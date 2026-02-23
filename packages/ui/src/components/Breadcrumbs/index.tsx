@@ -2,7 +2,7 @@
 
 import type { CSSProperties, JSX, ReactNode } from 'react'
 import { Item } from './components/Item'
-import { breadcrumbs } from './styles.css'
+import { breadcrumbsStyle } from './styles.css'
 
 type BreadcrumbsProps = {
   children: ReactNode
@@ -30,7 +30,7 @@ export const Breadcrumbs: BreadcrumbsType = ({
     data-testid={dataTestId}
     style={style}
   >
-    <ol className={breadcrumbs}>{children}</ol>
+    <ol className={breadcrumbsStyle.breadcrumbs}>{children}</ol>
   </nav>
 )
 

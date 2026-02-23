@@ -7,7 +7,7 @@ import { List } from '../../List'
 import { Cell } from './components/Cell'
 import { Row } from './components/Row'
 import { OfferListProvider } from './OfferListProvider'
-import { offerList } from './styles.css'
+import { offerListStyle } from './styles.css'
 
 type OfferListProps = Omit<
   ComponentProps<typeof List>,
@@ -80,7 +80,7 @@ export const OfferList = ({
     >
       <List
         autoCollapse={autoCollapse}
-        className={cn(className, offerList)}
+        className={cn(className, offerListStyle.offerList)}
         columns={computedColumns}
         data-testid={dataTestId}
         expandable={false}

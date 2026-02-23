@@ -7,8 +7,8 @@ import { useEffect, useRef } from 'react'
 import { TextInput } from '../../TextInput'
 import { OPTION_SELECTOR } from '../constants'
 import { useSelectInput } from '../SelectInputProvider'
+import { selectInputStyle } from '../styles.css'
 import type { DataType, OptionType } from '../types'
-import { searchBar } from './dropdown.css'
 
 type SearchBarProps = {
   placeholder: string
@@ -184,7 +184,7 @@ export const SearchBarDropdown = ({
   return (
     <TextInput
       aria-label="search-bar"
-      className={searchBar}
+      className={selectInputStyle.searchBar}
       data-testid="search-bar"
       onBlur={() => setSearchBarActive(false)}
       onChange={event => handleChange(event.target.value)}

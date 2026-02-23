@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-export const dropzone = recipe({
+const dropzone = recipe({
   base: {
     border: `1px dashed ${theme.colors.neutral.borderStrong}`,
     textAlign: 'center',
@@ -44,9 +44,9 @@ export const dropzone = recipe({
   },
 })
 
-export const fileInput = style({ display: 'none' })
+const fileInput = style({ display: 'none' })
 
-export const titleSmall = styleVariants({
+const titleSmall = styleVariants({
   default: {
     cursor: 'pointer',
   },
@@ -55,7 +55,7 @@ export const titleSmall = styleVariants({
   },
 })
 
-export const overlayWrapper = style({
+const overlayWrapper = style({
   height: 'fit-content',
   position: 'relative',
   width: 'fit-content',
@@ -69,7 +69,7 @@ const dropzoneOverlayBase = style({
   position: 'absolute',
 })
 
-export const dropzoneOverlay = styleVariants({
+const dropzoneOverlay = styleVariants({
   default: [
     dropzoneOverlayBase,
     {
@@ -103,7 +103,7 @@ const dropzoneOverlayDisabledOver = style({
   border: `1px dashed ${theme.colors.primary.borderDisabled}`,
 })
 
-export const dropzoneOverlayDisabled = styleVariants({
+const dropzoneOverlayDisabled = styleVariants({
   default: {},
   over: [dropzoneOverlayDisabledOver],
   page: [dropzoneOverlayDisabledOver],
@@ -115,7 +115,7 @@ const fileViewerContainerBase = style({
   width: 'fit-content',
 })
 
-export const fileViewerContainer = styleVariants({
+const fileViewerContainer = styleVariants({
   default: [
     fileViewerContainerBase,
     {
@@ -135,7 +135,7 @@ export const fileViewerContainer = styleVariants({
     },
   ],
 })
-export const fileViewerImageBase = style({
+const fileViewerImageBase = style({
   alignItems: 'center',
   borderRadius: theme.radii.default,
   display: 'flex',
@@ -145,7 +145,7 @@ export const fileViewerImageBase = style({
   width: theme.sizing[400],
 })
 
-export const fileViewerImage = styleVariants({
+const fileViewerImage = styleVariants({
   default: [
     fileViewerImageBase,
     {
@@ -160,9 +160,22 @@ export const fileViewerImage = styleVariants({
   ],
 })
 
-export const fileInfo = style({
+const fileInfo = style({
   maxWidth: 264,
   overflow: 'hidden',
   textOverflow: 'ellipsis',
   textWrap: 'nowrap',
 })
+
+export const fileInputStyle = {
+  dropzone,
+  fileInput,
+  titleSmall,
+  overlayWrapper,
+  dropzoneOverlay,
+  dropzoneOverlayDisabled,
+  fileViewerContainer,
+  fileViewerImageBase,
+  fileInfo,
+  fileViewerImage,
+}

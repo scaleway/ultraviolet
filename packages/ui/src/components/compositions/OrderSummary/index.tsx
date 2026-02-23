@@ -9,11 +9,7 @@ import orderSummaryLocales from './locales/en'
 import { NonScrollableContent } from './NonScrollableContent'
 import { OrderSummaryContext } from './Provider'
 import { ScrollableContent } from './ScrollableContent'
-import {
-  orderSummaryContainer,
-  orderSummaryHeaderContainer,
-  orderSummaryStackBackground,
-} from './styles.css'
+import { orderSummaryStyle } from './styles.css'
 import type { OrderSummaryProps, TimeUnit } from './types'
 
 export const OrderSummary = ({
@@ -128,7 +124,7 @@ export const OrderSummary = ({
   return (
     <OrderSummaryContext.Provider value={valueContext}>
       <Stack
-        className={cn(className, orderSummaryContainer)}
+        className={cn(className, orderSummaryStyle.container)}
         data-testid={dataTestId}
         justifyContent={hideDetails ? 'flex-start' : 'space-between'}
         style={style}
@@ -137,7 +133,7 @@ export const OrderSummary = ({
           <Stack
             alignItems="center"
             className={
-              orderSummaryHeaderContainer[
+              orderSummaryStyle.headerContainer[
                 hideDetails ? 'hideDetails' : 'showDetails'
               ]
             }
@@ -154,7 +150,7 @@ export const OrderSummary = ({
               {header}
             </Text>
             {hideTimeUnit || hideDetails ? null : (
-              <Stack className={orderSummaryStackBackground}>
+              <Stack className={orderSummaryStyle.stackBackground}>
                 <UnitInput
                   dropdownAlign="center"
                   maxWidth="200px"

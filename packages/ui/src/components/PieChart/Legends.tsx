@@ -2,18 +2,7 @@
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Tooltip } from '../Tooltip'
-import {
-  bulletPie,
-  colorBullet,
-  labelPie,
-  linePie,
-  listItemPie,
-  listPie,
-  progressiveLinePie,
-  textPie,
-  toggleBoxPie,
-  valuePie,
-} from './styles.css'
+import { colorBullet, pieChartStyle } from './styles.css'
 import { Tooltip as TooltipContainer } from './Tooltip'
 import type { Data } from './types'
 
@@ -30,7 +19,7 @@ export const Legends = ({
   onFocusChange,
   colors,
 }: LegendsProps) => (
-  <ul className={listPie}>
+  <ul className={pieChartStyle.list}>
     {data?.map((item, index) => {
       const isSegmentFocused = focused !== undefined && item.id === focused
 
@@ -43,9 +32,11 @@ export const Legends = ({
           text={<TooltipContainer data={item} />}
           visible={isSegmentFocused}
         >
-          <li className={listItemPie({ isFocused: isSegmentFocused })}>
+          <li
+            className={pieChartStyle.listItem({ isFocused: isSegmentFocused })}
+          >
             <div
-              className={toggleBoxPie}
+              className={pieChartStyle.toggleBox}
               data-testid={id}
               onBlur={() => onFocusChange()}
               onFocus={() => onFocusChange(item.id)}
@@ -53,27 +44,31 @@ export const Legends = ({
               onMouseOver={() => onFocusChange(item.id)}
             />
             <div
-              className={bulletPie({ isFocused: isSegmentFocused })}
+              className={pieChartStyle.bullet({ isFocused: isSegmentFocused })}
               color={colors[index]}
               id={`chart-legend-${item.id}`}
               style={assignInlineVars({
                 [colorBullet]: colors[index],
               })}
             />
-            <div className={labelPie}>
-              <span className={textPie({ isFocused: isSegmentFocused })}>
+            <div className={pieChartStyle.label}>
+              <span
+                className={pieChartStyle.text({ isFocused: isSegmentFocused })}
+              >
                 {item.name}
               </span>
-              <span className={linePie}>
+              <span className={pieChartStyle.line}>
                 <span
-                  className={progressiveLinePie({
+                  className={pieChartStyle.progressiveLine({
                     isFocused: isSegmentFocused,
                   })}
                 />
               </span>
             </div>
             <div
-              className={valuePie[isSegmentFocused ? 'isFocused' : 'default']}
+              className={
+                pieChartStyle.value[isSegmentFocused ? 'isFocused' : 'default']
+              }
             >
               {item.value}
             </div>

@@ -1,5 +1,5 @@
 'use client'
 
-import { iconSkeleton } from './stylesVariants.css'
+import { skeletonStyle } from './styles.css'
 
-export const IconSkeleton = () => <div className={iconSkeleton} />
+export const IconSkeleton = () => <div className={skeletonStyle.iconSkeleton} />

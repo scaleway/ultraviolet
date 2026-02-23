@@ -6,10 +6,10 @@ import { SouthShortIcon } from '@ultraviolet/icons/SouthShortIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
-import { listSortIcon } from '../List/styles.css'
+import { listStyle } from '../List/styles.css'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-import { headerCellText, tableHeaderCell } from './styles.css'
+import { tableStyle } from './styles.css'
 import {
   headerCellMaxWidth,
   headerCellMinWidth,
@@ -18,7 +18,7 @@ import {
 
 const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) =>
   order ? (
-    <SouthShortIcon className={listSortIcon[order]} sentiment="primary" />
+    <SouthShortIcon className={listStyle.sortIcon[order]} sentiment="primary" />
   ) : (
     <SortIconUV sentiment="neutral" />
   )
@@ -65,7 +65,10 @@ export const HeaderCell = ({
     <th
       align={align}
       aria-sort={order}
-      className={cn(className, tableHeaderCell({ align, checked: isCheckbox }))}
+      className={cn(
+        className,
+        tableStyle.headerCell({ align, checked: isCheckbox }),
+      )}
       onClick={handleOrder}
       onKeyDown={
         handleOrder
@@ -90,7 +93,7 @@ export const HeaderCell = ({
     >
       <Text
         as="div"
-        className={headerCellText}
+        className={tableStyle.headerCellText}
         sentiment={order !== undefined ? 'primary' : 'neutral'}
         variant="bodySmall"
       >

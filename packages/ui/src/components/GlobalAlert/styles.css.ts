@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { SIZE_HEIGHT } from '../Button/constants'
 
-export const closeButton = style({
+const closeButton = style({
   background: 'none',
   position: 'absolute',
   right: theme.sizing[SIZE_HEIGHT.large],
@@ -20,7 +20,7 @@ const containerBase = style({
   width: '100%',
 })
 
-export const container = styleVariants({
+const container = styleVariants({
   danger: [
     containerBase,
     { backgroundColor: theme.colors.danger.backgroundStrong },
@@ -34,3 +34,8 @@ export const container = styleVariants({
     { background: theme.colors.other.gradients.background.linear.aqua },
   ],
 })
+
+export const globalAlertStyle = {
+  closeButton,
+  container,
+}

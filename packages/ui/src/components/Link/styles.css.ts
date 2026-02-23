@@ -53,7 +53,7 @@ function makeVariant(
   }
 }
 
-export const link = recipe({
+const link = recipe({
   base: {
     backgroundColor: 'none',
     border: 'none',
@@ -148,7 +148,7 @@ export const link = recipe({
   },
 })
 
-export const containerIconLink = style({
+const containerIcon = style({
   display: 'inline-flex',
   paddingBottom: theme.space['0.5'],
 })
@@ -156,9 +156,9 @@ export const containerIconLink = style({
 /* Make this to have a global syle which does not depend on props
 That way we do not have to target every possible variant in
 icon styles */
-export const defaultLink = style({})
+const defaultLink = style({})
 
-export const iconLeftLink = style({
+const iconLeft = style({
   marginRight: theme.space['0.5'],
   transition: `transform ${TRANSITION_DURATION}ms ease-out`,
   selectors: {
@@ -172,7 +172,7 @@ export const iconLeftLink = style({
 })
 
 // Use calc() instead of simply "-" because theme.space[0.25] is a var()
-export const iconRightLink = style({
+const iconRight = style({
   marginLeft: theme.space['0.5'],
   transition: `transform ${TRANSITION_DURATION}ms ease-out`,
   selectors: {
@@ -189,3 +189,11 @@ export const iconRightLink = style({
 globalStyle(`${defaultLink} > * `, {
   pointerEvents: 'none',
 })
+
+export const linkStyle = {
+  link,
+  containerIcon,
+  defaultLink,
+  iconLeft,
+  iconRight,
+}

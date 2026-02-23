@@ -1,12 +1,12 @@
 import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 
-export const tabsMenuContainer = style({
+const menuContainer = style({
   display: 'flex',
   flexDirection: 'column',
 })
 
-export const tabsMenu = style({
+const menu = style({
   background: `${theme.colors.neutral.background} !important`,
   bottom: 0,
   boxShadow: theme.shadows.menu,
@@ -15,7 +15,7 @@ export const tabsMenu = style({
   top: 0,
 })
 
-export const tabsContainer = style({
+const container = style({
   display: 'flex',
   flexWrap: 'nowrap',
   msOverflowStyle: 'none',
@@ -40,12 +40,12 @@ export const tabsContainer = style({
   zIndex: 0,
 })
 
-export const tabsBadgeContainer = style({
+const badgeContainer = style({
   display: 'flex',
   marginLeft: theme.space[1],
 })
 
-export const tabsButton = style({
+const button = style({
   alignItems: 'baseline',
   background: 'none',
   border: 'none',
@@ -84,7 +84,7 @@ export const tabsButton = style({
       borderBottomColor: theme.colors.primary.border,
       color: theme.colors.primary.text,
     },
-    [`${tabsMenuContainer} &`]: {
+    [`${menuContainer} &`]: {
       backgroundColor: 'transparent',
       borderBottomWidth: 1.5,
       cursor: 'pointer',
@@ -94,11 +94,11 @@ export const tabsButton = style({
       minWidth: '6.875rem',
       width: '100%',
     },
-    [`${tabsMenuContainer} &[aria-disabled='true']`]: {
+    [`${menuContainer} &[aria-disabled='true']`]: {
       cursor: 'not-allowed',
       filter: 'grayscale(1) opacity(50%)',
     },
-    [`${tabsMenuContainer} &:disabled`]: {
+    [`${menuContainer} &:disabled`]: {
       cursor: 'not-allowed',
       filter: 'grayscale(1) opacity(50%)',
     },
@@ -110,11 +110,11 @@ export const tabsButton = style({
   whiteSpace: 'nowrap',
 })
 
-export const tabsBadge = style({
+const badge = style({
   marginLeft: theme.space[1],
   padding: `0 ${theme.space[1]}`,
   selectors: {
-    [`${tabsButton}[aria-selected="false"]:hover &, ${tabsButton}[aria-selected="false"]:active &`]:
+    [`${button}[aria-selected="false"]:hover &, ${button}[aria-selected="false"]:active &`]:
       {
         backgroundColor: theme.colors.primary.background,
         borderColor: theme.colors.primary.background,
@@ -123,13 +123,12 @@ export const tabsBadge = style({
   },
 })
 
-export const tabsTextSelected = styleVariants({
+const textSelected = styleVariants({
   default: {
     selectors: {
-      [`${tabsButton}:hover &, ${tabsButton}:focus &, ${tabsButton}:active &`]:
-        {
-          color: theme.colors.primary.text,
-        },
+      [`${button}:hover &, ${button}:focus &, ${button}:active &`]: {
+        color: theme.colors.primary.text,
+      },
     },
   },
   selected: {
@@ -137,21 +136,33 @@ export const tabsTextSelected = styleVariants({
   },
 })
 
-export const tabsArrowIcon = style({
+const arrowIcon = style({
   color: 'inherit',
   marginLeft: theme.space[1],
   transition: '300ms transform ease-out',
   selectors: {
-    [`${tabsButton}[aria-expanded="true"] &`]: {
+    [`${button}[aria-expanded="true"] &`]: {
       transform: 'rotate(-180deg)',
     },
   },
 })
 
-export const tabsMenuWrapper = style({
+const menuWrapper = style({
   bottom: 0,
   display: 'flex',
   position: 'sticky',
   right: 0,
   top: 0,
 })
+
+export const tabsStyle = {
+  menuContainer,
+  menu,
+  container,
+  badgeContainer,
+  button,
+  badge,
+  textSelected,
+  arrowIcon,
+  menuWrapper,
+}

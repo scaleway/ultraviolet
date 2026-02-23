@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 
-export const stackCard = style({
+const stack = style({
   selectors: {
     "&[data-disabled='true']": {
       cursor: 'not-allowed',
@@ -9,7 +9,7 @@ export const stackCard = style({
   },
 })
 
-export const borderedBox = style({
+const borderedBox = style({
   border: `1px solid ${theme.colors.neutral.border}`,
   borderRadius: theme.radii.default,
   flex: '1 1 auto',
@@ -23,3 +23,5 @@ export const borderedBox = style({
     },
   },
 })
+
+export const cardStyle = { stack, borderedBox }

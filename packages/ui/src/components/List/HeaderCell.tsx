@@ -8,7 +8,7 @@ import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
-import { listHeaderCell, listSortIcon } from './styles.css'
+import { listStyle } from './styles.css'
 import {
   maxWidthHeaderCell,
   minWidthHeaderCell,
@@ -17,7 +17,7 @@ import {
 
 const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) =>
   order ? (
-    <SouthShortIcon className={listSortIcon[order]} sentiment="primary" />
+    <SouthShortIcon className={listStyle.sortIcon[order]} sentiment="primary" />
   ) : (
     <SortIconUV sentiment="neutral" />
   )
@@ -59,7 +59,7 @@ export const HeaderCell = ({
   return (
     <th
       aria-sort={order}
-      className={cn(className, listHeaderCell)}
+      className={cn(className, listStyle.headerCell)}
       onClick={handleOrder}
       onKeyDown={
         handleOrder

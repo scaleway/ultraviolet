@@ -1,14 +1,5 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
-import { calendarContentWrapper } from '../styles.css'
-
-export const dateinputPopup = style([
-  calendarContentWrapper(),
-  {
-    boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
-    width: '100%',
-  },
-])
 
 export const capitalizedText = style({ textTransform: 'capitalize' })
 export const capitalizedTextDay = style([

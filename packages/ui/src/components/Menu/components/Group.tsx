@@ -4,7 +4,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import { Children } from 'react'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { menuGroup } from '../styles.css'
+import { menuStyle } from '../styles.css'
 
 type GroupProps = {
   label: string
@@ -28,7 +28,7 @@ export const Group = ({
 
   return (
     <>
-      <span className={menuGroup} style={style}>
+      <span className={menuStyle.group} style={style}>
         <Stack alignItems="center" direction="row" gap={1}>
           <Text
             as="span"

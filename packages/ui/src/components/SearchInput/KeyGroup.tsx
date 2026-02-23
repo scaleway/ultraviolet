@@ -3,7 +3,7 @@
 import type { ComponentProps } from 'react'
 import { Key } from '../Key'
 import { Stack } from '../Stack'
-import { clickableStack } from './styles.css'
+import { searchInputStyle } from './styles.css'
 
 type KeyGroupProps = {
   keys: ComponentProps<typeof Key>['children'][]
@@ -12,7 +12,12 @@ type KeyGroupProps = {
 }
 
 export const KeyGroup = ({ keys, disabled, onClick }: KeyGroupProps) => (
-  <Stack className={clickableStack} direction="row" gap={0.5} onClick={onClick}>
+  <Stack
+    className={searchInputStyle.clickableStack}
+    direction="row"
+    gap={0.5}
+    onClick={onClick}
+  >
     {keys.map(key => (
       <Key data-testid={`key-${key}`} disabled={disabled} key={key}>
         {key}

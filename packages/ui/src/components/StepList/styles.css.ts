@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-export const steps = style({
+const steps = style({
   display: 'flex',
   flexDirection: 'column',
   fontSize: theme.typography.body.fontSize,
@@ -12,7 +12,7 @@ export const steps = style({
   textAlign: 'left',
 })
 
-export const step = recipe({
+const step = recipe({
   base: {
     alignItems: 'flex-start',
     display: 'flex',
@@ -31,7 +31,7 @@ export const step = recipe({
   },
 })
 
-export const stepDiv = recipe({
+const stepDiv = recipe({
   base: {
     flex: 1,
     margin: 'auto',
@@ -50,3 +50,4 @@ export const stepDiv = recipe({
     },
   },
 })
+export const stepListStyle = { steps, step, stepDiv }

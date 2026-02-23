@@ -7,7 +7,7 @@ import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { getPageNumbers } from './getPageNumbers'
-import { ellipsisClass, pageButton, pageNumbersContainer } from './styles.css'
+import { paginationStyle } from './styles.css'
 
 type PaginationButtonsProps = {
   page: number
@@ -41,7 +41,7 @@ const MakeButton = ({
       <Text
         aria-label="ellipsis"
         as="span"
-        className={ellipsisClass[perPage ? 'small' : 'medium']}
+        className={paginationStyle.ellipsisClass[perPage ? 'small' : 'medium']}
         disabled={disabled}
         placement="center"
         prominence="default"
@@ -53,7 +53,7 @@ const MakeButton = ({
     ) : null}
     <Button
       aria-current={pageNumber === page}
-      className={pageButton[perPage ? 'small' : 'medium']}
+      className={paginationStyle.pageButton[perPage ? 'small' : 'medium']}
       disabled={disabled}
       onClick={handlePageClick(pageNumber)}
       sentiment={pageNumber === page ? 'primary' : 'neutral'}
@@ -110,7 +110,11 @@ export const PaginationButtons = ({
           <ArrowLeftIcon />
         </Button>
       </Stack>
-      <Stack className={pageNumbersContainer} direction="row" gap={1}>
+      <Stack
+        className={paginationStyle.pageNumbersContainer}
+        direction="row"
+        gap={1}
+      >
         {pageNumbersToDisplay.map((pageNumber, index) => (
           <MakeButton
             disabled={disabled}

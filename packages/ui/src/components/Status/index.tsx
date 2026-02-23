@@ -4,7 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import type { CSSProperties } from 'react'
 import { Tooltip } from '../Tooltip'
 import type { SENTIMENTS } from './constant'
-import { animatedCircleStatus, circleStatus, status } from './styles.css'
+import { statusStyle } from './styles.css'
 
 type StatusSentiment = (typeof SENTIMENTS)[number]
 
@@ -35,14 +35,14 @@ export const Status = ({
 }: StatusProps) => (
   <Tooltip text={tooltip}>
     <span
-      className={cn(className, status({ notification }))}
+      className={cn(className, statusStyle.status({ notification }))}
       data-testid={dataTestId}
       style={style}
     >
       {animated ? (
-        <span className={animatedCircleStatus({ sentiment })} />
+        <span className={statusStyle.animatedCircle({ sentiment })} />
       ) : null}
-      <span className={circleStatus({ sentiment })} />
+      <span className={statusStyle.circle({ sentiment })} />
     </span>
   </Tooltip>
 )

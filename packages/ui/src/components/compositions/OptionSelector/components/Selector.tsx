@@ -1,6 +1,6 @@
 import { SelectInput } from '../../../SelectInput'
 import type { DataType } from '../../../SelectInput/types'
-import { firstSelectInput, secondSelectInput } from '../styles.css'
+import { optionSelectorStyle } from '../styles.css'
 import type { OptionSelectorProps } from '../types'
 
 export const Selector = ({
@@ -35,7 +35,9 @@ export const Selector = ({
   <SelectInput
     aria-label={selector['aria-label']}
     className={
-      isFirst ? firstSelectInput[direction] : secondSelectInput[direction]
+      isFirst
+        ? optionSelectorStyle.firstSelectInput[direction]
+        : optionSelectorStyle.secondSelectInput[direction]
     }
     data-testid={isFirst ? 'first-selector' : 'second-selector'}
     disabled={selector.disabled || disabled}

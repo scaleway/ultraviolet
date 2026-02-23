@@ -24,18 +24,9 @@ import { Tooltip } from '../../Tooltip'
 import { SIZES_TAG } from '../constants'
 import { findOptionInOptions } from '../findOptionInOptions'
 import { useSelectInput } from '../SelectInputProvider'
+import { selectInputStyle } from '../styles.css'
 import type { OptionType } from '../types'
-import {
-  maxWidthTag,
-  minWidthTag,
-  multiselectStack,
-  plusTag,
-  selectBar,
-  selectBarTags,
-  selectbarState,
-  selectedValues,
-  selectinputPlaceholder,
-} from './selectBar.css'
+import { maxWidthTag, minWidthTag } from './selectBar.css'
 
 type SelectBarProps = {
   size: 'small' | 'medium' | 'large'
@@ -91,7 +82,7 @@ const DisplayValues = ({
   return multiselect ? (
     <Stack
       alignItems="center"
-      className={multiselectStack}
+      className={selectInputStyle.multiselectStack}
       direction="row"
       gap="1"
       ref={refTag}
@@ -107,7 +98,10 @@ const DisplayValues = ({
         >
           {potentiallyNonOverflowedValues.map(option => (
             <Tag
-              className={cn(option.value, selectBarTags.hidden)}
+              className={cn(
+                option.value,
+                selectInputStyle.selectBarTags.hidden,
+              )}
               key={option.value}
               onClose={() => {}}
             >
@@ -118,7 +112,7 @@ const DisplayValues = ({
       ) : null}
       {nonOverflowedValues.map((option, index) => (
         <Tag
-          className={selectBarTags.visible}
+          className={selectInputStyle.selectBarTags.visible}
           data-testid="selected-options-tags"
           disabled={disabled}
           key={option?.value}
@@ -155,7 +149,7 @@ const DisplayValues = ({
         <Stack justifyContent="center" ref={refPlusTag}>
           <Tag
             aria-label="Plus tag"
-            className={plusTag}
+            className={selectInputStyle.plusTag}
             data-testid="plus-tag"
             disabled={disabled}
             key="+"
@@ -170,7 +164,7 @@ const DisplayValues = ({
   ) : (
     <Text
       as="span"
-      className={selectedValues}
+      className={selectInputStyle.selectedValues}
       disabled={disabled}
       prominence="default"
       sentiment="neutral"
@@ -441,7 +435,7 @@ const SelectBar = ({
         aria-label={label}
         // oxlint-disable-next-line jsx_a11y/no-autofocus
         autoFocus={autoFocus}
-        className={selectBar({
+        className={selectInputStyle.selectBar({
           disabled,
           dropdownVisible: isDropdownVisible,
           readOnly,
@@ -494,7 +488,7 @@ const SelectBar = ({
         ) : (
           <Text
             as="span"
-            className={selectinputPlaceholder}
+            className={selectInputStyle.placeholder}
             disabled={disabled}
             prominence="weak"
             sentiment="neutral"
@@ -505,7 +499,9 @@ const SelectBar = ({
         )}
         <Stack
           alignItems="center"
-          className={selectbarState[size === 'medium' ? 'small' : size]}
+          className={
+            selectInputStyle.selectbarState[size === 'medium' ? 'small' : size]
+          }
           direction="row"
           gap={1}
           ref={arrowRef}

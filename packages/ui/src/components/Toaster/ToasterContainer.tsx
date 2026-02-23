@@ -5,7 +5,7 @@ import type { CSSProperties } from 'react'
 import type { ToastOptions } from 'react-toastify'
 import { ToastContainer as BaseToastContainer, Slide } from 'react-toastify'
 import { AUTOCLOSE_DELAY } from './constants'
-import { toaster } from './styles.css'
+import { toasterStyle } from './styles.css'
 
 type ToastContainerProps = {
   /**
@@ -55,7 +55,7 @@ export const ToastContainer = ({
 }: ToastContainerProps) => (
   <BaseToastContainer
     autoClose={autoClose ?? AUTOCLOSE_DELAY}
-    className={cn(className, toaster)}
+    className={cn(className, toasterStyle.toaster)}
     containerId={containerId}
     data-testid={dataTestId}
     draggable={false}

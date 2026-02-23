@@ -6,7 +6,7 @@ import {
   optionSelectInputDisabled,
   optionSelectInputError,
 } from '../../SelectableCardOptionGroup/styles.css'
-import { unitInputUnit } from '../../UnitInput/styles.css'
+import { unitInputStyle } from '../../UnitInput/styles.css'
 import { INPUT_SIZE_HEIGHT } from '../constants'
 
 export const maxWidthTag = createVar({
@@ -31,7 +31,7 @@ export const selectbarState = styleVariants({
   },
 })
 
-export const selectinputPlaceholder = style({
+export const placeholder = style({
   alignSelf: 'center',
   userSelect: 'none',
 })
@@ -80,7 +80,7 @@ export const selectBarBase = style({
   paddingRight: 0,
   width: '100%',
   selectors: {
-    [`.${unitInputUnit} &`]: {
+    [`.${unitInputStyle.unit} &`]: {
       background: 'transparent',
       border: 'none !important',
     },

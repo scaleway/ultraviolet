@@ -16,7 +16,7 @@ import { DialogCancelButton } from './components/CancelButton'
 import { DialogStack } from './components/Stack'
 import { DialogText } from './components/Text'
 import type { DialogSentiment } from './constants'
-import { dialogTitle, dialogXsmall } from './styles.css'
+import { dialogStyle } from './styles.css'
 
 const DIALOG_SIZE = 'xsmall'
 
@@ -70,7 +70,7 @@ export const BaseDialog = ({
       </Bullet>
       <Text
         as="h2"
-        className={dialogTitle}
+        className={dialogStyle.title}
         sentiment="neutral"
         variant="headingSmallStronger"
       >
@@ -89,7 +89,7 @@ export const BaseDialog = ({
   return (
     <Modal
       ariaLabel={ariaLabel}
-      className={cn(className, dialogXsmall)}
+      className={cn(className, dialogStyle.xsmall)}
       data-testid={dataTestId}
       disclosure={disclosure}
       hideOnClickOutside={hideOnClickOutside}

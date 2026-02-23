@@ -4,7 +4,7 @@ import { useTheme } from '@ultraviolet/themes'
 import type { CSSProperties } from 'react'
 import type { ExtendedColor } from '../../theme'
 import { SIZES } from './constants'
-import { circle, loader, loaderCircleAnimation } from './styles.css'
+import { loaderStyle } from './styles.css'
 
 const VIEWBOX_WIDTH = 100
 const VIEWBOX_HEIGHT = 100
@@ -47,7 +47,7 @@ export const Loader = ({
       aria-valuemin={0}
       aria-valuenow={percentage}
       aria-valuetext={`${percentage}%`}
-      className={active ? loader : undefined}
+      className={active ? loaderStyle.loader : undefined}
       role="progressbar"
       style={{
         height: theme.sizing[SIZES[size]],
@@ -57,7 +57,7 @@ export const Loader = ({
       viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
     >
       <circle
-        className={circle}
+        className={loaderStyle.circle}
         cx={HALF_VIEWBOX_WIDTH}
         cy={HALF_VIEWBOX_HEIGHT}
         fill="none"
@@ -65,7 +65,7 @@ export const Loader = ({
         strokeWidth={16}
       />
       <circle
-        className={loaderCircleAnimation}
+        className={loaderStyle.loaderCircleAnimation}
         cx={HALF_VIEWBOX_WIDTH}
         cy={HALF_VIEWBOX_HEIGHT}
         fill="none"

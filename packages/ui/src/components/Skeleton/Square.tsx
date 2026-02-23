@@ -1,5 +1,5 @@
 'use client'
 
-import { squareSkeleton } from './stylesVariants.css'
+import { skeletonStyle } from './styles.css'
 
-export const Square = () => <div className={squareSkeleton} />
+export const Square = () => <div className={skeletonStyle.squareSkeleton} />

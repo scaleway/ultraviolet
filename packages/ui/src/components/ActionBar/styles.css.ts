@@ -4,12 +4,12 @@ import { fadeIn } from '../../utils'
 
 export const rankActionBar = createVar()
 
-export const stackActionBar = style({
+const stackActionBar = style({
   height: '100%',
   padding: `0 ${theme.space[2]}`,
 })
 
-export const actionBar = style({
+const actionBar = style({
   animation: `${fadeIn} 0.2s ease-in-out`,
   backgroundColor: theme.colors.other.elevation.background.fixed,
   borderRadius: theme.radii.default,
@@ -21,3 +21,5 @@ export const actionBar = style({
   transform: 'translate(-50%, 0)',
   width: '37.5rem',
 })
+
+export const actionBarStyle = { stackActionBar, actionBar }

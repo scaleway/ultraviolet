@@ -6,7 +6,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import { forwardRef } from 'react'
 import { useColumnProvider } from './ColumnProvider'
 import { useListContext } from './ListContext'
-import { listCell, listCellStrict } from './styles.css'
+import { listStyle } from './styles.css'
 import {
   listCellPadding,
   maxWidthCell,
@@ -48,8 +48,8 @@ export const Cell = forwardRef<HTMLTableCellElement, CellProps>(
       <td
         className={cn(
           className,
-          listCell,
-          colMode === 'strict' ? listCellStrict : '',
+          listStyle.cell,
+          colMode === 'strict' ? listStyle.cellStrict : '',
         )}
         colSpan={colSpan}
         data-testid={dataTestid}

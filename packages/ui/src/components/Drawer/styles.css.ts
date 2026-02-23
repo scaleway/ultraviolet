@@ -37,41 +37,41 @@ function makeStyleSize(size: SizeProp) {
     animation: `${slideIn()} linear ${DURATION[size]}s`,
   }
 }
-export const drawer = styleVariants({
+const drawer = styleVariants({
   large: makeStyleSize('large'),
   medium: makeStyleSize('medium'),
   small: makeStyleSize('small'),
 })
 
-export const drawerContentWrapper = style({
+const contentWrapper = style({
   height: '100%',
   position: 'relative',
 })
 
-export const drawerChildrenWrapper = style({
+const childrenWrapper = style({
   height: '100%',
   overflowY: 'auto',
 })
 
-export const drawerContent = style({
+const content = style({
   paddingInline: theme.space[2],
 })
 
-export const drawerHeader = style({
+const header = style({
   paddingInline: theme.space[2],
   paddingTop: theme.space[4],
 })
 
-export const drawerFooter = style({
+const footer = style({
   padding: theme.space[2],
   paddingTop: 0,
 })
 
-export const drawerBase = style({})
+const base = style({})
 
-export const drawerPush = style({})
+const push = style({})
 
-export const contentToPushStyle = style({})
+const contentToPushStyle = style({})
 
 globalStyle(`${contentToPushStyle}[data-drawer="small"]`, {
   paddingRight: `${SIZES.small}rem`,
@@ -87,3 +87,14 @@ globalStyle(`${contentToPushStyle}[data-drawer="large"]`, {
   paddingRight: `${SIZES.large}rem`,
   transition: `padding-right ${DURATION.large}s !important`,
 })
+export const drawerStyle = {
+  drawer,
+  contentWrapper,
+  childrenWrapper,
+  content,
+  header,
+  footer,
+  base,
+  push,
+  contentToPushStyle,
+}

@@ -6,7 +6,7 @@ import { Link } from '../Link'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import type { SizesTypes } from './styles.css'
-import { emptyStateContainer, emptyStateImage, paddedStack } from './styles.css'
+import { emptyStateStyle } from './styles.css'
 
 type EmptyStateProps = {
   title?: string
@@ -54,13 +54,13 @@ export const EmptyState = ({
   style,
 }: EmptyStateProps) => (
   <Stack
-    className={cn(className, emptyStateContainer({ bordered, size }))}
+    className={cn(className, emptyStateStyle.container({ bordered, size }))}
     data-testid={dataTestId}
     style={style}
   >
     <Stack
       alignItems="center"
-      className={paddedStack}
+      className={emptyStateStyle.paddedStack}
       gap={size === 'small' ? 2 : 3}
       justifyContent="center"
     >
@@ -68,7 +68,7 @@ export const EmptyState = ({
         {image && typeof image === 'string' ? (
           <img
             alt=""
-            className={emptyStateImage[size]}
+            className={emptyStateStyle.image[size]}
             height="auto"
             src={image}
             width="auto"

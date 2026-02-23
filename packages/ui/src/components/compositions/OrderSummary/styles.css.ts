@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-export const orderSummaryContainer = style({
+const container = style({
   '@media': {
     '(min-width: 1440px)': {
       minWidth: '27.5rem',
@@ -19,7 +19,7 @@ const orderSummaryHeaderContainerBase = style({
   paddingBottom: theme.space[2],
 })
 
-export const orderSummaryHeaderContainer = styleVariants({
+const headerContainer = styleVariants({
   hideDetails: [orderSummaryHeaderContainerBase],
   showDetails: [
     orderSummaryHeaderContainerBase,
@@ -27,32 +27,32 @@ export const orderSummaryHeaderContainer = styleVariants({
   ],
 })
 
-export const orderSummaryStackBackground = style({
+const stackBackground = style({
   backgroundColor: theme.colors.neutral.background,
 })
 
-export const orderSummaryNonScrollableContainer = style({
+const nonScrollableContainer = style({
   borderTop: `1px solid ${theme.colors.neutral.border}`,
   padding: theme.space[3],
 })
 
-export const orderSummaryNumberInput = style({
+const numberInput = style({
   backgroundColor: theme.colors.neutral.background,
   maxWidth: '12.5rem',
 })
 
-export const orderSummaryScrollableContainer = style({
+const scrollableContainer = style({
   height: '100%',
   minHeight: '10rem',
   overflowY: 'scroll',
   padding: theme.space[3],
 })
 
-export const orderSummaryDetails = style({
+const details = style({
   paddingLeft: theme.space[1],
 })
 
-export const orderSummaryCategory = style({
+const category = style({
   selectors: {
     '&:not(:last-child)': {
       borderBottom: `1px solid ${theme.colors.neutral.border}`,
@@ -61,7 +61,7 @@ export const orderSummaryCategory = style({
   },
 })
 
-export const orderSummaryAnchor = style({
+const anchor = style({
   color: 'inherit',
   selectors: {
     '&:hover': {
@@ -72,12 +72,12 @@ export const orderSummaryAnchor = style({
   transition: 'color 250ms ease-out',
 })
 
-export const orderSummaryAnchorIcon = recipe({
+const anchorIcon = recipe({
   base: {
     opacity: 0,
     position: 'absolute',
     selectors: {
-      [`${orderSummaryAnchor}:hover > &`]: {
+      [`${anchor}:hover > &`]: {
         opacity: 1,
       },
     },
@@ -97,7 +97,7 @@ export const orderSummaryAnchorIcon = recipe({
   },
 })
 
-export const orderSummaryTotalPrice = styleVariants({
+const totalPrice = styleVariants({
   priceInformation: {
     display: 'flex',
     alignItems: 'center',
@@ -105,3 +105,17 @@ export const orderSummaryTotalPrice = styleVariants({
   },
   default: {},
 })
+
+export const orderSummaryStyle = {
+  anchorIcon,
+  container,
+  headerContainer,
+  stackBackground,
+  nonScrollableContainer,
+  scrollableContainer,
+  details,
+  category,
+  anchor,
+  totalPrice,
+  numberInput,
+}

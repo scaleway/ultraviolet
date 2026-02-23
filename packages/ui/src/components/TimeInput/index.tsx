@@ -19,7 +19,7 @@ import {
   isNumber,
   setValueByType,
 } from './helpers'
-import { timeinput, timeinputWrapper, timeSeparator } from './styles.css'
+import { timeInputStyle } from './styles.css'
 
 export type Time = {
   h: string
@@ -260,7 +260,7 @@ export const TimeInput = ({
         alignItems="center"
         aria-label={ariaLabel}
         aria-required={required}
-        className={timeinputWrapper({
+        className={timeInputStyle.wrapper({
           disabled,
           error: !!error,
           readOnly,
@@ -325,7 +325,7 @@ export const TimeInput = ({
                   autoComplete="off"
                   // oxlint-disable-next-line jsx_a11y/no-autofocus
                   autoFocus={autoFocus && type === 'h'}
-                  className={timeinput()}
+                  className={timeInputStyle.timeinput()}
                   data-size={size}
                   data-testid={`${fullName()}-input`}
                   disabled={disabled}
@@ -373,7 +373,7 @@ export const TimeInput = ({
                 {type === 's' ? null : (
                   <Text
                     as="span"
-                    className={timeSeparator}
+                    className={timeInputStyle.timeSeparator}
                     prominence="default"
                     sentiment="neutral"
                     variant="body"
@@ -392,7 +392,7 @@ export const TimeInput = ({
               aria-valuenow={period === 'am' ? 0 : 12}
               aria-valuetext={period}
               autoComplete="off"
-              className={timeinput({ period: true })}
+              className={timeInputStyle.timeinput({ period: true })}
               data-size={size}
               data-testid="am-pm-input"
               disabled={disabled}

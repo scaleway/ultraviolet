@@ -4,14 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
-import {
-  afterScroll,
-  beforeScroll,
-  borderWrapper,
-  scrollableWrapper,
-  widthVar,
-  wrapper,
-} from './styles.css'
+import { carouselStyle, widthVar } from './styles.css'
 
 type CarouselItemProps = {
   children: ReactNode
@@ -24,7 +17,7 @@ export const CarouselItem = ({
   style,
 }: CarouselItemProps) => (
   <div
-    className={borderWrapper}
+    className={carouselStyle.borderWrapper}
     draggable="true"
     style={{
       ...assignInlineVars({
@@ -86,16 +79,19 @@ export const Carousel = ({
   const [deltaX, setDeltaX] = useState(0)
 
   return (
-    <div className={cn(className, wrapper)} data-testid={dataTestId}>
+    <div
+      className={cn(className, carouselStyle.wrapper)}
+      data-testid={dataTestId}
+    >
       <span
-        className={beforeScroll}
+        className={carouselStyle.beforeScroll}
         data-testid={`${dataTestId}-before`}
         onFocus={handleScrollRight}
         onMouseLeave={() => clearInterval(intervalRight)}
         onMouseOver={handleScrollRight}
       />
       <div
-        className={cn(className, scrollableWrapper)}
+        className={cn(className, carouselStyle.scrollableWrapper)}
         data-testid={`${dataTestId}-wrapper`}
         onDrag={() => handleScrollX(deltaX)}
         onDragEnd={() => {
@@ -124,7 +120,7 @@ export const Carousel = ({
       </div>
 
       <span
-        className={afterScroll}
+        className={carouselStyle.afterScroll}
         data-testid={`${dataTestId}-after`}
         onFocus={handleScrollLeft}
         onMouseLeave={() => clearInterval(intervalLeft)}

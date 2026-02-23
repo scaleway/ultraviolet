@@ -19,6 +19,10 @@ export const config = mergeConfig(defineConfig(defaultConfig), {
           import.meta.dirname,
           'src/components/compositions/index.ts',
         ),
+        'components/compositions/styles': resolve(
+          import.meta.dirname,
+          'src/components/compositions/styles.ts',
+        ),
         index: 'src/index.ts',
       },
       rolldownOptions: {

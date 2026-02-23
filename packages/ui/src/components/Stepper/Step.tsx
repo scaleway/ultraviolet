@@ -8,14 +8,7 @@ import { Bullet } from '../Bullet'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { useStepper } from './StepperProvider'
-import {
-  animationStepperContainer,
-  stepBullet,
-  stepContainer,
-  stepperContainerRecipe,
-  stepperInteractive,
-  stepText,
-} from './styles.css'
+import { stepperStyle } from './styles.css'
 
 type StepProps = {
   onClick?: (index: number) => void
@@ -78,9 +71,9 @@ export const Step = ({
       alignItems="center"
       className={cn(
         className ?? 'step',
-        stepContainer,
+        stepperStyle.stepContainer,
         separatorBottom
-          ? stepperContainerRecipe({
+          ? stepperStyle.containerRecipe({
               animated,
               disabled,
               done: isDone,
@@ -90,10 +83,10 @@ export const Step = ({
             })
           : '',
         isActive && separator && animated
-          ? animationStepperContainer[size]
+          ? stepperStyle.animationStepperContainer[size]
           : '',
         interactiveDone && !disabled
-          ? stepperInteractive[isActive ? 'active' : 'inactive']
+          ? stepperStyle.interactive[isActive ? 'active' : 'inactive']
           : '',
       )}
       data-testid={dataTestId ?? `stepper-step-${index}`}
@@ -112,7 +105,7 @@ export const Step = ({
     >
       {isDone && !disabled ? (
         <Bullet
-          className={stepBullet({
+          className={stepperStyle.stepBullet({
             disabled,
             isActive,
             size,
@@ -125,7 +118,7 @@ export const Step = ({
         </Bullet>
       ) : (
         <Bullet
-          className={stepBullet({
+          className={stepperStyle.stepBullet({
             disabled,
             isActive,
             size,
@@ -140,7 +133,7 @@ export const Step = ({
       {title ? (
         <Text
           as="span"
-          className={stepText({
+          className={stepperStyle.stepText({
             addMarginTop: separator && labelPosition !== 'right',
             disabled,
           })}

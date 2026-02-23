@@ -1,7 +1,7 @@
 import { Checkbox } from '../Checkbox'
 import { Radio } from '../Radio'
 import { Toggle } from '../Toggle'
-import { selectableElementSelectableCard } from './styles.css'
+import { selectableCardStyle } from './styles.css'
 import type { MultiStateProps } from './types'
 
 export const MultiStateInput = ({
@@ -31,7 +31,7 @@ export const MultiStateInput = ({
     return (
       <Checkbox
         checked={checked}
-        className={selectableElementSelectableCard}
+        className={selectableCardStyle.selectableElement}
         data-error={isError}
         disabled={disabled}
         error={isError}
@@ -54,7 +54,7 @@ export const MultiStateInput = ({
     return (
       <Radio
         checked={checked}
-        className={selectableElementSelectableCard}
+        className={selectableCardStyle.selectableElement}
         data-error={isError}
         disabled={disabled}
         error={isError}
@@ -76,7 +76,7 @@ export const MultiStateInput = ({
     return (
       <Toggle
         checked={checked}
-        className={selectableElementSelectableCard}
+        className={selectableCardStyle.selectableElement}
         data-error={isError}
         disabled={disabled}
         error={isError}

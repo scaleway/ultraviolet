@@ -16,12 +16,12 @@ const switchButtonContainerBase = style({
   width: 'fit-content',
 })
 
-export const switchButtonContainer = styleVariants({
+const container = styleVariants({
   medium: [switchButtonContainerBase, { height: theme.sizing[SIZES.medium] }],
   small: [switchButtonContainerBase, { height: theme.sizing[SIZES.small] }],
 })
 
-export const switchButtonOptionBase = style({
+const optionBase = style({
   alignItems: 'center',
   background: 'transparent',
   border: 'none',
@@ -49,8 +49,8 @@ export const switchButtonOptionBase = style({
 /**
  * Create style variant so it is easier to deal with the global styles
  */
-export const switchButtonOptionPrimary = style({})
-export const switchButtonOptionNeutral = style({})
+const optionPrimary = style({})
+const optionNeutral = style({})
 
 const focusOverlayBase = style({
   borderRadius: theme.radii.default,
@@ -60,7 +60,7 @@ const focusOverlayBase = style({
   transition: 'all 200ms ease-in-out',
 })
 
-export const focusOverlay = styleVariants({
+const focusOverlay = styleVariants({
   neutral: [
     focusOverlayBase,
     { background: theme.colors.neutral.backgroundStrong },
@@ -70,3 +70,11 @@ export const focusOverlay = styleVariants({
     { background: theme.colors.primary.backgroundStrong },
   ],
 })
+
+export const switchButtonStyle = {
+  container,
+  optionBase,
+  optionNeutral,
+  optionPrimary,
+  focusOverlay,
+}

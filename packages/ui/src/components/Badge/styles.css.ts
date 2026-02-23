@@ -45,7 +45,7 @@ function getStrongStyle(sentiment: (typeof sentiments)[number]) {
   }
 }
 
-export const badge = recipe({
+const badge = recipe({
   base: {
     alignItems: 'center',
     borderRadius: theme.radii.xlarge,
@@ -129,3 +129,4 @@ export const badge = recipe({
 })
 
 export type BadgeVariants = NonNullable<RecipeVariants<typeof badge>>
+export const badgeStyle = { badge }

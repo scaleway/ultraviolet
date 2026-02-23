@@ -7,7 +7,7 @@ import { Checkbox } from '../Checkbox'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { checkboxGroup, fieldset } from './styles.css'
+import { checkboxGroupStyle } from './styles.css'
 
 type CheckboxGroupContextType = {
   groupName: string
@@ -61,7 +61,7 @@ export const CheckboxGroupCheckbox = ({
     <Checkbox
       autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
       checked={groupValues?.includes(checkboxValue)}
-      className={cn(className, checkboxGroup)}
+      className={cn(className, checkboxGroupStyle.checkboxGroup)}
       data-testid={dataTestId}
       disabled={disabled}
       error={error || errorContext}
@@ -127,7 +127,10 @@ export const CheckboxGroup = ({
   return (
     <CheckboxGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset className={cn(className, fieldset)} style={style}>
+        <fieldset
+          className={cn(className, checkboxGroupStyle.fieldset)}
+          style={style}
+        >
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>

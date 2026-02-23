@@ -6,7 +6,7 @@ import { useContext } from 'react'
 import { StepList } from '../../StepList'
 import { Text } from '../../Text'
 import { Data } from './helper'
-import { steppedListCardStep, steppedListCardStepTitle } from './styles.css'
+import { steppedListCardStyle } from './styles.css'
 
 type StepProps = {
   /**
@@ -41,7 +41,7 @@ export const SteppedList = ({
   return completed ? (
     <StepList.Item
       bulletContent={<CheckIcon />}
-      className={steppedListCardStep}
+      className={steppedListCardStyle.step}
       data-testid={dataTestId}
       onClick={() => containerData.setCurrentStep(stepNumber)}
       prominence={active ? 'strong' : 'default'}
@@ -50,7 +50,7 @@ export const SteppedList = ({
     >
       <Text
         as="h3"
-        className={steppedListCardStepTitle}
+        className={steppedListCardStyle.stepTitle}
         variant={active ? 'bodyStrong' : 'body'}
       >
         {stepTitle}
@@ -59,7 +59,7 @@ export const SteppedList = ({
   ) : (
     <StepList.Item
       bulletContent={stepIcon ?? String(stepNumber)}
-      className={steppedListCardStep}
+      className={steppedListCardStyle.step}
       data-testid={dataTestId}
       onClick={() => containerData.setCurrentStep(stepNumber)}
       prominence={active ? 'strong' : undefined}
@@ -68,7 +68,7 @@ export const SteppedList = ({
     >
       <Text
         as="h3"
-        className={steppedListCardStepTitle}
+        className={steppedListCardStyle.stepTitle}
         variant={active ? 'bodyStrong' : 'body'}
       >
         {stepTitle}

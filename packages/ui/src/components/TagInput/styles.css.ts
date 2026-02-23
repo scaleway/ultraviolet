@@ -8,7 +8,7 @@ export const TAGINPUT_SIZE_PADDING = {
   small: '0.5',
 } as const
 
-export const tagInputContainer = recipe({
+const container = recipe({
   base: {
     backgroundColor: theme.colors.neutral.background,
     border: `1px solid ${theme.colors.neutral.border}`,
@@ -71,7 +71,7 @@ export const tagInputContainer = recipe({
   },
 })
 
-export const tagInputDataContainer = style({
+const dataContainer = style({
   alignItems: 'center',
   display: 'flex',
   flex: 1,
@@ -80,13 +80,13 @@ export const tagInputDataContainer = style({
   height: '100%',
 })
 
-export const tagInputStateContainer = style({
+const stateContainer = style({
   alignItems: 'center',
   display: 'flex',
   gap: theme.space[1],
 })
 
-export const tagInput = style({
+const tagInput = style({
   background: 'inherit',
   border: 'none',
   color: theme.colors.neutral.text,
@@ -107,3 +107,10 @@ export const tagInput = style({
     },
   },
 })
+
+export const tagInputStyle = {
+  container,
+  dataContainer,
+  stateContainer,
+  tagInput,
+}

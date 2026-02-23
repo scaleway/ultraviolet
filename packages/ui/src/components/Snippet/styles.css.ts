@@ -4,7 +4,7 @@ import { recipe } from '@vanilla-extract/recipes'
 
 export const rowsVar = createVar()
 
-export const pretext = recipe({
+const pretext = recipe({
   base: {
     counterReset: 'section',
     height: 'auto',
@@ -37,7 +37,7 @@ export const pretext = recipe({
   },
 })
 
-export const line = recipe({
+const line = recipe({
   base: {
     display: 'block',
     whiteSpace: 'pre',
@@ -83,7 +83,7 @@ function makePrefix(type: 'lines' | 'command') {
   }
 }
 
-export const prefix = styleVariants({
+const prefix = styleVariants({
   command: makePrefix('command'),
   lines: makePrefix('lines'),
 })
@@ -97,12 +97,12 @@ const snippetContainerBase = style({
   position: 'relative',
 })
 
-export const snippetContainer = styleVariants({
+const container = styleVariants({
   multiline: [snippetContainerBase, { width: '100%' }],
   oneLine: [snippetContainerBase],
 })
 
-export const stackStyle = style({
+const stackStyle = style({
   width: '100%',
 })
 
@@ -114,7 +114,8 @@ const buttonContainerBase = style({
   right: 0,
   top: 0,
 })
-export const buttonContainer = styleVariants({
+
+const buttonContainer = styleVariants({
   multiline: [
     buttonContainerBase,
     {
@@ -128,7 +129,7 @@ export const buttonContainer = styleVariants({
   ],
 })
 
-export const showMoreContainer = styleVariants({
+const showMoreContainer = styleVariants({
   false: {
     boxShadow: `0px -22px 19px -6px ${theme.colors.neutral.backgroundWeak}`,
     width: '100%',
@@ -139,7 +140,7 @@ export const showMoreContainer = styleVariants({
   },
 })
 
-export const showMoreButton = style({
+const showMoreButton = style({
   background: 'none',
   border: 'none',
   cursor: 'pointer',
@@ -148,13 +149,13 @@ export const showMoreButton = style({
   width: '100%',
 })
 
-export const centeredText = style({
+const centeredText = style({
   alignItems: 'center',
   display: 'flex',
   justifyContent: 'center',
 })
 
-export const animatedArrowIcon = styleVariants({
+const animatedArrowIcon = styleVariants({
   false: {
     transform: 'rotate(0deg)',
     transformOrigin: 'center',
@@ -166,3 +167,16 @@ export const animatedArrowIcon = styleVariants({
     transition: 'transform 300ms ease-in-out',
   },
 })
+
+export const snippetStyle = {
+  pretext,
+  line,
+  prefix,
+  container,
+  stackStyle,
+  buttonContainer,
+  showMoreContainer,
+  showMoreButton,
+  centeredText,
+  animatedArrowIcon,
+}

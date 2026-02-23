@@ -8,7 +8,7 @@ const shineAnimation = keyframes({
   to: { left: '100%' },
 })
 
-export const progressContainer = style({
+const container = style({
   backgroundColor: theme.colors.neutral.backgroundStrong,
   borderRadius: theme.radii.default,
   height: theme.sizing['050'],
@@ -19,7 +19,7 @@ export const progressContainer = style({
   width: '100%',
 })
 
-export const customText = styleVariants({
+const customText = styleVariants({
   withSuffix: {
     minWidth: theme.sizing[500],
     width: 'max-content',
@@ -30,7 +30,7 @@ export const customText = styleVariants({
   },
 })
 
-export const progressBar = style({
+const progressBar = style({
   animation: `${shineAnimation} 1s linear infinite`,
   background:
     'linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0))',
@@ -52,7 +52,7 @@ const base = style({
   width: percentageValue,
 })
 
-export const filledBarSentiments = styleVariants(
+const filledBarSentiments = styleVariants(
   SENTIMENTS_WITHOUT_NEUTRAL.reduce(
     (acc, sentimentKey) => ({
       ...acc,
@@ -69,3 +69,9 @@ export const filledBarSentiments = styleVariants(
     >,
   ),
 )
+export const progressBarStyle = {
+  container,
+  customText,
+  progressBar,
+  filledBarSentiments,
+}

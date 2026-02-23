@@ -4,12 +4,8 @@ import { useMemo } from 'react'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Tooltip } from '../../Tooltip'
+import { selectInputStyle } from '../styles.css'
 import type { OptionType } from '../types'
-import {
-  dropdownInfo,
-  dropdownInfoContainer,
-  dropdownInfoTextItem,
-} from './dropdown.css'
 
 type DisplayOptionProps = {
   option: OptionType
@@ -47,14 +43,14 @@ export const DisplayOption = ({
         >
           <Stack
             alignItems="center"
-            className={dropdownInfoContainer}
+            className={selectInputStyle.dropdownInfoContainer}
             direction="row"
             gap={0.5}
           >
             {option.optionalInfo ?? null}
             <Text
               as="span"
-              className={dropdownInfoTextItem}
+              className={selectInputStyle.dropdownInfoTextItem}
               placement="left"
               variant={textVariant}
             >
@@ -89,13 +85,13 @@ export const DisplayOption = ({
         >
           <Stack
             alignItems="baseline"
-            className={dropdownInfoContainer}
+            className={selectInputStyle.dropdownInfoContainer}
             direction="row"
             gap={0.5}
           >
             <Text
               as="span"
-              className={dropdownInfoTextItem}
+              className={selectInputStyle.dropdownInfoTextItem}
               placement="left"
               variant={textVariant}
             >
@@ -108,7 +104,9 @@ export const DisplayOption = ({
             ) : null}
           </Stack>
           {option.optionalInfo ? (
-            <div className={dropdownInfo}>{option.optionalInfo}</div>
+            <div className={selectInputStyle.dropdownInfo}>
+              {option.optionalInfo}
+            </div>
           ) : null}
         </Stack>
       </Tooltip>
@@ -127,14 +125,14 @@ export const DisplayOption = ({
           {option.optionalInfo ?? null}
 
           <Stack
-            className={dropdownInfoContainer}
+            className={selectInputStyle.dropdownInfoContainer}
             data-testid={`option-stack-${option.value}`}
             direction="column"
             gap={0.5}
           >
             <Text
               as="span"
-              className={dropdownInfoTextItem}
+              className={selectInputStyle.dropdownInfoTextItem}
               placement="left"
               variant={textVariant}
             >
@@ -166,21 +164,23 @@ export const DisplayOption = ({
         gap={0.5}
       >
         <Stack
-          className={dropdownInfoContainer}
+          className={selectInputStyle.dropdownInfoContainer}
           direction="row"
           gap={0.5}
           justifyContent="space-between"
         >
           <Text
             as="span"
-            className={dropdownInfoTextItem}
+            className={selectInputStyle.dropdownInfoTextItem}
             placement="left"
             variant={textVariant}
           >
             {option.label}
           </Text>
           {option.optionalInfo ? (
-            <div className={dropdownInfo}>{option.optionalInfo}</div>
+            <div className={selectInputStyle.dropdownInfo}>
+              {option.optionalInfo}
+            </div>
           ) : null}
         </Stack>
         {option.description ? (

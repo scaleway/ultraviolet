@@ -1,5 +1,6 @@
 import { style } from '@vanilla-extract/css'
 
-export const tooltip = style({
+const tooltip = style({
   pointerEvents: 'none',
 })
+export const tooltipStyle = { tooltip }

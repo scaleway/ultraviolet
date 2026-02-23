@@ -26,3 +26,13 @@ export const optionSelectInputError = style({})
 export const optionPadded = style({
   padding: `0 ${theme.space[2]}`,
 })
+export const selectableCardOptionGroupStyle = {
+  selectableCardOptionFieldSet,
+  disabledImage,
+  selectableCard,
+  optionFullHeight,
+  optionSelectInput,
+  optionSelectInputDisabled,
+  optionSelectInputError,
+  optionPadded,
+}

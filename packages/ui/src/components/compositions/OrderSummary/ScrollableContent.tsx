@@ -9,14 +9,7 @@ import {
   formatNumber,
 } from './helpers'
 import { OrderSummaryContext } from './Provider'
-import {
-  orderSummaryAnchor,
-  orderSummaryAnchorIcon,
-  orderSummaryCategory,
-  orderSummaryDetails,
-  orderSummaryNumberInput,
-  orderSummaryScrollableContainer,
-} from './styles.css'
+import { orderSummaryStyle } from './styles.css'
 import type { ItemsType, SubCategoryType } from './types'
 
 const SubCategoryPrice = ({
@@ -167,9 +160,9 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
             variant="bodyStrong"
           >
             {category.anchor ? (
-              <a className={orderSummaryAnchor} href={category.anchor}>
+              <a className={orderSummaryStyle.anchor} href={category.anchor}>
                 <AttachIcon
-                  className={orderSummaryAnchorIcon({ size: 'medium' })}
+                  className={orderSummaryStyle.anchorIcon({ size: 'medium' })}
                   sentiment="info"
                 />
                 {category.category}
@@ -190,9 +183,9 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
           variant="bodyStrong"
         >
           {category.anchor ? (
-            <a className={orderSummaryAnchor} href={category.anchor}>
+            <a className={orderSummaryStyle.anchor} href={category.anchor}>
               <AttachIcon
-                className={orderSummaryAnchorIcon({ size: 'medium' })}
+                className={orderSummaryStyle.anchorIcon({ size: 'medium' })}
                 sentiment="info"
               />
               {category.category}
@@ -205,7 +198,7 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
       {category.customContent}
       {category.numberInput ? (
         <NumberInput
-          className={orderSummaryNumberInput}
+          className={orderSummaryStyle.numberInput}
           controls={category.numberInputControls}
           onChange={category.onChangeInput}
           size="small"
@@ -264,9 +257,9 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => (
             variant="bodySmallStrong"
           >
             {subCategory.anchor ? (
-              <a className={orderSummaryAnchor} href={subCategory.anchor}>
+              <a className={orderSummaryStyle.anchor} href={subCategory.anchor}>
                 <AttachIcon
-                  className={orderSummaryAnchorIcon({ size: 'small' })}
+                  className={orderSummaryStyle.anchorIcon({ size: 'small' })}
                   sentiment="info"
                 />
                 {subCategory.title}
@@ -287,9 +280,9 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => (
           variant="bodySmallStrong"
         >
           {subCategory.anchor ? (
-            <a className={orderSummaryAnchor} href={subCategory.anchor}>
+            <a className={orderSummaryStyle.anchor} href={subCategory.anchor}>
               <AttachIcon
-                className={orderSummaryAnchorIcon({ size: 'small' })}
+                className={orderSummaryStyle.anchorIcon({ size: 'small' })}
                 sentiment="info"
               />
               {subCategory.title}
@@ -311,7 +304,7 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => (
       ) : null}
       {subCategory.numberInput ? (
         <NumberInput
-          className={orderSummaryNumberInput}
+          className={orderSummaryStyle.numberInput}
           controls={subCategory.numberInputControls}
           onChange={subCategory.onChangeInput}
           size="small"
@@ -321,7 +314,7 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => (
       ) : null}
       <SubCategoryPrice subCategory={subCategory} />
     </Stack>
-    <Stack className={orderSummaryDetails} direction="column" gap={0.5}>
+    <Stack className={orderSummaryStyle.details} direction="column" gap={0.5}>
       {subCategory.details?.map((detail, index) =>
         detail ? (
           <Text
@@ -343,11 +336,11 @@ export const ScrollableContent = () => {
   const { items } = useContext(OrderSummaryContext)
 
   return (
-    <Stack className={orderSummaryScrollableContainer} gap={3}>
+    <Stack className={orderSummaryStyle.scrollableContainer} gap={3}>
       {items.map(category =>
         Object.keys(category).length > 0 && category.category ? (
           <Stack
-            className={orderSummaryCategory}
+            className={orderSummaryStyle.category}
             gap={1.5}
             key={category.category}
           >

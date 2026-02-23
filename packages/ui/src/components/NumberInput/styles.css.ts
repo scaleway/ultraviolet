@@ -3,7 +3,7 @@ import { styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { SIZES } from './constant'
 
-export const numberinputSideContainer = styleVariants({
+const sideContainer = styleVariants({
   large: {
     height: theme.sizing[SIZES.large],
     padding: `${theme.space['0.5']} ${theme.space['1']}`,
@@ -18,7 +18,7 @@ export const numberinputSideContainer = styleVariants({
   },
 })
 
-export const inputContainer = recipe({
+const inputContainer = recipe({
   base: {
     background: 'inherit',
     borderColor: 'inherit',
@@ -38,7 +38,7 @@ export const inputContainer = recipe({
   },
 })
 
-export const unit = recipe({
+const unit = recipe({
   base: { alignItems: 'center', display: 'flex', padding: theme.space[1] },
   defaultVariants: {
     disabled: false,
@@ -76,7 +76,7 @@ export const unit = recipe({
   },
 })
 
-export const numberinput = recipe({
+const numberinput = recipe({
   base: {
     background: 'none',
     border: 'none',
@@ -153,7 +153,7 @@ export const numberinput = recipe({
   },
 })
 
-export const numberinputContainer = recipe({
+const container = recipe({
   base: {
     alignItems: 'center',
     border: `1px solid ${theme.colors.neutral.border}`,
@@ -220,3 +220,11 @@ export const numberinputContainer = recipe({
     },
   },
 })
+
+export const numberInputStyle = {
+  sideContainer,
+  inputContainer,
+  unit,
+  numberinput,
+  container,
+}

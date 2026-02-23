@@ -13,13 +13,7 @@ import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 import { IllustrationContainer } from './IllustrationContainer'
 import { MultiStateInput } from './MultiStateInput'
-import {
-  containerSelectableCard,
-  indentedCard,
-  labelContainerSelectableCardLabel,
-  labelContainerSelectableCardNoLabel,
-  stackSelectableCard,
-} from './styles.css'
+import { selectableCardStyle } from './styles.css'
 import type { SelectableCardProps } from './types'
 import { inputDisplay, labelDisplay, widthSelectable } from './variables.css'
 
@@ -128,7 +122,7 @@ export const SelectableCard = forwardRef(
           alignItems="flex-start"
           className={cn(
             className,
-            containerSelectableCard({
+            selectableCardStyle.container({
               cursor:
                 (type === 'checkbox' || type === 'toggle') && isComplexChildren
                   ? 'default'
@@ -136,8 +130,8 @@ export const SelectableCard = forwardRef(
               image,
             }),
             label
-              ? labelContainerSelectableCardLabel
-              : labelContainerSelectableCardNoLabel,
+              ? selectableCardStyle.labelContainerSelectableCardLabel
+              : selectableCardStyle.labelContainerSelectableCardNoLabel,
           )}
           data-checked={checked}
           data-disabled={disabled}
@@ -190,8 +184,10 @@ export const SelectableCard = forwardRef(
             {children ? (
               <Stack
                 className={cn(
-                  stackSelectableCard,
-                  !!label && showTick && indented ? indentedCard : undefined,
+                  selectableCardStyle.stack,
+                  !!label && showTick && indented
+                    ? selectableCardStyle.indentedCard
+                    : undefined,
                 )}
                 data-has-default-cursor={
                   (type === 'checkbox' || type === 'toggle') &&

@@ -7,7 +7,7 @@ import { cn } from '@ultraviolet/utils'
 import type { CSSProperties } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { passwordCheckContainer } from './styles.css'
+import { passwordCheckStyle } from './styles.css'
 
 type Rule = {
   name: string
@@ -37,7 +37,7 @@ export const PasswordCheck = ({
   style,
 }: PasswordCheckProps) => (
   <div
-    className={cn(className, passwordCheckContainer)}
+    className={cn(className, passwordCheckStyle.container)}
     data-testid={dataTestId}
     style={style}
   >

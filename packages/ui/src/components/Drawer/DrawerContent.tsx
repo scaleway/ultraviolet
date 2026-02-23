@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
-import { drawerContent } from './styles.css'
+import { drawerStyle } from './styles.css'
 
 export const DrawerContent = ({ children }: { children: ReactNode }) => (
-  <div className={drawerContent}>{children}</div>
+  <div className={drawerStyle.content}>{children}</div>
 )

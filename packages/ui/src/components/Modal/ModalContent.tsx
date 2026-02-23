@@ -7,7 +7,7 @@ import type { ComponentProps, CSSProperties } from 'react'
 import { Button } from '../Button'
 import type { Modal } from '.'
 import { Dialog } from './components/Dialog'
-import { modalContainer } from './styles.css'
+import { modalStyle } from './styles.css'
 import type { ModalPlacement, ModalSize } from './types'
 
 type ModalContentProps = ComponentProps<typeof Modal> & {
@@ -74,7 +74,7 @@ export const ModalContent = ({
               visible,
             })
           : children}
-        <div className={modalContainer}>
+        <div className={modalStyle.container}>
           {isClosable ? (
             <Button
               aria-label="close"

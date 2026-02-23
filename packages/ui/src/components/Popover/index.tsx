@@ -18,7 +18,7 @@ import { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import type { SIZES_WIDTH } from './constant'
-import { popover, stackPopover } from './styles.css'
+import { popoverStyle } from './styles.css'
 
 type SentimentType = 'neutral' | 'primary'
 
@@ -33,7 +33,7 @@ const ContentWrapper = ({
   children,
   sentiment,
 }: ContentWrapperProps) => (
-  <Stack className={stackPopover} gap={1}>
+  <Stack className={popoverStyle.stack} gap={1}>
     <Stack direction="row" justifyContent="space-between">
       <Text
         as="h3"
@@ -146,7 +146,7 @@ export const Popover = forwardRef(
     return (
       <Popup
         align={align}
-        className={cn(className, popover({ sentiment, size }))}
+        className={cn(className, popoverStyle.popover({ sentiment, size }))}
         data-testid={dataTestId}
         debounceDelay={0}
         dynamicDomRendering={dynamicDomRendering}

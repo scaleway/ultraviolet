@@ -3,7 +3,7 @@ import { createVar } from '@vanilla-extract/css'
 import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { recipe } from '@vanilla-extract/recipes'
 import type { Color } from '../../theme'
-import { drawerBase } from '../Drawer/styles.css'
+import { drawerStyle } from '../Drawer/styles.css'
 
 export const thicknessSeparator = createVar()
 
@@ -19,7 +19,7 @@ function makeColors(isBackground: boolean, sentiment: Color) {
   }
 }
 
-export const iconWraperSeparator = recipe({
+const iconWraper = recipe({
   base: {
     alignItems: 'center',
     display: 'flex',
@@ -50,7 +50,7 @@ export const iconWraperSeparator = recipe({
     },
   },
 })
-export const hr = recipe({
+const hr = recipe({
   base: {
     border: 0,
     margin: 0,
@@ -78,7 +78,7 @@ export const hr = recipe({
       neutral: {
         backgroundColor: theme.colors.neutral.borderWeak,
         selectors: {
-          [`${drawerBase} &`]: {
+          [`${drawerStyle.base} &`]: {
             backgroundColor: theme.colors.neutral.border,
             minHeight: 1,
           },
@@ -92,6 +92,10 @@ export const hr = recipe({
   },
 })
 
-export type SeparatorVariants = NonNullable<
-  RecipeVariants<typeof iconWraperSeparator>
->
+export type SeparatorVariants = NonNullable<RecipeVariants<typeof iconWraper>>
+
+export const separatorStyle = {
+  thicknessSeparator,
+  iconWraper,
+  hr,
+}

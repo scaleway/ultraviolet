@@ -4,7 +4,7 @@
 import type { ReactNode, RefObject } from 'react'
 import { useContext } from 'react'
 import { ChipContext } from './ChipContext'
-import { buttonContainer } from './styles.css'
+import { chipStyle } from './styles.css'
 
 type ChipIconType = {
   /**
@@ -31,7 +31,7 @@ export const ChipIcon = ({
   if (onClick) {
     return (
       <button
-        className={buttonContainer}
+        className={chipStyle.buttonContainer}
         data-active={isActive}
         data-disabled={disabled}
         data-has-onclick={!!onClick && !disabled}
@@ -52,7 +52,7 @@ export const ChipIcon = ({
 
   return (
     <div
-      className={buttonContainer}
+      className={chipStyle.buttonContainer}
       data-active={isActive}
       data-disabled={disabled}
       data-testid={dataTestId}

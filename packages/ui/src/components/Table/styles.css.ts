@@ -20,16 +20,16 @@ const colorChange = keyframes({
   },
 })
 
-export const table = style({
+const table = style({
   borderCollapse: 'collapse',
   boxSizing: 'content-box',
   width: '100%',
 })
 
-export const tableStripped = style({})
-export const tableBordered = style({})
+const stripped = style({})
+const bordered = style({})
 
-export const tableCell = recipe({
+const cell = recipe({
   base: {
     display: 'table-cell',
     fontSize: theme.typography.bodySmall.fontSize,
@@ -59,11 +59,11 @@ export const tableCell = recipe({
   },
 })
 
-export const tableHeader = style({
+const header = style({
   borderBottom: `1px solid ${theme.colors.neutral.border}`,
 })
 
-export const tableHeaderCell = recipe({
+const headerCell = recipe({
   base: {
     display: 'table-cell',
     maxWidth: headerCellMaxWidth,
@@ -96,14 +96,14 @@ export const tableHeaderCell = recipe({
   },
 })
 
-export const headerCellText = style({
+const headerCellText = style({
   alignItems: 'center',
   display: 'flex',
   flexDirection: 'row',
   gap: theme.space[1],
 })
 
-export const tableExpandableWrapper = style({
+const expandableWrapper = style({
   background: theme.colors.neutral.backgroundWeak,
   borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
   borderTop: `1px solid ${theme.colors.neutral.border}`,
@@ -114,24 +114,40 @@ export const tableExpandableWrapper = style({
   width: '100%',
 })
 
-export const tableCheckboxContainer = style({
+const checkboxContainer = style({
   display: 'flex',
   width: theme.sizing[SELECTABLE_CHECKBOX_SIZE],
 })
 
-export const tableTrAnimation = style({
+const trAnimation = style({
   animation: `${colorChange} 3s linear`,
 })
 
-export const tableSkeletonRow = style({ cursor: 'progress' })
-export const tableSkeleton = style({ maxWidth: '100%', width: '80%' })
-export const tableRow = style({
+const skeletonRow = style({ cursor: 'progress' })
+const skeleton = style({ maxWidth: '100%', width: '80%' })
+const row = style({
   selectors: {
-    [`${tableStripped} tbody &:nth-of-type(even)`]: {
+    [`${stripped} tbody &:nth-of-type(even)`]: {
       background: theme.colors.neutral.backgroundWeak,
     },
-    [`${tableBordered} tbody &`]: {
+    [`${bordered} tbody &`]: {
       borderBottom: `1px solid ${theme.colors.neutral.borderWeak}`,
     },
   },
 })
+
+export const tableStyle = {
+  stripped,
+  table,
+  bordered,
+  cell,
+  header,
+  headerCell,
+  headerCellText,
+  expandableWrapper,
+  checkboxContainer,
+  trAnimation,
+  skeletonRow,
+  skeleton,
+  row,
+}

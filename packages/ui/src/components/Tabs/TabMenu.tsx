@@ -10,7 +10,7 @@ import type {
 } from 'react'
 import { forwardRef } from 'react'
 import { Menu } from '../Menu'
-import { tabsArrowIcon, tabsButton, tabsMenuWrapper } from './styles.css'
+import { tabsStyle } from './styles.css'
 
 type TabMenuProps = {
   children: ReactNode
@@ -33,21 +33,21 @@ export const TabMenu = forwardRef(
     }: TabMenuProps,
     ref: Ref<HTMLButtonElement>,
   ) => (
-    <div className={tabsMenuWrapper}>
+    <div className={tabsStyle.menuWrapper}>
       <Menu
         disclosure={
           <button
             aria-disabled={disabled ?? 'false'}
             aria-haspopup="menu"
             aria-selected={ariaSelected}
-            className={cn(className, tabsButton)}
+            className={cn(className, tabsStyle.button)}
             disabled={disabled}
             role="tab"
             type="button"
             {...props}
           >
             {disclosure}
-            <ArrowDownIcon className={tabsArrowIcon} />
+            <ArrowDownIcon className={tabsStyle.arrowIcon} />
           </button>
         }
         id={id}

@@ -16,7 +16,7 @@ const IMAGE_SIZES = {
 
 export type SizesTypes = keyof typeof CONTAINER_SIZES
 
-export const emptyStateContainer = recipe({
+const container = recipe({
   base: {
     margin: '0 auto',
     width: '100%',
@@ -42,7 +42,7 @@ export const emptyStateContainer = recipe({
   },
 })
 
-export const paddedStack = style({ padding: theme.space[5] })
+const paddedStack = style({ padding: theme.space[5] })
 
 function createImageStyle(size: SizesTypes) {
   return {
@@ -51,8 +51,14 @@ function createImageStyle(size: SizesTypes) {
     width: `${IMAGE_SIZES[size]}rem`,
   }
 }
-export const emptyStateImage = styleVariants({
+const image = styleVariants({
   large: createImageStyle('large'),
   medium: createImageStyle('medium'),
   small: createImageStyle('small'),
 })
+
+export const emptyStateStyle = {
+  container,
+  paddedStack,
+  image,
+}

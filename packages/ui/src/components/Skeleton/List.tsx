@@ -1,17 +1,16 @@
 'use client'
 
 import { Line } from './Line'
-import {
-  listSkeletonDiv,
-  listSkeletonLi,
-  listSkeletonUl,
-} from './stylesVariants.css'
+import { skeletonStyle } from './styles.css'
 
 const Item = ({ col = 3 }: { col: number }) => (
-  <li className={listSkeletonLi}>
+  <li className={skeletonStyle.listSkeletonLi}>
     {Array.from({ length: col }, (_, i) => (
       // biome-ignore lint/suspicious/noArrayIndexKey: to fix
-      <div className={listSkeletonDiv} key={`skeleton-list-col-${i}`}>
+      <div
+        className={skeletonStyle.listSkeletonDiv}
+        key={`skeleton-list-col-${i}`}
+      >
         <Line />
       </div>
     ))}
@@ -25,7 +24,7 @@ export const List = ({
   length?: number
   col?: number
 }) => (
-  <ul className={listSkeletonUl}>
+  <ul className={skeletonStyle.listSkeletonUl}>
     {Array.from({ length }, (_, i) => (
       // biome-ignore lint/suspicious/noArrayIndexKey: to fix
       <Item col={col} key={`skeleton-list-${i}`} />

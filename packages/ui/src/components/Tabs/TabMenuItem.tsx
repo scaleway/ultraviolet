@@ -3,7 +3,7 @@
 import type { ComponentProps } from 'react'
 import { useMemo } from 'react'
 import { Menu } from '../Menu'
-import { tabsTextSelected } from './styles.css'
+import { tabsStyle } from './styles.css'
 import { useTabsContext } from './TabsContext'
 
 type TabMenuItemProps = {
@@ -26,7 +26,7 @@ export const TabMenuItem = ({
   return (
     <Menu.Item
       aria-selected={isSelected}
-      className={tabsTextSelected[isSelected ? 'selected' : 'default']}
+      className={tabsStyle.textSelected[isSelected ? 'selected' : 'default']}
       onClick={event => {
         if (value !== undefined) {
           onChange(value)

@@ -11,7 +11,7 @@ import type {
 import { forwardRef, useMemo } from 'react'
 import type { UltravioletUITheme } from '../../theme'
 import type { AlignItemsType, JustifyContentType } from './styles.css'
-import { sprinkles, stack } from './styles.css'
+import { sprinkles, stackStyle } from './styles.css'
 import type { PolymorphicComponentProps } from './types'
 import { flexVar, maxWidthVar, minWidthVar, widthVar } from './variables.css'
 
@@ -138,7 +138,7 @@ const IStack = forwardRef<any, PropsWithChildren<StackProps>>(
           : { xxsmall: justifyContent },
     })
 
-    const combinedClassName = [className, stack, sprinkleClassName]
+    const combinedClassName = [className, stackStyle.stack, sprinkleClassName]
       .filter(Boolean)
       .join(' ')
 

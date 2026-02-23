@@ -18,15 +18,7 @@ import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 import { ExpandableCardTitle } from './components/Title'
 import type { EXPANDABLE_CARD_SIZE } from './constants'
-import {
-  arrowIcon,
-  content,
-  detailsClass,
-  dragIconContainer,
-  dropableArea,
-  stackClass,
-  summaryClass,
-} from './styles.css'
+import { expandableCardStyle } from './styles.css'
 
 type DraggableListType = { value?: string }
 type ExpandableCardSize = (typeof EXPANDABLE_CARD_SIZE)[number]
@@ -153,7 +145,7 @@ const BaseExpandableCard = forwardRef(
 
     return (
       <Stack
-        className={stackClass}
+        className={expandableCardStyle.stack}
         data-draggable={draggable}
         data-name={name}
         data-value={value}
@@ -170,7 +162,7 @@ const BaseExpandableCard = forwardRef(
       >
         {draggable ? (
           <Stack
-            className={dragIconContainer}
+            className={expandableCardStyle.dragIconContainer}
             data-testid={`draggable-icon-${value}`}
             data-visible={isHovered}
             justifyContent="center"
@@ -206,7 +198,7 @@ const BaseExpandableCard = forwardRef(
           </Stack>
         ) : null}
         <details
-          className={cn(className, detailsClass)}
+          className={cn(className, expandableCardStyle.details)}
           data-clicking={clicking}
           data-testid={dataTestId}
           key={clicking ? 'closed' : 'open'}
@@ -217,7 +209,7 @@ const BaseExpandableCard = forwardRef(
         >
           {/** biome-ignore lint/a11y/noStaticElementInteractions: need to add onClick/onKeyDown to use onToggleExpand */}
           <summary
-            className={summaryClass}
+            className={expandableCardStyle.summary}
             data-disabled={!!disabled}
             data-testid={dataTestId ? `${dataTestId}-summary` : undefined}
             onClick={event => {
@@ -242,7 +234,7 @@ const BaseExpandableCard = forwardRef(
             ref={headerRef}
           >
             <ArrowDownIcon
-              className={arrowIcon}
+              className={expandableCardStyle.arrowIcon}
               disabled={disabled}
               sentiment="neutral"
             />
@@ -254,13 +246,13 @@ const BaseExpandableCard = forwardRef(
               header
             )}
           </summary>
-          <div className={content}>{children}</div>
+          <div className={expandableCardStyle.content}>{children}</div>
         </details>
         {draggable && index === 0 ? (
           // biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop
           // biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop
           <div
-            className={dropableArea}
+            className={expandableCardStyle.dropableArea}
             data-first
             onDragLeave={event => onDrag(event, 'transparent', true)}
             onDragOver={event =>
@@ -274,7 +266,7 @@ const BaseExpandableCard = forwardRef(
           // biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop
           // biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop
           <div
-            className={dropableArea}
+            className={expandableCardStyle.dropableArea}
             data-testid={`${value}-dropable-area`}
             onDragLeave={event => onDrag(event, 'transparent')}
             onDragOver={event => onDrag(event, theme.colors.primary.border)}

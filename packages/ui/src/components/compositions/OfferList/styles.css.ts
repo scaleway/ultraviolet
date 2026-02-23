@@ -30,7 +30,7 @@ function createBannerStyle(
     color: theme.colors[sentiment][disabled ? 'textDisabled' : 'text'],
   }
 }
-export const offerList = style({})
+const offerList = style({})
 
 globalStyle(`${offerList} td:first-child, ${offerList} th:first-child`, {
   maxWidth: theme.sizing[700],
@@ -38,7 +38,7 @@ globalStyle(`${offerList} td:first-child, ${offerList} th:first-child`, {
   width: theme.sizing[700],
 })
 
-export const offerListBanner = style({
+const banner = style({
   background: theme.colors.neutral.backgroundWeak,
   borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
   cursor: 'auto',
@@ -48,7 +48,7 @@ export const offerListBanner = style({
   width: '100%',
 })
 
-export const offerListBannerText = recipe({
+const bannerText = recipe({
   base: {
     border: `1px solid ${theme.colors.neutral.border}`,
     borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
@@ -104,7 +104,7 @@ export const offerListBannerText = recipe({
   },
 })
 
-export const offerListBannerCell = style({
+const bannerCell = style({
   borderTopLeftRadius: 0,
   borderTopRightRadius: 0,
   height: 'fit-content',
@@ -114,7 +114,7 @@ export const offerListBannerCell = style({
   transition: 'box-shadow 200ms ease, border-color 200ms ease',
 })
 
-export const offerListBannerStack = recipe({
+const bannerStack = recipe({
   base: {
     borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
     borderTop: `1px solid ${theme.colors.neutral.border}`,
@@ -146,13 +146,13 @@ export const offerListBannerStack = recipe({
   },
 })
 
-export const offerListBadge = style({
+const badge = style({
   left: theme.space[5],
   position: 'absolute',
   transform: 'translateY(-160%)',
 })
 
-export const offerListNoPaddingCell = style({
+const noPaddingCell = style({
   padding: 0,
   selectors: {
     '&:first-of-type': {
@@ -162,36 +162,36 @@ export const offerListNoPaddingCell = style({
   width: 32,
 })
 
-export const offerListRowSelected = style({
+const rowSelected = style({
   color: theme.colors.primary.text,
 })
-export const offerListRowSelectedNotExpandable = style({
+const rowSelectedNotExpandable = style({
   cursor: 'pointer',
 })
-export const offerListRowSelectedExpandable = style({})
+const rowSelectedExpandable = style({})
 
-export const offerListRowBanner = style({})
-export const offerListCellNoRadius = style({
+const rowBanner = style({})
+const cellNoRadius = style({
   selectors: {
-    [`${offerListRowBanner} &, ${offerListRowBanner} &:first-child`]: {
+    [`${rowBanner} &, ${rowBanner} &:first-child`]: {
       borderBottomLeftRadius: 0,
     },
-    [`${offerListRowBanner} &, ${offerListRowBanner} &:last-child`]: {
+    [`${rowBanner} &, ${rowBanner} &:last-child`]: {
       borderBottomRightRadius: 0,
     },
   },
 })
 
-export const offerListRowSelectableContainer = style({ display: 'flex' })
+const rowSelectableContainer = style({ display: 'flex' })
 
-export const offerListRowExpandable = style({
+const rowExpandable = style({
   padding: expandablePadding,
 })
 
-export const offerListCell = style({
+const cell = style({
   whiteSpace: 'pre-line',
   selectors: {
-    [`${offerListRowSelectedNotExpandable} &:nth-child(2), ${offerListRowSelectedExpandable} &:nth-child(3)`]:
+    [`${rowSelectedNotExpandable} &:nth-child(2), ${rowSelectedExpandable} &:nth-child(3)`]:
       {
         fontWeight: theme.typography.bodySmallStrong.weight,
       },
@@ -199,14 +199,35 @@ export const offerListCell = style({
 })
 
 globalStyle(
-  `${offerListRowSelected}[aria-expanded="true"] td, ${offerListRowSelected}[aria-expanded="true"] td:first-child, ${offerListRowSelected}[aria-expanded="true"] td:last-child, ${offerListRowSelected}[aria-expanded="true"] + tr td`,
+  `${rowSelected}[aria-expanded="true"] td, ${rowSelected}[aria-expanded="true"] td:first-child, ${rowSelected}[aria-expanded="true"] td:last-child, ${rowSelected}[aria-expanded="true"] + tr td`,
   {
     borderColor: theme.colors.primary.border,
   },
 )
 
-export const offerListLoadingCell = style({ height: '100%' })
+const loadingCell = style({ height: '100%' })
 
-export const offerListSelectedCell = style({
+const selectedCell = style({
   borderColor: `${theme.colors.primary.border} !important`,
 })
+
+export const offerListStyle = {
+  expandablePadding,
+  offerList,
+  banner,
+  bannerText,
+  bannerCell,
+  bannerStack,
+  badge,
+  noPaddingCell,
+  rowSelected,
+  rowSelectedNotExpandable,
+  rowSelectedExpandable,
+  rowBanner,
+  cellNoRadius,
+  rowSelectableContainer,
+  rowExpandable,
+  cell,
+  loadingCell,
+  selectedCell,
+}

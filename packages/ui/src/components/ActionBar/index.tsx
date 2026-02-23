@@ -5,7 +5,7 @@ import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { Stack } from '../Stack'
-import { actionBar, rankActionBar, stackActionBar } from './styles.css'
+import { actionBarStyle, rankActionBar } from './styles.css'
 
 type ActionBarProps = {
   children: ReactNode
@@ -36,7 +36,7 @@ export const ActionBar = ({
 }: ActionBarProps) =>
   createPortal(
     <div
-      className={cn(className, actionBar)}
+      className={cn(className, actionBarStyle.actionBar)}
       data-testid={dataTestId}
       role={role}
       style={{
@@ -46,7 +46,7 @@ export const ActionBar = ({
         ...style,
       }}
     >
-      <Stack alignItems="center" className={stackActionBar}>
+      <Stack alignItems="center" className={actionBarStyle.stackActionBar}>
         {children}
       </Stack>
     </div>,

@@ -7,7 +7,7 @@ import { cn } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { useCallback, useMemo } from 'react'
 import { getDataColors } from '../../helpers/treeMap'
-import { treeMapContainer } from './styles.css'
+import { treeMapChartStyle } from './styles.css'
 import { Tooltip } from './Tooltip'
 import type { DataType } from './types'
 
@@ -63,7 +63,7 @@ export const TreeMapChart = ({
 
   return (
     <div
-      className={cn(className, treeMapContainer)}
+      className={cn(className, treeMapChartStyle.container)}
       data-testid={dataTestId}
       style={{ height }}
     >

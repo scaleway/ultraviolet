@@ -11,18 +11,7 @@ import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Tooltip } from '../../Tooltip'
 import { THUMB_SIZE } from '../constant'
-import {
-  leftVar,
-  sliderCustomRail,
-  sliderDouble,
-  sliderDoubleText,
-  sliderDoubleWrapper,
-  sliderInnerRail,
-  sliderThumbStyle,
-  sliderTooltip,
-  thumbColor,
-  tooltipLeft,
-} from '../styles.css'
+import { leftVar, sliderStyle, thumbColor, tooltipLeft } from '../styles.css'
 import type { DoubleSliderProps } from '../types'
 import { Options } from './Options'
 
@@ -215,7 +204,7 @@ export const DoubleSlider = ({
     ) : (
       <Text
         as="span"
-        className={sliderDoubleText({
+        className={sliderStyle.doubleText({
           isDouble: true,
           isPadded: isRowDirection,
         })}
@@ -301,19 +290,19 @@ export const DoubleSlider = ({
         ) : (
           styledValue(leftToShow, 'left')
         )}
-        <div className={sliderDoubleWrapper}>
+        <div className={sliderStyle.doubleWrapper}>
           <Tooltip
-            className={sliderTooltip}
+            className={sliderStyle.tooltip}
             placement={tooltipPosition}
             style={assignInlineVars({
               [tooltipLeft]: `${(placementTooltip[0] + placementTooltip[1]) / 2}px`,
             })}
             text={typeof tooltipText === 'string' ? tooltipText : undefined}
           >
-            <div className={sliderCustomRail}>
+            <div className={sliderStyle.customRail}>
               <div
                 aria-disabled={!!disabled}
-                className={sliderInnerRail({
+                className={sliderStyle.innerRail({
                   disabled: !!disabled,
                   error: !!error,
                 })}
@@ -323,7 +312,7 @@ export const DoubleSlider = ({
             </div>
 
             <Tooltip
-              className={sliderTooltip}
+              className={sliderStyle.tooltip}
               placement={tooltipPosition}
               style={assignInlineVars({
                 [tooltipLeft]: `${placementTooltip[0]}px`,
@@ -334,8 +323,8 @@ export const DoubleSlider = ({
                 aria-label={ariaLabel ?? name}
                 className={cn(
                   className,
-                  sliderDouble({ disabled, hasTooltip: !!tooltip }),
-                  sliderThumbStyle({
+                  sliderStyle.double({ disabled, hasTooltip: !!tooltip }),
+                  sliderStyle.thumbStyle({
                     disabled: !!disabled,
                     hasTooltipDouble: !!tooltip,
                     isDouble: true,
@@ -369,7 +358,7 @@ export const DoubleSlider = ({
               />
             </Tooltip>
             <Tooltip
-              className={sliderTooltip}
+              className={sliderStyle.tooltip}
               placement={tooltipPosition}
               style={assignInlineVars({
                 [tooltipLeft]: `${placementTooltip[1]}px`,
@@ -380,8 +369,8 @@ export const DoubleSlider = ({
                 aria-label={ariaLabel ?? name}
                 className={cn(
                   className,
-                  sliderDouble({ disabled, hasTooltip: !!tooltip }),
-                  sliderThumbStyle({
+                  sliderStyle.double({ disabled, hasTooltip: !!tooltip }),
+                  sliderStyle.thumbStyle({
                     disabled,
                     hasTooltipDouble: !!tooltip,
                     isDouble: true,

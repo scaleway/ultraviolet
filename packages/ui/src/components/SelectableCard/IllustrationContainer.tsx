@@ -3,11 +3,7 @@
 import type { ReactNode } from 'react'
 import { cloneElement, isValidElement } from 'react'
 import { Stack } from '../Stack'
-import {
-  divSelectableCard,
-  illustrationSelectableCard,
-  imageSelectableCard,
-} from './styles.css'
+import { selectableCardStyle } from './styles.css'
 import type { SelectableCardProps } from './types'
 
 export const IllustrationContainer = ({
@@ -34,15 +30,19 @@ export const IllustrationContainer = ({
         justifyContent="space-between"
         width="100%"
       >
-        <Stack className={illustrationSelectableCard}>{subChildren}</Stack>
+        <Stack className={selectableCardStyle.illustration}>
+          {subChildren}
+        </Stack>
         <Stack justifyContent="center">
           {productIcon ? productIcon : null}
         </Stack>
 
         {illustration ? (
-          <div className={divSelectableCard}>
+          <div className={selectableCardStyle.div}>
             {illustration ? (
-              <div className={imageSelectableCard}>{computedIllustration}</div>
+              <div className={selectableCardStyle.image}>
+                {computedIllustration}
+              </div>
             ) : null}
           </div>
         ) : null}

@@ -28,15 +28,7 @@ import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
 import { ColumnProvider } from './ColumnProvider'
 import { useListContext } from './ListContext'
-import {
-  listCheckboxContainer,
-  listCheckboxInRange,
-  listExpandableButton,
-  listExpandableCell,
-  listExpandableWrapper,
-  listNoPaddingCell,
-  listRow,
-} from './styles.css'
+import { listStyle } from './styles.css'
 import { paddingExpandableCell } from './variables.css'
 
 type RowProps = {
@@ -175,7 +167,10 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           }
           aria-disabled={disabled}
           aria-expanded={expandable ? expandedRowIds[id] : undefined}
-          className={cn(className, listRow({ highlightAnimation, sentiment }))}
+          className={cn(
+            className,
+            listStyle.row({ highlightAnimation, sentiment }),
+          )}
           data-dragging={dataDragging}
           data-highlight={selectable && !!selectedRowIds[id]}
           data-testid={dataTestid}
@@ -204,8 +199,8 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
         >
           {selectable ? (
             <ColumnProvider width={theme.sizing[300]}>
-              <Cell className={listNoPaddingCell}>
-                <div className={listCheckboxContainer}>
+              <Cell className={listStyle.noPaddingCell}>
+                <div className={listStyle.checkboxContainer}>
                   <Tooltip
                     text={
                       typeof selectDisabled === 'string'
@@ -217,7 +212,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
                       aria-label="select"
                       checked={selectedRowIds[id]}
                       className={
-                        inRange?.includes(id) ? listCheckboxInRange : ''
+                        inRange?.includes(id) ? listStyle.checkboxInRange : ''
                       }
                       disabled={isSelectDisabled}
                       name="list-select-checkbox"
@@ -232,10 +227,10 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           ) : null}
           {expandButton ? (
             <ColumnProvider width={theme.sizing[400]}>
-              <Cell className={listNoPaddingCell}>
+              <Cell className={listStyle.noPaddingCell}>
                 <Button
                   aria-label="expand"
-                  className={listExpandableButton}
+                  className={listStyle.expandableButton}
                   data-testid="list-expand-button"
                   disabled={disabled || !expandable}
                   onClick={() => toggleRowExpand()}
@@ -265,7 +260,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
         </tr>
         {expandable && expandedRowIds[id] ? (
           <tr
-            className={listExpandableWrapper}
+            className={listStyle.expandableWrapper}
             data-expandable-content
             data-highlight={selectable && !!selectedRowIds[id]}
             id={expandedRowId}
@@ -285,7 +280,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
             }
           >
             <Cell
-              className={listExpandableCell}
+              className={listStyle.expandableCell}
               colSpan={totalColumns}
               style={assignInlineVars({
                 [paddingExpandableCell]: theme.space[expandablePadding ?? '2'],

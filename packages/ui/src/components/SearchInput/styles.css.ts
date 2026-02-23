@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 
-export const searchInputPopup = style({
+const popup = style({
   background: theme.colors.other.elevation.background.raised,
   boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
   minWidth: '38.125rem',
@@ -10,6 +10,12 @@ export const searchInputPopup = style({
   width: '100%',
 })
 
-export const searchInput = style({})
+const searchInput = style({})
 
-export const clickableStack = style({ cursor: 'text' })
+const clickableStack = style({ cursor: 'text' })
+
+export const searchInputStyle = {
+  popup,
+  searchInput,
+  clickableStack,
+}

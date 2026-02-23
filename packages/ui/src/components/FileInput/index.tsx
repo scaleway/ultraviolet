@@ -10,14 +10,7 @@ import { FileInputButton } from './components/Button'
 import { ListFiles } from './components/List'
 import { FileInputContext } from './FileInputProvider'
 import { fileIsAccepted } from './helpers'
-import {
-  dropzone,
-  dropzoneOverlay,
-  dropzoneOverlayDisabled,
-  fileInput,
-  overlayWrapper,
-  titleSmall,
-} from './styles.css'
+import { fileInputStyle } from './styles.css'
 import type { FileInputProps, FilesType } from './types'
 
 /**
@@ -157,7 +150,7 @@ const FileInputBase = ({
           >
             <input
               accept={accept}
-              className={fileInput}
+              className={fileInputStyle.fileInput}
               data-testid={dataTestid}
               id={inputId}
               multiple={multiple}
@@ -167,15 +160,15 @@ const FileInputBase = ({
               required={required}
               type="file"
             />
-            <div className={overlayWrapper}>
+            <div className={fileInputStyle.overlayWrapper}>
               {computedChildren}
               {/** biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop */}
               {/** biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop */}
               <div
                 className={
                   disabled
-                    ? dropzoneOverlayDisabled[dragState]
-                    : dropzoneOverlay[dragState]
+                    ? fileInputStyle.dropzoneOverlayDisabled[dragState]
+                    : fileInputStyle.dropzoneOverlay[dragState]
                 }
                 onDragOver={event => event.preventDefault()}
                 onDrop={event => {
@@ -245,7 +238,11 @@ const FileInputBase = ({
           <Text as="div" disabled={disabled} sentiment="neutral" variant="body">
             <Stack
               alignItems="center"
-              className={dropzone({ disabled, size, state: dragState })}
+              className={fileInputStyle.dropzone({
+                disabled,
+                size,
+                state: dragState,
+              })}
               data-testid="drag-container"
               direction={isSmall ? 'row' : 'column'}
               gap={isSmall ? 1 : 2}
@@ -262,7 +259,7 @@ const FileInputBase = ({
               {disabled ? null : (
                 <input
                   accept={accept}
-                  className={fileInput}
+                  className={fileInputStyle.fileInput}
                   data-testid={dataTestid}
                   disabled={disabled}
                   id={inputId}
@@ -282,7 +279,9 @@ const FileInputBase = ({
                 as={isSmall ? 'label' : 'div'}
                 className={
                   isSmall
-                    ? titleSmall[disabled ? 'disabled' : 'default']
+                    ? fileInputStyle.titleSmall[
+                        disabled ? 'disabled' : 'default'
+                      ]
                     : undefined
                 }
                 disabled={disabled}

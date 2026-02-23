@@ -11,19 +11,7 @@ import { Expandable } from '../Expandable'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import {
-  animatedArrowIcon,
-  buttonContainer,
-  centeredText,
-  line,
-  prefix as prefixStyle,
-  pretext,
-  rowsVar,
-  showMoreButton,
-  showMoreContainer,
-  snippetContainer,
-  stackStyle,
-} from './styles.css'
+import { rowsVar, snippetStyle } from './styles.css'
 
 const LINES_BREAK_REGEX = /\r\n|\r|\n/
 
@@ -52,7 +40,7 @@ const CodeContent = ({
 }: CodeContentProps) => (
   <Text
     as="pre"
-    className={pretext({
+    className={snippetStyle.pretext({
       noExpandable,
       showMore: hasShowMoreButton && !showMore,
     })}
@@ -66,8 +54,8 @@ const CodeContent = ({
       Children.map(lines, child => (
         <span
           className={cn(
-            line({ multiline: true }),
-            prefix ? prefixStyle[prefix] : '',
+            snippetStyle.line({ multiline: true }),
+            prefix ? snippetStyle.prefix[prefix] : '',
           )}
           key={child}
         >
@@ -75,7 +63,12 @@ const CodeContent = ({
         </span>
       ))
     ) : (
-      <span className={cn(line(), prefix ? prefixStyle[prefix] : '')}>
+      <span
+        className={cn(
+          snippetStyle.line(),
+          prefix ? snippetStyle.prefix[prefix] : '',
+        )}
+      >
         {children}
       </span>
     )}
@@ -149,12 +142,12 @@ export const Snippet = ({
       <div
         className={cn(
           className,
-          snippetContainer[multiline ? 'multiline' : 'oneLine'],
+          snippetStyle.container[multiline ? 'multiline' : 'oneLine'],
         )}
         data-testid={dataTestId}
         style={style}
       >
-        <Stack className={stackStyle}>
+        <Stack className={snippetStyle.stackStyle}>
           {hasShowMoreButton ? (
             <Expandable minHeight={minHeight} opened={showMore}>
               <CodeContent
@@ -180,7 +173,7 @@ export const Snippet = ({
           )}
           <div
             className={
-              buttonContainer[
+              snippetStyle.buttonContainer[
                 multiline && numberOfLines > 1 ? 'multiline' : 'oneLine'
               ]
             }
@@ -194,23 +187,31 @@ export const Snippet = ({
             />
           </div>
           {hasShowMoreButton ? (
-            <div className={showMoreContainer[showMore ? 'true' : 'false']}>
+            <div
+              className={
+                snippetStyle.showMoreContainer[showMore ? 'true' : 'false']
+              }
+            >
               <button
                 aria-expanded={showMore}
-                className={showMoreButton}
+                className={snippetStyle.showMoreButton}
                 onClick={setShowMore}
                 type="button"
               >
                 <Text
                   as="span"
-                  className={centeredText}
+                  className={snippetStyle.centeredText}
                   sentiment="neutral"
                   variant="bodySmallStrong"
                 >
                   {showMore ? hideText : showText}
                   &nbsp;
                   <ArrowDownIcon
-                    className={animatedArrowIcon[showMore ? 'true' : 'false']}
+                    className={
+                      snippetStyle.animatedArrowIcon[
+                        showMore ? 'true' : 'false'
+                      ]
+                    }
                   />
                 </Text>
               </button>

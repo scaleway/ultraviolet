@@ -4,12 +4,7 @@ import type { ComponentProps, ReactNode } from 'react'
 import { List } from '../../../List'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
-import {
-  offerListBanner,
-  offerListBannerCell,
-  offerListBannerStack,
-  offerListBannerText,
-} from '../styles.css'
+import { offerListStyle } from '../styles.css'
 
 type BannerProps = {
   children: ReactNode
@@ -31,22 +26,22 @@ export const Banner = ({
   type === 'div' ? (
     <Stack
       aria-disabled={disabled}
-      className={offerListBannerStack({ sentiment })}
+      className={offerListStyle.bannerStack({ sentiment })}
     >
       <Text as="p" disabled={disabled} sentiment={sentiment} variant="caption">
         {children}
       </Text>
     </Stack>
   ) : (
-    <tr className={offerListBanner}>
+    <tr className={offerListStyle.banner}>
       <List.Cell
         aria-disabled={disabled}
-        className={offerListBannerCell}
+        className={offerListStyle.bannerCell}
         colSpan={colSpan}
       >
         <Text
           as="p"
-          className={offerListBannerText({
+          className={offerListStyle.bannerText({
             disabled,
             primaryBorder: shouldHavePrimaryBorder,
             sentiment,

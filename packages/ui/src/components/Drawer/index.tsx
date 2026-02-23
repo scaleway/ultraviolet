@@ -11,16 +11,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { DrawerContent } from './DrawerContent'
 import type { SizeProp } from './styles.css'
-import {
-  contentToPushStyle,
-  drawer,
-  drawerBase,
-  drawerChildrenWrapper,
-  drawerContentWrapper,
-  drawerFooter,
-  drawerHeader,
-  drawerPush,
-} from './styles.css'
+import { drawerStyle } from './styles.css'
 
 type DrawerProps = Pick<
   ComponentProps<typeof Modal>,
@@ -74,8 +65,8 @@ export const BaseDrawer = ({
     const targetElement = push === 'body' ? document?.body : push?.current
     if (targetElement && push) {
       targetElement.dataset['drawer'] = size
-      if (!targetElement.classList.contains(contentToPushStyle)) {
-        targetElement.classList.add(contentToPushStyle)
+      if (!targetElement.classList.contains(drawerStyle.contentToPushStyle)) {
+        targetElement.classList.add(drawerStyle.contentToPushStyle)
       }
     }
   }, [size, push])
@@ -85,7 +76,7 @@ export const BaseDrawer = ({
 
     if (targetElement && push) {
       targetElement.dataset['drawer'] = 'none'
-      targetElement.classList.remove(contentToPushStyle)
+      targetElement.classList.remove(drawerStyle.contentToPushStyle)
     }
   }, [push])
 
@@ -101,7 +92,7 @@ export const BaseDrawer = ({
       return (
         <Text
           as="h2"
-          className={drawerHeader}
+          className={drawerStyle.header}
           prominence="default"
           sentiment="neutral"
           variant="headingSmallStrong"
@@ -114,7 +105,7 @@ export const BaseDrawer = ({
       return (
         <Text
           as="h2"
-          className={drawerHeader}
+          className={drawerStyle.header}
           prominence="default"
           sentiment="neutral"
           variant="headingSmallStrong"
@@ -132,7 +123,7 @@ export const BaseDrawer = ({
 
     return () => {
       if (targetElement && push) {
-        targetElement.classList.remove(contentToPushStyle)
+        targetElement.classList.remove(drawerStyle.contentToPushStyle)
       }
     }
   }, [open, push, size])
@@ -143,9 +134,9 @@ export const BaseDrawer = ({
       backdropClassName="backdrop-drawer"
       className={cn(
         className,
-        drawer[size],
-        drawerBase,
-        push ? drawerPush : '',
+        drawerStyle.drawer[size],
+        drawerStyle.base,
+        push ? drawerStyle.push : '',
       )}
       data-size={size}
       data-testid={dataTestId}
@@ -168,13 +159,13 @@ export const BaseDrawer = ({
           typeof children === 'function' ? children(modalProps) : children
 
         return (
-          <Stack className={drawerContentWrapper} gap={2}>
+          <Stack className={drawerStyle.contentWrapper} gap={2}>
             {computeHeader(modalProps)}
             {separator ? <Separator /> : null}
-            <div className={drawerChildrenWrapper}>
+            <div className={drawerStyle.childrenWrapper}>
               {noPadding ? content : <DrawerContent>{content}</DrawerContent>}
             </div>
-            <Stack className={drawerFooter}>
+            <Stack className={drawerStyle.footer}>
               {typeof footer === 'function' ? footer(modalProps) : footer}
             </Stack>
           </Stack>

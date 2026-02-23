@@ -15,7 +15,7 @@ import { CalendarContent } from './components/CalendarContent'
 import { CalendarPopup } from './components/Popup'
 import { createDate, createDateRange, formatValue } from './helpers'
 import { getDays, getLocalizedMonths, getMonths } from './helpersLocale'
-import { calendarContentWrapper, dateinputContainer } from './styles.css'
+import { dateInputStyle } from './styles.css'
 
 type DateInputProps<IsRange extends undefined | boolean = false> = {
   autoFocus?: boolean
@@ -295,7 +295,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
   return (
     <DateInputContext.Provider value={valueContext}>
       <div
-        className={cn(className, dateinputContainer)}
+        className={cn(className, dateInputStyle.container)}
         data-testid={dataTestId}
         id={id}
         onBlur={onBlur}
@@ -384,7 +384,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
               </Text>
             )}
             <Card
-              className={calendarContentWrapper({ disabled })}
+              className={dateInputStyle.calendarContentWrapper({ disabled })}
               disabled={disabled}
             >
               <CalendarContent />

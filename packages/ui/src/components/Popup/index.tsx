@@ -27,12 +27,7 @@ import { createPortal } from 'react-dom'
 import { isClientSide } from '../../helpers/isClientSide'
 import type { PopupAlign, PopupPlacement } from './helpers'
 import { computePositions, DEFAULT_POSITIONS } from './helpers'
-import {
-  animationPopup,
-  childrenContainerPopup,
-  containerPopup,
-  popup,
-} from './styles.css'
+import { popupStyle } from './styles.css'
 import {
   animationDurationPopup,
   arrowLeft,
@@ -562,7 +557,7 @@ export const Popup = forwardRef(
           aria-controls={generatedId}
           aria-describedby={generatedId}
           aria-haspopup={ariaHasPopup}
-          className={childrenContainerPopup({
+          className={popupStyle.childrenContainer({
             fullHeight: containerFullHeight,
             fullWidth: containerFullWidth,
           })}
@@ -619,14 +614,14 @@ export const Popup = forwardRef(
               <div
                 className={cn(
                   className,
-                  popup({
+                  popupStyle.popup({
                     hasArrow,
                     visibleInDom: dynamicDomRendering
                       ? undefined
                       : visibleInDom,
                   }),
                   isAnimated
-                    ? animationPopup[
+                    ? popupStyle.animation[
                         reverseAnimation ? 'reverse' : 'notReverse'
                       ]
                     : '',
@@ -661,7 +656,9 @@ export const Popup = forwardRef(
                 }}
               >
                 <div
-                  className={containerPopup({ hasMaxHeight: !!maxHeight })}
+                  className={popupStyle.container({
+                    hasMaxHeight: !!maxHeight,
+                  })}
                   style={assignInlineVars({
                     [maxHeightPopup]:
                       typeof maxHeight === 'number'

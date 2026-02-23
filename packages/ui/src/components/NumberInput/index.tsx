@@ -18,13 +18,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 import type { SIZES } from './constant'
-import {
-  inputContainer,
-  numberinput,
-  numberinputContainer,
-  numberinputSideContainer,
-  unit as unitStyle,
-} from './styles.css'
+import { numberInputStyle } from './styles.css'
 
 type Sizes = keyof typeof SIZES
 
@@ -207,7 +201,10 @@ export const NumberInput = forwardRef(
         <div>
           <Tooltip text={tooltip}>
             <div
-              className={numberinputContainer({ size, state: computedState })}
+              className={numberInputStyle.container({
+                size,
+                state: computedState,
+              })}
               data-controls={controls}
               data-disabled={disabled}
               data-error={!!error}
@@ -219,7 +216,7 @@ export const NumberInput = forwardRef(
               {controls ? (
                 <Stack
                   alignItems="center"
-                  className={numberinputSideContainer[size]}
+                  className={numberInputStyle.sideContainer[size]}
                   data-size={size}
                   justifyContent="center"
                 >
@@ -237,14 +234,18 @@ export const NumberInput = forwardRef(
               ) : null}
               <Row
                 alignItems="center"
-                className={inputContainer({ controls })}
+                className={numberInputStyle.inputContainer({ controls })}
                 justifyContent="space-between"
                 templateColumns="1fr auto"
               >
                 <input
                   aria-label={ariaLabel}
                   autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
-                  className={numberinput({ controls, hasUnit: !!unit, size })}
+                  className={numberInputStyle.numberinput({
+                    controls,
+                    hasUnit: !!unit,
+                    size,
+                  })}
                   data-testid={dataTestId}
                   disabled={disabled}
                   id={localId}
@@ -282,7 +283,11 @@ export const NumberInput = forwardRef(
                 {unit ? (
                   <Text
                     as="span"
-                    className={unitStyle({ disabled, readOnly, size })}
+                    className={numberInputStyle.unit({
+                      disabled,
+                      readOnly,
+                      size,
+                    })}
                     disabled={disabled}
                     sentiment="neutral"
                     variant="body"
@@ -294,7 +299,7 @@ export const NumberInput = forwardRef(
               {controls ? (
                 <Stack
                   alignItems="center"
-                  className={numberinputSideContainer[size]}
+                  className={numberInputStyle.sideContainer[size]}
                   data-size={size}
                   justifyContent="center"
                 >

@@ -3,19 +3,19 @@ import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 export const paddingRightVar = createVar()
-export const textareaWrapper = style({
+const wrapper = style({
   display: 'flex',
   position: 'relative',
   width: '100%',
 })
 
-export const textAreaClearableContainer = style({
+const clearableContainer = style({
   position: 'absolute',
   right: theme.space[1],
   top: theme.space['1.5'],
 })
 
-export const textArea = recipe({
+const textArea = recipe({
   base: {
     background: theme.colors.neutral.background,
     border: `1px solid ${theme.colors.neutral.border}`,
@@ -69,3 +69,9 @@ export const textArea = recipe({
     },
   },
 })
+
+export const textAreaStyle = {
+  clearableContainer,
+  textArea,
+  wrapper,
+}

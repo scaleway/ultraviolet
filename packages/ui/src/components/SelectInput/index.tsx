@@ -12,7 +12,7 @@ import { Text } from '../Text'
 import { Dropdown } from './components/Dropdown'
 import { SelectBar } from './components/SelectBar'
 import { SelectInputProvider } from './SelectInputProvider'
-import { selectinputContainer, selectinputHelper } from './styles.css'
+import { selectInputStyle } from './styles.css'
 import type { DataType } from './types'
 
 type SelectInputProps<IsMulti extends undefined | boolean = false> = {
@@ -223,7 +223,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
     >
       <div
         aria-label={name}
-        className={cn(className, selectinputContainer)}
+        className={cn(className, selectInputStyle.container)}
         onBlur={onBlur}
         onFocus={onFocus}
         style={style}
@@ -278,7 +278,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
         {!(error || success) && helper ? (
           <Text
             as="p"
-            className={selectinputHelper}
+            className={selectInputStyle.helper}
             prominence="weak"
             sentiment="neutral"
             variant={size === 'small' ? 'captionSmall' : 'caption'}
@@ -289,7 +289,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
         {(error && typeof error === 'string') || success ? (
           <Text
             as="p"
-            className={selectinputHelper}
+            className={selectInputStyle.helper}
             prominence="default"
             sentiment={error ? 'danger' : 'success'}
             variant={size === 'small' ? 'captionSmall' : 'caption'}

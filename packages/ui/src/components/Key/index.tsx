@@ -5,7 +5,7 @@ import type { CSSProperties } from 'react'
 import { useMemo } from 'react'
 import { Text } from '../Text'
 import { KEYS_MATCH } from './constants'
-import { key as keyStyle } from './styles.css'
+import { keyStyle } from './styles.css'
 
 type KeyProps = {
   children: string
@@ -53,7 +53,7 @@ export const Key = ({
     <kbd
       className={cn(
         className,
-        keyStyle({ disabled, prominence, sentiment, size }),
+        keyStyle.key({ disabled, prominence, sentiment, size }),
       )}
       data-disabled={disabled}
       data-prominence={prominence}

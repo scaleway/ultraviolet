@@ -1,29 +1,29 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 
-export const steppedListCard = style({ padding: 0 })
+const steppedListCard = style({ padding: 0 })
 
-export const steppedListCardWrapper = style({
+const wrapper = style({
   borderRight: `1px solid ${theme.colors.neutral.border}`,
   padding: theme.space[3],
 })
 
-export const steppedListCardContent = style({
+const content = style({
   minWidth: 0,
   padding: theme.space[3],
   paddingTop: theme.space[4],
 })
 
-export const steppedListCardImage = style({
+const image = style({
   display: 'flex',
   justifyContent: 'right',
 })
 
-export const steppedListCardSubHeader = style({
+const subHeader = style({
   marginBottom: theme.space[3],
 })
 
-export const steppedListCardStepTitle = style({
+const stepTitle = style({
   cursor: 'pointer',
   selectors: {
     '&:active': {
@@ -41,10 +41,21 @@ export const steppedListCardStepTitle = style({
   transition: 'text-decoration-color 250ms ease-out',
 })
 
-export const steppedListCardStep = style({
+const step = style({
   alignItems: 'center',
 })
 
-export const hideButton = style({
+const hideButton = style({
   width: 'fit-content',
 })
+
+export const steppedListCardStyle = {
+  steppedListCard,
+  wrapper,
+  content,
+  image,
+  subHeader,
+  stepTitle,
+  step,
+  hideButton,
+}

@@ -1,7 +1,7 @@
 'use client'
 
 import { Text } from '../Text'
-import { itemTooltipPie, listTooltipPie } from './styles.css'
+import { pieChartStyle } from './styles.css'
 
 type TooltipProps = {
   data: {
@@ -18,8 +18,8 @@ type TooltipProps = {
 
 export const Tooltip = ({ data }: TooltipProps) => (
   <div role="tooltip" tabIndex={-1}>
-    <ul className={listTooltipPie}>
-      <li className={itemTooltipPie}>
+    <ul className={pieChartStyle.listTooltip}>
+      <li className={pieChartStyle.itemTooltip}>
         <Text as="p" prominence="stronger" variant="body">
           {data.name}
         </Text>
@@ -28,7 +28,7 @@ export const Tooltip = ({ data }: TooltipProps) => (
         </Text>
       </li>
       {data.details?.map(detail => (
-        <li className={itemTooltipPie} key={detail.name}>
+        <li className={pieChartStyle.itemTooltip} key={detail.name}>
           <Text as="p" prominence="stronger" variant="bodySmall">
             {detail.name}
           </Text>

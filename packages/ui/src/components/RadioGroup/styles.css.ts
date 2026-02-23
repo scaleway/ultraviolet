@@ -1,7 +1,8 @@
 import { style } from '@vanilla-extract/css'
 
-export const fieldset = style({
+const fieldset = style({
   border: 'none',
   margin: 0,
   padding: 0,
 })
+export const radioGRoupStyle = { fieldset }

@@ -3,7 +3,7 @@
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import type { SENTIMENTS } from '../../../theme'
 import { Button } from '../../Button'
-import { closeButtonToaster } from '../styles.css'
+import { toasterStyle } from '../styles.css'
 
 type SENTIMENT = (typeof SENTIMENTS)[number]
 
@@ -18,7 +18,7 @@ export const CloseButton = ({
 }: CloseButtonProps) => (
   <Button
     aria-label="close"
-    className={closeButtonToaster}
+    className={toasterStyle.closeButton}
     onClick={closeToast}
     sentiment={sentiment}
     size="xsmall"

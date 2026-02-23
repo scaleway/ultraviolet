@@ -5,7 +5,7 @@ import { Skeleton } from '../Skeleton'
 import { Cell } from './Cell'
 import { ColumnProvider } from './ColumnProvider'
 import { useListContext } from './ListContext'
-import { listLoadingRow, listRow, listSkeleton } from './styles.css'
+import { listStyle } from './styles.css'
 
 type ListLoadingSkeletonProps = {
   selectable: boolean
@@ -26,7 +26,10 @@ export const SkeletonRows = ({
     <>
       {rowArray.map(index => (
         <tr
-          className={cn(listRow({ sentiment: 'neutral' }), listLoadingRow)}
+          className={cn(
+            listStyle.row({ sentiment: 'neutral' }),
+            listStyle.loadingRow,
+          )}
           id={`skeleton-${index}`}
           key={index}
         >
@@ -39,7 +42,7 @@ export const SkeletonRows = ({
               width={columns[columnIndex].width}
             >
               <Cell>
-                <Skeleton className={listSkeleton} variant="line" />
+                <Skeleton className={listStyle.skeleton} variant="line" />
               </Cell>
             </ColumnProvider>
           ))}

@@ -3,7 +3,7 @@ import { globalStyle, style } from '@vanilla-extract/css'
 
 const PREFIX = '.Toastify'
 
-export const toaster = style({
+const toaster = style({
   borderRadius: theme.radii.default,
   minHeight: theme.sizing[700],
 })
@@ -35,7 +35,7 @@ globalStyle(`${toaster} ${PREFIX}__toast--warning`, {
   padding: theme.space[2],
 })
 
-export const closeButtonToaster = style({
+const closeButton = style({
   background: 'none',
   margin: 'auto',
   marginLeft: theme.space[1],
@@ -48,6 +48,12 @@ export const closeButtonToaster = style({
   },
 })
 
-export const toasterButton = style({
+const button = style({
   color: theme.colors.neutral.textStronger,
 })
+
+export const toasterStyle = {
+  toaster,
+  closeButton,
+  button,
+}

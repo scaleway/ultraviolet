@@ -16,16 +16,7 @@ import { Tooltip } from '../../../Tooltip'
 import { useOfferListContext } from '../OfferListProvider'
 import {
   expandablePadding as expandablePaddingVar,
-  offerListBadge,
-  offerListCellNoRadius,
-  offerListNoPaddingCell,
-  offerListRowBanner,
-  offerListRowExpandable,
-  offerListRowSelectableContainer,
-  offerListRowSelected,
-  offerListRowSelectedExpandable,
-  offerListRowSelectedNotExpandable,
-  offerListSelectedCell,
+  offerListStyle,
 } from '../styles.css'
 import { Banner } from './Banner'
 import { OfferListRowContext } from './OfferListRowProvider'
@@ -93,7 +84,7 @@ export const Row = ({
       return (
         <>
           <div
-            className={offerListRowExpandable}
+            className={offerListStyle.rowExpandable}
             style={assignInlineVars({
               [expandablePaddingVar]: theme.space[expandablePadding ?? 2],
             })}
@@ -167,11 +158,11 @@ export const Row = ({
       <List.Row
         className={cn(
           className,
-          banner ? offerListRowBanner : '',
-          isSelected ? offerListRowSelected : '',
+          banner ? offerListStyle.rowBanner : '',
+          isSelected ? offerListStyle.rowSelected : '',
           expandable
-            ? offerListRowSelectedExpandable
-            : offerListRowSelectedNotExpandable,
+            ? offerListStyle.rowSelectedExpandable
+            : offerListStyle.rowSelectedNotExpandable,
         )}
         data-dragging={dataDragging}
         data-testid={dataTestId}
@@ -199,14 +190,14 @@ export const Row = ({
       >
         <List.Cell
           className={cn(
-            offerListNoPaddingCell,
-            isSelected ? offerListSelectedCell : '',
-            banner ? offerListCellNoRadius : '',
+            offerListStyle.noPaddingCell,
+            isSelected ? offerListStyle.selectedCell : '',
+            banner ? offerListStyle.cellNoRadius : '',
           )}
         >
           {badge ? (
             <BadgeUV
-              className={offerListBadge}
+              className={offerListStyle.badge}
               disabled={disabled}
               prominence={badge.prominence}
               sentiment={badge.sentiment}
@@ -215,7 +206,7 @@ export const Row = ({
               {badge.text}
             </BadgeUV>
           ) : null}
-          <div className={offerListRowSelectableContainer}>
+          <div className={offerListStyle.rowSelectableContainer}>
             <Tooltip
               text={
                 typeof selectDisabled === 'string' ? selectDisabled : undefined
@@ -261,8 +252,8 @@ export const Row = ({
         {expandable ? (
           <List.Cell
             className={cn(
-              offerListNoPaddingCell,
-              isSelected ? offerListSelectedCell : '',
+              offerListStyle.noPaddingCell,
+              isSelected ? offerListStyle.selectedCell : '',
             )}
           >
             <Button

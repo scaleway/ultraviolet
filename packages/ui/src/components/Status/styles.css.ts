@@ -24,7 +24,7 @@ const sentimentsCircleStatus = Object.fromEntries(
   ]),
 )
 
-export const circleStatus = recipe({
+const circle = recipe({
   base: {
     ...baseCircle,
     display: 'inline-block',
@@ -34,7 +34,7 @@ export const circleStatus = recipe({
   },
 })
 
-export const animatedCircleStatus = recipe({
+const animatedCircle = recipe({
   base: {
     ...baseCircle,
     animation: `${ping} 1.1s cubic-bezier(0, 0, 0.2, 1) infinite`,
@@ -46,7 +46,7 @@ export const animatedCircleStatus = recipe({
   },
 })
 
-export const status = recipe({
+const status = recipe({
   base: {
     display: 'flex',
     height: HEIGHT,
@@ -62,3 +62,4 @@ export const status = recipe({
     },
   },
 })
+export const statusStyle = { circle, animatedCircle, status }

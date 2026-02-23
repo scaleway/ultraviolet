@@ -1,11 +1,11 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style, styleVariants } from '@vanilla-extract/css'
-import { searchInput } from '../SearchInput/styles.css'
+import { searchInputStyle } from '../SearchInput/styles.css'
 import { TEXTINPUT_SIZE_HEIGHT } from './constants'
 
 export const hasFocusVar = createVar()
 
-export const basicPrefix = style({
+const basicPrefix = style({
   padding: theme.space['2'],
   borderRight: '1px solid',
   borderColor: 'inherit',
@@ -13,36 +13,36 @@ export const basicPrefix = style({
 
   selectors: {
     '&[data-size="small"]': { padding: theme.space['1'] },
-    [`${searchInput} &`]: {
+    [`${searchInputStyle.searchInput} &`]: {
       border: 'none',
     },
   },
 })
 
-export const stateStack = style({
+const stateStack = style({
   padding: `0 ${theme.space['2']}`,
 })
 
-export const basicSuffix = style({
+const basicSuffix = style({
   padding: `0 ${theme.space['2']}`,
   borderLeft: '1px solid',
   borderColor: 'inherit',
   height: '100%',
   selectors: {
-    [`${searchInput} &`]: {
+    [`${searchInputStyle.searchInput} &`]: {
       border: 'none',
     },
   },
 })
 
-export const ctaSuffix = style({
+const ctaSuffix = style({
   padding: `0 ${theme.space['1']}`,
   borderLeft: '1px solid',
   borderColor: 'inherit',
   height: '100%',
 })
 
-export const inputWrapperSizes = styleVariants(
+const inputWrapperSizes = styleVariants(
   Object.keys(TEXTINPUT_SIZE_HEIGHT).reduce(
     (acc, size) => ({
       ...acc,
@@ -57,7 +57,7 @@ export const inputWrapperSizes = styleVariants(
   ),
 )
 
-export const inputWrapper = style({
+const inputWrapper = style({
   alignItems: 'center',
   background: theme.colors.neutral.background,
   border: `1px solid ${theme.colors.neutral.border}`,
@@ -91,7 +91,7 @@ export const inputWrapper = style({
   width: '100%',
 })
 
-export const inputClass = style({
+const input = style({
   flex: 1,
   border: 'none',
   outline: 'none',
@@ -115,7 +115,7 @@ export const inputClass = style({
     '&:focus': {
       outline: 'none',
     },
-    [`${searchInput} &`]: {
+    [`${searchInputStyle.searchInput} &`]: {
       padding: 0,
     },
     [`${inputWrapper} > &`]: {
@@ -132,3 +132,13 @@ export const inputClass = style({
     },
   },
 })
+
+export const textInputStyle = {
+  basicPrefix,
+  stateStack,
+  basicSuffix,
+  ctaSuffix,
+  inputWrapper,
+  inputWrapperSizes,
+  input,
+}

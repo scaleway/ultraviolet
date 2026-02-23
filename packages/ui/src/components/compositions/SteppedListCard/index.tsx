@@ -11,11 +11,7 @@ import { Text } from '../../Text'
 import { Data } from './helper'
 import { SteppedList } from './Step'
 import { SteppedListContent } from './SteppedListContent'
-import {
-  hideButton,
-  steppedListCard,
-  steppedListCardWrapper,
-} from './styles.css'
+import { steppedListCardStyle } from './styles.css'
 
 type SteppedListContainerProps = {
   /**
@@ -135,7 +131,7 @@ const SteppedListCard = ({
           )}
           {showToggleOption ? (
             <Button
-              className={hideButton}
+              className={steppedListCardStyle.hideButton}
               onClick={onClickHideButton}
               sentiment="neutral"
               size="small"
@@ -147,10 +143,10 @@ const SteppedListCard = ({
           ) : null}
         </Stack>
         {hidden ? null : (
-          <Card className={steppedListCard}>
+          <Card className={steppedListCardStyle.steppedListCard}>
             <Row templateColumns="1fr 3fr">
               <Stack
-                className={steppedListCardWrapper}
+                className={steppedListCardStyle.wrapper}
                 direction="column"
                 gap={4}
               >

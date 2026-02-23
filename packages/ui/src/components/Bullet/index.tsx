@@ -5,7 +5,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import type { SENTIMENTS } from '../../theme'
 import { Tooltip } from '../Tooltip'
 import type { PROMINENCES, SIZES } from './constants'
-import { bullet } from './styles.css'
+import { bulletStyle } from './styles.css'
 
 type ProminenceType = keyof typeof PROMINENCES
 
@@ -41,7 +41,7 @@ export const Bullet = ({
     <div
       className={cn(
         className,
-        bullet({ disabled, prominence, sentiment, size }),
+        bulletStyle.bullet({ disabled, prominence, sentiment, size }),
       )}
       data-testid={dataTestId}
       style={style}

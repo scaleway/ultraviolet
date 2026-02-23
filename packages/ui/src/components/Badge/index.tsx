@@ -6,7 +6,7 @@ import { useMemo } from 'react'
 import { Text } from '../Text'
 import { TEXT_VARIANT } from './constant'
 import type { BadgeVariants } from './styles.css'
-import { badge } from './styles.css'
+import { badgeStyle } from './styles.css'
 
 type BadgeProps = {
   className?: string
@@ -45,7 +45,7 @@ export const Badge = ({
       as="span"
       className={cn(
         className,
-        badge({ disabled, prominence, sentiment, size }),
+        badgeStyle.badge({ disabled, prominence, sentiment, size }),
       )}
       data-testid={dataTestId}
       prominence={disabled ? 'weak' : 'default'}

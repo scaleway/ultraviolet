@@ -19,7 +19,7 @@ import { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import { TextInput } from '../TextInput'
 import { KeyGroup } from './KeyGroup'
-import { clickableStack, searchInput, searchInputPopup } from './styles.css'
+import { searchInputStyle } from './styles.css'
 import type { SearchInputProps } from './types'
 
 /**
@@ -243,7 +243,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     return (
       <div style={{ width: '100%' }}>
         <Popup
-          className={searchInputPopup}
+          className={searchInputStyle.popup}
           data-testid={`popup-${dataTestId}`}
           debounceDelay={0}
           hasArrow={false}
@@ -263,7 +263,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             aria-live={ariaLive}
             autoComplete={autoComplete}
             autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
-            className={cn(className, searchInput)}
+            className={cn(className, searchInputStyle.searchInput)}
             clearable
             data-testid={dataTestId}
             disabled={disabled}
@@ -282,7 +282,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             placeholder={placeholder}
             prefix={
               <Stack
-                className={clickableStack}
+                className={searchInputStyle.clickableStack}
                 data-testid={`search-icon${dataTestId ? `-${dataTestId}` : ''}`}
                 onClick={() => innerSearchInputRef.current?.focus()}
               >

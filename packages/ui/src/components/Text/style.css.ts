@@ -142,7 +142,7 @@ const compoundVariants = filterByProperty(
 
 const variant = generateVariants()
 
-export const text = recipe({
+const text = recipe({
   base: {
     textAlign: textVars.textAlign,
     whiteSpace: textVars.whiteSpace,
@@ -206,3 +206,5 @@ export const text = recipe({
 })
 
 export type TextVariants = NonNullable<RecipeVariants<typeof text>>
+
+export const textStyle = { text }

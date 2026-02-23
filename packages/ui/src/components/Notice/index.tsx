@@ -4,7 +4,7 @@ import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIco
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import { Text } from '../Text'
-import { notice } from './styles.css'
+import { noticeStyle } from './styles.css'
 
 type NoticeProps = {
   children: ReactNode
@@ -24,7 +24,7 @@ export const Notice = ({
 }: NoticeProps) => (
   <Text
     as="span"
-    className={cn(className, notice)}
+    className={cn(className, noticeStyle.notice)}
     data-testid={dataTestId}
     prominence="weak"
     sentiment="neutral"

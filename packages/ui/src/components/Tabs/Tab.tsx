@@ -16,12 +16,7 @@ import { Badge } from '../Badge'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-import {
-  tabsBadge,
-  tabsBadgeContainer,
-  tabsButton,
-  tabsTextSelected,
-} from './styles.css'
+import { tabsStyle } from './styles.css'
 import { useTabsContext } from './TabsContext'
 
 type TabProps<T extends ElementType = 'button'> = {
@@ -82,7 +77,7 @@ export const Tab = forwardRef(
           aria-disabled={disabled}
           aria-label={value ? `${value}` : undefined}
           aria-selected={isSelected}
-          className={cn(className, tabsButton)}
+          className={cn(className, tabsStyle.button)}
           data-is-selected={isSelected}
           disabled={computedAs === 'button' ? disabled : undefined}
           onClick={event => {
@@ -107,7 +102,7 @@ export const Tab = forwardRef(
               {children}
               {typeof counter === 'number' || typeof counter === 'string' ? (
                 <Badge
-                  className={tabsBadge}
+                  className={tabsStyle.badge}
                   prominence={isSelected ? 'strong' : 'default'}
                   sentiment={isSelected ? 'primary' : 'neutral'}
                   size="medium"
@@ -116,7 +111,7 @@ export const Tab = forwardRef(
                 </Badge>
               ) : null}
               {badge ? (
-                <span className={tabsBadgeContainer}>{badge}</span>
+                <span className={tabsStyle.badgeContainer}>{badge}</span>
               ) : null}
             </Stack>
             {subtitle ? (
@@ -124,7 +119,7 @@ export const Tab = forwardRef(
                 <Text
                   as="span"
                   className={
-                    tabsTextSelected[isSelected ? 'selected' : 'default']
+                    tabsStyle.textSelected[isSelected ? 'selected' : 'default']
                   }
                   prominence="weak"
                   sentiment="neutral"

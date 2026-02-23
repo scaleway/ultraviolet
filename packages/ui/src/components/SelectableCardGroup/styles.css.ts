@@ -5,3 +5,4 @@ export const selectableCardGroupFieldSet = style({
   margin: 0,
   padding: 0,
 })
+export const selectableCardGroupStyle = { selectableCardGroupFieldSet }

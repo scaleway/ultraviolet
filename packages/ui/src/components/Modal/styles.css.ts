@@ -2,37 +2,37 @@ import { theme } from '@ultraviolet/themes'
 import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { slideFromBottom } from '../../utils'
-import { drawer, drawerBase, drawerPush, SIZES } from '../Drawer/styles.css'
+import { drawerStyle, SIZES } from '../Drawer/styles.css'
 import { MODAL_PLACEMENT, MODAL_WIDTH } from './constants'
 
 export const topModal = createVar()
 export const positionModal = createVar()
 
-export const modalContainer = style({
+const container = style({
   position: 'absolute',
   right: theme.space[2],
   top: theme.space[2],
 })
 
-export const modalImageContainer = style({
+const imageContainer = style({
   backgroundColor: theme.colors.primary.background,
   height: '15rem',
   overflow: 'hidden',
   width: '100%',
 })
 
-export const modalImage = style({
+const image = style({
   height: '100%',
   marginInline: 'auto',
   objectFit: 'cover',
   width: '100%',
 })
 
-export const modalContent = style({
+const content = style({
   padding: theme.space[3],
 })
 
-export const modalBackdropBase = style({
+const backdropBase = style({
   backgroundColor: theme.colors.overlay,
   height: 0,
   opacity: 0,
@@ -43,18 +43,18 @@ export const modalBackdropBase = style({
   width: 0,
   zIndex: 1,
   selectors: {
-    [`&:has(${drawerBase})`]: {
+    [`&:has(${drawerStyle.base})`]: {
       padding: 0,
       transition: 'opacity 100ms ease-in-out',
     },
-    [`&:has(${drawerPush})`]: {
+    [`&:has(${drawerStyle.push})`]: {
       background: 'none',
     },
   },
 })
 
-export const modalBackdrop = recipe({
-  base: modalBackdropBase,
+const backdrop = recipe({
+  base: backdropBase,
   variants: {
     open: {
       true: {
@@ -75,7 +75,7 @@ export const modalBackdrop = recipe({
   },
 })
 
-export const modal = recipe({
+const modal = recipe({
   base: {
     backgroundColor: theme.colors.other.elevation.background.overlay,
     border: 0,
@@ -86,22 +86,23 @@ export const modal = recipe({
     transition: 'width 0.3s ease-in-out, transform 0.3s ease-in-out',
     width: `${MODAL_WIDTH.medium}rem`,
     selectors: {
-      [`&${drawerPush}`]: {
+      [`&${drawerStyle.push}`]: {
         borderLeft: `1px solid ${theme.colors.neutral.border}`,
         boxShadow: 'none',
       },
-      [`&${drawer.large}, &${drawer.small}, &${drawer.medium}`]: {
-        borderRadius: '0',
-        marginRight: '0',
-        padding: '0',
-      },
-      [`&${drawer.large}`]: {
+      [`&${drawerStyle.drawer.large}, &${drawerStyle.drawer.small}, &${drawerStyle.drawer.medium}`]:
+        {
+          borderRadius: '0',
+          marginRight: '0',
+          padding: '0',
+        },
+      [`&${drawerStyle.drawer.large}`]: {
         width: `${SIZES.large}rem`,
       },
-      [`&${drawer.small}`]: {
+      [`&${drawerStyle.drawer.small}`]: {
         width: `${SIZES.small}rem`,
       },
-      [`&${drawer.medium}`]: {
+      [`&${drawerStyle.drawer.medium}`]: {
         width: `${SIZES.medium}rem`,
       },
     },
@@ -148,3 +149,13 @@ export const modal = recipe({
     ),
   },
 })
+
+export const modalStyle = {
+  container,
+  imageContainer,
+  image,
+  content,
+  backdropBase,
+  backdrop,
+  modal,
+}

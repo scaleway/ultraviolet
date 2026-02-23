@@ -7,7 +7,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { ChipContext } from './ChipContext'
 import { ChipIcon } from './ChipIcon'
-import { container } from './styles.css'
+import { chipStyle } from './styles.css'
 
 type ChipType = {
   children: ReactNode
@@ -78,7 +78,7 @@ export const Chip = ({
       >
         <Stack
           alignItems="center"
-          className={cn(className, container)}
+          className={cn(className, chipStyle.container)}
           data-active={isActive}
           data-disabled={disabled}
           data-prominence={prominence}

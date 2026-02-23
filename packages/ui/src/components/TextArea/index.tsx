@@ -21,12 +21,7 @@ import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-import {
-  paddingRightVar,
-  textAreaClearableContainer,
-  textArea as textAreaStyle,
-  textareaWrapper,
-} from './styles.css'
+import { paddingRightVar, textAreaStyle } from './styles.css'
 
 const STATE_ICON_SIZE = 'small'
 
@@ -203,12 +198,12 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           </Label>
         ) : null}
         <Tooltip text={tooltip}>
-          <div className={textareaWrapper}>
+          <div className={textAreaStyle.wrapper}>
             <textarea
               aria-invalid={!!error}
               aria-label={ariaLabel}
               autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
-              className={textAreaStyle({
+              className={textAreaStyle.textArea({
                 error: !!error,
                 success: !!success,
               })}
@@ -241,7 +236,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
             />
             <Stack
               alignItems="center"
-              className={textAreaClearableContainer}
+              className={textAreaStyle.clearableContainer}
               direction="row"
               gap="1"
             >

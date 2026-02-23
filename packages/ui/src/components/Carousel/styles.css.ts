@@ -3,14 +3,14 @@ import { createVar, style } from '@vanilla-extract/css'
 
 export const widthVar = createVar()
 
-export const wrapper = style({
+const wrapper = style({
   marginLeft: '-100px',
   marginRight: '-100px',
   position: 'relative',
   width: '100%',
 })
 
-export const beforeScroll = style({
+const beforeScroll = style({
   background: `linear-gradient(-90deg, transparent, ${theme.colors.neutral.background})`,
   content: "''",
   cursor: 'w-resize',
@@ -20,7 +20,7 @@ export const beforeScroll = style({
   zIndex: 'auto',
 })
 
-export const scrollableWrapper = style({
+const scrollableWrapper = style({
   display: 'flex',
   gap: theme.space['2'],
   overflowX: 'scroll',
@@ -29,7 +29,7 @@ export const scrollableWrapper = style({
   whiteSpace: 'nowrap',
 })
 
-export const afterScroll = style({
+const afterScroll = style({
   background: `linear-gradient(-90deg, ${theme.colors.neutral.background}, transparent)`,
   bottom: '0',
   content: "''",
@@ -41,7 +41,7 @@ export const afterScroll = style({
   zIndex: 'auto',
 })
 
-export const borderWrapper = style({
+const borderWrapper = style({
   alignItems: 'stretch',
   cursor: 'grab',
   display: 'flex',
@@ -52,3 +52,11 @@ export const borderWrapper = style({
   whiteSpace: 'normal',
   width: widthVar,
 })
+
+export const carouselStyle = {
+  wrapper,
+  beforeScroll,
+  scrollableWrapper,
+  afterScroll,
+  borderWrapper,
+}

@@ -6,7 +6,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { DoubleSlider } from './components/DoubleSlider'
 import { SingleSlider } from './components/SingleSlider'
-import { sliderContainer } from './styles.css'
+import { sliderStyle } from './styles.css'
 import type { SliderProps } from './types'
 
 /**
@@ -63,7 +63,7 @@ export const Slider = ({
   return (
     <Stack
       aria-label={ariaLabel}
-      className={double && !!options ? sliderContainer : ''}
+      className={double && !!options ? sliderStyle.container : ''}
       data-double={double}
       data-options={!!options}
       gap={gap}

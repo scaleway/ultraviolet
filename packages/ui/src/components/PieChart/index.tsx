@@ -11,12 +11,7 @@ import { getLegendColor } from '../../helpers/legend'
 import { getNivoTheme } from '../../helpers/nivoTheme'
 import { Text } from '../Text'
 import { Legends } from './Legends'
-import {
-  containerPie,
-  contentPie,
-  emptyLegendPie,
-  heightContainerPie,
-} from './styles.css'
+import { heightContainerPie, pieChartStyle } from './styles.css'
 import type { Data } from './types'
 
 type PieChartProps = {
@@ -58,7 +53,7 @@ export const PieChart = ({
   const EmptyLegendDisplayed = useCallback(
     () =>
       emptyLegend ? (
-        <div className={emptyLegendPie}>
+        <div className={pieChartStyle.emptyLegend}>
           <Text as="p" variant="body">
             {emptyLegend}
           </Text>
@@ -86,7 +81,7 @@ export const PieChart = ({
 
   return (
     <div
-      className={containerPie}
+      className={pieChartStyle.container}
       style={{
         ...assignInlineVars({
           [heightContainerPie]: height ? `${height}px` : '',
@@ -140,7 +135,9 @@ export const PieChart = ({
           width={width}
           {...chartProps}
         />
-        {content ? <div className={contentPie}>{content}</div> : null}
+        {content ? (
+          <div className={pieChartStyle.content}>{content}</div>
+        ) : null}
       </div>
       {withLegend ? <LegendDisplayer /> : null}
     </div>

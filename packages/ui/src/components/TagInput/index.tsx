@@ -18,12 +18,7 @@ import { Tag } from '../Tag'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 import type { TAGINPUT_SIZE_PADDING } from './styles.css'
-import {
-  tagInput,
-  tagInputContainer,
-  tagInputDataContainer,
-  tagInputStateContainer,
-} from './styles.css'
+import { tagInputStyle } from './styles.css'
 
 type TagInputSize = keyof typeof TAGINPUT_SIZE_PADDING
 
@@ -222,7 +217,7 @@ export const TagInput = ({
       <div>
         <Tooltip text={tooltip}>
           <div
-            className={cn(className, tagInputContainer({ size }))}
+            className={cn(className, tagInputStyle.container({ size }))}
             data-disabled={disabled}
             data-error={!!error}
             data-readonly={readOnly}
@@ -235,7 +230,7 @@ export const TagInput = ({
               }
             }}
           >
-            <div className={tagInputDataContainer}>
+            <div className={tagInputStyle.dataContainer}>
               {tagInputState.map(tag => (
                 <Tag
                   disabled={disabled}
@@ -257,7 +252,7 @@ export const TagInput = ({
               {disabled ? null : (
                 <input
                   aria-label={ariaLabel}
-                  className={tagInput}
+                  className={tagInputStyle.tagInput}
                   data-size={size}
                   id={localId}
                   name={name}
@@ -274,7 +269,7 @@ export const TagInput = ({
               )}
             </div>
             {computedClearable || success || error ? (
-              <div className={tagInputStateContainer}>
+              <div className={tagInputStyle.stateContainer}>
                 {computedClearable ? (
                   <Button
                     aria-label="clear value"

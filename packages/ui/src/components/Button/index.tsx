@@ -17,7 +17,7 @@ import { forwardRef, useMemo } from 'react'
 import { Loader } from '../Loader'
 import { Tooltip } from '../Tooltip'
 import type { ButtonVariants } from './styles.css'
-import { button } from './styles.css'
+import { buttonStyle } from './styles.css'
 
 type CommonProps = {
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type']
@@ -154,7 +154,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
 
     const computedClassName = cn(
       className,
-      button({ disabled, fullWidth, sentiment, size, variant }),
+      buttonStyle.button({ disabled, fullWidth, sentiment, size, variant }),
     )
 
     // render prop: render custom element with Button styling

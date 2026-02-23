@@ -15,7 +15,7 @@ export const sizes = {
   },
 }
 
-export const toggle = recipe({
+const toggle = recipe({
   base: {
     alignItems: 'center',
     backgroundColor: theme.colors.neutral.backgroundStrong,
@@ -147,7 +147,7 @@ export const toggle = recipe({
   },
 })
 
-export const checkbox = style({
+const checkbox = style({
   cursor: 'pointer',
   height: '100%',
   left: 0,
@@ -162,7 +162,7 @@ export const checkbox = style({
   width: '100%',
 })
 
-export const label = recipe({
+const label = recipe({
   base: {
     alignItems: 'flex-start',
     cursor: 'pointer',
@@ -188,3 +188,9 @@ export const label = recipe({
     },
   },
 })
+
+export const toggleStyle = {
+  toggle,
+  checkbox,
+  label,
+}

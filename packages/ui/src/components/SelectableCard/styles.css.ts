@@ -3,7 +3,7 @@ import { globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { inputDisplay, labelDisplay } from './variables.css'
 
-export const containerSelectableCard = recipe({
+const container = recipe({
   base: {
     background: theme.colors.neutral.background,
     border: `1px solid ${theme.colors.neutral.border}`,
@@ -65,16 +65,16 @@ export const containerSelectableCard = recipe({
   },
 })
 
-export const labelContainerSelectableCardLabel = style({
+const labelContainerSelectableCardLabel = style({
   selectors: {
     '&:first-child': {
       marginBottom: `-${theme.space['0.5']}`,
     },
   },
 })
-export const labelContainerSelectableCardNoLabel = style({})
+const labelContainerSelectableCardNoLabel = style({})
 
-export const divSelectableCard = style({
+const div = style({
   alignItems: 'normal',
   display: 'flex',
   flexFlow: 'column',
@@ -85,7 +85,7 @@ export const divSelectableCard = style({
   position: 'relative',
 })
 
-export const imageSelectableCard = style({
+const image = style({
   height: 'auto',
   left: theme.space[1],
   minWidth: '13.75rem',
@@ -93,13 +93,13 @@ export const imageSelectableCard = style({
   position: 'absolute',
 })
 
-export const illustrationSelectableCard = style({
+const illustration = style({
   flex: '0 1 auto',
   maxWidth: 'calc(100% - 10rem)',
   padding: theme.space[2],
 })
 
-export const stackSelectableCard = style({
+const stack = style({
   selectors: {
     '&[data-has-default-cursor="true"]': {
       cursor: 'default',
@@ -110,11 +110,11 @@ export const stackSelectableCard = style({
   },
 })
 
-export const indentedCard = style({
+const indentedCard = style({
   paddingLeft: theme.space[4],
 })
 
-export const selectableElementSelectableCard = style({
+const selectableElement = style({
   alignItems: 'flex-start',
   display: 'inline-flex',
   selectors: {
@@ -130,10 +130,22 @@ export const selectableElementSelectableCard = style({
   },
 })
 
-globalStyle(`${selectableElementSelectableCard} > input + svg`, {
+globalStyle(`${selectableElement} > input + svg`, {
   display: inputDisplay,
 })
 
-globalStyle(`${selectableElementSelectableCard} > label`, {
+globalStyle(`${selectableElement} > label`, {
   display: labelDisplay,
 })
+
+export const selectableCardStyle = {
+  container,
+  labelContainerSelectableCardLabel,
+  labelContainerSelectableCardNoLabel,
+  div,
+  image,
+  illustration,
+  stack,
+  indentedCard,
+  selectableElement,
+}

@@ -5,11 +5,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useRef } from 'react'
 import { SelectableCard } from '../SelectableCard'
 import { useSwitchButton } from './SwitchButtonContext'
-import {
-  switchButtonOptionBase,
-  switchButtonOptionNeutral,
-  switchButtonOptionPrimary,
-} from './styles.css'
+import { switchButtonStyle } from './styles.css'
 
 type OptionProps = {
   value: string
@@ -58,9 +54,9 @@ export const Option = ({
       checked={localValue === value}
       className={cn(
         sentiment === 'neutral'
-          ? switchButtonOptionNeutral
-          : switchButtonOptionPrimary,
-        switchButtonOptionBase,
+          ? switchButtonStyle.optionNeutral
+          : switchButtonStyle.optionPrimary,
+        switchButtonStyle.optionBase,
       )}
       data-checked={localValue === value}
       data-testid={dataTestId ?? `switch-button-${value}`}

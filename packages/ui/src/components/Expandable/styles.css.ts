@@ -2,7 +2,7 @@ import { createVar, style } from '@vanilla-extract/css'
 
 export const animationDurationVar = createVar()
 
-export const expandable = style({
+const expandable = style({
   height: 'auto',
   selectors: {
     '&[data-is-animated="true"]': {
@@ -13,3 +13,4 @@ export const expandable = style({
     },
   },
 })
+export const expandableStyle = { expandable }

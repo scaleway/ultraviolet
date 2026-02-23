@@ -4,7 +4,7 @@ import { recipe } from '@vanilla-extract/recipes'
 
 export const wrapperWidth = createVar()
 
-export const wrapperBarStack = style({
+const wrapper = style({
   backgroundColor: theme.colors.neutral.backgroundWeak,
   minWidth: 0,
   selectors: {
@@ -31,7 +31,7 @@ export const wrapperBarStack = style({
   width: wrapperWidth,
 })
 
-export const barStack = recipe({
+const barStack = recipe({
   base: {
     alignItems: 'center',
     display: 'flex',
@@ -62,14 +62,14 @@ export const barStack = recipe({
   },
 })
 
-export const barStackText = style({
+const text = style({
   display: 'block',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
   width: '100%',
 })
 
-export const containerBarStack = style({
+const container = style({
   backgroundColor: theme.colors.neutral.backgroundWeak,
   borderRadius: theme.radii.default,
   boxShadow: theme.shadows.defaultShadow,
@@ -79,11 +79,11 @@ export const containerBarStack = style({
   width: '100%',
 })
 
-export const barStackLabel = style({
+const label = style({
   justifyContent: 'space-between',
 })
 
-export const barStackLegendCircle = recipe({
+const legendCircle = recipe({
   base: {
     borderRadius: theme.radii.circle,
     height: theme.sizing[100],
@@ -103,3 +103,13 @@ export const barStackLegendCircle = recipe({
     },
   },
 })
+
+export const barStackStyle = {
+  wrapper,
+  wrapperWidth,
+  barStack,
+  text,
+  container,
+  label,
+  legendCircle,
+}

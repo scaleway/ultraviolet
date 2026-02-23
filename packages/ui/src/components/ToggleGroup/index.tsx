@@ -7,7 +7,7 @@ import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Toggle } from '../Toggle'
-import { fieldset } from './styles.css'
+import { toggleGroupStyle } from './styles.css'
 
 type ToggleGroupContextType = {
   groupName: string
@@ -111,7 +111,10 @@ const ToggleGroupComponent = ({
   return (
     <ToggleGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset className={cn(className, fieldset)} style={style}>
+        <fieldset
+          className={cn(className, toggleGroupStyle.fieldset)}
+          style={style}
+        >
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>

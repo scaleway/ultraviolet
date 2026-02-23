@@ -9,7 +9,7 @@ import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { DateInputContext } from '../Context'
 import { formatValue, isSameMonth } from '../helpers'
-import { capitalizedText, dayMonth as monthStyle } from './styles.css'
+import { dateInputStyle } from '../styles.css'
 
 export const Monthly = () => {
   const {
@@ -143,7 +143,10 @@ export const Monthly = () => {
         return (
           <Button
             aria-label={monthState()}
-            className={cn(monthStyle, capitalizedText)}
+            className={cn(
+              dateInputStyle.dayMonth,
+              dateInputStyle.capitalizedText,
+            )}
             disabled={disabled || isExcluded || isOutsideRange}
             key={month[0]}
             onClick={event => {

@@ -10,7 +10,7 @@ import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { useFileInput } from '../FileInputProvider'
 import { formatFileSize, getMimeTypeType } from '../helpers'
-import { fileInfo, fileViewerContainer, fileViewerImage } from '../styles.css'
+import { fileInputStyle } from '../styles.css'
 import type { ListProps, MimeType } from '../types'
 
 const getIllustration = (
@@ -21,21 +21,27 @@ const getIllustration = (
 ) => {
   if (loading) {
     return (
-      <div className={fileViewerImage[error ? 'error' : 'default']}>
+      <div
+        className={fileInputStyle.fileViewerImage[error ? 'error' : 'default']}
+      >
         <Loader active sentiment="primary" size="xsmall" />
       </div>
     )
   }
   if (type === 'audio') {
     return (
-      <div className={fileViewerImage[error ? 'error' : 'default']}>
+      <div
+        className={fileInputStyle.fileViewerImage[error ? 'error' : 'default']}
+      >
         <AudioIcon sentiment={error ? 'danger' : 'primary'} size="medium" />
       </div>
     )
   }
   if (type === 'video') {
     return (
-      <div className={fileViewerImage[error ? 'error' : 'default']}>
+      <div
+        className={fileInputStyle.fileViewerImage[error ? 'error' : 'default']}
+      >
         <VideoIcon sentiment={error ? 'danger' : 'primary'} size="medium" />
       </div>
     )
@@ -44,7 +50,7 @@ const getIllustration = (
     return (
       <img
         alt=""
-        className={fileViewerImage.default}
+        className={fileInputStyle.fileViewerImage.default}
         height="auto"
         src={file}
         width="auto"
@@ -54,14 +60,18 @@ const getIllustration = (
 
   if (type === 'image' && error) {
     return (
-      <div className={fileViewerImage[error ? 'error' : 'default']}>
+      <div
+        className={fileInputStyle.fileViewerImage[error ? 'error' : 'default']}
+      >
         <ImageIcon sentiment={error ? 'danger' : 'primary'} size="medium" />
       </div>
     )
   }
 
   return (
-    <div className={fileViewerImage[error ? 'error' : 'default']}>
+    <div
+      className={fileInputStyle.fileViewerImage[error ? 'error' : 'default']}
+    >
       <DocIcon sentiment={error ? 'danger' : 'primary'} size="medium" />
     </div>
   )
@@ -96,7 +106,7 @@ export const ListFiles = ({
               <Stack
                 alignItems="center"
                 className={
-                  fileViewerContainer[
+                  fileInputStyle.fileViewerContainer[
                     file.error || error ? 'error' : prominence
                   ]
                 }
@@ -106,7 +116,7 @@ export const ListFiles = ({
               >
                 <Stack alignItems="center" direction="row" gap={1}>
                   {illustration}
-                  <Stack className={fileInfo} direction="column">
+                  <Stack className={fileInputStyle.fileInfo} direction="column">
                     <Text
                       as="p"
                       oneLine

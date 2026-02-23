@@ -1,10 +1,15 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+import {
+  capitalizedText,
+  capitalizedTextDay,
+  dayMonth,
+} from './components/styles.css'
 
-export const dateinputContainer = style({ width: '100%' })
+const container = style({ width: '100%' })
 
-export const calendarContentWrapper = recipe({
+const calendarContentWrapper = recipe({
   base: {
     backgroundColor: theme.colors.other.elevation.background.raised,
     borderRadius: theme.radii.default,
@@ -18,3 +23,19 @@ export const calendarContentWrapper = recipe({
     },
   },
 })
+const popup = style([
+  calendarContentWrapper(),
+  {
+    boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
+    width: '100%',
+  },
+])
+
+export const dateInputStyle = {
+  container,
+  calendarContentWrapper,
+  popup,
+  capitalizedText,
+  capitalizedTextDay,
+  dayMonth,
+}

@@ -3,7 +3,7 @@
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties } from 'react'
 import { Text } from '../Text'
-import { colorMeter, meter, strengthMeter, wrapperMeter } from './styles.css'
+import { colorMeter, meterStyle } from './styles.css'
 
 type Strength = {
   /**
@@ -66,7 +66,7 @@ export const Meter = ({
         {title}
         <Text
           as="span"
-          className={strengthMeter}
+          className={meterStyle.strength}
           style={assignInlineVars({
             [colorMeter]: strength[value].color,
           })}
@@ -75,9 +75,9 @@ export const Meter = ({
           {text}
         </Text>
       </Text>
-      <div className={wrapperMeter}>
+      <div className={meterStyle.wrapper}>
         <div
-          className={meter}
+          className={meterStyle.meter}
           style={{
             backgroundColor,
             width,

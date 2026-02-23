@@ -22,19 +22,19 @@ const bulletFlashAnimation = keyframes({
   },
 })
 
-export const containerPie = style({
+const container = style({
   alignItems: 'center',
   display: 'flex',
   height: heightContainerPie,
 })
 
-export const emptyLegendPie = style({
+const emptyLegend = style({
   alignItems: 'center',
   display: 'flex',
   marginLeft: theme.space[5],
 })
 
-export const contentPie = style({
+const content = style({
   display: 'inline-block',
   fontSize: theme.typography.headingStrong.fontSize,
   height: 100,
@@ -47,7 +47,7 @@ export const contentPie = style({
   width: 100,
 })
 
-export const listPie = style({
+const list = style({
   display: 'flex',
   flex: '1',
   flexDirection: 'column',
@@ -57,7 +57,7 @@ export const listPie = style({
   overflowY: 'auto',
 })
 
-export const listItemPie = recipe({
+const listItem = recipe({
   base: {
     alignItems: 'center',
     display: 'flex',
@@ -76,7 +76,7 @@ export const listItemPie = recipe({
   },
 })
 
-export const bulletPie = recipe({
+const bullet = recipe({
   base: {
     background: colorBullet,
     borderRadius: theme.radii.circle,
@@ -94,13 +94,13 @@ export const bulletPie = recipe({
   },
 })
 
-export const labelPie = style({
+const label = style({
   alignItems: 'baseline',
   display: 'flex',
   flex: '1',
 })
 
-export const valuePie = styleVariants({
+const value = styleVariants({
   default: {
     fontWeight: 400,
     marginLeft: theme.space[1],
@@ -111,7 +111,7 @@ export const valuePie = styleVariants({
   },
 })
 
-export const textPie = recipe({
+const text = recipe({
   base: {
     flex: 'none',
     marginRight: theme.space[1],
@@ -129,19 +129,19 @@ export const textPie = recipe({
   },
 })
 
-export const toggleBoxPie = style({
+const toggleBox = style({
   height: 21,
   position: 'absolute',
   width: 250,
 })
 
-export const linePie = style({
+const line = style({
   borderBottom: `1px solid ${theme.colors.neutral.border}`,
   position: 'relative',
   width: '100%',
 })
 
-export const progressiveLinePie = recipe({
+const progressiveLine = recipe({
   base: {
     borderBottom: `1px solid ${theme.colors.primary.border}`,
     bottom: -1,
@@ -162,13 +162,13 @@ export const progressiveLinePie = recipe({
   },
 })
 
-export const listTooltipPie = style({
+const listTooltip = style({
   margin: 0,
   padding: `0 ${theme.space[1]} ${theme.space[1]} ${theme.space[1]}`,
   width: '100%',
 })
 
-export const itemTooltipPie = style({
+const itemTooltip = style({
   display: 'flex',
   gap: theme.space[1],
   justifyContent: 'space-between',
@@ -176,3 +176,20 @@ export const itemTooltipPie = style({
   textAlign: 'left',
   width: '100%',
 })
+
+export const pieChartStyle = {
+  container,
+  emptyLegend,
+  content,
+  listItem,
+  list,
+  bullet,
+  label,
+  value,
+  text,
+  toggleBox,
+  line,
+  progressiveLine,
+  listTooltip,
+  itemTooltip,
+}

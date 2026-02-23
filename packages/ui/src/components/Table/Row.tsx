@@ -9,15 +9,10 @@ import { Children, useCallback, useEffect, useRef } from 'react'
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
 import { ColumnProvider } from '../List/ColumnProvider'
-import { listCheckboxInRange, listNoPaddingCell } from '../List/styles.css'
+import { listStyle } from '../List/styles.css'
 import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
-import {
-  tableCheckboxContainer,
-  tableExpandableWrapper,
-  tableRow,
-  tableTrAnimation,
-} from './styles.css'
+import { tableStyle } from './styles.css'
 import { useTableContext } from './TableContext'
 
 type RowProps = {
@@ -113,8 +108,8 @@ export const Row = ({
       <tr
         className={cn(
           className,
-          highlightAnimation ? tableTrAnimation : '',
-          tableRow,
+          highlightAnimation ? tableStyle.trAnimation : '',
+          tableStyle.row,
         )}
         data-testid={dataTestid}
         role={canClickRowToExpand ? 'button row' : 'row'}
@@ -122,8 +117,8 @@ export const Row = ({
       >
         {selectable ? (
           <ColumnProvider width={theme.sizing[300]}>
-            <Cell className={listNoPaddingCell}>
-              <div className={tableCheckboxContainer}>
+            <Cell className={listStyle.noPaddingCell}>
+              <div className={tableStyle.checkboxContainer}>
                 <Tooltip
                   text={
                     typeof selectDisabled === 'string'
@@ -135,7 +130,9 @@ export const Row = ({
                     aria-label="select"
                     checked={selectedRowIds[id]}
                     className={
-                      inRange?.includes(id) ? listCheckboxInRange : undefined
+                      inRange?.includes(id)
+                        ? listStyle.checkboxInRange
+                        : undefined
                     }
                     disabled={!!selectDisabled}
                     name="table-select-checkbox"
@@ -152,7 +149,7 @@ export const Row = ({
         ) : null}
         {expandButton ? (
           <ColumnProvider width={theme.sizing[300]}>
-            <Cell className={listNoPaddingCell}>
+            <Cell className={listStyle.noPaddingCell}>
               <Button
                 aria-label="expand"
                 data-testid="list-expand-button"
@@ -183,7 +180,7 @@ export const Row = ({
       </tr>
       {expandable && expandedRowIds[id] ? (
         <tr
-          className={tableExpandableWrapper}
+          className={tableStyle.expandableWrapper}
           data-expandable-content
           onClick={
             canClickRowToExpand
