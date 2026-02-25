@@ -81,13 +81,7 @@ export const Illustration: StoryFn = args => {
         <SelectableCard
           {...args}
           checked={value2 === 'label-24'}
-          illustration={
-            <WireIllustration
-              height="220px"
-              name="appleSiliconM2"
-              width="220px"
-            />
-          }
+          illustration={<WireIllustration name="appleSiliconM2" />}
           label={
             <Stack alignItems="center" direction="row" flex={1} gap={1}>
               <Text as="span" variant="bodyStrong">
@@ -115,13 +109,7 @@ export const Illustration: StoryFn = args => {
         <SelectableCard
           {...args}
           checked={value2 === 'label-25'}
-          illustration={
-            <WireIllustration
-              height="220px"
-              name="appleSiliconM2"
-              width="220px"
-            />
-          }
+          illustration={<WireIllustration name="appleSiliconM2" />}
           label={
             <Stack alignItems="center" direction="row" flex={1} gap={1}>
               <Text as="span" variant="bodyStrong">
