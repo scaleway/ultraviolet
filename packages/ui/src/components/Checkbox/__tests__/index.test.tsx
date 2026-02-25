@@ -75,6 +75,13 @@ describe('checkbox', () => {
       </Checkbox>,
     ))
 
+  test('renders correctly small', () =>
+    shouldMatchSnapshot(
+      <Checkbox onChange={() => {}} size="small">
+        Checkbox Label
+      </Checkbox>,
+    ))
+
   test('renders correctly checked and disabled', () =>
     shouldMatchSnapshot(
       <Checkbox checked disabled onChange={() => {}}>

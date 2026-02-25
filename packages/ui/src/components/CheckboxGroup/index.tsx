@@ -42,6 +42,7 @@ export const CheckboxGroupCheckbox = ({
   required,
   tooltip,
   style,
+  size,
 }: CheckboxGroupCheckboxProps) => {
   const context = useContext(CheckboxGroupContext)
 
@@ -70,6 +71,7 @@ export const CheckboxGroupCheckbox = ({
       onChange={onChange}
       onFocus={onFocus}
       required={required}
+      size={size}
       style={style}
       tooltip={tooltip}
       value={checkboxValue}

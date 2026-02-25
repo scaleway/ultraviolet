@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { style } from '@vanilla-extract/css'
+import { style, styleVariants } from '@vanilla-extract/css'
 import { checkboxGroup } from '../CheckboxGroup/styles.css'
 import { listCheckboxInRange } from '../List/styles.css'
 import { labelContainerSelectableCardLabel } from '../SelectableCard/styles.css'
@@ -8,9 +8,8 @@ export const errorText = style({
   paddingTop: theme.space['0.5'],
 })
 
-export const checkboxContainer = style({
+const checkboxContainerBase = style({
   display: 'inline-flex',
-  gap: theme.space['1'],
   position: 'relative',
   selectors: {
     "&[aria-disabled='true']": {
@@ -22,13 +21,17 @@ export const checkboxContainer = style({
     },
   },
 })
-export const checkboxInput = style({
+
+export const checkboxContainer = styleVariants({
+  default: [checkboxContainerBase, { gap: theme.space['1'] }],
+  small: [checkboxContainerBase, { gap: theme.space['0.5'] }],
+})
+
+const checkboxInputBase = style({
   borderWidth: 0,
-  height: theme.sizing['300'],
   opacity: 0,
   position: 'absolute',
   whiteSpace: 'nowrap',
-  width: theme.sizing['300'],
   selectors: {
     '&:not(:disabled)': {
       cursor: 'pointer',
@@ -38,139 +41,173 @@ export const checkboxInput = style({
     },
   },
 })
+export const checkboxInput = styleVariants({
+  default: [
+    checkboxInputBase,
+    { height: theme.sizing[300], width: theme.sizing[300] },
+  ],
+  small: [
+    checkboxInputBase,
+    {
+      height: theme.sizing[200],
+      width: theme.sizing[200],
+      marginTop: theme.space['0.25'],
+    },
+  ],
+})
 
-export const icon = style({
+const iconBase = style({
   borderRadius: theme.radii.default,
-  height: theme.sizing['300'],
-  minHeight: theme.sizing['300'],
-  minWidth: theme.sizing['300'],
-  width: theme.sizing['300'],
   selectors: {
-    [`${checkboxContainer}[aria-disabled='true'] &`]: {
+    [`${checkboxContainerBase}[aria-disabled='true'] &`]: {
       fill: theme.colors.neutral.borderDisabled,
     },
-    [`${checkboxContainer}[aria-disabled='true'] input[aria-invalid="true"]:checked + &`]:
+    [`${checkboxContainerBase}[aria-disabled='true'] input[aria-invalid="true"]:checked + &`]:
       {
         fill: theme.colors.danger.backgroundStrongDisabled,
       },
-    [`${checkboxContainer}[aria-disabled='true'] input[aria-invalid="true"] + &`]:
+    [`${checkboxContainerBase}[aria-disabled='true'] input[aria-invalid="true"] + &`]:
       {
         fill: theme.colors.danger.background,
       },
-    [`${checkboxContainer}[aria-disabled='true'] input:checked + &`]: {
+    [`${checkboxContainerBase}[aria-disabled='true'] input:checked + &`]: {
       fill: theme.colors.primary.backgroundStrongDisabled,
     },
-    [`${checkboxContainer}[aria-disabled='true'] input[aria-checked="mixed"] + &`]:
+    [`${checkboxContainerBase}[aria-disabled='true'] input[aria-checked="mixed"] + &`]:
       {
         fill: theme.colors.primary.backgroundStrongDisabled,
       },
-    [`${checkboxContainer} input[aria-invalid="true"] + &`]: {
+    [`${checkboxContainerBase} input[aria-invalid="true"] + &`]: {
       fill: theme.colors.danger.backgroundStrong,
     },
-    [`${checkboxInput}:focus + &`]: {
+    [`${checkboxInputBase}:focus + &`]: {
       backgroundColor: theme.colors.primary.background,
       fill: theme.colors.danger.background,
       outline: `1px solid ${theme.shadows.focusPrimary}`,
     },
-    [`${checkboxInput}[aria-invalid='true']:focus + &`]: {
+    [`${checkboxInputBase}[aria-invalid='true']:focus + &`]: {
       backgroundColor: theme.colors.danger.background,
       fill: theme.colors.danger.background,
       outline: `1px solid ${theme.shadows.focusDanger}`,
     },
-    [`${checkboxInput}:not(:disabled):checked + &, ${checkboxInput}:not(:disabled)[aria-checked='mixed'] + &`]:
+    [`${checkboxInputBase}:not(:disabled):checked + &, ${checkboxInputBase}:not(:disabled)[aria-checked='mixed'] + &`]:
       {
         fill: theme.colors.primary.backgroundStrong,
       },
-    [`${checkboxInput}:not(:disabled)[aria-invalid='true'] + &, ${checkboxInput}:not(:disabled)[aria-invalid='mixed'] + &`]:
+    [`${checkboxInputBase}:not(:disabled)[aria-invalid='true'] + &, ${checkboxInputBase}:not(:disabled)[aria-invalid='mixed'] + &`]:
       {
         fill: theme.colors.danger.background,
       },
   },
 })
 
+export const icon = styleVariants({
+  default: [
+    iconBase,
+    {
+      height: theme.sizing['300'],
+      minHeight: theme.sizing['300'],
+      minWidth: theme.sizing['300'],
+      width: theme.sizing['300'],
+    },
+  ],
+  small: [
+    iconBase,
+    {
+      marginTop: theme.space['0.25'],
+      height: theme.sizing['200'],
+      minHeight: theme.sizing['200'],
+      minWidth: theme.sizing['200'],
+      width: theme.sizing['200'],
+    },
+  ],
+})
+
 export const innerCheckbox = style({
   fill: theme.colors.neutral.background,
   stroke: theme.colors.neutral.border,
   selectors: {
-    [`${checkboxContainer}[aria-disabled='true'] &`]: {
+    [`${checkboxContainerBase}[aria-disabled='true'] &`]: {
       fill: theme.colors.neutral.backgroundDisabled,
       stroke: theme.colors.neutral.borderStrongDisabled,
     },
-    [`${checkboxContainer}[aria-disabled='true'] input[aria-invalid="true"]:checked + ${icon} &`]:
+    [`${checkboxContainerBase}[aria-disabled='true'] input[aria-invalid="true"]:checked + ${iconBase} &`]:
       {
         fill: theme.colors.danger.backgroundStrongDisabled,
         stroke: theme.colors.danger.borderStrongDisabled,
       },
-    [`${checkboxContainer}[aria-disabled='true'] input[aria-invalid="true"] + ${icon} &`]:
+    [`${checkboxContainerBase}[aria-disabled='true'] input[aria-invalid="true"] + ${iconBase} &`]:
       {
         fill: theme.colors.danger.background,
         stroke: theme.colors.danger.borderDisabled,
       },
-    [`${checkboxContainer}[aria-disabled='true'] input:checked + ${icon} &`]: {
-      fill: theme.colors.primary.borderDisabled,
-      stroke: theme.colors.primary.borderDisabled,
-    },
-    [`${checkboxContainer}[aria-disabled='true'] input[aria-checked="mixed"] + ${icon} &`]:
+    [`${checkboxContainerBase}[aria-disabled='true'] input:checked + ${iconBase} &`]:
+      {
+        fill: theme.colors.primary.borderDisabled,
+        stroke: theme.colors.primary.borderDisabled,
+      },
+    [`${checkboxContainerBase}[aria-disabled='true'] input[aria-checked="mixed"] + ${iconBase} &`]:
       {
         fill: theme.colors.primary.backgroundStrongDisabled,
         stroke: theme.colors.primary.borderStrongDisabled,
       },
-    [`${checkboxContainer} input:checked + ${icon} &`]: {
+    [`${checkboxContainerBase} input:checked + ${iconBase} &`]: {
       fill: theme.colors.primary.backgroundStrong,
       stroke: theme.colors.primary.borderStrong,
       transformOrigin: 'center',
       transition: '200ms fill ease-in-out',
     },
-    [`${checkboxContainer} input[aria-invalid="true"]:checked + ${icon} &`]: {
-      fill: theme.colors.danger.backgroundStrong,
-      stroke: theme.colors.danger.borderStrong,
-    },
-    [`${checkboxContainer} input[aria-checked="mixed"] + ${icon} &`]: {
+    [`${checkboxContainerBase} input[aria-invalid="true"]:checked + ${iconBase} &`]:
+      {
+        fill: theme.colors.danger.backgroundStrong,
+        stroke: theme.colors.danger.borderStrong,
+      },
+    [`${checkboxContainerBase} input[aria-checked="mixed"] + ${iconBase} &`]: {
       fill: theme.colors.primary.backgroundStrong,
       stroke: theme.colors.primary.borderStrong,
     },
-    [`${checkboxContainer}:hover[aria-disabled='false'] input[aria-invalid='false'][aria-checked='false'] + ${icon} &`]:
+    [`${checkboxContainerBase}:hover[aria-disabled='false'] input[aria-invalid='false'][aria-checked='false'] + ${iconBase} &`]:
       {
         fill: theme.colors.primary.backgroundHover,
         stroke: theme.colors.primary.borderHover,
       },
-    [`${checkboxContainer}:hover[aria-disabled='false'] input[aria-invalid='false'][aria-checked='true'] + ${icon} &`]:
+    [`${checkboxContainerBase}:hover[aria-disabled='false'] input[aria-invalid='false'][aria-checked='true'] + ${iconBase} &`]:
       {
         fill: theme.colors.primary.backgroundStrongHover,
         stroke: theme.colors.primary.borderStrongHover,
       },
-    [`${checkboxContainer}:hover[aria-disabled='false'] input[aria-invalid='false'][aria-checked='mixed'] + ${icon} &`]:
+    [`${checkboxContainerBase}:hover[aria-disabled='false'] input[aria-invalid='false'][aria-checked='mixed'] + ${iconBase} &`]:
       {
         fill: theme.colors.primary.backgroundStrongHover,
         stroke: theme.colors.primary.borderStrongHover,
       },
-    [`${checkboxContainer}:hover[aria-disabled='false'] input[aria-invalid='true'][aria-checked='false'] + ${icon} &`]:
+    [`${checkboxContainerBase}:hover[aria-disabled='false'] input[aria-invalid='true'][aria-checked='false'] + ${iconBase} &`]:
       {
         fill: theme.colors.danger.backgroundHover,
         stroke: theme.colors.danger.borderHover,
       },
-    [`${checkboxContainer}:hover[aria-disabled='false'] input[aria-invalid='true'][aria-checked='true'] + ${icon} &`]:
+    [`${checkboxContainerBase}:hover[aria-disabled='false'] input[aria-invalid='true'][aria-checked='true'] + ${iconBase} &`]:
       {
         fill: theme.colors.danger.backgroundStrongHover,
         stroke: theme.colors.danger.borderStrongHover,
       },
-    [`${checkboxContainer} input[aria-invalid="true"] + ${icon} &`]: {
+    [`${checkboxContainerBase} input[aria-invalid="true"] + ${iconBase} &`]: {
       fill: theme.colors.danger.background,
       stroke: theme.colors.danger.backgroundStrong,
     },
-    [`${checkboxInput}:focus + ${icon} &`]: {
+    [`${checkboxInputBase}:focus + ${iconBase} &`]: {
       fill: theme.colors.primary.backgroundHover,
       stroke: theme.colors.primary.borderHover,
     },
-    [`${checkboxInput}[aria-invalid='true']:focus + ${icon} &`]: {
+    [`${checkboxInputBase}[aria-invalid='true']:focus + ${iconBase} &`]: {
       fill: theme.colors.danger.backgroundHover,
       stroke: theme.colors.danger.borderHover,
     },
-    [`${checkboxInput}:not(:disabled):checked + ${icon} &, ${checkboxInput}:not(:disabled)[aria-checked='mixed'] + ${icon} &`]:
+    [`${checkboxInputBase}:not(:disabled):checked + ${iconBase} &, ${checkboxInputBase}:not(:disabled)[aria-checked='mixed'] + ${iconBase} &`]:
       {
         stroke: theme.colors.primary.borderStrong,
       },
-    [`${checkboxInput}:not(:disabled)[aria-invalid='true'] + ${icon} &, ${checkboxInput}:not(:disabled)[aria-invalid='mixed'] + ${icon} &`]:
+    [`${checkboxInputBase}:not(:disabled)[aria-invalid='true'] + ${iconBase} &, ${checkboxInputBase}:not(:disabled)[aria-invalid='mixed'] + ${iconBase} &`]:
       {
         stroke: theme.colors.danger.border,
       },
@@ -185,7 +222,7 @@ export const iconPath = style({
   fill: theme.colors.neutral.background,
   transform: 'scale(0)',
   selectors: {
-    [`${checkboxContainer} input:checked + ${icon} &`]: {
+    [`${checkboxContainerBase} input:checked + ${iconBase} &`]: {
       transform: 'scale(1) translate(2px, 2px)',
       transformOrigin: 'center',
       transition: '200ms transform ease-in-out',
@@ -195,7 +232,7 @@ export const iconPath = style({
 
 export const checkMixedMark = style({
   selectors: {
-    [`${checkboxContainer} input[aria-checked="mixed"] + ${icon} &`]: {
+    [`${checkboxContainerBase} input[aria-checked="mixed"] + ${iconBase} &`]: {
       fill: theme.colors.neutral.iconStronger,
     },
   },
@@ -205,7 +242,7 @@ export const label = style({
   cursor: 'pointer',
   width: '100%',
   selectors: {
-    [`${checkboxContainer}[aria-disabled='true'] &`]: {
+    [`${checkboxContainerBase}[aria-disabled='true'] &`]: {
       cursor: 'not-allowed',
     },
     [`${checkboxGroup} &`]: {

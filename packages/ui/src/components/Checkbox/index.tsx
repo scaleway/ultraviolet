@@ -1,41 +1,19 @@
 'use client'
 
-import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
+import { CheckboxIconContainer } from './CheckboxIconContainer'
 import {
   checkboxContainer,
   checkboxInput,
-  checkMixedMark,
   errorText,
   icon,
-  iconPath,
-  innerCheckbox,
   label,
 } from './styles.css'
-
-const CheckboxIconContainer = ({ children }: { children: ReactNode }) => {
-  const theme = useTheme()
-
-  return (
-    <g>
-      <rect
-        className={innerCheckbox}
-        height="16"
-        rx={theme.radii.small}
-        strokeWidth="2"
-        width="16"
-        x="4"
-        y="4"
-      />
-      {children}
-    </g>
-  )
-}
 
 type LabelProp =
   | {
@@ -57,6 +35,7 @@ type CheckboxProps = {
   required?: boolean
   'data-testid'?: string
   tooltip?: string
+  size?: 'default' | 'small'
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   | 'autoFocus'
@@ -100,6 +79,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       tooltip,
       tabIndex,
       style,
+      size = 'default',
     },
     ref,
   ) => {
@@ -114,7 +94,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           htmlFor={localId}
           prominence="default"
           sentiment="neutral"
-          variant="body"
+          variant={size === 'small' ? 'bodySmall' : 'body'}
         >
           {children}
         </Text>
@@ -129,7 +109,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       <Tooltip text={tooltip}>
         <div
           aria-disabled={disabled}
-          className={cn(className, checkboxContainer)}
+          className={cn(className, checkboxContainer[size])}
           data-checked={checked}
           data-error={!!error}
           data-testid={dataTestId}
@@ -142,7 +122,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             aria-label={ariaLabel}
             autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
             checked={isCheck}
-            className={checkboxInput}
+            className={checkboxInput[size]}
             disabled={disabled}
             id={localId}
             name={name}
@@ -158,32 +138,9 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             value={value}
           />
 
-          <svg className={icon} fill="none" viewBox="0 0 24 24">
-            <title>checkbox</title>
-            <CheckboxIconContainer>
-              {checked !== 'indeterminate' ? (
-                <path
-                  className={iconPath}
-                  clipRule="evenodd"
-                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                  fill="white"
-                  fillRule="evenodd"
-                  height={9}
-                  width={12}
-                  x="5"
-                  y="4"
-                />
-              ) : (
-                <rect
-                  className={checkMixedMark}
-                  height="2"
-                  rx="1"
-                  width="12"
-                  x="6"
-                  y="11"
-                />
-              )}
-            </CheckboxIconContainer>
+          <svg className={icon[size]} fill="none" viewBox="0 0 24 24">
+            <title>{name}</title>
+            <CheckboxIconContainer checked={checked} />
           </svg>
 
           {children || required || helper || error ? (
