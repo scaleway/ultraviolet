@@ -1,3 +1,5 @@
+const SPLIT_REGEX = /\D+/
+const DATE_SEPARATOR_REGEX = /[^a-zA-Z0-9]+/
 // First day of the month for a given year
 export const getMonthFirstDay = (month: number, year: number) => {
   const firstDay = new Date(year, month - 1, 1).getDay()
@@ -43,8 +45,8 @@ const getDateISO = (showMonthYearPicker: boolean, date?: Date) => {
     }
 
     return [
-      addZero(date.getMonth() + 1),
       addZero(date.getDate()),
+      addZero(date.getMonth() + 1),
       date.getFullYear(),
     ].join('/')
   }
@@ -84,25 +86,49 @@ export const formatValue = (
   return undefined
 }
 
-export const createDate = (value: string, showMonthYearPicker: boolean) => {
+const returnValidDate = (
+  computedDate: Date,
+  minDate?: Date,
+  maxDate?: Date,
+) => {
+  const isValidDate = !!computedDate.getTime()
+
+  const isTooSoon = isValidDate && minDate && computedDate < minDate
+  const isTooLate = isValidDate && maxDate && computedDate > maxDate
+
+  if (isTooLate) {
+    return maxDate
+  }
+  if (isTooSoon) {
+    return minDate
+  }
+
+  return isValidDate ? computedDate : null
+}
+
+export const createDate = (
+  value: string,
+  showMonthYearPicker: boolean,
+  minDate?: Date,
+  maxDate?: Date,
+) => {
   if (showMonthYearPicker) {
     // Force YYYY/MM (since MM/YYYY not recognised as a date in typescript)
-    // biome-ignore lint/performance/useTopLevelRegex: to fix
-    const res = value.split(/\D+/).map(val => Number.parseInt(val, 10))
+    const res = value.split(SPLIT_REGEX).map(val => Number.parseInt(val, 10))
     const year =
       Math.max(...res) < 100 ? Math.max(...res) + 2000 : Math.max(...res) // MM/YY should be seen as MM/20YY instead of MM/19YY
 
     const month = Math.min(...res) - 1
     const computedDate = new Date(year, month)
-    const isValidDate = !!computedDate.getTime()
 
-    return isValidDate ? computedDate : null
+    return returnValidDate(computedDate, minDate, maxDate)
   }
 
-  const computedDate = new Date(value)
-  const isValidDate = !!computedDate.getTime()
+  // Cannot simply use new Date(value) since its base format is MM/DD/YYYY whereas the component uses DD/MM/YYYY
+  const [day, month, year] = value.split(DATE_SEPARATOR_REGEX)
+  const computedDate = new Date(`${month} ${day} ${year}`)
 
-  return isValidDate ? computedDate : null
+  return returnValidDate(computedDate, minDate, maxDate)
 }
 
 export const createDateRange = (

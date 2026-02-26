@@ -7,7 +7,10 @@ import {
   dayMonth,
 } from './components/styles.css'
 
-const container = style({ width: '100%' })
+const container = style({
+  width: '100%',
+  height: 'fit-content',
+})
 
 const calendarContentWrapper = recipe({
   base: {

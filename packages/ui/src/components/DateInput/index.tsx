@@ -258,7 +258,12 @@ export const DateInput = <IsRange extends undefined | boolean>({
         setYearToShow(computedNewRange[0].getFullYear())
       }
     } else {
-      const computedDate = createDate(newValue, showMonthYearPicker)
+      const computedDate = createDate(
+        newValue,
+        showMonthYearPicker,
+        minDate,
+        maxDate,
+      )
 
       if (computedDate) {
         setMonthToShow(computedDate.getMonth() + 1)
@@ -284,7 +289,12 @@ export const DateInput = <IsRange extends undefined | boolean>({
           ) => void
         )?.(computedNewRange, undefined)
       } else {
-        const computedDate = createDate(inputValue, showMonthYearPicker)
+        const computedDate = createDate(
+          inputValue,
+          showMonthYearPicker,
+          minDate,
+          maxDate,
+        )
         ;(
           onChange as (date: Date | null, event?: React.SyntheticEvent) => void
         )?.(computedDate, undefined)
