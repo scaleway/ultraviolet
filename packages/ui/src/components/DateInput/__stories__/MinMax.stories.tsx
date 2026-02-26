@@ -12,9 +12,10 @@ MinMax.parameters = {
 
 MinMax.args = {
   label: 'Date',
-  maxDate: new Date('December 25, 1995 03:24:00'),
-  minDate: new Date('December 12, 1995 03:24:00'),
+  maxDate: new Date('December 25, 1995 00:00:00'),
+  minDate: new Date('December 12, 1995 00:00:00'),
   value: new Date('1995-12-17T03:24:00'),
+  onChange: console.log,
 }
 
 MinMax.decorators = [

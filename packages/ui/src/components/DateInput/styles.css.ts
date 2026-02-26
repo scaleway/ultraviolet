@@ -2,7 +2,10 @@ import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-export const dateinputContainer = style({ width: '100%' })
+export const dateinputContainer = style({
+  width: '100%',
+  height: 'fit-content',
+})
 
 export const calendarContentWrapper = recipe({
   base: {
