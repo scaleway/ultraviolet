@@ -16,6 +16,8 @@ export const ILLUSTRATIONS = {
     'https://assets.scaleway.com/illustrations/products/appleSilicon/apple-silicon-m4-wire.svg',
   appleSilicon:
     'https://assets.scaleway.com/illustrations/products/appleSilicon/apple-silicon-wire.svg',
+  artifactRegistry:
+    'https://assets.scaleway.com/illustrations/products/artifactRegistry/artifact-registry-wire.svg',
   auditTrail:
     'https://assets.scaleway.com/illustrations/products/auditTrail/audit-trail-wire.svg',
   blockStorage:
