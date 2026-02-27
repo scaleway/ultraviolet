@@ -192,6 +192,11 @@ export const SingleSlider = ({
     ? options[selectedIndex].value
     : selectedIndex
 
+  const hasCustomValue = customValueDisplay !== undefined
+
+  const displayCorrectValue =
+    input || !hasCustomValue ? styledValue(valueToShow) : customValueDisplay
+
   return (
     <Stack direction={direction} gap={1} justifyContent="left">
       {label ? (
@@ -207,22 +212,12 @@ export const SingleSlider = ({
           >
             {label}
           </Label>
-          {direction === 'column' && (input || !customValueDisplay)
-            ? styledValue(valueToShow)
-            : null}
-          {direction === 'column' && customValueDisplay && !input
-            ? customValueDisplay
-            : null}
+          {direction === 'column' ? displayCorrectValue : null}
         </Stack>
       ) : null}
 
       <Stack direction="row" justifyContent="flex-end">
-        {direction === 'column' && !label && (input || !customValueDisplay)
-          ? styledValue(valueToShow)
-          : null}
-        {direction === 'column' && !label && customValueDisplay && !input
-          ? customValueDisplay
-          : null}
+        {direction === 'column' && !label ? displayCorrectValue : null}
       </Stack>
       <Stack direction="column" gap={1} justifyContent="center" width="100%">
         <Tooltip
@@ -281,12 +276,7 @@ export const SingleSlider = ({
           />
         ) : null}
       </Stack>
-      {direction === 'row' && (input || !customValueDisplay)
-        ? styledValue(valueToShow)
-        : null}
-      {direction === 'row' && customValueDisplay && !input
-        ? customValueDisplay
-        : null}
+      {direction === 'row' ? displayCorrectValue : null}
     </Stack>
   )
 }

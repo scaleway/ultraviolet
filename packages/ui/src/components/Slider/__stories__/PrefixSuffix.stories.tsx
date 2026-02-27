@@ -53,6 +53,15 @@ export const PrefixSuffix: StoryFn<typeof Slider> = args => {
     <Stack gap={4}>
       <Slider
         {...args}
+        customValueDisplay={false}
+        label="With custom value set to false"
+        max={100}
+        onChange={() => {}}
+        tooltip={false}
+        value={34}
+      />
+      <Slider
+        {...args}
         customValueDisplay={
           <Text as="p" variant="bodySmallStrong">
             This is a custom value
@@ -65,6 +74,7 @@ export const PrefixSuffix: StoryFn<typeof Slider> = args => {
         value={34}
       />
       <Slider
+        {...args}
         customValueDisplay={
           <Text as="p" variant="bodySmallStrong">
             This is a custom value

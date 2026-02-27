@@ -151,6 +151,18 @@ describe('single slider', () => {
     )
   })
 
+  test('renders correctly custom value false', () => {
+    shouldMatchSnapshot(
+      <Slider
+        customValueDisplay={false}
+        label="Label"
+        name="Name"
+        tooltip
+        value={1}
+      />,
+    )
+  })
+
   test('renders correctly custom value - direction row', () => {
     shouldMatchSnapshot(
       <Slider
