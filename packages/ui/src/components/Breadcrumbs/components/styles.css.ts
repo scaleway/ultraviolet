@@ -13,14 +13,14 @@ export const minWidthVar = createVar({
   syntax: '*',
 })
 
-export const linkBreadcrumbs = style({
+export const link = style({
   overflow: 'hidden',
   paddingRight: theme.space[1],
   textOverflow: 'ellipsis',
   whiteSpace: 'nowrap',
 })
 
-export const contentBreadcrumbs = style({
+export const content = style({
   display: 'block',
   maxWidth: maxWidthVar,
   minWidth: minWidthVar,
@@ -29,7 +29,7 @@ export const contentBreadcrumbs = style({
   whiteSpace: 'nowrap',
 })
 
-export const itemContainerBreadcrumbs = recipe({
+export const itemContainer = recipe({
   base: {
     alignItems: 'center',
     display: 'flex',
@@ -47,20 +47,20 @@ export const itemContainerBreadcrumbs = recipe({
 })
 
 export const contentBreadcrumbsText = style({})
-export const breadcrumbsItem = style({})
+export const item = style({})
 
 globalStyle(
-  `${breadcrumbsItem}:not(:first-child) ${linkBreadcrumbs}, ${breadcrumbsItem}:not(:first-child) ${contentBreadcrumbsText}`,
+  `${item}:not(:first-child) ${link}, ${item}:not(:first-child) ${contentBreadcrumbsText}`,
   {
     padding: `0 ${theme.space[1]}`,
   },
 )
 
-globalStyle(`${breadcrumbsItem}:last-child ${linkBreadcrumbs}`, {
+globalStyle(`${item}:last-child ${link}`, {
   pointerEvents: 'none',
 })
 
-globalStyle(`${breadcrumbsItem}:last-child ${contentBreadcrumbs}`, {
+globalStyle(`${item}:last-child ${content}`, {
   cursor: 'default',
   pointerEvents: 'none',
 })

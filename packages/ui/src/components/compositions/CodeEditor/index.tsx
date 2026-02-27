@@ -19,17 +19,7 @@ import { Expandable } from '../../Expandable'
 import { Label } from '../../Label'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import {
-  animatedArrowIcon,
-  centeredText,
-  codeEditor,
-  codeEditorWrapper,
-  copyButton as copyButtonStyle,
-  disabledStack,
-  maxHeightVar,
-  showMoreButton,
-  showMoreContainer,
-} from './styles.css'
+import { codeEditorStyle, disabledStack, maxHeightVar } from './styles.css'
 
 type CodeEditorProps = {
   value: string
@@ -75,7 +65,7 @@ const CodeEditorCopyButton = ({
 }) => (
   <CopyButton
     bordered
-    className={copyButtonStyle}
+    className={codeEditorStyle.copyButton}
     sentiment="neutral"
     size="small"
     value={value}
@@ -95,23 +85,25 @@ const CodeEditorExpandable = ({
   hideText: string
   showText: string
 }) => (
-  <div className={showMoreContainer({ expanded })}>
+  <div className={codeEditorStyle.showMoreContainer({ expanded })}>
     <button
       aria-expanded={expanded}
-      className={showMoreButton}
+      className={codeEditorStyle.showMoreButton}
       onClick={() => setExpanded(prevState => !prevState)}
       type="button"
     >
       <Text
         as="span"
-        className={centeredText}
+        className={codeEditorStyle.centeredText}
         sentiment="neutral"
         variant="bodySmallStrong"
       >
         {expanded ? hideText : showText}
         &nbsp;
         <ArrowDownIcon
-          className={animatedArrowIcon[expanded ? 'true' : 'false']}
+          className={
+            codeEditorStyle.animatedArrowIcon[expanded ? 'true' : 'false']
+          }
         />
       </Text>
     </button>
@@ -195,9 +187,11 @@ export const CodeEditor = ({
           {label}
         </Label>
       ) : null}
-      <div className={codeEditorWrapper}>
+      <div className={codeEditorStyle.wrapper}>
         <div
-          className={cn(codeEditor[disabled ? 'disabled' : 'default'])}
+          className={cn(
+            codeEditorStyle.codeEditor[disabled ? 'disabled' : 'default'],
+          )}
           style={assignInlineVars({
             [maxHeightVar]:
               !expanded && expandableHeight ? `${expandableHeight}px` : 'none',

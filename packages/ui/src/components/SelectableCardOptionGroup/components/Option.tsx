@@ -8,14 +8,7 @@ import { SelectableCard } from '../../SelectableCard'
 import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 import { useSelectableCardOptionGroup } from '../Provider'
-import {
-  optionFullHeight,
-  optionPadded,
-  optionSelectInput,
-  optionSelectInputDisabled,
-  optionSelectInputError,
-  selectableCard,
-} from '../styles.css'
+import { selectableCardOptionGroupStyle } from '../styles.css'
 import { Image } from './Image'
 
 type OptionProps = Omit<ComponentProps<typeof SelectableCard>, 'onChange'> & {
@@ -66,7 +59,7 @@ export const Option = ({
   return (
     <SelectableCard
       checked={groupValue === value}
-      className={cn(className, selectableCard)}
+      className={cn(className, selectableCardOptionGroupStyle.selectableCard)}
       data-testid={dataTestId}
       disabled={isDisabled}
       isError={error}
@@ -84,7 +77,7 @@ export const Option = ({
       {...(label ? { id: inputId } : { 'aria-label': ariaLabel! })}
     >
       <Stack
-        className={optionFullHeight}
+        className={selectableCardOptionGroupStyle.optionFullHeight}
         direction="column"
         flex="1 1 auto"
         gap={2}
@@ -93,7 +86,7 @@ export const Option = ({
       >
         <Stack
           alignItems="center"
-          className={optionPadded}
+          className={selectableCardOptionGroupStyle.optionPadded}
           direction="column"
           gap={1}
           justifyContent="center"
@@ -136,9 +129,11 @@ export const Option = ({
             typeof label === 'string' ? `${label} option` : `${value} option`
           }
           className={cn(
-            optionSelectInput,
-            isDisabled ? optionSelectInputDisabled : '',
-            error ? optionSelectInputError : '',
+            selectableCardOptionGroupStyle.optionSelectInput,
+            isDisabled
+              ? selectableCardOptionGroupStyle.optionSelectInputDisabled
+              : '',
+            error ? selectableCardOptionGroupStyle.optionSelectInputError : '',
           )}
           data-testid={dataTestId ? `${dataTestId}-select` : undefined}
           disabled={isDisabled}

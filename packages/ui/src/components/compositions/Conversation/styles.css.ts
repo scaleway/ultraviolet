@@ -1,58 +1,66 @@
 import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 
-const conversationInfosBase = style({
+const infosBase = style({
   alignItems: 'center',
   display: 'flex',
   margin: `0 ${theme.space[7]}`,
 })
 
-export const conversationInfos = styleVariants({
-  left: [conversationInfosBase, { justifyContent: 'flex-start' }],
-  right: [conversationInfosBase, { justifyContent: 'flex-end' }],
+const infos = styleVariants({
+  left: [infosBase, { justifyContent: 'flex-start' }],
+  right: [infosBase, { justifyContent: 'flex-end' }],
 })
 
-export const styledText = style({
+const styledText = style({
   marginTop: theme.space[3],
   textAlign: 'center',
 })
 
-const conversationContainerBase = style({
+const containerBase = style({
   display: 'flex',
   marginBottom: theme.space[2],
 })
 
-export const conversationContainer = styleVariants({
-  left: [conversationContainerBase, { flexDirection: 'row-reverse' }],
-  right: [conversationContainerBase, { flexDirection: 'row' }],
+const container = styleVariants({
+  left: [containerBase, { flexDirection: 'row-reverse' }],
+  right: [containerBase, { flexDirection: 'row' }],
 })
 
-const conversationRawMessageBase = style({
+const rawMessageBase = style({
   borderRadius: theme.radii.default,
   margin: theme.space[3],
   marginBottom: 0,
   padding: theme.space[3],
 })
-export const conversationRawMessage = styleVariants({
+
+const rawMessage = styleVariants({
   left: [
-    conversationRawMessageBase,
+    rawMessageBase,
     { backgroundColor: theme.colors.neutral.backgroundStrong },
   ],
-  right: [
-    conversationRawMessageBase,
-    { backgroundColor: theme.colors.primary.background },
-  ],
+  right: [rawMessageBase, { backgroundColor: theme.colors.primary.background }],
 })
 
-export const conversationAvatar = style({
+const avatar = style({
   alignSelf: 'flex-end',
   display: 'flex',
 })
 
-export const conversationBubble = style({ width: '100%' })
+const bubble = style({ width: '100%' })
 
-export const conversationTag = style({
+const tag = style({
   backgroundColor: theme.colors.neutral.backgroundStrong,
   height: theme.sizing[200],
   marginRight: theme.space[1],
 })
+
+export const conversationStyle = {
+  infos,
+  styledText,
+  container,
+  rawMessage,
+  avatar,
+  tag,
+  bubble,
+}

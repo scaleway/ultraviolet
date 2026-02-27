@@ -9,7 +9,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Option } from './components/Option'
 import { SelectableCardOptionGroupContext } from './Provider'
-import { selectableCardOptionFieldSet } from './styles.css'
+import { selectableCardOptionGroupStyle } from './styles.css'
 import type { Sizes } from './types'
 
 type SelectableCardOptionGroupProps = {
@@ -87,7 +87,9 @@ const SelectableCardOptionGroupComponent = ({
   return (
     <SelectableCardOptionGroupContext.Provider value={contextValue}>
       <Stack gap={1} style={style}>
-        <fieldset className={cn(className, selectableCardOptionFieldSet)}>
+        <fieldset
+          className={cn(className, selectableCardOptionGroupStyle.fieldset)}
+        >
           <Stack gap={1.5}>
             {legend ? (
               <Label

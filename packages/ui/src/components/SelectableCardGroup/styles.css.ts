@@ -1,8 +1,8 @@
 import { style } from '@vanilla-extract/css'
 
-export const selectableCardGroupFieldSet = style({
+const fieldset = style({
   border: 'none',
   margin: 0,
   padding: 0,
 })
-export const selectableCardGroupStyle = { selectableCardGroupFieldSet }
+export const selectableCardGroupStyle = { fieldset }

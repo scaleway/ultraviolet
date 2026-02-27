@@ -8,7 +8,7 @@ import { Row } from '../Row'
 import { SelectableCard } from '../SelectableCard'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { selectableCardGroupFieldSet } from './styles.css'
+import { selectableCardGroupStyle } from './styles.css'
 
 type SelectableCardGroupContextType = {
   groupName?: string
@@ -129,7 +129,7 @@ const SelectableCardGroupComponent = ({
   return (
     <SelectableCardGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset className={cn(className, selectableCardGroupFieldSet)}>
+        <fieldset className={cn(className, selectableCardGroupStyle.fieldset)}>
           <Stack gap={1.5}>
             {legend ? (
               <Label

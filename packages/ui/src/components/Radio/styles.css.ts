@@ -2,12 +2,12 @@ import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { selectableCardStyle } from '../SelectableCard/styles.css'
 import { widthSelectable } from '../SelectableCard/variables.css'
-import { selectableCard } from '../SelectableCardOptionGroup/styles.css'
+import { selectableCardOptionGroupStyle } from '../SelectableCardOptionGroup/styles.css'
 import { switchButtonStyle } from '../SwitchButton/styles.css'
 
 const stack = style({
   selectors: {
-    [`${selectableCard} &`]: {
+    [`${selectableCardOptionGroupStyle.selectableCard} &`]: {
       marginTop: `calc(-1 * ${theme.space[2]})`,
       padding: theme.space[1],
       position: 'absolute',

@@ -5,15 +5,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../../Stack'
 import { Tag } from '../../Tag'
 import { Text } from '../../Text'
-import {
-  conversationAvatar,
-  conversationBubble,
-  conversationContainer,
-  conversationInfos,
-  conversationRawMessage,
-  conversationTag,
-  styledText,
-} from './styles.css'
+import { conversationStyle } from './styles.css'
 
 const Conversation = ({
   children,
@@ -32,7 +24,7 @@ export const MessageInfos = ({
   align: 'left' | 'right'
   style?: CSSProperties
 }) => (
-  <div className={conversationInfos[align]} style={style}>
+  <div className={conversationStyle.infos[align]} style={style}>
     {children}
   </div>
 )
@@ -46,7 +38,7 @@ export const DateComponent = ({
 }) => (
   <Text
     as="p"
-    className={styledText}
+    className={conversationStyle.styledText}
     prominence="weak"
     style={style}
     variant="bodySmall"
@@ -70,11 +62,14 @@ export const Message = ({
   align = 'right',
   style,
 }: MessageProps) => (
-  <div className={cn(className, conversationContainer[align])} style={style}>
-    <div className={conversationBubble}>
-      <div className={conversationRawMessage[align]}>{children}</div>
+  <div
+    className={cn(className, conversationStyle.container[align])}
+    style={style}
+  >
+    <div className={conversationStyle.bubble}>
+      <div className={conversationStyle.rawMessage[align]}>{children}</div>
     </div>
-    <div className={conversationAvatar}>{avatar}</div>
+    <div className={conversationStyle.avatar}>{avatar}</div>
   </div>
 )
 
@@ -85,7 +80,7 @@ export const MessageTag = ({
   children: ReactNode
   style?: CSSProperties
 }) => (
-  <Tag className={conversationTag} style={style}>
+  <Tag className={conversationStyle.tag} style={style}>
     {children}
   </Tag>
 )
