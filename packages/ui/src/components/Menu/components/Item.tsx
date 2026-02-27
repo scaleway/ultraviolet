@@ -37,6 +37,7 @@ type ItemProps = {
    */
   searchText?: string
   style?: CSSProperties
+  rightComponent?: ReactNode
 }
 
 export const Item = forwardRef<HTMLElement, ItemProps>(
@@ -56,6 +57,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
       searchText,
       'data-testid': dataTestId,
       style,
+      rightComponent,
     },
     ref,
   ) => {
@@ -151,14 +153,31 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
               role="menuitem"
               target={target}
             >
-              {isDisclosure ? (
+              {isDisclosure || rightComponent ? (
                 <Stack
                   alignItems="center"
                   direction="row"
                   justifyContent="space-between"
                   width="100%"
                 >
-                  {children} <ArrowRightIcon />
+                  {children}
+                  {rightComponent ? (
+                    // biome-ignore lint/a11y/noStaticElementInteractions: wrapper for an eventual interactive element
+                    // biome-ignore lint/a11y/noNoninteractiveElementInteractions: wrapper for an eventual interactive element
+                    <div
+                      onClick={event => {
+                        event.stopPropagation()
+                        event.preventDefault()
+                      }}
+                      onKeyDown={event => {
+                        event.stopPropagation()
+                        event.preventDefault()
+                      }}
+                    >
+                      {rightComponent}
+                    </div>
+                  ) : null}
+                  {isDisclosure ? <ArrowRightIcon /> : null}
                 </Stack>
               ) : (
                 children
@@ -201,14 +220,31 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
             role="menuitem"
             type="button"
           >
-            {isDisclosure ? (
+            {isDisclosure || rightComponent ? (
               <Stack
                 alignItems="center"
                 direction="row"
                 justifyContent="space-between"
                 width="100%"
               >
-                {children} <ArrowRightIcon />
+                {children}
+                {rightComponent ? (
+                  // biome-ignore lint/a11y/noStaticElementInteractions: wrapper for an eventual interactive element
+                  // biome-ignore lint/a11y/noNoninteractiveElementInteractions: wrapper for an eventual interactive element
+                  <div
+                    onClick={event => {
+                      event.stopPropagation()
+                      event.preventDefault()
+                    }}
+                    onKeyDown={event => {
+                      event.stopPropagation()
+                      event.preventDefault()
+                    }}
+                  >
+                    {rightComponent}
+                  </div>
+                ) : null}
+                {isDisclosure ? <ArrowRightIcon /> : null}
               </Stack>
             ) : (
               children

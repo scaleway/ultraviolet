@@ -232,6 +232,167 @@ describe('menu', () => {
       </Menu>,
     ))
 
+  test('renders with rightComponent', async () => {
+    const onClick = vi.fn()
+    const onClickMenu = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <Menu
+        disclosure={() => disclosure}
+        footer="Footer"
+        hideOnClickItem
+        visible
+      >
+        <Menu.Item
+          onClick={onClickMenu}
+          rightComponent={
+            <button onClick={onClick} type="button">
+              click me
+            </button>
+          }
+        >
+          Not footer
+        </Menu.Item>
+      </Menu>,
+    )
+
+    const button = screen.getByRole('button', {
+      name: 'click me',
+    })
+    await userEvent.click(button)
+    expect(onClick).toHaveBeenCalledOnce()
+    expect(onClickMenu).toHaveBeenCalledTimes(0)
+    expect(button).toBeVisible()
+
+    await userEvent.click(screen.getByText('Not footer'))
+    expect(onClick).toHaveBeenCalledOnce()
+    expect(onClickMenu).toHaveBeenCalledOnce()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders with rightComponent and link item', async () => {
+    const onClick = vi.fn()
+    const onClickMenu = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <Menu
+        disclosure={() => disclosure}
+        footer="Footer"
+        hideOnClickItem
+        visible
+      >
+        <Menu.Item
+          href="exemple.com"
+          onClick={onClickMenu}
+          rightComponent={
+            <button onClick={onClick} type="button">
+              click me
+            </button>
+          }
+        >
+          Not footer
+        </Menu.Item>
+      </Menu>,
+    )
+
+    const button = screen.getByRole('button', {
+      name: 'click me',
+    })
+    await userEvent.click(button)
+    expect(onClick).toHaveBeenCalledOnce()
+    expect(onClickMenu).toHaveBeenCalledTimes(0)
+    expect(button).toBeVisible()
+
+    await userEvent.click(screen.getByText('Not footer'))
+    expect(onClick).toHaveBeenCalledOnce()
+    expect(onClickMenu).toHaveBeenCalledOnce()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders with rightComponent and link item (keyboard navigation)', async () => {
+    const onKeyDown = vi.fn()
+    const onClickMenu = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <Menu
+        disclosure={() => disclosure}
+        footer="Footer"
+        hideOnClickItem
+        visible
+      >
+        <Menu.Item
+          href="exemple.com"
+          onClick={onClickMenu}
+          rightComponent={
+            <button onKeyDown={onKeyDown} type="button">
+              click me
+            </button>
+          }
+        >
+          Not footer
+        </Menu.Item>
+      </Menu>,
+    )
+
+    const button = screen.getByRole('button', {
+      name: 'click me',
+    })
+    button.focus()
+    await userEvent.keyboard('[Enter]')
+    expect(onKeyDown).toHaveBeenCalledOnce()
+    expect(onClickMenu).toHaveBeenCalledTimes(0)
+    expect(button).toBeVisible()
+
+    await userEvent.keyboard('[Space]')
+    expect(onKeyDown).toHaveBeenCalledTimes(2)
+
+    await userEvent.click(screen.getByText('Not footer'))
+    expect(onKeyDown).toHaveBeenCalledTimes(2)
+    expect(onClickMenu).toHaveBeenCalledOnce()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders with rightComponent  (keyboard navigation)', async () => {
+    const onKeyDown = vi.fn()
+    const onClickMenu = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <Menu
+        disclosure={() => disclosure}
+        footer="Footer"
+        hideOnClickItem
+        visible
+      >
+        <Menu.Item
+          onClick={onClickMenu}
+          rightComponent={
+            <button onKeyDown={onKeyDown} type="button">
+              click me
+            </button>
+          }
+        >
+          Not footer
+        </Menu.Item>
+      </Menu>,
+    )
+
+    const button = screen.getByRole('button', {
+      name: 'click me',
+    })
+    button.focus()
+    await userEvent.keyboard('[Enter]')
+    expect(onKeyDown).toHaveBeenCalledOnce()
+    expect(onClickMenu).toHaveBeenCalledTimes(0)
+    expect(button).toBeVisible()
+
+    await userEvent.keyboard('[Space]')
+    expect(onKeyDown).toHaveBeenCalledTimes(2)
+
+    await userEvent.click(screen.getByText('Not footer'))
+    expect(onKeyDown).toHaveBeenCalledTimes(2)
+    expect(onClickMenu).toHaveBeenCalledOnce()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
   test('renders nested', async () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} searchable>
