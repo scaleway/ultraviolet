@@ -232,6 +232,44 @@ describe('menu', () => {
       </Menu>,
     ))
 
+  test('renders with rightComponent', async () => {
+    const onClick = vi.fn()
+    const onClickMenu = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <Menu
+        disclosure={() => disclosure}
+        footer="Footer"
+        hideOnClickItem
+        visible
+      >
+        <Menu.Item
+          onClick={onClickMenu}
+          rightComponent={
+            <button onClick={onClick} type="button">
+              click me
+            </button>
+          }
+        >
+          Not footer
+        </Menu.Item>
+      </Menu>,
+    )
+
+    const button = screen.getByRole('button', {
+      name: 'click me',
+    })
+    await userEvent.click(button)
+    expect(onClick).toHaveBeenCalledOnce()
+    expect(onClickMenu).toHaveBeenCalledTimes(0)
+    expect(button).toBeVisible()
+
+    await userEvent.click(screen.getByText('Not footer'))
+    expect(onClick).toHaveBeenCalledOnce()
+    expect(onClickMenu).toHaveBeenCalledOnce()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('renders nested', async () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} searchable>
