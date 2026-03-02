@@ -1,5 +1,27 @@
 # @ultraviolet/plus
 
+## 3.6.0
+
+### Minor Changes
+
+- [#6079](https://github.com/scaleway/ultraviolet/pull/6079) [`491dff2`](https://github.com/scaleway/ultraviolet/commit/491dff2638c47dbfff9a90832167ac5de30109be) Thanks [@lisalupi](https://github.com/lisalupi)! - Deprecated `CustomerSatisfaction`, `Conversation` and `CodeEditor` - use the `@ultraviolet/ui/compositions` version
+
+- [#6092](https://github.com/scaleway/ultraviolet/pull/6092) [`7a46a8b`](https://github.com/scaleway/ultraviolet/commit/7a46a8b78dac0d4db367b63052d642e74bf09416) Thanks [@lisalupi](https://github.com/lisalupi)! - Deprecated `Navigation`, `FAQ` and `Infotable` - use the `@ultraviolet/ui/composition` version instead
+
+- [#6082](https://github.com/scaleway/ultraviolet/pull/6082) [`5365ea9`](https://github.com/scaleway/ultraviolet/commit/5365ea9d8a576af83de9153c07329e118739752b) Thanks [@lisalupi](https://github.com/lisalupi)! - Deprecated `EstimateCost`, `ContentCard` and `ContentCardGroup` - use the `@ultraviolet/ui/composition` version instead
+
+### Patch Changes
+
+- [#6152](https://github.com/scaleway/ultraviolet/pull/6152) [`1f75900`](https://github.com/scaleway/ultraviolet/commit/1f75900797b6f1a665e4837258e3abbc8f3c2cd4) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-intersection-observer` to `10.0.3`.
+
+- [#6143](https://github.com/scaleway/ultraviolet/pull/6143) [`38f78e3`](https://github.com/scaleway/ultraviolet/commit/38f78e370928874dd5d4e42d67e9c4473a9cf22a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.0-beta.15`.
+
+- Updated dependencies [[`d429f15`](https://github.com/scaleway/ultraviolet/commit/d429f15ebc9cb25f0f5c225aa27458465dbe87c8), [`7a46a8b`](https://github.com/scaleway/ultraviolet/commit/7a46a8b78dac0d4db367b63052d642e74bf09416), [`491dff2`](https://github.com/scaleway/ultraviolet/commit/491dff2638c47dbfff9a90832167ac5de30109be), [`38f78e3`](https://github.com/scaleway/ultraviolet/commit/38f78e370928874dd5d4e42d67e9c4473a9cf22a), [`57c2530`](https://github.com/scaleway/ultraviolet/commit/57c25302de9d8b9a7a40c49f68f0061a66e6f29f), [`820b64e`](https://github.com/scaleway/ultraviolet/commit/820b64ea1382072b50f3beb930badc57ce267a36), [`5365ea9`](https://github.com/scaleway/ultraviolet/commit/5365ea9d8a576af83de9153c07329e118739752b)]:
+  - @ultraviolet/ui@3.11.0
+  - @ultraviolet/icons@5.1.5
+  - @ultraviolet/themes@3.1.1
+  - @ultraviolet/utils@1.0.5
+
 ## 3.5.2
 
 ### Patch Changes

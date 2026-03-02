@@ -1,5 +1,15 @@
 # @ultraviolet/nextjs
 
+## 3.0.20
+
+### Patch Changes
+
+- [#6143](https://github.com/scaleway/ultraviolet/pull/6143) [`38f78e3`](https://github.com/scaleway/ultraviolet/commit/38f78e370928874dd5d4e42d67e9c4473a9cf22a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.0-beta.15`.
+
+- Updated dependencies [[`d429f15`](https://github.com/scaleway/ultraviolet/commit/d429f15ebc9cb25f0f5c225aa27458465dbe87c8), [`7a46a8b`](https://github.com/scaleway/ultraviolet/commit/7a46a8b78dac0d4db367b63052d642e74bf09416), [`491dff2`](https://github.com/scaleway/ultraviolet/commit/491dff2638c47dbfff9a90832167ac5de30109be), [`38f78e3`](https://github.com/scaleway/ultraviolet/commit/38f78e370928874dd5d4e42d67e9c4473a9cf22a), [`820b64e`](https://github.com/scaleway/ultraviolet/commit/820b64ea1382072b50f3beb930badc57ce267a36), [`5365ea9`](https://github.com/scaleway/ultraviolet/commit/5365ea9d8a576af83de9153c07329e118739752b)]:
+  - @ultraviolet/ui@3.11.0
+  - @ultraviolet/themes@3.1.1
+
 ## 3.0.19
 
 ### Patch Changes

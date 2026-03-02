@@ -1,5 +1,17 @@
 # @ultraviolet/illustrations
 
+## 6.0.11
+
+### Patch Changes
+
+- [#6157](https://github.com/scaleway/ultraviolet/pull/6157) [`57c2530`](https://github.com/scaleway/ultraviolet/commit/57c25302de9d8b9a7a40c49f68f0061a66e6f29f) Thanks [@lisalupi](https://github.com/lisalupi)! - New illustrations `artifactRegistry`
+
+- [#6143](https://github.com/scaleway/ultraviolet/pull/6143) [`38f78e3`](https://github.com/scaleway/ultraviolet/commit/38f78e370928874dd5d4e42d67e9c4473a9cf22a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.0-beta.15`.
+
+- Updated dependencies [[`38f78e3`](https://github.com/scaleway/ultraviolet/commit/38f78e370928874dd5d4e42d67e9c4473a9cf22a)]:
+  - @ultraviolet/themes@3.1.1
+  - @ultraviolet/utils@1.0.5
+
 ## 6.0.10
 
 ### Patch Changes
