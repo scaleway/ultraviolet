@@ -11,6 +11,10 @@ export const config = mergeConfig(defineConfig(defaultConfig), {
           import.meta.dirname,
           'src/components/compositions/Navigation/index.tsx',
         ),
+        'components/compositions/EstimateCost/index': resolve(
+          import.meta.dirname,
+          'src/components/compositions/EstimateCost/index.tsx',
+        ),
         'components/compositions/index': resolve(
           import.meta.dirname,
           'src/components/compositions/index.ts',
