@@ -340,8 +340,8 @@ importers:
         specifier: 2.0.1
         version: 2.0.1(react@19.2.4)(schema-dts@1.1.5)(typescript@5.9.3)
       react-syntax-highlighter:
-        specifier: 16.1.0
-        version: 16.1.0(react@19.2.4)
+        specifier: 16.1.1
+        version: 16.1.1(react@19.2.4)
       react-use-clipboard:
         specifier: 1.0.9
         version: 1.0.9(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -6621,8 +6621,8 @@ packages:
       schema-dts: '>=0.7.4'
       typescript: '>=3.1.6'
 
-  react-syntax-highlighter@16.1.0:
-    resolution: {integrity: sha512-E40/hBiP5rCNwkeBN1vRP+xow1X0pndinO+z3h7HLsHyjztbyjfzNWNKuAsJj+7DLam9iT4AaaOZnueCU+Nplg==}
+  react-syntax-highlighter@16.1.1:
+    resolution: {integrity: sha512-PjVawBGy80C6YbC5DDZJeUjBmC7skaoEUdvfFQediQHgCL7aKyVHe57SaJGfQsloGDac+gCpTfRdtxzWWKmCXA==}
     engines: {node: '>= 16.20.2'}
     peerDependencies:
       react: '>= 0.14.0'
@@ -13998,7 +13998,7 @@ snapshots:
       schema-dts: 1.1.5
       typescript: 5.9.3
 
-  react-syntax-highlighter@16.1.0(react@19.2.4):
+  react-syntax-highlighter@16.1.1(react@19.2.4):
     dependencies:
       '@babel/runtime': 7.28.6
       highlight.js: 10.7.3
