@@ -1,5 +1,28 @@
 # Change Log
 
+## 3.11.0
+
+### Minor Changes
+
+- [#6092](https://github.com/scaleway/ultraviolet/pull/6092) [`7a46a8b`](https://github.com/scaleway/ultraviolet/commit/7a46a8b78dac0d4db367b63052d642e74bf09416) Thanks [@lisalupi](https://github.com/lisalupi)! - New compositions `Navigation`, `FAQ` and `Infotable` (migrated from `@ultraviolet/plus`, with a small refactor to reduce code complexity)
+
+- [#6079](https://github.com/scaleway/ultraviolet/pull/6079) [`491dff2`](https://github.com/scaleway/ultraviolet/commit/491dff2638c47dbfff9a90832167ac5de30109be) Thanks [@lisalupi](https://github.com/lisalupi)! - New compositions `CustomerSatisfaction`, `Conversation` and `CodeEditor`
+
+- [#6082](https://github.com/scaleway/ultraviolet/pull/6082) [`5365ea9`](https://github.com/scaleway/ultraviolet/commit/5365ea9d8a576af83de9153c07329e118739752b) Thanks [@lisalupi](https://github.com/lisalupi)! - New compositions `EstimateCost`, `ContentCard` and `ContentCardGroup` (migrated from `@ultraviolet/plus`, with a small refactor to reduce code complexity)
+
+### Patch Changes
+
+- [#6159](https://github.com/scaleway/ultraviolet/pull/6159) [`d429f15`](https://github.com/scaleway/ultraviolet/commit/d429f15ebc9cb25f0f5c225aa27458465dbe87c8) Thanks [@lisalupi](https://github.com/lisalupi)! - `Checkbox`: new prop "size"
+
+- [#6143](https://github.com/scaleway/ultraviolet/pull/6143) [`38f78e3`](https://github.com/scaleway/ultraviolet/commit/38f78e370928874dd5d4e42d67e9c4473a9cf22a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.0-beta.15`.
+
+- [#6160](https://github.com/scaleway/ultraviolet/pull/6160) [`820b64e`](https://github.com/scaleway/ultraviolet/commit/820b64ea1382072b50f3beb930badc57ce267a36) Thanks [@lisalupi](https://github.com/lisalupi)! - `Menu.Item`: new prop `rightComponent`
+
+- Updated dependencies [[`38f78e3`](https://github.com/scaleway/ultraviolet/commit/38f78e370928874dd5d4e42d67e9c4473a9cf22a), [`57c2530`](https://github.com/scaleway/ultraviolet/commit/57c25302de9d8b9a7a40c49f68f0061a66e6f29f)]:
+  - @ultraviolet/icons@5.1.5
+  - @ultraviolet/themes@3.1.1
+  - @ultraviolet/utils@1.0.5
+
 ## 3.10.2
 
 ### Patch Changes
