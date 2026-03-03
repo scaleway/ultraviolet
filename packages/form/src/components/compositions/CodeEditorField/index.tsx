@@ -9,7 +9,7 @@ export type CodeEditorFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof CodeEditor>, 'value' | 'onChange'> & {
+  Omit<ComponentProps<typeof CodeEditor>, 'value' | 'onChange' | 'onBlur'> & {
     regex?: (RegExp | RegExp[])[]
     onChange?: (value: string) => void
     onBlur?: (value: string) => void
