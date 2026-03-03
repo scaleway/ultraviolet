@@ -3,6 +3,7 @@
 import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { FocusEvent } from 'react'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Label } from '../../Label'
 import { NumberInput } from '../../NumberInput'
@@ -158,75 +159,79 @@ export const DoubleSlider = ({
     }
   }
 
+  const onBlurInput = (
+    event: FocusEvent<HTMLInputElement>,
+    side: 'left' | 'right',
+  ) => {
+    // Default to min/max when the input is left empty
+    if (event.target.value) {
+      const newValue = Number.parseFloat(event.target.value)
+      if (side === 'left') {
+        internalOnChangeRef([newValue, selectedIndexes[1]])
+      } else {
+        internalOnChangeRef([selectedIndexes[0], newValue])
+      }
+    } else if (side === 'left') {
+      const index = activeValue('left')
+      if (index === 0) {
+        internalOnChangeRef([min, selectedIndexes[1]])
+      } else {
+        internalOnChangeRef([selectedIndexes[0], max])
+      }
+    } else if (side === 'right') {
+      const index = activeValue('right')
+      if (index === 0) {
+        internalOnChangeRef([min, selectedIndexes[1]])
+      } else {
+        internalOnChangeRef([selectedIndexes[0], max])
+      }
+    }
+  }
+
   const styledValue = (
     valueNumber: string | number | null,
-    side?: 'left' | 'right',
-  ) =>
-    input && !options ? (
+    side: 'left' | 'right',
+  ) => {
+    const isRowDirection = direction !== 'column'
+    const index = side === 'left' ? 0 : 1
+
+    return input && !options ? (
       <NumberInput
         aria-label={`input-${side}`}
         controls={false}
-        data-testid={side ? `slider-input-${side}` : 'slider-input'}
+        data-testid={`slider-input-${side}`}
         disabled={disabled}
         max={max}
         min={min}
-        onBlur={event => {
-          // Default to min/max when the input is left empty
-          if (event.target.value) {
-            const newValue = Number.parseFloat(event.target.value)
-            if (side === 'left') {
-              internalOnChangeRef([newValue, selectedIndexes[1]])
-            } else if (side === 'right') {
-              internalOnChangeRef([selectedIndexes[0], newValue])
-            }
-          } else {
-            if (side === 'left') {
-              const index = activeValue('left')
-              if (index === 0) {
-                internalOnChangeRef([min, selectedIndexes[1]])
-              } else {
-                internalOnChangeRef([selectedIndexes[0], max])
-              }
-            }
-
-            if (side === 'right') {
-              const index = activeValue('right')
-              if (index === 0) {
-                internalOnChangeRef([min, selectedIndexes[1]])
-              } else {
-                internalOnChangeRef([selectedIndexes[0], max])
-              }
-            }
-          }
-        }}
+        onBlur={event => onBlurInput(event, side)}
         onChange={newVal => {
           handleChangeInput(newVal, side)
         }}
         size="small"
         step={step}
         unit={typeof suffix === 'string' ? suffix : unit}
-        value={side === 'left' ? inputValue?.[0] : inputValue?.[1]}
+        value={inputValue?.[index]}
       />
     ) : (
       <Text
         as="span"
         className={sliderDoubleText({
           isDouble: true,
-          isPadded: direction !== 'column',
+          isPadded: isRowDirection,
         })}
         data-testid={
           dataTestId ? `${dataTestId}-value-${side}` : `value-${side}`
         }
-        placement={direction !== 'row' ? 'right' : 'center'}
+        placement={isRowDirection ? 'center' : 'right'}
         sentiment="neutral"
         variant="bodySmall"
       >
         {prefix}
         {valueNumber}
-        {suffix ? suffix[side === 'left' ? 0 : 1] : unit}
+        {suffix ? suffix[index] : unit}
       </Text>
     )
-
+  }
   // Position of the sliders to look like one range slider
   const minPos = ((Math.min(...selectedIndexes) - min) * 100) / (max - min)
   const maxPos = ((Math.max(...selectedIndexes) - min) * 100) / (max - min)
@@ -293,8 +298,9 @@ export const DoubleSlider = ({
             {styledValue(leftToShow, 'left')}
             {styledValue(rightToShow, 'right')}
           </Stack>
-        ) : null}
-        {direction === 'row' ? styledValue(leftToShow, 'left') : null}
+        ) : (
+          styledValue(leftToShow, 'left')
+        )}
         <div className={sliderDoubleWrapper}>
           <Tooltip
             className={sliderTooltip}
@@ -337,7 +343,7 @@ export const DoubleSlider = ({
                 )}
                 data-direction={direction}
                 data-error={error}
-                data-testid={dataTestId ? `${dataTestId}-left` : 'handle-left'}
+                data-testid={`${dataTestId ?? 'handle'}-left`}
                 disabled={!!disabled}
                 id={finalId}
                 max={max}
@@ -383,9 +389,7 @@ export const DoubleSlider = ({
                 )}
                 data-direction={direction}
                 data-error={error}
-                data-testid={
-                  dataTestId ? `${dataTestId}-right` : 'handle-right'
-                }
+                data-testid={`${dataTestId ?? 'handle'}-right`}
                 disabled={!!disabled}
                 id={finalId}
                 max={max}
