@@ -7,24 +7,13 @@ import type { LabelProp } from '../../types'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-import {
-  container,
-  innerCircleRing,
-  labelRadio,
-  labelStyle,
-  margedText,
-  radio,
-  radioMark,
-  radioStack,
-  ring,
-  textLabel,
-} from './styles.css'
+import { radioStyle } from './styles.css'
 
 const RadioMarkedIcon = () => (
   <g>
     <circle cx="12" cy="12" r="10" strokeWidth="2" />
-    <circle className={innerCircleRing} cx="12" cy="12" r="8" />
-    <circle className={radioMark} cx="12" cy="12" r="5" />
+    <circle className={radioStyle.innerCircleRing} cx="12" cy="12" r="8" />
+    <circle className={radioStyle.mark} cx="12" cy="12" r="5" />
   </g>
 )
 
@@ -86,10 +75,10 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
 
     return (
       <Tooltip text={tooltip}>
-        <Stack className={radioStack} gap={0.5}>
+        <Stack className={radioStyle.stack} gap={0.5}>
           <div
             aria-disabled={disabled}
-            className={cn(className, container)}
+            className={cn(className, radioStyle.container)}
             data-checked={checked}
             data-error={error}
             data-testid={dataTestId}
@@ -100,7 +89,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               aria-label={ariaLabel}
               autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
               checked={checked}
-              className={radio}
+              className={radioStyle.radio}
               disabled={disabled}
               id={localId}
               name={name}
@@ -114,7 +103,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               type="radio"
               value={value}
             />
-            <svg className={ring} viewBox="0 0 24 24">
+            <svg className={radioStyle.ring} viewBox="0 0 24 24">
               <title>radio</title>
               <RadioMarkedIcon />
             </svg>
@@ -123,7 +112,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
                 {typeof label === 'string' ? (
                   <Text
                     as="label"
-                    className={cn(textLabel, labelRadio)}
+                    className={cn(radioStyle.textLabel, radioStyle.label)}
                     htmlFor={localId}
                     prominence="default"
                     variant="body"
@@ -132,7 +121,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
                   </Text>
                 ) : (
                   <label
-                    className={cn(labelStyle, labelRadio)}
+                    className={cn(radioStyle.labelStyle, radioStyle.label)}
                     htmlFor={localId}
                   >
                     {label}
@@ -144,7 +133,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
           {helper ? (
             <Text
               as="span"
-              className={margedText}
+              className={radioStyle.margedText}
               prominence="weak"
               sentiment="neutral"
               variant="caption"

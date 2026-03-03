@@ -4,7 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import { Children, forwardRef, useEffect, useState } from 'react'
 import { useListContext } from '../List/ListContext'
-import { listContainer } from '../List/styles.css'
+import { listStyle } from '../List/styles.css'
 import { Body } from './Body'
 import { Cell } from './Cell'
 import { Header } from './Header'
@@ -13,7 +13,7 @@ import { HeaderRow } from './HeaderRow'
 import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
-import { table, tableBordered, tableStripped } from './styles.css'
+import { tableStyle } from './styles.css'
 import type { TableProviderProps } from './TableContext'
 import { TableProvider, useTableContext } from './TableContext'
 import type { ColumnProps } from './types'
@@ -68,7 +68,7 @@ const TableContainer = ({ children }: { children: ReactNode }) => {
     // oxlint-disable react/exhaustive-deps
   }, [children, setRefList])
 
-  return <div className={listContainer}>{children}</div>
+  return <div className={listStyle.container}>{children}</div>
 }
 
 export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
@@ -99,9 +99,9 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
       <TableContainer>
         <table
           className={cn(
-            table,
-            stripped ? tableStripped : '',
-            bordered ? tableBordered : '',
+            tableStyle.table,
+            stripped ? tableStyle.stripped : '',
+            bordered ? tableStyle.bordered : '',
           )}
           ref={ref}
           style={style}

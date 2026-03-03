@@ -12,7 +12,7 @@ export const SENTIMENTS = [
   'warning',
 ] as const
 
-export const containerTag = recipe({
+const container = recipe({
   base: {
     alignItems: 'center',
     borderRadius: theme.radii.default,
@@ -78,12 +78,14 @@ export const containerTag = recipe({
   },
 })
 
-export const textTag = style({
+const text = style({
   maxWidth: '14.5rem',
 })
 
-export const closeButtonTag = style({
+const closeButton = style({
   height: 'fit-content',
   padding: theme.space['0.25'],
   width: 'fit-content',
 })
+
+export const tagStyle = { container, text, closeButton }

@@ -12,15 +12,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Stack } from '../../Stack'
 import { useModal } from '../ModalProvider'
-import {
-  modal,
-  modalBackdrop,
-  modalContent,
-  modalImage,
-  modalImageContainer,
-  positionModal,
-  topModal,
-} from '../styles.css'
+import { modalStyle, positionModal, topModal } from '../styles.css'
 import type { DialogProps } from '../types'
 
 // Prevent default behaviour on Escape
@@ -224,7 +216,7 @@ export const Dialog = ({
     <div
       className={cn(
         backdropClassName,
-        modalBackdrop({ open: true, visible: isVisible }),
+        modalStyle.backdrop({ open: true, visible: isVisible }),
       )}
       data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
       data-visible={isVisible}
@@ -237,7 +229,7 @@ export const Dialog = ({
         aria-modal
         className={cn(
           className,
-          modal({
+          modalStyle.modal({
             animation,
             image: !!image,
             placement,
@@ -268,18 +260,18 @@ export const Dialog = ({
           <>
             <Stack
               alignItems="flex-end"
-              className={modalImageContainer}
+              className={modalStyle.imageContainer}
               justifyContent="center"
             >
               <img
                 alt="illustration"
-                className={modalImage}
+                className={modalStyle.image}
                 height="auto"
                 src={image}
                 width="auto"
               />
             </Stack>
-            <Stack className={modalContent} gap={5}>
+            <Stack className={modalStyle.content} gap={5}>
               {children}
             </Stack>
           </>

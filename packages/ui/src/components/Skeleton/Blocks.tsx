@@ -3,7 +3,8 @@
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { IconSkeleton } from './IconSkeleton'
 import { Line } from './Line'
-import { blocksContainer, blocksSkeleton, columns } from './stylesVariants.css'
+import { skeletonStyle } from './styles.css'
+import { columns } from './stylesVariants.css'
 
 export const Blocks = ({
   col = 4,
@@ -13,14 +14,17 @@ export const Blocks = ({
   length?: number
 }) => (
   <div
-    className={blocksContainer}
+    className={skeletonStyle.blocksContainer}
     style={assignInlineVars({
       [columns]: col.toString(),
     })}
   >
     {Array.from({ length }, (_, i) => (
       // biome-ignore lint/suspicious/noArrayIndexKey: to fix
-      <div className={blocksSkeleton} key={`skeleton-blocks-${i}`}>
+      <div
+        className={skeletonStyle.blocksSkeleton}
+        key={`skeleton-blocks-${i}`}
+      >
         <IconSkeleton />
         <Line />
       </div>

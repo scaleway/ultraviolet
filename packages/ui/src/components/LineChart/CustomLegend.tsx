@@ -10,19 +10,7 @@ import { getLegendColor } from '../../helpers/legend'
 import { Checkbox } from '../Checkbox'
 import { Text } from '../Text'
 import { getAverage, getCurrent, getMax, getMin, getSelected } from './helpers'
-import {
-  backgroundColorLegend,
-  cellValueContainer,
-  container,
-  lineChartBody,
-  lineChartHead,
-  lineChartHeadTitle,
-  lineChartLegend,
-  lineChartRow,
-  lineChartRowContent,
-  longContainer,
-  textLegend,
-} from './styles.css'
+import { backgroundColorLegend, lineChartStyle } from './styles.css'
 
 type CellProps = {
   value?: DatumValue
@@ -32,7 +20,7 @@ type CellProps = {
 const Cell = ({ value, variant }: CellProps) => (
   <Text
     as="span"
-    className={cn(textLegend, lineChartHeadTitle)}
+    className={cn(lineChartStyle.textLegend, lineChartStyle.headTitle)}
     sentiment="neutral"
     variant={variant}
   >
@@ -61,15 +49,22 @@ export const CustomLegend = ({
   className,
   'data-testid': dataTestId,
 }: CustomLegendProps) => (
-  <div className={cn(className, container)} data-testid={dataTestId}>
-    <div className={lineChartHead}>
-      <div className={cn(longContainer, lineChartHeadTitle)}>Legend</div>
+  <div
+    className={cn(className, lineChartStyle.container)}
+    data-testid={dataTestId}
+  >
+    <div className={lineChartStyle.head}>
+      <div
+        className={cn(lineChartStyle.longContainer, lineChartStyle.headTitle)}
+      >
+        Legend
+      </div>
       <Cell value="Minimum" variant="body" />
       <Cell value="Maximum" variant="body" />
       <Cell value="Average" variant="body" />
       <Cell value="Current" variant="body" />
     </div>
-    <div className={lineChartBody}>
+    <div className={lineChartStyle.body}>
       {data?.map((row, index) => {
         const values = row.data.map(val => val.y as number)
         const labelIndexed = `${row.id}${index}`
@@ -77,11 +72,16 @@ export const CustomLegend = ({
 
         return (
           <div
-            className={lineChartRow}
+            className={lineChartStyle.row}
             // oxlint-disable-next-line no-unknown-property
             key={labelIndexed}
           >
-            <div className={cn(longContainer, lineChartRowContent)}>
+            <div
+              className={cn(
+                lineChartStyle.longContainer,
+                lineChartStyle.content,
+              )}
+            >
               <Checkbox
                 checked={selected.includes(labelIndexed)}
                 name={id}
@@ -89,12 +89,12 @@ export const CustomLegend = ({
                   setSelected([...getSelected(id, index, selected)])
                 }
               >
-                <div className={cellValueContainer}>
+                <div className={lineChartStyle.cellValueContainer}>
                   <Text as="span" sentiment="neutral" variant="bodySmall">
                     {row?.['label']}
                   </Text>
                   <div
-                    className={lineChartLegend}
+                    className={lineChartStyle.legend}
                     // oxlint-disable-next-line no-unknown-property
                     data-testid={`label-${id}`}
                     style={assignInlineVars({

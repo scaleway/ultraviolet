@@ -8,13 +8,7 @@ import { Text } from '../../Text'
 import { FeatureHint } from './FeatureHint'
 import PlansLocales from './locales/en'
 import { PlanHeader } from './PlanHeader'
-import {
-  plansCell,
-  plansOutOfStockBadge,
-  plansRowHidden,
-  plans as plansStyle,
-  plansUppercaseText,
-} from './styles.css'
+import { plansStyle } from './styles.css'
 import type { Feature, PlanType } from './types'
 
 type PlansProps<T extends string> = {
@@ -48,10 +42,10 @@ export const Plans = <T extends string>({
   const [hoveredPlan, setHoveredPlan] = useState<string>()
 
   return (
-    <table className={plansStyle} style={style}>
+    <table className={plansStyle.plans} style={style}>
       <thead>
         <tr>
-          <td className={plansCell({ hide: hideLabels })}>
+          <td className={plansStyle.cell({ hide: hideLabels })}>
             {hideFeatureText ? null : (
               <Text as="span" variant="headingSmallStrong">
                 {locales['plans.features']}
@@ -71,7 +65,7 @@ export const Plans = <T extends string>({
             return (
               // biome-ignore lint/a11y/noNoninteractiveElementInteractions: interactive table with a clickable button for accessibility
               <td
-                className={plansCell({
+                className={plansStyle.cell({
                   activeColor:
                     value === plan.value ||
                     hoveredPlan === plan.value ||
@@ -94,18 +88,18 @@ export const Plans = <T extends string>({
                 onMouseOver={() => hoverPlan(plan.value)}
               >
                 {plan.outOfStock ? (
-                  <Badge className={plansOutOfStockBadge} size="small">
+                  <Badge className={plansStyle.outOfStockBadge} size="small">
                     {locales['plans.outOfStock']}
                   </Badge>
                 ) : null}
                 {plan.header.quotas && !plan.outOfStock ? (
-                  <Badge className={plansOutOfStockBadge} size="small">
+                  <Badge className={plansStyle.outOfStockBadge} size="small">
                     {plan.header.quotas}
                   </Badge>
                 ) : null}
                 {isHighlighted && !plan.outOfStock && !plan.header.quotas ? (
                   <Badge
-                    className={plansOutOfStockBadge}
+                    className={plansStyle.outOfStockBadge}
                     prominence="strong"
                     sentiment="primary"
                     size="small"
@@ -131,14 +125,14 @@ export const Plans = <T extends string>({
           if ('group' in feature) {
             return (
               <tr
-                className={hideLabels ? plansRowHidden : ''}
+                className={hideLabels ? plansStyle.rowHidden : ''}
                 key={feature.group}
               >
-                <td className={plansCell({})}>
+                <td className={plansStyle.cell({})}>
                   <Stack alignItems="center" direction="row" gap={1}>
                     <Text
                       as="p"
-                      className={plansUppercaseText}
+                      className={plansStyle.uppercaseText}
                       sentiment="neutral"
                       variant="bodySmallStronger"
                     >
@@ -152,7 +146,7 @@ export const Plans = <T extends string>({
 
                   return (
                     <td
-                      className={plansCell({
+                      className={plansStyle.cell({
                         activeColor:
                           value === plan.value ||
                           hoveredPlan === plan.value ||
@@ -173,7 +167,7 @@ export const Plans = <T extends string>({
 
           return (
             <tr key={feature.key}>
-              <td className={plansCell({ hide: hideLabels })}>
+              <td className={plansStyle.cell({ hide: hideLabels })}>
                 <Stack>
                   <Stack alignItems="center" direction="row" gap={1}>
                     <Text as="p" variant="bodyStrong">
@@ -207,7 +201,7 @@ export const Plans = <T extends string>({
                 return (
                   // biome-ignore lint/a11y/noNoninteractiveElementInteractions: interactive table with a clickable button for accessibility
                   <td
-                    className={plansCell({
+                    className={plansStyle.cell({
                       activeColor:
                         value === plan.value ||
                         hoveredPlan === plan.value ||

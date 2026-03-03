@@ -1,38 +1,31 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
-import {
-  labelContainerSelectableCardLabel,
-  selectableElementSelectableCard,
-} from '../SelectableCard/styles.css'
+import { selectableCardStyle } from '../SelectableCard/styles.css'
 import { widthSelectable } from '../SelectableCard/variables.css'
-import { selectableCard } from '../SelectableCardOptionGroup/styles.css'
-import {
-  switchButtonOptionBase,
-  switchButtonOptionNeutral,
-  switchButtonOptionPrimary,
-} from '../SwitchButton/styles.css'
+import { selectableCardOptionGroupStyle } from '../SelectableCardOptionGroup/styles.css'
+import { switchButtonStyle } from '../SwitchButton/styles.css'
 
-export const radioStack = style({
+const stack = style({
   selectors: {
-    [`${selectableCard} &`]: {
+    [`${selectableCardOptionGroupStyle.selectableCard} &`]: {
       marginTop: `calc(-1 * ${theme.space[2]})`,
       padding: theme.space[1],
       position: 'absolute',
     },
-    [`${labelContainerSelectableCardLabel} &`]: {
+    [`${selectableCardStyle.labelContainerSelectableCardLabel} &`]: {
       width: '100%',
     },
-    [`${selectableElementSelectableCard} > &`]: {
+    [`${selectableCardStyle.selectableElement} > &`]: {
       width: widthSelectable,
     },
   },
 })
 
-export const margedText = style({
+const margedText = style({
   marginLeft: theme.space['4'],
 })
 
-export const container = style({
+const container = style({
   alignItems: 'flex-start',
   display: 'flex',
   flex: 1,
@@ -49,7 +42,7 @@ export const container = style({
   },
 })
 
-export const textLabel = style({
+const textLabel = style({
   cursor: 'pointer',
   flex: 1,
   selectors: {
@@ -60,28 +53,28 @@ export const textLabel = style({
   },
 })
 
-export const labelRadio = style({
+const label = style({
   selectors: {
-    [`${switchButtonOptionBase}[data-checked='true'] &`]: {
+    [`${switchButtonStyle.optionBase}[data-checked='true'] &`]: {
       color: theme.colors.neutral.textStrong,
       transition: 'color 300ms ease-in-out',
     },
-    [`${switchButtonOptionBase} &`]: {
+    [`${switchButtonStyle.optionBase} &`]: {
       transition: 'color 300ms ease-in-out',
     },
-    [`${switchButtonOptionPrimary}[data-checked="true"] &`]: {
+    [`${switchButtonStyle.optionPrimary}[data-checked="true"] &`]: {
       color: theme.colors.primary.textStrong,
     },
-    [`${switchButtonOptionNeutral}[data-checked="false"] &:hover`]: {
+    [`${switchButtonStyle.optionNeutral}[data-checked="false"] &:hover`]: {
       color: theme.colors.neutral.textHover,
     },
-    [`${switchButtonOptionPrimary}[data-checked="false"] &:hover`]: {
+    [`${switchButtonStyle.optionPrimary}[data-checked="false"] &:hover`]: {
       color: theme.colors.primary.text,
     },
-    [`${switchButtonOptionBase}[data-disabled="true"] &`]: {
+    [`${switchButtonStyle.optionBase}[data-disabled="true"] &`]: {
       color: theme.colors.neutral.textDisabled,
     },
-    [`${switchButtonOptionBase}[data-checked='false'][data-disabled="true"] &:hover`]:
+    [`${switchButtonStyle.optionBase}[data-checked='false'][data-disabled="true"] &:hover`]:
       {
         background: 'transparent',
         color: theme.colors.neutral.textDisabled,
@@ -89,12 +82,12 @@ export const labelRadio = style({
   },
 })
 
-export const labelStyle = style({
+const labelStyle = style({
   cursor: 'pointer',
   flex: 1,
 })
 
-export const radio = style({
+const radio = style({
   borderWidth: 0,
   cursor: 'pointer',
   height: theme.sizing['300'],
@@ -109,7 +102,7 @@ export const radio = style({
   width: theme.sizing['300'],
 })
 
-export const ring = style({
+const ring = style({
   borderRadius: theme.radii.circle,
   fill: theme.colors.neutral.border,
   height: theme.sizing['300'],
@@ -153,7 +146,7 @@ export const ring = style({
   width: theme.sizing['300'],
 })
 
-export const radioMark = style({
+const mark = style({
   selectors: {
     [`${container} ${radio} + ${ring} &`]: {
       transform: 'scale(0)',
@@ -166,7 +159,7 @@ export const radioMark = style({
   transition: '200ms transform ease-in-out',
 })
 
-export const innerCircleRing = style({
+const innerCircleRing = style({
   selectors: {
     [`${container}:hover[aria-disabled='false'] ${ring} &`]: {
       fill: theme.colors.primary.backgroundHover,
@@ -185,3 +178,16 @@ export const innerCircleRing = style({
     },
   },
 })
+
+export const radioStyle = {
+  stack,
+  margedText,
+  container,
+  textLabel,
+  label,
+  labelStyle,
+  radio,
+  ring,
+  mark,
+  innerCircleRing,
+}

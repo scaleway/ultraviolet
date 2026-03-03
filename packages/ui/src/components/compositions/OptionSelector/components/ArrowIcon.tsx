@@ -1,6 +1,6 @@
 import { RayStartArrowIcon } from '@ultraviolet/icons/RayStartArrowIcon'
 import { RayTopArrowIcon } from '@ultraviolet/icons/RayTopArrowIcon'
-import { arrow } from '../styles.css'
+import { optionSelectorStyle } from '../styles.css'
 
 export const Arrow = ({
   direction,
@@ -11,14 +11,14 @@ export const Arrow = ({
 }) =>
   direction === 'vertical' ? (
     <RayTopArrowIcon
-      className={arrow.vertical}
+      className={optionSelectorStyle.arrow.vertical}
       prominence="weak"
       sentiment="neutral"
       size={size}
     />
   ) : (
     <RayStartArrowIcon
-      className={arrow.horizontal}
+      className={optionSelectorStyle.arrow.horizontal}
       prominence="weak"
       sentiment="neutral"
       size={size}

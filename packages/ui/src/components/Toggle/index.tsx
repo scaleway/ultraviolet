@@ -7,7 +7,7 @@ import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-import { checkbox, label as labelReceipe, toggle } from './styles.css'
+import { toggleStyle } from './styles.css'
 
 type ToggleProps = {
   checked?: boolean
@@ -72,7 +72,7 @@ export const Toggle = forwardRef(
           aria-disabled={disabled}
           className={cn(
             className,
-            labelReceipe({
+            toggleStyle.label({
               disabled,
               labelPosition,
             }),
@@ -126,7 +126,7 @@ export const Toggle = forwardRef(
             ) : null}
           </Stack>
           <div
-            className={toggle({
+            className={toggleStyle.toggle({
               disabled,
               error: !!error,
               size,
@@ -137,7 +137,7 @@ export const Toggle = forwardRef(
               aria-invalid={!!error}
               aria-label={ariaLabel}
               checked={checked}
-              className={checkbox}
+              className={toggleStyle.checkbox}
               disabled={disabled}
               id={localId}
               name={name}

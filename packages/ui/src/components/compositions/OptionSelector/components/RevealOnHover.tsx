@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { revealOnHover } from '../styles.css'
+import { optionSelectorStyle } from '../styles.css'
 
 export const RevealOnHover = ({
   content,
@@ -9,10 +9,13 @@ export const RevealOnHover = ({
   hoverContent: ReactNode
 }) => (
   <>
-    <div className={revealOnHover} data-visibility="unhover">
+    <div
+      className={optionSelectorStyle.revealOnHover}
+      data-visibility="unhover"
+    >
       {content}
     </div>
-    <div className={revealOnHover} data-visibility="hover">
+    <div className={optionSelectorStyle.revealOnHover} data-visibility="hover">
       {hoverContent}
     </div>
   </>

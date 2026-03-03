@@ -15,7 +15,7 @@ import { Stack } from '../../Stack'
 import { Tooltip } from '../../Tooltip'
 import { getListItem } from '../helpers'
 import { useDisclosureContext, useMenu } from '../MenuProvider'
-import { menuItem, menuItemContainer } from '../styles.css'
+import { menuStyle } from '../styles.css'
 
 type MenuItemSentiment = 'neutral' | 'primary' | 'danger'
 
@@ -131,7 +131,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
     if (href && !disabled) {
       return (
         <div
-          className={menuItemContainer({ borderless })}
+          className={menuStyle.itemContainer({ borderless })}
           data-search-text={searchText}
           style={style}
         >
@@ -139,7 +139,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
             <a
               className={cn(
                 className,
-                menuItem({ borderless: true, disabled, sentiment }),
+                menuStyle.item({ borderless: true, disabled, sentiment }),
               )}
               data-active={active}
               data-is-disclosure={isDisclosure}
@@ -190,7 +190,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
 
     return (
       <div
-        className={menuItemContainer({ borderless })}
+        className={menuStyle.itemContainer({ borderless })}
         data-search-text={searchText}
         style={style}
       >
@@ -198,7 +198,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
           <button
             className={cn(
               className,
-              menuItem({ borderless, disabled, sentiment }),
+              menuStyle.item({ borderless, disabled, sentiment }),
             )}
             data-active={active || (isVisible && isDisclosure)}
             data-is-disclosure={isDisclosure}

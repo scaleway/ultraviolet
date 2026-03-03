@@ -5,11 +5,7 @@ import { useContext, useEffect } from 'react'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Data, nextStep } from './helper'
-import {
-  steppedListCardContent,
-  steppedListCardImage,
-  steppedListCardSubHeader,
-} from './styles.css'
+import { steppedListCardStyle } from './styles.css'
 
 type SteppedListContentProps = {
   subHeader?: ReactNode
@@ -48,8 +44,8 @@ export const SteppedListContent = ({
 
   if (stepNumber === currentStep) {
     return (
-      <Stack className={steppedListCardContent} style={style}>
-        <div className={steppedListCardSubHeader}>
+      <Stack className={steppedListCardStyle.content} style={style}>
+        <div className={steppedListCardStyle.subHeader}>
           {typeof subHeader === 'string' ? (
             <Text as="h3" variant="headingSmallStrong">
               {subHeader}
@@ -72,7 +68,7 @@ export const SteppedListContent = ({
               }),
             )
           : children}
-        <div className={steppedListCardImage}>{image}</div>
+        <div className={steppedListCardStyle.image}>{image}</div>
       </Stack>
     )
   }

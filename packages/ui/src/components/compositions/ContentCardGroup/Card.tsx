@@ -10,12 +10,7 @@ import type {
 import { forwardRef } from 'react'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import {
-  customStack,
-  fullHeightStack,
-  iconWrapper,
-  styledWrapper,
-} from './styles.css'
+import { contentCardGroupStyle } from './styles.css'
 
 type CardProps = {
   title?: string
@@ -45,7 +40,7 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
     ref,
   ) => (
     <a
-      className={styledWrapper}
+      className={contentCardGroupStyle.cardWrapper}
       href={href}
       ref={ref}
       style={style}
@@ -53,12 +48,12 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
     >
       <Stack
         alignItems="center"
-        className={fullHeightStack}
+        className={contentCardGroupStyle.cardContentStack}
         direction="row"
         gap={2}
         justifyContent="space-between"
       >
-        <Stack className={customStack} gap="0.5">
+        <Stack className={contentCardGroupStyle.customStack} gap="0.5">
           <div>
             {subtitle ? (
               <Text
@@ -87,7 +82,7 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
           ) : null}
           {children}
         </Stack>
-        <div className={iconWrapper}>
+        <div className={contentCardGroupStyle.iconWrapper}>
           <OpenInNewIcon sentiment="neutral" />
         </div>
       </Stack>

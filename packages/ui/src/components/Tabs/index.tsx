@@ -11,7 +11,7 @@ import {
   useRef,
   useState,
 } from 'react'
-import { tabsContainer, tabsMenu, tabsMenuContainer } from './styles.css'
+import { tabsStyle } from './styles.css'
 import { Tab } from './Tab'
 import { TabMenu } from './TabMenu'
 import { TabMenuItem } from './TabMenuItem'
@@ -106,7 +106,7 @@ export const Tabs = ({
   return (
     <TabsContext.Provider value={value}>
       <div
-        className={cn(className, tabsContainer)}
+        className={cn(className, tabsStyle.container)}
         data-testid={dataTestId}
         ref={tabsRef}
         role="tablist"
@@ -115,11 +115,11 @@ export const Tabs = ({
         {children}
         {displayMore ? (
           <TabMenu
-            className={tabsMenu}
+            className={tabsStyle.menu}
             disclosure={moreDisclosure}
             ref={moreStaticRef}
           >
-            <div className={tabsMenuContainer}>{menuItemChildren}</div>
+            <div className={tabsStyle.menuContainer}>{menuItemChildren}</div>
           </TabMenu>
         ) : null}
       </div>

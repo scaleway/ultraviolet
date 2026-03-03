@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Text } from '../../../Text'
-import { errorFirstSelector, errorSecondSelector } from '../styles.css'
+import { optionSelectorStyle } from '../styles.css'
 
 export const SelectorHelper = ({
   isError,
@@ -15,7 +15,11 @@ export const SelectorHelper = ({
 }) => (
   <Text
     as="p"
-    className={isFirst ? errorFirstSelector : errorSecondSelector}
+    className={
+      isFirst
+        ? optionSelectorStyle.errorFirstSelector
+        : optionSelectorStyle.errorSecondSelector
+    }
     prominence={isError ? 'default' : 'weak'}
     sentiment={isError ? 'danger' : 'neutral'}
     variant="caption"

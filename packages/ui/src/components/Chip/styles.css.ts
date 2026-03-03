@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 
-export const buttonContainer = style({
+const buttonContainer = style({
   background: 'none',
   border: 'none',
   borderRadius: theme.radii.default,
@@ -22,7 +22,7 @@ export const buttonContainer = style({
   },
 })
 
-export const container = style({
+const container = style({
   backgroundColor: theme.colors.neutral.background,
   border: `1px solid ${theme.colors.neutral.borderWeak}`,
   borderRadius: theme.radii.xlarge,
@@ -73,3 +73,5 @@ export const container = style({
   userSelect: 'none',
   width: 'fit-content',
 })
+
+export const chipStyle = { buttonContainer, container }

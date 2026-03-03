@@ -3,7 +3,7 @@ import { globalStyle, style } from '@vanilla-extract/css'
 
 const PREFIX = '.Toastify'
 
-export const notification = style({
+const notification = style({
   borderRadius: theme.radii.default,
 })
 
@@ -29,3 +29,5 @@ globalStyle(`${notification} ${PREFIX}__toast-body`, {
   margin: 0,
   padding: 0,
 })
+
+export const notificationStyle = { notification }

@@ -35,24 +35,10 @@ import {
   OPTION_SELECTOR,
 } from '../constants'
 import { useSelectInput } from '../SelectInputProvider'
+import { selectInputStyle } from '../styles.css'
 import type { DataType, OptionType } from '../types'
 import { DisplayOption } from './DropdownOption'
-import {
-  comboboxCreate,
-  dropdown,
-  dropdownCheckbox,
-  dropdownContainer,
-  dropdownContainerUnGrouped,
-  dropdownEmptyState,
-  dropdownGroup,
-  dropdownGroupSelectable,
-  dropdownGroupWrapper,
-  dropdownItem,
-  dropdownLoadMore,
-  dropdownWidth,
-  emptyStateGroupStyle,
-  footer as footerStyle,
-} from './dropdown.css'
+import { dropdownWidth } from './dropdown.css'
 import { SearchBarDropdown } from './SearchBarDropdown'
 
 export type DropdownProps = {
@@ -254,7 +240,11 @@ const CreateDropdown = ({
 
   if (isEmpty && !addOption) {
     return (
-      <Stack alignItems="center" className={dropdownEmptyState} gap={2}>
+      <Stack
+        alignItems="center"
+        className={selectInputStyle.dropdownEmptyState}
+        gap={2}
+      >
         {emptyState ?? (
           <Text
             as="p"
@@ -286,7 +276,7 @@ const CreateDropdown = ({
     return (
       <div
         aria-selected="false"
-        className={comboboxCreate}
+        className={selectInputStyle.comboboxCreate}
         data-testid="add-option"
         id="add-option"
         onClick={handleClickCustomValue}
@@ -390,7 +380,10 @@ const CreateDropdown = ({
 
   return Array.isArray(displayedOptions) ? (
     <Stack
-      className={cn(dropdownContainer, dropdownContainerUnGrouped)}
+      className={cn(
+        selectInputStyle.dropdownContainer,
+        selectInputStyle.dropdownContainerUnGrouped,
+      )}
       gap={0.25}
       id="select-dropdown"
       onKeyDown={handleKeyDownSelect}
@@ -399,7 +392,7 @@ const CreateDropdown = ({
       {addOption && searchInput && searchable ? (
         <div
           aria-selected="false"
-          className={comboboxCreate}
+          className={selectInputStyle.comboboxCreate}
           data-testid="add-option"
           id="add-option"
           onClick={handleClickCustomValue}
@@ -441,7 +434,7 @@ const CreateDropdown = ({
             aria-label="select-all"
             aria-selected={selectedData.allSelected}
             className={cn(
-              dropdownItem({
+              selectInputStyle.dropdownItem({
                 selected: selectedData.allSelected,
                 size: size === 'small' ? 'small' : 'default',
               }),
@@ -456,7 +449,7 @@ const CreateDropdown = ({
           >
             <Checkbox
               checked={selectedData.allSelected}
-              className={dropdownCheckbox}
+              className={selectInputStyle.dropdownCheckbox}
               data-testid="select-all-checkbox"
               disabled={false}
               onChange={selectAllOptions}
@@ -494,7 +487,7 @@ const CreateDropdown = ({
                 !option.disabled
               }
               className={cn(
-                dropdownItem({
+                selectInputStyle.dropdownItem({
                   disabled: !!option.disabled,
                   selected:
                     selectedData.selectedValues.includes(option.value) &&
@@ -537,7 +530,7 @@ const CreateDropdown = ({
                     selectedData.selectedValues.includes(option.value) &&
                     !option.disabled
                   }
-                  className={dropdownCheckbox}
+                  className={selectInputStyle.dropdownCheckbox}
                   disabled={option.disabled}
                   onChange={event => {
                     if (!option.disabled) {
@@ -570,13 +563,15 @@ const CreateDropdown = ({
           ))
         )}
         {loadMore ? (
-          <Stack className={dropdownLoadMore}>{loadMore}</Stack>
+          <Stack className={selectInputStyle.dropdownLoadMore}>
+            {loadMore}
+          </Stack>
         ) : null}
       </Stack>
     </Stack>
   ) : (
     <Stack
-      className={dropdownContainer}
+      className={selectInputStyle.dropdownContainer}
       data-grouped
       id="select-dropdown"
       onKeyDown={handleKeyDownSelect}
@@ -589,7 +584,7 @@ const CreateDropdown = ({
           {addOption && searchInput && searchable ? (
             <div
               aria-selected="false"
-              className={comboboxCreate}
+              className={selectInputStyle.comboboxCreate}
               data-testid="add-option"
               id="add-option"
               onClick={handleClickCustomValue}
@@ -631,7 +626,7 @@ const CreateDropdown = ({
                 aria-label="select-all"
                 aria-selected={selectedData.allSelected}
                 className={cn(
-                  dropdownItem({
+                  selectInputStyle.dropdownItem({
                     selected: selectedData.allSelected,
                     size: size === 'small' ? 'small' : 'default',
                   }),
@@ -647,7 +642,7 @@ const CreateDropdown = ({
               >
                 <Checkbox
                   checked={selectedData.allSelected}
-                  className={dropdownCheckbox}
+                  className={selectInputStyle.dropdownCheckbox}
                   data-testid="select-all-checkbox"
                   disabled={false}
                   name="select-all"
@@ -682,18 +677,18 @@ const CreateDropdown = ({
               <Stack gap={0.25} key={group}>
                 {hasElements || emptyStateGroup ? (
                   <div
-                    className={dropdownGroupWrapper}
+                    className={selectInputStyle.dropdownGroupWrapper}
                     id={selectAllGroup ? 'items' : undefined}
                   >
                     {group ? (
                       <button
                         className={cn(
                           selectAllGroup
-                            ? dropdownGroupSelectable({
+                            ? selectInputStyle.dropdownGroupSelectable({
                                 size: size === 'small' ? 'small' : 'default',
                               })
                             : '',
-                          dropdownGroup,
+                          selectInputStyle.dropdownGroup,
                         )}
                         data-selectgroup={selectAllGroup}
                         data-testid={`group-${index}`}
@@ -715,7 +710,7 @@ const CreateDropdown = ({
                             checked={selectedData.selectedGroups.includes(
                               group,
                             )}
-                            className={dropdownCheckbox}
+                            className={selectInputStyle.dropdownCheckbox}
                             data-testid="select-group"
                             disabled={false}
                             onChange={() =>
@@ -755,7 +750,7 @@ const CreateDropdown = ({
                   {!hasElements && emptyStateGroup ? (
                     <Text
                       as="span"
-                      className={emptyStateGroupStyle}
+                      className={selectInputStyle.emptyStateGroupStyle}
                       prominence="weak"
                       sentiment="neutral"
                       variant={textVariant}
@@ -766,7 +761,7 @@ const CreateDropdown = ({
                   {errorGroup ? (
                     <Text
                       as="span"
-                      className={emptyStateGroupStyle}
+                      className={selectInputStyle.emptyStateGroupStyle}
                       sentiment="danger"
                       variant={textVariant}
                     >
@@ -783,7 +778,7 @@ const CreateDropdown = ({
                           !option.disabled
                         }
                         className={cn(
-                          dropdownItem({
+                          selectInputStyle.dropdownItem({
                             disabled: !!option.disabled,
                             size: size === 'small' ? 'small' : 'default',
                             selected:
@@ -830,7 +825,7 @@ const CreateDropdown = ({
                                 option.value,
                               ) && !option.disabled
                             }
-                            className={dropdownCheckbox}
+                            className={selectInputStyle.dropdownCheckbox}
                             disabled={option.disabled}
                             onChange={event => {
                               if (!option.disabled) {
@@ -869,7 +864,9 @@ const CreateDropdown = ({
           })}
         </>
       )}
-      {loadMore ? <Stack className={dropdownLoadMore}>{loadMore}</Stack> : null}
+      {loadMore ? (
+        <Stack className={selectInputStyle.dropdownLoadMore}>{loadMore}</Stack>
+      ) : null}
     </Stack>
   )
 }
@@ -1030,13 +1027,13 @@ export const Dropdown = ({
     if (footer && !isEmpty) {
       if (typeof footer === 'function') {
         return (
-          <div className={footerStyle}>
+          <div className={selectInputStyle.footer}>
             {footer(() => setIsDropdownVisible(false))}
           </div>
         )
       }
 
-      return <div className={footerStyle}>{footer}</div>
+      return <div className={selectInputStyle.footer}>{footer}</div>
     }
 
     return null
@@ -1045,7 +1042,7 @@ export const Dropdown = ({
   return (
     <Popup
       align={dropdownAlign ?? 'start'}
-      className={dropdown}
+      className={selectInputStyle.dropdown}
       containerFullWidth
       debounceDelay={0}
       disableAnimation

@@ -13,14 +13,7 @@ import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-import {
-  barStack,
-  barStackLegendCircle,
-  barStackText,
-  containerBarStack,
-  wrapperBarStack,
-  wrapperWidth,
-} from './styles.css'
+import { barStackStyle, wrapperWidth } from './styles.css'
 
 type BarProps = {
   /**
@@ -98,7 +91,7 @@ export const BarStack = ({
           <Label>{label}</Label>
         )}
         <div
-          className={cn(className, containerBarStack)}
+          className={cn(className, barStackStyle.container)}
           data-testid={dataTestId}
           style={style}
         >
@@ -117,7 +110,7 @@ export const BarStack = ({
               tooltip,
             }) => (
               <div
-                className={wrapperBarStack}
+                className={barStackStyle.wrapper}
                 key={id}
                 style={assignInlineVars({
                   [wrapperWidth]: `${(value / computedTotal) * 100}%`,
@@ -130,7 +123,7 @@ export const BarStack = ({
                   {tooltip ? (
                     <Tooltip id={`tooltip-${id}`} text={tooltip ?? text}>
                       <div
-                        className={barStack({ size })}
+                        className={barStackStyle.barStack({ size })}
                         data-testid={`content-${id}`}
                         onClick={onClick}
                         onDoubleClick={onDoubleClick}
@@ -146,7 +139,7 @@ export const BarStack = ({
                       >
                         <Text
                           as="span"
-                          className={barStackText}
+                          className={barStackStyle.text}
                           prominence="stronger"
                           sentiment="neutral"
                           variant={
@@ -162,7 +155,7 @@ export const BarStack = ({
                     </Tooltip>
                   ) : (
                     <div
-                      className={barStack({ size })}
+                      className={barStackStyle.barStack({ size })}
                       data-testid={`content-${id}`}
                       onClick={onClick}
                       onDoubleClick={onDoubleClick}
@@ -174,7 +167,7 @@ export const BarStack = ({
                     >
                       <Text
                         as="span"
-                        className={barStackText}
+                        className={barStackStyle.text}
                         prominence="stronger"
                         sentiment="neutral"
                         variant={
@@ -209,7 +202,7 @@ export const BarStack = ({
               onMouseLeave={() => setHoveredBarId(null)}
             >
               <span
-                className={barStackLegendCircle({
+                className={barStackStyle.legendCircle({
                   child: (index % 6) as 1 | 2 | 3 | 4 | 5 | 0,
                 })}
               />

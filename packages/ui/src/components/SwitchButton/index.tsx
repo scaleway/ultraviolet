@@ -16,7 +16,7 @@ import { FocusOverlay } from './FocusOverlay'
 import { Option } from './Option'
 import type { RefOptionType } from './SwitchButtonContext'
 import { SwitchButtonContext } from './SwitchButtonContext'
-import { switchButtonContainer } from './styles.css'
+import { switchButtonStyle } from './styles.css'
 
 type SwitchButtonProps = {
   name?: string
@@ -157,7 +157,7 @@ export const SwitchButton = ({
     <SwitchButtonContext.Provider value={valueContext}>
       <Tooltip text={tooltip}>
         <Stack
-          className={cn(className, switchButtonContainer[size])}
+          className={cn(className, switchButtonStyle.container[size])}
           data-testid={dataTestId}
           direction="row"
           onMouseDown={event => {

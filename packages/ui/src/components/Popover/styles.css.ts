@@ -9,7 +9,7 @@ function createSizesPopover(size: keyof typeof SIZES_WIDTH) {
     width: `${SIZES_WIDTH[size]}rem`,
   }
 }
-export const popover = recipe({
+const popover = recipe({
   base: {
     boxShadow: theme.shadows.popover,
     padding: theme.space[2],
@@ -42,6 +42,8 @@ export const popover = recipe({
   },
 })
 
-export const stackPopover = style({
+const stack = style({
   color: theme.colors.neutral.text,
 })
+
+export const popoverStyle = { popover, stack }

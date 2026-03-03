@@ -11,14 +11,7 @@ import { useState } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import {
-  alert,
-  buttonAlert,
-  buttonCloseAlert,
-  smallIcon,
-  textAlert,
-  wrapAlert,
-} from './styles.css'
+import { alertStyle } from './styles.css'
 import type { AlertSentiment } from './type'
 
 const sentimentIcons = {
@@ -76,7 +69,7 @@ export const Alert = ({
 
   return (
     <Stack
-      className={cn(className, alert({ sentiment, size }))}
+      className={cn(className, alertStyle.alert({ sentiment, size }))}
       data-testid={dataTestId}
       direction="row"
       gap={1}
@@ -84,7 +77,7 @@ export const Alert = ({
     >
       <Stack
         alignItems="center"
-        className={wrapAlert}
+        className={alertStyle.wrap}
         direction="row"
         gap={2}
         justifyContent="space-between"
@@ -98,14 +91,14 @@ export const Alert = ({
         >
           <Icon
             aria-hidden="true"
-            className={size === 'small' ? smallIcon : ''}
+            className={size === 'small' ? alertStyle.smallIcon : ''}
             prominence={sentiment === 'neutral' ? 'strong' : undefined}
             sentiment={sentiment}
             size={size === 'small' ? 'small' : 'large'}
           />
           <Stack
             alignItems="center"
-            className={textAlert}
+            className={alertStyle.text}
             direction="row"
             flex="1 1 auto"
             gap={1.5}
@@ -133,7 +126,7 @@ export const Alert = ({
         </Stack>
         {buttonText ? (
           <Button
-            className={buttonAlert[size]}
+            className={alertStyle.button[size]}
             disabled={disabled}
             onClick={onClickButton}
             sentiment={sentiment}
@@ -146,7 +139,7 @@ export const Alert = ({
       {closable || onClose ? (
         <Button
           aria-label="close"
-          className={buttonCloseAlert}
+          className={alertStyle.buttonClose}
           onClick={() => {
             setOpened(false)
             onClose?.()

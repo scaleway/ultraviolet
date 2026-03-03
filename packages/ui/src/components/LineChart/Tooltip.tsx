@@ -3,7 +3,7 @@
 import type { Point } from '@nivo/line'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Text } from '../Text'
-import { colorLine, lineColorSquare, lineTooltipContainer } from './styles.css'
+import { colorLine, lineChartStyle } from './styles.css'
 
 type LineChartTooltipProps = {
   point: Point
@@ -16,10 +16,10 @@ export const LineChartTooltip = ({
   xFormatted,
   yFormatted,
 }: LineChartTooltipProps) => (
-  <div className={lineTooltipContainer}>
+  <div className={lineChartStyle.lineTooltipContainer}>
     <div>
       <span
-        className={lineColorSquare}
+        className={lineChartStyle.lineColorSquare}
         style={assignInlineVars({
           [colorLine]: point.serieColor,
         })}

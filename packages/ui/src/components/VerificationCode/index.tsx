@@ -12,7 +12,7 @@ import type {
 import { createRef, useId, useMemo, useState } from 'react'
 import { Label } from '../Label'
 import { Text } from '../Text'
-import { filedSetClass, inputClass, inputSizes } from './styles.css'
+import { verificationCodeStyle } from './styles.css'
 
 const DEFAULT_ON_FUNCTION = () => {}
 
@@ -237,7 +237,7 @@ export const VerificationCode = ({
 
   return (
     <fieldset
-      className={cn(className, filedSetClass)}
+      className={cn(className, verificationCodeStyle.filedSetClass)}
       data-testid={dataTestId}
       style={style}
     >
@@ -258,7 +258,10 @@ export const VerificationCode = ({
             aria-invalid={!!error}
             aria-label={`${ariaLabel} ${index}`}
             autoComplete="off"
-            className={cn(inputSizes[size], inputClass)}
+            className={cn(
+              verificationCodeStyle.inputSizes[size],
+              verificationCodeStyle.input,
+            )}
             data-success={!!success}
             data-testid={index}
             disabled={disabled}

@@ -35,7 +35,7 @@ function getBulletStyle(
     color: theme.colors[sentiment][text],
   }
 }
-export const bullet = recipe({
+const bullet = recipe({
   base: {
     alignItems: 'center',
     borderRadius: theme.radii.circle,
@@ -87,3 +87,4 @@ export const bullet = recipe({
     ),
   },
 })
+export const bulletStyle = { bullet }

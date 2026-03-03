@@ -10,7 +10,7 @@ import { Line } from './Line'
 import { List } from './List'
 import { Slider } from './Slider'
 import { Square } from './Square'
-import { skeletonContainer, skeletonHighlight } from './styles.css'
+import { skeletonStyle } from './styles.css'
 
 const variants = {
   block: Block,
@@ -57,13 +57,13 @@ export const Skeleton = ({
       aria-busy
       aria-label={ariaLabel}
       aria-live="polite"
-      className={cn(className, skeletonContainer)}
+      className={cn(className, skeletonStyle.container)}
       data-testid={dataTestId}
       style={style}
     >
       <Component col={col} length={length} />
 
-      <div className={skeletonHighlight} />
+      <div className={skeletonStyle.highlight} />
     </div>
   )
 }

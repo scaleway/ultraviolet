@@ -5,7 +5,7 @@ import { Bullet } from '../../Bullet'
 import { Card } from '../../Card'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { faq } from './styles.css'
+import { faqStyle } from './styles.css'
 
 type FAQProps = {
   description: string
@@ -24,7 +24,7 @@ export const FAQ = ({
   notes,
   style,
 }: FAQProps) => (
-  <Card className={faq} style={style}>
+  <Card className={faqStyle.faq} style={style}>
     <Stack direction="row" gap={2}>
       <div>
         {!productIcon && illustrationText ? (

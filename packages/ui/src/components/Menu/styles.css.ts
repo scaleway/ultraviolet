@@ -33,7 +33,8 @@ function makeItemStyle(
 
   return base
 }
-export const menu = recipe({
+
+const menu = recipe({
   base: {
     backgroundColor: theme.colors.other.elevation.background.raised,
     boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
@@ -63,11 +64,11 @@ export const menu = recipe({
   },
 })
 
-export const menuContent = style({ overflow: 'auto' })
+const content = style({ overflow: 'auto' })
 
-export const menuFooter = style({ padding: theme.space[1] })
+const footer = style({ padding: theme.space[1] })
 
-export const menuList = style({
+const list = style({
   backgroundColor: theme.colors.other.elevation.background.raised,
   color: theme.colors.neutral.text,
   maxHeight: `calc(min(${heightMenu}, ${heightAvailableSpace}) - ${theme.space['0.5']})`,
@@ -87,14 +88,14 @@ export const menuList = style({
   },
 })
 
-export const menuSearchInput = style({ padding: theme.space[1] })
+const searchInput = style({ padding: theme.space[1] })
 
-export const menuGroup = style({
+const group = style({
   padding: `${theme.space['0.5']} ${theme.space['1.5']}`,
   textAlign: 'left',
 })
 
-export const menuItemContainer = recipe({
+const itemContainer = recipe({
   base: {
     selectors: {
       '&:last-child': {
@@ -119,7 +120,7 @@ export const menuItemContainer = recipe({
   },
 })
 
-export const menuItem = recipe({
+const item = recipe({
   base: {
     alignItems: 'center',
     background: 'none',
@@ -183,7 +184,7 @@ export const menuItem = recipe({
 
 ITEM_SENTIMENT.map(sentiment =>
   globalStyle(
-    `${menuItem({ borderless: false, disabled: false, sentiment })} > svg`,
+    `${item({ borderless: false, disabled: false, sentiment })} > svg`,
     {
       fill: theme.colors[sentiment].text,
     },
@@ -192,7 +193,7 @@ ITEM_SENTIMENT.map(sentiment =>
 
 ITEM_SENTIMENT.map(sentiment =>
   globalStyle(
-    `${menuItem({ borderless: false, disabled: true, sentiment })} > svg`,
+    `${item({ borderless: false, disabled: true, sentiment })} > svg`,
     {
       fill: theme.colors[sentiment].textDisabled,
     },
@@ -201,7 +202,7 @@ ITEM_SENTIMENT.map(sentiment =>
 
 ITEM_SENTIMENT.map(sentiment =>
   globalStyle(
-    `${menuItem({ borderless: false, disabled: false, sentiment })}:hover, ${menuItem({ borderless: false, disabled: false, sentiment })}:focus-visible, ${menuItem({ borderless: false, disabled: false, sentiment })}[data-active="true"] > svg, ${menuItem({ borderless: true, disabled: false, sentiment })}:hover, ${menuItem({ borderless: true, disabled: false, sentiment })}:focus-visible, ${menuItem({ borderless: true, disabled: false, sentiment })}[data-active="true"] > svg`,
+    `${item({ borderless: false, disabled: false, sentiment })}:hover, ${item({ borderless: false, disabled: false, sentiment })}:focus-visible, ${item({ borderless: false, disabled: false, sentiment })}[data-active="true"] > svg, ${item({ borderless: true, disabled: false, sentiment })}:hover, ${item({ borderless: true, disabled: false, sentiment })}:focus-visible, ${item({ borderless: true, disabled: false, sentiment })}[data-active="true"] > svg`,
     {
       fill: theme.colors[sentiment].textHover,
     },
@@ -210,7 +211,7 @@ ITEM_SENTIMENT.map(sentiment =>
 
 ITEM_SENTIMENT.map(sentiment =>
   globalStyle(
-    `${menuItem({ borderless: true, disabled: false, sentiment })} > svg`,
+    `${item({ borderless: true, disabled: false, sentiment })} > svg`,
     {
       fill: theme.colors[sentiment].text,
     },
@@ -219,9 +220,20 @@ ITEM_SENTIMENT.map(sentiment =>
 
 ITEM_SENTIMENT.map(sentiment =>
   globalStyle(
-    `${menuItem({ borderless: true, disabled: true, sentiment })} > svg`,
+    `${item({ borderless: true, disabled: true, sentiment })} > svg`,
     {
       fill: theme.colors[sentiment].textDisabled,
     },
   ),
 )
+
+export const menuStyle = {
+  menu,
+  content,
+  footer,
+  list,
+  searchInput,
+  group,
+  itemContainer,
+  item,
+}

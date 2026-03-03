@@ -36,7 +36,7 @@ const baseStyle = {
   width: '100%',
 }
 
-export const containerAvatar = recipe({
+const container = recipe({
   base: {
     position: 'relative',
   },
@@ -77,7 +77,7 @@ export const containerAvatar = recipe({
   },
 })
 
-export const uploadContainer = recipe({
+const uploadContainer = recipe({
   base: {
     alignItems: 'center',
     bottom: '0',
@@ -88,7 +88,7 @@ export const uploadContainer = recipe({
     position: 'absolute',
     right: '0',
     selectors: {
-      [`${containerAvatar()}:hover &`]: {
+      [`${container()}:hover &`]: {
         backgroundColor: theme.colors.overlay,
         cursor: 'pointer',
         opacity: 1,
@@ -116,7 +116,7 @@ export const uploadContainer = recipe({
   },
 })
 
-export const productIconContainer = recipe({
+const productIconContainer = recipe({
   base: {
     ...baseStyle,
     overflow: 'hidden',
@@ -138,7 +138,7 @@ export const productIconContainer = recipe({
   },
 })
 
-export const elementContainer = recipe({
+const elementContainer = recipe({
   base: baseStyle,
   variants: {
     shape: {
@@ -152,7 +152,7 @@ export const elementContainer = recipe({
   },
 })
 
-export const colorsAvatar = recipe({
+const colorsAvatar = recipe({
   base: {
     ...baseStyle,
     borderBottom: `calc(${finalSizeAvatar} / 2) solid ${halvedColorAvatar}`,
@@ -178,7 +178,7 @@ export const colorsAvatar = recipe({
   },
 })
 
-export const svgAvatar = recipe({
+const svgAvatar = recipe({
   base: {
     height: '100% !important',
     width: '100% !important',
@@ -192,3 +192,12 @@ export const svgAvatar = recipe({
     },
   },
 })
+
+export const avatarStyle = {
+  container,
+  uploadContainer,
+  productIconContainer,
+  elementContainer,
+  colorsAvatar,
+  svgAvatar,
+}

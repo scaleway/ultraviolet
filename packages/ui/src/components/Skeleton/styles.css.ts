@@ -1,5 +1,25 @@
 import { theme } from '@ultraviolet/themes'
 import { keyframes, style } from '@vanilla-extract/css'
+import {
+  blockSkeletonLine,
+  blockSkeletonList,
+  blocksContainer,
+  blocksSkeleton,
+  boxWithIconSkeleton,
+  donutSkeletonCircle,
+  donutSkeletonContainer,
+  donutSkeletonLineList,
+  donutSkeletonSvg,
+  iconSkeleton,
+  lineSkeleton,
+  listSkeletonDiv,
+  listSkeletonLi,
+  listSkeletonUl,
+  sliderSkeletonBanner,
+  sliderSkeletonCard,
+  sliderSkeletonContainer,
+  squareSkeleton,
+} from './stylesVariants.css'
 
 const shineAnimation = keyframes({
   '0%': {
@@ -14,7 +34,7 @@ function createColor(opacity: number) {
   return `rgb(from ${theme.colors.neutral.backgroundWeak} r g b / ${opacity})`
 }
 
-export const skeletonContainer = style({
+const container = style({
   cursor: 'progress',
   display: 'flex',
   flexFlow: 'column',
@@ -24,7 +44,7 @@ export const skeletonContainer = style({
   width: '100%',
 })
 
-export const skeletonHighlight = style({
+const highlight = style({
   '@media': {
     '(prefers-reduced-motion: reduce)': {
       animation: 'unset',
@@ -46,3 +66,26 @@ export const skeletonHighlight = style({
   top: 0,
   width: '25%',
 })
+
+export const skeletonStyle = {
+  container,
+  highlight,
+  blockSkeletonLine,
+  blockSkeletonList,
+  blocksContainer,
+  blocksSkeleton,
+  boxWithIconSkeleton,
+  donutSkeletonCircle,
+  donutSkeletonContainer,
+  donutSkeletonSvg,
+  donutSkeletonLineList,
+  iconSkeleton,
+  lineSkeleton,
+  listSkeletonLi,
+  listSkeletonDiv,
+  listSkeletonUl,
+  sliderSkeletonBanner,
+  sliderSkeletonContainer,
+  sliderSkeletonCard,
+  squareSkeleton,
+}

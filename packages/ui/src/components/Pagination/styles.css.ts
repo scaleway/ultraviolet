@@ -1,11 +1,11 @@
 import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 
-export const pageNumbersContainer = style({
+const pageNumbersContainer = style({
   margin: `0 ${theme.space['1']}`,
 })
 
-export const pageButton = styleVariants({
+const pageButton = styleVariants({
   medium: { width: theme.sizing[500] },
   small: { width: theme.sizing[400] },
 })
@@ -15,7 +15,7 @@ const ellipsisBase = style({
   padding: theme.space[1],
 })
 
-export const ellipsisClass = styleVariants({
+const ellipsisClass = styleVariants({
   medium: [
     ellipsisBase,
     {
@@ -31,3 +31,9 @@ export const ellipsisClass = styleVariants({
     },
   ],
 })
+
+export const paginationStyle = {
+  pageNumbersContainer,
+  pageButton,
+  ellipsisClass,
+}

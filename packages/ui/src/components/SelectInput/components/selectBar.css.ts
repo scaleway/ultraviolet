@@ -1,12 +1,8 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import {
-  optionSelectInput,
-  optionSelectInputDisabled,
-  optionSelectInputError,
-} from '../../SelectableCardOptionGroup/styles.css'
-import { unitInputUnit } from '../../UnitInput/styles.css'
+import { selectableCardOptionGroupStyle } from '../../SelectableCardOptionGroup/styles.css'
+import { unitInputStyle } from '../../UnitInput/styles.css'
 import { INPUT_SIZE_HEIGHT } from '../constants'
 
 export const maxWidthTag = createVar({
@@ -31,7 +27,7 @@ export const selectbarState = styleVariants({
   },
 })
 
-export const selectinputPlaceholder = style({
+export const placeholder = style({
   alignSelf: 'center',
   userSelect: 'none',
 })
@@ -80,26 +76,26 @@ export const selectBarBase = style({
   paddingRight: 0,
   width: '100%',
   selectors: {
-    [`.${unitInputUnit} &`]: {
+    [`.${unitInputStyle.unit} &`]: {
       background: 'transparent',
       border: 'none !important',
     },
-    [`${optionSelectInput} &`]: {
+    [`${selectableCardOptionGroupStyle.optionSelectInput} &`]: {
       borderBottom: '0 !important',
       borderLeft: '0 !important',
       borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
       borderRight: '0 !important',
     },
-    [`${optionSelectInput} &:hover, ${optionSelectInput} &:active, ${optionSelectInput} &:focus`]:
+    [`${selectableCardOptionGroupStyle.optionSelectInput} &:hover, ${selectableCardOptionGroupStyle.optionSelectInput} &:active, ${selectableCardOptionGroupStyle.optionSelectInput} &:focus`]:
       {
         borderColor: theme.colors.neutral.border,
         outline: 'none',
       },
-    [`${optionSelectInputDisabled} &:hover, ${optionSelectInputDisabled} &:focus, ${optionSelectInputDisabled} &:active`]:
+    [`${selectableCardOptionGroupStyle.optionSelectInputDisabled} &:hover, ${selectableCardOptionGroupStyle.optionSelectInputDisabled} &:focus, ${selectableCardOptionGroupStyle.optionSelectInputDisabled} &:active`]:
       {
         borderColor: theme.colors.neutral.borderDisabled,
       },
-    [`${optionSelectInputError} &:hover, ${optionSelectInputError} &:focus, ${optionSelectInputError} &:active`]:
+    [`${selectableCardOptionGroupStyle.optionSelectInputError} &:hover, ${selectableCardOptionGroupStyle.optionSelectInputError} &:focus, ${selectableCardOptionGroupStyle.optionSelectInputError} &:active`]:
       {
         borderColor: theme.colors.danger.border,
       },

@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { SIZE_HEIGHT, SIZE_WIDTH } from './constants'
 
-export const inputSizes = styleVariants({
+const inputSizes = styleVariants({
   large: {
     fontSize: theme.typography.body.fontSize,
     fontWeight: theme.typography.body.weight,
@@ -29,7 +29,7 @@ export const inputSizes = styleVariants({
   },
 })
 
-export const inputClass = style({
+const input = style({
   background: theme.colors.neutral.background,
   border: `solid 1px ${theme.colors.neutral.border}`,
   borderRadius: theme.radii.default,
@@ -75,7 +75,7 @@ export const inputClass = style({
   transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
 })
 
-export const filedSetClass = style({
+const filedSetClass = style({
   border: 'none',
   display: 'flex',
   flexDirection: 'column',
@@ -83,3 +83,9 @@ export const filedSetClass = style({
   margin: 0,
   padding: 0,
 })
+
+export const verificationCodeStyle = {
+  inputSizes,
+  input,
+  filedSetClass,
+}

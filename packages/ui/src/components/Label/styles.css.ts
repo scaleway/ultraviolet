@@ -1,6 +1,6 @@
 import { styleVariants } from '@vanilla-extract/css'
 
-export const textPointer = styleVariants({
+const textPointer = styleVariants({
   default: {
     cursor: 'text',
   },
@@ -11,3 +11,5 @@ export const textPointer = styleVariants({
     cursor: 'pointer',
   },
 })
+
+export const labelStyle = { textPointer }

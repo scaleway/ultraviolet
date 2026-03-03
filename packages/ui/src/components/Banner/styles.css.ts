@@ -3,7 +3,7 @@ import { style, styleVariants } from '@vanilla-extract/css'
 import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { recipe } from '@vanilla-extract/recipes'
 
-export const banner = recipe({
+const banner = recipe({
   base: {
     borderRadius: theme.radii.large,
   },
@@ -66,7 +66,7 @@ export const banner = recipe({
   },
 })
 
-export const imageStackBanner = styleVariants({
+const imageStack = styleVariants({
   medium: {
     width: '140px',
   },
@@ -75,7 +75,7 @@ export const imageStackBanner = styleVariants({
   },
 })
 
-export const closeButtonBanner = style({
+const closeButton = style({
   background: 'none',
   selectors: {
     '&:hover': {
@@ -85,3 +85,8 @@ export const closeButtonBanner = style({
 })
 
 export type BannerVariants = NonNullable<RecipeVariants<typeof banner>>
+export const bannerStyle = {
+  banner,
+  imageStack,
+  closeButton,
+}

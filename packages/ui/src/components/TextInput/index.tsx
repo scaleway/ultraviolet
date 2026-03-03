@@ -29,15 +29,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 import type { TEXTINPUT_SIZE_HEIGHT } from './constants'
-import {
-  basicPrefix,
-  basicSuffix,
-  ctaSuffix,
-  inputClass,
-  inputWrapper,
-  inputWrapperSizes,
-  stateStack,
-} from './styles.css'
+import { textInputStyle } from './styles.css'
 
 type TextInputProps = {
   className?: string
@@ -192,7 +184,10 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
         <div>
           <Tooltip text={tooltip}>
             <div
-              className={cn(inputWrapper, inputWrapperSizes[size])}
+              className={cn(
+                textInputStyle.inputWrapper,
+                textInputStyle.inputWrapperSizes[size],
+              )}
               data-disabled={disabled}
               data-error={!!error}
               data-has-focus={hasFocus}
@@ -202,7 +197,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               {prefix ? (
                 <Stack
                   alignItems="center"
-                  className={basicPrefix}
+                  className={textInputStyle.basicPrefix}
                   data-size={size}
                   direction="row"
                 >
@@ -227,7 +222,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                 autoComplete={autoComplete}
                 // oxlint-disable-next-line jsx_a11y/no-autofocus
                 autoFocus={autoFocus}
-                className={inputClass}
+                className={textInputStyle.input}
                 data-size={size}
                 data-testid={dataTestId}
                 defaultValue={defaultValue}
@@ -259,7 +254,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               {success || error || loading || computedClearable ? (
                 <Stack
                   alignItems="center"
-                  className={stateStack}
+                  className={textInputStyle.stateStack}
                   direction="row"
                   gap={1}
                 >
@@ -304,7 +299,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               {suffix ? (
                 <Stack
                   alignItems="center"
-                  className={basicSuffix}
+                  className={textInputStyle.basicSuffix}
                   direction="row"
                 >
                   {typeof suffix === 'string' ? (
@@ -324,7 +319,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               {type === 'password' ? (
                 <Stack
                   alignItems="center"
-                  className={ctaSuffix}
+                  className={textInputStyle.ctaSuffix}
                   direction="row"
                 >
                   <Button
@@ -347,7 +342,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               {onRandomize ? (
                 <Stack
                   alignItems="center"
-                  className={ctaSuffix}
+                  className={textInputStyle.ctaSuffix}
                   direction="row"
                 >
                   <Button

@@ -6,7 +6,7 @@ import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import type { UltravioletUITheme } from '../../theme'
 import type { AlignItemsType, JustifyContentType } from './styles.css'
-import { row, sprinkles } from './styles.css'
+import { rowStyle, sprinkles } from './styles.css'
 import { paddings, templateColumn } from './variables.css'
 
 type ResponsiveProp<T> =
@@ -76,7 +76,7 @@ export const Row = ({
   <div
     className={cn(
       className,
-      row,
+      rowStyle.row,
       sprinkles({
         alignItems:
           typeof alignItems === 'object' ? alignItems : { xxsmall: alignItems },

@@ -7,12 +7,7 @@ import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import type { PROGRESS_BAR_SENTIMENTS } from './constants'
-import {
-  customText,
-  filledBarSentiments,
-  progressBar,
-  progressContainer,
-} from './styles.css'
+import { progressBarStyle } from './styles.css'
 import { percentageValue } from './variables.css'
 
 type ProgressBarProps = {
@@ -95,16 +90,16 @@ export const ProgressBar = ({
       aria-valuemax={max}
       aria-valuemin={0}
       aria-valuenow={value}
-      className={cn(className, progressContainer)}
+      className={cn(className, progressBarStyle.container)}
       data-testid={dataTestId}
       role="progressbar"
       style={style}
     >
       {progress ? (
-        <div className={progressBar} />
+        <div className={progressBarStyle.progressBar} />
       ) : (
         <div
-          className={filledBarSentiments[sentiment]}
+          className={progressBarStyle.filledBarSentiments[sentiment]}
           style={assignInlineVars({
             [percentageValue]: `${(100 * Math.max(0, Math.min(max, value))) / max}%`,
           })}
@@ -115,7 +110,9 @@ export const ProgressBar = ({
       <Stack direction="row" gap={1} width="fit-content">
         <Text
           as="label"
-          className={customText[suffix ? 'withSuffix' : 'noSuffix']}
+          className={
+            progressBarStyle.customText[suffix ? 'withSuffix' : 'noSuffix']
+          }
           sentiment="neutral"
           variant="bodySmall"
         >

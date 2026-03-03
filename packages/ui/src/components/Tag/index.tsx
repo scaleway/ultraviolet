@@ -11,7 +11,7 @@ import { Loader } from '../Loader'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 import type { SENTIMENTS } from './styles.css'
-import { closeButtonTag, containerTag, textTag } from './styles.css'
+import { tagStyle } from './styles.css'
 
 const COPY_DURATION = 2500
 
@@ -49,7 +49,7 @@ const TagInner = ({
     <Text
       aria-disabled={disabled}
       as="span"
-      className={textTag}
+      className={tagStyle.text}
       oneLine
       variant={variant === 'code' ? 'code' : 'caption'}
     >
@@ -61,7 +61,7 @@ const TagInner = ({
     {onClose && !isLoading ? (
       <Button
         aria-label="Close tag"
-        className={closeButtonTag}
+        className={tagStyle.closeButton}
         data-testid="close-tag"
         disabled={disabled}
         onClick={onClose}
@@ -117,7 +117,7 @@ export const Tag = ({
         <button
           className={cn(
             className,
-            containerTag({ copiable, disabled, sentiment }),
+            tagStyle.container({ copiable, disabled, sentiment }),
           )}
           data-testid={dataTestId}
           disabled={disabled}
@@ -141,7 +141,7 @@ export const Tag = ({
 
   return (
     <span
-      className={cn(className, containerTag({ disabled, sentiment }))}
+      className={cn(className, tagStyle.container({ disabled, sentiment }))}
       data-testid={dataTestId}
       style={style}
     >

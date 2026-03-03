@@ -7,13 +7,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 import { CheckboxIconContainer } from './CheckboxIconContainer'
-import {
-  checkboxContainer,
-  checkboxInput,
-  errorText,
-  icon,
-  label,
-} from './styles.css'
+import { checkboxStyle } from './styles.css'
 
 type LabelProp =
   | {
@@ -90,7 +84,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       typeof children === 'string' ? (
         <Text
           as="label"
-          className={label}
+          className={checkboxStyle.label}
           htmlFor={localId}
           prominence="default"
           sentiment="neutral"
@@ -99,7 +93,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           {children}
         </Text>
       ) : (
-        <label className={label} htmlFor={localId}>
+        <label className={checkboxStyle.label} htmlFor={localId}>
           {children}
         </label>
       )
@@ -109,7 +103,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       <Tooltip text={tooltip}>
         <div
           aria-disabled={disabled}
-          className={cn(className, checkboxContainer[size])}
+          className={cn(className, checkboxStyle.container[size])}
           data-checked={checked}
           data-error={!!error}
           data-testid={dataTestId}
@@ -122,7 +116,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             aria-label={ariaLabel}
             autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
             checked={isCheck}
-            className={checkboxInput[size]}
+            className={checkboxStyle.input[size]}
             disabled={disabled}
             id={localId}
             name={name}
@@ -137,12 +131,14 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             type="checkbox"
             value={value}
           />
-
-          <svg className={icon[size]} fill="none" viewBox="0 0 24 24">
+          <svg
+            className={checkboxStyle.icon[size]}
+            fill="none"
+            viewBox="0 0 24 24"
+          >
             <title>{name}</title>
             <CheckboxIconContainer checked={checked} />
           </svg>
-
           {children || required || helper || error ? (
             <Stack flex={1} gap={0.5}>
               {children || required ? (
@@ -170,7 +166,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
               {error && typeof error !== 'boolean' ? (
                 <Text
                   as="span"
-                  className={errorText}
+                  className={checkboxStyle.errorText}
                   sentiment="danger"
                   variant="caption"
                 >

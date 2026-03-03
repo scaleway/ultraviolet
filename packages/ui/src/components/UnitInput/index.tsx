@@ -17,15 +17,7 @@ import { SelectInput } from '../SelectInput'
 import type { OptionType } from '../SelectInput/types'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import {
-  unitInputNumber,
-  unitInputNumberWrapper,
-  unitInputSize,
-  unitInputState,
-  unitInputUnit,
-  unitInputUnitWidth,
-  widthSelectInput,
-} from './styles.css'
+import { unitInputStyle, widthSelectInput } from './styles.css'
 
 type UnitInputValue = { inputValue: number; unit: string }
 
@@ -161,16 +153,19 @@ export const UnitInput = ({
         </Label>
       ) : null}
       <Row
-        className={cn(unitInputSize[size], unitInputState[computedState])}
+        className={cn(
+          unitInputStyle.size[size],
+          unitInputStyle.state[computedState],
+        )}
         data-disabled={!!disabled}
         data-testid={dataTestId}
         templateColumns={templateColumns ?? '1fr auto'}
       >
-        <div className={unitInputNumberWrapper} id="input-field">
+        <div className={unitInputStyle.numberWrapper} id="input-field">
           <input
             aria-invalid={!!error}
             autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
-            className={cn(className, unitInputNumber[size])}
+            className={cn(className, unitInputStyle.number[size])}
             data-testid="unit-input"
             disabled={disabled}
             id={localId}
@@ -202,7 +197,7 @@ export const UnitInput = ({
           {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
         </div>
         <SelectInput
-          className={cn(unitInputUnit, unitInputUnitWidth)}
+          className={cn(unitInputStyle.unit, unitInputStyle.unitWidth)}
           clearable={false}
           data-disabled={disabled}
           disabled={disabled}

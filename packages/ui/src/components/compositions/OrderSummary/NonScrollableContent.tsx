@@ -4,10 +4,7 @@ import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { DisplayPrice } from './helpers'
 import { OrderSummaryContext } from './Provider'
-import {
-  orderSummaryNonScrollableContainer,
-  orderSummaryTotalPrice,
-} from './styles.css'
+import { orderSummaryStyle } from './styles.css'
 import type { PriceTypeSingle, TimeUnit } from './types'
 
 type NonScrollableContentProps = {
@@ -45,7 +42,7 @@ export const NonScrollableContent = ({
   const divisor = defaultPriceInformation ? timePeriodAmount : undefined
 
   return (
-    <Stack className={orderSummaryNonScrollableContainer} gap={3}>
+    <Stack className={orderSummaryStyle.nonScrollableContainer} gap={3}>
       {children}
       <Stack alignItems="center" direction="row" justifyContent="space-between">
         {totalPriceInfo && totalPriceInfoPlacement === 'left' ? (
@@ -83,7 +80,7 @@ export const NonScrollableContent = ({
             <Text
               as="span"
               className={
-                orderSummaryTotalPrice[
+                orderSummaryStyle.totalPrice[
                   defaultPriceInformation && !priceInformation
                     ? 'default'
                     : 'priceInformation'
@@ -120,7 +117,7 @@ export const NonScrollableContent = ({
               <Text
                 as="span"
                 className={
-                  orderSummaryTotalPrice[
+                  orderSummaryStyle.totalPrice[
                     priceInformation ? 'priceInformation' : 'default'
                   ]
                 }

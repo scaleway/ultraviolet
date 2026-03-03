@@ -5,12 +5,7 @@ import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import {
-  iconContainer,
-  iconStack,
-  imageClass,
-  subContainerHeightVar,
-} from './styles.css'
+import { contentCardStyle, subContainerHeightVar } from './styles.css'
 import type { ContentCardProps } from './type'
 
 export const LinkContent = ({
@@ -22,12 +17,12 @@ export const LinkContent = ({
 }) => (
   <Stack
     alignItems={direction === 'column' ? 'flex-end' : 'center'}
-    className={cn(iconStack[direction])}
+    className={cn(contentCardStyle.iconStack[direction])}
     direction={direction}
     flex={1}
     justifyContent={direction === 'column' ? 'center' : 'flex-end'}
   >
-    <div className={iconContainer}>
+    <div className={contentCardStyle.iconContainer}>
       <OpenInNewIcon disabled={disabled} sentiment="neutral" />
     </div>
   </Stack>
@@ -92,7 +87,7 @@ export const ImageContent = ({
 }) => (
   <img
     alt=""
-    className={imageClass[direction]}
+    className={contentCardStyle.image[direction]}
     data-disabled={disabled}
     height={direction === 'column' ? 120 : undefined}
     src={image}

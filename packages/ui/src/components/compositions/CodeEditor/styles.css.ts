@@ -10,7 +10,7 @@ import { recipe } from '@vanilla-extract/recipes'
 export const maxHeightVar = createVar()
 export const disabledStack = style({ cursor: 'not-allowed' })
 
-export const copyButton = style({
+const copyButton = style({
   backgroundColor: consoleDarkTheme.colors.neutral.backgroundWeak,
   color: consoleDarkTheme.colors.neutral.textStrong,
   position: 'absolute',
@@ -34,7 +34,7 @@ const codeEditorBase = style({
   maxHeight: maxHeightVar,
 })
 
-export const codeEditor = styleVariants({
+const codeEditor = styleVariants({
   default: [codeEditorBase],
   disabled: [codeEditorBase, { pointerEvents: 'none', userSelect: 'none' }],
 })
@@ -115,7 +115,7 @@ const showMoreContainerBase = style({
   marginTop: `calc(-1 * ${theme.space[1]})`,
   transition: 'box-shadow .5s',
 })
-export const showMoreContainer = recipe({
+const showMoreContainer = recipe({
   base: showMoreContainerBase,
   variants: {
     expanded: {
@@ -129,7 +129,7 @@ export const showMoreContainer = recipe({
   },
 })
 
-export const showMoreButton = style({
+const showMoreButton = style({
   background: 'none',
   border: 'none',
   cursor: 'pointer',
@@ -138,14 +138,14 @@ export const showMoreButton = style({
   width: '100%',
 })
 
-export const centeredText = style({
+const centeredText = style({
   alignItems: 'center',
   display: 'flex',
   justifyContent: 'center',
   color: consoleDarkTheme.colors.neutral.text,
 })
 
-export const animatedArrowIcon = styleVariants({
+const animatedArrowIcon = styleVariants({
   false: {
     transform: 'rotate(0deg)',
     transformOrigin: 'center',
@@ -158,7 +158,7 @@ export const animatedArrowIcon = styleVariants({
   },
 })
 
-export const codeEditorWrapper = style({
+const wrapper = style({
   borderRadius: theme.space['0.5'],
   border: '1px solid transparent',
 
@@ -169,3 +169,13 @@ export const codeEditorWrapper = style({
     },
   },
 })
+
+export const codeEditorStyle = {
+  copyButton,
+  codeEditor,
+  showMoreButton,
+  showMoreContainer,
+  centeredText,
+  animatedArrowIcon,
+  wrapper,
+}

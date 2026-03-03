@@ -7,14 +7,7 @@ import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Text } from '../Text'
 import { DEFAULT_COLORS, sizes, TEXT_VARIANT_BY_SIZE } from './constants'
-import {
-  colorsAvatar,
-  containerAvatar,
-  elementContainer,
-  productIconContainer,
-  svgAvatar,
-  uploadContainer,
-} from './styles.css'
+import { avatarStyle } from './styles.css'
 import type { AvatarProps, SentimentColors } from './types'
 import {
   finalColorAvatar,
@@ -52,7 +45,10 @@ export const Avatar = ({
     // biome-ignore lint/a11y/noNoninteractiveElementInteractions: event handler only when role="button"
     // biome-ignore lint/a11y/noStaticElementInteractions:  event handler only when role="button"
     <div
-      className={cn(className, containerAvatar({ sentiment, shape, size }))}
+      className={cn(
+        className,
+        avatarStyle.container({ sentiment, shape, size }),
+      )}
       data-has-background={!['user', 'image'].includes(variant)}
       data-testid={dataTestId}
       onClick={onClick}
@@ -67,20 +63,22 @@ export const Avatar = ({
       }}
     >
       {upload ? (
-        <div className={uploadContainer({ shape, size })}>
+        <div className={avatarStyle.uploadContainer({ shape, size })}>
           <UploadIcon prominence="stronger" sentiment="neutral" size="large" />
         </div>
       ) : null}
       {variant === 'user' ? (
-        <div className={productIconContainer({ shape, size })}>
-          <UserProductIcon className={svgAvatar({ shape })} />
+        <div className={avatarStyle.productIconContainer({ shape, size })}>
+          <UserProductIcon className={avatarStyle.svgAvatar({ shape })} />
         </div>
       ) : null}
       {variant === 'icon' ? (
-        <div className={elementContainer({ shape })}>{children}</div>
+        <div className={avatarStyle.elementContainer({ shape })}>
+          {children}
+        </div>
       ) : null}
       {variant === 'text' ? (
-        <div className={elementContainer({ shape })}>
+        <div className={avatarStyle.elementContainer({ shape })}>
           <Text
             as="span"
             prominence={sentiment === 'primary' ? 'stronger' : 'strong'}
@@ -93,7 +91,7 @@ export const Avatar = ({
       ) : null}
       {variant === 'colors' ? (
         <span
-          className={colorsAvatar({ shape, size })}
+          className={avatarStyle.colorsAvatar({ shape, size })}
           style={assignInlineVars({
             [finalSizeAvatar]: finalSize,
             [finalColorAvatar]: finalColors[0],

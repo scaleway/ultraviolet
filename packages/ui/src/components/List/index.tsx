@@ -16,7 +16,7 @@ import { ListProvider, useListContext } from './ListContext'
 import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
-import { list, listContainer } from './styles.css'
+import { listStyle } from './styles.css'
 import type { ColumnProps } from './types'
 
 // Note: Get type optional type from omit values of ListContext
@@ -65,7 +65,7 @@ const TableContainer = ({ children }: { children: ReactNode }) => {
     // oxlint-disable react/exhaustive-deps
   }, [children, setRefList])
 
-  return <div className={listContainer}>{children}</div>
+  return <div className={listStyle.container}>{children}</div>
 }
 
 const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(
@@ -93,7 +93,11 @@ const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(
       selectable={selectable}
     >
       <TableContainer>
-        <table className={cn(className, list)} ref={ref} style={style}>
+        <table
+          className={cn(className, listStyle.list)}
+          ref={ref}
+          style={style}
+        >
           <HeaderRow hasSelectAllColumn={selectable}>
             {columns.map((column, index) => (
               <HeaderCell

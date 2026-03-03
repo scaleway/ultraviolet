@@ -7,14 +7,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
 import { TAGS_GAP } from './constant'
-import {
-  ellipsisChild,
-  ellipsisContainer,
-  popoverTriggerWidthVar,
-  tagContainer,
-  tagListContainer,
-  tagsWrapper,
-} from './styles.css'
+import { popoverTriggerWidthVar, tagListStyle } from './styles.css'
 
 const DEFAULT_POPOVER_MAX_HEIGHT = '16rem'
 
@@ -250,7 +243,7 @@ export const TagList = ({
     typeof tag !== 'string' && tag.icon ? (
       <Tag
         // useful when two tags are identical `${tag}-${index}`
-        className={cn(isEllipsis ? 'ellipsed' : '', ellipsisChild)}
+        className={cn(isEllipsis ? 'ellipsed' : '', tagListStyle.ellipsisChild)}
         copiable={copiable}
         copiedText={copiedText}
         copyText={copyText}
@@ -261,7 +254,7 @@ export const TagList = ({
       </Tag>
     ) : (
       <Tag
-        className={cn(isEllipsis ? 'ellipsed' : '', ellipsisChild)}
+        className={cn(isEllipsis ? 'ellipsed' : '', tagListStyle.ellipsisChild)}
         copiable={copiable}
         copiedText={copiedText}
         copyText={copyText}
@@ -273,18 +266,18 @@ export const TagList = ({
 
   return (
     <div
-      className={cn(className, tagListContainer)}
+      className={cn(className, tagListStyle.container)}
       data-testid={dataTestId}
       style={{ visibility: isReady ? 'visible' : 'hidden', ...style }}
     >
       <div
         className={cn(
-          tagContainer({
+          tagListStyle.tagContainer({
             multiline,
           }),
           (visibleTags.length === 1 && hiddenTags.length === 0) ||
             popoverTriggerWidth
-            ? ellipsisContainer
+            ? tagListStyle.ellipsisContainer
             : '',
         )}
         data-testid={`${dataTestId ?? 'taglist'}-container`}
@@ -312,7 +305,7 @@ export const TagList = ({
         }}
       >
         <div
-          className={tagContainer({ multiline })}
+          className={tagListStyle.tagContainer({ multiline })}
           data-testid={`${dataTestId ?? 'taglist'}-measure-container`}
         >
           {potentiallyVisibleTags.map((tag, index) => renderTag(tag, index))}
@@ -321,7 +314,7 @@ export const TagList = ({
       {hiddenTags.length > 0 && (
         <Popover
           content={
-            <div className={tagContainer({ multiline: true })}>
+            <div className={tagListStyle.tagContainer({ multiline: true })}>
               {hiddenTags.map((tag, index) => renderTag(tag, index))}
             </div>
           }
@@ -333,7 +326,7 @@ export const TagList = ({
           visible={isPopoverVisible}
         >
           <span
-            className={tagsWrapper}
+            className={tagListStyle.tagsWrapper}
             data-testid={`${dataTestId ?? 'taglist'}-open`}
             onClick={() => setIsPopoverVisible(true)}
             onKeyDown={event => {

@@ -3,7 +3,7 @@ import { style } from '@vanilla-extract/css'
 import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles'
 import { flexVar, maxWidthVar, minWidthVar, widthVar } from './variables.css'
 
-export const stack = style({
+const stack = style({
   display: 'flex',
   flex: flexVar,
   maxWidth: maxWidthVar,
@@ -92,3 +92,4 @@ export const responsiveProperties = defineProperties({
 })
 
 export const sprinkles = createSprinkles(responsiveProperties)
+export const stackStyle = { stack }

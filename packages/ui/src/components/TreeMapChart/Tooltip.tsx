@@ -1,7 +1,7 @@
 'use client'
 
 import { Text } from '../Text'
-import { treeMapTooltipContainer } from './styles.css'
+import { treeMapChartStyle } from './styles.css'
 import type { DataType } from './types'
 
 type TooltipProps = Pick<DataType, 'content' | 'value'> & {
@@ -13,7 +13,7 @@ export const Tooltip = ({
   content,
   'data-testid': dataTestId,
 }: TooltipProps) => (
-  <div className={treeMapTooltipContainer} data-testid={dataTestId}>
+  <div className={treeMapChartStyle.tooltipContainer} data-testid={dataTestId}>
     <Text as="p" sentiment="primary" variant="bodyStronger">
       {content}
     </Text>

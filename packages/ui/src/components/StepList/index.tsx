@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Bullet } from '../Bullet'
-import { step, stepDiv, steps } from './styles.css'
+import { stepListStyle } from './styles.css'
 
 export type Sizes = 'small' | 'medium'
 
@@ -31,7 +31,7 @@ const Item = ({
   className,
 }: ItemProps) => (
   <li
-    className={cn(className, step({ disabled }))}
+    className={cn(className, stepListStyle.step({ disabled }))}
     onClick={onClick}
     onKeyDown={onKeyDown}
   >
@@ -45,7 +45,7 @@ const Item = ({
         {bulletContent}
       </Bullet>
     ) : null}
-    <div className={stepDiv({ size })}>{children}</div>
+    <div className={stepListStyle.stepDiv({ size })}>{children}</div>
   </li>
 )
 
@@ -66,7 +66,11 @@ export const StepList = ({
   style,
   'data-testid': dataTestId,
 }: StepListProps) => (
-  <ul className={cn(className, steps)} data-testid={dataTestId} style={style}>
+  <ul
+    className={cn(className, stepListStyle.steps)}
+    data-testid={dataTestId}
+    style={style}
+  >
     {children}
   </ul>
 )

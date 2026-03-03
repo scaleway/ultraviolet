@@ -26,16 +26,11 @@ import type { Badge } from '../../../Badge'
 import { Stack } from '../../../Stack'
 import { Tooltip } from '../../../Tooltip'
 import { useNavigation } from '../NavigationProvider'
+import { navigationStyle } from '../styles.css'
 import type { ItemType, PinUnPinType } from '../types'
 import { ItemExpanded } from './ItemExpanded'
 import { ItemMenu, ItemMenuItem } from './ItemMenu'
 import { ItemContext } from './ItemProvider'
-import {
-  navigationItemAnimatedIcon,
-  navigationItemContainer,
-  navigationItemContainerAnimated,
-  navigationItemMenuStack,
-} from './items.css'
 
 type LinkProps = {
   to: string
@@ -358,7 +353,7 @@ export const Item = memo(
         <Tooltip placement="right" text={label}>
           <Stack
             alignItems="flex-start"
-            className={navigationItemMenuStack}
+            className={navigationStyle.itemMenuStack}
             gap={1}
             justifyContent="flex-start"
           >
@@ -366,8 +361,8 @@ export const Item = memo(
               alignItems="center"
               as={containerTag}
               className={cn(
-                navigationItemContainer({ disabled }),
-                navigationItemContainerAnimated({
+                navigationStyle.itemContainer({ disabled }),
+                navigationStyle.itemContainerAnimated({
                   animated: shouldAnimate && animationType === 'complex',
                   animation: computedAnimation,
                 }),
@@ -379,7 +374,7 @@ export const Item = memo(
               target={target}
             >
               <OpenInNewIcon
-                className={navigationItemAnimatedIcon({
+                className={navigationStyle.itemAnimatedIcon({
                   animated: shouldAnimate && animationType === 'complex',
                   animation: computedAnimation,
                 })}

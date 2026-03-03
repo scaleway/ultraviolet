@@ -10,7 +10,7 @@ import { IconWithContent } from './components/IconWithContent'
 import { RevealOnHover } from './components/RevealOnHover'
 import { Selector } from './components/Selector'
 import { SelectorHelper } from './components/SelectorLabel'
-import { firstLabel, optionSelectorWrapper, secondLabel } from './styles.css'
+import { optionSelectorStyle } from './styles.css'
 import type { OptionSelectorProps, SelectorOption } from './types'
 
 const makeSelectInputOptions = (
@@ -125,18 +125,22 @@ export const OptionSelector = ({
   return (
     <fieldset
       aria-label={ariaLabel}
-      className={cn(className, optionSelectorWrapper({ direction }))}
+      className={cn(className, optionSelectorStyle.wrapper({ direction }))}
       data-testid={dataTestId}
       name={name}
       style={style}
     >
       {isHorizontal ? (
-        <Label className={firstLabel} required={required} size={size}>
+        <Label
+          className={optionSelectorStyle.firstLabel}
+          required={required}
+          size={size}
+        >
           {firstSelector.label}
         </Label>
       ) : null}
       {firstValue && secondSelector && secondSelectorOptions && isHorizontal ? (
-        <Label className={secondLabel} required={required}>
+        <Label className={optionSelectorStyle.secondLabel} required={required}>
           {secondSelector?.label}
         </Label>
       ) : null}

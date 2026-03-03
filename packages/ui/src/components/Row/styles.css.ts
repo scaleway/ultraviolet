@@ -4,7 +4,7 @@ import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles'
 import type { CSSProperties } from 'react'
 import { paddings, templateColumn } from './variables.css'
 
-export const row = style({
+const row = style({
   '@media': {
     [`screen and (min-width: ${consoleLightTheme.breakpoints.xlarge})`]: {
       gridTemplateColumns: templateColumn.xlarge,
@@ -113,3 +113,5 @@ export const responsiveProperties = defineProperties({
 })
 
 export const sprinkles = createSprinkles(responsiveProperties)
+
+export const rowStyle = { row }

@@ -2,7 +2,7 @@
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Text } from '../../Text'
-import { leftOption, sliderDatalist, sliderOption } from '../styles.css'
+import { leftOption, sliderStyle } from '../styles.css'
 
 export type OptionsProps = {
   ticks: {
@@ -17,7 +17,7 @@ export type OptionsProps = {
 
 export const Options = ({ ticks, min, max, value, step }: OptionsProps) => (
   <datalist
-    className={sliderDatalist({ double: Array.isArray(value) })}
+    className={sliderStyle.datalist({ double: Array.isArray(value) })}
     data-double={Array.isArray(value)}
   >
     {ticks.map((element, index, { length }) => {
@@ -39,7 +39,7 @@ export const Options = ({ ticks, min, max, value, step }: OptionsProps) => (
 
       return (
         <span
-          className={sliderOption({
+          className={sliderStyle.option({
             left: index === 0,
             right: index === length - 1,
           })}

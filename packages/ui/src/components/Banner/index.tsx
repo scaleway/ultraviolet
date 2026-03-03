@@ -12,7 +12,7 @@ import { Text } from '../Text'
 import defaultIllustration from './assets/default-image.svg'
 import defaultIllustrationSmall from './assets/default-image-small.svg'
 import type { BannerVariants } from './styles.css'
-import { banner, closeButtonBanner, imageStackBanner } from './styles.css'
+import { bannerStyle } from './styles.css'
 
 type BannerProps = {
   title: string
@@ -78,7 +78,7 @@ export const Banner = ({
 
   return (
     <Stack
-      className={cn(className, banner({ size, variant }))}
+      className={cn(className, bannerStyle.banner({ size, variant }))}
       data-testid={dataTestId}
       direction="row"
       gap={2}
@@ -86,7 +86,7 @@ export const Banner = ({
       style={style}
     >
       {image ? (
-        <Stack className={imageStackBanner[size]} justifyContent="center">
+        <Stack className={bannerStyle.imageStack[size]} justifyContent="center">
           {typeof image === 'string' ? (
             <img alt="" height="auto" src={image} width="auto" />
           ) : (
@@ -94,7 +94,7 @@ export const Banner = ({
           )}
         </Stack>
       ) : (
-        <Stack className={imageStackBanner[size]} justifyContent="center">
+        <Stack className={bannerStyle.imageStack[size]} justifyContent="center">
           <img alt="" height="auto" src={defaultImage} width="auto" />
         </Stack>
       )}
@@ -154,7 +154,7 @@ export const Banner = ({
       </Stack>
       {closable ? (
         <Button
-          className={closeButtonBanner}
+          className={bannerStyle.closeButton}
           name="close"
           onClick={() => {
             setOpened(false)

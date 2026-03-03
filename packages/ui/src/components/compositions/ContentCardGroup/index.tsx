@@ -5,7 +5,7 @@ import { Children, forwardRef } from 'react'
 import { Stack } from '../../Stack'
 import { Card } from './Card'
 import { SkeletonCard } from './SkeletonCard'
-import { groupCardWrapper } from './styles.css'
+import { contentCardGroupStyle } from './styles.css'
 
 type BaseContentCardGroupProps = {
   children: ReactNode
@@ -18,7 +18,7 @@ const BaseContentCardGroup = forwardRef<
   BaseContentCardGroupProps
 >(({ children, loading, style }, ref) => (
   <Stack
-    className={groupCardWrapper}
+    className={contentCardGroupStyle.groupCardWrapper}
     direction="column"
     ref={ref}
     style={style}

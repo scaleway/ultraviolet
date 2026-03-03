@@ -8,9 +8,9 @@ import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { DateInputContext } from '../Context'
 import { getNextMonth, getPreviousMonth } from '../helpers'
+import { dateInputStyle } from '../styles.css'
 import { Daily } from './CalendarDaily'
 import { Monthly } from './CalendarMonthly'
-import { capitalizedText } from './styles.css'
 
 export const CalendarContent = () => {
   const {
@@ -61,7 +61,7 @@ export const CalendarContent = () => {
         </Button>
         <Text
           as="span"
-          className={capitalizedText}
+          className={dateInputStyle.capitalizedText}
           disabled={disabled}
           sentiment="neutral"
           variant="bodyStrong"

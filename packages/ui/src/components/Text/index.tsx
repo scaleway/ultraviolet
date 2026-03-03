@@ -10,7 +10,7 @@ import { useIsOverflowing } from '../../hooks/useIsOverflowing'
 import type { ExtendedColor } from '../../theme'
 import { Tooltip } from '../Tooltip'
 import type { PROMINENCES } from './constants'
-import { text } from './style.css'
+import { textStyle } from './style.css'
 import { textVars } from './variables.css'
 
 type ProminenceProps = keyof typeof PROMINENCES
@@ -74,7 +74,7 @@ export const Text = ({
         aria-hidden={ariaHidden}
         className={cn(
           className,
-          text({
+          textStyle.text({
             disabled,
             italic,
             oneLine,

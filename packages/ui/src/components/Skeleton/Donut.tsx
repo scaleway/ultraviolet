@@ -1,26 +1,21 @@
 'use client'
 
 import { Line } from './Line'
-import {
-  CIRCLE_SIZE,
-  donutSkeletonCircle,
-  donutSkeletonContainer,
-  donutSkeletonLineList,
-  donutSkeletonSvg,
-} from './stylesVariants.css'
+import { skeletonStyle } from './styles.css'
+import { CIRCLE_SIZE } from './stylesVariants.css'
 
 export const Donut = () => (
-  <div className={donutSkeletonContainer}>
-    <svg className={donutSkeletonSvg}>
+  <div className={skeletonStyle.donutSkeletonContainer}>
+    <svg className={skeletonStyle.donutSkeletonSvg}>
       <title>donut skeleton</title>
       <circle
-        className={donutSkeletonCircle}
+        className={skeletonStyle.donutSkeletonCircle}
         cx={`${CIRCLE_SIZE / 2}rem`}
         cy={`${CIRCLE_SIZE / 2}rem`}
         r="90"
       />
     </svg>
-    <ul className={donutSkeletonLineList}>
+    <ul className={skeletonStyle.donutSkeletonLineList}>
       <li>
         <Line />
       </li>

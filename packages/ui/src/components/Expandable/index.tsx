@@ -4,7 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
-import { animationDurationVar, expandable } from './styles.css'
+import { animationDurationVar, expandableStyle } from './styles.css'
 
 const ANIMATION_DURATION = 300 // in ms
 
@@ -132,7 +132,7 @@ export const AnimatedExpandable = ({
 
   return (
     <div
-      className={cn(className, expandable)}
+      className={cn(className, expandableStyle.expandable)}
       data-is-animated={shouldBeAnimated && !isFirstRender.current}
       data-testid={dataTestId}
       ref={ref}

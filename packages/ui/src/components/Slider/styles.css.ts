@@ -9,15 +9,15 @@ export const thumbColor = createVar()
 export const leftVar = createVar()
 export const leftOption = createVar()
 
-export const sliderContainer = style({ marginBottom: theme.space[3] })
+const container = style({ marginBottom: theme.space[3] })
 
-export const sliderTooltip = style({
+const tooltip = style({
   left: tooltipLeft,
   position: 'absolute',
   width: 'fit-content',
 })
 
-export const sliderDatalist = recipe({
+const datalist = recipe({
   base: {
     display: 'flex',
     height: theme.typography.caption.lineHeight,
@@ -33,7 +33,7 @@ export const sliderDatalist = recipe({
   },
 })
 
-export const sliderOption = recipe({
+const option = recipe({
   base: {
     display: 'flex',
     left: leftOption,
@@ -65,7 +65,7 @@ const sliderThumbDefaultStyle = {
   width: `${THUMB_SIZE}px`,
 } as CSSProperties
 
-export const sliderThumbStyle = recipe({
+const thumbStyle = recipe({
   defaultVariants: {
     disabled: false,
     hasTooltipDouble: true,
@@ -141,7 +141,7 @@ export const sliderThumbStyle = recipe({
   },
 })
 
-export const sliderDoubleText = recipe({
+const doubleText = recipe({
   variants: {
     isDouble: {
       false: {
@@ -167,7 +167,7 @@ const trackStyle = {
   WebkitAppearance: 'none',
 } as CSSProperties
 
-export const sliderDouble = recipe({
+const double = recipe({
   base: {
     appearance: 'none',
     background: 'transparent',
@@ -219,7 +219,7 @@ export const sliderDouble = recipe({
   },
 })
 
-export const sliderSingle = recipe({
+const single = recipe({
   base: {
     alignSelf: 'center',
     appearance: 'none',
@@ -274,7 +274,7 @@ export const sliderSingle = recipe({
     },
   },
 })
-export const sliderDoubleWrapper = style({
+const doubleWrapper = style({
   alignItems: 'center',
   alignSelf: 'center',
   display: 'flex',
@@ -283,7 +283,7 @@ export const sliderDoubleWrapper = style({
   width: ['-webkit-fill-available', '-moz-available'],
 })
 
-export const sliderCustomRail = style({
+const customRail = style({
   background: theme.colors.neutral.borderWeak,
   borderRadius: theme.radii.default,
   height: theme.sizing[100],
@@ -294,7 +294,7 @@ export const sliderCustomRail = style({
   width: '100%',
 })
 
-export const sliderInnerRail = recipe({
+const innerRail = recipe({
   base: {
     backgroundColor: theme.colors.primary.border,
     borderRadius: theme.radii.default,
@@ -319,4 +319,21 @@ export const sliderInnerRail = recipe({
   },
 })
 
-export const sliderNumberInput = style({ minWidth: theme.space[5] })
+const numberInput = style({ minWidth: theme.space[5] })
+
+export const sliderStyle = {
+  leftVar,
+  leftOption,
+  container,
+  tooltip,
+  datalist,
+  option,
+  thumbStyle,
+  doubleText,
+  double,
+  single,
+  doubleWrapper,
+  customRail,
+  innerRail,
+  numberInput,
+}

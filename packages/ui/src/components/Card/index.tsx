@@ -5,7 +5,7 @@ import type { CSSProperties, ReactNode, Ref } from 'react'
 import { forwardRef } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { borderedBox, stackCard } from './styles.css'
+import { cardStyle } from './styles.css'
 
 type CardProps = {
   children: ReactNode
@@ -43,7 +43,7 @@ export const Card = forwardRef(
   ) =>
     header ? (
       <Stack
-        className={cn(className, stackCard)}
+        className={cn(className, cardStyle.stack)}
         data-disabled={disabled}
         data-testid={dataTestId}
         gap={1}
@@ -64,7 +64,7 @@ export const Card = forwardRef(
           header
         )}
         <div
-          className={borderedBox}
+          className={cardStyle.borderedBox}
           data-disabled={disabled}
           data-is-active={active}
         >
@@ -91,7 +91,7 @@ export const Card = forwardRef(
       </Stack>
     ) : (
       <div
-        className={cn(className, borderedBox)}
+        className={cn(className, cardStyle.borderedBox)}
         data-disabled={disabled}
         data-is-active={active}
         data-testid={dataTestId}

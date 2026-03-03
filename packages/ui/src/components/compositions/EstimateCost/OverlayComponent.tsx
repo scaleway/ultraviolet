@@ -6,20 +6,12 @@ import type { JSX, ReactNode } from 'react'
 import { Children, cloneElement, isValidElement, useMemo } from 'react'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
-import { estimateCostResourceName } from './Components/components.css'
 import { LineThrough } from './Components/LineThrough'
 import { Strong } from './Components/Strong'
 import { maximumFractionDigits, multiplier } from './constants'
 import { useEstimateCost } from './EstimateCostProvider'
 import { OverlayContextProvider } from './OverlayContext'
-import {
-  estimateCostBadge,
-  estimateCostList,
-  estimateCostOverlayContainer,
-  estimateCostOverlayRow,
-  estimateCostSideItem,
-  overlayMarginVar,
-} from './styles.css'
+import { estimateCostStyle, overlayMarginVar } from './styles.css'
 import type { Units } from './types'
 
 type ExtraProps = {
@@ -86,15 +78,15 @@ export const OverlayComponent = ({
   return (
     <OverlayContextProvider value={value}>
       <div
-        className={estimateCostOverlayContainer({ inView })}
+        className={estimateCostStyle.overlayContainer({ inView })}
         data-testid="summary-overlay"
         style={assignInlineVars({
           [overlayMarginVar]: overlayMargin ?? '0',
         })}
       >
-        <ul className={estimateCostList}>
+        <ul className={estimateCostStyle.list}>
           {OverlayLeft ? (
-            <li className={estimateCostSideItem}>
+            <li className={estimateCostStyle.sideItem}>
               <OverlayLeft disabled={disableOverlayLeft}>
                 {locales['estimate.cost.submit.label']}
               </OverlayLeft>
@@ -108,12 +100,12 @@ export const OverlayComponent = ({
                 })
               : null,
           )}
-          <li className={estimateCostOverlayRow()}>
+          <li className={estimateCostStyle.overlayRow()}>
             <Stack alignItems="center" direction="row" gap={1}>
               <CalculatorIcon sentiment="primary" size="medium" />
               {locales['estimate.cost.label']}
             </Stack>
-            <div className={estimateCostResourceName()}>
+            <div className={estimateCostStyle.resourceName()}>
               <Strong variant="big">
                 <LineThrough isActive={isBeta && discount === 0}>
                   {formatNumber(overlayPrice, {
@@ -129,7 +121,7 @@ export const OverlayComponent = ({
               </Strong>
               {isBeta ? (
                 <Badge
-                  className={estimateCostBadge}
+                  className={estimateCostStyle.badge}
                   prominence="strong"
                   sentiment="warning"
                 >
@@ -144,7 +136,7 @@ export const OverlayComponent = ({
             </div>
           </li>
           {OverlayRight ? (
-            <li className={estimateCostSideItem}>
+            <li className={estimateCostStyle.sideItem}>
               <OverlayRight disabled={disableOverlayRight}>
                 {locales['estimate.cost.submit.label']}
               </OverlayRight>

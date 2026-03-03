@@ -4,7 +4,7 @@ import { recipe } from '@vanilla-extract/recipes'
 import { groupAnimation } from '../animations.css'
 import { ANIMATION_DURATION } from '../constants'
 
-export const navigationGroupText = recipe({
+export const groupText = recipe({
   base: {
     height: `calc(${theme.typography.bodySmallStrong.lineHeight} + ${theme.space['1']})`,
     paddingBottom: theme.space[1],
@@ -24,9 +24,9 @@ export const navigationGroupText = recipe({
   },
 })
 
-export const navigationGroupStack = style({ paddingTop: theme.space[1] })
+export const groupStack = style({ paddingTop: theme.space[1] })
 
-export const navigationPinnedItemDropableArea = style({
+export const pinnedItemDropableArea = style({
   borderTop: '2px solid',
   borderColor: 'transparent',
   height: 2,
@@ -50,11 +50,11 @@ export const navigationPinnedItemDropableArea = style({
   top: 0,
 })
 
-export const navigationPinnedItemRelativeDiv = style({
+export const pinnedItemRelativeDiv = style({
   position: 'relative',
 })
 
-export const navigationPinnedItemContainer = recipe({
+export const pinnedItemContainer = recipe({
   base: {
     padding: `${theme.space[1]} 0`,
   },
@@ -68,11 +68,11 @@ export const navigationPinnedItemContainer = recipe({
   },
 })
 
-export const navigationSeparator = style({
+export const separator = style({
   margin: `${theme.space['2']} calc(${theme.space['2']} * -1)`,
   flexShrink: 0,
 })
 
-export const navigationShowHideStack = style({
+export const showHideStack = style({
   height: '100%',
 })

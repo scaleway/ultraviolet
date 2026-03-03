@@ -13,7 +13,8 @@ function createStyleAlert(sentiment: AlertSentiment) {
     color: sentimentColor.text,
   }
 }
-export const alert = recipe({
+
+const alert = recipe({
   base: {
     borderRadius: theme.radii.default,
   },
@@ -44,15 +45,15 @@ export const alert = recipe({
   },
 })
 
-export const wrapAlert = style({
+const wrap = style({
   width: '100%',
 })
 
-export const textAlert = style({
+const text = style({
   color: theme.colors.neutral.text,
 })
 
-export const buttonAlert = styleVariants({
+const button = styleVariants({
   medium: {
     marginLeft: theme.space[5],
   },
@@ -61,12 +62,21 @@ export const buttonAlert = styleVariants({
   },
 })
 
-export const buttonCloseAlert = style({
+const buttonClose = style({
   alignSelf: 'flex-start',
 })
 
 export type AlertVariants = NonNullable<RecipeVariants<typeof alert>>
 
-export const smallIcon = style({
+const smallIcon = style({
   marginTop: theme.space['0.25'],
 })
+
+export const alertStyle = {
+  alert,
+  wrap,
+  text,
+  button,
+  buttonClose,
+  smallIcon,
+}

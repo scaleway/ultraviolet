@@ -7,7 +7,7 @@ import { Label } from '../Label'
 import { Radio } from '../Radio'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { fieldset } from './styles.css'
+import { radioGRoupStyle } from './styles.css'
 
 type RadioGroupContextType = {
   groupName?: string
@@ -113,7 +113,7 @@ const RadioGroupComponent = ({
   return (
     <RadioGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset className={cn(className, fieldset)}>
+        <fieldset className={cn(className, radioGRoupStyle.fieldset)}>
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>

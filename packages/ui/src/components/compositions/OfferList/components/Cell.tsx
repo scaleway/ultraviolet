@@ -5,12 +5,7 @@ import type { ComponentProps } from 'react'
 import { List } from '../../../List'
 import { Skeleton } from '../../../Skeleton'
 import { useOfferListContext } from '../OfferListProvider'
-import {
-  offerListCell,
-  offerListCellNoRadius,
-  offerListLoadingCell,
-  offerListSelectedCell,
-} from '../styles.css'
+import { offerListStyle } from '../styles.css'
 import { useOfferListRowContext } from './OfferListRowProvider'
 
 export const Cell = ({
@@ -24,16 +19,16 @@ export const Cell = ({
   const { selected, banner } = useOfferListRowContext()
 
   return loading ? (
-    <List.Cell className={offerListLoadingCell} style={style}>
+    <List.Cell className={offerListStyle.loadingCell} style={style}>
       <Skeleton data-state={loading} variant="line" />
     </List.Cell>
   ) : (
     <List.Cell
       className={cn(
         className,
-        offerListCell,
-        selected ? offerListSelectedCell : '',
-        banner ? offerListCellNoRadius : '',
+        offerListStyle.cell,
+        selected ? offerListStyle.selectedCell : '',
+        banner ? offerListStyle.cellNoRadius : '',
       )}
       colSpan={colSpan}
       data-testid={dataTestId}

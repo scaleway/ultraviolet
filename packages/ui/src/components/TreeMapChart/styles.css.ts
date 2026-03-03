@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, style } from '@vanilla-extract/css'
 
-export const treeMapTooltipContainer = style({
+const tooltipContainer = style({
   background: theme.colors.neutral.backgroundWeakElevated,
   borderRadius: theme.radii.small,
   boxShadow: theme.shadows.tooltip,
@@ -10,12 +10,12 @@ export const treeMapTooltipContainer = style({
   padding: `${theme.space[1]} ${theme.space[2]}`,
 })
 
-export const treeMapContainer = style({
+const container = style({
   position: 'relative',
 })
 
 // Add style with the !important rule to override the TreeMapChart default Style
-globalStyle(`${treeMapContainer} span`, {
+globalStyle(`${container} span`, {
   width: 'auto !important',
   height: 'auto !important',
   top: '8px !important',
@@ -28,7 +28,12 @@ globalStyle(`${treeMapContainer} span`, {
   display: 'block !important',
 })
 
-globalStyle(`${treeMapContainer} div[data-testid*="node."]`, {
+globalStyle(`${container} div[data-testid*="node."]`, {
   borderRadius: '8px',
   overflow: 'hidden',
 })
+
+export const treeMapChartStyle = {
+  container,
+  tooltipContainer,
+}

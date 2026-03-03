@@ -8,7 +8,7 @@ import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { GlobalAlertLink } from './GlobalAlertLink'
-import { closeButton, container } from './styles.css'
+import { globalAlertStyle } from './styles.css'
 
 type GlobalAlertProps = {
   children: ReactNode
@@ -46,7 +46,7 @@ export const GlobalAlert = ({
   return (
     <Stack
       alignItems="center"
-      className={cn(className, container[variant])}
+      className={cn(className, globalAlertStyle.container[variant])}
       data-testid={dataTestId}
       data-variant={variant}
       direction="row"
@@ -75,7 +75,7 @@ export const GlobalAlert = ({
       </Stack>
       {closable ? (
         <Button
-          className={closeButton}
+          className={globalAlertStyle.closeButton}
           onClick={() => {
             toggleOpened()
             onClose?.()

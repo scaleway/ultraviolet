@@ -6,13 +6,9 @@ import type { CSSProperties, DragEvent, ReactElement } from 'react'
 import { useCallback } from 'react'
 import { Text } from '../../../Text'
 import { useNavigation } from '../NavigationProvider'
+import { navigationStyle } from '../styles.css'
 import type { DragNDropData } from '../types'
 import { Item } from './Item'
-import {
-  navigationPinnedItemContainer,
-  navigationPinnedItemDropableArea,
-  navigationPinnedItemRelativeDiv,
-} from './styles.css'
 
 type PinnedItemsProps = {
   /**
@@ -133,11 +129,14 @@ export const PinnedItems = ({
                 )
 
                 return (
-                  <div className={navigationPinnedItemRelativeDiv} key={itemId}>
+                  <div
+                    className={navigationStyle.pinnedItemRelativeDiv}
+                    key={itemId}
+                  >
                     {/** biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop */}
                     {/** biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop */}
                     <div
-                      className={navigationPinnedItemDropableArea}
+                      className={navigationStyle.pinnedItemDropableArea}
                       onDragLeave={onDragLeave}
                       onDragOver={onDragOver}
                       onDrop={event => onDrop(event, index)}
@@ -152,7 +151,7 @@ export const PinnedItems = ({
               return null
             })
           ) : (
-            <div className={navigationPinnedItemContainer({ expanded })}>
+            <div className={navigationStyle.pinnedItemContainer({ expanded })}>
               <Text
                 as="p"
                 prominence="weak"
@@ -164,11 +163,11 @@ export const PinnedItems = ({
             </div>
           )}
 
-          <div className={navigationPinnedItemRelativeDiv}>
+          <div className={navigationStyle.pinnedItemRelativeDiv}>
             {/** biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop */}
             {/** biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop */}
             <div
-              className={navigationPinnedItemDropableArea}
+              className={navigationStyle.pinnedItemDropableArea}
               onDragLeave={onDragLeave}
               onDragOver={onDragOver}
               onDrop={event => onDrop(event, pinnedItems.length)}

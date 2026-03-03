@@ -5,9 +5,9 @@ import { TAGS_GAP } from './constant'
 
 export const popoverTriggerWidthVar = createVar()
 
-export const tagListContainer = style({ display: 'flex' })
+const container = style({ display: 'flex' })
 
-export const tagContainer = recipe({
+const tagContainer = recipe({
   base: {
     alignItems: 'center',
     color: theme.colors.neutral.text,
@@ -23,7 +23,7 @@ export const tagContainer = recipe({
   },
 })
 
-export const ellipsisContainer = style({
+const ellipsisContainer = style({
   selectors: {
     '&:has(.ellipsed)': {
       maxWidth: 'fit-content',
@@ -32,7 +32,7 @@ export const ellipsisContainer = style({
   },
 })
 
-export const ellipsisChild = style({
+const ellipsisChild = style({
   selectors: {
     [`${ellipsisContainer} &`]: {
       maxWidth: 'fit-content',
@@ -41,7 +41,7 @@ export const ellipsisChild = style({
   },
 })
 
-export const tagsWrapper = style({
+const tagsWrapper = style({
   alignSelf: 'center',
   backgroundColor: 'transparent',
   border: 'none',
@@ -55,3 +55,11 @@ export const tagsWrapper = style({
   textOverflow: 'ellipsis',
   whiteSpace: 'pre',
 })
+
+export const tagListStyle = {
+  container,
+  tagContainer,
+  ellipsisChild,
+  ellipsisContainer,
+  tagsWrapper,
+}

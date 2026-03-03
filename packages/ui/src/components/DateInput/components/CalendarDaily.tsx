@@ -14,7 +14,7 @@ import {
   getPreviousMonth,
   isSameDay,
 } from '../helpers'
-import { capitalizedTextDay, dayMonth as dayStyle } from './styles.css'
+import { dateInputStyle } from '../styles.css'
 
 export const Daily = () => {
   const {
@@ -92,7 +92,7 @@ export const Daily = () => {
       {Object.entries(DAYS).map(day => (
         <Text
           as="p"
-          className={capitalizedTextDay}
+          className={dateInputStyle.capitalizedTextDay}
           disabled={disabled}
           key={day[0]}
           sentiment="neutral"
@@ -254,7 +254,7 @@ export const Daily = () => {
         return (
           <Button
             aria-label={dayState()}
-            className={dayStyle}
+            className={dateInputStyle.dayMonth}
             data-testid={createTestId()}
             disabled={disabled || isExcluded || isOutsideRange}
             key={`${data.month}-${data.day}`}

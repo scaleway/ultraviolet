@@ -6,16 +6,9 @@ import { Text } from '../../../Text'
 import { Tooltip } from '../../../Tooltip'
 import { useEstimateCost } from '../EstimateCostProvider'
 import { useOverlay } from '../OverlayContext'
+import { estimateCostStyle } from '../styles.css'
 import type { ItemLeftSideProps } from '../types'
-import {
-  estimateCostBadgeItem,
-  estimateCostLeftSide,
-  estimateCostMaxWidthText,
-  estimateCostResourceName,
-  estimateCostTextItem,
-  estimateCostTooltip,
-  styledDiv,
-} from './components.css'
+import { estimateCostMaxWidthText } from './components.css'
 
 type ExtraProps = {
   itemCallback: (amount: number, isVariant: boolean) => void
@@ -47,7 +40,7 @@ export const ItemLeftSide = ({
   const { locales } = useEstimateCost()
 
   return (
-    <LeftSide className={isOverlay ? '' : estimateCostLeftSide}>
+    <LeftSide className={isOverlay ? '' : estimateCostStyle.leftSide}>
       <Stack>
         <Stack direction="row">
           <Text
@@ -58,8 +51,8 @@ export const ItemLeftSide = ({
             {label}
           </Text>
           {tooltipInfo ? (
-            <div className={styledDiv}>
-              <Tooltip className={estimateCostTooltip} text={tooltipInfo}>
+            <div className={estimateCostStyle.div}>
+              <Tooltip className={estimateCostStyle.tooltip} text={tooltipInfo}>
                 <HelpCircleOutlineIcon size="medium" />
               </Tooltip>
             </div>
@@ -67,7 +60,7 @@ export const ItemLeftSide = ({
           {subLabel && !isOverlay ? (
             <Text
               as="p"
-              className={estimateCostTextItem}
+              className={estimateCostStyle.textItem}
               italic
               sentiment="primary"
               variant="body"
@@ -77,7 +70,7 @@ export const ItemLeftSide = ({
           ) : null}
           {discount > 0 && discountText ? (
             <Badge
-              className={estimateCostBadgeItem}
+              className={estimateCostStyle.badgeItem}
               prominence="strong"
               sentiment="warning"
               size="small"
@@ -98,7 +91,7 @@ export const ItemLeftSide = ({
         ) : null}
       </Stack>
       <div
-        className={estimateCostResourceName({
+        className={estimateCostStyle.resourceName({
           isAnimated: isOverlay && animated,
           isOverlay,
         })}

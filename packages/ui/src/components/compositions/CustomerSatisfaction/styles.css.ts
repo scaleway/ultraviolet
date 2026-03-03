@@ -1,7 +1,7 @@
 import { keyframes, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-export const angryAnimation = keyframes({
+const angryAnimation = keyframes({
   '30%': {
     transform: 'translate3d(-5px, 0, 0) rotate(5deg)',
   },
@@ -16,7 +16,7 @@ export const angryAnimation = keyframes({
   },
 })
 
-export const happyAnimation = keyframes({
+const happyAnimation = keyframes({
   '30%': {
     transform: 'translate3d(0, 5px, 0) rotate(5deg)',
   },
@@ -31,7 +31,7 @@ export const happyAnimation = keyframes({
   },
 })
 
-export const customerStatisfaction = recipe({
+const customerStatisfaction = recipe({
   base: {
     cursor: 'pointer',
     height: 88,
@@ -60,10 +60,17 @@ export const customerStatisfaction = recipe({
   },
 })
 
-export const customerSatisfactionButtonContainer = style({
+const buttonContainer = style({
   border: 'none',
   background: 'transparent',
   padding: 0,
   margin: 0,
   outline: 'none',
 })
+
+export const customerSatisfactionStyle = {
+  angryAnimation,
+  happyAnimation,
+  customerStatisfaction,
+  buttonContainer,
+}

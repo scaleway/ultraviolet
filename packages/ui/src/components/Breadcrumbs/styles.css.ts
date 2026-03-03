@@ -1,8 +1,15 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, style } from '@vanilla-extract/css'
+import {
+  content,
+  contentBreadcrumbsText,
+  item,
+  itemContainer,
+  link,
+} from './components/styles.css'
 import { HEIGHT } from './constants'
 
-export const breadcrumbs = style({
+const breadcrumbs = style({
   alignItems: 'center',
   display: 'flex',
   flexWrap: 'wrap',
@@ -23,3 +30,11 @@ globalStyle(`${breadcrumbs} > *:not(:last-child)::after`, {
   fontWeight: theme.typography.bodySmallStrong.weight,
   padding: `0 ${theme.space['0.5']}`,
 })
+export const breadcrumbsStyle = {
+  breadcrumbs,
+  link,
+  content,
+  itemContainer,
+  contentBreadcrumbsText,
+  item,
+}

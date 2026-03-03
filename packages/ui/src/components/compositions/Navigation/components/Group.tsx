@@ -5,7 +5,7 @@ import { Children } from 'react'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
 import { useNavigation } from '../NavigationProvider'
-import { navigationGroupStack, navigationGroupText } from './styles.css'
+import { navigationStyle } from '../styles.css'
 
 type GroupProps = {
   children: ReactNode
@@ -35,11 +35,11 @@ export const Group = ({
   if (Children.count(children) > 0) {
     return (
       <div style={{ width: animation ? '100%' : undefined, ...style }}>
-        <Stack className={navigationGroupStack} direction="column">
+        <Stack className={navigationStyle.groupStack} direction="column">
           {isDiplay ? (
             <Text
               as="span"
-              className={navigationGroupText({
+              className={navigationStyle.groupText({
                 animation: animationType === 'complex' ? animation : false,
               })}
               prominence="weak"

@@ -3,7 +3,7 @@
 import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
-import { cellText, desc, infoTableCell, term } from '../styles.css'
+import { infoTableStyle } from '../styles.css'
 
 type CellProps = {
   children: ReactNode
@@ -19,13 +19,13 @@ export const InfoTableCell = ({
   style,
 }: CellProps) => (
   <Stack
-    className={infoTableCell}
+    className={infoTableStyle.cell}
     gap="0.5"
     minWidth="0"
     style={style}
     width="100%"
   >
-    <dt className={term}>
+    <dt className={infoTableStyle.term}>
       <Text
         as="div"
         prominence="weak"
@@ -35,10 +35,10 @@ export const InfoTableCell = ({
         {title}
       </Text>
     </dt>
-    <dd className={desc}>
+    <dd className={infoTableStyle.desc}>
       <Text
         as="div"
-        className={cellText}
+        className={infoTableStyle.cellText}
         oneLine={!multiline}
         prominence="default"
         sentiment="neutral"

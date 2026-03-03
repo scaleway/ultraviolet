@@ -31,7 +31,7 @@ const loadingAnimationStepMedium = keyframes({
   },
 })
 
-export const stepperContainer = recipe({
+export const container = recipe({
   base: {
     alignItems: 'stretch',
     display: 'flex',
@@ -66,7 +66,7 @@ export const stepperContainer = recipe({
   },
 })
 
-export const stepperLine = recipe({
+const line = recipe({
   base: {
     backgroundColor: theme.colors.neutral.backgroundStrong,
     borderRadius: theme.radii.default,
@@ -122,13 +122,13 @@ export const stepperLine = recipe({
   },
 })
 
-export const stepContainer = style({
+const stepContainer = style({
   display: 'flex',
   transition: 'text-decoration 300ms',
   whiteSpace: 'nowrap',
 })
 
-export const stepperContainerRecipe = recipe({
+const containerRecipe = recipe({
   compoundVariants: [
     {
       style: {
@@ -247,7 +247,7 @@ export const stepperContainerRecipe = recipe({
   },
 })
 
-export const animationStepperContainer = styleVariants({
+const animationStepperContainer = styleVariants({
   medium: {
     selectors: {
       '&:not(:last-child):after': {
@@ -266,7 +266,7 @@ export const animationStepperContainer = styleVariants({
   },
 })
 
-export const stepperInteractive = styleVariants({
+const interactive = styleVariants({
   active: {
     cursor: 'pointer',
   },
@@ -277,14 +277,14 @@ export const stepperInteractive = styleVariants({
 
 const stepBulletBase = style({
   selectors: {
-    [`${stepperInteractive.active}:hover > &`]: {
+    [`${interactive.active}:hover > &`]: {
       boxShadow: theme.shadows.focusPrimary,
     },
   },
   transition: 'box-shadow 300ms',
 })
 
-export const stepBullet = recipe({
+const stepBullet = recipe({
   base: stepBulletBase,
   defaultVariants: {
     disabled: false,
@@ -295,7 +295,7 @@ export const stepBullet = recipe({
     disabled: {
       false: {
         selectors: {
-          [`${stepperInteractive.inactive}:hover > &`]: {
+          [`${interactive.inactive}:hover > &`]: {
             boxShadow: theme.shadows.focusPrimary,
           },
         },
@@ -331,7 +331,7 @@ export const stepBullet = recipe({
 
 const stepTextBase = style({
   selectors: {
-    [`${stepperInteractive.active}:hover > &`]: {
+    [`${interactive.active}:hover > &`]: {
       color: theme.colors.primary.textHover,
       textDecoration: `underline ${theme.colors.primary.textHover}`,
       textDecorationThickness: 1,
@@ -343,7 +343,7 @@ const stepTextBase = style({
   transition: 'text-decoration-color 250ms ease-out',
 })
 
-export const stepText = recipe({
+const stepText = recipe({
   base: stepTextBase,
   defaultVariants: {
     disabled: false,
@@ -357,7 +357,7 @@ export const stepText = recipe({
     disabled: {
       false: {
         selectors: {
-          [`${stepperInteractive.inactive}:hover > &`]: {
+          [`${interactive.inactive}:hover > &`]: {
             color: theme.colors.neutral.textHover,
             textDecoration: `underline ${theme.colors.neutral.textHover}`,
             textDecorationThickness: 1,
@@ -370,3 +370,14 @@ export const stepText = recipe({
     },
   },
 })
+
+export const stepperStyle = {
+  container,
+  line,
+  stepContainer,
+  containerRecipe,
+  animationStepperContainer,
+  interactive,
+  stepBullet,
+  stepText,
+}

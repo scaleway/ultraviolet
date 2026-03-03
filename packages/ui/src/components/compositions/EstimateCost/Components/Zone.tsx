@@ -3,7 +3,7 @@
 import type { CSSProperties } from 'react'
 import { memo } from 'react'
 import { useEstimateCost } from '../EstimateCostProvider'
-import { estimateCostImage } from '../styles.css'
+import { estimateCostStyle } from '../styles.css'
 import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
 import { Item } from './Item'
 import { Strong } from './Strong'
@@ -63,7 +63,7 @@ export const Zone = memo(
         <Strong>
           <img
             alt={label}
-            className={estimateCostImage}
+            className={estimateCostStyle.image}
             height="auto"
             src={image}
             width="auto"

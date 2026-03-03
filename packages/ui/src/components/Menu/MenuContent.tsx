@@ -26,15 +26,7 @@ import { SearchInput } from '../SearchInput'
 import { Stack } from '../Stack'
 import { getListItem, searchChildren } from './helpers'
 import { DisclosureContext, useMenu } from './MenuProvider'
-import {
-  heightAvailableSpace,
-  heightMenu,
-  menu,
-  menuContent,
-  menuFooter,
-  menuList,
-  menuSearchInput,
-} from './styles.css'
+import { heightAvailableSpace, heightMenu, menuStyle } from './styles.css'
 import type { MenuProps } from './types'
 
 const SPACE_DISCLOSURE_POPUP = 24 // in px
@@ -229,7 +221,10 @@ export const Menu = forwardRef(
       <Popup
         align={align}
         aria-label={ariaLabel}
-        className={cn(className, menu({ arrow: hasArrow, searchable }))}
+        className={cn(
+          className,
+          menuStyle.menu({ arrow: hasArrow, searchable }),
+        )}
         debounceDelay={triggerMethod === 'hover' ? 250 : 0}
         dynamicDomRendering={dynamicDomRendering}
         hasArrow={hasArrow}
@@ -253,7 +248,7 @@ export const Menu = forwardRef(
         tabIndex={-1}
         text={
           <Stack
-            className={cn(className, menuList)}
+            className={cn(className, menuStyle.list)}
             data-testid={dataTestId}
             onKeyDown={handleKeyDown}
             onMouseEnter={() => setShouldBeVisible(true)}
@@ -264,10 +259,10 @@ export const Menu = forwardRef(
               [heightAvailableSpace]: popupMaxHeight,
             })}
           >
-            <Stack className={menuContent} ref={contentRef}>
+            <Stack className={menuStyle.content} ref={contentRef}>
               {searchable && typeof children !== 'function' ? (
                 <SearchInput
-                  className={menuSearchInput}
+                  className={menuStyle.searchInput}
                   onSearch={onSearch}
                   ref={searchInputRef}
                   size="small"
@@ -275,7 +270,9 @@ export const Menu = forwardRef(
               ) : null}
               {finalChild}
             </Stack>
-            {footer ? <Stack className={menuFooter}>{footer}</Stack> : null}
+            {footer ? (
+              <Stack className={menuStyle.footer}>{footer}</Stack>
+            ) : null}
           </Stack>
         }
         visible={triggerMethod === 'click' ? isVisible : shouldBeVisible}

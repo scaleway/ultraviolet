@@ -2,6 +2,39 @@ import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import {
+  itemAnimatedIcon,
+  itemBadge,
+  itemCategoryIcon,
+  itemContainer,
+  itemContainerAnimated,
+  itemContainerBase,
+  itemDragIcon,
+  itemMenu,
+  itemMenuContainer,
+  itemMenuPinned,
+  itemMenuStack,
+  itemPadded,
+  itemPaddingStack,
+  itemPinIcon,
+  itemPinnedButton,
+  itemRelative,
+  itemShowDraggable,
+  itemShowPinButton,
+  itemStackIcon,
+  itemVariants,
+  itemWeakText,
+  itemWrapText,
+} from './components/items.css'
+import {
+  groupStack,
+  groupText,
+  pinnedItemContainer,
+  pinnedItemDropableArea,
+  pinnedItemRelativeDiv,
+  separator,
+  showHideStack,
+} from './components/styles.css'
+import {
   ANIMATION_DURATION,
   NAVIGATION_COLLASPED_WIDTH,
   NAVIGATION_MAX_WIDTH,
@@ -9,7 +42,7 @@ import {
 } from './constants'
 import { widthNavigationContainer } from './variables.css'
 
-export const navigationStickyFooter = recipe({
+const stickyFooter = recipe({
   base: {
     background: theme.colors.neutral.background,
     borderTop: `1px solid ${theme.colors.neutral.borderWeak}`,
@@ -33,25 +66,25 @@ export const navigationStickyFooter = recipe({
   },
 })
 
-export const navigationHeader = style({
+const header = style({
   background: theme.colors.neutral.background,
 })
 
-export const navigationLogoContainer = style({
+const logoContainer = style({
   height: 22,
   margin: `${theme.space['3']} ${theme.space['3']} ${theme.space['2']} ${theme.space['3']}`,
   maxWidth: 220,
   overflow: 'hidden',
 })
 
-export const navigation = style({
+const navigation = style({
   borderRight: `1px solid ${theme.colors.neutral.borderWeak}`,
   display: 'flex',
   flexDirection: 'row',
   position: 'relative',
 })
 
-export const navigationContainer = recipe({
+const container = recipe({
   base: {
     background: theme.colors.neutral.background,
     display: 'flex',
@@ -87,25 +120,25 @@ export const navigationContainer = recipe({
   },
 })
 
-export const navigationContentContainer = style({
+const contentContainer = style({
   display: 'flex',
   flexDirection: 'column',
   flexGrow: 1,
   overflow: 'hidden',
 })
 
-export const navigationContentContainerCollapsed = style({
+const contentContainerCollapsed = style({
   alignItems: 'center',
 })
 
-export const navigationContent = style({
+const content = style({
   flexGrow: 1,
   overflowX: 'hidden',
   overflowY: 'auto',
   padding: theme.space[2],
 })
 
-export const navigationSlider = style({
+const slider = style({
   background: 'transparent',
   borderRight: '2px solid transparent',
   bottom: 0,
@@ -121,3 +154,44 @@ export const navigationSlider = style({
   top: 0,
   width: 6,
 })
+
+export const navigationStyle = {
+  stickyFooter,
+  header,
+  logoContainer,
+  navigation,
+  container,
+  contentContainer,
+  contentContainerCollapsed,
+  content,
+  slider,
+  itemMenuContainer,
+  itemRelative,
+  itemPadded,
+  itemPinIcon,
+  itemMenu,
+  itemMenuPinned,
+  itemContainerBase,
+  itemContainer,
+  itemContainerAnimated,
+  itemShowDraggable,
+  itemShowPinButton,
+  itemWeakText,
+  itemVariants,
+  itemDragIcon,
+  itemWrapText,
+  itemBadge,
+  itemPinnedButton,
+  itemAnimatedIcon,
+  itemMenuStack,
+  itemStackIcon,
+  itemCategoryIcon,
+  itemPaddingStack,
+  groupText,
+  groupStack,
+  pinnedItemDropableArea,
+  pinnedItemRelativeDiv,
+  pinnedItemContainer,
+  separator,
+  showHideStack,
+}

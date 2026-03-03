@@ -5,7 +5,7 @@ import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useMemo } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { textPointer } from './styles.css'
+import { labelStyle } from './styles.css'
 
 const LabelRequiredOrNot = ({
   children,
@@ -42,7 +42,7 @@ const LabelRequiredOrNot = ({
       >
         <Text
           as={as === 'label' ? 'label' : 'legend'}
-          className={textPointer[textPointerValue]}
+          className={labelStyle.textPointer[textPointerValue]}
           disabled={disabled}
           htmlFor={htmlFor}
           id={id}
@@ -67,7 +67,7 @@ const LabelRequiredOrNot = ({
   return (
     <Text
       as={as === 'label' ? 'label' : 'legend'}
-      className={cn(textPointer[textPointerValue], className)}
+      className={cn(labelStyle.textPointer[textPointerValue], className)}
       disabled={disabled}
       htmlFor={htmlFor}
       id={id}

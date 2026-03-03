@@ -10,16 +10,7 @@ import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Tooltip } from '../../Tooltip'
 import { THUMB_SIZE } from '../constant'
-import {
-  leftVar,
-  sliderDoubleText,
-  sliderNumberInput,
-  sliderSingle,
-  sliderThumbStyle,
-  sliderTooltip,
-  thumbColor,
-  tooltipLeft,
-} from '../styles.css'
+import { leftVar, sliderStyle, thumbColor, tooltipLeft } from '../styles.css'
 import type { SingleSliderProps } from '../types'
 import { Options } from './Options'
 
@@ -139,7 +130,7 @@ export const SingleSlider = ({
     input && !options ? (
       <NumberInput
         aria-label="input"
-        className={sliderNumberInput}
+        className={sliderStyle.numberInput}
         controls={false}
         data-testid={dataTestId ? `${dataTestId}-input` : 'slider-input'}
         disabled={disabled}
@@ -157,7 +148,7 @@ export const SingleSlider = ({
     ) : (
       <Text
         as="span"
-        className={sliderDoubleText({
+        className={sliderStyle.doubleText({
           isDouble: direction !== 'column',
           isPadded: direction === 'column',
         })}
@@ -221,7 +212,7 @@ export const SingleSlider = ({
       </Stack>
       <Stack direction="column" gap={1} justifyContent="center" width="100%">
         <Tooltip
-          className={sliderTooltip}
+          className={sliderStyle.tooltip}
           placement={tooltipPosition}
           style={assignInlineVars({
             [tooltipLeft]: `${placementTooltip}px`,
@@ -233,8 +224,8 @@ export const SingleSlider = ({
             aria-label={ariaLabel ?? name}
             className={cn(
               className,
-              sliderSingle({ direction, disabled, error: !!error }),
-              sliderThumbStyle({ disabled, isDouble: false }),
+              sliderStyle.single({ direction, disabled, error: !!error }),
+              sliderStyle.thumbStyle({ disabled, isDouble: false }),
             )}
             data-direction={direction}
             data-error={!!error}

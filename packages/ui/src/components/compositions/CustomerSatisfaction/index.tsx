@@ -13,10 +13,7 @@ import rating4 from './assets/4-5.svg'
 import rating4NS from './assets/4-5NB.svg'
 import rating5 from './assets/5-5.svg'
 import rating5NS from './assets/5-5NB.svg'
-import {
-  customerSatisfactionButtonContainer,
-  customerStatisfaction,
-} from './styles.css'
+import { customerSatisfactionStyle } from './styles.css'
 
 const ratings = [
   {
@@ -82,7 +79,7 @@ export const CustomerSatisfaction = ({
 
         return (
           <button
-            className={customerSatisfactionButtonContainer}
+            className={customerSatisfactionStyle.buttonContainer}
             key={rating.value}
             onClick={() => {
               onChange(rating.value)
@@ -98,7 +95,7 @@ export const CustomerSatisfaction = ({
           >
             <img
               alt="rating"
-              className={customerStatisfaction({
+              className={customerSatisfactionStyle.customerStatisfaction({
                 animated: isSelected ? animated : undefined,
                 isScaled,
               })}

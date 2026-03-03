@@ -4,7 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import type { CSSProperties } from 'react'
 import type { ToastOptions } from 'react-toastify'
 import { ToastContainer as BaseToastContainer, Slide } from 'react-toastify'
-import { notification as notificationStyle } from './styles.css'
+import { notificationStyle } from './styles.css'
 
 type NotificationContainerProps = {
   /**
@@ -45,7 +45,7 @@ export const NotificationContainer = ({
 }: NotificationContainerProps) => (
   <BaseToastContainer
     autoClose={autoClose}
-    className={cn(className, notificationStyle)}
+    className={cn(className, notificationStyle.notification)}
     containerId={containerId}
     data-testid={dataTestId}
     draggable={false}

@@ -270,7 +270,7 @@ const sharedSizeStyled = {
   lineHeight: theme.typography.bodySmallStrong.lineHeight,
 }
 
-export const button = recipe({
+const button = recipe({
   base: {
     alignItems: 'center',
     borderRadius: theme.radii.default,
@@ -380,3 +380,5 @@ export const button = recipe({
 })
 
 export type ButtonVariants = NonNullable<RecipeVariants<typeof button>>
+
+export const buttonStyle = { button }

@@ -4,7 +4,7 @@ import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { useLayoutEffect, useRef } from 'react'
 import { Popup } from '../../Popup'
 import { POPUP_WIDTH } from '../constants'
-import { dateinputPopup } from './styles.css'
+import { dateInputStyle } from '../styles.css'
 
 type PopupProps = {
   children: ReactNode
@@ -52,7 +52,7 @@ export const CalendarPopup = ({
   return (
     <Popup
       align="start"
-      className={dateinputPopup}
+      className={dateInputStyle.popup}
       debounceDelay={0}
       disableAnimation
       hasArrow={false}

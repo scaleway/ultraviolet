@@ -13,7 +13,7 @@ import {
   popupPosition,
 } from './variables.css'
 
-const animation = keyframes({
+const animationEntry = keyframes({
   ' 0%': {
     opacity: 0,
     transform: popupInitialPosition,
@@ -35,7 +35,7 @@ const exitAnimation = keyframes({
   },
 })
 
-export const containerPopup = recipe({
+const container = recipe({
   base: {
     maxHeight: '100%',
     overflow: 'auto',
@@ -49,7 +49,7 @@ export const containerPopup = recipe({
   },
 })
 
-export const popup = recipe({
+const popup = recipe({
   base: {
     backgroundColor: theme.colors.neutral.backgroundStronger,
     borderRadius: theme.radii.default,
@@ -99,16 +99,16 @@ export const popup = recipe({
   },
 })
 
-export const animationPopup = styleVariants({
+const animation = styleVariants({
   notReverse: {
-    animation: `${animationDurationPopup} ${animation} forwards`,
+    animation: `${animationDurationPopup} ${animationEntry} forwards`,
   },
   reverse: {
     animation: `${animationDurationPopup} ${exitAnimation} forwards`,
   },
 })
 
-export const childrenContainerPopup = recipe({
+const childrenContainer = recipe({
   base: {
     display: 'inherit',
   },
@@ -125,3 +125,10 @@ export const childrenContainerPopup = recipe({
     },
   },
 })
+
+export const popupStyle = {
+  container,
+  popup,
+  animation,
+  childrenContainer,
+}

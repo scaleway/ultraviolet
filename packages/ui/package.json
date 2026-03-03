@@ -62,6 +62,12 @@
       "import": "./dist/components/compositions/*/index.js",
       "require": "./dist/components/compositions/*/index.js",
       "default": "./dist/components/compositions/*/index.js"
+    },
+    "./compositions/styles": {
+      "types": "./dist/components/compositions/styles.d.ts",
+      "import": "./dist/components/compositions/styles.js",
+      "require": "./dist/components/compositions/styles.js",
+      "default": "./dist/components/compositions/styles.js"
     }
   },
   "size-limit": [

@@ -11,15 +11,8 @@ import { useMemo } from 'react'
 import { Button } from '../../Button'
 import { Link } from '../../Link'
 import { Text } from '../../Text'
-import {
-  breadcrumbsItem,
-  contentBreadcrumbs,
-  contentBreadcrumbsText,
-  itemContainerBreadcrumbs,
-  linkBreadcrumbs,
-  maxWidthVar,
-  minWidthVar,
-} from './styles.css'
+import { breadcrumbsStyle } from '../styles.css'
+import { maxWidthVar, minWidthVar } from './styles.css'
 
 type ItemProps = {
   children: ReactNode
@@ -59,7 +52,7 @@ export const Item = ({
     if (to) {
       return (
         <Link
-          className={linkBreadcrumbs}
+          className={breadcrumbsStyle.link}
           href={to}
           prominence="stronger"
           size="small"
@@ -72,7 +65,7 @@ export const Item = ({
     if (onClick) {
       return (
         <Button
-          className={contentBreadcrumbs}
+          className={breadcrumbsStyle.content}
           disabled={disabled}
           sentiment="neutral"
           size="small"
@@ -90,7 +83,10 @@ export const Item = ({
     return (
       <Text
         as="div"
-        className={cn(contentBreadcrumbs, contentBreadcrumbsText)}
+        className={cn(
+          breadcrumbsStyle.content,
+          breadcrumbsStyle.contentBreadcrumbsText,
+        )}
         variant="bodySmallStrong"
       >
         {children}
@@ -103,8 +99,8 @@ export const Item = ({
       aria-current={ariaCurrent}
       className={cn(
         className,
-        itemContainerBreadcrumbs({ clickable: !!onClick }),
-        breadcrumbsItem,
+        breadcrumbsStyle.itemContainer({ clickable: !!onClick }),
+        breadcrumbsStyle.item,
       )}
       onClick={onClick}
       onKeyDown={onKeyDown}

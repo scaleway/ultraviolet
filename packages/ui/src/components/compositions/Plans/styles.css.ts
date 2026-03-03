@@ -2,9 +2,9 @@ import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-export const plansIconWrapper = style({ all: 'unset', cursor: 'pointer' })
+const iconWrapper = style({ all: 'unset', cursor: 'pointer' })
 
-export const plans = style({
+const plans = style({
   borderCollapse: 'separate',
   borderSpacing: `${theme.space[2]} 0`,
 
@@ -17,14 +17,14 @@ export const plans = style({
   width: `calc(100% + ${theme.space[4]})`,
 })
 
-export const plansOutOfStockBadge = style({
+const outOfStockBadge = style({
   bottom: '100%',
   left: '50%',
   position: 'absolute',
   transform: 'translateX(-50%) translateY(50%)',
 })
 
-export const plansCell = recipe({
+const cell = recipe({
   base: {
     backgroundColor: 'transparent',
     outline: 'none',
@@ -132,29 +132,43 @@ export const plansCell = recipe({
   },
 })
 
-export const plansRowHidden = style({ display: 'none' })
+const rowHidden = style({ display: 'none' })
 
-export const plansUppercaseText = style({ textTransform: 'uppercase' })
+const uppercaseText = style({ textTransform: 'uppercase' })
 
-export const plansHeaderInput = style({
+const headerInput = style({
   left: 0,
   opacity: 0,
   position: 'absolute',
   top: 0,
 })
 
-export const plansHeaderFullHeight = style({ height: '100%' })
+const headerFullHeight = style({ height: '100%' })
 
-export const plansDescription = style({
+const description = style({
   padding: theme.space[1],
   width: '100%',
 })
 
-export const plansFullSizeSeparator = style({ width: '100%' })
+const fullSizeSeparator = style({ width: '100%' })
 
-export const plansCurrentWrapper = style({
+const currentWrapper = style({
   alignItems: 'center',
   display: 'flex',
   /* Same as button */
   height: theme.sizing[600],
 })
+
+export const plansStyle = {
+  iconWrapper,
+  plans,
+  outOfStockBadge,
+  cell,
+  rowHidden,
+  uppercaseText,
+  headerInput,
+  headerFullHeight,
+  description,
+  fullSizeSeparator,
+  currentWrapper,
+}

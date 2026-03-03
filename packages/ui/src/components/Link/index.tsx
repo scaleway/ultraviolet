@@ -18,13 +18,7 @@ import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { Tooltip } from '../Tooltip'
 import type { PROMINENCES } from './constants'
-import {
-  containerIconLink,
-  defaultLink,
-  iconLeftLink,
-  iconRightLink,
-  link,
-} from './styles.css'
+import { linkStyle } from './styles.css'
 
 export type ProminenceProps = keyof typeof PROMINENCES
 
@@ -133,14 +127,14 @@ export const Link = forwardRef(
 
     const computedClassName = cn(
       className,
-      link({
+      linkStyle.link({
         oneLine,
         prominence,
         sentiment,
         type: variant,
         variant: textVariant,
       }),
-      defaultLink,
+      linkStyle.defaultLink,
     )
 
     if (render) {
@@ -176,21 +170,21 @@ export const Link = forwardRef(
           target={target}
         >
           {!isBlank && iconPosition === 'left' ? (
-            <ArrowLeftIcon className={iconLeftLink} size={ICON_SIZE} />
+            <ArrowLeftIcon className={linkStyle.iconLeft} size={ICON_SIZE} />
           ) : null}
           {children}
 
           {isBlank ? (
-            <span className={containerIconLink}>
+            <span className={linkStyle.containerIcon}>
               <OpenInNewIcon
-                className={iconRightLink}
+                className={linkStyle.iconRight}
                 size={BLANK_TARGET_ICON_SIZE}
               />
             </span>
           ) : null}
 
           {!isBlank && iconPosition === 'right' ? (
-            <ArrowRightIcon className={iconRightLink} size={ICON_SIZE} />
+            <ArrowRightIcon className={linkStyle.iconRight} size={ICON_SIZE} />
           ) : null}
         </a>
       </Tooltip>

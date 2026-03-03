@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 
-export const dropableArea = style({
+const dropableArea = style({
   borderBottom: '2px solid',
   borderColor: 'transparent',
   bottom: '-5px',
@@ -30,7 +30,7 @@ export const dropableArea = style({
   width: '100%',
 })
 
-export const summaryClass = style({
+const summary = style({
   alignItems: 'center',
   cursor: 'pointer',
   display: 'flex',
@@ -48,11 +48,11 @@ export const summaryClass = style({
   },
 })
 
-export const stackClass = style({
+const stack = style({
   position: 'relative',
 })
 
-export const detailsClass = style({
+const details = style({
   border: `1px solid ${theme.colors.neutral.border}`,
   borderRadius: theme.radii.default,
 
@@ -64,7 +64,7 @@ export const detailsClass = style({
     '&[open]': {
       borderColor: theme.colors.primary.border,
     },
-    [`${stackClass}:hover > &`]: {
+    [`${stack}:hover > &`]: {
       borderColor: theme.colors.primary.border,
     },
   },
@@ -72,26 +72,26 @@ export const detailsClass = style({
   width: '100%',
 })
 
-export const arrowIcon = style({
+const arrowIcon = style({
   transition: 'transform 0.2s ease-in-out',
   selectors: {
-    [`${detailsClass}[open] &`]: {
+    [`${details}[open] &`]: {
       transform: 'rotate(180deg)',
     },
   },
 })
 
-export const content = style({
+const content = style({
   borderTop: `1px solid ${theme.colors.neutral.border}`,
   padding: theme.space['3'],
   selectors: {
-    [`${detailsClass}[open] > &`]: {
+    [`${details}[open] > &`]: {
       borderColor: theme.colors.primary.border,
     },
   },
 })
 
-export const dragIconContainer = style({
+const dragIconContainer = style({
   cursor: 'grab',
   height: '100%',
   opacity: 0,
@@ -111,3 +111,12 @@ export const dragIconContainer = style({
   },
   transition: 'opacity 0.2s ease-in-out',
 })
+export const expandableCardStyle = {
+  dropableArea,
+  summary,
+  stack,
+  details,
+  arrowIcon,
+  content,
+  dragIconContainer,
+}

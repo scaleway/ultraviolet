@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { recipe } from '@vanilla-extract/recipes'
 
-export const key = recipe({
+const key = recipe({
   base: {
     alignItems: 'center',
     borderRadius: theme.radii.default,
@@ -92,3 +92,5 @@ export const key = recipe({
     },
   },
 })
+
+export const keyStyle = { key }

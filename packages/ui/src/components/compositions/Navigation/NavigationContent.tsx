@@ -8,14 +8,7 @@ import { NAVIGATION_COLLASPED_WIDTH, NAVIGATION_MIN_WIDTH } from './constants'
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { useNavigation } from './NavigationProvider'
-import {
-  navigation,
-  navigationContainer,
-  navigationContent,
-  navigationContentContainer,
-  navigationContentContainerCollapsed,
-  navigationSlider,
-} from './styles.css'
+import { navigationStyle } from './styles.css'
 import type { NavigationProps } from './types'
 import { widthNavigationContainer } from './variables.css'
 
@@ -125,9 +118,13 @@ export const NavigationContent = ({
   ])
 
   return (
-    <nav className={cn(className, navigation)} data-testid={dataTestId} id={id}>
+    <nav
+      className={cn(className, navigationStyle.navigation)}
+      data-testid={dataTestId}
+      id={id}
+    >
       <div
-        className={navigationContainer({
+        className={navigationStyle.container({
           animation: shouldAnimate ? animation : undefined,
           expanded,
         })}
@@ -139,11 +136,15 @@ export const NavigationContent = ({
         {logo ? <Header logo={logo} /> : null}
         <div
           className={cn(
-            navigationContentContainer,
-            expanded ? '' : navigationContentContainerCollapsed,
+            navigationStyle.contentContainer,
+            expanded ? '' : navigationStyle.contentContainerCollapsed,
           )}
         >
-          <Stack className={navigationContent} gap={0.25} ref={contentRef}>
+          <Stack
+            className={navigationStyle.content}
+            gap={0.25}
+            ref={contentRef}
+          >
             {children}
           </Stack>
           {allowNavigationResize ? (
@@ -153,7 +154,7 @@ export const NavigationContent = ({
       </div>
       {allowNavigationResize ? (
         <div
-          className={navigationSlider}
+          className={navigationStyle.slider}
           data-testid="slider"
           ref={sliderRef}
         />

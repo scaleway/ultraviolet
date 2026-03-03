@@ -9,20 +9,10 @@ import { Expandable } from '../../../Expandable'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
 import { useNavigation } from '../NavigationProvider'
+import { navigationStyle } from '../styles.css'
 import type { ItemExpandedType } from './ComponentsTypes'
 import { ItemBadge, ItemPinnedButton } from './ItemFragments'
 import { ItemContext, ItemProvider } from './ItemProvider'
-import {
-  navigationItemCategoryIcon,
-  navigationItemContainer,
-  navigationItemContainerAnimated,
-  navigationItemDragIcon,
-  navigationItemPadded,
-  navigationItemPaddingStack,
-  navigationItemStackIcon,
-  navigationItemVariants,
-  navigationItemWrapText,
-} from './items.css'
 
 const ItemChildren = ({
   noExpand,
@@ -50,7 +40,7 @@ const ItemChildren = ({
             className={
               noExpand || type === 'pinnedGroup'
                 ? ''
-                : navigationItemPaddingStack({
+                : navigationStyle.itemPaddingStack({
                     hide:
                       shouldAnimate &&
                       animationType === 'complex' &&
@@ -69,7 +59,7 @@ const ItemChildren = ({
               className={
                 noExpand || type === 'pinnedGroup'
                   ? ''
-                  : navigationItemPaddingStack({
+                  : navigationStyle.itemPaddingStack({
                       hide:
                         shouldAnimate &&
                         animationType === 'complex' &&
@@ -131,7 +121,7 @@ const ItemContent = ({
       {categoryIcon ? (
         <Stack
           alignItems="center"
-          className={navigationItemCategoryIcon}
+          className={navigationStyle.itemCategoryIcon}
           justifyContent="center"
         >
           {categoryIcon}
@@ -139,7 +129,7 @@ const ItemContent = ({
       ) : null}
       {type === 'pinned' && expanded ? (
         <DragIcon
-          className={navigationItemDragIcon}
+          className={navigationStyle.itemDragIcon}
           disabled={disabled}
           prominence="default"
           sentiment="neutral"
@@ -150,7 +140,7 @@ const ItemContent = ({
         {animation ? null : (
           <Text
             as="span"
-            className={navigationItemWrapText({
+            className={navigationStyle.itemWrapText({
               disabled,
               weak: hasActiveChildren && !noExpand && !disabled && !!active,
             })}
@@ -165,14 +155,16 @@ const ItemContent = ({
           >
             {label}
             {labelDescription ? (
-              <span className={navigationItemPadded}>{labelDescription}</span>
+              <span className={navigationStyle.itemPadded}>
+                {labelDescription}
+              </span>
             ) : null}
           </Text>
         )}
         {subLabel && !animation ? (
           <Text
             as="span"
-            className={navigationItemWrapText({
+            className={navigationStyle.itemWrapText({
               disabled,
               weak: hasActiveChildren && !noExpand && !disabled && !!active,
             })}
@@ -302,18 +294,18 @@ export const ItemExpanded = ({
         aria-expanded={ariaExpanded}
         as={containerTag}
         className={cn(
-          navigationItemContainer({
+          navigationStyle.itemContainer({
             disabled,
             hasActive: hasActiveChildren,
             isActive: !!active,
             noExpand,
             subLabel: !!subLabel,
           }),
-          navigationItemContainerAnimated({
+          navigationStyle.itemContainerAnimated({
             animated: shouldAnimate && animationType === 'complex',
             animation: computedAnimation,
           }),
-          navigationItemVariants({
+          navigationStyle.itemVariants({
             shouldHaveWeakText,
             showDraggableIcon,
             showPinIcon,
@@ -375,7 +367,7 @@ export const ItemExpanded = ({
           {children && !animation && !noExpand ? (
             <Stack
               alignItems="center"
-              className={navigationItemStackIcon}
+              className={navigationStyle.itemStackIcon}
               direction="row"
               gap={1}
             >

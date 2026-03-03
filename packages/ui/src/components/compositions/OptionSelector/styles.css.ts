@@ -3,7 +3,7 @@ import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { dropdownItemBase } from '../../SelectInput/components/dropdown.css'
 
-export const optionSelectorWrapper = recipe({
+const wrapper = recipe({
   base: {
     border: 'none',
   },
@@ -28,7 +28,7 @@ export const optionSelectorWrapper = recipe({
   },
 })
 
-export const revealOnHover = style({
+const revealOnHover = style({
   selectors: {
     "&[data-visibility='hover']": {
       display: 'none',
@@ -47,17 +47,17 @@ export const revealOnHover = style({
   },
 })
 
-export const firstLabel = style({
+const firstLabel = style({
   gridColumn: '1',
   gridRow: '1',
 })
 
-export const secondLabel = style({
+const secondLabel = style({
   gridColumn: '3',
   gridRow: '1',
 })
 
-export const firstSelectInput = styleVariants({
+const firstSelectInput = styleVariants({
   horizontal: {
     gridColumn: '1',
     gridRow: '2',
@@ -65,7 +65,7 @@ export const firstSelectInput = styleVariants({
   vertical: {},
 })
 
-export const secondSelectInput = styleVariants({
+const secondSelectInput = styleVariants({
   horizontal: {
     gridColumn: '3',
     gridRow: '2',
@@ -73,7 +73,7 @@ export const secondSelectInput = styleVariants({
   vertical: {},
 })
 
-export const arrow = styleVariants({
+const arrow = styleVariants({
   horizontal: {
     gridColumn: '2',
     gridRow: '2',
@@ -82,12 +82,24 @@ export const arrow = styleVariants({
   vertical: { width: '100%' },
 })
 
-export const errorFirstSelector = style({
+const errorFirstSelector = style({
   gridColumn: '1',
   gridRow: '3',
 })
 
-export const errorSecondSelector = style({
+const errorSecondSelector = style({
   gridColumn: '3',
   gridRow: '3',
 })
+
+export const optionSelectorStyle = {
+  arrow,
+  errorFirstSelector,
+  errorSecondSelector,
+  wrapper,
+  revealOnHover,
+  firstLabel,
+  secondLabel,
+  firstSelectInput,
+  secondSelectInput,
+}

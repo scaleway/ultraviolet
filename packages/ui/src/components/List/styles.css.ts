@@ -63,13 +63,13 @@ function makeRowStyleSentiment(sentiment: (typeof SENTIMENTS)[number]) {
   }
 }
 
-export const listContainer = style({
+const container = style({
   minWidth: '100%',
   overflowX: 'auto',
   width: '100%',
 })
 
-export const list = style({
+const list = style({
   borderSpacing: `0 ${theme.space[2]}`,
   boxSizing: 'content-box',
   gap: theme.space[1],
@@ -77,7 +77,7 @@ export const list = style({
   width: '100%',
 })
 
-export const listSortIcon = styleVariants({
+const sortIcon = styleVariants({
   ascending: {
     transform: 'rotate(-180deg)',
     transition: 'transform 0.2s ease-in-out',
@@ -87,7 +87,7 @@ export const listSortIcon = styleVariants({
   },
 })
 
-export const listHeaderCell = style({
+const headerCell = style({
   color: theme.colors.neutral.text,
   display: 'table-cell',
   fontFamily: theme.typography.bodySmall.fontFamily,
@@ -111,13 +111,13 @@ export const listHeaderCell = style({
   width: widthHeaderCell,
 })
 
-export const listHeaderRow = style({
+const headerRow = style({
   display: 'table-row,',
   padding: `0 ${theme.space[2]}`,
   verticalAlign: 'middle',
 })
 
-export const listNoPaddingHeaderCell = style({
+const noPaddingHeaderCell = style({
   maxWidth: theme.sizing[SELECTABLE_CHECKBOX_SIZE],
   padding: 0,
   selectors: {
@@ -127,7 +127,7 @@ export const listNoPaddingHeaderCell = style({
   },
 })
 
-export const listExpandableWrapper = style({
+const expandableWrapper = style({
   background: theme.colors.neutral.backgroundWeak,
   borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
   cursor: 'auto',
@@ -138,7 +138,7 @@ export const listExpandableWrapper = style({
   width: '100%',
 })
 
-export const listCheckboxInRange = style({})
+const checkboxInRange = style({})
 
 const listRowBase = style({
   backgroundColor: theme.colors.neutral.background,
@@ -163,7 +163,7 @@ const listRowBase = style({
   verticalAlign: 'middle',
 })
 
-export const listRow = recipe({
+const row = recipe({
   base: listRowBase,
   defaultVariants: {
     highlightAnimation: false,
@@ -184,7 +184,7 @@ export const listRow = recipe({
   },
 })
 
-export const listCell = style({
+const cell = style({
   borderBottom: `1px solid ${theme.colors.neutral.border}`,
   borderTop: `1px solid ${theme.colors.neutral.border}`,
   display: 'table-cell',
@@ -199,7 +199,7 @@ export const listCell = style({
     '&:first-child, &:last-child': {
       transition: 'box-shadow 200ms ease, border-color 200ms ease',
     },
-    [`${listRowBase}:not([aria-disabled='true']):hover + ${listExpandableWrapper} > &`]:
+    [`${listRowBase}:not([aria-disabled='true']):hover + ${expandableWrapper} > &`]:
       {
         borderColor: theme.colors.primary.border,
       },
@@ -241,17 +241,17 @@ export const listCell = style({
   width: widthCell,
 })
 
-export const listCellStrict = style({})
+const cellStrict = style({})
 
-globalStyle(`${listCellStrict} > *`, {
+globalStyle(`${cellStrict} > *`, {
   maxWidth: maxWidthChildrenCell,
   minWidth: minWidthChildrenCell,
   width: widthChildrenCell,
 })
 
-export const listCheckboxContainer = style({ display: 'flex' })
+const checkboxContainer = style({ display: 'flex' })
 
-export const listNoPaddingCell = style({
+const noPaddingCell = style({
   maxWidth: theme.sizing[SELECTABLE_CHECKBOX_SIZE],
   padding: 0,
   selectors: {
@@ -261,35 +261,55 @@ export const listNoPaddingCell = style({
   },
 })
 
-export const listLoadingRow = style({
+const loadingRow = style({
   cursor: 'progress',
 })
 
-export const listSkeleton = style({
+const skeleton = style({
   alignItems: 'flex-start',
   justifyContent: 'center',
   maxWidth: '100%',
   width: '80%',
 })
 
-export const listExpandableButton = style({
+const expandableButton = style({
   minWidth: theme.sizing[400],
 })
 
-export const listExpandableCell = style({
+const expandableCell = style({
   padding: paddingExpandableCell,
   selectors: {
-    [`${listExpandableWrapper} > &, ${listExpandableWrapper} > &:first-child, ${listExpandableWrapper} > &:last-child`]:
+    [`${expandableWrapper} > &, ${expandableWrapper} > &:first-child, ${expandableWrapper} > &:last-child`]:
       {
         transition: 'box-shadow 200ms ease, border-color 200ms ease',
       },
-    [`${listExpandableWrapper} > &`]: {
+    [`${expandableWrapper} > &`]: {
       border: `1px solid ${theme.colors.neutral.border}`,
       borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
       borderTop: 'none',
     },
-    [`${listExpandableWrapper}[data-highlight="true"] > &`]: {
+    [`${expandableWrapper}[data-highlight="true"] > &`]: {
       borderColor: theme.colors.primary.border,
     },
   },
 })
+
+export const listStyle = {
+  container,
+  list,
+  sortIcon,
+  headerCell,
+  headerRow,
+  expandableWrapper,
+  checkboxInRange,
+  row,
+  cell,
+  cellStrict,
+  checkboxContainer,
+  noPaddingCell,
+  loadingRow,
+  skeleton,
+  expandableButton,
+  expandableCell,
+  noPaddingHeaderCell,
+}

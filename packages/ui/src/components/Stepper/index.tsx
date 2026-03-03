@@ -5,7 +5,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import { Children, Fragment, isValidElement } from 'react'
 import { Step } from './Step'
 import { StepperProvider } from './StepperProvider'
-import { stepperContainer, stepperLine } from './styles.css'
+import { stepperStyle } from './styles.css'
 
 type StepperProps = {
   animated?: boolean
@@ -55,7 +55,7 @@ export const Stepper = ({
       <div
         className={cn(
           className,
-          stepperContainer({ labelPosition, separator }),
+          stepperStyle.container({ labelPosition, separator }),
         )}
         data-testid={dataTestId}
         style={style}
@@ -81,7 +81,7 @@ export const Stepper = ({
               <Step index={index} {...(child.props as object)} />
               {isNotLast && separator && labelPosition === 'right' ? (
                 <div
-                  className={stepperLine({ animated, temporal })}
+                  className={stepperStyle.line({ animated, temporal })}
                   data-size={size}
                 />
               ) : null}

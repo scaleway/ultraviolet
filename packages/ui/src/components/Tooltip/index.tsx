@@ -4,7 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, Ref } from 'react'
 import { forwardRef } from 'react'
 import { Popup } from '../Popup'
-import { tooltip } from './styles.css'
+import { tooltipStyle } from './styles.css'
 
 type TooltipProps = Pick<
   ComponentProps<typeof Popup>,
@@ -56,7 +56,7 @@ export const Tooltip = forwardRef(
     tooltipRef: Ref<HTMLDivElement>,
   ) => (
     <Popup
-      className={cn(className, tooltip)}
+      className={cn(className, tooltipStyle.tooltip)}
       containerFullHeight={containerFullHeight}
       containerFullWidth={containerFullWidth}
       data-testid={dataTestId}

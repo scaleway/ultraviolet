@@ -2,7 +2,7 @@
 
 import { Skeleton } from '../Skeleton'
 import { Cell } from './Cell'
-import { tableSkeleton, tableSkeletonRow } from './styles.css'
+import { tableStyle } from './styles.css'
 
 type SkeletonRowsProps = {
   selectable: boolean
@@ -17,11 +17,15 @@ export const SkeletonRows = ({ selectable, rows, cols }: SkeletonRowsProps) => {
   return (
     <>
       {rowArray.map(index => (
-        <tr className={tableSkeletonRow} id={`skeleton-${index}`} key={index}>
+        <tr
+          className={tableStyle.skeletonRow}
+          id={`skeleton-${index}`}
+          key={index}
+        >
           {selectable ? <Cell /> : null}
           {colArray.map(columnIndex => (
             <Cell key={columnIndex}>
-              <Skeleton className={tableSkeleton} variant="line" />
+              <Skeleton className={tableStyle.skeleton} variant="line" />
             </Cell>
           ))}
         </tr>

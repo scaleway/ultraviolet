@@ -34,7 +34,7 @@ const unitInputNumberBase = style({
   width: '100%',
 })
 
-export const unitInputNumber = styleVariants({
+const number = styleVariants({
   large: [unitInputNumberBase, { fontSize: theme.typography.body.fontSize }],
   medium: [unitInputNumberBase],
   small: [unitInputNumberBase, { paddingLeft: theme.space[1] }],
@@ -59,7 +59,7 @@ const unitInputNumberWrapperBase = style({
   width: '100%',
 })
 
-export const unitInputState = styleVariants({
+const state = styleVariants({
   default: [unitInputNumberWrapperBase],
   disabled: [
     unitInputNumberWrapperBase,
@@ -119,7 +119,7 @@ export const unitInputState = styleVariants({
   ],
 })
 
-export const unitInputNumberWrapper = style({
+const numberWrapper = style({
   alignItems: 'center',
   borderRight: `1px solid ${theme.colors.neutral.border}`,
   display: 'flex',
@@ -139,16 +139,16 @@ export const unitInputNumberWrapper = style({
     [`${unitInputNumberWrapperBase}:hover > &`]: {
       borderRightColor: theme.colors.primary.border,
     },
-    [`${unitInputState.disabled}:hover > &`]: {
+    [`${state.disabled}:hover > &`]: {
       borderRightColor: theme.colors.neutral.border,
     },
-    [`${unitInputState.readOnly}:hover > &`]: {
+    [`${state.readOnly}:hover > &`]: {
       borderRightColor: theme.colors.neutral.borderHover,
     },
-    [`${unitInputState.success}:hover > &, ${unitInputState.success} > &`]: {
+    [`${state.success}:hover > &, ${state.success} > &`]: {
       borderRightColor: theme.colors.success.border,
     },
-    [`${unitInputState.error}:hover > &, ${unitInputState.error} > &`]: {
+    [`${state.error}:hover > &, ${state.error} > &`]: {
       borderRightColor: theme.colors.danger.border,
     },
   },
@@ -161,14 +161,23 @@ function getSizeUnitInput(size: 'small' | 'medium' | 'large') {
     overflow: 'hidden',
   }
 }
-export const unitInputSize = styleVariants({
+const size = styleVariants({
   large: getSizeUnitInput('large'),
   medium: getSizeUnitInput('medium'),
   small: getSizeUnitInput('small'),
 })
 
-export const unitInputUnitWidth = style({
+const unitWidth = style({
   width: widthSelectInput,
 })
 
-export const unitInputUnit = style({})
+const unit = style({})
+
+export const unitInputStyle = {
+  number,
+  state,
+  numberWrapper,
+  size,
+  unitWidth,
+  unit,
+}

@@ -9,22 +9,7 @@ import { CustomUnitInput } from '../Components/CustomUnitInput'
 import { maximumFractionDigits, maximumFractionDigitsLong } from '../constants'
 import { useEstimateCost } from '../EstimateCostProvider'
 import type EstimateCostLocales from '../locales/en'
-import {
-  estimateCostBadgeBeta,
-  estimateCostCalculatorIcon,
-  estimateCostCell,
-  estimateCostEmptyCell,
-  estimateCostEmptyTable,
-  estimateCostPriceCell,
-  estimateCostPriceCellContent,
-  estimateCostPriceColumn,
-  estimateCostTable,
-  estimateCostText,
-  estimateCostTimeCell,
-  estimateCostTitle,
-  estimateCostTotalPriceCell,
-  paddingLeftCell,
-} from '../styles.css'
+import { estimateCostStyle, paddingLeftCell } from '../styles.css'
 import type {
   ChildrenComponentType,
   ExtraProps,
@@ -51,9 +36,9 @@ export const DescriptionComponent = memo(
 )
 
 export const TitleComponent = memo(({ locales }: { locales: LocalesType }) => (
-  <h3 className={estimateCostTitle}>
+  <h3 className={estimateCostStyle.title}>
     <CalculatorIcon
-      className={estimateCostCalculatorIcon}
+      className={estimateCostStyle.calculatorIcon}
       sentiment="primary"
       size="medium"
     />
@@ -79,13 +64,13 @@ export const ChildrenComponent = ({
     <table
       cellPadding="0"
       cellSpacing="0"
-      className={estimateCostTable[hideTotal ? 'noTotal' : 'total']}
+      className={estimateCostStyle.table[hideTotal ? 'noTotal' : 'total']}
       data-testid="summary"
       ref={ref}
     >
       <colgroup>
         <col />
-        <col className={estimateCostPriceColumn} />
+        <col className={estimateCostStyle.priceColumn} />
       </colgroup>
       {hideTimeUnit ? null : (
         <thead>
@@ -95,11 +80,11 @@ export const ChildrenComponent = ({
             </th>
             <th
               className={cn(
-                estimateCostPriceCellContent,
-                estimateCostPriceCell,
+                estimateCostStyle.priceCellContent,
+                estimateCostStyle.priceCell,
               )}
             >
-              <div className={estimateCostTimeCell}>
+              <div className={estimateCostStyle.timeCell}>
                 <CustomUnitInput
                   defaultTimeUnit={defaultTimeUnit}
                   iteration={iteration}
@@ -161,18 +146,22 @@ export const TotalComponent = ({
     locales[`estimate.cost.beta.${discount > 0 ? 'discount' : 'free'}`]
 
   return (
-    <table cellPadding="0" cellSpacing="0" className={estimateCostEmptyTable}>
+    <table
+      cellPadding="0"
+      cellSpacing="0"
+      className={estimateCostStyle.emptyTable}
+    >
       <colgroup>
         <col />
-        <col className={estimateCostPriceColumn} />
+        <col className={estimateCostStyle.priceColumn} />
       </colgroup>
       <tbody>
         <tr>
-          <td aria-label="control" className={estimateCostEmptyCell} />
+          <td aria-label="control" className={estimateCostStyle.emptyCell} />
           <td
             className={cn(
-              estimateCostCell({ hasBorder: false, primary: false }),
-              estimateCostTotalPriceCell,
+              estimateCostStyle.cell({ hasBorder: false, primary: false }),
+              estimateCostStyle.totalPriceCell,
             )}
             style={assignInlineVars({
               [paddingLeftCell]: '16px',
@@ -181,7 +170,7 @@ export const TotalComponent = ({
             {isBeta ? (
               <Badge
                 className={
-                  estimateCostBadgeBeta[
+                  estimateCostStyle.badgeBeta[
                     localeBeta.length > 25 ? 'long' : 'short'
                   ]
                 }
@@ -194,7 +183,7 @@ export const TotalComponent = ({
             ) : null}
             <Text
               as="h3"
-              className={estimateCostText({ beta: isBeta })}
+              className={estimateCostStyle.text({ beta: isBeta })}
               sentiment="primary"
               variant="heading"
             >

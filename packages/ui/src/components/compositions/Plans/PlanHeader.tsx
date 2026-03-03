@@ -3,13 +3,7 @@ import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import PlansLocales from './locales/en'
-import {
-  plansCurrentWrapper,
-  plansDescription,
-  plansFullSizeSeparator,
-  plansHeaderFullHeight,
-  plansHeaderInput,
-} from './styles.css'
+import { plansStyle } from './styles.css'
 import type { PlanType } from './types'
 
 type PlanHeaderProps = {
@@ -34,7 +28,7 @@ export const PlanHeader = ({
   <>
     {fieldName && onChange && !disabled ? (
       <input
-        className={plansHeaderInput}
+        className={plansStyle.headerInput}
         data-testid={plan.value}
         id={plan.value}
         name={fieldName}
@@ -51,7 +45,7 @@ export const PlanHeader = ({
     ) : null}
     <Stack
       alignItems="center"
-      className={plansHeaderFullHeight}
+      className={plansStyle.headerFullHeight}
       gap={2}
       justifyContent="space-between"
     >
@@ -94,7 +88,7 @@ export const PlanHeader = ({
           </Stack>
         </Stack>
         {plan.header.description ? (
-          <div className={plansDescription}>
+          <div className={plansStyle.description}>
             <Text as="div" disabled={disabled} variant="caption">
               {plan.header.description}
             </Text>
@@ -106,7 +100,7 @@ export const PlanHeader = ({
           ? plan.header.cta
           : null}
         {plan.header.cta && currentPlanValue === plan.value ? (
-          <div className={plansCurrentWrapper}>
+          <div className={plansStyle.currentWrapper}>
             <Text
               as="span"
               disabled={disabled}
@@ -118,7 +112,7 @@ export const PlanHeader = ({
           </div>
         ) : null}
         {plan.header.separator ? (
-          <Separator className={plansFullSizeSeparator} />
+          <Separator className={plansStyle.fullSizeSeparator} />
         ) : null}
       </Stack>
     </Stack>

@@ -4,7 +4,7 @@ import type { ReactNode } from 'react'
 import { Checkbox } from '../Checkbox'
 import { HeaderCell } from './HeaderCell'
 import { useListContext } from './ListContext'
-import { listHeaderRow, listNoPaddingHeaderCell } from './styles.css'
+import { listStyle } from './styles.css'
 
 type RowProps = {
   hasSelectAllColumn: boolean
@@ -19,9 +19,9 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
 
   return (
     <thead>
-      <tr className={listHeaderRow}>
+      <tr className={listStyle.headerRow}>
         {hasSelectAllColumn ? (
-          <HeaderCell className={listNoPaddingHeaderCell}>
+          <HeaderCell className={listStyle.noPaddingHeaderCell}>
             <Checkbox
               aria-label="select all"
               checked={allRowSelectValue}
@@ -33,7 +33,9 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
           </HeaderCell>
         ) : null}
         {expandButton ? (
-          <HeaderCell className={listNoPaddingHeaderCell}>{null}</HeaderCell>
+          <HeaderCell className={listStyle.noPaddingHeaderCell}>
+            {null}
+          </HeaderCell>
         ) : null}
         {children}
       </tr>
