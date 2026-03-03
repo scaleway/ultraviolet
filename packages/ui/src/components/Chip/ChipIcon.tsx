@@ -1,26 +1,22 @@
+// oxlint-disable typescript/no-unsafe-type-assertion
 'use client'
 
-// oxlint-disable-next-line import/no-namespace
-import * as Icon from '@ultraviolet/icons'
-import type { RefObject } from 'react'
+import type { ReactNode, RefObject } from 'react'
 import { useContext } from 'react'
-import type { PascalToCamelCaseWithoutSuffix } from '../../types'
 import { ChipContext } from './ChipContext'
 import { buttonContainer } from './styles.css'
-
-type IconType = PascalToCamelCaseWithoutSuffix<keyof typeof Icon, 'Icon'>
 
 type ChipIconType = {
   /**
    * Add an icon in the chip
    */
-  name: IconType
+  icon: ReactNode
   onClick?: () => void
   'data-testid'?: string
 }
 
 export const ChipIcon = ({
-  name,
+  icon,
   onClick,
   'data-testid': dataTestId,
 }: ChipIconType) => {
@@ -31,14 +27,6 @@ export const ChipIcon = ({
   }
 
   const { disabled, isActive, iconRef } = context
-
-  const IconUsed =
-    // biome-ignore lint/performance/noDynamicNamespaceImportAccess: to fix
-    Icon[
-      `${
-        (name as string).charAt(0).toUpperCase() + (name as string).slice(1)
-      }Icon` as keyof typeof Icon
-    ]
 
   if (onClick) {
     return (
@@ -57,12 +45,7 @@ export const ChipIcon = ({
         ref={iconRef as RefObject<HTMLButtonElement | null>}
         type="button"
       >
-        <IconUsed
-          disabled={disabled}
-          prominence={isActive ? 'stronger' : 'default'}
-          sentiment="neutral"
-          size="small"
-        />
+        {icon}
       </button>
     )
   }
@@ -75,12 +58,7 @@ export const ChipIcon = ({
       data-testid={dataTestId}
       ref={iconRef as RefObject<HTMLDivElement | null>}
     >
-      <IconUsed
-        disabled={disabled}
-        prominence={isActive ? 'stronger' : 'default'}
-        sentiment="neutral"
-        size="small"
-      />
+      {icon}
     </div>
   )
 }

@@ -1,10 +1,11 @@
 import { act, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
+import { MacMiniProductIcon } from '@ultraviolet/icons/product/MacMiniProductIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, expect, test, vi } from 'vitest'
 import { SelectableCard } from '..'
-import illustration from './illustrationTest.svg'
+import { IllustrationExample } from './illustrationTest'
 
 describe('selectableCard', () => {
   const types: TupleUnion<
@@ -133,7 +134,7 @@ describe('selectableCard', () => {
       test('renders correctly with illustration', () =>
         shouldMatchSnapshot(
           <SelectableCard
-            illustration={illustration}
+            illustration={<IllustrationExample />}
             label="label"
             name="label-14"
             onChange={() => {}}
@@ -168,7 +169,7 @@ describe('selectableCard', () => {
             label="label"
             name="label-14"
             onChange={() => {}}
-            productIcon="macMini"
+            productIcon={<MacMiniProductIcon size="xlarge" />}
             showTick
             type={type}
             value="label-14"
