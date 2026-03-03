@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.11.1
+
+### Patch Changes
+
+- [#6173](https://github.com/scaleway/ultraviolet/pull/6173) [`e184a62`](https://github.com/scaleway/ultraviolet/commit/e184a62575cce89505bf628ff9fedcd48438a811) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix vite config so that `estimateCostDefaultLocales` can be imported and used
+
 ## 3.11.0
 
 ### Minor Changes
