@@ -287,6 +287,7 @@ export const NumberInput = forwardRef(
                       disabled,
                       readOnly,
                       size,
+                      controls,
                     })}
                     disabled={disabled}
                     sentiment="neutral"

@@ -44,6 +44,7 @@ const unit = recipe({
     disabled: false,
     readOnly: false,
     size: 'large',
+    controls: true,
   },
   variants: {
     disabled: {
@@ -51,11 +52,13 @@ const unit = recipe({
         background: theme.colors.neutral.backgroundDisabled,
         cursor: 'not-allowed',
         userSelect: 'none',
+        borderBlock: `1px solid ${theme.colors.neutral.borderDisabled}`,
       },
     },
     readOnly: {
       true: {
         background: theme.colors.neutral.backgroundWeak,
+        borderBlock: `1px solid ${theme.colors.neutral.border}`,
       },
     },
     size: {
@@ -71,6 +74,11 @@ const unit = recipe({
       small: {
         fontSize: theme.typography.bodySmall.fontSize,
         height: theme.sizing[SIZES.small],
+      },
+    },
+    controls: {
+      false: {
+        borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
       },
     },
   },
@@ -127,6 +135,7 @@ const numberinput = recipe({
     controls: {
       false: {
         textAlign: 'left',
+        borderRadius: `${theme.radii.default} 0 0 ${theme.radii.default}`,
       },
     },
     hasUnit: {
@@ -151,6 +160,12 @@ const numberinput = recipe({
       },
     },
   },
+  compoundVariants: [
+    {
+      variants: { controls: false, hasUnit: false },
+      style: { borderRadius: theme.radii.default },
+    },
+  ],
 })
 
 const container = recipe({
