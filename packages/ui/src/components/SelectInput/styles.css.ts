@@ -19,7 +19,7 @@ import {
   emptyStateGroupStyle,
   footer,
   searchBar,
-} from './components/dropdown.css'
+} from './components/Dropdown/dropdown.css'
 import {
   multiselectStack,
   placeholder,
@@ -29,7 +29,7 @@ import {
   selectBarTags,
   selectbarState,
   selectedValues,
-} from './components/selectBar.css'
+} from './components/SelectBar/selectBar.css'
 
 const container = style({ width: '100%' })
 const helper = style({ paddingTop: theme.space['0.5'] })

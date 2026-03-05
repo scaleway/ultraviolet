@@ -10,6 +10,14 @@ import {
   useReducer,
   useState,
 } from 'react'
+import {
+  clearAllAction,
+  resetAction,
+  selectAllAction,
+  selectGroupAction,
+  selectOptionAction,
+  updateAction,
+} from './reducerFonctions'
 import type { DataType, OptionType, ReducerAction, ReducerState } from './types'
 
 type ContextProps = {
@@ -154,131 +162,41 @@ export const SelectInputProvider = <T extends boolean>({
   ): ReducerState => {
     switch (action.type) {
       case 'selectAll': {
-        if (state.allSelected) {
-          return { allSelected: false, selectedGroups: [], selectedValues: [] }
-        }
-
-        return {
-          allSelected: true,
-          selectedGroups: allGroups,
-          selectedValues: allValues.map(option => option.value),
-        }
+        return selectAllAction(state, allGroups, allValues)
       }
 
       case 'selectGroup': {
-        if (!Array.isArray(options)) {
-          if (state.selectedGroups.includes(action.selectedGroup)) {
-            return {
-              allSelected: false,
-              selectedGroups: state.selectedGroups.filter(
-                selectedGroup => selectedGroup !== action.selectedGroup,
-              ),
-              selectedValues: [...state.selectedValues].filter(
-                selectedValue =>
-                  !options[action.selectedGroup].find(
-                    option => option.value === selectedValue,
-                  ),
-              ),
-            }
-          }
-
-          const newSelectedValues = [...state.selectedValues]
-          options[action.selectedGroup].map(option =>
-            newSelectedValues.find(aValue => aValue === option.value) ||
-            option.disabled
-              ? null
-              : newSelectedValues.push(option.value),
-          )
-
-          return {
-            allSelected:
-              newSelectedValues.length ===
-              numberOfOptions - numberOfDisabledOptions,
-            selectedGroups: [...state.selectedGroups, action.selectedGroup],
-            selectedValues: newSelectedValues,
-          }
-        }
-
-        return state
+        return selectGroupAction(
+          state,
+          action.selectedGroup,
+          options,
+          numberOfOptions,
+          numberOfDisabledOptions,
+        )
       }
 
       case 'selectOption': {
-        if (multiselect) {
-          if (state.selectedValues.includes(action.clickedOption.value)) {
-            return {
-              allSelected: false,
-              selectedGroups:
-                action.group && state.selectedGroups.includes(action.group)
-                  ? state.selectedGroups.filter(
-                      selectedGroup => selectedGroup !== action.group,
-                    )
-                  : [],
-              selectedValues: state.selectedValues.filter(
-                val => val !== action.clickedOption.value,
-              ),
-            }
-          }
-
-          return {
-            allSelected:
-              state.selectedValues.length + 1 ===
-              numberOfOptions - numberOfDisabledOptions,
-            selectedGroups:
-              !Array.isArray(options) &&
-              action.group &&
-              options[action.group].every(
-                option =>
-                  [
-                    ...state.selectedValues,
-                    action.clickedOption.value,
-                  ].includes(option.value) || option.disabled,
-              )
-                ? [...state.selectedGroups, action.group]
-                : state.selectedGroups,
-            selectedValues: [
-              ...state.selectedValues,
-              action.clickedOption.value,
-            ],
-          }
-        }
-
-        return {
-          allSelected: false,
-          selectedGroups: state.selectedGroups,
-          selectedValues: [action.clickedOption.value],
-        }
+        return selectOptionAction(
+          state,
+          options,
+          numberOfOptions,
+          numberOfDisabledOptions,
+          multiselect,
+          action.clickedOption,
+          action.group,
+        )
       }
 
       case 'clearAll': {
-        return { allSelected: false, selectedGroups: [], selectedValues: [] }
+        return clearAllAction()
       }
 
       case 'update': {
-        return {
-          allSelected: state.allSelected,
-          selectedGroups: state.selectedGroups,
-          selectedValues: state.selectedValues.filter(selectedValue => {
-            if (!Array.isArray(options)) {
-              return Object.keys(options).some(group =>
-                options[group].some(
-                  option => option.value === selectedValue && !option.disabled,
-                ),
-              )
-            }
-
-            return options.some(
-              option => option.value === selectedValue && !option.disabled,
-            )
-          }),
-        }
+        return updateAction(state, options)
       }
 
       case 'reset': {
-        return {
-          allSelected: false,
-          selectedGroups: action.selectedGroups,
-          selectedValues: action.selectedValues,
-        }
+        return resetAction(action.selectedGroups, action.selectedValues)
       }
 
       default: {
@@ -303,6 +221,7 @@ export const SelectInputProvider = <T extends boolean>({
 
   const providerValue = useMemo(
     () =>
+      // oxlint-disable-next-line typescript/no-unsafe-type-assertion
       ({
         displayedOptions,
         isDropdownVisible,
