@@ -40,7 +40,6 @@ const LogIn = () => {
     )
     setTimeout(() => setLoginText(''), 3000)
 
-    // oxlint-disable-next-line eslint/no-console
     console.log('Values :', values)
   }
 

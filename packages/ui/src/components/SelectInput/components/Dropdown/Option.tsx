@@ -2,12 +2,12 @@
 
 import { useMemo } from 'react'
 
-import { Stack } from '../../Stack'
-import { Text } from '../../Text'
-import { Tooltip } from '../../Tooltip'
-import { selectInputStyle } from '../styles.css'
+import { Stack } from '../../../Stack'
+import { Text } from '../../../Text'
+import { Tooltip } from '../../../Tooltip'
+import { selectInputStyle } from '../../styles.css'
 
-import type { OptionType } from '../types'
+import type { OptionType } from '../../types'
 
 type DisplayOptionProps = {
   option: OptionType
@@ -34,6 +34,18 @@ export const DisplayOption = ({
     return 'captionSmall'
   }, [textVariant])
 
+  const optionDescription = option.description ? (
+    <Text
+      as="span"
+      placement="left"
+      prominence="weak"
+      sentiment={option.disabled ? undefined : 'neutral'}
+      variant={captionSize}
+    >
+      {option.description}
+    </Text>
+  ) : null
+
   if (descriptionDirection === 'row' && optionalInfoPlacement === 'left') {
     return (
       <Tooltip disableAnimation text={option.tooltip}>
@@ -49,7 +61,7 @@ export const DisplayOption = ({
             direction="row"
             gap={0.5}
           >
-            {option.optionalInfo ?? null}
+            {option.optionalInfo}
             <Text
               as="span"
               className={selectInputStyle.dropdownInfoTextItem}
@@ -58,17 +70,7 @@ export const DisplayOption = ({
             >
               {option.label}
             </Text>
-            {option.description ? (
-              <Text
-                as="span"
-                placement="left"
-                prominence="weak"
-                sentiment={option.disabled ? undefined : 'neutral'}
-                variant={captionSize}
-              >
-                {option.description}
-              </Text>
-            ) : null}
+            {optionDescription}
           </Stack>
         </Stack>
       </Tooltip>
@@ -99,11 +101,7 @@ export const DisplayOption = ({
             >
               {option.label}
             </Text>
-            {option.description ? (
-              <Text as="span" placement="left" variant={captionSize}>
-                {option.description}
-              </Text>
-            ) : null}
+            {optionDescription}
           </Stack>
           {option.optionalInfo ? (
             <div className={selectInputStyle.dropdownInfo}>
@@ -124,7 +122,7 @@ export const DisplayOption = ({
           gap={0.5}
           justifyContent={option.optionalInfo ? 'left' : 'space-between'}
         >
-          {option.optionalInfo ?? null}
+          {option.optionalInfo}
 
           <Stack
             className={selectInputStyle.dropdownInfoContainer}
@@ -140,17 +138,7 @@ export const DisplayOption = ({
             >
               {option.label}
             </Text>
-            {option.description ? (
-              <Text
-                as="span"
-                placement="left"
-                prominence="weak"
-                sentiment={option.disabled ? undefined : 'neutral'}
-                variant={captionSize}
-              >
-                {option.description}
-              </Text>
-            ) : null}
+            {optionDescription}
           </Stack>
         </Stack>
       </Tooltip>
@@ -185,17 +173,7 @@ export const DisplayOption = ({
             </div>
           ) : null}
         </Stack>
-        {option.description ? (
-          <Text
-            as="span"
-            placement="left"
-            prominence="weak"
-            sentiment={option.disabled ? undefined : 'neutral'}
-            variant={captionSize}
-          >
-            {option.description}
-          </Text>
-        ) : null}
+        {optionDescription}
       </Stack>
     </Tooltip>
   )
