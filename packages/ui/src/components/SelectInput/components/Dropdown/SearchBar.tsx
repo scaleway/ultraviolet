@@ -4,11 +4,15 @@ import { isFuzzyMatch, normalizeString } from '@scaleway/fuzzy-search'
 import { SearchIcon } from '@ultraviolet/icons/SearchIcon'
 import type { Dispatch, KeyboardEvent, SetStateAction } from 'react'
 import { useEffect, useRef } from 'react'
-import { TextInput } from '../../TextInput'
-import { OPTION_SELECTOR } from '../constants'
-import { useSelectInput } from '../SelectInputProvider'
-import { selectInputStyle } from '../styles.css'
-import type { DataType, OptionType } from '../types'
+import { TextInput } from '../../../TextInput'
+import { OPTION_SELECTOR } from '../../constants'
+import { useSelectInput } from '../../SelectInputProvider'
+import { selectInputStyle } from '../../styles.css'
+import type { DataType, OptionType } from '../../types'
+import {
+  computeSelectedDataMultiselect,
+  computeSelectedDataSingleSelect,
+} from '../helpers'
 
 type SearchBarProps = {
   placeholder: string
@@ -83,7 +87,7 @@ const findClosestOption = (
 const escapeRegExp = (string: string) =>
   string.replace(/[.*+?^{}()|[\]\\]/g, String.raw`\$&`)
 
-export const SearchBarDropdown = ({
+export const SearchBar = ({
   placeholder,
   displayedOptions,
   setSearchBarActive,
@@ -134,28 +138,23 @@ export const SearchBarDropdown = ({
     const { key } = event
     if (key === 'Enter') {
       const closestOption = findClosestOption(displayedOptions, search)
+
       if (closestOption) {
         if (multiselect) {
-          setSelectedData({
-            clickedOption: closestOption,
-            group: Array.isArray(options)
-              ? undefined
-              : Object.keys(options).find(group =>
-                  options[group].includes(closestOption),
-                ),
-            type: 'selectOption',
-          })
-          onChange?.(
-            selectedData.selectedValues.includes(closestOption.value)
-              ? selectedData.selectedValues
-              : [...selectedData.selectedValues, closestOption.value],
+          const data = computeSelectedDataMultiselect(
+            closestOption,
+            options,
+            selectedData,
           )
+          setSelectedData(data.computedData)
+          onChange?.(data.onChangeData)
         } else {
-          setSelectedData({
-            clickedOption: closestOption,
-            type: 'selectOption',
-          })
-          onChange?.(selectedData.selectedValues[0] ?? '')
+          const data = computeSelectedDataSingleSelect(
+            closestOption,
+            selectedData,
+          )
+          setSelectedData(data.computedData)
+          onChange?.(data.onChangeData)
         }
       }
     } else if (key === 'Tab' || key === 'ArrowDown') {

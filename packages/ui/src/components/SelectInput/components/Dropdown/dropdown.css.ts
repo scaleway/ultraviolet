@@ -63,11 +63,12 @@ export const dropdownGroupSelectable = recipe({
       small: {
         paddingLeft: theme.space[1],
       },
-      default: {},
+      large: {},
+      medium: {},
     },
   },
   defaultVariants: {
-    size: 'default',
+    size: 'large',
   },
 })
 
@@ -108,7 +109,7 @@ export const dropdownItem = recipe({
   defaultVariants: {
     disabled: false,
     selected: false,
-    size: 'default',
+    size: 'large',
   },
   variants: {
     selected: {
@@ -117,7 +118,8 @@ export const dropdownItem = recipe({
       },
     },
     size: {
-      default: {},
+      large: {},
+      medium: {},
       small: {
         padding: theme.space[1],
       },
