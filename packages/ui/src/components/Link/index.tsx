@@ -10,6 +10,7 @@ import type {
   CSSProperties,
   ForwardedRef,
   HTMLAttributeAnchorTarget,
+  KeyboardEventHandler,
   MouseEventHandler,
   ReactNode,
   RefObject,
@@ -37,6 +38,7 @@ type LinkProps = {
   className?: string
   // For react router shouldn't be used directly
   onClick?: MouseEventHandler<HTMLAnchorElement>
+  onKeyDown?: KeyboardEventHandler<HTMLAnchorElement>
   'aria-label'?: string
   'aria-current'?: AnchorHTMLAttributes<HTMLAnchorElement>['aria-current']
   'aria-keyshortcuts'?: string
@@ -89,6 +91,7 @@ export const Link = forwardRef(
       rel,
       className,
       onClick,
+      onKeyDown,
       'aria-label': ariaLabel,
       'aria-current': ariaCurrent,
       'aria-keyshortcuts': ariaKeyshortcuts,
@@ -164,6 +167,7 @@ export const Link = forwardRef(
           download={download}
           href={href}
           onClick={onClick}
+          onKeyDown={onKeyDown}
           ref={usedRef}
           rel={computedRel}
           style={style}

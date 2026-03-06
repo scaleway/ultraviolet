@@ -23,7 +23,7 @@ export const Interactive: StoryFn<
   const [value, setValue] = useState(ITEMS)
 
   const setPage = useCallback(
-    (event: MouseEvent<HTMLLIElement>, localValue: string) => {
+    (event: MouseEvent<HTMLElement>, localValue: string) => {
       event?.preventDefault()
 
       const index = value.findIndex(item => item.label === localValue)
