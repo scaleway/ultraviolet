@@ -20,6 +20,7 @@ type FormProps<TFieldValues extends FieldValues> = {
   name?: string
   onSubmit: (data: TFieldValues) => Promise<OnSubmitReturn> | OnSubmitReturn
   methods: UseFormReturn<TFieldValues>
+  'aria-label'?: string
 }
 
 export const Form = <TFieldValues extends FieldValues>({
@@ -28,6 +29,7 @@ export const Form = <TFieldValues extends FieldValues>({
   errors,
   onSubmit,
   name,
+  'aria-label': ariaLabel,
 }: FormProps<TFieldValues>) => {
   const handleSubmit = methods.handleSubmit(async values => {
     const result = await onSubmit(values)
@@ -44,6 +46,7 @@ export const Form = <TFieldValues extends FieldValues>({
     <FormProvider {...methods}>
       <ErrorProvider errors={{ ...defaultErrors, ...errors }}>
         <form
+          aria-label={ariaLabel}
           name={name}
           noValidate
           // oxlint-disable-next-line typescript/no-misused-promises
