@@ -12,7 +12,7 @@ export const KyutaiLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="KyutaiLogo">
+  <Icon {...props} title="Kyutai">
     <path d="M2 2h16v16H2z" fill="#000" />
     <path
       d="M11.205 6.667v3.95l2.168-1.932 1.891.007-2.27 2.114 2.34 2.86h-1.832l-1.496-1.95-.801.742v1.209H9.667v-7z"

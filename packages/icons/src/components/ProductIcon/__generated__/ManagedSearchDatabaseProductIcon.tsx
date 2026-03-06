@@ -12,7 +12,7 @@ export const ManagedSearchDatabaseProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="ManagedSearchDatabaseProductIcon">
+  <Icon {...props} title="ManagedSearchDatabase">
     <g className="managed-search-database">
       <g className=".Square">
         <g className="fillWeak" fill="#F1EEFC">

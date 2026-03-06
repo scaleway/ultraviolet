@@ -12,7 +12,7 @@ export const FinlandFlag = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="FinlandFlag">
+  <Icon {...props} title="Finland">
     {props.disabled ? (
       <>
         <g>

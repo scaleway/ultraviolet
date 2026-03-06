@@ -12,7 +12,7 @@ export const AlertCircleOutlineIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="AlertCircleOutlineIcon">
+  <Icon {...props} title="AlertCircle">
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path

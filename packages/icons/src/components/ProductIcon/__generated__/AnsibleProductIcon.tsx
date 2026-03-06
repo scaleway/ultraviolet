@@ -12,7 +12,7 @@ export const AnsibleProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="AnsibleProductIcon">
+  <Icon {...props} title="Ansible">
     <g className="Ansible">
       <g className=".Square">
         <path
