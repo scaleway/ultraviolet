@@ -214,6 +214,7 @@ export const Row = ({
             >
               {selectable === 'radio' ? (
                 <Radio
+                  aria-label={`select-${id}`}
                   checked={isRowSelected}
                   disabled={isSelectableDisable}
                   id={id}
