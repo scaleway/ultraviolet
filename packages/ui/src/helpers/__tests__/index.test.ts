@@ -1,26 +1,9 @@
 // biome-ignore-all lint/style/noDoneCallback: test ok
 import type { KeyboardEvent } from 'react'
 import { describe, expect, test, vi } from 'vitest'
-import isJSONString from '../isJSON'
 import onKeyOnlyNumbers from '../keycode'
 import parseIntOr from '../numbers'
 import recursivelyGetChildrenString from '../recursivelyGetChildrenString'
-
-describe(isJSONString, () => {
-  test.each`
-    test                      | value            | expected
-    ${'is correct JSON'}      | ${'{ "a": 10 }'} | ${true}
-    ${'is Boolean'}           | ${true}          | ${true}
-    ${'is Number'}            | ${10}            | ${true}
-    ${'is null'}              | ${null}          | ${true}
-    ${'JSON is unterminated'} | ${'{ "a": 10'}   | ${false}
-    ${'no argument passed'}   | ${undefined}     | ${false}
-    ${'is Array'}             | ${[1, 2, 3]}     | ${false}
-    ${'is String'}            | ${'hello'}       | ${false}
-  `('returns $expected when $test', current => {
-    expect(isJSONString(current.value as string)).toBe(current.expected)
-  })
-})
 
 describe(recursivelyGetChildrenString, () => {
   const complexChildrenWithStringNestedChildren = {

@@ -61,6 +61,6 @@ export {
   unfoldOut,
   zoomIn,
   zoomOut,
-} from './animations/animationsVE.css'
+} from './animations/animationsVanillaExtract.css'
 export { default as normalize } from './normalize'
 export { down, up } from './responsive'
