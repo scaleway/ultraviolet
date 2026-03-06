@@ -40,6 +40,17 @@ type ItemProps = {
   rightComponent?: ReactNode
 }
 
+const focusFistElement = (
+  firstElementInNestedMenu: HTMLAnchorElement | HTMLButtonElement,
+) => {
+  if (['BUTTON', 'A'].includes(firstElementInNestedMenu.tagName)) {
+    ;(firstElementInNestedMenu as HTMLElement).focus()
+  } else if (firstElementInNestedMenu.firstChild instanceof HTMLElement) {
+    // Another nested menu
+    firstElementInNestedMenu.firstChild.focus()
+  }
+}
+
 export const Item = forwardRef<HTMLElement, ItemProps>(
   (
     {
@@ -97,20 +108,8 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
             const listItem = getListItem([
               ...menuRef.current.children[0].children[0].children,
             ])
-            if (listItem) {
-              const firstElementInNestedMenu = listItem[0]
-              if (
-                firstElementInNestedMenu &&
-                ['BUTTON', 'A'].includes(firstElementInNestedMenu.tagName)
-              ) {
-                ;(firstElementInNestedMenu as HTMLElement).focus()
-              } else if (
-                firstElementInNestedMenu &&
-                firstElementInNestedMenu.firstChild instanceof HTMLElement
-              ) {
-                // Another nested menu
-                firstElementInNestedMenu.firstChild.focus()
-              }
+            if (listItem[0]) {
+              focusFistElement(listItem[0])
             }
           }
         }, 50)
@@ -148,6 +147,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
               href={href}
               onClick={onClickHandle}
               onKeyDown={handleKeyDown}
+              // oxlint-disable-next-line typescript/no-unsafe-type-assertion
               ref={ref as Ref<HTMLAnchorElement>}
               rel={rel}
               role="menuitem"
@@ -216,6 +216,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
               }
             }}
             onKeyDown={handleKeyDown}
+            // oxlint-disable-next-line typescript/no-unsafe-type-assertion
             ref={ref as Ref<HTMLButtonElement>}
             role="menuitem"
             type="button"
