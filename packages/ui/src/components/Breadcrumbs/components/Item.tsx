@@ -30,8 +30,8 @@ type ItemProps = {
    */
   to?: string
   disabled?: boolean
-  onClick?: (event: ReactMouseEvent<HTMLLIElement>) => void
-  onKeyDown?: (event: KeyboardEvent<HTMLLIElement>) => void
+  onClick?: (event: ReactMouseEvent<HTMLElement>) => void
+  onKeyDown?: (event: KeyboardEvent<HTMLElement>) => void
   className?: string
   maxWidth?: string
   minWidth?: string
@@ -54,6 +54,8 @@ export const Item = ({
         <Link
           className={breadcrumbsStyle.link}
           href={to}
+          onClick={onClick}
+          onKeyDown={onKeyDown}
           prominence="stronger"
           size="small"
         >
@@ -67,6 +69,8 @@ export const Item = ({
         <Button
           className={breadcrumbsStyle.content}
           disabled={disabled}
+          onClick={onClick}
+          onKeyDown={onKeyDown}
           sentiment="neutral"
           size="small"
           style={assignInlineVars({
@@ -92,7 +96,7 @@ export const Item = ({
         {children}
       </Text>
     )
-  }, [children, disabled, maxWidth, minWidth, onClick, to])
+  }, [children, disabled, maxWidth, minWidth, onClick, to, onKeyDown])
 
   return (
     <li
@@ -102,8 +106,6 @@ export const Item = ({
         breadcrumbsStyle.itemContainer({ clickable: !!onClick }),
         breadcrumbsStyle.item,
       )}
-      onClick={onClick}
-      onKeyDown={onKeyDown}
       style={assignInlineVars({
         [minWidthVar]: minWidth?.toString(),
         [maxWidthVar]: maxWidth?.toString(),
