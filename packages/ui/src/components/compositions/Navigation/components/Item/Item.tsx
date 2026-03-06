@@ -22,14 +22,15 @@ import {
   useMemo,
   useRef,
 } from 'react'
-import type { Badge } from '../../../Badge'
-import { Stack } from '../../../Stack'
-import { Tooltip } from '../../../Tooltip'
-import { useNavigation } from '../NavigationProvider'
-import { navigationStyle } from '../styles.css'
-import type { ItemType, PinUnPinType } from '../types'
+import type { Badge } from '../../../../Badge'
+import { Stack } from '../../../../Stack'
+import { Tooltip } from '../../../../Tooltip'
+import { useNavigation } from '../../NavigationProvider'
+import { navigationStyle } from '../../styles.css'
+import type { ItemType, PinUnPinType } from '../../types'
+import { ItemMenu } from '../Menu/Menu'
+import { ItemMenuItem } from '../Menu/MenuItem'
 import { ItemExpanded } from './ItemExpanded'
-import { ItemMenu, ItemMenuItem } from './ItemMenu'
 import { ItemContext } from './ItemProvider'
 
 type LinkProps = {
