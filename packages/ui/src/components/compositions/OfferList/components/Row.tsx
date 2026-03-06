@@ -167,13 +167,14 @@ export const Row = ({
         data-dragging={dataDragging}
         data-testid={dataTestId}
         disabled={disabled}
+        disabledClickRowToExpand
         expandable={computedExpandableContent}
         expandablePadding={banner ? '0' : undefined}
         expanded={expanded ?? expandedRowIds[id]}
         highlightAnimation={highlightAnimation}
         id={id}
         onClick={() => {
-          if (selectDisabled || disabled || expandable) {
+          if (selectDisabled || disabled || loading) {
             return
           }
 
@@ -186,6 +187,7 @@ export const Row = ({
         }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
+        selectDisabled={selectDisabled}
         style={style}
       >
         <List.Cell
@@ -260,7 +262,10 @@ export const Row = ({
               aria-label="expand"
               data-testid="list-expand-button"
               disabled={(disabled ?? !expandable) || loading}
-              onClick={toggleRowExpand}
+              onClick={event => {
+                event.stopPropagation()
+                toggleRowExpand()
+              }}
               sentiment="neutral"
               size="small"
               variant="ghost"
