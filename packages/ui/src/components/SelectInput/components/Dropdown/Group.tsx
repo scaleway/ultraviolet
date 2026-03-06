@@ -1,4 +1,5 @@
 import { cn } from '@ultraviolet/utils'
+
 import { Checkbox } from '../../../Checkbox'
 import { Text } from '../../../Text'
 import { useSelectInput } from '../../SelectInputProvider'
@@ -15,7 +16,7 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
     onChange,
   } = useSelectInput()
 
-  const handleSelectGroup = (group: string) => {
+  const handleSelectGroup = () => {
     if (multiselect) {
       setSelectedData({ selectedGroup: group, type: 'selectGroup' })
       if (!Array.isArray(options)) {
@@ -57,11 +58,11 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
           data-selectgroup={selectAllGroup}
           data-testid={`group-${index}`}
           key={group}
-          onClick={() => (selectAllGroup ? handleSelectGroup(group) : null)}
+          onClick={() => (selectAllGroup ? handleSelectGroup() : null)}
           onKeyDown={event => {
             if ([' ', 'Enter'].includes(event.key)) {
               event.preventDefault()
-              handleSelectGroup(group)
+              handleSelectGroup()
             }
           }}
           tabIndex={selectAllGroup ? 0 : -1}
@@ -73,9 +74,7 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
               className={selectInputStyle.dropdownCheckbox}
               data-testid="select-group"
               disabled={false}
-              onChange={() =>
-                selectAllGroup ? handleSelectGroup(group) : null
-              }
+              onChange={() => (selectAllGroup ? handleSelectGroup() : null)}
               tabIndex={-1}
               value={group}
             >

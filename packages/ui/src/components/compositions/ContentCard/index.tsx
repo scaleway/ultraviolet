@@ -5,7 +5,9 @@ import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 
 import { Stack } from '../../Stack'
 
-import { CardContent, ImageContent, LinkContent } from './Content'
+import { CardContent } from './Content'
+import { ImageContent } from './ImageContent'
+import { LinkContent } from './LinkContent'
 import { Skeleton } from './Skeleton'
 import { contentCardStyle } from './styles.css'
 

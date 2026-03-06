@@ -256,6 +256,8 @@ export const Daily = () => {
           return 'neutral'
         }
 
+        const isHightlighted = isSelected || isInHoveredRange
+
         return (
           <Button
             aria-label={dayState()}
@@ -284,8 +286,8 @@ export const Daily = () => {
                 setHoveredDate(constructedDate)
               }
             }}
-            sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}
-            variant={isSelected || isInHoveredRange ? 'filled' : 'ghost'}
+            sentiment={isHightlighted ? 'primary' : 'neutral'}
+            variant={isHightlighted ? 'filled' : 'ghost'}
           >
             {data.day}
           </Button>

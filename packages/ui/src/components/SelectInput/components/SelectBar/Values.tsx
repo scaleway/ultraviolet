@@ -3,15 +3,18 @@
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { RefObject } from 'react'
+
 import { Stack } from '../../../Stack'
 import { Tag } from '../../../Tag'
 import { Text } from '../../../Text'
 import { findOptionInOptions } from '../../findOptionInOptions'
 import { useSelectInput } from '../../SelectInputProvider'
 import { selectInputStyle } from '../../styles.css'
-import type { OptionType } from '../../types'
+
 import { maxWidthTag, minWidthTag } from './selectBar.css'
+
+import type { OptionType } from '../../types'
+import type { RefObject } from 'react'
 
 type DisplayValuesProps = {
   refTag: RefObject<HTMLDivElement | null>

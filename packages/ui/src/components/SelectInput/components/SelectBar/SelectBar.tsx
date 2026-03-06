@@ -4,7 +4,6 @@ import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-import type { RefObject } from 'react'
 import {
   useCallback,
   useEffect,
@@ -13,6 +12,7 @@ import {
   useRef,
   useState,
 } from 'react'
+
 import { Button } from '../../../Button'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
@@ -21,9 +21,12 @@ import { SIZES_TAG } from '../../constants'
 import { findOptionInOptions } from '../../findOptionInOptions'
 import { useSelectInput } from '../../SelectInputProvider'
 import { selectInputStyle } from '../../styles.css'
-import type { OptionType } from '../../types'
 import { computeOverflowVars, getTagsWidth } from '../helpers'
+
 import { DisplayValues } from './Values'
+
+import type { OptionType } from '../../types'
+import type { RefObject } from 'react'
 
 type SelectBarProps = {
   size: 'small' | 'medium' | 'large'

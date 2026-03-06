@@ -1,10 +1,13 @@
 import { cn } from '@ultraviolet/utils'
-import type { ChangeEvent, KeyboardEvent, MouseEvent, RefObject } from 'react'
+
 import { Checkbox } from '../../../Checkbox'
 import { useSelectInput } from '../../SelectInputProvider'
 import { selectInputStyle } from '../../styles.css'
-import type { OptionType } from '../../types'
+
 import { DisplayOption } from './Option'
+
+import type { OptionType } from '../../types'
+import type { ChangeEvent, KeyboardEvent, MouseEvent, RefObject } from 'react'
 
 export const Item = ({
   option,
@@ -36,11 +39,9 @@ export const Item = ({
 
   const handleClick = ({
     clickedOption,
-    group,
     event,
   }: {
     clickedOption: OptionType
-    group?: string
     event:
       | MouseEvent<HTMLDivElement>
       | KeyboardEvent<HTMLDivElement>
@@ -88,7 +89,6 @@ export const Item = ({
           handleClick({
             clickedOption: option,
             event,
-            group,
           })
         }
       }}
@@ -98,7 +98,6 @@ export const Item = ({
           handleClick({
             clickedOption: option,
             event,
-            group,
           })
         }
       }}
@@ -124,7 +123,6 @@ export const Item = ({
               handleClick({
                 clickedOption: option,
                 event,
-                group,
               })
             }
           }}

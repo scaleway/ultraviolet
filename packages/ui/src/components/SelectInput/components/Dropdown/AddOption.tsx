@@ -1,7 +1,9 @@
 import { useSelectInput } from '../../SelectInputProvider'
 import { selectInputStyle } from '../../styles.css'
-import type { OptionType } from '../../types'
+
 import { DisplayOption } from './Option'
+
+import type { OptionType } from '../../types'
 
 export const AddOption = ({
   option,

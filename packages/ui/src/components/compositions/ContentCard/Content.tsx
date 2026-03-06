@@ -1,35 +1,9 @@
 'use client'
 
-import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
-import { cn } from '@ultraviolet/utils'
-import { assignInlineVars } from '@vanilla-extract/dynamic'
-
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 
-import { contentCardStyle, subContainerHeightVar } from './styles.css'
-
 import type { ContentCardProps } from './type'
-
-export const LinkContent = ({
-  direction,
-  disabled,
-}: {
-  direction: 'column' | 'row'
-  disabled?: boolean
-}) => (
-  <Stack
-    alignItems={direction === 'column' ? 'flex-end' : 'center'}
-    className={cn(contentCardStyle.iconStack[direction])}
-    direction={direction}
-    flex={1}
-    justifyContent={direction === 'column' ? 'center' : 'flex-end'}
-  >
-    <div className={contentCardStyle.iconContainer}>
-      <OpenInNewIcon disabled={disabled} sentiment="neutral" />
-    </div>
-  </Stack>
-)
 
 export const CardContent = ({
   title,
@@ -75,28 +49,4 @@ export const CardContent = ({
     </Stack>
     {children ? <Stack>{children}</Stack> : null}
   </Stack>
-)
-
-export const ImageContent = ({
-  disabled,
-  image,
-  direction,
-  subContainerHeight,
-}: {
-  disabled?: boolean
-  image?: string
-  direction: 'row' | 'column'
-  subContainerHeight: string
-}) => (
-  <img
-    alt=""
-    className={contentCardStyle.image[direction]}
-    data-disabled={disabled}
-    height={direction === 'column' ? 120 : undefined}
-    src={image}
-    style={assignInlineVars({
-      [subContainerHeightVar]: subContainerHeight,
-    })}
-    width={direction === 'row' ? 220 : undefined}
-  />
 )

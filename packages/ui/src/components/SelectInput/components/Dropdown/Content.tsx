@@ -2,18 +2,21 @@
 
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { cn } from '@ultraviolet/utils'
-import type { KeyboardEvent, ReactNode } from 'react'
 import { useEffect, useMemo, useRef } from 'react'
+
 import { Skeleton } from '../../../Skeleton'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
 import { OPTION_SELECTOR } from '../../constants'
 import { useSelectInput } from '../../SelectInputProvider'
 import { selectInputStyle } from '../../styles.css'
+
 import { AddOption } from './AddOption'
 import { Group } from './Group'
 import { Item } from './Item'
 import { SelectAll } from './SelectAll'
+
+import type { KeyboardEvent, ReactNode } from 'react'
 
 type CreateDropdownProps = {
   isEmpty: boolean

@@ -141,6 +141,7 @@ export const Monthly = () => {
 
           return 'neutral'
         }
+        const isHightlighted = isSelected || isInHoveredRange
 
         return (
           <Button
@@ -167,8 +168,8 @@ export const Monthly = () => {
               }
             }}
             onMouseEnter={() => setHoveredDate(constructedDate)}
-            sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}
-            variant={isSelected || isInHoveredRange ? 'filled' : 'ghost'}
+            sentiment={isHightlighted ? 'primary' : 'neutral'}
+            variant={isHightlighted ? 'filled' : 'ghost'}
           >
             {month[1]}
           </Button>

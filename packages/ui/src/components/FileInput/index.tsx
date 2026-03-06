@@ -1,6 +1,5 @@
 'use client'
 
-import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
 import {
   useEffect,
   useId,
@@ -16,6 +15,7 @@ import { Text } from '../Text'
 
 import { FileInputButton } from './components/Button'
 import { ListFiles } from './components/List'
+import { DropzoneContent } from './DropzoneContent'
 import { FileInputContext } from './FileInputProvider'
 import { fileIsAccepted } from './helpers'
 import { fileInputStyle } from './styles.css'
@@ -128,6 +128,13 @@ const FileInputBase = ({
     }
   }
 
+  const onDropComputed = (event: DragEvent<HTMLDivElement>) => {
+    if (!disabled) {
+      onDrop?.(event)
+      manageDrop(event)
+    }
+  }
+
   const computedChildren =
     typeof children === 'function' ? children(inputId, inputRef) : children
 
@@ -150,6 +157,34 @@ const FileInputBase = ({
     [disabled, error, files, onChangeFiles],
   )
 
+  const input = (
+    <input
+      accept={accept}
+      className={fileInputStyle.fileInput}
+      data-testid={dataTestid}
+      disabled={disabled}
+      id={inputId}
+      multiple={multiple}
+      name={label ?? ariaLabel}
+      onChange={onChange}
+      ref={inputRef}
+      required={required}
+      type="file"
+    />
+  )
+
+  const bottomComputed = bottom ? (
+    <Text
+      as="div"
+      disabled={disabled}
+      prominence="weak"
+      sentiment="neutral"
+      variant="caption"
+    >
+      {bottom}
+    </Text>
+  ) : null
+
   if (variant === 'overlay') {
     return (
       <FileInputContext.Provider value={value}>
@@ -161,18 +196,7 @@ const FileInputBase = ({
             data-testid="drag-container"
             onDragOver={onDragOver}
           >
-            <input
-              accept={accept}
-              className={fileInputStyle.fileInput}
-              data-testid={dataTestid}
-              id={inputId}
-              multiple={multiple}
-              name={label ?? ariaLabel}
-              onChange={onChange}
-              ref={inputRef}
-              required={required}
-              type="file"
-            />
+            {input}
             <div className={fileInputStyle.overlayWrapper}>
               {computedChildren}
               {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
@@ -184,12 +208,7 @@ const FileInputBase = ({
                     : fileInputStyle.dropzoneOverlay[dragState]
                 }
                 onDragOver={event => event.preventDefault()}
-                onDrop={event => {
-                  if (!disabled) {
-                    onDrop?.(event)
-                    manageDrop(event)
-                  }
-                }}
+                onDrop={onDropComputed}
                 style={style}
               >
                 {title &&
@@ -207,17 +226,7 @@ const FileInputBase = ({
               </div>
             </div>
           </div>
-          {bottom ? (
-            <Text
-              as="div"
-              disabled={disabled}
-              prominence="weak"
-              sentiment="neutral"
-              variant="caption"
-            >
-              {bottom}
-            </Text>
-          ) : null}
+          {bottomComputed}
           {computedError}
         </Stack>
       </FileInputContext.Provider>
@@ -252,50 +261,17 @@ const FileInputBase = ({
               gap={isSmall ? 1 : 2}
               justifyContent="center"
               onDragOver={onDragOver}
-              onDrop={event => {
-                if (!disabled) {
-                  onDrop?.(event)
-                  manageDrop(event)
-                }
-              }}
+              onDrop={onDropComputed}
               style={style}
             >
-              {disabled ? null : (
-                <input
-                  accept={accept}
-                  className={fileInputStyle.fileInput}
-                  data-testid={dataTestid}
-                  disabled={disabled}
-                  id={inputId}
-                  name={label ?? ariaLabel}
-                  onChange={onChange}
-                  ref={inputRef}
-                  required={required}
-                  type="file"
-                />
-              )}
-              <UploadIcon
+              {disabled ? null : input}
+              <DropzoneContent
                 disabled={disabled}
-                sentiment={isSmall ? 'neutral' : 'primary'}
-                size={isSmall ? 'small' : 'xlarge'}
+                inputId={inputId}
+                inputRef={inputRef}
+                isSmall={isSmall}
+                title={title}
               />
-              <Text
-                as={isSmall ? 'label' : 'div'}
-                className={
-                  isSmall
-                    ? fileInputStyle.titleSmall[
-                        disabled ? 'disabled' : 'default'
-                      ]
-                    : undefined
-                }
-                disabled={disabled}
-                htmlFor={inputId}
-                placement="left"
-                sentiment="neutral"
-                variant={isSmall ? 'bodySmallStrong' : 'headingSmallStrong'}
-              >
-                {typeof title === 'function' ? title(inputId, inputRef) : title}
-              </Text>
               {computedChildren}
             </Stack>
           </Text>
@@ -311,17 +287,7 @@ const FileInputBase = ({
           ) : null}
         </Stack>
         {computedError}
-        {bottom ? (
-          <Text
-            as="div"
-            disabled={disabled}
-            prominence="weak"
-            sentiment="neutral"
-            variant="caption"
-          >
-            {bottom}
-          </Text>
-        ) : null}
+        {bottomComputed}
       </Stack>
     </FileInputContext.Provider>
   )
