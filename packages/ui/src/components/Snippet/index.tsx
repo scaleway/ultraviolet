@@ -2,78 +2,19 @@
 
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { cn } from '@ultraviolet/utils'
-import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
-import { Children, useReducer } from 'react'
+import { useReducer } from 'react'
 import { useTheme } from '../../theme/ThemeProvider'
 import { CopyButton } from '../CopyButton'
 import { Expandable } from '../Expandable'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { rowsVar, snippetStyle } from './styles.css'
+import type { Prefixes } from './CodeContent'
+import { CodeContent } from './CodeContent'
+import { snippetStyle } from './styles.css'
 
 const LINES_BREAK_REGEX = /\r\n|\r|\n/
-
-type Prefixes = 'lines' | 'command'
-
-type CodeContentProps = {
-  children: string
-  prefix?: Prefixes
-  multiline?: boolean
-  showMore?: boolean
-  hasShowMoreButton?: boolean
-  lines?: string[]
-  noExpandable: boolean
-  rows: number
-}
-
-const CodeContent = ({
-  children,
-  prefix,
-  multiline,
-  showMore,
-  hasShowMoreButton,
-  lines,
-  noExpandable,
-  rows,
-}: CodeContentProps) => (
-  <Text
-    as="pre"
-    className={snippetStyle.pretext({
-      noExpandable,
-      showMore: hasShowMoreButton && !showMore,
-    })}
-    style={assignInlineVars({
-      [rowsVar]: rows.toString(),
-    })}
-    variant="code"
-    whiteSpace={multiline ? undefined : 'nowrap'}
-  >
-    {multiline ? (
-      Children.map(lines, child => (
-        <span
-          className={cn(
-            snippetStyle.line({ multiline: true }),
-            prefix ? snippetStyle.prefix[prefix] : '',
-          )}
-          key={child}
-        >
-          {child}
-        </span>
-      ))
-    ) : (
-      <span
-        className={cn(
-          snippetStyle.line(),
-          prefix ? snippetStyle.prefix[prefix] : '',
-        )}
-      >
-        {children}
-      </span>
-    )}
-  </Text>
-)
 
 type SnippetProps = {
   className?: string
