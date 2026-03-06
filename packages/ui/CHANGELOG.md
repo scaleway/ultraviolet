@@ -1,5 +1,150 @@
 # Change Log
 
+## 3.12.0
+
+### Minor Changes
+
+- [#6123](https://github.com/scaleway/ultraviolet/pull/6123) [`8b50acc`](https://github.com/scaleway/ultraviolet/commit/8b50acc40a1d6a3de1923ff17e5b02470b92d3b8) Thanks [@lisalupi](https://github.com/lisalupi)! - ### **⚠️⚠️ BREAKING CHANGES ⚠️⚠️**
+
+  `Chip.Icon`: prop `name` (string) has been replaced with `icon` (ReactNode). To add an icon, simply pass the selected icon to the component instead of its name:
+
+  Before:
+
+  ```js
+  <Chip>
+    MyChip
+    <Chip.Icon name="filter" />
+  </Chip>
+  ```
+
+  After:
+
+  ```js
+  import { FilterIcon } from "@ultraviolet/icons/FilterIcon";
+
+  <Chip>
+    MyChip
+    <Chip.Icon icon={<FilterIcon />} />
+  </Chip>;
+  ```
+
+  `SelectableCard`: prop `productIcon` and `illustration ` are now a ReactNode, like in `Chip.Icon`. Be careful with the sizes: to obtain the same result as before, the product icons must have `size="large"`.
+
+  Before:
+
+  ```js
+   <SelectableCard
+    {...args}
+    label="ProductIcon"
+    name="label-1"
+    productIcon="macMiniM2"
+    type="radio"
+    value="label-1"
+  >
+   <SelectableCard
+    {...args}
+    label="Illustration"
+    name="label-1"
+    illustration="url"
+    type="radio"
+    value="label-1"
+  >
+  ```
+
+  After:
+
+  ```js
+  import { MacMiniProductIcon } from '@ultraviolet/icons/product/MacMiniProductIcon'
+
+   <SelectableCard
+    {...args}
+    label="ProductIcon"
+    name="label-1"
+    productIcon={<MacMiniProductIcon size="large" />}
+    value="label-1"
+  >
+   <SelectableCard
+    {...args}
+    label="Illustration"
+    name="label-1"
+    illustration={<img src={url} />} //or illustration={<DynamicIllustration name="appleSiliconM2" />}
+    value="label-1"
+  >
+  ```
+
+  `FAQ` (composition): prop `productIconName` (string) has been replaced with `productIcon` (ReactNode). To add an icon, simply pass the selected icon to the component instead of its name:
+
+  Before:
+
+  ```js
+  <FAQ description="description" productIconName="sms" title="title" />
+  ```
+
+  After:
+
+  ```js
+  import { SmsProductIcon } from "@ultraviolet/icons/product/SmsProductIcon";
+
+  <FAQ
+    description="description"
+    productIconName={<SmsProductIcon size="xlarge" />}
+    title="title"
+  />;
+  ```
+
+  Be careful with the sizes: to obtain the same result as before, the product icons must have `size="xlarge"`.
+
+  > Those changes avoid importing all ProductIcons by default in `@ultraviolet/ui`.
+
+- [#6155](https://github.com/scaleway/ultraviolet/pull/6155) [`adc3ce5`](https://github.com/scaleway/ultraviolet/commit/adc3ce5db64bcb7d864de668c7530de8ed5e3dd4) Thanks [@lisalupi](https://github.com/lisalupi)! - Export all components vanilla-extract classnames. All the classes for a single component are added in a single obejct : for instance, to get the vanilla-extract classname of a drawer footer, simply write :
+
+  ```js
+  import { drawerStyle } from "@ultraviolet/ui";
+
+  const footerClassName = drawerStyle.drawerFooter; // → uv_1iezf7ya
+  ```
+
+  Beware, some vanilla-extract classname are `styleVariants`. They must be used as follow :
+
+  ```js
+  import { drawerStyle } from "@ultraviolet/ui";
+
+  const drawerClassName = drawerStyle.drawer; // → { large: "uv_1iezf7y3", medium: "uv_1iezf7y4", small: "uv_1iezf7y5" }
+  const drawerClassNameSmall = drawerClassName.small; // → uv_1iezf7y5
+  ```
+
+  There are also `recipe`:
+
+  ```js
+  import { badgeStyle } from "@ultraviolet/ui";
+
+  const badgeStyle = badgeStyle.badge; // → function
+  const badgeDefault = badgeStyle(); // → uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jy7 uv_1yf71jye uv_1yf71jyn
+  const badgePrimary = badgeStyle({ sentiment: "primary" }); // → uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jy5 uv_1yf71jye uv_1yf71jyj
+  ```
+
+  Composition styles are available in `@ultraviolet/ui/compositions/styles`:
+
+  ```js
+  import { orderSummaryStyle } from "@ultraviolet/ui/compositions/styles";
+  import { OrderSummary } from "@ultraviolet/ui/compositions/OrderSummary";
+  ```
+
+  You **do not** need to import the component's styles for them to display correctly. These styles are exported to simplify customization using classnames.
+
+### Patch Changes
+
+- [#6163](https://github.com/scaleway/ultraviolet/pull/6163) [`3ac731b`](https://github.com/scaleway/ultraviolet/commit/3ac731bf45938b45c7d3cc6f08742567e528332a) Thanks [@lisalupi](https://github.com/lisalupi)! - `Slider`: when `customValueDisplay = false`, nothing should be displayed
+
+- [#6175](https://github.com/scaleway/ultraviolet/pull/6175) [`7dbb44b`](https://github.com/scaleway/ultraviolet/commit/7dbb44bb932872b6c7f5de6af0597277e88c0eca) Thanks [@lisalupi](https://github.com/lisalupi)! - `Popup`: recompute position on scroll
+
+- [#6170](https://github.com/scaleway/ultraviolet/pull/6170) [`dfb3fb5`](https://github.com/scaleway/ultraviolet/commit/dfb3fb5100289f96c00d4c13fb136a0d47498e4d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.0-beta.16`.
+
+- Updated dependencies [[`dfb3fb5`](https://github.com/scaleway/ultraviolet/commit/dfb3fb5100289f96c00d4c13fb136a0d47498e4d)]:
+  - @ultraviolet/icons@5.1.6
+  - @ultraviolet/themes@3.1.2
+  - @ultraviolet/utils@1.0.6
+
 ## 3.11.1
 
 ### Patch Changes

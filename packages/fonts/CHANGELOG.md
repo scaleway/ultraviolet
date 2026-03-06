@@ -1,5 +1,11 @@
 # @ultraviolet/fonts
 
+## 2.1.2
+
+### Patch Changes
+
+- [#6170](https://github.com/scaleway/ultraviolet/pull/6170) [`dfb3fb5`](https://github.com/scaleway/ultraviolet/commit/dfb3fb5100289f96c00d4c13fb136a0d47498e4d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.0-beta.16`.
+
 ## 2.1.1
 
 ### Patch Changes
