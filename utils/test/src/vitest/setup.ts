@@ -16,7 +16,7 @@ const MockResize = vi.fn(function mock() {
 })
 
 export const setup = () => {
-  process.env.TZ = 'UTC'
+  process.env['TZ'] = 'UTC'
   expect.extend(matchers)
 
   // oxlint-disable-next-line no-hooks
