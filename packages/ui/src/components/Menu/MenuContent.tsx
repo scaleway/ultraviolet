@@ -31,6 +31,27 @@ import type { MenuProps } from './types'
 
 const SPACE_DISCLOSURE_POPUP = 24 // in px
 
+const moveFocusDown = (
+  indexOfCurrent: number,
+  listItem: (HTMLButtonElement | HTMLAnchorElement)[],
+) => {
+  if (indexOfCurrent < listItem.length - 1) {
+    listItem[indexOfCurrent + 1].focus()
+  } else {
+    listItem[0].focus()
+  }
+}
+const moveFocusUp = (
+  indexOfCurrent: number,
+  listItem: (HTMLButtonElement | HTMLAnchorElement)[],
+) => {
+  if (indexOfCurrent > 0) {
+    listItem[indexOfCurrent - 1].focus()
+  } else {
+    listItem.at(-1)?.focus()
+  }
+}
+
 export const Menu = forwardRef(
   (
     {
@@ -71,6 +92,8 @@ export const Menu = forwardRef(
     const contentRef = useRef<HTMLDivElement>(null)
     const tempId = useId()
     const finalId = `menu-${id ?? tempId}`
+    const isTriggerMethodHover = triggerMethod === 'hover'
+
     // if you need dialog inside your component, use function, otherwise component is fine
     const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(
       disclosure,
@@ -78,6 +101,7 @@ export const Menu = forwardRef(
       ? disclosure
       : disclosure({ visible: isVisible })
     const innerRef = useRef(target as unknown as HTMLButtonElement)
+
     useImperativeHandle(ref, () => innerRef.current)
 
     const finalDisclosure = cloneElement(target, {
@@ -120,7 +144,7 @@ export const Menu = forwardRef(
     }, [isVisible, searchable])
 
     useEffect(() => {
-      if (disclosureRef.current && triggerMethod === 'hover') {
+      if (disclosureRef.current && isTriggerMethodHover) {
         const handler = (value: boolean | undefined) => {
           setShouldBeVisible(value)
         }
@@ -147,7 +171,7 @@ export const Menu = forwardRef(
       }
 
       return undefined
-    }, [setShouldBeVisible, disclosureRef, triggerMethod])
+    }, [setShouldBeVisible, disclosureRef, isTriggerMethodHover])
 
     const finalChild = useMemo(() => {
       if (typeof children === 'function') {
@@ -171,6 +195,20 @@ export const Menu = forwardRef(
       }
     }
 
+    const handleFocusKey = (
+      key: string,
+      indexOfCurrent: number,
+      listItem: (HTMLButtonElement | HTMLAnchorElement)[],
+    ) => {
+      if (key === 'ArrowDown') {
+        moveFocusDown(indexOfCurrent, listItem)
+      } else if (key === 'ArrowUp') {
+        moveFocusUp(indexOfCurrent, listItem)
+      } else if (key === 'ArrowLeft' && isTriggerMethodHover) {
+        disclosureRef.current?.focus()
+        setShouldBeVisible(undefined)
+      }
+    }
     const handleKeyDown = (event: KeyboardEvent) => {
       if (contentRef.current) {
         const listItem = getListItem([...contentRef.current.children])
@@ -179,28 +217,10 @@ export const Menu = forwardRef(
             item => item === document.activeElement,
           )
           if (currentElement) {
-            if (event.key === 'ArrowDown') {
-              event.preventDefault()
-              const indexOfCurrent = listItem.indexOf(currentElement)
+            const indexOfCurrent = listItem.indexOf(currentElement)
+            event.preventDefault()
 
-              if (indexOfCurrent < listItem.length - 1) {
-                listItem[indexOfCurrent + 1].focus()
-              } else {
-                listItem[0].focus()
-              }
-            } else if (event.key === 'ArrowUp') {
-              event.preventDefault()
-
-              const indexOfCurrent = listItem.indexOf(currentElement)
-              if (indexOfCurrent > 0) {
-                listItem[indexOfCurrent - 1].focus()
-              } else {
-                listItem.at(-1)?.focus()
-              }
-            } else if (event.key === 'ArrowLeft' && triggerMethod === 'hover') {
-              disclosureRef.current?.focus()
-              setShouldBeVisible(undefined)
-            }
+            handleFocusKey(event.key, indexOfCurrent, listItem)
           }
         }
       }
@@ -225,7 +245,7 @@ export const Menu = forwardRef(
           className,
           menuStyle.menu({ arrow: hasArrow, searchable }),
         )}
-        debounceDelay={triggerMethod === 'hover' ? 250 : 0}
+        debounceDelay={isTriggerMethodHover ? 250 : 0}
         dynamicDomRendering={dynamicDomRendering}
         hasArrow={hasArrow}
         hideOnClickOutside
