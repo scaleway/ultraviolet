@@ -54,6 +54,7 @@ type RowProps = {
   onMouseEnter?: MouseEventHandler<HTMLTableRowElement>
   onMouseLeave?: MouseEventHandler<HTMLTableRowElement>
   onClick?: (id: string) => void
+  disabledClickRowToExpand?: boolean
 }
 
 export const Row = forwardRef<HTMLTableRowElement, RowProps>(
@@ -75,6 +76,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       onMouseEnter,
       onMouseLeave,
       onClick,
+      disabledClickRowToExpand,
     },
     forwardedRef,
   ) => {
@@ -130,7 +132,8 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       }
     }, [collapseRow, expandRow, expandedRowIds, id])
 
-    const canClickRowToExpand = !disabled && !!expandable && !expandButton
+    const cannotClickRowToExpand =
+      disabledClickRowToExpand || disabled || expandButton || !expandable
 
     useEffect(() => {
       if (
@@ -176,26 +179,26 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           data-testid={dataTestid}
           onClick={() => {
             onClick?.(id)
-            if (canClickRowToExpand) {
+            if (!cannotClickRowToExpand) {
               toggleRowExpand()
             }
           }}
           onKeyDown={
-            canClickRowToExpand
-              ? event => {
+            cannotClickRowToExpand
+              ? undefined
+              : event => {
                   if (event.key === ' ') {
                     toggleRowExpand()
                     event.preventDefault()
                   }
                 }
-              : undefined
           }
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
           ref={forwardedRef}
-          role={canClickRowToExpand ? 'button row' : undefined}
+          role={cannotClickRowToExpand ? undefined : 'button row'}
           style={style}
-          tabIndex={canClickRowToExpand ? 0 : -1}
+          tabIndex={cannotClickRowToExpand ? -1 : 0}
         >
           {selectable ? (
             <ColumnProvider width={theme.sizing[300]}>
@@ -265,18 +268,18 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
             data-highlight={selectable && !!selectedRowIds[id]}
             id={expandedRowId}
             onClick={
-              canClickRowToExpand
-                ? e => {
+              cannotClickRowToExpand
+                ? undefined
+                : e => {
                     e.stopPropagation()
                   }
-                : undefined
             }
             onKeyDown={
-              canClickRowToExpand
-                ? e => {
+              cannotClickRowToExpand
+                ? undefined
+                : e => {
                     e.stopPropagation()
                   }
-                : undefined
             }
           >
             <Cell
