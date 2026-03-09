@@ -1,6 +1,7 @@
 'use client'
 
 import { consoleLightTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   CSSProperties,
@@ -138,13 +139,9 @@ const IStack = forwardRef<any, PropsWithChildren<StackProps>>(
           : { xxsmall: justifyContent },
     })
 
-    const combinedClassName = [className, stackStyle.stack, sprinkleClassName]
-      .filter(Boolean)
-      .join(' ')
-
     return (
       <Component
-        className={combinedClassName}
+        className={cn(className, stackStyle.stack, sprinkleClassName)}
         data-testid={dataTestId}
         id={id}
         ref={ref}

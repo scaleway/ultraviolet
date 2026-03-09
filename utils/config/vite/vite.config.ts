@@ -45,6 +45,9 @@ export const defaultConfig: UserConfig = {
     minify: false,
     outDir: 'dist',
     rolldownOptions: {
+      checks: {
+        circularDependency: true,
+      },
       experimental: {
         // lazyBarrel: true,
         // strictExecutionOrder: true,
@@ -64,7 +67,7 @@ export const defaultConfig: UserConfig = {
         legalComments: 'none',
         minify: false,
         minifyInternalExports: false,
-        strictExecutionOrder: false,
+        strictExecutionOrder: true,
         topLevelVar: false,
       },
       platform: 'browser',

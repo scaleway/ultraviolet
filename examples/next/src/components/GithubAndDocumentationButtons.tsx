@@ -7,13 +7,14 @@ const GithubAndDocumentationButtons = () => (
       aria-label="github"
       href="https://github.com/scaleway/ultraviolet"
       sentiment="neutral"
-      variant="filled"
+      variant="outlined"
     >
       <GithubIcon size="large" />
     </Button>
     <Button
       aria-label="documentation"
       href="https://storybook.ultraviolet.scaleway.com/"
+      variant="outlined"
     >
       Documentation
     </Button>

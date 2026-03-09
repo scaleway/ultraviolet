@@ -1,4 +1,5 @@
 import { Card as ScwUICard, Text } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import Image from 'next/image'
 import type { ReactNode } from 'react'
 import styles from '../../styles/component.module.scss'
@@ -11,9 +12,7 @@ type CardProps = {
 }
 
 const Card = ({ title, description, icon, className }: CardProps) => (
-  <ScwUICard
-    className={`${className ? `${className} ` : ''}${styles.borderedBox}`}
-  >
+  <ScwUICard className={cn(className, styles.borderedBox)}>
     <div>
       <Image alt="icon" height={64} src={icon} width={64} />
     </div>

@@ -27,7 +27,7 @@
     "start": "STORYBOOK_ENVIRONMENT=development storybook dev -p 6006",
     "start:production": "STORYBOOK_ENVIRONMENT=production storybook dev -p 6006",
     "format": "biome check --linter-enabled=false --write .",
-    "format:check": "biome check --linter-enabled=false --verbose .",
+    "format:check": "biome check --linter-enabled=false --verbose . --diagnostic-level=error",
     "format:ci": "biome ci --linter-enabled=false .",
     "biome:lint": "pnpm -w biome lint . --diagnostic-level=error",
     "lint:fix": "pnpm run oxc:type-aware --fix && biome:lint",

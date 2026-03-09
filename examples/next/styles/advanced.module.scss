@@ -1,9 +1,9 @@
-h3.title {
+.title {
   align-self: center;
   font-size: var(--typography-heading-font-size);
 }
 
-g.group {
+.group {
   fill: var(--color-danger-backgroundStrong);
 
   svg {
@@ -11,13 +11,13 @@ g.group {
   }
 }
 
-div.communityContainer {
+.communityContainer {
   padding: var(--space-3);
   background-color: var(--color-primary-background);
   border-radius: var(--radii-default);
 }
 
-div.homeContainer {
+.homeContainer {
   max-width: 1440px;
 
   @media (max-width: 1280px) {
@@ -26,13 +26,13 @@ div.homeContainer {
   }
 }
 
-div.headingContainer {
+.headingContainer {
   @media (max-width: 1280px) {
     flex-direction: column;
   }
 }
 
-div.openSourceDescription {
+.openSourceDescription {
   margin-bottom: 12px;
 }
 
@@ -40,11 +40,11 @@ h3.openSourceTitle {
   align-self: center;
 }
 
-div.openSourceCard {
+.openSourceCard {
   flex: 1;
 }
 
-div.openSourceStack {
+.openSourceStack {
   @media (max-width: 1280px) {
     flex-direction: column;
   }
