@@ -294,6 +294,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
 
   return (
     <DateInputContext.Provider value={valueContext}>
+      {/* oxlint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div
         className={cn(className, dateInputStyle.container)}
         data-testid={dataTestId}

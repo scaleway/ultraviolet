@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { createContext, useContext } from 'react'
+import { createContext, useContext, useMemo } from 'react'
 
 type ContextType =
   | {
@@ -22,17 +22,19 @@ export const ColumnProvider = ({
   minWidth,
   maxWidth,
   children,
-}: ColumnProviderProps) => (
-  <ColumnContext.Provider
-    value={{
+}: ColumnProviderProps) => {
+  const value = useMemo(
+    () => ({
       maxWidth,
       minWidth,
       width,
-    }}
-  >
-    {children}
-  </ColumnContext.Provider>
-)
+    }),
+    [maxWidth, minWidth, width],
+  )
+  return (
+    <ColumnContext.Provider value={value}>{children}</ColumnContext.Provider>
+  )
+}
 
 // oxlint-disable-next-line react/only-export-components
 export const useColumnProvider = () => useContext(ColumnContext)

@@ -153,6 +153,11 @@ export const Row = ({
 
   const isSelectableDisable = disabled || loading || !!selectDisabled
 
+  const offerListRowContextValue = useMemo(
+    () => ({ selected: isSelected, banner: !!banner }),
+    [isSelected, banner],
+  )
+
   return (
     <>
       <List.Row
@@ -269,9 +274,7 @@ export const Row = ({
             </Button>
           </List.Cell>
         ) : null}
-        <OfferListRowContext.Provider
-          value={{ selected: isSelected, banner: !!banner }}
-        >
+        <OfferListRowContext.Provider value={offerListRowContextValue}>
           {children}
         </OfferListRowContext.Provider>
       </List.Row>
