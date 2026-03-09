@@ -1,12 +1,13 @@
-import { Text } from '@ultraviolet/ui'
+import { Stack, Text } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import styles from '../../styles/component.module.scss'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
 
-const Footer = () => (
-  <footer className={styles.footer}>
-    <div className={styles.footerRow}>
-      <div>
+const Footer = ({ className }: { className?: string }) => (
+  <footer className={cn(className, styles.footer)}>
+    <div>
+      <Stack className={styles.footerRow} gap={1}>
         <Text as="p" variant="body">
           Hosted in green datacenters in France
         </Text>
@@ -16,11 +17,11 @@ const Footer = () => (
           clean energy source. We embrace both disruptive and state-of-the-art
           technologies that reduce our environmental impact.
         </Text>
-      </div>
-      <div className={styles.disclaimerContainer}>
+      </Stack>
+      <Stack className={styles.disclaimerContainer} direction="row" gap="2">
         <Logo />
         <GithubAndDocumentationButtons />
-      </div>
+      </Stack>
     </div>
   </footer>
 )

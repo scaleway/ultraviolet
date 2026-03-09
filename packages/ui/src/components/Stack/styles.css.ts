@@ -37,8 +37,11 @@ const themeBreakpoints = orderedBreakpointKeys.reduce(
       '@media': `screen and (min-width: ${consoleLightTheme.breakpoints[key as keyof typeof consoleLightTheme.breakpoints]})`,
     },
   }),
-  {},
-) as Record<keyof typeof consoleLightTheme.breakpoints, { '@media': string }>
+  {} as Record<
+    keyof typeof consoleLightTheme.breakpoints,
+    { '@media': string }
+  >,
+)
 
 const themeSpace = Object.values(consoleLightTheme.space)
 

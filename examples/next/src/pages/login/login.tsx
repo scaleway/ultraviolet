@@ -48,7 +48,7 @@ const LogIn = () => {
       <Form errors={mockErrors} methods={methods} onSubmit={handleSubmit}>
         <Stack alignItems="center" gap={1}>
           <IdIcon size="small" />
-          <Text as="h1" variant="heading">
+          <Text as="h1" variant="headingSmall">
             Login form
           </Text>
           <TextInputField

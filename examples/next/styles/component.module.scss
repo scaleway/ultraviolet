@@ -1,45 +1,41 @@
-footer.footer {
+.footer {
   box-shadow: 0 0 8px 2px rgba(178, 182, 195, 0.37);
   width: 100%;
   display: flex;
+  margin: 0;
   justify-content: center;
-  padding: var(--space-4);
 }
 
-div.footerRow {
+.footerRow {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: var(--space-4);
+  padding: var(--space-4);
   flex: 1;
-  max-width: 1140px;
 }
 
-div.borderedBox {
-  display: grid;
+.borderedBox {
+  display: flex;
   grid-template-columns: fit-content(20%) 3fr;
   gap: var(--space-2);
   height: auto;
-  min-width: 350,;
+  min-width: 350;
 }
 
-div.disclaimerContainer {
+.disclaimerContainer {
   min-height: 60px;
-  height: 60;
-  top: 0;
   background-color: var(--color-neutral-background-weak);
   box-shadow: 0 0 8px 2px rgba(178, 182, 195, 0.37);
   display: flex;
-  align-items: center;
   min-width: 10px;
-  padding: 8px 10px;
+  padding: var(--space-2);
   width: 100%;
   justify-content: center;
-  position: sticky;
-  z-index: 1;
+  align-items: center;
 }
 
-div.copyBox {
+.copyBox {
   background: var(--color-neutral-background-strong);
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radii-default);
@@ -53,7 +49,7 @@ div.copyBox {
   }
 }
 
-header.header {
+.header {
   min-height: 60px;
   height: 60px;
   top: 0;
@@ -69,13 +65,13 @@ header.header {
   z-index: 1;
 }
 
-div.horizontalStack {
+.horizontalStack {
   display: flex;
   align-items: center;
   gap: var(--space-1);
 }
 
-div.headerRow {
+.headerRow {
   display: flex;
   flex: 1;
   align-items: center;
@@ -83,6 +79,6 @@ div.headerRow {
   max-width: 1440px;
 }
 
-g.logo {
+.logo {
   fill: var(--color-primary-text);
 }

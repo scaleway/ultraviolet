@@ -5,7 +5,8 @@ import {
 } from '@ultraviolet/themes'
 import { extendTheme, Stack } from '@ultraviolet/ui'
 import type { AppProps } from 'next/app'
-import { useCallback, useEffect, useState } from 'react'
+import type { PropsWithChildren } from 'react'
+import { useCallback, useLayoutEffect, useState } from 'react'
 import Footer from '../components/Footer'
 import Head from '../components/Head'
 import Header from '../components/Header'
@@ -14,27 +15,20 @@ import '@ultraviolet/ui/styles'
 import '@ultraviolet/icons/styles'
 import '@ultraviolet/themes/global'
 import '@ultraviolet/themes/dark.css'
-import '@ultraviolet/themes/light.css'
 import '@ultraviolet/themes/darker.css'
+import '@ultraviolet/themes/light.css'
+import styles from '../../styles/grid.module.scss'
 import '../../styles/global.css'
 
 type Themes = 'light' | 'dark'
 
-const COMMON_THEME_PROPS = {
-  typography: {
-    heading: {
-      fontSize: '42px',
-      lineHeight: '52px',
-    },
-    headingLarge: {
-      fontSize: '72px',
-      lineHeight: '80px',
-    },
-    headingSmall: {
-      fontSize: '28px',
-    },
-  },
-}
+const Grid = ({ children }: PropsWithChildren) => (
+  <Stack alignItems="center" className={styles.grid} gap={4}>
+    {children}
+  </Stack>
+)
+
+const themeKey = 'theme'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [theme, setTheme] = useState<Themes>('light')
@@ -45,13 +39,12 @@ const App = ({ Component, pageProps }: AppProps) => {
     document.documentElement.classList.add(`${theme}-theme`)
   }
   const setThemeCallBack = useCallback((localTheme: Themes) => {
-    localStorage.setItem('theme', localTheme)
+    localStorage.setItem(themeKey, localTheme)
     setTheme(localTheme)
   }, [])
 
   const localLightTheme = {
     ...extendTheme({
-      ...COMMON_THEME_PROPS,
       ...consoleLightTheme,
       colors: {
         primary: {
@@ -66,39 +59,34 @@ const App = ({ Component, pageProps }: AppProps) => {
   const localDarkTheme = {
     ...extendTheme({
       ...consoleDarkTheme,
-      ...COMMON_THEME_PROPS,
     }),
     setTheme: setThemeCallBack,
     theme: 'dark',
   } as const
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (typeof window !== 'undefined') {
-      const storageTheme = localStorage.getItem('theme')
+      const theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light'
+      const storageTheme =
+        (localStorage.getItem(themeKey) as 'light' | 'dark') ?? theme
       if (storageTheme) {
-        setTheme(storageTheme as 'light' | 'dark')
-      } else {
-        const isThemeDark = window.matchMedia(
-          '(prefers-color-scheme: dark)',
-        ).matches
-
-        if (isThemeDark) {
-          setThemeCallBack('dark')
-        } else {
-          setThemeCallBack('light')
-        }
+        setTheme(storageTheme)
       }
     }
-  }, [setThemeCallBack])
+  }, [])
 
   return (
     <ThemeProvider theme={theme === 'light' ? localLightTheme : localDarkTheme}>
       <Head />
-      <Stack alignItems="center" gap={4}>
-        <Header setTheme={setThemes} />
-        <Component {...pageProps} />
-        <Footer />
-      </Stack>
+      <Grid>
+        <Header className={styles.header} setTheme={setThemes} />
+        <main className={styles.main}>
+          <Component {...pageProps} />
+        </main>
+        <Footer className={styles.footer} />
+      </Grid>
     </ThemeProvider>
   )
 }
