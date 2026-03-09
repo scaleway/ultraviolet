@@ -12,7 +12,7 @@ export const DirectConnectProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="DirectConnectProductIcon">
+  <Icon {...props} title="DirectConnect">
     <g className="Direct-Connect">
       <g className=".Square">
         <path

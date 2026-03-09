@@ -12,7 +12,7 @@ export const FlexibleIpProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="FlexibleIpProductIcon">
+  <Icon {...props} title="FlexibleIp">
     <g className="Flexible-Ip">
       <g className=".Square">
         <path

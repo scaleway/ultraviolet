@@ -12,7 +12,7 @@ export const TerraformProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="TerraformProductIcon">
+  <Icon {...props} title="Terraform">
     <g className="Terraform">
       <g className=".Square">
         <path

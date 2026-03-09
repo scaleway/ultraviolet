@@ -12,7 +12,7 @@ export const MicrosoftLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="MicrosoftLogo">
+  <Icon {...props} title="Microsoft">
     <g clipPath="url(#a)">
       <path d="M2 2h16v16H2z" fill="#F3F3F3" />
       <path d="M2.696 2.696h6.956v6.956H2.696z" fill="#F35325" />

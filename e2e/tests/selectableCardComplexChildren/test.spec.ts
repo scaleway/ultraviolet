@@ -22,7 +22,7 @@ test.describe('SelectableCard type checkbox', () => {
     // Click on the select input within first selectable card and verify that only this one is selected and checked
     await option1Selection.click()
     await page.getByTestId('option-option1').click()
-    await expect(option1Selection).toHaveText('Sub option 1ArrowDownIcon')
+    await expect(option1Selection).toHaveText('Sub option 1ArrowDown')
     await expect(option1Checkbox).toBeChecked()
     await expect(option2Checkbox).not.toBeChecked()
 
@@ -30,7 +30,7 @@ test.describe('SelectableCard type checkbox', () => {
     await option1Checkbox.click()
     await expect(option1Checkbox).not.toBeChecked()
     await expect(option2Checkbox).not.toBeChecked()
-    await expect(option1Selection).toHaveText('Sub option 1ArrowDownIcon')
+    await expect(option1Selection).toHaveText('Sub option 1ArrowDown')
   })
 
   test('with text children', async ({ page, baseURL }) => {
@@ -121,7 +121,7 @@ test.describe('SelectableCard type radio', () => {
     await expect(option1Radio).toBeChecked()
     await expect(option2Radio).not.toBeChecked()
     await page.getByTestId('option-radio1').click()
-    await expect(option1Selection).toHaveText('Sub radio 1ArrowDownIcon')
+    await expect(option1Selection).toHaveText('Sub radio 1ArrowDown')
     await expect(option1Radio).toBeChecked()
     await expect(option2Radio).not.toBeChecked()
 
@@ -129,7 +129,7 @@ test.describe('SelectableCard type radio', () => {
     await option2Radio.click()
     await expect(option1Radio).not.toBeChecked()
     await expect(option2Radio).toBeChecked()
-    await expect(option1Selection).toHaveText('Sub radio 1ArrowDownIcon')
+    await expect(option1Selection).toHaveText('Sub radio 1ArrowDown')
   })
 
   test('with text children', async ({ page, baseURL }) => {

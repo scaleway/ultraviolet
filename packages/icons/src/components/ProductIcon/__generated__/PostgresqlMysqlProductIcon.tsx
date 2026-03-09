@@ -12,7 +12,7 @@ export const PostgresqlMysqlProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="PostgresqlMysqlProductIcon">
+  <Icon {...props} title="PostgresqlMysql">
     <g className="PostgreSQL-and-MySQL">
       <g className=".Square">
         <path

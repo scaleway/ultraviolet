@@ -12,7 +12,7 @@ export const ArrowRightDoubleIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="ArrowRightDoubleIcon">
+  <Icon {...props} title="ArrowRightDouble">
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path

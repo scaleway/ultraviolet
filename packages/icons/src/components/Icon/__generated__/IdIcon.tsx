@@ -10,7 +10,7 @@ import { Icon } from '../Icon'
 
 export const IdIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="IdIcon">
+  <Icon {...props} title="Id">
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path

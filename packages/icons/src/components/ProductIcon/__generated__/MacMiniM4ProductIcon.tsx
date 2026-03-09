@@ -12,7 +12,7 @@ export const MacMiniM4ProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="MacMiniM4ProductIcon">
+  <Icon {...props} title="MacMiniM4">
     <g className="sentiment=primary, size=xlarge, disabled=false">
       <g className=".Square">
         <g className="fillWeak" fill="#F1EEFC">

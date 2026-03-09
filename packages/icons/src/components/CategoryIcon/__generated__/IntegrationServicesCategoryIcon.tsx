@@ -12,7 +12,7 @@ export const IntegrationServicesCategoryIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="IntegrationServicesCategoryIcon">
+  <Icon {...props} title="IntegrationServices">
     <g className="Application-Integration">
       <g className="Icon">
         <path

@@ -12,7 +12,7 @@ export const CloudEssentialsProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="CloudEssentialsProductIcon">
+  <Icon {...props} title="CloudEssentials">
     <path
       className="fillWeak"
       d="M0 16C0 7.16344 7.16344 0 16 0H48C56.8366 0 64 7.16344 64 16V48C64 56.8366 56.8366 64 48 64H16C7.16344 64 0 56.8366 0 48V16Z"

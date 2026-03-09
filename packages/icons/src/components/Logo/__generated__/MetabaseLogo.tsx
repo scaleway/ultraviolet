@@ -12,7 +12,7 @@ export const MetabaseLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="MetabaseLogo">
+  <Icon {...props} title="Metabase">
     <path
       d="M4.6368 7.05984C5.16574 7.05984 5.59453 6.6242 5.59453 6.0868C5.59453 5.54941 5.16574 5.11377 4.6368 5.11377C4.10787 5.11377 3.67908 5.54941 3.67908 6.0868C3.67908 6.6242 4.10787 7.05984 4.6368 7.05984Z"
       fill="#509EE3"

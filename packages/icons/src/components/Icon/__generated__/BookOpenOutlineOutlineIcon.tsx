@@ -12,7 +12,7 @@ export const BookOpenOutlineOutlineIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="BookOpenOutlineOutlineIcon">
+  <Icon {...props} title="BookOpenOutline">
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
