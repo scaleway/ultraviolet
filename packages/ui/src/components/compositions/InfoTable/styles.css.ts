@@ -38,29 +38,34 @@ const cell = style({
 
 const term = style({
   alignItems: 'center',
-  color: theme.colors.neutral.textStrong,
-  display: 'inline-flex',
-  fontWeight: theme.typography.bodyStrong.weight,
   minWidth: 0,
+  display: 'inline-flex',
+  gap: theme.space[1],
 })
-
 const desc = style({
   color: theme.colors.neutral.text,
   margin: 0,
   minWidth: 0,
   width: '100%',
-})
-
-const cellText = style({
-  display: 'inline-block',
-  minWidth: 0,
-  width: '100%',
-})
-
-globalStyle(`${cellText} > *`, {
+  maxWidth: '100%',
+  display: 'flex',
+  flexDirection: 'row',
   alignItems: 'center',
-  display: 'inline-flex',
+  gap: theme.space[0.25],
+})
+
+const cellWithCopyButton = style({
+  maxWidth: '100%',
+  width: '100%',
+  minWidth: 0,
+})
+
+globalStyle(`${desc} > *`, {
   marginRight: theme.space[1],
+  minWidth: 0,
+  maxWidth: '100%',
+  width: 'fit-content',
+  alignItems: 'center',
 })
 
 export const infoTableStyle = {
@@ -69,5 +74,5 @@ export const infoTableStyle = {
   cell,
   term,
   desc,
-  cellText,
+  cellWithCopyButton,
 }

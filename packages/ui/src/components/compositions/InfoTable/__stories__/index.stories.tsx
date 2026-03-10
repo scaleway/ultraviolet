@@ -8,6 +8,7 @@ export default {
     InfoTable,
     'InfoTable.Row': InfoTable.Row,
     'InfoTable.Cell': InfoTable.Cell,
+    'InfoTable.CellWithCopyButton': InfoTable.CellWithCopyButton,
   },
 } satisfies Meta
 
