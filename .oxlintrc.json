@@ -17,6 +17,7 @@
       "files": [
         "**/__stories__/**/*.{ts,tsx}",
         "**/__tests__/**/*.{ts,tsx}",
+        "**/*.test.{ts,tsx}",
         ".storybook/**/*.{ts,tsx}",
         "examples/**",
         ".storybook/**/*.{ts,tsx}",
@@ -30,6 +31,7 @@
         "import/no-named-export": "off",
         "import/no-namespace": "off",
         "import/no-unassigned-import": "off",
+        "jsx-a11y/no-static-element-interactions": "warn",
         "react/jsx-pascal-case": "off",
         "react/no-array-index-key": "off",
         "react/only-export-components": "off",
@@ -76,7 +78,9 @@
         "typescript/no-unsafe-assignment": "warn",
         "vitest/prefer-called-times": "off",
         "vitest/prefer-describe-function-title": "warn",
-        "vitest/prefer-lowercase-title": "error"
+        "vitest/prefer-lowercase-title": "error",
+        "vitest/no-importing-vitest-globals": "off",
+        "vitest/prefer-import-in-mock": "off"
       }
     },
     {
@@ -149,6 +153,8 @@
     "typescript/promise-function-async": "off",
     "typescript/strict-boolean-expressions": "off",
     "unicorn/empty-brace-spaces": "off",
-    "unicorn/prefer-global-this": "off"
+    "jsx-a11y/no-static-element-interactions": "warn",
+    "unicorn/prefer-global-this": "off",
+    "unicorn/prefer-ternary": "off"
   }
 }

@@ -325,6 +325,7 @@ export const TagList = ({
           title={popoverTitle}
           visible={isPopoverVisible}
         >
+          {/* oxlint-disable-next-line jsx-a11y/no-static-element-interactions */}
           <span
             className={tagListStyle.tagsWrapper}
             data-testid={`${dataTestId ?? 'taglist'}-open`}

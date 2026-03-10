@@ -2,7 +2,14 @@
 
 import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
 import type { ChangeEvent, DragEvent } from 'react'
-import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
+import {
+  useEffect,
+  useId,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -128,18 +135,21 @@ const FileInputBase = ({
       </Text>
     ) : null
 
+  const value = useMemo(
+    () => ({
+      disabled,
+      error: !!error,
+      files,
+      inputRef,
+      onChangeFiles,
+      setFiles,
+    }),
+    [disabled, error, files, onChangeFiles],
+  )
+
   if (variant === 'overlay') {
     return (
-      <FileInputContext.Provider
-        value={{
-          disabled,
-          error: !!error,
-          files,
-          inputRef,
-          onChangeFiles,
-          setFiles,
-        }}
-      >
+      <FileInputContext.Provider value={value}>
         <Stack direction="column" gap={1}>
           {/** biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop */}
           {/** biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop */}
@@ -214,16 +224,7 @@ const FileInputBase = ({
   const isSmall = size === 'small'
 
   return (
-    <FileInputContext.Provider
-      value={{
-        disabled,
-        error: !!error,
-        files,
-        inputRef,
-        onChangeFiles,
-        setFiles,
-      }}
-    >
+    <FileInputContext.Provider value={value}>
       <Stack direction="column" gap={1}>
         <Stack className={className} direction="column" gap={0.5}>
           {label || labelDescription ? (

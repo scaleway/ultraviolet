@@ -90,6 +90,7 @@ export const Carousel = ({
         onMouseLeave={() => clearInterval(intervalRight)}
         onMouseOver={handleScrollRight}
       />
+      {/* oxlint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div
         className={cn(className, carouselStyle.scrollableWrapper)}
         data-testid={`${dataTestId}-wrapper`}

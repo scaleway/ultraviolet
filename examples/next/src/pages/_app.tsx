@@ -33,10 +33,10 @@ const themeKey = 'theme'
 const App = ({ Component, pageProps }: AppProps) => {
   const [theme, setTheme] = useState<Themes>('light')
 
-  const setThemes = (theme: Themes) => {
-    setTheme(theme)
+  const setThemes = (newTheme: Themes) => {
+    setTheme(newTheme)
     document.documentElement.classList.remove('light-theme', 'dark-theme')
-    document.documentElement.classList.add(`${theme}-theme`)
+    document.documentElement.classList.add(`${newTheme}-theme`)
   }
   const setThemeCallBack = useCallback((localTheme: Themes) => {
     localStorage.setItem(themeKey, localTheme)
@@ -66,11 +66,12 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   useLayoutEffect(() => {
     if (typeof window !== 'undefined') {
-      const theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+      const matchtTheme = window.matchMedia('(prefers-color-scheme: dark)')
+        .matches
         ? 'dark'
         : 'light'
       const storageTheme =
-        (localStorage.getItem(themeKey) as 'light' | 'dark') ?? theme
+        (localStorage.getItem(themeKey) as 'light' | 'dark') ?? matchtTheme
       if (storageTheme) {
         setTheme(storageTheme)
       }

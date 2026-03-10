@@ -1,5 +1,5 @@
 import type { Dispatch, ReactNode, SetStateAction } from 'react'
-import { createContext, useContext } from 'react'
+import { createContext, useContext, useMemo } from 'react'
 
 type OfferListContextValue = {
   selectable: 'radio' | 'checkbox'
@@ -43,9 +43,9 @@ export const OfferListProvider = ({
   setRadioSelectedRow,
   checkboxSelectedRows,
   setCheckboxSelectedRows,
-}: OfferListProviderProps) => (
-  <OfferListContext.Provider
-    value={{
+}: OfferListProviderProps) => {
+  const value = useMemo(
+    () => ({
       autoCollapse,
       checkboxSelectedRows,
       disabled,
@@ -56,11 +56,26 @@ export const OfferListProvider = ({
       selectable,
       setCheckboxSelectedRows,
       setRadioSelectedRow,
-    }}
-  >
-    {children}
-  </OfferListContext.Provider>
-)
+    }),
+    [
+      autoCollapse,
+      checkboxSelectedRows,
+      disabled,
+      expandable,
+      loading,
+      onChangeSelect,
+      radioSelectedRow,
+      selectable,
+      setCheckboxSelectedRows,
+      setRadioSelectedRow,
+    ],
+  )
+  return (
+    <OfferListContext.Provider value={value}>
+      {children}
+    </OfferListContext.Provider>
+  )
+}
 
 // oxlint-disable-next-line react/only-export-components
 export const useOfferListContext = () => {

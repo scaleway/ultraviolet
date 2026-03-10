@@ -141,7 +141,11 @@ type ListType = {
   /**
    * @deprecated Use `colMode="strict"`
    */
-  (props: LegacyListProps & RefAttributes<HTMLTableElement>): ReactNode
+
+  (
+    // oxlint-disable-next-line typescript/unified-signatures
+    props: LegacyListProps & RefAttributes<HTMLTableElement>,
+  ): ReactNode
   Cell: typeof Cell
   Row: typeof Row
   SelectBar: typeof SelectBar
