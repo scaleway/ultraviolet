@@ -133,6 +133,7 @@ const BaseExpandableCard = forwardRef(
         }
 
         if (event?.dataTransfer) {
+          // oxlint-disable-next-line typescript/no-unsafe-type-assertion
           const data = JSON.parse(
             event.dataTransfer.getData('text'),
           ) as DraggableListType

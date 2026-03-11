@@ -1,73 +1,14 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
-import { createContext, useContext, useMemo } from 'react'
+import type { InputHTMLAttributes, ReactNode } from 'react'
+import { useMemo } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { Toggle } from '../Toggle'
+import { ToggleGroupContext } from './Context'
+import { ToggleGroupToggle } from './SingleToggle'
 import { toggleGroupStyle } from './styles.css'
-
-type ToggleGroupContextType = {
-  groupName: string
-  groupValues: string[]
-  error: boolean
-} & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
-
-const ToggleGroupContext = createContext<ToggleGroupContextType | undefined>(
-  undefined,
-)
-
-type ToggleGroupToggleProps = Omit<
-  ComponentProps<typeof Toggle>,
-  'onChange' | 'checked' | 'required'
-> & {
-  value: string
-}
-
-/**
- * ToggleGroup is a component that allows you to group a set of Toggle components together under the same legend.
- */
-export const ToggleGroupToggle = ({
-  disabled,
-  name,
-  value,
-  label,
-  helper,
-  error,
-  className,
-  'data-testid': dataTestId,
-  style,
-}: ToggleGroupToggleProps) => {
-  const context = useContext(ToggleGroupContext)
-
-  if (!context) {
-    throw new Error('ToggleGroup.Toggle can only be used inside a ToggleGroup')
-  }
-
-  const { groupName, onChange, groupValues, error: contextError } = context
-
-  const ToggleName = `${groupName}.${name}`
-  const ToggleValue = value.toString()
-
-  return (
-    <Toggle
-      checked={groupValues?.includes(ToggleValue)}
-      className={className}
-      data-testid={dataTestId}
-      disabled={disabled}
-      error={error || contextError}
-      helper={helper}
-      label={label}
-      name={ToggleName}
-      onChange={onChange}
-      style={style}
-      value={ToggleValue}
-    />
-  )
-}
 
 type ToggleGroupProps = {
   legend?: string

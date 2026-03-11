@@ -149,8 +149,6 @@ export const Row = ({
     onChangeSelect?.(offerName)
   }
 
-  const isSelectableDisable = disabled || loading || !!selectDisabled
-
   const offerListRowContextValue = useMemo(
     () => ({ selected: isSelected, banner: !!banner }),
     [isSelected, banner],

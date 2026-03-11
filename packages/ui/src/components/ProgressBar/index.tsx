@@ -48,79 +48,83 @@ export const ProgressBar = ({
   'aria-labelledby': ariaLabelledBy,
   'aria-label': ariaLabel,
   style,
-}: ProgressBarProps) => (
-  <Stack
-    alignItems="center"
-    direction={direction}
-    gap={direction === 'column' ? 1 : 2}
-  >
-    {direction === 'column' && (label || showProgress) ? (
-      <Stack
-        direction="row"
-        justifyContent={!label && showProgress ? 'right' : 'space-between'}
-        width="100%"
-      >
+}: ProgressBarProps) => {
+  const computedValue = suffix === '%' ? (100 * value) / max : value
+
+  return (
+    <Stack
+      alignItems="center"
+      direction={direction}
+      gap={direction === 'column' ? 1 : 2}
+    >
+      {direction === 'column' && (label || showProgress) ? (
+        <Stack
+          direction="row"
+          justifyContent={!label && showProgress ? 'right' : 'space-between'}
+          width="100%"
+        >
+          <Label labelDescription={labelDescription} size="medium">
+            {label}
+          </Label>
+          {showProgress ? (
+            <Text
+              as="label"
+              placement="right"
+              sentiment="neutral"
+              variant="bodySmall"
+            >
+              {prefix}
+              {computedValue}
+              {suffix}
+            </Text>
+          ) : null}
+        </Stack>
+      ) : null}
+
+      {direction === 'row' && label ? (
         <Label labelDescription={labelDescription} size="medium">
           {label}
         </Label>
-        {showProgress ? (
+      ) : null}
+
+      <div
+        aria-label={ariaLabel}
+        aria-labelledby={ariaLabelledBy}
+        aria-valuemax={max}
+        aria-valuemin={0}
+        aria-valuenow={value}
+        className={cn(className, progressBarStyle.container)}
+        data-testid={dataTestId}
+        role="progressbar"
+        style={style}
+      >
+        {progress ? (
+          <div className={progressBarStyle.progressBar} />
+        ) : (
+          <div
+            className={progressBarStyle.filledBarSentiments[sentiment]}
+            style={assignInlineVars({
+              [percentageValue]: `${(100 * Math.max(0, Math.min(max, value))) / max}%`,
+            })}
+          />
+        )}
+      </div>
+      {showProgress && direction === 'row' ? (
+        <Stack direction="row" gap={1} width="fit-content">
           <Text
             as="label"
-            placement="right"
+            className={
+              progressBarStyle.customText[suffix ? 'withSuffix' : 'noSuffix']
+            }
             sentiment="neutral"
             variant="bodySmall"
           >
             {prefix}
-            {suffix === '%' ? (100 * value) / max : value}
+            {computedValue}
             {suffix}
           </Text>
-        ) : null}
-      </Stack>
-    ) : null}
-
-    {direction === 'row' && label ? (
-      <Label labelDescription={labelDescription} size="medium">
-        {label}
-      </Label>
-    ) : null}
-
-    <div
-      aria-label={ariaLabel}
-      aria-labelledby={ariaLabelledBy}
-      aria-valuemax={max}
-      aria-valuemin={0}
-      aria-valuenow={value}
-      className={cn(className, progressBarStyle.container)}
-      data-testid={dataTestId}
-      role="progressbar"
-      style={style}
-    >
-      {progress ? (
-        <div className={progressBarStyle.progressBar} />
-      ) : (
-        <div
-          className={progressBarStyle.filledBarSentiments[sentiment]}
-          style={assignInlineVars({
-            [percentageValue]: `${(100 * Math.max(0, Math.min(max, value))) / max}%`,
-          })}
-        />
-      )}
-    </div>
-    {showProgress && direction === 'row' ? (
-      <Stack direction="row" gap={1} width="fit-content">
-        <Text
-          as="label"
-          className={
-            progressBarStyle.customText[suffix ? 'withSuffix' : 'noSuffix']
-          }
-          sentiment="neutral"
-          variant="bodySmall"
-        >
-          {prefix}
-          {suffix === '%' ? (100 * value) / max : value}
-          {suffix}
-        </Text>
-      </Stack>
-    ) : null}
-  </Stack>
-)
+        </Stack>
+      ) : null}
+    </Stack>
+  )
+}
