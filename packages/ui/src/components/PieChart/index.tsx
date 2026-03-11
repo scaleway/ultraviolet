@@ -65,6 +65,7 @@ export const PieChart = ({
     [emptyLegend],
   )
 
+  // oxlint-disable-next-line typescript/no-unsafe-type-assertion
   const localColors = getLegendColor(theme as typeof UVTheme)
 
   const LegendDisplayer = useCallback(

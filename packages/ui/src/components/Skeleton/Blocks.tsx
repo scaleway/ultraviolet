@@ -21,7 +21,6 @@ export const Blocks = ({
     })}
   >
     {Array.from({ length }, (_, i) => (
-      // oxlint-disable react/no-array-index-key: to fix
       <div
         className={skeletonStyle.blocksSkeleton}
         key={`skeleton-blocks-${i}`}

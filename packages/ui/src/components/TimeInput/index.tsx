@@ -1,10 +1,7 @@
 'use client'
 
-import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
-import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
 
-import { Button } from '../Button'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -20,6 +17,7 @@ import {
   isNumber,
   setValueByType,
 } from './helpers'
+import { RightIcon } from './RightIcon'
 import { timeInputStyle } from './styles.css'
 
 import type { CSSProperties, FocusEvent, ReactNode } from 'react'
@@ -247,6 +245,9 @@ export const TimeInput = ({
     }
   }
 
+  const bottomText = error || helper
+  const isEditable = readOnly || disabled
+
   return (
     <Stack className={className} gap={0.5} style={style}>
       {label || labelDescription ? (
@@ -333,7 +334,7 @@ export const TimeInput = ({
                   data-testid={`${fullName()}-input`}
                   disabled={disabled}
                   onChange={event => {
-                    if (!(readOnly || disabled)) {
+                    if (!isEditable) {
                       const key = getLastTypedChar(
                         event.target.value,
                         getValueByType(type, time),
@@ -347,7 +348,7 @@ export const TimeInput = ({
                     event.stopPropagation()
                   }}
                   onKeyDown={event => {
-                    if (!(readOnly || disabled)) {
+                    if (!isEditable) {
                       if (event.key === 'ArrowUp') {
                         event.preventDefault()
                         handleIncrease(type)
@@ -400,16 +401,17 @@ export const TimeInput = ({
               data-testid="am-pm-input"
               disabled={disabled}
               onChange={event => {
-                if (!(readOnly || disabled)) {
+                if (!isEditable) {
                   const key = event.target.value.slice(-1)
                   if (isAOrP(key)) {
+                    // oxlint-disable-next-line typescript/no-unsafe-type-assertion
                     handleChangePeriod(key as 'a' | 'p')
                   }
                 }
               }}
               onClick={event => event.stopPropagation()}
               onKeyDown={event => {
-                if (!(readOnly || disabled)) {
+                if (!isEditable) {
                   if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
                     event.preventDefault()
                     handleChangePeriod(period === 'am' ? 'p' : 'a')
@@ -428,29 +430,16 @@ export const TimeInput = ({
           ) : null}
         </Stack>
         {error || clearable ? (
-          <Stack alignItems="center" direction="row" gap="1">
-            {error ? <AlertCircleIcon sentiment="danger" /> : null}
-            {clearable ? (
-              <Button
-                aria-label="clear value"
-                data-testid="clear"
-                disabled={disabled || readOnly}
-                onClick={event => {
-                  event.stopPropagation()
-                  setTime(undefined)
-                  onChange?.(undefined)
-                }}
-                sentiment="neutral"
-                size="small"
-                variant="ghost"
-              >
-                <CloseIcon />
-              </Button>
-            ) : null}
-          </Stack>
+          <RightIcon
+            clearable={clearable}
+            error={!!error}
+            isEditable={isEditable}
+            onChange={onChange}
+            setTime={setTime}
+          />
         ) : null}
       </Stack>
-      {helper || error ? (
+      {bottomText ? (
         <Text
           as="p"
           disabled={disabled}
@@ -458,7 +447,7 @@ export const TimeInput = ({
           sentiment={error ? 'danger' : 'neutral'}
           variant="caption"
         >
-          {error || helper}
+          {bottomText}
         </Text>
       ) : null}
     </Stack>

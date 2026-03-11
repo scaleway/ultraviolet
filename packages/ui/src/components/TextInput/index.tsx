@@ -1,83 +1,29 @@
 'use client'
 
-import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { AutoFixIcon } from '@ultraviolet/icons/AutoFixIcon'
-import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
-import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-import { EyeIcon } from '@ultraviolet/icons/EyeIcon'
-import { EyeOffIcon } from '@ultraviolet/icons/EyeOffIcon'
 import { cn } from '@ultraviolet/utils'
 import {
   forwardRef,
   useCallback,
   useId,
   useImperativeHandle,
-  useMemo,
   useRef,
   useState,
 } from 'react'
 
 import { Button } from '../Button'
 import { Label } from '../Label'
-import { Loader } from '../Loader'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
+import { BottomText } from './BottomText'
+import { PrefixSuffix } from './PrefixSuffix'
+import { RightIcon } from './RightIcon'
+import { ShowHidePassword } from './ShowHidePassword'
 import { textInputStyle } from './styles.css'
 
-import type { TEXTINPUT_SIZE_HEIGHT } from './constants'
-import type {
-  ChangeEvent,
-  ChangeEventHandler,
-  InputHTMLAttributes,
-  ReactNode,
-} from 'react'
-
-type TextInputProps = {
-  className?: string
-  clearable?: boolean
-  'data-testid'?: string
-  error?: string
-  helper?: ReactNode
-  label?: string
-  labelDescription?: ReactNode
-  loading?: boolean
-  minLength?: number
-  maxLength?: number
-  onRandomize?: () => void
-  prefix?: ReactNode
-  size?: keyof typeof TEXTINPUT_SIZE_HEIGHT
-  success?: string | boolean
-  suffix?: ReactNode
-  tooltip?: string
-  type?: 'text' | 'password' | 'url' | 'email'
-  value?: string
-  defaultValue?: string
-  onChangeValue?: (value: string) => void
-} & Pick<
-  InputHTMLAttributes<HTMLInputElement>,
-  | 'onFocus'
-  | 'onBlur'
-  | 'name'
-  | 'id'
-  | 'placeholder'
-  | 'aria-label'
-  | 'aria-labelledby'
-  | 'disabled'
-  | 'readOnly'
-  | 'required'
-  | 'autoFocus'
-  | 'tabIndex'
-  | 'autoComplete'
-  | 'onKeyDown'
-  | 'onKeyUp'
-  | 'role'
-  | 'aria-live'
-  | 'aria-atomic'
-  | 'onChange'
-  | 'style'
->
+import type { TextInputProps } from './type'
+import type { ChangeEventHandler } from 'react'
 
 /**
  * This component offers an extended input HTML. The component can be controlled or uncontrolled.
@@ -140,18 +86,6 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
     const computedType =
       type === 'password' && isPasswordVisible ? 'text' : type
 
-    const sentiment = useMemo(() => {
-      if (error) {
-        return 'danger'
-      }
-
-      if (success) {
-        return 'success'
-      }
-
-      return 'neutral'
-    }, [error, success])
-
     const onChangeCallback: ChangeEventHandler<HTMLInputElement> = useCallback(
       event => {
         onChange?.(event)
@@ -162,7 +96,6 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
     )
 
     const computedValue = value ?? localValue
-
     const computedClearable = clearable && !!computedValue
 
     return (
@@ -184,198 +117,112 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             {label}
           </Label>
         ) : null}
-        <div>
-          <Tooltip text={tooltip}>
-            <div
-              className={cn(
-                textInputStyle.inputWrapper,
-                textInputStyle.inputWrapperSizes[size],
-              )}
-              data-disabled={disabled}
-              data-error={!!error}
-              data-has-focus={hasFocus}
-              data-readonly={readOnly}
-              data-success={!!success}
-            >
-              {prefix ? (
-                <Stack
-                  alignItems="center"
-                  className={textInputStyle.basicPrefix}
-                  data-size={size}
-                  direction="row"
-                >
-                  {typeof prefix === 'string' ? (
-                    <Text
-                      as="span"
-                      disabled={disabled}
-                      sentiment="neutral"
-                      variant="bodySmall"
-                    >
-                      {prefix}
-                    </Text>
-                  ) : (
-                    prefix
-                  )}
-                </Stack>
-              ) : null}
-              <input
-                aria-invalid={!!error}
-                aria-label={ariaLabel}
-                aria-labelledby={ariaLabelledBy}
-                autoComplete={autoComplete}
-                // oxlint-disable-next-line jsx_a11y/no-autofocus
-                autoFocus={autoFocus}
-                className={textInputStyle.input}
-                data-size={size}
-                data-testid={dataTestId}
-                defaultValue={defaultValue}
-                disabled={disabled}
-                id={id ?? localId}
-                maxLength={maxLength}
-                minLength={minLength}
-                name={name}
-                onBlur={event => {
-                  setHasFocus(false)
-                  onBlur?.(event)
-                }}
-                onChange={onChangeCallback}
-                onFocus={event => {
-                  setHasFocus(true)
-                  onFocus?.(event)
-                }}
-                onKeyDown={onKeyDown}
-                onKeyUp={onKeyUp}
-                placeholder={placeholder}
-                readOnly={readOnly}
-                ref={inputRef}
-                required={required}
-                style={style}
-                tabIndex={tabIndex}
-                type={computedType}
-                value={value}
-              />
-              {success || error || loading || computedClearable ? (
-                <Stack
-                  alignItems="center"
-                  className={textInputStyle.stateStack}
-                  direction="row"
-                  gap={1}
-                >
-                  {computedClearable ? (
-                    <Button
-                      aria-label="clear value"
-                      disabled={disabled || !computedValue}
-                      onClick={() => {
-                        if (inputRef?.current) {
-                          inputRef.current.value = ''
-                          setLocalValue('')
-                          onChangeCallback({
-                            currentTarget: { value: '' },
-                            target: { value: '' },
-                          } as ChangeEvent<HTMLInputElement>)
-                        }
-                      }}
-                      sentiment="neutral"
-                      size={size === 'small' ? 'xsmall' : 'small'}
-                      variant="ghost"
-                    >
-                      <CloseIcon size="small" />
-                    </Button>
-                  ) : null}
-                  {success ? (
-                    <CheckCircleIcon
-                      disabled={disabled}
-                      sentiment="success"
-                      size="small"
-                    />
-                  ) : null}
-                  {error ? (
-                    <AlertCircleIcon
-                      disabled={disabled}
-                      sentiment="danger"
-                      size="small"
-                    />
-                  ) : null}
-                  {loading && !disabled ? <Loader active size="small" /> : null}
-                </Stack>
-              ) : null}
-              {suffix ? (
-                <Stack
-                  alignItems="center"
-                  className={textInputStyle.basicSuffix}
-                  direction="row"
-                >
-                  {typeof suffix === 'string' ? (
-                    <Text
-                      as="span"
-                      disabled={disabled}
-                      sentiment="neutral"
-                      variant="bodySmall"
-                    >
-                      {suffix}
-                    </Text>
-                  ) : (
-                    suffix
-                  )}
-                </Stack>
-              ) : null}
-              {type === 'password' ? (
-                <Stack
-                  alignItems="center"
-                  className={textInputStyle.ctaSuffix}
-                  direction="row"
-                >
-                  <Button
-                    aria-label={isPasswordVisible ? 'hide' : 'show'}
-                    data-testid={
-                      dataTestId ? `${dataTestId}-visibility-button` : undefined
-                    }
-                    disabled={disabled}
-                    onClick={() => {
-                      setIsPasswordVisible(!isPasswordVisible)
-                    }}
-                    sentiment="neutral"
-                    size={size === 'small' ? 'xsmall' : 'small'}
-                    variant="ghost"
-                  >
-                    {isPasswordVisible ? <EyeOffIcon /> : <EyeIcon />}
-                  </Button>
-                </Stack>
-              ) : null}
-              {onRandomize ? (
-                <Stack
-                  alignItems="center"
-                  className={textInputStyle.ctaSuffix}
-                  direction="row"
-                >
-                  <Button
-                    disabled={disabled}
-                    onClick={onRandomize}
-                    sentiment="neutral"
-                    size={size === 'small' ? 'xsmall' : 'small'}
-                    variant="ghost"
-                  >
-                    <AutoFixIcon />
-                  </Button>
-                </Stack>
-              ) : null}
-            </div>
-          </Tooltip>
-        </div>
-        {error || typeof success === 'string' || typeof helper === 'string' ? (
-          <Text
-            as="p"
-            disabled={disabled}
-            prominence={error || success ? 'default' : 'weak'}
-            sentiment={sentiment}
-            variant="caption"
+        <Tooltip text={tooltip}>
+          <div
+            className={cn(
+              textInputStyle.inputWrapper,
+              textInputStyle.inputWrapperSizes[size],
+            )}
+            data-disabled={disabled}
+            data-error={!!error}
+            data-has-focus={hasFocus}
+            data-readonly={readOnly}
+            data-success={!!success}
           >
-            {error || success || helper}
-          </Text>
-        ) : null}
-        {!(error || success) && typeof helper !== 'string' && helper
-          ? helper
-          : null}
+            <PrefixSuffix
+              content={prefix}
+              disabled={disabled}
+              size={size}
+              type="prefix"
+            />
+            <input
+              aria-invalid={!!error}
+              aria-label={ariaLabel}
+              aria-labelledby={ariaLabelledBy}
+              autoComplete={autoComplete}
+              // oxlint-disable-next-line jsx_a11y/no-autofocus
+              autoFocus={autoFocus}
+              className={textInputStyle.input}
+              data-size={size}
+              data-testid={dataTestId}
+              defaultValue={defaultValue}
+              disabled={disabled}
+              id={id ?? localId}
+              maxLength={maxLength}
+              minLength={minLength}
+              name={name}
+              onBlur={event => {
+                setHasFocus(false)
+                onBlur?.(event)
+              }}
+              onChange={onChangeCallback}
+              onFocus={event => {
+                setHasFocus(true)
+                onFocus?.(event)
+              }}
+              onKeyDown={onKeyDown}
+              onKeyUp={onKeyUp}
+              placeholder={placeholder}
+              readOnly={readOnly}
+              ref={inputRef}
+              required={required}
+              style={style}
+              tabIndex={tabIndex}
+              type={computedType}
+              value={value}
+            />
+            <RightIcon
+              computedClearable={computedClearable}
+              computedValue={computedValue}
+              disabled={disabled}
+              error={error}
+              inputRef={inputRef}
+              loading={loading}
+              onChangeCallback={onChangeCallback}
+              setLocalValue={setLocalValue}
+              size={size}
+              success={success}
+            />
+            <PrefixSuffix
+              content={suffix}
+              disabled={disabled}
+              size={size}
+              type="suffix"
+            />
+            {type === 'password' ? (
+              <ShowHidePassword
+                data-testid={dataTestId}
+                disabled={disabled}
+                isPasswordVisible={isPasswordVisible}
+                setIsPasswordVisible={setIsPasswordVisible}
+                size={size}
+              />
+            ) : null}
+            {onRandomize ? (
+              <Stack
+                alignItems="center"
+                className={textInputStyle.ctaSuffix}
+                direction="row"
+              >
+                <Button
+                  disabled={disabled}
+                  onClick={onRandomize}
+                  sentiment="neutral"
+                  size={size === 'small' ? 'xsmall' : 'small'}
+                  variant="ghost"
+                >
+                  <AutoFixIcon />
+                </Button>
+              </Stack>
+            ) : null}
+          </div>
+        </Tooltip>
+        <BottomText
+          disabled={disabled}
+          error={error}
+          helper={helper}
+          success={success}
+        />
       </Stack>
     )
   },

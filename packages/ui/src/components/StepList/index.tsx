@@ -2,55 +2,10 @@
 
 import { cn } from '@ultraviolet/utils'
 
-import { Bullet } from '../Bullet'
-
+import { Item } from './Item'
 import { stepListStyle } from './styles.css'
 
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
-
-export type Sizes = 'small' | 'medium'
-
-type ItemProps = {
-  sentiment?: ComponentProps<typeof Bullet>['sentiment']
-  prominence?: ComponentProps<typeof Bullet>['prominence']
-  size?: Sizes
-  disabled?: boolean
-  children: ReactNode
-  onClick?: () => void
-  onKeyDown?: () => void
-  className?: string
-  bulletContent?: ReactNode
-}
-
-const Item = ({
-  bulletContent,
-  sentiment,
-  prominence,
-  children,
-  onClick,
-  onKeyDown,
-  size = 'medium',
-  disabled = false,
-  className,
-}: ItemProps) => (
-  <li
-    className={cn(className, stepListStyle.step({ disabled }))}
-    onClick={onClick}
-    onKeyDown={onKeyDown}
-  >
-    {bulletContent ? (
-      <Bullet
-        disabled={disabled}
-        prominence={prominence}
-        sentiment={sentiment}
-        size={size}
-      >
-        {bulletContent}
-      </Bullet>
-    ) : null}
-    <div className={stepListStyle.stepDiv({ size })}>{children}</div>
-  </li>
-)
+import type { CSSProperties, ReactNode } from 'react'
 
 type StepListProps = {
   children: ReactNode

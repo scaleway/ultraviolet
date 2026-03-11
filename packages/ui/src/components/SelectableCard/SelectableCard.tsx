@@ -103,6 +103,7 @@ export const SelectableCard = forwardRef(
             `label[for="${inputElement.id}"]`,
           )
 
+          // oxlint-disable-next-line typescript/no-unsafe-type-assertion
           const targetNode = event.target as Node
 
           // Check if the event target is the input element, its associated label, or the children content
@@ -119,6 +120,8 @@ export const SelectableCard = forwardRef(
       [disabled],
     )
 
+    const isCheckboxOrToggle = type === 'checkbox' || type === 'toggle'
+
     return (
       <ParentContainer>
         <Stack
@@ -127,9 +130,7 @@ export const SelectableCard = forwardRef(
             className,
             selectableCardStyle.container({
               cursor:
-                (type === 'checkbox' || type === 'toggle') && isComplexChildren
-                  ? 'default'
-                  : 'custom',
+                isCheckboxOrToggle && isComplexChildren ? 'default' : 'custom',
               image,
             }),
             label
@@ -145,7 +146,7 @@ export const SelectableCard = forwardRef(
           flex={1}
           gap={0.5}
           onClick={
-            (type === 'checkbox' || type === 'toggle') && isComplexChildren
+            isCheckboxOrToggle && isComplexChildren
               ? undefined
               : onClickContainer
           }
@@ -193,8 +194,7 @@ export const SelectableCard = forwardRef(
                     : undefined,
                 )}
                 data-has-default-cursor={
-                  (type === 'checkbox' || type === 'toggle') &&
-                  isComplexChildren
+                  isCheckboxOrToggle && isComplexChildren
                 }
                 data-has-label={!!label && showTick}
                 onKeyDown={event => event.stopPropagation()}

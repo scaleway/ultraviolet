@@ -7,18 +7,11 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
+import { RadioMarkedIcon } from './MarkedIcon'
 import { radioStyle } from './styles.css'
 
 import type { LabelProp } from '../../types'
 import type { InputHTMLAttributes, ReactNode } from 'react'
-
-const RadioMarkedIcon = () => (
-  <g>
-    <circle cx="12" cy="12" r="10" strokeWidth="2" />
-    <circle className={radioStyle.innerCircleRing} cx="12" cy="12" r="8" />
-    <circle className={radioStyle.mark} cx="12" cy="12" r="5" />
-  </g>
-)
 
 type RadioProps = {
   error?: ReactNode
@@ -111,6 +104,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               <RadioMarkedIcon />
             </svg>
             {label ? (
+              // biome-ignore lint/complexity/noUselessFragments: needed
               <>
                 {typeof label === 'string' ? (
                   <Text

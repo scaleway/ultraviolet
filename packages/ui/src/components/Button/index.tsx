@@ -168,6 +168,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
             children,
             className: computedClassName,
             'data-testid': dataTestId,
+            // oxlint-disable-next-line typescript/no-unsafe-type-assertion
             ref: ref as Ref<HTMLElement>,
             style,
           })}
@@ -202,6 +203,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
             onMouseLeave={onMouseLeave}
             onMouseOut={onMouseOut}
             onMouseUp={onMouseUp}
+            // oxlint-disable-next-line typescript/no-unsafe-type-assertion
             ref={ref as Ref<HTMLAnchorElement>}
             role={role}
             style={style}
@@ -237,6 +239,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
           onMouseOut={onMouseOut}
           onMouseUp={onMouseUp}
           onPointerDown={onPointerDown}
+          // oxlint-disable-next-line typescript/no-unsafe-type-assertion
           ref={ref as Ref<HTMLButtonElement>}
           role={role}
           style={style}
