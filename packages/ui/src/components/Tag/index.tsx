@@ -17,19 +17,34 @@ const COPY_DURATION = 2500
 
 type TagProps = {
   isLoading?: boolean
-  onClose?: MouseEventHandler<HTMLButtonElement>
   sentiment?: (typeof SENTIMENTS)[number]
   disabled?: boolean
-  copiable?: boolean
-  copyButton?: boolean
-  copyText?: string
-  copiedText?: string
+
   className?: string
-  children: ReactNode
   variant?: 'default' | 'code'
   'data-testid'?: string
   style?: CSSProperties
-}
+} & (
+  | {
+      keyValue: { key: string; value: string }
+      children?: never
+      copiable?: never
+      copyButton?: never
+      copyText?: never
+      copiedText?: never
+      onClose?: never
+    }
+  | {
+      keyValue?: never
+      children: ReactNode
+      copiable?: boolean
+      copyButton?: boolean
+      copyText?: string
+
+      copiedText?: string
+      onClose?: MouseEventHandler<HTMLButtonElement>
+    }
+)
 
 type TagInnerProps = Omit<
   TagProps,
@@ -93,6 +108,7 @@ export const Tag = ({
   variant = 'default',
   className,
   style,
+  keyValue,
   'data-testid': dataTestId,
 }: TagProps) => {
   const stringChildren = useMemo(() => {
@@ -110,6 +126,61 @@ export const Tag = ({
   const [isCopied, setCopied] = useClipboard(stringChildren, {
     successDuration: COPY_DURATION,
   })
+
+  if (keyValue) {
+    return (
+      <>
+        <span
+          className={cn(
+            className,
+            tagStyle.container({
+              disabled,
+              sentiment,
+              isKey: true,
+              isKeyValue: true,
+            }),
+          )}
+          data-testid={dataTestId}
+          style={style}
+        >
+          <TagInner
+            copiable
+            copyButton={copyButton}
+            disabled={disabled}
+            isLoading={isLoading}
+            onClose={onClose}
+            variant={variant}
+          >
+            {keyValue.key}
+          </TagInner>
+        </span>
+        <span
+          className={cn(
+            className,
+            tagStyle.container({
+              disabled,
+              sentiment,
+              isValue: true,
+              isKeyValue: true,
+            }),
+          )}
+          data-testid={dataTestId}
+          style={style}
+        >
+          <TagInner
+            copiable
+            copyButton={copyButton}
+            disabled={disabled}
+            isLoading={isLoading}
+            onClose={onClose}
+            variant={variant}
+          >
+            {keyValue.value}
+          </TagInner>
+        </span>
+      </>
+    )
+  }
 
   if (copiable && !disabled) {
     return (
