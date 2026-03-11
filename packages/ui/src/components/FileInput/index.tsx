@@ -1,6 +1,6 @@
 'use client'
 
-import type { ChangeEvent, DragEvent } from 'react'
+import type { ChangeEvent, DragEvent as DragEventReact } from 'react'
 import {
   useEffect,
   useId,
@@ -53,7 +53,7 @@ const FileInputBase = ({
   const inputId = useId()
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const onDragOver = (event: DragEvent<HTMLDivElement>) => {
+  const onDragOver = (event: DragEventReact) => {
     event.preventDefault()
     event.stopPropagation()
     setDragState('over')
@@ -62,8 +62,8 @@ const FileInputBase = ({
   const onDragPage = () => setDragState('page')
 
   const handleDrop = () => setDragState('default')
-  const handleDragLeave = (event: Event) => {
-    const dragEvent = event as unknown as DragEvent
+  const handleDragLeave = (event: DragEvent) => {
+    const dragEvent = event
 
     if (event.type === 'dragend' || dragEvent.relatedTarget === null) {
       setDragState('default')
@@ -108,7 +108,7 @@ const FileInputBase = ({
     onChangeFiles?.(formattedFiles)
   }
 
-  const manageDrop = (event: DragEvent<HTMLDivElement>) => {
+  const manageDrop = (event: DragEventReact<HTMLDivElement>) => {
     event.preventDefault()
 
     if (!disabled) {
@@ -125,7 +125,7 @@ const FileInputBase = ({
     }
   }
 
-  const onDropComputed = (event: DragEvent<HTMLDivElement>) => {
+  const onDropComputed = (event: DragEventReact<HTMLDivElement>) => {
     if (!disabled) {
       onDrop?.(event)
       manageDrop(event)
@@ -141,18 +141,6 @@ const FileInputBase = ({
         {error}
       </Text>
     ) : null
-
-  const value = useMemo(
-    () => ({
-      disabled,
-      error: !!error,
-      files,
-      inputRef,
-      onChangeFiles,
-      setFiles,
-    }),
-    [disabled, error, files, onChangeFiles],
-  )
 
   const input = (
     <input
@@ -181,6 +169,18 @@ const FileInputBase = ({
       {bottom}
     </Text>
   ) : null
+
+  const value = useMemo(
+    () => ({
+      disabled,
+      error: !!error,
+      files,
+      inputRef,
+      onChangeFiles,
+      setFiles,
+    }),
+    [disabled, error, files, onChangeFiles],
+  )
 
   if (variant === 'overlay') {
     return (

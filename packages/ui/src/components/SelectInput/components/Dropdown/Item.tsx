@@ -36,7 +36,6 @@ export const Item = ({
 
   const handleClick = ({
     clickedOption,
-    group,
     event,
   }: {
     clickedOption: OptionType
@@ -88,7 +87,6 @@ export const Item = ({
           handleClick({
             clickedOption: option,
             event,
-            group,
           })
         }
       }}
@@ -98,7 +96,6 @@ export const Item = ({
           handleClick({
             clickedOption: option,
             event,
-            group,
           })
         }
       }}
@@ -124,7 +121,6 @@ export const Item = ({
               handleClick({
                 clickedOption: option,
                 event,
-                group,
               })
             }
           }}

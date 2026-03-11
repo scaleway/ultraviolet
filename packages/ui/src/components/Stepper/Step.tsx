@@ -1,12 +1,11 @@
 'use client'
 
-import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import { useMemo } from 'react'
-import { Bullet } from '../Bullet'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { StepBullet } from './Bullet'
 import { useStepper } from './StepperProvider'
 import { stepperStyle } from './styles.css'
 
@@ -70,7 +69,8 @@ export const Step = ({
     <Stack
       alignItems="center"
       className={cn(
-        className ?? 'step',
+        className,
+        'step',
         stepperStyle.stepContainer,
         separatorBottom
           ? stepperStyle.containerRecipe({
@@ -103,33 +103,12 @@ export const Step = ({
       }}
       style={style}
     >
-      {isDone && !disabled ? (
-        <Bullet
-          className={stepperStyle.stepBullet({
-            disabled,
-            isActive,
-            size,
-          })}
-          prominence="default"
-          sentiment="primary"
-          size={size}
-        >
-          <CheckIcon />
-        </Bullet>
-      ) : (
-        <Bullet
-          className={stepperStyle.stepBullet({
-            disabled,
-            isActive,
-            size,
-          })}
-          prominence="strong"
-          sentiment={isDone || isActive ? 'primary' : 'neutral'}
-          size={size}
-        >
-          {(index + 1).toString()}
-        </Bullet>
-      )}
+      <StepBullet
+        disabled={disabled}
+        index={index}
+        isActive={isActive}
+        isDone={isDone}
+      />
       {title ? (
         <Text
           as="span"

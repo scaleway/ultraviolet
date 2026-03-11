@@ -1,3 +1,4 @@
+// oxlint-disable import/no-nodejs-modules
 // oxlint-disable eslint/no-console
 // biome-ignore-all lint/performance/useTopLevelRegex: error
 

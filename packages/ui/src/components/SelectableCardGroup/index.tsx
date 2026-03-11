@@ -1,84 +1,15 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
-import { createContext, useContext, useMemo } from 'react'
+import type { InputHTMLAttributes, ReactNode } from 'react'
+import { useMemo } from 'react'
 import { Label } from '../Label'
 import { Row } from '../Row'
-import { SelectableCard } from '../SelectableCard'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { SelectableCardGroupContext } from './Context'
+import { CardSelectableCard } from './SingleCard'
 import { selectableCardGroupStyle } from './styles.css'
-
-type SelectableCardGroupContextType = {
-  groupName?: string
-  groupValue: string | number | (string | number)[]
-  type: 'radio' | 'checkbox'
-  showTick: boolean
-  error: boolean
-} & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
-
-const SelectableCardGroupContext = createContext<
-  SelectableCardGroupContextType | undefined
->(undefined)
-
-export type CardSelectableCardProps = Omit<
-  ComponentProps<typeof SelectableCard>,
-  'onChange' | 'checked' | 'type' | 'showTick'
->
-
-const CardSelectableCard = ({
-  value,
-  disabled,
-  children,
-  className,
-  isError,
-  onFocus,
-  onBlur,
-  tooltip,
-  id,
-  label,
-  style,
-  'data-testid': dataTestId,
-}: CardSelectableCardProps) => {
-  const context = useContext(SelectableCardGroupContext)
-
-  if (!context) {
-    throw new Error(
-      'SelectableCardGroup.Card can only be used inside a SelectableCardGroup',
-    )
-  }
-
-  const { groupName, onChange, groupValue, type, showTick, error } = context
-
-  return (
-    <SelectableCard
-      checked={
-        typeof groupValue === 'object'
-          ? groupValue.includes(value)
-          : groupValue === value
-      }
-      className={className}
-      data-testid={dataTestId}
-      disabled={disabled}
-      id={id}
-      isError={isError || error}
-      label={label}
-      name={groupName}
-      onBlur={onBlur}
-      onChange={onChange}
-      onFocus={onFocus}
-      showTick={showTick}
-      style={style}
-      tooltip={tooltip}
-      type={type}
-      value={value}
-    >
-      {children}
-    </SelectableCard>
-  )
-}
 
 type SelectableCardGroupProps = {
   legend?: string
