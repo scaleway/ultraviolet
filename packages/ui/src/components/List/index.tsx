@@ -8,7 +8,7 @@ import type {
   RefAttributes,
   SetStateAction,
 } from 'react'
-import { Children, forwardRef, useEffect, useState } from 'react'
+import { forwardRef } from 'react'
 import { Cell } from './Cell'
 import { HeaderCell } from './HeaderCell'
 import { HeaderRow } from './HeaderRow'
@@ -17,6 +17,7 @@ import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
 import { listStyle } from './styles.css'
+import { TableContainer } from './TableContainer'
 import type { ColumnProps } from './types'
 
 // Note: Get type optional type from omit values of ListContext
@@ -47,25 +48,6 @@ type NewListProps = Omit<ListProps, 'colMode'> & {
 }
 type LegacyListProps = Omit<ListProps, 'colMode'> & {
   colMode?: 'flexible' | undefined
-}
-
-const TableContainer = ({ children }: { children: ReactNode }) => {
-  const [childrenMemory, setChildrenMemory] = useState<ReactNode[]>(
-    Children.toArray(children),
-  )
-
-  const { setRefList } = useListContext()
-
-  // Reset ref list when children change
-  useEffect(() => {
-    if (Children.toArray(children) !== childrenMemory) {
-      setRefList([])
-      setChildrenMemory(Children.toArray(children))
-    }
-    // oxlint-disable react/exhaustive-deps
-  }, [children, setRefList])
-
-  return <div className={listStyle.container}>{children}</div>
 }
 
 const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(

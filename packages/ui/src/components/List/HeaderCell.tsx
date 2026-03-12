@@ -1,26 +1,18 @@
 'use client'
 
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
-import { SortIcon as SortIconUV } from '@ultraviolet/icons/SortIcon'
-import { SouthShortIcon } from '@ultraviolet/icons/SouthShortIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
+import { SortIcon } from './SortIcon'
 import { listStyle } from './styles.css'
 import {
   maxWidthHeaderCell,
   minWidthHeaderCell,
   widthHeaderCell,
 } from './variables.css'
-
-const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) =>
-  order ? (
-    <SouthShortIcon className={listStyle.sortIcon[order]} sentiment="primary" />
-  ) : (
-    <SortIconUV sentiment="neutral" />
-  )
 
 type HeaderCellProps = {
   children: ReactNode

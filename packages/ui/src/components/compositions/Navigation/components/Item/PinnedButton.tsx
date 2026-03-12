@@ -2,31 +2,10 @@ import { PinOutlineIcon } from '@ultraviolet/icons/PinOutlineIcon'
 import { UnpinIcon } from '@ultraviolet/icons/UnpinIcon'
 import type { MouseEvent } from 'react'
 import { useMemo } from 'react'
-import { Badge } from '../../../Badge'
-import { Tooltip } from '../../../Tooltip'
-import { useNavigation } from '../NavigationProvider'
-import { navigationStyle } from '../styles.css'
-import type { ItemExpandedType } from './ComponentsTypes'
-
-export const ItemBadge = ({
-  badgeText,
-  animation,
-  disabled,
-  badgeSentiment,
-}: Pick<ItemExpandedType, 'badgeText' | 'badgeSentiment' | 'disabled'> & {
-  animation: boolean
-}) =>
-  badgeText && !animation ? (
-    <Badge
-      className={navigationStyle.itemBadge}
-      disabled={disabled}
-      prominence="strong"
-      sentiment={badgeSentiment}
-      size="small"
-    >
-      {badgeText}
-    </Badge>
-  ) : null
+import { Tooltip } from '../../../../Tooltip'
+import { useNavigation } from '../../NavigationProvider'
+import { navigationStyle } from '../../styles.css'
+import type { ItemExpandedType } from '../ComponentsTypes'
 
 export const ItemPinnedButton = ({
   shouldShowPinnedButton,

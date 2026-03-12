@@ -5,28 +5,12 @@ import type { Serie } from '@nivo/line'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ComponentProps } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import { Checkbox } from '../Checkbox'
 import { Text } from '../Text'
 import { getAverage, getCurrent, getMax, getMin, getSelected } from './helpers'
+import { Cell } from './LegendCell'
 import { backgroundColorLegend, lineChartStyle } from './styles.css'
-
-type CellProps = {
-  value?: DatumValue
-  variant: ComponentProps<typeof Text>['variant']
-}
-
-const Cell = ({ value, variant }: CellProps) => (
-  <Text
-    as="span"
-    className={cn(lineChartStyle.textLegend, lineChartStyle.headTitle)}
-    sentiment="neutral"
-    variant={variant}
-  >
-    {value as string | number}
-  </Text>
-)
 
 type Transformer = (value: DatumValue) => string
 
@@ -66,7 +50,9 @@ export const CustomLegend = ({
     </div>
     <div className={lineChartStyle.body}>
       {data?.map((row, index) => {
-        const values = row.data.map(val => val.y as number)
+        const values = row.data
+          .map(val => val.y)
+          .filter(val => typeof val === 'number')
         const labelIndexed = `${row.id}${index}`
         const id = row.id.toString()
 

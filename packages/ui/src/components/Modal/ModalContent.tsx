@@ -1,5 +1,3 @@
-// biome-ignore-all lint/complexity/noUselessFragments: ok
-
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
@@ -64,32 +62,28 @@ export const ModalContent = ({
       size={finalSize}
       style={style}
     >
-      <>
-        {typeof children === 'function'
-          ? children({
-              close: handleClose,
-              modalId: finalId,
-              show: handleOpen,
-              toggle: handleToggle,
-              visible,
-            })
-          : children}
-        <div className={modalStyle.container}>
-          {isClosable ? (
-            <Button
-              aria-label="close"
-              data-testid={
-                dataTestId ? `${dataTestId}-close-button` : undefined
-              }
-              onClick={handleClose}
-              sentiment="neutral"
-              size="small"
-              variant="ghost"
-            >
-              <CloseIcon />
-            </Button>
-          ) : null}
-        </div>
-      </>
+      {typeof children === 'function'
+        ? children({
+            close: handleClose,
+            modalId: finalId,
+            show: handleOpen,
+            toggle: handleToggle,
+            visible,
+          })
+        : children}
+      <div className={modalStyle.container}>
+        {isClosable ? (
+          <Button
+            aria-label="close"
+            data-testid={dataTestId ? `${dataTestId}-close-button` : undefined}
+            onClick={handleClose}
+            sentiment="neutral"
+            size="small"
+            variant="ghost"
+          >
+            <CloseIcon />
+          </Button>
+        ) : null}
+      </div>
     </Dialog>
   ) : null

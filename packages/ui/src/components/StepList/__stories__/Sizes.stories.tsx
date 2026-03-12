@@ -1,4 +1,4 @@
-import type { Sizes as SizesType } from '..'
+import type { Sizes as SizesType } from '../Item'
 import { StepList } from '..'
 import { Template } from './Template.stories'
 
