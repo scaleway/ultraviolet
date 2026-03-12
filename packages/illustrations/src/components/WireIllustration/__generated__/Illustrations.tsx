@@ -33,6 +33,8 @@ export const ILLUSTRATIONS = {
     'https://assets.scaleway.com/illustrations/products/containers/containers-wire.svg',
   costManager:
     'https://assets.scaleway.com/illustrations/products/costManager/cost-manager-wire.svg',
+  dataOrchestrator:
+    'https://assets.scaleway.com/illustrations/products/dataOrchestrator/data-orchestrator-wire.svg',
   dataWarehouse:
     'https://assets.scaleway.com/illustrations/products/dataWarehouse/data-warehouse-wire.svg',
   dediboxCore:

@@ -17,6 +17,7 @@ import * as cockpit from './cockpit'
 import * as containerRegistry from './containerRegistry'
 import * as containers from './containers'
 import * as costManager from './costManager'
+import * as dataOrchestrator from './dataOrchestrator'
 import * as dataWarehouse from './dataWarehouse'
 import * as dedibox from './dedibox'
 import * as dediboxVps from './dediboxVps'
@@ -85,6 +86,7 @@ export {
   containerRegistry,
   containers,
   costManager,
+  dataOrchestrator,
   dataWarehouse,
   dedibox,
   dediboxVps,
