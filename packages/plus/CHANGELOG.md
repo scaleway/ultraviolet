@@ -1,5 +1,47 @@
 # @ultraviolet/plus
 
+## 3.7.0
+
+### Minor Changes
+
+- [#6123](https://github.com/scaleway/ultraviolet/pull/6123) [`8b50acc`](https://github.com/scaleway/ultraviolet/commit/8b50acc40a1d6a3de1923ff17e5b02470b92d3b8) Thanks [@lisalupi](https://github.com/lisalupi)! - ### **⚠️⚠️ BREAKING CHANGES ⚠️⚠️**
+
+  `FAQ`: prop `productIconName` (string) has been replaced with `productIcon` (ReactNode). To add an icon, simply pass the selected icon to the component instead of its name:
+
+  Before:
+
+  ```js
+  <FAQ description="description" productIconName="sms" title="title" />
+  ```
+
+  After:
+
+  ```js
+  import { SmsProductIcon } from "@ultraviolet/icons/product/SmsProductIcon";
+
+  <FAQ
+    description="description"
+    productIconName={<SmsProductIcon size="xlarge" />}
+    title="title"
+  />;
+  ```
+
+  Be careful with the sizes: to obtain the same result as before, the product icons must have `size="xlarge"`.
+
+  > This change avoids importing all ProductIcons by default in `@ultraviolet/plus`.
+
+### Patch Changes
+
+- [#6199](https://github.com/scaleway/ultraviolet/pull/6199) [`dce6e86`](https://github.com/scaleway/ultraviolet/commit/dce6e8610dfa9dc03ff5d19f778abaa0cdbecf18) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.0-beta.16`.
+
+- [#6170](https://github.com/scaleway/ultraviolet/pull/6170) [`dfb3fb5`](https://github.com/scaleway/ultraviolet/commit/dfb3fb5100289f96c00d4c13fb136a0d47498e4d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.0-beta.16`.
+
+- Updated dependencies [[`3ac731b`](https://github.com/scaleway/ultraviolet/commit/3ac731bf45938b45c7d3cc6f08742567e528332a), [`8b50acc`](https://github.com/scaleway/ultraviolet/commit/8b50acc40a1d6a3de1923ff17e5b02470b92d3b8), [`7dbb44b`](https://github.com/scaleway/ultraviolet/commit/7dbb44bb932872b6c7f5de6af0597277e88c0eca), [`dce6e86`](https://github.com/scaleway/ultraviolet/commit/dce6e8610dfa9dc03ff5d19f778abaa0cdbecf18), [`dfb3fb5`](https://github.com/scaleway/ultraviolet/commit/dfb3fb5100289f96c00d4c13fb136a0d47498e4d), [`d95e320`](https://github.com/scaleway/ultraviolet/commit/d95e32089cd2a099312ab7c412dd85f0a61f8d68), [`480654c`](https://github.com/scaleway/ultraviolet/commit/480654c8398af482108e9d431939080cf72282ee), [`adc3ce5`](https://github.com/scaleway/ultraviolet/commit/adc3ce5db64bcb7d864de668c7530de8ed5e3dd4), [`93d93d2`](https://github.com/scaleway/ultraviolet/commit/93d93d205d94c16aeff8b809aea23d9074af5193), [`59fb5b7`](https://github.com/scaleway/ultraviolet/commit/59fb5b7bf220ada44900cda3def6d708e8210593)]:
+  - @ultraviolet/ui@3.12.0
+  - @ultraviolet/icons@5.1.6
+  - @ultraviolet/themes@3.1.2
+  - @ultraviolet/utils@1.0.6
+
 ## 3.6.1
 
 ### Patch Changes
