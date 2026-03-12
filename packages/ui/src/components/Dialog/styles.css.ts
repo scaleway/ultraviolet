@@ -6,5 +6,6 @@ const title = style({
   marginTop: theme.space[2],
 })
 
-const xsmall = style({ width: '32.5rem' })
+const xsmall = style({})
+
 export const dialogStyle = { title, xsmall }
