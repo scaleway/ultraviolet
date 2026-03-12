@@ -1,5 +1,21 @@
 # @ultraviolet/illustrations
 
+## 6.0.12
+
+### Patch Changes
+
+- [#6153](https://github.com/scaleway/ultraviolet/pull/6153) [`1b696e7`](https://github.com/scaleway/ultraviolet/commit/1b696e7bbc425d7c3b579d42c9440ad73bec9bec) Thanks [@renovate](https://github.com/apps/renovate)! - fix exports
+
+- [#6202](https://github.com/scaleway/ultraviolet/pull/6202) [`480654c`](https://github.com/scaleway/ultraviolet/commit/480654c8398af482108e9d431939080cf72282ee) Thanks [@lisalupi](https://github.com/lisalupi)! - New illustrations `DataOrchestrator`
+
+- [#6199](https://github.com/scaleway/ultraviolet/pull/6199) [`dce6e86`](https://github.com/scaleway/ultraviolet/commit/dce6e8610dfa9dc03ff5d19f778abaa0cdbecf18) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.0-beta.16`.
+
+- [#6170](https://github.com/scaleway/ultraviolet/pull/6170) [`dfb3fb5`](https://github.com/scaleway/ultraviolet/commit/dfb3fb5100289f96c00d4c13fb136a0d47498e4d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.0-beta.16`.
+
+- Updated dependencies [[`dce6e86`](https://github.com/scaleway/ultraviolet/commit/dce6e8610dfa9dc03ff5d19f778abaa0cdbecf18), [`dfb3fb5`](https://github.com/scaleway/ultraviolet/commit/dfb3fb5100289f96c00d4c13fb136a0d47498e4d)]:
+  - @ultraviolet/themes@3.1.2
+  - @ultraviolet/utils@1.0.6
+
 ## 6.0.11
 
 ### Patch Changes
