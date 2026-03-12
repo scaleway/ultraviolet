@@ -5,8 +5,9 @@ import { tableStyle } from './styles.css'
 
 type HeaderProps = {
   children: ReactNode
+  highlighted?: boolean
 }
 
-export const Header = ({ children }: HeaderProps) => (
-  <thead className={tableStyle.header}>{children}</thead>
+export const Header = ({ children, highlighted }: HeaderProps) => (
+  <thead className={tableStyle.header({ highlighted })}>{children}</thead>
 )

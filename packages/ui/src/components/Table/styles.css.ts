@@ -59,8 +59,20 @@ const cell = recipe({
   },
 })
 
-const header = style({
-  borderBottom: `1px solid ${theme.colors.neutral.border}`,
+const header = recipe({
+  base: {
+    borderBottom: `1px solid ${theme.colors.neutral.border}`,
+  },
+  variants: {
+    highlighted: {
+      true: {
+        background: theme.colors.neutral.backgroundWeak,
+      },
+    },
+  },
+  defaultVariants: {
+    highlighted: false,
+  },
 })
 
 const headerCell = recipe({
