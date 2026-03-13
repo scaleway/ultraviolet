@@ -475,8 +475,8 @@ importers:
         specifier: workspace:*
         version: link:../ui
       react-hook-form:
-        specifier: 7.71.2
-        version: 7.71.2(react@19.2.4)
+        specifier: 8.0.0-beta.1
+        version: 8.0.0-beta.1(react@19.2.4)
     devDependencies:
       '@babel/core':
         specifier: 7.29.0
@@ -6596,8 +6596,8 @@ packages:
     peerDependencies:
       react: ^19.2.4
 
-  react-hook-form@7.71.2:
-    resolution: {integrity: sha512-1CHvcDYzuRUNOflt4MOq3ZM46AronNJtQ1S7tnX6YN4y72qhgiUItpacZUAQ0TyWYci3yz1X+rXaSxiuEm86PA==}
+  react-hook-form@8.0.0-beta.1:
+    resolution: {integrity: sha512-UqCdgYVbmY6QCyEFJSZ0lS5zY6cXT2uUMDYew3ylQm3BR2/PKJ+E6DiKATEWAm8L8WqKsxYBLo+j797BPqnoWA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
@@ -14064,7 +14064,7 @@ snapshots:
       react: 19.2.4
       scheduler: 0.27.0
 
-  react-hook-form@7.71.2(react@19.2.4):
+  react-hook-form@8.0.0-beta.1(react@19.2.4):
     dependencies:
       react: 19.2.4
 
