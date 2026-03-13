@@ -1,5 +1,14 @@
 # Change Log
 
+## 6.2.3
+
+### Patch Changes
+
+- [#6178](https://github.com/scaleway/ultraviolet/pull/6178) [`10b36cd`](https://github.com/scaleway/ultraviolet/commit/10b36cde81cad1f2819183b84fead5e16c9c9932) Thanks [@lisalupi](https://github.com/lisalupi)! - `CodeEditorField`: fix onBlur type
+
+- Updated dependencies [[`deb39cf`](https://github.com/scaleway/ultraviolet/commit/deb39cf2b23595382d4ba7314a639c03659bc4a9), [`8cab78f`](https://github.com/scaleway/ultraviolet/commit/8cab78f18949b629980f3a2113daacc9c2b6835d), [`b20dda8`](https://github.com/scaleway/ultraviolet/commit/b20dda8cfcbf85c3bec79f34734a1626b11ad25f), [`d9b3958`](https://github.com/scaleway/ultraviolet/commit/d9b39585d1d94d7cfdd2d835b3c174ae088801b5)]:
+  - @ultraviolet/ui@3.12.1
+
 ## 6.2.2
 
 ### Patch Changes
