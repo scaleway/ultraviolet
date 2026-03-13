@@ -22,7 +22,13 @@ export type IconProps = {
   title: string
 } & Pick<
   SVGProps<SVGSVGElement>,
-  'className' | 'stroke' | 'cursor' | 'strokeWidth' | 'aria-label' | 'style'
+  | 'className'
+  | 'stroke'
+  | 'cursor'
+  | 'strokeWidth'
+  | 'aria-label'
+  | 'aria-hidden'
+  | 'style'
 >
 
 /**
@@ -42,6 +48,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       strokeWidth,
       disabled,
       'aria-label': ariaLabel,
+      'aria-hidden': ariaHidden,
       children,
       style,
       title,
@@ -55,6 +62,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <svg
+        aria-hidden={ariaHidden}
         aria-label={ariaLabel}
         className={cn(
           className,
