@@ -1,5 +1,22 @@
 # Change Log
 
+## 3.12.1
+
+### Patch Changes
+
+- [#6204](https://github.com/scaleway/ultraviolet/pull/6204) [`deb39cf`](https://github.com/scaleway/ultraviolet/commit/deb39cf2b23595382d4ba7314a639c03659bc4a9) Thanks [@lisalupi](https://github.com/lisalupi)! - `Tag`: new prop `keyValue` to display the tag with read-only key-values and fix `disabled` style
+
+- [#6198](https://github.com/scaleway/ultraviolet/pull/6198) [`8cab78f`](https://github.com/scaleway/ultraviolet/commit/8cab78f18949b629980f3a2113daacc9c2b6835d) Thanks [@lisalupi](https://github.com/lisalupi)! - `InfoTable`: fix cell display and add a new sub-component `InfoTable.CellWithCopyButton`
+
+- [#6185](https://github.com/scaleway/ultraviolet/pull/6185) [`b20dda8`](https://github.com/scaleway/ultraviolet/commit/b20dda8cfcbf85c3bec79f34734a1626b11ad25f) Thanks [@lisalupi](https://github.com/lisalupi)! - **⚠️⚠️ BREAKING CHANGE ⚠️⚠️**
+
+  `Breadcrumbs`: move onClick and onKeyDown handlers to `<a>`/`<button>` instead of `<li>` wrapper. This impacts the props type : it uses `HTMLElement` instead of `HTMLLiElement`
+
+- [#6186](https://github.com/scaleway/ultraviolet/pull/6186) [`d9b3958`](https://github.com/scaleway/ultraviolet/commit/d9b39585d1d94d7cfdd2d835b3c174ae088801b5) Thanks [@lisalupi](https://github.com/lisalupi)! - `List.Row`: new prop `disabledClickRowToExpand`. When enabled, it completely disables expanding a row by clicking anywhere on it.
+  **Note**: If this prop is set to `true` and `expandable` is `false` on the `List`, the row cannot be expanded at all.
+
+  `OfferList`: Clicking a row now selects it, even if the row is expandable. To expand an expandable row, users must click the dedicated expand button instead of anywhere on the row.
+
 ## 3.12.0
 
 ### Minor Changes
