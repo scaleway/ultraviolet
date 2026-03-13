@@ -41,4 +41,7 @@ describe('tag', () => {
 
   test('renders correctly with code variant', () =>
     shouldMatchSnapshot(<Tag variant="code">test</Tag>))
+
+  test('renders correctly with key-value variant', () =>
+    shouldMatchSnapshot(<Tag keyValue={{ key: 'key', value: 'value' }} />))
 })

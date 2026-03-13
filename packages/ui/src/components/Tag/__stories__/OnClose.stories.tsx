@@ -12,6 +12,6 @@ OnClose.parameters = {
 }
 
 OnClose.args = {
-  ...Template.args,
+  children: 'Tag',
   onClose: () => {},
 }

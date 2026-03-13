@@ -5,7 +5,19 @@ import { Tag } from '..'
 export const Copiable: StoryFn<typeof Tag> = args => (
   <Stack gap={1}>
     Without copyButton: <Tag {...args} />
-    With copyButton: <Tag {...args} copyButton />
+    With copyButton:{' '}
+    <Tag
+      copiable={args.copiable}
+      copiedText={args.copiedText}
+      copyButton
+      copyText={args.copyText}
+      disabled={args.disabled}
+      isLoading={args.isLoading}
+      sentiment={args.sentiment}
+      variant={args.variant}
+    >
+      {args.children}
+    </Tag>
   </Stack>
 )
 

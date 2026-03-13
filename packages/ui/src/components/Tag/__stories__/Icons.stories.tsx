@@ -3,7 +3,16 @@ import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { Tag } from '..'
 
 export const Icons: StoryFn<typeof Tag> = args => (
-  <Tag {...args} sentiment="success">
+  <Tag
+    copiable={args.copiable}
+    copiedText={args.copiedText}
+    copyButton={args.copyButton}
+    copyText={args.copyText}
+    disabled={args.disabled}
+    isLoading={args.isLoading}
+    sentiment="success"
+    variant={args.variant}
+  >
     <CheckIcon size="small" />
     Valid
   </Tag>
