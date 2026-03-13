@@ -1,5 +1,5 @@
 import { shouldMatchSnapshot } from '@utils/test'
-import { describe, it } from 'vitest'
+import { describe, it, vi } from 'vitest'
 import { InfoTable } from '..'
 
 describe('infoTable', () => {
@@ -79,6 +79,42 @@ describe('infoTable', () => {
             cell cell cell cell
           </InfoTable.Cell>
           <InfoTable.Cell title="title">cell</InfoTable.Cell>
+          <InfoTable.Cell title="title">cell</InfoTable.Cell>
+        </InfoTable.Row>
+      </InfoTable>,
+    ))
+
+  it('should work with CellWithCopybutton', () =>
+    shouldMatchSnapshot(
+      <InfoTable>
+        <InfoTable.Row templateColumns="repeat(3, 1fr)">
+          <InfoTable.Cell title="title">cell</InfoTable.Cell>
+          <InfoTable.Cell title="title">cell</InfoTable.Cell>
+          <InfoTable.Cell title="title">cell</InfoTable.Cell>
+        </InfoTable.Row>
+        <InfoTable.Row templateColumns="2fr 1fr">
+          <InfoTable.Cell title="title">cell with more text</InfoTable.Cell>
+          <InfoTable.Cell title="title">cell</InfoTable.Cell>
+        </InfoTable.Row>
+        <InfoTable.Row templateColumns="1fr">
+          <InfoTable.Cell title="title">cell</InfoTable.Cell>
+        </InfoTable.Row>
+        <InfoTable.Row templateColumns="repeat(3, 1fr)">
+          <InfoTable.Cell title="title">
+            cell cell cell cell cell cell cell cell cell cell cell cell cell
+            cell cell cell cell cell cell cell cell cell cell cell cell cell
+            cell cell cell cell
+          </InfoTable.Cell>
+          <InfoTable.CellWithCopyButton
+            buttonSize="small"
+            copiedText="copied"
+            copyContent="copy"
+            copyText="copy"
+            onCopy={vi.fn}
+            title="title"
+          >
+            a content
+          </InfoTable.CellWithCopyButton>
           <InfoTable.Cell title="title">cell</InfoTable.Cell>
         </InfoTable.Row>
       </InfoTable>,

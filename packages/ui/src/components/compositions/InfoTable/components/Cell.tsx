@@ -5,7 +5,7 @@ import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
 import { infoTableStyle } from '../styles.css'
 
-type CellProps = {
+export type CellProps = {
   children: ReactNode
   title: ReactNode
   multiline?: boolean
@@ -25,27 +25,24 @@ export const InfoTableCell = ({
     style={style}
     width="100%"
   >
-    <dt className={infoTableStyle.term}>
-      <Text
-        as="div"
-        prominence="weak"
-        sentiment="neutral"
-        variant="bodySmallStrong"
-      >
-        {title}
-      </Text>
-    </dt>
-    <dd className={infoTableStyle.desc}>
-      <Text
-        as="div"
-        className={infoTableStyle.cellText}
-        oneLine={!multiline}
-        prominence="default"
-        sentiment="neutral"
-        variant="body"
-      >
-        {children}
-      </Text>
-    </dd>
+    <Text
+      as="dt"
+      className={infoTableStyle.term}
+      prominence="weak"
+      sentiment="neutral"
+      variant="bodySmallStrong"
+    >
+      {title}
+    </Text>
+    <Text
+      as="dd"
+      className={infoTableStyle.desc}
+      oneLine={!multiline}
+      prominence="default"
+      sentiment="neutral"
+      variant="body"
+    >
+      {children}
+    </Text>
   </Stack>
 )

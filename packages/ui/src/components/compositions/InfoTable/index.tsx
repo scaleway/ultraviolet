@@ -5,6 +5,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import { useMemo } from 'react'
 import { InfoTableContext } from './Context'
 import { InfoTableCell } from './components/Cell'
+import { CellWithCopyButton } from './components/CellWithCopyButton'
 import { InfoTableRow } from './components/Row'
 import { infoTableStyle } from './styles.css'
 
@@ -45,4 +46,5 @@ const BaseInfoTable = ({
 export const InfoTable = Object.assign(BaseInfoTable, {
   Row: InfoTableRow,
   Cell: InfoTableCell,
+  CellWithCopyButton,
 })
