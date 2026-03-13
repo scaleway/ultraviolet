@@ -85,9 +85,9 @@ const IStack = forwardRef<any, PropsWithChildren<StackProps>>(
     {
       gap,
       direction = 'column',
-      alignItems = 'normal',
-      justifyContent = 'normal',
-      wrap = 'nowrap',
+      alignItems,
+      justifyContent,
+      wrap,
       className,
       children,
       id,
