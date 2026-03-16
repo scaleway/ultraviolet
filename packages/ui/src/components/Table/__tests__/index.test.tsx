@@ -361,6 +361,23 @@ describe('table', () => {
       </Table>,
     ))
 
+  test('should render correctly with highlightHeader', () =>
+    shouldMatchSnapshot(
+      <Table columns={columns} highlightHeader>
+        <Table.Body>
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+            <Table.Row id={id} key={id}>
+              <Table.Cell>{columnA}</Table.Cell>
+              <Table.Cell>{columnB}</Table.Cell>
+              <Table.Cell>{columnC}</Table.Cell>
+              <Table.Cell>{columnD}</Table.Cell>
+              <Table.Cell>{columnE}</Table.Cell>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </Table>,
+    ))
+
   test('should render correctly with highlight animation on Table.Row', () =>
     shouldMatchSnapshot(
       <Table

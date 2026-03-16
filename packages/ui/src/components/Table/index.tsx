@@ -49,6 +49,7 @@ type TableProps = Omit<
   autoCollapse?: boolean
   expandButton?: boolean
   columns: ColumnProps[]
+  highlightHeader?: boolean
   style?: CSSProperties
 }
 
@@ -84,6 +85,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
       autoCollapse = false,
       onSelectedChange,
       style,
+      highlightHeader,
     },
     ref,
   ) => (
@@ -106,7 +108,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
           ref={ref}
           style={style}
         >
-          <Header>
+          <Header highlighted={highlightHeader}>
             <HeaderRow hasSelectAllColumn={selectable}>
               {columns.map((column, index) => (
                 <HeaderCell

@@ -95,7 +95,7 @@ export const HeaderCell = ({
         as="div"
         className={tableStyle.headerCellText}
         sentiment={order !== undefined ? 'primary' : 'neutral'}
-        variant="bodySmall"
+        variant="bodySmallStronger"
       >
         {children}
         {info ? (
