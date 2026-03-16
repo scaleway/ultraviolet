@@ -1,7 +1,3 @@
-// oxlint-disable jsx_a11y/interactive-supports-focus: to fix
-// oxlint-disable eslint/max-statements
-// oxlint-disable eslint/complexity
-
 'use client'
 
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
@@ -16,17 +12,19 @@ import {
   useRef,
 } from 'react'
 
-import { Stack } from '../../../Stack'
-import { Tooltip } from '../../../Tooltip'
-import { useNavigation } from '../NavigationProvider'
-import { navigationStyle } from '../styles.css'
+import { Stack } from '../../../../Stack'
+import { Tooltip } from '../../../../Tooltip'
+import { useNavigation } from '../../NavigationProvider'
+import { navigationStyle } from '../../styles.css'
+import { ItemMenu } from '../Menu/Menu'
+import { ItemMenuItem } from '../Menu/MenuItem'
+import { NestedMenu } from '../Menu/NestedMenu'
 
 import { ItemExpanded } from './ItemExpanded'
-import { ItemMenu, ItemMenuItem } from './ItemMenu'
 import { ItemContext } from './ItemProvider'
 
-import type { Badge } from '../../../Badge'
-import type { ItemType, PinUnPinType } from '../types'
+import type { Badge } from '../../../../Badge'
+import type { ItemType, PinUnPinType } from '../../types'
 import type {
   ComponentProps,
   CSSProperties,
@@ -161,8 +159,7 @@ export const Item = memo(
       )
     }
 
-    const itemProvider = useContext(ItemContext)
-    const hasParents = !!itemProvider
+    const hasParents = !!useContext(ItemContext)
 
     const {
       expanded,
@@ -319,6 +316,36 @@ export const Item = memo(
         >
           {children}
         </ItemMenu>
+      )
+    }
+
+    // This content is the menu of the navigation when collasped, while also being inside a menu: nested menu
+    if (Children.count(children) > 0 && hasParents) {
+      return (
+        <NestedMenu
+          active={active}
+          badgeSentiment={badgeSentiment}
+          badgeText={badgeText}
+          disabled={disabled}
+          hasActiveChildren={hasActiveChildren}
+          hasHrefAndNoChildren={hasHrefAndNoChildren}
+          href={href}
+          id={id}
+          isItemPinned={isItemPinned}
+          isPinDisabled={isPinDisabled}
+          label={label}
+          labelDescription={labelDescription}
+          noExpand={noExpand}
+          onClickPinUnpin={onClickPinUnpin}
+          onToggle={onToggle}
+          pinTooltipLocale={pinTooltipLocale}
+          rel={rel}
+          shouldShowPinnedButton={shouldShowPinnedButton}
+          style={style}
+          target={target}
+        >
+          {children}
+        </NestedMenu>
       )
     }
 
