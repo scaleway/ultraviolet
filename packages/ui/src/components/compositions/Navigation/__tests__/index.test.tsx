@@ -1,6 +1,9 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { UseCaseCategoryIcon } from '@ultraviolet/icons/category'
+import {
+  BaremetalCategoryIcon,
+  UseCaseCategoryIcon,
+} from '@ultraviolet/icons/category'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, expect, test, vi } from 'vitest'
@@ -111,6 +114,32 @@ const NavigationShowHide = ({
       </Navigation.Group>
       {/* @ts-expect-error we try to test when no children is provided */}
       <Navigation.Group label="Empty Group" />
+    </Navigation>
+  </NavigationProvider>
+)
+
+const NavigationNested = ({
+  pinnedFeature = true,
+}: BasicNavigationProps & { onShowHide?: () => void }) => (
+  <NavigationProvider
+    animation={false}
+    initialExpanded={false}
+    pinnedFeature={pinnedFeature}
+  >
+    <Navigation logo={<p>Logo</p>}>
+      <Navigation.Group label="Products">
+        <Navigation.Item
+          categoryIcon={<BaremetalCategoryIcon />}
+          id="compute"
+          label="Compute"
+          subLabel="All compute ressources"
+        >
+          <Navigation.Item id="advanced" label="Advanced">
+            <Navigation.Item id="kubernetes" label="Kubernetes" />
+            <Navigation.Item id="openstack" label="OpenStack" />
+          </Navigation.Item>
+        </Navigation.Item>
+      </Navigation.Group>
     </Navigation>
   </NavigationProvider>
 )
@@ -279,6 +308,15 @@ describe('navigation', () => {
     const showButton = screen.getByTestId('show-hide')
     await userEvent.click(showButton)
     expect(onShowHide).toHaveBeenCalledOnce()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('with nested items', async () => {
+    const { asFragment } = renderWithTheme(<NavigationNested pinnedFeature />)
+    const advancedItemMenu = screen.getByRole('button', { name: 'Compute' })
+    await userEvent.hover(advancedItemMenu)
+    expect(screen.getByTestId('advanced')).toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
   })
