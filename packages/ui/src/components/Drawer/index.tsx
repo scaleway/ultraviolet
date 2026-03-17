@@ -150,6 +150,7 @@ export const BaseDrawer = ({
       onOpen={onOpenPush}
       open={open}
       placement="top-right"
+      preventBodyScroll={!push}
       ref={modalRef}
       size={size}
       style={style}
