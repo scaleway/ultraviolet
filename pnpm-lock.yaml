@@ -51,8 +51,8 @@ importers:
         specifier: 0.0.8
         version: 0.0.8(@biomejs/biome@2.4.0)
       '@scaleway/oxlint-config':
-        specifier: 0.1.8
-        version: 0.1.8(oxlint@1.51.0(oxlint-tsgolint@0.15.0))
+        specifier: 0.1.10
+        version: 0.1.10(oxlint@1.51.0(oxlint-tsgolint@0.15.0))
       '@scaleway/tsconfig':
         specifier: 1.1.4
         version: 1.1.4
@@ -3556,10 +3556,10 @@ packages:
     resolution: {integrity: sha512-7wafArqq/fSVy0epmpE0RN6e7foOO5EctgG94UBY26Fq2vWN9eJ2Nm1vE8vX+CPBiKZpm4M/Fc45WCKJG75KVQ==}
     engines: {node: '>=20.x'}
 
-  '@scaleway/oxlint-config@0.1.8':
-    resolution: {integrity: sha512-Tf67lN7VLppFzA2lZNiznXmmFqCk80F3f6kcskXNkHfCFnAF9sAIST0MK8b3IJ/a34nxXG1qfdrSbMiNAbTgjA==}
+  '@scaleway/oxlint-config@0.1.10':
+    resolution: {integrity: sha512-wr3HB+d112vGDt857qdxacOYEBWwi6rVZsmJ6IAjdEaUSyy2RJ+Rn/fm2SzwP86z3Wsm+oUq4T8oU1/enTHRrg==}
     peerDependencies:
-      oxlint: 1.42.0
+      oxlint: 1.53.0
 
   '@scaleway/random-name@5.1.4':
     resolution: {integrity: sha512-+rDbZG1317VGovkE79dLaDe0n1cCwtQUrQ1KxMct8vzzZwRA+viiU6VQePMSmu/MMhed2OUtDSM45tbmwE7BeQ==}
@@ -10417,7 +10417,7 @@ snapshots:
 
   '@scaleway/fuzzy-search@1.0.2': {}
 
-  '@scaleway/oxlint-config@0.1.8(oxlint@1.51.0(oxlint-tsgolint@0.15.0))':
+  '@scaleway/oxlint-config@0.1.10(oxlint@1.51.0(oxlint-tsgolint@0.15.0))':
     dependencies:
       oxlint: 1.51.0(oxlint-tsgolint@0.15.0)
 
