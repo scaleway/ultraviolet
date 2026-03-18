@@ -43,6 +43,7 @@ export const SingleSlider = ({
   customValueDisplay,
   'aria-label': ariaLabel,
   tooltipPosition,
+  defaultScale = false,
 }: SingleSliderProps) => {
   const localId = useId()
   const theme = useTheme()
@@ -62,6 +63,9 @@ export const SingleSlider = ({
   }, [refSlider])
 
   const ticks = useMemo(() => {
+    if (options && defaultScale) {
+      return options
+    }
     if (options) {
       return options.map((element, index) => ({
         label: element.label,
@@ -70,7 +74,7 @@ export const SingleSlider = ({
     }
 
     return []
-  }, [options])
+  }, [options, defaultScale])
 
   const internalOnChange = useCallback(
     (newValue: number) => {
@@ -259,6 +263,7 @@ export const SingleSlider = ({
         </Tooltip>
         {options ? (
           <Options
+            defaultScale={defaultScale}
             max={max}
             min={min}
             step={step}

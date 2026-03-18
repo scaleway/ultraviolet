@@ -58,6 +58,10 @@ type DefaultProps = {
    * Options for a non-linear scale, overrides `min`, `max`. This is usefull if step is not enough to get the desired granularity.
    */
   options?: { value: number; label?: string }[]
+  /**
+   * Set this prop to true to display the options without having a non-linear scale
+   */
+  defaultScale?: boolean
 
   'data-testid'?: string
 } & Pick<
