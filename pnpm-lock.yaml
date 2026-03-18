@@ -48,8 +48,8 @@ importers:
         specifier: 1.58.2
         version: 1.58.2
       '@scaleway/biome':
-        specifier: 0.0.7
-        version: 0.0.7(@biomejs/biome@2.4.0)
+        specifier: 0.0.8
+        version: 0.0.8(@biomejs/biome@2.4.0)
       '@scaleway/oxlint-config':
         specifier: 0.1.8
         version: 0.1.8(oxlint@1.51.0(oxlint-tsgolint@0.15.0))
@@ -3547,10 +3547,10 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@scaleway/biome@0.0.7':
-    resolution: {integrity: sha512-oiQsTY4mKD4BmDtlCeACGSFRwtFcW8Y5kQ3a62pSQwu/aoVdSztioUWQOKCWkfi6ffv8LGVGBoWLGRBWbdT7Zw==}
+  '@scaleway/biome@0.0.8':
+    resolution: {integrity: sha512-w1qR5Rdf2PHDiI/BOnKVORlSGZIpRR5x5kV8uX/C5jBtNMMUYo/BP+HaM+8VVwPvvubN0nzxfmVkTz2c3lLzXQ==}
     peerDependencies:
-      '@biomejs/biome': 2.3.14
+      '@biomejs/biome': 2.4.6
 
   '@scaleway/fuzzy-search@1.0.2':
     resolution: {integrity: sha512-7wafArqq/fSVy0epmpE0RN6e7foOO5EctgG94UBY26Fq2vWN9eJ2Nm1vE8vX+CPBiKZpm4M/Fc45WCKJG75KVQ==}
@@ -10411,7 +10411,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.53.3':
     optional: true
 
-  '@scaleway/biome@0.0.7(@biomejs/biome@2.4.0)':
+  '@scaleway/biome@0.0.8(@biomejs/biome@2.4.0)':
     dependencies:
       '@biomejs/biome': 2.4.0
 
