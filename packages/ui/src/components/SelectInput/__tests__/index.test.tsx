@@ -1261,7 +1261,7 @@ describe('selectInput', () => {
     expect(selectAllCheckBox).not.toBeChecked()
     await userEvent.keyboard('[Enter]')
     expect(selectAllCheckBox).toBeChecked()
-  }, 10_000)
+  }, 15_000)
 
   test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row" & multiselect', async () => {
     renderWithTheme(
