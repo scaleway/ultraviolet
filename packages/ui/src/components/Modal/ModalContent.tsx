@@ -45,6 +45,7 @@ export const ModalContent = ({
   image,
   style,
   ref,
+  isDrawer,
 }: ModalContentProps) =>
   visible || open ? (
     <Dialog
@@ -56,6 +57,7 @@ export const ModalContent = ({
       hideOnEsc={hideOnEsc}
       id={finalId}
       image={image}
+      isDrawer={isDrawer}
       onClose={handleClose}
       open={visible || open}
       placement={placement}
