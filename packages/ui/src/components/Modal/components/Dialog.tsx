@@ -37,6 +37,7 @@ export const Dialog = ({
   image,
   style,
   ref,
+  isDrawer,
 }: DialogProps) => {
   const [isVisible, setIsVisible] = useState(false)
 
@@ -57,12 +58,15 @@ export const Dialog = ({
 
   // register/unregister the modal to handle nested modals
   useEffect(() => {
-    registerModal({ id, ref: dialogRef })
+    // a drawer should not be registered since it does not stack with other modals
+    if (!isDrawer) {
+      registerModal({ id, ref: dialogRef })
+    }
 
     return () => {
       unregisterModal(id)
     }
-  }, [id, registerModal, unregisterModal, dialogRef])
+  }, [id, registerModal, unregisterModal, dialogRef, isDrawer])
 
   // Portal to put the modal in
   useEffect(() => {

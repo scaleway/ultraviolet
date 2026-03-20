@@ -31,6 +31,8 @@ export type ModalProps = {
   image?: string
   style?: CSSProperties
   ref?: RefObject<HTMLDialogElement | null>
+  /** When set to true, the modal is not counted in the nested-modals count */
+  isDrawer?: boolean
 }
 /**
  * Modal is a component that allows you to display content on top of other content.
@@ -57,6 +59,7 @@ export const Modal = ({
   image,
   style,
   ref,
+  isDrawer,
 }: ModalProps) => {
   // Used for disclosure usage only
   const [visible, setVisible] = useState(false)
@@ -120,6 +123,7 @@ export const Modal = ({
           hideOnEsc={hideOnEsc}
           image={image}
           isClosable={isClosable}
+          isDrawer={isDrawer}
           open={open}
           placement={placement}
           preventBodyScroll={preventBodyScroll}
@@ -145,6 +149,7 @@ export const Modal = ({
             hideOnEsc={hideOnEsc}
             image={image}
             isClosable={isClosable}
+            isDrawer={isDrawer}
             open={open}
             placement={placement}
             preventBodyScroll={preventBodyScroll}

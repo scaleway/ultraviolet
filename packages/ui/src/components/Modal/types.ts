@@ -48,4 +48,5 @@ export type DialogProps = {
   image?: string
   style?: CSSProperties
   ref?: RefObject<HTMLDialogElement | null>
+  isDrawer?: boolean
 }

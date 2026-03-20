@@ -145,6 +145,7 @@ export const BaseDrawer = ({
       hideOnEsc={hideOnEsc}
       id={id}
       isClosable={isClosable}
+      isDrawer
       onBeforeClose={onClosePush}
       onClose={onClose}
       onOpen={onOpenPush}
