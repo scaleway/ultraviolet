@@ -5,7 +5,7 @@ export const Clearable = Template.bind({})
 Clearable.args = {
   clearable: true,
   label: 'Clearable',
-  placeholder: 'MM-DD-YYYY',
+  placeholder: 'DD-MM-YYYY',
 }
 
 Clearable.decorators = [
