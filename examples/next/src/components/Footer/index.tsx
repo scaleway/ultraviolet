@@ -1,8 +1,9 @@
 import { Stack, Text } from '@ultraviolet/ui'
+
 import { cn } from '@ultraviolet/utils'
-import styles from '../../styles/component.module.scss'
-import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
-import Logo from './Logo'
+import GithubAndDocumentationButtons from '../GithubAndDocumentationButtons'
+import Logo from '../Logo'
+import styles from './footer.module.scss'
 
 const Footer = ({ className }: { className?: string }) => (
   <footer className={cn(className, styles.footer)}>
