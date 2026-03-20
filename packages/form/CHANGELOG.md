@@ -1,5 +1,15 @@
 # Change Log
 
+## 6.2.3
+
+### Patch Changes
+
+- [#6178](https://github.com/scaleway/ultraviolet/pull/6178) [`10b36cd`](https://github.com/scaleway/ultraviolet/commit/10b36cde81cad1f2819183b84fead5e16c9c9932) Thanks [@lisalupi](https://github.com/lisalupi)! - `CodeEditorField`: fix onBlur type
+
+- Updated dependencies [[`deb39cf`](https://github.com/scaleway/ultraviolet/commit/deb39cf2b23595382d4ba7314a639c03659bc4a9), [`866f571`](https://github.com/scaleway/ultraviolet/commit/866f5715507990f2c469c3bf2ea0c6cd7e49512b), [`8cab78f`](https://github.com/scaleway/ultraviolet/commit/8cab78f18949b629980f3a2113daacc9c2b6835d), [`8c6bf2d`](https://github.com/scaleway/ultraviolet/commit/8c6bf2d08028bd4eb63a07dee093571075c27408), [`42c3f4f`](https://github.com/scaleway/ultraviolet/commit/42c3f4ffb0ee0644ddb0617cb38002e3a8d5313f), [`b20dda8`](https://github.com/scaleway/ultraviolet/commit/b20dda8cfcbf85c3bec79f34734a1626b11ad25f), [`5f74798`](https://github.com/scaleway/ultraviolet/commit/5f7479869efb317da6d7790966f32a42b655365e), [`972c6ca`](https://github.com/scaleway/ultraviolet/commit/972c6ca487bdbe0e7bc94b63959898fb9cb4dd94), [`16de416`](https://github.com/scaleway/ultraviolet/commit/16de416262c34bb0d9b2592ae8525acf6c66fd1e), [`d9b3958`](https://github.com/scaleway/ultraviolet/commit/d9b39585d1d94d7cfdd2d835b3c174ae088801b5), [`6df0811`](https://github.com/scaleway/ultraviolet/commit/6df0811ea396499207497da9288bfab5862dcc30)]:
+  - @ultraviolet/ui@3.12.1
+  - @ultraviolet/icons@5.2.0
+
 ## 6.2.2
 
 ### Patch Changes
