@@ -1,3 +1,4 @@
+// oxlint-disable typescript/no-unsafe-type-assertion
 'use client'
 
 import type { ReactNode } from 'react'
@@ -44,11 +45,15 @@ export const Slider = ({
   customValueDisplay,
   labelDescription,
   'aria-label': ariaLabel,
+  defaultScale = false,
 }: SliderProps) => {
   // we check if options exists if so we set the bounds to the length of the options
-  const correctedBounds = options
-    ? { max: Array.isArray(options) ? options.length - 1 : max, min: 0 }
-    : { max, min }
+
+  const correctedBounds =
+    options && !defaultScale
+      ? { max: Array.isArray(options) ? options.length - 1 : max, min: 0 }
+      : { max, min }
+
   const gap = useMemo(() => {
     if (options) {
       return 3
@@ -75,6 +80,7 @@ export const Slider = ({
           className={className}
           customValueDisplay={customValueDisplay}
           data-testid={dataTestId}
+          defaultScale={defaultScale}
           direction={direction}
           disabled={disabled}
           error={error}
@@ -104,6 +110,7 @@ export const Slider = ({
           className={className}
           customValueDisplay={customValueDisplay}
           data-testid={dataTestId}
+          defaultScale={defaultScale}
           direction={direction}
           disabled={disabled}
           error={error}

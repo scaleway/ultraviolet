@@ -196,9 +196,10 @@ describe('double slider', () => {
     )
   })
 
-  test('renders correctly double with custom scale', () => {
+  test('renders correctly double with custom ticks and defaultScale', () => {
     shouldMatchSnapshot(
       <Slider
+        defaultScale
         double
         label="Label"
         name="Name"

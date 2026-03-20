@@ -41,6 +41,7 @@ export const DoubleSlider = ({
   tooltipPosition,
   'aria-label': ariaLabel,
   labelDescription,
+  defaultScale = false,
   customValueDisplay,
 }: DoubleSliderProps) => {
   const theme = useTheme()
@@ -94,6 +95,9 @@ export const DoubleSlider = ({
   }
 
   const ticks = useMemo(() => {
+    if (options && defaultScale) {
+      return options
+    }
     if (options) {
       return options.map((element, index) => ({
         label: element.label,
@@ -102,7 +106,7 @@ export const DoubleSlider = ({
     }
 
     return []
-  }, [options])
+  }, [options, defaultScale])
 
   const internalOnChangeRef = useCallback(
     (localValue: (number | null)[]) => {
@@ -247,9 +251,10 @@ export const DoubleSlider = ({
       THUMB_SIZE / 2,
   ]
 
-  const [leftToShow, rightToShow] = options
-    ? [options[selectedIndexes[0]].value, options[selectedIndexes[1]].value]
-    : selectedIndexes
+  const [leftToShow, rightToShow] =
+    options && !defaultScale
+      ? [options[selectedIndexes[0]].value, options[selectedIndexes[1]].value]
+      : selectedIndexes
 
   // Make the component controllable
   useEffect(() => {
@@ -405,6 +410,7 @@ export const DoubleSlider = ({
           </Tooltip>
           {options ? (
             <Options
+              defaultScale={defaultScale}
               max={max}
               min={min}
               step={step}

@@ -199,6 +199,18 @@ describe('single slider', () => {
       <Slider label="Label" name="Name" options={options} unit="%" value={1} />,
     )
   })
+  test('renders correctly with custom ticks and default scale', () => {
+    shouldMatchSnapshot(
+      <Slider
+        defaultScale
+        label="Label"
+        name="Name"
+        options={options}
+        unit="%"
+        value={1}
+      />,
+    )
+  })
 
   test('renders correctly with default ticks without label', () => {
     shouldMatchSnapshot(
