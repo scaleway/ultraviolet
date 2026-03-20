@@ -4,6 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   FocusEventHandler,
+  KeyboardEvent,
   KeyboardEventHandler,
   MouseEventHandler,
   ReactEventHandler,
@@ -146,6 +147,35 @@ export const Dialog = ({
     [hideOnClickOutside, position, dialogRef],
   )
 
+  const handleFocusMove = useCallback(
+    (
+      event: KeyboardEvent,
+      firstFocusableEl: Element,
+      lastFocusableEl?: Element,
+    ) => {
+      if (event.shiftKey) {
+        if (
+          document.activeElement === firstFocusableEl ||
+          document.activeElement === dialogRef.current
+        ) {
+          if (lastFocusableEl instanceof HTMLElement) {
+            lastFocusableEl.focus()
+          }
+          event.preventDefault()
+        }
+      } else if (
+        document.activeElement === lastFocusableEl ||
+        document.activeElement === dialogRef.current
+      ) {
+        if (firstFocusableEl instanceof HTMLElement) {
+          firstFocusableEl.focus()
+        }
+        event.preventDefault()
+      }
+    },
+    [dialogRef],
+  )
+
   // Enable focus trap inside the modal
   const handleFocusTrap: KeyboardEventHandler = useCallback(
     event => {
@@ -174,29 +204,10 @@ export const Dialog = ({
         const elems = [...focusableEls]
         const firstFocusableEl = elems[0]
         const lastFocusableEl = elems.at(-1)
-
-        if (event.shiftKey) {
-          if (
-            document.activeElement === firstFocusableEl ||
-            document.activeElement === dialogRef.current
-          ) {
-            if (lastFocusableEl instanceof HTMLElement) {
-              lastFocusableEl.focus()
-            }
-            event.preventDefault()
-          }
-        } else if (
-          document.activeElement === lastFocusableEl ||
-          document.activeElement === dialogRef.current
-        ) {
-          if (firstFocusableEl instanceof HTMLElement) {
-            firstFocusableEl.focus()
-          }
-          event.preventDefault()
-        }
+        handleFocusMove(event, firstFocusableEl, lastFocusableEl)
       }
     },
-    [dialogRef],
+    [dialogRef, handleFocusMove],
   )
 
   if (

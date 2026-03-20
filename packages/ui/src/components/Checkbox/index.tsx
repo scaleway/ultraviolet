@@ -99,6 +99,18 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       )
     const isCheck = checked === true ? checked : false
 
+    const childStack =
+      children || required ? (
+        <Stack alignItems="center" direction="row" flex={1} gap={0.5}>
+          {children ? styledChildren : null}
+          {required ? (
+            <Text as="sup" sentiment="danger" variant="body">
+              *
+            </Text>
+          ) : null}
+        </Stack>
+      ) : null
+
     return (
       <Tooltip text={tooltip}>
         <div
@@ -141,17 +153,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           </svg>
           {children || required || helper || error ? (
             <Stack flex={1} gap={0.5}>
-              {children || required ? (
-                <Stack alignItems="center" direction="row" flex={1} gap={0.5}>
-                  {children ? styledChildren : null}
-                  {required ? (
-                    <Text as="sup" sentiment="danger" variant="body">
-                      *
-                    </Text>
-                  ) : null}
-                </Stack>
-              ) : null}
-
+              {childStack}
               {helper ? (
                 <Text
                   as="span"

@@ -1,22 +1,14 @@
 'use client'
 
-import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
-import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
-import {
-  forwardRef,
-  useCallback,
-  useId,
-  useImperativeHandle,
-  useMemo,
-  useRef,
-} from 'react'
-import { Button } from '../Button'
+import { forwardRef, useId, useImperativeHandle, useMemo, useRef } from 'react'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
+import { Controls } from './components/Controls'
+import { Unit } from './components/Unit'
 import type { SIZES } from './constant'
 import { numberInputStyle } from './styles.css'
 
@@ -122,47 +114,6 @@ export const NumberInput = forwardRef(
 
       return 'default'
     }, [error, success, disabled, readOnly])
-    const onClickSideButton = useCallback(
-      (direction: 'up' | 'down') => () => {
-        if (direction === 'up') {
-          localRef.current?.stepUp()
-        } else if (direction === 'down') {
-          localRef.current?.stepDown()
-        }
-        onChange?.(Number.parseFloat(localRef.current?.value ?? '') ?? min)
-      },
-      [localRef, min, onChange],
-    )
-
-    const isMinusDisabled = useCallback(() => {
-      if (!localRef?.current?.value || localRef?.current?.value === '') {
-        return false
-      }
-
-      const numericValue = Number(localRef?.current?.value)
-      if (Number.isNaN(numericValue)) {
-        return false
-      }
-
-      const minValue = typeof min === 'number' ? min : Number(min)
-
-      return Number.isNaN(numericValue) || numericValue <= minValue
-    }, [localRef?.current?.value, min])
-
-    const isPlusDisabled = useCallback(() => {
-      if (!localRef?.current?.value || localRef?.current?.value === '') {
-        return false
-      }
-
-      const numericValue = Number(localRef?.current?.value)
-      if (Number.isNaN(numericValue)) {
-        return false
-      }
-
-      const maxValue = typeof max === 'number' ? max : Number(max)
-
-      return numericValue >= maxValue
-    }, [localRef?.current?.value, max])
 
     const helperSentiment = useMemo(() => {
       if (error) {
@@ -185,6 +136,7 @@ export const NumberInput = forwardRef(
         localRef.current.value = inputValue
       }
     }
+    const isDisabledOrReadOnly = disabled || readOnly
 
     return (
       <Stack className={className} gap="0.5">
@@ -213,25 +165,16 @@ export const NumberInput = forwardRef(
               data-success={!!success}
               data-unit={!!unit}
             >
-              {controls ? (
-                <Stack
-                  alignItems="center"
-                  className={numberInputStyle.sideContainer[size]}
-                  data-size={size}
-                  justifyContent="center"
-                >
-                  <Button
-                    aria-label="minus"
-                    disabled={disabled || readOnly || isMinusDisabled()}
-                    onClick={onClickSideButton('down')}
-                    sentiment="neutral"
-                    size={size === 'small' ? 'xsmall' : 'small'}
-                    variant="ghost"
-                  >
-                    <MinusIcon size={size === 'large' ? 'small' : 'small'} />
-                  </Button>
-                </Stack>
-              ) : null}
+              <Controls
+                controls={controls}
+                direction="down"
+                isDisabledOrReadOnly={isDisabledOrReadOnly}
+                localRef={localRef}
+                max={max}
+                min={min}
+                onChange={onChange}
+                size={size}
+              />
               <Row
                 alignItems="center"
                 className={numberInputStyle.inputContainer({ controls })}
@@ -280,49 +223,31 @@ export const NumberInput = forwardRef(
                   type="number"
                   value={inputValue}
                 />
-                {unit ? (
-                  <Text
-                    as="span"
-                    className={numberInputStyle.unit({
-                      disabled,
-                      readOnly,
-                      size,
-                      controls,
-                    })}
-                    disabled={disabled}
-                    sentiment="neutral"
-                    variant="body"
-                  >
-                    {unit}
-                  </Text>
-                ) : null}
+                <Unit
+                  controls={controls}
+                  disabled={disabled}
+                  readOnly={readOnly}
+                  size={size}
+                  unit={unit}
+                />
               </Row>
-              {controls ? (
-                <Stack
-                  alignItems="center"
-                  className={numberInputStyle.sideContainer[size]}
-                  data-size={size}
-                  justifyContent="center"
-                >
-                  <Button
-                    aria-label="plus"
-                    disabled={disabled || readOnly || isPlusDisabled()}
-                    onClick={onClickSideButton('up')}
-                    sentiment="neutral"
-                    size={size === 'small' ? 'xsmall' : 'small'}
-                    variant="ghost"
-                  >
-                    <PlusIcon size={size === 'large' ? 'small' : 'small'} />
-                  </Button>
-                </Stack>
-              ) : null}
+              <Controls
+                controls={controls}
+                direction="up"
+                isDisabledOrReadOnly={isDisabledOrReadOnly}
+                localRef={localRef}
+                max={max}
+                min={min}
+                onChange={onChange}
+                size={size}
+              />
             </div>
           </Tooltip>
         </div>
         {error || typeof success === 'string' || typeof helper === 'string' ? (
           <Text
             as="span"
-            disabled={disabled || readOnly}
+            disabled={isDisabledOrReadOnly}
             prominence={error || success ? 'default' : 'weak'}
             sentiment={helperSentiment}
             variant="caption"

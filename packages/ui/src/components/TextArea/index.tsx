@@ -1,7 +1,5 @@
 'use client'
 
-import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
-import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
@@ -17,13 +15,12 @@ import {
 import { Button } from '../Button'
 import { SIZE_HEIGHT as ButtonSizeHeight } from '../Button/constants'
 import { Label } from '../Label'
-import { Row } from '../Row'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
+import { STATE_ICON_SIZE } from './constant'
+import { SuccessErrorIcon } from './Icon'
+import { Notice } from './Notice'
 import { paddingRightVar, textAreaStyle } from './styles.css'
-
-const STATE_ICON_SIZE = 'small'
 
 type LabelProps =
   | {
@@ -253,43 +250,20 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
                   <CloseIcon />
                 </Button>
               ) : null}
-              {success && !error ? (
-                <CheckCircleIcon sentiment="success" size={STATE_ICON_SIZE} />
-              ) : null}
-              {error ? <AlertCircleIcon sentiment="danger" /> : null}
+              <SuccessErrorIcon error={!!error} success={!!success} />
             </Stack>
           </div>
         </Tooltip>
-
         {notice || maxLength ? (
-          <Row gap="1" templateColumns="minmax(0, 1fr) min-content">
-            <div>
-              {error || success || typeof helper === 'string' ? (
-                <Text
-                  as="p"
-                  disabled={disabled}
-                  prominence={error || success ? 'default' : 'weak'}
-                  sentiment={sentiment}
-                  variant="caption"
-                >
-                  {error || success || helper}
-                </Text>
-              ) : null}
-              {!(error || success) && typeof helper !== 'string' && helper
-                ? helper
-                : null}
-            </div>
-            {maxLength ? (
-              <Text
-                as="div"
-                prominence="weak"
-                sentiment="neutral"
-                variant="caption"
-              >
-                {value?.length ?? 0}/{maxLength}
-              </Text>
-            ) : null}
-          </Row>
+          <Notice
+            disabled={disabled}
+            error={error}
+            helper={helper}
+            maxLength={maxLength}
+            sentiment={sentiment}
+            success={success}
+            value={value}
+          />
         ) : null}
       </Stack>
     )

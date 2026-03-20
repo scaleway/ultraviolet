@@ -1,10 +1,8 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
-import { Children, forwardRef, useEffect, useState } from 'react'
-import { useListContext } from '../List/ListContext'
-import { listStyle } from '../List/styles.css'
+import type { CSSProperties } from 'react'
+import { forwardRef } from 'react'
 import { Body } from './Body'
 import { Cell } from './Cell'
 import { Header } from './Header'
@@ -14,6 +12,7 @@ import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
 import { tableStyle } from './styles.css'
+import { TableContainer } from './TableContainer'
 import type { TableProviderProps } from './TableContext'
 import { TableProvider, useTableContext } from './TableContext'
 import type { ColumnProps } from './types'
@@ -51,25 +50,6 @@ type TableProps = Omit<
   columns: ColumnProps[]
   highlightHeader?: boolean
   style?: CSSProperties
-}
-
-const TableContainer = ({ children }: { children: ReactNode }) => {
-  const [childrenMemory, setChildrenMemory] = useState<ReactNode[]>(
-    Children.toArray(children),
-  )
-
-  const { setRefList } = useListContext()
-
-  // Reset ref list when children change
-  useEffect(() => {
-    if (Children.toArray(children) !== childrenMemory) {
-      setRefList([])
-      setChildrenMemory(Children.toArray(children))
-    }
-    // oxlint-disable react/exhaustive-deps
-  }, [children, setRefList])
-
-  return <div className={listStyle.container}>{children}</div>
 }
 
 export const BaseTable = forwardRef<HTMLTableElement, TableProps>(

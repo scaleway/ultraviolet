@@ -42,6 +42,7 @@ const Provider = ({
   return <TableContext.Provider value={value}>{children}</TableContext.Provider>
 }
 
+// oxlint-disable-next-line react/no-multi-comp
 export const TableProvider = ({
   children,
   bordered,
