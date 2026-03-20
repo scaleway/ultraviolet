@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, RefObject } from 'react'
-import { useCallback, useLayoutEffect, useRef } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useRef } from 'react'
 import type { ModalProps } from '../Modal'
 import { Modal } from '../Modal'
 import type { ModalState } from '../Modal/types'
@@ -63,6 +63,7 @@ export const BaseDrawer = ({
 
   const onOpenPush = useCallback(() => {
     const targetElement = push === 'body' ? document?.body : push?.current
+
     if (targetElement && push) {
       targetElement.dataset['drawer'] = size
       if (!targetElement.classList.contains(drawerStyle.contentToPushStyle)) {
@@ -81,11 +82,11 @@ export const BaseDrawer = ({
   }, [push])
 
   // Add the push style when the drawer is open by default
-  useLayoutEffect(() => {
-    if (modalRef.current) {
+  useEffect(() => {
+    if (open) {
       onOpenPush()
     }
-  }, [onOpenPush, onClosePush])
+  }, [onOpenPush, open])
 
   const computeHeader = (modalProps: ModalState) => {
     if (typeof header === 'string') {
