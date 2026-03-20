@@ -88,36 +88,17 @@ export const BaseDrawer = ({
     }
   }, [onOpenPush, open])
 
-  const computeHeader = (modalProps: ModalState) => {
-    if (typeof header === 'string') {
-      return (
-        <Text
-          as="h2"
-          className={drawerStyle.header}
-          prominence="default"
-          sentiment="neutral"
-          variant="headingSmallStrong"
-        >
-          {header}
-        </Text>
-      )
-    }
-    if (typeof header === 'function') {
-      return (
-        <Text
-          as="h2"
-          className={drawerStyle.header}
-          prominence="default"
-          sentiment="neutral"
-          variant="headingSmallStrong"
-        >
-          {header(modalProps)}
-        </Text>
-      )
-    }
-
-    return header
-  }
+  const computeHeader = (modalProps: ModalState) => (
+    <Text
+      as="h2"
+      className={drawerStyle.header}
+      prominence="default"
+      sentiment="neutral"
+      variant="headingSmallStrong"
+    >
+      {typeof header === 'function' ? header(modalProps) : header}
+    </Text>
+  )
 
   useLayoutEffect(() => {
     const targetElement = push === 'body' ? document?.body : push?.current
