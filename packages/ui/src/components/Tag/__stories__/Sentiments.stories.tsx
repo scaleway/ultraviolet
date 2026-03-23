@@ -1,7 +1,8 @@
+import { Tag } from '..'
+import { SENTIMENTS } from '../../../theme'
+
 import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { SENTIMENTS } from '../../../theme'
-import { Tag } from '..'
 
 export const Sentiments = (props: ComponentProps<typeof Tag>) =>
   SENTIMENTS.map(sentiment => (

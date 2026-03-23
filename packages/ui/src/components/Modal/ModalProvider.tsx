@@ -1,6 +1,5 @@
 'use client'
 
-import type { ReactNode, RefObject } from 'react'
 import {
   createContext,
   useCallback,
@@ -8,6 +7,8 @@ import {
   useMemo,
   useState,
 } from 'react'
+
+import type { ReactNode, RefObject } from 'react'
 
 type ModalObject = {
   id: string

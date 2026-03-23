@@ -1,13 +1,13 @@
 {
   "name": "@examples/next",
   "version": "1.0.0",
+  "private": true,
   "homepage": "https://ultraviolet.scaleway.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scaleway/ultraviolet.git",
     "directory": "examples/next-advanced"
   },
-  "private": true,
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",

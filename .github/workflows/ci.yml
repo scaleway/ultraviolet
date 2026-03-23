@@ -3,7 +3,7 @@ name: CI
 on:
   merge_group:
   pull_request:
-    types: ["opened", "edited", "reopened", "synchronize"]
+    types: ['opened', 'edited', 'reopened', 'synchronize']
   push:
     branches:
       - main
@@ -13,11 +13,11 @@ jobs:
   build:
     strategy:
       matrix:
-        node: ["24"]
+        node: ['24']
     runs-on: ubuntu-24.04
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: "remote:rw"
+      TURBO_CACHE: 'remote:rw'
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
@@ -32,12 +32,12 @@ jobs:
   build_storybook:
     strategy:
       matrix:
-        node: ["24"]
+        node: ['24']
     runs-on: ubuntu-24.04
     needs: [build]
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: "remote:rw"
+      TURBO_CACHE: 'remote:rw'
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-24.04
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: "remote:rw"
+      TURBO_CACHE: 'remote:rw'
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
@@ -70,14 +70,14 @@ jobs:
     runs-on: ubuntu-24.04
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: "remote:rw"
+      TURBO_CACHE: 'remote:rw'
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.3.0
         with:
           node-version: 24.14.0
-          cache: "pnpm"
+          cache: 'pnpm'
       - name: manypkg
         run: |
           pnpm install --frozen-lockfile
@@ -88,14 +88,14 @@ jobs:
     needs: [build]
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: "remote:rw"
+      TURBO_CACHE: 'remote:rw'
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.3.0
         with:
           node-version: 24.14.0
-          cache: "pnpm"
+          cache: 'pnpm'
       - name: typecheck
         run: |
           pnpm install --frozen-lockfile
@@ -107,33 +107,32 @@ jobs:
     needs: []
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: "remote:rw"
+      TURBO_CACHE: 'remote:rw'
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.3.0
         with:
           node-version: 24.14.0
-          cache: "pnpm"
+          cache: 'pnpm'
       - name: lint
         run: |
           pnpm install --frozen-lockfile
           pnpm run build
           pnpm run oxc:type-aware --quiet
-          pnpm biome:lint
 
   format:
     runs-on: ubuntu-24.04
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: "remote:rw"
+      TURBO_CACHE: 'remote:rw'
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.3.0
         with:
           node-version: 24.14.0
-          cache: "pnpm"
+          cache: 'pnpm'
       - run: |
           pnpm install --frozen-lockfile
           pnpm run format:ci
@@ -142,11 +141,11 @@ jobs:
     runs-on: ubuntu-24.04
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: "remote:rw"
+      TURBO_CACHE: 'remote:rw'
     needs: [build]
     strategy:
       matrix:
-        node: ["24"]
+        node: ['24']
     steps:
       - uses: actions/checkout@v6
         with:
@@ -155,7 +154,7 @@ jobs:
       - uses: actions/setup-node@v6.3.0
         with:
           node-version: ${{ matrix.node }}
-          cache: "pnpm"
+          cache: 'pnpm'
       - run: |
           pnpm install --frozen-lockfile
           pnpm run test:unit:coverage --concurrency 1
@@ -187,7 +186,7 @@ jobs:
     needs: [build]
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: "remote:rw"
+      TURBO_CACHE: 'remote:rw'
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
@@ -195,7 +194,7 @@ jobs:
         uses: actions/setup-node@v6.3.0
         with:
           node-version: 24.14.0
-          cache: "pnpm"
+          cache: 'pnpm'
       - run: |
           pnpm install --frozen-lockfile
           pnpm build
@@ -206,9 +205,9 @@ jobs:
     needs: [publint, typecheck, build]
     env:
       IMAGE_NAME: rg.fr-par.scw.cloud/ultraviolet/storybook
-      DEPLOYMENT_NAME: "storybook"
+      DEPLOYMENT_NAME: 'storybook'
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: "remote:rw"
+      TURBO_CACHE: 'remote:rw'
     # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#example-usage-of-the-jobs-context
     outputs:
       base_url: ${{ steps.deploy.outputs.url }}
@@ -293,18 +292,18 @@ jobs:
         uses: philibea/scaleway-containers-deploy@v1.1.5
         id: deploy
         with:
-          type: "deploy"
-          scw_dns: "storybook.ultraviolet.scaleway.com"
+          type: 'deploy'
+          scw_dns: 'storybook.ultraviolet.scaleway.com'
           root_zone: ${{ env.STORYBOOK_BRANCH_SLUG == 'main' }}
           scw_access_key: ${{ vars.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
           scw_containers_namespace_id: ${{ vars.SCW_CONTAINERS_NAMESPACE_ID }}
-          scw_environment_variables: "GITHUB=DEPLOY"
+          scw_environment_variables: 'GITHUB=DEPLOY'
           scw_registry: ${{ env.IMAGE_NAME }}:${{ env.STORYBOOK_BRANCH_SLUG }}
           scw_min_scale: ${{ env.SCW_MIN_SCALE }}
           scw_cpu_limit: ${{ env.SCW_CPU_LIMIT }}
           scw_max_concurrency: ${{ env.SCW_MAX_CONCURRENCY }}
-          scw_sandbox: "v2"
+          scw_sandbox: 'v2'
           scw_memory_limit: ${{ env.SCW_MEMORY_LIMIT }}
 
       - name: Update deployment status
@@ -331,14 +330,14 @@ jobs:
     needs: [typecheck, format]
     env:
       CI: true
-      TURBO_CACHE: "remote:rw"
+      TURBO_CACHE: 'remote:rw'
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.3.0
         with:
           node-version: 24.14.0
-          cache: "pnpm"
+          cache: 'pnpm'
       - name: install pnpm deps
         run: |
           pnpm install --frozen-lockfile

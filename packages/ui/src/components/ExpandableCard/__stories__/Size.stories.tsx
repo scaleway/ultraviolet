@@ -1,7 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { Stack } from '../..'
 import { ExpandableCard } from '..'
+import { Stack } from '../..'
 import { EXPANDABLE_CARD_SIZE } from '../constants'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Size: StoryFn<typeof ExpandableCard> = args => (
   <Stack gap={1}>

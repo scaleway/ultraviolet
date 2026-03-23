@@ -1,8 +1,11 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useCallback, useState } from 'react'
-import { Button } from '../../Button'
+
 import { SelectInput } from '..'
+import { Button } from '../../Button'
+
 import { dataUnGrouped } from './resources'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const LoadMore: StoryFn<typeof SelectInput> = args => {
   const [options, setOptions] = useState(dataUnGrouped)

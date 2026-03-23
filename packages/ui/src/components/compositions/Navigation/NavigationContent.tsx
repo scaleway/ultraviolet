@@ -3,14 +3,17 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useRef } from 'react'
+
 import { Stack } from '../../Stack'
+
 import { NAVIGATION_COLLASPED_WIDTH, NAVIGATION_MIN_WIDTH } from './constants'
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { useNavigation } from './NavigationProvider'
 import { navigationStyle } from './styles.css'
-import type { NavigationProps } from './types'
 import { widthNavigationContainer } from './variables.css'
+
+import type { NavigationProps } from './types'
 
 export const NavigationContent = ({
   children,

@@ -2,6 +2,7 @@ import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
+
 import { TextInput } from '..'
 
 describe('textInput', () => {

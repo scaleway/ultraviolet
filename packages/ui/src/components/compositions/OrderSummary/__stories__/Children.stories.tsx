@@ -1,12 +1,15 @@
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 import { useState } from 'react'
+
 import { OrderSummary } from '..'
-import { categoryAZ, categoryM2, categoryOptions } from './productsExample'
-import { Stack } from '../../../Stack'
 import { Badge } from '../../../Badge'
 import { RadioGroup } from '../../../RadioGroup'
 import { SelectInput } from '../../../SelectInput'
+import { Stack } from '../../../Stack'
+
+import { categoryAZ, categoryM2, categoryOptions } from './productsExample'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 const mockItems = [categoryAZ, categoryM2, categoryOptions]
 

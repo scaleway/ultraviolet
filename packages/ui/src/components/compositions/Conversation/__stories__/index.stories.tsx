@@ -1,4 +1,3 @@
-import type { Meta } from '@storybook/react-vite'
 import {
   Conversation,
   DateComponent,
@@ -6,6 +5,8 @@ import {
   MessageInfos,
   MessageTag as Tag,
 } from '..'
+
+import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Conversation,

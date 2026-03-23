@@ -1,5 +1,6 @@
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it, vi } from 'vitest'
+
 import { InfoTable } from '..'
 
 describe('infoTable', () => {

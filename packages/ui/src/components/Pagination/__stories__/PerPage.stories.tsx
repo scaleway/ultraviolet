@@ -1,9 +1,12 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
+
+import { Pagination } from '..'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
-import { Pagination } from '..'
+
 import { list } from './styles.css'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 const NUMBER_OF_ITEMS = 134
 

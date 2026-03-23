@@ -1,10 +1,12 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ReactNode } from 'react'
 import { createContext, useContext, useLayoutEffect } from 'react'
+
 import { consoleLightTheme } from './themes'
 import { theme as themeContract } from './vanilla/themes.css'
+
+import type { ReactNode } from 'react'
 
 const ThemeContext = createContext(consoleLightTheme)
 

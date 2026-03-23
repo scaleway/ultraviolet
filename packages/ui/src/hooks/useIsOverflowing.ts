@@ -1,5 +1,6 @@
-import type { RefObject } from 'react'
 import { useEffect, useState } from 'react'
+
+import type { RefObject } from 'react'
 
 /**
  * This hook checks if the element has overflow based on the offsetWidth and scrollWidth of the element.

@@ -4,16 +4,19 @@ import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode, RefObject } from 'react'
 import { Children, useCallback, useEffect, useRef } from 'react'
+
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
 import { ColumnProvider } from '../List/ColumnProvider'
 import { listStyle } from '../List/styles.css'
 import { Tooltip } from '../Tooltip'
+
 import { Cell } from './Cell'
 import { tableStyle } from './styles.css'
 import { useTableContext } from './TableContext'
+
+import type { CSSProperties, ReactNode, RefObject } from 'react'
 
 type RowProps = {
   children: ReactNode

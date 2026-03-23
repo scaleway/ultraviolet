@@ -1,11 +1,14 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties } from 'react'
 import { useMemo } from 'react'
+
 import { Text } from '../Text'
+
 import { KEYS_MATCH } from './constants'
 import { keyStyle } from './styles.css'
+
+import type { CSSProperties } from 'react'
 
 type KeyProps = {
   children: string

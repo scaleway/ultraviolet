@@ -19,7 +19,7 @@ import { theme, ThemeProvider } from '@ultraviolet/themes'
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <SdkGoProductIcon size="medium" variant="primary"/>
+    <SdkGoProductIcon size="medium" variant="primary" />
   </ThemeProvider>
 )
 ```

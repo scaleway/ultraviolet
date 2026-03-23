@@ -1,5 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, style } from '@vanilla-extract/css'
+
 import {
   content,
   contentBreadcrumbsText,

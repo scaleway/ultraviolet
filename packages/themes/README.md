@@ -4,7 +4,7 @@
 
 Ultraviolet Themes is a set of themes for the Ultraviolet UI library.
 
-> [!NOTE] 
+> [!NOTE]
 >
 > `@ultraviolet/ui` is using `@ultraviolet/themes` under the hood, therefore you don't need to install it if you want to use the default theme (`consoleLightTheme` and `consoleDarkTheme` are the default themes).
 > This package is only usefull if you want to use only `@ultraviolet/themes` without `@ultraviolet/ui` or if you want to create your own theme based on the existing ones.
@@ -14,11 +14,11 @@ Ultraviolet Themes is a set of themes for the Ultraviolet UI library.
 ### CDN
 
 ```html
-<link rel="stylesheet" href="https://assets.scaleway.com/themes/light.css"> 
+<link rel="stylesheet" href="https://assets.scaleway.com/themes/light.css" />
 // OR
-<link rel="stylesheet" href="https://assets.scaleway.com/themes/dark.css"> 
-// OR 
-<link rel="stylesheet" href="https://assets.scaleway.com/themes/darker.css"> 
+<link rel="stylesheet" href="https://assets.scaleway.com/themes/dark.css" />
+// OR
+<link rel="stylesheet" href="https://assets.scaleway.com/themes/darker.css" />
 ```
 
 ### Using npm
@@ -49,11 +49,15 @@ export const App = () => (
   </ThemeProvider>
 )
 ```
+
 #### Normalized css
+
 Add this import for normalized css:
+
 ```tsx
 import '@ultraviolet/themes/global'
 ```
+
 ## Documentation
 
 Checkout our [documentation website](https://storybook.ultraviolet.scaleway.com/).

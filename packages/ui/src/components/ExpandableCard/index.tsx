@@ -4,6 +4,16 @@ import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { DragIcon } from '@ultraviolet/icons/DragIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
+import { forwardRef, useCallback, useRef, useState } from 'react'
+
+import { Stack } from '../Stack'
+import { Tooltip } from '../Tooltip'
+
+import { ExpandableCardTitle } from './components/Title'
+import { expandableCardStyle } from './styles.css'
+
+import type { XOR } from '../../types'
+import type { EXPANDABLE_CARD_SIZE } from './constants'
 import type {
   CSSProperties,
   DetailsHTMLAttributes,
@@ -12,13 +22,6 @@ import type {
   KeyboardEvent,
   ReactNode,
 } from 'react'
-import { forwardRef, useCallback, useRef, useState } from 'react'
-import type { XOR } from '../../types'
-import { Stack } from '../Stack'
-import { Tooltip } from '../Tooltip'
-import { ExpandableCardTitle } from './components/Title'
-import type { EXPANDABLE_CARD_SIZE } from './constants'
-import { expandableCardStyle } from './styles.css'
 
 type DraggableListType = { value?: string }
 type ExpandableCardSize = (typeof EXPANDABLE_CARD_SIZE)[number]
@@ -207,7 +210,7 @@ const BaseExpandableCard = forwardRef(
           ref={ref}
           tabIndex={disabled ? -1 : undefined}
         >
-          {/** biome-ignore lint/a11y/noStaticElementInteractions: need to add onClick/onKeyDown to use onToggleExpand */}
+          {/** oxlint-disable jsx_a11y/no-static-element-interactions: need to add onClick/onKeyDown to use onToggleExpand */}
           <summary
             className={expandableCardStyle.summary}
             data-disabled={!!disabled}
@@ -249,8 +252,8 @@ const BaseExpandableCard = forwardRef(
           <div className={expandableCardStyle.content}>{children}</div>
         </details>
         {draggable && index === 0 ? (
-          // biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop
-          // biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop
+          // oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop
+          // oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop
           <div
             className={expandableCardStyle.dropableArea}
             data-first
@@ -263,8 +266,8 @@ const BaseExpandableCard = forwardRef(
           />
         ) : null}
         {draggable ? (
-          // biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop
-          // biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop
+          // oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop
+          // oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop
           <div
             className={expandableCardStyle.dropableArea}
             data-testid={`${value}-dropable-area`}

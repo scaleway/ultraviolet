@@ -19,9 +19,7 @@ export const FocusOverlay = ({
   <div
     className={switchButtonStyle.focusOverlay[sentiment]}
     style={{
-      left: `${
-        position - (mouseDownSide === 'left' ? FOCUS_OVERLAY_SCALE_RATIO : 0)
-      }px`,
+      left: `${position - (mouseDownSide === 'left' ? FOCUS_OVERLAY_SCALE_RATIO : 0)}px`,
       width: `${cardWidth}px`,
     }}
   />

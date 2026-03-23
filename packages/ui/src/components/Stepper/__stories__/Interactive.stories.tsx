@@ -1,4 +1,5 @@
 import { Stepper } from '..'
+
 import { Template } from './Template.stories'
 
 export const Interactive = Template.bind({})

@@ -1,11 +1,13 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, ReactNode } from 'react'
 import { useContext } from 'react'
+
 import { Row } from '../../../Row'
 import { InfoTableContext } from '../Context'
 import { infoTableStyle, rowWidth } from '../styles.css'
+
+import type { CSSProperties, ReactNode } from 'react'
 
 type RowProps = {
   children: ReactNode

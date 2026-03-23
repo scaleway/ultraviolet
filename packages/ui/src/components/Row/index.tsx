@@ -3,11 +3,13 @@
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, ReactNode } from 'react'
-import type { UltravioletUITheme } from '../../theme'
-import type { AlignItemsType, JustifyContentType } from './styles.css'
+
 import { rowStyle, sprinkles } from './styles.css'
 import { paddings, templateColumn } from './variables.css'
+
+import type { UltravioletUITheme } from '../../theme'
+import type { AlignItemsType, JustifyContentType } from './styles.css'
+import type { CSSProperties, ReactNode } from 'react'
 
 type ResponsiveProp<T> =
   | T

@@ -2,12 +2,13 @@
 
 import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-import type { CSSProperties, FocusEvent, ReactNode } from 'react'
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
+
 import { Button } from '../Button'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+
 import { DEFAULT_DATE, DEFAULT_PLACEHOLDER, TIME_KEYS } from './constants'
 import {
   canConcat,
@@ -20,6 +21,8 @@ import {
   setValueByType,
 } from './helpers'
 import { timeInputStyle } from './styles.css'
+
+import type { CSSProperties, FocusEvent, ReactNode } from 'react'
 
 export type Time = {
   h: string

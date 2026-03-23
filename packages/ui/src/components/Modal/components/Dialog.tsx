@@ -2,18 +2,20 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
+
+import { Stack } from '../../Stack'
+import { useModal } from '../ModalProvider'
+import { modalStyle, positionModal, topModal } from '../styles.css'
+
+import type { DialogProps } from '../types'
 import type {
   FocusEventHandler,
   KeyboardEventHandler,
   MouseEventHandler,
   ReactEventHandler,
 } from 'react'
-import { useCallback, useEffect, useRef, useState } from 'react'
-import { createPortal } from 'react-dom'
-import { Stack } from '../../Stack'
-import { useModal } from '../ModalProvider'
-import { modalStyle, positionModal, topModal } from '../styles.css'
-import type { DialogProps } from '../types'
 
 // Prevent default behaviour on Escape
 const stopCancel: ReactEventHandler = event => {
@@ -257,7 +259,7 @@ export const Dialog = ({
           }),
           ...style,
         }}
-        // biome-ignore  lint/a11y/noNoninteractiveTabindex: to fix
+        // oxlint-disable a11y/noNoninteractiveTabindex: to fix
         tabIndex={0}
       >
         {image ? (

@@ -1,7 +1,8 @@
 'use client'
 
-import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { createContext, useContext, useMemo, useRef, useState } from 'react'
+
+import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 
 type MenuContextProps = {
   hideOnClickItem: boolean

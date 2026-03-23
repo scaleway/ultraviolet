@@ -1,13 +1,16 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
-import type { LabelProp } from '../../types'
+
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
+
 import { radioStyle } from './styles.css'
+
+import type { LabelProp } from '../../types'
+import type { InputHTMLAttributes, ReactNode } from 'react'
 
 const RadioMarkedIcon = () => (
   <g>

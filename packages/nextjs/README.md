@@ -42,17 +42,18 @@ export default function RootLayout({
 ### Limitations
 
 - **Fonts**: Ultraviolet UI uses custom fonts that need to be imported separately. Make sure to import the fonts CSS file in your project's entry point:
+
 ```sh
 pnpm add @ultraviolet/fonts
 ```
 
-  then in you `GlobalStyle` file:
-  
-  ```tsx
-  "use client"
-  
-  import '@ultraviolet/fonts/fonts.css'
-  ```
+then in you `GlobalStyle` file:
+
+```tsx
+'use client'
+
+import '@ultraviolet/fonts/fonts.css'
+```
 
 ## Documentation
 

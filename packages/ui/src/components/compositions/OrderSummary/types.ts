@@ -1,6 +1,6 @@
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import type { UnitInput } from '../../UnitInput'
 import type orderSummaryLocales from './locales/en'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 export type TimeUnit = 'seconds' | 'minutes' | 'hours' | 'days' | 'months'
 

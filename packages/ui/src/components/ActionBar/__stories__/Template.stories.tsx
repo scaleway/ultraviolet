@@ -1,9 +1,11 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { DeleteIcon } from '@ultraviolet/icons/DeleteIcon'
 import { useState } from 'react'
+
+import { ActionBar } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-import { ActionBar } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Template: StoryFn<typeof ActionBar> = args => {
   const [state, setState] = useState(false)

@@ -1,4 +1,3 @@
-import type { DocsContainerProps as BaseContainerProps } from '@storybook/addon-docs/blocks'
 import {
   DocsContainer as BaseContainer,
   Unstyled,
@@ -7,13 +6,15 @@ import {
   consoleLightTheme as lightTheme,
   ThemeProvider as ThemeProviderUV,
 } from '@ultraviolet/themes'
-import type { ReactNode } from 'react'
+import { GlobalAlert } from '@ultraviolet/ui'
 import { cloneElement, isValidElement, useState } from 'react'
+
+import { globalStyleStoryBook } from './globalStyle.css'
 import '@ultraviolet/fonts/fonts.css'
 // don't know how it's work today
 import '../../packages/themes/dist/themes.css'
-import { GlobalAlert } from '@ultraviolet/ui'
-import { globalStyleStoryBook } from './globalStyle.css'
+import type { DocsContainerProps as BaseContainerProps } from '@storybook/addon-docs/blocks'
+import type { ReactNode } from 'react'
 
 type ExtraProps = {
   /**

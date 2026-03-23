@@ -1,12 +1,15 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
+
+import { Modal } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { Modal } from '..'
+
 import appleSilicon from './assets/apple-silicon-m4-content.webp'
 import costManager from './assets/cost-manager-content.webp'
 import image from './assets/illustration.webp'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 const IMAGES_STEP = [image, appleSilicon, costManager]
 const TEXT_STEP = [

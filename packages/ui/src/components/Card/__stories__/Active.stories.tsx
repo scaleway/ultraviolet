@@ -1,12 +1,14 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { CancelIcon } from '@ultraviolet/icons/CancelIcon'
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { PencilIcon } from '@ultraviolet/icons/PencilIcon'
 import { useState } from 'react'
+
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Card } from '../index'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Active: StoryFn = args => {
   const [active, setActive] = useState(true)

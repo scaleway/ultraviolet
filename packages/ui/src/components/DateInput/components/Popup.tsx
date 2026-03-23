@@ -1,10 +1,12 @@
 'use client'
 
-import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { useLayoutEffect, useRef } from 'react'
+
 import { Popup } from '../../Popup'
 import { POPUP_WIDTH } from '../constants'
 import { dateInputStyle } from '../styles.css'
+
+import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 
 type PopupProps = {
   children: ReactNode

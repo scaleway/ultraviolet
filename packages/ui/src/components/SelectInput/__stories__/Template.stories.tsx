@@ -1,6 +1,7 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { Stack } from '../../Stack'
 import { SelectInput } from '..'
+import { Stack } from '../../Stack'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Template: StoryFn<typeof SelectInput> = args => (
   <Stack width="80%">

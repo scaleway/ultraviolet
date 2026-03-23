@@ -1,6 +1,6 @@
-import type { TestUserConfig, ViteUserConfig } from 'vitest/config'
-
 import { configDefaults, defineConfig, mergeConfig } from 'vitest/config'
+
+import type { TestUserConfig, ViteUserConfig } from 'vitest/config'
 
 export const createVitestConfig = (
   options: TestUserConfig & ViteUserConfig = {},

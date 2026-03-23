@@ -1,10 +1,13 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
+
+import { FileInput } from '..'
 import { Avatar } from '../../Avatar'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { FileInput } from '..'
+
 import { hereText } from './styles.css'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Children: StoryFn<typeof FileInput> = args => {
   const [image, setImage] = useState<string | undefined>(undefined)

@@ -1,6 +1,7 @@
 // oxlint-disable eslint/no-console
 
 import { writeFile, writeFileSync } from 'node:fs'
+
 import { header, TOKENS_URL } from './constants'
 import { generateThemeCss } from './create-css-variables'
 import { generatePalette } from './generatePalette'
@@ -44,9 +45,7 @@ const writeFiles = async () => {
     const filePath = `packages/themes/src/themes/console/${themeMatch.outputTheme}/__generated__/index.ts`
     writeFile(
       filePath,
-      `${header}export const ${themeMatch.outputTheme}Theme = ${JSON.stringify(
-        output,
-      )}`,
+      `${header}export const ${themeMatch.outputTheme}Theme = ${JSON.stringify(output)}`,
       {},
       () => {
         console.log(`File written ${filePath}`)

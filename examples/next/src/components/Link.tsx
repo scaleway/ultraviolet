@@ -1,8 +1,9 @@
 import { Link as UVLink } from '@ultraviolet/ui'
-import type { LinkProps } from 'next/link'
 import NextLink from 'next/link'
-import type { ComponentProps } from 'react'
 import { forwardRef } from 'react'
+
+import type { LinkProps } from 'next/link'
+import type { ComponentProps } from 'react'
 
 type LinkPropsType = Omit<LinkProps, ''> &
   Omit<ComponentProps<typeof UVLink>, ''>

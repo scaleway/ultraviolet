@@ -2,6 +2,7 @@ import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { beforeAll, describe, expect, test, vi } from 'vitest'
+
 import { PieChart } from '..'
 import {
   data,
@@ -65,7 +66,6 @@ describe('pieChart', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  // biome-ignore lint/suspicious/noSkippedTests: to fix
   test.skip('renders correctly when chart is hovered', async () => {
     const { container } = renderWithTheme(
       <PieChart data={dataWithLegendsAndDetails} withLegend />,

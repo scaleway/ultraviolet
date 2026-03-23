@@ -2,8 +2,9 @@ import { fireEvent, screen } from '@testing-library/react'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
-import { Link } from '../../Link'
+
 import { Tabs } from '..'
+import { Link } from '../../Link'
 
 describe('tabs', () => {
   test('renders correctly', () => {

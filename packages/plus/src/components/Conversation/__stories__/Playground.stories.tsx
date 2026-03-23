@@ -1,5 +1,7 @@
 import { Avatar } from '@ultraviolet/ui'
+
 import { Conversation } from '..'
+
 import { Template } from './Template.stories'
 
 export const Playground = Template.bind({})

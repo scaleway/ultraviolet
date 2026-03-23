@@ -1,11 +1,13 @@
 'use client'
 
-import type { CSSProperties, ReactNode } from 'react'
 import { Bullet } from '../../Bullet'
 import { Card } from '../../Card'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+
 import { faqStyle } from './styles.css'
+
+import type { CSSProperties, ReactNode } from 'react'
 
 type FAQProps = {
   description: string

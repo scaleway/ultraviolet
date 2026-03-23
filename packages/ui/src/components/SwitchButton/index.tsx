@@ -1,6 +1,18 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+
+import { Stack } from '../Stack'
+import { Tooltip } from '../Tooltip'
+
+import { FOCUS_OVERLAY_SCALE_RATIO } from './constant'
+import { FocusOverlay } from './FocusOverlay'
+import { Option } from './Option'
+import { switchButtonStyle } from './styles.css'
+import { SwitchButtonContext } from './SwitchButtonContext'
+
+import type { RefOptionType } from './SwitchButtonContext'
 import type {
   ChangeEvent,
   ChangeEventHandler,
@@ -8,15 +20,6 @@ import type {
   FocusEventHandler,
   ReactNode,
 } from 'react'
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { Stack } from '../Stack'
-import { Tooltip } from '../Tooltip'
-import { FOCUS_OVERLAY_SCALE_RATIO } from './constant'
-import { FocusOverlay } from './FocusOverlay'
-import { Option } from './Option'
-import type { RefOptionType } from './SwitchButtonContext'
-import { SwitchButtonContext } from './SwitchButtonContext'
-import { switchButtonStyle } from './styles.css'
 
 type SwitchButtonProps = {
   name?: string

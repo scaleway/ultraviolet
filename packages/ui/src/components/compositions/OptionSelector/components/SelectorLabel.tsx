@@ -1,6 +1,7 @@
-import type { ReactNode } from 'react'
 import { Text } from '../../../Text'
 import { optionSelectorStyle } from '../styles.css'
+
+import type { ReactNode } from 'react'
 
 export const SelectorHelper = ({
   isError,

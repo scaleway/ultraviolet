@@ -5,6 +5,7 @@ import {
   useTheme,
 } from '@ultraviolet/themes'
 import deepmerge from 'deepmerge'
+
 import { ThemeProvider } from './ThemeProvider'
 
 export type ScreenSize = keyof typeof consoleLightTheme.breakpoints

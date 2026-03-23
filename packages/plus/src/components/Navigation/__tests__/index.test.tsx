@@ -2,9 +2,11 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { UseCaseCategoryIcon } from '@ultraviolet/icons/category'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import type { ComponentProps } from 'react'
 import { describe, expect, test, vi } from 'vitest'
+
 import { Navigation, NavigationProvider } from '..'
+
+import type { ComponentProps } from 'react'
 
 type BasicNavigationProps = Pick<
   ComponentProps<typeof NavigationProvider>,

@@ -1,15 +1,15 @@
 // oxlint-disable import/no-namespace
-// biome-ignore-all lint/correctness/useImageSize: should be fix
+// oxlint-disablecorrectness/useImageSize: should be fix
 
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
-
 import * as productsIllustrations from '@ultraviolet/illustrations/products'
 import * as variousIllustrations from '@ultraviolet/illustrations/various'
 import { Button, Expandable, Snippet, Stack, Text } from '@ultraviolet/ui'
 import { useReducer } from 'react'
+
 // import * as assets from '../index'
 import {
   buttonStory,

@@ -39,16 +39,13 @@ export default function App() {
     defaultValues: INITIAL_VALUES,
     mode: 'onChange',
   })
-  
+
   const formErrors = {
     required: () => 'This field is required',
     // Add more error messages as needed for min, max, etc.
   }
-  
-  const onSubmit = async ({
-    firstName,
-    lastName,
-  }: FormValues) => {
+
+  const onSubmit = async ({ firstName, lastName }: FormValues) => {
     // Add your form submission logic here
     console.log('Form submitted with values:', { firstName, lastName })
   }
@@ -64,7 +61,7 @@ export default function App() {
 }
 ```
 
-###  `useWatch` Hook
+### `useWatch` Hook
 
 You can use the `useWatch` hook from `@ultraviolet/form` to watch specific fields in your form thus subscribing to their changes.
 It can be useful for displaying real-time updates or triggering actions based on field values.
@@ -82,13 +79,13 @@ function FirstNameWatched({ control }: { control: Control<FormInputs> }) {
 
 export default function App() {
   ... // same setup as before
-  
+
   return (
     <ThemeProvider theme={theme}>
       <Form methods={methods} errors={formErrors} onSubmit={onSubmit}>
         <TextInputField name="firstName" />
         <TextInputField name="lastName" />
-        
+
         <FirstNameWatched control={control} />
       </Form>
     </ThemeProvider>
@@ -104,12 +101,7 @@ In addition many field support `required`, `minLength`, `maxLength`, `min`, and 
 #### Native Validation
 
 ```tsx
-<TextInputField 
-  name="firstName" 
-  required
-  minLength={2}
-  maxLength={30}
-/>
+<TextInputField name="firstName" required minLength={2} maxLength={30} />
 ```
 
 #### With Validate
@@ -117,8 +109,8 @@ In addition many field support `required`, `minLength`, `maxLength`, `min`, and 
 ```tsx
 const EXISTING_IPS = ['192.168.1.1']
 
-<TextInputField 
-  name="ip" 
+<TextInputField
+  name="ip"
   validate={{
   ipAlreadyExists: (ip: string) =>
     EXISTING_IPS.includes(ip) ? 'This ip is already in use' : undefined,
@@ -129,7 +121,7 @@ const EXISTING_IPS = ['192.168.1.1']
 #### With Regex
 
 ```tsx
-<TextInputField 
+<TextInputField
   name="email"
   regex={[/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/]}
 />
@@ -146,11 +138,7 @@ You can then use it like this:
 
 ```tsx
 import { email } from '@scaleway/regex'
-
-<TextInputField 
-  name="email"
-  regex={[email]}
-/>
+;<TextInputField name="email" regex={[email]} />
 ```
 
 Check all the available regexes in the [Scaleway Regex file](https://github.com/scaleway/scaleway-lib/blob/main/packages/regex/src/index.ts)
@@ -163,15 +151,14 @@ You can use [Zod](https://zod.dev/) for validation by integrating it with `@ultr
 pnpm add zod @hookform/resolvers
 ```
 
-
 Here's how you can do it:
 
 ```tsx
-import { ThemeProvider, theme  } from '@ultraviolet/themes'
+import { ThemeProvider, theme } from '@ultraviolet/themes'
 import { Form, TextInputField } from '@ultraviolet/form'
 import { useForm } from '@ultraviolet/form'
-import { zodResolver } from "@hookform/resolvers/zod"
-import * as z from "zod"
+import { zodResolver } from '@hookform/resolvers/zod'
+import * as z from 'zod'
 
 // Define your Zod schema for validation
 const schema = z.object({
@@ -194,16 +181,13 @@ export default function App() {
     resolver: zodResolver(schema),
     mode: 'onChange',
   })
-  
+
   const formErrors = {
     required: () => 'This field is required',
     // Add more error messages as needed for min, max, etc.
   }
-  
-  const onSubmit = async ({
-    firstName,
-    lastName,
-  }: FormValues) => {
+
+  const onSubmit = async ({ firstName, lastName }: FormValues) => {
     // Add your form submission logic here
     console.log('Form submitted with values:', { firstName, lastName })
   }

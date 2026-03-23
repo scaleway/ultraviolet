@@ -1,10 +1,12 @@
 'use client'
 
 import { useTheme } from '@ultraviolet/themes'
-import type { CSSProperties } from 'react'
-import type { ExtendedColor } from '../../theme'
+
 import { SIZES } from './constants'
 import { loaderStyle } from './styles.css'
+
+import type { ExtendedColor } from '../../theme'
+import type { CSSProperties } from 'react'
 
 const VIEWBOX_WIDTH = 100
 const VIEWBOX_HEIGHT = 100

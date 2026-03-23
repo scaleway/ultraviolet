@@ -1,10 +1,13 @@
 'use client'
 
-import type { ReactNode } from 'react'
 import { useMemo } from 'react'
+
 import { ActionBar } from '../ActionBar'
 import { Stack } from '../Stack'
+
 import { useListContext } from './ListContext'
+
+import type { ReactNode } from 'react'
 
 type SelectBarProps<T> = {
   className?: string

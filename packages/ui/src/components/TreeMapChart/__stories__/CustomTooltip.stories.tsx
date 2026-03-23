@@ -1,6 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { TreeMapChart } from '..'
+
 import { treeMapChartSimpleData } from './mockData'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const CustomTooltip: StoryFn<typeof TreeMapChart> = props => (
   <TreeMapChart

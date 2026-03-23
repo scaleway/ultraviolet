@@ -1,13 +1,16 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
+
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+
 import { ChipContext } from './ChipContext'
 import { ChipIcon } from './ChipIcon'
 import { chipStyle } from './styles.css'
+
+import type { CSSProperties, ReactNode } from 'react'
 
 type ChipType = {
   children: ReactNode

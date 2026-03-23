@@ -1,5 +1,6 @@
 import { GithubIcon } from '@ultraviolet/icons/GithubIcon'
 import { Link, Stack, Text } from '@ultraviolet/ui'
+
 import styles from '../../../styles/advanced.module.scss'
 import swForm from '../../assets/icons/icon-scaleway-form.svg'
 import swLib from '../../assets/icons/icon-scaleway-lib.svg'

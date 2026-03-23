@@ -1,5 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
+
 import { SIZE_HEIGHT } from '../Button/constants'
 
 const closeButton = style({

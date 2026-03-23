@@ -4,6 +4,7 @@ import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
 import { SunIcon } from '@ultraviolet/icons/SunIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
+
 import { SwitchButton } from '..'
 
 let resizeCallback: ResizeObserverCallback = () => {}

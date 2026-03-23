@@ -1,18 +1,21 @@
 'use client'
 
-import type { Box } from '@nivo/core'
 import { Pie } from '@nivo/pie'
-import type { theme as UVTheme } from '@ultraviolet/themes'
 import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, ReactNode } from 'react'
 import { useCallback, useState } from 'react'
+
 import { getLegendColor } from '../../helpers/legend'
 import { getNivoTheme } from '../../helpers/nivoTheme'
 import { Text } from '../Text'
+
 import { Legends } from './Legends'
 import { heightContainerPie, pieChartStyle } from './styles.css'
+
 import type { Data } from './types'
+import type { Box } from '@nivo/core'
+import type { theme as UVTheme } from '@ultraviolet/themes'
+import type { CSSProperties, ReactNode } from 'react'
 
 type PieChartProps = {
   chartProps?: Record<string, unknown>

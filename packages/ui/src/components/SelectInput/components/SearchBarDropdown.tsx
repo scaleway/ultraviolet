@@ -2,13 +2,15 @@
 
 import { isFuzzyMatch, normalizeString } from '@scaleway/fuzzy-search'
 import { SearchIcon } from '@ultraviolet/icons/SearchIcon'
-import type { Dispatch, KeyboardEvent, SetStateAction } from 'react'
 import { useEffect, useRef } from 'react'
+
 import { TextInput } from '../../TextInput'
 import { OPTION_SELECTOR } from '../constants'
 import { useSelectInput } from '../SelectInputProvider'
 import { selectInputStyle } from '../styles.css'
+
 import type { DataType, OptionType } from '../types'
+import type { Dispatch, KeyboardEvent, SetStateAction } from 'react'
 
 type SearchBarProps = {
   placeholder: string

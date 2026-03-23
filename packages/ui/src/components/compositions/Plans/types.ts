@@ -1,5 +1,5 @@
-import type { ComponentProps, ReactNode } from 'react'
 import type { Text } from '../../Text'
+import type { ComponentProps, ReactNode } from 'react'
 
 export type Hint =
   | {

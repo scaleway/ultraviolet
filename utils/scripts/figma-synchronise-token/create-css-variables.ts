@@ -1,4 +1,4 @@
-// biome-ignore-all lint/performance/useTopLevelRegex: to fix
+// oxlint-disable: to fix
 
 const fontWeightMap = {
   Medium: 500,
@@ -20,9 +20,9 @@ const makeCSSVariablesRec = (
       .join('')
   }
   const cssValue = Object.keys(fontWeightMap).includes(
-    innerValue as keyof typeof fontWeightMap,
+    innerValue as unknown as keyof typeof fontWeightMap,
   )
-    ? fontWeightMap[innerValue as keyof typeof fontWeightMap]
+    ? fontWeightMap[innerValue as unknown as keyof typeof fontWeightMap]
     : innerValue
 
   const finalCSSValue =

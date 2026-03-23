@@ -1,8 +1,10 @@
-import type { StoryFn } from '@storybook/react-vite'
+import { Menu } from '..'
 import { Modal } from '../../Modal'
 import { TextInput } from '../../TextInput'
-import { Menu } from '..'
+
 import { DefaultDisclosure } from './Template.stories'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 const NestedModal = () => (
   <Modal disclosure={<Menu.Item>MenuItem with Modal</Menu.Item>}>

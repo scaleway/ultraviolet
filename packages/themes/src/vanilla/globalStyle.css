@@ -16,8 +16,15 @@ body {
 }
 body {
   font-family:
-    system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji";
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
 }
 hr {
   height: 0;
@@ -35,7 +42,7 @@ kbd,
 pre,
 samp {
   font-family:
-    ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
   font-size: 1em;
 }
 small {
@@ -72,9 +79,9 @@ button,
 select {
   text-transform: none;
 }
-[type="button"],
-[type="reset"],
-[type="submit"],
+[type='button'],
+[type='reset'],
+[type='submit'],
 button {
   -webkit-appearance: button;
 }
@@ -98,7 +105,7 @@ progress {
 ::-webkit-outer-spin-button {
   height: auto;
 }
-[type="search"] {
+[type='search'] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }

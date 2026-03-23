@@ -1,7 +1,9 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { Stack, Text } from '@ultraviolet/ui'
+
 import { FranceFlag } from '../__generated__'
 import { SIZES } from '../constant'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Sizes: StoryFn<typeof FranceFlag> = props => (
   <Stack gap={1}>

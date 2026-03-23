@@ -1,8 +1,10 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { SENTIMENTS } from '../../../theme'
-import { Stack, Table, Text } from '../..'
 import { Button } from '..'
+import { Stack, Table, Text } from '../..'
+import { SENTIMENTS } from '../../../theme'
+
 import { showCase } from './style.css'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 const buttonVariants = ['ghost', 'filled', 'outlined'] as const
 

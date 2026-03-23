@@ -1,12 +1,14 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { LockIcon } from '@ultraviolet/icons/LockIcon'
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
-import type { ComponentProps } from 'react'
+import { LockIcon } from '@ultraviolet/icons/LockIcon'
+
 import { InfoTable } from '..'
+import { Button } from '../../../Button'
 import { Card } from '../../../Card'
 import { Status } from '../../../Status'
-import { Button } from '../../../Button'
 import { Tooltip } from '../../../Tooltip'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 export const ComplexExample: StoryFn<
   ComponentProps<typeof InfoTable>

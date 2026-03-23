@@ -4,12 +4,14 @@ import {
   ThemeProvider,
 } from '@ultraviolet/themes'
 import { extendTheme, Stack } from '@ultraviolet/ui'
-import type { AppProps } from 'next/app'
-import type { PropsWithChildren } from 'react'
 import { useCallback, useLayoutEffect, useState } from 'react'
+
+import styles from '../../styles/grid.module.scss'
 import Footer from '../components/Footer'
 import Head from '../components/Head'
 import Header from '../components/Header'
+
+import type { AppProps } from 'next/app'
 import '@ultraviolet/fonts/fonts.css'
 import '@ultraviolet/ui/styles'
 import '@ultraviolet/icons/styles'
@@ -17,7 +19,7 @@ import '@ultraviolet/themes/global'
 import '@ultraviolet/themes/dark.css'
 import '@ultraviolet/themes/darker.css'
 import '@ultraviolet/themes/light.css'
-import styles from '../../styles/grid.module.scss'
+import type { PropsWithChildren } from 'react'
 import '../../styles/global.css'
 
 type Themes = 'light' | 'dark'

@@ -1,10 +1,13 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
+
+import { List } from '..'
 import { Button } from '../../Button'
 import { Text } from '../../Text'
-import { List } from '..'
+
 import { columns, data } from './resources'
 import { Template } from './Template.stories'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const OnSelectedChange: StoryFn = args => {
   const [selectedRows, onSelectedChange] = useState<string[]>([])

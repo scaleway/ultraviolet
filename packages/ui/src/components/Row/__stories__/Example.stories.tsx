@@ -1,6 +1,7 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { Card, Separator, Stack, Status, Text } from '../..'
 import { Row } from '..'
+import { Card, Separator, Stack, Status, Text } from '../..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Example: StoryFn = args => (
   <Card header="Overview">

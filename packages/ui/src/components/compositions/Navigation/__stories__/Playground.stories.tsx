@@ -1,5 +1,3 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import { BaremetalCategoryIcon } from '@ultraviolet/icons/category/BaremetalCategoryIcon'
 import { DataAndAnalyticsCategoryIcon } from '@ultraviolet/icons/category/DataAndAnalyticsCategoryIcon'
 import { DatabaseCategoryIcon } from '@ultraviolet/icons/category/DatabaseCategoryIcon'
@@ -8,14 +6,19 @@ import { NetworkCategoryIcon } from '@ultraviolet/icons/category/NetworkCategory
 import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category/OrganizationDashboardCategoryIcon'
 import { SecurityCategoryIcon } from '@ultraviolet/icons/category/SecurityCategoryIcon'
 import { UseCaseCategoryIcon } from '@ultraviolet/icons/category/UseCaseCategoryIcon'
-import type { ComponentProps } from 'react'
+import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import { useCallback, useEffect, useState } from 'react'
+
 import { Navigation, NavigationProvider, useNavigation } from '..'
-import logo from './assets/logo.svg'
-import logoSmall from './assets/logo-small.svg'
-import { animation } from './styles.css'
 import { Stack } from '../../../Stack'
 import { Tooltip } from '../../../Tooltip'
+
+import logoSmall from './assets/logo-small.svg'
+import logo from './assets/logo.svg'
+import { animation } from './styles.css'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 const onClickPinUnpin: ComponentProps<
   typeof Navigation.Item

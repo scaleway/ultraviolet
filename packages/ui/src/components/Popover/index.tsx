@@ -2,7 +2,6 @@
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, ReactNode, Ref } from 'react'
 import {
   forwardRef,
   useCallback,
@@ -12,13 +11,17 @@ import {
   useRef,
   useState,
 } from 'react'
+
 import { Button } from '../Button'
 import { ModalContext } from '../Modal/ModalProvider'
 import { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import type { SIZES_WIDTH } from './constant'
+
 import { popoverStyle } from './styles.css'
+
+import type { SIZES_WIDTH } from './constant'
+import type { ComponentProps, ReactNode, Ref } from 'react'
 
 type SentimentType = 'neutral' | 'primary'
 

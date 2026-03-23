@@ -1,8 +1,10 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { CockpitProductIcon } from '@ultraviolet/icons/product'
-import type { ComponentProps } from 'react'
+
 import { ContentCard } from '..'
 import illustration from '../assets/illustration.png'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 export const Template: StoryFn<ComponentProps<typeof ContentCard>> = ({
   direction,

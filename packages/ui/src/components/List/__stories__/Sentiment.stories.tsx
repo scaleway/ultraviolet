@@ -1,5 +1,6 @@
-import { SENTIMENTS } from '../../../theme'
 import { List } from '..'
+import { SENTIMENTS } from '../../../theme'
+
 import { Template } from './Template.stories'
 
 export const Sentiments = Template.bind({})

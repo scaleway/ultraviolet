@@ -1,9 +1,11 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps } from 'react'
+
 import { Button } from '../../Button'
 import { toasterStyle } from '../styles.css'
+
+import type { ComponentProps } from 'react'
 
 export const ToastButton = ({
   variant,

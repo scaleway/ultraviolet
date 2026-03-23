@@ -1,6 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
+
 import { SelectableCardGroup } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Columns: StoryFn<typeof SelectableCardGroup> = args => {
   const [values, onChange] = useState(['value-1'])

@@ -1,6 +1,7 @@
+import { Snippet } from '../index'
+
 import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { Snippet } from '../index'
 
 const VALUE = `pnpm add @ultraviolet/ui
 pnpm install

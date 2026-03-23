@@ -2,7 +2,6 @@
 
 import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
-import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import {
   forwardRef,
   useCallback,
@@ -11,14 +10,18 @@ import {
   useMemo,
   useRef,
 } from 'react'
+
 import { Button } from '../Button'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-import type { SIZES } from './constant'
+
 import { numberInputStyle } from './styles.css'
+
+import type { SIZES } from './constant'
+import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 
 type Sizes = keyof typeof SIZES
 

@@ -1,8 +1,10 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
+
+import { SearchInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-import { SearchInput } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Standalone: StoryFn<typeof SearchInput> = ({ ...args }) => {
   const [value, setValue] = useState('')

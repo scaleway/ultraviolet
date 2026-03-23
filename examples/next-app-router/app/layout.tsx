@@ -11,8 +11,9 @@ import {
   consoleLightTheme,
   generateObjectStyleFromTheme,
 } from '@ultraviolet/themes'
-import type { Metadata } from 'next'
 import { cookies } from 'next/headers'
+
+import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 
 // oxlint-disable-next-line react/only-export-components

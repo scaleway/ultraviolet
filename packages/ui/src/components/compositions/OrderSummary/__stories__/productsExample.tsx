@@ -1,5 +1,6 @@
 import { FranceFlag } from '@ultraviolet/icons/flags/FranceFlag'
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
+
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
 import { Tooltip } from '../../../Tooltip'

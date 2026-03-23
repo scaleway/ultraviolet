@@ -1,10 +1,12 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { AlertCircleOutlineIcon } from '@ultraviolet/icons/AlertCircleOutlineIcon'
-import type { ComponentProps } from 'react'
+
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
 import { Tooltip } from '../../Tooltip'
 import { NumberInput } from '../index'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 export const LabelDescription: StoryFn = (
   args: ComponentProps<typeof NumberInput>,

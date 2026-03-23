@@ -2,7 +2,7 @@
 
 // oxlint-disable eslint/no-console
 // oxlint-disable eslint/max-statements
-// biome-ignore-all lint/style/noNonNullAssertion: error
+// oxlint-disable @typescript-eslint/no-non-null-assertion: error
 
 import { createHash } from 'node:crypto'
 import fs, {

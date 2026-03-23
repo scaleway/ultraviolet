@@ -5,15 +5,18 @@ import { SortIcon as SortIconUV } from '@ultraviolet/icons/SortIcon'
 import { SouthShortIcon } from '@ultraviolet/icons/SouthShortIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ReactNode } from 'react'
+
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
+
 import { listStyle } from './styles.css'
 import {
   maxWidthHeaderCell,
   minWidthHeaderCell,
   widthHeaderCell,
 } from './variables.css'
+
+import type { ReactNode } from 'react'
 
 const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) =>
   order ? (

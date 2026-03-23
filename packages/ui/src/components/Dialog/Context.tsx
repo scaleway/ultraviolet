@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useContext } from 'react'
+
 import type { DialogSentiment } from './constants'
 
 export type DialogContextType = {

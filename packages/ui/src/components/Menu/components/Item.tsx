@@ -2,6 +2,14 @@
 
 import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { cn } from '@ultraviolet/utils'
+import { forwardRef, useCallback } from 'react'
+
+import { Stack } from '../../Stack'
+import { Tooltip } from '../../Tooltip'
+import { getListItem } from '../helpers'
+import { useDisclosureContext, useMenu } from '../MenuProvider'
+import { menuStyle } from '../styles.css'
+
 import type {
   CSSProperties,
   KeyboardEvent,
@@ -10,12 +18,6 @@ import type {
   ReactNode,
   Ref,
 } from 'react'
-import { forwardRef, useCallback } from 'react'
-import { Stack } from '../../Stack'
-import { Tooltip } from '../../Tooltip'
-import { getListItem } from '../helpers'
-import { useDisclosureContext, useMenu } from '../MenuProvider'
-import { menuStyle } from '../styles.css'
 
 type MenuItemSentiment = 'neutral' | 'primary' | 'danger'
 
@@ -162,8 +164,6 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
                 >
                   {children}
                   {rightComponent ? (
-                    // biome-ignore lint/a11y/noStaticElementInteractions: wrapper for an eventual interactive element
-                    // biome-ignore lint/a11y/noNoninteractiveElementInteractions: wrapper for an eventual interactive element
                     <div
                       onClick={event => {
                         event.stopPropagation()
@@ -229,8 +229,6 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
               >
                 {children}
                 {rightComponent ? (
-                  // biome-ignore lint/a11y/noStaticElementInteractions: wrapper for an eventual interactive element
-                  // biome-ignore lint/a11y/noNoninteractiveElementInteractions: wrapper for an eventual interactive element
                   <div
                     onClick={event => {
                       event.stopPropagation()

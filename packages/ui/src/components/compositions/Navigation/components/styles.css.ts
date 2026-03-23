@@ -1,6 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+
 import { groupAnimation } from '../animations.css'
 import { ANIMATION_DURATION } from '../constants'
 

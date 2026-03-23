@@ -1,10 +1,13 @@
 'use client'
 
-import type { CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
+
 import { Stack } from '../Stack'
+
 import { PaginationButtons } from './PaginationButtons'
 import { PerPage } from './PerPage'
+
+import type { CSSProperties } from 'react'
 
 type PaginationProps = {
   /**

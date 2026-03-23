@@ -6,13 +6,16 @@ import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { LightBulbIcon } from '@ultraviolet/icons/LightBulbIcon'
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useState } from 'react'
+
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+
 import { alertStyle } from './styles.css'
+
 import type { AlertSentiment } from './type'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 const sentimentIcons = {
   danger: AlertCircleIcon,

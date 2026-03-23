@@ -1,11 +1,13 @@
-import type { StoryFn } from '@storybook/react-vite'
+import { Modal } from '..'
 import { Badge } from '../../Badge'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { Modal } from '..'
+
 import image from './assets/illustration.webp'
 import imageCorrectFormat from './assets/illustrationCorrectFormat.webp'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Image: StoryFn = props => (
   <Stack direction="row" gap={2}>

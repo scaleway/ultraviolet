@@ -1,9 +1,12 @@
 'use client'
 
 import { memo } from 'react'
+
 import { Stack } from '../../Stack'
+
 import { useNavigation } from './NavigationProvider'
 import { navigationStyle } from './styles.css'
+
 import type { NavigationProps } from './types'
 
 type HeaderProps = {

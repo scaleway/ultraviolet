@@ -1,6 +1,6 @@
 # E2E Testing
 
-This project uses playwright to run end-to-end tests. As we are testing a library we need to setup a test environment 
+This project uses playwright to run end-to-end tests. As we are testing a library we need to setup a test environment
 for rendering the component and the test file for each test case.
 
 > [!WARNING]  
@@ -8,6 +8,7 @@ for rendering the component and the test file for each test case.
 > E2E tests can be used for testing a mix of component and see their interaction. Example: select input within a modal and vice versa.
 
 ## Structure
+
 ```
 e2e
 ├── tests
@@ -51,5 +52,5 @@ To write the tests and ease your life we made a template. You can copy and paste
 
 - `render.tsx`: this will be rendered in the browser and will contain the component / combination of components you want to test.
 - `test.spec.ts`: this will contain the playwright test cases.
-  - Do not forget to change ```await page.goto(`${baseURL}/template`)```. Where `template` is the exact same folder name this file is contained into.
+  - Do not forget to change ``await page.goto(`${baseURL}/template`)``. Where `template` is the exact same folder name this file is contained into.
   - You should export default your Render component so routing will be correctly done.

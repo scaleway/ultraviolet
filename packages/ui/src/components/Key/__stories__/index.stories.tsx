@@ -1,6 +1,7 @@
-import type { Meta } from '@storybook/react-vite'
 import { Key } from '..'
 import { Stack } from '../../Stack'
+
+import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Key,

@@ -1,5 +1,6 @@
 import { NetworkCategoryIcon } from '@ultraviolet/icons/category/NetworkCategoryIcon'
 import { EmailOutlineIcon } from '@ultraviolet/icons/EmailOutlineIcon'
+
 import { Badge } from '../../Badge'
 import { Bullet } from '../../Bullet'
 import { Button } from '../../Button'
@@ -325,7 +326,6 @@ export const OptionalInfo5 = [
     label: 'Warsaw',
     optionalInfo: (
       <Button
-        // biome-ignore lint/suspicious/noAlert: ok
         onClick={() => alert('We will enable Warsaw soon!')}
         sentiment="neutral"
         size="xsmall"

@@ -1,4 +1,4 @@
-// biome-ignore-all lint/performance/useTopLevelRegex: error
+// oxlint-disableperformance/useTopLevelRegex: error
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -104,9 +104,7 @@ export const updateDynamicIllustrations = (
       .join('\n')}
 
     export type IllustrationsKeys = {
-    ${filteredDynamicIllustrations
-      .map(illustration => `${illustration.category}: string`)
-      .join('\n')}
+    ${filteredDynamicIllustrations.map(illustration => `${illustration.category}: string`).join('\n')}
     }
 
     export const ILLUSTRATIONS = {

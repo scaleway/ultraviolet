@@ -1,7 +1,6 @@
 'use client'
 
 import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
-import type { ChangeEvent, DragEvent } from 'react'
 import {
   useEffect,
   useId,
@@ -10,15 +9,19 @@ import {
   useRef,
   useState,
 } from 'react'
+
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+
 import { FileInputButton } from './components/Button'
 import { ListFiles } from './components/List'
 import { FileInputContext } from './FileInputProvider'
 import { fileIsAccepted } from './helpers'
 import { fileInputStyle } from './styles.css'
+
 import type { FileInputProps, FilesType } from './types'
+import type { ChangeEvent, DragEvent } from 'react'
 
 /**
  * FileInput allow user to drag & drop and upload one or multiple files.
@@ -151,8 +154,8 @@ const FileInputBase = ({
     return (
       <FileInputContext.Provider value={value}>
         <Stack direction="column" gap={1}>
-          {/** biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop */}
-          {/** biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop */}
+          {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
+          {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
           <div
             className={className}
             data-testid="drag-container"
@@ -172,8 +175,8 @@ const FileInputBase = ({
             />
             <div className={fileInputStyle.overlayWrapper}>
               {computedChildren}
-              {/** biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop */}
-              {/** biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop */}
+              {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
+              {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
               <div
                 className={
                   disabled

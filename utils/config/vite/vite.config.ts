@@ -1,6 +1,7 @@
 import react from '@vitejs/plugin-react'
 import { readPackage } from 'read-pkg'
 import preserveDirectives from 'rollup-preserve-directives'
+
 import type { UserConfig } from 'vite'
 
 const pkg = await readPackage()

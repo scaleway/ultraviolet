@@ -360,9 +360,7 @@ export const computePositions = ({
         arrowTop: `${-arrowWidth - 5}px`,
         arrowTransform: '',
         placement: 'bottom',
-        popupInitialPosition: `translate3d(${
-          finalPositionX
-        }px, ${positionY - TOTAL_USED_SPACE}px, 0)`,
+        popupInitialPosition: `translate3d(${finalPositionX}px, ${positionY - TOTAL_USED_SPACE}px, 0)`,
         popupPosition: `translate3d(${finalPositionX}px, ${positionY}px, 0)`,
         rotate: 180,
       }
@@ -382,12 +380,8 @@ export const computePositions = ({
         arrowTop: '50%',
         arrowTransform: 'translate(-50%, -50%)',
         placement: 'left',
-        popupInitialPosition: `translate3d(${positionX + TOTAL_USED_SPACE}px, ${
-          positionY + popupOverflow
-        }px, 0)`,
-        popupPosition: `translate3d(${positionX}px, ${
-          positionY + popupOverflow
-        }px, 0)`,
+        popupInitialPosition: `translate3d(${positionX + TOTAL_USED_SPACE}px, ${positionY + popupOverflow}px, 0)`,
+        popupPosition: `translate3d(${positionX}px, ${positionY + popupOverflow}px, 0)`,
         rotate: -90,
       }
     }
@@ -405,12 +399,8 @@ export const computePositions = ({
         arrowTop: '50%',
         arrowTransform: 'translate(50%, -50%)',
         placement: 'right',
-        popupInitialPosition: `translate3d(${positionX - TOTAL_USED_SPACE}px, ${
-          positionY + popupOverflow
-        }px, 0)`,
-        popupPosition: `translate3d(${positionX}px, ${
-          positionY + popupOverflow
-        }px, 0)`,
+        popupInitialPosition: `translate3d(${positionX - TOTAL_USED_SPACE}px, ${positionY + popupOverflow}px, 0)`,
+        popupPosition: `translate3d(${positionX}px, ${positionY + popupOverflow}px, 0)`,
         rotate: 90,
       }
     }
@@ -436,12 +426,8 @@ export const computePositions = ({
           arrowTop: '50%',
           arrowTransform: 'translate(50%, -50%)',
           placement: 'right',
-          popupInitialPosition: `translate3d(${
-            positionX - TOTAL_USED_SPACE
-          }px, ${positionY + popupOverflow}px, 0)`,
-          popupPosition: `translate3d(${positionX}px, ${
-            positionY + popupOverflow
-          }px, 0)`,
+          popupInitialPosition: `translate3d(${positionX - TOTAL_USED_SPACE}px, ${positionY + popupOverflow}px, 0)`,
+          popupPosition: `translate3d(${positionX}px, ${positionY + popupOverflow}px, 0)`,
           rotate: 90,
         }
       }
@@ -461,12 +447,8 @@ export const computePositions = ({
         arrowTop: '50%',
         arrowTransform: 'translate(-50%, -50%)',
         placement: 'left',
-        popupInitialPosition: `translate3d(${positionX + TOTAL_USED_SPACE}px, ${
-          positionY + popupOverflow
-        }px, 0)`,
-        popupPosition: `translate3d(${positionX}px, ${
-          positionY + popupOverflow
-        }px, 0)`,
+        popupInitialPosition: `translate3d(${positionX + TOTAL_USED_SPACE}px, ${positionY + popupOverflow}px, 0)`,
+        popupPosition: `translate3d(${positionX}px, ${positionY + popupOverflow}px, 0)`,
         rotate: -90,
       }
     }
@@ -498,9 +480,7 @@ export const computePositions = ({
         arrowTop: `${popupHeight - 1}px`,
         arrowTransform: '',
         placement: 'top',
-        popupInitialPosition: `translate3d(${
-          finalPositionX
-        }px, ${positionY + TOTAL_USED_SPACE}px, 0)`,
+        popupInitialPosition: `translate3d(${finalPositionX}px, ${positionY + TOTAL_USED_SPACE}px, 0)`,
         popupPosition: `translate3d(${finalPositionX}px, ${positionY}px, 0)`,
         rotate: 0,
       }
@@ -533,9 +513,7 @@ export const computePositions = ({
         arrowTop: `${popupHeight - 1}px`,
         arrowTransform: '',
         placement: 'top',
-        popupInitialPosition: `translate3d(${
-          finalPositionX
-        }px, ${positionY + TOTAL_USED_SPACE}px, 0)`,
+        popupInitialPosition: `translate3d(${finalPositionX}px, ${positionY + TOTAL_USED_SPACE}px, 0)`,
         popupPosition: `translate3d(${finalPositionX}px, ${positionY}px, 0)`,
         rotate: 0,
       }

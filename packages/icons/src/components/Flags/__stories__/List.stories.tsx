@@ -1,11 +1,13 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
+
 import * as Flags from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const List: StoryFn = props => (
   <Stack gap={1}>
     {Object.keys(Flags).map(iconName => {
-      // biome-ignore lint/performance/noDynamicNamespaceImportAccess: to fix
+      // oxlint-disable: to fix
       const Flag = Flags[iconName as keyof typeof Flags]
 
       return (

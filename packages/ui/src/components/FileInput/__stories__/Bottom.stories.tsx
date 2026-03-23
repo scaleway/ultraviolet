@@ -1,5 +1,6 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { FileInput } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Bottom: StoryFn<typeof FileInput> = args => (
   <FileInput

@@ -97,14 +97,14 @@
   After :
 
   ```tsx
-  import { ThemeProvider } from "@ultraviolet/themes";
-  import "@ultraviolet/themes/global";
+  import { ThemeProvider } from '@ultraviolet/themes'
+  import '@ultraviolet/themes/global'
 
   const App = () => (
     <ThemeProvider theme={theme}>
       <MyApp />
     </ThemeProvider>
-  );
+  )
   ```
 
 - [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - New `theme` provided that is a contract interface for vanilla extract
@@ -144,14 +144,14 @@
   After :
 
   ```tsx
-  import { ThemeProvider } from "@ultraviolet/themes";
-  import "@ultraviolet/themes/global";
+  import { ThemeProvider } from '@ultraviolet/themes'
+  import '@ultraviolet/themes/global'
 
   const App = () => (
     <ThemeProvider theme={theme}>
       <MyApp />
     </ThemeProvider>
-  );
+  )
   ```
 
 ## 3.0.0-beta.2
@@ -199,7 +199,6 @@
   #### Screens
 
   Screen changed from `number` to `string` type to include `px` unit. The new values are now in `px` instead of `number`. The new values are:
-
   - New `xxsmall`
   - `theme.screens.xsmall` -> `theme.breakpoints.xsmall`
   - `theme.screens.small` -> `breakpoints.small`
@@ -212,7 +211,6 @@
   Some colors tokens have been removed. Here are the following tokens that are now removed:
 
   **Danger**
-
   - `theme.colors.danger.backgroundWeak`
   - `theme.colors.danger.backgroundWeakDisabled`
   - `theme.colors.danger.backgroundWeakHover`
@@ -227,7 +225,6 @@
   - `theme.colors.danger.textWeakHover`
 
   **Info**
-
   - `theme.colors.info.backgroundWeak`
   - `theme.colors.info.backgroundWeakDisabled`
   - `theme.colors.info.backgroundWeakHover`
@@ -242,7 +239,6 @@
   - `theme.colors.info.textWeakHover`
 
   **Primary**
-
   - `theme.colors.primary.backgroundWeak`
   - `theme.colors.primary.backgroundWeakDisabled`
   - `theme.colors.primary.backgroundWeakHover`
@@ -257,7 +253,6 @@
   - `theme.colors.primary.textWeakHover`
 
   **Secondary**
-
   - `theme.colors.secondary.backgroundWeak`
   - `theme.colors.secondary.backgroundWeakDisabled`
   - `theme.colors.secondary.backgroundWeakHover`
@@ -272,7 +267,6 @@
   - `theme.colors.secondary.textWeakHover`
 
   **Success**
-
   - `theme.colors.success.backgroundWeak`
   - `theme.colors.success.backgroundWeakDisabled`
   - `theme.colors.success.backgroundWeakHover`
@@ -287,7 +281,6 @@
   - `theme.colors.success.textWeakHover`
 
   **Warning**
-
   - `theme.colors.warning.backgroundWeak`
   - `theme.colors.warning.backgroundWeakDisabled`
   - `theme.colors.warning.backgroundWeakHover`
@@ -302,7 +295,6 @@
   - `theme.colors.warning.textWeakHover`
 
   **Other Gradients**
-
   - `theme.colors.other.gradients.background.gold`
   - `theme.colors.other.gradients.background.purple`
   - `theme.colors.other.gradients.background.strong`
@@ -320,7 +312,7 @@
   In order to be always up to date we recommend you installing `@ultraviolet/fonts` package and import it in your App entry point.
 
   ```tsx
-  import "@ultraviolet/fonts/fonts.css";
+  import '@ultraviolet/fonts/fonts.css'
   ```
 
 ### Patch Changes
@@ -350,7 +342,6 @@
   #### Screens
 
   Screen changed from `number` to `string` type to include `px` unit. The new values are now in `px` instead of `number`. The new values are:
-
   - New `xxsmall`
   - `theme.screens.xsmall` -> `theme.breakpoints.xsmall`
   - `theme.screens.small` -> `breakpoints.small`
@@ -363,7 +354,6 @@
   Some colors tokens have been removed. Here are the following tokens that are now removed:
 
   **Danger**
-
   - `theme.colors.danger.backgroundWeak`
   - `theme.colors.danger.backgroundWeakDisabled`
   - `theme.colors.danger.backgroundWeakHover`
@@ -378,7 +368,6 @@
   - `theme.colors.danger.textWeakHover`
 
   **Info**
-
   - `theme.colors.info.backgroundWeak`
   - `theme.colors.info.backgroundWeakDisabled`
   - `theme.colors.info.backgroundWeakHover`
@@ -393,7 +382,6 @@
   - `theme.colors.info.textWeakHover`
 
   **Primary**
-
   - `theme.colors.primary.backgroundWeak`
   - `theme.colors.primary.backgroundWeakDisabled`
   - `theme.colors.primary.backgroundWeakHover`
@@ -408,7 +396,6 @@
   - `theme.colors.primary.textWeakHover`
 
   **Secondary**
-
   - `theme.colors.secondary.backgroundWeak`
   - `theme.colors.secondary.backgroundWeakDisabled`
   - `theme.colors.secondary.backgroundWeakHover`
@@ -423,7 +410,6 @@
   - `theme.colors.secondary.textWeakHover`
 
   **Success**
-
   - `theme.colors.success.backgroundWeak`
   - `theme.colors.success.backgroundWeakDisabled`
   - `theme.colors.success.backgroundWeakHover`
@@ -438,7 +424,6 @@
   - `theme.colors.success.textWeakHover`
 
   **Warning**
-
   - `theme.colors.warning.backgroundWeak`
   - `theme.colors.warning.backgroundWeakDisabled`
   - `theme.colors.warning.backgroundWeakHover`
@@ -453,7 +438,6 @@
   - `theme.colors.warning.textWeakHover`
 
   **Other Gradients**
-
   - `theme.colors.other.gradients.background.gold`
   - `theme.colors.other.gradients.background.purple`
   - `theme.colors.other.gradients.background.strong`
@@ -471,7 +455,7 @@
   In order to be always up to date we recommend you installing `@ultraviolet/fonts` package and import it in your App entry point.
 
   ```tsx
-  import "@ultraviolet/fonts/fonts.css";
+  import '@ultraviolet/fonts/fonts.css'
   ```
 
 ## 2.0.0-beta.0

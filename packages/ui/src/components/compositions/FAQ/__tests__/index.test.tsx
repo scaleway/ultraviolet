@@ -1,6 +1,7 @@
 import { SupportProductIcon } from '@ultraviolet/icons/product/SupportProductIcon'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
+
 import { FAQ } from '..'
 
 describe('fAQ', () => {

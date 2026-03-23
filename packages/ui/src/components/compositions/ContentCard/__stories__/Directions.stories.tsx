@@ -1,8 +1,10 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { ContentCard } from '../index'
-import { Template } from './Template.stories'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
+import { ContentCard } from '../index'
+
+import { Template } from './Template.stories'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Directions: StoryFn<typeof ContentCard> = args => (
   <Stack gap={2}>

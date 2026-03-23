@@ -1,7 +1,8 @@
-import type { ComponentProps } from 'react'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { CopyButton } from '../index'
+
+import type { ComponentProps } from 'react'
 
 export const Sizes = (props: ComponentProps<typeof CopyButton>) => (
   <Stack gap={1}>

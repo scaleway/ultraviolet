@@ -1,5 +1,6 @@
 import { Menu } from '..'
 import { CopyButton } from '../../CopyButton'
+
 import { Template } from './Template.stories'
 
 export const RightComponent = Template.bind({})

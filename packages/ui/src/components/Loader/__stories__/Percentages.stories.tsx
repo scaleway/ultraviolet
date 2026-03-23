@@ -1,5 +1,6 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { Loader } from '../index'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Percentages: StoryFn = props => (
   <>

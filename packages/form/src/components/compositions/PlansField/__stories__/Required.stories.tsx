@@ -1,8 +1,7 @@
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
-import { Submit } from '../../../Submit'
-import { PlansField } from '..'
 import { Button, Stack } from '@ultraviolet/ui'
+
+import { PlansField } from '..'
+import { Submit } from '../../../Submit'
 import {
   domain,
   fees,
@@ -10,6 +9,9 @@ import {
   gb,
   ssl,
 } from '../../PlansField/__tests__/features'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 const planStarter = {
   data: {

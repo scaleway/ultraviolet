@@ -1,9 +1,12 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties } from 'react'
+
 import { Text } from '../Text'
+
 import { colorMeter, meterStyle } from './styles.css'
+
+import type { CSSProperties } from 'react'
 
 type Strength = {
   /**
@@ -48,7 +51,7 @@ export const Meter = ({
   const text = strength[value]?.text ?? strength[0].text
 
   return (
-    // biome-ignore lint/a11y/useSemanticElements: style issue
+    // oxlint-disable jsx_a11y/no-noninteractive-element-to-interactive-role: style issue
     <div
       aria-labelledby="meter-label"
       aria-live="polite"

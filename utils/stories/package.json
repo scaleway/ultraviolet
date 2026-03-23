@@ -3,29 +3,25 @@
   "version": "0.0.1",
   "private": true,
   "description": "Ultraviolet Global Stories",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/scaleway/ultraviolet.git",
-    "directory": "utils/stories"
-  },
-  "scripts": {
-    "typecheck": "tsgo --noEmit",
-    "typecheck:go": "tsgo --noEmit"
-  },
   "keywords": [
     "fonts",
     "ui"
   ],
   "license": "Apache-2.0",
-  "engines": {
-    "node": ">=18.x",
-    "pnpm": ">=10.x"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scaleway/ultraviolet.git",
+    "directory": "utils/stories"
   },
   "os": [
     "darwin",
     "linux"
   ],
   "type": "module",
+  "scripts": {
+    "typecheck": "tsgo --noEmit",
+    "typecheck:go": "tsgo --noEmit"
+  },
   "dependencies": {
     "@repo/config": "workspace:*",
     "@storybook/addon-a11y": "10.2.19",
@@ -47,5 +43,9 @@
     "@vanilla-extract/recipes": "0.5.7",
     "@vanilla-extract/sprinkles": "1.6.5",
     "react": "19.2.4"
+  },
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=10.x"
   }
 }

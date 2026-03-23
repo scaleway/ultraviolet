@@ -4,9 +4,11 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
+
 import { Alert } from '../../Alert'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+
 import { CompactEstimateCost } from './CompactEstimateCost'
 import {
   ChildrenComponent,
@@ -21,6 +23,7 @@ import EstimateCostLocales from './locales/en'
 import { OverlayComponent } from './OverlayComponent'
 import { OverlayContextProvider } from './OverlayContext'
 import { estimateCostStyle } from './styles.css'
+
 import type {
   BareEstimateProduct,
   EstimateCostProps,
@@ -301,9 +304,7 @@ export const EstimateCostContent = ({
                 >
                   {
                     locales[
-                      `estimate.cost.fees.${
-                        commitmentFees ? 'oneTime' : 'monthly'
-                      }.title`
+                      `estimate.cost.fees.${commitmentFees ? 'oneTime' : 'monthly'}.title`
                     ]
                   }
                 </Text>

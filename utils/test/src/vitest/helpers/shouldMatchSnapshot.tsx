@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react'
-import type { ReactNode } from 'react'
 import { expect } from 'vitest'
+
+import type { ReactNode } from 'react'
 
 export const makeShouldMatchSnapshot = (
   children: ReactNode,
@@ -12,6 +13,5 @@ export const makeShouldMatchSnapshot = (
 ) => {
   const { asFragment } = render(children, { wrapper })
 
-  // biome-ignore  lint/suspicious/noMisplacedAssertion: use inside it/expect
   expect(asFragment()).toMatchSnapshot()
 }

@@ -2,6 +2,7 @@ import { act, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
+
 import { RadioField } from '..'
 
 describe('radioField', () => {
@@ -36,7 +37,9 @@ describe('radioField', () => {
   test('should render correctly checked', () => {
     const { asFragment } = renderWithForm(
       <RadioField label="Radio field checked" name="test" value="checked" />,
-      { defaultValues: { test: 'checked' } },
+      {
+        defaultValues: { test: 'checked' },
+      },
     )
     const input = screen.getByRole('radio', { hidden: true })
     expect(input).toBeChecked()

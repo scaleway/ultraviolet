@@ -2,6 +2,7 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
+
 import { BarStack } from '..'
 
 const fakeData = [

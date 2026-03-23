@@ -1,5 +1,6 @@
 import { consoleLightTheme as theme } from '@ultraviolet/themes'
 import { globalStyle, style } from '@vanilla-extract/css'
+
 import background from '../assets/brand-background.png'
 
 export const globalStyleStoryBook = style({

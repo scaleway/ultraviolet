@@ -2,6 +2,7 @@
 
 import { Skeleton } from '../../Skeleton'
 import { Stack } from '../../Stack'
+
 import { contentCardGroupStyle } from './styles.css'
 
 export const SkeletonCard = () => (

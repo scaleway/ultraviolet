@@ -3,9 +3,9 @@ name: Generate changeset for Renovate
 on:
   pull_request_target:
     paths:
-      - ".github/workflows/changesets-renovate.yml"
-      - "**/pnpm-lock.yaml"
-      - "**/package.json"
+      - '.github/workflows/changesets-renovate.yml'
+      - '**/pnpm-lock.yaml'
+      - '**/package.json'
 
 jobs:
   generate-changeset:
@@ -28,6 +28,6 @@ jobs:
         uses: actions/setup-node@v6.3.0
         with:
           node-version: 24.14.0
-          cache: "pnpm"
+          cache: 'pnpm'
       - name: Run changesets-renovate
         run: pnpm dlx @scaleway/changesets-renovate

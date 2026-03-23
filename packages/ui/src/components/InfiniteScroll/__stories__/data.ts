@@ -1,5 +1,5 @@
-import type { ComponentProps } from 'react'
 import type { Table } from '../../Table'
+import type { ComponentProps } from 'react'
 
 export const generateRandomName = (nameLength: number) =>
   String.fromCharCode(
@@ -7,7 +7,7 @@ export const generateRandomName = (nameLength: number) =>
       { length: nameLength },
       () => Math.floor(Math.random() * 26) + 97,
     ),
-    // biome-ignore lint/performance/useTopLevelRegex: nok
+    // oxlint-disable: nok
   ).replace(/^./, c => c.toUpperCase())
 
 export const generateRandomNamesArray = (size: number, nameLength: number) =>

@@ -2,13 +2,16 @@
 
 import { ArrowLeftDoubleIcon } from '@ultraviolet/icons/ArrowLeftDoubleIcon'
 import { ArrowRightDoubleIcon } from '@ultraviolet/icons/ArrowRightDoubleIcon'
-import type { RefObject } from 'react'
 import { useCallback, useLayoutEffect, useMemo, useState } from 'react'
+
 import { Button } from '../../Button'
 import { Tooltip } from '../../Tooltip'
+
 import { useNavigation } from './NavigationProvider'
 import { navigationStyle } from './styles.css'
+
 import type { NavigationProps } from './types'
+import type { RefObject } from 'react'
 
 type FooterProps = {
   onToggleExpand: NavigationProps['onToggleExpand']
@@ -33,9 +36,8 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
     return true
   }, [contentRef])
 
-  const [footerHasOverflowStyle, setFooterHasOverflowStyle] = useState(
-    isScrollAtBottom(),
-  )
+  const [footerHasOverflowStyle, setFooterHasOverflowStyle] =
+    useState(isScrollAtBottom())
 
   // This is for detecting if there is scroll on the content and set the shadow on the footer
   useLayoutEffect(() => {

@@ -1,4 +1,5 @@
 import { multiplier } from './constants'
+
 import type { Units } from './types'
 
 // time unit = hours, days, months

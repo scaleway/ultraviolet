@@ -2,7 +2,9 @@ import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
+
 import { SelectInput } from '..'
+
 import {
   cities,
   dataGroupEmpty,
@@ -856,7 +858,6 @@ describe('selectInput', () => {
     expect(input.textContent).toContain('Jupiter')
   })
 
-  // biome-ignore lint/suspicious/noSkippedTests: to fix
   test.skip('handles correctly with searchable and closest value - multiselect', async () => {
     // There is issues with this test
     renderWithTheme(
@@ -917,7 +918,7 @@ describe('selectInput', () => {
     const emptyState = screen.getByText('No options')
     expect(emptyState).toBeVisible()
   })
-  // biome-ignore lint/suspicious/noSkippedTests: to fix
+
   test.skip('handles correctly with searchable and closest value - multiselect & grouped data', async () => {
     // There is issues with this test
     renderWithTheme(

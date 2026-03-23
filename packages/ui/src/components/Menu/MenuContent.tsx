@@ -2,13 +2,6 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type {
-  ButtonHTMLAttributes,
-  KeyboardEvent,
-  MouseEvent,
-  ReactNode,
-  Ref,
-} from 'react'
 import {
   cloneElement,
   forwardRef,
@@ -21,13 +14,23 @@ import {
   useRef,
   useState,
 } from 'react'
+
 import { Popup } from '../Popup'
 import { SearchInput } from '../SearchInput'
 import { Stack } from '../Stack'
+
 import { getListItem, searchChildren } from './helpers'
 import { DisclosureContext, useMenu } from './MenuProvider'
 import { heightAvailableSpace, heightMenu, menuStyle } from './styles.css'
+
 import type { MenuProps } from './types'
+import type {
+  ButtonHTMLAttributes,
+  KeyboardEvent,
+  MouseEvent,
+  ReactNode,
+  Ref,
+} from 'react'
 
 const SPACE_DISCLOSURE_POPUP = 24 // in px
 

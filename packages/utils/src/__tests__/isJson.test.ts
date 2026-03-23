@@ -1,5 +1,6 @@
-// biome-ignore-all lint/style/noDoneCallback: test ok
+// oxlint-disablestyle/noDoneCallback: test ok
 import { describe, expect, test } from 'vitest'
+
 import { isJSONString } from '../isJson'
 
 describe(isJSONString, () => {

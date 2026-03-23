@@ -1,9 +1,10 @@
+import { Link } from '..'
+import { Stack } from '../../Stack'
+import { PROMINENCES } from '../constants'
+
+import type { ProminenceProps } from '..'
 import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { Stack } from '../../Stack'
-import type { ProminenceProps } from '..'
-import { Link } from '..'
-import { PROMINENCES } from '../constants'
 
 export const Prominence = (props: ComponentProps<typeof Link>) =>
   Object.keys(PROMINENCES).map(prominence => (

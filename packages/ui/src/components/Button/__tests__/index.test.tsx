@@ -5,8 +5,9 @@ import { PencilOutlineIcon } from '@ultraviolet/icons/PencilOutlineIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { forwardRef } from 'react'
 import { describe, expect, test, vi } from 'vitest'
-import { SENTIMENTS } from '../../../theme'
+
 import { Button } from '..'
+import { SENTIMENTS } from '../../../theme'
 import { SIZE_KEY } from '../constants'
 
 const buttonSizes = SIZE_KEY

@@ -1,7 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { Button } from '../../Button'
 import { Menu } from '..'
+import { Button } from '../../Button'
+
 import type { DisclosureProps } from '../types'
+import type { StoryFn } from '@storybook/react-vite'
 
 const CustomDisclosure = ({ visible }: DisclosureProps) => (
   <Button>{visible ? 'Menu (is opened)' : 'Menu (is closed)'}</Button>

@@ -1,7 +1,8 @@
 'use client'
 
-import type { ReactNode } from 'react'
 import { createContext, useMemo } from 'react'
+
+import type { ReactNode } from 'react'
 
 // Create the context with a default value
 // oxlint-disable-next-line react/only-export-components

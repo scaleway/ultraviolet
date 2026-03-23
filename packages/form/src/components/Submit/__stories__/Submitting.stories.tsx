@@ -1,8 +1,9 @@
-import type { StoryFn } from '@storybook/react-vite'
+import { Submit } from '..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 import { Form } from '../../Form'
-import { Submit } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Submitting: StoryFn = () => {
   const methods = useForm()

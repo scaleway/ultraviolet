@@ -1,6 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+
 import { skeletonStyle } from './styles.css'
 import { widthLine } from './stylesVariants.css'
 

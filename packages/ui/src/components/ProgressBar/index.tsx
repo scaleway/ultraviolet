@@ -2,13 +2,16 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, ReactNode } from 'react'
+
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import type { PROGRESS_BAR_SENTIMENTS } from './constants'
+
 import { progressBarStyle } from './styles.css'
 import { percentageValue } from './variables.css'
+
+import type { PROGRESS_BAR_SENTIMENTS } from './constants'
+import type { CSSProperties, ReactNode } from 'react'
 
 type ProgressBarProps = {
   sentiment?: (typeof PROGRESS_BAR_SENTIMENTS)[number]

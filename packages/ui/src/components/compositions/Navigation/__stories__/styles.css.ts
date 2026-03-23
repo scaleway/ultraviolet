@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css'
+
 import { fadeIn, fadeOut } from '../../../../utils'
 
 export const animation = style({

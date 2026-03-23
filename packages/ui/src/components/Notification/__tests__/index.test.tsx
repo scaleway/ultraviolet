@@ -1,6 +1,7 @@
 import { act, screen } from '@testing-library/react'
 import { renderWithTheme } from '@utils/test'
 import { afterEach, describe, expect, test, vi } from 'vitest'
+
 import { NotificationContainer, notification } from '..'
 
 describe('toaster', () => {

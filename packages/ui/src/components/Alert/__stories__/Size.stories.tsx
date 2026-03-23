@@ -1,7 +1,8 @@
+import { Alert } from '..'
+import { Stack } from '../../Stack'
+
 import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { Stack } from '../../Stack'
-import { Alert } from '..'
 
 export const Size = (props: ComponentProps<typeof Alert>) => (
   <>

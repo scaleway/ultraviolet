@@ -1,13 +1,16 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
+
 import { Checkbox } from '../Checkbox'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+
 import { checkboxGroupStyle } from './styles.css'
+
+import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 
 type CheckboxGroupContextType = {
   groupName: string

@@ -1,6 +1,7 @@
 import { emptyLight } from '@ultraviolet/illustrations/various/empty'
 import { Card, Stack } from '@ultraviolet/ui'
 import Image from 'next/image'
+
 import { Link } from '../components/Link'
 
 const Index = () => (

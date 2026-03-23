@@ -1,12 +1,13 @@
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
+
 import { CodeEditor } from '../CodeEditor'
 
 // We are skipping this as CodeEditor seems to be generating new classNames
 // which is causing the snapshot to fail randomly. Also, CodeEditor component
 // doesn't implement anything more than a Text all the rest comes from an external
 // library.
-// biome-ignore lint/suspicious/noSkippedTests: to fix
+// oxlint-disable vitest/no-disabled-tests: to fix
 describe.skip('codeEditor', () => {
   it('should render correctly with content', () =>
     shouldMatchSnapshot(

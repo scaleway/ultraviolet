@@ -1,17 +1,19 @@
-// @vitest-environment jsdom
-import type * as Nivo from '@nivo/core'
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import type { ComponentProps } from 'react'
 import { useEffect, useState } from 'react'
 import { describe, expect, test, vi } from 'vitest'
+
 import { LineChart } from '..'
 import {
   lineChartData,
   lineChartHoursData,
   lineChartMultipleData,
 } from '../__stories__/mockData'
+
+// @vitest-environment jsdom
+import type * as Nivo from '@nivo/core'
+import type { ComponentProps } from 'react'
 
 // Mock the ResponsiveWrapper component
 vi.mock('@nivo/core', async importOriginal => {
@@ -81,7 +83,7 @@ describe('lineChart', () => {
       />,
     ))
 
-  // biome-ignore lint/suspicious/noSkippedTests: to fix
+  // oxlint-disable vitest/no-disabled-tests: to fix
   test.skip('renders correctly when chart is hovered', async () => {
     const { asFragment } = renderWithTheme(
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,

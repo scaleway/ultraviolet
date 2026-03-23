@@ -1,4 +1,5 @@
 import { styleVariants } from '@vanilla-extract/css'
+
 import { SENTIMENTS } from '../../../theme'
 
 export const showCase = styleVariants(

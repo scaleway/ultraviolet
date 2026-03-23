@@ -23,12 +23,12 @@ jobs:
       - name: Set up Python environment
         uses: actions/setup-python@v6
         with:
-          python-version: "3.14.3"
+          python-version: '3.14.3'
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.3.0
         with:
           node-version: 24.14.0
-          cache: "pnpm"
+          cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
 
       - name: Install aws CLI

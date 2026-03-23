@@ -2,10 +2,12 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
+
 import { List } from '..'
+
+import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 
 type WrapperProps = {
   theme?: typeof consoleLightTheme
@@ -71,7 +73,7 @@ describe('list', () => {
   afterEach(() => {
     vi.spyOn(globalThis.Math, 'random').mockRestore()
   })
-  // biome-ignore lint/suspicious/noSkippedTests: to fix
+
   test.skip('should throw an error', () => {
     const consoleErrMock = vi
       .spyOn(console, 'error')
@@ -273,7 +275,7 @@ describe('list', () => {
         {data.map(
           ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
             <List.Row expandable={columnF} id={id} key={id} sentiment="info">
-              {/** biome-ignore lint/complexity/noUselessFragments: needed for the test */}
+              {/** oxlint-disable react/jsx-no-useless-fragment: needed for the test */}
               <>
                 <List.Cell>{columnA}</List.Cell>
                 <List.Cell>{columnB}</List.Cell>

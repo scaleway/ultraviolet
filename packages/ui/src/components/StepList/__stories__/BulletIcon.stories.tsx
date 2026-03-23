@@ -1,5 +1,7 @@
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
+
 import { StepList } from '..'
+
 import { Template } from './Template.stories'
 
 export const BulletIcon = Template.bind({})

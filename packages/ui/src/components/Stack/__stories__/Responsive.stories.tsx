@@ -1,6 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '../../Stack'
+
 import { child } from './styles.css'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Responsive: StoryFn = props => (
   <Stack

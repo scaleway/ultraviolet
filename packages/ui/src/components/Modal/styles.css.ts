@@ -1,9 +1,11 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+
 import { slideFromBottom } from '../../utils'
 import { dialogStyle } from '../Dialog/styles.css'
 import { drawerStyle, SIZES } from '../Drawer/styles.css'
+
 import { MODAL_PLACEMENT, MODAL_WIDTH } from './constants'
 
 export const topModal = createVar()

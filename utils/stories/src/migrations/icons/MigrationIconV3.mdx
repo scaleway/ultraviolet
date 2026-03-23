@@ -8,22 +8,20 @@ New big change in icons, we added a new way to import icons. You can now directl
 
 ```tsx
 // Before
-import { Icon } from '@ultraviolet/icons';
+import { Icon } from '@ultraviolet/icons'
 
 const MyComponent = () => (
   <Icon name="address" sentiment="danger" size="small" />
-);
+)
 ```
 
 ```tsx
 // Now
-import { AddressIcon } from '@ultraviolet/icons';
+import { AddressIcon } from '@ultraviolet/icons'
 // OR
-import { AddressIcon } from '@ultraviolet/icons/AddressIcon';
+import { AddressIcon } from '@ultraviolet/icons/AddressIcon'
 
-const MyComponent = () => (
-  <Address sentiment="danger" size="small" />
-);
+const MyComponent = () => <Address sentiment="danger" size="small" />
 ```
 
 This change will make it easier to use icons in your project and reduce the bundle size.
@@ -60,11 +58,7 @@ import { InstanceProductIcon } from '@ultraviolet/icons/product/InstanceProductI
 If needed you can import all icons at once:
 
 ```tsx
-import * as Icons from '@ultraviolet/icons';
+import * as Icons from '@ultraviolet/icons'
 
-const MyComponent = ({ iconName }) => (
-  <div>
-    {Icons[iconName]}
-  </div>
-)
+const MyComponent = ({ iconName }) => <div>{Icons[iconName]}</div>
 ```

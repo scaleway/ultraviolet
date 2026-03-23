@@ -1,10 +1,12 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
+import { ToastContainer as BaseToastContainer, Slide } from 'react-toastify'
+
+import { notificationStyle } from './styles.css'
+
 import type { CSSProperties } from 'react'
 import type { ToastOptions } from 'react-toastify'
-import { ToastContainer as BaseToastContainer, Slide } from 'react-toastify'
-import { notificationStyle } from './styles.css'
 
 type NotificationContainerProps = {
   /**

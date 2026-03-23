@@ -1,7 +1,9 @@
 'use client'
 
 import { Text } from '../Text'
+
 import { treeMapChartStyle } from './styles.css'
+
 import type { DataType } from './types'
 
 type TooltipProps = Pick<DataType, 'content' | 'value'> & {

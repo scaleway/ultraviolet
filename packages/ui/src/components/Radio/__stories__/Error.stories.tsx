@@ -1,6 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
+
 import { Radio } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Error: StoryFn = args => {
   const [value, onChange] = useState('error-label-1')

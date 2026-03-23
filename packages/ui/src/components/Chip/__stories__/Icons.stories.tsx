@@ -1,8 +1,10 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { Stack } from '../../Stack'
-import { Chip } from '..'
-import { FilterIcon } from '@ultraviolet/icons/FilterIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
+import { FilterIcon } from '@ultraviolet/icons/FilterIcon'
+
+import { Chip } from '..'
+import { Stack } from '../../Stack'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Icons: StoryFn<typeof Chip> = ({ ...args }) => (
   <Stack direction="row" gap={1}>

@@ -2,6 +2,7 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
+
 import { Alert } from '..'
 
 describe('alert', () => {
@@ -41,14 +42,11 @@ describe('alert', () => {
     ))
 
   describe('renders correctly with all sentiments', () => {
-    test.each([
-      'danger',
-      'info',
-      'success',
-      'warning',
-      'neutral',
-    ] as const)('renders correctly sentiment %o', sentiment =>
-      shouldMatchSnapshot(<Alert sentiment={sentiment}>Sample Alert</Alert>))
+    test.each(['danger', 'info', 'success', 'warning', 'neutral'] as const)(
+      'renders correctly sentiment %o',
+      sentiment =>
+        shouldMatchSnapshot(<Alert sentiment={sentiment}>Sample Alert</Alert>),
+    )
   })
 
   test('should render alert and then close it', async () => {

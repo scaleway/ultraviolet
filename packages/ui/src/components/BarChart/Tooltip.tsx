@@ -2,7 +2,9 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+
 import { Text } from '../Text'
+
 import { barChartStyle, colorBar } from './styles.css'
 
 type BarChartTooltipProps = {

@@ -6,11 +6,11 @@ Those icons are customisable through props only.
 
 1. Add the `.svg` file into `packages/icons/src/components/Icon/assets` and in the correct sub folder
 2. Then run the following command:
-`pnpm run icons:update` at root of the project. The icons component will be generated automatically using this command.
-<br />
-<br />
-** IMPORTANT: ** Make sure that the icon name is unique, otherwise it will override the existing one.
-The name of the svg should be snake-case.
+   `pnpm run icons:update` at root of the project. The icons component will be generated automatically using this command.
+   <br />
+   <br />
+   ** IMPORTANT: ** Make sure that the icon name is unique, otherwise it will override the existing one.
+   The name of the svg should be snake-case.
 
 ## 🗑️ How to deprecate an icon?
 
@@ -18,8 +18,7 @@ Sometime we need to rename icons or remove them. To deprecated an icon you can s
 
 ```ts
 export const DEPRECATED_ICONS: DeprecatedIconsType = [
-  ...
-  {
+  ...{
     name: 'AsteriskIcon',
     deprecated: true,
     deprecatedReason: 'Use * from the font instead.',

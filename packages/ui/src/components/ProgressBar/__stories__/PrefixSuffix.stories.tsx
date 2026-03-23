@@ -1,6 +1,7 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { Stack } from '../../Stack'
 import { ProgressBar } from '..'
+import { Stack } from '../../Stack'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const PrefixSuffix: StoryFn = props => (
   <Stack gap={2}>

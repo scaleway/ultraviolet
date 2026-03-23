@@ -2,7 +2,9 @@ import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
+
 import { Plans } from '..'
+
 import { domain, fees, gb, group, pipeline, ssl } from './features'
 import { planAdvanced, planProfessional, planStarter } from './plans'
 

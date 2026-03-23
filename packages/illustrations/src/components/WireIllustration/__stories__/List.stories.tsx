@@ -1,8 +1,10 @@
-import type { Decorator } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import type { ComponentProps } from 'react'
+
 import { WireIllustration } from '..'
 import { ILLUSTRATIONS } from '../__generated__/Illustrations'
+
+import type { Decorator } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 const illustrationKeys = Object.keys(ILLUSTRATIONS).filter(
   key => !key.startsWith('__') && key !== 'displayName',

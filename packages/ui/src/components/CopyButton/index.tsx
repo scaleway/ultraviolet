@@ -2,9 +2,11 @@
 
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { CopyContentIcon } from '@ultraviolet/icons/CopyContentIcon'
-import type { CSSProperties } from 'react'
 import useClipboard from 'react-use-clipboard'
+
 import { Button } from '../Button'
+
+import type { CSSProperties } from 'react'
 
 const COPY_DURATION = 2500
 

@@ -1,8 +1,11 @@
-import type { Decorator } from '@storybook/react-vite'
 import { es, fr, ru } from 'date-fns/locale'
-import type { ComponentProps } from 'react'
+
 import { DateInput } from '..'
+
 import { Template } from './Template'
+
+import type { Decorator } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 const locales = [
   { label: 'fr-FR', locale: fr },

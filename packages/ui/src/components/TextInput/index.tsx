@@ -7,12 +7,6 @@ import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { EyeIcon } from '@ultraviolet/icons/EyeIcon'
 import { EyeOffIcon } from '@ultraviolet/icons/EyeOffIcon'
 import { cn } from '@ultraviolet/utils'
-import type {
-  ChangeEvent,
-  ChangeEventHandler,
-  InputHTMLAttributes,
-  ReactNode,
-} from 'react'
 import {
   forwardRef,
   useCallback,
@@ -22,14 +16,23 @@ import {
   useRef,
   useState,
 } from 'react'
+
 import { Button } from '../Button'
 import { Label } from '../Label'
 import { Loader } from '../Loader'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-import type { TEXTINPUT_SIZE_HEIGHT } from './constants'
+
 import { textInputStyle } from './styles.css'
+
+import type { TEXTINPUT_SIZE_HEIGHT } from './constants'
+import type {
+  ChangeEvent,
+  ChangeEventHandler,
+  InputHTMLAttributes,
+  ReactNode,
+} from 'react'
 
 type TextInputProps = {
   className?: string

@@ -1,7 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 import { InfoTable } from '..'
 import { Stack } from '../../../Stack'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 export const MultiLine: StoryFn<ComponentProps<typeof InfoTable>> = props => (
   <InfoTable {...props}>

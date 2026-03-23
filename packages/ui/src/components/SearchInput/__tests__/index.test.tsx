@@ -3,8 +3,9 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useState } from 'react'
 import { describe, expect, test } from 'vitest'
-import { Button } from '../../Button'
+
 import { SearchInput } from '..'
+import { Button } from '../../Button'
 
 describe('searchInput', () => {
   test('renders correctly without children props', () =>

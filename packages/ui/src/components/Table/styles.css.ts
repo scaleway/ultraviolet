@@ -1,6 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { keyframes, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+
 import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 import {
   headerCellMaxWidth,

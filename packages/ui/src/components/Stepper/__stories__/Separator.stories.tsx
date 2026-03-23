@@ -1,6 +1,7 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { Stack } from '../../Stack'
 import { Stepper } from '..'
+import { Stack } from '../../Stack'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Separator: StoryFn<typeof Stepper> = args => (
   <Stack direction="column" gap={3}>

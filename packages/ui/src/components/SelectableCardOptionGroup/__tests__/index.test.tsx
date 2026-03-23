@@ -2,6 +2,7 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
+
 import { SelectableCardOptionGroup } from '..'
 import centos from '../__stories__/assets/centos.svg'
 import debian from '../__stories__/assets/debian.svg'

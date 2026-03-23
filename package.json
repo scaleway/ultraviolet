@@ -1,16 +1,11 @@
 {
   "name": "root",
   "private": true,
-  "packageManager": "pnpm@10.30.3",
-  "engines": {
-    "node": ">=20.x",
-    "pnpm": ">=10.x"
-  },
-  "type": "module",
   "os": [
     "darwin",
     "linux"
   ],
+  "type": "module",
   "scripts": {
     "size": "turbo run size",
     "typecheck:root": "tsc -p tsconfig.json --noEmit",
@@ -26,11 +21,11 @@
     "commit": "npx git-cz -a --disable-emoji",
     "start": "STORYBOOK_ENVIRONMENT=development storybook dev -p 6006",
     "start:production": "STORYBOOK_ENVIRONMENT=production storybook dev -p 6006",
-    "format": "biome check --linter-enabled=false --write .",
-    "format:check": "biome check --linter-enabled=false --verbose . --diagnostic-level=error",
-    "format:ci": "biome ci --linter-enabled=false .",
-    "biome:lint": "pnpm -w biome lint . --diagnostic-level=error",
-    "lint:fix": "pnpm run oxc:type-aware --fix && biome:lint",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "format:ci": "oxfmt --check .",
+    "oxc:lint": "pnpm -w oxlint -c .oxlintrc.json",
+    "lint:fix": "pnpm run oxc:type-aware --fix && pnpm run oxc:lint",
     "oxc": "oxlint -c .oxlintrc.json --type-check",
     "oxc:type-aware": "oxlint -c .oxlintrc.json --type-check --type-aware",
     "oxc:fix": "pnpm run oxc --fix",
@@ -46,52 +41,6 @@
     "illustrations:update": "BUCKET_NAME=scaleway-assets BUCKET_REGION=fr-par tsx utils/scripts/illustrations/update-illustrations.tsx && pnpm format packages/illustrations/src/",
     "lintpublish": "turbo run lintpublish"
   },
-  "lint-staged": {
-    "*.(j|t|mj)s?(x)": [
-      "pnpm run format",
-      "pnpm -w biome lint . --diagnostic-level=error",
-      "oxlint run oxc:type-aware --fix --quiet"
-    ],
-    "packages/illustrations/**/*.svg": [
-      "pnpm run svg"
-    ],
-    "*.y?(a)ml": [
-      "pnpm dlx prettier --write '**/*.{yml,yaml}'"
-    ],
-    "*.json": [
-      "pnpm run format"
-    ],
-    ".md?(x)": [
-      "pnpm dlx prettier --write '**/*.{md,mdx}'"
-    ],
-    "pnpm-lock.yaml, package.json, **/pnpm-lock.yaml, **/package.json": [
-      "pnpm exec manypkg check"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "manypkg": {
-    "ignoredRules": [
-      "INTERNAL_MISMATCH"
-    ]
-  },
-  "pnpm": {
-    "overrides": {},
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "react": "18 || 19",
-        "react-dom": "18 || 19"
-      }
-    }
-  },
   "devDependencies": {
     "@babel/core": "7.29.0",
     "@babel/plugin-transform-runtime": "7.29.0",
@@ -99,14 +48,12 @@
     "@babel/preset-react": "7.28.5",
     "@babel/preset-typescript": "7.28.5",
     "@babel/runtime": "7.28.6",
-    "@biomejs/biome": "2.4.0",
     "@changesets/changelog-github": "0.6.0",
     "@changesets/cli": "2.30.0",
     "@commitlint/cli": "20.4.4",
     "@commitlint/config-conventional": "20.4.4",
     "@manypkg/cli": "0.25.1",
     "@playwright/test": "1.58.2",
-    "@scaleway/biome": "0.0.8",
     "@scaleway/oxlint-config": "0.1.10",
     "@scaleway/tsconfig": "1.1.4",
     "@size-limit/file": "12.0.1",
@@ -152,8 +99,9 @@
     "husky": "9.1.7",
     "jest-axe": "10.0.0",
     "lint-staged": "16.4.0",
+    "oxfmt": "0.41.0",
     "oxlint": "1.51.0",
-    "oxlint-tsgolint": "0.15.0",
+    "oxlint-tsgolint": "0.17.1",
     "postcss": "8.5.8",
     "publint": "0.3.18",
     "react": "19.2.4",
@@ -176,5 +124,55 @@
     "vitest-canvas-mock": "1.1.3",
     "vitest-localstorage-mock": "0.1.2",
     "zxcvbn": "4.4.2"
+  },
+  "lint-staged": {
+    "*.(j|t|mj)s?(x)": [
+      "pnpm run format",
+      "pnpm run oxc:lint"
+    ],
+    "packages/illustrations/**/*.svg": [
+      "pnpm run svg"
+    ],
+    "*.y?(a)ml": [
+      "pnpm run format"
+    ],
+    "*.json": [
+      "pnpm run format"
+    ],
+    ".md?(x)": [
+      "pnpm run format"
+    ],
+    "pnpm-lock.yaml, package.json, **/pnpm-lock.yaml, **/package.json": [
+      "pnpm exec manypkg check"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "engines": {
+    "node": ">=20.x",
+    "pnpm": ">=10.x"
+  },
+  "packageManager": "pnpm@10.30.3",
+  "pnpm": {
+    "overrides": {},
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "18 || 19",
+        "react-dom": "18 || 19"
+      }
+    }
+  },
+  "manypkg": {
+    "ignoredRules": [
+      "INTERNAL_MISMATCH"
+    ]
   }
 }

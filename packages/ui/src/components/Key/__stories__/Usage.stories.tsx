@@ -1,9 +1,11 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useCallback, useEffect, useState } from 'react'
+
+import { Key } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Tooltip } from '../../Tooltip'
-import { Key } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Usage: StoryFn<typeof Key> = () => {
   const [counter, setCounter] = useState(0)

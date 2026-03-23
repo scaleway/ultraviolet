@@ -1,4 +1,5 @@
 import { createThemeContract } from '@vanilla-extract/css'
+
 import type { CSSProperties } from 'react'
 
 type Keys = Pick<CSSProperties, 'textAlign' | 'whiteSpace'>

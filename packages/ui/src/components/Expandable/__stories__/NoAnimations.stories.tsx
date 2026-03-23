@@ -1,10 +1,12 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { useState } from 'react'
+
+import { Expandable } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-import { Expandable } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const NoAnimations: StoryFn<typeof Expandable> = args => {
   const [toggled, onToggle] = useState(false)

@@ -1,5 +1,6 @@
-import type { Decorator } from '@storybook/react-vite'
 import { Template } from './Template.stories'
+
+import type { Decorator } from '@storybook/react-vite'
 
 export const MaxWidth = Template.bind({})
 

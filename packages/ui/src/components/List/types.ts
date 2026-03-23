@@ -1,5 +1,5 @@
-import type { ComponentProps } from 'react'
 import type { HeaderCell } from './HeaderCell'
+import type { ComponentProps } from 'react'
 
 export type ColumnProps = Pick<
   ComponentProps<typeof HeaderCell>,

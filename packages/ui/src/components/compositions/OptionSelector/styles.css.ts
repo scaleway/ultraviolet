@@ -1,6 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+
 import { dropdownItemBase } from '../../SelectInput/components/dropdown.css'
 
 const wrapper = recipe({

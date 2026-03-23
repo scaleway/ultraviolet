@@ -1,6 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { Carousel } from '..'
+
 import { carouselStoryContent } from './styles.css'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Template: StoryFn<typeof Carousel> = props => (
   <Carousel {...props}>

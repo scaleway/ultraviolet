@@ -1,7 +1,9 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { NotificationIcon } from '@ultraviolet/icons/NotificationIcon'
-import { Button } from '../../Button'
+
 import { Status } from '..'
+import { Button } from '../../Button'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Notification: StoryFn<typeof Status> = props => (
   <Button sentiment="neutral" size="medium" variant="ghost">

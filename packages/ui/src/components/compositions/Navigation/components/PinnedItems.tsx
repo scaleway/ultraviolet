@@ -2,13 +2,16 @@
 
 import { PinCategoryIcon } from '@ultraviolet/icons/category'
 import { useTheme } from '@ultraviolet/themes'
-import type { CSSProperties, DragEvent, ReactElement } from 'react'
 import { useCallback } from 'react'
+
 import { Text } from '../../../Text'
 import { useNavigation } from '../NavigationProvider'
 import { navigationStyle } from '../styles.css'
-import type { DragNDropData } from '../types'
+
 import { Item } from './Item'
+
+import type { DragNDropData } from '../types'
+import type { CSSProperties, DragEvent, ReactElement } from 'react'
 
 type PinnedItemsProps = {
   /**
@@ -133,8 +136,8 @@ export const PinnedItems = ({
                     className={navigationStyle.pinnedItemRelativeDiv}
                     key={itemId}
                   >
-                    {/** biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop */}
-                    {/** biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop */}
+                    {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
+                    {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
                     <div
                       className={navigationStyle.pinnedItemDropableArea}
                       onDragLeave={onDragLeave}
@@ -164,8 +167,8 @@ export const PinnedItems = ({
           )}
 
           <div className={navigationStyle.pinnedItemRelativeDiv}>
-            {/** biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop */}
-            {/** biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop */}
+            {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
+            {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
             <div
               className={navigationStyle.pinnedItemDropableArea}
               onDragLeave={onDragLeave}

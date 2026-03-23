@@ -3,13 +3,15 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { MouseEvent as MouseEventReact } from 'react'
 import { useContext, useState } from 'react'
+
 import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { DateInputContext } from '../Context'
 import { formatValue, isSameMonth } from '../helpers'
 import { dateInputStyle } from '../styles.css'
+
+import type { MouseEvent as MouseEventReact } from 'react'
 
 export const Monthly = () => {
   const {

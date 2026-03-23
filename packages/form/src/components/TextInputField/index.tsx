@@ -1,12 +1,14 @@
 'use client'
 
 import { TextInput } from '@ultraviolet/ui'
+import { useController } from 'react-hook-form'
+
+import { useErrors } from '../../providers'
+import { validateRegex } from '../../utils/validateRegex'
+
+import type { BaseFieldProps } from '../../types'
 import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
-import { useController } from 'react-hook-form'
-import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
-import { validateRegex } from '../../utils/validateRegex'
 
 type TextInputFieldProps<
   TFieldValues extends FieldValues,

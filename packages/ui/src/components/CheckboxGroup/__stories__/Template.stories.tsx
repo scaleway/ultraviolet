@@ -1,5 +1,6 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { CheckboxGroup } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Template: StoryFn<typeof CheckboxGroup> = args => (
   <CheckboxGroup {...args}>

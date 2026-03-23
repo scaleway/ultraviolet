@@ -1,4 +1,5 @@
 import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
+
 import type { ReactNode } from 'react'
 
 const ThemeWrapper = ({ children }: { children: ReactNode }) => (

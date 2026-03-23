@@ -2,7 +2,6 @@ import addonA11y from '@storybook/addon-a11y'
 import addonDocs from '@storybook/addon-docs'
 import addonLinks from '@storybook/addon-links'
 import addonTheme, { withThemeByClassName } from '@storybook/addon-themes'
-import type { Decorator, Preview } from '@storybook/react-vite'
 import { definePreview } from '@storybook/react-vite'
 import {
   consoleDarkerTheme as darkerTheme,
@@ -10,13 +9,14 @@ import {
   consoleLightTheme as lightTheme,
   ThemeProvider as ThemeProviderUI,
 } from '@ultraviolet/themes'
+import { scan } from 'react-scan'
 import { themes } from 'storybook/theming'
+
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
 import { dark, light } from './storybookThemes'
 import '@ultraviolet/fonts/fonts.css'
-
-import { scan } from 'react-scan'
+import type { Decorator, Preview } from '@storybook/react-vite'
 
 const BREAKPOINT_ORDER = [
   'xlarge',
@@ -118,11 +118,10 @@ const parameters: Preview['parameters'] = {
       ...VIEWPORTS,
     },
   },
-}
+} as const
 
 const getThemeColor = (theme: string) => {
   const { value: background, textColor } =
-    // oxlint-disable-next-line typescript/no-unsafe-call
     parameters['backgrounds'].values.find(
       ({ name }: { name: string }) => name === theme,
     ) ?? parameters['backgrounds'].values[0]
@@ -132,9 +131,9 @@ const getThemeColor = (theme: string) => {
 
 const decorators: Decorator[] = [
   (Story, args) => {
-    // const { theme } = args.context.globals
     const { context } = args
-    const { theme: globalTheme } = args.context.globals
+    const { theme: globalTheme } = context.globals
+    //oxlint-disable-next-line typescript/no-unsafe-type-assertion
     const theme = (globalTheme as 'light' | 'dark' | undefined) || 'light'
 
     const { background, textColor } = getThemeColor(theme)

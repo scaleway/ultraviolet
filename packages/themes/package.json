@@ -1,19 +1,29 @@
 {
-  "dependencies": {
-    "@vanilla-extract/css": "1.18.0",
-    "@vanilla-extract/dynamic": "2.1.5"
-  },
+  "name": "@ultraviolet/themes",
+  "version": "3.1.2",
   "description": "Ultraviolet Themes",
-  "devDependencies": {
-    "@repo/config": "workspace:*",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "vite": "8.0.0-beta.18"
+  "keywords": [
+    "themes",
+    "ui"
+  ],
+  "homepage": "https://github.com/scaleway/ultraviolet#readme",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scaleway/ultraviolet.git",
+    "directory": "packages/themes"
   },
-  "engines": {
-    "node": ">=18.x",
-    "pnpm": ">=9.x"
-  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "type": "module",
+  "sideEffects": [
+    "**/*.css",
+    "**/*.css.ts"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -29,30 +39,8 @@
     "./global": "./dist/themes.css",
     "./theme.css": "./dist/themes.css"
   },
-  "homepage": "https://github.com/scaleway/ultraviolet#readme",
-  "keywords": [
-    "themes",
-    "ui"
-  ],
-  "license": "Apache-2.0",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "name": "@ultraviolet/themes",
-  "os": [
-    "darwin",
-    "linux"
-  ],
-  "peerDependencies": {
-    "react": "18.x || 19.x",
-    "react-dom": "18.x || 19.x"
-  },
   "publishConfig": {
     "access": "public"
-  },
-  "repository": {
-    "directory": "packages/themes",
-    "type": "git",
-    "url": "git+https://github.com/scaleway/ultraviolet.git"
   },
   "scripts": {
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
@@ -63,10 +51,22 @@
     "watch": "pnpm run '/^watch:.*/'",
     "watch:build": "vite build --config vite.config.ts --watch"
   },
-  "sideEffects": [
-    "**/*.css",
-    "**/*.css.ts"
-  ],
-  "type": "module",
-  "version": "3.1.2"
+  "dependencies": {
+    "@vanilla-extract/css": "1.18.0",
+    "@vanilla-extract/dynamic": "2.1.5"
+  },
+  "devDependencies": {
+    "@repo/config": "workspace:*",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "vite": "8.0.1"
+  },
+  "peerDependencies": {
+    "react": "18.x || 19.x",
+    "react-dom": "18.x || 19.x"
+  },
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=9.x"
+  }
 }

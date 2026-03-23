@@ -1,5 +1,6 @@
-import type { ReactNode } from 'react'
 import { Children, cloneElement, isValidElement } from 'react'
+
+import type { ReactNode } from 'react'
 
 type ChildType = {
   children: ReactNode

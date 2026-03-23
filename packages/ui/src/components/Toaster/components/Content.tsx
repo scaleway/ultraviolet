@@ -1,8 +1,9 @@
 'use client'
 
-import type { ReactNode } from 'react'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+
+import type { ReactNode } from 'react'
 
 type ContentProps = {
   children?: ReactNode

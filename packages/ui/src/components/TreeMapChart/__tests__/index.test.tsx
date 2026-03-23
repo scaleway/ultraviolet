@@ -2,15 +2,17 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme } from '@utils/test'
-import type { ReactNode } from 'react'
 import { useState } from 'react'
 import { describe, expect, test, vi } from 'vitest'
+
 import { TreeMapChart } from '..'
 import {
   treeMapChartSimpleData,
   treeMapChartWithCustomContentData,
 } from '../__stories__/mockData'
+
 import type { DataType } from '../types'
+import type { ReactNode } from 'react'
 
 type MockedNodeType = {
   color: string

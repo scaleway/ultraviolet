@@ -1,13 +1,16 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { InputHTMLAttributes, ReactNode, Ref } from 'react'
 import { forwardRef, useId } from 'react'
+
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
+
 import { toggleStyle } from './styles.css'
+
+import type { InputHTMLAttributes, ReactNode, Ref } from 'react'
 
 type ToggleProps = {
   checked?: boolean

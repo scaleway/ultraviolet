@@ -1,5 +1,6 @@
-import type { Decorator, StoryFn } from '@storybook/react-vite'
 import { Separator } from '..'
+
+import type { Decorator, StoryFn } from '@storybook/react-vite'
 
 export const Direction: StoryFn<typeof Separator> = args => (
   <>

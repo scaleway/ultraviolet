@@ -1,8 +1,10 @@
 import { AttachIcon } from '@ultraviolet/icons/AttachIcon'
 import { useContext } from 'react'
+
 import { NumberInput } from '../../NumberInput'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+
 import {
   calculateSubCategoryPrice,
   DisplayPrice,
@@ -10,6 +12,7 @@ import {
 } from './helpers'
 import { OrderSummaryContext } from './Provider'
 import { orderSummaryStyle } from './styles.css'
+
 import type { ItemsType, SubCategoryType } from './types'
 
 const SubCategoryPrice = ({
@@ -57,12 +60,7 @@ const SubCategoryPrice = ({
                 currency,
                 fractionDigits,
               )
-            : `${formatNumber(
-                subCategoryPrice.discounted[0],
-                localeFormat,
-                currency,
-                fractionDigits,
-              )} - ${formatNumber(
+            : `${formatNumber(subCategoryPrice.discounted[0], localeFormat, currency, fractionDigits)} - ${formatNumber(
                 subCategoryPrice.discounted[1],
                 localeFormat,
                 currency,
@@ -91,12 +89,7 @@ const SubCategoryPrice = ({
                   currency,
                   fractionDigits,
                 )
-              : `${formatNumber(
-                  subCategoryPrice.default[0],
-                  localeFormat,
-                  currency,
-                  fractionDigits,
-                )} - ${formatNumber(
+              : `${formatNumber(subCategoryPrice.default[0], localeFormat, currency, fractionDigits)} - ${formatNumber(
                   subCategoryPrice.default[1],
                   localeFormat,
                   currency,
@@ -124,12 +117,7 @@ const SubCategoryPrice = ({
                   localeFormat,
                   currency,
                   fractionDigits,
-                )} - ${formatNumber(
-                  subCategoryPrice.discounted[1],
-                  localeFormat,
-                  currency,
-                  fractionDigits,
-                )}`}
+                )} - ${formatNumber(subCategoryPrice.discounted[1], localeFormat, currency, fractionDigits)}`}
             {subCategory.priceUnit ? ` /${subCategory.priceUnit}` : ''}
           </Text>
         </Stack>

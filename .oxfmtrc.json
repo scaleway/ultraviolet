@@ -1,0 +1,42 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "useTabs": false,
+  "tabWidth": 2,
+  "printWidth": 80,
+  "singleQuote": true,
+  "jsxSingleQuote": false,
+  "quoteProps": "as-needed",
+  "trailingComma": "all",
+  "semi": false,
+  "arrowParens": "avoid",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "sortImports": {
+    "order": "asc",
+    "groups": ["builtin", "internal", "external", "parent", "sibling", "type"]
+  },
+  "ignorePatterns": [
+    "CHANGELOG.md",
+    ".changeset",
+    "**/_generated",
+    "**/*.gen.*",
+    "**/.next",
+    "**/next-env.d.ts",
+    "**/.output",
+    "**/dist",
+    "**/build",
+    "**/out",
+    "**/.turbo",
+    "**/storybook-static",
+    "**/.cache",
+    "**/public/build",
+    "**/.vite",
+    "**/coverage",
+    "**/.nyc_output",
+    "**/*.auto.*",
+    "**/graphql-types.*",
+    "**/schema.d.ts",
+    "**/schema.graphql.d.ts",
+    "**/*.d.ts.map"
+  ]
+}

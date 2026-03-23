@@ -2,53 +2,33 @@
   "name": "@ultraviolet/ui",
   "version": "3.12.1",
   "description": "Ultraviolet UI",
-  "homepage": "https://github.com/scaleway/ultraviolet#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/scaleway/ultraviolet.git",
-    "directory": "packages/ui"
-  },
-  "scripts": {
-    "type:generate": "tsgo --declaration -p tsconfig.build.json",
-    "watch": "pnpm run '/^watch:.*/'",
-    "watch:build": "vite build --config vite.config.ts --watch",
-    "build": "vite build --config vite.config.ts && pnpm run type:generate",
-    "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
-    "typecheck": "tsgo --noEmit",
-    "size": "size-limit",
-    "test:unit": "LC_ALL=en_US.UTF-8  pnpm vitest --run --config vitest.config.ts",
-    "test:watch": "LC_ALL=en_US.UTF-8  pnpm vitest watch --config vitest.config.ts",
-    "test:unit:coverage": "pnpm test:unit --coverage",
-    "lintpublish": "publint"
-  },
   "keywords": [
     "react",
     "reactjs",
     "ui"
   ],
+  "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "license": "Apache-2.0",
-  "publishConfig": {
-    "access": "public"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scaleway/ultraviolet.git",
+    "directory": "packages/ui"
   },
-  "engines": {
-    "node": ">=18.x",
-    "pnpm": ">=9.x"
-  },
+  "files": [
+    "dist/"
+  ],
   "os": [
     "darwin",
     "linux"
   ],
+  "type": "module",
   "sideEffects": [
     "**/*.css",
     "**/*.css.ts"
   ],
-  "type": "module",
-  "files": [
-    "dist/"
-  ],
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -70,33 +50,21 @@
       "default": "./dist/components/compositions/styles.js"
     }
   },
-  "size-limit": [
-    {
-      "path": [
-        "dist/**/*.js",
-        "!*.d.ts",
-        "!*.cjs"
-      ],
-      "limit": "800 kB",
-      "webpack": false,
-      "brotli": true,
-      "running": false
-    }
-  ],
-  "peerDependencies": {
-    "react": "18.x || 19.x",
-    "react-dom": "18.x || 19.x"
+  "publishConfig": {
+    "access": "public"
   },
-  "devDependencies": {
-    "@babel/core": "7.29.0",
-    "@repo/config": "workspace:*",
-    "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3",
-    "@utils/test": "workspace:*",
-    "@vanilla-extract/vite-plugin": "5.1.4",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "vite": "8.0.0-beta.18"
+  "scripts": {
+    "type:generate": "tsgo --declaration -p tsconfig.build.json",
+    "watch": "pnpm run '/^watch:.*/'",
+    "watch:build": "vite build --config vite.config.ts --watch",
+    "build": "vite build --config vite.config.ts && pnpm run type:generate",
+    "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
+    "typecheck": "tsgo --noEmit",
+    "size": "size-limit",
+    "test:unit": "LC_ALL=en_US.UTF-8  pnpm vitest --run --config vitest.config.ts",
+    "test:watch": "LC_ALL=en_US.UTF-8  pnpm vitest watch --config vitest.config.ts",
+    "test:unit:coverage": "pnpm test:unit --coverage",
+    "lintpublish": "publint"
   },
   "dependencies": {
     "@nivo/bar": "0.89.1",
@@ -123,5 +91,37 @@
     "react-intersection-observer": "10.0.3",
     "react-toastify": "11.0.5",
     "react-use-clipboard": "1.0.9"
+  },
+  "devDependencies": {
+    "@babel/core": "7.29.0",
+    "@repo/config": "workspace:*",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@utils/test": "workspace:*",
+    "@vanilla-extract/vite-plugin": "5.1.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "vite": "8.0.1"
+  },
+  "peerDependencies": {
+    "react": "18.x || 19.x",
+    "react-dom": "18.x || 19.x"
+  },
+  "size-limit": [
+    {
+      "path": [
+        "dist/**/*.js",
+        "!*.d.ts",
+        "!*.cjs"
+      ],
+      "limit": "800 kB",
+      "webpack": false,
+      "brotli": true,
+      "running": false
+    }
+  ],
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=9.x"
   }
 }

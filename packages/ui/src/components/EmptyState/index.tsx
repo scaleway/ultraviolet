@@ -1,12 +1,15 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
+
 import { Link } from '../Link'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import type { SizesTypes } from './styles.css'
+
 import { emptyStateStyle } from './styles.css'
+
+import type { SizesTypes } from './styles.css'
+import type { CSSProperties, ReactNode } from 'react'
 
 type EmptyStateProps = {
   title?: string

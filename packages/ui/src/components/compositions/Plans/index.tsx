@@ -1,15 +1,18 @@
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-import type { CSSProperties } from 'react'
 import { useState } from 'react'
+
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+
 import { FeatureHint } from './FeatureHint'
 import PlansLocales from './locales/en'
 import { PlanHeader } from './PlanHeader'
 import { plansStyle } from './styles.css'
+
 import type { Feature, PlanType } from './types'
+import type { CSSProperties } from 'react'
 
 type PlansProps<T extends string> = {
   fieldName?: string
@@ -63,7 +66,7 @@ export const Plans = <T extends string>({
             }
 
             return (
-              // biome-ignore lint/a11y/noNoninteractiveElementInteractions: interactive table with a clickable button for accessibility
+              // oxlint-disable jsx_a11y/no-static-element-interactions: interactive table with a clickable button for accessibility
               <td
                 className={plansStyle.cell({
                   activeColor:
@@ -199,7 +202,7 @@ export const Plans = <T extends string>({
                 }
 
                 return (
-                  // biome-ignore lint/a11y/noNoninteractiveElementInteractions: interactive table with a clickable button for accessibility
+                  // oxlint-disable jsx_a11y/no-static-element-interactions: interactive table with a clickable button for accessibility
                   <td
                     className={plansStyle.cell({
                       activeColor:

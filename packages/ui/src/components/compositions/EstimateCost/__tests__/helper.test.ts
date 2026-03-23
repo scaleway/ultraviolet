@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+
 import { calculatePrice } from '../helper'
 
 describe('estimateCost - helper', () => {

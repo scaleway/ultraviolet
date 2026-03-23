@@ -1,11 +1,9 @@
 {
   "name": "@utils/test",
   "version": "0.0.1",
-  "description": "Ultraviolet utils test",
   "private": true,
+  "description": "Ultraviolet utils test",
   "license": "MIT",
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scaleway/ultraviolet.git",
@@ -14,6 +12,8 @@
   "files": [
     "src/*"
   ],
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
   "exports": {
     ".": {
       "default": "./src/index.ts"

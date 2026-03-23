@@ -1,7 +1,9 @@
+import { useState } from 'react'
+
+import { SwitchButton } from '../index'
+
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { useState } from 'react'
-import { SwitchButton } from '../index'
 
 export const UpdateChildren: StoryFn<
   ComponentProps<typeof SwitchButton>

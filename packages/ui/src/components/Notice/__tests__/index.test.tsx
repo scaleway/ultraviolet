@@ -1,5 +1,6 @@
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
+
 import { Notice } from '..'
 
 describe('notice', () => {

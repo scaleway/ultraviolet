@@ -4,6 +4,7 @@ import {
   setupIntersectionMocking,
 } from 'react-intersection-observer/test-utils'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
+
 import { EstimateCost } from '..'
 
 describe('estimateCost - index', () => {

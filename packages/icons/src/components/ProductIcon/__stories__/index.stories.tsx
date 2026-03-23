@@ -1,6 +1,8 @@
-import type { Meta } from '@storybook/react-vite'
 import { ConsoleProductIcon } from '../__generated__'
+
 import Documentation from './Documentation.md?raw'
+
+import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: ConsoleProductIcon,

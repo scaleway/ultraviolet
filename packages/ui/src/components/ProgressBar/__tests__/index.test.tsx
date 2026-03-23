@@ -1,5 +1,6 @@
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
+
 import { ProgressBar } from '..'
 import { PROGRESS_BAR_SENTIMENTS } from '../constants'
 

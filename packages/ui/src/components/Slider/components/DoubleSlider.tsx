@@ -3,8 +3,8 @@
 import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { FocusEvent } from 'react'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
+
 import { Label } from '../../Label'
 import { NumberInput } from '../../NumberInput'
 import { Stack } from '../../Stack'
@@ -12,8 +12,11 @@ import { Text } from '../../Text'
 import { Tooltip } from '../../Tooltip'
 import { THUMB_SIZE } from '../constant'
 import { leftVar, sliderStyle, thumbColor, tooltipLeft } from '../styles.css'
-import type { DoubleSliderProps } from '../types'
+
 import { Options } from './Options'
+
+import type { DoubleSliderProps } from '../types'
+import type { FocusEvent } from 'react'
 
 export const DoubleSlider = ({
   name,

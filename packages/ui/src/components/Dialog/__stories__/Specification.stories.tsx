@@ -1,6 +1,7 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { Button } from '../../Button'
 import { Dialog } from '..'
+import { Button } from '../../Button'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Specifications: StoryFn<typeof Dialog> = props => (
   <Dialog

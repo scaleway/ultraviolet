@@ -1,7 +1,9 @@
 import { theme } from '@ultraviolet/themes'
-import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { recipe } from '@vanilla-extract/recipes'
+
 import { SIZE_GAP_KEY, SIZE_HEIGHT, SIZE_PADDING_KEY } from './constants'
+
+import type { RecipeVariants } from '@vanilla-extract/recipes'
 
 const { monochrome } = theme.colors.other
 

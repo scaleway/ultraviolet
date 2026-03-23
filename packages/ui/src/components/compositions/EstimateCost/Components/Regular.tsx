@@ -1,10 +1,12 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
 import { memo } from 'react'
+
 import { useOverlay } from '../OverlayContext'
 import { estimateCostStyle } from '../styles.css'
+
+import type { CSSProperties, ReactNode } from 'react'
 
 type RegularProps = {
   variant?: 'normal' | 'small' | 'big' | 'capitalized'
