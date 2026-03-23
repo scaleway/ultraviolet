@@ -1,5 +1,13 @@
 # Change Log
 
+## 6.2.4
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @ultraviolet/icons@5.2.1
+  - @ultraviolet/ui@3.12.2
+
 ## 6.2.3
 
 ### Patch Changes
@@ -645,11 +653,13 @@
 ### Major Changes
 
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - All group input have a breaking changes in their props:
+
   - `label` is now longer needed, use `legend` instead.
   - `legend` type moved from `ReactNode` to `string`. Use `legendDescription` to add more information.
   - new prop `legendDescription` to add more information to the legend.
 
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
+
   - `<RadioField />` no longer deprecated
   - `<DateField />` renamed `<DateInputField />` to be consistent with other input fields
 
@@ -674,6 +684,7 @@
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Spread props instead of manually adding them to avoid forgetting some
 
   Breaking changes :
+
   - `SelectableCardGroupField`: prop `type` is now mandatory
   - `VerificationCodeField` : rename `id` as `inputId`
 
@@ -847,6 +858,7 @@
 - [`5d0a970`](https://github.com/scaleway/ultraviolet/commit/5d0a9702142eb4de78f4511e38004b60e2264634) Thanks [@lisalupi](https://github.com/lisalupi)! - Spread props instead of manually adding them to avoid forgetting some
 
   Breaking changes :
+
   - `SelectableCardGroupField`: prop `type` is now mandatory
   - `VerificationCodeField` : rename `id` as `inputId`
 
@@ -1337,23 +1349,24 @@
 ### Patch Changes
 
 - [#4742](https://github.com/scaleway/ultraviolet/pull/4742) [`2a8b327`](https://github.com/scaleway/ultraviolet/commit/2a8b327cb41a72475d4dd91f55b55491ce2d78f6) Thanks [@matthprost](https://github.com/matthprost)! - - System Icons from `@ultraviolet/icons` have a change in their sizing. `large` became `medium` and a new `large` sizing has been created (around 24px)
+
   - `<Button />` the prop `icon`, `iconPosition` and `iconSentiment` has been marked as deprecated and will be removed in future major release. You should use the icon component directly in the children of the button:
 
   ```tsx
   // Before
-  import { Button } from '@ultraviolet/ui'
+  import { Button } from "@ultraviolet/ui";
   <Button icon="pencil" iconPosition="right" iconVariant="outline">
     Edit
-  </Button>
+  </Button>;
   ```
 
   ```tsx
   // After
-  import { Button } from '@ultraviolet/ui'
-  import { PencilOutlineIcon } from '@ultraviolet/icons'
+  import { Button } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
   <Button>
     Edit <PencilOutlineIcon />
-  </Button>
+  </Button>;
   ```
 
   - Fix of other legacy usages of icons into the library
@@ -1719,6 +1732,7 @@
 - [#4384](https://github.com/scaleway/ultraviolet/pull/4384) [`6b53102`](https://github.com/scaleway/ultraviolet/commit/6b53102778e03127bf3e1473e2dc0a00912d3e1e) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<CheckboxField />` label
 
 - [#4361](https://github.com/scaleway/ultraviolet/pull/4361) [`c289c5d`](https://github.com/scaleway/ultraviolet/commit/c289c5d4cfaa8eb587115b73ad119a079793826e) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `<TextArea />` and `<TextAreaField />`:
+
   - To have correct focus / active styles
   - Update prop `rows` to accept `auto` which will automatically adjust the height of the textarea based on its content
 
@@ -1936,6 +1950,7 @@
 - [#4083](https://github.com/scaleway/ultraviolet/pull/4083) [`eb32638`](https://github.com/scaleway/ultraviolet/commit/eb32638d417510b7bcacc9686744f43a5bd30c0e) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<TagInputField />` regex to work with array of string value
 
 - [#4080](https://github.com/scaleway/ultraviolet/pull/4080) [`89583b1`](https://github.com/scaleway/ultraviolet/commit/89583b1a056acf5ad01fc122c38506ffe0a1adb3) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `<SelectInput />` helper color
+
   - Fix `<Slider />` helper color and options not to wrap
 
 - [#4081](https://github.com/scaleway/ultraviolet/pull/4081) [`c3ec2dd`](https://github.com/scaleway/ultraviolet/commit/c3ec2dde045ed93bbc68b36d888364e243913ec0) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<DateInput />` colors when having both props `selectsRange` and `showMonthYearPicker`
@@ -2031,6 +2046,7 @@
 ### Patch Changes
 
 - [#3944](https://github.com/scaleway/ultraviolet/pull/3944) [`d571c5e`](https://github.com/scaleway/ultraviolet/commit/d571c5e07d3f90ac3a80d85e95b2e33b8479927f) Thanks [@matthprost](https://github.com/matthprost)! - - Minor fixes to `<TextInputV2 />` component
+
   - Fixed issue with `<DateInput />` component preventing the input to be edited
 
 - [#4006](https://github.com/scaleway/ultraviolet/pull/4006) [`e011345`](https://github.com/scaleway/ultraviolet/commit/e0113459832a0c026164344fc7efd6a3ab490df7) Thanks [@philibea](https://github.com/philibea)! - Add turborepo
@@ -2489,6 +2505,7 @@
 ### Patch Changes
 
 - [#3599](https://github.com/scaleway/ultraviolet/pull/3599) [`713a4df`](https://github.com/scaleway/ultraviolet/commit/713a4df7a14d17dfa2602284c6e036e00cd37e3f) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `<CheckboxGroupField />` to make all checkbox of the group as required when set `required` prop
+
   - Fix `<CheckboxGroupField.Checkbox />` to have prop `required` and allow partial requirement for the group to be valid
 
 - [#3606](https://github.com/scaleway/ultraviolet/pull/3606) [`fb1e2bc`](https://github.com/scaleway/ultraviolet/commit/fb1e2bc68f8f82adf84714a45ade3a4555d0f817) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.51.2`.

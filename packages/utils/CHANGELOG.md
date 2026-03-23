@@ -1,5 +1,14 @@
 # @ultraviolet/utils
 
+## 1.0.7
+
+### Patch Changes
+
+- [#6260](https://github.com/scaleway/ultraviolet/pull/6260) [`9d1cefa`](https://github.com/scaleway/ultraviolet/commit/9d1cefac6c5a415eddd6f60bad9673b02825c454) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vitest` to `4.1.0`.
+  Updated dependency `@vitest/coverage-istanbul` to `4.1.0`.
+  Updated dependency `@vitest/coverage-v8` to `4.1.0`.
+  Updated dependency `@vitest/ui` to `4.1.0`.
+
 ## 1.0.6
 
 ### Patch Changes

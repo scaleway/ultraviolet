@@ -1,5 +1,17 @@
 # @ultraviolet/plus
 
+## 3.7.2
+
+### Patch Changes
+
+- [#5895](https://github.com/scaleway/ultraviolet/pull/5895) [`5c0bdcf`](https://github.com/scaleway/ultraviolet/commit/5c0bdcfb81a3685d49db91395ce0cc1e6044ee6f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.25.4`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.25.4`.
+  Updated dependency `@uiw/react-codemirror` to `4.25.4`.
+- Updated dependencies [[`9d1cefa`](https://github.com/scaleway/ultraviolet/commit/9d1cefac6c5a415eddd6f60bad9673b02825c454)]:
+  - @ultraviolet/utils@1.0.7
+  - @ultraviolet/icons@5.2.1
+  - @ultraviolet/ui@3.12.2
+
 ## 3.7.1
 
 ### Patch Changes
@@ -25,12 +37,12 @@
   After:
 
   ```js
-  import { SmsProductIcon } from '@ultraviolet/icons/product/SmsProductIcon'
-  ;<FAQ
+  import { SmsProductIcon } from "@ultraviolet/icons/product/SmsProductIcon";
+  <FAQ
     description="description"
     productIconName={<SmsProductIcon size="xlarge" />}
     title="title"
-  />
+  />;
   ```
 
   Be careful with the sizes: to obtain the same result as before, the product icons must have `size="xlarge"`.
@@ -115,6 +127,7 @@
 - [#6111](https://github.com/scaleway/ultraviolet/pull/6111) [`3458287`](https://github.com/scaleway/ultraviolet/commit/3458287bd6f3eaa35bd92e7c46b3935a5545d477) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - Fix strikethrough price condition on order summary
 
 - [#6073](https://github.com/scaleway/ultraviolet/pull/6073) [`73acf0b`](https://github.com/scaleway/ultraviolet/commit/73acf0bd2e818b3cbc04c2daa4782cbbd09cf2c3) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`:
+
   - when prop `priceInformation` is set to true, automatically display "/unit" (unit is the selected unit on the UnitInput)
   - remove "s" on unit when showing "/unit" ("/hours" -> "/hour")
 
@@ -199,6 +212,7 @@
 ### Minor Changes
 
 - [#6011](https://github.com/scaleway/ultraviolet/pull/6011) [`ac1d8a9`](https://github.com/scaleway/ultraviolet/commit/ac1d8a9162c528053a66404b38a4c0f7dbebc588) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`: fix discounts
+
   - Show undiscounted total price when the discount is applied to a category/subcategory
   - Show the undiscounted price of the category when a discount is applied to a subcategory
   - Fix category discount in %
@@ -326,6 +340,7 @@
 - [#5821](https://github.com/scaleway/ultraviolet/pull/5821) [`e064b69`](https://github.com/scaleway/ultraviolet/commit/e064b6930434aad7b1e31f1e960f00ae291bb43f) Thanks [@lisalupi](https://github.com/lisalupi)! - `Plans`: new prop "highlight"
 
 - [#5833](https://github.com/scaleway/ultraviolet/pull/5833) [`0e4dd48`](https://github.com/scaleway/ultraviolet/commit/0e4dd487741e0030d9f652e468b2dc035e2722d4) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`:
+
   - new prop `totalPriceInfoPlacement` for the placement of `totalPriceInfo`
   - new prop `hideBeforePrice` to only show discounted price
   - `discount = 1` interpreted as 100% instead of 1€ for the total price
@@ -373,6 +388,7 @@
 - [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - remove cjs build
 
 - [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - `SteppedListCard`:
+
   - possibility to have an icon instead of a step number
   - `nextStep` will not change the step state (completed or not) if it does not receive a prop
   - smaller bullets
@@ -527,6 +543,7 @@
 ### Minor Changes
 
 - [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`68006e1`](https://github.com/scaleway/ultraviolet/commit/68006e14d373276ce7d77638ec6261229cce60b5) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `InfoTable` to use vanilla extract instead of Emotion
+
   - Add prop "style" to `Row`
 
 - [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`de4cc1c`](https://github.com/scaleway/ultraviolet/commit/de4cc1c180e36fbe991da9268871b21868bd7112) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Conversation` to use vanilla extract instead of Emotion
@@ -896,6 +913,7 @@
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **BREAKING CHANGES**
 
   Deprecated props removed:
+
   - `CodeEditor`: prop "title" removed -> use "label" instead
   - `Icon`: prop "color" removed -> use "sentiment" instead
   - `Icon`: prop "size" can only be "xsmall", "small", "medium", "large", "xlarge" or "xxlarge"
@@ -966,6 +984,7 @@
 - [#5335](https://github.com/scaleway/ultraviolet/pull/5335) [`40e189c`](https://github.com/scaleway/ultraviolet/commit/40e189cb6af270ea830b9d7faeee20d15817425a) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGES**
 
   Deprecated props removed:
+
   - `CodeEditor`: prop "title" removed -> use "label" instead
   - `Icon`: prop "color" removed -> use "sentiment" instead
   - `Icon`: prop "size" can only be "xsmall", "small", "medium", "large", "xlarge" or "xxlarge"
@@ -1280,26 +1299,27 @@
 - [#5100](https://github.com/scaleway/ultraviolet/pull/5100) [`314b5c6`](https://github.com/scaleway/ultraviolet/commit/314b5c61bc76cb660432c79c83e01171a0441f69) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES:
 
   `Navigation.Item`: change in the types and deprecated category icon props:
+
   - `categoryIcon`: type switch from union type to react node to allow you adding your own category icon.
 
   ```tsx
   // Before
-  ;<Navigation.Item categoryIcon="useCase" />
+  <Navigation.Item categoryIcon="useCase" />;
 
   // After
-  import { UseCaseCategoryIcon } from '@ultraviolet/icons/category'
-  ;<Navigation.Item categoryIcon={<UseCaseCategoryIcon />} />
+  import { UseCaseCategoryIcon } from "@ultraviolet/icons/category";
+  <Navigation.Item categoryIcon={<UseCaseCategoryIcon />} />;
   ```
 
   - `categoryIconVariant`: has been removed. Use the variant of the icon component itself.
 
   ```tsx
   // Before
-  ;<Navigation.Item categoryIcon="useCase" categoryIconVariant="neutral" />
+  <Navigation.Item categoryIcon="useCase" categoryIconVariant="neutral" />;
 
   // After
-  import { UseCaseCategoryIcon } from '@ultraviolet/icons/category'
-  ;<Navigation.Item categoryIcon={<UseCaseCategoryIcon variant="neutral" />} />
+  import { UseCaseCategoryIcon } from "@ultraviolet/icons/category";
+  <Navigation.Item categoryIcon={<UseCaseCategoryIcon variant="neutral" />} />;
   ```
 
 ### Patch Changes
@@ -1607,23 +1627,24 @@
 ### Patch Changes
 
 - [#4742](https://github.com/scaleway/ultraviolet/pull/4742) [`2a8b327`](https://github.com/scaleway/ultraviolet/commit/2a8b327cb41a72475d4dd91f55b55491ce2d78f6) Thanks [@matthprost](https://github.com/matthprost)! - - System Icons from `@ultraviolet/icons` have a change in their sizing. `large` became `medium` and a new `large` sizing has been created (around 24px)
+
   - `<Button />` the prop `icon`, `iconPosition` and `iconSentiment` has been marked as deprecated and will be removed in future major release. You should use the icon component directly in the children of the button:
 
   ```tsx
   // Before
-  import { Button } from '@ultraviolet/ui'
-  ;<Button icon="pencil" iconPosition="right" iconVariant="outline">
+  import { Button } from "@ultraviolet/ui";
+  <Button icon="pencil" iconPosition="right" iconVariant="outline">
     Edit
-  </Button>
+  </Button>;
   ```
 
   ```tsx
   // After
-  import { Button } from '@ultraviolet/ui'
-  import { PencilOutlineIcon } from '@ultraviolet/icons'
-  ;<Button>
+  import { Button } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
+  <Button>
     Edit <PencilOutlineIcon />
-  </Button>
+  </Button>;
   ```
 
   - Fix of other legacy usages of icons into the library
@@ -2709,6 +2730,7 @@
 ### Patch Changes
 
 - [#3620](https://github.com/scaleway/ultraviolet/pull/3620) [`d63adc3`](https://github.com/scaleway/ultraviolet/commit/d63adc3bdd03f66c18980830774866c0aec7dc44) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `<Navigation />` to work better with slider, have better tab index and close the menu when clicking
+
   - Fix `<EstimateCost />` to have prop `overlayMargin` in order to adapt the overlay depending on the width of the navigation
 
 - [#3616](https://github.com/scaleway/ultraviolet/pull/3616) [`8f285a6`](https://github.com/scaleway/ultraviolet/commit/8f285a6460db5c442abf10f074dda8f3f543a271) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/styled` to `11.11.5`.
