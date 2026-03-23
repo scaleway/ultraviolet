@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.2.0
+
+### Minor Changes
+
+- [#6208](https://github.com/scaleway/ultraviolet/pull/6208) [`42c3f4f`](https://github.com/scaleway/ultraviolet/commit/42c3f4ffb0ee0644ddb0617cb38002e3a8d5313f) Thanks [@iManu](https://github.com/iManu)! - Add aria-hidden props for svg tag
+
 ## 5.1.6
 
 ### Patch Changes

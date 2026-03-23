@@ -1,5 +1,40 @@
 # Change Log
 
+## 3.12.1
+
+### Patch Changes
+
+- [#6197](https://github.com/scaleway/ultraviolet/pull/6197) [`d9aec9b`](https://github.com/scaleway/ultraviolet/commit/d9aec9b3eec34f90d610da84a063e4ae6b820ce1) Thanks [@philibea](https://github.com/philibea)! - Remove default props value for style which generate a class with a priority over className
+
+- [#6204](https://github.com/scaleway/ultraviolet/pull/6204) [`deb39cf`](https://github.com/scaleway/ultraviolet/commit/deb39cf2b23595382d4ba7314a639c03659bc4a9) Thanks [@lisalupi](https://github.com/lisalupi)! - `Tag`: new prop `keyValue` to display the tag with read-only key-values and fix `disabled` style
+
+- [#6232](https://github.com/scaleway/ultraviolet/pull/6232) [`866f571`](https://github.com/scaleway/ultraviolet/commit/866f5715507990f2c469c3bf2ea0c6cd7e49512b) Thanks [@lisalupi](https://github.com/lisalupi)! - `Drawer`: fix controlled push version
+
+- [#6198](https://github.com/scaleway/ultraviolet/pull/6198) [`8cab78f`](https://github.com/scaleway/ultraviolet/commit/8cab78f18949b629980f3a2113daacc9c2b6835d) Thanks [@lisalupi](https://github.com/lisalupi)! - `InfoTable`: fix cell display and add a new sub-component `InfoTable.CellWithCopyButton`
+
+- [#6234](https://github.com/scaleway/ultraviolet/pull/6234) [`8c6bf2d`](https://github.com/scaleway/ultraviolet/commit/8c6bf2d08028bd4eb63a07dee093571075c27408) Thanks [@lisalupi](https://github.com/lisalupi)! - .
+  `Modal`: new prop `isDrawer` and use this prop in component `Drawer`. With this prop, a modal is not registered and does not receive nested animation and width.
+
+- [#6185](https://github.com/scaleway/ultraviolet/pull/6185) [`b20dda8`](https://github.com/scaleway/ultraviolet/commit/b20dda8cfcbf85c3bec79f34734a1626b11ad25f) Thanks [@lisalupi](https://github.com/lisalupi)! - **⚠️⚠️ BREAKING CHANGE ⚠️⚠️**
+
+  `Breadcrumbs`: move onClick and onKeyDown handlers to `<a>`/`<button>` instead of `<li>` wrapper. This impacts the props type : it uses `HTMLElement` instead of `HTMLLiElement`
+
+- [#6229](https://github.com/scaleway/ultraviolet/pull/6229) [`5f74798`](https://github.com/scaleway/ultraviolet/commit/5f7479869efb317da6d7790966f32a42b655365e) Thanks [@lisalupi](https://github.com/lisalupi)! - `Slider`: new prop `defaultScale` to be able to display ticks (options) with a non-linear scale
+
+- [#6206](https://github.com/scaleway/ultraviolet/pull/6206) [`972c6ca`](https://github.com/scaleway/ultraviolet/commit/972c6ca487bdbe0e7bc94b63959898fb9cb4dd94) Thanks [@lisalupi](https://github.com/lisalupi)! - `Table`: new prop `highlightHeader` and change header text weight
+
+- [#6219](https://github.com/scaleway/ultraviolet/pull/6219) [`16de416`](https://github.com/scaleway/ultraviolet/commit/16de416262c34bb0d9b2592ae8525acf6c66fd1e) Thanks [@lisalupi](https://github.com/lisalupi)! - `Drawer`: allow scroll in the page with `push` variant
+
+- [#6186](https://github.com/scaleway/ultraviolet/pull/6186) [`d9b3958`](https://github.com/scaleway/ultraviolet/commit/d9b39585d1d94d7cfdd2d835b3c174ae088801b5) Thanks [@lisalupi](https://github.com/lisalupi)! - `List.Row`: new prop `disabledClickRowToExpand`. When enabled, it completely disables expanding a row by clicking anywhere on it.
+  **Note**: If this prop is set to `true` and `expandable` is `false` on the `List`, the row cannot be expanded at all.
+
+  `OfferList`: Clicking a row now selects it, even if the row is expandable. To expand an expandable row, users must click the dedicated expand button instead of anywhere on the row.
+
+- [#6217](https://github.com/scaleway/ultraviolet/pull/6217) [`6df0811`](https://github.com/scaleway/ultraviolet/commit/6df0811ea396499207497da9288bfab5862dcc30) Thanks [@lisalupi](https://github.com/lisalupi)! - `Drawer`: header should always have a padding, even when it is a `ReactNode`
+
+- Updated dependencies [[`42c3f4f`](https://github.com/scaleway/ultraviolet/commit/42c3f4ffb0ee0644ddb0617cb38002e3a8d5313f)]:
+  - @ultraviolet/icons@5.2.0
+
 ## 3.12.0
 
 ### Minor Changes
