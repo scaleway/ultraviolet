@@ -2,85 +2,81 @@ import { configDefaults, defineConfig, mergeConfig } from 'vitest/config'
 
 import type { TestUserConfig, ViteUserConfig } from 'vitest/config'
 
+const defaultConfig = defineConfig({
+  test: {
+    experimental: {
+      fsModuleCache: true,
+    },
+    alias: {
+      '.*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+        '<rootDir>/.vitest/fileMock.js',
+      '\\.svg$': '<rootDir>/.vitest/svg.ts',
+    },
+    allowOnly: false,
+    clearMocks: true,
+
+    pool: 'forks',
+    coverage: {
+      exclude: [
+        ...(configDefaults.coverage.exclude ?? []),
+        '.reports/**',
+        '**/.eslintrc.*',
+        '**/*.d.ts',
+        'build',
+        'dist',
+        'node_modules',
+        '**/{webpack,vite,vitest,babel}.config.*',
+        '**.snap',
+        '**/__stories__/**',
+        '**.svg',
+      ],
+      provider: 'istanbul',
+      reporter: ['text', 'json', 'cobertura', 'html', 'json-summary'],
+    },
+    css: {
+      modules: {
+        classNameStrategy: 'non-scoped',
+      },
+    },
+    deps: {
+      optimizer: {
+        web: {
+          enabled: true,
+          include: ['@nivo/*'],
+        },
+      },
+    },
+    environment: 'jsdom',
+    exclude: [
+      ...configDefaults.exclude,
+      '**/node_modules/**',
+      '**/{dist,build}/**',
+      '**/__stories__/**',
+      '**.stories.*',
+      '**/coverages/**',
+      '**/__stories__/**',
+      '**/.{idea,git,cache,output,temp,reports,jest}/**',
+    ],
+    globals: true,
+    logHeapUsage: true,
+    mockReset: true,
+    outputFile: {
+      junit: '.reports/tests.xml',
+    },
+    reporters: ['default', 'junit'],
+    restoreMocks: true,
+    server: {
+      deps: {
+        inline: true,
+      },
+    },
+    setupFiles: ['vitest-localstorage-mock', 'vitest-canvas-mock'],
+    testTimeout: 25_000,
+  },
+})
+
 export const createVitestConfig = (
   options: TestUserConfig & ViteUserConfig = {},
-) =>
-  mergeConfig(
-    defineConfig({
-      test: {
-        experimental: {
-          fsModuleCache: true,
-          printImportBreakdown: false,
-        },
-        alias: {
-          '.*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-            '<rootDir>/.vitest/fileMock.js',
-          '\\.svg$': '<rootDir>/.vitest/svg.ts',
-        },
-        allowOnly: false,
-        clearMocks: true,
-
-        pool: 'forks',
-        coverage: {
-          exclude: [
-            ...(configDefaults.coverage.exclude ?? []),
-            '.reports/**',
-            '**/.eslintrc.*',
-            '**/*.d.ts',
-            'build',
-            'dist',
-            'node_modules',
-            '**/{webpack,vite,vitest,babel}.config.*',
-            '**.snap',
-            '**/__stories__/**',
-            '**.svg',
-          ],
-          provider: 'istanbul',
-          reporter: ['text', 'json', 'cobertura', 'html', 'json-summary'],
-        },
-        css: {
-          modules: {
-            classNameStrategy: 'non-scoped',
-          },
-        },
-        deps: {
-          optimizer: {
-            web: {
-              enabled: true,
-              include: ['@nivo/*'],
-            },
-          },
-        },
-        environment: 'jsdom',
-        exclude: [
-          ...configDefaults.exclude,
-          '**/node_modules/**',
-          '**/{dist,build}/**',
-          '**/__stories__/**',
-          '**.stories.*',
-          '**/coverages/**',
-          '**/__stories__/**',
-          '**/.{idea,git,cache,output,temp,reports,jest}/**',
-        ],
-        globals: true,
-        logHeapUsage: true,
-        mockReset: true,
-        outputFile: {
-          junit: '.reports/tests.xml',
-        },
-        reporters: ['default', 'junit'],
-        restoreMocks: true,
-        server: {
-          deps: {
-            inline: true,
-          },
-        },
-        setupFiles: ['vitest-localstorage-mock', 'vitest-canvas-mock'],
-        testTimeout: 25_000,
-        ...options,
-      },
-    }),
-    options,
-  )
+) => mergeConfig(defaultConfig, options)
 
 export default createVitestConfig()
