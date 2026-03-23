@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.12.2
+
+### Patch Changes
+
+- Updated dependencies [[`9d1cefa`](https://github.com/scaleway/ultraviolet/commit/9d1cefac6c5a415eddd6f60bad9673b02825c454)]:
+  - @ultraviolet/utils@1.0.7
+  - @ultraviolet/icons@5.2.1
+
 ## 3.12.1
 
 ### Patch Changes
@@ -55,11 +63,11 @@
   After:
 
   ```js
-  import { FilterIcon } from '@ultraviolet/icons/FilterIcon'
-  ;<Chip>
+  import { FilterIcon } from "@ultraviolet/icons/FilterIcon";
+  <Chip>
     MyChip
     <Chip.Icon icon={<FilterIcon />} />
-  </Chip>
+  </Chip>;
   ```
 
   `SelectableCard`: prop `productIcon` and `illustration ` are now a ReactNode, like in `Chip.Icon`. Be careful with the sizes: to obtain the same result as before, the product icons must have `size="large"`.
@@ -117,12 +125,12 @@
   After:
 
   ```js
-  import { SmsProductIcon } from '@ultraviolet/icons/product/SmsProductIcon'
-  ;<FAQ
+  import { SmsProductIcon } from "@ultraviolet/icons/product/SmsProductIcon";
+  <FAQ
     description="description"
     productIconName={<SmsProductIcon size="xlarge" />}
     title="title"
-  />
+  />;
   ```
 
   Be careful with the sizes: to obtain the same result as before, the product icons must have `size="xlarge"`.
@@ -132,35 +140,35 @@
 - [#6155](https://github.com/scaleway/ultraviolet/pull/6155) [`adc3ce5`](https://github.com/scaleway/ultraviolet/commit/adc3ce5db64bcb7d864de668c7530de8ed5e3dd4) Thanks [@lisalupi](https://github.com/lisalupi)! - Export all components vanilla-extract classnames. All the classes for a single component are added in a single obejct : for instance, to get the vanilla-extract classname of a drawer footer, simply write :
 
   ```js
-  import { drawerStyle } from '@ultraviolet/ui'
+  import { drawerStyle } from "@ultraviolet/ui";
 
-  const footerClassName = drawerStyle.drawerFooter // → uv_1iezf7ya
+  const footerClassName = drawerStyle.drawerFooter; // → uv_1iezf7ya
   ```
 
   Beware, some vanilla-extract classname are `styleVariants`. They must be used as follow :
 
   ```js
-  import { drawerStyle } from '@ultraviolet/ui'
+  import { drawerStyle } from "@ultraviolet/ui";
 
-  const drawerClassName = drawerStyle.drawer // → { large: "uv_1iezf7y3", medium: "uv_1iezf7y4", small: "uv_1iezf7y5" }
-  const drawerClassNameSmall = drawerClassName.small // → uv_1iezf7y5
+  const drawerClassName = drawerStyle.drawer; // → { large: "uv_1iezf7y3", medium: "uv_1iezf7y4", small: "uv_1iezf7y5" }
+  const drawerClassNameSmall = drawerClassName.small; // → uv_1iezf7y5
   ```
 
   There are also `recipe`:
 
   ```js
-  import { badgeStyle } from '@ultraviolet/ui'
+  import { badgeStyle } from "@ultraviolet/ui";
 
-  const badgeStyle = badgeStyle.badge // → function
-  const badgeDefault = badgeStyle() // → uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jy7 uv_1yf71jye uv_1yf71jyn
-  const badgePrimary = badgeStyle({ sentiment: 'primary' }) // → uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jy5 uv_1yf71jye uv_1yf71jyj
+  const badgeStyle = badgeStyle.badge; // → function
+  const badgeDefault = badgeStyle(); // → uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jy7 uv_1yf71jye uv_1yf71jyn
+  const badgePrimary = badgeStyle({ sentiment: "primary" }); // → uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jy5 uv_1yf71jye uv_1yf71jyj
   ```
 
   Composition styles are available in `@ultraviolet/ui/compositions/styles`:
 
   ```js
-  import { orderSummaryStyle } from '@ultraviolet/ui/compositions/styles'
-  import { OrderSummary } from '@ultraviolet/ui/compositions/OrderSummary'
+  import { orderSummaryStyle } from "@ultraviolet/ui/compositions/styles";
+  import { OrderSummary } from "@ultraviolet/ui/compositions/OrderSummary";
   ```
 
   You **do not** need to import the component's styles for them to display correctly. These styles are exported to simplify customization using classnames.
@@ -259,6 +267,7 @@
 ### Minor Changes
 
 - [#6077](https://github.com/scaleway/ultraviolet/pull/6077) [`884a3c5`](https://github.com/scaleway/ultraviolet/commit/884a3c5b913a618e2fffc82b98753f7c493bd5a1) Thanks [@lisalupi](https://github.com/lisalupi)! - `FileInput`:
+
   - cannot drop files which do not respect the accept prop
   - when `multiple = false`, if multiple files are dropped at once, only the first one should be added
 
@@ -270,6 +279,7 @@
 ### Patch Changes
 
 - [#6065](https://github.com/scaleway/ultraviolet/pull/6065) [`a96c4d8`](https://github.com/scaleway/ultraviolet/commit/a96c4d82a5bdf30822d4aaadaceaaafe616e6883) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: sizes fixes:
+
   - adapt font size on dropdown and placeholder depending on SelectInput size
   - small textInput when small
   - smaller icons when small
@@ -419,6 +429,7 @@
 - [#5987](https://github.com/scaleway/ultraviolet/pull/5987) [`94bf725`](https://github.com/scaleway/ultraviolet/commit/94bf7250328c6ac91cfd3aac3f8bff6df75e1bd4) Thanks [@lisalupi](https://github.com/lisalupi)! - `List`: fix deprecated message. Note that in future major version, prop `colMode` will be removed and default behavior will `colMode="strict"`.
 
 - [#5975](https://github.com/scaleway/ultraviolet/pull/5975) [`98abf07`](https://github.com/scaleway/ultraviolet/commit/98abf07b11fd74bb458cb7907f18167f5613aae5) Thanks [@lisalupi](https://github.com/lisalupi)! - `Link`:
+
   - new dotted underline for accessibility
   - switch `:visited` color from primary to secondary to avoid confusion with `sentiment="primary"`
 
@@ -428,6 +439,7 @@
   `TextInput`: fix prefix border-color
 
 - [#5949](https://github.com/scaleway/ultraviolet/pull/5949) [`2fa66cb`](https://github.com/scaleway/ultraviolet/commit/2fa66cba74f8809b3c93708519003f8cd563dcd0) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`:
+
   - new prop `combobox` to dynamically add options when searchable
   - fix navigation in the dropdown using keys when searchable
 
@@ -483,6 +495,7 @@
 ### Minor Changes
 
 - [#5937](https://github.com/scaleway/ultraviolet/pull/5937) [`22994af`](https://github.com/scaleway/ultraviolet/commit/22994af651f7eb409ed6568dd7e11cbe1445e126) Thanks [@lisalupi](https://github.com/lisalupi)! - `Tag`:
+
   - add copy icon when `copiable` with prop `copyButton`
   - new variant "code"
   - fix hover style when copiable
@@ -533,6 +546,7 @@
 - [#5863](https://github.com/scaleway/ultraviolet/pull/5863) [`ec99ee5`](https://github.com/scaleway/ultraviolet/commit/ec99ee591e1de6b9c9428146fa7f8cb1bda1b81e) Thanks [@lisalupi](https://github.com/lisalupi)! - `PasswordCheck`: update style
 
 - [#5884](https://github.com/scaleway/ultraviolet/pull/5884) [`d1b9517`](https://github.com/scaleway/ultraviolet/commit/d1b9517b55a3f84ea94d52e09bbbb4b872e7219c) Thanks [@lisalupi](https://github.com/lisalupi)! - `Stepper`:
+
   - Change the prominence of the "Done" bullet
   - Reduce height of the bar between steps (2px -> 1px)
 
@@ -573,6 +587,7 @@
 - [#5835](https://github.com/scaleway/ultraviolet/pull/5835) [`c650f4f`](https://github.com/scaleway/ultraviolet/commit/c650f4fd70be4b6a09477514b5719becec6a278b) Thanks [@PierreBertinet](https://github.com/PierreBertinet)! - Fix color of disabled option description text
 
 - [#5828](https://github.com/scaleway/ultraviolet/pull/5828) [`7bde3d9`](https://github.com/scaleway/ultraviolet/commit/7bde3d9d0c905f610b903d1af7802742e3cfcc4e) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`:
+
   - click outside should work in every context
   - fix placeholder alignment when small
 
@@ -601,19 +616,19 @@
   In order to start using the new style, you will need to import new `<ThemeProvider />` and import new CSS generated at build time:
 
   ```tsx
-  import { ThemeProvider } from '@emotion/react'
+  import { ThemeProvider } from "@emotion/react";
   import {
     consoleLightTheme,
     ThemeProvider as ThemeProviderUV,
-  } from '@ultraviolet/themes'
+  } from "@ultraviolet/themes";
 
-  import '@ultraviolet/ui/styles' // Generated CSS used by components
+  import "@ultraviolet/ui/styles"; // Generated CSS used by components
 
-  export const App = children => {
-    ;<ThemeProvider theme={consoleLightTheme}>
+  export const App = (children) => {
+    <ThemeProvider theme={consoleLightTheme}>
       <ThemeProviderUV>{children}</ThemeProviderUV>
-    </ThemeProvider>
-  }
+    </ThemeProvider>;
+  };
   ```
 
 - [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - ! POTENTIAL BREAKING CHANGES !
@@ -625,45 +640,47 @@
 - [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGE** Remove all emotion animation, replace with vanilla-extract animation by default.
 
   ```js
-  import { fadeIn } from '@ultraviolet/ui' // vanilla-extract animation
+  import { fadeIn } from "@ultraviolet/ui"; // vanilla-extract animation
   ```
 
   To use animation in another context, add `Default` at the end of the animation name:
 
   ```js
-  import { fadeInDefault } from '@ultraviolet/ui'
+  import { fadeInDefault } from "@ultraviolet/ui";
   ```
 
   This returns a string that can be used in many different places.
+
   1. **Emotion**: create the keyframe then use it:
 
   ```js
-  import { fadeInDefault } from '@ultraviolet/ui'
-  import { keyframes } from '@emotion/react'
+  import { fadeInDefault } from "@ultraviolet/ui";
+  import { keyframes } from "@emotion/react";
 
-  const fadeInEmotion = keyframes`${fadeInDefault}`
+  const fadeInEmotion = keyframes`${fadeInDefault}`;
   const StyledDiv = styled.div`
     animation: ${fadeInEmotion} 1s ease infinite;
-  `
+  `;
   ```
 
   2. Vanilla CSS: simply add the name of the animation you want to use as a className.
 
   ```js
-  const MyComponent = () => <div className="fadeIn">Hello World!</div>
+  const MyComponent = () => <div className="fadeIn">Hello World!</div>;
   ```
 
   To customize the animation, you must overrule the default settings:
 
   ```js
   const MyComponent = () => (
-    <div className="fadeIn" style={{ animationDuration: '300ms' }}>
+    <div className="fadeIn" style={{ animationDuration: "300ms" }}>
       Hello World!
     </div>
-  )
+  );
   ```
 
 - [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - - Remove `Emotion`
+
   - Removed `Breakpoint`: use directly `up` and `down`
 
 - [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - - `Bullet`: **BREAKING CHANGE** "disabled" is now a prop instead of a value of prop "sentiment"
@@ -769,6 +786,7 @@
 
 - [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - All `Popup` components (`Popover`, `Tooltip`, `Menu`): 4 new positions `auto-` to have auto-placement but give priority to a direction. For instance, `auto-bottom` will try to place the popup beneath the disclosure first, if there is not enough place it will try top, then left, then right.
   The priorities are :
+
   - `auto-bottom` : bottom > top > left > right
   - `auto-left` : left > right > top > bottom
   - `auto-right` : right > left > top > bottom
@@ -813,6 +831,7 @@
 
 - [#5782](https://github.com/scaleway/ultraviolet/pull/5782) [`b9f0d1e`](https://github.com/scaleway/ultraviolet/commit/b9f0d1e7ad0aae0a4e7756d7d7e107a8228e9419) Thanks [@lisalupi](https://github.com/lisalupi)! - All `Popup` components (`Popover`, `Tooltip`, `Menu`): 4 new positions `auto-` to have auto-placement but give priority to a direction. For instance, `auto-bottom` will try to place the popup beneath the disclosure first, if there is not enough place it will try top, then left, then right.
   The priorities are :
+
   - `auto-bottom` : bottom > top > left > right
   - `auto-left` : left > right > top > bottom
   - `auto-right` : right > left > top > bottom
@@ -831,42 +850,43 @@
 - [#5766](https://github.com/scaleway/ultraviolet/pull/5766) [`2974892`](https://github.com/scaleway/ultraviolet/commit/2974892ab614235acdf141f1a83c9a867237cb9b) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGE** Remove all emotion animation, replace with vanilla-extract animation by default.
 
   ```js
-  import { fadeIn } from '@ultraviolet/ui' // vanilla-extract animation
+  import { fadeIn } from "@ultraviolet/ui"; // vanilla-extract animation
   ```
 
   To use animation in another context, add `Default` at the end of the animation name:
 
   ```js
-  import { fadeInDefault } from '@ultraviolet/ui'
+  import { fadeInDefault } from "@ultraviolet/ui";
   ```
 
   This returns a string that can be used in many different places.
+
   1. **Emotion**: create the keyframe then use it:
 
   ```js
-  import { fadeInDefault } from '@ultraviolet/ui'
-  import { keyframes } from '@emotion/react'
+  import { fadeInDefault } from "@ultraviolet/ui";
+  import { keyframes } from "@emotion/react";
 
-  const fadeInEmotion = keyframes`${fadeInDefault}`
+  const fadeInEmotion = keyframes`${fadeInDefault}`;
   const StyledDiv = styled.div`
     animation: ${fadeInEmotion} 1s ease infinite;
-  `
+  `;
   ```
 
   2. Vanilla CSS: simply add the name of the animation you want to use as a className.
 
   ```js
-  const MyComponent = () => <div className="fadeIn">Hello World!</div>
+  const MyComponent = () => <div className="fadeIn">Hello World!</div>;
   ```
 
   To customize the animation, you must overrule the default settings:
 
   ```js
   const MyComponent = () => (
-    <div className="fadeIn" style={{ animationDuration: '300ms' }}>
+    <div className="fadeIn" style={{ animationDuration: "300ms" }}>
       Hello World!
     </div>
-  )
+  );
   ```
 
 ### Minor Changes
@@ -931,6 +951,7 @@
 ### Minor Changes
 
 - [#5713](https://github.com/scaleway/ultraviolet/pull/5713) [`0523069`](https://github.com/scaleway/ultraviolet/commit/0523069fd9a4455c375315ea7a47b4292ebc978e) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `Slider` to use vanilla extract instead of Emotion
+
   - Add prop "style" to `Popup` and `Tooltip`
 
 - [#5723](https://github.com/scaleway/ultraviolet/pull/5723) [`eb6127e`](https://github.com/scaleway/ultraviolet/commit/eb6127e80e64644b0e2a4237a3cea291172acade) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Tabs` to use vanilla extract instead of Emotion
@@ -957,9 +978,11 @@
 ### Minor Changes
 
 - [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`68006e1`](https://github.com/scaleway/ultraviolet/commit/68006e14d373276ce7d77638ec6261229cce60b5) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `InfoTable` to use vanilla extract instead of Emotion
+
   - Add prop "style" to `Row`
 
 - [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`7091562`](https://github.com/scaleway/ultraviolet/commit/709156284a91877ccbe72feba79b4ae44797319f) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor components `List` and `OfferList` to use vanilla-extract instead of Emotion
+
   - HeaderCell: Rename prop `minWith`-> `minWidth`
 
 - [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`203174a`](https://github.com/scaleway/ultraviolet/commit/203174a4d8a5e74bdff04b9d961b478423a8da1e) Thanks [@lisalupi](https://github.com/lisalupi)! - `UnitInput`: remove `&&` in style, since it is not needed anymore and replace id use with vanilla-extract class
@@ -1016,6 +1039,7 @@
 ### Minor Changes
 
 - [#5644](https://github.com/scaleway/ultraviolet/pull/5644) [`5c10948`](https://github.com/scaleway/ultraviolet/commit/5c10948eceb6a4e257bd6f752273dc7fee85d08e) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `SelectInput` to use vanilla extract instead of Emotion
+
   - `Tag`: add prop `style`
 
 - [#5645](https://github.com/scaleway/ultraviolet/pull/5645) [`8ec50bb`](https://github.com/scaleway/ultraviolet/commit/8ec50bbb6b49f71ca574adeeaa1905d27511d0a8) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `EmptyState` to use vanilla extract instead of Emotion
@@ -1037,11 +1061,13 @@
 ### Minor Changes
 
 - [#5640](https://github.com/scaleway/ultraviolet/pull/5640) [`945ce38`](https://github.com/scaleway/ultraviolet/commit/945ce3842e11407e4bdda076c27f41465ec73284) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `UnitInput` to use vanilla extract instead of Emotion
+
   - Add prop `style` to `SelectInput`
 
 - [#5622](https://github.com/scaleway/ultraviolet/pull/5622) [`12fc99d`](https://github.com/scaleway/ultraviolet/commit/12fc99dde57e3e97543bc26402a99ad0ea359cd8) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `TimeInput` to use vanilla-extract instead of Emotion
 
 - [#5614](https://github.com/scaleway/ultraviolet/pull/5614) [`a8b9b62`](https://github.com/scaleway/ultraviolet/commit/a8b9b6237173d72b9c74af2ac4d57b4b81949982) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor components `TagInput` and `TagList` to use vanilla-extract instead of emotion
+
   - `TagList` : popover should be openable using keyboard keys (space or enter)
 
 - [#5608](https://github.com/scaleway/ultraviolet/pull/5608) [`d1b44ff`](https://github.com/scaleway/ultraviolet/commit/d1b44ffd1bf0a8ded5b13d3b51a3e8ed0077a46d) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<TextInput />` using vanilla extract
@@ -1338,17 +1364,17 @@
   In order to start using the new style, you will need to import new `<ThemeProvider />` and import new CSS generated at build time:
 
   ```tsx
-  import { ThemeProvider } from '@emotion/react'
-  import { consoleLightTheme } from '@ultraviolet/themes'
+  import { ThemeProvider } from "@emotion/react";
+  import { consoleLightTheme } from "@ultraviolet/themes";
 
-  import { ThemeProvider as ThemeProviderUV } from '@ultraviolet/ui' // ThemeProvider that generate the theme applied to components
-  import '@ultraviolet/ui/styles' // Generated CSS used by components
+  import { ThemeProvider as ThemeProviderUV } from "@ultraviolet/ui"; // ThemeProvider that generate the theme applied to components
+  import "@ultraviolet/ui/styles"; // Generated CSS used by components
 
-  export const App = children => {
-    ;<ThemeProvider theme={consoleLightTheme}>
+  export const App = (children) => {
+    <ThemeProvider theme={consoleLightTheme}>
       <ThemeProviderUV>{children}</ThemeProviderUV>
-    </ThemeProvider>
-  }
+    </ThemeProvider>;
+  };
   ```
 
 ## 3.0.0-beta.1
@@ -1367,17 +1393,17 @@
   In order to start using the new style, you will need to import new `<ThemeProvider />` and import new CSS generated at build time:
 
   ```tsx
-  import { ThemeProvider } from '@emotion/react'
-  import { consoleLightTheme } from '@ultraviolet/themes'
+  import { ThemeProvider } from "@emotion/react";
+  import { consoleLightTheme } from "@ultraviolet/themes";
 
-  import { ThemeProvider as ThemeProviderUV } from '@ultraviolet/ui' // ThemeProvider that generate the theme applied to components
-  import '@ultraviolet/ui/styles' // Generated CSS used by components
+  import { ThemeProvider as ThemeProviderUV } from "@ultraviolet/ui"; // ThemeProvider that generate the theme applied to components
+  import "@ultraviolet/ui/styles"; // Generated CSS used by components
 
-  export const App = children => {
-    ;<ThemeProvider theme={consoleLightTheme}>
+  export const App = (children) => {
+    <ThemeProvider theme={consoleLightTheme}>
       <ThemeProviderUV>{children}</ThemeProviderUV>
-    </ThemeProvider>
-  }
+    </ThemeProvider>;
+  };
   ```
 
 ## 2.0.5
@@ -1393,6 +1419,7 @@
 - [#5385](https://github.com/scaleway/ultraviolet/pull/5385) [`22733ab`](https://github.com/scaleway/ultraviolet/commit/22733ab678cb58a71cc8e6f93f98544b3f3d2cdf) Thanks [@lisalupi](https://github.com/lisalupi)! - `Menu`: the popup should shrink when there is not enough size to avoid creating more scroll
 
 - [#5410](https://github.com/scaleway/ultraviolet/pull/5410) [`6d6ea09`](https://github.com/scaleway/ultraviolet/commit/6d6ea09eabd68bebc0300b1002a8308b1f336e3b) Thanks [@lisalupi](https://github.com/lisalupi)! - - `OfferList`: fix spacing between rows
+
   - `List`: new props "onMouseLeave" and "onMouseEnter"
 
 - [#5415](https://github.com/scaleway/ultraviolet/pull/5415) [`0bb13d0`](https://github.com/scaleway/ultraviolet/commit/0bb13d0055c5e930d7eb12df0941012afba9a71b) Thanks [@lisalupi](https://github.com/lisalupi)! - `Table`: remove unnecessary padding on first column header
@@ -1445,11 +1472,13 @@
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **BREAKING CHANGES**
 
   Deprecated props removed:
+
   - `Link`: prop "sentiment" can only by "primary" or "info" (default value) now
   - `List.Cell`: prop "preventClick" removed (it is now default behavior)
   - `Menu`: prop "size" and "maxWidth" removed, the size is now automatic
 
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - All group input have a breaking changes in their props:
+
   - `label` is now longer needed, use `legend` instead.
   - `legend` type moved from `ReactNode` to `string`. Use `legendDescription` to add more information.
   - new prop `legendDescription` to add more information to the legend.
@@ -1457,7 +1486,9 @@
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **BREAKING CHANGES**
 
   Deprecated props removed:
+
   - `TagInput`:
+
     - props "manualInput" and "onChangeError" removed: the props used to have no effect
     - prop "variant" removed: only one variant possible now
     - prop "tags" removed -> use "value" instead
@@ -1467,6 +1498,7 @@
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **BREAKING CHANGES**
 
   Deprecated props removed:
+
   - `Card`: prop "isActive" removed -> use "active" instead
   - `Checkbox`: props "progress" and "size" removed
   - `CopyButton`: prop "noBorder" removed -> use "bordered" instead
@@ -1485,19 +1517,19 @@
 
   ```tsx
   // Before
-  import { Button } from '@ultraviolet/ui'
-  ;<Button icon="pencil" iconPosition="right" iconVariant="outline">
+  import { Button } from "@ultraviolet/ui";
+  <Button icon="pencil" iconPosition="right" iconVariant="outline">
     Edit
-  </Button>
+  </Button>;
   ```
 
   ```tsx
   // After
-  import { Button } from '@ultraviolet/ui'
-  import { PencilOutlineIcon } from '@ultraviolet/icons'
-  ;<Button>
+  import { Button } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
+  <Button>
     Edit <PencilOutlineIcon />
-  </Button>
+  </Button>;
   ```
 
   ### Badge
@@ -1515,11 +1547,11 @@
 
   ```tsx
   // After
-  import { Badge } from '@ultraviolet/ui'
-  import { PencilOutlineIcon } from '@ultraviolet/icons'
-  ;<Badge>
+  import { Badge } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
+  <Badge>
     Edit <PencilOutlineIcon />
-  </Badge>
+  </Badge>;
   ```
 
   ### Bullet
@@ -1555,17 +1587,17 @@
 
   ```tsx
   // Before
-  import { AvatarV2 } from '@ultraviolet/ui'
-  ;<AvatarV2 variant="icon" shape="circle" sentiment="primary" icon="mosaic" />
+  import { AvatarV2 } from "@ultraviolet/ui";
+  <AvatarV2 variant="icon" shape="circle" sentiment="primary" icon="mosaic" />;
   ```
 
   ```tsx
   // After
-  import { AvatarV2 } from '@ultraviolet/ui'
-  import { MosaicIcon } from '@ultraviolet/icons/MosaicIcon'
-  ;<AvatarV2 variant="icon" shape="circle" sentiment="primary">
+  import { AvatarV2 } from "@ultraviolet/ui";
+  import { MosaicIcon } from "@ultraviolet/icons/MosaicIcon";
+  <AvatarV2 variant="icon" shape="circle" sentiment="primary">
     <MosaicIcon size="xlarge" />
-  </AvatarV2>
+  </AvatarV2>;
   ```
 
   ### Separator
@@ -1574,17 +1606,17 @@
 
   ```tsx
   // Before
-  import { Separator } from '@ultraviolet/ui'
-  ;<Separator direction="vertical" icon="ray-top-arrow" />
+  import { Separator } from "@ultraviolet/ui";
+  <Separator direction="vertical" icon="ray-top-arrow" />;
   ```
 
   ```tsx
   // After
-  import { Separator } from '@ultraviolet/ui'
-  import { RayTopArrowIcon } from '@ultraviolet/icons/RayTopArrowIcon'
-  ;<Separator direction="vertical">
+  import { Separator } from "@ultraviolet/ui";
+  import { RayTopArrowIcon } from "@ultraviolet/icons/RayTopArrowIcon";
+  <Separator direction="vertical">
     <RayTopArrowIcon size="medium" />
-  </Separator>
+  </Separator>;
   ```
 
   ### Tag
@@ -1593,21 +1625,22 @@
 
   ```tsx
   // Before
-  import { Tag } from '@ultraviolet/ui'
-  ;<Tag icon="check">Valid</Tag>
+  import { Tag } from "@ultraviolet/ui";
+  <Tag icon="check">Valid</Tag>;
   ```
 
   ```tsx
   // After
-  import { Tag } from '@ultraviolet/ui'
-  import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
-  ;<Tag>
+  import { Tag } from "@ultraviolet/ui";
+  import { CheckIcon } from "@ultraviolet/icons/CheckIcon";
+  <Tag>
     <CheckIcon size="small" />
     Valid
-  </Tag>
+  </Tag>;
   ```
 
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
+
   - Removal of `<PasswordStrengthMeter />` component => replaced by `<Meter />`
   - Dialog no long experimental
 
@@ -1632,6 +1665,7 @@
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **BREAKING CHANGES**
 
   Deprecated props removed:
+
   - `Modal`:
     - prop "customDialogBackdropStyles" removed -> use "backdropClassName" instead to style the backdrop
     - prop "customDialogStyles" removed -> use "customDialogStyles" instead to style the dialog
@@ -1647,6 +1681,7 @@
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **BREAKING CHANGES**
 
   Deprecated props removed:
+
   - `CodeEditor`: prop "title" removed -> use "label" instead
   - `Icon`: prop "color" removed -> use "sentiment" instead
   - `Icon`: prop "size" can only be "xsmall", "small", "medium", "large", "xlarge" or "xxlarge"
@@ -1660,6 +1695,7 @@
 
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **Breaking changes**
   `SwitchButton`: New version of the component:
+
   - props `leftButton` and `rightButton` removed
   - Use `SwitchButton.Option` to add buttons/options
   - More than 2 options possible now !
@@ -1718,11 +1754,13 @@
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `<TimeInputV2 />`: size "large" by default instead of "medium" and fix width of AM/PM input when large.
 
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `<Loader />`: **breaking changes**
+
   - align size on system icons : now size can only be "xsmall" (0.75rem/12px), "small" (1rem/16px), "medium" (1.25rem/20px), "large" (1.5rem/24px), "xlarge" (2rem/32px), or "_xxlarge_" (3.5rem/56px). By default, `size = "xlarge"` to match the old size.
   - remove prop `color`, use `sentiment` instead. By default, `sentiment = primary`.
   - remove props `trailColor`, `text`and `strokeWidth`.
 
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Allow DND kit to work with `List` and `Button` :
+
   - `List.Row` now supports "style" and "data-dragging" props ;
   - For Security group we don't display header but the List component add to much spaces ;
   - List.Row do not allow data-dragging prop
@@ -1731,6 +1769,7 @@
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `Expandable`: no animation on first render
 
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `<MenuV2 />`: focus on disclosure when closing menu and can use arrow keys to navigate in menu :
+
   - Arrow Up/Down: browse the items
   - Arrow Right: open nested menu and focus on the first item
   - Arrow Left : close nested menu
@@ -1776,6 +1815,7 @@
 - [#5351](https://github.com/scaleway/ultraviolet/pull/5351) [`ea55dea`](https://github.com/scaleway/ultraviolet/commit/ea55dea228d3e634f13e1de358d2738de210e7b2) Thanks [@lisalupi](https://github.com/lisalupi)! - `UnitInput`: new prop "templateColumns" to chose sizes of the input and the select input more precisely
 
 - [#5255](https://github.com/scaleway/ultraviolet/pull/5255) [`2ddbbf9`](https://github.com/scaleway/ultraviolet/commit/2ddbbf9a785f40cb79a06b6ba1bfb89e5a22cf6b) Thanks [@lisalupi](https://github.com/lisalupi)! - `<MenuV2 />`: focus on disclosure when closing menu and can use arrow keys to navigate in menu :
+
   - Arrow Up/Down: browse the items
   - Arrow Right: open nested menu and focus on the first item
   - Arrow Left : close nested menu
@@ -1792,7 +1832,9 @@
 - [`d25d9d8`](https://github.com/scaleway/ultraviolet/commit/d25d9d8c71ffdc922f033daaf4ec6252f8382992) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGES**
 
   Deprecated props removed:
+
   - `TagInput`:
+
     - props "manualInput" and "onChangeError" removed: the props used to have no effect
     - prop "variant" removed: only one variant possible now
     - prop "tags" removed -> use "value" instead
@@ -1802,6 +1844,7 @@
 - [#5335](https://github.com/scaleway/ultraviolet/pull/5335) [`40e189c`](https://github.com/scaleway/ultraviolet/commit/40e189cb6af270ea830b9d7faeee20d15817425a) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGES**
 
   Deprecated props removed:
+
   - `CodeEditor`: prop "title" removed -> use "label" instead
   - `Icon`: prop "color" removed -> use "sentiment" instead
   - `Icon`: prop "size" can only be "xsmall", "small", "medium", "large", "xlarge" or "xxlarge"
@@ -1838,6 +1881,7 @@
 - [#5308](https://github.com/scaleway/ultraviolet/pull/5308) [`288eec8`](https://github.com/scaleway/ultraviolet/commit/288eec8554bec97892574f598cf6193331e1fb7a) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGES**
 
   Deprecated props removed:
+
   - `Link`: prop "sentiment" can only by "primary" or "info" (default value) now
   - `List.Cell`: prop "preventClick" removed (it is now default behavior)
   - `Menu`: prop "size" and "maxWidth" removed, the size is now automatic
@@ -1845,6 +1889,7 @@
 - [#5310](https://github.com/scaleway/ultraviolet/pull/5310) [`7ce2d34`](https://github.com/scaleway/ultraviolet/commit/7ce2d34977de7731e873106d5ccdc3dcbca7b92b) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGES**
 
   Deprecated props removed:
+
   - `Modal`:
     - prop "customDialogBackdropStyles" removed -> use "backdropClassName" instead to style the backdrop
     - prop "customDialogStyles" removed -> use "customDialogStyles" instead to style the dialog
@@ -1869,6 +1914,7 @@
 - [#5306](https://github.com/scaleway/ultraviolet/pull/5306) [`80e0af3`](https://github.com/scaleway/ultraviolet/commit/80e0af3b006b51bf83e49581d84eab9eb94bc4c7) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGES**
 
   Deprecated props removed:
+
   - `Card`: prop "isActive" removed -> use "active" instead
   - `Checkbox`: props "progress" and "size" removed
   - `CopyButton`: prop "noBorder" removed -> use "bordered" instead
@@ -1902,6 +1948,7 @@
 - [#5312](https://github.com/scaleway/ultraviolet/pull/5312) [`99eb24a`](https://github.com/scaleway/ultraviolet/commit/99eb24a498e1ac2c270272fa771f0eaa1b2d4fea) Thanks [@lisalupi](https://github.com/lisalupi)! - `Modal`: disclosure onClick should work even when it changes
 
 - [#5289](https://github.com/scaleway/ultraviolet/pull/5289) [`e3570d8`](https://github.com/scaleway/ultraviolet/commit/e3570d88c8f66e89c532f545c727eccd06d5664c) Thanks [@lisalupi](https://github.com/lisalupi)! - Allow DND kit to work with `List` and `Button` :
+
   - `List.Row` now supports "style" and "data-dragging" props ;
   - For Security group we don't display header but the List component add to much spaces ;
   - List.Row do not allow data-dragging prop
@@ -2009,6 +2056,7 @@
 - [`cc10503`](https://github.com/scaleway/ultraviolet/commit/cc1050379db613d13c921a3af172128aa4cf225b) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix visited state of link to match promience
 
 - [`53fcf41`](https://github.com/scaleway/ultraviolet/commit/53fcf415f169f61b4593f72fdacd7de3ebbd9387) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Loader />`: **breaking changes**
+
   - align size on system icons : now size can only be "xsmall" (0.75rem/12px), "small" (1rem/16px), "medium" (1.25rem/20px), "large" (1.5rem/24px), "xlarge" (2rem/32px), or "_xxlarge_" (3.5rem/56px). By default, `size = "xlarge"` to match the old size.
   - remove prop `color`, use `sentiment` instead. By default, `sentiment = primary`.
   - remove props `trailColor`, `text`and `strokeWidth`.
@@ -2068,19 +2116,19 @@
 
   ```tsx
   // Before
-  import { Button } from '@ultraviolet/ui'
-  ;<Button icon="pencil" iconPosition="right" iconVariant="outline">
+  import { Button } from "@ultraviolet/ui";
+  <Button icon="pencil" iconPosition="right" iconVariant="outline">
     Edit
-  </Button>
+  </Button>;
   ```
 
   ```tsx
   // After
-  import { Button } from '@ultraviolet/ui'
-  import { PencilOutlineIcon } from '@ultraviolet/icons'
-  ;<Button>
+  import { Button } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
+  <Button>
     Edit <PencilOutlineIcon />
-  </Button>
+  </Button>;
   ```
 
   ### Badge
@@ -2098,11 +2146,11 @@
 
   ```tsx
   // After
-  import { Badge } from '@ultraviolet/ui'
-  import { PencilOutlineIcon } from '@ultraviolet/icons'
-  ;<Badge>
+  import { Badge } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
+  <Badge>
     Edit <PencilOutlineIcon />
-  </Badge>
+  </Badge>;
   ```
 
   ### Bullet
@@ -2137,17 +2185,17 @@
 
   ```tsx
   // Before
-  import { AvatarV2 } from '@ultraviolet/ui'
-  ;<AvatarV2 variant="icon" shape="circle" sentiment="primary" icon="mosaic" />
+  import { AvatarV2 } from "@ultraviolet/ui";
+  <AvatarV2 variant="icon" shape="circle" sentiment="primary" icon="mosaic" />;
   ```
 
   ```tsx
   // After
-  import { AvatarV2 } from '@ultraviolet/ui'
-  import { MosaicIcon } from '@ultraviolet/icons'
-  ;<AvatarV2 variant="icon" shape="circle" sentiment="primary">
+  import { AvatarV2 } from "@ultraviolet/ui";
+  import { MosaicIcon } from "@ultraviolet/icons";
+  <AvatarV2 variant="icon" shape="circle" sentiment="primary">
     <MosaicIcon size="xlarge" />
-  </AvatarV2>
+  </AvatarV2>;
   ```
 
   ### Separator
@@ -2156,17 +2204,17 @@
 
   ```tsx
   // Before
-  import { Separator } from '@ultraviolet/ui'
-  ;<Separator direction="vertical" icon="ray-top-arrow" />
+  import { Separator } from "@ultraviolet/ui";
+  <Separator direction="vertical" icon="ray-top-arrow" />;
   ```
 
   ```tsx
   // After
-  import { Separator } from '@ultraviolet/ui'
-  import { RayTopArrowIcon } from '@ultraviolet/icons'
-  ;<Separator direction="vertical">
+  import { Separator } from "@ultraviolet/ui";
+  import { RayTopArrowIcon } from "@ultraviolet/icons";
+  <Separator direction="vertical">
     <RayTopArrowIcon size="medium" />
-  </Separator>
+  </Separator>;
   ```
 
   ### Tag
@@ -2175,18 +2223,18 @@
 
   ```tsx
   // Before
-  import { Tag } from '@ultraviolet/ui'
-  ;<Tag icon="check">Valid</Tag>
+  import { Tag } from "@ultraviolet/ui";
+  <Tag icon="check">Valid</Tag>;
   ```
 
   ```tsx
   // After
-  import { Tag } from '@ultraviolet/ui'
-  import { CheckIcon } from '@ultraviolet/icons'
-  ;<Tag>
+  import { Tag } from "@ultraviolet/ui";
+  import { CheckIcon } from "@ultraviolet/icons";
+  <Tag>
     <CheckIcon size="small" />
     Valid
-  </Tag>
+  </Tag>;
   ```
 
 ## 2.0.0-beta.0
@@ -2371,6 +2419,7 @@
 ### Patch Changes
 
 - [#4945](https://github.com/scaleway/ultraviolet/pull/4945) [`5705e3c`](https://github.com/scaleway/ultraviolet/commit/5705e3c02e7915b1c4c812426e2676ce34e38696) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Link />`:
+
   - add a "visited" state
   - deprecate all sentiments but primary (usable in a new prop)
 
@@ -2651,17 +2700,17 @@
 
   ```tsx
   // Before
-  import { AvatarV2 } from '@ultraviolet/ui'
-  ;<AvatarV2 variant="icon" shape="circle" sentiment="primary" icon="mosaic" />
+  import { AvatarV2 } from "@ultraviolet/ui";
+  <AvatarV2 variant="icon" shape="circle" sentiment="primary" icon="mosaic" />;
   ```
 
   ```tsx
   // After
-  import { AvatarV2 } from '@ultraviolet/ui'
-  import { MosaicIcon } from '@ultraviolet/icons'
-  ;<AvatarV2 variant="icon" shape="circle" sentiment="primary">
+  import { AvatarV2 } from "@ultraviolet/ui";
+  import { MosaicIcon } from "@ultraviolet/icons";
+  <AvatarV2 variant="icon" shape="circle" sentiment="primary">
     <MosaicIcon size="xlarge" />
-  </AvatarV2>
+  </AvatarV2>;
   ```
 
   ### Separator
@@ -2670,17 +2719,17 @@
 
   ```tsx
   // Before
-  import { Separator } from '@ultraviolet/ui'
-  ;<Separator direction="vertical" icon="ray-top-arrow" />
+  import { Separator } from "@ultraviolet/ui";
+  <Separator direction="vertical" icon="ray-top-arrow" />;
   ```
 
   ```tsx
   // After
-  import { Separator } from '@ultraviolet/ui'
-  import { RayTopArrowIcon } from '@ultraviolet/icons'
-  ;<Separator direction="vertical">
+  import { Separator } from "@ultraviolet/ui";
+  import { RayTopArrowIcon } from "@ultraviolet/icons";
+  <Separator direction="vertical">
     <RayTopArrowIcon size="medium" />
-  </Separator>
+  </Separator>;
   ```
 
   ### Tag
@@ -2689,18 +2738,18 @@
 
   ```tsx
   // Before
-  import { Tag } from '@ultraviolet/ui'
-  ;<Tag icon="check">Valid</Tag>
+  import { Tag } from "@ultraviolet/ui";
+  <Tag icon="check">Valid</Tag>;
   ```
 
   ```tsx
   // After
-  import { Tag } from '@ultraviolet/ui'
-  import { CheckIcon } from '@ultraviolet/icons'
-  ;<Tag>
+  import { Tag } from "@ultraviolet/ui";
+  import { CheckIcon } from "@ultraviolet/icons";
+  <Tag>
     <CheckIcon size="small" />
     Valid
-  </Tag>
+  </Tag>;
   ```
 
   You can find this migration documented in the [Ultraviolet UI Storybook](https://storybook.ultraviolet.scaleway.com/?path=/docs/migrations-migrate-icon-usages--docs).
@@ -2782,17 +2831,17 @@
 
   ```tsx
   // Before
-  import { Badge } from '@ultraviolet/ui'
-  ;<Badge icon="pencil">Edit</Badge>
+  import { Badge } from "@ultraviolet/ui";
+  <Badge icon="pencil">Edit</Badge>;
   ```
 
   ```tsx
   // After
-  import { Badge } from '@ultraviolet/ui'
-  import { PencilOutlineIcon } from '@ultraviolet/icons'
-  ;<Badge>
+  import { Badge } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
+  <Badge>
     Edit <PencilOutlineIcon />
-  </Badge>
+  </Badge>;
   ```
 
 - [#4759](https://github.com/scaleway/ultraviolet/pull/4759) [`5b840a8`](https://github.com/scaleway/ultraviolet/commit/5b840a8d081da1ffff44e94fc6b3fcf7e142d6f1) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Table.Cell />` to have correct sentiments prop
@@ -2811,23 +2860,24 @@
 ### Patch Changes
 
 - [#4742](https://github.com/scaleway/ultraviolet/pull/4742) [`2a8b327`](https://github.com/scaleway/ultraviolet/commit/2a8b327cb41a72475d4dd91f55b55491ce2d78f6) Thanks [@matthprost](https://github.com/matthprost)! - - System Icons from `@ultraviolet/icons` have a change in their sizing. `large` became `medium` and a new `large` sizing has been created (around 24px)
+
   - `<Button />` the prop `icon`, `iconPosition` and `iconSentiment` has been marked as deprecated and will be removed in future major release. You should use the icon component directly in the children of the button:
 
   ```tsx
   // Before
-  import { Button } from '@ultraviolet/ui'
-  ;<Button icon="pencil" iconPosition="right" iconVariant="outline">
+  import { Button } from "@ultraviolet/ui";
+  <Button icon="pencil" iconPosition="right" iconVariant="outline">
     Edit
-  </Button>
+  </Button>;
   ```
 
   ```tsx
   // After
-  import { Button } from '@ultraviolet/ui'
-  import { PencilOutlineIcon } from '@ultraviolet/icons'
-  ;<Button>
+  import { Button } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
+  <Button>
     Edit <PencilOutlineIcon />
-  </Button>
+  </Button>;
   ```
 
   - Fix of other legacy usages of icons into the library
@@ -2920,6 +2970,7 @@
 ### Minor Changes
 
 - [#4537](https://github.com/scaleway/ultraviolet/pull/4537) [`9db9273`](https://github.com/scaleway/ultraviolet/commit/9db927334bfc4eeb583d1753c775b6b91abe97d2) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor and enhancement of `<Pagination />` :
+
   - Number of results on the bottom left
   - Number of items to display
   - Styling
@@ -3223,6 +3274,7 @@
 - [#4423](https://github.com/scaleway/ultraviolet/pull/4423) [`02450b5`](https://github.com/scaleway/ultraviolet/commit/02450b59897e5c99ea4db08ba21fd08ec4f4f03f) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputV2 />` to align on the left when dropdown is bigger than the actual input
 
 - [#4339](https://github.com/scaleway/ultraviolet/pull/4339) [`8b92813`](https://github.com/scaleway/ultraviolet/commit/8b928139ec5c99ae9e65ea1129705dbb1413268c) Thanks [@lisalupi](https://github.com/lisalupi)! - `<SelectInputV2 />`:
+
   - Hide search when less than 6 items (even when `searchable = true`)
   - Clickable `footer` to close the dropdown
   - `clearable = false` by default now
@@ -3237,6 +3289,7 @@
 ### Patch Changes
 
 - [#4377](https://github.com/scaleway/ultraviolet/pull/4377) [`14756fb`](https://github.com/scaleway/ultraviolet/commit/14756fbe69fce22e1ddf8f181e9eef5348c4ca8a) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `<Slider />` not to have min or max width and take full width when it can
+
   - Fix `<Popup />` to have better arrow positioning
 
 - [#4411](https://github.com/scaleway/ultraviolet/pull/4411) [`5e5d521`](https://github.com/scaleway/ultraviolet/commit/5e5d521255b6b99806f4aa0071ac3df6d1704c95) Thanks [@radhi-nasser-scaleway](https://github.com/radhi-nasser-scaleway)! - Fix `<SwitchButton />` not updating local value when value prop change
@@ -3352,12 +3405,14 @@
 ### Minor Changes
 
 - [#4273](https://github.com/scaleway/ultraviolet/pull/4273) [`04e9273`](https://github.com/scaleway/ultraviolet/commit/04e9273a02fd00f8334e03bee97e5408d61f163b) Thanks [@matthprost](https://github.com/matthprost)! - Refactoring on `<Table />`:
+
   - Update of sort icons
   - Added `expandable` on `<Table />` and `<Table.Row />`
   - Refactoring of grid system
   - Added `align` and `sentiment` prop on `<Table.Cell />`
 
   Refactoring on `<List />`:
+
   - Update of sort icons
 
 ### Patch Changes
@@ -3424,6 +3479,7 @@
 ### Patch Changes
 
 - [#4205](https://github.com/scaleway/ultraviolet/pull/4205) [`408dade`](https://github.com/scaleway/ultraviolet/commit/408dade64b06994f2de8fdd3b999b6d966b57e2f) Thanks [@lisalupi](https://github.com/lisalupi)! - `<ProgressBar />`:
+
   - new prop `label`
   - new prop `showProgress`: show/hide percentage of progress
   - new prop `direction`: defines the position of the label & percentage
@@ -3440,6 +3496,7 @@
 ### Minor Changes
 
 - [#4201](https://github.com/scaleway/ultraviolet/pull/4201) [`84cab43`](https://github.com/scaleway/ultraviolet/commit/84cab43c806f1753ab052b0b622d075eb02dd1bd) Thanks [@lisalupi](https://github.com/lisalupi)! - `<SelectInputV2 />`:
+
   - prop `searchText` is now mandatory if the label of an option is not a string
   - search will look for matches in the description if it is of type string
   - fixed stories
@@ -3534,6 +3591,7 @@
 ### Patch Changes
 
 - [#4080](https://github.com/scaleway/ultraviolet/pull/4080) [`89583b1`](https://github.com/scaleway/ultraviolet/commit/89583b1a056acf5ad01fc122c38506ffe0a1adb3) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `<SelectInput />` helper color
+
   - Fix `<Slider />` helper color and options not to wrap
 
 - [#4081](https://github.com/scaleway/ultraviolet/pull/4081) [`c3ec2dd`](https://github.com/scaleway/ultraviolet/commit/c3ec2dde045ed93bbc68b36d888364e243913ec0) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<DateInput />` colors when having both props `selectsRange` and `showMonthYearPicker`
@@ -3845,6 +3903,7 @@
 ### Minor Changes
 
 - [#3781](https://github.com/scaleway/ultraviolet/pull/3781) [`90dbb2b`](https://github.com/scaleway/ultraviolet/commit/90dbb2b9bf925c5b158ac8f221cc51bd0104ca6d) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Stepper />` enhancement:
+
   - Added a new disabled state
   - Added possibility to navigate throughout the steps for the user by clicking on the bullets
   - Refactor code : use `<Stepper.Step />` for the steps instead of a list of children
@@ -4020,6 +4079,7 @@
 ### Minor Changes
 
 - [#3631](https://github.com/scaleway/ultraviolet/pull/3631) [`30153dc`](https://github.com/scaleway/ultraviolet/commit/30153dc6ccf54e32281325386888263afd32bed9) Thanks [@matthprost](https://github.com/matthprost)! - Refactoring of `<MenuV2 />` component with a new style and implement following props:
+
   - New prop `size`: `small`, `medium`, `large`
   - New prop `triggerMethod`: `click`, `hover` (default is `click`) it will trigger the menu to open on click or hover
   - On `Menu.Item`:
@@ -4028,6 +4088,7 @@
   - New sub component `<MenuV2.Group />` to group items together under a label
 
   Refactoring of `<Popup />` component:
+
   - Change of prop `hasDebounce` to `debounceDelay` => the prop will also add delay on the apparition of the popup
 
 ### Patch Changes
@@ -4103,6 +4164,7 @@
 ### Patch Changes
 
 - [#3620](https://github.com/scaleway/ultraviolet/pull/3620) [`d63adc3`](https://github.com/scaleway/ultraviolet/commit/d63adc3bdd03f66c18980830774866c0aec7dc44) Thanks [@matthprost](https://github.com/matthprost)! - - Add `tabIndex` on `<Tooltip />` component to be able to disable tab when the children is already tabbable
+
   - Fix `<Expandable />` to add `visibility: hidden` when the component is collapsed to avoid tabulation on hidden elements
 
 - [#3616](https://github.com/scaleway/ultraviolet/pull/3616) [`8f285a6`](https://github.com/scaleway/ultraviolet/commit/8f285a6460db5c442abf10f074dda8f3f543a271) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/styled` to `11.11.5`.
@@ -4627,6 +4689,7 @@
 - [#3142](https://github.com/scaleway/ultraviolet/pull/3142) [`b6e59335`](https://github.com/scaleway/ultraviolet/commit/b6e5933584b59d2f73d3880a7b02e89f0c94b116) Thanks [@matthprost](https://github.com/matthprost)! - New prop `initiallyExpanded` on `<Snippet />` component.
 
 - [#3141](https://github.com/scaleway/ultraviolet/pull/3141) [`58b643bc`](https://github.com/scaleway/ultraviolet/commit/58b643bcbba996e7817c01703c0cf332a0d91d01) Thanks [@matthprost](https://github.com/matthprost)! - - Improved Popup (and so Popover, MenuV2 and Tooltip) to be attached to children instead of `document.body`
+
   - Added new prop `portalTarget` on Popup component to allow attaching to a specific element
 
 - [#3131](https://github.com/scaleway/ultraviolet/pull/3131) [`4e76930d`](https://github.com/scaleway/ultraviolet/commit/4e76930d54833e033ef21357f0b444e82b3d08bb) Thanks [@matthprost](https://github.com/matthprost)! - Refactor global `JSX.Element` by importing it from `React`
@@ -4689,14 +4752,17 @@
 ### Minor Changes
 
 - [#3097](https://github.com/scaleway/ultraviolet/pull/3097) [`6349e4e3`](https://github.com/scaleway/ultraviolet/commit/6349e4e303153558d1a0535557013e25356341c1) Thanks [@matthprost](https://github.com/matthprost)! - Changes in component `<Popup />`:
+
   - Add new prop `maxHeight` and disable animation when set
   - Add new prop `disableAnimation` to disable animation on popup
 
   Changes in component `<MenuV2 />`:
+
   - Add new prop `maxHeight` and disable animation when set
   - Add new prop `maxWidth`
 
   Changes in component `<Popover />`:
+
   - Add new prop `maxHeight` and disable animation when set
   - Add new prop `maxWidth`
 
@@ -4770,6 +4836,7 @@
 ### Minor Changes
 
 - [#3011](https://github.com/scaleway/ultraviolet/pull/3011) [`dcb99f39`](https://github.com/scaleway/ultraviolet/commit/dcb99f39b00cbf50f9763d37b71d4b3b0fdbf248) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - Component `<DateInput />` updates:
+
   - Design update
   - New prop available `selectRange` allowing the user to select a range of dates
 
@@ -5522,6 +5589,7 @@
 - [#2469](https://github.com/scaleway/scaleway-ui/pull/2469) [`b3738e44`](https://github.com/scaleway/scaleway-ui/commit/b3738e44d0191e34b1c58baac971d94232c44409) Thanks [@matthprost](https://github.com/matthprost)! - Tooltip is now focusable for the voice over to be able to read it
 
 - [#2473](https://github.com/scaleway/scaleway-ui/pull/2473) [`277bf359`](https://github.com/scaleway/scaleway-ui/commit/277bf3592f52791dea4f6e47470d02d063e659ae) Thanks [@matthprost](https://github.com/matthprost)! - - In `Alert` rename `onButtonClick` into `onClickButton`
+
   - In `Banner` rename prop `type` into `variant`
 
 - [#2472](https://github.com/scaleway/scaleway-ui/pull/2472) [`69ed20af`](https://github.com/scaleway/scaleway-ui/commit/69ed20af0d484005eef92bccc6d8d534f4fd161d) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Remove `UnitInput` component
