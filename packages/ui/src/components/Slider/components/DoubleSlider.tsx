@@ -320,7 +320,11 @@ export const DoubleSlider = ({
               text={Array.isArray(tooltipText) ? tooltipText[0] : undefined}
             >
               <input
-                aria-label={ariaLabel ?? name}
+                aria-label={`${ariaLabel ?? name} minimum`}
+                aria-valuemax={max}
+                aria-valuemin={min}
+                aria-valuenow={selectedIndexes[0]}
+                aria-valuetext={`${selectedIndexes[0]}${suffix ? (Array.isArray(suffix) ? suffix[0] : suffix) : (unit ?? '')}`}
                 className={cn(
                   className,
                   sliderStyle.double({ disabled, hasTooltip: !!tooltip }),
@@ -366,7 +370,11 @@ export const DoubleSlider = ({
               text={Array.isArray(tooltipText) ? tooltipText[1] : undefined}
             >
               <input
-                aria-label={ariaLabel ?? name}
+                aria-label={`${ariaLabel ?? name} maximum`}
+                aria-valuemax={max}
+                aria-valuemin={min}
+                aria-valuenow={selectedIndexes[1]}
+                aria-valuetext={`${selectedIndexes[1]}${suffix ? (Array.isArray(suffix) ? suffix[1] : suffix) : (unit ?? '')}`}
                 className={cn(
                   className,
                   sliderStyle.double({ disabled, hasTooltip: !!tooltip }),

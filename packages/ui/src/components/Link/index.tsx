@@ -181,9 +181,11 @@ export const Link = forwardRef(
           {isBlank ? (
             <span className={linkStyle.containerIcon}>
               <OpenInNewIcon
+                aria-hidden="true"
                 className={linkStyle.iconRight}
                 size={BLANK_TARGET_ICON_SIZE}
               />
+              <span className="sr-only">opens in new window</span>
             </span>
           ) : null}
 

@@ -82,7 +82,7 @@ export const Menu = forwardRef(
 
     const finalDisclosure = cloneElement(target, {
       'aria-expanded': isVisible,
-      'aria-haspopup': 'dialog',
+      'aria-haspopup': 'menu',
       onClick: (event: MouseEvent<HTMLButtonElement>) => {
         target.props.onClick?.(event)
         if (isNested) {
@@ -243,7 +243,7 @@ export const Menu = forwardRef(
         placement={isNested ? 'nested-menu' : placement}
         portalTarget={portalTarget}
         ref={menuRef}
-        role="dialog"
+        role="popup"
         style={style}
         tabIndex={-1}
         text={

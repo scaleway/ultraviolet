@@ -23,15 +23,32 @@ export const Breadcrumbs: BreadcrumbsType = ({
   className,
   'data-testid': dataTestId,
   style,
-}) => (
-  <nav
-    aria-label="breadcrumb"
-    className={className}
-    data-testid={dataTestId}
-    style={style}
-  >
-    <ol className={breadcrumbsStyle.breadcrumbs}>{children}</ol>
-  </nav>
-)
+}) => {
+  const childArray = Array.isArray(children) ? children : [children]
+  return (
+    <nav
+      aria-label="breadcrumb"
+      className={className}
+      data-testid={dataTestId}
+      style={style}
+    >
+      <ol className={breadcrumbsStyle.breadcrumbs}>
+        {childArray.map((child, index) => {
+          const isLast = index === childArray.length - 1
+          if (isLast && typeof child === 'object' && 'type' in child) {
+            return {
+              ...child,
+              props: {
+                ...child.props,
+                'aria-current': 'page' as const,
+              },
+            }
+          }
+          return child
+        })}
+      </ol>
+    </nav>
+  )
+}
 
 Breadcrumbs.Item = Item

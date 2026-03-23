@@ -52,7 +52,8 @@ const MakeButton = ({
       </Text>
     ) : null}
     <Button
-      aria-current={pageNumber === page}
+      aria-current={pageNumber === page ? 'page' : undefined}
+      aria-label={`Page ${pageNumber}`}
       className={paginationStyle.pageButton[perPage ? 'small' : 'medium']}
       disabled={disabled}
       onClick={handlePageClick(pageNumber)}
@@ -100,7 +101,7 @@ export const PaginationButtons = ({
     <Stack className={className} data-testid={dataTestId} direction="row">
       <Stack gap={1}>
         <Button
-          aria-label="Back"
+          aria-label="Previous page"
           disabled={page <= 1 || disabled}
           onClick={goToPreviousPage}
           sentiment="primary"
@@ -134,7 +135,7 @@ export const PaginationButtons = ({
       </Stack>
       <Stack gap={1}>
         <Button
-          aria-label="Next"
+          aria-label="Next page"
           disabled={page >= pageCount || disabled}
           onClick={goToNextPage}
           sentiment="primary"

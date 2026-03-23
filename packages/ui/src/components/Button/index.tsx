@@ -27,7 +27,15 @@ type CommonProps = {
   'data-testid'?: string
   isLoading?: boolean
   'aria-label'?: string
-  'aria-current'?: boolean
+  'aria-current'?:
+    | boolean
+    | 'page'
+    | 'step'
+    | 'location'
+    | 'date'
+    | 'time'
+    | 'true'
+    | 'false'
   'aria-controls'?: string
   'aria-expanded'?: boolean
   'aria-haspopup'?: boolean

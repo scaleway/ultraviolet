@@ -34,6 +34,7 @@ type CarouselProps = {
   className?: string
   children?: ReactNode
   'data-testid'?: string
+  'aria-label'?: string
 }
 
 /**
@@ -43,6 +44,7 @@ export const Carousel = ({
   children,
   className,
   'data-testid': dataTestId = 'scrollbar',
+  'aria-label': ariaLabel = 'Carousel',
 }: CarouselProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
   let intervalLeft: ReturnType<typeof setInterval> | undefined
@@ -78,20 +80,40 @@ export const Carousel = ({
   const [dragStartX, setDragStartX] = useState(0)
   const [deltaX, setDeltaX] = useState(0)
 
+  const handleScrollLeftKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+      e.preventDefault()
+      handleScrollX(e.key === 'ArrowLeft' ? -25 : 25)
+    }
+  }
+
+  const handleScrollRightKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+      e.preventDefault()
+      handleScrollX(e.key === 'ArrowLeft' ? 25 : -25)
+    }
+  }
+
   return (
     <div
+      aria-label={ariaLabel}
       className={cn(className, carouselStyle.wrapper)}
       data-testid={dataTestId}
+      role="region"
     >
-      <span
+      <button
+        aria-label="Scroll left"
         className={carouselStyle.beforeScroll}
         data-testid={`${dataTestId}-before`}
-        onFocus={handleScrollRight}
-        onMouseLeave={() => clearInterval(intervalRight)}
-        onMouseOver={handleScrollRight}
+        onClick={handleScrollLeft}
+        onFocus={handleScrollLeft}
+        onKeyDown={handleScrollLeftKeyDown}
+        onMouseLeave={() => clearInterval(intervalLeft)}
+        onMouseOver={handleScrollLeft}
+        type="button"
       />
-      {/* oxlint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div
+        aria-roledescription="carousel"
         className={cn(className, carouselStyle.scrollableWrapper)}
         data-testid={`${dataTestId}-wrapper`}
         onDrag={() => handleScrollX(deltaX)}
@@ -116,16 +138,21 @@ export const Carousel = ({
           e.stopPropagation()
         }}
         ref={scrollRef}
+        tabIndex={0}
       >
         {children}
       </div>
 
-      <span
+      <button
+        aria-label="Scroll right"
         className={carouselStyle.afterScroll}
         data-testid={`${dataTestId}-after`}
-        onFocus={handleScrollLeft}
-        onMouseLeave={() => clearInterval(intervalLeft)}
-        onMouseOver={handleScrollLeft}
+        onClick={handleScrollRight}
+        onFocus={handleScrollRight}
+        onKeyDown={handleScrollRightKeyDown}
+        onMouseLeave={() => clearInterval(intervalRight)}
+        onMouseOver={handleScrollRight}
+        type="button"
       />
     </div>
   )
