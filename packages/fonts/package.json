@@ -36,11 +36,11 @@
     "access": "public"
   },
   "scripts": {
-    "watch": "pnpm run '/^watch:.*/'",
-    "watch:build": "vite build --config vite.config.ts --watch",
     "build": "vite build --config vite.config.ts",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
-    "lintpublish": "pnpm publint"
+    "lintpublish": "pnpm publint",
+    "watch": "pnpm run '/^watch:.*/'",
+    "watch:build": "vite build --config vite.config.ts --watch"
   },
   "devDependencies": {
     "@repo/config": "workspace:*",

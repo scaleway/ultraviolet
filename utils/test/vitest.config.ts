@@ -19,6 +19,7 @@ export const createVitestConfig = (
         },
         allowOnly: false,
         clearMocks: true,
+
         pool: 'forks',
         coverage: {
           exclude: [
@@ -50,7 +51,7 @@ export const createVitestConfig = (
             },
           },
         },
-        environment: 'happy-dom',
+        environment: 'jsdom',
         exclude: [
           ...configDefaults.exclude,
           '**/node_modules/**',

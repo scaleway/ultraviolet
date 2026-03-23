@@ -1,3 +1,5 @@
+// oxlint-disable import/no-nodejs-modules
+//
 import { appendFileSync, readdirSync, statSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 

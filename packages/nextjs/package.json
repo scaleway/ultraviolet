@@ -39,13 +39,13 @@
     "access": "public"
   },
   "scripts": {
-    "type:generate": "tsgo --declaration -p tsconfig.build.json",
-    "watch": "pnpm run '/^watch:.*/'",
-    "watch:build": "vite build --config vite.config.ts --watch",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
+    "lintpublish": "publint",
+    "type:generate": "tsgo --declaration -p tsconfig.build.json",
     "typecheck": "tsgo --noEmit",
-    "lintpublish": "publint"
+    "watch": "pnpm run '/^watch:.*/'",
+    "watch:build": "vite build --config vite.config.ts --watch"
   },
   "dependencies": {
     "@ultraviolet/themes": "workspace:*",

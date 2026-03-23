@@ -1,4 +1,5 @@
 // oxlint-disable eslint/no-console
+// oxlint-disable import/no-nodejs-modules
 
 import { writeFile, writeFileSync } from 'node:fs'
 

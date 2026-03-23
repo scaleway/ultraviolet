@@ -97,15 +97,15 @@
     "access": "public"
   },
   "scripts": {
-    "type:generate": "tsgo --declaration -p tsconfig.build.json",
-    "watch": "pnpm run '/^watch:.*/'",
-    "watch:build": "vite build --config vite.config.ts --watch",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
+    "lintpublish": "publint",
     "postbuild": "node ./process-css.ts",
-    "typecheck": "tsgo --noEmit",
     "size": "size-limit",
-    "lintpublish": "publint"
+    "type:generate": "tsgo --declaration -p tsconfig.build.json",
+    "typecheck": "tsgo --noEmit",
+    "watch": "pnpm run '/^watch:.*/'",
+    "watch:build": "vite build --config vite.config.ts --watch"
   },
   "dependencies": {
     "@ultraviolet/themes": "workspace:*",

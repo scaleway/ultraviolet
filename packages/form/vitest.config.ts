@@ -10,9 +10,18 @@ export const vitestConfig = {
   ],
   test: {
     ...createVitestConfig({
-      environment: 'happy-dom',
-      name: 'uv/form happy-dom',
+      environment: 'jsdom',
+      name: 'form',
+      dom: true,
       setupFiles: ['./vitest.setup.ts'],
+      deps: {
+        optimizer: {
+          web: {
+            enabled: true,
+            include: ['@nivo/*'],
+          },
+        },
+      },
     }),
   },
 }

@@ -1,5 +1,6 @@
 // oxlint-disable eslint/no-console
 // oxlint-disable: error
+// oxlint-disable import/no-nodejs-modules
 
 import { existsSync, promises } from 'node:fs'
 import path from 'node:path'

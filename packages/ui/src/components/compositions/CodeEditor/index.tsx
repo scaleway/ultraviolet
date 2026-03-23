@@ -16,17 +16,12 @@ import { Text } from '../../Text'
 
 import { codeEditorStyle, disabledStack, maxHeightVar } from './styles.css'
 
-import type {
-  ComponentProps,
-  CSSProperties,
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-} from 'react'
+import type { ReactCodeMirrorProps } from '@uiw/react-codemirror'
+import type { CSSProperties, Dispatch, ReactNode, SetStateAction } from 'react'
 
 type CodeEditorProps = {
   value: string
-  onChange: ComponentProps<typeof CodeMirror>['onChange']
+  onChange: ReactCodeMirrorProps['onChange']
   extensions: keyof typeof langs
   onBlur?: () => void
   height?: string

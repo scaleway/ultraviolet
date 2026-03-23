@@ -34,7 +34,7 @@
     "./console/*": {
       "types": "./dist/themes/console/*/index.d.ts",
       "import": "./dist/themes/console/*/index.js",
-      "require": "./dist/themes/console/*/index.cjs"
+      "require": "./dist/themes/console/*/index.js"
     },
     "./global": "./dist/themes.css",
     "./theme.css": "./dist/themes.css"
@@ -46,7 +46,7 @@
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "lintpublish": "pnpm publint",
-    "type:generate": "tsc --declaration -p tsconfig.build.json",
+    "type:generate": "tsgo --declaration -p tsconfig.build.json",
     "typecheck": "tsgo --noEmit",
     "watch": "pnpm run '/^watch:.*/'",
     "watch:build": "vite build --config vite.config.ts --watch"

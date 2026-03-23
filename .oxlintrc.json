@@ -20,6 +20,7 @@
         "**/__stories__/**/*.{ts,tsx}",
         "**/__tests__/**/*.{ts,tsx}",
         "**/*.test.{ts,tsx}",
+        "**/utils/*.{ts,tsx}",
         ".storybook/**/*.{ts,tsx}",
         "examples/**",
         ".storybook/**/*.{ts,tsx}",
@@ -31,6 +32,7 @@
       "rules": {
         "eslint/no-alert": "off",
         "eslint/no-console": "off",
+        "import/no-nodejs-modules": "off",
         "import/no-anonymous-default-export": "off",
         "import/no-named-export": "off",
         "import/no-namespace": "off",
@@ -135,6 +137,8 @@
     "import/no-unassigned-import": "off",
     "import/no-nodejs-modules": "warn",
     "react/display-name": "off",
+    "react/no-react-children": "off",
+    "react/no-clone-element": "off",
     "react/jsx-max-depth": [
       "error",
       {

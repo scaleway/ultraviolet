@@ -25,7 +25,9 @@
         "!**/*.stories.{tsx,jsx}",
         "vite.config.ts"
       ],
+      "outputLogs": "new-only",
       "outputs": [
+        ".generated/**",
         "build/**",
         "dist/**",
         ".next/**",
@@ -49,8 +51,11 @@
       "persistent": true
     },
     "test:unit": {
+      "cache": true,
       "dependsOn": ["build"],
-      "passThroughEnv": ["VITEST_*"]
+      "outputLogs": "new-only",
+      "outputs": ["node_modules/.vite", ".vitest-reports", ".reports"],
+      "passThroughEnv": ["VITEST_*", "NODE_*"]
     },
     "test:unit:coverage": {
       "dependsOn": ["build"],
