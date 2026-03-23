@@ -1,12 +1,15 @@
 'use client'
 
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
-import type { ReactNode } from 'react'
 import { useContext } from 'react'
+
 import { StepList } from '../../StepList'
 import { Text } from '../../Text'
+
 import { Data } from './helper'
 import { steppedListCardStyle } from './styles.css'
+
+import type { ReactNode } from 'react'
 
 type StepProps = {
   /**

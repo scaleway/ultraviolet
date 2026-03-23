@@ -1,13 +1,14 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { Row, Snippet, Stack, Text } from '@ultraviolet/ui'
-import { DEPRECATED_ICONS } from '../../../deprecatedIcons'
+
 import * as CategoryIcon from '..'
+import { DEPRECATED_ICONS } from '../../../deprecatedIcons'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const List: StoryFn<typeof CategoryIcon> = props => (
   <Stack gap={1}>
     {Object.keys(CategoryIcon).map(iconName => {
       const FoundCategoryIcon =
-        // biome-ignore lint/performance/noDynamicNamespaceImportAccess: to fix
         CategoryIcon[iconName as keyof typeof CategoryIcon]
 
       const deprecated = DEPRECATED_ICONS.find(icon => icon.name === iconName)

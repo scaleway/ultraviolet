@@ -1,12 +1,12 @@
 'use client'
 
-import type { MouseEvent as MouseEventReact } from 'react'
 import { useContext, useState } from 'react'
+
 import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { Text } from '../../Text'
-import { DateInputContext } from '../Context'
 import { CALENDAR_WEEKS } from '../constants'
+import { DateInputContext } from '../Context'
 import {
   formatValue,
   getMonthFirstDay,
@@ -15,6 +15,8 @@ import {
   isSameDay,
 } from '../helpers'
 import { dateInputStyle } from '../styles.css'
+
+import type { MouseEvent as MouseEventReact } from 'react'
 
 export const Daily = () => {
   const {
@@ -78,7 +80,10 @@ export const Daily = () => {
   // Get the dates to be displayed from the next month
   const nextMonthDates = Array.from(
     { length: daysFromNextMonth },
-    (_, index) => ({ day: index + 1, month: 1 }),
+    (_, index) => ({
+      day: index + 1,
+      month: 1,
+    }),
   )
 
   const allDaysToShow = [

@@ -1,6 +1,13 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
+import { createRef, useId, useMemo, useState } from 'react'
+
+import { Label } from '../Label'
+import { Text } from '../Text'
+
+import { verificationCodeStyle } from './styles.css'
+
 import type {
   ChangeEvent,
   ClipboardEventHandler,
@@ -9,10 +16,6 @@ import type {
   KeyboardEventHandler,
   ReactNode,
 } from 'react'
-import { createRef, useId, useMemo, useState } from 'react'
-import { Label } from '../Label'
-import { Text } from '../Text'
-import { verificationCodeStyle } from './styles.css'
 
 const DEFAULT_ON_FUNCTION = () => {}
 

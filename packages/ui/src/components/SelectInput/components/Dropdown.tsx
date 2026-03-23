@@ -4,16 +4,6 @@ import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type {
-  ChangeEvent,
-  ComponentProps,
-  Dispatch,
-  KeyboardEvent,
-  MouseEvent,
-  ReactNode,
-  RefObject,
-  SetStateAction,
-} from 'react'
 import {
   useCallback,
   useContext,
@@ -23,6 +13,7 @@ import {
   useRef,
   useState,
 } from 'react'
+
 import { Checkbox } from '../../Checkbox'
 import { ModalContext } from '../../Modal/ModalProvider'
 import { Popup } from '../../Popup'
@@ -36,10 +27,22 @@ import {
 } from '../constants'
 import { useSelectInput } from '../SelectInputProvider'
 import { selectInputStyle } from '../styles.css'
-import type { DataType, OptionType } from '../types'
-import { DisplayOption } from './DropdownOption'
+
 import { dropdownWidth } from './dropdown.css'
+import { DisplayOption } from './DropdownOption'
 import { SearchBarDropdown } from './SearchBarDropdown'
+
+import type { DataType, OptionType } from '../types'
+import type {
+  ChangeEvent,
+  ComponentProps,
+  Dispatch,
+  KeyboardEvent,
+  MouseEvent,
+  ReactNode,
+  RefObject,
+  SetStateAction,
+} from 'react'
 
 export type DropdownProps = {
   id?: string

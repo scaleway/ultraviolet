@@ -2,48 +2,30 @@
   "name": "@ultraviolet/icons",
   "version": "5.2.0",
   "description": "Ultraviolet Icons",
-  "homepage": "https://github.com/scaleway/ultraviolet#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/scaleway/ultraviolet.git",
-    "directory": "packages/icons"
-  },
-  "scripts": {
-    "type:generate": "tsgo --declaration -p tsconfig.build.json",
-    "watch": "pnpm run '/^watch:.*/'",
-    "watch:build": "vite build --config vite.config.ts --watch",
-    "build": "vite build --config vite.config.ts && pnpm run type:generate",
-    "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
-    "postbuild": "node ./process-css.ts",
-    "typecheck": "tsgo --noEmit",
-    "size": "size-limit",
-    "lintpublish": "publint"
-  },
   "keywords": [
     "react",
     "reactjs",
     "ui"
   ],
+  "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "license": "Apache-2.0",
-  "publishConfig": {
-    "access": "public"
-  },
-  "engines": {
-    "node": ">=18.x",
-    "pnpm": ">=9.x"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scaleway/ultraviolet.git",
+    "directory": "packages/icons"
   },
   "os": [
     "darwin",
     "linux"
   ],
   "type": "module",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "main": "./dist/index.js",
   "sideEffects": [
     "**/*.css",
     "**/*.css.ts"
   ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -111,6 +93,41 @@
       "default": "./dist/components/Flags/__generated__/*.js"
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "type:generate": "tsgo --declaration -p tsconfig.build.json",
+    "watch": "pnpm run '/^watch:.*/'",
+    "watch:build": "vite build --config vite.config.ts --watch",
+    "build": "vite build --config vite.config.ts && pnpm run type:generate",
+    "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
+    "postbuild": "node ./process-css.ts",
+    "typecheck": "tsgo --noEmit",
+    "size": "size-limit",
+    "lintpublish": "publint"
+  },
+  "dependencies": {
+    "@ultraviolet/themes": "workspace:*",
+    "@ultraviolet/utils": "workspace:*",
+    "@vanilla-extract/css": "1.18.0",
+    "@vanilla-extract/dynamic": "2.1.5",
+    "@vanilla-extract/recipes": "0.5.7"
+  },
+  "devDependencies": {
+    "@babel/core": "7.29.0",
+    "@repo/config": "workspace:*",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@utils/test": "workspace:*",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "vite": "8.0.1"
+  },
+  "peerDependencies": {
+    "react": "18.x || 19.x",
+    "react-dom": "18.x || 19.x"
+  },
   "size-limit": [
     {
       "path": [
@@ -124,25 +141,8 @@
       "running": false
     }
   ],
-  "peerDependencies": {
-    "react": "18.x || 19.x",
-    "react-dom": "18.x || 19.x"
-  },
-  "devDependencies": {
-    "@babel/core": "7.29.0",
-    "@repo/config": "workspace:*",
-    "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3",
-    "@utils/test": "workspace:*",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "vite": "8.0.0-beta.18"
-  },
-  "dependencies": {
-    "@ultraviolet/themes": "workspace:*",
-    "@ultraviolet/utils": "workspace:*",
-    "@vanilla-extract/css": "1.18.0",
-    "@vanilla-extract/dynamic": "2.1.5",
-    "@vanilla-extract/recipes": "0.5.7"
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=9.x"
   }
 }

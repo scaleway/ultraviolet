@@ -1,7 +1,8 @@
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
-import { colors } from '../../../theme'
+
 import { Meter } from '..'
+import { colors } from '../../../theme'
 
 describe('meter', () => {
   const strengthLevels = [

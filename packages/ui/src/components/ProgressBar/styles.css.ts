@@ -1,6 +1,8 @@
 import { theme } from '@ultraviolet/themes'
 import { keyframes, style, styleVariants } from '@vanilla-extract/css'
+
 import { SENTIMENTS_WITHOUT_NEUTRAL } from '../../theme'
+
 import { percentageValue } from './variables.css'
 
 const shineAnimation = keyframes({

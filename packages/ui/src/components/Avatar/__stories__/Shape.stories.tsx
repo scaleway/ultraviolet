@@ -1,6 +1,7 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { Stack } from '../../Stack'
 import { Avatar } from '..'
+import { Stack } from '../../Stack'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Shape: StoryFn<typeof Avatar> = props => (
   <>

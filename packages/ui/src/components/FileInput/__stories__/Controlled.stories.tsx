@@ -1,10 +1,12 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
+
+import { FileInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { FileInput } from '..'
+
 import type { FilesType } from '../types'
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Controlled: StoryFn<typeof FileInput> = args => {
   const [files, setFiles] = useState<FilesType[]>([])

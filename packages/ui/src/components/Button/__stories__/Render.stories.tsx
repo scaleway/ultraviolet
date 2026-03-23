@@ -1,8 +1,10 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { PencilIcon } from '@ultraviolet/icons/PencilIcon'
 import { forwardRef } from 'react'
-import { Stack } from '../..'
+
 import { Button } from '..'
+import { Stack } from '../..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 const buttonVariants = ['ghost', 'filled', 'outlined'] as const
 

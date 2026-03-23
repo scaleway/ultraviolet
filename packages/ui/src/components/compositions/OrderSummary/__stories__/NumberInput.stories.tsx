@@ -1,7 +1,9 @@
+import { useState } from 'react'
+
+import { OrderSummary } from '..'
+
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { useState } from 'react'
-import { OrderSummary } from '..'
 
 const mockItems = (
   requestsAmount: number,

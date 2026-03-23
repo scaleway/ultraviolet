@@ -1,15 +1,18 @@
 'use client'
 
-import type { BarDatum, BarSvgProps, BarTooltipProps } from '@nivo/bar'
 import { ResponsiveBar } from '@nivo/bar'
-import type { Box, DatumValue, ValueFormat } from '@nivo/core'
-import type { theme as UVTheme } from '@ultraviolet/themes'
 import { useTheme } from '@ultraviolet/themes'
-import type { ComponentProps, CSSProperties } from 'react'
 import { useCallback } from 'react'
+
 import { getLegendColor } from '../../helpers/legend'
 import { getNivoTheme } from '../../helpers/nivoTheme'
+
 import { BarChartTooltip } from './Tooltip'
+
+import type { BarDatum, BarSvgProps, BarTooltipProps } from '@nivo/bar'
+import type { Box, DatumValue, ValueFormat } from '@nivo/core'
+import type { theme as UVTheme } from '@ultraviolet/themes'
+import type { ComponentProps, CSSProperties } from 'react'
 
 type Formatter = ValueFormat<DatumValue>
 

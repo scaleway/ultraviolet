@@ -1,9 +1,12 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+
 import { Bullet } from '../Bullet'
+
 import { stepListStyle } from './styles.css'
+
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 export type Sizes = 'small' | 'medium'
 

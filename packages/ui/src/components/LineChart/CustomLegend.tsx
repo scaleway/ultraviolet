@@ -1,16 +1,19 @@
 'use client'
 
-import type { DatumValue } from '@nivo/core'
-import type { Serie } from '@nivo/line'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ComponentProps } from 'react'
+
 import { getLegendColor } from '../../helpers/legend'
 import { Checkbox } from '../Checkbox'
 import { Text } from '../Text'
+
 import { getAverage, getCurrent, getMax, getMin, getSelected } from './helpers'
 import { backgroundColorLegend, lineChartStyle } from './styles.css'
+
+import type { DatumValue } from '@nivo/core'
+import type { Serie } from '@nivo/line'
+import type { ComponentProps } from 'react'
 
 type CellProps = {
   value?: DatumValue

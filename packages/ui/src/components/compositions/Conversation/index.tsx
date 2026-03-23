@@ -1,11 +1,14 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
+
 import { Stack } from '../../Stack'
 import { Tag } from '../../Tag'
 import { Text } from '../../Text'
+
 import { conversationStyle } from './styles.css'
+
+import type { CSSProperties, ReactNode } from 'react'
 
 const Conversation = ({
   children,

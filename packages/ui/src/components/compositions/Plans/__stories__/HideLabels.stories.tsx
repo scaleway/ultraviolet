@@ -1,8 +1,10 @@
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
+
+import { Button } from '../../../Button'
+import { Text } from '../../../Text'
+
 import { domain, fees, gb, pipeline, ssl } from './features'
 import { Template } from './Template.stories'
-import { Text } from '../../../Text'
-import { Button } from '../../../Button'
 
 const ContentPlan = ({
   description,

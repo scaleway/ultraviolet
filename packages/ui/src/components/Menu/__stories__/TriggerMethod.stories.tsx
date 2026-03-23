@@ -1,8 +1,10 @@
-import type { StoryFn } from '@storybook/react-vite'
+import { Menu } from '..'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { Menu } from '..'
+
 import { DefaultDisclosure } from './Template.stories'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const TriggerMethod: StoryFn<typeof Menu> = () => (
   <Stack gap={3} width="100%">

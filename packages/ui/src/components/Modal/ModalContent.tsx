@@ -1,14 +1,17 @@
-// biome-ignore-all lint/complexity/noUselessFragments: ok
+// oxlint-disable react/jsx-no-useless-fragment: ok
 
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-import type { ComponentProps, CSSProperties } from 'react'
+
 import { Button } from '../Button'
-import type { Modal } from '.'
+
 import { Dialog } from './components/Dialog'
 import { modalStyle } from './styles.css'
+
+import type { Modal } from '.'
 import type { ModalPlacement, ModalSize } from './types'
+import type { ComponentProps, CSSProperties } from 'react'
 
 type ModalContentProps = ComponentProps<typeof Modal> & {
   visible: boolean

@@ -6,7 +6,6 @@ import { skeletonStyle } from './styles.css'
 const Item = ({ col = 3 }: { col: number }) => (
   <li className={skeletonStyle.listSkeletonLi}>
     {Array.from({ length: col }, (_, i) => (
-      // biome-ignore lint/suspicious/noArrayIndexKey: to fix
       <div
         className={skeletonStyle.listSkeletonDiv}
         key={`skeleton-list-col-${i}`}
@@ -26,7 +25,6 @@ export const List = ({
 }) => (
   <ul className={skeletonStyle.listSkeletonUl}>
     {Array.from({ length }, (_, i) => (
-      // biome-ignore lint/suspicious/noArrayIndexKey: to fix
       <Item col={col} key={`skeleton-list-${i}`} />
     ))}
   </ul>

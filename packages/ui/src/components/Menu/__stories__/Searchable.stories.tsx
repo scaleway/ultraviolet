@@ -1,11 +1,13 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
-import type { ComponentProps, ReactNode } from 'react'
+
+import { Menu } from '..'
 import { Avatar } from '../../Avatar'
 import { Badge } from '../../Badge'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-import { Menu } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps, ReactNode } from 'react'
 
 type ItemProps = {
   sentiment?: ComponentProps<typeof Menu.Item>['sentiment']

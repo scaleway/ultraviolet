@@ -1,7 +1,8 @@
 'use client'
 
-import type { ReactNode } from 'react'
 import { Stack } from '../../Stack'
+
+import type { ReactNode } from 'react'
 
 type DialogButtonsProps = {
   secondaryButton: ReactNode

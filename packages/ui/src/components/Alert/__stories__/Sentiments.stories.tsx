@@ -1,8 +1,9 @@
+import { Alert } from '..'
+import { Stack } from '../../Stack'
+import { ALERT_SENTIMENTS } from '../type'
+
 import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { Stack } from '../../Stack'
-import { Alert } from '..'
-import { ALERT_SENTIMENTS } from '../type'
 
 export const Sentiments = (props: ComponentProps<typeof Alert>) =>
   ALERT_SENTIMENTS.map(sentiment => (

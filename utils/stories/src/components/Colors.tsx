@@ -1,7 +1,7 @@
-import type { consoleLightTheme } from '@ultraviolet/themes'
 import { useTheme } from '@ultraviolet/themes'
 import { Card, Row, Separator, Stack, Text } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+
 import {
   capitalizedText,
   card,
@@ -11,6 +11,8 @@ import {
   separator,
 } from '../styles.css'
 import ThemeWrapper from '../ThemeWrapper'
+
+import type { consoleLightTheme } from '@ultraviolet/themes'
 
 type Color = Extract<
   keyof typeof consoleLightTheme.colors,
@@ -225,7 +227,7 @@ const Colors = () => {
                     const gradient = gradientBackgroundColorsType[
                       background as keyof typeof gradientBackgroundColorsType
                     ]
-                      // biome-ignore lint/performance/useTopLevelRegex: to fix
+                      // oxlint-disable: to fix
                       .replace(/;$/, '')
 
                     return (

@@ -1,22 +1,25 @@
 import { CalculatorIcon } from '@ultraviolet/icons/CalculatorIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ReactNode } from 'react'
 import { Children, cloneElement, isValidElement, memo } from 'react'
+
 import { Badge } from '../../../Badge'
 import { Text } from '../../../Text'
 import { CustomUnitInput } from '../Components/CustomUnitInput'
 import { maximumFractionDigits, maximumFractionDigitsLong } from '../constants'
 import { useEstimateCost } from '../EstimateCostProvider'
-import type EstimateCostLocales from '../locales/en'
 import { estimateCostStyle, paddingLeftCell } from '../styles.css'
+
+import { LineThrough } from './LineThrough'
+
+import type EstimateCostLocales from '../locales/en'
 import type {
   ChildrenComponentType,
   ExtraProps,
   LocalesType,
   TotalContentProps,
 } from '../types'
-import { LineThrough } from './LineThrough'
+import type { ReactNode } from 'react'
 
 export const DescriptionComponent = memo(
   ({

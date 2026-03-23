@@ -1,5 +1,6 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { ProgressBar } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Cap: StoryFn = props => (
   <>

@@ -1,11 +1,13 @@
 'use client'
 
 import { RadioGroup } from '@ultraviolet/ui'
+import { useController } from 'react-hook-form'
+
+import { useErrors } from '../../providers'
+
+import type { BaseFieldProps } from '../../types'
 import type { ComponentProps, JSX } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
-import { useController } from 'react-hook-form'
-import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
 
 type RadioGroupFieldProps<
   TFieldValues extends FieldValues,

@@ -3,15 +3,18 @@
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Children, useReducer } from 'react'
+
 import { useTheme } from '../../theme/ThemeProvider'
 import { CopyButton } from '../CopyButton'
 import { Expandable } from '../Expandable'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+
 import { rowsVar, snippetStyle } from './styles.css'
+
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 const LINES_BREAK_REGEX = /\r\n|\r|\n/
 

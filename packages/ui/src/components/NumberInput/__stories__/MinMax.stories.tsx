@@ -1,6 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
+
 import { NumberInput } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Template: StoryFn<typeof NumberInput> = props => {
   const [value, setValue] = useState<number | null>(10)

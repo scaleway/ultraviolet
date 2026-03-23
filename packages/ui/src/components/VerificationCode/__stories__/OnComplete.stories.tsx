@@ -1,5 +1,6 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { VerificationCode } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 const onCompleteHandler = (value: unknown) => {
   // oxlint-disable-next-line no-console

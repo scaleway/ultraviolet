@@ -4,6 +4,7 @@ import { DocIcon } from '@ultraviolet/icons/DocIcon'
 import { ImageIcon } from '@ultraviolet/icons/ImageIcon'
 import { VideoIcon } from '@ultraviolet/icons/VideoIcon'
 import { useState } from 'react'
+
 import { Button } from '../../Button'
 import { Loader } from '../../Loader'
 import { Stack } from '../../Stack'
@@ -11,6 +12,7 @@ import { Text } from '../../Text'
 import { useFileInput } from '../FileInputProvider'
 import { formatFileSize, getMimeTypeType } from '../helpers'
 import { fileInputStyle } from '../styles.css'
+
 import type { ListProps, MimeType } from '../types'
 
 const getIllustration = (

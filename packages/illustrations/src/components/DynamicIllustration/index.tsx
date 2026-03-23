@@ -1,9 +1,11 @@
 'use client'
 
 import { useTheme } from '@ultraviolet/themes'
-import type { CSSProperties } from 'react'
-import type { IllustrationsKeys } from './__generated__/Illustrations'
+
 import { ILLUSTRATIONS } from './__generated__/Illustrations'
+
+import type { IllustrationsKeys } from './__generated__/Illustrations'
+import type { CSSProperties } from 'react'
 
 type DynamicIllustrationProps = {
   /**

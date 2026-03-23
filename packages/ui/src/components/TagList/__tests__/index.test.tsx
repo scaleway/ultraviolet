@@ -2,8 +2,10 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { afterAll, describe, expect, test, vi } from 'vitest'
-import type { TagType } from '..'
+
 import { TagList } from '..'
+
+import type { TagType } from '..'
 
 // - This function mocks the offsetWidth of DOM elements:
 // as JSDOM | happy-dom ( used by testing-library ) only emulates the DOM elements

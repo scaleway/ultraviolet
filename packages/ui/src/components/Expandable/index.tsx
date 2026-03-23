@@ -2,9 +2,11 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
+
 import { animationDurationVar, expandableStyle } from './styles.css'
+
+import type { CSSProperties, ReactNode } from 'react'
 
 const ANIMATION_DURATION = 300 // in ms
 

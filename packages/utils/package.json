@@ -2,11 +2,40 @@
   "name": "@ultraviolet/utils",
   "version": "1.0.6",
   "description": "Shared utilities for the repository",
+  "keywords": [
+    "helpers",
+    "shared",
+    "utilities"
+  ],
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scaleway/ultraviolet.git",
     "directory": "packages/repo-utils"
+  },
+  "files": [
+    "dist/"
+  ],
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "type:generate": "tsgo --declaration -p tsconfig.build.json",
@@ -21,38 +50,16 @@
     "size": "size-limit",
     "lintpublish": "publint"
   },
-  "keywords": [
-    "utilities",
-    "helpers",
-    "shared"
-  ],
-  "license": "Apache-2.0",
-  "publishConfig": {
-    "access": "public"
+  "devDependencies": {
+    "@repo/config": "workspace:*",
+    "@types/react": "19.2.14",
+    "@utils/test": "workspace:*",
+    "react": "19.2.4",
+    "vite": "8.0.1",
+    "vitest": "4.0.18"
   },
-  "engines": {
-    "node": ">=18.x",
-    "pnpm": ">=9.x"
-  },
-  "os": [
-    "darwin",
-    "linux"
-  ],
-  "sideEffects": false,
-  "type": "module",
-  "files": [
-    "dist/"
-  ],
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "main": "./dist/index.js",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "default": "./dist/index.js"
-    }
+  "peerDependencies": {
+    "react": "18.x || 19.x"
   },
   "size-limit": [
     {
@@ -67,15 +74,8 @@
       "running": false
     }
   ],
-  "devDependencies": {
-    "@repo/config": "workspace:*",
-    "@types/react": "19.2.14",
-    "@utils/test": "workspace:*",
-    "react": "19.2.4",
-    "vite": "8.0.0-beta.18",
-    "vitest": "4.0.18"
-  },
-  "peerDependencies": {
-    "react": "18.x || 19.x"
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=9.x"
   }
 }

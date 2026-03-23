@@ -4,6 +4,7 @@ import { AddressIcon } from '@ultraviolet/icons/AddressIcon'
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
+
 import { Chip } from '..'
 
 describe('checkbox', () => {

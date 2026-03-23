@@ -1,7 +1,8 @@
+import { Link } from '..'
+import { Stack } from '../../Stack'
+
 import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { Stack } from '../../Stack'
-import { Link } from '..'
 
 export const Primary = (props: ComponentProps<typeof Link>) => (
   <Stack direction="column">

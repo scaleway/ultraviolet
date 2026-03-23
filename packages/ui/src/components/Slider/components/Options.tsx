@@ -1,6 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+
 import { Text } from '../../Text'
 import { leftOption, sliderStyle } from '../styles.css'
 

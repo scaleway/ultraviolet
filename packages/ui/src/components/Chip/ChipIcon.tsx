@@ -1,10 +1,12 @@
 // oxlint-disable typescript/no-unsafe-type-assertion
 'use client'
 
-import type { ReactNode, RefObject } from 'react'
 import { useContext } from 'react'
+
 import { ChipContext } from './ChipContext'
 import { chipStyle } from './styles.css'
+
+import type { ReactNode, RefObject } from 'react'
 
 type ChipIconType = {
   /**

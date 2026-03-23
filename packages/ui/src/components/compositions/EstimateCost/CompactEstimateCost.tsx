@@ -1,7 +1,10 @@
 import { CalculatorIcon } from '@ultraviolet/icons/CalculatorIcon'
+
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+
 import { estimateCostStyle } from './styles.css'
+
 import type { Iteration } from './types'
 
 type TotalPrice = {

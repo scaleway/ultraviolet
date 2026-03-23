@@ -1,10 +1,18 @@
-// biome-ignore-all lint/a11y/useAriaPropsSupportedByRole: to fix
+// oxlint-disable jsx_a11y/aria-role: to fix
 
 'use client'
 
 import { useTheme } from '@ultraviolet/themes'
-import type { RenderProp } from '@ultraviolet/utils'
 import { cn, renderElement } from '@ultraviolet/utils'
+import { forwardRef, useMemo } from 'react'
+
+import { Loader } from '../Loader'
+import { Tooltip } from '../Tooltip'
+
+import { buttonStyle } from './styles.css'
+
+import type { ButtonVariants } from './styles.css'
+import type { RenderProp } from '@ultraviolet/utils'
 import type {
   AriaRole,
   ButtonHTMLAttributes,
@@ -13,11 +21,6 @@ import type {
   ReactNode,
   Ref,
 } from 'react'
-import { forwardRef, useMemo } from 'react'
-import { Loader } from '../Loader'
-import { Tooltip } from '../Tooltip'
-import type { ButtonVariants } from './styles.css'
-import { buttonStyle } from './styles.css'
 
 type CommonProps = {
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type']

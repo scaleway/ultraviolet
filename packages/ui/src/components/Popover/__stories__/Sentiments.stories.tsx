@@ -1,9 +1,12 @@
-import type { StoryFn } from '@storybook/react-vite'
-import type { Dispatch, SetStateAction } from 'react'
 import { useCallback, useState } from 'react'
+
 import { Button } from '../../Button'
 import { Popover } from '../index'
+
 import { Playground } from './Playground.stories'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { Dispatch, SetStateAction } from 'react'
 
 export const Sentiments: StoryFn<typeof Popover> = () => {
   const [primaryOpened, setPrimaryOpened] = useState(false)

@@ -1,11 +1,14 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useRef } from 'react'
+
 import { SelectableCard } from '../SelectableCard'
-import { useSwitchButton } from './SwitchButtonContext'
+
 import { switchButtonStyle } from './styles.css'
+import { useSwitchButton } from './SwitchButtonContext'
+
+import type { CSSProperties, ReactNode } from 'react'
 
 type OptionProps = {
   value: string

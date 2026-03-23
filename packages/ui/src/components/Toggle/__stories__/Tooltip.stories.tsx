@@ -1,4 +1,5 @@
 import { Stack } from '../../Stack'
+
 import { Template } from './Template.stories'
 
 export const Tooltip = Template.bind({})

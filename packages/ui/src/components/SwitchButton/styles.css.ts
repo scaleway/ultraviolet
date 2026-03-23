@@ -35,9 +35,13 @@ const optionBase = style({
       boxShadow: 'none !important',
     },
     '&[data-checked="false"]:hover:not([data-error="true"])[data-disabled="false"]':
-      { boxShadow: 'none' },
+      {
+        boxShadow: 'none',
+      },
     '&[data-checked="false"][data-error="false"][data-disabled="false"]:active':
-      { boxShadow: 'none' },
+      {
+        boxShadow: 'none',
+      },
     '&[data-checked="true"]': { border: 'none' },
     '&[data-disabled="true"]': { background: 'transparent', border: 'none' },
   },

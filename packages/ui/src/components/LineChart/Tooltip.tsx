@@ -1,9 +1,12 @@
 'use client'
 
-import type { Point } from '@nivo/line'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+
 import { Text } from '../Text'
+
 import { colorLine, lineChartStyle } from './styles.css'
+
+import type { Point } from '@nivo/line'
 
 type LineChartTooltipProps = {
   point: Point

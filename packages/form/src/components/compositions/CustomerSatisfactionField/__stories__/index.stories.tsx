@@ -1,9 +1,11 @@
-import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
+
+import { CustomerSatisfactionField } from '..'
 import { Form } from '../../..'
 import { useForm } from '../../../..'
 import { mockErrors } from '../../../../mocks'
-import { CustomerSatisfactionField } from '..'
+
+import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: CustomerSatisfactionField,

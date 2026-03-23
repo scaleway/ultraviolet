@@ -1,6 +1,7 @@
 import { LockIcon } from '@ultraviolet/icons/LockIcon'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
+
 import { Tag } from '..'
 
 describe('tag', () => {

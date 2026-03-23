@@ -2,9 +2,10 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ComponentProps, ReactNode } from 'react'
 import { Children } from 'react'
+
 import { Text } from '../../Text'
+
 import { maxWidthText, maxWidthTextVar } from './Components/components.css'
 import { Item } from './Components/Item'
 import { LineThrough } from './Components/LineThrough'
@@ -19,7 +20,9 @@ import { EstimateCostProvider } from './EstimateCostProvider'
 import estimateCostDefaultLocales from './locales/en'
 import { useOverlay } from './OverlayContext'
 import { estimateCostStyle } from './styles.css'
+
 import type { EstimateCostProps, Units } from './types'
+import type { ComponentProps, ReactNode } from 'react'
 
 const DEFAULT_UNIT_LIST: Units[] = ['hours', 'days', 'months']
 

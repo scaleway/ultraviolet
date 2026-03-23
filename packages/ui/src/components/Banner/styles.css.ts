@@ -1,7 +1,8 @@
 import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
-import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { recipe } from '@vanilla-extract/recipes'
+
+import type { RecipeVariants } from '@vanilla-extract/recipes'
 
 const banner = recipe({
   base: {

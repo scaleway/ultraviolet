@@ -1,7 +1,9 @@
 import { theme } from '@ultraviolet/themes'
-import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { recipe } from '@vanilla-extract/recipes'
+
 import { SIZES } from './constant'
+
+import type { RecipeVariants } from '@vanilla-extract/recipes'
 
 const sentiments = [
   'primary',

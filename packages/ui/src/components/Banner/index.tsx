@@ -3,16 +3,19 @@
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useMemo, useState } from 'react'
+
 import { Button } from '../Button'
 import { Link } from '../Link'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import defaultIllustration from './assets/default-image.svg'
+
 import defaultIllustrationSmall from './assets/default-image-small.svg'
-import type { BannerVariants } from './styles.css'
+import defaultIllustration from './assets/default-image.svg'
 import { bannerStyle } from './styles.css'
+
+import type { BannerVariants } from './styles.css'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 type BannerProps = {
   title: string

@@ -1,13 +1,16 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
+
 import { List } from '../../List'
+
 import { Cell } from './components/Cell'
 import { Row } from './components/Row'
 import { OfferListProvider } from './OfferListProvider'
 import { offerListStyle } from './styles.css'
+
+import type { ComponentProps, CSSProperties } from 'react'
 
 type OfferListProps = Omit<
   ComponentProps<typeof List>,

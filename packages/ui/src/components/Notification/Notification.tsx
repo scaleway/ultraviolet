@@ -1,16 +1,18 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
+import { toast as baseToast } from 'react-toastify'
+
+import { Button } from '../Button'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
+
 import type { ReactNode } from 'react'
 import type {
   Theme as ThemeToastify,
   ToastOptions,
   TypeOptions,
 } from 'react-toastify'
-import { toast as baseToast } from 'react-toastify'
-import { Button } from '../Button'
-import { Stack } from '../Stack'
-import { Text } from '../Text'
 
 type CloseButtonProps = {
   closeToast: (event: React.MouseEvent<HTMLElement>) => void

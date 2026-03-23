@@ -1,14 +1,16 @@
+import { isColorMonochrome, textVariants, theme } from '@ultraviolet/themes'
+import { capitalize, filterByProperty } from '@ultraviolet/utils'
+import { recipe } from '@vanilla-extract/recipes'
+
+import { PROMINENCES } from './constants'
+import { textVars } from './variables.css'
+
 import type {
   ExtendedColor,
   TextStyleObject,
   TextVariant,
 } from '@ultraviolet/themes'
-import { isColorMonochrome, textVariants, theme } from '@ultraviolet/themes'
-import { capitalize, filterByProperty } from '@ultraviolet/utils'
 import type { RecipeVariants } from '@vanilla-extract/recipes'
-import { recipe } from '@vanilla-extract/recipes'
-import { PROMINENCES } from './constants'
-import { textVars } from './variables.css'
 
 type ProminenceProps = keyof typeof PROMINENCES
 

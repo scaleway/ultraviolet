@@ -8,6 +8,8 @@
   "ignorePatterns": [
     "**/app.config.d.ts",
     "**/package.config.d.ts",
+    "examples/**",
+    "e2e/**",
     "next.config.js",
     "*.d.ts",
     "svgo.config.mjs"
@@ -22,7 +24,9 @@
         "examples/**",
         ".storybook/**/*.{ts,tsx}",
         "utils/stories/**/*.{ts,tsx}",
-        "utils/scripts/*.ts"
+        "utils/scripts/*.ts",
+        "**/icons/process-css.ts",
+        "vite.config.ts"
       ],
       "rules": {
         "eslint/no-alert": "off",

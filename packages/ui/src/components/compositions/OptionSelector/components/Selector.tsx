@@ -1,6 +1,7 @@
 import { SelectInput } from '../../../SelectInput'
-import type { DataType } from '../../../SelectInput/types'
 import { optionSelectorStyle } from '../styles.css'
+
+import type { DataType } from '../../../SelectInput/types'
 import type { OptionSelectorProps } from '../types'
 
 export const Selector = ({

@@ -1,9 +1,11 @@
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 import { OfferList } from '..'
-import { columns, data } from './resources'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
+
+import { columns, data } from './resources'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 export const Type: StoryFn<ComponentProps<typeof OfferList>> = props => (
   <Stack gap={3}>

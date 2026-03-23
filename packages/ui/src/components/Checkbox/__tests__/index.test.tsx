@@ -1,10 +1,12 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import type { ActionDispatch } from 'react'
 import { useReducer } from 'react'
 import { describe, expect, test } from 'vitest'
+
 import { Checkbox } from '..'
+
+import type { ActionDispatch } from 'react'
 
 type ChildrenProps = { checked: boolean; onChange: ActionDispatch<[]> }
 type Props = {

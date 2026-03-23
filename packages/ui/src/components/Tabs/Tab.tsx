@@ -1,6 +1,16 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
+import { forwardRef, useMemo } from 'react'
+
+import { Badge } from '../Badge'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
+import { Tooltip } from '../Tooltip'
+
+import { tabsStyle } from './styles.css'
+import { useTabsContext } from './TabsContext'
+
 import type {
   ComponentProps,
   CSSProperties,
@@ -11,13 +21,6 @@ import type {
   ReactNode,
   Ref,
 } from 'react'
-import { forwardRef, useMemo } from 'react'
-import { Badge } from '../Badge'
-import { Stack } from '../Stack'
-import { Text } from '../Text'
-import { Tooltip } from '../Tooltip'
-import { tabsStyle } from './styles.css'
-import { useTabsContext } from './TabsContext'
 
 type TabProps<T extends ElementType = 'button'> = {
   as?: T

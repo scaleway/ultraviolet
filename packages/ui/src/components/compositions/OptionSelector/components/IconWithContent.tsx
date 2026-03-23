@@ -1,5 +1,6 @@
-import type { ReactNode } from 'react'
 import { Stack } from '../../../Stack'
+
+import type { ReactNode } from 'react'
 
 export const IconWithContent = ({
   content,

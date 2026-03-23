@@ -1,12 +1,14 @@
 'use client'
 
 import { CheckboxGroup } from '@ultraviolet/ui'
-import type { ComponentProps } from 'react'
 import { Children, isValidElement, useCallback } from 'react'
-import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
+
 import { useErrors } from '../../providers'
+
 import type { BaseFieldProps } from '../../types'
+import type { ComponentProps } from 'react'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 
 const arraysContainSameValues = (array1: string[], array2: string[]) => {
   if (array1.length === 0) {

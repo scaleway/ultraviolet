@@ -5,8 +5,8 @@ import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Children, useCallback, useMemo, useState } from 'react'
+
 import { Badge as BadgeUV } from '../../../Badge'
 import { Button } from '../../../Button'
 import { Checkbox } from '../../../Checkbox'
@@ -18,8 +18,11 @@ import {
   expandablePadding as expandablePaddingVar,
   offerListStyle,
 } from '../styles.css'
+
 import { Banner } from './Banner'
 import { OfferListRowContext } from './OfferListRowProvider'
+
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 type RowProps = ComponentProps<typeof List.Row> & {
   banner?: {

@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+
 import { cn } from './generateClassname'
 
 describe('generateClassname', () => {

@@ -1,11 +1,14 @@
 'use client'
 
-import type { CSSProperties, ReactNode } from 'react'
 import { useContext, useEffect } from 'react'
+
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+
 import { Data, nextStep } from './helper'
 import { steppedListCardStyle } from './styles.css'
+
+import type { CSSProperties, ReactNode } from 'react'
 
 type SteppedListContentProps = {
   subHeader?: ReactNode

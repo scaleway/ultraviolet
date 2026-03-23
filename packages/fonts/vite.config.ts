@@ -1,4 +1,5 @@
 import path from 'node:path'
+
 import { defineConfig, mergeConfig } from 'vite'
 
 export const config = mergeConfig(

@@ -1,5 +1,6 @@
-import type { theme } from '@ultraviolet/themes'
 import { createVar } from '@vanilla-extract/css'
+
+import type { theme } from '@ultraviolet/themes'
 
 export const templateColumn: Record<
   keyof typeof theme.breakpoints,

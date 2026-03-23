@@ -1,11 +1,14 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useMemo } from 'react'
+
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+
 import { labelStyle } from './styles.css'
+
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 const LabelRequiredOrNot = ({
   children,

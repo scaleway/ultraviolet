@@ -1,7 +1,9 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { Stack } from '../../Stack'
-import { Chip } from '..'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
+
+import { Chip } from '..'
+import { Stack } from '../../Stack'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Disabled: StoryFn<typeof Chip> = ({ ...args }) => (
   <Stack direction="row" gap={1}>

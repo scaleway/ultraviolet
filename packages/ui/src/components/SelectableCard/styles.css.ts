@@ -1,6 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+
 import { inputDisplay, labelDisplay } from './variables.css'
 
 const container = recipe({

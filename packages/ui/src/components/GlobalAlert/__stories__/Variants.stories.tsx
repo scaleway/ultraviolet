@@ -1,7 +1,8 @@
-import type { Decorator } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 import { Stack } from '../../Stack'
 import { GlobalAlert } from '../index'
+
+import type { Decorator } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 export const Variants = (props: ComponentProps<typeof GlobalAlert>) =>
   (['info', 'danger', 'promotional'] as const).map(variant => (

@@ -5,7 +5,6 @@ import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, DOMAttributes, ReactNode } from 'react'
 import {
   forwardRef,
   useEffect,
@@ -14,6 +13,7 @@ import {
   useMemo,
   useRef,
 } from 'react'
+
 import { Button } from '../Button'
 import { SIZE_HEIGHT as ButtonSizeHeight } from '../Button/constants'
 import { Label } from '../Label'
@@ -21,7 +21,10 @@ import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
+
 import { paddingRightVar, textAreaStyle } from './styles.css'
+
+import type { CSSProperties, DOMAttributes, ReactNode } from 'react'
 
 const STATE_ICON_SIZE = 'small'
 

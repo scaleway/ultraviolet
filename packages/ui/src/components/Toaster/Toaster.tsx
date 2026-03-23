@@ -3,11 +3,13 @@
 import { AlertCircleOutlineIcon } from '@ultraviolet/icons/AlertCircleOutlineIcon'
 import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
 import { CloseCircleOutlineIcon } from '@ultraviolet/icons/CloseCircleOutlineIcon'
-import type { ReactNode } from 'react'
-import type { ToastOptions } from 'react-toastify'
 import { toast as baseToast } from 'react-toastify'
+
 import { CloseButton } from './components/CloseButton'
 import { Content } from './components/Content'
+
+import type { ReactNode } from 'react'
+import type { ToastOptions } from 'react-toastify'
 
 export const toast = {
   error: (

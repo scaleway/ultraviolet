@@ -3,7 +3,7 @@ name: Upload Fonts
 on:
   push:
     branches:
-      - "main"
+      - 'main'
     paths:
       - packages/fonts/**
 env:

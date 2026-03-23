@@ -1,6 +1,7 @@
-import type { Meta } from '@storybook/react-vite'
 import { Loader } from '..'
 import { Stack } from '../../Stack'
+
+import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Loader,

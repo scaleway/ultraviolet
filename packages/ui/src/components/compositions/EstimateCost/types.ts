@@ -1,3 +1,6 @@
+import type { Alert } from '../../Alert'
+import type { Text } from '../../Text'
+import type EstimateCostLocales from './locales/en'
 import type {
   ComponentProps,
   CSSProperties,
@@ -6,9 +9,6 @@ import type {
   ReactNode,
   SetStateAction,
 } from 'react'
-import type { Alert } from '../../Alert'
-import type { Text } from '../../Text'
-import type EstimateCostLocales from './locales/en'
 
 export type LocalesType = Record<keyof typeof EstimateCostLocales, string>
 

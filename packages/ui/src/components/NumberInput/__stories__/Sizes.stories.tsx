@@ -1,7 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 import { Stack } from '../../Stack'
 import { NumberInput } from '../index'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 export const Sizes: StoryFn = (args: ComponentProps<typeof NumberInput>) => (
   <Stack gap={2}>

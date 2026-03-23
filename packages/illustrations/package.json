@@ -2,48 +2,29 @@
   "name": "@ultraviolet/illustrations",
   "version": "6.0.12",
   "description": "Ultraviolet Illustrations",
+  "keywords": [
+    "illustrations",
+    "ui"
+  ],
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scaleway/ultraviolet.git",
     "directory": "packages/illustrations"
   },
-  "scripts": {
-    "type:generate": "tsgo --declaration -p tsconfig.build.json",
-    "watch": "pnpm run '/^watch:.*/'",
-    "watch:build": "vite build --config vite.config.ts --watch",
-    "build": "vite build --config vite.config.ts && pnpm run type:generate",
-    "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
-    "typecheck": "tsgo --noEmit",
-    "size": "size-limit",
-    "test:unit": "LC_ALL=en_US.UTF-8 pnpm vitest --run --config vitest.config.ts",
-    "test:unit:coverage": "pnpm test:unit --coverage",
-    "lintpublish": "publint"
-  },
-  "keywords": [
-    "illustrations",
-    "ui"
+  "files": [
+    "dist/"
   ],
-  "license": "Apache-2.0",
-  "publishConfig": {
-    "access": "public"
-  },
-  "engines": {
-    "node": ">=18.x",
-    "pnpm": ">=9.x"
-  },
   "os": [
     "darwin",
     "linux"
   ],
-  "files": [
-    "dist/"
-  ],
-  "sideEffects": false,
   "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/components/index.d.ts",
@@ -88,22 +69,20 @@
       "default": "./dist/components/index.js"
     }
   },
-  "size-limit": [
-    {
-      "path": [
-        "dist/**/*.js",
-        "!*.d.ts",
-        "!*.cjs"
-      ],
-      "limit": "999 MB",
-      "webpack": false,
-      "brotli": true,
-      "running": false
-    }
-  ],
-  "peerDependencies": {
-    "react": "18.x || 19.x",
-    "react-dom": "18.x || 19.x"
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "type:generate": "tsgo --declaration -p tsconfig.build.json",
+    "watch": "pnpm run '/^watch:.*/'",
+    "watch:build": "vite build --config vite.config.ts --watch",
+    "build": "vite build --config vite.config.ts && pnpm run type:generate",
+    "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
+    "typecheck": "tsgo --noEmit",
+    "size": "size-limit",
+    "test:unit": "LC_ALL=en_US.UTF-8 pnpm vitest --run --config vitest.config.ts",
+    "test:unit:coverage": "pnpm test:unit --coverage",
+    "lintpublish": "publint"
   },
   "dependencies": {
     "@ultraviolet/themes": "workspace:*",
@@ -120,6 +99,27 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "tinyglobby": "0.2.15",
-    "vite": "8.0.0-beta.18"
+    "vite": "8.0.1"
+  },
+  "peerDependencies": {
+    "react": "18.x || 19.x",
+    "react-dom": "18.x || 19.x"
+  },
+  "size-limit": [
+    {
+      "path": [
+        "dist/**/*.js",
+        "!*.d.ts",
+        "!*.cjs"
+      ],
+      "limit": "999 MB",
+      "webpack": false,
+      "brotli": true,
+      "running": false
+    }
+  ],
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=9.x"
   }
 }

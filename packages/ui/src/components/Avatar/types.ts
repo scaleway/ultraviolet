@@ -1,5 +1,5 @@
-import type { CSSProperties, MouseEvent, ReactNode } from 'react'
 import type { SENTIMENTS, sizes } from './constants'
+import type { CSSProperties, MouseEvent, ReactNode } from 'react'
 
 // This type defines an array of string that should have a length of 0, 1, or 2
 export type Colors =

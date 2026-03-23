@@ -128,7 +128,10 @@ const getValues = (
   const res = Object.keys(data).reduce((values: JsonType, key) => {
     const newValue = getValues(
       (data as Record<string, ColorType | ThemeType>)[key],
-      { typeFilter, variables },
+      {
+        typeFilter,
+        variables,
+      },
     )
 
     if (newValue !== null) {

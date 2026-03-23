@@ -3,15 +3,18 @@
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { CopyContentIcon } from '@ultraviolet/icons/CopyContentIcon'
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
 import { useMemo } from 'react'
 import useClipboard from 'react-use-clipboard'
+
 import { Button } from '../Button'
 import { Loader } from '../Loader'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-import type { SENTIMENTS } from './styles.css'
+
 import { tagStyle } from './styles.css'
+
+import type { SENTIMENTS } from './styles.css'
+import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
 
 const COPY_DURATION = 2500
 

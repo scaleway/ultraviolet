@@ -1,10 +1,13 @@
 import { create } from 'storybook/theming'
+
 import lightTheme, { darkerTheme, darkTheme } from '../packages/ui/src/theme'
+
 import logoDark from './assets/logo-dark.png'
 import logoLight from './assets/logo-light.png'
+
 import type lightBrandImage from './assets/scaleway-text-light.png'
 
-// biome-ignore lint/style/noEnum: to fix avoid enum !!
+// oxlint-disable no-constant-condition: to fix avoid enum !!
 enum Base {
   LIGHT = 'light',
   DARK = 'dark',

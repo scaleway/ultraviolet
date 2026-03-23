@@ -1,7 +1,9 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { Stack } from '../../Stack'
+
 import { SelectableCard } from '..'
+import { Stack } from '../../Stack'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Disabled: StoryFn = args => {
   const [value, onChange] = useState('label-8')

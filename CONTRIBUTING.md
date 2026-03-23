@@ -41,7 +41,7 @@ ultraviolet/
             helper.ts <== local helper used in one specific component
           ...
         helpers/ <== global helpers for all components in a specific package
-    utils/ <== our scripts for generation and tools for testing 
+    utils/ <== our scripts for generation and tools for testing
 ```
 
 The project is composed of components, each of them is composed of a story folder plus a test folder.
@@ -191,11 +191,13 @@ We will explain here how to handle a beta correctly and how our workflow of GitH
 > A beta version is not always required. Consider creating a beta version if you have significant major changes that need to be tested and reviewed before the final release. This is especially useful when multiple teams or projects depend on the library and need time to adapt. However, **using a beta version is optional and not mandatory**.
 
 Before releasing a new major version, you should create a beta to allow for a testing period of the major changes across all projects using the library. To do this, first create a beta branch from main:
+
 ```sh
 git checkout -b beta main
 ```
 
 Next, enter prerelease mode for changeset:
+
 ```sh
 pnpm changeset pre enter beta
 ```
@@ -204,8 +206,8 @@ From this point on, any changeset added to pull requests targeting the beta bran
 
 Creating a `beta` branch enables the [release GitHub Action](https://github.com/scaleway/ultraviolet/blob/main/.github/workflows/release.yml) to run on the beta branch as well. Like the main branch, the beta branch will have its own release (beta) pull request, usually named `chore: release (beta)`. Merging this pull request will publish the beta version to npm and make it available for testing.
 
-> [!IMPORTANT] 
-> Throughout the beta period, **make sure to write clear and descriptive changesets**, as these will be used for the beta release notes. 
+> [!IMPORTANT]
+> Throughout the beta period, **make sure to write clear and descriptive changesets**, as these will be used for the beta release notes.
 
 When the beta phase is complete and you are ready to release the new major version, create a pull request from the beta branch into main. This will merge all beta changes into main and trigger the new major release. After the release, you can delete the beta branch.
 
@@ -217,6 +219,7 @@ If a hotfix needs to be applied to the stable version (main), proceed as usual b
 
 > [!TIP]
 > Keep the following in mind when planning a beta:
+>
 > - Have a clear roadmap and action plan before starting a beta.
 > - Set a deadline for the beta period; managing multiple release branches is complex and requires regular synchronization.
 > - Only hotfixes should be merged and released in the main branch during the beta period.

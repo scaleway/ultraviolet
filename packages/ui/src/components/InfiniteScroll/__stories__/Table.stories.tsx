@@ -1,9 +1,12 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useRef, useState } from 'react'
+
+import { InfiniteScroll } from '..'
 import { Skeleton } from '../../Skeleton'
 import { Table as UVTable } from '../../Table'
-import { InfiniteScroll } from '..'
+
 import { generateRandomNamesArray, TABLE_COLUMNS, TABLE_DATA } from './data'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 const ListLoader = () => (
   <>

@@ -1,8 +1,10 @@
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
+
+import { StepList } from '..'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { StepList } from '..'
+
 import { Template } from './Template.stories'
 
 export const ComplexChild = Template.bind({})

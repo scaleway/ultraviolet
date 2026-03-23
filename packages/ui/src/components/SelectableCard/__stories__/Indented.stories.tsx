@@ -1,10 +1,12 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
+
+import { SelectableCard } from '..'
 import { SelectInput } from '../../SelectInput'
 import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { SelectableCard } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Indented: StoryFn = args => {
   const [value2, onChange2] = useState({ 'label-20': true, 'label-21': false })

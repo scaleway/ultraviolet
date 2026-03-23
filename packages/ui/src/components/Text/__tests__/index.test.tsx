@@ -1,6 +1,7 @@
 import { textVariants } from '@ultraviolet/themes'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
+
 import { Text } from '..'
 
 describe('text', () => {
@@ -9,7 +10,8 @@ describe('text', () => {
       <Text as="div" variant={variant}>
         {variant}
       </Text>,
-    ))
+    ),
+  )
 
   test('renders correctly with tooltip', () =>
     shouldMatchSnapshot(

@@ -1,7 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 import { EstimateCost } from '..'
 import { Stack } from '../../../Stack'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 export const NewPrice: StoryFn<ComponentProps<typeof EstimateCost>> = props => (
   <Stack gap={4}>

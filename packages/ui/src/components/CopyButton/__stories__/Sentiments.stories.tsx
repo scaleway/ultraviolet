@@ -1,5 +1,6 @@
-import type { ComponentProps } from 'react'
 import { CopyButton } from '../index'
+
+import type { ComponentProps } from 'react'
 
 export const Sentiments = (props: ComponentProps<typeof CopyButton>) =>
   (['primary', 'neutral'] as const).map(sentiment => (

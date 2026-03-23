@@ -1,10 +1,13 @@
+import { useState } from 'react'
+
+import { OfferList } from '..'
+import { Button } from '../../../Button'
+import { Stack } from '../../../Stack'
+
+import { columns, data } from './resources'
+
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { useState } from 'react'
-import { OfferList } from '..'
-import { columns, data } from './resources'
-import { Stack } from '../../../Stack'
-import { Button } from '../../../Button'
 
 export const OnChange: StoryFn<ComponentProps<typeof OfferList>> = props => {
   const [selectedRow, setSelectedRow] = useState<string | string[]>(

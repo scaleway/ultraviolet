@@ -1,8 +1,10 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useReducer } from 'react'
+
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Modal } from '../index'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Open: StoryFn = props => {
   const [open, toggleOpen] = useReducer(prevState => !prevState, false)

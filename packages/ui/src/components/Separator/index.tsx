@@ -2,9 +2,11 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, ReactNode } from 'react'
-import type { SeparatorVariants } from './styles.css'
+
 import { separatorStyle, thicknessSeparator } from './styles.css'
+
+import type { SeparatorVariants } from './styles.css'
+import type { CSSProperties, ReactNode } from 'react'
 
 type SeparatorProps = {
   thickness?: number
@@ -27,8 +29,6 @@ export const Separator = ({
   style,
 }: SeparatorProps) =>
   children ? (
-    // biome-ignore  lint/a11y/useFocusableInteractive: to fix
-    // biome-ignore lint/a11y/useSemanticElements: cannot have a separator inside a separator
     <div
       aria-orientation={direction}
       className={cn(
@@ -36,7 +36,6 @@ export const Separator = ({
         separatorStyle.iconWraper({ direction, sentiment }),
       )}
       data-testid={dataTestId}
-      // biome-ignore lint/a11y/useAriaPropsForRole: cannot have a separator inside a separator
       role="separator"
       style={style}
     >

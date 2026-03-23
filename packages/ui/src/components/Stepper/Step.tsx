@@ -2,13 +2,16 @@
 
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
 import { useMemo } from 'react'
+
 import { Bullet } from '../Bullet'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+
 import { useStepper } from './StepperProvider'
 import { stepperStyle } from './styles.css'
+
+import type { CSSProperties, ReactNode } from 'react'
 
 type StepProps = {
   onClick?: (index: number) => void

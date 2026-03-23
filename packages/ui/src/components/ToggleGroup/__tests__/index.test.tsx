@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
+
 import { ToggleGroup } from '..'
 
 describe('toggleGroup', () => {

@@ -1,8 +1,9 @@
 'use client'
 
-import type { CSSProperties, JSX, ReactNode } from 'react'
 import { Item } from './components/Item'
 import { breadcrumbsStyle } from './styles.css'
+
+import type { CSSProperties, JSX, ReactNode } from 'react'
 
 type BreadcrumbsProps = {
   children: ReactNode

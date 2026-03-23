@@ -3,9 +3,11 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { forwardRef } from 'react'
 import { describe, expect, test, vi } from 'vitest'
-import type { ProminenceProps } from '..'
+
 import { Link } from '..'
 import { PROMINENCES } from '../constants'
+
+import type { ProminenceProps } from '..'
 
 // Mock component simulating Next.js Link
 const MockNextLink = forwardRef<
@@ -30,7 +32,8 @@ describe('link', () => {
         <Link href="/" sentiment={sentiment as 'primary' | 'info'}>
           Hello
         </Link>,
-      ))
+      ),
+    )
   })
 
   describe('prominence', () => {
@@ -44,7 +47,8 @@ describe('link', () => {
         <Link href="/" prominence={prominence as ProminenceProps}>
           Hello
         </Link>,
-      ))
+      ),
+    )
   })
 
   test('render correctly with target blank', () =>

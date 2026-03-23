@@ -1,16 +1,18 @@
-import type { StoryFn } from '@storybook/react-vite'
+import { ColdStorageProductIcon } from '@ultraviolet/icons/product/ColdStorageProductIcon'
+import { MacMiniProductIcon } from '@ultraviolet/icons/product/MacMiniProductIcon'
 import {
   WireIllustration,
   // @ts-expect-error can't import ultraviolet/illustration in ui (cyclic dependencies)
 } from '@ultraviolet/illustrations'
 import { useState } from 'react'
+
+import { SelectableCard } from '..'
 import { Badge } from '../../Badge'
 import { Link } from '../../Link'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { SelectableCard } from '..'
-import { MacMiniProductIcon } from '@ultraviolet/icons/product/MacMiniProductIcon'
-import { ColdStorageProductIcon } from '@ultraviolet/icons/product/ColdStorageProductIcon'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Illustration: StoryFn = args => {
   const [value, onChange] = useState('label-30')

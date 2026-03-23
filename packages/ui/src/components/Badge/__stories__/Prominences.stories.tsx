@@ -1,7 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { SENTIMENTS } from '../../../theme'
 import { Badge } from '..'
+import { SENTIMENTS } from '../../../theme'
 import { PROMINENCES } from '../constant'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Prominences: StoryFn = props => (
   <>

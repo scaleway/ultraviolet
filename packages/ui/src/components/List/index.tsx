@@ -1,14 +1,8 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type {
-  CSSProperties,
-  Dispatch,
-  ReactNode,
-  RefAttributes,
-  SetStateAction,
-} from 'react'
 import { Children, forwardRef, useEffect, useState } from 'react'
+
 import { Cell } from './Cell'
 import { HeaderCell } from './HeaderCell'
 import { HeaderRow } from './HeaderRow'
@@ -17,7 +11,15 @@ import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
 import { listStyle } from './styles.css'
+
 import type { ColumnProps } from './types'
+import type {
+  CSSProperties,
+  Dispatch,
+  ReactNode,
+  RefAttributes,
+  SetStateAction,
+} from 'react'
 
 // Note: Get type optional type from omit values of ListContext
 type ListProps = {
@@ -136,7 +138,6 @@ const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(
  * List is a component that displays a list of items based on the columns you provide and the data you pass.
  */
 type ListType = {
-  // biome-ignore  lint/style/useUnifiedTypeSignatures: ok
   (props: NewListProps & RefAttributes<HTMLTableElement>): ReactNode
   /**
    * @deprecated Use `colMode="strict"`

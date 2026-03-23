@@ -3,6 +3,7 @@ import { userEvent } from '@testing-library/user-event'
 import { EscapeIcon } from '@ultraviolet/icons/EscapeIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, test } from 'vitest'
+
 import { SteppedListCard } from '..'
 import { blockStorageWire } from '../__mocks__/blockStorageWire'
 

@@ -2,6 +2,7 @@ import { AlertCircleOutlineIcon } from '@ultraviolet/icons/AlertCircleOutlineIco
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
+
 import { StepList } from '..'
 
 describe('stepList', () => {

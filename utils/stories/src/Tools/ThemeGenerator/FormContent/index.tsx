@@ -10,7 +10,9 @@ import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
 import { Button, Row, Stack, Text, Tooltip } from '@ultraviolet/ui'
 import { useState } from 'react'
+
 import { hexadecimalColorRegex, INITIAL_VALUES } from '../contants'
+
 import { capitalizeText, row } from './style.css'
 
 export const FormContent = () => {
@@ -88,9 +90,7 @@ export const FormContent = () => {
               >
                 {isRequiredSentiment
                   ? `${field.key} sentiment name`
-                  : `Additional sentiment ${
-                      index - countRequiredSentiments + 1
-                    } name`}
+                  : `Additional sentiment ${index - countRequiredSentiments + 1} name`}
               </Text>
               <Tooltip
                 text={
@@ -119,9 +119,7 @@ export const FormContent = () => {
               >
                 {isRequiredSentiment
                   ? `${field.key} sentiment value`
-                  : `Additional sentiment ${
-                      index - countRequiredSentiments + 1
-                    } value`}
+                  : `Additional sentiment ${index - countRequiredSentiments + 1} value`}
               </Text>
               <Stack alignItems="center" direction="row" gap={1}>
                 <Row className={row} gap={1} templateColumns="9fr 1fr">

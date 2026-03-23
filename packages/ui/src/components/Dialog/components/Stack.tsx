@@ -1,7 +1,8 @@
 'use client'
 
-import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../../Stack'
+
+import type { CSSProperties, ReactNode } from 'react'
 
 type DialogStackProps = {
   children: ReactNode

@@ -1,9 +1,10 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Modal } from '../index'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const WithTooltip: StoryFn = props => (
   <Modal {...props} disclosure={<Button>With a Tooltip</Button>}>

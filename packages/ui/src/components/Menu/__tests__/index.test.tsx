@@ -6,6 +6,7 @@ import {
   shouldMatchSnapshotWithPortal,
 } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
+
 import { Menu } from '..'
 
 const disclosure = (

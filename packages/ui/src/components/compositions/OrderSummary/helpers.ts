@@ -1,6 +1,8 @@
 import { useContext } from 'react'
+
 import { multiplier } from './constants'
 import { OrderSummaryContext } from './Provider'
+
 import type {
   CurrencyType,
   ItemsType,
@@ -234,12 +236,7 @@ export const DisplayPrice = ({
         localeFormat,
         currency,
         fractionDigits ?? 2,
-      )} - ${formatNumber(
-        price[`maxPrice${withDiscount}`] / divisor,
-        localeFormat,
-        currency,
-        fractionDigits ?? 2,
-      )}`
+      )} - ${formatNumber(price[`maxPrice${withDiscount}`] / divisor, localeFormat, currency, fractionDigits ?? 2)}`
 }
 
 export const computeCategoriesPrice = (

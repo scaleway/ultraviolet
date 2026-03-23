@@ -1,8 +1,10 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useMemo, useState } from 'react'
+
+import { Slider } from '..'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { Slider } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const PrefixSuffix: StoryFn<typeof Slider> = args => {
   const [value, setValue] = useState(10)

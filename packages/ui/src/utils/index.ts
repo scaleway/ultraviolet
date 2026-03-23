@@ -1,9 +1,5 @@
 export type { ComparableType } from '@ultraviolet/utils'
-export {
-  capitalize,
-  getUUID,
-  orderBy,
-} from '@ultraviolet/utils'
+export { capitalize, getUUID, orderBy } from '@ultraviolet/utils'
 export {
   bounce as bounceDefault,
   fadeIn as fadeInDefault,

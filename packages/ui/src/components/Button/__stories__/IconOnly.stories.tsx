@@ -1,4 +1,5 @@
 import { PencilIcon } from '@ultraviolet/icons/PencilIcon'
+
 import { Template } from './Template.stories'
 
 export const IconOnly = Template.bind({})

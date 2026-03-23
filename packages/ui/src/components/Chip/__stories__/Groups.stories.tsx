@@ -1,8 +1,10 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
+
+import { Chip } from '..'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { Chip } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Groups: StoryFn<typeof Chip> = ({ ...args }) => {
   const [singleSelected, setSingleSelected] = useState(-1)

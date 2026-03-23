@@ -1,9 +1,11 @@
 import { shouldMatchSnapshot } from '@utils/test'
-import type { ComponentProps } from 'react'
 import { describe, test } from 'vitest'
-import { SENTIMENTS } from '../../../theme'
+
 import { Loader } from '..'
+import { SENTIMENTS } from '../../../theme'
 import { SIZES } from '../constants'
+
+import type { ComponentProps } from 'react'
 
 describe('loader', () => {
   test('renders default props', () =>

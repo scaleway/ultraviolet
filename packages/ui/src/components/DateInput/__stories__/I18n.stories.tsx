@@ -1,10 +1,12 @@
+import { enGB } from 'date-fns/locale/en-GB'
+import { useState } from 'react'
+
+import { DateInput } from '..'
+import { SelectInput } from '../../SelectInput'
+
 import type { StoryFn } from '@storybook/react-vite'
 import type { Locale } from 'date-fns'
-import { enGB } from 'date-fns/locale/en-GB'
 import type { ComponentProps } from 'react'
-import { useState } from 'react'
-import { SelectInput } from '../../SelectInput'
-import { DateInput } from '..'
 
 const locales = ['en', 'fr', 'es', 'de', 'ru'] as const
 

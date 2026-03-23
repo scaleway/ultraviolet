@@ -1,12 +1,15 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
 import { useState } from 'react'
+
+import { Table } from '..'
 import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { Stack } from '../../Stack'
-import { Table } from '..'
+
 import { columns, data as DATA } from './resources'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 type Movie = {
   id: string

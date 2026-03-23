@@ -1,18 +1,21 @@
 'use client'
 
-import type { DatumValue, Box as NivoBox, ValueFormat } from '@nivo/core'
-import type { LineSvgProps, Point, Serie } from '@nivo/line'
 import { ResponsiveLine } from '@nivo/line'
-import type { ScaleSpec } from '@nivo/scales'
-import type { theme as UVTheme } from '@ultraviolet/themes'
 import { useTheme } from '@ultraviolet/themes'
-import type { ComponentProps, CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
+
 import { getLegendColor } from '../../helpers/legend'
 import { getNivoTheme } from '../../helpers/nivoTheme'
+
 import { CustomLegend } from './CustomLegend'
 import { getMaxChartValue, getMinChartValue } from './helpers'
 import { LineChartTooltip } from './Tooltip'
+
+import type { DatumValue, Box as NivoBox, ValueFormat } from '@nivo/core'
+import type { LineSvgProps, Point, Serie } from '@nivo/line'
+import type { ScaleSpec } from '@nivo/scales'
+import type { theme as UVTheme } from '@ultraviolet/themes'
+import type { ComponentProps, CSSProperties } from 'react'
 
 type LineChartProps = {
   height?: string | number

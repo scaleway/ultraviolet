@@ -1,14 +1,16 @@
-import type * as Nivo from '@nivo/core'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import type { ComponentProps } from 'react'
 import { describe, test, vi } from 'vitest'
+
 import { BarChart } from '..'
 import {
   barChartMultiData,
   barChartPositiveNegativeData,
   barChartSimpleData,
 } from '../__stories__/mockData'
+
+import type * as Nivo from '@nivo/core'
+import type { ComponentProps } from 'react'
 
 // Mock the ResponsiveWrapper component
 vi.mock('@nivo/core', async importOriginal => {
@@ -46,7 +48,7 @@ describe('barChart', () => {
   test('renders correctly with negative values', () =>
     shouldMatchSnapshot(<BarChart data={barChartPositiveNegativeData} />))
 
-  // biome-ignore lint/suspicious/noSkippedTests: to fix
+  // oxlint-disable vitest/no-disabled-tests: to fix
   test.skip('renders correctly with custom tooltip format', async () => {
     const { container } = renderWithTheme(
       <BarChart

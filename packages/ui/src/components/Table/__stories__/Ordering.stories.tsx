@@ -1,7 +1,10 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useMemo, useState } from 'react'
+
 import { Table } from '..'
+
 import { data as sourceData } from './resources'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Ordering: StoryFn = args => {
   const [currentOrder, setCurrentOrder] = useState<{

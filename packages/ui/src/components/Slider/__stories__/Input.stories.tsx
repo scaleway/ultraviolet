@@ -1,5 +1,6 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { Slider } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Input: StoryFn<typeof Slider> = args => <Slider {...args} />
 

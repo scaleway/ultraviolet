@@ -1,8 +1,10 @@
 import { cn } from '@ultraviolet/utils'
 import { useEffect, useMemo, useState } from 'react'
+
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { UnitInput } from '../../UnitInput'
+
 import { Units } from './constants'
 import { computeCategoriesPrice, computeTotalPrice } from './helpers'
 import orderSummaryLocales from './locales/en'
@@ -10,6 +12,7 @@ import { NonScrollableContent } from './NonScrollableContent'
 import { OrderSummaryContext } from './Provider'
 import { ScrollableContent } from './ScrollableContent'
 import { orderSummaryStyle } from './styles.css'
+
 import type { OrderSummaryProps, TimeUnit } from './types'
 
 export const OrderSummary = ({

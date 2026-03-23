@@ -1,12 +1,14 @@
 'use client'
 
 import { SelectInput } from '@ultraviolet/ui'
-import type { ComponentProps } from 'react'
 import { useCallback } from 'react'
-import type { FieldPath, FieldValues, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
+
 import { useErrors } from '../../providers'
+
 import type { BaseFieldProps } from '../../types'
+import type { ComponentProps } from 'react'
+import type { FieldPath, FieldValues, PathValue } from 'react-hook-form'
 
 type SelectInputFieldProps<
   TFieldValues extends FieldValues,

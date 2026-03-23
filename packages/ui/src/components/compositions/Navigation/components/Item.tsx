@@ -1,4 +1,4 @@
-// biome-ignore-all lint/a11y/useFocusableInteractive: to fix
+// oxlint-disable jsx_a11y/interactive-supports-focus: to fix
 // oxlint-disable eslint/max-statements
 // oxlint-disable eslint/complexity
 
@@ -6,13 +6,6 @@
 
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn } from '@ultraviolet/utils'
-import type {
-  ComponentProps,
-  CSSProperties,
-  DragEvent,
-  ElementType,
-  ReactNode,
-} from 'react'
 import {
   Children,
   isValidElement,
@@ -22,15 +15,25 @@ import {
   useMemo,
   useRef,
 } from 'react'
-import type { Badge } from '../../../Badge'
+
 import { Stack } from '../../../Stack'
 import { Tooltip } from '../../../Tooltip'
 import { useNavigation } from '../NavigationProvider'
 import { navigationStyle } from '../styles.css'
-import type { ItemType, PinUnPinType } from '../types'
+
 import { ItemExpanded } from './ItemExpanded'
 import { ItemMenu, ItemMenuItem } from './ItemMenu'
 import { ItemContext } from './ItemProvider'
+
+import type { Badge } from '../../../Badge'
+import type { ItemType, PinUnPinType } from '../types'
+import type {
+  ComponentProps,
+  CSSProperties,
+  DragEvent,
+  ElementType,
+  ReactNode,
+} from 'react'
 
 type LinkProps = {
   to: string

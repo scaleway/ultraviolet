@@ -1,17 +1,20 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, RefObject } from 'react'
 import { useCallback, useEffect, useLayoutEffect, useRef } from 'react'
-import type { ModalProps } from '../Modal'
+
 import { Modal } from '../Modal'
-import type { ModalState } from '../Modal/types'
 import { Separator } from '../Separator'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+
 import { DrawerContent } from './DrawerContent'
-import type { SizeProp } from './styles.css'
 import { drawerStyle } from './styles.css'
+
+import type { ModalProps } from '../Modal'
+import type { ModalState } from '../Modal/types'
+import type { SizeProp } from './styles.css'
+import type { ComponentProps, RefObject } from 'react'
 
 type DrawerProps = Pick<
   ComponentProps<typeof Modal>,

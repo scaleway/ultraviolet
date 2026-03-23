@@ -1,11 +1,14 @@
 'use client'
 
 import { useTheme } from '@ultraviolet/themes'
-import type { ReactNode } from 'react'
+
 import { Checkbox } from '../Checkbox'
+
 import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 import { HeaderCell } from './HeaderCell'
 import { useTableContext } from './TableContext'
+
+import type { ReactNode } from 'react'
 
 type HeaderRowProps = {
   children: ReactNode

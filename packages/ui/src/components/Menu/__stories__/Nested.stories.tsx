@@ -1,6 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { Menu } from '..'
+
 import { DefaultDisclosure } from './Template.stories'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Nested: StoryFn<typeof Menu> = ({ ...props }) => (
   <Menu {...props} disclosure={DefaultDisclosure} searchable>

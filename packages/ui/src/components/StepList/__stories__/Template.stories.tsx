@@ -1,6 +1,7 @@
+import { StepList } from '..'
+
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { StepList } from '..'
 
 export const Template: StoryFn<ComponentProps<typeof StepList>> = args => (
   <StepList {...args}>

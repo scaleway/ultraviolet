@@ -1,11 +1,14 @@
-import type { ReactNode } from 'react'
 import { useContext } from 'react'
+
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+
 import { DisplayPrice } from './helpers'
 import { OrderSummaryContext } from './Provider'
 import { orderSummaryStyle } from './styles.css'
+
 import type { PriceTypeSingle, TimeUnit } from './types'
+import type { ReactNode } from 'react'
 
 type NonScrollableContentProps = {
   discount: number

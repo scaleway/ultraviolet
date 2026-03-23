@@ -1,4 +1,5 @@
 import { EstimateCost } from '..'
+
 import { Template } from './Template.stories'
 
 export const GlobalDiscount = Template.bind({})

@@ -2,11 +2,14 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, ReactNode } from 'react'
-import type { Color } from '../../theme'
+
 import { useColumnProvider } from '../List/ColumnProvider'
+
 import { tableStyle } from './styles.css'
 import { maxWidthCell, minWidthCell, widthCell } from './variables.css'
+
+import type { Color } from '../../theme'
+import type { CSSProperties, ReactNode } from 'react'
 
 type Align = 'left' | 'center' | 'right'
 

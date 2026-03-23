@@ -1,7 +1,7 @@
-import type { ComponentProps, DispatchWithoutAction, ReactNode } from 'react'
 import type { Popup } from '../Popup'
 import type { TextInput } from '../TextInput'
 import type { KeyGroup } from './KeyGroup'
+import type { ComponentProps, DispatchWithoutAction, ReactNode } from 'react'
 
 type ChildrenProps = {
   searchTerms: string

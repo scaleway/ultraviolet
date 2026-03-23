@@ -1,12 +1,14 @@
 'use client'
 
 import { NumberInput } from '@ultraviolet/ui'
+import { useController } from 'react-hook-form'
+
+import { useErrors } from '../../providers'
+import { isInteger } from '../../validators/isInteger'
+
+import type { BaseFieldProps } from '../../types'
 import type { ComponentProps, FocusEvent } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
-import { useController } from 'react-hook-form'
-import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
-import { isInteger } from '../../validators/isInteger'
 
 type NumberInputProps<
   TFieldValues extends FieldValues,

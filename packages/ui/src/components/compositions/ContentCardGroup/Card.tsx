@@ -1,16 +1,19 @@
 'use client'
 
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
+import { forwardRef } from 'react'
+
+import { Stack } from '../../Stack'
+import { Text } from '../../Text'
+
+import { contentCardGroupStyle } from './styles.css'
+
 import type {
   AnchorHTMLAttributes,
   CSSProperties,
   ElementType,
   ReactNode,
 } from 'react'
-import { forwardRef } from 'react'
-import { Stack } from '../../Stack'
-import { Text } from '../../Text'
-import { contentCardGroupStyle } from './styles.css'
 
 type CardProps = {
   title?: string

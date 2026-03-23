@@ -1,5 +1,6 @@
-import { Text } from '../../Text'
 import { Table } from '..'
+import { Text } from '../../Text'
+
 import { data } from './resources'
 import { Template } from './Template.stories'
 

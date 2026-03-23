@@ -1,6 +1,5 @@
 'use client'
 
-import type { Dispatch, ReactNode, RefObject } from 'react'
 import {
   createContext,
   useCallback,
@@ -10,9 +9,12 @@ import {
   useRef,
   useState,
 } from 'react'
+
 import { ANIMATION_DURATION, NAVIGATION_WIDTH } from './constants'
 import NavigationLocales from './locales/en'
+
 import type { PinUnPinType } from './types'
+import type { Dispatch, ReactNode, RefObject } from 'react'
 
 type Item = {
   label: string

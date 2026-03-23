@@ -2,6 +2,7 @@ import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category/O
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn } from '@ultraviolet/utils'
 import { Children } from 'react'
+
 import { Button } from '../../../Button'
 import { Menu } from '../../../Menu'
 import { Stack } from '../../../Stack'
@@ -9,9 +10,11 @@ import { Text } from '../../../Text'
 import { Tooltip } from '../../../Tooltip'
 import { useNavigation } from '../NavigationProvider'
 import { navigationStyle } from '../styles.css'
-import type { ItemMenuItemType, ItemMenuType } from './ComponentsTypes'
+
 import { ItemBadge, ItemPinnedButton } from './ItemFragments'
 import { ItemProvider } from './ItemProvider'
+
+import type { ItemMenuItemType, ItemMenuType } from './ComponentsTypes'
 
 export const ItemMenu = ({
   style,

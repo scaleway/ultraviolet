@@ -1,12 +1,15 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
 import { useMemo } from 'react'
+
 import { Text } from '../Text'
+
 import { TEXT_VARIANT } from './constant'
-import type { BadgeVariants } from './styles.css'
 import { badgeStyle } from './styles.css'
+
+import type { BadgeVariants } from './styles.css'
+import type { CSSProperties, ReactNode } from 'react'
 
 type BadgeProps = {
   className?: string

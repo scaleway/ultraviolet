@@ -1,4 +1,5 @@
 import { Tabs } from '..'
+
 import { Template } from './Template.stories'
 
 export const MenuDisabled = Template.bind({})

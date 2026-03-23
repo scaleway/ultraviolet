@@ -1,6 +1,7 @@
 'use client'
 
 import { Text } from '../Text'
+
 import { pieChartStyle } from './styles.css'
 
 type TooltipProps = {

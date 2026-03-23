@@ -1,6 +1,8 @@
 import { theme } from '@ultraviolet/themes'
 import { recipe } from '@vanilla-extract/recipes'
+
 import { SENTIMENTS } from '../../theme'
+
 import { PROMINENCES, SIZES } from './constants'
 
 const TEXT_VARIANT = {

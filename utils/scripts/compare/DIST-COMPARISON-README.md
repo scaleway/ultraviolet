@@ -5,6 +5,7 @@ This script compares the `dist` folders across all packages in the Ultraviolet m
 ## Purpose
 
 After a major build tool migration, it's crucial to verify that:
+
 - All packages still build successfully
 - Build outputs haven't changed unexpectedly
 - No files are missing or corrupted
@@ -45,6 +46,7 @@ This generates `dist-comparison/migration-comparison-report.txt` with detailed c
 ## What It Compares
 
 For each package:
+
 - **File existence**: New files, missing files
 - **Content changes**: Modified files (via SHA256 checksums)
 - **Size changes**: File size differences

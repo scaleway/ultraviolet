@@ -1,6 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
+
 import { CheckboxGroup } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Controlled: StoryFn = () => {
   const [values, onChange] = useState(['termsAndConditions'])

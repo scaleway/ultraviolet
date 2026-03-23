@@ -1,5 +1,6 @@
-import type { ScreenSize } from '../../theme'
 import { screens } from '../../theme'
+
+import type { ScreenSize } from '../../theme'
 
 export const up = (size: ScreenSize, rules: string): string => {
   if (!(size in screens)) {

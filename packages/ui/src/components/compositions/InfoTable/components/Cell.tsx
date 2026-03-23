@@ -1,9 +1,10 @@
 'use client'
 
-import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
 import { infoTableStyle } from '../styles.css'
+
+import type { CSSProperties, ReactNode } from 'react'
 
 export type CellProps = {
   children: ReactNode

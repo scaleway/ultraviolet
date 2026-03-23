@@ -1,5 +1,6 @@
-import type { Meta } from '@storybook/react-vite'
 import { Slider } from '..'
+
+import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Slider,

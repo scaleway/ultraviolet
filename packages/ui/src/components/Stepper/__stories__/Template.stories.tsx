@@ -1,5 +1,6 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { Stepper } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Template: StoryFn<typeof Stepper> = args => <Stepper {...args} />
 

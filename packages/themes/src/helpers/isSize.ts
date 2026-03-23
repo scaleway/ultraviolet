@@ -1,5 +1,6 @@
-import type { Sizes } from '../constants'
 import { sizing } from '../constants'
+
+import type { Sizes } from '../constants'
 
 const SIZES = Object.keys(sizing) as Sizes[]
 

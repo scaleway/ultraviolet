@@ -1,7 +1,6 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
 import {
   Children,
   cloneElement,
@@ -11,11 +10,14 @@ import {
   useRef,
   useState,
 } from 'react'
+
 import { tabsStyle } from './styles.css'
 import { Tab } from './Tab'
 import { TabMenu } from './TabMenu'
 import { TabMenuItem } from './TabMenuItem'
 import { TabsContext } from './TabsContext'
+
+import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
 
 type TabsProps = {
   selected?: string | number

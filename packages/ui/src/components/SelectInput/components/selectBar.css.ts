@@ -1,6 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+
 import { selectableCardOptionGroupStyle } from '../../SelectableCardOptionGroup/styles.css'
 import { unitInputStyle } from '../../UnitInput/styles.css'
 import { INPUT_SIZE_HEIGHT } from '../constants'

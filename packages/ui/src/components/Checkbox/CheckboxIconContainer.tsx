@@ -1,6 +1,7 @@
 'use client'
 
 import { useTheme } from '@ultraviolet/themes'
+
 import { checkboxStyle } from './styles.css'
 
 export const CheckboxIconContainer = ({

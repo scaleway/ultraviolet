@@ -1,9 +1,11 @@
-// biome-ignore-all lint/style/noDoneCallback: test ok
-import type { KeyboardEvent } from 'react'
 import { describe, expect, test, vi } from 'vitest'
+
 import onKeyOnlyNumbers from '../keycode'
 import parseIntOr from '../numbers'
 import recursivelyGetChildrenString from '../recursivelyGetChildrenString'
+
+// oxlint-disablestyle/noDoneCallback: test ok
+import type { KeyboardEvent } from 'react'
 
 describe(recursivelyGetChildrenString, () => {
   const complexChildrenWithStringNestedChildren = {

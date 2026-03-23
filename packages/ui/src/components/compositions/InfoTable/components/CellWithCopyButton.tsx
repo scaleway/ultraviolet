@@ -1,9 +1,11 @@
-import type { ComponentProps } from 'react'
 import { CopyButton } from '../../../CopyButton'
 import { Row } from '../../../Row'
 import { Text } from '../../../Text'
-import type { CellProps } from './Cell'
+
 import { InfoTableCell } from './Cell'
+
+import type { CellProps } from './Cell'
+import type { ComponentProps } from 'react'
 
 export const CellWithCopyButton = ({
   copyContent,

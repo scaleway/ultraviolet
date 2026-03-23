@@ -51,21 +51,15 @@ const container = recipe({
     size: {
       large: {
         minHeight: theme.sizing[600],
-        padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.large]} - 1px) ${
-          theme.space['2']
-        }`,
+        padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.large]} - 1px) ${theme.space['2']}`,
       },
       medium: {
         minHeight: theme.sizing[500],
-        padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.medium]} - 1px) ${
-          theme.space['2']
-        }`,
+        padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.medium]} - 1px) ${theme.space['2']}`,
       },
       small: {
         minHeight: theme.sizing[400],
-        padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.small]} - 1px) ${
-          theme.space['1']
-        }`,
+        padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.small]} - 1px) ${theme.space['1']}`,
       },
     },
   },

@@ -1,5 +1,6 @@
-import type { SelectInput } from '@ultraviolet/ui'
 import { Badge } from '@ultraviolet/ui'
+
+import type { SelectInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 
 export const ubuntuOptions: ComponentProps<typeof SelectInput>['options'] = [

@@ -3,7 +3,9 @@ import { SunIcon } from '@ultraviolet/icons/SunIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { Toggle } from '@ultraviolet/ui'
 import { cn } from '@ultraviolet/utils'
+
 import styles from '../../styles/component.module.scss'
+
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
 

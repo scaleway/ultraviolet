@@ -1,6 +1,7 @@
 'use client'
 
 import { Skeleton } from '../Skeleton'
+
 import { Cell } from './Cell'
 import { tableStyle } from './styles.css'
 

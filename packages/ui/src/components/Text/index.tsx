@@ -1,17 +1,20 @@
 'use client'
 
-import type { TextVariant } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, ElementType, ReactNode } from 'react'
 import { useRef } from 'react'
+
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { useIsOverflowing } from '../../hooks/useIsOverflowing'
-import type { ExtendedColor } from '../../theme'
 import { Tooltip } from '../Tooltip'
-import type { PROMINENCES } from './constants'
+
 import { textStyle } from './style.css'
 import { textVars } from './variables.css'
+
+import type { ExtendedColor } from '../../theme'
+import type { PROMINENCES } from './constants'
+import type { TextVariant } from '@ultraviolet/themes'
+import type { CSSProperties, ElementType, ReactNode } from 'react'
 
 type ProminenceProps = keyof typeof PROMINENCES
 type PlacementProps = CSSProperties['textAlign']

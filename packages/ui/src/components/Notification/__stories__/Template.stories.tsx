@@ -1,7 +1,9 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { VerifyCardProductIcon } from '@ultraviolet/icons/product'
-import { Button, Text } from '../../index'
+
 import { NotificationContainer, notification } from '..'
+import { Button, Text } from '../../index'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Template: StoryFn<typeof NotificationContainer> = args => (
   <>

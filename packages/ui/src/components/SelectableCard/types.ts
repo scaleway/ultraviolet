@@ -1,3 +1,4 @@
+import type { LabelProp } from '../../types'
 import type {
   ChangeEventHandler,
   CSSProperties,
@@ -6,8 +7,6 @@ import type {
   ReactNode,
   RefObject,
 } from 'react'
-
-import type { LabelProp } from '../../types'
 
 export type SelectableCardProps = {
   name?: string

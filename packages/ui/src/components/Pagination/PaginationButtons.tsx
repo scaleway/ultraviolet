@@ -3,9 +3,11 @@
 import { ArrowLeftIcon } from '@ultraviolet/icons/ArrowLeftIcon'
 import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { useCallback, useMemo } from 'react'
+
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+
 import { getPageNumbers } from './getPageNumbers'
 import { paginationStyle } from './styles.css'
 

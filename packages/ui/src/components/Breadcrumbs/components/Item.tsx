@@ -2,17 +2,20 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+import { useMemo } from 'react'
+
+import { Button } from '../../Button'
+import { Link } from '../../Link'
+import { Text } from '../../Text'
+import { breadcrumbsStyle } from '../styles.css'
+
+import { maxWidthVar, minWidthVar } from './styles.css'
+
 import type {
   KeyboardEvent,
   MouseEvent as ReactMouseEvent,
   ReactNode,
 } from 'react'
-import { useMemo } from 'react'
-import { Button } from '../../Button'
-import { Link } from '../../Link'
-import { Text } from '../../Text'
-import { breadcrumbsStyle } from '../styles.css'
-import { maxWidthVar, minWidthVar } from './styles.css'
 
 type ItemProps = {
   children: ReactNode

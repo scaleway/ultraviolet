@@ -1,6 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+
 import { IconSkeleton } from './IconSkeleton'
 import { Line } from './Line'
 import { skeletonStyle } from './styles.css'
@@ -20,7 +21,7 @@ export const Blocks = ({
     })}
   >
     {Array.from({ length }, (_, i) => (
-      // biome-ignore lint/suspicious/noArrayIndexKey: to fix
+      // oxlint-disable react/no-array-index-key: to fix
       <div
         className={skeletonStyle.blocksSkeleton}
         key={`skeleton-blocks-${i}`}

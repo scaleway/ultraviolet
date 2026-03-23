@@ -1,6 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { useEffect, useState } from 'react'
+
 import { ProgressBar } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const ShowProgress: StoryFn = props => {
   const [value, setValue] = useState(0)

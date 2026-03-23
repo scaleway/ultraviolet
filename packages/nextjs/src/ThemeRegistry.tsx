@@ -1,6 +1,7 @@
 'use client'
 
 import { ThemeProvider } from '@ultraviolet/themes'
+
 import type { ComponentProps, ReactNode } from 'react'
 
 type ThemeRegistryProps = {

@@ -3,9 +3,11 @@ import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
+
 import { Modal } from '..'
 import illustration from '../__stories__/assets/illustration.webp'
 import { useModal } from '../ModalProvider'
+
 import { customDialogBackdropStyles, customDialogStyles } from './testStyle.css'
 
 const mockOnClick = vi.fn()

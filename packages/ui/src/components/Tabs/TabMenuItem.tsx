@@ -1,10 +1,13 @@
 'use client'
 
-import type { ComponentProps } from 'react'
 import { useMemo } from 'react'
+
 import { Menu } from '../Menu'
+
 import { tabsStyle } from './styles.css'
 import { useTabsContext } from './TabsContext'
+
+import type { ComponentProps } from 'react'
 
 type TabMenuItemProps = {
   value?: string | number

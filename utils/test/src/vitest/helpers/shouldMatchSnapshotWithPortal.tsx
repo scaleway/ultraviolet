@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react'
-import type { ReactElement } from 'react'
 import { expect, vi } from 'vitest'
+
+import type { ReactElement } from 'react'
 
 export const makeShouldMatchSnapshotWithPortal = (
   children: ReactElement,
@@ -15,7 +16,6 @@ export const makeShouldMatchSnapshotWithPortal = (
   globalThis.console = { ...console, error: vi.fn() }
 
   const { asFragment, unmount } = render(children, { wrapper })
-  // biome-ignore  lint/suspicious/noMisplacedAssertion: use inside it/expect
   expect(asFragment()).toMatchSnapshot()
 
   // Unmounting to don't see the warning message described above

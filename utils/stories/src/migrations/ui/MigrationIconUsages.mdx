@@ -6,8 +6,11 @@ import '../styles.css'
 # Migrate Icon Usages
 
 This migration has per main goal to optimize the bundle size and improve the performance of the application by removing the import of all icons from the `@ultraviolet/icons` package.
-<br/>
-Currently we import all the icons contained in the library but depending on your usage you may not need all of them. This issue is particularly important for the web application where the bundle size is a critical point.
+
+<br />
+Currently we import all the icons contained in the library but depending on your
+usage you may not need all of them. This issue is particularly important for the
+web application where the bundle size is a critical point.
 
 <br />
 
@@ -15,14 +18,14 @@ Currently we import all the icons contained in the library but depending on your
 
 You can find below the list of components that have deprecated props related to icons and the new usage to follow. Click on the component name to see the detailed migration.
 
-| Component        | Deprecated Props                     | New Usage                                      |
-|------------------|--------------------------------------|------------------------------------------------|
-| [Button](#button) | `icon`, `iconPosition`, `iconVariant` | Use the imported icon directly in the children |
-| [Badge](#badge)   | `icon`                               | Use the imported icon directly in the children |
-| [Bullet](#bullet) | `icon`, `iconVariant`                | Use the imported icon directly in the children |
-| [AvatarV2](#avatarv2) | `icon`                           | Use the imported icon directly in the children |
-| [Separator](#separator) | `icon`                         | Use the imported icon directly in the children |
-| [Tag](#tag)       | `icon`                               | Use the imported icon directly in the children |
+| Component               | Deprecated Props                      | New Usage                                      |
+| ----------------------- | ------------------------------------- | ---------------------------------------------- |
+| [Button](#button)       | `icon`, `iconPosition`, `iconVariant` | Use the imported icon directly in the children |
+| [Badge](#badge)         | `icon`                                | Use the imported icon directly in the children |
+| [Bullet](#bullet)       | `icon`, `iconVariant`                 | Use the imported icon directly in the children |
+| [AvatarV2](#avatarv2)   | `icon`                                | Use the imported icon directly in the children |
+| [Separator](#separator) | `icon`                                | Use the imported icon directly in the children |
+| [Tag](#tag)             | `icon`                                | Use the imported icon directly in the children |
 
 <br />
 
@@ -31,7 +34,7 @@ You can find below the list of components that have deprecated props related to 
 The size of the icons has been updated to be more consistent across the library. You can find below the mapping between the old sizes and the new sizes.
 
 | Previous Size | New Size |
-|---------------|----------|
+| ------------- | -------- |
 | -             | xsmall   |
 | small         | small    |
 | large         | medium   |
@@ -44,7 +47,7 @@ The size of the icons has been updated to be more consistent across the library.
 We shouldn't use px anymore in the code. The size of the icons has been updated to be more consistent across the library. You can find below the mapping between the old sizes and the new sizes.
 
 | PX Value | Size Token |
-|----------|------------|
+| -------- | ---------- |
 | 12px     | xsmall     |
 | 16px     | small      |
 | 20px     | medium     |
@@ -63,8 +66,7 @@ We shouldn't use px anymore in the code. The size of the icons has been updated 
 ```tsx
 // Before
 import { Button } from '@ultraviolet/ui'
-
-<Button icon="pencil" iconPosition="right" iconVariant="outline">
+;<Button icon="pencil" iconPosition="right" iconVariant="outline">
   Edit
 </Button>
 ```
@@ -73,8 +75,7 @@ import { Button } from '@ultraviolet/ui'
 // After
 import { Button } from '@ultraviolet/ui'
 import { PencilOutlineIcon } from '@ultraviolet/icons/PencilOutlineIcon'
-
-<Button>
+;<Button>
   Edit <PencilOutlineIcon />
 </Button>
 ```
@@ -96,8 +97,7 @@ import { Badge } from '@ultraviolet/ui'
 // After
 import { Badge } from '@ultraviolet/ui'
 import { PencilOutlineIcon } from '@ultraviolet/icons/PencilOutlineIcon'
-
-<Badge>
+;<Badge>
   Edit <PencilOutlineIcon />
 </Badge>
 ```
@@ -136,16 +136,14 @@ import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 ```tsx
 // Before
 import { AvatarV2 } from '@ultraviolet/ui'
-
-<AvatarV2 variant="icon" shape="circle" sentiment="primary" icon="mosaic" />
+;<AvatarV2 variant="icon" shape="circle" sentiment="primary" icon="mosaic" />
 ```
 
 ```tsx
 // After
 import { AvatarV2 } from '@ultraviolet/ui'
 import { MosaicIcon } from '@ultraviolet/icons/MosaicIcon'
-
-<AvatarV2 variant="icon" shape="circle" sentiment="primary">
+;<AvatarV2 variant="icon" shape="circle" sentiment="primary">
   <MosaicIcon size="xlarge" />
 </AvatarV2>
 ```
@@ -157,20 +155,17 @@ import { MosaicIcon } from '@ultraviolet/icons/MosaicIcon'
 ```tsx
 // Before
 import { Separator } from '@ultraviolet/ui'
-
-<Separator direction="vertical" icon="ray-top-arrow" />
+;<Separator direction="vertical" icon="ray-top-arrow" />
 ```
 
 ```tsx
 // After
 import { Separator } from '@ultraviolet/ui'
 import { RayTopArrowIcon } from '@ultraviolet/icons'
-
-<Separator direction="vertical">
+;<Separator direction="vertical">
   <RayTopArrowIcon size="medium" />
 </Separator>
 ```
-
 
 ### Tag
 
@@ -179,18 +174,14 @@ import { RayTopArrowIcon } from '@ultraviolet/icons'
 ```tsx
 // Before
 import { Tag } from '@ultraviolet/ui'
-
-<Tag icon="check">
-  Valid
-</Tag>
+;<Tag icon="check">Valid</Tag>
 ```
 
 ```tsx
 // After
 import { Tag } from '@ultraviolet/ui'
 import { CheckIcon } from '@ultraviolet/icons'
-
-<Tag>
+;<Tag>
   <CheckIcon size="small" />
   Valid
 </Tag>

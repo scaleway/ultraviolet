@@ -1,9 +1,11 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
-import type { SIZES, VARIANTS } from './constants'
+
 import { productIconSizes, productIconVariants } from './styles.css'
+
+import type { SIZES, VARIANTS } from './constants'
+import type { CSSProperties, ReactNode } from 'react'
 
 type Variants = (typeof VARIANTS)[number]
 

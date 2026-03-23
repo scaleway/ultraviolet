@@ -1,5 +1,6 @@
 import { appendFileSync, readdirSync, statSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
+
 import {
   updateDynamicIllustrations,
   updateWireIllustrations,

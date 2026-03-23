@@ -1,7 +1,8 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { Stack } from '../../Stack'
 import { Key } from '..'
+import { Stack } from '../../Stack'
 import { KEYS_MATCH } from '../constants'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const SpecialKeys: StoryFn<typeof Key> = props => (
   <Stack gap={1}>

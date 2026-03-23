@@ -1,8 +1,10 @@
-import type { StoryFn } from '@storybook/react-vite'
+import { Menu } from '..'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
-import { Menu } from '..'
+
 import { DefaultDisclosure } from './Template.stories'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const LongMenu: StoryFn<typeof Menu> = ({ ...props }) => (
   <Menu {...props} disclosure={DefaultDisclosure}>

@@ -172,7 +172,6 @@
 - [#5819](https://github.com/scaleway/ultraviolet/pull/5819) [`48cc201`](https://github.com/scaleway/ultraviolet/commit/48cc201bd9278802a16d57e13c556364c88274bd) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor all components to use `vanilla-extract` instead of `Emotion`
 
 - [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGE**
-
   - `ClockOutlineIcon` has been renamed to `ClockIcon`
   - `ClockOutlineOutlineIcon` has been renamed to `ClockOutlineIcon`
 
@@ -201,7 +200,6 @@
 - [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - remove cjs build
 
 - [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - - `Logo`: new logo `RedHatLogo`
-
   - `Icon`: new icon `CloseCircleIcon`
 
 - [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - New logos
@@ -436,22 +434,18 @@
 ### Major Changes
 
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES
-
   - `GoldSupportProductIcon` => Replaced by `BusinessSupportProductIcon`
   - `PlatinumSupportProductIcon` => Replace by `EnterpriseSupportProductIcon`
   - `SilverSupportProductIcon` => Replaced by `AdvancedSupportProductIcon`
 
   New product icons:
-
   - `VpnConnectionProductIcon`
   - `VpnCustomerGatewayProductIcon`
 
   New system icon:
-
   - `ClichouseIcon`
 
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Name changing in Category icons:
-
   - `ToolsServicesCategoryIcon` → `ManagementAndGovernanceCategoryIcon`
   - `IotCategoryIcon` → `DomainsAndWebHostingCategoryIcon`
   - `ServerlessCategoryIcon` → `ServerlessComputeCategoryIcon`
@@ -462,27 +456,23 @@
   - `EnvironmentalFootprintCategoryIcon` → `CostAndImpactManagerCategoryIcon`
 
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **Beta 1 - Migration of Icons to @ultraviolet/icons with direct imports**
-
   - `Icon` component has been removed it was previously imported like `import { Icon } from '@ultraviolet/icons/legacy'`. Instead you should import the icon you need directly from `@ultraviolet/icons`.
 
     Before:
 
     ```tsx
-    import { Icon } from "@ultraviolet/icons/legacy";
-
-    <Icon name="drag" />;
+    import { Icon } from '@ultraviolet/icons/legacy'
+    ;<Icon name="drag" />
     ```
 
     After:
 
     ```tsx
-    import { DragIcon } from "@ultraviolet/icons";
-
-    <DragIcon />;
+    import { DragIcon } from '@ultraviolet/icons'
+    ;<DragIcon />
     ```
 
   ### Icons removed
-
   - `DocumentDbProductIcon`: no replacement.
   - `AsteriskIcon`: use \* in ASCII instead.
   - `CrossCircleIcon` use `CloseCircleOutlineIcon` instead.
@@ -490,7 +480,6 @@
   - `DragVariantIcon`: use `DragIcon` instead.
 
   ### System icons changes
-
   - prop `size` no longer support `string` and `number`. You shoud use the sizes supported by the component (`xmsall`, `small`, ect.). Example:
 
     ```tsx
@@ -506,7 +495,6 @@
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **BREAKING CHANGES**
 
   Deprecated props removed:
-
   - `CodeEditor`: prop "title" removed -> use "label" instead
   - `Icon`: prop "color" removed -> use "sentiment" instead
   - `Icon`: prop "size" can only be "xsmall", "small", "medium", "large", "xlarge" or "xxlarge"
@@ -544,7 +532,6 @@
 - [#5335](https://github.com/scaleway/ultraviolet/pull/5335) [`40e189c`](https://github.com/scaleway/ultraviolet/commit/40e189cb6af270ea830b9d7faeee20d15817425a) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGES**
 
   Deprecated props removed:
-
   - `CodeEditor`: prop "title" removed -> use "label" instead
   - `Icon`: prop "color" removed -> use "sentiment" instead
   - `Icon`: prop "size" can only be "xsmall", "small", "medium", "large", "xlarge" or "xxlarge"
@@ -595,18 +582,15 @@
 ### Major Changes
 
 - [`da3e7f7`](https://github.com/scaleway/ultraviolet/commit/da3e7f7c41ce6bad2c0dcd9a05693cee587f2ef3) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES
-
   - `GoldSupportProductIcon` => Replaced by `BusinessSupportProductIcon`
   - `PlatinumSupportProductIcon` => Replace by `EnterpriseSupportProductIcon`
   - `SilverSupportProductIcon` => Replaced by `AdvancedSupportProductIcon`
 
   New product icons:
-
   - `VpnConnectionProductIcon`
   - `VpnCustomerGatewayProductIcon`
 
   New system icon:
-
   - `ClichouseIcon`
 
 ### Patch Changes
@@ -625,7 +609,6 @@
 ### Major Changes
 
 - [#5113](https://github.com/scaleway/ultraviolet/pull/5113) [`a928589`](https://github.com/scaleway/ultraviolet/commit/a9285896d638e34eba9bb25c55c38de2aef4e210) Thanks [@matthprost](https://github.com/matthprost)! - Name changing in Category icons:
-
   - `ToolsServicesCategoryIcon` → `ManagementAndGovernanceCategoryIcon`
   - `IotCategoryIcon` → `DomainsAndWebHostingCategoryIcon`
   - `ServerlessCategoryIcon` → `ServerlessComputeCategoryIcon`
@@ -636,27 +619,23 @@
   - `EnvironmentalFootprintCategoryIcon` → `CostAndImpactManagerCategoryIcon`
 
 - [#5058](https://github.com/scaleway/ultraviolet/pull/5058) [`865c160`](https://github.com/scaleway/ultraviolet/commit/865c160aee2db5bd5e7b357e9693a45a17ef4284) Thanks [@matthprost](https://github.com/matthprost)! - **Beta 1 - Migration of Icons to @ultraviolet/icons with direct imports**
-
   - `Icon` component has been removed it was previously imported like `import { Icon } from '@ultraviolet/icons/legacy'`. Instead you should import the icon you need directly from `@ultraviolet/icons`.
 
     Before:
 
     ```tsx
-    import { Icon } from "@ultraviolet/icons/legacy";
-
-    <Icon name="drag" />;
+    import { Icon } from '@ultraviolet/icons/legacy'
+    ;<Icon name="drag" />
     ```
 
     After:
 
     ```tsx
-    import { DragIcon } from "@ultraviolet/icons";
-
-    <DragIcon />;
+    import { DragIcon } from '@ultraviolet/icons'
+    ;<DragIcon />
     ```
 
   ### Icons removed
-
   - `DocumentDbProductIcon`: no replacement.
   - `AsteriskIcon`: use \* in ASCII instead.
   - `CrossCircleIcon` use `CloseCircleOutlineIcon` instead.
@@ -664,7 +643,6 @@
   - `DragVariantIcon`: use `DragIcon` instead.
 
   ### System icons changes
-
   - prop `size` no longer support `string` and `number`. You shoud use the sizes supported by the component (`xmsall`, `small`, ect.). Example:
 
     ```tsx
@@ -862,26 +840,23 @@
 ### Patch Changes
 
 - [#4742](https://github.com/scaleway/ultraviolet/pull/4742) [`2a8b327`](https://github.com/scaleway/ultraviolet/commit/2a8b327cb41a72475d4dd91f55b55491ce2d78f6) Thanks [@matthprost](https://github.com/matthprost)! - - System Icons from `@ultraviolet/icons` have a change in their sizing. `large` became `medium` and a new `large` sizing has been created (around 24px)
-
   - `<Button />` the prop `icon`, `iconPosition` and `iconSentiment` has been marked as deprecated and will be removed in future major release. You should use the icon component directly in the children of the button:
 
   ```tsx
   // Before
-  import { Button } from "@ultraviolet/ui";
-
-  <Button icon="pencil" iconPosition="right" iconVariant="outline">
+  import { Button } from '@ultraviolet/ui'
+  ;<Button icon="pencil" iconPosition="right" iconVariant="outline">
     Edit
-  </Button>;
+  </Button>
   ```
 
   ```tsx
   // After
-  import { Button } from "@ultraviolet/ui";
-  import { PencilOutlineIcon } from "@ultraviolet/icons";
-
-  <Button>
+  import { Button } from '@ultraviolet/ui'
+  import { PencilOutlineIcon } from '@ultraviolet/icons'
+  ;<Button>
     Edit <PencilOutlineIcon />
-  </Button>;
+  </Button>
   ```
 
   - Fix of other legacy usages of icons into the library
@@ -1151,20 +1126,20 @@
 
   ```tsx
   // Before
-  import { Icon } from "@ultraviolet/icons";
+  import { Icon } from '@ultraviolet/icons'
 
   const MyComponent = () => (
     <Icon name="address" sentiment="danger" size="small" />
-  );
+  )
   ```
 
   ```tsx
   // Now
-  import { AddressIcon } from "@ultraviolet/icons";
+  import { AddressIcon } from '@ultraviolet/icons'
   // OR
-  import { AddressIcon } from "@ultraviolet/icons/AddressIcon";
+  import { AddressIcon } from '@ultraviolet/icons/AddressIcon'
 
-  const MyComponent = () => <Address sentiment="danger" size="small" />;
+  const MyComponent = () => <Address sentiment="danger" size="small" />
   ```
 
   This change will make it easier to use icons in your project and reduce the bundle size.
@@ -1172,22 +1147,22 @@
 
   ```tsx
   // Before
-  import { CategoryIcon } from "@ultraviolet/icons";
+  import { CategoryIcon } from '@ultraviolet/icons'
 
   // Now
-  import { BaremetalCategoryIcon } from "@ultraviolet/icons/category";
+  import { BaremetalCategoryIcon } from '@ultraviolet/icons/category'
   // OR
-  import { BaremetalCategoryIcon } from "@ultraviolet/icons/category/BaremetalCategoryIcon";
+  import { BaremetalCategoryIcon } from '@ultraviolet/icons/category/BaremetalCategoryIcon'
   ```
 
   ```tsx
   // Before
-  import { ProductIcon } from "@ultraviolet/icons";
+  import { ProductIcon } from '@ultraviolet/icons'
 
   // Now
-  import { InstanceProductIcon } from "@ultraviolet/icons/product";
+  import { InstanceProductIcon } from '@ultraviolet/icons/product'
   // OR
-  import { InstanceProductIcon } from "@ultraviolet/icons/product/InstanceProductIcon";
+  import { InstanceProductIcon } from '@ultraviolet/icons/product/InstanceProductIcon'
   ```
 
 ## 2.17.0
@@ -1778,12 +1753,10 @@
 ### Major Changes
 
 - [#2884](https://github.com/scaleway/ultraviolet/pull/2884) [`ac9aa7a7`](https://github.com/scaleway/ultraviolet/commit/ac9aa7a7b96d51bce1e3f721d43ce3df3cdfab17) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ THIS IS BREAKING CHANGES ⚠️
-
   - ProductIcon `messaging` has been renamed to `nats`
   - ProductIcon `SqsSns` has been renamed to `sqs`
 
   ***
-
   - New ProductIcon `sns`, `video` and `rocket`
 
 ### Patch Changes

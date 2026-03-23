@@ -1,5 +1,6 @@
 import { Stack, Text } from '@ultraviolet/ui'
 import Image from 'next/image'
+
 import styles from '../../../styles/advanced.module.scss'
 import swA11y from '../../assets/icons/icon-scaleway-a11y.svg'
 import swCustom from '../../assets/icons/icon-scaleway-custom.svg'

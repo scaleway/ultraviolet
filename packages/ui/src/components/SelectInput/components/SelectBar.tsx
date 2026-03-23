@@ -7,7 +7,6 @@ import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ReactNode, RefObject } from 'react'
 import {
   useCallback,
   useEffect,
@@ -16,6 +15,7 @@ import {
   useRef,
   useState,
 } from 'react'
+
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Tag } from '../../Tag'
@@ -25,8 +25,11 @@ import { SIZES_TAG } from '../constants'
 import { findOptionInOptions } from '../findOptionInOptions'
 import { useSelectInput } from '../SelectInputProvider'
 import { selectInputStyle } from '../styles.css'
-import type { OptionType } from '../types'
+
 import { maxWidthTag, minWidthTag } from './selectBar.css'
+
+import type { OptionType } from '../types'
+import type { ReactNode, RefObject } from 'react'
 
 type SelectBarProps = {
   size: 'small' | 'medium' | 'large'

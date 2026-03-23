@@ -2,6 +2,7 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
+
 import { CustomerSatisfaction } from '..'
 
 describe('customerSatisfaction', () => {

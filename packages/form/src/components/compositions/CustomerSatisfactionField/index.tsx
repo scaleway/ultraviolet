@@ -1,7 +1,8 @@
 import { CustomerSatisfaction } from '@ultraviolet/ui/compositions/CustomerSatisfaction'
-import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useController } from 'react-hook-form'
+
 import type { BaseFieldProps } from '../../../types'
+import type { FieldPath, FieldValues } from 'react-hook-form'
 
 type CustomerSatisfactionFieldProps<
   TFieldValues extends FieldValues,

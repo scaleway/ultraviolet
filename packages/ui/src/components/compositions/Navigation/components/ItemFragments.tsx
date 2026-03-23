@@ -1,12 +1,14 @@
 import { PinOutlineIcon } from '@ultraviolet/icons/PinOutlineIcon'
 import { UnpinIcon } from '@ultraviolet/icons/UnpinIcon'
-import type { MouseEvent } from 'react'
 import { useMemo } from 'react'
+
 import { Badge } from '../../../Badge'
 import { Tooltip } from '../../../Tooltip'
 import { useNavigation } from '../NavigationProvider'
 import { navigationStyle } from '../styles.css'
+
 import type { ItemExpandedType } from './ComponentsTypes'
+import type { MouseEvent } from 'react'
 
 export const ItemBadge = ({
   badgeText,

@@ -1,3 +1,5 @@
+import type { Badge } from '../../../Badge'
+import type { ItemType, PinUnPinType } from '../types'
 import type {
   ComponentProps,
   CSSProperties,
@@ -5,8 +7,6 @@ import type {
   ElementType,
   ReactNode,
 } from 'react'
-import type { Badge } from '../../../Badge'
-import type { ItemType, PinUnPinType } from '../types'
 
 export type ItemExpandedType = {
   categoryIcon: ReactNode

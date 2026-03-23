@@ -1,7 +1,8 @@
 'use client'
 
-import type { ReactNode } from 'react'
 import { createContext, useContext } from 'react'
+
+import type { ReactNode } from 'react'
 
 const OverlayContext = createContext({ isOverlay: false })
 // oxlint-disable-next-line react/only-export-components

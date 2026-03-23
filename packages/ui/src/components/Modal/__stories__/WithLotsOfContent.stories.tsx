@@ -1,6 +1,7 @@
-import type { StoryFn } from '@storybook/react-vite'
-import { Button } from '../../Button'
 import { Modal } from '..'
+import { Button } from '../../Button'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const WithLotsOfContent: StoryFn = props => (
   <Modal

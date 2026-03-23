@@ -1,7 +1,7 @@
-name: "size"
+name: 'size'
 on:
   pull_request:
-    types: ["opened", "edited", "reopened", "synchronize"]
+    types: ['opened', 'edited', 'reopened', 'synchronize']
 jobs:
   size:
     runs-on: ubuntu-24.04

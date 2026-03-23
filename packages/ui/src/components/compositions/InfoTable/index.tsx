@@ -1,13 +1,15 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
 import { useMemo } from 'react'
-import { InfoTableContext } from './Context'
+
 import { InfoTableCell } from './components/Cell'
 import { CellWithCopyButton } from './components/CellWithCopyButton'
 import { InfoTableRow } from './components/Row'
+import { InfoTableContext } from './Context'
 import { infoTableStyle } from './styles.css'
+
+import type { CSSProperties, ReactNode } from 'react'
 
 type InfoTableProps = {
   children: ReactNode

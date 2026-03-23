@@ -1,17 +1,20 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps } from 'react'
 import { useMemo } from 'react'
+
 import { Label } from '../../Label'
-import type { SelectInput } from '../../SelectInput'
+
 import { Arrow } from './components/ArrowIcon'
 import { IconWithContent } from './components/IconWithContent'
 import { RevealOnHover } from './components/RevealOnHover'
 import { Selector } from './components/Selector'
 import { SelectorHelper } from './components/SelectorLabel'
 import { optionSelectorStyle } from './styles.css'
+
+import type { SelectInput } from '../../SelectInput'
 import type { OptionSelectorProps, SelectorOption } from './types'
+import type { ComponentProps } from 'react'
 
 const makeSelectInputOptions = (
   options: SelectorOption[],

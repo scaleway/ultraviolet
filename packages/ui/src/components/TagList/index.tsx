@@ -2,12 +2,15 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
+
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
+
 import { TAGS_GAP } from './constant'
 import { popoverTriggerWidthVar, tagListStyle } from './styles.css'
+
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 const DEFAULT_POPOVER_MAX_HEIGHT = '16rem'
 
@@ -336,7 +339,7 @@ export const TagList = ({
               }
             }}
             ref={popoverTriggerRef}
-            // biome-ignore lint/a11y/noNoninteractiveTabindex : to fix
+            // oxlint-disable jsx_a11y/no-noninteractive-tabindex : to fix
             tabIndex={0}
           >
             +{hiddenTags.length}

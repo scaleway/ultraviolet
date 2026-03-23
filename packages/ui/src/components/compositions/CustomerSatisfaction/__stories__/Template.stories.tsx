@@ -1,7 +1,9 @@
+import { useState } from 'react'
+
+import { CustomerSatisfaction } from '..'
+
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { useState } from 'react'
-import { CustomerSatisfaction } from '..'
 
 export const Template: StoryFn<
   ComponentProps<typeof CustomerSatisfaction>

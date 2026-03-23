@@ -7,7 +7,7 @@ export const isColorMonochrome = (
 ): color is Monochrome => {
   if (color) {
     // cast as includes doesn't allow
-    return monochromes.includes(color as Monochrome)
+    return monochromes.includes(color as unknown as Monochrome)
   }
 
   return false

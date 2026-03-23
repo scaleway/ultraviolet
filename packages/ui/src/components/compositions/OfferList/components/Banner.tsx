@@ -1,10 +1,11 @@
 'use client'
 
-import type { ComponentProps, ReactNode } from 'react'
 import { List } from '../../../List'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
 import { offerListStyle } from '../styles.css'
+
+import type { ComponentProps, ReactNode } from 'react'
 
 type BannerProps = {
   children: ReactNode

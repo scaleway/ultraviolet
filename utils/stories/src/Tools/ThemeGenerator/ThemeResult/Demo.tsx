@@ -22,14 +22,16 @@ import {
   Text,
   Toggle,
 } from '@ultraviolet/ui'
-import type { ChangeEvent } from 'react'
 import { useState } from 'react'
+
 import {
   themeGeneratorContainer,
   themeGeneratorStack,
   themeGeneratorStepList,
   themeGeneratorStepper,
 } from './styles.css'
+
+import type { ChangeEvent } from 'react'
 
 export const Demo = () => {
   const [tabState, setTabState] = useState<number | string>(1)
@@ -195,11 +197,7 @@ export const Demo = () => {
                   </SwitchButton.Option>
                 </SwitchButton>
                 <RadioGroup
-                  legend={`${switchState
-                    .charAt(0)
-                    .toUpperCase()}${switchState.slice(
-                    1,
-                  )} to a previous version:`}
+                  legend={`${switchState.charAt(0).toUpperCase()}${switchState.slice(1)} to a previous version:`}
                   name="downgrade"
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setRadioState(event.target.value)

@@ -1,7 +1,9 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { Stack, Text } from '@ultraviolet/ui'
-import type { ComponentProps } from 'react'
+
 import { SteppedListCard } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 export const WithoutToggleButton: StoryFn<
   ComponentProps<typeof SteppedListCard>

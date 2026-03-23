@@ -1,5 +1,6 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { Banner } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
 
 export const Directions: StoryFn = args => (
   <>

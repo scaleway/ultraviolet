@@ -4,6 +4,7 @@ import { EscapeIcon } from '@ultraviolet/icons/EscapeIcon'
 import { blockStorageWire } from '@ultraviolet/illustrations/products/blockStorage'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, test } from 'vitest'
+
 import { SteppedListCard } from '..'
 
 describe('steppedListCard', () => {

@@ -2,11 +2,13 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { ThemeProvider } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
 import { describe, expect, test, vi } from 'vitest'
-import defaultTheme from '../../../theme'
+
 import { Table } from '..'
+import defaultTheme from '../../../theme'
+
+import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 
 type WrapperProps = {
   theme?: typeof defaultTheme
@@ -50,7 +52,6 @@ const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
 )
 
 describe('table', () => {
-  // biome-ignore lint/suspicious/noSkippedTests: to fix
   test.skip('should throw an error', () => {
     const consoleErrMock = vi
       .spyOn(console, 'error')

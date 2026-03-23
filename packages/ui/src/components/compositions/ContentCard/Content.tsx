@@ -3,9 +3,12 @@
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+
 import { contentCardStyle, subContainerHeightVar } from './styles.css'
+
 import type { ContentCardProps } from './type'
 
 export const LinkContent = ({

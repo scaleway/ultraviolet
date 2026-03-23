@@ -1,14 +1,17 @@
 // oxlint-disable typescript/no-unsafe-type-assertion
 'use client'
 
-import type { ReactNode } from 'react'
 import { useMemo } from 'react'
+
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+
 import { DoubleSlider } from './components/DoubleSlider'
 import { SingleSlider } from './components/SingleSlider'
 import { sliderStyle } from './styles.css'
+
 import type { SliderProps } from './types'
+import type { ReactNode } from 'react'
 
 /**
  * You can define simple or double sliders with the slider component.

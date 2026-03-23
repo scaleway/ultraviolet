@@ -1,10 +1,11 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
 import { Children, forwardRef, useEffect, useState } from 'react'
+
 import { useListContext } from '../List/ListContext'
 import { listStyle } from '../List/styles.css'
+
 import { Body } from './Body'
 import { Cell } from './Cell'
 import { Header } from './Header'
@@ -14,9 +15,11 @@ import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
 import { tableStyle } from './styles.css'
-import type { TableProviderProps } from './TableContext'
 import { TableProvider, useTableContext } from './TableContext'
+
+import type { TableProviderProps } from './TableContext'
 import type { ColumnProps } from './types'
+import type { CSSProperties, ReactNode } from 'react'
 
 // type OptionalKeys<T> = {
 //   [K in keyof T]: {} extends Pick<T, K> ? K : never

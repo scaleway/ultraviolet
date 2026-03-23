@@ -2,8 +2,10 @@ import { Badge } from '../../Badge'
 import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+
 import PlansLocales from './locales/en'
 import { plansStyle } from './styles.css'
+
 import type { PlanType } from './types'
 
 type PlanHeaderProps = {

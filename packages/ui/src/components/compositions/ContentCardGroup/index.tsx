@@ -1,11 +1,14 @@
 'use client'
 
-import type { CSSProperties, ReactNode } from 'react'
 import { Children, forwardRef } from 'react'
+
 import { Stack } from '../../Stack'
+
 import { Card } from './Card'
 import { SkeletonCard } from './SkeletonCard'
 import { contentCardGroupStyle } from './styles.css'
+
+import type { CSSProperties, ReactNode } from 'react'
 
 type BaseContentCardGroupProps = {
   children: ReactNode
@@ -25,7 +28,7 @@ const BaseContentCardGroup = forwardRef<
   >
     {loading
       ? Children.map(children, (_child, index) => (
-          // biome-ignore lint/suspicious/noArrayIndexKey: error
+          // oxlint-disable react/no-array-index-key: error
           <SkeletonCard key={index} />
         ))
       : children}

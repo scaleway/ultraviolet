@@ -1,6 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+
 import { IconSkeleton } from './IconSkeleton'
 import { Line } from './Line'
 import { skeletonStyle } from './styles.css'
@@ -20,7 +21,6 @@ export const BoxWithIcon = ({
     })}
   >
     {Array.from({ length }, (_, i) => (
-      // biome-ignore lint/suspicious/noArrayIndexKey: to fix
       <div
         className={skeletonStyle.boxWithIconSkeleton}
         key={`skeleton-box-${i}`}

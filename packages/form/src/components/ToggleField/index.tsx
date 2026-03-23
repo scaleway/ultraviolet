@@ -1,11 +1,13 @@
 'use client'
 
 import { Toggle } from '@ultraviolet/ui'
+import { useController } from 'react-hook-form'
+
+import { useErrors } from '../../providers'
+
+import type { BaseFieldProps } from '../../types'
 import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
-import { useController } from 'react-hook-form'
-import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
 
 type ToggleFieldProps<
   TFieldValues extends FieldValues,

@@ -1,11 +1,13 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
 import { Children, Fragment, isValidElement } from 'react'
+
 import { Step } from './Step'
 import { StepperProvider } from './StepperProvider'
 import { stepperStyle } from './styles.css'
+
+import type { CSSProperties, ReactNode } from 'react'
 
 type StepperProps = {
   animated?: boolean
@@ -76,7 +78,6 @@ export const Stepper = ({
           const temporal = getTemporal()
 
           return (
-            // biome-ignore lint/suspicious/noArrayIndexKey: to fix
             <Fragment key={`creation-progress-${index}`}>
               <Step index={index} {...(child.props as object)} />
               {isNotLast && separator && labelPosition === 'right' ? (

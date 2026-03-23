@@ -1,9 +1,11 @@
-import type { StoryFn } from '@storybook/react-vite'
 import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
 import { SunIcon } from '@ultraviolet/icons/SunIcon'
-import type { ComponentProps } from 'react'
+
 import { Stack } from '../../Stack'
 import { SwitchButton } from '../index'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 
 export const WithIcon: StoryFn<ComponentProps<typeof SwitchButton>> = args => (
   <SwitchButton {...args} size="small">

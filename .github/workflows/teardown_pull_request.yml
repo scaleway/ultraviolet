@@ -26,7 +26,7 @@ jobs:
         uses: philibea/scaleway-containers-deploy@v1.1.5
         id: deploy
         with:
-          type: "teardown"
+          type: 'teardown'
           scw_dns: ${{ env.SCW_DNS }}
           scw_access_key: ${{ vars.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}

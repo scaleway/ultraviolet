@@ -1,7 +1,9 @@
 import { Button, Separator, Stack, Text } from '@ultraviolet/ui'
 import Image from 'next/image'
+
 import styles from '../../../styles/advanced.module.scss'
 import slackLogo from '../../assets/icons/icon-slack.svg'
+
 import AdvancedUseCases from './AdvancedUseCases'
 import GettingStarted from './GettingStarted'
 import Introduction from './Introduction'

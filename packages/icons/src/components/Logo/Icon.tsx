@@ -1,9 +1,11 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
-import type { SIZES } from './constant'
+
 import { logo } from './style.css'
+
+import type { SIZES } from './constant'
+import type { CSSProperties, ReactNode } from 'react'
 
 export type IconProps = {
   size?: keyof typeof SIZES

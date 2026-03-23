@@ -1,10 +1,12 @@
-import type { StoryFn } from '@storybook/react-vite'
-import type { Dispatch, SetStateAction } from 'react'
 import { useState } from 'react'
+
+import { Table } from '..'
 import { Checkbox } from '../../Checkbox'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { Table } from '..'
+
+import type { StoryFn } from '@storybook/react-vite'
+import type { Dispatch, SetStateAction } from 'react'
 
 const CHANNELS = ['email', 'app', 'sms']
 

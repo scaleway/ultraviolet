@@ -1,19 +1,22 @@
-// biome-ignore-all  lint/a11y/useAriaPropsSupportedByRole: to fix
+// oxlint-disable a11y/useAriaPropsSupportedByRole: to fix
 
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
 import { useId, useRef } from 'react'
+
 import { Label } from '../Label'
-import type { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+
 import { Dropdown } from './components/Dropdown'
 import { SelectBar } from './components/SelectBar'
 import { SelectInputProvider } from './SelectInputProvider'
 import { selectInputStyle } from './styles.css'
+
+import type { Popup } from '../Popup'
 import type { DataType } from './types'
+import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
 
 type SelectInputProps<IsMulti extends undefined | boolean = false> = {
   /**
