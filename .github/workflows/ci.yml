@@ -247,7 +247,7 @@ jobs:
           username: nologin
           password: ${{ secrets.SCW_SECRET_KEY }}
       - name: Build
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         env:
           IMAGE: ${{ env.IMAGE_NAME }}:${{ env.STORYBOOK_BRANCH_SLUG }}
           SOURCE_DATE_EPOCH: 0
