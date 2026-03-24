@@ -46,13 +46,14 @@ describe('copyButton', () => {
 
   it('should renders correctly with a complex children', async () => {
     const onCopy = vi.fn(() => {})
+    const writeTextSpy = vi
+      .spyOn(navigator.clipboard, 'writeText')
+      .mockResolvedValue(undefined)
 
     renderWithTheme(<CopyButton onCopy={onCopy} value="test" />)
 
     await userEvent.click(screen.getByRole('button'))
     expect(onCopy).toHaveBeenCalledOnce()
-    // @ts-expect-error we are voluntarily based on an older browser spec
-    // oxlint-disable-next-line typescript/no-unsafe-call
-    expect(window.clipboardData.getData()).toBe('test')
+    expect(writeTextSpy).toHaveBeenCalledWith('test')
   })
 })

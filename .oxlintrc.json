@@ -5,6 +5,11 @@
     "./node_modules/@scaleway/oxlint-config/configs/react.json",
     "./node_modules/@scaleway/oxlint-config/configs/typescript.json"
   ],
+  "options": {
+    "reportUnusedDisableDirectives": "allow",
+    "typeAware": true,
+    "typeCheck": false
+  },
   "ignorePatterns": [
     "**/app.config.d.ts",
     "**/package.config.d.ts",

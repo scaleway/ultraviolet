@@ -7,3 +7,5 @@ export type { ComparableType } from './orderBy'
 export { orderBy } from './orderBy'
 export type { RenderProp } from './polymorphic'
 export { mergeProps, renderElement } from './polymorphic'
+
+export { useClipboard } from './hooks'

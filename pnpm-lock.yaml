@@ -348,9 +348,6 @@ importers:
       react-syntax-highlighter:
         specifier: 16.1.1
         version: 16.1.1(react@19.2.4)
-      react-use-clipboard:
-        specifier: 1.0.9
-        version: 1.0.9(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       sass:
         specifier: 1.98.0
         version: 1.98.0
@@ -823,6 +820,12 @@ importers:
       '@repo/config':
         specifier: workspace:*
         version: link:../../utils/config
+      '@testing-library/dom':
+        specifier: 10.4.1
+        version: 10.4.1
+      '@testing-library/react':
+        specifier: 16.3.2
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@types/react':
         specifier: 19.2.14
         version: 19.2.14

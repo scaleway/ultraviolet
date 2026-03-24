@@ -19,8 +19,9 @@
   "exclude": ["node_modules", "coverage", "dist", "examples", "e2e"],
   "extends": ["@scaleway/tsconfig"],
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
+    // "**/*.ts",
+    // "**/*.tsx",
+    "utils/**/*.ts",
     "**/*.spec.ts",
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx",
