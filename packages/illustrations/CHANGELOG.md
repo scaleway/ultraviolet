@@ -1,5 +1,12 @@
 # @ultraviolet/illustrations
 
+## 6.0.13
+
+### Patch Changes
+
+- Updated dependencies [[`9d1cefa`](https://github.com/scaleway/ultraviolet/commit/9d1cefac6c5a415eddd6f60bad9673b02825c454)]:
+  - @ultraviolet/utils@1.0.7
+
 ## 6.0.12
 
 ### Patch Changes
@@ -582,6 +589,7 @@
 ### Patch Changes
 
 - [#3813](https://github.com/scaleway/ultraviolet/pull/3813) [`2be2c09`](https://github.com/scaleway/ultraviolet/commit/2be2c0947ce477b092f6494659f8d88c4e3873ac) Thanks [@lisalupi](https://github.com/lisalupi)! - - `<ProductIcon/>`: 2 new icons (`ipam` and `deleteMarker`)
+
   - `<Illustration />`: 2 new types of illustrations (`kms` and `dediboxVPS`)
 
 - [#3815](https://github.com/scaleway/ultraviolet/pull/3815) [`9e68526`](https://github.com/scaleway/ultraviolet/commit/9e68526153beeaaf26b551a1eb7977828266d9a4) Thanks [@philibea](https://github.com/philibea)! - update deps of the package, remove internal deps of dependencies
