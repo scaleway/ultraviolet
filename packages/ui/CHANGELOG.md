@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.12.3
+
+### Patch Changes
+
+- [#6266](https://github.com/scaleway/ultraviolet/pull/6266) [`2291317`](https://github.com/scaleway/ultraviolet/commit/2291317fffdb59505c53eaa0e769bdeeded6ba81) Thanks [@lisalupi](https://github.com/lisalupi)! - `Breadcrumbs.Item`: onClick should go to the <li> instead of the Button (issue with menu breadcrumbs)
+
 ## 3.12.2
 
 ### Patch Changes
