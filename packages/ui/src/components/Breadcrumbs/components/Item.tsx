@@ -72,8 +72,6 @@ export const Item = ({
         <Button
           className={breadcrumbsStyle.content}
           disabled={disabled}
-          onClick={onClick}
-          onKeyDown={onKeyDown}
           sentiment="neutral"
           size="small"
           style={assignInlineVars({
@@ -113,6 +111,7 @@ export const Item = ({
         [minWidthVar]: minWidth?.toString(),
         [maxWidthVar]: maxWidth?.toString(),
       })}
+      {...(to ? {} : { onClick, onKeyDown })}
     >
       {renderedChildren}
     </li>
