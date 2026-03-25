@@ -106,7 +106,7 @@ describe('tagList', () => {
     )
 
     expect(screen.getByText('+1')).toBeInTheDocument()
-    expect(screen.getByText('scaleway')).toBeInTheDocument()
+    expect(screen.getByTestId('scaleway')).toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -152,7 +152,7 @@ describe('tagList', () => {
       />,
     )
 
-    expect(screen.getByText('cloud')).toBeInTheDocument()
+    expect(screen.getByTestId('cloud')).toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -190,8 +190,8 @@ describe('tagList', () => {
       />,
     )
 
-    expect(screen.getByText('scaleway')).toBeInTheDocument()
-    expect(screen.queryByText('cloud')).not.toBeInTheDocument()
+    expect(screen.getByTestId('scaleway')).toBeInTheDocument()
+    expect(screen.queryByTestId('provider')).not.toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -223,7 +223,7 @@ describe('tagList', () => {
       />,
     )
 
-    expect(screen.getByText('scaleway')).toBeInTheDocument()
+    expect(screen.getByTestId('scaleway')).toBeInTheDocument()
     expect(screen.queryByText('cloud')).not.toBeInTheDocument()
     expect(screen.getByText('+2')).toBeInTheDocument()
 
@@ -244,7 +244,7 @@ describe('tagList', () => {
       />,
     )
 
-    expect(screen.getByText('scaleway')).toBeInTheDocument()
+    expect(screen.getByTestId('scaleway')).toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -271,7 +271,7 @@ describe('tagList', () => {
       />,
     )
 
-    expect(screen.getByText('database')).toBeInTheDocument()
+    expect(screen.getByTestId('database')).toBeInTheDocument()
     expect(screen.queryByText('private-network')).not.toBeInTheDocument()
     expect(screen.getByText('+2')).toBeInTheDocument()
 
@@ -360,7 +360,7 @@ describe('tagList', () => {
     await userEvent.click(plus)
 
     expect(screen.getByText('Additional')).toBeInTheDocument()
-    expect(screen.getByText('world')).toBeInTheDocument()
+    expect(screen.getByTestId('world')).toBeInTheDocument()
 
     const closeButton = screen.getByLabelText('close')
     await userEvent.click(closeButton)

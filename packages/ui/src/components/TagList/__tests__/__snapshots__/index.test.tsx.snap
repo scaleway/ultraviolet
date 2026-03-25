@@ -17,6 +17,7 @@ exports[`tagList > hide items after maxLength 1`] = `
       >
         <span
           class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -26,6 +27,7 @@ exports[`tagList > hide items after maxLength 1`] = `
         </span>
         <span
           class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -35,6 +37,7 @@ exports[`tagList > hide items after maxLength 1`] = `
         </span>
         <span
           class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -44,6 +47,7 @@ exports[`tagList > hide items after maxLength 1`] = `
         </span>
         <span
           class="ellipsed styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -51,6 +55,55 @@ exports[`tagList > hide items after maxLength 1`] = `
             database
           </span>
         </span>
+      </div>
+      <div
+        style="position: absolute; visibility: hidden; white-space: nowrap; pointer-events: none;"
+      >
+        <div
+          class="styles__1f9zr5y2"
+          data-testid="taglist-measure-container"
+        >
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="scaleway"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              scaleway
+            </span>
+          </span>
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="cloud"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              cloud
+            </span>
+          </span>
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="provider"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              provider
+            </span>
+          </span>
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="database"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              database
+            </span>
+          </span>
+        </div>
       </div>
       <div
         aria-controls="_r_12_"
@@ -88,6 +141,7 @@ exports[`tagList > renders correctly 1`] = `
       >
         <span
           class="ellipsed styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -95,6 +149,25 @@ exports[`tagList > renders correctly 1`] = `
             scaleway
           </span>
         </span>
+      </div>
+      <div
+        style="position: absolute; visibility: hidden; white-space: nowrap; pointer-events: none;"
+      >
+        <div
+          class="styles__1f9zr5y2"
+          data-testid="taglist-measure-container"
+        >
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="scaleway"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              scaleway
+            </span>
+          </span>
+        </div>
       </div>
       <div
         aria-controls="_r_2_"
@@ -132,6 +205,7 @@ exports[`tagList > renders correctly a scrollable popover with non default popov
       >
         <span
           class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -141,6 +215,7 @@ exports[`tagList > renders correctly a scrollable popover with non default popov
         </span>
         <span
           class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -150,6 +225,7 @@ exports[`tagList > renders correctly a scrollable popover with non default popov
         </span>
         <span
           class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -159,6 +235,7 @@ exports[`tagList > renders correctly a scrollable popover with non default popov
         </span>
         <span
           class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -168,6 +245,7 @@ exports[`tagList > renders correctly a scrollable popover with non default popov
         </span>
         <span
           class="ellipsed styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -175,6 +253,65 @@ exports[`tagList > renders correctly a scrollable popover with non default popov
             item
           </span>
         </span>
+      </div>
+      <div
+        style="position: absolute; visibility: hidden; white-space: nowrap; pointer-events: none;"
+      >
+        <div
+          class="styles__1f9zr5y2"
+          data-testid="taglist-measure-container"
+        >
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="very"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              very
+            </span>
+          </span>
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="item"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              item
+            </span>
+          </span>
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="item"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              item
+            </span>
+          </span>
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="item"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              item
+            </span>
+          </span>
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="item"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              item
+            </span>
+          </span>
+        </div>
       </div>
       <div
         aria-controls="_r_2i_"
@@ -212,6 +349,7 @@ exports[`tagList > renders correctly and add ellipsis to the first tag as it too
       >
         <span
           class="ellipsed styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -219,6 +357,25 @@ exports[`tagList > renders correctly and add ellipsis to the first tag as it too
             scaleway is the best cloud provider ever invented
           </span>
         </span>
+      </div>
+      <div
+        style="position: absolute; visibility: hidden; white-space: nowrap; pointer-events: none;"
+      >
+        <div
+          class="styles__1f9zr5y2"
+          data-testid="taglist-measure-container"
+        >
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="scaleway is the best cloud provider ever invented"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              scaleway is the best cloud provider ever invented
+            </span>
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -242,6 +399,7 @@ exports[`tagList > renders correctly and ignore custom threshold as it does not 
       >
         <span
           class="ellipsed styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -249,6 +407,35 @@ exports[`tagList > renders correctly and ignore custom threshold as it does not 
             scaleway
           </span>
         </span>
+      </div>
+      <div
+        style="position: absolute; visibility: hidden; white-space: nowrap; pointer-events: none;"
+      >
+        <div
+          class="styles__1f9zr5y2"
+          data-testid="taglist-measure-container"
+        >
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="scaleway"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              scaleway
+            </span>
+          </span>
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="cloud"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              cloud
+            </span>
+          </span>
+        </div>
       </div>
       <div
         aria-controls="_r_i_"
@@ -286,6 +473,7 @@ exports[`tagList > renders correctly when maxLength is smaller than first tag 1`
       >
         <span
           class="ellipsed styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -293,6 +481,25 @@ exports[`tagList > renders correctly when maxLength is smaller than first tag 1`
             scaleway
           </span>
         </span>
+      </div>
+      <div
+        style="position: absolute; visibility: hidden; white-space: nowrap; pointer-events: none;"
+      >
+        <div
+          class="styles__1f9zr5y2"
+          data-testid="taglist-measure-container"
+        >
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="scaleway"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              scaleway
+            </span>
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -322,6 +529,7 @@ exports[`tagList > renders correctly with copiable 1`] = `
         >
           <button
             class="styles__1f9zr5y5 styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp5 styles_undefined_compound_2__d6zknpf"
+            data-testid=""
             type="button"
           >
             <span
@@ -339,6 +547,7 @@ exports[`tagList > renders correctly with copiable 1`] = `
         >
           <button
             class="ellipsed styles__1f9zr5y5 styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp5 styles_undefined_compound_2__d6zknpf"
+            data-testid=""
             type="button"
           >
             <span
@@ -347,6 +556,51 @@ exports[`tagList > renders correctly with copiable 1`] = `
               cloud
             </span>
           </button>
+        </div>
+      </div>
+      <div
+        style="position: absolute; visibility: hidden; white-space: nowrap; pointer-events: none;"
+      >
+        <div
+          class="styles__1f9zr5y2"
+          data-testid="taglist-measure-container"
+        >
+          <div
+            aria-controls="_r_18_"
+            aria-describedby="_r_18_"
+            class="styles__w40vpo9"
+            tabindex="0"
+          >
+            <button
+              class="styles__1f9zr5y5 styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp5 styles_undefined_compound_2__d6zknpf"
+              data-testid="scaleway"
+              type="button"
+            >
+              <span
+                class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+              >
+                scaleway
+              </span>
+            </button>
+          </div>
+          <div
+            aria-controls="_r_1a_"
+            aria-describedby="_r_1a_"
+            class="styles__w40vpo9"
+            tabindex="0"
+          >
+            <button
+              class="styles__1f9zr5y5 styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp5 styles_undefined_compound_2__d6zknpf"
+              data-testid="cloud"
+              type="button"
+            >
+              <span
+                class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+              >
+                cloud
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -371,6 +625,7 @@ exports[`tagList > renders correctly with custom threshold 1`] = `
       >
         <span
           class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -380,6 +635,7 @@ exports[`tagList > renders correctly with custom threshold 1`] = `
         </span>
         <span
           class="ellipsed styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -387,6 +643,35 @@ exports[`tagList > renders correctly with custom threshold 1`] = `
             cloud
           </span>
         </span>
+      </div>
+      <div
+        style="position: absolute; visibility: hidden; white-space: nowrap; pointer-events: none;"
+      >
+        <div
+          class="styles__1f9zr5y2"
+          data-testid="taglist-measure-container"
+        >
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="scaleway"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              scaleway
+            </span>
+          </span>
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="cloud"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              cloud
+            </span>
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -410,6 +695,7 @@ exports[`tagList > renders correctly with custom threshold and extra tags 1`] = 
       >
         <span
           class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -419,6 +705,7 @@ exports[`tagList > renders correctly with custom threshold and extra tags 1`] = 
         </span>
         <span
           class="ellipsed styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -426,6 +713,35 @@ exports[`tagList > renders correctly with custom threshold and extra tags 1`] = 
             cloud
           </span>
         </span>
+      </div>
+      <div
+        style="position: absolute; visibility: hidden; white-space: nowrap; pointer-events: none;"
+      >
+        <div
+          class="styles__1f9zr5y2"
+          data-testid="taglist-measure-container"
+        >
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="scaleway"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              scaleway
+            </span>
+          </span>
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="cloud"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              cloud
+            </span>
+          </span>
+        </div>
       </div>
       <div
         aria-controls="_r_e_"
@@ -463,6 +779,7 @@ exports[`tagList > renders correctly with custom threshold and extra tags and ma
       >
         <span
           class="ellipsed styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -470,6 +787,25 @@ exports[`tagList > renders correctly with custom threshold and extra tags and ma
             scaleway
           </span>
         </span>
+      </div>
+      <div
+        style="position: absolute; visibility: hidden; white-space: nowrap; pointer-events: none;"
+      >
+        <div
+          class="styles__1f9zr5y2"
+          data-testid="taglist-measure-container"
+        >
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="scaleway"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              scaleway
+            </span>
+          </span>
+        </div>
       </div>
       <div
         aria-controls="_r_n_"
@@ -513,6 +849,7 @@ exports[`tagList > renders correctly with icons 1`] = `
         >
           <button
             class="styles__1f9zr5y5 styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp5 styles_undefined_compound_2__d6zknpf"
+            data-testid=""
             type="button"
           >
             <span
@@ -530,6 +867,7 @@ exports[`tagList > renders correctly with icons 1`] = `
         >
           <button
             class="ellipsed styles__1f9zr5y5 styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp5 styles_undefined_compound_2__d6zknpf"
+            data-testid=""
             type="button"
           >
             <span
@@ -538,6 +876,51 @@ exports[`tagList > renders correctly with icons 1`] = `
               cloud
             </span>
           </button>
+        </div>
+      </div>
+      <div
+        style="position: absolute; visibility: hidden; white-space: nowrap; pointer-events: none;"
+      >
+        <div
+          class="styles__1f9zr5y2"
+          data-testid="taglist-measure-container"
+        >
+          <div
+            aria-controls="_r_1g_"
+            aria-describedby="_r_1g_"
+            class="styles__w40vpo9"
+            tabindex="0"
+          >
+            <button
+              class="styles__1f9zr5y5 styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp5 styles_undefined_compound_2__d6zknpf"
+              data-testid="scaleway"
+              type="button"
+            >
+              <span
+                class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+              >
+                scaleway
+              </span>
+            </button>
+          </div>
+          <div
+            aria-controls="_r_1i_"
+            aria-describedby="_r_1i_"
+            class="styles__w40vpo9"
+            tabindex="0"
+          >
+            <button
+              class="styles__1f9zr5y5 styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp5 styles_undefined_compound_2__d6zknpf"
+              data-testid="cloud"
+              type="button"
+            >
+              <span
+                class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+              >
+                cloud
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -556,12 +939,13 @@ exports[`tagList > renders correctly with multiline 1`] = `
       style="visibility: visible;"
     >
       <div
-        class="styles__1f9zr5y2 styles_multiline_true__1f9zr5y3"
+        class="styles__1f9zr5y2 styles_multiline_true__1f9zr5y3 styles__1f9zr5y4"
         data-testid="taglist-container"
-        style="--_1f9zr5y0: 0px;"
+        style="--_1f9zr5y0: 50px;"
       >
         <span
           class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -571,6 +955,7 @@ exports[`tagList > renders correctly with multiline 1`] = `
         </span>
         <span
           class="ellipsed styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -578,6 +963,35 @@ exports[`tagList > renders correctly with multiline 1`] = `
             cloud
           </span>
         </span>
+      </div>
+      <div
+        style="position: absolute; visibility: hidden; white-space: nowrap; pointer-events: none;"
+      >
+        <div
+          class="styles__1f9zr5y2 styles_multiline_true__1f9zr5y3"
+          data-testid="taglist-measure-container"
+        >
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="scaleway"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              scaleway
+            </span>
+          </span>
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="cloud"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              cloud
+            </span>
+          </span>
+        </div>
       </div>
       <div
         aria-controls="_r_17_"
@@ -602,7 +1016,27 @@ exports[`tagList > renders correctly with no tags 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
-  />
+  >
+    <div
+      class="styles__1f9zr5y1"
+      data-testid="taglist"
+      style="visibility: hidden;"
+    >
+      <div
+        class="styles__1f9zr5y2"
+        data-testid="taglist-container"
+        style="--_1f9zr5y0: 0px;"
+      />
+      <div
+        style="position: absolute; visibility: hidden; white-space: nowrap; pointer-events: none;"
+      >
+        <div
+          class="styles__1f9zr5y2"
+          data-testid="taglist-measure-container"
+        />
+      </div>
+    </div>
+  </div>
 </DocumentFragment>
 `;
 
@@ -623,6 +1057,7 @@ exports[`tagList > renders correctly with placement 1`] = `
       >
         <span
           class="ellipsed styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+          data-testid=""
         >
           <span
             class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
@@ -630,6 +1065,25 @@ exports[`tagList > renders correctly with placement 1`] = `
             scaleway
           </span>
         </span>
+      </div>
+      <div
+        style="position: absolute; visibility: hidden; white-space: nowrap; pointer-events: none;"
+      >
+        <div
+          class="styles__1f9zr5y2"
+          data-testid="taglist-measure-container"
+        >
+          <span
+            class="styles__1f9zr5y5 styles__d6zknp0 styles_sentiment_neutral__d6zknp5"
+            data-testid="scaleway"
+          >
+            <span
+              class="styles__d6zknp1c style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a"
+            >
+              scaleway
+            </span>
+          </span>
+        </div>
       </div>
       <div
         aria-controls="_r_5_"

@@ -2,6 +2,8 @@ import { theme } from '@ultraviolet/themes'
 import { keyframes, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
+import { tagListStyle } from '../TagList/styles.css'
+
 import { DEFAULT_ARROW_WIDTH } from './helpers'
 import {
   animationDurationPopup,
@@ -112,6 +114,11 @@ const animation = styleVariants({
 const childrenContainer = recipe({
   base: {
     display: 'inherit',
+    selectors: {
+      [`${tagListStyle.ellipsisChild} > &`]: {
+        minWidth: 0,
+      },
+    },
   },
   variants: {
     fullHeight: {

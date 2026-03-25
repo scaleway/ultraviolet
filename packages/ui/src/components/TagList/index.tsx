@@ -13,6 +13,7 @@ import { popoverTriggerWidthVar, tagListStyle } from './styles.css'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 const DEFAULT_POPOVER_MAX_HEIGHT = '16rem'
+const MIN_TAG_WIDTH = 32 // in px
 
 export type TagType = string | { label: string; icon: ReactNode }
 
@@ -133,7 +134,8 @@ export const TagList = ({
       return
     }
 
-    const parentWidth = containerRef.current.parentElement?.offsetWidth ?? 0
+    const parentWidth =
+      (containerRef.current.parentElement?.offsetWidth ?? 0) - MIN_TAG_WIDTH
 
     const toMeasureElements: HTMLCollection =
       measureRef.current.children[0].children
@@ -196,13 +198,14 @@ export const TagList = ({
     tags,
     threshold,
     tmpThreshold,
+    containerRef.current?.parentElement?.offsetWidth,
   ])
 
   // Once the popover trigger is available we have to:
   // - to get the popover trigger width so the last visible tags can have ellipsis if needed
   // - remove the last tag if the popover have no place and push it in to the hidden tags list
   useEffect(() => {
-    if (!isReady && popoverTriggerRef.current?.offsetWidth) {
+    if (popoverTriggerRef.current?.offsetWidth) {
       const newPopoverTriggerWidth = popoverTriggerRef.current.offsetWidth
 
       // Set popover trigger width
@@ -229,28 +232,29 @@ export const TagList = ({
 
       setIsReady(true)
     }
-  }, [hiddenTags, isReady, threshold, visibleTags, visibleTags.length])
+  }, [
+    hiddenTags,
+    threshold,
+    visibleTags,
+    visibleTags.length,
+    containerRef.current?.parentElement?.offsetWidth,
+  ])
 
-  // Remove the hidden div that served to measure the rendered tags
-  useEffect(() => {
-    if (isReady && measureRef.current?.parentNode) {
-      measureRef.current.remove()
-    }
-  }, [isReady])
-
-  if (tags.length === 0) {
-    return null
-  }
-
-  const renderTag = (tag: TagType, index: number, isEllipsis = false) =>
+  const renderTag = (
+    tag: TagType,
+    index: number,
+    isEllipsis = false,
+    hidden?: boolean,
+  ) =>
     typeof tag !== 'string' && tag.icon ? (
       <Tag
-        // useful when two tags are identical `${tag}-${index}`
         className={cn(isEllipsis ? 'ellipsed' : '', tagListStyle.ellipsisChild)}
         copiable={copiable}
         copiedText={copiedText}
         copyText={copyText}
+        // useful when two tags are identical `${tag}-${index}`
         key={`${getTagLabel(tag)}-${index}`}
+        data-testid={hidden ? '' : getTagLabel(tag)}
       >
         {tag.icon}
         {getTagLabel(tag)}
@@ -262,6 +266,7 @@ export const TagList = ({
         copiedText={copiedText}
         copyText={copyText}
         key={`${getTagLabel(tag)}-${index}`}
+        data-testid={hidden ? '' : getTagLabel(tag)}
       >
         {getTagLabel(tag)}
       </Tag>
@@ -295,6 +300,7 @@ export const TagList = ({
             index,
             // add ellipsis to last tag
             index === visibleTags.length - 1,
+            true,
           ),
         )}
       </div>
@@ -305,6 +311,7 @@ export const TagList = ({
           position: 'absolute',
           visibility: 'hidden',
           whiteSpace: 'nowrap',
+          pointerEvents: 'none',
         }}
       >
         <div

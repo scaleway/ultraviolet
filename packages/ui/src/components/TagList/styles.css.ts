@@ -39,6 +39,9 @@ const ellipsisChild = style({
       maxWidth: 'fit-content',
       width: '100%',
     },
+    '&.ellipsed': {
+      minWidth: 0,
+    },
   },
 })
 
