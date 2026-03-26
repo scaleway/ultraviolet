@@ -40,6 +40,7 @@ const FileInputFieldBase = <
   title,
   bottom,
   children,
+  errorLabel,
   ...props
 }: FileInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -60,7 +61,7 @@ const FileInputFieldBase = <
     return (
       <FileInput
         {...props}
-        error={getError({ label }, error)}
+        error={getError({ label: errorLabel ?? label }, error)}
         label={label}
         onChangeFiles={files => {
           field.onChange(files)

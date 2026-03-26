@@ -32,6 +32,7 @@ export const CheckboxField = <
   onBlur,
   shouldUnregister = false,
   validate,
+  errorLabel,
   'aria-label': ariaLabel,
   ...props
 }: CheckboxFieldProps<TFieldValues, TFieldName>) => {
@@ -55,7 +56,10 @@ export const CheckboxField = <
       {...props}
       checked={!!field.value}
       disabled={field.disabled}
-      error={getError({ label: label ?? ariaLabel ?? name }, error)}
+      error={getError(
+        { label: errorLabel ?? label ?? ariaLabel ?? name },
+        error,
+      )}
       name={field.name}
       onBlur={event => {
         field.onBlur()

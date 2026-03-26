@@ -60,6 +60,7 @@ export type BaseFieldProps<
     TFieldName
   >['shouldUnregister']
   control?: Control<TFieldValues>
+  errorLabel?: string
 }
 
 /**

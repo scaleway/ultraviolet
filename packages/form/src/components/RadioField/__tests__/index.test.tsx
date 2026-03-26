@@ -59,6 +59,7 @@ describe('radioField', () => {
         onChange={onChange}
         onFocus={onFocus}
         value="events"
+        errorLabel="errorLabel"
       />,
     )
     const input = screen.getByRole('radio', { hidden: true })

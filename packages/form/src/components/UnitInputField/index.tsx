@@ -32,6 +32,7 @@ export const UnitInputField = <
   validate,
   control,
   optionName,
+  errorLabel,
   ...props
 }: UnitInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -59,7 +60,7 @@ export const UnitInputField = <
   return (
     <UnitInput
       {...props}
-      error={getError({ label }, valueFieldState.error)}
+      error={getError({ label: errorLabel ?? label }, valueFieldState.error)}
       label={label}
       max={max}
       min={min}

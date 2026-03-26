@@ -27,6 +27,7 @@ const ToggleGroupFieldComponent = <
   required = false,
   shouldUnregister = false,
   validate,
+  errorLabel,
   ...props
 }: ToggleGroupFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -50,7 +51,7 @@ const ToggleGroupFieldComponent = <
   return (
     <ToggleGroup
       {...props}
-      error={customError ?? getError({ label: legend }, error)}
+      error={customError ?? getError({ label: errorLabel ?? legend }, error)}
       legend={legend}
       name={field.name}
       onChange={event => {

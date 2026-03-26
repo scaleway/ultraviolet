@@ -40,6 +40,7 @@ export const TextInputField = <
   shouldUnregister,
   validate,
   control,
+  errorLabel,
   ...props
 }: TextInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -72,7 +73,7 @@ export const TextInputField = <
       aria-label={ariaLabel}
       error={getError(
         {
-          label: label ?? ariaLabel ?? name,
+          label: errorLabel ?? label ?? ariaLabel ?? name,
           maxLength,
           minLength,
           regex: regexes,

@@ -43,6 +43,7 @@ const CheckboxGroupFieldComponent = <
   shouldUnregister = false,
   validate,
   legend = '',
+  errorLabel,
   ...props
 }: CheckboxGroupFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -96,7 +97,7 @@ const CheckboxGroupFieldComponent = <
   return (
     <CheckboxGroup
       {...props}
-      error={getError({ label: legend }, error) ?? customError}
+      error={getError({ label: errorLabel ?? legend }, error) ?? customError}
       legend={legend}
       name={name}
       onChange={event => {
