@@ -1,89 +1,15 @@
-import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category/OrganizationDashboardCategoryIcon'
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn } from '@ultraviolet/utils'
-import { Children } from 'react'
 
-import { Button } from '../../../Button'
-import { Menu } from '../../../Menu'
-import { Stack } from '../../../Stack'
-import { Text } from '../../../Text'
-import { Tooltip } from '../../../Tooltip'
-import { useNavigation } from '../NavigationProvider'
-import { navigationStyle } from '../styles.css'
+import { Menu } from '../../../../Menu'
+import { Stack } from '../../../../Stack'
+import { Text } from '../../../../Text'
+import { useNavigation } from '../../NavigationProvider'
+import { navigationStyle } from '../../styles.css'
+import { ItemBadge } from '../Item/Badge'
+import { ItemPinnedButton } from '../Item/PinnedButton'
 
-import { ItemBadge, ItemPinnedButton } from './ItemFragments'
-import { ItemProvider } from './ItemProvider'
-
-import type { ItemMenuItemType, ItemMenuType } from './ComponentsTypes'
-
-export const ItemMenu = ({
-  style,
-  children,
-  label,
-  categoryIcon,
-  active,
-  hasActiveChildren,
-}: ItemMenuType) => (
-  <Stack
-    alignItems="flex-start"
-    className={navigationStyle.itemMenuStack}
-    gap={1}
-    justifyContent="flex-start"
-    style={style}
-  >
-    {Children.count(children) > 0 ? (
-      <Menu
-        className={navigationStyle.itemMenuContainer}
-        disclosure={
-          <Button
-            aria-label={label}
-            sentiment="neutral"
-            size="small"
-            variant={hasActiveChildren ? 'filled' : 'ghost'}
-          >
-            {categoryIcon ? (
-              <Stack
-                alignItems="center"
-                direction="row"
-                gap={1}
-                justifyContent="center"
-              >
-                {categoryIcon}
-              </Stack>
-            ) : null}
-          </Button>
-        }
-        dynamicDomRendering={false} // As we parse the children we don't need dynamic rendering
-        placement="right"
-        triggerMethod="hover"
-      >
-        <ItemProvider>{children}</ItemProvider>
-      </Menu>
-    ) : (
-      <Tooltip placement="right" tabIndex={-1} text={label}>
-        <Button
-          aria-label={label}
-          sentiment="neutral"
-          size="small"
-          variant={active ? 'filled' : 'ghost'}
-        >
-          <Stack
-            alignItems="center"
-            direction="row"
-            gap={1}
-            justifyContent="center"
-          >
-            {categoryIcon ?? (
-              <OrganizationDashboardCategoryIcon
-                variant={active ? 'primary' : 'neutral'}
-              />
-            )}
-          </Stack>
-        </Button>
-      </Tooltip>
-    )}
-  </Stack>
-)
+import type { ItemMenuItemType } from '../ComponentsTypes'
 
 export const ItemMenuItem = ({
   active,
@@ -128,10 +54,11 @@ export const ItemMenuItem = ({
           ? navigationStyle.itemMenuPinned
           : '',
       )}
+      data-testid={id}
       disabled={disabled}
       href={href}
-      onClick={() => onToggle?.(!!active)}
       // pinnedFeature={pinnedFeature}
+      onClick={() => onToggle?.(!!active)}
       rel={rel}
       sentiment={active ? 'primary' : 'neutral'}
       style={style}
