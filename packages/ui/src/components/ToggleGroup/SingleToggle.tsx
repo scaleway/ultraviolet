@@ -1,9 +1,12 @@
 'use client'
 
-import type { ComponentProps } from 'react'
 import { useContext } from 'react'
+
 import { Toggle } from '../Toggle'
+
 import { ToggleGroupContext } from './Context'
+
+import type { ComponentProps } from 'react'
 
 type ToggleGroupToggleProps = Omit<
   ComponentProps<typeof Toggle>,

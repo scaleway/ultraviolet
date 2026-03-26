@@ -1,5 +1,6 @@
-import type { InputHTMLAttributes } from 'react'
 import { createContext } from 'react'
+
+import type { InputHTMLAttributes } from 'react'
 
 type RadioGroupContextType = {
   groupName?: string

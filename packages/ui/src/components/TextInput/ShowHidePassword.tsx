@@ -1,10 +1,13 @@
 import { EyeIcon } from '@ultraviolet/icons/EyeIcon'
 import { EyeOffIcon } from '@ultraviolet/icons/EyeOffIcon'
-import type { Dispatch, SetStateAction } from 'react'
+
 import { Button } from '../Button'
 import { Stack } from '../Stack'
+
 import { textInputStyle } from './styles.css'
+
 import type { TextInputProps } from './type'
+import type { Dispatch, SetStateAction } from 'react'
 
 export const ShowHidePassword = ({
   size,

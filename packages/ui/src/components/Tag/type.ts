@@ -1,5 +1,5 @@
-import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
 import type { SENTIMENTS } from './styles.css'
+import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
 
 export type TagProps = {
   isLoading?: boolean

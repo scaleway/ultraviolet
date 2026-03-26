@@ -1,9 +1,11 @@
 'use client'
 
-import type { ReactNode } from 'react'
 import { Children, useEffect, useState } from 'react'
+
 import { useListContext } from '../List/ListContext'
 import { listStyle } from '../List/styles.css'
+
+import type { ReactNode } from 'react'
 
 export const TableContainer = ({ children }: { children: ReactNode }) => {
   const [childrenMemory, setChildrenMemory] = useState<ReactNode[]>(

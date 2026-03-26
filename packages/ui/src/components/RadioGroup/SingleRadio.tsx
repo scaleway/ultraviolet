@@ -1,9 +1,12 @@
 'use client'
 
-import type { ComponentProps } from 'react'
 import { useContext } from 'react'
+
 import { Radio } from '../Radio'
+
 import { RadioGroupContext } from './Context'
+
+import type { ComponentProps } from 'react'
 
 type RadioGroupRadioProps = Omit<
   ComponentProps<typeof Radio>,

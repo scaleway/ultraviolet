@@ -1,5 +1,7 @@
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
+
 import { Bullet } from '../Bullet'
+
 import { useStepper } from './StepperProvider'
 import { stepperStyle } from './styles.css'
 

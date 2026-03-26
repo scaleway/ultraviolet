@@ -1,9 +1,12 @@
 'use client'
 
-import type { ComponentProps } from 'react'
 import { useContext } from 'react'
+
 import { SelectableCard } from '../SelectableCard'
+
 import { SelectableCardGroupContext } from './Context'
+
+import type { ComponentProps } from 'react'
 
 export type CardSelectableCardProps = Omit<
   ComponentProps<typeof SelectableCard>,

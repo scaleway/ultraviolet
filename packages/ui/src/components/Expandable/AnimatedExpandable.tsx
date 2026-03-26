@@ -1,8 +1,10 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useRef, useState } from 'react'
+
 import { ANIMATION_DURATION } from './constant'
 import { animationDurationVar, expandableStyle } from './styles.css'
+
 import type { ExpandableProps } from './types'
 
 export const AnimatedExpandable = ({

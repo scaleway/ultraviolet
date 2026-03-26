@@ -2,6 +2,7 @@
 
 import { Button } from '../Button'
 import { Text } from '../Text'
+
 import { paginationStyle } from './styles.css'
 
 type MakeButtonProps = {

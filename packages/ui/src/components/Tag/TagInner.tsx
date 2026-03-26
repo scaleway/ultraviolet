@@ -2,10 +2,13 @@
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { CopyContentIcon } from '@ultraviolet/icons/CopyContentIcon'
+
 import { Button } from '../Button'
 import { Loader } from '../Loader'
 import { Text } from '../Text'
+
 import { tagStyle } from './styles.css'
+
 import type { TagProps } from './type'
 
 type TagInnerProps = Omit<
