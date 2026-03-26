@@ -8,7 +8,7 @@ import { Text } from '../../../Text'
 import { useNavigation } from '../NavigationProvider'
 import { navigationStyle } from '../styles.css'
 
-import { Item } from './Item'
+import { Item } from './Item/Item'
 
 import type { DragNDropData } from '../types'
 import type { CSSProperties, DragEvent, ReactElement } from 'react'
@@ -66,6 +66,7 @@ export const PinnedItems = ({
       event.preventDefault()
       if (event?.dataTransfer) {
         event.currentTarget.style.borderColor = 'transparent'
+        // oxlint-disable-next-line typescript/no-unsafe-type-assertion
         const data = JSON.parse(
           event.dataTransfer.getData('text'),
         ) as DragNDropData

@@ -1,7 +1,7 @@
 'use client'
 
 import { Group } from './components/Group'
-import { Item } from './components/Item'
+import { Item } from './components/Item/Item'
 import { PinnedItems } from './components/PinnedItems'
 import { Separator } from './components/Separator'
 import { ShowHide } from './components/ShowHide'

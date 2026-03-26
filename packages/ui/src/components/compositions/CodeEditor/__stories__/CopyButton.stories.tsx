@@ -25,3 +25,10 @@ export const CopyButton: StoryFn<ComponentProps<typeof CodeEditor>> = ({
 
   return <CodeEditor {...props} copyButton onChange={setValue} value={value} />
 }
+
+CopyButton.args = {
+  extensions: 'js',
+  helper: 'Example of helper text',
+  label: 'Code Editor',
+  readOnly: false,
+}

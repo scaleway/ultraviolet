@@ -9,6 +9,9 @@ import { DateInput } from '..'
 
 tk.freeze(new Date(1_609_503_120_000))
 
+const DECEMBER = /December/i
+const YEAR = /1995/i
+
 describe('dateInput', () => {
   test('renders correctly with default props', () => {
     const { asFragment } = renderWithTheme(
@@ -203,7 +206,7 @@ describe('dateInput', () => {
     const calendar = screen.getByRole('dialog')
     expect(calendar).toBeVisible()
 
-    const visibleMonth = screen.getByText(/December/i)
+    const visibleMonth = screen.getByText(DECEMBER)
     await userEvent.click(screen.getByTestId('previous-month'))
     expect(visibleMonth.textContent).toContain('November')
 
@@ -230,7 +233,7 @@ describe('dateInput', () => {
     const calendar = screen.getByRole('dialog')
     expect(calendar).toBeVisible()
 
-    const visibleMonth = screen.getByText(/1995/i)
+    const visibleMonth = screen.getByText(YEAR)
     await userEvent.click(screen.getByTestId('previous-month'))
     expect(visibleMonth.textContent).toContain('1994')
 
@@ -257,7 +260,7 @@ describe('dateInput', () => {
     await userEvent.click(input)
 
     await userEvent.click(screen.getByText('15'))
-    expect(input.value).toBe('12/15/1995')
+    expect(input.value).toBe('15/12/1995')
 
     await userEvent.click(input)
 
@@ -265,12 +268,12 @@ describe('dateInput', () => {
     await userEvent.click(dayFromLastMonth)
 
     await userEvent.click(input)
-    expect(input.value).toBe('11/30/1995')
+    expect(input.value).toBe('30/11/1995')
 
     await userEvent.click(input)
     const dayFromNextMonth = screen.getAllByText('1')[1]
     await userEvent.click(dayFromNextMonth)
-    expect(input.value).toBe('12/01/1995')
+    expect(input.value).toBe('01/12/1995')
   })
 
   test('handle correctly click on date range', async () => {
@@ -290,21 +293,21 @@ describe('dateInput', () => {
     expect(calendar).toBeVisible()
 
     await userEvent.click(screen.getByText('15'))
-    expect(input.value).toBe('02/15/1995 - ')
+    expect(input.value).toBe('15/02/1995 - ')
     const day = screen.getByText('27')
 
     await userEvent.hover(day)
     await userEvent.unhover(day)
 
     await userEvent.click(day)
-    expect(input.value).toBe('02/15/1995 - 02/27/1995')
+    expect(input.value).toBe('15/02/1995 - 27/02/1995')
 
     await userEvent.click(input)
     await userEvent.click(screen.getByText('31'))
-    expect(input.value).toBe('01/31/1995 - ')
+    expect(input.value).toBe('31/01/1995 - ')
 
     await userEvent.click(screen.getByText('20'))
-    expect(input.value).toBe('01/20/1995 - 01/31/1995')
+    expect(input.value).toBe('20/01/1995 - 31/01/1995')
   })
 
   test('render correctly with showMonthYearPicker with excluded months', async () => {
@@ -408,7 +411,7 @@ describe('dateInput', () => {
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
 
-    await userEvent.type(input, '08/21/1995')
+    await userEvent.type(input, '21/08/1995')
     input.blur()
     expect(mockOnChange).toBeCalled()
     expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
@@ -428,7 +431,7 @@ describe('dateInput', () => {
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
 
-    await userEvent.type(input, '08/21/1995')
+    await userEvent.type(input, '21/08/1995')
     input.blur()
     expect(mockOnChange).toBeCalled()
     expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
