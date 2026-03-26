@@ -1,4 +1,5 @@
 import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category/OrganizationDashboardCategoryIcon'
+import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import { Children } from 'react'
 
 import { Button } from '../../../../Button'
@@ -45,7 +46,7 @@ export const ItemMenu = ({
                 {categoryIcon}
               </Stack>
             ) : (
-              '...'
+              <DotsHorizontalIcon />
             )}
           </Button>
         }
