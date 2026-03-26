@@ -435,6 +435,7 @@ const SelectBar = ({
       <div
         aria-controls={dropdownId}
         aria-expanded={isDropdownVisible}
+        aria-haspopup="listbox"
         aria-label={label}
         // oxlint-disable-next-line jsx_a11y/no-autofocus
         autoFocus={autoFocus}
@@ -513,7 +514,7 @@ const SelectBar = ({
           {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
           {clearable && selectedData.selectedValues.length > 0 ? (
             <Button
-              aria-label="clear value"
+              aria-label={`Clear ${label ?? 'selection'}`}
               data-testid="clear-all"
               disabled={disabled || !selectedData.selectedValues[0] || readOnly}
               onClick={event => {
@@ -533,7 +534,7 @@ const SelectBar = ({
             </Button>
           ) : null}
           <ArrowDownIcon
-            aria-label="show dropdown"
+            aria-hidden="true"
             disabled={disabled || readOnly}
             sentiment="neutral"
             size="small"

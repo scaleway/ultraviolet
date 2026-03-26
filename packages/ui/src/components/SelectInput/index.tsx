@@ -225,7 +225,6 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
       value={value}
     >
       <div
-        aria-label={name}
         className={cn(className, selectInputStyle.container)}
         onBlur={onBlur}
         onFocus={onFocus}

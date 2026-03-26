@@ -229,6 +229,10 @@ export const SingleSlider = ({
           <input
             aria-disabled={disabled}
             aria-label={ariaLabel ?? name}
+            aria-valuemax={max}
+            aria-valuemin={min}
+            aria-valuenow={selectedIndex}
+            aria-valuetext={`${selectedIndex}${suffix ?? unit ?? ''}`}
             className={cn(
               className,
               sliderStyle.single({ direction, disabled, error: !!error }),

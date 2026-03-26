@@ -1,3 +1,5 @@
+export type { AxeOptions, AxeResults } from './axe'
+export { a11y, checkAccessibility, expectAxeToPass } from './axe'
 export {
   ComponentWrapper,
   defaultError,

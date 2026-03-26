@@ -108,7 +108,13 @@ export const Pagination = ({
   }, [perPage])
 
   return (
-    <Stack direction="row" justifyContent="space-between" style={style}>
+    <Stack
+      aria-label="Pagination"
+      direction="row"
+      justifyContent="space-between"
+      role="navigation"
+      style={style}
+    >
       {perPage ? (
         <PerPage
           numberOfItems={numberOfItems}
