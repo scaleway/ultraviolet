@@ -83,7 +83,7 @@ describe('selectableCardField', () => {
     await userEvent.click(input)
     expect(onChange).toHaveBeenCalledOnce()
     await userEvent.click(input)
-    expect(onChange).toBeCalledTimes(2)
+    expect(onChange).toHaveBeenCalledTimes(2)
     expect(asFragment()).toMatchSnapshot()
   })
 })

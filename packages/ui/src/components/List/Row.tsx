@@ -1,7 +1,5 @@
 'use client'
 
-import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
-import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
@@ -16,13 +14,11 @@ import {
   useRef,
 } from 'react'
 
-import { Button } from '../Button'
-import { Checkbox } from '../Checkbox'
-import { Tooltip } from '../Tooltip'
-
 import { Cell } from './Cell'
 import { ColumnProvider } from './ColumnProvider'
+import { ExpandButtonCell } from './ExpandButtonCell'
 import { useListContext } from './ListContext'
+import { SelectRowCell } from './SelectRowCell'
 import { listStyle } from './styles.css'
 import { paddingExpandableCell } from './variables.css'
 
@@ -93,10 +89,8 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       selectedRowIds,
       expandButton,
       columns,
-      inRange,
       refList,
       setRefList,
-      handleOnChange,
     } = useListContext()
 
     const expandedRowId = useId()
@@ -165,6 +159,8 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
     const totalColumns =
       columns.length + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
 
+    const hasHightLight = selectable && !!selectedRowIds[id]
+
     return (
       <>
         <tr
@@ -178,7 +174,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
             listStyle.row({ highlightAnimation, sentiment }),
           )}
           data-dragging={dataDragging}
-          data-highlight={selectable && !!selectedRowIds[id]}
+          data-highlight={hasHightLight}
           data-testid={dataTestid}
           onClick={() => {
             onClick?.(id)
@@ -203,52 +199,19 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           style={style}
           tabIndex={cannotClickRowToExpand ? -1 : 0}
         >
-          {selectable ? (
-            <ColumnProvider width={theme.sizing[300]}>
-              <Cell className={listStyle.noPaddingCell}>
-                <div className={listStyle.checkboxContainer}>
-                  <Tooltip
-                    text={
-                      typeof selectDisabled === 'string'
-                        ? selectDisabled
-                        : undefined
-                    }
-                  >
-                    <Checkbox
-                      aria-label="select"
-                      checked={selectedRowIds[id]}
-                      className={
-                        inRange?.includes(id) ? listStyle.checkboxInRange : ''
-                      }
-                      disabled={isSelectDisabled}
-                      name="list-select-checkbox"
-                      onChange={() => handleOnChange(id, selectedRowIds[id])}
-                      ref={checkboxRef}
-                      value={id}
-                    />
-                  </Tooltip>
-                </div>
-              </Cell>
-            </ColumnProvider>
-          ) : null}
-          {expandButton ? (
-            <ColumnProvider width={theme.sizing[400]}>
-              <Cell className={listStyle.noPaddingCell}>
-                <Button
-                  aria-label="expand"
-                  className={listStyle.expandableButton}
-                  data-testid="list-expand-button"
-                  disabled={disabled || !expandable}
-                  onClick={() => toggleRowExpand()}
-                  sentiment={sentiment}
-                  size="small"
-                  variant="ghost"
-                >
-                  {expandedRowIds[id] ? <ArrowUpIcon /> : <ArrowDownIcon />}
-                </Button>
-              </Cell>
-            </ColumnProvider>
-          ) : null}
+          <SelectRowCell
+            checkboxRef={checkboxRef}
+            id={id}
+            isSelectDisabled={isSelectDisabled}
+            selectDisabled={selectDisabled}
+          />
+          <ExpandButtonCell
+            disabled={disabled}
+            expandable={expandable}
+            id={id}
+            sentiment={sentiment}
+            toggleRowExpand={toggleRowExpand}
+          />
           {validChildrenArray.map((child, index) => {
             const column = columns[index]
 
@@ -268,7 +231,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           <tr
             className={listStyle.expandableWrapper}
             data-expandable-content
-            data-highlight={selectable && !!selectedRowIds[id]}
+            data-highlight={hasHightLight}
             id={expandedRowId}
             onClick={
               cannotClickRowToExpand

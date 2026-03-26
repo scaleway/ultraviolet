@@ -1,3 +1,4 @@
+// oxlint-disable typescript/no-unsafe-type-assertion
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
@@ -156,6 +157,6 @@ describe('switchButton', () => {
       renderWithTheme(
         <SwitchButton.Option value="left">Left</SwitchButton.Option>,
       ),
-    ).toThrowError('SwitchButton.Option should be used inside a SwitchButton')
+    ).toThrow('SwitchButton.Option should be used inside a SwitchButton')
   })
 })

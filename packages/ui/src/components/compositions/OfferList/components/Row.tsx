@@ -7,12 +7,8 @@ import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Children, useCallback, useMemo, useState } from 'react'
 
-import { Badge as BadgeUV } from '../../../Badge'
 import { Button } from '../../../Button'
-import { Checkbox } from '../../../Checkbox'
 import { List } from '../../../List'
-import { Radio } from '../../../Radio'
-import { Tooltip } from '../../../Tooltip'
 import { useOfferListContext } from '../OfferListProvider'
 import {
   expandablePadding as expandablePaddingVar,
@@ -21,7 +17,9 @@ import {
 
 import { Banner } from './Banner'
 import { OfferListRowContext } from './OfferListRowProvider'
+import { SelectableCell } from './SelectableCell'
 
+import type { Badge as BadgeUV } from '../../../Badge'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 type RowProps = ComponentProps<typeof List.Row> & {
@@ -154,8 +152,6 @@ export const Row = ({
     onChangeSelect?.(offerName)
   }
 
-  const isSelectableDisable = disabled || loading || !!selectDisabled
-
   const offerListRowContextValue = useMemo(
     () => ({ selected: isSelected, banner: !!banner }),
     [isSelected, banner],
@@ -198,68 +194,18 @@ export const Row = ({
         selectDisabled={selectDisabled}
         style={style}
       >
-        <List.Cell
-          className={cn(
-            offerListStyle.noPaddingCell,
-            isSelected ? offerListStyle.selectedCell : '',
-            banner ? offerListStyle.cellNoRadius : '',
-          )}
-        >
-          {badge ? (
-            <BadgeUV
-              className={offerListStyle.badge}
-              disabled={disabled}
-              prominence={badge.prominence}
-              sentiment={badge.sentiment}
-              size="small"
-            >
-              {badge.text}
-            </BadgeUV>
-          ) : null}
-          <div className={offerListStyle.rowSelectableContainer}>
-            <Tooltip
-              text={
-                typeof selectDisabled === 'string' ? selectDisabled : undefined
-              }
-            >
-              {selectable === 'radio' ? (
-                <Radio
-                  aria-label={`select-${id}`}
-                  checked={isRowSelected}
-                  disabled={isSelectableDisable}
-                  id={id}
-                  name={`radio-offer-list-${id}`}
-                  onChange={() => {
-                    // When !expandable, selection is triggered in the onClick of List.Row
-                    if (expandable) {
-                      handleChangeRadio()
-                    }
-                    if (expandedRowIds[id]) {
-                      expandRow(id)
-                    } else if (!autoCollapse) {
-                      collapseRow(id)
-                    }
-                  }}
-                  value={id}
-                />
-              ) : (
-                <Checkbox
-                  aria-label="select"
-                  checked={isRowSelected}
-                  disabled={isSelectableDisable}
-                  id={id}
-                  name={`checkbox-offer-list-${id}`}
-                  onChange={() => {
-                    if (expandable) {
-                      handleChangeCheckbox()
-                    }
-                  }}
-                  value={id}
-                />
-              )}
-            </Tooltip>
-          </div>
-        </List.Cell>
+        <SelectableCell
+          badge={badge}
+          banner={banner}
+          disabled={disabled}
+          handleChangeCheckbox={handleChangeCheckbox}
+          handleChangeRadio={handleChangeRadio}
+          id={id}
+          isRowSelected={isRowSelected}
+          isSelected={isSelected}
+          loading={loading}
+          selectDisabled={selectDisabled}
+        />
         {expandable ? (
           <List.Cell
             className={cn(

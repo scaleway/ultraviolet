@@ -3,110 +3,20 @@
 import { langs } from '@uiw/codemirror-extensions-langs'
 import { material } from '@uiw/codemirror-theme-material'
 import CodeMirror from '@uiw/react-codemirror'
-import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useState } from 'react'
 
-import { CopyButton } from '../../CopyButton'
 import { Expandable } from '../../Expandable'
 import { Label } from '../../Label'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 
+import { CodeEditorCopyButton } from './components/CopyButton'
+import { CodeEditorExpandable } from './components/Expandable'
 import { codeEditorStyle, disabledStack, maxHeightVar } from './styles.css'
 
-import type { ReactCodeMirrorProps } from '@uiw/react-codemirror'
-import type { CSSProperties, Dispatch, ReactNode, SetStateAction } from 'react'
-
-type CodeEditorProps = {
-  value: string
-  onChange: ReactCodeMirrorProps['onChange']
-  extensions: keyof typeof langs
-  onBlur?: () => void
-  height?: string
-  readOnly?: boolean
-  autoCompletion?: boolean
-  disabled?: boolean
-  helper?: ReactNode
-  /**
-   * When set to true, a copy button is displayed in the top right corner of the editor.
-   * If a string is provided, it is used as the button's label. Otherwise, no label is displayed.
-   */
-  copyButton?: boolean | string
-  label?: string
-  /**
-   * Defines a max height and adds an expand button to see the full content of the component
-   */
-  expandableHeight?: number
-  /** Text for the "show" button when maxLines is defined */
-  showText?: string
-  /** Text for the "hide" button when maxLines is defined */
-  hideText?: string
-  id?: string
-  labelDescription?: ReactNode
-  'aria-label'?: string
-  'data-testid'?: string
-  className?: string
-  error?: string
-  lineNumbers?: boolean
-  style?: CSSProperties
-  required?: boolean
-}
-
-const CodeEditorCopyButton = ({
-  copyButton,
-  value,
-}: {
-  copyButton: CodeEditorProps['copyButton']
-  value: CodeEditorProps['value']
-}) => (
-  <CopyButton
-    bordered
-    className={codeEditorStyle.copyButton}
-    sentiment="neutral"
-    size="small"
-    value={value}
-  >
-    {typeof copyButton === 'string' ? copyButton : undefined}
-  </CopyButton>
-)
-
-const CodeEditorExpandable = ({
-  expanded,
-  setExpanded,
-  hideText,
-  showText,
-}: {
-  expanded: boolean
-  setExpanded: Dispatch<SetStateAction<boolean>>
-  hideText: string
-  showText: string
-}) => (
-  <div className={codeEditorStyle.showMoreContainer({ expanded })}>
-    <button
-      aria-expanded={expanded}
-      className={codeEditorStyle.showMoreButton}
-      onClick={() => setExpanded(prevState => !prevState)}
-      type="button"
-    >
-      <Text
-        as="span"
-        className={codeEditorStyle.centeredText}
-        sentiment="neutral"
-        variant="bodySmallStrong"
-      >
-        {expanded ? hideText : showText}
-        &nbsp;
-        <ArrowDownIcon
-          className={
-            codeEditorStyle.animatedArrowIcon[expanded ? 'true' : 'false']
-          }
-        />
-      </Text>
-    </button>
-  </div>
-)
+import type { CodeEditorProps } from './type'
 
 export const CodeEditor = ({
   value,

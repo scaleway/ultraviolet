@@ -1,6 +1,7 @@
 import type { MimeType } from './types'
 
 export const getMimeTypeType = (mimeType: string): MimeType =>
+  // oxlint-disable-next-line typescript/no-unsafe-type-assertion
   (mimeType.split('/')?.[0]?.toLowerCase() || 'example') as MimeType
 
 export const formatFileSize = (bytes: number): string => {

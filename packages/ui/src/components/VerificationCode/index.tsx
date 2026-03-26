@@ -84,6 +84,7 @@ export const VerificationCode = ({
   const uniqueId = useId()
   const id = inputId ?? uniqueId
   const valuesArray = Object.assign(new Array(fields).fill(''), [
+    // oxlint-disable-next-line typescript/no-misused-spread
     ...initialValue.substring(0, fields),
   ])
   const [values, setValues] = useState<string[]>(valuesArray)
@@ -133,11 +134,9 @@ export const VerificationCode = ({
 
   const inputOnKeyDown =
     (index: number): KeyboardEventHandler<HTMLInputElement> =>
-    // oxlint-disable-next-line eslint/max-statements
     event => {
       const prevIndex = index - 1
       const nextIndex = index + 1
-      const first = inputRefs[0]
       const last = inputRefs.at(-1)
       const prev = inputRefs[prevIndex]
       const next = inputRefs[nextIndex]
@@ -174,7 +173,7 @@ export const VerificationCode = ({
 
         case 'ArrowUp': {
           event.preventDefault()
-          first?.current?.focus()
+          inputRefs[0]?.current?.focus()
           break
         }
 
@@ -195,6 +194,7 @@ export const VerificationCode = ({
     (currentIndex: number): ClipboardEventHandler<HTMLInputElement> =>
     event => {
       event.preventDefault()
+      // oxlint-disable-next-line typescript/no-misused-spread
       const pastedValue = [...event.clipboardData.getData('Text')].map(
         (copiedValue: string) =>
           // Replace non number char with empty char when type is number

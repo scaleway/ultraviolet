@@ -270,7 +270,7 @@ describe('modal', () => {
     )
     await userEvent.keyboard('{Escape}')
 
-    expect(mockOnClose).toBeCalledTimes(0)
+    expect(mockOnClose).not.toHaveBeenCalled()
   })
 
   test('test hideOnClickOutside is true', async () => {
@@ -309,6 +309,6 @@ describe('modal', () => {
     )
     await userEvent.click(screen.getByTestId('test-backdrop'))
 
-    expect(mockOnClose).toBeCalledTimes(0)
+    expect(mockOnClose).not.toHaveBeenCalled()
   })
 })

@@ -69,7 +69,7 @@ describe('groupField', () => {
     expect(input).toBeChecked()
 
     await userEvent.click(input)
-    expect(onChange).toBeCalledTimes(2)
+    expect(onChange).toHaveBeenCalledTimes(2)
     expect(input).not.toBeChecked()
     expect(asFragment()).toMatchSnapshot()
   })

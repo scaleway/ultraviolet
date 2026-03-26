@@ -1,3 +1,4 @@
+// oxlint-disable typescript/no-unsafe-type-assertion
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
@@ -200,9 +201,7 @@ describe('fileInput', () => {
   test('should throw error with FileInput.Button outside of FileInput', () => {
     expect(() =>
       shouldMatchSnapshot(<FileInput.Button>button</FileInput.Button>),
-    ).toThrowError(
-      'FileInputContext should be inside FileInput to work properly.',
-    )
+    ).toThrow('FileInputContext should be inside FileInput to work properly.')
   })
 
   test('should work with function children and title', () => {

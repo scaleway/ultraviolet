@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { Children, forwardRef, useEffect, useState } from 'react'
+import { forwardRef } from 'react'
 
 import { Cell } from './Cell'
 import { HeaderCell } from './HeaderCell'
@@ -11,6 +11,7 @@ import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
 import { listStyle } from './styles.css'
+import { TableContainer } from './TableContainer'
 
 import type { ColumnProps } from './types'
 import type {
@@ -49,25 +50,6 @@ type NewListProps = Omit<ListProps, 'colMode'> & {
 }
 type LegacyListProps = Omit<ListProps, 'colMode'> & {
   colMode?: 'flexible' | undefined
-}
-
-const TableContainer = ({ children }: { children: ReactNode }) => {
-  const [childrenMemory, setChildrenMemory] = useState<ReactNode[]>(
-    Children.toArray(children),
-  )
-
-  const { setRefList } = useListContext()
-
-  // Reset ref list when children change
-  useEffect(() => {
-    if (Children.toArray(children) !== childrenMemory) {
-      setRefList([])
-      setChildrenMemory(Children.toArray(children))
-    }
-    // oxlint-disable react/exhaustive-deps
-  }, [children, setRefList])
-
-  return <div className={listStyle.container}>{children}</div>
 }
 
 const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(
@@ -138,6 +120,7 @@ const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(
  * List is a component that displays a list of items based on the columns you provide and the data you pass.
  */
 type ListType = {
+  // biome-ignore  lint/style/useUnifiedTypeSignatures: ok
   (props: NewListProps & RefAttributes<HTMLTableElement>): ReactNode
   /**
    * @deprecated Use `colMode="strict"`

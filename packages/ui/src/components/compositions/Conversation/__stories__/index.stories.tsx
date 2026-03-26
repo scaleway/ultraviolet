@@ -1,20 +1,14 @@
-import {
-  Conversation,
-  DateComponent,
-  Message,
-  MessageInfos,
-  MessageTag as Tag,
-} from '..'
+import { Conversation } from '..'
 
 import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Conversation,
   subcomponents: {
-    'Conversation.Date': DateComponent,
-    'Conversation.Message': Message,
-    'Conversation.Tag': Tag,
-    'Conversation.MessageInfos': MessageInfos,
+    'Conversation.Date': Conversation.Date,
+    'Conversation.Message': Conversation.Message,
+    'Conversation.Tag': Conversation.Tag,
+    'Conversation.MessageInfos': Conversation.MessageInfos,
   },
   title: 'Compositions/Conversation',
 } satisfies Meta<typeof Conversation>

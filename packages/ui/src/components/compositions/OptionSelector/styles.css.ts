@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-import { dropdownItemBase } from '../../SelectInput/components/dropdown.css'
+import { selectInputStyle } from '../../styles'
 
 const wrapper = recipe({
   base: {
@@ -37,12 +37,12 @@ const revealOnHover = style({
     '&[data-visibility="unhover"]': {
       display: 'flex',
     },
-    [`${dropdownItemBase}:hover &[data-visibility="hover"],
-  ${dropdownItemBase}:focus &[data-visibility="hover"]`]: {
+    [`${selectInputStyle.dropdownItemBase}:hover &[data-visibility="hover"],
+  ${selectInputStyle.dropdownItemBase}:focus &[data-visibility="hover"]`]: {
       display: 'flex',
     },
-    [`${dropdownItemBase}:hover &[data-visibility="unhover"],
-  ${dropdownItemBase}:focus &[data-visibility="unhover"]`]: {
+    [`${selectInputStyle.dropdownItemBase}:hover &[data-visibility="unhover"],
+  ${selectInputStyle.dropdownItemBase}:focus &[data-visibility="unhover"]`]: {
       display: 'none',
     },
   },

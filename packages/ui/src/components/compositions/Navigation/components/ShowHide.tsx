@@ -1,7 +1,5 @@
 'use client'
 
-// oxlint-disable eslint/max-statements
-
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { memo, useState } from 'react'

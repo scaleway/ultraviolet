@@ -150,3 +150,29 @@ export const createDateRange = (
 
   return computedNewRange
 }
+
+export const getIsInHoveredRange = (
+  selectsRange: boolean,
+  constructedDate: Date,
+  hoveredDate?: Date | null,
+  range?: {
+    start?: Date | null
+    end: Date | null
+  },
+) =>
+  (selectsRange &&
+    range?.start &&
+    constructedDate > range.start &&
+    hoveredDate &&
+    constructedDate < hoveredDate &&
+    !range.end) ||
+  (selectsRange &&
+    range?.start &&
+    constructedDate < range.start &&
+    hoveredDate &&
+    constructedDate > hoveredDate &&
+    !range.end) ||
+  (range?.start &&
+    range.end &&
+    constructedDate < range.end &&
+    constructedDate > range.start)

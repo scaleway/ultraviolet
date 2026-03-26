@@ -73,7 +73,7 @@ describe('dateInputField', () => {
     await userEvent.click(screen.getByText('15'))
 
     await waitFor(() => {
-      expect(onChange).toBeCalledTimes(2)
+      expect(onChange).toHaveBeenCalledTimes(2)
     })
 
     expect(resultForm.current.getValues('test')).toEqual([

@@ -27,10 +27,7 @@ const BaseContentCardGroup = forwardRef<
     style={style}
   >
     {loading
-      ? Children.map(children, (_child, index) => (
-          // oxlint-disable react/no-array-index-key: error
-          <SkeletonCard key={index} />
-        ))
+      ? Children.map(children, (_child, index) => <SkeletonCard key={index} />)
       : children}
   </Stack>
 ))

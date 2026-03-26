@@ -21,7 +21,6 @@ import {
 //   optionalInfo?: ReactNode
 // }
 
-// oxlint-disable-next-line eslint/max-statements
 describe('selectInput', () => {
   beforeAll(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {

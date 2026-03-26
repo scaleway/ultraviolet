@@ -413,7 +413,7 @@ describe('dateInput', () => {
 
     await userEvent.type(input, '21/08/1995')
     input.blur()
-    expect(mockOnChange).toBeCalled()
+    expect(mockOnChange).toHaveBeenCalled()
     expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
   })
 
@@ -433,7 +433,7 @@ describe('dateInput', () => {
 
     await userEvent.type(input, '21/08/1995')
     input.blur()
-    expect(mockOnChange).toBeCalled()
+    expect(mockOnChange).toHaveBeenCalled()
     expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
   })
 
@@ -454,7 +454,7 @@ describe('dateInput', () => {
     await userEvent.type(input, '2000/08')
     input.blur()
 
-    expect(mockOnChange).toBeCalled()
+    expect(mockOnChange).toHaveBeenCalled()
     expect(screen.getByText('2000', { exact: false })).toBeInTheDocument()
   })
 
@@ -474,7 +474,7 @@ describe('dateInput', () => {
     await userEvent.click(input)
     await userEvent.type(input, '2000/08')
     input.blur()
-    expect(mockOnChange).toBeCalled()
+    expect(mockOnChange).toHaveBeenCalled()
     expect(screen.getByText('2000', { exact: false })).toBeInTheDocument()
   })
 })

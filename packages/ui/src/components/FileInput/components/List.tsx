@@ -21,30 +21,27 @@ const getIllustration = (
   error: boolean,
   loading?: boolean,
 ) => {
+  const state = error ? 'error' : 'default'
+  const sentiment = error ? 'danger' : 'primary'
+
   if (loading) {
     return (
-      <div
-        className={fileInputStyle.fileViewerImage[error ? 'error' : 'default']}
-      >
+      <div className={fileInputStyle.fileViewerImage[state]}>
         <Loader active sentiment="primary" size="xsmall" />
       </div>
     )
   }
   if (type === 'audio') {
     return (
-      <div
-        className={fileInputStyle.fileViewerImage[error ? 'error' : 'default']}
-      >
-        <AudioIcon sentiment={error ? 'danger' : 'primary'} size="medium" />
+      <div className={fileInputStyle.fileViewerImage[state]}>
+        <AudioIcon sentiment={sentiment} size="medium" />
       </div>
     )
   }
   if (type === 'video') {
     return (
-      <div
-        className={fileInputStyle.fileViewerImage[error ? 'error' : 'default']}
-      >
-        <VideoIcon sentiment={error ? 'danger' : 'primary'} size="medium" />
+      <div className={fileInputStyle.fileViewerImage[state]}>
+        <VideoIcon sentiment={sentiment} size="medium" />
       </div>
     )
   }
@@ -62,19 +59,15 @@ const getIllustration = (
 
   if (type === 'image' && error) {
     return (
-      <div
-        className={fileInputStyle.fileViewerImage[error ? 'error' : 'default']}
-      >
-        <ImageIcon sentiment={error ? 'danger' : 'primary'} size="medium" />
+      <div className={fileInputStyle.fileViewerImage[state]}>
+        <ImageIcon sentiment={sentiment} size="medium" />
       </div>
     )
   }
 
   return (
-    <div
-      className={fileInputStyle.fileViewerImage[error ? 'error' : 'default']}
-    >
-      <DocIcon sentiment={error ? 'danger' : 'primary'} size="medium" />
+    <div className={fileInputStyle.fileViewerImage[state]}>
+      <DocIcon sentiment={sentiment} size="medium" />
     </div>
   )
 }

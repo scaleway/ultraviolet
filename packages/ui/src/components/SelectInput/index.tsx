@@ -9,8 +9,7 @@ import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
-import { Dropdown } from './components/Dropdown'
-import { SelectBar } from './components/SelectBar'
+import { Dropdown, SelectBar } from './components'
 import { SelectInputProvider } from './SelectInputProvider'
 import { selectInputStyle } from './styles.css'
 
