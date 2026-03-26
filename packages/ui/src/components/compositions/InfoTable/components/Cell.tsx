@@ -1,5 +1,7 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
+
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
 import { infoTableStyle } from '../styles.css'
@@ -37,7 +39,10 @@ export const InfoTableCell = ({
     </Text>
     <Text
       as="dd"
-      className={infoTableStyle.desc}
+      className={cn(
+        infoTableStyle.desc,
+        typeof children === 'string' ? '' : infoTableStyle.descFlex,
+      )}
       oneLine={!multiline}
       prominence="default"
       sentiment="neutral"

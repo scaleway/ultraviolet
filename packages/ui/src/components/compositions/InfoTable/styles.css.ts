@@ -42,12 +42,16 @@ const term = style({
   display: 'inline-flex',
   gap: theme.space[1],
 })
+
 const desc = style({
   color: theme.colors.neutral.text,
   margin: 0,
   minWidth: 0,
   width: '100%',
   maxWidth: '100%',
+})
+
+const descFlex = style({
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
@@ -74,5 +78,6 @@ export const infoTableStyle = {
   cell,
   term,
   desc,
+  descFlex,
   cellWithCopyButton,
 }
