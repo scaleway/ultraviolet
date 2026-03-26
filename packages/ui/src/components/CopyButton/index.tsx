@@ -2,7 +2,7 @@
 
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { CopyContentIcon } from '@ultraviolet/icons/CopyContentIcon'
-import useClipboard from 'react-use-clipboard'
+import { useClipboard } from '@ultraviolet/utils'
 
 import { Button } from '../Button'
 
@@ -51,7 +51,10 @@ export const CopyButton = ({
       data-testid={dataTestId}
       onClick={() => {
         setCopied()
-        onCopy?.()
+          .then(() => {
+            onCopy?.()
+          })
+          .catch(() => null)
       }}
       sentiment={sentiment}
       size={size}

@@ -2,9 +2,8 @@
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { CopyContentIcon } from '@ultraviolet/icons/CopyContentIcon'
-import { cn } from '@ultraviolet/utils'
+import { cn, useClipboard } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-import useClipboard from 'react-use-clipboard'
 
 import { Button } from '../Button'
 import { Loader } from '../Loader'
@@ -195,7 +194,9 @@ export const Tag = ({
           )}
           data-testid={dataTestId}
           disabled={disabled}
-          onClick={setCopied}
+          onClick={() => {
+            setCopied().catch(() => null)
+          }}
           type="button"
         >
           <TagInner
