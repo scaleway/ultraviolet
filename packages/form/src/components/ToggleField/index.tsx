@@ -1,6 +1,7 @@
 'use client'
 
 import { Toggle } from '@ultraviolet/ui'
+import { useMemo } from 'react'
 import { useController } from 'react-hook-form'
 
 import { useErrors } from '../../providers'
@@ -33,6 +34,7 @@ export const ToggleField = <
   format,
   shouldUnregister = false,
   validate,
+  errorLabel,
   'aria-label': ariaLabel,
   ...props
 }: ToggleFieldProps<TFieldValues, TFieldName>) => {
@@ -58,14 +60,23 @@ export const ToggleField = <
     return field.value as boolean
   }
 
+  const computedErrorLabel = useMemo(() => {
+    if (errorLabel) {
+      return errorLabel
+    }
+
+    if (typeof label === 'string') {
+      return label
+    }
+
+    return ariaLabel ?? name
+  }, [errorLabel, name, ariaLabel, label])
+
   return (
     <Toggle
       {...props}
       checked={transformedValue()}
-      error={getError(
-        { label: typeof label === 'string' ? label : (ariaLabel ?? name) },
-        error,
-      )}
+      error={getError({ label: computedErrorLabel }, error)}
       label={label}
       name={field.name}
       onBlur={event => {

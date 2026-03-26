@@ -26,6 +26,7 @@ export const VerificationCodeField = <
   onChange,
   required,
   validate,
+  errorLabel,
   ...props
 }: VerificationCodeFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
@@ -53,7 +54,10 @@ export const VerificationCodeField = <
   return (
     <VerificationCode
       {...props}
-      error={getError({ label: label ?? 'verification-code-field' }, error)}
+      error={getError(
+        { label: errorLabel ?? label ?? 'verification-code-field' },
+        error,
+      )}
       fields={fields}
       inputId={inputId}
       label={label}

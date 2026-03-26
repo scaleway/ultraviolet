@@ -32,6 +32,7 @@ export const NumberInputField = <
   required,
   shouldUnregister = false,
   validate,
+  errorLabel,
   ...props
 }: NumberInputProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -58,7 +59,12 @@ export const NumberInputField = <
       {...props}
       aria-label={ariaLabel}
       error={getError(
-        { isInteger: step, label: label ?? ariaLabel ?? name, max, min },
+        {
+          isInteger: step,
+          label: errorLabel ?? label ?? ariaLabel ?? name,
+          max,
+          min,
+        },
         error,
       )}
       label={label}

@@ -34,6 +34,7 @@ export const TimeInputField = <
   'aria-label': ariaLabel,
   shouldUnregister,
   control,
+  errorLabel,
   ...props
 }: TimeInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -55,7 +56,7 @@ export const TimeInputField = <
       {...props}
       error={getError(
         {
-          label: label ?? ariaLabel ?? name,
+          label: errorLabel ?? label ?? ariaLabel ?? name,
           value: field.value,
         },
         error,

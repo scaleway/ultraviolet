@@ -44,6 +44,7 @@ export const DateInputField = <
   selectsRange,
   showMonthYearPicker,
   shouldUnregister = false,
+  errorLabel,
   ...props
 }: DateInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -72,7 +73,7 @@ export const DateInputField = <
           ? (field.value as [Date | null, Date | null])[1]
           : undefined
       }
-      error={getError({ label, maxDate, minDate }, error)}
+      error={getError({ label: errorLabel ?? label, maxDate, minDate }, error)}
       format={
         format ??
         (value => {

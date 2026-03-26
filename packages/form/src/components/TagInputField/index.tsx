@@ -30,6 +30,7 @@ export const TagInputField = <
   shouldUnregister = false,
   label,
   validate,
+  errorLabel,
   'aria-label': ariaLabel,
   ...props
 }: TagInputFieldProps<TFieldValues, TFieldName>) => {
@@ -60,7 +61,7 @@ export const TagInputField = <
       {...props}
       aria-label={ariaLabel}
       error={getError(
-        { label: label ?? ariaLabel ?? name, regex: regexes },
+        { label: errorLabel ?? label ?? ariaLabel ?? name, regex: regexes },
         error,
       )}
       label={label}
