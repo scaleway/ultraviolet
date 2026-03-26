@@ -18,7 +18,12 @@ import { ItemLeftSide } from './ItemLeftSide'
 import { ItemPrice } from './ItemPrice'
 
 import type { Text } from '../../../Text'
-import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
+import type {
+  BareEstimateProduct,
+  EstimateProduct,
+  Iteration,
+  Units,
+} from '../types'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 type ItemProps = {
@@ -209,10 +214,10 @@ export const Item = memo(
 
     const unit = useMemo(() => {
       if (!baseUnit) {
-        return locales['estimate.cost.units.gb.label']
+        return locales['estimate.cost.units.gb.label'] as Units
       }
 
-      return baseUnit
+      return baseUnit as Units
     }, [baseUnit, locales])
 
     const { isOverlay } = useOverlay()

@@ -8,12 +8,10 @@ import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 
 import { CompactEstimateCost } from './CompactEstimateCost'
-import {
-  ChildrenComponent,
-  DescriptionComponent,
-  TotalComponent,
-} from './Components/ContentComponents'
+import { ChildrenComponent } from './Components/Children'
+import { Description } from './Components/Description'
 import { Item } from './Components/Item'
+import { Total } from './Components/Total'
 import { maximumFractionDigits, maximumFractionDigitsLong } from './constants'
 import { useEstimateCost } from './EstimateCostProvider'
 import { calculatePrice } from './helper'
@@ -258,7 +256,7 @@ export const EstimateCostContent = ({
           </OverlayComponent>
         )}
         {description === false ? null : (
-          <DescriptionComponent description={description} locales={locales} />
+          <Description description={description} locales={locales} />
         )}
         {alert ? (
           <Alert sentiment={alertVariant} title={alertTitle}>
@@ -283,7 +281,7 @@ export const EstimateCostContent = ({
               </ChildrenComponent>
             ) : null}
             {hideTotal ? null : (
-              <TotalComponent
+              <Total
                 discount={discount}
                 hideHourlyPriceOnTotal={hideHourlyPriceOnTotal}
                 isBeta={isBeta}

@@ -84,10 +84,8 @@ export const ItemPrice = ({
                 : maximumFractionDigits.hours,
             },
           )}
-          {TIME_RELATED_UNIT.includes(unit as Units)
-            ? locales[
-                `estimate.cost.units.${unit as Units}.label`
-              ].toLowerCase()
+          {TIME_RELATED_UNIT.includes(unit)
+            ? locales[`estimate.cost.units.${unit}.label`].toLowerCase()
             : `/${unit}`}
           {noIteration
             ? null

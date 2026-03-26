@@ -1,3 +1,4 @@
+// oxlint-disable typescript/no-unsafe-type-assertion
 import { describe, expect, test, vi } from 'vitest'
 
 import onKeyOnlyNumbers from '../keycode'

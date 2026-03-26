@@ -140,6 +140,7 @@ export const Dialog = ({
       if (
         hideOnClickOutside &&
         dialogRef.current &&
+        // oxlint-disable-next-line typescript/no-unsafe-type-assertion
         !dialogRef.current.contains(event.target as Node) &&
         position === 0
       ) {

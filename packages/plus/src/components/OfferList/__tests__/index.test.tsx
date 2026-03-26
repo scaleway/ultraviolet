@@ -207,8 +207,6 @@ describe('offerList', () => {
           <OfferList.Cell>a cell</OfferList.Cell>
         </OfferList.Row>,
       ),
-    ).toThrowError(
-      'useOfferListContext should be used inside a OfferList component',
-    )
+    ).toThrow('useOfferListContext should be used inside a OfferList component')
   })
 })

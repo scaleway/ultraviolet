@@ -9,6 +9,7 @@ import { CALENDAR_WEEKS } from '../constants'
 import { DateInputContext } from '../Context'
 import {
   formatValue,
+  getIsInHoveredRange,
   getMonthFirstDay,
   getNextMonth,
   getPreviousMonth,
@@ -133,23 +134,12 @@ export const Daily = () => {
         const isAfterStartDate =
           selectsRange && range?.start && constructedDate > range.start
 
-        const isInHoveredRange =
-          (selectsRange &&
-            range?.start &&
-            constructedDate > range.start &&
-            hoveredDate &&
-            constructedDate < hoveredDate &&
-            !range.end) ||
-          (selectsRange &&
-            range?.start &&
-            constructedDate < range.start &&
-            hoveredDate &&
-            constructedDate > hoveredDate &&
-            !range.end) ||
-          (range?.start &&
-            range.end &&
-            constructedDate < range.end &&
-            constructedDate > range.start)
+        const isInHoveredRange = getIsInHoveredRange(
+          selectsRange,
+          constructedDate,
+          hoveredDate,
+          range,
+        )
 
         const getNewDate = () => {
           // Clicked on a day from the previous month

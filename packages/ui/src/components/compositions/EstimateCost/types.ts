@@ -242,5 +242,5 @@ export type ItemPriceProps = {
   longFractionDigits: boolean
   maximumFractionDigitsLong: Record<Units, number>
   maximumFractionDigits: Record<Units, number>
-  unit: string
+  unit: Units
 }

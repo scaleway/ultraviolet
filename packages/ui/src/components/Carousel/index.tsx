@@ -1,36 +1,12 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useRef, useState } from 'react'
 
-import { carouselStyle, widthVar } from './styles.css'
+import { CarouselItem } from './Item'
+import { carouselStyle } from './styles.css'
 
-import type { CSSProperties, ReactNode } from 'react'
-
-type CarouselItemProps = {
-  children: ReactNode
-  width?: string
-  style?: CSSProperties
-}
-export const CarouselItem = ({
-  children,
-  width = '240px',
-  style,
-}: CarouselItemProps) => (
-  <div
-    className={carouselStyle.borderWrapper}
-    draggable="true"
-    style={{
-      ...assignInlineVars({
-        [widthVar]: width,
-      }),
-      ...style,
-    }}
-  >
-    {children}
-  </div>
-)
+import type { ReactNode } from 'react'
 
 type CarouselProps = {
   className?: string

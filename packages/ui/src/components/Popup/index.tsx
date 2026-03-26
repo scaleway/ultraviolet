@@ -446,6 +446,8 @@ export const Popup = forwardRef(
       const handleClickOutside = (event: MouseEvent) => {
         const popupCurrent = innerPopupRef.current
         const childrenCurrent = childrenRef.current
+        // oxlint-disable-next-line typescript/no-unsafe-type-assertion
+        const target = event.target as Node
 
         if (
           popupCurrent &&
@@ -454,8 +456,8 @@ export const Popup = forwardRef(
           event.target &&
           event.target !== popupCurrent &&
           event.target !== childrenCurrent &&
-          !childrenCurrent?.contains(event.target as Node) &&
-          !popupCurrent.contains(event.target as Node)
+          !childrenCurrent?.contains(target) &&
+          !popupCurrent.contains(target)
         ) {
           event.preventDefault()
           event.stopPropagation()
@@ -555,6 +557,7 @@ export const Popup = forwardRef(
       }
 
       return (
+        // oxlint-disable-next-line jsx_a11y/no-static-element-interactions
         <div
           aria-controls={generatedId}
           aria-describedby={generatedId}
@@ -613,6 +616,7 @@ export const Popup = forwardRef(
         {renderChildren()}
         {shouldRender
           ? createPortal(
+              // oxlint-disable-next-line jsx_a11y/no-static-element-interactions:  has a role
               <div
                 className={cn(
                   className,

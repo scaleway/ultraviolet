@@ -1,5 +1,3 @@
-// oxlint-disable eslint/complexity
-
 'use client'
 
 import { cn } from '@ultraviolet/utils'
@@ -8,7 +6,7 @@ import { useContext, useState } from 'react'
 import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { DateInputContext } from '../Context'
-import { formatValue, isSameMonth } from '../helpers'
+import { formatValue, getIsInHoveredRange, isSameMonth } from '../helpers'
 import { dateInputStyle } from '../styles.css'
 
 import type { MouseEvent as MouseEventReact } from 'react'
@@ -57,23 +55,12 @@ export const Monthly = () => {
         const isAfterStartDate =
           selectsRange && range?.start && constructedDate > range.start
 
-        const isInHoveredRange =
-          (selectsRange &&
-            range?.start &&
-            constructedDate > range.start &&
-            hoveredDate &&
-            constructedDate < hoveredDate &&
-            !range.end) ||
-          (selectsRange &&
-            range?.start &&
-            constructedDate < range.start &&
-            hoveredDate &&
-            constructedDate > hoveredDate &&
-            !range.end) ||
-          (range?.start &&
-            range.end &&
-            constructedDate < range.end &&
-            constructedDate > range.start)
+        const isInHoveredRange = getIsInHoveredRange(
+          selectsRange,
+          constructedDate,
+          hoveredDate,
+          range,
+        )
 
         const isSelected =
           (value && isSameMonth(constructedDate, value)) ||

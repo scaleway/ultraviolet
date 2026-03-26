@@ -33,7 +33,6 @@ import type { Ref } from 'react'
  * - `toggleIsOpen`: a function to toggle the popup
  */
 export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
-  // oxlint-disable-next-line eslint/max-statements
   (
     {
       placeholder,

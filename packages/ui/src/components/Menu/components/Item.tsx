@@ -173,6 +173,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
                         event.stopPropagation()
                         event.preventDefault()
                       }}
+                      role="menuitem"
                     >
                       {rightComponent}
                     </div>
@@ -239,6 +240,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
                       event.stopPropagation()
                       event.preventDefault()
                     }}
+                    role="menuitem"
                   >
                     {rightComponent}
                   </div>

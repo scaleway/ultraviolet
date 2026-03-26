@@ -46,9 +46,9 @@ describe('checkbox', () => {
     ))
 
   test('throw error when using Chip.Icon outside of Chip', () => {
-    expect(() =>
-      renderWithTheme(<Chip.Icon icon={<AddressIcon />} />),
-    ).toThrowError('Chip.Icon can only be used inside a Chip component')
+    expect(() => renderWithTheme(<Chip.Icon icon={<AddressIcon />} />)).toThrow(
+      'Chip.Icon can only be used inside a Chip component',
+    )
   })
 
   test('renders correctly onClick', async () => {
