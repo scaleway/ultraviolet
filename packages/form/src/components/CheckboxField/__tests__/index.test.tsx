@@ -87,7 +87,7 @@ describe('checkboxField', () => {
         methods={result.current}
         onSubmit={() => {}}
       >
-        <CheckboxField name="test" required>
+        <CheckboxField name="test" required errorLabel="errorLabel">
           Checkbox field error
         </CheckboxField>
         <div>Focus</div>

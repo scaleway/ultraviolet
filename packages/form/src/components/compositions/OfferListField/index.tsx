@@ -42,6 +42,7 @@ const OfferListField = <
   label,
   required,
   value,
+  errorLabel,
   onChange,
   shouldUnregister,
 }: OfferListFieldProps<TFieldValues, TName>) => {
@@ -81,7 +82,7 @@ const OfferListField = <
         <Text as="p" prominence="default" sentiment="danger" variant="caption">
           {getError(
             {
-              label: label ?? name,
+              label: errorLabel ?? label ?? name,
               value: field.value,
             },
             error,

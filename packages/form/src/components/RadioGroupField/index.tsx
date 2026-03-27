@@ -29,6 +29,7 @@ const RadioGroupFieldComponent = <
   shouldUnregister = false,
   validate,
   legend = '',
+  errorLabel,
   ...props
 }: RadioGroupFieldProps<TFieldValues, TFieldName>): JSX.Element => {
   const { getError } = useErrors()
@@ -48,7 +49,7 @@ const RadioGroupFieldComponent = <
   return (
     <RadioGroup
       {...props}
-      error={getError({ label: legend }, error) ?? customError}
+      error={getError({ label: errorLabel ?? legend }, error) ?? customError}
       legend={legend}
       name={field.name}
       onChange={event => {

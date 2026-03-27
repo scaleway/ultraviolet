@@ -31,6 +31,7 @@ export const RadioField = <
   value,
   shouldUnregister = false,
   validate,
+  errorLabel,
   'aria-label': ariaLabel,
   ...props
 }: RadioFieldProps<TFieldValues, TFieldName>) => {
@@ -48,7 +49,10 @@ export const RadioField = <
     shouldUnregister,
   })
 
-  const errorLabel = useMemo(() => {
+  const computedErrorLabel = useMemo(() => {
+    if (errorLabel) {
+      return errorLabel
+    }
     if (label && typeof label === 'string') {
       return label
     }
@@ -58,14 +62,14 @@ export const RadioField = <
     }
 
     return name
-  }, [label, name, ariaLabel])
+  }, [label, name, ariaLabel, errorLabel])
 
   return (
     <Radio
       {...props}
       checked={field.value === value}
       disabled={disabled}
-      error={getError({ label: errorLabel }, error)}
+      error={getError({ label: computedErrorLabel }, error)}
       name={field.name}
       onBlur={event => {
         field.onBlur()
