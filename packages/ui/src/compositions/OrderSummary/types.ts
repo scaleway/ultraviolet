@@ -135,6 +135,7 @@ export type OrderSummaryProps = {
     unitaryTotalPrice: PriceTypeSingle,
   ) => void
   hideDetails?: boolean
+  calculatorIcon?: boolean
   className?: string
   ['data-testid']?: string
   style?: CSSProperties
