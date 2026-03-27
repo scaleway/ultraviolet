@@ -41,6 +41,7 @@ export const OrderSummary = ({
   'data-testid': dataTestId,
   style,
   priceInformation,
+  calculatorIcon,
 }: OrderSummaryProps) => {
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
@@ -193,6 +194,8 @@ export const OrderSummary = ({
           totalPriceInfo={totalPriceInfo}
           totalPriceInfoPlacement={totalPriceInfoPlacement}
           unit={timePeriodUnit}
+          compact={hideDetails && !header}
+          calculatorIcon={calculatorIcon}
         >
           {children}
         </NonScrollableContent>
