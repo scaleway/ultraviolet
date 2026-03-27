@@ -7,13 +7,10 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
 
-import { TAGS_GAP } from './constant'
+import { DEFAULT_POPOVER_MAX_HEIGHT, MIN_TAG_WIDTH, TAGS_GAP } from './constant'
 import { popoverTriggerWidthVar, tagListStyle } from './styles.css'
 
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
-
-const DEFAULT_POPOVER_MAX_HEIGHT = '16rem'
-const MIN_TAG_WIDTH = 32 // in px
 
 export type TagType = string | { label: string; icon: ReactNode }
 
@@ -140,10 +137,10 @@ export const TagList = ({
     const toMeasureElements: HTMLCollection =
       measureRef.current.children[0].children
 
-    const [firstTag, ...restOfToMeasureElements] = [...toMeasureElements]
+    const toMeasureElementsArray = [...toMeasureElements]
 
     const { measuredVisibleTags, measuredHiddenTags } =
-      restOfToMeasureElements.reduce(
+      toMeasureElementsArray.reduce(
         (
           accumulator: {
             measuredVisibleTags: TagType[]
@@ -157,29 +154,40 @@ export const TagList = ({
           measuredHiddenTags: TagType[]
           accumulatedWidth: number
         } => {
+          const tagWidth = (currentValue as HTMLDivElement).offsetWidth
+          const gap = index > 0 ? Number.parseInt(TAGS_GAP, 10) : 0
           const newAccumulatedWidth =
-            accumulator.accumulatedWidth +
-            (currentValue as HTMLDivElement).offsetWidth +
-            Number.parseInt(TAGS_GAP, 10)
+            accumulator.accumulatedWidth + tagWidth + gap
 
+          const minWidthAccumulatedWidth =
+            accumulator.accumulatedWidth + MIN_TAG_WIDTH + gap
+
+          // The tag fits (with or without needing shrinking)
+          if (minWidthAccumulatedWidth <= parentWidth) {
+            return {
+              accumulatedWidth: newAccumulatedWidth,
+              measuredHiddenTags: accumulator.measuredHiddenTags,
+              measuredVisibleTags: [
+                ...accumulator.measuredVisibleTags,
+                tags[index],
+              ],
+            }
+          }
+
+          // The tag doesn't fit at all (available space < min-width)
           return {
-            accumulatedWidth: newAccumulatedWidth,
+            accumulatedWidth: accumulator.accumulatedWidth,
             measuredHiddenTags: [
               ...accumulator.measuredHiddenTags,
-              newAccumulatedWidth > parentWidth && tags[index + 1],
-            ].filter(Boolean) as TagType[],
-            measuredVisibleTags: [
-              ...accumulator.measuredVisibleTags,
-              newAccumulatedWidth <= parentWidth && tags[index + 1],
-            ].filter(Boolean) as TagType[],
+              tags[index],
+            ],
+            measuredVisibleTags: accumulator.measuredVisibleTags,
           }
         },
         {
-          accumulatedWidth:
-            (firstTag as HTMLDivElement).offsetWidth +
-            Number.parseInt(TAGS_GAP, 10),
+          accumulatedWidth: 0,
           measuredHiddenTags: [],
-          measuredVisibleTags: [tags[0]], // we need to always show one tag
+          measuredVisibleTags: [],
         },
       )
 
