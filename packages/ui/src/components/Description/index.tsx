@@ -5,7 +5,7 @@ import type { HTMLAttributes, ReactNode } from 'react'
 import { canDisplay } from '../../helpers/hasHelperText'
 import { Text } from '../Text'
 
-type HelperProps = {
+export type DescriptionProps = {
   helper?: ReactNode
   success?: string | boolean
   error?: ReactNode
@@ -25,7 +25,7 @@ export const Description = ({
   error,
   style,
   className,
-}: HelperProps) => {
+}: DescriptionProps) => {
   const hasTextError = typeof error === 'string' || canDisplay(error)
   const hasTextSuccess = typeof success === 'string'
 

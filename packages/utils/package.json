@@ -50,6 +50,9 @@
     "watch": "pnpm run '/^watch:.*/'",
     "watch:build": "vite build  --watch"
   },
+  "dependencies": {
+    "awesome-phonenumber": "7.8.0"
+  },
   "devDependencies": {
     "@repo/config": "workspace:*",
     "@testing-library/dom": "10.4.1",

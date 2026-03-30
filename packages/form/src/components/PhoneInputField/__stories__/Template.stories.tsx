@@ -1,16 +1,12 @@
-import { PhoneField } from '..'
+import type { StoryFn } from '@storybook/react-vite'
+import { PhoneInputField } from '..'
 import { Form } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 
-import type { StoryFn } from '@storybook/react-vite'
-
-export const Template: StoryFn<typeof PhoneField> = ({ ...args }) => (
+export const Template: StoryFn<typeof PhoneInputField> = ({ ...args }) => (
   <Form errors={mockErrors} methods={useForm()} onSubmit={() => {}}>
-    <PhoneField
-      {...args}
-      parseNumberErrorMessage="This doesn't appear to be a valid phone number."
-    />
+    <PhoneInputField {...args} parseNumberErrorMessage="This doesn't appear to be a valid phone number." />
   </Form>
 )
 

@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { PhoneInput } from '..'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const ControlledVSUncontrolled: StoryFn<typeof PhoneInput> = props => {
   const [value, setValue] = useState('+33612345678')

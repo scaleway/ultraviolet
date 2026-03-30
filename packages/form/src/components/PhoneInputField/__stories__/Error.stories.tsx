@@ -1,11 +1,10 @@
-import { PhoneField } from '..'
+import type { StoryFn } from '@storybook/react-vite'
+import { PhoneInputField } from '..'
 import { Form } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 
-import type { StoryFn } from '@storybook/react-vite'
-
-export const WithError: StoryFn<typeof PhoneField> = () => {
+export const WithError: StoryFn<typeof PhoneInputField> = () => {
   const methods = useForm({
     defaultValues: {
       phone: 'invalid',
@@ -14,7 +13,7 @@ export const WithError: StoryFn<typeof PhoneField> = () => {
 
   return (
     <Form errors={mockErrors} methods={methods} onSubmit={() => {}}>
-      <PhoneField
+      <PhoneInputField
         defaultCountry="FR"
         label="Phone Number"
         name="phone"

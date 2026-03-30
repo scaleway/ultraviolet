@@ -97,7 +97,7 @@ const input = style({
   paddingLeft: theme.space['2'],
   background: 'transparent',
   fontSize: theme.typography.bodySmall.fontSize,
-
+  color: theme.colors.neutral.text,
   selectors: {
     '&[data-size="large"]': {
       fontSize: theme.typography.body.fontSize,

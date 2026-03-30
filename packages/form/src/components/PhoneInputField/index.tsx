@@ -1,16 +1,18 @@
-import { useController, useErrors } from '@ultraviolet/form'
-import { PhoneInput } from '@ultraviolet/ui'
-import { parsePhoneNumber } from 'awesome-phonenumber'
+'use client'
 
 import type { BaseFieldProps, FieldPath, FieldValues } from '@ultraviolet/form'
+import { PhoneInput } from '@ultraviolet/ui'
+import { phoneUtils } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
+import { useController } from 'react-hook-form'
+import { useErrors } from '../../providers'
 
 type PhoneInputValue = NonNullable<ComponentProps<typeof PhoneInput>['value']>
 
-type PhoneFieldProps<
-  TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
+type PhoneFieldProps<TFieldValues extends FieldValues, TName extends FieldPath<TFieldValues>> = BaseFieldProps<
+  TFieldValues,
+  TName
+> &
   ComponentProps<typeof PhoneInput> & {
     /**
      * message show to the user when the number is not a correct phone number
@@ -18,14 +20,16 @@ type PhoneFieldProps<
     parseNumberErrorMessage: string
   }
 
-export const PhoneField = <
+export const PhoneInputField = <
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   className,
   disabled,
   id,
+  errorLabel,
   label,
+  control,
   name,
   onBlur,
   onChange,
@@ -36,20 +40,20 @@ export const PhoneField = <
   'data-testid': dataTestId,
   parseNumberErrorMessage = "This doesn't appear to be a valid phone number.",
   onParsingError,
+  shouldUnregister,
 }: PhoneFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
   const {
     field,
     fieldState: { error: fieldError },
   } = useController<TFieldValues>({
+    control,
     name,
     rules: {
       required,
       validate: (phoneNumber: PhoneInputValue) => {
         try {
-          return !!phoneNumber && !parsePhoneNumber(phoneNumber).valid
-            ? parseNumberErrorMessage
-            : undefined
+          return !!phoneNumber && !phoneUtils.parsePhoneNumber(phoneNumber).valid ? parseNumberErrorMessage : undefined
         } catch (error: unknown) {
           if (error instanceof Error) {
             onParsingError?.({
@@ -62,7 +66,10 @@ export const PhoneField = <
         }
       },
     },
+    shouldUnregister,
   })
+
+  const internalError = getError({ label: errorLabel ?? label ?? name }, fieldError)
 
   return (
     <PhoneInput
@@ -70,7 +77,7 @@ export const PhoneField = <
       data-testid={dataTestId}
       defaultCountry={defaultCountry}
       disabled={disabled}
-      error={getError({ label: label ?? '' }, fieldError)}
+      error={internalError}
       id={id}
       label={label}
       name={field.name}

@@ -1,37 +1,44 @@
 import { theme } from '@ultraviolet/themes'
-import { style } from '@vanilla-extract/css'
+import { style, styleVariants } from '@vanilla-extract/css'
+import { INPUT_SIZE_HEIGHT } from './constants'
 
 const flag = style({
   maxWidth: '64px',
-})
-
-const text = style({
-  marginLeft: theme.space['1'],
-})
-
-const span = style({
-  position: 'absolute',
-  top: '-12px',
-  left: '12px',
-  fontSize: '13px',
-  padding: `0 ${theme.space['2']}`,
-  backgroundColor: theme.colors.other.elevation.background.overlay,
-})
-
-const label = style({
-  height: '48px',
-  position: 'relative',
-  display: 'flex',
-  borderRadius: '4px',
+  padding: `0 ${theme.space['1.5']}`,
+  borderRight: '1px solid',
+  borderColor: 'inherit',
+  height: '100%',
   alignItems: 'center',
-  border: `1px solid ${theme.colors.neutral.borderWeak}`,
-  padding: `${theme.space['1']} ${theme.space['1']}`,
-  gap: theme.space['1'],
+  justifyContent: 'center',
+  alignSelf: 'center',
+})
+
+const inputWrapperSizes = styleVariants(
+  Object.keys(INPUT_SIZE_HEIGHT).reduce<Record<keyof typeof INPUT_SIZE_HEIGHT, { height: string }>>(
+    (acc, size) => ({
+      ...acc,
+      [size]: {
+        height: theme.sizing[INPUT_SIZE_HEIGHT[size as keyof typeof INPUT_SIZE_HEIGHT]],
+      },
+    }),
+    {} as Record<keyof typeof INPUT_SIZE_HEIGHT, { height: string }>,
+  ),
+)
+
+const inputWrapper = style({
+  alignItems: 'center',
+  background: theme.colors.neutral.background,
+  borderRadius: theme.radii.default,
+  border: `1px solid ${theme.colors.neutral.border}`,
+  display: 'flex',
+  flexDirection: 'row',
   selectors: {
-    '&[data-disabled="true"]': {
-      color: theme.colors.neutral.textDisabled,
+    '&:not([data-disabled="true"]):not([data-readonly="true"]):hover': {
+      borderColor: theme.colors.primary.border,
+    },
+    "&[data-disabled='true']": {
+      background: theme.colors.neutral.backgroundDisabled,
       borderColor: theme.colors.neutral.borderDisabled,
-      cursor: 'not-allowed',
     },
     '&[data-error="true"]': {
       borderColor: theme.colors.danger.border,
@@ -41,21 +48,34 @@ const label = style({
       border: `1px solid ${theme.colors.primary.border}`,
       boxShadow: theme.shadows.focusPrimary,
     },
+    "&[data-readonly='true']": {
+      background: theme.colors.neutral.backgroundWeak,
+      borderColor: theme.colors.neutral.border,
+    },
+    "&[data-success='true']": {
+      borderColor: theme.colors.success.border,
+    },
   },
-})
-
-const error = style({
-  paddingTop: theme.space['0.25'],
+  width: '100%',
 })
 
 const input = style({
-  height: '100%',
+  flex: 1,
   border: 'none',
   outline: 'none',
+  height: '100%',
   width: '100%',
+  paddingLeft: theme.space['2'],
   background: theme.colors.neutral.background,
   color: theme.colors.neutral.text,
+  borderRadius: theme.radii.default,
   selectors: {
+    '&[data-size="large"]': {
+      fontSize: theme.typography.body.fontSize,
+    },
+    '&[data-size="small"]': {
+      paddingLeft: theme.space['1'],
+    },
     '&::placeholder': {
       color: theme.colors.neutral.textWeak,
     },
@@ -64,14 +84,27 @@ const input = style({
       pointerEvents: 'none',
       backgroundColor: 'inherit',
     },
+    '&:focus': {
+      outline: 'none',
+    },
+    [`${inputWrapper} > &`]: {
+      color: theme.colors.neutral.text,
+    },
+    [`${inputWrapper} > &::placeholder`]: {
+      color: theme.colors.neutral.textWeak,
+    },
+    [`${inputWrapper}[data-disabled='true'] > &`]: {
+      color: theme.colors.neutral.textDisabled,
+    },
+    [`${inputWrapper}[data-disabled='true'] > &::placeholder`]: {
+      color: theme.colors.neutral.textWeakDisabled,
+    },
   },
 })
 
 export const phoneInputStyle = {
   flag,
-  text,
-  span,
-  label,
-  error,
+  inputWrapper,
+  inputWrapperSizes,
   input,
 }

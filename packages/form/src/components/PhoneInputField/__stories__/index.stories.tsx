@@ -1,11 +1,9 @@
+import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-
 import { PhoneInputField } from '..'
 import { Form } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
-
-import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: PhoneInputField,
@@ -67,8 +65,8 @@ export default {
       )
     },
   ],
-  title: 'Form/Components/Fields/PhoneInputField',
-} as Meta<typeof PhoneField>
+  title: 'Form/Components/Fields/PhoneField',
+} as Meta<typeof PhoneInputField>
 
 export { Playground } from './Playground.stories'
 export { Required } from './Required.stories'

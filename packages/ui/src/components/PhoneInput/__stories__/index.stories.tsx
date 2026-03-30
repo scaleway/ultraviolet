@@ -1,6 +1,5 @@
-import { PhoneInput } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { PhoneInput } from '..'
 
 export default {
   component: PhoneInput,
@@ -14,3 +13,6 @@ export { Disabled } from './Disabled.stories'
 export { WithError } from './Error.stories'
 export { Required } from './Required.stories'
 export { ControlledVSUncontrolled } from './ControlledVSUncontrolled.stories'
+export { WithUserControlledFormatting } from './UserControl.stories'
+export { WithOnValueChange } from './UserControl.stories'
+export { WithExternalValidation } from './UserControl.stories'

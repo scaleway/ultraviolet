@@ -468,6 +468,9 @@ importers:
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:../ui
+      '@ultraviolet/utils':
+        specifier: workspace:*
+        version: link:../utils
       awesome-phonenumber:
         specifier: 7.8.0
         version: 7.8.0
@@ -692,9 +695,6 @@ importers:
       '@vanilla-extract/sprinkles':
         specifier: 1.6.5
         version: 1.6.5(@vanilla-extract/css@1.20.1)
-      awesome-phonenumber:
-        specifier: 7.8.0
-        version: 7.8.0
       codemirror:
         specifier: 6.0.2
         version: 6.0.2
@@ -743,6 +743,10 @@ importers:
         version: 8.0.13(@types/node@24.12.4)(esbuild@0.28.0)(jiti@2.6.1)(sass@1.99.0)(terser@5.47.1)(tsx@4.21.0)(yaml@2.9.0)
 
   packages/utils:
+    dependencies:
+      awesome-phonenumber:
+        specifier: 7.8.0
+        version: 7.8.0
     devDependencies:
       '@repo/config':
         specifier: workspace:*
