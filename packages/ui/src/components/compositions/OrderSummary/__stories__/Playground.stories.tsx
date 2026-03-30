@@ -2,7 +2,7 @@ import { Template } from './Template.stories'
 
 export const Playground = Template.bind({})
 
-Playground.args = { ...Template.args }
+Playground.args = { ...Template.args, calculatorIcon: true }
 
 Playground.parameters = {
   docs: {

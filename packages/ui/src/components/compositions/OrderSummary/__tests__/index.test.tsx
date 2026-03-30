@@ -282,6 +282,18 @@ describe('orderSummary', () => {
         />
       </>,
     ))
+  test('works with hideDetails and no header', () =>
+    shouldMatchSnapshot(
+      <>
+        <OrderSummary header="summary" hideDetails items={[categoryAZ]} />
+        <OrderSummary
+          discount={0.5}
+          calculatorIcon
+          hideDetails
+          items={[categoryAZ]}
+        />
+      </>,
+    ))
 
   test('works with negative category price', () => {
     const { asFragment } = renderWithTheme(

@@ -31,9 +31,18 @@ const stackBackground = style({
   backgroundColor: theme.colors.neutral.background,
 })
 
-const nonScrollableContainer = style({
-  borderTop: `1px solid ${theme.colors.neutral.border}`,
-  padding: theme.space[3],
+const nonScrollableContainer = recipe({
+  variants: {
+    compact: {
+      false: {
+        borderTop: `1px solid ${theme.colors.neutral.border}`,
+        padding: theme.space[3],
+      },
+      true: {
+        padding: theme.space[2],
+      },
+    },
+  },
 })
 
 const numberInput = style({
@@ -106,6 +115,11 @@ const totalPrice = styleVariants({
   default: {},
 })
 
+const calculatorIcon = style({
+  marginRight: theme.space[1],
+  marginBottom: theme.space['0.5'],
+})
+
 export const orderSummaryStyle = {
   anchorIcon,
   container,
@@ -118,4 +132,5 @@ export const orderSummaryStyle = {
   anchor,
   totalPrice,
   numberInput,
+  calculatorIcon,
 }
