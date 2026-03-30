@@ -1,5 +1,11 @@
 # @ultraviolet/utils
 
+## 1.0.8
+
+### Patch Changes
+
+- [#6268](https://github.com/scaleway/ultraviolet/pull/6268) [`2512e0a`](https://github.com/scaleway/ultraviolet/commit/2512e0a5e398e7c113a7ca34a74d07bc9d15110b) Thanks [@philibea](https://github.com/philibea)! - remove react-clipboard deps
+
 ## 1.0.7
 
 ### Patch Changes
