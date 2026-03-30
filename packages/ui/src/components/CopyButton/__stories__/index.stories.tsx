@@ -12,7 +12,7 @@ export default {
       </Stack>
     ),
   ],
-  title: 'Components/Action/CopyButton',
+  title: 'UI/Action/CopyButton',
 } as Meta<typeof CopyButton>
 
 export { Playground } from './Playground.stories'

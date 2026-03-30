@@ -15,6 +15,10 @@ import { orderSummaryStyle } from './styles.css'
 
 import type { OrderSummaryProps, TimeUnit } from './types'
 
+/**
+ * Key interface element that provides users with a comprehensive
+ * view of their selected configurations, costs, and any applied discounts.
+ */
 export const OrderSummary = ({
   header,
   hideTimeUnit = false,

@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: ExpandableCard,
-  title: 'Components/Layout/ExpandableCard',
+  title: 'UI/Layout/ExpandableCard',
   subcomponents: {
     'ExpandableCard.Title': ExpandableCard.Title,
   },

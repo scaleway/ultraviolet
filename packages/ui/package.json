@@ -43,6 +43,12 @@
       "require": "./dist/components/compositions/*/index.js",
       "default": "./dist/components/compositions/*/index.js"
     },
+    "./compositions": {
+      "types": "./dist/components/compositions/index.d.ts",
+      "import": "./dist/components/compositions/index.js",
+      "require": "./dist/components/compositions/index.js",
+      "default": "./dist/components/compositions/index.js"
+    },
     "./compositions/styles": {
       "types": "./dist/components/compositions/styles.d.ts",
       "import": "./dist/components/compositions/styles.js",

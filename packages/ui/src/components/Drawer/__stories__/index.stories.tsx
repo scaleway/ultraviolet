@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Drawer,
-  title: 'Components/Overlay/Drawer',
+  title: 'UI/Overlay/Drawer',
 } as Meta<typeof Drawer>
 
 export { Playground } from './Playground.stories'

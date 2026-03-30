@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: LineChart,
-  title: 'Components/Data Display/Chart/LineChart',
+  title: 'UI/Data Display/Chart/LineChart',
   parameters: {
     experimental: true,
   },

@@ -12,7 +12,7 @@ export default {
       </Stack>
     ),
   ],
-  title: 'Components/Data Display/Snippet',
+  title: 'UI/Data Display/Snippet',
 } as Meta<typeof Snippet>
 
 export { Playground } from './Playground.stories'

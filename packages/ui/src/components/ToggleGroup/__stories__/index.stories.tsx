@@ -11,7 +11,7 @@ export default {
       </div>
     ),
   ],
-  title: 'Components/Data Entry/ToggleGroup',
+  title: 'UI/Data Entry/ToggleGroup',
   args: {
     name: 'options',
     legend: 'Choose options:',

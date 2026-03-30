@@ -2,7 +2,7 @@ import { Toast, ToastContainer } from '..'
 
 export default {
   component: ToastContainer,
-  title: 'Components/Feedback/Toaster',
+  title: 'UI/Feedback/Toaster',
   subcomponents: {
     ToastContainer,
     'Toast.Button': Toast.Button,

@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: BarChart,
-  title: 'Components/Data Display/Chart/BarChart',
+  title: 'UI/Data Display/Chart/BarChart',
 } as Meta<typeof BarChart>
 
 export { Playground } from './Playground.stories'

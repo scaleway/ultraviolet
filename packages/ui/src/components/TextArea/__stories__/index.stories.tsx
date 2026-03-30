@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: TextArea,
-  title: 'Components/Data Entry/TextArea',
+  title: 'UI/Data Entry/TextArea',
 } as Meta<typeof TextArea>
 
 export { Playground } from './Playground.stories'

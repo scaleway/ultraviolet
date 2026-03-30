@@ -18,6 +18,9 @@ import type { EstimateCostProps, Units } from './types'
 
 const DEFAULT_UNIT_LIST: Units[] = ['hours', 'days', 'months']
 
+/**
+ * Provide users with an estimated cost or price associated with a particular item, service, or action.
+ */
 export const EstimateCost = ({
   description,
   alert,

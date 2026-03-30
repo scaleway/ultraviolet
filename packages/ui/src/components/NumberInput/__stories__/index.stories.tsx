@@ -15,7 +15,7 @@ export default {
       </div>
     ),
   ],
-  title: 'Components/Data Entry/NumberInput',
+  title: 'UI/Data Entry/NumberInput',
 } as Meta<typeof NumberInput>
 
 export { Playground } from './Playground.stories'

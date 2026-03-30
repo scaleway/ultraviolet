@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: TreeMapChart,
-  title: 'Components/Data Display/Chart/TreeMapChart',
+  title: 'UI/Data Display/Chart/TreeMapChart',
   parameters: {
     experimental: true,
   },

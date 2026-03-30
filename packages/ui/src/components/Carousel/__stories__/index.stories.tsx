@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Carousel,
-  title: 'Components/Data Display/Carousel',
+  title: 'UI/Data Display/Carousel',
   subcomponents: { 'Carousel.Item': Carousel.Item },
 } as Meta<typeof Carousel>
 

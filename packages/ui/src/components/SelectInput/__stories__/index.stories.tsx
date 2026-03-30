@@ -12,7 +12,7 @@ export default {
     ),
   ],
 
-  title: 'Components/Data Entry/SelectInput',
+  title: 'UI/Data Entry/SelectInput',
 } as Meta<typeof SelectInput>
 
 export { Playground } from './Playground.stories'

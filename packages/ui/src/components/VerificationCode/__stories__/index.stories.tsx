@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: VerificationCode,
-  title: 'Components/Data Entry/VerificationCode',
+  title: 'UI/Data Entry/VerificationCode',
 } as Meta<typeof VerificationCode>
 
 export { Playground } from './Playground.stories'

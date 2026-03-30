@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Bullet,
-  title: 'Components/Badges/Bullet',
+  title: 'UI/Badges/Bullet',
 } as Meta<typeof Bullet>
 
 export { Playground } from './Playground.stories'

@@ -5,7 +5,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Loader,
-  title: 'Components/Feedback/Loader',
+  title: 'UI/Feedback/Loader',
   decorators: [
     StoryComponent => (
       <Stack direction="row" gap={1}>

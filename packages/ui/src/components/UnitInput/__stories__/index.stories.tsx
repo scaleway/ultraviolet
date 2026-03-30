@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: UnitInput,
-  title: 'Components/Data Entry/UnitInput',
+  title: 'UI/Data Entry/UnitInput',
   decorators: [
     StoryComponent => (
       <div style={{ height: 250 }}>

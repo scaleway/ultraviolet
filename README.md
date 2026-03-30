@@ -13,7 +13,6 @@
 Welcome to the Ultraviolet Core repository! This is the main repository for the Ultraviolet project, which is a set of packages and tools designed to help you build fast and efficient applications.
 
 - [Ultraviolet UI](https://github.com/scaleway/ultraviolet/tree/main/packages/ui): The main UI library that includes a set of components and utilities to build fast application.
-- [Ultraviolet Plus](https://github.com/scaleway/ultraviolet/tree/main/packages/plus): An extension of UI with more complex components.
 - [Ultraviolet Form](https://github.com/scaleway/ultraviolet/tree/main/packages/form): A library to build forms with Ultraviolet UI components, it is using React Final Form under the hood.
 - [Ultraviolet Themes](https://github.com/scaleway/ultraviolet/tree/main/packages/themes): A set of themes for the Ultraviolet UI library (default theme is included in `@ultraviolet/ui`).
 - [Ultraviolet Icons](https://github.com/scaleway/ultraviolet/tree/main/packages/icons): A library that provides a set of icons to use with Ultraviolet UI.

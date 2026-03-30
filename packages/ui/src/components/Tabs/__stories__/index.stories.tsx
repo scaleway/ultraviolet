@@ -5,7 +5,7 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: Tabs,
   subcomponents: { 'Tabs.Tab': Tabs.Tab },
-  title: 'Components/Navigation/Tabs',
+  title: 'UI/Navigation/Tabs',
 } as Meta<typeof Tabs>
 
 export { Playground } from './Playground.stories'

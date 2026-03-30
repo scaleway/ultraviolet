@@ -19,7 +19,7 @@ export default {
       },
     },
   },
-  title: 'Components/Overlay/Menu',
+  title: 'UI/Overlay/Menu',
   subcomponents: {
     'Menu.Item': Menu.Item,
     'Menu.Group': Menu.Group,

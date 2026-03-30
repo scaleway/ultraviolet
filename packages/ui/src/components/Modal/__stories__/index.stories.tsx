@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Modal,
-  title: 'Components/Overlay/Modal',
+  title: 'UI/Overlay/Modal',
 } as Meta<typeof Modal>
 
 export { Playground } from './Playground.stories'

@@ -64,7 +64,7 @@ Package: ui
     index.js (1,234,567 → 1,234,890 bytes)
     styles.css (89,012 → 87,654 bytes)
 
-Package: plus
+Package: form
   New files:
     components/NewComponent.js
 ```

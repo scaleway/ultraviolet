@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Stack,
-  title: 'Components/Layout/Stack',
+  title: 'UI/Layout/Stack',
 } as Meta<typeof Stack>
 
 export { Playground } from './Playground.stories'

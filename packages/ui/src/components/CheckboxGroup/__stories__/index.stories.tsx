@@ -11,7 +11,7 @@ export default {
       </div>
     ),
   ],
-  title: 'Components/Data Entry/CheckboxGroup',
+  title: 'UI/Data Entry/CheckboxGroup',
   args: {
     name: 'conditions',
     legend: 'Conditions:',

@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: ProgressBar,
-  title: 'Components/Feedback/ProgressBar',
+  title: 'UI/Feedback/ProgressBar',
 } as Meta<typeof ProgressBar>
 
 export { Playground } from './Playground.stories'

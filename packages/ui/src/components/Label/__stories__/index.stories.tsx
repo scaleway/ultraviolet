@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Label,
-  title: 'Components/Typography/Label',
+  title: 'UI/Typography/Label',
 } as Meta
 export { Playground } from './Playground.stories'
 export { Required } from './Required.stories'

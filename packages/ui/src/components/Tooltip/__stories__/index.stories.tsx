@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Tooltip,
-  title: 'Components/Overlay/Tooltip',
+  title: 'UI/Overlay/Tooltip',
 } as Meta
 
 export { Playground } from './Playground.stories'

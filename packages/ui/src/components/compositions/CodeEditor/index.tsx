@@ -18,6 +18,9 @@ import { codeEditorStyle, disabledStack, maxHeightVar } from './styles.css'
 
 import type { CodeEditorProps } from './type'
 
+/**
+ * A code editor is a specialized tool designed to help developers write, edit, and manage code efficiently.
+ */
 export const CodeEditor = ({
   value,
   onChange,

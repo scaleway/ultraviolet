@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: TagInput,
-  title: 'Components/Data Entry/TagInput',
+  title: 'UI/Data Entry/TagInput',
 } as Meta
 
 export { Playground } from './Playground.stories'

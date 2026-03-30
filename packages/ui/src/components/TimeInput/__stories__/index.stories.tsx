@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: TimeInput,
-  title: 'Components/Data Entry/TimeInput',
+  title: 'UI/Data Entry/TimeInput',
   decorators: [Story => <Story />],
 } as Meta<typeof TimeInput>
 
