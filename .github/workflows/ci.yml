@@ -60,7 +60,7 @@ jobs:
       - uses: pnpm/action-setup@v4.4.0
       - uses: actions/setup-node@v6.3.0
         with:
-          node-version: 24.14.0
+          node-version: 24.14.1
       - name: build
         run: |
           pnpm install --frozen-lockfile
@@ -76,7 +76,7 @@ jobs:
       - uses: pnpm/action-setup@v4.4.0
       - uses: actions/setup-node@v6.3.0
         with:
-          node-version: 24.14.0
+          node-version: 24.14.1
           cache: 'pnpm'
       - name: manypkg
         run: |
@@ -94,7 +94,7 @@ jobs:
       - uses: pnpm/action-setup@v4.4.0
       - uses: actions/setup-node@v6.3.0
         with:
-          node-version: 24.14.0
+          node-version: 24.14.1
           cache: 'pnpm'
       - name: typecheck
         run: |
@@ -113,7 +113,7 @@ jobs:
       - uses: pnpm/action-setup@v4.4.0
       - uses: actions/setup-node@v6.3.0
         with:
-          node-version: 24.14.0
+          node-version: 24.14.1
           cache: 'pnpm'
       - name: lint
         run: |
@@ -131,7 +131,7 @@ jobs:
       - uses: pnpm/action-setup@v4.4.0
       - uses: actions/setup-node@v6.3.0
         with:
-          node-version: 24.14.0
+          node-version: 24.14.1
           cache: 'pnpm'
       - run: |
           pnpm install --frozen-lockfile
@@ -193,7 +193,7 @@ jobs:
       - name: publint
         uses: actions/setup-node@v6.3.0
         with:
-          node-version: 24.14.0
+          node-version: 24.14.1
           cache: 'pnpm'
       - run: |
           pnpm install --frozen-lockfile
@@ -336,7 +336,7 @@ jobs:
       - uses: pnpm/action-setup@v4.4.0
       - uses: actions/setup-node@v6.3.0
         with:
-          node-version: 24.14.0
+          node-version: 24.14.1
           cache: 'pnpm'
       - name: install pnpm deps
         run: |
