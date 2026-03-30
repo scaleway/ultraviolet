@@ -1,5 +1,16 @@
 # @ultraviolet/nextjs
 
+## 3.0.26
+
+### Patch Changes
+
+- [#6285](https://github.com/scaleway/ultraviolet/pull/6285) [`eba59e5`](https://github.com/scaleway/ultraviolet/commit/eba59e57bd865c0a16b93dbeb68d1b5b58281a9c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `16.2.1`.
+
+- [#6261](https://github.com/scaleway/ultraviolet/pull/6261) [`9b4032f`](https://github.com/scaleway/ultraviolet/commit/9b4032f645285c774a732949eaa773747e066080) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `16.2.0`.
+
+- Updated dependencies [[`2512e0a`](https://github.com/scaleway/ultraviolet/commit/2512e0a5e398e7c113a7ca34a74d07bc9d15110b), [`adf8a65`](https://github.com/scaleway/ultraviolet/commit/adf8a652b2a02a9ecdd955986812388ff5386825), [`1314935`](https://github.com/scaleway/ultraviolet/commit/1314935c0795dc3296cc2c5dd28b4168aa22656a), [`1959e4e`](https://github.com/scaleway/ultraviolet/commit/1959e4efe4c7b9be6322281827179fcc8d374053), [`060b940`](https://github.com/scaleway/ultraviolet/commit/060b9408607828d1c3c7caee598af922901623fb)]:
+  - @ultraviolet/ui@3.13.0
+
 ## 3.0.25
 
 ### Patch Changes
