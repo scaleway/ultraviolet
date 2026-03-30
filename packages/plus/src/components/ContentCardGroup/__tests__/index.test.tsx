@@ -5,11 +5,11 @@ import { ContentCardGroup } from '..'
 
 describe('contentCardGroup', () => {
   beforeEach(() => {
-    vi.spyOn(global.Math, 'random').mockReturnValue(0.415_591_366_944_480_4)
+    vi.spyOn(globalThis.Math, 'random').mockReturnValue(0.415_591_366_944_480_4)
   })
 
   afterEach(() => {
-    vi.spyOn(global.Math, 'random').mockRestore()
+    vi.spyOn(globalThis.Math, 'random').mockRestore()
   })
 
   test('renders correctly with required title & hread', () =>
