@@ -10,7 +10,6 @@ import {
 } from '@ultraviolet/ui'
 import { useState } from 'react'
 import '@ultraviolet/ui/styles' // Import styles for the UI components
-// import '@ultraviolet/icons/styles' // Import styles for the UI components
 import '@ultraviolet/themes/global'
 
 export const App = () => {
