@@ -50,19 +50,19 @@ describe('helper functions dateInput', () => {
   })
 
   test('isSameMonth should work', () => {
-    expect(
-      isSameMonth(new Date('23 Dec 2023'), new Date('22 Dec 2023')),
-    ).toBeTruthy()
-    expect(
-      isSameMonth(new Date('23 Dec 2023'), new Date('23 Oct 2023')),
-    ).toBeFalsy()
+    expect(isSameMonth(new Date('23 Dec 2023'), new Date('22 Dec 2023'))).toBe(
+      true,
+    )
+    expect(isSameMonth(new Date('23 Dec 2023'), new Date('23 Oct 2023'))).toBe(
+      false,
+    )
   })
 
   test('isSameDay should work', () => {
-    expect(isSameDay(new Date(), new Date('22 Dec 1999'))).toBeFalsy()
-    expect(
-      isSameDay(new Date('23 Dec 2023'), new Date('23 Dec 2023')),
-    ).toBeTruthy()
+    expect(isSameDay(new Date(), new Date('22 Dec 1999'))).toBe(false)
+    expect(isSameDay(new Date('23 Dec 2023'), new Date('23 Dec 2023'))).toBe(
+      true,
+    )
   })
 
   test('formatValue should work with default formatting', () => {

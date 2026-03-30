@@ -141,6 +141,6 @@ describe('checkbox', () => {
       hidden: true,
     })
     await userEvent.click(input)
-    expect(input.checked).toBeTruthy()
+    expect(input.checked).toBe(true)
   })
 })

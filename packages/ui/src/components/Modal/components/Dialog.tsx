@@ -271,7 +271,7 @@ export const Dialog = ({
           }),
           ...style,
         }}
-        // oxlint-disable a11y/noNoninteractiveTabindex: to fix
+        // oxlint-disable-next-line jsx_a11y/no-noninteractive-tabindex
         tabIndex={0}
       >
         {image ? (
