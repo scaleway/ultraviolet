@@ -1,6 +1,6 @@
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
 
-import { PhoneInputField } from '..'
+import { PhoneField } from '..'
 import { Form } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
@@ -8,7 +8,7 @@ import { mockErrors } from '../../../mocks'
 import type { Meta } from '@storybook/react-vite'
 
 export default {
-  component: PhoneInputField,
+  component: PhoneField,
   decorators: [
     ChildStory => {
       const methods = useForm()
@@ -67,7 +67,7 @@ export default {
       )
     },
   ],
-  title: 'Form/Components/Fields/PhoneInputField',
+  title: 'Form/Components/Fields/PhoneField',
 } as Meta<typeof PhoneField>
 
 export { Playground } from './Playground.stories'

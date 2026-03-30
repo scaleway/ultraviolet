@@ -189,4 +189,75 @@ describe('ui - PhoneInput', () => {
     await userEvent.type(input, '0612345678')
     expect(onChange).toHaveBeenCalled()
   })
+
+  test('should respect disableAutoFormat prop', async () => {
+    const onChange = vi.fn()
+
+    renderWithTheme(
+      <PhoneInput
+        defaultCountry="FR"
+        disableAutoFormat
+        label="Phone"
+        name="phone"
+        onChange={onChange}
+        placeholder="Enter phone number"
+      />,
+    )
+
+    const input = screen.getByPlaceholderText('Enter phone number')
+    await userEvent.type(input, '0612345678')
+    expect(input).toHaveValue('0612345678')
+  })
+
+  test('should call onValueChange with parsed metadata', async () => {
+    const onValueChange = vi.fn()
+    const onChange = vi.fn()
+
+    renderWithTheme(
+      <PhoneInput
+        defaultCountry="FR"
+        label="Phone"
+        name="phone"
+        onChange={onChange}
+        onValueChange={onValueChange}
+        placeholder="Enter phone number"
+      />,
+    )
+
+    const input = screen.getByPlaceholderText('Enter phone number')
+    await userEvent.type(input, '0612345678')
+
+    expect(onValueChange).toHaveBeenCalled()
+    const callArg = onValueChange.mock.calls[0]?.[0]
+    expect(callArg).toHaveProperty('inputValue')
+    expect(callArg).toHaveProperty('formatted')
+    expect(callArg).toHaveProperty('country')
+    expect(callArg).toHaveProperty('valid')
+    expect(callArg).toHaveProperty('e164')
+    expect(callArg).toHaveProperty('international')
+  })
+
+  test('should call onValueChange with metadata', async () => {
+    const onValueChange = vi.fn()
+    const onChange = vi.fn()
+
+    renderWithTheme(
+      <PhoneInput
+        defaultCountry="FR"
+        label="Phone"
+        name="phone"
+        onChange={onChange}
+        onValueChange={onValueChange}
+        placeholder="Enter phone number"
+      />,
+    )
+
+    const input = screen.getByPlaceholderText('Enter phone number')
+    await userEvent.type(input, '0612345678')
+
+    expect(onValueChange).toHaveBeenCalled()
+    const callArg = onValueChange.mock.calls[0]?.[0]
+    expect(callArg).toHaveProperty('inputValue')
+    expect(callArg).toHaveProperty('country')
+  })
 })

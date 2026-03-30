@@ -1,3 +1,5 @@
+'use client'
+
 import { cn } from '@ultraviolet/utils'
 import { getExample, parsePhoneNumber } from 'awesome-phonenumber'
 import { useImperativeHandle, useRef, useState } from 'react'
@@ -46,6 +48,15 @@ type PhoneInputProps = PhoneInputLabelProps & {
     error: Error
     inputValue: string
   }) => void
+  disableAutoFormat?: boolean
+  onValueChange?: (value: {
+    inputValue: string
+    formatted: string
+    country: string | null
+    valid: boolean
+    e164: string | null
+    international: string | null
+  }) => void
 } & InputProps
 
 type PhoneInputType = ComponentType<PhoneInputProps>
@@ -67,6 +78,8 @@ export const PhoneInput: PhoneInputType = ({
   label = 'Phone',
   onParsingError,
   ref,
+  disableAutoFormat = false,
+  onValueChange,
 }) => {
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -76,8 +89,10 @@ export const PhoneInput: PhoneInputType = ({
 
   const formatNumber = ({ inputValue }: { inputValue: string }) => {
     try {
-      const country = parsePhoneNumber(inputValue).regionCode
+      const parsed = parsePhoneNumber(inputValue)
+      const country = parsed.regionCode
       let phoneNumber = inputValue
+
       if (!country) {
         setCountryFlag(defaultCountry)
         if (phoneNumber.length === 10) {
@@ -86,6 +101,7 @@ export const PhoneInput: PhoneInputType = ({
       } else {
         setCountryFlag(country)
       }
+
       const isValid =
         phoneNumber.length > 4 &&
         parsePhoneNumber(phoneNumber, { regionCode: countryFlag }).valid
@@ -94,6 +110,26 @@ export const PhoneInput: PhoneInputType = ({
         ? parsePhoneNumber(phoneNumber, { regionCode: countryFlag }).number
             ?.international
         : phoneNumber
+
+      const e164 = isValid
+        ? parsePhoneNumber(phoneNumber, { regionCode: countryFlag }).number
+            ?.e164
+        : null
+
+      const result = {
+        inputValue,
+        formatted: formattedNumber ?? inputValue,
+        country: country ?? countryFlag,
+        valid: isValid,
+        e164: e164 ?? null,
+        international: formattedNumber ?? null,
+      }
+
+      onValueChange?.(result)
+
+      if (disableAutoFormat) {
+        return inputValue
+      }
 
       return formattedNumber
     } catch (error: unknown) {
