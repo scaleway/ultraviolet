@@ -1,5 +1,33 @@
 # Change Log
 
+## 3.13.0
+
+### Minor Changes
+
+- [#6162](https://github.com/scaleway/ultraviolet/pull/6162) [`1314935`](https://github.com/scaleway/ultraviolet/commit/1314935c0795dc3296cc2c5dd28b4168aa22656a) Thanks [@lisalupi](https://github.com/lisalupi)! - `DateInput`: change date format from MMDDYYYY to DDMMYYYY and fix date input when min/max date
+
+- [#6216](https://github.com/scaleway/ultraviolet/pull/6216) [`1959e4e`](https://github.com/scaleway/ultraviolet/commit/1959e4efe4c7b9be6322281827179fcc8d374053) Thanks [@lisalupi](https://github.com/lisalupi)! - `Navigation`:
+  - allow nested items and menus
+  - add item parent label on top of menu to help navigation
+  - add `...` on menu disclosure when no `categoryIcon` is provided to avoid empty buttons
+
+### Patch Changes
+
+- [#6268](https://github.com/scaleway/ultraviolet/pull/6268) [`2512e0a`](https://github.com/scaleway/ultraviolet/commit/2512e0a5e398e7c113a7ca34a74d07bc9d15110b) Thanks [@philibea](https://github.com/philibea)! - remove react-clipboard deps
+
+- [#6273](https://github.com/scaleway/ultraviolet/pull/6273) [`adf8a65`](https://github.com/scaleway/ultraviolet/commit/adf8a652b2a02a9ecdd955986812388ff5386825) Thanks [@lisalupi](https://github.com/lisalupi)! - `InfoTable`: remove useless styling on string cells
+
+- [#6271](https://github.com/scaleway/ultraviolet/pull/6271) [`060b940`](https://github.com/scaleway/ultraviolet/commit/060b9408607828d1c3c7caee598af922901623fb) Thanks [@lisalupi](https://github.com/lisalupi)! - `TagList`: overflow can dynamically adapt to the container width.
+
+  ⚠️ Note that this may break some existing tests (a visually hidden div containing the tags is added and not removed). A data-testid has been added to help prevent test failures.
+
+- [#6277](https://github.com/scaleway/ultraviolet/pull/6277) [`20fd88c`](https://github.com/scaleway/ultraviolet/commit/20fd88cb028973288d7405f1f267606fbd98148e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.3`.
+
+- Updated dependencies [[`2512e0a`](https://github.com/scaleway/ultraviolet/commit/2512e0a5e398e7c113a7ca34a74d07bc9d15110b), [`20fd88c`](https://github.com/scaleway/ultraviolet/commit/20fd88cb028973288d7405f1f267606fbd98148e), [`a219be7`](https://github.com/scaleway/ultraviolet/commit/a219be7ad454d8aa22c5210dd80188f42fc1ce1b)]:
+  - @ultraviolet/utils@1.0.8
+  - @ultraviolet/icons@5.3.0
+  - @ultraviolet/themes@3.1.3
+
 ## 3.12.3
 
 ### Patch Changes

@@ -1,5 +1,20 @@
 # Change Log
 
+## 6.2.6
+
+### Patch Changes
+
+- [#6277](https://github.com/scaleway/ultraviolet/pull/6277) [`20fd88c`](https://github.com/scaleway/ultraviolet/commit/20fd88cb028973288d7405f1f267606fbd98148e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.3`.
+
+- [#6253](https://github.com/scaleway/ultraviolet/pull/6253) [`5fa7594`](https://github.com/scaleway/ultraviolet/commit/5fa7594a5f14aca545b58fd6b9cbe3ad6367d207) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.72.0`.
+
+- [#6274](https://github.com/scaleway/ultraviolet/pull/6274) [`46a5c7b`](https://github.com/scaleway/ultraviolet/commit/46a5c7bdfd52c325541c4779503652d0e8beea7d) Thanks [@chambo-e](https://github.com/chambo-e)! - pass required prop down to Checkbox
+
+- Updated dependencies [[`2512e0a`](https://github.com/scaleway/ultraviolet/commit/2512e0a5e398e7c113a7ca34a74d07bc9d15110b), [`adf8a65`](https://github.com/scaleway/ultraviolet/commit/adf8a652b2a02a9ecdd955986812388ff5386825), [`1314935`](https://github.com/scaleway/ultraviolet/commit/1314935c0795dc3296cc2c5dd28b4168aa22656a), [`1959e4e`](https://github.com/scaleway/ultraviolet/commit/1959e4efe4c7b9be6322281827179fcc8d374053), [`060b940`](https://github.com/scaleway/ultraviolet/commit/060b9408607828d1c3c7caee598af922901623fb), [`20fd88c`](https://github.com/scaleway/ultraviolet/commit/20fd88cb028973288d7405f1f267606fbd98148e), [`a219be7`](https://github.com/scaleway/ultraviolet/commit/a219be7ad454d8aa22c5210dd80188f42fc1ce1b)]:
+  - @ultraviolet/ui@3.13.0
+  - @ultraviolet/icons@5.3.0
+  - @ultraviolet/themes@3.1.3
+
 ## 6.2.5
 
 ### Patch Changes

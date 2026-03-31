@@ -1,5 +1,11 @@
 # @repo/config
 
+## 0.0.4
+
+### Patch Changes
+
+- [#6277](https://github.com/scaleway/ultraviolet/pull/6277) [`20fd88c`](https://github.com/scaleway/ultraviolet/commit/20fd88cb028973288d7405f1f267606fbd98148e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.3`.
+
 ## 0.0.3
 
 ### Patch Changes
