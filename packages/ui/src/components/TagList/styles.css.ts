@@ -6,7 +6,10 @@ import { TAGS_GAP } from './constant'
 
 export const popoverTriggerWidthVar = createVar()
 
-const container = style({ display: 'flex' })
+const container = style({
+  display: 'flex',
+  width: '100% !important', // It should always have a width of 100% for overflow computation
+})
 
 const tagContainer = recipe({
   base: {
