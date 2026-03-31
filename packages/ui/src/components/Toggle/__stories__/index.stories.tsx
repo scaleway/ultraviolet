@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Toggle,
-  title: 'Components/Data Entry/Toggle',
+  title: 'UI/Data Entry/Toggle',
 } as Meta<typeof Toggle>
 
 export { Playground } from './Playground.stories'

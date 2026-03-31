@@ -30,6 +30,9 @@ type OfferListProps = Omit<
   style?: CSSProperties
 }
 
+/**
+ * Component that displays a structured list of promotional items, services, or product offers
+ */
 export const OfferList = ({
   expandable,
   type = 'radio',

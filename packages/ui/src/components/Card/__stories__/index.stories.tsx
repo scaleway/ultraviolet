@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Card,
-  title: 'Components/Layout/Card',
+  title: 'UI/Layout/Card',
 } as Meta
 
 export { Playground } from './Playground.stories'

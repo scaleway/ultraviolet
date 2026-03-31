@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Separator,
-  title: 'Components/Layout/Separator',
+  title: 'UI/Layout/Separator',
 } as Meta
 
 export { Playground } from './Playground.stories'

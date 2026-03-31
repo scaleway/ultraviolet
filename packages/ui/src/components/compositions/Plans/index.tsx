@@ -28,6 +28,9 @@ type PlansProps<T extends string> = {
   highlight?: { plan: string; content: string }
 }
 
+/**
+ * Allows users to compare different offers, providing varying features and pricing options to suit different needs.
+ */
 export const Plans = <T extends string>({
   fieldName,
   onChange,

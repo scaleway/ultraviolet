@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Banner,
-  title: 'Components/Other/Banner',
+  title: 'UI/Other/Banner',
 } as Meta<typeof Banner>
 
 export { Playground } from './Playground.stories'

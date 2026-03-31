@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Tag,
-  title: 'Components/Badges/Tag',
+  title: 'UI/Badges/Tag',
 } as Meta
 
 export { Playground } from './Playground.stories'

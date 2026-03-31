@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: GlobalAlert,
-  title: 'Components/Feedback/GlobalAlert',
+  title: 'UI/Feedback/GlobalAlert',
   subcomponents: { 'GlobalAlert.Link': GlobalAlert.Link },
 } as Meta
 

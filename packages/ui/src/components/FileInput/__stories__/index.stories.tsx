@@ -10,7 +10,7 @@ export default {
     'FileInput.Button': FileInput.Button,
   },
 
-  title: 'Components/Data Entry/FileInput',
+  title: 'UI/Data Entry/FileInput',
 } as Meta<typeof FileInput>
 
 export { Playground } from './Playground.stories'

@@ -12,7 +12,7 @@ export default {
       </Stack>
     ),
   ],
-  title: 'Components/Other/Key',
+  title: 'UI/Other/Key',
 } as Meta<typeof Key>
 
 export { Playground } from './Playground.stories'

@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Button,
-  title: 'Components/Action/Button',
+  title: 'UI/Action/Button',
 } as Meta<typeof Button>
 
 export { Playground } from './Playground.stories'

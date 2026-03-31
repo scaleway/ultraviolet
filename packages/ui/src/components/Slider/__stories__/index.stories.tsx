@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Slider,
-  title: 'Components/Data Entry/Slider',
+  title: 'UI/Data Entry/Slider',
 } as Meta<typeof Slider>
 
 export { Playground } from './Playground.stories'

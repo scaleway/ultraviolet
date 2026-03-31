@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: InfiniteScroll,
-  title: 'Components/Data Display/InfiniteScroll',
+  title: 'UI/Data Display/InfiniteScroll',
 } as Meta
 
 export { Playground } from './Playground.stories'

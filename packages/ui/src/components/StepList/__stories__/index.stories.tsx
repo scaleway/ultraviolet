@@ -8,7 +8,7 @@ export default {
     experimental: true,
   },
   tags: ['experimental'],
-  title: 'Components/Data Display/StepList',
+  title: 'UI/Data Display/StepList',
 } as Meta
 
 export { Playground } from './Playground.stories'

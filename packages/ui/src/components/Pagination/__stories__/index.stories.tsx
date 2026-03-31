@@ -2,7 +2,7 @@ import { Pagination } from '..'
 
 export default {
   component: Pagination,
-  title: 'Components/Navigation/Pagination',
+  title: 'UI/Navigation/Pagination',
 }
 
 export { Playground } from './Playground.stories'

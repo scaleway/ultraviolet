@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Expandable,
-  title: 'Components/Action/Expandable',
+  title: 'UI/Action/Expandable',
 } as Meta
 
 export { Playground } from './Playground.stories'

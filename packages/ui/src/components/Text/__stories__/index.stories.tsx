@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Text,
-  title: 'Components/Typography/Text',
+  title: 'UI/Typography/Text',
 } as Meta
 
 export { Playground } from './Playground.stories'

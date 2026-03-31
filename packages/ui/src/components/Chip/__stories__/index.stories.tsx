@@ -14,7 +14,7 @@ export default {
       </div>
     ),
   ],
-  title: 'Components/Badges/Chip',
+  title: 'UI/Badges/Chip',
 } as Meta<typeof Chip>
 
 export { Playground } from './Playground.stories'

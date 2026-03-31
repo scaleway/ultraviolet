@@ -7,7 +7,7 @@ export default {
   subcomponents: {
     'SwitchButton.Option': SwitchButton.Option,
   },
-  title: 'Components/Action/SwitchButton',
+  title: 'UI/Action/SwitchButton',
 } as Meta
 
 export { Playground } from './Playground.stories'

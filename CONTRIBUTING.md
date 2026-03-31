@@ -30,7 +30,7 @@ ultraviolet/
   e2e/ <== end-to-end testing with a mix of many components to test edge cases
   examples/ <== folder with project examples using our packages (nextjs, vite, etc.)
   packages/
-    [ui/form/plus/...]/
+    [ui/form/...]/
       src/
         components/
           Button/

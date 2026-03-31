@@ -1,0 +1,24 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { CompositionsList } from './CompositionsList/'
+
+<Meta title="Compositions/Introduction" />
+
+# Compositions
+
+Compositions are special components of `@ultraviolet/ui`. Most of them are complex compositions of UI components. To avoid importing heavy code that will be unused in your project, they are not imported the same way as other `@ultraviolet/ui` components:
+
+```js
+// Import a regular component
+import { MyComponent } from '@ultraviolet/ui'
+
+// Import a composition component
+import { MyComponent } from '@ultraviolet/ui/MyComponent'
+```
+
+This allows for **tree shaking**, reducing your bundle size by only including the compositions you actually use.
+
+## Currently available compositions:
+
+Each composition has its own Storybook documentation.
+
+<CompositionsList />

@@ -11,7 +11,7 @@ export default {
       </div>
     ),
   ],
-  title: 'Components/Data Entry/Checkbox',
+  title: 'UI/Data Entry/Checkbox',
 } as Meta<typeof Checkbox>
 
 export { Playground } from './Playground.stories'

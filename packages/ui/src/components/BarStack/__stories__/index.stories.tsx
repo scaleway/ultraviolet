@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: BarStack,
-  title: 'Components/Data Display/BarStack',
+  title: 'UI/Data Display/BarStack',
 } as Meta<typeof BarStack>
 
 export { Playground } from './Playground.stories'

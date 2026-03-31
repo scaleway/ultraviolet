@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: NotificationContainer,
-  title: 'Components/Feedback/Notification',
+  title: 'UI/Feedback/Notification',
 } as Meta<typeof NotificationContainer>
 
 export { Playground } from './Playground.stories'

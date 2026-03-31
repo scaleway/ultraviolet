@@ -11,7 +11,7 @@ export default {
       </div>
     ),
   ],
-  title: 'Components/Data Display/TagList',
+  title: 'UI/Data Display/TagList',
 } as Meta
 
 export { Playground } from './Playground.stories'

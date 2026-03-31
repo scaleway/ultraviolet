@@ -8,7 +8,7 @@ export default {
   subcomponents: {
     'Stepper.Step': Stepper.Step,
   },
-  title: 'Components/Navigation/Stepper',
+  title: 'UI/Navigation/Stepper',
 } as Meta
 
 export { Playground } from './Playground.stories'

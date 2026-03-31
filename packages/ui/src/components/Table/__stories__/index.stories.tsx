@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Table,
-  title: 'Components/Data Display/Table',
+  title: 'UI/Data Display/Table',
   subcomponents: { 'Table.Row': Table.Row, 'Table.Cell': Table.Cell },
 } as Meta
 

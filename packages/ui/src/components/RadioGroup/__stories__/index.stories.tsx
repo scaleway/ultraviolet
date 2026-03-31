@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: RadioGroup,
-  title: 'Components/Data Entry/RadioGroup',
+  title: 'UI/Data Entry/RadioGroup',
 } as Meta<typeof RadioGroup>
 
 export { Playground } from './Playground.stories'
