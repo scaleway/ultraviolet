@@ -1,5 +1,19 @@
 # Change Log
 
+## 5.3.0
+
+### Minor Changes
+
+- [#6230](https://github.com/scaleway/ultraviolet/pull/6230) [`a219be7`](https://github.com/scaleway/ultraviolet/commit/a219be7ad454d8aa22c5210dd80188f42fc1ce1b) Thanks [@lisalupi](https://github.com/lisalupi)! - Rename icon: `TagManager` -> `Annotations`
+
+### Patch Changes
+
+- [#6277](https://github.com/scaleway/ultraviolet/pull/6277) [`20fd88c`](https://github.com/scaleway/ultraviolet/commit/20fd88cb028973288d7405f1f267606fbd98148e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.3`.
+
+- Updated dependencies [[`2512e0a`](https://github.com/scaleway/ultraviolet/commit/2512e0a5e398e7c113a7ca34a74d07bc9d15110b), [`20fd88c`](https://github.com/scaleway/ultraviolet/commit/20fd88cb028973288d7405f1f267606fbd98148e)]:
+  - @ultraviolet/utils@1.0.8
+  - @ultraviolet/themes@3.1.3
+
 ## 5.2.1
 
 ### Patch Changes
