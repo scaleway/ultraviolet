@@ -22,7 +22,7 @@ describe('toggleField', () => {
       },
     })
     const element = screen.getByRole<HTMLInputElement>('checkbox')
-    expect(element.checked).toBeTruthy()
+    expect(element.checked).toBe(true)
     expect(asFragment()).toMatchSnapshot()
   })
 

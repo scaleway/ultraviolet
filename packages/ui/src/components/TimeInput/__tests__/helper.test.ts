@@ -13,26 +13,26 @@ import {
 
 describe('helper functions dateInput', () => {
   test('isNumber should work', () => {
-    expect(isNumber('2')).toBeTruthy()
-    expect(isNumber('a')).toBeFalsy()
+    expect(isNumber('2')).toBe(true)
+    expect(isNumber('a')).toBe(false)
   })
 
   test('isAOrP should work', () => {
-    expect(isAOrP('a')).toBeTruthy()
-    expect(isAOrP('p')).toBeTruthy()
-    expect(isAOrP('d')).toBeFalsy()
+    expect(isAOrP('a')).toBe(true)
+    expect(isAOrP('p')).toBe(true)
+    expect(isAOrP('d')).toBe(false)
   })
 
   test('canConcat should work', () => {
-    expect(canConcat(3, 'h', 3, 12)).toBeFalsy()
-    expect(canConcat(1, 'm', 2, 24)).toBeTruthy()
-    expect(canConcat(1, 'm', 2, 12)).toBeTruthy()
+    expect(canConcat(3, 'h', 3, 12)).toBe(false)
+    expect(canConcat(1, 'm', 2, 24)).toBe(true)
+    expect(canConcat(1, 'm', 2, 12)).toBe(true)
   })
 
   test('isCompleteHour should work', () => {
-    expect(isCompleteHour(24, 2)).toBeFalsy()
-    expect(isCompleteHour(12, 13)).toBeTruthy()
-    expect(isCompleteHour(24, 4)).toBeTruthy()
+    expect(isCompleteHour(24, 2)).toBe(false)
+    expect(isCompleteHour(12, 13)).toBe(true)
+    expect(isCompleteHour(24, 4)).toBe(true)
   })
 
   test('getLastTypedChar should work', () => {

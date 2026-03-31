@@ -9,7 +9,7 @@ describe(useIsOverflowing, () => {
       useIsOverflowing({ current: document.createElement('div') }),
     )
     await waitFor(() => {
-      expect(result.current).toBeFalsy()
+      expect(result.current).toBe(false)
     })
   })
 
@@ -19,7 +19,7 @@ describe(useIsOverflowing, () => {
       useIsOverflowing({ current: document.createElement('div') }, callback),
     )
     await waitFor(() => {
-      expect(result.current).toBeFalsy()
+      expect(result.current).toBe(false)
     })
 
     expect(callback).toHaveBeenCalledOnce()
@@ -39,7 +39,7 @@ describe(useIsOverflowing, () => {
     )
 
     await waitFor(() => {
-      expect(result.current).toBeTruthy()
+      expect(result.current).toBe(true)
     })
   })
 
@@ -61,7 +61,7 @@ describe(useIsOverflowing, () => {
     )
 
     await waitFor(() => {
-      expect(result.current).toBeTruthy()
+      expect(result.current).toBe(true)
     })
 
     expect(callback).toHaveBeenCalledWith(true)
@@ -89,7 +89,7 @@ describe(useIsOverflowing, () => {
     )
 
     await waitFor(() => {
-      expect(result.current).toBeFalsy()
+      expect(result.current).toBe(false)
     })
   })
 })

@@ -257,6 +257,7 @@ const SelectBar = ({
         }}
         ref={innerRef}
         role="combobox"
+        // oxlint-disable-next-line jsx_a11y/no-noninteractive-tabindex
         tabIndex={0}
       >
         {shouldDisplayValues ? (

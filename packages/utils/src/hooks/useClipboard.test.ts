@@ -26,7 +26,7 @@ describe('hooks - useClipboard', () => {
     await act(async () => {
       await result.current[1]()
     })
-    expect(result.current[0]).toBeTruthy()
+    expect(result.current[0]).toBe(true)
 
     expect(writeTextSpy).toHaveBeenCalledWith('test text')
   })
@@ -41,7 +41,7 @@ describe('hooks - useClipboard', () => {
       await result.current[1]()
     })
 
-    expect(result.current[0]).toBeFalsy()
+    expect(result.current[0]).toBe(false)
     expect(writeTextSpy).toHaveBeenCalledWith('test text')
   })
 
@@ -60,7 +60,7 @@ describe('hooks - useClipboard', () => {
     })
 
     expect(onErrorSpy).toHaveBeenCalledWith(error)
-    expect(result.current[0]).toBeFalsy()
+    expect(result.current[0]).toBe(false)
   })
 
   it('should reset isCopied status after successDuration', async () => {
@@ -75,13 +75,13 @@ describe('hooks - useClipboard', () => {
       await result.current[1]()
     })
 
-    expect(result.current[0]).toBeTruthy()
+    expect(result.current[0]).toBe(true)
 
     act(() => {
       vi.advanceTimersByTime(1001)
     })
 
-    expect(result.current[0]).toBeFalsy()
+    expect(result.current[0]).toBe(false)
   })
 
   it('should not reset isCopied status without successDuration', async () => {
@@ -94,11 +94,11 @@ describe('hooks - useClipboard', () => {
       await result.current[1]()
     })
 
-    expect(result.current[0]).toBeTruthy()
+    expect(result.current[0]).toBe(true)
 
     vi.advanceTimersByTime(5000)
 
-    expect(result.current[0]).toBeTruthy()
+    expect(result.current[0]).toBe(true)
   })
 
   it('should clear timeout when component unmounts', async () => {
