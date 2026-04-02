@@ -161,12 +161,6 @@ export const defaultConfig: UserConfigExport = {
         find: '@ultraviolet/form',
         replacement: resolve('packages/form/src'),
       },
-
-      // Plus
-      {
-        find: '@ultraviolet/plus',
-        replacement: resolve('packages/plus/src'),
-      },
     ],
     extensions: ['.mjs', '.js', '.ts', '.tsx', '.json', '.css'],
   },
