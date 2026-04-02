@@ -1,5 +1,11 @@
 'use client'
 
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import { Children } from 'react'
+
+import { Text } from '../../Text'
+
+import { maxWidthText, maxWidthTextVar } from './Components/components.css'
 import { Item } from './Components/Item'
 import { LineThrough } from './Components/LineThrough'
 import { NumberInput } from './Components/NumberInput'
@@ -8,19 +14,17 @@ import { Regular } from './Components/Regular'
 import { Strong } from './Components/Strong'
 import { Unit } from './Components/Unit'
 import { Zone } from './Components/Zone'
-import { Ellipsis } from './Ellipsis'
 import { EstimateCostContent } from './EstimateCostContent'
 import { EstimateCostProvider } from './EstimateCostProvider'
 import { Image } from './Image'
 import estimateCostDefaultLocales from './locales/en'
+import { useOverlay } from './OverlayContext'
 
 import type { EstimateCostProps, Units } from './types'
+import type { ReactNode } from 'react'
 
 const DEFAULT_UNIT_LIST: Units[] = ['hours', 'days', 'months']
 
-/**
- * Provide users with an estimated cost or price associated with a particular item, service, or action.
- */
 export const EstimateCost = ({
   description,
   alert,
@@ -106,6 +110,39 @@ EstimateCost.Image = Image
 
 EstimateCost.Region = Region
 EstimateCost.Zone = Zone
+
+const Ellipsis = ({
+  children,
+  maxWidth = 350,
+  'data-testid': dataTestId,
+}: {
+  children: ReactNode
+  maxWidth?: number
+  'data-testid'?: string
+}) => {
+  const { isOverlay } = useOverlay()
+  // eslint-disable-next-line @typescript-eslint/no-base-to-string
+  const text = Children.toArray(children).join('').toString()
+
+  return (
+    <div
+      data-testid={dataTestId}
+      style={{ display: isOverlay ? undefined : 'inline-flex' }}
+    >
+      <Text
+        as="p"
+        className={maxWidthText}
+        oneLine
+        style={assignInlineVars({
+          [maxWidthTextVar]: isOverlay ? '200px' : `${maxWidth}px`,
+        })}
+        variant="bodyStrong"
+      >
+        {text}
+      </Text>
+    </div>
+  )
+}
 
 EstimateCost.Ellipsis = Ellipsis
 

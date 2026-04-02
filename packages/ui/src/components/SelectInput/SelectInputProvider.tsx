@@ -17,7 +17,7 @@ import {
   selectGroupAction,
   selectOptionAction,
   updateAction,
-} from './reducerFonctions'
+} from './reducerFunctions'
 
 import type { DataType, OptionType, ReducerAction, ReducerState } from './types'
 import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
@@ -157,7 +157,6 @@ export const SelectInputProvider = <T extends boolean>({
 
     return []
   }, [options])
-
   const reducer = (
     state: ReducerState,
     action: ReducerAction,

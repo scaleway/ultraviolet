@@ -7,18 +7,59 @@ import {
   Stack,
   Text,
   ThemeProvider,
+  Badge,
+  SelectableCardOptionGroup,
 } from '@ultraviolet/ui'
 import { useState } from 'react'
 import '@ultraviolet/ui/styles' // Import styles for the UI components
 import '@ultraviolet/themes/global'
+import centos from './assets/centos.svg'
+import debian from './assets/debian.svg'
+import ubuntu from './assets/ubuntu.svg'
+import { centosOptions, debianOptions, ubuntuOptions } from './constants'
 
 export const App = () => {
   const [count, setCount] = useState(0)
   const [darkMode, setDarkMode] = useState(false)
+  const [value, onChange] = useState<string>()
+  const [option, onChangeOption] = useState<string>()
 
   return (
     <ThemeProvider theme={darkMode ? consoleDarkTheme : consoleLightTheme}>
       <Row gap="3" templateColumns="9fr 3fr">
+        <Badge sentiment="danger" prominence="strong">
+          test
+        </Badge>
+        <SelectableCardOptionGroup
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+            console.log('ok')
+            onChange(event.currentTarget.value)
+          }}
+          onChangeOption={(newValue: string) => {
+            onChangeOption(newValue)
+          }}
+          optionValue={option}
+          value={value}
+        >
+          <SelectableCardOptionGroup.Option
+            image={ubuntu}
+            label="Ubuntu"
+            options={ubuntuOptions}
+            value="ubuntu"
+          />
+          <SelectableCardOptionGroup.Option
+            image={debian}
+            label="Debian"
+            options={debianOptions}
+            value="debian"
+          />
+          <SelectableCardOptionGroup.Option
+            image={centos}
+            label="CentOS"
+            options={centosOptions}
+            value="centos"
+          />
+        </SelectableCardOptionGroup>
         <Card>
           <Text as="h1" variant="headingSmall">
             Classic
