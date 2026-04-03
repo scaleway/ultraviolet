@@ -10,6 +10,7 @@ import {
   Badge,
   SelectableCardOptionGroup,
 } from '@ultraviolet/ui'
+import { InfoTable } from '@ultraviolet/ui/compositions/InfoTable'
 import { useState } from 'react'
 import '@ultraviolet/ui/styles' // Import styles for the UI components
 import '@ultraviolet/themes/global'
@@ -26,10 +27,15 @@ export const App = () => {
 
   return (
     <ThemeProvider theme={darkMode ? consoleDarkTheme : consoleLightTheme}>
-      <Row gap="3" templateColumns="9fr 3fr">
+      <Row gap="3" templateColumns="auto auto">
         <Badge sentiment="danger" prominence="strong">
           test
         </Badge>
+        <InfoTable>
+          <InfoTable.Row templateColumns="1fr">
+            <InfoTable.Cell title="title">Coucou</InfoTable.Cell>
+          </InfoTable.Row>
+        </InfoTable>
         <SelectableCardOptionGroup
           onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
             console.log('ok')

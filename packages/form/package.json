@@ -30,9 +30,9 @@
       "default": "./dist/index.js"
     },
     "./compositions/*": {
-      "types": "./dist/components/compositions/*/index.d.ts",
-      "require": "./dist/components/compositions/*/index.js",
-      "default": "./dist/components/compositions/*/index.js"
+      "types": "./dist/compositions/*/index.d.ts",
+      "require": "./dist/compositions/*/index.js",
+      "default": "./dist/compositions/*/index.js"
     }
   },
   "publishConfig": {

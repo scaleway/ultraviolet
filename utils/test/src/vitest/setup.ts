@@ -15,6 +15,7 @@ const MockResize = vi.fn(function mock() {
 })
 
 export const setup = () => {
+  process.env['TZ'] = 'UTC'
   expect.extend(matchers)
 
   beforeEach(() => {
