@@ -4,6 +4,7 @@ import { recipe } from '@vanilla-extract/recipes'
 
 import { tagStyle } from '../Tag/styles.css'
 import { tagListStyle } from '../TagList/styles.css'
+import { textStyle } from '../Text/style.css'
 
 import { DEFAULT_ARROW_WIDTH } from './helpers'
 import {
@@ -122,6 +123,9 @@ const childrenContainer = recipe({
       [`&:has(${tagStyle.text})`]: {
         minWidth: 0,
         width: '100%',
+      },
+      [`&:has(.${textStyle.oneLine})`]: {
+        minWidth: 0,
       },
     },
   },
