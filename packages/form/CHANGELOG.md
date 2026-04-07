@@ -1,5 +1,16 @@
 # Change Log
 
+## 6.2.7
+
+### Patch Changes
+
+- [#6303](https://github.com/scaleway/ultraviolet/pull/6303) [`19d643c`](https://github.com/scaleway/ultraviolet/commit/19d643cd65694a060e938255d4673d35b034db1f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.5`.
+
+- Updated dependencies [[`19d643c`](https://github.com/scaleway/ultraviolet/commit/19d643cd65694a060e938255d4673d35b034db1f), [`aa7a389`](https://github.com/scaleway/ultraviolet/commit/aa7a389ce0f263e6f44543fe04daa4df9a1618c7)]:
+  - @ultraviolet/icons@5.3.1
+  - @ultraviolet/themes@3.1.4
+  - @ultraviolet/ui@3.13.1
+
 ## 6.2.6
 
 ### Patch Changes
