@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.1.4
+
+### Patch Changes
+
+- [#6303](https://github.com/scaleway/ultraviolet/pull/6303) [`19d643c`](https://github.com/scaleway/ultraviolet/commit/19d643cd65694a060e938255d4673d35b034db1f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.5`.
+
 ## 3.1.3
 
 ### Patch Changes

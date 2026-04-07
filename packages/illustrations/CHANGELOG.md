@@ -1,5 +1,15 @@
 # @ultraviolet/illustrations
 
+## 6.0.15
+
+### Patch Changes
+
+- [#6303](https://github.com/scaleway/ultraviolet/pull/6303) [`19d643c`](https://github.com/scaleway/ultraviolet/commit/19d643cd65694a060e938255d4673d35b034db1f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.5`.
+
+- Updated dependencies [[`19d643c`](https://github.com/scaleway/ultraviolet/commit/19d643cd65694a060e938255d4673d35b034db1f)]:
+  - @ultraviolet/themes@3.1.4
+  - @ultraviolet/utils@1.0.9
+
 ## 6.0.14
 
 ### Patch Changes
