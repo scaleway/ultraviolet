@@ -24,7 +24,7 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: '3.14.3'
-      - uses: pnpm/action-setup@v4.4.0
+      - uses: pnpm/action-setup@v5.0.0
       - uses: actions/setup-node@v6.3.0
         with:
           node-version: 24.14.1
