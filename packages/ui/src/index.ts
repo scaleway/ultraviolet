@@ -2,6 +2,7 @@ import './utils/animations/animations.css'
 
 export * from './components'
 export * from './components/styles'
+
 export type { UltravioletUITheme } from './theme'
 export {
   darkTheme,

@@ -1,2 +1,2 @@
-export { Dropdown } from './Dropdown'
-export { SelectBar } from './SelectBar'
+export { Dropdown } from './Dropdown/Dropdown'
+export { SelectBar } from './SelectBar/SelectBar'

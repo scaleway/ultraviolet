@@ -8,22 +8,15 @@ export const config = mergeConfig(defineConfig(defaultConfig), {
   build: {
     lib: {
       entry: {
-        'components/compositions/Navigation/index': resolve(
+        'compositions/Navigation/index': resolve(
           import.meta.dirname,
-          'src/components/compositions/Navigation/index.tsx',
+          'src/compositions/Navigation/index.tsx',
         ),
-        'components/compositions/EstimateCost/index': resolve(
+        'compositions/EstimateCost/index': resolve(
           import.meta.dirname,
-          'src/components/compositions/EstimateCost/index.tsx',
+          'src/compositions/EstimateCost/index.tsx',
         ),
-        'components/compositions/index': resolve(
-          import.meta.dirname,
-          'src/components/compositions/index.ts',
-        ),
-        'components/compositions/styles': resolve(
-          import.meta.dirname,
-          'src/components/compositions/styles.ts',
-        ),
+        composition: 'src/composition.ts',
         index: 'src/index.ts',
       },
       rolldownOptions: {

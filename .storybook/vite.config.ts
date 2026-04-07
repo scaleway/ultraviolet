@@ -131,11 +131,11 @@ export const defaultConfig: UserConfigExport = {
       // UI - compositions (must come before base alias)
       {
         find: /^@ultraviolet\/ui\/compositions\/(.*)/,
-        replacement: resolve('packages/ui/src/components/compositions/$1'),
+        replacement: resolve('packages/ui/src/compositions/$1'),
       },
       {
         find: '@ultraviolet/ui/compositions',
-        replacement: resolve('packages/ui/src/components/compositions'),
+        replacement: resolve('packages/ui/src/compositions'),
       },
 
       // UI - base alias
@@ -147,13 +147,11 @@ export const defaultConfig: UserConfigExport = {
       // Form - compositions (must come before base alias)
       {
         find: /^@ultraviolet\/form\/compositions\/(.*)/,
-        replacement: resolve(
-          'packages/form/src/components/compositions/$1.tsx',
-        ),
+        replacement: resolve('packages/form/src/compositions/$1.tsx'),
       },
       {
         find: '@ultraviolet/form/compositions',
-        replacement: resolve('packages/form/src/components/compositions'),
+        replacement: resolve('packages/form/src/compositions'),
       },
 
       // Form - base alias
