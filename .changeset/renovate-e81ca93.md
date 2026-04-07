@@ -1,0 +1,13 @@
+---
+'@ultraviolet/fonts': patch
+'@ultraviolet/form': patch
+'@ultraviolet/icons': patch
+'@ultraviolet/illustrations': patch
+'@ultraviolet/nextjs': patch
+'@ultraviolet/themes': patch
+'@ultraviolet/ui': patch
+'@ultraviolet/utils': patch
+'@repo/config': patch
+---
+
+Updated dependency `vite` to `8.0.5`.
