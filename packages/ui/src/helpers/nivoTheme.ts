@@ -13,6 +13,7 @@ export const getNivoTheme = (theme: ReturnType<typeof useTheme>) =>
       },
     },
     text: {
+      dominantBaseline: 'middle',
       fill: theme.colors.neutral.text,
       fontFamily: theme.typography.body.fontFamily,
       fontSize: theme.typography.bodySmall.fontSize,
