@@ -2,6 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { keyframes, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
+import { tagStyle } from '../Tag/styles.css'
 import { tagListStyle } from '../TagList/styles.css'
 
 import { DEFAULT_ARROW_WIDTH } from './helpers'
@@ -117,6 +118,10 @@ const childrenContainer = recipe({
     selectors: {
       [`${tagListStyle.ellipsisChild} > &`]: {
         minWidth: 0,
+      },
+      [`&:has(${tagStyle.text})`]: {
+        minWidth: 0,
+        width: '100%',
       },
     },
   },

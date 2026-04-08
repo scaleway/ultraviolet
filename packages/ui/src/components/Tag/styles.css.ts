@@ -23,6 +23,7 @@ const container = recipe({
     padding: `0 ${theme.space[1]}`,
     whiteSpace: 'nowrap',
     width: 'fit-content',
+    maxWidth: '100%',
   },
   variants: {
     copiable: {
