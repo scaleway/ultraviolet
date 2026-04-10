@@ -1,19 +1,20 @@
+import { Stack } from '@ultraviolet/ui'
+
 import { RichTextEditorField } from '..'
-import { Submit } from '../..'
+import { Submit } from '../../../components/Submit'
+
+import { Template } from './Template.stories'
 
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const Template: StoryFn<
+export const Required: StoryFn<
   ComponentProps<typeof RichTextEditorField>
 > = args => (
-  <div>
+  <Stack gap={1}>
     <RichTextEditorField {...args} />
     <Submit>Submit</Submit>
-  </div>
+  </Stack>
 )
 
-Template.args = {
-  label: 'Label',
-  name: 'richTextEditor',
-}
+Required.args = { ...Template.args, required: true }
