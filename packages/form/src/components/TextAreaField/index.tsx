@@ -41,6 +41,7 @@ export const TextAreaField = <
   regex: regexes,
   submitOnEnter,
   validate,
+  errorLabel,
   'aria-label': ariaLabel,
   ...props
 }: TextAreaFieldProps<TFieldValues, TFieldName>) => {
@@ -89,7 +90,7 @@ export const TextAreaField = <
       {...props}
       error={getError(
         {
-          label: label ?? ariaLabel ?? name,
+          label: errorLabel ?? label ?? ariaLabel ?? name,
           maxLength,
           minLength,
           regex: regexes,

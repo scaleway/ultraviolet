@@ -48,6 +48,7 @@ const SelectableCardOptionGroupFieldComponent: <
   error: customError,
   shouldUnregister = false,
   validate,
+  errorLabel,
   ...props
 }: SelectableCardOptionGroupFieldProps<
   TFieldValues,
@@ -75,7 +76,7 @@ const SelectableCardOptionGroupFieldComponent: <
 
   return (
     <SelectableCardOptionGroup
-      error={getError({ label: legend }, error) ?? customError}
+      error={getError({ label: errorLabel ?? legend }, error) ?? customError}
       legend={legend}
       name={name}
       onChange={event => {

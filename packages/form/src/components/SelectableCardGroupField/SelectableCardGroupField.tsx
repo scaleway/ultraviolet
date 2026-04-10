@@ -31,6 +31,7 @@ const SelectableCardGroupFieldComponent = <
   type = 'radio',
   shouldUnregister = false,
   validate,
+  errorLabel,
   ...props
 }: SelectableCardGroupFieldProps<TFieldValues, TFieldName>): JSX.Element => {
   const { getError } = useErrors()
@@ -51,7 +52,7 @@ const SelectableCardGroupFieldComponent = <
     <SelectableCardGroup
       {...props}
       columns={columns}
-      error={getError({ label: legend }, error) ?? customError}
+      error={getError({ label: errorLabel ?? legend }, error) ?? customError}
       legend={legend}
       name={name}
       onChange={event => {

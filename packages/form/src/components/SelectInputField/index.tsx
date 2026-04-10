@@ -30,6 +30,7 @@ export const SelectInputField = <
   validate,
   onChange,
   multiselect,
+  errorLabel,
   ...props
 }: SelectInputFieldProps<TFieldValues, TFieldName>) => {
   const {
@@ -60,7 +61,10 @@ export const SelectInputField = <
   return (
     <SelectInput
       aria-label={ariaLabel}
-      error={getError({ label: label ?? ariaLabel ?? name }, error)}
+      error={getError(
+        { label: errorLabel ?? label ?? ariaLabel ?? name },
+        error,
+      )}
       label={label}
       multiselect={multiselect}
       name={field.name}

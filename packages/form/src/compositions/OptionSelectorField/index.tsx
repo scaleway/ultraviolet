@@ -27,6 +27,7 @@ export const OptionSelectorField = <
   control,
   validate,
   onChange,
+  errorLabel,
   ...props
 }: OptionSelectorFieldProps<TFieldValues, TFieldName>) => {
   const {
@@ -56,7 +57,10 @@ export const OptionSelectorField = <
   return (
     <OptionSelector
       aria-label={ariaLabel}
-      error={getError({ label: label ?? ariaLabel ?? name }, error)}
+      error={getError(
+        { label: errorLabel ?? label ?? ariaLabel ?? name },
+        error,
+      )}
       name={field.name}
       onChange={val => {
         field.onChange({ first: val.first, second: val.second })
