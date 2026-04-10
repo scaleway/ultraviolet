@@ -39,7 +39,12 @@ describe('richTextEditorField', () => {
       expect(onSubmit).toHaveBeenCalledTimes(0)
     })
 
-    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    const doc = document.querySelector<HTMLDivElement>(
+      '[contenteditable="true"]',
+    )
+    if (!doc) {
+      throw new Error('RichTextEditor contenteditable not found')
+    }
     await userEvent.click(doc)
     await userEvent.type(doc, 'This is an example')
     await userEvent.click(screen.getByText('Submit'))
@@ -77,12 +82,17 @@ describe('richTextEditorField', () => {
     expect(italicButton).not.toBeNull()
     expect(bulletListButton).not.toBeNull()
 
-    await userEvent.click(italicButton!)
-    await userEvent.click(bulletListButton!)
-
-    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    const doc = document.querySelector<HTMLDivElement>(
+      '[contenteditable="true"]',
+    )
+    if (!doc) {
+      throw new Error('RichTextEditor contenteditable not found')
+    }
     await userEvent.click(doc)
-    await userEvent.type(doc, 'Styled item')
+    await userEvent.click(italicButton!)
+    await userEvent.type(doc, 'Styled ')
+    await userEvent.click(bulletListButton!)
+    await userEvent.type(doc, 'item')
     await userEvent.click(screen.getByText('Submit'))
 
     await waitFor(() => {
