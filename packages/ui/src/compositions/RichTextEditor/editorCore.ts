@@ -16,7 +16,7 @@ import { createToggleListCommand, escapeHtml } from './helpers'
 import type { Node } from 'prosemirror-model'
 
 const nodesWithLists = addListNodes(
-  basicSchema.spec.nodes,
+  basicSchema.spec.nodes.remove('image'),
   'paragraph block*',
   'block',
 )

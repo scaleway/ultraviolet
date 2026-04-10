@@ -1,7 +1,7 @@
 'use client'
 
-import { Row } from '../Row'
-import { Text } from '../Text'
+import { Row } from '../../components/Row'
+import { Text } from '../../components/Text'
 
 import type { ReactNode } from 'react'
 
