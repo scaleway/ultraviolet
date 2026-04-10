@@ -1,8 +1,8 @@
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
 
 import { RichTextEditorField } from '..'
-import { Form } from '../..'
 import { useForm } from '../../..'
+import { Form } from '../../../components'
 import { mockErrors } from '../../../mocks'
 
 import type { Meta } from '@storybook/react-vite'

@@ -65,6 +65,7 @@ export const docRegion = style({
   outline: 'none',
   overflowY: 'auto',
   padding: theme.space[1],
+  whiteSpace: 'pre-wrap',
   width: '100%',
 })
 

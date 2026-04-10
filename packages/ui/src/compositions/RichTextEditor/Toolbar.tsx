@@ -1,4 +1,8 @@
 import {
+  useEditorEventCallback,
+  useEditorState,
+} from '@handlewithcare/react-prosemirror'
+import {
   BoldIcon,
   ItalicIcon,
   ListBulletIcon,
@@ -8,8 +12,8 @@ import {
 import { toggleMark } from 'prosemirror-commands'
 import { liftListItem, wrapInList } from 'prosemirror-schema-list'
 
-import { Button } from '../Button'
-import { Stack } from '../Stack'
+import { Button } from '../../components/Button'
+import { Stack } from '../../components/Stack'
 
 import { isSelectionInNodeType } from './helpers'
 
@@ -17,17 +21,14 @@ import type { MarkType } from 'prosemirror-model'
 import type { EditorState, Transaction } from 'prosemirror-state'
 
 type ToolbarProps = {
-  applyCommand: (
-    command: (
-      state: EditorState,
-      dispatch?: (tr: Transaction) => void,
-    ) => boolean,
-  ) => void
   disabled?: boolean
-  editorState: EditorState
   showList: boolean
   showMarks: boolean
 }
+type EditorCommand = (
+  state: EditorState,
+  dispatch?: (tr: Transaction) => void,
+) => boolean
 
 const isMarkActive = (state: EditorState, markType?: MarkType) => {
   if (!markType) {
@@ -45,13 +46,12 @@ const isMarkActive = (state: EditorState, markType?: MarkType) => {
   return state.doc.rangeHasMark(from, to, markType)
 }
 
-export const Toolbar = ({
-  editorState,
-  applyCommand,
-  disabled,
-  showList,
-  showMarks,
-}: ToolbarProps) => {
+export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
+  const editorState = useEditorState()
+  const runCommand = useEditorEventCallback((view, command: EditorCommand) => {
+    command(view.state, view.dispatch)
+  })
+
   const strongMark = editorState.schema.marks['strong']
   const emMark = editorState.schema.marks['em']
   const underlineMark = editorState.schema.marks['underline']
@@ -73,7 +73,7 @@ export const Toolbar = ({
             onMouseDown={event => {
               event.preventDefault()
               if (strongMark) {
-                applyCommand(toggleMark(strongMark))
+                runCommand(toggleMark(strongMark))
               }
             }}
           >
@@ -86,7 +86,7 @@ export const Toolbar = ({
             onMouseDown={event => {
               event.preventDefault()
               if (emMark) {
-                applyCommand(toggleMark(emMark))
+                runCommand(toggleMark(emMark))
               }
             }}
           >
@@ -101,7 +101,7 @@ export const Toolbar = ({
             onMouseDown={event => {
               event.preventDefault()
               if (underlineMark) {
-                applyCommand(toggleMark(underlineMark))
+                runCommand(toggleMark(underlineMark))
               }
             }}
           >
@@ -117,7 +117,7 @@ export const Toolbar = ({
             variant={isInBulletList ? 'filled' : 'ghost'}
             onMouseDown={event => {
               event.preventDefault()
-              applyCommand(
+              runCommand(
                 isInBulletList
                   ? liftListItem(listItem)
                   : wrapInList(bulletList),
@@ -132,7 +132,7 @@ export const Toolbar = ({
             variant={isInOrderedList ? 'filled' : 'ghost'}
             onMouseDown={event => {
               event.preventDefault()
-              applyCommand(
+              runCommand(
                 isInOrderedList
                   ? liftListItem(listItem)
                   : wrapInList(orderedList),
