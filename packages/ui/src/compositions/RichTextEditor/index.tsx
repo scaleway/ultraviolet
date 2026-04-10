@@ -3,10 +3,10 @@
 import { ProseMirror, ProseMirrorDoc } from '@handlewithcare/react-prosemirror'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
-import { useEffect, useId, useMemo, useState } from 'react'
+import { useId, useMemo, useState } from 'react'
 
-import { Label } from '../Label'
-import { Stack } from '../Stack'
+import { Label } from '../../components/Label'
+import { Stack } from '../../components/Stack'
 
 import {
   createEditorState,
@@ -14,12 +14,11 @@ import {
   editorDocToHtml,
   editorSchema,
 } from './editorCore'
-import { collapseEmptyRichTextHtml } from './helpers'
 import { Notice } from './Notice'
 import { richTextEditorStyle } from './styles.css'
 import { Toolbar } from './Toolbar'
 
-import type { EditorState, Transaction } from 'prosemirror-state'
+import type { EditorState } from 'prosemirror-state'
 import type { CSSProperties, DOMAttributes, ReactNode } from 'react'
 
 const RICH_TEXT_EDITOR_LINE_HEIGHT_EM = 1.5
@@ -95,50 +94,6 @@ export const RichTextEditor = ({
     createEditorState(docFromHtml(value, editorSchema)),
   )
 
-  useEffect(() => {
-    setEditorState(prev => {
-      const prevHtml = collapseEmptyRichTextHtml(
-        editorDocToHtml(prev.doc, editorSchema),
-      )
-      const nextValue = collapseEmptyRichTextHtml(value ?? '')
-
-      if (nextValue === prevHtml) {
-        return prev
-      }
-
-      return createEditorState(docFromHtml(value, editorSchema))
-    })
-  }, [value])
-
-  const applyCommand = (
-    command: (
-      state: EditorState,
-      dispatch?: (tr: Transaction) => void,
-    ) => boolean,
-  ) => {
-    if (!isEditable) {
-      return
-    }
-
-    setEditorState(prevState => {
-      let nextState = prevState
-      command(prevState, tr => {
-        nextState = prevState.apply(tr)
-      })
-      const prevHtml = collapseEmptyRichTextHtml(
-        editorDocToHtml(prevState.doc, editorSchema),
-      )
-      const nextHtml = collapseEmptyRichTextHtml(
-        editorDocToHtml(nextState.doc, editorSchema),
-      )
-      if (nextHtml !== prevHtml) {
-        onChange?.(nextHtml)
-      }
-
-      return nextState
-    })
-  }
-
   return (
     <Stack gap="0.5">
       {label ? (
@@ -158,21 +113,6 @@ export const RichTextEditor = ({
         data-disabled={disabled ? 'true' : undefined}
         style={style}
       >
-        {isEditable ? (
-          <div
-            className={richTextEditorStyle.toolbarRow({
-              error: !!error && !disabled,
-              success: !!success && !error && !disabled,
-            })}
-          >
-            <Toolbar
-              applyCommand={applyCommand}
-              editorState={editorState}
-              showList={showList}
-              showMarks={showMarks}
-            />
-          </div>
-        ) : null}
         <ProseMirror
           dispatchTransaction={transaction => {
             if (!isEditable) {
@@ -181,14 +121,11 @@ export const RichTextEditor = ({
 
             setEditorState(prev => {
               const next = prev.apply(transaction)
-              const prevHtml = collapseEmptyRichTextHtml(
-                editorDocToHtml(prev.doc, editorSchema),
-              )
-              const nextHtml = collapseEmptyRichTextHtml(
-                editorDocToHtml(next.doc, editorSchema),
-              )
-              if (nextHtml !== prevHtml) {
-                onChange?.(nextHtml)
+              if (!prev.doc.eq(next.doc)) {
+                const isEmpty = next.doc.textContent.trim() === ''
+                onChange?.(
+                  isEmpty ? '' : editorDocToHtml(next.doc, editorSchema),
+                )
               }
 
               return next
@@ -197,6 +134,16 @@ export const RichTextEditor = ({
           state={editorState}
           static={!isEditable}
         >
+          {isEditable ? (
+            <div
+              className={richTextEditorStyle.toolbarRow({
+                error: !!error && !disabled,
+                success: !!success && !error && !disabled,
+              })}
+            >
+              <Toolbar showList={showList} showMarks={showMarks} />
+            </div>
+          ) : null}
           <ProseMirrorDoc
             aria-invalid={!!error}
             aria-label={ariaLabel}

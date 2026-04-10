@@ -1,6 +1,6 @@
 'use client'
 
-import { RichTextEditor } from '@ultraviolet/ui'
+import { RichTextEditor } from '@ultraviolet/ui/compositions'
 import { useController } from 'react-hook-form'
 
 import { useErrors } from '../../providers'

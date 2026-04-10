@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import { RichTextEditor } from '..'
-import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Stack } from '../../../components/Stack'
+import { Text } from '../../../components/Text'
 
 import type { StoryFn } from '@storybook/react-vite'
 
