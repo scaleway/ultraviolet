@@ -1,0 +1,197 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ui - PhoneInput > should render correctly when input is disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div>
+      <label
+        aria-disabled="true"
+        class="styles__f9zn1x3"
+        data-disabled="true"
+        data-error="false"
+        for="phone-phone"
+      >
+        <span
+          class="styles__f9zn1x2"
+        >
+          Phone
+        </span>
+        <div
+          class="styles__f9zn1x0"
+        >
+          🇫🇷
+        </div>
+        <input
+          class="styles__f9zn1x5"
+          disabled=""
+          id="phone-phone"
+          maxlength="20"
+          name="phone"
+          placeholder="+33 6 12 34 56 78"
+          type="tel"
+          value="+33612345678"
+        />
+      </label>
+      <div
+        class="styles__mlltm91"
+        data-is-animated="false"
+        style="--mlltm90: 300ms; max-height: 0px; overflow: hidden;"
+      >
+        <p
+          class="styles__f9zn1x4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ui - PhoneInput > should render correctly with basic props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div>
+      <label
+        aria-disabled="false"
+        class="styles__f9zn1x3"
+        data-disabled="false"
+        data-error="false"
+        for="phone-phone"
+      >
+        <span
+          class="styles__f9zn1x2"
+        >
+          Phone
+        </span>
+        <div
+          class="styles__f9zn1x0"
+        >
+          🇫🇷
+        </div>
+        <input
+          class="styles__f9zn1x5"
+          id="phone-phone"
+          maxlength="20"
+          name="phone"
+          placeholder="+33 6 12 34 56 78"
+          type="tel"
+          value="+33612345678"
+        />
+      </label>
+      <div
+        class="styles__mlltm91"
+        data-is-animated="false"
+        style="--mlltm90: 300ms; max-height: 0px; overflow: hidden;"
+      >
+        <p
+          class="styles__f9zn1x4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ui - PhoneInput > should render correctly with error 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div>
+      <label
+        aria-disabled="false"
+        class="styles__f9zn1x3"
+        data-disabled="false"
+        data-error="true"
+        for="phone-phone"
+      >
+        <span
+          class="styles__f9zn1x2"
+        >
+          Phone
+        </span>
+        <div
+          class="styles__f9zn1x0"
+        >
+          🇫🇷
+        </div>
+        <input
+          class="styles__f9zn1x5"
+          id="phone-phone"
+          maxlength="20"
+          name="phone"
+          placeholder="+33 6 12 34 56 78"
+          type="tel"
+          value="+33612345678"
+        />
+      </label>
+      <div
+        class="styles__mlltm91"
+        data-is-animated="false"
+        style="--mlltm90: 300ms;"
+      >
+        <p
+          class="styles__f9zn1x4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+        >
+          Invalid phone number
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ui - PhoneInput > should render correctly with required field 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div>
+      <label
+        aria-disabled="false"
+        class="styles__f9zn1x3"
+        data-disabled="false"
+        data-error="false"
+        for="phone-phone"
+      >
+        <span
+          class="styles__f9zn1x2"
+        >
+          Phone
+        </span>
+        <div
+          class="styles__f9zn1x0"
+        >
+          🇫🇷
+        </div>
+        <input
+          class="styles__f9zn1x5"
+          id="phone-phone"
+          maxlength="20"
+          name="phone"
+          placeholder="+33 6 12 34 56 78"
+          type="tel"
+          value="+33612345678"
+        />
+        <span
+          class="styles__f9zn1x1 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+        >
+          *
+        </span>
+      </label>
+      <div
+        class="styles__mlltm91"
+        data-is-animated="false"
+        style="--mlltm90: 300ms; max-height: 0px; overflow: hidden;"
+      >
+        <p
+          class="styles__f9zn1x4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

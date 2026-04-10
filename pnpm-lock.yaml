@@ -471,6 +471,9 @@ importers:
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:../ui
+      awesome-phonenumber:
+        specifier: 7.8.0
+        version: 7.8.0
       react-hook-form:
         specifier: 7.72.0
         version: 7.72.0(react@19.2.4)
@@ -695,6 +698,9 @@ importers:
       '@vanilla-extract/sprinkles':
         specifier: 1.6.5
         version: 1.6.5(@vanilla-extract/css@1.18.0)
+      awesome-phonenumber:
+        specifier: 7.8.0
+        version: 7.8.0
       codemirror:
         specifier: 6.0.2
         version: 6.0.2
@@ -4018,6 +4024,10 @@ packages:
   at-least-node@1.0.0:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
     engines: {node: '>= 4.0.0'}
+
+  awesome-phonenumber@7.8.0:
+    resolution: {integrity: sha512-zw23nvKt6gLGgCrKZ5Z7ZK0lm3k39/uZTw+cWp5tpiXVfEFSt9AEVFDzSycws76G64xOMrIVp2upYvJxwRgzvw==}
+    engines: {node: '>=18'}
 
   axe-core@4.10.2:
     resolution: {integrity: sha512-RE3mdQ7P3FRSe7eqCWoeQ/Z9QXrtniSjp1wUjt5nRC3WIpz5rSCve6o3fsZ2aCpJtrZjSZgjwXAoTO5k4tEI0w==}
@@ -10785,6 +10795,8 @@ snapshots:
   async@3.2.6: {}
 
   at-least-node@1.0.0: {}
+
+  awesome-phonenumber@7.8.0: {}
 
   axe-core@4.10.2: {}
 
