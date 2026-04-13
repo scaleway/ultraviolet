@@ -9,9 +9,7 @@ import type { StoryFn } from '@storybook/react-vite'
 
 export const OnChange: StoryFn<typeof SelectInput> = args => {
   const [values, setValues] = useState<string[]>([])
-  const [values2, setValues2] = useState<
-    (typeof OptionalInfo4)[number]['value'][]
-  >(['par'])
+  const [values2, setValues2] = useState(['par'])
   const defaultOptions = [
     {
       disabled: false,

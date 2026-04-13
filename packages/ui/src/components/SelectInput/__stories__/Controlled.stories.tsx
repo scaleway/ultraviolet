@@ -10,11 +10,8 @@ import { Template } from './Template.stories'
 import type { StoryFn } from '@storybook/react-vite'
 
 export const Controlled: StoryFn<typeof SelectInput> = () => {
-  const [valueSingle, setValueSingle] =
-    useState<(typeof dataUnGrouped)[number]['value']>('uranus')
-  const [valueMulti, setValueMulti] = useState<
-    (typeof dataUnGrouped)[number]['value'][]
-  >(['neptune', 'uranus'])
+  const [valueSingle, setValueSingle] = useState('uranus')
+  const [valueMulti, setValueMulti] = useState(['neptune', 'uranus'])
 
   return (
     <Stack direction="column" gap={2} width="50%">

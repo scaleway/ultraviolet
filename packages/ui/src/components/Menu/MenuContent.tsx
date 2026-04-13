@@ -89,9 +89,7 @@ export const Menu = forwardRef(
     } = useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
     const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
-    const [popupMaxHeight, setPopupMaxHeight] = useState<string>(
-      maxHeight ?? '30rem',
-    )
+    const [popupMaxHeight, setPopupMaxHeight] = useState(maxHeight ?? '30rem')
     const contentRef = useRef<HTMLDivElement>(null)
     const tempId = useId()
     const finalId = `menu-${id ?? tempId}`

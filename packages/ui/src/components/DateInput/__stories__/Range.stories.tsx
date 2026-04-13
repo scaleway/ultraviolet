@@ -4,7 +4,6 @@ import { DateInput } from '..'
 import { Stack } from '../../Stack'
 
 import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 const MONTHS = [
   'January',
@@ -20,7 +19,7 @@ const MONTHS = [
   'November',
   'December',
 ]
-export const Range: StoryFn<ComponentProps<typeof DateInput>> = args => {
+export const Range: StoryFn = args => {
   const [startDate, setStartDate] = useState<Date | null>(null)
   const [endDate, setEndDate] = useState<Date | null>(null)
 

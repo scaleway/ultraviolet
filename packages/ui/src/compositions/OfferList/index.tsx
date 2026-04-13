@@ -46,10 +46,10 @@ export const OfferList = ({
   style,
   'data-testid': dataTestId,
 }: OfferListProps) => {
-  const [radioSelectedRow, setRadioSelectedRow] = useState<string | undefined>(
+  const [radioSelectedRow, setRadioSelectedRow] = useState(
     typeof selected === 'string' ? selected : undefined,
   )
-  const [checkboxSelectedRows, setCheckboxSelectedRows] = useState<string[]>(
+  const [checkboxSelectedRows, setCheckboxSelectedRows] = useState(
     Array.isArray(selected) ? selected : [],
   )
 

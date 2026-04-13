@@ -20,7 +20,7 @@ import { FileInputContext } from './FileInputProvider'
 import { fileIsAccepted } from './helpers'
 import { fileInputStyle } from './styles.css'
 
-import type { FileInputProps, FilesType } from './types'
+import type { FileInputProps } from './types'
 import type { ChangeEvent, DragEvent as DragEventReact } from 'react'
 
 /**
@@ -51,7 +51,7 @@ const FileInputBase = ({
   const [dragState, setDragState] = useState<'over' | 'default' | 'page'>(
     'default',
   )
-  const [files, setFiles] = useState<FilesType[]>(defaultFiles ?? [])
+  const [files, setFiles] = useState(defaultFiles ?? [])
 
   const inputId = useId()
   const inputRef = useRef<HTMLInputElement>(null)

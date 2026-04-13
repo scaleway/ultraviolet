@@ -5,7 +5,7 @@ import { TextInput } from '..'
 import type { StoryFn } from '@storybook/react-vite'
 
 export const OnRandomize: StoryFn<typeof TextInput> = ({ ...args }) => {
-  const [value, setValue] = useState<string | undefined>(args.value)
+  const [value, setValue] = useState(args.value)
 
   return (
     <TextInput

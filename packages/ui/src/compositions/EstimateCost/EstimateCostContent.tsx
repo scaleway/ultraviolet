@@ -24,7 +24,6 @@ import type {
   BareEstimateProduct,
   EstimateCostProps,
   EstimateProduct,
-  Iteration,
   Units,
 } from './types'
 
@@ -72,7 +71,7 @@ export const EstimateCostContent = ({
     overlayHourly: 0,
     total: 0,
   })
-  const [iteration, setIteration] = useState<Iteration>({
+  const [iteration, setIteration] = useState({
     unit: defaultTimeUnit ?? 'hours',
     value: 1,
   })

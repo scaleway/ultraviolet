@@ -41,7 +41,7 @@ export const Tabs = ({
   'data-testid': dataTestId,
   ...props
 }: TabsProps) => {
-  const tabsRef = useRef<HTMLDivElement>({} as HTMLDivElement)
+  const tabsRef = useRef({} as HTMLDivElement)
   const moreStaticRef = useRef<HTMLButtonElement>(null)
   const [displayMore, setDisplayMore] = useState(false)
   const value = useMemo(

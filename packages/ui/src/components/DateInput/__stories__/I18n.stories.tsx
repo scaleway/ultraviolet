@@ -5,7 +5,6 @@ import { DateInput } from '..'
 import { SelectInput } from '../../SelectInput'
 
 import type { StoryFn } from '@storybook/react-vite'
-import type { Locale } from 'date-fns'
 import type { ComponentProps } from 'react'
 
 const locales = ['en', 'fr', 'es', 'de', 'ru'] as const
@@ -29,14 +28,14 @@ const localesOptions = locales.map(locale => ({
   value: locale,
 }))
 
-export const I18n: StoryFn<ComponentProps<typeof DateInput>> = args => {
+export const I18n: StoryFn = args => {
   const [currentLocale, setCurrentLocale] = useState<LocalSupportedType>(
     locales[0],
   )
   const [value, setValue] =
     useState<ComponentProps<typeof DateInput>['value']>(undefined)
 
-  const [dateFns, setDateFns] = useState<Locale>(enGB)
+  const [dateFns, setDateFns] = useState(enGB)
 
   const onChange = async (locale: string) => {
     if (isLocales(locale)) {

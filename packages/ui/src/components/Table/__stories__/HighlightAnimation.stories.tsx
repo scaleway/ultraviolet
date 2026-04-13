@@ -22,7 +22,7 @@ type Movie = {
 }
 
 export const HighlightAnimation: StoryFn<typeof Table> = ({ ...props }) => {
-  const [data, setData] = useState<Movie[]>(DATA)
+  const [data, setData] = useState(DATA)
 
   const newData = {
     director: 'Unknown',
@@ -50,7 +50,7 @@ export const HighlightAnimation: StoryFn<typeof Table> = ({ ...props }) => {
         <Table.Body>
           {data.map(movie => (
             <Table.Row
-              highlightAnimation={movie.isNew}
+              highlightAnimation={!!movie.isNew}
               id={movie.id}
               key={movie.id}
             >

@@ -147,7 +147,7 @@ export const ListProvider = ({
   )
   const selectRows = useCallback(
     (rowIds: string[], state: boolean) => {
-      const newSelectedRowIds = rowIds.reduce<RowState>(
+      const newSelectedRowIds = rowIds.reduce(
         (acc, rowId) => ({ ...acc, [rowId]: state }),
         selectedRowIds,
       )

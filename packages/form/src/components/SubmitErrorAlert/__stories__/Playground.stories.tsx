@@ -5,11 +5,8 @@ import { mockErrors } from '../../../mocks'
 import { Form } from '../../Form'
 
 import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
-export const Playground: StoryFn<
-  ComponentProps<typeof SubmitErrorAlert>
-> = () => {
+export const Playground: StoryFn = () => {
   const methods = useForm()
 
   return (

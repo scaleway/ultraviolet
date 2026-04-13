@@ -270,7 +270,7 @@ export const computeTotalPrice = (
   discount: number,
   timePeriodUnit: TimeUnit,
 ) => {
-  const price = Object.values(categoriesPrice).reduce<[number, number]>(
+  const price = Object.values(categoriesPrice).reduce(
     (acc, categoryPrice) => [
       acc[0] + categoryPrice.totalPrice,
       acc[1] + categoryPrice.maxPrice,
@@ -278,9 +278,7 @@ export const computeTotalPrice = (
     [0, 0],
   )
 
-  const priceDiscounted = Object.values(categoriesPrice).reduce<
-    [number, number]
-  >(
+  const priceDiscounted = Object.values(categoriesPrice).reduce(
     (acc, categoryPrice) => [
       acc[0] + categoryPrice.totalPriceWithDiscount,
       acc[1] + categoryPrice.maxPriceWithDiscount,

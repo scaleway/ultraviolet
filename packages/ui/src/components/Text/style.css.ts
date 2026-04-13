@@ -46,7 +46,7 @@ type StyleText = Omit<
 }
 
 function generateVariants() {
-  return textVariants.reduce<Record<TextVariant, StyleText>>(
+  return textVariants.reduce(
     (acc, key) => {
       acc[key] = {
         fontFamily: theme.typography[key].fontFamily,

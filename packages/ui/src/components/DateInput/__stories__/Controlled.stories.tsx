@@ -5,9 +5,8 @@ import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 
 import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
-export const Controlled: StoryFn<ComponentProps<typeof DateInput>> = args => {
+export const Controlled: StoryFn = args => {
   const [value, setValue] = useState<
     Date | Date[] | [Date | null, Date | null] | null
   >(new Date('December 17, 1995 03:24:00'))

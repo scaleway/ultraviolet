@@ -96,7 +96,7 @@ export const TagInput = ({
   const [tagInputState, setTagInput] = useState(
     convertTagArrayToTagStateArray(value),
   )
-  const [input, setInput] = useState<string>('')
+  const [input, setInput] = useState('')
   const [status, setStatus] = useState<{ [key: string]: StatusValue }>({})
 
   const uniqueId = useId()

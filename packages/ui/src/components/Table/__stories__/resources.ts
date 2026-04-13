@@ -9,6 +9,7 @@ export const data = [
     releaseYear: 1999,
     storyBy: 'George Lucas',
     trilogy: 'Prequel',
+    isNew: false,
   },
   {
     director: 'George Lucas',

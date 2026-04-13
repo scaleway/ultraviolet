@@ -75,7 +75,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     const focusedLinkIndex = useRef(0)
     const popupRef = useRef<HTMLDivElement>(null)
     const [containerWidth, setContainerWidth] = useState(0)
-    const [searchTerms, setSearchTerms] = useState<string>(defaultValue)
+    const [searchTerms, setSearchTerms] = useState(defaultValue)
     const [isMacOS, setIsMacOS] = useState(false)
     const [keyPressed, setKeyPressed] = useState<string[]>([])
     const [isOpen, toggleIsOpen] = useReducer(state => !state, false)
