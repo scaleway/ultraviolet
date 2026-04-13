@@ -1,5 +1,6 @@
 import { isColorMonochrome, textVariants, theme } from '@ultraviolet/themes'
 import { capitalize, filterByProperty } from '@ultraviolet/utils'
+import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 import { PROMINENCES } from './constants'
@@ -207,6 +208,7 @@ const text = recipe({
   },
 })
 
+const oneLine = style({})
 export type TextVariants = NonNullable<RecipeVariants<typeof text>>
 
-export const textStyle = { text }
+export const textStyle = { text, oneLine }

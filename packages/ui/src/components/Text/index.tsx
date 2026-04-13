@@ -87,6 +87,7 @@ export const Text = ({
             underline,
             variant,
           }),
+          oneLine ? textStyle.oneLine : '',
         )}
         data-testid={dataTestId}
         dir={dir}
