@@ -142,12 +142,12 @@ export const Dialog = ({
         dialogRef.current &&
         // oxlint-disable-next-line typescript/no-unsafe-type-assertion
         !dialogRef.current.contains(event.target as Node) &&
-        position === 0
+        (isDrawer || position === 0)
       ) {
         onCloseRef.current()
       }
     },
-    [hideOnClickOutside, position, dialogRef],
+    [hideOnClickOutside, position, dialogRef, isDrawer],
   )
 
   const handleFocusMove = useCallback(

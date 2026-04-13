@@ -52,6 +52,7 @@ const backdropBase = style({
     },
     [`&:has(${drawerStyle.push})`]: {
       background: 'none',
+      pointerEvents: 'none',
     },
   },
 })
@@ -92,6 +93,7 @@ const modal = recipe({
       [`&${drawerStyle.push}`]: {
         borderLeft: `1px solid ${theme.colors.neutral.border}`,
         boxShadow: 'none',
+        pointerEvents: 'auto',
       },
       [`&${drawerStyle.drawer.large}, &${drawerStyle.drawer.small}, &${drawerStyle.drawer.medium}`]:
         {
