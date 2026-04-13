@@ -5,7 +5,7 @@ import { Slider } from '..'
 import type { StoryFn } from '@storybook/react-vite'
 
 export const Double: StoryFn<typeof Slider> = () => {
-  const [value, setValue] = useState<number[]>([1, 3])
+  const [value, setValue] = useState([1, 3])
 
   return (
     <Slider

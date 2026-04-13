@@ -16,9 +16,9 @@ const generateRandomPassword = (length = 12) => {
   ).join('')
 }
 export const Password: StoryFn<typeof TextInput> = ({ ...args }) => {
-  const [value, setValue] = useState<string | undefined>(args.value)
-  const [value2, setValue2] = useState<string | undefined>(args.value)
-  const [value3, setValue3] = useState<string | undefined>(args.value)
+  const [value, setValue] = useState(args.value)
+  const [value2, setValue2] = useState(args.value)
+  const [value3, setValue3] = useState(args.value)
 
   return (
     <Stack gap={2}>

@@ -87,6 +87,7 @@ export const VerificationCode = ({
     // oxlint-disable-next-line typescript/no-misused-spread
     ...initialValue.substring(0, fields),
   ])
+  // oxlint-disable-next-line typescript/no-unnecessary-type-arguments needed here
   const [values, setValues] = useState<string[]>(valuesArray)
 
   const inputRefs = Array.from({ length: fields }, () =>

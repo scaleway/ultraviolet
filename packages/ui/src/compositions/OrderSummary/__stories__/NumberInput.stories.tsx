@@ -55,8 +55,8 @@ const mockItems = (
 }
 
 export const NumberInput: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
-  const [requestsAmount, setRequestsAmount] = useState<number>(200_000)
-  const [requestsAmount2, setRequestsAmount2] = useState<number>(10)
+  const [requestsAmount, setRequestsAmount] = useState(200_000)
+  const [requestsAmount2, setRequestsAmount2] = useState(10)
 
   const onChange = (value: number | null) => {
     setRequestsAmount(value ?? 0)

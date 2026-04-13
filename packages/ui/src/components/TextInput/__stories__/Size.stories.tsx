@@ -7,7 +7,7 @@ import { TEXTINPUT_SIZE_HEIGHT } from '../constants'
 import type { StoryFn } from '@storybook/react-vite'
 
 export const Size: StoryFn<typeof TextInput> = args => {
-  const [value, setValue] = useState<string>('Text')
+  const [value, setValue] = useState('Text')
 
   return (
     <Stack gap="2">

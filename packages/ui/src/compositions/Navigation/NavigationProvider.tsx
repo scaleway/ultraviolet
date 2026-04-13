@@ -153,12 +153,12 @@ export const NavigationProvider = ({
   showHide,
 }: NavigationProviderProps) => {
   const [expanded, setExpanded] = useState(initialExpanded)
-  const [pinnedItems, setPinnedItems] = useState<string[]>(initialPinned ?? [])
+  const [pinnedItems, setPinnedItems] = useState(initialPinned ?? [])
 
   const [animation, setAnimation] = useState<boolean | 'expand' | 'collapse'>(
     false,
   )
-  const [width, setWidth] = useState<number>(initialWidth)
+  const [width, setWidth] = useState(initialWidth)
   const [allowNavigationResize, setAllowNavigationResize] = useState(
     initialAllowNavigationResize,
   )

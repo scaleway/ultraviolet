@@ -147,8 +147,8 @@ export const Dropdown = ({
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [defaultSearchValue, setDefaultSearch] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
-  const [search, setSearch] = useState<string>('')
-  const [maxWidth, setWidth] = useState<string | number>(
+  const [search, setSearch] = useState('')
+  const [maxWidth, setWidth] = useState(
     refSelect.current?.offsetWidth ?? '100%',
   )
   const modalContext = useContext(ModalContext)

@@ -5,7 +5,7 @@ import { TextArea } from '..'
 import type { StoryFn } from '@storybook/react-vite'
 
 export const Template: StoryFn<typeof TextArea> = ({ ...args }) => {
-  const [value, setValue] = useState<string | undefined>(args.value)
+  const [value, setValue] = useState(args.value)
 
   return <TextArea {...args} onChange={setValue} value={value} />
 }

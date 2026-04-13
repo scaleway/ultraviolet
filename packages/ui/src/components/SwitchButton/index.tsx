@@ -55,7 +55,7 @@ export const SwitchButton = ({
 }: SwitchButtonProps) => {
   const containerRef = useRef<HTMLDivElement>(null)
 
-  const [localValue, setLocalValue] = useState<string>(value)
+  const [localValue, setLocalValue] = useState(value)
   const [refOptions, setRefOptions] = useState<RefOptionType[]>([])
   const [position, setPosition] = useState(0)
   const [width, setWidth] = useState(0)

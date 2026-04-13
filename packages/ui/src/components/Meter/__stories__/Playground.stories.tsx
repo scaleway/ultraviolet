@@ -16,8 +16,8 @@ const strength = [
 ]
 
 export const Playground: StoryFn<typeof Meter> = args => {
-  const [value, setValue] = useState<number>(0)
-  const [password, setPassword] = useState<string>('')
+  const [value, setValue] = useState(0)
+  const [password, setPassword] = useState('')
 
   useEffect(() => {
     if (password.length > 0) {

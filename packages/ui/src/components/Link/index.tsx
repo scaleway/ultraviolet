@@ -68,7 +68,7 @@ type LinkProps = {
        * <Link render={(props) => <NextLink {...props} href="/about" />}>About</Link>
        * ```
        */
-      render: RenderProp<AnchorHTMLAttributes<HTMLAnchorElement>>
+      render: RenderProp
     },
   ]
 >

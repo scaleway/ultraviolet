@@ -23,6 +23,7 @@ export const getMax = (values: DatumValue[] = []): number =>
 export const getAverage = (values: DatumValue[] = []): number =>
   values.length > 0
     ? Math.round(
+        // oxlint-disable-next-line typescript/no-unnecessary-type-arguments needed here
         (values.reduce<number>((sum, curr) => sum + parse(curr), 0) /
           values.length) *
           100,

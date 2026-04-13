@@ -14,7 +14,7 @@ const LONG_VALUE =
   'A long time ago, in a galaxy far, far away, amidst the swirling constellations and distant star systems, there existed a realm of unimaginable wonders and ancient mysteries waiting to be discovered. This distant galaxy, filled with countless planets, moons, and celestial phenomena, was home to diverse civilizations, each with their own unique cultures, histories, and legends. Among the stars, epic tales of heroism, adventure, and conflict unfolded, shaping the destinies of countless beings and leaving an indelible mark on the fabric of the universe itself.'
 
 export const Examples: StoryFn<typeof TextArea> = () => {
-  const [value, setValue] = useState<string>(
+  const [value, setValue] = useState(
     'A long time ago in a galaxy far, far away',
   )
   const [valueLong, setValueLong] = useState(LONG_VALUE)
