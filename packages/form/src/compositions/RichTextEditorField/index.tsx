@@ -61,7 +61,7 @@ export const RichTextEditorField = <
         field.onChange(value)
         onChange?.(value as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
-      value={field.value ?? ''}
+      value={field.value}
       {...(label ? { label } : { 'aria-label': ariaLabel! })}
     />
   )
