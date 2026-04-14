@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: RichTextEditor,
-  title: 'UI/Data Entry/RichTextEditor',
+  title: 'Compositions/RichTextEditor',
 } as Meta<typeof RichTextEditor>
 
 export { Playground } from './Playground.stories'
