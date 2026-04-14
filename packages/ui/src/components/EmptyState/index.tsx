@@ -108,22 +108,26 @@ export const EmptyState = ({
           </Text>
         </Stack>
       </Stack>
-      <Stack alignItems="center" gap={2} justifyContent="center">
-        <Stack direction="row" gap={2}>
-          {secondaryButton}
-          {primaryButton}
+      {primaryButton || secondaryButton || learnMore ? (
+        <Stack alignItems="center" gap={2} justifyContent="center">
+          {primaryButton || secondaryButton ? (
+            <Stack direction="row" gap={2}>
+              {secondaryButton}
+              {primaryButton}
+            </Stack>
+          ) : null}
+          {learnMore?.text ? (
+            <Link
+              href={learnMore.link}
+              iconPosition="right"
+              size={size === 'small' ? 'small' : undefined}
+              target={learnMore.target}
+            >
+              {learnMore.text}
+            </Link>
+          ) : null}
         </Stack>
-        {learnMore?.text ? (
-          <Link
-            href={learnMore.link}
-            iconPosition="right"
-            size={size === 'small' ? 'small' : undefined}
-            target={learnMore.target}
-          >
-            {learnMore.text}
-          </Link>
-        ) : null}
-      </Stack>
+      ) : null}
       {children}
     </Stack>
   </Stack>
