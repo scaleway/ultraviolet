@@ -3,6 +3,7 @@
 import { ProseMirror, ProseMirrorDoc } from '@handlewithcare/react-prosemirror'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useId, useMemo, useState } from 'react'
 
 import { Label } from '../../components/Label'
@@ -15,7 +16,7 @@ import {
   editorSchema,
 } from './editorCore'
 import { Notice } from './Notice'
-import { richTextEditorStyle } from './styles.css'
+import { docRegionMaxHeightVar, richTextEditorStyle } from './styles.css'
 import { Toolbar } from './Toolbar'
 
 import type { EditorState } from 'prosemirror-state'
@@ -151,8 +152,10 @@ export const RichTextEditor = ({
             data-testid={dataTestId}
             id={id}
             style={{
+              ...assignInlineVars({
+                [docRegionMaxHeightVar]: maxHeight ?? 'none',
+              }),
               minHeight,
-              ...(maxHeight ? { maxHeight } : {}),
             }}
             onBlur={onBlur}
             onFocus={onFocus}
