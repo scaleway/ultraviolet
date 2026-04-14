@@ -1,6 +1,8 @@
 import { theme } from '@ultraviolet/themes'
-import { style } from '@vanilla-extract/css'
+import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+
+export const docRegionMaxHeightVar = createVar()
 
 export const toolbarRow = recipe({
   base: {
@@ -61,7 +63,8 @@ export const editorSurface = recipe({
 })
 
 export const docRegion = style({
-  lineHeight: 1.5,
+  lineHeight: theme.typography.body.lineHeight,
+  maxHeight: docRegionMaxHeightVar,
   outline: 'none',
   overflowY: 'auto',
   padding: theme.space[1],

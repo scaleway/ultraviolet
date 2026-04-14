@@ -67,7 +67,7 @@ export default {
       )
     },
   ],
-  title: 'Form/Components/Fields/RichTextEditorField',
+  title: 'Compositions/RichTextEditorField',
 } as Meta
 
 export { Playground } from './Playground.stories'
