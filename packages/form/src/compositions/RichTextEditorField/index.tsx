@@ -20,6 +20,7 @@ export const RichTextEditorField = <
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   control,
+  errorLabel,
   label,
   onChange,
   name,
@@ -48,7 +49,7 @@ export const RichTextEditorField = <
       {...props}
       error={getError(
         {
-          label: label ?? ariaLabel ?? name,
+          label: errorLabel ?? label ?? ariaLabel ?? name,
           value: field.value,
         },
         error,
