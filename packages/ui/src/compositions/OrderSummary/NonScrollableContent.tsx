@@ -64,15 +64,17 @@ export const NonScrollableContent = ({
                 prominence="strong"
                 sentiment="neutral"
                 variant="bodyStrong"
+                className={
+                  calculatorIcon
+                    ? orderSummaryStyle.compactTotalPrice
+                    : undefined
+                }
               >
                 {calculatorIcon ? (
-                  <CalculatorIcon
-                    sentiment="primary"
-                    size="medium"
-                    className={orderSummaryStyle.calculatorIcon}
-                  />
+                  <CalculatorIcon sentiment="primary" size="medium" />
                 ) : null}
-                {locales['order.summary.total']}:
+                {locales['order.summary.total']}
+                {compact ? null : ':'}
               </Text>
               {totalPriceDescription}
             </Stack>
@@ -85,16 +87,16 @@ export const NonScrollableContent = ({
               prominence="strong"
               sentiment="neutral"
               variant="bodyStrong"
+              className={
+                calculatorIcon ? orderSummaryStyle.compactTotalPrice : undefined
+              }
             >
               {calculatorIcon ? (
-                <CalculatorIcon
-                  sentiment="primary"
-                  size="medium"
-                  className={orderSummaryStyle.calculatorIcon}
-                />
+                <CalculatorIcon sentiment="primary" size="medium" />
               ) : null}
               {locales['order.summary.total']}
-              {additionalInfo ? ` ${additionalInfo}` : null}:
+              {additionalInfo ? ` ${additionalInfo}` : null}
+              {compact ? null : ':'}
             </Text>
             {totalPriceDescription}
           </Stack>

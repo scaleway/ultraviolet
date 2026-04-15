@@ -115,9 +115,10 @@ const totalPrice = styleVariants({
   default: {},
 })
 
-const calculatorIcon = style({
-  marginRight: theme.space[1],
-  marginBottom: theme.space['0.5'],
+const compactTotalPrice = style({
+  display: 'flex',
+  alignItems: 'center',
+  gap: theme.space[1],
 })
 
 export const orderSummaryStyle = {
@@ -132,5 +133,5 @@ export const orderSummaryStyle = {
   anchor,
   totalPrice,
   numberInput,
-  calculatorIcon,
+  compactTotalPrice,
 }
