@@ -1,9 +1,9 @@
 'use client'
 
 import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
-import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
+import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
+import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import { LightBulbIcon } from '@ultraviolet/icons/LightBulbIcon'
 import { cn } from '@ultraviolet/utils'
 import { useState } from 'react'
@@ -19,9 +19,9 @@ import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 const sentimentIcons = {
   danger: AlertCircleIcon,
-  info: InformationOutlineIcon,
+  info: InformationIcon,
   neutral: LightBulbIcon,
-  success: CheckCircleOutlineIcon,
+  success: CheckCircleIcon,
   warning: AlertCircleIcon,
 }
 
@@ -104,7 +104,7 @@ export const Alert = ({
             className={alertStyle.text}
             direction="row"
             flex="1 1 auto"
-            gap={1.5}
+            gap={size === 'small' ? 0.5 : 1}
             wrap
           >
             {title ? (
