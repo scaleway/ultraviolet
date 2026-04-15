@@ -3,12 +3,12 @@
   "extends": [
     "./node_modules/@scaleway/oxlint-config/configs/index.json",
     "./node_modules/@scaleway/oxlint-config/configs/react.json",
-    "./node_modules/@scaleway/oxlint-config/configs/typescript.json"
+    "./node_modules/@scaleway/oxlint-config/configs/typescript.json",
   ],
   "options": {
     "reportUnusedDisableDirectives": "allow",
     "typeAware": true,
-    "typeCheck": false
+    "typeCheck": false,
   },
   "ignorePatterns": [
     "**/app.config.d.ts",
@@ -17,7 +17,7 @@
     "e2e/**",
     "next.config.js",
     "*.d.ts",
-    "svgo.config.mjs"
+    "svgo.config.mjs",
   ],
   "overrides": [
     {
@@ -32,26 +32,32 @@
         "utils/stories/**/*.{ts,tsx}",
         "utils/scripts/*.ts",
         "**/icons/process-css.ts",
-        "vite.config.ts"
+        "vite.config.ts",
       ],
       "rules": {
         "eslint/no-alert": "off",
         "eslint/no-console": "off",
-        "import/no-nodejs-modules": "off",
+
         "import/no-anonymous-default-export": "off",
         "import/no-named-export": "off",
         "import/no-namespace": "off",
+        "import/no-nodejs-modules": "off",
         "import/no-unassigned-import": "off",
+
         "jsx-a11y/no-static-element-interactions": "warn",
+
         "react/jsx-pascal-case": "off",
+        "react/no-multi-comp": "off",
         "react/no-array-index-key": "off",
         "react/only-export-components": "off",
+
+        "typescript/strict-void-return": "off",
+        "typescript/no-useless-default-assignment": "off",
         "typescript/no-unsafe-assignment": "warn",
+        "typescript/no-unsafe-call": "warn",
         "typescript/no-unsafe-member-access": "warn",
         "typescript/no-unsafe-return": "warn",
-        "typescript/no-unsafe-call": "warn",
-        "react/no-multi-comp": "off"
-      }
+      },
     },
     {
       "files": [
@@ -64,7 +70,7 @@
         ".vitest/**",
         "vitest.setup.ts",
         "**/vitest.setup.ts",
-        "**/vitest/setup.ts"
+        "**/vitest/setup.ts",
       ],
       "plugins": ["import", "oxc", "vitest"],
       "rules": {
@@ -72,29 +78,40 @@
         "eslint/max-statements": [
           "error",
           {
-            "max": 100
-          }
+            "max": 100,
+          },
         ],
         "import/export": "off",
+        "import/max-dependencies": "off",
         "import/no-anonymous-default-export": "off",
         "import/no-named-export": "off",
         "import/no-namespace": "off",
         "import/no-unassigned-import": "off",
+
         "jsx_a11y/label-has-associated-control": "off",
+
         "no-console": "off",
         "node/no-process-env": "off",
-        "typescript/no-unsafe-member-access": "off",
+
         "typescript/consistent-type-imports": "off",
-        "typescript/promise-function-async": "warn",
         "typescript/no-unsafe-assignment": "warn",
+        "typescript/no-unsafe-member-access": "off",
+        "typescript/promise-function-async": "warn",
+        "typescript/strict-void-return": "off",
+
+        "unicorn/no-new-array": "off",
+        "unicorn/prefer-logical-operator-over-ternary": "off",
+        "unicorn/prefer-set-has": "off",
+
+        "vitest/no-importing-vitest-globals": "off",
         "vitest/prefer-called-times": "off",
         "vitest/prefer-describe-function-title": "warn",
-        "vitest/prefer-lowercase-title": "error",
-        "vitest/no-importing-vitest-globals": "off",
         "vitest/prefer-import-in-mock": "off",
+        "vitest/prefer-lowercase-title": "error",
         "vitest/prefer-to-be-falsy": "off",
-        "vitest/prefer-to-be-truthy": "off"
-      }
+        "vitest/prefer-to-be-truthy": "off",
+        "vitest/require-test-timeout": "off",
+      },
     },
     {
       "files": ["e2e/**/*.{ts,tsx}"],
@@ -102,13 +119,13 @@
         "eslint/max-statements": [
           "error",
           {
-            "max": 30
-          }
+            "max": 30,
+          },
         ],
         "react/no-multi-comp": "off",
-        "node/no-process-env": "off"
-      }
-    }
+        "node/no-process-env": "off",
+      },
+    },
   ],
   "plugins": [
     "import",
@@ -117,59 +134,86 @@
     "react",
     "typescript",
     "unicorn",
-    "jsx-a11y"
+    "jsx-a11y",
   ],
   "rules": {
     "eslint/complexity": [
       "warn",
       {
         "max": 30,
-        "variant": "modified"
-      }
+        "variant": "modified",
+      },
     ],
     "eslint/max-statements": [
       "error",
       {
-        "max": 30
-      }
+        "max": 30,
+      },
     ],
     "eslint/no-param-reassign": "error",
     "eslint/sort-imports": [
       "off",
       {
         "ignoreDeclarationSort": true,
-        "memberSyntaxSortOrder": ["single", "multiple", "all", "none"]
-      }
+        "memberSyntaxSortOrder": ["single", "multiple", "all", "none"],
+      },
     ],
+
+    "eslint/no-negated-condition": "off",
+
     "import/no-unassigned-import": "off",
     "import/no-nodejs-modules": "warn",
+    "import/max-dependencies": "off",
+
     "react/display-name": "off",
     "react/no-react-children": "off",
     "react/no-clone-element": "off",
     "react/jsx-max-depth": [
       "error",
       {
-        "max": 10
-      }
+        "max": 10,
+      },
     ],
     "react/jsx-no-useless-fragment": "off",
     "react/jsx-props-no-spreading": "off",
     "react/no-multi-comp": "warn",
+
     "typescript/prefer-nullish-coalescing": [
       "off",
       {
-        "ignoreBooleanCoercion": true
-      }
+        "ignoreBooleanCoercion": true,
+      },
     ],
+
+    "jsx-a11y/no-static-element-interactions": "warn",
+
+    "typescript/dot-notation": "off",
     "typescript/no-confusing-void-expression": "off",
     "typescript/no-deprecated": "warn",
     "typescript/no-misused-spread": "warn",
+    "typescript/no-unsafe-argument": "off",
     "typescript/no-unsafe-type-assertion": "warn",
+    "typescript/no-useless-default-assignment": "off",
     "typescript/promise-function-async": "off",
     "typescript/strict-boolean-expressions": "off",
+    "typescript/strict-void-return": "off",
+
     "unicorn/empty-brace-spaces": "off",
-    "jsx-a11y/no-static-element-interactions": "warn",
+    "unicorn/no-invalid-remove-event-listener": "off",
+    "unicorn/no-new-array": "off",
+    "unicorn/no-zero-fractions": "off",
+    "unicorn/number-literal-case": "off",
+    "unicorn/numeric-separators-style": "off",
+    "unicorn/prefer-array-some": "off",
+    "unicorn/prefer-code-point": "off",
+    "unicorn/prefer-dom-node-append": "off",
+    "unicorn/prefer-dom-node-remove": "off",
     "unicorn/prefer-global-this": "off",
-    "unicorn/prefer-ternary": "off"
-  }
+    "unicorn/prefer-import-meta-properties": "off",
+    "unicorn/prefer-logical-operator-over-ternary": "off",
+    "unicorn/prefer-query-selector": "off",
+    "unicorn/prefer-set-has": "off",
+    "unicorn/prefer-string-slice": "off",
+    "unicorn/prefer-ternary": "off",
+  },
 }

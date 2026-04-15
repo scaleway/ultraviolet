@@ -2,11 +2,11 @@ import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import { Link, Stack, StepList, Tooltip } from '@ultraviolet/ui'
 import * as Compositions from '@ultraviolet/ui/compositions'
 
-const NOT_COMPONENTS = [
+const NOT_COMPONENTS = new Set([
   'NavigationProvider',
   'useNavigation',
   'estimateCostDefaultLocales',
-]
+])
 
 type ComponentInfo = {
   name: string
@@ -21,12 +21,12 @@ type ReactComponentWithDocGen = {
 export const CompositionsList = () => {
   const componentsList: ComponentInfo[] = Object.entries(Compositions)
     .map(([name, component]) => ({
-      name: name,
+      name,
       // oxlint-disable-next-line typescript/no-unsafe-type-assertion
       description: (component as ReactComponentWithDocGen).__docgenInfo
         ?.description,
     }))
-    .filter(component => !NOT_COMPONENTS.includes(component.name))
+    .filter(component => !NOT_COMPONENTS.has(component.name))
 
   return (
     <StepList>
