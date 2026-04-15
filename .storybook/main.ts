@@ -39,6 +39,11 @@ const main = defineMain({
 
   typescript: {
     reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      compilerOptions: {
+        esModuleInterop: true,
+      },
+    },
   },
 })
 
