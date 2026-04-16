@@ -48,6 +48,7 @@ export const EstimateCost = ({
   currency = 'EUR',
   style,
   onTotalPriceChange,
+  backgroundProminence = 'default',
 }: EstimateCostProps) => (
   <EstimateCostProvider
     currency={currency}
@@ -58,6 +59,7 @@ export const EstimateCost = ({
       alert={alert}
       alertTitle={alertTitle}
       alertVariant={alertVariant}
+      backgroundProminence={backgroundProminence}
       commitmentFees={commitmentFees}
       commitmentFeesContent={commitmentFeesContent}
       compact={compact}

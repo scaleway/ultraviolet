@@ -283,6 +283,16 @@ describe('orderSummary', () => {
       </>,
     ))
 
+  test('works compact', () =>
+    shouldMatchSnapshot(
+      <OrderSummary
+        header="summary"
+        items={[categoryAZ]}
+        variant="compact"
+        backgroundProminence="default"
+      />,
+    ))
+
   test('works with negative category price', () => {
     const { asFragment } = renderWithTheme(
       <OrderSummary header="summary" items={[categoryAZ, negativeItem]} />,

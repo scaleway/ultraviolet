@@ -134,6 +134,11 @@ export type OrderSummaryProps = {
     unitaryCategoriesPrice: PriceType,
     unitaryTotalPrice: PriceTypeSingle,
   ) => void
+  /**
+   * When compact, only the total price is displayed
+   */
+  variant?: 'compact' | 'default'
+  backgroundProminence?: 'strong' | 'default'
   hideDetails?: boolean
   calculatorIcon?: boolean
   className?: string

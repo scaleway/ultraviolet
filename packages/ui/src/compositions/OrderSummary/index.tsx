@@ -45,11 +45,14 @@ export const OrderSummary = ({
   'data-testid': dataTestId,
   style,
   priceInformation,
-  calculatorIcon,
+  calculatorIcon = false,
+  variant = 'default',
+  backgroundProminence = 'default',
 }: OrderSummaryProps) => {
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
 
+  const compact = variant === 'compact'
   const categoriesPrice = useMemo(
     () =>
       computeCategoriesPrice(
@@ -132,7 +135,10 @@ export const OrderSummary = ({
   return (
     <OrderSummaryContext.Provider value={valueContext}>
       <Stack
-        className={cn(className, orderSummaryStyle.container)}
+        className={cn(
+          className,
+          orderSummaryStyle.container({ backgroundProminence }),
+        )}
         data-testid={dataTestId}
         justifyContent={hideDetails ? 'flex-start' : 'space-between'}
         style={style}
@@ -181,7 +187,7 @@ export const OrderSummary = ({
             )}
           </Stack>
         ) : null}
-        {hideDetails ? null : <ScrollableContent />}
+        {hideDetails || compact ? null : <ScrollableContent />}
         <NonScrollableContent
           additionalInfo={additionalInfo}
           defaultPriceInformation={
@@ -198,7 +204,7 @@ export const OrderSummary = ({
           totalPriceInfo={totalPriceInfo}
           totalPriceInfoPlacement={totalPriceInfoPlacement}
           unit={timePeriodUnit}
-          compact={hideDetails && !header}
+          compact={compact}
           calculatorIcon={calculatorIcon}
         >
           {children}

@@ -249,9 +249,15 @@ const content = styleVariants({
   default: {},
 })
 
-const compact = style({
-  background: theme.colors.neutral.backgroundWeak,
-  padding: theme.space[2],
+const compact = styleVariants({
+  default: {
+    background: theme.colors.neutral.backgroundWeak,
+    padding: theme.space[2],
+  },
+  strong: {
+    background: theme.colors.neutral.background,
+    padding: theme.space[2],
+  },
 })
 
 const compactText = style({

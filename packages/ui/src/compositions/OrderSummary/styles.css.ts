@@ -2,15 +2,29 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-const container = style({
-  '@media': {
-    '(min-width: 1440px)': {
-      minWidth: '27.5rem',
+const container = recipe({
+  base: {
+    '@media': {
+      '(min-width: 1440px)': {
+        minWidth: '27.5rem',
+      },
+    },
+    height: '100%',
+    minWidth: '20rem',
+  },
+  variants: {
+    backgroundProminence: {
+      default: {
+        backgroundColor: theme.colors.neutral.backgroundWeak,
+      },
+      strong: {
+        backgroundColor: theme.colors.neutral.background,
+      },
     },
   },
-  backgroundColor: theme.colors.neutral.backgroundWeak,
-  height: '100%',
-  minWidth: '20rem',
+  defaultVariants: {
+    backgroundProminence: 'default',
+  },
 })
 
 const orderSummaryHeaderContainerBase = style({

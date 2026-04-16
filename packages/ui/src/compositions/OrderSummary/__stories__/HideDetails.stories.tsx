@@ -12,14 +12,14 @@ HideDetails.args = {
   hideDetails: true,
   hideTimeUnit: true,
   items: [categoryAZ, categoryM2, categoryOptions, categoryDefault],
-  calculatorIcon: true,
+  header: 'Summary',
 }
 
 HideDetails.parameters = {
   docs: {
     description: {
       story:
-        'It is possible to only display the overall price using prop `hideDetails`. For an even more compact layout, do not set a header.',
+        'It is possible to only display the overall price using prop `hideDetails`.',
     },
   },
 }

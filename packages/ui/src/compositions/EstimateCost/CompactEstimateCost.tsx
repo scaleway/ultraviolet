@@ -20,14 +20,16 @@ export const CompactEstimateCost = ({
   label,
   totalPrice,
   iteration,
+  backgroundProminence,
 }: {
   label: string
   totalPrice: TotalPrice
   iteration: Iteration
+  backgroundProminence: 'default' | 'strong'
 }) => (
   <Stack
     alignItems="center"
-    className={estimateCostStyle.compact}
+    className={estimateCostStyle.compact[backgroundProminence]}
     direction="row"
     justifyContent="space-between"
   >

@@ -26,7 +26,7 @@ type NonScrollableContentProps = {
   defaultPriceInformation: boolean
   timePeriodAmount: number
   compact: boolean
-  calculatorIcon?: boolean
+  calculatorIcon: boolean
 }
 
 export const NonScrollableContent = ({
