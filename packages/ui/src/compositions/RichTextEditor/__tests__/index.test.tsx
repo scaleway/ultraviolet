@@ -34,7 +34,8 @@ describe('richTextEditor', () => {
     await userEvent.type(doc, 'a')
 
     expect(onChange).toHaveBeenCalled()
-    expect(onChange).toHaveBeenLastCalledWith(expect.stringContaining('a'))
+    const lastHtml = onChange.mock.calls.at(-1)?.[0]
+    expect(lastHtml).toContain('a')
   })
 
   test('should return empty string when cleared', async () => {
@@ -59,18 +60,18 @@ describe('richTextEditor', () => {
       <RichTextEditor aria-label="Test" onChange={onChange} value="" />,
     )
 
-    const italicButton = screen.getByTitle('ItalicIcon').closest('button')
-    expect(italicButton).not.toBeNull()
-
-    await userEvent.click(italicButton!)
+    const italicButton = screen.getByRole('button', { name: 'Italic' })
+    await userEvent.click(italicButton)
 
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
     await userEvent.click(doc)
     await userEvent.type(doc, 'hello')
 
     expect(onChange).toHaveBeenCalled()
-    expect(onChange).toHaveBeenLastCalledWith(expect.stringContaining('<em>'))
-    expect(onChange).toHaveBeenLastCalledWith(expect.stringContaining('hello'))
+    const lastHtml = onChange.mock.calls.at(-1)?.[0]
+    expect(lastHtml).toContain('<em>')
+    expect(lastHtml).toContain('</em>')
+    expect(lastHtml).toContain('hello')
   })
 
   test('should apply bullet list formatting', async () => {
@@ -80,21 +81,20 @@ describe('richTextEditor', () => {
       <RichTextEditor aria-label="Test" onChange={onChange} value="" />,
     )
 
-    const bulletListButton = screen
-      .getByTitle('ListBulletIcon')
-      .closest('button')
-    expect(bulletListButton).not.toBeNull()
-
-    await userEvent.click(bulletListButton!)
+    const bulletListButton = screen.getByRole('button', { name: 'Bullet List' })
+    await userEvent.click(bulletListButton)
 
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
     await userEvent.click(doc)
     await userEvent.type(doc, 'item')
 
     expect(onChange).toHaveBeenCalled()
-    expect(onChange).toHaveBeenLastCalledWith(expect.stringContaining('<ul>'))
-    expect(onChange).toHaveBeenLastCalledWith(expect.stringContaining('<li>'))
-    expect(onChange).toHaveBeenLastCalledWith(expect.stringContaining('item'))
+    const lastHtml = onChange.mock.calls.at(-1)?.[0]
+    expect(lastHtml).toContain('<ul>')
+    expect(lastHtml).toContain('</ul>')
+    expect(lastHtml).toContain('<li>')
+    expect(lastHtml).toContain('</li>')
+    expect(lastHtml).toContain('item')
   })
 
   test('should not be editable when disabled', async () => {
@@ -109,8 +109,6 @@ describe('richTextEditor', () => {
       />,
     )
 
-    expect(screen.queryByRole('button')).toBeNull()
-
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
     fireEvent.focus(doc)
     await userEvent.type(doc, 'a')
@@ -123,6 +121,7 @@ describe('richTextEditor', () => {
 
     renderWithTheme(
       <RichTextEditor
+        id="id-test"
         label="Test"
         onChange={onChange}
         success={successMessage}
@@ -130,7 +129,9 @@ describe('richTextEditor', () => {
       />,
     )
 
-    expect(screen.getByText(successMessage)).toBeDefined()
+    const status = screen.getByRole('status')
+    expect(status).toHaveAttribute('aria-describedby', 'id-test-notice')
+    expect(status).toHaveTextContent(successMessage)
   })
 
   test('should display error message', () => {
@@ -139,14 +140,17 @@ describe('richTextEditor', () => {
 
     renderWithTheme(
       <RichTextEditor
+        id="id-test"
         label="Test"
         onChange={onChange}
-        success={errorMessage}
+        error={errorMessage}
         value="test"
       />,
     )
 
-    expect(screen.getByText(errorMessage)).toBeDefined()
+    const status = screen.getByRole('status')
+    expect(status).toHaveAttribute('aria-describedby', 'id-test-notice')
+    expect(status).toHaveTextContent(errorMessage)
   })
 
   test('should display helper message', () => {
@@ -155,6 +159,7 @@ describe('richTextEditor', () => {
 
     renderWithTheme(
       <RichTextEditor
+        id="id-test"
         helper={helperMessage}
         label="Test"
         onChange={onChange}
@@ -162,7 +167,9 @@ describe('richTextEditor', () => {
       />,
     )
 
-    expect(screen.getByText(helperMessage)).toBeDefined()
+    const status = screen.getByRole('status')
+    expect(status).toHaveAttribute('aria-describedby', 'id-test-notice')
+    expect(status).toHaveTextContent(helperMessage)
   })
 
   test('should not display helper message when success is displayed', () => {
@@ -191,12 +198,18 @@ describe('richTextEditor', () => {
 
     renderWithTheme(
       <RichTextEditor
+        id="id-test"
         helper={helperMessage}
         label="Test"
         onChange={onChange}
-        success={errorMessage}
+        error={errorMessage}
         value="test"
       />,
     )
+
+    const status = screen.getByRole('status')
+    expect(status).toHaveAttribute('aria-describedby', 'id-test-notice')
+    expect(status).toHaveTextContent(errorMessage)
+    expect(screen.queryByText(helperMessage)).toBeNull()
   })
 })

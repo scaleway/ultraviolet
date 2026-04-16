@@ -3,28 +3,13 @@ import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 export const docRegionMaxHeightVar = createVar()
+export const docRegionMinHeightVar = createVar()
 
 export const toolbarRow = recipe({
   base: {
     borderBottom: `1px solid ${theme.colors.neutral.border}`,
     flexShrink: 0,
     padding: `${theme.space['0.5']} ${theme.space[1]}`,
-  },
-  defaultVariants: {
-    error: false,
-    success: false,
-  },
-  variants: {
-    error: {
-      true: {
-        borderBottomColor: theme.colors.danger.border,
-      },
-    },
-    success: {
-      true: {
-        borderBottomColor: theme.colors.success.border,
-      },
-    },
   },
 })
 
@@ -65,6 +50,7 @@ export const editorSurface = recipe({
 export const docRegion = style({
   lineHeight: theme.typography.body.lineHeight,
   maxHeight: docRegionMaxHeightVar,
+  minHeight: docRegionMinHeightVar,
   outline: 'none',
   overflowY: 'auto',
   padding: theme.space[1],
