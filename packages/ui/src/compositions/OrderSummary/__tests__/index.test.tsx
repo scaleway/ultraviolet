@@ -290,6 +290,31 @@ describe('orderSummary', () => {
         items={[categoryAZ]}
         variant="compact"
         backgroundProminence="default"
+        calculatorIcon
+      />,
+    ))
+
+  test('works with calculator icon', () =>
+    shouldMatchSnapshot(
+      <OrderSummary
+        header="summary"
+        items={[categoryAZ]}
+        variant="compact"
+        backgroundProminence="default"
+        calculatorIcon
+      />,
+    ))
+
+  test('works compact with total price info', () =>
+    shouldMatchSnapshot(
+      <OrderSummary
+        header="summary"
+        items={[categoryAZ]}
+        variant="compact"
+        backgroundProminence="default"
+        calculatorIcon
+        totalPriceInfo="Info"
+        totalPriceInfoPlacement="left"
       />,
     ))
 
