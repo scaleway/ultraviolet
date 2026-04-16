@@ -118,4 +118,25 @@ describe('hooks - useClipboard', () => {
 
     expect(clearTimeoutSpy).toHaveBeenCalled()
   })
+
+  it('should update clipboard text when text prop changes', async () => {
+    const writeTextSpy = vi.fn().mockResolvedValue(undefined)
+    navigator.clipboard.writeText = writeTextSpy
+
+    const { result, rerender } = renderHook(({ text }) => useClipboard(text), {
+      initialProps: { text: 'initial text' },
+    })
+
+    await act(async () => {
+      await result.current[1]()
+    })
+    expect(writeTextSpy).toHaveBeenCalledWith('initial text')
+
+    rerender({ text: 'updated text' })
+
+    await act(async () => {
+      await result.current[1]()
+    })
+    expect(writeTextSpy).toHaveBeenCalledWith('updated text')
+  })
 })

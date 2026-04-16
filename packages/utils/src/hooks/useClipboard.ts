@@ -21,6 +21,10 @@ export function useClipboard(
   const paramsRef = useRef({ text, options })
 
   useEffect(() => {
+    paramsRef.current = { text, options }
+  }, [text, options])
+
+  useEffect(() => {
     let id: number | undefined
     if (isCopied && successDuration) {
       id = setTimeout(() => {
