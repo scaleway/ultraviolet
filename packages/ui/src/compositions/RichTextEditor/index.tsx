@@ -4,7 +4,7 @@ import { ProseMirror, ProseMirrorDoc } from '@handlewithcare/react-prosemirror'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { useId, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 
 import { Label } from '../../components/Label'
 import { Stack } from '../../components/Stack'
@@ -16,7 +16,11 @@ import {
   editorSchema,
 } from './editorCore'
 import { Notice } from './Notice'
-import { docRegionMaxHeightVar, richTextEditorStyle } from './styles.css'
+import {
+  docRegionMaxHeightVar,
+  docRegionMinHeightVar,
+  richTextEditorStyle,
+} from './styles.css'
 import { Toolbar } from './Toolbar'
 
 import type { EditorState } from 'prosemirror-state'
@@ -29,6 +33,7 @@ export type RichTextEditorProps = {
   className?: string
   'data-testid'?: string
   disabled?: boolean
+  readOnly?: boolean
   error?: string
   helper?: ReactNode
   label?: string
@@ -52,6 +57,7 @@ export const RichTextEditor = ({
   onBlur,
   onFocus,
   disabled = false,
+  readOnly = false,
   error,
   helper,
   success,
@@ -67,15 +73,14 @@ export const RichTextEditor = ({
   showList = true,
   required = false,
 }: RichTextEditorProps) => {
-  const localId = useId()
-  const isEditable = !disabled
+  const isEditable = !disabled && !readOnly
   const lineHeightEm = RICH_TEXT_EDITOR_LINE_HEIGHT_EM
   const padding = theme.space[1]
   const minHeight = `calc(${lineHeightEm}em * ${rows} + 2 * ${padding})`
   const maxHeight =
     typeof maxRows === 'number'
       ? `calc(${lineHeightEm}em * ${maxRows} + 2 * ${padding})`
-      : undefined
+      : 'none'
 
   const sentiment = useMemo(() => {
     if (error) {
@@ -98,7 +103,7 @@ export const RichTextEditor = ({
   return (
     <Stack gap="0.5">
       {label ? (
-        <Label htmlFor={id ?? localId} required={required}>
+        <Label htmlFor={id} id={`${id}-label`} required={required}>
           {label}
         </Label>
       ) : null}
@@ -135,16 +140,9 @@ export const RichTextEditor = ({
           state={editorState}
           static={!isEditable}
         >
-          {isEditable ? (
-            <div
-              className={richTextEditorStyle.toolbarRow({
-                error: !!error && !disabled,
-                success: !!success && !error && !disabled,
-              })}
-            >
-              <Toolbar showList={showList} showMarks={showMarks} />
-            </div>
-          ) : null}
+          <div className={richTextEditorStyle.toolbarRow({})}>
+            <Toolbar showList={showList} showMarks={showMarks} />
+          </div>
           <ProseMirrorDoc
             aria-invalid={!!error}
             aria-label={ariaLabel}
@@ -154,8 +152,8 @@ export const RichTextEditor = ({
             style={{
               ...assignInlineVars({
                 [docRegionMaxHeightVar]: maxHeight ?? 'none',
+                [docRegionMinHeightVar]: minHeight,
               }),
-              minHeight,
             }}
             onBlur={onBlur}
             onFocus={onFocus}
@@ -164,6 +162,7 @@ export const RichTextEditor = ({
       </Stack>
       {notice ? (
         <Notice
+          id={`${id}-notice`}
           disabled={disabled}
           error={error}
           helper={helper}

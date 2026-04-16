@@ -63,13 +63,15 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
   const isInOrderedList = isSelectionInNodeType(editorState, orderedList)
 
   return (
-    <Stack alignItems="center" direction="row" gap={1}>
+    <Stack alignItems="center" direction="row" gap={1} role="toolbar">
       {showMarks ? (
         <Stack alignItems="center" direction="row" gap={1}>
           <Button
+            aria-label="Bold"
             disabled={disabled}
             size="small"
             variant={isMarkActive(editorState, strongMark) ? 'filled' : 'ghost'}
+            sentiment="neutral"
             onMouseDown={event => {
               event.preventDefault()
               if (strongMark) {
@@ -80,9 +82,11 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
             <BoldIcon />
           </Button>
           <Button
+            aria-label="Italic"
             disabled={disabled}
             size="small"
             variant={isMarkActive(editorState, emMark) ? 'filled' : 'ghost'}
+            sentiment="neutral"
             onMouseDown={event => {
               event.preventDefault()
               if (emMark) {
@@ -93,11 +97,13 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
             <ItalicIcon />
           </Button>
           <Button
+            aria-label="Underline"
             disabled={disabled}
             size="small"
             variant={
               isMarkActive(editorState, underlineMark) ? 'filled' : 'ghost'
             }
+            sentiment="neutral"
             onMouseDown={event => {
               event.preventDefault()
               if (underlineMark) {
@@ -112,9 +118,11 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
       {showList ? (
         <Stack alignItems="center" direction="row" gap={1}>
           <Button
+            aria-label="Bullet List"
             disabled={disabled || isInOrderedList}
             size="small"
             variant={isInBulletList ? 'filled' : 'ghost'}
+            sentiment="neutral"
             onMouseDown={event => {
               event.preventDefault()
               runCommand(
@@ -127,9 +135,11 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
             <ListBulletIcon />
           </Button>
           <Button
+            aria-label="Ordered List"
             disabled={disabled || isInBulletList}
             size="small"
             variant={isInOrderedList ? 'filled' : 'ghost'}
+            sentiment="neutral"
             onMouseDown={event => {
               event.preventDefault()
               runCommand(
