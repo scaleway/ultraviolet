@@ -97,7 +97,7 @@ export const Alert = ({
             className={size === 'small' ? alertStyle.smallIcon : ''}
             prominence={sentiment === 'neutral' ? 'strong' : undefined}
             sentiment={sentiment}
-            size={size === 'small' ? 'small' : 'large'}
+            size={size === 'small' ? 'small' : 'medium'}
           />
           <Stack
             alignItems="center"
@@ -147,11 +147,11 @@ export const Alert = ({
             setOpened(false)
             onClose?.()
           }}
-          sentiment="neutral"
-          size="small"
+          sentiment={sentiment}
+          size="xsmall"
           variant="ghost"
         >
-          <CloseIcon />
+          <CloseIcon sentiment="neutral" />
         </Button>
       ) : null}
     </Stack>
