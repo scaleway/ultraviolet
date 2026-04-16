@@ -56,4 +56,22 @@ describe('copyButton', () => {
     expect(onCopy).toHaveBeenCalledOnce()
     expect(writeTextSpy).toHaveBeenCalledWith('test')
   })
+
+  it('should update clipboard text when value prop changes', async () => {
+    const writeTextSpy = vi.fn().mockResolvedValue(undefined)
+    navigator.clipboard.writeText = writeTextSpy
+
+    const { rerender } = renderWithTheme(<CopyButton value="initial text" />)
+
+    const copyButton = screen.getByRole('button')
+    await userEvent.click(copyButton)
+
+    expect(writeTextSpy).toHaveBeenCalledWith('initial text')
+
+    rerender(<CopyButton value="updated text" />)
+
+    const copyButtonRerendered = screen.getByRole('button')
+    await userEvent.click(copyButtonRerendered)
+    expect(writeTextSpy).toHaveBeenCalledWith('updated text')
+  })
 })
