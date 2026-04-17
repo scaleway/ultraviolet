@@ -43,6 +43,7 @@ const main = defineMain({
       compilerOptions: {
         esModuleInterop: true,
       },
+      shouldRemoveUndefinedFromOptional: true,
     },
   },
 })
