@@ -19,4 +19,5 @@ Required.args = {
   label: 'This CodeEditor is required',
   name: 'required-code-editor',
   required: true,
+  extensions: 'js',
 }
