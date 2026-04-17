@@ -94,7 +94,7 @@ export const Alert = ({
         >
           <Icon
             aria-hidden="true"
-            className={size === 'small' ? alertStyle.smallIcon : ''}
+            className={alertStyle.icon}
             prominence={sentiment === 'neutral' ? 'strong' : undefined}
             sentiment={sentiment}
             size={size === 'small' ? 'small' : 'medium'}
