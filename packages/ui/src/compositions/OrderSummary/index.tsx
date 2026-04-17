@@ -46,13 +46,12 @@ export const OrderSummary = ({
   style,
   priceInformation,
   calculatorIcon = false,
-  variant = 'default',
+  compact = false,
   backgroundProminence = 'default',
 }: OrderSummaryProps) => {
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
 
-  const compact = variant === 'compact'
   const categoriesPrice = useMemo(
     () =>
       computeCategoriesPrice(
@@ -137,7 +136,9 @@ export const OrderSummary = ({
       <Stack
         className={cn(
           className,
-          orderSummaryStyle.container({ backgroundProminence }),
+          orderSummaryStyle.container({
+            backgroundProminence: compact ? backgroundProminence : 'default',
+          }),
         )}
         data-testid={dataTestId}
         justifyContent={hideDetails ? 'flex-start' : 'space-between'}

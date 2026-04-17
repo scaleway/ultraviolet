@@ -35,6 +35,9 @@ export type EstimateCostProps = {
    * When set to true, only the estimated final cost is displayed
    */
   compact?: boolean
+  /**
+   * This prop is only usable when `variant = "compact"`
+   */
   backgroundProminence?: 'strong' | 'default'
   /**
    * By default, a description exists but if you need you can customize it with this prop.

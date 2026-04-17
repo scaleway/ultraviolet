@@ -288,8 +288,8 @@ describe('orderSummary', () => {
       <OrderSummary
         header="summary"
         items={[categoryAZ]}
-        variant="compact"
-        backgroundProminence="default"
+        compact
+        backgroundProminence="strong"
         calculatorIcon
       />,
     ))
@@ -299,7 +299,7 @@ describe('orderSummary', () => {
       <OrderSummary
         header="summary"
         items={[categoryAZ]}
-        variant="compact"
+        compact
         backgroundProminence="default"
         calculatorIcon
       />,
@@ -310,7 +310,7 @@ describe('orderSummary', () => {
       <OrderSummary
         header="summary"
         items={[categoryAZ]}
-        variant="compact"
+        compact
         backgroundProminence="default"
         calculatorIcon
         totalPriceInfo="Info"

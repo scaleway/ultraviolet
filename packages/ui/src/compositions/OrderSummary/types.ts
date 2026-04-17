@@ -23,6 +23,23 @@ type PeriodProps =
       unitUnitInput?: TimeUnit
       onChangeUnitInput?: (unit: string, amount: number) => void
     }
+
+type CompactProps =
+  | {
+      compact: true
+      /**
+       * This prop is only usable when `variant = "compact"`
+       */
+      backgroundProminence?: 'strong' | 'default'
+    }
+  | {
+      compact?: false
+      /**
+       * This prop is only usable when `variant = "compact"`
+       */
+      backgroundProminence?: never
+    }
+
 type NumberInputType = {
   /**
    * Display a number input instead of the price
@@ -134,14 +151,10 @@ export type OrderSummaryProps = {
     unitaryCategoriesPrice: PriceType,
     unitaryTotalPrice: PriceTypeSingle,
   ) => void
-  /**
-   * When compact, only the total price is displayed
-   */
-  variant?: 'compact' | 'default'
-  backgroundProminence?: 'strong' | 'default'
   hideDetails?: boolean
   calculatorIcon?: boolean
   className?: string
   ['data-testid']?: string
   style?: CSSProperties
-} & PeriodProps
+} & PeriodProps &
+  CompactProps
