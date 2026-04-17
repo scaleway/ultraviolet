@@ -133,6 +133,32 @@ describe('fileInput', () => {
 
   test('renders correctly onChange', async () => {
     const onChange = vi.fn()
+    const onDelete = vi.fn()
+
+    const { asFragment } = renderWithTheme(
+      <FileInput
+        aria-label="label"
+        defaultFiles={defaultFile}
+        multiple
+        onChange={onChange}
+      >
+        <FileInput.List onDelete={onDelete} />
+      </FileInput>,
+    )
+
+    const soundMp3File = screen.getByTestId('sound.mp3')
+    const closeButton = screen.getByTestId('remove-sound.mp3')
+
+    expect(soundMp3File).toBeInTheDocument()
+    await userEvent.click(closeButton)
+    expect(soundMp3File).not.toBeInTheDocument()
+    expect(onDelete).toHaveBeenCalledOnce()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly onChangeFiles', async () => {
+    const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -150,6 +176,7 @@ describe('fileInput', () => {
     expect(soundMp3File).toBeInTheDocument()
     await userEvent.click(closeButton)
     expect(soundMp3File).not.toBeInTheDocument()
+    expect(onChange).toHaveBeenCalled()
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -183,6 +210,7 @@ describe('fileInput', () => {
 
   test('renders correctly with FileInput.Button', () => {
     const onChange = vi.fn()
+
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -256,6 +284,30 @@ describe('fileInput', () => {
     const dragContainer = screen.getByTestId('drag-container')
     fireEvent.dragOver(dragContainer)
     fireEvent.drop(dragContainer)
+    expect(defaultcontent).toBeVisible()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly when drag and drop disabled', () => {
+    const onChange = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <FileInput
+        aria-label="label"
+        defaultFiles={defaultFile}
+        multiple
+        onChangeFiles={onChange}
+        title="dragging"
+        variant="overlay"
+        disabledDragndrop
+      >
+        <FileInput.List />
+        nodrag
+      </FileInput>,
+    )
+
+    const defaultcontent = screen.getByText('nodrag')
+    fireEvent.dragOver(defaultcontent)
     expect(defaultcontent).toBeVisible()
 
     expect(asFragment()).toMatchSnapshot()

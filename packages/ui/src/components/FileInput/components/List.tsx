@@ -76,6 +76,7 @@ export const ListFiles = ({
   limit,
   textLimit,
   prominence = 'default',
+  onDelete,
 }: ListProps) => {
   const [computedLimit, setLimit] = useState(limit)
   const seeAllOnClick = () => {
@@ -133,6 +134,7 @@ export const ListFiles = ({
                     )
                     setFiles(newFiles)
                     onChangeFiles?.(newFiles)
+                    onDelete?.(file.fileName)
                   }}
                   sentiment={sentiment}
                   size="xsmall"

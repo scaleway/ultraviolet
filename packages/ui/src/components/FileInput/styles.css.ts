@@ -4,8 +4,18 @@ import { recipe } from '@vanilla-extract/recipes'
 
 const dropzone = recipe({
   base: {
+    fontFamily: theme.typography.body.fontFamily,
+    fontSize: theme.typography.body.fontSize,
+    fontWeight: theme.typography.body.fontWeight,
+    lineHeight: theme.typography.body.lineHeight,
+    background: 'none',
+    color: theme.colors.neutral.text,
     border: `1px dashed ${theme.colors.neutral.borderStrong}`,
     textAlign: 'center',
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   compoundVariants: [
     {
@@ -14,6 +24,17 @@ const dropzone = recipe({
         cursor: 'copy',
       },
       variants: { disabled: false, state: 'over' },
+    },
+    {
+      style: {
+        selectors: {
+          '&:hover': {
+            cursor: 'pointer',
+            border: `1px solid ${theme.colors.neutral.borderStrong}`,
+          },
+        },
+      },
+      variants: { disabled: false, size: 'small' },
     },
   ],
   defaultVariants: {
@@ -26,14 +47,19 @@ const dropzone = recipe({
       true: {
         background: theme.colors.neutral.backgroundDisabled,
         cursor: 'not-allowed',
+        color: theme.colors.neutral.textDisabled,
       },
     },
     size: {
       medium: {
         padding: theme.space[5],
+        flexDirection: 'column',
+        gap: theme.space[2],
       },
       small: {
         padding: theme.space[2],
+        flexDirection: 'row',
+        gap: theme.space[1],
       },
     },
     state: {
