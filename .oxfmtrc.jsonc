@@ -14,10 +14,10 @@
   "sortImports": {
     "order": "asc",
     "groups": ["builtin", "internal", "external", "parent", "sibling", "type"],
-    "newlinesBetween": true
+    "newlinesBetween": true,
   },
   "sortPackageJson": {
-    "sortScripts": true
+    "sortScripts": true,
   },
   "ignorePatterns": [
     "CHANGELOG.md",
@@ -41,6 +41,6 @@
     "**/graphql-types.*",
     "**/schema.d.ts",
     "**/schema.graphql.d.ts",
-    "**/*.d.ts.map"
-  ]
+    "**/*.d.ts.map",
+  ],
 }

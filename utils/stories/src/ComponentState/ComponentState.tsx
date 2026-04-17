@@ -1,5 +1,3 @@
-// oxlint-disable import/no-namespace
-//
 import { linkTo } from '@storybook/addon-links'
 import { Button, Stack, Table, Text } from '@ultraviolet/ui'
 import { useEffect, useState } from 'react'
