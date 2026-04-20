@@ -1,0 +1,89 @@
+Summary: Template de PR avec checklist A11y
+Issue Type: Improvement
+Priority: Low
+Labels: a11y, ci-cd, github, workflow
+
+Description:
+Ajouter une section accessibility dans le template de pull request pour garantir la review a11y systématique.
+
+Contexte:
+- .github/pull_request_template.md existe
+- Pas de section dedicated à l'accessibilité
+- Risque d'oublier les tests a11y avant merge
+
+Tâches:
+[ ] Modifier .github/pull_request_template.md
+[ ] Ajouter section "Accessibility" avec checklist
+[ ] Lier vers la documentation a11y
+[ ] Auto-assign reviewer a11y si besoin
+[ ] Ajouter un label "needs-a11y-review"
+[ ] Configurer GitHub Action pour commenter les PRs
+
+Template à modifier:
+```markdown
+## Accessibility Checklist
+
+### Required for all PRs
+- [ ] Keyboard navigation tested (Tab, Enter, Space, Esc)
+- [ ] Focus states visible and clear
+- [ ] Screen reader tested (NVDA/VoiceOver)
+- [ ] Color contrast verified (4.5:1 minimum)
+- [ ] ARIA attributes correct and necessary
+- [ ] axe-core tests pass (unit/e2e)
+
+### If creating new component
+- [ ] Accessibility documentation added
+- [ ] A11y stories added to Storybook
+- [ ] Manual testing completed
+- [ ] Accessibility reviewer assigned
+
+### Resources
+- [Accessibility Guidelines](docs/accessibility/README.md)
+- [Testing Checklist](docs/accessibility/checklist.md)
+- [ARIA Quick Reference](docs/accessibility/examples.md)
+
+### Notes
+<!-- Add any accessibility-related notes or known issues -->
+```
+
+GitHub Action à créer (.github/workflows/a11y-review.yml):
+```yaml
+name: A11y Review Assignment
+on:
+  pull_request:
+    types: [opened, labeled]
+
+jobs:
+  assign-a11y-reviewer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            if (context.payload.pull_request.labels.some(l => l.name === 'needs-a11y-review')) {
+              github.rest.issues.addAssignees({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                assignees: ['a11y-team-member']
+              })
+            }
+```
+
+Labels à créer:
+- needs-a11y-review (orange)
+- a11y-approved (green)
+- a11y-issues (red)
+
+Critères d'acceptation:
+- [ ] Template PR mis à jour
+- [ ] Checklist a11y visible
+- [ ] Liens vers docs fonctionnels
+- [ ] Labels GitHub créés
+- [ ] GitHub Action fonctionnelle (optionnel)
+- [ ] Testé sur une PR
+
+Estimation: 4h
+Assignee: Unassigned
+Reporter: A11y Audit Team
+Dependencies: UV-013

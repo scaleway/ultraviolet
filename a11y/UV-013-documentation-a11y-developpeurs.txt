@@ -1,0 +1,110 @@
+Summary: Documentation A11y pour les développeurs
+Issue Type: Documentation
+Priority: Medium
+Labels: a11y, docs, guidelines, onboarding
+
+Description:
+Créer un guide complet d'accessibilité pour les développeurs de la Design System.
+
+Contexte:
+- CONTRIBUTING.md existe mais pas de section a11y détaillée
+- Besoin d'un guide de référence pour les devs
+- Standardisation des pratiques a11y
+
+Tâches:
+[ ] Guide des bonnes pratiques a11y
+[ ] Checklist avant merge d'un composant
+[ ] Exemples de code accessible
+[ ] Ressources et références
+[ ] Glossaire des termes ARIA
+[ ] FAQ et troubleshooting
+
+Structure du guide:
+```markdown
+# Accessibility Guidelines
+
+## 1. Introduction
+- Why accessibility matters
+- WCAG 2.1 AA compliance
+- Legal requirements
+
+## 2. Core Principles (POUR)
+- Perceivable
+- Operable
+- Understandable
+- Robust
+
+## 3. Component Development
+### Keyboard Navigation
+- All interactive elements must be focusable
+- Focus must be visible
+- Logical focus order
+- Escape closes modals/menus
+
+### Screen Readers
+- Use semantic HTML
+- Add ARIA labels when needed
+- Announce dynamic changes
+
+### Visual Design
+- Color contrast ratios (4.5:1 minimum)
+- Don't rely on color alone
+- Focus indicators
+
+## 4. ARIA Quick Reference
+- role="button" vs <button>
+- aria-label vs aria-labelledby
+- aria-expanded for collapsibles
+- aria-live for dynamic content
+
+## 5. Testing Checklist
+- [ ] Keyboard navigation tested
+- [ ] Screen reader tested
+- [ ] Color contrast checked
+- [ ] axe-core tests pass
+- [ ] Manual testing completed
+
+## 6. Code Examples
+### Good Button
+```tsx
+<button
+  onClick={handleClick}
+  aria-label={iconOnly ? 'Close' : undefined}
+  aria-describedby={error ? errorId : undefined}
+>
+  {children}
+</button>
+```
+
+### Bad Button
+```tsx
+<div onClick={handleClick}>
+  {children}
+</div>
+```
+
+## 7. Resources
+- WCAG 2.1 Guidelines
+- ARIA Authoring Practices
+- WebAIM Contrast Checker
+- axe DevTools Extension
+```
+
+Fichiers à créer:
+- docs/accessibility/README.md (main guide)
+- docs/accessibility/checklist.md
+- docs/accessibility/examples.md
+- docs/accessibility/resources.md
+
+Critères d'acceptation:
+- [ ] Guide principal complet
+- [ ] Checklist téléchargeable
+- [ ] Exemples de code pour chaque composant majeur
+- [ ] Liens vers ressources externes
+- [ ] Review par équipe
+- [ ] Intégré dans onboarding devs
+
+Estimation: 12h
+Assignee: Unassigned
+Reporter: A11y Audit Team
+Dependencies: UV-005, UV-006
