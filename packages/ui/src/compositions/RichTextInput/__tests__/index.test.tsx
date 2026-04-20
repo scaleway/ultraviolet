@@ -3,19 +3,19 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 
-import { RichTextEditor } from '..'
+import { RichTextInput } from '..'
 
-describe('richTextEditor', () => {
+describe('richTextInput', () => {
   test('should render correctly with basic props', () =>
     shouldMatchSnapshot(
-      <RichTextEditor aria-label="Test" onChange={() => {}} value="test" />,
+      <RichTextInput aria-label="Test" onChange={() => {}} value="test" />,
     ))
 
   test('should render the value', () => {
     const onChange = vi.fn()
 
     renderWithTheme(
-      <RichTextEditor aria-label="Test" onChange={onChange} value="test" />,
+      <RichTextInput aria-label="Test" onChange={onChange} value="test" />,
     )
 
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
@@ -26,7 +26,7 @@ describe('richTextEditor', () => {
     const onChange = vi.fn()
 
     renderWithTheme(
-      <RichTextEditor aria-label="Test" onChange={onChange} value="test" />,
+      <RichTextInput aria-label="Test" onChange={onChange} value="test" />,
     )
 
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
@@ -35,14 +35,14 @@ describe('richTextEditor', () => {
 
     expect(onChange).toHaveBeenCalled()
     const lastHtml = onChange.mock.calls.at(-1)?.[0]
-    expect(lastHtml).toContain('a')
+    expect(lastHtml).toBe('<p>testa</p>')
   })
 
   test('should return empty string when cleared', async () => {
     const onChange = vi.fn()
 
     renderWithTheme(
-      <RichTextEditor aria-label="Test" onChange={onChange} value="test" />,
+      <RichTextInput aria-label="Test" onChange={onChange} value="test" />,
     )
 
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
@@ -57,7 +57,7 @@ describe('richTextEditor', () => {
     const onChange = vi.fn()
 
     renderWithTheme(
-      <RichTextEditor aria-label="Test" onChange={onChange} value="" />,
+      <RichTextInput aria-label="Test" onChange={onChange} value="" />,
     )
 
     const italicButton = screen.getByRole('button', { name: 'Italic' })
@@ -69,16 +69,14 @@ describe('richTextEditor', () => {
 
     expect(onChange).toHaveBeenCalled()
     const lastHtml = onChange.mock.calls.at(-1)?.[0]
-    expect(lastHtml).toContain('<em>')
-    expect(lastHtml).toContain('</em>')
-    expect(lastHtml).toContain('hello')
+    expect(lastHtml).toBe('<p><em>hello</em></p>')
   })
 
   test('should apply bullet list formatting', async () => {
     const onChange = vi.fn()
 
     renderWithTheme(
-      <RichTextEditor aria-label="Test" onChange={onChange} value="" />,
+      <RichTextInput aria-label="Test" onChange={onChange} value="" />,
     )
 
     const bulletListButton = screen.getByRole('button', { name: 'Bullet List' })
@@ -90,18 +88,14 @@ describe('richTextEditor', () => {
 
     expect(onChange).toHaveBeenCalled()
     const lastHtml = onChange.mock.calls.at(-1)?.[0]
-    expect(lastHtml).toContain('<ul>')
-    expect(lastHtml).toContain('</ul>')
-    expect(lastHtml).toContain('<li>')
-    expect(lastHtml).toContain('</li>')
-    expect(lastHtml).toContain('item')
+    expect(lastHtml).toBe('<ul><li><p>item</p></li></ul>')
   })
 
   test('should not be editable when disabled', async () => {
     const onChange = vi.fn()
 
     renderWithTheme(
-      <RichTextEditor
+      <RichTextInput
         aria-label="Test"
         disabled
         onChange={onChange}
@@ -120,7 +114,7 @@ describe('richTextEditor', () => {
     const successMessage = 'success message'
 
     renderWithTheme(
-      <RichTextEditor
+      <RichTextInput
         id="id-test"
         label="Test"
         onChange={onChange}
@@ -139,7 +133,7 @@ describe('richTextEditor', () => {
     const errorMessage = 'error!'
 
     renderWithTheme(
-      <RichTextEditor
+      <RichTextInput
         id="id-test"
         label="Test"
         onChange={onChange}
@@ -158,7 +152,7 @@ describe('richTextEditor', () => {
     const helperMessage = 'helper'
 
     renderWithTheme(
-      <RichTextEditor
+      <RichTextInput
         id="id-test"
         helper={helperMessage}
         label="Test"
@@ -178,7 +172,7 @@ describe('richTextEditor', () => {
     const helperMessage = 'helper'
 
     renderWithTheme(
-      <RichTextEditor
+      <RichTextInput
         helper={helperMessage}
         label="Test"
         onChange={onChange}
@@ -197,7 +191,7 @@ describe('richTextEditor', () => {
     const helperMessage = 'helper'
 
     renderWithTheme(
-      <RichTextEditor
+      <RichTextInput
         id="id-test"
         helper={helperMessage}
         label="Test"

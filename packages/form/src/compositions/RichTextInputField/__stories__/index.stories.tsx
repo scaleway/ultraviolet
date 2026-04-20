@@ -1,6 +1,6 @@
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
 
-import { RichTextEditorField } from '..'
+import { RichTextInputField } from '..'
 import { useForm } from '../../..'
 import { Form } from '../../../components'
 import { mockErrors } from '../../../mocks'
@@ -8,7 +8,7 @@ import { mockErrors } from '../../../mocks'
 import type { Meta } from '@storybook/react-vite'
 
 export default {
-  component: RichTextEditorField,
+  component: RichTextInputField,
   decorators: [
     ChildStory => {
       const methods = useForm()
@@ -67,7 +67,7 @@ export default {
       )
     },
   ],
-  title: 'Form/Components/Compositions/RichTextEditorField',
+  title: 'Form/Components/Compositions/RichTextInputField',
 } as Meta
 
 export { Playground } from './Playground.stories'
