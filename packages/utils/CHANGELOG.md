@@ -1,5 +1,26 @@
 # @ultraviolet/utils
 
+## 1.0.10
+
+### Patch Changes
+
+- [#6342](https://github.com/scaleway/ultraviolet/pull/6342) [`4be825f`](https://github.com/scaleway/ultraviolet/commit/4be825f6a6d8b61ea649b50d77421d2cadf18c45) Thanks [@lisalupi](https://github.com/lisalupi)! - `useClipboard`: fix hook not reacting to prop updates. Clipboard operations now always use the latest values of `text` and `options`
+
+- [#6329](https://github.com/scaleway/ultraviolet/pull/6329) [`17c8f2e`](https://github.com/scaleway/ultraviolet/commit/17c8f2e5b5db6c3f4166433bd2c646d8bd4fffff) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vitest` to `4.1.4`.
+  Updated dependency `@vitest/coverage-istanbul` to `4.1.4`.
+  Updated dependency `@vitest/coverage-v8` to `4.1.4`.
+  Updated dependency `@vitest/ui` to `4.1.4`.
+
+- [#6325](https://github.com/scaleway/ultraviolet/pull/6325) [`f6656ba`](https://github.com/scaleway/ultraviolet/commit/f6656ba46a5b8cf2fc4f3c3c7fec6f041553799a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.2.5`.
+  Updated dependency `react-dom` to `19.2.5`.
+
+- [#6324](https://github.com/scaleway/ultraviolet/pull/6324) [`5faa8c2`](https://github.com/scaleway/ultraviolet/commit/5faa8c2e49771aa8c609b90c18312d8e7659d57f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.8`.
+
+- [#6298](https://github.com/scaleway/ultraviolet/pull/6298) [`661a29e`](https://github.com/scaleway/ultraviolet/commit/661a29e439ccc5331b014bb9b2b45c6022b0a956) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@vitest/coverage-istanbul` to `4.1.3`.
+  Updated dependency `@vitest/coverage-v8` to `4.1.3`.
+  Updated dependency `@vitest/ui` to `4.1.3`.
+  Updated dependency `vitest` to `4.1.3`.
+
 ## 1.0.9
 
 ### Patch Changes

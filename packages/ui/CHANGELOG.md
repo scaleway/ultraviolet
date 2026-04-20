@@ -1,5 +1,48 @@
 # Change Log
 
+## 3.14.0
+
+### Minor Changes
+
+- [#6337](https://github.com/scaleway/ultraviolet/pull/6337) [`e4ae00d`](https://github.com/scaleway/ultraviolet/commit/e4ae00dee07a0611b8b974065cc6c3ab1388516c) Thanks [@lisalupi](https://github.com/lisalupi)! - `FileInput`: various improvements to component:
+  - new prop `validator` for custom errors
+  - add default `onChange` for un formatted events
+  - new prop `disabledDragndrop` to disabled drag and drop behavior
+  - update prop `onDrop` to return `acceptedFiles` and `errorFiles`
+  - new props `onKeyDown`, `onKeyUp`, `onFocus`, `onBlur` and `name`.
+  - new prop `onDelete` for `FileInput.List`
+  - When `type = "dropzone"` and `size="small"`, the component is now a button and clicking anywere on it opens the file selector (previously, only clicking on the label opened the file selector)
+  - Fix style issues
+
+### Patch Changes
+
+- [#6313](https://github.com/scaleway/ultraviolet/pull/6313) [`1d62b49`](https://github.com/scaleway/ultraviolet/commit/1d62b49e8808dcc26683ee53a7e6a9b8cdba1441) Thanks [@lisalupi](https://github.com/lisalupi)! - `Text`: add `min-width` to the popup container when `oneLine` is enabled to ensure the ellipsis works properly
+
+- [#6340](https://github.com/scaleway/ultraviolet/pull/6340) [`8bca898`](https://github.com/scaleway/ultraviolet/commit/8bca89859b87f07108d29a7b54b7d15f5800135f) Thanks [@lisalupi](https://github.com/lisalupi)! - `Alert`: fix padding, icons size, icons type (oultine -> filled) and close button (size and sentiment)
+
+- [#6317](https://github.com/scaleway/ultraviolet/pull/6317) [`27f89d7`](https://github.com/scaleway/ultraviolet/commit/27f89d7d434c0ca3e16b36b00e955980edac154b) Thanks [@lisalupi](https://github.com/lisalupi)! - `Drawer`: fix `hideOnClickOutside` behavior: set to `true` by default (similar to `Modal`) for default drawers and to `false` for _push_ drawers. Small fix to allow interactivity outside of _push_ drawers (previously, only content of the push drawer was interactive).
+
+- [#6346](https://github.com/scaleway/ultraviolet/pull/6346) [`59c601c`](https://github.com/scaleway/ultraviolet/commit/59c601c75c2b5b571a40bfa55df5fa51274b790b) Thanks [@lisalupi](https://github.com/lisalupi)! - Remove unused dependencies
+
+- [#6316](https://github.com/scaleway/ultraviolet/pull/6316) [`6ba736b`](https://github.com/scaleway/ultraviolet/commit/6ba736b54cf84b993f751651bacf366930009978) Thanks [@lisalupi](https://github.com/lisalupi)! - `Tag`: add a max width to ensure correct overflow
+
+- [#6338](https://github.com/scaleway/ultraviolet/pull/6338) [`bf1ca25`](https://github.com/scaleway/ultraviolet/commit/bf1ca25e60ec5f0f66048bee7f305bedf817c81f) Thanks [@lisalupi](https://github.com/lisalupi)! - `EmptyState`: small refactor to avoid empty divs
+
+- [#6314](https://github.com/scaleway/ultraviolet/pull/6314) [`9cfb3e9`](https://github.com/scaleway/ultraviolet/commit/9cfb3e96a6bc786708056cfb6723581139295540) Thanks [@lisalupi](https://github.com/lisalupi)! - `BarChart`: fix legend placement (firefox)
+
+- [#6325](https://github.com/scaleway/ultraviolet/pull/6325) [`f6656ba`](https://github.com/scaleway/ultraviolet/commit/f6656ba46a5b8cf2fc4f3c3c7fec6f041553799a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.2.5`.
+  Updated dependency `react-dom` to `19.2.5`.
+
+- [#6324](https://github.com/scaleway/ultraviolet/pull/6324) [`5faa8c2`](https://github.com/scaleway/ultraviolet/commit/5faa8c2e49771aa8c609b90c18312d8e7659d57f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.8`.
+
+- [#6288](https://github.com/scaleway/ultraviolet/pull/6288) [`7382e79`](https://github.com/scaleway/ultraviolet/commit/7382e79418f0205bbe37c637d9e1487e00692494) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.25.9`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.25.9`.
+  Updated dependency `@uiw/react-codemirror` to `4.25.9`.
+- Updated dependencies [[`4be825f`](https://github.com/scaleway/ultraviolet/commit/4be825f6a6d8b61ea649b50d77421d2cadf18c45), [`17c8f2e`](https://github.com/scaleway/ultraviolet/commit/17c8f2e5b5db6c3f4166433bd2c646d8bd4fffff), [`f6656ba`](https://github.com/scaleway/ultraviolet/commit/f6656ba46a5b8cf2fc4f3c3c7fec6f041553799a), [`5faa8c2`](https://github.com/scaleway/ultraviolet/commit/5faa8c2e49771aa8c609b90c18312d8e7659d57f), [`661a29e`](https://github.com/scaleway/ultraviolet/commit/661a29e439ccc5331b014bb9b2b45c6022b0a956), [`1e4cc20`](https://github.com/scaleway/ultraviolet/commit/1e4cc208ea3605a249d7cc85cb7b242ca844aa0c)]:
+  - @ultraviolet/utils@1.0.10
+  - @ultraviolet/icons@5.3.2
+  - @ultraviolet/themes@3.1.5
+
 ## 3.13.1
 
 ### Patch Changes

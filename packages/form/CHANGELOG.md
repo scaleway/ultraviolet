@@ -1,5 +1,55 @@
 # Change Log
 
+## 6.3.0
+
+### Minor Changes
+
+- [#6241](https://github.com/scaleway/ultraviolet/pull/6241) [`fa4a28f`](https://github.com/scaleway/ultraviolet/commit/fa4a28f296a97518c1ca9e5bb4674ee9017c3c68) Thanks [@lisalupi](https://github.com/lisalupi)! - Form element can have a `errorLabel` (string) to use as a custom value to display (instead of the label) when an error is displayed (empty required element, min/max value not respected, etc.).
+
+  For instance, this component:
+
+  ```js
+  <NumberInputField
+    label="Choose number of elements"
+    errorLabel="Amount"
+    value={20}
+    max={10}
+  />
+  ```
+
+  Used with this error:
+
+  ```js
+  import type { FormErrors } from '@ultraviolet/form'
+  import { NumberInputField } from '@ultraviolet/form'
+
+  const errors: FormErrors = {
+     ...
+     isInteger: ...
+     max: ({ max, label }) => `${label} must be less than ${max}$`,
+     min: ...
+     ...
+  }
+  ```
+
+  The displayed `max` error message is `Amount must be less than 10` instead of `Choose number of elements must be less than 10`.
+
+  It allows custom error labels with a fallback on the `label` if `errorLabel` is not defined — this can be useful when creating a default `useError`.
+
+### Patch Changes
+
+- [#6325](https://github.com/scaleway/ultraviolet/pull/6325) [`f6656ba`](https://github.com/scaleway/ultraviolet/commit/f6656ba46a5b8cf2fc4f3c3c7fec6f041553799a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.2.5`.
+  Updated dependency `react-dom` to `19.2.5`.
+
+- [#6311](https://github.com/scaleway/ultraviolet/pull/6311) [`282df87`](https://github.com/scaleway/ultraviolet/commit/282df8713c9e9ac7b95a6eed66409edcbc51e166) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.72.1`.
+
+- [#6324](https://github.com/scaleway/ultraviolet/pull/6324) [`5faa8c2`](https://github.com/scaleway/ultraviolet/commit/5faa8c2e49771aa8c609b90c18312d8e7659d57f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.8`.
+
+- Updated dependencies [[`1d62b49`](https://github.com/scaleway/ultraviolet/commit/1d62b49e8808dcc26683ee53a7e6a9b8cdba1441), [`8bca898`](https://github.com/scaleway/ultraviolet/commit/8bca89859b87f07108d29a7b54b7d15f5800135f), [`27f89d7`](https://github.com/scaleway/ultraviolet/commit/27f89d7d434c0ca3e16b36b00e955980edac154b), [`59c601c`](https://github.com/scaleway/ultraviolet/commit/59c601c75c2b5b571a40bfa55df5fa51274b790b), [`6ba736b`](https://github.com/scaleway/ultraviolet/commit/6ba736b54cf84b993f751651bacf366930009978), [`bf1ca25`](https://github.com/scaleway/ultraviolet/commit/bf1ca25e60ec5f0f66048bee7f305bedf817c81f), [`9cfb3e9`](https://github.com/scaleway/ultraviolet/commit/9cfb3e96a6bc786708056cfb6723581139295540), [`f6656ba`](https://github.com/scaleway/ultraviolet/commit/f6656ba46a5b8cf2fc4f3c3c7fec6f041553799a), [`5faa8c2`](https://github.com/scaleway/ultraviolet/commit/5faa8c2e49771aa8c609b90c18312d8e7659d57f), [`7382e79`](https://github.com/scaleway/ultraviolet/commit/7382e79418f0205bbe37c637d9e1487e00692494), [`1e4cc20`](https://github.com/scaleway/ultraviolet/commit/1e4cc208ea3605a249d7cc85cb7b242ca844aa0c), [`e4ae00d`](https://github.com/scaleway/ultraviolet/commit/e4ae00dee07a0611b8b974065cc6c3ab1388516c)]:
+  - @ultraviolet/ui@3.14.0
+  - @ultraviolet/icons@5.3.2
+  - @ultraviolet/themes@3.1.5
+
 ## 6.2.7
 
 ### Patch Changes

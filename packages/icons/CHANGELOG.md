@@ -1,5 +1,21 @@
 # Change Log
 
+## 5.3.2
+
+### Patch Changes
+
+- [#6325](https://github.com/scaleway/ultraviolet/pull/6325) [`f6656ba`](https://github.com/scaleway/ultraviolet/commit/f6656ba46a5b8cf2fc4f3c3c7fec6f041553799a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.2.5`.
+  Updated dependency `react-dom` to `19.2.5`.
+
+- [#6324](https://github.com/scaleway/ultraviolet/pull/6324) [`5faa8c2`](https://github.com/scaleway/ultraviolet/commit/5faa8c2e49771aa8c609b90c18312d8e7659d57f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.8`.
+
+- [#6279](https://github.com/scaleway/ultraviolet/pull/6279) [`1e4cc20`](https://github.com/scaleway/ultraviolet/commit/1e4cc208ea3605a249d7cc85cb7b242ca844aa0c) Thanks [@lisalupi](https://github.com/lisalupi)! - New icons:
+  - Product icon: `ForkProductIcon`, `SwitchProductIcon` and `TrycatchProductIcon`
+  - Icon: `CursorOutlineIcon`, `HandOutlineIcon`, `TicketOutlineIcon`, `CursorIcon`, `HandIcon` and `TicketIcon`
+- Updated dependencies [[`4be825f`](https://github.com/scaleway/ultraviolet/commit/4be825f6a6d8b61ea649b50d77421d2cadf18c45), [`17c8f2e`](https://github.com/scaleway/ultraviolet/commit/17c8f2e5b5db6c3f4166433bd2c646d8bd4fffff), [`f6656ba`](https://github.com/scaleway/ultraviolet/commit/f6656ba46a5b8cf2fc4f3c3c7fec6f041553799a), [`5faa8c2`](https://github.com/scaleway/ultraviolet/commit/5faa8c2e49771aa8c609b90c18312d8e7659d57f), [`661a29e`](https://github.com/scaleway/ultraviolet/commit/661a29e439ccc5331b014bb9b2b45c6022b0a956)]:
+  - @ultraviolet/utils@1.0.10
+  - @ultraviolet/themes@3.1.5
+
 ## 5.3.1
 
 ### Patch Changes
