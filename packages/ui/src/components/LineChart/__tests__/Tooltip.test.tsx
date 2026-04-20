@@ -3,7 +3,7 @@ import { describe, test } from 'vitest'
 
 import { LineChartTooltip } from '../Tooltip'
 
-import type { Point } from '@nivo/line'
+import type { LineSeries, Point } from '@nivo/line'
 
 describe('lineChart Tooltip', () => {
   test('renders correctly ', () =>
@@ -13,7 +13,7 @@ describe('lineChart Tooltip', () => {
           {
             data: { xFormatted: '05-05-2022', yFormatted: '15 kb' },
             serieColor: '#ff0000',
-          } as Point
+          } as unknown as Point<LineSeries>
         }
       />,
     ))
