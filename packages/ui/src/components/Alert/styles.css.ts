@@ -69,7 +69,7 @@ const buttonClose = style({
 
 export type AlertVariants = NonNullable<RecipeVariants<typeof alert>>
 
-const smallIcon = style({
+const icon = style({
   marginTop: theme.space['0.25'],
 })
 
@@ -79,5 +79,5 @@ export const alertStyle = {
   text,
   button,
   buttonClose,
-  smallIcon,
+  icon,
 }
