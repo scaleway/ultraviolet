@@ -11,7 +11,7 @@ Success.parameters = {
   docs: {
     description: {
       story:
-        'Mark `RichTextEditor` in an success state using `success` string property. Any helper will be replaced by provided success message',
+        'Mark `RichTextInput` in an success state using `success` string property. Any helper will be replaced by provided success message',
     },
   },
 }
