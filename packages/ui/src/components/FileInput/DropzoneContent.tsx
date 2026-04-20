@@ -27,14 +27,13 @@ export const DropzoneContent = ({
       size={isSmall ? 'small' : 'xlarge'}
     />
     <Text
-      as={isSmall ? 'label' : 'div'}
+      as={isSmall ? 'p' : 'div'}
       className={
         isSmall
           ? fileInputStyle.titleSmall[disabled ? 'disabled' : 'default']
           : undefined
       }
       disabled={disabled}
-      htmlFor={inputId}
       placement="left"
       sentiment="neutral"
       variant={isSmall ? 'bodySmallStrong' : 'headingSmallStrong'}

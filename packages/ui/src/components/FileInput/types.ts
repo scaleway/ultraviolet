@@ -1,4 +1,9 @@
-import type { CSSProperties, DragEvent, ReactNode, RefObject } from 'react'
+import type {
+  DragEvent,
+  InputHTMLAttributes,
+  ReactNode,
+  RefObject,
+} from 'react'
 
 type ChildrenType =
   | ReactNode
@@ -17,6 +22,7 @@ export type FilesType = {
   error?: string
 }
 
+export type ErrorType = { fileName?: string; error: string }
 /**
  * See https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types#types
  */
@@ -42,7 +48,7 @@ type OverlayVariantProps = {
   /** Size of the dropzone. When set to small, the component can be used inline */
   size?: never
   /** Main text to display in the dropzone */
-  title: ReactNode
+  title?: ReactNode
   children: ChildrenType
   bottom?: never
 }
@@ -59,22 +65,37 @@ export type DropzoneVariantProps = {
 }
 
 export type FileInputProps = {
-  style?: CSSProperties
   className?: string
   labelDescription?: ReactNode
   helper?: string
-  onDrop?: (event: DragEvent<HTMLDivElement>) => void
-  disabled?: boolean
+  onDrop?: (
+    event: DragEvent<HTMLElement>,
+    accetedFiles: File[],
+    errorFiles?: ErrorType[],
+  ) => void
   accept?: HTMLInputElement['accept']
   onChangeFiles?: (files: FilesType[]) => void
   defaultFiles?: FilesType[]
   /** When set to true, multiple files can be added */
   multiple?: boolean
   'data-testid'?: string
-  required?: boolean
   error?: boolean | string
+  disabledDragndrop?: boolean
+  onChange?: (files: FileList) => void
+  validator?: (file: File) => string
 } & (OverlayVariantProps | DropzoneVariantProps) &
-  LabelType
+  LabelType &
+  Pick<
+    InputHTMLAttributes<HTMLInputElement>,
+    | 'onFocus'
+    | 'onBlur'
+    | 'name'
+    | 'disabled'
+    | 'required'
+    | 'onKeyDown'
+    | 'onKeyUp'
+    | 'style'
+  >
 
 type LimitType =
   | { limit: number; textLimit: string }
@@ -82,4 +103,5 @@ type LimitType =
 
 export type ListProps = {
   prominence?: 'default' | 'strong'
+  onDelete?: (name: string) => void
 } & LimitType

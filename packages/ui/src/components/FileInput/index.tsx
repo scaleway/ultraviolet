@@ -20,7 +20,7 @@ import { FileInputContext } from './FileInputProvider'
 import { fileIsAccepted } from './helpers'
 import { fileInputStyle } from './styles.css'
 
-import type { FileInputProps } from './types'
+import type { ErrorType, FileInputProps } from './types'
 import type { ChangeEvent, DragEvent as DragEventReact } from 'react'
 
 /**
@@ -46,6 +46,14 @@ const FileInputBase = ({
   bottom,
   required,
   error,
+  onChange,
+  onFocus,
+  onBlur,
+  name,
+  onKeyDown,
+  onKeyUp,
+  disabledDragndrop = false,
+  validator,
   'data-testid': dataTestid,
 }: FileInputProps) => {
   const [dragState, setDragState] = useState<'over' | 'default' | 'page'>(
@@ -54,6 +62,7 @@ const FileInputBase = ({
   const [files, setFiles] = useState(defaultFiles ?? [])
 
   const inputId = useId()
+  const helperId = useId()
   const inputRef = useRef<HTMLInputElement>(null)
 
   const onDragOver = (event: DragEventReact) => {
@@ -62,7 +71,9 @@ const FileInputBase = ({
     setDragState('over')
   }
 
-  const onDragPage = () => setDragState('page')
+  const onDragPage = () => {
+    setDragState('page')
+  }
 
   const handleDrop = () => setDragState('default')
   const handleDragLeave = (event: DragEvent) => {
@@ -74,18 +85,19 @@ const FileInputBase = ({
   }
 
   useLayoutEffect(() => {
-    window.addEventListener('dragenter', onDragPage)
-    window.addEventListener('dragend', handleDragLeave)
-    window.addEventListener('drop', handleDrop)
-    window.addEventListener('dragleave', handleDragLeave)
-
+    if (!disabledDragndrop) {
+      window.addEventListener('dragenter', onDragPage)
+      window.addEventListener('dragend', handleDragLeave)
+      window.addEventListener('drop', handleDrop)
+      window.addEventListener('dragleave', handleDragLeave)
+    }
     return () => {
       window.removeEventListener('dragenter', onDragPage)
       window.removeEventListener('dragend', handleDragLeave)
       window.removeEventListener('drop', handleDrop)
       window.removeEventListener('dragleave', handleDragLeave)
     }
-  }, [])
+  }, [disabledDragndrop])
 
   useEffect(() => {
     if (defaultFiles) {
@@ -93,34 +105,56 @@ const FileInputBase = ({
     }
   }, [defaultFiles])
 
-  const addFiles = (addedFiles: FileList | null) => {
+  const addFiles = (addedFiles: FileList | null): [File[], ErrorType[]] => {
     const droppedFiles = [...(addedFiles ?? [])]
-    const acceptedDropped = droppedFiles.filter(file =>
-      fileIsAccepted(file.type, accept),
-    )
+    const newFiles: File[] = []
+    const errorFiles: ErrorType[] = []
 
-    const newFiles = acceptedDropped.map(file => ({
+    for (const file of droppedFiles) {
+      const isAccepted = fileIsAccepted(file.type, accept)
+      const customError = validator?.(file)
+
+      if (isAccepted && !customError) {
+        newFiles.push(file)
+      } else {
+        const acceptArray = accept?.split(',')
+        const defaultMessage = acceptArray
+          ? `File type must be ${acceptArray.length > 1 ? `one of ${acceptArray.join(', ')}` : acceptArray[0]}`
+          : 'Error'
+
+        errorFiles.push({
+          fileName: name,
+          error: customError ?? defaultMessage,
+        })
+      }
+    }
+
+    const formattedNewFiles = newFiles.map(file => ({
       file: URL.createObjectURL(file),
       fileName: file.name,
       lastModified: file.lastModified,
       size: file.size,
       type: file.type,
     }))
-    const formattedFiles = multiple ? [...files, ...newFiles] : [newFiles[0]]
+
+    const formattedFiles = multiple
+      ? [...files, ...formattedNewFiles]
+      : [formattedNewFiles[0]]
     setFiles(formattedFiles)
     onChangeFiles?.(formattedFiles)
-  }
 
-  const manageDrop = (event: DragEventReact<HTMLDivElement>) => {
-    event.preventDefault()
-
-    if (!disabled) {
-      addFiles(event.dataTransfer?.files)
-      onDrop?.(event)
+    if (addedFiles) {
+      onChange?.(addedFiles)
     }
+
+    if (inputRef.current) {
+      inputRef.current.value = ''
+    }
+
+    return [newFiles, errorFiles]
   }
 
-  const onChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const onChangeLocal = (event: ChangeEvent<HTMLInputElement>) => {
     event.preventDefault()
 
     if (!disabled) {
@@ -128,36 +162,52 @@ const FileInputBase = ({
     }
   }
 
-  const onDropComputed = (event: DragEventReact<HTMLDivElement>) => {
+  const onDropComputed = (event: DragEventReact<HTMLElement>) => {
+    event.preventDefault()
+
     if (!disabled) {
-      onDrop?.(event)
-      manageDrop(event)
+      const [acceptedFiles, errorFiles] = addFiles(event.dataTransfer?.files)
+      onDrop?.(event, acceptedFiles, errorFiles)
     }
   }
 
   const computedChildren =
     typeof children === 'function' ? children(inputId, inputRef) : children
 
-  const computedError =
-    error && typeof error === 'string' ? (
-      <Text as="p" sentiment="danger" variant="bodySmall">
-        {error}
+  const computedHelper =
+    helper || (error && typeof error === 'string') ? (
+      <Text
+        as="p"
+        sentiment={error ? 'danger' : 'neutral'}
+        variant="caption"
+        prominence={error ? 'default' : 'weak'}
+        id={helperId}
+      >
+        {error || helper}
       </Text>
     ) : null
 
   const input = (
     <input
       accept={accept}
+      aria-describedby={
+        helper || typeof error === 'string' ? helperId : undefined
+      }
+      aria-label={ariaLabel}
       className={fileInputStyle.fileInput}
       data-testid={dataTestid}
       disabled={disabled}
       id={inputId}
       multiple={multiple}
-      name={label ?? ariaLabel}
-      onChange={onChange}
+      name={name ?? label ?? ariaLabel}
+      onChange={onChangeLocal}
       ref={inputRef}
       required={required}
       type="file"
+      onFocus={onFocus}
+      onBlur={onBlur}
+      onKeyDown={onKeyDown}
+      onKeyUp={onKeyUp}
     />
   )
 
@@ -190,16 +240,18 @@ const FileInputBase = ({
       <FileInputContext.Provider value={value}>
         <Stack direction="column" gap={1}>
           {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
-          {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
           <div
             className={className}
             data-testid="drag-container"
-            onDragOver={onDragOver}
+            onDragOver={event => {
+              if (!disabledDragndrop) {
+                onDragOver(event)
+              }
+            }}
           >
             {input}
             <div className={fileInputStyle.overlayWrapper}>
               {computedChildren}
-              {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
               {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
               <div
                 className={
@@ -208,7 +260,11 @@ const FileInputBase = ({
                     : fileInputStyle.dropzoneOverlay[dragState]
                 }
                 onDragOver={event => event.preventDefault()}
-                onDrop={onDropComputed}
+                onDrop={event => {
+                  if (!disabledDragndrop) {
+                    onDropComputed(event)
+                  }
+                }}
                 style={style}
               >
                 {title &&
@@ -227,66 +283,58 @@ const FileInputBase = ({
             </div>
           </div>
           {bottomComputed}
-          {computedError}
+          {computedHelper}
         </Stack>
       </FileInputContext.Provider>
     )
   }
 
   const isSmall = size === 'small'
+  const Container = isSmall ? 'button' : 'div'
 
   return (
     <FileInputContext.Provider value={value}>
-      <Stack direction="column" gap={1}>
+      <Stack direction="column" gap={1} width="100%">
         <Stack className={className} direction="column" gap={0.5}>
           {label || labelDescription ? (
             <Label
               labelDescription={labelDescription}
               required={required}
               size={size}
+              htmlFor={inputId}
             >
               {label}
             </Label>
           ) : null}
-          <Text as="div" disabled={disabled} sentiment="neutral" variant="body">
-            <Stack
-              alignItems="center"
-              className={fileInputStyle.dropzone({
-                disabled,
-                size,
-                state: dragState,
-              })}
-              data-testid="drag-container"
-              direction={isSmall ? 'row' : 'column'}
-              gap={isSmall ? 1 : 2}
-              justifyContent="center"
-              onDragOver={onDragOver}
-              onDrop={onDropComputed}
-              style={style}
-            >
-              {disabled ? null : input}
-              <DropzoneContent
-                disabled={disabled}
-                inputId={inputId}
-                inputRef={inputRef}
-                isSmall={isSmall}
-                title={title}
-              />
-              {computedChildren}
-            </Stack>
-          </Text>
-          {helper ? (
-            <Text
-              as="p"
-              prominence="weak"
-              sentiment="neutral"
-              variant="caption"
-            >
-              {helper}
-            </Text>
-          ) : null}
+          {disabled ? null : input}
+          <Container
+            disabled={disabled}
+            className={fileInputStyle.dropzone({
+              disabled,
+              size,
+              state: dragState,
+            })}
+            onClick={() => {
+              if (isSmall) {
+                inputRef.current?.click()
+              }
+            }}
+            {...(isSmall ? { type: 'button' } : undefined)}
+            data-testid="drag-container"
+            onDragOver={onDragOver}
+            onDrop={onDropComputed}
+          >
+            <DropzoneContent
+              disabled={disabled}
+              inputId={inputId}
+              inputRef={inputRef}
+              isSmall={isSmall}
+              title={title}
+            />
+            {computedChildren}
+          </Container>
+          {computedHelper}
         </Stack>
-        {computedError}
         {bottomComputed}
       </Stack>
     </FileInputContext.Provider>
