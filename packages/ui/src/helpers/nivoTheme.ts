@@ -1,4 +1,4 @@
-import type { Theme as NivoTheme } from '@nivo/core'
+import type { PartialTheme as NivoTheme } from '@nivo/theming'
 import type { useTheme } from '@ultraviolet/themes'
 
 // be aware that this theme is applied on all chart using nivo library, please check any changes you make here on all charts

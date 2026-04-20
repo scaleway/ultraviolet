@@ -11,8 +11,9 @@ import { CustomLegend } from './CustomLegend'
 import { getMaxChartValue, getMinChartValue } from './helpers'
 import { LineChartTooltip } from './Tooltip'
 
-import type { DatumValue, Box as NivoBox, ValueFormat } from '@nivo/core'
-import type { LineSvgProps, Point, Serie } from '@nivo/line'
+import type { Serie } from './helpers'
+import type { Box as NivoBox, ValueFormat } from '@nivo/core'
+import type { LineSvgProps, Point, LineSeries, AllowedValue } from '@nivo/line'
 import type { ScaleSpec } from '@nivo/scales'
 import type { theme as UVTheme } from '@ultraviolet/themes'
 import type { ComponentProps, CSSProperties } from 'react'
@@ -25,7 +26,7 @@ type LineChartProps = {
   data?: Serie[]
   withLegend?: boolean
   tooltipFunction?: (props: {
-    point: Point
+    point: Point<LineSeries>
   }) => Partial<
     Pick<ComponentProps<typeof LineChartTooltip>, 'xFormatted' | 'yFormatted'>
   >
@@ -35,11 +36,11 @@ type LineChartProps = {
       ComponentProps<typeof CustomLegend>['axisTransformer']
     >
   >
-  pointFormatters?: Partial<Record<'x' | 'y', ValueFormat<DatumValue>>>
+  pointFormatters?: Partial<Record<'x' | 'y', ValueFormat<AllowedValue>>>
   tickValues?: Partial<
     Record<'bottom' | 'left' | 'right' | 'top', number | string>
   >
-  chartProps?: Partial<LineSvgProps>
+  chartProps?: Partial<LineSvgProps<LineSeries>>
   'data-testid'?: string
   style?: CSSProperties
 }
@@ -56,7 +57,7 @@ const DEFAULT_CHARTPROPS = {}
 
 const createCustomTooltip =
   (tooltipFunction?: LineChartProps['tooltipFunction']) =>
-  (props: { point: Point }) => {
+  (props: { point: Point<LineSeries> }) => {
     const customProps = tooltipFunction ? tooltipFunction(props) : {}
 
     return (
@@ -93,7 +94,7 @@ export const LineChart = ({
     datasets: data?.map(d => ({
       data: d.data,
       id: d.id,
-      label: d?.['label'] as string,
+      label: d?.['label'],
     })),
   }
 
@@ -151,7 +152,7 @@ export const LineChart = ({
               max: getMaxChartValue(finalData),
               min: getMinChartValue(finalData),
               ...yScale,
-            } as LineSvgProps['yScale']
+            } as LineSvgProps<LineSeries>['yScale']
           }
           {...chartProps}
         />
@@ -159,7 +160,7 @@ export const LineChart = ({
       {withLegend && (
         <CustomLegend
           axisTransformer={axisFormatters?.left}
-          data={dataset.datasets}
+          data={data}
           selected={selected ?? []}
           setSelected={setSelected}
         />

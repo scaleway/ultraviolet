@@ -1,6 +1,6 @@
-import type { DatumValue, Serie } from '@nivo/line'
+import type { AllowedValue, LineSeries } from '@nivo/line'
 
-const parse = (data?: DatumValue | null): number => {
+const parse = (data?: AllowedValue): number => {
   if (typeof data === 'number') {
     return data || 0
   }
@@ -14,13 +14,13 @@ const parse = (data?: DatumValue | null): number => {
   return 0
 }
 
-export const getMin = (values: DatumValue[] = []): number =>
+export const getMin = (values: AllowedValue[] = []): number =>
   values.length > 0 ? Math.min(...values.map(data => parse(data))) : 0
 
-export const getMax = (values: DatumValue[] = []): number =>
+export const getMax = (values: AllowedValue[] = []): number =>
   values.length > 0 ? Math.max(...values.map(data => parse(data))) : 0
 
-export const getAverage = (values: DatumValue[] = []): number =>
+export const getAverage = (values: AllowedValue[] = []): number =>
   values.length > 0
     ? Math.round(
         // oxlint-disable-next-line typescript/no-unnecessary-type-arguments needed here
@@ -30,7 +30,7 @@ export const getAverage = (values: DatumValue[] = []): number =>
       ) / 100
     : 0
 
-export const getMaxChartValue = (preppedData?: Serie[]): number => {
+export const getMaxChartValue = (preppedData?: LineSeries[]): number => {
   if (!preppedData?.length) {
     return 0
   }
@@ -42,7 +42,7 @@ export const getMaxChartValue = (preppedData?: Serie[]): number => {
   return Math.ceil(maximum + maximum * 0.1)
 }
 
-export const getMinChartValue = (preppedData?: Serie[]): number => {
+export const getMinChartValue = (preppedData?: LineSeries[]): number => {
   if (!preppedData?.length) {
     return 0
   }
@@ -75,4 +75,9 @@ export const getSelected = (
   }
 
   return selected
+}
+
+export type Serie = LineSeries & {
+  label?: string
+  [key: string]: unknown
 }
