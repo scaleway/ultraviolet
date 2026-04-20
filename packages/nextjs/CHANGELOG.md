@@ -1,5 +1,22 @@
 # @ultraviolet/nextjs
 
+## 3.0.28
+
+### Patch Changes
+
+- [#6351](https://github.com/scaleway/ultraviolet/pull/6351) [`612d202`](https://github.com/scaleway/ultraviolet/commit/612d202c49d48d5ae1f8a4ddd37ca8ab5e03cd6b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `16.2.4`.
+
+- [#6325](https://github.com/scaleway/ultraviolet/pull/6325) [`f6656ba`](https://github.com/scaleway/ultraviolet/commit/f6656ba46a5b8cf2fc4f3c3c7fec6f041553799a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.2.5`.
+  Updated dependency `react-dom` to `19.2.5`.
+
+- [#6320](https://github.com/scaleway/ultraviolet/pull/6320) [`0bfb5ab`](https://github.com/scaleway/ultraviolet/commit/0bfb5ab01ef886d21d25eac2c7ed4b3ad96b8828) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `16.2.3`.
+
+- [#6324](https://github.com/scaleway/ultraviolet/pull/6324) [`5faa8c2`](https://github.com/scaleway/ultraviolet/commit/5faa8c2e49771aa8c609b90c18312d8e7659d57f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.8`.
+
+- Updated dependencies [[`1d62b49`](https://github.com/scaleway/ultraviolet/commit/1d62b49e8808dcc26683ee53a7e6a9b8cdba1441), [`8bca898`](https://github.com/scaleway/ultraviolet/commit/8bca89859b87f07108d29a7b54b7d15f5800135f), [`27f89d7`](https://github.com/scaleway/ultraviolet/commit/27f89d7d434c0ca3e16b36b00e955980edac154b), [`59c601c`](https://github.com/scaleway/ultraviolet/commit/59c601c75c2b5b571a40bfa55df5fa51274b790b), [`6ba736b`](https://github.com/scaleway/ultraviolet/commit/6ba736b54cf84b993f751651bacf366930009978), [`bf1ca25`](https://github.com/scaleway/ultraviolet/commit/bf1ca25e60ec5f0f66048bee7f305bedf817c81f), [`9cfb3e9`](https://github.com/scaleway/ultraviolet/commit/9cfb3e96a6bc786708056cfb6723581139295540), [`f6656ba`](https://github.com/scaleway/ultraviolet/commit/f6656ba46a5b8cf2fc4f3c3c7fec6f041553799a), [`5faa8c2`](https://github.com/scaleway/ultraviolet/commit/5faa8c2e49771aa8c609b90c18312d8e7659d57f), [`7382e79`](https://github.com/scaleway/ultraviolet/commit/7382e79418f0205bbe37c637d9e1487e00692494), [`e4ae00d`](https://github.com/scaleway/ultraviolet/commit/e4ae00dee07a0611b8b974065cc6c3ab1388516c)]:
+  - @ultraviolet/ui@3.14.0
+  - @ultraviolet/themes@3.1.5
+
 ## 3.0.27
 
 ### Patch Changes
