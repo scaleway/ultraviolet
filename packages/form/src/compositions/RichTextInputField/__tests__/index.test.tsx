@@ -4,14 +4,14 @@ import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
 import { describe, expect, test, vi } from 'vitest'
 
-import { RichTextEditorField } from '..'
+import { RichTextInputField } from '..'
 import { Submit } from '../../../components'
 import { Form } from '../../../components/Form'
 
-describe('richTextEditorField', () => {
+describe('richTextInputField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
-      <RichTextEditorField label="Test" name="test" />,
+      <RichTextInputField label="Test" name="test" />,
     )
 
     expect(asFragment()).toMatchSnapshot()
@@ -29,12 +29,12 @@ describe('richTextEditorField', () => {
         methods={result.current}
         onSubmit={onSubmit}
       >
-        <RichTextEditorField label="Test" name="test" required />
+        <RichTextInputField label="Test" name="test" required />
         <Submit>Submit</Submit>
       </Form>,
     )
 
-    await userEvent.click(screen.getByText('Submit'))
+    await userEvent.click(screen.getByRole('button', { name: 'Submit' }))
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledTimes(0)
     })
@@ -43,7 +43,7 @@ describe('richTextEditorField', () => {
       '[contenteditable="true"]',
     )
     if (!doc) {
-      throw new Error('RichTextEditor contenteditable not found')
+      throw new Error('RichTextInput contenteditable not found')
     }
     await userEvent.click(doc)
     await userEvent.type(doc, 'This is an example')
@@ -51,9 +51,9 @@ describe('richTextEditorField', () => {
 
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledOnce()
-      expect(onSubmit.mock.calls[0]?.[0]?.test).toEqual(
-        expect.stringContaining('This is an example'),
-      )
+      expect(onSubmit.mock.calls[0][0]).toEqual({
+        test: '<p>This is an example</p>',
+      })
     })
     expect(asFragment()).toMatchSnapshot()
   })
@@ -70,7 +70,7 @@ describe('richTextEditorField', () => {
         methods={result.current}
         onSubmit={onSubmit}
       >
-        <RichTextEditorField label="Test" name="test" required />
+        <RichTextInputField label="Test" name="test" required />
         <Submit>Submit</Submit>
       </Form>,
     )
@@ -86,7 +86,7 @@ describe('richTextEditorField', () => {
       '[contenteditable="true"]',
     )
     if (!doc) {
-      throw new Error('RichTextEditor contenteditable not found')
+      throw new Error('RichTextInput contenteditable not found')
     }
     await userEvent.click(doc)
     await userEvent.click(italicButton!)
@@ -97,18 +97,9 @@ describe('richTextEditorField', () => {
 
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledOnce()
-      expect(onSubmit.mock.calls[0]?.[0]?.test).toEqual(
-        expect.stringContaining('<em>'),
-      )
-      expect(onSubmit.mock.calls[0]?.[0]?.test).toEqual(
-        expect.stringContaining('<ul>'),
-      )
-      expect(onSubmit.mock.calls[0]?.[0]?.test).toEqual(
-        expect.stringContaining('<li>'),
-      )
-      expect(onSubmit.mock.calls[0]?.[0]?.test).toEqual(
-        expect.stringContaining('Styled item'),
-      )
+      expect(onSubmit.mock.calls[0][0]).toEqual({
+        test: '<ul><li><p><em>Styled item</em></p></li></ul>',
+      })
     })
   })
 })

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`richTextEditorField > should render correctly 1`] = `
+exports[`richTextInputField > should render correctly 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
@@ -13,25 +13,27 @@ exports[`richTextEditorField > should render correctly 1`] = `
         class="uv_toi52u0 uv_toi52u2d uv_toi52u5j"
       >
         <label
-          class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9own uv_m4c9ow1a uv_m4c9ow32"
-          for="_r_0_"
+          class="uv_17td3g90 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9own uv_m4c9ow1a uv_m4c9ow32"
+          id="undefined-label"
         >
           Test
         </label>
         <div
-          class="uv_1l8c6qs4 uv_toi52u0 uv_toi52u2d"
+          class="uv_nb9uyi4 uv_toi52u0 uv_toi52u2d"
         >
           <div
-            class="uv_1l8c6qs1"
+            class="uv_nb9uyi2"
           >
             <div
               class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u3p"
+              role="toolbar"
             >
               <div
                 class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u3p"
               >
                 <button
-                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoeg uv_e1wcoej uv_e1wcoe13"
+                  aria-label="Bold"
+                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe8 uv_e1wcoeg uv_e1wcoej uv_e1wcoe19"
                   type="button"
                 >
                   <svg
@@ -51,7 +53,8 @@ exports[`richTextEditorField > should render correctly 1`] = `
                   </svg>
                 </button>
                 <button
-                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoeg uv_e1wcoej uv_e1wcoe13"
+                  aria-label="Italic"
+                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe8 uv_e1wcoeg uv_e1wcoej uv_e1wcoe19"
                   type="button"
                 >
                   <svg
@@ -71,7 +74,8 @@ exports[`richTextEditorField > should render correctly 1`] = `
                   </svg>
                 </button>
                 <button
-                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoeg uv_e1wcoej uv_e1wcoe13"
+                  aria-label="Underline"
+                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe8 uv_e1wcoeg uv_e1wcoej uv_e1wcoe19"
                   type="button"
                 >
                   <svg
@@ -95,7 +99,8 @@ exports[`richTextEditorField > should render correctly 1`] = `
                 class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u3p"
               >
                 <button
-                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoeg uv_e1wcoej uv_e1wcoe13"
+                  aria-label="Bullet List"
+                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe8 uv_e1wcoeg uv_e1wcoej uv_e1wcoe19"
                   type="button"
                 >
                   <svg
@@ -128,7 +133,8 @@ exports[`richTextEditorField > should render correctly 1`] = `
                   </svg>
                 </button>
                 <button
-                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoeg uv_e1wcoej uv_e1wcoe13"
+                  aria-label="Ordered List"
+                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe8 uv_e1wcoeg uv_e1wcoej uv_e1wcoe19"
                   type="button"
                 >
                   <svg
@@ -157,9 +163,9 @@ exports[`richTextEditorField > should render correctly 1`] = `
           </div>
           <div
             aria-invalid="false"
-            class="uv_1l8c6qs8 ProseMirror"
+            class="uv_nb9uyi8 ProseMirror"
             contenteditable="true"
-            style="--uv_1l8c6qs0: calc(1.5em * 10 + 2 * var(--uv_theme_rwwhsl9u)); min-height: calc(1.5em * 5 + 2 * var(--uv_theme_rwwhsl9u));"
+            style="--uv_nb9uyi0: calc(1.5em * 10 + 2 * var(--uv_theme_rwwhsl9u)); --uv_nb9uyi1: calc(1.5em * 5 + 2 * var(--uv_theme_rwwhsl9u));"
             translate="no"
           >
             <p>
@@ -175,7 +181,7 @@ exports[`richTextEditorField > should render correctly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`richTextEditorField > should render correctly generated 1`] = `
+exports[`richTextInputField > should render correctly generated 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
@@ -188,25 +194,27 @@ exports[`richTextEditorField > should render correctly generated 1`] = `
         class="uv_toi52u0 uv_toi52u2d uv_toi52u5j"
       >
         <label
-          class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9own uv_m4c9ow1a uv_m4c9ow32"
-          for="_r_7_"
+          class="uv_17td3g90 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9own uv_m4c9ow1a uv_m4c9ow32"
+          id="undefined-label"
         >
           Test
         </label>
         <div
-          class="uv_1l8c6qs4 uv_toi52u0 uv_toi52u2d"
+          class="uv_nb9uyi4 uv_toi52u0 uv_toi52u2d"
         >
           <div
-            class="uv_1l8c6qs1"
+            class="uv_nb9uyi2"
           >
             <div
               class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u3p"
+              role="toolbar"
             >
               <div
                 class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u3p"
               >
                 <button
-                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoeg uv_e1wcoej uv_e1wcoe13"
+                  aria-label="Bold"
+                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe8 uv_e1wcoeg uv_e1wcoej uv_e1wcoe19"
                   type="button"
                 >
                   <svg
@@ -226,7 +234,8 @@ exports[`richTextEditorField > should render correctly generated 1`] = `
                   </svg>
                 </button>
                 <button
-                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoeg uv_e1wcoej uv_e1wcoe13"
+                  aria-label="Italic"
+                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe8 uv_e1wcoeg uv_e1wcoej uv_e1wcoe19"
                   type="button"
                 >
                   <svg
@@ -246,7 +255,8 @@ exports[`richTextEditorField > should render correctly generated 1`] = `
                   </svg>
                 </button>
                 <button
-                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoeg uv_e1wcoej uv_e1wcoe13"
+                  aria-label="Underline"
+                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe8 uv_e1wcoeg uv_e1wcoej uv_e1wcoe19"
                   type="button"
                 >
                   <svg
@@ -270,7 +280,8 @@ exports[`richTextEditorField > should render correctly generated 1`] = `
                 class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u3p"
               >
                 <button
-                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoeg uv_e1wcoej uv_e1wcoe13"
+                  aria-label="Bullet List"
+                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe8 uv_e1wcoeg uv_e1wcoej uv_e1wcoe19"
                   type="button"
                 >
                   <svg
@@ -303,7 +314,8 @@ exports[`richTextEditorField > should render correctly generated 1`] = `
                   </svg>
                 </button>
                 <button
-                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoeg uv_e1wcoej uv_e1wcoe13"
+                  aria-label="Ordered List"
+                  class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe8 uv_e1wcoeg uv_e1wcoej uv_e1wcoe19"
                   type="button"
                 >
                   <svg
@@ -332,9 +344,9 @@ exports[`richTextEditorField > should render correctly generated 1`] = `
           </div>
           <div
             aria-invalid="false"
-            class="uv_1l8c6qs8 ProseMirror"
+            class="uv_nb9uyi8 ProseMirror"
             contenteditable="true"
-            style="--uv_1l8c6qs0: calc(1.5em * 10 + 2 * var(--uv_theme_rwwhsl9u)); min-height: calc(1.5em * 5 + 2 * var(--uv_theme_rwwhsl9u));"
+            style="--uv_nb9uyi0: calc(1.5em * 10 + 2 * var(--uv_theme_rwwhsl9u)); --uv_nb9uyi1: calc(1.5em * 5 + 2 * var(--uv_theme_rwwhsl9u));"
             translate="no"
           >
             <p>

@@ -1,11 +1,11 @@
-import { RichTextEditor } from '..'
+import { RichTextInput } from '..'
 
 import type { Meta } from '@storybook/react-vite'
 
 export default {
-  component: RichTextEditor,
-  title: 'Compositions/RichTextEditor',
-} as Meta<typeof RichTextEditor>
+  component: RichTextInput,
+  title: 'Compositions/RichTextInput',
+} as Meta<typeof RichTextInput>
 
 export { Playground } from './Playground.stories'
 export { Disabled } from './Disabled.stories'

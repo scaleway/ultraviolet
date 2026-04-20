@@ -5,12 +5,16 @@ import { recipe } from '@vanilla-extract/recipes'
 export const docRegionMaxHeightVar = createVar()
 export const docRegionMinHeightVar = createVar()
 
-export const toolbarRow = recipe({
-  base: {
-    borderBottom: `1px solid ${theme.colors.neutral.border}`,
-    flexShrink: 0,
-    padding: `${theme.space['0.5']} ${theme.space[1]}`,
-  },
+export const toolbarRow = style({
+  borderBottom: `1px solid ${theme.colors.neutral.border}`,
+  flexShrink: 0,
+  padding: `${theme.space['0.5']} ${theme.space[1]}`,
+})
+
+export const errorIcon = style({
+  position: 'absolute',
+  top: theme.space['10'],
+  right: theme.space['6'],
 })
 
 export const editorSurface = recipe({
@@ -58,8 +62,9 @@ export const docRegion = style({
   width: '100%',
 })
 
-export const richTextEditorStyle = {
+export const richTextInputStyle = {
   docRegion,
+  errorIcon,
   editorSurface,
   toolbarRow,
 }

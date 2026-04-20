@@ -3,4 +3,4 @@
 "@ultraviolet/ui": minor
 ---
 
-`RichTextEditor`: create component `RichTextEditor` and `RichTextEditorField`
+`RichTextInput`: create component `RichTextInput` and `RichTextInputField`
