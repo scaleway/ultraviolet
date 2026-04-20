@@ -11,7 +11,7 @@ Helper.parameters = {
   docs: {
     description: {
       story:
-        'Add an helper below the `RichTextEditor` using the `helper` string property. Any helper will be replaced by provided success message',
+        'Add an helper below the `RichTextInput` using the `helper` string property. Any helper will be replaced by provided success message',
     },
   },
 }

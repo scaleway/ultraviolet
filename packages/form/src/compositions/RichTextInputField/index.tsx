@@ -1,6 +1,6 @@
 'use client'
 
-import { RichTextEditor } from '@ultraviolet/ui/compositions/RichTextEditor'
+import { RichTextInput } from '@ultraviolet/ui/compositions/RichTextInput'
 import { useController } from 'react-hook-form'
 
 import { useErrors } from '../../providers'
@@ -9,13 +9,13 @@ import type { BaseFieldProps } from '../../types'
 import type { ComponentProps, FocusEvent } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 
-export type RichTextEditorFieldProps<
+export type RichTextInputFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof RichTextEditor>, 'value' | 'onChange' | 'error'>
+  Omit<ComponentProps<typeof RichTextInput>, 'value' | 'onChange' | 'error'>
 
-export const RichTextEditorField = <
+export const RichTextInputField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
@@ -29,7 +29,7 @@ export const RichTextEditorField = <
   validate,
   'aria-label': ariaLabel,
   ...props
-}: RichTextEditorFieldProps<TFieldValues, TFieldName>) => {
+}: RichTextInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
 
   const {
@@ -45,7 +45,7 @@ export const RichTextEditorField = <
   })
 
   return (
-    <RichTextEditor
+    <RichTextInput
       {...props}
       error={getError(
         {

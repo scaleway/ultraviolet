@@ -1,6 +1,7 @@
 'use client'
 
 import { ProseMirror, ProseMirrorDoc } from '@handlewithcare/react-prosemirror'
+import { AlertCircleIcon } from '@ultraviolet/icons'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
@@ -19,7 +20,7 @@ import { Notice } from './Notice'
 import {
   docRegionMaxHeightVar,
   docRegionMinHeightVar,
-  richTextEditorStyle,
+  richTextInputStyle,
 } from './styles.css'
 import { Toolbar } from './Toolbar'
 
@@ -28,7 +29,7 @@ import type { CSSProperties, DOMAttributes, ReactNode } from 'react'
 
 const RICH_TEXT_EDITOR_LINE_HEIGHT_EM = 1.5
 
-export type RichTextEditorProps = {
+export type RichTextInputProps = {
   'aria-label'?: string
   className?: string
   'data-testid'?: string
@@ -51,7 +52,7 @@ export type RichTextEditorProps = {
   showMarks?: boolean
 }
 
-export const RichTextEditor = ({
+export const RichTextInput = ({
   value = '',
   onChange,
   onBlur,
@@ -72,7 +73,7 @@ export const RichTextEditor = ({
   showMarks = true,
   showList = true,
   required = false,
-}: RichTextEditorProps) => {
+}: RichTextInputProps) => {
   const isEditable = !disabled && !readOnly
   const lineHeightEm = RICH_TEXT_EDITOR_LINE_HEIGHT_EM
   const padding = theme.space[1]
@@ -109,7 +110,7 @@ export const RichTextEditor = ({
       ) : null}
       <Stack
         className={cn(
-          richTextEditorStyle.editorSurface({
+          richTextInputStyle.editorSurface({
             disabled,
             error: !!error && !disabled,
             success: !!success && !error && !disabled,
@@ -140,13 +141,13 @@ export const RichTextEditor = ({
           state={editorState}
           static={!isEditable}
         >
-          <div className={richTextEditorStyle.toolbarRow({})}>
+          <div className={richTextInputStyle.toolbarRow}>
             <Toolbar showList={showList} showMarks={showMarks} />
           </div>
           <ProseMirrorDoc
             aria-invalid={!!error}
             aria-label={ariaLabel}
-            className={richTextEditorStyle.docRegion}
+            className={richTextInputStyle.docRegion}
             data-testid={dataTestId}
             id={id}
             style={{
@@ -158,6 +159,12 @@ export const RichTextEditor = ({
             onBlur={onBlur}
             onFocus={onFocus}
           />
+          {error ? (
+            <AlertCircleIcon
+              sentiment="danger"
+              className={richTextInputStyle.errorIcon}
+            />
+          ) : null}
         </ProseMirror>
       </Stack>
       {notice ? (

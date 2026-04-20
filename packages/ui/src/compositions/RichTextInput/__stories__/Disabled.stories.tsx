@@ -10,7 +10,7 @@ Disabled.args = {
 Disabled.parameters = {
   docs: {
     description: {
-      story: 'Mark `RichTextEditor` as disabled using `disabled` property.',
+      story: 'Mark `RichTextInput` as disabled using `disabled` property.',
     },
   },
 }
