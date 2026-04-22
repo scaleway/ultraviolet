@@ -27,7 +27,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v6.3.0
         with:
-          node-version: 24.14.1
+          node-version: 24.15.0
           cache: 'pnpm'
       - name: Run changesets-renovate
         run: pnpm dlx @scaleway/changesets-renovate
