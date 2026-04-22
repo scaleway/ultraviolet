@@ -125,7 +125,7 @@ describe('richTextInput', () => {
 
     const status = screen.getByRole('status')
     expect(status).toHaveAttribute('aria-describedby', 'id-test-notice')
-    expect(status).toHaveTextContent(successMessage)
+    expect(status).toHaveAccessibleDescription(successMessage)
   })
 
   test('should display error message', () => {
@@ -144,7 +144,7 @@ describe('richTextInput', () => {
 
     const status = screen.getByRole('status')
     expect(status).toHaveAttribute('aria-describedby', 'id-test-notice')
-    expect(status).toHaveTextContent(errorMessage)
+    expect(status).toHaveAccessibleDescription(errorMessage)
   })
 
   test('should display helper message', () => {
@@ -163,7 +163,7 @@ describe('richTextInput', () => {
 
     const status = screen.getByRole('status')
     expect(status).toHaveAttribute('aria-describedby', 'id-test-notice')
-    expect(status).toHaveTextContent(helperMessage)
+    expect(status).toHaveAccessibleDescription(helperMessage)
   })
 
   test('should not display helper message when success is displayed', () => {
@@ -181,8 +181,12 @@ describe('richTextInput', () => {
       />,
     )
 
-    expect(screen.getByText(successMessage)).toBeDefined()
-    expect(screen.queryByText(helperMessage)).toBeNull()
+    expect(screen.getByRole('status')).toHaveAccessibleDescription(
+      successMessage,
+    )
+    expect(screen.getByRole('status')).not.toHaveAccessibleDescription(
+      helperMessage,
+    )
   })
 
   test('should not display helper message when error is displayed', () => {
@@ -201,9 +205,9 @@ describe('richTextInput', () => {
       />,
     )
 
-    const status = screen.getByRole('status')
-    expect(status).toHaveAttribute('aria-describedby', 'id-test-notice')
-    expect(status).toHaveTextContent(errorMessage)
-    expect(screen.queryByText(helperMessage)).toBeNull()
+    expect(screen.getByRole('status')).toHaveAccessibleDescription(errorMessage)
+    expect(screen.getByRole('status')).not.toHaveAccessibleDescription(
+      helperMessage,
+    )
   })
 })

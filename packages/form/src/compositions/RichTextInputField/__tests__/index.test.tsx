@@ -47,7 +47,7 @@ describe('richTextInputField', () => {
     }
     await userEvent.click(doc)
     await userEvent.type(doc, 'This is an example')
-    await userEvent.click(screen.getByText('Submit'))
+    await userEvent.click(screen.getByRole('button', { name: 'Submit' }))
 
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledOnce()
@@ -75,10 +75,8 @@ describe('richTextInputField', () => {
       </Form>,
     )
 
-    const italicButton = screen.getByTitle('ItalicIcon').closest('button')
-    const bulletListButton = screen
-      .getByTitle('ListBulletIcon')
-      .closest('button')
+    const italicButton = screen.getByRole('button', { name: 'Italic' })
+    const bulletListButton = screen.getByRole('button', { name: 'Bullet List' })
     expect(italicButton).not.toBeNull()
     expect(bulletListButton).not.toBeNull()
 
@@ -89,11 +87,11 @@ describe('richTextInputField', () => {
       throw new Error('RichTextInput contenteditable not found')
     }
     await userEvent.click(doc)
-    await userEvent.click(italicButton!)
+    await userEvent.click(italicButton)
     await userEvent.type(doc, 'Styled ')
-    await userEvent.click(bulletListButton!)
+    await userEvent.click(bulletListButton)
     await userEvent.type(doc, 'item')
-    await userEvent.click(screen.getByText('Submit'))
+    await userEvent.click(screen.getByRole('button', { name: 'Submit' }))
 
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledOnce()
