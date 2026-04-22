@@ -51,8 +51,8 @@ importers:
         specifier: 1.1.4
         version: 1.1.4
       '@size-limit/file':
-        specifier: 12.0.1
-        version: 12.0.1(size-limit@12.1.0(jiti@2.6.1))
+        specifier: 12.1.0
+        version: 12.1.0(size-limit@12.1.0(jiti@2.6.1))
       '@size-limit/preset-big-lib':
         specifier: 12.1.0
         version: 12.1.0(esbuild@0.27.4)(size-limit@12.1.0(jiti@2.6.1))
@@ -3238,12 +3238,6 @@ packages:
   '@sitespeed.io/tracium@0.3.3':
     resolution: {integrity: sha512-dNZafjM93Y+F+sfwTO5gTpsGXlnc/0Q+c2+62ViqP3gkMWvHEMSKkaEHgVJLcLg3i/g19GSIPziiKpgyne07Bw==}
     engines: {node: '>=8'}
-
-  '@size-limit/file@12.0.1':
-    resolution: {integrity: sha512-Kvbnz46iV7WeHaANf1HmWjXBVMU2KkCU+0xJ78FzIjZwlVKKEqy+QCZprdBMfIWrzrvYeqP4cfuzKG8z6xVivg==}
-    engines: {node: ^20.0.0 || ^22.0.0 || >=24.0.0}
-    peerDependencies:
-      size-limit: 12.0.1
 
   '@size-limit/file@12.1.0':
     resolution: {integrity: sha512-eGwDcIufnNnvJRzv3liDOn6MAOGgmOTUdpeGQ2KuRTlgIgO54AJH1ilvktlJc6PIjNfwpYY0dOGyap1QgM1swQ==}
@@ -9733,10 +9727,6 @@ snapshots:
       debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
-
-  '@size-limit/file@12.0.1(size-limit@12.1.0(jiti@2.6.1))':
-    dependencies:
-      size-limit: 12.1.0(jiti@2.6.1)
 
   '@size-limit/file@12.1.0(size-limit@12.1.0(jiti@2.6.1))':
     dependencies:
