@@ -5,7 +5,7 @@ import { AlertCircleIcon } from '@ultraviolet/icons'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { useMemo, useState } from 'react'
+import { useId, useMemo, useState } from 'react'
 
 import { Label } from '../../components/Label'
 import { Stack } from '../../components/Stack'
@@ -74,6 +74,9 @@ export const RichTextInput = ({
   showList = true,
   required = false,
 }: RichTextInputProps) => {
+  const localId = useId()
+  const inputId = id ?? `rich-text-input-${localId}`
+  const noticeId = `${inputId}-notice`
   const isEditable = !disabled && !readOnly
   const lineHeightEm = RICH_TEXT_EDITOR_LINE_HEIGHT_EM
   const padding = theme.space[1]
@@ -104,7 +107,7 @@ export const RichTextInput = ({
   return (
     <Stack gap="0.5">
       {label ? (
-        <Label htmlFor={id} id={`${id}-label`} required={required}>
+        <Label htmlFor={inputId} id={`${inputId}-label`} required={required}>
           {label}
         </Label>
       ) : null}
@@ -117,7 +120,6 @@ export const RichTextInput = ({
           }),
           className,
         )}
-        data-disabled={disabled ? 'true' : undefined}
         style={style}
       >
         <ProseMirror
@@ -149,7 +151,7 @@ export const RichTextInput = ({
             aria-label={ariaLabel}
             className={richTextInputStyle.docRegion}
             data-testid={dataTestId}
-            id={id}
+            id={inputId}
             style={{
               ...assignInlineVars({
                 [docRegionMaxHeightVar]: maxHeight ?? 'none',
@@ -169,7 +171,7 @@ export const RichTextInput = ({
       </Stack>
       {notice ? (
         <Notice
-          id={`${id}-notice`}
+          id={noticeId}
           disabled={disabled}
           error={error}
           helper={helper}
