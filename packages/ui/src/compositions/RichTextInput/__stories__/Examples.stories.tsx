@@ -20,38 +20,23 @@ export const Examples: StoryFn<typeof RichTextInput> = () => (
       and long content.
     </Text>
 
-    <RichTextInput
-      aria-label="Plain text"
-      label="Plain text"
-      value={PLAIN_TEXT_VALUE}
-    />
+    <RichTextInput label="Plain text" value={PLAIN_TEXT_VALUE} />
 
-    <RichTextInput
-      aria-label="Rich HTML"
-      label="Rich content (HTML)"
-      value={HTML_VALUE}
-    />
+    <RichTextInput label="Rich content (HTML)" value={HTML_VALUE} />
 
+    <RichTextInput label="Bulleted list" value={LIST_VALUE} />
     <RichTextInput
-      aria-label="Bulleted list"
-      label="Bulleted list"
-      value={LIST_VALUE}
-    />
-    <RichTextInput
-      aria-label="Long content"
       label="Long content"
       maxRows={20}
       rows={8}
       value={LONG_VALUE}
     />
     <RichTextInput
-      aria-label="No list toolbar"
       label="Toolbar without lists"
       showList={false}
       value={PLAIN_TEXT_VALUE}
     />
     <RichTextInput
-      aria-label="No marks toolbar"
       label="Toolbar without marks (bold/italic/underline)"
       showMarks={false}
       value={PLAIN_TEXT_VALUE}
