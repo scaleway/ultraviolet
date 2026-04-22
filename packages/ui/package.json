@@ -73,6 +73,7 @@
     "watch:build": "vite build --config vite.config.ts --watch"
   },
   "dependencies": {
+    "@handlewithcare/react-prosemirror": "3.0.0",
     "@nivo/bar": "0.89.1",
     "@nivo/core": "0.89.1",
     "@nivo/line": "0.89.1",
@@ -94,6 +95,13 @@
     "codemirror": "6.0.2",
     "csstype": "3.2.3",
     "deepmerge": "4.3.1",
+    "prosemirror-commands": "1.5.0",
+    "prosemirror-keymap": "1.2.1",
+    "prosemirror-model": "1.25.1",
+    "prosemirror-schema-basic": "1.2.2",
+    "prosemirror-schema-list": "1.2.2",
+    "prosemirror-state": "1.4.3",
+    "prosemirror-view": "1.41.4",
     "react-intersection-observer": "10.0.3",
     "react-toastify": "11.0.5"
   },
