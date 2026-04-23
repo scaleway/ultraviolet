@@ -70,7 +70,7 @@ export type FileInputProps = {
   helper?: string
   onDrop?: (
     event: DragEvent<HTMLElement>,
-    accetedFiles: File[],
+    acceptedFiles: File[],
     errorFiles?: ErrorType[],
   ) => void
   accept?: HTMLInputElement['accept']
@@ -82,7 +82,7 @@ export type FileInputProps = {
   error?: boolean | string
   disabledDragndrop?: boolean
   onChange?: (files: FileList) => void
-  validator?: (file: File) => string
+  validator?: (file: File) => string | null | undefined
 } & (OverlayVariantProps | DropzoneVariantProps) &
   LabelType &
   Pick<
