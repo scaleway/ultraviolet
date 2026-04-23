@@ -7,7 +7,7 @@ import {
 import { Button, Modal, Stack, Text, TextInput } from '@ultraviolet/ui'
 import { useState } from 'react'
 
-import { mockErrors } from '../../mocks/mockErrors'
+import { mockErrors } from '../../../mocks/mockErrors'
 
 const Render = () => {
   const methods = useForm<{ lastName: ''; color: '' }>()

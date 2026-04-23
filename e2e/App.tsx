@@ -28,7 +28,10 @@ const pagesToRender = Object.keys(modules)
       ? {
           Component: lazy(
             // oxlint-disable-next-line typescript/no-unsafe-return
-            async () => import(`./tests/${path?.split('/')[2]}/render.tsx`),
+            async () =>
+              import(
+                `./tests/${path?.split('/')[2]}/${path?.split('/')[3]}/render.tsx`
+              ),
           ),
           name: path.replace('.tsx', ''),
         }
@@ -55,9 +58,9 @@ const WelcomePage = () => (
       {pagesToRender.map(path => (
         <li key={path?.name}>
           <ReactRouterLink
-            to={{ pathname: path?.name?.split('/')[2]?.toLowerCase() ?? '' }}
+            to={{ pathname: path?.name?.split('/')[3]?.toLowerCase() ?? '' }}
           >
-            {path?.name?.split('/')[2]?.toLowerCase()}
+            {path?.name?.split('/')[3]?.toLowerCase()}
           </ReactRouterLink>
         </li>
       ))}
@@ -79,7 +82,7 @@ const App = () => (
                 <Route
                   element={<Element />}
                   key={path?.name}
-                  path={path?.name?.split('/')[2]?.toLowerCase()}
+                  path={path?.name?.split('/')[3]?.toLowerCase()}
                 />
               )
             }

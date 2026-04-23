@@ -19,21 +19,32 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name: 'e2e-chromium',
+      testDir: './tests/e2e',
       use: { ...devices['Desktop Chrome'] },
     },
     {
-      name: 'firefox',
+      name: 'e2e-firefox',
+      testDir: './tests/e2e',
       use: { ...devices['Desktop Firefox'] },
     },
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      name: 'e2e-webkit',
+      testDir: './tests/e2e',
+      use: {
+        ...devices['Desktop Safari'],
+      },
+    },
+    {
+      name: 'screenshots-chromium',
+      testDir: './tests/screenshots',
+      use: {
+        ...devices['Desktop Chrome'],
+      },
     },
   ],
   reporter: 'line',
   retries: isCI ? 2 : 0,
-  testDir: './tests',
   timeout: isCI ? Number(times['1min']) : undefined,
   use: {
     baseURL,
@@ -45,6 +56,7 @@ export default defineConfig({
     stderr: 'pipe',
     stdout: 'ignore',
     url: baseURL,
+    reuseExistingServer: true,
   },
   workers: isCI ? 1 : undefined,
 })

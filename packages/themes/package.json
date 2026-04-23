@@ -19,8 +19,7 @@
   ],
   "type": "module",
   "sideEffects": [
-    "**/*.css",
-    "**/*.css.ts"
+    "/global"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -36,7 +35,10 @@
       "import": "./dist/themes/console/*/index.js",
       "require": "./dist/themes/console/*/index.js"
     },
-    "./global": "./dist/themes.css",
+    "./global": {
+      "types": "./global.d.ts",
+      "default": "./dist/themes.css"
+    },
     "./theme.css": "./dist/themes.css"
   },
   "publishConfig": {
