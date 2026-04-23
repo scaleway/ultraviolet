@@ -36,7 +36,7 @@ export type EstimateCostProps = {
    */
   compact?: boolean
   /**
-   * This prop is only usable when `variant = "compact"`
+   * This prop is only usable when `compact = true`
    */
   backgroundProminence?: 'strong' | 'default'
   /**

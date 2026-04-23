@@ -28,14 +28,14 @@ type CompactProps =
   | {
       compact: true
       /**
-       * This prop is only usable when `variant = "compact"`
+       * This prop is only usable when `compact=true`
        */
       backgroundProminence?: 'strong' | 'default'
     }
   | {
       compact?: false
       /**
-       * This prop is only usable when `variant = "compact"`
+       * This prop is only usable when `compact=true`
        */
       backgroundProminence?: never
     }
