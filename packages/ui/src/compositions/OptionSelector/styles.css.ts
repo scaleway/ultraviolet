@@ -7,6 +7,8 @@ import { selectInputStyle } from '../../components/styles'
 const wrapper = recipe({
   base: {
     border: 'none',
+    padding: 0,
+    margin: 0,
   },
   variants: {
     direction: {
