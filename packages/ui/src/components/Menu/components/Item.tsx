@@ -77,7 +77,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
     ref,
   ) => {
     const {
-      hideOnClickItem: MenuHideOnClickItem,
+      hideOnClickItem: menuHideOnClickItem,
       setIsVisible,
       isVisible,
       menuRef,
@@ -93,13 +93,13 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
           return undefined
         }
         onClick?.(event)
-        if (hideOnClickItem || MenuHideOnClickItem) {
+        if (hideOnClickItem || menuHideOnClickItem) {
           setIsVisible(false)
         }
 
         return undefined
       },
-      [disabled, hideOnClickItem, MenuHideOnClickItem, onClick, setIsVisible],
+      [disabled, hideOnClickItem, menuHideOnClickItem, onClick, setIsVisible],
     )
 
     const handleKeyDown = (
@@ -214,7 +214,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
                 event.preventDefault()
               }
               onClick?.(event)
-              if (hideOnClickItem || MenuHideOnClickItem) {
+              if (hideOnClickItem || menuHideOnClickItem) {
                 setIsVisible(false)
               }
             }}
