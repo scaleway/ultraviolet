@@ -53,7 +53,7 @@ describe('lineChart', () => {
       <LineChart
         data={lineChartData}
         pointFormatters={{
-          x: value => value.toString(),
+          x: value => value?.toString() ?? '',
           y: value => `${value as number} unit`,
         }}
         xScale={{ type: 'linear' }}

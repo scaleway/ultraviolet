@@ -6,10 +6,10 @@ import { Text } from '../Text'
 
 import { colorLine, lineChartStyle } from './styles.css'
 
-import type { Point } from '@nivo/line'
+import type { LineSeries, Point } from '@nivo/line'
 
 type LineChartTooltipProps = {
-  point: Point
+  point: Point<LineSeries>
   xFormatted?: string
   yFormatted?: string
 }
@@ -24,7 +24,7 @@ export const LineChartTooltip = ({
       <span
         className={lineChartStyle.lineColorSquare}
         style={assignInlineVars({
-          [colorLine]: point.serieColor,
+          [colorLine]: point.seriesColor,
         })}
       />
     </div>

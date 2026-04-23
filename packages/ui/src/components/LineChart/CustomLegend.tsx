@@ -12,8 +12,8 @@ import { getAverage, getCurrent, getMax, getMin, getSelected } from './helpers'
 import { Cell } from './LegendCell'
 import { backgroundColorLegend, lineChartStyle } from './styles.css'
 
+import type { Serie } from './helpers'
 import type { DatumValue } from '@nivo/core'
-import type { Serie } from '@nivo/line'
 
 type Transformer = (value: DatumValue) => string
 

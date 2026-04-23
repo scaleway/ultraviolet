@@ -7,7 +7,7 @@ export const CustomTooltip = Template.bind({})
 
 CustomTooltip.args = {
   tooltipFunction: ({ point }) => ({
-    xFormatted: `Date: ${format(new Date(point.data.x), 'MM-y')}`,
+    xFormatted: `Date: ${format(new Date(point.x), 'MM-y')}`,
     yFormatted: `Valeur: ${point.data.yFormatted}`,
   }),
   axisFormatters: {

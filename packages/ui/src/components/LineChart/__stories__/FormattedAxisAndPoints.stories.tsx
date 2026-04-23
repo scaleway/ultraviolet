@@ -12,7 +12,7 @@ FormattedAxisAndPoints.args = {
   },
   data: lineChartHoursData,
   pointFormatters: {
-    x: value => format(new Date(value), 'dd-MM-y hh:mm'),
-    y: value => `${value.toString()} liters`,
+    x: value => format(new Date(value ?? ''), 'dd-MM-y hh:mm'),
+    y: value => `${value?.toString()} liters`,
   },
 }

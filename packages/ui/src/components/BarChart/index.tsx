@@ -34,7 +34,10 @@ type BarChartProps = {
   tooltipFunction?: (
     props: BarTooltipProps<BarDatum>,
   ) => ComponentProps<typeof BarChartTooltip>
-  chartProps?: Partial<BarSvgProps<BarDatum>>
+  chartProps?: Partial<BarSvgProps<BarDatum>> & {
+    minValue?: number
+    maxValue?: number
+  }
   'data-testid'?: string
   style?: CSSProperties
 }
@@ -109,6 +112,13 @@ export const BarChart = ({
         margin={margin}
         theme={getNivoTheme(theme)}
         tooltip={tooltip}
+        valueScale={
+          chartProps?.valueScale ?? {
+            type: 'linear',
+            min: chartProps?.minValue,
+            max: chartProps?.maxValue,
+          }
+        }
         {...chartProps}
       />
     </div>
