@@ -45,6 +45,9 @@ export const OrderSummary = ({
   'data-testid': dataTestId,
   style,
   priceInformation,
+  calculatorIcon = false,
+  compact = false,
+  backgroundProminence = 'default',
 }: OrderSummaryProps) => {
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
@@ -131,7 +134,12 @@ export const OrderSummary = ({
   return (
     <OrderSummaryContext.Provider value={valueContext}>
       <Stack
-        className={cn(className, orderSummaryStyle.container)}
+        className={cn(
+          className,
+          orderSummaryStyle.container({
+            backgroundProminence: compact ? backgroundProminence : 'default',
+          }),
+        )}
         data-testid={dataTestId}
         justifyContent={hideDetails ? 'flex-start' : 'space-between'}
         style={style}
@@ -180,7 +188,7 @@ export const OrderSummary = ({
             )}
           </Stack>
         ) : null}
-        {hideDetails ? null : <ScrollableContent />}
+        {hideDetails || compact ? null : <ScrollableContent />}
         <NonScrollableContent
           additionalInfo={additionalInfo}
           defaultPriceInformation={
@@ -197,6 +205,8 @@ export const OrderSummary = ({
           totalPriceInfo={totalPriceInfo}
           totalPriceInfoPlacement={totalPriceInfoPlacement}
           unit={timePeriodUnit}
+          compact={compact}
+          calculatorIcon={calculatorIcon}
         >
           {children}
         </NonScrollableContent>

@@ -283,6 +283,41 @@ describe('orderSummary', () => {
       </>,
     ))
 
+  test('works compact', () =>
+    shouldMatchSnapshot(
+      <OrderSummary
+        header="summary"
+        items={[categoryAZ]}
+        compact
+        backgroundProminence="strong"
+        calculatorIcon
+      />,
+    ))
+
+  test('works with calculator icon', () =>
+    shouldMatchSnapshot(
+      <OrderSummary
+        header="summary"
+        items={[categoryAZ]}
+        compact
+        backgroundProminence="default"
+        calculatorIcon
+      />,
+    ))
+
+  test('works compact with total price info', () =>
+    shouldMatchSnapshot(
+      <OrderSummary
+        header="summary"
+        items={[categoryAZ]}
+        compact
+        backgroundProminence="default"
+        calculatorIcon
+        totalPriceInfo="Info"
+        totalPriceInfoPlacement="left"
+      />,
+    ))
+
   test('works with negative category price', () => {
     const { asFragment } = renderWithTheme(
       <OrderSummary header="summary" items={[categoryAZ, negativeItem]} />,

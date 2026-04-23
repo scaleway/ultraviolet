@@ -36,6 +36,10 @@ export type EstimateCostProps = {
    */
   compact?: boolean
   /**
+   * This prop is only usable when `compact = true`
+   */
+  backgroundProminence?: 'strong' | 'default'
+  /**
    * By default, a description exists but if you need you can customize it with this prop.
    */
   description?: ReactNode

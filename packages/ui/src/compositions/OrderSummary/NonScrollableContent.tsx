@@ -1,3 +1,4 @@
+import { CalculatorIcon } from '@ultraviolet/icons/CalculatorIcon'
 import { useContext } from 'react'
 
 import { Stack } from '../../components/Stack'
@@ -24,6 +25,8 @@ type NonScrollableContentProps = {
   hideBeforePrice?: boolean
   defaultPriceInformation: boolean
   timePeriodAmount: number
+  compact: boolean
+  calculatorIcon: boolean
 }
 
 export const NonScrollableContent = ({
@@ -39,13 +42,18 @@ export const NonScrollableContent = ({
   hideBeforePrice,
   defaultPriceInformation,
   timePeriodAmount,
+  compact,
+  calculatorIcon,
 }: NonScrollableContentProps) => {
   const { locales } = useContext(OrderSummaryContext)
   const unitSingular = unit.endsWith('s') ? unit.slice(0, -1) : unit
   const divisor = defaultPriceInformation ? timePeriodAmount : undefined
 
   return (
-    <Stack className={orderSummaryStyle.nonScrollableContainer} gap={3}>
+    <Stack
+      className={orderSummaryStyle.nonScrollableContainer({ compact })}
+      gap={3}
+    >
       {children}
       <Stack alignItems="center" direction="row" justifyContent="space-between">
         {totalPriceInfo && totalPriceInfoPlacement === 'left' ? (
@@ -56,8 +64,17 @@ export const NonScrollableContent = ({
                 prominence="strong"
                 sentiment="neutral"
                 variant="bodyStrong"
+                className={
+                  calculatorIcon
+                    ? orderSummaryStyle.compactTotalPrice
+                    : undefined
+                }
               >
-                {locales['order.summary.total']}:
+                {calculatorIcon ? (
+                  <CalculatorIcon sentiment="primary" size="medium" />
+                ) : null}
+                {locales['order.summary.total']}
+                {compact ? null : ':'}
               </Text>
               {totalPriceDescription}
             </Stack>
@@ -70,9 +87,16 @@ export const NonScrollableContent = ({
               prominence="strong"
               sentiment="neutral"
               variant="bodyStrong"
+              className={
+                calculatorIcon ? orderSummaryStyle.compactTotalPrice : undefined
+              }
             >
+              {calculatorIcon ? (
+                <CalculatorIcon sentiment="primary" size="medium" />
+              ) : null}
               {locales['order.summary.total']}
-              {additionalInfo ? ` ${additionalInfo}` : null}:
+              {additionalInfo ? ` ${additionalInfo}` : null}
+              {compact ? null : ':'}
             </Text>
             {totalPriceDescription}
           </Stack>

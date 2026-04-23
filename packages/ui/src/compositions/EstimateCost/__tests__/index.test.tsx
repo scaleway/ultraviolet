@@ -238,7 +238,12 @@ describe('estimateCost - index', () => {
 
   test('render compact', () =>
     shouldMatchSnapshot(
-      <EstimateCost compact defaultTimeUnit="months" discount={0}>
+      <EstimateCost
+        compact
+        defaultTimeUnit="months"
+        discount={0}
+        backgroundProminence="strong"
+      >
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>

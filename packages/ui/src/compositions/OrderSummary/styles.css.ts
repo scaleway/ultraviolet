@@ -2,15 +2,29 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-const container = style({
-  '@media': {
-    '(min-width: 1440px)': {
-      minWidth: '27.5rem',
+const container = recipe({
+  base: {
+    '@media': {
+      '(min-width: 1440px)': {
+        minWidth: '27.5rem',
+      },
+    },
+    height: '100%',
+    minWidth: '20rem',
+  },
+  variants: {
+    backgroundProminence: {
+      default: {
+        backgroundColor: theme.colors.neutral.backgroundWeak,
+      },
+      strong: {
+        backgroundColor: theme.colors.neutral.background,
+      },
     },
   },
-  backgroundColor: theme.colors.neutral.backgroundWeak,
-  height: '100%',
-  minWidth: '20rem',
+  defaultVariants: {
+    backgroundProminence: 'default',
+  },
 })
 
 const orderSummaryHeaderContainerBase = style({
@@ -31,9 +45,18 @@ const stackBackground = style({
   backgroundColor: theme.colors.neutral.background,
 })
 
-const nonScrollableContainer = style({
-  borderTop: `1px solid ${theme.colors.neutral.border}`,
-  padding: theme.space[3],
+const nonScrollableContainer = recipe({
+  variants: {
+    compact: {
+      false: {
+        borderTop: `1px solid ${theme.colors.neutral.border}`,
+        padding: theme.space[3],
+      },
+      true: {
+        padding: theme.space[2],
+      },
+    },
+  },
 })
 
 const numberInput = style({
@@ -106,6 +129,12 @@ const totalPrice = styleVariants({
   default: {},
 })
 
+const compactTotalPrice = style({
+  display: 'flex',
+  alignItems: 'center',
+  gap: theme.space[1],
+})
+
 export const orderSummaryStyle = {
   anchorIcon,
   container,
@@ -118,4 +147,5 @@ export const orderSummaryStyle = {
   anchor,
   totalPrice,
   numberInput,
+  compactTotalPrice,
 }

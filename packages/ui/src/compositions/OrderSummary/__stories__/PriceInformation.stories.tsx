@@ -51,7 +51,7 @@ export const PriceInformation: StoryFn<
       <Text as="span" variant="code">
         true
       </Text>{' '}
-      : and hideDetaiils={' '}
+      : and hideDetails={' '}
       <Text as="span" variant="code">
         true
       </Text>{' '}

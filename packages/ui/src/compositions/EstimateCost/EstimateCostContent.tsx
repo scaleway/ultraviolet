@@ -58,6 +58,7 @@ export const EstimateCostContent = ({
   onTotalPriceChange,
   style,
   compact,
+  backgroundProminence = 'default',
 }: EstimateCostProps) => {
   const [ref, inView] = useInView()
   const { formatNumber } = useEstimateCost()
@@ -231,6 +232,7 @@ export const EstimateCostContent = ({
           iteration={iteration}
           label={locales['estimate.cost.label']}
           totalPrice={totalPrice}
+          backgroundProminence={backgroundProminence}
         />
       ) : null}
       <Stack
