@@ -117,11 +117,11 @@ importers:
         specifier: workspace:*
         version: link:packages/ui
       '@vanilla-extract/css':
-        specifier: 1.18.0
-        version: 1.18.0
+        specifier: 1.20.1
+        version: 1.20.1
       '@vanilla-extract/vite-plugin':
-        specifier: 5.2.1
-        version: 5.2.1(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(yaml@2.8.3)
+        specifier: 5.2.2
+        version: 5.2.2(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(yaml@2.8.3)
       '@vitejs/plugin-react':
         specifier: 6.0.1
         version: 6.0.1(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))
@@ -509,14 +509,14 @@ importers:
         specifier: workspace:*
         version: link:../utils
       '@vanilla-extract/css':
-        specifier: 1.18.0
-        version: 1.18.0
+        specifier: 1.20.1
+        version: 1.20.1
       '@vanilla-extract/dynamic':
         specifier: 2.1.5
         version: 2.1.5
       '@vanilla-extract/recipes':
         specifier: 0.5.7
-        version: 0.5.7(@vanilla-extract/css@1.18.0)
+        version: 0.5.7(@vanilla-extract/css@1.20.1)
     devDependencies:
       '@babel/core':
         specifier: 7.29.0
@@ -552,8 +552,8 @@ importers:
         specifier: workspace:*
         version: link:../utils
       '@vanilla-extract/css':
-        specifier: 1.18.0
-        version: 1.18.0
+        specifier: 1.20.1
+        version: 1.20.1
       '@vanilla-extract/dynamic':
         specifier: 2.1.5
         version: 2.1.5
@@ -571,8 +571,8 @@ importers:
         specifier: workspace:*
         version: link:../../utils/test
       '@vanilla-extract/vite-plugin':
-        specifier: 5.2.1
-        version: 5.2.1(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(vite@8.0.8(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(yaml@2.8.3)
+        specifier: 5.2.2
+        version: 5.2.2(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(vite@8.0.8(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(yaml@2.8.3)
       react:
         specifier: 19.2.5
         version: 19.2.5
@@ -614,8 +614,8 @@ importers:
   packages/themes:
     dependencies:
       '@vanilla-extract/css':
-        specifier: 1.18.0
-        version: 1.18.0
+        specifier: 1.20.1
+        version: 1.20.1
       '@vanilla-extract/dynamic':
         specifier: 2.1.5
         version: 2.1.5
@@ -678,17 +678,17 @@ importers:
         specifier: workspace:*
         version: link:../utils
       '@vanilla-extract/css':
-        specifier: 1.18.0
-        version: 1.18.0
+        specifier: 1.20.1
+        version: 1.20.1
       '@vanilla-extract/dynamic':
         specifier: 2.1.5
         version: 2.1.5
       '@vanilla-extract/recipes':
         specifier: 0.5.7
-        version: 0.5.7(@vanilla-extract/css@1.18.0)
+        version: 0.5.7(@vanilla-extract/css@1.20.1)
       '@vanilla-extract/sprinkles':
         specifier: 1.6.5
-        version: 1.6.5(@vanilla-extract/css@1.18.0)
+        version: 1.6.5(@vanilla-extract/css@1.20.1)
       codemirror:
         specifier: 6.0.2
         version: 6.0.2
@@ -724,8 +724,8 @@ importers:
         specifier: workspace:*
         version: link:../../utils/test
       '@vanilla-extract/vite-plugin':
-        specifier: 5.2.1
-        version: 5.2.1(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(yaml@2.8.3)
+        specifier: 5.2.2
+        version: 5.2.2(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(yaml@2.8.3)
       react:
         specifier: 19.2.5
         version: 19.2.5
@@ -814,17 +814,17 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
       '@vanilla-extract/css':
-        specifier: 1.18.0
-        version: 1.18.0
+        specifier: 1.20.1
+        version: 1.20.1
       '@vanilla-extract/dynamic':
         specifier: 2.1.5
         version: 2.1.5
       '@vanilla-extract/recipes':
         specifier: 0.5.7
-        version: 0.5.7(@vanilla-extract/css@1.18.0)
+        version: 0.5.7(@vanilla-extract/css@1.20.1)
       '@vanilla-extract/sprinkles':
         specifier: 1.6.5
-        version: 1.6.5(@vanilla-extract/css@1.18.0)
+        version: 1.6.5(@vanilla-extract/css@1.20.1)
       react:
         specifier: 19.2.5
         version: 19.2.5
@@ -3736,14 +3736,11 @@ packages:
   '@vanilla-extract/babel-plugin-debug-ids@1.2.2':
     resolution: {integrity: sha512-MeDWGICAF9zA/OZLOKwhoRlsUW+fiMwnfuOAqFVohL31Agj7Q/RBWAYweqjHLgFBCsdnr6XIfwjJnmb2znEWxw==}
 
-  '@vanilla-extract/compiler@0.6.0':
-    resolution: {integrity: sha512-FlZM8s/h1obGHdYSTo05iIXUr6hsNvoE/okv/e9Sq7GN+niofhUKyuZPSwZNVYMK49xxeWNH9mopOlGRRPV4mw==}
+  '@vanilla-extract/compiler@0.7.0':
+    resolution: {integrity: sha512-rZQ40HVmsxfGLjoflwwsaUBLfpbpKDoZC19oiDA0FHq4LdrYtyVbFkc0MfqkNo/qBCvaZfsRezCqk0QQxCqZ8w==}
 
-  '@vanilla-extract/css@1.18.0':
-    resolution: {integrity: sha512-/p0dwOjr0o8gE5BRQ5O9P0u/2DjUd6Zfga2JGmE4KaY7ZITWMszTzk4x4CPlM5cKkRr2ZGzbE6XkuPNfp9shSQ==}
-
-  '@vanilla-extract/css@1.20.0':
-    resolution: {integrity: sha512-yKuajXFlghIjRZmEfy95z6MYj+mzJPoD3nbNLVAUB8Np6I1P9g5vBlznQPD+0A46osCn0za/wIvp/cg8HU3aig==}
+  '@vanilla-extract/css@1.20.1':
+    resolution: {integrity: sha512-5I9RNo5uZW9tsBnqrWzJqELegOqTHBrZyDFnES0gR9gJJHBB9dom1N0bwITM9tKwBcfKrTX4a6DHVeQdJ2ubQA==}
 
   '@vanilla-extract/dynamic@2.1.5':
     resolution: {integrity: sha512-QGIFGb1qyXQkbzx6X6i3+3LMc/iv/ZMBttMBL+Wm/DetQd36KsKsFg5CtH3qy+1hCA/5w93mEIIAiL4fkM8ycw==}
@@ -3764,8 +3761,8 @@ packages:
     peerDependencies:
       '@vanilla-extract/css': ^1.0.0
 
-  '@vanilla-extract/vite-plugin@5.2.1':
-    resolution: {integrity: sha512-1dmCgmTmls/c4G+t453vZIzZ+82ftr+JC2J48C1drVkiwtZ7DscYSIko9Ci0CyDptBLWz5EO9fWnqzfHnns8tg==}
+  '@vanilla-extract/vite-plugin@5.2.2':
+    resolution: {integrity: sha512-AUyB4fDR2b/Mo0lcXhhlf6RxnDPYwFMyKKopalJ4BwQNKYzZSoTwHJ1PLPO9SKhpz7lzXc0Z18GHQZOewzl3YA==}
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
 
@@ -4438,11 +4435,6 @@ packages:
 
   css.escape@1.5.1:
     resolution: {integrity: sha512-YUifsXXuknHlUsmlgyY0PKzgPOr7/FjCePfHNt0jxm83wHZi44VDMQ7/fGNkjY3/jV1MC+1CmZbaHzugyeRtpg==}
-
-  cssesc@3.0.0:
-    resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
-    engines: {node: '>=4'}
-    hasBin: true
 
   cssfontparser@1.2.1:
     resolution: {integrity: sha512-6tun4LoZnj7VN6YeegOVb67KBX/7JJsqvj+pv3ZA7F878/eN33AbGa5b/S/wXxS/tcp8nc40xRUrsPlxIyNUPg==}
@@ -10172,9 +10164,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vanilla-extract/compiler@0.6.0(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)':
+  '@vanilla-extract/compiler@0.7.0(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)':
     dependencies:
-      '@vanilla-extract/css': 1.20.0
+      '@vanilla-extract/css': 1.20.1
       '@vanilla-extract/integration': 8.0.9
       vite: 8.0.8(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)
       vite-node: 6.0.0(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)
@@ -10194,9 +10186,9 @@ snapshots:
       - tsx
       - yaml
 
-  '@vanilla-extract/compiler@0.6.0(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)':
+  '@vanilla-extract/compiler@0.7.0(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)':
     dependencies:
-      '@vanilla-extract/css': 1.20.0
+      '@vanilla-extract/css': 1.20.1
       '@vanilla-extract/integration': 8.0.9
       vite: 8.0.8(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)
       vite-node: 6.0.0(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)
@@ -10216,29 +10208,11 @@ snapshots:
       - tsx
       - yaml
 
-  '@vanilla-extract/css@1.18.0':
+  '@vanilla-extract/css@1.20.1':
     dependencies:
       '@emotion/hash': 0.9.2
       '@vanilla-extract/private': 1.0.9
       css-what: 6.2.2
-      cssesc: 3.0.0
-      csstype: 3.2.3
-      dedent: 1.7.2
-      deep-object-diff: 1.1.9
-      deepmerge: 4.3.1
-      lru-cache: 10.4.3
-      media-query-parser: 2.0.2
-      modern-ahocorasick: 1.1.0
-      picocolors: 1.1.1
-    transitivePeerDependencies:
-      - babel-plugin-macros
-
-  '@vanilla-extract/css@1.20.0':
-    dependencies:
-      '@emotion/hash': 0.9.2
-      '@vanilla-extract/private': 1.0.9
-      css-what: 6.2.2
-      cssesc: 3.0.0
       csstype: 3.2.3
       dedent: 1.7.2
       deep-object-diff: 1.1.9
@@ -10259,7 +10233,7 @@ snapshots:
       '@babel/core': 7.29.0
       '@babel/plugin-syntax-typescript': 7.28.6(@babel/core@7.29.0)
       '@vanilla-extract/babel-plugin-debug-ids': 1.2.2
-      '@vanilla-extract/css': 1.20.0
+      '@vanilla-extract/css': 1.20.1
       dedent: 1.7.2
       esbuild: 0.27.4
       eval: 0.1.8
@@ -10272,17 +10246,17 @@ snapshots:
 
   '@vanilla-extract/private@1.0.9': {}
 
-  '@vanilla-extract/recipes@0.5.7(@vanilla-extract/css@1.18.0)':
+  '@vanilla-extract/recipes@0.5.7(@vanilla-extract/css@1.20.1)':
     dependencies:
-      '@vanilla-extract/css': 1.18.0
+      '@vanilla-extract/css': 1.20.1
 
-  '@vanilla-extract/sprinkles@1.6.5(@vanilla-extract/css@1.18.0)':
+  '@vanilla-extract/sprinkles@1.6.5(@vanilla-extract/css@1.20.1)':
     dependencies:
-      '@vanilla-extract/css': 1.18.0
+      '@vanilla-extract/css': 1.20.1
 
-  '@vanilla-extract/vite-plugin@5.2.1(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(yaml@2.8.3)':
+  '@vanilla-extract/vite-plugin@5.2.2(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(yaml@2.8.3)':
     dependencies:
-      '@vanilla-extract/compiler': 0.6.0(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)
+      '@vanilla-extract/compiler': 0.7.0(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)
       '@vanilla-extract/integration': 8.0.9
       vite: 8.0.8(@types/node@24.12.2)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)
     transitivePeerDependencies:
@@ -10301,9 +10275,9 @@ snapshots:
       - tsx
       - yaml
 
-  '@vanilla-extract/vite-plugin@5.2.1(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(vite@8.0.8(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(yaml@2.8.3)':
+  '@vanilla-extract/vite-plugin@5.2.2(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(vite@8.0.8(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(yaml@2.8.3)':
     dependencies:
-      '@vanilla-extract/compiler': 0.6.0(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)
+      '@vanilla-extract/compiler': 0.7.0(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)
       '@vanilla-extract/integration': 8.0.9
       vite: 8.0.8(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)
     transitivePeerDependencies:
@@ -11029,8 +11003,6 @@ snapshots:
   css-what@6.2.2: {}
 
   css.escape@1.5.1: {}
-
-  cssesc@3.0.0: {}
 
   cssfontparser@1.2.1: {}
 
