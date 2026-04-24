@@ -93,7 +93,6 @@ export const TagList = ({
       tags.length > 0 &&
       tags
         .slice(0, tmpThreshold)
-        // oxlint-disable-next-line typescript/no-unnecessary-type-arguments needed here
         .reduce<string>((acc, tag) => acc + getTagLabel(tag), '').length >
         maxLength
     ) {

@@ -3,7 +3,6 @@ import { VerificationCode } from '..'
 import type { StoryFn } from '@storybook/react-vite'
 
 const onCompleteHandler = (value: unknown) => {
-  // oxlint-disable-next-line no-console
   console.log('Code is fully typed', value)
 }
 

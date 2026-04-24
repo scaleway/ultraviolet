@@ -35,7 +35,6 @@ export default {
           errors={mockErrors}
           methods={methods}
           onSubmit={data => {
-            // oxlint-disable-next-line eslint/no-console
             console.log('data', data)
           }}
         >

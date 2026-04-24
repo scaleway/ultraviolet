@@ -531,7 +531,6 @@ const placementTop = (
 /**
  * This function will compute the positions of popup and arrow based on children position and popup size
  */
-// oxlint-disable-next-line eslint/max-statements
 export const computePositions = ({
   placement,
   childrenRef,

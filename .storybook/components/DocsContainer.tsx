@@ -51,7 +51,6 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
   const scope = context?.attachedCSFFiles?.values()?.next()?.value?.meta
   const parameters = scope?.parameters
 
-  // oxlint-disable-next-line typescript/no-unsafe-call
   const isPlusLibrary = scope?.title?.includes('Plus/') ?? false
 
   if (

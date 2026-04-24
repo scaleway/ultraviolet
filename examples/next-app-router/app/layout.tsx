@@ -1,4 +1,3 @@
-// oxlint-disable import/no-unassigned-import
 import '@ultraviolet/fonts/fonts.css'
 import '@ultraviolet/ui/styles'
 import '@ultraviolet/icons/styles'
@@ -16,7 +15,6 @@ import { cookies } from 'next/headers'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 
-// oxlint-disable-next-line react/only-export-components
 export const metadata: Metadata = {
   description: 'Design System',
   title: 'Ultraviolet',

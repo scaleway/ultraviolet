@@ -226,9 +226,7 @@ const Colors = () => {
 
                     const gradient = gradientBackgroundColorsType[
                       background as keyof typeof gradientBackgroundColorsType
-                    ]
-                      // oxlint-disable: to fix
-                      .replace(/;$/, '')
+                    ].replace(/;$/, '')
 
                     return (
                       <Stack key={background}>

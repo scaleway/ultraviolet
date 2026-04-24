@@ -48,7 +48,6 @@ describe('barChart', () => {
   test('renders correctly with negative values', () =>
     shouldMatchSnapshot(<BarChart data={barChartPositiveNegativeData} />))
 
-  // oxlint-disable vitest/no-disabled-tests: to fix
   test.skip('renders correctly with custom tooltip format', async () => {
     const { container } = renderWithTheme(
       <BarChart

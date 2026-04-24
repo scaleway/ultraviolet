@@ -51,10 +51,7 @@ export const Disabled: StoryFn<typeof ContentCard> = args => (
           direction="column"
           disabled
           image={illustration}
-          onClick={
-            // oxlint-disable-next-line eslint/no-console
-            () => console.log('ok')
-          }
+          onClick={() => console.log('ok')}
           subtitle="New update"
           title="Create your first function"
         />

@@ -51,7 +51,6 @@ export const Meter = ({
   const text = strength[value]?.text ?? strength[0].text
 
   return (
-    // oxlint-disable jsx_a11y/no-noninteractive-element-to-interactive-role: style issue
     <div
       aria-labelledby="meter-label"
       aria-live="polite"

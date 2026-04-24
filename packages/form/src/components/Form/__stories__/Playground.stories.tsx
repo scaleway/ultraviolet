@@ -239,7 +239,6 @@ export const Playground: StoryFn<typeof Form> = () => {
 
 Playground.args = {
   onSubmit: values => {
-    // oxlint-disable-next-line eslint/no-console
     console.log('Submit', values)
   },
 }

@@ -1,4 +1,3 @@
-// oxlint-disablestyle/noDoneCallback: test ok
 import { describe, expect, test } from 'vitest'
 
 import { isJSONString } from '../isJson'

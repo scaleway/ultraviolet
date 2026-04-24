@@ -253,8 +253,6 @@ const BaseExpandableCard = forwardRef(
           <div className={expandableCardStyle.content}>{children}</div>
         </details>
         {draggable && index === 0 ? (
-          // oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop
-          // oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop
           <div
             className={expandableCardStyle.dropableArea}
             data-first
@@ -267,8 +265,6 @@ const BaseExpandableCard = forwardRef(
           />
         ) : null}
         {draggable ? (
-          // oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop
-          // oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop
           <div
             className={expandableCardStyle.dropableArea}
             data-testid={`${value}-dropable-area`}

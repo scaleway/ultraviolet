@@ -1,5 +1,3 @@
-// oxlint-disable jsx_a11y/aria-role: to fix
-
 'use client'
 
 import { useTheme } from '@ultraviolet/themes'

@@ -1,5 +1,4 @@
 // oxlint-disable import/no-namespace
-// oxlint-disablecorrectness/useImageSize: should be fix
 
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
@@ -10,7 +9,6 @@ import * as variousIllustrations from '@ultraviolet/illustrations/various'
 import { Button, Expandable, Snippet, Stack, Text } from '@ultraviolet/ui'
 import { useReducer } from 'react'
 
-// import * as assets from '../index'
 import {
   buttonStory,
   cardStory,

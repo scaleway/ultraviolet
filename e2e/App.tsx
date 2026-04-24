@@ -1,4 +1,3 @@
-// oxlint-disable import/no-unassigned-import
 import '@ultraviolet/fonts/fonts.css'
 import '@ultraviolet/themes/global'
 import '@ultraviolet/ui/styles'
@@ -27,7 +26,6 @@ const pagesToRender = Object.keys(modules)
     path.includes('render.tsx')
       ? {
           Component: lazy(
-            // oxlint-disable-next-line typescript/no-unsafe-return
             async () => import(`./tests/${path?.split('/')[2]}/render.tsx`),
           ),
           name: path.replace('.tsx', ''),

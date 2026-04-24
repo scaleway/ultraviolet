@@ -7,7 +7,6 @@ import logoLight from './assets/logo-light.png'
 
 import type lightBrandImage from './assets/scaleway-text-light.png'
 
-// oxlint-disable no-constant-condition: to fix avoid enum !!
 enum Base {
   LIGHT = 'light',
   DARK = 'dark',

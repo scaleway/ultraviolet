@@ -114,19 +114,17 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
             <Stack direction="column">
               {offer.id}
               <Stack direction="row" gap={0.5}>
-                {Array.from({ length: offer.score }).map((_, i) => (
+                {Array.from({ length: offer.score }).map(() => (
                   <LeafIcon
-                    // oxlint-disable-next-line react/no-array-index-key
-                    key={`green-${i}`}
+                    key={`green-${offer.id}`}
                     sentiment="success"
                     size="small"
                   />
                 ))}
-                {Array.from({ length: 3 - offer.score }).map((_, i) => (
+                {Array.from({ length: 3 - offer.score }).map(() => (
                   <LeafIcon
                     disabled
-                    // oxlint-disable-next-line react/no-array-index-key
-                    key={`grey-${i}`}
+                    key={`grey-${offer.id}`}
                     sentiment="neutral"
                     size="small"
                   />

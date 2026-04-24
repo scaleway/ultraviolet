@@ -1,5 +1,3 @@
-// oxlint-disable a11y/useAriaPropsSupportedByRole: to fix
-
 'use client'
 
 import { cn } from '@ultraviolet/utils'

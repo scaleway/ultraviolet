@@ -44,7 +44,6 @@ const showContent = (
 const onClickPinUnpin: ComponentProps<
   typeof Navigation.Item
 >['onClickPinUnpin'] = ({ totalPinned }) => {
-  // oxlint-disable-next-line eslint/no-console
   console.log('total pinned items:', totalPinned)
 }
 export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
@@ -64,7 +63,6 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
 
   const saveExpandedInLocalStorage = useCallback((localExpanded: boolean) => {
     setExpanded(localExpanded)
-    // oxlint-disable-next-line eslint/no-console
     console.log(
       `expanded state with value ${localExpanded} saved in local storage`,
     )
@@ -72,13 +70,11 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
   }, [])
 
   useEffect(() => {
-    // oxlint-disable-next-line eslint/no-console
     console.log('pinned items:', pinnedItems)
     localStorage.setItem('pinnedItems', pinnedItems.toString())
   }, [pinnedItems])
 
   const saveWidthInLocalStorage = useCallback((width: number) => {
-    // oxlint-disable-next-line eslint/no-console
     console.log(`width of ${width} saved in local storage`)
     localStorage.setItem('width', width.toString())
   }, [])

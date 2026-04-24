@@ -50,7 +50,6 @@ export const Selectable: StoryFn<typeof Table> = args => {
               </Text>
               <Button
                 onClick={() => {
-                  // oxlint-disable-next-line eslint/no-alert
                   alert('elements could be deleted')
                   unselectAll()
                 }}

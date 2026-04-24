@@ -3,7 +3,6 @@
 // oxlint-disable eslint/no-console
 // oxlint-disable eslint/max-statements
 // oxlint-disable import/no-nodejs-modules
-// oxlint-disable @typescript-eslint/no-non-null-assertion: error
 
 import { createHash } from 'node:crypto'
 import fs, {

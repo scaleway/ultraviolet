@@ -1,5 +1,3 @@
-// oxlint-disable: to fix
-
 const fontWeightMap = {
   Medium: 500,
   Regular: 400,
