@@ -6,6 +6,16 @@ export default {
   component: Tabs,
   subcomponents: { 'Tabs.Tab': Tabs.Tab },
   title: 'UI/Navigation/Tabs',
+  parameters: {
+    a11y: 'partial',
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+  },
 } as Meta<typeof Tabs>
 
 export { Playground } from './Playground.stories'

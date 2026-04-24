@@ -6,6 +6,14 @@ export default {
   component: LineChart,
   title: 'UI/Data Display/Chart/LineChart',
   parameters: {
+    a11y: false,
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
     experimental: true,
   },
   tags: ['experimental'],

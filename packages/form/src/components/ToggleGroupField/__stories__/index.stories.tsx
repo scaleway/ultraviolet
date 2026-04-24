@@ -76,6 +76,16 @@ export default {
     name: 'options',
     legend: 'Choose options:',
   },
+  parameters: {
+    a11y: false,
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+  },
 } as Meta<typeof ToggleGroupField>
 
 export { Playground } from './Playground.stories'

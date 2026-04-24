@@ -12,6 +12,16 @@ export default {
       </div>
     ),
   ],
+  parameters: {
+    a11y: 'partial',
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+  },
 } as Meta
 
 export { Playground } from './Playground.stories'

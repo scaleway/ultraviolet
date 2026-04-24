@@ -1,45 +1,50 @@
 import { linkTo } from '@storybook/addon-links'
 import { Button, Stack, Table, Text } from '@ultraviolet/ui'
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 
-import * as components from '../../../../packages/ui/src/components'
+import {
+  A11Y_LEVELS,
+  getComponentAuditCategories,
+  findA11yStatus,
+} from '../AccessibilityAudit/constants'
+import {
+  storiesCompositionsModules,
+  storiesComponentModules,
+} from '../constants'
 
-const findComponentState = (parameters: {
-  deprecated?: boolean
-  experimental?: boolean
-}) => {
-  if (parameters?.deprecated) {
-    return '⛔ Deprecated'
-  }
-
-  if (parameters?.experimental) {
-    return '🧪 Experimental'
-  }
-
-  return '✅ Stable'
-}
-
-const componentsNames = Object.keys(components)
+import { COMPONENT_STATES, findComponentState } from './constants'
 
 const ComponentState = () => {
+  /**
+   * State to hold dynamically loaded component story modules
+   * Contains settled promises with component metadata (title, parameters, etc.)
+   */
   const [modules, setModules] = useState<
     | PromiseSettledResult<{
-        default: { title: string; parameters: { deprecated: boolean } }
+        default: {
+          title: string
+          parameters: { deprecated: boolean; a11y: boolean }
+        }
       }>[]
     | null
   >(null)
 
+  /**
+   * Effect to dynamically import all component story files
+   * Loads index.stories.tsx for each component in the components directory
+   * Uses Promise.allSettled to handle potential import failures gracefully
+   */
   useEffect(() => {
-    Promise.allSettled(
-      componentsNames.map(
-        async name =>
-          // oxlint-disable-next-line typescript/no-unsafe-return
-          import(
-            `../../../../packages/ui/src/components/${name}/__stories__/index.stories.tsx`
-          ),
-      ),
-    )
+    /**
+     * Import all component story files in parallel
+     * Path pattern: ../../../../packages/ui/src/components/{ComponentName}/__stories__/index.stories.tsx
+     */
+    Promise.allSettled([
+      ...storiesComponentModules,
+      ...storiesCompositionsModules,
+    ])
       .then(localModules => {
+        console.debug(localModules)
         setModules(localModules)
       })
       .catch((error: unknown) => {
@@ -59,52 +64,53 @@ const ComponentState = () => {
       </Text>
 
       <Stack gap={3}>
-        <Text as="h2" variant="heading">
-          Definition of states
+        <Text as="h2" variant="headingLarge">
+          Definition of states:
+        </Text>
+        {Object.entries(COMPONENT_STATES).map(
+          ([key, { icon, label, description }]) => (
+            <Stack gap={1} key={key} justifyContent="center">
+              <Text as="h3" variant="headingSmall">
+                {label} {icon}
+              </Text>
+              {description}
+            </Stack>
+          ),
+        )}
+      </Stack>
+      <Stack gap={3}>
+        <Text as="h2" variant="headingLarge">
+          Accessibility levels:
         </Text>
         <Stack gap={1}>
-          <Text as="h3" variant="headingSmall">
-            ✅ Stable
-          </Text>
           <Text as="p" variant="body">
-            Stable state means the component is ready for production. If a
-            breaking change occurs it will generate a major version.
+            Accessibility levels are an additional status that can be added to
+            components to track their accessibility compliance. A component can
+            have both a state (Stable, Experimental, Deprecated) and an
+            accessibility level.
           </Text>
         </Stack>
+        {Object.entries(A11Y_LEVELS).map(
+          ([key, { icon, label, description }]) => (
+            <Stack gap={1} key={key} justifyContent="center">
+              <Text as="h3" variant="headingSmall">
+                {label} {icon}
+              </Text>
+              {description}
+            </Stack>
+          ),
+        )}
+      </Stack>
 
-        <Stack gap={1}>
-          <Text as="h3" variant="headingSmall">
-            🧪 Experimental
-          </Text>
-          <Text as="p" variant="body">
-            Experimental state means the component is being tested and props
-            might change in the future. The component itself might even
-            disappear if we don&apos;t find a real purpose for it. This state is
-            also used for new version of a component (ex: Button v2) that we
-            want to test before replacing the old one. In any case{' '}
-            <Text as="span" variant="bodyStronger">
-              this state means the component is not ready for production
-            </Text>
-            .
-          </Text>
-          <Text as="p" variant="body">
-            An experimental component won&apos;t generate major version when
-            having a breaking change.
-          </Text>
-        </Stack>
-
-        <Stack gap={1}>
-          <Text as="h3" variant="headingSmall">
-            ⛔ Deprecated
-          </Text>
-          <Text as="p" variant="body">
-            Deprecated state means the component is not recommended for use and
-            will be removed in the future. When seeing a component you use being
-            deprecated you should start migrating to another component as soon
-            as possible. To know what to use instead you can check the story of
-            the deprecated component.
-          </Text>
-        </Stack>
+      <Stack gap={3}>
+        <Text as="h2" variant="headingLarge">
+          Accessibility Audit Checklist
+        </Text>
+        <Text as="p" variant="body">
+          For components not yet compliant, use this checklist to verify
+          accessibility criteria. Each category contains specific WCAG criteria
+          to validate during the audit process.
+        </Text>
       </Stack>
       <Stack gap={3}>
         <Text as="h2" variant="heading">
@@ -116,33 +122,45 @@ const ComponentState = () => {
             <Text as="span" variant="bodyStronger">
               Number of components
             </Text>
-            : {componentsNames.length}
+            : {modules?.length}
           </Text>
           <Table
             columns={[
               { label: 'Name' },
               { label: 'Category' },
               { label: 'State' },
+              { label: 'Accessibility' },
+              { label: 'Audit a11y' },
             ]}
             loading={!modules}
             stripped
           >
             <Table.Body>
+              {/* Map through loaded modules and render each component's information */}
               {modules?.map(module => {
                 if (module.status === 'fulfilled') {
-                  const desctructuredName: string[] =
-                    module.value.default.title
-                      .replace('Components/', '')
-                      .split('/') ?? []
+                  /**
+                   * Parse component title to extract category and name
+                   * Title format: 'UI/Category/ComponentName' or 'UI/Category/SubCategory/ComponentName'
+                   */
+                  const destructuredName: string[] =
+                    module.value.default.title.split('/') ?? []
 
-                  const componentCategory = desctructuredName[1]
-                    ? desctructuredName[0]
-                    : 'Others'
-                  const componentName = desctructuredName[1]
-                    ? desctructuredName[1]
-                    : desctructuredName[0]
+                  // Title format: 'UI/Category/ComponentName' or 'UI/Category/SubCategory/ComponentName'
+                  // We want the last part as component name and the rest as category
+                  const componentCategory = destructuredName
+                    .slice(1, -1)
+                    .join('/')
+                  const componentName = destructuredName.at(-1)
 
+                  /** Get the lifecycle state (deprecated/experimental/stable) */
                   const componentState = findComponentState(
+                    module.value.default.parameters,
+                  )
+                  const a11yStatus = findA11yStatus(
+                    module.value.default.parameters,
+                  )
+                  const auditCategories = getComponentAuditCategories(
                     module.value.default.parameters,
                   )
 
@@ -164,13 +182,40 @@ const ComponentState = () => {
                       </Table.Cell>
                       <Table.Cell>
                         <Text as="span" variant="body">
-                          {componentCategory}
+                          {componentCategory || 'Others'}
                         </Text>
                       </Table.Cell>
                       <Table.Cell>
                         <Text as="span" variant="body">
-                          {componentState}
+                          {componentState.icon} {componentState.label}
                         </Text>
+                      </Table.Cell>
+                      <Table.Cell>
+                        <Text as="span" variant="body">
+                          {a11yStatus ? (
+                            <>
+                              {a11yStatus.icon}
+                              <Text as="span" variant="body">
+                                {a11yStatus.label}
+                              </Text>
+                            </>
+                          ) : (
+                            '-'
+                          )}
+                        </Text>
+                      </Table.Cell>
+                      <Table.Cell>
+                        <Stack direction="row" gap={1}>
+                          {auditCategories.map(category => (
+                            <Text
+                              as="span"
+                              key={category.id}
+                              variant="bodySmall"
+                            >
+                              {category.completed ? '●' : '○'}
+                            </Text>
+                          ))}
+                        </Stack>
                       </Table.Cell>
                     </Table.Row>
                   )

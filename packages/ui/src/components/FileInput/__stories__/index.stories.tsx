@@ -11,6 +11,16 @@ export default {
   },
 
   title: 'UI/Data Entry/FileInput',
+  parameters: {
+    a11y: 'partial',
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+  },
 } as Meta<typeof FileInput>
 
 export { Playground } from './Playground.stories'

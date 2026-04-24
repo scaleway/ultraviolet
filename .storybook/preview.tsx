@@ -134,7 +134,6 @@ const decorators: Decorator[] = [
   (Story, args) => {
     const { context } = args
     const { theme: globalTheme } = context.globals
-    //oxlint-disable-next-line typescript/no-unsafe-type-assertion
     const theme = (globalTheme as 'light' | 'dark' | undefined) || 'light'
 
     const { background, textColor } = getThemeColor(theme)
