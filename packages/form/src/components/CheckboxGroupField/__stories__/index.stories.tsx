@@ -82,6 +82,16 @@ export default {
     name: 'conditions',
     legend: 'Conditions',
   },
+  parameters: {
+    a11y: false,
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+  },
 } as Meta<typeof CheckboxGroupField>
 
 export { Playground } from './Playground.stories'

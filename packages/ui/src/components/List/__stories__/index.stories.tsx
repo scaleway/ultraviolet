@@ -9,6 +9,16 @@ export default {
     'List.Row': List.Row,
     'List.Cell': List.Cell,
   },
+  parameters: {
+    a11y: 'partial',
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+  },
 } as Meta<typeof List>
 
 export { Playground } from './Playground.stories'

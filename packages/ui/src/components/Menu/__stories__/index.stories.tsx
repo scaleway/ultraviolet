@@ -12,6 +12,15 @@ export default {
     ),
   ],
   parameters: {
+    a11y: 'partial',
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+
     docs: {
       description: {
         component:

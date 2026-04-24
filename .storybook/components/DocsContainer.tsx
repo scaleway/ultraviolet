@@ -18,6 +18,8 @@ import '../../packages/themes/dist/themes.css'
 import type { DocsContainerProps as BaseContainerProps } from '@storybook/addon-docs/blocks'
 import type { ReactNode } from 'react'
 
+type A11yLevel = 'partial' | 'compliant' | 'certified'
+
 type ExtraProps = {
   /**
    * When a component is deprecated we can set this property to true
@@ -39,6 +41,17 @@ type ExtraProps = {
    * This prop can be used to define if a component is being tested and not prod ready
    */
   experimental?: boolean
+  /**
+   * This prop can be used to define the accessibility compliance level
+   */
+  a11y?: boolean | A11yLevel
+  audit?: {
+    'keyboard-focus': boolean
+    'contrast-visuals': boolean
+    'semantics-screen-reader': boolean
+    'pointer-touch': boolean
+    'specific-patterns': boolean
+  }
 }
 
 type DocsContainerProps = BaseContainerProps & {
@@ -53,7 +66,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
   const scope = context?.attachedCSFFiles?.values()?.next()?.value?.meta
   const parameters = scope?.parameters
 
-  const isPlusLibrary = scope?.title?.includes('Plus/') ?? false
+  const isPlusLibrary = scope?.title?.includes('Compositions/') ?? false
 
   if (
     import.meta.env['STORYBOOK_ENVIRONMENT'] === 'production' &&
@@ -91,6 +104,8 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
           <BaseContainer context={context}>
             {isValidElement<ExtraProps>(children)
               ? cloneElement(children, {
+                  a11y: parameters?.a11y,
+                  audit: parameters?.audit,
                   deprecated: parameters?.deprecated,
                   deprecatedReason: parameters?.deprecatedReason,
                   experimental: isPlusLibrary ? true : parameters?.experimental,

@@ -13,6 +13,16 @@ export default {
   ],
 
   title: 'UI/Data Entry/SelectInput',
+  parameters: {
+    a11y: 'partial',
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+  },
 } as Meta<typeof SelectInput>
 
 export { Playground } from './Playground.stories'
