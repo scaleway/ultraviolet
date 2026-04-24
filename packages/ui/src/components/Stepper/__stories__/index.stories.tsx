@@ -9,6 +9,9 @@ export default {
     'Stepper.Step': Stepper.Step,
   },
   title: 'UI/Navigation/Stepper',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta
 
 export { Playground } from './Playground.stories'

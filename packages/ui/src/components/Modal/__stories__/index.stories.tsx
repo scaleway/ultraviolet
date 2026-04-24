@@ -5,6 +5,9 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: Modal,
   title: 'UI/Overlay/Modal',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof Modal>
 
 export { Playground } from './Playground.stories'

@@ -13,6 +13,9 @@ export default {
     ),
   ],
   title: 'UI/Other/Key',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof Key>
 
 export { Playground } from './Playground.stories'

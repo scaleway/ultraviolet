@@ -5,6 +5,9 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: Radio,
   title: 'UI/Data Entry/Radio',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof Radio>
 
 export { Playground } from './Playground.stories'

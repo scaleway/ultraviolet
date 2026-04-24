@@ -5,6 +5,9 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: DateInput,
   title: 'UI/Data Entry/DateInput',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta
 export { Playground } from './Playground.stories'
 export { Size } from './Size.stories'

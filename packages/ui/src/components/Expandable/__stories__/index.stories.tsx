@@ -5,6 +5,9 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: Expandable,
   title: 'UI/Action/Expandable',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta
 
 export { Playground } from './Playground.stories'

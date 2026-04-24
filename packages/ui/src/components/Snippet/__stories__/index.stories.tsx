@@ -13,6 +13,9 @@ export default {
     ),
   ],
   title: 'UI/Data Display/Snippet',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof Snippet>
 
 export { Playground } from './Playground.stories'

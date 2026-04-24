@@ -5,6 +5,9 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: BarStack,
   title: 'UI/Data Display/BarStack',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof BarStack>
 
 export { Playground } from './Playground.stories'

@@ -16,6 +16,9 @@ export default {
     ),
   ],
   title: 'UI/Data Entry/NumberInput',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof NumberInput>
 
 export { Playground } from './Playground.stories'

@@ -8,6 +8,9 @@ export default {
   subcomponents: {
     'ExpandableCard.Title': ExpandableCard.Title,
   },
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta
 
 export { Playground } from './Playground.stories'

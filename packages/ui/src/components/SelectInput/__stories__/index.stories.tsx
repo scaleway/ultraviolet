@@ -13,6 +13,9 @@ export default {
   ],
 
   title: 'UI/Data Entry/SelectInput',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof SelectInput>
 
 export { Playground } from './Playground.stories'

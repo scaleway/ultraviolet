@@ -12,6 +12,8 @@ export default {
     ),
   ],
   parameters: {
+    a11y: 'partial',
+
     docs: {
       description: {
         component:

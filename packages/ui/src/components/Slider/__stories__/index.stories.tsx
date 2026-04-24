@@ -5,6 +5,9 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: Slider,
   title: 'UI/Data Entry/Slider',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof Slider>
 
 export { Playground } from './Playground.stories'

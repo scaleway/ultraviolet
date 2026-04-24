@@ -12,6 +12,9 @@ export default {
       </div>
     ),
   ],
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta
 
 export { Playground } from './Playground.stories'

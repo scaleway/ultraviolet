@@ -5,6 +5,9 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: SearchInput,
   title: 'UI/Data Entry/SearchInput',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof SearchInput>
 
 export { Playground } from './Playground.stories'

@@ -12,6 +12,9 @@ export default {
     ),
   ],
   title: 'UI/Data Display/TagList',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta
 
 export { Playground } from './Playground.stories'
