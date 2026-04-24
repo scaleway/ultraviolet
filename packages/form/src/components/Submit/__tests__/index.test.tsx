@@ -35,14 +35,8 @@ describe('submit', () => {
           }),
       },
     )
-    await userEvent.click(
-      // eslint-disable-next-line testing-library/no-node-access
-      screen.getByText('Test').closest('button')!,
-    )
-    expect(
-      // eslint-disable-next-line testing-library/no-node-access
-      screen.getByText('Test').closest('button')!,
-    ).toBeDisabled()
+    await userEvent.click(screen.getByText('Test').closest('button')!)
+    expect(screen.getByText('Test').closest('button')!).toBeDisabled()
 
     expect(asFragment()).toMatchSnapshot()
   })

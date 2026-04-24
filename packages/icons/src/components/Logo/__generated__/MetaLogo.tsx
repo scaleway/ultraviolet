@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const MetaLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="MetaLogo">
     <g clipPath="url(#a)">
       <path

@@ -1,5 +1,3 @@
-// oxlint-disable import/no-namespace
-
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { MinusIcon } from '@ultraviolet/icons/MinusIcon'

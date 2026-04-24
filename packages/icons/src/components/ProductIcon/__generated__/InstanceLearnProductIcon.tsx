@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const InstanceLearnProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="InstanceLearnProductIcon">
     <g className="Instance-Learn">
       <g className=".Square">

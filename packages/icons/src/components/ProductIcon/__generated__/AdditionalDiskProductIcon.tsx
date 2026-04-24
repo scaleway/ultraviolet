@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const AdditionalDiskProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="AdditionalDiskProductIcon">
     <g className="Additional-Disk">
       <g className="Additional-Disk-icon" clipPath="url(#a)">

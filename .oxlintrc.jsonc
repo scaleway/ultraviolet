@@ -6,7 +6,7 @@
     "./node_modules/@scaleway/oxlint-config/configs/typescript.json",
   ],
   "options": {
-    "reportUnusedDisableDirectives": "allow",
+    "reportUnusedDisableDirectives": "error",
     "typeAware": true,
     "typeCheck": false,
   },

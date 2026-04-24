@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const SdkGoProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="SdkGoProductIcon">
     <g className="SDK-Go">
       <g className="SDK-Go-icon" clipPath="url(#a)">

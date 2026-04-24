@@ -87,7 +87,6 @@ describe('lineChart', () => {
     const { asFragment } = renderWithTheme(
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
     )
-    // eslint-disable-next-line testing-library/no-node-access
     const line = document.querySelector('svg[role="img"] g path')
     if (!line) {
       throw new Error('LineChart line path not found')

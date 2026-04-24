@@ -10,7 +10,6 @@ export const Image = (props: ComponentProps<'img'>) => (
     alt={props.alt}
     height={props.height}
     width={props.width}
-    // eslint-disable-next-line react/jsx-props-no-spreading
     {...props}
     className={cn(props.className, estimateCostStyle.image)}
   />

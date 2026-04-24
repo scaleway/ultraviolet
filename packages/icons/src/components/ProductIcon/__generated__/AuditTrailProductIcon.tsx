@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const AuditTrailProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="AuditTrailProductIcon">
     <g className="audit-trail">
       <g className="fillWeak">

@@ -60,7 +60,6 @@ describe('barChart', () => {
       />,
     )
 
-    // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
     const bar = container.querySelector('svg[role="img"] g line')
     if (!bar) {
       throw new Error('BarChart column not found')

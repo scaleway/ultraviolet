@@ -4,7 +4,6 @@ import { jsonLdScriptProps } from 'react-schemaorg'
 import type { CreativeWork } from 'schema-dts'
 
 class MyDocument extends Document {
-  // eslint-disable-next-line class-methods-use-this
   override render() {
     return (
       <Html>

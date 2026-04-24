@@ -76,7 +76,6 @@ export const Responsive: StoryFn = props => {
             <div
               className={divWithBackground}
               data-sentiment={sentiments[idx]}
-              // oxlint-disable-next-line react/no-array-index-key
               key={idx}
             >
               {col}
@@ -104,7 +103,6 @@ export const Responsive: StoryFn = props => {
             <div
               className={divWithBackground}
               data-sentiment={sentiments[idx]}
-              // oxlint-disable-next-line react/no-array-index-key
               key={idx}
             >
               {col}

@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const MongoDbProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="MongoDbProductIcon">
     <g className="Managed-Database-Document">
       <g className=".Square">

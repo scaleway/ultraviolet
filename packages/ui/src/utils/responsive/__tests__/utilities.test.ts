@@ -1,5 +1,3 @@
-/* eslint-disable eslint-comments/disable-enable-pair */
-
 import { describe, expect, test } from 'vitest'
 
 import { screens } from '../../../theme'

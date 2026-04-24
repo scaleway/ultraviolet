@@ -122,7 +122,6 @@ describe('treeMapChart', () => {
       consoleLightTheme,
     )
 
-    // eslint-disable-next-line testing-library/no-node-access, testing-library/no-container
     const chartContainer = container.querySelector('[style*="height"]')
     expect(chartContainer).toHaveStyle({ height: '400px' })
   })
@@ -142,7 +141,6 @@ describe('treeMapChart', () => {
     )
 
     // Find the first node element (treemap node)
-    // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
     const node = container.querySelector('[data-testid^="node."]')
     expect(node).toBeInTheDocument()
 
@@ -152,10 +150,7 @@ describe('treeMapChart', () => {
     // Verify tooltip function was called
     expect(tooltipFunction).toHaveBeenCalled()
     expect(tooltipFunction).toHaveBeenCalledWith(
-      expect.objectContaining(
-        // eslint-disable-next-line testing-library/no-node-access
-        treeMapChartSimpleData.children[0],
-      ),
+      expect.objectContaining(treeMapChartSimpleData.children[0]),
     )
 
     // Check that tooltip is visible with custom content

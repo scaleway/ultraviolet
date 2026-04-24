@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const TableauLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="TableauLogo">
     <g clipPath="url(#clip0_110_655540)">
       <path
