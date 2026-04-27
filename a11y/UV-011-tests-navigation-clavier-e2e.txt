@@ -1,0 +1,79 @@
+Summary: Tests E2E de navigation clavier
+Issue Type: Story
+Priority: Medium
+Labels: a11y, e2e, keyboard, playwright
+
+Description:
+Créer des tests E2E complets pour la navigation clavier sur tous les composants interactifs.
+
+Contexte:
+- Navigation clavier essentielle pour les utilisateurs power users
+- Playwright permet de tester la navigation clavier
+- Besoin de tests systématiques
+
+Tâches:
+[ ] Tester Tab/Shift+Tab sur tous les composants
+[ ] Tester les raccourcis clavier (Esc, Enter, Space)
+[ ] Tester les focus states visibles
+[ ] Créer des fixtures de tests réutilisables
+[ ] Documenter les patterns de test
+[ ] Intégrer dans la CI
+
+Fixtures à créer (e2e/fixtures/keyboard.ts):
+```typescript
+export const keyboardTest = async ({ page }) => {
+  return {
+    tab: () => page.keyboard.press('Tab'),
+    shiftTab: () => page.keyboard.press('Shift+Tab'),
+    enter: () => page.keyboard.press('Enter'),
+    space: () => page.keyboard.press('Space'),
+    esc: () => page.keyboard.press('Escape'),
+    arrows: (direction: 'up' | 'down' | 'left' | 'right') => 
+      page.keyboard.press(`Arrow${direction}`),
+    getFocusedElement: () => page.evaluate(() => 
+      document.activeElement?.tagName
+    ),
+  }
+}
+```
+
+Composants à tester:
+[ ] Button - Tab, Enter, Space
+[ ] Modal - Tab, Shift+Tab, Esc
+[ ] SelectInput - Tab, Enter, Space, Arrow keys
+[ ] Tabs - Arrow keys, Home, End
+[ ] Navigation - Arrow keys, Home, End
+[ ] ExpandableCard - Enter, Space
+[ ] Carousel - Arrow keys
+[ ] Menu/Dropdown - Arrow keys, Esc
+
+Tests à implémenter:
+```typescript
+test('Modal - Keyboard navigation', async ({ page }) => {
+  const kb = keyboardTest(page)
+  
+  // Open modal
+  await page.click('[data-testid="open-modal"]')
+  
+  // Focus trapped in modal
+  await kb.tab()
+  await expect(page.locator('[role="dialog"]')).toBeFocused()
+  
+  // Close with Esc
+  await kb.esc()
+  await expect(page.locator('[role="dialog"]')).not.toBeVisible()
+})
+```
+
+Critères d'acceptation:
+- [ ] Fixtures keyboardTest créées
+- [ ] Tests pour 10+ composants
+- [ ] Focus states testés
+- [ ] Raccourcis clavier testés
+- [ ] Tests passent en CI
+- [ ] Documentation des patterns
+
+Estimation: 10h
+Assignee: Unassigned
+Reporter: A11y Audit Team
+Dependencies: UV-010

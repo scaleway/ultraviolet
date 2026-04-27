@@ -1,0 +1,134 @@
+Summary: Audit régulier automatisé
+Issue Type: Story
+Priority: Low
+Labels: a11y, automation, ci-cd, monitoring
+
+Description:
+Planifier des audits d'accessibilité réguliers et automatisés pour détecter les régressions.
+
+Contexte:
+- Un audit ponctuel ne suffit pas
+- Les nouvelles features peuvent introduire des régressions
+- Besoin de monitoring continu
+
+Tâches:
+[ ] GitHub Action hebdomadaire
+[ ] Scan de la production (storybook statique)
+[ ] Rapport automatique
+[ ] Création automatique de tickets
+[ ] Notification Slack/Email si régression
+[ ] Review mensuelle des metrics
+
+GitHub Action (.github/workflows/a11y-weekly.yml):
+```yaml
+name: Weekly A11y Audit
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # Every Monday at 9am UTC
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  a11y-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup
+        run: |
+          pnpm install
+          pnpm build
+          pnpm build:storybook
+      - name: Start Storybook
+        run: pnpm http-server ./storybook-static -p 6006 &
+      - name: Run A11y Audit
+        run: pnpm tsx utils/scripts/a11y-full-scan.ts
+      - name: Generate Report
+        run: pnpm tsx utils/scripts/generate-a11y-report.ts
+      - name: Upload Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: a11y-weekly-report
+          path: a11y-report.html
+      - name: Check for Regressions
+        run: pnpm tsx utils/scripts/check-a11y-regressions.ts
+      - name: Create Issue if Regression
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🚨 A11y Regression Detected',
+              body: 'Weekly audit found new violations...',
+              labels: ['a11y', 'regression', 'critical']
+            })
+```
+
+Scripts à créer:
+1. utils/scripts/a11y-full-scan.ts
+   - Scan tous les composants
+   - Scan Storybook stories
+   - Scan examples en production
+
+2. utils/scripts/generate-a11y-report.ts
+   - Génère rapport HTML
+   - Génère rapport JSON
+   - Compare avec historique
+
+3. utils/scripts/check-a11y-regressions.ts
+   - Compare avec semaine précédente
+   - Détecte nouvelles violations
+   - Échoue si régression critique
+
+Rapport automatique:
+```markdown
+# Weekly A11y Report - 2024-W15
+
+## Summary
+- Total Violations: 42 (↓ 3 from last week)
+- New Violations: 2
+- Fixed Violations: 5
+
+## Critical Issues
+None ✓
+
+## New Violations
+1. Component: Carousel
+   Rule: keyboard-navigation
+   Severity: Serious
+   
+2. Component: TagList
+   Rule: aria-labels
+   Severity: Moderate
+
+## Trend
+[Graph showing 8-week trend]
+
+## Action Items
+- [ ] Fix Carousel keyboard navigation (assigned to @dev1)
+- [ ] Add aria-labels to TagList (assigned to @dev2)
+```
+
+Notification (optionnel):
+```typescript
+const sendNotification = (report) => {
+  if (report.newViolations.length > 0) {
+    // Send Slack message
+    // Send email
+    // Create GitHub issue
+  }
+}
+```
+
+Critères d'acceptation:
+- [ ] GitHub Action hebdomadaire configurée
+- [ ] Scripts de scan fonctionnels
+- [ ] Rapports générés automatiquement
+- [ ] Tickets créés automatiquement si régression
+- [ ] Historique conservé (min 3 mois)
+- [ ] Process documenté
+
+Estimation: 10h
+Assignee: Unassigned
+Reporter: A11y Audit Team
+Dependencies: UV-004, UV-005, UV-016

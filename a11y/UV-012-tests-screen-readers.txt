@@ -1,0 +1,88 @@
+Summary: Tests Screen Readers (NVDA/JAWS/VoiceOver)
+Issue Type: Story
+Priority: Low
+Labels: a11y, screen-reader, e2e, testing
+
+Description:
+Créer des tests et documentation pour la compatibilité avec les lecteurs d'écran.
+
+Contexte:
+- Tests screen readers complexes à automatiser
+- Nécessite des tests manuels principalement
+- Documentation cruciale pour les développeurs
+
+Tâches:
+[ ] Créer des scénarios de tests screen reader
+[ ] Tester les announcements (aria-live)
+[ ] Vérifier le reading order
+[ ] Documenter les bonnes pratiques
+[ ] Créer une checklist de validation
+[ ] Enregistrer des sessions de test (vidéo)
+
+Outils à utiliser:
+- NVDA (Windows, gratuit)
+- JAWS (Windows, payant)
+- VoiceOver (macOS, intégré)
+- Narrator (Windows, intégré)
+
+Scénarios de test:
+1. Navigation principale
+   - [ ] Landing sur la page
+   - [ ] Navigation au clavier
+   - [ ] Compréhension de la structure
+   
+2. Formulaires
+   - [ ] Labels annoncés
+   - [ ] Erreurs annoncées
+   - [ ] Validation annoncée
+   
+3. Composants dynamiques
+   - [ ] Modal ouverte/fermée annoncée
+   - [ ] Tabs changées annoncées
+   - [ ] Notifications annoncées
+
+4. Tables et données
+   - [ ] Headers de colonne annoncés
+   - [ ] Données lues correctement
+   - [ ] Pagination annoncée
+
+Documentation à créer:
+```markdown
+# Screen Reader Testing Guide
+
+## Quick Start
+- NVDA: Ctrl+Alt+N
+- VoiceOver: Cmd+F5
+- JAWS: Insert+F5
+
+## Key Commands
+### NVDA
+- Navigate: Tab, Arrow keys
+- Read all: CapsLock+Down
+- Stop speech: Ctrl
+
+### VoiceOver
+- Navigate: VO+Arrow keys
+- Read all: VO+A
+- Stop speech: Ctrl
+
+## Testing Checklist
+[ ] Page title announced
+[ ] Main landmarks announced
+[ ] Form labels announced
+[ ] Error messages announced
+[ ] Dynamic changes announced
+[ ] Focus order logical
+```
+
+Critères d'acceptation:
+- [ ] Guide de testing screen reader créé
+- [ ] Checklist de validation documentée
+- [ ] 5+ composants testés manuellement
+- [ ] Vidéos de démo (optionnel)
+- [ ] Documentation dans CONTRIBUTING.md
+
+Estimation: 8h
+Assignee: Unassigned
+Reporter: A11y Audit Team
+Dependencies: UV-006, UV-009
