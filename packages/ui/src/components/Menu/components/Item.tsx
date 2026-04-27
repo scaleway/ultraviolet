@@ -40,6 +40,7 @@ type ItemProps = {
   searchText?: string
   style?: CSSProperties
   rightComponent?: ReactNode
+  hideOnClickItem?: boolean | undefined
 }
 
 const focusFistElement = (
@@ -71,11 +72,12 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
       'data-testid': dataTestId,
       style,
       rightComponent,
+      hideOnClickItem,
     },
     ref,
   ) => {
     const {
-      hideOnClickItem,
+      hideOnClickItem: menuHideOnClickItem,
       setIsVisible,
       isVisible,
       menuRef,
@@ -91,13 +93,13 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
           return undefined
         }
         onClick?.(event)
-        if (hideOnClickItem) {
+        if (hideOnClickItem || menuHideOnClickItem) {
           setIsVisible(false)
         }
 
         return undefined
       },
-      [disabled, hideOnClickItem, onClick, setIsVisible],
+      [disabled, hideOnClickItem, menuHideOnClickItem, onClick, setIsVisible],
     )
 
     const handleKeyDown = (
@@ -212,7 +214,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
                 event.preventDefault()
               }
               onClick?.(event)
-              if (hideOnClickItem) {
+              if (hideOnClickItem || menuHideOnClickItem) {
                 setIsVisible(false)
               }
             }}
