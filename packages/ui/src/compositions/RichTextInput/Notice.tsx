@@ -20,7 +20,7 @@ export const Notice = ({
   sentiment?: 'danger' | 'success' | 'neutral'
   id?: string
 }) => (
-  <div aria-describedby={id} id={id} role="status">
+  <div id={id} role="status">
     <Row gap="1" templateColumns="minmax(0, 1fr) min-content">
       {error || success || typeof helper === 'string' ? (
         <Text
