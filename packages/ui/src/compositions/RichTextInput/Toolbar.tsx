@@ -51,6 +51,17 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
   const runCommand = useEditorEventCallback((view, command: EditorCommand) => {
     command(view.state, view.dispatch)
   })
+  const runCommandOnEnter = (
+    event: React.KeyboardEvent<HTMLButtonElement>,
+    command: EditorCommand,
+  ) => {
+    if (event.key !== 'Enter') {
+      return
+    }
+
+    event.preventDefault()
+    runCommand(command)
+  }
 
   const strongMark = editorState.schema.marks['strong']
   const emMark = editorState.schema.marks['em']
@@ -78,6 +89,11 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
                 runCommand(toggleMark(strongMark))
               }
             }}
+            onKeyDown={event => {
+              if (strongMark) {
+                runCommandOnEnter(event, toggleMark(strongMark))
+              }
+            }}
           >
             <BoldIcon />
           </Button>
@@ -91,6 +107,11 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
               event.preventDefault()
               if (emMark) {
                 runCommand(toggleMark(emMark))
+              }
+            }}
+            onKeyDown={event => {
+              if (emMark) {
+                runCommandOnEnter(event, toggleMark(emMark))
               }
             }}
           >
@@ -108,6 +129,11 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
               event.preventDefault()
               if (underlineMark) {
                 runCommand(toggleMark(underlineMark))
+              }
+            }}
+            onKeyDown={event => {
+              if (underlineMark) {
+                runCommandOnEnter(event, toggleMark(underlineMark))
               }
             }}
           >
@@ -131,6 +157,14 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
                   : wrapInList(bulletList),
               )
             }}
+            onKeyDown={event => {
+              runCommandOnEnter(
+                event,
+                isInBulletList
+                  ? liftListItem(listItem)
+                  : wrapInList(bulletList),
+              )
+            }}
           >
             <ListBulletIcon />
           </Button>
@@ -143,6 +177,14 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
             onMouseDown={event => {
               event.preventDefault()
               runCommand(
+                isInOrderedList
+                  ? liftListItem(listItem)
+                  : wrapInList(orderedList),
+              )
+            }}
+            onKeyDown={event => {
+              runCommandOnEnter(
+                event,
                 isInOrderedList
                   ? liftListItem(listItem)
                   : wrapInList(orderedList),
