@@ -6,6 +6,9 @@ export default {
   component: Table,
   title: 'UI/Data Display/Table',
   subcomponents: { 'Table.Row': Table.Row, 'Table.Cell': Table.Cell },
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta
 
 export { Playground } from './Playground.stories'

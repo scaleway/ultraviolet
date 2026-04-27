@@ -8,6 +8,9 @@ export default {
     'SwitchButton.Option': SwitchButton.Option,
   },
   title: 'UI/Action/SwitchButton',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta
 
 export { Playground } from './Playground.stories'

@@ -5,6 +5,9 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: TextInput,
   title: 'UI/Data Entry/TextInput',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof TextInput>
 
 export { Playground } from './Playground.stories'

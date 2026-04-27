@@ -5,6 +5,9 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: Skeleton,
   title: 'UI/Feedback/Skeleton',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof Skeleton>
 
 export { Playground } from './Playground.stories'

@@ -12,6 +12,9 @@ export default {
     ),
   ],
   title: 'UI/Data Entry/Checkbox',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof Checkbox>
 
 export { Playground } from './Playground.stories'

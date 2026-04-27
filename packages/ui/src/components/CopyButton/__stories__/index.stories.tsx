@@ -13,6 +13,9 @@ export default {
     ),
   ],
   title: 'UI/Action/CopyButton',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof CopyButton>
 
 export { Playground } from './Playground.stories'

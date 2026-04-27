@@ -17,6 +17,9 @@ export default {
     legend: 'Choose options:',
     value: ['weekly-save'],
   },
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof ToggleGroup>
 
 export { Playground } from './Playground.stories'

@@ -5,6 +5,9 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: Badge,
   title: 'UI/Badges/Badge',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof Badge>
 
 export { Playground } from './Playground.stories'

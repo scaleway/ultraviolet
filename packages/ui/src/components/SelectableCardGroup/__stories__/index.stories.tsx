@@ -5,6 +5,9 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: SelectableCardGroup,
   title: 'UI/Data Entry/SelectableCardGroup',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof SelectableCardGroup>
 
 export { Playground } from './Playground.stories'

@@ -11,6 +11,9 @@ export default {
   },
 
   title: 'UI/Data Entry/FileInput',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof FileInput>
 
 export { Playground } from './Playground.stories'

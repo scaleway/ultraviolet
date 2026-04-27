@@ -6,6 +6,9 @@ export default {
   component: GlobalAlert,
   title: 'UI/Feedback/GlobalAlert',
   subcomponents: { 'GlobalAlert.Link': GlobalAlert.Link },
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta
 
 export { Playground } from './Playground.stories'

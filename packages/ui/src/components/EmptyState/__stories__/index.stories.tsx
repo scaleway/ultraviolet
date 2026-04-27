@@ -5,6 +5,9 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: EmptyState,
   title: 'UI/Data Display/EmptyState',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof EmptyState>
 
 export { Playground } from './Playground.stories'

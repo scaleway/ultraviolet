@@ -9,6 +9,9 @@ export default {
     'List.Row': List.Row,
     'List.Cell': List.Cell,
   },
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof List>
 
 export { Playground } from './Playground.stories'

@@ -15,6 +15,9 @@ export default {
     ),
   ],
   title: 'UI/Badges/Chip',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof Chip>
 
 export { Playground } from './Playground.stories'

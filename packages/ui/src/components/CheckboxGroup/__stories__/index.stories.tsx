@@ -17,6 +17,9 @@ export default {
     legend: 'Conditions:',
     value: ['value-1'],
   },
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta<typeof CheckboxGroup>
 
 export { Playground } from './Playground.stories'

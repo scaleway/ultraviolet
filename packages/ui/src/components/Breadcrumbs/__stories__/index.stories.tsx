@@ -7,6 +7,9 @@ export default {
   component: Breadcrumbs,
   subcomponents: { 'Breadcrumbs.Item': Item },
   title: 'UI/Navigation/Breadcrumbs',
+  parameters: {
+    a11y: 'partial',
+  },
 } as Meta
 
 export { Playground } from './Playground.stories'
