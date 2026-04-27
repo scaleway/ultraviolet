@@ -208,7 +208,6 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
             disabled={disabled}
             onClick={event => {
               if (isNested) {
-                event.stopPropagation()
                 event.preventDefault()
               }
               onClick?.(event)
