@@ -52,7 +52,6 @@ export const Form = <TFieldValues extends FieldValues>({
           aria-label={ariaLabel}
           name={name}
           noValidate
-          // oxlint-disable-next-line typescript/no-misused-promises
           onSubmit={e => {
             e.preventDefault()
             e.stopPropagation()

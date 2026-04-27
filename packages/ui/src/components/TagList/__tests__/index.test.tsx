@@ -43,11 +43,7 @@ const mockOffsetWidth = (
       return this.textContent.length * TAG_CHAR_WIDTH * 1.2
     }
 
-    if (
-      this.tagName === 'SPAN' &&
-      // eslint-disable-next-line testing-library/no-node-access
-      this.children.length === 0
-    ) {
+    if (this.tagName === 'SPAN' && this.children.length === 0) {
       // This is a tag, return computed size based on text length
       const text = this.childNodes[0].textContent ?? ''
 
@@ -56,9 +52,7 @@ const mockOffsetWidth = (
 
     if (
       this.tagName === 'DIV' &&
-      // eslint-disable-next-line testing-library/no-node-access
       this.children.length === 1 &&
-      // eslint-disable-next-line testing-library/no-node-access
       this.children[0].tagName === 'BUTTON'
     ) {
       // This is a copiable tag
@@ -69,11 +63,8 @@ const mockOffsetWidth = (
 
     if (
       this.tagName === 'SPAN' &&
-      // eslint-disable-next-line testing-library/no-node-access
       this.children.length === 1 &&
-      // eslint-disable-next-line testing-library/no-node-access
       this.children[0].tagName === 'SPAN' &&
-      // eslint-disable-next-line testing-library/no-node-access
       this.children[0].children.length === 0
     ) {
       // This is a tag, return computed size based on text length

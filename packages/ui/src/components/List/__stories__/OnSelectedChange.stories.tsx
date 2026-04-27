@@ -11,7 +11,6 @@ import type { StoryFn } from '@storybook/react-vite'
 
 export const OnSelectedChange: StoryFn = args => {
   const [selectedRows, onSelectedChange] = useState<string[]>([])
-  // oxlint-disable-next-line eslint/no-console
   console.log('selected', selectedRows)
 
   return (
@@ -57,7 +56,6 @@ export const OnSelectedChange: StoryFn = args => {
               </Text>
               <Button
                 onClick={() => {
-                  // oxlint-disable-next-line eslint/no-alert
                   alert('elements could be deleted')
                   unselectAll()
                 }}
@@ -109,7 +107,6 @@ OnSelectedChange.args = {
             </Text>
             <Button
               onClick={() => {
-                // oxlint-disable-next-line eslint/no-alert
                 alert('elements could be deleted')
                 unselectAll()
               }}

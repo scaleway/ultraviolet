@@ -22,10 +22,7 @@ describe('submitErrorAlert', () => {
       {},
       { onSubmit },
     )
-    await userEvent.click(
-      // eslint-disable-next-line testing-library/no-node-access
-      screen.getByText('Submit').closest('button')!,
-    )
+    await userEvent.click(screen.getByText('Submit').closest('button')!)
     expect(await screen.findByText('hello')).toBeInTheDocument()
     expect(asFragment()).toMatchSnapshot()
   })

@@ -83,12 +83,10 @@ describe('lineChart', () => {
       />,
     ))
 
-  // oxlint-disable vitest/no-disabled-tests: to fix
   test.skip('renders correctly when chart is hovered', async () => {
     const { asFragment } = renderWithTheme(
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
     )
-    // eslint-disable-next-line testing-library/no-node-access
     const line = document.querySelector('svg[role="img"] g path')
     if (!line) {
       throw new Error('LineChart line path not found')

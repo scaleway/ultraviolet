@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const PowerBiLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="PowerBiLogo">
     <g clipPath="url(#clip0_116_656025)">
       <path

@@ -76,7 +76,6 @@ export const FormContent = () => {
           ({ required }) => required,
         ).length
 
-        // oxlint-disable-next-line eslint/no-console
         console.log({ errors })
 
         return (

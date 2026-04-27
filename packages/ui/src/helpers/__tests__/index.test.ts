@@ -5,7 +5,6 @@ import onKeyOnlyNumbers from '../keycode'
 import parseIntOr from '../numbers'
 import recursivelyGetChildrenString from '../recursivelyGetChildrenString'
 
-// oxlint-disablestyle/noDoneCallback: test ok
 import type { KeyboardEvent } from 'react'
 
 describe(recursivelyGetChildrenString, () => {

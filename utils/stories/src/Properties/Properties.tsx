@@ -1,5 +1,3 @@
-// oxlint-disable import/no-namespace
-
 import { Stack, Table, Text } from '@ultraviolet/ui'
 
 import * as components from '../../../../packages/ui/src/components'
@@ -36,7 +34,6 @@ type ModuleType = ({
 const Properties = () => {
   const componentsList = Object.values(components) as ModuleType[]
 
-  /* eslint-disable no-underscore-dangle */
   const componentNameAndProperties = componentsList.reduce<
     Record<string, Record<string, unknown>>
   >((acc, component) => {
@@ -56,7 +53,6 @@ const Properties = () => {
 
     return acc
   }, {})
-  /* eslint-enable no-underscore-dangle */
 
   const propertiesList = Object.keys(componentNameAndProperties).flatMap(key =>
     Object.keys(componentNameAndProperties[key]),

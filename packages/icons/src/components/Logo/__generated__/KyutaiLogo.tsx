@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const KyutaiLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="KyutaiLogo">
     <path fill="#000" d="M2 2h16v16H2z" />
     <path

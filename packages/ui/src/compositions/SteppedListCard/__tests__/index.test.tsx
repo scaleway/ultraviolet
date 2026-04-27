@@ -88,7 +88,6 @@ describe('steppedListCard', () => {
       <SteppedListCard
         header="Header"
         onClickHide={() => console.log('test')}
-        // oxlint-disable-next-line no-console
         steps={['step1', 'step2']}
       >
         <SteppedListCard.Step
@@ -113,7 +112,6 @@ describe('steppedListCard', () => {
       <SteppedListCard
         header="Header"
         onClickHide={() => console.log('test')}
-        // oxlint-disable-next-line no-console
         steps={['step1', 'step2']}
       >
         <SteppedListCard.Step
@@ -188,7 +186,6 @@ describe('steppedListCard', () => {
       <SteppedListCard
         header="Header"
         onClickHide={() => console.log('hide clicked')}
-        // oxlint-disable-next-line no-console
         steps={['step1', 'step2']}
       >
         <SteppedListCard.Step

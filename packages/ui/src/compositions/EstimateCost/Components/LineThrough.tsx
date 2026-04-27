@@ -17,7 +17,6 @@ export const LineThrough = ({
 }: LineThroughProps) => (
   <span
     className={cn(className, isActive ? estimateCostStyle.lineThrough : '')}
-    // eslint-disable-next-line react/jsx-props-no-spreading
     {...props}
   />
 )

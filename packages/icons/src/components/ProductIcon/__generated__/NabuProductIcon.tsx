@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const NabuProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="NabuProductIcon">
     <g className="Nabu">
       <g className="Container-Registry">

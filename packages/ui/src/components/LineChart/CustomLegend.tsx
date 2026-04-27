@@ -60,11 +60,7 @@ export const CustomLegend = ({
         const id = row.id.toString()
 
         return (
-          <div
-            className={lineChartStyle.row}
-            // oxlint-disable-next-line no-unknown-property
-            key={labelIndexed}
-          >
+          <div className={lineChartStyle.row} key={labelIndexed}>
             <div
               className={cn(
                 lineChartStyle.longContainer,
@@ -84,7 +80,6 @@ export const CustomLegend = ({
                   </Text>
                   <div
                     className={lineChartStyle.legend}
-                    // oxlint-disable-next-line no-unknown-property
                     data-testid={`label-${id}`}
                     style={assignInlineVars({
                       [backgroundColorLegend]: getLegendColor(theme)[index],

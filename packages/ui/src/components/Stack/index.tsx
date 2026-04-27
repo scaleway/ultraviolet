@@ -156,7 +156,6 @@ const IStack = forwardRef<any, PropsWithChildren<StackProps>>(
           }),
           ...style,
         }}
-        // eslint-disable-next-line react/jsx-props-no-spreading
         {...props}
       >
         {children}

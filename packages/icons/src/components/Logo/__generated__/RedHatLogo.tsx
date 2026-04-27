@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const RedHatLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="RedHatLogo">
     <g transform="scale(0.078125)" fill="currentColor">
       <path

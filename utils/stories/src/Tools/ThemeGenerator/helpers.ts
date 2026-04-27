@@ -1,5 +1,4 @@
 // eslint-disable no-bitwise
-// oxlint-disable no-bitwise/noBitwiseOperators: disabled rule
 // Function imported from https://github.com/PimpTrizkit/PJs/wiki/12.-Shade,-Blend-and-Convert-a-Web-Color-(pSBC.js)#stackoverflow-archive-begin to shade hexa colors
 
 type ShadeHexColorType = (color: string, percent: number) => string

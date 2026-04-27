@@ -226,9 +226,7 @@ const Colors = () => {
 
                     const gradient = gradientBackgroundColorsType[
                       background as keyof typeof gradientBackgroundColorsType
-                    ]
-                      // oxlint-disable: to fix
-                      .replace(/;$/, '')
+                    ].replace(/;$/, '')
 
                     return (
                       <Stack key={background}>
@@ -282,7 +280,7 @@ const Colors = () => {
                         <Row gap={2} templateColumns="repeat(3, 1fr)">
                           {Object.keys(
                             // @ts-expect-error can't infer properly
-                            // oxlint-disable-next-line typescript/no-unsafe-argument,typescript/no-unsafe-member-access
+                            // oxlint-disable-next-line typescript/no-unsafe-member-access
                             iconColors[type][sentiment],
                           ).map(value => (
                             <Stack gap={1} key={value}>

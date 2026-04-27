@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const CustomModelProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="CustomModelProductIcon">
     <g clipPath="url(#clip0_4253_5045)" className="Style=Console">
       <path

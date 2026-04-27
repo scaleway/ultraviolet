@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const UseCaseCategoryIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="UseCaseCategoryIcon">
     <g className="UseCase">
       <g className="Group 1188">

@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const WebPlatformProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="WebPlatformProductIcon">
     <g className="Web-Platform" clipPath="url(#a)">
       <g className=".Square">

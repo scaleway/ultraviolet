@@ -48,7 +48,6 @@ describe('barChart', () => {
   test('renders correctly with negative values', () =>
     shouldMatchSnapshot(<BarChart data={barChartPositiveNegativeData} />))
 
-  // oxlint-disable vitest/no-disabled-tests: to fix
   test.skip('renders correctly with custom tooltip format', async () => {
     const { container } = renderWithTheme(
       <BarChart
@@ -61,7 +60,6 @@ describe('barChart', () => {
       />,
     )
 
-    // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
     const bar = container.querySelector('svg[role="img"] g line')
     if (!bar) {
       throw new Error('BarChart column not found')

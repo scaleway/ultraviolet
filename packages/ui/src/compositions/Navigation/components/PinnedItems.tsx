@@ -138,7 +138,6 @@ export const PinnedItems = ({
                     key={itemId}
                   >
                     {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
-                    {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
                     <div
                       className={navigationStyle.pinnedItemDropableArea}
                       onDragLeave={onDragLeave}
@@ -168,7 +167,6 @@ export const PinnedItems = ({
           )}
 
           <div className={navigationStyle.pinnedItemRelativeDiv}>
-            {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
             {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
             <div
               className={navigationStyle.pinnedItemDropableArea}

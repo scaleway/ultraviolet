@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const TransactionalEmailProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="TransactionalEmailProductIcon">
     <g className="Transactional-Email" clipPath="url(#b)">
       <g className=".Square">

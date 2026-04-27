@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const UbuntuLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="UbuntuLogo">
     <circle fill="#f47421" cx="10" cy="10" r="9" />
     <circle

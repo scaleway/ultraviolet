@@ -7,7 +7,6 @@ import type { StoryFn } from '@storybook/react-vite'
 export const List: StoryFn = props => (
   <Stack gap={1}>
     {Object.keys(Flags).map(iconName => {
-      // oxlint-disable: to fix
       const Flag = Flags[iconName as keyof typeof Flags]
 
       return (

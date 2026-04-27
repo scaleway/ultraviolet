@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const CdnProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="CdnProductIcon">
     <g className="CDN">
       <g className=".Square">

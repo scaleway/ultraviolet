@@ -69,7 +69,6 @@ export const Plans = <T extends string>({
             }
 
             return (
-              // oxlint-disable jsx_a11y/no-static-element-interactions: interactive table with a clickable button for accessibility
               <td
                 className={plansStyle.cell({
                   activeColor:
@@ -205,7 +204,6 @@ export const Plans = <T extends string>({
                 }
 
                 return (
-                  // oxlint-disable jsx_a11y/no-static-element-interactions: interactive table with a clickable button for accessibility
                   <td
                     className={plansStyle.cell({
                       activeColor:

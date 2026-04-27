@@ -1,4 +1,3 @@
-// oxlint-disableperformance/useTopLevelRegex: error
 // oxlint-disable import/no-nodejs-modules
 
 import fs from 'node:fs'

@@ -12,7 +12,6 @@ import type { IconProps } from '../Icon'
 export const RouteRulesProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props} title="RouteRulesProductIcon">
     <g>
       <path
