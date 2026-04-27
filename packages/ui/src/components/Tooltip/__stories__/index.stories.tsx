@@ -10,3 +10,4 @@ export default {
 export { Playground } from './Playground.stories'
 export { Placement } from './Placement.stories'
 export { MaxWidth } from './MaxWidth.stories'
+export { PlacementAuto } from './PlacementAuto.stories'
