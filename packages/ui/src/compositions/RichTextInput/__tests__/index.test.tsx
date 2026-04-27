@@ -123,9 +123,9 @@ describe('richTextInput', () => {
       />,
     )
 
-    const status = screen.getByRole('status')
-    expect(status).toHaveAttribute('aria-describedby', 'id-test-notice')
-    expect(status).toHaveAccessibleDescription(successMessage)
+    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    expect(doc).toHaveAccessibleDescription(successMessage)
+    expect(screen.getByRole('status')).toHaveTextContent(successMessage)
   })
 
   test('should display error message', () => {
@@ -142,9 +142,9 @@ describe('richTextInput', () => {
       />,
     )
 
-    const status = screen.getByRole('status')
-    expect(status).toHaveAttribute('aria-describedby', 'id-test-notice')
-    expect(status).toHaveAccessibleDescription(errorMessage)
+    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    expect(doc).toHaveAccessibleDescription(errorMessage)
+    expect(screen.getByRole('status')).toHaveTextContent(errorMessage)
   })
 
   test('should display helper message', () => {
@@ -161,9 +161,9 @@ describe('richTextInput', () => {
       />,
     )
 
-    const status = screen.getByRole('status')
-    expect(status).toHaveAttribute('aria-describedby', 'id-test-notice')
-    expect(status).toHaveAccessibleDescription(helperMessage)
+    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    expect(doc).toHaveAccessibleDescription(helperMessage)
+    expect(screen.getByRole('status')).toHaveTextContent(helperMessage)
   })
 
   test('should not display helper message when success is displayed', () => {
@@ -181,12 +181,10 @@ describe('richTextInput', () => {
       />,
     )
 
-    expect(screen.getByRole('status')).toHaveAccessibleDescription(
-      successMessage,
-    )
-    expect(screen.getByRole('status')).not.toHaveAccessibleDescription(
-      helperMessage,
-    )
+    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    expect(doc).toHaveAccessibleDescription(successMessage)
+    expect(doc).not.toHaveAccessibleDescription(helperMessage)
+    expect(screen.getByRole('status')).toHaveTextContent(successMessage)
   })
 
   test('should not display helper message when error is displayed', () => {
@@ -205,9 +203,9 @@ describe('richTextInput', () => {
       />,
     )
 
-    expect(screen.getByRole('status')).toHaveAccessibleDescription(errorMessage)
-    expect(screen.getByRole('status')).not.toHaveAccessibleDescription(
-      helperMessage,
-    )
+    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    expect(doc).toHaveAccessibleDescription(errorMessage)
+    expect(doc).not.toHaveAccessibleDescription(helperMessage)
+    expect(screen.getByRole('status')).toHaveTextContent(errorMessage)
   })
 })
