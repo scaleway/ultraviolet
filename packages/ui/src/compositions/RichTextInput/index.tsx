@@ -77,6 +77,7 @@ export const RichTextInput = ({
   const localId = useId()
   const inputId = id ?? `rich-text-input-${localId}`
   const noticeId = `${inputId}-notice`
+  const labelledById = `${inputId}-label`
   const isEditable = !disabled && !readOnly
   const lineHeightEm = RICH_TEXT_EDITOR_LINE_HEIGHT_EM
   const padding = theme.space[1]
@@ -107,7 +108,7 @@ export const RichTextInput = ({
   return (
     <Stack gap="0.5">
       {label ? (
-        <Label htmlFor={inputId} id={`${inputId}-label`} required={required}>
+        <Label htmlFor={inputId} id={labelledById} required={required}>
           {label}
         </Label>
       ) : null}
@@ -146,27 +147,31 @@ export const RichTextInput = ({
           <div className={richTextInputStyle.toolbarRow}>
             <Toolbar showList={showList} showMarks={showMarks} />
           </div>
-          <ProseMirrorDoc
-            aria-invalid={!!error}
-            aria-label={ariaLabel}
-            className={richTextInputStyle.docRegion}
-            data-testid={dataTestId}
-            id={inputId}
-            style={{
-              ...assignInlineVars({
-                [docRegionMaxHeightVar]: maxHeight ?? 'none',
-                [docRegionMinHeightVar]: minHeight,
-              }),
-            }}
-            onBlur={onBlur}
-            onFocus={onFocus}
-          />
-          {error ? (
-            <AlertCircleIcon
-              sentiment="danger"
-              className={richTextInputStyle.errorIcon}
+          <div className={richTextInputStyle.wrapper}>
+            <ProseMirrorDoc
+              aria-labelledby={labelledById}
+              aria-describedby={noticeId}
+              aria-invalid={!!error}
+              aria-label={ariaLabel}
+              className={richTextInputStyle.docRegion}
+              data-testid={dataTestId}
+              id={inputId}
+              style={{
+                ...assignInlineVars({
+                  [docRegionMaxHeightVar]: maxHeight ?? 'none',
+                  [docRegionMinHeightVar]: minHeight,
+                }),
+              }}
+              onBlur={onBlur}
+              onFocus={onFocus}
             />
-          ) : null}
+            {error ? (
+              <AlertCircleIcon
+                className={richTextInputStyle.errorIcon}
+                sentiment="danger"
+              />
+            ) : null}
+          </div>
         </ProseMirror>
       </Stack>
       {notice ? (
