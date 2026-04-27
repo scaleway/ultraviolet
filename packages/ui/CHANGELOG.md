@@ -1,5 +1,40 @@
 # Change Log
 
+## 3.14.1
+
+### Patch Changes
+
+- [#6341](https://github.com/scaleway/ultraviolet/pull/6341) [`6ba8c5c`](https://github.com/scaleway/ultraviolet/commit/6ba8c5c666ddd49d087c8b7435f0cda102dda7bf) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@nivo/bar` to `0.99.0`.
+  Updated dependency `@nivo/core` to `0.99.0`.
+  Updated dependency `@nivo/line` to `0.99.0`.
+  Updated dependency `@nivo/pie` to `0.99.0`.
+  Updated dependency `@nivo/scales` to `0.99.0`.
+  Updated dependency `@nivo/treemap` to `0.99.0`.
+
+  `LineChart`: ⚠️ Breaking change: type of `point` in `tooltipFunction` has changed slightly: use `point.x` instead of `point.data.x` (and similarly `point.y` instead of `point.data.y`). `xFormatted` and `yFormatted` remain unchanged
+
+- [#6359](https://github.com/scaleway/ultraviolet/pull/6359) [`df71e8a`](https://github.com/scaleway/ultraviolet/commit/df71e8a71d1d8cbfed8e6ed025090c22d3b3cfe5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@vanilla-extract/css` to `1.20.1`.
+  Updated dependency `@vanilla-extract/vite-plugin` to `5.2.2`.
+
+- [#6371](https://github.com/scaleway/ultraviolet/pull/6371) [`7017759`](https://github.com/scaleway/ultraviolet/commit/70177594df4a9eed580374b90db42ce6edfb9074) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.10`.
+
+- [#6356](https://github.com/scaleway/ultraviolet/pull/6356) [`75a6a3a`](https://github.com/scaleway/ultraviolet/commit/75a6a3a6193363bb2dc740095ebbe52bbb92c0b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.9`.
+
+- [#6278](https://github.com/scaleway/ultraviolet/pull/6278) [`ad81cdd`](https://github.com/scaleway/ultraviolet/commit/ad81cdd877013bcf99f4c406b4dc2da27b83ccfd) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`:
+
+  - new prop `compact` for a very compact view of the component, similar to `EstimateCost`,
+  - new prop `backgroundProminence` to be able to change the component background prominence
+  - new prop `calculartorIcon` to add next to the price total
+
+  `EstimateCost`: new prop `backgroundProminence`, similar to `OrderSummary`
+
+- [#6370](https://github.com/scaleway/ultraviolet/pull/6370) [`19f385d`](https://github.com/scaleway/ultraviolet/commit/19f385db72ab459f9ea71e413d8920f61c1d0c81) Thanks [@lisalupi](https://github.com/lisalupi)! - `OptionSelector`: remove unwanted browser default padding and margin from fieldset
+
+- Updated dependencies [[`df71e8a`](https://github.com/scaleway/ultraviolet/commit/df71e8a71d1d8cbfed8e6ed025090c22d3b3cfe5), [`7017759`](https://github.com/scaleway/ultraviolet/commit/70177594df4a9eed580374b90db42ce6edfb9074), [`75a6a3a`](https://github.com/scaleway/ultraviolet/commit/75a6a3a6193363bb2dc740095ebbe52bbb92c0b3), [`aeb25db`](https://github.com/scaleway/ultraviolet/commit/aeb25db78ba7437c68378412d63f73fee6409acd)]:
+  - @ultraviolet/icons@5.3.3
+  - @ultraviolet/themes@3.1.6
+  - @ultraviolet/utils@1.0.11
+
 ## 3.14.0
 
 ### Minor Changes

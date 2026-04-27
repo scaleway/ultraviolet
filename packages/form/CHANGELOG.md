@@ -1,5 +1,20 @@
 # Change Log
 
+## 6.3.1
+
+### Patch Changes
+
+- [#6380](https://github.com/scaleway/ultraviolet/pull/6380) [`478310a`](https://github.com/scaleway/ultraviolet/commit/478310ae992d1d2d9649e9d8c042e24fc9e99c51) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.73.1`.
+
+- [#6371](https://github.com/scaleway/ultraviolet/pull/6371) [`7017759`](https://github.com/scaleway/ultraviolet/commit/70177594df4a9eed580374b90db42ce6edfb9074) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.10`.
+
+- [#6356](https://github.com/scaleway/ultraviolet/pull/6356) [`75a6a3a`](https://github.com/scaleway/ultraviolet/commit/75a6a3a6193363bb2dc740095ebbe52bbb92c0b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.9`.
+
+- Updated dependencies [[`6ba8c5c`](https://github.com/scaleway/ultraviolet/commit/6ba8c5c666ddd49d087c8b7435f0cda102dda7bf), [`df71e8a`](https://github.com/scaleway/ultraviolet/commit/df71e8a71d1d8cbfed8e6ed025090c22d3b3cfe5), [`7017759`](https://github.com/scaleway/ultraviolet/commit/70177594df4a9eed580374b90db42ce6edfb9074), [`75a6a3a`](https://github.com/scaleway/ultraviolet/commit/75a6a3a6193363bb2dc740095ebbe52bbb92c0b3), [`ad81cdd`](https://github.com/scaleway/ultraviolet/commit/ad81cdd877013bcf99f4c406b4dc2da27b83ccfd), [`19f385d`](https://github.com/scaleway/ultraviolet/commit/19f385db72ab459f9ea71e413d8920f61c1d0c81)]:
+  - @ultraviolet/ui@3.14.1
+  - @ultraviolet/icons@5.3.3
+  - @ultraviolet/themes@3.1.6
+
 ## 6.3.0
 
 ### Minor Changes
