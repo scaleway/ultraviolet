@@ -123,7 +123,7 @@ const FileInputBase = ({
           : 'Error'
 
         errorFiles.push({
-          fileName: name,
+          fileName: file.name,
           error: customError ?? defaultMessage,
         })
       }
