@@ -49,7 +49,7 @@ const noop = () => {}
 
 export type PositionsType = {
   arrowLeft: number
-  arrowTop: string | number
+  arrowTop: number
   arrowTransform: string
   placement: string
   rotate: number
@@ -232,7 +232,7 @@ export const Popup = forwardRef(
     const debounceTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
     const [visibleInDom, setVisibleInDom] = useState(false)
     const [reverseAnimation, setReverseAnimation] = useState(false)
-    const [positions, setPositions] = useState<PositionsType>({
+    const [positions, setPositions] = useState({
       ...DEFAULT_POSITIONS,
     })
     const uniqueId = useId()
@@ -645,7 +645,7 @@ export const Popup = forwardRef(
                 role={role}
                 style={{
                   ...assignInlineVars({
-                    [arrowTop]: `${positions.arrowTop}`,
+                    [arrowTop]: `${positions.arrowTop}px`,
                     [arrowLeft]: `${positions.arrowLeft}px`,
                     [arrowTransform]: `${positions.arrowTransform} rotate(${positions.rotate}deg)`,
                     [popupPosition]: positions.popupPosition,

@@ -22,7 +22,6 @@ const isGenericPlacement = (
 
 export const DEFAULT_ARROW_WIDTH = 8 // in px
 const SPACE = 4 // in px
-const TOTAL_USED_SPACE = 0 // in px
 export const DEFAULT_POSITIONS = {
   arrowLeft: 0,
   arrowTop: 0,
@@ -41,6 +40,7 @@ type ComputePlacementTypes = {
   offsetParent: Element
   isNestedMenu?: boolean
   autoPlacement?: AutoPlacements
+  arrowWidth: number
 }
 // Depending on the auto-placement preferences, change the placements hierarchy
 
@@ -59,6 +59,10 @@ const getOrderOfPlacement = (autoPlacement: AutoPlacements) => {
   return ['top', 'bottom', 'left', 'right'] as const
 }
 
+// Space between the popup and its target
+const getHorizontalSpacing = (arrowWidth: number) => arrowWidth + SPACE * 2
+const getVerticalSpacing = (arrowWidth: number) => arrowWidth + SPACE
+
 /**
  * This function will find the best placement in a window for popup based on children position and popup size
  */
@@ -70,12 +74,15 @@ const computePlacement = ({
   popupPortalTarget,
   isNestedMenu,
   autoPlacement,
+  arrowWidth,
 }: ComputePlacementTypes) => {
   const {
     top: childrenTop,
+    bottom: childrenBottom,
     left: childrenLeft,
     right: childrenRight,
     width: childrenWidth,
+    height: childrenHeight,
   } = childrenStructuredRef
 
   const orderOfPlacement = getOrderOfPlacement(autoPlacement ?? 'auto')
@@ -91,6 +98,9 @@ const computePlacement = ({
   const overloadedChildrenTop = isPopupPortalTargetBody
     ? childrenTop
     : childrenTop - parentTop
+  const overloadedChildrenBottom = isPopupPortalTargetBody
+    ? childrenBottom
+    : childrenTop - parentTop + childrenHeight
   const overloadedChildrenRight = isPopupPortalTargetBody
     ? childrenRight
     : childrenLeft - parentLeft + childrenWidth
@@ -98,10 +108,7 @@ const computePlacement = ({
   const { width: popupWidth, height: popupHeight } = popupStructuredRef
 
   if (isNestedMenu) {
-    if (
-      overloadedChildrenRight + popupWidth + TOTAL_USED_SPACE >
-      window.innerWidth
-    ) {
+    if (overloadedChildrenRight + popupWidth > window.innerWidth) {
       return 'left'
     }
 
@@ -110,28 +117,22 @@ const computePlacement = ({
 
   const conditionsOfPlacement = {
     bottom:
-      window.innerHeight - overloadedChildrenTop - TOTAL_USED_SPACE >=
-      popupHeight,
-    left: overloadedChildrenLeft - TOTAL_USED_SPACE >= popupWidth,
+      overloadedChildrenBottom + getVerticalSpacing(arrowWidth) + popupHeight <=
+      window.innerHeight,
+    left:
+      overloadedChildrenLeft - getHorizontalSpacing(arrowWidth) - popupWidth >=
+      0,
     right:
-      window.innerWidth - overloadedChildrenLeft - TOTAL_USED_SPACE >=
-      popupWidth,
-    top: overloadedChildrenTop - popupHeight - TOTAL_USED_SPACE >= 0,
+      overloadedChildrenRight + getHorizontalSpacing(arrowWidth) + popupWidth <=
+      window.innerWidth,
+    top:
+      overloadedChildrenTop - getVerticalSpacing(arrowWidth) - popupHeight >= 0,
   }
 
-  if (conditionsOfPlacement[orderOfPlacement[0]]) {
-    return orderOfPlacement[0]
-  }
-
-  if (conditionsOfPlacement[orderOfPlacement[1]]) {
-    return orderOfPlacement[1]
-  }
-
-  if (conditionsOfPlacement[orderOfPlacement[2]]) {
-    return orderOfPlacement[2]
-  }
-
-  return orderOfPlacement[3]
+  return (
+    orderOfPlacement.find(placement => conditionsOfPlacement[placement]) ||
+    orderOfPlacement[3]
+  )
 }
 /**
  * This function will check if the offset parent is usable for popup positioning
@@ -165,87 +166,58 @@ const findOffsetParent = (element: RefObject<HTMLDivElement>) => {
 }
 
 const getVerticalOverflow = (
-  childrenRect: {
-    top: number
-    left: number
-    right: number
-    bottom: number
-    width: number
-  },
-  offsetParentRect: {
-    top: number
-    left: number
-    right: number
-  },
+  childrenRect: DOMRect,
+  offsetParentRect: DOMRect,
   popupHalfWidthWithArrow: number,
   popupWidth: number,
 ) => {
   const { left: parentLeft, right: parentRight } = offsetParentRect
+  const { left: childrenLeft, width: childrenWidth } = childrenRect
 
-  const {
-    left: childrenLeft,
-    right: childrenRight,
-    width: childrenWidth,
-  } = childrenRect
+  const popupLeft = childrenLeft + childrenWidth / 2 - popupWidth / 2
+  const popupRight = popupLeft + popupWidth
 
-  const popupOverflowRight = childrenRight - childrenWidth / 2 + popupWidth / 2
-
-  const popupOverflowLeft =
-    childrenLeft + childrenWidth / 2 - parentLeft - popupWidth / 2
-
-  if (popupOverflowRight > parentRight) {
-    if (Math.abs(popupOverflowRight - parentRight) > popupHalfWidthWithArrow) {
+  if (popupRight > parentRight) {
+    if (Math.abs(popupRight - parentRight) > popupHalfWidthWithArrow) {
       return -popupHalfWidthWithArrow
     }
-
-    return parentRight - popupOverflowRight
+    return parentRight - popupRight
   }
 
-  if (popupOverflowLeft < 0) {
-    if (Math.abs(popupOverflowLeft) > popupHalfWidthWithArrow) {
+  if (popupLeft < parentLeft) {
+    if (Math.abs(popupLeft - parentLeft) > popupHalfWidthWithArrow) {
       return popupHalfWidthWithArrow
     }
-
-    return Math.abs(popupOverflowLeft)
+    return Math.abs(popupLeft - parentLeft)
   }
 
   return undefined
 }
 
 const getHorizontalOverflow = (
-  childrenRect: {
-    top: number
-    left: number
-    right: number
-    bottom: number
-    width: number
-  },
-  offsetParentRect: {
-    top: number
-    left: number
-    right: number
-  },
+  childrenRect: DOMRect,
+  offsetParentRect: DOMRect,
   popupHeight: number,
   popupHalfHeightWithArrow: number,
 ) => {
-  const { top: parentTop } = offsetParentRect
+  const { top: parentTop, bottom: parentBottom } = offsetParentRect
+  const { top: childrenTop, height: childrenHeight } = childrenRect
 
-  const { top: childrenTop, bottom: childrenBottom } = childrenRect
-  const popupOverflowTop = childrenTop - parentTop - popupHeight / 2
+  const popupTop = childrenTop + childrenHeight / 2 - popupHeight / 2
+  const popupBottom = popupTop + popupHeight
 
-  if (popupOverflowTop < 0) {
-    if (
-      Math.abs(childrenTop - parentTop - popupHalfHeightWithArrow) >
-      popupHalfHeightWithArrow
-    ) {
+  if (popupTop < parentTop) {
+    if (Math.abs(popupTop - parentTop) > popupHalfHeightWithArrow) {
       return popupHalfHeightWithArrow
     }
-
-    return Math.abs(popupOverflowTop)
+    return Math.abs(popupTop - parentTop)
   }
 
-  if (childrenBottom + popupHeight > window.innerHeight) {
-    return -popupHalfHeightWithArrow
+  if (popupBottom > parentBottom) {
+    if (Math.abs(popupBottom - parentBottom) > popupHalfHeightWithArrow) {
+      return -popupHalfHeightWithArrow
+    }
+    return parentBottom - popupBottom
   }
 
   return undefined
@@ -262,7 +234,7 @@ const getHorizontalOverflow = (
  */
 const getPopupOverflowFromParent = (
   position: Placements,
-  offsetParentRect: { top: number; left: number; right: number },
+  offsetParentRect: DOMRect,
   childrenRect: DOMRect,
   popupStructuredRef: DOMRect,
   arrowWidth: number,
@@ -325,7 +297,10 @@ const placementBottom = (
     ? overloadedChildrenLeft
     : overloadedChildrenLeft + childrenWidth / 2 - popupWidth / 2
   const positionY =
-    overloadedChildrenTop + scrollTopValue + childrenHeight + arrowWidth + SPACE
+    overloadedChildrenTop +
+    scrollTopValue +
+    childrenHeight +
+    getVerticalSpacing(arrowWidth)
 
   const computedPositionX = isAligned ? positionX : positionX + popupOverflow
 
@@ -335,15 +310,11 @@ const placementBottom = (
     : computedPositionX
 
   return {
-    arrowLeft: isAligned
-      ? childrenWidth / 2 - arrowWidth
-      : popupWidth / 2 + popupOverflow * -1,
-    arrowTop: `${-arrowWidth - 5}px`,
+    arrowLeft: isAligned ? childrenWidth / 2 : popupWidth / 2 - popupOverflow,
+    arrowTop: -arrowWidth - 5,
     arrowTransform: '',
     placement: 'bottom',
-    popupInitialPosition: `translate3d(${
-      finalPositionX
-    }px, ${positionY - TOTAL_USED_SPACE}px, 0)`,
+    popupInitialPosition: `translate3d(${finalPositionX}px, ${positionY}px, 0)`,
     popupPosition: `translate3d(${finalPositionX}px, ${positionY}px, 0)`,
     rotate: 180,
   }
@@ -360,7 +331,8 @@ const placementLeft = (
   popupOverflow: number,
   popupHeight: number,
 ) => {
-  const positionX = overloadedChildrenLeft - popupWidth - arrowWidth - SPACE * 2
+  const positionX =
+    overloadedChildrenLeft - popupWidth - getHorizontalSpacing(arrowWidth)
   const positionY = isAligned
     ? overloadedChildrenTop + scrollTopValue
     : overloadedChildrenTop +
@@ -370,10 +342,12 @@ const placementLeft = (
 
   return {
     arrowLeft: popupWidth + arrowWidth + 5,
-    arrowTop: '50%',
+    arrowTop: isAligned
+      ? childrenHeight / 2 - arrowWidth
+      : popupHeight / 2 - popupOverflow,
     arrowTransform: 'translate(-50%, -50%)',
     placement: 'left',
-    popupInitialPosition: `translate3d(${positionX + TOTAL_USED_SPACE}px, ${
+    popupInitialPosition: `translate3d(${positionX}px, ${
       positionY + popupOverflow
     }px, 0)`,
     popupPosition: `translate3d(${positionX}px, ${
@@ -393,7 +367,7 @@ const placementRight = (
   popupHeight: number,
   overloadedChildrenRight: number,
 ) => {
-  const positionX = overloadedChildrenRight + arrowWidth + SPACE * 2
+  const positionX = overloadedChildrenRight + getHorizontalSpacing(arrowWidth)
   const positionY = isAligned
     ? overloadedChildrenTop + scrollTopValue
     : overloadedChildrenTop +
@@ -403,15 +377,15 @@ const placementRight = (
 
   return {
     arrowLeft: -arrowWidth - 5,
-    arrowTop: '50%',
+    arrowTop: isAligned
+      ? childrenHeight / 2 - arrowWidth
+      : popupHeight / 2 - popupOverflow,
     arrowTransform: 'translate(50%, -50%)',
     placement: 'right',
-    popupInitialPosition: `translate3d(${positionX - TOTAL_USED_SPACE}px, ${
+    popupInitialPosition: `translate3d(${positionX}px, ${
       positionY + popupOverflow
     }px, 0)`,
-    popupPosition: `translate3d(${positionX}px, ${
-      positionY + popupOverflow
-    }px, 0)`,
+    popupPosition: `translate3d(${positionX}px, ${positionY + popupOverflow}px, 0)`,
     rotate: 90,
   }
 }
@@ -441,21 +415,24 @@ const placementNested = (
       offsetParentRect,
       popupPortalTarget,
       popupStructuredRef,
+      arrowWidth,
     }) === 'right'
   ) {
     // Place the menu top-right
-    const positionX = overloadedChildrenRight + arrowWidth + SPACE * 2
+    const positionX = overloadedChildrenRight + getHorizontalSpacing(arrowWidth)
     const positionY = isAligned
       ? overloadedChildrenTop + scrollTopValue
       : overloadedChildrenTop + scrollTopValue - popupHeight / 8
 
     return {
       arrowLeft: -arrowWidth - 5,
-      arrowTop: '50%',
+      arrowTop: isAligned
+        ? childrenHeight / 2 - arrowWidth
+        : popupHeight / 2 - popupOverflow,
       arrowTransform: 'translate(50%, -50%)',
       placement: 'right',
       popupInitialPosition: `translate3d(${
-        positionX - TOTAL_USED_SPACE
+        positionX
       }px, ${positionY + popupOverflow}px, 0)`,
       popupPosition: `translate3d(${positionX}px, ${
         positionY + popupOverflow
@@ -465,7 +442,8 @@ const placementNested = (
   }
 
   // Place it top-left
-  const positionX = overloadedChildrenLeft - popupWidth - arrowWidth - SPACE * 2
+  const positionX =
+    overloadedChildrenLeft - popupWidth - getHorizontalSpacing(arrowWidth)
   const positionY = isAligned
     ? overloadedChildrenTop + scrollTopValue
     : overloadedChildrenTop +
@@ -475,10 +453,12 @@ const placementNested = (
 
   return {
     arrowLeft: popupWidth + arrowWidth + 5,
-    arrowTop: '50%',
+    arrowTop: isAligned
+      ? childrenHeight / 2 - arrowWidth
+      : popupHeight / 2 - popupOverflow,
     arrowTransform: 'translate(-50%, -50%)',
     placement: 'left',
-    popupInitialPosition: `translate3d(${positionX + TOTAL_USED_SPACE}px, ${
+    popupInitialPosition: `translate3d(${positionX}px, ${
       positionY + popupOverflow
     }px, 0)`,
     popupPosition: `translate3d(${positionX}px, ${
@@ -505,7 +485,10 @@ const placementTop = (
     ? overloadedChildrenLeft
     : overloadedChildrenLeft + childrenWidth / 2 - popupWidth / 2
   const positionY =
-    overloadedChildrenTop + scrollTopValue - popupHeight - arrowWidth - SPACE
+    overloadedChildrenTop +
+    scrollTopValue -
+    popupHeight -
+    getVerticalSpacing(arrowWidth)
 
   const computedPositionX = isAligned ? positionX : positionX + popupOverflow
 
@@ -515,15 +498,11 @@ const placementTop = (
     : computedPositionX
 
   return {
-    arrowLeft: isAligned
-      ? childrenWidth / 2 - arrowWidth
-      : popupWidth / 2 + popupOverflow * -1,
-    arrowTop: `${popupHeight - 1}px`,
+    arrowLeft: isAligned ? childrenWidth / 2 : popupWidth / 2 - popupOverflow,
+    arrowTop: popupHeight - 1,
     arrowTransform: '',
     placement: 'top',
-    popupInitialPosition: `translate3d(${
-      finalPositionX
-    }px, ${positionY + TOTAL_USED_SPACE}px, 0)`,
+    popupInitialPosition: `translate3d(${finalPositionX}px, ${positionY}px, 0)`,
     popupPosition: `translate3d(${finalPositionX}px, ${positionY}px, 0)`,
     rotate: 0,
   }
@@ -549,6 +528,7 @@ export const computePositions = ({
     left: 0,
     right: window?.innerWidth ?? 0,
     top: 0,
+    bottom: window?.innerHeight ?? 0,
   }
 
   const popupStructuredRef = popupRef.current!.getBoundingClientRect()
@@ -562,6 +542,7 @@ export const computePositions = ({
         offsetParentRect,
         popupPortalTarget,
         popupStructuredRef,
+        arrowWidth,
       })
 
   const {

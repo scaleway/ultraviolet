@@ -45,6 +45,7 @@ export default defineConfig({
     stderr: 'pipe',
     stdout: 'ignore',
     url: baseURL,
+    reuseExistingServer: !isCI,
   },
   workers: isCI ? 1 : undefined,
 })
