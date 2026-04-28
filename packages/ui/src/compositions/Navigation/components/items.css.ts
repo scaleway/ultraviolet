@@ -2,9 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-import { fadeIn } from '../../../utils'
-import { shrinkHeight } from '../animations.css'
-import { ANIMATION_DURATION } from '../constants'
+import { ANIMATION_DURATION, ANIMATION_EASING } from '../constants'
 
 export const itemMenuContainer = style({ width: 180 })
 
@@ -102,7 +100,6 @@ export const itemContainer = recipe({
     hasActive: false,
     isActive: false,
     noExpand: false,
-    subLabel: false,
   },
   variants: {
     disabled: {
@@ -131,38 +128,7 @@ export const itemContainer = recipe({
         cursor: 'pointer',
       },
     },
-    subLabel: {
-      true: {
-        padding: `${theme.space['0.5']} ${theme.space['1']}`,
-      },
-    },
   },
-})
-
-export const itemContainerAnimated = recipe({
-  variants: {
-    animated: {
-      true: {},
-    },
-    animation: {
-      collapse: {},
-      expand: {},
-    },
-  },
-  compoundVariants: [
-    {
-      variants: { animated: true, animation: 'collapse' },
-      style: {
-        animation: `${shrinkHeight} ${ANIMATION_DURATION}ms ease-in-out`,
-      },
-    },
-    {
-      variants: { animated: true, animation: 'expand' },
-      style: {
-        animation: `${shrinkHeight} ${ANIMATION_DURATION}ms ease-in-out reverse`,
-      },
-    },
-  ],
 })
 
 export const itemShowDraggable = style({})
@@ -206,12 +172,20 @@ export const itemWrapText = recipe({
     },
     WebkitBoxOrient: 'vertical',
     WebkitLineClamp: 2,
+    transition: `opacity ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
   },
   defaultVariants: {
     disabled: false,
     weak: false,
+    shrinking: false,
   },
   variants: {
+    shrinking: {
+      true: {
+        whiteSpace: 'nowrap !important',
+        opacity: 0,
+      },
+    },
     disabled: {
       true: {
         color: theme.colors.neutral.textWeakDisabled,
@@ -270,36 +244,8 @@ export const itemPinnedButton = style({
   visibility: 'visible',
 })
 
-export const itemAnimatedIcon = recipe({
-  variants: {
-    animated: {
-      true: {},
-    },
-    animation: {
-      collapse: {},
-      expand: {},
-    },
-  },
-  compoundVariants: [
-    {
-      variants: { animated: true, animation: 'collapse' },
-      style: {
-        animation: `${fadeIn} ${ANIMATION_DURATION}ms ease-in-out reverse`,
-      },
-    },
-    {
-      variants: { animated: true, animation: 'expand' },
-      style: {
-        animation: `${fadeIn} ${ANIMATION_DURATION}ms ease-in-out`,
-      },
-    },
-  ],
-})
-
 export const itemMenuStack = style({
   marginTop: theme.space['0.25'],
-  padding: `0 ${theme.space[2]}`,
-  width: 'fit-content',
 })
 
 export const itemStackIcon = style({

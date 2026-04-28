@@ -169,8 +169,6 @@ export const Item = memo(
       pinLimit,
       animation,
       registerItem,
-      shouldAnimate,
-      animationType,
       showHide,
     } = context
 
@@ -265,7 +263,6 @@ export const Item = memo(
     if (!alwaysVisible && showHide === 'hide') {
       return null
     }
-    const computedAnimation = animation === 'collapse' ? 'collapse' : 'expand'
 
     if (expanded || (!expanded && animation === 'expand')) {
       return (
@@ -310,6 +307,7 @@ export const Item = memo(
         <ItemMenu
           active={active}
           categoryIcon={categoryIcon}
+          data-flip-id={id}
           hasActiveChildren={hasActiveChildren}
           label={label}
           style={style}
@@ -384,33 +382,21 @@ export const Item = memo(
           <Stack
             alignItems="flex-start"
             className={navigationStyle.itemMenuStack}
+            data-flip-id={id}
             gap={1}
             justifyContent="flex-start"
           >
             <Stack
               alignItems="center"
               as={containerTag}
-              className={cn(
-                navigationStyle.itemContainer({ disabled }),
-                navigationStyle.itemContainerAnimated({
-                  animated: shouldAnimate && animationType === 'complex',
-                  animation: computedAnimation,
-                }),
-              )}
+              className={cn(navigationStyle.itemContainer({ disabled }))}
               gap={1}
               href={href}
               justifyContent="center"
               rel={rel}
               target={target}
             >
-              <OpenInNewIcon
-                className={navigationStyle.itemAnimatedIcon({
-                  animated: shouldAnimate && animationType === 'complex',
-                  animation: computedAnimation,
-                })}
-                prominence="weak"
-                sentiment="neutral"
-              />
+              <OpenInNewIcon prominence="weak" sentiment="neutral" />
             </Stack>
           </Stack>
         </Tooltip>
