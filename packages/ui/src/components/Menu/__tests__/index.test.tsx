@@ -559,5 +559,38 @@ describe('menu', () => {
           <Menu.Item active>Active Props</Menu.Item>
         </Menu>,
       ))
+
+    test('should hideOnClick for specific item', async () => {
+      renderWithTheme(
+        <Menu disclosure={() => disclosure} id="menu">
+          <Menu.Item hideOnClick data-testid="hide-item">
+            Should Hide
+          </Menu.Item>
+          <Menu.Item data-testid="dont-hide-item">Should not Hide</Menu.Item>
+        </Menu>,
+      )
+      const menuButton = screen.getByRole<HTMLButtonElement>('button')
+      // Open Menu
+      await userEvent.click(menuButton)
+      const dialog = screen.getByRole('dialog')
+
+      await waitFor(() => {
+        expect(dialog).toBeVisible()
+      })
+
+      // Click item that should NOT close the menu
+      const itemNoHide = screen.getByTestId('dont-hide-item')
+      await userEvent.click(itemNoHide)
+      await waitFor(() => {
+        expect(dialog).toBeVisible()
+      })
+
+      // Click item that SHOULD close the menu
+      const itemHide = screen.getByTestId('hide-item')
+      await userEvent.click(itemHide)
+      await waitFor(() => {
+        expect(dialog).not.toBeVisible()
+      })
+    })
   })
 })
