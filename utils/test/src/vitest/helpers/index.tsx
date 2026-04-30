@@ -5,6 +5,7 @@ import { Form, useForm } from '../../../../../packages/form/src/index'
 
 import { makeShouldMatchSnapshot } from './shouldMatchSnapshot'
 import { makeShouldMatchSnapshotWithPortal } from './shouldMatchSnapshotWithPortal'
+import { makeshouldNotHaveViolation } from './shouldNotHaveViolation'
 
 import type { FormErrors, UseFormProps } from '../../../../../packages/form/src'
 // oxlint-disable react/only-export-components
@@ -55,6 +56,28 @@ export const mockFormErrors: FormErrors = {
       .join(' and ')}`,
   required: () => 'This field is required',
 }
+
+/**
+ * use `asFragment()` from the `render` directly
+ *
+ * @example
+ * ```tsx
+ *  const { asFragment } = render(...)
+ *
+ *  expect(asFragment()).toMatchSnapshot()
+ * ```
+ *
+ */
+
+export const shouldNotHaveViolation = (
+  component: ReactElement,
+  theme?: typeof consoleLightTheme,
+) =>
+  makeshouldNotHaveViolation(component, {
+    wrapper: ({ children }) => (
+      <ComponentWrapper theme={theme}>{children}</ComponentWrapper>
+    ),
+  })
 
 /**
  * use `asFragment()` from the `render` directly

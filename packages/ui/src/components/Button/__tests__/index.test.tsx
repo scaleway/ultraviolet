@@ -2,7 +2,11 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { PencilIcon } from '@ultraviolet/icons/PencilIcon'
 import { PencilOutlineIcon } from '@ultraviolet/icons/PencilOutlineIcon'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import {
+  renderWithTheme,
+  shouldMatchSnapshot,
+  shouldNotHaveViolation,
+} from '@utils/test'
 import { forwardRef } from 'react'
 import { describe, expect, test, vi } from 'vitest'
 
@@ -62,12 +66,17 @@ describe('button', () => {
   })
 
   buttonSizes.forEach(size => {
-    test(`render ${size}`, () =>
-      shouldMatchSnapshot(
+    test(`render ${size}`, async () => {
+      const Component = (
         <Button onClick={MockOnClick} size={size}>
           Hello
-        </Button>,
-      ))
+        </Button>
+      )
+
+      shouldMatchSnapshot(Component)
+
+      await shouldNotHaveViolation(Component)
+    })
   })
 
   test('work with onPointerDown and onKeyDown', async () => {

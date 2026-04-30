@@ -1,9 +1,11 @@
 import { render } from '@testing-library/react'
+import { ReactNode } from 'react'
 import { expect } from 'vitest'
+import { axe } from 'vitest-axe'
 
 import type { ReactNode } from 'react'
 
-export const makeShouldMatchSnapshot = (
+export const makeshouldNotHaveViolation = async (
   children: ReactNode,
   {
     wrapper,
@@ -11,6 +13,8 @@ export const makeShouldMatchSnapshot = (
     wrapper?: React.JSXElementConstructor<{ children: React.ReactNode }>
   },
 ) => {
-  const { asFragment } = render(children, { wrapper })
-  expect(asFragment()).toMatchSnapshot()
+  const { container } = render(children, { wrapper })
+
+  const res = await axe(container)
+  expect(res).toHaveNoViolations()
 }
