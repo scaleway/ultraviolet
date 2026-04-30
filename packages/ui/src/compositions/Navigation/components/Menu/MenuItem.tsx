@@ -74,7 +74,7 @@ export const ItemMenuItem = ({
           as="span"
           className={navigationStyle.itemWrapText({
             disabled,
-            shrinking: animation === 'collapse',
+            animation,
             weak: hasActiveChildren && !noExpand && !disabled && !!active,
           })}
           variant="bodySmall"

@@ -40,7 +40,6 @@ export const ItemChildren = ({
                       animation === 'expand',
                   })
             }
-            width={animation ? '100%' : undefined}
           >
             {children}
           </Stack>
@@ -59,7 +58,6 @@ export const ItemChildren = ({
                         animation === 'expand',
                     })
               }
-              width={animation ? '100%' : undefined}
             >
               {children}
             </Stack>
