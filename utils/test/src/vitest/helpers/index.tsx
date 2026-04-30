@@ -57,18 +57,6 @@ export const mockFormErrors: FormErrors = {
   required: () => 'This field is required',
 }
 
-/**
- * use `asFragment()` from the `render` directly
- *
- * @example
- * ```tsx
- *  const { asFragment } = render(...)
- *
- *  expect(asFragment()).toMatchSnapshot()
- * ```
- *
- */
-
 export const shouldNotHaveViolation = (
   component: ReactElement,
   theme?: typeof consoleLightTheme,

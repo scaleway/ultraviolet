@@ -3,7 +3,7 @@ import { describe, test } from 'vitest'
 
 import { Stack } from '..'
 
-describe('stack', () => {
+describe('stack - A11Y', () => {
   test('should render correctly with default props', async () =>
     shouldNotHaveViolation(
       <Stack>
