@@ -45,6 +45,7 @@ export const mockFormErrors: FormErrors = {
 }
 
 /**
+ * @deprecated
  * use `asFragment()` from the `render` directly
  *
  * @example
@@ -62,6 +63,7 @@ export const shouldMatchSnapshotWithPortal = (component: ReactElement, theme?: t
   })
 
 /**
+ * @deprecated
  * use `asFragment()` from the `render` directly
  *
  * @example
@@ -77,11 +79,14 @@ export const shouldMatchSnapshot = (component: ReactNode, theme?: typeof console
     wrapper: ({ children }) => <ComponentWrapper theme={theme}>{children}</ComponentWrapper>,
   })
 
-export const renderWithTheme = (compoment: ReactNode, theme?: typeof consoleLightTheme, options?: RenderOptions) =>
-  render(compoment, {
+export const renderWithTheme = (compoment: ReactNode, theme?: typeof consoleLightTheme, options?: RenderOptions) => {
+  const result = render(compoment, {
     ...options,
     wrapper: ({ children }) => <ComponentWrapper theme={theme}>{children}</ComponentWrapper>,
   })
+
+  return result
+}
 
 export const renderWithForm = (
   compoment: ReactElement,
@@ -91,13 +96,15 @@ export const renderWithForm = (
 ) => {
   const { result } = renderHook(() => useForm({ mode: 'onChange', ...useFormProps }))
 
+  const renderResult = renderWithTheme(
+    <Form errors={mockFormErrors} methods={result.current} onSubmit={() => {}} {...formProps}>
+      {compoment}
+    </Form>,
+    theme,
+  )
+
   return {
-    ...renderWithTheme(
-      <Form errors={mockFormErrors} methods={result.current} onSubmit={() => {}} {...formProps}>
-        {compoment}
-      </Form>,
-      theme,
-    ),
+    ...renderResult,
     resultForm: result,
   }
 }

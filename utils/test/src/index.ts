@@ -9,3 +9,5 @@ export {
   shouldMatchSnapshot,
   shouldMatchSnapshotWithPortal,
 } from './vitest'
+
+export * from './axe'

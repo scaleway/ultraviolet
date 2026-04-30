@@ -46,7 +46,6 @@ export const setup = () => {
     }
   })
 
-  //
   afterEach(() => {
     resetIntersectionMocking()
     vi.spyOn(globalThis.Math, 'random').mockRestore()
