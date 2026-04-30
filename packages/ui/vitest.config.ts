@@ -11,9 +11,9 @@ export const vitestConfig = {
   ],
   test: {
     ...createVitestConfig({
-      environment: 'json',
+      environment: 'jsdom',
       testTimeout: 10_000,
-      dom: true,
+      dom: false,
       name: 'ui',
       setupFiles: ['./vitest.setup.ts'],
       deps: {

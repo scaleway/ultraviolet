@@ -5,6 +5,7 @@ import { PencilOutlineIcon } from '@ultraviolet/icons/PencilOutlineIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { forwardRef } from 'react'
 import { describe, expect, test, vi } from 'vitest'
+import { axe } from 'vitest-axe'
 
 import { Button } from '..'
 import { SENTIMENTS } from '../../../theme'
@@ -62,18 +63,21 @@ describe('button', () => {
   })
 
   buttonSizes.forEach(size => {
-    test(`render ${size}`, () =>
-      shouldMatchSnapshot(
+    test(`render ${size}`, () => {
+      const Component = (
         <Button onClick={MockOnClick} size={size}>
           Hello
-        </Button>,
-      ))
+        </Button>
+      )
+
+      shouldMatchSnapshot(Component)
+    })
   })
 
   test('work with onPointerDown and onKeyDown', async () => {
-    const onPointerDown = vi.fn()
-    const onKeyDown = vi.fn()
-    const { asFragment } = renderWithTheme(
+    const onPointerDown = vi.fn<() => void>()
+    const onKeyDown = vi.fn<() => void>()
+    const { asFragment, container } = renderWithTheme(
       <Button
         aria-describedby="test"
         aria-disabled={false}
@@ -91,6 +95,8 @@ describe('button', () => {
     expect(onKeyDown).toHaveBeenCalledOnce()
 
     expect(asFragment).toMatchSnapshot()
+    const res = await axe(container)
+    expect(res).toHaveNoViolations()
   })
 
   test('render with icon', () =>
@@ -227,7 +233,7 @@ describe('button', () => {
       })
 
       test('forwards ref correctly with render prop', () => {
-        const ref = vi.fn()
+        const ref = vi.fn<() => void>()
         renderWithTheme(
           <Button ref={ref} render={<MockNextLink href="/about" />}>
             About
@@ -238,7 +244,7 @@ describe('button', () => {
       })
 
       test('handles click events with render prop', async () => {
-        const onClick = vi.fn()
+        const onClick = vi.fn<() => void>()
         renderWithTheme(
           <Button
             data-testid="button"
@@ -289,7 +295,7 @@ describe('button', () => {
       })
 
       test('forwards ref correctly with render function', () => {
-        const ref = vi.fn()
+        const ref = vi.fn<() => void>()
         renderWithTheme(
           <Button
             ref={ref}
