@@ -563,33 +563,35 @@ describe('menu', () => {
     test('should hideOnClick for specific item', async () => {
       renderWithTheme(
         <Menu disclosure={() => disclosure} id="menu">
-          <Menu.Item hideOnClick data-testid="hide-item">
-            Should Hide
-          </Menu.Item>
-          <Menu.Item data-testid="dont-hide-item">Should not Hide</Menu.Item>
+          <Menu.Item hideOnClick>Should Hide</Menu.Item>
+          <Menu.Item>Should not Hide</Menu.Item>
         </Menu>,
       )
       const menuButton = screen.getByRole<HTMLButtonElement>('button')
       // Open Menu
       await userEvent.click(menuButton)
-      const dialog = screen.getByRole('dialog')
+      const menu = screen.getByRole('menu')
 
       await waitFor(() => {
-        expect(dialog).toBeVisible()
+        expect(menu).toBeVisible()
       })
 
       // Click item that should NOT close the menu
-      const itemNoHide = screen.getByTestId('dont-hide-item')
+      const itemNoHide = screen.getByRole<HTMLLinkElement>('menuitem', {
+        name: 'Should not Hide',
+      })
       await userEvent.click(itemNoHide)
       await waitFor(() => {
-        expect(dialog).toBeVisible()
+        expect(menu).toBeVisible()
       })
 
       // Click item that SHOULD close the menu
-      const itemHide = screen.getByTestId('hide-item')
+      const itemHide = screen.getByRole<HTMLLinkElement>('menuitem', {
+        name: 'Should Hide',
+      })
       await userEvent.click(itemHide)
       await waitFor(() => {
-        expect(dialog).not.toBeVisible()
+        expect(menu).not.toBeVisible()
       })
     })
   })
