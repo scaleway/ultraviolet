@@ -6,6 +6,7 @@
 // oxlint-disable import/no-namespace
 
 import * as accountExperience from './accountExperience'
+import * as annotations from './annotations'
 import * as apiGateway from './apiGateway'
 import * as appleSilicon from './appleSilicon'
 import * as artifactRegistry from './artifactRegistry'
@@ -75,6 +76,7 @@ import * as webPlatform from './webPlatform'
 
 export {
   accountExperience,
+  annotations,
   apiGateway,
   appleSilicon,
   artifactRegistry,

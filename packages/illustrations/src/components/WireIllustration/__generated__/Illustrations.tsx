@@ -8,6 +8,8 @@
 export const ILLUSTRATIONS = {
   accountExperience:
     'https://assets.scaleway.com/illustrations/products/accountExperience/account-experience-wire.svg',
+  annotations:
+    'https://assets.scaleway.com/illustrations/products/annotations/annotations-wire.svg',
   apiGateway:
     'https://assets.scaleway.com/illustrations/products/apiGateway/api-gateway-wire.svg',
   appleSiliconM2:
