@@ -1,7 +1,7 @@
 {
   "extends": "../config/tsconfig/base.json",
   "compilerOptions": {
-    "types": ["@types/node"]
+    "types": ["@types/node", "../../vitest-axe.d.ts"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "*.config.ts"]
 }

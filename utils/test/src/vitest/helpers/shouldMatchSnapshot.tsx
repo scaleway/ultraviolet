@@ -11,6 +11,5 @@ export const makeShouldMatchSnapshot = (
   },
 ) => {
   const { asFragment } = render(children, { wrapper })
-
   expect(asFragment()).toMatchSnapshot()
 }

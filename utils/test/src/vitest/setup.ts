@@ -1,13 +1,14 @@
-import * as matchers from '@testing-library/jest-dom/matchers'
+import * as domMatchers from '@testing-library/jest-dom/matchers'
 import { cleanup } from '@testing-library/react'
 import { resetIntersectionMocking, setupIntersectionMocking } from 'react-intersection-observer/test-utils'
 import { afterEach, beforeEach, expect, vi } from 'vitest'
+import * as axeMatchers from 'vitest-axe/matchers'
 
-const MockResize = vi.fn(function mock() {
+const MockResize = vi.fn<() => void>(function mock() {
   return {
-    disconnect: vi.fn(),
-    observe: vi.fn(),
-    unobserve: vi.fn(),
+    disconnect: vi.fn<() => void>(),
+    observe: vi.fn<() => void>(),
+    unobserve: vi.fn<() => void>(),
   }
 })
 
@@ -26,7 +27,8 @@ const MockMatchMedia = vi.fn(function mock(query: string): MediaQueryList {
 
 export const setup = () => {
   process.env['TZ'] = 'UTC'
-  expect.extend(matchers)
+  expect.extend(domMatchers)
+  expect.extend(axeMatchers)
 
   beforeEach(() => {
     setupIntersectionMocking(vi.fn)
