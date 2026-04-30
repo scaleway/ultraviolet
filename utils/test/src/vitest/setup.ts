@@ -4,11 +4,11 @@ import { resetIntersectionMocking, setupIntersectionMocking } from 'react-inters
 import { afterEach, beforeEach, expect, vi } from 'vitest'
 import * as axeMatchers from 'vitest-axe/matchers'
 
-const MockResize = vi.fn<() => void>(function mock() {
+const MockResize = vi.fn(function mock() {
   return {
-    disconnect: vi.fn<() => void>(),
-    observe: vi.fn<() => void>(),
-    unobserve: vi.fn<() => void>(),
+    disconnect: vi.fn(),
+    observe: vi.fn(),
+    unobserve: vi.fn(),
   }
 })
 
@@ -46,7 +46,6 @@ export const setup = () => {
     }
   })
 
-  //
   afterEach(() => {
     resetIntersectionMocking()
     vi.spyOn(globalThis.Math, 'random').mockRestore()

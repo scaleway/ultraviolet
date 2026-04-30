@@ -1,15 +1,17 @@
-import { shouldNotHaveViolation } from '@utils/test'
-import { describe, test } from 'vitest'
-
+import { renderWithTheme, expectNoViolations } from '@utils/test'
+import { describe, it } from 'vitest'
 import { Stack } from '..'
 
-describe('stack', () => {
-  test('should render correctly with default props', async () =>
-    shouldNotHaveViolation(
+describe('stack - A11Y', () => {
+  it('should render correctly with default props', async () => {
+    const { container } = renderWithTheme(
       <Stack>
         <div>first child</div>
         <div>second child</div>
         <div>third child</div>
       </Stack>,
-    ))
+    )
+
+    await expectNoViolations(container)
+  })
 })

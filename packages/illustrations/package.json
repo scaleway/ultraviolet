@@ -77,7 +77,7 @@
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "lintpublish": "publint",
     "size": "size-limit",
-    "test:unit": "LC_ALL=en_US.UTF-8 pnpm vitest --run ",
+    "test:unit": "TZ=UTC LC_ALL=en_US.UTF-8 pnpm vitest --run ",
     "test:unit:coverage": "pnpm test:unit --coverage",
     "type:generate": "tsgo --declaration -p tsconfig.build.json",
     "typecheck": "tsgo --noEmit",

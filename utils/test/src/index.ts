@@ -6,7 +6,8 @@ export {
   renderWithForm,
   renderWithTheme,
   setup,
-  shouldNotHaveViolation,
   shouldMatchSnapshot,
   shouldMatchSnapshotWithPortal,
 } from './vitest'
+
+export * from './axe'
