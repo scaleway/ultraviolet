@@ -23,7 +23,7 @@ jobs:
         run: |
           git config --global user.name 'Scaleway Bot'
           git config --global user.email 'github@scaleway.com'
-      - uses: pnpm/action-setup@v6.0.3
+      - uses: pnpm/action-setup@v6.0.5
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
