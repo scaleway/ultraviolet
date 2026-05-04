@@ -98,7 +98,13 @@ export const ListFiles = ({
           const sentiment = file.error ? 'danger' : 'neutral'
 
           return (
-            <Stack data-testid={file.fileName} gap={0.5} key={file.fileName}>
+            <Stack
+              data-testid={file.fileName}
+              gap={0.5}
+              key={file.fileName}
+              as="ul"
+              className={fileInputStyle.fileListContainer}
+            >
               <Stack
                 alignItems="center"
                 className={
@@ -109,6 +115,7 @@ export const ListFiles = ({
                 direction="row"
                 gap={2}
                 justifyContent="center"
+                as="li"
               >
                 <Stack alignItems="center" direction="row" gap={1}>
                   {illustration}
@@ -162,7 +169,7 @@ export const ListFiles = ({
           size="large"
           variant="ghost"
         >
-          {textLimit} ({files.length})
+          {textLimit} ({files.length - (limit ?? 0)})
         </Button>
       ) : null}
     </Stack>
