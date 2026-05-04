@@ -26,6 +26,7 @@ export const ItemExpanded = ({
   shouldShowPinnedButton,
   children,
   dataTestId,
+  dataFlipId,
   type,
   href,
   rel,
@@ -138,7 +139,7 @@ export const ItemExpanded = ({
           }),
         )}
         data-testid={dataTestId}
-        data-flip-id={categoryIcon ? id : null}
+        data-flip-id={dataFlipId}
         direction="row"
         disabled={containerTag === 'button' ? disabled : undefined}
         draggable={type === 'pinned' && expanded}
@@ -204,7 +205,7 @@ export const ItemExpanded = ({
           </Stack>
         ) : null}
       </Stack>
-      {children && ((expanded && !animation) || animation === 'expand') ? (
+      {children && expanded ? (
         <ItemChildren
           internalExpanded={internalExpanded}
           noExpand={noExpand}

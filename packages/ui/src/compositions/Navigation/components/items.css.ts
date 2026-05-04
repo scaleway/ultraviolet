@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-import { fadeIn } from '../../../utils'
+import { fadeIn, slideDownLarge } from '../../../utils'
 import { ANIMATION_DURATION, ANIMATION_EASING } from '../constants'
 
 export const itemMenuContainer = style({ width: 180 })
@@ -10,6 +10,12 @@ export const itemMenuContainer = style({ width: 180 })
 export const itemRelative = style({ position: 'relative' })
 
 export const itemPadded = style({ paddingLeft: theme.space[1] })
+
+export const itemCollapsed = style({
+  height: theme.sizing['400'],
+  width: theme.sizing['400'],
+  padding: 0,
+})
 
 const itemPinIconBase = style({
   borderRadius: theme.radii.default,
@@ -50,24 +56,14 @@ export const itemContainerBase = style({
   border: 'none',
   borderRadius: theme.radii.default,
   color: 'inherit',
-  marginTop: theme.space['0.25'],
-  padding: `calc(${theme.space['0.25']} + ${theme.space['0.5']}) ${theme.space[1]}`,
+  padding: `calc(${theme.space['0.25']} + ${theme.space['0.5']})`,
   textAlign: 'left',
   textDecoration: 'none',
   width: '100%',
 })
 
-export const itemPaddingStack = recipe({
-  base: {
-    paddingLeft: 28, // This value need to be hardcoded because of the category icon size
-  },
-  variants: {
-    hide: {
-      true: {
-        display: 'none',
-      },
-    },
-  },
+export const itemPaddingStack = style({
+  paddingLeft: 28, // This value need to be hardcoded because of the category icon size
 })
 
 export const itemContainer = recipe({
@@ -119,8 +115,8 @@ export const itemContainer = recipe({
     expanding: {
       true: {
         selectors: {
-          [`${itemPaddingStack({ hide: false })} &`]: {
-            animation: `${fadeIn} ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
+          [`${itemPaddingStack} &`]: {
+            animation: `${fadeIn} ${ANIMATION_DURATION * 0.75}ms ${ANIMATION_DURATION * 0.25}ms ${ANIMATION_EASING} both, ${slideDownLarge} ${ANIMATION_DURATION}ms`,
           },
         },
       },
@@ -209,7 +205,7 @@ export const itemWrapText = recipe({
         opacity: 0,
       },
       expand: {
-        animation: `${fadeIn} ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
+        animation: `${fadeIn} ${ANIMATION_DURATION}ms ${ANIMATION_EASING} both`,
       },
       false: {},
     },
