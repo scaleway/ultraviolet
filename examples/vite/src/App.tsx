@@ -14,6 +14,7 @@ import { InfoTable } from '@ultraviolet/ui/compositions/InfoTable'
 import { useState } from 'react'
 import '@ultraviolet/ui/styles' // Import styles for the UI components
 import '@ultraviolet/themes/global'
+
 import centos from './assets/centos.svg'
 import debian from './assets/debian.svg'
 import ubuntu from './assets/ubuntu.svg'
