@@ -1,0 +1,57 @@
+Summary: Setup oxlint avec règles A11y pour l'audit A11y
+Issue Type: Story
+Priority: High
+Labels: a11y, devops, infrastructure, oxlint
+
+Description:
+Configurer les règles A11y dans oxlint pour détecter automatiquement les problèmes d'accessibilité dans le code.
+
+Contexte:
+- Actuellement 52 occurrences de règles a11y désactivées avec oxlint-disable
+- Nécessité d'avoir un linting a11y automatisé dans le workflow de développement
+- Premier pilier de l'infrastructure a11y
+
+Tâches:
+[ ] Configurer les règles A11y dans .oxlintrc.jsonc
+[ ] Commencer en mode warning uniquement (ne pas bloquer la CI)
+[ ] Documenter les règles activées dans CONTRIBUTING.md
+[ ] Tester sur un échantillon de composants
+
+Règles à activer (priorité haute):
+- accessible-emoji
+- alt-text
+- anchor-has-content
+- aria-activedescendant-has-tabindex
+- aria-props
+- aria-role
+- aria-unsupported-roles
+- autocomplete-valid
+- click-events-have-key-events
+- heading-has-content
+- html-has-lang
+- iframe-has-title
+- img-redundant-alt
+- label-has-associated-control
+- lang
+- media-has-caption
+- mouse-events-have-key-events
+- no-access-key
+- no-autofocus
+- no-noninteractive-element-interactions
+- no-noninteractive-element-to-interactive-role
+- no-noninteractive-tabindex
+- no-redundant-roles
+- no-static-element-interactions
+- role-has-required-aria-props
+- scope
+- tabindex-no-positive
+
+Critères d'acceptation:
+- [ ] La configuration oxlint inclut les règles A11y
+- [ ] Les règles sont documentées
+- [ ] Le linting tourne en local sans erreurs bloquantes
+- [ ] La CI affiche les warnings a11y sans échouer
+
+Estimation: 3h
+Assignee: Unassigned
+Reporter: A11y Audit Team

@@ -1,0 +1,52 @@
+Summary: Corriger les violations A11y de niveau critical/serious
+Issue Type: Bug
+Priority: High
+Labels: a11y, fix, wcag, critical
+
+Description:
+Résoudre les violations d'accessibilité de niveau critical et serious identifiées lors de l'audit.
+
+Contexte:
+- 52 occurrences avec oxlint-disable a11y à reviewer
+- Violations critiques bloquent la conformité WCAG AA
+- Impact direct sur les utilisateurs en situation de handicap
+
+Tâches:
+[ ] Review des 52 occurrences avec oxlint-disable a11y
+[ ] Corriger les problèmes de focus management
+[ ] Fixer les problèmes de contrastes de couleurs
+[ ] Améliorer les landmarks et rôles ARIA
+[ ] Supprimer les oxlint-disable justifiés
+[ ] Ajouter des commentaires pour les cas limites
+
+Fichiers à corriger (priorité):
+1. packages/ui/src/components/Button/index.tsx (aria-role)
+2. packages/ui/src/components/SelectInput/index.tsx (aria-role)
+3. packages/ui/src/components/Modal/components/Dialog.tsx (focus trap)
+4. packages/ui/src/components/ExpandableCard/index.tsx (keyboard)
+5. packages/ui/src/components/FileInput/index.tsx (drag & drop a11y)
+6. packages/ui/src/components/Navigation/ (keyboard navigation)
+7. packages/ui/src/compositions/Plans/ (table a11y)
+
+Violations critiques à fixer:
+- Missing alternative text
+- Missing form label
+- Missing link name
+- Missing button name
+- Focus not visible
+- Focus order not sequential
+- Keyboard trap
+- No skip link
+- Color contrast (less than 3:1)
+
+Critères d'acceptation:
+- [ ] 0 violations critical
+- [ ] 0 violations serious
+- [ ] Moins de 10 violations moderate
+- [ ] Tests a11y passent sur les composants corrigés
+- [ ] Tests manuels avec screen reader OK
+
+Estimation: 16h
+Assignee: Unassigned
+Reporter: A11y Audit Team
+Dependencies: UV-005

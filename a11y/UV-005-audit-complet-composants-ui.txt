@@ -1,0 +1,62 @@
+Summary: Audit complet des composants UI avec axe-core
+Issue Type: Task
+Priority: High
+Labels: a11y, audit, scanning
+
+Description:
+Scanner tous les composants de la Design System avec axe-core et générer un rapport complet des violations.
+
+Contexte:
+- Packages/ui/src/components contient tous les composants
+- 52 occurrences de règles a11y désactivées identifiées
+- Besoin d'une vue d'ensemble pour prioriser les correctifs
+
+Tâches:
+[ ] Créer un script de scan utils/scripts/a11y-scan.ts
+[ ] Scanner tous les composants dans packages/ui/src/components/
+[ ] Scanner les compositions packages/ui/src/compositions/
+[ ] Scanner les composants form packages/form/src/components/
+[ ] Générer un rapport des violations par composant
+[ ] Prioriser les violations (critical, serious, moderate, minor)
+[ ] Créer des sous-tickets par composant critique
+
+Script de scan:
+```typescript
+import { AxePuppeteer } from '@axe-core/puppeteer'
+import { renderWithTheme } from '@utils/test'
+import * as Components from '@ultraviolet/ui'
+
+const scanAllComponents = async () => {
+  const results = {}
+  for (const Component of Components) {
+    const { container } = renderWithTheme(<Component />)
+    const axeResults = await axe.run(container)
+    results[Component.name] = axeResults.violations
+  }
+  return results
+}
+```
+
+Rapport à générer:
+- Nombre de violations par composant
+- Types de violations (critical/serious/moderate/minor)
+- Règles les plus violées
+- Composants les plus problématiques
+
+Composants à auditer en priorité:
+1. Button (aria-role disabled)
+2. Modal/Dialog (focus management)
+3. SelectInput (aria-role disabled)
+4. Navigation (no-static-element-interactions)
+5. ExpandableCard (keyboard navigation)
+
+Critères d'acceptation:
+- [ ] Script de scan fonctionnel
+- [ ] Rapport complet généré (.md ou .html)
+- [ ] Sous-tickets créés pour les composants critiques
+- [ ] Présentation des résultats à l'équipe
+
+Estimation: 8h
+Assignee: Unassigned
+Reporter: A11y Audit Team
+Dependencies: UV-001, UV-002

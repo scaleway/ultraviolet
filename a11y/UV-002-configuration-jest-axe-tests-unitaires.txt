@@ -1,0 +1,53 @@
+Summary: Configuration vitest-axe pour les tests unitaires A11y
+Issue Type: Story
+Priority: High
+Labels: a11y, testing, vitest-axe, vitest
+
+Description:
+Implémenter axe-core dans les tests unitaires via vitest-axe pour détecter les violations d'accessibilité automatiquement.
+
+Contexte:
+- vitest-axe est déjà installé (voir vitest-axe.d.ts et expect.d.ts)
+- Mais peu ou pas utilisé dans les tests actuels
+- Utils/test contient les helpers de test (renderWithTheme, etc.)
+
+Tâches:
+[ ] Ajouter axe-core aux dependencies de test (utils/test/package.json)
+[ ] Créer un helper toHaveNoAxeViolations dans utils/test/src/vitest/helpers/
+[ ] Configurer les règles axe personnalisées (WCAG AA)
+[ ] Ajouter la documentation d'usage dans utils/test/README.md
+[ ] Tester sur 2-3 composants existants (Button, Alert)
+[ ] Ajouter un exemple dans les tests existants
+
+Configuration axe recommandée:
+```typescript
+const axeConfig = {
+  rules: {
+    'color-contrast': { enabled: true },
+    'label': { enabled: true },
+    'landmark-one-main': { enabled: false }, // Pas pertinent pour les composants isolés
+    'region': { enabled: false }, // Idem
+  }
+}
+```
+
+Helper à créer:
+```typescript
+export const renderWithAxe = (component, options) => {
+  const { container } = renderWithTheme(component, options)
+  const results = await axe(container)
+  expect(results).toHaveNoViolations()
+  return renderWithTheme(component, options)
+}
+```
+
+Critères d'acceptation:
+- [ ] Helper toHaveNoAxeViolations disponible dans @utils/test
+- [ ] Documentation à jour
+- [ ] Au moins 2 composants testés avec axe
+- [ ] Les tests passent en local et en CI
+
+Estimation: 5h
+Assignee: Unassigned
+Reporter: A11y Audit Team
+Dependencies: UV-001

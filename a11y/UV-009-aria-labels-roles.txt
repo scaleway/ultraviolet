@@ -1,0 +1,61 @@
+Summary: ARIA Labels & Roles - Amélioration des attributs ARIA
+Issue Type: Bug
+Priority: Medium
+Labels: a11y, aria, semantics
+
+Description:
+Améliorer les attributs ARIA (labels, roles, states) sur tous les composants pour une meilleure sémantique.
+
+Contexte:
+- Button a aria-role disabled (line 1)
+- SelectInput a aria-role disabled (line 1)
+- Radio a role-supports-aria-props disabled (line 84)
+- Besoin de cohérence dans l'usage d'ARIA
+
+Tâches:
+[ ] Review Button component (aria-role)
+[ ] Review SelectInput component (aria-role)
+[ ] Review Radio component (aria-props)
+[ ] Ajouter aria-labels manquants
+[ ] Vérifier les live regions (alerts, notifications)
+[ ] Ajouter aria-describedby pour les erreurs
+[ ] Implémenter aria-expanded pour les accordéons
+[ ] Ajouter aria-current pour la navigation
+
+Composants à review:
+1. Button - role="button" si div, aria-pressed si toggle
+2. SelectInput - role="combobox", aria-expanded, aria-controls
+3. Radio - aria-checked, role="radio"
+4. Modal - role="dialog", aria-modal="true"
+5. Tabs - role="tablist", role="tab", aria-selected
+6. Navigation - role="navigation", aria-label
+7. Alert - role="alert" ou role="status"
+
+Pattern aria-label:
+```typescript
+<Button
+  aria-label={iconOnly ? label : undefined}
+  aria-describedby={error ? errorId : undefined}
+  aria-expanded={isExpanded}
+  aria-controls={controlledId}
+  aria-current={isCurrent ? 'page' : undefined}
+>
+```
+
+Live regions à implémenter:
+- Notifications toast: role="status" aria-live="polite"
+- Alerts: role="alert" aria-live="assertive"
+- Loading: aria-busy="true" aria-live="polite"
+
+Critères d'acceptation:
+- [ ] Tous les composants ont des rôles ARIA corrects
+- [ ] aria-label présent quand texte visible absent
+- [ ] aria-describedby pour context/errors
+- [ ] Live regions pour feedback dynamique
+- [ ] Plus de oxlint-disable aria-*
+- [ ] Tests avec screen reader OK
+
+Estimation: 10h
+Assignee: Unassigned
+Reporter: A11y Audit Team
+Dependencies: UV-005, UV-006

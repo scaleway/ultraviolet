@@ -1,0 +1,102 @@
+Summary: Stories de démonstration A11y dans Storybook
+Issue Type: Story
+Priority: Medium
+Labels: a11y, storybook, demo, documentation
+
+Description:
+Créer des stories dédiées dans Storybook pour démontrer les fonctionnalités d'accessibilité de chaque composant.
+
+Contexte:
+- Storybook existe avec @storybook/addon-a11y
+- Stories actuelles montrent l'usage basique
+- Besoin de stories éducatives sur l'a11y
+
+Tâches:
+[ ] Story "Keyboard Navigation" par composant
+[ ] Story "Screen Reader Announcements"
+[ ] Story "Focus States"
+[ ] Story "Error States & Validation"
+[ ] Story "ARIA Attributes"
+[ ] Template réutilisable pour nouveaux composants
+
+Structure des stories:
+```typescript
+// Button.a11y.stories.tsx
+export const KeyboardNavigation = {
+  render: () => (
+    <div>
+      <h2>Keyboard Navigation Test</h2>
+      <p>Use Tab to navigate, Enter/Space to activate</p>
+      <Button>Tab to me</Button>
+      <Button>Then me</Button>
+      <Button disabled>Disabled (skipped)</Button>
+    </div>
+  ),
+  parameters: {
+    a11y: {
+      config: {
+        rules: [{ id: 'focusable', enabled: true }]
+      }
+    }
+  }
+}
+
+export const FocusStates = {
+  render: () => (
+    <div style={{ padding: '20px' }}>
+      <h2>Focus States</h2>
+      <p>Click and press Tab to see focus indicators</p>
+      <Button variant="filled">Filled</Button>
+      <Button variant="outlined">Outlined</Button>
+      <Button variant="ghost">Ghost</Button>
+    </div>
+  )
+}
+
+export const ARIALabels = {
+  render: () => (
+    <div>
+      <h2>ARIA Labels</h2>
+      <Button aria-label="Close dialog">
+        <CloseIcon />
+      </Button>
+      <Button aria-describedby="help-text">
+        With description
+      </Button>
+      <p id="help-text">This button does something</p>
+    </div>
+  )
+}
+```
+
+Composants prioritaires:
+[ ] Button
+[ ] Modal/Dialog
+[ ] SelectInput
+[ ] Tabs
+[ ] Navigation
+[ ] Alert/Notification
+[ ] Form components
+
+Template à créer:
+```typescript
+// utils/stories/src/a11y-templates.tsx
+export const createKeyboardStory = (Component) => ({
+  // Template standardisé
+})
+export const createFocusStory = (Component) => ({
+  // Template standardisé
+})
+```
+
+Critères d'acceptation:
+- [ ] 10+ composants avec stories a11y dédiées
+- [ ] Templates réutilisables créés
+- [ ] Documentation dans chaque story
+- [ ] Tests a11y intégrés aux stories
+- [ ] Section dédiée dans Storybook sidebar
+
+Estimation: 10h
+Assignee: Unassigned
+Reporter: A11y Audit Team
+Dependencies: UV-003
