@@ -1,7 +1,7 @@
 'use client'
 
 import type { ChangeEvent, DragEvent as DragEventReact } from 'react'
-import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { Description } from '../Description'
 import { Label } from '../Label'
@@ -11,7 +11,7 @@ import { FileInputButton } from './components/Button'
 import { ListFiles } from './components/List'
 import { DropzoneContent } from './DropzoneContent'
 import { FileInputContext } from './FileInputProvider'
-import { fileIsAccepted } from './helpers'
+import { fileIsAccepted, readEntry } from './helpers'
 import type { ErrorType, FileInputProps } from './types'
 import { fileInputStyle } from './styles.css'
 
@@ -48,6 +48,7 @@ const FileInputBase = ({
   validator,
   'data-testid': dataTestid,
   'aria-describedby': ariaDescribedBy,
+  allowDirectories,
 }: FileInputProps) => {
   const [dragState, setDragState] = useState<'over' | 'default' | 'page'>('default')
   const [files, setFiles] = useState(defaultFiles ?? [])
@@ -56,6 +57,8 @@ const FileInputBase = ({
   const helperId = useId()
   const inputRef = useRef<HTMLInputElement>(null)
 
+  // When we allow folder, we should allow to add multiple files
+  const computedMultiple = allowDirectories || multiple
   const onDragOver = (event: DragEventReact) => {
     event.preventDefault()
     event.stopPropagation()
@@ -96,52 +99,55 @@ const FileInputBase = ({
     }
   }, [defaultFiles])
 
-  const addFiles = (addedFiles: FileList | null): [File[], ErrorType[]] => {
-    const droppedFiles = [...(addedFiles ?? [])]
-    const newFiles: File[] = []
-    const errorFiles: ErrorType[] = []
+  const addFiles = useCallback(
+    (addedFiles: FileList | null): [File[], ErrorType[]] => {
+      const droppedFiles = [...(addedFiles ?? [])]
+      const newFiles: File[] = []
+      const errorFiles: ErrorType[] = []
 
-    for (const file of droppedFiles) {
-      const isAccepted = fileIsAccepted(file.type, accept)
-      const customError = validator?.(file)
+      for (const file of droppedFiles) {
+        const isAccepted = fileIsAccepted(file.type, file.name, accept)
+        const customError = validator?.(file)
 
-      if (isAccepted && !customError) {
-        newFiles.push(file)
-      } else {
-        const acceptArray = accept?.split(',')
-        const defaultMessage = acceptArray
-          ? `File type must be ${acceptArray.length > 1 ? `one of ${acceptArray.join(', ')}` : acceptArray[0]}`
-          : 'Error'
+        if (isAccepted && !customError) {
+          newFiles.push(file)
+        } else {
+          const acceptArray = accept?.split(',')
+          const defaultMessage = acceptArray
+            ? `File type must be ${acceptArray.length > 1 ? `one of ${acceptArray.join(', ')}` : acceptArray[0]}`
+            : 'Error'
 
-        errorFiles.push({
-          fileName: file.name,
-          error: customError ?? defaultMessage,
-        })
+          errorFiles.push({
+            fileName: file.name,
+            error: customError ?? defaultMessage,
+          })
+        }
       }
-    }
 
-    const formattedNewFiles = newFiles.map(file => ({
-      file: URL.createObjectURL(file),
-      fileName: file.name,
-      lastModified: file.lastModified,
-      size: file.size,
-      type: file.type,
-    }))
+      const formattedNewFiles = newFiles.map(file => ({
+        file: URL.createObjectURL(file),
+        fileName: file.name,
+        lastModified: file.lastModified,
+        size: file.size,
+        type: file.type,
+      }))
 
-    const formattedFiles = multiple ? [...files, ...formattedNewFiles] : [formattedNewFiles[0]]
-    setFiles(formattedFiles)
-    onChangeFiles?.(formattedFiles)
+      const formattedFiles = computedMultiple ? [...files, ...formattedNewFiles] : [formattedNewFiles[0]]
+      setFiles(formattedFiles)
+      onChangeFiles?.(formattedFiles)
 
-    if (addedFiles) {
-      onChange?.(addedFiles)
-    }
+      if (addedFiles) {
+        onChange?.(addedFiles)
+      }
 
-    if (inputRef.current) {
-      inputRef.current.value = ''
-    }
+      if (inputRef.current) {
+        inputRef.current.value = ''
+      }
 
-    return [newFiles, errorFiles]
-  }
+      return [newFiles, errorFiles]
+    },
+    [onChangeFiles, computedMultiple, files, accept, validator, onChange],
+  )
 
   const onChangeLocal = (event: ChangeEvent<HTMLInputElement>) => {
     event.preventDefault()
@@ -151,14 +157,22 @@ const FileInputBase = ({
     }
   }
 
-  const onDropComputed = (event: DragEventReact<HTMLElement>) => {
-    event.preventDefault()
+  const onDropComputed = useCallback(
+    async (event: DragEventReact<HTMLElement>) => {
+      event.preventDefault()
 
-    if (!disabled) {
-      const [acceptedFiles, errorFiles] = addFiles(event.dataTransfer?.files)
-      onDrop?.(event, acceptedFiles, errorFiles)
-    }
-  }
+      if (!disabled && allowDirectories && !disabledDragndrop) {
+        const readFile = await readEntry(event.dataTransfer)
+
+        const [acceptedFiles, errorFiles] = addFiles(readFile)
+        onDrop?.(event, acceptedFiles, errorFiles)
+      } else if (!(disabled || disabledDragndrop)) {
+        const [acceptedFiles, errorFiles] = addFiles(event.dataTransfer?.files)
+        onDrop?.(event, acceptedFiles, errorFiles)
+      }
+    },
+    [disabled, onDrop, allowDirectories, addFiles, disabledDragndrop],
+  )
 
   const computedChildren = typeof children === 'function' ? children(inputId, inputRef) : children
 
@@ -175,7 +189,7 @@ const FileInputBase = ({
       data-testid={dataTestid}
       disabled={disabled}
       id={inputId}
-      multiple={multiple}
+      multiple={computedMultiple}
       name={name ?? label ?? ariaLabel}
       onChange={onChangeLocal}
       ref={inputRef}
@@ -232,9 +246,9 @@ const FileInputBase = ({
                 }
                 onDragOver={event => event.preventDefault()}
                 onDrop={event => {
-                  if (!disabledDragndrop) {
-                    onDropComputed(event)
-                  }
+                  onDropComputed(event).catch(() => {
+                    throw new Error('An error occured')
+                  })
                 }}
                 style={style}
               >
@@ -281,7 +295,11 @@ const FileInputBase = ({
             {...(isSmall ? { type: 'button' } : undefined)}
             data-testid="drag-container"
             onDragOver={onDragOver}
-            onDrop={onDropComputed}
+            onDrop={event => {
+              onDropComputed(event).catch(() => {
+                throw new Error('An error occured')
+              })
+            }}
           >
             <DropzoneContent
               disabled={disabled}

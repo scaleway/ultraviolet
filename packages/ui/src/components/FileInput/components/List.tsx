@@ -73,13 +73,20 @@ export const ListFiles = ({ limit, textLimit, prominence = 'default', onDelete }
           const sentiment = file.error ? 'danger' : 'neutral'
 
           return (
-            <Stack data-testid={file.fileName} gap={0.5} key={file.fileName}>
+            <Stack
+              data-testid={file.fileName}
+              gap={0.5}
+              key={file.fileName}
+              as="ul"
+              className={fileInputStyle.fileListContainer}
+            >
               <Stack
                 alignItems="center"
                 className={fileInputStyle.fileViewerContainer[file.error || error ? 'error' : prominence]}
                 direction="row"
                 gap={2}
                 justifyContent="center"
+                as="li"
               >
                 <Stack alignItems="center" direction="row" gap={1}>
                   {illustration}
@@ -120,7 +127,7 @@ export const ListFiles = ({ limit, textLimit, prominence = 'default', onDelete }
       })}
       {computedLimit && files.length > computedLimit ? (
         <Button data-testid="see-all" onClick={seeAllOnClick} sentiment="primary" size="large" variant="ghost">
-          {textLimit} ({files.length})
+          {textLimit} ({files.length - (limit ?? 0)})
         </Button>
       ) : null}
     </Stack>
