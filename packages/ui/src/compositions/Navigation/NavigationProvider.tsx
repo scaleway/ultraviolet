@@ -187,7 +187,7 @@ export const NavigationProvider = ({
   )
   const navigationRef = useRef<HTMLDivElement | null>(null)
 
-  const { recordState, animate } = useFlip(navigationRef, {
+  const { prepareAnimation, animate } = useFlip(navigationRef, {
     duration: ANIMATION_DURATION,
     easing: ANIMATION_EASING,
   })
@@ -219,7 +219,7 @@ export const NavigationProvider = ({
       }
 
       if (shouldAnimate && !immediate) {
-        recordState()
+        prepareAnimation()
         setAnimation(isNowExpanded ? 'expand' : 'collapse')
 
         requestAnimationFrame(() => {
@@ -237,7 +237,7 @@ export const NavigationProvider = ({
         })
       }
     },
-    [expanded, onExpandChange, recordState, animate, shouldAnimate],
+    [expanded, onExpandChange, prepareAnimation, animate, shouldAnimate],
   )
 
   const pinItem = useCallback(
