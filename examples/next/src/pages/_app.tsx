@@ -19,6 +19,7 @@ import '@ultraviolet/themes/global'
 import '@ultraviolet/themes/dark.css'
 import '@ultraviolet/themes/darker.css'
 import '@ultraviolet/themes/light.css'
+
 import type { PropsWithChildren } from 'react'
 import '../../styles/global.css'
 
