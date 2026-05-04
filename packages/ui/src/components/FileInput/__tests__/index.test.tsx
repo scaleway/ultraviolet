@@ -1,10 +1,11 @@
 // oxlint-disable typescript/no-unsafe-type-assertion
-import { fireEvent, screen } from '@testing-library/react'
+import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 
 import { FileInput } from '..'
+import { FilesType } from '../types'
 
 const defaultFile = [
   {
@@ -132,8 +133,8 @@ describe('fileInput', () => {
   })
 
   test('renders correctly onChange', async () => {
-    const onChange = vi.fn()
-    const onDelete = vi.fn()
+    const onChange = vi.fn<(files: FileList) => void>()
+    const onDelete = vi.fn<(name: string) => void>()
 
     const { asFragment } = renderWithTheme(
       <FileInput
@@ -158,7 +159,7 @@ describe('fileInput', () => {
   })
 
   test('renders correctly onChangeFiles', async () => {
-    const onChange = vi.fn()
+    const onChange = vi.fn<(files: FilesType[]) => void>()
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -182,7 +183,7 @@ describe('fileInput', () => {
   })
 
   test('should work correctly with listLimit', async () => {
-    const onChange = vi.fn()
+    const onChange = vi.fn<(files: FilesType[]) => void>()
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -209,7 +210,7 @@ describe('fileInput', () => {
   })
 
   test('renders correctly with FileInput.Button', () => {
-    const onChange = vi.fn()
+    const onChange = vi.fn<(files: FilesType[]) => void>()
 
     const { asFragment } = renderWithTheme(
       <FileInput
@@ -233,7 +234,7 @@ describe('fileInput', () => {
   })
 
   test('should work with function children and title', () => {
-    const onChange = vi.fn()
+    const onChange = vi.fn<(files: FilesType[]) => void>()
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -265,7 +266,7 @@ describe('fileInput', () => {
   })
 
   test('renders correctly ondrop, ondrag', () => {
-    const onChange = vi.fn()
+    const onChange = vi.fn<(files: FilesType[]) => void>()
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -290,7 +291,7 @@ describe('fileInput', () => {
   })
 
   test('renders correctly when drag and drop disabled', () => {
-    const onChange = vi.fn()
+    const onChange = vi.fn<(files: FilesType[]) => void>()
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -326,7 +327,7 @@ describe('fileInput', () => {
   })
 
   test('should handle adding a file when selecting via the hidden file input', async () => {
-    const onChangeFiles = vi.fn()
+    const onChangeFiles = vi.fn<(files: FilesType[]) => void>()
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -355,7 +356,7 @@ describe('fileInput', () => {
   })
 
   test('should add a file with drag and drop', () => {
-    const onChangeFiles = vi.fn()
+    const onChangeFiles = vi.fn<(files: FilesType[]) => void>()
     renderWithTheme(
       <FileInput
         accept="image/*"
@@ -388,7 +389,7 @@ describe('fileInput', () => {
   })
 
   test('should add a file with drag and drop which when accept is defined', () => {
-    const onChangeFiles = vi.fn()
+    const onChangeFiles = vi.fn<(files: FilesType[]) => void>()
     renderWithTheme(
       <FileInput
         accept="image/*"
@@ -433,10 +434,10 @@ describe('fileInput', () => {
   })
 
   test('should add a file with drag and drop which when accept is defined and precise', () => {
-    const onChangeFiles = vi.fn()
+    const onChangeFiles = vi.fn<(files: FilesType[]) => void>()
     renderWithTheme(
       <FileInput
-        accept="image/png"
+        accept="image/png, .mp3"
         aria-label="label"
         onChangeFiles={onChangeFiles}
       />,
@@ -446,6 +447,9 @@ describe('fileInput', () => {
     const file = new File(['dnd'], 'dnd.png', { type: 'image/png' })
     const fileJpg = new File(['dnd'], 'dnd.jpg', { type: 'image/jpg' })
     const filePdf = new File(['not-added'], 'not-added.pdf', {
+      type: 'application/pdf',
+    })
+    const filemp3 = new File(['added'], 'added.mp3', {
       type: 'application/pdf',
     })
 
@@ -485,15 +489,24 @@ describe('fileInput', () => {
       },
     } as unknown as DragEvent)
 
+    fireEvent.drop(dropzone, {
+      dataTransfer: {
+        files: [filemp3],
+        items: [],
+        types: ['Files'],
+      },
+    } as unknown as DragEvent)
+
     expect(onChangeFiles).not.toHaveBeenCalledWith(
       expect.arrayContaining([
         expect.objectContaining({ fileName: 'dnd.jpg' }),
+        expect.objectContaining({ fileName: 'added.mp3' }),
       ]),
     )
   })
 
   test('should add a file with drag and drop which when accept but not valid', () => {
-    const onChangeFiles = vi.fn()
+    const onChangeFiles = vi.fn<(files: FilesType[]) => void>()
     renderWithTheme(
       <FileInput accept=" " aria-label="label" onChangeFiles={onChangeFiles} />,
     )
@@ -514,5 +527,85 @@ describe('fileInput', () => {
         expect.objectContaining({ fileName: 'dnd.png' }),
       ]),
     )
+  })
+
+  test('should add files from dropped directory with allowDirectories', async () => {
+    const onChangeFiles = vi.fn<(files: FilesType[]) => void>()
+    renderWithTheme(
+      <FileInput
+        aria-label="label"
+        onChangeFiles={onChangeFiles}
+        allowDirectories
+        bottom={<FileInput.List />}
+        size="small"
+        title="title"
+      />,
+    )
+
+    const dropzone = screen.getByRole('button', { name: 'UploadIcon title' })
+    const dirFile = new File(['content1'], 'dir/file1.png', {
+      type: 'image/png',
+    })
+    const singleFile = new File(['content2'], 'single.png', {
+      type: 'image/png',
+    })
+
+    let callCount = 0
+    const dirFileEntry = {
+      isFile: true,
+      isDirectory: false,
+      file: (success: (file: File) => void) => success(dirFile),
+    } as unknown as FileSystemFileEntry
+
+    const directoryEntry = {
+      isFile: false,
+      isDirectory: true,
+      name: 'dir',
+      createReader: () => ({
+        readEntries: (resolve: (entries: FileSystemEntry[]) => void) => {
+          if (callCount === 0) {
+            callCount += 1
+            resolve([dirFileEntry])
+          } else {
+            resolve([])
+          }
+        },
+      }),
+    } as unknown as FileSystemDirectoryEntry
+
+    const dirItem = {
+      kind: 'file',
+      type: dirFile.type,
+      webkitGetAsEntry: () => directoryEntry,
+    } as unknown as DataTransferItem
+
+    const singleFileEntry = {
+      isFile: true,
+      isDirectory: false,
+      file: (success: (file: File) => void) => success(singleFile),
+    } as unknown as FileSystemFileEntry
+
+    const singleItem = {
+      kind: 'file',
+      type: singleFile.type,
+      webkitGetAsEntry: () => singleFileEntry,
+    } as unknown as DataTransferItem
+
+    fireEvent.drop(dropzone, {
+      dataTransfer: {
+        files: [dirFile, singleFile],
+        items: [dirItem, singleItem],
+        types: ['Files'],
+      },
+    } as unknown as DragEvent)
+
+    await waitFor(() => {
+      expect(onChangeFiles).toHaveBeenCalledWith(
+        expect.arrayContaining([
+          expect.objectContaining({ fileName: 'dir/file1.png' }),
+          expect.objectContaining({ fileName: 'single.png' }),
+        ]),
+      )
+    })
   })
 })

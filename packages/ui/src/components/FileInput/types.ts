@@ -83,6 +83,13 @@ export type FileInputProps = {
   disabledDragndrop?: boolean
   onChange?: (files: FileList) => void
   validator?: (file: File) => string
+  /**
+   * Allow to drag and drop folders in the dropzone. When set to true:
+   * - `multiple` will automatically be set to `true`
+   * - The files are all flattened and returned as a list. It is possible to use a path to reconstruct the folder
+   * (`file.webkitpath`)
+   */
+  allowDirectories?: boolean
 } & (OverlayVariantProps | DropzoneVariantProps) &
   LabelType &
   Pick<
