@@ -167,7 +167,6 @@ export const Item = memo(
       pinnedFeature,
       pinnedItems,
       pinLimit,
-      animation,
       registerItem,
       showHide,
     } = context
@@ -264,7 +263,7 @@ export const Item = memo(
       return null
     }
 
-    if (expanded || (!expanded && animation === 'expand')) {
+    if (expanded) {
       return (
         <ItemExpanded
           active={active}
@@ -273,6 +272,7 @@ export const Item = memo(
           categoryIcon={categoryIcon}
           containerTag={containerTag}
           dataTestId={dataTestId}
+          dataFlipId={!hasParents && categoryIcon ? id : null}
           disabled={disabled}
           hasActiveChildren={hasActiveChildren}
           hasPinnedFeatureAndNoChildren={hasPinnedFeatureAndNoChildren}
@@ -307,7 +307,7 @@ export const Item = memo(
         <ItemMenu
           active={active}
           categoryIcon={categoryIcon}
-          data-flip-id={id}
+          data-flip-id={categoryIcon ? id : undefined}
           hasActiveChildren={hasActiveChildren}
           label={label}
           style={style}
@@ -380,9 +380,8 @@ export const Item = memo(
       return (
         <Tooltip placement="right" text={label}>
           <Stack
-            alignItems="flex-start"
-            className={navigationStyle.itemMenuStack}
-            data-flip-id={id}
+            alignItems="center"
+            data-flip-id={categoryIcon ? id : undefined}
             gap={1}
             justifyContent="flex-start"
           >

@@ -33,17 +33,10 @@ export const Group = ({
 
   const { expanded, animation } = context
 
-  const isDiplay = (expanded && !animation) || animation === 'expand'
-
   if (Children.count(children) > 0) {
     return (
-      <Stack
-        className={navigationStyle.groupStack}
-        direction="column"
-        style={style}
-        data-flip-id={id}
-      >
-        {isDiplay ? (
+      <Stack gap={0.25} direction="column" style={style} data-flip-id={id}>
+        {expanded ? (
           <Text
             as="span"
             className={navigationStyle.groupText({

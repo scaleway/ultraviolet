@@ -6,8 +6,6 @@ import { memo, useState } from 'react'
 
 import { Button } from '../../../components/Button'
 import { Stack } from '../../../components/Stack'
-import { useFlip } from '../../../hooks/useFlip'
-import { ANIMATION_DURATION, ANIMATION_EASING } from '../constants'
 import { useNavigation } from '../NavigationProvider'
 import { navigationStyle } from '../styles.css'
 
@@ -41,27 +39,15 @@ export const ShowHide = memo(
         'Navigation.ShowAll can only be used inside a NavigationProvider.',
       )
     }
-    const { expanded, animation, showHide, navigationRef, shouldAnimate } =
-      context
-
-    const { recordState, animate } = useFlip(navigationRef, {
-      duration: ANIMATION_DURATION,
-      easing: ANIMATION_EASING,
-    })
+    const { expanded, animation, showHide } = context
 
     const [computedShown, setIsShown] = useState(showHide === 'show')
     const onClick = () => {
-      if (shouldAnimate) {
-        recordState()
-        requestAnimationFrame(() => {
-          animate().catch(() => {})
-        })
-      }
       setIsShown(!computedShown)
       onShowHide?.(computedShown ? 'hide' : 'show')
     }
 
-    if ((expanded && !animation) || animation === 'expand') {
+    if (expanded) {
       return (
         <Stack
           className={navigationStyle.showHideStack({

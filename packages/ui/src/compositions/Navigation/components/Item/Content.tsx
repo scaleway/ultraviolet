@@ -60,8 +60,7 @@ export const ItemContent = ({
           {categoryIcon}
         </Stack>
       ) : null}
-      {type === 'pinned' &&
-      ((expanded && !animation) || animation === 'expand') ? (
+      {type === 'pinned' && expanded ? (
         <DragIcon
           className={navigationStyle.itemDragIcon}
           disabled={disabled}
@@ -94,7 +93,7 @@ export const ItemContent = ({
             </span>
           ) : null}
         </Text>
-        {subLabel && ((expanded && !animation) || animation === 'expand') ? (
+        {subLabel && expanded ? (
           <Text
             as="span"
             className={navigationStyle.itemWrapText({
