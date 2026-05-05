@@ -10,15 +10,15 @@ import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import { useCallback, useEffect, useState } from 'react'
 
 import { Navigation, NavigationProvider, useNavigation } from '..'
+import { Button } from '../../../components'
 import { Stack } from '../../../components/Stack'
 import { Tooltip } from '../../../components/Tooltip'
 
 import logoSmall from './assets/logo-small.svg'
 import logo from './assets/logo.svg'
-import { animation } from './styles.css'
 
 import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 
 const onClickPinUnpin: ComponentProps<
   typeof Navigation.Item
@@ -29,12 +29,10 @@ const onClickPinUnpin: ComponentProps<
 const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
   const [active, setActive] = useState('Instance')
   const [pinnedItemsExpanded, setPinnedItemsExpanded] = useState(false)
-  const [expanded, setExpanded] = useState(true)
 
   const { pinnedItems } = useNavigation()
 
   const saveExpandedInLocalStorage = useCallback((localExpanded: boolean) => {
-    setExpanded(localExpanded)
     console.log(
       `expanded state with value ${localExpanded} saved in local storage`,
     )
@@ -64,11 +62,10 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             <img alt="" height="22px" src={logoSmall} width="auto" />
             <img
               alt=""
-              className={animation}
-              data-expanded={expanded}
               height="22px"
               src={logo}
               width="auto"
+              style={{ objectFit: 'cover', objectPosition: 'left' }}
             />
           </Stack>
         </a>
@@ -103,7 +100,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             {item}
           </Tooltip>
         )}
-        onToggle={toggle => setPinnedItemsExpanded(!!toggle)}
+        onToggle={toggle => setPinnedItemsExpanded(!toggle)}
         toggle={pinnedItemsExpanded}
       />
       <Navigation.Separator />
@@ -184,6 +181,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
           categoryIcon={<DataAndAnalyticsCategoryIcon variant="primary" />}
           id="storage"
           label="Storage"
+          toggle
         >
           <Navigation.Item
             active={active === 'Block Storage'}
@@ -354,6 +352,12 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
   )
 }
 
+const ToggleButton = ({ children }: { children?: ReactNode }) => {
+  const { toggleExpand } = useNavigation()
+
+  return <Button onClick={() => toggleExpand()}>{children}</Button>
+}
+
 export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
   const navigationExpanded = localStorage.getItem('expanded') === 'true'
   const navigationWidth = Number(localStorage.getItem('width')) || undefined
@@ -361,122 +365,119 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
   const pinnedItems = storageItems ? storageItems.split(',') : []
 
   return (
-    <div
-      style={{
-        background: '#f1f1f1',
-        display: 'flex',
-        height: '800px',
-        margin: '-10px 0', // This is to compensate the border added by storybook around the story
-      }}
+    <NavigationProvider
+      initialExpanded={navigationExpanded}
+      initialPinned={pinnedItems}
+      initialWidth={navigationWidth}
+      pinLimit={2}
+      pinnedFeature
     >
-      <NavigationProvider
-        initialExpanded={navigationExpanded}
-        initialPinned={pinnedItems}
-        initialWidth={navigationWidth}
-        pinLimit={2}
-        pinnedFeature
-      >
-        <PlaygroundContent {...props} />
-      </NavigationProvider>
       <div
         style={{
-          alignItems: 'center',
+          background: '#f1f1f1',
           display: 'flex',
-          flex: '1',
-          flexDirection: 'column',
-          gap: '16px',
-          overflowY: 'scroll',
-          padding: '16px',
+          height: '800px',
+          margin: '-10px 0', // This is to compensate the border added by storybook around the story
         }}
       >
-        <img
-          alt="logo"
-          height="256px"
-          src="https://via.placeholder.com/256"
-          width="256px"
-        />
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor
-          aliquam dui, a laoreet ante faucibus a. In accumsan pharetra dui, a
-          lobortis eros suscipit ut. In dapibus quam et massa commodo tincidunt.
-          Cras bibendum pharetra ultricies. Sed eget vulputate dui. Morbi nisi
-          ipsum, gravida at tristique eu, varius ut nibh. Curabitur non odio
-          neque. Curabitur in ante non risus malesuada tempus. Maecenas vel
-          ipsum justo. Sed sed nulla eu diam vestibulum molestie vitae nec
-          risus. Cras volutpat sollicitudin est in blandit. Proin non sem non
-          dolor vulputate faucibus quis pulvinar justo. In porta quis risus
-          luctus volutpat. Quisque sagittis aliquam justo, vitae ultrices eros.
-          Sed ac arcu ligula. Pellentesque condimentum mattis lacus ut dapibus.
-          Nam in sapien eros. Phasellus sagittis ipsum congue augue porta
-          placerat. Maecenas quis egestas mauris, non eleifend elit. In turpis
-          risus, ultrices ut sem a, auctor lobortis nisi. In molestie porttitor
-          commodo. Pellentesque eu convallis nunc. Cras vel ipsum odio. Mauris
-          faucibus ac nunc eget vehicula. Quisque at eros aliquam, pretium lacus
-          eu, volutpat ligula. Fusce fringilla dolor non pulvinar accumsan.
-          Curabitur ullamcorper purus neque, fringilla sollicitudin urna tempus
-          quis. Etiam sagittis, purus et venenatis sodales, sapien ipsum
-          vestibulum nisl, ut laoreet dolor diam nec erat. Donec ullamcorper
-          ante non dolor lobortis, quis lacinia ante ultrices. Pellentesque quis
-          condimentum arcu. Nulla ac fringilla eros. Nam at leo at lorem
-          sagittis auctor. Suspendisse fringilla pulvinar efficitur. Suspendisse
-          non eleifend enim. Pellentesque sit amet lectus vitae enim luctus
-          feugiat. Pellentesque porttitor augue at dui placerat congue sed at
-          quam. Praesent imperdiet augue urna. Proin a ligula vitae enim
-          venenatis ultricies ac vel sapien. Ut dolor massa, vulputate commodo
-          accumsan quis, dapibus et purus. Suspendisse at purus massa. Nunc et
-          ante at felis pharetra laoreet vel et lectus. Integer euismod urna
-          eget mollis commodo. Phasellus blandit mauris sed fermentum accumsan.
-          Curabitur eros felis, rutrum vitae dolor sed, efficitur laoreet est.
-          Pellentesque blandit eros sed pellentesque vestibulum. Suspendisse nec
-          magna diam. Suspendisse feugiat nisi ut augue condimentum, sed
-          ullamcorper mauris porta. Sed porttitor libero in condimentum
-          scelerisque. Vestibulum ut felis maximus, mollis ante vitae, consequat
-          ante. Vivamus ac lacinia arcu, eget fermentum lectus. Vivamus gravida
-          sodales metus a facilisis. Nam condimentum massa ut magna sagittis,
-          quis varius augue sagittis. Aenean vitae ipsum ac lectus consequat
-          convallis ut nec augue. Donec orci tortor, tincidunt rutrum cursus
-          non, blandit sed quam. Nunc pulvinar euismod ultrices. Curabitur non
-          arcu sed augue faucibus aliquet vitae vitae odio. Cras tincidunt eget
-          mi quis rhoncus. Curabitur eleifend pharetra tincidunt. Cras quis
-          tortor pellentesque, porttitor massa eget, mattis felis. Nulla aliquet
-          sodales tortor sit amet accumsan. Sed vitae interdum ipsum. Sed ut
-          volutpat nunc. Praesent aliquam ipsum ex, ac interdum odio vestibulum
-          dictum. Suspendisse neque quam, rhoncus aliquam diam eu, finibus
-          fringilla metus. Aliquam tristique enim arcu, non dapibus augue
-          volutpat eu. Integer ut sollicitudin nulla. Integer et est rutrum,
-          placerat orci in, fermentum neque. Sed facilisis nulla a orci finibus
-          tempus. Duis consectetur nisi nisl, ut eleifend libero facilisis a.
-          Nam quis neque lacus. Morbi a risus vestibulum, varius ex nec, varius
-          purus. In non quam risus. Mauris finibus justo erat, sed laoreet sem
-          luctus a. In cursus augue id eros ultricies, a pulvinar turpis
-          lobortis. Donec malesuada pellentesque venenatis. Nullam semper metus
-          at ligula venenatis egestas. Aenean metus nisl, sodales eget
-          condimentum sit amet, ullamcorper a nunc. Nullam pulvinar ornare
-          turpis a cursus. Ut egestas, nunc eu tempor sollicitudin, eros est
-          porttitor magna, vel lobortis quam est in felis. Nam sed sem est.
-          Morbi congue egestas felis, eu auctor ex. Integer non diam eu nibh
-          congue malesuada. Suspendisse ullamcorper nec odio in eleifend. Nullam
-          vehicula, risus quis sodales semper, diam risus ornare odio, ac
-          consectetur nisi orci at arcu. Aliquam vulputate nulla non urna
-          venenatis aliquet. Aenean tincidunt purus nisi, sit amet semper orci
-          lobortis non. Phasellus turpis dolor, rhoncus id pretium eget, auctor
-          sed lacus. Cras rutrum urna bibendum augue feugiat tempus. Quisque
-          iaculis sapien tellus, consequat semper felis consectetur ac.
-          Suspendisse tristique orci pretium, venenatis ante et, venenatis
-          risus. Phasellus scelerisque, nisi quis egestas ultrices, arcu libero
-          fringilla libero, ut molestie arcu turpis sed leo. Nullam finibus
-          libero tristique neque eleifend hendrerit. Praesent non molestie
-          libero, sit amet dapibus est. In congue ac nibh id sodales. Mauris
-          aliquet ante sit amet est varius congue quis vitae elit. In lectus ex,
-          malesuada quis eros eu, gravida ullamcorper lorem. Aliquam porttitor
-          odio condimentum nisi pellentesque ullamcorper quis vitae mauris.
-          Pellentesque et tortor sem. Duis suscipit orci massa. Duis a tellus
-          vitae nunc semper eleifend. Pellentesque venenatis maximus tellus in
-          bibendum. Ut risus justo, viverra id lacinia quis, egestas at augue.
-          Nulla dolor odio, malesuada nec posuere sed, molestie vitae quam.
-          Suspendisse at augue augue.
+        <PlaygroundContent {...props} />
+        <div
+          style={{
+            alignItems: 'end',
+            display: 'flex',
+            flex: '1',
+            flexDirection: 'column',
+            gap: '16px',
+            overflowY: 'scroll',
+            padding: '16px',
+          }}
+        >
+          <ToggleButton>Toggle</ToggleButton>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor
+            aliquam dui, a laoreet ante faucibus a. In accumsan pharetra dui, a
+            lobortis eros suscipit ut. In dapibus quam et massa commodo
+            tincidunt. Cras bibendum pharetra ultricies. Sed eget vulputate dui.
+            Morbi nisi ipsum, gravida at tristique eu, varius ut nibh. Curabitur
+            non odio neque. Curabitur in ante non risus malesuada tempus.
+            Maecenas vel ipsum justo. Sed sed nulla eu diam vestibulum molestie
+            vitae nec risus. Cras volutpat sollicitudin est in blandit. Proin
+            non sem non dolor vulputate faucibus quis pulvinar justo. In porta
+            quis risus luctus volutpat. Quisque sagittis aliquam justo, vitae
+            ultrices eros. Sed ac arcu ligula. Pellentesque condimentum mattis
+            lacus ut dapibus. Nam in sapien eros. Phasellus sagittis ipsum
+            congue augue porta placerat. Maecenas quis egestas mauris, non
+            eleifend elit. In turpis risus, ultrices ut sem a, auctor lobortis
+            nisi. In molestie porttitor commodo. Pellentesque eu convallis nunc.
+            Cras vel ipsum odio. Mauris faucibus ac nunc eget vehicula. Quisque
+            at eros aliquam, pretium lacus eu, volutpat ligula. Fusce fringilla
+            dolor non pulvinar accumsan. Curabitur ullamcorper purus neque,
+            fringilla sollicitudin urna tempus quis. Etiam sagittis, purus et
+            venenatis sodales, sapien ipsum vestibulum nisl, ut laoreet dolor
+            diam nec erat. Donec ullamcorper ante non dolor lobortis, quis
+            lacinia ante ultrices. Pellentesque quis condimentum arcu. Nulla ac
+            fringilla eros. Nam at leo at lorem sagittis auctor. Suspendisse
+            fringilla pulvinar efficitur. Suspendisse non eleifend enim.
+            Pellentesque sit amet lectus vitae enim luctus feugiat. Pellentesque
+            porttitor augue at dui placerat congue sed at quam. Praesent
+            imperdiet augue urna. Proin a ligula vitae enim venenatis ultricies
+            ac vel sapien. Ut dolor massa, vulputate commodo accumsan quis,
+            dapibus et purus. Suspendisse at purus massa. Nunc et ante at felis
+            pharetra laoreet vel et lectus. Integer euismod urna eget mollis
+            commodo. Phasellus blandit mauris sed fermentum accumsan. Curabitur
+            eros felis, rutrum vitae dolor sed, efficitur laoreet est.
+            Pellentesque blandit eros sed pellentesque vestibulum. Suspendisse
+            nec magna diam. Suspendisse feugiat nisi ut augue condimentum, sed
+            ullamcorper mauris porta. Sed porttitor libero in condimentum
+            scelerisque. Vestibulum ut felis maximus, mollis ante vitae,
+            consequat ante. Vivamus ac lacinia arcu, eget fermentum lectus.
+            Vivamus gravida sodales metus a facilisis. Nam condimentum massa ut
+            magna sagittis, quis varius augue sagittis. Aenean vitae ipsum ac
+            lectus consequat convallis ut nec augue. Donec orci tortor,
+            tincidunt rutrum cursus non, blandit sed quam. Nunc pulvinar euismod
+            ultrices. Curabitur non arcu sed augue faucibus aliquet vitae vitae
+            odio. Cras tincidunt eget mi quis rhoncus. Curabitur eleifend
+            pharetra tincidunt. Cras quis tortor pellentesque, porttitor massa
+            eget, mattis felis. Nulla aliquet sodales tortor sit amet accumsan.
+            Sed vitae interdum ipsum. Sed ut volutpat nunc. Praesent aliquam
+            ipsum ex, ac interdum odio vestibulum dictum. Suspendisse neque
+            quam, rhoncus aliquam diam eu, finibus fringilla metus. Aliquam
+            tristique enim arcu, non dapibus augue volutpat eu. Integer ut
+            sollicitudin nulla. Integer et est rutrum, placerat orci in,
+            fermentum neque. Sed facilisis nulla a orci finibus tempus. Duis
+            consectetur nisi nisl, ut eleifend libero facilisis a. Nam quis
+            neque lacus. Morbi a risus vestibulum, varius ex nec, varius purus.
+            In non quam risus. Mauris finibus justo erat, sed laoreet sem luctus
+            a. In cursus augue id eros ultricies, a pulvinar turpis lobortis.
+            Donec malesuada pellentesque venenatis. Nullam semper metus at
+            ligula venenatis egestas. Aenean metus nisl, sodales eget
+            condimentum sit amet, ullamcorper a nunc. Nullam pulvinar ornare
+            turpis a cursus. Ut egestas, nunc eu tempor sollicitudin, eros est
+            porttitor magna, vel lobortis quam est in felis. Nam sed sem est.
+            Morbi congue egestas felis, eu auctor ex. Integer non diam eu nibh
+            congue malesuada. Suspendisse ullamcorper nec odio in eleifend.
+            Nullam vehicula, risus quis sodales semper, diam risus ornare odio,
+            ac consectetur nisi orci at arcu. Aliquam vulputate nulla non urna
+            venenatis aliquet. Aenean tincidunt purus nisi, sit amet semper orci
+            lobortis non. Phasellus turpis dolor, rhoncus id pretium eget,
+            auctor sed lacus. Cras rutrum urna bibendum augue feugiat tempus.
+            Quisque iaculis sapien tellus, consequat semper felis consectetur
+            ac. Suspendisse tristique orci pretium, venenatis ante et, venenatis
+            risus. Phasellus scelerisque, nisi quis egestas ultrices, arcu
+            libero fringilla libero, ut molestie arcu turpis sed leo. Nullam
+            finibus libero tristique neque eleifend hendrerit. Praesent non
+            molestie libero, sit amet dapibus est. In congue ac nibh id sodales.
+            Mauris aliquet ante sit amet est varius congue quis vitae elit. In
+            lectus ex, malesuada quis eros eu, gravida ullamcorper lorem.
+            Aliquam porttitor odio condimentum nisi pellentesque ullamcorper
+            quis vitae mauris. Pellentesque et tortor sem. Duis suscipit orci
+            massa. Duis a tellus vitae nunc semper eleifend. Pellentesque
+            venenatis maximus tellus in bibendum. Ut risus justo, viverra id
+            lacinia quis, egestas at augue. Nulla dolor odio, malesuada nec
+            posuere sed, molestie vitae quam. Suspendisse at augue augue.
+          </div>
         </div>
       </div>
-    </div>
+    </NavigationProvider>
   )
 }

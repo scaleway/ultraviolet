@@ -5,13 +5,10 @@ import type { ItemExpandedType } from '../ComponentsTypes'
 
 export const ItemBadge = ({
   badgeText,
-  animation,
   disabled,
   badgeSentiment,
-}: Pick<ItemExpandedType, 'badgeText' | 'badgeSentiment' | 'disabled'> & {
-  animation: boolean
-}) =>
-  badgeText && !animation ? (
+}: Pick<ItemExpandedType, 'badgeText' | 'badgeSentiment' | 'disabled'>) =>
+  badgeText ? (
     <Badge
       className={navigationStyle.itemBadge}
       disabled={disabled}

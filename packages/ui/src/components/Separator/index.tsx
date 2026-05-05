@@ -12,6 +12,10 @@ type SeparatorProps = {
   thickness?: number
   className?: string
   'data-testid'?: string
+  /**
+   * @private
+   */
+  'data-flip-id'?: string
   children?: ReactNode
   style?: CSSProperties
 } & SeparatorVariants
@@ -25,6 +29,7 @@ export const Separator = ({
   sentiment = 'neutral',
   className,
   'data-testid': dataTestId,
+  'data-flip-id': flipId,
   children,
   style,
 }: SeparatorProps) =>
@@ -36,6 +41,7 @@ export const Separator = ({
         separatorStyle.iconWraper({ direction, sentiment }),
       )}
       data-testid={dataTestId}
+      data-flip-id={flipId}
       role="separator"
       style={style}
     >
@@ -58,6 +64,7 @@ export const Separator = ({
       aria-orientation={direction}
       className={cn(className, separatorStyle.hr({ direction, sentiment }))}
       data-testid={dataTestId}
+      data-flip-id={flipId}
       style={assignInlineVars({
         [thicknessSeparator]: `${thickness}px`,
       })}

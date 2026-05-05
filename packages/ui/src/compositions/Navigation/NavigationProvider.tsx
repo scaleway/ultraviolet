@@ -10,7 +10,13 @@ import {
   useState,
 } from 'react'
 
-import { ANIMATION_DURATION, NAVIGATION_WIDTH } from './constants'
+import { useFlip } from '../../hooks/useFlip'
+
+import {
+  ANIMATION_DURATION,
+  ANIMATION_EASING,
+  NAVIGATION_WIDTH,
+} from './constants'
 import NavigationLocales from './locales/en'
 
 import type { PinUnPinType } from './types'
@@ -133,6 +139,7 @@ type NavigationProviderProps = {
   animation?: boolean
   /**
    * type of animation
+   * @deprecated use the `animation` prop to enable or disable the animation completely. This one has no effect.
    */
   animationType?: AnimationType
   showHide?: 'show' | 'hide'
@@ -174,6 +181,11 @@ export const NavigationProvider = ({
   )
   const navigationRef = useRef<HTMLDivElement | null>(null)
 
+  const { recordState, animate } = useFlip(navigationRef, {
+    duration: ANIMATION_DURATION,
+    easing: ANIMATION_EASING,
+  })
+
   // This function will be triggered when expand/collapse button is clicked
   const toggleExpand = useCallback(
     (toggle?: boolean) => {
@@ -193,17 +205,23 @@ export const NavigationProvider = ({
       }
 
       if (shouldAnimate) {
+        recordState()
         setAnimation(expanded ? 'collapse' : 'expand')
 
-        setTimeout(() => {
-          setExpanded(toggle ?? !expanded)
-          setAnimation(false)
-        }, ANIMATION_DURATION)
+        requestAnimationFrame(() => {
+          animate().then(
+            () => {
+              setExpanded(toggle ?? !expanded)
+              setAnimation(false)
+            },
+            () => {},
+          )
+        })
       } else {
         setExpanded(toggle ?? !expanded)
       }
     },
-    [expanded, onExpandChange, shouldAnimate],
+    [expanded, onExpandChange, shouldAnimate, recordState, animate],
   )
 
   const pinItem = useCallback(

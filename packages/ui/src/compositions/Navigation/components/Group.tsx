@@ -30,20 +30,21 @@ export const Group = ({
     )
   }
 
-  const { expanded, animation, animationType } = context
+  const { expanded, animation } = context
 
-  const isDiplay = !animation && expanded
+  const isDiplay = (expanded && !animation) || animation === 'expand'
 
   if (Children.count(children) > 0) {
     return (
-      <div style={{ width: animation ? '100%' : undefined, ...style }}>
+      <div
+        style={{ width: animation ? '100%' : undefined, ...style }}
+        data-flip-id={label}
+      >
         <Stack className={navigationStyle.groupStack} direction="column">
           {isDiplay ? (
             <Text
               as="span"
-              className={navigationStyle.groupText({
-                animation: animationType === 'complex' ? animation : false,
-              })}
+              className={navigationStyle.groupText({ animation })}
               prominence="weak"
               sentiment="neutral"
               variant="bodySmallStrong"

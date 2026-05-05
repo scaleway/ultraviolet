@@ -3,22 +3,22 @@ import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 import { groupAnimation } from '../animations.css'
-import { ANIMATION_DURATION } from '../constants'
+import { ANIMATION_DURATION, ANIMATION_EASING } from '../constants'
 
 export const groupText = recipe({
   base: {
     height: `calc(${theme.typography.bodySmallStrong.lineHeight} + ${theme.space['1']})`,
     paddingBottom: theme.space[1],
     paddingLeft: theme.space[1],
-    transition: `opacity ${ANIMATION_DURATION}ms ease-in-out, height ${ANIMATION_DURATION}ms ease-in-out`,
+    transition: `opacity ${ANIMATION_DURATION}ms ${ANIMATION_EASING}, height ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
   },
   variants: {
     animation: {
       collapse: {
-        animation: `${groupAnimation} ${ANIMATION_DURATION}ms ease-in-out reverse`,
+        animation: `${groupAnimation} ${ANIMATION_DURATION}ms ${ANIMATION_EASING} reverse`,
       },
       expand: {
-        animation: `${groupAnimation} ${ANIMATION_DURATION}ms ease-in-out`,
+        animation: `${groupAnimation} ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
       },
       false: {},
     },

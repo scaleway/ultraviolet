@@ -40,9 +40,7 @@ export const ItemMenuItem = ({
     )
   }
 
-  const { pinnedFeature, animation, shouldAnimate, animationType } = context
-
-  const computedAnimation = animation === 'collapse' ? 'collapse' : 'expand'
+  const { pinnedFeature, animation } = context
 
   return (
     <Menu.Item
@@ -72,35 +70,29 @@ export const ItemMenuItem = ({
         justifyContent="space-between"
         width="100%"
       >
-        {animation ? null : (
-          <Text
-            as="span"
-            className={navigationStyle.itemWrapText({
-              disabled,
-              weak: hasActiveChildren && !noExpand && !disabled && !!active,
-            })}
-            variant="bodySmall"
-            whiteSpace="pre-wrap"
-          >
-            {label}
-          </Text>
-        )}
+        <Text
+          as="span"
+          className={navigationStyle.itemWrapText({
+            disabled,
+            shrinking: animation === 'collapse',
+            weak: hasActiveChildren && !noExpand && !disabled && !!active,
+          })}
+          variant="bodySmall"
+          whiteSpace="pre-wrap"
+        >
+          {label}
+        </Text>
         {labelDescription ? (
           <span className={navigationStyle.itemPadded}>{labelDescription}</span>
         ) : null}
         <Stack direction="row">
           <ItemBadge
-            animation={!!animation}
             badgeSentiment={badgeSentiment}
             badgeText={badgeText}
             disabled={disabled}
           />
           {hasHrefAndNoChildren && target === '_blank' ? (
             <OpenInNewIcon
-              className={navigationStyle.itemAnimatedIcon({
-                animated: shouldAnimate && animationType === 'complex',
-                animation: computedAnimation,
-              })}
               disabled={disabled}
               prominence="weak"
               sentiment="neutral"

@@ -6,14 +6,25 @@ import { useEffect, useRef } from 'react'
 
 import { Stack } from '../../components/Stack'
 
-import { NAVIGATION_COLLASPED_WIDTH, NAVIGATION_MIN_WIDTH } from './constants'
+import {
+  NAVIGATION_COLLASPED_WIDTH,
+  NAVIGATION_MAX_WIDTH,
+  NAVIGATION_MIN_WIDTH,
+} from './constants'
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { useNavigation } from './NavigationProvider'
 import { navigationStyle } from './styles.css'
-import { widthNavigationContainer } from './variables.css'
+import {
+  widthNavigationContainer,
+  widthNavigationContainerFull,
+} from './variables.css'
 
 import type { NavigationProps } from './types'
+
+function clamp(min: number, value: number, max: number) {
+  return Math.min(max, Math.max(min, value))
+}
 
 export const NavigationContent = ({
   children,
@@ -56,7 +67,11 @@ export const NavigationContent = ({
     const mouseMove = (event: MouseEvent) => {
       if (prevX !== undefined) {
         const navWidth = navRect?.width ?? 0
-        const newWidth = navWidth + (event.clientX - prevX)
+        const newWidth = clamp(
+          NAVIGATION_MIN_WIDTH,
+          navWidth + (event.clientX - prevX),
+          NAVIGATION_MAX_WIDTH,
+        )
 
         if (navigationRef.current && expanded) {
           navigationRef.current.style.width = `${newWidth}px`
@@ -120,6 +135,11 @@ export const NavigationContent = ({
     toggleExpand,
   ])
 
+  let navWidth = width
+  if (animation === 'collapse' || (!expanded && !animation)) {
+    navWidth = NAVIGATION_COLLASPED_WIDTH
+  }
+
   return (
     <nav
       className={cn(className, navigationStyle.navigation)}
@@ -127,22 +147,15 @@ export const NavigationContent = ({
       id={id}
     >
       <div
-        className={navigationStyle.container({
-          animation: shouldAnimate ? animation : undefined,
-          expanded,
-        })}
+        className={navigationStyle.container({ animate: shouldAnimate })}
         ref={navigationRef}
         style={assignInlineVars({
-          [widthNavigationContainer]: `${width}px`,
+          [widthNavigationContainer]: `${navWidth}px`,
+          [widthNavigationContainerFull]: `${width}px`,
         })}
       >
         {logo ? <Header logo={logo} /> : null}
-        <div
-          className={cn(
-            navigationStyle.contentContainer,
-            expanded ? '' : navigationStyle.contentContainerCollapsed,
-          )}
-        >
+        <div className={cn(navigationStyle.contentContainer)}>
           <Stack
             className={navigationStyle.content}
             gap={0.25}

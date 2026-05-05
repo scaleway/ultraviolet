@@ -3,11 +3,9 @@ import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 import {
-  itemAnimatedIcon,
   itemBadge,
   itemCategoryIcon,
   itemContainer,
-  itemContainerAnimated,
   itemContainerBase,
   itemDragIcon,
   itemMenu,
@@ -35,13 +33,11 @@ import {
   separator,
   showHideStack,
 } from './components/styles.css'
+import { ANIMATION_DURATION, ANIMATION_EASING } from './constants'
 import {
-  ANIMATION_DURATION,
-  NAVIGATION_COLLASPED_WIDTH,
-  NAVIGATION_MAX_WIDTH,
-  NAVIGATION_MIN_WIDTH,
-} from './constants'
-import { widthNavigationContainer } from './variables.css'
+  widthNavigationContainer,
+  widthNavigationContainerFull,
+} from './variables.css'
 
 const stickyFooter = recipe({
   base: {
@@ -51,7 +47,6 @@ const stickyFooter = recipe({
     display: 'flex',
     justifyContent: 'flex-end',
     padding: `${theme.space['1']} ${theme.space['2']}`,
-    transition: `justify-content ${ANIMATION_DURATION}ms ease-in-out, box-shadow 230ms ease-in-out`,
     width: '100%',
   },
   defaultVariants: {
@@ -92,30 +87,10 @@ const container = recipe({
     flexDirection: 'column',
     width: widthNavigationContainer,
   },
-  compoundVariants: [
-    {
-      style: {
-        maxWidth: `${NAVIGATION_MAX_WIDTH}px`,
-        minWidth: `${NAVIGATION_MIN_WIDTH}px`,
-      },
-      variants: { animation: false, expanded: true },
-    },
-  ],
   variants: {
-    animation: {
-      collapse: {
-        transition: `width ${ANIMATION_DURATION}ms ease-in-out`,
-        width: `${NAVIGATION_COLLASPED_WIDTH}px`,
-      },
-      expand: {
-        transition: `width ${ANIMATION_DURATION}ms ease-in-out`,
-        width: widthNavigationContainer,
-      },
-      false: {},
-    },
-    expanded: {
-      false: {
-        width: `${NAVIGATION_COLLASPED_WIDTH}px`,
+    animate: {
+      true: {
+        transition: `width ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
       },
     },
   },
@@ -137,6 +112,7 @@ const content = style({
   overflowX: 'hidden',
   overflowY: 'auto',
   padding: theme.space[2],
+  width: widthNavigationContainerFull,
 })
 
 const slider = style({
@@ -174,7 +150,6 @@ export const navigationStyle = {
   itemMenuPinned,
   itemContainerBase,
   itemContainer,
-  itemContainerAnimated,
   itemShowDraggable,
   itemShowPinButton,
   itemWeakText,
@@ -183,7 +158,6 @@ export const navigationStyle = {
   itemWrapText,
   itemBadge,
   itemPinnedButton,
-  itemAnimatedIcon,
   itemMenuStack,
   itemStackIcon,
   itemCategoryIcon,
