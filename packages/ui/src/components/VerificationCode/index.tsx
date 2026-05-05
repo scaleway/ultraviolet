@@ -1,10 +1,11 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { createRef, useId, useMemo, useState } from 'react'
+import { createRef, useId, useState } from 'react'
 
+import { hasHelperText } from '../../helpers/hasHelperText'
+import { Helper } from '../Helper'
 import { Label } from '../Label'
-import { Text } from '../Text'
 
 import { verificationCodeStyle } from './styles.css'
 
@@ -55,6 +56,7 @@ type VerificationCodeProps = {
   helper?: ReactNode
   success?: boolean | string
   style?: CSSProperties
+  'aria-describedby'?: string
 }
 
 /**
@@ -80,9 +82,12 @@ export const VerificationCode = ({
   helper,
   success,
   style,
+  'aria-describedby': ariaDescribedBy,
 }: VerificationCodeProps) => {
   const uniqueId = useId()
   const id = inputId ?? uniqueId
+  const helperId = useId()
+
   const valuesArray = Object.assign(new Array(fields).fill(''), [
     // oxlint-disable-next-line typescript/no-misused-spread
     ...initialValue.substring(0, fields),
@@ -226,18 +231,6 @@ export const VerificationCode = ({
       triggerChange(pastedValue)
     }
 
-  const sentiment = useMemo(() => {
-    if (error) {
-      return 'danger'
-    }
-
-    if (success) {
-      return 'success'
-    }
-
-    return 'neutral'
-  }, [error, success])
-
   return (
     <fieldset
       className={cn(className, verificationCodeStyle.filedSetClass)}
@@ -258,6 +251,11 @@ export const VerificationCode = ({
       <div>
         {values.map((value: string, index: number) => (
           <input
+            aria-describedby={
+              !ariaDescribedBy && hasHelperText(helper, error, success)
+                ? helperId
+                : ariaDescribedBy
+            }
             aria-invalid={!!error}
             aria-label={`${ariaLabel} ${index}`}
             autoComplete="off"
@@ -284,20 +282,13 @@ export const VerificationCode = ({
           />
         ))}
       </div>
-      {error || typeof success === 'string' || typeof helper === 'string' ? (
-        <Text
-          as="p"
-          disabled={disabled}
-          prominence={error || success ? 'default' : 'weak'}
-          sentiment={sentiment}
-          variant="caption"
-        >
-          {(error || success) ?? helper}
-        </Text>
-      ) : null}
-      {!(error || success) && typeof helper !== 'string' && helper
-        ? helper
-        : null}
+      <Helper
+        error={error}
+        success={success}
+        helper={helper}
+        disabled={disabled}
+        id={ariaDescribedBy ?? helperId}
+      />
     </fieldset>
   )
 }

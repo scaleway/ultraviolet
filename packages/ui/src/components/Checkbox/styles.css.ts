@@ -5,10 +5,6 @@ import { checkboxGroupStyle } from '../CheckboxGroup/styles.css'
 import { listStyle } from '../List/styles.css'
 import { selectableCardStyle } from '../SelectableCard/styles.css'
 
-const errorText = style({
-  paddingTop: theme.space['0.5'],
-})
-
 const containerBase = style({
   display: 'inline-flex',
   position: 'relative',
@@ -248,7 +244,6 @@ const label = style({
 })
 
 export const checkboxStyle = {
-  errorText,
   container,
   input,
   icon,

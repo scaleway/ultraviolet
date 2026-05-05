@@ -2,10 +2,11 @@
 
 import { forwardRef, useId, useImperativeHandle, useMemo, useRef } from 'react'
 
+import { hasHelperText } from '../../helpers/hasHelperText'
+import { Helper } from '../Helper'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
 import { Controls } from './components/Controls'
@@ -35,7 +36,7 @@ type NumberInputProps = {
    * Whether to show controls
    */
   controls?: boolean
-  error?: string
+  error?: string | boolean
   success?: string | boolean
   helper?: ReactNode
   value?: number | null
@@ -56,6 +57,7 @@ type NumberInputProps = {
   | 'required'
   | 'autoFocus'
   | 'style'
+  | 'aria-describedby'
 >
 
 /**
@@ -88,6 +90,7 @@ export const NumberInput = forwardRef(
       helper,
       'aria-label': ariaLabel,
       'data-testid': dataTestId,
+      'aria-describedby': ariaDescribedBy,
       required,
       autoFocus,
       readOnly,
@@ -99,6 +102,7 @@ export const NumberInput = forwardRef(
     useImperativeHandle(ref, () => localRef.current!)
 
     const uniqueId = useId()
+    const helperId = useId()
     const localId = id ?? uniqueId
 
     const computedState = useMemo(() => {
@@ -117,18 +121,6 @@ export const NumberInput = forwardRef(
 
       return 'default'
     }, [error, success, disabled, readOnly])
-
-    const helperSentiment = useMemo(() => {
-      if (error) {
-        return 'danger'
-      }
-
-      if (success) {
-        return 'success'
-      }
-
-      return 'neutral'
-    }, [error, success])
 
     let inputValue: string | undefined
     if (value !== undefined) {
@@ -185,6 +177,11 @@ export const NumberInput = forwardRef(
                 templateColumns="1fr auto"
               >
                 <input
+                  aria-describedby={
+                    hasHelperText(helper, error, success) && !ariaDescribedBy
+                      ? helperId
+                      : ariaDescribedBy
+                  }
                   aria-label={ariaLabel}
                   autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
                   className={numberInputStyle.numberinput({
@@ -247,20 +244,14 @@ export const NumberInput = forwardRef(
             </div>
           </Tooltip>
         </div>
-        {error || typeof success === 'string' || typeof helper === 'string' ? (
-          <Text
-            as="span"
-            disabled={isDisabledOrReadOnly}
-            prominence={error || success ? 'default' : 'weak'}
-            sentiment={helperSentiment}
-            variant="caption"
-          >
-            {error || success || helper}
-          </Text>
-        ) : null}
-        {!(error || success) && typeof helper !== 'string' && helper
-          ? helper
-          : null}
+        <Helper
+          error={error}
+          helper={helper}
+          disabled={isDisabledOrReadOnly}
+          size={size}
+          success={success}
+          id={ariaDescribedBy ?? helperId}
+        />
       </Stack>
     )
   },

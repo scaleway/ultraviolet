@@ -5,7 +5,7 @@ import { describe, expect, test } from 'vitest'
 
 import { Label } from '..'
 
-describe('dateInput', () => {
+describe('label', () => {
   test('renders correctly with default props', () => {
     const { asFragment } = renderWithTheme(<Label>Label</Label>)
     expect(asFragment()).toMatchSnapshot()

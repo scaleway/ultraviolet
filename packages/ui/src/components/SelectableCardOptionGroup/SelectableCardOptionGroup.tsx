@@ -1,12 +1,13 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { useMemo } from 'react'
+import { useId, useMemo } from 'react'
 
+import { hasHelperText } from '../../helpers/hasHelperText'
+import { Helper } from '../Helper'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
 
 import { Option } from './components/Option'
 import { SelectableCardOptionGroupContext } from './Provider'
@@ -36,7 +37,10 @@ type SelectableCardOptionGroupProps = {
   disabled?: boolean
   size?: Sizes
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'name' | 'style'>
+  Pick<
+    InputHTMLAttributes<HTMLInputElement>,
+    'name' | 'style' | 'aria-describedby'
+  >
 
 /**
  * SelectableCardOptionGroup gives you a group of SelectInput within a SelectableCard component.
@@ -61,6 +65,7 @@ const SelectableCardOptionGroupComponent = ({
   disabled,
   size = 'large',
   style,
+  'aria-describedby': ariaDescribedBy,
 }: SelectableCardOptionGroupProps) => {
   const contextValue = useMemo(
     () => ({
@@ -86,12 +91,18 @@ const SelectableCardOptionGroupComponent = ({
       size,
     ],
   )
+  const helperId = useId()
 
   return (
     <SelectableCardOptionGroupContext.Provider value={contextValue}>
       <Stack gap={1} style={style}>
         <fieldset
           className={cn(className, selectableCardOptionGroupStyle.fieldset)}
+          aria-describedby={
+            !ariaDescribedBy && hasHelperText(helper, error)
+              ? helperId
+              : ariaDescribedBy
+          }
         >
           <Stack gap={1.5}>
             {legend ? (
@@ -108,16 +119,13 @@ const SelectableCardOptionGroupComponent = ({
             </Row>
           </Stack>
         </fieldset>
-        {(error && typeof error === 'string') || helper ? (
-          <Text
-            as="span"
-            prominence="weak"
-            sentiment={error ? 'danger' : 'neutral'}
-            variant="caption"
-          >
-            {helper ?? error}
-          </Text>
-        ) : null}
+        <Helper
+          id={ariaDescribedBy ?? helperId}
+          error={error}
+          helper={helper}
+          disabled={disabled}
+          size={size}
+        />
       </Stack>
     </SelectableCardOptionGroupContext.Provider>
   )

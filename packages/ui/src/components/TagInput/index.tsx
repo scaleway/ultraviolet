@@ -4,13 +4,14 @@ import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn, getUUID } from '@ultraviolet/utils'
-import { useEffect, useId, useMemo, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 
+import { hasHelperText } from '../../helpers/hasHelperText'
 import { Button } from '../Button'
+import { Helper } from '../Helper'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Tag } from '../Tag'
-import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
 import { tagInputStyle } from './styles.css'
@@ -66,6 +67,7 @@ type TagInputProps = {
   tooltip?: string
   clearable?: boolean
   style?: CSSProperties
+  'aria-describedBy'?: string
 }
 
 /**
@@ -92,6 +94,7 @@ export const TagInput = ({
   tooltip,
   clearable = false,
   style,
+  'aria-describedBy': ariaDescribedBy,
 }: TagInputProps) => {
   const [tagInputState, setTagInput] = useState(
     convertTagArrayToTagStateArray(value),
@@ -101,6 +104,7 @@ export const TagInput = ({
 
   const uniqueId = useId()
   const localId = id ?? uniqueId
+  const helperId = useId()
 
   useEffect(() => {
     setTagInput(convertTagArrayToTagStateArray(value))
@@ -191,18 +195,6 @@ export const TagInput = ({
     dispatchOnChange([])
   }
 
-  const helperSentiment = useMemo(() => {
-    if (error) {
-      return 'danger'
-    }
-
-    if (success) {
-      return 'success'
-    }
-
-    return 'neutral'
-  }, [error, success])
-
   const computedClearable = clearable && tagInputState.length > 0
 
   return (
@@ -254,6 +246,11 @@ export const TagInput = ({
               ))}
               {disabled ? null : (
                 <input
+                  aria-describedby={
+                    !ariaDescribedBy && hasHelperText(helper, error, success)
+                      ? helperId
+                      : ariaDescribedBy
+                  }
                   aria-label={ariaLabel}
                   className={tagInputStyle.tagInput}
                   data-size={size}
@@ -304,17 +301,14 @@ export const TagInput = ({
           </div>
         </Tooltip>
       </div>
-      {error || typeof success === 'string' || helper ? (
-        <Text
-          as="span"
-          disabled={disabled || readOnly}
-          prominence={error || success ? undefined : 'weak'}
-          sentiment={helperSentiment}
-          variant="caption"
-        >
-          {error || success || helper}
-        </Text>
-      ) : null}
+      <Helper
+        helper={helper}
+        error={error}
+        success={success}
+        id={ariaDescribedBy ?? helperId}
+        disabled={disabled}
+        size={size}
+      />
     </Stack>
   )
 }

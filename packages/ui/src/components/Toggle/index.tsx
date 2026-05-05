@@ -3,6 +3,8 @@
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId } from 'react'
 
+import { hasHelperText } from '../../helpers/hasHelperText'
+import { Helper } from '../Helper'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -37,6 +39,7 @@ type ToggleProps = {
   | 'value'
   | 'checked'
   | 'style'
+  | 'aria-describedby'
 >
 
 export const Toggle = forwardRef(
@@ -63,10 +66,12 @@ export const Toggle = forwardRef(
       error,
       'aria-label': ariaLabel,
       style,
+      'aria-describedby': ariaDescribedBy,
     }: ToggleProps,
     ref: Ref<HTMLInputElement>,
   ) => {
     const uniqueId = useId()
+    const helperId = useId()
     const localId = id ?? uniqueId
 
     return (
@@ -106,27 +111,13 @@ export const Toggle = forwardRef(
                 ) : null}
               </Row>
             ) : null}
-            {typeof error === 'string' ? (
-              <Text
-                as="p"
-                disabled={disabled}
-                prominence="default"
-                sentiment="danger"
-                variant="bodySmall"
-              >
-                {error}
-              </Text>
-            ) : null}
-            {helper && !error ? (
-              <Text
-                as="p"
-                prominence="weak"
-                sentiment="neutral"
-                variant="caption"
-              >
-                {helper}
-              </Text>
-            ) : null}
+            <Helper
+              helper={helper}
+              error={error}
+              id={ariaDescribedBy ?? helperId}
+              disabled={disabled}
+              size={size}
+            />
           </Stack>
           <div
             className={toggleStyle.toggle({
@@ -136,6 +127,11 @@ export const Toggle = forwardRef(
             })}
           >
             <input
+              aria-describedby={
+                !ariaDescribedBy && hasHelperText(helper, error)
+                  ? helperId
+                  : ariaDescribedBy
+              }
               aria-disabled={disabled}
               aria-invalid={!!error}
               aria-label={ariaLabel}

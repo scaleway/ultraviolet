@@ -8,10 +8,10 @@ import {
   useEffect,
   useId,
   useImperativeHandle,
-  useMemo,
   useRef,
 } from 'react'
 
+import { hasHelperText } from '../../helpers/hasHelperText'
 import { Button } from '../Button'
 import { SIZE_HEIGHT as ButtonSizeHeight } from '../Button/constants'
 import { Label } from '../Label'
@@ -23,7 +23,7 @@ import { SuccessErrorIcon } from './Icon'
 import { Notice } from './Notice'
 import { paddingRightVar, textAreaStyle } from './styles.css'
 
-import type { CSSProperties, DOMAttributes, ReactNode } from 'react'
+import type { CSSProperties, ReactNode, TextareaHTMLAttributes } from 'react'
 
 type LabelProps =
   | {
@@ -80,13 +80,14 @@ type TextAreaProps = {
   required?: boolean
   'data-testid'?: string
   name?: string
-  onFocus?: DOMAttributes<HTMLTextAreaElement>['onFocus']
-  onBlur?: DOMAttributes<HTMLTextAreaElement>['onBlur']
-  onKeyDown?: DOMAttributes<HTMLTextAreaElement>['onKeyDown']
   clearable?: boolean
   labelDescription?: ReactNode
   style?: CSSProperties
-} & LabelProps
+} & LabelProps &
+  Pick<
+    TextareaHTMLAttributes<HTMLTextAreaElement>,
+    'onFocus' | 'onBlur' | 'onKeyDown' | 'aria-describedby'
+  >
 
 /**
  * This component offers an extended textarea HTML
@@ -122,10 +123,13 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       labelDescription,
       'aria-label': ariaLabel,
       style,
+      'aria-describedby': ariaDescribedBy,
     },
     ref,
   ) => {
     const localId = useId()
+    const helperId = useId()
+
     const theme = useTheme()
     const textAreaRef = useRef<HTMLTextAreaElement>(null)
     useImperativeHandle(ref, () => textAreaRef.current!)
@@ -171,17 +175,6 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       requestAnimationFrame(updateHeight)
     }, [value, rows, theme, maxRows, textAreaRef.current?.value])
 
-    const sentiment = useMemo(() => {
-      if (error) {
-        return 'danger'
-      }
-
-      if (success) {
-        return 'success'
-      }
-
-      return 'neutral'
-    }, [error, success])
     const notice = success || error || helper
 
     const computedClearable = clearable && !!value
@@ -200,6 +193,11 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         <Tooltip text={tooltip}>
           <div className={textAreaStyle.wrapper}>
             <textarea
+              aria-describedby={
+                !ariaDescribedBy && hasHelperText(helper, error, success)
+                  ? helperId
+                  : ariaDescribedBy
+              }
               aria-invalid={!!error}
               aria-label={ariaLabel}
               autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
@@ -262,8 +260,8 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
             disabled={disabled}
             error={error}
             helper={helper}
+            id={ariaDescribedBy ?? helperId}
             maxLength={maxLength}
-            sentiment={sentiment}
             success={success}
             value={value}
           />

@@ -45,6 +45,7 @@ export const SingleSlider = ({
   'aria-label': ariaLabel,
   tooltipPosition,
   defaultScale = false,
+  'aria-describedby': ariaDescribedBy,
 }: SingleSliderProps) => {
   const localId = useId()
   const theme = useTheme()
@@ -225,6 +226,7 @@ export const SingleSlider = ({
           text={tooltipText}
         >
           <input
+            aria-describedby={ariaDescribedBy}
             aria-disabled={disabled}
             aria-label={ariaLabel ?? name}
             className={cn(
