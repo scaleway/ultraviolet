@@ -1,8 +1,10 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { useMemo } from 'react'
 import type { InputHTMLAttributes, ReactNode } from 'react'
+import { useId, useMemo } from 'react'
+import { hasHelperText } from '../../helpers/hasHelperText'
+import { Helper } from '../Helper'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -22,7 +24,7 @@ type ToggleGroupProps = {
   required?: boolean
   description?: ReactNode
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'style'>
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'style' | 'aria-describedby'>
 
 const ToggleGroupComponent = ({
   legend,
@@ -38,6 +40,7 @@ const ToggleGroupComponent = ({
   description,
   required = false,
   style,
+  'aria-describedby': ariaDescribedBy,
 }: ToggleGroupProps) => {
   const contextValue = useMemo(
     () => ({
@@ -48,11 +51,16 @@ const ToggleGroupComponent = ({
     }),
     [name, value, onChange, error],
   )
+  const helperId = useId()
 
   return (
     <ToggleGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset className={cn(className, toggleGroupStyle.fieldset)} style={style}>
+        <fieldset
+          className={cn(className, toggleGroupStyle.fieldset)}
+          style={style}
+          aria-describedby={!ariaDescribedBy && hasHelperText(helper, error) ? helperId : ariaDescribedBy}
+        >
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>
@@ -78,16 +86,7 @@ const ToggleGroupComponent = ({
             </Stack>
           </Stack>
         </fieldset>
-        {helper ? (
-          <Text as="p" prominence="weak" sentiment="neutral" variant="caption">
-            {helper}
-          </Text>
-        ) : null}
-        {error ? (
-          <Text as="p" prominence="weak" sentiment="danger" variant="bodySmall">
-            {error}
-          </Text>
-        ) : null}
+        <Helper helper={helper} error={error} id={ariaDescribedBy ?? helperId} />
       </Stack>
     </ToggleGroupContext.Provider>
   )

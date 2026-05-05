@@ -3,10 +3,10 @@
 import { cn } from '@ultraviolet/utils'
 import { useId, useRef } from 'react'
 import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
+import { Helper } from '../Helper'
 import { Label } from '../Label'
 import type { Popup } from '../Popup'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
 import { Dropdown } from './components/Dropdown/Dropdown'
 import { SelectBar } from './components/SelectBar/SelectBar'
 import { SelectInputProvider } from './SelectInputProvider'
@@ -33,7 +33,7 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
   /**
    * Helper text to give more information to the user
    */
-  helper?: string
+  helper?: ReactNode
   /**
    * Selectable options
    */
@@ -135,7 +135,10 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
   onOpen?: () => void
   groupError?: Record<string, ReactNode>
   groupEmptyState?: Record<string, ReactNode>
-} & Pick<HTMLAttributes<HTMLDivElement>, 'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className' | 'style'>
+} & Pick<
+  HTMLAttributes<HTMLDivElement>,
+  'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className' | 'style' | 'aria-describedby'
+>
 /**
  * SelectInput component is used to select one or many elements from a selection.
  */
@@ -181,9 +184,11 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   groupError,
   style,
   addOption,
+  'aria-describedby': ariaDescribedBy,
 }: SelectInputProps<IsMulti>) => {
   const localId = useId()
   const finalId = id ?? localId
+  const helperId = useId()
   const dropdownId = useId()
   const ref = useRef<HTMLDivElement | null>(null)
   const numberOfOptions = Array.isArray(options)
@@ -193,7 +198,6 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   const numberOfDisabledOptions = Array.isArray(options)
     ? options.filter(option => option.disabled).length
     : Object.values(options).reduce((acc, current) => acc + current.filter(option => option.disabled).length, 0)
-
   const finalDataTestId = dataTestId ?? `select-input-${name ?? 'name'}`
 
   return (
@@ -242,6 +246,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
               </Label>
             ) : null}
             <SelectBar
+              aria-describedby={ariaDescribedBy ?? helperId}
               autoFocus={autofocus} // oxlint-disable-line jsx_a11y/no-autofocus
               clearable={clearable}
               data-testid={finalDataTestId}
@@ -256,31 +261,20 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
               size={size}
               success={success}
               tooltip={tooltip}
+              helperId={helperId}
+              helper={helper}
             />
           </Stack>
         </Dropdown>
-        {!(error || success) && helper ? (
-          <Text
-            as="p"
-            className={selectInputStyle.helper}
-            prominence="weak"
-            sentiment="neutral"
-            variant={size === 'small' ? 'captionSmall' : 'caption'}
-          >
-            {helper}
-          </Text>
-        ) : null}
-        {(error && typeof error === 'string') || success ? (
-          <Text
-            as="p"
-            className={selectInputStyle.helper}
-            prominence="default"
-            sentiment={error ? 'danger' : 'success'}
-            variant={size === 'small' ? 'captionSmall' : 'caption'}
-          >
-            {error || success}
-          </Text>
-        ) : null}
+        <Helper
+          error={error}
+          success={success}
+          helper={helper}
+          size={size}
+          disabled={disabled}
+          id={ariaDescribedBy ?? helperId}
+          className={selectInputStyle.helper}
+        />
       </div>
     </SelectInputProvider>
   )

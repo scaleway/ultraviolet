@@ -5,11 +5,12 @@ import { material } from '@uiw/codemirror-theme-material'
 import CodeMirror from '@uiw/react-codemirror'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import { Expandable } from '../../components/Expandable'
+import { Helper } from '../../components/Helper'
 import { Label } from '../../components/Label'
 import { Stack } from '../../components/Stack'
-import { Text } from '../../components/Text'
+import { hasHelperText } from '../../helpers/hasHelperText'
 import { CodeEditorCopyButton } from './components/CopyButton'
 import { CodeEditorExpandable } from './components/Expandable'
 import type { CodeEditorProps } from './type'
@@ -42,9 +43,12 @@ export const CodeEditor = ({
   lineNumbers = true,
   style,
   required,
+  'aria-describedby': ariaDescribedBy,
 }: CodeEditorProps) => {
   const [expanded, setExpanded] = useState(false)
   const expandableEnabled = expandableHeight !== undefined
+
+  const helperId = useId()
 
   // Non-editable when disabled, readOnly or not-expanded
   const isEditable = !(disabled && readOnly) && (!expandableEnabled || expanded)
@@ -52,6 +56,7 @@ export const CodeEditor = ({
   const content = (
     <>
       <CodeMirror
+        aria-describedby={!ariaDescribedBy && hasHelperText(helper, error) ? helperId : ariaDescribedBy}
         aria-disabled={disabled}
         aria-label={ariaLabel}
         basicSetup={{
@@ -108,16 +113,7 @@ export const CodeEditor = ({
           <CodeEditorExpandable expanded={expanded} hideText={hideText} setExpanded={setExpanded} showText={showText} />
         ) : null}
       </div>
-      {error && typeof error !== 'boolean' ? (
-        <Text as="span" sentiment="danger" variant="caption">
-          {error}
-        </Text>
-      ) : null}
-      {!error && helper ? (
-        <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
-          {helper}
-        </Text>
-      ) : null}
+      <Helper error={error} helper={helper} disabled={disabled} id={ariaDescribedBy ?? helperId} />
     </Stack>
   )
 }

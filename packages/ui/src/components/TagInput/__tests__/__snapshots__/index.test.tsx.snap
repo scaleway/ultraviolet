@@ -82,7 +82,7 @@ exports[`tagInput > should renders correctly readOnly 1`] = `
             <input
               class="styles__sjgcm26"
               data-size="large"
-              id="_r_4_"
+              id="_r_6_"
               readonly=""
               type="text"
               value=""
@@ -115,9 +115,10 @@ exports[`tagInput > should renders correctly with error 1`] = `
             class="styles__sjgcm24"
           >
             <input
+              aria-describedby="_r_i_"
               class="styles__sjgcm26"
               data-size="large"
-              id="_r_c_"
+              id="_r_h_"
               type="text"
               value=""
             />
@@ -145,6 +146,7 @@ exports[`tagInput > should renders correctly with error 1`] = `
       </div>
       <span
         class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+        id="_r_i_"
       >
         This is an error
       </span>
@@ -163,7 +165,7 @@ exports[`tagInput > should renders correctly with label 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_6_"
+        for="_r_9_"
       >
         Label
       </label>
@@ -181,7 +183,7 @@ exports[`tagInput > should renders correctly with label 1`] = `
             <input
               class="styles__sjgcm26"
               data-size="large"
-              id="_r_6_"
+              id="_r_9_"
               type="text"
               value=""
             />
@@ -206,7 +208,7 @@ exports[`tagInput > should renders correctly with labelDescription 1`] = `
       >
         <label
           class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-          for="_r_9_"
+          for="_r_d_"
         />
         <div>
           label description
@@ -226,7 +228,7 @@ exports[`tagInput > should renders correctly with labelDescription 1`] = `
             <input
               class="styles__sjgcm26"
               data-size="large"
-              id="_r_9_"
+              id="_r_d_"
               type="text"
               value=""
             />
@@ -260,7 +262,7 @@ exports[`tagInput > should renders correctly with placeholder 1`] = `
             <input
               class="styles__sjgcm26"
               data-size="large"
-              id="_r_i_"
+              id="_r_p_"
               placeholder="Enter a value here"
               type="text"
               value=""
@@ -353,7 +355,7 @@ exports[`tagInput > should renders correctly with some tags 1`] = `
             <input
               class="styles__sjgcm26"
               data-size="large"
-              id="_r_k_"
+              id="_r_s_"
               name="radio"
               placeholder=""
               type="text"
@@ -447,7 +449,7 @@ exports[`tagInput > should renders correctly with some tags objects 1`] = `
             <input
               class="styles__sjgcm26"
               data-size="large"
-              id="_r_q_"
+              id="_r_13_"
               name="radio"
               placeholder=""
               type="text"
@@ -481,9 +483,10 @@ exports[`tagInput > should renders correctly with success 1`] = `
             class="styles__sjgcm24"
           >
             <input
+              aria-describedby="_r_m_"
               class="styles__sjgcm26"
               data-size="large"
-              id="_r_f_"
+              id="_r_l_"
               type="text"
               value=""
             />
@@ -511,6 +514,7 @@ exports[`tagInput > should renders correctly with success 1`] = `
       </div>
       <span
         class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_success__m4c9owe style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_56__m4c9ow2u"
+        id="_r_m_"
       >
         This is a success
       </span>

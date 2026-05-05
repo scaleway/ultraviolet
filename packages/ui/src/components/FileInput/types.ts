@@ -47,7 +47,7 @@ export type DropzoneVariantProps = {
 export type FileInputProps = {
   className?: string
   labelDescription?: ReactNode
-  helper?: string
+  helper?: ReactNode
   onDrop?: (event: DragEvent<HTMLElement>, acceptedFiles: File[], errorFiles?: ErrorType[]) => void
   accept?: HTMLInputElement['accept']
   onChangeFiles?: (files: FilesType[]) => void
@@ -63,7 +63,7 @@ export type FileInputProps = {
   LabelType &
   Pick<
     InputHTMLAttributes<HTMLInputElement>,
-    'onFocus' | 'onBlur' | 'name' | 'disabled' | 'required' | 'onKeyDown' | 'onKeyUp' | 'style'
+    'onFocus' | 'onBlur' | 'name' | 'disabled' | 'required' | 'onKeyDown' | 'onKeyUp' | 'style' | 'aria-describedby'
   >
 
 type LimitType = { limit: number; textLimit: string } | { limit?: never; textLimit?: never }

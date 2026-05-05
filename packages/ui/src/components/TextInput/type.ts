@@ -44,4 +44,5 @@ export type TextInputProps = {
   | 'aria-atomic'
   | 'onChange'
   | 'style'
+  | 'aria-describedby'
 >

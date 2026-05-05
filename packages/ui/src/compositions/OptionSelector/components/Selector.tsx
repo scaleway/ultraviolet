@@ -16,6 +16,7 @@ export const Selector = ({
   value,
   direction = 'horizontal',
   firstSelector: selector,
+  helperId,
 }: Pick<
   OptionSelectorProps,
   'size' | 'disabled' | 'error' | 'readOnly' | 'required' | 'direction' | 'firstSelector'
@@ -25,8 +26,10 @@ export const Selector = ({
   onChange: (val: string) => void
   options: DataType
   value?: string
+  helperId: string
 }) => (
   <SelectInput
+    aria-describedby={isHorizontal ? helperId : undefined}
     aria-label={selector['aria-label']}
     className={
       isFirst ? optionSelectorStyle.firstSelectInput[direction] : optionSelectorStyle.secondSelectInput[direction]

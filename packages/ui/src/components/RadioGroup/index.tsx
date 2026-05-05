@@ -1,8 +1,10 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { useMemo } from 'react'
 import type { InputHTMLAttributes, ReactNode } from 'react'
+import { useId, useMemo } from 'react'
+import { hasHelperText } from '../../helpers/hasHelperText'
+import { Helper } from '../Helper'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -21,7 +23,7 @@ type RadioGroupProps = {
   children: ReactNode
   description?: ReactNode
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'name'>
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'name' | 'aria-describedby'>
 
 /**
  * RadioGroup is a component that allows users to select one option from a list of options using radio.
@@ -39,6 +41,7 @@ const RadioGroupComponent = ({
   name,
   description,
   required = false,
+  'aria-describedby': ariaDescribedBy,
 }: RadioGroupProps) => {
   const contextValue = useMemo(
     () => ({
@@ -50,11 +53,15 @@ const RadioGroupComponent = ({
     }),
     [name, value, onChange, required, error],
   )
+  const helperId = useId()
 
   return (
     <RadioGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset className={cn(className, radioGRoupStyle.fieldset)}>
+        <fieldset
+          className={cn(className, radioGRoupStyle.fieldset)}
+          aria-describedby={!ariaDescribedBy && hasHelperText(helper, error) ? helperId : ariaDescribedBy}
+        >
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>
@@ -80,16 +87,7 @@ const RadioGroupComponent = ({
             </Stack>
           </Stack>
         </fieldset>
-        {helper ? (
-          <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
-            {helper}
-          </Text>
-        ) : null}
-        {error ? (
-          <Text as="span" sentiment="danger" variant="caption">
-            {error}
-          </Text>
-        ) : null}
+        <Helper helper={helper} error={error} id={ariaDescribedBy ?? helperId} />
       </Stack>
     </RadioGroupContext.Provider>
   )

@@ -1,7 +1,9 @@
 'use client'
 
-import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import type { ChangeEvent, DragEvent as DragEventReact } from 'react'
+import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { hasHelperText } from '../../helpers/hasHelperText'
+import { Helper } from '../Helper'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -45,6 +47,7 @@ const FileInputBase = ({
   disabledDragndrop = false,
   validator,
   'data-testid': dataTestid,
+  'aria-describedby': ariaDescribedBy,
 }: FileInputProps) => {
   const [dragState, setDragState] = useState<'over' | 'default' | 'page'>('default')
   const [files, setFiles] = useState(defaultFiles ?? [])
@@ -159,23 +162,14 @@ const FileInputBase = ({
 
   const computedChildren = typeof children === 'function' ? children(inputId, inputRef) : children
 
-  const computedHelper =
-    helper || (error && typeof error === 'string') ? (
-      <Text
-        as="p"
-        sentiment={error ? 'danger' : 'neutral'}
-        variant="caption"
-        prominence={error ? 'default' : 'weak'}
-        id={helperId}
-      >
-        {error || helper}
-      </Text>
-    ) : null
+  const computedHelper = (
+    <Helper error={error} helper={helper} id={ariaDescribedBy ?? helperId} size={size} disabled={disabled} />
+  )
 
   const input = (
     <input
       accept={accept}
-      aria-describedby={helper || typeof error === 'string' ? helperId : undefined}
+      aria-describedby={hasHelperText(helper, error) && !ariaDescribedBy ? helperId : ariaDescribedBy}
       aria-label={ariaLabel}
       className={fileInputStyle.fileInput}
       data-testid={dataTestid}
