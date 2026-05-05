@@ -6,8 +6,8 @@ exports[`menu > can navigate with arrow keys 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-_r_2l_"
-      aria-describedby="menu-_r_2l_"
+      aria-controls="menu-_r_2o_"
+      aria-describedby="menu-_r_2o_"
       class="styles__w40vpo9"
       tabindex="-1"
     >
@@ -25,6 +25,30 @@ exports[`menu > can navigate with arrow keys 1`] = `
 `;
 
 exports[`menu > menu.Item > render with active props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="menu-_r_3n_"
+      aria-describedby="menu-_r_3n_"
+      class="styles__w40vpo9"
+      tabindex="-1"
+    >
+      <button
+        aria-expanded="true"
+        aria-haspopup="dialog"
+        data-testid="disclosure"
+        type="button"
+      >
+        Menu
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`menu > menu.Item > render with borderless props 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
@@ -48,79 +72,7 @@ exports[`menu > menu.Item > render with active props 1`] = `
 </DocumentFragment>
 `;
 
-exports[`menu > menu.Item > render with borderless props 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <div
-      aria-controls="menu-_r_3h_"
-      aria-describedby="menu-_r_3h_"
-      class="styles__w40vpo9"
-      tabindex="-1"
-    >
-      <button
-        aria-expanded="true"
-        aria-haspopup="dialog"
-        data-testid="disclosure"
-        type="button"
-      >
-        Menu
-      </button>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`menu > menu.Item > render with default props 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <div
-      aria-controls="menu-_r_38_"
-      aria-describedby="menu-_r_38_"
-      class="styles__w40vpo9"
-      tabindex="-1"
-    >
-      <button
-        aria-expanded="true"
-        aria-haspopup="dialog"
-        data-testid="disclosure"
-        type="button"
-      >
-        Menu
-      </button>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`menu > menu.Item > render with disabled props 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <div
-      aria-controls="menu-_r_3e_"
-      aria-describedby="menu-_r_3e_"
-      class="styles__w40vpo9"
-      tabindex="-1"
-    >
-      <button
-        aria-expanded="true"
-        aria-haspopup="dialog"
-        data-testid="disclosure"
-        type="button"
-      >
-        Menu
-      </button>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`menu > menu.Item > render with sentiment danger 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
@@ -144,14 +96,14 @@ exports[`menu > menu.Item > render with sentiment danger 1`] = `
 </DocumentFragment>
 `;
 
-exports[`menu > placement > renders bottom 1`] = `
+exports[`menu > menu.Item > render with disabled props 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
   >
     <div
-      aria-controls="menu-_r_2v_"
-      aria-describedby="menu-_r_2v_"
+      aria-controls="menu-_r_3h_"
+      aria-describedby="menu-_r_3h_"
       class="styles__w40vpo9"
       tabindex="-1"
     >
@@ -168,7 +120,31 @@ exports[`menu > placement > renders bottom 1`] = `
 </DocumentFragment>
 `;
 
-exports[`menu > placement > renders left 1`] = `
+exports[`menu > menu.Item > render with sentiment danger 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="menu-_r_3e_"
+      aria-describedby="menu-_r_3e_"
+      class="styles__w40vpo9"
+      tabindex="-1"
+    >
+      <button
+        aria-expanded="true"
+        aria-haspopup="dialog"
+        data-testid="disclosure"
+        type="button"
+      >
+        Menu
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`menu > placement > renders bottom 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
@@ -192,7 +168,7 @@ exports[`menu > placement > renders left 1`] = `
 </DocumentFragment>
 `;
 
-exports[`menu > placement > renders right 1`] = `
+exports[`menu > placement > renders left 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
@@ -216,14 +192,38 @@ exports[`menu > placement > renders right 1`] = `
 </DocumentFragment>
 `;
 
+exports[`menu > placement > renders right 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="menu-_r_38_"
+      aria-describedby="menu-_r_38_"
+      class="styles__w40vpo9"
+      tabindex="-1"
+    >
+      <button
+        aria-expanded="true"
+        aria-haspopup="dialog"
+        data-testid="disclosure"
+        type="button"
+      >
+        Menu
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`menu > placement > renders top 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
   >
     <div
-      aria-controls="menu-_r_2s_"
-      aria-describedby="menu-_r_2s_"
+      aria-controls="menu-_r_2v_"
+      aria-describedby="menu-_r_2v_"
       class="styles__w40vpo9"
       tabindex="-1"
     >
@@ -246,8 +246,8 @@ exports[`menu > renders nested 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-_r_23_"
-      aria-describedby="menu-_r_23_"
+      aria-controls="menu-_r_25_"
+      aria-describedby="menu-_r_25_"
       class="styles__w40vpo9"
       tabindex="-1"
     >
@@ -414,8 +414,8 @@ exports[`menu > renders with footer 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-_r_1k_"
-      aria-describedby="menu-_r_1k_"
+      aria-controls="menu-_r_1m_"
+      aria-describedby="menu-_r_1m_"
       class="styles__w40vpo9"
       tabindex="-1"
     >
@@ -438,8 +438,8 @@ exports[`menu > renders with rightComponent  (keyboard navigation) 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-_r_20_"
-      aria-describedby="menu-_r_20_"
+      aria-controls="menu-_r_22_"
+      aria-describedby="menu-_r_22_"
       class="styles__w40vpo9"
       tabindex="-1"
     >
@@ -462,8 +462,8 @@ exports[`menu > renders with rightComponent 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-_r_1n_"
-      aria-describedby="menu-_r_1n_"
+      aria-controls="menu-_r_1p_"
+      aria-describedby="menu-_r_1p_"
       class="styles__w40vpo9"
       tabindex="-1"
     >
@@ -486,8 +486,8 @@ exports[`menu > renders with rightComponent and link item (keyboard navigation) 
     data-testid="testing"
   >
     <div
-      aria-controls="menu-_r_1t_"
-      aria-describedby="menu-_r_1t_"
+      aria-controls="menu-_r_1v_"
+      aria-describedby="menu-_r_1v_"
       class="styles__w40vpo9"
       tabindex="-1"
     >
@@ -510,8 +510,8 @@ exports[`menu > renders with rightComponent and link item 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-_r_1q_"
-      aria-describedby="menu-_r_1q_"
+      aria-controls="menu-_r_1s_"
+      aria-describedby="menu-_r_1s_"
       class="styles__w40vpo9"
       tabindex="-1"
     >

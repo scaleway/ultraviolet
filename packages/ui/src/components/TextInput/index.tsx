@@ -11,12 +11,13 @@ import {
   useState,
 } from 'react'
 
+import { hasHelperText } from '../../helpers/hasHelperText'
 import { Button } from '../Button'
+import { Helper } from '../Helper'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 
-import { BottomText } from './BottomText'
 import { PrefixSuffix } from './PrefixSuffix'
 import { RightIcon } from './RightIcon'
 import { ShowHidePassword } from './ShowHidePassword'
@@ -64,6 +65,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
       minLength,
       maxLength,
       'aria-labelledby': ariaLabelledBy,
+      'aria-describedby': ariaDescribedBy,
       'aria-label': ariaLabel,
       autoComplete,
       onKeyDown,
@@ -77,6 +79,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
     ref,
   ) => {
     const localId = useId()
+    const helperId = useId()
     const [hasFocus, setHasFocus] = useState(false)
     const [localValue, setLocalValue] = useState(defaultValue)
     const inputRef = useRef<HTMLInputElement>(null)
@@ -138,6 +141,11 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             <input
               aria-invalid={!!error}
               aria-label={ariaLabel}
+              aria-describedby={
+                !ariaDescribedBy && hasHelperText(helper, error, success)
+                  ? helperId
+                  : ariaDescribedBy
+              }
               aria-labelledby={ariaLabelledBy}
               autoComplete={autoComplete}
               // oxlint-disable-next-line jsx_a11y/no-autofocus
@@ -217,11 +225,13 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             ) : null}
           </div>
         </Tooltip>
-        <BottomText
-          disabled={disabled}
-          error={error}
+        <Helper
           helper={helper}
+          error={error}
           success={success}
+          size={size}
+          disabled={disabled}
+          id={ariaDescribedBy ?? helperId}
         />
       </Stack>
     )

@@ -13,7 +13,7 @@ exports[`timeInput > renders can move with arrow keys - 12-hour format 1`] = `
       >
         <label
           class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-          for="_r_24_"
+          for="_r_2i_"
         >
           label
         </label>
@@ -33,6 +33,7 @@ exports[`timeInput > renders can move with arrow keys - 12-hour format 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_2j_"
               aria-valuemax="12"
               aria-valuemin="1"
               aria-valuenow="12"
@@ -40,6 +41,7 @@ exports[`timeInput > renders can move with arrow keys - 12-hour format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="hours-input"
+              id="_r_2i_"
               placeholder="00"
               role="spinbutton"
               value="12"
@@ -54,6 +56,7 @@ exports[`timeInput > renders can move with arrow keys - 12-hour format 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_2j_"
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="23"
@@ -61,6 +64,7 @@ exports[`timeInput > renders can move with arrow keys - 12-hour format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="minutes-input"
+              id="_r_2i_"
               placeholder="00"
               role="spinbutton"
               value="23"
@@ -75,6 +79,7 @@ exports[`timeInput > renders can move with arrow keys - 12-hour format 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_2j_"
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="14"
@@ -82,12 +87,14 @@ exports[`timeInput > renders can move with arrow keys - 12-hour format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="seconds-input"
+              id="_r_2i_"
               placeholder="00"
               role="spinbutton"
               value="14"
             />
           </div>
           <input
+            aria-describedby="_r_2j_"
             aria-valuemax="12"
             aria-valuemin="0"
             aria-valuenow="12"
@@ -96,17 +103,19 @@ exports[`timeInput > renders can move with arrow keys - 12-hour format 1`] = `
             class="styles__yl1788 styles_period_true__yl1789"
             data-size="large"
             data-testid="am-pm-input"
+            id="_r_2i_"
             placeholder="AM"
             role="spinbutton"
             value="PM"
           />
         </div>
       </div>
-      <p
+      <span
         class="style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_3__m4c9ow1d style_undefined_compound_67__m4c9ow35"
+        id="_r_2j_"
       >
         helper
-      </p>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -125,7 +134,7 @@ exports[`timeInput > renders can move with arrow keys - 24-hour format 1`] = `
       >
         <label
           class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-          for="_r_2a_"
+          for="_r_2p_"
         >
           label
         </label>
@@ -145,6 +154,7 @@ exports[`timeInput > renders can move with arrow keys - 24-hour format 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_2q_"
               aria-valuemax="23"
               aria-valuemin="0"
               aria-valuenow="23"
@@ -152,6 +162,7 @@ exports[`timeInput > renders can move with arrow keys - 24-hour format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="hours-input"
+              id="_r_2p_"
               placeholder="00"
               role="spinbutton"
               value="23"
@@ -166,6 +177,7 @@ exports[`timeInput > renders can move with arrow keys - 24-hour format 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_2q_"
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="23"
@@ -173,6 +185,7 @@ exports[`timeInput > renders can move with arrow keys - 24-hour format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="minutes-input"
+              id="_r_2p_"
               placeholder="00"
               role="spinbutton"
               value="23"
@@ -187,6 +200,7 @@ exports[`timeInput > renders can move with arrow keys - 24-hour format 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_2q_"
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="14"
@@ -194,6 +208,7 @@ exports[`timeInput > renders can move with arrow keys - 24-hour format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="seconds-input"
+              id="_r_2p_"
               placeholder="00"
               role="spinbutton"
               value="14"
@@ -225,11 +240,12 @@ exports[`timeInput > renders can move with arrow keys - 24-hour format 1`] = `
           </button>
         </div>
       </div>
-      <p
+      <span
         class="style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_3__m4c9ow1d style_undefined_compound_67__m4c9ow35"
+        id="_r_2q_"
       >
         helper
-      </p>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -245,7 +261,7 @@ exports[`timeInput > renders correctly clearable 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_g_"
+        for="_r_k_"
       >
         test
       </label>
@@ -265,6 +281,7 @@ exports[`timeInput > renders correctly clearable 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="hours-input"
+              id="_r_k_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -285,6 +302,7 @@ exports[`timeInput > renders correctly clearable 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="minutes-input"
+              id="_r_k_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -305,6 +323,7 @@ exports[`timeInput > renders correctly clearable 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="seconds-input"
+              id="_r_k_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -354,7 +373,7 @@ exports[`timeInput > renders correctly clearable 2`] = `
       >
         <label
           class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-          for="_r_1t_"
+          for="_r_2a_"
         >
           label
         </label>
@@ -374,6 +393,7 @@ exports[`timeInput > renders correctly clearable 2`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_2b_"
               aria-valuemax="12"
               aria-valuemin="1"
               aria-valuenow="12"
@@ -381,6 +401,7 @@ exports[`timeInput > renders correctly clearable 2`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="hours-input"
+              id="_r_2a_"
               placeholder="00"
               role="spinbutton"
               value="12"
@@ -395,6 +416,7 @@ exports[`timeInput > renders correctly clearable 2`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_2b_"
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="0"
@@ -402,6 +424,7 @@ exports[`timeInput > renders correctly clearable 2`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="minutes-input"
+              id="_r_2a_"
               placeholder="00"
               role="spinbutton"
               value="00"
@@ -416,6 +439,7 @@ exports[`timeInput > renders correctly clearable 2`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_2b_"
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="0"
@@ -423,12 +447,14 @@ exports[`timeInput > renders correctly clearable 2`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="seconds-input"
+              id="_r_2a_"
               placeholder="00"
               role="spinbutton"
               value="00"
             />
           </div>
           <input
+            aria-describedby="_r_2b_"
             aria-valuemax="12"
             aria-valuemin="0"
             aria-valuenow="0"
@@ -437,6 +463,7 @@ exports[`timeInput > renders correctly clearable 2`] = `
             class="styles__yl1788 styles_period_true__yl1789"
             data-size="large"
             data-testid="am-pm-input"
+            id="_r_2a_"
             placeholder="AM"
             role="spinbutton"
             value="AM"
@@ -467,11 +494,12 @@ exports[`timeInput > renders correctly clearable 2`] = `
           </button>
         </div>
       </div>
-      <p
+      <span
         class="style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_3__m4c9ow1d style_undefined_compound_67__m4c9ow35"
+        id="_r_2b_"
       >
         helper
-      </p>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -490,7 +518,7 @@ exports[`timeInput > renders correctly controlled - 12-hour format 1`] = `
       >
         <label
           class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-          for="_r_1h_"
+          for="_r_1s_"
         >
           label
         </label>
@@ -510,6 +538,7 @@ exports[`timeInput > renders correctly controlled - 12-hour format 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_1t_"
               aria-valuemax="12"
               aria-valuemin="1"
               aria-valuenow="12"
@@ -517,6 +546,7 @@ exports[`timeInput > renders correctly controlled - 12-hour format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="hours-input"
+              id="_r_1s_"
               placeholder="00"
               role="spinbutton"
               value="12"
@@ -531,6 +561,7 @@ exports[`timeInput > renders correctly controlled - 12-hour format 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_1t_"
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="23"
@@ -538,6 +569,7 @@ exports[`timeInput > renders correctly controlled - 12-hour format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="minutes-input"
+              id="_r_1s_"
               placeholder="00"
               role="spinbutton"
               value="23"
@@ -552,6 +584,7 @@ exports[`timeInput > renders correctly controlled - 12-hour format 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_1t_"
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="7"
@@ -559,12 +592,14 @@ exports[`timeInput > renders correctly controlled - 12-hour format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="seconds-input"
+              id="_r_1s_"
               placeholder="00"
               role="spinbutton"
               value="07"
             />
           </div>
           <input
+            aria-describedby="_r_1t_"
             aria-valuemax="12"
             aria-valuemin="0"
             aria-valuenow="0"
@@ -573,17 +608,19 @@ exports[`timeInput > renders correctly controlled - 12-hour format 1`] = `
             class="styles__yl1788 styles_period_true__yl1789"
             data-size="large"
             data-testid="am-pm-input"
+            id="_r_1s_"
             placeholder="AM"
             role="spinbutton"
             value="AM"
           />
         </div>
       </div>
-      <p
+      <span
         class="style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_3__m4c9ow1d style_undefined_compound_67__m4c9ow35"
+        id="_r_1t_"
       >
         helper
-      </p>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -602,7 +639,7 @@ exports[`timeInput > renders correctly controlled - 24-hours format 1`] = `
       >
         <label
           class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-          for="_r_1n_"
+          for="_r_23_"
         >
           label
         </label>
@@ -622,6 +659,7 @@ exports[`timeInput > renders correctly controlled - 24-hours format 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_24_"
               aria-valuemax="23"
               aria-valuemin="0"
               aria-valuenow="23"
@@ -629,6 +667,7 @@ exports[`timeInput > renders correctly controlled - 24-hours format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="hours-input"
+              id="_r_23_"
               placeholder="00"
               role="spinbutton"
               value="23"
@@ -643,6 +682,7 @@ exports[`timeInput > renders correctly controlled - 24-hours format 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_24_"
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="32"
@@ -650,6 +690,7 @@ exports[`timeInput > renders correctly controlled - 24-hours format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="minutes-input"
+              id="_r_23_"
               placeholder="00"
               role="spinbutton"
               value="32"
@@ -664,6 +705,7 @@ exports[`timeInput > renders correctly controlled - 24-hours format 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_24_"
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="31"
@@ -671,6 +713,7 @@ exports[`timeInput > renders correctly controlled - 24-hours format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="seconds-input"
+              id="_r_23_"
               placeholder="00"
               role="spinbutton"
               value="31"
@@ -678,11 +721,12 @@ exports[`timeInput > renders correctly controlled - 24-hours format 1`] = `
           </div>
         </div>
       </div>
-      <p
+      <span
         class="style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_3__m4c9ow1d style_undefined_compound_67__m4c9ow35"
+        id="_r_24_"
       >
         helper
-      </p>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -698,7 +742,7 @@ exports[`timeInput > renders correctly disabled 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_3_"
+        for="_r_4_"
       >
         test
       </label>
@@ -719,6 +763,7 @@ exports[`timeInput > renders correctly disabled 1`] = `
               data-size="large"
               data-testid="hours-input"
               disabled=""
+              id="_r_4_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -740,6 +785,7 @@ exports[`timeInput > renders correctly disabled 1`] = `
               data-size="large"
               data-testid="minutes-input"
               disabled=""
+              id="_r_4_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -761,6 +807,7 @@ exports[`timeInput > renders correctly disabled 1`] = `
               data-size="large"
               data-testid="seconds-input"
               disabled=""
+              id="_r_4_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -783,7 +830,7 @@ exports[`timeInput > renders correctly large 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_u_"
+        for="_r_15_"
       >
         test
       </label>
@@ -803,6 +850,7 @@ exports[`timeInput > renders correctly large 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="hours-input"
+              id="_r_15_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -823,6 +871,7 @@ exports[`timeInput > renders correctly large 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="minutes-input"
+              id="_r_15_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -843,6 +892,7 @@ exports[`timeInput > renders correctly large 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="seconds-input"
+              id="_r_15_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -865,7 +915,7 @@ exports[`timeInput > renders correctly readOnly 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_7_"
+        for="_r_9_"
       >
         test
       </label>
@@ -885,6 +935,7 @@ exports[`timeInput > renders correctly readOnly 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="hours-input"
+              id="_r_9_"
               placeholder="00"
               readonly=""
               role="spinbutton"
@@ -906,6 +957,7 @@ exports[`timeInput > renders correctly readOnly 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="minutes-input"
+              id="_r_9_"
               placeholder="00"
               readonly=""
               role="spinbutton"
@@ -927,6 +979,7 @@ exports[`timeInput > renders correctly readOnly 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="seconds-input"
+              id="_r_9_"
               placeholder="00"
               readonly=""
               role="spinbutton"
@@ -953,7 +1006,7 @@ exports[`timeInput > renders correctly required 1`] = `
       >
         <label
           class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-          for="_r_l_"
+          for="_r_q_"
         >
           test
         </label>
@@ -980,6 +1033,7 @@ exports[`timeInput > renders correctly required 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="hours-input"
+              id="_r_q_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1000,6 +1054,7 @@ exports[`timeInput > renders correctly required 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="minutes-input"
+              id="_r_q_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1020,6 +1075,7 @@ exports[`timeInput > renders correctly required 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="seconds-input"
+              id="_r_q_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1042,7 +1098,7 @@ exports[`timeInput > renders correctly small 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodySmallStrong__m4c9owl style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_q_"
+        for="_r_10_"
       >
         test
       </label>
@@ -1062,6 +1118,7 @@ exports[`timeInput > renders correctly small 1`] = `
               class="styles__yl1788"
               data-size="small"
               data-testid="hours-input"
+              id="_r_10_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1082,6 +1139,7 @@ exports[`timeInput > renders correctly small 1`] = `
               class="styles__yl1788"
               data-size="small"
               data-testid="minutes-input"
+              id="_r_10_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1102,6 +1160,7 @@ exports[`timeInput > renders correctly small 1`] = `
               class="styles__yl1788"
               data-size="small"
               data-testid="seconds-input"
+              id="_r_10_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1124,7 +1183,7 @@ exports[`timeInput > renders correctly with 12-hour format 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_12_"
+        for="_r_1a_"
       >
         test
       </label>
@@ -1144,6 +1203,7 @@ exports[`timeInput > renders correctly with 12-hour format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="hours-input"
+              id="_r_1a_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1164,6 +1224,7 @@ exports[`timeInput > renders correctly with 12-hour format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="minutes-input"
+              id="_r_1a_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1184,6 +1245,7 @@ exports[`timeInput > renders correctly with 12-hour format 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="seconds-input"
+              id="_r_1a_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1197,6 +1259,7 @@ exports[`timeInput > renders correctly with 12-hour format 1`] = `
             class="styles__yl1788 styles_period_true__yl1789"
             data-size="large"
             data-testid="am-pm-input"
+            id="_r_1a_"
             placeholder="AM"
             role="spinbutton"
           />
@@ -1231,6 +1294,7 @@ exports[`timeInput > renders correctly with base props 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="hours-input"
+              id="_r_0_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1251,6 +1315,7 @@ exports[`timeInput > renders correctly with base props 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="minutes-input"
+              id="_r_0_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1271,6 +1336,7 @@ exports[`timeInput > renders correctly with base props 1`] = `
               class="styles__yl1788"
               data-size="large"
               data-testid="seconds-input"
+              id="_r_0_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1293,7 +1359,7 @@ exports[`timeInput > renders correctly with error 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_b_"
+        for="_r_e_"
       >
         test
       </label>
@@ -1307,12 +1373,14 @@ exports[`timeInput > renders correctly with error 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_f_"
               aria-valuemax="23"
               aria-valuemin="0"
               autocomplete="off"
               class="styles__yl1788"
               data-size="large"
               data-testid="hours-input"
+              id="_r_e_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1327,12 +1395,14 @@ exports[`timeInput > renders correctly with error 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_f_"
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="off"
               class="styles__yl1788"
               data-size="large"
               data-testid="minutes-input"
+              id="_r_e_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1347,12 +1417,14 @@ exports[`timeInput > renders correctly with error 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_f_"
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="off"
               class="styles__yl1788"
               data-size="large"
               data-testid="seconds-input"
+              id="_r_e_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1379,11 +1451,12 @@ exports[`timeInput > renders correctly with error 1`] = `
           </svg>
         </div>
       </div>
-      <p
+      <span
         class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+        id="_r_f_"
       >
         error
-      </p>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -1402,7 +1475,7 @@ exports[`timeInput > renders correctly with helper and error 1`] = `
       >
         <label
           class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-          for="_r_1b_"
+          for="_r_1l_"
         >
           label
         </label>
@@ -1422,12 +1495,14 @@ exports[`timeInput > renders correctly with helper and error 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_1m_"
               aria-valuemax="23"
               aria-valuemin="0"
               autocomplete="off"
               class="styles__yl1788"
               data-size="large"
               data-testid="hours-input"
+              id="_r_1l_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1442,12 +1517,14 @@ exports[`timeInput > renders correctly with helper and error 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_1m_"
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="off"
               class="styles__yl1788"
               data-size="large"
               data-testid="minutes-input"
+              id="_r_1l_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1462,12 +1539,14 @@ exports[`timeInput > renders correctly with helper and error 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_1m_"
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="off"
               class="styles__yl1788"
               data-size="large"
               data-testid="seconds-input"
+              id="_r_1l_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1494,9 +1573,12 @@ exports[`timeInput > renders correctly with helper and error 1`] = `
           </svg>
         </div>
       </div>
-      <p
+      <span
         class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
-      />
+        id="_r_1m_"
+      >
+        helper
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -1515,7 +1597,7 @@ exports[`timeInput > renders correctly with label description and helper 1`] = `
       >
         <label
           class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-          for="_r_16_"
+          for="_r_1f_"
         >
           label
         </label>
@@ -1533,12 +1615,14 @@ exports[`timeInput > renders correctly with label description and helper 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_1g_"
               aria-valuemax="23"
               aria-valuemin="0"
               autocomplete="off"
               class="styles__yl1788"
               data-size="large"
               data-testid="hours-input"
+              id="_r_1f_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1553,12 +1637,14 @@ exports[`timeInput > renders correctly with label description and helper 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_1g_"
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="off"
               class="styles__yl1788"
               data-size="large"
               data-testid="minutes-input"
+              id="_r_1f_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1573,12 +1659,14 @@ exports[`timeInput > renders correctly with label description and helper 1`] = `
             class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
           >
             <input
+              aria-describedby="_r_1g_"
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="off"
               class="styles__yl1788"
               data-size="large"
               data-testid="seconds-input"
+              id="_r_1f_"
               placeholder="00"
               role="spinbutton"
               value=""
@@ -1586,11 +1674,12 @@ exports[`timeInput > renders correctly with label description and helper 1`] = `
           </div>
         </div>
       </div>
-      <p
+      <span
         class="style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_3__m4c9ow1d style_undefined_compound_67__m4c9ow35"
+        id="_r_1g_"
       >
         helper
-      </p>
+      </span>
     </div>
   </div>
 </DocumentFragment>

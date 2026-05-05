@@ -46,6 +46,7 @@ export const DoubleSlider = ({
   labelDescription,
   defaultScale = false,
   customValueDisplay,
+  'aria-describedby': ariaDescribedBy,
 }: DoubleSliderProps) => {
   const theme = useTheme()
   const localId = useId()
@@ -328,6 +329,7 @@ export const DoubleSlider = ({
               text={Array.isArray(tooltipText) ? tooltipText[0] : undefined}
             >
               <input
+                aria-describedby={ariaDescribedBy}
                 aria-label={ariaLabel ?? name}
                 className={cn(
                   className,
@@ -374,6 +376,7 @@ export const DoubleSlider = ({
               text={Array.isArray(tooltipText) ? tooltipText[1] : undefined}
             >
               <input
+                aria-describedby={ariaDescribedBy}
                 aria-label={ariaLabel ?? name}
                 className={cn(
                   className,

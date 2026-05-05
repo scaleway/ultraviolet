@@ -36,7 +36,7 @@ exports[`single slider > handles correctly onChange with min and max 1`] = `
                     aria-label="input"
                     class="styles__1ce7gb6c styles_controls_false__1ce7gb6d styles_size_small__1ce7gb6h styles_undefined_compound_0__1ce7gb6i"
                     data-testid="slider-input"
-                    id="_r_3s_"
+                    id="_r_4s_"
                     max="10"
                     min="2"
                     placeholder=""
@@ -59,7 +59,7 @@ exports[`single slider > handles correctly onChange with min and max 1`] = `
             data-direction="column"
             data-error="false"
             data-testid="slider"
-            id="_r_3r_"
+            id="_r_4r_"
             max="10"
             min="2"
             name="slider"
@@ -109,7 +109,7 @@ exports[`single slider > handles correctly with custom scale 1`] = `
             data-direction="column"
             data-error="false"
             data-testid="slider"
-            id="_r_3v_"
+            id="_r_51_"
             max="3"
             min="0"
             name="slider"
@@ -203,7 +203,7 @@ exports[`single slider > renders correctly 1`] = `
           >
             <label
               class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-              for="_r_0_"
+              for="_r_1_"
             >
               Label
             </label>
@@ -229,11 +229,12 @@ exports[`single slider > renders correctly 1`] = `
           style="--_4k0ekn0: 100%;"
         >
           <input
+            aria-describedby="_r_0_"
             aria-label="Name"
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="false"
-            id="_r_0_"
+            id="_r_1_"
             max="100"
             min="0"
             name="Name"
@@ -245,11 +246,12 @@ exports[`single slider > renders correctly 1`] = `
           />
         </div>
       </div>
-      <p
+      <span
         class="style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_3__m4c9ow1d style_undefined_compound_67__m4c9ow35"
+        id="_r_0_"
       >
         helper
-      </p>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -272,7 +274,7 @@ exports[`single slider > renders correctly custom tooltip 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_2b_"
+            for="_r_2v_"
           >
             Label
           </label>
@@ -292,8 +294,8 @@ exports[`single slider > renders correctly custom tooltip 1`] = `
           style="--_4k0ekn0: 100%;"
         >
           <div
-            aria-controls="_r_2e_"
-            aria-describedby="_r_2e_"
+            aria-controls="_r_32_"
+            aria-describedby="_r_32_"
             class="styles__w40vpo9"
             tabindex="0"
           >
@@ -302,7 +304,7 @@ exports[`single slider > renders correctly custom tooltip 1`] = `
               class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
               data-direction="column"
               data-error="false"
-              id="_r_2b_"
+              id="_r_2v_"
               max="100"
               min="0"
               name="Name"
@@ -337,7 +339,7 @@ exports[`single slider > renders correctly custom value - direction row 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_2p_"
+            for="_r_3h_"
           >
             Label
           </label>
@@ -350,8 +352,8 @@ exports[`single slider > renders correctly custom value - direction row 1`] = `
           style="--_4k0ekn0: 100%;"
         >
           <div
-            aria-controls="_r_2r_"
-            aria-describedby="_r_2r_"
+            aria-controls="_r_3j_"
+            aria-describedby="_r_3j_"
             class="styles__w40vpo9"
             tabindex="0"
           >
@@ -360,7 +362,7 @@ exports[`single slider > renders correctly custom value - direction row 1`] = `
               class="styles__a5ifr1p styles_direction_row__a5ifr1r styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
               data-direction="row"
               data-error="false"
-              id="_r_2p_"
+              id="_r_3h_"
               max="100"
               min="0"
               name="Name"
@@ -396,7 +398,7 @@ exports[`single slider > renders correctly custom value 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_2j_"
+            for="_r_39_"
           >
             Label
           </label>
@@ -410,8 +412,8 @@ exports[`single slider > renders correctly custom value 1`] = `
           style="--_4k0ekn0: 100%;"
         >
           <div
-            aria-controls="_r_2l_"
-            aria-describedby="_r_2l_"
+            aria-controls="_r_3b_"
+            aria-describedby="_r_3b_"
             class="styles__w40vpo9"
             tabindex="0"
           >
@@ -420,7 +422,7 @@ exports[`single slider > renders correctly custom value 1`] = `
               class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
               data-direction="column"
               data-error="false"
-              id="_r_2j_"
+              id="_r_39_"
               max="100"
               min="0"
               name="Name"
@@ -455,7 +457,7 @@ exports[`single slider > renders correctly custom value false 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_2m_"
+            for="_r_3d_"
           >
             Label
           </label>
@@ -468,8 +470,8 @@ exports[`single slider > renders correctly custom value false 1`] = `
           style="--_4k0ekn0: 100%;"
         >
           <div
-            aria-controls="_r_2o_"
-            aria-describedby="_r_2o_"
+            aria-controls="_r_3f_"
+            aria-describedby="_r_3f_"
             class="styles__w40vpo9"
             tabindex="0"
           >
@@ -478,7 +480,7 @@ exports[`single slider > renders correctly custom value false 1`] = `
               class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
               data-direction="column"
               data-error="false"
-              id="_r_2m_"
+              id="_r_3d_"
               max="100"
               min="0"
               name="Name"
@@ -513,7 +515,7 @@ exports[`single slider > renders correctly custom value with input  1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_2s_"
+            for="_r_3l_"
           >
             Label
           </label>
@@ -526,8 +528,8 @@ exports[`single slider > renders correctly custom value with input  1`] = `
           style="--_4k0ekn0: 100%;"
         >
           <div
-            aria-controls="_r_2u_"
-            aria-describedby="_r_2u_"
+            aria-controls="_r_3n_"
+            aria-describedby="_r_3n_"
             class="styles__w40vpo9"
             tabindex="0"
           >
@@ -536,7 +538,7 @@ exports[`single slider > renders correctly custom value with input  1`] = `
               class="styles__a5ifr1p styles_direction_row__a5ifr1r styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
               data-direction="row"
               data-error="false"
-              id="_r_2s_"
+              id="_r_3l_"
               max="100"
               min="0"
               name="Name"
@@ -569,7 +571,7 @@ exports[`single slider > renders correctly custom value with input  1`] = `
                   aria-label="input"
                   class="styles__1ce7gb6c styles_controls_false__1ce7gb6d styles_size_small__1ce7gb6h styles_undefined_compound_0__1ce7gb6i"
                   data-testid="slider-input"
-                  id="_r_2v_"
+                  id="_r_3o_"
                   max="100"
                   min="0"
                   placeholder=""
@@ -604,7 +606,7 @@ exports[`single slider > renders correctly default tooltip 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_2f_"
+            for="_r_34_"
           >
             Label
           </label>
@@ -624,8 +626,8 @@ exports[`single slider > renders correctly default tooltip 1`] = `
           style="--_4k0ekn0: 100%;"
         >
           <div
-            aria-controls="_r_2i_"
-            aria-describedby="_r_2i_"
+            aria-controls="_r_37_"
+            aria-describedby="_r_37_"
             class="styles__w40vpo9"
             tabindex="0"
           >
@@ -634,7 +636,7 @@ exports[`single slider > renders correctly default tooltip 1`] = `
               class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
               data-direction="column"
               data-error="false"
-              id="_r_2f_"
+              id="_r_34_"
               max="100"
               min="0"
               name="Name"
@@ -669,7 +671,7 @@ exports[`single slider > renders correctly direction row 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_t_"
+            for="_r_15_"
           >
             Label
           </label>
@@ -686,7 +688,7 @@ exports[`single slider > renders correctly direction row 1`] = `
             class="styles__a5ifr1p styles_direction_row__a5ifr1r styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="row"
             data-error="false"
-            id="_r_t_"
+            id="_r_15_"
             max="100"
             min="0"
             name="Name"
@@ -727,7 +729,7 @@ exports[`single slider > renders correctly direction row with input 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_11_"
+            for="_r_1a_"
           >
             Label
           </label>
@@ -744,7 +746,7 @@ exports[`single slider > renders correctly direction row with input 1`] = `
             class="styles__a5ifr1p styles_direction_row__a5ifr1r styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="row"
             data-error="false"
-            id="_r_11_"
+            id="_r_1a_"
             max="100"
             min="0"
             name="Name"
@@ -776,7 +778,7 @@ exports[`single slider > renders correctly direction row with input 1`] = `
                   aria-label="input"
                   class="styles__1ce7gb6c styles_controls_false__1ce7gb6d styles_size_small__1ce7gb6h styles_undefined_compound_0__1ce7gb6i"
                   data-testid="slider-input"
-                  id="_r_14_"
+                  id="_r_1d_"
                   max="100"
                   min="0"
                   placeholder=""
@@ -811,7 +813,7 @@ exports[`single slider > renders correctly disabled 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_1e_"
+            for="_r_1r_"
           >
             Label
           </label>
@@ -837,7 +839,7 @@ exports[`single slider > renders correctly disabled 1`] = `
             data-direction="column"
             data-error="false"
             disabled=""
-            id="_r_1e_"
+            id="_r_1r_"
             max="100"
             min="0"
             name="Name"
@@ -871,7 +873,7 @@ exports[`single slider > renders correctly error boolean 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_1i_"
+            for="_r_20_"
           >
             Label
           </label>
@@ -891,11 +893,12 @@ exports[`single slider > renders correctly error boolean 1`] = `
           style="--_4k0ekn0: 100%;"
         >
           <input
+            aria-describedby="_r_1v_"
             aria-label="Name"
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles_error_true__a5ifr1u styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="true"
-            id="_r_1i_"
+            id="_r_20_"
             max="100"
             min="0"
             name="Name"
@@ -907,11 +910,12 @@ exports[`single slider > renders correctly error boolean 1`] = `
           />
         </div>
       </div>
-      <p
-        class="style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_3__m4c9ow1d style_undefined_compound_51__m4c9ow2p"
+      <span
+        class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+        id="_r_1v_"
       >
         helper
-      </p>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -934,7 +938,7 @@ exports[`single slider > renders correctly error boolean and helper 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_1n_"
+            for="_r_26_"
           >
             Label
           </label>
@@ -954,11 +958,12 @@ exports[`single slider > renders correctly error boolean and helper 1`] = `
           style="--_4k0ekn0: 100%;"
         >
           <input
+            aria-describedby="_r_25_"
             aria-label="Name"
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles_error_true__a5ifr1u styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="true"
-            id="_r_1n_"
+            id="_r_26_"
             max="100"
             min="0"
             name="Name"
@@ -970,11 +975,12 @@ exports[`single slider > renders correctly error boolean and helper 1`] = `
           />
         </div>
       </div>
-      <p
-        class="style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_3__m4c9ow1d style_undefined_compound_51__m4c9ow2p"
+      <span
+        class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+        id="_r_25_"
       >
         helper
-      </p>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -997,7 +1003,7 @@ exports[`single slider > renders correctly error string 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_1s_"
+            for="_r_2c_"
           >
             Label
           </label>
@@ -1017,11 +1023,12 @@ exports[`single slider > renders correctly error string 1`] = `
           style="--_4k0ekn0: 100%;"
         >
           <input
+            aria-describedby="_r_2b_"
             aria-label="Name"
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles_error_true__a5ifr1u styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="true"
-            id="_r_1s_"
+            id="_r_2c_"
             max="100"
             min="0"
             name="Name"
@@ -1033,11 +1040,12 @@ exports[`single slider > renders correctly error string 1`] = `
           />
         </div>
       </div>
-      <p
-        class="style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_3__m4c9ow1d style_undefined_compound_51__m4c9ow2p"
+      <span
+        class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+        id="_r_2b_"
       >
         error
-      </p>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -1060,7 +1068,7 @@ exports[`single slider > renders correctly error string and helper 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_21_"
+            for="_r_2i_"
           >
             Label
           </label>
@@ -1080,11 +1088,12 @@ exports[`single slider > renders correctly error string and helper 1`] = `
           style="--_4k0ekn0: 100%;"
         >
           <input
+            aria-describedby="_r_2h_"
             aria-label="Name"
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles_error_true__a5ifr1u styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="true"
-            id="_r_21_"
+            id="_r_2i_"
             max="100"
             min="0"
             name="Name"
@@ -1096,11 +1105,12 @@ exports[`single slider > renders correctly error string and helper 1`] = `
           />
         </div>
       </div>
-      <p
-        class="style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_3__m4c9ow1d style_undefined_compound_51__m4c9ow2p"
+      <span
+        class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+        id="_r_2h_"
       >
         error
-      </p>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -1123,7 +1133,7 @@ exports[`single slider > renders correctly input 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_26_"
+            for="_r_2o_"
           >
             Label
           </label>
@@ -1148,7 +1158,7 @@ exports[`single slider > renders correctly input 1`] = `
                     aria-label="input"
                     class="styles__1ce7gb6c styles_controls_false__1ce7gb6d styles_size_small__1ce7gb6h styles_undefined_compound_0__1ce7gb6i"
                     data-testid="slider-input"
-                    id="_r_28_"
+                    id="_r_2q_"
                     max="100"
                     min="0"
                     placeholder=""
@@ -1173,7 +1183,7 @@ exports[`single slider > renders correctly input 1`] = `
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="false"
-            id="_r_26_"
+            id="_r_2o_"
             max="100"
             min="0"
             name="Name"
@@ -1207,7 +1217,7 @@ exports[`single slider > renders correctly min max 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_3j_"
+            for="_r_4h_"
           >
             Label
           </label>
@@ -1231,7 +1241,7 @@ exports[`single slider > renders correctly min max 1`] = `
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="false"
-            id="_r_3j_"
+            id="_r_4h_"
             max="10"
             min="1"
             name="Name"
@@ -1265,7 +1275,7 @@ exports[`single slider > renders correctly prefix 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_p_"
+            for="_r_10_"
           >
             Label
           </label>
@@ -1289,7 +1299,7 @@ exports[`single slider > renders correctly prefix 1`] = `
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="false"
-            id="_r_p_"
+            id="_r_10_"
             max="100"
             min="0"
             name="Name"
@@ -1326,7 +1336,7 @@ exports[`single slider > renders correctly required 1`] = `
           >
             <label
               class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-              for="_r_6_"
+              for="_r_8_"
             >
               Label
             </label>
@@ -1356,7 +1366,7 @@ exports[`single slider > renders correctly required 1`] = `
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="false"
-            id="_r_6_"
+            id="_r_8_"
             max="100"
             min="0"
             name="Name"
@@ -1390,7 +1400,7 @@ exports[`single slider > renders correctly step 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_3n_"
+            for="_r_4m_"
           >
             Label
           </label>
@@ -1414,7 +1424,7 @@ exports[`single slider > renders correctly step 1`] = `
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="false"
-            id="_r_3n_"
+            id="_r_4m_"
             max="100"
             min="0"
             name="Name"
@@ -1448,7 +1458,7 @@ exports[`single slider > renders correctly suffix complex 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_f_"
+            for="_r_j_"
           >
             Label
           </label>
@@ -1477,7 +1487,7 @@ exports[`single slider > renders correctly suffix complex 1`] = `
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="false"
-            id="_r_f_"
+            id="_r_j_"
             max="100"
             min="0"
             name="Name"
@@ -1511,7 +1521,7 @@ exports[`single slider > renders correctly suffix string 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_b_"
+            for="_r_e_"
           >
             Label
           </label>
@@ -1535,7 +1545,7 @@ exports[`single slider > renders correctly suffix string 1`] = `
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="false"
-            id="_r_b_"
+            id="_r_e_"
             max="100"
             min="0"
             name="Name"
@@ -1569,7 +1579,7 @@ exports[`single slider > renders correctly suffix string input 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_j_"
+            for="_r_o_"
           >
             Label
           </label>
@@ -1594,7 +1604,7 @@ exports[`single slider > renders correctly suffix string input 1`] = `
                     aria-label="input"
                     class="styles__1ce7gb6c styles_controls_false__1ce7gb6d styles_hasUnit_true__1ce7gb6e styles_size_small__1ce7gb6h"
                     data-testid="slider-input"
-                    id="_r_l_"
+                    id="_r_q_"
                     max="100"
                     min="0"
                     placeholder=""
@@ -1624,7 +1634,7 @@ exports[`single slider > renders correctly suffix string input 1`] = `
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="false"
-            id="_r_j_"
+            id="_r_o_"
             max="100"
             min="0"
             name="Name"
@@ -1658,7 +1668,7 @@ exports[`single slider > renders correctly with custom ticks 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_31_"
+            for="_r_3s_"
           >
             Label
           </label>
@@ -1682,7 +1692,7 @@ exports[`single slider > renders correctly with custom ticks 1`] = `
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="false"
-            id="_r_31_"
+            id="_r_3s_"
             max="1"
             min="0"
             name="Name"
@@ -1747,7 +1757,7 @@ exports[`single slider > renders correctly with custom ticks and default scale 1
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_37_"
+            for="_r_43_"
           >
             Label
           </label>
@@ -1771,7 +1781,7 @@ exports[`single slider > renders correctly with custom ticks and default scale 1
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="false"
-            id="_r_37_"
+            id="_r_43_"
             max="100"
             min="0"
             name="Name"
@@ -1836,7 +1846,7 @@ exports[`single slider > renders correctly with default ticks without label 1`] 
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_3d_"
+            for="_r_4a_"
           >
             Label
           </label>
@@ -1860,7 +1870,7 @@ exports[`single slider > renders correctly with default ticks without label 1`] 
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="false"
-            id="_r_3d_"
+            id="_r_4a_"
             max="1"
             min="0"
             name="Name"
@@ -1925,7 +1935,7 @@ exports[`single slider > renders correctly with value < min 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_16_"
+            for="_r_1h_"
           >
             Label
           </label>
@@ -1949,7 +1959,7 @@ exports[`single slider > renders correctly with value < min 1`] = `
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="false"
-            id="_r_16_"
+            id="_r_1h_"
             max="100"
             min="10"
             name="Name"
@@ -1983,7 +1993,7 @@ exports[`single slider > renders correctly with value > max 1`] = `
         >
           <label
             class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_1a_"
+            for="_r_1m_"
           >
             Label
           </label>
@@ -2007,7 +2017,7 @@ exports[`single slider > renders correctly with value > max 1`] = `
             class="styles__a5ifr1p styles_direction_column__a5ifr1q styles__a5ifr1b styles_disabled_false__a5ifr1c styles_isDouble_false__a5ifr1f"
             data-direction="column"
             data-error="false"
-            id="_r_1a_"
+            id="_r_1m_"
             max="10"
             min="0"
             name="Name"

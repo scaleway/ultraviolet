@@ -6,11 +6,12 @@ import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useId, useMemo, useState } from 'react'
 
+import { hasHelperText } from '../../helpers/hasHelperText'
+import { Helper } from '../Helper'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { SelectInput } from '../SelectInput'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
 
 import { unitInputStyle, widthSelectInput } from './styles.css'
 
@@ -36,7 +37,7 @@ type UnitInputProps = {
   selectInputWidth?: number | string
   size?: 'small' | 'medium' | 'large'
   'data-testid'?: string
-  helper?: string
+  helper?: ReactNode
   unitError?: string
   width?: CSSProperties['width']
   maxWidth?: CSSProperties['maxWidth']
@@ -61,6 +62,7 @@ type UnitInputProps = {
   | 'autoFocus'
   | 'onKeyDown'
   | 'style'
+  | 'aria-describedby'
 >
 
 export const UnitInput = ({
@@ -98,21 +100,14 @@ export const UnitInput = ({
   dropdownAlign,
   templateColumns,
   style,
+  'aria-describedby': ariaDescribedBy,
 }: UnitInputProps) => {
   const [val, setVal] = useState(value)
   const uniqueId = useId()
+  const helperId = useId()
 
   const localId = id ?? uniqueId
-  const sentiment = useMemo(() => {
-    if (error) {
-      return 'danger'
-    }
-    if (success) {
-      return 'success'
-    }
 
-    return 'neutral'
-  }, [error, success])
   const computedState = useMemo(() => {
     if (disabled) {
       return 'disabled'
@@ -166,6 +161,11 @@ export const UnitInput = ({
       >
         <div className={unitInputStyle.numberWrapper} id="input-field">
           <input
+            aria-describedby={
+              !ariaDescribedBy && hasHelperText(helper, error, success)
+                ? helperId
+                : ariaDescribedBy
+            }
             aria-invalid={!!error}
             autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
             className={cn(className, unitInputStyle.number[size])}
@@ -200,6 +200,11 @@ export const UnitInput = ({
           {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
         </div>
         <SelectInput
+          aria-describedby={
+            !ariaDescribedBy && hasHelperText(helper, error)
+              ? helperId
+              : ariaDescribedBy
+          }
           className={cn(unitInputStyle.unit, unitInputStyle.unitWidth)}
           clearable={false}
           data-disabled={disabled}
@@ -223,20 +228,14 @@ export const UnitInput = ({
           value={unitValue}
         />
       </Row>
-      {error || typeof success === 'string' || typeof helper === 'string' ? (
-        <Text
-          as="p"
-          disabled={disabled}
-          prominence={sentiment === 'neutral' ? 'weak' : 'default'}
-          sentiment={sentiment}
-          variant="caption"
-        >
-          {error || success || helper}
-        </Text>
-      ) : null}
-      {!(error || success) && typeof helper !== 'string' && helper
-        ? helper
-        : null}
+      <Helper
+        helper={helper}
+        error={error}
+        success={success}
+        disabled={disabled}
+        size={size}
+        id={ariaDescribedBy ?? helperId}
+      />
     </Stack>
   )
 }

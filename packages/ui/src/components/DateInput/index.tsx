@@ -18,7 +18,7 @@ import { dateInputStyle } from './styles.css'
 
 import type { ContextProps } from './Context'
 import type { Locale } from 'date-fns'
-import type { ChangeEvent, CSSProperties, FocusEvent } from 'react'
+import type { ChangeEvent, CSSProperties, FocusEvent, ReactNode } from 'react'
 
 type DateInputProps<IsRange extends undefined | boolean = false> = {
   autoFocus?: boolean
@@ -44,7 +44,7 @@ type DateInputProps<IsRange extends undefined | boolean = false> = {
   id?: string
   labelDescription?: string
   success?: string | boolean
-  helper?: string
+  helper?: ReactNode
   size?: 'small' | 'medium' | 'large'
   readOnly?: boolean
   tooltip?: string
@@ -58,6 +58,7 @@ type DateInputProps<IsRange extends undefined | boolean = false> = {
    */
   input?: 'calendar' | 'text'
   selectsRange?: IsRange
+  'aria-describedBy'?: string
   onChange?: IsRange extends true
     ? (
         date: Date[] | [Date | null, Date | null],
@@ -102,6 +103,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
   input = 'text',
   'data-testid': dataTestId,
   style,
+  'aria-describedBy': ariaDescribedBy,
 }: DateInputProps<IsRange>) => {
   const defaultMonthToShow = useMemo(() => {
     if (value) {
@@ -335,6 +337,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
             visible={isPopupVisible}
           >
             <TextInput
+              aria-describedBy={ariaDescribedBy}
               autoComplete="false"
               autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
               clearable={clearable}

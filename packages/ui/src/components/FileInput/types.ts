@@ -67,7 +67,7 @@ export type DropzoneVariantProps = {
 export type FileInputProps = {
   className?: string
   labelDescription?: ReactNode
-  helper?: string
+  helper?: ReactNode
   onDrop?: (
     event: DragEvent<HTMLElement>,
     acceptedFiles: File[],
@@ -95,6 +95,7 @@ export type FileInputProps = {
     | 'onKeyDown'
     | 'onKeyUp'
     | 'style'
+    | 'aria-describedby'
   >
 
 type LimitType =

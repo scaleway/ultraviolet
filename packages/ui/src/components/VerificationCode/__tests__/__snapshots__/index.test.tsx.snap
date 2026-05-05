@@ -16,7 +16,7 @@ exports[`verificationCode > render correctly with error as boolean 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="0"
-          id="_r_i_-0"
+          id="_r_v_-0"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -29,7 +29,7 @@ exports[`verificationCode > render correctly with error as boolean 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="1"
-          id="_r_i_-1"
+          id="_r_v_-1"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -42,7 +42,7 @@ exports[`verificationCode > render correctly with error as boolean 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="2"
-          id="_r_i_-2"
+          id="_r_v_-2"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -55,16 +55,13 @@ exports[`verificationCode > render correctly with error as boolean 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="3"
-          id="_r_i_-3"
+          id="_r_v_-3"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
           value=""
         />
       </div>
-      <p
-        class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
-      />
     </fieldset>
   </div>
 </DocumentFragment>
@@ -80,63 +77,68 @@ exports[`verificationCode > render correctly with error as string 1`] = `
     >
       <div>
         <input
+          aria-describedby="_r_t_"
           aria-invalid="true"
           aria-label="Verification code 0"
           autocomplete="off"
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="0"
-          id="_r_g_-0"
+          id="_r_s_-0"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
           value=""
         />
         <input
+          aria-describedby="_r_t_"
           aria-invalid="true"
           aria-label="Verification code 1"
           autocomplete="off"
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="1"
-          id="_r_g_-1"
+          id="_r_s_-1"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
           value=""
         />
         <input
+          aria-describedby="_r_t_"
           aria-invalid="true"
           aria-label="Verification code 2"
           autocomplete="off"
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="2"
-          id="_r_g_-2"
+          id="_r_s_-2"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
           value=""
         />
         <input
+          aria-describedby="_r_t_"
           aria-invalid="true"
           aria-label="Verification code 3"
           autocomplete="off"
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="3"
-          id="_r_g_-3"
+          id="_r_s_-3"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
           value=""
         />
       </div>
-      <p
+      <span
         class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+        id="_r_t_"
       >
         test
-      </p>
+      </span>
     </fieldset>
   </div>
 </DocumentFragment>
@@ -152,63 +154,68 @@ exports[`verificationCode > render correctly with helper 1`] = `
     >
       <div>
         <input
+          aria-describedby="_r_n_"
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="0"
-          id="_r_c_-0"
+          id="_r_m_-0"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
           value=""
         />
         <input
+          aria-describedby="_r_n_"
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="1"
-          id="_r_c_-1"
+          id="_r_m_-1"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
           value=""
         />
         <input
+          aria-describedby="_r_n_"
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="2"
-          id="_r_c_-2"
+          id="_r_m_-2"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
           value=""
         />
         <input
+          aria-describedby="_r_n_"
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="3"
-          id="_r_c_-3"
+          id="_r_m_-3"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
           value=""
         />
       </div>
-      <p
+      <span
         class="style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_3__m4c9ow1d style_undefined_compound_67__m4c9ow35"
+        id="_r_n_"
       >
         test
-      </p>
+      </span>
     </fieldset>
   </div>
 </DocumentFragment>
@@ -224,8 +231,8 @@ exports[`verificationCode > render correctly with label 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_e_-0"
-        id="_r_e_-label"
+        for="_r_p_-0"
+        id="_r_p_-label"
       >
         test
       </label>
@@ -237,7 +244,7 @@ exports[`verificationCode > render correctly with label 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="0"
-          id="_r_e_-0"
+          id="_r_p_-0"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -250,7 +257,7 @@ exports[`verificationCode > render correctly with label 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="1"
-          id="_r_e_-1"
+          id="_r_p_-1"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -263,7 +270,7 @@ exports[`verificationCode > render correctly with label 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="2"
-          id="_r_e_-2"
+          id="_r_p_-2"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -276,7 +283,7 @@ exports[`verificationCode > render correctly with label 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="3"
-          id="_r_e_-3"
+          id="_r_p_-3"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -301,8 +308,8 @@ exports[`verificationCode > render correctly with labelDescription 1`] = `
       >
         <label
           class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-          for="_r_n_-0"
-          id="_r_n_-label"
+          for="_r_16_-0"
+          id="_r_16_-label"
         >
           test
         </label>
@@ -318,7 +325,7 @@ exports[`verificationCode > render correctly with labelDescription 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="0"
-          id="_r_n_-0"
+          id="_r_16_-0"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -331,7 +338,7 @@ exports[`verificationCode > render correctly with labelDescription 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="1"
-          id="_r_n_-1"
+          id="_r_16_-1"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -344,7 +351,7 @@ exports[`verificationCode > render correctly with labelDescription 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="2"
-          id="_r_n_-2"
+          id="_r_16_-2"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -357,7 +364,7 @@ exports[`verificationCode > render correctly with labelDescription 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="3"
-          id="_r_n_-3"
+          id="_r_16_-3"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -385,7 +392,7 @@ exports[`verificationCode > render correctly with small size 1`] = `
           class="styles_small__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
-          id="_r_b_-0"
+          id="_r_k_-0"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -398,7 +405,7 @@ exports[`verificationCode > render correctly with small size 1`] = `
           class="styles_small__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
-          id="_r_b_-1"
+          id="_r_k_-1"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -411,7 +418,7 @@ exports[`verificationCode > render correctly with small size 1`] = `
           class="styles_small__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
-          id="_r_b_-2"
+          id="_r_k_-2"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -424,7 +431,7 @@ exports[`verificationCode > render correctly with small size 1`] = `
           class="styles_small__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
-          id="_r_b_-3"
+          id="_r_k_-3"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -452,7 +459,7 @@ exports[`verificationCode > render correctly with success as boolean 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="true"
           data-testid="0"
-          id="_r_k_-0"
+          id="_r_11_-0"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -465,7 +472,7 @@ exports[`verificationCode > render correctly with success as boolean 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="true"
           data-testid="1"
-          id="_r_k_-1"
+          id="_r_11_-1"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -478,7 +485,7 @@ exports[`verificationCode > render correctly with success as boolean 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="true"
           data-testid="2"
-          id="_r_k_-2"
+          id="_r_11_-2"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -491,7 +498,7 @@ exports[`verificationCode > render correctly with success as boolean 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="true"
           data-testid="3"
-          id="_r_k_-3"
+          id="_r_11_-3"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -513,63 +520,68 @@ exports[`verificationCode > render correctly with success as string 1`] = `
     >
       <div>
         <input
+          aria-describedby="_r_14_"
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="true"
           data-testid="0"
-          id="_r_l_-0"
+          id="_r_13_-0"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
           value=""
         />
         <input
+          aria-describedby="_r_14_"
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="true"
           data-testid="1"
-          id="_r_l_-1"
+          id="_r_13_-1"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
           value=""
         />
         <input
+          aria-describedby="_r_14_"
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="true"
           data-testid="2"
-          id="_r_l_-2"
+          id="_r_13_-2"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
           value=""
         />
         <input
+          aria-describedby="_r_14_"
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="true"
           data-testid="3"
-          id="_r_l_-3"
+          id="_r_13_-3"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
           value=""
         />
       </div>
-      <p
+      <span
         class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_success__m4c9owe style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_56__m4c9ow2u"
+        id="_r_14_"
       >
         test
-      </p>
+      </span>
     </fieldset>
   </div>
 </DocumentFragment>
@@ -658,7 +670,7 @@ exports[`verificationCode > renders correctly with initial value and placeholder
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="0"
-          id="_r_1_-0"
+          id="_r_2_-0"
           pattern="[0-9]*"
           placeholder="0"
           type="tel"
@@ -671,7 +683,7 @@ exports[`verificationCode > renders correctly with initial value and placeholder
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="1"
-          id="_r_1_-1"
+          id="_r_2_-1"
           pattern="[0-9]*"
           placeholder="0"
           type="tel"
@@ -684,7 +696,7 @@ exports[`verificationCode > renders correctly with initial value and placeholder
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="2"
-          id="_r_1_-2"
+          id="_r_2_-2"
           pattern="[0-9]*"
           placeholder="3"
           type="tel"
@@ -697,7 +709,7 @@ exports[`verificationCode > renders correctly with initial value and placeholder
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="3"
-          id="_r_1_-3"
+          id="_r_2_-3"
           pattern="[0-9]*"
           placeholder="7"
           type="tel"
@@ -710,7 +722,7 @@ exports[`verificationCode > renders correctly with initial value and placeholder
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="4"
-          id="_r_1_-4"
+          id="_r_2_-4"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -723,7 +735,7 @@ exports[`verificationCode > renders correctly with initial value and placeholder
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="5"
-          id="_r_1_-5"
+          id="_r_2_-5"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -751,7 +763,7 @@ exports[`verificationCode > should handle and replace non number with "" when ty
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="0"
-          id="_r_4_-0"
+          id="_r_8_-0"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -764,7 +776,7 @@ exports[`verificationCode > should handle and replace non number with "" when ty
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="1"
-          id="_r_4_-1"
+          id="_r_8_-1"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -777,7 +789,7 @@ exports[`verificationCode > should handle and replace non number with "" when ty
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="2"
-          id="_r_4_-2"
+          id="_r_8_-2"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -790,7 +802,7 @@ exports[`verificationCode > should handle and replace non number with "" when ty
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="3"
-          id="_r_4_-3"
+          id="_r_8_-3"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -818,7 +830,7 @@ exports[`verificationCode > should handle error 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="0"
-          id="_r_9_-0"
+          id="_r_i_-0"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -831,7 +843,7 @@ exports[`verificationCode > should handle error 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="1"
-          id="_r_9_-1"
+          id="_r_i_-1"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -844,7 +856,7 @@ exports[`verificationCode > should handle error 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="2"
-          id="_r_9_-2"
+          id="_r_i_-2"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -857,16 +869,13 @@ exports[`verificationCode > should handle error 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="3"
-          id="_r_9_-3"
+          id="_r_i_-3"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
           value=""
         />
       </div>
-      <p
-        class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
-      />
     </fieldset>
   </div>
 </DocumentFragment>
@@ -888,7 +897,7 @@ exports[`verificationCode > should handle keyDown and special key cases and focu
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="0"
-          id="_r_2_-0"
+          id="_r_4_-0"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -901,7 +910,7 @@ exports[`verificationCode > should handle keyDown and special key cases and focu
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="1"
-          id="_r_2_-1"
+          id="_r_4_-1"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -914,7 +923,7 @@ exports[`verificationCode > should handle keyDown and special key cases and focu
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="2"
-          id="_r_2_-2"
+          id="_r_4_-2"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -927,7 +936,7 @@ exports[`verificationCode > should handle keyDown and special key cases and focu
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="3"
-          id="_r_2_-3"
+          id="_r_4_-3"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -955,7 +964,7 @@ exports[`verificationCode > should handle paste when type is not number 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="0"
-          id="_r_7_-0"
+          id="_r_e_-0"
           placeholder=""
           type="text"
           value="1"
@@ -967,7 +976,7 @@ exports[`verificationCode > should handle paste when type is not number 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="1"
-          id="_r_7_-1"
+          id="_r_e_-1"
           placeholder=""
           type="text"
           value="h"
@@ -979,7 +988,7 @@ exports[`verificationCode > should handle paste when type is not number 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="2"
-          id="_r_7_-2"
+          id="_r_e_-2"
           placeholder=""
           type="text"
           value="2"
@@ -991,7 +1000,7 @@ exports[`verificationCode > should handle paste when type is not number 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="3"
-          id="_r_7_-3"
+          id="_r_e_-3"
           placeholder=""
           type="text"
           value="3"
@@ -1003,7 +1012,7 @@ exports[`verificationCode > should handle paste when type is not number 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="4"
-          id="_r_7_-4"
+          id="_r_e_-4"
           placeholder=""
           type="text"
           value="a"
@@ -1015,7 +1024,7 @@ exports[`verificationCode > should handle paste when type is not number 1`] = `
           class="styles_large__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="5"
-          id="_r_7_-5"
+          id="_r_e_-5"
           placeholder=""
           type="text"
           value="*"
@@ -1027,140 +1036,6 @@ exports[`verificationCode > should handle paste when type is not number 1`] = `
 `;
 
 exports[`verificationCode > should handle paste with no overflowing values 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <fieldset
-      class="styles__1k9synd5"
-    >
-      <div>
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1k9synd0 styles__1k9synd4"
-          data-success="false"
-          data-testid="0"
-          id="_r_3_-0"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="1"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1k9synd0 styles__1k9synd4"
-          data-success="false"
-          data-testid="1"
-          id="_r_3_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="2"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1k9synd0 styles__1k9synd4"
-          data-success="false"
-          data-testid="2"
-          id="_r_3_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="3"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1k9synd0 styles__1k9synd4"
-          data-success="false"
-          data-testid="3"
-          id="_r_3_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="4"
-        />
-      </div>
-    </fieldset>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`verificationCode > should handle paste with overflowing values 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <fieldset
-      class="styles__1k9synd5"
-    >
-      <div>
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1k9synd0 styles__1k9synd4"
-          data-success="false"
-          data-testid="0"
-          id="_r_5_-0"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="1"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1k9synd0 styles__1k9synd4"
-          data-success="false"
-          data-testid="1"
-          id="_r_5_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="2"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1k9synd0 styles__1k9synd4"
-          data-success="false"
-          data-testid="2"
-          id="_r_5_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="3"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1k9synd0 styles__1k9synd4"
-          data-success="false"
-          data-testid="3"
-          id="_r_5_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="4"
-        />
-      </div>
-    </fieldset>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`verificationCode > should handle paste with overflowing values at different index than 0 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
@@ -1193,7 +1068,7 @@ exports[`verificationCode > should handle paste with overflowing values at diffe
           pattern="[0-9]*"
           placeholder=""
           type="tel"
-          value="1"
+          value="2"
         />
         <input
           aria-invalid="false"
@@ -1206,7 +1081,7 @@ exports[`verificationCode > should handle paste with overflowing values at diffe
           pattern="[0-9]*"
           placeholder=""
           type="tel"
-          value="2"
+          value="3"
         />
         <input
           aria-invalid="false"
@@ -1216,6 +1091,140 @@ exports[`verificationCode > should handle paste with overflowing values at diffe
           data-success="false"
           data-testid="3"
           id="_r_6_-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="4"
+        />
+      </div>
+    </fieldset>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`verificationCode > should handle paste with overflowing values 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <fieldset
+      class="styles__1k9synd5"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          autocomplete="off"
+          class="styles_large__1k9synd0 styles__1k9synd4"
+          data-success="false"
+          data-testid="0"
+          id="_r_a_-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="1"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          autocomplete="off"
+          class="styles_large__1k9synd0 styles__1k9synd4"
+          data-success="false"
+          data-testid="1"
+          id="_r_a_-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="2"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          autocomplete="off"
+          class="styles_large__1k9synd0 styles__1k9synd4"
+          data-success="false"
+          data-testid="2"
+          id="_r_a_-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="3"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          autocomplete="off"
+          class="styles_large__1k9synd0 styles__1k9synd4"
+          data-success="false"
+          data-testid="3"
+          id="_r_a_-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="4"
+        />
+      </div>
+    </fieldset>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`verificationCode > should handle paste with overflowing values at different index than 0 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <fieldset
+      class="styles__1k9synd5"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          autocomplete="off"
+          class="styles_large__1k9synd0 styles__1k9synd4"
+          data-success="false"
+          data-testid="0"
+          id="_r_c_-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="1"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          autocomplete="off"
+          class="styles_large__1k9synd0 styles__1k9synd4"
+          data-success="false"
+          data-testid="1"
+          id="_r_c_-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="1"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          autocomplete="off"
+          class="styles_large__1k9synd0 styles__1k9synd4"
+          data-success="false"
+          data-testid="2"
+          id="_r_c_-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="2"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          autocomplete="off"
+          class="styles_large__1k9synd0 styles__1k9synd4"
+          data-success="false"
+          data-testid="3"
+          id="_r_c_-3"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -1244,7 +1253,7 @@ exports[`verificationCode > should render correctly disabled true 1`] = `
           data-success="false"
           data-testid="0"
           disabled=""
-          id="_r_p_-0"
+          id="_r_19_-0"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -1258,7 +1267,7 @@ exports[`verificationCode > should render correctly disabled true 1`] = `
           data-success="false"
           data-testid="1"
           disabled=""
-          id="_r_p_-1"
+          id="_r_19_-1"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -1272,7 +1281,7 @@ exports[`verificationCode > should render correctly disabled true 1`] = `
           data-success="false"
           data-testid="2"
           disabled=""
-          id="_r_p_-2"
+          id="_r_19_-2"
           pattern="[0-9]*"
           placeholder=""
           type="tel"
@@ -1286,7 +1295,7 @@ exports[`verificationCode > should render correctly disabled true 1`] = `
           data-success="false"
           data-testid="3"
           disabled=""
-          id="_r_p_-3"
+          id="_r_19_-3"
           pattern="[0-9]*"
           placeholder=""
           type="tel"

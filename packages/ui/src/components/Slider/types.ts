@@ -6,7 +6,7 @@ type DefaultProps = {
    */
   name?: string
   label?: string
-  helper?: string
+  helper?: ReactNode
   /**
    * Minimum possible value
    */
@@ -66,7 +66,13 @@ type DefaultProps = {
   'data-testid'?: string
 } & Pick<
   HTMLAttributes<HTMLInputElement>,
-  'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className' | 'style'
+  | 'id'
+  | 'onBlur'
+  | 'onFocus'
+  | 'aria-label'
+  | 'className'
+  | 'style'
+  | 'aria-describedby'
 >
 
 type SingleProps = {

@@ -80,7 +80,7 @@ exports[`radio > renders correctly when checked 1`] = `
           aria-invalid="false"
           checked=""
           class="styles__17da2jl6"
-          id="_r_c_"
+          id="_r_g_"
           name="radio"
           type="radio"
           value="choice"
@@ -115,7 +115,7 @@ exports[`radio > renders correctly when checked 1`] = `
         </svg>
         <label
           class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-          for="_r_c_"
+          for="_r_g_"
         >
           Choice
         </label>
@@ -143,7 +143,7 @@ exports[`radio > renders correctly when disabled 1`] = `
           aria-invalid="false"
           class="styles__17da2jl6"
           disabled=""
-          id="_r_3_"
+          id="_r_4_"
           name="radio"
           type="radio"
           value="choice"
@@ -178,7 +178,7 @@ exports[`radio > renders correctly when disabled 1`] = `
         </svg>
         <label
           class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-          for="_r_3_"
+          for="_r_4_"
         >
           Choice
         </label>
@@ -203,10 +203,11 @@ exports[`radio > renders correctly when error 1`] = `
         data-error="Invalid value"
       >
         <input
+          aria-describedby="_r_l_"
           aria-disabled="false"
           aria-invalid="true"
           class="styles__17da2jl6"
-          id="_r_f_"
+          id="_r_k_"
           name="radio"
           type="radio"
           value="choice"
@@ -241,11 +242,17 @@ exports[`radio > renders correctly when error 1`] = `
         </svg>
         <label
           class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-          for="_r_f_"
+          for="_r_k_"
         >
           Choice
         </label>
       </div>
+      <span
+        class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+        id="_r_l_"
+      >
+        Invalid value
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -265,10 +272,11 @@ exports[`radio > renders correctly when helper 1`] = `
         data-checked="false"
       >
         <input
+          aria-describedby="_r_q_"
           aria-disabled="false"
           aria-invalid="false"
           class="styles__17da2jl6"
-          id="_r_i_"
+          id="_r_p_"
           name="radio"
           type="radio"
           value="choice"
@@ -303,13 +311,14 @@ exports[`radio > renders correctly when helper 1`] = `
         </svg>
         <label
           class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-          for="_r_i_"
+          for="_r_p_"
         >
           Choice
         </label>
       </div>
       <span
-        class="styles__17da2jl1 style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_3__m4c9ow1d style_undefined_compound_67__m4c9ow35"
+        class="style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_3__m4c9ow1d style_undefined_compound_67__m4c9ow35"
+        id="_r_q_"
       >
         Helper
       </span>
@@ -324,8 +333,8 @@ exports[`radio > renders correctly with tooltip 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="_r_7_"
-      aria-describedby="_r_7_"
+      aria-controls="_r_a_"
+      aria-describedby="_r_a_"
       class="styles__w40vpo9"
       tabindex="0"
     >
@@ -341,7 +350,7 @@ exports[`radio > renders correctly with tooltip 1`] = `
             aria-disabled="false"
             aria-invalid="false"
             class="styles__17da2jl6"
-            id="_r_6_"
+            id="_r_8_"
             name="radio"
             type="radio"
             value="choice"
@@ -376,7 +385,7 @@ exports[`radio > renders correctly with tooltip 1`] = `
           </svg>
           <label
             class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-            for="_r_6_"
+            for="_r_8_"
           >
             Choice
           </label>
@@ -405,7 +414,7 @@ exports[`radio > renders without name 1`] = `
           aria-invalid="false"
           class="styles__17da2jl6"
           disabled=""
-          id="_r_9_"
+          id="_r_c_"
           type="radio"
           value="choice"
         />
@@ -439,7 +448,7 @@ exports[`radio > renders without name 1`] = `
         </svg>
         <label
           class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-          for="_r_9_"
+          for="_r_c_"
         >
           Choice
         </label>
