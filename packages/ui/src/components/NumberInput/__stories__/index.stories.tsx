@@ -16,6 +16,16 @@ export default {
     ),
   ],
   title: 'UI/Data Entry/NumberInput',
+  parameters: {
+    a11y: 'partial',
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+  },
 } as Meta<typeof NumberInput>
 
 export { Playground } from './Playground.stories'

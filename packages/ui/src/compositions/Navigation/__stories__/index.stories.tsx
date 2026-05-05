@@ -13,6 +13,17 @@ export default {
     'Navigation.Separator': Navigation.Separator,
     'Navigation.ShowHide': Navigation.ShowHide,
   },
+  parameters: {
+    a11y: 'partial',
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+    experimental: true,
+  },
 } as Meta
 
 export { Playground } from './Playground.stories'

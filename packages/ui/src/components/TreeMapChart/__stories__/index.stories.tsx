@@ -6,6 +6,14 @@ export default {
   component: TreeMapChart,
   title: 'UI/Data Display/Chart/TreeMapChart',
   parameters: {
+    a11y: false,
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
     experimental: true,
   },
   tags: ['experimental'],

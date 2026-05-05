@@ -35,6 +35,7 @@ const main = defineMain({
   stories: [
     '../packages/*/src/**/__stories__/index.stories.tsx',
     '../utils/stories/src/**/*.mdx',
+    // '../utils/stories/src/**/*.stories.tsx',
   ],
 
   typescript: {

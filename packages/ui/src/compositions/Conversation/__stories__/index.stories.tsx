@@ -11,6 +11,17 @@ export default {
     'Conversation.MessageInfos': Conversation.MessageInfos,
   },
   title: 'Compositions/Conversation',
+  parameters: {
+    a11y: 'partial',
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+    experimental: true,
+  },
 } satisfies Meta<typeof Conversation>
 
 export { Playground } from './Playground.stories'
