@@ -57,6 +57,35 @@ const MyComponent = () => (
 )
 ```
 
+## Reducing animations
+
+Some animations can trigger discomfort for people with [vestibular motion disorders](https://www.a11yproject.com/posts/understanding-vestibular-disorders/). Animations such as scaling or panning large objects can be vestibular motion triggers.
+
+In CSS you can use the media query [prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) to trigger animations only if the user has not enabled a setting on their device to reduce animations.
+
+```css
+@media (prefers-reduced-motion: no-preference) {
+  .animated {
+    animation: bounce 1s;
+  }
+}
+```
+
+For animations that are controlled in JavaScript, we provide a React hook to detect if the user has enabled the setting.
+
+```tsx
+import { usePrefersReducedMotion } from '@ultraviolet/animations'
+
+function MyComponent() {
+  const prefersReducedMotion = usePrefersReducedMotion()
+  return (
+    <div style={{ animation: prefersReducedMotion ? 'none' : 'bounce 1s' }}>
+      Content
+    </div>
+  )
+}
+```
+
 ## List
 
 - <ShowcaseAnimations animation="bounce" />

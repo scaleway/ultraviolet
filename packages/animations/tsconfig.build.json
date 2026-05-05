@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "exclude": [
+    "*.config.ts",
+    "*.setup.ts",
+    "**/__tests__",
+    "**/__mocks__",
+    "**/__stories__",
+    "src/**/*.test.tsx"
+  ],
+  "extends": "@repo/config/tsconfig/build.json",
+  "include": ["src"]
+}

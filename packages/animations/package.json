@@ -1,0 +1,55 @@
+{
+  "name": "@ultraviolet/animations",
+  "version": "0.1.0",
+  "description": "Ultraviolet animations",
+  "homepage": "https://github.com/scaleway/ultraviolet#readme",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scaleway/ultraviolet.git",
+    "directory": "packages/animations"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build && pnpm type:generate",
+    "lintpublish": "publint",
+    "test:unit": "vitest --run",
+    "test:unit:coverage": "pnpm test:unit --coverage",
+    "test:watch": "vitest",
+    "type:generate": "tsgo --declaration -p tsconfig.build.json",
+    "typecheck": "tsgo --noEmit"
+  },
+  "devDependencies": {
+    "@repo/config": "workspace:*",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@utils/test": "workspace:*",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "vite": "8.0.10",
+    "vitest": "4.1.5"
+  },
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=9.x"
+  }
+}
