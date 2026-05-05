@@ -75,7 +75,7 @@ export const ItemContent = ({
           as="span"
           className={navigationStyle.itemWrapText({
             disabled,
-            shrinking: animation === 'collapse',
+            animation,
             weak: hasActiveChildren && !noExpand && !disabled && !!active,
           })}
           data-animation={animation}
@@ -99,6 +99,7 @@ export const ItemContent = ({
             as="span"
             className={navigationStyle.itemWrapText({
               disabled,
+              animation,
               weak: hasActiveChildren && !noExpand && !disabled && !!active,
             })}
             data-animation={animation}

@@ -16,6 +16,7 @@ import { Tooltip } from '../../../components/Tooltip'
 
 import logoSmall from './assets/logo-small.svg'
 import logo from './assets/logo.svg'
+import { logoStyle } from './styles.css'
 
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps, ReactNode } from 'react'
@@ -30,7 +31,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
   const [active, setActive] = useState('Instance')
   const [pinnedItemsExpanded, setPinnedItemsExpanded] = useState(false)
 
-  const { pinnedItems } = useNavigation()
+  const { pinnedItems, expanded, animation } = useNavigation()
 
   const saveExpandedInLocalStorage = useCallback((localExpanded: boolean) => {
     console.log(
@@ -65,7 +66,9 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
               height="22px"
               src={logo}
               width="auto"
-              style={{ objectFit: 'cover', objectPosition: 'left' }}
+              className={logoStyle({
+                expanded: (expanded && !animation) || animation === 'expand',
+              })}
             />
           </Stack>
         </a>
@@ -160,7 +163,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Verylongproductnamewithoutspace')}
           />
-          <Navigation.Item id="advanced" label="Advanced">
+          <Navigation.Item id="advanced" label="Advanced" toggle>
             <Navigation.Item
               active={active === 'Kubernetes'}
               id="kubernetes"

@@ -129,6 +129,7 @@ export const ItemExpanded = ({
             hasActive: hasActiveChildren,
             isActive: !!active,
             noExpand,
+            expanding: animation === 'expand',
           }),
           navigationStyle.itemVariants({
             shouldHaveWeakText,
@@ -137,7 +138,7 @@ export const ItemExpanded = ({
           }),
         )}
         data-testid={dataTestId}
-        data-flip-id={id}
+        data-flip-id={categoryIcon ? id : null}
         direction="row"
         disabled={containerTag === 'button' ? disabled : undefined}
         draggable={type === 'pinned' && expanded}

@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-import { groupAnimation } from '../animations.css'
+import { fadeIn } from '../../../utils'
 import { ANIMATION_DURATION, ANIMATION_EASING } from '../constants'
 
 export const groupText = recipe({
@@ -10,17 +10,12 @@ export const groupText = recipe({
     height: `calc(${theme.typography.bodySmallStrong.lineHeight} + ${theme.space['1']})`,
     paddingBottom: theme.space[1],
     paddingLeft: theme.space[1],
-    transition: `opacity ${ANIMATION_DURATION}ms ${ANIMATION_EASING}, height ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
   },
   variants: {
     animation: {
-      collapse: {
-        animation: `${groupAnimation} ${ANIMATION_DURATION}ms ${ANIMATION_EASING} reverse`,
-      },
       expand: {
-        animation: `${groupAnimation} ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
+        animation: `${fadeIn} ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
       },
-      false: {},
     },
   },
 })
@@ -74,6 +69,15 @@ export const separator = style({
   flexShrink: 0,
 })
 
-export const showHideStack = style({
-  height: '100%',
+export const showHideStack = recipe({
+  base: {
+    height: '100%',
+  },
+  variants: {
+    expanding: {
+      true: {
+        animation: `${fadeIn} ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
+      },
+    },
+  },
 })

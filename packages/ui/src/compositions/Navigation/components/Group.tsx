@@ -36,15 +36,14 @@ export const Group = ({
 
   if (Children.count(children) > 0) {
     return (
-      <div
-        style={{ width: animation ? '100%' : undefined, ...style }}
-        data-flip-id={label}
-      >
+      <div style={style}>
         <Stack className={navigationStyle.groupStack} direction="column">
           {isDiplay ? (
             <Text
               as="span"
-              className={navigationStyle.groupText({ animation })}
+              className={navigationStyle.groupText({
+                animation: animation === 'expand' ? 'expand' : undefined,
+              })}
               prominence="weak"
               sentiment="neutral"
               variant="bodySmallStrong"

@@ -1,12 +1,13 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { assignInlineVars } from '@vanilla-extract/dynamic'
+import { assignInlineVars, setElementVars } from '@vanilla-extract/dynamic'
 import { useEffect, useRef } from 'react'
 
 import { Stack } from '../../components/Stack'
 
 import {
+  ANIMATION_DURATION,
   NAVIGATION_COLLASPED_WIDTH,
   NAVIGATION_MAX_WIDTH,
   NAVIGATION_MIN_WIDTH,
@@ -17,7 +18,8 @@ import { useNavigation } from './NavigationProvider'
 import { navigationStyle } from './styles.css'
 import {
   widthNavigationContainer,
-  widthNavigationContainerFull,
+  widthNavigationContainerDuration,
+  widthNavigationContainerExpanded,
 } from './variables.css'
 
 import type { NavigationProps } from './types'
@@ -75,6 +77,9 @@ export const NavigationContent = ({
 
         if (navigationRef.current && expanded) {
           navigationRef.current.style.width = `${newWidth}px`
+          setElementVars(navigationRef.current, {
+            [widthNavigationContainerExpanded]: `${newWidth}px`,
+          })
         }
 
         if (newWidth <= NAVIGATION_MIN_WIDTH) {
@@ -95,10 +100,21 @@ export const NavigationContent = ({
       prevX = event.clientX
       navRect = navigationRef.current?.getBoundingClientRect()
 
+      if (navigationRef.current) {
+        setElementVars(navigationRef.current, {
+          [widthNavigationContainerDuration]: '0',
+        })
+      }
+
       const mouseup = () => {
         if (shouldCollapseOnMouseUp || shouldExpandOnMouseUp) {
           toggleExpand()
           onToggleExpand?.(!expanded)
+          if (navigationRef.current) {
+            setElementVars(navigationRef.current, {
+              [widthNavigationContainerExpanded]: `${width}px`,
+            })
+          }
         }
 
         if (navigationRef.current) {
@@ -110,6 +126,10 @@ export const NavigationContent = ({
           if (!expanded) {
             navigationRef.current.style.width = ''
           }
+
+          setElementVars(navigationRef.current, {
+            [widthNavigationContainerDuration]: `${shouldAnimate ? ANIMATION_DURATION : 0}ms`,
+          })
         }
 
         document.removeEventListener('mousemove', mouseMove)
@@ -133,6 +153,8 @@ export const NavigationContent = ({
     onWidthResize,
     setWidth,
     toggleExpand,
+    shouldAnimate,
+    width,
   ])
 
   let navWidth = width
@@ -147,11 +169,12 @@ export const NavigationContent = ({
       id={id}
     >
       <div
-        className={navigationStyle.container({ animate: shouldAnimate })}
+        className={navigationStyle.container()}
         ref={navigationRef}
         style={assignInlineVars({
           [widthNavigationContainer]: `${navWidth}px`,
-          [widthNavigationContainerFull]: `${width}px`,
+          [widthNavigationContainerExpanded]: `${width}px`,
+          [widthNavigationContainerDuration]: `${shouldAnimate ? ANIMATION_DURATION : 0}ms`,
         })}
       >
         {logo ? <Header logo={logo} /> : null}
