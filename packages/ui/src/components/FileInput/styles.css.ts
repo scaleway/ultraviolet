@@ -84,7 +84,6 @@ const titleSmall = styleVariants({
 const overlayWrapper = style({
   height: 'fit-content',
   position: 'relative',
-  width: 'fit-content',
 })
 
 const dropzoneOverlayBase = style({
