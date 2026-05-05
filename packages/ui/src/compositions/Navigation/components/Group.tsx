@@ -1,6 +1,6 @@
 'use client'
 
-import { Children } from 'react'
+import { Children, useId } from 'react'
 
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
@@ -23,6 +23,7 @@ export const Group = ({
   additionalData,
 }: GroupProps) => {
   const context = useNavigation()
+  const id = useId()
 
   if (!context) {
     throw new Error(
@@ -36,31 +37,34 @@ export const Group = ({
 
   if (Children.count(children) > 0) {
     return (
-      <div style={style}>
-        <Stack className={navigationStyle.groupStack} direction="column">
-          {isDiplay ? (
-            <Text
-              as="span"
-              className={navigationStyle.groupText({
-                animation: animation === 'expand' ? 'expand' : undefined,
-              })}
-              prominence="weak"
-              sentiment="neutral"
-              variant="bodySmallStrong"
-            >
-              {additionalData ? (
-                <Stack direction="row" justifyContent="space-between">
-                  {label}
-                  {additionalData}
-                </Stack>
-              ) : (
-                label
-              )}
-            </Text>
-          ) : null}
-          {children}
-        </Stack>
-      </div>
+      <Stack
+        className={navigationStyle.groupStack}
+        direction="column"
+        style={style}
+        data-flip-id={id}
+      >
+        {isDiplay ? (
+          <Text
+            as="span"
+            className={navigationStyle.groupText({
+              animation: animation === 'expand' ? 'expand' : undefined,
+            })}
+            prominence="weak"
+            sentiment="neutral"
+            variant="bodySmallStrong"
+          >
+            {additionalData ? (
+              <Stack direction="row" justifyContent="space-between">
+                {label}
+                {additionalData}
+              </Stack>
+            ) : (
+              label
+            )}
+          </Text>
+        ) : null}
+        {children}
+      </Stack>
     )
   }
 

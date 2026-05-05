@@ -11,6 +11,7 @@ import {
 } from 'react'
 
 import { useFlip } from '../../hooks/useFlip'
+import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
 
 import {
   ANIMATION_DURATION,
@@ -153,12 +154,15 @@ export const NavigationProvider = ({
   onExpandChange,
   initialWidth = NAVIGATION_WIDTH,
   initialAllowNavigationResize = true,
-  animation: shouldAnimate = true,
+  animation: animationEnabled = true,
   animationType,
   showHide,
 }: NavigationProviderProps) => {
   const [expanded, setExpanded] = useState(initialExpanded)
   const [pinnedItems, setPinnedItems] = useState(initialPinned ?? [])
+
+  const prefersReducedMotion = usePrefersReducedMotion()
+  const shouldAnimate = animationEnabled && !prefersReducedMotion
 
   const [animation, setAnimation] = useState<boolean | 'expand' | 'collapse'>(
     false,
