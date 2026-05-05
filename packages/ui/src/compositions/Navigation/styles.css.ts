@@ -3,11 +3,10 @@ import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 import {
-  itemAnimatedIcon,
   itemBadge,
   itemCategoryIcon,
+  itemCollapsed,
   itemContainer,
-  itemContainerAnimated,
   itemContainerBase,
   itemDragIcon,
   itemMenu,
@@ -27,7 +26,6 @@ import {
   itemWrapText,
 } from './components/items.css'
 import {
-  groupStack,
   groupText,
   pinnedItemContainer,
   pinnedItemDropableArea,
@@ -35,13 +33,12 @@ import {
   separator,
   showHideStack,
 } from './components/styles.css'
+import { ANIMATION_EASING, NAVIGATION_COLLASPED_WIDTH } from './constants'
 import {
-  ANIMATION_DURATION,
-  NAVIGATION_COLLASPED_WIDTH,
-  NAVIGATION_MAX_WIDTH,
-  NAVIGATION_MIN_WIDTH,
-} from './constants'
-import { widthNavigationContainer } from './variables.css'
+  widthNavigationContainer,
+  widthNavigationContainerDuration,
+  widthNavigationContainerExpanded,
+} from './variables.css'
 
 const stickyFooter = recipe({
   base: {
@@ -51,7 +48,6 @@ const stickyFooter = recipe({
     display: 'flex',
     justifyContent: 'flex-end',
     padding: `${theme.space['1']} ${theme.space['2']}`,
-    transition: `justify-content ${ANIMATION_DURATION}ms ease-in-out, box-shadow 230ms ease-in-out`,
     width: '100%',
   },
   defaultVariants: {
@@ -91,33 +87,7 @@ const container = recipe({
     display: 'flex',
     flexDirection: 'column',
     width: widthNavigationContainer,
-  },
-  compoundVariants: [
-    {
-      style: {
-        maxWidth: `${NAVIGATION_MAX_WIDTH}px`,
-        minWidth: `${NAVIGATION_MIN_WIDTH}px`,
-      },
-      variants: { animation: false, expanded: true },
-    },
-  ],
-  variants: {
-    animation: {
-      collapse: {
-        transition: `width ${ANIMATION_DURATION}ms ease-in-out`,
-        width: `${NAVIGATION_COLLASPED_WIDTH}px`,
-      },
-      expand: {
-        transition: `width ${ANIMATION_DURATION}ms ease-in-out`,
-        width: widthNavigationContainer,
-      },
-      false: {},
-    },
-    expanded: {
-      false: {
-        width: `${NAVIGATION_COLLASPED_WIDTH}px`,
-      },
-    },
+    transition: `width ${widthNavigationContainerDuration} ${ANIMATION_EASING}`,
   },
 })
 
@@ -132,11 +102,41 @@ const contentContainerCollapsed = style({
   alignItems: 'center',
 })
 
-const content = style({
-  flexGrow: 1,
-  overflowX: 'hidden',
-  overflowY: 'auto',
-  padding: theme.space[2],
+const content = recipe({
+  base: {
+    flexGrow: 1,
+    overflowX: 'hidden',
+    overflowY: 'auto',
+    scrollbarGutter: 'stable',
+    padding: `${theme.space['2']} ${theme.space['0.5']} ${theme.space['2']} ${theme.space['2']}`,
+    width: widthNavigationContainerExpanded,
+    scrollbarWidth: 'thin',
+    scrollbarColor: `${theme.colors.neutral.borderStrong} transparent`,
+
+    selectors: {
+      '&::-webkit-scrollbar': {
+        width: '12px',
+      },
+      '&::-webkit-scrollbar-track': {
+        background: 'transparent',
+      },
+      '&::-webkit-scrollbar-thumb': {
+        backgroundColor: theme.colors.neutral.borderStrong,
+      },
+      '&::-webkit-scrollbar-thumb:hover': {
+        background: theme.colors.neutral.borderStrongHover,
+      },
+    },
+  },
+  variants: {
+    collapsed: {
+      true: {
+        width: NAVIGATION_COLLASPED_WIDTH,
+        transition: `width ${widthNavigationContainerDuration} ${ANIMATION_EASING}`,
+        alignItems: 'start',
+      },
+    },
+  },
 })
 
 const slider = style({
@@ -167,6 +167,7 @@ export const navigationStyle = {
   content,
   slider,
   itemMenuContainer,
+  itemCollapsed,
   itemRelative,
   itemPadded,
   itemPinIcon,
@@ -174,7 +175,6 @@ export const navigationStyle = {
   itemMenuPinned,
   itemContainerBase,
   itemContainer,
-  itemContainerAnimated,
   itemShowDraggable,
   itemShowPinButton,
   itemWeakText,
@@ -183,13 +183,11 @@ export const navigationStyle = {
   itemWrapText,
   itemBadge,
   itemPinnedButton,
-  itemAnimatedIcon,
   itemMenuStack,
   itemStackIcon,
   itemCategoryIcon,
   itemPaddingStack,
   groupText,
-  groupStack,
   pinnedItemDropableArea,
   pinnedItemRelativeDiv,
   pinnedItemContainer,

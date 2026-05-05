@@ -1,6 +1,6 @@
 'use client'
 
-import { Children } from 'react'
+import { Children, useId } from 'react'
 
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
@@ -23,6 +23,7 @@ export const Group = ({
   additionalData,
 }: GroupProps) => {
   const context = useNavigation()
+  const id = useId()
 
   if (!context) {
     throw new Error(
@@ -30,37 +31,33 @@ export const Group = ({
     )
   }
 
-  const { expanded, animation, animationType } = context
-
-  const isDiplay = !animation && expanded
+  const { expanded, animation } = context
 
   if (Children.count(children) > 0) {
     return (
-      <div style={{ width: animation ? '100%' : undefined, ...style }}>
-        <Stack className={navigationStyle.groupStack} direction="column">
-          {isDiplay ? (
-            <Text
-              as="span"
-              className={navigationStyle.groupText({
-                animation: animationType === 'complex' ? animation : false,
-              })}
-              prominence="weak"
-              sentiment="neutral"
-              variant="bodySmallStrong"
-            >
-              {additionalData ? (
-                <Stack direction="row" justifyContent="space-between">
-                  {label}
-                  {additionalData}
-                </Stack>
-              ) : (
-                label
-              )}
-            </Text>
-          ) : null}
-          {children}
-        </Stack>
-      </div>
+      <Stack gap={0.25} direction="column" style={style} data-flip-id={id}>
+        {expanded ? (
+          <Text
+            as="span"
+            className={navigationStyle.groupText({
+              animation: animation === 'expand' ? 'expand' : undefined,
+            })}
+            prominence="weak"
+            sentiment="neutral"
+            variant="bodySmallStrong"
+          >
+            {additionalData ? (
+              <Stack direction="row" justifyContent="space-between">
+                {label}
+                {additionalData}
+              </Stack>
+            ) : (
+              label
+            )}
+          </Text>
+        ) : null}
+        {children}
+      </Stack>
     )
   }
 

@@ -26,6 +26,7 @@ export const ItemExpanded = ({
   shouldShowPinnedButton,
   children,
   dataTestId,
+  dataFlipId,
   type,
   href,
   rel,
@@ -58,8 +59,7 @@ export const ItemExpanded = ({
     )
   }
 
-  const { expanded, animation, shouldAnimate, animationType, pinnedFeature } =
-    context
+  const { expanded, animation, pinnedFeature } = context
 
   const showDraggableIcon =
     !noExpand && pinnedFeature && shouldShowPinnedButton && !disabled
@@ -118,8 +118,6 @@ export const ItemExpanded = ({
     return undefined
   }, [hasHrefAndNoChildren, internalExpanded])
 
-  const computedAnimation = animation === 'collapse' ? 'collapse' : 'expand'
-
   return (
     <>
       <Stack
@@ -132,11 +130,7 @@ export const ItemExpanded = ({
             hasActive: hasActiveChildren,
             isActive: !!active,
             noExpand,
-            subLabel: !!subLabel,
-          }),
-          navigationStyle.itemContainerAnimated({
-            animated: shouldAnimate && animationType === 'complex',
-            animation: computedAnimation,
+            expanding: animation === 'expand',
           }),
           navigationStyle.itemVariants({
             shouldHaveWeakText,
@@ -145,6 +139,7 @@ export const ItemExpanded = ({
           }),
         )}
         data-testid={dataTestId}
+        data-flip-id={dataFlipId}
         direction="row"
         disabled={containerTag === 'button' ? disabled : undefined}
         draggable={type === 'pinned' && expanded}
@@ -170,46 +165,47 @@ export const ItemExpanded = ({
           subLabel={subLabel}
           type={type}
         />
-        <Stack alignItems="center" direction="row" gap={href ? 1 : undefined}>
-          {badgeText || hasPinnedFeatureAndNoChildren ? (
-            <>
-              <ItemBadge
-                animation={!!animation}
-                badgeSentiment={badgeSentiment}
-                badgeText={badgeText}
+        {animation !== 'collapse' ? (
+          <Stack alignItems="center" direction="row" gap={href ? 1 : undefined}>
+            {badgeText || hasPinnedFeatureAndNoChildren ? (
+              <>
+                <ItemBadge
+                  badgeSentiment={badgeSentiment}
+                  badgeText={badgeText}
+                  disabled={disabled}
+                />
+                <ItemPinnedButton
+                  active={active}
+                  id={id}
+                  isItemPinned={isItemPinned}
+                  isPinDisabled={isPinDisabled}
+                  onClickPinUnpin={onClickPinUnpin}
+                  pinTooltipLocale={pinTooltipLocale}
+                  shouldShowPinnedButton={shouldShowPinnedButton}
+                />
+              </>
+            ) : null}
+            {hasHrefAndNoChildren && target === '_blank' ? (
+              <OpenInNewIcon
                 disabled={disabled}
+                prominence="default"
+                sentiment="neutral"
               />
-              <ItemPinnedButton
-                active={active}
-                id={id}
-                isItemPinned={isItemPinned}
-                isPinDisabled={isPinDisabled}
-                onClickPinUnpin={onClickPinUnpin}
-                pinTooltipLocale={pinTooltipLocale}
-                shouldShowPinnedButton={shouldShowPinnedButton}
-              />
-            </>
-          ) : null}
-          {hasHrefAndNoChildren && target === '_blank' && !animation ? (
-            <OpenInNewIcon
-              disabled={disabled}
-              prominence="default"
-              sentiment="neutral"
-            />
-          ) : null}
-          {children && !animation && !noExpand ? (
-            <Stack
-              alignItems="center"
-              className={navigationStyle.itemStackIcon}
-              direction="row"
-              gap={1}
-            >
-              <ArrowIcon prominence="weak" sentiment="neutral" />
-            </Stack>
-          ) : null}
-        </Stack>
+            ) : null}
+            {children && !noExpand ? (
+              <Stack
+                alignItems="center"
+                className={navigationStyle.itemStackIcon}
+                direction="row"
+                gap={1}
+              >
+                <ArrowIcon prominence="weak" sentiment="neutral" />
+              </Stack>
+            ) : null}
+          </Stack>
+        ) : null}
       </Stack>
-      {children ? (
+      {children && expanded ? (
         <ItemChildren
           internalExpanded={internalExpanded}
           noExpand={noExpand}

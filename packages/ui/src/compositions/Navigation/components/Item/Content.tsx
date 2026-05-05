@@ -70,35 +70,35 @@ export const ItemContent = ({
         />
       ) : null}
       <Stack>
-        {animation ? null : (
+        <Text
+          as="span"
+          className={navigationStyle.itemWrapText({
+            disabled,
+            animation,
+            weak: hasActiveChildren && !noExpand && !disabled && !!active,
+          })}
+          data-animation={animation}
+          disabled={disabled}
+          prominence={
+            (categoryIcon || !hasParents) && !active ? 'strong' : 'default'
+          }
+          sentiment={active ? 'primary' : 'neutral'}
+          variant="bodySmallStrong"
+          whiteSpace="pre-wrap"
+        >
+          {label}
+          {labelDescription ? (
+            <span className={navigationStyle.itemPadded}>
+              {labelDescription}
+            </span>
+          ) : null}
+        </Text>
+        {subLabel && expanded ? (
           <Text
             as="span"
             className={navigationStyle.itemWrapText({
               disabled,
-              weak: hasActiveChildren && !noExpand && !disabled && !!active,
-            })}
-            data-animation={animation}
-            disabled={disabled}
-            prominence={
-              (categoryIcon || !hasParents) && !active ? 'strong' : 'default'
-            }
-            sentiment={active ? 'primary' : 'neutral'}
-            variant="bodySmallStrong"
-            whiteSpace="pre-wrap"
-          >
-            {label}
-            {labelDescription ? (
-              <span className={navigationStyle.itemPadded}>
-                {labelDescription}
-              </span>
-            ) : null}
-          </Text>
-        )}
-        {subLabel && !animation ? (
-          <Text
-            as="span"
-            className={navigationStyle.itemWrapText({
-              disabled,
+              animation,
               weak: hasActiveChildren && !noExpand && !disabled && !!active,
             })}
             data-animation={animation}

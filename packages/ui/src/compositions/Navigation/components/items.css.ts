@@ -2,15 +2,20 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-import { fadeIn } from '../../../utils'
-import { shrinkHeight } from '../animations.css'
-import { ANIMATION_DURATION } from '../constants'
+import { fadeIn, slideDownLarge } from '../../../utils'
+import { ANIMATION_DURATION, ANIMATION_EASING } from '../constants'
 
 export const itemMenuContainer = style({ width: 180 })
 
 export const itemRelative = style({ position: 'relative' })
 
 export const itemPadded = style({ paddingLeft: theme.space[1] })
+
+export const itemCollapsed = style({
+  height: theme.sizing['400'],
+  width: theme.sizing['400'],
+  padding: 0,
+})
 
 const itemPinIconBase = style({
   borderRadius: theme.radii.default,
@@ -51,11 +56,14 @@ export const itemContainerBase = style({
   border: 'none',
   borderRadius: theme.radii.default,
   color: 'inherit',
-  marginTop: theme.space['0.25'],
-  padding: `calc(${theme.space['0.25']} + ${theme.space['0.5']}) ${theme.space[1]}`,
+  padding: `calc(${theme.space['0.25']} + ${theme.space['0.5']})`,
   textAlign: 'left',
   textDecoration: 'none',
   width: '100%',
+})
+
+export const itemPaddingStack = style({
+  paddingLeft: 28, // This value need to be hardcoded because of the category icon size
 })
 
 export const itemContainer = recipe({
@@ -102,9 +110,17 @@ export const itemContainer = recipe({
     hasActive: false,
     isActive: false,
     noExpand: false,
-    subLabel: false,
   },
   variants: {
+    expanding: {
+      true: {
+        selectors: {
+          [`${itemPaddingStack} &`]: {
+            animation: `${fadeIn} ${ANIMATION_DURATION * 0.75}ms ${ANIMATION_DURATION * 0.25}ms ${ANIMATION_EASING} both, ${slideDownLarge} ${ANIMATION_DURATION}ms`,
+          },
+        },
+      },
+    },
     disabled: {
       true: {
         backgroundColor: 'unset',
@@ -131,38 +147,7 @@ export const itemContainer = recipe({
         cursor: 'pointer',
       },
     },
-    subLabel: {
-      true: {
-        padding: `${theme.space['0.5']} ${theme.space['1']}`,
-      },
-    },
   },
-})
-
-export const itemContainerAnimated = recipe({
-  variants: {
-    animated: {
-      true: {},
-    },
-    animation: {
-      collapse: {},
-      expand: {},
-    },
-  },
-  compoundVariants: [
-    {
-      variants: { animated: true, animation: 'collapse' },
-      style: {
-        animation: `${shrinkHeight} ${ANIMATION_DURATION}ms ease-in-out`,
-      },
-    },
-    {
-      variants: { animated: true, animation: 'expand' },
-      style: {
-        animation: `${shrinkHeight} ${ANIMATION_DURATION}ms ease-in-out reverse`,
-      },
-    },
-  ],
 })
 
 export const itemShowDraggable = style({})
@@ -206,12 +191,24 @@ export const itemWrapText = recipe({
     },
     WebkitBoxOrient: 'vertical',
     WebkitLineClamp: 2,
+    transition: `opacity ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
   },
   defaultVariants: {
     disabled: false,
     weak: false,
+    animation: false,
   },
   variants: {
+    animation: {
+      collapse: {
+        whiteSpace: 'nowrap !important',
+        opacity: 0,
+      },
+      expand: {
+        animation: `${fadeIn} ${ANIMATION_DURATION}ms ${ANIMATION_EASING} both`,
+      },
+      false: {},
+    },
     disabled: {
       true: {
         color: theme.colors.neutral.textWeakDisabled,
@@ -270,36 +267,8 @@ export const itemPinnedButton = style({
   visibility: 'visible',
 })
 
-export const itemAnimatedIcon = recipe({
-  variants: {
-    animated: {
-      true: {},
-    },
-    animation: {
-      collapse: {},
-      expand: {},
-    },
-  },
-  compoundVariants: [
-    {
-      variants: { animated: true, animation: 'collapse' },
-      style: {
-        animation: `${fadeIn} ${ANIMATION_DURATION}ms ease-in-out reverse`,
-      },
-    },
-    {
-      variants: { animated: true, animation: 'expand' },
-      style: {
-        animation: `${fadeIn} ${ANIMATION_DURATION}ms ease-in-out`,
-      },
-    },
-  ],
-})
-
 export const itemMenuStack = style({
   marginTop: theme.space['0.25'],
-  padding: `0 ${theme.space[2]}`,
-  width: 'fit-content',
 })
 
 export const itemStackIcon = style({
@@ -308,17 +277,4 @@ export const itemStackIcon = style({
 
 export const itemCategoryIcon = style({
   minWidth: 20,
-})
-
-export const itemPaddingStack = recipe({
-  base: {
-    paddingLeft: 28, // This value need to be hardcoded because of the category icon size
-  },
-  variants: {
-    hide: {
-      true: {
-        display: 'none',
-      },
-    },
-  },
 })

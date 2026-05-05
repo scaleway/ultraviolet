@@ -1,5 +1,7 @@
 'use client'
 
+import { useFlip, usePrefersReducedMotion } from '@ultraviolet/animations'
+import { setElementVars } from '@vanilla-extract/dynamic'
 import {
   createContext,
   useCallback,
@@ -10,12 +12,16 @@ import {
   useState,
 } from 'react'
 
-import { ANIMATION_DURATION, NAVIGATION_WIDTH } from './constants'
+import {
+  ANIMATION_DURATION,
+  ANIMATION_EASING,
+  NAVIGATION_WIDTH,
+} from './constants'
 import NavigationLocales from './locales/en'
+import { widthNavigationContainerDuration } from './variables.css'
 
 import type { PinUnPinType } from './types'
 import type { Dispatch, ReactNode, RefObject } from 'react'
-
 type Item = {
   label: string
   active?: boolean
@@ -29,7 +35,7 @@ type AnimationType = 'simple' | 'complex'
 
 type ContextProps = {
   expanded: boolean
-  toggleExpand: (toggle?: boolean) => void
+  toggleExpand: (toggle?: boolean, options?: { immediate?: boolean }) => void
   animation: boolean | 'expand' | 'collapse'
   pinnedFeature?: boolean
   onClickPinUnpin?: (pinned: string[]) => void
@@ -133,6 +139,7 @@ type NavigationProviderProps = {
   animation?: boolean
   /**
    * type of animation
+   * @deprecated use the `animation` prop to enable or disable the animation completely. This one has no effect.
    */
   animationType?: AnimationType
   showHide?: 'show' | 'hide'
@@ -148,12 +155,15 @@ export const NavigationProvider = ({
   onExpandChange,
   initialWidth = NAVIGATION_WIDTH,
   initialAllowNavigationResize = true,
-  animation: shouldAnimate = true,
+  animation: animationEnabled = true,
   animationType,
   showHide,
 }: NavigationProviderProps) => {
   const [expanded, setExpanded] = useState(initialExpanded)
   const [pinnedItems, setPinnedItems] = useState(initialPinned ?? [])
+
+  const prefersReducedMotion = usePrefersReducedMotion()
+  const shouldAnimate = animationEnabled && !prefersReducedMotion
 
   const [animation, setAnimation] = useState<boolean | 'expand' | 'collapse'>(
     false,
@@ -174,9 +184,14 @@ export const NavigationProvider = ({
   )
   const navigationRef = useRef<HTMLDivElement | null>(null)
 
+  const { prepareAnimation, animate } = useFlip(navigationRef, {
+    duration: ANIMATION_DURATION,
+    easing: ANIMATION_EASING,
+  })
+
   // This function will be triggered when expand/collapse button is clicked
   const toggleExpand = useCallback(
-    (toggle?: boolean) => {
+    (toggle?: boolean, options?: { immediate?: boolean }) => {
       if (typeof toggle !== 'boolean' && toggle !== undefined) {
         throw new Error(
           'toggleExpand only accepts boolean or undefined as parameter. You most likely did <button onClick={toggleExpand}> instead of <button onClick={() => toggleExpand()}>',
@@ -187,23 +202,40 @@ export const NavigationProvider = ({
         return
       }
 
-      onExpandChange?.(!expanded)
+      const isNowExpanded = toggle ?? !expanded
+      const immediate = options?.immediate
+
+      onExpandChange?.(!isNowExpanded)
+      setExpanded(isNowExpanded)
+
       if (navigationRef.current) {
         navigationRef.current.style.width = ''
+        setElementVars(navigationRef.current, {
+          [widthNavigationContainerDuration]: `${shouldAnimate && !immediate ? ANIMATION_DURATION : 0}ms`,
+        })
       }
 
-      if (shouldAnimate) {
-        setAnimation(expanded ? 'collapse' : 'expand')
-
-        setTimeout(() => {
-          setExpanded(toggle ?? !expanded)
-          setAnimation(false)
-        }, ANIMATION_DURATION)
-      } else {
-        setExpanded(toggle ?? !expanded)
+      if (!shouldAnimate || immediate) {
+        return
       }
+
+      prepareAnimation()
+      setAnimation(isNowExpanded ? 'expand' : 'collapse')
+
+      requestAnimationFrame(() => {
+        animate()
+          .then(() => {
+            if (navigationRef.current) {
+              setElementVars(navigationRef.current, {
+                [widthNavigationContainerDuration]: `${shouldAnimate ? ANIMATION_DURATION : 0}ms`,
+              })
+            }
+            setAnimation(false)
+          })
+          .catch(() => {})
+      })
     },
-    [expanded, onExpandChange, shouldAnimate],
+    [expanded, onExpandChange, prepareAnimation, animate, shouldAnimate],
   )
 
   const pinItem = useCallback(

@@ -2,30 +2,24 @@ import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-import { groupAnimation } from '../animations.css'
-import { ANIMATION_DURATION } from '../constants'
+import { fadeIn } from '../../../utils'
+import { ANIMATION_DURATION, ANIMATION_EASING } from '../constants'
+import { widthNavigationContainer } from '../variables.css'
 
 export const groupText = recipe({
   base: {
     height: `calc(${theme.typography.bodySmallStrong.lineHeight} + ${theme.space['1']})`,
     paddingBottom: theme.space[1],
     paddingLeft: theme.space[1],
-    transition: `opacity ${ANIMATION_DURATION}ms ease-in-out, height ${ANIMATION_DURATION}ms ease-in-out`,
   },
   variants: {
     animation: {
-      collapse: {
-        animation: `${groupAnimation} ${ANIMATION_DURATION}ms ease-in-out reverse`,
-      },
       expand: {
-        animation: `${groupAnimation} ${ANIMATION_DURATION}ms ease-in-out`,
+        animation: `${fadeIn} ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
       },
-      false: {},
     },
   },
 })
-
-export const groupStack = style({ paddingTop: theme.space[1] })
 
 export const pinnedItemDropableArea = style({
   borderTop: '2px solid',
@@ -72,8 +66,20 @@ export const pinnedItemContainer = recipe({
 export const separator = style({
   margin: `${theme.space['2']} calc(${theme.space['2']} * -1)`,
   flexShrink: 0,
+  width: widthNavigationContainer,
+  transition: `width ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
 })
 
-export const showHideStack = style({
-  height: '100%',
+export const showHideStack = recipe({
+  base: {
+    height: '100%',
+    width: '100%',
+  },
+  variants: {
+    expanding: {
+      true: {
+        animation: `${fadeIn} ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
+      },
+    },
+  },
 })

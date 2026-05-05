@@ -1,19 +1,32 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { assignInlineVars } from '@vanilla-extract/dynamic'
+import { assignInlineVars, setElementVars } from '@vanilla-extract/dynamic'
 import { useEffect, useRef } from 'react'
 
 import { Stack } from '../../components/Stack'
 
-import { NAVIGATION_COLLASPED_WIDTH, NAVIGATION_MIN_WIDTH } from './constants'
+import {
+  ANIMATION_DURATION,
+  NAVIGATION_COLLASPED_WIDTH,
+  NAVIGATION_MAX_WIDTH,
+  NAVIGATION_MIN_WIDTH,
+} from './constants'
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { useNavigation } from './NavigationProvider'
 import { navigationStyle } from './styles.css'
-import { widthNavigationContainer } from './variables.css'
+import {
+  widthNavigationContainer,
+  widthNavigationContainerDuration,
+  widthNavigationContainerExpanded,
+} from './variables.css'
 
 import type { NavigationProps } from './types'
+
+function clamp(min: number, value: number, max: number) {
+  return Math.min(max, Math.max(min, value))
+}
 
 export const NavigationContent = ({
   children,
@@ -37,7 +50,6 @@ export const NavigationContent = ({
     width,
     expanded,
     toggleExpand,
-    animation,
     navigationRef,
     allowNavigationResize,
     shouldAnimate,
@@ -56,23 +68,22 @@ export const NavigationContent = ({
     const mouseMove = (event: MouseEvent) => {
       if (prevX !== undefined) {
         const navWidth = navRect?.width ?? 0
-        const newWidth = navWidth + (event.clientX - prevX)
+        const newWidth = clamp(
+          NAVIGATION_MIN_WIDTH,
+          navWidth + (event.clientX - prevX),
+          NAVIGATION_MAX_WIDTH,
+        )
 
         if (navigationRef.current && expanded) {
           navigationRef.current.style.width = `${newWidth}px`
+          setElementVars(navigationRef.current, {
+            [widthNavigationContainerExpanded]: `${newWidth}px`,
+          })
         }
 
-        if (newWidth <= NAVIGATION_MIN_WIDTH) {
-          shouldCollapseOnMouseUp = true
-        } else {
-          shouldCollapseOnMouseUp = false
-        }
-
-        if (newWidth >= NAVIGATION_COLLASPED_WIDTH && !expanded) {
-          shouldExpandOnMouseUp = true
-        } else {
-          shouldExpandOnMouseUp = false
-        }
+        shouldCollapseOnMouseUp = newWidth <= NAVIGATION_MIN_WIDTH
+        shouldExpandOnMouseUp =
+          !expanded && newWidth >= NAVIGATION_COLLASPED_WIDTH
       }
     }
 
@@ -80,10 +91,21 @@ export const NavigationContent = ({
       prevX = event.clientX
       navRect = navigationRef.current?.getBoundingClientRect()
 
+      if (navigationRef.current) {
+        setElementVars(navigationRef.current, {
+          [widthNavigationContainerDuration]: '0',
+        })
+      }
+
       const mouseup = () => {
         if (shouldCollapseOnMouseUp || shouldExpandOnMouseUp) {
           toggleExpand()
           onToggleExpand?.(!expanded)
+          if (navigationRef.current) {
+            setElementVars(navigationRef.current, {
+              [widthNavigationContainerExpanded]: `${width}px`,
+            })
+          }
         }
 
         if (navigationRef.current) {
@@ -95,6 +117,10 @@ export const NavigationContent = ({
           if (!expanded) {
             navigationRef.current.style.width = ''
           }
+
+          setElementVars(navigationRef.current, {
+            [widthNavigationContainerDuration]: `${shouldAnimate ? ANIMATION_DURATION : 0}ms`,
+          })
         }
 
         document.removeEventListener('mousemove', mouseMove)
@@ -118,6 +144,8 @@ export const NavigationContent = ({
     onWidthResize,
     setWidth,
     toggleExpand,
+    shouldAnimate,
+    width,
   ])
 
   return (
@@ -127,24 +155,18 @@ export const NavigationContent = ({
       id={id}
     >
       <div
-        className={navigationStyle.container({
-          animation: shouldAnimate ? animation : undefined,
-          expanded,
-        })}
+        className={navigationStyle.container()}
         ref={navigationRef}
         style={assignInlineVars({
-          [widthNavigationContainer]: `${width}px`,
+          [widthNavigationContainer]: `${expanded ? width : NAVIGATION_COLLASPED_WIDTH}px`,
+          [widthNavigationContainerExpanded]: `${width}px`,
+          [widthNavigationContainerDuration]: `${shouldAnimate ? ANIMATION_DURATION : 0}ms`,
         })}
       >
         {logo ? <Header logo={logo} /> : null}
-        <div
-          className={cn(
-            navigationStyle.contentContainer,
-            expanded ? '' : navigationStyle.contentContainerCollapsed,
-          )}
-        >
+        <div className={cn(navigationStyle.contentContainer)}>
           <Stack
-            className={navigationStyle.content}
+            className={navigationStyle.content({ collapsed: !expanded })}
             gap={0.25}
             ref={contentRef}
           >

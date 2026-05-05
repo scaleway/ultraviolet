@@ -56,7 +56,6 @@ export const PinnedItems = ({
     reorderItems,
     expanded,
     items,
-    animation,
     showHide,
   } = context
   const theme = useTheme()
@@ -103,7 +102,7 @@ export const PinnedItems = ({
 
   if (pinnedFeature && showHide !== 'hide') {
     return (
-      <div style={{ width: animation ? '100%' : undefined, ...style }}>
+      <div style={style}>
         <Item
           categoryIcon={<PinCategoryIcon variant="neutral" />}
           data-testid="pinned-group"
@@ -136,6 +135,7 @@ export const PinnedItems = ({
                   <div
                     className={navigationStyle.pinnedItemRelativeDiv}
                     key={itemId}
+                    data-flip-id={itemId}
                   >
                     {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
                     <div

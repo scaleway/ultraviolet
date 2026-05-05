@@ -167,10 +167,7 @@ export const Item = memo(
       pinnedFeature,
       pinnedItems,
       pinLimit,
-      animation,
       registerItem,
-      shouldAnimate,
-      animationType,
       showHide,
     } = context
 
@@ -265,9 +262,8 @@ export const Item = memo(
     if (!alwaysVisible && showHide === 'hide') {
       return null
     }
-    const computedAnimation = animation === 'collapse' ? 'collapse' : 'expand'
 
-    if (expanded || (!expanded && animation === 'expand')) {
+    if (expanded) {
       return (
         <ItemExpanded
           active={active}
@@ -276,6 +272,7 @@ export const Item = memo(
           categoryIcon={categoryIcon}
           containerTag={containerTag}
           dataTestId={dataTestId}
+          dataFlipId={!hasParents && categoryIcon ? id : null}
           disabled={disabled}
           hasActiveChildren={hasActiveChildren}
           hasPinnedFeatureAndNoChildren={hasPinnedFeatureAndNoChildren}
@@ -310,6 +307,7 @@ export const Item = memo(
         <ItemMenu
           active={active}
           categoryIcon={categoryIcon}
+          data-flip-id={categoryIcon ? id : undefined}
           hasActiveChildren={hasActiveChildren}
           label={label}
           style={style}
@@ -382,35 +380,22 @@ export const Item = memo(
       return (
         <Tooltip placement="right" text={label}>
           <Stack
-            alignItems="flex-start"
-            className={navigationStyle.itemMenuStack}
+            alignItems="center"
+            data-flip-id={categoryIcon ? id : undefined}
             gap={1}
             justifyContent="flex-start"
           >
             <Stack
               alignItems="center"
               as={containerTag}
-              className={cn(
-                navigationStyle.itemContainer({ disabled }),
-                navigationStyle.itemContainerAnimated({
-                  animated: shouldAnimate && animationType === 'complex',
-                  animation: computedAnimation,
-                }),
-              )}
+              className={cn(navigationStyle.itemContainer({ disabled }))}
               gap={1}
               href={href}
               justifyContent="center"
               rel={rel}
               target={target}
             >
-              <OpenInNewIcon
-                className={navigationStyle.itemAnimatedIcon({
-                  animated: shouldAnimate && animationType === 'complex',
-                  animation: computedAnimation,
-                })}
-                prominence="weak"
-                sentiment="neutral"
-              />
+              <OpenInNewIcon prominence="weak" sentiment="neutral" />
             </Stack>
           </Stack>
         </Tooltip>
