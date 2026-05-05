@@ -5,6 +5,7 @@ import { recipe } from '@vanilla-extract/recipes'
 import {
   itemBadge,
   itemCategoryIcon,
+  itemCollapsed,
   itemContainer,
   itemContainerBase,
   itemDragIcon,
@@ -25,7 +26,6 @@ import {
   itemWrapText,
 } from './components/items.css'
 import {
-  groupStack,
   groupText,
   pinnedItemContainer,
   pinnedItemDropableArea,
@@ -33,7 +33,7 @@ import {
   separator,
   showHideStack,
 } from './components/styles.css'
-import { ANIMATION_EASING } from './constants'
+import { ANIMATION_EASING, NAVIGATION_COLLASPED_WIDTH } from './constants'
 import {
   widthNavigationContainer,
   widthNavigationContainerDuration,
@@ -102,12 +102,41 @@ const contentContainerCollapsed = style({
   alignItems: 'center',
 })
 
-const content = style({
-  flexGrow: 1,
-  overflowX: 'hidden',
-  overflowY: 'auto',
-  padding: theme.space[2],
-  width: widthNavigationContainerExpanded,
+const content = recipe({
+  base: {
+    flexGrow: 1,
+    overflowX: 'hidden',
+    overflowY: 'auto',
+    scrollbarGutter: 'stable',
+    padding: `${theme.space['2']} ${theme.space['0.5']} ${theme.space['2']} ${theme.space['2']}`,
+    width: widthNavigationContainerExpanded,
+    scrollbarWidth: 'thin',
+    scrollbarColor: `${theme.colors.neutral.borderStrong} transparent`,
+
+    selectors: {
+      '&::-webkit-scrollbar': {
+        width: '12px',
+      },
+      '&::-webkit-scrollbar-track': {
+        background: 'transparent',
+      },
+      '&::-webkit-scrollbar-thumb': {
+        backgroundColor: theme.colors.neutral.borderStrong,
+      },
+      '&::-webkit-scrollbar-thumb:hover': {
+        background: theme.colors.neutral.borderStrongHover,
+      },
+    },
+  },
+  variants: {
+    collapsed: {
+      true: {
+        width: NAVIGATION_COLLASPED_WIDTH,
+        transition: `width ${widthNavigationContainerDuration} ${ANIMATION_EASING}`,
+        alignItems: 'start',
+      },
+    },
+  },
 })
 
 const slider = style({
@@ -138,6 +167,7 @@ export const navigationStyle = {
   content,
   slider,
   itemMenuContainer,
+  itemCollapsed,
   itemRelative,
   itemPadded,
   itemPinIcon,
@@ -158,7 +188,6 @@ export const navigationStyle = {
   itemCategoryIcon,
   itemPaddingStack,
   groupText,
-  groupStack,
   pinnedItemDropableArea,
   pinnedItemRelativeDiv,
   pinnedItemContainer,

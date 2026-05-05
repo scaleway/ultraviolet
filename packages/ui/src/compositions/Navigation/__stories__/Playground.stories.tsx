@@ -31,7 +31,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
   const [active, setActive] = useState('Instance')
   const [pinnedItemsExpanded, setPinnedItemsExpanded] = useState(false)
 
-  const { pinnedItems, expanded, animation } = useNavigation()
+  const { pinnedItems, expanded } = useNavigation()
 
   const saveExpandedInLocalStorage = useCallback((localExpanded: boolean) => {
     console.log(
@@ -59,16 +59,14 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
           rel="noreferrer"
           target="_blank"
         >
-          <Stack direction="row" gap={1}>
-            <img alt="" height="22px" src={logoSmall} width="auto" />
+          <Stack direction="row" gap={0.5}>
+            <img alt="" width="16px" src={logoSmall} height="auto" />
             <img
               alt=""
               height="22px"
               src={logo}
               width="auto"
-              className={logoStyle({
-                expanded: (expanded && !animation) || animation === 'expand',
-              })}
+              className={logoStyle({ expanded })}
             />
           </Stack>
         </a>
@@ -355,10 +353,20 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
   )
 }
 
-const ToggleButton = ({ children }: { children?: ReactNode }) => {
+const ToggleButton = ({
+  children,
+  immediate,
+}: {
+  children?: ReactNode
+  immediate?: boolean
+}) => {
   const { toggleExpand } = useNavigation()
 
-  return <Button onClick={() => toggleExpand()}>{children}</Button>
+  return (
+    <Button onClick={() => toggleExpand(undefined, { immediate })}>
+      {children}
+    </Button>
+  )
 }
 
 export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
@@ -396,6 +404,7 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
           }}
         >
           <ToggleButton>Toggle</ToggleButton>
+          <ToggleButton immediate>Toggle immediate</ToggleButton>
           <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor
             aliquam dui, a laoreet ante faucibus a. In accumsan pharetra dui, a

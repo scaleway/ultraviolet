@@ -23,22 +23,16 @@ export const ItemChildren = ({
     )
   }
 
-  const { animation, animationType, shouldAnimate } = context
-
   return (
     <>
       {noExpand ? (
         <ItemProvider>
           <Stack
+            gap={0.25}
             className={
               noExpand || type === 'pinnedGroup'
                 ? ''
-                : navigationStyle.itemPaddingStack({
-                    hide:
-                      shouldAnimate &&
-                      animationType === 'complex' &&
-                      animation === 'expand',
-                  })
+                : navigationStyle.itemPaddingStack
             }
           >
             {children}
@@ -48,15 +42,11 @@ export const ItemChildren = ({
         <ItemProvider>
           <Expandable animationDuration={0} opened={internalExpanded}>
             <Stack
+              gap={0.25}
               className={
                 noExpand || type === 'pinnedGroup'
                   ? ''
-                  : navigationStyle.itemPaddingStack({
-                      hide:
-                        shouldAnimate &&
-                        animationType === 'complex' &&
-                        animation === 'expand',
-                    })
+                  : navigationStyle.itemPaddingStack
               }
             >
               {children}

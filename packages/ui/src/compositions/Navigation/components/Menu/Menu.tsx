@@ -21,12 +21,11 @@ export const ItemMenu = ({
   'data-flip-id': dataFlipId,
 }: ItemMenuType) => (
   <Stack
-    alignItems="flex-start"
-    className={navigationStyle.itemMenuStack}
+    alignItems="center"
     gap={1}
     justifyContent="flex-start"
     style={style}
-    data-flip-id={categoryIcon ? dataFlipId : null}
+    data-flip-id={dataFlipId}
   >
     {Children.count(children) > 0 ? (
       <Menu
@@ -37,6 +36,7 @@ export const ItemMenu = ({
             sentiment="neutral"
             size="small"
             variant={hasActiveChildren ? 'filled' : 'ghost'}
+            className={navigationStyle.itemCollapsed}
           >
             {categoryIcon ? (
               <Stack
@@ -67,6 +67,7 @@ export const ItemMenu = ({
           sentiment="neutral"
           size="small"
           variant={active ? 'filled' : 'ghost'}
+          className={navigationStyle.itemCollapsed}
         >
           <Stack
             alignItems="center"

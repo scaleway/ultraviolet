@@ -26,6 +26,7 @@ type CommonProps = {
   role?: AriaRole
   className?: string
   'data-testid'?: string
+  'data-flip-id'?: string
   isLoading?: boolean
   'aria-label'?: string
   'aria-current'?: boolean
@@ -91,6 +92,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
       type = 'button' as const,
       className,
       'data-testid': dataTestId,
+      'data-flip-id': dataFlipId,
       sentiment = 'primary',
       variant = 'filled',
       size = 'large',
@@ -166,6 +168,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
             children,
             className: computedClassName,
             'data-testid': dataTestId,
+            'data-flip-id': dataFlipId,
             // oxlint-disable-next-line typescript/no-unsafe-type-assertion
             ref: ref as Ref<HTMLElement>,
             style,
@@ -192,6 +195,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
             autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
             className={computedClassName}
             data-testid={dataTestId}
+            data-flip-id={dataFlipId}
             download={download}
             href={href}
             onBlur={onBlur}
@@ -226,6 +230,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
           autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
           className={computedClassName}
           data-testid={dataTestId}
+          data-flip-id={dataFlipId}
           disabled={computeIsDisabled}
           name={name}
           onBlur={onBlur}

@@ -56,7 +56,6 @@ export const PinnedItems = ({
     reorderItems,
     expanded,
     items,
-    animation,
     showHide,
   } = context
   const theme = useTheme()
@@ -155,11 +154,7 @@ export const PinnedItems = ({
               return null
             })
           ) : (
-            <div
-              className={navigationStyle.pinnedItemContainer({
-                expanded: (expanded && !animation) || animation === 'expand',
-              })}
-            >
+            <div className={navigationStyle.pinnedItemContainer({ expanded })}>
               <Text
                 as="p"
                 prominence="weak"

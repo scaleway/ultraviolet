@@ -59,10 +59,8 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
   const onShowHide = (newValue: typeof showHide) => setShowHide(newValue)
   const [active, setActive] = useState('Instance')
   const [pinnedItemsExpanded, setPinnedItemsExpanded] = useState(false)
-  const [expanded, setExpanded] = useState(true)
 
   const saveExpandedInLocalStorage = useCallback((localExpanded: boolean) => {
-    setExpanded(localExpanded)
     console.log(
       `expanded state with value ${localExpanded} saved in local storage`,
     )
@@ -106,11 +104,10 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
               target="_blank"
             >
               <Stack direction="row" gap={1}>
-                <img alt="" height="22px" src={logoSmall} width="auto" />
+                <img alt="" width="16px" src={logoSmall} />
                 <img
                   alt=""
                   className={logoStyle()}
-                  data-expanded={expanded}
                   height="22px"
                   src={logo}
                   width="auto"

@@ -6,11 +6,11 @@ export const logoStyle = recipe({
   base: {
     objectFit: 'cover',
     objectPosition: 'left',
-    transition: `opacity ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
   },
   variants: {
     expanded: {
       false: {
+        transition: `opacity ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
         opacity: 0,
       },
       true: {

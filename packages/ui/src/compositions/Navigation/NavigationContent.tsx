@@ -50,7 +50,6 @@ export const NavigationContent = ({
     width,
     expanded,
     toggleExpand,
-    animation,
     navigationRef,
     allowNavigationResize,
     shouldAnimate,
@@ -82,17 +81,9 @@ export const NavigationContent = ({
           })
         }
 
-        if (newWidth <= NAVIGATION_MIN_WIDTH) {
-          shouldCollapseOnMouseUp = true
-        } else {
-          shouldCollapseOnMouseUp = false
-        }
-
-        if (newWidth >= NAVIGATION_COLLASPED_WIDTH && !expanded) {
-          shouldExpandOnMouseUp = true
-        } else {
-          shouldExpandOnMouseUp = false
-        }
+        shouldCollapseOnMouseUp = newWidth <= NAVIGATION_MIN_WIDTH
+        shouldExpandOnMouseUp =
+          !expanded && newWidth >= NAVIGATION_COLLASPED_WIDTH
       }
     }
 
@@ -157,11 +148,6 @@ export const NavigationContent = ({
     width,
   ])
 
-  let navWidth = width
-  if (animation === 'collapse' || (!expanded && !animation)) {
-    navWidth = NAVIGATION_COLLASPED_WIDTH
-  }
-
   return (
     <nav
       className={cn(className, navigationStyle.navigation)}
@@ -172,7 +158,7 @@ export const NavigationContent = ({
         className={navigationStyle.container()}
         ref={navigationRef}
         style={assignInlineVars({
-          [widthNavigationContainer]: `${navWidth}px`,
+          [widthNavigationContainer]: `${expanded ? width : NAVIGATION_COLLASPED_WIDTH}px`,
           [widthNavigationContainerExpanded]: `${width}px`,
           [widthNavigationContainerDuration]: `${shouldAnimate ? ANIMATION_DURATION : 0}ms`,
         })}
@@ -180,7 +166,7 @@ export const NavigationContent = ({
         {logo ? <Header logo={logo} /> : null}
         <div className={cn(navigationStyle.contentContainer)}>
           <Stack
-            className={navigationStyle.content}
+            className={navigationStyle.content({ collapsed: !expanded })}
             gap={0.25}
             ref={contentRef}
           >
