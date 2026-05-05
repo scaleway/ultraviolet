@@ -1,5 +1,48 @@
 # Change Log
 
+## 3.14.1
+
+### Patch Changes
+
+- [#6357](https://github.com/scaleway/ultraviolet/pull/6357) [`c499bd8`](https://github.com/scaleway/ultraviolet/commit/c499bd855d03752f3c7d2336af3f90f4e967e9e5) Thanks [@jsulpis](https://github.com/jsulpis)! - Fix Popup alignment and flipping condition (affects the Tooltip, Popover, SelectInput etc)
+
+- [#6369](https://github.com/scaleway/ultraviolet/pull/6369) [`420663b`](https://github.com/scaleway/ultraviolet/commit/420663b2487a5493ec07fafa306bfb51fe8659e0) Thanks [@lisalupi](https://github.com/lisalupi)! - `FileInput`: update validator type so that it can return `null` or `undefined`, fix `fileRejection` (in `onChange`) to return correct file names and fix wrapper overlay width
+
+- [#6341](https://github.com/scaleway/ultraviolet/pull/6341) [`6ba8c5c`](https://github.com/scaleway/ultraviolet/commit/6ba8c5c666ddd49d087c8b7435f0cda102dda7bf) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@nivo/bar` to `0.99.0`.
+  Updated dependency `@nivo/core` to `0.99.0`.
+  Updated dependency `@nivo/line` to `0.99.0`.
+  Updated dependency `@nivo/pie` to `0.99.0`.
+  Updated dependency `@nivo/scales` to `0.99.0`.
+  Updated dependency `@nivo/treemap` to `0.99.0`.
+
+  `LineChart`: ⚠️ Breaking change: type of `point` in `tooltipFunction` has changed slightly: use `point.x` instead of `point.data.x` (and similarly `point.y` instead of `point.data.y`). `xFormatted` and `yFormatted` remain unchanged
+
+- [#6359](https://github.com/scaleway/ultraviolet/pull/6359) [`df71e8a`](https://github.com/scaleway/ultraviolet/commit/df71e8a71d1d8cbfed8e6ed025090c22d3b3cfe5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@vanilla-extract/css` to `1.20.1`.
+  Updated dependency `@vanilla-extract/vite-plugin` to `5.2.2`.
+
+- [#6371](https://github.com/scaleway/ultraviolet/pull/6371) [`7017759`](https://github.com/scaleway/ultraviolet/commit/70177594df4a9eed580374b90db42ce6edfb9074) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.10`.
+
+- [#6356](https://github.com/scaleway/ultraviolet/pull/6356) [`75a6a3a`](https://github.com/scaleway/ultraviolet/commit/75a6a3a6193363bb2dc740095ebbe52bbb92c0b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.9`.
+
+- [#6278](https://github.com/scaleway/ultraviolet/pull/6278) [`ad81cdd`](https://github.com/scaleway/ultraviolet/commit/ad81cdd877013bcf99f4c406b4dc2da27b83ccfd) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`:
+
+  - new prop `compact` for a very compact view of the component, similar to `EstimateCost`,
+  - new prop `backgroundProminence` to be able to change the component background prominence
+  - new prop `calculartorIcon` to add next to the price total
+
+  `EstimateCost`: new prop `backgroundProminence`, similar to `OrderSummary`
+
+- [#6367](https://github.com/scaleway/ultraviolet/pull/6367) [`c168072`](https://github.com/scaleway/ultraviolet/commit/c168072d4c9e7c7dd02e3b07d8e49c455940a471) Thanks [@PierreBertinet](https://github.com/PierreBertinet)! - Add hideOnClickItem on Menu.Item in addition to Menu
+
+- [#6382](https://github.com/scaleway/ultraviolet/pull/6382) [`f4a5da1`](https://github.com/scaleway/ultraviolet/commit/f4a5da1ea4671363a5e5f928c94c19299b3a6785) Thanks [@lisalupi](https://github.com/lisalupi)! - `Menu`: remove event.stopPropagation on nested menu items
+
+- [#6370](https://github.com/scaleway/ultraviolet/pull/6370) [`19f385d`](https://github.com/scaleway/ultraviolet/commit/19f385db72ab459f9ea71e413d8920f61c1d0c81) Thanks [@lisalupi](https://github.com/lisalupi)! - `OptionSelector`: remove unwanted browser default padding and margin from fieldset
+
+- Updated dependencies [[`135502d`](https://github.com/scaleway/ultraviolet/commit/135502df01b9dc975c42339262a62e77be0a8bb9), [`df71e8a`](https://github.com/scaleway/ultraviolet/commit/df71e8a71d1d8cbfed8e6ed025090c22d3b3cfe5), [`7017759`](https://github.com/scaleway/ultraviolet/commit/70177594df4a9eed580374b90db42ce6edfb9074), [`75a6a3a`](https://github.com/scaleway/ultraviolet/commit/75a6a3a6193363bb2dc740095ebbe52bbb92c0b3), [`aeb25db`](https://github.com/scaleway/ultraviolet/commit/aeb25db78ba7437c68378412d63f73fee6409acd)]:
+  - @ultraviolet/icons@5.3.3
+  - @ultraviolet/themes@3.1.6
+  - @ultraviolet/utils@1.0.11
+
 ## 3.14.0
 
 ### Minor Changes

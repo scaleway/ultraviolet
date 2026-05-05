@@ -1,5 +1,22 @@
 # @ultraviolet/illustrations
 
+## 6.0.17
+
+### Patch Changes
+
+- [#6385](https://github.com/scaleway/ultraviolet/pull/6385) [`135502d`](https://github.com/scaleway/ultraviolet/commit/135502df01b9dc975c42339262a62e77be0a8bb9) Thanks [@lisalupi](https://github.com/lisalupi)! - New illustrations `annotation`
+
+- [#6359](https://github.com/scaleway/ultraviolet/pull/6359) [`df71e8a`](https://github.com/scaleway/ultraviolet/commit/df71e8a71d1d8cbfed8e6ed025090c22d3b3cfe5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@vanilla-extract/css` to `1.20.1`.
+  Updated dependency `@vanilla-extract/vite-plugin` to `5.2.2`.
+
+- [#6371](https://github.com/scaleway/ultraviolet/pull/6371) [`7017759`](https://github.com/scaleway/ultraviolet/commit/70177594df4a9eed580374b90db42ce6edfb9074) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.10`.
+
+- [#6356](https://github.com/scaleway/ultraviolet/pull/6356) [`75a6a3a`](https://github.com/scaleway/ultraviolet/commit/75a6a3a6193363bb2dc740095ebbe52bbb92c0b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.9`.
+
+- Updated dependencies [[`df71e8a`](https://github.com/scaleway/ultraviolet/commit/df71e8a71d1d8cbfed8e6ed025090c22d3b3cfe5), [`7017759`](https://github.com/scaleway/ultraviolet/commit/70177594df4a9eed580374b90db42ce6edfb9074), [`75a6a3a`](https://github.com/scaleway/ultraviolet/commit/75a6a3a6193363bb2dc740095ebbe52bbb92c0b3), [`aeb25db`](https://github.com/scaleway/ultraviolet/commit/aeb25db78ba7437c68378412d63f73fee6409acd)]:
+  - @ultraviolet/themes@3.1.6
+  - @ultraviolet/utils@1.0.11
+
 ## 6.0.16
 
 ### Patch Changes
