@@ -1,5 +1,6 @@
 'use client'
 
+import { useFlip, usePrefersReducedMotion } from '@ultraviolet/animations'
 import { setElementVars } from '@vanilla-extract/dynamic'
 import {
   createContext,
@@ -11,9 +12,6 @@ import {
   useState,
 } from 'react'
 
-import { useFlip } from '../../hooks/useFlip'
-import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
-
 import {
   ANIMATION_DURATION,
   ANIMATION_EASING,
@@ -24,7 +22,6 @@ import { widthNavigationContainerDuration } from './variables.css'
 
 import type { PinUnPinType } from './types'
 import type { Dispatch, ReactNode, RefObject } from 'react'
-
 type Item = {
   label: string
   active?: boolean
@@ -187,7 +184,7 @@ export const NavigationProvider = ({
   )
   const navigationRef = useRef<HTMLDivElement | null>(null)
 
-  const { recordState, animate } = useFlip(navigationRef, {
+  const { prepareAnimation, animate } = useFlip(navigationRef, {
     duration: ANIMATION_DURATION,
     easing: ANIMATION_EASING,
   })
@@ -218,26 +215,27 @@ export const NavigationProvider = ({
         })
       }
 
-      if (shouldAnimate && !immediate) {
-        recordState()
-        setAnimation(isNowExpanded ? 'expand' : 'collapse')
-
-        requestAnimationFrame(() => {
-          animate().then(
-            () => {
-              if (navigationRef.current) {
-                setElementVars(navigationRef.current, {
-                  [widthNavigationContainerDuration]: `${shouldAnimate ? ANIMATION_DURATION : 0}ms`,
-                })
-              }
-              setAnimation(false)
-            },
-            () => {},
-          )
-        })
+      if (!shouldAnimate || immediate) {
+        return
       }
+
+      prepareAnimation()
+      setAnimation(isNowExpanded ? 'expand' : 'collapse')
+
+      requestAnimationFrame(() => {
+        animate()
+          .then(() => {
+            if (navigationRef.current) {
+              setElementVars(navigationRef.current, {
+                [widthNavigationContainerDuration]: `${shouldAnimate ? ANIMATION_DURATION : 0}ms`,
+              })
+            }
+            setAnimation(false)
+          })
+          .catch(() => {})
+      })
     },
-    [expanded, onExpandChange, recordState, animate, shouldAnimate],
+    [expanded, onExpandChange, prepareAnimation, animate, shouldAnimate],
   )
 
   const pinItem = useCallback(
