@@ -2,6 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
+import { fadeIn } from '../../../utils'
 import { ANIMATION_DURATION, ANIMATION_EASING } from '../constants'
 
 export const itemMenuContainer = style({ width: 180 })
@@ -56,6 +57,19 @@ export const itemContainerBase = style({
   width: '100%',
 })
 
+export const itemPaddingStack = recipe({
+  base: {
+    paddingLeft: 28, // This value need to be hardcoded because of the category icon size
+  },
+  variants: {
+    hide: {
+      true: {
+        display: 'none',
+      },
+    },
+  },
+})
+
 export const itemContainer = recipe({
   base: itemContainerBase,
   compoundVariants: [
@@ -102,6 +116,15 @@ export const itemContainer = recipe({
     noExpand: false,
   },
   variants: {
+    expanding: {
+      true: {
+        selectors: {
+          [`${itemPaddingStack({ hide: false })} &`]: {
+            animation: `${fadeIn} ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
+          },
+        },
+      },
+    },
     disabled: {
       true: {
         backgroundColor: 'unset',
@@ -177,14 +200,18 @@ export const itemWrapText = recipe({
   defaultVariants: {
     disabled: false,
     weak: false,
-    shrinking: false,
+    animation: false,
   },
   variants: {
-    shrinking: {
-      true: {
+    animation: {
+      collapse: {
         whiteSpace: 'nowrap !important',
         opacity: 0,
       },
+      expand: {
+        animation: `${fadeIn} ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
+      },
+      false: {},
     },
     disabled: {
       true: {
@@ -254,17 +281,4 @@ export const itemStackIcon = style({
 
 export const itemCategoryIcon = style({
   minWidth: 20,
-})
-
-export const itemPaddingStack = recipe({
-  base: {
-    paddingLeft: 28, // This value need to be hardcoded because of the category icon size
-  },
-  variants: {
-    hide: {
-      true: {
-        display: 'none',
-      },
-    },
-  },
 })

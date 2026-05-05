@@ -26,7 +26,7 @@ export const ItemMenu = ({
     gap={1}
     justifyContent="flex-start"
     style={style}
-    data-flip-id={dataFlipId}
+    data-flip-id={categoryIcon ? dataFlipId : null}
   >
     {Children.count(children) > 0 ? (
       <Menu

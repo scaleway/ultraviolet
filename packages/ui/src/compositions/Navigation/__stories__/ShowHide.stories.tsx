@@ -20,7 +20,7 @@ import { Tooltip } from '../../../components/Tooltip'
 
 import logoSmall from './assets/logo-small.svg'
 import logo from './assets/logo.svg'
-import { animation } from './styles.css'
+import { logoStyle } from './styles.css'
 
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
@@ -109,7 +109,7 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 <img alt="" height="22px" src={logoSmall} width="auto" />
                 <img
                   alt=""
-                  className={animation}
+                  className={logoStyle()}
                   data-expanded={expanded}
                   height="22px"
                   src={logo}

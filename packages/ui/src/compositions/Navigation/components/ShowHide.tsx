@@ -39,17 +39,19 @@ export const ShowHide = memo(
         'Navigation.ShowAll can only be used inside a NavigationProvider.',
       )
     }
-    const { expanded, showHide } = context
+    const { expanded, animation, showHide } = context
     const [computedShown, setIsShown] = useState(showHide === 'show')
     const onClick = () => {
       setIsShown(!computedShown)
       onShowHide?.(computedShown ? 'hide' : 'show')
     }
 
-    if (expanded) {
+    if ((expanded && !animation) || animation === 'expand') {
       return (
         <Stack
-          className={navigationStyle.showHideStack}
+          className={navigationStyle.showHideStack({
+            expanding: animation === 'expand',
+          })}
           justifyContent="flex-end"
           style={style}
         >
@@ -70,8 +72,8 @@ export const ShowHide = memo(
     // When the navigation is collapsed
     return (
       <Stack
-        alignItems="center"
-        className={navigationStyle.showHideStack}
+        alignItems="start"
+        className={navigationStyle.showHideStack({ collapsed: true })}
         justifyContent="flex-end"
         style={style}
       >

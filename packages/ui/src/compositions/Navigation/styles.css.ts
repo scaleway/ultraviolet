@@ -33,10 +33,11 @@ import {
   separator,
   showHideStack,
 } from './components/styles.css'
-import { ANIMATION_DURATION, ANIMATION_EASING } from './constants'
+import { ANIMATION_EASING } from './constants'
 import {
   widthNavigationContainer,
-  widthNavigationContainerFull,
+  widthNavigationContainerDuration,
+  widthNavigationContainerExpanded,
 } from './variables.css'
 
 const stickyFooter = recipe({
@@ -86,13 +87,7 @@ const container = recipe({
     display: 'flex',
     flexDirection: 'column',
     width: widthNavigationContainer,
-  },
-  variants: {
-    animate: {
-      true: {
-        transition: `width ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
-      },
-    },
+    transition: `width ${widthNavigationContainerDuration} ${ANIMATION_EASING}`,
   },
 })
 
@@ -112,7 +107,7 @@ const content = style({
   overflowX: 'hidden',
   overflowY: 'auto',
   padding: theme.space[2],
-  width: widthNavigationContainerFull,
+  width: widthNavigationContainerExpanded,
 })
 
 const slider = style({
