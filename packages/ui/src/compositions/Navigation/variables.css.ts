@@ -6,7 +6,7 @@ import { createVar } from '@vanilla-extract/css'
 export const widthNavigationContainer = createVar()
 /**
  * The width of the navigation panel when expanded.
- * It's used for the expanding animation.
+ * It's used to have persistent text wraps during the expand animation.
  */
 export const widthNavigationContainerExpanded = createVar()
 /**
