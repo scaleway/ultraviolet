@@ -18,6 +18,7 @@ export const ItemMenu = ({
   categoryIcon,
   active,
   hasActiveChildren,
+  'data-flip-id': dataFlipId,
 }: ItemMenuType) => (
   <Stack
     alignItems="flex-start"
@@ -25,6 +26,7 @@ export const ItemMenu = ({
     gap={1}
     justifyContent="flex-start"
     style={style}
+    data-flip-id={dataFlipId}
   >
     {Children.count(children) > 0 ? (
       <Menu

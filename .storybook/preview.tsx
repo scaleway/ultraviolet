@@ -113,6 +113,9 @@ const parameters: Preview['parameters'] = {
   previewTabs: {
     canvas: { hidden: false },
   },
+  controls: {
+    exclude: 'data-flip-id',
+  },
   viewMode: 'docs',
   viewport: {
     viewports: {
