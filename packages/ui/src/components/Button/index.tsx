@@ -26,6 +26,9 @@ type CommonProps = {
   role?: AriaRole
   className?: string
   'data-testid'?: string
+  /**
+   * @private
+   */
   'data-flip-id'?: string
   isLoading?: boolean
   'aria-label'?: string

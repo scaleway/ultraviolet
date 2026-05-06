@@ -35,7 +35,13 @@ export const Group = ({
 
   if (Children.count(children) > 0) {
     return (
-      <Stack gap={0.25} direction="column" style={style} data-flip-id={id}>
+      <Stack
+        gap={0.25}
+        direction="column"
+        style={style}
+        data-flip-id={id}
+        className={navigationStyle.groupStack}
+      >
         {expanded ? (
           <Text
             as="span"
@@ -47,7 +53,11 @@ export const Group = ({
             variant="bodySmallStrong"
           >
             {additionalData ? (
-              <Stack direction="row" justifyContent="space-between">
+              <Stack
+                direction="row"
+                alignItems="center"
+                justifyContent="space-between"
+              >
                 {label}
                 {additionalData}
               </Stack>

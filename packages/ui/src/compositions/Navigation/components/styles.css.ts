@@ -8,7 +8,6 @@ import { widthNavigationContainer } from '../variables.css'
 
 export const groupText = recipe({
   base: {
-    height: `calc(${theme.typography.bodySmallStrong.lineHeight} + ${theme.space['1']})`,
     paddingBottom: theme.space[1],
     paddingLeft: theme.space[1],
   },
@@ -20,6 +19,8 @@ export const groupText = recipe({
     },
   },
 })
+
+export const groupStack = style({ paddingTop: theme.space[1] })
 
 export const pinnedItemDropableArea = style({
   borderTop: '2px solid',

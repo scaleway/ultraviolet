@@ -271,8 +271,8 @@ export const itemMenuStack = style({
   marginTop: theme.space['0.25'],
 })
 
-export const itemStackIcon = style({
-  paddingTop: theme.space['0.5'],
+export const itemArrowIcon = style({
+  marginTop: theme.space['0.25'],
 })
 
 export const itemCategoryIcon = style({

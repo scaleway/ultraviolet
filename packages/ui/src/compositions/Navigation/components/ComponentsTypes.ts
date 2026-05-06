@@ -48,6 +48,9 @@ export type ItemMenuType = {
   hasActiveChildren: boolean
   categoryIcon?: ReactNode
   active?: boolean
+  /**
+   * @private
+   */
   'data-flip-id'?: string
 }
 

@@ -121,7 +121,7 @@ export const ItemExpanded = ({
   return (
     <>
       <Stack
-        alignItems={categoryIcon ? 'flex-start' : 'center'}
+        alignItems={children && !noExpand ? 'flex-start' : 'center'}
         aria-expanded={ariaExpanded}
         as={containerTag}
         className={cn(
@@ -193,14 +193,11 @@ export const ItemExpanded = ({
               />
             ) : null}
             {children && !noExpand ? (
-              <Stack
-                alignItems="center"
-                className={navigationStyle.itemStackIcon}
-                direction="row"
-                gap={1}
-              >
-                <ArrowIcon prominence="weak" sentiment="neutral" />
-              </Stack>
+              <ArrowIcon
+                className={navigationStyle.itemArrowIcon}
+                prominence="weak"
+                sentiment="neutral"
+              />
             ) : null}
           </Stack>
         ) : null}
