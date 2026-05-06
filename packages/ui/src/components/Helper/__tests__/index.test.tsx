@@ -1,24 +1,24 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from '@utils/test'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { Helper } from '..'
 
 describe('helper', () => {
-  test('renders correctly with default props', () => {
+  it('renders correctly with default props', () => {
     const { asFragment } = renderWithTheme(<Helper id="id" />)
 
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with helper string', () => {
+  it('renders correctly with helper string', () => {
     const { asFragment } = renderWithTheme(<Helper id="id" helper="Helper" />)
     expect(screen.getByText('Helper')).toBeVisible()
 
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with helper ReactNode', () => {
+  it('renders correctly with helper ReactNode', () => {
     const { asFragment } = renderWithTheme(
       <Helper id="id" helper={<div>Helper</div>} />,
     )
@@ -27,7 +27,7 @@ describe('helper', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly small', () => {
+  it('renders correctly small', () => {
     const { asFragment } = renderWithTheme(
       <Helper id="id" helper="Helper" size="small" />,
     )
@@ -36,7 +36,7 @@ describe('helper', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly medium', () => {
+  it('renders correctly medium', () => {
     const { asFragment } = renderWithTheme(
       <Helper id="id" helper="Helper" size="medium" />,
     )
@@ -45,7 +45,7 @@ describe('helper', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly disabled', () => {
+  it('renders correctly disabled', () => {
     const { asFragment } = renderWithTheme(
       <Helper id="id" helper="Helper" disabled />,
     )
@@ -54,13 +54,13 @@ describe('helper', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with success string', () => {
+  it('renders correctly with success string', () => {
     const { asFragment } = renderWithTheme(<Helper id="id" success="Success" />)
     expect(screen.getByText('Success')).toBeVisible()
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with success string disabled', () => {
+  it('renders correctly with success string disabled', () => {
     const { asFragment } = renderWithTheme(
       <Helper id="id" success="Success" disabled />,
     )
@@ -68,7 +68,7 @@ describe('helper', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with success true', () => {
+  it('renders correctly with success true', () => {
     const { asFragment } = renderWithTheme(
       <Helper id="id" success helper="Helper" />,
     )
@@ -77,14 +77,14 @@ describe('helper', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with error', () => {
+  it('renders correctly with error', () => {
     const { asFragment } = renderWithTheme(<Helper id="id" error="Error" />)
     expect(screen.getByText('Error')).toBeVisible()
 
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with error disabled', () => {
+  it('renders correctly with error disabled', () => {
     const { asFragment } = renderWithTheme(
       <Helper id="id" error="Error" disabled />,
     )
@@ -92,7 +92,8 @@ describe('helper', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
-  test('renders correctly with error true', () => {
+
+  it('renders correctly with error true', () => {
     const { asFragment } = renderWithTheme(
       <Helper id="id" error helper="helper" />,
     )
@@ -101,7 +102,7 @@ describe('helper', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders errors when helper, error and sucess are defined', () => {
+  it('renders errors when helper, error and sucess are defined', () => {
     const { asFragment } = renderWithTheme(
       <Helper id="id" helper="helper" error="error" success="success" />,
     )
@@ -110,7 +111,7 @@ describe('helper', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders success when helper and sucess are defined', () => {
+  it('renders success when helper and sucess are defined', () => {
     const { asFragment } = renderWithTheme(
       <Helper id="id" helper="helper" success="success" />,
     )
@@ -119,7 +120,7 @@ describe('helper', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with aria-describedby', () => {
+  it('renders correctly with aria-describedby', () => {
     const { asFragment } = renderWithTheme(
       <div>
         <Helper id="id-helper" size="small" helper="helper" />
