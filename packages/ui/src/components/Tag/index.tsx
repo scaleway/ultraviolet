@@ -107,7 +107,12 @@ export const Tag = ({
         <button
           className={cn(
             className,
-            tagStyle.container({ copiable, disabled, sentiment }),
+            tagStyle.container({
+              copiable,
+              disabled,
+              sentiment,
+              closable: !!onClose,
+            }),
           )}
           data-testid={dataTestId}
           disabled={disabled}
@@ -122,6 +127,7 @@ export const Tag = ({
             disabled={disabled}
             isLoading={isLoading}
             onClose={onClose}
+            sentiment={sentiment}
             variant={variant}
           >
             {children}
@@ -133,7 +139,10 @@ export const Tag = ({
 
   return (
     <span
-      className={cn(className, tagStyle.container({ disabled, sentiment }))}
+      className={cn(
+        className,
+        tagStyle.container({ disabled, sentiment, closable: !!onClose }),
+      )}
       data-testid={dataTestId}
       style={style}
     >
@@ -141,6 +150,7 @@ export const Tag = ({
         disabled={disabled}
         isLoading={isLoading}
         onClose={onClose}
+        sentiment={sentiment}
         variant={variant}
       >
         {children}

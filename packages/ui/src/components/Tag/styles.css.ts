@@ -46,6 +46,12 @@ const container = recipe({
         cursor: 'not-allowed',
       },
     },
+    closable: {
+      true: {
+        paddingRight: theme.space[0.5],
+        gap: theme.space[0.5],
+      },
+    },
 
     sentiment: Object.fromEntries(
       SENTIMENTS.map(sentiment => [
@@ -127,10 +133,4 @@ const text = style({
   maxWidth: '14.5rem',
 })
 
-const closeButton = style({
-  height: 'fit-content',
-  padding: theme.space['0.25'],
-  width: 'fit-content',
-})
-
-export const tagStyle = { container, text, closeButton }
+export const tagStyle = { container, text }

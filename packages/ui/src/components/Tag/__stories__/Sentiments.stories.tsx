@@ -16,6 +16,7 @@ export const Sentiments = (props: ComponentProps<typeof Tag>) =>
       key={sentiment}
       sentiment={sentiment}
       variant={props.variant}
+      onClose={() => {}}
     >
       {sentiment}
     </Tag>
