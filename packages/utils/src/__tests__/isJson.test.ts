@@ -1,10 +1,10 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { isJSONString } from '../isJson'
 
 describe(isJSONString, () => {
-  test.each`
-    test                      | value            | expected
+  it.each`
+    it                        | value            | expected
     ${'is correct JSON'}      | ${'{ "a": 10 }'} | ${true}
     ${'is Boolean'}           | ${true}          | ${true}
     ${'is Number'}            | ${10}            | ${true}

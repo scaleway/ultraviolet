@@ -1,5 +1,5 @@
 import { renderWithForm } from '@utils/test'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { SelectableCardOptionGroupField } from '../..'
 import centos from '../__stories__/assets/centos.svg'
@@ -12,7 +12,7 @@ import {
 } from '../__stories__/constants'
 
 describe('selectableCardOptionGroupField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <SelectableCardOptionGroupField
         legend="Select your OS"

@@ -1,12 +1,12 @@
 import { act, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, vi, it } from 'vitest'
 
 import { SelectableCardField } from '../..'
 
 describe('selectableCardField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <SelectableCardField label="test" name="test" value="test">
         Radio field
@@ -15,7 +15,7 @@ describe('selectableCardField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly disabled', () => {
+  it('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
       <SelectableCardField disabled label="test" name="test" value="disabled">
         Radio field disabled
@@ -26,7 +26,7 @@ describe('selectableCardField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly checked', () => {
+  it('should render correctly checked', () => {
     const { asFragment } = renderWithForm(
       <SelectableCardField label="test" name="test" value="checked">
         Radio field checked
@@ -38,7 +38,7 @@ describe('selectableCardField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events correctly', async () => {
+  it('should trigger events correctly', async () => {
     const onFocus = vi.fn(() => {})
     const onChange = vi.fn(() => {})
     const onBlur = vi.fn(() => {})
@@ -66,7 +66,7 @@ describe('selectableCardField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with errors', async () => {
+  it('should render correctly with errors', async () => {
     const { asFragment } = renderWithForm(
       <>
         <SelectableCardField label="test" name="test" required value="checked">

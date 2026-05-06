@@ -1,50 +1,50 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { Label } from '..'
 
 describe('dateInput', () => {
-  test('renders correctly with default props', () => {
+  it('renders correctly with default props', () => {
     const { asFragment } = renderWithTheme(<Label>Label</Label>)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly required', () => {
+  it('renders correctly required', () => {
     const { asFragment } = renderWithTheme(<Label required>Label</Label>)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with label description (string)', () => {
+  it('renders correctly with label description (string)', () => {
     const { asFragment } = renderWithTheme(
       <Label labelDescription="test">Label</Label>,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with label description (ReactNode)', () => {
+  it('renders correctly with label description (ReactNode)', () => {
     const { asFragment } = renderWithTheme(
       <Label labelDescription={<div>test</div>}>Label</Label>,
     )
     expect(asFragment()).toMatchSnapshot()
   })
-  test('renders correctly small', () => {
+  it('renders correctly small', () => {
     const { asFragment } = renderWithTheme(<Label size="small">Label</Label>)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly medium', () => {
+  it('renders correctly medium', () => {
     const { asFragment } = renderWithTheme(<Label size="medium">Label</Label>)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly large', () => {
+  it('renders correctly large', () => {
     const { asFragment } = renderWithTheme(<Label size="large">Label</Label>)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with htmlFor', async () => {
+  it('renders correctly with htmlFor', async () => {
     const { asFragment } = renderWithTheme(
       <div>
         <Label htmlFor="id" id="id-label" size="small">

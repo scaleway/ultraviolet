@@ -5,7 +5,7 @@ import {
   shouldMatchSnapshot,
   shouldMatchSnapshotWithPortal,
 } from '@utils/test'
-import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
+import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { Menu } from '..'
 
@@ -24,26 +24,26 @@ describe('menu', () => {
     vi.restoreAllMocks()
   })
 
-  test('renders with disclosure not a function', () =>
+  it('renders with disclosure not a function', () =>
     shouldMatchSnapshotWithPortal(
       <Menu disclosure={disclosure}>
         <Menu.Item>Menu.Item should not be visible in test</Menu.Item>
       </Menu>,
     ))
-  test('renders with visible=false', () =>
+  it('renders with visible=false', () =>
     shouldMatchSnapshotWithPortal(
       <Menu disclosure={() => disclosure}>
         <Menu.Item>Menu.Item should not be visible in test</Menu.Item>
       </Menu>,
     ))
-  test('renders with Menu.Item', () =>
+  it('renders with Menu.Item', () =>
     shouldMatchSnapshotWithPortal(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Item>Menu.Item</Menu.Item>
       </Menu>,
     ))
 
-  test('renders with Menu.Group', () =>
+  it('renders with Menu.Group', () =>
     shouldMatchSnapshotWithPortal(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Group label="Group">
@@ -52,7 +52,7 @@ describe('menu', () => {
       </Menu>,
     ))
 
-  test('renders with Menu.Group and labelDescription', () =>
+  it('renders with Menu.Group and labelDescription', () =>
     shouldMatchSnapshotWithPortal(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Group label="Group" labelDescription="This is a description">
@@ -61,14 +61,14 @@ describe('menu', () => {
       </Menu>,
     ))
 
-  test('renders with Menu.ItemLink', () =>
+  it('renders with Menu.ItemLink', () =>
     shouldMatchSnapshotWithPortal(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
       </Menu>,
     ))
 
-  test(`renders with triggerMethod "hover"`, async () => {
+  it(`renders with triggerMethod "hover"`, async () => {
     renderWithTheme(
       <Menu disclosure={() => disclosure} triggerMethod="hover" visible>
         <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
@@ -93,7 +93,7 @@ describe('menu', () => {
     await waitFor(() => expect(menu).not.toBeVisible())
   })
 
-  test('renders with Menu.ItemLink & Menu.Item disabled', () =>
+  it('renders with Menu.ItemLink & Menu.Item disabled', () =>
     shouldMatchSnapshotWithPortal(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Item disabled>Menu.Item disabled</Menu.Item>
@@ -103,7 +103,7 @@ describe('menu', () => {
       </Menu>,
     ))
 
-  test('disclosure Component render with function disclosure', async () => {
+  it('disclosure Component render with function disclosure', async () => {
     renderWithTheme(
       <Menu disclosure={() => disclosure} id="menu">
         <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
@@ -116,7 +116,7 @@ describe('menu', () => {
     await userEvent.click(menuButton)
   })
 
-  test('disclosure Component render with function children', async () => {
+  it('disclosure Component render with function children', async () => {
     renderWithTheme(
       <Menu disclosure={() => disclosure} id="menu">
         {({ toggle }) => (
@@ -142,7 +142,7 @@ describe('menu', () => {
     })
   })
 
-  test('should hideOnClickItem', async () => {
+  it('should hideOnClickItem', async () => {
     renderWithTheme(
       <Menu disclosure={() => disclosure} hideOnClickItem id="menu">
         <Menu.Item>Test</Menu.Item>
@@ -165,7 +165,7 @@ describe('menu', () => {
     })
   })
 
-  test('should search on simple childs', async () => {
+  it('should search on simple childs', async () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} id="menu" searchable>
         <Menu.Item>Disk</Menu.Item>
@@ -191,7 +191,7 @@ describe('menu', () => {
     expect(items[0]).toHaveTextContent('Disk')
   })
 
-  test('should search on simple complex childs', async () => {
+  it('should search on simple complex childs', async () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} id="menu" searchable>
         <Menu.Item>
@@ -226,14 +226,14 @@ describe('menu', () => {
     expect(items.length).toBe(1)
     expect(items[0]).toHaveTextContent('Disk')
   })
-  test('renders with footer', () =>
+  it('renders with footer', () =>
     shouldMatchSnapshot(
       <Menu disclosure={() => disclosure} footer="Footer" visible>
         <Menu.Item>Not footer</Menu.Item>
       </Menu>,
     ))
 
-  test('renders with rightComponent', async () => {
+  it('renders with rightComponent', async () => {
     const onClick = vi.fn()
     const onClickMenu = vi.fn()
     const { asFragment } = renderWithTheme(
@@ -271,7 +271,7 @@ describe('menu', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders with rightComponent and link item', async () => {
+  it('renders with rightComponent and link item', async () => {
     const onClick = vi.fn()
     const onClickMenu = vi.fn()
     const { asFragment } = renderWithTheme(
@@ -310,7 +310,7 @@ describe('menu', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders with rightComponent and link item (keyboard navigation)', async () => {
+  it('renders with rightComponent and link item (keyboard navigation)', async () => {
     const onKeyDown = vi.fn()
     const onClickMenu = vi.fn()
     const { asFragment } = renderWithTheme(
@@ -353,7 +353,7 @@ describe('menu', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders with rightComponent  (keyboard navigation)', async () => {
+  it('renders with rightComponent  (keyboard navigation)', async () => {
     const onKeyDown = vi.fn()
     const onClickMenu = vi.fn()
     const { asFragment } = renderWithTheme(
@@ -394,7 +394,7 @@ describe('menu', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
-  test('renders nested', async () => {
+  it('renders nested', async () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} searchable>
         <Menu.Item borderless>Power on</Menu.Item>
@@ -424,7 +424,7 @@ describe('menu', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('parent menu should stay visible after opening nested menu', async () => {
+  it('parent menu should stay visible after opening nested menu', async () => {
     renderWithTheme(
       <Menu disclosure={() => disclosure}>
         <Menu.Item>Item 1</Menu.Item>
@@ -457,7 +457,7 @@ describe('menu', () => {
     expect(screen.getByText('Nested Item')).toBeVisible()
   })
 
-  test('can navigate with arrow keys', async () => {
+  it('can navigate with arrow keys', async () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure}>
         <Menu.Item borderless data-testid="item">
@@ -498,27 +498,27 @@ describe('menu', () => {
   })
 
   describe('placement', () => {
-    test('renders top', () =>
+    it('renders top', () =>
       shouldMatchSnapshot(
         <Menu disclosure={() => disclosure} placement="top" visible>
           <Menu.Item>top</Menu.Item>
         </Menu>,
       ))
 
-    test('renders bottom', () =>
+    it('renders bottom', () =>
       shouldMatchSnapshot(
         <Menu disclosure={() => disclosure} placement="bottom" visible>
           <Menu.Item>bottom</Menu.Item>
         </Menu>,
       ))
 
-    test('renders left', () =>
+    it('renders left', () =>
       shouldMatchSnapshot(
         <Menu disclosure={() => disclosure} placement="left" visible>
           <Menu.Item>left</Menu.Item>
         </Menu>,
       ))
-    test('renders right', () =>
+    it('renders right', () =>
       shouldMatchSnapshot(
         <Menu disclosure={() => disclosure} placement="right" visible>
           <Menu.Item>right</Menu.Item>
@@ -527,40 +527,40 @@ describe('menu', () => {
   })
 
   describe('menu.Item', () => {
-    test('render with default props', () =>
+    it('render with default props', () =>
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item>Default Props</Menu.Item>
         </Menu>,
       ))
 
-    test('render with sentiment danger', () =>
+    it('render with sentiment danger', () =>
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item sentiment="danger">Danger</Menu.Item>
         </Menu>,
       ))
 
-    test('render with disabled props', () =>
+    it('render with disabled props', () =>
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item disabled>Disabled Props</Menu.Item>
         </Menu>,
       ))
-    test('render with borderless props', () =>
+    it('render with borderless props', () =>
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item borderless>Borderless Props</Menu.Item>
         </Menu>,
       ))
-    test('render with active props', () =>
+    it('render with active props', () =>
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item active>Active Props</Menu.Item>
         </Menu>,
       ))
 
-    test('should hideOnClick for specific item', async () => {
+    it('should hideOnClick for specific item', async () => {
       renderWithTheme(
         <Menu disclosure={() => disclosure} id="menu">
           <Menu.Item hideOnClick>Should Hide</Menu.Item>

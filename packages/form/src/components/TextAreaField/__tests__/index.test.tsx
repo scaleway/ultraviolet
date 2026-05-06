@@ -2,21 +2,21 @@ import { renderHook, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { TextAreaField } from '..'
 import { Submit } from '../..'
 import { Form } from '../../Form'
 
 describe('textAreaField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <TextAreaField label="Test" name="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should submit with onSubmitEnter prop', async () => {
+  it('should submit with onSubmitEnter prop', async () => {
     const onSubmit = vi.fn()
     const { result } = renderHook(() => useForm<{ test: string }>())
 
@@ -44,7 +44,7 @@ describe('textAreaField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly generated', async () => {
+  it('should render correctly generated', async () => {
     const onSubmit = vi.fn()
     const { result } = renderHook(() => useForm<{ test: string }>())
 

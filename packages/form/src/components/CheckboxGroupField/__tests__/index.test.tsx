@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, vi, it } from 'vitest'
 
 import { CheckboxGroupField } from '..'
 
 describe('checkboxField', () => {
-  test('should render correctly checked', async () => {
+  it('should render correctly checked', async () => {
     const { asFragment } = renderWithForm(
       <CheckboxGroupField legend="Label" name="Checkbox" onChange={() => {}}>
         <CheckboxGroupField.Checkbox name="value-1" value="value-1">
@@ -35,7 +35,7 @@ describe('checkboxField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events correctly with required prop', async () => {
+  it('should trigger events correctly with required prop', async () => {
     const onChange = vi.fn(() => {})
 
     const { asFragment } = renderWithForm(

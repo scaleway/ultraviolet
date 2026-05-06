@@ -1,20 +1,20 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { ExpandableCard } from '..'
 import { Text } from '../../Text'
 
 describe('expandableCard', () => {
-  test('renders correctly with default values', () => {
+  it('renders correctly with default values', () => {
     const { asFragment } = renderWithTheme(
       <ExpandableCard header="Title">Content</ExpandableCard>,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with complex header', () => {
+  it('renders correctly with complex header', () => {
     const { asFragment } = renderWithTheme(
       <ExpandableCard
         header={
@@ -32,7 +32,7 @@ describe('expandableCard', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('works properly when clicked', async () => {
+  it('works properly when clicked', async () => {
     renderWithTheme(<ExpandableCard header="Title">Content</ExpandableCard>)
 
     await userEvent.click(screen.getByText('Title'))
@@ -41,7 +41,7 @@ describe('expandableCard', () => {
     // The content should exist in the document after clicking
   })
 
-  test('works properly when disabled', async () => {
+  it('works properly when disabled', async () => {
     renderWithTheme(
       <ExpandableCard disabled header="Title">
         Content
@@ -53,16 +53,7 @@ describe('expandableCard', () => {
     // For disabled cards, the content should still exist in the document
   })
 
-  test('works properly when clicked', async () => {
-    renderWithTheme(<ExpandableCard header="Title">Content</ExpandableCard>)
-
-    await userEvent.click(screen.getByText('Title'))
-    expect(screen.getByText('Content')).toBeInTheDocument()
-    // In happy-dom, we need to check the actual state of the component
-    // The content should exist in the document after clicking
-  })
-
-  test('works properly draggable', async () => {
+  it('works properly draggable', async () => {
     const onDrop = vi.fn()
     const onKeyDown = vi.fn()
     const { asFragment } = renderWithTheme(
@@ -93,6 +84,7 @@ describe('expandableCard', () => {
     fireEvent.dragOver(dropZone)
     fireEvent.drop(dropZone, {
       dataTransfer: {
+        // oxlint-disable-next-line vitest/no-conditional-in-test
         getData: (type: string) => (type === 'text' ? data : ''),
       },
     })
@@ -108,7 +100,7 @@ describe('expandableCard', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('works properly when controlled and open with key interaction', async () => {
+  it('works properly when controlled and open with key interaction', async () => {
     const onToggleExpand = vi.fn()
     renderWithTheme(
       <ExpandableCard
@@ -129,7 +121,7 @@ describe('expandableCard', () => {
     })
   })
 
-  test('works properly when uncontrolled and open', async () => {
+  it('works properly when uncontrolled and open', async () => {
     renderWithTheme(
       <ExpandableCard data-testid="expandablecard" header="Title" open>
         Content

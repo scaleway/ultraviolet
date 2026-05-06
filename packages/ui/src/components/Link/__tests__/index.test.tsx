@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { forwardRef } from 'react'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { Link } from '..'
 import { PROMINENCES } from '../constants'
@@ -21,11 +21,11 @@ const MockNextLink = forwardRef<
 MockNextLink.displayName = 'MockNextLink'
 
 describe('link', () => {
-  test('render correctly with no sentiment', () =>
+  it('render correctly with no sentiment', () =>
     shouldMatchSnapshot(<Link href="/">Hello</Link>))
 
   describe('sentiment', () => {
-    test.each(
+    it.each(
       ['primary', 'info'].map(sentiment => [`render ${sentiment}`, sentiment]),
     )('%s', (_, sentiment) =>
       shouldMatchSnapshot(
@@ -37,7 +37,7 @@ describe('link', () => {
   })
 
   describe('prominence', () => {
-    test.each(
+    it.each(
       Object.keys(PROMINENCES).map(prominence => [
         `render prominence ${prominence}`,
         prominence,
@@ -51,24 +51,21 @@ describe('link', () => {
     )
   })
 
-  test('render correctly with target blank', () =>
+  it('render correctly with target blank', () =>
     shouldMatchSnapshot(
       <Link href="/" target="_blank">
         Hello
       </Link>,
     ))
 
-  test('render correctly prop primary', () =>
+  it('render correctly prop primary', () =>
     shouldMatchSnapshot(
       <Link href="/" sentiment="primary">
         Hello
       </Link>,
     ))
 
-  test('render correctly with href props', () =>
-    shouldMatchSnapshot(<Link href="/">Hello</Link>))
-
-  test('render correctly with href props', () =>
+  it('render correctly with href props', () =>
     shouldMatchSnapshot(
       <>
         <Link href="/" iconPosition="left">
@@ -86,7 +83,7 @@ describe('link', () => {
       </>,
     ))
 
-  test('render correctly with variants props', () =>
+  it('render correctly with variants props', () =>
     shouldMatchSnapshot(
       <>
         <Link href="/" variant="inline">
@@ -98,7 +95,7 @@ describe('link', () => {
       </>,
     ))
 
-  test('render correctly with bad sentiment', () =>
+  it('render correctly with bad sentiment', () =>
     shouldMatchSnapshot(
       // @ts-expect-error Use a wrong sentiment
       <Link href="/" sentiment="wrong">
@@ -106,7 +103,7 @@ describe('link', () => {
       </Link>,
     ))
 
-  test('render correctly with sizes', () =>
+  it('render correctly with sizes', () =>
     shouldMatchSnapshot(
       <>
         <Link href="/" size="large">
@@ -123,7 +120,7 @@ describe('link', () => {
       </>,
     ))
 
-  test('render correctly with oneLine', () =>
+  it('render correctly with oneLine', () =>
     shouldMatchSnapshot(
       <div style={{ marginBottom: 16, marginTop: 8, width: 200 }}>
         <Link href="/" oneLine>
@@ -134,14 +131,14 @@ describe('link', () => {
 
   describe('render prop', () => {
     describe('element form', () => {
-      test('render correctly with render prop', () =>
+      it('render correctly with render prop', () =>
         shouldMatchSnapshot(
           <Link render={<MockNextLink href="/about" />} sentiment="primary">
             About
           </Link>,
         ))
 
-      test('render correctly with render prop and different sentiments', () =>
+      it('render correctly with render prop and different sentiments', () =>
         shouldMatchSnapshot(
           <>
             <Link render={<MockNextLink href="/about" />} sentiment="primary">
@@ -153,7 +150,7 @@ describe('link', () => {
           </>,
         ))
 
-      test('render correctly with render prop and sizes', () =>
+      it('render correctly with render prop and sizes', () =>
         shouldMatchSnapshot(
           <>
             <Link render={<MockNextLink href="/about" />} size="large">
@@ -168,7 +165,7 @@ describe('link', () => {
           </>,
         ))
 
-      test('merges className correctly with render prop', () => {
+      it('merges className correctly with render prop', () => {
         renderWithTheme(
           <Link
             data-testid="link"
@@ -183,7 +180,7 @@ describe('link', () => {
         expect(link.className).toContain('custom-class')
       })
 
-      test('forwards ref correctly with render prop', () => {
+      it('forwards ref correctly with render prop', () => {
         const ref = vi.fn()
         renderWithTheme(
           <Link
@@ -198,7 +195,7 @@ describe('link', () => {
         expect(ref).toHaveBeenCalled()
       })
 
-      test('handles click events with render prop', async () => {
+      it('handles click events with render prop', async () => {
         const onClick = vi.fn()
         renderWithTheme(
           <Link
@@ -220,7 +217,7 @@ describe('link', () => {
     })
 
     describe('function form', () => {
-      test('render correctly with render function', () =>
+      it('render correctly with render function', () =>
         shouldMatchSnapshot(
           <Link
             render={props => <MockNextLink {...props} href="/about" />}
@@ -230,7 +227,7 @@ describe('link', () => {
           </Link>,
         ))
 
-      test('passes props to render function', () => {
+      it('passes props to render function', () => {
         renderWithTheme(
           <Link
             className="link-class"
@@ -247,7 +244,7 @@ describe('link', () => {
         expect(link.className).toContain('link-class')
       })
 
-      test('forwards ref correctly with render function', () => {
+      it('forwards ref correctly with render function', () => {
         const ref = vi.fn()
         renderWithTheme(
           <Link

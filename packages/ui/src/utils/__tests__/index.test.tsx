@@ -1,5 +1,5 @@
 import { getUUID } from '@ultraviolet/utils'
-import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 describe('ids', () => {
   describe(getUUID, () => {
@@ -13,11 +13,11 @@ describe('ids', () => {
       vi.spyOn(globalThis.Math, 'random').mockRestore()
     })
 
-    test('returns correctly without arguments', () => {
+    it('returns correctly without arguments', () => {
       expect(getUUID()).toMatchSnapshot()
     })
 
-    test('returns correctly with a prefix', () => {
+    it('returns correctly with a prefix', () => {
       expect(getUUID('ah')).toMatchSnapshot()
     })
   })

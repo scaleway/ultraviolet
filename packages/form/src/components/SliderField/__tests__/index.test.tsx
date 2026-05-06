@@ -2,7 +2,7 @@ import { act, fireEvent, renderHook, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, vi, it } from 'vitest'
 
 import { SliderField, Submit } from '../..'
 import { Form } from '../../Form'
@@ -18,26 +18,26 @@ const options = [
 ]
 
 describe('sliderField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(<SliderField name="test" value={0} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with possible values', () => {
+  it('should render correctly with possible values', () => {
     const { asFragment } = renderWithForm(
       <SliderField name="test" options={options} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with possible values and double', () => {
+  it('should render correctly with possible values and double', () => {
     const { asFragment } = renderWithForm(
       <SliderField double name="test" options={options} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly disabled', () => {
+  it('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
       <SliderField aria-label="Slider Input" disabled name="test" value={10} />,
     )
@@ -47,7 +47,7 @@ describe('sliderField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events correctly', () => {
+  it('should trigger events correctly', () => {
     const onFocus = vi.fn(() => {})
     const onBlur = vi.fn(() => {})
 
@@ -71,7 +71,7 @@ describe('sliderField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should work fine with form setValue', async () => {
+  it('should work fine with form setValue', async () => {
     const onSubmit = vi.fn()
     const onBlur = vi.fn(() => {})
     const { result } = renderHook(() =>
@@ -118,7 +118,7 @@ describe('sliderField', () => {
     expect(slider.value).toBe('10')
   })
 
-  test('should work correctly with possibleValues', () => {
+  it('should work correctly with possibleValues', () => {
     const { result } = renderHook(() => useForm({ mode: 'onChange' }))
 
     renderWithTheme(
@@ -142,7 +142,7 @@ describe('sliderField', () => {
     expect(result.current.getValues('test')).toBe(100)
   })
 
-  test('should work correctly with possibleValues and double', () => {
+  it('should work correctly with possibleValues and double', () => {
     const { result } = renderHook(() => useForm({ mode: 'onChange' }))
 
     renderWithTheme(

@@ -2,25 +2,25 @@ import { act, renderHook, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, vi, it } from 'vitest'
 
 import { CheckboxField } from '../..'
 import { Form } from '../../Form'
 
 describe('checkboxField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(<CheckboxField name="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with aria-label', () => {
+  it('should render correctly with aria-label', () => {
     const { asFragment } = renderWithForm(
       <CheckboxField aria-label="test" name="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly disabled', () => {
+  it('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
       <CheckboxField disabled name="test" />,
     )
@@ -31,7 +31,7 @@ describe('checkboxField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly checked without value', () => {
+  it('should render correctly checked without value', () => {
     const { asFragment } = renderWithForm(<CheckboxField name="checked" />, {
       defaultValues: {
         checked: true,
@@ -43,7 +43,7 @@ describe('checkboxField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly not checked without value', () => {
+  it('should render correctly not checked without value', () => {
     const { asFragment } = renderWithForm(<CheckboxField name="checked" />, {
       defaultValues: {},
     })
@@ -53,7 +53,7 @@ describe('checkboxField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events correctly', async () => {
+  it('should trigger events correctly', async () => {
     const onFocus = vi.fn(() => {})
     const onChange = vi.fn(() => {})
     const onBlur = vi.fn(() => {})
@@ -79,7 +79,7 @@ describe('checkboxField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with errors', async () => {
+  it('should render correctly with errors', async () => {
     const { result } = renderHook(() => useForm({ mode: 'onChange' }))
     const { asFragment } = renderWithTheme(
       <Form

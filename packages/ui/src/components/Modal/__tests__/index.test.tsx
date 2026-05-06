@@ -2,7 +2,7 @@ import { renderHook, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
-import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
+import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { Modal } from '..'
 import illustration from '../__stories__/assets/illustration.webp'
@@ -21,54 +21,54 @@ describe('modal', () => {
     vi.restoreAllMocks()
   })
 
-  test('useModal() should throw error if not rendered in provider', () => {
+  it('useModal() should throw error if not rendered in provider', () => {
     expect(() => renderHook(() => useModal())).toThrow(
       'useModal must be used within a ModalProvider',
     )
   })
 
-  test('renders with default Props', () =>
+  it('renders with default Props', () =>
     shouldMatchSnapshotWithPortal(
       <Modal disclosure={<button type="button">Test</button>}>
         <div>test</div>
       </Modal>,
     ))
 
-  test('renders without disclosure', () =>
+  it('renders without disclosure', () =>
     shouldMatchSnapshotWithPortal(
       <Modal disclosure={undefined}>
         <div>test</div>
       </Modal>,
     ))
 
-  test('renders with default Props and function children', () =>
+  it('renders with default Props and function children', () =>
     shouldMatchSnapshotWithPortal(<Modal>{() => <div>test</div>}</Modal>))
 
-  test('renders with default Props and function children open', () =>
+  it('renders with default Props and function children open', () =>
     shouldMatchSnapshotWithPortal(<Modal open>{() => <div>test</div>}</Modal>))
 
-  test('renders with open={true}', () =>
+  it('renders with open={true}', () =>
     shouldMatchSnapshotWithPortal(
       <Modal open>
         <div>test</div>
       </Modal>,
     ))
 
-  test('renders with open={true} and no close icon', () =>
+  it('renders with open={true} and no close icon', () =>
     shouldMatchSnapshotWithPortal(
       <Modal isClosable={false} open>
         <div>test</div>
       </Modal>,
     ))
 
-  test('renders open custom size', () =>
+  it('renders open custom size', () =>
     shouldMatchSnapshotWithPortal(
       <Modal open size="medium">
         <div>test</div>
       </Modal>,
     ))
 
-  test('renders with custom classNames', () =>
+  it('renders with custom classNames', () =>
     shouldMatchSnapshotWithPortal(
       <Modal
         backdropClassName={customDialogBackdropStyles}
@@ -79,14 +79,14 @@ describe('modal', () => {
       </Modal>,
     ))
 
-  test('renders with image', () =>
+  it('renders with image', () =>
     shouldMatchSnapshotWithPortal(
       <Modal image={illustration} isClosable={false} open>
         <div>test</div>
       </Modal>,
     ))
 
-  test('renders with disclosure', () =>
+  it('renders with disclosure', () =>
     shouldMatchSnapshotWithPortal(
       <Modal
         ariaLabel="modal-test"
@@ -97,7 +97,7 @@ describe('modal', () => {
       </Modal>,
     ))
 
-  test('renders with disclosure and onBeforeClose', async () => {
+  it('renders with disclosure and onBeforeClose', async () => {
     let count = 0
     const { asFragment } = renderWithTheme(
       <Modal
@@ -124,7 +124,7 @@ describe('modal', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders with disclosure and onClose', async () => {
+  it('renders with disclosure and onClose', async () => {
     let count = 0
     const { asFragment } = renderWithTheme(
       <Modal
@@ -151,7 +151,7 @@ describe('modal', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('disclosure function render onClick props is called', async () => {
+  it('disclosure function render onClick props is called', async () => {
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
@@ -170,7 +170,7 @@ describe('modal', () => {
     expect(mockOnClick).toHaveBeenCalledOnce()
   })
 
-  test('disclosure function render onClick props is call with toggle', async () => {
+  it('disclosure function render onClick props is call with toggle', async () => {
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
@@ -195,7 +195,7 @@ describe('modal', () => {
     expect(mockOnClick).toHaveBeenCalledOnce()
   })
 
-  test(`should call 'close' prop from render props`, async () => {
+  it(`should call 'close' prop from render props`, async () => {
     renderWithTheme(
       <Modal ariaLabel="modal-test" id="modal-test" open>
         {({ close }) => (
@@ -216,7 +216,7 @@ describe('modal', () => {
     expect(mockOnClick).toHaveBeenCalledOnce()
   })
 
-  test('disclosure Component render onClick props is call', async () => {
+  it('disclosure Component render onClick props is call', async () => {
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
@@ -236,7 +236,7 @@ describe('modal', () => {
     expect(mockOnClick).toHaveBeenCalledOnce()
   })
 
-  test('test hideOnEsc is true', async () => {
+  it('test hideOnEsc is true', async () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Modal
@@ -255,7 +255,7 @@ describe('modal', () => {
     expect(mockOnClose).toHaveBeenCalledOnce()
   })
 
-  test('test hideOnEsc is false', async () => {
+  it('test hideOnEsc is false', async () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Modal
@@ -273,7 +273,7 @@ describe('modal', () => {
     expect(mockOnClose).not.toHaveBeenCalled()
   })
 
-  test('test hideOnClickOutside is true', async () => {
+  it('test hideOnClickOutside is true', async () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Modal
@@ -293,7 +293,7 @@ describe('modal', () => {
     expect(mockOnClose).toHaveBeenCalledOnce()
   })
 
-  test('test hideOnClickOutside is false', async () => {
+  it('test hideOnClickOutside is false', async () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Modal

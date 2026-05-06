@@ -2,9 +2,10 @@ import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { EscapeIcon } from '@ultraviolet/icons/EscapeIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, it, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { SteppedListCard } from '..'
+// oxlint-disable-next-line vitest/no-mocks-import
 import { blockStorageWire } from '../__mocks__/blockStorageWire'
 
 describe('steppedListCard', () => {
@@ -107,7 +108,7 @@ describe('steppedListCard', () => {
       </SteppedListCard>,
     ))
 
-  test('should handle checked steps and navigation', async () => {
+  it('should handle checked steps and navigation', async () => {
     renderWithTheme(
       <SteppedListCard
         header="Header"
@@ -181,7 +182,7 @@ describe('steppedListCard', () => {
     expect(contentStep2clicked).not.toBeVisible()
   })
 
-  test('should handle custom hide button', async () => {
+  it('should handle custom hide button', async () => {
     renderWithTheme(
       <SteppedListCard
         header="Header"
@@ -234,7 +235,7 @@ describe('steppedListCard', () => {
     expect(content).toBeInTheDocument()
   })
 
-  test('should handle default hide button', async () => {
+  it('should handle default hide button', async () => {
     renderWithTheme(
       <SteppedListCard header="Header" steps={['step1', 'step2']}>
         <SteppedListCard.Step

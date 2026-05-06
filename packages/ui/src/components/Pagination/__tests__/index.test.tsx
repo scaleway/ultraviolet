@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { Pagination } from '..'
 
 describe('pagination', () => {
-  test('should render correctly', async () => {
+  it('should render correctly', async () => {
     const mockOnClick = vi.fn()
     const { asFragment } = renderWithTheme(
       <Pagination
@@ -23,7 +23,7 @@ describe('pagination', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with pageCount is 1', async () => {
+  it('should render correctly with pageCount is 1', async () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
@@ -36,7 +36,7 @@ describe('pagination', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly component with pageTabCount', async () => {
+  it('should render correctly component with pageTabCount', async () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
@@ -49,7 +49,7 @@ describe('pagination', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly component with disabled', async () => {
+  it('should render correctly component with disabled', async () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
@@ -62,7 +62,7 @@ describe('pagination', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with page < 1', () => {
+  it('should render correctly with page < 1', () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
@@ -72,7 +72,7 @@ describe('pagination', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with page > pageCount', () => {
+  it('should render correctly with page > pageCount', () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
@@ -82,7 +82,7 @@ describe('pagination', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with pageClick', async () => {
+  it('should render correctly with pageClick', async () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
@@ -105,7 +105,7 @@ describe('pagination', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with perPage - default values', async () => {
+  it('should render correctly with perPage - default values', async () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
@@ -124,7 +124,7 @@ describe('pagination', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with perPage', async () => {
+  it('should render correctly with perPage', async () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
@@ -145,7 +145,7 @@ describe('pagination', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should work correctly with perPage', async () => {
+  it('should work correctly with perPage', async () => {
     const mockOnClick = vi.fn()
     const mockOnClickPerPage = vi.fn()
 

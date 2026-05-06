@@ -1,26 +1,26 @@
 import { act, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, vi, it } from 'vitest'
 
 import { RadioField } from '..'
 
 describe('radioField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <RadioField label="Radio field" name="test" value="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with aria-label', () => {
+  it('should render correctly with aria-label', () => {
     const { asFragment } = renderWithForm(
       <RadioField aria-label="Radio field" name="test" value="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly disabled', () => {
+  it('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
       <RadioField
         disabled
@@ -34,7 +34,7 @@ describe('radioField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly checked', () => {
+  it('should render correctly checked', () => {
     const { asFragment } = renderWithForm(
       <RadioField label="Radio field checked" name="test" value="checked" />,
       {
@@ -46,7 +46,7 @@ describe('radioField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events correctly', async () => {
+  it('should trigger events correctly', async () => {
     const onFocus = vi.fn(() => {})
     const onChange = vi.fn(() => {})
     const onBlur = vi.fn(() => {})

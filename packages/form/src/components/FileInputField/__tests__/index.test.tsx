@@ -1,26 +1,26 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, vi, it } from 'vitest'
 
 import { FileInputField } from '..'
 
 describe('fileInputField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <FileInputField label="Test" name="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly disabled', () => {
+  it('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
       <FileInputField disabled label="Test" name="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly as an overlay', () => {
+  it('should render correctly as an overlay', () => {
     const { asFragment } = renderWithForm(
       <FileInputField label="Test" name="test" variant="overlay">
         overlay
@@ -29,7 +29,7 @@ describe('fileInputField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events', async () => {
+  it('should trigger events', async () => {
     const onChange = vi.fn()
     const user = userEvent.setup()
     renderWithForm(

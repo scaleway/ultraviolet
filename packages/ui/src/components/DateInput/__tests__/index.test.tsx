@@ -3,7 +3,7 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { es, fr, ru } from 'date-fns/locale'
 import tk from 'timekeeper'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { DateInput } from '..'
 
@@ -13,9 +13,10 @@ const DECEMBER = /December/i
 const YEAR = /1995/i
 
 describe('dateInput', () => {
-  test('renders correctly with default props', () => {
+  it('renders correctly with default props', () => {
     const { asFragment } = renderWithTheme(
       <DateInput
+        // oxlint-disable-next-line vitest/no-conditional-in-test
         format={value => (value instanceof Date ? value.toISOString() : value)}
         label="Date"
         locale={fr}
@@ -29,34 +30,34 @@ describe('dateInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly disabled', () => {
+  it('renders correctly disabled', () => {
     const { asFragment } = renderWithTheme(
       <DateInput disabled label="Date" onChange={() => {}} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly required', () => {
+  it('renders correctly required', () => {
     const { asFragment } = renderWithTheme(
       <DateInput label="Date" onChange={() => {}} required />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly error', () => {
+  it('renders correctly error', () => {
     const { asFragment } = renderWithTheme(
       <DateInput error="error" label="Date" onChange={() => {}} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
-  test('renders correctly error disabled', () => {
+  it('renders correctly error disabled', () => {
     const { asFragment } = renderWithTheme(
       <DateInput disabled error="error" label="Date" onChange={() => {}} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly error disabled required', () => {
+  it('renders correctly error disabled required', () => {
     const { asFragment } = renderWithTheme(
       <DateInput
         disabled
@@ -69,7 +70,7 @@ describe('dateInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly min-max', () => {
+  it('renders correctly min-max', () => {
     const { asFragment } = renderWithTheme(
       <DateInput
         label="Date"
@@ -81,7 +82,7 @@ describe('dateInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with date-fns locale fr', async () => {
+  it('renders correctly with date-fns locale fr', async () => {
     const { asFragment } = renderWithTheme(
       <DateInput label="Date" locale={fr} onChange={() => {}} />,
     )
@@ -90,7 +91,7 @@ describe('dateInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with date-fns locale es', async () => {
+  it('renders correctly with date-fns locale es', async () => {
     const { asFragment } = renderWithTheme(
       <DateInput label="Date" locale={es} onChange={() => {}} />,
     )
@@ -99,7 +100,7 @@ describe('dateInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with date-fns locale ru', async () => {
+  it('renders correctly with date-fns locale ru', async () => {
     const { asFragment } = renderWithTheme(
       <DateInput label="Date" locale={ru} onChange={() => {}} />,
     )
@@ -108,13 +109,13 @@ describe('dateInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('render correctly with showMonthYearPicker', () => {
+  it('render correctly with showMonthYearPicker', () => {
     const { asFragment } = renderWithTheme(
       <DateInput label="Date" onChange={() => {}} showMonthYearPicker />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
-  test('render correctly with showMonthYearPicker with default date', async () => {
+  it('render correctly with showMonthYearPicker with default date', async () => {
     const { asFragment } = renderWithTheme(
       <DateInput
         label="Date"
@@ -130,28 +131,21 @@ describe('dateInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly disabled', () => {
-    const { asFragment } = renderWithTheme(
-      <DateInput disabled label="Date" onChange={() => {}} />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('renders correctly with input = "calendar', () => {
+  it('renders correctly with input = "calendar', () => {
     const { asFragment } = renderWithTheme(
       <DateInput input="calendar" label="Date" onChange={() => {}} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with input = "calendar disabled', () => {
+  it('renders correctly with input = "calendar disabled', () => {
     const { asFragment } = renderWithTheme(
       <DateInput disabled input="calendar" label="Date" onChange={() => {}} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with a array of dates to exclude', async () => {
+  it('renders correctly with a array of dates to exclude', async () => {
     const { asFragment } = renderWithTheme(
       <DateInput
         excludeDates={[
@@ -171,7 +165,7 @@ describe('dateInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('handle correctly click outside', async () => {
+  it('handle correctly click outside', async () => {
     renderWithTheme(
       <>
         Outside
@@ -188,7 +182,7 @@ describe('dateInput', () => {
     expect(calendar).not.toBeVisible()
   })
 
-  test('handle correctly click to change month', async () => {
+  it('handle correctly click to change month', async () => {
     renderWithTheme(
       <>
         Outside
@@ -214,7 +208,7 @@ describe('dateInput', () => {
     expect(visibleMonth.textContent).toContain('December')
   })
 
-  test('handle correctly click to change year', async () => {
+  it('handle correctly click to change year', async () => {
     renderWithTheme(
       <>
         Outside
@@ -241,7 +235,7 @@ describe('dateInput', () => {
     expect(visibleMonth.textContent).toContain('1995')
   })
 
-  test('handle correctly click on date', async () => {
+  it('handle correctly click on date', async () => {
     renderWithTheme(
       <DateInput
         label="Date"
@@ -276,7 +270,7 @@ describe('dateInput', () => {
     expect(input.value).toBe('01/12/1995')
   })
 
-  test('handle correctly click on date range', async () => {
+  it('handle correctly click on date range', async () => {
     renderWithTheme(
       <DateInput
         label="Date"
@@ -310,7 +304,7 @@ describe('dateInput', () => {
     expect(input.value).toBe('20/01/1995 - 31/01/1995')
   })
 
-  test('render correctly with showMonthYearPicker with excluded months', async () => {
+  it('render correctly with showMonthYearPicker with excluded months', async () => {
     const { asFragment } = renderWithTheme(
       <DateInput
         excludeDates={[new Date('1995-10-01'), new Date('1995-02-01')]}
@@ -326,7 +320,7 @@ describe('dateInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('handle correctly click on date with showmonthYearPicker', async () => {
+  it('handle correctly click on date with showmonthYearPicker', async () => {
     renderWithTheme(
       <DateInput
         label="Date"
@@ -346,7 +340,7 @@ describe('dateInput', () => {
     expect(input.value).toBe('01/1995')
   })
 
-  test('handle correctly click on date range with showMonthYearPicker', async () => {
+  it('handle correctly click on date range with showMonthYearPicker', async () => {
     renderWithTheme(
       <DateInput
         label="Date"
@@ -381,10 +375,11 @@ describe('dateInput', () => {
     expect(input.value).toBe('09/1995 - 12/1995')
   })
 
-  test('renders correctly custom format with range', () => {
+  it('renders correctly custom format with range', () => {
     const { asFragment } = renderWithTheme(
       <DateInput
         endDate={new Date('1995-12-11T03:24:00.000+00:00')}
+        // oxlint-disable-next-line vitest/no-conditional-in-test
         format={value => (value instanceof Date ? value.toISOString() : value)}
         label="Date"
         name="test"
@@ -398,7 +393,7 @@ describe('dateInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('handle correctly type in input', async () => {
+  it('handle correctly type in input', async () => {
     const mockOnChange = vi.fn()
     renderWithTheme(
       <DateInput
@@ -417,7 +412,7 @@ describe('dateInput', () => {
     expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
   })
 
-  test('handle correctly type in input with select range', async () => {
+  it('handle correctly type in input with select range', async () => {
     const mockOnChange = vi.fn()
     renderWithTheme(
       <DateInput
@@ -437,7 +432,7 @@ describe('dateInput', () => {
     expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
   })
 
-  test('handle correctly type in input with showMonthYearPicker', async () => {
+  it('handle correctly type in input with showMonthYearPicker', async () => {
     const mockOnChange = vi.fn()
     renderWithTheme(
       <DateInput
@@ -458,7 +453,7 @@ describe('dateInput', () => {
     expect(screen.getByText('2000', { exact: false })).toBeInTheDocument()
   })
 
-  test('handle correctly type in input with select range and showMonthYearPicker', async () => {
+  it('handle correctly type in input with select range and showMonthYearPicker', async () => {
     const mockOnChange = vi.fn()
     renderWithTheme(
       <DateInput

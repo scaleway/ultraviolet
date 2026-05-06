@@ -5,7 +5,7 @@ import {
   UseCaseCategoryIcon,
 } from '@ultraviolet/icons/category'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { Navigation, NavigationProvider } from '..'
 
@@ -147,16 +147,16 @@ const NavigationNested = ({
 )
 
 describe('navigation', () => {
-  test('render with basic content', () =>
+  it('render with basic content', () =>
     shouldMatchSnapshot(<BasicNavigation />))
 
-  test('render without pinnedFeature', () =>
+  it('render without pinnedFeature', () =>
     shouldMatchSnapshot(<BasicNavigation pinnedFeature={false} />))
 
-  test('render with basic content and no expand', () =>
+  it('render with basic content and no expand', () =>
     shouldMatchSnapshot(<BasicNavigationNoExpand />))
 
-  test('click on expand / collapse button', async () => {
+  it('click on expand / collapse button', async () => {
     const { asFragment } = renderWithTheme(<BasicNavigation />)
 
     expect(asFragment()).toMatchSnapshot()
@@ -188,7 +188,7 @@ describe('navigation', () => {
     })
   })
 
-  test('resize manually the navigation using slider', () => {
+  it('resize manually the navigation using slider', () => {
     const { asFragment } = renderWithTheme(<BasicNavigation />)
 
     const slider = screen.getByTestId('slider')
@@ -202,7 +202,7 @@ describe('navigation', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('pin and unpin an item', async () => {
+  it('pin and unpin an item', async () => {
     const { asFragment } = renderWithTheme(<BasicNavigation />)
 
     expect(screen.getByText('You have no pinned items.')).toBeInTheDocument()
@@ -216,6 +216,7 @@ describe('navigation', () => {
       button.textContent?.includes('Servers'),
     )
 
+    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (firstServersButton) {
       // Hover over the button to reveal the pin button
       await userEvent.hover(firstServersButton)
@@ -263,10 +264,12 @@ describe('navigation', () => {
       button.textContent?.includes('Servers'),
     )
 
+    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (serversButton) {
       await userEvent.hover(serversButton)
     }
 
+    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (unpinButton) {
       await userEvent.click(unpinButton)
     }
@@ -274,7 +277,7 @@ describe('navigation', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('with show hide feature', async () => {
+  it('with show hide feature', async () => {
     const onShowHide = vi.fn()
     const { asFragment } = renderWithTheme(
       <NavigationShowHide onShowHide={onShowHide} pinnedFeature />,
@@ -291,7 +294,7 @@ describe('navigation', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('with show hide feature - collapsed', async () => {
+  it('with show hide feature - collapsed', async () => {
     const onShowHide = vi.fn()
     const { asFragment } = renderWithTheme(
       <NavigationShowHide onShowHide={onShowHide} pinnedFeature />,
@@ -314,7 +317,7 @@ describe('navigation', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('with nested items', async () => {
+  it('with nested items', async () => {
     const { asFragment } = renderWithTheme(<NavigationNested pinnedFeature />)
     const advancedItemMenu = screen.getByRole('button', { name: 'Compute' })
     await userEvent.hover(advancedItemMenu)

@@ -108,5 +108,4 @@ EstimateCost.Zone = Zone
 
 EstimateCost.Ellipsis = Ellipsis
 
-// oxlint-disable-next-line eslint-plugin-react-refresh/only-export-components
 export { estimateCostDefaultLocales }

@@ -2,7 +2,7 @@ import { act, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { MacMiniProductIcon } from '@ultraviolet/icons/product/MacMiniProductIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { SelectableCard } from '..'
 
@@ -17,7 +17,7 @@ describe('selectableCard', () => {
 
   for (const type of types) {
     describe(type, () => {
-      test('renders correctly with default props', () =>
+      it('renders correctly with default props', () =>
         shouldMatchSnapshot(
           <SelectableCard
             label="test"
@@ -29,7 +29,7 @@ describe('selectableCard', () => {
           </SelectableCard>,
         ))
 
-      test('renders correctly with aria label', () =>
+      it('renders correctly with aria label', () =>
         shouldMatchSnapshot(
           <SelectableCard
             aria-label="test"
@@ -41,7 +41,7 @@ describe('selectableCard', () => {
           </SelectableCard>,
         ))
 
-      test('renders correctly with showTick', () =>
+      it('renders correctly with showTick', () =>
         shouldMatchSnapshot(
           <SelectableCard
             aria-label="test"
@@ -55,7 +55,7 @@ describe('selectableCard', () => {
           </SelectableCard>,
         ))
 
-      test('renders correctly with checked prop', () =>
+      it('renders correctly with checked prop', () =>
         shouldMatchSnapshot(
           <SelectableCard
             aria-label="test"
@@ -69,7 +69,7 @@ describe('selectableCard', () => {
           </SelectableCard>,
         ))
 
-      test('renders correctly with disabled prop', () =>
+      it('renders correctly with disabled prop', () =>
         shouldMatchSnapshot(
           <SelectableCard
             aria-label="test"
@@ -83,7 +83,7 @@ describe('selectableCard', () => {
           </SelectableCard>,
         ))
 
-      test('renders correctly with isError prop', () =>
+      it('renders correctly with isError prop', () =>
         shouldMatchSnapshot(
           <SelectableCard
             isError
@@ -97,7 +97,7 @@ describe('selectableCard', () => {
           </SelectableCard>,
         ))
 
-      test('renders correctly with tooltip prop', () =>
+      it('renders correctly with tooltip prop', () =>
         shouldMatchSnapshot(
           <SelectableCard
             label="test"
@@ -111,7 +111,7 @@ describe('selectableCard', () => {
           </SelectableCard>,
         ))
 
-      test('renders correctly with complex children', () =>
+      it('renders correctly with complex children', () =>
         shouldMatchSnapshot(
           <SelectableCard
             disabled
@@ -124,7 +124,9 @@ describe('selectableCard', () => {
             {({ checked, disabled }) => (
               <div
                 style={{
+                  // oxlint-disable-next-line vitest/no-conditional-in-test
                   background: disabled ? 'gray' : 'green',
+                  // oxlint-disable-next-line vitest/no-conditional-in-test
                   color: checked ? 'green' : 'gray',
                 }}
               >
@@ -134,7 +136,7 @@ describe('selectableCard', () => {
           </SelectableCard>,
         ))
 
-      test('renders correctly with illustration', () =>
+      it('renders correctly with illustration', () =>
         shouldMatchSnapshot(
           <SelectableCard
             illustration={<IllustrationExample />}
@@ -150,7 +152,7 @@ describe('selectableCard', () => {
           </SelectableCard>,
         ))
 
-      test('renders correctly with indented disabled', () =>
+      it('renders correctly with indented disabled', () =>
         shouldMatchSnapshot(
           <SelectableCard
             indented={false}
@@ -166,7 +168,7 @@ describe('selectableCard', () => {
           </SelectableCard>,
         ))
 
-      test('renders correctly with productIcon', () =>
+      it('renders correctly with productIcon', () =>
         shouldMatchSnapshot(
           <SelectableCard
             label="label"
@@ -182,7 +184,7 @@ describe('selectableCard', () => {
           </SelectableCard>,
         ))
 
-      test('accessibility working with space key pressed to select', async () => {
+      it('accessibility working with space key pressed to select', async () => {
         const onChange = vi.fn()
 
         renderWithTheme(
@@ -206,7 +208,7 @@ describe('selectableCard', () => {
         })
       })
 
-      test('should trigger onChange when click on the label using getByLabelText', async () => {
+      it('should trigger onChange when click on the label using getByLabelText', async () => {
         const onChange = vi.fn()
 
         renderWithTheme(
@@ -229,7 +231,7 @@ describe('selectableCard', () => {
         })
       })
 
-      test('should trigger onChange when click on the label using getByRole', async () => {
+      it('should trigger onChange when click on the label using getByRole', async () => {
         const onChange = vi.fn()
 
         renderWithTheme(
@@ -244,6 +246,7 @@ describe('selectableCard', () => {
           </SelectableCard>,
         )
 
+        // oxlint-disable-next-line vitest/no-conditional-in-test
         const role = type === 'toggle' ? 'checkbox' : type
         const label = screen.getByRole(role, {
           name: 'labelName',
@@ -255,7 +258,7 @@ describe('selectableCard', () => {
         })
       })
 
-      test('should trigger onChange when click on the card', async () => {
+      it('should trigger onChange when click on the card', async () => {
         const onChange = vi.fn()
 
         renderWithTheme(

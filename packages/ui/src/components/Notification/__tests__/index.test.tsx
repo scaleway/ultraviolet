@@ -1,6 +1,6 @@
 import { act, screen } from '@testing-library/react'
 import { renderWithTheme } from '@utils/test'
-import { afterEach, describe, expect, test, vi } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 
 import { NotificationContainer, notification } from '..'
 
@@ -9,7 +9,7 @@ describe('toaster', () => {
     vi.clearAllTimers()
   })
 
-  test('renders correctly with close button', async () => {
+  it('renders correctly with close button', async () => {
     const { asFragment } = renderWithTheme(<NotificationContainer />)
     act(() => {
       notification('Description', 'Title', 'icon', true)
@@ -19,7 +19,7 @@ describe('toaster', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with custom close button', async () => {
+  it('renders correctly with custom close button', async () => {
     const { asFragment } = renderWithTheme(<NotificationContainer />)
     act(() => {
       notification(

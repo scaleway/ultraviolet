@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { Breadcrumbs } from '..'
 
 describe('breadcrumbs', () => {
-  test('renders correctly with default values', () =>
+  it('renders correctly with default values', () =>
     shouldMatchSnapshot(
       <Breadcrumbs>
         <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
@@ -18,7 +18,7 @@ describe('breadcrumbs', () => {
       </Breadcrumbs>,
     ))
 
-  test('renders correctly with minWidth and maxWidth', () =>
+  it('renders correctly with minWidth and maxWidth', () =>
     shouldMatchSnapshot(
       <Breadcrumbs>
         <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
@@ -30,7 +30,7 @@ describe('breadcrumbs', () => {
       </Breadcrumbs>,
     ))
 
-  test('click on middle item', async () => {
+  it('click on middle item', async () => {
     const onClick = vi.fn()
     const { asFragment } = renderWithTheme(
       <Breadcrumbs>
@@ -45,7 +45,7 @@ describe('breadcrumbs', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('last item should no be clickable', () => {
+  it('last item should no be clickable', () => {
     const onClick = vi.fn()
     const { asFragment } = renderWithTheme(
       <Breadcrumbs>
@@ -62,7 +62,7 @@ describe('breadcrumbs', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with invalid child', () => {
+  it('renders correctly with invalid child', () => {
     const { asFragment } = renderWithTheme(
       <Breadcrumbs>Invalid child</Breadcrumbs>,
     )

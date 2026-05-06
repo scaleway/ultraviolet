@@ -1,5 +1,5 @@
 import { shouldMatchSnapshot } from '@utils/test'
-import { describe, test } from 'vitest'
+import { describe, it } from 'vitest'
 
 import { Loader } from '..'
 import { SENTIMENTS } from '../../../theme'
@@ -8,19 +8,19 @@ import { SIZES } from '../constants'
 import type { ComponentProps } from 'react'
 
 describe('loader', () => {
-  test('renders default props', () =>
+  it('renders default props', () =>
     shouldMatchSnapshot(<Loader label="Loading test" />))
 
-  test('renders active with default percentage', () =>
+  it('renders active with default percentage', () =>
     shouldMatchSnapshot(<Loader active label="Loading test" />))
 
-  test('renders active with custom percentage', () =>
+  it('renders active with custom percentage', () =>
     shouldMatchSnapshot(<Loader active label="Loading test" />))
 
-  test('renders with percentage 75', () =>
+  it('renders with percentage 75', () =>
     shouldMatchSnapshot(<Loader active label="Loading test" percentage={75} />))
 
-  test('renders with color neutral and primary', () =>
+  it('renders with color neutral and primary', () =>
     shouldMatchSnapshot(
       <>
         <Loader label="Loading test" sentiment="neutral" />
@@ -29,12 +29,12 @@ describe('loader', () => {
     ))
 
   SENTIMENTS.slice(0, 5).forEach(color => {
-    test(`renders with sentiment ${color}`, () =>
+    it(`renders with sentiment ${color}`, () =>
       shouldMatchSnapshot(<Loader label="Loading test" sentiment={color} />))
   })
 
   Object.keys(SIZES).forEach(size => {
-    test(`renders with size ${size}`, () =>
+    it(`renders with size ${size}`, () =>
       shouldMatchSnapshot(
         <Loader
           label="Loading test"

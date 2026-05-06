@@ -2,20 +2,20 @@ import { act, renderHook, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, vi, it } from 'vitest'
 
 import { NumberInputField, Submit } from '../..'
 import { Form } from '../../Form'
 
 describe('numberInputField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <NumberInputField name="test" value={0} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly disabled', () => {
+  it('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
       <NumberInputField
         aria-label="Number Input"
@@ -35,7 +35,7 @@ describe('numberInputField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should work fine with form setValue', async () => {
+  it('should work fine with form setValue', async () => {
     const onSubmit = vi.fn()
     const { result } = renderHook(() =>
       useForm<{ test: number | null }>({

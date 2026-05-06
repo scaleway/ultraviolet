@@ -3,7 +3,7 @@ import {
   resetIntersectionMocking,
   setupIntersectionMocking,
 } from 'react-intersection-observer/test-utils'
-import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { EstimateCost } from '..'
 
@@ -17,7 +17,7 @@ describe('estimateCost - Region', () => {
     resetIntersectionMocking()
   })
 
-  test('render region component', () => {
+  it('render region component', () => {
     const { asFragment } = renderWithTheme(
       <EstimateCost defaultTimeUnit="hours">
         <EstimateCost.Region image={frFlag} label="nl-ams" />

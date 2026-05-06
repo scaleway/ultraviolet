@@ -1,21 +1,21 @@
 import { screen } from '@testing-library/react'
 import { renderWithForm } from '@utils/test'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { ToggleField } from '..'
 
 describe('toggleField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(<ToggleField name="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly disabled', () => {
+  it('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(<ToggleField disabled name="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly checked', () => {
+  it('should render correctly checked', () => {
     const { asFragment } = renderWithForm(<ToggleField name="test" />, {
       defaultValues: {
         test: true,
@@ -26,7 +26,7 @@ describe('toggleField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with label and checked', () => {
+  it('should render correctly with label and checked', () => {
     const { asFragment } = renderWithForm(
       <ToggleField label="test" name="test" />,
       {

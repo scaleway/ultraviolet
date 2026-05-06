@@ -3,7 +3,7 @@ import {
   resetIntersectionMocking,
   setupIntersectionMocking,
 } from 'react-intersection-observer/test-utils'
-import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { EstimateCost } from '..'
 
@@ -14,7 +14,7 @@ describe('estimateCost - Item', () => {
   afterEach(() => {
     resetIntersectionMocking()
   })
-  test('render with noPrice and noBorder', () => {
+  it('render with noPrice and noBorder', () => {
     const { asFragment } = renderWithTheme(
       <EstimateCost>
         <EstimateCost.Item label="Test" noBorder noPrice>
@@ -25,7 +25,7 @@ describe('estimateCost - Item', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('render with tabulation', () => {
+  it('render with tabulation', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Test" tabulation={2}>
@@ -35,7 +35,7 @@ describe('estimateCost - Item', () => {
     )
   })
 
-  test('render with labelTextVariant', () => {
+  it('render with labelTextVariant', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Test" labelTextVariant="bodySmall">
@@ -45,7 +45,7 @@ describe('estimateCost - Item', () => {
     )
   })
 
-  test('render with priceText', () => {
+  it('render with priceText', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Test" priceText="included">
@@ -55,7 +55,7 @@ describe('estimateCost - Item', () => {
     )
   })
 
-  test('render with tooltipInfo', () => {
+  it('render with tooltipInfo', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Test" tooltipInfo="This is a tooltip">
@@ -65,7 +65,7 @@ describe('estimateCost - Item', () => {
     )
   })
 
-  test('render with notice', () => {
+  it('render with notice', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Test" notice="This is a notice">

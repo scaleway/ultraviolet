@@ -1,10 +1,10 @@
 import { renderWithForm } from '@utils/test'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { VerificationCodeField } from '..'
 
 describe('verificationCodeField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <VerificationCodeField
         label="Code"

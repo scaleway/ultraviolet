@@ -1,7 +1,7 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { Slider } from '..'
 
@@ -24,7 +24,7 @@ describe('double slider', () => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {})
   })
 
-  test('renders correctly direction row double', () => {
+  it('renders correctly direction row double', () => {
     shouldMatchSnapshot(
       <Slider
         direction="row"
@@ -37,24 +37,24 @@ describe('double slider', () => {
     )
   })
 
-  test('renders correctly with value empty', () => {
+  it('renders correctly with value empty', () => {
     shouldMatchSnapshot(
       /* @ts-expect-error testing purpose */
       <Slider double label="Label" name="Name" />,
     )
   })
 
-  test('renders correctly with value empty array and no min max', () => {
+  it('renders correctly with value empty array and no min max', () => {
     shouldMatchSnapshot(<Slider double label="Label" name="Name" value={[]} />)
   })
 
-  test('renders correctly with value empty array with min max', () => {
+  it('renders correctly with value empty array with min max', () => {
     shouldMatchSnapshot(
       <Slider double label="Label" max={10} min={0} name="Name" value={[]} />,
     )
   })
 
-  test('renders correctly direction row double with input', () => {
+  it('renders correctly direction row double with input', () => {
     shouldMatchSnapshot(
       <Slider
         direction="row"
@@ -67,13 +67,13 @@ describe('double slider', () => {
     )
   })
 
-  test('renders correctly double ', () => {
+  it('renders correctly double ', () => {
     shouldMatchSnapshot(
       <Slider double label="Label" name="Name" value={[12, 14]} />,
     )
   })
 
-  test('renders correctly double with value outside of min-max', () => {
+  it('renders correctly double with value outside of min-max', () => {
     const { asFragment } = renderWithTheme(
       <Slider
         data-testid="slider"
@@ -92,19 +92,19 @@ describe('double slider', () => {
     )
   })
 
-  test('renders correctly double disabled', () => {
+  it('renders correctly double disabled', () => {
     shouldMatchSnapshot(
       <Slider disabled double label="Label" name="Name" value={[12, 14]} />,
     )
   })
 
-  test('renders correctly double input', () => {
+  it('renders correctly double input', () => {
     shouldMatchSnapshot(
       <Slider double input label="Label" name="Name" value={[12, 14]} />,
     )
   })
 
-  test('renders correctly double custom tooltip', () => {
+  it('renders correctly double custom tooltip', () => {
     shouldMatchSnapshot(
       <Slider
         double
@@ -116,13 +116,13 @@ describe('double slider', () => {
     )
   })
 
-  test('renders correctly double default toolip ', () => {
+  it('renders correctly double default toolip ', () => {
     shouldMatchSnapshot(
       <Slider double label="Label" name="Name" tooltip value={[12, 14]} />,
     )
   })
 
-  test('renders correctly custom value ', () => {
+  it('renders correctly custom value ', () => {
     shouldMatchSnapshot(
       <Slider
         customValueDisplay="customValue"
@@ -135,7 +135,7 @@ describe('double slider', () => {
     )
   })
 
-  test('renders correctly custom value - direction "row"', () => {
+  it('renders correctly custom value - direction "row"', () => {
     shouldMatchSnapshot(
       <Slider
         customValueDisplay="customValue"
@@ -149,7 +149,7 @@ describe('double slider', () => {
     )
   })
 
-  test('renders correctly custom value with input ', () => {
+  it('renders correctly custom value with input ', () => {
     const { asFragment } = renderWithTheme(
       <Slider
         customValueDisplay="customValue"
@@ -167,7 +167,7 @@ describe('double slider', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly double with single tooltip', () => {
+  it('renders correctly double with single tooltip', () => {
     shouldMatchSnapshot(
       <Slider
         double
@@ -179,13 +179,13 @@ describe('double slider', () => {
     )
   })
 
-  test('renders correctly double with default ticks', () => {
+  it('renders correctly double with default ticks', () => {
     shouldMatchSnapshot(
       <Slider double label="Label" name="Name" unit="%" value={[12, 14]} />,
     )
   })
 
-  test('renders correctly double with custom ticks', () => {
+  it('renders correctly double with custom ticks', () => {
     shouldMatchSnapshot(
       <Slider
         double
@@ -197,7 +197,7 @@ describe('double slider', () => {
     )
   })
 
-  test('renders correctly double with custom ticks and defaultScale', () => {
+  it('renders correctly double with custom ticks and defaultScale', () => {
     shouldMatchSnapshot(
       <Slider
         defaultScale
@@ -210,7 +210,7 @@ describe('double slider', () => {
     )
   })
 
-  test('renders correctly double min max', () => {
+  it('renders correctly double min max', () => {
     shouldMatchSnapshot(
       <Slider
         double
@@ -223,13 +223,13 @@ describe('double slider', () => {
     )
   })
 
-  test('renders correctly double step', () => {
+  it('renders correctly double step', () => {
     shouldMatchSnapshot(
       <Slider double label="Label" name="Name" step={0.5} value={[12, 14]} />,
     )
   })
 
-  test('handles correctly onChange double', async () => {
+  it('handles correctly onChange double', async () => {
     const onChange = () => vi.fn()
 
     const { asFragment } = renderWithTheme(
@@ -266,7 +266,7 @@ describe('double slider', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('handles correctly onChange with min and max double', async () => {
+  it('handles correctly onChange with min and max double', async () => {
     const onChange: (value: number[]) => void = vi.fn()
 
     const { asFragment } = renderWithTheme(
@@ -303,7 +303,7 @@ describe('double slider', () => {
     expect(sliderRight.value).toBe('10')
     expect(asFragment()).toMatchSnapshot()
   })
-  test('handles correctly onChange custom scale double', () => {
+  it('handles correctly onChange custom scale double', () => {
     const onChange: (value: number[]) => void = vi.fn()
 
     const { asFragment } = renderWithTheme(

@@ -1,17 +1,17 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { TextArea } from '..'
 
 describe('textArea', () => {
-  test('should render correctly with basic props', () =>
+  it('should render correctly with basic props', () =>
     shouldMatchSnapshot(
       <TextArea label="Test" onChange={() => {}} value="test" />,
     ))
 
-  test('should control the value', () => {
+  it('should control the value', () => {
     const onChange = vi.fn()
 
     renderWithTheme(<TextArea label="Test" onChange={onChange} value="test" />)
@@ -23,7 +23,7 @@ describe('textArea', () => {
     expect(onChange).toHaveBeenCalledWith('another value')
   })
 
-  test('should be clearable', async () => {
+  it('should be clearable', async () => {
     const onChange = vi.fn()
 
     renderWithTheme(
@@ -37,27 +37,27 @@ describe('textArea', () => {
     expect(onChange).toHaveBeenCalledWith('')
   })
 
-  test('should render correctly when input is disabled', () =>
+  it('should render correctly when input is disabled', () =>
     shouldMatchSnapshot(
       <TextArea disabled label="Test" onChange={() => {}} value="test" />,
     ))
 
-  test('should render correctly when input is readOnly', () =>
+  it('should render correctly when input is readOnly', () =>
     shouldMatchSnapshot(
       <TextArea label="Test" onChange={() => {}} readOnly value="test" />,
     ))
 
-  test('should render correctly when it is required', () =>
+  it('should render correctly when it is required', () =>
     shouldMatchSnapshot(
       <TextArea label="Test" onChange={() => {}} required value="test" />,
     ))
 
-  test('should render correctly with maxlength', () =>
+  it('should render correctly with maxlength', () =>
     shouldMatchSnapshot(
       <TextArea label="Test" maxLength={3} onChange={() => {}} value="test" />,
     ))
 
-  test('should render correctly when input has a success sentiment', () =>
+  it('should render correctly when input has a success sentiment', () =>
     shouldMatchSnapshot(
       <TextArea
         label="Test"
@@ -67,7 +67,7 @@ describe('textArea', () => {
       />,
     ))
 
-  test('should render correctly when input  has a error sentiment', () =>
+  it('should render correctly when input  has a error sentiment', () =>
     shouldMatchSnapshot(
       <TextArea
         error="success"
@@ -77,7 +77,7 @@ describe('textArea', () => {
       />,
     ))
 
-  test('should render with auto rows', () =>
+  it('should render with auto rows', () =>
     shouldMatchSnapshot(
       <TextArea
         error="success"
@@ -88,7 +88,7 @@ describe('textArea', () => {
       />,
     ))
 
-  test('should render with AutoExpandMax', () =>
+  it('should render with AutoExpandMax', () =>
     shouldMatchSnapshot(
       <TextArea
         error="success"
@@ -98,7 +98,7 @@ describe('textArea', () => {
         value="test"
       />,
     ))
-  test('should render with AutoExpandMax and rows', () =>
+  it('should render with AutoExpandMax and rows', () =>
     shouldMatchSnapshot(
       <TextArea
         error="success"
@@ -110,7 +110,7 @@ describe('textArea', () => {
       />,
     ))
 
-  test('should display success message', () => {
+  it('should display success message', () => {
     const onChange = vi.fn()
     const successMessage = 'success message'
 
@@ -126,7 +126,7 @@ describe('textArea', () => {
     expect(screen.getByText(successMessage)).toBeDefined()
   })
 
-  test('should display error message', () => {
+  it('should display error message', () => {
     const onChange = vi.fn()
     const errorMessage = 'error!'
 
@@ -142,7 +142,7 @@ describe('textArea', () => {
     expect(screen.getByText(errorMessage)).toBeDefined()
   })
 
-  test('should display helper message', () => {
+  it('should display helper message', () => {
     const onChange = vi.fn()
     const helperMessage = 'helper'
 
@@ -158,7 +158,7 @@ describe('textArea', () => {
     expect(screen.getByText(helperMessage)).toBeDefined()
   })
 
-  test('should not display helper message when success is displayed', () => {
+  it('should not display helper message when success is displayed', () => {
     const onChange = vi.fn()
     const successMessage = 'success message'
     const helperMessage = 'helper'
@@ -177,7 +177,7 @@ describe('textArea', () => {
     expect(screen.queryByText(helperMessage)).toBeNull()
   })
 
-  test('should not display helper message when error is displayed', () => {
+  it('should not display helper message when error is displayed', () => {
     const onChange = vi.fn()
     const error = 'error!'
     const helperMessage = 'helper'

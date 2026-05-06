@@ -1,9 +1,11 @@
+// oxlint-disable vitest/no-conditional-in-test
+// oxlint-disable vitest/no-conditional-expect
 import { fireEvent, render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { ThemeProvider } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useState } from 'react'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { Table } from '..'
 import defaultTheme from '../../../theme'
@@ -52,7 +54,8 @@ const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
 )
 
 describe('table', () => {
-  test.skip('should throw an error', () => {
+  // oxlint-disable-next-line vitest/no-disabled-tests
+  it.skip('should throw an error', () => {
     const consoleErrMock = vi
       .spyOn(console, 'error')
       .mockImplementation(() => {})
@@ -74,7 +77,7 @@ describe('table', () => {
     consoleErrMock.mockRestore()
   })
 
-  test('should render correctly', () =>
+  it('should render correctly', () =>
     shouldMatchSnapshot(
       <Table columns={columns}>
         <Table.Body>
@@ -91,7 +94,7 @@ describe('table', () => {
       </Table>,
     ))
 
-  test('should render correctly with loading', () =>
+  it('should render correctly with loading', () =>
     shouldMatchSnapshot(
       <Table columns={columns} loading>
         <Table.Body>
@@ -108,7 +111,7 @@ describe('table', () => {
       </Table>,
     ))
 
-  test('should render correctly with selectable then click on first row then uncheck all, then check all', async () => {
+  it('should render correctly with selectable then click on first row then uncheck all, then check all', async () => {
     const { asFragment } = renderWithTheme(
       <Table columns={columns} selectable>
         <Table.Body>
@@ -134,9 +137,11 @@ describe('table', () => {
     const allCheckbox = checkboxes.find(({ value }) => value === 'all')
     expect(firstRowCheckbox).toBeInTheDocument()
     expect(allCheckbox).toBeInTheDocument()
+    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (!firstRowCheckbox) {
       throw new Error('First checkbox is not defined')
     }
+    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (!allCheckbox) {
       throw new Error('Select all checkbox is not defined')
     }
@@ -156,7 +161,7 @@ describe('table', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with sort then click', async () => {
+  it('should render correctly with sort then click', async () => {
     const LocalControlValue = ({
       children,
     }: {
@@ -242,7 +247,7 @@ describe('table', () => {
     }
   })
 
-  test('should render correctly with bad sort value', () => {
+  it('should render correctly with bad sort value', () => {
     const { asFragment } = renderWithTheme(
       <Table
         // @ts-expect-error Wrong value used
@@ -267,7 +272,7 @@ describe('table', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with isSelectable and selectedIds but then disable/enable them', () => {
+  it('should render correctly with isSelectable and selectedIds but then disable/enable them', () => {
     const selectedIds = ['1']
     const { rerender } = render(
       <Table columns={columns} selectable>
@@ -304,7 +309,7 @@ describe('table', () => {
     )
   })
 
-  test('should render correctly with selectDisabled as a string', () =>
+  it('should render correctly with selectDisabled as a string', () =>
     shouldMatchSnapshot(
       <Table columns={columns}>
         <Table.Body>
@@ -321,7 +326,7 @@ describe('table', () => {
       </Table>,
     ))
 
-  test('should render correctly with stipped', () =>
+  it('should render correctly with stipped', () =>
     shouldMatchSnapshot(
       <Table bordered columns={columns} stripped>
         <Table.Body>
@@ -338,7 +343,7 @@ describe('table', () => {
       </Table>,
     ))
 
-  test('should render correctly with info', () =>
+  it('should render correctly with info', () =>
     shouldMatchSnapshot(
       <Table
         bordered
@@ -362,7 +367,7 @@ describe('table', () => {
       </Table>,
     ))
 
-  test('should render correctly with highlightHeader', () =>
+  it('should render correctly with highlightHeader', () =>
     shouldMatchSnapshot(
       <Table columns={columns} highlightHeader>
         <Table.Body>
@@ -379,7 +384,7 @@ describe('table', () => {
       </Table>,
     ))
 
-  test('should render correctly with highlight animation on Table.Row', () =>
+  it('should render correctly with highlight animation on Table.Row', () =>
     shouldMatchSnapshot(
       <Table
         columns={[
@@ -401,7 +406,7 @@ describe('table', () => {
       </Table>,
     ))
 
-  test('should render correctly with selectable and shift click', async () => {
+  it('should render correctly with selectable and shift click', async () => {
     const { asFragment } = renderWithTheme(
       <Table columns={columns} selectable>
         <Table.Body>

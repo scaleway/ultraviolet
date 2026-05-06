@@ -1,19 +1,19 @@
 import { AlertCircleOutlineIcon } from '@ultraviolet/icons/AlertCircleOutlineIcon'
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { shouldMatchSnapshot } from '@utils/test'
-import { describe, test } from 'vitest'
+import { describe, it } from 'vitest'
 
 import { StepList } from '..'
 
 describe('stepList', () => {
-  test('renders correctly ', () =>
+  it('renders correctly ', () =>
     shouldMatchSnapshot(
       <StepList>
         <StepList.Item bulletContent="1">Item 1</StepList.Item>
       </StepList>,
     ))
 
-  test('renders correctly with bulletContent', () =>
+  it('renders correctly with bulletContent', () =>
     shouldMatchSnapshot(
       <StepList>
         <StepList.Item bulletContent={<AlertCircleOutlineIcon />}>
@@ -22,7 +22,7 @@ describe('stepList', () => {
       </StepList>,
     ))
 
-  test('renders correctly with bulletContent & sentiment', () =>
+  it('renders correctly with bulletContent & sentiment', () =>
     shouldMatchSnapshot(
       <StepList>
         <StepList.Item
@@ -34,7 +34,7 @@ describe('stepList', () => {
       </StepList>,
     ))
 
-  test('renders correctly with small size', () =>
+  it('renders correctly with small size', () =>
     shouldMatchSnapshot(
       <StepList>
         <StepList.Item bulletContent="1" size="small">
@@ -43,7 +43,7 @@ describe('stepList', () => {
       </StepList>,
     ))
 
-  test('renders correctly with disabled state', () =>
+  it('renders correctly with disabled state', () =>
     shouldMatchSnapshot(
       <StepList>
         <StepList.Item bulletContent="1" disabled>
@@ -52,7 +52,7 @@ describe('stepList', () => {
       </StepList>,
     ))
 
-  test('renders correctly with disabled state & bullet icon', () =>
+  it('renders correctly with disabled state & bullet icon', () =>
     shouldMatchSnapshot(
       <StepList>
         <StepList.Item bulletContent={<CheckIcon />} disabled>

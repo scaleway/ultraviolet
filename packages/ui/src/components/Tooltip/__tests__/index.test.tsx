@@ -2,14 +2,14 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme } from '@utils/test'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { Tooltip } from '..'
 
 import type { ComponentProps } from 'react'
 
 describe('tooltip', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithTheme(
       <Tooltip debounceDelay={0} text="test">
         Hover me
@@ -22,7 +22,7 @@ describe('tooltip', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly without text', () => {
+  it('should render correctly without text', () => {
     const { asFragment } = renderWithTheme(
       <Tooltip debounceDelay={0}>Hover me</Tooltip>,
       consoleLightTheme,
@@ -33,7 +33,7 @@ describe('tooltip', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should display tooltip on hover', async () => {
+  it('should display tooltip on hover', async () => {
     renderWithTheme(
       <Tooltip debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -47,7 +47,7 @@ describe('tooltip', () => {
     expect(tooltipPortal).toBeVisible()
   })
 
-  test('should display tooltip on hover with function children', async () => {
+  it('should display tooltip on hover with function children', async () => {
     renderWithTheme(
       <Tooltip debounceDelay={0} id="test" text="test success!">
         {props => (
@@ -65,7 +65,7 @@ describe('tooltip', () => {
     expect(tooltipPortal).toBeVisible()
   })
 
-  test('should display tooltip on hover and hide when exit', async () => {
+  it('should display tooltip on hover and hide when exit', async () => {
     renderWithTheme(
       <Tooltip debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -84,7 +84,7 @@ describe('tooltip', () => {
     })
   })
 
-  test('should display tooltip on hover and hide when exit and hover back before animation ends', async () => {
+  it('should display tooltip on hover and hide when exit and hover back before animation ends', async () => {
     renderWithTheme(
       <Tooltip debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -101,7 +101,7 @@ describe('tooltip', () => {
     expect(tooltipPortal).toBeVisible()
   })
 
-  test('should create tooltip with random id', async () => {
+  it('should create tooltip with random id', async () => {
     renderWithTheme(
       <Tooltip debounceDelay={0} text="test success!">
         <p data-testid="children">Hover me</p>
@@ -115,7 +115,7 @@ describe('tooltip', () => {
     expect(tooltipPortal).toBeVisible()
   })
 
-  test('should renders tooltip with maxWidth', async () => {
+  it('should renders tooltip with maxWidth', async () => {
     renderWithTheme(
       <Tooltip debounceDelay={0} maxWidth={100} text="test success!">
         <p data-testid="children">Hover me</p>
@@ -131,7 +131,7 @@ describe('tooltip', () => {
 
   describe('defined placement', () => {
     ;['top', 'left', 'right', 'bottom'].forEach(placement => {
-      test(`should renders tooltip with placement ${placement}`, async () => {
+      it(`should renders tooltip with placement ${placement}`, async () => {
         renderWithTheme(
           <Tooltip
             debounceDelay={0}
@@ -151,7 +151,7 @@ describe('tooltip', () => {
     })
   })
 
-  test('should verify accessibility', async () => {
+  it('should verify accessibility', async () => {
     renderWithTheme(
       <Tooltip debounceDelay={0} maxWidth={100} text="test success!">
         <p data-testid="children">Hover me</p>

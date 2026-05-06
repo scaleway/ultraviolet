@@ -4,7 +4,7 @@ import { userEvent } from '@testing-library/user-event'
 import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
 import { SunIcon } from '@ultraviolet/icons/SunIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
+import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 
 import { SwitchButton } from '..'
 
@@ -22,14 +22,14 @@ describe('switchButton', () => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {})
   })
 
-  test('renders correctly', () =>
+  it('renders correctly', () =>
     shouldMatchSnapshot(
       <SwitchButton name="test" onChange={() => {}} value="left">
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
       </SwitchButton>,
     ))
-  test('renders correctly medium', () =>
+  it('renders correctly medium', () =>
     shouldMatchSnapshot(
       <SwitchButton name="test" onChange={() => {}} size="medium" value="left">
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
@@ -37,7 +37,7 @@ describe('switchButton', () => {
       </SwitchButton>,
     ))
 
-  test('renders correctly with right value', () =>
+  it('renders correctly with right value', () =>
     shouldMatchSnapshot(
       <SwitchButton name="test" onChange={() => {}} value="right">
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
@@ -45,7 +45,7 @@ describe('switchButton', () => {
       </SwitchButton>,
     ))
 
-  test('renders correctly with children changing', () => {
+  it('renders correctly with children changing', () => {
     const tempResizeObserver = window.ResizeObserver
     window.ResizeObserver = vi.fn(function mock(cb: ResizeObserverCallback) {
       resizeCallback = cb
@@ -79,7 +79,7 @@ describe('switchButton', () => {
     window.ResizeObserver = tempResizeObserver
   })
 
-  test('renders with tooltip', () =>
+  it('renders with tooltip', () =>
     shouldMatchSnapshot(
       <SwitchButton
         name="test"
@@ -92,7 +92,7 @@ describe('switchButton', () => {
       </SwitchButton>,
     ))
 
-  test('renders with disabled and tooltip on SwitchButton.Option', () =>
+  it('renders with disabled and tooltip on SwitchButton.Option', () =>
     shouldMatchSnapshot(
       <SwitchButton
         name="test"
@@ -107,7 +107,7 @@ describe('switchButton', () => {
       </SwitchButton>,
     ))
 
-  test('renders neutral', () =>
+  it('renders neutral', () =>
     shouldMatchSnapshot(
       <SwitchButton
         name="test"
@@ -120,7 +120,7 @@ describe('switchButton', () => {
       </SwitchButton>,
     ))
 
-  test('renders with icons', () =>
+  it('renders with icons', () =>
     shouldMatchSnapshot(
       <SwitchButton
         name="test"
@@ -137,7 +137,7 @@ describe('switchButton', () => {
       </SwitchButton>,
     ))
 
-  test('renders with on change', async () => {
+  it('renders with on change', async () => {
     const onChange = vi.fn()
 
     renderWithTheme(
@@ -152,7 +152,7 @@ describe('switchButton', () => {
     await userEvent.click(rightButton)
   })
 
-  test('throws error when using button outside of context', () => {
+  it('throws error when using button outside of context', () => {
     expect(() =>
       renderWithTheme(
         <SwitchButton.Option value="left">Left</SwitchButton.Option>,

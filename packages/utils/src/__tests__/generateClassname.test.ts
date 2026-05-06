@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { cn } from './generateClassname'
+import { cn } from '../generateClassname'
 
 describe('generateClassname', () => {
   it('should combine multiple class names', () => {
