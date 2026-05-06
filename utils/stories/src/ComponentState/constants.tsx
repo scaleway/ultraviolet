@@ -1,8 +1,6 @@
-import {
-  ShieldCheckOutlineIcon,
-  SparklesOutlineIcon,
-  CancelIcon,
-} from '@ultraviolet/icons'
+import { CancelIcon } from '@ultraviolet/icons/CancelIcon'
+import { ShieldCheckOutlineIcon } from '@ultraviolet/icons/ShieldCheckOutlineIcon'
+import { SparklesOutlineIcon } from '@ultraviolet/icons/SparklesOutlineIcon'
 import { Text } from '@ultraviolet/ui'
 
 import type { ReactNode } from 'react'

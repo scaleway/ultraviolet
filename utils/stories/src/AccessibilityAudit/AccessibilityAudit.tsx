@@ -1,9 +1,14 @@
 import { linkTo } from '@storybook/addon-links'
+import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
+import { CloseCircleOutlineIcon } from '@ultraviolet/icons/CloseCircleOutlineIcon'
 import {
-  CheckCircleOutlineIcon,
-  CloseCircleOutlineIcon,
-} from '@ultraviolet/icons'
-import { Button, Stack, Table, Text, ProgressBar } from '@ultraviolet/ui'
+  Button,
+  Stack,
+  Table,
+  Text,
+  Tooltip,
+  ProgressBar,
+} from '@ultraviolet/ui'
 import { useState, useEffect } from 'react'
 
 import { findComponentState } from '../ComponentState/constants'
@@ -77,13 +82,13 @@ const AccessibilityAudit = () => {
     modules
       ?.filter(
         (
-          m,
-        ): m is PromiseFulfilledResult<{
+          module,
+        ): module is PromiseFulfilledResult<{
           default: {
             title: string
             parameters: ComponentStoryParameters
           }
-        }> => m.status === 'fulfilled',
+        }> => module.status === 'fulfilled',
       )
       .map(module => {
         const destructuredName: string[] =
@@ -157,7 +162,7 @@ const AccessibilityAudit = () => {
         <Table
           columns={[
             { label: 'Category' },
-            { label: 'Progress', minWidth: '50%' },
+            { label: 'Progress', minWidth: '50%', width: '300px' },
             { label: 'Components' },
           ]}
           stripped
@@ -176,18 +181,14 @@ const AccessibilityAudit = () => {
                       {category.title}
                     </Text>
                   </Table.Cell>
-                  <Table.Cell>
-                    <Stack direction="row" gap={2} width="100%">
-                      <ProgressBar
-                        max={100}
-                        sentiment={percentage === 100 ? 'success' : 'primary'}
-                        style={{ flex: 1 }}
-                        value={percentage}
-                      />
-                      <Text as="span" variant="bodySmall">
-                        {percentage}%
-                      </Text>
-                    </Stack>
+                  <Table.Cell align="left">
+                    <ProgressBar
+                      max={100}
+                      sentiment={percentage === 100 ? 'success' : 'primary'}
+                      value={percentage}
+                      direction="row"
+                      label={`${percentage}%`}
+                    />
                   </Table.Cell>
                   <Table.Cell>
                     <Text as="span" variant="body">
@@ -205,14 +206,12 @@ const AccessibilityAudit = () => {
       <Stack gap={4}>
         {AUDIT_CATEGORIES.map(category => (
           <Stack gap={2} key={category.id}>
-            <Stack direction="row">
-              <Text as="h2" variant="heading">
-                {category.title}&nbsp;
-                <Text as="span" variant="bodySmall">
-                  {getCategoryCompletion(category.id)}% complete
-                </Text>
+            <Text as="h2" variant="heading">
+              {category.title}&nbsp;
+              <Text as="span" variant="bodySmall">
+                {getCategoryCompletion(category.id)}% complete
               </Text>
-            </Stack>
+            </Text>
 
             {category.description && (
               <Text as="p" variant="body">
@@ -223,14 +222,12 @@ const AccessibilityAudit = () => {
             <Stack gap={3}>
               {category.criteria.map(criterion => (
                 <Stack gap={2} key={criterion.name}>
-                  <Stack gap={1}>
-                    <Text as="p" variant="headingSmall">
-                      {criterion.name}
-                    </Text>
-                    <Text as="span" variant="bodySmall">
-                      {criterion.wcagLevel}
-                    </Text>
-                  </Stack>
+                  <Text as="p" variant="headingSmall">
+                    {criterion.name}
+                  </Text>
+                  <Text as="span" variant="bodySmall">
+                    {criterion.wcagLevel}
+                  </Text>
                   <Text as="p" variant="body">
                     {criterion.description}
                   </Text>
@@ -299,11 +296,6 @@ const AccessibilityAudit = () => {
                   </Text>
                 </Table.Cell>
                 <Table.Cell>
-                  <Text as="span" variant="body">
-                    {component.state.label}
-                  </Text>
-                </Table.Cell>
-                <Table.Cell>
                   {component.a11yLevel ? (
                     <Stack direction="row" gap={1} alignItems="center">
                       {A11Y_LEVELS[component.a11yLevel].icon}
@@ -321,17 +313,19 @@ const AccessibilityAudit = () => {
                   <Stack direction="row" gap={1}>
                     {component.auditCategories.map(category => (
                       <Text as="span" key={category.id} variant="bodySmall">
-                        {category.completed ? (
-                          <CheckCircleOutlineIcon
-                            size="medium"
-                            sentiment="success"
-                          />
-                        ) : (
-                          <CloseCircleOutlineIcon
-                            size="medium"
-                            sentiment="danger"
-                          />
-                        )}
+                        <Tooltip text={category.id}>
+                          {category.completed ? (
+                            <CheckCircleOutlineIcon
+                              size="medium"
+                              sentiment="success"
+                            />
+                          ) : (
+                            <CloseCircleOutlineIcon
+                              size="medium"
+                              sentiment="danger"
+                            />
+                          )}
+                        </Tooltip>
                       </Text>
                     ))}
                   </Stack>
