@@ -4,7 +4,6 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { FileInput } from '..'
-import { FilesType } from '../types'
 
 const defaultFile = [
   {
@@ -375,7 +374,7 @@ describe('fileInput', () => {
 
   it('should add a file with drag and drop which when accept is defined and precise', () => {
     const onChangeFiles = vi.fn()
-    renderWithTheme(<FileInput accept="image/png" aria-label="label" onChangeFiles={onChangeFiles} />)
+    renderWithTheme(<FileInput accept="image/png, .mp3" aria-label="label" onChangeFiles={onChangeFiles} />)
 
     const dropzone = screen.getByTestId('drag-container')
     const file = new File(['dnd'], 'dnd.png', { type: 'image/png' })
@@ -456,7 +455,7 @@ describe('fileInput', () => {
   })
 
   it('should add files from dropped directory with allowDirectories', async () => {
-    const onChangeFiles = vi.fn<(files: FilesType[]) => void>()
+    const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput
         aria-label="label"

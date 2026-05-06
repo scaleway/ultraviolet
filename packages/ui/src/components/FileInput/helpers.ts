@@ -58,7 +58,15 @@ export const fileIsAccepted = (
   return false
 }
 
-const convertEntryToFile = (entry: FileSystemFileEntry) =>
+const isFileSystemFileEntry = (
+  entry: FileSystemEntry,
+): entry is FileSystemFileEntry => !!entry.isFile
+
+const isFileSystemDirEntry = (
+  entry: FileSystemEntry,
+): entry is FileSystemDirectoryEntry => !!entry.isDirectory
+
+const convertEntryToFile = (entry: FileSystemFileEntry): Promise<File> =>
   new Promise((resolve, reject) => {
     if (entry.isFile) {
       entry.file(
@@ -73,6 +81,7 @@ const convertEntryToFile = (entry: FileSystemFileEntry) =>
 // Recursive function to read all the files inside nested directories
 const readEntries = async (
   directory: FileSystemDirectoryEntry,
+  onDropError?: (error?: unknown) => void,
 ): Promise<FileSystemFileEntry[]> => {
   const reader = directory.createReader()
   const entries: FileSystemFileEntry[] = []
@@ -81,18 +90,18 @@ const readEntries = async (
   while (true) {
     const results = await new Promise<FileSystemEntry[]>((resolve, reject) => {
       reader.readEntries(resolve, reject)
-    })
+    }).catch((error: unknown) => onDropError?.(error))
 
-    if (results.length === 0) {
+    if (results?.length === 0 || !results) {
       break
     }
 
     const computedFiles = results
-      .filter(entry => entry.isFile)
-      .map(entry => entry as FileSystemFileEntry)
+      .filter(entry => isFileSystemFileEntry(entry))
+      .map(entry => entry)
     const computedDirs = results
-      .filter(entry => entry.isDirectory)
-      .map(entry => entry as FileSystemDirectoryEntry)
+      .filter(entry => isFileSystemDirEntry(entry))
+      .map(entry => entry)
 
     entries.push(...computedFiles)
     subdirs.push(...computedDirs)
@@ -100,31 +109,35 @@ const readEntries = async (
 
   // Process all subdirectories in parallel with promise.all
   const subdirFiles = await Promise.all(
-    subdirs.map(subdir => readEntries(subdir)),
-  )
+    subdirs.map(subdir => readEntries(subdir, onDropError)),
+  ).catch((error: unknown) => onDropError?.(error))
 
-  for (const files of subdirFiles) {
-    entries.push(...files)
+  if (subdirFiles) {
+    for (const files of subdirFiles) {
+      entries.push(...files)
+    }
   }
 
   return entries
 }
 
-export const readEntry = async (dataTransfer: DataTransfer) => {
+export const readEntry = async (
+  dataTransfer: DataTransfer,
+  onDropError?: (error: unknown) => void,
+) => {
   const items = [...dataTransfer.items].map(entry => entry.webkitGetAsEntry())
   const dataTransferComputed = new DataTransfer()
 
   for (const entry of items) {
-    if (entry?.isFile) {
-      const file = (await convertEntryToFile(
-        entry as FileSystemFileEntry,
-      )) as File
+    if (entry && isFileSystemFileEntry(entry)) {
+      const file = await convertEntryToFile(entry)
       dataTransferComputed.items.add(file)
-    } else if (entry?.isDirectory) {
-      const directory = entry as FileSystemDirectoryEntry
-      const entries = await readEntries(directory)
+    } else if (entry && isFileSystemDirEntry(entry)) {
+      const directory = entry
+      const entries = await readEntries(directory, onDropError)
+
       for (const file of entries) {
-        const convertedFile = (await convertEntryToFile(file)) as File
+        const convertedFile = await convertEntryToFile(file)
         dataTransferComputed.items.add(convertedFile)
       }
     }

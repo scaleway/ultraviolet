@@ -46,6 +46,7 @@ const FileInputBase = ({
   onKeyUp,
   disabledDragndrop = false,
   validator,
+  onDropError,
   'data-testid': dataTestid,
   'aria-describedby': ariaDescribedBy,
   allowDirectories,
@@ -162,16 +163,27 @@ const FileInputBase = ({
       event.preventDefault()
 
       if (!disabled && allowDirectories && !disabledDragndrop) {
-        const readFile = await readEntry(event.dataTransfer)
-
-        const [acceptedFiles, errorFiles] = addFiles(readFile)
-        onDrop?.(event, acceptedFiles, errorFiles)
+        const readFile = await readEntry(event.dataTransfer, onDropError).catch(
+          // oxlint-disable-next-line unicorn/catch-error-name : a const `error` is defined elsewhere
+          (e: unknown) => onDropError?.(e),
+        )
+        if (readFile) {
+          const [acceptedFiles, errorFiles] = addFiles(readFile)
+          onDrop?.(event, acceptedFiles, errorFiles)
+        }
       } else if (!(disabled || disabledDragndrop)) {
         const [acceptedFiles, errorFiles] = addFiles(event.dataTransfer?.files)
         onDrop?.(event, acceptedFiles, errorFiles)
       }
     },
-    [disabled, onDrop, allowDirectories, addFiles, disabledDragndrop],
+    [
+      disabled,
+      onDrop,
+      allowDirectories,
+      addFiles,
+      disabledDragndrop,
+      onDropError,
+    ],
   )
 
   const computedChildren = typeof children === 'function' ? children(inputId, inputRef) : children
@@ -246,8 +258,9 @@ const FileInputBase = ({
                 }
                 onDragOver={event => event.preventDefault()}
                 onDrop={event => {
-                  onDropComputed(event).catch(() => {
-                    throw new Error('An error occured')
+                  // oxlint-disable-next-line unicorn/catch-error-name : a const `error` is defined elsewhere
+                  onDropComputed(event).catch((e: unknown) => {
+                    onDropError?.(e)
                   })
                 }}
                 style={style}
