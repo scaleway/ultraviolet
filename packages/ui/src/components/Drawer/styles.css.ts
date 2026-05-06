@@ -55,6 +55,7 @@ const childrenWrapper = style({
 
 const content = style({
   paddingInline: theme.space[2],
+  height: '100%',
 })
 
 const header = style({
