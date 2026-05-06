@@ -55,6 +55,7 @@ const FileInputBase = ({
   onKeyUp,
   disabledDragndrop = false,
   validator,
+  onDropError,
   'data-testid': dataTestid,
   allowDirectories,
 }: FileInputProps) => {
@@ -158,7 +159,7 @@ const FileInputBase = ({
 
       return [newFiles, errorFiles]
     },
-    [onChangeFiles, computedMultiple, files, name, accept, validator, onChange],
+    [onChangeFiles, computedMultiple, files, accept, validator, onChange],
   )
 
   const onChangeLocal = (event: ChangeEvent<HTMLInputElement>) => {
@@ -174,16 +175,27 @@ const FileInputBase = ({
       event.preventDefault()
 
       if (!disabled && allowDirectories && !disabledDragndrop) {
-        const readFile = await readEntry(event.dataTransfer)
-
-        const [acceptedFiles, errorFiles] = addFiles(readFile)
-        onDrop?.(event, acceptedFiles, errorFiles)
+        const readFile = await readEntry(event.dataTransfer, onDropError).catch(
+          // oxlint-disable-next-line unicorn/catch-error-name : a const `error` is defined elsewhere
+          (e: unknown) => onDropError?.(e),
+        )
+        if (readFile) {
+          const [acceptedFiles, errorFiles] = addFiles(readFile)
+          onDrop?.(event, acceptedFiles, errorFiles)
+        }
       } else if (!(disabled || disabledDragndrop)) {
         const [acceptedFiles, errorFiles] = addFiles(event.dataTransfer?.files)
         onDrop?.(event, acceptedFiles, errorFiles)
       }
     },
-    [disabled, onDrop, allowDirectories, addFiles, disabledDragndrop],
+    [
+      disabled,
+      onDrop,
+      allowDirectories,
+      addFiles,
+      disabledDragndrop,
+      onDropError,
+    ],
   )
 
   const computedChildren =
@@ -276,8 +288,9 @@ const FileInputBase = ({
                 }
                 onDragOver={event => event.preventDefault()}
                 onDrop={event => {
-                  onDropComputed(event).catch(() => {
-                    throw new Error('An error occured')
+                  // oxlint-disable-next-line unicorn/catch-error-name : a const `error` is defined elsewhere
+                  onDropComputed(event).catch((e: unknown) => {
+                    onDropError?.(e)
                   })
                 }}
                 style={style}

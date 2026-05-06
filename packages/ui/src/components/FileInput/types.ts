@@ -82,6 +82,10 @@ export type FileInputProps = {
   error?: boolean | string
   disabledDragndrop?: boolean
   onChange?: (files: FileList) => void
+  /**
+   * Catch error when reading drag and dropped files
+   */
+  onDropError?: (error?: unknown) => void
   validator?: (file: File) => string | null | undefined
   /**
    * Allow to drag and drop folders in the dropzone. When set to true:

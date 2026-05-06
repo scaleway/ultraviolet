@@ -5,7 +5,6 @@ import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 
 import { FileInput } from '..'
-import { FilesType } from '../types'
 
 const defaultFile = [
   {
@@ -133,8 +132,8 @@ describe('fileInput', () => {
   })
 
   it('renders correctly onChange', async () => {
-    const onChange = vi.fn<(files: FileList) => void>()
-    const onDelete = vi.fn<(name: string) => void>()
+    const onChange = vi.fn()
+    const onDelete = vi.fn()
 
     const { asFragment } = renderWithTheme(
       <FileInput
@@ -159,7 +158,7 @@ describe('fileInput', () => {
   })
 
   it('renders correctly onChangeFiles', async () => {
-    const onChange = vi.fn<(files: FilesType[]) => void>()
+    const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -183,7 +182,7 @@ describe('fileInput', () => {
   })
 
   it('should work correctly with listLimit', async () => {
-    const onChange = vi.fn<(files: FilesType[]) => void>()
+    const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -210,7 +209,7 @@ describe('fileInput', () => {
   })
 
   it('renders correctly with FileInput.Button', () => {
-    const onChange = vi.fn<(files: FilesType[]) => void>()
+    const onChange = vi.fn()
 
     const { asFragment } = renderWithTheme(
       <FileInput
@@ -234,7 +233,7 @@ describe('fileInput', () => {
   })
 
   it('should work with function children and title', () => {
-    const onChange = vi.fn<(files: FilesType[]) => void>()
+    const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -266,7 +265,7 @@ describe('fileInput', () => {
   })
 
   it('renders correctly ondrop, ondrag', () => {
-    const onChange = vi.fn<(files: FilesType[]) => void>()
+    const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -291,7 +290,7 @@ describe('fileInput', () => {
   })
 
   it('renders correctly when drag and drop disabled', () => {
-    const onChange = vi.fn<(files: FilesType[]) => void>()
+    const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -327,7 +326,7 @@ describe('fileInput', () => {
   })
 
   it('should handle adding a file when selecting via the hidden file input', async () => {
-    const onChangeFiles = vi.fn<(files: FilesType[]) => void>()
+    const onChangeFiles = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -356,7 +355,7 @@ describe('fileInput', () => {
   })
 
   it('should add a file with drag and drop', () => {
-    const onChangeFiles = vi.fn<(files: FilesType[]) => void>()
+    const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput
         accept="image/*"
@@ -389,7 +388,7 @@ describe('fileInput', () => {
   })
 
   it('should add a file with drag and drop which when accept is defined', () => {
-    const onChangeFiles = vi.fn<(files: FilesType[]) => void>()
+    const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput
         accept="image/*"
@@ -434,7 +433,7 @@ describe('fileInput', () => {
   })
 
   it('should add a file with drag and drop which when accept is defined and precise', () => {
-    const onChangeFiles = vi.fn<(files: FilesType[]) => void>()
+    const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput
         accept="image/png, .mp3"
@@ -506,7 +505,7 @@ describe('fileInput', () => {
   })
 
   it('should add a file with drag and drop which when accept but not valid', () => {
-    const onChangeFiles = vi.fn<(files: FilesType[]) => void>()
+    const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput accept=" " aria-label="label" onChangeFiles={onChangeFiles} />,
     )
@@ -530,7 +529,7 @@ describe('fileInput', () => {
   })
 
   it('should add files from dropped directory with allowDirectories', async () => {
-    const onChangeFiles = vi.fn<(files: FilesType[]) => void>()
+    const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput
         aria-label="label"
