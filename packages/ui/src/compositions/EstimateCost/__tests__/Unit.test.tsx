@@ -5,7 +5,7 @@ import {
   resetIntersectionMocking,
   setupIntersectionMocking,
 } from 'react-intersection-observer/test-utils'
-import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { EstimateCost } from '..'
 
@@ -17,7 +17,7 @@ describe('estimateCost - Unit Item', () => {
     resetIntersectionMocking()
   })
 
-  test('render basic props', () => {
+  it('render basic props', () => {
     const { asFragment } = renderWithTheme(
       <EstimateCost>
         <EstimateCost.Item label="Unit">
@@ -28,7 +28,7 @@ describe('estimateCost - Unit Item', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('render basic props with monthly price', () => {
+  it('render basic props with monthly price', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Unit" monthlyPrice={100}>
@@ -38,7 +38,7 @@ describe('estimateCost - Unit Item', () => {
     )
   })
 
-  test('render basic props with values', () =>
+  it('render basic props with values', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
@@ -54,7 +54,7 @@ describe('estimateCost - Unit Item', () => {
       </EstimateCost>,
     ))
 
-  test('render basic props with values and no iteration', () =>
+  it('render basic props with values and no iteration', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
@@ -72,7 +72,7 @@ describe('estimateCost - Unit Item', () => {
       </EstimateCost>,
     ))
 
-  test('render test', () =>
+  it('render test', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
@@ -102,7 +102,7 @@ describe('estimateCost - Unit Item', () => {
       </EstimateCost>,
     ))
 
-  test('render basic props with overlay', () =>
+  it('render basic props with overlay', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Unit" monthlyPrice={100}>
@@ -111,7 +111,7 @@ describe('estimateCost - Unit Item', () => {
       </EstimateCost>,
     ))
 
-  test('render with 0 amount', () =>
+  it('render with 0 amount', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item amount={0} label="Unit" price={10}>
@@ -120,7 +120,7 @@ describe('estimateCost - Unit Item', () => {
       </EstimateCost>,
     ))
 
-  test('render with 10 amount', () =>
+  it('render with 10 amount', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item amount={10} label="Unit" price={10}>
@@ -129,7 +129,7 @@ describe('estimateCost - Unit Item', () => {
       </EstimateCost>,
     ))
 
-  test('render with value update', async () => {
+  it('render with value update', async () => {
     renderWithTheme(
       <EstimateCost>
         <EstimateCost.Item label="Unit">
@@ -145,7 +145,7 @@ describe('estimateCost - Unit Item', () => {
     await waitFor(() => expect(input.value).toBe('10'))
   })
 
-  test('render with negative value update', async () => {
+  it('render with negative value update', async () => {
     renderWithTheme(
       <EstimateCost>
         <EstimateCost.Item label="Unit">
@@ -161,7 +161,7 @@ describe('estimateCost - Unit Item', () => {
     await waitFor(() => expect(input.value).toBe('0'))
   })
 
-  test('render with getAmountValue', () =>
+  it('render with getAmountValue', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Unit" monthlyPrice={100}>

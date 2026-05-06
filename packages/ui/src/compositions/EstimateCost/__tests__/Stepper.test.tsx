@@ -3,7 +3,7 @@ import {
   resetIntersectionMocking,
   setupIntersectionMocking,
 } from 'react-intersection-observer/test-utils'
-import { afterEach, beforeEach, describe, test, vi } from 'vitest'
+import { afterEach, beforeEach, describe, it, vi } from 'vitest'
 
 import { EstimateCost } from '..'
 
@@ -15,7 +15,7 @@ describe('estimateCost - NumberInput Item', () => {
     resetIntersectionMocking()
   })
 
-  test('render basic props', () =>
+  it('render basic props', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="NumberInput">
@@ -24,7 +24,7 @@ describe('estimateCost - NumberInput Item', () => {
       </EstimateCost>,
     ))
 
-  test('render basic with overlay', () =>
+  it('render basic with overlay', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="NumberInput">
@@ -33,7 +33,7 @@ describe('estimateCost - NumberInput Item', () => {
       </EstimateCost>,
     ))
 
-  test('render with values', () =>
+  it('render with values', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
@@ -49,7 +49,7 @@ describe('estimateCost - NumberInput Item', () => {
       </EstimateCost>,
     ))
 
-  test('render with getAmountValue', () =>
+  it('render with getAmountValue', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="NumberInput">

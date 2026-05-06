@@ -2,7 +2,7 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { FileInput } from '..'
 
@@ -54,13 +54,13 @@ const defaultFile = [
 ]
 
 describe('fileInput', () => {
-  test('renders correctly', () => {
+  it('renders correctly', () => {
     const { asFragment } = renderWithTheme(
       <FileInput helper="helper" label="label" title="title" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
-  test('renders correctly as an overlay', () => {
+  it('renders correctly as an overlay', () => {
     const { asFragment } = renderWithTheme(
       <FileInput label="label" title="title" variant="overlay">
         test
@@ -68,14 +68,14 @@ describe('fileInput', () => {
     )
     expect(asFragment()).toMatchSnapshot()
   })
-  test('renders correctly small', () => {
+  it('renders correctly small', () => {
     const { asFragment } = renderWithTheme(
       <FileInput label="label" size="small" title="title" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with multiple and list', () => {
+  it('renders correctly with multiple and list', () => {
     const { asFragment } = renderWithTheme(
       <FileInput aria-label="label" defaultFiles={defaultFile} multiple>
         <FileInput.List />
@@ -84,7 +84,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with multiple and list - empty', () => {
+  it('renders correctly with multiple and list - empty', () => {
     const { asFragment } = renderWithTheme(
       <FileInput aria-label="label" multiple>
         <FileInput.List />
@@ -93,14 +93,14 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with bottom', () => {
+  it('renders correctly with bottom', () => {
     const { asFragment } = renderWithTheme(
       <FileInput aria-label="label" bottom={<FileInput.List />} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly disabled', () => {
+  it('renders correctly disabled', () => {
     const { asFragment } = renderWithTheme(
       <FileInput aria-label="label" disabled>
         <FileInput.Button data-testid="button">
@@ -113,7 +113,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with error', () => {
+  it('renders correctly with error', () => {
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
@@ -131,7 +131,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly onChange', async () => {
+  it('renders correctly onChange', async () => {
     const onChange = vi.fn()
     const onDelete = vi.fn()
 
@@ -157,7 +157,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly onChangeFiles', async () => {
+  it('renders correctly onChangeFiles', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
@@ -181,7 +181,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should work correctly with listLimit', async () => {
+  it('should work correctly with listLimit', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
@@ -208,7 +208,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with FileInput.Button', () => {
+  it('renders correctly with FileInput.Button', () => {
     const onChange = vi.fn()
 
     const { asFragment } = renderWithTheme(
@@ -226,13 +226,13 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should throw error with FileInput.Button outside of FileInput', () => {
+  it('should throw error with FileInput.Button outside of FileInput', () => {
     expect(() =>
       shouldMatchSnapshot(<FileInput.Button>button</FileInput.Button>),
     ).toThrow('FileInputContext should be inside FileInput to work properly.')
   })
 
-  test('should work with function children and title', () => {
+  it('should work with function children and title', () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
@@ -264,7 +264,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly ondrop, ondrag', () => {
+  it('renders correctly ondrop, ondrag', () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
@@ -289,7 +289,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly when drag and drop disabled', () => {
+  it('renders correctly when drag and drop disabled', () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
@@ -313,7 +313,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should handle drag state in dropzone variant', () => {
+  it('should handle drag state in dropzone variant', () => {
     const { asFragment } = renderWithTheme(
       <FileInput aria-label="label" title="upload files" variant="dropzone" />,
     )
@@ -325,7 +325,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should handle adding a file when selecting via the hidden file input', async () => {
+  it('should handle adding a file when selecting via the hidden file input', async () => {
     const onChangeFiles = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
@@ -354,7 +354,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should add a file with drag and drop', () => {
+  it('should add a file with drag and drop', () => {
     const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput
@@ -387,7 +387,7 @@ describe('fileInput', () => {
     expect(added).toBeInTheDocument()
   })
 
-  test('should add a file with drag and drop which when accept is defined', () => {
+  it('should add a file with drag and drop which when accept is defined', () => {
     const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput
@@ -432,7 +432,7 @@ describe('fileInput', () => {
     )
   })
 
-  test('should add a file with drag and drop which when accept is defined and precise', () => {
+  it('should add a file with drag and drop which when accept is defined and precise', () => {
     const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput
@@ -492,7 +492,7 @@ describe('fileInput', () => {
     )
   })
 
-  test('should add a file with drag and drop which when accept but not valid', () => {
+  it('should add a file with drag and drop which when accept but not valid', () => {
     const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput accept=" " aria-label="label" onChangeFiles={onChangeFiles} />,

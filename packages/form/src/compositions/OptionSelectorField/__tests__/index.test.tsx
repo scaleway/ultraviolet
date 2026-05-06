@@ -1,7 +1,7 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { OptionSelectorField } from '..'
 import {
@@ -10,7 +10,7 @@ import {
 } from '../__stories__/resources'
 
 describe('optionSelectorField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <OptionSelectorField
         firstSelector={{ label: 'label', options: firstSelectorOptions }}
@@ -21,7 +21,7 @@ describe('optionSelectorField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly disabled', () => {
+  it('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
       <OptionSelectorField
         disabled
@@ -33,7 +33,7 @@ describe('optionSelectorField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events', async () => {
+  it('should trigger events', async () => {
     const onChange = vi.fn()
 
     const { asFragment } = renderWithForm(

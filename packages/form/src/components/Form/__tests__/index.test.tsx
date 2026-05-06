@@ -2,12 +2,12 @@ import { renderHook, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { mockFormErrors, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, vi, it } from 'vitest'
 
 import { Form } from '..'
 
 describe('form', () => {
-  test('renders correctly with node children', () => {
+  it('renders correctly with node children', () => {
     const { result } = renderHook(() => useForm())
     const { asFragment } = renderWithTheme(
       <Form
@@ -21,7 +21,7 @@ describe('form', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with onSubmit', async () => {
+  it('renders correctly with onSubmit', async () => {
     const onSubmit = vi.fn(() => {})
     const { result } = renderHook(() => useForm())
 

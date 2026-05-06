@@ -1,7 +1,7 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import { afterAll, describe, expect, test, vi } from 'vitest'
+import { afterAll, describe, expect, it, vi } from 'vitest'
 
 import { TagList } from '..'
 
@@ -87,7 +87,7 @@ describe('tagList', () => {
     vi.resetAllMocks()
   })
 
-  test('renders correctly', () => {
+  it('renders correctly', () => {
     const tags = ['scaleway', 'cloud']
 
     mockOffsetWidth()
@@ -102,7 +102,7 @@ describe('tagList', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with no tags', () => {
+  it('renders correctly with no tags', () => {
     mockOffsetWidth()
 
     const { asFragment } = renderWithTheme(
@@ -112,7 +112,7 @@ describe('tagList', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with placement', () => {
+  it('renders correctly with placement', () => {
     const tags = ['scaleway', 'cloud']
 
     mockOffsetWidth()
@@ -129,7 +129,7 @@ describe('tagList', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with custom threshold', () => {
+  it('renders correctly with custom threshold', () => {
     const tags = ['scaleway', 'cloud']
 
     mockOffsetWidth()
@@ -148,7 +148,7 @@ describe('tagList', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with custom threshold and extra tags', () => {
+  it('renders correctly with custom threshold and extra tags', () => {
     const tags = ['scaleway', 'cloud', 'provider']
 
     mockOffsetWidth()
@@ -167,7 +167,7 @@ describe('tagList', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly and ignore custom threshold as it does not fit the parent', () => {
+  it('renders correctly and ignore custom threshold as it does not fit the parent', () => {
     const tags = ['scaleway', 'cloud', 'provider']
 
     mockOffsetWidth('taglist', 50)
@@ -187,7 +187,7 @@ describe('tagList', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly and add ellipsis to the first tag as it too long', () => {
+  it('renders correctly and add ellipsis to the first tag as it too long', () => {
     const tags = ['scaleway is the best cloud provider ever invented']
 
     mockOffsetWidth('taglist', 50)
@@ -199,7 +199,7 @@ describe('tagList', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with custom threshold and extra tags and maxLength inferior to the combined size of tags', () => {
+  it('renders correctly with custom threshold and extra tags and maxLength inferior to the combined size of tags', () => {
     const tags = ['scaleway', 'cloud', 'provider']
 
     mockOffsetWidth()
@@ -221,7 +221,7 @@ describe('tagList', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly when maxLength is smaller than first tag', () => {
+  it('renders correctly when maxLength is smaller than first tag', () => {
     const tags = ['scaleway']
 
     mockOffsetWidth()
@@ -240,7 +240,7 @@ describe('tagList', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('hide items after maxLength', () => {
+  it('hide items after maxLength', () => {
     const tags = [
       'scaleway',
       'cloud',
@@ -269,7 +269,7 @@ describe('tagList', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with multiline', () => {
+  it('renders correctly with multiline', () => {
     const tags = ['scaleway', 'cloud', 'provider']
 
     mockOffsetWidth()
@@ -287,7 +287,7 @@ describe('tagList', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with copiable', () => {
+  it('renders correctly with copiable', () => {
     const tags = ['scaleway', 'cloud']
 
     mockOffsetWidth()
@@ -308,7 +308,7 @@ describe('tagList', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with icons', () => {
+  it('renders correctly with icons', () => {
     const tags = ['scaleway', 'cloud']
 
     mockOffsetWidth()
@@ -326,7 +326,7 @@ describe('tagList', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly when clicking on popover', async () => {
+  it('renders correctly when clicking on popover', async () => {
     const tags: TagType[] = [
       { icon: 'id', label: 'smooth' },
       'code',
@@ -361,7 +361,7 @@ describe('tagList', () => {
     })
   })
 
-  test('renders correctly when clicking on popover via keyboard event', async () => {
+  it('renders correctly when clicking on popover via keyboard event', async () => {
     const tags: TagType[] = [
       { icon: 'id', label: 'smooth' },
       'code',
@@ -396,7 +396,7 @@ describe('tagList', () => {
     })
   })
 
-  test('renders correctly a scrollable popover with non default popoverMaxHeight', async () => {
+  it('renders correctly a scrollable popover with non default popoverMaxHeight', async () => {
     const tags: TagType[] = [
       'very',
       ...new Array<string>(50).fill('item'),

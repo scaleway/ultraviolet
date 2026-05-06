@@ -1,41 +1,38 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { TimeInput } from '..'
 
 const DEFAULT_VALUE = new Date('01/01/2000 11:23:14')
 
 describe('timeInput', () => {
-  test('renders correctly with base props', () =>
+  it('renders correctly with base props', () =>
     shouldMatchSnapshot(<TimeInput />))
 
-  test('renders correctly disabled', () =>
+  it('renders correctly disabled', () =>
     shouldMatchSnapshot(<TimeInput disabled label="test" />))
 
-  test('renders correctly readOnly', () =>
+  it('renders correctly readOnly', () =>
     shouldMatchSnapshot(<TimeInput label="test" readOnly />))
 
-  test('renders correctly with error', () =>
+  it('renders correctly with error', () =>
     shouldMatchSnapshot(<TimeInput error="error" label="test" />))
 
-  test('renders correctly clearable', () =>
-    shouldMatchSnapshot(<TimeInput clearable label="test" />))
-
-  test('renders correctly required', () =>
+  it('renders correctly required', () =>
     shouldMatchSnapshot(<TimeInput label="test" required />))
 
-  test('renders correctly small', () =>
+  it('renders correctly small', () =>
     shouldMatchSnapshot(<TimeInput label="test" size="small" />))
 
-  test('renders correctly large', () =>
+  it('renders correctly large', () =>
     shouldMatchSnapshot(<TimeInput label="test" size="large" />))
 
-  test('renders correctly with 12-hour format', () =>
+  it('renders correctly with 12-hour format', () =>
     shouldMatchSnapshot(<TimeInput label="test" timeFormat={12} />))
 
-  test('renders correctly with label description and helper', () =>
+  it('renders correctly with label description and helper', () =>
     shouldMatchSnapshot(
       <TimeInput
         helper="helper"
@@ -44,7 +41,7 @@ describe('timeInput', () => {
       />,
     ))
 
-  test('renders correctly with helper and error', () =>
+  it('renders correctly with helper and error', () =>
     shouldMatchSnapshot(
       <TimeInput
         error
@@ -54,7 +51,7 @@ describe('timeInput', () => {
       />,
     ))
 
-  test('renders correctly controlled - 12-hour format', async () => {
+  it('renders correctly controlled - 12-hour format', async () => {
     const mockOnChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <TimeInput
@@ -92,7 +89,7 @@ describe('timeInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly controlled - 24-hours format', async () => {
+  it('renders correctly controlled - 24-hours format', async () => {
     const mockOnChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <TimeInput
@@ -125,7 +122,7 @@ describe('timeInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly clearable', async () => {
+  it('renders correctly clearable', async () => {
     const mockOnChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <TimeInput
@@ -144,7 +141,7 @@ describe('timeInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders can move with arrow keys - 12-hour format', async () => {
+  it('renders can move with arrow keys - 12-hour format', async () => {
     const mockOnChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <TimeInput
@@ -181,7 +178,7 @@ describe('timeInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders can move with arrow keys - 24-hour format', async () => {
+  it('renders can move with arrow keys - 24-hour format', async () => {
     const mockOnChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <TimeInput

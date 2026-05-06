@@ -22,7 +22,7 @@ export const CompositionsList = () => {
   const componentsList: ComponentInfo[] = Object.entries(Compositions)
     .map(([name, component]) => ({
       name,
-      // oxlint-disable-next-line typescript/no-unsafe-type-assertion
+      // oxlint-disable-next-line no-underscore-dangle
       description: (component as ReactComponentWithDocGen).__docgenInfo
         ?.description,
     }))

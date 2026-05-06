@@ -1,10 +1,10 @@
 import { shouldMatchSnapshot } from '@utils/test'
-import { describe, test } from 'vitest'
+import { describe, it } from 'vitest'
 
 import { BarChartTooltip } from '../Tooltip'
 
 describe('barChartTooltip', () => {
-  test('renders correctly', () =>
+  it('renders correctly', () =>
     shouldMatchSnapshot(
       <BarChartTooltip
         color="#ff0000"

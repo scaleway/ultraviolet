@@ -2,13 +2,13 @@ import { renderHook, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, vi, it } from 'vitest'
 
 import { Form, Submit, SwitchButtonField } from '../..'
 import { mockErrors } from '../../../mocks'
 
 describe('switchButtonField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <SwitchButtonField name="test" onChange={() => vi.fn()}>
         <SwitchButtonField.Option value="left">Left</SwitchButtonField.Option>
@@ -18,7 +18,7 @@ describe('switchButtonField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should works with defaultValues', async () => {
+  it('should works with defaultValues', async () => {
     const onSubmit = vi.fn()
     const { result } = renderHook(() =>
       useForm<{ test: string[] }>({ defaultValues: { test: ['right'] } }),

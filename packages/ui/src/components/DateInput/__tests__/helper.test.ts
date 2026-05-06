@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import {
   addZero,
@@ -21,15 +21,15 @@ const date = new Date('20 November 2000')
 const format = (value?: Date) => (value ? String(value.getFullYear()) : '1999')
 
 describe('helper functions dateInput', () => {
-  test('getMonthFirstDay should work', () => {
+  it('getMonthFirstDay should work', () => {
     expect(getMonthFirstDay(1, 2000)).toBe(5)
   })
 
-  test('addZero should work', () => {
+  it('addZero should work', () => {
     expect(addZero(1)).toBe('01')
   })
 
-  test('getPreviousMonth should work', () => {
+  it('getPreviousMonth should work', () => {
     const beforeJan2000 = getPreviousMonth(1, 2000)
     expect(beforeJan2000[0]).toBe(12)
     expect(beforeJan2000[1]).toBe(1999)
@@ -39,7 +39,7 @@ describe('helper functions dateInput', () => {
     expect(beforeDec2000[1]).toBe(2000)
   })
 
-  test('getNextMonth should work', () => {
+  it('getNextMonth should work', () => {
     const afterDec2000 = getNextMonth(12, 2000)
     expect(afterDec2000[0]).toBe(1)
     expect(afterDec2000[1]).toBe(2001)
@@ -49,7 +49,7 @@ describe('helper functions dateInput', () => {
     expect(afterNo000[1]).toBe(2000)
   })
 
-  test('isSameMonth should work', () => {
+  it('isSameMonth should work', () => {
     expect(isSameMonth(new Date('23 Dec 2023'), new Date('22 Dec 2023'))).toBe(
       true,
     )
@@ -58,14 +58,14 @@ describe('helper functions dateInput', () => {
     )
   })
 
-  test('isSameDay should work', () => {
+  it('isSameDay should work', () => {
     expect(isSameDay(new Date(), new Date('22 Dec 1999'))).toBe(false)
     expect(isSameDay(new Date('23 Dec 2023'), new Date('23 Dec 2023'))).toBe(
       true,
     )
   })
 
-  test('formatValue should work with default formatting', () => {
+  it('formatValue should work with default formatting', () => {
     expect(formatValue(date, null, false, false)).toBe('20/11/2000')
     expect(formatValue(date, null, true, false)).toBe('11/2000')
     expect(formatValue(date, null, false, true)).toBe('20/11/2000')
@@ -77,7 +77,7 @@ describe('helper functions dateInput', () => {
     )
   })
 
-  test('formatValue should work with custom formatting', () => {
+  it('formatValue should work with custom formatting', () => {
     expect(formatValue(date, null, false, false, format)).toBe('2000')
     expect(formatValue(date, null, true, false, format)).toBe('2000')
     expect(formatValue(date, null, false, true, format)).toBe('2000')
@@ -89,13 +89,13 @@ describe('helper functions dateInput', () => {
     )
   })
 
-  test('createDate should work', () => {
+  it('createDate should work', () => {
     expect(createDate('12/02/2020', false)).toEqual(new Date(2020, 1, 12))
     expect(createDate('12-02-2020', false)).toEqual(new Date(2020, 1, 12))
     expect(createDate('12 may 2020', false)).toEqual(new Date(2020, 4, 12))
   })
 
-  test('createDate should work with min and maxDate', () => {
+  it('createDate should work with min and maxDate', () => {
     expect(createDate('12/02/2020', false, new Date(2020, 1, 15))).toEqual(
       new Date(2020, 1, 15),
     )
@@ -104,7 +104,7 @@ describe('helper functions dateInput', () => {
     ).toEqual(new Date(2020, 1, 10))
   })
 
-  test('createdate should work with showMonthYearPicker', () => {
+  it('createdate should work with showMonthYearPicker', () => {
     expect(createDate('12/2020', true)).toEqual(new Date(2020, 11, 1))
     expect(createDate('12-2020', true)).toEqual(new Date(2020, 11, 1))
     expect(createDate('2020/12', true)).toEqual(new Date(2020, 11, 1))

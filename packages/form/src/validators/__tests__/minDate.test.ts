@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { minDateValidator } from '../minDate'
 
@@ -9,14 +9,14 @@ const yesterday = new Date(today.getTime() - 24 * hourInMs)
 const tomorrow = new Date(today.getTime() + 24 * hourInMs)
 
 describe('minDate validator', () => {
-  test('should invalidate the input', () => {
+  it('should invalidate the input', () => {
     const validator = minDateValidator(tomorrow)
     expect(validator(today)).toBe(false)
     expect(validator(twoHoursLater)).toBe(false)
     expect(validator(yesterday)).toBe(false)
   })
 
-  test('should validate the input', () => {
+  it('should validate the input', () => {
     const validator = minDateValidator(yesterday)
     expect(validator(today)).toBe(true)
     expect(validator(tomorrow)).toBe(true)

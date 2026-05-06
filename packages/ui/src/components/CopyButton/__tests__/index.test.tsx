@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { beforeAll, describe, expect, it, test, vi } from 'vitest'
+import { beforeAll, describe, expect, it, vi } from 'vitest'
 
 import { CopyButton } from '../index'
 
@@ -18,30 +18,30 @@ describe('copyButton', () => {
     }
   })
 
-  test('renders correctly', () =>
+  it('renders correctly', () =>
     shouldMatchSnapshot(<CopyButton value="Test" />))
   ;(['xsmall', 'small', 'medium', 'large'] as const).forEach(size => {
-    test(`renders correctly sentiment ${size}`, () =>
+    it(`renders correctly sentiment ${size}`, () =>
       shouldMatchSnapshot(<CopyButton size={size} value="Test" />))
   })
   ;(['primary', 'neutral'] as const).forEach(sentiment => {
-    test(`renders correctly sentiment ${sentiment}`, () =>
+    it(`renders correctly sentiment ${sentiment}`, () =>
       shouldMatchSnapshot(<CopyButton sentiment={sentiment} value="Test" />))
   })
 
-  test('renders correctly with bordered', () =>
+  it('renders correctly with bordered', () =>
     shouldMatchSnapshot(<CopyButton bordered value="Test" />))
 
-  test('renders correctly with children', () =>
+  it('renders correctly with children', () =>
     shouldMatchSnapshot(<CopyButton value="Test">Copy test</CopyButton>))
 
-  test('renders correctly with custom copy text', () =>
+  it('renders correctly with custom copy text', () =>
     shouldMatchSnapshot(<CopyButton copyText="Copy me" value="Test" />))
 
-  test('renders correctly with custom copied text', () =>
+  it('renders correctly with custom copied text', () =>
     shouldMatchSnapshot(<CopyButton copiedText="Copied!" value="Test" />))
 
-  test('renders correctly with custom class name', () =>
+  it('renders correctly with custom class name', () =>
     shouldMatchSnapshot(<CopyButton className="custom-class" value="Test" />))
 
   it('should renders correctly with a complex children', async () => {

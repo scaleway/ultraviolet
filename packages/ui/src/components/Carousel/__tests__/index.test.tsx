@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, test } from 'vitest'
+import { describe, it } from 'vitest'
 
 import { Carousel } from '..'
 
 describe('carousel', () => {
-  test('renders correctly with default props', () =>
+  it('renders correctly with default props', () =>
     shouldMatchSnapshot(
       <Carousel>
         <Carousel.Item>Item 1</Carousel.Item>
@@ -18,7 +18,7 @@ describe('carousel', () => {
       </Carousel>,
     ))
 
-  test('check hover state on scrollbar', async () => {
+  it('check hover state on scrollbar', async () => {
     renderWithTheme(
       <Carousel>
         <Carousel.Item>Item 1</Carousel.Item>

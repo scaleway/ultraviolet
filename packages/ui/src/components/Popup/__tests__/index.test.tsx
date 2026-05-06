@@ -1,24 +1,24 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { Popup } from '../../index'
 
 import type { ComponentProps } from 'react'
 
 describe('popup', () => {
-  test('should render correctly', () =>
+  it('should render correctly', () =>
     shouldMatchSnapshotWithPortal(
       <Popup debounceDelay={0} text="test">
         Hover me
       </Popup>,
     ))
 
-  test('should render correctly without text', () =>
+  it('should render correctly without text', () =>
     shouldMatchSnapshotWithPortal(<Popup debounceDelay={0}>Hover me</Popup>))
 
-  test('should display Popup on hover', async () => {
+  it('should display Popup on hover', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -32,7 +32,7 @@ describe('popup', () => {
     expect(PopupPortal).toBeVisible()
   })
 
-  test('should display Popup on hover with no animation', async () => {
+  it('should display Popup on hover with no animation', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} disableAnimation id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -46,7 +46,7 @@ describe('popup', () => {
     expect(PopupPortal).toBeVisible()
   })
 
-  test('should display Popup on hover with maxHeight', async () => {
+  it('should display Popup on hover with maxHeight', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} id="test" maxHeight="200px" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -60,7 +60,7 @@ describe('popup', () => {
     expect(PopupPortal).toBeVisible()
   })
 
-  test('should display Popup on hover with function children', async () => {
+  it('should display Popup on hover with function children', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} id="test" text="test success!">
         {props => (
@@ -78,7 +78,7 @@ describe('popup', () => {
     expect(PopupPortal).toBeVisible()
   })
 
-  test('should display Popup on hover and hide when exit', async () => {
+  it('should display Popup on hover and hide when exit', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -97,7 +97,7 @@ describe('popup', () => {
     })
   })
 
-  test('should display Popup on hover and hide when exit and hover back before animation ends', async () => {
+  it('should display Popup on hover and hide when exit and hover back before animation ends', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -114,7 +114,7 @@ describe('popup', () => {
     expect(PopupPortal).toBeVisible()
   })
 
-  test('should create Popup with random id', async () => {
+  it('should create Popup with random id', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} text="test success!">
         <p data-testid="children">Hover me</p>
@@ -128,7 +128,7 @@ describe('popup', () => {
     expect(PopupPortal).toBeVisible()
   })
 
-  test('should renders Popup with maxWidth', async () => {
+  it('should renders Popup with maxWidth', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} maxWidth={100} text="test success!">
         <p data-testid="children">Hover me</p>
@@ -154,7 +154,7 @@ describe('popup', () => {
       'auto-left',
       'auto-right',
     ].forEach(placement => {
-      test(`should renders Popup with placement ${placement}`, async () => {
+      it(`should renders Popup with placement ${placement}`, async () => {
         renderWithTheme(
           <Popup
             debounceDelay={0}
@@ -174,7 +174,7 @@ describe('popup', () => {
     })
   })
 
-  test('should verify accessibility', async () => {
+  it('should verify accessibility', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} maxWidth={100} text="test success!">
         <p data-testid="children">Hover me</p>
@@ -192,7 +192,7 @@ describe('popup', () => {
     })
   })
 
-  test('should verify trap focus', async () => {
+  it('should verify trap focus', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} maxWidth={100} text="test success!">
         <button data-testid="1" type="button">
@@ -220,7 +220,7 @@ describe('popup', () => {
     })
   })
 
-  test('should handle unmount correctly', async () => {
+  it('should handle unmount correctly', async () => {
     const onClose = vi.fn()
     const { unmount } = renderWithTheme(
       <Popup onClose={onClose} text="test unmount!">

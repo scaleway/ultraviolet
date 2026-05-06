@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { BarStack } from '..'
 
@@ -14,18 +14,18 @@ const fakeData = [
 ]
 
 describe('barStack', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithTheme(<BarStack data={fakeData} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with total', () => {
+  it('should render correctly with total', () => {
     const { asFragment } = renderWithTheme(
       <BarStack data={fakeData} total={1000} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
-  test('should render correctly with label and label information', () => {
+  it('should render correctly with label and label information', () => {
     const { asFragment } = renderWithTheme(
       <BarStack
         className="classname"
@@ -38,20 +38,20 @@ describe('barStack', () => {
     expect(asFragment()).toMatchSnapshot()
   })
   Object.keys(['xsmall', 'small', 'large', 'medium']).forEach(size => {
-    test(`renders correctly size ${size}`, () => {
+    it(`renders correctly size ${size}`, () => {
       const { asFragment } = renderWithTheme(<BarStack data={fakeData} />)
       expect(asFragment()).toMatchSnapshot()
     })
   })
 
-  test('should render correctly with legend outside', () => {
+  it('should render correctly with legend outside', () => {
     const { asFragment } = renderWithTheme(
       <BarStack data={fakeData} legend="outside" total={1000} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with event handlers', async () => {
+  it('should render correctly with event handlers', async () => {
     const [
       onClick,
       onDoubleClick,
@@ -95,7 +95,7 @@ describe('barStack', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with hovering legend', async () => {
+  it('should render correctly with hovering legend', async () => {
     const { asFragment } = renderWithTheme(
       <BarStack
         data={[

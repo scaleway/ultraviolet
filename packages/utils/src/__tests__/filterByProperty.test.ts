@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { filterByProperty } from './filterByProperty'
+import { filterByProperty } from '../filterByProperty'
 
 describe('filterByProperty helpers', () => {
   it('should filter array by property existence', () => {
@@ -20,7 +20,7 @@ describe('filterByProperty helpers', () => {
     expect(result).toContainEqual({ name: '' })
     expect(result).toContainEqual({ name: 'Jane' })
   })
-  it('should filter array by property existence', () => {
+  it('should filter array by property existence 2', () => {
     const input: { name?: string | null | undefined }[] = [
       { name: 'John' },
       { name: null },

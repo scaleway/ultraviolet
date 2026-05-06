@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, vi, it } from 'vitest'
 
 import { SelectableCardGroupField } from '../..'
 
 describe('selectableCardField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <SelectableCardGroupField
         legend="test"
@@ -22,7 +22,7 @@ describe('selectableCardField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly checked as radiofield', () => {
+  it('should render correctly checked as radiofield', () => {
     const { asFragment } = renderWithForm(
       <SelectableCardGroupField
         legend="test"
@@ -43,7 +43,7 @@ describe('selectableCardField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly checked as a checkbox', () => {
+  it('should render correctly checked as a checkbox', () => {
     const { asFragment } = renderWithForm(
       <SelectableCardGroupField
         legend="test"
@@ -64,7 +64,7 @@ describe('selectableCardField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events correctly', async () => {
+  it('should trigger events correctly', async () => {
     const onChange = vi.fn(() => {})
 
     const { asFragment } = renderWithForm(

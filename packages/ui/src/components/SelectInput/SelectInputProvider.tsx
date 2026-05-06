@@ -65,7 +65,6 @@ const SelectInputContext = createContext<ContextProps>({
   size: 'large',
 })
 
-// oxlint-disable-next-line react/only-export-components
 export const useSelectInput = () => useContext(SelectInputContext)
 
 type SelectInputProviderProps<IsMulti extends boolean> = {

@@ -5,6 +5,7 @@ import type { TestUserConfig, ViteUserConfig, Plugin } from 'vitest/config'
 /**
  * @deprecated https://github.com/vitest-dev/vitest/issues/9935
  */
+// oxlint-disable-next-line func-name-matching
 export const coveragePluginIssue = function fixIstanbulBabelInterop(): Plugin {
   return {
     name: 'fix-istanbul-babel-interop',

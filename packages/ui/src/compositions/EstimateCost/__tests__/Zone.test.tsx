@@ -3,7 +3,7 @@ import {
   resetIntersectionMocking,
   setupIntersectionMocking,
 } from 'react-intersection-observer/test-utils'
-import { afterEach, beforeEach, describe, test, vi } from 'vitest'
+import { afterEach, beforeEach, describe, it, vi } from 'vitest'
 
 import { EstimateCost } from '..'
 
@@ -17,14 +17,14 @@ describe('estimateCost - Zone', () => {
     resetIntersectionMocking()
   })
 
-  test('render zone component', () =>
+  it('render zone component', () =>
     shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="hours">
         <EstimateCost.Zone image={frFlag} label="fr-par-1" />
       </EstimateCost>,
     ))
 
-  test('render region component, with animation', () =>
+  it('render region component, with animation', () =>
     shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="hours">
         <EstimateCost.Zone animated image={frFlag} label="nl-ams-1" />

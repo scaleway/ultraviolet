@@ -3,13 +3,13 @@ import { userEvent } from '@testing-library/user-event'
 import { AddressIcon } from '@ultraviolet/icons/AddressIcon'
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { Chip } from '..'
 
 describe('checkbox', () => {
-  test('renders correctly', () => shouldMatchSnapshot(<Chip>test</Chip>))
-  test('renders correctly wiht icon', () =>
+  it('renders correctly', () => shouldMatchSnapshot(<Chip>test</Chip>))
+  it('renders correctly wiht icon', () =>
     shouldMatchSnapshot(
       <Chip>
         <Chip.Icon icon={<AddressIcon />} onClick={() => {}} />
@@ -17,41 +17,41 @@ describe('checkbox', () => {
       </Chip>,
     ))
 
-  test('renders correctly active', () =>
+  it('renders correctly active', () =>
     shouldMatchSnapshot(
       <Chip active>
         test <Chip.Icon icon={<AddressIcon />} />
       </Chip>,
     ))
 
-  test('renders correctly large', () =>
+  it('renders correctly large', () =>
     shouldMatchSnapshot(
       <Chip size="large">
         test <Chip.Icon icon={<AddressIcon />} />
       </Chip>,
     ))
 
-  test('renders correctly disabled', () =>
+  it('renders correctly disabled', () =>
     shouldMatchSnapshot(
       <Chip disabled>
         test <Chip.Icon icon={<AddressIcon />} />
       </Chip>,
     ))
 
-  test('renders correctly active disabled', () =>
+  it('renders correctly active disabled', () =>
     shouldMatchSnapshot(
       <Chip active disabled>
         test <Chip.Icon icon={<AddressIcon />} />
       </Chip>,
     ))
 
-  test('throw error when using Chip.Icon outside of Chip', () => {
+  it('throw error when using Chip.Icon outside of Chip', () => {
     expect(() => renderWithTheme(<Chip.Icon icon={<AddressIcon />} />)).toThrow(
       'Chip.Icon can only be used inside a Chip component',
     )
   })
 
-  test('renders correctly onClick', async () => {
+  it('renders correctly onClick', async () => {
     const mockOnClick1 = vi.fn()
     const mockOnClick2 = vi.fn()
     const mockOnClickIcon1 = vi.fn()

@@ -31,9 +31,6 @@ describe(getPageNumbers, () => {
     it('should get 3,4,5,6,7 if current page is 7, with 7 pages', () => {
       expect(getPageNumbers(7, 7)).toEqual([1, 3, 4, 5, 6, 7])
     })
-    it('should get 1,2,3,4 if current page is 1, with 4 pages', () => {
-      expect(getPageNumbers(1, 4)).toEqual([1, 2, 3, 4])
-    })
     it('should get 1,2,3,4 if current page is 5, with 4 pages', () => {
       expect(getPageNumbers(5, 4)).toEqual([1, 2, 3, 4])
     })

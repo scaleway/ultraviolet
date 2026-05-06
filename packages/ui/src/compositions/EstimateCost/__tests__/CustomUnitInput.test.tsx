@@ -5,7 +5,7 @@ import {
   resetIntersectionMocking,
   setupIntersectionMocking,
 } from 'react-intersection-observer/test-utils'
-import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { CustomUnitInput } from '../Components/CustomUnitInput'
 
@@ -16,7 +16,7 @@ describe('estimateCost - CustomUnitInput', () => {
   afterEach(() => {
     resetIntersectionMocking()
   })
-  test('render default values', () =>
+  it('render default values', () =>
     shouldMatchSnapshot(
       <CustomUnitInput
         iteration={{ unit: 'hours', value: 1 }}
@@ -25,7 +25,7 @@ describe('estimateCost - CustomUnitInput', () => {
       />,
     ))
 
-  test('render and trigger on blur when leaving input empty', async () => {
+  it('render and trigger on blur when leaving input empty', async () => {
     renderWithTheme(
       <CustomUnitInput
         iteration={{ unit: 'hours', value: 1 }}

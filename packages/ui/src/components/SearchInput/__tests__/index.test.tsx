@@ -2,13 +2,13 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useState } from 'react'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { SearchInput } from '..'
 import { Button } from '../../Button'
 
 describe('searchInput', () => {
-  test('renders correctly without children props', () =>
+  it('renders correctly without children props', () =>
     shouldMatchSnapshot(
       <SearchInput
         onClose={() => {}}
@@ -20,7 +20,7 @@ describe('searchInput', () => {
       </SearchInput>,
     ))
 
-  test('renders with disabled prop', () =>
+  it('renders with disabled prop', () =>
     shouldMatchSnapshot(
       <SearchInput
         disabled
@@ -34,7 +34,7 @@ describe('searchInput', () => {
     ))
 
   describe('renders with shortcut prop', () => {
-    test('as boolean', () =>
+    it('as boolean', () =>
       shouldMatchSnapshot(
         <SearchInput
           onClose={() => {}}
@@ -46,7 +46,7 @@ describe('searchInput', () => {
           <div />
         </SearchInput>,
       ))
-    test('as array of string', () =>
+    it('as array of string', () =>
       shouldMatchSnapshot(
         <SearchInput
           onClose={() => {}}
@@ -60,7 +60,7 @@ describe('searchInput', () => {
       ))
   })
 
-  test('renders with error prop', () =>
+  it('renders with error prop', () =>
     shouldMatchSnapshot(
       <SearchInput
         error="there is an error"
@@ -73,7 +73,7 @@ describe('searchInput', () => {
       </SearchInput>,
     ))
 
-  test('renders correctly with children props and triggers onSearch then clear the search', async () => {
+  it('renders correctly with children props and triggers onSearch then clear the search', async () => {
     let searchValue = ''
 
     renderWithTheme(
@@ -102,7 +102,7 @@ describe('searchInput', () => {
     await waitFor(() => expect(searchValue).toBe(''))
   })
 
-  test('renders correctly and verify accessibility', async () => {
+  it('renders correctly and verify accessibility', async () => {
     let searchValue = ''
 
     renderWithTheme(
@@ -168,7 +168,7 @@ describe('searchInput', () => {
     })
   })
 
-  test('check if shortcut as boolean works', async () => {
+  it('check if shortcut as boolean works', async () => {
     renderWithTheme(
       <SearchInput
         data-testid="search-bar"
@@ -196,7 +196,7 @@ describe('searchInput', () => {
     expect(SearchInputElement).toHaveFocus()
   })
 
-  test('check if custom shortcut works', async () => {
+  it('check if custom shortcut works', async () => {
     renderWithTheme(
       <SearchInput
         data-testid="search-bar"
@@ -224,7 +224,7 @@ describe('searchInput', () => {
     expect(SearchInputElement).toHaveFocus()
   })
 
-  test('search icon is clickable', async () => {
+  it('search icon is clickable', async () => {
     renderWithTheme(
       <SearchInput
         data-testid="search-bar"
@@ -255,7 +255,7 @@ describe('searchInput', () => {
     })
   })
 
-  test('search shotcut are clickable', async () => {
+  it('search shotcut are clickable', async () => {
     renderWithTheme(
       <SearchInput
         data-testid="search-bar"
@@ -286,7 +286,7 @@ describe('searchInput', () => {
     })
   })
 
-  test('resets to empty string when value is manually reset', async () => {
+  it('resets to empty string when value is manually reset', async () => {
     const TestComponent = () => {
       const [value, setValue] = useState<string | undefined>('initial value')
 

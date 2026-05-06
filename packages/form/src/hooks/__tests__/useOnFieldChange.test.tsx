@@ -2,7 +2,7 @@ import { renderHook } from '@testing-library/react'
 import { ThemeProvider } from '@ultraviolet/themes'
 import { theme as lightTheme } from '@ultraviolet/ui'
 import { useForm } from 'react-hook-form'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { CheckboxField, Form, TextInputField } from '../../components'
 import { mockErrors } from '../../mocks'
@@ -51,7 +51,7 @@ const Wrapper = ({ children, defaultValues }: Wrapers) => {
 }
 
 describe(useOnFieldChange, () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const callback = vi.fn((value, values) => {
       expect(value).toBe(updated.textInputName)
       expect(values).toStrictEqual(updated)
@@ -83,7 +83,7 @@ describe(useOnFieldChange, () => {
     expect(callback).toHaveBeenCalledOnce()
   })
 
-  test('should render when condition change', () => {
+  it('should render when condition change', () => {
     const callback = vi.fn()
 
     let defaultValues = initial

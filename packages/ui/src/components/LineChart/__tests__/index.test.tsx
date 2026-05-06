@@ -2,7 +2,7 @@ import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useEffect, useState } from 'react'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { LineChart } from '..'
 import {
@@ -29,15 +29,15 @@ vi.mock('@nivo/core', async importOriginal => {
 })
 
 describe('lineChart', () => {
-  test('renders correctly without data', () =>
+  it('renders correctly without data', () =>
     shouldMatchSnapshot(<LineChart xScale={{ type: 'linear' }} />)) // default xScale type (time) triggers test failure !?!
 
-  test('renders correctly with data', () =>
+  it('renders correctly with data', () =>
     shouldMatchSnapshot(
       <LineChart data={lineChartData} xScale={{ type: 'linear' }} />,
     ))
 
-  test('renders correctly with data transformer', () =>
+  it('renders correctly with data transformer', () =>
     shouldMatchSnapshot(
       <LineChart
         axisFormatters={{
@@ -48,11 +48,12 @@ describe('lineChart', () => {
       />,
     ))
 
-  test('renders correctly with point formatter', () =>
+  it('renders correctly with point formatter', () =>
     shouldMatchSnapshot(
       <LineChart
         data={lineChartData}
         pointFormatters={{
+          // oxlint-disable-next-line vitest/no-conditional-in-test
           x: value => value?.toString() ?? '',
           y: value => `${value as number} unit`,
         }}
@@ -60,12 +61,12 @@ describe('lineChart', () => {
       />,
     ))
 
-  test('renders correctly with detailed legend', () =>
+  it('renders correctly with detailed legend', () =>
     shouldMatchSnapshot(
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
     ))
 
-  test('renders correctly with timeline data', () =>
+  it('renders correctly with timeline data', () =>
     shouldMatchSnapshot(
       <LineChart
         data={lineChartHoursData}
@@ -74,7 +75,7 @@ describe('lineChart', () => {
       />,
     ))
 
-  test('renders correctly with multiple series', () =>
+  it('renders correctly with multiple series', () =>
     shouldMatchSnapshot(
       <LineChart
         data={lineChartMultipleData}
@@ -83,11 +84,13 @@ describe('lineChart', () => {
       />,
     ))
 
-  test.skip('renders correctly when chart is hovered', async () => {
+  // oxlint-disable-next-line vitest/no-disabled-tests
+  it.skip('renders correctly when chart is hovered', async () => {
     const { asFragment } = renderWithTheme(
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
     )
     const line = document.querySelector('svg[role="img"] g path')
+    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (!line) {
       throw new Error('LineChart line path not found')
     }
@@ -96,7 +99,7 @@ describe('lineChart', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly when legend is deselected', () => {
+  it('renders correctly when legend is deselected', () => {
     const { asFragment } = renderWithTheme(
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
     )
@@ -105,7 +108,7 @@ describe('lineChart', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly when data is async', () => {
+  it('renders correctly when data is async', () => {
     const AsyncLineChart = () => {
       const [data, setData] = useState<
         typeof lineChartMultipleData | undefined

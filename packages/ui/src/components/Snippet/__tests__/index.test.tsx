@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, it, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { Snippet } from '../index'
 
@@ -18,57 +18,57 @@ const TEST_VALUE_SINGLELINE =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 
 describe('snippet', () => {
-  test('renders correctly', () =>
+  it('renders correctly', () =>
     shouldMatchSnapshot(<Snippet>{TEST_VALUE_SINGLELINE}</Snippet>))
 
-  test('renders correctly in multiline ', () =>
+  it('renders correctly in multiline ', () =>
     shouldMatchSnapshot(<Snippet>{TEST_VALUE_MULTILINE}</Snippet>))
 
-  test('renders correctly in multiline with prefix lines number', () =>
+  it('renders correctly in multiline with prefix lines number', () =>
     shouldMatchSnapshot(
       <Snippet prefix="lines">{TEST_VALUE_MULTILINE}</Snippet>,
     ))
 
-  test('renders correctly in multiline with prefix command', () =>
+  it('renders correctly in multiline with prefix command', () =>
     shouldMatchSnapshot(
       <Snippet prefix="command">{TEST_VALUE_MULTILINE}</Snippet>,
     ))
 
-  test('renders correctly with single line with prefix command', () =>
+  it('renders correctly with single line with prefix command', () =>
     shouldMatchSnapshot(
       <Snippet prefix="command">{TEST_VALUE_SINGLELINE}</Snippet>,
     ))
 
-  test('renders correctly with single line with prefix lines number', () =>
+  it('renders correctly with single line with prefix lines number', () =>
     shouldMatchSnapshot(
       <Snippet prefix="lines">{TEST_VALUE_SINGLELINE}</Snippet>,
     ))
 
-  test('renders correctly with copyText', () =>
+  it('renders correctly with copyText', () =>
     shouldMatchSnapshot(
       <Snippet copyText="Test">{TEST_VALUE_SINGLELINE}</Snippet>,
     ))
 
-  test('renders correctly with copiedText', () => {
+  it('renders correctly with copiedText', () => {
     shouldMatchSnapshot(
       <Snippet copiedText="Test">{TEST_VALUE_SINGLELINE}</Snippet>,
     )
   })
 
-  test('renders correctly with hideText', () => {
+  it('renders correctly with hideText', () => {
     shouldMatchSnapshot(
       <Snippet hideText="Test">{TEST_VALUE_MULTILINE}</Snippet>,
     )
   })
 
-  test('renders correctly with showText', () => {
+  it('renders correctly with showText', () => {
     const { asFragment } = renderWithTheme(
       <Snippet showText="Test">{TEST_VALUE_MULTILINE}</Snippet>,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with initiallyExpanded', () => {
+  it('renders correctly with initiallyExpanded', () => {
     const { asFragment } = renderWithTheme(
       <Snippet initiallyExpanded>{TEST_VALUE_MULTILINE}</Snippet>,
     )
@@ -87,26 +87,26 @@ describe('snippet', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with custom number of rows', () => {
+  it('renders correctly with custom number of rows', () => {
     const { asFragment } = renderWithTheme(
       <Snippet rows={12}>{TEST_VALUE_MULTILINE}</Snippet>,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with noExpandable', () => {
+  it('renders correctly with noExpandable', () => {
     const { asFragment } = renderWithTheme(
       <Snippet noExpandable>{TEST_VALUE_MULTILINE}</Snippet>,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with label ', () =>
+  it('renders correctly with label ', () =>
     shouldMatchSnapshot(
       <Snippet label="label">{TEST_VALUE_MULTILINE}</Snippet>,
     ))
 
-  test('renders correctly with labelDescription', () =>
+  it('renders correctly with labelDescription', () =>
     shouldMatchSnapshot(
       <Snippet
         label="label"
@@ -115,7 +115,7 @@ describe('snippet', () => {
         {TEST_VALUE_MULTILINE}
       </Snippet>,
     ))
-  test('renders correctly with helper ', () =>
+  it('renders correctly with helper ', () =>
     shouldMatchSnapshot(
       <Snippet helper="helper">{TEST_VALUE_MULTILINE}</Snippet>,
     ))

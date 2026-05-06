@@ -3,7 +3,7 @@ import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme } from '@utils/test'
 import { useState } from 'react'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { TreeMapChart } from '..'
 import {
@@ -98,7 +98,7 @@ vi.mock('@nivo/treemap', () => ({
 }))
 
 describe('treeMapChart', () => {
-  test('renders correctly with data', () => {
+  it('renders correctly with data', () => {
     const { asFragment } = renderWithTheme(
       <TreeMapChart data={treeMapChartSimpleData} />,
       consoleLightTheme,
@@ -107,7 +107,7 @@ describe('treeMapChart', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders complex content with React components', () => {
+  it('renders complex content with React components', () => {
     const { asFragment } = renderWithTheme(
       <TreeMapChart data={treeMapChartWithCustomContentData} />,
       consoleLightTheme,
@@ -116,7 +116,7 @@ describe('treeMapChart', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders with custom height', () => {
+  it('renders with custom height', () => {
     const { container } = renderWithTheme(
       <TreeMapChart data={treeMapChartSimpleData} height="400px" />,
       consoleLightTheme,
@@ -126,7 +126,7 @@ describe('treeMapChart', () => {
     expect(chartContainer).toHaveStyle({ height: '400px' })
   })
 
-  test('renders with custom tooltip function', async () => {
+  it('renders with custom tooltip function', async () => {
     const tooltipFunction = vi.fn(data => ({
       content: `Custom: ${data.content}`,
       value: data.value * 2,

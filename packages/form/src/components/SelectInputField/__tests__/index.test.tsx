@@ -1,42 +1,42 @@
 import { act, fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, vi, it } from 'vitest'
 
 import { SelectInputField } from '..'
 
 import { cities, planets } from './resources'
 
 describe('selectInputField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <SelectInputField name="test" options={cities} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly disabled', () => {
+  it('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
       <SelectInputField disabled name="test" options={cities} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly multiselect', () => {
+  it('should render correctly multiselect', () => {
     const { asFragment } = renderWithForm(
       <SelectInputField multiselect name="test" options={cities} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly grouped', () => {
+  it('should render correctly grouped', () => {
     const { asFragment } = renderWithForm(
       <SelectInputField multiselect name="test" options={planets} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should display right value on grouped options', async () => {
+  it('should display right value on grouped options', async () => {
     const { asFragment } = renderWithForm(
       <SelectInputField name="test" options={planets} searchable={false} />,
     )
@@ -54,7 +54,7 @@ describe('selectInputField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events', async () => {
+  it('should trigger events', async () => {
     const onChange = vi.fn()
 
     const { asFragment } = renderWithForm(

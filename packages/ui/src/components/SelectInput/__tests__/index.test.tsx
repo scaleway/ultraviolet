@@ -1,7 +1,7 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
+import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 
 import { SelectInput } from '..'
 
@@ -33,14 +33,14 @@ describe('selectInput', () => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {})
   })
 
-  test('renders correctly', () => {
+  it('renders correctly', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput label="label" name="test" options={dataUnGrouped} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly small', () => {
+  it('renders correctly small', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         label="label"
@@ -52,7 +52,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with tooltip', () => {
+  it('renders correctly with tooltip', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         label="label"
@@ -64,19 +64,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly required', () => {
-    const { asFragment } = renderWithTheme(
-      <SelectInput
-        label="label"
-        name="test"
-        options={dataUnGrouped}
-        required
-      />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('renders correctly not clearable', () => {
+  it('renders correctly not clearable', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         clearable={false}
@@ -91,7 +79,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly ungrouped', async () => {
+  it('renders correctly ungrouped', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         name="test"
@@ -113,7 +101,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly grouped', async () => {
+  it('renders correctly grouped', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         name="test"
@@ -132,7 +120,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with default value', async () => {
+  it('renders correctly with default value', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         name="test"
@@ -152,7 +140,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with footer', async () => {
+  it('renders correctly with footer', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         footer="this is a footer"
@@ -173,7 +161,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly multiselect', async () => {
+  it('renders correctly multiselect', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         multiselect
@@ -194,7 +182,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with group error', async () => {
+  it('renders correctly with group error', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         groupError={{
@@ -219,7 +207,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with group empty state', async () => {
+  it('renders correctly with group empty state', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         groupEmptyState={{
@@ -245,7 +233,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with label on the right and optional info on the left', async () => {
+  it('renders correctly with label on the right and optional info on the left', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         descriptionDirection="row"
@@ -267,7 +255,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with label on the right and optional info on the right', async () => {
+  it('renders correctly with label on the right and optional info on the right', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         descriptionDirection="row"
@@ -288,7 +276,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with label on the bottom and optional info on the left', async () => {
+  it('renders correctly with label on the bottom and optional info on the left', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         descriptionDirection="column"
@@ -309,7 +297,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with label on the bottom and optional info on the right', async () => {
+  it('renders correctly with label on the bottom and optional info on the right', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         descriptionDirection="column"
@@ -330,7 +318,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly loadMore', () => {
+  it('renders correctly loadMore', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         clearable={false}
@@ -345,7 +333,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with emptyState', async () => {
+  it('renders correctly with emptyState', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         emptyState="no option"
@@ -364,7 +352,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly disabled', async () => {
+  it('renders correctly disabled', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         disabled
@@ -379,7 +367,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly required', async () => {
+  it('renders correctly required', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         name="test"
@@ -400,7 +388,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with dropdownAlign', async () => {
+  it('renders correctly with dropdownAlign', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         dropdownAlign="center"
@@ -422,7 +410,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly readOnly', async () => {
+  it('renders correctly readOnly', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         name="test"
@@ -438,7 +426,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with error', async () => {
+  it('renders correctly with error', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         error="error"
@@ -458,7 +446,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with success', async () => {
+  it('renders correctly with success', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         name="test"
@@ -478,7 +466,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with not searchable', async () => {
+  it('renders correctly with not searchable', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         name="test"
@@ -497,7 +485,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('handles correctly dropdown with clicks - grouped', async () => {
+  it('handles correctly dropdown with clicks - grouped', async () => {
     renderWithTheme(
       <SelectInput
         multiselect
@@ -521,7 +509,7 @@ describe('selectInput', () => {
     expect(dropdown).not.toBeInTheDocument()
   })
 
-  test('handles correctly dropdown with clicks - ungrouped', async () => {
+  it('handles correctly dropdown with clicks - ungrouped', async () => {
     renderWithTheme(
       <SelectInput
         multiselect
@@ -546,7 +534,7 @@ describe('selectInput', () => {
     expect(dropdown).not.toBeInTheDocument()
   })
 
-  test('handles correctly closable tags', async () => {
+  it('handles correctly closable tags', async () => {
     renderWithTheme(
       <SelectInput
         multiselect
@@ -565,7 +553,7 @@ describe('selectInput', () => {
     expect(venus).not.toBeVisible()
   })
 
-  test('renders correctly unclosable tags when readonly', () => {
+  it('renders correctly unclosable tags when readonly', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         multiselect
@@ -583,7 +571,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('handles correctly dropdown with arrow down/up key press with ungrouped data', async () => {
+  it('handles correctly dropdown with arrow down/up key press with ungrouped data', async () => {
     renderWithTheme(
       <SelectInput
         name="test"
@@ -609,7 +597,7 @@ describe('selectInput', () => {
     })
     expect(mercury).toHaveFocus()
   })
-  test('handles correctly dropdown with arrow pressing enter or space', async () => {
+  it('handles correctly dropdown with arrow pressing enter or space', async () => {
     renderWithTheme(
       <SelectInput
         name="test"
@@ -630,7 +618,7 @@ describe('selectInput', () => {
     })
   })
 
-  test('handles correctly dropdown with arrow down/up key press with grouped data', async () => {
+  it('handles correctly dropdown with arrow down/up key press with grouped data', async () => {
     renderWithTheme(
       <SelectInput
         name="test"
@@ -658,7 +646,7 @@ describe('selectInput', () => {
     expect(jupiter).toHaveFocus()
   })
 
-  test('handles correctly clear all', async () => {
+  it('handles correctly clear all', async () => {
     renderWithTheme(
       <SelectInput
         clearable
@@ -675,7 +663,7 @@ describe('selectInput', () => {
     expect(clearAll).not.toBeInTheDocument()
   })
 
-  test('handles click autoclose when outside click', async () => {
+  it('handles click autoclose when outside click', async () => {
     renderWithTheme(
       <>
         Test outside element
@@ -701,7 +689,7 @@ describe('selectInput', () => {
 
     expect(dropdown).not.toBeVisible()
   })
-  test('handles click on item', async () => {
+  it('handles click on item', async () => {
     const onChange = vi.fn()
 
     renderWithTheme(
@@ -727,7 +715,7 @@ describe('selectInput', () => {
     expect(onChange).toHaveBeenCalledOnce()
   })
 
-  test('handles keydown when not searchable on ungrouped data', async () => {
+  it('handles keydown when not searchable on ungrouped data', async () => {
     renderWithTheme(
       <SelectInput
         name="test"
@@ -748,7 +736,7 @@ describe('selectInput', () => {
     await userEvent.type(dropdown, 'a')
   })
 
-  test('handles keydown when not searchable on grouped data', async () => {
+  it('handles keydown when not searchable on grouped data', async () => {
     renderWithTheme(
       <SelectInput
         name="test"
@@ -766,7 +754,7 @@ describe('selectInput', () => {
     await userEvent.type(dropdown, 'a')
   })
 
-  test('renders with onChange', async () => {
+  it('renders with onChange', async () => {
     renderWithTheme(
       <SelectInput
         name="test"
@@ -783,7 +771,7 @@ describe('selectInput', () => {
     await userEvent.click(earth)
     await userEvent.click(earth)
   })
-  test('renders with onChange - multiselect', async () => {
+  it('renders with onChange - multiselect', async () => {
     renderWithTheme(
       <SelectInput
         multiselect
@@ -802,7 +790,7 @@ describe('selectInput', () => {
     await userEvent.click(earth)
   })
 
-  test('handles correctly searchable and closest value - grouped data', async () => {
+  it('handles correctly searchable and closest value - grouped data', async () => {
     renderWithTheme(
       <SelectInput
         name="test"
@@ -857,7 +845,8 @@ describe('selectInput', () => {
     expect(input.textContent).toContain('Jupiter')
   })
 
-  test.skip('handles correctly with searchable and closest value - multiselect', async () => {
+  // oxlint-disable-next-line vitest/no-disabled-tests
+  it.skip('handles correctly with searchable and closest value - multiselect', async () => {
     // There is issues with this test
     renderWithTheme(
       <SelectInput
@@ -918,7 +907,8 @@ describe('selectInput', () => {
     expect(emptyState).toBeVisible()
   })
 
-  test.skip('handles correctly with searchable and closest value - multiselect & grouped data', async () => {
+  // oxlint-disable-next-line vitest/no-disabled-tests
+  it.skip('handles correctly with searchable and closest value - multiselect & grouped data', async () => {
     // There is issues with this test
     renderWithTheme(
       <SelectInput
@@ -970,7 +960,7 @@ describe('selectInput', () => {
     await userEvent.keyboard('[Enter]')
   }, 10_000)
 
-  test('renders correctly selected tags when multiselect', async () => {
+  it('renders correctly selected tags when multiselect', async () => {
     renderWithTheme(
       <SelectInput
         descriptionDirection="column"
@@ -1004,7 +994,7 @@ describe('selectInput', () => {
     expect(plustag).toBeInTheDocument()
   })
 
-  test('handles correcty selectAll grouped data', async () => {
+  it('handles correcty selectAll grouped data', async () => {
     renderWithTheme(
       <SelectInput
         multiselect
@@ -1061,7 +1051,7 @@ describe('selectInput', () => {
     expect(selectAllCheckBox).toBeChecked()
   }, 15_000)
 
-  test('handles correcty selectAll ungrouped data', async () => {
+  it('handles correcty selectAll ungrouped data', async () => {
     renderWithTheme(
       <SelectInput
         multiselect
@@ -1118,7 +1108,7 @@ describe('selectInput', () => {
     expect(selectAllCheckBox).toBeChecked()
   }, 10_000)
 
-  test('handles correcty selectAllGroup', async () => {
+  it('handles correcty selectAllGroup', async () => {
     renderWithTheme(
       <SelectInput
         multiselect
@@ -1162,7 +1152,7 @@ describe('selectInput', () => {
     expect(selectAllGroupCheckBox).toBeChecked()
   }, 10_000)
 
-  test('handles correcty selectAllGroup - keyboard events', async () => {
+  it('handles correcty selectAllGroup - keyboard events', async () => {
     renderWithTheme(
       <SelectInput
         multiselect
@@ -1195,7 +1185,7 @@ describe('selectInput', () => {
     expect(selectAllGroupCheckBox).not.toBeChecked()
   }, 10_000)
 
-  test('handles correcty selectAllGroup with selectAll - grouped data', async () => {
+  it('handles correcty selectAllGroup with selectAll - grouped data', async () => {
     renderWithTheme(
       <SelectInput
         clearable={false}
@@ -1263,7 +1253,7 @@ describe('selectInput', () => {
     expect(selectAllCheckBox).toBeChecked()
   }, 15_000)
 
-  test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row" & multiselect', async () => {
+  it('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
         descriptionDirection="row"
@@ -1279,7 +1269,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row" & multiselect', async () => {
+  it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
         descriptionDirection="row"
@@ -1295,7 +1285,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column" & multiselect', async () => {
+  it('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
         descriptionDirection="column"
@@ -1311,7 +1301,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column" & multiselect', async () => {
+  it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
         descriptionDirection="column"
@@ -1327,7 +1317,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row"', async () => {
+  it('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row"', async () => {
     renderWithTheme(
       <SelectInput
         descriptionDirection="row"
@@ -1342,12 +1332,32 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row"', async () => {
+  it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row"', async () => {
     renderWithTheme(
       <SelectInput
         descriptionDirection="row"
         name="test"
         optionalInfoPlacement="right"
+        options={dataGrouped}
+        placeholder="placeholder"
+      />,
+    )
+    const input = screen.getByTestId('select-input-test')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+    const earth = screen.getByTestId('option-earth')
+    await userEvent.click(earth)
+  })
+  it('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column"', async () => {
+    renderWithTheme(
+      <SelectInput
+        descriptionDirection="column"
+        name="test"
+        optionalInfoPlacement="left"
         options={dataGrouped}
         placeholder="placeholder"
       />,
@@ -1362,27 +1372,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column"', async () => {
-    renderWithTheme(
-      <SelectInput
-        descriptionDirection="column"
-        name="test"
-        optionalInfoPlacement="left"
-        options={dataGrouped}
-        placeholder="placeholder"
-      />,
-    )
-    const input = screen.getByTestId('select-input-test')
-    await userEvent.click(input)
-    const dropdown = screen.getByRole('dialog')
-
-    await waitFor(() => {
-      expect(dropdown).toBeVisible()
-    })
-    const earth = screen.getByTestId('option-earth')
-    await userEvent.click(earth)
-  })
-  test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column"', async () => {
+  it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column"', async () => {
     renderWithTheme(
       <SelectInput
         descriptionDirection="column"
@@ -1403,7 +1393,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test('renders correctly loading - grouped data', async () => {
+  it('renders correctly loading - grouped data', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         descriptionDirection="row"
@@ -1425,7 +1415,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly loading - ungrouped data', async () => {
+  it('renders correctly loading - ungrouped data', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         descriptionDirection="row"
@@ -1446,7 +1436,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with function footer', async () => {
+  it('renders correctly with function footer', async () => {
     const f = vi.fn(() => {})
 
     const { asFragment } = renderWithTheme(
@@ -1493,7 +1483,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('handles correctly when adding options - single select', async () => {
+  it('handles correctly when adding options - single select', async () => {
     const onClick = vi.fn()
 
     renderWithTheme(
@@ -1531,7 +1521,7 @@ describe('selectInput', () => {
     expect(onClick).toHaveBeenCalledOnce()
   })
 
-  test('handles correctly when adding options - single select and ungrouped options', async () => {
+  it('handles correctly when adding options - single select and ungrouped options', async () => {
     const onClick = vi.fn()
 
     renderWithTheme(
@@ -1569,7 +1559,7 @@ describe('selectInput', () => {
     expect(onClick).toHaveBeenCalledOnce()
   })
 
-  test('handles correctly when adding options - multiselect select', async () => {
+  it('handles correctly when adding options - multiselect select', async () => {
     const onClick = vi.fn()
 
     renderWithTheme(
@@ -1622,7 +1612,7 @@ describe('selectInput', () => {
     expect(onClick).toHaveBeenCalledTimes(2)
   })
 
-  test('handles correctly when adding options - multiselect select and ungrouped data', async () => {
+  it('handles correctly when adding options - multiselect select and ungrouped data', async () => {
     const onClick = vi.fn()
 
     renderWithTheme(

@@ -2,7 +2,7 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useCallback, useState } from 'react'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { Popover } from '..'
 import { Button } from '../../Button'
@@ -85,21 +85,21 @@ const AdvancedPopover = () => {
 }
 
 describe('tooltip', () => {
-  test('should render correctly with required props', () =>
+  it('should render correctly with required props', () =>
     shouldMatchSnapshot(
       <Popover content="Test" onClose={() => {}} title="Test">
         Children
       </Popover>,
     ))
 
-  test('should render correctly with required props and visible', () =>
+  it('should render correctly with required props and visible', () =>
     shouldMatchSnapshot(
       <Popover content="Test" onClose={() => {}} title="Test" visible>
         Children
       </Popover>,
     ))
 
-  test('should render correctly with component in content prop', () =>
+  it('should render correctly with component in content prop', () =>
     shouldMatchSnapshot(
       <Popover content={<p>Test</p>} onClose={() => {}} title="Test" visible>
         Children
@@ -108,7 +108,7 @@ describe('tooltip', () => {
 
   describe('should render correctly with placement', () => {
     ;['top', 'left', 'right', 'bottom'].forEach(placement => {
-      test(`should renders tooltip with placement ${placement}`, () => {
+      it(`should renders tooltip with placement ${placement}`, () => {
         shouldMatchSnapshot(
           <Popover
             content="Test"
@@ -126,7 +126,7 @@ describe('tooltip', () => {
 
   describe('should render correctly with sentiment', () => {
     ;(['neutral', 'primary'] as const).forEach(sentiment => {
-      test(`should renders tooltip with placement ${sentiment}`, () => {
+      it(`should renders tooltip with placement ${sentiment}`, () => {
         shouldMatchSnapshot(
           <Popover
             content="Test"
@@ -144,7 +144,7 @@ describe('tooltip', () => {
 
   describe('should render correctly with sizes', () => {
     ;['small', 'medium', 'large'].forEach(size => {
-      test(`should renders tooltip with placement ${size}`, () => {
+      it(`should renders tooltip with placement ${size}`, () => {
         const { asFragment } = renderWithTheme(
           <Popover
             content="Test"
@@ -161,7 +161,7 @@ describe('tooltip', () => {
     })
   })
 
-  test('should render visible on mount and close on click on close button', async () => {
+  it('should render visible on mount and close on click on close button', async () => {
     const onClose = vi.fn(() => {})
 
     renderWithTheme(
@@ -185,7 +185,7 @@ describe('tooltip', () => {
     expect(onClose).toHaveBeenCalledOnce()
   })
 
-  test('should render visible on mount and close on click outside', async () => {
+  it('should render visible on mount and close on click outside', async () => {
     const onClose = vi.fn(() => {})
 
     renderWithTheme(
@@ -220,7 +220,7 @@ describe('tooltip', () => {
   // This test is made to check advanced use cases of popover with inputs inside and a modal that contains the same inputs
   // The goal is to check if at any time the popover or the modal close unexpectedly when interacting with the inputs
   describe('advanced test', () => {
-    test('should open popover click on select, choose an option and fill text input without closing popover', async () => {
+    it('should open popover click on select, choose an option and fill text input without closing popover', async () => {
       renderWithTheme(<AdvancedPopover />)
       const buttonControlsPopover = screen.getByTestId('button-popover')
 
@@ -250,7 +250,7 @@ describe('tooltip', () => {
       })
     })
 
-    test('should open popover then modal within popover, click on select, choose an option and fill text input without closing modal and popover', async () => {
+    it('should open popover then modal within popover, click on select, choose an option and fill text input without closing modal and popover', async () => {
       renderWithTheme(<AdvancedPopover />)
       const buttonControlsPopover = screen.getByTestId('button-popover')
 

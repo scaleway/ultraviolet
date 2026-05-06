@@ -1,59 +1,59 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { KEYS_MATCH } from '../constants'
 import { Key } from '../index'
 
 describe('key', () => {
-  test('renders correctly', () => shouldMatchSnapshot(<Key>A</Key>))
-  test('renders primary', () =>
+  it('renders correctly', () => shouldMatchSnapshot(<Key>A</Key>))
+  it('renders primary', () =>
     shouldMatchSnapshot(<Key sentiment="primary">A</Key>))
-  test('renders strong', () =>
+  it('renders strong', () =>
     shouldMatchSnapshot(
       <Key prominence="strong" sentiment="neutral">
         A
       </Key>,
     ))
-  test('renders strong primary', () =>
+  it('renders strong primary', () =>
     shouldMatchSnapshot(
       <Key prominence="strong" sentiment="primary">
         A
       </Key>,
     ))
 
-  test('renders disabled', () =>
+  it('renders disabled', () =>
     shouldMatchSnapshot(
       <Key disabled sentiment="neutral">
         A
       </Key>,
     ))
 
-  test('renders disabled primary', () =>
+  it('renders disabled primary', () =>
     shouldMatchSnapshot(
       <Key disabled sentiment="primary">
         A
       </Key>,
     ))
 
-  test('renders disabled strong', () =>
+  it('renders disabled strong', () =>
     shouldMatchSnapshot(
       <Key disabled prominence="strong" sentiment="neutral">
         A
       </Key>,
     ))
 
-  test('renders disabled strong primary', () =>
+  it('renders disabled strong primary', () =>
     shouldMatchSnapshot(
       <Key disabled prominence="strong" sentiment="primary">
         A
       </Key>,
     ))
 
-  test('renders small', () => shouldMatchSnapshot(<Key size="small">A</Key>))
+  it('renders small', () => shouldMatchSnapshot(<Key size="small">A</Key>))
 
   Object.keys(KEYS_MATCH).map(key =>
-    test(`renders with special key ${key}`, () => {
+    it(`renders with special key ${key}`, () => {
       renderWithTheme(<Key data-testid="key">{key}</Key>)
 
       const element = screen.getByTestId('key')

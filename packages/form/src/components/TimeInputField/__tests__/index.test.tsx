@@ -1,26 +1,26 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { TimeInputField } from '..'
 
 describe('textInputField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <TimeInputField label="Test" name="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly disabled', () => {
+  it('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
       <TimeInputField label="Test" name="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events', async () => {
+  it('should trigger events', async () => {
     const onFocus = vi.fn()
     const onChange = vi.fn()
     const onBlur = vi.fn()

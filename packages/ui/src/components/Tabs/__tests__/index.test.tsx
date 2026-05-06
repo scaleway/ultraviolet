@@ -1,18 +1,18 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { Tabs } from '..'
 import { Link } from '../../Link'
 
 describe('tabs', () => {
-  test('renders correctly', () => {
+  it('renders correctly', () => {
     const { asFragment } = renderWithTheme(<Tabs onChange={() => {}} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with Tabs with prop', () => {
+  it('renders correctly with Tabs with prop', () => {
     Object.defineProperty(HTMLElement.prototype, 'clientWidth', {
       configurable: true,
       value: 500,
@@ -72,7 +72,7 @@ describe('tabs', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with Tabs menu selected', () => {
+  it('renders correctly with Tabs menu selected', () => {
     const { asFragment } = renderWithTheme(
       <Tabs onChange={() => {}} selected={4}>
         <Tabs.Tab value={0}>First</Tabs.Tab>
@@ -93,7 +93,7 @@ describe('tabs', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with Tabs and last disabled', () => {
+  it('renders correctly with Tabs and last disabled', () => {
     shouldMatchSnapshot(
       <Tabs onChange={() => {}} selected={2}>
         <Tabs.Tab value={0}>First</Tabs.Tab>
@@ -105,7 +105,7 @@ describe('tabs', () => {
     )
   })
 
-  test('renders correctly with Tabs name', () => {
+  it('renders correctly with Tabs name', () => {
     shouldMatchSnapshot(
       <Tabs onChange={() => {}} selected="second">
         <Tabs.Tab value="first">First</Tabs.Tab>
@@ -117,7 +117,7 @@ describe('tabs', () => {
     )
   })
 
-  test('renders correctly with custom Tabs component', () => {
+  it('renders correctly with custom Tabs component', () => {
     shouldMatchSnapshot(
       <Tabs onChange={() => {}}>
         <Tabs.Tab as="div">First</Tabs.Tab>
@@ -129,7 +129,7 @@ describe('tabs', () => {
     )
   })
 
-  test('updates tab on keydown', () => {
+  it('updates tab on keydown', () => {
     const onChange = vi.fn()
     const onFirstTabClick = vi.fn()
     renderWithTheme(
@@ -157,7 +157,7 @@ describe('tabs', () => {
     expect(onFirstTabClick).toHaveBeenCalledTimes(0)
   })
 
-  test('updates tab on click', () => {
+  it('updates tab on click', () => {
     const onChange = vi.fn()
     const onFirstTabClick = vi.fn()
     renderWithTheme(
@@ -193,7 +193,7 @@ describe('tabs', () => {
     expect(onFirstTabClick).toHaveBeenCalledOnce()
   })
 
-  test('no onChange', () => {
+  it('no onChange', () => {
     const onClick = vi.fn()
     const { unmount } = renderWithTheme(
       <Tabs onChange={() => {}}>

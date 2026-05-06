@@ -5,7 +5,7 @@ import {
   resetIntersectionMocking,
   setupIntersectionMocking,
 } from 'react-intersection-observer/test-utils'
-import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { EstimateCost } from '..'
 
@@ -20,7 +20,7 @@ describe('estimateCost - Regular Item', () => {
     resetIntersectionMocking()
   })
 
-  test('render basic props', () =>
+  it('render basic props', () =>
     shouldMatchSnapshot(
       <EstimateCost description="Custom Description">
         <EstimateCost.Item label="Regular">
@@ -29,7 +29,7 @@ describe('estimateCost - Regular Item', () => {
       </EstimateCost>,
     ))
 
-  test('render basic props with overlay', () =>
+  it('render basic props with overlay', () =>
     shouldMatchSnapshot(
       <EstimateCost
         OverlayLeft={OverlaySubmitButton}
@@ -48,7 +48,7 @@ describe('estimateCost - Regular Item', () => {
       </EstimateCost>,
     ))
 
-  test('render basic props with overlay beta', () =>
+  it('render basic props with overlay beta', () =>
     shouldMatchSnapshot(
       <EstimateCost isBeta OverlayRight={OverlaySubmitButton}>
         <EstimateCost.Item
@@ -67,7 +67,7 @@ describe('estimateCost - Regular Item', () => {
       </EstimateCost>,
     ))
 
-  test('render basic props with long fractions digits', () =>
+  it('render basic props with long fractions digits', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular" longFractionDigits price={0.000_001}>
@@ -76,7 +76,7 @@ describe('estimateCost - Regular Item', () => {
       </EstimateCost>,
     ))
 
-  test('render basic props with maxPrice and longFractionDigits', () =>
+  it('render basic props with maxPrice and longFractionDigits', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
@@ -91,7 +91,7 @@ describe('estimateCost - Regular Item', () => {
       </EstimateCost>,
     ))
 
-  test('render basic props with maxPrice', () =>
+  it('render basic props with maxPrice', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
@@ -106,7 +106,7 @@ describe('estimateCost - Regular Item', () => {
       </EstimateCost>,
     ))
 
-  test('render basic props with is not defined', () =>
+  it('render basic props with is not defined', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item isDefined={false} label="Regular">
@@ -115,7 +115,7 @@ describe('estimateCost - Regular Item', () => {
       </EstimateCost>,
     ))
 
-  test('render basic props with sublabel', () =>
+  it('render basic props with sublabel', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular" subLabel="Excellent">
@@ -124,7 +124,7 @@ describe('estimateCost - Regular Item', () => {
       </EstimateCost>,
     ))
 
-  test('render basic props with textNotDefined', () =>
+  it('render basic props with textNotDefined', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular" textNotDefined="Not defined">
@@ -133,7 +133,7 @@ describe('estimateCost - Regular Item', () => {
       </EstimateCost>,
     ))
 
-  test('render basic with ellipsis', () =>
+  it('render basic with ellipsis', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular" textNotDefined="Not defined">
@@ -146,7 +146,7 @@ describe('estimateCost - Regular Item', () => {
       </EstimateCost>,
     ))
 
-  test('render with isDisabledOnOverlay', () =>
+  it('render with isDisabledOnOverlay', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular">
@@ -157,7 +157,7 @@ describe('estimateCost - Regular Item', () => {
       </EstimateCost>,
     ))
 
-  test('render with alert', () =>
+  it('render with alert', () =>
     shouldMatchSnapshot(
       <EstimateCost
         alert="this is an alert"
@@ -169,7 +169,7 @@ describe('estimateCost - Regular Item', () => {
       </EstimateCost>,
     ))
 
-  test('render with hourly price range', async () => {
+  it('render with hourly price range', async () => {
     renderWithTheme(
       <EstimateCost>
         <EstimateCost.Item
@@ -191,7 +191,7 @@ describe('estimateCost - Regular Item', () => {
     await waitFor(() => expect(input.value).toBe('10'))
   })
 
-  test('render with hourly price range and longFractionDigits', async () => {
+  it('render with hourly price range and longFractionDigits', async () => {
     renderWithTheme(
       <EstimateCost>
         <EstimateCost.Item

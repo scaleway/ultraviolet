@@ -2,7 +2,7 @@ import { renderHook, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, vi, it } from 'vitest'
 
 import { Form, Submit, TagInputField } from '../..'
 import { mockErrors } from '../../../mocks'
@@ -10,14 +10,14 @@ import { mockErrors } from '../../../mocks'
 const alpha = /^[a-zA-Z]*$/
 
 describe('tagInputField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <TagInputField name="test" placeholder="placeholder" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with regex', () => {
+  it('should render correctly with regex', () => {
     const { asFragment } = renderWithForm(
       <>
         <TagInputField
@@ -34,7 +34,7 @@ describe('tagInputField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should works with defaultValues', async () => {
+  it('should works with defaultValues', async () => {
     const onSubmit = vi.fn()
     const { result } = renderHook(() =>
       useForm<{ test: string[] }>({ defaultValues: { test: ['First'] } }),

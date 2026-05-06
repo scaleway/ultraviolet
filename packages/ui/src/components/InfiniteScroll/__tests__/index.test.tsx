@@ -1,11 +1,11 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { renderWithTheme } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { InfiniteScroll } from '..'
 
 describe('infiniteScroll', () => {
-  test('renders correctly ', () => {
+  it('renders correctly ', () => {
     const { asFragment } = renderWithTheme(
       <InfiniteScroll onLoadMore={() => {}} />,
     )
@@ -13,7 +13,7 @@ describe('infiniteScroll', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('onLoadMore is correctly called when scrolling down', async () => {
+  it('onLoadMore is correctly called when scrolling down', async () => {
     const onLoadMore = vi.fn()
 
     renderWithTheme(
@@ -49,7 +49,7 @@ describe('infiniteScroll', () => {
     })
   })
 
-  test('async onLoadMore is correctly called when scrolling down', async () => {
+  it('async onLoadMore is correctly called when scrolling down', async () => {
     const onLoadMore = vi.fn(
       async () =>
         new Promise<void>(resolve => {

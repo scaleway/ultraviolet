@@ -44,6 +44,5 @@ Navigation.PinnedItems = PinnedItems
 Navigation.Separator = Separator
 Navigation.ShowHide = ShowHide
 
-// oxlint-disable-next-line eslint-plugin-react-refresh/only-export-components
 export { NavigationProvider, useNavigation }
 export type { NavigationProps }

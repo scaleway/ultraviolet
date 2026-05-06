@@ -2,7 +2,7 @@ import { renderHook, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { Submit, UnitInputField } from '../..'
 import { mockErrors } from '../../../mocks'
@@ -24,7 +24,7 @@ const optionsSelect = [
 ]
 
 describe('unitInputField', () => {
-  test('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <UnitInputField
         label="Test"
@@ -37,7 +37,7 @@ describe('unitInputField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should handles onChange and selection', async () => {
+  it('should handles onChange and selection', async () => {
     const onSubmit = vi.fn()
     const { result } = renderHook(() =>
       useForm<{ test: number | null }>({

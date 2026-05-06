@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react'
 import { shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { SelectableCardGroup } from '..'
 
 describe('selectableCardGroup', () => {
-  test('renders correctly', () =>
+  it('renders correctly', () =>
     shouldMatchSnapshot(
       <SelectableCardGroup
         legend="Label"
@@ -19,7 +19,7 @@ describe('selectableCardGroup', () => {
       </SelectableCardGroup>,
     ))
 
-  test('renders correctly with direction multiple columns', () =>
+  it('renders correctly with direction multiple columns', () =>
     shouldMatchSnapshot(
       <SelectableCardGroup
         columns={2}
@@ -34,7 +34,7 @@ describe('selectableCardGroup', () => {
       </SelectableCardGroup>,
     ))
 
-  test('renders correctly with helper content', () =>
+  it('renders correctly with helper content', () =>
     shouldMatchSnapshot(
       <SelectableCardGroup
         helper="Helper content"
@@ -48,7 +48,7 @@ describe('selectableCardGroup', () => {
         <SelectableCardGroup.Card label="Checkbox 2" value="value-2" />
       </SelectableCardGroup>,
     ))
-  test('renders correctly required and showTick', () =>
+  it('renders correctly required and showTick', () =>
     shouldMatchSnapshot(
       <SelectableCardGroup
         legend="Label"
@@ -63,7 +63,7 @@ describe('selectableCardGroup', () => {
         <SelectableCardGroup.Card label="Checkbox 2" value="value-2" />
       </SelectableCardGroup>,
     ))
-  test('renders correctly with error content', () =>
+  it('renders correctly with error content', () =>
     shouldMatchSnapshot(
       <SelectableCardGroup
         error="Error content"
@@ -77,7 +77,7 @@ describe('selectableCardGroup', () => {
         <SelectableCardGroup.Card label="Checkbox 2" value="value-2" />
       </SelectableCardGroup>,
     ))
-  test('renders correctly as a radio', () =>
+  it('renders correctly as a radio', () =>
     shouldMatchSnapshot(
       <SelectableCardGroup
         error="Error content"
@@ -92,7 +92,7 @@ describe('selectableCardGroup', () => {
       </SelectableCardGroup>,
     ))
 
-  test('throws if SelectableCardGroup.Card is used without SelectableCardGroup', () => {
+  it('throws if SelectableCardGroup.Card is used without SelectableCardGroup', () => {
     expect(() =>
       render(<SelectableCardGroup.Card label="Checkbox 1" value="value-1" />),
     ).toThrow(

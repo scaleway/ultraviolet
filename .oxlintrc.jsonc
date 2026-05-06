@@ -112,6 +112,17 @@
         "vitest/prefer-to-be-truthy": "off",
         "vitest/require-test-timeout": "off",
         "vitest/require-mock-type-parameters": "off",
+        "vitest/prefer-expect-assertions": "off",
+        "vitest/no-hooks": "off",
+        "vitest/expect-expect": "off",
+        "vitest/valid-title": "off",
+        "vitest/max-expects": [
+          "error",
+          {
+            "max": 10,
+          },
+        ],
+        "vitest/no-mocks-import": "error",
       },
     },
     {
@@ -161,10 +172,13 @@
     ],
 
     "eslint/no-negated-condition": "off",
+    "react/forbid-component-props": "off",
 
     "import/no-unassigned-import": "off",
     "import/no-nodejs-modules": "warn",
     "import/max-dependencies": "off",
+
+    "oxc/branches-sharing-code": "off",
 
     "react/display-name": "off",
     "react/no-react-children": "off",
@@ -178,6 +192,7 @@
     "react/jsx-no-useless-fragment": "off",
     "react/jsx-props-no-spreading": "off",
     "react/no-multi-comp": "warn",
+    "react/only-export-components": "off",
 
     "typescript/prefer-nullish-coalescing": [
       "off",

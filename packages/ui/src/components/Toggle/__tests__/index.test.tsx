@@ -1,26 +1,26 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { Toggle } from '..'
 
 describe('toggle', () => {
-  test('renders correctly', () =>
+  it('renders correctly', () =>
     shouldMatchSnapshot(<Toggle name="test" onChange={() => {}} />))
 
-  test('renders correctly when checked', () =>
+  it('renders correctly when checked', () =>
     shouldMatchSnapshot(<Toggle checked name="test" onChange={() => {}} />))
 
-  test('renders correctly when disabled', () =>
+  it('renders correctly when disabled', () =>
     shouldMatchSnapshot(<Toggle disabled name="test" onChange={() => {}} />))
 
-  test('renders correctly when required with label', () =>
+  it('renders correctly when required with label', () =>
     shouldMatchSnapshot(
       <Toggle label="test" name="test" onChange={() => {}} required />,
     ))
 
-  test('renders correctly when required with label left', () =>
+  it('renders correctly when required with label left', () =>
     shouldMatchSnapshot(
       <Toggle
         label="test"
@@ -31,17 +31,17 @@ describe('toggle', () => {
       />,
     ))
 
-  test('renders correctly with non default size', () =>
+  it('renders correctly with non default size', () =>
     shouldMatchSnapshot(
       <Toggle name="test" onChange={() => {}} size="small" />,
     ))
 
-  test('renders correctly label', () =>
+  it('renders correctly label', () =>
     shouldMatchSnapshot(
       <Toggle label="This is a label" name="test" onChange={() => {}} />,
     ))
 
-  test('renders correctly with tooltip', () =>
+  it('renders correctly with tooltip', () =>
     shouldMatchSnapshot(
       <Toggle
         label="This is a label"
@@ -51,7 +51,7 @@ describe('toggle', () => {
       />,
     ))
 
-  test('renders correctly with labels on left', () =>
+  it('renders correctly with labels on left', () =>
     shouldMatchSnapshot(
       <Toggle
         label="This is a label"
@@ -61,7 +61,7 @@ describe('toggle', () => {
       />,
     ))
 
-  test('renders correctly with custom labels on right', () =>
+  it('renders correctly with custom labels on right', () =>
     shouldMatchSnapshot(
       <Toggle
         label="This is a label"
@@ -71,12 +71,12 @@ describe('toggle', () => {
       />,
     ))
 
-  test('renders correctly with complex label', () =>
+  it('renders correctly with complex label', () =>
     shouldMatchSnapshot(
       <Toggle label={<span>Custom label rendered</span>} name="test" />,
     ))
 
-  test('renders and click on toggle on', async () => {
+  it('renders and click on toggle on', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <Toggle label="labelName" name="test" onChange={onChange} />,
@@ -90,11 +90,11 @@ describe('toggle', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with helper', () =>
+  it('renders correctly with helper', () =>
     shouldMatchSnapshot(
       <Toggle helper="This is a helper" label="This is a label" name="test" />,
     ))
-  test('renders correctly with error', () =>
+  it('renders correctly with error', () =>
     shouldMatchSnapshot(
       <Toggle
         error="error text"

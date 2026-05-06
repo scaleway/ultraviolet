@@ -1,5 +1,5 @@
 // oxlint-disable typescript/no-unsafe-type-assertion
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import onKeyOnlyNumbers from '../keycode'
 import parseIntOr from '../numbers'
@@ -18,7 +18,7 @@ describe(recursivelyGetChildrenString, () => {
     props: { children: null },
   }
 
-  test.each`
+  it.each`
     test                                                      | value                                         | expected
     ${'is bare string'}                                       | ${'hello'}                                    | ${'hello'}
     ${'is array'}                                             | ${['hello', 'world']}                         | ${''}
@@ -34,7 +34,7 @@ describe(recursivelyGetChildrenString, () => {
 })
 
 describe(onKeyOnlyNumbers, () => {
-  test('should only prevent numbers keyCodes', () => {
+  it('should only prevent numbers keyCodes', () => {
     ;[...new Array(100).keys()].forEach(keyCode => {
       const preventDefault = vi.fn()
 
@@ -44,6 +44,7 @@ describe(onKeyOnlyNumbers, () => {
       } as unknown as KeyboardEvent)
 
       expect(preventDefault).toHaveBeenCalledTimes(
+        // oxlint-disable-next-line vitest/no-conditional-in-test
         keyCode < 48 || keyCode > 57 ? 1 : 0,
       )
     })
@@ -53,7 +54,7 @@ describe(onKeyOnlyNumbers, () => {
 describe(parseIntOr, () => {
   const fallback = 987_654_321
 
-  test.each`
+  it.each`
     test                                | value                  | expected
     ${'is correct number'}              | ${10}                  | ${10}
     ${'is BigInt'}                      | ${900719925474099267n} | ${900_719_925_474_099_300}

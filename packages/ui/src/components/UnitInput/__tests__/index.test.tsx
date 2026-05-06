@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { UnitInput } from '..'
 
@@ -20,7 +20,7 @@ const options = [
   },
 ]
 describe('unitInput', () => {
-  test('renders with default props', () =>
+  it('renders with default props', () =>
     shouldMatchSnapshot(
       <UnitInput
         name="test"
@@ -30,7 +30,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test('renders with min max', () =>
+  it('renders with min max', () =>
     shouldMatchSnapshot(
       <UnitInput
         max={100}
@@ -40,7 +40,7 @@ describe('unitInput', () => {
         options={options}
       />,
     ))
-  test('renders with size small', () =>
+  it('renders with size small', () =>
     shouldMatchSnapshot(
       <UnitInput
         name="test"
@@ -51,7 +51,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test('renders with size medioum', () =>
+  it('renders with size medioum', () =>
     shouldMatchSnapshot(
       <UnitInput
         name="test"
@@ -62,7 +62,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test('renders click', async () => {
+  it('renders click', async () => {
     const { asFragment } = renderWithTheme(
       <UnitInput
         name="test"
@@ -78,7 +78,7 @@ describe('unitInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders with size large', () =>
+  it('renders with size large', () =>
     shouldMatchSnapshot(
       <UnitInput
         name="test"
@@ -89,7 +89,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test('renders with disabled and placeHolder', () =>
+  it('renders with disabled and placeHolder', () =>
     shouldMatchSnapshot(
       <UnitInput
         disabled
@@ -101,7 +101,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test('renders with dropdownAlign center', () =>
+  it('renders with dropdownAlign center', () =>
     shouldMatchSnapshot(
       <UnitInput
         dropdownAlign="center"
@@ -113,7 +113,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test('renders with success', () =>
+  it('renders with success', () =>
     shouldMatchSnapshot(
       <UnitInput
         helper="text"
@@ -126,7 +126,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test('renders with error', () =>
+  it('renders with error', () =>
     shouldMatchSnapshot(
       <UnitInput
         error="error"
@@ -138,7 +138,7 @@ describe('unitInput', () => {
         placeholder="100"
       />,
     ))
-  test('renders with error  and success', () =>
+  it('renders with error  and success', () =>
     shouldMatchSnapshot(
       <UnitInput
         error
@@ -152,7 +152,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test('handles writing in input', async () => {
+  it('handles writing in input', async () => {
     renderWithTheme(
       <div>
         <UnitInput
@@ -183,7 +183,7 @@ describe('unitInput', () => {
     await userEvent.click(screen.getByTestId('test'))
   })
 
-  test('handles selectintg input', async () => {
+  it('handles selectintg input', async () => {
     renderWithTheme(
       <div>
         <UnitInput
@@ -207,7 +207,7 @@ describe('unitInput', () => {
     await userEvent.click(screen.getByTestId('option-mb'))
   })
 
-  test('renders with label and no label information', () =>
+  it('renders with label and no label information', () =>
     shouldMatchSnapshot(
       <UnitInput
         disabled
@@ -219,7 +219,7 @@ describe('unitInput', () => {
         placeholder="100"
       />,
     ))
-  test('renders with label and label information', () =>
+  it('renders with label and label information', () =>
     shouldMatchSnapshot(
       <UnitInput
         disabled
@@ -232,7 +232,7 @@ describe('unitInput', () => {
         placeholder="100"
       />,
     ))
-  test('renders with no label and label information', () =>
+  it('renders with no label and label information', () =>
     shouldMatchSnapshot(
       <UnitInput
         disabled
@@ -245,7 +245,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test('renders with default value', () =>
+  it('renders with default value', () =>
     shouldMatchSnapshot(
       <UnitInput
         disabled

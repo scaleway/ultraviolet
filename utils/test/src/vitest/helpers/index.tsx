@@ -7,7 +7,6 @@ import { makeShouldMatchSnapshot } from './shouldMatchSnapshot'
 import { makeShouldMatchSnapshotWithPortal } from './shouldMatchSnapshotWithPortal'
 
 import type { FormErrors, UseFormProps } from '../../../../../packages/form/src'
-// oxlint-disable react/only-export-components
 import type { RenderOptions } from '@testing-library/react'
 import type { ComponentProps, ReactElement, ReactNode } from 'react'
 

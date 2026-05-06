@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { ToggleGroupField } from '..'
 
 describe('groupField', () => {
-  test('should render correctly checked', async () => {
+  it('should render correctly checked', async () => {
     const { asFragment } = renderWithForm(
       <ToggleGroupField legend="Label" name="Group" onChange={() => {}}>
         <ToggleGroupField.Toggle
@@ -36,7 +36,7 @@ describe('groupField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events correctly with required prop', async () => {
+  it('should trigger events correctly with required prop', async () => {
     const onChange = vi.fn(() => {})
 
     const { asFragment } = renderWithForm(

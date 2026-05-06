@@ -1,6 +1,6 @@
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, test, vi } from 'vitest'
+import { describe, it, vi } from 'vitest'
 
 import { BarChart } from '..'
 import {
@@ -26,13 +26,12 @@ vi.mock('@nivo/core', async importOriginal => {
 })
 
 describe('barChart', () => {
-  test('renders correctly without data', () =>
-    shouldMatchSnapshot(<BarChart />))
+  it('renders correctly without data', () => shouldMatchSnapshot(<BarChart />))
 
-  test('renders correctly with data', () =>
+  it('renders correctly with data', () =>
     shouldMatchSnapshot(<BarChart data={barChartSimpleData} />))
 
-  test('renders correctly with data transformer', () =>
+  it('renders correctly with data transformer', () =>
     shouldMatchSnapshot(
       <BarChart
         axisFormatters={{
@@ -42,13 +41,14 @@ describe('barChart', () => {
       />,
     ))
 
-  test('renders correctly with multiple series', () =>
+  it('renders correctly with multiple series', () =>
     shouldMatchSnapshot(<BarChart data={barChartMultiData} />))
 
-  test('renders correctly with negative values', () =>
+  it('renders correctly with negative values', () =>
     shouldMatchSnapshot(<BarChart data={barChartPositiveNegativeData} />))
 
-  test.skip('renders correctly with custom tooltip format', async () => {
+  // oxlint-disable-next-line vitest/no-disabled-tests
+  it.skip('renders correctly with custom tooltip format', async () => {
     const { container } = renderWithTheme(
       <BarChart
         data={barChartPositiveNegativeData}
@@ -61,6 +61,7 @@ describe('barChart', () => {
     )
 
     const bar = container.querySelector('svg[role="img"] g line')
+    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (!bar) {
       throw new Error('BarChart column not found')
     }

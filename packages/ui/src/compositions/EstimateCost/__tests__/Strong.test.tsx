@@ -3,7 +3,7 @@ import {
   resetIntersectionMocking,
   setupIntersectionMocking,
 } from 'react-intersection-observer/test-utils'
-import { afterEach, beforeEach, describe, test, vi } from 'vitest'
+import { afterEach, beforeEach, describe, it, vi } from 'vitest'
 
 import { EstimateCost } from '..'
 
@@ -16,7 +16,7 @@ describe('estimateCost - Strong Item', () => {
     resetIntersectionMocking()
   })
 
-  test('render basic props', () =>
+  it('render basic props', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Strong">
@@ -25,7 +25,7 @@ describe('estimateCost - Strong Item', () => {
       </EstimateCost>,
     ))
 
-  test('render with small variant', () =>
+  it('render with small variant', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Strong">
@@ -36,7 +36,7 @@ describe('estimateCost - Strong Item', () => {
       </EstimateCost>,
     ))
 
-  test('render with isDisabledOnOverlay', () =>
+  it('render with isDisabledOnOverlay', () =>
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Strong">

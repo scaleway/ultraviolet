@@ -1,7 +1,7 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, vi, it } from 'vitest'
 
 import { SelectableCardOptionGroup } from '..'
 import centos from '../__stories__/assets/centos.svg'
@@ -14,7 +14,7 @@ import {
 } from '../__stories__/constants'
 
 describe('selectableCardOptionGroup', () => {
-  test('renders correctly', () => {
+  it('renders correctly', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
         legend="Select your OS"
@@ -47,7 +47,7 @@ describe('selectableCardOptionGroup', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with medium size', () => {
+  it('renders correctly with medium size', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
         onChange={() => {}}
@@ -80,7 +80,7 @@ describe('selectableCardOptionGroup', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with aria-label', () => {
+  it('renders correctly with aria-label', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
         aria-label="Select your OS"
@@ -114,7 +114,7 @@ describe('selectableCardOptionGroup', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with id', () => {
+  it('renders correctly with id', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
         onChange={() => {}}
@@ -150,7 +150,7 @@ describe('selectableCardOptionGroup', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with all options disabled', () => {
+  it('renders correctly with all options disabled', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
         disabled
@@ -183,7 +183,7 @@ describe('selectableCardOptionGroup', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with partial disabled', async () => {
+  it('renders correctly with partial disabled', async () => {
     const onChange = vi.fn()
     const onChangeOption = vi.fn()
 
@@ -225,7 +225,7 @@ describe('selectableCardOptionGroup', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with error message', () => {
+  it('renders correctly with error message', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
         error="Error message"
@@ -259,7 +259,7 @@ describe('selectableCardOptionGroup', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with error as boolean', () => {
+  it('renders correctly with error as boolean', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
         error
@@ -292,7 +292,7 @@ describe('selectableCardOptionGroup', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with image as ReactNode', () => {
+  it('renders correctly with image as ReactNode', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
         onChange={() => {}}
@@ -324,7 +324,7 @@ describe('selectableCardOptionGroup', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly 4 columns', () => {
+  it('renders correctly 4 columns', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
         columns={4}
@@ -357,7 +357,7 @@ describe('selectableCardOptionGroup', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with helper', () => {
+  it('renders correctly with helper', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
         helper="Helper message"
@@ -391,7 +391,7 @@ describe('selectableCardOptionGroup', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('onChange and onChangeOption are being called', async () => {
+  it('onChange and onChangeOption are being called', async () => {
     const onChange = vi.fn()
     const onChangeOption = vi.fn()
 
@@ -433,7 +433,7 @@ describe('selectableCardOptionGroup', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('tabulation works in correct order selectable card > select input', async () => {
+  it('tabulation works in correct order selectable card > select input', async () => {
     renderWithTheme(
       <SelectableCardOptionGroup
         onChange={() => {}}
