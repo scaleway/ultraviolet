@@ -48,12 +48,14 @@ export const Usage: StoryFn<typeof Helper> = () => (
           options={values}
           size="medium"
           label="Input1"
+          aria-describedby="id1"
         />
         <SelectInput
           name="input22"
           options={values}
           size="medium"
           label="Input2"
+          aria-describedby="id2"
         />
         <Checkbox>Checkbox</Checkbox>
       </Row>
@@ -69,7 +71,7 @@ Usage.parameters = {
   docs: {
     description: {
       story:
-        'Example of a usage of this component. Here, to center the checkbox with the input and not with the input and the helper, use `Label` and `Row`. Do not forget to use prop `aria-describedby` on the input it to link the helper.',
+        'Example of a usage of this component. Here, to center the checkbox with the input and not with the input and the helper, use `Label` and `Row`. Do not forget to use the prop `aria-describedby` on the input to link it with the helper.',
     },
   },
 }

@@ -123,15 +123,16 @@ describe('helper', () => {
     const { asFragment } = renderWithTheme(
       <div>
         <Helper id="id-helper" size="small" helper="helper" />
-        <input data-testid="test-input" aria-describedby="id-helper" />
+        <input
+          data-testid="test-input"
+          aria-describedby="id-helper"
+          type="text"
+        />
       </div>,
     )
 
-    const input = screen.getByTestId('test-input')
-    const helper = screen.getByText('helper')
-
-    expect(input).toHaveAttribute('aria-describedby', 'id-helper')
-    expect(helper).toHaveAttribute('id', 'id-helper')
+    const input = screen.getByRole('textbox')
+    expect(input).toHaveAccessibleDescription('helper')
 
     expect(asFragment()).toMatchSnapshot()
   })
