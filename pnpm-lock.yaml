@@ -472,8 +472,8 @@ importers:
         specifier: workspace:*
         version: link:../ui
       react-hook-form:
-        specifier: 7.74.0
-        version: 7.74.0(react@19.2.6)
+        specifier: 7.75.0
+        version: 7.75.0(react@19.2.6)
     devDependencies:
       '@repo/config':
         specifier: workspace:*
@@ -6166,8 +6166,8 @@ packages:
       react:
         optional: true
 
-  react-hook-form@7.74.0:
-    resolution: {integrity: sha512-yR6wHr99p9wFv686jhRWVSFhUvDvNbdUf2dKlbno8/VKOCuoNobDGC6S+M2dua9A9Yo8vpcrp8assIYbsZCQ9g==}
+  react-hook-form@7.75.0:
+    resolution: {integrity: sha512-Ovv94H+0p3sJ7B9B5QxPuCP1u8V/cHuVGyH55cSwodYDtoJwK+fqk3vjfIgSX59I2U/bU4z0nRJ9HMLpNiWEmw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
@@ -13089,7 +13089,7 @@ snapshots:
     optionalDependencies:
       react: 19.2.6
 
-  react-hook-form@7.74.0(react@19.2.6):
+  react-hook-form@7.75.0(react@19.2.6):
     dependencies:
       react: 19.2.6
 
