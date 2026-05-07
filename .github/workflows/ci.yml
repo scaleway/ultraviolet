@@ -121,7 +121,7 @@ jobs:
           node-version: 24.15.0
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run format:ci
+      - run: pnpm run format:check
 
   test:
     runs-on: ubuntu-24.04
