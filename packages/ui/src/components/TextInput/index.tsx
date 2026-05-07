@@ -6,7 +6,7 @@ import type { ChangeEventHandler } from 'react'
 import { forwardRef, useCallback, useId, useImperativeHandle, useRef, useState } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { Button } from '../Button'
-import { Helper } from '../Helper'
+import { Description } from '../Description'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
@@ -187,7 +187,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             ) : null}
           </div>
         </Tooltip>
-        <Helper
+        <Description
           helper={helper}
           error={error}
           success={success}

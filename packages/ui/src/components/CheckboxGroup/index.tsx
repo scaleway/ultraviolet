@@ -4,7 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 import { useId, useMemo } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Helper } from '../Helper'
+import { Description } from '../Description'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -91,7 +91,7 @@ const CheckboxGroup = ({
             </Stack>
           </Stack>
         </fieldset>
-        <Helper helper={helper} error={error} id={ariaDescribedBy ?? helperId} />
+        <Description helper={helper} error={error} id={ariaDescribedBy ?? helperId} />
       </Stack>
     </CheckboxGroupContext.Provider>
   )

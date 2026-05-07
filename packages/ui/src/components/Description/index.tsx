@@ -16,9 +16,9 @@ type HelperProps = {
   id: string
 } & Pick<HTMLAttributes<HTMLParagraphElement>, 'className' | 'style'>
 /**
- * Helper is used inside all of our input components, but it can be used outside for design purposes
+ * Description is used inside all of our input components, but it can be used outside for design purposes
  */
-export const Helper = ({
+export const Description = ({
   size = 'large',
   id,
   disabled,

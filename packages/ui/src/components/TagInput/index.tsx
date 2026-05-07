@@ -8,7 +8,7 @@ import { useEffect, useId, useRef, useState } from 'react'
 import type { ChangeEvent, CSSProperties, KeyboardEventHandler, ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { Button } from '../Button'
-import { Helper } from '../Helper'
+import { Description } from '../Description'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Tag } from '../Tag'
@@ -262,7 +262,7 @@ export const TagInput = ({
           </div>
         </Tooltip>
       </div>
-      <Helper
+      <Description
         helper={helper}
         error={error}
         success={success}

@@ -6,8 +6,8 @@ import CodeMirror from '@uiw/react-codemirror'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useId, useState } from 'react'
+import { Description } from '../../components/Description'
 import { Expandable } from '../../components/Expandable'
-import { Helper } from '../../components/Helper'
 import { Label } from '../../components/Label'
 import { Stack } from '../../components/Stack'
 import { hasHelperText } from '../../helpers/hasHelperText'
@@ -113,7 +113,7 @@ export const CodeEditor = ({
           <CodeEditorExpandable expanded={expanded} hideText={hideText} setExpanded={setExpanded} showText={showText} />
         ) : null}
       </div>
-      <Helper error={error} helper={helper} disabled={disabled} id={ariaDescribedBy ?? helperId} />
+      <Description error={error} helper={helper} disabled={disabled} id={ariaDescribedBy ?? helperId} />
     </Stack>
   )
 }

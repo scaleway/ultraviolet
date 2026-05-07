@@ -4,7 +4,7 @@
 import type { ReactNode } from 'react'
 import { useId, useMemo } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Helper } from '../Helper'
+import { Description } from '../Description'
 import { Stack } from '../Stack'
 import { DoubleSlider } from './components/DoubleSlider'
 import { SingleSlider } from './components/SingleSlider'
@@ -138,7 +138,7 @@ export const Slider = ({
           value={value as number}
         />
       )}
-      <Helper helper={helper} error={error} id={ariaDescribedBy ?? helperId} disabled={disabled} />
+      <Description helper={helper} error={error} id={ariaDescribedBy ?? helperId} disabled={disabled} />
     </Stack>
   )
 }

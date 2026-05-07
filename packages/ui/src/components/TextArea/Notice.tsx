@@ -2,7 +2,7 @@
 
 import type { ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Helper } from '../Helper'
+import { Description } from '../Description'
 import { Row } from '../Row'
 import { Text } from '../Text'
 
@@ -25,7 +25,7 @@ export const Notice = ({
 }) => (
   <Row gap="1" templateColumns="minmax(0, 1fr) min-content">
     {hasHelperText(helper, error, success) ? (
-      <Helper id={id} error={error} success={success} disabled={disabled} helper={helper} />
+      <Description id={id} error={error} success={success} disabled={disabled} helper={helper} />
     ) : (
       <div /> // Used to place the maxLength content on the right
     )}

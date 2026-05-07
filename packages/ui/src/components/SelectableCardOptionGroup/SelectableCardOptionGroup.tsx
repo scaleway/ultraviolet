@@ -4,7 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { useId, useMemo } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Helper } from '../Helper'
+import { Description } from '../Description'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
@@ -95,7 +95,7 @@ const SelectableCardOptionGroupComponent = ({
             </Row>
           </Stack>
         </fieldset>
-        <Helper id={ariaDescribedBy ?? helperId} error={error} helper={helper} disabled={disabled} size={size} />
+        <Description id={ariaDescribedBy ?? helperId} error={error} helper={helper} disabled={disabled} size={size} />
       </Stack>
     </SelectableCardOptionGroupContext.Provider>
   )

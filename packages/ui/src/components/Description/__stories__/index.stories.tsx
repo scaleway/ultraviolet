@@ -1,10 +1,10 @@
-import { Helper } from '..'
+import { Description } from '..'
 
 import type { Meta } from '@storybook/react-vite'
 
 export default {
-  component: Helper,
-  title: 'UI/Typography/Helper',
+  component: Description,
+  title: 'UI/Typography/Description',
 } as Meta
 export { Playground } from './Playground.stories'
 export { Error } from './Error.stories'

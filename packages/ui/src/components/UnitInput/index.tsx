@@ -7,7 +7,7 @@ import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useId, useMemo, useState } from 'react'
 import type { ComponentProps, CSSProperties, InputHTMLAttributes, ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Helper } from '../Helper'
+import { Description } from '../Description'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { SelectInput } from '../SelectInput'
@@ -197,7 +197,7 @@ export const UnitInput = ({
           value={unitValue}
         />
       </Row>
-      <Helper
+      <Description
         helper={helper}
         error={error}
         success={success}

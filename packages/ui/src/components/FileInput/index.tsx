@@ -3,7 +3,7 @@
 import type { ChangeEvent, DragEvent as DragEventReact } from 'react'
 import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Helper } from '../Helper'
+import { Description } from '../Description'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -163,7 +163,7 @@ const FileInputBase = ({
   const computedChildren = typeof children === 'function' ? children(inputId, inputRef) : children
 
   const computedHelper = (
-    <Helper error={error} helper={helper} id={ariaDescribedBy ?? helperId} size={size} disabled={disabled} />
+    <Description error={error} helper={helper} id={ariaDescribedBy ?? helperId} size={size} disabled={disabled} />
   )
 
   const input = (

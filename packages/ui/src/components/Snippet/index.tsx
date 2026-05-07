@@ -7,8 +7,8 @@ import { useId, useReducer } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { useTheme } from '../../theme/ThemeProvider'
 import { CopyButton } from '../CopyButton'
+import { Description } from '../Description'
 import { Expandable } from '../Expandable'
-import { Helper } from '../Helper'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -127,7 +127,7 @@ export const Snippet = ({
           ) : null}
         </Stack>
       </div>
-      <Helper helper={helper} id={ariaDescribedBy ?? helperId} />
+      <Description helper={helper} id={ariaDescribedBy ?? helperId} />
     </Stack>
   )
 }

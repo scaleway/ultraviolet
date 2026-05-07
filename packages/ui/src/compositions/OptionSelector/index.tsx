@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { useId, useMemo } from 'react'
-import { Helper } from '../../components/Helper'
+import { Description } from '../../components/Description'
 import { Label } from '../../components/Label'
 import type { SelectInput } from '../../components/SelectInput'
 import { hasHelperText } from '../../helpers/hasHelperText'
@@ -167,7 +167,7 @@ export const OptionSelector = ({
       ) : null}
       {/** Do not use error and helper directly from SelectInput to avoid misalignment issues when direction="horizontal" */}
       {isHorizontal && (firstSelectorStringError || firstSelector.helper || error) ? (
-        <Helper
+        <Description
           error={hasHelperText(undefined, error) ? error : firstSelector.error}
           helper={firstSelector.helper}
           id={firstSelectorHelperId}
@@ -177,7 +177,7 @@ export const OptionSelector = ({
         />
       ) : null}
       {secondSelector && isHorizontal && (secondSelectorStringError || secondSelector?.helper || error) ? (
-        <Helper
+        <Description
           error={hasHelperText(undefined, error) ? error : secondSelector.error}
           helper={secondSelector.helper}
           id={secondSelectorHelperId}

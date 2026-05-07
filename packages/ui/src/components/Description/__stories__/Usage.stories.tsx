@@ -1,4 +1,4 @@
-import { Helper } from '..'
+import { Description } from '..'
 import { Checkbox } from '../../Checkbox'
 import { Row } from '../../Row'
 import { SelectInput } from '../../SelectInput'
@@ -20,7 +20,7 @@ const values = [
     value: 'value3',
   },
 ]
-export const Usage: StoryFn<typeof Helper> = () => (
+export const Usage: StoryFn<typeof Description> = () => (
   <Stack gap={3}>
     Using prop helper inside the component :
     <Stack direction="row" gap={2} justifyContent="center" alignItems="end">
@@ -60,8 +60,8 @@ export const Usage: StoryFn<typeof Helper> = () => (
         <Checkbox>Checkbox</Checkbox>
       </Row>
       <Row gap={2} templateColumns="1fr 1fr 1fr">
-        <Helper helper="Helper" id="id1" />
-        <Helper helper="Helper" id="id2" />
+        <Description helper="Helper" id="id1" />
+        <Description helper="Helper" id="id2" />
       </Row>
     </Stack>
   </Stack>
@@ -71,7 +71,7 @@ Usage.parameters = {
   docs: {
     description: {
       story:
-        'Example of a usage of this component. Here, to center the checkbox with the input and not with the input and the helper, use `Label` and `Row`. Do not forget to use the prop `aria-describedby` on the input to link it with the helper.',
+        'Example of a usage of this component. Here, to center the checkbox with the input and not with the input and the helper, use `Description` and `Row`. Do not forget to use the prop `aria-describedby` on the input to link it with the helper.',
     },
   },
 }

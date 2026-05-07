@@ -3,7 +3,7 @@
 import { forwardRef, useId, useImperativeHandle, useMemo, useRef } from 'react'
 import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Helper } from '../Helper'
+import { Description } from '../Description'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
@@ -223,7 +223,7 @@ export const NumberInput = forwardRef(
             </div>
           </Tooltip>
         </div>
-        <Helper
+        <Description
           error={error}
           helper={helper}
           disabled={isDisabledOrReadOnly}

@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { useId, useRef } from 'react'
 import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
-import { Helper } from '../Helper'
+import { Description } from '../Description'
 import { Label } from '../Label'
 import type { Popup } from '../Popup'
 import { Stack } from '../Stack'
@@ -31,7 +31,7 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
    */
   label?: string
   /**
-   * Helper text to give more information to the user
+   * Description text to give more information to the user
    */
   helper?: ReactNode
   /**
@@ -266,7 +266,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
             />
           </Stack>
         </Dropdown>
-        <Helper
+        <Description
           error={error}
           success={success}
           helper={helper}

@@ -11,7 +11,7 @@ import type {
   ReactNode,
 } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Helper } from '../Helper'
+import { Description } from '../Description'
 import { Label } from '../Label'
 import { verificationCodeStyle } from './styles.css'
 
@@ -253,7 +253,13 @@ export const VerificationCode = ({
           />
         ))}
       </div>
-      <Helper error={error} success={success} helper={helper} disabled={disabled} id={ariaDescribedBy ?? helperId} />
+      <Description
+        error={error}
+        success={success}
+        helper={helper}
+        disabled={disabled}
+        id={ariaDescribedBy ?? helperId}
+      />
     </fieldset>
   )
 }

@@ -3,7 +3,7 @@
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import type { CSSProperties, FocusEvent, ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Helper } from '../Helper'
+import { Description } from '../Description'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -426,7 +426,7 @@ export const TimeInput = ({
           />
         ) : null}
       </Stack>
-      <Helper error={error} helper={helper} disabled={disabled} size={size} id={ariaDescribedBy ?? helperId} />
+      <Description error={error} helper={helper} disabled={disabled} size={size} id={ariaDescribedBy ?? helperId} />
     </Stack>
   )
 }

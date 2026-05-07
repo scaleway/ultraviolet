@@ -1,23 +1,22 @@
-import { Helper } from '..'
+import { Description } from '..'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 
 import type { StoryFn } from '@storybook/react-vite'
 
-export const Error: StoryFn<typeof Helper> = props => (
+export const Success: StoryFn<typeof Description> = props => (
   <Stack direction="column" alignItems="baseline" gap={1}>
     <Text as="span" variant="body">
-      With prop error as a string:
+      With prop success as a string
     </Text>
-    <Helper {...props} error="Error" />
-
+    <Description {...props} success="Success" />
     <Text as="span" variant="body">
-      With prop error as a boolean (true):
+      With prop success as a boolean (true)
     </Text>
-    <Helper {...props} error />
+    <Description {...props} success />
   </Stack>
 )
 
-Error.args = {
+Success.args = {
   helper: 'This is helper text',
 }

@@ -4,7 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId } from 'react'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Helper } from '../Helper'
+import { Description } from '../Description'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
@@ -155,7 +155,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           {children || required || helper || error ? (
             <Stack flex={1} gap={0.5}>
               {childStack}
-              <Helper
+              <Description
                 helper={helper}
                 error={error}
                 id={ariaDescribedBy ?? `${localId}-hint`}
