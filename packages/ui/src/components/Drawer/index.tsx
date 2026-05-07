@@ -152,9 +152,11 @@ export const BaseDrawer = ({
             <div className={drawerStyle.childrenWrapper}>
               {noPadding ? content : <DrawerContent>{content}</DrawerContent>}
             </div>
-            <Stack className={drawerStyle.footer}>
-              {typeof footer === 'function' ? footer(modalProps) : footer}
-            </Stack>
+            {footer ? (
+              <Stack className={drawerStyle.footer}>
+                {typeof footer === 'function' ? footer(modalProps) : footer}
+              </Stack>
+            ) : null}
           </Stack>
         )
       }}
