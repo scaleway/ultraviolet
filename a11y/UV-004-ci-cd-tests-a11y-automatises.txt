@@ -1,0 +1,63 @@
+Summary: CI/CD - Intégrer les tests A11y dans le pipeline
+Issue Type: Story
+Priority: High
+Labels: a11y, ci-cd, github-actions, automation
+
+Description:
+Intégrer les tests d'accessibilité dans le pipeline CI/CD pour bloquer les régressions.
+
+Contexte:
+- Workflow GitHub Actions existe (.github/workflows/)
+- Tests unitaires et e2e déjà en place
+- Besoin d'ajouter un gate a11y sur les PRs
+
+Tâches:
+[ ] Créer un workflow GitHub Action .github/workflows/a11y.yml
+[ ] Ajouter un job de tests a11y sur les PRs
+[ ] Configurer les seuils de violations (bloquant/non-bloquant)
+[ ] Générer des rapports HTML des violations
+[ ] Intégrer avec GitHub Status Checks
+[ ] Ajouter un commentaire automatique sur les PRs avec violations
+
+Workflow à créer:
+```yaml
+name: Accessibility Tests
+on:
+  pull_request:
+    branches: [main, beta]
+
+jobs:
+  a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup
+        run: pnpm install && pnpm build
+      - name: Run a11y tests
+        run: pnpm test:unit:coverage
+      - name: Run Storybook a11y
+        run: pnpm build:storybook
+      - name: Upload a11y report
+        uses: actions/upload-artifact@v4
+        with:
+          name: a11y-report
+          path: a11y-report.html
+```
+
+Seuils recommandés:
+- Critical: Bloquant (0 tolérance)
+- Serious: Bloquant (0 tolérance)
+- Moderate: Warning (seuil: 5)
+- Minor: Warning (seuil: 10)
+
+Critères d'acceptation:
+- [ ] Workflow a11y.yml créé et fonctionnel
+- [ ] Les PRs avec violations critiques échouent
+- [ ] Rapport HTML généré et consultable
+- [ ] Status check visible sur les PRs
+- [ ] Documentation dans CONTRIBUTING.md
+
+Estimation: 6h
+Assignee: Unassigned
+Reporter: A11y Audit Team
+Dependencies: UV-001, UV-002

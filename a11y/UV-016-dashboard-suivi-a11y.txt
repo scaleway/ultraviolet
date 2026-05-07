@@ -1,0 +1,107 @@
+Summary: Dashboard de suivi A11y
+Issue Type: Story
+Priority: Low
+Labels: a11y, monitoring, dashboard, metrics
+
+Description:
+Créer un dashboard pour tracker les violations d'accessibilité dans le temps et visualiser les progrès.
+
+Contexte:
+- Audit initial va générer beaucoup de données
+- Besoin de visualiser les progrès
+- Motivation de l'équipe avec metrics claires
+
+Tâches:
+[ ] Configurer rapport automatique des violations
+[ ] Tracker l'évolution dans le temps
+[ ] Alerts sur régression
+[ ] Intégrer avec Storybook
+[ ] Dashboard publique dans le repo
+[ ] Metrics dans le README
+
+Outils possibles:
+- GitHub Pages + Chart.js
+- Storybook a11y addon stats
+- Custom script + JSON reports
+- Integration with Datadog/New Relic (si utilisé)
+
+Metrics à tracker:
+```typescript
+interface A11yMetrics {
+  date: string
+  totalViolations: number
+  bySeverity: {
+    critical: number
+    serious: number
+    moderate: number
+    minor: number
+  }
+  byComponent: Record<string, number>
+  byRule: Record<string, number>
+  trend: 'improving' | 'stable' | 'degrading'
+  wcagCompliance: 'A' | 'AA' | 'AAA'
+}
+```
+
+Dashboard à créer:
+```markdown
+# Accessibility Dashboard
+
+## Current Status
+- Total Violations: 42 ↓ 15%
+- Critical: 0 ✓
+- Serious: 2 ↓ 50%
+- Moderate: 15 ↓ 10%
+- Minor: 25 ↓ 5%
+
+## WCAG Compliance: AA (95%)
+
+## Trend (Last 30 days)
+[Graph: violations over time]
+
+## Top Violations
+1. color-contrast: 12
+2. aria-labels: 8
+3. focus-visible: 7
+
+## Components to Fix
+1. Navigation: 15 violations
+2. Modal: 8 violations
+3. SelectInput: 6 violations
+
+## Recent Improvements
+- ✅ Button: 0 violations (was 5)
+- ✅ Alert: 0 violations (was 3)
+- ⚠️ New: Carousel has 4 violations
+```
+
+Script de génération (utils/scripts/a11y-dashboard.ts):
+```typescript
+const generateDashboard = async () => {
+  const currentMetrics = await scanAllComponents()
+  const historicalMetrics = loadHistoricalData()
+  
+  const dashboard = {
+    summary: calculateSummary(currentMetrics),
+    trend: calculateTrend(currentMetrics, historicalMetrics),
+    topViolations: getTopViolations(currentMetrics),
+    improvements: getImprovements(currentMetrics, historicalMetrics),
+  }
+  
+  writeToFile('docs/a11y-dashboard.md', formatDashboard(dashboard))
+  updateBadge('a11y-badge.svg', dashboard.wcagCompliance)
+}
+```
+
+Critères d'acceptation:
+- [ ] Dashboard généré automatiquement
+- [ ] Historique des metrics conservé
+- [ ] Visualisation claire (graphs)
+- [ ] Mis à jour via GitHub Action hebdo
+- [ ] Badge a11y dans README
+- [ ] Accessible dans docs/
+
+Estimation: 8h
+Assignee: Unassigned
+Reporter: A11y Audit Team
+Dependencies: UV-004, UV-005

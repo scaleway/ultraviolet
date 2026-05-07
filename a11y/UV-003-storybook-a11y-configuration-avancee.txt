@@ -1,0 +1,54 @@
+Summary: Storybook A11y - Configuration avancée de @storybook/addon-a11y
+Issue Type: Improvement
+Priority: Medium
+Labels: a11y, storybook, dx
+
+Description:
+Optimiser la configuration de @storybook/addon-a11y pour fournir un feedback immédiat aux développeurs.
+
+Contexte:
+- @storybook/addon-a11y est déjà installé (package.json line 64)
+- Configuré dans .storybook/main.ts et preview.tsx
+- Mais configuration basique, sans personnalisation
+
+Tâches:
+[ ] Configurer les règles WCAG AA comme standard dans .storybook/preview.tsx
+[ ] Ajouter un decorator pour tester les états (focus, hover, disabled)
+[ ] Créer des templates de stories avec tests a11y automatiques
+[ ] Documenter comment utiliser l'addon dans les stories
+[ ] Ajouter un panneau A11y personnalisé si besoin
+
+Configuration à ajouter dans preview.tsx:
+```typescript
+parameters: {
+  a11y: {
+    config: {
+      rules: [{
+        id: 'color-contrast',
+        enabled: true,
+      }],
+    },
+    element: '#root',
+    manual: false,
+    runOnly: {
+      type: 'tag',
+      values: ['wcag2a', 'wcag2aa'],
+    },
+  }
+}
+```
+
+Decorator à créer:
+- FocusStateDecorator: force le focus pour vérification
+- ColorSchemeDecorator: teste light/dark/darker themes
+
+Critères d'acceptation:
+- [ ] Configuration WCAG AA active dans Storybook
+- [ ] Les stories montrent les violations automatiquement
+- [ ] Documentation dans .storybook/README.md
+- [ ] Au moins 3 composants démo avec tests a11y
+
+Estimation: 4h
+Assignee: Unassigned
+Reporter: A11y Audit Team
+Dependencies: UV-001

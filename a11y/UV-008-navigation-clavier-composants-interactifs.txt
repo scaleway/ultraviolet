@@ -1,0 +1,77 @@
+Summary: Navigation clavier - Composants interactifs
+Issue Type: Bug
+Priority: Medium
+Labels: a11y, keyboard, navigation, interactive
+
+Description:
+Corriger la navigation clavier sur les composants avec des éléments statiques interactifs (no-static-element-interactions).
+
+Contexte:
+- Multiples composants ont des div/span avec onClick mais sans onKeyDown
+- Navigation clavier impossible sur ces éléments
+- 15+ occurrences de no-static-element-interactions disabled
+
+Composants concernés:
+[ ] ExpandableCard (3 occurrences)
+[ ] FileInput (4 occurrences)
+[ ] TagList (2 occurrences)
+[ ] Navigation/PinnedItems (4 occurrences)
+[ ] Plans (2 occurrences)
+[ ] Carousel (1 occurrence)
+[ ] Popup (2 occurrences)
+[ ] Meter (1 occurrence)
+[ ] SelectableCard (1 occurrence)
+
+Tâches:
+[ ] Review chaque composant listé
+[ ] Ajouter onKeyDown pour chaque onClick
+[ ] Ajouter tabIndex={0} si nécessaire
+[ ] Ajouter role approprié (button, checkbox, etc.)
+[ ] Gérer les états focus/active au clavier
+[ ] Tester navigation Tab/Enter/Space
+[ ] Supprimer les oxlint-disable
+
+Pattern à implémenter:
+```typescript
+<div
+  onClick={handleClick}
+  onKeyDown={(e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      handleClick()
+    }
+  }}
+  tabIndex={0}
+  role="button"
+  aria-pressed={isPressed}
+>
+  Content
+</div>
+```
+
+CSS focus à ajouter:
+```css
+&:focus {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+&:focus:not(:focus-visible) {
+  outline: none;
+}
+&:focus-visible {
+  outline: 2px solid var(--focus-color);
+}
+```
+
+Critères d'acceptation:
+- [ ] Tous les composants interactifs navigables au clavier
+- [ ] Enter et Space déclenchent les actions
+- [ ] Focus visible clairement
+- [ ] Rôles ARIA corrects
+- [ ] Plus de oxlint-disable no-static-element-interactions
+- [ ] Tests unitaires de keyboard navigation
+
+Estimation: 12h
+Assignee: Unassigned
+Reporter: A11y Audit Team
+Dependencies: UV-005, UV-006
