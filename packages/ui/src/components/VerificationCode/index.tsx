@@ -229,7 +229,7 @@ export const VerificationCode = ({
       <div>
         {values.map((value: string, index: number) => (
           <input
-            aria-describedby={!ariaDescribedBy && hasHelperText(helper, error, success) ? helperId : ariaDescribedBy}
+            aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
             aria-invalid={!!error}
             aria-label={`${ariaLabel} ${index}`}
             autoComplete="off"

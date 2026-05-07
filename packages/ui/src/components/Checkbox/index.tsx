@@ -128,7 +128,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         >
           <input
             aria-checked={checked === 'indeterminate' ? 'mixed' : isCheck}
-            aria-describedby={hasHelperText(helper, error) && !ariaDescribedBy ? `${localId}-hint` : ariaDescribedBy}
+            aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? `${localId}-hint` : undefined)}
             aria-invalid={!!error}
             aria-label={ariaLabel}
             autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus

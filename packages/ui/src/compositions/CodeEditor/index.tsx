@@ -56,7 +56,7 @@ export const CodeEditor = ({
   const content = (
     <>
       <CodeMirror
-        aria-describedby={!ariaDescribedBy && hasHelperText(helper, error) ? helperId : ariaDescribedBy}
+        aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
         aria-disabled={disabled}
         aria-label={ariaLabel}
         basicSetup={{

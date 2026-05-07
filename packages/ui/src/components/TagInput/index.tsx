@@ -223,9 +223,7 @@ export const TagInput = ({
               ))}
               {disabled ? null : (
                 <input
-                  aria-describedby={
-                    !ariaDescribedBy && hasHelperText(helper, error, success) ? helperId : ariaDescribedBy
-                  }
+                  aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
                   aria-label={ariaLabel}
                   className={tagInputStyle.tagInput}
                   data-size={size}

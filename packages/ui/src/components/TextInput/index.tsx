@@ -116,7 +116,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             <input
               aria-invalid={!!error}
               aria-label={ariaLabel}
-              aria-describedby={!ariaDescribedBy && hasHelperText(helper, error, success) ? helperId : ariaDescribedBy}
+              aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
               aria-labelledby={ariaLabelledBy}
               autoComplete={autoComplete}
               // oxlint-disable-next-line jsx_a11y/no-autofocus

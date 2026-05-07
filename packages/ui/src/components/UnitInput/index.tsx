@@ -138,7 +138,7 @@ export const UnitInput = ({
       >
         <div className={unitInputStyle.numberWrapper} id="input-field">
           <input
-            aria-describedby={!ariaDescribedBy && hasHelperText(helper, error, success) ? helperId : ariaDescribedBy}
+            aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
             aria-invalid={!!error}
             autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
             className={cn(className, unitInputStyle.number[size])}

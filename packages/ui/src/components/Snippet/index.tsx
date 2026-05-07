@@ -87,7 +87,7 @@ export const Snippet = ({
       >
         <Stack
           className={snippetStyle.stackStyle}
-          aria-describedby={!ariaDescribedBy && hasHelperText(helper) ? helperId : ariaDescribedBy}
+          aria-describedby={ariaDescribedBy || (hasHelperText(helper) ? helperId : undefined)}
         >
           {hasShowMoreButton ? (
             <Expandable minHeight={minHeight} opened={showMore}>

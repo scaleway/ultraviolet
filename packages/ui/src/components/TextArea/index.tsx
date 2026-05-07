@@ -175,7 +175,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         <Tooltip text={tooltip}>
           <div className={textAreaStyle.wrapper}>
             <textarea
-              aria-describedby={!ariaDescribedBy && hasHelperText(helper, error, success) ? helperId : ariaDescribedBy}
+              aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
               aria-invalid={!!error}
               aria-label={ariaLabel}
               autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus

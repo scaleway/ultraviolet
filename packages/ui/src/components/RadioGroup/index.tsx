@@ -60,7 +60,7 @@ const RadioGroupComponent = ({
       <Stack gap={1}>
         <fieldset
           className={cn(className, radioGRoupStyle.fieldset)}
-          aria-describedby={!ariaDescribedBy && hasHelperText(helper, error) ? helperId : ariaDescribedBy}
+          aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
         >
           <Stack gap={1.5}>
             {legend || description ? (

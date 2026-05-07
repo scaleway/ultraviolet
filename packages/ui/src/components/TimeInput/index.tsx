@@ -310,7 +310,7 @@ export const TimeInput = ({
             return (
               <Stack direction="row" key={type}>
                 <input
-                  aria-describedby={!ariaDescribedBy && hasHelperText(helper, error) ? helperId : ariaDescribedBy}
+                  aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
                   aria-label={ariaLabel}
                   aria-valuemax={computeMaxValue()}
                   aria-valuemin={type === 'h' && timeFormat === 12 ? 1 : 0}
@@ -375,7 +375,7 @@ export const TimeInput = ({
           })}
           {timeFormat === 12 ? (
             <input
-              aria-describedby={!ariaDescribedBy && hasHelperText(helper, error) ? helperId : ariaDescribedBy}
+              aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
               aria-label={ariaLabel}
               aria-valuemax={12}
               aria-valuemin={0}

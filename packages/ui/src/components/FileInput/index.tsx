@@ -169,7 +169,7 @@ const FileInputBase = ({
   const input = (
     <input
       accept={accept}
-      aria-describedby={hasHelperText(helper, error) && !ariaDescribedBy ? helperId : ariaDescribedBy}
+      aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
       aria-label={ariaLabel}
       className={fileInputStyle.fileInput}
       data-testid={dataTestid}

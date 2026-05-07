@@ -82,7 +82,7 @@ const SelectableCardOptionGroupComponent = ({
       <Stack gap={1} style={style}>
         <fieldset
           className={cn(className, selectableCardOptionGroupStyle.fieldset)}
-          aria-describedby={!ariaDescribedBy && hasHelperText(helper, error) ? helperId : ariaDescribedBy}
+          aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
         >
           <Stack gap={1.5}>
             {legend ? (

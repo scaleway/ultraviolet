@@ -168,9 +168,7 @@ export const NumberInput = forwardRef(
                 templateColumns="1fr auto"
               >
                 <input
-                  aria-describedby={
-                    hasHelperText(helper, error, success) && !ariaDescribedBy ? helperId : ariaDescribedBy
-                  }
+                  aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
                   aria-label={ariaLabel}
                   autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
                   className={numberInputStyle.numberinput({

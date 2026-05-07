@@ -64,7 +64,7 @@ const CheckboxGroup = ({
         <fieldset
           className={cn(className, checkboxGroupStyle.fieldset)}
           style={style}
-          aria-describedby={!ariaDescribedBy && hasHelperText(helper, error) ? helperId : ariaDescribedBy}
+          aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
         >
           <Stack gap={1.5}>
             {legend || description ? (

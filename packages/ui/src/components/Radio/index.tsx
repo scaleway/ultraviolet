@@ -82,7 +82,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
             data-testid={dataTestId}
           >
             <input
-              aria-describedby={!ariaDescribedBy && hasHelperText(helper, error) ? helperId : ariaDescribedBy}
+              aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
               aria-disabled={disabled}
               aria-invalid={!!error} // oxlint-disable-line eslint-plugin-jsx-a11y(role-supports-aria-props)
               aria-label={ariaLabel}

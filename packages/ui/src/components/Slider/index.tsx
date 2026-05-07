@@ -77,7 +77,7 @@ export const Slider = ({
     >
       {double ? (
         <DoubleSlider
-          aria-describedby={!ariaDescribedBy && hasHelperText(helper, error) ? helperId : ariaDescribedBy}
+          aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
           aria-label={ariaLabel}
           className={className}
           customValueDisplay={customValueDisplay}
@@ -108,7 +108,7 @@ export const Slider = ({
         />
       ) : (
         <SingleSlider
-          aria-describedby={!ariaDescribedBy && hasHelperText(helper, error) ? helperId : ariaDescribedBy}
+          aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
           aria-label={ariaLabel}
           className={className}
           customValueDisplay={customValueDisplay}

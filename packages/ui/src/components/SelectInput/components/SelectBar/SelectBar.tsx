@@ -15,6 +15,9 @@ import { SIZES_TAG } from '../../constants'
 import { findOptionInOptions } from '../../findOptionInOptions'
 import { useSelectInput } from '../../SelectInputProvider'
 import type { OptionType } from '../../types'
+import { computeOverflowVars, getTagsWidth } from '../helpers'
+import { DisplayValues } from './Values'
+import { selectInputStyle } from '../../styles.css'
 
 type SelectBarProps = {
   size: 'small' | 'medium' | 'large'
@@ -178,7 +181,7 @@ const SelectBar = ({
   return (
     <Tooltip disableAnimation text={tooltip}>
       <div
-        aria-describedby={!ariaDescribedBy && hasHelperText(helper, error, success) ? helperId : ariaDescribedBy}
+        aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
         aria-controls={dropdownId}
         aria-expanded={isDropdownVisible}
         aria-label={label}
