@@ -1,44 +1,34 @@
 import { linkTo } from '@storybook/addon-links'
 import { Button, Stack, Table, Text } from '@ultraviolet/ui'
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 
-import * as components from '../../../../packages/ui/src/components'
+import {
+  storiesCompositionsModules,
+  storiesComponentModules,
+} from '../constants'
 
-const findComponentState = (parameters: {
-  deprecated?: boolean
-  experimental?: boolean
-}) => {
-  if (parameters?.deprecated) {
-    return '⛔ Deprecated'
-  }
-
-  if (parameters?.experimental) {
-    return '🧪 Experimental'
-  }
-
-  return '✅ Stable'
-}
-
-const componentsNames = Object.keys(components)
+import { COMPONENT_STATES, findComponentState } from './constants'
 
 const ComponentState = () => {
   const [modules, setModules] = useState<
     | PromiseSettledResult<{
-        default: { title: string; parameters: { deprecated: boolean } }
+        default: {
+          title: string
+          parameters: { deprecated: boolean; a11y: boolean }
+        }
       }>[]
     | null
   >(null)
 
+  /**
+   * Effect to dynamically import all component story files
+   * Loads index.stories.tsx for each component in the components directory
+   */
   useEffect(() => {
-    Promise.allSettled(
-      componentsNames.map(
-        async name =>
-          // oxlint-disable-next-line typescript/no-unsafe-return
-          import(
-            `../../../../packages/ui/src/components/${name}/__stories__/index.stories.tsx`
-          ),
-      ),
-    )
+    Promise.allSettled([
+      ...storiesComponentModules,
+      ...storiesCompositionsModules,
+    ])
       .then(localModules => {
         setModules(localModules)
       })
@@ -59,53 +49,21 @@ const ComponentState = () => {
       </Text>
 
       <Stack gap={3}>
-        <Text as="h2" variant="heading">
-          Definition of states
+        <Text as="h2" variant="headingLarge">
+          Definition of states:
         </Text>
-        <Stack gap={1}>
-          <Text as="h3" variant="headingSmall">
-            ✅ Stable
-          </Text>
-          <Text as="p" variant="body">
-            Stable state means the component is ready for production. If a
-            breaking change occurs it will generate a major version.
-          </Text>
-        </Stack>
-
-        <Stack gap={1}>
-          <Text as="h3" variant="headingSmall">
-            🧪 Experimental
-          </Text>
-          <Text as="p" variant="body">
-            Experimental state means the component is being tested and props
-            might change in the future. The component itself might even
-            disappear if we don&apos;t find a real purpose for it. This state is
-            also used for new version of a component (ex: Button v2) that we
-            want to test before replacing the old one. In any case{' '}
-            <Text as="span" variant="bodyStronger">
-              this state means the component is not ready for production
-            </Text>
-            .
-          </Text>
-          <Text as="p" variant="body">
-            An experimental component won&apos;t generate major version when
-            having a breaking change.
-          </Text>
-        </Stack>
-
-        <Stack gap={1}>
-          <Text as="h3" variant="headingSmall">
-            ⛔ Deprecated
-          </Text>
-          <Text as="p" variant="body">
-            Deprecated state means the component is not recommended for use and
-            will be removed in the future. When seeing a component you use being
-            deprecated you should start migrating to another component as soon
-            as possible. To know what to use instead you can check the story of
-            the deprecated component.
-          </Text>
-        </Stack>
+        {Object.entries(COMPONENT_STATES).map(
+          ([key, { icon, label, description }]) => (
+            <Stack gap={1} key={key}>
+              <Text as="h3" variant="headingSmall">
+                {label} {icon}
+              </Text>
+              {description}
+            </Stack>
+          ),
+        )}
       </Stack>
+
       <Stack gap={3}>
         <Text as="h2" variant="heading">
           Components list
@@ -116,7 +74,7 @@ const ComponentState = () => {
             <Text as="span" variant="bodyStronger">
               Number of components
             </Text>
-            : {componentsNames.length}
+            : {modules?.length}
           </Text>
           <Table
             columns={[
@@ -128,20 +86,24 @@ const ComponentState = () => {
             stripped
           >
             <Table.Body>
+              {/* Map through loaded modules and render each component's information */}
               {modules?.map(module => {
                 if (module.status === 'fulfilled') {
-                  const desctructuredName: string[] =
-                    module.value.default.title
-                      .replace('Components/', '')
-                      .split('/') ?? []
+                  /**
+                   * Parse component title to extract category and name
+                   * Title format: 'UI/Category/ComponentName' or 'UI/Category/SubCategory/ComponentName'
+                   */
+                  const destructuredName: string[] =
+                    module.value.default.title.split('/') ?? []
 
-                  const componentCategory = desctructuredName[1]
-                    ? desctructuredName[0]
-                    : 'Others'
-                  const componentName = desctructuredName[1]
-                    ? desctructuredName[1]
-                    : desctructuredName[0]
+                  // Title format: 'UI/Category/ComponentName' or 'UI/Category/SubCategory/ComponentName'
+                  // We want the last part as component name and the rest as category
+                  const componentCategory = destructuredName
+                    .slice(1, -1)
+                    .join('/')
+                  const componentName = destructuredName.at(-1)
 
+                  /** Get the lifecycle state (deprecated/experimental/stable) */
                   const componentState = findComponentState(
                     module.value.default.parameters,
                   )
@@ -164,12 +126,12 @@ const ComponentState = () => {
                       </Table.Cell>
                       <Table.Cell>
                         <Text as="span" variant="body">
-                          {componentCategory}
+                          {componentCategory || 'Others'}
                         </Text>
                       </Table.Cell>
                       <Table.Cell>
                         <Text as="span" variant="body">
-                          {componentState}
+                          {componentState.icon} {componentState.label}
                         </Text>
                       </Table.Cell>
                     </Table.Row>

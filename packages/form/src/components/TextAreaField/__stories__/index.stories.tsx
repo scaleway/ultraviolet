@@ -68,6 +68,16 @@ export default {
     },
   ],
   title: 'Form/Components/Fields/TextAreaField',
+  parameters: {
+    a11y: false,
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+  },
 } as Meta
 
 export { Playground } from './Playground.stories'

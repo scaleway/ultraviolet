@@ -6,6 +6,17 @@ export default {
   component: ContentCardGroup,
   title: 'Compositions/ContentCardGroup',
   subcomponents: { 'ContentCardGroup.Card': ContentCardGroup.Card },
+  parameters: {
+    a11y: 'partial',
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+    experimental: true,
+  },
 } as Meta
 
 export { Playground } from './Playground.stories'

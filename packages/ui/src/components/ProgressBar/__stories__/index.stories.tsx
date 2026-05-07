@@ -5,6 +5,16 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: ProgressBar,
   title: 'UI/Feedback/ProgressBar',
+  parameters: {
+    a11y: 'partial',
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+  },
 } as Meta<typeof ProgressBar>
 
 export { Playground } from './Playground.stories'

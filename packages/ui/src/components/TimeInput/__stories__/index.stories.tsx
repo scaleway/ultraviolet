@@ -6,6 +6,16 @@ export default {
   component: TimeInput,
   title: 'UI/Data Entry/TimeInput',
   decorators: [Story => <Story />],
+  parameters: {
+    a11y: 'partial',
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+  },
 } as Meta<typeof TimeInput>
 
 export { Playground } from './Playground.stories'
