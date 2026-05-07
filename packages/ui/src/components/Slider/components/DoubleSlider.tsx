@@ -259,6 +259,11 @@ export const DoubleSlider = ({
       ? [options[selectedIndexes[0]].value, options[selectedIndexes[1]].value]
       : selectedIndexes
 
+  const leftSliderProgress =
+    ((selectedIndexes[0] ?? 0 - min) * 100) / (max - min)
+  const rightSliderProgress =
+    ((selectedIndexes[1] ?? 0 - min) * 100) / (max - min)
+
   // Make the component controllable
   useEffect(() => {
     setSelectedIndexes(() => {
@@ -355,7 +360,7 @@ export const DoubleSlider = ({
                 ref={refSlider}
                 step={step}
                 style={assignInlineVars({
-                  [leftVar]: `calc(${((selectedIndexes[0] - min) * 100) / (max - min)}% - ${THUMB_SIZE / 2}px)`,
+                  [leftVar]: `calc(${leftSliderProgress}% - ${(THUMB_SIZE * leftSliderProgress) / 100}px)`,
                   [thumbColor]:
                     theme.theme === 'light'
                       ? theme.colors.neutral.background
@@ -400,7 +405,7 @@ export const DoubleSlider = ({
                 onFocus={onFocus}
                 step={step}
                 style={assignInlineVars({
-                  [leftVar]: `calc(${(((selectedIndexes[1] ?? 0) - min) * 100) / (max - min)}% - ${THUMB_SIZE / 2}px)`,
+                  [leftVar]: `calc(${rightSliderProgress}% - ${(THUMB_SIZE * rightSliderProgress) / 100}px)`,
                   [thumbColor]:
                     theme.theme === 'light'
                       ? theme.colors.neutral.background
