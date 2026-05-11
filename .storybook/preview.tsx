@@ -50,6 +50,12 @@ scan({
 })
 
 const parameters: Preview['parameters'] = {
+  a11y: {
+    context: 'body',
+    config: {},
+    options: {},
+    test: '',
+  },
   backgrounds: {
     disable: true,
     grid: {
@@ -182,4 +188,10 @@ export default definePreview({
   parameters,
   addons: [addonDocs(), addonLinks(), addonA11y(), addonTheme()],
   tags: ['autodocs'],
+  initialGlobals: {
+    a11y: {
+      // Optional flag to prevent the automatic check
+      manual: false,
+    },
+  },
 })

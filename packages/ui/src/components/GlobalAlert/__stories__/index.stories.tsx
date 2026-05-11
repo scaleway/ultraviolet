@@ -7,7 +7,7 @@ export default {
   title: 'UI/Feedback/GlobalAlert',
   subcomponents: { 'GlobalAlert.Link': GlobalAlert.Link },
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,

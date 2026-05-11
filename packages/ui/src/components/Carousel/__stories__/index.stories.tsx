@@ -7,7 +7,7 @@ export default {
   title: 'UI/Data Display/Carousel',
   subcomponents: { 'Carousel.Item': Carousel.Item },
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,

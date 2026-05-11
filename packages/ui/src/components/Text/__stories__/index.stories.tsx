@@ -6,7 +6,7 @@ export default {
   component: Text,
   title: 'UI/Typography/Text',
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,
