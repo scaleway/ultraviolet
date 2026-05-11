@@ -23,6 +23,7 @@ export const TagInner = ({
   disabled = false,
   copiable,
   variant,
+  sentiment,
   copyButton,
 }: TagInnerProps) => (
   <>
@@ -41,12 +42,11 @@ export const TagInner = ({
     {onClose && !isLoading ? (
       <Button
         aria-label="Close tag"
-        className={tagStyle.closeButton}
         data-testid="close-tag"
         disabled={disabled}
         onClick={onClose}
-        sentiment="neutral"
-        size="small"
+        sentiment={sentiment}
+        size="xsmall"
         variant="ghost"
       >
         <CloseIcon size="small" />
