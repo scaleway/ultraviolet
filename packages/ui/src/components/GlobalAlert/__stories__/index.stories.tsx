@@ -1,6 +1,5 @@
-import { GlobalAlert } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { GlobalAlert } from '..'
 
 export default {
   component: GlobalAlert,

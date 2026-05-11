@@ -1,15 +1,13 @@
 import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category/OrganizationDashboardCategoryIcon'
 import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import { Children } from 'react'
-
 import { Button } from '../../../../components/Button'
 import { Menu } from '../../../../components/Menu'
 import { Stack } from '../../../../components/Stack'
 import { Tooltip } from '../../../../components/Tooltip'
-import { navigationStyle } from '../../styles.css'
-import { ItemProvider } from '../Item/ItemProvider'
-
 import type { ItemMenuType } from '../ComponentsTypes'
+import { ItemProvider } from '../Item/ItemProvider'
+import { navigationStyle } from '../../styles.css'
 
 export const ItemMenu = ({
   style,
@@ -20,13 +18,7 @@ export const ItemMenu = ({
   hasActiveChildren,
   'data-flip-id': dataFlipId,
 }: ItemMenuType) => (
-  <Stack
-    alignItems="center"
-    gap={1}
-    justifyContent="flex-start"
-    style={style}
-    data-flip-id={dataFlipId}
-  >
+  <Stack alignItems="center" gap={1} justifyContent="flex-start" style={style} data-flip-id={dataFlipId}>
     {Children.count(children) > 0 ? (
       <Menu
         className={navigationStyle.itemMenuContainer}
@@ -39,12 +31,7 @@ export const ItemMenu = ({
             className={navigationStyle.itemCollapsed}
           >
             {categoryIcon ? (
-              <Stack
-                alignItems="center"
-                direction="row"
-                gap={1}
-                justifyContent="center"
-              >
+              <Stack alignItems="center" direction="row" gap={1} justifyContent="center">
                 {categoryIcon}
               </Stack>
             ) : (
@@ -69,17 +56,8 @@ export const ItemMenu = ({
           variant={active ? 'filled' : 'ghost'}
           className={navigationStyle.itemCollapsed}
         >
-          <Stack
-            alignItems="center"
-            direction="row"
-            gap={1}
-            justifyContent="center"
-          >
-            {categoryIcon ?? (
-              <OrganizationDashboardCategoryIcon
-                variant={active ? 'primary' : 'neutral'}
-              />
-            )}
+          <Stack alignItems="center" direction="row" gap={1} justifyContent="center">
+            {categoryIcon ?? <OrganizationDashboardCategoryIcon variant={active ? 'primary' : 'neutral'} />}
           </Stack>
         </Button>
       </Tooltip>

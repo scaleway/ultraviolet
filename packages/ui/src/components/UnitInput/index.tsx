@@ -5,22 +5,14 @@ import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useId, useMemo, useState } from 'react'
-
+import type { ComponentProps, CSSProperties, InputHTMLAttributes, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { SelectInput } from '../SelectInput'
+import type { OptionType } from '../SelectInput/types'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { unitInputStyle, widthSelectInput } from './styles.css'
-
-import type { OptionType } from '../SelectInput/types'
-import type {
-  ComponentProps,
-  CSSProperties,
-  InputHTMLAttributes,
-  ReactNode,
-} from 'react'
 
 type UnitInputValue = { inputValue: number; unit: string }
 
@@ -137,29 +129,14 @@ export const UnitInput = ({
   }, [value])
 
   return (
-    <Stack
-      gap={0.5}
-      maxWidth={maxWidth}
-      onBlur={onBlur}
-      onFocus={onFocus}
-      onKeyDown={onKeyDown}
-      width={width}
-    >
+    <Stack gap={0.5} maxWidth={maxWidth} onBlur={onBlur} onFocus={onFocus} onKeyDown={onKeyDown} width={width}>
       {label || labelInformation ? (
-        <Label
-          htmlFor={localId}
-          labelDescription={labelInformation}
-          required={required}
-          size={size}
-        >
+        <Label htmlFor={localId} labelDescription={labelInformation} required={required} size={size}>
           {label}
         </Label>
       ) : null}
       <Row
-        className={cn(
-          unitInputStyle.size[size],
-          unitInputStyle.state[computedState],
-        )}
+        className={cn(unitInputStyle.size[size], unitInputStyle.state[computedState])}
         data-disabled={!!disabled}
         data-testid={dataTestId}
         templateColumns={templateColumns ?? '1fr auto'}
@@ -234,9 +211,7 @@ export const UnitInput = ({
           {error || success || helper}
         </Text>
       ) : null}
-      {!(error || success) && typeof helper !== 'string' && helper
-        ? helper
-        : null}
+      {!(error || success) && typeof helper !== 'string' && helper ? helper : null}
     </Stack>
   )
 }

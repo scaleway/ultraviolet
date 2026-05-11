@@ -1,11 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 import { OfferList } from '..'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
-
 import { columns, data } from './resources'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 export const Type: StoryFn<ComponentProps<typeof OfferList>> = props => (
   <Stack gap={3}>
@@ -23,9 +21,7 @@ export const Type: StoryFn<ComponentProps<typeof OfferList>> = props => (
             id={planet.id}
             key={planet.id}
             offerName={planet.id}
-            selectDisabled={
-              planet.id === 'jupiter' ? 'this row cannot be selected' : false
-            }
+            selectDisabled={planet.id === 'jupiter' ? 'this row cannot be selected' : false}
           >
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
@@ -48,11 +44,7 @@ export const Type: StoryFn<ComponentProps<typeof OfferList>> = props => (
             id={planet.id}
             key={planet.id}
             offerName={planet.id}
-            selectDisabled={
-              planet.id === 'jupiter'
-                ? 'this row cannot be selected (but it is not disabled)'
-                : false
-            }
+            selectDisabled={planet.id === 'jupiter' ? 'this row cannot be selected (but it is not disabled)' : false}
           >
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>

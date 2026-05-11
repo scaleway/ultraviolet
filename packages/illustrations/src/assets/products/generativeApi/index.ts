@@ -10,9 +10,4 @@ const generativeApiKeyvisual = `${BASE_URL}/products/generativeApi/generative-ap
 const generativeApiOriginal = `${BASE_URL}/products/generativeApi/generative-api-original.webp`
 const generativeApiWire = `${BASE_URL}/products/generativeApi/generative-api-wire.svg`
 
-export {
-  generativeApiContent,
-  generativeApiKeyvisual,
-  generativeApiOriginal,
-  generativeApiWire,
-}
+export { generativeApiContent, generativeApiKeyvisual, generativeApiOriginal, generativeApiWire }

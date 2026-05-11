@@ -1,6 +1,5 @@
-import { Status } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Status } from '..'
 
 export default {
   component: Status,

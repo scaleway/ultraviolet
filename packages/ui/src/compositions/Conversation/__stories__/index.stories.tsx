@@ -1,6 +1,5 @@
-import { Conversation } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Conversation } from '..'
 
 export default {
   component: Conversation,

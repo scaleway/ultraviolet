@@ -1,18 +1,11 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { SelectInput } from '..'
 import { Stack } from '../../Stack'
-
 import { OptionalInfo, OptionalInfo2 } from './resources'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Searchable: StoryFn<typeof SelectInput> = args => (
   <Stack gap="2" width="50%">
-    <SelectInput
-      {...args}
-      label="Searchable true : >= 6 elements"
-      options={OptionalInfo}
-      searchable
-    />
+    <SelectInput {...args} label="Searchable true : >= 6 elements" options={OptionalInfo} searchable />
     <SelectInput
       {...args}
       label="Searchable true : <6 elements"

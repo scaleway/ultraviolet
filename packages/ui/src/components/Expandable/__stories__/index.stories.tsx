@@ -1,6 +1,5 @@
-import { Expandable } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Expandable } from '..'
 
 export default {
   component: Expandable,

@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const RedHatLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const RedHatLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="RedHatLogo">
     <g transform="scale(0.078125)" fill="currentColor">
       <path

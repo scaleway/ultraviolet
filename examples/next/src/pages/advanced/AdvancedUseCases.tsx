@@ -1,7 +1,6 @@
 import { Stack, Text } from '@ultraviolet/ui'
-
-import styles from '../../../styles/advanced.module.scss'
 import CopyBox from '../../components/CopyBoxCommand'
+import styles from '../../../styles/advanced.module.scss'
 
 const useCase1 = `import { theme as lightTheme, dark as darkTheme, Button, Text } from '@ultraviolet/ui'
 import { ThemeProvider } from '@ultraviolet/themes'
@@ -91,17 +90,11 @@ export default App
 const AdvancedUseCases = () => (
   <section>
     <Stack gap={5}>
-      <Text
-        as="h3"
-        className={styles.title}
-        id="advanced-use-cases"
-        variant="heading"
-      >
+      <Text as="h3" className={styles.title} id="advanced-use-cases" variant="heading">
         Advanced Use Cases
       </Text>
       <Text as="p" sentiment="neutral" variant="body">
-        If you want to change the theme or even to create a dark theme, Scaleway
-        UI allows you to do it easily
+        If you want to change the theme or even to create a dark theme, Scaleway UI allows you to do it easily
       </Text>
       <CopyBox>
         <CopyBox.Command command={useCase1} title="Dark theme" />

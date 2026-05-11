@@ -1,11 +1,8 @@
-import { Breadcrumbs } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { Breadcrumbs } from '..'
 
-export const Responsive: StoryFn<
-  ComponentProps<typeof Breadcrumbs>
-> = props => (
+export const Responsive: StoryFn<ComponentProps<typeof Breadcrumbs>> = props => (
   <div
     style={{
       border: '1px solid black',

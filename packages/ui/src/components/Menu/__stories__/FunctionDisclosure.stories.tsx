@@ -1,8 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Menu } from '..'
 import { Button } from '../../Button'
-
 import type { DisclosureProps } from '../types'
-import type { StoryFn } from '@storybook/react-vite'
 
 const CustomDisclosure = ({ visible }: DisclosureProps) => (
   <Button>{visible ? 'Menu (is opened)' : 'Menu (is closed)'}</Button>
@@ -17,8 +16,7 @@ export const FunctionDisclosure: StoryFn<typeof Menu> = () => (
 FunctionDisclosure.parameters = {
   docs: {
     description: {
-      story:
-        'You can specify a function as disclosure and get popover props as argument',
+      story: 'You can specify a function as disclosure and get popover props as argument',
     },
   },
 }

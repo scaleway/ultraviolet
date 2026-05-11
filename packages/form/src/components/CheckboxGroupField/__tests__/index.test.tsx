@@ -2,7 +2,6 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, vi, it } from 'vitest'
-
 import { CheckboxGroupField } from '..'
 
 describe('checkboxField', () => {
@@ -22,12 +21,9 @@ describe('checkboxField', () => {
         },
       },
     )
-    const [firstInput, secondInput] = screen.getAllByRole<HTMLInputElement>(
-      'checkbox',
-      {
-        hidden: true,
-      },
-    )
+    const [firstInput, secondInput] = screen.getAllByRole<HTMLInputElement>('checkbox', {
+      hidden: true,
+    })
     await userEvent.click(secondInput)
 
     expect(firstInput).not.toBeChecked()
@@ -39,12 +35,7 @@ describe('checkboxField', () => {
     const onChange = vi.fn(() => {})
 
     const { asFragment } = renderWithForm(
-      <CheckboxGroupField
-        legend="CheckboxGroupField events"
-        name="test"
-        onChange={onChange}
-        required
-      >
+      <CheckboxGroupField legend="CheckboxGroupField events" name="test" onChange={onChange} required>
         <CheckboxGroupField.Checkbox name="value-1" value="value-1">
           Checkbox 1
         </CheckboxGroupField.Checkbox>

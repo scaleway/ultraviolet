@@ -1,12 +1,10 @@
 'use client'
 
+import type { ReactNode } from 'react'
 import { Checkbox } from '../Checkbox'
-
 import { HeaderCell } from './HeaderCell'
 import { useListContext } from './ListContext'
 import { listStyle } from './styles.css'
-
-import type { ReactNode } from 'react'
 
 type RowProps = {
   hasSelectAllColumn: boolean
@@ -14,8 +12,7 @@ type RowProps = {
 }
 
 export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
-  const { allRowSelectValue, selectAllHandler, selectedRowIds, expandButton } =
-    useListContext()
+  const { allRowSelectValue, selectAllHandler, selectedRowIds, expandButton } = useListContext()
 
   const selectableRowCount = Object.keys(selectedRowIds).length
 
@@ -34,11 +31,7 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
             />
           </HeaderCell>
         ) : null}
-        {expandButton ? (
-          <HeaderCell className={listStyle.noPaddingHeaderCell}>
-            {null}
-          </HeaderCell>
-        ) : null}
+        {expandButton ? <HeaderCell className={listStyle.noPaddingHeaderCell}>{null}</HeaderCell> : null}
         {children}
       </tr>
     </thead>

@@ -26,8 +26,7 @@ export const RadioSelectableCard = () => {
         value="radio1"
       >
         <Stack gap={1}>
-          This option will cost you 1.99€ and provide you with a lot of
-          happiness radio
+          This option will cost you 1.99€ and provide you with a lot of happiness radio
           <SelectInput
             label="Select a sub option radio"
             onChange={(newValue: string) => setSelectInputValue(newValue)}
@@ -59,8 +58,7 @@ export const RadioSelectableCard = () => {
         type="radio"
         value="radio2"
       >
-        This option will cost you 2.99€ and provide you with a lot more of
-        happiness radio
+        This option will cost you 2.99€ and provide you with a lot more of happiness radio
       </SelectableCard>
     </Stack>
   )

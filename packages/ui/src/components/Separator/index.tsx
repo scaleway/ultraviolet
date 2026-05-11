@@ -2,11 +2,9 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
-import { separatorStyle, thicknessSeparator } from './styles.css'
-
-import type { SeparatorVariants } from './styles.css'
 import type { CSSProperties, ReactNode } from 'react'
+import { separatorStyle, thicknessSeparator } from './styles.css'
+import type { SeparatorVariants } from './styles.css'
 
 type SeparatorProps = {
   thickness?: number
@@ -36,10 +34,7 @@ export const Separator = ({
   children ? (
     <div
       aria-orientation={direction}
-      className={cn(
-        className,
-        separatorStyle.iconWraper({ direction, sentiment }),
-      )}
+      className={cn(className, separatorStyle.iconWraper({ direction, sentiment }))}
       data-testid={dataTestId}
       data-flip-id={flipId}
       role="separator"

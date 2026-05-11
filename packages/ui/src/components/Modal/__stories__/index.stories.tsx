@@ -1,6 +1,5 @@
-import { Modal } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Modal } from '..'
 
 export default {
   component: Modal,

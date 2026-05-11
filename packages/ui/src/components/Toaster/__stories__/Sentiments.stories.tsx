@@ -1,24 +1,17 @@
+import type { Decorator, StoryFn } from '@storybook/react-vite'
 import { ToastContainer, toast } from '..'
 import { Button } from '../../index'
-
-import type { Decorator, StoryFn } from '@storybook/react-vite'
 
 export const Sentiments: StoryFn<typeof ToastContainer> = args => (
   <div style={{ height: '300px' }}>
     <ToastContainer {...args} />
-    <Button
-      onClick={() => toast.success('This is success')}
-      sentiment="neutral"
-    >
+    <Button onClick={() => toast.success('This is success')} sentiment="neutral">
       Success
     </Button>
     <Button onClick={() => toast.error('This is error')} sentiment="danger">
       Error
     </Button>
-    <Button
-      onClick={() => toast.warning('This is warning')}
-      sentiment="warning"
-    >
+    <Button onClick={() => toast.warning('This is warning')} sentiment="warning">
       Warning
     </Button>
   </div>

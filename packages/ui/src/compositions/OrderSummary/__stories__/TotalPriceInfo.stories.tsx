@@ -1,5 +1,4 @@
 import { Badge } from '../../../components/Badge'
-
 import { Template } from './Template.stories'
 
 export const TotalPriceInfo = Template.bind({})

@@ -1,6 +1,5 @@
-import { SteppedListCard } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { SteppedListCard } from '..'
 
 export default {
   component: SteppedListCard,

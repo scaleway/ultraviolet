@@ -1,6 +1,5 @@
-import { TagInput } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { TagInput } from '..'
 
 export default {
   component: TagInput,

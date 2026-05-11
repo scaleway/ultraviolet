@@ -3,14 +3,12 @@ import { userEvent } from '@testing-library/user-event'
 import { consoleDarkTheme } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it } from 'vitest'
-
 import { Banner } from '..'
 
 // import image from '../__stories__/Image.png'
 
 describe('banner', () => {
-  it('renders correctly with default values', () =>
-    shouldMatchSnapshot(<Banner title="Title">Description</Banner>))
+  it('renders correctly with default values', () => shouldMatchSnapshot(<Banner title="Title">Description</Banner>))
 
   it('renders correctly with a button', () =>
     shouldMatchSnapshot(

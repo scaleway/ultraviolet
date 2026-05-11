@@ -1,6 +1,5 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style } from '@vanilla-extract/css'
-
 import { fadeIn } from '../../utils'
 
 export const rankActionBar = createVar()

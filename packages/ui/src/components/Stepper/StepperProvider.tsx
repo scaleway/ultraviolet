@@ -1,7 +1,6 @@
 'use client'
 
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
-
 import type { ReactNode } from 'react'
 
 type ContextType = {
@@ -63,7 +62,5 @@ export const StepperProvider = ({
   )
   useEffect(() => setStep(selected), [selected])
 
-  return (
-    <StepperContext.Provider value={value}>{children}</StepperContext.Provider>
-  )
+  return <StepperContext.Provider value={value}>{children}</StepperContext.Provider>
 }

@@ -2,12 +2,6 @@
 
 import { cn } from '@ultraviolet/utils'
 import { createRef, useId, useMemo, useState } from 'react'
-
-import { Label } from '../Label'
-import { Text } from '../Text'
-
-import { verificationCodeStyle } from './styles.css'
-
 import type {
   ChangeEvent,
   ClipboardEventHandler,
@@ -16,11 +10,13 @@ import type {
   KeyboardEventHandler,
   ReactNode,
 } from 'react'
+import { Label } from '../Label'
+import { Text } from '../Text'
+import { verificationCodeStyle } from './styles.css'
 
 const DEFAULT_ON_FUNCTION = () => {}
 
-const inputOnFocus: FocusEventHandler<HTMLInputElement> = event =>
-  event.target.select()
+const inputOnFocus: FocusEventHandler<HTMLInputElement> = event => event.target.select()
 
 type VerificationCodeProps = {
   disabled?: boolean
@@ -89,9 +85,7 @@ export const VerificationCode = ({
   ])
   const [values, setValues] = useState<string[]>(valuesArray)
 
-  const inputRefs = Array.from({ length: fields }, () =>
-    createRef<HTMLInputElement>(),
-  )
+  const inputRefs = Array.from({ length: fields }, () => createRef<HTMLInputElement>())
 
   const triggerChange = (inputValues: string[]) => {
     const stringValue = inputValues.join('')
@@ -103,34 +97,30 @@ export const VerificationCode = ({
     }
   }
 
-  const inputOnChange =
-    (index: number) => (event: ChangeEvent<HTMLInputElement>) => {
-      let { value } = event.target
-      if (type === 'number') {
-        value = event.target.value.replace(/[^\d]/gi, '')
-      }
-      const newValues = [...values]
-
-      if (
-        value === '' ||
-        (type === 'number' && !new RegExp(event.target.pattern).test(value))
-      ) {
-        newValues[index] = ''
-        setValues(newValues)
-
-        return
-      }
-
-      const sanitizedValue = value[0] // in case more than 1 char, we just take the first one
-      newValues[index] = sanitizedValue ?? ''
-      setValues(newValues)
-      const nextIndex = Math.min(index + 1, fields - 1)
-      const next = inputRefs[nextIndex]
-
-      next?.current?.focus()
-
-      triggerChange(newValues)
+  const inputOnChange = (index: number) => (event: ChangeEvent<HTMLInputElement>) => {
+    let { value } = event.target
+    if (type === 'number') {
+      value = event.target.value.replace(/[^\d]/gi, '')
     }
+    const newValues = [...values]
+
+    if (value === '' || (type === 'number' && !new RegExp(event.target.pattern).test(value))) {
+      newValues[index] = ''
+      setValues(newValues)
+
+      return
+    }
+
+    const sanitizedValue = value[0] // in case more than 1 char, we just take the first one
+    newValues[index] = sanitizedValue ?? ''
+    setValues(newValues)
+    const nextIndex = Math.min(index + 1, fields - 1)
+    const next = inputRefs[nextIndex]
+
+    next?.current?.focus()
+
+    triggerChange(newValues)
+  }
 
   const inputOnKeyDown =
     (index: number): KeyboardEventHandler<HTMLInputElement> =>
@@ -195,18 +185,13 @@ export const VerificationCode = ({
     event => {
       event.preventDefault()
       // oxlint-disable-next-line typescript/no-misused-spread
-      const pastedValue = [...event.clipboardData.getData('Text')].map(
-        (copiedValue: string) =>
-          // Replace non number char with empty char when type is number
-          type === 'number' ? copiedValue.replace(/[^\d]/gi, '') : copiedValue,
+      const pastedValue = [...event.clipboardData.getData('Text')].map((copiedValue: string) =>
+        // Replace non number char with empty char when type is number
+        type === 'number' ? copiedValue.replace(/[^\d]/gi, '') : copiedValue,
       )
 
       // Trim array to avoid array overflow
-      pastedValue.splice(
-        fields - currentIndex < pastedValue.length
-          ? fields - currentIndex
-          : pastedValue.length,
-      )
+      pastedValue.splice(fields - currentIndex < pastedValue.length ? fields - currentIndex : pastedValue.length)
 
       setValues((vals: string[]) => {
         const newArray = structuredClone(vals)
@@ -217,10 +202,7 @@ export const VerificationCode = ({
       })
 
       // we select min value between the end of inputs and valid pasted chars
-      const nextIndex = Math.min(
-        currentIndex + pastedValue.filter(item => item !== '').length,
-        inputRefs.length - 1,
-      )
+      const nextIndex = Math.min(currentIndex + pastedValue.filter(item => item !== '').length, inputRefs.length - 1)
       const next = inputRefs[nextIndex]
       next?.current?.focus()
       triggerChange(pastedValue)
@@ -239,11 +221,7 @@ export const VerificationCode = ({
   }, [error, success])
 
   return (
-    <fieldset
-      className={cn(className, verificationCodeStyle.filedSetClass)}
-      data-testid={dataTestId}
-      style={style}
-    >
+    <fieldset className={cn(className, verificationCodeStyle.filedSetClass)} data-testid={dataTestId} style={style}>
       {label || labelDescription ? (
         <Label
           htmlFor={`${id}-0`}
@@ -261,10 +239,7 @@ export const VerificationCode = ({
             aria-invalid={!!error}
             aria-label={`${ariaLabel} ${index}`}
             autoComplete="off"
-            className={cn(
-              verificationCodeStyle.inputSizes[size],
-              verificationCodeStyle.input,
-            )}
+            className={cn(verificationCodeStyle.inputSizes[size], verificationCodeStyle.input)}
             data-success={!!success}
             data-testid={index}
             disabled={disabled}
@@ -295,9 +270,7 @@ export const VerificationCode = ({
           {(error || success) ?? helper}
         </Text>
       ) : null}
-      {!(error || success) && typeof helper !== 'string' && helper
-        ? helper
-        : null}
+      {!(error || success) && typeof helper !== 'string' && helper ? helper : null}
     </fieldset>
   )
 }

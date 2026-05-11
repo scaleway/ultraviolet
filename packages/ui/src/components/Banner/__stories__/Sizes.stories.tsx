@@ -1,6 +1,5 @@
-import { Banner } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { Banner } from '..'
 
 export const Sizes: StoryFn = args => (
   <>
@@ -11,9 +10,8 @@ export const Sizes: StoryFn = args => (
       size="medium"
       title="Apply to Scaleway Startup programs"
     >
-      The Scaleway Startup programs offer the perfect combination of cloud
-      credits, advisors and startup experts to develop your business and limit
-      your expenses.
+      The Scaleway Startup programs offer the perfect combination of cloud credits, advisors and startup experts to
+      develop your business and limit your expenses.
     </Banner>
     <Banner
       {...args}
@@ -23,9 +21,8 @@ export const Sizes: StoryFn = args => (
       size="small"
       title="Apply to Scaleway Startup programs"
     >
-      The Scaleway Startup programs offer the perfect combination of cloud
-      credits, advisors and startup experts to develop your business and limit
-      your expenses.
+      The Scaleway Startup programs offer the perfect combination of cloud credits, advisors and startup experts to
+      develop your business and limit your expenses.
     </Banner>
     <Banner
       {...args}
@@ -35,9 +32,8 @@ export const Sizes: StoryFn = args => (
       title="Apply to Scaleway Startup programs"
       variant="promotional"
     >
-      The Scaleway Startup programs offer the perfect combination of cloud
-      credits, advisors and startup experts to develop your business and limit
-      your expenses.
+      The Scaleway Startup programs offer the perfect combination of cloud credits, advisors and startup experts to
+      develop your business and limit your expenses.
     </Banner>
     <Banner
       {...args}
@@ -48,9 +44,8 @@ export const Sizes: StoryFn = args => (
       title="Apply to Scaleway Startup programs"
       variant="promotional"
     >
-      The Scaleway Startup programs offer the perfect combination of cloud
-      credits, advisors and startup experts to develop your business and limit
-      your expenses.
+      The Scaleway Startup programs offer the perfect combination of cloud credits, advisors and startup experts to
+      develop your business and limit your expenses.
     </Banner>
   </>
 )

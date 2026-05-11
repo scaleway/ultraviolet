@@ -1,5 +1,5 @@
-import type { Text } from '../Text'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import type { Text } from '../Text'
 
 export type LabelProps = {
   /**

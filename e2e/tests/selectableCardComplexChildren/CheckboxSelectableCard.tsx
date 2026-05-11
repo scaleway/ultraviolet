@@ -1,11 +1,4 @@
-import {
-  SelectableCard,
-  SelectInput,
-  Slider,
-  Stack,
-  Text,
-  TextArea,
-} from '@ultraviolet/ui'
+import { SelectableCard, SelectInput, Slider, Stack, Text, TextArea } from '@ultraviolet/ui'
 import { useState } from 'react'
 
 export const CheckboxSelectableCard = () => {
@@ -31,16 +24,13 @@ export const CheckboxSelectableCard = () => {
           </Stack>
         }
         name="checkbox1"
-        onChange={event =>
-          setValue({ ...value, checkbox1: event.currentTarget.checked })
-        }
+        onChange={event => setValue({ ...value, checkbox1: event.currentTarget.checked })}
         showTick
         type="checkbox"
         value="checkbox1"
       >
         <Stack gap={1}>
-          This option will cost you 1.99€ and provide you with a lot of
-          happiness checkbox
+          This option will cost you 1.99€ and provide you with a lot of happiness checkbox
           <SelectInput
             label="Select a sub option checkbox"
             onChange={(newValue: string) => setSelectInputValue(newValue)}
@@ -67,15 +57,12 @@ export const CheckboxSelectableCard = () => {
           </Stack>
         }
         name="option2"
-        onChange={event =>
-          setValue({ ...value, checkbox2: event.currentTarget.checked })
-        }
+        onChange={event => setValue({ ...value, checkbox2: event.currentTarget.checked })}
         showTick
         type="checkbox"
         value="option2"
       >
-        This option will cost you 2.99€ and provide you with a lot more of
-        happiness checkbox
+        This option will cost you 2.99€ and provide you with a lot more of happiness checkbox
       </SelectableCard>
       <SelectableCard
         checked={value.checkbox3}
@@ -90,16 +77,13 @@ export const CheckboxSelectableCard = () => {
           </Stack>
         }
         name="option3"
-        onChange={event =>
-          setValue({ ...value, checkbox3: event.currentTarget.checked })
-        }
+        onChange={event => setValue({ ...value, checkbox3: event.currentTarget.checked })}
         showTick
         type="checkbox"
         value="option3"
       >
         <Stack gap={1}>
-          When clicking on the slider and typing in the input, the event does
-          not bubble up the the SelectableCard
+          When clicking on the slider and typing in the input, the event does not bubble up the the SelectableCard
           <TextArea label="TextArea Checkbox" onChange={() => {}} />
           <Slider input label="Slider" value={32} />
         </Stack>

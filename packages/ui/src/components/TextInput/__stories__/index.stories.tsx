@@ -1,6 +1,5 @@
-import { TextInput } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { TextInput } from '..'
 
 export default {
   component: TextInput,

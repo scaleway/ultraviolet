@@ -1,9 +1,7 @@
-import { describe, expect, it } from 'vitest'
-
-import { getAllIds, getDataColors, getOpacity, percentToHex } from '../treeMap'
-
 import type { DefaultTreeMapDatum } from '@nivo/treemap'
 import type { consoleLightTheme } from '@ultraviolet/themes'
+import { describe, expect, it } from 'vitest'
+import { getAllIds, getDataColors, getOpacity, percentToHex } from '../treeMap'
 
 type Theme = typeof consoleLightTheme
 
@@ -95,13 +93,7 @@ describe(getAllIds, () => {
       ],
       id: 'root',
     }
-    expect(getAllIds(datum)).toEqual([
-      'root',
-      'child1',
-      'grandchild1',
-      'grandchild2',
-      'child2',
-    ])
+    expect(getAllIds(datum)).toEqual(['root', 'child1', 'grandchild1', 'grandchild2', 'child2'])
   })
 
   it('should handle deeply nested structures', () => {

@@ -1,6 +1,5 @@
 import { Tabs } from '..'
 import { Badge } from '../../Badge'
-
 import { Template } from './Template.stories'
 
 export const Showcase = Template.bind({})
@@ -10,13 +9,7 @@ Showcase.args = {
     <Tabs.Tab key={1} value={1}>
       Choice 1
     </Tabs.Tab>,
-    <Tabs.Tab
-      as="a"
-      href="https://scaleway.com"
-      key={2}
-      target="_blank"
-      value={2}
-    >
+    <Tabs.Tab as="a" href="https://scaleway.com" key={2} target="_blank" value={2}>
       Link
     </Tabs.Tab>,
     <Tabs.Tab disabled key={3} value={3}>
@@ -25,13 +18,7 @@ Showcase.args = {
     <Tabs.Tab as="a" disabled href="https://scaleway.com" key={4} value={4}>
       Disabled too
     </Tabs.Tab>,
-    <Tabs.Tab
-      as="a"
-      href="https://scaleway.com"
-      key={5}
-      target="_blank"
-      value={5}
-    >
+    <Tabs.Tab as="a" href="https://scaleway.com" key={5} target="_blank" value={5}>
       Link no value
     </Tabs.Tab>,
     <Tabs.Tab as="div" key={6} value={6}>

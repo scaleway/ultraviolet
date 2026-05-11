@@ -2,13 +2,11 @@
 
 import { CheckboxGroup } from '@ultraviolet/ui'
 import { Children, isValidElement, useCallback } from 'react'
-import { useController } from 'react-hook-form'
-
-import { useErrors } from '../../providers'
-
-import type { BaseFieldProps } from '../../types'
 import type { ComponentProps } from 'react'
+import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useErrors } from '../../providers'
+import type { BaseFieldProps } from '../../types'
 
 const arraysContainSameValues = (array1: string[], array2: string[]) => {
   if (array1.length === 0) {
@@ -18,10 +16,10 @@ const arraysContainSameValues = (array1: string[], array2: string[]) => {
   return array2.every(value => array1.includes(value))
 }
 
-type CheckboxGroupFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
+type CheckboxGroupFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = Omit<
+  BaseFieldProps<TFieldValues, TFieldName>,
+  'label'
+> &
   Omit<ComponentProps<typeof CheckboxGroup>, 'value' | 'onChange'>
 
 type ElementProps = {
@@ -103,21 +101,12 @@ const CheckboxGroupFieldComponent = <
       onChange={event => {
         const fieldValue = field.value as string[]
         if (fieldValue?.includes(event.currentTarget.value)) {
-          field.onChange(
-            fieldValue?.filter(
-              currentValue => currentValue !== event.currentTarget.value,
-            ),
-          )
+          field.onChange(fieldValue?.filter(currentValue => currentValue !== event.currentTarget.value))
         } else {
           field.onChange([...field.value, event.currentTarget.value])
         }
 
-        onChange?.(
-          event.currentTarget.value as PathValue<
-            TFieldValues,
-            Path<TFieldValues>
-          >,
-        )
+        onChange?.(event.currentTarget.value as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       required={required}
       value={field.value}
@@ -131,9 +120,6 @@ type RadioGroupFieldType = typeof CheckboxGroupFieldComponent & {
   Checkbox: typeof CheckboxGroup.Checkbox
 }
 
-export const CheckboxGroupField: RadioGroupFieldType = Object.assign(
-  CheckboxGroupFieldComponent,
-  {
-    Checkbox: CheckboxGroup.Checkbox,
-  },
-)
+export const CheckboxGroupField: RadioGroupFieldType = Object.assign(CheckboxGroupFieldComponent, {
+  Checkbox: CheckboxGroup.Checkbox,
+})

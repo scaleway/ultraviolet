@@ -1,5 +1,4 @@
 import { Badge } from '@ultraviolet/ui'
-
 import type { SelectInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 
@@ -14,9 +13,7 @@ export const ubuntuOptions: ComponentProps<typeof SelectInput>['options'] = [
   },
 ]
 
-export const ubuntuOptionsLegacy: ComponentProps<
-  typeof SelectInput
->['options'] = [
+export const ubuntuOptionsLegacy: ComponentProps<typeof SelectInput>['options'] = [
   {
     label: 'Ubuntu 20.04 Focal Fossa',
     value: 'ubuntu-20.04',

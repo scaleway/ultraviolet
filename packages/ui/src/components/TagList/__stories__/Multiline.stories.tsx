@@ -12,14 +12,7 @@ Multiline.parameters = {
 
 Multiline.args = {
   multiline: true,
-  tags: [
-    'very',
-    ...new Array<string>(50).fill('item'),
-    'tooltip',
-    'scaleway',
-    'paris',
-    'cloud',
-  ],
+  tags: ['very', ...new Array<string>(50).fill('item'), 'tooltip', 'scaleway', 'paris', 'cloud'],
   threshold: 55,
 }
 

@@ -10,9 +10,4 @@ const cloudEssentialsKeyvisual = `${BASE_URL}/products/cloudEssentials/cloud-ess
 const cloudEssentialsOriginal = `${BASE_URL}/products/cloudEssentials/cloud-essentials-original.webp`
 const cloudEssentialsWire = `${BASE_URL}/products/cloudEssentials/cloud-essentials-wire.svg`
 
-export {
-  cloudEssentialsContent,
-  cloudEssentialsKeyvisual,
-  cloudEssentialsOriginal,
-  cloudEssentialsWire,
-}
+export { cloudEssentialsContent, cloudEssentialsKeyvisual, cloudEssentialsOriginal, cloudEssentialsWire }

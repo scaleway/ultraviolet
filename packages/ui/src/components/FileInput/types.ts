@@ -1,16 +1,6 @@
-import type {
-  DragEvent,
-  InputHTMLAttributes,
-  ReactNode,
-  RefObject,
-} from 'react'
+import type { DragEvent, InputHTMLAttributes, ReactNode, RefObject } from 'react'
 
-type ChildrenType =
-  | ReactNode
-  | ((
-      inputId: string,
-      inputRef: RefObject<HTMLInputElement | null>,
-    ) => ReactNode)
+type ChildrenType = ReactNode | ((inputId: string, inputRef: RefObject<HTMLInputElement | null>) => ReactNode)
 
 export type FilesType = {
   fileName: string
@@ -26,19 +16,9 @@ export type ErrorType = { fileName?: string; error: string }
 /**
  * See https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types#types
  */
-export type MimeType =
-  | 'application'
-  | 'audio'
-  | 'example'
-  | 'font'
-  | 'image'
-  | 'model'
-  | 'text'
-  | 'video'
+export type MimeType = 'application' | 'audio' | 'example' | 'font' | 'image' | 'model' | 'text' | 'video'
 
-type LabelType =
-  | { label: string; 'aria-label'?: never }
-  | { label?: never; 'aria-label': string }
+type LabelType = { label: string; 'aria-label'?: never } | { label?: never; 'aria-label': string }
 
 /**
  * Add the dropzone inside any content: when hovering, replace the content with the dropzone overlay
@@ -68,11 +48,7 @@ export type FileInputProps = {
   className?: string
   labelDescription?: ReactNode
   helper?: string
-  onDrop?: (
-    event: DragEvent<HTMLElement>,
-    acceptedFiles: File[],
-    errorFiles?: ErrorType[],
-  ) => void
+  onDrop?: (event: DragEvent<HTMLElement>, acceptedFiles: File[], errorFiles?: ErrorType[]) => void
   accept?: HTMLInputElement['accept']
   onChangeFiles?: (files: FilesType[]) => void
   defaultFiles?: FilesType[]
@@ -87,19 +63,10 @@ export type FileInputProps = {
   LabelType &
   Pick<
     InputHTMLAttributes<HTMLInputElement>,
-    | 'onFocus'
-    | 'onBlur'
-    | 'name'
-    | 'disabled'
-    | 'required'
-    | 'onKeyDown'
-    | 'onKeyUp'
-    | 'style'
+    'onFocus' | 'onBlur' | 'name' | 'disabled' | 'required' | 'onKeyDown' | 'onKeyUp' | 'style'
   >
 
-type LimitType =
-  | { limit: number; textLimit: string }
-  | { limit?: never; textLimit?: never }
+type LimitType = { limit: number; textLimit: string } | { limit?: never; textLimit?: never }
 
 export type ListProps = {
   prominence?: 'default' | 'strong'

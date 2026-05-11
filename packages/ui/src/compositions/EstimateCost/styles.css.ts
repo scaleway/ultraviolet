@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-
+import { MAX_CELL_WIDTH, PRICE_MAX_CELL_WIDTH } from './constants'
 import {
   badgeItem,
   div,
@@ -19,7 +19,6 @@ import {
   tooltip,
   tr,
 } from './Components/components.css'
-import { MAX_CELL_WIDTH, PRICE_MAX_CELL_WIDTH } from './constants'
 
 export const paddingLeftCell = createVar()
 export const overlayMarginVar = createVar()
@@ -39,10 +38,7 @@ const table = styleVariants({
   total: [tableBase, { borderRadius: '4px 4px 0 4px' }],
 })
 
-const feesTable = style([
-  tableBase,
-  { borderRadius: '4px', marginTop: theme.space[2] },
-])
+const feesTable = style([tableBase, { borderRadius: '4px', marginTop: theme.space[2] }])
 
 const priceColumn = style({
   backgroundColor: theme.colors.neutral.background,

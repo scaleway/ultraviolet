@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const OsProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const OsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="OsProductIcon">
     <g className="OS">
       <g className="OS-icon" clipPath="url(#a)">
@@ -37,12 +34,7 @@ export const OsProductIcon = ({
             className="fillStrong"
             clipRule="evenodd"
           />
-          <g
-            fill="#521094"
-            fillRule="evenodd"
-            className="fill"
-            clipRule="evenodd"
-          >
+          <g fill="#521094" fillRule="evenodd" className="fill" clipRule="evenodd">
             <path d="M11 41.596V25a1 1 0 0 1 1.495-.869l20 11.404a1 1 0 0 1 .505.87V53a1 1 0 0 1-1.495.869l-20-11.404a1 1 0 0 1-.505-.87Zm20-4.61L13 26.72v14.294l18 10.264z" />
             <path d="M53 41.596V25a1 1 0 0 0-1.495-.869l-20 11.404a1 1 0 0 0-.505.87V53a1 1 0 0 0 1.495.869l20-11.404a1 1 0 0 0 .505-.87Zm-20-4.61L51 26.72v14.293L33 51.278z" />
           </g>

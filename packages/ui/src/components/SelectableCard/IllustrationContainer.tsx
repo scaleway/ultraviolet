@@ -1,13 +1,10 @@
 'use client'
 
 import { cloneElement, isValidElement } from 'react'
-
-import { Stack } from '../Stack'
-
-import { selectableCardStyle } from './styles.css'
-
-import type { SelectableCardProps } from './types'
 import type { ReactNode } from 'react'
+import { Stack } from '../Stack'
+import type { SelectableCardProps } from './types'
+import { selectableCardStyle } from './styles.css'
 
 export const IllustrationContainer = ({
   children: subChildren,
@@ -26,27 +23,13 @@ export const IllustrationContainer = ({
       : null
 
     return (
-      <Stack
-        alignItems="stretch"
-        direction="row"
-        flex={1}
-        justifyContent="space-between"
-        width="100%"
-      >
-        <Stack className={selectableCardStyle.illustration}>
-          {subChildren}
-        </Stack>
-        <Stack justifyContent="center">
-          {productIcon ? productIcon : null}
-        </Stack>
+      <Stack alignItems="stretch" direction="row" flex={1} justifyContent="space-between" width="100%">
+        <Stack className={selectableCardStyle.illustration}>{subChildren}</Stack>
+        <Stack justifyContent="center">{productIcon ? productIcon : null}</Stack>
 
         {illustration ? (
           <div className={selectableCardStyle.div}>
-            {illustration ? (
-              <div className={selectableCardStyle.image}>
-                {computedIllustration}
-              </div>
-            ) : null}
+            {illustration ? <div className={selectableCardStyle.image}>{computedIllustration}</div> : null}
           </div>
         ) : null}
       </Stack>

@@ -1,5 +1,4 @@
 import { configDefaults, defineConfig, mergeConfig } from 'vitest/config'
-
 import type { TestUserConfig, ViteUserConfig } from 'vitest/config'
 
 const defaultConfig = defineConfig({
@@ -75,8 +74,6 @@ const defaultConfig = defineConfig({
   },
 })
 
-export const createVitestConfig = (
-  options: TestUserConfig & ViteUserConfig = {},
-) => mergeConfig(defaultConfig, options)
+export const createVitestConfig = (options: TestUserConfig & ViteUserConfig = {}) => mergeConfig(defaultConfig, options)
 
 export default createVitestConfig()

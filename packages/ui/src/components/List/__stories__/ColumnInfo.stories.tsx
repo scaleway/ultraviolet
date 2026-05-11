@@ -1,8 +1,6 @@
-import { List } from '..'
-
-import { data } from './resources'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { List } from '..'
+import { data } from './resources'
 
 export const ColumnInfo: StoryFn = args => (
   <List

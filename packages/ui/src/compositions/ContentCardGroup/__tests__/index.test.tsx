@@ -1,6 +1,5 @@
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-
 import { ContentCardGroup } from '..'
 
 describe('contentCardGroup', () => {
@@ -22,22 +21,14 @@ describe('contentCardGroup', () => {
   it('renders correctly with subtitle', () =>
     shouldMatchSnapshot(
       <ContentCardGroup>
-        <ContentCardGroup.Card
-          href="http://scaleway.com"
-          subtitle="subtitle"
-          title="title"
-        />
+        <ContentCardGroup.Card href="http://scaleway.com" subtitle="subtitle" title="title" />
       </ContentCardGroup>,
     ))
 
   it('renders correctly with description', () =>
     shouldMatchSnapshot(
       <ContentCardGroup>
-        <ContentCardGroup.Card
-          description="description"
-          href="http://scaleway.com"
-          title="title"
-        />
+        <ContentCardGroup.Card description="description" href="http://scaleway.com" title="title" />
       </ContentCardGroup>,
     ))
 
@@ -53,11 +44,7 @@ describe('contentCardGroup', () => {
   it('renders correctly with link target _parent', () =>
     shouldMatchSnapshot(
       <ContentCardGroup>
-        <ContentCardGroup.Card
-          href="http://scaleway.com"
-          target="_parent"
-          title="title"
-        />
+        <ContentCardGroup.Card href="http://scaleway.com" target="_parent" title="title" />
       </ContentCardGroup>,
     ))
 

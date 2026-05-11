@@ -2,15 +2,12 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { StepBullet } from './Bullet'
 import { useStepper } from './StepperProvider'
 import { stepperStyle } from './styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type StepProps = {
   onClick?: (index: number) => void
@@ -46,15 +43,7 @@ export const Step = ({
   style,
   'data-testid': dataTestId,
 }: StepProps) => {
-  const {
-    separator,
-    labelPosition,
-    animated,
-    size,
-    interactive,
-    step,
-    setStep,
-  } = useStepper()
+  const { separator, labelPosition, animated, size, interactive, step, setStep } = useStepper()
   const isActive = index === step
   const isDone = index < step
   const separatorBottom = separator && labelPosition === 'bottom'
@@ -85,12 +74,8 @@ export const Step = ({
               size,
             })
           : '',
-        isActive && separator && animated
-          ? stepperStyle.animationStepperContainer[size]
-          : '',
-        interactiveDone && !disabled
-          ? stepperStyle.interactive[isActive ? 'active' : 'inactive']
-          : '',
+        isActive && separator && animated ? stepperStyle.animationStepperContainer[size] : '',
+        interactiveDone && !disabled ? stepperStyle.interactive[isActive ? 'active' : 'inactive'] : '',
       )}
       data-testid={dataTestId ?? `stepper-step-${index}`}
       direction={labelPosition === 'right' ? 'row' : 'column'}
@@ -106,12 +91,7 @@ export const Step = ({
       }}
       style={style}
     >
-      <StepBullet
-        disabled={disabled}
-        index={index}
-        isActive={isActive}
-        isDone={isDone}
-      />
+      <StepBullet disabled={disabled} index={index} isActive={isActive} isDone={isDone} />
       {title ? (
         <Text
           as="span"

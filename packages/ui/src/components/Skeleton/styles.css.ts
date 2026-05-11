@@ -1,6 +1,5 @@
 import { theme } from '@ultraviolet/themes'
 import { keyframes, style } from '@vanilla-extract/css'
-
 import {
   blockSkeletonLine,
   blockSkeletonList,

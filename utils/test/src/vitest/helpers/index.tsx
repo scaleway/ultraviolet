@@ -1,14 +1,11 @@
 import { render, renderHook } from '@testing-library/react'
+import type { RenderOptions } from '@testing-library/react'
 import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
-
+import type { ComponentProps, ReactElement, ReactNode } from 'react'
+import type { FormErrors, UseFormProps } from '../../../../../packages/form/src'
 import { Form, useForm } from '../../../../../packages/form/src/index'
-
 import { makeShouldMatchSnapshot } from './shouldMatchSnapshot'
 import { makeShouldMatchSnapshotWithPortal } from './shouldMatchSnapshotWithPortal'
-
-import type { FormErrors, UseFormProps } from '../../../../../packages/form/src'
-import type { RenderOptions } from '@testing-library/react'
-import type { ComponentProps, ReactElement, ReactNode } from 'react'
 
 export const ComponentWrapper = ({
   children,
@@ -35,22 +32,14 @@ export const mockFormErrors: FormErrors = {
     return 'This field should be a number'
   },
   max: ({ max }) => `This field is too high (maximum is : ${max ?? ''})`,
-  maxDate: ({ maxDate }) =>
-    `This field should be before ${maxDate?.toString() ?? ''}`,
-  maxLength: ({ maxLength }) =>
-    `This field should have a length lower than ${maxLength ?? ''}`,
+  maxDate: ({ maxDate }) => `This field should be before ${maxDate?.toString() ?? ''}`,
+  maxLength: ({ maxLength }) => `This field should have a length lower than ${maxLength ?? ''}`,
   min: ({ min }) => `This field is too low (minimum is: ${min ?? ''})`,
-  minDate: ({ minDate }) =>
-    `This field should be after ${minDate?.toString() ?? ''}`,
-  minLength: ({ minLength }) =>
-    `This field should have a length greater than ${minLength ?? ''}`,
+  minDate: ({ minDate }) => `This field should be after ${minDate?.toString() ?? ''}`,
+  minLength: ({ minLength }) => `This field should have a length greater than ${minLength ?? ''}`,
   pattern: ({ regex }) =>
     `This field should match the regex ${(regex ?? [])
-      .map(r =>
-        Array.isArray(r)
-          ? r.map(nestedRegex => nestedRegex.source).join(' or ')
-          : r.source,
-      )
+      .map(r => (Array.isArray(r) ? r.map(nestedRegex => nestedRegex.source).join(' or ') : r.source))
       .join(' and ')}`,
   required: () => 'This field is required',
 }
@@ -67,14 +56,9 @@ export const mockFormErrors: FormErrors = {
  *
  */
 
-export const shouldMatchSnapshotWithPortal = (
-  component: ReactElement,
-  theme?: typeof consoleLightTheme,
-) =>
+export const shouldMatchSnapshotWithPortal = (component: ReactElement, theme?: typeof consoleLightTheme) =>
   makeShouldMatchSnapshotWithPortal(component, {
-    wrapper: ({ children }) => (
-      <ComponentWrapper theme={theme}>{children}</ComponentWrapper>
-    ),
+    wrapper: ({ children }) => <ComponentWrapper theme={theme}>{children}</ComponentWrapper>,
   })
 
 /**
@@ -88,26 +72,15 @@ export const shouldMatchSnapshotWithPortal = (
  * ```
  *
  */
-export const shouldMatchSnapshot = (
-  component: ReactNode,
-  theme?: typeof consoleLightTheme,
-) =>
+export const shouldMatchSnapshot = (component: ReactNode, theme?: typeof consoleLightTheme) =>
   makeShouldMatchSnapshot(component, {
-    wrapper: ({ children }) => (
-      <ComponentWrapper theme={theme}>{children}</ComponentWrapper>
-    ),
+    wrapper: ({ children }) => <ComponentWrapper theme={theme}>{children}</ComponentWrapper>,
   })
 
-export const renderWithTheme = (
-  compoment: ReactNode,
-  theme?: typeof consoleLightTheme,
-  options?: RenderOptions,
-) =>
+export const renderWithTheme = (compoment: ReactNode, theme?: typeof consoleLightTheme, options?: RenderOptions) =>
   render(compoment, {
     ...options,
-    wrapper: ({ children }) => (
-      <ComponentWrapper theme={theme}>{children}</ComponentWrapper>
-    ),
+    wrapper: ({ children }) => <ComponentWrapper theme={theme}>{children}</ComponentWrapper>,
   })
 
 export const renderWithForm = (
@@ -116,18 +89,11 @@ export const renderWithForm = (
   formProps?: Partial<ComponentProps<typeof Form>>,
   theme?: typeof consoleLightTheme,
 ) => {
-  const { result } = renderHook(() =>
-    useForm({ mode: 'onChange', ...useFormProps }),
-  )
+  const { result } = renderHook(() => useForm({ mode: 'onChange', ...useFormProps }))
 
   return {
     ...renderWithTheme(
-      <Form
-        errors={mockFormErrors}
-        methods={result.current}
-        onSubmit={() => {}}
-        {...formProps}
-      >
+      <Form errors={mockFormErrors} methods={result.current} onSubmit={() => {}} {...formProps}>
         {compoment}
       </Form>,
       theme,

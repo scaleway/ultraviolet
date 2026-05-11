@@ -1,11 +1,9 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-
-import { logo } from './style.css'
-
-import type { SIZES } from './constant'
 import type { CSSProperties, ReactNode } from 'react'
+import type { SIZES } from './constant'
+import { logo } from './style.css'
 
 export type IconProps = {
   size?: keyof typeof SIZES
@@ -18,20 +16,8 @@ export type IconProps = {
 /**
  * Logo component is used to render a set of logos. Their style cannot be changed
  */
-export const Icon = ({
-  size = 'small',
-  className,
-  children,
-  style,
-  title,
-}: IconProps) => (
-  <svg
-    className={cn(className, logo[size])}
-    height="20"
-    style={style}
-    viewBox="0 0 20 20"
-    width="20"
-  >
+export const Icon = ({ size = 'small', className, children, style, title }: IconProps) => (
+  <svg className={cn(className, logo[size])} height="20" style={style} viewBox="0 0 20 20" width="20">
     <title>{title}</title>
     {children}
   </svg>

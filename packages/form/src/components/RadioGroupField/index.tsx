@@ -1,18 +1,16 @@
 'use client'
 
 import { RadioGroup } from '@ultraviolet/ui'
-import { useController } from 'react-hook-form'
-
-import { useErrors } from '../../providers'
-
-import type { BaseFieldProps } from '../../types'
 import type { ComponentProps, JSX } from 'react'
+import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useErrors } from '../../providers'
+import type { BaseFieldProps } from '../../types'
 
-type RadioGroupFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
+type RadioGroupFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = Omit<
+  BaseFieldProps<TFieldValues, TFieldName>,
+  'label'
+> &
   Omit<ComponentProps<typeof RadioGroup>, 'value' | 'onChange' | 'legend'> &
   Partial<Pick<ComponentProps<typeof RadioGroup>, 'legend'>>
 
@@ -54,9 +52,7 @@ const RadioGroupFieldComponent = <
       name={field.name}
       onChange={event => {
         field.onChange(event)
-        onChange?.(
-          event.target.value as PathValue<TFieldValues, Path<TFieldValues>>,
-        )
+        onChange?.(event.target.value as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       required={required}
       value={field.value}
@@ -70,9 +66,6 @@ type RadioGroupFieldType = typeof RadioGroupFieldComponent & {
   Radio: typeof RadioGroup.Radio
 }
 
-export const RadioGroupField: RadioGroupFieldType = Object.assign(
-  RadioGroupFieldComponent,
-  {
-    Radio: RadioGroup.Radio,
-  },
-)
+export const RadioGroupField: RadioGroupFieldType = Object.assign(RadioGroupFieldComponent, {
+  Radio: RadioGroup.Radio,
+})

@@ -1,6 +1,5 @@
-import { Skeleton } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Skeleton } from '..'
 
 export default {
   component: Skeleton,

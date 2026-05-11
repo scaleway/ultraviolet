@@ -13,17 +13,14 @@ import {
   useRef,
   useState,
 } from 'react'
-
+import type { Ref } from 'react'
 import { isClientSide } from '../../helpers/isClientSide'
 import { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import { TextInput } from '../TextInput'
-
 import { KeyGroup } from './KeyGroup'
-import { searchInputStyle } from './styles.css'
-
 import type { SearchInputProps } from './types'
-import type { Ref } from 'react'
+import { searchInputStyle } from './styles.css'
 
 /**
  * SearchInput is a component that allows users to search for items. It is a combination of a TextInput and a Popup. The Popup is used to display search results.
@@ -82,10 +79,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     const innerSearchInputRef = useRef<HTMLInputElement>(null)
     useImperativeHandle(ref, () => innerSearchInputRef.current!)
 
-    const content =
-      typeof children === 'function'
-        ? children({ isOpen, searchTerms, toggleIsOpen })
-        : children
+    const content = typeof children === 'function' ? children({ isOpen, searchTerms, toggleIsOpen }) : children
 
     const resizeSearchBar = () => {
       if (popupRef.current) {
@@ -96,11 +90,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     const handleNavigation = (event: KeyboardEvent) => {
       const links = [...(popupRef.current?.querySelectorAll('a') ?? [])]
 
-      if (
-        links.length > 0 &&
-        focusedLinkIndex.current >= 0 &&
-        focusedLinkIndex.current <= links.length
-      ) {
+      if (links.length > 0 && focusedLinkIndex.current >= 0 && focusedLinkIndex.current <= links.length) {
         if (event.key === 'ArrowUp') {
           if (focusedLinkIndex.current - 1 < 0) {
             focusedLinkIndex.current = links.length - 1
@@ -176,20 +166,14 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
         setKeyPressed([...keyPressed, key.toUpperCase()])
 
         if (typeof shortcut === 'boolean') {
-          if (
-            (key === 'k' || key === 'K') &&
-            ((!isMacOS && ctrlKey) || (isMacOS && metaKey))
-          ) {
+          if ((key === 'k' || key === 'K') && ((!isMacOS && ctrlKey) || (isMacOS && metaKey))) {
             event.preventDefault()
             innerSearchInputRef.current?.focus()
           }
         } else {
           const uppercaseShortcut = shortcut.map(s => s.toUpperCase())
 
-          if (
-            JSON.stringify([...keyPressed, key.toUpperCase()]) ===
-            JSON.stringify(uppercaseShortcut)
-          ) {
+          if (JSON.stringify([...keyPressed, key.toUpperCase()]) === JSON.stringify(uppercaseShortcut)) {
             event.preventDefault()
             innerSearchInputRef.current?.focus()
           }
@@ -299,11 +283,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             style={style}
             suffix={
               shortcut && searchTerms.length === 0 ? (
-                <KeyGroup
-                  disabled={disabled}
-                  keys={keys}
-                  onClick={() => innerSearchInputRef.current?.focus()}
-                />
+                <KeyGroup disabled={disabled} keys={keys} onClick={() => innerSearchInputRef.current?.focus()} />
               ) : undefined
             }
             tooltip={tooltip}

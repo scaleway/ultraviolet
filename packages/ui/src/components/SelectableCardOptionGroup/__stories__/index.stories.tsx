@@ -1,6 +1,5 @@
-import { SelectableCardOptionGroup } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { SelectableCardOptionGroup } from '..'
 
 export default {
   component: SelectableCardOptionGroup,

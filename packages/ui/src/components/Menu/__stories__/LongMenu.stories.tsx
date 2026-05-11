@@ -1,21 +1,14 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Menu } from '..'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
-
 import { DefaultDisclosure } from './Template.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const LongMenu: StoryFn<typeof Menu> = ({ ...props }) => (
   <Menu {...props} disclosure={DefaultDisclosure}>
     <Menu.Group label="Server">
       <Menu.Item borderless>
-        <Stack
-          alignItems="center"
-          direction="row"
-          flex={1}
-          justifyContent="space-between"
-        >
+        <Stack alignItems="center" direction="row" flex={1} justifyContent="space-between">
           Information&nbsp;
           <Badge sentiment="success" size="small">
             New
@@ -30,12 +23,7 @@ export const LongMenu: StoryFn<typeof Menu> = ({ ...props }) => (
     </Menu.Group>
     <Menu.Group label="Dedicated Server">
       <Menu.Item borderless>
-        <Stack
-          alignItems="center"
-          direction="row"
-          flex={1}
-          justifyContent="space-between"
-        >
+        <Stack alignItems="center" direction="row" flex={1} justifyContent="space-between">
           Information&nbsp;
           <Badge sentiment="success" size="small">
             New
@@ -50,12 +38,7 @@ export const LongMenu: StoryFn<typeof Menu> = ({ ...props }) => (
     </Menu.Group>
     <Menu.Group label="Kubernetes">
       <Menu.Item borderless>
-        <Stack
-          alignItems="center"
-          direction="row"
-          flex={1}
-          justifyContent="space-between"
-        >
+        <Stack alignItems="center" direction="row" flex={1} justifyContent="space-between">
           Information&nbsp;
           <Badge sentiment="success" size="small">
             New
@@ -70,12 +53,7 @@ export const LongMenu: StoryFn<typeof Menu> = ({ ...props }) => (
     </Menu.Group>
     <Menu.Group label="Serverless">
       <Menu.Item borderless>
-        <Stack
-          alignItems="center"
-          direction="row"
-          flex={1}
-          justifyContent="space-between"
-        >
+        <Stack alignItems="center" direction="row" flex={1} justifyContent="space-between">
           Information&nbsp;
           <Badge sentiment="success" size="small">
             New

@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const PlacementGroupProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const PlacementGroupProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="PlacementGroupProductIcon">
     <g className="Placement-Group">
       <g className=".Square">
@@ -21,13 +18,7 @@ export const PlacementGroupProductIcon = ({
           className="fillWeak"
         />
       </g>
-      <path
-        fill="#A365F6"
-        d="M36 45h-8v-2h8z"
-        className="fillStrong"
-        clipRule="evenodd"
-        fillRule="evenodd"
-      />
+      <path fill="#A365F6" d="M36 45h-8v-2h8z" className="fillStrong" clipRule="evenodd" fillRule="evenodd" />
       <path
         fill="#4F0599"
         d="M50 38H38v12h12zm-12-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V38a2 2 0 0 0-2-2z"

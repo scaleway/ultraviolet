@@ -10,9 +10,4 @@ const dataOrchestratorKeyvisual = `${BASE_URL}/products/dataOrchestrator/data-or
 const dataOrchestratorOriginal = `${BASE_URL}/products/dataOrchestrator/data-orchestrator-original.webp`
 const dataOrchestratorWire = `${BASE_URL}/products/dataOrchestrator/data-orchestrator-wire.svg`
 
-export {
-  dataOrchestratorContent,
-  dataOrchestratorKeyvisual,
-  dataOrchestratorOriginal,
-  dataOrchestratorWire,
-}
+export { dataOrchestratorContent, dataOrchestratorKeyvisual, dataOrchestratorOriginal, dataOrchestratorWire }

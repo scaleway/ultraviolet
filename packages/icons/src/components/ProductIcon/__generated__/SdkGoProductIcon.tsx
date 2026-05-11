@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const SdkGoProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const SdkGoProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="SdkGoProductIcon">
     <g className="SDK-Go">
       <g className="SDK-Go-icon" clipPath="url(#a)">

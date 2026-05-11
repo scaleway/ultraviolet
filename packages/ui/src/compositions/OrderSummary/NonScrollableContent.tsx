@@ -1,15 +1,12 @@
 import { CalculatorIcon } from '@ultraviolet/icons/CalculatorIcon'
 import { useContext } from 'react'
-
+import type { ReactNode } from 'react'
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
-
 import { DisplayPrice } from './helpers'
 import { OrderSummaryContext } from './Provider'
-import { orderSummaryStyle } from './styles.css'
-
 import type { PriceTypeSingle, TimeUnit } from './types'
-import type { ReactNode } from 'react'
+import { orderSummaryStyle } from './styles.css'
 
 type NonScrollableContentProps = {
   discount: number
@@ -50,10 +47,7 @@ export const NonScrollableContent = ({
   const divisor = defaultPriceInformation ? timePeriodAmount : undefined
 
   return (
-    <Stack
-      className={orderSummaryStyle.nonScrollableContainer({ compact })}
-      gap={3}
-    >
+    <Stack className={orderSummaryStyle.nonScrollableContainer({ compact })} gap={3}>
       {children}
       <Stack alignItems="center" direction="row" justifyContent="space-between">
         {totalPriceInfo && totalPriceInfoPlacement === 'left' ? (
@@ -64,15 +58,9 @@ export const NonScrollableContent = ({
                 prominence="strong"
                 sentiment="neutral"
                 variant="bodyStrong"
-                className={
-                  calculatorIcon
-                    ? orderSummaryStyle.compactTotalPrice
-                    : undefined
-                }
+                className={calculatorIcon ? orderSummaryStyle.compactTotalPrice : undefined}
               >
-                {calculatorIcon ? (
-                  <CalculatorIcon sentiment="primary" size="medium" />
-                ) : null}
+                {calculatorIcon ? <CalculatorIcon sentiment="primary" size="medium" /> : null}
                 {locales['order.summary.total']}
                 {compact ? null : ':'}
               </Text>
@@ -87,13 +75,9 @@ export const NonScrollableContent = ({
               prominence="strong"
               sentiment="neutral"
               variant="bodyStrong"
-              className={
-                calculatorIcon ? orderSummaryStyle.compactTotalPrice : undefined
-              }
+              className={calculatorIcon ? orderSummaryStyle.compactTotalPrice : undefined}
             >
-              {calculatorIcon ? (
-                <CalculatorIcon sentiment="primary" size="medium" />
-              ) : null}
+              {calculatorIcon ? <CalculatorIcon sentiment="primary" size="medium" /> : null}
               {locales['order.summary.total']}
               {additionalInfo ? ` ${additionalInfo}` : null}
               {compact ? null : ':'}
@@ -102,15 +86,12 @@ export const NonScrollableContent = ({
           </Stack>
         )}
         <Stack alignItems="flex-end" direction="column">
-          {totalPrice.totalPrice === totalPrice.totalPriceWithDiscount ||
-          hideBeforePrice ? (
+          {totalPrice.totalPrice === totalPrice.totalPriceWithDiscount || hideBeforePrice ? (
             <Text
               as="span"
               className={
                 orderSummaryStyle.totalPrice[
-                  defaultPriceInformation && !priceInformation
-                    ? 'default'
-                    : 'priceInformation'
+                  defaultPriceInformation && !priceInformation ? 'default' : 'priceInformation'
                 ]
               }
               data-testid="total-price"
@@ -118,54 +99,30 @@ export const NonScrollableContent = ({
               sentiment="neutral"
               variant="headingSmallStrong"
             >
-              <DisplayPrice
-                beforeOrAfter="after"
-                divisor={divisor}
-                price={totalPrice}
-              />
+              <DisplayPrice beforeOrAfter="after" divisor={divisor} price={totalPrice} />
               {defaultPriceInformation ? `/${unitSingular}` : null}
               {priceInformation}
             </Text>
           ) : (
             <Stack alignItems="center" direction="row" gap={1}>
-              <Text
-                as="span"
-                prominence="weak"
-                sentiment="neutral"
-                strikeThrough
-                variant="bodySmallStrong"
-              >
-                <DisplayPrice
-                  beforeOrAfter="before"
-                  divisor={divisor}
-                  price={totalPrice}
-                />
+              <Text as="span" prominence="weak" sentiment="neutral" strikeThrough variant="bodySmallStrong">
+                <DisplayPrice beforeOrAfter="before" divisor={divisor} price={totalPrice} />
               </Text>
               <Text
                 as="span"
-                className={
-                  orderSummaryStyle.totalPrice[
-                    priceInformation ? 'priceInformation' : 'default'
-                  ]
-                }
+                className={orderSummaryStyle.totalPrice[priceInformation ? 'priceInformation' : 'default']}
                 data-testid="total-price"
                 prominence="strong"
                 sentiment="neutral"
                 variant="headingSmallStrong"
               >
-                <DisplayPrice
-                  beforeOrAfter="after"
-                  divisor={divisor}
-                  price={totalPrice}
-                />
+                <DisplayPrice beforeOrAfter="after" divisor={divisor} price={totalPrice} />
                 {defaultPriceInformation ? `/${unitSingular}` : null}
                 {priceInformation}
               </Text>
             </Stack>
           )}
-          {totalPriceInfo && totalPriceInfoPlacement === 'right'
-            ? totalPriceInfo
-            : null}
+          {totalPriceInfo && totalPriceInfoPlacement === 'right' ? totalPriceInfo : null}
         </Stack>
       </Stack>
       {footer}

@@ -10,9 +10,4 @@ const artifactRegistryKeyvisual = `${BASE_URL}/products/artifactRegistry/artifac
 const artifactRegistryOriginal = `${BASE_URL}/products/artifactRegistry/artifact-registry-original.webp`
 const artifactRegistryWire = `${BASE_URL}/products/artifactRegistry/artifact-registry-wire.svg`
 
-export {
-  artifactRegistryContent,
-  artifactRegistryKeyvisual,
-  artifactRegistryOriginal,
-  artifactRegistryWire,
-}
+export { artifactRegistryContent, artifactRegistryKeyvisual, artifactRegistryOriginal, artifactRegistryWire }

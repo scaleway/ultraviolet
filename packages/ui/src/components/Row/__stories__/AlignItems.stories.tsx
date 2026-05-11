@@ -1,23 +1,16 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Row } from '..'
 import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
 import { divWithBackground } from './DivWithBackground.css'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const AlignItems: StoryFn = args => (
   <Stack gap={2}>
     <Text as="p" variant="bodyStrong">
       alignItems=&ldquo;start&ldquo;
     </Text>
-    <Row
-      {...args}
-      alignItems="flex-start"
-      gap={1}
-      templateColumns="repeat(3, 1fr)"
-    >
+    <Row {...args} alignItems="flex-start" gap={1} templateColumns="repeat(3, 1fr)">
       <div style={{ height: '100px' }}>1fr</div>
       <div className={divWithBackground} style={{ height: '50px' }}>
         1fr
@@ -41,12 +34,7 @@ export const AlignItems: StoryFn = args => (
     <Text as="p" variant="bodyStrong">
       alignItems=&ldquo;end&ldquo;
     </Text>
-    <Row
-      {...args}
-      alignItems="flex-end"
-      gap={1}
-      templateColumns="repeat(3, 1fr)"
-    >
+    <Row {...args} alignItems="flex-end" gap={1} templateColumns="repeat(3, 1fr)">
       <div className={divWithBackground} style={{ height: '100px' }}>
         1fr
       </div>

@@ -1,9 +1,7 @@
 // oxlint-disable no-underscore-dangle
 import { Stack, Table, Text } from '@ultraviolet/ui'
-
-import * as components from '../../../../packages/ui/src/components'
-
 import type { ComponentType } from 'react'
+import * as components from '../../../../packages/ui/src/components'
 
 type PropertyType = {
   defaultValue: {
@@ -35,36 +33,20 @@ type ModuleType = ({
 const Properties = () => {
   const componentsList = Object.values(components) as ModuleType[]
 
-  const componentNameAndProperties = componentsList.reduce<
-    Record<string, Record<string, unknown>>
-  >((acc, component) => {
-    if (component?.__docgenInfo?.props) {
-      return {
-        ...acc,
-        [component.displayName]: component.__docgenInfo.props,
+  const componentNameAndProperties = componentsList.reduce<Record<string, Record<string, unknown>>>(
+    (acc, component) => {
+      if (component?.__docgenInfo?.props) {
+        return {
+          ...acc,
+          [component.displayName]: component.__docgenInfo.props,
+        }
       }
-    }
 
-    if (component?.type?.__docgenInfo?.props) {
-      return {
-        ...acc,
-        [component.type.displayName]: component.type.__docgenInfo.props,
-      }
-    }
-
-    return acc
-  }, {})
-
-  const propertiesList = Object.keys(componentNameAndProperties).flatMap(key =>
-    Object.keys(componentNameAndProperties[key]),
-  )
-
-  const countPropertiesUsages = propertiesList.reduce<Record<string, number>>(
-    (acc, property) => {
-      if (acc[property]) {
-        acc[property] += 1
-      } else {
-        acc[property] = 1
+      if (component?.type?.__docgenInfo?.props) {
+        return {
+          ...acc,
+          [component.type.displayName]: component.type.__docgenInfo.props,
+        }
       }
 
       return acc
@@ -72,28 +54,38 @@ const Properties = () => {
     {},
   )
 
-  const propertiesUsagesCountAndComponentsName = Object.entries(
-    countPropertiesUsages,
-  ).reduce<Record<string, { count: number; components: string[] }>>(
-    (acc, [property, count]) => {
-      const componentsMatching = Object.entries(
-        componentNameAndProperties,
-      ).reduce<string[]>((accumulator, [component, properties]) => {
+  const propertiesList = Object.keys(componentNameAndProperties).flatMap(key =>
+    Object.keys(componentNameAndProperties[key]),
+  )
+
+  const countPropertiesUsages = propertiesList.reduce<Record<string, number>>((acc, property) => {
+    if (acc[property]) {
+      acc[property] += 1
+    } else {
+      acc[property] = 1
+    }
+
+    return acc
+  }, {})
+
+  const propertiesUsagesCountAndComponentsName = Object.entries(countPropertiesUsages).reduce<
+    Record<string, { count: number; components: string[] }>
+  >((acc, [property, count]) => {
+    const componentsMatching = Object.entries(componentNameAndProperties).reduce<string[]>(
+      (accumulator, [component, properties]) => {
         if (Object.keys(properties).includes(property)) {
           return [...accumulator, component]
         }
 
         return accumulator
-      }, [])
+      },
+      [],
+    )
 
-      return { ...acc, [property]: { components: componentsMatching, count } }
-    },
-    {},
-  )
+    return { ...acc, [property]: { components: componentsMatching, count } }
+  }, {})
 
-  const sortedPropertiesUsagesCountAndComponentsName = Object.entries(
-    propertiesUsagesCountAndComponentsName,
-  )
+  const sortedPropertiesUsagesCountAndComponentsName = Object.entries(propertiesUsagesCountAndComponentsName)
     .toSorted(([, { count: countA }], [, { count: countB }]) => countB - countA)
     .reduce<Record<string, { count: number; components: string[] }>>(
       (acc, [property, value]) => ({
@@ -113,9 +105,8 @@ const Properties = () => {
           <Text as="span" variant="bodyStrong">
             Similar property name*:
           </Text>
-          &nbsp;this is a list of properties that are similar to the current
-          property. The way it checks is not very precise, it just checks if the
-          property name contains some part of the other property name.
+          &nbsp;this is a list of properties that are similar to the current property. The way it checks is not very
+          precise, it just checks if the property name contains some part of the other property name.
         </Text>
         <Text as="p" variant="body">
           <Text as="span" variant="bodyStronger">
@@ -135,137 +126,99 @@ const Properties = () => {
         stripped
       >
         <Table.Body>
-          {Object.keys(sortedPropertiesUsagesCountAndComponentsName).map(
-            property => {
-              const lowerCaseProperty = property.toLowerCase()
-              const findSimilarProperty = [
-                ...new Set(
-                  propertiesList
-                    .map(localProperty => {
-                      const lowerCaseLocalProperty = localProperty.toLowerCase()
+          {Object.keys(sortedPropertiesUsagesCountAndComponentsName).map(property => {
+            const lowerCaseProperty = property.toLowerCase()
+            const findSimilarProperty = [
+              ...new Set(
+                propertiesList
+                  .map(localProperty => {
+                    const lowerCaseLocalProperty = localProperty.toLowerCase()
 
-                      for (
-                        let i = 4;
-                        i < lowerCaseLocalProperty.length;
-                        i += 1
+                    for (let i = 4; i < lowerCaseLocalProperty.length; i += 1) {
+                      const localPropertySubstring = lowerCaseLocalProperty.substring(0, i).toLocaleLowerCase()
+
+                      if (
+                        lowerCaseProperty.includes(localPropertySubstring) &&
+                        lowerCaseLocalProperty !== lowerCaseProperty
                       ) {
-                        const localPropertySubstring = lowerCaseLocalProperty
-                          .substring(0, i)
-                          .toLocaleLowerCase()
-
-                        if (
-                          lowerCaseProperty.includes(localPropertySubstring) &&
-                          lowerCaseLocalProperty !== lowerCaseProperty
-                        ) {
-                          return localProperty
-                        }
+                        return localProperty
                       }
+                    }
 
-                      const reversedLocalProperty = [...lowerCaseLocalProperty]
-                        .toReversed()
-                        .join('')
-                      const reversedLowerCaseProperty = [...lowerCaseProperty]
-                        .toReversed()
-                        .join('')
+                    const reversedLocalProperty = [...lowerCaseLocalProperty].toReversed().join('')
+                    const reversedLowerCaseProperty = [...lowerCaseProperty].toReversed().join('')
 
-                      for (
-                        let i = 4;
-                        i < reversedLocalProperty.length;
-                        i += 1
+                    for (let i = 4; i < reversedLocalProperty.length; i += 1) {
+                      const reverseLocalPropertySubstring = reversedLocalProperty.substring(0, i)
+
+                      if (
+                        reversedLowerCaseProperty.includes(reverseLocalPropertySubstring) &&
+                        reversedLocalProperty !== reversedLowerCaseProperty
                       ) {
-                        const reverseLocalPropertySubstring =
-                          reversedLocalProperty.substring(0, i)
-
-                        if (
-                          reversedLowerCaseProperty.includes(
-                            reverseLocalPropertySubstring,
-                          ) &&
-                          reversedLocalProperty !== reversedLowerCaseProperty
-                        ) {
-                          return localProperty
-                        }
+                        return localProperty
                       }
-
-                      return null
-                    })
-                    .filter(Boolean),
-                ),
-              ]
-
-              const propertyValues = [
-                ...new Set(
-                  sortedPropertiesUsagesCountAndComponentsName[
-                    property
-                  ]?.components?.flatMap(component => {
-                    const { name, value } =
-                      (
-                        componentNameAndProperties as Record<
-                          string,
-                          Record<string, PropertyType>
-                        >
-                      )[component]?.[property]?.type ?? {}
-
-                    if (name === 'boolean') {
-                      return ['true', 'false']
                     }
 
-                    if (name === 'string') {
-                      return ['string']
-                    }
+                    return null
+                  })
+                  .filter(Boolean),
+              ),
+            ]
 
-                    if (name === 'enum') {
-                      return (
-                        value?.map(localValue =>
-                          localValue.value.replaceAll('"', ''),
-                        ) ?? []
-                      )
-                    }
+            const propertyValues = [
+              ...new Set(
+                sortedPropertiesUsagesCountAndComponentsName[property]?.components?.flatMap(component => {
+                  const { name, value } =
+                    (componentNameAndProperties as Record<string, Record<string, PropertyType>>)[component]?.[property]
+                      ?.type ?? {}
 
-                    return []
-                  }),
-                ),
-              ]
+                  if (name === 'boolean') {
+                    return ['true', 'false']
+                  }
 
-              return (
-                <Table.Row
-                  id={property}
-                  key={property}
-                  style={{ verticalAlign: 'top' }}
-                >
-                  <Table.Cell>
-                    <Text as="span" variant="bodyStrong">
-                      {property}
-                    </Text>
-                  </Table.Cell>
-                  <Table.Cell>
-                    <Text as="span" variant="body">
-                      {
-                        sortedPropertiesUsagesCountAndComponentsName[property]
-                          .count
-                      }
-                    </Text>
-                  </Table.Cell>
-                  <Table.Cell>
-                    <Text as="span" variant="body" whiteSpace="break-spaces">
-                      {propertyValues.join(', ')}
-                    </Text>
-                  </Table.Cell>
-                  <Table.Cell>
-                    <Text as="span" variant="body" whiteSpace="break-spaces">
-                      {findSimilarProperty.join(', ')}
-                    </Text>
-                  </Table.Cell>
-                  <Table.Cell>
-                    <Text as="span" variant="body" whiteSpace="break-spaces">
-                      {sortedPropertiesUsagesCountAndComponentsName[
-                        property
-                      ].components.join(', ')}
-                    </Text>
-                  </Table.Cell>
-                </Table.Row>
-              )
-            },
-          )}
+                  if (name === 'string') {
+                    return ['string']
+                  }
+
+                  if (name === 'enum') {
+                    return value?.map(localValue => localValue.value.replaceAll('"', '')) ?? []
+                  }
+
+                  return []
+                }),
+              ),
+            ]
+
+            return (
+              <Table.Row id={property} key={property} style={{ verticalAlign: 'top' }}>
+                <Table.Cell>
+                  <Text as="span" variant="bodyStrong">
+                    {property}
+                  </Text>
+                </Table.Cell>
+                <Table.Cell>
+                  <Text as="span" variant="body">
+                    {sortedPropertiesUsagesCountAndComponentsName[property].count}
+                  </Text>
+                </Table.Cell>
+                <Table.Cell>
+                  <Text as="span" variant="body" whiteSpace="break-spaces">
+                    {propertyValues.join(', ')}
+                  </Text>
+                </Table.Cell>
+                <Table.Cell>
+                  <Text as="span" variant="body" whiteSpace="break-spaces">
+                    {findSimilarProperty.join(', ')}
+                  </Text>
+                </Table.Cell>
+                <Table.Cell>
+                  <Text as="span" variant="body" whiteSpace="break-spaces">
+                    {sortedPropertiesUsagesCountAndComponentsName[property].components.join(', ')}
+                  </Text>
+                </Table.Cell>
+              </Table.Row>
+            )
+          })}
         </Table.Body>
       </Table>
     </Stack>

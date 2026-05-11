@@ -2,11 +2,9 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useEffect, useRef, useState } from 'react'
-
+import type { ReactNode } from 'react'
 import { CarouselItem } from './Item'
 import { carouselStyle } from './styles.css'
-
-import type { ReactNode } from 'react'
 
 type CarouselProps = {
   className?: string
@@ -17,11 +15,7 @@ type CarouselProps = {
 /**
  * Carousel component allows you to scroll horizontally through a list of items.
  */
-export const Carousel = ({
-  children,
-  className,
-  'data-testid': dataTestId = 'scrollbar',
-}: CarouselProps) => {
+export const Carousel = ({ children, className, 'data-testid': dataTestId = 'scrollbar' }: CarouselProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
   let intervalLeft: ReturnType<typeof setInterval> | undefined
   let intervalRight: ReturnType<typeof setInterval> | undefined
@@ -57,10 +51,7 @@ export const Carousel = ({
   const [deltaX, setDeltaX] = useState(0)
 
   return (
-    <div
-      className={cn(className, carouselStyle.wrapper)}
-      data-testid={dataTestId}
-    >
+    <div className={cn(className, carouselStyle.wrapper)} data-testid={dataTestId}>
       <span
         className={carouselStyle.beforeScroll}
         data-testid={`${dataTestId}-before`}
@@ -83,8 +74,7 @@ export const Carousel = ({
         }}
         onDragStart={e => {
           const blankImg = new Image()
-          blankImg.src =
-            'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+          blankImg.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
 
           e.dataTransfer.setDragImage(blankImg, 0, 0)
           setDragStartX(e.clientX)

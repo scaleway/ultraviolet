@@ -1,6 +1,5 @@
-import { ContentCard } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { ContentCard } from '..'
 
 export default {
   component: ContentCard,

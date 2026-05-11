@@ -1,20 +1,12 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import {
-  BaremetalCategoryIcon,
-  UseCaseCategoryIcon,
-} from '@ultraviolet/icons/category'
+import { BaremetalCategoryIcon, UseCaseCategoryIcon } from '@ultraviolet/icons/category'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import type { ComponentProps } from 'react'
 import { describe, expect, it, vi } from 'vitest'
-
 import { Navigation, NavigationProvider } from '..'
 
-import type { ComponentProps } from 'react'
-
-type BasicNavigationProps = Pick<
-  ComponentProps<typeof NavigationProvider>,
-  'pinnedFeature'
->
+type BasicNavigationProps = Pick<ComponentProps<typeof NavigationProvider>, 'pinnedFeature'>
 
 const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
   <NavigationProvider animation={false} pinnedFeature={pinnedFeature}>
@@ -29,16 +21,8 @@ const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
           label="Dashboard"
           noPinButton
         />
-        <Navigation.Item
-          categoryIcon={<UseCaseCategoryIcon />}
-          id="item2"
-          label="Servers"
-        />
-        <Navigation.Item
-          categoryIcon={<UseCaseCategoryIcon />}
-          id="item3"
-          label="Not servers"
-        >
+        <Navigation.Item categoryIcon={<UseCaseCategoryIcon />} id="item2" label="Servers" />
+        <Navigation.Item categoryIcon={<UseCaseCategoryIcon />} id="item3" label="Not servers">
           <Navigation.Item id="item4" label="Thing" />
         </Navigation.Item>
       </Navigation.Group>
@@ -48,18 +32,12 @@ const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
   </NavigationProvider>
 )
 
-const BasicNavigationNoExpand = ({
-  pinnedFeature = true,
-}: BasicNavigationProps) => (
+const BasicNavigationNoExpand = ({ pinnedFeature = true }: BasicNavigationProps) => (
   <NavigationProvider animation pinnedFeature={pinnedFeature}>
     <Navigation logo={<p>Logo</p>}>
       <Navigation.PinnedItems />
       <Navigation.Group label="Products">
-        <Navigation.Item
-          id="compute"
-          label="Compute"
-          subLabel="All compute ressources"
-        >
+        <Navigation.Item id="compute" label="Compute" subLabel="All compute ressources">
           <Navigation.Item
             badgeSentiment="success"
             badgeText="new"
@@ -86,11 +64,7 @@ const NavigationShowHide = ({
   pinnedFeature = true,
   onShowHide,
 }: BasicNavigationProps & { onShowHide?: () => void }) => (
-  <NavigationProvider
-    animation={false}
-    pinnedFeature={pinnedFeature}
-    showHide="hide"
-  >
+  <NavigationProvider animation={false} pinnedFeature={pinnedFeature} showHide="hide">
     <Navigation logo={<p>Logo</p>}>
       <Navigation.PinnedItems />
       <Navigation.Separator />
@@ -102,17 +76,8 @@ const NavigationShowHide = ({
           label="Dashboard"
           noPinButton
         />
-        <Navigation.Item
-          categoryIcon={<UseCaseCategoryIcon />}
-          id="item2"
-          label="Servers"
-        />
-        <Navigation.ShowHide
-          data-testid="show-hide"
-          hideContent="hide"
-          onShowHide={onShowHide}
-          showContent="show"
-        />
+        <Navigation.Item categoryIcon={<UseCaseCategoryIcon />} id="item2" label="Servers" />
+        <Navigation.ShowHide data-testid="show-hide" hideContent="hide" onShowHide={onShowHide} showContent="show" />
       </Navigation.Group>
       {/* @ts-expect-error we try to test when no children is provided */}
       <Navigation.Group label="Empty Group" />
@@ -120,14 +85,8 @@ const NavigationShowHide = ({
   </NavigationProvider>
 )
 
-const NavigationNested = ({
-  pinnedFeature = true,
-}: BasicNavigationProps & { onShowHide?: () => void }) => (
-  <NavigationProvider
-    animation={false}
-    initialExpanded={false}
-    pinnedFeature={pinnedFeature}
-  >
+const NavigationNested = ({ pinnedFeature = true }: BasicNavigationProps & { onShowHide?: () => void }) => (
+  <NavigationProvider animation={false} initialExpanded={false} pinnedFeature={pinnedFeature}>
     <Navigation logo={<p>Logo</p>}>
       <Navigation.Group label="Products">
         <Navigation.Item
@@ -147,14 +106,11 @@ const NavigationNested = ({
 )
 
 describe('navigation', () => {
-  it('render with basic content', () =>
-    shouldMatchSnapshot(<BasicNavigation />))
+  it('render with basic content', () => shouldMatchSnapshot(<BasicNavigation />))
 
-  it('render without pinnedFeature', () =>
-    shouldMatchSnapshot(<BasicNavigation pinnedFeature={false} />))
+  it('render without pinnedFeature', () => shouldMatchSnapshot(<BasicNavigation pinnedFeature={false} />))
 
-  it('render with basic content and no expand', () =>
-    shouldMatchSnapshot(<BasicNavigationNoExpand />))
+  it('render with basic content and no expand', () => shouldMatchSnapshot(<BasicNavigationNoExpand />))
 
   it('click on expand / collapse button', async () => {
     const { asFragment } = renderWithTheme(<BasicNavigation />)
@@ -166,9 +122,7 @@ describe('navigation', () => {
     })
     await userEvent.click(collapseButton)
     await waitFor(() => {
-      expect(
-        screen.getByRole('button', { name: 'Expand sidebar' }),
-      ).toBeVisible()
+      expect(screen.getByRole('button', { name: 'Expand sidebar' })).toBeVisible()
     })
     expect(asFragment()).toMatchSnapshot()
 
@@ -182,9 +136,7 @@ describe('navigation', () => {
     })
     await userEvent.click(expandButton)
     await waitFor(() => {
-      expect(
-        screen.getByRole('button', { name: 'Collapse sidebar' }),
-      ).toBeVisible()
+      expect(screen.getByRole('button', { name: 'Collapse sidebar' })).toBeVisible()
     })
   })
 
@@ -212,9 +164,7 @@ describe('navigation', () => {
     const allButtonsNav = await screen.findAllByRole('button')
 
     // Find the button that contains "Servers" text
-    const firstServersButton = allButtonsNav.find(button =>
-      button.textContent?.includes('Servers'),
-    )
+    const firstServersButton = allButtonsNav.find(button => button.textContent?.includes('Servers'))
 
     // oxlint-disable-next-line vitest/no-conditional-in-test
     if (firstServersButton) {
@@ -260,9 +210,7 @@ describe('navigation', () => {
     const allButtons = await screen.findAllByRole('button')
 
     // Find the button that contains "Servers" text
-    const serversButton = allButtons.find(button =>
-      button.textContent?.includes('Servers'),
-    )
+    const serversButton = allButtons.find(button => button.textContent?.includes('Servers'))
 
     // oxlint-disable-next-line vitest/no-conditional-in-test
     if (serversButton) {
@@ -279,9 +227,7 @@ describe('navigation', () => {
 
   it('with show hide feature', async () => {
     const onShowHide = vi.fn()
-    const { asFragment } = renderWithTheme(
-      <NavigationShowHide onShowHide={onShowHide} pinnedFeature />,
-    )
+    const { asFragment } = renderWithTheme(<NavigationShowHide onShowHide={onShowHide} pinnedFeature />)
 
     expect(screen.getByText('Dashboard')).toBeVisible() // alwaysVisible set to true for this item
     expect(screen.queryByText('Servers')).not.toBeInTheDocument() // alwaysVisible not set to true for this item
@@ -296,18 +242,14 @@ describe('navigation', () => {
 
   it('with show hide feature - collapsed', async () => {
     const onShowHide = vi.fn()
-    const { asFragment } = renderWithTheme(
-      <NavigationShowHide onShowHide={onShowHide} pinnedFeature />,
-    )
+    const { asFragment } = renderWithTheme(<NavigationShowHide onShowHide={onShowHide} pinnedFeature />)
 
     const collapseButton = screen.getByRole('button', {
       name: 'Collapse sidebar',
     })
     await userEvent.click(collapseButton)
     await waitFor(() => {
-      expect(
-        screen.getByRole('button', { name: 'Expand sidebar' }),
-      ).toBeVisible()
+      expect(screen.getByRole('button', { name: 'Expand sidebar' })).toBeVisible()
     })
 
     const showButton = screen.getByTestId('show-hide')

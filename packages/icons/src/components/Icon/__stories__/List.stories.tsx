@@ -1,11 +1,9 @@
+import type { Decorator } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-
+import type { ComponentProps } from 'react'
 import * as Icon from '..'
 import { DEPRECATED_ICONS } from '../../../deprecatedIcons'
-
 import type { AddressIcon } from '../__generated__'
-import type { Decorator } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 export const List = (args: ComponentProps<typeof AddressIcon>) =>
   Object.keys(Icon).map(name => {

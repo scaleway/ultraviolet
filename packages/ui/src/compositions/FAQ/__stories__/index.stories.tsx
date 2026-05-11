@@ -1,6 +1,5 @@
-import { FAQ } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { FAQ } from '..'
 
 export default {
   component: FAQ,

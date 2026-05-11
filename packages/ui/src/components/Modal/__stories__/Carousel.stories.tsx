@@ -1,15 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { Modal } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
 import appleSilicon from './assets/apple-silicon-m4-content.webp'
 import costManager from './assets/cost-manager-content.webp'
 import image from './assets/illustration.webp'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const IMAGES_STEP = [image, appleSilicon, costManager]
 const TEXT_STEP = [
@@ -24,9 +21,7 @@ export const Carousel: StoryFn = props => {
 
   return (
     <Modal
-      disclosure={
-        <Button onClick={() => setStep(0)}>Open Carousel Modal</Button>
-      }
+      disclosure={<Button onClick={() => setStep(0)}>Open Carousel Modal</Button>}
       image={IMAGES_STEP[step]}
       size="xsmall"
       {...props}
@@ -36,17 +31,8 @@ export const Carousel: StoryFn = props => {
           <Text as="p" sentiment="neutral" variant="body">
             {TEXT_STEP[step]}
           </Text>
-          <Stack
-            alignItems="flex-end"
-            direction="row"
-            justifyContent="space-between"
-          >
-            <Text
-              as="span"
-              prominence="weak"
-              sentiment="neutral"
-              variant="bodySmall"
-            >
+          <Stack alignItems="flex-end" direction="row" justifyContent="space-between">
+            <Text as="span" prominence="weak" sentiment="neutral" variant="bodySmall">
               {step + 1} of {IMAGES_STEP.length}
             </Text>
             <Button

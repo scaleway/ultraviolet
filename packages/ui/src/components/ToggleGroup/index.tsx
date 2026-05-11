@@ -2,16 +2,13 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-
+import type { InputHTMLAttributes, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { ToggleGroupContext } from './Context'
 import { ToggleGroupToggle } from './SingleToggle'
 import { toggleGroupStyle } from './styles.css'
-
-import type { InputHTMLAttributes, ReactNode } from 'react'
 
 type ToggleGroupProps = {
   legend?: string
@@ -55,19 +52,12 @@ const ToggleGroupComponent = ({
   return (
     <ToggleGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset
-          className={cn(className, toggleGroupStyle.fieldset)}
-          style={style}
-        >
+        <fieldset className={cn(className, toggleGroupStyle.fieldset)} style={style}>
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>
                 {legend ? (
-                  <Label
-                    as="legend"
-                    labelDescription={legendDescription}
-                    required={required}
-                  >
+                  <Label as="legend" labelDescription={legendDescription} required={required}>
                     {legend}
                   </Label>
                 ) : null}
@@ -107,9 +97,6 @@ type SelectableCardOptionGroupType = typeof ToggleGroupComponent & {
   Toggle: typeof ToggleGroupToggle
 }
 
-export const ToggleGroup: SelectableCardOptionGroupType = Object.assign(
-  ToggleGroupComponent,
-  {
-    Toggle: ToggleGroupToggle,
-  },
-)
+export const ToggleGroup: SelectableCardOptionGroupType = Object.assign(ToggleGroupComponent, {
+  Toggle: ToggleGroupToggle,
+})

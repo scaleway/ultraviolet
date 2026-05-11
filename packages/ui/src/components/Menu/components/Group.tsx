@@ -1,12 +1,10 @@
 'use client'
 
 import { Children } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { menuStyle } from '../styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type GroupProps = {
   label: string
@@ -19,25 +17,14 @@ type GroupProps = {
   style?: CSSProperties
 }
 
-export const Group = ({
-  label,
-  children,
-  labelDescription,
-  emptyState,
-  style,
-}: GroupProps) => {
+export const Group = ({ label, children, labelDescription, emptyState, style }: GroupProps) => {
   const isChildrenEmpty = Children.count(children) === 0
 
   return (
     <>
       <span className={menuStyle.group} style={style}>
         <Stack alignItems="center" direction="row" gap={1}>
-          <Text
-            as="span"
-            prominence="weak"
-            sentiment="neutral"
-            variant="captionStrong"
-          >
+          <Text as="span" prominence="weak" sentiment="neutral" variant="captionStrong">
             {label}
           </Text>
           {labelDescription ?? null}

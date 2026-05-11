@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const NetworkAclsProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const NetworkAclsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="NetworkAclsProductIcon">
     <g className="sentiment=primary, disabled=false, size=xlarge">
       <g className="icon">

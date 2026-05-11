@@ -1,6 +1,5 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, styleVariants } from '@vanilla-extract/css'
-
 import { SIZES, VARIANTS } from './constants'
 
 const PROMINENCES = ['Weak', 'Strong', ''] as const
@@ -25,12 +24,7 @@ function generateVariantStyle(
   }
 }
 export const productIconSizes = styleVariants(
-  Object.fromEntries(
-    Object.keys(SIZES).map(size => [
-      size,
-      generateSizeStyle(size as keyof typeof SIZES),
-    ]),
-  ),
+  Object.fromEntries(Object.keys(SIZES).map(size => [size, generateSizeStyle(size as keyof typeof SIZES)])),
 )
 
 export const productIconVariants = styleVariants({
@@ -53,31 +47,13 @@ for (const prominence of PROMINENCES) {
       `${disabled ? variantClassDisabled : variantClass} path[fill].fill${prominence}`
 
     // Disabled style
-    globalStyle(
-      selectorDefault(true),
-      generateVariantStyle(variant, true, prominence),
-    )
-    globalStyle(
-      selectorGfill(true),
-      generateVariantStyle(variant, true, prominence),
-    )
-    globalStyle(
-      selectorPathField(true),
-      generateVariantStyle(variant, true, prominence),
-    )
+    globalStyle(selectorDefault(true), generateVariantStyle(variant, true, prominence))
+    globalStyle(selectorGfill(true), generateVariantStyle(variant, true, prominence))
+    globalStyle(selectorPathField(true), generateVariantStyle(variant, true, prominence))
 
     // Non-disabled style
-    globalStyle(
-      selectorDefault(),
-      generateVariantStyle(variant, false, prominence),
-    )
-    globalStyle(
-      selectorGfill(),
-      generateVariantStyle(variant, false, prominence),
-    )
-    globalStyle(
-      selectorPathField(),
-      generateVariantStyle(variant, false, prominence),
-    )
+    globalStyle(selectorDefault(), generateVariantStyle(variant, false, prominence))
+    globalStyle(selectorGfill(), generateVariantStyle(variant, false, prominence))
+    globalStyle(selectorPathField(), generateVariantStyle(variant, false, prominence))
   }
 }

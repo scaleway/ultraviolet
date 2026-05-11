@@ -3,17 +3,9 @@
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { cn } from '@ultraviolet/utils'
 import { forwardRef } from 'react'
-
+import type { ButtonHTMLAttributes, ComponentProps, ReactNode, Ref } from 'react'
 import { Menu } from '../Menu'
-
 import { tabsStyle } from './styles.css'
-
-import type {
-  ButtonHTMLAttributes,
-  ComponentProps,
-  ReactNode,
-  Ref,
-} from 'react'
 
 type TabMenuProps = {
   children: ReactNode
@@ -24,16 +16,7 @@ type TabMenuProps = {
 
 export const TabMenu = forwardRef(
   (
-    {
-      children,
-      disclosure,
-      visible,
-      id,
-      disabled,
-      className,
-      'aria-selected': ariaSelected,
-      ...props
-    }: TabMenuProps,
+    { children, disclosure, visible, id, disabled, className, 'aria-selected': ariaSelected, ...props }: TabMenuProps,
     ref: Ref<HTMLButtonElement>,
   ) => (
     <div className={tabsStyle.menuWrapper}>

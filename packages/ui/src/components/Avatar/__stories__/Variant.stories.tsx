@@ -1,11 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { MosaicIcon } from '@ultraviolet/icons/MosaicIcon'
-
 import { Avatar } from '..'
 import { Stack } from '../../Stack'
-
 import avatar from './assets/avatar.svg'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Variant: StoryFn<typeof Avatar> = props => (
   <>

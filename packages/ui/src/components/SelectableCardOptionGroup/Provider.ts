@@ -1,8 +1,7 @@
 import { createContext, useContext } from 'react'
-
+import type { ComponentProps, InputHTMLAttributes } from 'react'
 import type { SelectInput } from '../SelectInput'
 import type { Sizes } from './types'
-import type { ComponentProps, InputHTMLAttributes } from 'react'
 
 type SelectableCardOptionGroupContextType = {
   groupName?: string
@@ -15,25 +14,22 @@ type SelectableCardOptionGroupContextType = {
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
-export const SelectableCardOptionGroupContext =
-  createContext<SelectableCardOptionGroupContextType>({
-    disabled: false,
-    error: false,
-    groupName: '',
-    onChange: () => {},
-    onChangeOption: () => {},
-    optionValue: '',
-    required: false,
-    size: 'large',
-  })
+export const SelectableCardOptionGroupContext = createContext<SelectableCardOptionGroupContextType>({
+  disabled: false,
+  error: false,
+  groupName: '',
+  onChange: () => {},
+  onChangeOption: () => {},
+  optionValue: '',
+  required: false,
+  size: 'large',
+})
 
 export const useSelectableCardOptionGroup = () => {
   const context = useContext(SelectableCardOptionGroupContext)
 
   if (!context) {
-    throw new Error(
-      'SelectableCardOptionGroup.Option must be used inside a SelectableCardOptionGroup',
-    )
+    throw new Error('SelectableCardOptionGroup.Option must be used inside a SelectableCardOptionGroup')
   }
 
   return context

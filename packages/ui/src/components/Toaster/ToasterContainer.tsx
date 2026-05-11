@@ -1,13 +1,11 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
+import type { CSSProperties } from 'react'
 import { ToastContainer as BaseToastContainer, Slide } from 'react-toastify'
-
+import type { ToastOptions } from 'react-toastify'
 import { AUTOCLOSE_DELAY } from './constants'
 import { toasterStyle } from './styles.css'
-
-import type { CSSProperties } from 'react'
-import type { ToastOptions } from 'react-toastify'
 
 type ToastContainerProps = {
   /**

@@ -1,16 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Badge } from '..'
 import { SENTIMENTS } from '../../../theme'
 import { PROMINENCES } from '../constant'
 
-import type { StoryFn } from '@storybook/react-vite'
-
 export const Prominences: StoryFn = props => (
   <>
     {Object.keys(PROMINENCES).map(prominence => (
-      <div
-        key={prominence}
-        style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}
-      >
+      <div key={prominence} style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
         {prominence}:
         {SENTIMENTS.map(sentiment => (
           <Badge
@@ -30,8 +26,7 @@ export const Prominences: StoryFn = props => (
 Prominences.parameters = {
   docs: {
     description: {
-      story:
-        'Prominence is defined by property `prominence`, this parameter will change color degree of badge.',
+      story: 'Prominence is defined by property `prominence`, this parameter will change color degree of badge.',
     },
   },
 }

@@ -2,15 +2,12 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useEffect, useMemo, useRef, useState } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { ChipContext } from './ChipContext'
 import { ChipIcon } from './ChipIcon'
 import { chipStyle } from './styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type ChipType = {
   children: ReactNode
@@ -50,10 +47,7 @@ export const Chip = ({
 
     return 'default'
   }, [isActive, disabled])
-  const value = useMemo(
-    () => ({ disabled, iconRef, isActive }),
-    [isActive, disabled, iconRef],
-  )
+  const value = useMemo(() => ({ disabled, iconRef, isActive }), [isActive, disabled, iconRef])
   useEffect(() => {
     setIsActive(active)
   }, [active])
@@ -74,11 +68,7 @@ export const Chip = ({
 
   return (
     <ChipContext.Provider value={value}>
-      <Text
-        as="div"
-        style={style}
-        variant={size === 'large' ? 'bodySmall' : 'caption'}
-      >
+      <Text as="div" style={style} variant={size === 'large' ? 'bodySmall' : 'caption'}>
         <Stack
           alignItems="center"
           className={cn(className, chipStyle.container)}

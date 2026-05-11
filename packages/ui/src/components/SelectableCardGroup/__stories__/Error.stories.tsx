@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { SelectableCardGroup } from '..'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Error: StoryFn<typeof SelectableCardGroup> = args => {
   const [values, onChange] = useState(['value-1'])
@@ -36,9 +34,7 @@ export const Error: StoryFn<typeof SelectableCardGroup> = args => {
         {...args}
         columns={2}
         legend="Error with 2 columns and radio"
-        onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-          onChange2(event.currentTarget.value)
-        }
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange2(event.currentTarget.value)}
         showTick
         type="radio"
         value={valueRow}
@@ -58,8 +54,7 @@ Error.args = {
 Error.parameters = {
   docs: {
     description: {
-      story:
-        'Use `error` prop to display SelectableCardGroup with a error style.',
+      story: 'Use `error` prop to display SelectableCardGroup with a error style.',
     },
   },
 }

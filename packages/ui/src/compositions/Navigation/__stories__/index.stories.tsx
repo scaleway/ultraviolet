@@ -1,6 +1,5 @@
-import { Navigation, NavigationProvider } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Navigation, NavigationProvider } from '..'
 
 export default {
   component: Navigation,

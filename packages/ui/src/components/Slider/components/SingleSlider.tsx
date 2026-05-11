@@ -4,18 +4,15 @@ import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
-
 import { Label } from '../../Label'
 import { NumberInput } from '../../NumberInput'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Tooltip } from '../../Tooltip'
 import { THUMB_SIZE } from '../constant'
-import { leftVar, sliderStyle, thumbColor, tooltipLeft } from '../styles.css'
-
-import { Options } from './Options'
-
 import type { SingleSliderProps } from '../types'
+import { Options } from './Options'
+import { leftVar, sliderStyle, thumbColor, tooltipLeft } from '../styles.css'
 
 export const SingleSlider = ({
   name,
@@ -119,10 +116,7 @@ export const SingleSlider = ({
     }
   }, [])
 
-  const leftPosition = useMemo(
-    () => ((selectedIndex - min) * 100) / (max - min),
-    [selectedIndex, max, min],
-  )
+  const leftPosition = useMemo(() => ((selectedIndex - min) * 100) / (max - min), [selectedIndex, max, min])
 
   const getBackgroundSize = useMemo(
     () => ({
@@ -180,32 +174,19 @@ export const SingleSlider = ({
   }, [tooltip, selectedIndex])
 
   const placementTooltip =
-    ((selectedIndex - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
-    THUMB_SIZE / 2 -
-    sliderWidth / 2
+    ((selectedIndex - min) / (max - min)) * (sliderWidth - THUMB_SIZE) + THUMB_SIZE / 2 - sliderWidth / 2
 
-  const valueToShow = options?.[selectedIndex]
-    ? options[selectedIndex].value
-    : selectedIndex
+  const valueToShow = options?.[selectedIndex] ? options[selectedIndex].value : selectedIndex
 
   const hasCustomValue = customValueDisplay !== undefined
 
-  const displayCorrectValue =
-    input || !hasCustomValue ? styledValue(valueToShow) : customValueDisplay
+  const displayCorrectValue = input || !hasCustomValue ? styledValue(valueToShow) : customValueDisplay
 
   return (
     <Stack direction={direction} gap={1} justifyContent="left">
       {label ? (
-        <Stack
-          alignItems="center"
-          direction="row"
-          justifyContent="space-between"
-        >
-          <Label
-            htmlFor={finalId}
-            labelDescription={labelDescription}
-            required={required}
-          >
+        <Stack alignItems="center" direction="row" justifyContent="space-between">
+          <Label htmlFor={finalId} labelDescription={labelDescription} required={required}>
             {label}
           </Label>
           {direction === 'column' ? displayCorrectValue : null}
@@ -251,9 +232,7 @@ export const SingleSlider = ({
               ...assignInlineVars({
                 [leftVar]: `calc(${leftPosition}% - ${(THUMB_SIZE * leftPosition) / 100}px)`,
                 [thumbColor]:
-                  theme.theme === 'light'
-                    ? theme.colors.neutral.background
-                    : theme.colors.neutral.backgroundStronger,
+                  theme.theme === 'light' ? theme.colors.neutral.background : theme.colors.neutral.backgroundStronger,
               }),
               ...getBackgroundSize,
             }}
@@ -263,14 +242,7 @@ export const SingleSlider = ({
           />
         </Tooltip>
         {options ? (
-          <Options
-            defaultScale={defaultScale}
-            max={max}
-            min={min}
-            step={step}
-            ticks={ticks}
-            value={selectedIndex}
-          />
+          <Options defaultScale={defaultScale} max={max} min={min} step={step} ticks={ticks} value={selectedIndex} />
         ) : null}
       </Stack>
       {direction === 'row' ? displayCorrectValue : null}

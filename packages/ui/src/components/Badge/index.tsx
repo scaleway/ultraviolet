@@ -2,14 +2,11 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Text } from '../Text'
-
 import { TEXT_VARIANT } from './constant'
 import { badgeStyle } from './styles.css'
-
 import type { BadgeVariants } from './styles.css'
-import type { CSSProperties, ReactNode } from 'react'
 
 type BadgeProps = {
   className?: string
@@ -35,10 +32,7 @@ export const Badge = ({
    * Badge should display an aria-label if the status is not neutral or primary
    */
   const ariaLabel = useMemo(
-    () =>
-      ['neutral', 'primary'].some(baseSentiment => baseSentiment === sentiment)
-        ? undefined
-        : sentiment,
+    () => (['neutral', 'primary'].some(baseSentiment => baseSentiment === sentiment) ? undefined : sentiment),
     [sentiment],
   )
 
@@ -46,10 +40,7 @@ export const Badge = ({
     <Text
       aria-label={ariaLabel}
       as="span"
-      className={cn(
-        className,
-        badgeStyle.badge({ disabled, prominence, sentiment, size }),
-      )}
+      className={cn(className, badgeStyle.badge({ disabled, prominence, sentiment, size }))}
       data-testid={dataTestId}
       prominence={disabled ? 'weak' : 'default'}
       style={style}

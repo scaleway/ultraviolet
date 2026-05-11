@@ -2,7 +2,6 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it } from 'vitest'
-
 import { Label } from '..'
 
 describe('dateInput', () => {
@@ -17,16 +16,12 @@ describe('dateInput', () => {
   })
 
   it('renders correctly with label description (string)', () => {
-    const { asFragment } = renderWithTheme(
-      <Label labelDescription="test">Label</Label>,
-    )
+    const { asFragment } = renderWithTheme(<Label labelDescription="test">Label</Label>)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with label description (ReactNode)', () => {
-    const { asFragment } = renderWithTheme(
-      <Label labelDescription={<div>test</div>}>Label</Label>,
-    )
+    const { asFragment } = renderWithTheme(<Label labelDescription={<div>test</div>}>Label</Label>)
     expect(asFragment()).toMatchSnapshot()
   })
   it('renders correctly small', () => {

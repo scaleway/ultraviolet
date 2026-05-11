@@ -1,6 +1,5 @@
-import { FileInput } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { FileInput } from '..'
 
 export const Bottom: StoryFn<typeof FileInput> = args => (
   <FileInput
@@ -17,8 +16,7 @@ export const Bottom: StoryFn<typeof FileInput> = args => (
 Bottom.parameters = {
   docs: {
     description: {
-      story:
-        'Add content outside of the container using prop `bottom`. It usually is a helper or `FileInput.List`.',
+      story: 'Add content outside of the container using prop `bottom`. It usually is a helper or `FileInput.List`.',
     },
   },
 }

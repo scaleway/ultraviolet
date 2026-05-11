@@ -3,7 +3,6 @@ import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
-
 import { Drawer } from '..'
 
 describe('drawer', () => {
@@ -69,11 +68,7 @@ describe('drawer', () => {
 
   it('renders custom size=medium', async () => {
     const { asFragment } = renderWithTheme(
-      <Drawer
-        disclosure={<button type="button">button</button>}
-        header="header"
-        size="medium"
-      >
+      <Drawer disclosure={<button type="button">button</button>} header="header" size="medium">
         <div>test</div>
       </Drawer>,
     )
@@ -84,11 +79,7 @@ describe('drawer', () => {
   })
   it('renders custom size=large', async () => {
     const { asFragment } = renderWithTheme(
-      <Drawer
-        disclosure={<button type="button">button</button>}
-        header="header"
-        size="large"
-      >
+      <Drawer disclosure={<button type="button">button</button>} header="header" size="large">
         <div>test</div>
       </Drawer>,
     )
@@ -100,11 +91,7 @@ describe('drawer', () => {
 
   it('renders custom size=small', async () => {
     const { asFragment } = renderWithTheme(
-      <Drawer
-        disclosure={<button type="button">button</button>}
-        header="header"
-        size="small"
-      >
+      <Drawer disclosure={<button type="button">button</button>} header="header" size="small">
         <div>test</div>
       </Drawer>,
     )
@@ -123,12 +110,7 @@ describe('drawer', () => {
 
   it('renders with disclosure', () =>
     shouldMatchSnapshotWithPortal(
-      <Drawer
-        ariaLabel="drawer-test"
-        disclosure={<button type="button">Test</button>}
-        header="header"
-        id="drawer-test"
-      >
+      <Drawer ariaLabel="drawer-test" disclosure={<button type="button">Test</button>} header="header" id="drawer-test">
         <div>drawer</div>
       </Drawer>,
     ))
@@ -260,14 +242,7 @@ describe('drawer', () => {
   it('test hideOnEsc is true', async () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
-      <Drawer
-        ariaLabel="drawer-test"
-        header="header"
-        hideOnEsc
-        id="drawer-test"
-        onClose={mockOnClose}
-        open
-      >
+      <Drawer ariaLabel="drawer-test" header="header" hideOnEsc id="drawer-test" onClose={mockOnClose} open>
         <div> test</div>
       </Drawer>,
     )
@@ -314,11 +289,7 @@ describe('drawer', () => {
       <Drawer
         ariaLabel="drawer-test"
         disclosure={<button type="button">Open</button>}
-        footer={
-          <button type="button">
-            A custom button that can close the drawer
-          </button>
-        }
+        footer={<button type="button">A custom button that can close the drawer</button>}
         header="header"
         id="drawer-test"
       >

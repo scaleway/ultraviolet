@@ -1,12 +1,8 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import {
-  resetIntersectionMocking,
-  setupIntersectionMocking,
-} from 'react-intersection-observer/test-utils'
+import { resetIntersectionMocking, setupIntersectionMocking } from 'react-intersection-observer/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-
 import { EstimateCost } from '..'
 
 describe('estimateCost - Unit Item', () => {
@@ -41,14 +37,7 @@ describe('estimateCost - Unit Item', () => {
   it('render basic props with values', () =>
     shouldMatchSnapshot(
       <EstimateCost>
-        <EstimateCost.Item
-          amount={100}
-          amountFree={50}
-          label="Storage"
-          price={0.001}
-          subLabel="50 GB Free"
-          unit="GB"
-        >
+        <EstimateCost.Item amount={100} amountFree={50} label="Storage" price={0.001} subLabel="50 GB Free" unit="GB">
           <EstimateCost.Unit unit="GB" />
         </EstimateCost.Item>
       </EstimateCost>,

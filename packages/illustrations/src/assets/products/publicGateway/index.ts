@@ -10,9 +10,4 @@ const publicGatewayKeyvisual = `${BASE_URL}/products/publicGateway/public-gatewa
 const publicGatewayOriginal = `${BASE_URL}/products/publicGateway/public-gateway-original.webp`
 const publicGatewayWire = `${BASE_URL}/products/publicGateway/public-gateway-wire.svg`
 
-export {
-  publicGatewayContent,
-  publicGatewayKeyvisual,
-  publicGatewayOriginal,
-  publicGatewayWire,
-}
+export { publicGatewayContent, publicGatewayKeyvisual, publicGatewayOriginal, publicGatewayWire }

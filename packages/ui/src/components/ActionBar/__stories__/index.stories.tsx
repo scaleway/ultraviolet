@@ -1,6 +1,5 @@
-import { ActionBar } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { ActionBar } from '..'
 
 export default {
   component: ActionBar,

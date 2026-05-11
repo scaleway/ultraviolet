@@ -1,8 +1,6 @@
-import { Menu } from '..'
-
-import { DefaultDisclosure } from './Template.stories'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { Menu } from '..'
+import { DefaultDisclosure } from './Template.stories'
 
 export const Sentiments: StoryFn<typeof Menu> = () => (
   <Menu disclosure={DefaultDisclosure}>
@@ -14,11 +12,7 @@ export const Sentiments: StoryFn<typeof Menu> = () => (
       Danger Disabled
     </Menu.Item>
     <Menu.Item href="/?/?path=/docs/components-navigation-menu">Link</Menu.Item>
-    <Menu.Item
-      href="/?/?path=/docs/components-navigation-menu"
-      sentiment="danger"
-      tooltip="test"
-    >
+    <Menu.Item href="/?/?path=/docs/components-navigation-menu" sentiment="danger" tooltip="test">
       Link Danger
     </Menu.Item>
   </Menu>

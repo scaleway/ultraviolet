@@ -1,24 +1,20 @@
 import { useTheme } from '@ultraviolet/themes'
 import { Stack, Tabs } from '@ultraviolet/ui'
 import { Children, isValidElement, useState } from 'react'
+import type { ReactElement } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import dracula from 'react-syntax-highlighter/dist/esm/styles/prism/dracula'
 import oneLight from 'react-syntax-highlighter/dist/esm/styles/prism/one-light'
-
 import styles from '../../styles/component.module.scss'
-
-import type { ReactElement } from 'react'
 
 type CopyBoxProps = {
   children: ReactElement<CommandProps> | ReactElement<CommandProps>[]
 }
 
 const CopyBox = ({ children }: CopyBoxProps) => {
-  const flatChild = (
-    Children.map(children, child =>
-      isValidElement(child) ? child : undefined,
-    ) || []
-  ).filter(child => !!child)
+  const flatChild = (Children.map(children, child => (isValidElement(child) ? child : undefined)) || []).filter(
+    child => !!child,
+  )
   const [tab, setTab] = useState(0)
 
   return (

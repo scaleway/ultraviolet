@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const IpfsNamingProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const IpfsNamingProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="IpfsNamingProductIcon">
     <g className="IPFS-Naming">
       <g className="Serverless-Functions">

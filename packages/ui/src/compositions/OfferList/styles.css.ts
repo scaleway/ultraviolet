@@ -2,31 +2,16 @@ import { theme } from '@ultraviolet/themes'
 import { createVar, globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-const SENTIMENTS = [
-  'primary',
-  'secondary',
-  'neutral',
-  'success',
-  'danger',
-  'warning',
-  'info',
-] as const
+const SENTIMENTS = ['primary', 'secondary', 'neutral', 'success', 'danger', 'warning', 'info'] as const
 
 export const expandablePadding = createVar()
 
-function createBannerStyle(
-  sentiment: (typeof SENTIMENTS)[number],
-  disabled: boolean,
-) {
+function createBannerStyle(sentiment: (typeof SENTIMENTS)[number], disabled: boolean) {
   return {
     backgroundColor:
       sentiment === 'neutral'
-        ? theme.colors.neutral[
-            disabled ? 'backgroundWeak' : 'backgroundWeakDisabled'
-          ]
-        : theme.colors[sentiment][
-            disabled ? 'backgroundDisabled' : 'background'
-          ],
+        ? theme.colors.neutral[disabled ? 'backgroundWeak' : 'backgroundWeakDisabled']
+        : theme.colors[sentiment][disabled ? 'backgroundDisabled' : 'background'],
     color: theme.colors[sentiment][disabled ? 'textDisabled' : 'text'],
   }
 }
@@ -137,9 +122,7 @@ const bannerStack = recipe({
         sentiment,
         {
           backgroundColor:
-            sentiment === 'neutral'
-              ? theme.colors.neutral.backgroundWeak
-              : theme.colors[sentiment].background,
+            sentiment === 'neutral' ? theme.colors.neutral.backgroundWeak : theme.colors[sentiment].background,
         },
       ]),
     ),
@@ -191,10 +174,9 @@ const rowExpandable = style({
 const cell = style({
   whiteSpace: 'pre-line',
   selectors: {
-    [`${rowSelectedNotExpandable} &:nth-child(2), ${rowSelectedExpandable} &:nth-child(3)`]:
-      {
-        fontWeight: theme.typography.bodySmallStrong.weight,
-      },
+    [`${rowSelectedNotExpandable} &:nth-child(2), ${rowSelectedExpandable} &:nth-child(3)`]: {
+      fontWeight: theme.typography.bodySmallStrong.weight,
+    },
   },
 })
 

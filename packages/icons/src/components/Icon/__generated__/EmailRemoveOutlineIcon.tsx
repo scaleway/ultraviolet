@@ -6,15 +6,11 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const EmailRemoveOutlineIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const EmailRemoveOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="EmailRemoveOutlineIcon">
-    {typeof props.size === 'string' &&
-    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
+    {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path
           d="M4.235 3.684C3 3.684 2 4.684 2 5.92v7.482c0 1.234 1 2.235 2.235 2.235h7.87v-1.263h-7.87a.97.97 0 0 1-.972-.972V8.118l5.145 3.166a2.24 2.24 0 0 0 2.342 0l1.355-.834v-.029h.047l3.743-2.303v2.303h1.263V5.92c0-1.234-1-2.235-2.235-2.235zm-.972 2.408V5.92c0-.536.435-.972.972-.972h10.688c.537 0 .972.436.972.972v.173c0 .338-.175.65-.463.828l-5.344 3.288a.97.97 0 0 1-1.018 0L3.726 6.92a.97.97 0 0 1-.463-.828"

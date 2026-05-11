@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const OwnCloudLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const OwnCloudLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="OwnCloudLogo">
     <path
       fillRule="evenodd"
@@ -61,12 +58,7 @@ export const OwnCloudLogo = ({
       d="M8.91766 13.2139C8.91766 12.2665 9.68572 11.4985 10.633 11.4985V11.6831C9.78767 11.6831 9.10228 12.3685 9.10228 13.2139C9.10228 14.0592 9.78766 14.7445 10.633 14.7445V14.9291C9.68573 14.9291 8.91766 14.1612 8.91766 13.2139Z"
       fill="#1D2D44"
     />
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M19.8382 10.9507H20.0228V12.8047H19.8382V10.9507Z"
-      fill="#1D2D44"
-    />
+    <path fillRule="evenodd" clipRule="evenodd" d="M19.8382 10.9507H20.0228V12.8047H19.8382V10.9507Z" fill="#1D2D44" />
     <path
       fillRule="evenodd"
       clipRule="evenodd"

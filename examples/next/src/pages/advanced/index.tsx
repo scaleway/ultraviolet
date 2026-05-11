@@ -1,13 +1,11 @@
 import { Button, Separator, Stack, Text } from '@ultraviolet/ui'
 import Image from 'next/image'
-
-import styles from '../../../styles/advanced.module.scss'
 import slackLogo from '../../assets/icons/icon-slack.svg'
-
 import AdvancedUseCases from './AdvancedUseCases'
 import GettingStarted from './GettingStarted'
 import Introduction from './Introduction'
 import OpenSource from './OpenSource'
+import styles from '../../../styles/advanced.module.scss'
 
 const Home = () => (
   <Stack className={styles.homeContainer} gap={8}>
@@ -31,8 +29,7 @@ const Home = () => (
             Connect with the community
           </Text>
           <Text as="p" sentiment="neutral" variant="body">
-            Join us if you want to report an issue, if you have any questions or
-            if you just want to meet new people!
+            Join us if you want to report an issue, if you have any questions or if you just want to meet new people!
           </Text>
         </div>
       </Stack>

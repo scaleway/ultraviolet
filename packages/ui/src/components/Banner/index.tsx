@@ -4,18 +4,15 @@ import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { useMemo, useState } from 'react'
-
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Button } from '../Button'
 import { Link } from '../Link'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import defaultIllustrationSmall from './assets/default-image-small.svg'
 import defaultIllustration from './assets/default-image.svg'
 import { bannerStyle } from './styles.css'
-
 import type { BannerVariants } from './styles.css'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 type BannerProps = {
   title: string
@@ -58,8 +55,7 @@ export const Banner = ({
   style,
 }: BannerProps) => {
   const { theme } = useTheme()
-  const defaultImage =
-    size === 'small' ? defaultIllustrationSmall : defaultIllustration
+  const defaultImage = size === 'small' ? defaultIllustrationSmall : defaultIllustration
 
   const prominence = useMemo(() => {
     if (variant === 'promotional') {
@@ -90,11 +86,7 @@ export const Banner = ({
     >
       {image ? (
         <Stack className={bannerStyle.imageStack[size]} justifyContent="center">
-          {typeof image === 'string' ? (
-            <img alt="" height="auto" src={image} width="auto" />
-          ) : (
-            image
-          )}
+          {typeof image === 'string' ? <img alt="" height="auto" src={image} width="auto" /> : image}
         </Stack>
       ) : (
         <Stack className={bannerStyle.imageStack[size]} justifyContent="center">
@@ -117,15 +109,7 @@ export const Banner = ({
           >
             {title}
           </Text>
-          <Text
-            as="p"
-            sentiment={
-              variant === 'promotional' || theme !== 'light'
-                ? 'white'
-                : 'neutral'
-            }
-            variant="body"
-          >
+          <Text as="p" sentiment={variant === 'promotional' || theme !== 'light' ? 'white' : 'neutral'} variant="body">
             {children}
           </Text>
         </Stack>
@@ -142,13 +126,7 @@ export const Banner = ({
               </Button>
             ) : null}
             {linkText ? (
-              <Link
-                href={linkHref ?? ''}
-                prominence={prominence}
-                sentiment="primary"
-                size="small"
-                target="_blank"
-              >
+              <Link href={linkHref ?? ''} prominence={prominence} sentiment="primary" size="small" target="_blank">
                 {linkText}
               </Link>
             ) : null}
@@ -163,12 +141,7 @@ export const Banner = ({
             setOpened(false)
             onClose?.()
           }}
-          sentiment={
-            variant === 'intro' ||
-            (variant === 'promotional' && theme !== 'light')
-              ? 'neutral'
-              : 'primary'
-          }
+          sentiment={variant === 'intro' || (variant === 'promotional' && theme !== 'light') ? 'neutral' : 'primary'}
           size="small"
           variant={variant === 'intro' ? 'ghost' : 'filled'}
         >

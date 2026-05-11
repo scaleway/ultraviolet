@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const IconSdkJsProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const IconSdkJsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="IconSdkJsProductIcon">
     <g className="Icon SDK JS">
       <g className=".Square">

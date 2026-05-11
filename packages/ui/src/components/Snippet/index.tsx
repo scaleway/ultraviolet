@@ -3,19 +3,16 @@
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { cn } from '@ultraviolet/utils'
 import { useReducer } from 'react'
-
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useTheme } from '../../theme/ThemeProvider'
 import { CopyButton } from '../CopyButton'
 import { Expandable } from '../Expandable'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { CodeContent } from './CodeContent'
-import { snippetStyle } from './styles.css'
-
 import type { Prefixes } from './CodeContent'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import { snippetStyle } from './styles.css'
 
 const LINES_BREAK_REGEX = /\r\n|\r|\n/
 
@@ -64,10 +61,7 @@ export const Snippet = ({
   labelDescription,
 }: SnippetProps) => {
   const theme = useTheme()
-  const [showMore, setShowMore] = useReducer(
-    value => !value,
-    initiallyExpanded ?? false,
-  )
+  const [showMore, setShowMore] = useReducer(value => !value, initiallyExpanded ?? false)
   const lines = children.split(LINES_BREAK_REGEX)
 
   const numberOfLines = lines.length
@@ -75,53 +69,29 @@ export const Snippet = ({
   const hasShowMoreButton = numberOfLines > rows && multiline && !noExpandable
   // Height of the expandable (when needed) = number of rows * height of a line (from rem to px) + padding (from rem to px)
   const minHeight =
-    rows * Number.parseFloat(theme.typography.code.lineHeight) * 16 +
-    Number.parseFloat(theme.space[4]) * 16
+    rows * Number.parseFloat(theme.typography.code.lineHeight) * 16 + Number.parseFloat(theme.space[4]) * 16
 
   return (
     <Stack direction="column" gap={1} width="100%">
-      {label ? (
-        <Label labelDescription={labelDescription}>{label}</Label>
-      ) : null}
+      {label ? <Label labelDescription={labelDescription}>{label}</Label> : null}
       <div
-        className={cn(
-          className,
-          snippetStyle.container[multiline ? 'multiline' : 'oneLine'],
-        )}
+        className={cn(className, snippetStyle.container[multiline ? 'multiline' : 'oneLine'])}
         data-testid={dataTestId}
         style={style}
       >
         <Stack className={snippetStyle.stackStyle}>
           {hasShowMoreButton ? (
             <Expandable minHeight={minHeight} opened={showMore}>
-              <CodeContent
-                lines={lines}
-                multiline={multiline}
-                noExpandable={noExpandable}
-                prefix={prefix}
-                rows={rows}
-              >
+              <CodeContent lines={lines} multiline={multiline} noExpandable={noExpandable} prefix={prefix} rows={rows}>
                 {children}
               </CodeContent>
             </Expandable>
           ) : (
-            <CodeContent
-              lines={lines}
-              multiline={multiline}
-              noExpandable={noExpandable}
-              prefix={prefix}
-              rows={rows}
-            >
+            <CodeContent lines={lines} multiline={multiline} noExpandable={noExpandable} prefix={prefix} rows={rows}>
               {children}
             </CodeContent>
           )}
-          <div
-            className={
-              snippetStyle.buttonContainer[
-                multiline && numberOfLines > 1 ? 'multiline' : 'oneLine'
-              ]
-            }
-          >
+          <div className={snippetStyle.buttonContainer[multiline && numberOfLines > 1 ? 'multiline' : 'oneLine']}>
             <CopyButton
               copiedText={copiedText}
               copyText={copyText}
@@ -131,32 +101,17 @@ export const Snippet = ({
             />
           </div>
           {hasShowMoreButton ? (
-            <div
-              className={
-                snippetStyle.showMoreContainer[showMore ? 'true' : 'false']
-              }
-            >
+            <div className={snippetStyle.showMoreContainer[showMore ? 'true' : 'false']}>
               <button
                 aria-expanded={showMore}
                 className={snippetStyle.showMoreButton}
                 onClick={setShowMore}
                 type="button"
               >
-                <Text
-                  as="span"
-                  className={snippetStyle.centeredText}
-                  sentiment="neutral"
-                  variant="bodySmallStrong"
-                >
+                <Text as="span" className={snippetStyle.centeredText} sentiment="neutral" variant="bodySmallStrong">
                   {showMore ? hideText : showText}
                   &nbsp;
-                  <ArrowDownIcon
-                    className={
-                      snippetStyle.animatedArrowIcon[
-                        showMore ? 'true' : 'false'
-                      ]
-                    }
-                  />
+                  <ArrowDownIcon className={snippetStyle.animatedArrowIcon[showMore ? 'true' : 'false']} />
                 </Text>
               </button>
             </div>

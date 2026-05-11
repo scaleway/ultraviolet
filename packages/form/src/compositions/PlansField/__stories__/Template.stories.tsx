@@ -1,7 +1,4 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { PlansField } from '..'
 
-import type { StoryFn } from '@storybook/react-vite'
-
-export const Template: StoryFn<typeof PlansField> = args => (
-  <PlansField {...args} />
-)
+export const Template: StoryFn<typeof PlansField> = args => <PlansField {...args} />

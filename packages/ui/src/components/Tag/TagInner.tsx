@@ -2,19 +2,13 @@
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { CopyContentIcon } from '@ultraviolet/icons/CopyContentIcon'
-
 import { Button } from '../Button'
 import { Loader } from '../Loader'
 import { Text } from '../Text'
-
+import type { TagProps } from './type'
 import { tagStyle } from './styles.css'
 
-import type { TagProps } from './type'
-
-type TagInnerProps = Omit<
-  TagProps,
-  'copyText' | 'copiedText' | 'className' | 'data-testid'
->
+type TagInnerProps = Omit<TagProps, 'copyText' | 'copiedText' | 'className' | 'data-testid'>
 
 export const TagInner = ({
   children,
@@ -36,9 +30,7 @@ export const TagInner = ({
     >
       {children}
     </Text>
-    {copiable && copyButton && !isLoading ? (
-      <CopyContentIcon size="xsmall" />
-    ) : null}
+    {copiable && copyButton && !isLoading ? <CopyContentIcon size="xsmall" /> : null}
     {onClose && !isLoading ? (
       <Button
         aria-label="Close tag"

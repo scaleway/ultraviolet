@@ -1,9 +1,8 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-
+import type { CSSProperties } from 'react'
 import { Stack } from '../../components/Stack'
-
 import rating1 from './assets/1-5.svg'
 import rating1NS from './assets/1-5NB.svg'
 import rating2 from './assets/2-5.svg'
@@ -15,8 +14,6 @@ import rating4NS from './assets/4-5NB.svg'
 import rating5 from './assets/5-5.svg'
 import rating5NS from './assets/5-5NB.svg'
 import { customerSatisfactionStyle } from './styles.css'
-
-import type { CSSProperties } from 'react'
 
 const ratings = [
   {
@@ -67,13 +64,7 @@ export const CustomerSatisfaction = ({
   const isHappy = useMemo(() => value > ratings.length / 2, [value])
 
   return (
-    <Stack
-      className={className}
-      data-testid={dataTestId}
-      direction="row"
-      justifyContent="space-between"
-      style={style}
-    >
+    <Stack className={className} data-testid={dataTestId} direction="row" justifyContent="space-between" style={style}>
       {ratings.map(rating => {
         const isSelected = rating.value === value
         const isOverfly = rating.value <= hoveredValue
@@ -104,11 +95,7 @@ export const CustomerSatisfaction = ({
               })}
               data-testid={`${dataTestId}-${rating.value}`}
               height="auto"
-              src={
-                isSelected || isOverfly || rating.value <= value
-                  ? rating.imgSelected
-                  : rating.imgNotSelected
-              }
+              src={isSelected || isOverfly || rating.value <= value ? rating.imgSelected : rating.imgNotSelected}
               width="auto"
             />
           </button>

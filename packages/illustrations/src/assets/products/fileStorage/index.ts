@@ -10,9 +10,4 @@ const fileStorageKeyvisual = `${BASE_URL}/products/fileStorage/file-storage-keyv
 const fileStorageOriginal = `${BASE_URL}/products/fileStorage/file-storage-original.webp`
 const fileStorageWire = `${BASE_URL}/products/fileStorage/file-storage-wire.svg`
 
-export {
-  fileStorageContent,
-  fileStorageKeyvisual,
-  fileStorageOriginal,
-  fileStorageWire,
-}
+export { fileStorageContent, fileStorageKeyvisual, fileStorageOriginal, fileStorageWire }

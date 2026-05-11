@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const MemoryOptimizedInstancesProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const MemoryOptimizedInstancesProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="MemoryOptimizedInstancesProductIcon">
     <g clipPath="url(#clip0_791_2096)">
       <path

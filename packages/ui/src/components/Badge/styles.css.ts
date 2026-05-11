@@ -1,19 +1,9 @@
 import { theme } from '@ultraviolet/themes'
 import { recipe } from '@vanilla-extract/recipes'
-
+import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { SIZES } from './constant'
 
-import type { RecipeVariants } from '@vanilla-extract/recipes'
-
-const sentiments = [
-  'primary',
-  'secondary',
-  'danger',
-  'info',
-  'success',
-  'warning',
-  'neutral',
-] as const
+const sentiments = ['primary', 'secondary', 'danger', 'info', 'success', 'warning', 'neutral'] as const
 
 function getDefaultStyle(sentiment: (typeof sentiments)[number]) {
   if (sentiment === 'neutral') {

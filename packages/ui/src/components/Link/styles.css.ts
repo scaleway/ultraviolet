@@ -2,21 +2,16 @@ import { theme } from '@ultraviolet/themes'
 import { capitalize } from '@ultraviolet/utils'
 import { globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-
 import { PROMINENCES } from './constants'
 
 const TRANSITION_DURATION = 250
 
 type ProminenceType = keyof typeof PROMINENCES
 
-function getLinkStyle(
-  sentiment: 'primary' | 'info',
-  prominence: ProminenceType,
-) {
+function getLinkStyle(sentiment: 'primary' | 'info', prominence: ProminenceType) {
   const definedProminence = capitalize(PROMINENCES[prominence])
   const text = `text${definedProminence}` as keyof typeof theme.colors.primary
-  const textHover =
-    `text${definedProminence}Hover` as keyof typeof theme.colors.primary
+  const textHover = `text${definedProminence}Hover` as keyof typeof theme.colors.primary
 
   return {
     color: theme.colors[sentiment][text] ?? theme.colors.neutral.text,
@@ -40,9 +35,7 @@ function getLinkStyle(
   }
 }
 
-function makeVariant(
-  variant: 'captionStrong' | 'bodySmallStrong' | 'bodyStrong',
-) {
+function makeVariant(variant: 'captionStrong' | 'bodySmallStrong' | 'bodyStrong') {
   return {
     fontSize: theme.typography[variant].fontSize,
     fontFamily: theme.typography[variant].fontFamily,
@@ -97,9 +90,7 @@ const link = recipe({
         },
       },
     },
-    prominence: Object.fromEntries(
-      Object.keys(PROMINENCES).map(prominence => [prominence, {}]),
-    ),
+    prominence: Object.fromEntries(Object.keys(PROMINENCES).map(prominence => [prominence, {}])),
     oneLine: {
       true: {
         whiteSpace: 'nowrap',

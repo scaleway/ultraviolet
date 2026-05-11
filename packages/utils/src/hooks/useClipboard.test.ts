@@ -1,6 +1,5 @@
 import { renderHook, act } from '@testing-library/react'
 import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest'
-
 import { useClipboard } from './useClipboard'
 
 describe('hooks - useClipboard', () => {
@@ -51,9 +50,7 @@ describe('hooks - useClipboard', () => {
     navigator.clipboard.writeText = writeTextSpy
     const onErrorSpy = vi.fn()
 
-    const { result } = renderHook(() =>
-      useClipboard('test text', { onError: onErrorSpy }),
-    )
+    const { result } = renderHook(() => useClipboard('test text', { onError: onErrorSpy }))
 
     await act(async () => {
       await result.current[1]()
@@ -67,9 +64,7 @@ describe('hooks - useClipboard', () => {
     const writeTextSpy = vi.fn().mockResolvedValue(undefined)
     navigator.clipboard.writeText = writeTextSpy
 
-    const { result } = renderHook(() =>
-      useClipboard('test text', { successDuration: 1000 }),
-    )
+    const { result } = renderHook(() => useClipboard('test text', { successDuration: 1000 }))
 
     await act(async () => {
       await result.current[1]()
@@ -105,9 +100,7 @@ describe('hooks - useClipboard', () => {
     const writeTextSpy = vi.fn().mockResolvedValue(undefined)
     navigator.clipboard.writeText = writeTextSpy
 
-    const { unmount, result } = renderHook(() =>
-      useClipboard('test text', { successDuration: 1000 }),
-    )
+    const { unmount, result } = renderHook(() => useClipboard('test text', { successDuration: 1000 }))
 
     await act(async () => {
       await result.current[1]()

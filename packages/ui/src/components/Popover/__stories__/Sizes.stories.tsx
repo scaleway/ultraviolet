@@ -1,24 +1,18 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useCallback, useState } from 'react'
-
+import type { Dispatch, SetStateAction } from 'react'
 import { Button } from '../../Button'
 import { Popover } from '../index'
-
 import { Playground } from './Playground.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { Dispatch, SetStateAction } from 'react'
 
 export const Sizes: StoryFn<typeof Popover> = () => {
   const [openedSmall, setOpenedSmall] = useState(false)
   const [openedMedium, setOpenedMedium] = useState(false)
   const [openedLarge, setOpenedLarge] = useState(false)
 
-  const onCloseCallBack = useCallback(
-    (setValue: Dispatch<SetStateAction<boolean>>) => {
-      setValue(false)
-    },
-    [],
-  )
+  const onCloseCallBack = useCallback((setValue: Dispatch<SetStateAction<boolean>>) => {
+    setValue(false)
+  }, [])
 
   return (
     <div style={{ display: 'inline-flex', gap: '16px' }}>

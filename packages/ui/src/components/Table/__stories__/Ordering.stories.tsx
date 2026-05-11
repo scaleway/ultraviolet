@@ -1,10 +1,7 @@
-import { useMemo, useState } from 'react'
-
-import { Table } from '..'
-
-import { data as sourceData } from './resources'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { useMemo, useState } from 'react'
+import { Table } from '..'
+import { data as sourceData } from './resources'
 
 export const Ordering: StoryFn = args => {
   const [currentOrder, setCurrentOrder] = useState<{
@@ -35,15 +32,13 @@ export const Ordering: StoryFn = args => {
           info: 'info works fine with the ordering',
           isOrdered: currentOrder.columnId === 'name',
           label: 'Movie name',
-          onOrder: newOrder =>
-            setCurrentOrder({ columnId: 'name', order: newOrder }),
+          onOrder: newOrder => setCurrentOrder({ columnId: 'name', order: newOrder }),
           orderDirection: currentOrder.order,
         },
         {
           isOrdered: currentOrder.columnId === 'releaseYear',
           label: 'Release year',
-          onOrder: newOrder =>
-            setCurrentOrder({ columnId: 'releaseYear', order: newOrder }),
+          onOrder: newOrder => setCurrentOrder({ columnId: 'releaseYear', order: newOrder }),
           orderDirection: currentOrder.order,
         },
         { label: 'Trilogy' },

@@ -1,7 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { useState } from 'react'
-
+import type { ComponentProps } from 'react'
 import { SteppedListCard } from '..'
 import { Button } from '../../../components/Button'
 import { Expandable } from '../../../components/Expandable'
@@ -9,12 +10,7 @@ import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
 import { blockStorageWire } from '../__mocks__/blockStorageWire'
 
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
-
-export const OnClickHide: StoryFn<
-  ComponentProps<typeof SteppedListCard>
-> = props => {
+export const OnClickHide: StoryFn<ComponentProps<typeof SteppedListCard>> = props => {
   const [visible, setVisible] = useState(true)
 
   return (
@@ -48,18 +44,13 @@ export const OnClickHide: StoryFn<
               </Stack>
             )}
           </SteppedListCard.Step>
-          <SteppedListCard.Step
-            image={blockStorageWire}
-            stepNumber={2}
-            subHeader="Second step"
-          >
+          <SteppedListCard.Step image={blockStorageWire} stepNumber={2} subHeader="Second step">
             {nextStep => (
               <Stack gap={2}>
                 Step description
                 <Stack direction="row" gap={2}>
                   <Button onClick={() => nextStep(true)}>
-                    Validate and close. It will trigger
-                    &quot;onClickHidden&quot;
+                    Validate and close. It will trigger &quot;onClickHidden&quot;
                   </Button>
                 </Stack>
               </Stack>

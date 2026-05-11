@@ -1,6 +1,5 @@
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { addons } from 'storybook/manager-api'
-
 import { light } from './storybookThemes'
 
 addons.setConfig({
@@ -10,8 +9,7 @@ addons.setConfig({
         bgColor: consoleLightTheme.colors.warning.background,
         fgColor: consoleLightTheme.colors.warning.text,
         text: '🧪 Experimental',
-        tooltip:
-          'This component is at an unstable stage and is subject to change in future releases.',
+        tooltip: 'This component is at an unstable stage and is subject to change in future releases.',
       },
       tags: 'experimental',
     },

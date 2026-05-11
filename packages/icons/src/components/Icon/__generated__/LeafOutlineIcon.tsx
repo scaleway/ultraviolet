@@ -6,15 +6,11 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const LeafOutlineIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const LeafOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="LeafOutlineIcon">
-    {typeof props.size === 'string' &&
-    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
+    {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path
           d="M10.27 8.416a.75.75 0 0 1-.38.99c-1.802.801-3.072 1.886-3.945 3.196-.877 1.315-1.381 2.898-1.585 4.73a.75.75 0 1 1-1.49-.165c.222-2.006.784-3.834 1.827-5.397C5.742 10.2 7.245 8.94 9.28 8.035a.75.75 0 0 1 .99.381"

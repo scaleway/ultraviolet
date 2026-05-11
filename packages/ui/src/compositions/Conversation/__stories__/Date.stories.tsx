@@ -9,8 +9,7 @@ DateStory.args = {
 DateStory.parameters = {
   docs: {
     description: {
-      story:
-        'You can easily add the date of the conversation using the `Conversation.Date` subcomponent.',
+      story: 'You can easily add the date of the conversation using the `Conversation.Date` subcomponent.',
     },
   },
 }

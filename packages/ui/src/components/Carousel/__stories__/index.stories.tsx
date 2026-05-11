@@ -1,6 +1,5 @@
-import { Carousel } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Carousel } from '..'
 
 export default {
   component: Carousel,

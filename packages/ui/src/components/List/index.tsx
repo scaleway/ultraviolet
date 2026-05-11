@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import { forwardRef } from 'react'
-
+import type { CSSProperties, Dispatch, ReactNode, RefAttributes, SetStateAction } from 'react'
 import { Cell } from './Cell'
 import { HeaderCell } from './HeaderCell'
 import { HeaderRow } from './HeaderRow'
@@ -10,17 +10,9 @@ import { ListProvider, useListContext } from './ListContext'
 import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
-import { listStyle } from './styles.css'
 import { TableContainer } from './TableContainer'
-
 import type { ColumnProps } from './types'
-import type {
-  CSSProperties,
-  Dispatch,
-  ReactNode,
-  RefAttributes,
-  SetStateAction,
-} from 'react'
+import { listStyle } from './styles.css'
 
 // Note: Get type optional type from omit values of ListContext
 type ListProps = {
@@ -77,11 +69,7 @@ const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(
       selectable={selectable}
     >
       <TableContainer>
-        <table
-          className={cn(className, listStyle.list)}
-          ref={ref}
-          style={style}
-        >
+        <table className={cn(className, listStyle.list)} ref={ref} style={style}>
           <HeaderRow hasSelectAllColumn={selectable}>
             {columns.map((column, index) => (
               <HeaderCell
@@ -99,17 +87,7 @@ const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(
               </HeaderCell>
             ))}
           </HeaderRow>
-          <tbody>
-            {loading ? (
-              <SkeletonRows
-                cols={columns.length}
-                rows={5}
-                selectable={selectable}
-              />
-            ) : (
-              children
-            )}
-          </tbody>
+          <tbody>{loading ? <SkeletonRows cols={columns.length} rows={5} selectable={selectable} /> : children}</tbody>
         </table>
       </TableContainer>
     </ListProvider>

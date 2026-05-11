@@ -1,6 +1,5 @@
-import { Popover } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Popover } from '..'
 
 export default {
   component: Popover,

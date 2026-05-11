@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const QueueingProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const QueueingProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="QueueingProductIcon">
     <g className="Queuing">
       <g className="icon" clipPath="url(#a)">

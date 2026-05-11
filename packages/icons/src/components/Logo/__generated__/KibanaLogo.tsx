@@ -6,21 +6,15 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const KibanaLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const KibanaLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="KibanaLogo">
     <path
       d="M2.79091 7.49092C5.44546 7.49092 7.95455 8.18183 10.1364 9.34546L17.9182 0H2.5V18.5455V7.49092H2.79091Z"
       fill="#E9478B"
     />
-    <path
-      d="M10.1364 9.34546L2.5 18.5455V20H17.8818C17.0091 15.4182 14.1 11.5273 10.1364 9.34546Z"
-      fill="#3EBEB0"
-    />
+    <path d="M10.1364 9.34546L2.5 18.5455V20H17.8818C17.0091 15.4182 14.1 11.5273 10.1364 9.34546Z" fill="#3EBEB0" />
     <path
       d="M10.1364 9.34546L2.5 18.5455V20H5.22729L12.6455 11.0545C12.6455 11.0545 12.1364 10.6545 11.4455 10.1454C10.9364 9.78181 10.1364 9.34546 10.1364 9.34546Z"
       fill="#37A595"

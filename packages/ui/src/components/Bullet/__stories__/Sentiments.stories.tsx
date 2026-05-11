@@ -1,9 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Bullet } from '..'
 import { SENTIMENTS } from '../../../theme'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Sentiments: StoryFn = props => (
   <Stack gap={1}>
@@ -22,12 +21,7 @@ export const Sentiments: StoryFn = props => (
         Prominence strong:
       </Text>
       {SENTIMENTS.map(sentiment => (
-        <Bullet
-          key={sentiment}
-          {...props}
-          prominence="strong"
-          sentiment={sentiment}
-        >
+        <Bullet key={sentiment} {...props} prominence="strong" sentiment={sentiment}>
           1
         </Bullet>
       ))}
@@ -38,8 +32,7 @@ export const Sentiments: StoryFn = props => (
 Sentiments.parameters = {
   docs: {
     description: {
-      story:
-        'Sentiment defines different colors of your component. You can define it using `Sentiment` property.',
+      story: 'Sentiment defines different colors of your component. You can define it using `Sentiment` property.',
     },
   },
 }

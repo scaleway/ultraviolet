@@ -4,15 +4,8 @@ import { ArrowLeftIcon } from '@ultraviolet/icons/ArrowLeftIcon'
 import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn, renderElement } from '@ultraviolet/utils'
-import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
-
-import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
-import { Tooltip } from '../Tooltip'
-
-import { linkStyle } from './styles.css'
-
-import type { PROMINENCES } from './constants'
 import type { RenderProp } from '@ultraviolet/utils'
+import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import type {
   AnchorHTMLAttributes,
   CSSProperties,
@@ -23,6 +16,10 @@ import type {
   ReactNode,
   RefObject,
 } from 'react'
+import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
+import { Tooltip } from '../Tooltip'
+import type { PROMINENCES } from './constants'
+import { linkStyle } from './styles.css'
 
 export type ProminenceProps = keyof typeof PROMINENCES
 
@@ -183,10 +180,7 @@ export const Link = forwardRef(
 
           {isBlank ? (
             <span className={linkStyle.containerIcon}>
-              <OpenInNewIcon
-                className={linkStyle.iconRight}
-                size={BLANK_TARGET_ICON_SIZE}
-              />
+              <OpenInNewIcon className={linkStyle.iconRight} size={BLANK_TARGET_ICON_SIZE} />
             </span>
           ) : null}
 

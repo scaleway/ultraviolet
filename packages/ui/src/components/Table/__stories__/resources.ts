@@ -1,5 +1,5 @@
-import type { Table } from '..'
 import type { ComponentProps } from 'react'
+import type { Table } from '..'
 
 export const data = [
   {
@@ -84,9 +84,7 @@ export const columns: NonNullable<ComponentProps<typeof Table>['columns']> = [
   { label: 'Director' },
 ]
 
-export const overflowColumns: NonNullable<
-  ComponentProps<typeof Table>['columns']
-> = [
+export const overflowColumns: NonNullable<ComponentProps<typeof Table>['columns']> = [
   { label: 'Movie name', minWidth: '500px' },
   { label: 'Release year', minWidth: '500px' },
   { label: 'Trilogy', minWidth: '500px' },

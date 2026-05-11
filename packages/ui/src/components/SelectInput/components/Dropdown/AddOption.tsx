@@ -1,9 +1,7 @@
 import { useSelectInput } from '../../SelectInputProvider'
-import { selectInputStyle } from '../../styles.css'
-
-import { DisplayOption } from './Option'
-
 import type { OptionType } from '../../types'
+import { DisplayOption } from './Option'
+import { selectInputStyle } from '../../styles.css'
 
 export const AddOption = ({
   option,
@@ -21,13 +19,7 @@ export const AddOption = ({
   searchable?: boolean
   isEmpty?: boolean
 }) => {
-  const {
-    setIsDropdownVisible,
-    multiselect,
-    onSearch,
-    searchInput,
-    setSearchInput,
-  } = useSelectInput()
+  const { setIsDropdownVisible, multiselect, onSearch, searchInput, setSearchInput } = useSelectInput()
 
   const handleClickCustomValue = () => {
     const newOption = { label: searchInput, value: searchInput }

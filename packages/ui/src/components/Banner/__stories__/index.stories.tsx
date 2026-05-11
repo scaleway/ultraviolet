@@ -1,6 +1,5 @@
-import { Banner } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Banner } from '..'
 
 export default {
   component: Banner,

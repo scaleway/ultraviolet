@@ -9,8 +9,7 @@ Helper.args = {
 Helper.parameters = {
   docs: {
     description: {
-      story:
-        'You can use `helper` prop to provide additional information to the user',
+      story: 'You can use `helper` prop to provide additional information to the user',
     },
   },
 }

@@ -1,13 +1,10 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
-
 import { Menu } from '..'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
 import { Tooltip } from '../../Tooltip'
-
 import { DefaultDisclosure } from './Template.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Group: StoryFn<typeof Menu> = ({ ...props }) => (
   <Menu {...props} disclosure={DefaultDisclosure}>
@@ -20,12 +17,7 @@ export const Group: StoryFn<typeof Menu> = ({ ...props }) => (
       }
     >
       <Menu.Item borderless>
-        <Stack
-          alignItems="center"
-          direction="row"
-          flex={1}
-          justifyContent="space-between"
-        >
+        <Stack alignItems="center" direction="row" flex={1} justifyContent="space-between">
           Information&nbsp;
           <Badge sentiment="success" size="small">
             New
@@ -40,12 +32,7 @@ export const Group: StoryFn<typeof Menu> = ({ ...props }) => (
     </Menu.Group>
     <Menu.Group label="Dedicated Server">
       <Menu.Item borderless>
-        <Stack
-          alignItems="center"
-          direction="row"
-          flex={1}
-          justifyContent="space-between"
-        >
+        <Stack alignItems="center" direction="row" flex={1} justifyContent="space-between">
           Information&nbsp;
           <Badge sentiment="success" size="small">
             New

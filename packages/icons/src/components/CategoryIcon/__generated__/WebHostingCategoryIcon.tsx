@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const WebHostingCategoryIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const WebHostingCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="WebHostingCategoryIcon">
     <g className="Webhosting">
       <g className="Webhosting-icon">
@@ -22,11 +19,7 @@ export const WebHostingCategoryIcon = ({
           clipRule="evenodd"
           fillRule="evenodd"
         />
-        <path
-          fill="#A365F6"
-          d="M9.84 6.043a2.025 2.025 0 1 0 0 4.05 2.025 2.025 0 0 0 0-4.05"
-          className="fillStrong"
-        />
+        <path fill="#A365F6" d="M9.84 6.043a2.025 2.025 0 1 0 0 4.05 2.025 2.025 0 0 0 0-4.05" className="fillStrong" />
       </g>
     </g>
   </Icon>

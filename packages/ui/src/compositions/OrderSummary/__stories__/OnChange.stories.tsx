@@ -1,34 +1,23 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
+import type { ComponentProps } from 'react'
 import { OrderSummary } from '..'
 import { Button } from '../../../components/Button'
 import { Stack } from '../../../components/Stack'
-
-import { categoryAZ, categoryDefault } from './productsExample'
-
 import type { PriceType } from '../types'
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
+import { categoryAZ, categoryDefault } from './productsExample'
 
 export const OnChange: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
   const [prices, setPrices] = useState<PriceType>({})
   const [elements, setElements] = useState([categoryAZ, categoryDefault])
 
   const onClick = () =>
-    elements.length === 2
-      ? setElements([categoryDefault])
-      : setElements([categoryAZ, categoryDefault])
+    elements.length === 2 ? setElements([categoryDefault]) : setElements([categoryAZ, categoryDefault])
 
   return (
     <Stack direction="row" gap={3}>
       <Button onClick={onClick}>Change elements</Button>
-      <OrderSummary
-        currency="EUR"
-        header="Summary"
-        items={elements}
-        localeFormat="en-US"
-        onChange={setPrices}
-      />
+      <OrderSummary currency="EUR" header="Summary" items={elements} localeFormat="en-US" onChange={setPrices} />
       <ul>
         Prices:
         {prices
@@ -46,8 +35,7 @@ export const OnChange: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
 OnChange.parameters = {
   docs: {
     description: {
-      story:
-        'Using prop `onChange` it is possible to get the price of each category',
+      story: 'Using prop `onChange` it is possible to get the price of each category',
     },
   },
 }

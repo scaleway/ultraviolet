@@ -1,13 +1,10 @@
 'use client'
 
 import { useMemo } from 'react'
-
+import type { ReactNode } from 'react'
 import { ActionBar } from '../ActionBar'
 import { Stack } from '../Stack'
-
 import { useTableContext } from './TableContext'
-
-import type { ReactNode } from 'react'
 
 type SelectBarProps<T> = {
   className?: string
@@ -19,12 +16,7 @@ type SelectBarProps<T> = {
   idKey: keyof T
 }
 
-export const SelectBar = <T,>({
-  children,
-  data,
-  idKey,
-  className,
-}: SelectBarProps<T>) => {
+export const SelectBar = <T,>({ children, data, idKey, className }: SelectBarProps<T>) => {
   const { selectedRowIds, unselectAll } = useTableContext()
 
   const selectedItems = useMemo(
@@ -38,13 +30,7 @@ export const SelectBar = <T,>({
 
   return (
     <ActionBar className={className}>
-      <Stack
-        alignItems="center"
-        direction="row"
-        flex="1 1 auto"
-        justifyContent="space-between"
-        width="100%"
-      >
+      <Stack alignItems="center" direction="row" flex="1 1 auto" justifyContent="space-between" width="100%">
         {children({
           selectedItems,
           unselectAll,

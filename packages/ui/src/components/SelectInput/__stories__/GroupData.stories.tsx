@@ -1,11 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
-
 import { SelectInput } from '..'
 import { Stack } from '../../Stack'
-
 import { dataGrouped } from './resources'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const Error = (
   <Stack alignItems="center" direction="row" gap={1}>

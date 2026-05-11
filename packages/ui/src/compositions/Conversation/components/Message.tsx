@@ -1,8 +1,6 @@
 import { cn } from '@ultraviolet/utils'
-
-import { conversationStyle } from '../styles.css'
-
 import type { CSSProperties, ReactNode } from 'react'
+import { conversationStyle } from '../styles.css'
 
 type MessageProps = {
   className?: string
@@ -12,17 +10,8 @@ type MessageProps = {
   style?: CSSProperties
 }
 
-export const Message = ({
-  className,
-  children,
-  avatar,
-  align = 'right',
-  style,
-}: MessageProps) => (
-  <div
-    className={cn(className, conversationStyle.container[align])}
-    style={style}
-  >
+export const Message = ({ className, children, avatar, align = 'right', style }: MessageProps) => (
+  <div className={cn(className, conversationStyle.container[align])} style={style}>
     <div className={conversationStyle.bubble}>
       <div className={conversationStyle.rawMessage[align]}>{children}</div>
     </div>

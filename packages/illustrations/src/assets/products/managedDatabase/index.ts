@@ -10,9 +10,4 @@ const managedDatabaseKeyvisual = `${BASE_URL}/products/managedDatabase/managed-d
 const managedDatabaseOriginal = `${BASE_URL}/products/managedDatabase/managed-database-original.webp`
 const managedDatabaseWire = `${BASE_URL}/products/managedDatabase/managed-database-wire.svg`
 
-export {
-  managedDatabaseContent,
-  managedDatabaseKeyvisual,
-  managedDatabaseOriginal,
-  managedDatabaseWire,
-}
+export { managedDatabaseContent, managedDatabaseKeyvisual, managedDatabaseOriginal, managedDatabaseWire }

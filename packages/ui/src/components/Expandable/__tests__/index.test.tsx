@@ -1,48 +1,35 @@
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it } from 'vitest'
-
 import { Expandable } from '..'
 
 describe('expandable', () => {
   it('renders correctly with default values', () => {
-    const { asFragment } = renderWithTheme(
-      <Expandable>Sample Expandable</Expandable>,
-    )
+    const { asFragment } = renderWithTheme(<Expandable>Sample Expandable</Expandable>)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly opened', () => {
-    const { asFragment } = renderWithTheme(
-      <Expandable opened>Sample Expandable</Expandable>,
-    )
+    const { asFragment } = renderWithTheme(<Expandable opened>Sample Expandable</Expandable>)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with minHeight', () => {
-    const { asFragment } = renderWithTheme(
-      <Expandable minHeight={5}>Sample Expandable</Expandable>,
-    )
+    const { asFragment } = renderWithTheme(<Expandable minHeight={5}>Sample Expandable</Expandable>)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with className', () => {
-    const { asFragment } = renderWithTheme(
-      <Expandable className="test">Sample Expandable</Expandable>,
-    )
+    const { asFragment } = renderWithTheme(<Expandable className="test">Sample Expandable</Expandable>)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with animationDuration', () => {
-    const { asFragment } = renderWithTheme(
-      <Expandable animationDuration={500}>Sample Expandable</Expandable>,
-    )
+    const { asFragment } = renderWithTheme(<Expandable animationDuration={500}>Sample Expandable</Expandable>)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with animationDuration set to 0', () => {
-    const { asFragment } = renderWithTheme(
-      <Expandable animationDuration={0}>Sample Expandable</Expandable>,
-    )
+    const { asFragment } = renderWithTheme(<Expandable animationDuration={0}>Sample Expandable</Expandable>)
     expect(asFragment()).toMatchSnapshot()
   })
 })

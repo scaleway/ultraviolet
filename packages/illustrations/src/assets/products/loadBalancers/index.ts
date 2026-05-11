@@ -10,9 +10,4 @@ const loadBalancersKeyvisual = `${BASE_URL}/products/loadBalancers/load-balancer
 const loadBalancersOriginal = `${BASE_URL}/products/loadBalancers/load-balancers-original.webp`
 const loadBalancersWire = `${BASE_URL}/products/loadBalancers/load-balancers-wire.svg`
 
-export {
-  loadBalancersContent,
-  loadBalancersKeyvisual,
-  loadBalancersOriginal,
-  loadBalancersWire,
-}
+export { loadBalancersContent, loadBalancersKeyvisual, loadBalancersOriginal, loadBalancersWire }

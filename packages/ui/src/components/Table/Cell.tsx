@@ -2,14 +2,11 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
+import type { CSSProperties, ReactNode } from 'react'
+import type { Color } from '../../theme'
 import { useColumnProvider } from '../List/ColumnProvider'
-
 import { tableStyle } from './styles.css'
 import { maxWidthCell, minWidthCell, widthCell } from './variables.css'
-
-import type { Color } from '../../theme'
-import type { CSSProperties, ReactNode } from 'react'
 
 type Align = 'left' | 'center' | 'right'
 
@@ -23,15 +20,7 @@ type CellProps = {
   style?: CSSProperties
 }
 
-export const Cell = ({
-  children,
-  className,
-  colSpan,
-  rowSpan,
-  sentiment,
-  align = 'left',
-  style,
-}: CellProps) => {
+export const Cell = ({ children, className, colSpan, rowSpan, sentiment, align = 'left', style }: CellProps) => {
   const context = useColumnProvider()
 
   return (

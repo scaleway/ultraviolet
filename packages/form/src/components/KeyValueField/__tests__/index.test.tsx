@@ -2,7 +2,6 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, it } from 'vitest'
-
 import { KeyValueField } from '..'
 
 describe('keyValueField', () => {
@@ -10,8 +9,7 @@ describe('keyValueField', () => {
     const { asFragment } = renderWithForm(
       <KeyValueField
         addButton={{
-          maxSizeReachedTooltip:
-            'This is a tooltip when the max size is reached',
+          maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
           name: 'add',
           tooltip: 'This is a tooltip',
         }}
@@ -36,8 +34,7 @@ describe('keyValueField', () => {
     const { asFragment } = renderWithForm(
       <KeyValueField
         addButton={{
-          maxSizeReachedTooltip:
-            'This is a tooltip when the max size is reached',
+          maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
           name: 'add',
           tooltip: 'This is a tooltip',
         }}
@@ -58,8 +55,7 @@ describe('keyValueField', () => {
     const { asFragment } = renderWithForm(
       <KeyValueField
         addButton={{
-          maxSizeReachedTooltip:
-            'This is a tooltip when the max size is reached',
+          maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
           name: 'add',
           tooltip: 'This is a tooltip',
         }}

@@ -1,16 +1,13 @@
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { theme } from '@ultraviolet/themes'
-
+import type { ReactNode } from 'react'
+import type { SENTIMENTS } from '../../theme'
 import { Button } from '../Button'
-
 import { Cell } from './Cell'
 import { ColumnProvider } from './ColumnProvider'
 import { useListContext } from './ListContext'
 import { listStyle } from './styles.css'
-
-import type { SENTIMENTS } from '../../theme'
-import type { ReactNode } from 'react'
 
 export const ExpandButtonCell = ({
   disabled,

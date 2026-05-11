@@ -3,13 +3,10 @@
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn } from '@ultraviolet/utils'
-
+import type { CSSProperties } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { passwordCheckStyle } from './styles.css'
-
-import type { CSSProperties } from 'react'
 
 type Rule = {
   name: string
@@ -32,17 +29,8 @@ type PasswordCheckProps = {
  * PasswordCheck is a component that display a list of password rules with a check or a cross depending on the validity
  * of the rule.
  */
-export const PasswordCheck = ({
-  rules,
-  className,
-  'data-testid': dataTestId,
-  style,
-}: PasswordCheckProps) => (
-  <div
-    className={cn(className, passwordCheckStyle.container)}
-    data-testid={dataTestId}
-    style={style}
-  >
+export const PasswordCheck = ({ rules, className, 'data-testid': dataTestId, style }: PasswordCheckProps) => (
+  <div className={cn(className, passwordCheckStyle.container)} data-testid={dataTestId} style={style}>
     {rules.map(rule => (
       <Stack alignItems="center" direction="row" gap={1} key={rule.name}>
         {rule.valid ? (

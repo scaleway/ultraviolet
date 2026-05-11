@@ -1,23 +1,18 @@
 'use client'
 
 import { TextInput } from '@ultraviolet/ui'
+import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
-
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
+import type { BaseFieldProps } from '../../types'
 import { validateRegex } from '../../utils/validateRegex'
 
-import type { BaseFieldProps } from '../../types'
-import type { ComponentProps } from 'react'
-import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
-
-type TextInputFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<
-    ComponentProps<typeof TextInput>,
-    'value' | 'error' | 'name' | 'onChange'
-  > & {
+type TextInputFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
+  TFieldValues,
+  TFieldName
+> &
+  Omit<ComponentProps<typeof TextInput>, 'value' | 'error' | 'name' | 'onChange'> & {
     regex?: (RegExp | RegExp[])[]
   }
 
@@ -91,9 +86,7 @@ export const TextInputField = <
       }}
       onChange={event => {
         field.onChange(event)
-        onChange?.(
-          event.target.value as PathValue<TFieldValues, Path<TFieldValues>>,
-        )
+        onChange?.(event.target.value as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       required={required}
       value={field.value ?? ''}

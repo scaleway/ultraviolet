@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
 import { child } from './styles.css'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Direction: StoryFn = props => (
   <Stack gap={3}>
@@ -39,8 +37,7 @@ export const Direction: StoryFn = props => (
 Direction.parameters = {
   docs: {
     description: {
-      story:
-        'prop `direction` allows the stack to behave as a column (default) or a row',
+      story: 'prop `direction` allows the stack to behave as a column (default) or a row',
     },
   },
 }

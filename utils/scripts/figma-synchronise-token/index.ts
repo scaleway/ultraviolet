@@ -2,7 +2,6 @@
 // oxlint-disable import/no-nodejs-modules
 
 import { writeFile, writeFileSync } from 'node:fs'
-
 import { header, TOKENS_URL } from './constants'
 import { generateThemeCss } from './create-css-variables'
 import { generatePalette } from './generatePalette'
@@ -42,14 +41,9 @@ const writeFiles = async () => {
   for (const themeMatch of themesMatches) {
     const output = generatePalette(figmaTokensJson, themeMatch) as UvThemeType
     const filePath = `packages/themes/src/themes/console/${themeMatch.outputTheme}/__generated__/index.ts`
-    writeFile(
-      filePath,
-      `${header}export const ${themeMatch.outputTheme}Theme = ${JSON.stringify(output)}`,
-      {},
-      () => {
-        console.log(`File written ${filePath}`)
-      },
-    )
+    writeFile(filePath, `${header}export const ${themeMatch.outputTheme}Theme = ${JSON.stringify(output)}`, {}, () => {
+      console.log(`File written ${filePath}`)
+    })
     createCSSFile(themeMatch.outputTheme, output) // Create CSS-tokens
   }
 }

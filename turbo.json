@@ -20,11 +20,7 @@
     "build": {
       "cache": true,
       "dependsOn": ["^build"],
-      "inputs": [
-        "$TURBO_DEFAULT$",
-        "!**/*.stories.{tsx,jsx}",
-        "vite.config.ts"
-      ],
+      "inputs": ["$TURBO_DEFAULT$", "!**/*.stories.{tsx,jsx}", "vite.config.ts"],
       "outputLogs": "new-only",
       "outputs": [
         ".generated/**",

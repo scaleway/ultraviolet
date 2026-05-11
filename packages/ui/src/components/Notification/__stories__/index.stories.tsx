@@ -1,6 +1,5 @@
-import { NotificationContainer } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { NotificationContainer } from '..'
 
 export default {
   component: NotificationContainer,

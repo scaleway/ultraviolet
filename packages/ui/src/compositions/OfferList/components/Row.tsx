@@ -6,21 +6,15 @@ import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Children, useCallback, useMemo, useState } from 'react'
-
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import type { Badge as BadgeUV } from '../../../components/Badge'
 import { Button } from '../../../components/Button'
 import { List } from '../../../components/List'
 import { useOfferListContext } from '../OfferListProvider'
-import {
-  expandablePadding as expandablePaddingVar,
-  offerListStyle,
-} from '../styles.css'
-
 import { Banner } from './Banner'
 import { OfferListRowContext } from './OfferListRowProvider'
 import { SelectableCell } from './SelectableCell'
-
-import type { Badge as BadgeUV } from '../../../components/Badge'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import { expandablePadding as expandablePaddingVar, offerListStyle } from '../styles.css'
 
 type RowProps = ComponentProps<typeof List.Row> & {
   banner?: {
@@ -67,8 +61,7 @@ export const Row = ({
   const { expandedRowIds, collapseRow, expandRow } = List.useListContext()
 
   const [isHovered, setHovered] = useState(false)
-  const childrenNumber =
-    Children.count(children) + (selectable ? 1 : 0) + (expandable ? 1 : 0)
+  const childrenNumber = Children.count(children) + (selectable ? 1 : 0) + (expandable ? 1 : 0)
 
   const toggleRowExpand = useCallback(() => {
     if (!loading) {
@@ -103,16 +96,7 @@ export const Row = ({
     }
 
     return undefined
-  }, [
-    expandable,
-    loading,
-    expandedRowIds,
-    banner,
-    expandablePadding,
-    id,
-    expandableContent,
-    disabled,
-  ])
+  }, [expandable, loading, expandedRowIds, banner, expandablePadding, id, expandableContent, disabled])
 
   const isRowSelected = useMemo(() => {
     if (selectable === 'radio') {
@@ -122,16 +106,11 @@ export const Row = ({
     return checkboxSelectedRows.includes(offerName)
   }, [offerName, checkboxSelectedRows, radioSelectedRow, selectable])
 
-  const isSelected =
-    selectable === 'radio'
-      ? radioSelectedRow === offerName
-      : checkboxSelectedRows.includes(offerName)
+  const isSelected = selectable === 'radio' ? radioSelectedRow === offerName : checkboxSelectedRows.includes(offerName)
 
   const handleChangeCheckbox = () => {
     if (isRowSelected) {
-      const newSelectedList = checkboxSelectedRows.filter(
-        element => element !== offerName,
-      )
+      const newSelectedList = checkboxSelectedRows.filter(element => element !== offerName)
       setCheckboxSelectedRows(newSelectedList)
       onChangeSelect?.(newSelectedList)
     } else {
@@ -152,10 +131,7 @@ export const Row = ({
     onChangeSelect?.(offerName)
   }
 
-  const offerListRowContextValue = useMemo(
-    () => ({ selected: isSelected, banner: !!banner }),
-    [isSelected, banner],
-  )
+  const offerListRowContextValue = useMemo(() => ({ selected: isSelected, banner: !!banner }), [isSelected, banner])
 
   return (
     <>
@@ -164,9 +140,7 @@ export const Row = ({
           className,
           banner ? offerListStyle.rowBanner : '',
           isSelected ? offerListStyle.rowSelected : '',
-          expandable
-            ? offerListStyle.rowSelectedExpandable
-            : offerListStyle.rowSelectedNotExpandable,
+          expandable ? offerListStyle.rowSelectedExpandable : offerListStyle.rowSelectedNotExpandable,
         )}
         data-dragging={dataDragging}
         data-testid={dataTestId}
@@ -207,12 +181,7 @@ export const Row = ({
           selectDisabled={selectDisabled}
         />
         {expandable ? (
-          <List.Cell
-            className={cn(
-              offerListStyle.noPaddingCell,
-              isSelected ? offerListStyle.selectedCell : '',
-            )}
-          >
+          <List.Cell className={cn(offerListStyle.noPaddingCell, isSelected ? offerListStyle.selectedCell : '')}>
             <Button
               aria-label="expand"
               data-testid="list-expand-button"
@@ -229,9 +198,7 @@ export const Row = ({
             </Button>
           </List.Cell>
         ) : null}
-        <OfferListRowContext.Provider value={offerListRowContextValue}>
-          {children}
-        </OfferListRowContext.Provider>
+        <OfferListRowContext.Provider value={offerListRowContextValue}>{children}</OfferListRowContext.Provider>
       </List.Row>
       {banner && !expandedRowIds[id] ? (
         <Banner

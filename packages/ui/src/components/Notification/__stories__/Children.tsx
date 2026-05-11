@@ -1,7 +1,6 @@
+import type { Decorator, StoryFn } from '@storybook/react-vite'
 import { NotificationContainer, notification } from '..'
 import { Avatar, Button, Stack, Text } from '../../index'
-
-import type { Decorator, StoryFn } from '@storybook/react-vite'
 
 export const Children: StoryFn<typeof NotificationContainer> = args => (
   <div style={{ height: '150px' }}>
@@ -16,20 +15,10 @@ export const Children: StoryFn<typeof NotificationContainer> = args => (
                   You were invited to join the organization [Org_A]
                 </Text>
                 <Stack direction="row" gap={1}>
-                  <Button
-                    onClick={closeToast}
-                    sentiment="neutral"
-                    size="small"
-                    variant="outlined"
-                  >
+                  <Button onClick={closeToast} sentiment="neutral" size="small" variant="outlined">
                     Decline
                   </Button>
-                  <Button
-                    onClick={closeToast}
-                    sentiment="primary"
-                    size="small"
-                    variant="filled"
-                  >
+                  <Button onClick={closeToast} sentiment="primary" size="small" variant="filled">
                     Accept
                   </Button>
                 </Stack>

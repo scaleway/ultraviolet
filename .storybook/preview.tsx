@@ -3,6 +3,7 @@ import addonDocs from '@storybook/addon-docs'
 import addonLinks from '@storybook/addon-links'
 import addonTheme, { withThemeByClassName } from '@storybook/addon-themes'
 import { definePreview } from '@storybook/react-vite'
+import type { Decorator, Preview } from '@storybook/react-vite'
 import {
   consoleDarkerTheme as darkerTheme,
   consoleDarkTheme as darkTheme,
@@ -11,22 +12,13 @@ import {
 } from '@ultraviolet/themes'
 import { scan } from 'react-scan'
 import { themes } from 'storybook/theming'
-
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
-import { dark, light } from './storybookThemes'
 import '@ultraviolet/fonts/fonts.css'
 
-import type { Decorator, Preview } from '@storybook/react-vite'
+import { dark, light } from './storybookThemes'
 
-const BREAKPOINT_ORDER = [
-  'xlarge',
-  'large',
-  'medium',
-  'small',
-  'xsmall',
-  'xxsmall',
-] as const
+const BREAKPOINT_ORDER = ['xlarge', 'large', 'medium', 'small', 'xsmall', 'xxsmall'] as const
 
 const VIEWPORTS = BREAKPOINT_ORDER.reduce((acc, key) => {
   if (key in lightTheme.breakpoints) {
@@ -126,9 +118,8 @@ const parameters: Preview['parameters'] = {
 
 const getThemeColor = (theme: string) => {
   const { value: background, textColor } =
-    parameters['backgrounds'].values.find(
-      ({ name }: { name: string }) => name === theme,
-    ) ?? parameters['backgrounds'].values[0]
+    parameters['backgrounds'].values.find(({ name }: { name: string }) => name === theme) ??
+    parameters['backgrounds'].values[0]
 
   return { background, textColor }
 }

@@ -1,10 +1,8 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style } from '@vanilla-extract/css'
-import { recipe } from '@vanilla-extract/recipes'
-
-import { THUMB_SIZE } from './constant'
-
 import type { CSSProperties } from '@vanilla-extract/css'
+import { recipe } from '@vanilla-extract/recipes'
+import { THUMB_SIZE } from './constant'
 
 export const tooltipLeft = createVar()
 export const thumbColor = createVar()
@@ -188,8 +186,7 @@ const double = recipe({
         ...sliderThumbDefaultStyle,
         left: leftVar,
       },
-      '&::-moz-range-track, &::-ms-track, &:focus::-webkit-slider-runnable-track':
-        trackStyle,
+      '&::-moz-range-track, &::-ms-track, &:focus::-webkit-slider-runnable-track': trackStyle,
       '&::-webkit-slider-thumb': {
         ...sliderThumbDefaultStyle,
         left: leftVar,

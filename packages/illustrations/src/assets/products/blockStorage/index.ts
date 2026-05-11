@@ -10,9 +10,4 @@ const blockStorageKeyvisual = `${BASE_URL}/products/blockStorage/block-storage-k
 const blockStorageOriginal = `${BASE_URL}/products/blockStorage/block-storage-original.webp`
 const blockStorageWire = `${BASE_URL}/products/blockStorage/block-storage-wire.svg`
 
-export {
-  blockStorageContent,
-  blockStorageKeyvisual,
-  blockStorageOriginal,
-  blockStorageWire,
-}
+export { blockStorageContent, blockStorageKeyvisual, blockStorageOriginal, blockStorageWire }

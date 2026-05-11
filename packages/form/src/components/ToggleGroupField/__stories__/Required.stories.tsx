@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
-
 import { ToggleGroupField } from '..'
 import { Submit } from '../..'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Required: StoryFn<typeof ToggleGroupField> = args => (
   <Stack gap={1}>
@@ -13,11 +11,7 @@ export const Required: StoryFn<typeof ToggleGroupField> = args => (
         name="weekly-save"
         value="weekly-save"
       />
-      <ToggleGroupField.Toggle
-        label="Reboot server every day at 9 am"
-        name="daily-reboot"
-        value="daily-reboot"
-      />
+      <ToggleGroupField.Toggle label="Reboot server every day at 9 am" name="daily-reboot" value="daily-reboot" />
     </ToggleGroupField>
     <Submit>Submit</Submit>
   </Stack>

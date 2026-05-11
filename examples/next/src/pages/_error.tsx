@@ -5,11 +5,7 @@ type ErrorPageProps = {
 }
 
 const ErrorPage = ({ statusCode }: ErrorPageProps) => (
-  <div>
-    {statusCode
-      ? `SCWUI: An error ${statusCode} occurred on server`
-      : 'SCWUI: An error occurred on client'}
-  </div>
+  <div>{statusCode ? `SCWUI: An error ${statusCode} occurred on server` : 'SCWUI: An error occurred on client'}</div>
 )
 
 ErrorPage.getInitialProps = ({ res, err }: NextPageContext) => {

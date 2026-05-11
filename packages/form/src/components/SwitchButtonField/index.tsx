@@ -1,11 +1,10 @@
 'use client'
 
 import { SwitchButton } from '@ultraviolet/ui'
-import { useController } from 'react-hook-form'
-
-import type { BaseFieldProps } from '../../types'
 import type { ComponentProps } from 'react'
+import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, PathValue } from 'react-hook-form'
+import type { BaseFieldProps } from '../../types'
 
 type SwitchButtonFieldProps<
   TFieldValues extends FieldValues,
@@ -48,9 +47,7 @@ const SwitchButtonField = <
       }}
       onChange={event => {
         field.onChange(event)
-        onChange?.(
-          event.target as PathValue<TFieldValues, TFieldName> | undefined,
-        )
+        onChange?.(event.target as PathValue<TFieldValues, TFieldName> | undefined)
       }}
       onFocus={onFocus}
       size={size}

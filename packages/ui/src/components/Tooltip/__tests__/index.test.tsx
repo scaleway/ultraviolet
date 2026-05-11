@@ -2,11 +2,9 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme } from '@utils/test'
-import { describe, expect, it } from 'vitest'
-
-import { Tooltip } from '..'
-
 import type { ComponentProps } from 'react'
+import { describe, expect, it } from 'vitest'
+import { Tooltip } from '..'
 
 describe('tooltip', () => {
   it('should render correctly', () => {
@@ -23,13 +21,9 @@ describe('tooltip', () => {
   })
 
   it('should render correctly without text', () => {
-    const { asFragment } = renderWithTheme(
-      <Tooltip debounceDelay={0}>Hover me</Tooltip>,
-      consoleLightTheme,
-      {
-        container: document.body,
-      },
-    )
+    const { asFragment } = renderWithTheme(<Tooltip debounceDelay={0}>Hover me</Tooltip>, consoleLightTheme, {
+      container: document.body,
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 

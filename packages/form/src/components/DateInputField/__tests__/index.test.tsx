@@ -2,7 +2,6 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, vi, it } from 'vitest'
-
 import { DateInputField } from '..'
 
 describe('dateInputField', () => {
@@ -12,9 +11,7 @@ describe('dateInputField', () => {
   })
 
   it('should render correctly disabled', () => {
-    const { asFragment } = renderWithForm(
-      <DateInputField disabled name="test" />,
-    )
+    const { asFragment } = renderWithForm(<DateInputField disabled name="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -22,12 +19,7 @@ describe('dateInputField', () => {
     const onBlur = vi.fn()
     const onChange = vi.fn()
     const { asFragment, resultForm } = renderWithForm(
-      <DateInputField
-        name="test"
-        onBlur={onBlur}
-        onChange={onChange}
-        placeholder="YYYY-MM-DD"
-      />,
+      <DateInputField name="test" onBlur={onBlur} onChange={onChange} placeholder="YYYY-MM-DD" />,
       {
         defaultValues: {
           test: new Date('2022-09-01'),
@@ -42,9 +34,7 @@ describe('dateInputField', () => {
       expect(onChange).toHaveBeenCalledOnce()
     })
 
-    expect(resultForm.current.getValues('test')).toEqual(
-      new Date('2022-09-15T00:00:00.000Z'),
-    )
+    expect(resultForm.current.getValues('test')).toEqual(new Date('2022-09-15T00:00:00.000Z'))
 
     expect(asFragment()).toMatchSnapshot()
   }, 10_000)
@@ -53,13 +43,7 @@ describe('dateInputField', () => {
     const onBlur = vi.fn()
     const onChange = vi.fn()
     const { asFragment, resultForm } = renderWithForm(
-      <DateInputField
-        name="test"
-        onBlur={onBlur}
-        onChange={onChange}
-        placeholder="YYYY-MM-DD"
-        selectsRange
-      />,
+      <DateInputField name="test" onBlur={onBlur} onChange={onChange} placeholder="YYYY-MM-DD" selectsRange />,
       {
         defaultValues: {
           test: [new Date('2022-09-01'), new Date('2022-09-06')],
@@ -88,13 +72,7 @@ describe('dateInputField', () => {
     const onBlur = vi.fn()
     const onChange = vi.fn()
     const { asFragment, resultForm } = renderWithForm(
-      <DateInputField
-        clearable
-        name="test"
-        onBlur={onBlur}
-        onChange={onChange}
-        placeholder="YYYY-MM-DD"
-      />,
+      <DateInputField clearable name="test" onBlur={onBlur} onChange={onChange} placeholder="YYYY-MM-DD" />,
       {
         defaultValues: {
           test: new Date('2022-09-01'),

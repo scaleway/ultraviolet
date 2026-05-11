@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { FilterIcon } from '@ultraviolet/icons/FilterIcon'
-
 import { Chip } from '..'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Icons: StoryFn<typeof Chip> = ({ ...args }) => (
   <Stack direction="row" gap={1}>
@@ -21,8 +19,7 @@ export const Icons: StoryFn<typeof Chip> = ({ ...args }) => (
 Icons.parameters = {
   docs: {
     description: {
-      story:
-        'To add an icon on the chip, use `Chip.Icon` inside the children of `Chip`.',
+      story: 'To add an icon on the chip, use `Chip.Icon` inside the children of `Chip`.',
     },
   },
 }

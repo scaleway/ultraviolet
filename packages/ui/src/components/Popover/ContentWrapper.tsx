@@ -1,21 +1,13 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
+import type { ContentWrapperProps } from './types'
 import { popoverStyle } from './styles.css'
 
-import type { ContentWrapperProps } from './types'
-
-export const ContentWrapper = ({
-  title,
-  onClose,
-  children,
-  sentiment,
-}: ContentWrapperProps) => (
+export const ContentWrapper = ({ title, onClose, children, sentiment }: ContentWrapperProps) => (
   <Stack className={popoverStyle.stack} gap={1}>
     <Stack direction="row" justifyContent="space-between">
       <Text

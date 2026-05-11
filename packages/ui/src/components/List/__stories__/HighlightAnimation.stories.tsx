@@ -1,15 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
 import { useState } from 'react'
-
 import { List } from '..'
 import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { Stack } from '../../Stack'
-
 import { columns, data as DATA } from './resources'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 type Planets = {
   id: string
@@ -44,11 +41,7 @@ export const HighlightAnimation: StoryFn<typeof List> = ({ ...props }) => {
       </Row>
       <List {...props} columns={columns}>
         {data.map(planet => (
-          <List.Row
-            highlightAnimation={planet.isNew}
-            id={planet.id}
-            key={planet.id}
-          >
+          <List.Row highlightAnimation={planet.isNew} id={planet.id} key={planet.id}>
             <List.Cell>{planet.name}</List.Cell>
             <List.Cell>{planet.perihelion}AU</List.Cell>
             <List.Cell>{planet.aphelion}AU</List.Cell>

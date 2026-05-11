@@ -1,17 +1,11 @@
-import {
-  consoleDarkTheme,
-  consoleLightTheme,
-  ThemeProvider,
-} from '@ultraviolet/themes'
+import { consoleDarkTheme, consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import { extendTheme, Stack } from '@ultraviolet/ui'
+import type { AppProps } from 'next/app'
 import { useCallback, useLayoutEffect, useState } from 'react'
-
-import styles from '../../styles/grid.module.scss'
+import type { PropsWithChildren } from 'react'
 import Footer from '../components/Footer'
 import Head from '../components/Head'
 import Header from '../components/Header'
-
-import type { AppProps } from 'next/app'
 import '@ultraviolet/fonts/fonts.css'
 import '@ultraviolet/ui/styles'
 import '@ultraviolet/icons/styles'
@@ -19,8 +13,7 @@ import '@ultraviolet/themes/global'
 import '@ultraviolet/themes/dark.css'
 import '@ultraviolet/themes/darker.css'
 import '@ultraviolet/themes/light.css'
-
-import type { PropsWithChildren } from 'react'
+import styles from '../../styles/grid.module.scss'
 import '../../styles/global.css'
 
 type Themes = 'light' | 'dark'
@@ -69,12 +62,8 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   useLayoutEffect(() => {
     if (typeof window !== 'undefined') {
-      const matchtTheme = window.matchMedia('(prefers-color-scheme: dark)')
-        .matches
-        ? 'dark'
-        : 'light'
-      const storageTheme =
-        (localStorage.getItem(themeKey) as 'light' | 'dark') ?? matchtTheme
+      const matchtTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      const storageTheme = (localStorage.getItem(themeKey) as 'light' | 'dark') ?? matchtTheme
       if (storageTheme) {
         setTheme(storageTheme)
       }

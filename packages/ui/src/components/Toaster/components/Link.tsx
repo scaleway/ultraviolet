@@ -1,8 +1,7 @@
 'use client'
 
-import { Link } from '../../Link'
-
 import type { ComponentProps } from 'react'
+import { Link } from '../../Link'
 
 export const ToastLink = ({ ...props }: ComponentProps<typeof Link>) => (
   <Link {...props} prominence="strong" size="small" />

@@ -3,13 +3,6 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { createPortal } from 'react-dom'
-
-import { Stack } from '../../Stack'
-import { useModal } from '../ModalProvider'
-import { modalStyle, positionModal, topModal } from '../styles.css'
-
-import type { DialogProps } from '../types'
 import type {
   FocusEventHandler,
   KeyboardEvent,
@@ -17,6 +10,11 @@ import type {
   MouseEventHandler,
   ReactEventHandler,
 } from 'react'
+import { createPortal } from 'react-dom'
+import { Stack } from '../../Stack'
+import { useModal } from '../ModalProvider'
+import type { DialogProps } from '../types'
+import { modalStyle, positionModal, topModal } from '../styles.css'
 
 // Prevent default behaviour on Escape
 const stopCancel: ReactEventHandler = event => {
@@ -48,12 +46,7 @@ export const Dialog = ({
   const nonDefaultRef = useRef<HTMLDialogElement>(null)
   const dialogRef = ref ?? nonDefaultRef
   const onCloseRef = useRef(onClose)
-  const {
-    registerModal,
-    unregisterModal,
-    openedModals,
-    previsousOpenedModales,
-  } = useModal()
+  const { registerModal, unregisterModal, openedModals, previsousOpenedModales } = useModal()
 
   useEffect(() => {
     setIsVisible(true)
@@ -151,25 +144,15 @@ export const Dialog = ({
   )
 
   const handleFocusMove = useCallback(
-    (
-      event: KeyboardEvent,
-      firstFocusableEl: Element,
-      lastFocusableEl?: Element,
-    ) => {
+    (event: KeyboardEvent, firstFocusableEl: Element, lastFocusableEl?: Element) => {
       if (event.shiftKey) {
-        if (
-          document.activeElement === firstFocusableEl ||
-          document.activeElement === dialogRef.current
-        ) {
+        if (document.activeElement === firstFocusableEl || document.activeElement === dialogRef.current) {
           if (lastFocusableEl instanceof HTMLElement) {
             lastFocusableEl.focus()
           }
           event.preventDefault()
         }
-      } else if (
-        document.activeElement === lastFocusableEl ||
-        document.activeElement === dialogRef.current
-      ) {
+      } else if (document.activeElement === lastFocusableEl || document.activeElement === dialogRef.current) {
         if (firstFocusableEl instanceof HTMLElement) {
           firstFocusableEl.focus()
         }
@@ -213,29 +196,15 @@ export const Dialog = ({
     [dialogRef, handleFocusMove],
   )
 
-  if (
-    modalAbove?.ref &&
-    typeof modalAbove.ref === 'object' &&
-    'current' in modalAbove.ref &&
-    currentModalHeight
-  ) {
-    top =
-      (modalAbove?.ref?.current?.offsetHeight ?? 0) / 2 -
-      currentModalHeight / 2 +
-      20
+  if (modalAbove?.ref && typeof modalAbove.ref === 'object' && 'current' in modalAbove.ref && currentModalHeight) {
+    top = (modalAbove?.ref?.current?.offsetHeight ?? 0) / 2 - currentModalHeight / 2 + 20
   }
 
-  const animation =
-    openedModals.length > 1 &&
-    position === 0 &&
-    previsousOpenedModales.length < openedModals.length
+  const animation = openedModals.length > 1 && position === 0 && previsousOpenedModales.length < openedModals.length
 
   return createPortal(
     <div
-      className={cn(
-        backdropClassName,
-        modalStyle.backdrop({ open: true, visible: isVisible }),
-      )}
+      className={cn(backdropClassName, modalStyle.backdrop({ open: true, visible: isVisible }))}
       data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
       data-visible={isVisible}
       onClick={handleClose}
@@ -276,18 +245,8 @@ export const Dialog = ({
       >
         {image ? (
           <>
-            <Stack
-              alignItems="flex-end"
-              className={modalStyle.imageContainer}
-              justifyContent="center"
-            >
-              <img
-                alt="illustration"
-                className={modalStyle.image}
-                height="auto"
-                src={image}
-                width="auto"
-              />
+            <Stack alignItems="flex-end" className={modalStyle.imageContainer} justifyContent="center">
+              <img alt="illustration" className={modalStyle.image} height="auto" src={image} width="auto" />
             </Stack>
             <Stack className={modalStyle.content} gap={5}>
               {children}

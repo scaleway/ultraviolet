@@ -7,8 +7,7 @@ Open.args = { ...Template.args, header: 'I am open', open: true }
 Open.parameters = {
   docs: {
     description: {
-      story:
-        'For an unconctrolled ExpandableCard open by default, use prop `open`. Otherwise use prop `expanded`.',
+      story: 'For an unconctrolled ExpandableCard open by default, use prop `open`. Otherwise use prop `expanded`.',
     },
   },
 }

@@ -3,15 +3,12 @@
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn } from '@ultraviolet/utils'
 import { useReducer } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { GlobalAlertLink } from './GlobalAlertLink'
 import { globalAlertStyle } from './styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type GlobalAlertProps = {
   children: ReactNode
@@ -56,22 +53,12 @@ export const GlobalAlert = ({
       justifyContent="center"
       style={style}
     >
-      <Stack
-        alignItems="center"
-        direction="row"
-        gap={2}
-        justifyContent="center"
-      >
+      <Stack alignItems="center" direction="row" gap={2} justifyContent="center">
         <Text as="p" sentiment="white" variant="bodySmall">
           {children}
         </Text>
         {onClickButton && buttonText ? (
-          <Button
-            onClick={onClickButton}
-            sentiment="white"
-            size="small"
-            variant="filled"
-          >
+          <Button onClick={onClickButton} sentiment="white" size="small" variant="filled">
             {buttonText}
           </Button>
         ) : null}

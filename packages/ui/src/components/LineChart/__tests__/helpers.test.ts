@@ -1,14 +1,5 @@
 import { describe, expect, it } from 'vitest'
-
-import {
-  getAverage,
-  getCurrent,
-  getMax,
-  getMaxChartValue,
-  getMin,
-  getMinChartValue,
-  getSelected,
-} from '../helpers'
+import { getAverage, getCurrent, getMax, getMaxChartValue, getMin, getMinChartValue, getSelected } from '../helpers'
 
 const chartValues = [
   {
@@ -69,10 +60,7 @@ const chartValuesFloat = [
 ]
 
 const values = [20, 38, 70, 40, 30, 20, 30, 80, 70, 50, 60, 65, 68, 65, 20]
-const valuesFloatMix = [
-  20.7, 38.823_23, 72, 40.7, 30.3, 20.7, 30.1, 80.8, 70, 50.2, 63, 65.1, 68.22,
-  65.3, 19.1,
-]
+const valuesFloatMix = [20.7, 38.823_23, 72, 40.7, 30.3, 20.7, 30.1, 80.8, 70, 50.2, 63, 65.1, 68.22, 65.3, 19.1]
 const valuesString = valuesFloatMix.map(x => x.toString())
 const emptyValues: never[] = []
 const errorValues = undefined

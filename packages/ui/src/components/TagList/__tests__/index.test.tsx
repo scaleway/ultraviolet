@@ -2,9 +2,7 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { afterAll, describe, expect, it, vi } from 'vitest'
-
 import { TagList } from '..'
-
 import type { TagType } from '..'
 
 // - This function mocks the offsetWidth of DOM elements:
@@ -12,21 +10,14 @@ import type { TagType } from '..'
 // so it does not render the elements in any way to be able to know their size or position.
 // - These mocks are specifically tailored for the running code
 // - If the code changes, these mocks may need to be updated accordingly
-const mockOffsetWidth = (
-  dataTestId = 'taglist',
-  customContainerWidth?: number,
-) => {
+const mockOffsetWidth = (dataTestId = 'taglist', customContainerWidth?: number) => {
   const TAGS_PARENT_WIDTH = 500
   const TAG_CHAR_WIDTH = 6
   const POPOVER_TRIGGER_WIDTH = 50
 
   const containerWidth = customContainerWidth ?? TAGS_PARENT_WIDTH
 
-  const mockOffsetWidthFunction = vi.spyOn(
-    HTMLElement.prototype,
-    'offsetWidth',
-    'get',
-  )
+  const mockOffsetWidthFunction = vi.spyOn(HTMLElement.prototype, 'offsetWidth', 'get')
 
   mockOffsetWidthFunction.mockImplementation(function get(this: HTMLElement) {
     if (this.dataset['testid'] === dataTestId) {
@@ -50,11 +41,7 @@ const mockOffsetWidth = (
       return 8 + text.length * TAG_CHAR_WIDTH + 8
     }
 
-    if (
-      this.tagName === 'DIV' &&
-      this.children.length === 1 &&
-      this.children[0].tagName === 'BUTTON'
-    ) {
+    if (this.tagName === 'DIV' && this.children.length === 1 && this.children[0].tagName === 'BUTTON') {
       // This is a copiable tag
       const text = this.childNodes[0].textContent ?? ''
 
@@ -92,9 +79,7 @@ describe('tagList', () => {
 
     mockOffsetWidth()
 
-    const { asFragment } = renderWithTheme(
-      <TagList data-testid="taglist" popoverTitle="Additional" tags={tags} />,
-    )
+    const { asFragment } = renderWithTheme(<TagList data-testid="taglist" popoverTitle="Additional" tags={tags} />)
 
     expect(screen.getByText('+1')).toBeInTheDocument()
     expect(screen.getByTestId('scaleway')).toBeInTheDocument()
@@ -105,9 +90,7 @@ describe('tagList', () => {
   it('renders correctly with no tags', () => {
     mockOffsetWidth()
 
-    const { asFragment } = renderWithTheme(
-      <TagList data-testid="taglist" popoverTitle="Additional" />,
-    )
+    const { asFragment } = renderWithTheme(<TagList data-testid="taglist" popoverTitle="Additional" />)
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -118,12 +101,7 @@ describe('tagList', () => {
     mockOffsetWidth()
 
     const { asFragment } = renderWithTheme(
-      <TagList
-        data-testid="taglist"
-        popoverPlacement="top"
-        popoverTitle="Additional"
-        tags={tags}
-      />,
+      <TagList data-testid="taglist" popoverPlacement="top" popoverTitle="Additional" tags={tags} />,
     )
 
     expect(asFragment()).toMatchSnapshot()
@@ -135,12 +113,7 @@ describe('tagList', () => {
     mockOffsetWidth()
 
     const { asFragment } = renderWithTheme(
-      <TagList
-        data-testid="taglist"
-        popoverTitle="Additional"
-        tags={tags}
-        threshold={2}
-      />,
+      <TagList data-testid="taglist" popoverTitle="Additional" tags={tags} threshold={2} />,
     )
 
     expect(screen.getByTestId('cloud')).toBeInTheDocument()
@@ -154,12 +127,7 @@ describe('tagList', () => {
     mockOffsetWidth()
 
     const { asFragment } = renderWithTheme(
-      <TagList
-        data-testid="taglist"
-        popoverTitle="Additional"
-        tags={tags}
-        threshold={2}
-      />,
+      <TagList data-testid="taglist" popoverTitle="Additional" tags={tags} threshold={2} />,
     )
 
     expect(screen.queryByText('provider')).not.toBeInTheDocument()
@@ -173,12 +141,7 @@ describe('tagList', () => {
     mockOffsetWidth('taglist', 50)
 
     const { asFragment } = renderWithTheme(
-      <TagList
-        data-testid="taglist"
-        popoverTitle="Additional"
-        tags={tags}
-        threshold={2}
-      />,
+      <TagList data-testid="taglist" popoverTitle="Additional" tags={tags} threshold={2} />,
     )
 
     expect(screen.getByTestId('scaleway')).toBeInTheDocument()
@@ -192,9 +155,7 @@ describe('tagList', () => {
 
     mockOffsetWidth('taglist', 50)
 
-    const { asFragment } = renderWithTheme(
-      <TagList data-testid="taglist" popoverTitle="Additional" tags={tags} />,
-    )
+    const { asFragment } = renderWithTheme(<TagList data-testid="taglist" popoverTitle="Additional" tags={tags} />)
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -205,13 +166,7 @@ describe('tagList', () => {
     mockOffsetWidth()
 
     const { asFragment } = renderWithTheme(
-      <TagList
-        data-testid="taglist"
-        maxLength={10}
-        popoverTitle="Additional"
-        tags={tags}
-        threshold={2}
-      />,
+      <TagList data-testid="taglist" maxLength={10} popoverTitle="Additional" tags={tags} threshold={2} />,
     )
 
     expect(screen.getByTestId('scaleway')).toBeInTheDocument()
@@ -227,12 +182,7 @@ describe('tagList', () => {
     mockOffsetWidth()
 
     const { asFragment } = renderWithTheme(
-      <TagList
-        data-testid="taglist"
-        maxLength={5}
-        popoverTitle="Additional"
-        tags={tags}
-      />,
+      <TagList data-testid="taglist" maxLength={5} popoverTitle="Additional" tags={tags} />,
     )
 
     expect(screen.getByTestId('scaleway')).toBeInTheDocument()
@@ -241,25 +191,12 @@ describe('tagList', () => {
   })
 
   it('hide items after maxLength', () => {
-    const tags = [
-      'scaleway',
-      'cloud',
-      'provider',
-      'database',
-      'private-network',
-      'instances',
-    ]
+    const tags = ['scaleway', 'cloud', 'provider', 'database', 'private-network', 'instances']
 
     mockOffsetWidth('taglist', 1000)
 
     const { asFragment } = renderWithTheme(
-      <TagList
-        data-testid="taglist"
-        maxLength={30}
-        popoverTitle="Additional"
-        tags={tags}
-        threshold={100}
-      />,
+      <TagList data-testid="taglist" maxLength={30} popoverTitle="Additional" tags={tags} threshold={100} />,
     )
 
     expect(screen.getByTestId('database')).toBeInTheDocument()
@@ -275,13 +212,7 @@ describe('tagList', () => {
     mockOffsetWidth()
 
     const { asFragment } = renderWithTheme(
-      <TagList
-        data-testid="taglist"
-        multiline
-        popoverTitle="Additional"
-        tags={tags}
-        threshold={2}
-      />,
+      <TagList data-testid="taglist" multiline popoverTitle="Additional" tags={tags} threshold={2} />,
     )
 
     expect(asFragment()).toMatchSnapshot()
@@ -293,13 +224,7 @@ describe('tagList', () => {
     mockOffsetWidth()
 
     const { asFragment } = renderWithTheme(
-      <TagList
-        copiable
-        data-testid="taglist"
-        popoverTitle="Additional"
-        tags={tags}
-        threshold={2}
-      />,
+      <TagList copiable data-testid="taglist" popoverTitle="Additional" tags={tags} threshold={2} />,
     )
 
     expect(screen.getByRole('button', { name: 'scaleway' })).toBeInTheDocument()
@@ -314,36 +239,18 @@ describe('tagList', () => {
     mockOffsetWidth()
 
     const { asFragment } = renderWithTheme(
-      <TagList
-        copiable
-        data-testid="taglist"
-        popoverTitle="Additional"
-        tags={tags}
-        threshold={4}
-      />,
+      <TagList copiable data-testid="taglist" popoverTitle="Additional" tags={tags} threshold={4} />,
     )
 
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly when clicking on popover', async () => {
-    const tags: TagType[] = [
-      { icon: 'id', label: 'smooth' },
-      'code',
-      { icon: 'lock', label: 'hello' },
-      'world',
-    ]
+    const tags: TagType[] = [{ icon: 'id', label: 'smooth' }, 'code', { icon: 'lock', label: 'hello' }, 'world']
 
     mockOffsetWidth()
 
-    renderWithTheme(
-      <TagList
-        data-testid="taglist"
-        popoverTitle="Additional"
-        tags={tags}
-        threshold={1}
-      />,
-    )
+    renderWithTheme(<TagList data-testid="taglist" popoverTitle="Additional" tags={tags} threshold={1} />)
 
     expect(screen.queryByText('Additional')).not.toBeInTheDocument()
 
@@ -371,14 +278,7 @@ describe('tagList', () => {
 
     mockOffsetWidth()
 
-    renderWithTheme(
-      <TagList
-        data-testid="taglist"
-        popoverTitle="Additional"
-        tags={tags}
-        threshold={1}
-      />,
-    )
+    renderWithTheme(<TagList data-testid="taglist" popoverTitle="Additional" tags={tags} threshold={1} />)
 
     expect(screen.queryByText('Additional')).not.toBeInTheDocument()
 
@@ -397,25 +297,12 @@ describe('tagList', () => {
   })
 
   it('renders correctly a scrollable popover with non default popoverMaxHeight', async () => {
-    const tags: TagType[] = [
-      'very',
-      ...new Array<string>(50).fill('item'),
-      'tooltip',
-      'scaleway',
-      'paris',
-      'cloud',
-    ]
+    const tags: TagType[] = ['very', ...new Array<string>(50).fill('item'), 'tooltip', 'scaleway', 'paris', 'cloud']
 
     mockOffsetWidth()
 
     const { asFragment } = renderWithTheme(
-      <TagList
-        data-testid="taglist"
-        popoverMaxHeight="100px"
-        popoverTitle="Additional"
-        tags={tags}
-        threshold={5}
-      />,
+      <TagList data-testid="taglist" popoverMaxHeight="100px" popoverTitle="Additional" tags={tags} threshold={5} />,
     )
 
     expect(screen.queryByText('Additional')).not.toBeInTheDocument()

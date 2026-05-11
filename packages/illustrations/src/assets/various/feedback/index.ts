@@ -13,12 +13,4 @@ const successLight = `${BASE_URL}/various/feedback/success-light.webp`
 const warningDark = `${BASE_URL}/various/feedback/warning-dark.webp`
 const warningLight = `${BASE_URL}/various/feedback/warning-light.webp`
 
-export {
-  dangerDark,
-  dangerLight,
-  notFound,
-  successDark,
-  successLight,
-  warningDark,
-  warningLight,
-}
+export { dangerDark, dangerLight, notFound, successDark, successLight, warningDark, warningLight }

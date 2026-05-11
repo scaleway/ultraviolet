@@ -1,6 +1,5 @@
-import { WireIllustration } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { WireIllustration } from '..'
 
 export default {
   component: WireIllustration,

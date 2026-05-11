@@ -4,7 +4,6 @@ import { renderWithTheme } from '@utils/test'
 import { es, fr, ru } from 'date-fns/locale'
 import tk from 'timekeeper'
 import { describe, expect, it, vi } from 'vitest'
-
 import { DateInput } from '..'
 
 tk.freeze(new Date(1_609_503_120_000))
@@ -31,41 +30,27 @@ describe('dateInput', () => {
   })
 
   it('renders correctly disabled', () => {
-    const { asFragment } = renderWithTheme(
-      <DateInput disabled label="Date" onChange={() => {}} />,
-    )
+    const { asFragment } = renderWithTheme(<DateInput disabled label="Date" onChange={() => {}} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly required', () => {
-    const { asFragment } = renderWithTheme(
-      <DateInput label="Date" onChange={() => {}} required />,
-    )
+    const { asFragment } = renderWithTheme(<DateInput label="Date" onChange={() => {}} required />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly error', () => {
-    const { asFragment } = renderWithTheme(
-      <DateInput error="error" label="Date" onChange={() => {}} />,
-    )
+    const { asFragment } = renderWithTheme(<DateInput error="error" label="Date" onChange={() => {}} />)
     expect(asFragment()).toMatchSnapshot()
   })
   it('renders correctly error disabled', () => {
-    const { asFragment } = renderWithTheme(
-      <DateInput disabled error="error" label="Date" onChange={() => {}} />,
-    )
+    const { asFragment } = renderWithTheme(<DateInput disabled error="error" label="Date" onChange={() => {}} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly error disabled required', () => {
     const { asFragment } = renderWithTheme(
-      <DateInput
-        disabled
-        error="error"
-        label="Date"
-        onChange={() => {}}
-        required
-      />,
+      <DateInput disabled error="error" label="Date" onChange={() => {}} required />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -83,36 +68,28 @@ describe('dateInput', () => {
   })
 
   it('renders correctly with date-fns locale fr', async () => {
-    const { asFragment } = renderWithTheme(
-      <DateInput label="Date" locale={fr} onChange={() => {}} />,
-    )
+    const { asFragment } = renderWithTheme(<DateInput label="Date" locale={fr} onChange={() => {}} />)
     const buttonContainer = screen.getByLabelText('Date')
     await userEvent.click(buttonContainer)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with date-fns locale es', async () => {
-    const { asFragment } = renderWithTheme(
-      <DateInput label="Date" locale={es} onChange={() => {}} />,
-    )
+    const { asFragment } = renderWithTheme(<DateInput label="Date" locale={es} onChange={() => {}} />)
     const buttonContainer = screen.getByLabelText('Date')
     await userEvent.click(buttonContainer)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with date-fns locale ru', async () => {
-    const { asFragment } = renderWithTheme(
-      <DateInput label="Date" locale={ru} onChange={() => {}} />,
-    )
+    const { asFragment } = renderWithTheme(<DateInput label="Date" locale={ru} onChange={() => {}} />)
     const buttonContainer = screen.getByLabelText('Date')
     await userEvent.click(buttonContainer)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('render correctly with showMonthYearPicker', () => {
-    const { asFragment } = renderWithTheme(
-      <DateInput label="Date" onChange={() => {}} showMonthYearPicker />,
-    )
+    const { asFragment } = renderWithTheme(<DateInput label="Date" onChange={() => {}} showMonthYearPicker />)
     expect(asFragment()).toMatchSnapshot()
   })
   it('render correctly with showMonthYearPicker with default date', async () => {
@@ -132,16 +109,12 @@ describe('dateInput', () => {
   })
 
   it('renders correctly with input = "calendar', () => {
-    const { asFragment } = renderWithTheme(
-      <DateInput input="calendar" label="Date" onChange={() => {}} />,
-    )
+    const { asFragment } = renderWithTheme(<DateInput input="calendar" label="Date" onChange={() => {}} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with input = "calendar disabled', () => {
-    const { asFragment } = renderWithTheme(
-      <DateInput disabled input="calendar" label="Date" onChange={() => {}} />,
-    )
+    const { asFragment } = renderWithTheme(<DateInput disabled input="calendar" label="Date" onChange={() => {}} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -395,13 +368,7 @@ describe('dateInput', () => {
 
   it('handle correctly type in input', async () => {
     const mockOnChange = vi.fn()
-    renderWithTheme(
-      <DateInput
-        label="Date"
-        onChange={mockOnChange}
-        placeholder="YYYY-MM-DD"
-      />,
-    )
+    renderWithTheme(<DateInput label="Date" onChange={mockOnChange} placeholder="YYYY-MM-DD" />)
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
@@ -414,14 +381,7 @@ describe('dateInput', () => {
 
   it('handle correctly type in input with select range', async () => {
     const mockOnChange = vi.fn()
-    renderWithTheme(
-      <DateInput
-        label="Date"
-        onChange={mockOnChange}
-        placeholder="YYYY-MM-DD"
-        selectsRange
-      />,
-    )
+    renderWithTheme(<DateInput label="Date" onChange={mockOnChange} placeholder="YYYY-MM-DD" selectsRange />)
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
@@ -434,14 +394,7 @@ describe('dateInput', () => {
 
   it('handle correctly type in input with showMonthYearPicker', async () => {
     const mockOnChange = vi.fn()
-    renderWithTheme(
-      <DateInput
-        label="Date"
-        onChange={mockOnChange}
-        placeholder="YYYY-MM-DD"
-        showMonthYearPicker
-      />,
-    )
+    renderWithTheme(<DateInput label="Date" onChange={mockOnChange} placeholder="YYYY-MM-DD" showMonthYearPicker />)
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
@@ -456,13 +409,7 @@ describe('dateInput', () => {
   it('handle correctly type in input with select range and showMonthYearPicker', async () => {
     const mockOnChange = vi.fn()
     renderWithTheme(
-      <DateInput
-        label="Date"
-        onChange={mockOnChange}
-        placeholder="YYYY-MM-DD"
-        selectsRange
-        showMonthYearPicker
-      />,
+      <DateInput label="Date" onChange={mockOnChange} placeholder="YYYY-MM-DD" selectsRange showMonthYearPicker />,
     )
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')

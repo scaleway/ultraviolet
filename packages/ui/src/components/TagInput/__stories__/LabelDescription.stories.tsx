@@ -1,23 +1,14 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { AlertCircleOutlineIcon } from '@ultraviolet/icons/AlertCircleOutlineIcon'
-
+import type { ComponentProps } from 'react'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
 import { Tooltip } from '../../Tooltip'
 import { TagInput } from '../index'
 
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
-
-export const LabelDescription: StoryFn = (
-  args: ComponentProps<typeof TagInput>,
-) => (
+export const LabelDescription: StoryFn = (args: ComponentProps<typeof TagInput>) => (
   <Stack gap={2}>
-    <TagInput
-      {...args}
-      label="Advanced Label"
-      labelDescription={<Badge size="small">New</Badge>}
-      required
-    />
+    <TagInput {...args} label="Advanced Label" labelDescription={<Badge size="small">New</Badge>} required />
     <TagInput
       {...args}
       label="Advanced Label"

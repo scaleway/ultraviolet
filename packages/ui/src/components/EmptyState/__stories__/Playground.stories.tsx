@@ -1,7 +1,5 @@
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
-
 import { Button } from '../../Button'
-
 import kapsuleLogo from './illustrations/kapsule.webp'
 import { Template } from './Template.stories'
 

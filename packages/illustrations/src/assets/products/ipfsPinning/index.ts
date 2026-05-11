@@ -10,9 +10,4 @@ const ipfsPinningKeyvisual = `${BASE_URL}/products/ipfsPinning/ipfs-pinning-keyv
 const ipfsPinningOriginal = `${BASE_URL}/products/ipfsPinning/ipfs-pinning-original.webp`
 const ipfsPinningWire = `${BASE_URL}/products/ipfsPinning/ipfs-pinning-wire.svg`
 
-export {
-  ipfsPinningContent,
-  ipfsPinningKeyvisual,
-  ipfsPinningOriginal,
-  ipfsPinningWire,
-}
+export { ipfsPinningContent, ipfsPinningKeyvisual, ipfsPinningOriginal, ipfsPinningWire }

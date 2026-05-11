@@ -10,9 +10,4 @@ const domainsAndDnsKeyvisual = `${BASE_URL}/products/domainsAndDns/domains-and-d
 const domainsAndDnsOriginal = `${BASE_URL}/products/domainsAndDns/domains-and-dns-original.webp`
 const domainsAndDnsWire = `${BASE_URL}/products/domainsAndDns/domains-and-dns-wire.svg`
 
-export {
-  domainsAndDnsContent,
-  domainsAndDnsKeyvisual,
-  domainsAndDnsOriginal,
-  domainsAndDnsWire,
-}
+export { domainsAndDnsContent, domainsAndDnsKeyvisual, domainsAndDnsOriginal, domainsAndDnsWire }

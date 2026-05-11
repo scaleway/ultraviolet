@@ -1,8 +1,6 @@
-import { Link } from '../index'
-
-import { containerStoryLink } from './styles.css'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { Link } from '../index'
+import { containerStoryLink } from './styles.css'
 
 export const OneLine: StoryFn<typeof Link> = args => {
   const { render, ...props } = args

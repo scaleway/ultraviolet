@@ -1,20 +1,11 @@
 import { cn } from '@ultraviolet/utils'
-
 import { Checkbox } from '../../../Checkbox'
 import { Text } from '../../../Text'
 import { useSelectInput } from '../../SelectInputProvider'
 import { selectInputStyle } from '../../styles.css'
 
 export const Group = ({ group, index }: { group: string; index: number }) => {
-  const {
-    selectAllGroup,
-    selectedData,
-    size,
-    setSelectedData,
-    multiselect,
-    options,
-    onChange,
-  } = useSelectInput()
+  const { selectAllGroup, selectedData, size, setSelectedData, multiselect, options, onChange } = useSelectInput()
 
   const handleSelectGroup = () => {
     if (multiselect) {
@@ -22,17 +13,14 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
       if (!Array.isArray(options)) {
         if (selectedData.selectedGroups.includes(group)) {
           const newSelectedValues = [...selectedData.selectedValues].filter(
-            selectedValue =>
-              !options[group].find(option => option.value === selectedValue),
+            selectedValue => !options[group].find(option => option.value === selectedValue),
           )
           onChange?.(newSelectedValues)
         } else {
           const newSelectedValues = [...selectedData.selectedValues]
 
           options[group].map(option =>
-            newSelectedValues.includes(option.value) || option.disabled
-              ? null
-              : newSelectedValues.push(option.value),
+            newSelectedValues.includes(option.value) || option.disabled ? null : newSelectedValues.push(option.value),
           )
           onChange?.(newSelectedValues)
         }
@@ -41,10 +29,7 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
   }
 
   return (
-    <div
-      className={selectInputStyle.dropdownGroupWrapper}
-      id={selectAllGroup ? 'items' : undefined}
-    >
+    <div className={selectInputStyle.dropdownGroupWrapper} id={selectAllGroup ? 'items' : undefined}>
       {group ? (
         <button
           className={cn(

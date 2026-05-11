@@ -1,6 +1,5 @@
 import { FranceFlag } from '@ultraviolet/icons/flags/FranceFlag'
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
-
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
 import { Tooltip } from '../../../components/Tooltip'
@@ -44,13 +43,7 @@ export const categoryM2 = {
   category: 'Configuration',
   subCategories: [
     {
-      details: [
-        'Apple M2 Chip',
-        '8 Cores CPU 8 cores GPU',
-        '256 GB SSD storage',
-        '16 GB memory',
-        '1 GB bandwidth',
-      ],
+      details: ['Apple M2 Chip', '8 Cores CPU 8 cores GPU', '256 GB SSD storage', '16 GB memory', '1 GB bandwidth'],
       price: 124.1,
       title: 'M2-M',
     },
@@ -73,9 +66,7 @@ export const categoryM2 = {
 
 export const categoryOptions = {
   category: 'Options',
-  subCategories: [
-    { customContent: 'Included', title: '0.5 Gbps public bandwidth' },
-  ],
+  subCategories: [{ customContent: 'Included', title: '0.5 Gbps public bandwidth' }],
 }
 
 export const negativeItem = {

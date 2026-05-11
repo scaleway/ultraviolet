@@ -2,20 +2,14 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useEffect, useState } from 'react'
-
+import type { ComponentProps, CSSProperties } from 'react'
 import { List } from '../../components/List'
-
 import { Cell } from './components/Cell'
 import { Row } from './components/Row'
 import { OfferListProvider } from './OfferListProvider'
 import { offerListStyle } from './styles.css'
 
-import type { ComponentProps, CSSProperties } from 'react'
-
-type OfferListProps = Omit<
-  ComponentProps<typeof List>,
-  'selectable' | 'onSelectedChange' | 'colMode'
-> & {
+type OfferListProps = Omit<ComponentProps<typeof List>, 'selectable' | 'onSelectedChange' | 'colMode'> & {
   /**
    * Make offerList selectable by choosing its type
    */
@@ -46,12 +40,8 @@ export const OfferList = ({
   style,
   'data-testid': dataTestId,
 }: OfferListProps) => {
-  const [radioSelectedRow, setRadioSelectedRow] = useState(
-    typeof selected === 'string' ? selected : undefined,
-  )
-  const [checkboxSelectedRows, setCheckboxSelectedRows] = useState(
-    Array.isArray(selected) ? selected : [],
-  )
+  const [radioSelectedRow, setRadioSelectedRow] = useState(typeof selected === 'string' ? selected : undefined)
+  const [checkboxSelectedRows, setCheckboxSelectedRows] = useState(Array.isArray(selected) ? selected : [])
 
   const computedColumns = [
     {

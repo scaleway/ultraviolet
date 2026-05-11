@@ -1,13 +1,10 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-
-import { Tooltip } from '../Tooltip'
-
-import { statusStyle } from './styles.css'
-
-import type { SENTIMENTS } from './constant'
 import type { CSSProperties } from 'react'
+import { Tooltip } from '../Tooltip'
+import type { SENTIMENTS } from './constant'
+import { statusStyle } from './styles.css'
 
 type StatusSentiment = (typeof SENTIMENTS)[number]
 
@@ -37,14 +34,8 @@ export const Status = ({
   style,
 }: StatusProps) => (
   <Tooltip text={tooltip}>
-    <span
-      className={cn(className, statusStyle.status({ notification }))}
-      data-testid={dataTestId}
-      style={style}
-    >
-      {animated ? (
-        <span className={statusStyle.animatedCircle({ sentiment })} />
-      ) : null}
+    <span className={cn(className, statusStyle.status({ notification }))} data-testid={dataTestId} style={style}>
+      {animated ? <span className={statusStyle.animatedCircle({ sentiment })} /> : null}
       <span className={statusStyle.circle({ sentiment })} />
     </span>
   </Tooltip>

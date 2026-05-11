@@ -1,7 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-
 import { fadeIn } from '../../../utils'
 import { ANIMATION_DURATION, ANIMATION_EASING } from '../constants'
 import { widthNavigationContainer } from '../variables.css'

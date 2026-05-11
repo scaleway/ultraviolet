@@ -1,6 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { EastIcon } from '@ultraviolet/icons/EastIcon'
-
+import type { ComponentProps } from 'react'
 import { SteppedListCard } from '..'
 import { Button } from '../../../components/Button'
 import { Snippet } from '../../../components/Snippet'
@@ -8,12 +9,7 @@ import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
 import { blockStorageWire } from '../__mocks__/blockStorageWire'
 
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
-
-export const IconStep: StoryFn<
-  ComponentProps<typeof SteppedListCard>
-> = props => (
+export const IconStep: StoryFn<ComponentProps<typeof SteppedListCard>> = props => (
   <SteppedListCard {...props}>
     <SteppedListCard.Step
       image={blockStorageWire}
@@ -27,14 +23,12 @@ export const IconStep: StoryFn<
       {nextStep => (
         <Stack direction="column" gap={2}>
           <Snippet {...props}>
-            pnpm add @ultraviolet/ui; pnpm install; pnpm start; pnpm build; pnpm
-            test:unit; pnpm test:visual; pnpm build:storybook;
+            pnpm add @ultraviolet/ui; pnpm install; pnpm start; pnpm build; pnpm test:unit; pnpm test:visual; pnpm
+            build:storybook;
           </Snippet>
           <Text as="div" variant="body">
-            We are thrilled to count you as a Scaleway user! We are looking
-            forward to providing you with the very best experience. To order
-            resources to get started with your project, we need you to complete
-            a few more steps.
+            We are thrilled to count you as a Scaleway user! We are looking forward to providing you with the very best
+            experience. To order resources to get started with your project, we need you to complete a few more steps.
           </Text>
           <Stack direction="row" gap={2}>
             <Button sentiment="primary">Action 1</Button>
@@ -60,11 +54,7 @@ export const IconStep: StoryFn<
         </Stack>
       )}
     </SteppedListCard.Step>
-    <SteppedListCard.Step
-      image={blockStorageWire}
-      stepNumber={2}
-      subHeader="Second step"
-    >
+    <SteppedListCard.Step image={blockStorageWire} stepNumber={2} subHeader="Second step">
       {nextStep => (
         <Stack direction="column" gap={2}>
           Second step description
@@ -72,18 +62,12 @@ export const IconStep: StoryFn<
             <Button onClick={() => nextStep()} variant="outlined">
               Next step
             </Button>
-            <Button onClick={() => nextStep(true)}>
-              Next step and validate
-            </Button>
+            <Button onClick={() => nextStep(true)}>Next step and validate</Button>
           </Stack>
         </Stack>
       )}
     </SteppedListCard.Step>
-    <SteppedListCard.Step
-      image={blockStorageWire}
-      stepNumber={3}
-      subHeader="Last step"
-    >
+    <SteppedListCard.Step image={blockStorageWire} stepNumber={3} subHeader="Last step">
       {nextStep => (
         <Stack gap={2}>
           Second step description

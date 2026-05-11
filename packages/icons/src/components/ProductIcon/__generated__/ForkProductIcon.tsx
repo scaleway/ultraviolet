@@ -6,17 +6,11 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const ForkProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const ForkProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="ForkProductIcon">
-    <g
-      className="sentiment=original, size=xlarge, disabled=false"
-      clipPath="url(#a)"
-    >
+    <g className="sentiment=original, size=xlarge, disabled=false" clipPath="url(#a)">
       <g className=".Square">
         <g className="fillWeak">
           <path

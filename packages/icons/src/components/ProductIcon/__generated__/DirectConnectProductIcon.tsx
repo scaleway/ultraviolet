@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const DirectConnectProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const DirectConnectProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="DirectConnectProductIcon">
     <g className="Direct-Connect">
       <g className=".Square">

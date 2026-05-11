@@ -1,6 +1,5 @@
-import { Slider } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { Slider } from '..'
 
 export const Input: StoryFn<typeof Slider> = args => <Slider {...args} />
 
@@ -16,8 +15,7 @@ Input.args = {
 Input.parameters = {
   docs: {
     description: {
-      story:
-        'To allow the user to directly write the desired value, set prop `input` to `true`.',
+      story: 'To allow the user to directly write the desired value, set prop `input` to `true`.',
     },
   },
 }

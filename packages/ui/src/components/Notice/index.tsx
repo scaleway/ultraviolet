@@ -2,12 +2,9 @@
 
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { cn } from '@ultraviolet/utils'
-
-import { Text } from '../Text'
-
-import { noticeStyle } from './styles.css'
-
 import type { CSSProperties, ReactNode } from 'react'
+import { Text } from '../Text'
+import { noticeStyle } from './styles.css'
 
 type NoticeProps = {
   children: ReactNode
@@ -19,12 +16,7 @@ type NoticeProps = {
 /**
  * A Notice is used to display a short message to the user.
  */
-export const Notice = ({
-  children,
-  className,
-  'data-testid': dataTestId,
-  style,
-}: NoticeProps) => (
+export const Notice = ({ children, className, 'data-testid': dataTestId, style }: NoticeProps) => (
   <Text
     as="span"
     className={cn(className, noticeStyle.notice)}
@@ -34,11 +26,7 @@ export const Notice = ({
     style={style}
     variant="caption"
   >
-    <InformationOutlineIcon
-      prominence="weak"
-      sentiment="neutral"
-      size="small"
-    />
+    <InformationOutlineIcon prominence="weak" sentiment="neutral" size="small" />
     {children}
   </Text>
 )

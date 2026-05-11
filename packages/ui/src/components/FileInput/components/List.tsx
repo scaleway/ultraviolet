@@ -4,23 +4,16 @@ import { DocIcon } from '@ultraviolet/icons/DocIcon'
 import { ImageIcon } from '@ultraviolet/icons/ImageIcon'
 import { VideoIcon } from '@ultraviolet/icons/VideoIcon'
 import { useState } from 'react'
-
 import { Button } from '../../Button'
 import { Loader } from '../../Loader'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { useFileInput } from '../FileInputProvider'
 import { formatFileSize, getMimeTypeType } from '../helpers'
+import type { ListProps, MimeType } from '../types'
 import { fileInputStyle } from '../styles.css'
 
-import type { ListProps, MimeType } from '../types'
-
-const getIllustration = (
-  type: MimeType,
-  file: string,
-  error: boolean,
-  loading?: boolean,
-) => {
+const getIllustration = (type: MimeType, file: string, error: boolean, loading?: boolean) => {
   const state = error ? 'error' : 'default'
   const sentiment = error ? 'danger' : 'primary'
 
@@ -46,15 +39,7 @@ const getIllustration = (
     )
   }
   if (type === 'image' && !error) {
-    return (
-      <img
-        alt=""
-        className={fileInputStyle.fileViewerImage.default}
-        height="auto"
-        src={file}
-        width="auto"
-      />
-    )
+    return <img alt="" className={fileInputStyle.fileViewerImage.default} height="auto" src={file} width="auto" />
   }
 
   if (type === 'image' && error) {
@@ -72,12 +57,7 @@ const getIllustration = (
   )
 }
 
-export const ListFiles = ({
-  limit,
-  textLimit,
-  prominence = 'default',
-  onDelete,
-}: ListProps) => {
+export const ListFiles = ({ limit, textLimit, prominence = 'default', onDelete }: ListProps) => {
   const [computedLimit, setLimit] = useState(limit)
   const seeAllOnClick = () => {
     setLimit(undefined)
@@ -89,23 +69,14 @@ export const ListFiles = ({
       {files.map((file, index) => {
         if (!computedLimit || index < computedLimit) {
           const fileType = getMimeTypeType(file.type)
-          const illustration = getIllustration(
-            fileType,
-            file.file,
-            !!file.error || error,
-            file.loading,
-          )
+          const illustration = getIllustration(fileType, file.file, !!file.error || error, file.loading)
           const sentiment = file.error ? 'danger' : 'neutral'
 
           return (
             <Stack data-testid={file.fileName} gap={0.5} key={file.fileName}>
               <Stack
                 alignItems="center"
-                className={
-                  fileInputStyle.fileViewerContainer[
-                    file.error || error ? 'error' : prominence
-                  ]
-                }
+                className={fileInputStyle.fileViewerContainer[file.error || error ? 'error' : prominence]}
                 direction="row"
                 gap={2}
                 justifyContent="center"
@@ -113,12 +84,7 @@ export const ListFiles = ({
                 <Stack alignItems="center" direction="row" gap={1}>
                   {illustration}
                   <Stack className={fileInputStyle.fileInfo} direction="column">
-                    <Text
-                      as="p"
-                      oneLine
-                      sentiment={sentiment}
-                      variant="bodySmallStrong"
-                    >
+                    <Text as="p" oneLine sentiment={sentiment} variant="bodySmallStrong">
                       {file.fileName}
                     </Text>
                     <Text as="p" sentiment={sentiment} variant="caption">
@@ -129,9 +95,7 @@ export const ListFiles = ({
                 <Button
                   data-testid={`remove-${file.fileName}`}
                   onClick={() => {
-                    const newFiles = files.filter(
-                      oldFile => file.file !== oldFile.file,
-                    )
+                    const newFiles = files.filter(oldFile => file.file !== oldFile.file)
                     setFiles(newFiles)
                     onChangeFiles?.(newFiles)
                     onDelete?.(file.fileName)
@@ -155,13 +119,7 @@ export const ListFiles = ({
         return null
       })}
       {computedLimit && files.length > computedLimit ? (
-        <Button
-          data-testid="see-all"
-          onClick={seeAllOnClick}
-          sentiment="primary"
-          size="large"
-          variant="ghost"
-        >
+        <Button data-testid="see-all" onClick={seeAllOnClick} sentiment="primary" size="large" variant="ghost">
           {textLimit} ({files.length})
         </Button>
       ) : null}

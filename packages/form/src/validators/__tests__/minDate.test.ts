@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest'
-
 import { minDateValidator } from '../minDate'
 
 const today = new Date()

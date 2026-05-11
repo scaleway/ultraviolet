@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const MacMiniM4ProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const MacMiniM4ProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="MacMiniM4ProductIcon">
     <g className="sentiment=primary, size=xlarge, disabled=false">
       <g className=".Square">

@@ -1,15 +1,12 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
 import { Badge } from '../../../components/Badge'
 import { Text } from '../../../components/Text'
 import { maximumFractionDigits, maximumFractionDigitsLong } from '../constants'
 import { useEstimateCost } from '../EstimateCostProvider'
-import { estimateCostStyle, paddingLeftCell } from '../styles.css'
-
-import { LineThrough } from './LineThrough'
-
 import type { TotalContentProps } from '../types'
+import { LineThrough } from './LineThrough'
+import { estimateCostStyle, paddingLeftCell } from '../styles.css'
 
 export const Total = ({
   isBeta,
@@ -21,15 +18,10 @@ export const Total = ({
   isLongFractionDigits,
 }: TotalContentProps) => {
   const { formatNumber, locales } = useEstimateCost()
-  const localeBeta =
-    locales[`estimate.cost.beta.${discount > 0 ? 'discount' : 'free'}`]
+  const localeBeta = locales[`estimate.cost.beta.${discount > 0 ? 'discount' : 'free'}`]
 
   return (
-    <table
-      cellPadding="0"
-      cellSpacing="0"
-      className={estimateCostStyle.emptyTable}
-    >
+    <table cellPadding="0" cellSpacing="0" className={estimateCostStyle.emptyTable}>
       <colgroup>
         <col />
         <col className={estimateCostStyle.priceColumn} />
@@ -48,11 +40,7 @@ export const Total = ({
           >
             {isBeta ? (
               <Badge
-                className={
-                  estimateCostStyle.badgeBeta[
-                    localeBeta.length > 25 ? 'long' : 'short'
-                  ]
-                }
+                className={estimateCostStyle.badgeBeta[localeBeta.length > 25 ? 'long' : 'short']}
                 prominence="strong"
                 sentiment="warning"
               >
@@ -60,15 +48,8 @@ export const Total = ({
                           ${localeBeta}`}
               </Badge>
             ) : null}
-            <Text
-              as="h3"
-              className={estimateCostStyle.text({ beta: isBeta })}
-              sentiment="primary"
-              variant="heading"
-            >
-              <LineThrough
-                isActive={isBeta && (discount === 0 || discount >= 1)}
-              >
+            <Text as="h3" className={estimateCostStyle.text({ beta: isBeta })} sentiment="primary" variant="heading">
+              <LineThrough isActive={isBeta && (discount === 0 || discount >= 1)}>
                 {totalValue}
                 {totalPrice.maxTotal > 0 ? ` - ${totalMaxValue}` : null}
               </LineThrough>
@@ -78,9 +59,7 @@ export const Total = ({
             totalPrice.hourly !== totalPrice.total &&
             totalPrice.total > 0 ? (
               <Text as="p" placement="right" variant="body">
-                <LineThrough
-                  isActive={isBeta && (discount === 0 || discount >= 1)}
-                >
+                <LineThrough isActive={isBeta && (discount === 0 || discount >= 1)}>
                   {formatNumber(totalPrice.hourly, {
                     maximumFractionDigits: isLongFractionDigits
                       ? maximumFractionDigitsLong.hours

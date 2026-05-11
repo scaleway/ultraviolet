@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const InstanceCostOptimizedProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const InstanceCostOptimizedProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="InstanceCostOptimizedProductIcon">
     <g className="Instance-CostOptimized">
       <g className=".Square">

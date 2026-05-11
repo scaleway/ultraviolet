@@ -2,7 +2,6 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
-
 import { Alert } from '..'
 
 describe('alert', () => {
@@ -14,8 +13,7 @@ describe('alert', () => {
     vi.restoreAllMocks()
   })
 
-  it('renders correctly with default values', () =>
-    shouldMatchSnapshot(<Alert>Sample Alert</Alert>))
+  it('renders correctly with default values', () => shouldMatchSnapshot(<Alert>Sample Alert</Alert>))
 
   it('renders correctly with children as component', () =>
     shouldMatchSnapshot(
@@ -24,8 +22,7 @@ describe('alert', () => {
       </Alert>,
     ))
 
-  it('renders correctly with title', () =>
-    shouldMatchSnapshot(<Alert title="title">Sample Alert</Alert>))
+  it('renders correctly with title', () => shouldMatchSnapshot(<Alert title="title">Sample Alert</Alert>))
 
   it('renders correctly with buttonText and onClickButton', () =>
     shouldMatchSnapshot(
@@ -42,10 +39,8 @@ describe('alert', () => {
     ))
 
   describe('renders correctly with all sentiments', () => {
-    it.each(['danger', 'info', 'success', 'warning', 'neutral'] as const)(
-      'renders correctly sentiment %o',
-      sentiment =>
-        shouldMatchSnapshot(<Alert sentiment={sentiment}>Sample Alert</Alert>),
+    it.each(['danger', 'info', 'success', 'warning', 'neutral'] as const)('renders correctly sentiment %o', sentiment =>
+      shouldMatchSnapshot(<Alert sentiment={sentiment}>Sample Alert</Alert>),
     )
   })
 

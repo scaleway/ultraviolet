@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
-
+import type { ComponentProps } from 'react'
 import { CheckboxGroupField } from '..'
 import { useFormContext } from '../../..'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 const DirectionTemplate = (args: ComponentProps<typeof CheckboxGroupField>) => {
   const { watch } = useFormContext()
@@ -12,10 +10,7 @@ const DirectionTemplate = (args: ComponentProps<typeof CheckboxGroupField>) => {
   return (
     <Stack gap={1}>
       <CheckboxGroupField {...args}>
-        <CheckboxGroupField.Checkbox
-          name="termsAndConditions"
-          value="termsAndConditions"
-        >
+        <CheckboxGroupField.Checkbox name="termsAndConditions" value="termsAndConditions">
           Accept terms and conditions
         </CheckboxGroupField.Checkbox>
         <CheckboxGroupField.Checkbox name="newsletter" value="newsletter">
@@ -29,9 +24,7 @@ const DirectionTemplate = (args: ComponentProps<typeof CheckboxGroupField>) => {
   )
 }
 
-export const Direction: StoryFn<typeof CheckboxGroupField> = args => (
-  <DirectionTemplate {...args} />
-)
+export const Direction: StoryFn<typeof CheckboxGroupField> = args => <DirectionTemplate {...args} />
 
 Direction.parameters = {
   docs: {

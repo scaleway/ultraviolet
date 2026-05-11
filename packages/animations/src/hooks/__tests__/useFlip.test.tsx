@@ -1,11 +1,8 @@
 import { renderHook, act } from '@testing-library/react'
 import { describe, expect, expectTypeOf, it, vi } from 'vitest'
-
 import { useFlip } from '../useFlip'
 
-const createMockRect = (
-  options: Partial<DOMRect> = {},
-): ReturnType<Element['getBoundingClientRect']> => ({
+const createMockRect = (options: Partial<DOMRect> = {}): ReturnType<Element['getBoundingClientRect']> => ({
   left: 0,
   top: 0,
   right: 100,
@@ -50,29 +47,22 @@ describe(useFlip, () => {
     const ref = { current: container }
     const { result } = renderHook(() => useFlip(ref))
 
-    vi.spyOn(element, 'getBoundingClientRect').mockReturnValueOnce(
-      createMockRect({ left: 0, top: 0 }),
-    )
+    vi.spyOn(element, 'getBoundingClientRect').mockReturnValueOnce(createMockRect({ left: 0, top: 0 }))
 
     act(() => {
       result.current.prepareAnimation()
     })
 
-    vi.spyOn(element, 'getBoundingClientRect').mockReturnValueOnce(
-      createMockRect({ left: 50, top: 50 }),
-    )
+    vi.spyOn(element, 'getBoundingClientRect').mockReturnValueOnce(createMockRect({ left: 50, top: 50 }))
 
     await act(async () => {
       await result.current.animate()
     })
 
-    expect(mockAnimate).toHaveBeenCalledWith(
-      [{ transform: 'translate(-50px, -50px)' }, {}],
-      {
-        duration: 250,
-        easing: 'ease',
-      },
-    )
+    expect(mockAnimate).toHaveBeenCalledWith([{ transform: 'translate(-50px, -50px)' }, {}], {
+      duration: 250,
+      easing: 'ease',
+    })
   })
 
   it('should not animate elements that have not moved', async () => {
@@ -88,17 +78,13 @@ describe(useFlip, () => {
     const ref = { current: container }
     const { result } = renderHook(() => useFlip(ref))
 
-    vi.spyOn(element, 'getBoundingClientRect').mockReturnValueOnce(
-      createMockRect({ left: 0, top: 0 }),
-    )
+    vi.spyOn(element, 'getBoundingClientRect').mockReturnValueOnce(createMockRect({ left: 0, top: 0 }))
 
     act(() => {
       result.current.prepareAnimation()
     })
 
-    vi.spyOn(element, 'getBoundingClientRect').mockReturnValueOnce(
-      createMockRect({ left: 0, top: 0 }),
-    )
+    vi.spyOn(element, 'getBoundingClientRect').mockReturnValueOnce(createMockRect({ left: 0, top: 0 }))
 
     await act(async () => {
       await result.current.animate()
@@ -126,17 +112,13 @@ describe(useFlip, () => {
       result.current.prepareAnimation()
     })
 
-    vi.spyOn(element, 'getBoundingClientRect').mockReturnValueOnce(
-      createMockRect({ left: 0, top: 0 }),
-    )
+    vi.spyOn(element, 'getBoundingClientRect').mockReturnValueOnce(createMockRect({ left: 0, top: 0 }))
 
     act(() => {
       result.current.prepareAnimation()
     })
 
-    vi.spyOn(element, 'getBoundingClientRect').mockReturnValueOnce(
-      createMockRect({ left: 50, top: 50 }),
-    )
+    vi.spyOn(element, 'getBoundingClientRect').mockReturnValueOnce(createMockRect({ left: 50, top: 50 }))
 
     await act(async () => {
       await result.current.animate()

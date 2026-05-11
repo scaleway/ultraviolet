@@ -1,6 +1,5 @@
 import { Tabs } from '..'
 import { Badge } from '../../Badge'
-
 import { Template } from './Template.stories'
 
 export const WithSubtitle = Template.bind({})
@@ -72,21 +71,10 @@ WithSubtitle.args = {
     >
       Text
     </Tabs.Tab>,
-    <Tabs.Tab
-      counter={10}
-      disabled
-      key={6}
-      subtitle="Subtitle with a long long long long long long text"
-      value={6}
-    >
+    <Tabs.Tab counter={10} disabled key={6} subtitle="Subtitle with a long long long long long long text" value={6}>
       Text
     </Tabs.Tab>,
-    <Tabs.Tab
-      counter={10}
-      key={7}
-      subtitle="Subtitle with a long long long long long long text"
-      value={6}
-    >
+    <Tabs.Tab counter={10} key={7} subtitle="Subtitle with a long long long long long long text" value={6}>
       Text
     </Tabs.Tab>,
   ],

@@ -2,7 +2,6 @@ import { AlertCircleOutlineIcon } from '@ultraviolet/icons/AlertCircleOutlineIco
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
-
 import { StepList } from '..'
 
 describe('stepList', () => {
@@ -16,19 +15,14 @@ describe('stepList', () => {
   it('renders correctly with bulletContent', () =>
     shouldMatchSnapshot(
       <StepList>
-        <StepList.Item bulletContent={<AlertCircleOutlineIcon />}>
-          Item 1
-        </StepList.Item>
+        <StepList.Item bulletContent={<AlertCircleOutlineIcon />}>Item 1</StepList.Item>
       </StepList>,
     ))
 
   it('renders correctly with bulletContent & sentiment', () =>
     shouldMatchSnapshot(
       <StepList>
-        <StepList.Item
-          bulletContent={<AlertCircleOutlineIcon />}
-          sentiment="success"
-        >
+        <StepList.Item bulletContent={<AlertCircleOutlineIcon />} sentiment="success">
           Item 1
         </StepList.Item>
       </StepList>,

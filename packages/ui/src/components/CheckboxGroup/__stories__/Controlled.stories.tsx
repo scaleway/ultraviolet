@@ -1,8 +1,6 @@
-import { useState } from 'react'
-
-import { CheckboxGroup } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { useState } from 'react'
+import { CheckboxGroup } from '..'
 
 export const Controlled: StoryFn = () => {
   const [values, onChange] = useState(['termsAndConditions'])
@@ -22,10 +20,7 @@ export const Controlled: StoryFn = () => {
       }}
       value={values}
     >
-      <CheckboxGroup.Checkbox
-        name="termsAndConditions"
-        value="termsAndConditions"
-      >
+      <CheckboxGroup.Checkbox name="termsAndConditions" value="termsAndConditions">
         Accept terms and conditions
       </CheckboxGroup.Checkbox>
       <CheckboxGroup.Checkbox name="newsletter" value="newsletter">
@@ -39,8 +34,7 @@ export const Controlled: StoryFn = () => {
 Controlled.parameters = {
   docs: {
     description: {
-      story:
-        'CheckboxGroup only work as a controlled component. You need to pass `onChange` callback to control it.',
+      story: 'CheckboxGroup only work as a controlled component. You need to pass `onChange` callback to control it.',
     },
   },
 }

@@ -3,20 +3,17 @@
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { cn } from '@ultraviolet/utils'
 import { useEffect, useMemo, useRef } from 'react'
-
+import type { KeyboardEvent, ReactNode } from 'react'
 import { Skeleton } from '../../../Skeleton'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
 import { OPTION_SELECTOR } from '../../constants'
 import { useSelectInput } from '../../SelectInputProvider'
-import { selectInputStyle } from '../../styles.css'
-
 import { AddOption } from './AddOption'
 import { Group } from './Group'
 import { Item } from './Item'
 import { SelectAll } from './SelectAll'
-
-import type { KeyboardEvent, ReactNode } from 'react'
+import { selectInputStyle } from '../../styles.css'
 
 type CreateDropdownProps = {
   isEmpty: boolean
@@ -106,8 +103,7 @@ export const CreateDropdown = ({
     return 'caption'
   }, [size])
 
-  const textVariantSmall =
-    size === 'small' ? 'captionStrong' : 'bodySmallStrong'
+  const textVariantSmall = size === 'small' ? 'captionStrong' : 'bodySmallStrong'
   const sizeVariantIcon = size === 'small' ? 'xsmall' : 'small'
 
   const computedEmptyState = emptyState ?? (
@@ -127,11 +123,7 @@ export const CreateDropdown = ({
 
   if (isEmpty && !addOption) {
     return (
-      <Stack
-        alignItems="center"
-        className={selectInputStyle.dropdownEmptyState}
-        gap={2}
-      >
+      <Stack alignItems="center" className={selectInputStyle.dropdownEmptyState} gap={2}>
         {computedEmptyState}
       </Stack>
     )
@@ -157,10 +149,7 @@ export const CreateDropdown = ({
 
   return Array.isArray(displayedOptions) ? (
     <Stack
-      className={cn(
-        selectInputStyle.dropdownContainer,
-        selectInputStyle.dropdownContainerUnGrouped,
-      )}
+      className={cn(selectInputStyle.dropdownContainer, selectInputStyle.dropdownContainerUnGrouped)}
       gap={0.25}
       id="select-dropdown"
       onKeyDown={handleKeyDownSelect}
@@ -194,11 +183,7 @@ export const CreateDropdown = ({
             />
           ))
         )}
-        {loadMore ? (
-          <Stack className={selectInputStyle.dropdownLoadMore}>
-            {loadMore}
-          </Stack>
-        ) : null}
+        {loadMore ? <Stack className={selectInputStyle.dropdownLoadMore}>{loadMore}</Stack> : null}
       </Stack>
     </Stack>
   ) : (
@@ -231,9 +216,7 @@ export const CreateDropdown = ({
 
             return (
               <Stack gap={0.25} key={group}>
-                {hasElements || emptyStateGroup ? (
-                  <Group group={group} index={index} />
-                ) : null}
+                {hasElements || emptyStateGroup ? <Group group={group} index={index} /> : null}
                 <Stack gap="0.25" id="items">
                   {!hasElements && emptyStateGroup ? (
                     <Text
@@ -277,9 +260,7 @@ export const CreateDropdown = ({
           })}
         </>
       )}
-      {loadMore ? (
-        <Stack className={selectInputStyle.dropdownLoadMore}>{loadMore}</Stack>
-      ) : null}
+      {loadMore ? <Stack className={selectInputStyle.dropdownLoadMore}>{loadMore}</Stack> : null}
     </Stack>
   )
 }

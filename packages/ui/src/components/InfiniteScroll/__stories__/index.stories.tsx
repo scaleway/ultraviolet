@@ -1,6 +1,5 @@
-import { InfiniteScroll } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { InfiniteScroll } from '..'
 
 export default {
   component: InfiniteScroll,

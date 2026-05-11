@@ -2,12 +2,9 @@
 
 import { cn } from '@ultraviolet/utils'
 import { forwardRef } from 'react'
-
-import { Popup } from '../Popup'
-
-import { tooltipStyle } from './styles.css'
-
 import type { ComponentProps, Ref } from 'react'
+import { Popup } from '../Popup'
+import { tooltipStyle } from './styles.css'
 
 type TooltipProps = Pick<
   ComponentProps<typeof Popup>,

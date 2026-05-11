@@ -1,27 +1,17 @@
 'use client'
 
-import {
-  useEffect,
-  useId,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react'
-
+import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import type { ChangeEvent, DragEvent as DragEventReact } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { FileInputButton } from './components/Button'
 import { ListFiles } from './components/List'
 import { DropzoneContent } from './DropzoneContent'
 import { FileInputContext } from './FileInputProvider'
 import { fileIsAccepted } from './helpers'
-import { fileInputStyle } from './styles.css'
-
 import type { ErrorType, FileInputProps } from './types'
-import type { ChangeEvent, DragEvent as DragEventReact } from 'react'
+import { fileInputStyle } from './styles.css'
 
 /**
  * FileInput allow user to drag & drop and upload one or multiple files.
@@ -56,9 +46,7 @@ const FileInputBase = ({
   validator,
   'data-testid': dataTestid,
 }: FileInputProps) => {
-  const [dragState, setDragState] = useState<'over' | 'default' | 'page'>(
-    'default',
-  )
+  const [dragState, setDragState] = useState<'over' | 'default' | 'page'>('default')
   const [files, setFiles] = useState(defaultFiles ?? [])
 
   const inputId = useId()
@@ -137,9 +125,7 @@ const FileInputBase = ({
       type: file.type,
     }))
 
-    const formattedFiles = multiple
-      ? [...files, ...formattedNewFiles]
-      : [formattedNewFiles[0]]
+    const formattedFiles = multiple ? [...files, ...formattedNewFiles] : [formattedNewFiles[0]]
     setFiles(formattedFiles)
     onChangeFiles?.(formattedFiles)
 
@@ -171,8 +157,7 @@ const FileInputBase = ({
     }
   }
 
-  const computedChildren =
-    typeof children === 'function' ? children(inputId, inputRef) : children
+  const computedChildren = typeof children === 'function' ? children(inputId, inputRef) : children
 
   const computedHelper =
     helper || (error && typeof error === 'string') ? (
@@ -190,9 +175,7 @@ const FileInputBase = ({
   const input = (
     <input
       accept={accept}
-      aria-describedby={
-        helper || typeof error === 'string' ? helperId : undefined
-      }
+      aria-describedby={helper || typeof error === 'string' ? helperId : undefined}
       aria-label={ariaLabel}
       className={fileInputStyle.fileInput}
       data-testid={dataTestid}
@@ -212,13 +195,7 @@ const FileInputBase = ({
   )
 
   const bottomComputed = bottom ? (
-    <Text
-      as="div"
-      disabled={disabled}
-      prominence="weak"
-      sentiment="neutral"
-      variant="caption"
-    >
+    <Text as="div" disabled={disabled} prominence="weak" sentiment="neutral" variant="caption">
       {bottom}
     </Text>
   ) : null
@@ -267,15 +244,8 @@ const FileInputBase = ({
                 }}
                 style={style}
               >
-                {title &&
-                typeof title !== 'function' &&
-                dragState !== 'default' ? (
-                  <Text
-                    as="div"
-                    disabled={disabled}
-                    sentiment="primary"
-                    variant="bodySmallStrong"
-                  >
+                {title && typeof title !== 'function' && dragState !== 'default' ? (
+                  <Text as="div" disabled={disabled} sentiment="primary" variant="bodySmallStrong">
                     {title}
                   </Text>
                 ) : null}
@@ -297,12 +267,7 @@ const FileInputBase = ({
       <Stack direction="column" gap={1} width="100%">
         <Stack className={className} direction="column" gap={0.5}>
           {label || labelDescription ? (
-            <Label
-              labelDescription={labelDescription}
-              required={required}
-              size={size}
-              htmlFor={inputId}
-            >
+            <Label labelDescription={labelDescription} required={required} size={size} htmlFor={inputId}>
               {label}
             </Label>
           ) : null}

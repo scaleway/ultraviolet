@@ -1,6 +1,5 @@
-import { Loader } from '../index'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { Loader } from '../index'
 
 export const Percentages: StoryFn = props => (
   <>
@@ -13,8 +12,7 @@ export const Percentages: StoryFn = props => (
 Percentages.parameters = {
   docs: {
     description: {
-      story:
-        'You can set the percentage of completion with the `percentage` prop.',
+      story: 'You can set the percentage of completion with the `percentage` prop.',
     },
   },
 }

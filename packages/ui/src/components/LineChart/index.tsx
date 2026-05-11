@@ -1,22 +1,19 @@
 'use client'
 
-import { ResponsiveLine } from '@nivo/line'
-import { useTheme } from '@ultraviolet/themes'
-import { useEffect, useState } from 'react'
-
-import { getLegendColor } from '../../helpers/legend'
-import { getNivoTheme } from '../../helpers/nivoTheme'
-
-import { CustomLegend } from './CustomLegend'
-import { getMaxChartValue, getMinChartValue } from './helpers'
-import { LineChartTooltip } from './Tooltip'
-
-import type { Serie } from './helpers'
 import type { Box as NivoBox, ValueFormat } from '@nivo/core'
+import { ResponsiveLine } from '@nivo/line'
 import type { LineSvgProps, Point, LineSeries, AllowedValue } from '@nivo/line'
 import type { ScaleSpec } from '@nivo/scales'
+import { useTheme } from '@ultraviolet/themes'
 import type { theme as UVTheme } from '@ultraviolet/themes'
+import { useEffect, useState } from 'react'
 import type { ComponentProps, CSSProperties } from 'react'
+import { getLegendColor } from '../../helpers/legend'
+import { getNivoTheme } from '../../helpers/nivoTheme'
+import { CustomLegend } from './CustomLegend'
+import { getMaxChartValue, getMinChartValue } from './helpers'
+import type { Serie } from './helpers'
+import { LineChartTooltip } from './Tooltip'
 
 type LineChartProps = {
   height?: string | number
@@ -27,19 +24,12 @@ type LineChartProps = {
   withLegend?: boolean
   tooltipFunction?: (props: {
     point: Point<LineSeries>
-  }) => Partial<
-    Pick<ComponentProps<typeof LineChartTooltip>, 'xFormatted' | 'yFormatted'>
-  >
+  }) => Partial<Pick<ComponentProps<typeof LineChartTooltip>, 'xFormatted' | 'yFormatted'>>
   axisFormatters?: Partial<
-    Record<
-      'bottom' | 'left' | 'right' | 'top',
-      ComponentProps<typeof CustomLegend>['axisTransformer']
-    >
+    Record<'bottom' | 'left' | 'right' | 'top', ComponentProps<typeof CustomLegend>['axisTransformer']>
   >
   pointFormatters?: Partial<Record<'x' | 'y', ValueFormat<AllowedValue>>>
-  tickValues?: Partial<
-    Record<'bottom' | 'left' | 'right' | 'top', number | string>
-  >
+  tickValues?: Partial<Record<'bottom' | 'left' | 'right' | 'top', number | string>>
   chartProps?: Partial<LineSvgProps<LineSeries>>
   'data-testid'?: string
   style?: CSSProperties
@@ -56,16 +46,11 @@ const DEFAULT_YSCALE: LineChartProps['yScale'] = { type: 'linear' }
 const DEFAULT_CHARTPROPS = {}
 
 const createCustomTooltip =
-  (tooltipFunction?: LineChartProps['tooltipFunction']) =>
-  (props: { point: Point<LineSeries> }) => {
+  (tooltipFunction?: LineChartProps['tooltipFunction']) => (props: { point: Point<LineSeries> }) => {
     const customProps = tooltipFunction ? tooltipFunction(props) : {}
 
     return (
-      <LineChartTooltip
-        point={props.point}
-        xFormatted={customProps.xFormatted}
-        yFormatted={customProps.yFormatted}
-      />
+      <LineChartTooltip point={props.point} xFormatted={customProps.xFormatted} yFormatted={customProps.yFormatted} />
     )
   }
 
@@ -98,13 +83,9 @@ export const LineChart = ({
     })),
   }
 
-  const [selected, setSelected] = useState(
-    dataset.datasets?.map(({ id }, index) => `${id}${index}`),
-  )
+  const [selected, setSelected] = useState(dataset.datasets?.map(({ id }, index) => `${id}${index}`))
 
-  const finalData = dataset.datasets?.filter(({ id }, index) =>
-    selected ? selected.includes(`${id}${index}`) : false,
-  )
+  const finalData = dataset.datasets?.filter(({ id }, index) => (selected ? selected.includes(`${id}${index}`) : false))
 
   useEffect(() => {
     if (selected !== undefined) {

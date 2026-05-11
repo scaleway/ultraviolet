@@ -2,7 +2,6 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-
 import { BarStack } from '..'
 
 const fakeData = [
@@ -20,9 +19,7 @@ describe('barStack', () => {
   })
 
   it('should render correctly with total', () => {
-    const { asFragment } = renderWithTheme(
-      <BarStack data={fakeData} total={1000} />,
-    )
+    const { asFragment } = renderWithTheme(<BarStack data={fakeData} total={1000} />)
     expect(asFragment()).toMatchSnapshot()
   })
   it('should render correctly with label and label information', () => {
@@ -45,21 +42,14 @@ describe('barStack', () => {
   })
 
   it('should render correctly with legend outside', () => {
-    const { asFragment } = renderWithTheme(
-      <BarStack data={fakeData} legend="outside" total={1000} />,
-    )
+    const { asFragment } = renderWithTheme(<BarStack data={fakeData} legend="outside" total={1000} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly with event handlers', async () => {
-    const [
-      onClick,
-      onDoubleClick,
-      onMouseDown,
-      onMouseEnter,
-      onMouseLeave,
-      onMouseUp,
-    ] = new Array(6).fill(1).map(() => vi.fn())
+    const [onClick, onDoubleClick, onMouseDown, onMouseEnter, onMouseLeave, onMouseUp] = new Array(6)
+      .fill(1)
+      .map(() => vi.fn())
 
     const { asFragment } = renderWithTheme(
       <BarStack

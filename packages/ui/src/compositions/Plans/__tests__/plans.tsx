@@ -1,10 +1,8 @@
 import { EntrepriseSupportProductIcon } from '@ultraviolet/icons/product'
-
+import type { ComponentProps } from 'react'
 import { Button } from '../../../components/Button'
 import { Separator } from '../../../components/Separator'
-
 import type { Text } from '../../../components/Text'
-import type { ComponentProps } from 'react'
 
 export const planStarter = {
   data: {
@@ -33,9 +31,7 @@ export const planStarter = {
       >
         <Separator />
 
-        <p style={{ paddingInline: '16px' }}>
-          For developers & non mission-critical projects{' '}
-        </p>
+        <p style={{ paddingInline: '16px' }}>For developers & non mission-critical projects </p>
         <Separator />
       </div>
     ),
@@ -115,9 +111,7 @@ export const planAdvanced = {
       >
         <Separator />
 
-        <p style={{ paddingInline: '16px' }}>
-          For fast-growing starups & mission-critical infrastructure
-        </p>
+        <p style={{ paddingInline: '16px' }}>For fast-growing starups & mission-critical infrastructure</p>
         <Separator />
       </div>
     ),

@@ -1,15 +1,7 @@
 'use client'
 
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useReducer,
-  useState,
-} from 'react'
-
+import { createContext, useCallback, useContext, useEffect, useMemo, useReducer, useState } from 'react'
+import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import {
   clearAllAction,
   resetAction,
@@ -18,9 +10,7 @@ import {
   selectOptionAction,
   updateAction,
 } from './reducerFunctions'
-
 import type { DataType, OptionType, ReducerAction, ReducerState } from './types'
-import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 
 type ContextProps = {
   options: DataType
@@ -78,9 +68,7 @@ type SelectInputProviderProps<IsMulti extends boolean> = {
   numberOfDisabledOptions: number
   multiselect: IsMulti
   refSelect?: RefObject<HTMLDivElement | null>
-  onChange?: IsMulti extends true
-    ? (value: string[]) => void
-    : (value: string) => void
+  onChange?: IsMulti extends true ? (value: string[]) => void : (value: string) => void
   onOpen?: () => void
 }
 
@@ -116,9 +104,7 @@ export const SelectInputProvider = <T extends boolean>({
     }
 
     return Object.keys(options).filter(group =>
-      options[group].every(groupOption =>
-        currentValue.includes(groupOption.value),
-      ),
+      options[group].every(groupOption => currentValue.includes(groupOption.value)),
     )
   }, [currentValue, options])
 
@@ -141,9 +127,7 @@ export const SelectInputProvider = <T extends boolean>({
 
   const allValues: OptionType[] = useMemo(() => {
     if (!Array.isArray(options)) {
-      return Object.keys(options).flatMap((group: string) =>
-        options[group].filter(option => !option.disabled),
-      )
+      return Object.keys(options).flatMap((group: string) => options[group].filter(option => !option.disabled))
     }
 
     return options.filter(option => !option.disabled)
@@ -156,23 +140,14 @@ export const SelectInputProvider = <T extends boolean>({
 
     return []
   }, [options])
-  const reducer = (
-    state: ReducerState,
-    action: ReducerAction,
-  ): ReducerState => {
+  const reducer = (state: ReducerState, action: ReducerAction): ReducerState => {
     switch (action.type) {
       case 'selectAll': {
         return selectAllAction(state, allGroups, allValues)
       }
 
       case 'selectGroup': {
-        return selectGroupAction(
-          state,
-          action.selectedGroup,
-          options,
-          numberOfOptions,
-          numberOfDisabledOptions,
-        )
+        return selectGroupAction(state, action.selectedGroup, options, numberOfOptions, numberOfDisabledOptions)
       }
 
       case 'selectOption': {
@@ -257,9 +232,5 @@ export const SelectInputProvider = <T extends boolean>({
     ],
   )
 
-  return (
-    <SelectInputContext.Provider value={providerValue}>
-      {children}
-    </SelectInputContext.Provider>
-  )
+  return <SelectInputContext.Provider value={providerValue}>{children}</SelectInputContext.Provider>
 }

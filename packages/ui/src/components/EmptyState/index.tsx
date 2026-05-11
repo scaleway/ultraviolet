@@ -1,15 +1,12 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Link } from '../Link'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { emptyStateStyle } from './styles.css'
-
 import type { SizesTypes } from './styles.css'
-import type { CSSProperties, ReactNode } from 'react'
 
 type EmptyStateProps = {
   title?: string
@@ -69,13 +66,7 @@ export const EmptyState = ({
     >
       <Stack alignItems="center" gap={2} justifyContent="center">
         {image && typeof image === 'string' ? (
-          <img
-            alt=""
-            className={emptyStateStyle.image[size]}
-            height="auto"
-            src={image}
-            width="auto"
-          />
+          <img alt="" className={emptyStateStyle.image[size]} height="auto" src={image} width="auto" />
         ) : (
           image
         )}
@@ -92,14 +83,7 @@ export const EmptyState = ({
             </Text>
           ) : null}
           <Text
-            as={
-              description &&
-              ['string', 'number', 'bigint', 'boolean'].includes(
-                typeof description,
-              )
-                ? 'p'
-                : 'div'
-            }
+            as={description && ['string', 'number', 'bigint', 'boolean'].includes(typeof description) ? 'p' : 'div'}
             placement="center"
             sentiment="neutral"
             variant={size === 'small' ? 'bodySmall' : 'body'}

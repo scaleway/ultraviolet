@@ -1,8 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { recipe } from '@vanilla-extract/recipes'
-
 import { ping } from '../../utils'
-
 import { SENTIMENTS } from './constant'
 
 const HEIGHT = '10px'
@@ -19,9 +17,7 @@ const sentimentsCircleStatus = Object.fromEntries(
     sentiment,
     {
       backgroundColor:
-        sentiment === 'neutral'
-          ? theme.colors.neutral.backgroundStronger
-          : theme.colors[sentiment].backgroundStrong,
+        sentiment === 'neutral' ? theme.colors.neutral.backgroundStronger : theme.colors[sentiment].backgroundStrong,
     },
   ]),
 )

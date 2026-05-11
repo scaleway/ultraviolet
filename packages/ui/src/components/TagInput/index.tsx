@@ -5,23 +5,15 @@ import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIco
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn, getUUID } from '@ultraviolet/utils'
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
-
+import type { ChangeEvent, CSSProperties, KeyboardEventHandler, ReactNode } from 'react'
 import { Button } from '../Button'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Tag } from '../Tag'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
 import { tagInputStyle } from './styles.css'
-
 import type { TAGINPUT_SIZE_PADDING } from './styles.css'
-import type {
-  ChangeEvent,
-  CSSProperties,
-  KeyboardEventHandler,
-  ReactNode,
-} from 'react'
 
 type TagInputSize = keyof typeof TAGINPUT_SIZE_PADDING
 
@@ -93,9 +85,7 @@ export const TagInput = ({
   clearable = false,
   style,
 }: TagInputProps) => {
-  const [tagInputState, setTagInput] = useState(
-    convertTagArrayToTagStateArray(value),
-  )
+  const [tagInputState, setTagInput] = useState(convertTagArrayToTagStateArray(value))
   const [input, setInput] = useState('')
   const [status, setStatus] = useState<{ [key: string]: StatusValue }>({})
 
@@ -109,9 +99,7 @@ export const TagInput = ({
   const inputRef = useRef<HTMLInputElement>(null)
 
   const dispatchOnChange = (newState: TagInputProp) => {
-    const changes = newState.map(tag =>
-      typeof tag === 'object' ? tag?.label : tag,
-    )
+    const changes = newState.map(tag => (typeof tag === 'object' ? tag?.label : tag))
 
     onChange?.(changes)
   }
@@ -127,9 +115,7 @@ export const TagInput = ({
   }
 
   const addTag = () => {
-    const newTagInput = input
-      ? [...tagInputState, { index: getUUID('tag'), label: input }]
-      : tagInputState
+    const newTagInput = input ? [...tagInputState, { index: getUUID('tag'), label: input }] : tagInputState
     setInput('')
     setTagInput(newTagInput)
     if (newTagInput.length !== tagInputState.length && newTagInput) {
@@ -170,11 +156,7 @@ export const TagInput = ({
       addTag()
       event.preventDefault()
     }
-    if (
-      event.key === 'Backspace' &&
-      inputRef?.current?.selectionStart === 0 &&
-      tagInputState.length > 0
-    ) {
+    if (event.key === 'Backspace' && inputRef?.current?.selectionStart === 0 && tagInputState.length > 0) {
       event.preventDefault()
       if (tagInputState) {
         const tag = tagInputState.at(-1)
@@ -208,12 +190,7 @@ export const TagInput = ({
   return (
     <Stack className={className} gap="0.5">
       {label || labelDescription ? (
-        <Label
-          htmlFor={id ?? localId}
-          labelDescription={labelDescription}
-          required={required}
-          size={size}
-        >
+        <Label htmlFor={id ?? localId} labelDescription={labelDescription} required={required} size={size}>
           {label}
         </Label>
       ) : null}
@@ -285,20 +262,8 @@ export const TagInput = ({
                     <CloseIcon />
                   </Button>
                 ) : null}
-                {success ? (
-                  <CheckCircleOutlineIcon
-                    disabled={disabled}
-                    sentiment="success"
-                    size="small"
-                  />
-                ) : null}
-                {error ? (
-                  <AlertCircleIcon
-                    disabled={disabled}
-                    sentiment="danger"
-                    size="small"
-                  />
-                ) : null}
+                {success ? <CheckCircleOutlineIcon disabled={disabled} sentiment="success" size="small" /> : null}
+                {error ? <AlertCircleIcon disabled={disabled} sentiment="danger" size="small" /> : null}
               </div>
             ) : null}
           </div>

@@ -1,23 +1,17 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useCallback, useState } from 'react'
-
+import type { Dispatch, SetStateAction } from 'react'
 import { Button } from '../../Button'
 import { Popover } from '../index'
-
 import { Playground } from './Playground.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { Dispatch, SetStateAction } from 'react'
 
 export const Sentiments: StoryFn<typeof Popover> = () => {
   const [primaryOpened, setPrimaryOpened] = useState(false)
   const [defaultOpened, setDefaultOpened] = useState(false)
 
-  const onCloseCallBack = useCallback(
-    (setValue: Dispatch<SetStateAction<boolean>>) => {
-      setValue(false)
-    },
-    [],
-  )
+  const onCloseCallBack = useCallback((setValue: Dispatch<SetStateAction<boolean>>) => {
+    setValue(false)
+  }, [])
 
   return (
     <div style={{ display: 'inline-flex', gap: '16px' }}>
@@ -40,9 +34,7 @@ export const Sentiments: StoryFn<typeof Popover> = () => {
         title="Popover Title"
         visible={primaryOpened}
       >
-        <Button onClick={() => setPrimaryOpened(true)}>
-          Open Popover primary sentiment
-        </Button>
+        <Button onClick={() => setPrimaryOpened(true)}>Open Popover primary sentiment</Button>
       </Popover>
     </div>
   )

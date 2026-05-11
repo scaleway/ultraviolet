@@ -3,7 +3,6 @@
 
 import { existsSync, promises } from 'node:fs'
 import path from 'node:path'
-
 import { DEPRECATED_ICONS } from '../../packages/icons/src/deprecatedIcons'
 
 const COMPONENTS = [
@@ -45,8 +44,7 @@ const COMPONENTS = [
 ]
 
 const wrapSvg = (svgContent: string) => {
-  const hasMultipleElements =
-    svgContent.trim().split(/<path|<rect|<circle|<line|<ellipse|<g/).length > 2
+  const hasMultipleElements = svgContent.trim().split(/<path|<rect|<circle|<line|<ellipse|<g/).length > 2
 
   return hasMultipleElements ? `<>${svgContent}</>` : svgContent
 }
@@ -60,12 +58,7 @@ const COMMENT_HEADER = `
 * PLEASE DO NOT EDIT HERE
 */`
 
-const templateIcon = (
-  iconName: string,
-  svg: string,
-  svgSmall?: string,
-  svgDisabled?: string,
-) => {
+const templateIcon = (iconName: string, svg: string, svgSmall?: string, svgDisabled?: string) => {
   const deprecated = DEPRECATED_ICONS.find(icon => icon.name === iconName)
 
   return `${COMMENT_HEADER}
@@ -97,8 +90,7 @@ const templateIcon = (
 `
 }
 
-const toPascalCase = (str: string) =>
-  str.replace(/(^\w|-\w)/g, match => match.replace('-', '').toUpperCase())
+const toPascalCase = (str: string) => str.replace(/(^\w|-\w)/g, match => match.replace('-', '').toUpperCase())
 
 const generateVariableName = (filePath: string) => {
   const parsedPath = path.parse(filePath)
@@ -170,11 +162,7 @@ const appendExportToIndex = async (output: string, iconName: string) => {
   }
 }
 
-const appendTypeToIndex = async (
-  output: string,
-  typeName: string,
-  iconNames: string[],
-) => {
+const appendTypeToIndex = async (output: string, typeName: string, iconNames: string[]) => {
   const typeDefinition = `export type ${typeName} = ${iconNames.map(name => `"${name}"`).join(' | ')}\n`
 
   try {
@@ -187,9 +175,7 @@ const appendTypeToIndex = async (
 const resetIconsFolder = async (folderPath: string) => {
   try {
     const files = await promises.readdir(folderPath)
-    const deletePromises = files.map(async file =>
-      promises.unlink(path.join(folderPath, file)),
-    )
+    const deletePromises = files.map(async file => promises.unlink(path.join(folderPath, file)))
     await Promise.all(deletePromises)
     console.log(`Deleted all files in ${folderPath}`)
   } catch (error) {
@@ -203,10 +189,7 @@ const main = async () => {
     await resetIconsFolder(component.output) // we clean the folder before generating the new icons
 
     try {
-      await promises.appendFile(
-        `${component.output}/index.ts`,
-        `${COMMENT_HEADER}\n`,
-      )
+      await promises.appendFile(`${component.output}/index.ts`, `${COMMENT_HEADER}\n`)
     } catch (error) {
       console.error('Error appending to index file:', error)
     }
@@ -224,31 +207,21 @@ const main = async () => {
         const smallFile = existsSync(smallFileName) ? smallFileName : file
 
         const disabledFileName = file.replace('default', 'disabled')
-        const disabledFile = existsSync(disabledFileName)
-          ? disabledFileName
-          : file
+        const disabledFile = existsSync(disabledFileName) ? disabledFileName : file
 
         const svgContent = await readSvg(file, component.suffix)
         const generatedName = `${generateVariableName(file)}${component.suffix}`
 
         iconNames.push(generatedName)
 
-        const svgContentSmall =
-          smallFile === file
-            ? undefined
-            : await readSvg(smallFile, component.suffix)
+        const svgContentSmall = smallFile === file ? undefined : await readSvg(smallFile, component.suffix)
 
         const svgContentDisabled =
           component.name === 'Flags' && disabledFile !== file
             ? await readSvg(disabledFile, component.suffix)
             : undefined
 
-        const generatedComponent = templateIcon(
-          generatedName,
-          svgContent,
-          svgContentSmall,
-          svgContentDisabled,
-        )
+        const generatedComponent = templateIcon(generatedName, svgContent, svgContentSmall, svgContentDisabled)
         const filePath = `${component.output}/${generatedName}.tsx`
 
         try {

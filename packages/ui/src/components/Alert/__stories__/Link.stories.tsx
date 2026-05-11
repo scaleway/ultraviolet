@@ -16,8 +16,7 @@ export const Link = () => (
         <UVLink href="scaleway.com" target="_blank" variant="inline">
           contact support for further assistance this is an error
         </UVLink>
-        . Additionally, ensure that you have the necessary permissions to access
-        this resource.
+        . Additionally, ensure that you have the necessary permissions to access this resource.
       </p>
     </Alert>
   </Stack>

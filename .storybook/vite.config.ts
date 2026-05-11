@@ -1,10 +1,8 @@
 import { resolve } from 'node:path'
-
 import svgr from '@svgr/rollup'
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-
 import type { UserConfigExport } from 'vite'
 
 export const defaultConfig: UserConfigExport = {
@@ -51,33 +49,23 @@ export const defaultConfig: UserConfigExport = {
       // Icons - specific icon files (must come before base aliases)
       {
         find: /^@ultraviolet\/icons\/([A-Z][a-zA-Z]+Icon)$/,
-        replacement: resolve(
-          'packages/icons/src/components/Icon/__generated__/$1.tsx',
-        ),
+        replacement: resolve('packages/icons/src/components/Icon/__generated__/$1.tsx'),
       },
       {
         find: /^@ultraviolet\/icons\/product\/([A-Z][a-zA-Z]+ProductIcon)$/,
-        replacement: resolve(
-          'packages/icons/src/components/ProductIcon/__generated__/$1.tsx',
-        ),
+        replacement: resolve('packages/icons/src/components/ProductIcon/__generated__/$1.tsx'),
       },
       {
         find: /^@ultraviolet\/icons\/logo\/([A-Z][a-zA-Z]+Logo)$/,
-        replacement: resolve(
-          'packages/icons/src/components/Logo/__generated__/$1.tsx',
-        ),
+        replacement: resolve('packages/icons/src/components/Logo/__generated__/$1.tsx'),
       },
       {
         find: /^@ultraviolet\/icons\/category\/([A-Z][a-zA-Z]+CategoryIcon)$/,
-        replacement: resolve(
-          'packages/icons/src/components/CategoryIcon/__generated__/$1.tsx',
-        ),
+        replacement: resolve('packages/icons/src/components/CategoryIcon/__generated__/$1.tsx'),
       },
       {
         find: /^@ultraviolet\/icons\/flags\/([A-Z][a-zA-Z]+Flag)$/,
-        replacement: resolve(
-          'packages/icons/src/components/Flags/__generated__/$1.tsx',
-        ),
+        replacement: resolve('packages/icons/src/components/Flags/__generated__/$1.tsx'),
       },
 
       // Icons - special files
@@ -89,9 +77,7 @@ export const defaultConfig: UserConfigExport = {
       // Icons - category index files (must come before base alias)
       {
         find: '@ultraviolet/icons/product',
-        replacement: resolve(
-          'packages/icons/src/components/ProductIcon/index.ts',
-        ),
+        replacement: resolve('packages/icons/src/components/ProductIcon/index.ts'),
       },
       {
         find: '@ultraviolet/icons/logo',
@@ -99,9 +85,7 @@ export const defaultConfig: UserConfigExport = {
       },
       {
         find: '@ultraviolet/icons/category',
-        replacement: resolve(
-          'packages/icons/src/components/CategoryIcon/index.ts',
-        ),
+        replacement: resolve('packages/icons/src/components/CategoryIcon/index.ts'),
       },
       {
         find: '@ultraviolet/icons/flags',

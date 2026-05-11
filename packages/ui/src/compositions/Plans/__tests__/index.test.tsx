@@ -2,47 +2,22 @@ import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-
 import { Plans } from '..'
-
 import { domain, fees, gb, group, pipeline, ssl } from './features'
 import { planAdvanced, planProfessional, planStarter } from './plans'
 
 describe('plans', () => {
   it('should work with default props', () =>
-    shouldMatchSnapshot(
-      <Plans
-        features={[gb, pipeline, domain, ssl, fees]}
-        plans={[planStarter]}
-      />,
-    ))
+    shouldMatchSnapshot(<Plans features={[gb, pipeline, domain, ssl, fees]} plans={[planStarter]} />))
 
   it('should work with hideLabels', () =>
-    shouldMatchSnapshot(
-      <Plans
-        features={[gb, pipeline, domain, ssl, fees]}
-        hideLabels
-        plans={[planStarter]}
-      />,
-    ))
+    shouldMatchSnapshot(<Plans features={[gb, pipeline, domain, ssl, fees]} hideLabels plans={[planStarter]} />))
 
   it('should work with hideFeatureText', () =>
-    shouldMatchSnapshot(
-      <Plans
-        features={[gb, pipeline, domain, ssl, fees]}
-        hideFeatureText
-        plans={[planStarter]}
-      />,
-    ))
+    shouldMatchSnapshot(<Plans features={[gb, pipeline, domain, ssl, fees]} hideFeatureText plans={[planStarter]} />))
 
   it('should work with value', () =>
-    shouldMatchSnapshot(
-      <Plans
-        features={[gb, pipeline, domain, ssl, fees]}
-        plans={[planStarter]}
-        value="advanced"
-      />,
-    ))
+    shouldMatchSnapshot(<Plans features={[gb, pipeline, domain, ssl, fees]} plans={[planStarter]} value="advanced" />))
 
   it('should work with popover as hint', async () => {
     const mockOnChange = vi.fn()
@@ -91,12 +66,7 @@ describe('plans', () => {
   })
 
   it('should work with group', () =>
-    shouldMatchSnapshot(
-      <Plans
-        features={[gb, group, pipeline, domain, ssl, fees]}
-        plans={[planStarter]}
-      />,
-    ))
+    shouldMatchSnapshot(<Plans features={[gb, group, pipeline, domain, ssl, fees]} plans={[planStarter]} />))
 
   it('should work with highlighted plan', () =>
     shouldMatchSnapshot(

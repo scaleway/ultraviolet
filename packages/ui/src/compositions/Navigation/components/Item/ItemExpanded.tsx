@@ -3,18 +3,15 @@ import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn } from '@ultraviolet/utils'
 import { useCallback, useMemo, useReducer } from 'react'
-
+import type { DragEvent } from 'react'
 import { Stack } from '../../../../components/Stack'
 import { useNavigation } from '../../NavigationProvider'
-import { navigationStyle } from '../../styles.css'
-
+import type { ItemExpandedType } from '../ComponentsTypes'
 import { ItemBadge } from './Badge'
 import { ItemChildren } from './Children'
 import { ItemContent } from './Content'
 import { ItemPinnedButton } from './PinnedButton'
-
-import type { ItemExpandedType } from '../ComponentsTypes'
-import type { DragEvent } from 'react'
+import { navigationStyle } from '../../styles.css'
 
 export const ItemExpanded = ({
   categoryIcon,
@@ -49,27 +46,19 @@ export const ItemExpanded = ({
   hasActiveChildren,
 }: ItemExpandedType) => {
   const context = useNavigation()
-  const [internalExpanded, onToggleExpand] = useReducer(
-    prevState => !prevState,
-    Boolean(toggle),
-  )
+  const [internalExpanded, onToggleExpand] = useReducer(prevState => !prevState, Boolean(toggle))
   if (!context) {
-    throw new Error(
-      'Navigation.Item can only be used inside a NavigationProvider.',
-    )
+    throw new Error('Navigation.Item can only be used inside a NavigationProvider.')
   }
 
   const { expanded, animation, pinnedFeature } = context
 
-  const showDraggableIcon =
-    !noExpand && pinnedFeature && shouldShowPinnedButton && !disabled
+  const showDraggableIcon = !noExpand && pinnedFeature && shouldShowPinnedButton && !disabled
 
-  const showPinIcon =
-    !(noExpand || disabled) && shouldShowPinnedButton && pinnedFeature
+  const showPinIcon = !(noExpand || disabled) && shouldShowPinnedButton && pinnedFeature
   // This content is when the navigation is expanded
 
-  const shouldHaveWeakText =
-    !!children && !active && shouldShowPinnedButton && !disabled
+  const shouldHaveWeakText = !!children && !active && shouldShowPinnedButton && !disabled
 
   const hasHrefAndNoChildren = href && !children
 
@@ -78,18 +67,12 @@ export const ItemExpanded = ({
     onToggle?.(internalExpanded)
   }, [internalExpanded, onToggle])
 
-  const ArrowIcon = useMemo(
-    () => (internalExpanded ? ArrowDownIcon : ArrowRightIcon),
-    [internalExpanded],
-  )
+  const ArrowIcon = useMemo(() => (internalExpanded ? ArrowDownIcon : ArrowRightIcon), [internalExpanded])
 
   const onDragStart = useCallback(
     (event: DragEvent<HTMLDivElement>) => {
       if (expanded) {
-        event.dataTransfer.setData(
-          'text/plain',
-          JSON.stringify({ index, label }),
-        )
+        event.dataTransfer.setData('text/plain', JSON.stringify({ index, label }))
 
         const element = event.currentTarget
         element.style.opacity = '0.5'
@@ -101,8 +84,7 @@ export const ItemExpanded = ({
   )
 
   const onDragEnd = useCallback(
-    (event: DragEvent<HTMLDivElement>) =>
-      expanded ? onDragStopTrigger(event) : undefined,
+    (event: DragEvent<HTMLDivElement>) => (expanded ? onDragStopTrigger(event) : undefined),
     [expanded, onDragStopTrigger],
   )
 
@@ -169,11 +151,7 @@ export const ItemExpanded = ({
           <Stack alignItems="center" direction="row" gap={href ? 1 : undefined}>
             {badgeText || hasPinnedFeatureAndNoChildren ? (
               <>
-                <ItemBadge
-                  badgeSentiment={badgeSentiment}
-                  badgeText={badgeText}
-                  disabled={disabled}
-                />
+                <ItemBadge badgeSentiment={badgeSentiment} badgeText={badgeText} disabled={disabled} />
                 <ItemPinnedButton
                   active={active}
                   id={id}
@@ -186,28 +164,16 @@ export const ItemExpanded = ({
               </>
             ) : null}
             {hasHrefAndNoChildren && target === '_blank' ? (
-              <OpenInNewIcon
-                disabled={disabled}
-                prominence="default"
-                sentiment="neutral"
-              />
+              <OpenInNewIcon disabled={disabled} prominence="default" sentiment="neutral" />
             ) : null}
             {children && !noExpand ? (
-              <ArrowIcon
-                className={navigationStyle.itemArrowIcon}
-                prominence="weak"
-                sentiment="neutral"
-              />
+              <ArrowIcon className={navigationStyle.itemArrowIcon} prominence="weak" sentiment="neutral" />
             ) : null}
           </Stack>
         ) : null}
       </Stack>
       {children && expanded ? (
-        <ItemChildren
-          internalExpanded={internalExpanded}
-          noExpand={noExpand}
-          type={type}
-        >
+        <ItemChildren internalExpanded={internalExpanded} noExpand={noExpand} type={type}>
           {children}
         </ItemChildren>
       ) : null}

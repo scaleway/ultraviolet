@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { LockIcon } from '@ultraviolet/icons/LockIcon'
 import { useRef, useState } from 'react'
-
 import { Avatar } from '..'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Examples: StoryFn<typeof Avatar> = props => {
   const [image, setImage] = useState<string | undefined>(undefined)
@@ -20,21 +18,9 @@ export const Examples: StoryFn<typeof Avatar> = props => {
       </Stack>
       <Stack alignItems="flex-start" direction="row" gap={1}>
         {image ? (
-          <Avatar
-            image={image}
-            onClick={() => inputRef?.current?.click()}
-            shape="square"
-            upload
-            variant="image"
-          />
+          <Avatar image={image} onClick={() => inputRef?.current?.click()} shape="square" upload variant="image" />
         ) : (
-          <Avatar
-            onClick={() => inputRef?.current?.click()}
-            shape="square"
-            text="UV"
-            upload
-            variant="text"
-          />
+          <Avatar onClick={() => inputRef?.current?.click()} shape="square" text="UV" upload variant="text" />
         )}
         <input
           onChange={event => {
@@ -50,9 +36,7 @@ export const Examples: StoryFn<typeof Avatar> = props => {
           <p>
             <b>My Profile</b>
           </p>
-          <small>
-            Last profile picture update: {image ? 'just now' : '2 hours ago'}
-          </small>
+          <small>Last profile picture update: {image ? 'just now' : '2 hours ago'}</small>
         </Stack>
       </Stack>
     </>

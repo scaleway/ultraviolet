@@ -35,10 +35,7 @@ const rawMessageBase = style({
 })
 
 const rawMessage = styleVariants({
-  left: [
-    rawMessageBase,
-    { backgroundColor: theme.colors.neutral.backgroundStrong },
-  ],
+  left: [rawMessageBase, { backgroundColor: theme.colors.neutral.backgroundStrong }],
   right: [rawMessageBase, { backgroundColor: theme.colors.primary.background }],
 })
 

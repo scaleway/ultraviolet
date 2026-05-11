@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { Chip } from '..'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Groups: StoryFn<typeof Chip> = ({ ...args }) => {
   const [singleSelected, setSingleSelected] = useState(-1)
@@ -20,44 +18,28 @@ export const Groups: StoryFn<typeof Chip> = ({ ...args }) => {
           <Chip
             {...args}
             active={singleSelected === 0}
-            onClick={() =>
-              singleSelected === 0
-                ? setSingleSelected(-1)
-                : setSingleSelected(0)
-            }
+            onClick={() => (singleSelected === 0 ? setSingleSelected(-1) : setSingleSelected(0))}
           >
             All
           </Chip>
           <Chip
             {...args}
             active={singleSelected === 1}
-            onClick={() =>
-              singleSelected === 1
-                ? setSingleSelected(-1)
-                : setSingleSelected(1)
-            }
+            onClick={() => (singleSelected === 1 ? setSingleSelected(-1) : setSingleSelected(1))}
           >
             Product
           </Chip>
           <Chip
             {...args}
             active={singleSelected === 2}
-            onClick={() =>
-              singleSelected === 2
-                ? setSingleSelected(-1)
-                : setSingleSelected(2)
-            }
+            onClick={() => (singleSelected === 2 ? setSingleSelected(-1) : setSingleSelected(2))}
           >
             Actions
           </Chip>
           <Chip
             {...args}
             active={singleSelected === 3}
-            onClick={() =>
-              singleSelected === 3
-                ? setSingleSelected(-1)
-                : setSingleSelected(3)
-            }
+            onClick={() => (singleSelected === 3 ? setSingleSelected(-1) : setSingleSelected(3))}
           >
             Resources
           </Chip>
@@ -72,11 +54,7 @@ export const Groups: StoryFn<typeof Chip> = ({ ...args }) => {
           <Chip
             {...args}
             active={multiSelected.includes(0)}
-            onClick={() =>
-              multiSelected.includes(0)
-                ? setMultiSelected([])
-                : setMultiSelected([...multiSelected, 0])
-            }
+            onClick={() => (multiSelected.includes(0) ? setMultiSelected([]) : setMultiSelected([...multiSelected, 0]))}
           >
             All (18)
           </Chip>
@@ -115,9 +93,7 @@ export const Groups: StoryFn<typeof Chip> = ({ ...args }) => {
           </Chip>
         </Stack>
         Selected chip{multiSelected.length > 1 ? 's' : null}:{' '}
-        {multiSelected.includes(0)
-          ? '1 2 3'
-          : multiSelected.map(id => `${id} `)}
+        {multiSelected.includes(0) ? '1 2 3' : multiSelected.map(id => `${id} `)}
       </Stack>
     </Stack>
   )

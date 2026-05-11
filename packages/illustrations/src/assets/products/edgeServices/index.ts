@@ -10,9 +10,4 @@ const edgeServicesKeyvisual = `${BASE_URL}/products/edgeServices/edge-services-k
 const edgeServicesOriginal = `${BASE_URL}/products/edgeServices/edge-services-original.webp`
 const edgeServicesWire = `${BASE_URL}/products/edgeServices/edge-services-wire.svg`
 
-export {
-  edgeServicesContent,
-  edgeServicesKeyvisual,
-  edgeServicesOriginal,
-  edgeServicesWire,
-}
+export { edgeServicesContent, edgeServicesKeyvisual, edgeServicesOriginal, edgeServicesWire }

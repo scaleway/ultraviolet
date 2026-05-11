@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const QwenLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const QwenLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="QwenLogo">
     <path
       fillRule="evenodd"

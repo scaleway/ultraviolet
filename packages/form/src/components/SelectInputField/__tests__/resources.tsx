@@ -48,8 +48,7 @@ export const planets = {
       value: 'mars',
     },
     {
-      description:
-        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+      description: 'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
       disabled: false,
       label: 'Pluto',
       value: 'pluto',

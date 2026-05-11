@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
-
+import type { ComponentProps } from 'react'
 import { RadioGroupField } from '..'
 import { Submit } from '../..'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 const RequiredTemplate = (args: ComponentProps<typeof RadioGroupField>) => (
   <Stack gap={1}>
@@ -16,9 +14,7 @@ const RequiredTemplate = (args: ComponentProps<typeof RadioGroupField>) => (
   </Stack>
 )
 
-export const Required: StoryFn<typeof RadioGroupField> = args => (
-  <RequiredTemplate {...args} />
-)
+export const Required: StoryFn<typeof RadioGroupField> = args => <RequiredTemplate {...args} />
 
 Required.args = {
   legend: 'Legend label',

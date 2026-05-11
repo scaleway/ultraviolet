@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { SelectableCard } from '..'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const ShowTick: StoryFn = args => {
   const [value, onChange] = useState('label-5')
@@ -40,9 +38,7 @@ export const ShowTick: StoryFn = args => {
           checked={value2['label-1']}
           label="Checkbox 1"
           name="label-1"
-          onChange={event =>
-            onChange2({ ...value2, 'label-1': event.currentTarget.checked })
-          }
+          onChange={event => onChange2({ ...value2, 'label-1': event.currentTarget.checked })}
           showTick
           type="checkbox"
           value="label-1"
@@ -52,9 +48,7 @@ export const ShowTick: StoryFn = args => {
           checked={value2['label-2']}
           label="Checkbox 2"
           name="label-2"
-          onChange={event =>
-            onChange2({ ...value2, 'label-2': event.currentTarget.checked })
-          }
+          onChange={event => onChange2({ ...value2, 'label-2': event.currentTarget.checked })}
           showTick
           type="checkbox"
           value="label-2"
@@ -67,9 +61,7 @@ export const ShowTick: StoryFn = args => {
           checked={value3['label-1']}
           label="Toggle 1"
           name="label-1"
-          onChange={event =>
-            onChange3({ ...value3, 'label-1': event.currentTarget.checked })
-          }
+          onChange={event => onChange3({ ...value3, 'label-1': event.currentTarget.checked })}
           showTick
           type="toggle"
           value="label-1"
@@ -79,9 +71,7 @@ export const ShowTick: StoryFn = args => {
           checked={value3['label-2']}
           label="Toggle 2"
           name="label-2"
-          onChange={event =>
-            onChange3({ ...value3, 'label-2': event.currentTarget.checked })
-          }
+          onChange={event => onChange3({ ...value3, 'label-2': event.currentTarget.checked })}
           showTick
           type="toggle"
           value="label-2"

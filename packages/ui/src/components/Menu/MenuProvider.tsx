@@ -1,7 +1,6 @@
 'use client'
 
 import { createContext, useContext, useMemo, useRef, useState } from 'react'
-
 import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 
 type MenuContextProps = {
@@ -42,9 +41,7 @@ export const MenuProvider = ({
   parentDisclosureRef,
 }: MenuProviderProps) => {
   const [isVisible, setIsVisible] = useState(visible)
-  const [shouldBeVisible, setShouldBeVisible] = useState<boolean | undefined>(
-    undefined,
-  )
+  const [shouldBeVisible, setShouldBeVisible] = useState<boolean | undefined>(undefined)
   const disclosureRef = useRef<HTMLButtonElement>(null)
   const menuRef = useRef<HTMLDivElement>(null)
   const parentMenu = useContext(MenuContext)

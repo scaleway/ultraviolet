@@ -1,6 +1,5 @@
-import { ProgressBar } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { ProgressBar } from '..'
 
 export default {
   component: ProgressBar,

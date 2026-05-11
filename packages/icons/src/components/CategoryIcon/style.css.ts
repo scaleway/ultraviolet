@@ -21,11 +21,8 @@ for (const variant of VARIANTS) {
     })
 
     // Disabled style
-    globalStyle(
-      `${categoryIcon[`${variant}Disabled` as keyof typeof categoryIcon]} .${fillClass}`,
-      {
-        fill: color[variant][`${fillClass}Disabled`],
-      },
-    )
+    globalStyle(`${categoryIcon[`${variant}Disabled` as keyof typeof categoryIcon]} .${fillClass}`, {
+      fill: color[variant][`${fillClass}Disabled`],
+    })
   }
 }

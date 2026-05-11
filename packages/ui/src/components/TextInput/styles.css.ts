@@ -1,9 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style, styleVariants } from '@vanilla-extract/css'
-
-import { searchInputStyle } from '../SearchInput/styles.css'
-
 import { TEXTINPUT_SIZE_HEIGHT } from './constants'
+import { searchInputStyle } from '../SearchInput/styles.css'
 
 export const hasFocusVar = createVar()
 
@@ -49,10 +47,7 @@ const inputWrapperSizes = styleVariants(
     (acc, size) => ({
       ...acc,
       [size]: {
-        height:
-          theme.sizing[
-            TEXTINPUT_SIZE_HEIGHT[size as keyof typeof TEXTINPUT_SIZE_HEIGHT]
-          ],
+        height: theme.sizing[TEXTINPUT_SIZE_HEIGHT[size as keyof typeof TEXTINPUT_SIZE_HEIGHT]],
       },
     }),
     {} as Record<keyof typeof TEXTINPUT_SIZE_HEIGHT, { height: string }>,

@@ -1,7 +1,5 @@
 import { useContext } from 'react'
-
 import { Stack } from '../../components/Stack'
-
 import { CategoryName } from './components/Category'
 import { SubCategory } from './components/SubCategory'
 import { OrderSummaryContext } from './Provider'
@@ -14,11 +12,7 @@ export const ScrollableContent = () => {
     <Stack className={orderSummaryStyle.scrollableContainer} gap={3}>
       {items.map(category =>
         Object.keys(category).length > 0 && category.category ? (
-          <Stack
-            className={orderSummaryStyle.category}
-            gap={1.5}
-            key={category.category}
-          >
+          <Stack className={orderSummaryStyle.category} gap={1.5} key={category.category}>
             {category.subTitle ? (
               <Stack direction="column">
                 <CategoryName category={category} />
@@ -27,14 +21,10 @@ export const ScrollableContent = () => {
             ) : (
               <CategoryName category={category} />
             )}
-            {category.subCategories &&
-            Object.keys(category.subCategories).length > 0 ? (
+            {category.subCategories && Object.keys(category.subCategories).length > 0 ? (
               <Stack gap={1}>
                 {category.subCategories.map((subCategory, index) => (
-                  <SubCategory
-                    key={subCategory.title ?? `${index}`}
-                    subCategory={subCategory}
-                  />
+                  <SubCategory key={subCategory.title ?? `${index}`} subCategory={subCategory} />
                 ))}
               </Stack>
             ) : null}

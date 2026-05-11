@@ -46,9 +46,7 @@ export const nextStep = ({
   onClickHide,
 }: NextStepProps) => {
   const newValue = completed === undefined ? done[stepNumber - 1] : completed
-  const tempDone = done.map((item, index) =>
-    index === stepNumber - 1 ? newValue : item,
-  )
+  const tempDone = done.map((item, index) => (index === stepNumber - 1 ? newValue : item))
   setCompleted(tempDone)
   if (numberOfSteps > stepNumber) {
     setCurrentStep(stepNumber + 1)

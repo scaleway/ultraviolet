@@ -5,11 +5,9 @@ import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useState } from 'react'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-
-import { List } from '..'
-
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { List } from '..'
 
 type WrapperProps = {
   theme?: typeof consoleLightTheme
@@ -26,10 +24,7 @@ type FakeDataType = {
   columnF: string
 }
 
-const data: FakeDataType[] = Array.from(
-  { length: 10 },
-  (_, index) => index + 1,
-).map(rowNum => ({
+const data: FakeDataType[] = Array.from({ length: 10 }, (_, index) => index + 1).map(rowNum => ({
   columnA: `Row ${rowNum} Column 1`,
   columnB: `Row ${rowNum} Column 2`,
   columnC: `Row ${rowNum} Column 3`,
@@ -78,9 +73,7 @@ describe('list', () => {
 
   // oxlint-disable-next-line vitest/no-disabled-tests
   it.skip('should throw an error', () => {
-    const consoleErrMock = vi
-      .spyOn(console, 'error')
-      .mockImplementation(() => {})
+    const consoleErrMock = vi.spyOn(console, 'error').mockImplementation(() => {})
 
     expect(() => {
       renderWithTheme(
@@ -204,12 +197,7 @@ describe('list', () => {
 
   it('should render correctly with column width and colMode strict', () =>
     shouldMatchSnapshot(
-      <List
-        colMode="strict"
-        columns={[columnWidthPercent, columnWidthPx]}
-        loading
-        selectable
-      >
+      <List colMode="strict" columns={[columnWidthPercent, columnWidthPx]} loading selectable>
         {data.map(({ id, columnA, columnB }) => (
           <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
@@ -236,59 +224,48 @@ describe('list', () => {
   it('should render correctly with expandable rows', () =>
     shouldMatchSnapshot(
       <List columns={columns}>
-        {data.map(
-          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-            <List.Row
-              expandable={columnF}
-              expandablePadding="10"
-              id={id}
-              key={id}
-            >
-              <List.Cell>{columnA}</List.Cell>
-              <List.Cell>{columnB}</List.Cell>
-              <List.Cell>{columnC}</List.Cell>
-              <List.Cell>{columnD}</List.Cell>
-              <List.Cell>{columnE}</List.Cell>
-            </List.Row>
-          ),
-        )}
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+          <List.Row expandable={columnF} expandablePadding="10" id={id} key={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
       </List>,
     ))
 
   it('should render correctly with sentiment rows', () =>
     shouldMatchSnapshot(
       <List columns={columns}>
-        {data.map(
-          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-            <List.Row expandable={columnF} id={id} key={id} sentiment="info">
-              <List.Cell>{columnA}</List.Cell>
-              <List.Cell>{columnB}</List.Cell>
-              <List.Cell>{columnC}</List.Cell>
-              <List.Cell>{columnD}</List.Cell>
-              <List.Cell>{columnE}</List.Cell>
-            </List.Row>
-          ),
-        )}
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+          <List.Row expandable={columnF} id={id} key={id} sentiment="info">
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
       </List>,
     ))
 
   it('should render correctly with children fragment', () =>
     shouldMatchSnapshot(
       <List columns={columns}>
-        {data.map(
-          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-            <List.Row expandable={columnF} id={id} key={id} sentiment="info">
-              {/** oxlint-disable react/jsx-no-useless-fragment: needed for the test */}
-              <>
-                <List.Cell>{columnA}</List.Cell>
-                <List.Cell>{columnB}</List.Cell>
-              </>
-              <List.Cell>{columnC}</List.Cell>
-              <List.Cell>{columnD}</List.Cell>
-              <List.Cell>{columnE}</List.Cell>
-            </List.Row>
-          ),
-        )}
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+          <List.Row expandable={columnF} id={id} key={id} sentiment="info">
+            {/** oxlint-disable react/jsx-no-useless-fragment: needed for the test */}
+            <>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+            </>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
       </List>,
     ))
 
@@ -393,12 +370,9 @@ describe('list', () => {
         )}
       </LocalControlValue>,
     )
-    const listHeaderCells = screen.queryAllByRole<HTMLTableCellElement>(
-      'button',
-      {
-        queryFallbacks: true,
-      },
-    )
+    const listHeaderCells = screen.queryAllByRole<HTMLTableCellElement>('button', {
+      queryFallbacks: true,
+    })
 
     expect(listHeaderCells).toHaveLength(columns.length)
 
@@ -478,17 +452,15 @@ describe('list', () => {
   it('should render correctly with isExpandable rows then click', async () => {
     const { asFragment } = renderWithTheme(
       <List columns={columns}>
-        {data.map(
-          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-            <List.Row expandable={columnF} id={id} key={id}>
-              <List.Cell>{columnA}</List.Cell>
-              <List.Cell>{columnB}</List.Cell>
-              <List.Cell>{columnC}</List.Cell>
-              <List.Cell>{columnD}</List.Cell>
-              <List.Cell>{columnE}</List.Cell>
-            </List.Row>
-          ),
-        )}
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+          <List.Row expandable={columnF} id={id} key={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
       </List>,
     )
     const button = screen.getAllByRole('button')[0]
@@ -503,17 +475,15 @@ describe('list', () => {
   it('should render correctly with isExpandable and autoClose rows then click', async () => {
     const { asFragment } = renderWithTheme(
       <List autoCollapse columns={columns}>
-        {data.map(
-          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-            <List.Row expandable={columnF} id={id} key={id}>
-              <List.Cell>{columnA}</List.Cell>
-              <List.Cell>{columnB}</List.Cell>
-              <List.Cell>{columnC}</List.Cell>
-              <List.Cell>{columnD}</List.Cell>
-              <List.Cell>{columnE}</List.Cell>
-            </List.Row>
-          ),
-        )}
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+          <List.Row expandable={columnF} id={id} key={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
       </List>,
     )
     const buttons = screen.getAllByRole('button')
@@ -645,17 +615,15 @@ describe('list', () => {
   it('should expand a row by pressing Space', () => {
     const { asFragment } = renderWithTheme(
       <List autoCollapse columns={columns}>
-        {data.map(
-          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-            <List.Row expandable={columnF} id={id} key={id}>
-              <List.Cell>{columnA}</List.Cell>
-              <List.Cell>{columnB}</List.Cell>
-              <List.Cell>{columnC}</List.Cell>
-              <List.Cell>{columnD}</List.Cell>
-              <List.Cell>{columnE}</List.Cell>
-            </List.Row>
-          ),
-        )}
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+          <List.Row expandable={columnF} id={id} key={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
       </List>,
     )
     const rows = screen.getAllByRole('button')
@@ -679,17 +647,15 @@ describe('list', () => {
   it('should not collapse a row by clicking on expandable content', () => {
     const { asFragment } = renderWithTheme(
       <List autoCollapse columns={columns}>
-        {data.map(
-          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-            <List.Row expandable={columnF} id={id} key={id}>
-              <List.Cell>{columnA}</List.Cell>
-              <List.Cell>{columnB}</List.Cell>
-              <List.Cell>{columnC}</List.Cell>
-              <List.Cell>{columnD}</List.Cell>
-              <List.Cell>{columnE}</List.Cell>
-            </List.Row>
-          ),
-        )}
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+          <List.Row expandable={columnF} id={id} key={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
       </List>,
     )
     const rows = screen.getAllByRole('button')

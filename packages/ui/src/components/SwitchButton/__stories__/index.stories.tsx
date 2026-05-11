@@ -1,6 +1,5 @@
-import { SwitchButton } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { SwitchButton } from '..'
 
 export default {
   component: SwitchButton,

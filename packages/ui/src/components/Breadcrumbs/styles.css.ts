@@ -1,14 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, style } from '@vanilla-extract/css'
-
-import {
-  content,
-  contentBreadcrumbsText,
-  item,
-  itemContainer,
-  link,
-} from './components/styles.css'
 import { HEIGHT } from './constants'
+import { content, contentBreadcrumbsText, item, itemContainer, link } from './components/styles.css'
 
 const breadcrumbs = style({
   alignItems: 'center',

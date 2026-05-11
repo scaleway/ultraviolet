@@ -1,12 +1,10 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-
 import { slideFromBottom } from '../../utils'
+import { MODAL_PLACEMENT, MODAL_WIDTH } from './constants'
 import { dialogStyle } from '../Dialog/styles.css'
 import { drawerStyle, SIZES } from '../Drawer/styles.css'
-
-import { MODAL_PLACEMENT, MODAL_WIDTH } from './constants'
 
 export const topModal = createVar()
 export const positionModal = createVar()
@@ -95,12 +93,11 @@ const modal = recipe({
         boxShadow: 'none',
         pointerEvents: 'auto',
       },
-      [`&${drawerStyle.drawer.large}, &${drawerStyle.drawer.small}, &${drawerStyle.drawer.medium}`]:
-        {
-          borderRadius: '0',
-          marginRight: '0',
-          padding: '0',
-        },
+      [`&${drawerStyle.drawer.large}, &${drawerStyle.drawer.small}, &${drawerStyle.drawer.medium}`]: {
+        borderRadius: '0',
+        marginRight: '0',
+        padding: '0',
+      },
       [`&${drawerStyle.drawer.large}`]: {
         width: `${SIZES.large}rem`,
       },
@@ -140,21 +137,11 @@ const modal = recipe({
         padding: 0,
       },
     },
-    placement: Object.fromEntries(
-      Object.entries(MODAL_PLACEMENT).map(([placement, value]) => [
-        placement,
-        value,
-      ]),
-    ),
+    placement: Object.fromEntries(Object.entries(MODAL_PLACEMENT).map(([placement, value]) => [placement, value])),
     positivePosition: {
       true: {},
     },
-    size: Object.fromEntries(
-      Object.entries(MODAL_WIDTH).map(([size, width]) => [
-        size,
-        { width: `${width}rem` },
-      ]),
-    ),
+    size: Object.fromEntries(Object.entries(MODAL_WIDTH).map(([size, width]) => [size, { width: `${width}rem` }])),
   },
 })
 

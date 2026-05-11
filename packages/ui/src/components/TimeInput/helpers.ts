@@ -8,9 +8,7 @@ export const isAOrP = (key: string) => ['a', 'A', 'p', 'P'].includes(key)
 const isValidNewHour = (old: number, key: number, timeFormat: number) => {
   const newValue = old * 10 + key
 
-  return (
-    (timeFormat === 24 && newValue < 24) || (timeFormat === 12 && newValue < 13)
-  )
+  return (timeFormat === 24 && newValue < 24) || (timeFormat === 12 && newValue < 13)
 }
 
 export const isCompleteHour = (timeFormat: number, value: number) => {
@@ -24,12 +22,7 @@ export const isCompleteHour = (timeFormat: number, value: number) => {
   return false
 }
 
-export const canConcat = (
-  oldValue: number,
-  type: (typeof TIME_KEYS)[number],
-  key: number,
-  timeFormat: 24 | 12,
-) =>
+export const canConcat = (oldValue: number, type: (typeof TIME_KEYS)[number], key: number, timeFormat: 24 | 12) =>
   (type === 'h' && isValidNewHour(oldValue, key, timeFormat)) ||
   (type !== 'h' && oldValue < 6) ||
   (type !== 'h' && oldValue < 6)
@@ -52,10 +45,7 @@ export const getLastTypedChar = (value: string, oldValue?: number) => {
   return ''
 }
 
-export const getValueByType = (
-  type: (typeof TIME_KEYS)[number],
-  value?: Date | null,
-) => {
+export const getValueByType = (type: (typeof TIME_KEYS)[number], value?: Date | null) => {
   if (!value) {
     return 0
   }
@@ -69,11 +59,7 @@ export const getValueByType = (
   return value.getSeconds()
 }
 
-export const setValueByType = (
-  type: (typeof TIME_KEYS)[number],
-  date: Date | undefined,
-  value: number,
-) => {
+export const setValueByType = (type: (typeof TIME_KEYS)[number], date: Date | undefined, value: number) => {
   if (type === 'h') {
     return date?.setHours(value)
   }
@@ -84,11 +70,7 @@ export const setValueByType = (
   return date?.setSeconds(value)
 }
 
-export const format = (
-  value: number,
-  type: (typeof TIME_KEYS)[number],
-  timeFormat: 24 | 12,
-) => {
+export const format = (value: number, type: (typeof TIME_KEYS)[number], timeFormat: 24 | 12) => {
   // 12-hour format: hours go from 1 to 12 (not 0-11)
   if (type === 'h' && timeFormat === 12) {
     return (value % 12 === 0 ? 12 : value % 12).toString().padStart(2, '0')

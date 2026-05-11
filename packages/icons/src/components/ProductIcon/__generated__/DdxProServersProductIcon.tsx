@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const DdxProServersProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const DdxProServersProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="DdxProServersProductIcon">
     <g className="DDX-Pro-Servers">
       <g className="Pro-Servers-icon" clipPath="url(#a)">

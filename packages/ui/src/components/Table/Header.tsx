@@ -1,8 +1,7 @@
 'use client'
 
-import { tableStyle } from './styles.css'
-
 import type { ReactNode } from 'react'
+import { tableStyle } from './styles.css'
 
 type HeaderProps = {
   children: ReactNode

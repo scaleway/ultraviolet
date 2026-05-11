@@ -1,12 +1,10 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { CockpitProductIcon } from '@ultraviolet/icons/product/CockpitProductIcon'
-
 import { Row } from '../../../components/Row'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
 import illustration from '../assets/illustration.png'
 import { ContentCard } from '../index'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Disabled: StoryFn<typeof ContentCard> = args => (
   <Stack gap={2}>

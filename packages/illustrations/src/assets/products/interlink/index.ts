@@ -10,9 +10,4 @@ const interlinkKeyvisual = `${BASE_URL}/products/interlink/interlink-keyvisual.w
 const interlinkOriginal = `${BASE_URL}/products/interlink/interlink-original.webp`
 const interlinkWire = `${BASE_URL}/products/interlink/interlink-wire.svg`
 
-export {
-  interlinkContent,
-  interlinkKeyvisual,
-  interlinkOriginal,
-  interlinkWire,
-}
+export { interlinkContent, interlinkKeyvisual, interlinkOriginal, interlinkWire }

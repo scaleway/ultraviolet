@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Menu } from '..'
 import { Stack } from '../../Stack'
-
 import { DefaultDisclosure } from './Template.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Overflowing: StoryFn<typeof Menu> = () => (
   <Stack gap={9}>
@@ -58,8 +56,7 @@ export const Overflowing: StoryFn<typeof Menu> = () => (
 Overflowing.parameters = {
   docs: {
     description: {
-      story:
-        'This story is only to check the behavior of the menu when it overflows the parent container.',
+      story: 'This story is only to check the behavior of the menu when it overflows the parent container.',
     },
   },
 }

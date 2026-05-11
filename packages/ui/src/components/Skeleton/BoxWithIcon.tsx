@@ -1,19 +1,12 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
 import { IconSkeleton } from './IconSkeleton'
 import { Line } from './Line'
 import { skeletonStyle } from './styles.css'
 import { columns } from './stylesVariants.css'
 
-export const BoxWithIcon = ({
-  col = 4,
-  length = 8,
-}: {
-  col?: number
-  length?: number
-}) => (
+export const BoxWithIcon = ({ col = 4, length = 8 }: { col?: number; length?: number }) => (
   <div
     className={skeletonStyle.blocksContainer}
     style={assignInlineVars({
@@ -21,10 +14,7 @@ export const BoxWithIcon = ({
     })}
   >
     {Array.from({ length }, (_, i) => (
-      <div
-        className={skeletonStyle.boxWithIconSkeleton}
-        key={`skeleton-box-${i}`}
-      >
+      <div className={skeletonStyle.boxWithIconSkeleton} key={`skeleton-box-${i}`}>
         <IconSkeleton />
         <Line />
       </div>

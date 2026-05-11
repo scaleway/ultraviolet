@@ -3,19 +3,12 @@
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
+import type { ReactNode } from 'react'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
 import { SortIcon } from './SortIcon'
 import { tableStyle } from './styles.css'
-import {
-  headerCellMaxWidth,
-  headerCellMinWidth,
-  headerCellWidth,
-} from './variables.css'
-
-import type { ReactNode } from 'react'
+import { headerCellMaxWidth, headerCellMinWidth, headerCellWidth } from './variables.css'
 
 type HeaderCellProps = {
   children: ReactNode
@@ -51,18 +44,13 @@ export const HeaderCell = ({
     order = 'descending'
   }
 
-  const handleOrder = onOrder
-    ? () => onOrder(order === 'ascending' ? 'desc' : 'asc')
-    : undefined
+  const handleOrder = onOrder ? () => onOrder(order === 'ascending' ? 'desc' : 'asc') : undefined
 
   return (
     <th
       align={align}
       aria-sort={order}
-      className={cn(
-        className,
-        tableStyle.headerCell({ align, checked: isCheckbox }),
-      )}
+      className={cn(className, tableStyle.headerCell({ align, checked: isCheckbox }))}
       onClick={handleOrder}
       onKeyDown={
         handleOrder
@@ -94,11 +82,7 @@ export const HeaderCell = ({
         {children}
         {info ? (
           <Tooltip text={info}>
-            <InformationOutlineIcon
-              prominence="weak"
-              sentiment="neutral"
-              size="small"
-            />
+            <InformationOutlineIcon prominence="weak" sentiment="neutral" size="small" />
           </Tooltip>
         ) : null}
         {orderDirection !== undefined && isOrdered !== undefined ? (

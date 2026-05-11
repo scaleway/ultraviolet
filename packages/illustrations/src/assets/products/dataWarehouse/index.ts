@@ -10,9 +10,4 @@ const dataWarehouseKeyvisual = `${BASE_URL}/products/dataWarehouse/data-warehous
 const dataWarehouseOriginal = `${BASE_URL}/products/dataWarehouse/data-warehouse-original.webp`
 const dataWarehouseWire = `${BASE_URL}/products/dataWarehouse/data-warehouse-wire.svg`
 
-export {
-  dataWarehouseContent,
-  dataWarehouseKeyvisual,
-  dataWarehouseOriginal,
-  dataWarehouseWire,
-}
+export { dataWarehouseContent, dataWarehouseKeyvisual, dataWarehouseOriginal, dataWarehouseWire }

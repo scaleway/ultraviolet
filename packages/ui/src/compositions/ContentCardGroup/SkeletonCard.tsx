@@ -2,7 +2,6 @@
 
 import { Skeleton } from '../../components/Skeleton'
 import { Stack } from '../../components/Stack'
-
 import { contentCardGroupStyle } from './styles.css'
 
 export const SkeletonCard = () => (
@@ -13,10 +12,7 @@ export const SkeletonCard = () => (
         <Skeleton variant="line" />
         <Skeleton variant="line" />
       </Stack>
-      <Skeleton
-        className={contentCardGroupStyle.squareSkeleton}
-        variant="square"
-      />
+      <Skeleton className={contentCardGroupStyle.squareSkeleton} variant="square" />
     </Stack>
   </div>
 )

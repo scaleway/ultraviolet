@@ -3,7 +3,6 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
 import { describe, expect, it, vi } from 'vitest'
-
 import { Submit, UnitInputField } from '../..'
 import { mockErrors } from '../../../mocks'
 import { Form } from '../../Form'
@@ -26,12 +25,7 @@ const optionsSelect = [
 describe('unitInputField', () => {
   it('should render correctly', () => {
     const { asFragment } = renderWithForm(
-      <UnitInputField
-        label="Test"
-        name="test"
-        optionName="test2"
-        options={optionsSelect}
-      />,
+      <UnitInputField label="Test" name="test" optionName="test2" options={optionsSelect} />,
     )
 
     expect(asFragment()).toMatchSnapshot()

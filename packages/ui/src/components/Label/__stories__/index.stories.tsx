@@ -1,6 +1,5 @@
-import { Label } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Label } from '..'
 
 export default {
   component: Label,

@@ -1,12 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Table } from '..'
-
 import { columns, data } from './resources'
 
-import type { StoryFn } from '@storybook/react-vite'
-
-export const ColumnWidth: StoryFn<typeof Table> = ({ ...props }) => (
-  <Table {...props} />
-)
+export const ColumnWidth: StoryFn<typeof Table> = ({ ...props }) => <Table {...props} />
 
 ColumnWidth.args = {
   children: (

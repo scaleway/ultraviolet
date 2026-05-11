@@ -1,12 +1,9 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-
-import { Bullet } from '../Bullet'
-
-import { stepListStyle } from './styles.css'
-
 import type { ComponentProps, ReactNode } from 'react'
+import { Bullet } from '../Bullet'
+import { stepListStyle } from './styles.css'
 
 export type Sizes = 'small' | 'medium'
 
@@ -33,18 +30,9 @@ export const Item = ({
   disabled = false,
   className,
 }: ItemProps) => (
-  <li
-    className={cn(className, stepListStyle.step({ disabled }))}
-    onClick={onClick}
-    onKeyDown={onKeyDown}
-  >
+  <li className={cn(className, stepListStyle.step({ disabled }))} onClick={onClick} onKeyDown={onKeyDown}>
     {bulletContent ? (
-      <Bullet
-        disabled={disabled}
-        prominence={prominence}
-        sentiment={sentiment}
-        size={size}
-      >
+      <Bullet disabled={disabled} prominence={prominence} sentiment={sentiment} size={size}>
         {bulletContent}
       </Bullet>
     ) : null}

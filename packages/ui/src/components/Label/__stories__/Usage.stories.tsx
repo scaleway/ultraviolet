@@ -1,10 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Label } from '..'
 import { Checkbox } from '../../Checkbox'
 import { Row } from '../../Row'
 import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const values = [
   {
@@ -24,18 +23,8 @@ export const Usage: StoryFn<typeof Label> = () => (
   <Stack gap={3}>
     Using prop label inside the component :
     <Stack direction="row" gap={2} justifyContent="center">
-      <SelectInput
-        label="Input1"
-        name="input11"
-        options={values}
-        size="medium"
-      />
-      <SelectInput
-        label="Input2"
-        name="input12"
-        options={values}
-        size="medium"
-      />
+      <SelectInput label="Input1" name="input11" options={values} size="medium" />
+      <SelectInput label="Input2" name="input12" options={values} size="medium" />
       <Checkbox>Checkbox</Checkbox>
     </Stack>
     Using component Label, outside of the input component :

@@ -2,9 +2,7 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-
 import { OfferList } from '..'
-
 import { columns, data } from './resources'
 
 describe('offerList', () => {
@@ -112,12 +110,7 @@ describe('offerList', () => {
   it('should work with selectable - radio', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
-      <OfferList
-        columns={columns}
-        onChangeSelect={onChange}
-        selected="jupiter"
-        type="radio"
-      >
+      <OfferList columns={columns} onChangeSelect={onChange} selected="jupiter" type="radio">
         {data.map(planet => (
           <OfferList.Row id={planet.id} key={planet.id} offerName={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
@@ -143,12 +136,7 @@ describe('offerList', () => {
   it('should work with selectable - checkbox', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
-      <OfferList
-        columns={columns}
-        onChangeSelect={onChange}
-        selected={['jupiter']}
-        type="checkbox"
-      >
+      <OfferList columns={columns} onChangeSelect={onChange} selected={['jupiter']} type="checkbox">
         {data.map(planet => (
           <OfferList.Row id={planet.id} key={planet.id} offerName={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
@@ -176,12 +164,7 @@ describe('offerList', () => {
     const { asFragment } = renderWithTheme(
       <OfferList columns={columns} expandable>
         {data.map(planet => (
-          <OfferList.Row
-            expandable="expandable content"
-            id={planet.id}
-            key={planet.id}
-            offerName={planet.id}
-          >
+          <OfferList.Row expandable="expandable content" id={planet.id} key={planet.id} offerName={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
             <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>

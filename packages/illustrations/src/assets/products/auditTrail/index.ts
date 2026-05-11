@@ -10,9 +10,4 @@ const auditTrailKeyvisual = `${BASE_URL}/products/auditTrail/audit-trail-keyvisu
 const auditTrailOriginal = `${BASE_URL}/products/auditTrail/audit-trail-original.webp`
 const auditTrailWire = `${BASE_URL}/products/auditTrail/audit-trail-wire.svg`
 
-export {
-  auditTrailContent,
-  auditTrailKeyvisual,
-  auditTrailOriginal,
-  auditTrailWire,
-}
+export { auditTrailContent, auditTrailKeyvisual, auditTrailOriginal, auditTrailWire }

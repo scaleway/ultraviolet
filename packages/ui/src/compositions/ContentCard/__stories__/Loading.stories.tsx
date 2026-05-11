@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
 import { ContentCard } from '../index'
-
 import { Template } from './Template.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Loading: StoryFn<typeof ContentCard> = args => (
   <Stack gap={2}>
@@ -27,7 +25,6 @@ Loading.args = { ...Template.args }
 
 Loading.parameters = {
   description: {
-    story:
-      'You can easily enable a loading state by passing `loading` it will render a placeholder skeleton.',
+    story: 'You can easily enable a loading state by passing `loading` it will render a placeholder skeleton.',
   },
 }

@@ -37,31 +37,21 @@ const walk = (dir: string): string[] => {
 const filesToAnalyze = walk(srcDir)
 
 for (const file of filesToAnalyze) {
-  if (
-    (file.endsWith('.ts') || file.endsWith('.tsx')) &&
-    !['stories.tsx', 'test.tsx'].some(end => file.endsWith(end))
-  ) {
+  if ((file.endsWith('.ts') || file.endsWith('.tsx')) && !['stories.tsx', 'test.tsx'].some(end => file.endsWith(end))) {
     const relativePath = relative(srcDir, file)
     const componentName = relativePath.split('/')[0]
 
     const content = readFileSync(file, 'utf8')
 
-    const matches = content.matchAll(
-      /import\s+(?:.*?from\s+)?(['"])(.*?)(['"])|export\s+{?\s*(\w+)?\s*}?$/g,
-    )
+    const matches = content.matchAll(/import\s+(?:.*?from\s+)?(['"])(.*?)(['"])|export\s+{?\s*(\w+)?\s*}?$/g)
 
     for (const match of matches) {
       const importedFile = match[2] || null
       if (importedFile) {
-        const normalizedFile = relative(
-          srcDir,
-          join(dirname(file), importedFile),
-        ).replace(/\.tsx?$/, '')
+        const normalizedFile = relative(srcDir, join(dirname(file), importedFile)).replace(/\.tsx?$/, '')
 
         if (
-          !['react', 'react-vite', 'vitest', 'styled', 'components/'].some(
-            string => normalizedFile.endsWith(string),
-          )
+          !['react', 'react-vite', 'vitest', 'styled', 'components/'].some(string => normalizedFile.endsWith(string))
         ) {
           const importedComponent = normalizedFile.split('/').toReversed()[0]
 
@@ -111,16 +101,12 @@ const { info } = console
 info('sortedComponent', JSON.stringify(graph, null, 2))
 writeFileSync('deps.json', JSON.stringify(sortedComponent, null, 2))
 
-const componentNames = new Set(
-  sortedComponent.sortedComponent.map(([name]) => name),
-)
+const componentNames = new Set(sortedComponent.sortedComponent.map(([name]) => name))
 const asRecord = Object.fromEntries(
   sortedComponent.sortedComponent
     .map(([name, count]) => {
       const { dependsOn } = count as { dependsOn: string[] }
-      const filteredDeps = dependsOn.filter(dependency =>
-        componentNames.has(dependency),
-      )
+      const filteredDeps = dependsOn.filter(dependency => componentNames.has(dependency))
 
       return [name, filteredDeps.length] as const
     })

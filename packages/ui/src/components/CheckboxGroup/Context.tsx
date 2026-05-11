@@ -1,7 +1,6 @@
 'use client'
 
 import { createContext } from 'react'
-
 import type { InputHTMLAttributes } from 'react'
 
 type CheckboxGroupContextType = {
@@ -11,6 +10,4 @@ type CheckboxGroupContextType = {
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
-export const CheckboxGroupContext = createContext<
-  CheckboxGroupContextType | undefined
->(undefined)
+export const CheckboxGroupContext = createContext<CheckboxGroupContextType | undefined>(undefined)

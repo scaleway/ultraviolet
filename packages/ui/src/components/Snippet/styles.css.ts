@@ -123,10 +123,7 @@ const buttonContainer = styleVariants({
       padding: `${theme.space['2']} ${theme.space['2']} 0 0`,
     },
   ],
-  oneLine: [
-    buttonContainerBase,
-    { padding: `${theme.space['1']} ${theme.space['2']} 0 0` },
-  ],
+  oneLine: [buttonContainerBase, { padding: `${theme.space['1']} ${theme.space['2']} 0 0` }],
 })
 
 const showMoreContainer = styleVariants({

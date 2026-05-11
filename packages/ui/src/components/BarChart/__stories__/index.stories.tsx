@@ -1,6 +1,5 @@
-import { BarChart } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { BarChart } from '..'
 
 export default {
   component: BarChart,

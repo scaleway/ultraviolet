@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest'
-
 import {
   addZero,
   createDate,
@@ -50,19 +49,13 @@ describe('helper functions dateInput', () => {
   })
 
   it('isSameMonth should work', () => {
-    expect(isSameMonth(new Date('23 Dec 2023'), new Date('22 Dec 2023'))).toBe(
-      true,
-    )
-    expect(isSameMonth(new Date('23 Dec 2023'), new Date('23 Oct 2023'))).toBe(
-      false,
-    )
+    expect(isSameMonth(new Date('23 Dec 2023'), new Date('22 Dec 2023'))).toBe(true)
+    expect(isSameMonth(new Date('23 Dec 2023'), new Date('23 Oct 2023'))).toBe(false)
   })
 
   it('isSameDay should work', () => {
     expect(isSameDay(new Date(), new Date('22 Dec 1999'))).toBe(false)
-    expect(isSameDay(new Date('23 Dec 2023'), new Date('23 Dec 2023'))).toBe(
-      true,
-    )
+    expect(isSameDay(new Date('23 Dec 2023'), new Date('23 Dec 2023'))).toBe(true)
   })
 
   it('formatValue should work with default formatting', () => {
@@ -72,9 +65,7 @@ describe('helper functions dateInput', () => {
 
     expect(formatValue(null, rangeDate, false, false)).toBe(undefined)
     expect(formatValue(null, rangeDate, true, true)).toBe('10/2000 - 10/2000')
-    expect(formatValue(null, rangeDate, false, true)).toBe(
-      '20/10/2000 - 31/10/2000',
-    )
+    expect(formatValue(null, rangeDate, false, true)).toBe('20/10/2000 - 31/10/2000')
   })
 
   it('formatValue should work with custom formatting', () => {
@@ -84,9 +75,7 @@ describe('helper functions dateInput', () => {
 
     expect(formatValue(null, rangeDate, false, false, format)).toBe(undefined)
     expect(formatValue(null, rangeDate, true, true, format)).toBe('2000 - 2000')
-    expect(formatValue(null, rangeDate, false, true, format)).toBe(
-      '2000 - 2000',
-    )
+    expect(formatValue(null, rangeDate, false, true, format)).toBe('2000 - 2000')
   })
 
   it('createDate should work', () => {
@@ -96,12 +85,8 @@ describe('helper functions dateInput', () => {
   })
 
   it('createDate should work with min and maxDate', () => {
-    expect(createDate('12/02/2020', false, new Date(2020, 1, 15))).toEqual(
-      new Date(2020, 1, 15),
-    )
-    expect(
-      createDate('12/02/2020', false, undefined, new Date(2020, 1, 10)),
-    ).toEqual(new Date(2020, 1, 10))
+    expect(createDate('12/02/2020', false, new Date(2020, 1, 15))).toEqual(new Date(2020, 1, 15))
+    expect(createDate('12/02/2020', false, undefined, new Date(2020, 1, 10))).toEqual(new Date(2020, 1, 10))
   })
 
   it('createdate should work with showMonthYearPicker', () => {

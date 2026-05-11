@@ -2,11 +2,7 @@ import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import { Link, Stack, StepList, Tooltip } from '@ultraviolet/ui'
 import * as Compositions from '@ultraviolet/ui/compositions'
 
-const NOT_COMPONENTS = new Set([
-  'NavigationProvider',
-  'useNavigation',
-  'estimateCostDefaultLocales',
-])
+const NOT_COMPONENTS = new Set(['NavigationProvider', 'useNavigation', 'estimateCostDefaultLocales'])
 
 type ComponentInfo = {
   name: string
@@ -23,8 +19,7 @@ export const CompositionsList = () => {
     .map(([name, component]) => ({
       name,
       // oxlint-disable-next-line no-underscore-dangle
-      description: (component as ReactComponentWithDocGen).__docgenInfo
-        ?.description,
+      description: (component as ReactComponentWithDocGen).__docgenInfo?.description,
     }))
     .filter(component => !NOT_COMPONENTS.has(component.name))
 
@@ -35,11 +30,7 @@ export const CompositionsList = () => {
         const componentLink = `https://storybook.ultraviolet.scaleway.com/?path=/docs/compositions-${lowerCaseName}--docs`
 
         return component ? (
-          <StepList.Item
-            key={component.name}
-            size="small"
-            bulletContent={index + 1}
-          >
+          <StepList.Item key={component.name} size="small" bulletContent={index + 1}>
             <Stack direction="row" gap={1} alignItems="baseline">
               <Link href={componentLink} size="small" prominence="stronger">
                 <Stack direction="row" alignItems="baseline">
@@ -48,11 +39,7 @@ export const CompositionsList = () => {
               </Link>
               {component.description ? (
                 <Tooltip text={component.description}>
-                  <InformationIcon
-                    sentiment="neutral"
-                    size="xsmall"
-                    prominence="weak"
-                  />
+                  <InformationIcon sentiment="neutral" size="xsmall" prominence="weak" />
                 </Tooltip>
               ) : null}{' '}
             </Stack>

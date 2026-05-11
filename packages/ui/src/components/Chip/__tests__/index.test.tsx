@@ -4,7 +4,6 @@ import { AddressIcon } from '@ultraviolet/icons/AddressIcon'
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-
 import { Chip } from '..'
 
 describe('checkbox', () => {
@@ -61,19 +60,11 @@ describe('checkbox', () => {
       <>
         <Chip data-testid="test" onClick={mockOnClick1}>
           test
-          <Chip.Icon
-            data-testid="test-icon"
-            icon={<ArrowDownIcon />}
-            onClick={mockOnClickIcon1}
-          />
+          <Chip.Icon data-testid="test-icon" icon={<ArrowDownIcon />} onClick={mockOnClickIcon1} />
         </Chip>
         <Chip data-testid="test-disabled" disabled onClick={mockOnClick2}>
           test Disabled
-          <Chip.Icon
-            data-testid="test-icon-disabled"
-            icon={<ArrowDownIcon />}
-            onClick={mockOnClickIcon2}
-          />
+          <Chip.Icon data-testid="test-icon-disabled" icon={<ArrowDownIcon />} onClick={mockOnClickIcon2} />
         </Chip>
       </>,
     )

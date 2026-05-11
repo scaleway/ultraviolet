@@ -2,9 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
 import { Text } from '../Text'
-
 import { barChartStyle, colorBar } from './styles.css'
 
 type BarChartTooltipProps = {
@@ -22,10 +20,7 @@ export const BarChartTooltip = ({
   className,
   'data-testid': dataTestId,
 }: BarChartTooltipProps) => (
-  <div
-    className={cn(className, barChartStyle.tooltipContainer)}
-    data-testid={dataTestId}
-  >
+  <div className={cn(className, barChartStyle.tooltipContainer)} data-testid={dataTestId}>
     <div>
       <span
         className={barChartStyle.tooltipContainer}

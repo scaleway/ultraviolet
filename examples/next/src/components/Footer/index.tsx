@@ -1,9 +1,7 @@
 import { Stack, Text } from '@ultraviolet/ui'
 import { cn } from '@ultraviolet/utils'
-
 import GithubAndDocumentationButtons from '../GithubAndDocumentationButtons'
 import Logo from '../Logo'
-
 import styles from './footer.module.scss'
 
 const Footer = ({ className }: { className?: string }) => (
@@ -14,9 +12,8 @@ const Footer = ({ className }: { className?: string }) => (
           Hosted in green datacenters in France
         </Text>
         <Text as="p" prominence="weak" variant="bodySmall">
-          Our datacenters are designed and built to deliver excellent energy
-          efficiency. They offer a low carbon footprint with our guaranteed
-          clean energy source. We embrace both disruptive and state-of-the-art
+          Our datacenters are designed and built to deliver excellent energy efficiency. They offer a low carbon
+          footprint with our guaranteed clean energy source. We embrace both disruptive and state-of-the-art
           technologies that reduce our environmental impact.
         </Text>
       </Stack>

@@ -3,7 +3,6 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-
 import pkg from './package.json' with { type: 'json' }
 
 const { log: logger } = console
@@ -33,10 +32,7 @@ if (escapedCss === '') {
   throw new Error('broken css export')
 }
 
-entryContent = entryContent.replace(
-  'const iconStyles = "";',
-  `const iconStyles = \`${escapedCss}\`;`,
-)
+entryContent = entryContent.replace('const iconStyles = "";', `const iconStyles = \`${escapedCss}\`;`)
 
 logger('export css module', entryPath)
 // Write the updated entry file

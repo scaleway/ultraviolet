@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const PythonLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const PythonLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="PythonLogo">
     <g>
       <path

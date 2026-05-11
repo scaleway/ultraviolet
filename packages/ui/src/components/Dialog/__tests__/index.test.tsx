@@ -2,7 +2,6 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-
 import { Dialog } from '..'
 import { Button } from '../../Button'
 
@@ -14,11 +13,7 @@ describe('dialog', () => {
           <Dialog.Text>text example</Dialog.Text>
           <Dialog.Buttons
             primaryButton={<Button sentiment="danger">Discard changes</Button>}
-            secondaryButton={
-              <Dialog.CancelButton onClick={() => {}}>
-                Cancel
-              </Dialog.CancelButton>
-            }
+            secondaryButton={<Dialog.CancelButton onClick={() => {}}>Cancel</Dialog.CancelButton>}
           />
         </Dialog.Stack>
       </Dialog>,
@@ -26,23 +21,13 @@ describe('dialog', () => {
 
   it('should handle disclosure & render prop', async () => {
     renderWithTheme(
-      <Dialog
-        disclosure={<Button>Open Dialog</Button>}
-        sentiment="primary"
-        title="Title Test"
-      >
+      <Dialog disclosure={<Button>Open Dialog</Button>} sentiment="primary" title="Title Test">
         {({ close }) => (
           <Dialog.Stack>
             <Dialog.Text>text example</Dialog.Text>
             <Dialog.Buttons
-              primaryButton={
-                <Button sentiment="danger">Discard changes</Button>
-              }
-              secondaryButton={
-                <Dialog.CancelButton onClick={close}>
-                  Cancel
-                </Dialog.CancelButton>
-              }
+              primaryButton={<Button sentiment="danger">Discard changes</Button>}
+              secondaryButton={<Dialog.CancelButton onClick={close}>Cancel</Dialog.CancelButton>}
             />
           </Dialog.Stack>
         )}
@@ -61,9 +46,7 @@ describe('dialog', () => {
   it('[CancelButton] : should handle click', async () => {
     const onClick = vi.fn()
 
-    renderWithTheme(
-      <Dialog.CancelButton onClick={onClick}>Cancel</Dialog.CancelButton>,
-    )
+    renderWithTheme(<Dialog.CancelButton onClick={onClick}>Cancel</Dialog.CancelButton>)
 
     const button = screen.getByText('Cancel')
     await userEvent.click(button)

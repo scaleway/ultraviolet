@@ -1,29 +1,18 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { useEffect, useState } from 'react'
-
 import { Row } from '..'
 import { Stack } from '../../Stack'
-
 import { divWithBackground } from './DivWithBackground.css'
 
-import type { StoryFn } from '@storybook/react-vite'
-
 export const Responsive: StoryFn = props => {
-  const [breakpoint, setBreakpoint] = useState<'xxsmall' | 'xsmall' | 'small'>(
-    'xxsmall',
-  )
+  const [breakpoint, setBreakpoint] = useState<'xxsmall' | 'xsmall' | 'small'>('xxsmall')
 
   useEffect(() => {
     const calc = () => {
-      if (
-        window.innerWidth <=
-        Number(consoleLightTheme.breakpoints.xxsmall.replace('px', ''))
-      ) {
+      if (window.innerWidth <= Number(consoleLightTheme.breakpoints.xxsmall.replace('px', ''))) {
         setBreakpoint('xxsmall')
-      } else if (
-        window.innerWidth <=
-        Number(consoleLightTheme.breakpoints.xsmall.replace('px', ''))
-      ) {
+      } else if (window.innerWidth <= Number(consoleLightTheme.breakpoints.xsmall.replace('px', ''))) {
         setBreakpoint('xsmall')
       } else {
         setBreakpoint('small')
@@ -73,11 +62,7 @@ export const Responsive: StoryFn = props => {
           const sentiments = ['primary', 'success', 'danger']
 
           return (
-            <div
-              className={divWithBackground}
-              data-sentiment={sentiments[idx]}
-              key={idx}
-            >
+            <div className={divWithBackground} data-sentiment={sentiments[idx]} key={idx}>
               {col}
             </div>
           )
@@ -100,11 +85,7 @@ export const Responsive: StoryFn = props => {
           const sentiments = ['primary', 'success', 'danger']
 
           return (
-            <div
-              className={divWithBackground}
-              data-sentiment={sentiments[idx]}
-              key={idx}
-            >
+            <div className={divWithBackground} data-sentiment={sentiments[idx]} key={idx}>
               {col}
             </div>
           )

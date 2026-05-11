@@ -1,6 +1,6 @@
+import type { ComponentProps, ReactNode } from 'react'
 import type { Popup } from '../Popup'
 import type { SIZES_WIDTH } from './constant'
-import type { ComponentProps, ReactNode } from 'react'
 
 type SentimentType = 'neutral' | 'primary'
 
@@ -22,12 +22,6 @@ export type PopoverProps = {
    */
   portalTarget?: HTMLElement
   placement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
-} & Pick<
-  ComponentProps<typeof Popup>,
-  'dynamicDomRendering' | 'align' | 'style'
->
+} & Pick<ComponentProps<typeof Popup>, 'dynamicDomRendering' | 'align' | 'style'>
 
-export type ContentWrapperProps = Pick<
-  PopoverProps,
-  'title' | 'onClose' | 'sentiment' | 'children'
->
+export type ContentWrapperProps = Pick<PopoverProps, 'title' | 'onClose' | 'sentiment' | 'children'>

@@ -2,18 +2,16 @@
 
 import { Slider } from '@ultraviolet/ui'
 import { useMemo } from 'react'
-import { useController } from 'react-hook-form'
-
-import { useErrors } from '../../providers'
-
-import type { BaseFieldProps } from '../../types'
 import type { ComponentProps, FocusEvent, ReactNode } from 'react'
+import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useErrors } from '../../providers'
+import type { BaseFieldProps } from '../../types'
 
-type SliderFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
+type SliderFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
+  TFieldValues,
+  TFieldName
+> &
   Omit<ComponentProps<typeof Slider>, 'value' | 'onChange'> & {
     suffix?: string | ReactNode[]
   }
@@ -58,17 +56,13 @@ export const SliderField = <
   const finalValue = useMemo(() => {
     if (options && field.value) {
       if (!Array.isArray(field.value)) {
-        const processedValue = options
-          .map(option => option.value)
-          .indexOf(field.value)
+        const processedValue = options.map(option => option.value).indexOf(field.value)
 
         return processedValue
       }
 
       if (Array.isArray(field.value)) {
-        const processedValue = (field.value as number[]).map(val =>
-          options.map(option => option.value).indexOf(val),
-        )
+        const processedValue = (field.value as number[]).map(val => options.map(option => option.value).indexOf(val))
 
         return processedValue
       }
@@ -80,10 +74,7 @@ export const SliderField = <
   return (
     <Slider
       aria-label={ariaLabel}
-      error={getError(
-        { label: errorLabel ?? label ?? ariaLabel ?? name, max, min },
-        error,
-      )}
+      error={getError({ label: errorLabel ?? label ?? ariaLabel ?? name, max, min }, error)}
       label={label}
       max={max}
       min={min}
@@ -95,15 +86,11 @@ export const SliderField = <
       onChange={(newValue: number | number[]) => {
         if (options) {
           const processedValue = Array.isArray(newValue)
-            ? newValue.map((val: number) =>
-                val ? options[val]?.value : options[0]?.value,
-              )
+            ? newValue.map((val: number) => (val ? options[val]?.value : options[0]?.value))
             : options[newValue]?.value
 
           field.onChange(processedValue)
-          onChange?.(
-            processedValue as PathValue<TFieldValues, Path<TFieldValues>>,
-          )
+          onChange?.(processedValue as PathValue<TFieldValues, Path<TFieldValues>>)
         } else {
           field.onChange(newValue)
           onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)

@@ -1,9 +1,6 @@
 import * as matchers from '@testing-library/jest-dom/matchers'
 import { cleanup } from '@testing-library/react'
-import {
-  resetIntersectionMocking,
-  setupIntersectionMocking,
-} from 'react-intersection-observer/test-utils'
+import { resetIntersectionMocking, setupIntersectionMocking } from 'react-intersection-observer/test-utils'
 import { afterEach, beforeEach, expect, vi } from 'vitest'
 
 const MockResize = vi.fn(function mock() {

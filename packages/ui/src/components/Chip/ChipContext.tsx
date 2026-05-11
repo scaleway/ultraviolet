@@ -1,7 +1,6 @@
 'use client'
 
 import { createContext } from 'react'
-
 import type { RefObject } from 'react'
 
 type ContextType = {

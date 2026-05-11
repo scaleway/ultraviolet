@@ -3,19 +3,12 @@
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
+import type { ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
-
 import { SortIcon } from './SortIcon'
 import { listStyle } from './styles.css'
-import {
-  maxWidthHeaderCell,
-  minWidthHeaderCell,
-  widthHeaderCell,
-} from './variables.css'
-
-import type { ReactNode } from 'react'
+import { maxWidthHeaderCell, minWidthHeaderCell, widthHeaderCell } from './variables.css'
 
 type HeaderCellProps = {
   children: ReactNode
@@ -47,9 +40,7 @@ export const HeaderCell = ({
     order = 'descending'
   }
 
-  const handleOrder = onOrder
-    ? () => onOrder(order === 'ascending' ? 'desc' : 'asc')
-    : undefined
+  const handleOrder = onOrder ? () => onOrder(order === 'ascending' ? 'desc' : 'asc') : undefined
 
   return (
     <th
@@ -81,16 +72,10 @@ export const HeaderCell = ({
         {children}
         {info ? (
           <Tooltip text={info}>
-            <InformationOutlineIcon
-              prominence="weak"
-              sentiment="neutral"
-              size="small"
-            />
+            <InformationOutlineIcon prominence="weak" sentiment="neutral" size="small" />
           </Tooltip>
         ) : null}
-        {orderDirection !== undefined && isOrdered !== undefined ? (
-          <SortIcon order={order} />
-        ) : null}
+        {orderDirection !== undefined && isOrdered !== undefined ? <SortIcon order={order} /> : null}
       </Stack>
     </th>
   )

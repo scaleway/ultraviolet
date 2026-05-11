@@ -1,6 +1,5 @@
-import { SubmitErrorAlert } from '../..'
-
 import type { Meta } from '@storybook/react-vite'
+import { SubmitErrorAlert } from '../..'
 
 export default {
   component: SubmitErrorAlert,
@@ -15,8 +14,7 @@ export default {
     },
     docs: {
       description: {
-        component:
-          'This component is used to display error message after a form submission',
+        component: 'This component is used to display error message after a form submission',
       },
     },
   },

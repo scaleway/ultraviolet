@@ -1,11 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useEffect, useState } from 'react'
 import zxcvbn from 'zxcvbn'
-
 import { Meter } from '..'
 import { colors } from '../../../theme'
 import { TextInput } from '../../TextInput'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const strength = [
   { color: colors.danger.text, text: 'veryWeak' },
@@ -27,18 +25,8 @@ export const Playground: StoryFn<typeof Meter> = args => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <TextInput
-        label="Password"
-        name="basic"
-        onChangeValue={setPassword}
-        value={password}
-      />
-      <Meter
-        {...args}
-        strength={strength}
-        title="Password Strength"
-        value={value}
-      />
+      <TextInput label="Password" name="basic" onChangeValue={setPassword} value={password} />
+      <Meter {...args} strength={strength} title="Password Strength" value={value} />
     </div>
   )
 }

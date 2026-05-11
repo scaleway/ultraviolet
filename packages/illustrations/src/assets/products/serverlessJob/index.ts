@@ -10,9 +10,4 @@ const serverlessJobKeyvisual = `${BASE_URL}/products/serverlessJob/serverless-jo
 const serverlessJobOriginal = `${BASE_URL}/products/serverlessJob/serverless-job-original.webp`
 const serverlessJobWire = `${BASE_URL}/products/serverlessJob/serverless-job-wire.svg`
 
-export {
-  serverlessJobContent,
-  serverlessJobKeyvisual,
-  serverlessJobOriginal,
-  serverlessJobWire,
-}
+export { serverlessJobContent, serverlessJobKeyvisual, serverlessJobOriginal, serverlessJobWire }

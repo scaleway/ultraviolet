@@ -6,15 +6,11 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const SortIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const SortIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="SortIcon">
-    {typeof props.size === 'string' &&
-    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
+    {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M6.287 13.395a.98.98 0 0 1 1.383 0l2.243 2.243 2.243-2.243a.978.978 0 0 1 1.384 1.384l-2.935 2.935a.98.98 0 0 1-1.384 0l-2.934-2.935a.98.98 0 0 1 0-1.384m7.253-5.79a.98.98 0 0 1-1.384 0L9.913 5.362 7.67 7.605A.978.978 0 0 1 6.287 6.22L9.22 3.287a.98.98 0 0 1 1.384 0L13.54 6.22a.98.98 0 0 1 0 1.384"
         clipRule="evenodd"

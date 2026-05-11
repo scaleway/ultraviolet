@@ -1,13 +1,11 @@
 import { FranceFlag } from '@ultraviolet/icons/flags/FranceFlag'
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
-
 import { Tooltip } from '../../../components/Tooltip'
 
 export const categoryDefault = {
   additionalInfo: (
     <Tooltip text="Info">
-      <InformationOutlineIcon sentiment="neutral" size="small" />7 days of free
-      backup
+      <InformationOutlineIcon sentiment="neutral" size="small" />7 days of free backup
     </Tooltip>
   ),
   category: 'Category',
@@ -15,8 +13,7 @@ export const categoryDefault = {
     {
       additionalInfo: (
         <Tooltip text="Info">
-          <InformationOutlineIcon sentiment="neutral" size="small" />7 days of
-          free backup
+          <InformationOutlineIcon sentiment="neutral" size="small" />7 days of free backup
         </Tooltip>
       ),
       details: ['Detail 1', 'Detail 2'],
@@ -42,13 +39,7 @@ export const categoryM2 = {
   category: 'Configuration',
   subCategories: [
     {
-      details: [
-        'Apple M2 Chip',
-        '8 Cores CPU 8 cores GPU',
-        '256 GB SSD storage',
-        '16 GB memory',
-        '1 GB bandwidth',
-      ],
+      details: ['Apple M2 Chip', '8 Cores CPU 8 cores GPU', '256 GB SSD storage', '16 GB memory', '1 GB bandwidth'],
       discount: 5,
       price: 124.1,
       title: 'M2-M',
@@ -62,9 +53,7 @@ export const categoryM2 = {
 
 export const categoryOptions = {
   category: 'Options',
-  subCategories: [
-    { customContent: 'Included', title: '0.5 Gbps public bandwidth' },
-  ],
+  subCategories: [{ customContent: 'Included', title: '0.5 Gbps public bandwidth' }],
   subTitle: 'sub title',
 }
 

@@ -10,9 +10,4 @@ const inferenceMoshiKeyvisual = `${BASE_URL}/products/moshiInference/inference-m
 const inferenceMoshiOriginal = `${BASE_URL}/products/moshiInference/inference-moshi-original.webp`
 const inferenceMoshiWire = `${BASE_URL}/products/moshiInference/inference-moshi-wire.svg`
 
-export {
-  inferenceMoshiContent,
-  inferenceMoshiKeyvisual,
-  inferenceMoshiOriginal,
-  inferenceMoshiWire,
-}
+export { inferenceMoshiContent, inferenceMoshiKeyvisual, inferenceMoshiOriginal, inferenceMoshiWire }

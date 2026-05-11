@@ -3,17 +3,9 @@
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import {
-  Children,
-  Fragment,
-  forwardRef,
-  isValidElement,
-  useCallback,
-  useEffect,
-  useId,
-  useRef,
-} from 'react'
-
+import { Children, Fragment, forwardRef, isValidElement, useCallback, useEffect, useId, useRef } from 'react'
+import type { CSSProperties, MouseEventHandler, ReactNode, RefObject } from 'react'
+import type { SENTIMENTS, space } from '../../theme'
 import { Cell } from './Cell'
 import { ColumnProvider } from './ColumnProvider'
 import { ExpandButtonCell } from './ExpandButtonCell'
@@ -21,14 +13,6 @@ import { useListContext } from './ListContext'
 import { SelectRowCell } from './SelectRowCell'
 import { listStyle } from './styles.css'
 import { paddingExpandableCell } from './variables.css'
-
-import type { SENTIMENTS, space } from '../../theme'
-import type {
-  CSSProperties,
-  MouseEventHandler,
-  ReactNode,
-  RefObject,
-} from 'react'
 
 type RowProps = {
   children: ReactNode
@@ -97,8 +81,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
 
     const checkboxRef = useRef<HTMLInputElement>(null)
 
-    const isSelectDisabled =
-      disabled || (selectDisabled !== undefined && selectDisabled !== false)
+    const isSelectDisabled = disabled || (selectDisabled !== undefined && selectDisabled !== false)
 
     const hasExpandable = !!expandable
     useEffect(() => {
@@ -129,50 +112,36 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       }
     }, [collapseRow, expandRow, expandedRowIds, id])
 
-    const cannotClickRowToExpand =
-      disabledClickRowToExpand || disabled || expandButton || !expandable
+    const cannotClickRowToExpand = disabledClickRowToExpand || disabled || expandButton || !expandable
 
     useEffect(() => {
-      if (
-        checkboxRef.current !== null &&
-        !refList.includes(checkboxRef as RefObject<HTMLInputElement>)
-      ) {
+      if (checkboxRef.current !== null && !refList.includes(checkboxRef as RefObject<HTMLInputElement>)) {
         setRefList([...refList, checkboxRef as RefObject<HTMLInputElement>])
       }
     }, [refList, setRefList])
 
     // Without this, <><List.Cell /><List.Cell /></> is seen as 1 column
     // which can be problematic when column widths are defined
-    const childrenArrayNoFragment = Children.toArray(children).flatMap(
-      (node: ReactNode) => {
-        if (isValidElement(node) && node.type === Fragment) {
-          return (node.props as { children?: ReactNode }).children
-        }
+    const childrenArrayNoFragment = Children.toArray(children).flatMap((node: ReactNode) => {
+      if (isValidElement(node) && node.type === Fragment) {
+        return (node.props as { children?: ReactNode }).children
+      }
 
-        return node
-      },
-    )
+      return node
+    })
 
-    const validChildrenArray = Children.toArray(childrenArrayNoFragment).filter(
-      child => isValidElement(child),
-    )
-    const totalColumns =
-      columns.length + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
+    const validChildrenArray = Children.toArray(childrenArrayNoFragment).filter(child => isValidElement(child))
+    const totalColumns = columns.length + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
 
     const hasHightLight = selectable && !!selectedRowIds[id]
 
     return (
       <>
         <tr
-          aria-controls={
-            expandable && expandedRowIds[id] ? expandedRowId : undefined
-          }
+          aria-controls={expandable && expandedRowIds[id] ? expandedRowId : undefined}
           aria-disabled={disabled}
           aria-expanded={expandable ? expandedRowIds[id] : undefined}
-          className={cn(
-            className,
-            listStyle.row({ highlightAnimation, sentiment }),
-          )}
+          className={cn(className, listStyle.row({ highlightAnimation, sentiment }))}
           data-dragging={dataDragging}
           data-highlight={hasHightLight}
           data-testid={dataTestid}

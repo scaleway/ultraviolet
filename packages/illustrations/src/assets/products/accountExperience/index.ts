@@ -10,9 +10,4 @@ const accountExperienceKeyvisual = `${BASE_URL}/products/accountExperience/accou
 const accountExperienceOriginal = `${BASE_URL}/products/accountExperience/account-experience-original.webp`
 const accountExperienceWire = `${BASE_URL}/products/accountExperience/account-experience-wire.svg`
 
-export {
-  accountExperienceContent,
-  accountExperienceKeyvisual,
-  accountExperienceOriginal,
-  accountExperienceWire,
-}
+export { accountExperienceContent, accountExperienceKeyvisual, accountExperienceOriginal, accountExperienceWire }

@@ -1,7 +1,6 @@
 'use client'
 
 import { Fragment } from 'react'
-
 import { IconSkeleton } from './IconSkeleton'
 import { Line } from './Line'
 import { skeletonStyle } from './styles.css'

@@ -1,21 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
+import type { ComponentProps } from 'react'
 import { OptionSelector } from '..'
-import {
-  firstSelectorOptions,
-  franceOptions,
-  netherlandsOptions,
-  polandOptions,
-} from '../__mock__/resources'
-
+import { firstSelectorOptions, franceOptions, netherlandsOptions, polandOptions } from '../__mock__/resources'
 import type { ValueType } from '../__mock__/resources'
 import type { SelectorOption } from '../types'
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
-export const Direction: StoryFn<
-  ComponentProps<typeof OptionSelector>
-> = props => {
+export const Direction: StoryFn<ComponentProps<typeof OptionSelector>> = props => {
   const [zone, setZone] = useState<SelectorOption[]>(franceOptions)
   const [value, setValue] = useState<{ first?: string; second?: string }>({
     first: '',
@@ -56,8 +47,7 @@ export const Direction: StoryFn<
 Direction.parameters = {
   docs: {
     description: {
-      story:
-        'By default the component has a horizontal direction, but it can be changed to be `vertical`',
+      story: 'By default the component has a horizontal direction, but it can be changed to be `vertical`',
     },
   },
 }

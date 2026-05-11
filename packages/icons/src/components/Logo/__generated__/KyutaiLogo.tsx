@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const KyutaiLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const KyutaiLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="KyutaiLogo">
     <path fill="#000" d="M2 2h16v16H2z" />
     <path

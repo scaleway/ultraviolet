@@ -1,10 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import {
-  globalStyle,
-  keyframes,
-  style,
-  styleVariants,
-} from '@vanilla-extract/css'
+import { globalStyle, keyframes, style, styleVariants } from '@vanilla-extract/css'
 
 export const SIZES = {
   large: 75.5,

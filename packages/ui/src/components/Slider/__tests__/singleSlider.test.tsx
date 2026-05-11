@@ -2,7 +2,6 @@ import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-
 import { Slider } from '..'
 
 const options = [
@@ -26,13 +25,7 @@ describe('single slider', () => {
 
   it('renders correctly', () => {
     shouldMatchSnapshot(
-      <Slider
-        helper="helper"
-        label="Label"
-        labelDescription="labeldescription"
-        name="Name"
-        value={1}
-      />,
+      <Slider helper="helper" label="Label" labelDescription="labeldescription" name="Name" value={1} />,
     )
   })
 
@@ -41,56 +34,35 @@ describe('single slider', () => {
   })
 
   it('renders correctly suffix string', () => {
-    shouldMatchSnapshot(
-      <Slider label="Label" name="Name" suffix="%" value={1} />,
-    )
+    shouldMatchSnapshot(<Slider label="Label" name="Name" suffix="%" value={1} />)
   })
 
   it('renders correctly suffix complex', () => {
-    shouldMatchSnapshot(
-      <Slider
-        label="Label"
-        name="Name"
-        suffix={<button type="button">suffix</button>}
-        value={1}
-      />,
-    )
+    shouldMatchSnapshot(<Slider label="Label" name="Name" suffix={<button type="button">suffix</button>} value={1} />)
   })
 
   it('renders correctly suffix string input', () => {
-    shouldMatchSnapshot(
-      <Slider input label="Label" name="Name" suffix="%" value={1} />,
-    )
+    shouldMatchSnapshot(<Slider input label="Label" name="Name" suffix="%" value={1} />)
   })
 
   it('renders correctly prefix', () => {
-    shouldMatchSnapshot(
-      <Slider label="Label" name="Name" prefix="%" value={1} />,
-    )
+    shouldMatchSnapshot(<Slider label="Label" name="Name" prefix="%" value={1} />)
   })
 
   it('renders correctly direction row', () => {
-    shouldMatchSnapshot(
-      <Slider direction="row" label="Label" name="Name" value={1} />,
-    )
+    shouldMatchSnapshot(<Slider direction="row" label="Label" name="Name" value={1} />)
   })
 
   it('renders correctly direction row with input', () => {
-    shouldMatchSnapshot(
-      <Slider direction="row" input label="Label" name="Name" value={1} />,
-    )
+    shouldMatchSnapshot(<Slider direction="row" input label="Label" name="Name" value={1} />)
   })
 
   it('renders correctly with value < min', () => {
-    shouldMatchSnapshot(
-      <Slider label="Label" min={10} name="Name" value={-1} />,
-    )
+    shouldMatchSnapshot(<Slider label="Label" min={10} name="Name" value={-1} />)
   })
 
   it('renders correctly with value > max', () => {
-    shouldMatchSnapshot(
-      <Slider label="Label" max={10} name="Name" value={90} />,
-    )
+    shouldMatchSnapshot(<Slider label="Label" max={10} name="Name" value={90} />)
   })
 
   it('renders correctly disabled', () => {
@@ -98,32 +70,18 @@ describe('single slider', () => {
   })
 
   it('renders correctly error boolean', () => {
-    shouldMatchSnapshot(
-      <Slider error helper="helper" label="Label" name="Name" value={1} />,
-    )
+    shouldMatchSnapshot(<Slider error helper="helper" label="Label" name="Name" value={1} />)
   })
 
   it('renders correctly error boolean and helper', () => {
-    shouldMatchSnapshot(
-      <Slider error helper="helper" label="Label" name="Name" value={1} />,
-    )
+    shouldMatchSnapshot(<Slider error helper="helper" label="Label" name="Name" value={1} />)
   })
 
   it('renders correctly error string', () => {
-    shouldMatchSnapshot(
-      <Slider error="error" label="Label" name="Name" value={1} />,
-    )
+    shouldMatchSnapshot(<Slider error="error" label="Label" name="Name" value={1} />)
   })
   it('renders correctly error string and helper', () => {
-    shouldMatchSnapshot(
-      <Slider
-        error="error"
-        helper="helper"
-        label="Label"
-        name="Name"
-        value={1}
-      />,
-    )
+    shouldMatchSnapshot(<Slider error="error" helper="helper" label="Label" name="Name" value={1} />)
   })
 
   it('renders correctly input', () => {
@@ -131,9 +89,7 @@ describe('single slider', () => {
   })
 
   it('renders correctly custom tooltip', () => {
-    shouldMatchSnapshot(
-      <Slider label="Label" name="Name" tooltip="tooltip" value={1} />,
-    )
+    shouldMatchSnapshot(<Slider label="Label" name="Name" tooltip="tooltip" value={1} />)
   })
 
   it('renders correctly default tooltip', () => {
@@ -141,53 +97,22 @@ describe('single slider', () => {
   })
 
   it('renders correctly custom value', () => {
-    shouldMatchSnapshot(
-      <Slider
-        customValueDisplay="custom value"
-        label="Label"
-        name="Name"
-        tooltip
-        value={1}
-      />,
-    )
+    shouldMatchSnapshot(<Slider customValueDisplay="custom value" label="Label" name="Name" tooltip value={1} />)
   })
 
   it('renders correctly custom value false', () => {
-    shouldMatchSnapshot(
-      <Slider
-        customValueDisplay={false}
-        label="Label"
-        name="Name"
-        tooltip
-        value={1}
-      />,
-    )
+    shouldMatchSnapshot(<Slider customValueDisplay={false} label="Label" name="Name" tooltip value={1} />)
   })
 
   it('renders correctly custom value - direction row', () => {
     shouldMatchSnapshot(
-      <Slider
-        customValueDisplay="custom value"
-        direction="row"
-        label="Label"
-        name="Name"
-        tooltip
-        value={1}
-      />,
+      <Slider customValueDisplay="custom value" direction="row" label="Label" name="Name" tooltip value={1} />,
     )
   })
 
   it('renders correctly custom value with input ', () => {
     const { asFragment } = renderWithTheme(
-      <Slider
-        customValueDisplay="customValue"
-        direction="row"
-        input
-        label="Label"
-        name="Name"
-        tooltip
-        value={1}
-      />,
+      <Slider customValueDisplay="customValue" direction="row" input label="Label" name="Name" tooltip value={1} />,
     )
     // The input overrides the custom input
     expect(screen.queryByText('customValue')).not.toBeInTheDocument()
@@ -196,60 +121,29 @@ describe('single slider', () => {
   })
 
   it('renders correctly with custom ticks', () => {
-    shouldMatchSnapshot(
-      <Slider label="Label" name="Name" options={options} unit="%" value={1} />,
-    )
+    shouldMatchSnapshot(<Slider label="Label" name="Name" options={options} unit="%" value={1} />)
   })
   it('renders correctly with custom ticks and default scale', () => {
-    shouldMatchSnapshot(
-      <Slider
-        defaultScale
-        label="Label"
-        name="Name"
-        options={options}
-        unit="%"
-        value={1}
-      />,
-    )
+    shouldMatchSnapshot(<Slider defaultScale label="Label" name="Name" options={options} unit="%" value={1} />)
   })
 
   it('renders correctly with default ticks without label', () => {
-    shouldMatchSnapshot(
-      <Slider
-        label="Label"
-        name="Name"
-        options={options2}
-        unit="%"
-        value={1}
-      />,
-    )
+    shouldMatchSnapshot(<Slider label="Label" name="Name" options={options2} unit="%" value={1} />)
   })
 
   it('renders correctly min max', () => {
-    shouldMatchSnapshot(
-      <Slider label="Label" max={10} min={1} name="Name" value={1} />,
-    )
+    shouldMatchSnapshot(<Slider label="Label" max={10} min={1} name="Name" value={1} />)
   })
 
   it('renders correctly step', () => {
-    shouldMatchSnapshot(
-      <Slider label="Label" name="Name" step={0.5} value={1} />,
-    )
+    shouldMatchSnapshot(<Slider label="Label" name="Name" step={0.5} value={1} />)
   })
 
   it('handles correctly onChange with min and max', async () => {
     const onChange: (value: number) => void = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <Slider
-        data-testid="slider"
-        input
-        max={10}
-        min={2}
-        name="slider"
-        onChange={onChange}
-        value={3}
-      />,
+      <Slider data-testid="slider" input max={10} min={2} name="slider" onChange={onChange} value={3} />,
     )
     const slider = screen.getByRole<HTMLInputElement>('slider')
     const input = screen.getByTestId<HTMLInputElement>('slider-input')

@@ -1,16 +1,11 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
-
 import { Table } from '..'
 import { Button } from '../../Button'
 import { Menu } from '../../Menu'
-
 import { columns, data } from './resources'
 
-import type { StoryFn } from '@storybook/react-vite'
-
-export const WithMenu: StoryFn<typeof Table> = ({ ...props }) => (
-  <Table {...props} />
-)
+export const WithMenu: StoryFn<typeof Table> = ({ ...props }) => <Table {...props} />
 
 WithMenu.args = {
   children: (
@@ -33,17 +28,10 @@ WithMenu.args = {
               <Menu.Item borderless sentiment="danger">
                 Danger
               </Menu.Item>
-              <Menu.Item
-                borderless
-                href="/?path=/docs/components-navigation-menu--borderless"
-              >
+              <Menu.Item borderless href="/?path=/docs/components-navigation-menu--borderless">
                 Link Neutral
               </Menu.Item>
-              <Menu.Item
-                borderless
-                href="/?path=/docs/components-navigation-menu--borderless"
-                sentiment="danger"
-              >
+              <Menu.Item borderless href="/?path=/docs/components-navigation-menu--borderless" sentiment="danger">
                 Link Danger
               </Menu.Item>
             </Menu>
@@ -52,9 +40,5 @@ WithMenu.args = {
       ))}
     </Table.Body>
   ),
-  columns: [
-    { info: 'This column is important', label: 'Name' },
-    ...columns.slice(1, 4),
-    { label: '', width: '42px' },
-  ],
+  columns: [{ info: 'This column is important', label: 'Name' }, ...columns.slice(1, 4), { label: '', width: '42px' }],
 }

@@ -1,19 +1,12 @@
-import {
-  consoleDarkerTheme,
-  consoleDarkTheme,
-  consoleLightTheme,
-  useTheme,
-} from '@ultraviolet/themes'
+import { consoleDarkerTheme, consoleDarkTheme, consoleLightTheme, useTheme } from '@ultraviolet/themes'
 import deepmerge from 'deepmerge'
-
 import { ThemeProvider } from './ThemeProvider'
 
 export type ScreenSize = keyof typeof consoleLightTheme.breakpoints
 
 type UltravioletUITheme = typeof consoleLightTheme
 
-const { colors, shadows, typography, space, radii, breakpoints } =
-  consoleLightTheme
+const { colors, shadows, typography, space, radii, breakpoints } = consoleLightTheme
 
 type RecursivePartial<T> = {
   [P in keyof T]?: RecursivePartial<T[P]>
@@ -30,30 +23,14 @@ const extendTheme = (extendedTheme: RecursivePartial<UltravioletUITheme>) =>
 // This type exclude overlay color
 type Color = Extract<
   keyof typeof consoleLightTheme.colors,
-  | 'primary'
-  | 'secondary'
-  | 'neutral'
-  | 'success'
-  | 'danger'
-  | 'warning'
-  | 'info'
+  'primary' | 'secondary' | 'neutral' | 'success' | 'danger' | 'warning' | 'info'
 >
 
 type ExtendedColor = Color | 'white' | 'black'
 
-const SENTIMENTS = [
-  'primary',
-  'secondary',
-  'neutral',
-  'success',
-  'danger',
-  'warning',
-  'info',
-] as const
+const SENTIMENTS = ['primary', 'secondary', 'neutral', 'success', 'danger', 'warning', 'info'] as const
 
-const SENTIMENTS_WITHOUT_NEUTRAL = SENTIMENTS.filter(
-  sentiment => sentiment !== 'neutral',
-)
+const SENTIMENTS_WITHOUT_NEUTRAL = SENTIMENTS.filter(sentiment => sentiment !== 'neutral')
 
 export type { UltravioletUITheme, Color, ExtendedColor }
 

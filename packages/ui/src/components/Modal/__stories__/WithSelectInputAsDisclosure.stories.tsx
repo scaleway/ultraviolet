@@ -1,8 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Modal } from '..'
 import { Button } from '../../Button'
 import { SelectInput } from '../../SelectInput'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const OPTIONS = [
   {
@@ -22,13 +21,8 @@ const OPTIONS = [
 export const WithSelectInputAsDisclosure: StoryFn = props => (
   <SelectInput
     footer={
-      <Modal
-        disclosure={<Button>Open Modal with SelectInput</Button>}
-        {...props}
-      >
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
-          Test
-        </div>
+      <Modal disclosure={<Button>Open Modal with SelectInput</Button>} {...props}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>Test</div>
       </Modal>
     }
     label="Choose an option"

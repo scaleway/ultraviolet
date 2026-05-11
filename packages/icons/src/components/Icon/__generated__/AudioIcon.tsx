@@ -6,15 +6,11 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const AudioIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const AudioIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="AudioIcon">
-    {typeof props.size === 'string' &&
-    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
+    {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M10.7019 2.25C11.1161 2.25 11.4518 2.58586 11.4519 3V17C11.4519 17.4142 11.1161 17.75 10.7019 17.75C10.2878 17.7498 9.9519 17.4141 9.9519 17V3C9.95199 2.58597 10.2879 2.25017 10.7019 2.25Z" />
         <path d="M13.7107 4.75488C14.1248 4.75488 14.4606 5.09078 14.4607 5.50488V14.5225C14.4607 14.9367 14.1249 15.2725 13.7107 15.2725C13.2966 15.2723 12.9607 14.9366 12.9607 14.5225V5.50488C12.9608 5.09088 13.2967 4.75505 13.7107 4.75488Z" />

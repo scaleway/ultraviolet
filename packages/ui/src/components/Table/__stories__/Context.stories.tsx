@@ -1,25 +1,15 @@
-import { useMemo } from 'react'
-
-import { Table } from '..'
-
-import { columns, data } from './resources'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { useMemo } from 'react'
+import { Table } from '..'
+import { columns, data } from './resources'
 
 export const Context: StoryFn = args => {
   const SubComponent = ({ srcData }: { srcData: typeof data }) => {
     const { selectedRowIds } = Table.useTableContext()
 
-    const selectedItems = useMemo(
-      () => srcData.filter(item => selectedRowIds[item.id]),
-      [srcData, selectedRowIds],
-    )
+    const selectedItems = useMemo(() => srcData.filter(item => selectedRowIds[item.id]), [srcData, selectedRowIds])
 
-    return (
-      <caption>
-        Selected movies(s): {selectedItems.map(movie => movie.name).join(', ')}
-      </caption>
-    )
+    return <caption>Selected movies(s): {selectedItems.map(movie => movie.name).join(', ')}</caption>
   }
 
   return (

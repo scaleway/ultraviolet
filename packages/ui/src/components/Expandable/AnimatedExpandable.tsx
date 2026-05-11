@@ -1,11 +1,9 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useRef, useState } from 'react'
-
 import { ANIMATION_DURATION } from './constant'
-import { animationDurationVar, expandableStyle } from './styles.css'
-
 import type { ExpandableProps } from './types'
+import { animationDurationVar, expandableStyle } from './styles.css'
 
 export const AnimatedExpandable = ({
   children,
@@ -17,9 +15,7 @@ export const AnimatedExpandable = ({
   animationDuration = ANIMATION_DURATION,
 }: ExpandableProps) => {
   const [height, setHeight] = useState<number | null>(null)
-  const transitionTimer = useRef<ReturnType<typeof setTimeout> | undefined>(
-    null,
-  )
+  const transitionTimer = useRef<ReturnType<typeof setTimeout> | undefined>(null)
   const ref = useRef<HTMLDivElement>(null)
   const shouldBeAnimated = animationDuration > 0
 

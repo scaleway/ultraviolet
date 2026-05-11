@@ -1,7 +1,6 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { OfferListField } from '..'
 import { columns, data } from '../__tests__/resources'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Template: StoryFn<typeof OfferListField> = args => (
   <OfferListField {...args} columns={columns}>

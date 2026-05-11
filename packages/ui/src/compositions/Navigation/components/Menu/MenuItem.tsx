@@ -1,15 +1,13 @@
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn } from '@ultraviolet/utils'
-
 import { Menu } from '../../../../components/Menu'
 import { Stack } from '../../../../components/Stack'
 import { Text } from '../../../../components/Text'
 import { useNavigation } from '../../NavigationProvider'
-import { navigationStyle } from '../../styles.css'
+import type { ItemMenuItemType } from '../ComponentsTypes'
 import { ItemBadge } from '../Item/Badge'
 import { ItemPinnedButton } from '../Item/PinnedButton'
-
-import type { ItemMenuItemType } from '../ComponentsTypes'
+import { navigationStyle } from '../../styles.css'
 
 export const ItemMenuItem = ({
   active,
@@ -35,9 +33,7 @@ export const ItemMenuItem = ({
 }: ItemMenuItemType) => {
   const context = useNavigation()
   if (!context) {
-    throw new Error(
-      'Navigation.Item can only be used inside a NavigationProvider.',
-    )
+    throw new Error('Navigation.Item can only be used inside a NavigationProvider.')
   }
 
   const { pinnedFeature, animation } = context
@@ -48,9 +44,7 @@ export const ItemMenuItem = ({
       borderless
       className={cn(
         navigationStyle.itemMenu,
-        pinnedFeature && shouldShowPinnedButton
-          ? navigationStyle.itemMenuPinned
-          : '',
+        pinnedFeature && shouldShowPinnedButton ? navigationStyle.itemMenuPinned : '',
       )}
       data-testid={id}
       disabled={disabled}
@@ -62,14 +56,7 @@ export const ItemMenuItem = ({
       style={style}
       target={target}
     >
-      <Stack
-        alignItems="center"
-        direction="row"
-        flex={1}
-        gap={1}
-        justifyContent="space-between"
-        width="100%"
-      >
+      <Stack alignItems="center" direction="row" flex={1} gap={1} justifyContent="space-between" width="100%">
         <Text
           as="span"
           className={navigationStyle.itemWrapText({
@@ -82,21 +69,11 @@ export const ItemMenuItem = ({
         >
           {label}
         </Text>
-        {labelDescription ? (
-          <span className={navigationStyle.itemPadded}>{labelDescription}</span>
-        ) : null}
+        {labelDescription ? <span className={navigationStyle.itemPadded}>{labelDescription}</span> : null}
         <Stack direction="row">
-          <ItemBadge
-            badgeSentiment={badgeSentiment}
-            badgeText={badgeText}
-            disabled={disabled}
-          />
+          <ItemBadge badgeSentiment={badgeSentiment} badgeText={badgeText} disabled={disabled} />
           {hasHrefAndNoChildren && target === '_blank' ? (
-            <OpenInNewIcon
-              disabled={disabled}
-              prominence="weak"
-              sentiment="neutral"
-            />
+            <OpenInNewIcon disabled={disabled} prominence="weak" sentiment="neutral" />
           ) : null}
           <ItemPinnedButton
             active={active}

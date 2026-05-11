@@ -1,15 +1,12 @@
 'use client'
 
 import { memo } from 'react'
-
+import type { CSSProperties } from 'react'
 import { useEstimateCost } from '../EstimateCostProvider'
-import { estimateCostStyle } from '../styles.css'
-
+import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
 import { Item } from './Item'
 import { Strong } from './Strong'
-
-import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
-import type { CSSProperties } from 'react'
+import { estimateCostStyle } from '../styles.css'
 
 type RegionProps = {
   shouldBeHidden?: boolean
@@ -64,13 +61,7 @@ export const Zone = memo(
         style={style}
       >
         <Strong>
-          <img
-            alt={label}
-            className={estimateCostStyle.image}
-            height="auto"
-            src={image}
-            width="auto"
-          />
+          <img alt={label} className={estimateCostStyle.image} height="auto" src={image} width="auto" />
           {label}
         </Strong>
       </Item>

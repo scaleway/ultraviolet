@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const WafProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const WafProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="WafProductIcon">
     <g className="sentiment=original, size=xlarge, disabled=false">
       <g className=".Square">

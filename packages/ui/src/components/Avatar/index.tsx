@@ -5,18 +5,11 @@ import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
 import { theme as UVTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
 import { Text } from '../Text'
-
 import { DEFAULT_COLORS, sizes, TEXT_VARIANT_BY_SIZE } from './constants'
-import { avatarStyle } from './styles.css'
-import {
-  finalColorAvatar,
-  finalSizeAvatar,
-  halvedColorAvatar,
-} from './variables.css'
-
 import type { AvatarProps, SentimentColors } from './types'
+import { avatarStyle } from './styles.css'
+import { finalColorAvatar, finalSizeAvatar, halvedColorAvatar } from './variables.css'
 
 /**
  * The Avatar component is used to represent a user, product, or entity. It can be used to display an image, an icon, a text or a set of colors.
@@ -37,25 +30,17 @@ export const Avatar = ({
   style,
 }: AvatarProps) => {
   const isHalved = colors.length > 1
-  const finalColors = colors?.map(
-    bgColor =>
-      UVTheme.colors[bgColor as SentimentColors]?.backgroundStrong ?? bgColor,
-  )
+  const finalColors = colors?.map(bgColor => UVTheme.colors[bgColor as SentimentColors]?.backgroundStrong ?? bgColor)
 
   const finalSize = sizes(UVTheme)[size]
 
   return (
     <div
-      className={cn(
-        className,
-        avatarStyle.container({ sentiment, shape, size }),
-      )}
+      className={cn(className, avatarStyle.container({ sentiment, shape, size }))}
       data-has-background={!['user', 'image'].includes(variant)}
       data-testid={dataTestId}
       onClick={onClick}
-      onKeyDown={event =>
-        event.key === ' ' || event.key === 'Enter' ? onClick?.() : null
-      }
+      onKeyDown={event => (event.key === ' ' || event.key === 'Enter' ? onClick?.() : null)}
       role={onClick ? 'button' : undefined}
       style={{
         backgroundImage: image ? `url(${image})` : undefined,
@@ -73,11 +58,7 @@ export const Avatar = ({
           <UserProductIcon className={avatarStyle.svgAvatar({ shape })} />
         </div>
       ) : null}
-      {variant === 'icon' ? (
-        <div className={avatarStyle.elementContainer({ shape })}>
-          {children}
-        </div>
-      ) : null}
+      {variant === 'icon' ? <div className={avatarStyle.elementContainer({ shape })}>{children}</div> : null}
       {variant === 'text' ? (
         <div className={avatarStyle.elementContainer({ shape })}>
           <Text

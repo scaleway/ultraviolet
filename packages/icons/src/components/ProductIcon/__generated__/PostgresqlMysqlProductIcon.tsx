@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const PostgresqlMysqlProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const PostgresqlMysqlProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="PostgresqlMysqlProductIcon">
     <g className="PostgreSQL-and-MySQL">
       <g className=".Square">

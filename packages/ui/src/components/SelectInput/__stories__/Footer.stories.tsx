@@ -1,11 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { SelectInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-
 import { dataGrouped } from './resources'
 import { Template } from './Template.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const PopupFooter = () => (
   <Stack direction="row" gap="1" width="100%">
@@ -18,18 +16,9 @@ const PopupFooter = () => (
   </Stack>
 )
 
-const PopupFooteronClick = ({
-  closeDropdown,
-}: {
-  closeDropdown: () => void
-}) => (
+const PopupFooteronClick = ({ closeDropdown }: { closeDropdown: () => void }) => (
   <Stack direction="row" gap="1" width="100%">
-    <Button
-      fullWidth
-      onClick={() => closeDropdown()}
-      sentiment="primary"
-      variant="outlined"
-    >
+    <Button fullWidth onClick={() => closeDropdown()} sentiment="primary" variant="outlined">
       Click me (close the dropdown)
     </Button>
     <Button fullWidth sentiment="primary" variant="filled">
@@ -40,17 +29,10 @@ const PopupFooteronClick = ({
 
 export const Footer: StoryFn<typeof SelectInput> = args => (
   <Stack gap={2}>
+    <SelectInput {...args} footer={<PopupFooter />} label="Default footer" options={dataGrouped} />
     <SelectInput
       {...args}
-      footer={<PopupFooter />}
-      label="Default footer"
-      options={dataGrouped}
-    />
-    <SelectInput
-      {...args}
-      footer={closeDropdown => (
-        <PopupFooteronClick closeDropdown={closeDropdown} />
-      )}
+      footer={closeDropdown => <PopupFooteronClick closeDropdown={closeDropdown} />}
       label="Function footer"
       options={dataGrouped}
     />

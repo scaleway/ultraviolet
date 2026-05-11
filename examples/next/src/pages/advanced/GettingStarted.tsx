@@ -1,5 +1,4 @@
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-
 import CopyBox from '../../components/CopyBoxCommand'
 import GithubAndDocumentationButtons from '../../components/GithubAndDocumentationButtons'
 
@@ -22,8 +21,7 @@ const GettingStarted = () => (
       </Text>
       <Stack gap={4} width="100%">
         <Text as="p" variant="body">
-          Run one of the following commands in your React project to start using
-          Ultraviolet UI:
+          Run one of the following commands in your React project to start using Ultraviolet UI:
         </Text>
         <Stack gap={2}>
           <Snippet prefix="command">pnpm add @ultraviolet/ui</Snippet>

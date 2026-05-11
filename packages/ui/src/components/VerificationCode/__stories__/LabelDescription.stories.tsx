@@ -1,5 +1,4 @@
 import { Badge } from '../../Badge'
-
 import { Template } from './Template.stories'
 
 export const LabelDescription = Template.bind({})
@@ -15,8 +14,7 @@ LabelDescription.args = {
 LabelDescription.parameters = {
   docs: {
     description: {
-      story:
-        'You can use `labelDescription` prop to provide additional information about the input field.',
+      story: 'You can use `labelDescription` prop to provide additional information about the input field.',
     },
   },
 }

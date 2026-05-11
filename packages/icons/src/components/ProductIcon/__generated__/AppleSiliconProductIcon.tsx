@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const AppleSiliconProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const AppleSiliconProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="AppleSiliconProductIcon">
     <g className="MacMini-M1">
       <g className=".Square">

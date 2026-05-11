@@ -1,5 +1,4 @@
 import { Button } from '../../../components/Button'
-
 import { domain, fees, gb, pipeline, ssl } from './features'
 import { Template } from './Template.stories'
 

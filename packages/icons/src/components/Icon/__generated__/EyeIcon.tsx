@@ -6,15 +6,11 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const EyeIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const EyeIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="EyeIcon">
-    {typeof props.size === 'string' &&
-    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
+    {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M10.0004 12.1174C11.1699 12.1174 12.1179 11.1694 12.1179 9.99993C12.1179 8.83049 11.1699 7.88247 10.0004 7.88247C8.831 7.88247 7.88298 8.83049 7.88298 9.99993C7.88298 11.1694 8.831 12.1174 10.0004 12.1174Z" />
         <path

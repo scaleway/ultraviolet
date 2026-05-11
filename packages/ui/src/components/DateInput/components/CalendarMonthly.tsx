@@ -2,14 +2,12 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useContext, useState } from 'react'
-
+import type { MouseEvent as MouseEventReact } from 'react'
 import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { DateInputContext } from '../Context'
 import { formatValue, getIsInHoveredRange, isSameMonth } from '../helpers'
 import { dateInputStyle } from '../styles.css'
-
-import type { MouseEvent as MouseEventReact } from 'react'
 
 export const Monthly = () => {
   const {
@@ -33,9 +31,7 @@ export const Monthly = () => {
     setHoveredDate,
     hoveredDate,
   } = useContext(DateInputContext)
-  const [rangeState, setRangeState] = useState<'start' | 'end'>(
-    range?.start && !range.end ? 'end' : 'start',
-  ) // Used when selectsRange is True. It is used to know the current state of the range: none when start date not selected, start when start date is selected, done when start & end date selected
+  const [rangeState, setRangeState] = useState<'start' | 'end'>(range?.start && !range.end ? 'end' : 'start') // Used when selectsRange is True. It is used to know the current state of the range: none when start date not selected, start when start date is selected, done when start & end date selected
 
   return (
     <Row gap={1} templateColumns="1fr 1fr 1fr">
@@ -43,24 +39,14 @@ export const Monthly = () => {
         const constructedDate = new Date(yearToShow, index, 1)
 
         const isExcluded = excludeDates
-          ? excludeDates
-              .map(date => isSameMonth(constructedDate, date))
-              .includes(true)
+          ? excludeDates.map(date => isSameMonth(constructedDate, date)).includes(true)
           : false
 
-        const isOutsideRange =
-          !!(minDate && constructedDate < minDate) ||
-          !!(maxDate && constructedDate > maxDate)
+        const isOutsideRange = !!(minDate && constructedDate < minDate) || !!(maxDate && constructedDate > maxDate)
 
-        const isAfterStartDate =
-          selectsRange && range?.start && constructedDate > range.start
+        const isAfterStartDate = selectsRange && range?.start && constructedDate > range.start
 
-        const isInHoveredRange = getIsInHoveredRange(
-          selectsRange,
-          constructedDate,
-          hoveredDate,
-          range,
-        )
+        const isInHoveredRange = getIsInHoveredRange(selectsRange, constructedDate, hoveredDate, range)
 
         const isSelected =
           (value && isSameMonth(constructedDate, value)) ||
@@ -74,45 +60,21 @@ export const Monthly = () => {
             if (rangeState === 'end' && isAfterStartDate) {
               setRange?.({ end: newDate, start: range.start })
               onChange?.([range.start, newDate], event)
-              setInputValue(
-                formatValue(
-                  null,
-                  { end: newDate, start: range.start },
-                  true,
-                  true,
-                  format,
-                ),
-              )
+              setInputValue(formatValue(null, { end: newDate, start: range.start }, true, true, format))
               setVisible(false)
               // If we click on another date, it will reset the range
               setRangeState('start')
             } else if (rangeState === 'end' && !isAfterStartDate && range) {
               setRange?.({ end: range.start, start: newDate })
               onChange?.([newDate, range.start], event)
-              setInputValue(
-                formatValue(
-                  null,
-                  { end: range.start, start: newDate },
-                  true,
-                  true,
-                  format,
-                ),
-              )
+              setInputValue(formatValue(null, { end: range.start, start: newDate }, true, true, format))
               setVisible(false)
               // If we click on another date, it will reset the range
               setRangeState('start')
             } else {
               setRange?.({ end: null, start: newDate })
               onChange?.([newDate, null], event)
-              setInputValue(
-                formatValue(
-                  null,
-                  { end: null, start: newDate },
-                  true,
-                  true,
-                  format,
-                ),
-              )
+              setInputValue(formatValue(null, { end: null, start: newDate }, true, true, format))
               setRangeState('end')
             }
           }
@@ -133,10 +95,7 @@ export const Monthly = () => {
         return (
           <Button
             aria-label={monthState()}
-            className={cn(
-              dateInputStyle.dayMonth,
-              dateInputStyle.capitalizedText,
-            )}
+            className={cn(dateInputStyle.dayMonth, dateInputStyle.capitalizedText)}
             disabled={disabled || isExcluded || isOutsideRange}
             key={month[0]}
             onClick={event => {
@@ -147,9 +106,7 @@ export const Monthly = () => {
                   setMonthToShow(index + 1)
                   setValue(constructedDate)
                   onChange?.(constructedDate, event)
-                  setInputValue(
-                    formatValue(constructedDate, null, true, false, format),
-                  )
+                  setInputValue(formatValue(constructedDate, null, true, false, format))
                   setVisible(false)
                 }
               }

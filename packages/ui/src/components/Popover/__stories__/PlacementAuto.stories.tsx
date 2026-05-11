@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useEffect, useRef, useState } from 'react'
-
 import { Button } from '../../Button'
 import { Popover } from '../index'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const PlacementAuto: StoryFn<typeof Popover> = args => {
   const [opened, setOpened] = useState(false)

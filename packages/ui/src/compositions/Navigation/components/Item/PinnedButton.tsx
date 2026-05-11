@@ -1,13 +1,11 @@
 import { PinOutlineIcon } from '@ultraviolet/icons/PinOutlineIcon'
 import { UnpinIcon } from '@ultraviolet/icons/UnpinIcon'
 import { useMemo } from 'react'
-
+import type { MouseEvent } from 'react'
 import { Tooltip } from '../../../../components/Tooltip'
 import { useNavigation } from '../../NavigationProvider'
-import { navigationStyle } from '../../styles.css'
-
 import type { ItemExpandedType } from '../ComponentsTypes'
-import type { MouseEvent } from 'react'
+import { navigationStyle } from '../../styles.css'
 
 export const ItemPinnedButton = ({
   shouldShowPinnedButton,
@@ -19,35 +17,22 @@ export const ItemPinnedButton = ({
   onClickPinUnpin,
 }: Pick<
   ItemExpandedType,
-  | 'shouldShowPinnedButton'
-  | 'isItemPinned'
-  | 'pinTooltipLocale'
-  | 'isPinDisabled'
-  | 'id'
-  | 'active'
-  | 'onClickPinUnpin'
+  'shouldShowPinnedButton' | 'isItemPinned' | 'pinTooltipLocale' | 'isPinDisabled' | 'id' | 'active' | 'onClickPinUnpin'
 >) => {
   const context = useNavigation()
   if (!context) {
-    throw new Error(
-      'Navigation.Item can only be used inside a NavigationProvider.',
-    )
+    throw new Error('Navigation.Item can only be used inside a NavigationProvider.')
   }
 
   const { locales, pinItem, unpinItem, pinnedItems, pinLimit } = context
 
-  const PinUnpinIcon = useMemo(
-    () => (isItemPinned ? UnpinIcon : PinOutlineIcon),
-    [isItemPinned],
-  )
+  const PinUnpinIcon = useMemo(() => (isItemPinned ? UnpinIcon : PinOutlineIcon), [isItemPinned])
 
   return shouldShowPinnedButton ? (
     <Tooltip
       placement="right"
       tabIndex={-1}
-      text={
-        isItemPinned ? locales['navigation.unpin.tooltip'] : pinTooltipLocale
-      }
+      text={isItemPinned ? locales['navigation.unpin.tooltip'] : pinTooltipLocale}
     >
       <div className={navigationStyle.itemRelative}>
         <button
@@ -76,9 +61,7 @@ export const ItemPinnedButton = ({
           type="button"
         >
           <PinUnpinIcon
-            className={
-              navigationStyle.itemPinIcon[active ? 'active' : 'inactive']
-            }
+            className={navigationStyle.itemPinIcon[active ? 'active' : 'inactive']}
             disabled={isItemPinned ? false : isPinDisabled}
             sentiment={active ? 'primary' : 'neutral'}
             size="medium"

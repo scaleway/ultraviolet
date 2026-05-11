@@ -2,13 +2,10 @@
 
 import { cn, useClipboard } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-
 import { Tooltip } from '../Tooltip'
-
-import { tagStyle } from './styles.css'
 import { TagInner } from './TagInner'
-
 import type { TagProps } from './type'
+import { tagStyle } from './styles.css'
 
 const COPY_DURATION = 2500
 
@@ -139,20 +136,11 @@ export const Tag = ({
 
   return (
     <span
-      className={cn(
-        className,
-        tagStyle.container({ disabled, sentiment, closable: !!onClose }),
-      )}
+      className={cn(className, tagStyle.container({ disabled, sentiment, closable: !!onClose }))}
       data-testid={dataTestId}
       style={style}
     >
-      <TagInner
-        disabled={disabled}
-        isLoading={isLoading}
-        onClose={onClose}
-        sentiment={sentiment}
-        variant={variant}
-      >
+      <TagInner disabled={disabled} isLoading={isLoading} onClose={onClose} sentiment={sentiment} variant={variant}>
         {children}
       </TagInner>
     </span>

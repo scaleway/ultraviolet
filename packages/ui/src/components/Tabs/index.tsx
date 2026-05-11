@@ -1,23 +1,13 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import {
-  Children,
-  cloneElement,
-  isValidElement,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react'
-
-import { tabsStyle } from './styles.css'
+import { Children, cloneElement, isValidElement, useEffect, useMemo, useRef, useState } from 'react'
+import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
 import { Tab } from './Tab'
 import { TabMenu } from './TabMenu'
 import { TabMenuItem } from './TabMenuItem'
 import { TabsContext } from './TabsContext'
-
-import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
+import { tabsStyle } from './styles.css'
 
 type TabsProps = {
   selected?: string | number
@@ -58,9 +48,7 @@ export const Tabs = ({
 
   // Scroll automatically to the tab
   useEffect(() => {
-    const tab = tabsRef.current.querySelector(
-      `[role='tab'][aria-selected='true']`,
-    )
+    const tab = tabsRef.current.querySelector(`[role='tab'][aria-selected='true']`)
 
     if (tabsRef.current.scrollTo && tab) {
       // @ts-expect-error: doesn't exit on Element
@@ -76,10 +64,7 @@ export const Tabs = ({
     const handler = () => {
       if (moreElement?.style) {
         moreElement.style.boxShadow =
-          element.scrollLeft + SHADOW_THRESHOLD >
-          element.scrollWidth - element.clientWidth
-            ? 'none'
-            : ''
+          element.scrollLeft + SHADOW_THRESHOLD > element.scrollWidth - element.clientWidth ? 'none' : ''
       }
     }
     if (displayMore) {
@@ -116,11 +101,7 @@ export const Tabs = ({
       >
         {children}
         {displayMore ? (
-          <TabMenu
-            className={tabsStyle.menu}
-            disclosure={moreDisclosure}
-            ref={moreStaticRef}
-          >
+          <TabMenu className={tabsStyle.menu} disclosure={moreDisclosure} ref={moreStaticRef}>
             <div className={tabsStyle.menuContainer}>{menuItemChildren}</div>
           </TabMenu>
         ) : null}

@@ -6,17 +6,14 @@ import CodeMirror from '@uiw/react-codemirror'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useState } from 'react'
-
 import { Expandable } from '../../components/Expandable'
 import { Label } from '../../components/Label'
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
-
 import { CodeEditorCopyButton } from './components/CopyButton'
 import { CodeEditorExpandable } from './components/Expandable'
-import { codeEditorStyle, disabledStack, maxHeightVar } from './styles.css'
-
 import type { CodeEditorProps } from './type'
+import { codeEditorStyle, disabledStack, maxHeightVar } from './styles.css'
 
 /**
  * A code editor is a specialized tool designed to help developers write, edit, and manage code efficiently.
@@ -81,18 +78,12 @@ export const CodeEditor = ({
         value={value}
         width="100%"
       />
-      {copyButton && !disabled ? (
-        <CodeEditorCopyButton copyButton={copyButton} value={value} />
-      ) : null}
+      {copyButton && !disabled ? <CodeEditorCopyButton copyButton={copyButton} value={value} /> : null}
     </>
   )
 
   return (
-    <Stack
-      className={cn(disabled ? disabledStack : '')}
-      gap={0.5}
-      style={style}
-    >
+    <Stack className={cn(disabled ? disabledStack : '')} gap={0.5} style={style}>
       {label ? (
         <Label labelDescription={labelDescription} required={required}>
           {label}
@@ -100,12 +91,9 @@ export const CodeEditor = ({
       ) : null}
       <div className={codeEditorStyle.wrapper}>
         <div
-          className={cn(
-            codeEditorStyle.codeEditor[disabled ? 'disabled' : 'default'],
-          )}
+          className={cn(codeEditorStyle.codeEditor[disabled ? 'disabled' : 'default'])}
           style={assignInlineVars({
-            [maxHeightVar]:
-              !expanded && expandableHeight ? `${expandableHeight}px` : 'none',
+            [maxHeightVar]: !expanded && expandableHeight ? `${expandableHeight}px` : 'none',
           })}
         >
           {expandableEnabled ? (
@@ -117,12 +105,7 @@ export const CodeEditor = ({
           )}
         </div>
         {expandableEnabled ? (
-          <CodeEditorExpandable
-            expanded={expanded}
-            hideText={hideText}
-            setExpanded={setExpanded}
-            showText={showText}
-          />
+          <CodeEditorExpandable expanded={expanded} hideText={hideText} setExpanded={setExpanded} showText={showText} />
         ) : null}
       </div>
       {error && typeof error !== 'boolean' ? (

@@ -1,8 +1,6 @@
-import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
-
-import { Bullet } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
+import { Bullet } from '..'
 
 export const Icon: StoryFn = props => (
   <>

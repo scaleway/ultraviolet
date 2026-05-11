@@ -1,11 +1,4 @@
-import {
-  SelectableCard,
-  SelectInput,
-  Slider,
-  Stack,
-  Text,
-  TextArea,
-} from '@ultraviolet/ui'
+import { SelectableCard, SelectInput, Slider, Stack, Text, TextArea } from '@ultraviolet/ui'
 import { useState } from 'react'
 
 export const ToggleSelectableCard = () => {
@@ -31,16 +24,13 @@ export const ToggleSelectableCard = () => {
           </Stack>
         }
         name="toggle1"
-        onChange={event =>
-          setValue({ ...value, toggle1: event.currentTarget.checked })
-        }
+        onChange={event => setValue({ ...value, toggle1: event.currentTarget.checked })}
         showTick
         type="toggle"
         value="toggle1"
       >
         <Stack gap={1}>
-          This option will cost you 1.99€ and provide you with a lot of
-          happiness toggle
+          This option will cost you 1.99€ and provide you with a lot of happiness toggle
           <SelectInput
             label="Select a sub option toggle"
             onChange={(newValue: string) => setSelectInputValue(newValue)}
@@ -67,15 +57,12 @@ export const ToggleSelectableCard = () => {
           </Stack>
         }
         name="toggle2"
-        onChange={event =>
-          setValue({ ...value, toggle2: event.currentTarget.checked })
-        }
+        onChange={event => setValue({ ...value, toggle2: event.currentTarget.checked })}
         showTick
         type="toggle"
         value="toggle2"
       >
-        This option will cost you 2.99€ and provide you with a lot more of
-        happiness toggle
+        This option will cost you 2.99€ and provide you with a lot more of happiness toggle
       </SelectableCard>
       <SelectableCard
         checked={value.toggle3}
@@ -90,16 +77,13 @@ export const ToggleSelectableCard = () => {
           </Stack>
         }
         name="toggle3"
-        onChange={event =>
-          setValue({ ...value, toggle3: event.currentTarget.checked })
-        }
+        onChange={event => setValue({ ...value, toggle3: event.currentTarget.checked })}
         showTick
         type="toggle"
         value="toggle3"
       >
         <Stack gap={1}>
-          When clicking on the slider and typing in the input, the event does
-          not bubble up the the SelectableCard
+          When clicking on the slider and typing in the input, the event does not bubble up the the SelectableCard
           <TextArea label="TextArea" onChange={() => {}} />
           <Slider input label="Slider" value={32} />
         </Stack>

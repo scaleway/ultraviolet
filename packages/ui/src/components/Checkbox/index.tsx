@@ -2,15 +2,12 @@
 
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId } from 'react'
-
+import type { InputHTMLAttributes, ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
 import { CheckboxIconContainer } from './CheckboxIconContainer'
 import { checkboxStyle } from './styles.css'
-
-import type { InputHTMLAttributes, ReactNode } from 'react'
 
 type LabelProp =
   | {
@@ -146,11 +143,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             type="checkbox"
             value={value}
           />
-          <svg
-            className={checkboxStyle.icon[size]}
-            fill="none"
-            viewBox="0 0 24 24"
-          >
+          <svg className={checkboxStyle.icon[size]} fill="none" viewBox="0 0 24 24">
             <title>{name}</title>
             <CheckboxIconContainer checked={checked} />
           </svg>
@@ -158,23 +151,13 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             <Stack flex={1} gap={0.5}>
               {childStack}
               {helper ? (
-                <Text
-                  as="span"
-                  prominence="weak"
-                  sentiment="neutral"
-                  variant="caption"
-                >
+                <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
                   {helper}
                 </Text>
               ) : null}
 
               {error && typeof error !== 'boolean' ? (
-                <Text
-                  as="span"
-                  className={checkboxStyle.errorText}
-                  sentiment="danger"
-                  variant="caption"
-                >
+                <Text as="span" className={checkboxStyle.errorText} sentiment="danger" variant="caption">
                   {error}
                 </Text>
               ) : null}

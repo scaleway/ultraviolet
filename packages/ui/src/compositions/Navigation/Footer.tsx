@@ -3,15 +3,12 @@
 import { ArrowLeftDoubleIcon } from '@ultraviolet/icons/ArrowLeftDoubleIcon'
 import { ArrowRightDoubleIcon } from '@ultraviolet/icons/ArrowRightDoubleIcon'
 import { useCallback, useLayoutEffect, useMemo, useState } from 'react'
-
+import type { RefObject } from 'react'
 import { Button } from '../../components/Button'
 import { Tooltip } from '../../components/Tooltip'
-
 import { useNavigation } from './NavigationProvider'
-import { navigationStyle } from './styles.css'
-
 import type { NavigationProps } from './types'
-import type { RefObject } from 'react'
+import { navigationStyle } from './styles.css'
 
 type FooterProps = {
   onToggleExpand: NavigationProps['onToggleExpand']
@@ -23,10 +20,7 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
 
   const isScrollAtBottom = useCallback(() => {
     if (contentRef.current) {
-      if (
-        contentRef.current.scrollTop + contentRef.current.offsetHeight >=
-        contentRef.current.scrollHeight
-      ) {
+      if (contentRef.current.scrollTop + contentRef.current.offsetHeight >= contentRef.current.scrollHeight) {
         return false
       }
 
@@ -36,8 +30,7 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
     return true
   }, [contentRef])
 
-  const [footerHasOverflowStyle, setFooterHasOverflowStyle] =
-    useState(isScrollAtBottom())
+  const [footerHasOverflowStyle, setFooterHasOverflowStyle] = useState(isScrollAtBottom())
 
   // This is for detecting if there is scroll on the content and set the shadow on the footer
   useLayoutEffect(() => {
@@ -65,16 +58,10 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
     setFooterHasOverflowStyle(isScrollAtBottom())
   }, [isScrollAtBottom])
 
-  const Icon = useMemo(
-    () => (expanded ? ArrowLeftDoubleIcon : ArrowRightDoubleIcon),
-    [expanded],
-  )
+  const Icon = useMemo(() => (expanded ? ArrowLeftDoubleIcon : ArrowRightDoubleIcon), [expanded])
 
   const label = useMemo(
-    () =>
-      expanded
-        ? locales['navigation.collapse.button']
-        : locales['navigation.expand.button'],
+    () => (expanded ? locales['navigation.collapse.button'] : locales['navigation.expand.button']),
     [expanded, locales],
   )
 
@@ -84,11 +71,7 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
         overflow: footerHasOverflowStyle,
       })}
     >
-      <Tooltip
-        disableAnimation={animation === false}
-        placement="right"
-        text={label}
-      >
+      <Tooltip disableAnimation={animation === false} placement="right" text={label}>
         <Button
           aria-label={label}
           onClick={() => {

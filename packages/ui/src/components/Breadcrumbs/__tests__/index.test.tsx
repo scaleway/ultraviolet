@@ -2,7 +2,6 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-
 import { Breadcrumbs } from '..'
 
 describe('breadcrumbs', () => {
@@ -11,8 +10,7 @@ describe('breadcrumbs', () => {
       <Breadcrumbs>
         <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
         <Breadcrumbs.Item to="/step1/step2">
-          I&apos;m a very long long long long long long long long long long long
-          long step
+          I&apos;m a very long long long long long long long long long long long long step
         </Breadcrumbs.Item>
         <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
       </Breadcrumbs>,
@@ -23,8 +21,7 @@ describe('breadcrumbs', () => {
       <Breadcrumbs>
         <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
         <Breadcrumbs.Item maxWidth="200px" minWidth="100px" to="/step1/step2">
-          I&apos;m a very long long long long long long long long long long long
-          long step
+          I&apos;m a very long long long long long long long long long long long long step
         </Breadcrumbs.Item>
         <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
       </Breadcrumbs>,
@@ -51,8 +48,7 @@ describe('breadcrumbs', () => {
       <Breadcrumbs>
         <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
         <Breadcrumbs.Item to="/step1/step2">
-          I&apos;m a very long long long long long long long long long long long
-          long step
+          I&apos;m a very long long long long long long long long long long long long step
         </Breadcrumbs.Item>
         <Breadcrumbs.Item onClick={onClick}>Step 3</Breadcrumbs.Item>
       </Breadcrumbs>,
@@ -63,9 +59,7 @@ describe('breadcrumbs', () => {
   })
 
   it('renders correctly with invalid child', () => {
-    const { asFragment } = renderWithTheme(
-      <Breadcrumbs>Invalid child</Breadcrumbs>,
-    )
+    const { asFragment } = renderWithTheme(<Breadcrumbs>Invalid child</Breadcrumbs>)
     expect(asFragment()).toMatchSnapshot()
   })
 })

@@ -2,9 +2,7 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-
 import { OfferListField } from '..'
-
 import { columns, data } from './resources'
 
 describe('offerListField', () => {
@@ -12,11 +10,7 @@ describe('offerListField', () => {
     const { asFragment } = renderWithForm(
       <OfferListField columns={columns} name="offer-list">
         {data.map(planet => (
-          <OfferListField.Row
-            id={planet.id}
-            key={planet.id}
-            offerName={planet.id}
-          >
+          <OfferListField.Row id={planet.id} key={planet.id} offerName={planet.id}>
             <OfferListField.Cell>{planet.name}</OfferListField.Cell>
             <OfferListField.Cell>{planet.perihelion}AU</OfferListField.Cell>
             <OfferListField.Cell>{planet.aphelion}AU</OfferListField.Cell>
@@ -31,12 +25,7 @@ describe('offerListField', () => {
     const { asFragment } = renderWithForm(
       <OfferListField columns={columns} name="offer-list">
         {data.map(planet => (
-          <OfferListField.Row
-            disabled
-            id={planet.id}
-            key={planet.id}
-            offerName={planet.id}
-          >
+          <OfferListField.Row disabled id={planet.id} key={planet.id} offerName={planet.id}>
             <OfferListField.Cell>{planet.name}</OfferListField.Cell>
             <OfferListField.Cell>{planet.perihelion}AU</OfferListField.Cell>
             <OfferListField.Cell>{planet.aphelion}AU</OfferListField.Cell>
@@ -51,18 +40,9 @@ describe('offerListField', () => {
   it('should trigger events', async () => {
     const onChange = vi.fn()
     renderWithForm(
-      <OfferListField
-        columns={columns}
-        name="offer-list"
-        onChange={onChange}
-        value="jupiter"
-      >
+      <OfferListField columns={columns} name="offer-list" onChange={onChange} value="jupiter">
         {data.map(planet => (
-          <OfferListField.Row
-            id={planet.id}
-            key={planet.id}
-            offerName={planet.id}
-          >
+          <OfferListField.Row id={planet.id} key={planet.id} offerName={planet.id}>
             <OfferListField.Cell>{planet.name}</OfferListField.Cell>
             <OfferListField.Cell>{planet.perihelion}AU</OfferListField.Cell>
             <OfferListField.Cell>{planet.aphelion}AU</OfferListField.Cell>

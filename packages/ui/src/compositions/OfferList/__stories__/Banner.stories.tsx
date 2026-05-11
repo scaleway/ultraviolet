@@ -1,9 +1,7 @@
-import { OfferList } from '..'
-
-import { columns, data } from './resources'
-
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { OfferList } from '..'
+import { columns, data } from './resources'
 
 export const Banner: StoryFn<ComponentProps<typeof OfferList>> = props => (
   <OfferList {...props} expandable>
@@ -12,10 +10,7 @@ export const Banner: StoryFn<ComponentProps<typeof OfferList>> = props => (
         <OfferList.Row
           banner={{
             sentiment: planet.id === 'mercury' ? 'primary' : undefined,
-            text:
-              index === 2
-                ? 'Disabled banner because row is disabled'
-                : 'This is a banner',
+            text: index === 2 ? 'Disabled banner because row is disabled' : 'This is a banner',
           }}
           disabled={index === 2}
           expandable="Some text"
@@ -39,8 +34,7 @@ Banner.args = {
 Banner.parameters = {
   docs: {
     description: {
-      story:
-        'Use props `banner` to add a banner. When a row is disabled, its banner is also disabled.',
+      story: 'Use props `banner` to add a banner. When a row is disabled, its banner is also disabled.',
     },
   },
 }

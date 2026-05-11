@@ -1,12 +1,10 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { Slider } from '..'
 import { Button } from '../../Button'
 import { Modal } from '../../Modal'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const options = [
   { label: '1 Mbps', value: 1 },
@@ -103,8 +101,8 @@ export const Options: StoryFn<typeof Slider> = args => {
           label="Partial options with only the min and max value"
           labelDescription={
             <Text as="p" variant="captionSmall">
-              defaultScale=false (here, step of 1 and min=0, max=options.length,
-              those values are automatically computed by the component)
+              defaultScale=false (here, step of 1 and min=0, max=options.length, those values are automatically computed
+              by the component)
             </Text>
           }
           name="name"
@@ -127,8 +125,7 @@ export const Options: StoryFn<typeof Slider> = args => {
           label="Partial options with only the min and max value"
           labelDescription={
             <Text as="p" variant="captionSmall">
-              defaultScale=true (here, step of 100 and min=0, max=1000, those
-              value come from the props)
+              defaultScale=true (here, step of 100 and min=0, max=1000, those value come from the props)
             </Text>
           }
           max={1000}
@@ -149,8 +146,7 @@ export const Options: StoryFn<typeof Slider> = args => {
           label="Partial options with only the min and max value"
           labelDescription={
             <Text as="p" variant="captionSmall">
-              defaultScale=true & double (here, step of 100 and min=0, max=1000,
-              those value come from the props)
+              defaultScale=true & double (here, step of 100 and min=0, max=1000, those value come from the props)
             </Text>
           }
           max={1000}
@@ -177,19 +173,12 @@ export const Options: StoryFn<typeof Slider> = args => {
         />
         Actual input value: [{doubleValue[0]}, {doubleValue[1]}]
         <br />
-        Matched input value with options: [{options[doubleValue[0]].value},
-        {options[doubleValue[1]].value}]
+        Matched input value with options: [{options[doubleValue[0]].value},{options[doubleValue[1]].value}]
       </Stack>
 
       <Stack width="25%">
         <Modal disclosure={<Button>Open modal</Button>}>
-          <Slider
-            {...args}
-            label="Label"
-            options={options}
-            tooltip={false}
-            unit="Gbps"
-          />
+          <Slider {...args} label="Label" options={options} tooltip={false} unit="Gbps" />
         </Modal>
       </Stack>
     </Stack>

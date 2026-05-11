@@ -1,11 +1,8 @@
-import { es, fr, ru } from 'date-fns/locale'
-
-import { DateInput } from '..'
-
-import { Template } from './Template'
-
 import type { Decorator } from '@storybook/react-vite'
+import { es, fr, ru } from 'date-fns/locale'
 import type { ComponentProps } from 'react'
+import { DateInput } from '..'
+import { Template } from './Template'
 
 const locales = [
   { label: 'fr-FR', locale: fr },
@@ -15,13 +12,7 @@ const locales = [
 
 export const Localized = (props: ComponentProps<typeof DateInput>) =>
   locales.map(({ label, locale }) => (
-    <DateInput
-      key={label}
-      {...props}
-      label={label}
-      locale={locale}
-      onChange={() => {}}
-    />
+    <DateInput key={label} {...props} label={label} locale={locale} onChange={() => {}} />
   ))
 
 Localized.args = Template.args
@@ -29,8 +20,7 @@ Localized.args = Template.args
 Localized.parameters = {
   docs: {
     description: {
-      story:
-        'You can import locale from `date-fns/locale` package and pass it as `locale` prop to localize the input.',
+      story: 'You can import locale from `date-fns/locale` package and pass it as `locale` prop to localize the input.',
     },
   },
 }

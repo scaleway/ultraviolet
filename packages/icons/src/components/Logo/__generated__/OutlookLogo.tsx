@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const OutlookLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const OutlookLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="OutlookLogo">
     <g clipPath="url(#a)">
       <path
@@ -23,10 +20,7 @@ export const OutlookLogo = ({
         d="M6.548 8.654h3.638v3.354H6.548zm10.708-3.409V3.711A.693.693 0 0 0 16.58 3H7.14a.694.694 0 0 0-.675.711v1.534l5.581 1.497z"
       />
       <path fill="#0078D4" d="M6.465 5.245h3.721v3.368h-3.72z" />
-      <path
-        fill="#28A8EA"
-        d="M13.907 5.245h-3.721v3.368l3.721 3.368h3.349V8.613z"
-      />
+      <path fill="#28A8EA" d="M13.907 5.245h-3.721v3.368l3.721 3.368h3.349V8.613z" />
       <path fill="#0078D4" d="M10.186 8.613h3.721v3.367h-3.721z" />
       <path fill="#0364B8" d="M10.186 11.98h3.721v3.368h-3.721z" />
       <path fill="#14447D" d="M6.548 12.008h3.638v3.05H6.548z" />
@@ -89,25 +83,11 @@ export const OutlookLogo = ({
       <path fill="#50D9FF" d="M13.907 5.245h3.349v3.368h-3.349z" />
     </g>
     <defs>
-      <linearGradient
-        id="b"
-        x1="11.861"
-        x2="11.861"
-        y1="10.858"
-        y2="17.968"
-        gradientUnits="userSpaceOnUse"
-      >
+      <linearGradient id="b" x1="11.861" x2="11.861" y1="10.858" y2="17.968" gradientUnits="userSpaceOnUse">
         <stop stopColor="#35B8F1" />
         <stop offset="1" stopColor="#28A8EA" />
       </linearGradient>
-      <linearGradient
-        id="c"
-        x1="3.422"
-        x2="8.809"
-        y1="5.832"
-        y2="15.11"
-        gradientUnits="userSpaceOnUse"
-      >
+      <linearGradient id="c" x1="3.422" x2="8.809" y1="5.832" y2="15.11" gradientUnits="userSpaceOnUse">
         <stop stopColor="#1784D9" />
         <stop offset=".5" stopColor="#107AD5" />
         <stop offset="1" stopColor="#0A63C9" />

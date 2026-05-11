@@ -1,13 +1,10 @@
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Children } from 'react'
-
-import { Text } from '../../components/Text'
-
-import { maxWidthTextVar } from './Components/components.css'
-import { useOverlay } from './OverlayContext'
-import { estimateCostStyle } from './styles.css'
-
 import type { ReactNode } from 'react'
+import { Text } from '../../components/Text'
+import { useOverlay } from './OverlayContext'
+import { maxWidthTextVar } from './Components/components.css'
+import { estimateCostStyle } from './styles.css'
 
 export const Ellipsis = ({
   children,
@@ -23,10 +20,7 @@ export const Ellipsis = ({
   const text = Children.toArray(children).join('').toString()
 
   return (
-    <div
-      data-testid={dataTestId}
-      style={{ display: isOverlay ? undefined : 'inline-flex' }}
-    >
+    <div data-testid={dataTestId} style={{ display: isOverlay ? undefined : 'inline-flex' }}>
       <Text
         as="p"
         className={estimateCostStyle.maxWidthText}

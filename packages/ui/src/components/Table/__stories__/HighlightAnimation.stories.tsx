@@ -1,15 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
 import { useState } from 'react'
-
 import { Table } from '..'
 import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { Stack } from '../../Stack'
-
 import { columns, data as DATA } from './resources'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 type Movie = {
   id: string
@@ -49,11 +46,7 @@ export const HighlightAnimation: StoryFn<typeof Table> = ({ ...props }) => {
       <Table {...props} columns={columns}>
         <Table.Body>
           {data.map(movie => (
-            <Table.Row
-              highlightAnimation={!!movie.isNew}
-              id={movie.id}
-              key={movie.id}
-            >
+            <Table.Row highlightAnimation={!!movie.isNew} id={movie.id} key={movie.id}>
               <Table.Cell>{movie.name}</Table.Cell>
               <Table.Cell>{movie.releaseYear}</Table.Cell>
               <Table.Cell>{movie.trilogy}</Table.Cell>

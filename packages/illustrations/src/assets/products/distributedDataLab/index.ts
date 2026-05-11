@@ -10,9 +10,4 @@ const distributedDataLabKeyvisual = `${BASE_URL}/products/distributedDataLab/dis
 const distributedDataLabOriginal = `${BASE_URL}/products/distributedDataLab/distributed-data-lab-original.webp`
 const distributedDataLabWire = `${BASE_URL}/products/distributedDataLab/distributed-data-lab-wire.svg`
 
-export {
-  distributedDataLabContent,
-  distributedDataLabKeyvisual,
-  distributedDataLabOriginal,
-  distributedDataLabWire,
-}
+export { distributedDataLabContent, distributedDataLabKeyvisual, distributedDataLabOriginal, distributedDataLabWire }

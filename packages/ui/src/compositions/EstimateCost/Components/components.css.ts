@@ -1,7 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-
 import { zoomIn } from '../../../utils'
 
 export const maxWidthTextVar = createVar()

@@ -3,13 +3,11 @@
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { memo, useState } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Button } from '../../../components/Button'
 import { Stack } from '../../../components/Stack'
 import { useNavigation } from '../NavigationProvider'
 import { navigationStyle } from '../styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type ShowAllProp = {
   showContent: ReactNode
@@ -25,19 +23,10 @@ type ShowAllProp = {
 }
 
 export const ShowHide = memo(
-  ({
-    showContent,
-    hideContent,
-    onShowHide,
-    tooltip,
-    'data-testid': dataTestId,
-    style,
-  }: ShowAllProp) => {
+  ({ showContent, hideContent, onShowHide, tooltip, 'data-testid': dataTestId, style }: ShowAllProp) => {
     const context = useNavigation()
     if (!context) {
-      throw new Error(
-        'Navigation.ShowAll can only be used inside a NavigationProvider.',
-      )
+      throw new Error('Navigation.ShowAll can only be used inside a NavigationProvider.')
     }
     const { expanded, animation, showHide } = context
 
@@ -72,12 +61,7 @@ export const ShowHide = memo(
 
     // When the navigation is collapsed
     return (
-      <Stack
-        alignItems="start"
-        className={navigationStyle.showHideStack()}
-        justifyContent="flex-end"
-        style={style}
-      >
+      <Stack alignItems="start" className={navigationStyle.showHideStack()} justifyContent="flex-end" style={style}>
         <Button
           data-testid={dataTestId}
           onClick={onClick}

@@ -1,19 +1,13 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { TextInput } from '..'
 import { CopyButton } from '../../CopyButton'
 import { Stack } from '../../Stack'
 
-import type { StoryFn } from '@storybook/react-vite'
-
 const generateRandomPassword = (length = 12) => {
-  const charset =
-    'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+  const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 
-  return Array.from(
-    { length },
-    () => charset[Math.floor(Math.random() * charset.length)],
-  ).join('')
+  return Array.from({ length }, () => charset[Math.floor(Math.random() * charset.length)]).join('')
 }
 export const Password: StoryFn<typeof TextInput> = ({ ...args }) => {
   const [value, setValue] = useState(args.value)

@@ -1,13 +1,10 @@
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 import { SteppedListCard } from '..'
 import { Button } from '../../../components/Button'
 import { Stack } from '../../../components/Stack'
 
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
-
-export const NextStep: StoryFn<
-  ComponentProps<typeof SteppedListCard>
-> = props => (
+export const NextStep: StoryFn<ComponentProps<typeof SteppedListCard>> = props => (
   <SteppedListCard {...props}>
     <SteppedListCard.Step stepNumber={1}>
       {nextStep => (
@@ -41,8 +38,7 @@ export const NextStep: StoryFn<
     </SteppedListCard.Step>
     <SteppedListCard.Step stepNumber={2}>
       <Stack direction="column" gap={2}>
-        Click the name of step 1 to navigate back to it and test the different
-        buttons.
+        Click the name of step 1 to navigate back to it and test the different buttons.
       </Stack>
     </SteppedListCard.Step>
   </SteppedListCard>

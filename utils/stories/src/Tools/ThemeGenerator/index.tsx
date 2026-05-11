@@ -1,16 +1,13 @@
 import { Form, useForm } from '@ultraviolet/form'
 import { theme as consoleLightTheme, Stack, Text } from '@ultraviolet/ui'
+import type { UltravioletUITheme } from '@ultraviolet/ui'
 import { useCallback, useEffect, useState } from 'react'
-
 import { TOKENS_URL } from '../../../../scripts/figma-synchronise-token/constants'
 import { generatePalette } from '../../../../scripts/figma-synchronise-token/generatePalette'
-
 import { INITIAL_VALUES, SHADES_KEYS, SHADES_KEYS_MATCHING } from './contants'
 import { FormContent } from './FormContent'
 import { generateShadeContrast } from './helpers'
 import { ThemeResult } from './ThemeResult'
-
-import type { UltravioletUITheme } from '@ultraviolet/ui'
 
 type JsonTokenType = {
   paletteLight: {
@@ -28,9 +25,7 @@ export const ThemeGenerator = () => {
   const [step, setStep] = useState(0)
   const [generatedPalette, setGeneratedPalette] = useState(consoleLightTheme)
   const [theme, setTheme] = useState(consoleLightTheme)
-  const [savedFormValues, setSavedFormValues] = useState<
-    typeof INITIAL_VALUES | null
-  >(null)
+  const [savedFormValues, setSavedFormValues] = useState<typeof INITIAL_VALUES | null>(null)
 
   const methods = useForm({
     mode: 'onChange',
@@ -114,21 +109,18 @@ export const ThemeGenerator = () => {
               ✨ Theme generator
             </Text>
             <Text as="p" variant="body">
-              There is around <b>175 token colors</b> in Ultraviolet theme. It
-              can be hard to set each of them one by one and understanding their
-              usage in the components. Theme generator is here to help you
-              create a new theme for your project FAST 🚀.
+              There is around <b>175 token colors</b> in Ultraviolet theme. It can be hard to set each of them one by
+              one and understanding their usage in the components. Theme generator is here to help you create a new
+              theme for your project FAST 🚀.
             </Text>
 
             <Text as="h3" variant="headingSmall">
               How does it work?
             </Text>
             <Text as="p" variant="body">
-              You basically just need to fill this form with the name and color
-              of each sentiment you want to use in your project. The color you
-              will set will be the most used color in the theme and the other
-              colors will be generated from it. So do not choose a color too
-              dark or too bright.
+              You basically just need to fill this form with the name and color of each sentiment you want to use in
+              your project. The color you will set will be the most used color in the theme and the other colors will be
+              generated from it. So do not choose a color too dark or too bright.
             </Text>
           </Stack>
           <Form
@@ -150,12 +142,7 @@ export const ThemeGenerator = () => {
           </Form>
         </Stack>
       ) : (
-        <ThemeResult
-          generatedPalette={generatedPalette}
-          setStep={setStep}
-          setTheme={setTheme}
-          theme={theme}
-        />
+        <ThemeResult generatedPalette={generatedPalette} setStep={setStep} setTheme={setTheme} theme={theme} />
       )}
     </Stack>
   )

@@ -1,6 +1,5 @@
-import { Tabs } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Tabs } from '..'
 
 export default {
   component: Tabs,

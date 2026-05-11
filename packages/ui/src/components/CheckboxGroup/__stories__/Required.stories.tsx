@@ -1,15 +1,11 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '../../Stack'
 import { CheckboxGroup } from '../index'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Required: StoryFn<typeof CheckboxGroup> = props => (
   <Stack gap={3}>
     <CheckboxGroup {...props} required>
-      <CheckboxGroup.Checkbox
-        name="termsAndConditions"
-        value="termsAndConditions"
-      >
+      <CheckboxGroup.Checkbox name="termsAndConditions" value="termsAndConditions">
         Accept terms and conditions (required)
       </CheckboxGroup.Checkbox>
       <CheckboxGroup.Checkbox name="newsletter" value="newsletter">
@@ -18,11 +14,7 @@ export const Required: StoryFn<typeof CheckboxGroup> = props => (
     </CheckboxGroup>
 
     <CheckboxGroup {...props}>
-      <CheckboxGroup.Checkbox
-        name="termsAndConditions"
-        required
-        value="termsAndConditions"
-      >
+      <CheckboxGroup.Checkbox name="termsAndConditions" required value="termsAndConditions">
         Accept terms and conditions (required)
       </CheckboxGroup.Checkbox>
       <CheckboxGroup.Checkbox name="newsletter" value="newsletter">

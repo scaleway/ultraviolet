@@ -1,17 +1,14 @@
+import type { StoryFn } from '@storybook/react-vite'
 import {
   DynamicIllustration,
   // @ts-expect-error can't import ultraviolet/illustration in ui (cyclic dependencies)
 } from '@ultraviolet/illustrations'
-
 import { SelectInput } from '..'
 import { EmptyState as EmptyStateComponent } from '../../EmptyState'
 import { Link } from '../../Link'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
 import { Template } from './Template.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const emptyStateText = (
   <Stack alignItems="center" gap={2}>
@@ -19,13 +16,10 @@ const emptyStateText = (
       No options
     </Text>
     <Text as="div" variant="body">
-      This is an example of custom EmptyState. You can customise it as you want
-      and make it as detailed, long and pretty as you want.
+      This is an example of custom EmptyState. You can customise it as you want and make it as detailed, long and pretty
+      as you want.
     </Text>
-    <Link
-      href="https://storybook.ultraviolet.scaleway.com/?path=/docs/get-started--docs"
-      iconPosition="right"
-    >
+    <Link href="https://storybook.ultraviolet.scaleway.com/?path=/docs/get-started--docs" iconPosition="right">
       It is possible to add links, for instance.
     </Link>
   </Stack>
@@ -33,11 +27,7 @@ const emptyStateText = (
 
 export const EmptyState: StoryFn<typeof SelectInput> = args => (
   <Stack direction="column" gap={2} width="50%">
-    <SelectInput
-      {...args}
-      emptyState={emptyStateText}
-      label="Using a custom component"
-    />
+    <SelectInput {...args} emptyState={emptyStateText} label="Using a custom component" />
     <SelectInput
       {...args}
       emptyState={

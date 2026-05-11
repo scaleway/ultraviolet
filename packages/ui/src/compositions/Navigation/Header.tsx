@@ -1,13 +1,10 @@
 'use client'
 
 import { memo } from 'react'
-
 import { Stack } from '../../components/Stack'
-
 import { useNavigation } from './NavigationProvider'
-import { navigationStyle } from './styles.css'
-
 import type { NavigationProps } from './types'
+import { navigationStyle } from './styles.css'
 
 type HeaderProps = {
   logo: NavigationProps['logo']

@@ -1,9 +1,8 @@
 'use client'
 
+import type { ReactNode } from 'react'
 import { Row } from '../Row'
 import { Text } from '../Text'
-
-import type { ReactNode } from 'react'
 
 export const Notice = ({
   maxLength,
@@ -35,9 +34,7 @@ export const Notice = ({
           {error || success || helper}
         </Text>
       ) : null}
-      {!(error || success) && typeof helper !== 'string' && helper
-        ? helper
-        : null}
+      {!(error || success) && typeof helper !== 'string' && helper ? helper : null}
     </div>
     {maxLength ? (
       <Text as="div" prominence="weak" sentiment="neutral" variant="caption">

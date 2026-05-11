@@ -1,27 +1,16 @@
-import type { Table } from '../../Table'
 import type { ComponentProps } from 'react'
+import type { Table } from '../../Table'
 
 export const generateRandomName = (nameLength: number) =>
-  String.fromCharCode(
-    ...Array.from(
-      { length: nameLength },
-      () => Math.floor(Math.random() * 26) + 97,
-    ),
-  ).replace(/^./, c => c.toUpperCase())
+  String.fromCharCode(...Array.from({ length: nameLength }, () => Math.floor(Math.random() * 26) + 97)).replace(
+    /^./,
+    c => c.toUpperCase(),
+  )
 
 export const generateRandomNamesArray = (size: number, nameLength: number) =>
   Array.from({ length: size }, () => generateRandomName(nameLength))
 
-export const DATA = [
-  'Mercury',
-  'Venus',
-  'Earth',
-  'Mars',
-  'Jupiter',
-  'Saturn',
-  'Uranus',
-  'Neptune',
-]
+export const DATA = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
 
 export const SELECT_INPUT_DATA = [
   {
@@ -133,9 +122,7 @@ export const TABLE_DATA = [
   },
 ]
 
-export const TABLE_COLUMNS: NonNullable<
-  ComponentProps<typeof Table>['columns']
-> = [
+export const TABLE_COLUMNS: NonNullable<ComponentProps<typeof Table>['columns']> = [
   { label: 'Movie name' },
   { label: 'Release year' },
   { label: 'Trilogy' },

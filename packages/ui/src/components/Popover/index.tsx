@@ -1,24 +1,13 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import {
-  forwardRef,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react'
-
+import { forwardRef, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
+import type { Ref } from 'react'
 import { ModalContext } from '../Modal/ModalProvider'
 import { Popup } from '../Popup'
-
 import { ContentWrapper } from './ContentWrapper'
-import { popoverStyle } from './styles.css'
-
 import type { PopoverProps } from './types'
-import type { Ref } from 'react'
+import { popoverStyle } from './styles.css'
 
 /**
  * Popover component is used to display additional information or actions on top of the main content of the page.
@@ -91,11 +80,7 @@ export const Popover = forwardRef(
         style={style}
         tabIndex={-1}
         text={
-          <ContentWrapper
-            onClose={localOnClose}
-            sentiment={sentiment}
-            title={title}
-          >
+          <ContentWrapper onClose={localOnClose} sentiment={sentiment} title={title}>
             {content}
           </ContentWrapper>
         }

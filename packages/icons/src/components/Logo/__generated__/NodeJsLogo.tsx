@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const NodeJsLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const NodeJsLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="NodeJsLogo">
     <g>
       <path
@@ -65,10 +62,7 @@ export const NodeJsLogo = ({
         />
       </mask>
       <g mask="url(#mask2_341_658)">
-        <path
-          d="M5.36719 6.79932V11.6563H9.51226V6.79932H5.36719Z"
-          fill="url(#paint2_linear_341_658)"
-        />
+        <path d="M5.36719 6.79932V11.6563H9.51226V6.79932H5.36719Z" fill="url(#paint2_linear_341_658)" />
       </g>
     </g>
     <defs>

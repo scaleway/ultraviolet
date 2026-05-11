@@ -1,7 +1,6 @@
 'use client'
 
 import { Skeleton } from '../Skeleton'
-
 import { Cell } from './Cell'
 import { tableStyle } from './styles.css'
 
@@ -18,11 +17,7 @@ export const SkeletonRows = ({ selectable, rows, cols }: SkeletonRowsProps) => {
   return (
     <>
       {rowArray.map(index => (
-        <tr
-          className={tableStyle.skeletonRow}
-          id={`skeleton-${index}`}
-          key={index}
-        >
+        <tr className={tableStyle.skeletonRow} id={`skeleton-${index}`} key={index}>
           {selectable ? <Cell /> : null}
           {colArray.map(columnIndex => (
             <Cell key={columnIndex}>

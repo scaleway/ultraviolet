@@ -1,15 +1,12 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-
-import { Button } from '../Button'
-
-import { Dialog } from './components/Dialog'
-import { modalStyle } from './styles.css'
-
-import type { Modal } from '.'
-import type { ModalPlacement, ModalSize } from './types'
 import type { ComponentProps, CSSProperties } from 'react'
+import type { Modal } from '.'
+import { Button } from '../Button'
+import { Dialog } from './components/Dialog'
+import type { ModalPlacement, ModalSize } from './types'
+import { modalStyle } from './styles.css'
 
 type ModalContentProps = ComponentProps<typeof Modal> & {
   visible: boolean

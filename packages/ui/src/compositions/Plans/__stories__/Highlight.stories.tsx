@@ -1,10 +1,8 @@
-import { Plans } from '..'
-import { Button } from '../../../components/Button'
-
-import { domain, fees, gb, pipeline, ssl } from './features'
-
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { Plans } from '..'
+import { Button } from '../../../components/Button'
+import { domain, fees, gb, pipeline, ssl } from './features'
 
 const planStarter = {
   data: {
@@ -75,9 +73,7 @@ const planAdvanced = {
   value: 'advanced',
 }
 
-export const Highlight: StoryFn<ComponentProps<typeof Plans>> = ({
-  ...props
-}) => <Plans {...props} fieldName="plans" />
+export const Highlight: StoryFn<ComponentProps<typeof Plans>> = ({ ...props }) => <Plans {...props} fieldName="plans" />
 
 Highlight.args = {
   features: [gb, pipeline, domain, ssl, fees],

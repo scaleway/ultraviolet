@@ -1,11 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
+import type { ComponentProps } from 'react'
 import { EstimateCost } from '..'
 import { Button } from '../../../components/Button'
 import { Stack } from '../../../components/Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 export const Unit: StoryFn<ComponentProps<typeof EstimateCost>> = props => {
   const [value, setValue] = useState<number | undefined>(0)
@@ -15,12 +13,7 @@ export const Unit: StoryFn<ComponentProps<typeof EstimateCost>> = props => {
       <Button onClick={() => setValue(10)}>Set value to 10</Button>
       <Button onClick={() => setValue(20)}>Set value to 20</Button>
       <EstimateCost {...props} hideOverlay>
-        <EstimateCost.Item
-          amount={value}
-          label="Screen pixels"
-          price={1}
-          unit="Px"
-        >
+        <EstimateCost.Item amount={value} label="Screen pixels" price={1} unit="Px">
           <EstimateCost.Unit />
         </EstimateCost.Item>
       </EstimateCost>

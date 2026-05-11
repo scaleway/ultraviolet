@@ -1,29 +1,19 @@
 'use client'
 
 import { SelectableCardOptionGroup } from '@ultraviolet/ui'
-import { useController } from 'react-hook-form'
-
-import { useErrors } from '../../providers'
-
-import type { BaseFieldProps } from '../../types'
 import type { ComponentProps, JSX } from 'react'
+import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues } from 'react-hook-form'
+import { useErrors } from '../../providers'
+import type { BaseFieldProps } from '../../types'
 
 type SelectableCardOptionGroupUI = typeof SelectableCardOptionGroup
 
 type SelectableCardOptionGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = Omit<
-  ComponentProps<SelectableCardOptionGroupUI>,
-  'onChange' | 'onChangeOption'
-> &
-  Partial<
-    Pick<
-      ComponentProps<SelectableCardOptionGroupUI>,
-      'onChangeOption' | 'onChange'
-    >
-  > &
+> = Omit<ComponentProps<SelectableCardOptionGroupUI>, 'onChange' | 'onChangeOption'> &
+  Partial<Pick<ComponentProps<SelectableCardOptionGroupUI>, 'onChangeOption' | 'onChange'>> &
   Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> & {
     optionName?: string
   }
@@ -50,10 +40,7 @@ const SelectableCardOptionGroupFieldComponent: <
   validate,
   errorLabel,
   ...props
-}: SelectableCardOptionGroupFieldProps<
-  TFieldValues,
-  TFieldName
->): JSX.Element => {
+}: SelectableCardOptionGroupFieldProps<TFieldValues, TFieldName>): JSX.Element => {
   const { getError } = useErrors()
   const {
     field,
@@ -97,12 +84,13 @@ const SelectableCardOptionGroupFieldComponent: <
   )
 }
 
-type SelectableCardOptionGroupFieldType =
-  typeof SelectableCardOptionGroupFieldComponent & {
-    Option: typeof SelectableCardOptionGroup.Option
-  }
+type SelectableCardOptionGroupFieldType = typeof SelectableCardOptionGroupFieldComponent & {
+  Option: typeof SelectableCardOptionGroup.Option
+}
 
-export const SelectableCardOptionGroupField: SelectableCardOptionGroupFieldType =
-  Object.assign(SelectableCardOptionGroupFieldComponent, {
+export const SelectableCardOptionGroupField: SelectableCardOptionGroupFieldType = Object.assign(
+  SelectableCardOptionGroupFieldComponent,
+  {
     Option: SelectableCardOptionGroup.Option,
-  })
+  },
+)

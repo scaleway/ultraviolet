@@ -5,7 +5,6 @@ import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
 import { SunIcon } from '@ultraviolet/icons/SunIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
-
 import { SwitchButton } from '..'
 
 let resizeCallback: ResizeObserverCallback = () => {}
@@ -70,10 +69,7 @@ describe('switchButton', () => {
       value: 100,
     })
 
-    resizeCallback(
-      [{ target: buttonLeft } as unknown as ResizeObserverEntry],
-      {} as ResizeObserver,
-    )
+    resizeCallback([{ target: buttonLeft } as unknown as ResizeObserverEntry], {} as ResizeObserver)
 
     expect(asFragment()).toMatchSnapshot()
     window.ResizeObserver = tempResizeObserver
@@ -81,12 +77,7 @@ describe('switchButton', () => {
 
   it('renders with tooltip', () =>
     shouldMatchSnapshot(
-      <SwitchButton
-        name="test"
-        onChange={() => {}}
-        tooltip="tooltip"
-        value="left"
-      >
+      <SwitchButton name="test" onChange={() => {}} tooltip="tooltip" value="left">
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
       </SwitchButton>,
@@ -94,12 +85,7 @@ describe('switchButton', () => {
 
   it('renders with disabled and tooltip on SwitchButton.Option', () =>
     shouldMatchSnapshot(
-      <SwitchButton
-        name="test"
-        onChange={() => {}}
-        tooltip="tooltip"
-        value="left"
-      >
+      <SwitchButton name="test" onChange={() => {}} tooltip="tooltip" value="left">
         <SwitchButton.Option disabled tooltip="This is disabled" value="left">
           Left
         </SwitchButton.Option>
@@ -109,12 +95,7 @@ describe('switchButton', () => {
 
   it('renders neutral', () =>
     shouldMatchSnapshot(
-      <SwitchButton
-        name="test"
-        onChange={() => {}}
-        sentiment="neutral"
-        value="left"
-      >
+      <SwitchButton name="test" onChange={() => {}} sentiment="neutral" value="left">
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
       </SwitchButton>,
@@ -122,12 +103,7 @@ describe('switchButton', () => {
 
   it('renders with icons', () =>
     shouldMatchSnapshot(
-      <SwitchButton
-        name="test"
-        onChange={() => {}}
-        tooltip="tooltip"
-        value="left"
-      >
+      <SwitchButton name="test" onChange={() => {}} tooltip="tooltip" value="left">
         <SwitchButton.Option value="left">
           <MoonIcon />
         </SwitchButton.Option>
@@ -153,10 +129,8 @@ describe('switchButton', () => {
   })
 
   it('throws error when using button outside of context', () => {
-    expect(() =>
-      renderWithTheme(
-        <SwitchButton.Option value="left">Left</SwitchButton.Option>,
-      ),
-    ).toThrow('SwitchButton.Option should be used inside a SwitchButton')
+    expect(() => renderWithTheme(<SwitchButton.Option value="left">Left</SwitchButton.Option>)).toThrow(
+      'SwitchButton.Option should be used inside a SwitchButton',
+    )
   })
 })

@@ -1,14 +1,12 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it } from 'vitest'
-
 import { KEYS_MATCH } from '../constants'
 import { Key } from '../index'
 
 describe('key', () => {
   it('renders correctly', () => shouldMatchSnapshot(<Key>A</Key>))
-  it('renders primary', () =>
-    shouldMatchSnapshot(<Key sentiment="primary">A</Key>))
+  it('renders primary', () => shouldMatchSnapshot(<Key sentiment="primary">A</Key>))
   it('renders strong', () =>
     shouldMatchSnapshot(
       <Key prominence="strong" sentiment="neutral">
@@ -57,9 +55,7 @@ describe('key', () => {
       renderWithTheme(<Key data-testid="key">{key}</Key>)
 
       const element = screen.getByTestId('key')
-      expect(element.textContent).toBe(
-        KEYS_MATCH[key as keyof typeof KEYS_MATCH],
-      )
+      expect(element.textContent).toBe(KEYS_MATCH[key as keyof typeof KEYS_MATCH])
     }),
   )
 })

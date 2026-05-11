@@ -1,10 +1,8 @@
 'use client'
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-
-import { Loader } from '../Loader'
-
 import type { CSSProperties, ElementType, ReactNode, RefObject } from 'react'
+import { Loader } from '../Loader'
 
 // This is the distance from the bottom of the scrollable container where the `onLoadMore` function will be called.
 // Change this value if you want increase or decrease the distance from scroll bottom.
@@ -109,8 +107,7 @@ export const InfiniteScroll = ({
     if (!hasMore) {
       return
     }
-    let scrollableContainer =
-      scrollParentRef?.current ?? containerRef.current?.parentElement
+    let scrollableContainer = scrollParentRef?.current ?? containerRef.current?.parentElement
     while (scrollableContainer && scrollableContainer !== document.body) {
       const { overflowY } = window.getComputedStyle(scrollableContainer)
       if (overflowY === 'auto' || overflowY === 'scroll') {
@@ -123,10 +120,7 @@ export const InfiniteScroll = ({
       return
     }
 
-    const debouncedHandleScroll = debounce(
-      () => handleScroll(scrollableContainer),
-      100,
-    )
+    const debouncedHandleScroll = debounce(() => handleScroll(scrollableContainer), 100)
     scrollableContainer.addEventListener('scroll', debouncedHandleScroll)
 
     // We need to return to remove the event listener when the component is unmounted

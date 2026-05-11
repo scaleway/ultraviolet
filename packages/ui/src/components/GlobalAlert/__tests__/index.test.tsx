@@ -2,12 +2,10 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it } from 'vitest'
-
 import { GlobalAlert } from '..'
 
 describe('globalAlert', () => {
-  it('renders correctly with default values', () =>
-    shouldMatchSnapshot(<GlobalAlert>Simple GlobalAlert</GlobalAlert>))
+  it('renders correctly with default values', () => shouldMatchSnapshot(<GlobalAlert>Simple GlobalAlert</GlobalAlert>))
 
   it('renders correctly with children as component', () =>
     shouldMatchSnapshot(<GlobalAlert>Sample GlobalAlert</GlobalAlert>))
@@ -29,9 +27,7 @@ describe('globalAlert', () => {
   describe('renders correctly with all variants', () => {
     ;(['info', 'danger', 'promotional'] as const).forEach(variant => {
       it(`renders correctly variant ${variant}`, () =>
-        shouldMatchSnapshot(
-          <GlobalAlert variant={variant}>Sample GlobalAlert</GlobalAlert>,
-        ))
+        shouldMatchSnapshot(<GlobalAlert variant={variant}>Sample GlobalAlert</GlobalAlert>))
     })
   })
 

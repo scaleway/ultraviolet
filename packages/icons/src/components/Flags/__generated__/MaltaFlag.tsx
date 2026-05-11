@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const MaltaFlag = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const MaltaFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="MaltaFlag">
     {props.disabled ? (
       <>
@@ -20,10 +17,7 @@ export const MaltaFlag = ({
             d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
             fill="#F0F0F0"
           />
-          <path
-            d="M12 0C18.6274 0 24 5.37262 24 12C24 18.6274 18.6274 24 12 24"
-            fill="#454545"
-          />
+          <path d="M12 0C18.6274 0 24 5.37262 24 12C24 18.6274 18.6274 24 12 24" fill="#454545" />
           <path
             d="M8.3481 4.69545V3.13025H6.7829V4.69545H5.21765V6.26065H6.7829V7.8259H8.3481V6.26065H9.91331V4.69545H8.3481Z"
             fill="#ACACAC"
@@ -42,10 +36,7 @@ export const MaltaFlag = ({
             d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
             fill="#F0F0F0"
           />
-          <path
-            d="M12 0C18.6274 0 24 5.37262 24 12C24 18.6274 18.6274 24 12 24"
-            fill="#D80027"
-          />
+          <path d="M12 0C18.6274 0 24 5.37262 24 12C24 18.6274 18.6274 24 12 24" fill="#D80027" />
           <path
             d="M8.3481 4.69545V3.13025H6.7829V4.69545H5.21765V6.26065H6.7829V7.8259H8.3481V6.26065H9.91331V4.69545H8.3481Z"
             fill="#ACABB1"

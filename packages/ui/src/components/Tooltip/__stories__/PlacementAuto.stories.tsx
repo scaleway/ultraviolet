@@ -1,10 +1,8 @@
+import type { Decorator } from '@storybook/react-vite'
 import { useEffect, useRef } from 'react'
-
+import type { ComponentProps } from 'react'
 import { Tooltip } from '..'
 import { Button } from '../../Button'
-
-import type { Decorator } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 export const PlacementAuto = (props: ComponentProps<typeof Tooltip>) => {
   const btnRef = useRef<HTMLElement>(null)

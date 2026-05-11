@@ -1,22 +1,18 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Dialog } from '..'
 import { Button } from '../../Button'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Template: StoryFn<typeof Dialog> = props => (
   <Dialog {...props}>
     {({ close }) => (
       <Dialog.Stack>
         <Dialog.Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis
-          consectetur est. Donec lorem orci, feugiat vitae lacinia bibendum,
-          malesuada vitae elit.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis consectetur est. Donec lorem orci, feugiat
+          vitae lacinia bibendum, malesuada vitae elit.
         </Dialog.Text>
         <Dialog.Buttons
           primaryButton={<Dialog.Button onClick={close}>Confirm</Dialog.Button>}
-          secondaryButton={
-            <Dialog.CancelButton onClick={close}>Cancel</Dialog.CancelButton>
-          }
+          secondaryButton={<Dialog.CancelButton onClick={close}>Cancel</Dialog.CancelButton>}
         />
       </Dialog.Stack>
     )}

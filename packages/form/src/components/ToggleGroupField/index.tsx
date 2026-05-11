@@ -1,19 +1,16 @@
 'use client'
 
 import { ToggleGroup } from '@ultraviolet/ui'
-import { useController } from 'react-hook-form'
-
-import { useErrors } from '../../providers'
-
-import type { BaseFieldProps } from '../../types'
 import type { ComponentProps } from 'react'
+import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useErrors } from '../../providers'
+import type { BaseFieldProps } from '../../types'
 
 type ToggleGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof ToggleGroup>, 'value' | 'onChange'>
+> = BaseFieldProps<TFieldValues, TFieldName> & Omit<ComponentProps<typeof ToggleGroup>, 'value' | 'onChange'>
 
 const ToggleGroupFieldComponent = <
   TFieldValues extends FieldValues,
@@ -56,9 +53,7 @@ const ToggleGroupFieldComponent = <
       name={field.name}
       onChange={event => {
         if (value.includes(event.currentTarget.value)) {
-          const newValue = value.filter(
-            currentValue => currentValue !== event.currentTarget.value,
-          )
+          const newValue = value.filter(currentValue => currentValue !== event.currentTarget.value)
           field.onChange(newValue)
           onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
         } else {
@@ -77,9 +72,6 @@ type RadioGroupFieldType = typeof ToggleGroupFieldComponent & {
   Toggle: typeof ToggleGroup.Toggle
 }
 
-export const ToggleGroupField: RadioGroupFieldType = Object.assign(
-  ToggleGroupFieldComponent,
-  {
-    Toggle: ToggleGroup.Toggle,
-  },
-)
+export const ToggleGroupField: RadioGroupFieldType = Object.assign(ToggleGroupFieldComponent, {
+  Toggle: ToggleGroup.Toggle,
+})

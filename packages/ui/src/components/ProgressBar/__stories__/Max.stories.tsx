@@ -1,25 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { ProgressBar } from '..'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Max: StoryFn = props => (
   <Stack gap={2}>
     <ProgressBar {...props} label="Max = 5, value = 3" max={5} value={3} />
-    <ProgressBar
-      {...props}
-      label="Max = 5, value = 3, no suffix"
-      max={5}
-      suffix={false}
-      value={3}
-    />
-    <ProgressBar
-      {...props}
-      label="Max = 5, with custom suffix"
-      max={5}
-      suffix="/5"
-      value={3.5}
-    />
+    <ProgressBar {...props} label="Max = 5, value = 3, no suffix" max={5} suffix={false} value={3} />
+    <ProgressBar {...props} label="Max = 5, with custom suffix" max={5} suffix="/5" value={3.5} />
 
     <ProgressBar
       {...props}
@@ -48,8 +35,7 @@ Max.decorators = [
 Max.parameters = {
   docs: {
     description: {
-      story:
-        'Set a custom `max` value to the progress (by default, `max = 100`)',
+      story: 'Set a custom `max` value to the progress (by default, `max = 100`)',
     },
   },
 }

@@ -2,11 +2,9 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useReducer } from 'react'
-import { describe, expect, it } from 'vitest'
-
-import { Checkbox } from '..'
-
 import type { ActionDispatch } from 'react'
+import { describe, expect, it } from 'vitest'
+import { Checkbox } from '..'
 
 type ChildrenProps = { checked: boolean; onChange: ActionDispatch<[]> }
 type Props = {
@@ -23,18 +21,12 @@ describe('checkbox', () => {
 
   it('renders correctly', () =>
     shouldMatchSnapshot(
-      <Checkbox
-        name="testing"
-        onBlur={() => {}}
-        onChange={() => {}}
-        onFocus={() => {}}
-      >
+      <Checkbox name="testing" onBlur={() => {}} onChange={() => {}} onFocus={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
 
-  it('renders correctly no child', () =>
-    shouldMatchSnapshot(<Checkbox aria-label="check" onChange={() => {}} />))
+  it('renders correctly no child', () => shouldMatchSnapshot(<Checkbox aria-label="check" onChange={() => {}} />))
 
   it('renders correctly disabled', () =>
     shouldMatchSnapshot(

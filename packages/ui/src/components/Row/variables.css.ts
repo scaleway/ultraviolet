@@ -1,11 +1,7 @@
+import type { theme } from '@ultraviolet/themes'
 import { createVar } from '@vanilla-extract/css'
 
-import type { theme } from '@ultraviolet/themes'
-
-export const templateColumn: Record<
-  keyof typeof theme.breakpoints,
-  ReturnType<typeof createVar>
-> = {
+export const templateColumn: Record<keyof typeof theme.breakpoints, ReturnType<typeof createVar>> = {
   large: createVar({
     inherits: false,
     initialValue: 'none',
@@ -38,10 +34,7 @@ export const templateColumn: Record<
   }),
 }
 
-export const paddings: Record<
-  keyof typeof theme.breakpoints,
-  ReturnType<typeof createVar>
-> = {
+export const paddings: Record<keyof typeof theme.breakpoints, ReturnType<typeof createVar>> = {
   large: createVar({
     inherits: false,
     initialValue: '0',

@@ -1,13 +1,11 @@
 import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { useCallback } from 'react'
-
+import type { RefObject } from 'react'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-import { numberInputStyle } from '../styles.css'
-
 import type { SIZES } from '../constant'
-import type { RefObject } from 'react'
+import { numberInputStyle } from '../styles.css'
 
 export const Controls = ({
   controls,

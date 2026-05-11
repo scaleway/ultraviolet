@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const InterlinkDedicatedProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const InterlinkDedicatedProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="InterlinkDedicatedProductIcon">
     <g className="sentiment=primary, size=xlarge, disabled=false">
       <g className="interlink-dedicated" clipPath="url(#a)">

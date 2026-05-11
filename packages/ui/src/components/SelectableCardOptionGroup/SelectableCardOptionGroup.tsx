@@ -2,18 +2,15 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-
+import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { Option } from './components/Option'
 import { SelectableCardOptionGroupContext } from './Provider'
-import { selectableCardOptionGroupStyle } from './styles.css'
-
 import type { Sizes } from './types'
-import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
+import { selectableCardOptionGroupStyle } from './styles.css'
 
 type SelectableCardOptionGroupProps = {
   legend?: string
@@ -74,32 +71,16 @@ const SelectableCardOptionGroupComponent = ({
       required,
       size,
     }),
-    [
-      disabled,
-      error,
-      name,
-      onChange,
-      onChangeOption,
-      optionValue,
-      required,
-      value,
-      size,
-    ],
+    [disabled, error, name, onChange, onChangeOption, optionValue, required, value, size],
   )
 
   return (
     <SelectableCardOptionGroupContext.Provider value={contextValue}>
       <Stack gap={1} style={style}>
-        <fieldset
-          className={cn(className, selectableCardOptionGroupStyle.fieldset)}
-        >
+        <fieldset className={cn(className, selectableCardOptionGroupStyle.fieldset)}>
           <Stack gap={1.5}>
             {legend ? (
-              <Label
-                as="legend"
-                labelDescription={legendDescription}
-                required={required}
-              >
+              <Label as="legend" labelDescription={legendDescription} required={required}>
                 {legend}
               </Label>
             ) : null}
@@ -109,12 +90,7 @@ const SelectableCardOptionGroupComponent = ({
           </Stack>
         </fieldset>
         {(error && typeof error === 'string') || helper ? (
-          <Text
-            as="span"
-            prominence="weak"
-            sentiment={error ? 'danger' : 'neutral'}
-            variant="caption"
-          >
+          <Text as="span" prominence="weak" sentiment={error ? 'danger' : 'neutral'} variant="caption">
             {helper ?? error}
           </Text>
         ) : null}
@@ -123,12 +99,13 @@ const SelectableCardOptionGroupComponent = ({
   )
 }
 
-type SelectableCardOptionGroupType =
-  typeof SelectableCardOptionGroupComponent & {
-    Option: typeof Option
-  }
+type SelectableCardOptionGroupType = typeof SelectableCardOptionGroupComponent & {
+  Option: typeof Option
+}
 
-export const SelectableCardOptionGroup: SelectableCardOptionGroupType =
-  Object.assign(SelectableCardOptionGroupComponent, {
+export const SelectableCardOptionGroup: SelectableCardOptionGroupType = Object.assign(
+  SelectableCardOptionGroupComponent,
+  {
     Option,
-  })
+  },
+)

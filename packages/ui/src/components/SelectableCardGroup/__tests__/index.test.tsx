@@ -1,19 +1,12 @@
 import { render } from '@testing-library/react'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it } from 'vitest'
-
 import { SelectableCardGroup } from '..'
 
 describe('selectableCardGroup', () => {
   it('renders correctly', () =>
     shouldMatchSnapshot(
-      <SelectableCardGroup
-        legend="Label"
-        name="checkbox"
-        onChange={() => {}}
-        type="checkbox"
-        value={['value-1']}
-      >
+      <SelectableCardGroup legend="Label" name="checkbox" onChange={() => {}} type="checkbox" value={['value-1']}>
         <SelectableCardGroup.Card label="Checkbox 1" value="value-1" />
         <SelectableCardGroup.Card label="Checkbox 2" value="value-2" />
       </SelectableCardGroup>,
@@ -93,9 +86,7 @@ describe('selectableCardGroup', () => {
     ))
 
   it('throws if SelectableCardGroup.Card is used without SelectableCardGroup', () => {
-    expect(() =>
-      render(<SelectableCardGroup.Card label="Checkbox 1" value="value-1" />),
-    ).toThrow(
+    expect(() => render(<SelectableCardGroup.Card label="Checkbox 1" value="value-1" />)).toThrow(
       'SelectableCardGroup.Card can only be used inside a SelectableCardGroup',
     )
   })

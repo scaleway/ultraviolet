@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const VerifyCardProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const VerifyCardProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="VerifyCardProductIcon">
     <g className="Verify-card">
       <g className=".Square">
@@ -29,11 +26,7 @@ export const VerifyCardProductIcon = ({
           clipRule="evenodd"
           fillRule="evenodd"
         />
-        <path
-          fill="#A365F6"
-          d="M32 22.08a5 5 0 1 1 0 10 5 5 0 0 1 0-10"
-          className="fillStrong"
-        />
+        <path fill="#A365F6" d="M32 22.08a5 5 0 1 1 0 10 5 5 0 0 1 0-10" className="fillStrong" />
         <path
           fill="#4F0599"
           d="M40.728 40.26c-2.118 3.03-5.286 5.304-8.978 6.416-3.692-1.112-6.86-3.386-8.978-6.414a16.4 16.4 0 0 1-1.522-2.504c0-2.7 4.742-4.908 10.5-4.908s10.5 2.16 10.5 4.908a16.4 16.4 0 0 1-1.522 2.502"

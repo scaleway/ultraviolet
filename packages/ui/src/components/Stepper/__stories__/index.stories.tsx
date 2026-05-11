@@ -1,6 +1,5 @@
-import { Stepper } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Stepper } from '..'
 
 export default {
   component: Stepper,

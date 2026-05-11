@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { TextArea } from '..'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const LONG_VALUE =
   'A long time ago, in a galaxy far, far away, amidst the swirling constellations and distant star systems, there existed a realm of unimaginable wonders and ancient mysteries waiting to be discovered. This distant galaxy, filled with countless planets, moons, and celestial phenomena, was home to diverse civilizations, each with their own unique cultures, histories, and legends. Among the stars, epic tales of heroism, adventure, and conflict unfolded, shaping the destinies of countless beings and leaving an indelible mark on the fabric of the universe itself.'
@@ -26,21 +24,8 @@ export const AutomaticRows: StoryFn<typeof TextArea> = () => {
         rows="auto"
         value={value1}
       />
-      <TextArea
-        aria-label={undefined}
-        label="Rows=2"
-        name="example-2"
-        onChange={setValue2}
-        rows={2}
-        value={value2}
-      />
-      <TextArea
-        aria-label={undefined}
-        label="maxRows=4"
-        maxRows={4}
-        onChange={setValue3}
-        value={value3}
-      />
+      <TextArea aria-label={undefined} label="Rows=2" name="example-2" onChange={setValue2} rows={2} value={value2} />
+      <TextArea aria-label={undefined} label="maxRows=4" maxRows={4} onChange={setValue3} value={value3} />
       <TextArea
         aria-label={undefined}
         label="Rows=2, maxRows=4"

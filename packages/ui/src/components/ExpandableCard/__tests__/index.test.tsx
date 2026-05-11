@@ -2,15 +2,12 @@ import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-
 import { ExpandableCard } from '..'
 import { Text } from '../../Text'
 
 describe('expandableCard', () => {
   it('renders correctly with default values', () => {
-    const { asFragment } = renderWithTheme(
-      <ExpandableCard header="Title">Content</ExpandableCard>,
-    )
+    const { asFragment } = renderWithTheme(<ExpandableCard header="Title">Content</ExpandableCard>)
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -103,12 +100,7 @@ describe('expandableCard', () => {
   it('works properly when controlled and open with key interaction', async () => {
     const onToggleExpand = vi.fn()
     renderWithTheme(
-      <ExpandableCard
-        data-testid="expandablecard"
-        expanded={false}
-        header="Title"
-        onToggleExpand={onToggleExpand}
-      >
+      <ExpandableCard data-testid="expandablecard" expanded={false} header="Title" onToggleExpand={onToggleExpand}>
         Content
       </ExpandableCard>,
     )

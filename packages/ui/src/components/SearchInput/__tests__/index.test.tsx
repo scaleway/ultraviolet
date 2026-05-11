@@ -3,32 +3,20 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useState } from 'react'
 import { describe, expect, it } from 'vitest'
-
 import { SearchInput } from '..'
 import { Button } from '../../Button'
 
 describe('searchInput', () => {
   it('renders correctly without children props', () =>
     shouldMatchSnapshot(
-      <SearchInput
-        onClose={() => {}}
-        onSearch={() => {}}
-        placeholder="Type something"
-        popupPlacement="bottom"
-      >
+      <SearchInput onClose={() => {}} onSearch={() => {}} placeholder="Type something" popupPlacement="bottom">
         <div />
       </SearchInput>,
     ))
 
   it('renders with disabled prop', () =>
     shouldMatchSnapshot(
-      <SearchInput
-        disabled
-        onClose={() => {}}
-        onSearch={() => {}}
-        placeholder="Type something"
-        popupPlacement="bottom"
-      >
+      <SearchInput disabled onClose={() => {}} onSearch={() => {}} placeholder="Type something" popupPlacement="bottom">
         <div />
       </SearchInput>,
     ))
@@ -292,10 +280,7 @@ describe('searchInput', () => {
 
       return (
         <>
-          <Button
-            data-testid="reset-button"
-            onClick={() => setValue(undefined)}
-          >
+          <Button data-testid="reset-button" onClick={() => setValue(undefined)}>
             Reset
           </Button>
           <SearchInput

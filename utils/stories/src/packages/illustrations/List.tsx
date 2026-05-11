@@ -6,7 +6,6 @@ import * as productsIllustrations from '@ultraviolet/illustrations/products'
 import * as variousIllustrations from '@ultraviolet/illustrations/various'
 import { Button, Expandable, Snippet, Stack, Text } from '@ultraviolet/ui'
 import { useReducer } from 'react'
-
 import {
   buttonStory,
   cardStory,
@@ -72,12 +71,7 @@ type SubListElementProps = {
   category: string
 }
 
-const SubListElement = ({
-  productName,
-  isExpanded,
-  setIsExpanded,
-  category,
-}: SubListElementProps) => (
+const SubListElement = ({ productName, isExpanded, setIsExpanded, category }: SubListElementProps) => (
   <Stack className={margedStackStory} gap={1}>
     <Button className={buttonStory} onClick={setIsExpanded} sentiment="neutral">
       {isExpanded ? <ArrowUpIcon /> : <ArrowDownIcon />}
@@ -85,42 +79,23 @@ const SubListElement = ({
     </Button>
     <Expandable opened={isExpanded}>
       <Stack gap={1}>
-        {Object.keys(
-          (defaultAssets as AssetsModule)[category][productName],
-        ).map(productImg => {
-          const imgSrc = (defaultAssets as AssetsModule)[category][productName][
-            productImg
-          ]
+        {Object.keys((defaultAssets as AssetsModule)[category][productName]).map(productImg => {
+          const imgSrc = (defaultAssets as AssetsModule)[category][productName][productImg]
 
           return (
-            <Stack
-              alignItems="center"
-              className={cardStory}
-              direction="row"
-              flex={1}
-              gap={2}
-              key={productImg}
-            >
+            <Stack alignItems="center" className={cardStory} direction="row" flex={1} gap={2} key={productImg}>
               {category === 'products' ? (
                 <img
                   alt={productName}
                   className={imageProductStory}
-                  src={
-                    (defaultAssets as AssetsModule)[category][productName][
-                      productImg
-                    ]
-                  }
+                  src={(defaultAssets as AssetsModule)[category][productName][productImg]}
                   width={200}
                 />
               ) : (
                 <img
                   alt={productName}
                   className={imageVariousStory}
-                  src={
-                    (defaultAssets as AssetsModule)[category][productName][
-                      productImg
-                    ]
-                  }
+                  src={(defaultAssets as AssetsModule)[category][productName][productImg]}
                   width={200}
                 />
               )}
@@ -203,25 +178,23 @@ export const List = () => {
             </Button>
             <Expandable opened={expandedStates[category]}>
               <Stack gap={1}>
-                {Object.keys((defaultAssets as AssetsModule)[category]).map(
-                  productName => (
-                    <SubListElement
-                      category={category}
-                      isExpanded={expandedStates[productName]}
-                      key={`${category}-${productName}`}
-                      productName={productName}
-                      setIsExpanded={() => {
-                        // Toggle the expanded state for a specific element
-                        const newExpandedStates = {
-                          ...expandedStates,
-                          [productName]: !expandedStates[productName],
-                        }
+                {Object.keys((defaultAssets as AssetsModule)[category]).map(productName => (
+                  <SubListElement
+                    category={category}
+                    isExpanded={expandedStates[productName]}
+                    key={`${category}-${productName}`}
+                    productName={productName}
+                    setIsExpanded={() => {
+                      // Toggle the expanded state for a specific element
+                      const newExpandedStates = {
+                        ...expandedStates,
+                        [productName]: !expandedStates[productName],
+                      }
 
-                        setExpandedStates(newExpandedStates)
-                      }}
-                    />
-                  ),
-                )}
+                      setExpandedStates(newExpandedStates)
+                    }}
+                  />
+                ))}
               </Stack>
             </Expandable>
           </div>

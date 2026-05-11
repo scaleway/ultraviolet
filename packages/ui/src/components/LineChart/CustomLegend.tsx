@@ -1,19 +1,16 @@
 'use client'
 
+import type { DatumValue } from '@nivo/core'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
 import { getLegendColor } from '../../helpers/legend'
 import { Checkbox } from '../Checkbox'
 import { Text } from '../Text'
-
 import { getAverage, getCurrent, getMax, getMin, getSelected } from './helpers'
+import type { Serie } from './helpers'
 import { Cell } from './LegendCell'
 import { backgroundColorLegend, lineChartStyle } from './styles.css'
-
-import type { Serie } from './helpers'
-import type { DatumValue } from '@nivo/core'
 
 type Transformer = (value: DatumValue) => string
 
@@ -36,16 +33,9 @@ export const CustomLegend = ({
   className,
   'data-testid': dataTestId,
 }: CustomLegendProps) => (
-  <div
-    className={cn(className, lineChartStyle.container)}
-    data-testid={dataTestId}
-  >
+  <div className={cn(className, lineChartStyle.container)} data-testid={dataTestId}>
     <div className={lineChartStyle.head}>
-      <div
-        className={cn(lineChartStyle.longContainer, lineChartStyle.headTitle)}
-      >
-        Legend
-      </div>
+      <div className={cn(lineChartStyle.longContainer, lineChartStyle.headTitle)}>Legend</div>
       <Cell value="Minimum" variant="body" />
       <Cell value="Maximum" variant="body" />
       <Cell value="Average" variant="body" />
@@ -53,26 +43,17 @@ export const CustomLegend = ({
     </div>
     <div className={lineChartStyle.body}>
       {data?.map((row, index) => {
-        const values = row.data
-          .map(val => val.y)
-          .filter(val => typeof val === 'number')
+        const values = row.data.map(val => val.y).filter(val => typeof val === 'number')
         const labelIndexed = `${row.id}${index}`
         const id = row.id.toString()
 
         return (
           <div className={lineChartStyle.row} key={labelIndexed}>
-            <div
-              className={cn(
-                lineChartStyle.longContainer,
-                lineChartStyle.content,
-              )}
-            >
+            <div className={cn(lineChartStyle.longContainer, lineChartStyle.content)}>
               <Checkbox
                 checked={selected.includes(labelIndexed)}
                 name={id}
-                onChange={() =>
-                  setSelected([...getSelected(id, index, selected)])
-                }
+                onChange={() => setSelected([...getSelected(id, index, selected)])}
               >
                 <div className={lineChartStyle.cellValueContainer}>
                   <Text as="span" sentiment="neutral" variant="bodySmall">
@@ -90,14 +71,8 @@ export const CustomLegend = ({
             </div>
             <Cell value={axisTransformer(getMin(values))} variant="bodySmall" />
             <Cell value={axisTransformer(getMax(values))} variant="bodySmall" />
-            <Cell
-              value={axisTransformer(getAverage(values))}
-              variant="bodySmall"
-            />
-            <Cell
-              value={axisTransformer(getCurrent(values))}
-              variant="bodySmall"
-            />
+            <Cell value={axisTransformer(getAverage(values))} variant="bodySmall" />
+            <Cell value={axisTransformer(getCurrent(values))} variant="bodySmall" />
           </div>
         )
       })}

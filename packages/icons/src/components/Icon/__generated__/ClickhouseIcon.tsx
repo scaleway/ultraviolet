@@ -6,15 +6,11 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const ClickhouseIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const ClickhouseIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="ClickhouseIcon">
-    {typeof props.size === 'string' &&
-    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
+    {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M8.75301 4C9.07908 4 9.31215 4.23275 9.31219 4.55862V51.4402C9.31219 51.7657 9.07911 52 8.75301 52H4.55918C4.23299 52 4 51.7657 4 51.4402V4.55862C4.00004 4.23278 4.23301 4.00004 4.55918 4H8.75301Z" />
         <path d="M19.4256 4C19.7518 4 19.9847 4.23275 19.9847 4.55862V51.4402C19.9847 51.7657 19.7518 52 19.4256 52H15.2317C14.9055 52 14.6725 51.7657 14.6725 51.4402V4.55862C14.6726 4.23275 14.9055 4 15.2317 4H19.4256Z" />

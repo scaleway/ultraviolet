@@ -1,9 +1,7 @@
-import { OfferList } from '..'
-
-import { columns, data } from './resources'
-
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { OfferList } from '..'
+import { columns, data } from './resources'
 
 const getTextBadge = (index: number) => {
   if (index === 1) {
@@ -50,8 +48,7 @@ Badge.args = {
 Badge.parameters = {
   docs: {
     description: {
-      story:
-        'Use props `badge` to add a badge to the row. When a row is disabled, its badge is also disabled.',
+      story: 'Use props `badge` to add a badge to the row. When a row is disabled, its badge is also disabled.',
     },
   },
 }

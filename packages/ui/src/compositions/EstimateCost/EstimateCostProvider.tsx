@@ -1,10 +1,8 @@
 'use client'
 
 import { createContext, useCallback, useContext, useMemo } from 'react'
-
-import EstimateCostLocales from './locales/en'
-
 import type { ReactNode } from 'react'
+import EstimateCostLocales from './locales/en'
 
 const EstimateCostContext = createContext<{
   locales: Record<keyof typeof EstimateCostLocales, string>
@@ -32,17 +30,8 @@ type FormatNumberOption = {
   maximumSignificantDigits?: number
 }
 
-export const EstimateCostProvider = ({
-  children,
-  locales,
-  currency,
-  numberLocales,
-}: EstimateCostProviderProps) => {
-  const newLocales = useMemo(
-    () =>
-      locales ? { ...EstimateCostLocales, ...locales } : EstimateCostLocales,
-    [locales],
-  )
+export const EstimateCostProvider = ({ children, locales, currency, numberLocales }: EstimateCostProviderProps) => {
+  const newLocales = useMemo(() => (locales ? { ...EstimateCostLocales, ...locales } : EstimateCostLocales), [locales])
 
   const formatNumber = useCallback(
     (number: number, options: FormatNumberOption) => {
@@ -65,9 +54,5 @@ export const EstimateCostProvider = ({
     [formatNumber, newLocales],
   )
 
-  return (
-    <EstimateCostContext.Provider value={value}>
-      {children}
-    </EstimateCostContext.Provider>
-  )
+  return <EstimateCostContext.Provider value={value}>{children}</EstimateCostContext.Provider>
 }

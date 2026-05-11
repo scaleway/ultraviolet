@@ -1,8 +1,6 @@
-import { Menu } from '..'
-
-import { DefaultDisclosure } from './Template.stories'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { Menu } from '..'
+import { DefaultDisclosure } from './Template.stories'
 
 export const Borderless: StoryFn<typeof Menu> = () => (
   <Menu disclosure={DefaultDisclosure}>
@@ -10,17 +8,10 @@ export const Borderless: StoryFn<typeof Menu> = () => (
     <Menu.Item borderless sentiment="danger">
       Danger
     </Menu.Item>
-    <Menu.Item
-      borderless
-      href="/?path=/docs/components-navigation-menu--borderless"
-    >
+    <Menu.Item borderless href="/?path=/docs/components-navigation-menu--borderless">
       Link Neutral
     </Menu.Item>
-    <Menu.Item
-      borderless
-      href="/?path=/docs/components-navigation-menu--borderless"
-      sentiment="danger"
-    >
+    <Menu.Item borderless href="/?path=/docs/components-navigation-menu--borderless" sentiment="danger">
       Link Danger
     </Menu.Item>
   </Menu>

@@ -1,26 +1,15 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
+import type { ComponentProps, Dispatch } from 'react'
 import { OrderSummary } from '..'
 import { Button } from '../../../components/Button'
 import { Checkbox } from '../../../components/Checkbox'
 import { Link } from '../../../components/Link'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
+import { categoryM2, categoryOptions, categoryStorage, negativeItem } from './productsExample'
 
-import {
-  categoryM2,
-  categoryOptions,
-  categoryStorage,
-  negativeItem,
-} from './productsExample'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps, Dispatch } from 'react'
-
-const mockItems = (
-  requestsAmount: number | null,
-  setRequestsAmount: Dispatch<React.SetStateAction<number | null>>,
-) => {
+const mockItems = (requestsAmount: number | null, setRequestsAmount: Dispatch<React.SetStateAction<number | null>>) => {
   const categoryNumberOfRequests = {
     category: 'Numers of requests',
     numberInput: true,
@@ -40,14 +29,7 @@ const mockItems = (
     ],
   }
 
-  return [
-    categoryNumberOfRequests,
-    categoryRequests,
-    categoryM2,
-    categoryOptions,
-    categoryStorage,
-    negativeItem,
-  ]
+  return [categoryNumberOfRequests, categoryRequests, categoryM2, categoryOptions, categoryStorage, negativeItem]
 }
 
 export const Example: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
@@ -60,18 +42,12 @@ export const Example: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
       footer={
         <Stack gap="1">
           <Checkbox checked={checked} onChange={() => setChecked(!checked)}>
-            I have read and accept Bare Metal specific conditions and macOS
-            License Agreement
+            I have read and accept Bare Metal specific conditions and macOS License Agreement
           </Checkbox>
           <Button disabled={!checked} onClick={() => alert('clicked')}>
             Create
           </Button>
-          <Text
-            as="span"
-            prominence="weak"
-            sentiment="neutral"
-            variant="bodySmall"
-          >
+          <Text as="span" prominence="weak" sentiment="neutral" variant="bodySmall">
             *For this estimation, 1 month is considered 730 hours.&nbsp;
             <Link href="#" size="small" target="_blank">
               Understand Apple Silicon billing

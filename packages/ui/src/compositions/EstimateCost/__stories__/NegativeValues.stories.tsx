@@ -1,26 +1,16 @@
 import { EstimateCost } from '..'
 import { Badge } from '../../../components/Badge'
-
 import { Template } from './Template.stories'
 
 export const NegativeValues = Template.bind({})
 
 NegativeValues.args = {
   children: [
-    <EstimateCost.Item
-      key="My Server"
-      label="My server"
-      monthlyPrice={100}
-      subLabel="Here is subLabel text"
-    >
+    <EstimateCost.Item key="My Server" label="My server" monthlyPrice={100} subLabel="Here is subLabel text">
       <EstimateCost.Strong>Powerful</EstimateCost.Strong>
       <EstimateCost.Regular>100 Cores</EstimateCost.Regular>
     </EstimateCost.Item>,
-    <EstimateCost.Item
-      key="Some storage"
-      label="Some storage"
-      monthlyPrice={100}
-    >
+    <EstimateCost.Item key="Some storage" label="Some storage" monthlyPrice={100}>
       <EstimateCost.Strong>100 GB</EstimateCost.Strong>
     </EstimateCost.Item>,
     <EstimateCost.Item key="Discount" label="Discount" monthlyPrice={-100}>

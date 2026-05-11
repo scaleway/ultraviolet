@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const StorageCategoryIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const StorageCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="StorageCategoryIcon">
     <g className="Storage">
       <path
@@ -21,11 +18,7 @@ export const StorageCategoryIcon = ({
         clipRule="evenodd"
         fillRule="evenodd"
       />
-      <path
-        fill="#A365F6"
-        d="m10 7 2.627 1.5v3L10.001 13l-2.627-1.5v-3z"
-        className="fillStrong"
-      />
+      <path fill="#A365F6" d="m10 7 2.627 1.5v3L10.001 13l-2.627-1.5v-3z" className="fillStrong" />
     </g>
   </Icon>
 )

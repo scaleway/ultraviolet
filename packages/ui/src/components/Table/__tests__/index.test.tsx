@@ -5,12 +5,10 @@ import { userEvent } from '@testing-library/user-event'
 import { ThemeProvider } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useState } from 'react'
+import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { describe, expect, it, vi } from 'vitest'
-
 import { Table } from '..'
 import defaultTheme from '../../../theme'
-
-import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 
 type WrapperProps = {
   theme?: typeof defaultTheme
@@ -27,10 +25,7 @@ type FakeDataType = {
   columnF: string
 }
 
-const data: FakeDataType[] = Array.from(
-  { length: 10 },
-  (_, index) => index + 1,
-).map(rowNum => ({
+const data: FakeDataType[] = Array.from({ length: 10 }, (_, index) => index + 1).map(rowNum => ({
   columnA: `Row ${rowNum} Column 1`,
   columnB: `Row ${rowNum} Column 2`,
   columnC: `Row ${rowNum} Column 3`,
@@ -40,14 +35,16 @@ const data: FakeDataType[] = Array.from(
   id: `${rowNum}`,
 }))
 
-const columns: NonNullable<ComponentProps<typeof Table>['columns']> =
-  Array.from({ length: 5 }, (_, index) => index + 1).map(columnNumber => ({
-    id: `${columnNumber}`,
-    label: `Column ${columnNumber}`,
-    maxWidth: '200px',
-    minWidth: '100px',
-    width: '100px',
-  }))
+const columns: NonNullable<ComponentProps<typeof Table>['columns']> = Array.from(
+  { length: 5 },
+  (_, index) => index + 1,
+).map(columnNumber => ({
+  id: `${columnNumber}`,
+  label: `Column ${columnNumber}`,
+  maxWidth: '200px',
+  minWidth: '100px',
+  width: '100px',
+}))
 
 const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
@@ -56,9 +53,7 @@ const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
 describe('table', () => {
   // oxlint-disable-next-line vitest/no-disabled-tests
   it.skip('should throw an error', () => {
-    const consoleErrMock = vi
-      .spyOn(console, 'error')
-      .mockImplementation(() => {})
+    const consoleErrMock = vi.spyOn(console, 'error').mockImplementation(() => {})
 
     expect(() =>
       renderWithTheme(
@@ -208,28 +203,23 @@ describe('table', () => {
             }))}
           >
             <Table.Body>
-              {data.map(
-                ({ id, columnA, columnB, columnC, columnD, columnE }) => (
-                  <Table.Row id={id} key={id}>
-                    <Table.Cell>{columnA}</Table.Cell>
-                    <Table.Cell>{columnB}</Table.Cell>
-                    <Table.Cell>{columnC}</Table.Cell>
-                    <Table.Cell>{columnD}</Table.Cell>
-                    <Table.Cell>{columnE}</Table.Cell>
-                  </Table.Row>
-                ),
-              )}
+              {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+                <Table.Row id={id} key={id}>
+                  <Table.Cell>{columnA}</Table.Cell>
+                  <Table.Cell>{columnB}</Table.Cell>
+                  <Table.Cell>{columnC}</Table.Cell>
+                  <Table.Cell>{columnD}</Table.Cell>
+                  <Table.Cell>{columnE}</Table.Cell>
+                </Table.Row>
+              ))}
             </Table.Body>
           </Table>
         )}
       </LocalControlValue>,
     )
-    const tableHeaderCells = screen.queryAllByRole<HTMLTableCellElement>(
-      'button',
-      {
-        queryFallbacks: true,
-      },
-    )
+    const tableHeaderCells = screen.queryAllByRole<HTMLTableCellElement>('button', {
+      queryFallbacks: true,
+    })
     expect(tableHeaderCells).toHaveLength(columns.length)
     if (tableHeaderCells[0] && tableHeaderCells[1]) {
       expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBe(null)
@@ -345,14 +335,7 @@ describe('table', () => {
 
   it('should render correctly with info', () =>
     shouldMatchSnapshot(
-      <Table
-        bordered
-        columns={[
-          { info: 'This column is important', label: 'Name' },
-          ...columns.slice(1, 3),
-        ]}
-        stripped
-      >
+      <Table bordered columns={[{ info: 'This column is important', label: 'Name' }, ...columns.slice(1, 3)]} stripped>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <Table.Row id={id} key={id}>
@@ -386,12 +369,7 @@ describe('table', () => {
 
   it('should render correctly with highlight animation on Table.Row', () =>
     shouldMatchSnapshot(
-      <Table
-        columns={[
-          { info: 'This column is important', label: 'Name' },
-          ...columns.slice(1, 3),
-        ]}
-      >
+      <Table columns={[{ info: 'This column is important', label: 'Name' }, ...columns.slice(1, 3)]}>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <Table.Row highlightAnimation id={id} key={id}>

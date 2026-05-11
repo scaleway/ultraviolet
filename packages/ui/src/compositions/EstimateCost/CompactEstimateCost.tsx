@@ -1,11 +1,8 @@
 import { CalculatorIcon } from '@ultraviolet/icons/CalculatorIcon'
-
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
-
-import { estimateCostStyle } from './styles.css'
-
 import type { Iteration } from './types'
+import { estimateCostStyle } from './styles.css'
 
 type TotalPrice = {
   hourly: number
@@ -42,10 +39,7 @@ export const CompactEstimateCost = ({
         €{totalPrice.total}
       </Text>
       <Text as="span" variant="bodyStrong">
-        /
-        {iteration.unit.length > 1 && iteration.unit.endsWith('s')
-          ? iteration.unit.slice(0, -1)
-          : iteration.unit}
+        /{iteration.unit.length > 1 && iteration.unit.endsWith('s') ? iteration.unit.slice(0, -1) : iteration.unit}
       </Text>
     </Stack>
   </Stack>

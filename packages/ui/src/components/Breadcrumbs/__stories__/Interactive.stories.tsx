@@ -1,14 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
 import { useCallback, useState } from 'react'
-
+import type { ComponentProps, MouseEvent } from 'react'
 import { Breadcrumbs } from '..'
 import { Button } from '../../Button'
 import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps, MouseEvent } from 'react'
 
 type ItemProp = { label: string; to?: string }[]
 
@@ -19,9 +17,7 @@ const ITEMS: ItemProp = [
   { label: 'Overview', to: '/' },
 ]
 
-export const Interactive: StoryFn<
-  ComponentProps<typeof Breadcrumbs>
-> = props => {
+export const Interactive: StoryFn<ComponentProps<typeof Breadcrumbs>> = props => {
   const [value, setValue] = useState(ITEMS)
 
   const setPage = useCallback(
@@ -67,10 +63,7 @@ export const Interactive: StoryFn<
           <div style={{ width: 'fit-content' }}>
             <Button
               onClick={() => {
-                setValue([
-                  ...value,
-                  { label: `Page ${value.length + 1}`, to: '/' },
-                ])
+                setValue([...value, { label: `Page ${value.length + 1}`, to: '/' }])
               }}
               sentiment="primary"
               size="small"
@@ -100,8 +93,7 @@ export const Interactive: StoryFn<
 Interactive.parameters = {
   docs: {
     description: {
-      story:
-        'Try out the breadcrumbs with different items and see how it behaves with this interactive example.',
+      story: 'Try out the breadcrumbs with different items and see how it behaves with this interactive example.',
     },
   },
 }

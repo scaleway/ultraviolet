@@ -1,15 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { SelectableCardOptionGroup } from '..'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
 import centos from './assets/centos.svg'
 import debian from './assets/debian.svg'
 import ubuntu from './assets/ubuntu.svg'
 import { centosOptions, debianOptions, ubuntuOptions } from './constants'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Template: StoryFn<typeof SelectableCardOptionGroup> = args => {
   const [value, onChange] = useState<string>()
@@ -29,24 +26,9 @@ export const Template: StoryFn<typeof SelectableCardOptionGroup> = args => {
         optionValue={option}
         value={value}
       >
-        <SelectableCardOptionGroup.Option
-          image={ubuntu}
-          label="Ubuntu"
-          options={ubuntuOptions}
-          value="ubuntu"
-        />
-        <SelectableCardOptionGroup.Option
-          image={debian}
-          label="Debian"
-          options={debianOptions}
-          value="debian"
-        />
-        <SelectableCardOptionGroup.Option
-          image={centos}
-          label="CentOS"
-          options={centosOptions}
-          value="centos"
-        />
+        <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
+        <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
+        <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
       </SelectableCardOptionGroup>
       <Stack>
         <Text as="h2" variant="bodyStrong">

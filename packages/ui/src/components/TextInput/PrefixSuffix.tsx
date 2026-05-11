@@ -1,10 +1,8 @@
+import type { ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
-import { textInputStyle } from './styles.css'
-
 import type { TextInputProps } from './type'
-import type { ReactNode } from 'react'
+import { textInputStyle } from './styles.css'
 
 export const PrefixSuffix = ({
   size,
@@ -18,19 +16,12 @@ export const PrefixSuffix = ({
   content ? (
     <Stack
       alignItems="center"
-      className={
-        textInputStyle[type === 'prefix' ? 'basicPrefix' : 'basicSuffix']
-      }
+      className={textInputStyle[type === 'prefix' ? 'basicPrefix' : 'basicSuffix']}
       data-size={size}
       direction="row"
     >
       {typeof content === 'string' ? (
-        <Text
-          as="span"
-          disabled={disabled}
-          sentiment="neutral"
-          variant="bodySmall"
-        >
+        <Text as="span" disabled={disabled} sentiment="neutral" variant="bodySmall">
           {content}
         </Text>
       ) : (

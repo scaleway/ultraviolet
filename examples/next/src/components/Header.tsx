@@ -3,21 +3,13 @@ import { SunIcon } from '@ultraviolet/icons/SunIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { Toggle } from '@ultraviolet/ui'
 import { cn } from '@ultraviolet/utils'
-
-import styles from '../../styles/component.module.scss'
-
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
+import styles from '../../styles/component.module.scss'
 
 type Themes = 'light' | 'dark'
 
-const TopBar = ({
-  setTheme,
-  className,
-}: {
-  setTheme: (theme: Themes) => void
-  className?: string
-}) => {
+const TopBar = ({ setTheme, className }: { setTheme: (theme: Themes) => void; className?: string }) => {
   const { theme } = useTheme()
 
   return (

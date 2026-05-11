@@ -1,19 +1,16 @@
 'use client'
 
 import { forwardRef, useId, useImperativeHandle, useMemo, useRef } from 'react'
-
+import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
 import { Controls } from './components/Controls'
 import { Unit } from './components/Unit'
-import { numberInputStyle } from './styles.css'
-
 import type { SIZES } from './constant'
-import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
+import { numberInputStyle } from './styles.css'
 
 type Sizes = keyof typeof SIZES
 
@@ -132,8 +129,7 @@ export const NumberInput = forwardRef(
 
     let inputValue: string | undefined
     if (value !== undefined) {
-      inputValue =
-        value !== null && typeof value === 'number' ? value.toString() : ''
+      inputValue = value !== null && typeof value === 'number' ? value.toString() : ''
 
       if (localRef.current) {
         localRef.current.value = inputValue
@@ -144,12 +140,7 @@ export const NumberInput = forwardRef(
     return (
       <Stack className={className} gap="0.5">
         {label || labelDescription ? (
-          <Label
-            htmlFor={localId}
-            labelDescription={labelDescription}
-            required={required}
-            size={size}
-          >
+          <Label htmlFor={localId} labelDescription={labelDescription} required={required} size={size}>
             {label}
           </Label>
         ) : null}
@@ -209,9 +200,7 @@ export const NumberInput = forwardRef(
                   onChange={
                     onChange
                       ? event => {
-                          const newNumber = Number.parseFloat(
-                            event.target.value,
-                          )
+                          const newNumber = Number.parseFloat(event.target.value)
                           onChange(Number.isNaN(newNumber) ? null : newNumber)
                         }
                       : undefined
@@ -226,13 +215,7 @@ export const NumberInput = forwardRef(
                   type="number"
                   value={inputValue}
                 />
-                <Unit
-                  controls={controls}
-                  disabled={disabled}
-                  readOnly={readOnly}
-                  size={size}
-                  unit={unit}
-                />
+                <Unit controls={controls} disabled={disabled} readOnly={readOnly} size={size} unit={unit} />
               </Row>
               <Controls
                 controls={controls}
@@ -258,9 +241,7 @@ export const NumberInput = forwardRef(
             {error || success || helper}
           </Text>
         ) : null}
-        {!(error || success) && typeof helper !== 'string' && helper
-          ? helper
-          : null}
+        {!(error || success) && typeof helper !== 'string' && helper ? helper : null}
       </Stack>
     )
   },

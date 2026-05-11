@@ -5,13 +5,7 @@ export const { colors, typography, sizing } = lightTheme
 // This type exclude overlay | other color
 export type Color = Extract<
   keyof typeof colors,
-  | 'primary'
-  | 'secondary'
-  | 'neutral'
-  | 'success'
-  | 'danger'
-  | 'warning'
-  | 'info'
+  'primary' | 'secondary' | 'neutral' | 'success' | 'danger' | 'warning' | 'info'
 >
 
 export type Monochrome = keyof typeof colors.other.monochrome

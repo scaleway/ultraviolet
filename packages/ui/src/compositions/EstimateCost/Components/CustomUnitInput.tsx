@@ -1,10 +1,8 @@
 'use client'
 
 import { memo, useMemo } from 'react'
-
 import { UnitInput } from '../../../components/UnitInput'
 import { useEstimateCost } from '../EstimateCostProvider'
-
 import type { Iteration, Units } from '../types'
 
 type CustomUnitInputProps = {
@@ -15,12 +13,7 @@ type CustomUnitInputProps = {
 }
 
 export const CustomUnitInput = memo(
-  ({
-    defaultTimeUnit = 'hours',
-    setIteration,
-    iteration,
-    timeUnits,
-  }: CustomUnitInputProps) => {
+  ({ defaultTimeUnit = 'hours', setIteration, iteration, timeUnits }: CustomUnitInputProps) => {
     const { locales } = useEstimateCost()
 
     const options = useMemo(

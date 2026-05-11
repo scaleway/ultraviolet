@@ -1,9 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Submit } from '..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 import { Form } from '../../Form'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Submitting: StoryFn = () => {
   const methods = useForm()
@@ -20,9 +19,7 @@ export const Submitting: StoryFn = () => {
         })
       }
     >
-      <Submit>
-        {isSubmitting ? 'This form is submitting' : 'Click to submit for 5sec'}
-      </Submit>
+      <Submit>{isSubmitting ? 'This form is submitting' : 'Click to submit for 5sec'}</Submit>
     </Form>
   )
 }

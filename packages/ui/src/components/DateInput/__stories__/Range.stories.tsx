@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { DateInput } from '..'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const MONTHS = [
   'January',
@@ -23,9 +21,7 @@ export const Range: StoryFn = args => {
   const [startDate, setStartDate] = useState<Date | null>(null)
   const [endDate, setEndDate] = useState<Date | null>(null)
 
-  const [startMonth, setStartMonth] = useState<Date | null>(
-    new Date('01/03/2024'),
-  )
+  const [startMonth, setStartMonth] = useState<Date | null>(new Date('01/03/2024'))
   const [endMonth, setEndMonth] = useState<Date | null>(null)
 
   const onChange = (dates: [Date | null, Date | null] | Date[]) => {
@@ -42,14 +38,7 @@ export const Range: StoryFn = args => {
 
   return (
     <Stack>
-      <DateInput
-        endDate={endDate}
-        label="Date"
-        onChange={onChange}
-        selectsRange
-        startDate={startDate}
-        {...args}
-      />
+      <DateInput endDate={endDate} label="Date" onChange={onChange} selectsRange startDate={startDate} {...args} />
       Selected dates : {startDate?.toDateString()} - {endDate?.toDateString()}
       <DateInput
         {...args}
@@ -61,8 +50,7 @@ export const Range: StoryFn = args => {
         startDate={startMonth}
       />
       Selected months : {startMonth ? MONTHS[startMonth.getMonth()] : null}
-      {startMonth?.getFullYear()} -
-      {endMonth ? MONTHS[endMonth.getMonth()] : null}
+      {startMonth?.getFullYear()} -{endMonth ? MONTHS[endMonth.getMonth()] : null}
       {endMonth?.getFullYear()}
     </Stack>
   )

@@ -3,31 +3,25 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { forwardRef } from 'react'
 import { describe, expect, it, vi } from 'vitest'
-
 import { Link } from '..'
+import type { ProminenceProps } from '..'
 import { PROMINENCES } from '../constants'
 
-import type { ProminenceProps } from '..'
-
 // Mock component simulating Next.js Link
-const MockNextLink = forwardRef<
-  HTMLAnchorElement,
-  React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }
->(({ href, children, ...props }, ref) => (
-  <a href={href} ref={ref} {...props}>
-    {children}
-  </a>
-))
+const MockNextLink = forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }>(
+  ({ href, children, ...props }, ref) => (
+    <a href={href} ref={ref} {...props}>
+      {children}
+    </a>
+  ),
+)
 MockNextLink.displayName = 'MockNextLink'
 
 describe('link', () => {
-  it('render correctly with no sentiment', () =>
-    shouldMatchSnapshot(<Link href="/">Hello</Link>))
+  it('render correctly with no sentiment', () => shouldMatchSnapshot(<Link href="/">Hello</Link>))
 
   describe('sentiment', () => {
-    it.each(
-      ['primary', 'info'].map(sentiment => [`render ${sentiment}`, sentiment]),
-    )('%s', (_, sentiment) =>
+    it.each(['primary', 'info'].map(sentiment => [`render ${sentiment}`, sentiment]))('%s', (_, sentiment) =>
       shouldMatchSnapshot(
         <Link href="/" sentiment={sentiment as 'primary' | 'info'}>
           Hello
@@ -37,17 +31,14 @@ describe('link', () => {
   })
 
   describe('prominence', () => {
-    it.each(
-      Object.keys(PROMINENCES).map(prominence => [
-        `render prominence ${prominence}`,
-        prominence,
-      ]),
-    )('%s', (_, prominence) =>
-      shouldMatchSnapshot(
-        <Link href="/" prominence={prominence as ProminenceProps}>
-          Hello
-        </Link>,
-      ),
+    it.each(Object.keys(PROMINENCES).map(prominence => [`render prominence ${prominence}`, prominence]))(
+      '%s',
+      (_, prominence) =>
+        shouldMatchSnapshot(
+          <Link href="/" prominence={prominence as ProminenceProps}>
+            Hello
+          </Link>,
+        ),
     )
   })
 
@@ -167,11 +158,7 @@ describe('link', () => {
 
       it('merges className correctly with render prop', () => {
         renderWithTheme(
-          <Link
-            data-testid="link"
-            render={<MockNextLink className="custom-class" href="/about" />}
-            sentiment="primary"
-          >
+          <Link data-testid="link" render={<MockNextLink className="custom-class" href="/about" />} sentiment="primary">
             About
           </Link>,
         )
@@ -183,11 +170,7 @@ describe('link', () => {
       it('forwards ref correctly with render prop', () => {
         const ref = vi.fn()
         renderWithTheme(
-          <Link
-            ref={ref}
-            render={<MockNextLink href="/about" />}
-            sentiment="primary"
-          >
+          <Link ref={ref} render={<MockNextLink href="/about" />} sentiment="primary">
             About
           </Link>,
         )
@@ -219,10 +202,7 @@ describe('link', () => {
     describe('function form', () => {
       it('render correctly with render function', () =>
         shouldMatchSnapshot(
-          <Link
-            render={props => <MockNextLink {...props} href="/about" />}
-            sentiment="primary"
-          >
+          <Link render={props => <MockNextLink {...props} href="/about" />} sentiment="primary">
             About
           </Link>,
         ))
@@ -231,9 +211,7 @@ describe('link', () => {
         renderWithTheme(
           <Link
             className="link-class"
-            render={props => (
-              <MockNextLink {...props} data-testid="link" href="/about" />
-            )}
+            render={props => <MockNextLink {...props} data-testid="link" href="/about" />}
             sentiment="primary"
           >
             About
@@ -247,11 +225,7 @@ describe('link', () => {
       it('forwards ref correctly with render function', () => {
         const ref = vi.fn()
         renderWithTheme(
-          <Link
-            ref={ref}
-            render={props => <MockNextLink {...props} href="/about" />}
-            sentiment="primary"
-          >
+          <Link ref={ref} render={props => <MockNextLink {...props} href="/about" />} sentiment="primary">
             About
           </Link>,
         )

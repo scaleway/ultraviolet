@@ -1,17 +1,10 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Toast, ToastContainer, toast } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 
-import type { StoryFn } from '@storybook/react-vite'
-
 const ButtonToaster = () => (
-  <Stack
-    alignItems="center"
-    direction="row"
-    gap={1}
-    justifyContent="space-between"
-    width="100%"
-  >
+  <Stack alignItems="center" direction="row" gap={1} justifyContent="space-between" width="100%">
     Personal data updated.
     <Toast.Button sentiment="neutral" variant="ghost">
       Undo
@@ -20,13 +13,7 @@ const ButtonToaster = () => (
 )
 
 const LinkToaster = () => (
-  <Stack
-    alignItems="center"
-    direction="row"
-    gap={1}
-    justifyContent="space-between"
-    width="100%"
-  >
+  <Stack alignItems="center" direction="row" gap={1} justifyContent="space-between" width="100%">
     Personal data updated.
     <Toast.Link href="https://scaleway.com">Reload</Toast.Link>
   </Stack>
@@ -35,27 +22,12 @@ const LinkToaster = () => (
 export const ComplexChildren: StoryFn<typeof ToastContainer> = args => (
   <div style={{ height: '200px' }}>
     <Stack gap={2}>
-      <ToastContainer
-        {...args}
-        autoClose={0}
-        containerId="complex-children"
-        position="bottom-left"
-      />
-      <Button
-        onClick={() =>
-          toast.success(<ButtonToaster />, undefined, 'complex-children')
-        }
-        sentiment="neutral"
-      >
+      <ToastContainer {...args} autoClose={0} containerId="complex-children" position="bottom-left" />
+      <Button onClick={() => toast.success(<ButtonToaster />, undefined, 'complex-children')} sentiment="neutral">
         Open toaster with button
       </Button>
 
-      <Button
-        onClick={() =>
-          toast.success(<LinkToaster />, undefined, 'complex-children')
-        }
-        sentiment="neutral"
-      >
+      <Button onClick={() => toast.success(<LinkToaster />, undefined, 'complex-children')} sentiment="neutral">
         Open toaster with link
       </Button>
     </Stack>

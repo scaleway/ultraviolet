@@ -1,11 +1,9 @@
+import type { KeyboardEvent } from 'react'
 // oxlint-disable typescript/no-unsafe-type-assertion
 import { describe, expect, it, vi } from 'vitest'
-
 import onKeyOnlyNumbers from '../keycode'
 import parseIntOr from '../numbers'
 import recursivelyGetChildrenString from '../recursivelyGetChildrenString'
-
-import type { KeyboardEvent } from 'react'
 
 describe(recursivelyGetChildrenString, () => {
   const complexChildrenWithStringNestedChildren = {
@@ -27,9 +25,7 @@ describe(recursivelyGetChildrenString, () => {
     ${'is complex children with a nested array children'}     | ${complexChildrenWithArrayNestedChildren}     | ${''}
     ${'is complex children without a nested string children'} | ${complexChildrenWithoutStringNestedChildren} | ${''}
   `('returns "$expected" when $test', current => {
-    expect(recursivelyGetChildrenString(current.value as string)).toBe(
-      current.expected,
-    )
+    expect(recursivelyGetChildrenString(current.value as string)).toBe(current.expected)
   })
 })
 

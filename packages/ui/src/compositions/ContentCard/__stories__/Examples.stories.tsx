@@ -1,17 +1,14 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { BookOpenOutlineIcon } from '@ultraviolet/icons/BookOpenOutlineIcon'
 import { AdvancedSettingsProductIcon } from '@ultraviolet/icons/product/AdvancedSettingsProductIcon'
 import { ConsoleProductIcon } from '@ultraviolet/icons/product/ConsoleProductIcon'
-
 import { Button } from '../../../components/Button'
 import { Link } from '../../../components/Link'
 import { Row } from '../../../components/Row'
 import { Stack } from '../../../components/Stack'
 import illustration2 from '../assets/illustration2.svg'
 import { ContentCard } from '../index'
-
 import { Template } from './Template.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Examples: StoryFn<typeof ContentCard> = args => (
   <Stack gap={2}>

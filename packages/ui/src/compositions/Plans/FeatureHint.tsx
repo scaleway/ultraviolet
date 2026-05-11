@@ -1,12 +1,9 @@
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { useState } from 'react'
-
 import { Popover } from '../../components/Popover'
 import { Tooltip } from '../../components/Tooltip'
-
-import { plansStyle } from './styles.css'
-
 import type { Hint } from './types'
+import { plansStyle } from './styles.css'
 
 type FeatureHintProps = {
   hint?: Hint
@@ -28,12 +25,7 @@ export const FeatureHint = ({ hint }: FeatureHintProps) => {
   }
 
   return (
-    <Popover
-      content={hint.content}
-      onClose={() => setVisible(false)}
-      title={hint.title}
-      visible={visible}
-    >
+    <Popover content={hint.content} onClose={() => setVisible(false)} title={hint.title} visible={visible}>
       <button
         className={plansStyle.iconWrapper}
         data-testid="hint-popover"

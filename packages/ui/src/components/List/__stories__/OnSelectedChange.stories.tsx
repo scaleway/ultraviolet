@@ -1,13 +1,10 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { List } from '..'
 import { Button } from '../../Button'
 import { Text } from '../../Text'
-
 import { columns, data } from './resources'
 import { Template } from './Template.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const OnSelectedChange: StoryFn = args => {
   const [selectedRows, onSelectedChange] = useState<string[]>([])
@@ -31,18 +28,9 @@ export const OnSelectedChange: StoryFn = args => {
           ' None'
         )}
       </Text>
-      <List
-        {...args}
-        columns={columns}
-        onSelectedChange={onSelectedChange}
-        selectable
-      >
+      <List {...args} columns={columns} onSelectedChange={onSelectedChange} selectable>
         {data.map(planet => (
-          <List.Row
-            expandable="Planet description"
-            id={planet.id}
-            key={planet.id}
-          >
+          <List.Row expandable="Planet description" id={planet.id} key={planet.id}>
             <List.Cell>{planet.name}</List.Cell>
             <List.Cell>{planet.perihelion}AU</List.Cell>
             <List.Cell>{planet.aphelion}AU</List.Cell>
@@ -80,20 +68,12 @@ OnSelectedChange.args = {
           disabled={planet.id === 'mercury'}
           id={planet.id}
           key={planet.id}
-          selectDisabled={
-            planet.id === 'home-sweet-home'
-              ? "Earth isn't selectable"
-              : undefined
-          }
+          selectDisabled={planet.id === 'home-sweet-home' ? "Earth isn't selectable" : undefined}
         >
           <List.Cell>
             {planet.name}
-            {planet.id === 'mercury'
-              ? ' (Not selectable because the row itself is disabled)'
-              : ''}
-            {planet.id === 'home-sweet-home'
-              ? ' (Not selectable because of prop `selectDisabled`)'
-              : ''}
+            {planet.id === 'mercury' ? ' (Not selectable because the row itself is disabled)' : ''}
+            {planet.id === 'home-sweet-home' ? ' (Not selectable because of prop `selectDisabled`)' : ''}
           </List.Cell>
           <List.Cell>{planet.perihelion}AU</List.Cell>
           <List.Cell>{planet.aphelion}AU</List.Cell>

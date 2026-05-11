@@ -19,8 +19,7 @@ IsLoading.decorators = [
 IsLoading.parameters = {
   docs: {
     description: {
-      story:
-        'Use`isLoading` prop when the options are loading and cannot be displayed',
+      story: 'Use`isLoading` prop when the options are loading and cannot be displayed',
     },
   },
 }

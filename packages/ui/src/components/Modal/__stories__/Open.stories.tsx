@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useReducer } from 'react'
-
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Modal } from '../index'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Open: StoryFn = props => {
   const [open, toggleOpen] = useReducer(prevState => !prevState, false)
@@ -22,8 +20,7 @@ export const Open: StoryFn = props => {
 Open.parameters = {
   docs: {
     description: {
-      story:
-        '`open` prop allow you to control when modal is open instead of using the `disclosure` prop',
+      story: '`open` prop allow you to control when modal is open instead of using the `disclosure` prop',
     },
   },
 }

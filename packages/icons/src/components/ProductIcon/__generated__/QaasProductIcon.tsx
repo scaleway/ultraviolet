@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const QaasProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const QaasProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="QaasProductIcon">
     <g className="QaaS">
       <g className="Container-Registry">
@@ -38,10 +35,7 @@ export const QaasProductIcon = ({
               d="M40.035 21.16a1.784 1.784 0 1 0-1.784 3.089 1.784 1.784 0 0 0 1.784-3.09Zm-4.17-.348a3.784 3.784 0 1 1 6.554 3.784 3.784 3.784 0 0 1-6.553-3.784ZM27.206 43.09a1.784 1.784 0 1 0-1.784 3.09 1.784 1.784 0 0 0 1.784-3.09m-4.169-.347a3.784 3.784 0 1 1 6.554 3.784 3.784 3.784 0 0 1-6.554-3.784"
               className="fill"
             />
-            <path
-              d="M38.863 25.429 28.36 42.359l-1.7-1.054 10.502-16.93z"
-              className="fill"
-            />
+            <path d="M38.863 25.429 28.36 42.359l-1.7-1.054 10.502-16.93z" className="fill" />
           </g>
         </g>
       </g>

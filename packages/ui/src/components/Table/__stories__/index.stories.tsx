@@ -1,6 +1,5 @@
-import { Table } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Table } from '..'
 
 export default {
   component: Table,

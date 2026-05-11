@@ -2,16 +2,13 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-
+import type { InputHTMLAttributes, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { RadioGroupContext } from './Context'
 import { RadioGroupRadio } from './SingleRadio'
 import { radioGRoupStyle } from './styles.css'
-
-import type { InputHTMLAttributes, ReactNode } from 'react'
 
 type RadioGroupProps = {
   legend?: string
@@ -62,11 +59,7 @@ const RadioGroupComponent = ({
             {legend || description ? (
               <Stack gap={0.5}>
                 {legend ? (
-                  <Label
-                    as="legend"
-                    labelDescription={legendDescription}
-                    required={required}
-                  >
+                  <Label as="legend" labelDescription={legendDescription} required={required}>
                     {legend}
                   </Label>
                 ) : null}
@@ -82,22 +75,13 @@ const RadioGroupComponent = ({
                 ) : null}
               </Stack>
             ) : null}
-            <Stack
-              alignItems="flex-start"
-              direction={direction}
-              gap={direction === 'column' ? 1 : 2}
-            >
+            <Stack alignItems="flex-start" direction={direction} gap={direction === 'column' ? 1 : 2}>
               {children}
             </Stack>
           </Stack>
         </fieldset>
         {helper ? (
-          <Text
-            as="span"
-            prominence="weak"
-            sentiment="neutral"
-            variant="caption"
-          >
+          <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
             {helper}
           </Text>
         ) : null}
@@ -115,9 +99,6 @@ type SelectableCardOptionGroupType = typeof RadioGroupComponent & {
   Radio: typeof RadioGroupRadio
 }
 
-export const RadioGroup: SelectableCardOptionGroupType = Object.assign(
-  RadioGroupComponent,
-  {
-    Radio: RadioGroupRadio,
-  },
-)
+export const RadioGroup: SelectableCardOptionGroupType = Object.assign(RadioGroupComponent, {
+  Radio: RadioGroupRadio,
+})

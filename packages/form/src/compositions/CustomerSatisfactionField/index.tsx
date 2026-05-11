@@ -1,8 +1,7 @@
 import { CustomerSatisfaction } from '@ultraviolet/ui/compositions/CustomerSatisfaction'
 import { useController } from 'react-hook-form'
-
-import type { BaseFieldProps } from '../../types'
 import type { FieldPath, FieldValues } from 'react-hook-form'
+import type { BaseFieldProps } from '../../types'
 
 type CustomerSatisfactionFieldProps<
   TFieldValues extends FieldValues,
@@ -26,7 +25,5 @@ export const CustomerSatisfactionField = <
     },
   })
 
-  return (
-    <CustomerSatisfaction onChange={field.onChange} value={field.value ?? 1} />
-  )
+  return <CustomerSatisfaction onChange={field.onChange} value={field.value ?? 1} />
 }

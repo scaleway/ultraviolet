@@ -2,9 +2,7 @@
 
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { LabelRequiredOrNot } from './LabelContent'
-
 import type { LabelProps } from './type'
 
 /**

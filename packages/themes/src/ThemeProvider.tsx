@@ -2,11 +2,9 @@
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { createContext, useContext, useLayoutEffect } from 'react'
-
+import type { ReactNode } from 'react'
 import { consoleLightTheme } from './themes'
 import { theme as themeContract } from './vanilla/themes.css'
-
-import type { ReactNode } from 'react'
 
 const ThemeContext = createContext(consoleLightTheme)
 
@@ -16,9 +14,7 @@ const ThemeContext = createContext(consoleLightTheme)
 export const useTheme = () => {
   const context = useContext(ThemeContext)
   if (!context) {
-    throw new Error(
-      'useTheme must be used within a ThemeProvider imported from @ultraviolet/ui',
-    )
+    throw new Error('useTheme must be used within a ThemeProvider imported from @ultraviolet/ui')
   }
 
   return context
@@ -37,10 +33,7 @@ type ThemeProviderProps = {
  * ThemeProvider will apply generated global CSS variables to the application in the `<head>`.
  * If no theme is provided, it will default to `lightTheme`.
  */
-export const ThemeProvider = ({
-  children,
-  theme = consoleLightTheme,
-}: ThemeProviderProps) => {
+export const ThemeProvider = ({ children, theme = consoleLightTheme }: ThemeProviderProps) => {
   useLayoutEffect(() => {
     const styleId = 'uv-theme'
     const existingStyle = document.getElementById(styleId)

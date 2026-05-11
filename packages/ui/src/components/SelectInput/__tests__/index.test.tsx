@@ -2,16 +2,8 @@ import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
-
 import { SelectInput } from '..'
-
-import {
-  cities,
-  dataGroupEmpty,
-  dataGrouped,
-  dataUnGrouped,
-  OptionalInfo,
-} from './resources'
+import { cities, dataGroupEmpty, dataGrouped, dataUnGrouped, OptionalInfo } from './resources'
 
 // export type OptionType = {
 //   value: string
@@ -34,32 +26,20 @@ describe('selectInput', () => {
   })
 
   it('renders correctly', () => {
-    const { asFragment } = renderWithTheme(
-      <SelectInput label="label" name="test" options={dataUnGrouped} />,
-    )
+    const { asFragment } = renderWithTheme(<SelectInput label="label" name="test" options={dataUnGrouped} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly small', () => {
     const { asFragment } = renderWithTheme(
-      <SelectInput
-        label="label"
-        name="test"
-        options={dataUnGrouped}
-        size="small"
-      />,
+      <SelectInput label="label" name="test" options={dataUnGrouped} size="small" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with tooltip', () => {
     const { asFragment } = renderWithTheme(
-      <SelectInput
-        label="label"
-        name="test"
-        options={dataUnGrouped}
-        tooltip="tooltip"
-      />,
+      <SelectInput label="label" name="test" options={dataUnGrouped} tooltip="tooltip" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -103,12 +83,7 @@ describe('selectInput', () => {
 
   it('renders correctly grouped', async () => {
     const { asFragment } = renderWithTheme(
-      <SelectInput
-        name="test"
-        options={dataGrouped}
-        placeholder="placeholder"
-        placeholderSearch="placeholdersearch"
-      />,
+      <SelectInput name="test" options={dataGrouped} placeholder="placeholder" placeholderSearch="placeholdersearch" />,
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
@@ -822,9 +797,7 @@ describe('selectInput', () => {
     expect(venus).not.toBeVisible()
 
     expect(input.textContent).toContain('Earth')
-    await userEvent.keyboard(
-      '[Backspace][Backspace][Backspace][Backspace][Backspace]',
-    )
+    await userEvent.keyboard('[Backspace][Backspace][Backspace][Backspace][Backspace]')
     const mars = screen.getByText('Mars')
     expect(mars).toBeVisible()
 
@@ -888,9 +861,7 @@ describe('selectInput', () => {
       expect(earthCheckbox).toBeChecked()
     })
 
-    await userEvent.keyboard(
-      '[Backspace][Backspace][Backspace][Backspace][Backspace]',
-    )
+    await userEvent.keyboard('[Backspace][Backspace][Backspace][Backspace][Backspace]')
     const mars = screen.getByTestId('option-mars')
     expect(mars).toBeVisible()
     await userEvent.click(mars)
@@ -938,9 +909,7 @@ describe('selectInput', () => {
       expect(screen.queryByText('jupiter')).not.toBeVisible()
     })
 
-    await userEvent.keyboard(
-      '[Backspace][Backspace][Backspace][Backspace][Backspace]',
-    )
+    await userEvent.keyboard('[Backspace][Backspace][Backspace][Backspace][Backspace]')
     const mars = screen.getByTestId('option-mars')
     expect(mars).toBeVisible()
     await userEvent.click(mars)

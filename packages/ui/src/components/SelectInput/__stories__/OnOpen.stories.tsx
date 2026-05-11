@@ -20,8 +20,7 @@ OnOpen.decorators = [
 OnOpen.parameters = {
   docs: {
     description: {
-      story:
-        '`onOpen` prop allow to set a callback which is called/triggered when option dropdown is open',
+      story: '`onOpen` prop allow to set a callback which is called/triggered when option dropdown is open',
     },
   },
 }

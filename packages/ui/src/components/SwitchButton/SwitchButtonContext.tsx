@@ -1,11 +1,5 @@
 import { createContext, useContext } from 'react'
-
-import type {
-  ChangeEvent,
-  Dispatch,
-  FocusEventHandler,
-  SetStateAction,
-} from 'react'
+import type { ChangeEvent, Dispatch, FocusEventHandler, SetStateAction } from 'react'
 
 export type RefOptionType = { value: string; current: HTMLInputElement }
 
@@ -21,9 +15,7 @@ type SwitchButtonContextValue = {
   sentiment: 'neutral' | 'primary'
 }
 
-export const SwitchButtonContext = createContext<
-  SwitchButtonContextValue | undefined
->(undefined)
+export const SwitchButtonContext = createContext<SwitchButtonContextValue | undefined>(undefined)
 
 export const useSwitchButton = () => {
   const context = useContext(SwitchButtonContext)

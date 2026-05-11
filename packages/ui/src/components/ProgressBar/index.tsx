@@ -2,16 +2,13 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
+import type { PROGRESS_BAR_SENTIMENTS } from './constants'
 import { progressBarStyle } from './styles.css'
 import { percentageValue } from './variables.css'
-
-import type { PROGRESS_BAR_SENTIMENTS } from './constants'
-import type { CSSProperties, ReactNode } from 'react'
 
 type ProgressBarProps = {
   sentiment?: (typeof PROGRESS_BAR_SENTIMENTS)[number]
@@ -55,27 +52,14 @@ export const ProgressBar = ({
   const computedValue = suffix === '%' ? (100 * value) / max : value
 
   return (
-    <Stack
-      alignItems="center"
-      direction={direction}
-      gap={direction === 'column' ? 1 : 2}
-    >
+    <Stack alignItems="center" direction={direction} gap={direction === 'column' ? 1 : 2}>
       {direction === 'column' && (label || showProgress) ? (
-        <Stack
-          direction="row"
-          justifyContent={!label && showProgress ? 'right' : 'space-between'}
-          width="100%"
-        >
+        <Stack direction="row" justifyContent={!label && showProgress ? 'right' : 'space-between'} width="100%">
           <Label labelDescription={labelDescription} size="medium">
             {label}
           </Label>
           {showProgress ? (
-            <Text
-              as="label"
-              placement="right"
-              sentiment="neutral"
-              variant="bodySmall"
-            >
+            <Text as="label" placement="right" sentiment="neutral" variant="bodySmall">
               {prefix}
               {computedValue}
               {suffix}
@@ -116,9 +100,7 @@ export const ProgressBar = ({
         <Stack direction="row" gap={1} width="fit-content">
           <Text
             as="label"
-            className={
-              progressBarStyle.customText[suffix ? 'withSuffix' : 'noSuffix']
-            }
+            className={progressBarStyle.customText[suffix ? 'withSuffix' : 'noSuffix']}
             sentiment="neutral"
             variant="bodySmall"
           >

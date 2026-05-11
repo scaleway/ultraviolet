@@ -1,5 +1,5 @@
-import type { OfferList } from '..'
 import type { ComponentProps } from 'react'
+import type { OfferList } from '..'
 
 export const data = [
   {
@@ -52,9 +52,8 @@ export const data = [
   },
 ]
 
-export const columns: NonNullable<ComponentProps<typeof OfferList>['columns']> =
-  [
-    { label: 'Solar system Planet' },
-    { label: 'Perihelion', width: '200px' },
-    { label: 'Aphelion', width: '200px' },
-  ]
+export const columns: NonNullable<ComponentProps<typeof OfferList>['columns']> = [
+  { label: 'Solar system Planet' },
+  { label: 'Perihelion', width: '200px' },
+  { label: 'Aphelion', width: '200px' },
+]

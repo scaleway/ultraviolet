@@ -1,9 +1,8 @@
 import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-
-import type { AlertSentiment } from './type'
 import type { RecipeVariants } from '@vanilla-extract/recipes'
+import type { AlertSentiment } from './type'
 
 function createStyleAlert(sentiment: AlertSentiment) {
   const sentimentColor = theme.colors[sentiment]

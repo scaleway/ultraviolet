@@ -1,7 +1,6 @@
 'use client'
 
 import { createContext } from 'react'
-
 import type { InputHTMLAttributes } from 'react'
 
 type SelectableCardGroupContextType = {
@@ -13,6 +12,4 @@ type SelectableCardGroupContextType = {
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
-export const SelectableCardGroupContext = createContext<
-  SelectableCardGroupContextType | undefined
->(undefined)
+export const SelectableCardGroupContext = createContext<SelectableCardGroupContextType | undefined>(undefined)

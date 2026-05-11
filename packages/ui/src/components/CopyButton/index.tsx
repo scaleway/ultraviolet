@@ -3,10 +3,8 @@
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { CopyContentIcon } from '@ultraviolet/icons/CopyContentIcon'
 import { useClipboard } from '@ultraviolet/utils'
-
-import { Button } from '../Button'
-
 import type { CSSProperties } from 'react'
+import { Button } from '../Button'
 
 const COPY_DURATION = 2500
 

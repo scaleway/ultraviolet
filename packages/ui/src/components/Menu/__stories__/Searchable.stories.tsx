@@ -1,13 +1,11 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
-
+import type { ComponentProps, ReactNode } from 'react'
 import { Menu } from '..'
 import { Avatar } from '../../Avatar'
 import { Badge } from '../../Badge'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps, ReactNode } from 'react'
 
 type ItemProps = {
   sentiment?: ComponentProps<typeof Menu.Item>['sentiment']
@@ -17,13 +15,7 @@ type ItemProps = {
   searchText?: string
 }
 
-const Item = ({
-  sentiment,
-  active,
-  colors,
-  children,
-  searchText,
-}: ItemProps) => (
+const Item = ({ sentiment, active, colors, children, searchText }: ItemProps) => (
   <Menu.Item active={active} searchText={searchText} sentiment={sentiment}>
     <Stack alignItems="center" direction="row" gap={1}>
       <Avatar colors={colors} shape="circle" size="xsmall" variant="colors" />
@@ -44,12 +36,7 @@ export const Searchable: StoryFn<typeof Menu> = props => (
     hideOnClickItem
     searchable
   >
-    <Item
-      active
-      colors={['#BF95F9', '#3D1862']}
-      searchText="default project"
-      sentiment="primary"
-    >
+    <Item active colors={['#BF95F9', '#3D1862']} searchText="default project" sentiment="primary">
       <Stack alignItems="center" direction="row" gap={1}>
         Default Project
         <Badge sentiment="success" size="small">

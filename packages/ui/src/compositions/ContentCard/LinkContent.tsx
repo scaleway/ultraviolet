@@ -1,16 +1,8 @@
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
-
 import { Stack } from '../../components/Stack'
-
 import { contentCardStyle } from './styles.css'
 
-export const LinkContent = ({
-  direction,
-  disabled,
-}: {
-  direction: 'column' | 'row'
-  disabled?: boolean
-}) => (
+export const LinkContent = ({ direction, disabled }: { direction: 'column' | 'row'; disabled?: boolean }) => (
   <Stack
     alignItems={direction === 'column' ? 'flex-end' : 'center'}
     className={contentCardStyle.iconStack[direction]}

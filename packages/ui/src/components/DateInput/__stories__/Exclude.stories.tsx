@@ -1,7 +1,6 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { DateInput } from '..'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Exclude: StoryFn = args => (
   <Stack gap={3}>

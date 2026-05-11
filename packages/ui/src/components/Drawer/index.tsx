@@ -2,19 +2,16 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useCallback, useEffect, useLayoutEffect, useRef } from 'react'
-
+import type { ComponentProps, RefObject } from 'react'
 import { Modal } from '../Modal'
+import type { ModalProps } from '../Modal'
+import type { ModalState } from '../Modal/types'
 import { Separator } from '../Separator'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { DrawerContent } from './DrawerContent'
 import { drawerStyle } from './styles.css'
-
-import type { ModalProps } from '../Modal'
-import type { ModalState } from '../Modal/types'
 import type { SizeProp } from './styles.css'
-import type { ComponentProps, RefObject } from 'react'
 
 type DrawerProps = Pick<
   ComponentProps<typeof Modal>,
@@ -92,13 +89,7 @@ export const BaseDrawer = ({
   }, [onOpenPush, open])
 
   const computeHeader = (modalProps: ModalState) => (
-    <Text
-      as="h2"
-      className={drawerStyle.header}
-      prominence="default"
-      sentiment="neutral"
-      variant="headingSmallStrong"
-    >
+    <Text as="h2" className={drawerStyle.header} prominence="default" sentiment="neutral" variant="headingSmallStrong">
       {typeof header === 'function' ? header(modalProps) : header}
     </Text>
   )
@@ -117,12 +108,7 @@ export const BaseDrawer = ({
     <Modal
       ariaLabel={ariaLabel}
       backdropClassName="backdrop-drawer"
-      className={cn(
-        className,
-        drawerStyle.drawer[size],
-        drawerStyle.base,
-        push ? drawerStyle.push : '',
-      )}
+      className={cn(className, drawerStyle.drawer[size], drawerStyle.base, push ? drawerStyle.push : '')}
       data-size={size}
       data-testid={dataTestId}
       disclosure={disclosure}
@@ -142,8 +128,7 @@ export const BaseDrawer = ({
       style={style}
     >
       {modalProps => {
-        const content =
-          typeof children === 'function' ? children(modalProps) : children
+        const content = typeof children === 'function' ? children(modalProps) : children
 
         return (
           <Stack className={drawerStyle.contentWrapper} gap={2}>
@@ -153,9 +138,7 @@ export const BaseDrawer = ({
               {noPadding ? content : <DrawerContent>{content}</DrawerContent>}
             </div>
             {footer ? (
-              <Stack className={drawerStyle.footer}>
-                {typeof footer === 'function' ? footer(modalProps) : footer}
-              </Stack>
+              <Stack className={drawerStyle.footer}>{typeof footer === 'function' ? footer(modalProps) : footer}</Stack>
             ) : null}
           </Stack>
         )

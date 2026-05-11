@@ -1,13 +1,11 @@
 'use client'
 
 import { useCallback, useContext, useId, useRef, useState } from 'react'
-
+import type { CSSProperties, ReactElement, ReactNode, RefObject } from 'react'
 import { Disclosure } from './components/Disclosure'
 import { ModalContent } from './ModalContent'
 import { ModalContext, ModalProvider } from './ModalProvider'
-
 import type { ModalPlacement, ModalSize, ModalState } from './types'
-import type { CSSProperties, ReactElement, ReactNode, RefObject } from 'react'
 
 export type ModalProps = {
   id?: string

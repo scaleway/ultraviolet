@@ -1,6 +1,5 @@
-import { Dialog } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Dialog } from '..'
 
 export default {
   component: Dialog,

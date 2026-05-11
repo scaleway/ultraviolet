@@ -3,9 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Children } from 'react'
-
 import { Text } from '../Text'
-
 import { rowsVar, snippetStyle } from './styles.css'
 
 export type Prefixes = 'lines' | 'command'
@@ -46,24 +44,14 @@ export const CodeContent = ({
     {multiline ? (
       Children.map(lines, child => (
         <span
-          className={cn(
-            snippetStyle.line({ multiline: true }),
-            prefix ? snippetStyle.prefix[prefix] : '',
-          )}
+          className={cn(snippetStyle.line({ multiline: true }), prefix ? snippetStyle.prefix[prefix] : '')}
           key={child}
         >
           {child}
         </span>
       ))
     ) : (
-      <span
-        className={cn(
-          snippetStyle.line(),
-          prefix ? snippetStyle.prefix[prefix] : '',
-        )}
-      >
-        {children}
-      </span>
+      <span className={cn(snippetStyle.line(), prefix ? snippetStyle.prefix[prefix] : '')}>{children}</span>
     )}
   </Text>
 )

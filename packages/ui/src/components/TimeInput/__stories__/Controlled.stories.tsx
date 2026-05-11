@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { TimeInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Controlled: StoryFn<typeof TimeInput> = args => {
   const [value24, setValue24] = useState<Date>()
@@ -22,9 +20,7 @@ export const Controlled: StoryFn<typeof TimeInput> = args => {
           value={value24}
         />
         Time: {value24?.toString()}
-        <Button onClick={() => setValue24(new Date('01/01/2000 12:34:56'))}>
-          set time to 12:34:56
-        </Button>
+        <Button onClick={() => setValue24(new Date('01/01/2000 12:34:56'))}>set time to 12:34:56</Button>
       </Stack>
       <Stack gap={1}>
         <TimeInput
@@ -49,8 +45,7 @@ Controlled.args = {
 Controlled.parameters = {
   docs: {
     description: {
-      story:
-        'Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html).',
+      story: 'Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html).',
     },
   },
 }

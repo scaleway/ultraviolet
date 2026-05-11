@@ -2,17 +2,14 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useId } from 'react'
-
+import type { ComponentProps, ReactNode } from 'react'
 import { Label } from '../../Label'
 import { SelectableCard } from '../../SelectableCard'
 import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 import { useSelectableCardOptionGroup } from '../Provider'
-import { selectableCardOptionGroupStyle } from '../styles.css'
-
 import { Image } from './Image'
-
-import type { ComponentProps, ReactNode } from 'react'
+import { selectableCardOptionGroupStyle } from '../styles.css'
 
 type OptionProps = Omit<ComponentProps<typeof SelectableCard>, 'onChange'> & {
   value: string
@@ -96,22 +93,11 @@ export const Option = ({
           width="100%"
         >
           {typeof image === 'string' ? (
-            <Image
-              alt={typeof label === 'string' ? label : value}
-              disabled={isDisabled}
-              size={size}
-              src={image}
-            />
+            <Image alt={typeof label === 'string' ? label : value} disabled={isDisabled} size={size} src={image} />
           ) : (
             image
           )}
-          <Stack
-            alignItems="center"
-            direction="column"
-            gap={0.5}
-            justifyContent="center"
-            width="100%"
-          >
+          <Stack alignItems="center" direction="column" gap={0.5} justifyContent="center" width="100%">
             {typeof label === 'string' ? (
               <Label
                 disabled={isDisabled}
@@ -128,14 +114,10 @@ export const Option = ({
           </Stack>
         </Stack>
         <SelectInput
-          aria-label={
-            typeof label === 'string' ? `${label} option` : `${value} option`
-          }
+          aria-label={typeof label === 'string' ? `${label} option` : `${value} option`}
           className={cn(
             selectableCardOptionGroupStyle.optionSelectInput,
-            isDisabled
-              ? selectableCardOptionGroupStyle.optionSelectInputDisabled
-              : '',
+            isDisabled ? selectableCardOptionGroupStyle.optionSelectInputDisabled : '',
             error ? selectableCardOptionGroupStyle.optionSelectInputError : '',
           )}
           data-testid={dataTestId ? `${dataTestId}-select` : undefined}

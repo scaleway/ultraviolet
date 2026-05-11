@@ -1,6 +1,5 @@
-import { NumberInput } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { NumberInput } from '..'
 
 export default {
   component: NumberInput,

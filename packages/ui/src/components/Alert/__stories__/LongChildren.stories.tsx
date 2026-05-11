@@ -15,8 +15,7 @@ LongChildren.args = {
 LongChildren.parameters = {
   docs: {
     description: {
-      story:
-        'If the children is long the content will be displayed as a column instead of a row.',
+      story: 'If the children is long the content will be displayed as a column instead of a row.',
     },
   },
 }

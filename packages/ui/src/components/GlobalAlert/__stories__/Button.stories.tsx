@@ -12,8 +12,7 @@ Button.args = {
 Button.parameters = {
   docs: {
     description: {
-      story:
-        'You can add a button to the alert by using the `buttonText` and `onClickButton` props.',
+      story: 'You can add a button to the alert by using the `buttonText` and `onClickButton` props.',
     },
   },
 }

@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const DatabaseCategoryIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const DatabaseCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="DatabaseCategoryIcon">
     <g className="Database">
       <g className="DB">

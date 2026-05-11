@@ -10,9 +10,4 @@ const serverlessDBKeyvisual = `${BASE_URL}/products/serverlessDB/serverlessDB-ke
 const serverlessDBOriginal = `${BASE_URL}/products/serverlessDB/serverlessDB-original.webp`
 const serverlessDBWire = `${BASE_URL}/products/serverlessDB/serverlessDB-wire.svg`
 
-export {
-  serverlessDBContent,
-  serverlessDBKeyvisual,
-  serverlessDBOriginal,
-  serverlessDBWire,
-}
+export { serverlessDBContent, serverlessDBKeyvisual, serverlessDBOriginal, serverlessDBWire }

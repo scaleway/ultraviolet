@@ -1,30 +1,19 @@
 'use client'
 
 import { useMemo } from 'react'
-
-import { Menu } from '../Menu'
-
-import { tabsStyle } from './styles.css'
-import { useTabsContext } from './TabsContext'
-
 import type { ComponentProps } from 'react'
+import { Menu } from '../Menu'
+import { useTabsContext } from './TabsContext'
+import { tabsStyle } from './styles.css'
 
 type TabMenuItemProps = {
   value?: string | number
 } & ComponentProps<typeof Menu.Item>
 
-export const TabMenuItem = ({
-  value,
-  children,
-  onClick,
-  ...props
-}: TabMenuItemProps) => {
+export const TabMenuItem = ({ value, children, onClick, ...props }: TabMenuItemProps) => {
   const { selected, onChange } = useTabsContext()
 
-  const isSelected = useMemo(
-    () => value !== undefined && selected === value,
-    [value, selected],
-  )
+  const isSelected = useMemo(() => value !== undefined && selected === value, [value, selected])
 
   return (
     <Menu.Item

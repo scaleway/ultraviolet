@@ -10,12 +10,7 @@ type FocusOverlayProps = {
   sentiment: 'neutral' | 'primary'
 }
 
-export const FocusOverlay = ({
-  cardWidth,
-  position,
-  mouseDownSide,
-  sentiment,
-}: FocusOverlayProps) => (
+export const FocusOverlay = ({ cardWidth, position, mouseDownSide, sentiment }: FocusOverlayProps) => (
   <div
     className={switchButtonStyle.focusOverlay[sentiment]}
     style={{

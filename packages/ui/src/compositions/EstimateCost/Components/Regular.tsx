@@ -2,11 +2,9 @@
 
 import { cn } from '@ultraviolet/utils'
 import { memo } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { useOverlay } from '../OverlayContext'
 import { estimateCostStyle } from '../styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type RegularProps = {
   variant?: 'normal' | 'small' | 'big' | 'capitalized'
@@ -17,23 +15,11 @@ type RegularProps = {
 }
 
 export const Regular = memo(
-  ({
-    variant = 'normal',
-    isDisabledOnOverlay = false,
-    children = null,
-    className,
-    style,
-  }: RegularProps) => {
+  ({ variant = 'normal', isDisabledOnOverlay = false, children = null, className, style }: RegularProps) => {
     const { isOverlay } = useOverlay()
 
     return isDisabledOnOverlay && isOverlay ? null : (
-      <div
-        className={cn(
-          className,
-          estimateCostStyle.regular({ isOverlay, variant }),
-        )}
-        style={style}
-      >
+      <div className={cn(className, estimateCostStyle.regular({ isOverlay, variant }))} style={style}>
         {children}
       </div>
     )

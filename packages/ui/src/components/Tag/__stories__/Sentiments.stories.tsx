@@ -1,8 +1,7 @@
-import { Tag } from '..'
-import { SENTIMENTS } from '../../../theme'
-
 import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { Tag } from '..'
+import { SENTIMENTS } from '../../../theme'
 
 export const Sentiments = (props: ComponentProps<typeof Tag>) =>
   SENTIMENTS.map(sentiment => (
@@ -25,8 +24,7 @@ export const Sentiments = (props: ComponentProps<typeof Tag>) =>
 Sentiments.parameters = {
   docs: {
     description: {
-      story:
-        'Sentiments defines different colors of you component. You can define it using `sentiment` property.',
+      story: 'Sentiments defines different colors of you component. You can define it using `sentiment` property.',
     },
   },
 }

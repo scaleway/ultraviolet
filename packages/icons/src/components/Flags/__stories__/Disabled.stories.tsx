@@ -1,7 +1,4 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { FranceFlag } from '../__generated__'
 
-import type { StoryFn } from '@storybook/react-vite'
-
-export const Disabled: StoryFn<typeof FranceFlag> = props => (
-  <FranceFlag {...props} disabled />
-)
+export const Disabled: StoryFn<typeof FranceFlag> = props => <FranceFlag {...props} disabled />

@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const AdditionalDiskProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const AdditionalDiskProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="AdditionalDiskProductIcon">
     <g className="Additional-Disk">
       <g className="Additional-Disk-icon" clipPath="url(#a)">

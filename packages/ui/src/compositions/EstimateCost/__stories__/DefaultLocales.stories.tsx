@@ -1,9 +1,7 @@
 import { Snippet } from '../../../components/Snippet'
 import locales from '../locales/en'
 
-export const DefaultLocales = () => (
-  <Snippet prefix="lines">{JSON.stringify(locales, null, 4)}</Snippet>
-)
+export const DefaultLocales = () => <Snippet prefix="lines">{JSON.stringify(locales, null, 4)}</Snippet>
 
 DefaultLocales.parameters = {
   docs: {

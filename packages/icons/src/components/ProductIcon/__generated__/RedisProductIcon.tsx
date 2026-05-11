@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const RedisProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const RedisProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="RedisProductIcon">
     <g className="Redis-For-Cache" clipPath="url(#b)">
       <g className=".Square">

@@ -1,5 +1,4 @@
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
 import { contentCardStyle, subContainerHeightVar } from './styles.css'
 
 export const ImageContent = ({

@@ -1,6 +1,5 @@
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it, vi } from 'vitest'
-
 import { InfoTable } from '..'
 
 describe('infoTable', () => {
@@ -21,9 +20,8 @@ describe('infoTable', () => {
         </InfoTable.Row>
         <InfoTable.Row templateColumns="repeat(3, 1fr)">
           <InfoTable.Cell title="title">
-            cell cell cell cell cell cell cell cell cell cell cell cell cell
-            cell cell cell cell cell cell cell cell cell cell cell cell cell
-            cell cell cell cell
+            cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell
+            cell cell cell cell cell cell cell cell cell
           </InfoTable.Cell>
           <InfoTable.Cell title="title">cell</InfoTable.Cell>
           <InfoTable.Cell title="title">cell</InfoTable.Cell>
@@ -48,9 +46,8 @@ describe('infoTable', () => {
         </InfoTable.Row>
         <InfoTable.Row templateColumns="repeat(3, 1fr)">
           <InfoTable.Cell multiline title="title">
-            cell cell cell cell cell cell cell cell cell cell cell cell cell
-            cell cell cell cell cell cell cell cell cell cell cell cell cell
-            cell cell cell cell
+            cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell
+            cell cell cell cell cell cell cell cell cell
           </InfoTable.Cell>
           <InfoTable.Cell title="title">cell</InfoTable.Cell>
           <InfoTable.Cell title="title">cell</InfoTable.Cell>
@@ -75,9 +72,8 @@ describe('infoTable', () => {
         </InfoTable.Row>
         <InfoTable.Row templateColumns="repeat(3, 1fr)">
           <InfoTable.Cell title="title">
-            cell cell cell cell cell cell cell cell cell cell cell cell cell
-            cell cell cell cell cell cell cell cell cell cell cell cell cell
-            cell cell cell cell
+            cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell
+            cell cell cell cell cell cell cell cell cell
           </InfoTable.Cell>
           <InfoTable.Cell title="title">cell</InfoTable.Cell>
           <InfoTable.Cell title="title">cell</InfoTable.Cell>
@@ -102,9 +98,8 @@ describe('infoTable', () => {
         </InfoTable.Row>
         <InfoTable.Row templateColumns="repeat(3, 1fr)">
           <InfoTable.Cell title="title">
-            cell cell cell cell cell cell cell cell cell cell cell cell cell
-            cell cell cell cell cell cell cell cell cell cell cell cell cell
-            cell cell cell cell
+            cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell
+            cell cell cell cell cell cell cell cell cell
           </InfoTable.Cell>
           <InfoTable.CellWithCopyButton
             buttonSize="small"

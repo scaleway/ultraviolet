@@ -3,14 +3,11 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useMemo, useRef, useState } from 'react'
-
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
-
 import { DEFAULT_POPOVER_MAX_HEIGHT, MIN_TAG_WIDTH, TAGS_GAP } from './constant'
 import { popoverTriggerWidthVar, tagListStyle } from './styles.css'
-
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 export type TagType = string | { label: string; icon: ReactNode }
 
@@ -49,8 +46,7 @@ type TagListProps = {
 
 const DEFAULT_TAGS: TagListProps['tags'] = []
 
-const getTagLabel = (tag: NonNullable<TagListProps['tags']>[number]) =>
-  typeof tag === 'object' ? tag.label : tag
+const getTagLabel = (tag: NonNullable<TagListProps['tags']>[number]) => (typeof tag === 'object' ? tag.label : tag)
 
 /**
  * This component is used to display a list of tags with a threshold and a popover when there are too many tags.
@@ -91,18 +87,12 @@ export const TagList = ({
     while (
       tmpThreshold > 1 &&
       tags.length > 0 &&
-      tags
-        .slice(0, tmpThreshold)
-        .reduce<string>((acc, tag) => acc + getTagLabel(tag), '').length >
-        maxLength
+      tags.slice(0, tmpThreshold).reduce<string>((acc, tag) => acc + getTagLabel(tag), '').length > maxLength
     ) {
       tmpThreshold -= 1
     }
 
-    const potentiallyVisibleTagsLength = Math.max(
-      1,
-      tags.length > tmpThreshold ? tmpThreshold : tags.length,
-    )
+    const potentiallyVisibleTagsLength = Math.max(1, tags.length > tmpThreshold ? tmpThreshold : tags.length)
     const potentiallyVisibleTags = tags.slice(0, potentiallyVisibleTagsLength)
     const surelyHiddenTags = tags.slice(potentiallyVisibleTagsLength)
 
@@ -113,8 +103,7 @@ export const TagList = ({
     }
   }, [maxLength, tags, threshold])
 
-  const { tmpThreshold, potentiallyVisibleTags, surelyHiddenTags } =
-    memoizedResult
+  const { tmpThreshold, potentiallyVisibleTags, surelyHiddenTags } = memoizedResult
 
   // Compute visible tags and hidden ones based on the container width and
   // what can fit into it from the potentially visible tags
@@ -131,65 +120,54 @@ export const TagList = ({
       return
     }
 
-    const parentWidth =
-      (containerRef.current.parentElement?.offsetWidth ?? 0) - MIN_TAG_WIDTH
+    const parentWidth = (containerRef.current.parentElement?.offsetWidth ?? 0) - MIN_TAG_WIDTH
 
-    const toMeasureElements: HTMLCollection =
-      measureRef.current.children[0].children
+    const toMeasureElements: HTMLCollection = measureRef.current.children[0].children
 
     const toMeasureElementsArray = [...toMeasureElements]
 
-    const { measuredVisibleTags, measuredHiddenTags } =
-      toMeasureElementsArray.reduce(
-        (
-          accumulator: {
-            measuredVisibleTags: TagType[]
-            measuredHiddenTags: TagType[]
-            accumulatedWidth: number
-          },
-          currentValue,
-          index,
-        ): {
+    const { measuredVisibleTags, measuredHiddenTags } = toMeasureElementsArray.reduce(
+      (
+        accumulator: {
           measuredVisibleTags: TagType[]
           measuredHiddenTags: TagType[]
           accumulatedWidth: number
-        } => {
-          const tagWidth = (currentValue as HTMLDivElement).offsetWidth
-          const gap = index > 0 ? Number.parseInt(TAGS_GAP, 10) : 0
-          const newAccumulatedWidth =
-            accumulator.accumulatedWidth + tagWidth + gap
+        },
+        currentValue,
+        index,
+      ): {
+        measuredVisibleTags: TagType[]
+        measuredHiddenTags: TagType[]
+        accumulatedWidth: number
+      } => {
+        const tagWidth = (currentValue as HTMLDivElement).offsetWidth
+        const gap = index > 0 ? Number.parseInt(TAGS_GAP, 10) : 0
+        const newAccumulatedWidth = accumulator.accumulatedWidth + tagWidth + gap
 
-          const minWidthAccumulatedWidth =
-            accumulator.accumulatedWidth + MIN_TAG_WIDTH + gap
+        const minWidthAccumulatedWidth = accumulator.accumulatedWidth + MIN_TAG_WIDTH + gap
 
-          // The tag fits (with or without needing shrinking)
-          if (minWidthAccumulatedWidth <= parentWidth) {
-            return {
-              accumulatedWidth: newAccumulatedWidth,
-              measuredHiddenTags: accumulator.measuredHiddenTags,
-              measuredVisibleTags: [
-                ...accumulator.measuredVisibleTags,
-                tags[index],
-              ],
-            }
-          }
-
-          // The tag doesn't fit at all (available space < min-width)
+        // The tag fits (with or without needing shrinking)
+        if (minWidthAccumulatedWidth <= parentWidth) {
           return {
-            accumulatedWidth: accumulator.accumulatedWidth,
-            measuredHiddenTags: [
-              ...accumulator.measuredHiddenTags,
-              tags[index],
-            ],
-            measuredVisibleTags: accumulator.measuredVisibleTags,
+            accumulatedWidth: newAccumulatedWidth,
+            measuredHiddenTags: accumulator.measuredHiddenTags,
+            measuredVisibleTags: [...accumulator.measuredVisibleTags, tags[index]],
           }
-        },
-        {
-          accumulatedWidth: 0,
-          measuredHiddenTags: [],
-          measuredVisibleTags: [],
-        },
-      )
+        }
+
+        // The tag doesn't fit at all (available space < min-width)
+        return {
+          accumulatedWidth: accumulator.accumulatedWidth,
+          measuredHiddenTags: [...accumulator.measuredHiddenTags, tags[index]],
+          measuredVisibleTags: accumulator.measuredVisibleTags,
+        }
+      },
+      {
+        accumulatedWidth: 0,
+        measuredHiddenTags: [],
+        measuredVisibleTags: [],
+      },
+    )
 
     const finalHiddenTags = [...measuredHiddenTags, ...surelyHiddenTags]
 
@@ -229,9 +207,7 @@ export const TagList = ({
         hiddenTags.length > 0 &&
         tagsContainerWidth + newPopoverTriggerWidth > parentWidth
       ) {
-        const visibleTagsCopy = visibleTags.filter(
-          (_, index) => index < visibleTags.length - 1,
-        )
+        const visibleTagsCopy = visibleTags.filter((_, index) => index < visibleTags.length - 1)
         const tagToMove = visibleTags.at(-1) ?? ''
 
         setVisibleTags(visibleTagsCopy)
@@ -240,20 +216,9 @@ export const TagList = ({
 
       setIsReady(true)
     }
-  }, [
-    hiddenTags,
-    threshold,
-    visibleTags,
-    visibleTags.length,
-    containerRef.current?.parentElement?.offsetWidth,
-  ])
+  }, [hiddenTags, threshold, visibleTags, visibleTags.length, containerRef.current?.parentElement?.offsetWidth])
 
-  const renderTag = (
-    tag: TagType,
-    index: number,
-    isEllipsis = false,
-    hidden?: boolean,
-  ) =>
+  const renderTag = (tag: TagType, index: number, isEllipsis = false, hidden?: boolean) =>
     typeof tag !== 'string' && tag.icon ? (
       <Tag
         className={cn(isEllipsis ? 'ellipsed' : '', tagListStyle.ellipsisChild)}
@@ -291,8 +256,7 @@ export const TagList = ({
           tagListStyle.tagContainer({
             multiline,
           }),
-          (visibleTags.length === 1 && hiddenTags.length === 0) ||
-            popoverTriggerWidth
+          (visibleTags.length === 1 && hiddenTags.length === 0) || popoverTriggerWidth
             ? tagListStyle.ellipsisContainer
             : '',
         )}

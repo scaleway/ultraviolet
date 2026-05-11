@@ -1,14 +1,10 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
-
+import type { ComponentProps } from 'react'
 import { KeyValueField } from '..'
 import { Submit } from '../../Submit'
 
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
-
-export const Environnement: StoryFn<
-  ComponentProps<typeof KeyValueField>
-> = args => (
+export const Environnement: StoryFn<ComponentProps<typeof KeyValueField>> = args => (
   <Stack gap={1}>
     <KeyValueField {...args} />
     <Submit>Submit</Submit>

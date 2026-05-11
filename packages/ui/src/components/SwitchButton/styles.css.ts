@@ -34,14 +34,12 @@ const optionBase = style({
       border: 'none !important',
       boxShadow: 'none !important',
     },
-    '&[data-checked="false"]:hover:not([data-error="true"])[data-disabled="false"]':
-      {
-        boxShadow: 'none',
-      },
-    '&[data-checked="false"][data-error="false"][data-disabled="false"]:active':
-      {
-        boxShadow: 'none',
-      },
+    '&[data-checked="false"]:hover:not([data-error="true"])[data-disabled="false"]': {
+      boxShadow: 'none',
+    },
+    '&[data-checked="false"][data-error="false"][data-disabled="false"]:active': {
+      boxShadow: 'none',
+    },
     '&[data-checked="true"]': { border: 'none' },
     '&[data-disabled="true"]': { background: 'transparent', border: 'none' },
   },
@@ -65,14 +63,8 @@ const focusOverlayBase = style({
 })
 
 const focusOverlay = styleVariants({
-  neutral: [
-    focusOverlayBase,
-    { background: theme.colors.neutral.backgroundStrong },
-  ],
-  primary: [
-    focusOverlayBase,
-    { background: theme.colors.primary.backgroundStrong },
-  ],
+  neutral: [focusOverlayBase, { background: theme.colors.neutral.backgroundStrong }],
+  primary: [focusOverlayBase, { background: theme.colors.primary.backgroundStrong }],
 })
 
 export const switchButtonStyle = {

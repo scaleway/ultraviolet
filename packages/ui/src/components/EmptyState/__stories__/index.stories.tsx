@@ -1,6 +1,5 @@
-import { EmptyState } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { EmptyState } from '..'
 
 export default {
   component: EmptyState,

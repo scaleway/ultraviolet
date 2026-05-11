@@ -1,8 +1,6 @@
-import { AddressIcon } from '../__generated__'
-
-import Documentation from './Documentation.md?raw'
-
 import type { Meta } from '@storybook/react-vite'
+import { AddressIcon } from '../__generated__'
+import Documentation from './Documentation.md?raw'
 
 export default {
   component: AddressIcon,

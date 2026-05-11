@@ -10,9 +10,4 @@ const annotationsKeyvisual = `${BASE_URL}/products/annotations/annotations-keyvi
 const annotationsOriginal = `${BASE_URL}/products/annotations/annotations-original.webp`
 const annotationsWire = `${BASE_URL}/products/annotations/annotations-wire.svg`
 
-export {
-  annotationsContent,
-  annotationsKeyvisual,
-  annotationsOriginal,
-  annotationsWire,
-}
+export { annotationsContent, annotationsKeyvisual, annotationsOriginal, annotationsWire }

@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-
+import { ANIMATION_EASING, NAVIGATION_COLLASPED_WIDTH } from './constants'
 import {
   itemBadge,
   itemCategoryIcon,
@@ -34,7 +34,6 @@ import {
   separator,
   showHideStack,
 } from './components/styles.css'
-import { ANIMATION_EASING, NAVIGATION_COLLASPED_WIDTH } from './constants'
 import {
   widthNavigationContainer,
   widthNavigationContainerDuration,

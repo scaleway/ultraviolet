@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import { forwardRef } from 'react'
-
+import type { CSSProperties } from 'react'
 import { Body } from './Body'
 import { Cell } from './Cell'
 import { Header } from './Header'
@@ -11,13 +11,11 @@ import { HeaderRow } from './HeaderRow'
 import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
-import { tableStyle } from './styles.css'
 import { TableContainer } from './TableContainer'
 import { TableProvider, useTableContext } from './TableContext'
-
 import type { TableProviderProps } from './TableContext'
 import type { ColumnProps } from './types'
-import type { CSSProperties } from 'react'
+import { tableStyle } from './styles.css'
 
 // type OptionalKeys<T> = {
 //   [K in keyof T]: {} extends Pick<T, K> ? K : never
@@ -28,13 +26,7 @@ import type { CSSProperties } from 'react'
 // Note: Get type optional from omit values
 type TableProps = Omit<
   TableProviderProps,
-  | 'selectable'
-  | 'loading'
-  | 'bordered'
-  | 'stripped'
-  | 'autoCollapse'
-  | 'columns'
-  | 'expandButton'
+  'selectable' | 'loading' | 'bordered' | 'stripped' | 'autoCollapse' | 'columns' | 'expandButton'
 > & {
   selectable?: boolean
   /**
@@ -82,11 +74,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
     >
       <TableContainer>
         <table
-          className={cn(
-            tableStyle.table,
-            stripped ? tableStyle.stripped : '',
-            bordered ? tableStyle.bordered : '',
-          )}
+          className={cn(tableStyle.table, stripped ? tableStyle.stripped : '', bordered ? tableStyle.bordered : '')}
           ref={ref}
           style={style}
         >
@@ -112,11 +100,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
           </Header>
           {loading ? (
             <Body>
-              <SkeletonRows
-                cols={columns.length}
-                rows={5}
-                selectable={selectable}
-              />
+              <SkeletonRows cols={columns.length} rows={5} selectable={selectable} />
             </Body>
           ) : (
             children

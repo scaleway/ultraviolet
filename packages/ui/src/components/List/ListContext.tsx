@@ -1,16 +1,6 @@
 'use client'
 
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react'
-
-import type { Checkbox } from '../Checkbox'
-import type { ColumnProps } from './types'
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import type {
   ComponentProps,
   Dispatch,
@@ -19,6 +9,8 @@ import type {
   RefObject,
   SetStateAction,
 } from 'react'
+import type { Checkbox } from '../Checkbox'
+import type { ColumnProps } from './types'
 
 type RowState = Record<string | number, boolean>
 
@@ -97,20 +89,17 @@ export const ListProvider = ({
   const [inRange, setInRange] = useState<string[]>([])
   const [refList, setRefList] = useState<RefObject<HTMLInputElement>[]>([])
 
-  const registerExpandableRow = useCallback(
-    (rowId: string, expanded = false) => {
-      setExpandedRowIds(current => ({ ...current, [rowId]: expanded }))
+  const registerExpandableRow = useCallback((rowId: string, expanded = false) => {
+    setExpandedRowIds(current => ({ ...current, [rowId]: expanded }))
 
-      return () => {
-        setExpandedRowIds(current => {
-          const { [rowId]: relatedId, ...otherIds } = current
+    return () => {
+      setExpandedRowIds(current => {
+        const { [rowId]: relatedId, ...otherIds } = current
 
-          return otherIds
-        })
-      }
-    },
-    [],
-  )
+        return otherIds
+      })
+    }
+  }, [])
 
   const registerSelectableRow = useCallback((rowId: string) => {
     setSelectedRowIds(current => ({ ...current, [rowId]: false }))
@@ -147,15 +136,10 @@ export const ListProvider = ({
   )
   const selectRows = useCallback(
     (rowIds: string[], state: boolean) => {
-      const newSelectedRowIds = rowIds.reduce(
-        (acc, rowId) => ({ ...acc, [rowId]: state }),
-        selectedRowIds,
-      )
+      const newSelectedRowIds = rowIds.reduce((acc, rowId) => ({ ...acc, [rowId]: state }), selectedRowIds)
       setSelectedRowIds(newSelectedRowIds)
       if (onSelectedChange) {
-        onSelectedChange(
-          Object.keys(newSelectedRowIds).filter(row => newSelectedRowIds[row]),
-        )
+        onSelectedChange(Object.keys(newSelectedRowIds).filter(row => newSelectedRowIds[row]))
       }
     },
     [onSelectedChange, selectedRowIds],
@@ -183,50 +167,34 @@ export const ListProvider = ({
     [selectRows],
   )
 
-  const selectAllHandler: ListContextValue['selectAllHandler'] =
-    useCallback(() => {
-      // we choose to unselect all when checkbox is in indeterminate state
-      if (
-        allRowSelectValue &&
-        [true, 'indeterminate'].includes(allRowSelectValue)
-      ) {
-        unselectAll()
-      }
-      if (allRowSelectValue === false) {
-        selectAll()
-      }
-      setLastCheckedCheckbox(undefined)
-    }, [allRowSelectValue, unselectAll, selectAll])
+  const selectAllHandler: ListContextValue['selectAllHandler'] = useCallback(() => {
+    // we choose to unselect all when checkbox is in indeterminate state
+    if (allRowSelectValue && [true, 'indeterminate'].includes(allRowSelectValue)) {
+      unselectAll()
+    }
+    if (allRowSelectValue === false) {
+      selectAll()
+    }
+    setLastCheckedCheckbox(undefined)
+  }, [allRowSelectValue, unselectAll, selectAll])
 
   const subscribeHandler = useCallback(() => {
     const handlers: (() => void)[] = []
     // Ensure that only existing checkboxes are in refList
     const updatedRefList = [
-      ...new Set(
-        refList.filter(
-          checkbox => document.contains(checkbox.current) && checkbox.current,
-        ),
-      ),
+      ...new Set(refList.filter(checkbox => document.contains(checkbox.current) && checkbox.current)),
     ]
 
     setRefList(updatedRefList)
 
-    const handleHover = (
-      index: number,
-      isShiftPressed: boolean,
-      leaving: boolean,
-    ) => {
+    const handleHover = (index: number, isShiftPressed: boolean, leaving: boolean) => {
       const newRange: string[] = []
       if (lastCheckedCheckbox) {
-        const targetCheckbox = updatedRefList.find(
-          checkbox => checkbox.current?.value === lastCheckedCheckbox,
-        )
+        const targetCheckbox = updatedRefList.find(checkbox => checkbox.current?.value === lastCheckedCheckbox)
 
         if (isShiftPressed && targetCheckbox && !leaving) {
           const lastCheckedIndex = updatedRefList.indexOf(targetCheckbox)
-          const start =
-            Math.min(lastCheckedIndex, index) -
-            (Math.min(lastCheckedIndex, index) === index ? 1 : 0)
+          const start = Math.min(lastCheckedIndex, index) - (Math.min(lastCheckedIndex, index) === index ? 1 : 0)
           const end = Math.max(lastCheckedIndex, index)
 
           updatedRefList.forEach((checkbox, i) => {
@@ -238,26 +206,16 @@ export const ListProvider = ({
       }
       setInRange(newRange)
     }
-    const handleClickRange = (
-      currentCheckbox: HTMLInputElement,
-      index: number,
-      isShiftPressed: boolean,
-    ) => {
+    const handleClickRange = (currentCheckbox: HTMLInputElement, index: number, isShiftPressed: boolean) => {
       if (isShiftPressed) {
         const checkboxesInRange: string[] = []
 
         // Get the index of the lastCheckedCheckbox
-        const targetCheckbox = updatedRefList.find(
-          checkbox => checkbox.current?.value === lastCheckedCheckbox,
-        )
-        const lastCheckedIndex = targetCheckbox
-          ? updatedRefList.indexOf(targetCheckbox)
-          : undefined
+        const targetCheckbox = updatedRefList.find(checkbox => checkbox.current?.value === lastCheckedCheckbox)
+        const lastCheckedIndex = targetCheckbox ? updatedRefList.indexOf(targetCheckbox) : undefined
 
         if (lastCheckedIndex !== undefined) {
-          const start =
-            Math.min(lastCheckedIndex, index) -
-            (Math.min(lastCheckedIndex, index) === index ? 1 : 0)
+          const start = Math.min(lastCheckedIndex, index) - (Math.min(lastCheckedIndex, index) === index ? 1 : 0)
           const end = Math.max(lastCheckedIndex, index)
 
           updatedRefList.forEach((checkbox, key) => {
@@ -280,17 +238,12 @@ export const ListProvider = ({
       }, 1)
     }
     refList.forEach((checkbox, index) => {
-      const clickHandler = function clickHandler(
-        this: HTMLInputElement,
-        event: MouseEvent,
-      ) {
+      const clickHandler = function clickHandler(this: HTMLInputElement, event: MouseEvent) {
         handleClickRange(this, index, event.shiftKey)
       }
 
-      const hoverEnteringHandler = (event: MouseEvent) =>
-        handleHover(index, event.shiftKey, false)
-      const hoverLeavingHandler = (event: MouseEvent) =>
-        handleHover(index, event.shiftKey, true)
+      const hoverEnteringHandler = (event: MouseEvent) => handleHover(index, event.shiftKey, false)
+      const hoverLeavingHandler = (event: MouseEvent) => handleHover(index, event.shiftKey, true)
 
       if (checkbox.current) {
         checkbox.current.addEventListener('click', clickHandler)
@@ -300,14 +253,8 @@ export const ListProvider = ({
         handlers.push(() => {
           if (checkbox.current) {
             checkbox.current.removeEventListener('click', clickHandler)
-            checkbox.current.removeEventListener(
-              'mouseout',
-              hoverEnteringHandler,
-            )
-            checkbox.current.removeEventListener(
-              'mousemove',
-              hoverLeavingHandler,
-            )
+            checkbox.current.removeEventListener('mouseout', hoverEnteringHandler)
+            checkbox.current.removeEventListener('mousemove', hoverLeavingHandler)
           }
         })
       }

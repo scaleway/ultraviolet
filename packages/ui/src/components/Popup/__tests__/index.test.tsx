@@ -1,11 +1,9 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
-import { describe, expect, it, vi } from 'vitest'
-
-import { Popup } from '../../index'
-
 import type { ComponentProps } from 'react'
+import { describe, expect, it, vi } from 'vitest'
+import { Popup } from '../../index'
 
 describe('popup', () => {
   it('should render correctly', () =>
@@ -143,35 +141,27 @@ describe('popup', () => {
   })
 
   describe('defined placement', () => {
-    ;[
-      'top',
-      'left',
-      'right',
-      'bottom',
-      'auto',
-      'auto-top',
-      'auto-bottom',
-      'auto-left',
-      'auto-right',
-    ].forEach(placement => {
-      it(`should renders Popup with placement ${placement}`, async () => {
-        renderWithTheme(
-          <Popup
-            debounceDelay={0}
-            placement={placement as ComponentProps<typeof Popup>['placement']}
-            text="test success!"
-          >
-            <p data-testid="children">Hover me</p>
-          </Popup>,
-        )
+    ;['top', 'left', 'right', 'bottom', 'auto', 'auto-top', 'auto-bottom', 'auto-left', 'auto-right'].forEach(
+      placement => {
+        it(`should renders Popup with placement ${placement}`, async () => {
+          renderWithTheme(
+            <Popup
+              debounceDelay={0}
+              placement={placement as ComponentProps<typeof Popup>['placement']}
+              text="test success!"
+            >
+              <p data-testid="children">Hover me</p>
+            </Popup>,
+          )
 
-        const children = screen.getByTestId('children')
-        await userEvent.hover(children)
+          const children = screen.getByTestId('children')
+          await userEvent.hover(children)
 
-        const PopupPortal = screen.getByText('test success!')
-        expect(PopupPortal).toBeVisible()
-      })
-    })
+          const PopupPortal = screen.getByText('test success!')
+          expect(PopupPortal).toBeVisible()
+        })
+      },
+    )
   })
 
   it('should verify accessibility', async () => {

@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const MetaLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const MetaLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="MetaLogo">
     <g clipPath="url(#a)">
       <path
@@ -28,27 +25,13 @@ export const MetaLogo = ({
       />
     </g>
     <defs>
-      <linearGradient
-        id="b"
-        x1="5.469"
-        x2="16.485"
-        y1="9.652"
-        y2="10.209"
-        gradientUnits="userSpaceOnUse"
-      >
+      <linearGradient id="b" x1="5.469" x2="16.485" y1="9.652" y2="10.209" gradientUnits="userSpaceOnUse">
         <stop stopColor="#0064E1" />
         <stop offset=".4" stopColor="#0064E1" />
         <stop offset=".83" stopColor="#0073EE" />
         <stop offset="1" stopColor="#0082FB" />
       </linearGradient>
-      <linearGradient
-        id="c"
-        x1="4.305"
-        x2="4.305"
-        y1="12.345"
-        y2="8.287"
-        gradientUnits="userSpaceOnUse"
-      >
+      <linearGradient id="c" x1="4.305" x2="4.305" y1="12.345" y2="8.287" gradientUnits="userSpaceOnUse">
         <stop stopColor="#0082FB" />
         <stop offset="1" stopColor="#0064E0" />
       </linearGradient>

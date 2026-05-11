@@ -2,28 +2,18 @@
 
 import { AutoFixIcon } from '@ultraviolet/icons/AutoFixIcon'
 import { cn } from '@ultraviolet/utils'
-import {
-  forwardRef,
-  useCallback,
-  useId,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from 'react'
-
+import { forwardRef, useCallback, useId, useImperativeHandle, useRef, useState } from 'react'
+import type { ChangeEventHandler } from 'react'
 import { Button } from '../Button'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
-
 import { BottomText } from './BottomText'
 import { PrefixSuffix } from './PrefixSuffix'
 import { RightIcon } from './RightIcon'
 import { ShowHidePassword } from './ShowHidePassword'
-import { textInputStyle } from './styles.css'
-
 import type { TextInputProps } from './type'
-import type { ChangeEventHandler } from 'react'
+import { textInputStyle } from './styles.css'
 
 /**
  * This component offers an extended input HTML. The component can be controlled or uncontrolled.
@@ -83,8 +73,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
     useImperativeHandle(ref, () => inputRef.current!)
 
     const [isPasswordVisible, setIsPasswordVisible] = useState(false)
-    const computedType =
-      type === 'password' && isPasswordVisible ? 'text' : type
+    const computedType = type === 'password' && isPasswordVisible ? 'text' : type
 
     const onChangeCallback: ChangeEventHandler<HTMLInputElement> = useCallback(
       event => {
@@ -99,13 +88,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
     const computedClearable = clearable && !!computedValue
 
     return (
-      <Stack
-        aria-atomic={ariaAtomic}
-        aria-live={ariaLive}
-        className={className}
-        gap={0.5}
-        role={role}
-      >
+      <Stack aria-atomic={ariaAtomic} aria-live={ariaLive} className={className} gap={0.5} role={role}>
         {label || labelDescription ? (
           <Label
             htmlFor={id ?? localId}
@@ -119,22 +102,14 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
         ) : null}
         <Tooltip text={tooltip}>
           <div
-            className={cn(
-              textInputStyle.inputWrapper,
-              textInputStyle.inputWrapperSizes[size],
-            )}
+            className={cn(textInputStyle.inputWrapper, textInputStyle.inputWrapperSizes[size])}
             data-disabled={disabled}
             data-error={!!error}
             data-has-focus={hasFocus}
             data-readonly={readOnly}
             data-success={!!success}
           >
-            <PrefixSuffix
-              content={prefix}
-              disabled={disabled}
-              size={size}
-              type="prefix"
-            />
+            <PrefixSuffix content={prefix} disabled={disabled} size={size} type="prefix" />
             <input
               aria-invalid={!!error}
               aria-label={ariaLabel}
@@ -183,12 +158,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               size={size}
               success={success}
             />
-            <PrefixSuffix
-              content={suffix}
-              disabled={disabled}
-              size={size}
-              type="suffix"
-            />
+            <PrefixSuffix content={suffix} disabled={disabled} size={size} type="suffix" />
             {type === 'password' ? (
               <ShowHidePassword
                 data-testid={dataTestId}
@@ -199,11 +169,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               />
             ) : null}
             {onRandomize ? (
-              <Stack
-                alignItems="center"
-                className={textInputStyle.ctaSuffix}
-                direction="row"
-              >
+              <Stack alignItems="center" className={textInputStyle.ctaSuffix} direction="row">
                 <Button
                   disabled={disabled}
                   onClick={onRandomize}
@@ -217,12 +183,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             ) : null}
           </div>
         </Tooltip>
-        <BottomText
-          disabled={disabled}
-          error={error}
-          helper={helper}
-          success={success}
-        />
+        <BottomText disabled={disabled} error={error} helper={helper} success={success} />
       </Stack>
     )
   },

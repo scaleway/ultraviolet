@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const VpnConnectionProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const VpnConnectionProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="VpnConnectionProductIcon">
     <g className="sentiment=original, size=xlarge, disabled=false">
       <g className=".Square">

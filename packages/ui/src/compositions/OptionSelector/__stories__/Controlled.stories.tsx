@@ -1,17 +1,15 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { DebianLogo } from '@ultraviolet/icons/logo/DebianLogo'
 import { ProxmoxLogo } from '@ultraviolet/icons/logo/ProxmoxLogo'
 import { UbuntuLogo } from '@ultraviolet/icons/logo/UbuntuLogo'
 import { WindowsLogo } from '@ultraviolet/icons/logo/WindowsLogo'
 import { capitalize } from '@ultraviolet/utils'
 import { useState } from 'react'
-
+import type { ComponentProps } from 'react'
 import { OptionSelector } from '..'
 import { Button } from '../../../components/Button'
 import { Stack } from '../../../components/Stack'
-
 import type { ValueType } from '../__mock__/resources'
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 const options = [
   {
@@ -47,9 +45,7 @@ const makeVersions = (os: string) => [
   },
 ]
 
-export const Controlled: StoryFn<
-  ComponentProps<typeof OptionSelector>
-> = props => {
+export const Controlled: StoryFn<ComponentProps<typeof OptionSelector>> = props => {
   const [value, setValue] = useState<ValueType>({
     first: '',
     second: '',
@@ -85,10 +81,7 @@ export const Controlled: StoryFn<
         <li>Selected OS: {value.first}</li>
         <li>Selected version: {value.second}</li>
       </ul>
-      <Button
-        onClick={() => setValue({ first: options[0].value })}
-        style={{ width: 'fit-content' }}
-      >
+      <Button onClick={() => setValue({ first: options[0].value })} style={{ width: 'fit-content' }}>
         Set first selector value to Ubuntu
       </Button>
     </Stack>

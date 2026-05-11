@@ -1,10 +1,9 @@
 import { Stack } from '@ultraviolet/ui'
 import { CodeEditor } from '@ultraviolet/ui/compositions/CodeEditor'
-import { useController } from 'react-hook-form'
-
-import type { BaseFieldProps } from '../../types'
 import type { ComponentProps } from 'react'
+import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues } from 'react-hook-form'
+import type { BaseFieldProps } from '../../types'
 
 export type CodeEditorFieldProps<
   TFieldValues extends FieldValues,

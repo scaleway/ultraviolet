@@ -2,11 +2,7 @@
 //
 import { appendFileSync, readdirSync, statSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
-
-import {
-  updateDynamicIllustrations,
-  updateWireIllustrations,
-} from './update-components'
+import { updateDynamicIllustrations, updateWireIllustrations } from './update-components'
 
 const ILLUSTRATIONS_DIR = 'packages/illustrations/src/assets'
 const BASE_URL = 'https://assets.scaleway.com/illustrations'
@@ -44,12 +40,7 @@ const updateListIllustrationsCategories = (directory: string) => {
 }
 
 // Add .webp and .svg files to index.ts
-const importIllustration = (
-  directory: string,
-  file: string,
-  output: string,
-  illustrations: string[],
-) => {
+const importIllustration = (directory: string, file: string, output: string, illustrations: string[]) => {
   const parsedFile = path.parse(file)
 
   if (parsedFile.ext === '.webp' || parsedFile.ext === '.svg') {
@@ -59,10 +50,7 @@ const importIllustration = (
     updateListIllustrationsCategories(directory)
 
     illustrations.push(filename)
-    appendFileSync(
-      output,
-      `const ${filename} = \`\${BASE_URL}/${relativePath.replace(/\\/g, '/')}\`\n`,
-    )
+    appendFileSync(output, `const ${filename} = \`\${BASE_URL}/${relativePath.replace(/\\/g, '/')}\`\n`)
   }
 }
 
@@ -99,10 +87,7 @@ const updateIndexes = () => {
   for (const subDir of subDirs) {
     const subDirPath = path.join(ILLUSTRATIONS_DIR, subDir)
 
-    if (
-      statSync(subDirPath).isDirectory() &&
-      !['__stories__', 'components'].includes(subDir)
-    ) {
+    if (statSync(subDirPath).isDirectory() && !['__stories__', 'components'].includes(subDir)) {
       const files = readdirSync(subDirPath)
 
       // Create index for each directory inside the subdirectories
@@ -128,18 +113,12 @@ const exportProducts = () => {
   for (const productDir of productsDirs) {
     const fullPath = path.join(PRODUCTS_DIR, productDir)
     if (statSync(fullPath).isDirectory()) {
-      appendFileSync(
-        `${PRODUCTS_DIR}/index.ts`,
-        `\nimport * as ${productDir} from './${productDir}'`,
-      )
+      appendFileSync(`${PRODUCTS_DIR}/index.ts`, `\nimport * as ${productDir} from './${productDir}'`)
       productExports.push(productDir)
     }
   }
 
-  appendFileSync(
-    `${PRODUCTS_DIR}/index.ts`,
-    `\n\nexport { ${productExports.toString()}}`,
-  )
+  appendFileSync(`${PRODUCTS_DIR}/index.ts`, `\n\nexport { ${productExports.toString()}}`)
 }
 
 updateIndexes()

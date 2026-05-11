@@ -1,7 +1,6 @@
-import { Badge } from '../../Badge'
-
-import type { SelectInput } from '../../SelectInput'
 import type { ComponentProps } from 'react'
+import { Badge } from '../../Badge'
+import type { SelectInput } from '../../SelectInput'
 
 export const mysqlOptions: ComponentProps<typeof SelectInput>['options'] = [
   {
@@ -14,17 +13,16 @@ export const mysqlOptions: ComponentProps<typeof SelectInput>['options'] = [
   },
 ]
 
-export const postgresqlOptions: ComponentProps<typeof SelectInput>['options'] =
-  [
-    {
-      label: 'PostgreSQL 13',
-      value: 'postgresql-13',
-    },
-    {
-      label: 'PostgreSQL 12',
-      value: 'postgresql-12',
-    },
-  ]
+export const postgresqlOptions: ComponentProps<typeof SelectInput>['options'] = [
+  {
+    label: 'PostgreSQL 13',
+    value: 'postgresql-13',
+  },
+  {
+    label: 'PostgreSQL 12',
+    value: 'postgresql-12',
+  },
+]
 
 export const ubuntuOptions: ComponentProps<typeof SelectInput>['options'] = [
   {
@@ -37,9 +35,7 @@ export const ubuntuOptions: ComponentProps<typeof SelectInput>['options'] = [
   },
 ]
 
-export const ubuntuOptionsLegacy: ComponentProps<
-  typeof SelectInput
->['options'] = [
+export const ubuntuOptionsLegacy: ComponentProps<typeof SelectInput>['options'] = [
   {
     label: 'Ubuntu 20.04 Focal Fossa',
     value: 'ubuntu-20.04',

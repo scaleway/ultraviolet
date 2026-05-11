@@ -1,7 +1,5 @@
 import { useMemo } from 'react'
-
 import { Text } from '../Text'
-
 import type { TextInputProps } from './type'
 
 export const BottomText = ({
@@ -35,9 +33,7 @@ export const BottomText = ({
           {error || success || helper}
         </Text>
       ) : null}
-      {!(error || success) && typeof helper !== 'string' && helper
-        ? helper
-        : null}
+      {!(error || success) && typeof helper !== 'string' && helper ? helper : null}
     </>
   )
 }

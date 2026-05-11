@@ -2,18 +2,10 @@
 
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { forwardRef } from 'react'
-
+import type { AnchorHTMLAttributes, CSSProperties, ElementType, ReactNode } from 'react'
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
-
 import { contentCardGroupStyle } from './styles.css'
-
-import type {
-  AnchorHTMLAttributes,
-  CSSProperties,
-  ElementType,
-  ReactNode,
-} from 'react'
 
 type CardProps = {
   title?: string
@@ -28,27 +20,8 @@ type CardProps = {
 }
 
 export const Card = forwardRef<HTMLAnchorElement, CardProps>(
-  (
-    {
-      title,
-      titleAs,
-      subtitle,
-      subtitleAs,
-      description,
-      children,
-      href,
-      target = '_blank',
-      style,
-    },
-    ref,
-  ) => (
-    <a
-      className={contentCardGroupStyle.cardWrapper}
-      href={href}
-      ref={ref}
-      style={style}
-      target={target}
-    >
+  ({ title, titleAs, subtitle, subtitleAs, description, children, href, target = '_blank', style }, ref) => (
+    <a className={contentCardGroupStyle.cardWrapper} href={href} ref={ref} style={style} target={target}>
       <Stack
         alignItems="center"
         className={contentCardGroupStyle.cardContentStack}
@@ -59,22 +32,11 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
         <Stack className={contentCardGroupStyle.customStack} gap="0.5">
           <div>
             {subtitle ? (
-              <Text
-                as={subtitleAs ?? 'h5'}
-                oneLine
-                prominence="weak"
-                sentiment="neutral"
-                variant="caption"
-              >
+              <Text as={subtitleAs ?? 'h5'} oneLine prominence="weak" sentiment="neutral" variant="caption">
                 {subtitle}
               </Text>
             ) : null}
-            <Text
-              as={titleAs ?? 'h3'}
-              oneLine
-              sentiment="neutral"
-              variant="bodyStrong"
-            >
+            <Text as={titleAs ?? 'h3'} oneLine sentiment="neutral" variant="bodyStrong">
               {title}
             </Text>
           </div>

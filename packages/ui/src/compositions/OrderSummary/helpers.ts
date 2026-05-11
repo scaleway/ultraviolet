@@ -1,8 +1,6 @@
 import { useContext } from 'react'
-
 import { multiplier } from './constants'
 import { OrderSummaryContext } from './Provider'
-
 import type {
   CurrencyType,
   ItemsType,
@@ -53,13 +51,10 @@ export const calculatePrice = ({
 }: CalculatePriceProps) => {
   const nonNanTimeAmount = Number.isNaN(timeAmount) ? 1 : timeAmount
   const valueBeforeDiscount =
-    price *
-    (fixedPrice ? 1 : nonNanTimeAmount * multiplier[timeUnit]) *
-    Math.max(amount - amountFree, 0)
+    price * (fixedPrice ? 1 : nonNanTimeAmount * multiplier[timeUnit]) * Math.max(amount - amountFree, 0)
 
   const finalValue =
-    valueBeforeDiscount * (1 - (discount <= 1 ? discount : 0)) -
-    (discount > 1 ? Math.abs(discount) : 0)
+    valueBeforeDiscount * (1 - (discount <= 1 ? discount : 0)) - (discount > 1 ? Math.abs(discount) : 0)
 
   return finalValue
 }
@@ -162,22 +157,14 @@ export const calculateCategoryPrice = (
     default: [number, number]
   } = category.subCategories?.reduce(
     (acc, subCategory) => {
-      const computedPrices = calculateSubCategoryPrice(
-        subCategory,
-        hideTimeUnit,
-        timePeriodAmount,
-        timePeriodUnit,
-      )
+      const computedPrices = calculateSubCategoryPrice(subCategory, hideTimeUnit, timePeriodAmount, timePeriodUnit)
 
       return {
         discounted: [
           acc.discounted[0] + computedPrices.discounted[0],
           acc.discounted[1] + computedPrices.discounted[1],
         ],
-        default: [
-          acc.default[0] + computedPrices.default[0],
-          acc.default[1] + computedPrices.default[1],
-        ],
+        default: [acc.default[0] + computedPrices.default[0], acc.default[1] + computedPrices.default[1]],
       }
     },
     { discounted: [0, 0], default: [0, 0] },
@@ -199,9 +186,7 @@ export const calculateCategoryPrice = (
 
   categoryPrice.default.map(price =>
     Math.max(
-      category.discount && category.discount <= 1
-        ? price * category.discount
-        : price - (category.discount ?? 0),
+      category.discount && category.discount <= 1 ? price * category.discount : price - (category.discount ?? 0),
       0,
     ),
   )
@@ -215,22 +200,12 @@ type DisplayPriceProps = {
   divisor?: number
 }
 
-export const DisplayPrice = ({
-  price,
-  beforeOrAfter,
-  divisor = 1,
-}: DisplayPriceProps) => {
-  const { localeFormat, currency, fractionDigits } =
-    useContext(OrderSummaryContext)
+export const DisplayPrice = ({ price, beforeOrAfter, divisor = 1 }: DisplayPriceProps) => {
+  const { localeFormat, currency, fractionDigits } = useContext(OrderSummaryContext)
   const withDiscount = beforeOrAfter === 'after' ? 'WithDiscount' : ''
 
   return price.totalPrice === price.maxPrice
-    ? formatNumber(
-        price[`totalPrice${withDiscount}`] / divisor,
-        localeFormat,
-        currency,
-        fractionDigits ?? 2,
-      )
+    ? formatNumber(price[`totalPrice${withDiscount}`] / divisor, localeFormat, currency, fractionDigits ?? 2)
     : `${formatNumber(
         price[`totalPrice${withDiscount}`] / divisor,
         localeFormat,
@@ -265,16 +240,9 @@ export const computeCategoriesPrice = (
     }
   }, {})
 
-export const computeTotalPrice = (
-  categoriesPrice: PriceType,
-  discount: number,
-  timePeriodUnit: TimeUnit,
-) => {
+export const computeTotalPrice = (categoriesPrice: PriceType, discount: number, timePeriodUnit: TimeUnit) => {
   const price = Object.values(categoriesPrice).reduce(
-    (acc, categoryPrice) => [
-      acc[0] + categoryPrice.totalPrice,
-      acc[1] + categoryPrice.maxPrice,
-    ],
+    (acc, categoryPrice) => [acc[0] + categoryPrice.totalPrice, acc[1] + categoryPrice.maxPrice],
     [0, 0],
   )
 
@@ -289,15 +257,13 @@ export const computeTotalPrice = (
   const computedPrice = {
     maxPrice: Math.max(price[1], 0),
     maxPriceWithDiscount: Math.max(
-      priceDiscounted[1] * (discount <= 1 ? 1 - discount : 1) -
-        (discount > 1 ? Math.abs(discount) : 0),
+      priceDiscounted[1] * (discount <= 1 ? 1 - discount : 1) - (discount > 1 ? Math.abs(discount) : 0),
       0,
     ),
     timeUnit: timePeriodUnit,
     totalPrice: Math.max(price[0], 0),
     totalPriceWithDiscount: Math.max(
-      priceDiscounted[0] * (discount <= 1 ? 1 - discount : 1) -
-        (discount > 1 ? Math.abs(discount) : 0),
+      priceDiscounted[0] * (discount <= 1 ? 1 - discount : 1) - (discount > 1 ? Math.abs(discount) : 0),
       0,
     ),
   }

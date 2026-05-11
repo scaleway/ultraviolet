@@ -2,11 +2,9 @@
 'use client'
 
 import { useContext } from 'react'
-
+import type { ReactNode, RefObject } from 'react'
 import { ChipContext } from './ChipContext'
 import { chipStyle } from './styles.css'
-
-import type { ReactNode, RefObject } from 'react'
 
 type ChipIconType = {
   /**
@@ -17,11 +15,7 @@ type ChipIconType = {
   'data-testid'?: string
 }
 
-export const ChipIcon = ({
-  icon,
-  onClick,
-  'data-testid': dataTestId,
-}: ChipIconType) => {
+export const ChipIcon = ({ icon, onClick, 'data-testid': dataTestId }: ChipIconType) => {
   const context = useContext(ChipContext)
 
   if (!context) {

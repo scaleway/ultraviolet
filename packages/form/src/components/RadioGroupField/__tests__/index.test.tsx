@@ -2,18 +2,12 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, vi, it } from 'vitest'
-
 import { RadioGroupField } from '..'
 
 describe('radioField', () => {
   it('should render correctly checked', async () => {
     const { asFragment } = renderWithForm(
-      <RadioGroupField
-        legend="Label"
-        name="radio"
-        onChange={() => {}}
-        value="value-1"
-      >
+      <RadioGroupField legend="Label" name="radio" onChange={() => {}} value="value-1">
         <RadioGroupField.Radio label="Radio 1" value="value-1" />
         <RadioGroupField.Radio label="Radio 2" value="value-2" />
       </RadioGroupField>,
@@ -33,12 +27,7 @@ describe('radioField', () => {
     const onChange = vi.fn(() => {})
 
     const { asFragment } = renderWithForm(
-      <RadioGroupField
-        legend="RadioGroupField events"
-        name="test"
-        onChange={onChange}
-        value="value-2"
-      >
+      <RadioGroupField legend="RadioGroupField events" name="test" onChange={onChange} value="value-2">
         <RadioGroupField.Radio label="Radio 1" value="value-1" />
         <RadioGroupField.Radio label="Radio 2" value="value-2" />
       </RadioGroupField>,

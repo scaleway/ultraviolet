@@ -1,39 +1,30 @@
 'use client'
 
 import { ResponsiveBar } from '@nivo/bar'
-import { useTheme } from '@ultraviolet/themes'
-import { useCallback } from 'react'
-
-import { getLegendColor } from '../../helpers/legend'
-import { getNivoTheme } from '../../helpers/nivoTheme'
-
-import { BarChartTooltip } from './Tooltip'
-
 import type { BarDatum, BarSvgProps, BarTooltipProps } from '@nivo/bar'
 import type { Box, DatumValue, ValueFormat } from '@nivo/core'
+import { useTheme } from '@ultraviolet/themes'
 import type { theme as UVTheme } from '@ultraviolet/themes'
+import { useCallback } from 'react'
 import type { ComponentProps, CSSProperties } from 'react'
+import { getLegendColor } from '../../helpers/legend'
+import { getNivoTheme } from '../../helpers/nivoTheme'
+import { BarChartTooltip } from './Tooltip'
 
 type Formatter = ValueFormat<DatumValue>
 
-type TickSpec = NonNullable<
-  ComponentProps<typeof ResponsiveBar>['axisBottom']
->['tickValues']
+type TickSpec = NonNullable<ComponentProps<typeof ResponsiveBar>['axisBottom']>['tickValues']
 
 type BarChartProps = {
   height?: string | number
   margin?: Box
   data?: BarDatum[]
-  axisFormatters?: Partial<
-    Record<'bottom' | 'left' | 'right' | 'top', Formatter>
-  >
+  axisFormatters?: Partial<Record<'bottom' | 'left' | 'right' | 'top', Formatter>>
   pointFormatters?: Partial<Record<'x' | 'y', Formatter>>
   tickValues?: Partial<Record<'bottom' | 'left' | 'right' | 'top', TickSpec>>
   keys?: string[]
   className?: string
-  tooltipFunction?: (
-    props: BarTooltipProps<BarDatum>,
-  ) => ComponentProps<typeof BarChartTooltip>
+  tooltipFunction?: (props: BarTooltipProps<BarDatum>) => ComponentProps<typeof BarChartTooltip>
   chartProps?: Partial<BarSvgProps<BarDatum>> & {
     minValue?: number
     maxValue?: number
@@ -69,27 +60,15 @@ export const BarChart = ({
 
   const tooltip = useCallback(
     (props: BarTooltipProps<BarDatum>) => {
-      const { indexValue, formattedValue, color } = tooltipFunction
-        ? tooltipFunction(props)
-        : props
+      const { indexValue, formattedValue, color } = tooltipFunction ? tooltipFunction(props) : props
 
-      return (
-        <BarChartTooltip
-          color={color}
-          formattedValue={formattedValue}
-          indexValue={indexValue.toString()}
-        />
-      )
+      return <BarChartTooltip color={color} formattedValue={formattedValue} indexValue={indexValue.toString()} />
     },
     [tooltipFunction],
   )
 
   return (
-    <div
-      className={className}
-      data-testid={dataTestId}
-      style={{ height, ...style }}
-    >
+    <div className={className} data-testid={dataTestId} style={{ height, ...style }}>
       <ResponsiveBar
         axisBottom={{
           format: axisFormatters?.bottom,

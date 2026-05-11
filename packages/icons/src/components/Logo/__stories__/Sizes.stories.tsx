@@ -1,8 +1,6 @@
-import { Stack, Text } from '@ultraviolet/ui'
-
-import { OutlookLogo } from '../__generated__'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { Stack, Text } from '@ultraviolet/ui'
+import { OutlookLogo } from '../__generated__'
 
 export const Sizes: StoryFn<typeof OutlookLogo> = props => (
   <Stack gap={1}>

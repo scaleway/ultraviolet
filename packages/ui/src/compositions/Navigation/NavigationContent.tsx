@@ -3,26 +3,18 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars, setElementVars } from '@vanilla-extract/dynamic'
 import { useEffect, useRef } from 'react'
-
 import { Stack } from '../../components/Stack'
-
-import {
-  ANIMATION_DURATION,
-  NAVIGATION_COLLASPED_WIDTH,
-  NAVIGATION_MAX_WIDTH,
-  NAVIGATION_MIN_WIDTH,
-} from './constants'
+import { ANIMATION_DURATION, NAVIGATION_COLLASPED_WIDTH, NAVIGATION_MAX_WIDTH, NAVIGATION_MIN_WIDTH } from './constants'
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { useNavigation } from './NavigationProvider'
+import type { NavigationProps } from './types'
 import { navigationStyle } from './styles.css'
 import {
   widthNavigationContainer,
   widthNavigationContainerDuration,
   widthNavigationContainerExpanded,
 } from './variables.css'
-
-import type { NavigationProps } from './types'
 
 function clamp(min: number, value: number, max: number) {
   return Math.min(max, Math.max(min, value))
@@ -40,20 +32,10 @@ export const NavigationContent = ({
   const context = useNavigation()
 
   if (!context) {
-    throw new Error(
-      'Navigation should be inside NavigationProvider to use it properly.',
-    )
+    throw new Error('Navigation should be inside NavigationProvider to use it properly.')
   }
 
-  const {
-    setWidth,
-    width,
-    expanded,
-    toggleExpand,
-    navigationRef,
-    allowNavigationResize,
-    shouldAnimate,
-  } = context
+  const { setWidth, width, expanded, toggleExpand, navigationRef, allowNavigationResize, shouldAnimate } = context
 
   const sliderRef = useRef<HTMLDivElement | null>(null)
   const contentRef = useRef<HTMLDivElement | null>(null)
@@ -68,11 +50,7 @@ export const NavigationContent = ({
     const mouseMove = (event: MouseEvent) => {
       if (prevX !== undefined) {
         const navWidth = navRect?.width ?? 0
-        const newWidth = clamp(
-          NAVIGATION_MIN_WIDTH,
-          navWidth + (event.clientX - prevX),
-          NAVIGATION_MAX_WIDTH,
-        )
+        const newWidth = clamp(NAVIGATION_MIN_WIDTH, navWidth + (event.clientX - prevX), NAVIGATION_MAX_WIDTH)
 
         if (navigationRef.current && expanded) {
           navigationRef.current.style.width = `${newWidth}px`
@@ -82,8 +60,7 @@ export const NavigationContent = ({
         }
 
         shouldCollapseOnMouseUp = newWidth <= NAVIGATION_MIN_WIDTH
-        shouldExpandOnMouseUp =
-          !expanded && newWidth >= NAVIGATION_COLLASPED_WIDTH
+        shouldExpandOnMouseUp = !expanded && newWidth >= NAVIGATION_COLLASPED_WIDTH
       }
     }
 
@@ -137,23 +114,10 @@ export const NavigationContent = ({
     return () => {
       sliderRefCurrent?.removeEventListener('mousedown', mousedown)
     }
-  }, [
-    expanded,
-    navigationRef,
-    onToggleExpand,
-    onWidthResize,
-    setWidth,
-    toggleExpand,
-    shouldAnimate,
-    width,
-  ])
+  }, [expanded, navigationRef, onToggleExpand, onWidthResize, setWidth, toggleExpand, shouldAnimate, width])
 
   return (
-    <nav
-      className={cn(className, navigationStyle.navigation)}
-      data-testid={dataTestId}
-      id={id}
-    >
+    <nav className={cn(className, navigationStyle.navigation)} data-testid={dataTestId} id={id}>
       <div
         className={navigationStyle.container()}
         ref={navigationRef}
@@ -165,25 +129,13 @@ export const NavigationContent = ({
       >
         {logo ? <Header logo={logo} /> : null}
         <div className={cn(navigationStyle.contentContainer)}>
-          <Stack
-            className={navigationStyle.content({ collapsed: !expanded })}
-            gap={0.25}
-            ref={contentRef}
-          >
+          <Stack className={navigationStyle.content({ collapsed: !expanded })} gap={0.25} ref={contentRef}>
             {children}
           </Stack>
-          {allowNavigationResize ? (
-            <Footer contentRef={contentRef} onToggleExpand={onToggleExpand} />
-          ) : null}
+          {allowNavigationResize ? <Footer contentRef={contentRef} onToggleExpand={onToggleExpand} /> : null}
         </div>
       </div>
-      {allowNavigationResize ? (
-        <div
-          className={navigationStyle.slider}
-          data-testid="slider"
-          ref={sliderRef}
-        />
-      ) : null}
+      {allowNavigationResize ? <div className={navigationStyle.slider} data-testid="slider" ref={sliderRef} /> : null}
     </nav>
   )
 }

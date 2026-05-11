@@ -1,11 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { SelectInput } from '..'
 import { Stack } from '../../Stack'
-
 import { dataGrouped, OptionalInfo4 } from './resources'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const OnChange: StoryFn<typeof SelectInput> = args => {
   const [values, setValues] = useState<string[]>([])
@@ -64,11 +61,7 @@ export const OnChange: StoryFn<typeof SelectInput> = args => {
           value={values}
         />
         Selected values:
-        <ul>
-          {values.length > 0
-            ? values.map(val => <li key={val}>{val}</li>)
-            : null}
-        </ul>
+        <ul>{values.length > 0 ? values.map(val => <li key={val}>{val}</li>) : null}</ul>
       </Stack>
       <SelectInput
         {...args}
@@ -96,8 +89,7 @@ OnChange.args = {
 OnChange.parameters = {
   docs: {
     description: {
-      story:
-        'You can pass a function to `OnChange` to deal with selection of options.',
+      story: 'You can pass a function to `OnChange` to deal with selection of options.',
     },
   },
 }

@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { SelectableCard } from '..'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Type: StoryFn = args => {
   const [value, onChange] = useState('label-3')
@@ -37,9 +35,7 @@ export const Type: StoryFn = args => {
           checked={value2['label-1']}
           label="Checkbox 1"
           name="label-1"
-          onChange={event =>
-            onChange2({ ...value2, 'label-1': !event.currentTarget.checked })
-          }
+          onChange={event => onChange2({ ...value2, 'label-1': !event.currentTarget.checked })}
           type="checkbox"
           value="label-1"
         />
@@ -48,9 +44,7 @@ export const Type: StoryFn = args => {
           checked={value2['label-2']}
           label="Checkbox 2"
           name="label-2"
-          onChange={event =>
-            onChange2({ ...value2, 'label-2': !event.currentTarget.checked })
-          }
+          onChange={event => onChange2({ ...value2, 'label-2': !event.currentTarget.checked })}
           type="checkbox"
           value="label-2"
         />
@@ -62,8 +56,7 @@ export const Type: StoryFn = args => {
 Type.parameters = {
   docs: {
     description: {
-      story:
-        'Two types exists for this component, it can either be a checkbox or a radio.',
+      story: 'Two types exists for this component, it can either be a checkbox or a radio.',
     },
   },
 }

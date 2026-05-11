@@ -10,9 +10,4 @@ const inferenceKeyvisual = `${BASE_URL}/products/inference/inference-keyvisual.w
 const inferenceOriginal = `${BASE_URL}/products/inference/inference-original.webp`
 const inferenceWire = `${BASE_URL}/products/inference/inference-wire.svg`
 
-export {
-  inferenceContent,
-  inferenceKeyvisual,
-  inferenceOriginal,
-  inferenceWire,
-}
+export { inferenceContent, inferenceKeyvisual, inferenceOriginal, inferenceWire }

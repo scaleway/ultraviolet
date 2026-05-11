@@ -1,7 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-
 import { VerificationCode } from '..'
 
 const pasteEventWithValue = (selector: HTMLElement, value: string) =>
@@ -16,16 +15,12 @@ describe('verificationCode', () => {
   })
 
   it('renders correctly with initial value and placeholder and 6 fields', () => {
-    const { asFragment } = renderWithTheme(
-      <VerificationCode fields={6} initialValue="13" placeholder="0037" />,
-    )
+    const { asFragment } = renderWithTheme(<VerificationCode fields={6} initialValue="13" placeholder="0037" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should handle keyDown and special key cases and focus/change events', () => {
-    const { asFragment } = renderWithTheme(
-      <VerificationCode fields={4} initialValue="1" type="number" />,
-    )
+    const { asFragment } = renderWithTheme(<VerificationCode fields={4} initialValue="1" type="number" />)
 
     const input0 = screen.getByTestId('0')
     fireEvent.keyDown(input0, { keyCode: 8 }) // press backspace
@@ -47,41 +42,31 @@ describe('verificationCode', () => {
   })
 
   it('should handle paste with no overflowing values', () => {
-    const { asFragment } = renderWithTheme(
-      <VerificationCode fields={4} initialValue="1" type="number" />,
-    )
+    const { asFragment } = renderWithTheme(<VerificationCode fields={4} initialValue="1" type="number" />)
     pasteEventWithValue(screen.getByDisplayValue('1'), '1234')
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should handle and replace non number with "" when type is number', () => {
-    const { asFragment } = renderWithTheme(
-      <VerificationCode fields={4} initialValue="1" />,
-    )
+    const { asFragment } = renderWithTheme(<VerificationCode fields={4} initialValue="1" />)
     pasteEventWithValue(screen.getByDisplayValue('1'), '1a34')
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should handle paste with overflowing values', () => {
-    const { asFragment } = renderWithTheme(
-      <VerificationCode fields={4} initialValue="12" />,
-    )
+    const { asFragment } = renderWithTheme(<VerificationCode fields={4} initialValue="12" />)
     pasteEventWithValue(screen.getByDisplayValue('1'), '123456')
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should handle paste with overflowing values at different index than 0', () => {
-    const { asFragment } = renderWithTheme(
-      <VerificationCode fields={4} initialValue="12" />,
-    )
+    const { asFragment } = renderWithTheme(<VerificationCode fields={4} initialValue="12" />)
     pasteEventWithValue(screen.getByDisplayValue('2'), '123456')
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should handle paste when type is not number', () => {
-    const { asFragment } = renderWithTheme(
-      <VerificationCode fields={6} initialValue="12" type="text" />,
-    )
+    const { asFragment } = renderWithTheme(<VerificationCode fields={6} initialValue="12" type="text" />)
     pasteEventWithValue(screen.getByDisplayValue('2'), 'h23a*6')
     expect(asFragment()).toMatchSnapshot()
   })
@@ -91,13 +76,7 @@ describe('verificationCode', () => {
     const onComplete = vi.fn()
 
     renderWithTheme(
-      <VerificationCode
-        fields={4}
-        initialValue="1"
-        onChange={onChange}
-        onComplete={onComplete}
-        type="number"
-      />,
+      <VerificationCode fields={4} initialValue="1" onChange={onChange} onComplete={onComplete} type="number" />,
     )
 
     pasteEventWithValue(screen.getByDisplayValue('1'), '12')
@@ -111,9 +90,7 @@ describe('verificationCode', () => {
   })
 
   it('should handle error', () => {
-    const { asFragment } = renderWithTheme(
-      <VerificationCode error fields={4} initialValue="1" type="number" />,
-    )
+    const { asFragment } = renderWithTheme(<VerificationCode error fields={4} initialValue="1" type="number" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -158,10 +135,7 @@ describe('verificationCode', () => {
 
   it('render correctly with labelDescription', () => {
     const { asFragment } = renderWithTheme(
-      <VerificationCode
-        label="test"
-        labelDescription={<span>description</span>}
-      />,
+      <VerificationCode label="test" labelDescription={<span>description</span>} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })

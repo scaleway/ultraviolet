@@ -7,15 +7,12 @@ import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import { LightBulbIcon } from '@ultraviolet/icons/LightBulbIcon'
 import { cn } from '@ultraviolet/utils'
 import { useState } from 'react'
-
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
-import { alertStyle } from './styles.css'
-
 import type { AlertSentiment } from './type'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import { alertStyle } from './styles.css'
 
 const sentimentIcons = {
   danger: AlertCircleIcon,
@@ -86,12 +83,7 @@ export const Alert = ({
         justifyContent="space-between"
         wrap
       >
-        <Stack
-          alignItems="flex-start"
-          direction="row"
-          flex="1 1 auto"
-          gap={size === 'small' ? 1 : 2}
-        >
+        <Stack alignItems="flex-start" direction="row" flex="1 1 auto" gap={size === 'small' ? 1 : 2}>
           <Icon
             aria-hidden="true"
             className={alertStyle.icon}
@@ -108,13 +100,7 @@ export const Alert = ({
             wrap
           >
             {title ? (
-              <Text
-                as="span"
-                sentiment={sentiment}
-                variant={
-                  size === 'small' ? 'bodySmallStronger' : 'bodyStronger'
-                }
-              >
+              <Text as="span" sentiment={sentiment} variant={size === 'small' ? 'bodySmallStronger' : 'bodyStronger'}>
                 {title}
               </Text>
             ) : null}

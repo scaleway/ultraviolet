@@ -1,10 +1,7 @@
-import { format } from 'date-fns'
-
-import { BarChart } from '..'
-
-import { barChartSimpleData } from './mockData'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { format } from 'date-fns'
+import { BarChart } from '..'
+import { barChartSimpleData } from './mockData'
 
 export const FormattedValuesAndTooltip: StoryFn<typeof BarChart> = props => (
   <BarChart
@@ -25,8 +22,7 @@ export const FormattedValuesAndTooltip: StoryFn<typeof BarChart> = props => (
 FormattedValuesAndTooltip.parameters = {
   docs: {
     description: {
-      story:
-        'Use `axisFormatters` and `tooltipFunction` to customize the axis and tooltip.',
+      story: 'Use `axisFormatters` and `tooltipFunction` to customize the axis and tooltip.',
     },
   },
 }

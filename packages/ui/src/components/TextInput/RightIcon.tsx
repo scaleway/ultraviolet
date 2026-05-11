@@ -1,21 +1,12 @@
 import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-
+import type { ChangeEvent, ChangeEventHandler, Dispatch, RefObject, SetStateAction } from 'react'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
 import { Stack } from '../Stack'
-
-import { textInputStyle } from './styles.css'
-
 import type { TextInputProps } from './type'
-import type {
-  ChangeEvent,
-  ChangeEventHandler,
-  Dispatch,
-  RefObject,
-  SetStateAction,
-} from 'react'
+import { textInputStyle } from './styles.css'
 
 export const RightIcon = ({
   success,
@@ -28,10 +19,7 @@ export const RightIcon = ({
   inputRef,
   setLocalValue,
   onChangeCallback,
-}: Pick<
-  TextInputProps,
-  'success' | 'error' | 'loading' | 'disabled' | 'size'
-> & {
+}: Pick<TextInputProps, 'success' | 'error' | 'loading' | 'disabled' | 'size'> & {
   computedClearable: boolean
   computedValue?: string
   inputRef?: RefObject<HTMLInputElement | null>
@@ -39,12 +27,7 @@ export const RightIcon = ({
   onChangeCallback: ChangeEventHandler<HTMLInputElement>
 }) =>
   success || error || loading || computedClearable ? (
-    <Stack
-      alignItems="center"
-      className={textInputStyle.stateStack}
-      direction="row"
-      gap={1}
-    >
+    <Stack alignItems="center" className={textInputStyle.stateStack} direction="row" gap={1}>
       {computedClearable ? (
         <Button
           aria-label="clear value"
@@ -67,12 +50,8 @@ export const RightIcon = ({
           <CloseIcon size="small" />
         </Button>
       ) : null}
-      {success ? (
-        <CheckCircleIcon disabled={disabled} sentiment="success" size="small" />
-      ) : null}
-      {error ? (
-        <AlertCircleIcon disabled={disabled} sentiment="danger" size="small" />
-      ) : null}
+      {success ? <CheckCircleIcon disabled={disabled} sentiment="success" size="small" /> : null}
+      {error ? <AlertCircleIcon disabled={disabled} sentiment="danger" size="small" /> : null}
       {loading && !disabled ? <Loader active size="small" /> : null}
     </Stack>
   ) : null

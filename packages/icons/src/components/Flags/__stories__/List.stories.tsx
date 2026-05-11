@@ -1,8 +1,6 @@
-import { Snippet, Stack, Text } from '@ultraviolet/ui'
-
-import * as Flags from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { Snippet, Stack, Text } from '@ultraviolet/ui'
+import * as Flags from '..'
 
 export const List: StoryFn = props => (
   <Stack gap={1}>

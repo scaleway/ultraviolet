@@ -10,8 +10,7 @@ Success.args = {
 Success.parameters = {
   docs: {
     description: {
-      story:
-        'You can use `success` prop to indicate a success with the current value',
+      story: 'You can use `success` prop to indicate a success with the current value',
     },
   },
 }

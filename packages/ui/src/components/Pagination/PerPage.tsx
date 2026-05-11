@@ -1,10 +1,9 @@
 'use client'
 
+import type { Dispatch, SetStateAction } from 'react'
 import { SelectInput } from '../SelectInput'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
-import type { Dispatch, SetStateAction } from 'react'
 
 const optionsItemsPerPage = [
   {

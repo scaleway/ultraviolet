@@ -1,12 +1,9 @@
 'use client'
 
-import { assignInlineVars } from '@vanilla-extract/dynamic'
-
-import { Text } from '../Text'
-
-import { colorLine, lineChartStyle } from './styles.css'
-
 import type { LineSeries, Point } from '@nivo/line'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import { Text } from '../Text'
+import { colorLine, lineChartStyle } from './styles.css'
 
 type LineChartTooltipProps = {
   point: Point<LineSeries>
@@ -14,11 +11,7 @@ type LineChartTooltipProps = {
   yFormatted?: string
 }
 
-export const LineChartTooltip = ({
-  point,
-  xFormatted,
-  yFormatted,
-}: LineChartTooltipProps) => (
+export const LineChartTooltip = ({ point, xFormatted, yFormatted }: LineChartTooltipProps) => (
   <div className={lineChartStyle.lineTooltipContainer}>
     <div>
       <span
@@ -29,20 +22,10 @@ export const LineChartTooltip = ({
       />
     </div>
     <div>
-      <Text
-        as="div"
-        prominence="stronger"
-        sentiment="neutral"
-        variant="bodyStronger"
-      >
+      <Text as="div" prominence="stronger" sentiment="neutral" variant="bodyStronger">
         {yFormatted ?? point.data.yFormatted}
       </Text>
-      <Text
-        as="div"
-        prominence="stronger"
-        sentiment="neutral"
-        variant="bodySmall"
-      >
+      <Text as="div" prominence="stronger" sentiment="neutral" variant="bodySmall">
         {xFormatted ?? point.data.xFormatted}
       </Text>
     </div>

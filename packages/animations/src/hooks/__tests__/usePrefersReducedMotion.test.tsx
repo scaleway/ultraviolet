@@ -1,6 +1,5 @@
 import { renderHook } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
-
 import { usePrefersReducedMotion } from '../usePrefersReducedMotion'
 
 describe(usePrefersReducedMotion, () => {
@@ -41,9 +40,6 @@ describe(usePrefersReducedMotion, () => {
 
     unmount()
 
-    expect(mockRemoveListener).toHaveBeenCalledWith(
-      'change',
-      expect.any(Function),
-    )
+    expect(mockRemoveListener).toHaveBeenCalledWith('change', expect.any(Function))
   })
 })

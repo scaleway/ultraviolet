@@ -64,10 +64,7 @@ type DefaultProps = {
   defaultScale?: boolean
 
   'data-testid'?: string
-} & Pick<
-  HTMLAttributes<HTMLInputElement>,
-  'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className' | 'style'
->
+} & Pick<HTMLAttributes<HTMLInputElement>, 'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className' | 'style'>
 
 type SingleProps = {
   /**

@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { SearchInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Standalone: StoryFn<typeof SearchInput> = ({ ...args }) => {
   const [value, setValue] = useState('')
@@ -13,12 +11,7 @@ export const Standalone: StoryFn<typeof SearchInput> = ({ ...args }) => {
   return (
     <div style={{ height: '120px' }}>
       <Stack direction="row" gap={1}>
-        <SearchInput
-          {...args}
-          onClose={() => {}}
-          onSearch={setValue}
-          placeholder="Type something"
-        />
+        <SearchInput {...args} onClose={() => {}} onSearch={setValue} placeholder="Type something" />
         <Button onClick={() => setSubmit(value)}>Search</Button>
       </Stack>
       <div style={{ marginTop: '20px' }}>

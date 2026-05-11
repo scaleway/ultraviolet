@@ -1,5 +1,5 @@
-import type { SelectInput } from '../../components/SelectInput'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import type { SelectInput } from '../../components/SelectInput'
 
 export type SelectorOption = {
   content: ReactNode
@@ -42,11 +42,7 @@ export type OptionSelectorProps = {
   'aria-label'?: string
   error?: string | boolean
   required?: boolean
-  onChange?: (values: {
-    first?: string
-    second?: string
-    changingValue: 'first' | 'second'
-  }) => void
+  onChange?: (values: { first?: string; second?: string; changingValue: 'first' | 'second' }) => void
   value?: { first?: string; second?: string }
   /** Hide the second selector when the first does not have a selected value */
   hideWhenEmpty?: boolean

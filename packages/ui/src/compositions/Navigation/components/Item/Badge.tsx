@@ -1,7 +1,6 @@
 import { Badge } from '../../../../components/Badge'
-import { navigationStyle } from '../../styles.css'
-
 import type { ItemExpandedType } from '../ComponentsTypes'
+import { navigationStyle } from '../../styles.css'
 
 export const ItemBadge = ({
   badgeText,

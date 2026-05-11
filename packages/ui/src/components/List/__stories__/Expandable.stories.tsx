@@ -1,12 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { List } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-
 import { columns, data } from './resources'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Expandable: StoryFn<typeof List> = props => {
   const [expanded, setExpanded] = useState(false)
@@ -28,9 +25,7 @@ export const Expandable: StoryFn<typeof List> = props => {
           >
             <List.Cell>
               {planet.name}
-              {planet.id === 'mercury'
-                ? ' (A disabled row cannot be expanded)'
-                : ''}
+              {planet.id === 'mercury' ? ' (A disabled row cannot be expanded)' : ''}
             </List.Cell>
             <List.Cell>{planet.perihelion}AU</List.Cell>
             <List.Cell>{planet.aphelion}AU</List.Cell>

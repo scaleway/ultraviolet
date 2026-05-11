@@ -4,13 +4,7 @@ export * from './components'
 export * from './components/styles'
 
 export type { UltravioletUITheme } from './theme'
-export {
-  darkTheme,
-  default as theme,
-  extendTheme,
-  ThemeProvider,
-  useTheme,
-} from './theme'
+export { darkTheme, default as theme, extendTheme, ThemeProvider, useTheme } from './theme'
 export {
   bounce,
   bounceDefault,

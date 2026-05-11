@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest'
-
 import { maxDateValidator } from '../maxDate'
 
 const today = new Date()

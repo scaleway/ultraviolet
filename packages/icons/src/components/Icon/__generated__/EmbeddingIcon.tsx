@@ -6,15 +6,11 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const EmbeddingIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const EmbeddingIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="EmbeddingIcon">
-    {typeof props.size === 'string' &&
-    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
+    {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M2.5 1.75C2.91421 1.75 3.25 2.08579 3.25 2.5V16.75H17.5C17.9142 16.75 18.25 17.0858 18.25 17.5C18.25 17.9142 17.9142 18.25 17.5 18.25H2.5C2.08579 18.25 1.75 17.9142 1.75 17.5V2.5C1.75 2.08579 2.08579 1.75 2.5 1.75Z" />
         <path d="M14 10C15.3807 10 16.5 11.1193 16.5 12.5C16.5 13.8807 15.3807 15 14 15C12.6193 15 11.5 13.8807 11.5 12.5C11.5 11.1193 12.6193 10 14 10Z" />

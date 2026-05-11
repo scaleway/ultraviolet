@@ -1,19 +1,16 @@
 'use client'
 
 import { VerificationCode } from '@ultraviolet/ui'
-import { useController } from 'react-hook-form'
-
-import { useErrors } from '../../providers'
-
-import type { BaseFieldProps } from '../../types'
 import type { ComponentProps } from 'react'
+import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues } from 'react-hook-form'
+import { useErrors } from '../../providers'
+import type { BaseFieldProps } from '../../types'
 
 type VerificationCodeFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof VerificationCode>, 'value'>
+> = BaseFieldProps<TFieldValues, TFieldName> & Omit<ComponentProps<typeof VerificationCode>, 'value'>
 
 export const VerificationCodeField = <
   TFieldValues extends FieldValues,
@@ -54,10 +51,7 @@ export const VerificationCodeField = <
   return (
     <VerificationCode
       {...props}
-      error={getError(
-        { label: errorLabel ?? label ?? 'verification-code-field' },
-        error,
-      )}
+      error={getError({ label: errorLabel ?? label ?? 'verification-code-field' }, error)}
       fields={fields}
       inputId={inputId}
       label={label}

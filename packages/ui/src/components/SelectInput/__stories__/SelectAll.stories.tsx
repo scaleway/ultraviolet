@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { SelectInput } from '..'
 import { Stack } from '../../Stack'
-
 import { dataGrouped } from './resources'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const SelectAll: StoryFn<typeof SelectInput> = args => (
   <Stack gap={5} width="50%">
@@ -11,8 +9,7 @@ export const SelectAll: StoryFn<typeof SelectInput> = args => (
       {...args}
       label="SelectAll"
       selectAll={{
-        description:
-          'You can click here to select every option. This description is optional',
+        description: 'You can click here to select every option. This description is optional',
         label: 'Select All',
       }}
     />
@@ -49,8 +46,7 @@ SelectAll.decorators = [
 SelectAll.parameters = {
   docs: {
     description: {
-      story:
-        'It will detect when the data is grouped and display the options accordingly',
+      story: 'It will detect when the data is grouped and display the options accordingly',
     },
   },
 }

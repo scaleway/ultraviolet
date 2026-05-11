@@ -1,14 +1,11 @@
 'use client'
 
 import { useContext, useEffect } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
-
 import { Data, nextStep } from './helper'
 import { steppedListCardStyle } from './styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type SteppedListContentProps = {
   subHeader?: ReactNode
@@ -26,15 +23,7 @@ export const SteppedListContent = ({
   completed = false,
   style,
 }: SteppedListContentProps) => {
-  const {
-    setDone,
-    currentStep,
-    done,
-    setCurrentStep,
-    numberOfSteps,
-    setHidden,
-    onClickHide,
-  } = useContext(Data)
+  const { setDone, currentStep, done, setCurrentStep, numberOfSteps, setHidden, onClickHide } = useContext(Data)
 
   useEffect(() => {
     setDone(prevDone => {

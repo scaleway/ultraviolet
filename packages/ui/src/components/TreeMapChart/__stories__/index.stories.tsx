@@ -1,6 +1,5 @@
-import { TreeMapChart } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { TreeMapChart } from '..'
 
 export default {
   component: TreeMapChart,

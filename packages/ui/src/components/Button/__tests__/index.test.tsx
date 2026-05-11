@@ -5,7 +5,6 @@ import { PencilOutlineIcon } from '@ultraviolet/icons/PencilOutlineIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { forwardRef } from 'react'
 import { describe, expect, it, vi } from 'vitest'
-
 import { Button } from '..'
 import { SENTIMENTS } from '../../../theme'
 import { SIZE_KEY } from '../constants'
@@ -17,14 +16,13 @@ const MockOnClick = () => {}
 const EXTENDED_SENTIMENTS = [...SENTIMENTS, 'black', 'white'] as const
 
 // Mock component simulating Next.js Link
-const MockNextLink = forwardRef<
-  HTMLAnchorElement,
-  React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }
->(({ href, children, ...props }, ref) => (
-  <a href={href} ref={ref} {...props}>
-    {children}
-  </a>
-))
+const MockNextLink = forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }>(
+  ({ href, children, ...props }, ref) => (
+    <a href={href} ref={ref} {...props}>
+      {children}
+    </a>
+  ),
+)
 MockNextLink.displayName = 'MockNextLink'
 
 describe('button', () => {
@@ -33,12 +31,7 @@ describe('button', () => {
       EXTENDED_SENTIMENTS.forEach(sentiment => {
         it(`render ${variant}&${sentiment}`, async () => {
           const { asFragment } = renderWithTheme(
-            <Button
-              disabled
-              onClick={MockOnClick}
-              sentiment={sentiment}
-              variant={variant}
-            >
+            <Button disabled onClick={MockOnClick} sentiment={sentiment} variant={variant}>
               Hello
             </Button>,
           )
@@ -48,12 +41,7 @@ describe('button', () => {
         })
         it(`render ${variant}&${sentiment} disabled`, () =>
           shouldMatchSnapshot(
-            <Button
-              disabled
-              onClick={MockOnClick}
-              sentiment={sentiment}
-              variant={variant}
-            >
+            <Button disabled onClick={MockOnClick} sentiment={sentiment} variant={variant}>
               Hello
             </Button>,
           ))
@@ -163,9 +151,7 @@ describe('button', () => {
   describe('render prop', () => {
     describe('element form', () => {
       it('render correctly with render prop', () =>
-        shouldMatchSnapshot(
-          <Button render={<MockNextLink href="/about" />}>About</Button>,
-        ))
+        shouldMatchSnapshot(<Button render={<MockNextLink href="/about" />}>About</Button>))
 
       it('render correctly with render prop and different variants', () =>
         shouldMatchSnapshot(
@@ -214,10 +200,7 @@ describe('button', () => {
 
       it('merges className correctly with render prop', () => {
         renderWithTheme(
-          <Button
-            data-testid="button"
-            render={<MockNextLink className="custom-class" href="/about" />}
-          >
+          <Button data-testid="button" render={<MockNextLink className="custom-class" href="/about" />}>
             About
           </Button>,
         )
@@ -266,19 +249,13 @@ describe('button', () => {
 
     describe('function form', () => {
       it('render correctly with render function', () =>
-        shouldMatchSnapshot(
-          <Button render={props => <MockNextLink {...props} href="/about" />}>
-            About
-          </Button>,
-        ))
+        shouldMatchSnapshot(<Button render={props => <MockNextLink {...props} href="/about" />}>About</Button>))
 
       it('passes props to render function', () => {
         renderWithTheme(
           <Button
             className="button-class"
-            render={props => (
-              <MockNextLink {...props} data-testid="button" href="/about" />
-            )}
+            render={props => <MockNextLink {...props} data-testid="button" href="/about" />}
           >
             About
           </Button>,
@@ -291,10 +268,7 @@ describe('button', () => {
       it('forwards ref correctly with render function', () => {
         const ref = vi.fn()
         renderWithTheme(
-          <Button
-            ref={ref}
-            render={props => <MockNextLink {...props} href="/about" />}
-          >
+          <Button ref={ref} render={props => <MockNextLink {...props} href="/about" />}>
             About
           </Button>,
         )

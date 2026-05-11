@@ -2,14 +2,11 @@
 
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { useContext } from 'react'
-
+import type { ReactNode } from 'react'
 import { StepList } from '../../components/StepList'
 import { Text } from '../../components/Text'
-
 import { Data } from './helper'
 import { steppedListCardStyle } from './styles.css'
-
-import type { ReactNode } from 'react'
 
 type StepProps = {
   /**
@@ -31,13 +28,7 @@ type StepProps = {
   'data-testid'?: string
 }
 
-export const SteppedList = ({
-  stepNumber,
-  stepTitle,
-  completed,
-  stepIcon,
-  'data-testid': dataTestId,
-}: StepProps) => {
+export const SteppedList = ({ stepNumber, stepTitle, completed, stepIcon, 'data-testid': dataTestId }: StepProps) => {
   const containerData = useContext(Data)
   const active = containerData.currentStep === stepNumber
 
@@ -51,11 +42,7 @@ export const SteppedList = ({
       sentiment="primary"
       size="small"
     >
-      <Text
-        as="h3"
-        className={steppedListCardStyle.stepTitle}
-        variant={active ? 'bodyStrong' : 'body'}
-      >
+      <Text as="h3" className={steppedListCardStyle.stepTitle} variant={active ? 'bodyStrong' : 'body'}>
         {stepTitle}
       </Text>
     </StepList.Item>
@@ -69,11 +56,7 @@ export const SteppedList = ({
       sentiment={active ? 'primary' : undefined}
       size="small"
     >
-      <Text
-        as="h3"
-        className={steppedListCardStyle.stepTitle}
-        variant={active ? 'bodyStrong' : 'body'}
-      >
+      <Text as="h3" className={steppedListCardStyle.stepTitle} variant={active ? 'bodyStrong' : 'body'}>
         {stepTitle}
       </Text>
     </StepList.Item>

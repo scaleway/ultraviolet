@@ -1,7 +1,6 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stepper } from '..'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Separator: StoryFn<typeof Stepper> = args => (
   <Stack direction="column" gap={3}>
@@ -27,8 +26,7 @@ Separator.args = {
 Separator.parameters = {
   docs: {
     description: {
-      story:
-        'Steps can be separated by a separator or not. By default there is a separator.',
+      story: 'Steps can be separated by a separator or not. By default there is a separator.',
     },
   },
 }

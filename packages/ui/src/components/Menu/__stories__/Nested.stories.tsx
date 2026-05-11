@@ -1,22 +1,14 @@
-import { Menu } from '..'
-
-import { DefaultDisclosure } from './Template.stories'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { Menu } from '..'
+import { DefaultDisclosure } from './Template.stories'
 
 export const Nested: StoryFn<typeof Menu> = ({ ...props }) => (
   <Menu {...props} disclosure={DefaultDisclosure} searchable>
     <Menu.Item borderless>Power on</Menu.Item>
-    <Menu
-      disclosure={<Menu.Item>SubMenu click</Menu.Item>}
-      triggerMethod="click"
-    >
+    <Menu disclosure={<Menu.Item>SubMenu click</Menu.Item>} triggerMethod="click">
       <Menu.Item>hi!</Menu.Item>
     </Menu>
-    <Menu
-      disclosure={<Menu.Item>SubMenu hover</Menu.Item>}
-      triggerMethod="hover"
-    >
+    <Menu disclosure={<Menu.Item>SubMenu hover</Menu.Item>} triggerMethod="hover">
       <Menu.Item>hello</Menu.Item>
     </Menu>
     {/**

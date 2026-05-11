@@ -1,15 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
+import type { ComponentProps } from 'react'
 import { OrderSummary } from '..'
 import { Badge } from '../../../components/Badge'
 import { RadioGroup } from '../../../components/RadioGroup'
 import { SelectInput } from '../../../components/SelectInput'
 import { Stack } from '../../../components/Stack'
-
 import { categoryAZ, categoryM2, categoryOptions } from './productsExample'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 const mockItems = [categoryAZ, categoryM2, categoryOptions]
 
@@ -88,8 +85,7 @@ Children.args = {
 Children.parameters = {
   docs: {
     description: {
-      story:
-        'The `children` prop can be used to add information in the non-scrollable area, before the final price.',
+      story: 'The `children` prop can be used to add information in the non-scrollable area, before the final price.',
     },
   },
 }

@@ -1,13 +1,10 @@
 import { EyeIcon } from '@ultraviolet/icons/EyeIcon'
 import { EyeOffIcon } from '@ultraviolet/icons/EyeOffIcon'
-
+import type { Dispatch, SetStateAction } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
-
-import { textInputStyle } from './styles.css'
-
 import type { TextInputProps } from './type'
-import type { Dispatch, SetStateAction } from 'react'
+import { textInputStyle } from './styles.css'
 
 export const ShowHidePassword = ({
   size,
@@ -19,11 +16,7 @@ export const ShowHidePassword = ({
   setIsPasswordVisible: Dispatch<SetStateAction<boolean>>
   isPasswordVisible: boolean
 }) => (
-  <Stack
-    alignItems="center"
-    className={textInputStyle.ctaSuffix}
-    direction="row"
-  >
+  <Stack alignItems="center" className={textInputStyle.ctaSuffix} direction="row">
     <Button
       aria-label={isPasswordVisible ? 'hide' : 'show'}
       data-testid={dataTestId ? `${dataTestId}-visibility-button` : undefined}

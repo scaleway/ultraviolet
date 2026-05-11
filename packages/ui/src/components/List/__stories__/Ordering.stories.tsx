@@ -1,10 +1,7 @@
-import { useMemo, useState } from 'react'
-
-import { List } from '..'
-
-import { data as sourceData } from './resources'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { useMemo, useState } from 'react'
+import { List } from '..'
+import { data as sourceData } from './resources'
 
 export const Ordering: StoryFn = args => {
   const [currentOrder, setCurrentOrder] = useState<{
@@ -34,16 +31,14 @@ export const Ordering: StoryFn = args => {
         {
           isOrdered: currentOrder.columnId === 'name',
           label: 'Solar system Planet',
-          onOrder: newOrder =>
-            setCurrentOrder({ columnId: 'name', order: newOrder }),
+          onOrder: newOrder => setCurrentOrder({ columnId: 'name', order: newOrder }),
           orderDirection: currentOrder.order,
         },
         {
           info: 'Nearest to the Sun',
           isOrdered: currentOrder.columnId === 'perihelion',
           label: 'Perihelion',
-          onOrder: newOrder =>
-            setCurrentOrder({ columnId: 'perihelion', order: newOrder }),
+          onOrder: newOrder => setCurrentOrder({ columnId: 'perihelion', order: newOrder }),
           orderDirection: currentOrder.order,
           width: '200px',
         },

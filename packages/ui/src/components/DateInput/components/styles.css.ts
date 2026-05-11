@@ -2,10 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 
 export const capitalizedText = style({ textTransform: 'capitalize' })
-export const capitalizedTextDay = style([
-  capitalizedText,
-  { display: 'inline-block' },
-])
+export const capitalizedTextDay = style([capitalizedText, { display: 'inline-block' }])
 
 export const dayMonth = style({
   color: theme.colors.neutral.textWeak,

@@ -2,18 +2,16 @@
 
 import { Toggle } from '@ultraviolet/ui'
 import { useMemo } from 'react'
-import { useController } from 'react-hook-form'
-
-import { useErrors } from '../../providers'
-
-import type { BaseFieldProps } from '../../types'
 import type { ComponentProps } from 'react'
+import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useErrors } from '../../providers'
+import type { BaseFieldProps } from '../../types'
 
-type ToggleFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
+type ToggleFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = Omit<
+  BaseFieldProps<TFieldValues, TFieldName>,
+  'label'
+> &
   Omit<ComponentProps<typeof Toggle>, 'value' | 'onChange'> & {
     parse?: (value: boolean) => PathValue<TFieldValues, TFieldName>
     format?: (value: PathValue<TFieldValues, TFieldName>) => boolean
@@ -89,9 +87,7 @@ export const ToggleField = <
         } else {
           field.onChange(event)
         }
-        onChange?.(
-          event.target.checked as PathValue<TFieldValues, Path<TFieldValues>>,
-        )
+        onChange?.(event.target.checked as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       onFocus={event => {
         onFocus?.(event)

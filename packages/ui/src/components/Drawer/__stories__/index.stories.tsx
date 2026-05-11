@@ -1,6 +1,5 @@
-import { Drawer } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Drawer } from '..'
 
 export default {
   component: Drawer,

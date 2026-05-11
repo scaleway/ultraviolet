@@ -3,31 +3,16 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useMemo } from 'react'
-
+import type { KeyboardEvent, MouseEvent as ReactMouseEvent, ReactNode } from 'react'
 import { Button } from '../../Button'
 import { Link } from '../../Link'
 import { Text } from '../../Text'
 import { breadcrumbsStyle } from '../styles.css'
-
 import { maxWidthVar, minWidthVar } from './styles.css'
-
-import type {
-  KeyboardEvent,
-  MouseEvent as ReactMouseEvent,
-  ReactNode,
-} from 'react'
 
 type ItemProps = {
   children: ReactNode
-  'aria-current'?:
-    | boolean
-    | 'false'
-    | 'true'
-    | 'page'
-    | 'step'
-    | 'location'
-    | 'date'
-    | 'time'
+  'aria-current'?: boolean | 'false' | 'true' | 'page' | 'step' | 'location' | 'date' | 'time'
   /**
    * Make the component act a `Link` tag
    */
@@ -88,10 +73,7 @@ export const Item = ({
     return (
       <Text
         as="div"
-        className={cn(
-          breadcrumbsStyle.content,
-          breadcrumbsStyle.contentBreadcrumbsText,
-        )}
+        className={cn(breadcrumbsStyle.content, breadcrumbsStyle.contentBreadcrumbsText)}
         variant="bodySmallStrong"
       >
         {children}
@@ -102,11 +84,7 @@ export const Item = ({
   return (
     <li
       aria-current={ariaCurrent}
-      className={cn(
-        className,
-        breadcrumbsStyle.itemContainer({ clickable: !!onClick }),
-        breadcrumbsStyle.item,
-      )}
+      className={cn(className, breadcrumbsStyle.itemContainer({ clickable: !!onClick }), breadcrumbsStyle.item)}
       style={assignInlineVars({
         [minWidthVar]: minWidth?.toString(),
         [maxWidthVar]: maxWidth?.toString(),

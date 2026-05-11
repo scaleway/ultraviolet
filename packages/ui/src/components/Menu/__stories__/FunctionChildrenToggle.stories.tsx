@@ -1,12 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Menu } from '..'
 import { Button } from '../../Button'
 
-import type { StoryFn } from '@storybook/react-vite'
-
 export const FunctionChildrenToggle: StoryFn<typeof Menu> = () => (
-  <Menu disclosure={<Button>Menu </Button>}>
-    {({ toggle }) => <Menu.Item onClick={toggle}>Menu 1</Menu.Item>}
-  </Menu>
+  <Menu disclosure={<Button>Menu </Button>}>{({ toggle }) => <Menu.Item onClick={toggle}>Menu 1</Menu.Item>}</Menu>
 )
 
 FunctionChildrenToggle.parameters = {

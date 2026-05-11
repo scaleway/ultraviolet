@@ -1,6 +1,5 @@
-import { conversationStyle } from '../styles.css'
-
 import type { CSSProperties, ReactNode } from 'react'
+import { conversationStyle } from '../styles.css'
 
 export const MessageInfos = ({
   children,

@@ -1,10 +1,8 @@
+import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-
 import { OptionSelectorField } from '..'
 import { Form, useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
-
-import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: OptionSelectorField,
@@ -26,12 +24,7 @@ export default {
       } = methods.formState
 
       return (
-        <Form
-          errors={mockErrors}
-          methods={methods}
-          name="OptionSelectorField"
-          onSubmit={() => {}}
-        >
+        <Form errors={mockErrors} methods={methods} name="OptionSelectorField" onSubmit={() => {}}>
           <Stack gap={2}>
             <ChildStory />
             <Stack gap={1}>

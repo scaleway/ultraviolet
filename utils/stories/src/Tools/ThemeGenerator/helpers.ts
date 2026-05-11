@@ -24,11 +24,5 @@ export const shadeHexColor: ShadeHexColorType = (color, percent) => {
     .slice(1)}`
 }
 
-export const generateShadeContrast = (
-  shadeKey: string,
-  value: string,
-  index: number,
-) =>
-  Number(shadeKey) < 900
-    ? shadeHexColor(value, (1 / 15) * (index + 1))
-    : shadeHexColor(value, -(1 / 15) * (index + 1))
+export const generateShadeContrast = (shadeKey: string, value: string, index: number) =>
+  Number(shadeKey) < 900 ? shadeHexColor(value, (1 / 15) * (index + 1)) : shadeHexColor(value, -(1 / 15) * (index + 1))

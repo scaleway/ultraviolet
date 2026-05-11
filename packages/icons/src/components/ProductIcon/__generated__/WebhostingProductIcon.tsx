@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const WebhostingProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const WebhostingProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="WebhostingProductIcon">
     <g className="Web-Hosting">
       <g className=".Square">
@@ -38,11 +35,7 @@ export const WebhostingProductIcon = ({
         <path d="M32 24.084a1 1 0 0 1 .993.883l.007.117v13.964a1 1 0 0 1-1.993.117L31 39.048V25.084a1 1 0 0 1 1-1m-1 20.11V53l.007.117A1 1 0 0 0 33 53v-8.806l-.13.002-.87.004q-.508 0-1-.006" />
         <path d="M32 24c4.607 0 8 6.787 8 15a1 1 0 1 1-2 0c0-7.25-2.875-13-6-13s-6 5.75-6 13a1 1 0 1 1-2 0c0-8.213 3.393-15 8-15m-5.524 19.988C27.438 48.818 29.706 52 32 52s4.562-3.18 5.524-8.012a38 38 0 0 0 2.078-.237C38.565 49.756 35.642 54 32 54s-6.565-4.246-7.602-10.249q.981.141 2.078.237" />
       </g>
-      <path
-        fill="#4F0599"
-        d="M41 15h5.498a1 1 0 0 1 .116 1.993l-.116.007H41a1 1 0 0 1-.117-1.993z"
-        className="fill"
-      />
+      <path fill="#4F0599" d="M41 15h5.498a1 1 0 0 1 .116 1.993l-.116.007H41a1 1 0 0 1-.117-1.993z" className="fill" />
     </g>
   </Icon>
 )

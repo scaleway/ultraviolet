@@ -1,14 +1,7 @@
+import type { ComponentProps, CSSProperties, Dispatch, JSX, ReactNode, SetStateAction } from 'react'
 import type { Alert } from '../../components/Alert'
 import type { Text } from '../../components/Text'
 import type EstimateCostLocales from './locales/en'
-import type {
-  ComponentProps,
-  CSSProperties,
-  Dispatch,
-  JSX,
-  ReactNode,
-  SetStateAction,
-} from 'react'
 
 export type LocalesType = Record<keyof typeof EstimateCostLocales, string>
 
@@ -100,17 +93,11 @@ export type EstimateCostProps = {
   /**
    * Content that will be shown on the left side of the overlay.
    */
-  OverlayLeft?: (props: {
-    children: ReactNode
-    disabled?: boolean
-  }) => JSX.Element
+  OverlayLeft?: (props: { children: ReactNode; disabled?: boolean }) => JSX.Element
   /**
    * Content that will be shown on the left side of the overlay.
    */
-  OverlayRight?: (props: {
-    children?: ReactNode
-    disabled?: boolean
-  }) => JSX.Element
+  OverlayRight?: (props: { children?: ReactNode; disabled?: boolean }) => JSX.Element
   /**
    * Time unit to use on the overlay. It can be different from estimate cost.
    */

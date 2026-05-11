@@ -45,8 +45,7 @@ export default function Home() {
           </Stack>
         </Alert>
         <Text as="p" variant="body">
-          Ultraviolet is a powerful and flexible UI library for building modern
-          web applications.
+          Ultraviolet is a powerful and flexible UI library for building modern web applications.
         </Text>
         <Text as="p" variant="body">
           Ultraviolet works with Next.js app router by providing{' '}

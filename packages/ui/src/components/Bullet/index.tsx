@@ -1,14 +1,11 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-
-import { Tooltip } from '../Tooltip'
-
-import { bulletStyle } from './styles.css'
-
-import type { SENTIMENTS } from '../../theme'
-import type { PROMINENCES, SIZES } from './constants'
 import type { CSSProperties, ReactNode } from 'react'
+import type { SENTIMENTS } from '../../theme'
+import { Tooltip } from '../Tooltip'
+import type { PROMINENCES, SIZES } from './constants'
+import { bulletStyle } from './styles.css'
 
 type ProminenceType = keyof typeof PROMINENCES
 
@@ -42,10 +39,7 @@ export const Bullet = ({
 }: BulletProps) => (
   <Tooltip id={tooltipBaseId} text={tooltip}>
     <div
-      className={cn(
-        className,
-        bulletStyle.bullet({ disabled, prominence, sentiment, size }),
-      )}
+      className={cn(className, bulletStyle.bullet({ disabled, prominence, sentiment, size }))}
       data-testid={dataTestId}
       style={style}
     >

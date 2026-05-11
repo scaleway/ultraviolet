@@ -2,23 +2,13 @@
 
 import { useTheme } from '@ultraviolet/themes'
 import { cn, renderElement } from '@ultraviolet/utils'
+import type { RenderProp } from '@ultraviolet/utils'
 import { forwardRef, useMemo } from 'react'
-
+import type { AriaRole, ButtonHTMLAttributes, CSSProperties, MouseEventHandler, ReactNode, Ref } from 'react'
 import { Loader } from '../Loader'
 import { Tooltip } from '../Tooltip'
-
 import { buttonStyle } from './styles.css'
-
 import type { ButtonVariants } from './styles.css'
-import type { RenderProp } from '@ultraviolet/utils'
-import type {
-  AriaRole,
-  ButtonHTMLAttributes,
-  CSSProperties,
-  MouseEventHandler,
-  ReactNode,
-  Ref,
-} from 'react'
 
 type CommonProps = {
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type']
@@ -151,17 +141,12 @@ export const Button = forwardRef<Element, BaseButtonProps>(
 
     const content = (
       <>
-        {isLoading ? (
-          <Loader active sentiment={computedSentimentLoader} size="small" />
-        ) : null}
+        {isLoading ? <Loader active sentiment={computedSentimentLoader} size="small" /> : null}
         {children}
       </>
     )
 
-    const computedClassName = cn(
-      className,
-      buttonStyle.button({ disabled, fullWidth, sentiment, size, variant }),
-    )
+    const computedClassName = cn(className, buttonStyle.button({ disabled, fullWidth, sentiment, size, variant }))
 
     // render prop: render custom element with Button styling
     if (render) {

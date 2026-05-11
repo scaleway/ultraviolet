@@ -2,16 +2,13 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-
+import type { InputHTMLAttributes, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { CheckboxGroupContext } from './Context'
 import { CheckboxGroupCheckbox } from './SingleCheckbox'
 import { checkboxGroupStyle } from './styles.css'
-
-import type { InputHTMLAttributes, ReactNode } from 'react'
 
 type CheckboxGroupProps = {
   legend?: string
@@ -59,19 +56,12 @@ const CheckboxGroup = ({
   return (
     <CheckboxGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset
-          className={cn(className, checkboxGroupStyle.fieldset)}
-          style={style}
-        >
+        <fieldset className={cn(className, checkboxGroupStyle.fieldset)} style={style}>
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>
                 {legend ? (
-                  <Label
-                    as="legend"
-                    labelDescription={legendDescription}
-                    required={required}
-                  >
+                  <Label as="legend" labelDescription={legendDescription} required={required}>
                     {legend}
                   </Label>
                 ) : null}
@@ -93,12 +83,7 @@ const CheckboxGroup = ({
           </Stack>
         </fieldset>
         {helper ? (
-          <Text
-            as="span"
-            prominence="weak"
-            sentiment="neutral"
-            variant="caption"
-          >
+          <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
             {helper}
           </Text>
         ) : null}

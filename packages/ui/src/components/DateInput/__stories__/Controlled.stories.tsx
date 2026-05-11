@@ -1,28 +1,19 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { DateInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 
-import type { StoryFn } from '@storybook/react-vite'
-
 export const Controlled: StoryFn = args => {
-  const [value, setValue] = useState<
-    Date | Date[] | [Date | null, Date | null] | null
-  >(new Date('December 17, 1995 03:24:00'))
+  const [value, setValue] = useState<Date | Date[] | [Date | null, Date | null] | null>(
+    new Date('December 17, 1995 03:24:00'),
+  )
 
   return (
     <Stack gap={2}>
-      <DateInput
-        {...args}
-        label="Date"
-        onChange={setValue}
-        value={value as Date}
-      />
+      <DateInput {...args} label="Date" onChange={setValue} value={value as Date} />
       Selected date : {value?.toString()}
-      <Button onClick={() => setValue(new Date('December 26, 1995 03:24:00'))}>
-        Set date to 1995-12-26
-      </Button>
+      <Button onClick={() => setValue(new Date('December 26, 1995 03:24:00'))}>Set date to 1995-12-26</Button>
     </Stack>
   )
 }

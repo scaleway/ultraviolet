@@ -1,8 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { recipe } from '@vanilla-extract/recipes'
-
 import { SENTIMENTS } from '../../theme'
-
 import { PROMINENCES, SIZES } from './constants'
 
 const TEXT_VARIANT = {
@@ -14,18 +12,12 @@ const TEXT_VARIANT = {
 
 type ProminenceType = keyof typeof PROMINENCES
 
-function getBulletStyle(
-  sentiment: (typeof SENTIMENTS)[number],
-  prominence: 'default' | 'strong',
-) {
+function getBulletStyle(sentiment: (typeof SENTIMENTS)[number], prominence: 'default' | 'strong') {
   if (sentiment === 'neutral') {
     return {
       background: theme.colors.neutral.background,
       border: `1px solid ${theme.colors.neutral.border}`,
-      color:
-        prominence === 'strong'
-          ? theme.colors.neutral.textStrong
-          : theme.colors.neutral.text,
+      color: prominence === 'strong' ? theme.colors.neutral.textStrong : theme.colors.neutral.text,
     }
   }
   const text = `text${PROMINENCES[prominence]}` as const
@@ -72,16 +64,12 @@ const bullet = recipe({
       default: {},
       strong: {},
     },
-    sentiment: Object.fromEntries(
-      Object.keys(SENTIMENTS).map(sentiment => [sentiment, {}]),
-    ),
+    sentiment: Object.fromEntries(Object.keys(SENTIMENTS).map(sentiment => [sentiment, {}])),
     size: Object.fromEntries(
       Object.keys(SIZES).map(size => [
         size,
         {
-          fontSize:
-            theme.typography[TEXT_VARIANT[size as keyof typeof TEXT_VARIANT]]
-              .fontSize,
+          fontSize: theme.typography[TEXT_VARIANT[size as keyof typeof TEXT_VARIANT]].fontSize,
           height: theme.sizing[SIZES[size as keyof typeof SIZES]],
           width: theme.sizing[SIZES[size as keyof typeof SIZES]],
         },

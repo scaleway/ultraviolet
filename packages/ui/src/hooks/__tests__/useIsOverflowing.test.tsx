@@ -1,13 +1,10 @@
 import { renderHook, waitFor } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
-
 import { useIsOverflowing } from '../useIsOverflowing'
 
 describe(useIsOverflowing, () => {
   it('should be false with no overflow', async () => {
-    const { result } = renderHook(() =>
-      useIsOverflowing({ current: document.createElement('div') }),
-    )
+    const { result } = renderHook(() => useIsOverflowing({ current: document.createElement('div') }))
     await waitFor(() => {
       expect(result.current).toBe(false)
     })
@@ -15,9 +12,7 @@ describe(useIsOverflowing, () => {
 
   it('should be false with no overflow and callback at false too', async () => {
     const callback = vi.fn()
-    const { result } = renderHook(() =>
-      useIsOverflowing({ current: document.createElement('div') }, callback),
-    )
+    const { result } = renderHook(() => useIsOverflowing({ current: document.createElement('div') }, callback))
     await waitFor(() => {
       expect(result.current).toBe(false)
     })
@@ -69,24 +64,17 @@ describe(useIsOverflowing, () => {
   })
 
   it('should cleanup event listener', () => {
-    const { unmount } = renderHook(() =>
-      useIsOverflowing({ current: document.createElement('div') }),
-    )
+    const { unmount } = renderHook(() => useIsOverflowing({ current: document.createElement('div') }))
 
     const removeEventListenerSpy = vi.spyOn(window, 'removeEventListener')
     unmount()
 
-    expect(removeEventListenerSpy).toHaveBeenCalledWith(
-      'resize',
-      expect.any(Function),
-    )
+    expect(removeEventListenerSpy).toHaveBeenCalledWith('resize', expect.any(Function))
     removeEventListenerSpy.mockRestore()
   })
 
   it('should handle undefined ref', async () => {
-    const { result } = renderHook(() =>
-      useIsOverflowing({ current: undefined }),
-    )
+    const { result } = renderHook(() => useIsOverflowing({ current: undefined }))
 
     await waitFor(() => {
       expect(result.current).toBe(false)

@@ -1,19 +1,16 @@
 'use client'
 
 import { OptionSelector } from '@ultraviolet/ui/compositions/OptionSelector'
-import { useController } from 'react-hook-form'
-
-import { useErrors } from '../../providers'
-
-import type { BaseFieldProps } from '../../types'
 import type { ComponentProps } from 'react'
+import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues } from 'react-hook-form'
+import { useErrors } from '../../providers'
+import type { BaseFieldProps } from '../../types'
 
 type OptionSelectorFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof OptionSelector>, 'value'>
+> = BaseFieldProps<TFieldValues, TFieldName> & Omit<ComponentProps<typeof OptionSelector>, 'value'>
 
 export const OptionSelectorField = <
   TFieldValues extends FieldValues,
@@ -57,10 +54,7 @@ export const OptionSelectorField = <
   return (
     <OptionSelector
       aria-label={ariaLabel}
-      error={getError(
-        { label: errorLabel ?? label ?? ariaLabel ?? name },
-        error,
-      )}
+      error={getError({ label: errorLabel ?? label ?? ariaLabel ?? name }, error)}
       name={field.name}
       onChange={val => {
         field.onChange({ first: val.first, second: val.second })

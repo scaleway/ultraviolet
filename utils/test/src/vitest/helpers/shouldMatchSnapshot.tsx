@@ -1,7 +1,6 @@
 import { render } from '@testing-library/react'
-import { expect } from 'vitest'
-
 import type { ReactNode } from 'react'
+import { expect } from 'vitest'
 
 export const makeShouldMatchSnapshot = (
   children: ReactNode,

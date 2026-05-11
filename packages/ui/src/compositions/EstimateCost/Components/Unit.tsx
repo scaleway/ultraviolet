@@ -1,14 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-
+import type { CSSProperties } from 'react'
 import { NumberInput } from '../../../components/NumberInput'
 import { useOverlay } from '../OverlayContext'
-import { estimateCostStyle } from '../styles.css'
-
 import { Regular } from './Regular'
-
-import type { CSSProperties } from 'react'
+import { estimateCostStyle } from '../styles.css'
 
 type UnitProps = {
   amount?: number
@@ -18,13 +15,7 @@ type UnitProps = {
   style?: CSSProperties
 }
 
-export const Unit = ({
-  amount,
-  itemCallback,
-  getAmountValue,
-  unit,
-  style,
-}: UnitProps) => {
+export const Unit = ({ amount, itemCallback, getAmountValue, unit, style }: UnitProps) => {
   const { isOverlay } = useOverlay()
   const [capacity, setCapacity] = useState(amount === 0 ? undefined : amount)
 
@@ -45,8 +36,7 @@ export const Unit = ({
         controls={false}
         name="capacity"
         onChange={capacityText => {
-          const newCapacity =
-            Number(capacityText) < 0 ? 0 : Number(capacityText)
+          const newCapacity = Number(capacityText) < 0 ? 0 : Number(capacityText)
           setCapacity(newCapacity)
           itemCallback?.(newCapacity, true)
           getAmountValue?.(capacity)

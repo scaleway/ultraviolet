@@ -1,6 +1,5 @@
-import { List } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { List } from '..'
 
 export default {
   component: List,

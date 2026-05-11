@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
-
+import type { ComponentProps } from 'react'
 import { UnitInputField } from '..'
 import { Submit } from '../..'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 const optionsSelect = [
   {
@@ -21,9 +19,7 @@ const optionsSelect = [
   },
 ]
 
-export const Template: StoryFn<
-  ComponentProps<typeof UnitInputField>
-> = args => (
+export const Template: StoryFn<ComponentProps<typeof UnitInputField>> = args => (
   <Stack gap="1">
     <UnitInputField {...args} />
     <Submit>Submit</Submit>

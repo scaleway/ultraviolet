@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Table } from '..'
 import { Stack, Text } from '../..'
-
 import { columns, data } from './resources'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const combos = [
   { bordered: false, id: 1, stripped: false },
@@ -17,16 +15,9 @@ export const Style: StoryFn = args => (
     {combos.map(combo => (
       <Stack gap={1} key={combo.id}>
         <Text as="h6" variant="headingSmall">
-          {combo.stripped ? '✅' : '❌'} Stripped |{' '}
-          {combo.bordered ? '✅' : '❌'} Bordered
+          {combo.stripped ? '✅' : '❌'} Stripped | {combo.bordered ? '✅' : '❌'} Bordered
         </Text>
-        <Table
-          {...args}
-          bordered={combo.bordered}
-          columns={columns}
-          expandable
-          stripped={combo.stripped}
-        >
+        <Table {...args} bordered={combo.bordered} columns={columns} expandable stripped={combo.stripped}>
           <Table.Body>
             {data.slice(0, 3).map(movie => (
               <Table.Row
@@ -54,8 +45,7 @@ export const Style: StoryFn = args => (
 Style.parameters = {
   docs: {
     description: {
-      story:
-        'You can customize the Table with two props `stripped` and `bordered`.',
+      story: 'You can customize the Table with two props `stripped` and `bordered`.',
     },
   },
 }

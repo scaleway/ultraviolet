@@ -6,12 +6,9 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
-export const IpFailoverProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const IpFailoverProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="IpFailoverProductIcon">
     <g className="IP-Failover">
       <g className=".Fill">

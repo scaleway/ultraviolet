@@ -44,6 +44,9 @@ importers:
       '@playwright/test':
         specifier: 1.59.1
         version: 1.59.1
+      '@scaleway/oxfmt-config':
+        specifier: 1.1.0
+        version: 1.1.0(oxfmt@0.47.0)
       '@scaleway/oxlint-config':
         specifier: 0.1.13
         version: 0.1.13(oxlint@1.62.0(oxlint-tsgolint@0.22.1))
@@ -3122,6 +3125,11 @@ packages:
     resolution: {integrity: sha512-7wafArqq/fSVy0epmpE0RN6e7foOO5EctgG94UBY26Fq2vWN9eJ2Nm1vE8vX+CPBiKZpm4M/Fc45WCKJG75KVQ==}
     engines: {node: '>=20.x'}
 
+  '@scaleway/oxfmt-config@1.1.0':
+    resolution: {integrity: sha512-3lXu+TprOlwi3Xejk//H+GGMqp/JEY4/p0dqlCOlMivpnJiy2yqm3JABtgJZs22odWxU2PUugOHx4ZXuydvS9Q==}
+    peerDependencies:
+      oxfmt: '>=0.45.0'
+
   '@scaleway/oxlint-config@0.1.13':
     resolution: {integrity: sha512-LairEiD+WbPYdlOowTcXW6UQCO1028F1uAOXIbcL4GCtHG6A//xfW9Wwb1luW6sRa3OfoG7l1kLBFrfll/SOcg==}
     peerDependencies:
@@ -4486,6 +4494,10 @@ packages:
 
   deep-object-diff@1.1.9:
     resolution: {integrity: sha512-Rn+RuwkmkDwCi2/oXOFS9Gsr5lJZu/yTGpK7wAaAIE75CC+LCGEZHpY6VQJa/RoJcrmaA/docWJZvYohlNkWPA==}
+
+  deepmerge-ts@7.1.5:
+    resolution: {integrity: sha512-HOJkrhaYsweh+W+e74Yn7YStZOilkoPb6fycpwNLKzSPtruFs48nYis0zy5yJz1+ktUhHxoRDJ27RQAWLIJVJw==}
+    engines: {node: '>=16.0.0'}
 
   deepmerge@4.3.1:
     resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
@@ -9543,6 +9555,11 @@ snapshots:
 
   '@scaleway/fuzzy-search@1.0.2': {}
 
+  '@scaleway/oxfmt-config@1.1.0(oxfmt@0.47.0)':
+    dependencies:
+      deepmerge-ts: 7.1.5
+      oxfmt: 0.47.0
+
   '@scaleway/oxlint-config@0.1.13(oxlint@1.62.0(oxlint-tsgolint@0.22.1))':
     dependencies:
       oxlint: 1.62.0(oxlint-tsgolint@0.22.1)
@@ -11114,6 +11131,8 @@ snapshots:
   deep-extend@0.6.0: {}
 
   deep-object-diff@1.1.9: {}
+
+  deepmerge-ts@7.1.5: {}
 
   deepmerge@4.3.1: {}
 

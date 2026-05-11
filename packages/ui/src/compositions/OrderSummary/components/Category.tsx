@@ -1,14 +1,12 @@
 import { AttachIcon } from '@ultraviolet/icons/AttachIcon'
 import { useContext } from 'react'
-
 import { NumberInput } from '../../../components/NumberInput'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
 import { DisplayPrice } from '../helpers'
 import { OrderSummaryContext } from '../Provider'
-import { orderSummaryStyle } from '../styles.css'
-
 import type { ItemsType } from '../types'
+import { orderSummaryStyle } from '../styles.css'
 
 export const CategoryName = ({ category }: { category: ItemsType }) => {
   const { categoriesPrice } = useContext(OrderSummaryContext)
@@ -25,18 +23,10 @@ export const CategoryName = ({ category }: { category: ItemsType }) => {
     <Stack alignItems="center" direction="row" justifyContent="space-between">
       {category.additionalInfo ? (
         <Stack alignItems="center" direction="row" gap={1}>
-          <Text
-            as="span"
-            prominence="strong"
-            sentiment="neutral"
-            variant="bodyStrong"
-          >
+          <Text as="span" prominence="strong" sentiment="neutral" variant="bodyStrong">
             {category.anchor ? (
               <a className={orderSummaryStyle.anchor} href={category.anchor}>
-                <AttachIcon
-                  className={orderSummaryStyle.anchorIcon({ size: 'medium' })}
-                  sentiment="info"
-                />
+                <AttachIcon className={orderSummaryStyle.anchorIcon({ size: 'medium' })} sentiment="info" />
                 {category.category}
               </a>
             ) : (
@@ -48,18 +38,10 @@ export const CategoryName = ({ category }: { category: ItemsType }) => {
           </Text>
         </Stack>
       ) : (
-        <Text
-          as="span"
-          prominence="strong"
-          sentiment="neutral"
-          variant="bodyStrong"
-        >
+        <Text as="span" prominence="strong" sentiment="neutral" variant="bodyStrong">
           {category.anchor ? (
             <a className={orderSummaryStyle.anchor} href={category.anchor}>
-              <AttachIcon
-                className={orderSummaryStyle.anchorIcon({ size: 'medium' })}
-                sentiment="info"
-              />
+              <AttachIcon className={orderSummaryStyle.anchorIcon({ size: 'medium' })} sentiment="info" />
               {category.category}
             </a>
           ) : (
@@ -80,12 +62,7 @@ export const CategoryName = ({ category }: { category: ItemsType }) => {
       ) : null}
       {!(category.customContent || category.numberInput) &&
       categoryPrice.totalPrice === categoryPrice.totalPriceWithDiscount ? (
-        <Text
-          as="span"
-          prominence="strong"
-          sentiment="neutral"
-          variant="bodyStrong"
-        >
+        <Text as="span" prominence="strong" sentiment="neutral" variant="bodyStrong">
           <DisplayPrice beforeOrAfter="after" price={categoryPrice} />
         </Text>
       ) : null}
@@ -93,21 +70,10 @@ export const CategoryName = ({ category }: { category: ItemsType }) => {
       {!(category.customContent || category.numberInput) &&
       categoryPrice.totalPrice !== categoryPrice.totalPriceWithDiscount ? (
         <Stack alignItems="center" direction="row" gap={1}>
-          <Text
-            as="span"
-            prominence="weak"
-            sentiment="neutral"
-            strikeThrough
-            variant="bodySmallStrong"
-          >
+          <Text as="span" prominence="weak" sentiment="neutral" strikeThrough variant="bodySmallStrong">
             <DisplayPrice beforeOrAfter="before" price={categoryPrice} />
           </Text>
-          <Text
-            as="span"
-            prominence="strong"
-            sentiment="neutral"
-            variant="bodyStrong"
-          >
+          <Text as="span" prominence="strong" sentiment="neutral" variant="bodyStrong">
             <DisplayPrice beforeOrAfter="after" price={categoryPrice} />
           </Text>
         </Stack>

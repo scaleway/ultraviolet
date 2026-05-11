@@ -1,10 +1,8 @@
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles'
-
-import { paddings, templateColumn } from './variables.css'
-
 import type { CSSProperties } from 'react'
+import { paddings, templateColumn } from './variables.css'
 
 const row = style({
   '@media': {
@@ -41,15 +39,12 @@ const row = style({
   display: 'grid',
 })
 
-const breakpoints = Object.keys(
-  consoleLightTheme.breakpoints,
-) as (keyof typeof consoleLightTheme.breakpoints)[]
+const breakpoints = Object.keys(consoleLightTheme.breakpoints) as (keyof typeof consoleLightTheme.breakpoints)[]
 
 // Get the keys and sort them by their pixel value. It's important to define breakpoints priority
 const orderedBreakpointKeys = breakpoints.toSorted(
   (a, b) =>
-    Number.parseInt(consoleLightTheme.breakpoints[a], 10) -
-    Number.parseInt(consoleLightTheme.breakpoints[b], 10),
+    Number.parseInt(consoleLightTheme.breakpoints[a], 10) - Number.parseInt(consoleLightTheme.breakpoints[b], 10),
 )
 
 const themeBreakpoints = orderedBreakpointKeys.reduce(
@@ -59,10 +54,7 @@ const themeBreakpoints = orderedBreakpointKeys.reduce(
       '@media': `screen and (min-width: ${consoleLightTheme.breakpoints[key]})`,
     },
   }),
-  {} as Record<
-    keyof typeof consoleLightTheme.breakpoints,
-    { '@media': string }
-  >,
+  {} as Record<keyof typeof consoleLightTheme.breakpoints, { '@media': string }>,
 )
 
 const themeSpace = Object.values(consoleLightTheme.space)

@@ -1,8 +1,7 @@
 'use client'
 
-import { Button } from '../../Button'
-
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import { Button } from '../../Button'
 
 type DialogCancelButtonProps = {
   children: ReactNode
@@ -11,19 +10,8 @@ type DialogCancelButtonProps = {
   style?: CSSProperties
 }
 
-export const DialogCancelButton = ({
-  children,
-  onClick,
-  disabled,
-  style,
-}: DialogCancelButtonProps) => (
-  <Button
-    disabled={disabled}
-    onClick={onClick}
-    sentiment="neutral"
-    style={style}
-    variant="outlined"
-  >
+export const DialogCancelButton = ({ children, onClick, disabled, style }: DialogCancelButtonProps) => (
+  <Button disabled={disabled} onClick={onClick} sentiment="neutral" style={style} variant="outlined">
     {children}
   </Button>
 )

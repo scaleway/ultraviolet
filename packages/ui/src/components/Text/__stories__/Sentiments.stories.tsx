@@ -1,19 +1,12 @@
-import { SENTIMENTS } from '../../../theme'
-import { Text } from '../index'
-
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { SENTIMENTS } from '../../../theme'
+import { Text } from '../index'
 
 export const Sentiments: StoryFn<ComponentProps<typeof Text>> = args => (
   <div>
     {SENTIMENTS.map(sentiment => (
-      <Text
-        key={sentiment}
-        {...args}
-        as="div"
-        sentiment={sentiment}
-        variant="body"
-      >
+      <Text key={sentiment} {...args} as="div" sentiment={sentiment} variant="body">
         This text uses {sentiment} sentiment.
       </Text>
     ))}
