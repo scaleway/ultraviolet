@@ -249,7 +249,7 @@ export const SingleSlider = ({
             step={step}
             style={{
               ...assignInlineVars({
-                [leftVar]: `calc(${leftPosition}% - ${THUMB_SIZE / 2}px)`,
+                [leftVar]: `calc(${leftPosition}% - ${(THUMB_SIZE * leftPosition) / 100}px)`,
                 [thumbColor]:
                   theme.theme === 'light'
                     ? theme.colors.neutral.background

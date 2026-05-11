@@ -45,10 +45,16 @@ const option = recipe({
   },
   variants: {
     left: {
-      true: { transform: 'none' },
+      true: {
+        left: 0,
+        transform: 'none',
+      },
     },
     right: {
-      true: { transform: 'translateX(-100%)' },
+      true: {
+        left: '100%',
+        transform: 'translateX(-100%)',
+      },
     },
   },
 })

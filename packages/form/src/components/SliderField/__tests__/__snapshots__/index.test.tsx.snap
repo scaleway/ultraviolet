@@ -41,7 +41,7 @@ exports[`sliderField > should render correctly 1`] = `
               min="0"
               name="test"
               step="1"
-              style="--uv_a5ifr12: calc(0% - 8px); --uv_a5ifr11: #ffffff; background-size: 0% 100%;"
+              style="--uv_a5ifr12: calc(0% - 0px); --uv_a5ifr11: #ffffff; background-size: 0% 100%;"
               tabindex="0"
               type="range"
               value="0"
@@ -98,7 +98,7 @@ exports[`sliderField > should render correctly disabled 1`] = `
               min="0"
               name="test"
               step="1"
-              style="--uv_a5ifr12: calc(0% - 8px); --uv_a5ifr11: #ffffff; background-size: 0% 100%;"
+              style="--uv_a5ifr12: calc(0% - 0px); --uv_a5ifr11: #ffffff; background-size: 0% 100%;"
               tabindex="0"
               type="range"
               value="0"
@@ -152,7 +152,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
               min="0"
               name="test"
               step="1"
-              style="--uv_a5ifr12: calc(0% - 8px); --uv_a5ifr11: #ffffff; background-size: 0% 100%;"
+              style="--uv_a5ifr12: calc(0% - 0px); --uv_a5ifr11: #ffffff; background-size: 0% 100%;"
               tabindex="0"
               type="range"
               value="0"
@@ -166,7 +166,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
                 data-element-left="true"
                 data-element-right="false"
                 data-value="0"
-                style="--uv_a5ifr13: 0%;"
+                style="--uv_a5ifr13: calc(0% - 0px + 8px);"
               >
                 <p
                   class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owp uv_m4c9ow1a uv_m4c9ow32"
@@ -179,7 +179,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
                 data-element-left="false"
                 data-element-right="false"
                 data-value="1"
-                style="--uv_a5ifr13: 16.666666666666668%;"
+                style="--uv_a5ifr13: calc(16.666666666666668% - 2.666666666666667px + 8px);"
               >
                 <p
                   class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owp uv_m4c9ow1a uv_m4c9ow32"
@@ -192,7 +192,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
                 data-element-left="false"
                 data-element-right="false"
                 data-value="2"
-                style="--uv_a5ifr13: 33.333333333333336%;"
+                style="--uv_a5ifr13: calc(33.333333333333336% - 5.333333333333334px + 8px);"
               >
                 <p
                   class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owp uv_m4c9ow1a uv_m4c9ow32"
@@ -205,7 +205,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
                 data-element-left="false"
                 data-element-right="false"
                 data-value="3"
-                style="--uv_a5ifr13: 50%;"
+                style="--uv_a5ifr13: calc(50% - 8px + 8px);"
               >
                 <p
                   class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owp uv_m4c9ow1a uv_m4c9ow32"
@@ -218,7 +218,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
                 data-element-left="false"
                 data-element-right="false"
                 data-value="4"
-                style="--uv_a5ifr13: 66.66666666666667%;"
+                style="--uv_a5ifr13: calc(66.66666666666667% - 10.666666666666668px + 8px);"
               >
                 <p
                   class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owp uv_m4c9ow1a uv_m4c9ow32"
@@ -231,7 +231,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
                 data-element-left="false"
                 data-element-right="false"
                 data-value="5"
-                style="--uv_a5ifr13: 83.33333333333333%;"
+                style="--uv_a5ifr13: calc(83.33333333333333% - 13.333333333333332px + 8px);"
               >
                 <p
                   class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owp uv_m4c9ow1a uv_m4c9ow32"
@@ -244,7 +244,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
                 data-element-left="false"
                 data-element-right="true"
                 data-value="6"
-                style="--uv_a5ifr13: 100%;"
+                style="--uv_a5ifr13: calc(100% - 16px + 8px);"
               >
                 <p
                   class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owp uv_m4c9ow1a uv_m4c9ow32"
@@ -323,7 +323,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                 min="0"
                 name="test"
                 step="1"
-                style="--uv_a5ifr12: calc(0% - 8px); --uv_a5ifr11: #ffffff;"
+                style="--uv_a5ifr12: calc(0% - 0px); --uv_a5ifr11: #ffffff;"
                 type="range"
                 value="0"
               />
@@ -337,7 +337,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                 min="0"
                 name="test"
                 step="1"
-                style="--uv_a5ifr12: calc(100% - 8px); --uv_a5ifr11: #ffffff;"
+                style="--uv_a5ifr12: calc(100% - 16px); --uv_a5ifr11: #ffffff;"
                 type="range"
                 value="6"
               />
@@ -350,7 +350,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                   data-element-left="true"
                   data-element-right="false"
                   data-value="0"
-                  style="--uv_a5ifr13: 0%;"
+                  style="--uv_a5ifr13: calc(0% - 0px + 8px);"
                 >
                   <p
                     class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owc uv_m4c9owt uv_m4c9ow1a uv_m4c9ow2e"
@@ -363,7 +363,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                   data-element-left="false"
                   data-element-right="false"
                   data-value="1"
-                  style="--uv_a5ifr13: 16.666666666666668%;"
+                  style="--uv_a5ifr13: calc(16.666666666666668% - 2.666666666666667px + 8px);"
                 >
                   <p
                     class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owp uv_m4c9ow1a uv_m4c9ow32"
@@ -376,7 +376,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                   data-element-left="false"
                   data-element-right="false"
                   data-value="2"
-                  style="--uv_a5ifr13: 33.333333333333336%;"
+                  style="--uv_a5ifr13: calc(33.333333333333336% - 5.333333333333334px + 8px);"
                 >
                   <p
                     class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owp uv_m4c9ow1a uv_m4c9ow32"
@@ -389,7 +389,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                   data-element-left="false"
                   data-element-right="false"
                   data-value="3"
-                  style="--uv_a5ifr13: 50%;"
+                  style="--uv_a5ifr13: calc(50% - 8px + 8px);"
                 >
                   <p
                     class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owp uv_m4c9ow1a uv_m4c9ow32"
@@ -402,7 +402,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                   data-element-left="false"
                   data-element-right="false"
                   data-value="4"
-                  style="--uv_a5ifr13: 66.66666666666667%;"
+                  style="--uv_a5ifr13: calc(66.66666666666667% - 10.666666666666668px + 8px);"
                 >
                   <p
                     class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owp uv_m4c9ow1a uv_m4c9ow32"
@@ -415,7 +415,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                   data-element-left="false"
                   data-element-right="false"
                   data-value="5"
-                  style="--uv_a5ifr13: 83.33333333333333%;"
+                  style="--uv_a5ifr13: calc(83.33333333333333% - 13.333333333333332px + 8px);"
                 >
                   <p
                     class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owp uv_m4c9ow1a uv_m4c9ow32"
@@ -428,7 +428,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                   data-element-left="false"
                   data-element-right="true"
                   data-value="6"
-                  style="--uv_a5ifr13: 100%;"
+                  style="--uv_a5ifr13: calc(100% - 16px + 8px);"
                 >
                   <p
                     class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owc uv_m4c9owt uv_m4c9ow1a uv_m4c9ow2e"
@@ -531,7 +531,7 @@ exports[`sliderField > should trigger events correctly 1`] = `
               min="0"
               name="test"
               step="1"
-              style="--uv_a5ifr12: calc(0% - 8px); --uv_a5ifr11: #ffffff; background-size: 0% 100%;"
+              style="--uv_a5ifr12: calc(0% - 0px); --uv_a5ifr11: #ffffff; background-size: 0% 100%;"
               tabindex="0"
               type="range"
               value="0"

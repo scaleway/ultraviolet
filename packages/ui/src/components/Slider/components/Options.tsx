@@ -3,6 +3,7 @@
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 
 import { Text } from '../../Text'
+import { THUMB_SIZE } from '../constant'
 import { leftOption, sliderStyle } from '../styles.css'
 
 export type OptionsProps = {
@@ -30,9 +31,8 @@ export const Options = ({
     data-double={Array.isArray(value)}
   >
     {ticks.map((element, index, { length }) => {
-      const left = defaultScale
-        ? ((element.value - min) * 100) / (max - min)
-        : ((index * step - min) * 100) / (max - min)
+      const elementValue = defaultScale ? element.value : index * step
+      const progress = ((elementValue - min) * 100) / (max - min)
 
       const formatedElement = element.label ?? String(element.value)
       const getIsSelected = () => {
@@ -58,7 +58,7 @@ export const Options = ({
           data-value={element.value}
           key={element.value}
           style={assignInlineVars({
-            [leftOption]: `${left}%`,
+            [leftOption]: `calc(${progress}% - ${(THUMB_SIZE * progress) / 100}px + ${THUMB_SIZE / 2}px)`,
           })}
         >
           <Text
