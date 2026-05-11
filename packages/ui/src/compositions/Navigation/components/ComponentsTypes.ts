@@ -19,6 +19,7 @@ export type ItemExpandedType = {
   shouldShowPinnedButton: boolean
   children: ReactNode
   dataTestId?: string
+  dataFlipId?: string | null
   type: ItemType
   href?: HTMLAnchorElement['href']
   rel?: HTMLAnchorElement['rel']
@@ -47,6 +48,10 @@ export type ItemMenuType = {
   hasActiveChildren: boolean
   categoryIcon?: ReactNode
   active?: boolean
+  /**
+   * @private
+   */
+  'data-flip-id'?: string
 }
 
 export type ItemMenuItemType = {

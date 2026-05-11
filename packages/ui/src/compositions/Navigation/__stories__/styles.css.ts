@@ -1,12 +1,21 @@
-import { style } from '@vanilla-extract/css'
+import { recipe } from '@vanilla-extract/recipes'
 
-import { fadeIn, fadeOut } from '../../../utils'
+import { ANIMATION_DURATION, ANIMATION_EASING } from '../constants'
 
-export const animation = style({
-  animation: `${fadeIn} 300ms ease-in-out`,
-  selectors: {
-    "&[data-expanded='false']": {
-      animation: `${fadeOut} 250ms ease-in-out`,
+export const logoStyle = recipe({
+  base: {
+    objectFit: 'cover',
+    objectPosition: 'left',
+  },
+  variants: {
+    expanded: {
+      false: {
+        transition: `opacity ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
+        opacity: 0,
+      },
+      true: {
+        opacity: 1,
+      },
     },
   },
 })
