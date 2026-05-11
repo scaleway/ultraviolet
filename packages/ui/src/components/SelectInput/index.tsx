@@ -3,6 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { useId, useRef } from 'react'
 import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
+import { hasHelperText } from '../../helpers/hasHelperText'
 import { Description } from '../Description'
 import { Label } from '../Label'
 import type { Popup } from '../Popup'
@@ -246,7 +247,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
               </Label>
             ) : null}
             <SelectBar
-              aria-describedby={ariaDescribedBy ?? helperId}
+              aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
               autoFocus={autofocus} // oxlint-disable-line jsx_a11y/no-autofocus
               clearable={clearable}
               data-testid={finalDataTestId}

@@ -26,7 +26,7 @@ export const Selector = ({
   onChange: (val: string) => void
   options: DataType
   value?: string
-  helperId: string
+  helperId?: string
 }) => (
   <SelectInput
     aria-describedby={isHorizontal ? helperId : undefined}
