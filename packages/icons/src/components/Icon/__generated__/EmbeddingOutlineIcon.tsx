@@ -9,12 +9,9 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const EmbeddingOutlineIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const EmbeddingOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="EmbeddingOutlineIcon">
-    {typeof props.size === 'string' &&
-    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
+    {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M2.5 1.75C2.91421 1.75 3.25 2.08579 3.25 2.5V16.75H17.5C17.9142 16.75 18.25 17.0858 18.25 17.5C18.25 17.9142 17.9142 18.25 17.5 18.25H2.5C2.08579 18.25 1.75 17.9142 1.75 17.5V2.5C1.75 2.08579 2.08579 1.75 2.5 1.75Z" />
         <path

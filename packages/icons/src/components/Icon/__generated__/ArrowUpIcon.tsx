@@ -9,12 +9,9 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const ArrowUpIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const ArrowUpIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="ArrowUpIcon">
-    {typeof props.size === 'string' &&
-    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
+    {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         fillRule="evenodd"
         d="M9.72 7.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06l-3.72-3.72-3.72 3.72a.75.75 0 0 1-1.06-1.06z"

@@ -34,13 +34,7 @@ export const LabelRequiredOrNot = ({
 
   if (required) {
     return (
-      <Stack
-        alignItems="flex-start"
-        className={className}
-        direction="row"
-        gap="0.5"
-        style={style}
-      >
+      <Stack alignItems="flex-start" className={className} direction="row" gap="0.5" style={style}>
         <Text
           as={as === 'label' ? 'label' : 'legend'}
           className={labelStyle.textPointer[textPointerValue]}

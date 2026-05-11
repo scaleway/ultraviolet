@@ -6,16 +6,10 @@ import { Submit } from '../..'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-const PartiallyRequiredStory = (
-  args: ComponentProps<typeof CheckboxGroupField>,
-) => (
+const PartiallyRequiredStory = (args: ComponentProps<typeof CheckboxGroupField>) => (
   <Stack gap={1}>
     <CheckboxGroupField {...args}>
-      <CheckboxGroupField.Checkbox
-        name="termsAndConditions"
-        required
-        value="termsAndConditions"
-      >
+      <CheckboxGroupField.Checkbox name="termsAndConditions" required value="termsAndConditions">
         Accept terms and conditions
       </CheckboxGroupField.Checkbox>
       <CheckboxGroupField.Checkbox name="newsletter" value="newsletter">
@@ -29,9 +23,7 @@ const PartiallyRequiredStory = (
   </Stack>
 )
 
-export const PartiallyRequired: StoryFn<typeof CheckboxGroupField> = args => (
-  <PartiallyRequiredStory {...args} />
-)
+export const PartiallyRequired: StoryFn<typeof CheckboxGroupField> = args => <PartiallyRequiredStory {...args} />
 
 PartiallyRequired.parameters = {
   docs: {

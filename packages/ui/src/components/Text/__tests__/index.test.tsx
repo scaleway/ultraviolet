@@ -17,9 +17,8 @@ describe('text', () => {
     shouldMatchSnapshot(
       <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
         <Text as="div" oneLine variant="body">
-          This text is quite long. Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
+          This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
         </Text>
       </div>,
     ))
@@ -28,9 +27,8 @@ describe('text', () => {
     shouldMatchSnapshot(
       <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
         <Text as="div" placement="end" variant="body">
-          This text is quite long. Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
+          This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
         </Text>
       </div>,
     ))
@@ -39,9 +37,8 @@ describe('text', () => {
     shouldMatchSnapshot(
       <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
         <Text as="div" dir="rtl" oneLine variant="body">
-          This text is quite long. Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
+          This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
         </Text>
       </div>,
     ))
@@ -50,9 +47,8 @@ describe('text', () => {
     shouldMatchSnapshot(
       <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
         <Text as="div" htmlFor="test" variant="body">
-          This text is quite long. Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
+          This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
         </Text>
       </div>,
     ))
@@ -105,9 +101,8 @@ describe('text', () => {
   it('renders correctly with whiteSpace', () =>
     shouldMatchSnapshot(
       <Text as="div" variant="body" whiteSpace="nowrap">
-        This text is quite long. Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.
       </Text>,
     ))
 })

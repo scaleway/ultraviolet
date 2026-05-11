@@ -8,13 +8,7 @@ import { SelectableCardGroupField } from '../..'
 describe('selectableCardField', () => {
   it('should render correctly', () => {
     const { asFragment } = renderWithForm(
-      <SelectableCardGroupField
-        legend="test"
-        name="test"
-        onChange={() => {}}
-        type="radio"
-        value="test"
-      >
+      <SelectableCardGroupField legend="test" name="test" onChange={() => {}} type="radio" value="test">
         <SelectableCardGroupField.Card label="Radio 1" value="radio 1" />
         <SelectableCardGroupField.Card label="Radio 2" value="radio 2" />
       </SelectableCardGroupField>,
@@ -24,17 +18,8 @@ describe('selectableCardField', () => {
 
   it('should render correctly checked as radiofield', () => {
     const { asFragment } = renderWithForm(
-      <SelectableCardGroupField
-        legend="test"
-        name="test"
-        type="radio"
-        value="checked"
-      >
-        <SelectableCardGroupField.Card
-          data-testid="checked"
-          label="Radio 1"
-          value="checked"
-        />
+      <SelectableCardGroupField legend="test" name="test" type="radio" value="checked">
+        <SelectableCardGroupField.Card data-testid="checked" label="Radio 1" value="checked" />
       </SelectableCardGroupField>,
       { defaultValues: { test: 'checked' } },
     )
@@ -45,17 +30,8 @@ describe('selectableCardField', () => {
 
   it('should render correctly checked as a checkbox', () => {
     const { asFragment } = renderWithForm(
-      <SelectableCardGroupField
-        legend="test"
-        name="test"
-        type="checkbox"
-        value={['checked']}
-      >
-        <SelectableCardGroupField.Card
-          data-testid="checked"
-          label="Checkbox 1"
-          value="checked"
-        />
+      <SelectableCardGroupField legend="test" name="test" type="checkbox" value={['checked']}>
+        <SelectableCardGroupField.Card data-testid="checked" label="Checkbox 1" value="checked" />
       </SelectableCardGroupField>,
       { defaultValues: { test: 'checked' } },
     )
@@ -68,13 +44,7 @@ describe('selectableCardField', () => {
     const onChange = vi.fn(() => {})
 
     const { asFragment } = renderWithForm(
-      <SelectableCardGroupField
-        legend="test"
-        name="test"
-        onChange={onChange}
-        type="checkbox"
-        value="events"
-      >
+      <SelectableCardGroupField legend="test" name="test" onChange={onChange} type="checkbox" value="events">
         <SelectableCardGroupField.Card label="Radio 1" value="radio 1" />
         <SelectableCardGroupField.Card label="Radio 2" value="radio 2" />
       </SelectableCardGroupField>,

@@ -18,10 +18,10 @@ const arraysContainSameValues = (array1: string[], array2: string[]) => {
   return array2.every(value => array1.includes(value))
 }
 
-type CheckboxGroupFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
+type CheckboxGroupFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = Omit<
+  BaseFieldProps<TFieldValues, TFieldName>,
+  'label'
+> &
   Omit<ComponentProps<typeof CheckboxGroup>, 'value' | 'onChange'>
 
 type ElementProps = {
@@ -103,21 +103,12 @@ const CheckboxGroupFieldComponent = <
       onChange={event => {
         const fieldValue = field.value as string[]
         if (fieldValue?.includes(event.currentTarget.value)) {
-          field.onChange(
-            fieldValue?.filter(
-              currentValue => currentValue !== event.currentTarget.value,
-            ),
-          )
+          field.onChange(fieldValue?.filter(currentValue => currentValue !== event.currentTarget.value))
         } else {
           field.onChange([...field.value, event.currentTarget.value])
         }
 
-        onChange?.(
-          event.currentTarget.value as PathValue<
-            TFieldValues,
-            Path<TFieldValues>
-          >,
-        )
+        onChange?.(event.currentTarget.value as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       required={required}
       value={field.value}
@@ -131,9 +122,6 @@ type RadioGroupFieldType = typeof CheckboxGroupFieldComponent & {
   Checkbox: typeof CheckboxGroup.Checkbox
 }
 
-export const CheckboxGroupField: RadioGroupFieldType = Object.assign(
-  CheckboxGroupFieldComponent,
-  {
-    Checkbox: CheckboxGroup.Checkbox,
-  },
-)
+export const CheckboxGroupField: RadioGroupFieldType = Object.assign(CheckboxGroupFieldComponent, {
+  Checkbox: CheckboxGroup.Checkbox,
+})

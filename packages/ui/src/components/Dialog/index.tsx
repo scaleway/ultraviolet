@@ -65,18 +65,9 @@ export const BaseDialog = ({
   const headerContent = (
     <>
       <Bullet sentiment={sentiment}>
-        {sentiment === 'warning' || sentiment === 'danger' ? (
-          <AlertCircleIcon />
-        ) : (
-          <CheckIcon />
-        )}
+        {sentiment === 'warning' || sentiment === 'danger' ? <AlertCircleIcon /> : <CheckIcon />}
       </Bullet>
-      <Text
-        as="h2"
-        className={dialogStyle.title}
-        sentiment="neutral"
-        variant="headingSmallStronger"
-      >
+      <Text as="h2" className={dialogStyle.title} sentiment="neutral" variant="headingSmallStronger">
         {title}
       </Text>
     </>

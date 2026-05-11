@@ -35,8 +35,7 @@ const alphaOrder = (obj: JsonType) => {
   const orderedKeys = Object.keys(obj ?? {}).toSorted()
 
   return orderedKeys.reduce((newObj: Record<string, string | object>, key) => {
-    const result =
-      typeof obj[key] === 'string' ? obj[key] : alphaOrder(obj[key] as JsonType)
+    const result = typeof obj[key] === 'string' ? obj[key] : alphaOrder(obj[key] as JsonType)
 
     newObj[key] = result
 
@@ -53,15 +52,8 @@ type ShadowType = {
   type: string
 }
 
-const isShadowType = (
-  data: ShadowType | Record<string, ShadowType>,
-): data is ShadowType =>
-  data &&
-  'x' in data &&
-  'y' in data &&
-  'blur' in data &&
-  'spread' in data &&
-  'color' in data
+const isShadowType = (data: ShadowType | Record<string, ShadowType>): data is ShadowType =>
+  data && 'x' in data && 'y' in data && 'blur' in data && 'spread' in data && 'color' in data
 
 const formatShadows = (data: ShadowType | Record<string, ShadowType>) => {
   if (isShadowType(data)) {
@@ -77,14 +69,11 @@ const formatShadows = (data: ShadowType | Record<string, ShadowType>) => {
 
 const evalValue = (value: string, variables: string | object) => {
   if (typeof value === 'object') {
-    return Object.keys(value).reduce(
-      (acc: Record<string, string | object>, key) => {
-        acc[key] = evalValue(value[key], variables)
+    return Object.keys(value).reduce((acc: Record<string, string | object>, key) => {
+      acc[key] = evalValue(value[key], variables)
 
-        return acc
-      },
-      {},
-    )
+      return acc
+    }, {})
   }
 
   let returnedValue = value
@@ -112,27 +101,21 @@ type ColorType = {
   type: string
 }
 
-const isColorType = (
-  data: ColorType | Record<string, ColorType> | ThemeType,
-): data is ColorType => data && 'value' in data && 'type' in data
+const isColorType = (data: ColorType | Record<string, ColorType> | ThemeType): data is ColorType =>
+  data && 'value' in data && 'type' in data
 
 const getValues = (
   data: Record<string, ColorType> | ColorType | ThemeType,
   { typeFilter, variables }: { typeFilter: string; variables: JsonType },
 ) => {
   if (isColorType(data)) {
-    return data.type === typeFilter && 'value' in data
-      ? evalValue(data.value, variables)
-      : null
+    return data.type === typeFilter && 'value' in data ? evalValue(data.value, variables) : null
   }
   const res = Object.keys(data).reduce((values: JsonType, key) => {
-    const newValue = getValues(
-      (data as Record<string, ColorType | ThemeType>)[key],
-      {
-        typeFilter,
-        variables,
-      },
-    )
+    const newValue = getValues((data as Record<string, ColorType | ThemeType>)[key], {
+      typeFilter,
+      variables,
+    })
 
     if (newValue !== null) {
       values[key.replaceAll(/,/g, '.')] = newValue
@@ -144,10 +127,7 @@ const getValues = (
   return Object.keys(res).length > 0 ? res : null
 }
 
-export const generatePalette = (
-  figmaTokensJson: JsonType,
-  themeMatch: ThemeMatchType,
-) => {
+export const generatePalette = (figmaTokensJson: JsonType, themeMatch: ThemeMatchType) => {
   const inputTheme = figmaTokensJson[themeMatch.inputTheme] as ThemeType
   const inputPalette = figmaTokensJson[themeMatch.palette] as PaletteType
 
@@ -263,10 +243,7 @@ export const generatePalette = (
     colors: {
       ...(typeof colors === 'object' ? colors : {}),
       neutral: {
-        ...(typeof colors === 'object' &&
-        typeof colors?.['neutral'] === 'object'
-          ? colors?.['neutral']
-          : {}),
+        ...(typeof colors === 'object' && typeof colors?.['neutral'] === 'object' ? colors?.['neutral'] : {}),
         ...(typeof paletteNeutral === 'object' ? paletteNeutral : {}),
       },
       overlay: getValues(inputPalette.other['overlay'], {

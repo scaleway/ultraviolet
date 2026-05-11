@@ -30,14 +30,8 @@ type OverlayComponentProps = {
   inView?: boolean
   isBeta?: boolean
   unit: Units
-  OverlayLeft?: (props: {
-    children: ReactNode
-    disabled?: boolean
-  }) => JSX.Element
-  OverlayRight?: (props: {
-    children?: ReactNode
-    disabled?: boolean
-  }) => JSX.Element
+  OverlayLeft?: (props: { children: ReactNode; disabled?: boolean }) => JSX.Element
+  OverlayRight?: (props: { children?: ReactNode; disabled?: boolean }) => JSX.Element
   totalPrice: {
     maxOverlayHourly: number
     overlayHourly: number
@@ -90,9 +84,7 @@ export const OverlayComponent = ({
         <ul className={estimateCostStyle.list}>
           {OverlayLeft ? (
             <li className={estimateCostStyle.sideItem}>
-              <OverlayLeft disabled={disableOverlayLeft}>
-                {locales['estimate.cost.submit.label']}
-              </OverlayLeft>
+              <OverlayLeft disabled={disableOverlayLeft}>{locales['estimate.cost.submit.label']}</OverlayLeft>
             </li>
           ) : null}
           {Children.map(children, (child, index) =>
@@ -123,26 +115,16 @@ export const OverlayComponent = ({
                 </LineThrough>
               </Strong>
               {isBeta ? (
-                <Badge
-                  className={estimateCostStyle.badge}
-                  prominence="strong"
-                  sentiment="warning"
-                >
+                <Badge className={estimateCostStyle.badge} prominence="strong" sentiment="warning">
                   {discount > 0 ? discount * 100 : ''}
-                  {
-                    locales[
-                      `estimate.cost.beta.${discount > 0 ? 'discount' : 'free'}`
-                    ]
-                  }
+                  {locales[`estimate.cost.beta.${discount > 0 ? 'discount' : 'free'}`]}
                 </Badge>
               ) : null}
             </div>
           </li>
           {OverlayRight ? (
             <li className={estimateCostStyle.sideItem}>
-              <OverlayRight disabled={disableOverlayRight}>
-                {locales['estimate.cost.submit.label']}
-              </OverlayRight>
+              <OverlayRight disabled={disableOverlayRight}>{locales['estimate.cost.submit.label']}</OverlayRight>
             </li>
           ) : null}
         </ul>

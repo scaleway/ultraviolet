@@ -13,13 +13,7 @@ import { switchButtonStyle } from './styles.css'
 import { SwitchButtonContext } from './SwitchButtonContext'
 
 import type { RefOptionType } from './SwitchButtonContext'
-import type {
-  ChangeEvent,
-  ChangeEventHandler,
-  CSSProperties,
-  FocusEventHandler,
-  ReactNode,
-} from 'react'
+import type { ChangeEvent, ChangeEventHandler, CSSProperties, FocusEventHandler, ReactNode } from 'react'
 
 type SwitchButtonProps = {
   name?: string
@@ -59,15 +53,11 @@ export const SwitchButton = ({
   const [refOptions, setRefOptions] = useState<RefOptionType[]>([])
   const [position, setPosition] = useState(0)
   const [width, setWidth] = useState(0)
-  const [mouseDownSide, setMouseDownSide] = useState<'left' | 'right' | null>(
-    null,
-  )
+  const [mouseDownSide, setMouseDownSide] = useState<'left' | 'right' | null>(null)
 
   const getElement = useCallback(
     (referenceValue: string) =>
-      refOptions.find(
-        element => element.current && element.value === referenceValue,
-      )?.current,
+      refOptions.find(element => element.current && element.value === referenceValue)?.current,
     [refOptions],
   )
 
@@ -76,8 +66,7 @@ export const SwitchButton = ({
       return 0
     }
     const currentPosition = curentElement.getBoundingClientRect().left
-    const containerPosition =
-      containerRef.current?.getBoundingClientRect().left ?? 0
+    const containerPosition = containerRef.current?.getBoundingClientRect().left ?? 0
 
     return currentPosition - containerPosition
   }
@@ -97,11 +86,7 @@ export const SwitchButton = ({
     const resizeObserver = new ResizeObserver(() => {
       if (
         element.offsetWidth &&
-        (![
-          width,
-          width + FOCUS_OVERLAY_SCALE_RATIO,
-          width - FOCUS_OVERLAY_SCALE_RATIO,
-        ].includes(element.offsetWidth) ||
+        (![width, width + FOCUS_OVERLAY_SCALE_RATIO, width - FOCUS_OVERLAY_SCALE_RATIO].includes(element.offsetWidth) ||
           getPosition(element) !== position)
       ) {
         setWidth(element.offsetWidth ?? 0)
@@ -144,16 +129,7 @@ export const SwitchButton = ({
       setRefOptions,
       size,
     }),
-    [
-      handleOnChange,
-      localValue,
-      name,
-      onBlur,
-      onFocus,
-      refOptions,
-      size,
-      sentiment,
-    ],
+    [handleOnChange, localValue, name, onBlur, onFocus, refOptions, size, sentiment],
   )
 
   return (
@@ -166,14 +142,11 @@ export const SwitchButton = ({
           onMouseDown={event => {
             const rect = event.currentTarget.getBoundingClientRect()
             const clickX = event.clientX - rect.left
-            const clickInCurrentElement =
-              clickX > position && clickX < position + width
+            const clickInCurrentElement = clickX > position && clickX < position + width
             if (clickInCurrentElement) {
               setMouseDownSide(null)
             } else {
-              setMouseDownSide(
-                clickX < getPosition(getElement(localValue)) ? 'left' : 'right',
-              )
+              setMouseDownSide(clickX < getPosition(getElement(localValue)) ? 'left' : 'right')
               setWidth(width + FOCUS_OVERLAY_SCALE_RATIO)
             }
           }}
@@ -193,12 +166,7 @@ export const SwitchButton = ({
           style={style}
         >
           {width ? (
-            <FocusOverlay
-              cardWidth={width}
-              mouseDownSide={mouseDownSide}
-              position={position}
-              sentiment={sentiment}
-            />
+            <FocusOverlay cardWidth={width} mouseDownSide={mouseDownSide} position={position} sentiment={sentiment} />
           ) : null}
           {children}
         </Stack>

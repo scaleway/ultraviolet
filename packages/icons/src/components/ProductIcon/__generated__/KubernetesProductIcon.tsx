@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const KubernetesProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const KubernetesProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="KubernetesProductIcon">
     <g className="K8S-Kapsule">
       <g className=".Square">

@@ -18,32 +18,13 @@ type OptionProps = {
   tooltip?: string
   style?: CSSProperties
 }
-export const Option = ({
-  value,
-  children,
-  'data-testid': dataTestId,
-  disabled,
-  tooltip,
-  style,
-}: OptionProps) => {
+export const Option = ({ value, children, 'data-testid': dataTestId, disabled, tooltip, style }: OptionProps) => {
   const context = useSwitchButton()
   const ref = useRef<HTMLInputElement>(null)
 
-  const {
-    localValue,
-    name,
-    onBlur,
-    onFocus,
-    handleOnChange,
-    refOptions,
-    setRefOptions,
-    sentiment,
-  } = context
+  const { localValue, name, onBlur, onFocus, handleOnChange, refOptions, setRefOptions, sentiment } = context
   useEffect(() => {
-    if (
-      ref?.current &&
-      refOptions.filter(option => option.value === value).length === 0
-    ) {
+    if (ref?.current && refOptions.filter(option => option.value === value).length === 0) {
       const option = {
         current: ref.current,
         value,
@@ -56,9 +37,7 @@ export const Option = ({
     <SelectableCard
       checked={localValue === value}
       className={cn(
-        sentiment === 'neutral'
-          ? switchButtonStyle.optionNeutral
-          : switchButtonStyle.optionPrimary,
+        sentiment === 'neutral' ? switchButtonStyle.optionNeutral : switchButtonStyle.optionPrimary,
         switchButtonStyle.optionBase,
       )}
       data-checked={localValue === value}

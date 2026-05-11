@@ -69,13 +69,7 @@ export const EmptyState = ({
     >
       <Stack alignItems="center" gap={2} justifyContent="center">
         {image && typeof image === 'string' ? (
-          <img
-            alt=""
-            className={emptyStateStyle.image[size]}
-            height="auto"
-            src={image}
-            width="auto"
-          />
+          <img alt="" className={emptyStateStyle.image[size]} height="auto" src={image} width="auto" />
         ) : (
           image
         )}
@@ -92,14 +86,7 @@ export const EmptyState = ({
             </Text>
           ) : null}
           <Text
-            as={
-              description &&
-              ['string', 'number', 'bigint', 'boolean'].includes(
-                typeof description,
-              )
-                ? 'p'
-                : 'div'
-            }
+            as={description && ['string', 'number', 'bigint', 'boolean'].includes(typeof description) ? 'p' : 'div'}
             placement="center"
             sentiment="neutral"
             variant={size === 'small' ? 'bodySmall' : 'body'}

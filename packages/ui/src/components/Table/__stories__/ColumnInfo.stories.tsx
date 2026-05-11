@@ -4,9 +4,7 @@ import { columns, data } from './resources'
 
 import type { StoryFn } from '@storybook/react-vite'
 
-export const ColumnInfo: StoryFn<typeof Table> = ({ ...props }) => (
-  <Table {...props} />
-)
+export const ColumnInfo: StoryFn<typeof Table> = ({ ...props }) => <Table {...props} />
 
 ColumnInfo.args = {
   children: (
@@ -21,8 +19,5 @@ ColumnInfo.args = {
       ))}
     </Table.Body>
   ),
-  columns: [
-    { info: 'This column is important', label: 'Name' },
-    ...columns.slice(1, 4),
-  ],
+  columns: [{ info: 'This column is important', label: 'Name' }, ...columns.slice(1, 4)],
 }

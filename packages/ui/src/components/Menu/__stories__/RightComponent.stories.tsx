@@ -10,9 +10,7 @@ RightComponent.args = {
     <Menu.Item
       borderless
       key="borderless"
-      rightComponent={
-        <CopyButton sentiment="neutral" size="xsmall" value="Power on" />
-      }
+      rightComponent={<CopyButton sentiment="neutral" size="xsmall" value="Power on" />}
     >
       Power on
     </Menu.Item>,

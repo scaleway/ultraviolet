@@ -18,19 +18,12 @@ export const PrefixSuffix = ({
   content ? (
     <Stack
       alignItems="center"
-      className={
-        textInputStyle[type === 'prefix' ? 'basicPrefix' : 'basicSuffix']
-      }
+      className={textInputStyle[type === 'prefix' ? 'basicPrefix' : 'basicSuffix']}
       data-size={size}
       direction="row"
     >
       {typeof content === 'string' ? (
-        <Text
-          as="span"
-          disabled={disabled}
-          sentiment="neutral"
-          variant="bodySmall"
-        >
+        <Text as="span" disabled={disabled} sentiment="neutral" variant="bodySmall">
           {content}
         </Text>
       ) : (

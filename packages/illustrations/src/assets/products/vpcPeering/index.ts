@@ -10,9 +10,4 @@ const vpcPeeringKeyvisual = `${BASE_URL}/products/vpcPeering/vpc-peering-keyvisu
 const vpcPeeringOriginal = `${BASE_URL}/products/vpcPeering/vpc-peering-original.webp`
 const vpcPeeringWire = `${BASE_URL}/products/vpcPeering/vpc-peering-wire.svg`
 
-export {
-  vpcPeeringContent,
-  vpcPeeringKeyvisual,
-  vpcPeeringOriginal,
-  vpcPeeringWire,
-}
+export { vpcPeeringContent, vpcPeeringKeyvisual, vpcPeeringOriginal, vpcPeeringWire }

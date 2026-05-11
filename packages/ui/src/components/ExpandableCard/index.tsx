@@ -14,14 +14,7 @@ import { expandableCardStyle } from './styles.css'
 
 import type { XOR } from '../../types'
 import type { EXPANDABLE_CARD_SIZE } from './constants'
-import type {
-  CSSProperties,
-  DetailsHTMLAttributes,
-  DragEvent,
-  ForwardedRef,
-  KeyboardEvent,
-  ReactNode,
-} from 'react'
+import type { CSSProperties, DetailsHTMLAttributes, DragEvent, ForwardedRef, KeyboardEvent, ReactNode } from 'react'
 
 type DraggableListType = { value?: string }
 type ExpandableCardSize = (typeof EXPANDABLE_CARD_SIZE)[number]
@@ -62,9 +55,7 @@ type CommonProps = {
   style?: CSSProperties
 } & DraggableProps
 
-type ExpandableCardProps = XOR<
-  [CommonProps & { expanded: boolean; onToggleExpand: () => void }, CommonProps]
->
+type ExpandableCardProps = XOR<[CommonProps & { expanded: boolean; onToggleExpand: () => void }, CommonProps]>
 const BaseExpandableCard = forwardRef(
   (
     {
@@ -113,20 +104,13 @@ const BaseExpandableCard = forwardRef(
 
     const onDragEnd = useCallback(() => setClicking(false), [])
 
-    const onDrag = useCallback(
-      (
-        event: DragEvent<HTMLDivElement>,
-        borderColor: string,
-        isFirst?: boolean,
-      ) => {
-        const refElement = isFirst ? draggableFirstRef : draggableRef
-        event.preventDefault()
-        if (refElement.current) {
-          refElement.current.style.borderColor = borderColor
-        }
-      },
-      [],
-    )
+    const onDrag = useCallback((event: DragEvent<HTMLDivElement>, borderColor: string, isFirst?: boolean) => {
+      const refElement = isFirst ? draggableFirstRef : draggableRef
+      event.preventDefault()
+      if (refElement.current) {
+        refElement.current.style.borderColor = borderColor
+      }
+    }, [])
 
     const handleDrop = useCallback(
       (event: DragEvent<HTMLDivElement>, isFirst?: boolean) => {
@@ -137,9 +121,7 @@ const BaseExpandableCard = forwardRef(
 
         if (event?.dataTransfer) {
           // oxlint-disable-next-line typescript/no-unsafe-type-assertion
-          const data = JSON.parse(
-            event.dataTransfer.getData('text'),
-          ) as DraggableListType
+          const data = JSON.parse(event.dataTransfer.getData('text')) as DraggableListType
 
           onDrop?.(isFirst ? '' : value, data.value ?? '')
         }
@@ -225,10 +207,7 @@ const BaseExpandableCard = forwardRef(
             onKeyDown={
               onToggleExpand
                 ? event => {
-                    if (
-                      event.key === ' ' &&
-                      event.target === headerRef.current
-                    ) {
+                    if (event.key === ' ' && event.target === headerRef.current) {
                       onToggleExpand()
                       event.preventDefault()
                     }
@@ -237,11 +216,7 @@ const BaseExpandableCard = forwardRef(
             }
             ref={headerRef}
           >
-            <ArrowDownIcon
-              className={expandableCardStyle.arrowIcon}
-              disabled={disabled}
-              sentiment="neutral"
-            />
+            <ArrowDownIcon className={expandableCardStyle.arrowIcon} disabled={disabled} sentiment="neutral" />
             {typeof header === 'string' ? (
               <ExpandableCardTitle disabled={disabled} size={size}>
                 {header}
@@ -257,9 +232,7 @@ const BaseExpandableCard = forwardRef(
             className={expandableCardStyle.dropableArea}
             data-first
             onDragLeave={event => onDrag(event, 'transparent', true)}
-            onDragOver={event =>
-              onDrag(event, theme.colors.primary.border, true)
-            }
+            onDragOver={event => onDrag(event, theme.colors.primary.border, true)}
             onDrop={event => handleDrop(event, true)}
             ref={draggableFirstRef}
           />

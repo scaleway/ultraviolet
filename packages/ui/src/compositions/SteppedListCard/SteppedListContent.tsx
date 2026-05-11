@@ -26,15 +26,7 @@ export const SteppedListContent = ({
   completed = false,
   style,
 }: SteppedListContentProps) => {
-  const {
-    setDone,
-    currentStep,
-    done,
-    setCurrentStep,
-    numberOfSteps,
-    setHidden,
-    onClickHide,
-  } = useContext(Data)
+  const { setDone, currentStep, done, setCurrentStep, numberOfSteps, setHidden, onClickHide } = useContext(Data)
 
   useEffect(() => {
     setDone(prevDone => {

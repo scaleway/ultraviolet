@@ -1,13 +1,8 @@
 import { expect, test } from '@playwright/test'
 
 test.describe('Popover should open to the requested direction', () => {
-  test('should open to the left when placement="left" even if there is not enough space', async ({
-    page,
-    baseURL,
-  }) => {
-    await page.goto(
-      `${baseURL}/popoverScrollingContainer?placement=left&scrollX=start`,
-    )
+  test('should open to the left when placement="left" even if there is not enough space', async ({ page, baseURL }) => {
+    await page.goto(`${baseURL}/popoverScrollingContainer?placement=left&scrollX=start`)
 
     await page.getByRole('button', { name: 'Open Popover' }).click()
 
@@ -26,13 +21,8 @@ test.describe('Popover should open to the requested direction', () => {
 })
 
 test.describe('Popover should flip direction if the placement includes "auto" and there is not enough space', () => {
-  test('should open to top when placement="auto-top" and there is enough space above', async ({
-    page,
-    baseURL,
-  }) => {
-    await page.goto(
-      `${baseURL}/popoverScrollingContainer?placement=auto-top&scrollY=end`,
-    )
+  test('should open to top when placement="auto-top" and there is enough space above', async ({ page, baseURL }) => {
+    await page.goto(`${baseURL}/popoverScrollingContainer?placement=auto-top&scrollY=end`)
 
     await page.getByRole('button', { name: 'Open Popover' }).click()
 
@@ -53,9 +43,7 @@ test.describe('Popover should flip direction if the placement includes "auto" an
     page,
     baseURL,
   }) => {
-    await page.goto(
-      `${baseURL}/popoverScrollingContainer?placement=auto-top&scrollY=start`,
-    )
+    await page.goto(`${baseURL}/popoverScrollingContainer?placement=auto-top&scrollY=start`)
 
     await page.getByRole('button', { name: 'Open Popover' }).click()
 
@@ -76,9 +64,7 @@ test.describe('Popover should flip direction if the placement includes "auto" an
     page,
     baseURL,
   }) => {
-    await page.goto(
-      `${baseURL}/popoverScrollingContainer?placement=auto-left&scrollX=start`,
-    )
+    await page.goto(`${baseURL}/popoverScrollingContainer?placement=auto-left&scrollX=start`)
 
     await page.getByRole('button', { name: 'Open Popover' }).click()
 
@@ -102,9 +88,7 @@ test.describe('Popover should translate to avoid overflow', () => {
     page,
     baseURL,
   }) => {
-    await page.goto(
-      `${baseURL}/popoverScrollingContainer?placement=top&scrollX=end`,
-    )
+    await page.goto(`${baseURL}/popoverScrollingContainer?placement=top&scrollX=end`)
 
     await page.getByRole('button', { name: 'Open Popover' }).click()
 
@@ -118,18 +102,14 @@ test.describe('Popover should translate to avoid overflow', () => {
     if (!popoverBox || !containerBox) {
       throw 'Could not get bounding box'
     }
-    expect(popoverBox.x + popoverBox.width).toBe(
-      containerBox.x + containerBox.width,
-    )
+    expect(popoverBox.x + popoverBox.width).toBe(containerBox.x + containerBox.width)
   })
 
   test('should translate on the Y axis to avoid vertical overflow out of the parent container', async ({
     page,
     baseURL,
   }) => {
-    await page.goto(
-      `${baseURL}/popoverScrollingContainer?placement=right&scrollX=start&scrollY=start`,
-    )
+    await page.goto(`${baseURL}/popoverScrollingContainer?placement=right&scrollX=start&scrollY=start`)
 
     await page.getByRole('button', { name: 'Open Popover' }).click()
 

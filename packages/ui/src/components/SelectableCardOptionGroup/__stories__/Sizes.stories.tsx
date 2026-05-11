@@ -21,62 +21,28 @@ export const Sizes: StoryFn<typeof SelectableCardOptionGroup> = args => {
         <SelectableCardOptionGroup
           {...args}
           legend={`${args.legend} (large)`}
-          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-            onChange(event.currentTarget.value)
-          }
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
           onChangeOption={(newValue: string) => onChangeOption(newValue)}
           optionValue={option}
           size="large"
           value={value}
         >
-          <SelectableCardOptionGroup.Option
-            image={ubuntu}
-            label="Ubuntu"
-            options={ubuntuOptions}
-            value="ubuntu"
-          />
-          <SelectableCardOptionGroup.Option
-            image={debian}
-            label="Debian"
-            options={debianOptions}
-            value="debian"
-          />
-          <SelectableCardOptionGroup.Option
-            image={centos}
-            label="CentOS"
-            options={centosOptions}
-            value="centos"
-          />
+          <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
+          <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
+          <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
         </SelectableCardOptionGroup>
         <SelectableCardOptionGroup
           {...args}
           legend={`${args.legend} (medium)`}
-          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-            onChange(event.currentTarget.value)
-          }
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
           onChangeOption={(newValue: string) => onChangeOption(newValue)}
           optionValue={option}
           size="medium"
           value={value}
         >
-          <SelectableCardOptionGroup.Option
-            image={ubuntu}
-            label="Ubuntu"
-            options={ubuntuOptions}
-            value="ubuntu"
-          />
-          <SelectableCardOptionGroup.Option
-            image={debian}
-            label="Debian"
-            options={debianOptions}
-            value="debian"
-          />
-          <SelectableCardOptionGroup.Option
-            image={centos}
-            label="CentOS"
-            options={centosOptions}
-            value="centos"
-          />
+          <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
+          <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
+          <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
         </SelectableCardOptionGroup>
       </Stack>
       <Stack>

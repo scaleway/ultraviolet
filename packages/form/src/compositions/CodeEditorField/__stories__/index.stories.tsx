@@ -26,12 +26,7 @@ export default {
       } = methods.formState
 
       return (
-        <Form
-          errors={mockErrors}
-          methods={methods}
-          name="CodeEditorField"
-          onSubmit={() => {}}
-        >
+        <Form errors={mockErrors} methods={methods} name="CodeEditorField" onSubmit={() => {}}>
           <Stack gap={2}>
             <ChildStory />
             <Stack gap={1}>

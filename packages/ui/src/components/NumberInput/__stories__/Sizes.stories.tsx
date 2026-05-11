@@ -7,13 +7,7 @@ import type { ComponentProps } from 'react'
 export const Sizes: StoryFn = (args: ComponentProps<typeof NumberInput>) => (
   <Stack gap={2}>
     {(['small', 'medium', 'large'] as const).map(size => (
-      <NumberInput
-        key={size}
-        {...args}
-        label={size}
-        placeholder="12"
-        size={size}
-      />
+      <NumberInput key={size} {...args} label={size} placeholder="12" size={size} />
     ))}
   </Stack>
 )

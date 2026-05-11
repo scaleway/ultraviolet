@@ -17,13 +17,7 @@ type ItemProps = {
   searchText?: string
 }
 
-const Item = ({
-  sentiment,
-  active,
-  colors,
-  children,
-  searchText,
-}: ItemProps) => (
+const Item = ({ sentiment, active, colors, children, searchText }: ItemProps) => (
   <Menu.Item active={active} searchText={searchText} sentiment={sentiment}>
     <Stack alignItems="center" direction="row" gap={1}>
       <Avatar colors={colors} shape="circle" size="xsmall" variant="colors" />
@@ -44,12 +38,7 @@ export const Searchable: StoryFn<typeof Menu> = props => (
     hideOnClickItem
     searchable
   >
-    <Item
-      active
-      colors={['#BF95F9', '#3D1862']}
-      searchText="default project"
-      sentiment="primary"
-    >
+    <Item active colors={['#BF95F9', '#3D1862']} searchText="default project" sentiment="primary">
       <Stack alignItems="center" direction="row" gap={1}>
         Default Project
         <Badge sentiment="success" size="small">

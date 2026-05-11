@@ -2,11 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-import {
-  capitalizedText,
-  capitalizedTextDay,
-  dayMonth,
-} from './components/styles.css'
+import { capitalizedText, capitalizedTextDay, dayMonth } from './components/styles.css'
 
 const container = style({
   width: '100%',

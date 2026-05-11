@@ -4,18 +4,11 @@ import '@ultraviolet/ui/styles'
 import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import { Text } from '@ultraviolet/ui'
 import { lazy } from 'react'
-import {
-  Link as ReactRouterLink,
-  Route,
-  BrowserRouter as Router,
-  Routes,
-} from 'react-router-dom'
+import { Link as ReactRouterLink, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
 import type { ReactNode } from 'react'
 
-const GlobalWrapper = ({ children }: { children: ReactNode }) => (
-  <div style={{ padding: '48px' }}>{children}</div>
-)
+const GlobalWrapper = ({ children }: { children: ReactNode }) => <div style={{ padding: '48px' }}>{children}</div>
 
 /**
  * We get all the render.tsx in tests folder and generate individual pages / routes to render the content.
@@ -25,9 +18,7 @@ const pagesToRender = Object.keys(modules)
   .map(path =>
     path.includes('render.tsx')
       ? {
-          Component: lazy(
-            async () => import(`./tests/${path?.split('/')[2]}/render.tsx`),
-          ),
+          Component: lazy(async () => import(`./tests/${path?.split('/')[2]}/render.tsx`)),
           name: path.replace('.tsx', ''),
         }
       : null,
@@ -43,8 +34,7 @@ const WelcomePage = () => (
       Welcome to the Ultraviolet E2E testing suite!
     </Text>
     <Text as="p" variant="body">
-      This page is a placeholder for the available pages to test. Please read
-      the README.md file for more information.
+      This page is a placeholder for the available pages to test. Please read the README.md file for more information.
     </Text>
     <Text as="p" variant="body">
       Available pages to test:
@@ -52,9 +42,7 @@ const WelcomePage = () => (
     <ul>
       {pagesToRender.map(path => (
         <li key={path?.name}>
-          <ReactRouterLink
-            to={{ pathname: path?.name?.split('/')[2]?.toLowerCase() ?? '' }}
-          >
+          <ReactRouterLink to={{ pathname: path?.name?.split('/')[2]?.toLowerCase() ?? '' }}>
             {path?.name?.split('/')[2]?.toLowerCase()}
           </ReactRouterLink>
         </li>
@@ -73,13 +61,7 @@ const App = () => (
             const Element = path?.Component
 
             if (Element) {
-              return (
-                <Route
-                  element={<Element />}
-                  key={path?.name}
-                  path={path?.name?.split('/')[2]?.toLowerCase()}
-                />
-              )
+              return <Route element={<Element />} key={path?.name} path={path?.name?.split('/')[2]?.toLowerCase()} />
             }
 
             return null

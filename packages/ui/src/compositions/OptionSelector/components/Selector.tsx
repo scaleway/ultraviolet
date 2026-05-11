@@ -19,13 +19,7 @@ export const Selector = ({
   firstSelector: selector,
 }: Pick<
   OptionSelectorProps,
-  | 'size'
-  | 'disabled'
-  | 'error'
-  | 'readOnly'
-  | 'required'
-  | 'direction'
-  | 'firstSelector'
+  'size' | 'disabled' | 'error' | 'readOnly' | 'required' | 'direction' | 'firstSelector'
 > & {
   isFirst?: boolean
   isHorizontal: boolean
@@ -36,9 +30,7 @@ export const Selector = ({
   <SelectInput
     aria-label={selector['aria-label']}
     className={
-      isFirst
-        ? optionSelectorStyle.firstSelectInput[direction]
-        : optionSelectorStyle.secondSelectInput[direction]
+      isFirst ? optionSelectorStyle.firstSelectInput[direction] : optionSelectorStyle.secondSelectInput[direction]
     }
     data-testid={isFirst ? 'first-selector' : 'second-selector'}
     disabled={selector.disabled || disabled}

@@ -22,12 +22,6 @@ export type PopoverProps = {
    */
   portalTarget?: HTMLElement
   placement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
-} & Pick<
-  ComponentProps<typeof Popup>,
-  'dynamicDomRendering' | 'align' | 'style'
->
+} & Pick<ComponentProps<typeof Popup>, 'dynamicDomRendering' | 'align' | 'style'>
 
-export type ContentWrapperProps = Pick<
-  PopoverProps,
-  'title' | 'onClose' | 'sentiment' | 'children'
->
+export type ContentWrapperProps = Pick<PopoverProps, 'title' | 'onClose' | 'sentiment' | 'children'>

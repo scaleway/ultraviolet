@@ -9,12 +9,9 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const DetachIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const DetachIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="DetachIcon">
-    {typeof props.size === 'string' &&
-    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
+    {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M2.195 2.195c.26-.26.683-.26.943 0l14.667 14.667a.667.667 0 1 1-.943.943L2.195 3.138a.667.667 0 0 1 0-.943" />
         <path d="M7.553 6.718a4.057 4.057 0 0 0 1.262 6.38.676.676 0 0 0 .582-1.22 2.704 2.704 0 0 1-.887-4.202z" />

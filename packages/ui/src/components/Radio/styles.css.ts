@@ -75,11 +75,10 @@ const label = style({
     [`${switchButtonStyle.optionBase}[data-disabled="true"] &`]: {
       color: theme.colors.neutral.textDisabled,
     },
-    [`${switchButtonStyle.optionBase}[data-checked='false'][data-disabled="true"] &:hover`]:
-      {
-        background: 'transparent',
-        color: theme.colors.neutral.textDisabled,
-      },
+    [`${switchButtonStyle.optionBase}[data-checked='false'][data-disabled="true"] &:hover`]: {
+      background: 'transparent',
+      color: theme.colors.neutral.textDisabled,
+    },
   },
 })
 
@@ -110,18 +109,15 @@ const ring = style({
   minHeight: theme.sizing['300'],
   minWidth: theme.sizing['300'],
   selectors: {
-    [`${container} ${radio}:checked[aria-disabled='false'][aria-invalid='false'] + &`]:
-      {
-        fill: theme.colors.primary.backgroundStrong,
-      },
-    [`${container} ${radio}:checked[aria-disabled='true'][aria-invalid='false'] + &`]:
-      {
-        fill: theme.colors.primary.borderDisabled,
-      },
-    [`${container} ${radio}[aria-invalid='true']:not([aria-disabled='true']) + &`]:
-      {
-        fill: theme.colors.danger.backgroundStrong,
-      },
+    [`${container} ${radio}:checked[aria-disabled='false'][aria-invalid='false'] + &`]: {
+      fill: theme.colors.primary.backgroundStrong,
+    },
+    [`${container} ${radio}:checked[aria-disabled='true'][aria-invalid='false'] + &`]: {
+      fill: theme.colors.primary.borderDisabled,
+    },
+    [`${container} ${radio}[aria-invalid='true']:not([aria-disabled='true']) + &`]: {
+      fill: theme.colors.danger.backgroundStrong,
+    },
     [`${container} ${radio}[aria-disabled='false']:active + &`]: {
       backgroundColor: '#5e127e40',
       fill: theme.colors.primary.backgroundStrong,

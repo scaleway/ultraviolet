@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const NextcloudLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const NextcloudLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="NextcloudLogo">
     <title>Nextcloud icon</title>{' '}
     <path

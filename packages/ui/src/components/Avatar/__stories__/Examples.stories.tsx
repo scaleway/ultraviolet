@@ -20,21 +20,9 @@ export const Examples: StoryFn<typeof Avatar> = props => {
       </Stack>
       <Stack alignItems="flex-start" direction="row" gap={1}>
         {image ? (
-          <Avatar
-            image={image}
-            onClick={() => inputRef?.current?.click()}
-            shape="square"
-            upload
-            variant="image"
-          />
+          <Avatar image={image} onClick={() => inputRef?.current?.click()} shape="square" upload variant="image" />
         ) : (
-          <Avatar
-            onClick={() => inputRef?.current?.click()}
-            shape="square"
-            text="UV"
-            upload
-            variant="text"
-          />
+          <Avatar onClick={() => inputRef?.current?.click()} shape="square" text="UV" upload variant="text" />
         )}
         <input
           onChange={event => {
@@ -50,9 +38,7 @@ export const Examples: StoryFn<typeof Avatar> = props => {
           <p>
             <b>My Profile</b>
           </p>
-          <small>
-            Last profile picture update: {image ? 'just now' : '2 hours ago'}
-          </small>
+          <small>Last profile picture update: {image ? 'just now' : '2 hours ago'}</small>
         </Stack>
       </Stack>
     </>

@@ -9,19 +9,14 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const ElasticSearchLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const ElasticSearchLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="ElasticSearchLogo">
     <g>
       <path
         d="M15.21 5.59879H1.61741C1.27526 5.59879 0.995325 5.31885 0.995325 4.9767V0.622087C0.995325 0.279939 1.27526 0 1.61741 0H19.3469C19.689 0 19.969 0.279939 19.969 0.622087V0.839818C19.9379 3.45258 17.8228 5.59879 15.21 5.59879Z"
         fill="#F0BF1A"
       />
-      <path
-        d="M20 19.9068H1.05752V14.308H15.2722C17.8849 14.308 20 16.4231 20 19.0359V19.9068Z"
-        fill="#3EBEB0"
-      />
+      <path d="M20 19.9068H1.05752V14.308H15.2722C17.8849 14.308 20 16.4231 20 19.0359V19.9068Z" fill="#3EBEB0" />
       <path
         d="M14.0903 12.7528H0V7.154H14.0903C15.6455 7.154 16.8897 8.39818 16.8897 9.9534C16.8897 11.5086 15.6144 12.7528 14.0903 12.7528Z"
         fill="#07A5DE"

@@ -12,13 +12,7 @@ export const Controlled: StoryFn<typeof Slider> = () => {
 
   return (
     <Stack gap={2}>
-      <Slider
-        input
-        label="Controlled"
-        name="name"
-        onChange={setValue}
-        value={value}
-      />
+      <Slider input label="Controlled" name="name" onChange={setValue} value={value} />
       <Button onClick={() => setValue(0)}>Reset values</Button>
       <Text as="p" variant="body">
         Value selected : {value}

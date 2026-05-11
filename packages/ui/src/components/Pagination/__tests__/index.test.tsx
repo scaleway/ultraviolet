@@ -9,12 +9,7 @@ describe('pagination', () => {
   it('should render correctly', async () => {
     const mockOnClick = vi.fn()
     const { asFragment } = renderWithTheme(
-      <Pagination
-        onChange={mockOnClick}
-        page={1}
-        pageCount={5}
-        pageTabCount={5}
-      />,
+      <Pagination onChange={mockOnClick} page={1} pageCount={5} pageTabCount={5} />,
     )
     const nextButton = screen.getByRole('button', { name: 'Next' })
     await userEvent.click(nextButton)
@@ -26,9 +21,7 @@ describe('pagination', () => {
   it('should render correctly with pageCount is 1', async () => {
     const mockOnClick = vi.fn()
 
-    const { asFragment } = renderWithTheme(
-      <Pagination onChange={mockOnClick} page={1} pageCount={1} />,
-    )
+    const { asFragment } = renderWithTheme(<Pagination onChange={mockOnClick} page={1} pageCount={1} />)
     const nextButton = screen.getByRole('button', { name: 'Next' })
     await userEvent.click(nextButton)
     expect(mockOnClick).not.toHaveBeenCalled()
@@ -39,9 +32,7 @@ describe('pagination', () => {
   it('should render correctly component with pageTabCount', async () => {
     const mockOnClick = vi.fn()
 
-    const { asFragment } = renderWithTheme(
-      <Pagination onChange={mockOnClick} page={12} pageCount={16} />,
-    )
+    const { asFragment } = renderWithTheme(<Pagination onChange={mockOnClick} page={12} pageCount={16} />)
     const nextButton = screen.getByRole('button', { name: 'Next' })
     await userEvent.click(nextButton)
     expect(mockOnClick).toHaveBeenCalledOnce()
@@ -52,9 +43,7 @@ describe('pagination', () => {
   it('should render correctly component with disabled', async () => {
     const mockOnClick = vi.fn()
 
-    const { asFragment } = renderWithTheme(
-      <Pagination disabled onChange={mockOnClick} page={5} pageCount={10} />,
-    )
+    const { asFragment } = renderWithTheme(<Pagination disabled onChange={mockOnClick} page={5} pageCount={10} />)
     const nextButton = screen.getByRole('button', { name: 'Next' })
     await userEvent.click(nextButton)
     expect(mockOnClick).not.toHaveBeenCalled()
@@ -65,9 +54,7 @@ describe('pagination', () => {
   it('should render correctly with page < 1', () => {
     const mockOnClick = vi.fn()
 
-    const { asFragment } = renderWithTheme(
-      <Pagination onChange={mockOnClick} page={0} pageCount={2} />,
-    )
+    const { asFragment } = renderWithTheme(<Pagination onChange={mockOnClick} page={0} pageCount={2} />)
     expect(mockOnClick).toHaveBeenCalledOnce()
     expect(asFragment()).toMatchSnapshot()
   })
@@ -75,9 +62,7 @@ describe('pagination', () => {
   it('should render correctly with page > pageCount', () => {
     const mockOnClick = vi.fn()
 
-    const { asFragment } = renderWithTheme(
-      <Pagination onChange={mockOnClick} page={3} pageCount={2} />,
-    )
+    const { asFragment } = renderWithTheme(<Pagination onChange={mockOnClick} page={3} pageCount={2} />)
     expect(mockOnClick).toHaveBeenCalledOnce()
     expect(asFragment()).toMatchSnapshot()
   })
@@ -85,9 +70,7 @@ describe('pagination', () => {
   it('should render correctly with pageClick', async () => {
     const mockOnClick = vi.fn()
 
-    const { asFragment } = renderWithTheme(
-      <Pagination onChange={mockOnClick} page={2} pageCount={10} />,
-    )
+    const { asFragment } = renderWithTheme(<Pagination onChange={mockOnClick} page={2} pageCount={10} />)
     const nextButton = screen.getByRole('button', { name: 'Next' })
     const backButton = screen.getByRole('button', { name: 'Back' })
     await userEvent.click(nextButton)
@@ -109,13 +92,7 @@ describe('pagination', () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <Pagination
-        numberOfItems={100}
-        onChange={mockOnClick}
-        page={2}
-        pageCount={10}
-        perPage={10}
-      />,
+      <Pagination numberOfItems={100} onChange={mockOnClick} page={2} pageCount={10} perPage={10} />,
     )
     const nextButton = screen.getByRole('button', { name: 'Next' })
     await userEvent.click(nextButton)

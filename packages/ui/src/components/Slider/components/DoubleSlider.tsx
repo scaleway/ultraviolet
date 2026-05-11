@@ -52,10 +52,7 @@ export const DoubleSlider = ({
   const finalId = id ?? localId
   const refSlider = useRef<HTMLInputElement>(null)
 
-  const safeValue =
-    value && Array.isArray(value) && value.length === 2
-      ? value
-      : [min ?? 0, max ?? 1]
+  const safeValue = value && Array.isArray(value) && value.length === 2 ? value : [min ?? 0, max ?? 1]
   const [selectedIndexes, setSelectedIndexes] = useState(safeValue)
   const [sliderWidth, setWidth] = useState(0)
   const [inputValue, setInputValue] = useState<(number | null)[]>(safeValue)
@@ -74,10 +71,7 @@ export const DoubleSlider = ({
       if (selectedIndexes[0] === null) {
         return 0
       }
-      if (
-        selectedIndexes[1] !== null &&
-        selectedIndexes[1] < selectedIndexes[0]
-      ) {
+      if (selectedIndexes[1] !== null && selectedIndexes[1] < selectedIndexes[0]) {
         return 1
       }
 
@@ -87,10 +81,7 @@ export const DoubleSlider = ({
     if (selectedIndexes[1] === null) {
       return 1
     }
-    if (
-      selectedIndexes[0] !== null &&
-      selectedIndexes[1] < selectedIndexes[0]
-    ) {
+    if (selectedIndexes[0] !== null && selectedIndexes[1] < selectedIndexes[0]) {
       return 0
     }
 
@@ -155,10 +146,7 @@ export const DoubleSlider = ({
     }
   }
 
-  const onBlurInput = (
-    event: FocusEvent<HTMLInputElement>,
-    side: 'left' | 'right',
-  ) => {
+  const onBlurInput = (event: FocusEvent<HTMLInputElement>, side: 'left' | 'right') => {
     // Default to min/max when the input is left empty
     if (event.target.value) {
       const newValue = Number.parseFloat(event.target.value)
@@ -184,10 +172,7 @@ export const DoubleSlider = ({
     }
   }
 
-  const styledValue = (
-    valueNumber: string | number | null,
-    side: 'left' | 'right',
-  ) => {
+  const styledValue = (valueNumber: string | number | null, side: 'left' | 'right') => {
     const isRowDirection = direction !== 'column'
     const index = side === 'left' ? 0 : 1
 
@@ -215,9 +200,7 @@ export const DoubleSlider = ({
           isDouble: true,
           isPadded: isRowDirection,
         })}
-        data-testid={
-          dataTestId ? `${dataTestId}-value-${side}` : `value-${side}`
-        }
+        data-testid={dataTestId ? `${dataTestId}-value-${side}` : `value-${side}`}
         placement={isRowDirection ? 'center' : 'right'}
         sentiment="neutral"
         variant="bodySmall"
@@ -248,27 +231,20 @@ export const DoubleSlider = ({
   }, [tooltip, selectedIndexes])
 
   const placementTooltip = [
-    ((selectedIndexes[0] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
-      THUMB_SIZE / 2,
-    ((selectedIndexes[1] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
-      THUMB_SIZE / 2,
+    ((selectedIndexes[0] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) + THUMB_SIZE / 2,
+    ((selectedIndexes[1] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) + THUMB_SIZE / 2,
   ]
 
   const [leftToShow, rightToShow] =
-    options && !defaultScale
-      ? [options[selectedIndexes[0]].value, options[selectedIndexes[1]].value]
-      : selectedIndexes
+    options && !defaultScale ? [options[selectedIndexes[0]].value, options[selectedIndexes[1]].value] : selectedIndexes
 
-  const leftSliderProgress =
-    ((selectedIndexes[0] ?? 0 - min) * 100) / (max - min)
-  const rightSliderProgress =
-    ((selectedIndexes[1] ?? 0 - min) * 100) / (max - min)
+  const leftSliderProgress = ((selectedIndexes[0] ?? 0 - min) * 100) / (max - min)
+  const rightSliderProgress = ((selectedIndexes[1] ?? 0 - min) * 100) / (max - min)
 
   // Make the component controllable
   useEffect(() => {
     setSelectedIndexes(() => {
-      const newSafeValue =
-        value && Array.isArray(value) && value.length === 2 ? value : [min, max]
+      const newSafeValue = value && Array.isArray(value) && value.length === 2 ? value : [min, max]
       if (min > newSafeValue[0]) {
         newSafeValue[0] = min
       }
@@ -284,11 +260,7 @@ export const DoubleSlider = ({
     <Stack direction="column" gap={1} justifyContent="left">
       {label ? (
         <Stack direction="row" justifyContent="space-between">
-          <Label
-            htmlFor={finalId}
-            labelDescription={labelDescription}
-            required={required}
-          >
+          <Label htmlFor={finalId} labelDescription={labelDescription} required={required}>
             {label}
           </Label>
           {customValueDisplay}
@@ -362,9 +334,7 @@ export const DoubleSlider = ({
                 style={assignInlineVars({
                   [leftVar]: `calc(${leftSliderProgress}% - ${(THUMB_SIZE * leftSliderProgress) / 100}px)`,
                   [thumbColor]:
-                    theme.theme === 'light'
-                      ? theme.colors.neutral.background
-                      : theme.colors.neutral.backgroundStronger,
+                    theme.theme === 'light' ? theme.colors.neutral.background : theme.colors.neutral.backgroundStronger,
                 })}
                 type="range"
                 value={selectedIndexes[0]}
@@ -407,9 +377,7 @@ export const DoubleSlider = ({
                 style={assignInlineVars({
                   [leftVar]: `calc(${rightSliderProgress}% - ${(THUMB_SIZE * rightSliderProgress) / 100}px)`,
                   [thumbColor]:
-                    theme.theme === 'light'
-                      ? theme.colors.neutral.background
-                      : theme.colors.neutral.backgroundStronger,
+                    theme.theme === 'light' ? theme.colors.neutral.background : theme.colors.neutral.backgroundStronger,
                 })}
                 type="range"
                 value={selectedIndexes[1]}

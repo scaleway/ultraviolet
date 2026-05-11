@@ -10,9 +10,4 @@ const webPlatformKeyvisual = `${BASE_URL}/products/webPlatform/web-platform-keyv
 const webPlatformOriginal = `${BASE_URL}/products/webPlatform/web-platform-original.webp`
 const webPlatformWire = `${BASE_URL}/products/webPlatform/web-platform-wire.svg`
 
-export {
-  webPlatformContent,
-  webPlatformKeyvisual,
-  webPlatformOriginal,
-  webPlatformWire,
-}
+export { webPlatformContent, webPlatformKeyvisual, webPlatformOriginal, webPlatformWire }

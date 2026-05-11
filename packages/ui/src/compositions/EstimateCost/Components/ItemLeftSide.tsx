@@ -46,11 +46,7 @@ export const ItemLeftSide = ({
     <LeftSide className={isOverlay ? '' : estimateCostStyle.leftSide}>
       <Stack>
         <Stack direction="row">
-          <Text
-            as="p"
-            prominence={labelTextProminence ?? 'default'}
-            variant={labelTextVariant ?? 'body'}
-          >
+          <Text as="p" prominence={labelTextProminence ?? 'default'} variant={labelTextVariant ?? 'body'}>
             {label}
           </Text>
           {tooltipInfo ? (
@@ -61,34 +57,18 @@ export const ItemLeftSide = ({
             </div>
           ) : null}
           {subLabel && !isOverlay ? (
-            <Text
-              as="p"
-              className={estimateCostStyle.textItem}
-              italic
-              sentiment="primary"
-              variant="body"
-            >
+            <Text as="p" className={estimateCostStyle.textItem} italic sentiment="primary" variant="body">
               {subLabel}
             </Text>
           ) : null}
           {discount > 0 && discountText ? (
-            <Badge
-              className={estimateCostStyle.badgeItem}
-              prominence="strong"
-              sentiment="warning"
-              size="small"
-            >
+            <Badge className={estimateCostStyle.badgeItem} prominence="strong" sentiment="warning" size="small">
               {discountText}
             </Badge>
           ) : null}
         </Stack>
         {notice ? (
-          <Text
-            as="p"
-            className={estimateCostMaxWidthText}
-            prominence="weak"
-            variant="caption"
-          >
+          <Text as="p" className={estimateCostMaxWidthText} prominence="weak" variant="caption">
             {notice}
           </Text>
         ) : null}

@@ -18,22 +18,18 @@ describe('copyButton', () => {
     }
   })
 
-  it('renders correctly', () =>
-    shouldMatchSnapshot(<CopyButton value="Test" />))
+  it('renders correctly', () => shouldMatchSnapshot(<CopyButton value="Test" />))
   ;(['xsmall', 'small', 'medium', 'large'] as const).forEach(size => {
-    it(`renders correctly sentiment ${size}`, () =>
-      shouldMatchSnapshot(<CopyButton size={size} value="Test" />))
+    it(`renders correctly sentiment ${size}`, () => shouldMatchSnapshot(<CopyButton size={size} value="Test" />))
   })
   ;(['primary', 'neutral'] as const).forEach(sentiment => {
     it(`renders correctly sentiment ${sentiment}`, () =>
       shouldMatchSnapshot(<CopyButton sentiment={sentiment} value="Test" />))
   })
 
-  it('renders correctly with bordered', () =>
-    shouldMatchSnapshot(<CopyButton bordered value="Test" />))
+  it('renders correctly with bordered', () => shouldMatchSnapshot(<CopyButton bordered value="Test" />))
 
-  it('renders correctly with children', () =>
-    shouldMatchSnapshot(<CopyButton value="Test">Copy test</CopyButton>))
+  it('renders correctly with children', () => shouldMatchSnapshot(<CopyButton value="Test">Copy test</CopyButton>))
 
   it('renders correctly with custom copy text', () =>
     shouldMatchSnapshot(<CopyButton copyText="Copy me" value="Test" />))
@@ -46,9 +42,7 @@ describe('copyButton', () => {
 
   it('should renders correctly with a complex children', async () => {
     const onCopy = vi.fn(() => {})
-    const writeTextSpy = vi
-      .spyOn(navigator.clipboard, 'writeText')
-      .mockResolvedValue(undefined)
+    const writeTextSpy = vi.spyOn(navigator.clipboard, 'writeText').mockResolvedValue(undefined)
 
     renderWithTheme(<CopyButton onCopy={onCopy} value="test" />)
 

@@ -6,23 +6,16 @@ import { recipe } from '@vanilla-extract/recipes'
 import { PROMINENCES } from './constants'
 import { textVars } from './variables.css'
 
-import type {
-  ExtendedColor,
-  TextStyleObject,
-  TextVariant,
-} from '@ultraviolet/themes'
+import type { ExtendedColor, TextStyleObject, TextVariant } from '@ultraviolet/themes'
 import type { RecipeVariants } from '@vanilla-extract/recipes'
 
 type ProminenceProps = keyof typeof PROMINENCES
 
-const isStronger = (prominence: ProminenceProps): prominence is 'stronger' =>
-  prominence === 'stronger'
+const isStronger = (prominence: ProminenceProps): prominence is 'stronger' => prominence === 'stronger'
 
-const isStrong = (prominence: ProminenceProps): prominence is 'strong' =>
-  prominence === 'strong'
+const isStrong = (prominence: ProminenceProps): prominence is 'strong' => prominence === 'strong'
 
-const isWeak = (prominence: ProminenceProps): prominence is 'weak' =>
-  prominence === 'weak'
+const isWeak = (prominence: ProminenceProps): prominence is 'weak' => prominence === 'weak'
 
 const sentiments = [
   'primary',
@@ -38,10 +31,7 @@ const sentiments = [
 
 const prominences = Object.keys(PROMINENCES) as (keyof typeof PROMINENCES)[]
 
-type StyleText = Omit<
-  TextStyleObject,
-  'paragraphSpacing' | 'textCase' | 'textDecoration' | 'weight'
-> & {
+type StyleText = Omit<TextStyleObject, 'paragraphSpacing' | 'textCase' | 'textDecoration' | 'weight'> & {
   textTransform: string
 }
 
@@ -63,19 +53,14 @@ function generateVariants() {
   )
 }
 
-function generateStyles(
-  prominence: ProminenceProps,
-  disabled: boolean,
-  sentiment?: ExtendedColor,
-) {
+function generateStyles(prominence: ProminenceProps, disabled: boolean, sentiment?: ExtendedColor) {
   if (isColorMonochrome(sentiment)) {
     return { color: theme.colors.other.monochrome[sentiment].text }
   }
 
   if (sentiment === 'neutral') {
     const definedProminence = capitalize(PROMINENCES[prominence])
-    const text =
-      `text${definedProminence}${disabled ? 'Disabled' : ''}` as const
+    const text = `text${definedProminence}${disabled ? 'Disabled' : ''}` as const
 
     return { color: theme.colors[sentiment][text] }
   }
@@ -85,12 +70,9 @@ function generateStyles(
    * We should ask to define theses var inside the theme instead
    */
   if (sentiment) {
-    if (
-      !(isWeak(prominence) || isStronger(prominence) || isStrong(prominence))
-    ) {
+    if (!(isWeak(prominence) || isStronger(prominence) || isStrong(prominence))) {
       const definedProminence = capitalize(PROMINENCES[prominence])
-      const text =
-        `text${definedProminence}${disabled ? 'Disabled' : ''}` as const
+      const text = `text${definedProminence}${disabled ? 'Disabled' : ''}` as const
 
       return { color: theme.colors[sentiment][text] }
     }
@@ -135,11 +117,7 @@ function getArrayOfVariantNoSentiment() {
 }
 
 const compoundVariants = filterByProperty(
-  [
-    ...getArrayOfVariantNoSentiment(),
-    ...getArrayOfVariantsDisabled(),
-    ...getArrayOfVariants(),
-  ],
+  [...getArrayOfVariantNoSentiment(), ...getArrayOfVariantsDisabled(), ...getArrayOfVariants()],
   'style',
 )
 

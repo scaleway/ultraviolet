@@ -6,36 +6,26 @@ import { describe, expect, it, vi } from 'vitest'
 import { TagInput } from '..'
 
 describe('tagInput', () => {
-  it('should renders correctly', () =>
-    shouldMatchSnapshot(<TagInput onChange={() => {}} />))
+  it('should renders correctly', () => shouldMatchSnapshot(<TagInput onChange={() => {}} />))
 
-  it('should renders correctly disabled', () =>
-    shouldMatchSnapshot(<TagInput disabled />))
+  it('should renders correctly disabled', () => shouldMatchSnapshot(<TagInput disabled />))
 
-  it('should renders correctly readOnly', () =>
-    shouldMatchSnapshot(<TagInput readOnly />))
+  it('should renders correctly readOnly', () => shouldMatchSnapshot(<TagInput readOnly />))
 
-  it('should renders correctly with label', () =>
-    shouldMatchSnapshot(<TagInput label="Label" />))
+  it('should renders correctly with label', () => shouldMatchSnapshot(<TagInput label="Label" />))
 
   it('should renders correctly with labelDescription', () =>
-    shouldMatchSnapshot(
-      <TagInput labelDescription={<div>label description</div>} />,
-    ))
+    shouldMatchSnapshot(<TagInput labelDescription={<div>label description</div>} />))
 
-  it('should renders correctly with error', () =>
-    shouldMatchSnapshot(<TagInput error="This is an error" />))
+  it('should renders correctly with error', () => shouldMatchSnapshot(<TagInput error="This is an error" />))
 
-  it('should renders correctly with success', () =>
-    shouldMatchSnapshot(<TagInput success="This is a success" />))
+  it('should renders correctly with success', () => shouldMatchSnapshot(<TagInput success="This is a success" />))
 
   it('should renders correctly with placeholder', () =>
     shouldMatchSnapshot(<TagInput placeholder="Enter a value here" />))
 
   it('should renders correctly with some tags', () =>
-    shouldMatchSnapshot(
-      <TagInput name="radio" onChange={() => {}} value={['hello', 'world']} />,
-    ))
+    shouldMatchSnapshot(<TagInput name="radio" onChange={() => {}} value={['hello', 'world']} />))
 
   it('should renders correctly with some tags objects', () =>
     shouldMatchSnapshot(
@@ -61,9 +51,7 @@ describe('tagInput', () => {
   it('should be clearable', async () => {
     const mockOnChange = vi.fn()
 
-    renderWithTheme(
-      <TagInput clearable onChange={mockOnChange} value={['first']} />,
-    )
+    renderWithTheme(<TagInput clearable onChange={mockOnChange} value={['first']} />)
     const clearableButton = screen.getByLabelText('clear value')
     await userEvent.click(clearableButton)
     expect(mockOnChange).toHaveBeenCalledWith([])
@@ -72,9 +60,7 @@ describe('tagInput', () => {
   it('should delete tag', async () => {
     const mockOnChange = vi.fn()
 
-    renderWithTheme(
-      <TagInput onChange={mockOnChange} value={['first', 'second']} />,
-    )
+    renderWithTheme(<TagInput onChange={mockOnChange} value={['first', 'second']} />)
 
     const firstTag = screen.queryByText(/first/)
     expect(firstTag).toBeInTheDocument()
@@ -89,14 +75,7 @@ describe('tagInput', () => {
 
   it('should delete tag with backspace', async () => {
     const mockOnChange = vi.fn()
-    renderWithTheme(
-      <TagInput
-        id="test"
-        name="radio"
-        onChange={mockOnChange}
-        value={['hello', 'world']}
-      />,
-    )
+    renderWithTheme(<TagInput id="test" name="radio" onChange={mockOnChange} value={['hello', 'world']} />)
     const input = screen.getByRole<HTMLInputElement>('textbox')
     const lastTag = screen.queryByText(/world/)
     expect(lastTag).toBeInTheDocument()
@@ -109,14 +88,7 @@ describe('tagInput', () => {
 
   it('should not add tag on paste', async () => {
     const mockOnChange = vi.fn()
-    renderWithTheme(
-      <TagInput
-        id="test"
-        name="radio"
-        onChange={mockOnChange}
-        value={['hello', 'world']}
-      />,
-    )
+    renderWithTheme(<TagInput id="test" name="radio" onChange={mockOnChange} value={['hello', 'world']} />)
     const input = screen.getByRole<HTMLInputElement>('textbox')
 
     await userEvent.click(input)

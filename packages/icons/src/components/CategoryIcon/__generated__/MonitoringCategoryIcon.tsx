@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const MonitoringCategoryIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const MonitoringCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="MonitoringCategoryIcon">
     <g className="Observability">
       <g className="icon">
@@ -20,11 +18,7 @@ export const MonitoringCategoryIcon = ({
           d="M3 7.25a1.25 1.25 0 1 1 2.5 0v7.5a1.25 1.25 0 1 1-2.5 0zm11.5-2a1.25 1.25 0 1 1 2.5 0v9.5a1.25 1.25 0 1 1-2.5 0z"
           className="fill"
         />
-        <path
-          fill="#A365F6"
-          d="M8.75 9.25a1.25 1.25 0 1 1 2.5 0v5.5a1.25 1.25 0 1 1-2.5 0z"
-          className="fillStrong"
-        />
+        <path fill="#A365F6" d="M8.75 9.25a1.25 1.25 0 1 1 2.5 0v5.5a1.25 1.25 0 1 1-2.5 0z" className="fillStrong" />
       </g>
     </g>
   </Icon>

@@ -35,10 +35,7 @@ export const Badge = ({
    * Badge should display an aria-label if the status is not neutral or primary
    */
   const ariaLabel = useMemo(
-    () =>
-      ['neutral', 'primary'].some(baseSentiment => baseSentiment === sentiment)
-        ? undefined
-        : sentiment,
+    () => (['neutral', 'primary'].some(baseSentiment => baseSentiment === sentiment) ? undefined : sentiment),
     [sentiment],
   )
 
@@ -46,10 +43,7 @@ export const Badge = ({
     <Text
       aria-label={ariaLabel}
       as="span"
-      className={cn(
-        className,
-        badgeStyle.badge({ disabled, prominence, sentiment, size }),
-      )}
+      className={cn(className, badgeStyle.badge({ disabled, prominence, sentiment, size }))}
       data-testid={dataTestId}
       prominence={disabled ? 'weak' : 'default'}
       style={style}

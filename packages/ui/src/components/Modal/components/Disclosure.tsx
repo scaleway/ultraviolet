@@ -4,15 +4,7 @@ import { cloneElement, isValidElement, useEffect, useMemo } from 'react'
 
 import type { DisclosureProps } from '../types'
 
-export const Disclosure = ({
-  disclosure,
-  handleOpen,
-  visible,
-  handleClose,
-  toggle,
-  id,
-  ref,
-}: DisclosureProps) => {
+export const Disclosure = ({ disclosure, handleOpen, visible, handleClose, toggle, id, ref }: DisclosureProps) => {
   useEffect(() => {
     const element = ref.current
     element?.addEventListener('click', handleOpen)

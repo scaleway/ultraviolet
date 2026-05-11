@@ -10,9 +10,4 @@ const containerRegistryKeyvisual = `${BASE_URL}/products/containerRegistry/conta
 const containerRegistryOriginal = `${BASE_URL}/products/containerRegistry/container-registry-original.webp`
 const containerRegistryWire = `${BASE_URL}/products/containerRegistry/container-registry-wire.svg`
 
-export {
-  containerRegistryContent,
-  containerRegistryKeyvisual,
-  containerRegistryOriginal,
-  containerRegistryWire,
-}
+export { containerRegistryContent, containerRegistryKeyvisual, containerRegistryOriginal, containerRegistryWire }

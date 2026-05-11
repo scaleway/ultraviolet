@@ -93,8 +93,7 @@ export const Row = ({
 
   const canClickRowToExpand = hasExpandable && !expandButton
 
-  const childrenLength =
-    Children.count(children) + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
+  const childrenLength = Children.count(children) + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
 
   useEffect(() => {
     if (
@@ -109,11 +108,7 @@ export const Row = ({
   return (
     <>
       <tr
-        className={cn(
-          className,
-          highlightAnimation ? tableStyle.trAnimation : '',
-          tableStyle.row,
-        )}
+        className={cn(className, highlightAnimation ? tableStyle.trAnimation : '', tableStyle.row)}
         data-testid={dataTestid}
         role={canClickRowToExpand ? 'button row' : 'row'}
         style={style}
@@ -122,26 +117,14 @@ export const Row = ({
           <ColumnProvider width={theme.sizing[300]}>
             <Cell className={listStyle.noPaddingCell}>
               <div className={tableStyle.checkboxContainer}>
-                <Tooltip
-                  text={
-                    typeof selectDisabled === 'string'
-                      ? selectDisabled
-                      : undefined
-                  }
-                >
+                <Tooltip text={typeof selectDisabled === 'string' ? selectDisabled : undefined}>
                   <Checkbox
                     aria-label="select"
                     checked={selectedRowIds[id]}
-                    className={
-                      inRange?.includes(id)
-                        ? listStyle.checkboxInRange
-                        : undefined
-                    }
+                    className={inRange?.includes(id) ? listStyle.checkboxInRange : undefined}
                     disabled={!!selectDisabled}
                     name="table-select-checkbox"
-                    onChange={() =>
-                      handleOnChange(id, selectedRowIds[id] ?? false)
-                    }
+                    onChange={() => handleOnChange(id, selectedRowIds[id] ?? false)}
                     ref={checkboxRowRef}
                     value={id}
                   />
@@ -171,11 +154,7 @@ export const Row = ({
           const column = columns[index]
 
           return (
-            <ColumnProvider
-              maxWidth={column?.maxWidth}
-              minWidth={column?.minWidth}
-              width={column?.width}
-            >
+            <ColumnProvider maxWidth={column?.maxWidth} minWidth={column?.minWidth} width={column?.width}>
               {child}
             </ColumnProvider>
           )

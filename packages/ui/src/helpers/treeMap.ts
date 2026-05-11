@@ -124,10 +124,7 @@ export const percentToHex = (percentage: number): string => {
  * getDataColors(data, theme)
  * // returns { '#3B82F6FF', '#3B82F600', '#3B82F610' }
  */
-export const getDataColors = (
-  data: DefaultTreeMapDatum,
-  theme: Theme,
-): string[] => {
+export const getDataColors = (data: DefaultTreeMapDatum, theme: Theme): string[] => {
   const baseColor = theme.colors.primary.text
 
   return getAllIds(data).map(

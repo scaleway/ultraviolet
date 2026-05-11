@@ -7,18 +7,13 @@ const onCompleteHandler = (value: unknown) => {
 }
 
 export const OnComplete: StoryFn<typeof VerificationCode> = args => (
-  <VerificationCode
-    {...args}
-    label="Verification code"
-    onComplete={onCompleteHandler}
-  />
+  <VerificationCode {...args} label="Verification code" onComplete={onCompleteHandler} />
 )
 
 OnComplete.parameters = {
   docs: {
     description: {
-      story:
-        'You can use `onComplete` prop to react on a completed code typing',
+      story: 'You can use `onComplete` prop to react on a completed code typing',
     },
   },
 }

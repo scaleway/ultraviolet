@@ -37,11 +37,7 @@ const Wrapper = ({ children, defaultValues }: Wrapers) => {
 
   return (
     <ThemeProvider theme={lightTheme}>
-      <Form<FormValues>
-        errors={mockErrors}
-        methods={methods}
-        onSubmit={() => {}}
-      >
+      <Form<FormValues> errors={mockErrors} methods={methods} onSubmit={() => {}}>
         {children}
         <CheckboxField name="check" />
         <TextInputField name="textInputName" type="text" />
@@ -60,15 +56,9 @@ describe(useOnFieldChange, () => {
     let defaultValues = initial
 
     const { result, rerender } = renderHook(
-      () =>
-        useOnFieldChange<FormValues, 'textInputName'>(
-          'textInputName',
-          callback,
-        ),
+      () => useOnFieldChange<FormValues, 'textInputName'>('textInputName', callback),
       {
-        wrapper: ({ children }) => (
-          <Wrapper defaultValues={defaultValues}>{children}</Wrapper>
-        ),
+        wrapper: ({ children }) => <Wrapper defaultValues={defaultValues}>{children}</Wrapper>,
       },
     )
 
@@ -101,9 +91,7 @@ describe(useOnFieldChange, () => {
         initialProps: {
           enabled: false,
         },
-        wrapper: ({ children }) => (
-          <Wrapper defaultValues={defaultValues}>{children}</Wrapper>
-        ),
+        wrapper: ({ children }) => <Wrapper defaultValues={defaultValues}>{children}</Wrapper>,
       },
     )
 

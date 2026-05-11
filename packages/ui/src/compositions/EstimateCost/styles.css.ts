@@ -39,10 +39,7 @@ const table = styleVariants({
   total: [tableBase, { borderRadius: '4px 4px 0 4px' }],
 })
 
-const feesTable = style([
-  tableBase,
-  { borderRadius: '4px', marginTop: theme.space[2] },
-])
+const feesTable = style([tableBase, { borderRadius: '4px', marginTop: theme.space[2] }])
 
 const priceColumn = style({
   backgroundColor: theme.colors.neutral.background,

@@ -8,11 +8,7 @@ export const Size: StoryFn = props => (
   <>
     {Object.keys(MODAL_WIDTH).map(size => (
       <div key={size} style={{ display: 'inline-block', padding: 16 }}>
-        <Modal
-          {...props}
-          disclosure={<Button>{size}</Button>}
-          size={size as keyof typeof MODAL_WIDTH}
-        >
+        <Modal {...props} disclosure={<Button>{size}</Button>} size={size as keyof typeof MODAL_WIDTH}>
           <div style={{ padding: 32 }}>Content of the {size} modal</div>
         </Modal>
       </div>

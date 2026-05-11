@@ -9,13 +9,9 @@ import { MessageTag } from './components/MessageTag'
 
 import type { CSSProperties, ReactNode } from 'react'
 
-const Conversation = ({
-  children,
-  style,
-}: {
-  children: ReactNode
-  style?: CSSProperties
-}) => <Stack style={style}>{children}</Stack>
+const Conversation = ({ children, style }: { children: ReactNode; style?: CSSProperties }) => (
+  <Stack style={style}>{children}</Stack>
+)
 
 Conversation.Date = DateComponent
 Conversation.Message = Message

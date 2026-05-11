@@ -17,9 +17,7 @@ export const AnimatedExpandable = ({
   animationDuration = ANIMATION_DURATION,
 }: ExpandableProps) => {
   const [height, setHeight] = useState<number | null>(null)
-  const transitionTimer = useRef<ReturnType<typeof setTimeout> | undefined>(
-    null,
-  )
+  const transitionTimer = useRef<ReturnType<typeof setTimeout> | undefined>(null)
   const ref = useRef<HTMLDivElement>(null)
   const shouldBeAnimated = animationDuration > 0
 

@@ -1,20 +1,12 @@
 import type { Popup } from '../Popup'
-import type {
-  ButtonHTMLAttributes,
-  ComponentProps,
-  ReactElement,
-  ReactNode,
-  Ref,
-} from 'react'
+import type { ButtonHTMLAttributes, ComponentProps, ReactElement, ReactNode, Ref } from 'react'
 
 type ChildMenuProps = {
   toggle: () => void
 }
 
 type DisclosureElement =
-  | ((
-      disclosure: DisclosureProps,
-    ) => ReactElement<ButtonHTMLAttributes<HTMLButtonElement>>)
+  | ((disclosure: DisclosureProps) => ReactElement<ButtonHTMLAttributes<HTMLButtonElement>>)
   | (ReactElement<ButtonHTMLAttributes<HTMLButtonElement>> & {
       ref?: Ref<HTMLButtonElement>
     })
@@ -56,7 +48,4 @@ export type MenuProps = {
    * When set to true, the menu shrinks (height) to avoid overflow on the page
    */
   shrink?: boolean
-} & Pick<
-  ComponentProps<typeof Popup>,
-  'dynamicDomRendering' | 'align' | 'style'
->
+} & Pick<ComponentProps<typeof Popup>, 'dynamicDomRendering' | 'align' | 'style'>

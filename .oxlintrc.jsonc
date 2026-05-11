@@ -143,15 +143,7 @@
       },
     },
   ],
-  "plugins": [
-    "import",
-    "node",
-    "oxc",
-    "react",
-    "typescript",
-    "unicorn",
-    "jsx-a11y",
-  ],
+  "plugins": ["import", "node", "oxc", "react", "typescript", "unicorn", "jsx-a11y"],
   "rules": {
     "eslint/complexity": [
       "warn",

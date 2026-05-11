@@ -6,13 +6,7 @@ import type EstimateCostLocales from '../locales/en'
 import type { ReactNode } from 'react'
 
 export const Description = memo(
-  ({
-    description,
-    locales,
-  }: {
-    description: ReactNode
-    locales: Record<keyof typeof EstimateCostLocales, string>
-  }) =>
+  ({ description, locales }: { description: ReactNode; locales: Record<keyof typeof EstimateCostLocales, string> }) =>
     description === undefined || typeof description === 'string' ? (
       <Text as="span" variant="body">
         {description || locales['estimate.cost.description']}

@@ -5,9 +5,7 @@ import { SteppedListCard } from '..'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const WithoutToggleButton: StoryFn<
-  ComponentProps<typeof SteppedListCard>
-> = props => (
+export const WithoutToggleButton: StoryFn<ComponentProps<typeof SteppedListCard>> = props => (
   <SteppedListCard {...props}>
     <SteppedListCard.Step
       stepNumber={1}

@@ -11,8 +11,7 @@ const locales = ['en', 'fr', 'es', 'de', 'ru'] as const
 
 type LocalSupportedType = (typeof locales)[number]
 
-const isLocales = (locale: string): locale is LocalSupportedType =>
-  locales.includes(locale as LocalSupportedType)
+const isLocales = (locale: string): locale is LocalSupportedType => locales.includes(locale as LocalSupportedType)
 
 const loadDateFNS = async (locale: LocalSupportedType) =>
   ({
@@ -29,11 +28,8 @@ const localesOptions = locales.map(locale => ({
 }))
 
 export const I18n: StoryFn = args => {
-  const [currentLocale, setCurrentLocale] = useState<LocalSupportedType>(
-    locales[0],
-  )
-  const [value, setValue] =
-    useState<ComponentProps<typeof DateInput>['value']>(undefined)
+  const [currentLocale, setCurrentLocale] = useState<LocalSupportedType>(locales[0])
+  const [value, setValue] = useState<ComponentProps<typeof DateInput>['value']>(undefined)
 
   const [dateFns, setDateFns] = useState(enGB)
 

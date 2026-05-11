@@ -18,10 +18,7 @@ import type { ContentCardProps } from './type'
  * It can take different directions to display the image and the content. You can also add more content
  * by passing children.
  */
-export const ContentCard = forwardRef<
-  HTMLAnchorElement & HTMLButtonElement & HTMLDivElement,
-  ContentCardProps
->(
+export const ContentCard = forwardRef<HTMLAnchorElement & HTMLButtonElement & HTMLDivElement, ContentCardProps>(
   (
     {
       image,
@@ -44,9 +41,7 @@ export const ContentCard = forwardRef<
   ) => {
     const subContainerRef = useRef<HTMLDivElement>(null)
     const [subContainerHeight, setSubContainerHeight] = useState(
-      subContainerRef?.current?.offsetHeight
-        ? `${subContainerRef?.current?.offsetHeight}px`
-        : 'none',
+      subContainerRef?.current?.offsetHeight ? `${subContainerRef?.current?.offsetHeight}px` : 'none',
     )
     const Container = useMemo(() => {
       if (href) {
@@ -68,10 +63,7 @@ export const ContentCard = forwardRef<
 
     return (
       <Container
-        className={cn(
-          className,
-          contentCardStyle.card({ active: !!(onClick || href) }),
-        )}
+        className={cn(className, contentCardStyle.card({ active: !!(onClick || href) }))}
         disabled={disabled}
         href={disabled ? undefined : href}
         onClick={disabled ? undefined : onClick}
@@ -94,12 +86,8 @@ export const ContentCard = forwardRef<
             ) : null}
             <Stack direction={direction} flex={1} gap={2}>
               <Stack
-                alignItems={
-                  subtitle || description || children ? undefined : 'center'
-                }
-                className={
-                  contentCardStyle.subContainer[href ? direction : 'noHref']
-                }
+                alignItems={subtitle || description || children ? undefined : 'center'}
+                className={contentCardStyle.subContainer[href ? direction : 'noHref']}
                 direction={direction}
                 flex="1 1 auto"
                 gap={2}
@@ -116,9 +104,7 @@ export const ContentCard = forwardRef<
                   {children}
                 </CardContent>
               </Stack>
-              {href ? (
-                <LinkContent direction={direction} disabled={disabled} />
-              ) : null}
+              {href ? <LinkContent direction={direction} disabled={disabled} /> : null}
             </Stack>
           </Stack>
         )}

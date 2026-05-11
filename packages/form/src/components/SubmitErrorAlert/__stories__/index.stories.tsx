@@ -15,8 +15,7 @@ export default {
     },
     docs: {
       description: {
-        component:
-          'This component is used to display error message after a form submission',
+        component: 'This component is used to display error message after a form submission',
       },
     },
   },

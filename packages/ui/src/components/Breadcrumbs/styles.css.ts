@@ -1,13 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, style } from '@vanilla-extract/css'
 
-import {
-  content,
-  contentBreadcrumbsText,
-  item,
-  itemContainer,
-  link,
-} from './components/styles.css'
+import { content, contentBreadcrumbsText, item, itemContainer, link } from './components/styles.css'
 import { HEIGHT } from './constants'
 
 const breadcrumbs = style({

@@ -34,30 +34,14 @@ type PinnedItemsProps = {
   style?: CSSProperties
 }
 
-export const PinnedItems = ({
-  toggle = true,
-  onReorder,
-  onToggle,
-  itemWrapper,
-  style,
-}: PinnedItemsProps) => {
+export const PinnedItems = ({ toggle = true, onReorder, onToggle, itemWrapper, style }: PinnedItemsProps) => {
   const context = useNavigation()
 
   if (!context) {
-    throw new Error(
-      'Navigation.PinnedItems can only be used inside a NavigationProvider.',
-    )
+    throw new Error('Navigation.PinnedItems can only be used inside a NavigationProvider.')
   }
 
-  const {
-    locales,
-    pinnedItems,
-    pinnedFeature,
-    reorderItems,
-    expanded,
-    items,
-    showHide,
-  } = context
+  const { locales, pinnedItems, pinnedFeature, reorderItems, expanded, items, showHide } = context
   const theme = useTheme()
 
   const onDrop = useCallback(
@@ -66,9 +50,7 @@ export const PinnedItems = ({
       if (event?.dataTransfer) {
         event.currentTarget.style.borderColor = 'transparent'
         // oxlint-disable-next-line typescript/no-unsafe-type-assertion
-        const data = JSON.parse(
-          event.dataTransfer.getData('text'),
-        ) as DragNDropData
+        const data = JSON.parse(event.dataTransfer.getData('text')) as DragNDropData
         if (data.index === index - 1 || index > data.index) {
           const newItems = reorderItems(data.index, index - 1)
           onReorder?.(newItems)
@@ -122,9 +104,7 @@ export const PinnedItems = ({
                     index={index}
                     key={itemId}
                     label={items[itemId].label}
-                    onClickPinUnpin={
-                      items[itemId]?.onClickPinUnpin ?? undefined
-                    }
+                    onClickPinUnpin={items[itemId]?.onClickPinUnpin ?? undefined}
                     onToggle={items[itemId]?.onToggle}
                     toggle={toggle}
                     type="pinned"
@@ -132,11 +112,7 @@ export const PinnedItems = ({
                 )
 
                 return (
-                  <div
-                    className={navigationStyle.pinnedItemRelativeDiv}
-                    key={itemId}
-                    data-flip-id={itemId}
-                  >
+                  <div className={navigationStyle.pinnedItemRelativeDiv} key={itemId} data-flip-id={itemId}>
                     {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
                     <div
                       className={navigationStyle.pinnedItemDropableArea}
@@ -144,9 +120,7 @@ export const PinnedItems = ({
                       onDragOver={onDragOver}
                       onDrop={event => onDrop(event, index)}
                     />
-                    {itemWrapper
-                      ? itemWrapper(itemElement, itemId)
-                      : itemElement}
+                    {itemWrapper ? itemWrapper(itemElement, itemId) : itemElement}
                   </div>
                 )
               }
@@ -155,12 +129,7 @@ export const PinnedItems = ({
             })
           ) : (
             <div className={navigationStyle.pinnedItemContainer({ expanded })}>
-              <Text
-                as="p"
-                prominence="weak"
-                sentiment="neutral"
-                variant="caption"
-              >
+              <Text as="p" prominence="weak" sentiment="neutral" variant="caption">
                 {locales['navigation.pinned.item.group.empty']}
               </Text>
             </div>

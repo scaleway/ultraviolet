@@ -26,9 +26,7 @@ export const MultiStateInput = ({
   }
 
   if (type === 'checkbox') {
-    const labelProps = label
-      ? { 'aria-label': undefined, children: label }
-      : { 'aria-label': ariaLabel! }
+    const labelProps = label ? { 'aria-label': undefined, children: label } : { 'aria-label': ariaLabel! }
 
     return (
       <Checkbox

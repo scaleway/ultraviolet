@@ -65,10 +65,7 @@ const filledBarSentiments = styleVariants(
         },
       ],
     }),
-    {} as Record<
-      (typeof SENTIMENTS_WITHOUT_NEUTRAL)[number],
-      { backgroundColor: string }
-    >,
+    {} as Record<(typeof SENTIMENTS_WITHOUT_NEUTRAL)[number], { backgroundColor: string }>,
   ),
 )
 export const progressBarStyle = {

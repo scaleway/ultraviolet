@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const GoogleLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const GoogleLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="GoogleLogo">
     <g clipPath="url(#a)">
       <path

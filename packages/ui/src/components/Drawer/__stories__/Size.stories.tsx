@@ -8,12 +8,7 @@ export const Size: StoryFn = props => (
   <>
     {Object.keys(SIZES).map(width => (
       <div key={width} style={{ display: 'inline-block', padding: 16 }}>
-        <Drawer
-          {...props}
-          disclosure={<Button>{width}</Button>}
-          header={width}
-          size={width as keyof typeof SIZES}
-        >
+        <Drawer {...props} disclosure={<Button>{width}</Button>} header={width} size={width as keyof typeof SIZES}>
           <div>Content of the {width} drawer</div>
         </Drawer>
       </div>

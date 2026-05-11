@@ -75,8 +75,6 @@ const defaultConfig = defineConfig({
   },
 })
 
-export const createVitestConfig = (
-  options: TestUserConfig & ViteUserConfig = {},
-) => mergeConfig(defaultConfig, options)
+export const createVitestConfig = (options: TestUserConfig & ViteUserConfig = {}) => mergeConfig(defaultConfig, options)
 
 export default createVitestConfig()

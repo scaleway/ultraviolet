@@ -13,12 +13,9 @@ export const Sizes: StoryFn<typeof Popover> = () => {
   const [openedMedium, setOpenedMedium] = useState(false)
   const [openedLarge, setOpenedLarge] = useState(false)
 
-  const onCloseCallBack = useCallback(
-    (setValue: Dispatch<SetStateAction<boolean>>) => {
-      setValue(false)
-    },
-    [],
-  )
+  const onCloseCallBack = useCallback((setValue: Dispatch<SetStateAction<boolean>>) => {
+    setValue(false)
+  }, [])
 
   return (
     <div style={{ display: 'inline-flex', gap: '16px' }}>

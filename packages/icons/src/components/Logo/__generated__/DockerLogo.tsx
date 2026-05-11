@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const DockerLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const DockerLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="DockerLogo">
     <path
       fillRule="evenodd"

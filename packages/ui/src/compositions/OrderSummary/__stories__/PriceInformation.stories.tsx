@@ -9,9 +9,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
 const elements = [categoryAZ, categoryDefault]
-export const PriceInformation: StoryFn<
-  ComponentProps<typeof OrderSummary>
-> = () => (
+export const PriceInformation: StoryFn<ComponentProps<typeof OrderSummary>> = () => (
   <Stack direction="column" gap={3}>
     <Text as="p" variant="body">
       Price information ={' '}
@@ -20,13 +18,7 @@ export const PriceInformation: StoryFn<
       </Text>{' '}
       :
     </Text>
-    <OrderSummary
-      currency="EUR"
-      header="Summary"
-      items={elements}
-      localeFormat="en-US"
-      priceInformation
-    />
+    <OrderSummary currency="EUR" header="Summary" items={elements} localeFormat="en-US" priceInformation />
     <Text as="p" variant="body">
       Price information ={' '}
       <Text as="span" variant="code">
@@ -56,14 +48,7 @@ export const PriceInformation: StoryFn<
         true
       </Text>{' '}
     </Text>
-    <OrderSummary
-      currency="EUR"
-      header="Summary"
-      hideDetails
-      items={elements}
-      localeFormat="en-US"
-      priceInformation
-    />
+    <OrderSummary currency="EUR" header="Summary" hideDetails items={elements} localeFormat="en-US" priceInformation />
     <Text as="p" variant="body">
       Price information ={' '}
       <Text as="span" variant="code">

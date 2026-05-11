@@ -4,12 +4,7 @@ import { Button } from '../../Button'
 import type { StoryFn } from '@storybook/react-vite'
 
 export const HideOnEsc: StoryFn = props => (
-  <Modal
-    {...props}
-    disclosure={<Button>hideOnEsc</Button>}
-    hideOnEsc={false}
-    size="medium"
-  >
+  <Modal {...props} disclosure={<Button>hideOnEsc</Button>} hideOnEsc={false} size="medium">
     <div style={{ padding: 32 }}>try to ESCAPE</div>
   </Modal>
 )

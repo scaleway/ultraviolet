@@ -63,7 +63,5 @@ export const StepperProvider = ({
   )
   useEffect(() => setStep(selected), [selected])
 
-  return (
-    <StepperContext.Provider value={value}>{children}</StepperContext.Provider>
-  )
+  return <StepperContext.Provider value={value}>{children}</StepperContext.Provider>
 }

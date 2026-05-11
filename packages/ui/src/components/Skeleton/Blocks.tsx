@@ -7,13 +7,7 @@ import { Line } from './Line'
 import { skeletonStyle } from './styles.css'
 import { columns } from './stylesVariants.css'
 
-export const Blocks = ({
-  col = 4,
-  length = 8,
-}: {
-  col?: number
-  length?: number
-}) => (
+export const Blocks = ({ col = 4, length = 8 }: { col?: number; length?: number }) => (
   <div
     className={skeletonStyle.blocksContainer}
     style={assignInlineVars({
@@ -21,10 +15,7 @@ export const Blocks = ({
     })}
   >
     {Array.from({ length }, (_, i) => (
-      <div
-        className={skeletonStyle.blocksSkeleton}
-        key={`skeleton-blocks-${i}`}
-      >
+      <div className={skeletonStyle.blocksSkeleton} key={`skeleton-blocks-${i}`}>
         <IconSkeleton />
         <Line />
       </div>

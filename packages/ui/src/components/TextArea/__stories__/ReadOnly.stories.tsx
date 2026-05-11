@@ -10,8 +10,7 @@ ReadOnly.args = {
 ReadOnly.parameters = {
   docs: {
     description: {
-      story:
-        'Mark `TextArea` in an readOnly state using `readOnly` boolean property',
+      story: 'Mark `TextArea` in an readOnly state using `readOnly` boolean property',
     },
   },
 }

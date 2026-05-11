@@ -55,9 +55,7 @@ test.describe('SelectableCard type checkbox', () => {
 
     // We click on the children to verify it will check the checkbox on a simple children
     await page
-      .getByText(
-        'This option will cost you 2.99€ and provide you with a lot more of happiness checkbox',
-      )
+      .getByText('This option will cost you 2.99€ and provide you with a lot more of happiness checkbox')
       .click()
     await expect(option2Checkbox).toBeChecked()
     await expect(option1Checkbox).not.toBeChecked()
@@ -153,11 +151,7 @@ test.describe('SelectableCard type radio', () => {
     await expect(option2Checkbox).not.toBeChecked()
 
     // We click on the children to verify it will check the checkbox on a simple children
-    await page
-      .getByText(
-        'This option will cost you 2.99€ and provide you with a lot more of happiness radio',
-      )
-      .click()
+    await page.getByText('This option will cost you 2.99€ and provide you with a lot more of happiness radio').click()
     await expect(option2Checkbox).toBeChecked()
     await expect(option1Checkbox).not.toBeChecked()
   })

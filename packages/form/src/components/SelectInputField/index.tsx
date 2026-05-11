@@ -13,8 +13,7 @@ import type { FieldPath, FieldValues, PathValue } from 'react-hook-form'
 type SelectInputFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof SelectInput>, 'value' | 'onChange'>
+> = BaseFieldProps<TFieldValues, TFieldName> & Omit<ComponentProps<typeof SelectInput>, 'value' | 'onChange'>
 
 export const SelectInputField = <
   TFieldValues extends FieldValues,
@@ -48,9 +47,7 @@ export const SelectInputField = <
 
   const { getError } = useErrors()
 
-  const handleChange: ComponentProps<
-    typeof SelectInput<typeof multiselect>
-  >['onChange'] = useCallback(
+  const handleChange: ComponentProps<typeof SelectInput<typeof multiselect>>['onChange'] = useCallback(
     (value: string | string[]) => {
       onChange?.(value as PathValue<TFieldValues, TFieldName>)
       field.onChange(value)
@@ -61,10 +58,7 @@ export const SelectInputField = <
   return (
     <SelectInput
       aria-label={ariaLabel}
-      error={getError(
-        { label: errorLabel ?? label ?? ariaLabel ?? name },
-        error,
-      )}
+      error={getError({ label: errorLabel ?? label ?? ariaLabel ?? name }, error)}
       label={label}
       multiselect={multiselect}
       name={field.name}

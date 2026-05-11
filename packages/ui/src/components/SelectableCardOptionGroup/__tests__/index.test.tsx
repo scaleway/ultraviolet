@@ -7,11 +7,7 @@ import { SelectableCardOptionGroup } from '..'
 import centos from '../__stories__/assets/centos.svg'
 import debian from '../__stories__/assets/debian.svg'
 import ubuntu from '../__stories__/assets/ubuntu.svg'
-import {
-  centosOptions,
-  debianOptions,
-  ubuntuOptions,
-} from '../__stories__/constants'
+import { centosOptions, debianOptions, ubuntuOptions } from '../__stories__/constants'
 
 describe('selectableCardOptionGroup', () => {
   it('renders correctly', () => {
@@ -23,24 +19,9 @@ describe('selectableCardOptionGroup', () => {
         optionValue="ubuntu-20.04"
         value="ubuntu"
       >
-        <SelectableCardOptionGroup.Option
-          image={ubuntu}
-          label="Ubuntu"
-          options={ubuntuOptions}
-          value="ubuntu"
-        />
-        <SelectableCardOptionGroup.Option
-          image={debian}
-          label="Debian"
-          options={debianOptions}
-          value="debian"
-        />
-        <SelectableCardOptionGroup.Option
-          image={centos}
-          label="CentOS"
-          options={centosOptions}
-          value="centos"
-        />
+        <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
+        <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
+        <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
       </SelectableCardOptionGroup>,
     )
 
@@ -56,24 +37,9 @@ describe('selectableCardOptionGroup', () => {
         size="medium"
         value="ubuntu"
       >
-        <SelectableCardOptionGroup.Option
-          image={ubuntu}
-          label="Ubuntu"
-          options={ubuntuOptions}
-          value="ubuntu"
-        />
-        <SelectableCardOptionGroup.Option
-          image={debian}
-          label="Debian"
-          options={debianOptions}
-          value="debian"
-        />
-        <SelectableCardOptionGroup.Option
-          image={centos}
-          label="CentOS"
-          options={centosOptions}
-          value="centos"
-        />
+        <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
+        <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
+        <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
       </SelectableCardOptionGroup>,
     )
 
@@ -90,24 +56,9 @@ describe('selectableCardOptionGroup', () => {
         size="medium"
         value="ubuntu"
       >
-        <SelectableCardOptionGroup.Option
-          aria-label="Ubuntu"
-          image={ubuntu}
-          options={ubuntuOptions}
-          value="ubuntu"
-        />
-        <SelectableCardOptionGroup.Option
-          aria-label="Debian"
-          image={debian}
-          options={debianOptions}
-          value="debian"
-        />
-        <SelectableCardOptionGroup.Option
-          aria-label="CentOS"
-          image={centos}
-          options={centosOptions}
-          value="centos"
-        />
+        <SelectableCardOptionGroup.Option aria-label="Ubuntu" image={ubuntu} options={ubuntuOptions} value="ubuntu" />
+        <SelectableCardOptionGroup.Option aria-label="Debian" image={debian} options={debianOptions} value="debian" />
+        <SelectableCardOptionGroup.Option aria-label="CentOS" image={centos} options={centosOptions} value="centos" />
       </SelectableCardOptionGroup>,
     )
 
@@ -159,24 +110,9 @@ describe('selectableCardOptionGroup', () => {
         optionValue="ubuntu-20.04"
         value="ubuntu"
       >
-        <SelectableCardOptionGroup.Option
-          image={ubuntu}
-          label="Ubuntu"
-          options={ubuntuOptions}
-          value="ubuntu"
-        />
-        <SelectableCardOptionGroup.Option
-          image={debian}
-          label="Debian"
-          options={debianOptions}
-          value="debian"
-        />
-        <SelectableCardOptionGroup.Option
-          image={centos}
-          label="CentOS"
-          options={centosOptions}
-          value="centos"
-        />
+        <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
+        <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
+        <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
       </SelectableCardOptionGroup>,
     )
 
@@ -194,12 +130,7 @@ describe('selectableCardOptionGroup', () => {
         optionValue="ubuntu-20.04"
         value="ubuntu"
       >
-        <SelectableCardOptionGroup.Option
-          image={ubuntu}
-          label="Ubuntu"
-          options={ubuntuOptions}
-          value="ubuntu"
-        />
+        <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
         <SelectableCardOptionGroup.Option
           disabled
           image={debian}
@@ -207,12 +138,7 @@ describe('selectableCardOptionGroup', () => {
           options={debianOptions}
           value="debian"
         />
-        <SelectableCardOptionGroup.Option
-          image={centos}
-          label="CentOS"
-          options={centosOptions}
-          value="centos"
-        />
+        <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
       </SelectableCardOptionGroup>,
     )
 
@@ -234,24 +160,9 @@ describe('selectableCardOptionGroup', () => {
         optionValue="ubuntu-20.04"
         value="ubuntu"
       >
-        <SelectableCardOptionGroup.Option
-          image={ubuntu}
-          label="Ubuntu"
-          options={ubuntuOptions}
-          value="ubuntu"
-        />
-        <SelectableCardOptionGroup.Option
-          image={debian}
-          label="Debian"
-          options={debianOptions}
-          value="debian"
-        />
-        <SelectableCardOptionGroup.Option
-          image={centos}
-          label="CentOS"
-          options={centosOptions}
-          value="centos"
-        />
+        <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
+        <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
+        <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
       </SelectableCardOptionGroup>,
     )
     expect(screen.getByText('Error message')).toBeInTheDocument()
@@ -268,24 +179,9 @@ describe('selectableCardOptionGroup', () => {
         optionValue="ubuntu-20.04"
         value="ubuntu"
       >
-        <SelectableCardOptionGroup.Option
-          image={ubuntu}
-          label="Ubuntu"
-          options={ubuntuOptions}
-          value="ubuntu"
-        />
-        <SelectableCardOptionGroup.Option
-          image={debian}
-          label="Debian"
-          options={debianOptions}
-          value="debian"
-        />
-        <SelectableCardOptionGroup.Option
-          image={centos}
-          label="CentOS"
-          options={centosOptions}
-          value="centos"
-        />
+        <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
+        <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
+        <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
       </SelectableCardOptionGroup>,
     )
 
@@ -333,24 +229,9 @@ describe('selectableCardOptionGroup', () => {
         optionValue="ubuntu-20.04"
         value="ubuntu"
       >
-        <SelectableCardOptionGroup.Option
-          image={ubuntu}
-          label="Ubuntu"
-          options={ubuntuOptions}
-          value="ubuntu"
-        />
-        <SelectableCardOptionGroup.Option
-          image={debian}
-          label="Debian"
-          options={debianOptions}
-          value="debian"
-        />
-        <SelectableCardOptionGroup.Option
-          image={centos}
-          label="CentOS"
-          options={centosOptions}
-          value="centos"
-        />
+        <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
+        <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
+        <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
       </SelectableCardOptionGroup>,
     )
 
@@ -366,24 +247,9 @@ describe('selectableCardOptionGroup', () => {
         optionValue="ubuntu-20.04"
         value="ubuntu"
       >
-        <SelectableCardOptionGroup.Option
-          image={ubuntu}
-          label="Ubuntu"
-          options={ubuntuOptions}
-          value="ubuntu"
-        />
-        <SelectableCardOptionGroup.Option
-          image={debian}
-          label="Debian"
-          options={debianOptions}
-          value="debian"
-        />
-        <SelectableCardOptionGroup.Option
-          image={centos}
-          label="CentOS"
-          options={centosOptions}
-          value="centos"
-        />
+        <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
+        <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
+        <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
       </SelectableCardOptionGroup>,
     )
     expect(screen.getByText('Helper message')).toBeInTheDocument()
@@ -402,24 +268,9 @@ describe('selectableCardOptionGroup', () => {
         optionValue="ubuntu-20.04"
         value="ubuntu"
       >
-        <SelectableCardOptionGroup.Option
-          image={ubuntu}
-          label="Ubuntu"
-          options={ubuntuOptions}
-          value="ubuntu"
-        />
-        <SelectableCardOptionGroup.Option
-          image={debian}
-          label="Debian"
-          options={debianOptions}
-          value="debian"
-        />
-        <SelectableCardOptionGroup.Option
-          image={centos}
-          label="CentOS"
-          options={centosOptions}
-          value="centos"
-        />
+        <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
+        <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
+        <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
       </SelectableCardOptionGroup>,
     )
 
@@ -441,12 +292,7 @@ describe('selectableCardOptionGroup', () => {
         optionValue="ubuntu-20.04"
         value="ubuntu"
       >
-        <SelectableCardOptionGroup.Option
-          image={ubuntu}
-          label="Ubuntu"
-          options={ubuntuOptions}
-          value="ubuntu"
-        />
+        <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
       </SelectableCardOptionGroup>,
     )
 

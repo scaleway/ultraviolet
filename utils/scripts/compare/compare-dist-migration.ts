@@ -5,15 +5,7 @@
 // oxlint-disable import/no-nodejs-modules
 
 import { createHash } from 'node:crypto'
-import fs, {
-  copyFileSync,
-  existsSync,
-  mkdirSync,
-  readdirSync,
-  readFileSync,
-  statSync,
-  writeFileSync,
-} from 'node:fs'
+import fs, { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
 import { dirname, join, relative, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -62,9 +54,7 @@ function getAllFiles(dirPath: string, relativeTo: string): FileInfo[] {
         scan(fullPath)
       } else {
         files.push({
-          checksum: createHash('sha256')
-            .update(readFileSync(fullPath))
-            .digest('hex'),
+          checksum: createHash('sha256').update(readFileSync(fullPath)).digest('hex'),
           path: relative(relativeTo, fullPath),
           size: stat.size,
         })
@@ -77,9 +67,7 @@ function getAllFiles(dirPath: string, relativeTo: string): FileInfo[] {
 }
 
 function generateManifest(outputFile: string): void {
-  const packages = fs
-    .readdirSync(PACKAGES_DIR)
-    .filter(item => statSync(join(PACKAGES_DIR, item)).isDirectory())
+  const packages = fs.readdirSync(PACKAGES_DIR).filter(item => statSync(join(PACKAGES_DIR, item)).isDirectory())
   console.log(`Generating manifest for ${packages.length} packages...`)
 
   const manifest: Manifest = {
@@ -106,11 +94,7 @@ function generateManifest(outputFile: string): void {
   writeFileSync(outputFile, JSON.stringify(manifest, null, 2))
 }
 
-function compareManifests(
-  baselinePath: string,
-  currentPath: string,
-  reportPath: string,
-): void {
+function compareManifests(baselinePath: string, currentPath: string, reportPath: string): void {
   console.log('Comparing manifests...')
   // oxlint-disable-next-line typescript/no-unsafe-assignment
   const baseline: Manifest = JSON.parse(readFileSync(baselinePath, 'utf8'))
@@ -125,9 +109,7 @@ function compareManifests(
   const currentPackages = Object.keys(current.packages).toSorted()
 
   const newPackages = currentPackages.filter(p => !baselinePackages.includes(p))
-  const missingPackages = baselinePackages.filter(
-    p => !currentPackages.includes(p),
-  )
+  const missingPackages = baselinePackages.filter(p => !currentPackages.includes(p))
 
   if (newPackages.length > 0) {
     report += `\n${GREEN}New packages:${NC}\n`
@@ -139,16 +121,12 @@ function compareManifests(
     report += `${missingPackages.join('\n')}\n`
   }
 
-  const commonPackages = baselinePackages.filter(p =>
-    currentPackages.includes(p),
-  )
+  const commonPackages = baselinePackages.filter(p => currentPackages.includes(p))
 
   for (const pkg of commonPackages) {
     console.error(`Comparing ${pkg}...`)
 
-    const baselineFiles = baseline.packages[pkg].files
-      .map(f => f.path)
-      .toSorted()
+    const baselineFiles = baseline.packages[pkg].files.map(f => f.path).toSorted()
     const currentFiles = current.packages[pkg].files.map(f => f.path).toSorted()
 
     const newFiles = currentFiles.filter(f => !baselineFiles.includes(f))
@@ -174,16 +152,10 @@ function compareManifests(
 
     const modifiedFiles: string[] = []
     for (const file of commonFiles) {
-      const baselineFile = baseline.packages[pkg].files.find(
-        f => f.path === file,
-      )!
-      const currentFile = current.packages[pkg].files.find(
-        f => f.path === file,
-      )!
+      const baselineFile = baseline.packages[pkg].files.find(f => f.path === file)!
+      const currentFile = current.packages[pkg].files.find(f => f.path === file)!
       if (baselineFile.checksum !== currentFile.checksum) {
-        modifiedFiles.push(
-          `${file} (${baselineFile.size} → ${currentFile.size} bytes)`,
-        )
+        modifiedFiles.push(`${file} (${baselineFile.size} → ${currentFile.size} bytes)`)
       }
     }
 
@@ -217,9 +189,7 @@ function main(): void {
 
   // Check if baseline exists
   if (!existsSync(BASELINE_FILE)) {
-    console.log(
-      'No baseline manifest found. Creating one for future comparison.',
-    )
+    console.log('No baseline manifest found. Creating one for future comparison.')
     console.log('To compare with a previous version:')
     console.log('1. Run this script before migration to create baseline')
     console.log('2. Run migration')

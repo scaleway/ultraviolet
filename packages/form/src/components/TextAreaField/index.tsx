@@ -14,10 +14,7 @@ export type TextAreaFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<
-    ComponentProps<typeof TextArea>,
-    'value' | 'error' | 'name' | 'onChange'
-  > & {
+  Omit<ComponentProps<typeof TextArea>, 'value' | 'error' | 'name' | 'onChange'> & {
     regex?: (RegExp | RegExp[])[]
     submitOnEnter?: boolean
   }

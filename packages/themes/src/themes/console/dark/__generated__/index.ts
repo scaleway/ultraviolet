@@ -149,18 +149,13 @@ export const darkTheme = {
       gradients: {
         background: {
           linear: {
-            accent:
-              'linear-gradient(151deg, #ff602e 0%, #3d1862 28.91%, #151a2d 75.01%);',
+            accent: 'linear-gradient(151deg, #ff602e 0%, #3d1862 28.91%, #151a2d 75.01%);',
             aqua: 'linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);',
             blue: 'linear-gradient(151deg, #47b0ff 0%, #3d1862 28.91%, #151a2d 75.01%);',
-            emerald:
-              'linear-gradient(151deg, #45d19f 0%, #3d1862 28.91%, #151a2d 75.01%);',
-            fuschia:
-              'linear-gradient(151deg, #f91b6c 0%, #3d1862 28.91%, #151a2d 75.01%);',
-            magenta:
-              'linear-gradient(151deg, #ec0bc3 0%, #3d1862 28.91%, #151a2d 75.01%);',
-            primary:
-              'linear-gradient(151deg, #792dd4 0%, #3d1862 28.91%, #151a2d 75.01%);',
+            emerald: 'linear-gradient(151deg, #45d19f 0%, #3d1862 28.91%, #151a2d 75.01%);',
+            fuschia: 'linear-gradient(151deg, #f91b6c 0%, #3d1862 28.91%, #151a2d 75.01%);',
+            magenta: 'linear-gradient(151deg, #ec0bc3 0%, #3d1862 28.91%, #151a2d 75.01%);',
+            primary: 'linear-gradient(151deg, #792dd4 0%, #3d1862 28.91%, #151a2d 75.01%);',
           },
           radial: {
             aquaFuschia:

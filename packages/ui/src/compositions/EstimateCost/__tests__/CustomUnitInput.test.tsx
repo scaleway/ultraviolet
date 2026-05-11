@@ -1,10 +1,7 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import {
-  resetIntersectionMocking,
-  setupIntersectionMocking,
-} from 'react-intersection-observer/test-utils'
+import { resetIntersectionMocking, setupIntersectionMocking } from 'react-intersection-observer/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { CustomUnitInput } from '../Components/CustomUnitInput'

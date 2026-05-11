@@ -21,9 +21,7 @@ const optionsSelect = [
   },
 ]
 
-export const Template: StoryFn<
-  ComponentProps<typeof UnitInputField>
-> = args => (
+export const Template: StoryFn<ComponentProps<typeof UnitInputField>> = args => (
   <Stack gap="1">
     <UnitInputField {...args} />
     <Submit>Submit</Submit>

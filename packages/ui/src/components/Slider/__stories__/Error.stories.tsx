@@ -5,14 +5,7 @@ import type { StoryFn } from '@storybook/react-vite'
 
 export const Error: StoryFn<typeof Slider> = args => (
   <Stack gap={4}>
-    <Slider
-      {...args}
-      error
-      label="Error"
-      onChange={() => {}}
-      tooltip="Disabled"
-      value={75}
-    />
+    <Slider {...args} error label="Error" onChange={() => {}} tooltip="Disabled" value={75} />
     <Slider
       {...args}
       error="This field is required"

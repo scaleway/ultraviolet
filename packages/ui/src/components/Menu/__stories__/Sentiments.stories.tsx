@@ -14,11 +14,7 @@ export const Sentiments: StoryFn<typeof Menu> = () => (
       Danger Disabled
     </Menu.Item>
     <Menu.Item href="/?/?path=/docs/components-navigation-menu">Link</Menu.Item>
-    <Menu.Item
-      href="/?/?path=/docs/components-navigation-menu"
-      sentiment="danger"
-      tooltip="test"
-    >
+    <Menu.Item href="/?/?path=/docs/components-navigation-menu" sentiment="danger" tooltip="test">
       Link Danger
     </Menu.Item>
   </Menu>

@@ -16,8 +16,7 @@ type HeaderRowProps = {
 }
 
 export const HeaderRow = ({ children, hasSelectAllColumn }: HeaderRowProps) => {
-  const { allRowSelectValue, selectAllHandler, selectedRowIds, expandButton } =
-    useTableContext()
+  const { allRowSelectValue, selectAllHandler, selectedRowIds, expandButton } = useTableContext()
   const theme = useTheme()
 
   const selectableRowCount = Object.keys(selectedRowIds).length
@@ -25,10 +24,7 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: HeaderRowProps) => {
   return (
     <tr>
       {hasSelectAllColumn ? (
-        <HeaderCell
-          isCheckbox
-          maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}
-        >
+        <HeaderCell isCheckbox maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
           <Checkbox
             aria-label="select all"
             checked={allRowSelectValue}

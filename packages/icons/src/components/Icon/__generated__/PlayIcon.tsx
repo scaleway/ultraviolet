@@ -9,12 +9,9 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const PlayIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const PlayIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="PlayIcon">
-    {typeof props.size === 'string' &&
-    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
+    {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         fillRule="evenodd"
         clipRule="evenodd"

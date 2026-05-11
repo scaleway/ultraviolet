@@ -20,8 +20,7 @@ export const formatFileSize = (bytes: number): string => {
   }
 
   // Format to 2 decimal
-  const formattedSize =
-    size % 1 === 0 ? size : Number.parseFloat(size.toFixed(2))
+  const formattedSize = size % 1 === 0 ? size : Number.parseFloat(size.toFixed(2))
 
   return `${formattedSize} ${units[unitIndex]}`
 }

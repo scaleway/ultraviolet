@@ -31,8 +31,7 @@ const Home = () => (
             Connect with the community
           </Text>
           <Text as="p" sentiment="neutral" variant="body">
-            Join us if you want to report an issue, if you have any questions or
-            if you just want to meet new people!
+            Join us if you want to report an issue, if you have any questions or if you just want to meet new people!
           </Text>
         </div>
       </Stack>

@@ -21,18 +21,13 @@ export const SelectRowCell = ({
   isSelectDisabled: boolean
   checkboxRef: RefObject<HTMLInputElement | null>
 }) => {
-  const { selectable, selectedRowIds, inRange, handleOnChange } =
-    useListContext()
+  const { selectable, selectedRowIds, inRange, handleOnChange } = useListContext()
 
   return selectable ? (
     <ColumnProvider width={theme.sizing[300]}>
       <Cell className={listStyle.noPaddingCell}>
         <div className={listStyle.checkboxContainer}>
-          <Tooltip
-            text={
-              typeof selectDisabled === 'string' ? selectDisabled : undefined
-            }
-          >
+          <Tooltip text={typeof selectDisabled === 'string' ? selectDisabled : undefined}>
             <Checkbox
               aria-label="select"
               checked={selectedRowIds[id]}

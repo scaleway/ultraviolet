@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const TableauLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const TableauLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="TableauLogo">
     <g clipPath="url(#clip0_110_655540)">
       <path

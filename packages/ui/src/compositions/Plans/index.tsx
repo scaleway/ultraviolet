@@ -72,9 +72,7 @@ export const Plans = <T extends string>({
               <td
                 className={plansStyle.cell({
                   activeColor:
-                    value === plan.value ||
-                    hoveredPlan === plan.value ||
-                    (isHighlighted && !plan.outOfStock),
+                    value === plan.value || hoveredPlan === plan.value || (isHighlighted && !plan.outOfStock),
                   disabled: computedDisabled,
                   focus: focusedPlan === plan.value,
                   hideLabels,
@@ -103,12 +101,7 @@ export const Plans = <T extends string>({
                   </Badge>
                 ) : null}
                 {isHighlighted && !plan.outOfStock && !plan.header.quotas ? (
-                  <Badge
-                    className={plansStyle.outOfStockBadge}
-                    prominence="strong"
-                    sentiment="primary"
-                    size="small"
-                  >
+                  <Badge className={plansStyle.outOfStockBadge} prominence="strong" sentiment="primary" size="small">
                     {highlight.content}
                   </Badge>
                 ) : null}
@@ -129,18 +122,10 @@ export const Plans = <T extends string>({
         {features.map(feature => {
           if ('group' in feature) {
             return (
-              <tr
-                className={hideLabels ? plansStyle.rowHidden : ''}
-                key={feature.group}
-              >
+              <tr className={hideLabels ? plansStyle.rowHidden : ''} key={feature.group}>
                 <td className={plansStyle.cell({})}>
                   <Stack alignItems="center" direction="row" gap={1}>
-                    <Text
-                      as="p"
-                      className={plansStyle.uppercaseText}
-                      sentiment="neutral"
-                      variant="bodySmallStronger"
-                    >
+                    <Text as="p" className={plansStyle.uppercaseText} sentiment="neutral" variant="bodySmallStronger">
                       {feature.group}
                     </Text>
                     {feature.hint ? <FeatureHint hint={feature.hint} /> : null}
@@ -153,9 +138,7 @@ export const Plans = <T extends string>({
                     <td
                       className={plansStyle.cell({
                         activeColor:
-                          value === plan.value ||
-                          hoveredPlan === plan.value ||
-                          (isHighlighted && !plan.outOfStock),
+                          value === plan.value || hoveredPlan === plan.value || (isHighlighted && !plan.outOfStock),
                         disabled: plan.outOfStock || plan.disabled,
                         focus: focusedPlan === plan.value,
                         hide: hideLabels,
@@ -181,13 +164,7 @@ export const Plans = <T extends string>({
                     <FeatureHint hint={feature.hint} />
                   </Stack>
                   {feature.description ? (
-                    <Text
-                      as="div"
-                      placement="start"
-                      prominence="weak"
-                      sentiment="neutral"
-                      variant="caption"
-                    >
+                    <Text as="div" placement="start" prominence="weak" sentiment="neutral" variant="caption">
                       {feature.description}
                     </Text>
                   ) : null}
@@ -207,9 +184,7 @@ export const Plans = <T extends string>({
                   <td
                     className={plansStyle.cell({
                       activeColor:
-                        value === plan.value ||
-                        hoveredPlan === plan.value ||
-                        (isHighlighted && !plan.outOfStock),
+                        value === plan.value || hoveredPlan === plan.value || (isHighlighted && !plan.outOfStock),
                       disabled: computedDisabled,
                       focus: focusedPlan === plan.value,
                       hideLabels,
@@ -218,36 +193,20 @@ export const Plans = <T extends string>({
                     data-testid={`${plan.value}-${feature.key}`}
                     key={plan.value}
                     onBlur={() => {}}
-                    onClick={
-                      selectable ? () => onChange(plan.value) : undefined
-                    }
+                    onClick={selectable ? () => onChange(plan.value) : undefined}
                     onFocus={() => {}}
                     onKeyDown={() => {}}
                     onMouseOut={() => hoverPlan()}
                     onMouseOver={() => hoverPlan(plan.value)}
                   >
                     {plan.data[featureKey] === false ? (
-                      <CloseIcon
-                        disabled={computedDisabled}
-                        prominence="weak"
-                        sentiment="neutral"
-                        size="large"
-                      />
+                      <CloseIcon disabled={computedDisabled} prominence="weak" sentiment="neutral" size="large" />
                     ) : null}
                     {plan.data[featureKey] === true ? (
-                      <CheckCircleIcon
-                        disabled={computedDisabled}
-                        sentiment="success"
-                        size="medium"
-                      />
+                      <CheckCircleIcon disabled={computedDisabled} sentiment="success" size="medium" />
                     ) : null}
                     {typeof plan.data[featureKey] !== 'boolean' ? (
-                      <Text
-                        as="span"
-                        disabled={computedDisabled}
-                        sentiment="neutral"
-                        variant="body"
-                      >
+                      <Text as="span" disabled={computedDisabled} sentiment="neutral" variant="body">
                         {plan.data[featureKey]}
                       </Text>
                     ) : null}

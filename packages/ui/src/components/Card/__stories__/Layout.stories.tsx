@@ -9,9 +9,8 @@ export const Layout: StoryFn = args => (
       Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque sit
     </Card>
     <Card header="Lorem Ipsum">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque sit
-      amet purus nec nunc fermentum ultricies Donec auctor, nunc nec ultricies
-      ultricies, nunc nunc
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque sit amet purus nec nunc fermentum ultricies
+      Donec auctor, nunc nec ultricies ultricies, nunc nunc
     </Card>
   </Row>
 )

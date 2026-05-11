@@ -19,14 +19,7 @@ import '@ultraviolet/fonts/fonts.css'
 
 import type { Decorator, Preview } from '@storybook/react-vite'
 
-const BREAKPOINT_ORDER = [
-  'xlarge',
-  'large',
-  'medium',
-  'small',
-  'xsmall',
-  'xxsmall',
-] as const
+const BREAKPOINT_ORDER = ['xlarge', 'large', 'medium', 'small', 'xsmall', 'xxsmall'] as const
 
 const VIEWPORTS = BREAKPOINT_ORDER.reduce((acc, key) => {
   if (key in lightTheme.breakpoints) {
@@ -126,9 +119,8 @@ const parameters: Preview['parameters'] = {
 
 const getThemeColor = (theme: string) => {
   const { value: background, textColor } =
-    parameters['backgrounds'].values.find(
-      ({ name }: { name: string }) => name === theme,
-    ) ?? parameters['backgrounds'].values[0]
+    parameters['backgrounds'].values.find(({ name }: { name: string }) => name === theme) ??
+    parameters['backgrounds'].values[0]
 
   return { background, textColor }
 }

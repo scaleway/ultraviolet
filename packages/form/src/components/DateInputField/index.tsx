@@ -13,17 +13,13 @@ import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 
 type DateExtends = Date | [Date | null, Date | null]
 
-type DateInputFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<
-    ComponentProps<typeof DateInput>,
-    'required' | 'name' | 'onChange' | 'value'
-  >
+type DateInputFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
+  TFieldValues,
+  TFieldName
+> &
+  Omit<ComponentProps<typeof DateInput>, 'required' | 'name' | 'onChange' | 'value'>
 
-const parseDate = (value: string | Date): Date =>
-  typeof value === 'string' ? new Date(value) : value
+const parseDate = (value: string | Date): Date => (typeof value === 'string' ? new Date(value) : value)
 
 const isEmpty = (value?: Date | string | null): boolean => !value
 
@@ -68,11 +64,7 @@ export const DateInputField = <
   return (
     <DateInput
       {...props}
-      endDate={
-        selectsRange && Array.isArray(field.value)
-          ? (field.value as [Date | null, Date | null])[1]
-          : undefined
-      }
+      endDate={selectsRange && Array.isArray(field.value) ? (field.value as [Date | null, Date | null])[1] : undefined}
       error={getError({ label: errorLabel ?? label, maxDate, minDate }, error)}
       format={
         format ??
@@ -122,9 +114,7 @@ export const DateInputField = <
       selectsRange={selectsRange}
       showMonthYearPicker={showMonthYearPicker}
       startDate={
-        selectsRange && Array.isArray(field.value)
-          ? (field.value as [Date | null, Date | null])[0]
-          : undefined
+        selectsRange && Array.isArray(field.value) ? (field.value as [Date | null, Date | null])[0] : undefined
       }
       value={Array.isArray(field.value) ? undefined : field.value}
     />

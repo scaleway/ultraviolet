@@ -13,22 +13,10 @@ const stack = style({
 })
 
 // Get the keys and sort them by their pixel value. It's important to define breakpoints priority
-const orderedBreakpointKeys = Object.keys(
-  consoleLightTheme.breakpoints,
-).toSorted(
+const orderedBreakpointKeys = Object.keys(consoleLightTheme.breakpoints).toSorted(
   (a, b) =>
-    Number.parseInt(
-      consoleLightTheme.breakpoints[
-        a as keyof typeof consoleLightTheme.breakpoints
-      ],
-      10,
-    ) -
-    Number.parseInt(
-      consoleLightTheme.breakpoints[
-        b as keyof typeof consoleLightTheme.breakpoints
-      ],
-      10,
-    ),
+    Number.parseInt(consoleLightTheme.breakpoints[a as keyof typeof consoleLightTheme.breakpoints], 10) -
+    Number.parseInt(consoleLightTheme.breakpoints[b as keyof typeof consoleLightTheme.breakpoints], 10),
 )
 
 const themeBreakpoints = orderedBreakpointKeys.reduce(
@@ -38,10 +26,7 @@ const themeBreakpoints = orderedBreakpointKeys.reduce(
       '@media': `screen and (min-width: ${consoleLightTheme.breakpoints[key as keyof typeof consoleLightTheme.breakpoints]})`,
     },
   }),
-  {} as Record<
-    keyof typeof consoleLightTheme.breakpoints,
-    { '@media': string }
-  >,
+  {} as Record<keyof typeof consoleLightTheme.breakpoints, { '@media': string }>,
 )
 
 const themeSpace = Object.values(consoleLightTheme.space)

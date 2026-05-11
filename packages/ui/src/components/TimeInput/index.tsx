@@ -101,9 +101,7 @@ export const TimeInput = ({
 
   const [time, setTime] = useState(value)
   const [period, setPeriod] = useState<'pm' | 'am' | undefined>(defaultPeriod)
-  const [filled, setFilled] = useState(
-    value ? { h: true, m: true, s: true } : { h: false, m: false, s: false },
-  ) // to not show 00 when there should be a placeholder
+  const [filled, setFilled] = useState(value ? { h: true, m: true, s: true } : { h: false, m: false, s: false }) // to not show 00 when there should be a placeholder
 
   const refHours = useRef<HTMLInputElement>(null)
   const refSeconds = useRef<HTMLInputElement>(null)
@@ -251,12 +249,7 @@ export const TimeInput = ({
   return (
     <Stack className={className} gap={0.5} style={style}>
       {label || labelDescription ? (
-        <Label
-          htmlFor={id ?? localId}
-          labelDescription={labelDescription}
-          required={required}
-          size={size}
-        >
+        <Label htmlFor={id ?? localId} labelDescription={labelDescription} required={required} size={size}>
           {label}
         </Label>
       ) : null}
@@ -319,12 +312,7 @@ export const TimeInput = ({
                   aria-valuemax={computeMaxValue()}
                   aria-valuemin={type === 'h' && timeFormat === 12 ? 1 : 0}
                   aria-valuenow={
-                    filled[type]
-                      ? Number.parseInt(
-                          format(getValueByType(type, time), type, timeFormat),
-                          10,
-                        )
-                      : undefined
+                    filled[type] ? Number.parseInt(format(getValueByType(type, time), type, timeFormat), 10) : undefined
                   }
                   autoComplete="off"
                   // oxlint-disable-next-line jsx_a11y/no-autofocus
@@ -335,10 +323,7 @@ export const TimeInput = ({
                   disabled={disabled}
                   onChange={event => {
                     if (!isEditable) {
-                      const key = getLastTypedChar(
-                        event.target.value,
-                        getValueByType(type, time),
-                      )
+                      const key = getLastTypedChar(event.target.value, getValueByType(type, time))
                       if (isNumber(key)) {
                         handleChange(type, Number.parseInt(key, 10))
                       }
@@ -368,11 +353,7 @@ export const TimeInput = ({
                   readOnly={readOnly}
                   ref={computedRef()}
                   role="spinbutton"
-                  value={
-                    filled[type]
-                      ? format(getValueByType(type, time), type, timeFormat)
-                      : ''
-                  }
+                  value={filled[type] ? format(getValueByType(type, time), type, timeFormat) : ''}
                 />
                 {type === 's' ? null : (
                   <Text

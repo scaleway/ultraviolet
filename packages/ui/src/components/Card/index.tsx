@@ -54,32 +54,17 @@ export const Card = forwardRef(
         style={style}
       >
         {typeof header === 'string' ? (
-          <Text
-            as="h2"
-            disabled={disabled}
-            prominence="strong"
-            sentiment="neutral"
-            variant="heading"
-          >
+          <Text as="h2" disabled={disabled} prominence="strong" sentiment="neutral" variant="heading">
             {header}
           </Text>
         ) : (
           header
         )}
-        <div
-          className={cardStyle.borderedBox}
-          data-disabled={disabled}
-          data-is-active={active}
-        >
+        <div className={cardStyle.borderedBox} data-disabled={disabled} data-is-active={active}>
           {subHeader ? (
             <Stack gap={2}>
               {typeof subHeader === 'string' ? (
-                <Text
-                  as="h3"
-                  disabled={disabled}
-                  sentiment="neutral"
-                  variant="headingSmallStrong"
-                >
+                <Text as="h3" disabled={disabled} sentiment="neutral" variant="headingSmallStrong">
                   {subHeader}
                 </Text>
               ) : (
@@ -104,12 +89,7 @@ export const Card = forwardRef(
         {subHeader ? (
           <Stack gap={2}>
             {typeof subHeader === 'string' ? (
-              <Text
-                as="h3"
-                disabled={disabled}
-                sentiment="neutral"
-                variant="headingSmallStrong"
-              >
+              <Text as="h3" disabled={disabled} sentiment="neutral" variant="headingSmallStrong">
                 {subHeader}
               </Text>
             ) : (

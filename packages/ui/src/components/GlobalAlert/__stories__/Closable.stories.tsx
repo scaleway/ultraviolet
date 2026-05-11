@@ -11,8 +11,7 @@ Closable.args = {
 Closable.parameters = {
   docs: {
     description: {
-      story:
-        'You can remove the close button by using the `closable` prop if you want the alert to be persistent.',
+      story: 'You can remove the close button by using the `closable` prop if you want the alert to be persistent.',
     },
   },
 }

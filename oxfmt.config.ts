@@ -5,7 +5,6 @@ export default mergeConfig(
   config,
   defineConfig({
     ...config,
-    printWidth: 80,
     sortImports: {
       order: 'asc',
       groups: ['builtin', 'internal', 'external', 'parent', 'sibling', 'type'],

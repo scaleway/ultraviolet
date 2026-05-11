@@ -1,10 +1,6 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import {
-  renderWithTheme,
-  shouldMatchSnapshot,
-  shouldMatchSnapshotWithPortal,
-} from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot, shouldMatchSnapshotWithPortal } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { Menu } from '..'
@@ -119,11 +115,7 @@ describe('menu', () => {
   it('disclosure Component render with function children', async () => {
     renderWithTheme(
       <Menu disclosure={() => disclosure} id="menu">
-        {({ toggle }) => (
-          <Menu.Item onClick={toggle}>
-            Menu.Item as Button with toggle
-          </Menu.Item>
-        )}
+        {({ toggle }) => <Menu.Item onClick={toggle}>Menu.Item as Button with toggle</Menu.Item>}
       </Menu>,
     )
     const menuButton = screen.getByRole<HTMLButtonElement>('button')
@@ -237,12 +229,7 @@ describe('menu', () => {
     const onClick = vi.fn()
     const onClickMenu = vi.fn()
     const { asFragment } = renderWithTheme(
-      <Menu
-        disclosure={() => disclosure}
-        footer="Footer"
-        hideOnClickItem
-        visible
-      >
+      <Menu disclosure={() => disclosure} footer="Footer" hideOnClickItem visible>
         <Menu.Item
           onClick={onClickMenu}
           rightComponent={
@@ -275,12 +262,7 @@ describe('menu', () => {
     const onClick = vi.fn()
     const onClickMenu = vi.fn()
     const { asFragment } = renderWithTheme(
-      <Menu
-        disclosure={() => disclosure}
-        footer="Footer"
-        hideOnClickItem
-        visible
-      >
+      <Menu disclosure={() => disclosure} footer="Footer" hideOnClickItem visible>
         <Menu.Item
           href="exemple.com"
           onClick={onClickMenu}
@@ -314,12 +296,7 @@ describe('menu', () => {
     const onKeyDown = vi.fn()
     const onClickMenu = vi.fn()
     const { asFragment } = renderWithTheme(
-      <Menu
-        disclosure={() => disclosure}
-        footer="Footer"
-        hideOnClickItem
-        visible
-      >
+      <Menu disclosure={() => disclosure} footer="Footer" hideOnClickItem visible>
         <Menu.Item
           href="exemple.com"
           onClick={onClickMenu}
@@ -357,12 +334,7 @@ describe('menu', () => {
     const onKeyDown = vi.fn()
     const onClickMenu = vi.fn()
     const { asFragment } = renderWithTheme(
-      <Menu
-        disclosure={() => disclosure}
-        footer="Footer"
-        hideOnClickItem
-        visible
-      >
+      <Menu disclosure={() => disclosure} footer="Footer" hideOnClickItem visible>
         <Menu.Item
           onClick={onClickMenu}
           rightComponent={
@@ -398,11 +370,7 @@ describe('menu', () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} searchable>
         <Menu.Item borderless>Power on</Menu.Item>
-        <Menu
-          disclosure={<Menu.Item>SubMenu click</Menu.Item>}
-          placement="right"
-          triggerMethod="click"
-        >
+        <Menu disclosure={<Menu.Item>SubMenu click</Menu.Item>} placement="right" triggerMethod="click">
           <Menu.Item>hi!</Menu.Item>
         </Menu>
       </Menu>,
@@ -428,11 +396,7 @@ describe('menu', () => {
     renderWithTheme(
       <Menu disclosure={() => disclosure}>
         <Menu.Item>Item 1</Menu.Item>
-        <Menu
-          disclosure={<Menu.Item>SubMenu</Menu.Item>}
-          placement="right"
-          triggerMethod="click"
-        >
+        <Menu disclosure={<Menu.Item>SubMenu</Menu.Item>} placement="right" triggerMethod="click">
           <Menu.Item>Nested Item</Menu.Item>
         </Menu>
         <Menu.Item>Item 2</Menu.Item>
@@ -464,9 +428,7 @@ describe('menu', () => {
           Power on
         </Menu.Item>
         <Menu
-          disclosure={
-            <Menu.Item data-testid="nested-menu">SubMenu click</Menu.Item>
-          }
+          disclosure={<Menu.Item data-testid="nested-menu">SubMenu click</Menu.Item>}
           placement="right"
           triggerMethod="click"
         >

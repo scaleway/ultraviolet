@@ -28,8 +28,7 @@ Sentiment.args = {
 Sentiment.parameters = {
   docs: {
     description: {
-      story:
-        'The `sentiment` prop can be used to change the sentiment of the avatar with variants `text` and `icon`.',
+      story: 'The `sentiment` prop can be used to change the sentiment of the avatar with variants `text` and `icon`.',
     },
   },
 }

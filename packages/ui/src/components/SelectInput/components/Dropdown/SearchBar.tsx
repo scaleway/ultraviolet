@@ -8,10 +8,7 @@ import { TextInput } from '../../../TextInput'
 import { OPTION_SELECTOR } from '../../constants'
 import { useSelectInput } from '../../SelectInputProvider'
 import { selectInputStyle } from '../../styles.css'
-import {
-  computeSelectedDataMultiselect,
-  computeSelectedDataSingleSelect,
-} from '../helpers'
+import { computeSelectedDataMultiselect, computeSelectedDataSingleSelect } from '../helpers'
 
 import type { DataType, OptionType } from '../../types'
 import type { Dispatch, KeyboardEvent, SetStateAction } from 'react'
@@ -40,19 +37,13 @@ const searchRegex = (data: OptionType[], query: string) =>
     const regex = new RegExp(query, 'i')
 
     return (
-      (query.length > 2
-        ? isFuzzyMatch(query, referenceText)
-        : referenceText.match(regex)) ||
-      (typeof option.description === 'string' &&
-        option.description.match(regex)) ||
+      (query.length > 2 ? isFuzzyMatch(query, referenceText) : referenceText.match(regex)) ||
+      (typeof option.description === 'string' && option.description.match(regex)) ||
       option.value.match(regex)
     )
   })
 
-const findClosestOption = (
-  options: DataType,
-  searchInput: string | undefined,
-) => {
+const findClosestOption = (options: DataType, searchInput: string | undefined) => {
   if (searchInput) {
     if (Array.isArray(options)) {
       const possibleOption = [...options].find(option => !option.disabled)
@@ -63,17 +54,11 @@ const findClosestOption = (
     } else {
       const possibleOptions = { ...options }
       Object.keys(possibleOptions).map((group: string) => {
-        possibleOptions[group] = possibleOptions[group].filter(
-          option => !option.disabled,
-        )
+        possibleOptions[group] = possibleOptions[group].filter(option => !option.disabled)
 
         return null
       })
-      if (
-        Object.keys(possibleOptions).some(
-          group => possibleOptions[group].length > 0,
-        )
-      ) {
+      if (Object.keys(possibleOptions).some(group => possibleOptions[group].length > 0)) {
         const firstFit = Object.keys(possibleOptions)
           .map(group => possibleOptions[group][0])
           .find(value => !!value)
@@ -86,42 +71,22 @@ const findClosestOption = (
   return null
 }
 
-const escapeRegExp = (string: string) =>
-  string.replace(/[.*+?^{}()|[\]\\]/g, String.raw`\$&`)
+const escapeRegExp = (string: string) => string.replace(/[.*+?^{}()|[\]\\]/g, String.raw`\$&`)
 
-export const SearchBar = ({
-  placeholder,
-  displayedOptions,
-  setSearchBarActive,
-}: SearchBarProps) => {
+export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }: SearchBarProps) => {
   const searchInputRef = useRef<HTMLInputElement>(null)
-  const {
-    onChange,
-    onSearch,
-    setSearchInput,
-    searchInput,
-    options,
-    multiselect,
-    setSelectedData,
-    selectedData,
-    size,
-  } = useSelectInput()
+  const { onChange, onSearch, setSearchInput, searchInput, options, multiselect, setSelectedData, selectedData, size } =
+    useSelectInput()
 
   const handleChange = (search: string) => {
     if (search.length > 0) {
       if (Array.isArray(options)) {
-        const filteredOptions = searchRegex(
-          [...options],
-          escapeRegExp(search.toString()),
-        )
+        const filteredOptions = searchRegex([...options], escapeRegExp(search.toString()))
         onSearch(filteredOptions)
       } else {
         const filteredOptions = { ...options }
         Object.keys(filteredOptions).map((group: string) => {
-          filteredOptions[group] = searchRegex(
-            filteredOptions[group],
-            escapeRegExp(search.toString()),
-          )
+          filteredOptions[group] = searchRegex(filteredOptions[group], escapeRegExp(search.toString()))
 
           return null
         })
@@ -133,28 +98,18 @@ export const SearchBar = ({
     setSearchInput(search)
   }
 
-  const handleKeyDown = (
-    event: KeyboardEvent<HTMLInputElement>,
-    search?: string,
-  ) => {
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>, search?: string) => {
     const { key } = event
     if (key === 'Enter') {
       const closestOption = findClosestOption(displayedOptions, search)
 
       if (closestOption) {
         if (multiselect) {
-          const data = computeSelectedDataMultiselect(
-            closestOption,
-            options,
-            selectedData,
-          )
+          const data = computeSelectedDataMultiselect(closestOption, options, selectedData)
           setSelectedData(data.computedData)
           onChange?.(data.onChangeData)
         } else {
-          const data = computeSelectedDataSingleSelect(
-            closestOption,
-            selectedData,
-          )
+          const data = computeSelectedDataSingleSelect(closestOption, selectedData)
           setSelectedData(data.computedData)
           onChange?.(data.onChangeData)
         }
@@ -192,12 +147,7 @@ export const SearchBar = ({
       onFocus={() => setSearchBarActive(true)}
       onKeyDown={event => handleKeyDown(event, searchInput)}
       placeholder={placeholder}
-      prefix={
-        <SearchIcon
-          sentiment="neutral"
-          size={size === 'small' ? 'xsmall' : 'small'}
-        />
-      }
+      prefix={<SearchIcon sentiment="neutral" size={size === 'small' ? 'xsmall' : 'small'} />}
       ref={searchInputRef}
       size={size === 'small' ? 'small' : 'medium'}
       value={searchInput}

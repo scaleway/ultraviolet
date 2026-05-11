@@ -3,19 +3,10 @@ import { Button, Stack } from '@ultraviolet/ui'
 
 const GithubAndDocumentationButtons = () => (
   <Stack direction="row" gap={2}>
-    <Button
-      aria-label="github"
-      href="https://github.com/scaleway/ultraviolet"
-      sentiment="neutral"
-      variant="outlined"
-    >
+    <Button aria-label="github" href="https://github.com/scaleway/ultraviolet" sentiment="neutral" variant="outlined">
       <GithubIcon size="large" />
     </Button>
-    <Button
-      aria-label="documentation"
-      href="https://storybook.ultraviolet.scaleway.com/"
-      variant="outlined"
-    >
+    <Button aria-label="documentation" href="https://storybook.ultraviolet.scaleway.com/" variant="outlined">
       Documentation
     </Button>
   </Stack>

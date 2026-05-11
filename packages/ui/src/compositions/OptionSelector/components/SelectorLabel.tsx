@@ -16,11 +16,7 @@ export const SelectorHelper = ({
 }) => (
   <Text
     as="p"
-    className={
-      isFirst
-        ? optionSelectorStyle.errorFirstSelector
-        : optionSelectorStyle.errorSecondSelector
-    }
+    className={isFirst ? optionSelectorStyle.errorFirstSelector : optionSelectorStyle.errorSecondSelector}
     prominence={isError ? 'default' : 'weak'}
     sentiment={isError ? 'danger' : 'neutral'}
     variant="caption"

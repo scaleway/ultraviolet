@@ -9,14 +9,11 @@ import type { BaseFieldProps } from '../../types'
 import type { ComponentProps, ReactNode } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 
-type FileInputFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<
-    ComponentProps<typeof FileInput>,
-    'error' | 'name' | 'onChangeFiles' | 'label' | 'aria-label'
-  > & {
+type FileInputFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
+  TFieldValues,
+  TFieldName
+> &
+  Omit<ComponentProps<typeof FileInput>, 'error' | 'name' | 'onChangeFiles' | 'label' | 'aria-label'> & {
     label: string
   }
 
@@ -71,9 +68,7 @@ const FileInputFieldBase = <
         title={title as ReactNode}
         variant="overlay"
       >
-        {typeof children === 'function'
-          ? (inputId, inputRef) => children(inputId, inputRef)
-          : children}
+        {typeof children === 'function' ? (inputId, inputRef) => children(inputId, inputRef) : children}
       </FileInput>
     )
   }
@@ -93,9 +88,7 @@ const FileInputFieldBase = <
       title={title}
       variant="dropzone"
     >
-      {typeof children === 'function'
-        ? (inputId, inputRef) => children(inputId, inputRef)
-        : children}
+      {typeof children === 'function' ? (inputId, inputRef) => children(inputId, inputRef) : children}
     </FileInput>
   )
 }
@@ -109,10 +102,7 @@ type FileInputFieldType = {
   Button: typeof FileInput.Button
 }
 
-export const FileInputField: FileInputFieldType = Object.assign(
-  FileInputFieldBase,
-  {
-    Button: FileInput.Button,
-    List: FileInput.List,
-  },
-)
+export const FileInputField: FileInputFieldType = Object.assign(FileInputFieldBase, {
+  Button: FileInput.Button,
+  List: FileInput.List,
+})

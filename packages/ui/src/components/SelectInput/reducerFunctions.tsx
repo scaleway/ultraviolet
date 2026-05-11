@@ -1,10 +1,6 @@
 import type { DataType, OptionType, ReducerState } from './types'
 
-export const selectAllAction = (
-  state: ReducerState,
-  allGroups: string[],
-  allValues: OptionType[],
-) => {
+export const selectAllAction = (state: ReducerState, allGroups: string[], allValues: OptionType[]) => {
   if (state.allSelected) {
     return { allSelected: false, selectedGroups: [], selectedValues: [] }
   }
@@ -26,29 +22,22 @@ export const selectGroupAction = (
     if (state.selectedGroups.includes(selectedGroupAction)) {
       return {
         allSelected: false,
-        selectedGroups: state.selectedGroups.filter(
-          selectedGroup => selectedGroup !== selectedGroupAction,
-        ),
+        selectedGroups: state.selectedGroups.filter(selectedGroup => selectedGroup !== selectedGroupAction),
         selectedValues: [...state.selectedValues].filter(
-          selectedValue =>
-            !options[selectedGroupAction].find(
-              option => option.value === selectedValue,
-            ),
+          selectedValue => !options[selectedGroupAction].find(option => option.value === selectedValue),
         ),
       }
     }
 
     const newSelectedValues = [...state.selectedValues]
     options[selectedGroupAction].map(option =>
-      newSelectedValues.find(aValue => aValue === option.value) ||
-      option.disabled
+      newSelectedValues.find(aValue => aValue === option.value) || option.disabled
         ? null
         : newSelectedValues.push(option.value),
     )
 
     return {
-      allSelected:
-        newSelectedValues.length === numberOfOptions - numberOfDisabledOptions,
+      allSelected: newSelectedValues.length === numberOfOptions - numberOfDisabledOptions,
       selectedGroups: [...state.selectedGroups, selectedGroupAction],
       selectedValues: newSelectedValues,
     }
@@ -72,28 +61,19 @@ export const selectOptionAction = (
         allSelected: false,
         selectedGroups:
           group && state.selectedGroups.includes(group)
-            ? state.selectedGroups.filter(
-                selectedGroup => selectedGroup !== group,
-              )
+            ? state.selectedGroups.filter(selectedGroup => selectedGroup !== group)
             : [],
-        selectedValues: state.selectedValues.filter(
-          val => val !== clickedOption.value,
-        ),
+        selectedValues: state.selectedValues.filter(val => val !== clickedOption.value),
       }
     }
 
     return {
-      allSelected:
-        state.selectedValues.length + 1 ===
-        numberOfOptions - numberOfDisabledOptions,
+      allSelected: state.selectedValues.length + 1 === numberOfOptions - numberOfDisabledOptions,
       selectedGroups:
         !Array.isArray(options) &&
         group &&
         options[group].every(
-          option =>
-            [...state.selectedValues, clickedOption.value].includes(
-              option.value,
-            ) || option.disabled,
+          option => [...state.selectedValues, clickedOption.value].includes(option.value) || option.disabled,
         )
           ? [...state.selectedGroups, group]
           : state.selectedGroups,
@@ -120,19 +100,16 @@ export const updateAction = (state: ReducerState, options: DataType) => ({
   selectedValues: state.selectedValues.filter(selectedValue => {
     if (!Array.isArray(options)) {
       return Object.keys(options).some(group =>
-        options[group].some(
-          option => option.value === selectedValue && !option.disabled,
-        ),
+        options[group].some(option => option.value === selectedValue && !option.disabled),
       )
     }
 
-    return options.some(
-      option => option.value === selectedValue && !option.disabled,
-    )
+    return options.some(option => option.value === selectedValue && !option.disabled)
   }),
 })
 
-export const resetAction = (
-  selectedGroups: string[],
-  selectedValues: string[],
-) => ({ allSelected: false, selectedGroups, selectedValues })
+export const resetAction = (selectedGroups: string[], selectedValues: string[]) => ({
+  allSelected: false,
+  selectedGroups,
+  selectedValues,
+})

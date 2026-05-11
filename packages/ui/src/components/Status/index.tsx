@@ -37,14 +37,8 @@ export const Status = ({
   style,
 }: StatusProps) => (
   <Tooltip text={tooltip}>
-    <span
-      className={cn(className, statusStyle.status({ notification }))}
-      data-testid={dataTestId}
-      style={style}
-    >
-      {animated ? (
-        <span className={statusStyle.animatedCircle({ sentiment })} />
-      ) : null}
+    <span className={cn(className, statusStyle.status({ notification }))} data-testid={dataTestId} style={style}>
+      {animated ? <span className={statusStyle.animatedCircle({ sentiment })} /> : null}
       <span className={statusStyle.circle({ sentiment })} />
     </span>
   </Tooltip>

@@ -10,9 +10,4 @@ const ipfsNamingKeyvisual = `${BASE_URL}/products/ipfsNaming/ipfs-naming-keyvisu
 const ipfsNamingOriginal = `${BASE_URL}/products/ipfsNaming/ipfs-naming-original.webp`
 const ipfsNamingWire = `${BASE_URL}/products/ipfsNaming/ipfs-naming-wire.svg`
 
-export {
-  ipfsNamingContent,
-  ipfsNamingKeyvisual,
-  ipfsNamingOriginal,
-  ipfsNamingWire,
-}
+export { ipfsNamingContent, ipfsNamingKeyvisual, ipfsNamingOriginal, ipfsNamingWire }

@@ -19,12 +19,7 @@ type SelectBarProps<T> = {
   idKey: keyof T
 }
 
-export const SelectBar = <T,>({
-  children,
-  data,
-  idKey,
-  className,
-}: SelectBarProps<T>) => {
+export const SelectBar = <T,>({ children, data, idKey, className }: SelectBarProps<T>) => {
   const { selectedRowIds, unselectAll } = useListContext()
 
   const selectedItems = useMemo(
@@ -38,13 +33,7 @@ export const SelectBar = <T,>({
 
   return (
     <ActionBar className={className}>
-      <Stack
-        alignItems="center"
-        direction="row"
-        flex="1 1 auto"
-        justifyContent="space-between"
-        width="100%"
-      >
+      <Stack alignItems="center" direction="row" flex="1 1 auto" justifyContent="space-between" width="100%">
         {children({
           selectedItems,
           unselectAll,

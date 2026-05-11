@@ -19,41 +19,23 @@ export const Children: StoryFn<typeof FileInput> = args => {
         aria-label="label"
         bottom={<FileInput.List />}
         disabled={args.disabled}
-        title={inputId => (
-          <label htmlFor={inputId}>Click here to add a file (title)</label>
-        )}
+        title={inputId => <label htmlFor={inputId}>Click here to add a file (title)</label>}
         variant="dropzone"
       >
         {inputId => (
           <Stack>
-            <Text
-              as="label"
-              htmlFor={inputId}
-              sentiment="primary"
-              variant="bodyStrong"
-            >
+            <Text as="label" htmlFor={inputId} sentiment="primary" variant="bodyStrong">
               You can also click here (children)
             </Text>
             But not here
           </Stack>
         )}
       </FileInput>
-      <FileInput
-        aria-label="label-2"
-        disabled={args.disabled}
-        title="drag here"
-        variant="overlay"
-      >
+      <FileInput aria-label="label-2" disabled={args.disabled} title="drag here" variant="overlay">
         {inputId => (
           <>
             Drag an drop on me or click{' '}
-            <Text
-              as="label"
-              className={hereText}
-              htmlFor={inputId}
-              sentiment="info"
-              variant="body"
-            >
+            <Text as="label" className={hereText} htmlFor={inputId} sentiment="info" variant="body">
               here
             </Text>{' '}
             to add a file
@@ -72,21 +54,9 @@ export const Children: StoryFn<typeof FileInput> = args => {
       >
         {(_, inputRef) =>
           image ? (
-            <Avatar
-              image={image}
-              onClick={() => inputRef?.current?.click()}
-              shape="square"
-              upload
-              variant="image"
-            />
+            <Avatar image={image} onClick={() => inputRef?.current?.click()} shape="square" upload variant="image" />
           ) : (
-            <Avatar
-              onClick={() => inputRef?.current?.click()}
-              shape="square"
-              text="UV"
-              upload
-              variant="text"
-            />
+            <Avatar onClick={() => inputRef?.current?.click()} shape="square" text="UV" upload variant="text" />
           )
         }
       </FileInput>

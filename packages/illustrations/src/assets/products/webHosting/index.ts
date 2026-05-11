@@ -10,9 +10,4 @@ const webHostingKeyvisual = `${BASE_URL}/products/webHosting/web-hosting-keyvisu
 const webHostingOriginal = `${BASE_URL}/products/webHosting/web-hosting-original.webp`
 const webHostingWire = `${BASE_URL}/products/webHosting/web-hosting-wire.svg`
 
-export {
-  webHostingContent,
-  webHostingKeyvisual,
-  webHostingOriginal,
-  webHostingWire,
-}
+export { webHostingContent, webHostingKeyvisual, webHostingOriginal, webHostingWire }

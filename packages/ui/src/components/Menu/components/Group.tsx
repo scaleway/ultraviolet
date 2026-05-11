@@ -19,25 +19,14 @@ type GroupProps = {
   style?: CSSProperties
 }
 
-export const Group = ({
-  label,
-  children,
-  labelDescription,
-  emptyState,
-  style,
-}: GroupProps) => {
+export const Group = ({ label, children, labelDescription, emptyState, style }: GroupProps) => {
   const isChildrenEmpty = Children.count(children) === 0
 
   return (
     <>
       <span className={menuStyle.group} style={style}>
         <Stack alignItems="center" direction="row" gap={1}>
-          <Text
-            as="span"
-            prominence="weak"
-            sentiment="neutral"
-            variant="captionStrong"
-          >
+          <Text as="span" prominence="weak" sentiment="neutral" variant="captionStrong">
             {label}
           </Text>
           {labelDescription ?? null}

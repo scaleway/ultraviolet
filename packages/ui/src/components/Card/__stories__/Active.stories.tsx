@@ -17,24 +17,16 @@ export const Active: StoryFn = args => {
     <Card {...args} active={active} header="Active Card">
       <Stack direction="row" gap={6} justifyContent="space-between">
         <Text as="p" sentiment={active ? 'primary' : 'neutral'} variant="body">
-          This card is currently highlighted through <strong>active</strong>{' '}
-          prop. In this example we use it to show the content is being edited.
+          This card is currently highlighted through <strong>active</strong> prop. In this example we use it to show the
+          content is being edited.
         </Text>
 
         {active ? (
           <Stack direction="row" gap={1}>
-            <Button
-              onClick={() => setActive(false)}
-              sentiment="success"
-              variant="outlined"
-            >
+            <Button onClick={() => setActive(false)} sentiment="success" variant="outlined">
               <CheckIcon />
             </Button>
-            <Button
-              onClick={() => setActive(false)}
-              sentiment="danger"
-              variant="outlined"
-            >
+            <Button onClick={() => setActive(false)} sentiment="danger" variant="outlined">
               <CancelIcon />
             </Button>
           </Stack>

@@ -19,11 +19,7 @@ export const ShowHidePassword = ({
   setIsPasswordVisible: Dispatch<SetStateAction<boolean>>
   isPasswordVisible: boolean
 }) => (
-  <Stack
-    alignItems="center"
-    className={textInputStyle.ctaSuffix}
-    direction="row"
-  >
+  <Stack alignItems="center" className={textInputStyle.ctaSuffix} direction="row">
     <Button
       aria-label={isPasswordVisible ? 'hide' : 'show'}
       data-testid={dataTestId ? `${dataTestId}-visibility-button` : undefined}

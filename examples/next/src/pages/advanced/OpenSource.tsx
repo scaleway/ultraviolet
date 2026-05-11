@@ -10,12 +10,7 @@ const OpenSource = () => (
   <section>
     <Stack gap={5}>
       <Stack gap={2}>
-        <Text
-          as="h3"
-          className={styles.openSourceTitle}
-          id="open-source"
-          variant="heading"
-        >
+        <Text as="h3" className={styles.openSourceTitle} id="open-source" variant="heading">
           Open Source
         </Text>
         <Text as="p" sentiment="neutral" variant="body">
@@ -33,10 +28,7 @@ const OpenSource = () => (
               </div>
               <Stack direction="row" gap={1}>
                 <GithubIcon size="small" />
-                <Link
-                  href="https://github.com/scaleway/scaleway-form"
-                  target="_blank"
-                >
+                <Link href="https://github.com/scaleway/scaleway-form" target="_blank">
                   Visit on GitHub
                 </Link>
               </Stack>
@@ -48,15 +40,10 @@ const OpenSource = () => (
         <Card
           description={
             <>
-              <div className={styles.openSourceDescription}>
-                Scaleway Lib is a set of NPM packages used at Scaleway
-              </div>
+              <div className={styles.openSourceDescription}>Scaleway Lib is a set of NPM packages used at Scaleway</div>
               <Stack direction="row" gap={1}>
                 <GithubIcon size="small" />
-                <Link
-                  href="https://github.com/scaleway/scaleway-lib"
-                  target="_blank"
-                >
+                <Link href="https://github.com/scaleway/scaleway-lib" target="_blank">
                   Visit on GitHub
                 </Link>
               </Stack>

@@ -64,13 +64,7 @@ export const Zone = memo(
         style={style}
       >
         <Strong>
-          <img
-            alt={label}
-            className={estimateCostStyle.image}
-            height="auto"
-            src={image}
-            width="auto"
-          />
+          <img alt={label} className={estimateCostStyle.image} height="auto" src={image} width="auto" />
           {label}
         </Strong>
       </Item>

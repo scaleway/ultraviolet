@@ -28,9 +28,7 @@ export const PositiveNegative: StoryFn<typeof BarChart> = props => {
       }}
       chartProps={{
         colors: ({ value }) =>
-          value === 1
-            ? theme.colors.other.data.charts.success
-            : theme.colors.other.data.charts.danger,
+          value === 1 ? theme.colors.other.data.charts.success : theme.colors.other.data.charts.danger,
         gridYValues: [-1, 0, 1],
         maxValue: 1,
         minValue: -1,

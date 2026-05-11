@@ -15,8 +15,7 @@ export const Padding: StoryFn = args => (
     </Row>
     <Row {...args} padding="16px 32px 24px 8px" templateColumns="1fr">
       <div className={divWithBackground}>
-        Padding-left: 8px, padding-right: 32px, padding-top: 16px,
-        padding-bottom: 24px;
+        Padding-left: 8px, padding-right: 32px, padding-top: 16px, padding-bottom: 24px;
       </div>
     </Row>
   </Stack>

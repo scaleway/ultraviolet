@@ -48,9 +48,7 @@ const SwitchButtonField = <
       }}
       onChange={event => {
         field.onChange(event)
-        onChange?.(
-          event.target as PathValue<TFieldValues, TFieldName> | undefined,
-        )
+        onChange?.(event.target as PathValue<TFieldValues, TFieldName> | undefined)
       }}
       onFocus={onFocus}
       size={size}

@@ -8,9 +8,7 @@ import { Template } from './Template.stories'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const SubmitOnEnter: StoryFn<
-  ComponentProps<typeof TextAreaField>
-> = args => (
+export const SubmitOnEnter: StoryFn<ComponentProps<typeof TextAreaField>> = args => (
   <Stack gap={1}>
     <TextAreaField {...args} />
     <Submit>Submit</Submit>

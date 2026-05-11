@@ -7,16 +7,7 @@ import type { StoryFn } from '@storybook/react-vite'
 export const Double: StoryFn<typeof Slider> = () => {
   const [value, setValue] = useState([1, 3])
 
-  return (
-    <Slider
-      data-testid="slider"
-      double
-      input
-      name="slider"
-      onChange={setValue}
-      value={value}
-    />
-  )
+  return <Slider data-testid="slider" double input name="slider" onChange={setValue} value={value} />
 }
 
 Double.args = {

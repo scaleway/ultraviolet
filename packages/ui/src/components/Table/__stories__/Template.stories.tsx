@@ -4,9 +4,7 @@ import { columns, data } from './resources'
 
 import type { StoryFn } from '@storybook/react-vite'
 
-export const Template: StoryFn<typeof Table> = ({ ...props }) => (
-  <Table {...props} />
-)
+export const Template: StoryFn<typeof Table> = ({ ...props }) => <Table {...props} />
 
 Template.args = {
   children: (

@@ -19,9 +19,7 @@ const sentimentsCircleStatus = Object.fromEntries(
     sentiment,
     {
       backgroundColor:
-        sentiment === 'neutral'
-          ? theme.colors.neutral.backgroundStronger
-          : theme.colors[sentiment].backgroundStrong,
+        sentiment === 'neutral' ? theme.colors.neutral.backgroundStronger : theme.colors[sentiment].backgroundStrong,
     },
   ]),
 )

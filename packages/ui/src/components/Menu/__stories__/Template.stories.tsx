@@ -11,7 +11,6 @@ export const DefaultDisclosure = (
   </Button>
 )
 
-export const Template: StoryFn<typeof Menu> = ({
-  disclosure = DefaultDisclosure,
-  ...props
-}) => <Menu disclosure={disclosure} {...props} />
+export const Template: StoryFn<typeof Menu> = ({ disclosure = DefaultDisclosure, ...props }) => (
+  <Menu disclosure={disclosure} {...props} />
+)

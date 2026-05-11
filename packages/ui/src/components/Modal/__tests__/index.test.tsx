@@ -22,9 +22,7 @@ describe('modal', () => {
   })
 
   it('useModal() should throw error if not rendered in provider', () => {
-    expect(() => renderHook(() => useModal())).toThrow(
-      'useModal must be used within a ModalProvider',
-    )
+    expect(() => renderHook(() => useModal())).toThrow('useModal must be used within a ModalProvider')
   })
 
   it('renders with default Props', () =>
@@ -70,11 +68,7 @@ describe('modal', () => {
 
   it('renders with custom classNames', () =>
     shouldMatchSnapshotWithPortal(
-      <Modal
-        backdropClassName={customDialogBackdropStyles}
-        className={customDialogStyles}
-        open
-      >
+      <Modal backdropClassName={customDialogBackdropStyles} className={customDialogStyles} open>
         <div>test</div>
       </Modal>,
     ))
@@ -88,11 +82,7 @@ describe('modal', () => {
 
   it('renders with disclosure', () =>
     shouldMatchSnapshotWithPortal(
-      <Modal
-        ariaLabel="modal-test"
-        disclosure={<button type="button">Test</button>}
-        id="modal-test"
-      >
+      <Modal ariaLabel="modal-test" disclosure={<button type="button">Test</button>} id="modal-test">
         <div>modal</div>
       </Modal>,
     ))
@@ -239,13 +229,7 @@ describe('modal', () => {
   it('test hideOnEsc is true', async () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
-      <Modal
-        ariaLabel="modal-test"
-        hideOnEsc
-        id="modal-test"
-        onBeforeClose={mockOnClose}
-        open
-      >
+      <Modal ariaLabel="modal-test" hideOnEsc id="modal-test" onBeforeClose={mockOnClose} open>
         <div> test</div>
       </Modal>,
     )
@@ -258,13 +242,7 @@ describe('modal', () => {
   it('test hideOnEsc is false', async () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
-      <Modal
-        ariaLabel="modal-test"
-        hideOnEsc={false}
-        id="modal-test"
-        onBeforeClose={mockOnClose}
-        open
-      >
+      <Modal ariaLabel="modal-test" hideOnEsc={false} id="modal-test" onBeforeClose={mockOnClose} open>
         <div> test</div>
       </Modal>,
     )

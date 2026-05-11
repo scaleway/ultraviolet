@@ -7,13 +7,7 @@
     "noUncheckedIndexedAccess": false,
     "skipLibCheck": true,
     "target": "esnext",
-    "types": [
-      "vite/client",
-      "@testing-library/jest-dom",
-      "./utils.d.ts",
-      "./global.d.ts",
-      "./expect.d.ts"
-    ]
+    "types": ["vite/client", "@testing-library/jest-dom", "./utils.d.ts", "./global.d.ts", "./expect.d.ts"]
   },
   "exclude": ["node_modules", "coverage", "dist", "examples", "e2e"],
   "extends": ["@scaleway/tsconfig"],

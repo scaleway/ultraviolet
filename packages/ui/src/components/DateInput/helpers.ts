@@ -28,8 +28,7 @@ export const getNextMonth = (month: number, year: number) => {
 
 // Checks if two date values are of the same month and year
 export const isSameMonth = (date: Date, basedate: Date) =>
-  basedate.getMonth() === date.getMonth() &&
-  basedate.getFullYear() === date.getFullYear()
+  basedate.getMonth() === date.getMonth() && basedate.getFullYear() === date.getFullYear()
 
 // (bool) Checks if two date values are the same day
 export const isSameDay = (date: Date, basedate: Date) =>
@@ -44,11 +43,7 @@ const getDateISO = (showMonthYearPicker: boolean, date?: Date) => {
       return [addZero(date.getMonth() + 1), date.getFullYear()].join('/')
     }
 
-    return [
-      addZero(date.getDate()),
-      addZero(date.getMonth() + 1),
-      date.getFullYear(),
-    ].join('/')
+    return [addZero(date.getDate()), addZero(date.getMonth() + 1), date.getFullYear()].join('/')
   }
 
   return ''
@@ -67,9 +62,7 @@ export const formatValue = (
   if (selectsRange && computedRange) {
     return format
       ? `${
-          format(computedRange.start ?? undefined)
-            ? `${format(computedRange.start ?? undefined)} - `
-            : ''
+          format(computedRange.start ?? undefined) ? `${format(computedRange.start ?? undefined)} - ` : ''
         }${format(computedRange.end ?? undefined) ?? ''}`
       : `${getDateISO(showMonthYearPicker, computedRange.start ?? undefined)}${
           computedRange.start ? ' - ' : ''
@@ -86,11 +79,7 @@ export const formatValue = (
   return undefined
 }
 
-const returnValidDate = (
-  computedDate: Date,
-  minDate?: Date,
-  maxDate?: Date,
-) => {
+const returnValidDate = (computedDate: Date, minDate?: Date, maxDate?: Date) => {
   const isValidDate = !!computedDate.getTime()
 
   const isTooSoon = isValidDate && minDate && computedDate < minDate
@@ -106,17 +95,11 @@ const returnValidDate = (
   return isValidDate ? computedDate : null
 }
 
-export const createDate = (
-  value: string,
-  showMonthYearPicker: boolean,
-  minDate?: Date,
-  maxDate?: Date,
-) => {
+export const createDate = (value: string, showMonthYearPicker: boolean, minDate?: Date, maxDate?: Date) => {
   if (showMonthYearPicker) {
     // Force YYYY/MM (since MM/YYYY not recognised as a date in typescript)
     const res = value.split(SPLIT_REGEX).map(val => Number.parseInt(val, 10))
-    const year =
-      Math.max(...res) < 100 ? Math.max(...res) + 2000 : Math.max(...res) // MM/YY should be seen as MM/20YY instead of MM/19YY
+    const year = Math.max(...res) < 100 ? Math.max(...res) + 2000 : Math.max(...res) // MM/YY should be seen as MM/20YY instead of MM/19YY
 
     const month = Math.min(...res) - 1
     const computedDate = new Date(year, month)
@@ -131,21 +114,12 @@ export const createDate = (
   return returnValidDate(computedDate, minDate, maxDate)
 }
 
-export const createDateRange = (
-  value: string,
-  showMonthYearPicker: boolean,
-) => {
-  const [startDateInput, endDateInput] = value
-    .split(' - ')
-    .map(val => createDate(val, showMonthYearPicker))
+export const createDateRange = (value: string, showMonthYearPicker: boolean) => {
+  const [startDateInput, endDateInput] = value.split(' - ').map(val => createDate(val, showMonthYearPicker))
 
   const computedNewRange: [Date | null, Date | null] = [
-    startDateInput instanceof Date && !Number.isNaN(startDateInput.getTime())
-      ? startDateInput
-      : null,
-    endDateInput instanceof Date && !Number.isNaN(endDateInput.getTime())
-      ? endDateInput
-      : null,
+    startDateInput instanceof Date && !Number.isNaN(startDateInput.getTime()) ? startDateInput : null,
+    endDateInput instanceof Date && !Number.isNaN(endDateInput.getTime()) ? endDateInput : null,
   ]
 
   return computedNewRange
@@ -172,7 +146,4 @@ export const getIsInHoveredRange = (
     hoveredDate &&
     constructedDate > hoveredDate &&
     !range.end) ||
-  (range?.start &&
-    range.end &&
-    constructedDate < range.end &&
-    constructedDate > range.start)
+  (range?.start && range.end && constructedDate < range.end && constructedDate > range.start)

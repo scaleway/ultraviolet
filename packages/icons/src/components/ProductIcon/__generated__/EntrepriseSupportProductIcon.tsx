@@ -9,14 +9,9 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const EntrepriseSupportProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const EntrepriseSupportProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="EntrepriseSupportProductIcon">
-    <g
-      className="sentiment=original, size=xlarge, disabled=false"
-      clipPath="url(#a)"
-    >
+    <g className="sentiment=original, size=xlarge, disabled=false" clipPath="url(#a)">
       <g className=".Square">
         <g className="fillWeak">
           <path

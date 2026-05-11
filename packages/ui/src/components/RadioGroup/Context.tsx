@@ -9,6 +9,4 @@ type RadioGroupContextType = {
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'style'>
 
-export const RadioGroupContext = createContext<
-  RadioGroupContextType | undefined
->(undefined)
+export const RadioGroupContext = createContext<RadioGroupContextType | undefined>(undefined)

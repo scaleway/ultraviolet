@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const WordpressLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const WordpressLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="WordpressLogo">
     <g>
       <path

@@ -33,10 +33,7 @@ if (escapedCss === '') {
   throw new Error('broken css export')
 }
 
-entryContent = entryContent.replace(
-  'const iconStyles = "";',
-  `const iconStyles = \`${escapedCss}\`;`,
-)
+entryContent = entryContent.replace('const iconStyles = "";', `const iconStyles = \`${escapedCss}\`;`)
 
 logger('export css module', entryPath)
 // Write the updated entry file

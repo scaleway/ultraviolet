@@ -7,8 +7,7 @@ export const AsOverlay = Template.bind({})
 AsOverlay.args = {
   children: (
     <>
-      I am an overlay (drag and drop){' '}
-      <FileInputField.Button>Or click here</FileInputField.Button>
+      I am an overlay (drag and drop) <FileInputField.Button>Or click here</FileInputField.Button>
       <FileInputField.List />
     </>
   ),

@@ -82,10 +82,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     const innerSearchInputRef = useRef<HTMLInputElement>(null)
     useImperativeHandle(ref, () => innerSearchInputRef.current!)
 
-    const content =
-      typeof children === 'function'
-        ? children({ isOpen, searchTerms, toggleIsOpen })
-        : children
+    const content = typeof children === 'function' ? children({ isOpen, searchTerms, toggleIsOpen }) : children
 
     const resizeSearchBar = () => {
       if (popupRef.current) {
@@ -96,11 +93,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     const handleNavigation = (event: KeyboardEvent) => {
       const links = [...(popupRef.current?.querySelectorAll('a') ?? [])]
 
-      if (
-        links.length > 0 &&
-        focusedLinkIndex.current >= 0 &&
-        focusedLinkIndex.current <= links.length
-      ) {
+      if (links.length > 0 && focusedLinkIndex.current >= 0 && focusedLinkIndex.current <= links.length) {
         if (event.key === 'ArrowUp') {
           if (focusedLinkIndex.current - 1 < 0) {
             focusedLinkIndex.current = links.length - 1
@@ -176,20 +169,14 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
         setKeyPressed([...keyPressed, key.toUpperCase()])
 
         if (typeof shortcut === 'boolean') {
-          if (
-            (key === 'k' || key === 'K') &&
-            ((!isMacOS && ctrlKey) || (isMacOS && metaKey))
-          ) {
+          if ((key === 'k' || key === 'K') && ((!isMacOS && ctrlKey) || (isMacOS && metaKey))) {
             event.preventDefault()
             innerSearchInputRef.current?.focus()
           }
         } else {
           const uppercaseShortcut = shortcut.map(s => s.toUpperCase())
 
-          if (
-            JSON.stringify([...keyPressed, key.toUpperCase()]) ===
-            JSON.stringify(uppercaseShortcut)
-          ) {
+          if (JSON.stringify([...keyPressed, key.toUpperCase()]) === JSON.stringify(uppercaseShortcut)) {
             event.preventDefault()
             innerSearchInputRef.current?.focus()
           }
@@ -299,11 +286,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             style={style}
             suffix={
               shortcut && searchTerms.length === 0 ? (
-                <KeyGroup
-                  disabled={disabled}
-                  keys={keys}
-                  onClick={() => innerSearchInputRef.current?.focus()}
-                />
+                <KeyGroup disabled={disabled} keys={keys} onClick={() => innerSearchInputRef.current?.focus()} />
               ) : undefined
             }
             tooltip={tooltip}

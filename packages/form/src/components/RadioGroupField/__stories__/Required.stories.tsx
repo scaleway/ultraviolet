@@ -16,9 +16,7 @@ const RequiredTemplate = (args: ComponentProps<typeof RadioGroupField>) => (
   </Stack>
 )
 
-export const Required: StoryFn<typeof RadioGroupField> = args => (
-  <RequiredTemplate {...args} />
-)
+export const Required: StoryFn<typeof RadioGroupField> = args => <RequiredTemplate {...args} />
 
 Required.args = {
   legend: 'Legend label',

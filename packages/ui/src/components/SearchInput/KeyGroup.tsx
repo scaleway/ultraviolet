@@ -14,12 +14,7 @@ type KeyGroupProps = {
 }
 
 export const KeyGroup = ({ keys, disabled, onClick }: KeyGroupProps) => (
-  <Stack
-    className={searchInputStyle.clickableStack}
-    direction="row"
-    gap={0.5}
-    onClick={onClick}
-  >
+  <Stack className={searchInputStyle.clickableStack} direction="row" gap={0.5} onClick={onClick}>
     {keys.map(key => (
       <Key data-testid={`key-${key}`} disabled={disabled} key={key}>
         {key}

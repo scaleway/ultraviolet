@@ -5,9 +5,7 @@ import { planets } from './resources'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const Multiple: StoryFn<
-  ComponentProps<typeof SelectInputField>
-> = () => (
+export const Multiple: StoryFn<ComponentProps<typeof SelectInputField>> = () => (
   <SelectInputField
     multiselect
     name="options"

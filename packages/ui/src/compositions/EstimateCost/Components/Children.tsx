@@ -41,12 +41,7 @@ export const ChildrenComponent = ({
             <th>
               <Title locales={locales} />
             </th>
-            <th
-              className={cn(
-                estimateCostStyle.priceCellContent,
-                estimateCostStyle.priceCell,
-              )}
-            >
+            <th className={cn(estimateCostStyle.priceCellContent, estimateCostStyle.priceCell)}>
               <div className={estimateCostStyle.timeCell}>
                 <CustomUnitInput
                   defaultTimeUnit={defaultTimeUnit}

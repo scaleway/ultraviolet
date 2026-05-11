@@ -11,10 +11,7 @@ type IOptions =
     }
   | undefined
 
-export function useClipboard(
-  text: string,
-  options?: IOptions,
-): [boolean, () => Promise<void>] {
+export function useClipboard(text: string, options?: IOptions): [boolean, () => Promise<void>] {
   const [isCopied, setIsCopied] = useState(false)
   const successDuration = options && options.successDuration
 

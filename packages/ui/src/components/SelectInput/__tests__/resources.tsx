@@ -109,8 +109,7 @@ export const dataGrouped = {
       value: 'mars',
     },
     {
-      description:
-        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+      description: 'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
       disabled: false,
       label: 'Pluto',
       value: 'pluto',
@@ -173,8 +172,7 @@ export const OptionalInfo = {
       value: 'mars',
     },
     {
-      description:
-        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+      description: 'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
       disabled: false,
       label: (
         <Text as="div" italic variant="body">

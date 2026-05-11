@@ -1,8 +1,4 @@
-import {
-  FranceFlag,
-  NetherlandsFlag,
-  PolandFlag,
-} from '@ultraviolet/icons/flags'
+import { FranceFlag, NetherlandsFlag, PolandFlag } from '@ultraviolet/icons/flags'
 import { LeafIcon } from '@ultraviolet/icons/LeafIcon'
 import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
 

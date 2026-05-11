@@ -8,14 +8,8 @@ import type { FieldPath, FieldValues } from 'react-hook-form'
 type PlanFieldsProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
-> = Pick<
-  ComponentProps<typeof Plans>,
-  'features' | 'plans' | 'hideLabels' | 'onChange' | 'highlight'
-> &
-  Pick<
-    BaseFieldProps<TFieldValues, TFieldName>,
-    'name' | 'control' | 'required'
-  >
+> = Pick<ComponentProps<typeof Plans>, 'features' | 'plans' | 'hideLabels' | 'onChange' | 'highlight'> &
+  Pick<BaseFieldProps<TFieldValues, TFieldName>, 'name' | 'control' | 'required'>
 
 export const PlansField = <
   TFieldValues extends FieldValues,

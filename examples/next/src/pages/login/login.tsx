@@ -1,12 +1,5 @@
 import { email as emailRegex } from '@scaleway/regex'
-import {
-  CheckboxField,
-  Form,
-  Submit,
-  TextInputField,
-  useForm,
-  useWatch,
-} from '@ultraviolet/form'
+import { CheckboxField, Form, Submit, TextInputField, useForm, useWatch } from '@ultraviolet/form'
 import { IdIcon } from '@ultraviolet/icons/IdIcon'
 import { Link, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'

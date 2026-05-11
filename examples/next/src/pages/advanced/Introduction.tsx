@@ -37,11 +37,7 @@ const Introduction = () => (
     </Stack>
 
     <Stack direction="row" gap={2} justifyContent="space-between">
-      <Card
-        description="We follow WAI-ARIA standards for each component."
-        icon={swA11y}
-        title="Accessibility"
-      />
+      <Card description="We follow WAI-ARIA standards for each component." icon={swA11y} title="Accessibility" />
       <Card
         description="Easily define dark and light themes and customize them with various colors."
         icon={swCustom}

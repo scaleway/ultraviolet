@@ -50,10 +50,9 @@ function makeStateStyle(state: 'neutral' | 'success' | 'danger') {
           `focus${capitalizeFirstLetter(correctSentiment)}` as keyof typeof theme.shadows
         ] as string,
       },
-      '&:not([data-disabled="true"]):not([data-readonly="true"]):focus-visible':
-        {
-          outline: '5px auto Highlight',
-        },
+      '&:not([data-disabled="true"]):not([data-readonly="true"]):focus-visible': {
+        outline: '5px auto Highlight',
+      },
       '&:not([data-disabled="true"]):not([data-readonly="true"]):hover': {
         borderColor: theme.colors[correctSentiment].borderHover,
         outline: 'none',
@@ -207,10 +206,7 @@ const selectBarTagsBase = style({
 
 export const selectBarTags = styleVariants({
   hidden: [selectBarTagsBase, { visibility: 'hidden' }],
-  visible: [
-    selectBarTagsBase,
-    { overflow: 'hidden', textOverflow: 'ellipsis' },
-  ],
+  visible: [selectBarTagsBase, { overflow: 'hidden', textOverflow: 'ellipsis' }],
 })
 
 export const selectedValues = style({

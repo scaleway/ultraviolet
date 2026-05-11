@@ -4,14 +4,7 @@ import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-import {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react'
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 
 import { Button } from '../../../Button'
 import { Stack } from '../../../Stack'
@@ -61,15 +54,8 @@ const SelectBar = ({
   label,
   dropdownId,
 }: SelectBarProps) => {
-  const {
-    isDropdownVisible,
-    onChange,
-    setIsDropdownVisible,
-    options,
-    selectedData,
-    setSelectedData,
-    multiselect,
-  } = useSelectInput()
+  const { isDropdownVisible, onChange, setIsDropdownVisible, options, selectedData, setSelectedData, multiselect } =
+    useSelectInput()
   const openable = !(readOnly || disabled)
   const [displayShadowCopy, setDisplayShadowCopy] = useState(false)
   const refTag = useRef<HTMLDivElement>(null)
@@ -79,20 +65,15 @@ const SelectBar = ({
   const [overflowAmount, setOverflowAmount] = useState(0)
   const [overflow, setOverflow] = useState(false)
   const [lastElementMaxWidth, setLastElementMaxWidth] = useState(0)
-  const [nonOverflowedValues, setNonOverFlowedValues] = useState<OptionType[]>(
-    () => {
-      if (selectedData.selectedValues[0]) {
-        const firstSelectOption = findOptionInOptions(
-          options,
-          selectedData.selectedValues[0],
-        )
+  const [nonOverflowedValues, setNonOverFlowedValues] = useState<OptionType[]>(() => {
+    if (selectedData.selectedValues[0]) {
+      const firstSelectOption = findOptionInOptions(options, selectedData.selectedValues[0])
 
-        return firstSelectOption ? [firstSelectOption] : []
-      }
+      return firstSelectOption ? [firstSelectOption] : []
+    }
 
-      return []
-    },
-  )
+    return []
+  })
 
   const potentiallyNonOverflowedValues = useMemo(
     () =>
@@ -123,10 +104,7 @@ const SelectBar = ({
       return refTag.current.offsetWidth
     }
 
-    return (
-      innerRef.current?.offsetWidth ??
-      0 - (arrowRef.current?.offsetWidth ?? 0) - SIZES_TAG.paddings
-    )
+    return innerRef.current?.offsetWidth ?? 0 - (arrowRef.current?.offsetWidth ?? 0) - SIZES_TAG.paddings
   }, [innerRef.current?.offsetWidth])
 
   // We then want to measure the tags length before displaying them
@@ -140,24 +118,16 @@ const SelectBar = ({
 
     if (measureRef.current && selectedData.selectedValues.length > 0) {
       const innerWidth = getWidth()
-      const tagsWidth = getTagsWidth(
-        [...measureRef.current.children],
-        innerWidth,
-        potentiallyNonOverflowedValues,
-      )
+      const tagsWidth = getTagsWidth([...measureRef.current.children], innerWidth, potentiallyNonOverflowedValues)
 
-      const additionnalElementsWidth =
-        SIZES_TAG.paddings + (refPlusTag.current?.offsetWidth ?? 0)
+      const additionnalElementsWidth = SIZES_TAG.paddings + (refPlusTag.current?.offsetWidth ?? 0)
 
       const overflowPx =
-        tagsWidth.accumulatedWidth +
-        (tagsWidth.measuredHiddenTags ? additionnalElementsWidth : 0) -
-        innerWidth
+        tagsWidth.accumulatedWidth + (tagsWidth.measuredHiddenTags ? additionnalElementsWidth : 0) - innerWidth
 
       const hasOverflow = overflowPx > 0
       const hasHiddenTags = tagsWidth.measuredHiddenTags > 0
-      const lastVisibleElementMaxSize =
-        tagsWidth.lastVisibleElementWidth - overflowPx
+      const lastVisibleElementMaxSize = tagsWidth.lastVisibleElementWidth - overflowPx
 
       const overflowVars = computeOverflowVars(
         tagsWidth,
@@ -173,12 +143,7 @@ const SelectBar = ({
       setOverflow(overflowVars.hasOverflow)
     }
     setDisplayShadowCopy(false)
-  }, [
-    displayShadowCopy,
-    potentiallyNonOverflowedValues,
-    selectedData.selectedValues.length,
-    getWidth,
-  ])
+  }, [displayShadowCopy, potentiallyNonOverflowedValues, selectedData.selectedValues.length, getWidth])
 
   useEffect(() => {
     setSelectedData({ type: 'update' })
@@ -188,10 +153,7 @@ const SelectBar = ({
     if (multiselect) {
       return (
         potentiallyNonOverflowedValues.length > 0 ||
-        selectedData.selectedValues.some(
-          selectedValue =>
-            findOptionInOptions(options, selectedValue) !== undefined,
-        )
+        selectedData.selectedValues.some(selectedValue => findOptionInOptions(options, selectedValue) !== undefined)
       )
     }
 
@@ -199,12 +161,7 @@ const SelectBar = ({
       selectedData.selectedValues[0] !== undefined &&
       findOptionInOptions(options, selectedData.selectedValues[0]) !== undefined
     )
-  }, [
-    multiselect,
-    options,
-    potentiallyNonOverflowedValues.length,
-    selectedData.selectedValues,
-  ])
+  }, [multiselect, options, potentiallyNonOverflowedValues.length, selectedData.selectedValues])
 
   const textVariant = useMemo(() => {
     if (size === 'large') {
@@ -236,9 +193,7 @@ const SelectBar = ({
         data-readonly={readOnly}
         data-testid={dataTestId}
         id={id}
-        onClick={
-          openable ? () => setIsDropdownVisible(!isDropdownVisible) : undefined
-        }
+        onClick={openable ? () => setIsDropdownVisible(!isDropdownVisible) : undefined}
         onKeyDown={event => {
           if (event.key === 'ArrowDown') {
             if (isDropdownVisible) {
@@ -251,9 +206,7 @@ const SelectBar = ({
             event.preventDefault()
           }
 
-          return ['Enter', ' '].includes(event.key) && openable
-            ? setIsDropdownVisible(!isDropdownVisible)
-            : null
+          return ['Enter', ' '].includes(event.key) && openable ? setIsDropdownVisible(!isDropdownVisible) : null
         }}
         ref={innerRef}
         role="combobox"
@@ -289,9 +242,7 @@ const SelectBar = ({
         )}
         <Stack
           alignItems="center"
-          className={
-            selectInputStyle.selectbarState[size === 'medium' ? 'small' : size]
-          }
+          className={selectInputStyle.selectbarState[size === 'medium' ? 'small' : size]}
           direction="row"
           gap={1}
           ref={arrowRef}
@@ -319,12 +270,7 @@ const SelectBar = ({
               <CloseIcon />
             </Button>
           ) : null}
-          <ArrowDownIcon
-            aria-label="show dropdown"
-            disabled={disabled || readOnly}
-            sentiment="neutral"
-            size="small"
-          />
+          <ArrowDownIcon aria-label="show dropdown" disabled={disabled || readOnly} sentiment="neutral" size="small" />
         </Stack>
       </div>
     </Tooltip>

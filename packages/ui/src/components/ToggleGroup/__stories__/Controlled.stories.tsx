@@ -28,11 +28,7 @@ export const Controlled: StoryFn = args => {
         name="weekly-save"
         value="weekly-save"
       />
-      <ToggleGroup.Toggle
-        label="Reboot server every day at 9 am"
-        name="daily-reboot"
-        value="daily-reboot"
-      />
+      <ToggleGroup.Toggle label="Reboot server every day at 9 am" name="daily-reboot" value="daily-reboot" />
       {JSON.stringify(values, null, 4)}
     </ToggleGroup>
   )
@@ -41,8 +37,7 @@ export const Controlled: StoryFn = args => {
 Controlled.parameters = {
   docs: {
     description: {
-      story:
-        'ToggleGroup only work as a controlled component. You need to pass `onChange` callback to control it.',
+      story: 'ToggleGroup only work as a controlled component. You need to pass `onChange` callback to control it.',
     },
   },
 }

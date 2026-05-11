@@ -9,9 +9,7 @@ describe('status', () => {
     shouldMatchSnapshot(<Status sentiment={sentiment} />),
   )
 
-  it('render animated', () =>
-    shouldMatchSnapshot(<Status animated sentiment="success" />))
+  it('render animated', () => shouldMatchSnapshot(<Status animated sentiment="success" />))
 
-  it('render with className', () =>
-    shouldMatchSnapshot(<Status className="test" sentiment="success" />))
+  it('render with className', () => shouldMatchSnapshot(<Status className="test" sentiment="success" />))
 })

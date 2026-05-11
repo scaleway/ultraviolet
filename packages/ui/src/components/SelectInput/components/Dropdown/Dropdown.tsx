@@ -2,15 +2,7 @@
 
 import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import {
-  useCallback,
-  useContext,
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react'
+import { useCallback, useContext, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 
 import { ModalContext } from '../../../Modal/ModalProvider'
 import { Popup } from '../../../Popup'
@@ -24,13 +16,7 @@ import { dropdownWidth } from './dropdown.css'
 import { SearchBar } from './SearchBar'
 
 import type { DataType } from '../../types'
-import type {
-  ComponentProps,
-  Dispatch,
-  ReactNode,
-  RefObject,
-  SetStateAction,
-} from 'react'
+import type { ComponentProps, Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 
 export type DropdownProps = {
   id?: string
@@ -134,23 +120,14 @@ export const Dropdown = ({
   groupEmptyState,
   addOption,
 }: DropdownProps) => {
-  const {
-    setIsDropdownVisible,
-    isDropdownVisible,
-    onSearch,
-    searchInput,
-    options,
-    displayedOptions,
-    numberOfOptions,
-  } = useSelectInput()
+  const { setIsDropdownVisible, isDropdownVisible, onSearch, searchInput, options, displayedOptions, numberOfOptions } =
+    useSelectInput()
   const theme = useTheme()
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [defaultSearchValue, setDefaultSearch] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState('')
-  const [maxWidth, setWidth] = useState(
-    refSelect.current?.offsetWidth ?? '100%',
-  )
+  const [maxWidth, setWidth] = useState(refSelect.current?.offsetWidth ?? '100%')
   const modalContext = useContext(ModalContext)
 
   const resizeDropdown = useCallback(() => {
@@ -218,15 +195,7 @@ export const Dropdown = ({
     }
 
     const eventKeydown = (event: globalThis.KeyboardEvent) =>
-      handleKeyDown(
-        event,
-        ref,
-        options,
-        searchBarActive,
-        setSearch,
-        setDefaultSearch,
-        search,
-      )
+      handleKeyDown(event, ref, options, searchBarActive, setSearch, setDefaultSearch, search)
 
     if (!searchable) {
       document.addEventListener('keydown', eventKeydown)
@@ -271,11 +240,7 @@ export const Dropdown = ({
   const computedFooter = useMemo(() => {
     if (footer && !isEmpty) {
       if (typeof footer === 'function') {
-        return (
-          <div className={selectInputStyle.footer}>
-            {footer(() => setIsDropdownVisible(false))}
-          </div>
-        )
+        return <div className={selectInputStyle.footer}>{footer(() => setIsDropdownVisible(false))}</div>
       }
 
       return <div className={selectInputStyle.footer}>{footer}</div>
@@ -301,8 +266,7 @@ export const Dropdown = ({
       ref={ref}
       role="dialog"
       style={assignInlineVars({
-        [dropdownWidth]:
-          typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth,
+        [dropdownWidth]: typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth,
       })}
       tabIndex={-1}
       text={

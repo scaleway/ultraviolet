@@ -3,9 +3,7 @@ import { ContentCardGroup } from '..'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const Template: StoryFn<ComponentProps<typeof ContentCardGroup>> = ({
-  ...props
-}) => (
+export const Template: StoryFn<ComponentProps<typeof ContentCardGroup>> = ({ ...props }) => (
   <ContentCardGroup {...props}>
     <ContentCardGroup.Card
       description="Improve your cluster resiliency !"

@@ -10,24 +10,16 @@ import { Form } from '../../Form'
 
 describe('textInputField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(
-      <TextInputField label="Test" name="test" />,
-    )
+    const { asFragment } = renderWithForm(<TextInputField label="Test" name="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly generated', async () => {
     const onSubmit = vi.fn()
-    const { result } = renderHook(() =>
-      useForm<{ test: string | null }>({ defaultValues: { test: null } }),
-    )
+    const { result } = renderHook(() => useForm<{ test: string | null }>({ defaultValues: { test: null } }))
 
     const { asFragment } = renderWithTheme(
-      <Form
-        errors={mockFormErrors}
-        methods={result.current}
-        onSubmit={onSubmit}
-      >
+      <Form errors={mockFormErrors} methods={result.current} onSubmit={onSubmit}>
         <TextInputField clearable label="Test" name="test" required />
         <Submit>Submit</Submit>
       </Form>,

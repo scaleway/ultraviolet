@@ -23,13 +23,9 @@ describe('tooltip', () => {
   })
 
   it('should render correctly without text', () => {
-    const { asFragment } = renderWithTheme(
-      <Tooltip debounceDelay={0}>Hover me</Tooltip>,
-      consoleLightTheme,
-      {
-        container: document.body,
-      },
-    )
+    const { asFragment } = renderWithTheme(<Tooltip debounceDelay={0}>Hover me</Tooltip>, consoleLightTheme, {
+      container: document.body,
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 

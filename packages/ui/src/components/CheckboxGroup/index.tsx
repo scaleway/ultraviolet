@@ -59,19 +59,12 @@ const CheckboxGroup = ({
   return (
     <CheckboxGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset
-          className={cn(className, checkboxGroupStyle.fieldset)}
-          style={style}
-        >
+        <fieldset className={cn(className, checkboxGroupStyle.fieldset)} style={style}>
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>
                 {legend ? (
-                  <Label
-                    as="legend"
-                    labelDescription={legendDescription}
-                    required={required}
-                  >
+                  <Label as="legend" labelDescription={legendDescription} required={required}>
                     {legend}
                   </Label>
                 ) : null}
@@ -93,12 +86,7 @@ const CheckboxGroup = ({
           </Stack>
         </fieldset>
         {helper ? (
-          <Text
-            as="span"
-            prominence="weak"
-            sentiment="neutral"
-            variant="caption"
-          >
+          <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
             {helper}
           </Text>
         ) : null}

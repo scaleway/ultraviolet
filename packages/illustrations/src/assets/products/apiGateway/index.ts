@@ -10,9 +10,4 @@ const apiGatewayKeyvisual = `${BASE_URL}/products/apiGateway/api-gateway-keyvisu
 const apiGatewayOriginal = `${BASE_URL}/products/apiGateway/api-gateway-original.webp`
 const apiGatewayWire = `${BASE_URL}/products/apiGateway/api-gateway-wire.svg`
 
-export {
-  apiGatewayContent,
-  apiGatewayKeyvisual,
-  apiGatewayOriginal,
-  apiGatewayWire,
-}
+export { apiGatewayContent, apiGatewayKeyvisual, apiGatewayOriginal, apiGatewayWire }

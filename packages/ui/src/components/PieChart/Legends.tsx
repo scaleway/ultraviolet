@@ -16,12 +16,7 @@ type LegendsProps = {
   colors: string[]
 }
 
-export const Legends = ({
-  focused,
-  data,
-  onFocusChange,
-  colors,
-}: LegendsProps) => (
+export const Legends = ({ focused, data, onFocusChange, colors }: LegendsProps) => (
   <ul className={pieChartStyle.list}>
     {data?.map((item, index) => {
       const isSegmentFocused = focused !== undefined && item.id === focused
@@ -29,15 +24,8 @@ export const Legends = ({
       const id = `chart-legend-${item.id}`
 
       return (
-        <Tooltip
-          id={id}
-          key={item.id}
-          text={<TooltipContainer data={item} />}
-          visible={isSegmentFocused}
-        >
-          <li
-            className={pieChartStyle.listItem({ isFocused: isSegmentFocused })}
-          >
+        <Tooltip id={id} key={item.id} text={<TooltipContainer data={item} />} visible={isSegmentFocused}>
+          <li className={pieChartStyle.listItem({ isFocused: isSegmentFocused })}>
             <div
               className={pieChartStyle.toggleBox}
               data-testid={id}
@@ -55,11 +43,7 @@ export const Legends = ({
               })}
             />
             <div className={pieChartStyle.label}>
-              <span
-                className={pieChartStyle.text({ isFocused: isSegmentFocused })}
-              >
-                {item.name}
-              </span>
+              <span className={pieChartStyle.text({ isFocused: isSegmentFocused })}>{item.name}</span>
               <span className={pieChartStyle.line}>
                 <span
                   className={pieChartStyle.progressiveLine({
@@ -68,13 +52,7 @@ export const Legends = ({
                 />
               </span>
             </div>
-            <div
-              className={
-                pieChartStyle.value[isSegmentFocused ? 'isFocused' : 'default']
-              }
-            >
-              {item.value}
-            </div>
+            <div className={pieChartStyle.value[isSegmentFocused ? 'isFocused' : 'default']}>{item.value}</div>
           </li>
         </Tooltip>
       )

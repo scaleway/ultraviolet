@@ -1,11 +1,6 @@
 import { SIZES_TAG } from '../constants'
 
-import type {
-  DataType,
-  OptionType,
-  ReducerAction,
-  ReducerState,
-} from '../types'
+import type { DataType, OptionType, ReducerAction, ReducerState } from '../types'
 import type { ReactNode } from 'react'
 
 export const getTagsWidth = (
@@ -28,23 +23,15 @@ export const getTagsWidth = (
       // oxlint-disable-next-line typescript/no-unsafe-type-assertion
       const elementWidth = (currentValue as HTMLDivElement).offsetWidth
 
-      const newAccumulatedWidth =
-        accumulator.accumulatedWidth + elementWidth + SIZES_TAG.gap
+      const newAccumulatedWidth = accumulator.accumulatedWidth + elementWidth + SIZES_TAG.gap
 
       const canBeVisible = newAccumulatedWidth <= innerWidth
 
       return {
-        accumulatedWidth: canBeVisible
-          ? newAccumulatedWidth
-          : accumulator.accumulatedWidth,
-        lastVisibleElementWidth: canBeVisible
-          ? elementWidth
-          : accumulator.lastVisibleElementWidth,
-        lastVisibleLabel: canBeVisible
-          ? potentiallyNonOverflowedValues[index].label
-          : accumulator.lastVisibleLabel,
-        measuredHiddenTags:
-          accumulator.measuredHiddenTags + (canBeVisible ? 0 : 1),
+        accumulatedWidth: canBeVisible ? newAccumulatedWidth : accumulator.accumulatedWidth,
+        lastVisibleElementWidth: canBeVisible ? elementWidth : accumulator.lastVisibleElementWidth,
+        lastVisibleLabel: canBeVisible ? potentiallyNonOverflowedValues[index].label : accumulator.lastVisibleLabel,
+        measuredHiddenTags: accumulator.measuredHiddenTags + (canBeVisible ? 0 : 1),
         measuredVisibleTags: [
           ...accumulator.measuredVisibleTags,
           ...(canBeVisible ? [potentiallyNonOverflowedValues[index]] : []),
@@ -69,14 +56,9 @@ export const computeOverflowVars = (
   additionnalElementsWidth: number,
 ) => {
   // If only one element is selected and it is hidden, we need to show it
-  if (
-    tagsWidth.measuredHiddenTags === 1 &&
-    tagsWidth.measuredVisibleTags.length === 0
-  ) {
+  if (tagsWidth.measuredHiddenTags === 1 && tagsWidth.measuredVisibleTags.length === 0) {
     const newOverflowPx =
-      tagsWidth.lastVisibleElementWidth +
-      (tagsWidth.measuredHiddenTags > 1 ? additionnalElementsWidth : 0) -
-      innerWidth
+      tagsWidth.lastVisibleElementWidth + (tagsWidth.measuredHiddenTags > 1 ? additionnalElementsWidth : 0) - innerWidth
     return {
       overflowAmount: 0,
       nonOverflowedValues: [potentiallyNonOverflowedValues[0]],
@@ -92,8 +74,7 @@ export const computeOverflowVars = (
     hasOverflow &&
     hasHiddenTags &&
     (lastVisibleElementMaxSize > 65 ||
-      (tagsWidth.measuredVisibleTags.length === 1 &&
-        lastVisibleElementMaxSize > 65)) &&
+      (tagsWidth.measuredVisibleTags.length === 1 && lastVisibleElementMaxSize > 65)) &&
     typeof tagsWidth.lastVisibleLabel === 'string'
   ) {
     return {
@@ -131,9 +112,7 @@ export const computeSelectedDataMultiselect = (
     clickedOption: closestOption,
     group: Array.isArray(options)
       ? undefined
-      : Object.keys(options).find(group =>
-          options[group].includes(closestOption),
-        ),
+      : Object.keys(options).find(group => options[group].includes(closestOption)),
     type: 'selectOption',
   },
   onChangeData: selectedData.selectedValues.includes(closestOption.value)

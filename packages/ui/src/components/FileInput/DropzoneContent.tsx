@@ -21,18 +21,10 @@ export const DropzoneContent = ({
   inputRef: RefObject<HTMLInputElement | null>
 }) => (
   <>
-    <UploadIcon
-      disabled={disabled}
-      sentiment={isSmall ? 'neutral' : 'primary'}
-      size={isSmall ? 'small' : 'xlarge'}
-    />
+    <UploadIcon disabled={disabled} sentiment={isSmall ? 'neutral' : 'primary'} size={isSmall ? 'small' : 'xlarge'} />
     <Text
       as={isSmall ? 'p' : 'div'}
-      className={
-        isSmall
-          ? fileInputStyle.titleSmall[disabled ? 'disabled' : 'default']
-          : undefined
-      }
+      className={isSmall ? fileInputStyle.titleSmall[disabled ? 'disabled' : 'default'] : undefined}
       disabled={disabled}
       placement="left"
       sentiment="neutral"

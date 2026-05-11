@@ -32,45 +32,33 @@ describe('pieChart', () => {
   })
 
   it('renders correctly with data and content', () => {
-    const { asFragment } = renderWithTheme(
-      <PieChart content="Test" data={data} />,
-    )
+    const { asFragment } = renderWithTheme(<PieChart content="Test" data={data} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with legend', () => {
-    const { asFragment } = renderWithTheme(
-      <PieChart data={dataWithLegends} withLegend />,
-    )
+    const { asFragment } = renderWithTheme(<PieChart data={dataWithLegends} withLegend />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with detailed legend', () => {
-    const { asFragment } = renderWithTheme(
-      <PieChart data={dataWithLegendsAndDetails} withLegend />,
-    )
+    const { asFragment } = renderWithTheme(<PieChart data={dataWithLegendsAndDetails} withLegend />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with detailed legend and discount', () => {
-    const { asFragment } = renderWithTheme(
-      <PieChart data={dataWithLegendsDetailsAndDiscount} withLegend />,
-    )
+    const { asFragment } = renderWithTheme(<PieChart data={dataWithLegendsDetailsAndDiscount} withLegend />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with empty legend placeholder', () => {
-    const { asFragment } = renderWithTheme(
-      <PieChart emptyLegend="I am a legend" withLegend />,
-    )
+    const { asFragment } = renderWithTheme(<PieChart emptyLegend="I am a legend" withLegend />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   // oxlint-disable-next-line vitest/no-disabled-tests
   it.skip('renders correctly when chart is hovered', async () => {
-    const { container } = renderWithTheme(
-      <PieChart data={dataWithLegendsAndDetails} withLegend />,
-    )
+    const { container } = renderWithTheme(<PieChart data={dataWithLegendsAndDetails} withLegend />)
     const slice = container.querySelector('svg g path')
     // oxlint-disable-next-line vitest/no-conditional-in-test
     if (!slice) {
@@ -81,9 +69,7 @@ describe('pieChart', () => {
   })
 
   it('renders correctly when legend is hovered', async () => {
-    const { asFragment } = renderWithTheme(
-      <PieChart data={dataWithLegendsAndDetails} withLegend />,
-    )
+    const { asFragment } = renderWithTheme(<PieChart data={dataWithLegendsAndDetails} withLegend />)
     const id = `chart-legend-${dataWithLegendsAndDetails[0].id}`
     await userEvent.unhover(screen.getByTestId(id))
     await userEvent.hover(screen.getByTestId(id))
@@ -91,9 +77,7 @@ describe('pieChart', () => {
   })
 
   it('renders correctly when legend is focused', () => {
-    const { asFragment } = renderWithTheme(
-      <PieChart data={dataWithLegendsAndDetails} withLegend />,
-    )
+    const { asFragment } = renderWithTheme(<PieChart data={dataWithLegendsAndDetails} withLegend />)
 
     const id = `chart-legend-${dataWithLegendsAndDetails[0].id}`
     fireEvent.blur(screen.getByTestId(id))

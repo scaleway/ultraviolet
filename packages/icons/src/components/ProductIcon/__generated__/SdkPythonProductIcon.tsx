@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const SdkPythonProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const SdkPythonProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="SdkPythonProductIcon">
     <g className="SDK-Python">
       <g className="SDK-Python-icon" clipPath="url(#a)">

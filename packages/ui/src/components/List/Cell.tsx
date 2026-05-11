@@ -36,9 +36,7 @@ export const Cell = forwardRef<HTMLTableCellElement, CellProps>(
     const minWidth = context?.minWidth
 
     /** Remove padding from width to avoid overflow since boxSizing = 'content-box' */
-    const widthChildren = width?.includes('%')
-      ? '100%'
-      : `calc(${width} - ${listCellPadding} - ${listCellPadding})`
+    const widthChildren = width?.includes('%') ? '100%' : `calc(${width} - ${listCellPadding} - ${listCellPadding})`
     const maxWidthChildren = maxWidth?.includes('%')
       ? '100%'
       : `calc(${maxWidth} - ${listCellPadding} - ${listCellPadding})`
@@ -48,11 +46,7 @@ export const Cell = forwardRef<HTMLTableCellElement, CellProps>(
 
     return (
       <td
-        className={cn(
-          className,
-          listStyle.cell,
-          colMode === 'strict' ? listStyle.cellStrict : '',
-        )}
+        className={cn(className, listStyle.cell, colMode === 'strict' ? listStyle.cellStrict : '')}
         colSpan={colSpan}
         data-testid={dataTestid}
         ref={ref}

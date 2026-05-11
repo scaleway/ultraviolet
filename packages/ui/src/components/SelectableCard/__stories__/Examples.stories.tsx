@@ -60,8 +60,7 @@ export const Examples: StoryFn = args => {
           value="label-29"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 1.99€ and provide you with a lot of
-            happiness
+            This option will cost you 1.99€ and provide you with a lot of happiness
           </Text>
         </SelectableCard>
         <SelectableCard
@@ -84,8 +83,7 @@ export const Examples: StoryFn = args => {
           value="label-15"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
+            This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCard>
       </Stack>
@@ -116,8 +114,7 @@ export const Examples: StoryFn = args => {
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             <Stack gap={3} width="100%">
-              This option will cost you 1.99€ and provide you with a lot of
-              happiness
+              This option will cost you 1.99€ and provide you with a lot of happiness
               <Separator />
               <SelectInput
                 label="Select a sub option"
@@ -156,8 +153,7 @@ export const Examples: StoryFn = args => {
           value="label-21"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
+            This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCard>
       </Stack>
@@ -188,8 +184,7 @@ export const Examples: StoryFn = args => {
           value="label-22"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
+            This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCard>
         <SelectableCard
@@ -217,8 +212,7 @@ export const Examples: StoryFn = args => {
           value="label-23"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
+            This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCard>
 
@@ -247,8 +241,7 @@ export const Examples: StoryFn = args => {
           value="label-24"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
+            This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCard>
 
@@ -277,8 +270,7 @@ export const Examples: StoryFn = args => {
           value="label-25"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
+            This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCard>
       </Row>
@@ -383,13 +375,7 @@ export const Examples: StoryFn = args => {
             <Stack direction="row" gap={2}>
               <Badge sentiment="primary">Save 64%</Badge>
               <Stack alignItems="center" direction="row" gap="0.5">
-                <Text
-                  as="span"
-                  prominence="weak"
-                  sentiment="neutral"
-                  strikeThrough
-                  variant="captionSmall"
-                >
+                <Text as="span" prominence="weak" sentiment="neutral" strikeThrough variant="captionSmall">
                   €8.99
                 </Text>
                 <Text as="span" sentiment="neutral" variant="bodyStronger">

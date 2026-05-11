@@ -35,9 +35,7 @@ export const BottomText = ({
           {error || success || helper}
         </Text>
       ) : null}
-      {!(error || success) && typeof helper !== 'string' && helper
-        ? helper
-        : null}
+      {!(error || success) && typeof helper !== 'string' && helper ? helper : null}
     </>
   )
 }

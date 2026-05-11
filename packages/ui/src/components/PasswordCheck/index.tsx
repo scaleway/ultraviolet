@@ -32,17 +32,8 @@ type PasswordCheckProps = {
  * PasswordCheck is a component that display a list of password rules with a check or a cross depending on the validity
  * of the rule.
  */
-export const PasswordCheck = ({
-  rules,
-  className,
-  'data-testid': dataTestId,
-  style,
-}: PasswordCheckProps) => (
-  <div
-    className={cn(className, passwordCheckStyle.container)}
-    data-testid={dataTestId}
-    style={style}
-  >
+export const PasswordCheck = ({ rules, className, 'data-testid': dataTestId, style }: PasswordCheckProps) => (
+  <div className={cn(className, passwordCheckStyle.container)} data-testid={dataTestId} style={style}>
     {rules.map(rule => (
       <Stack alignItems="center" direction="row" gap={1} key={rule.name}>
         {rule.valid ? (

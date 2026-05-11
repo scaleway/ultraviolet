@@ -7,22 +7,13 @@ import { TextInput } from '..'
 
 describe('textInput', () => {
   it('should render correctly with basic props', () =>
-    shouldMatchSnapshot(
-      <TextInput label="Test" onChange={() => {}} value="test" />,
-    ))
+    shouldMatchSnapshot(<TextInput label="Test" onChange={() => {}} value="test" />))
 
   it('should control the value', () => {
     const onChange = vi.fn()
     const onChangeValue = vi.fn()
 
-    renderWithTheme(
-      <TextInput
-        label="Test"
-        onChange={onChange}
-        onChangeValue={onChangeValue}
-        value="test"
-      />,
-    )
+    renderWithTheme(<TextInput label="Test" onChange={onChange} onChangeValue={onChangeValue} value="test" />)
 
     const textarea = screen.getByLabelText<HTMLInputElement>('Test')
     expect(textarea.value).toBe('test')
@@ -34,9 +25,7 @@ describe('textInput', () => {
   it('should be clearable', async () => {
     const onChange = vi.fn()
 
-    renderWithTheme(
-      <TextInput clearable label="Test" onChange={onChange} value="test" />,
-    )
+    renderWithTheme(<TextInput clearable label="Test" onChange={onChange} value="test" />)
 
     const textarea = screen.getByLabelText<HTMLTextAreaElement>('Test')
     expect(textarea.value).toBe('test')
@@ -49,47 +38,22 @@ describe('textInput', () => {
   })
 
   it('should render correctly when input is disabled', () =>
-    shouldMatchSnapshot(
-      <TextInput disabled label="Test" onChange={() => {}} value="test" />,
-    ))
+    shouldMatchSnapshot(<TextInput disabled label="Test" onChange={() => {}} value="test" />))
 
   it('should render correctly when input is readOnly', () =>
-    shouldMatchSnapshot(
-      <TextInput label="Test" onChange={() => {}} readOnly value="test" />,
-    ))
+    shouldMatchSnapshot(<TextInput label="Test" onChange={() => {}} readOnly value="test" />))
 
   it('should render correctly when input has a success sentiment', () =>
-    shouldMatchSnapshot(
-      <TextInput
-        label="Test"
-        onChange={() => {}}
-        success="success"
-        value="test"
-      />,
-    ))
+    shouldMatchSnapshot(<TextInput label="Test" onChange={() => {}} success="success" value="test" />))
 
   it('should render correctly when input  has a error sentiment', () =>
-    shouldMatchSnapshot(
-      <TextInput
-        error="success"
-        label="Test"
-        onChange={() => {}}
-        value="test"
-      />,
-    ))
+    shouldMatchSnapshot(<TextInput error="success" label="Test" onChange={() => {}} value="test" />))
 
   it('should display success message', () => {
     const onChange = vi.fn()
     const successMessage = 'success message'
 
-    renderWithTheme(
-      <TextInput
-        label="Test"
-        onChange={onChange}
-        success={successMessage}
-        value="test"
-      />,
-    )
+    renderWithTheme(<TextInput label="Test" onChange={onChange} success={successMessage} value="test" />)
 
     expect(screen.getByText(successMessage)).toBeDefined()
   })
@@ -98,14 +62,7 @@ describe('textInput', () => {
     const onChange = vi.fn()
     const errorMessage = 'error!'
 
-    renderWithTheme(
-      <TextInput
-        label="Test"
-        onChange={onChange}
-        success={errorMessage}
-        value="test"
-      />,
-    )
+    renderWithTheme(<TextInput label="Test" onChange={onChange} success={errorMessage} value="test" />)
 
     expect(screen.getByText(errorMessage)).toBeDefined()
   })
@@ -114,14 +71,7 @@ describe('textInput', () => {
     const onChange = vi.fn()
     const helperMessage = 'helper'
 
-    renderWithTheme(
-      <TextInput
-        helper={helperMessage}
-        label="Test"
-        onChange={onChange}
-        value="test"
-      />,
-    )
+    renderWithTheme(<TextInput helper={helperMessage} label="Test" onChange={onChange} value="test" />)
 
     expect(screen.getByText(helperMessage)).toBeDefined()
   })
@@ -132,13 +82,7 @@ describe('textInput', () => {
     const helperMessage = 'helper'
 
     renderWithTheme(
-      <TextInput
-        helper={helperMessage}
-        label="Test"
-        onChange={onChange}
-        success={successMessage}
-        value="test"
-      />,
+      <TextInput helper={helperMessage} label="Test" onChange={onChange} success={successMessage} value="test" />,
     )
 
     expect(screen.getByText(successMessage)).toBeDefined()
@@ -150,15 +94,7 @@ describe('textInput', () => {
     const error = 'error!'
     const helperMessage = 'helper'
 
-    renderWithTheme(
-      <TextInput
-        error={error}
-        helper={helperMessage}
-        label="Test"
-        onChange={onChange}
-        value="test"
-      />,
-    )
+    renderWithTheme(<TextInput error={error} helper={helperMessage} label="Test" onChange={onChange} value="test" />)
 
     expect(screen.getByText(error)).toBeDefined()
     expect(screen.queryByText(helperMessage)).toBeNull()

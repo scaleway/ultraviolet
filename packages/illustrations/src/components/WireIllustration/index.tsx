@@ -11,13 +11,7 @@ import type { CSSProperties } from 'react'
 
 type Color = Extract<
   keyof typeof theme.colors,
-  | 'primary'
-  | 'secondary'
-  | 'neutral'
-  | 'success'
-  | 'danger'
-  | 'warning'
-  | 'info'
+  'primary' | 'secondary' | 'neutral' | 'success' | 'danger' | 'warning' | 'info'
 >
 
 export type IllustrationWireProp = {
@@ -55,8 +49,7 @@ export const WireIllustration = ({
       ...assignInlineVars({
         [url]: `url(${ILLUSTRATIONS[name]}) center center / contain no-repeat`,
         [widthVar]: typeof width === 'number' ? `${width.toString()}px` : width,
-        [heightVar]:
-          typeof height === 'number' ? `${height.toString()}px` : height,
+        [heightVar]: typeof height === 'number' ? `${height.toString()}px` : height,
       }),
       ...style,
     }}

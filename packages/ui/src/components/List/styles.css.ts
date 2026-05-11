@@ -1,10 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import {
-  globalStyle,
-  keyframes,
-  style,
-  styleVariants,
-} from '@vanilla-extract/css'
+import { globalStyle, keyframes, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 import { SENTIMENTS } from '../../theme'
@@ -177,12 +172,7 @@ const row = recipe({
         animation: `${colorChange} 3s linear`,
       },
     },
-    sentiment: Object.fromEntries(
-      SENTIMENTS.map(sentiment => [
-        sentiment,
-        makeRowStyleSentiment(sentiment) as object,
-      ]),
-    ),
+    sentiment: Object.fromEntries(SENTIMENTS.map(sentiment => [sentiment, makeRowStyleSentiment(sentiment) as object])),
   },
 })
 
@@ -201,10 +191,9 @@ const cell = style({
     '&:first-child, &:last-child': {
       transition: 'box-shadow 200ms ease, border-color 200ms ease',
     },
-    [`${listRowBase}:not([aria-disabled='true']):hover + ${expandableWrapper} > &`]:
-      {
-        borderColor: theme.colors.primary.border,
-      },
+    [`${listRowBase}:not([aria-disabled='true']):hover + ${expandableWrapper} > &`]: {
+      borderColor: theme.colors.primary.border,
+    },
     [`${listRowBase}[aria-expanded='true'] > &`]: {
       borderBottomColor: theme.colors.primary.border,
     },
@@ -281,10 +270,9 @@ const expandableButton = style({
 const expandableCell = style({
   padding: paddingExpandableCell,
   selectors: {
-    [`${expandableWrapper} > &, ${expandableWrapper} > &:first-child, ${expandableWrapper} > &:last-child`]:
-      {
-        transition: 'box-shadow 200ms ease, border-color 200ms ease',
-      },
+    [`${expandableWrapper} > &, ${expandableWrapper} > &:first-child, ${expandableWrapper} > &:last-child`]: {
+      transition: 'box-shadow 200ms ease, border-color 200ms ease',
+    },
     [`${expandableWrapper} > &`]: {
       border: `1px solid ${theme.colors.neutral.border}`,
       borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,

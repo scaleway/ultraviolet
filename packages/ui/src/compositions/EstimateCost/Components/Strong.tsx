@@ -13,16 +13,8 @@ type StrongProps = {
   isDisabledOnOverlay?: boolean
   style?: CSSProperties
 }
-export const Strong = memo(
-  ({ variant = 'normal', children = null, style }: StrongProps) => (
-    <div
-      className={cn(
-        estimateCostStyle.regular({ variant }),
-        estimateCostStyle.strong({ variant }),
-      )}
-      style={style}
-    >
-      {children}
-    </div>
-  ),
-)
+export const Strong = memo(({ variant = 'normal', children = null, style }: StrongProps) => (
+  <div className={cn(estimateCostStyle.regular({ variant }), estimateCostStyle.strong({ variant }))} style={style}>
+    {children}
+  </div>
+))

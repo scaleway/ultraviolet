@@ -10,9 +10,4 @@ const localStorageKeyvisual = `${BASE_URL}/products/localStorage/local-storage-k
 const localStorageOriginal = `${BASE_URL}/products/localStorage/local-storage-original.webp`
 const localStorageWire = `${BASE_URL}/products/localStorage/local-storage-wire.svg`
 
-export {
-  localStorageContent,
-  localStorageKeyvisual,
-  localStorageOriginal,
-  localStorageWire,
-}
+export { localStorageContent, localStorageKeyvisual, localStorageOriginal, localStorageWire }

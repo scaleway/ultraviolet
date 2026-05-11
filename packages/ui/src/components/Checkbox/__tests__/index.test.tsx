@@ -23,18 +23,12 @@ describe('checkbox', () => {
 
   it('renders correctly', () =>
     shouldMatchSnapshot(
-      <Checkbox
-        name="testing"
-        onBlur={() => {}}
-        onChange={() => {}}
-        onFocus={() => {}}
-      >
+      <Checkbox name="testing" onBlur={() => {}} onChange={() => {}} onFocus={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
 
-  it('renders correctly no child', () =>
-    shouldMatchSnapshot(<Checkbox aria-label="check" onChange={() => {}} />))
+  it('renders correctly no child', () => shouldMatchSnapshot(<Checkbox aria-label="check" onChange={() => {}} />))
 
   it('renders correctly disabled', () =>
     shouldMatchSnapshot(

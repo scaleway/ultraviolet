@@ -10,9 +10,4 @@ const quantumApplicationKeyvisual = `${BASE_URL}/products/quantumApplication/qua
 const quantumApplicationOriginal = `${BASE_URL}/products/quantumApplication/quantum-application-original.webp`
 const quantumApplicationWire = `${BASE_URL}/products/quantumApplication/quantum-application-wire.svg`
 
-export {
-  quantumApplicationContent,
-  quantumApplicationKeyvisual,
-  quantumApplicationOriginal,
-  quantumApplicationWire,
-}
+export { quantumApplicationContent, quantumApplicationKeyvisual, quantumApplicationOriginal, quantumApplicationWire }

@@ -47,18 +47,12 @@ export type BaseFieldProps<
 > = {
   name: TFieldName
   required?: boolean
-  validate?: Record<
-    string,
-    Validate<FieldPathValue<TFieldValues, TFieldName>, TFieldValues>
-  >
+  validate?: Record<string, Validate<FieldPathValue<TFieldValues, TFieldName>, TFieldValues>>
   defaultValue?: PathValue<TFieldValues, Path<TFieldValues>>
   label?: string
   value?: PathValue<TFieldValues, Path<TFieldValues>>
   onChange?: (value?: PathValue<TFieldValues, TFieldName>) => void
-  shouldUnregister?: UseControllerProps<
-    TFieldValues,
-    TFieldName
-  >['shouldUnregister']
+  shouldUnregister?: UseControllerProps<TFieldValues, TFieldName>['shouldUnregister']
   control?: Control<TFieldValues>
   errorLabel?: string
 }
@@ -77,13 +71,9 @@ export type LabelProp =
       'aria-label': string
     }
 
-export type PascalToCamelCase<S extends string> =
-  S extends `${infer P1}${infer P2}` ? `${Lowercase<P1>}${P2}` : S
+export type PascalToCamelCase<S extends string> = S extends `${infer P1}${infer P2}` ? `${Lowercase<P1>}${P2}` : S
 
-export type RemoveSuffix<
-  S extends string,
-  Suffix extends string,
-> = S extends `${infer Prefix}${Suffix}` ? Prefix : S
+export type RemoveSuffix<S extends string, Suffix extends string> = S extends `${infer Prefix}${Suffix}` ? Prefix : S
 
 /**
  * This type removes the suffix from a PascalCase string and converts it to camelCase. Pretty useful for Icon, CategoryIcon and ProductIcon components.

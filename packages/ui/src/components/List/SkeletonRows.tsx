@@ -15,11 +15,7 @@ type ListLoadingSkeletonProps = {
   cols: number
 }
 
-export const SkeletonRows = ({
-  selectable,
-  rows,
-  cols,
-}: ListLoadingSkeletonProps) => {
+export const SkeletonRows = ({ selectable, rows, cols }: ListLoadingSkeletonProps) => {
   const rowArray = Array.from({ length: rows }, (_, index) => index)
   const colArray = Array.from({ length: cols }, (_, index) => index)
   const { columns } = useListContext()
@@ -28,10 +24,7 @@ export const SkeletonRows = ({
     <>
       {rowArray.map(index => (
         <tr
-          className={cn(
-            listStyle.row({ sentiment: 'neutral' }),
-            listStyle.loadingRow,
-          )}
+          className={cn(listStyle.row({ sentiment: 'neutral' }), listStyle.loadingRow)}
           id={`skeleton-${index}`}
           key={index}
         >

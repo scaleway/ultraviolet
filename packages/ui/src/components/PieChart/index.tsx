@@ -73,12 +73,7 @@ export const PieChart = ({
       isEmpty ? (
         <EmptyLegendDisplayed />
       ) : (
-        <Legends
-          colors={localColors}
-          data={data}
-          focused={currentFocusIndex}
-          onFocusChange={setCurrentFocusIndex}
-        />
+        <Legends colors={localColors} data={data} focused={currentFocusIndex} onFocusChange={setCurrentFocusIndex} />
       ),
     [isEmpty, currentFocusIndex, data, EmptyLegendDisplayed, localColors],
   )
@@ -139,9 +134,7 @@ export const PieChart = ({
           width={width}
           {...chartProps}
         />
-        {content ? (
-          <div className={pieChartStyle.content}>{content}</div>
-        ) : null}
+        {content ? <div className={pieChartStyle.content}>{content}</div> : null}
       </div>
       {withLegend ? <LegendDisplayer /> : null}
     </div>

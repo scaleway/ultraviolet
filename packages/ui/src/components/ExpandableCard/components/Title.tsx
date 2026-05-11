@@ -9,13 +9,7 @@ export type ExpandableCardTitleProps = {
   disabled?: boolean
 } & Partial<Pick<ComponentProps<typeof Text>, 'as' | 'style'>> &
   Pick<ComponentProps<typeof Text>, 'children'>
-export const ExpandableCardTitle = ({
-  as,
-  size = 'medium',
-  children,
-  disabled,
-  style,
-}: ExpandableCardTitleProps) => (
+export const ExpandableCardTitle = ({ as, size = 'medium', children, disabled, style }: ExpandableCardTitleProps) => (
   <Text
     as={as ?? 'h2'}
     disabled={disabled}

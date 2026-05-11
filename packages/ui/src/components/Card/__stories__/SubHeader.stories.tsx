@@ -60,8 +60,7 @@ SubHeader.args = {
 SubHeader.parameters = {
   docs: {
     description: {
-      story:
-        'You can pass a `string` to the `subHeader` prop to display a simple subHeader inside the card.',
+      story: 'You can pass a `string` to the `subHeader` prop to display a simple subHeader inside the card.',
     },
   },
 }

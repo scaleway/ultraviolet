@@ -6,13 +6,7 @@ export const LocalDiscount = Template.bind({})
 
 LocalDiscount.args = {
   children: [
-    <EstimateCost.Item
-      amount={100}
-      key="Storage"
-      label="Storage"
-      price={0.001}
-      unit="GB"
-    >
+    <EstimateCost.Item amount={100} key="Storage" label="Storage" price={0.001} unit="GB">
       <EstimateCost.Unit unit="GB" />
     </EstimateCost.Item>,
     <EstimateCost.Item
@@ -32,8 +26,7 @@ LocalDiscount.args = {
 LocalDiscount.parameters = {
   docs: {
     description: {
-      story:
-        'To make it local to one item add prop `discount` to the desired item `EstimateCost.Item`',
+      story: 'To make it local to one item add prop `discount` to the desired item `EstimateCost.Item`',
     },
   },
 }

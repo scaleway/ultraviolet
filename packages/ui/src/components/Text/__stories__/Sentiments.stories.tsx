@@ -7,13 +7,7 @@ import type { ComponentProps } from 'react'
 export const Sentiments: StoryFn<ComponentProps<typeof Text>> = args => (
   <div>
     {SENTIMENTS.map(sentiment => (
-      <Text
-        key={sentiment}
-        {...args}
-        as="div"
-        sentiment={sentiment}
-        variant="body"
-      >
+      <Text key={sentiment} {...args} as="div" sentiment={sentiment} variant="body">
         This text uses {sentiment} sentiment.
       </Text>
     ))}

@@ -10,9 +10,7 @@ import { blockStorageWire } from '../__mocks__/blockStorageWire'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const Template: StoryFn<
-  ComponentProps<typeof SteppedListCard>
-> = props => (
+export const Template: StoryFn<ComponentProps<typeof SteppedListCard>> = props => (
   <SteppedListCard {...props}>
     <SteppedListCard.Step
       image={blockStorageWire}
@@ -26,14 +24,12 @@ export const Template: StoryFn<
       {nextStep => (
         <Stack direction="column" gap={2}>
           <Snippet {...props}>
-            pnpm add @ultraviolet/ui; pnpm install; pnpm start; pnpm build; pnpm
-            test:unit; pnpm test:visual; pnpm build:storybook;
+            pnpm add @ultraviolet/ui; pnpm install; pnpm start; pnpm build; pnpm test:unit; pnpm test:visual; pnpm
+            build:storybook;
           </Snippet>
           <Text as="div" variant="body">
-            We are thrilled to count you as a Scaleway user! We are looking
-            forward to providing you with the very best experience. To order
-            resources to get started with your project, we need you to complete
-            a few more steps.
+            We are thrilled to count you as a Scaleway user! We are looking forward to providing you with the very best
+            experience. To order resources to get started with your project, we need you to complete a few more steps.
           </Text>
           <Stack direction="row" gap={2}>
             <Button sentiment="primary">Action 1</Button>
@@ -59,11 +55,7 @@ export const Template: StoryFn<
         </Stack>
       )}
     </SteppedListCard.Step>
-    <SteppedListCard.Step
-      image={blockStorageWire}
-      stepNumber={2}
-      subHeader="Second step"
-    >
+    <SteppedListCard.Step image={blockStorageWire} stepNumber={2} subHeader="Second step">
       {nextStep => (
         <Stack direction="column" gap={2}>
           Second step description
@@ -71,18 +63,12 @@ export const Template: StoryFn<
             <Button onClick={() => nextStep()} variant="outlined">
               Next step
             </Button>
-            <Button onClick={() => nextStep(true)}>
-              Next step and validate
-            </Button>
+            <Button onClick={() => nextStep(true)}>Next step and validate</Button>
           </Stack>
         </Stack>
       )}
     </SteppedListCard.Step>
-    <SteppedListCard.Step
-      image={blockStorageWire}
-      stepNumber={3}
-      subHeader="Last step"
-    >
+    <SteppedListCard.Step image={blockStorageWire} stepNumber={3} subHeader="Last step">
       {nextStep => (
         <Stack gap={2}>
           Second step description

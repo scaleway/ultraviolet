@@ -21,56 +21,25 @@ const options = [
 ]
 describe('unitInput', () => {
   it('renders with default props', () =>
-    shouldMatchSnapshot(
-      <UnitInput
-        name="test"
-        onChange={() => {}}
-        onChangeUnitValue={() => {}}
-        options={options}
-      />,
-    ))
+    shouldMatchSnapshot(<UnitInput name="test" onChange={() => {}} onChangeUnitValue={() => {}} options={options} />))
 
   it('renders with min max', () =>
     shouldMatchSnapshot(
-      <UnitInput
-        max={100}
-        min={10}
-        onChange={() => {}}
-        onChangeUnitValue={() => {}}
-        options={options}
-      />,
+      <UnitInput max={100} min={10} onChange={() => {}} onChangeUnitValue={() => {}} options={options} />,
     ))
   it('renders with size small', () =>
     shouldMatchSnapshot(
-      <UnitInput
-        name="test"
-        onChange={() => {}}
-        onChangeUnitValue={() => {}}
-        options={options}
-        size="small"
-      />,
+      <UnitInput name="test" onChange={() => {}} onChangeUnitValue={() => {}} options={options} size="small" />,
     ))
 
   it('renders with size medioum', () =>
     shouldMatchSnapshot(
-      <UnitInput
-        name="test"
-        onChange={() => {}}
-        onChangeUnitValue={() => {}}
-        options={options}
-        size="medium"
-      />,
+      <UnitInput name="test" onChange={() => {}} onChangeUnitValue={() => {}} options={options} size="medium" />,
     ))
 
   it('renders click', async () => {
     const { asFragment } = renderWithTheme(
-      <UnitInput
-        name="test"
-        onChange={() => {}}
-        onChangeUnitValue={() => {}}
-        options={options}
-        size="medium"
-      />,
+      <UnitInput name="test" onChange={() => {}} onChangeUnitValue={() => {}} options={options} size="medium" />,
     )
 
     const select = screen.getByTestId('select-input-test-unit')
@@ -80,13 +49,7 @@ describe('unitInput', () => {
 
   it('renders with size large', () =>
     shouldMatchSnapshot(
-      <UnitInput
-        name="test"
-        onChange={() => {}}
-        onChangeUnitValue={() => {}}
-        options={options}
-        size="large"
-      />,
+      <UnitInput name="test" onChange={() => {}} onChangeUnitValue={() => {}} options={options} size="large" />,
     ))
 
   it('renders with disabled and placeHolder', () =>

@@ -11,6 +11,4 @@ type CheckboxGroupContextType = {
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
-export const CheckboxGroupContext = createContext<
-  CheckboxGroupContextType | undefined
->(undefined)
+export const CheckboxGroupContext = createContext<CheckboxGroupContextType | undefined>(undefined)

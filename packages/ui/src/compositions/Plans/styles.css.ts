@@ -76,10 +76,9 @@ const cell = recipe({
     activeColor: {
       true: {
         selectors: {
-          'thead &:not(:first-child), tbody &:not(:first-child), tbody tr:last-child &:not(:first-child)':
-            {
-              borderColor: theme.colors.primary.border,
-            },
+          'thead &:not(:first-child), tbody &:not(:first-child), tbody tr:last-child &:not(:first-child)': {
+            borderColor: theme.colors.primary.border,
+          },
         },
       },
     },
@@ -91,11 +90,10 @@ const cell = recipe({
     focus: {
       true: {
         selectors: {
-          'thead &:not(:first-child), tbody &:not(:first-child), tbody tr:last-child &:not(:first-child)':
-            {
-              borderColor: 'blue',
-              borderWidth: '2px 2px 0 2px',
-            },
+          'thead &:not(:first-child), tbody &:not(:first-child), tbody tr:last-child &:not(:first-child)': {
+            borderColor: 'blue',
+            borderWidth: '2px 2px 0 2px',
+          },
         },
       },
     },

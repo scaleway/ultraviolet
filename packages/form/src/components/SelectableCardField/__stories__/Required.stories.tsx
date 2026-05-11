@@ -6,9 +6,7 @@ import { Submit } from '../../Submit'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const Required: StoryFn<
-  ComponentProps<typeof SelectableCardField>
-> = args => (
+export const Required: StoryFn<ComponentProps<typeof SelectableCardField>> = args => (
   <Stack gap={1}>
     <SelectableCardField {...args} value="option 1" />
     <SelectableCardField {...args} value="option 2" />

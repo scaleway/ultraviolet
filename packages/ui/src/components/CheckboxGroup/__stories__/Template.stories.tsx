@@ -4,10 +4,7 @@ import type { StoryFn } from '@storybook/react-vite'
 
 export const Template: StoryFn<typeof CheckboxGroup> = args => (
   <CheckboxGroup {...args}>
-    <CheckboxGroup.Checkbox
-      name="termsAndConditions"
-      value="termsAndConditions"
-    >
+    <CheckboxGroup.Checkbox name="termsAndConditions" value="termsAndConditions">
       Accept terms and conditions
     </CheckboxGroup.Checkbox>
     <CheckboxGroup.Checkbox name="newsletter" tooltip="keke" value="newsletter">

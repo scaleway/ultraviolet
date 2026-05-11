@@ -10,9 +10,4 @@ const containersKeyvisual = `${BASE_URL}/products/containers/containers-keyvisua
 const containersOriginal = `${BASE_URL}/products/containers/containers-original.webp`
 const containersWire = `${BASE_URL}/products/containers/containers-wire.svg`
 
-export {
-  containersContent,
-  containersKeyvisual,
-  containersOriginal,
-  containersWire,
-}
+export { containersContent, containersKeyvisual, containersOriginal, containersWire }

@@ -3,22 +3,11 @@ import { Tooltip } from '..'
 import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-const PLACEMENTS: ComponentProps<typeof Tooltip>['placement'][] = [
-  'auto',
-  'top',
-  'bottom',
-  'left',
-  'right',
-]
+const PLACEMENTS: ComponentProps<typeof Tooltip>['placement'][] = ['auto', 'top', 'bottom', 'left', 'right']
 
 export const Placement = (props: ComponentProps<typeof Tooltip>) =>
   PLACEMENTS.map(placement => (
-    <Tooltip
-      key={placement}
-      {...props}
-      placement={placement}
-      text="Hello there"
-    >
+    <Tooltip key={placement} {...props} placement={placement} text="Hello there">
       Placement on {placement}
     </Tooltip>
   ))

@@ -9,14 +9,9 @@ import type { StoryFn } from '@storybook/react-vite'
 
 export const DropzoneSize: StoryFn<typeof FileInput> = args => (
   <Stack direction="column" gap={2}>
-    <FileInput
-      disabled={args.disabled}
-      label="medium"
-      title="Drag and drop files to get started"
-      variant="dropzone"
-    >
-      Only pay for the storage you use. For example, storing 100 GB of data will
-      cost use monthly less than a cup of coffee.
+    <FileInput disabled={args.disabled} label="medium" title="Drag and drop files to get started" variant="dropzone">
+      Only pay for the storage you use. For example, storing 100 GB of data will cost use monthly less than a cup of
+      coffee.
       <Link href="" target="_blank">
         Object Storage pricing
       </Link>

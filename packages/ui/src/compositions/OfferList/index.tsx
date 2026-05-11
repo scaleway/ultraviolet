@@ -12,10 +12,7 @@ import { offerListStyle } from './styles.css'
 
 import type { ComponentProps, CSSProperties } from 'react'
 
-type OfferListProps = Omit<
-  ComponentProps<typeof List>,
-  'selectable' | 'onSelectedChange' | 'colMode'
-> & {
+type OfferListProps = Omit<ComponentProps<typeof List>, 'selectable' | 'onSelectedChange' | 'colMode'> & {
   /**
    * Make offerList selectable by choosing its type
    */
@@ -46,12 +43,8 @@ export const OfferList = ({
   style,
   'data-testid': dataTestId,
 }: OfferListProps) => {
-  const [radioSelectedRow, setRadioSelectedRow] = useState(
-    typeof selected === 'string' ? selected : undefined,
-  )
-  const [checkboxSelectedRows, setCheckboxSelectedRows] = useState(
-    Array.isArray(selected) ? selected : [],
-  )
+  const [radioSelectedRow, setRadioSelectedRow] = useState(typeof selected === 'string' ? selected : undefined)
+  const [checkboxSelectedRows, setCheckboxSelectedRows] = useState(Array.isArray(selected) ? selected : [])
 
   const computedColumns = [
     {

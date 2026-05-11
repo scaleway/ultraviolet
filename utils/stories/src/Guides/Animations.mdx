@@ -78,11 +78,7 @@ import { usePrefersReducedMotion } from '@ultraviolet/animations'
 
 function MyComponent() {
   const prefersReducedMotion = usePrefersReducedMotion()
-  return (
-    <div style={{ animation: prefersReducedMotion ? 'none' : 'bounce 1s' }}>
-      Content
-    </div>
-  )
+  return <div style={{ animation: prefersReducedMotion ? 'none' : 'bounce 1s' }}>Content</div>
 }
 ```
 

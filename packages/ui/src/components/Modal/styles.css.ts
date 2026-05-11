@@ -95,12 +95,11 @@ const modal = recipe({
         boxShadow: 'none',
         pointerEvents: 'auto',
       },
-      [`&${drawerStyle.drawer.large}, &${drawerStyle.drawer.small}, &${drawerStyle.drawer.medium}`]:
-        {
-          borderRadius: '0',
-          marginRight: '0',
-          padding: '0',
-        },
+      [`&${drawerStyle.drawer.large}, &${drawerStyle.drawer.small}, &${drawerStyle.drawer.medium}`]: {
+        borderRadius: '0',
+        marginRight: '0',
+        padding: '0',
+      },
       [`&${drawerStyle.drawer.large}`]: {
         width: `${SIZES.large}rem`,
       },
@@ -140,21 +139,11 @@ const modal = recipe({
         padding: 0,
       },
     },
-    placement: Object.fromEntries(
-      Object.entries(MODAL_PLACEMENT).map(([placement, value]) => [
-        placement,
-        value,
-      ]),
-    ),
+    placement: Object.fromEntries(Object.entries(MODAL_PLACEMENT).map(([placement, value]) => [placement, value])),
     positivePosition: {
       true: {},
     },
-    size: Object.fromEntries(
-      Object.entries(MODAL_WIDTH).map(([size, width]) => [
-        size,
-        { width: `${width}rem` },
-      ]),
-    ),
+    size: Object.fromEntries(Object.entries(MODAL_WIDTH).map(([size, width]) => [size, { width: `${width}rem` }])),
   },
 })
 

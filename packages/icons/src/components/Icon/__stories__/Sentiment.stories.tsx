@@ -8,9 +8,7 @@ import type { ComponentProps } from 'react'
 const COLORS = ['primary', 'success', 'warning'] as const
 
 export const Sentiment = (args: ComponentProps<typeof EyeIcon>) =>
-  COLORS.map(sentiment => (
-    <EyeIcon key={sentiment} sentiment={sentiment} {...args} />
-  ))
+  COLORS.map(sentiment => <EyeIcon key={sentiment} sentiment={sentiment} {...args} />)
 
 Sentiment.parameters = {
   docs: {

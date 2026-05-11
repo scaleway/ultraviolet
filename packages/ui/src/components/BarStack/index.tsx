@@ -11,12 +11,7 @@ import { Tooltip } from '../Tooltip'
 
 import { barStackStyle, wrapperWidth } from './styles.css'
 
-import type {
-  CSSProperties,
-  KeyboardEventHandler,
-  MouseEventHandler,
-  ReactNode,
-} from 'react'
+import type { CSSProperties, KeyboardEventHandler, MouseEventHandler, ReactNode } from 'react'
 
 type BarProps = {
   /**
@@ -73,10 +68,7 @@ export const BarStack = ({
   legend = 'inside',
   size,
 }: BarStackProps) => {
-  const computedTotal = useMemo(
-    () => total ?? data.reduce((acc, { value }) => acc + value, 0),
-    [total, data],
-  )
+  const computedTotal = useMemo(() => total ?? data.reduce((acc, { value }) => acc + value, 0), [total, data])
 
   const [hoveredBarId, setHoveredBarId] = useState<string | null>(null)
 
@@ -93,11 +85,7 @@ export const BarStack = ({
         ) : (
           <Label>{label}</Label>
         )}
-        <div
-          className={cn(className, barStackStyle.container)}
-          data-testid={dataTestId}
-          style={style}
-        >
+        <div className={cn(className, barStackStyle.container)} data-testid={dataTestId} style={style}>
           {data.map(
             ({
               id,
@@ -119,10 +107,7 @@ export const BarStack = ({
                   [wrapperWidth]: `${(value / computedTotal) * 100}%`,
                 })}
               >
-                <Tooltip
-                  text={legend === 'outside' ? text : undefined}
-                  visible={hoveredBarId === id}
-                >
+                <Tooltip text={legend === 'outside' ? text : undefined} visible={hoveredBarId === id}>
                   {tooltip ? (
                     <Tooltip id={`tooltip-${id}`} text={tooltip ?? text}>
                       <div
@@ -145,11 +130,7 @@ export const BarStack = ({
                           className={barStackStyle.text}
                           prominence="stronger"
                           sentiment="neutral"
-                          variant={
-                            size === 'small' || size === 'xsmall'
-                              ? 'captionSmallStrong'
-                              : 'captionStrong'
-                          }
+                          variant={size === 'small' || size === 'xsmall' ? 'captionSmallStrong' : 'captionStrong'}
                           whiteSpace="nowrap"
                         >
                           {legend === 'outside' ? '' : text}
@@ -173,11 +154,7 @@ export const BarStack = ({
                         className={barStackStyle.text}
                         prominence="stronger"
                         sentiment="neutral"
-                        variant={
-                          size === 'small' || size === 'xsmall'
-                            ? 'captionSmallStrong'
-                            : 'captionStrong'
-                        }
+                        variant={size === 'small' || size === 'xsmall' ? 'captionSmallStrong' : 'captionStrong'}
                         whiteSpace="nowrap"
                       >
                         {legend === 'outside' ? '' : text}

@@ -40,9 +40,7 @@ export const Stepper = ({
   separator = true,
   style,
 }: StepperProps) => {
-  const cleanChildren = Children.toArray(children).filter(child =>
-    isValidElement(child),
-  )
+  const cleanChildren = Children.toArray(children).filter(child => isValidElement(child))
   const lastStep = Children.count(cleanChildren) - 1
 
   return (
@@ -55,10 +53,7 @@ export const Stepper = ({
       size={size}
     >
       <div
-        className={cn(
-          className,
-          stepperStyle.container({ labelPosition, separator }),
-        )}
+        className={cn(className, stepperStyle.container({ labelPosition, separator }))}
         data-testid={dataTestId}
         style={style}
       >
@@ -81,10 +76,7 @@ export const Stepper = ({
             <Fragment key={`creation-progress-${index}`}>
               <Step index={index} {...(child.props as object)} />
               {isNotLast && separator && labelPosition === 'right' ? (
-                <div
-                  className={stepperStyle.line({ animated, temporal })}
-                  data-size={size}
-                />
+                <div className={stepperStyle.line({ animated, temporal })} data-size={size} />
               ) : null}
             </Fragment>
           )

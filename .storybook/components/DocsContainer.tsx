@@ -1,11 +1,5 @@
-import {
-  DocsContainer as BaseContainer,
-  Unstyled,
-} from '@storybook/addon-docs/blocks'
-import {
-  consoleLightTheme as lightTheme,
-  ThemeProvider as ThemeProviderUV,
-} from '@ultraviolet/themes'
+import { DocsContainer as BaseContainer, Unstyled } from '@storybook/addon-docs/blocks'
+import { consoleLightTheme as lightTheme, ThemeProvider as ThemeProviderUV } from '@ultraviolet/themes'
 import { GlobalAlert } from '@ultraviolet/ui'
 import { cloneElement, isValidElement, useState } from 'react'
 
@@ -91,14 +85,9 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
             <GlobalAlert
               buttonText="Access to Beta"
               closable={false}
-              onClickButton={() =>
-                window.top?.location.assign(
-                  'https://beta.storybook.ultraviolet.scaleway.com',
-                )
-              }
+              onClickButton={() => window.top?.location.assign('https://beta.storybook.ultraviolet.scaleway.com')}
             >
-              A Beta version is available. Please use this version if your
-              dependencies include the Beta release.
+              A Beta version is available. Please use this version if your dependencies include the Beta release.
             </GlobalAlert>
           ) : null}
           <BaseContainer context={context}>

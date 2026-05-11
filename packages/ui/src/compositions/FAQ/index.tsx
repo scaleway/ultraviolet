@@ -18,20 +18,11 @@ type FAQProps = {
   style?: CSSProperties
 }
 
-export const FAQ = ({
-  productIcon,
-  illustrationText,
-  title,
-  description,
-  notes,
-  style,
-}: FAQProps) => (
+export const FAQ = ({ productIcon, illustrationText, title, description, notes, style }: FAQProps) => (
   <Card className={faqStyle.faq} style={style}>
     <Stack direction="row" gap={2}>
       <div>
-        {!productIcon && illustrationText ? (
-          <Bullet sentiment="primary">{illustrationText.toString()}</Bullet>
-        ) : null}
+        {!productIcon && illustrationText ? <Bullet sentiment="primary">{illustrationText.toString()}</Bullet> : null}
         {productIcon ?? null}
       </div>
       <div>

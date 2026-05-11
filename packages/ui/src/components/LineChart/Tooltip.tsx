@@ -14,11 +14,7 @@ type LineChartTooltipProps = {
   yFormatted?: string
 }
 
-export const LineChartTooltip = ({
-  point,
-  xFormatted,
-  yFormatted,
-}: LineChartTooltipProps) => (
+export const LineChartTooltip = ({ point, xFormatted, yFormatted }: LineChartTooltipProps) => (
   <div className={lineChartStyle.lineTooltipContainer}>
     <div>
       <span
@@ -29,20 +25,10 @@ export const LineChartTooltip = ({
       />
     </div>
     <div>
-      <Text
-        as="div"
-        prominence="stronger"
-        sentiment="neutral"
-        variant="bodyStronger"
-      >
+      <Text as="div" prominence="stronger" sentiment="neutral" variant="bodyStronger">
         {yFormatted ?? point.data.yFormatted}
       </Text>
-      <Text
-        as="div"
-        prominence="stronger"
-        sentiment="neutral"
-        variant="bodySmall"
-      >
+      <Text as="div" prominence="stronger" sentiment="neutral" variant="bodySmall">
         {xFormatted ?? point.data.xFormatted}
       </Text>
     </div>

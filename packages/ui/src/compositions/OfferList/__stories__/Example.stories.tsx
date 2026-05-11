@@ -84,8 +84,7 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
           info: 'Info',
           isOrdered: currentOrder.columnId === 'id',
           label: 'Name',
-          onOrder: newOrder =>
-            setCurrentOrder({ columnId: 'id', order: newOrder }),
+          onOrder: newOrder => setCurrentOrder({ columnId: 'id', order: newOrder }),
           orderDirection: currentOrder.order,
         },
         {
@@ -94,8 +93,7 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
         {
           isOrdered: currentOrder.columnId === 'memory',
           label: 'Memory',
-          onOrder: newOrder =>
-            setCurrentOrder({ columnId: 'memory', order: newOrder }),
+          onOrder: newOrder => setCurrentOrder({ columnId: 'memory', order: newOrder }),
           orderDirection: currentOrder.order,
         },
         { label: 'Disks' },
@@ -104,30 +102,16 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
       ]}
     >
       {sortedData.map(offer => (
-        <OfferList.Row
-          expandable="Expandable content"
-          id={offer.id}
-          key={offer.id}
-          offerName={offer.id}
-        >
+        <OfferList.Row expandable="Expandable content" id={offer.id} key={offer.id} offerName={offer.id}>
           <OfferList.Cell>
             <Stack direction="column">
               {offer.id}
               <Stack direction="row" gap={0.5}>
                 {Array.from({ length: offer.score }).map(() => (
-                  <LeafIcon
-                    key={`green-${offer.id}`}
-                    sentiment="success"
-                    size="small"
-                  />
+                  <LeafIcon key={`green-${offer.id}`} sentiment="success" size="small" />
                 ))}
                 {Array.from({ length: 3 - offer.score }).map(() => (
-                  <LeafIcon
-                    disabled
-                    key={`grey-${offer.id}`}
-                    sentiment="neutral"
-                    size="small"
-                  />
+                  <LeafIcon disabled key={`grey-${offer.id}`} sentiment="neutral" size="small" />
                 ))}
               </Stack>
             </Stack>

@@ -48,17 +48,11 @@ export type ContextProps = {
 } & (
   | {
       selectsRange: true
-      onChange?: (
-        date: [Date | null, Date | null],
-        event: React.SyntheticEvent | undefined,
-      ) => void
+      onChange?: (date: [Date | null, Date | null], event: React.SyntheticEvent | undefined) => void
     }
   | {
       selectsRange: false
-      onChange?: (
-        date: Date | null,
-        event: React.SyntheticEvent | undefined,
-      ) => void
+      onChange?: (date: Date | null, event: React.SyntheticEvent | undefined) => void
     }
 )
 export const DateInputContext = createContext<ContextProps>({

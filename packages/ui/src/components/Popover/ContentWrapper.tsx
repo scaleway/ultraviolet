@@ -10,12 +10,7 @@ import { popoverStyle } from './styles.css'
 
 import type { ContentWrapperProps } from './types'
 
-export const ContentWrapper = ({
-  title,
-  onClose,
-  children,
-  sentiment,
-}: ContentWrapperProps) => (
+export const ContentWrapper = ({ title, onClose, children, sentiment }: ContentWrapperProps) => (
   <Stack className={popoverStyle.stack} gap={1}>
     <Stack direction="row" justifyContent="space-between">
       <Text

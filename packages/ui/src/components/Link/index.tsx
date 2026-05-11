@@ -183,10 +183,7 @@ export const Link = forwardRef(
 
           {isBlank ? (
             <span className={linkStyle.containerIcon}>
-              <OpenInNewIcon
-                className={linkStyle.iconRight}
-                size={BLANK_TARGET_ICON_SIZE}
-              />
+              <OpenInNewIcon className={linkStyle.iconRight} size={BLANK_TARGET_ICON_SIZE} />
             </span>
           ) : null}
 

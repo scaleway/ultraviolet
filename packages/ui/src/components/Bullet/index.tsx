@@ -42,10 +42,7 @@ export const Bullet = ({
 }: BulletProps) => (
   <Tooltip id={tooltipBaseId} text={tooltip}>
     <div
-      className={cn(
-        className,
-        bulletStyle.bullet({ disabled, prominence, sentiment, size }),
-      )}
+      className={cn(className, bulletStyle.bullet({ disabled, prominence, sentiment, size }))}
       data-testid={dataTestId}
       style={style}
     >

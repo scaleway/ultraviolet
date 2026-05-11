@@ -139,20 +139,11 @@ export const Tag = ({
 
   return (
     <span
-      className={cn(
-        className,
-        tagStyle.container({ disabled, sentiment, closable: !!onClose }),
-      )}
+      className={cn(className, tagStyle.container({ disabled, sentiment, closable: !!onClose }))}
       data-testid={dataTestId}
       style={style}
     >
-      <TagInner
-        disabled={disabled}
-        isLoading={isLoading}
-        onClose={onClose}
-        sentiment={sentiment}
-        variant={variant}
-      >
+      <TagInner disabled={disabled} isLoading={isLoading} onClose={onClose} sentiment={sentiment} variant={variant}>
         {children}
       </TagInner>
     </span>

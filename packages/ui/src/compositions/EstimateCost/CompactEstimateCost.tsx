@@ -42,10 +42,7 @@ export const CompactEstimateCost = ({
         €{totalPrice.total}
       </Text>
       <Text as="span" variant="bodyStrong">
-        /
-        {iteration.unit.length > 1 && iteration.unit.endsWith('s')
-          ? iteration.unit.slice(0, -1)
-          : iteration.unit}
+        /{iteration.unit.length > 1 && iteration.unit.endsWith('s') ? iteration.unit.slice(0, -1) : iteration.unit}
       </Text>
     </Stack>
   </Stack>

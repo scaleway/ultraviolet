@@ -25,19 +25,10 @@ export const CodeEditorExpandable = ({
       onClick={() => setExpanded(prevState => !prevState)}
       type="button"
     >
-      <Text
-        as="span"
-        className={codeEditorStyle.centeredText}
-        sentiment="neutral"
-        variant="bodySmallStrong"
-      >
+      <Text as="span" className={codeEditorStyle.centeredText} sentiment="neutral" variant="bodySmallStrong">
         {expanded ? hideText : showText}
         &nbsp;
-        <ArrowDownIcon
-          className={
-            codeEditorStyle.animatedArrowIcon[expanded ? 'true' : 'false']
-          }
-        />
+        <ArrowDownIcon className={codeEditorStyle.animatedArrowIcon[expanded ? 'true' : 'false']} />
       </Text>
     </button>
   </div>

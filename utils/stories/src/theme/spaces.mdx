@@ -18,9 +18,8 @@ In the theme tokens you will find <b>2 major dimension categories</b> for spacin
 Our spacing is structured on the <b>8px</b> base unit. All the keys are based on this unit and are multiples of it. This allows for a consistent spacing scale that can be used across the application.
 
 <br />
-Space is used for spacing <b>paddings</b>, <b>margins</b> and <b>gaps</b>. It is
-a scale of values that can be used to create consistent spacing between
-elements.
+Space is used for spacing <b>paddings</b>, <b>margins</b> and <b>gaps</b>. It is a scale of values that can be used to
+create consistent spacing between elements.
 <br />
 <img src={SpaceTable} height="700" alt="" />
 <br />
@@ -33,12 +32,10 @@ const MyComponent = styled.div`
 ```
 
 <Card>
-  | **Do** | **Don't** | |--------|-----------| | ✅ **Do**: Use `space` for
-  setting spacing (padding, margin, gap) to maintain consistency. | 🚫
-  **Don't**: Use `space` on height, max-height, width, max-width. Use `sizing`
-  for that. | | | 🚫 **Don't**: Use `space` on border radius, `theme.radii`
-  exists for that | | | 🚫 **Don't**: Use `space` on font size and line height,
-  `theme.typography` exists for that or use `<Text />` component |
+  | **Do** | **Don't** | |--------|-----------| | ✅ **Do**: Use `space` for setting spacing (padding, margin, gap) to
+  maintain consistency. | 🚫 **Don't**: Use `space` on height, max-height, width, max-width. Use `sizing` for that. | |
+  | 🚫 **Don't**: Use `space` on border radius, `theme.radii` exists for that | | | 🚫 **Don't**: Use `space` on font
+  size and line height, `theme.typography` exists for that or use `<Text />` component |
 </Card>
 
 ### Sizing
@@ -46,15 +43,15 @@ const MyComponent = styled.div`
 Sizing is a of 8px just like space. In order to differenciate space and sizing and avoid usage confusion we create different keys for sizing. Those keys are named by the multiplier \* 1000. Multiplier being the number of 8px units.
 
 <br />
-Sizing is used mostly for <b>height</b> and <b>width</b> of elements. It is a
-scale of values that can be used to create consistent sizing of elements.
+Sizing is used mostly for <b>height</b> and <b>width</b> of elements. It is a scale of values that can be used to create
+consistent sizing of elements.
 <br />
 <img src={SizingTable} height="1100" alt="" />
 <br />
 
 <Alert title="Be aware of deprecated tokens" sentiment="warning">
-  Tokens that have yellow background in the above picture are deprecated and
-  should be avoided as much as possible. We will remove them in a future major.
+  Tokens that have yellow background in the above picture are deprecated and should be avoided as much as possible. We
+  will remove them in a future major.
 </Alert>
 <br />
 You can access to sizing in Ultraviolet using the theme:
@@ -66,14 +63,11 @@ const MyComponent = styled.div`
 ```
 
 <Card>
-  | **Do** | **Don't** | |--------|-----------| | ✅ **Do**: Use `sizing` for
-  setting width and height (min and max included) to maintain consistency. | 🚫
-  **Don't**: Use `sizing` on padding, margin, gap, and any other spacing
-  element. Use `space` for that. | | | 🚫 **Don't**: Use `sizing` on border and
-  box shadow, we want to keep those in px and not in rem | | | 🚫 **Don't**: Use
-  `sizing` on border radius, `theme.radii` exists for that | | | 🚫 **Don't**:
-  Use `sizing` on font size and line height, `theme.typography` exists for that
-  or use `<Text />` component |
+  | **Do** | **Don't** | |--------|-----------| | ✅ **Do**: Use `sizing` for setting width and height (min and max
+  included) to maintain consistency. | 🚫 **Don't**: Use `sizing` on padding, margin, gap, and any other spacing
+  element. Use `space` for that. | | | 🚫 **Don't**: Use `sizing` on border and box shadow, we want to keep those in px
+  and not in rem | | | 🚫 **Don't**: Use `sizing` on border radius, `theme.radii` exists for that | | | 🚫 **Don't**:
+  Use `sizing` on font size and line height, `theme.typography` exists for that or use `<Text />` component |
 </Card>
 <br />
 

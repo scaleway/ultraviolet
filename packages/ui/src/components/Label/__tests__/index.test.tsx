@@ -17,16 +17,12 @@ describe('dateInput', () => {
   })
 
   it('renders correctly with label description (string)', () => {
-    const { asFragment } = renderWithTheme(
-      <Label labelDescription="test">Label</Label>,
-    )
+    const { asFragment } = renderWithTheme(<Label labelDescription="test">Label</Label>)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with label description (ReactNode)', () => {
-    const { asFragment } = renderWithTheme(
-      <Label labelDescription={<div>test</div>}>Label</Label>,
-    )
+    const { asFragment } = renderWithTheme(<Label labelDescription={<div>test</div>}>Label</Label>)
     expect(asFragment()).toMatchSnapshot()
   })
   it('renders correctly small', () => {

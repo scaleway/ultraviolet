@@ -14,9 +14,7 @@ type OfferListContextValue = {
   checkboxSelectedRows: string[]
   setCheckboxSelectedRows: Dispatch<SetStateAction<string[]>>
 }
-const OfferListContext = createContext<OfferListContextValue | undefined>(
-  undefined,
-)
+const OfferListContext = createContext<OfferListContextValue | undefined>(undefined)
 
 type OfferListProviderProps = {
   selectable: 'radio' | 'checkbox'
@@ -71,20 +69,14 @@ export const OfferListProvider = ({
       setRadioSelectedRow,
     ],
   )
-  return (
-    <OfferListContext.Provider value={value}>
-      {children}
-    </OfferListContext.Provider>
-  )
+  return <OfferListContext.Provider value={value}>{children}</OfferListContext.Provider>
 }
 
 export const useOfferListContext = () => {
   const context = useContext(OfferListContext)
 
   if (!context) {
-    throw new Error(
-      'useOfferListContext should be used inside a OfferList component',
-    )
+    throw new Error('useOfferListContext should be used inside a OfferList component')
   }
 
   return context

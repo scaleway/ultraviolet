@@ -67,13 +67,7 @@ export const CustomerSatisfaction = ({
   const isHappy = useMemo(() => value > ratings.length / 2, [value])
 
   return (
-    <Stack
-      className={className}
-      data-testid={dataTestId}
-      direction="row"
-      justifyContent="space-between"
-      style={style}
-    >
+    <Stack className={className} data-testid={dataTestId} direction="row" justifyContent="space-between" style={style}>
       {ratings.map(rating => {
         const isSelected = rating.value === value
         const isOverfly = rating.value <= hoveredValue
@@ -104,11 +98,7 @@ export const CustomerSatisfaction = ({
               })}
               data-testid={`${dataTestId}-${rating.value}`}
               height="auto"
-              src={
-                isSelected || isOverfly || rating.value <= value
-                  ? rating.imgSelected
-                  : rating.imgNotSelected
-              }
+              src={isSelected || isOverfly || rating.value <= value ? rating.imgSelected : rating.imgNotSelected}
               width="auto"
             />
           </button>

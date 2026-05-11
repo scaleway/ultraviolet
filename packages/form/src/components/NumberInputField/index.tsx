@@ -10,10 +10,10 @@ import type { BaseFieldProps } from '../../types'
 import type { ComponentProps, FocusEvent } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 
-type NumberInputProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
+type NumberInputProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
+  TFieldValues,
+  TFieldName
+> &
   Omit<ComponentProps<typeof NumberInput>, 'onChange'>
 
 export const NumberInputField = <

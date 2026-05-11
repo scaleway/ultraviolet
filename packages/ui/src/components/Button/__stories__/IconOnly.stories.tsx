@@ -13,8 +13,7 @@ IconOnly.args = {
 IconOnly.parameters = {
   docs: {
     description: {
-      story:
-        'To define a button with an icon only you can simply pass your icon into the children.',
+      story: 'To define a button with an icon only you can simply pass your icon into the children.',
     },
   },
 }

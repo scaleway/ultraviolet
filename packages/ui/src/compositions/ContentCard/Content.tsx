@@ -17,32 +17,16 @@ export const CardContent = ({
     <Stack gap={0.5}>
       <Stack>
         {subtitle ? (
-          <Text
-            as="small"
-            disabled={disabled}
-            prominence="weak"
-            sentiment="neutral"
-            variant="caption"
-          >
+          <Text as="small" disabled={disabled} prominence="weak" sentiment="neutral" variant="caption">
             {subtitle}
           </Text>
         ) : null}
-        <Text
-          as={headingTag}
-          disabled={disabled}
-          sentiment="neutral"
-          variant="bodyStrong"
-        >
+        <Text as={headingTag} disabled={disabled} sentiment="neutral" variant="bodyStrong">
           {title}
         </Text>
       </Stack>
       {description ? (
-        <Text
-          as="p"
-          disabled={disabled}
-          sentiment="neutral"
-          variant="bodySmall"
-        >
+        <Text as="p" disabled={disabled} sentiment="neutral" variant="bodySmall">
           {description}
         </Text>
       ) : null}

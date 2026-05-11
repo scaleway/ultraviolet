@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const DistributedDataLabProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const DistributedDataLabProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="DistributedDataLabProductIcon">
     <g className="Distributed Data Lab">
       <g className="Container-Registry">
@@ -22,27 +20,14 @@ export const DistributedDataLabProductIcon = ({
             className="fillWeak"
           />
         </g>
-        <g
-          fill="#A060F6"
-          fillRule="evenodd"
-          className="fillStrong"
-          clipRule="evenodd"
-        >
-          <path
-            d="M44 31.901a1 1 0 0 1 1-1h12.79a1 1 0 1 1 0 2H45a1 1 0 0 1-1-1"
-            className="fillStrong"
-          />
+        <g fill="#A060F6" fillRule="evenodd" className="fillStrong" clipRule="evenodd">
+          <path d="M44 31.901a1 1 0 0 1 1-1h12.79a1 1 0 1 1 0 2H45a1 1 0 0 1-1-1" className="fillStrong" />
           <path
             d="M53.502 27.813a1 1 0 0 1 1.4-.2l4.651 3.489a1 1 0 0 1 0 1.6l-4.65 3.488a1 1 0 0 1-1.2-1.6l3.584-2.689-3.585-2.688a1 1 0 0 1-.2-1.4"
             className="fillStrong"
           />
         </g>
-        <g
-          fill="#A060F6"
-          fillRule="evenodd"
-          className="fillStrong"
-          clipRule="evenodd"
-        >
+        <g fill="#A060F6" fillRule="evenodd" className="fillStrong" clipRule="evenodd">
           <path
             d="M35.741 28.154a1 1 0 0 1 0-1.414l10.465-10.465a1 1 0 0 1 1.414 1.414L37.155 28.154a1 1 0 0 1-1.414 0"
             className="fillStrong"
@@ -52,12 +37,7 @@ export const DistributedDataLabProductIcon = ({
             className="fillStrong"
           />
         </g>
-        <g
-          fill="#A060F6"
-          fillRule="evenodd"
-          className="fillStrong"
-          clipRule="evenodd"
-        >
+        <g fill="#A060F6" fillRule="evenodd" className="fillStrong" clipRule="evenodd">
           <path
             d="M35.741 35.192a1 1 0 0 0 0 1.414L46.206 47.07a1 1 0 0 0 1.414-1.414L37.155 35.192a1 1 0 0 0-1.414 0"
             className="fillStrong"

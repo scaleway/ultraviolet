@@ -15,8 +15,8 @@ export const Disabled: StoryFn<typeof FileInput> = args => (
       title="Drag and drop files to get started"
       variant="dropzone"
     >
-      Only pay for the storage you use. For example, storing 100 GB of data will
-      cost use monthly less than a cup of coffee.
+      Only pay for the storage you use. For example, storing 100 GB of data will cost use monthly less than a cup of
+      coffee.
       <Stack direction="row" gap="2" justifyContent="center">
         <FileInput.Button sentiment="neutral" variant="outlined">
           <PlusIcon />

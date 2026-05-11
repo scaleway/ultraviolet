@@ -13,28 +13,16 @@ describe('meter', () => {
     { color: colors.success.text, text: 'veryStrong' },
   ]
 
-  it('render with ', () =>
-    shouldMatchSnapshot(
-      <Meter strength={strengthLevels} title="MyTitle" value={0} />,
-    ))
+  it('render with ', () => shouldMatchSnapshot(<Meter strength={strengthLevels} title="MyTitle" value={0} />))
 
-  it('render with weak value', () =>
-    shouldMatchSnapshot(
-      <Meter strength={strengthLevels} title="MyTitle" value={1} />,
-    ))
+  it('render with weak value', () => shouldMatchSnapshot(<Meter strength={strengthLevels} title="MyTitle" value={1} />))
 
   it('render with medium password', () =>
-    shouldMatchSnapshot(
-      <Meter strength={strengthLevels} title="MyTitle" value={2} />,
-    ))
+    shouldMatchSnapshot(<Meter strength={strengthLevels} title="MyTitle" value={2} />))
 
   it('render with strong value', () =>
-    shouldMatchSnapshot(
-      <Meter strength={strengthLevels} title="MyTitle" value={3} />,
-    ))
+    shouldMatchSnapshot(<Meter strength={strengthLevels} title="MyTitle" value={3} />))
 
   it('render with very strong value', () =>
-    shouldMatchSnapshot(
-      <Meter strength={strengthLevels} title="MyTitle" value={4} />,
-    ))
+    shouldMatchSnapshot(<Meter strength={strengthLevels} title="MyTitle" value={4} />))
 })

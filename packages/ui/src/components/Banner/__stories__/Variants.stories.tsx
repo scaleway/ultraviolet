@@ -11,9 +11,8 @@ export const Variants: StoryFn = args => (
       title="Apply to Scaleway Startup programs"
       variant="intro"
     >
-      The Scaleway Startup programs offer the perfect combination of cloud
-      credits, infrastructure advisors and startup experts to develop your
-      business and limit your expenses.
+      The Scaleway Startup programs offer the perfect combination of cloud credits, infrastructure advisors and startup
+      experts to develop your business and limit your expenses.
     </Banner>
     <Banner
       {...args}
@@ -23,9 +22,8 @@ export const Variants: StoryFn = args => (
       title="Apply to Scaleway Startup programs"
       variant="promotional"
     >
-      The Scaleway Startup programs offer the perfect combination of cloud
-      credits, infrastructure advisors and startup experts to develop your
-      business and limit your expenses.
+      The Scaleway Startup programs offer the perfect combination of cloud credits, infrastructure advisors and startup
+      experts to develop your business and limit your expenses.
     </Banner>
   </>
 )

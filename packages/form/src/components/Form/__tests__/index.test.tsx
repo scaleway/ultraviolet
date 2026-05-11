@@ -10,11 +10,7 @@ describe('form', () => {
   it('renders correctly with node children', () => {
     const { result } = renderHook(() => useForm())
     const { asFragment } = renderWithTheme(
-      <Form
-        errors={mockFormErrors}
-        methods={result.current}
-        onSubmit={() => {}}
-      >
+      <Form errors={mockFormErrors} methods={result.current} onSubmit={() => {}}>
         Test
       </Form>,
     )
@@ -26,11 +22,7 @@ describe('form', () => {
     const { result } = renderHook(() => useForm())
 
     const { asFragment } = renderWithTheme(
-      <Form
-        errors={mockFormErrors}
-        methods={result.current}
-        onSubmit={onSubmit}
-      >
+      <Form errors={mockFormErrors} methods={result.current} onSubmit={onSubmit}>
         <button type="submit">Submit</button>
       </Form>,
     )

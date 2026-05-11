@@ -66,11 +66,7 @@ const SelectableCardGroupComponent = ({
         <fieldset className={cn(className, selectableCardGroupStyle.fieldset)}>
           <Stack gap={1.5}>
             {legend ? (
-              <Label
-                as="legend"
-                labelDescription={legendDescription}
-                required={required}
-              >
+              <Label as="legend" labelDescription={legendDescription} required={required}>
                 {legend}
               </Label>
             ) : null}
@@ -80,12 +76,7 @@ const SelectableCardGroupComponent = ({
           </Stack>
         </fieldset>
         {helper ? (
-          <Text
-            as="span"
-            prominence="weak"
-            sentiment="neutral"
-            variant="caption"
-          >
+          <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
             {helper}
           </Text>
         ) : null}
@@ -103,9 +94,6 @@ type SelectableCardOptionGroupType = typeof SelectableCardGroupComponent & {
   Card: typeof CardSelectableCard
 }
 
-export const SelectableCardGroup: SelectableCardOptionGroupType = Object.assign(
-  SelectableCardGroupComponent,
-  {
-    Card: CardSelectableCard,
-  },
-)
+export const SelectableCardGroup: SelectableCardOptionGroupType = Object.assign(SelectableCardGroupComponent, {
+  Card: CardSelectableCard,
+})

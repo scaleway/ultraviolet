@@ -9,28 +9,16 @@ import { SubCategoryPrice } from './SubCategoryPrice'
 
 import type { SubCategoryType } from '../types'
 
-export const SubCategory = ({
-  subCategory,
-}: {
-  subCategory: SubCategoryType
-}) => (
+export const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => (
   <Stack direction="column" gap={1}>
     <Stack alignItems="center" direction="row" justifyContent="space-between">
       {subCategory.additionalInfo || subCategory.icon ? (
         <Stack alignItems="center" direction="row" gap={1}>
           {subCategory.icon}
-          <Text
-            as="span"
-            prominence="strong"
-            sentiment="neutral"
-            variant="bodySmallStrong"
-          >
+          <Text as="span" prominence="strong" sentiment="neutral" variant="bodySmallStrong">
             {subCategory.anchor ? (
               <a className={orderSummaryStyle.anchor} href={subCategory.anchor}>
-                <AttachIcon
-                  className={orderSummaryStyle.anchorIcon({ size: 'small' })}
-                  sentiment="info"
-                />
+                <AttachIcon className={orderSummaryStyle.anchorIcon({ size: 'small' })} sentiment="info" />
                 {subCategory.title}
               </a>
             ) : (
@@ -42,18 +30,10 @@ export const SubCategory = ({
           </Text>
         </Stack>
       ) : (
-        <Text
-          as="span"
-          prominence="strong"
-          sentiment="neutral"
-          variant="bodySmallStrong"
-        >
+        <Text as="span" prominence="strong" sentiment="neutral" variant="bodySmallStrong">
           {subCategory.anchor ? (
             <a className={orderSummaryStyle.anchor} href={subCategory.anchor}>
-              <AttachIcon
-                className={orderSummaryStyle.anchorIcon({ size: 'small' })}
-                sentiment="info"
-              />
+              <AttachIcon className={orderSummaryStyle.anchorIcon({ size: 'small' })} sentiment="info" />
               {subCategory.title}
             </a>
           ) : (
@@ -62,12 +42,7 @@ export const SubCategory = ({
         </Text>
       )}
       {subCategory.customContent ? (
-        <Text
-          as="span"
-          prominence="strong"
-          sentiment="neutral"
-          variant="bodySmallStrong"
-        >
+        <Text as="span" prominence="strong" sentiment="neutral" variant="bodySmallStrong">
           {subCategory.customContent}
         </Text>
       ) : null}

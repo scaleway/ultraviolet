@@ -15,20 +15,12 @@ export const OnChange: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
   const [elements, setElements] = useState([categoryAZ, categoryDefault])
 
   const onClick = () =>
-    elements.length === 2
-      ? setElements([categoryDefault])
-      : setElements([categoryAZ, categoryDefault])
+    elements.length === 2 ? setElements([categoryDefault]) : setElements([categoryAZ, categoryDefault])
 
   return (
     <Stack direction="row" gap={3}>
       <Button onClick={onClick}>Change elements</Button>
-      <OrderSummary
-        currency="EUR"
-        header="Summary"
-        items={elements}
-        localeFormat="en-US"
-        onChange={setPrices}
-      />
+      <OrderSummary currency="EUR" header="Summary" items={elements} localeFormat="en-US" onChange={setPrices} />
       <ul>
         Prices:
         {prices
@@ -46,8 +38,7 @@ export const OnChange: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
 OnChange.parameters = {
   docs: {
     description: {
-      story:
-        'Using prop `onChange` it is possible to get the price of each category',
+      story: 'Using prop `onChange` it is possible to get the price of each category',
     },
   },
 }

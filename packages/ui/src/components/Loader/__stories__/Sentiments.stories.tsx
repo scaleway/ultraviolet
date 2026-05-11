@@ -9,11 +9,7 @@ export const Sentiments: StoryFn = props => (
   <Stack gap={4}>
     {[...SENTIMENTS, 'white', 'black'].map(sentiment => (
       <Stack alignItems="center" key={sentiment}>
-        <Loader
-          key={sentiment}
-          {...props}
-          sentiment={sentiment as ExtendedColor}
-        />
+        <Loader key={sentiment} {...props} sentiment={sentiment as ExtendedColor} />
         {sentiment}
       </Stack>
     ))}
@@ -23,8 +19,7 @@ export const Sentiments: StoryFn = props => (
 Sentiments.parameters = {
   docs: {
     description: {
-      story:
-        'You can set the color of the component with the `sentiment` prop.',
+      story: 'You can set the color of the component with the `sentiment` prop.',
     },
   },
 }

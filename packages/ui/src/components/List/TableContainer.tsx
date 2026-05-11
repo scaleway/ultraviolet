@@ -8,9 +8,7 @@ import { listStyle } from './styles.css'
 import type { ReactNode } from 'react'
 
 export const TableContainer = ({ children }: { children: ReactNode }) => {
-  const [childrenMemory, setChildrenMemory] = useState<ReactNode[]>(
-    Children.toArray(children),
-  )
+  const [childrenMemory, setChildrenMemory] = useState<ReactNode[]>(Children.toArray(children))
 
   const { setRefList } = useListContext()
 

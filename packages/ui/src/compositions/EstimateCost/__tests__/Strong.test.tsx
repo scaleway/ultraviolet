@@ -1,8 +1,5 @@
 import { shouldMatchSnapshot } from '@utils/test'
-import {
-  resetIntersectionMocking,
-  setupIntersectionMocking,
-} from 'react-intersection-observer/test-utils'
+import { resetIntersectionMocking, setupIntersectionMocking } from 'react-intersection-observer/test-utils'
 import { afterEach, beforeEach, describe, it, vi } from 'vitest'
 
 import { EstimateCost } from '..'
@@ -29,9 +26,7 @@ describe('estimateCost - Strong Item', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Strong">
-          <EstimateCost.Strong variant="small">
-            This is a strong Item
-          </EstimateCost.Strong>
+          <EstimateCost.Strong variant="small">This is a strong Item</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
     ))
@@ -40,9 +35,7 @@ describe('estimateCost - Strong Item', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Strong">
-          <EstimateCost.Strong isDisabledOnOverlay>
-            This is a strong Item
-          </EstimateCost.Strong>
+          <EstimateCost.Strong isDisabledOnOverlay>This is a strong Item</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
     ))

@@ -106,8 +106,7 @@ export const CreateDropdown = ({
     return 'caption'
   }, [size])
 
-  const textVariantSmall =
-    size === 'small' ? 'captionStrong' : 'bodySmallStrong'
+  const textVariantSmall = size === 'small' ? 'captionStrong' : 'bodySmallStrong'
   const sizeVariantIcon = size === 'small' ? 'xsmall' : 'small'
 
   const computedEmptyState = emptyState ?? (
@@ -127,11 +126,7 @@ export const CreateDropdown = ({
 
   if (isEmpty && !addOption) {
     return (
-      <Stack
-        alignItems="center"
-        className={selectInputStyle.dropdownEmptyState}
-        gap={2}
-      >
+      <Stack alignItems="center" className={selectInputStyle.dropdownEmptyState} gap={2}>
         {computedEmptyState}
       </Stack>
     )
@@ -157,10 +152,7 @@ export const CreateDropdown = ({
 
   return Array.isArray(displayedOptions) ? (
     <Stack
-      className={cn(
-        selectInputStyle.dropdownContainer,
-        selectInputStyle.dropdownContainerUnGrouped,
-      )}
+      className={cn(selectInputStyle.dropdownContainer, selectInputStyle.dropdownContainerUnGrouped)}
       gap={0.25}
       id="select-dropdown"
       onKeyDown={handleKeyDownSelect}
@@ -194,11 +186,7 @@ export const CreateDropdown = ({
             />
           ))
         )}
-        {loadMore ? (
-          <Stack className={selectInputStyle.dropdownLoadMore}>
-            {loadMore}
-          </Stack>
-        ) : null}
+        {loadMore ? <Stack className={selectInputStyle.dropdownLoadMore}>{loadMore}</Stack> : null}
       </Stack>
     </Stack>
   ) : (
@@ -231,9 +219,7 @@ export const CreateDropdown = ({
 
             return (
               <Stack gap={0.25} key={group}>
-                {hasElements || emptyStateGroup ? (
-                  <Group group={group} index={index} />
-                ) : null}
+                {hasElements || emptyStateGroup ? <Group group={group} index={index} /> : null}
                 <Stack gap="0.25" id="items">
                   {!hasElements && emptyStateGroup ? (
                     <Text
@@ -277,9 +263,7 @@ export const CreateDropdown = ({
           })}
         </>
       )}
-      {loadMore ? (
-        <Stack className={selectInputStyle.dropdownLoadMore}>{loadMore}</Stack>
-      ) : null}
+      {loadMore ? <Stack className={selectInputStyle.dropdownLoadMore}>{loadMore}</Stack> : null}
     </Stack>
   )
 }

@@ -39,10 +39,7 @@ type UseFlipOptions = {
  * }
  * ```
  */
-export const useFlip = (
-  ref: RefObject<HTMLElement | null>,
-  options: UseFlipOptions = {},
-) => {
+export const useFlip = (ref: RefObject<HTMLElement | null>, options: UseFlipOptions = {}) => {
   const { duration = 250, easing = 'ease' } = options
 
   const firstPositions = useRef<Map<string, DOMRect>>(new Map())
@@ -92,16 +89,11 @@ export const useFlip = (
           return null
         }
 
-        return element.animate(
-          [{ transform: `translate(${deltaX}px, ${deltaY}px)` }, {}],
-          { duration, easing },
-        )
+        return element.animate([{ transform: `translate(${deltaX}px, ${deltaY}px)` }, {}], { duration, easing })
       })
       .filter(animation => animation !== null)
 
-    return Promise.allSettled(
-      animations.current.map(animation => animation.finished),
-    )
+    return Promise.allSettled(animations.current.map(animation => animation.finished))
   }, [ref, duration, easing])
 
   return { prepareAnimation, animate }

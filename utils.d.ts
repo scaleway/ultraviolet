@@ -16,15 +16,11 @@
  * ```
  */
 type TupleUnion<U extends string, R extends string[] = []> = {
-  [S in U]: Exclude<U, S> extends never
-    ? [...R, S]
-    : TupleUnion<Exclude<U, S>, [...R, S]>
+  [S in U]: Exclude<U, S> extends never ? [...R, S] : TupleUnion<Exclude<U, S>, [...R, S]>
 }[U]
 
 type Without<T, U> = { [P in Exclude<keyof T, keyof U>]?: never }
-type SingleXOR<T, U> = T | U extends object
-  ? (Without<T, U> & U) | (Without<U, T> & T)
-  : T | U
+type SingleXOR<T, U> = T | U extends object ? (Without<T, U> & U) | (Without<U, T> & T) : T | U
 
 declare type ArrayType<T> = T extends (infer U)[] ? U : never
 

@@ -15,11 +15,7 @@ type RowProps = {
   style?: CSSProperties
 }
 
-export const InfoTableRow = ({
-  children,
-  templateColumns,
-  style,
-}: RowProps) => {
+export const InfoTableRow = ({ children, templateColumns, style }: RowProps) => {
   const { width } = useContext(InfoTableContext)
 
   return (

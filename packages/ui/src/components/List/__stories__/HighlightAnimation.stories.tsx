@@ -44,11 +44,7 @@ export const HighlightAnimation: StoryFn<typeof List> = ({ ...props }) => {
       </Row>
       <List {...props} columns={columns}>
         {data.map(planet => (
-          <List.Row
-            highlightAnimation={planet.isNew}
-            id={planet.id}
-            key={planet.id}
-          >
+          <List.Row highlightAnimation={planet.isNew} id={planet.id} key={planet.id}>
             <List.Cell>{planet.name}</List.Cell>
             <List.Cell>{planet.perihelion}AU</List.Cell>
             <List.Cell>{planet.aphelion}AU</List.Cell>

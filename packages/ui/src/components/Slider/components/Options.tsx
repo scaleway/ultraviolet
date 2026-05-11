@@ -18,18 +18,8 @@ export type OptionsProps = {
   defaultScale: boolean
 }
 
-export const Options = ({
-  ticks,
-  min,
-  max,
-  value,
-  step,
-  defaultScale,
-}: OptionsProps) => (
-  <datalist
-    className={sliderStyle.datalist({ double: Array.isArray(value) })}
-    data-double={Array.isArray(value)}
-  >
+export const Options = ({ ticks, min, max, value, step, defaultScale }: OptionsProps) => (
+  <datalist className={sliderStyle.datalist({ double: Array.isArray(value) })} data-double={Array.isArray(value)}>
     {ticks.map((element, index, { length }) => {
       const elementValue = defaultScale ? element.value : index * step
       const progress = ((elementValue - min) * 100) / (max - min)
@@ -40,9 +30,7 @@ export const Options = ({
           return false
         }
 
-        return typeof value === 'number'
-          ? element.value === value
-          : value.includes(element.value)
+        return typeof value === 'number' ? element.value === value : value.includes(element.value)
       }
 
       const isSelected = getIsSelected()

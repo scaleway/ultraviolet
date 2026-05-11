@@ -10,9 +10,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
 export const OnChange: StoryFn<ComponentProps<typeof OfferList>> = props => {
-  const [selectedRow, setSelectedRow] = useState<string | string[]>(
-    'venus-offer',
-  )
+  const [selectedRow, setSelectedRow] = useState<string | string[]>('venus-offer')
   const [selectable, setSelectable] = useState<'checkbox' | 'radio'>('radio')
 
   return (
@@ -31,15 +29,8 @@ export const OnChange: StoryFn<ComponentProps<typeof OfferList>> = props => {
       </Button>
       Selected row
       {Array.isArray(selectedRow) && selectedRow.length > 1 ? 's' : ''}:{' '}
-      {Array.isArray(selectedRow)
-        ? selectedRow.map((value, index) => `${index > 0 ? ', ' : ''}${value}`)
-        : selectedRow}
-      <OfferList
-        {...props}
-        onChangeSelect={setSelectedRow}
-        selected={selectedRow}
-        type={selectable}
-      >
+      {Array.isArray(selectedRow) ? selectedRow.map((value, index) => `${index > 0 ? ', ' : ''}${value}`) : selectedRow}
+      <OfferList {...props} onChangeSelect={setSelectedRow} selected={selectedRow} type={selectable}>
         {data.map(planet => (
           <OfferList.Row
             disabled={planet.id === 'mars'}

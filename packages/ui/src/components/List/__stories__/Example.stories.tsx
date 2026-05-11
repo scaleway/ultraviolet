@@ -41,15 +41,13 @@ export const Example: StoryFn = args => {
         {
           isOrdered: currentOrder.columnId === 'name',
           label: 'Solar system Planet',
-          onOrder: newOrder =>
-            setCurrentOrder({ columnId: 'name', order: newOrder }),
+          onOrder: newOrder => setCurrentOrder({ columnId: 'name', order: newOrder }),
           orderDirection: currentOrder.order,
         },
         {
           isOrdered: currentOrder.columnId === 'perihelion',
           label: 'Perihelion',
-          onOrder: newOrder =>
-            setCurrentOrder({ columnId: 'perihelion', order: newOrder }),
+          onOrder: newOrder => setCurrentOrder({ columnId: 'perihelion', order: newOrder }),
           orderDirection: currentOrder.order,
           width: '200px',
         },
@@ -82,10 +80,7 @@ export const Example: StoryFn = args => {
                   <Text as="h6" variant="headingSmall">
                     Edit description
                   </Text>
-                  <TextInput
-                    label="Type planet description"
-                    name="description"
-                  />
+                  <TextInput label="Type planet description" name="description" />
                 </Stack>
               </Modal>
             </Stack>

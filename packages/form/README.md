@@ -121,10 +121,7 @@ const EXISTING_IPS = ['192.168.1.1']
 #### With Regex
 
 ```tsx
-<TextInputField
-  name="email"
-  regex={[/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/]}
-/>
+<TextInputField name="email" regex={[/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/]} />
 ```
 
 We all know regex can be tricky, so to help you with that we made [Scaleway Regex](https://github.com/scaleway/scaleway-lib/tree/main/packages/regex) library that contains a lot of useful regexes that you can use in your forms.

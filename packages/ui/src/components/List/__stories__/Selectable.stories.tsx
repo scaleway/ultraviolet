@@ -17,11 +17,7 @@ export const Selectable: StoryFn<typeof List> = args => {
       <List {...args} columns={columns} selectable>
         {data.map(planet =>
           planet.id !== 'mars' || clicked ? (
-            <List.Row
-              expandable="Planet description"
-              id={planet.id}
-              key={planet.id}
-            >
+            <List.Row expandable="Planet description" id={planet.id} key={planet.id}>
               <List.Cell>{planet.name}</List.Cell>
               <List.Cell>{planet.perihelion}AU</List.Cell>
               <List.Cell>{planet.aphelion}AU</List.Cell>
@@ -31,18 +27,10 @@ export const Selectable: StoryFn<typeof List> = args => {
 
         <List.SelectBar data={data} idKey="id">
           {({ selectedItems, unselectAll }) => (
-            <Stack
-              alignItems="center"
-              direction="row"
-              gap={2}
-              justifyContent="space-between"
-            >
+            <Stack alignItems="center" direction="row" gap={2} justifyContent="space-between">
               <Text as="p" sentiment="primary" variant="bodyStrong">
                 {selectedItems.length} item(s) selected (
-                {selectedItems.map(
-                  (item, index) => `${index > 0 ? ', ' : ''}${item.name}`,
-                )}
-                )
+                {selectedItems.map((item, index) => `${index > 0 ? ', ' : ''}${item.name}`)})
               </Text>
               <Button
                 onClick={() => {

@@ -22,13 +22,7 @@ export const Template: StoryFn<typeof ActionBar> = args => {
       <Button onClick={toggle}>Click on me to display</Button>
       {state ? (
         <ActionBar {...args}>
-          <Stack
-            alignItems="center"
-            direction="row"
-            flex="1 1 auto"
-            justifyContent="space-between"
-            width="100%"
-          >
+          <Stack alignItems="center" direction="row" flex="1 1 auto" justifyContent="space-between" width="100%">
             <div>I am the Playground Action Bar</div>
             <Button sentiment="danger" size="small" variant="outlined">
               <DeleteIcon />

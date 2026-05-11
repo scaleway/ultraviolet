@@ -11,10 +11,7 @@ import type { MenuProps } from './types'
 import type { Ref } from 'react'
 
 const Component = forwardRef(
-  (
-    { children, visible, hideOnClickItem, ...props }: MenuProps,
-    ref: Ref<HTMLButtonElement>,
-  ) => (
+  ({ children, visible, hideOnClickItem, ...props }: MenuProps, ref: Ref<HTMLButtonElement>) => (
     <MenuProvider hideOnClickItem={hideOnClickItem} visible={visible}>
       <MenuContent {...props} ref={ref}>
         {children}

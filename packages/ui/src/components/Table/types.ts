@@ -1,10 +1,7 @@
 import type { HeaderCell } from './HeaderCell'
 import type { ComponentProps, ReactNode } from 'react'
 
-export type ColumnProps = Pick<
-  ComponentProps<typeof HeaderCell>,
-  'isOrdered' | 'onOrder' | 'orderDirection'
-> & {
+export type ColumnProps = Pick<ComponentProps<typeof HeaderCell>, 'isOrdered' | 'onOrder' | 'orderDirection'> & {
   label?: ReactNode
   width?: string
   minWidth?: string

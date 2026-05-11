@@ -26,21 +26,8 @@ export const AutomaticRows: StoryFn<typeof TextArea> = () => {
         rows="auto"
         value={value1}
       />
-      <TextArea
-        aria-label={undefined}
-        label="Rows=2"
-        name="example-2"
-        onChange={setValue2}
-        rows={2}
-        value={value2}
-      />
-      <TextArea
-        aria-label={undefined}
-        label="maxRows=4"
-        maxRows={4}
-        onChange={setValue3}
-        value={value3}
-      />
+      <TextArea aria-label={undefined} label="Rows=2" name="example-2" onChange={setValue2} rows={2} value={value2} />
+      <TextArea aria-label={undefined} label="maxRows=4" maxRows={4} onChange={setValue3} value={value3} />
       <TextArea
         aria-label={undefined}
         label="Rows=2, maxRows=4"

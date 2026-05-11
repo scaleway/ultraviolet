@@ -49,25 +49,10 @@ export const DisplayOption = ({
   if (descriptionDirection === 'row' && optionalInfoPlacement === 'left') {
     return (
       <Tooltip disableAnimation text={option.tooltip}>
-        <Stack
-          data-testid={`option-stack-${option.value}`}
-          direction="row"
-          gap={0.5}
-          justifyContent="left"
-        >
-          <Stack
-            alignItems="center"
-            className={selectInputStyle.dropdownInfoContainer}
-            direction="row"
-            gap={0.5}
-          >
+        <Stack data-testid={`option-stack-${option.value}`} direction="row" gap={0.5} justifyContent="left">
+          <Stack alignItems="center" className={selectInputStyle.dropdownInfoContainer} direction="row" gap={0.5}>
             {option.optionalInfo}
-            <Text
-              as="span"
-              className={selectInputStyle.dropdownInfoTextItem}
-              placement="left"
-              variant={textVariant}
-            >
+            <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
               {option.label}
             </Text>
             {optionDescription}
@@ -87,27 +72,13 @@ export const DisplayOption = ({
           gap={0.5}
           justifyContent="space-between"
         >
-          <Stack
-            alignItems="baseline"
-            className={selectInputStyle.dropdownInfoContainer}
-            direction="row"
-            gap={0.5}
-          >
-            <Text
-              as="span"
-              className={selectInputStyle.dropdownInfoTextItem}
-              placement="left"
-              variant={textVariant}
-            >
+          <Stack alignItems="baseline" className={selectInputStyle.dropdownInfoContainer} direction="row" gap={0.5}>
+            <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
               {option.label}
             </Text>
             {optionDescription}
           </Stack>
-          {option.optionalInfo ? (
-            <div className={selectInputStyle.dropdownInfo}>
-              {option.optionalInfo}
-            </div>
-          ) : null}
+          {option.optionalInfo ? <div className={selectInputStyle.dropdownInfo}>{option.optionalInfo}</div> : null}
         </Stack>
       </Tooltip>
     )
@@ -130,12 +101,7 @@ export const DisplayOption = ({
             direction="column"
             gap={0.5}
           >
-            <Text
-              as="span"
-              className={selectInputStyle.dropdownInfoTextItem}
-              placement="left"
-              variant={textVariant}
-            >
+            <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
               {option.label}
             </Text>
             {optionDescription}
@@ -147,31 +113,17 @@ export const DisplayOption = ({
 
   return (
     <Tooltip disableAnimation text={option.tooltip}>
-      <Stack
-        alignItems="normal"
-        data-testid={`option-stack-${option.value}`}
-        direction="column"
-        gap={0.5}
-      >
+      <Stack alignItems="normal" data-testid={`option-stack-${option.value}`} direction="column" gap={0.5}>
         <Stack
           className={selectInputStyle.dropdownInfoContainer}
           direction="row"
           gap={0.5}
           justifyContent="space-between"
         >
-          <Text
-            as="span"
-            className={selectInputStyle.dropdownInfoTextItem}
-            placement="left"
-            variant={textVariant}
-          >
+          <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
             {option.label}
           </Text>
-          {option.optionalInfo ? (
-            <div className={selectInputStyle.dropdownInfo}>
-              {option.optionalInfo}
-            </div>
-          ) : null}
+          {option.optionalInfo ? <div className={selectInputStyle.dropdownInfo}>{option.optionalInfo}</div> : null}
         </Stack>
         {optionDescription}
       </Stack>

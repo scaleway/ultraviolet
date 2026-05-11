@@ -10,9 +10,7 @@ import { Form } from '../../Form'
 
 describe('textAreaField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(
-      <TextAreaField label="Test" name="test" />,
-    )
+    const { asFragment } = renderWithForm(<TextAreaField label="Test" name="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -21,11 +19,7 @@ describe('textAreaField', () => {
     const { result } = renderHook(() => useForm<{ test: string }>())
 
     const { asFragment } = renderWithTheme(
-      <Form
-        errors={mockFormErrors}
-        methods={result.current}
-        onSubmit={onSubmit}
-      >
+      <Form errors={mockFormErrors} methods={result.current} onSubmit={onSubmit}>
         <TextAreaField label="Test" name="test" submitOnEnter />
         <Submit>Submit</Submit>
       </Form>,
@@ -49,11 +43,7 @@ describe('textAreaField', () => {
     const { result } = renderHook(() => useForm<{ test: string }>())
 
     const { asFragment } = renderWithTheme(
-      <Form
-        errors={mockFormErrors}
-        methods={result.current}
-        onSubmit={onSubmit}
-      >
+      <Form errors={mockFormErrors} methods={result.current} onSubmit={onSubmit}>
         <TextAreaField clearable label="Test" name="test" required />
         <Submit>Submit</Submit>
       </Form>,

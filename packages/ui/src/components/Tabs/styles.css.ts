@@ -114,12 +114,11 @@ const badge = style({
   marginLeft: theme.space[1],
   padding: `0 ${theme.space[1]}`,
   selectors: {
-    [`${button}[aria-selected="false"]:hover &, ${button}[aria-selected="false"]:active &`]:
-      {
-        backgroundColor: theme.colors.primary.background,
-        borderColor: theme.colors.primary.background,
-        color: theme.colors.primary.text,
-      },
+    [`${button}[aria-selected="false"]:hover &, ${button}[aria-selected="false"]:active &`]: {
+      backgroundColor: theme.colors.primary.background,
+      borderColor: theme.colors.primary.background,
+      color: theme.colors.primary.text,
+    },
   },
 })
 

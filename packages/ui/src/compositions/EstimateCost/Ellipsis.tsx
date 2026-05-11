@@ -23,10 +23,7 @@ export const Ellipsis = ({
   const text = Children.toArray(children).join('').toString()
 
   return (
-    <div
-      data-testid={dataTestId}
-      style={{ display: isOverlay ? undefined : 'inline-flex' }}
-    >
+    <div data-testid={dataTestId} style={{ display: isOverlay ? undefined : 'inline-flex' }}>
       <Text
         as="p"
         className={estimateCostStyle.maxWidthText}

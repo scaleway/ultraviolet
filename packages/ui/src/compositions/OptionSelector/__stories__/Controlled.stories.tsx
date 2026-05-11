@@ -47,9 +47,7 @@ const makeVersions = (os: string) => [
   },
 ]
 
-export const Controlled: StoryFn<
-  ComponentProps<typeof OptionSelector>
-> = props => {
+export const Controlled: StoryFn<ComponentProps<typeof OptionSelector>> = props => {
   const [value, setValue] = useState<ValueType>({
     first: '',
     second: '',
@@ -85,10 +83,7 @@ export const Controlled: StoryFn<
         <li>Selected OS: {value.first}</li>
         <li>Selected version: {value.second}</li>
       </ul>
-      <Button
-        onClick={() => setValue({ first: options[0].value })}
-        style={{ width: 'fit-content' }}
-      >
+      <Button onClick={() => setValue({ first: options[0].value })} style={{ width: 'fit-content' }}>
         Set first selector value to Ubuntu
       </Button>
     </Stack>

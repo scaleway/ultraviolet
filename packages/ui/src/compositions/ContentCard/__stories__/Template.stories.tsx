@@ -6,10 +6,7 @@ import illustration from '../assets/illustration.png'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const Template: StoryFn<ComponentProps<typeof ContentCard>> = ({
-  direction,
-  ...props
-}) => (
+export const Template: StoryFn<ComponentProps<typeof ContentCard>> = ({ direction, ...props }) => (
   <div style={{ width: direction === 'column' ? '315px' : undefined }}>
     <ContentCard {...props} direction={direction} />
   </div>

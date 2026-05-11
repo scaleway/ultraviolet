@@ -14,8 +14,7 @@ describe('alert', () => {
     vi.restoreAllMocks()
   })
 
-  it('renders correctly with default values', () =>
-    shouldMatchSnapshot(<Alert>Sample Alert</Alert>))
+  it('renders correctly with default values', () => shouldMatchSnapshot(<Alert>Sample Alert</Alert>))
 
   it('renders correctly with children as component', () =>
     shouldMatchSnapshot(
@@ -24,8 +23,7 @@ describe('alert', () => {
       </Alert>,
     ))
 
-  it('renders correctly with title', () =>
-    shouldMatchSnapshot(<Alert title="title">Sample Alert</Alert>))
+  it('renders correctly with title', () => shouldMatchSnapshot(<Alert title="title">Sample Alert</Alert>))
 
   it('renders correctly with buttonText and onClickButton', () =>
     shouldMatchSnapshot(
@@ -42,10 +40,8 @@ describe('alert', () => {
     ))
 
   describe('renders correctly with all sentiments', () => {
-    it.each(['danger', 'info', 'success', 'warning', 'neutral'] as const)(
-      'renders correctly sentiment %o',
-      sentiment =>
-        shouldMatchSnapshot(<Alert sentiment={sentiment}>Sample Alert</Alert>),
+    it.each(['danger', 'info', 'success', 'warning', 'neutral'] as const)('renders correctly sentiment %o', sentiment =>
+      shouldMatchSnapshot(<Alert sentiment={sentiment}>Sample Alert</Alert>),
     )
   })
 

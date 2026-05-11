@@ -66,21 +66,12 @@ export const PaginationButtons = ({
           <ArrowLeftIcon />
         </Button>
       </Stack>
-      <Stack
-        className={paginationStyle.pageNumbersContainer}
-        direction="row"
-        gap={1}
-      >
+      <Stack className={paginationStyle.pageNumbersContainer} direction="row" gap={1}>
         {pageNumbersToDisplay.map((pageNumber, index) => (
           <MakeButton
             disabled={disabled}
             handlePageClick={handlePageClick}
-            hasEllipsisBefore={
-              !(
-                index === 0 ||
-                pageNumbersToDisplay[index - 1] === pageNumber - 1
-              )
-            }
+            hasEllipsisBefore={!(index === 0 || pageNumbersToDisplay[index - 1] === pageNumber - 1)}
             key={pageNumber}
             page={page}
             pageNumber={pageNumber}

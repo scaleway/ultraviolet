@@ -7,11 +7,7 @@ import type { StoryFn } from '@storybook/react-vite'
 export const Sentiments: StoryFn = props => (
   <>
     {PROGRESS_BAR_SENTIMENTS.map(sentiment => (
-      <UncontrolledProgressBar
-        key={sentiment}
-        sentiment={sentiment}
-        {...props}
-      />
+      <UncontrolledProgressBar key={sentiment} sentiment={sentiment} {...props} />
     ))}
   </>
 )

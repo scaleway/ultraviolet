@@ -46,24 +46,14 @@ export const CodeContent = ({
     {multiline ? (
       Children.map(lines, child => (
         <span
-          className={cn(
-            snippetStyle.line({ multiline: true }),
-            prefix ? snippetStyle.prefix[prefix] : '',
-          )}
+          className={cn(snippetStyle.line({ multiline: true }), prefix ? snippetStyle.prefix[prefix] : '')}
           key={child}
         >
           {child}
         </span>
       ))
     ) : (
-      <span
-        className={cn(
-          snippetStyle.line(),
-          prefix ? snippetStyle.prefix[prefix] : '',
-        )}
-      >
-        {children}
-      </span>
+      <span className={cn(snippetStyle.line(), prefix ? snippetStyle.prefix[prefix] : '')}>{children}</span>
     )}
   </Text>
 )

@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const CockpitProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const CockpitProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="CockpitProductIcon">
     <g className="Observability" clipPath="url(#b)">
       <g className="Style=Console">
@@ -49,11 +47,7 @@ export const CockpitProductIcon = ({
         clipRule="evenodd"
         fillRule="evenodd"
       />
-      <path
-        fill="#A365F6"
-        d="M44 43.95a2 2 0 1 0-4 0 2 2 0 0 0 4 0"
-        className="fillStrong"
-      />
+      <path fill="#A365F6" d="M44 43.95a2 2 0 1 0-4 0 2 2 0 0 0 4 0" className="fillStrong" />
       <path
         fill="#4F0599"
         d="M36.8 28a.733.733 0 1 0 0 1.467.733.733 0 0 0 0-1.467m-2.734.733A2.733 2.733 0 0 1 39.24 27.5h3.787a2.733 2.733 0 1 1-.185 2h-3.418a2.735 2.735 0 0 1-3.557 1.803l-4.427 4.87a1 1 0 0 1-1.244.19l-5.322-3.104a2.73 2.73 0 0 1-2.715.696l-2.126 2.834a2.733 2.733 0 1 1-1.622-1.171l2.17-2.892a2.733 2.733 0 1 1 5.085-1.32l4.839 2.822 3.862-4.248a2.7 2.7 0 0 1-.3-1.247ZM22.933 30.6a.733.733 0 1 0 0 1.467.733.733 0 0 0 0-1.467m21.8-1.867a.733.733 0 1 1 1.467 0 .733.733 0 0 1-1.467 0m-27 8.8a.733.733 0 1 0 0 1.467.733.733 0 0 0 0-1.467"

@@ -45,44 +45,25 @@ export const PlanHeader = ({
         value={plan.value}
       />
     ) : null}
-    <Stack
-      alignItems="center"
-      className={plansStyle.headerFullHeight}
-      gap={2}
-      justifyContent="space-between"
-    >
+    <Stack alignItems="center" className={plansStyle.headerFullHeight} gap={2} justifyContent="space-between">
       <Stack alignItems="center" gap={3} width="100%">
         <Stack alignItems="center" gap={1}>
           <Badge
             disabled={disabled}
             sentiment={
-              plan.sentiment &&
-              plan.sentiment !== 'black' &&
-              plan.sentiment !== 'white'
-                ? plan.sentiment
-                : 'primary'
+              plan.sentiment && plan.sentiment !== 'black' && plan.sentiment !== 'white' ? plan.sentiment : 'primary'
             }
           >
             <label htmlFor={plan.value}>{plan.title}</label>
           </Badge>
           {plan.titleHeader}
           <Stack alignItems="center">
-            <Text
-              as="span"
-              disabled={disabled}
-              sentiment={plan.sentiment ?? 'primary'}
-              variant="headingSmallStrong"
-            >
+            <Text as="span" disabled={disabled} sentiment={plan.sentiment ?? 'primary'} variant="headingSmallStrong">
               {plan.header.price}
             </Text>
             <Stack style={{ minHeight: '16px' }}>
               {plan.header.priceDescription ? (
-                <Text
-                  as="span"
-                  disabled={disabled}
-                  sentiment={plan.sentiment ?? 'primary'}
-                  variant="caption"
-                >
+                <Text as="span" disabled={disabled} sentiment={plan.sentiment ?? 'primary'} variant="caption">
                   {plan.header.priceDescription}
                 </Text>
               ) : null}
@@ -98,24 +79,15 @@ export const PlanHeader = ({
         ) : null}
       </Stack>
       <Stack alignItems="center" gap={3} width="100%">
-        {plan.header.cta && currentPlanValue !== plan.value
-          ? plan.header.cta
-          : null}
+        {plan.header.cta && currentPlanValue !== plan.value ? plan.header.cta : null}
         {plan.header.cta && currentPlanValue === plan.value ? (
           <div className={plansStyle.currentWrapper}>
-            <Text
-              as="span"
-              disabled={disabled}
-              sentiment={plan.sentiment ?? 'primary'}
-              variant="bodySmallStrong"
-            >
+            <Text as="span" disabled={disabled} sentiment={plan.sentiment ?? 'primary'} variant="bodySmallStrong">
               {locales['plans.currentPlan']}
             </Text>
           </div>
         ) : null}
-        {plan.header.separator ? (
-          <Separator className={plansStyle.fullSizeSeparator} />
-        ) : null}
+        {plan.header.separator ? <Separator className={plansStyle.fullSizeSeparator} /> : null}
       </Stack>
     </Stack>
   </>

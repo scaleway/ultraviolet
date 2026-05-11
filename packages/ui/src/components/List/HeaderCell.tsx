@@ -9,11 +9,7 @@ import { Tooltip } from '../Tooltip'
 
 import { SortIcon } from './SortIcon'
 import { listStyle } from './styles.css'
-import {
-  maxWidthHeaderCell,
-  minWidthHeaderCell,
-  widthHeaderCell,
-} from './variables.css'
+import { maxWidthHeaderCell, minWidthHeaderCell, widthHeaderCell } from './variables.css'
 
 import type { ReactNode } from 'react'
 
@@ -47,9 +43,7 @@ export const HeaderCell = ({
     order = 'descending'
   }
 
-  const handleOrder = onOrder
-    ? () => onOrder(order === 'ascending' ? 'desc' : 'asc')
-    : undefined
+  const handleOrder = onOrder ? () => onOrder(order === 'ascending' ? 'desc' : 'asc') : undefined
 
   return (
     <th
@@ -81,16 +75,10 @@ export const HeaderCell = ({
         {children}
         {info ? (
           <Tooltip text={info}>
-            <InformationOutlineIcon
-              prominence="weak"
-              sentiment="neutral"
-              size="small"
-            />
+            <InformationOutlineIcon prominence="weak" sentiment="neutral" size="small" />
           </Tooltip>
         ) : null}
-        {orderDirection !== undefined && isOrdered !== undefined ? (
-          <SortIcon order={order} />
-        ) : null}
+        {orderDirection !== undefined && isOrdered !== undefined ? <SortIcon order={order} /> : null}
       </Stack>
     </th>
   )

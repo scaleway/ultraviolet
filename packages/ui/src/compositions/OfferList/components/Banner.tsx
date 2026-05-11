@@ -25,21 +25,14 @@ export const Banner = ({
   shouldHavePrimaryBorder,
 }: BannerProps) =>
   type === 'div' ? (
-    <Stack
-      aria-disabled={disabled}
-      className={offerListStyle.bannerStack({ sentiment })}
-    >
+    <Stack aria-disabled={disabled} className={offerListStyle.bannerStack({ sentiment })}>
       <Text as="p" disabled={disabled} sentiment={sentiment} variant="caption">
         {children}
       </Text>
     </Stack>
   ) : (
     <tr className={offerListStyle.banner}>
-      <List.Cell
-        aria-disabled={disabled}
-        className={offerListStyle.bannerCell}
-        colSpan={colSpan}
-      >
+      <List.Cell aria-disabled={disabled} className={offerListStyle.bannerCell} colSpan={colSpan}>
         <Text
           as="p"
           className={offerListStyle.bannerText({

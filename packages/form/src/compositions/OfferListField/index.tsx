@@ -4,19 +4,13 @@ import { useController } from 'react-hook-form'
 
 import { useErrors } from '../../providers'
 
-import type {
-  BaseFieldProps,
-  FieldPath,
-  FieldValues,
-  Path,
-  PathValue,
-} from '@ultraviolet/form'
+import type { BaseFieldProps, FieldPath, FieldValues, Path, PathValue } from '@ultraviolet/form'
 import type { ComponentProps, ReactNode } from 'react'
 
-type OfferListFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
+type OfferListFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
+  TFieldValues,
+  TFieldName
+> &
   Omit<ComponentProps<typeof OfferList>, 'selected' | 'onChangeSelect'> & {
     className?: string
     id?: string

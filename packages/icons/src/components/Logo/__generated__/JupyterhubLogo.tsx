@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const JupyterhubLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const JupyterhubLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="JupyterhubLogo">
     <path
       fillRule="evenodd"

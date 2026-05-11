@@ -24,18 +24,8 @@ export const Usage: StoryFn<typeof Label> = () => (
   <Stack gap={3}>
     Using prop label inside the component :
     <Stack direction="row" gap={2} justifyContent="center">
-      <SelectInput
-        label="Input1"
-        name="input11"
-        options={values}
-        size="medium"
-      />
-      <SelectInput
-        label="Input2"
-        name="input12"
-        options={values}
-        size="medium"
-      />
+      <SelectInput label="Input1" name="input11" options={values} size="medium" />
+      <SelectInput label="Input2" name="input12" options={values} size="medium" />
       <Checkbox>Checkbox</Checkbox>
     </Stack>
     Using component Label, outside of the input component :

@@ -27,9 +27,7 @@ describe(recursivelyGetChildrenString, () => {
     ${'is complex children with a nested array children'}     | ${complexChildrenWithArrayNestedChildren}     | ${''}
     ${'is complex children without a nested string children'} | ${complexChildrenWithoutStringNestedChildren} | ${''}
   `('returns "$expected" when $test', current => {
-    expect(recursivelyGetChildrenString(current.value as string)).toBe(
-      current.expected,
-    )
+    expect(recursivelyGetChildrenString(current.value as string)).toBe(current.expected)
   })
 })
 

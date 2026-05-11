@@ -10,9 +10,7 @@ import { Tooltip } from '../../../components/Tooltip'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const ComplexExample: StoryFn<
-  ComponentProps<typeof InfoTable>
-> = props => (
+export const ComplexExample: StoryFn<ComponentProps<typeof InfoTable>> = props => (
   <Card header="Instance information">
     <InfoTable {...props}>
       <InfoTable.Row templateColumns="repeat(4, 1fr)">
@@ -45,16 +43,11 @@ export const ComplexExample: StoryFn<
           8
         </InfoTable.Cell>
         <InfoTable.Cell title="RAM">32 GB</InfoTable.Cell>
-        <InfoTable.Cell title="Compatible Storage">
-          Block / Local
-        </InfoTable.Cell>
+        <InfoTable.Cell title="Compatible Storage">Block / Local</InfoTable.Cell>
         <InfoTable.Cell title="Bandwidth">800 Mbps</InfoTable.Cell>
       </InfoTable.Row>
       <InfoTable.Row templateColumns="repeat(2, 1fr)">
-        <InfoTable.CellWithCopyButton
-          copyContent="this-is-an-id-3424-2342"
-          title="Instance ID"
-        >
+        <InfoTable.CellWithCopyButton copyContent="this-is-an-id-3424-2342" title="Instance ID">
           4f6be74f-84c1-4ffb-ac80-39bezefzef7808bdd0
         </InfoTable.CellWithCopyButton>
         <InfoTable.CellWithCopyButton

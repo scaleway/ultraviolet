@@ -2,21 +2,9 @@
 
 import { useFlip, usePrefersReducedMotion } from '@ultraviolet/animations'
 import { setElementVars } from '@vanilla-extract/dynamic'
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useMemo,
-  useReducer,
-  useRef,
-  useState,
-} from 'react'
+import { createContext, useCallback, useContext, useMemo, useReducer, useRef, useState } from 'react'
 
-import {
-  ANIMATION_DURATION,
-  ANIMATION_EASING,
-  NAVIGATION_WIDTH,
-} from './constants'
+import { ANIMATION_DURATION, ANIMATION_EASING, NAVIGATION_WIDTH } from './constants'
 import NavigationLocales from './locales/en'
 import { widthNavigationContainerDuration } from './variables.css'
 
@@ -163,13 +151,9 @@ export const NavigationProvider = ({
   const prefersReducedMotion = usePrefersReducedMotion()
   const shouldAnimate = animationEnabled && !prefersReducedMotion
 
-  const [animation, setAnimation] = useState<boolean | 'expand' | 'collapse'>(
-    false,
-  )
+  const [animation, setAnimation] = useState<boolean | 'expand' | 'collapse'>(false)
   const [width, setWidth] = useState(initialWidth)
-  const [allowNavigationResize, setAllowNavigationResize] = useState(
-    initialAllowNavigationResize,
-  )
+  const [allowNavigationResize, setAllowNavigationResize] = useState(initialAllowNavigationResize)
 
   // This is used to store the items that are registered in the navigation
   // This way we can retrieve items with their active state in pinned feature
@@ -313,9 +297,5 @@ export const NavigationProvider = ({
     ],
   )
 
-  return (
-    <NavigationContext.Provider value={value}>
-      {children}
-    </NavigationContext.Provider>
-  )
+  return <NavigationContext.Provider value={value}>{children}</NavigationContext.Provider>
 }

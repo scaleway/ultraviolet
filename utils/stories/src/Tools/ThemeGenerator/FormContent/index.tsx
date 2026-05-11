@@ -1,10 +1,4 @@
-import {
-  Submit,
-  TextInputField,
-  useFieldArray,
-  useFormContext,
-  useFormState,
-} from '@ultraviolet/form'
+import { Submit, TextInputField, useFieldArray, useFormContext, useFormState } from '@ultraviolet/form'
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
@@ -27,33 +21,17 @@ export const FormContent = () => {
     <Stack gap={6}>
       <Stack direction="row" gap={1}>
         <Stack flex={1} gap={1}>
-          <Text
-            as="label"
-            className={capitalizeText}
-            htmlFor="sentiment_neutral"
-            variant="bodyStrong"
-          >
+          <Text as="label" className={capitalizeText} htmlFor="sentiment_neutral" variant="bodyStrong">
             Neutral sentiment name
           </Text>
           <Tooltip text="Neutral sentiment name cannot be changed as it is essential for the theme to work.">
             <Stack flex={1}>
-              <TextInputField
-                disabled
-                id="sentiment_neutral"
-                name="sentiment_neutral"
-                placeholder="neutral"
-                required
-              />
+              <TextInputField disabled id="sentiment_neutral" name="sentiment_neutral" placeholder="neutral" required />
             </Stack>
           </Tooltip>
         </Stack>
         <Stack flex={1} gap={1}>
-          <Text
-            as="label"
-            className={capitalizeText}
-            htmlFor="sentiment_neutral_value"
-            variant="bodyStrong"
-          >
+          <Text as="label" className={capitalizeText} htmlFor="sentiment_neutral_value" variant="bodyStrong">
             Neutral sentiment value
           </Text>
           <Tooltip text="Neutral sentiment value cannot be changed as it is essential for the theme to work.">
@@ -72,21 +50,14 @@ export const FormContent = () => {
 
       {fields.map((field, index) => {
         const isRequiredSentiment = field.required
-        const countRequiredSentiments = fields.filter(
-          ({ required }) => required,
-        ).length
+        const countRequiredSentiments = fields.filter(({ required }) => required).length
 
         console.log({ errors })
 
         return (
           <Stack direction="row" gap={1} key={field.id}>
             <Stack flex={1} gap={1}>
-              <Text
-                as="label"
-                className={capitalizeText}
-                htmlFor={`sentiments.${index}.key`}
-                variant="bodyStrong"
-              >
+              <Text as="label" className={capitalizeText} htmlFor={`sentiments.${index}.key`} variant="bodyStrong">
                 {isRequiredSentiment
                   ? `${field.key} sentiment name`
                   : `Additional sentiment ${index - countRequiredSentiments + 1} name`}
@@ -110,12 +81,7 @@ export const FormContent = () => {
               </Tooltip>
             </Stack>
             <Stack flex={1} gap={1}>
-              <Text
-                as="label"
-                className={capitalizeText}
-                htmlFor={`sentiments.${index}.value`}
-                variant="bodyStrong"
-              >
+              <Text as="label" className={capitalizeText} htmlFor={`sentiments.${index}.value`} variant="bodyStrong">
                 {isRequiredSentiment
                   ? `${field.key} sentiment value`
                   : `Additional sentiment ${index - countRequiredSentiments + 1} value`}
@@ -130,12 +96,7 @@ export const FormContent = () => {
                   />
                 </Row>
                 {isRequiredSentiment ? null : (
-                  <Button
-                    onClick={() => remove(index)}
-                    sentiment="neutral"
-                    size="large"
-                    variant="filled"
-                  >
+                  <Button onClick={() => remove(index)} sentiment="neutral" size="large" variant="filled">
                     <CloseIcon />
                   </Button>
                 )}

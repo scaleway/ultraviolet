@@ -15,10 +15,7 @@ export const Shrink: StoryFn<typeof Menu> = () => (
       <Menu.Item>item</Menu.Item>
     </Menu>
 
-    <Menu
-      disclosure={<Button>default with placement bottom</Button>}
-      placement="bottom"
-    >
+    <Menu disclosure={<Button>default with placement bottom</Button>} placement="bottom">
       <Menu.Item>item</Menu.Item>
       <Menu.Item>item</Menu.Item>
       <Menu.Item>item</Menu.Item>
@@ -28,11 +25,7 @@ export const Shrink: StoryFn<typeof Menu> = () => (
       <Menu.Item>item</Menu.Item>
     </Menu>
 
-    <Menu
-      disclosure={<Button>shrink=true and placement bottom</Button>}
-      placement="bottom"
-      shrink
-    >
+    <Menu disclosure={<Button>shrink=true and placement bottom</Button>} placement="bottom" shrink>
       <Menu.Item>item</Menu.Item>
       <Menu.Item>item</Menu.Item>
       <Menu.Item>item</Menu.Item>

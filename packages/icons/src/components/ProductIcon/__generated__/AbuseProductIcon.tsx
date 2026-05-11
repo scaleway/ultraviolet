@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const AbuseProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const AbuseProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="AbuseProductIcon">
     <path
       fill="#EEF"

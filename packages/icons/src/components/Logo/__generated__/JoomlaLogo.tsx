@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const JoomlaLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const JoomlaLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="JoomlaLogo">
     <g>
       <path

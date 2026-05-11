@@ -8,10 +8,7 @@ import { RadioGroupContext } from './Context'
 
 import type { ComponentProps } from 'react'
 
-type RadioGroupRadioProps = Omit<
-  ComponentProps<typeof Radio>,
-  'onChange' | 'checked' | 'required' | 'name'
->
+type RadioGroupRadioProps = Omit<ComponentProps<typeof Radio>, 'onChange' | 'checked' | 'required' | 'name'>
 export const RadioGroupRadio = ({
   onFocus,
   onBlur,

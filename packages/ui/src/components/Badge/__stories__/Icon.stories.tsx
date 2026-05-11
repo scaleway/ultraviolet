@@ -6,13 +6,7 @@ import type { StoryFn } from '@storybook/react-vite'
 
 export const Icon: StoryFn = props => (
   <Badge {...props}>
-    <InformationOutlineIcon
-      size={
-        props['size'] === 'xsmall' || props['size'] === 'small'
-          ? 'xsmall'
-          : 'small'
-      }
-    />
+    <InformationOutlineIcon size={props['size'] === 'xsmall' || props['size'] === 'small' ? 'xsmall' : 'small'} />
     Badge
   </Badge>
 )

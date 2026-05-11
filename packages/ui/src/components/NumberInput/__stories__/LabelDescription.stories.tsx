@@ -8,16 +8,9 @@ import { NumberInput } from '../index'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const LabelDescription: StoryFn = (
-  args: ComponentProps<typeof NumberInput>,
-) => (
+export const LabelDescription: StoryFn = (args: ComponentProps<typeof NumberInput>) => (
   <Stack gap={2}>
-    <NumberInput
-      {...args}
-      label="Advanced Label"
-      labelDescription={<Badge size="small">New</Badge>}
-      required
-    />
+    <NumberInput {...args} label="Advanced Label" labelDescription={<Badge size="small">New</Badge>} required />
     <NumberInput
       {...args}
       label="Advanced Label"

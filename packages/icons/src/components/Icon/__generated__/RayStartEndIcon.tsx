@@ -9,12 +9,9 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const RayStartEndIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const RayStartEndIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="RayStartEndIcon">
-    {typeof props.size === 'string' &&
-    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
+    {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M6.5 10C6.5 10.9665 5.7165 11.75 4.75 11.75C3.7835 11.75 3 10.9665 3 10C3 9.0335 3.7835 8.25 4.75 8.25C5.7165 8.25 6.5 9.0335 6.5 10Z" />
         <path d="M13.5 10C13.5 10.9665 14.2835 11.75 15.25 11.75C16.2165 11.75 17 10.9665 17 10C17 9.0335 16.2165 8.25 15.25 8.25C14.2835 8.25 13.5 9.0335 13.5 10Z" />

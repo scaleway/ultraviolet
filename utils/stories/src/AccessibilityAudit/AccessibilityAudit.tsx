@@ -1,35 +1,15 @@
 import { linkTo } from '@storybook/addon-links'
 import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
 import { CloseCircleOutlineIcon } from '@ultraviolet/icons/CloseCircleOutlineIcon'
-import {
-  Button,
-  Stack,
-  Table,
-  Text,
-  Tooltip,
-  ProgressBar,
-} from '@ultraviolet/ui'
+import { Button, Stack, Table, Text, Tooltip, ProgressBar } from '@ultraviolet/ui'
 import { useState, useEffect } from 'react'
 
 import { findComponentState } from '../ComponentState/constants'
-import {
-  storiesCompositionsModules,
-  storiesComponentModules,
-} from '../constants'
+import { storiesCompositionsModules, storiesComponentModules } from '../constants'
 
-import {
-  AUDIT_CATEGORIES,
-  A11Y_LEVELS,
-  findA11yStatus,
-  getComponentAuditCategories,
-} from './constants'
+import { AUDIT_CATEGORIES, A11Y_LEVELS, findA11yStatus, getComponentAuditCategories } from './constants'
 
-import type {
-  A11yLevel,
-  ComponentAuditStatus,
-  AuditCategories,
-  ComponentStoryParameters,
-} from './constants'
+import type { A11yLevel, ComponentAuditStatus, AuditCategories, ComponentStoryParameters } from './constants'
 import type { ReactNode } from 'react'
 
 type ComponentInfo = {
@@ -46,9 +26,7 @@ type ComponentInfo = {
   auditCategories: AuditCategories
 }
 
-const getComponentAudit = (
-  parameters: ComponentStoryParameters,
-): ComponentAuditStatus => parameters?.audit ?? {}
+const getComponentAudit = (parameters: ComponentStoryParameters): ComponentAuditStatus => parameters?.audit ?? {}
 
 const AccessibilityAudit = () => {
   const [modules, setModules] = useState<
@@ -62,10 +40,7 @@ const AccessibilityAudit = () => {
   >(null)
 
   useEffect(() => {
-    Promise.allSettled([
-      ...storiesComponentModules,
-      ...storiesCompositionsModules,
-    ])
+    Promise.allSettled([...storiesComponentModules, ...storiesCompositionsModules])
       .then(localModules => {
         setModules(localModules)
       })
@@ -91,17 +66,14 @@ const AccessibilityAudit = () => {
         }> => module.status === 'fulfilled',
       )
       .map(module => {
-        const destructuredName: string[] =
-          module.value.default.title.split('/') ?? []
+        const destructuredName: string[] = module.value.default.title.split('/') ?? []
 
         console.debug('destructuredName', destructuredName)
 
         const componentCategory = destructuredName.slice(1, -1).join('/')
         const componentName = destructuredName.at(-1) ?? 'Unknown'
         const a11yStatus = findA11yStatus(module.value.default.parameters)
-        const auditCategories = getComponentAuditCategories(
-          module.value.default.parameters,
-        )
+        const auditCategories = getComponentAuditCategories(module.value.default.parameters)
         const audit = getComponentAudit(module.value.default.parameters)
 
         return {
@@ -121,16 +93,14 @@ const AccessibilityAudit = () => {
     return total > 0 ? Math.round((completed / total) * 100) : 0
   }
 
-  const getComponentsForCategory = (categoryId: string) =>
-    componentsInfo.filter(c => c.audit[categoryId])
+  const getComponentsForCategory = (categoryId: string) => componentsInfo.filter(c => c.audit[categoryId])
 
   return (
     <Stack gap={5}>
       <Stack gap={2}>
         <Text as="p" variant="body">
-          Comprehensive accessibility audit checklist and tracking for all
-          Ultraviolet components. Use this page to track progress and understand
-          accessibility requirements.
+          Comprehensive accessibility audit checklist and tracking for all Ultraviolet components. Use this page to
+          track progress and understand accessibility requirements.
         </Text>
       </Stack>
 
@@ -139,19 +109,17 @@ const AccessibilityAudit = () => {
           Accessibility Levels
         </Text>
         <Stack gap={2} direction="row">
-          {Object.entries(A11Y_LEVELS).map(
-            ([key, { icon, label, description }]) => (
-              <Stack key={key} gap={2} justifyContent="left">
-                <Stack direction="row" gap={2} alignItems="center">
-                  {icon}
-                  <Text as="h3" variant="headingSmall">
-                    {label}
-                  </Text>
-                </Stack>
-                {description}
+          {Object.entries(A11Y_LEVELS).map(([key, { icon, label, description }]) => (
+            <Stack key={key} gap={2} justifyContent="left">
+              <Stack direction="row" gap={2} alignItems="center">
+                {icon}
+                <Text as="h3" variant="headingSmall">
+                  {label}
+                </Text>
               </Stack>
-            ),
-          )}
+              {description}
+            </Stack>
+          ))}
         </Stack>
       </Stack>
 
@@ -170,9 +138,7 @@ const AccessibilityAudit = () => {
           <Table.Body>
             {AUDIT_CATEGORIES.map(category => {
               const percentage = getCategoryCompletion(category.id)
-              const completedCount = getComponentsForCategory(
-                category.id,
-              ).length
+              const completedCount = getComponentsForCategory(category.id).length
 
               return (
                 <Table.Row id={category.id} key={category.id}>
@@ -282,11 +248,7 @@ const AccessibilityAudit = () => {
             {componentsInfo.map(component => (
               <Table.Row id={component.title} key={component.title}>
                 <Table.Cell>
-                  <Button
-                    onClick={linkTo(component.title)}
-                    size="small"
-                    variant="ghost"
-                  >
+                  <Button onClick={linkTo(component.title)} size="small" variant="ghost">
                     {component.name}
                   </Button>
                 </Table.Cell>
@@ -315,15 +277,9 @@ const AccessibilityAudit = () => {
                       <Text as="span" key={category.id} variant="bodySmall">
                         <Tooltip text={category.id}>
                           {category.completed ? (
-                            <CheckCircleOutlineIcon
-                              size="medium"
-                              sentiment="success"
-                            />
+                            <CheckCircleOutlineIcon size="medium" sentiment="success" />
                           ) : (
-                            <CloseCircleOutlineIcon
-                              size="medium"
-                              sentiment="danger"
-                            />
+                            <CloseCircleOutlineIcon size="medium" sentiment="danger" />
                           )}
                         </Tooltip>
                       </Text>

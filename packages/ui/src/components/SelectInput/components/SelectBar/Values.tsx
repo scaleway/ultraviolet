@@ -47,8 +47,7 @@ export const DisplayValues = ({
   displayShadowCopy,
   textVariant,
 }: DisplayValuesProps) => {
-  const { multiselect, selectedData, setSelectedData, options, onChange } =
-    useSelectInput()
+  const { multiselect, selectedData, setSelectedData, options, onChange } = useSelectInput()
 
   return multiselect ? (
     <Stack
@@ -69,10 +68,7 @@ export const DisplayValues = ({
         >
           {potentiallyNonOverflowedValues.map(option => (
             <Tag
-              className={cn(
-                option.value,
-                selectInputStyle.selectBarTags.hidden,
-              )}
+              className={cn(option.value, selectInputStyle.selectBarTags.hidden)}
               key={option.value}
               onClose={() => {}}
             >
@@ -96,9 +92,7 @@ export const DisplayValues = ({
                     clickedOption: option,
                     type: 'selectOption',
                   })
-                  const newSelectedValues = selectedData.selectedValues?.filter(
-                    val => val !== option.value,
-                  )
+                  const newSelectedValues = selectedData.selectedValues?.filter(val => val !== option.value)
                   onChange?.(newSelectedValues)
                 }
           }
@@ -141,9 +135,7 @@ export const DisplayValues = ({
       sentiment="neutral"
       variant={textVariant}
     >
-      {selectedData.selectedValues[0]
-        ? findOptionInOptions(options, selectedData.selectedValues[0])?.label
-        : null}
+      {selectedData.selectedValues[0] ? findOptionInOptions(options, selectedData.selectedValues[0])?.label : null}
     </Text>
   )
 }

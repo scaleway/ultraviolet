@@ -18,9 +18,7 @@ type TreeMapChartProps = {
   height?: string | number
   data: DataType
   className?: string
-  tooltipFunction?: (
-    props: TooltipProps<DataType>['node']['data'],
-  ) => ComponentProps<typeof Tooltip>
+  tooltipFunction?: (props: TooltipProps<DataType>['node']['data']) => ComponentProps<typeof Tooltip>
   chartProps?: Partial<TreeMapSvgProps<DataType>>
   'data-testid'?: string
 }
@@ -65,11 +63,7 @@ export const TreeMapChart = ({
   )
 
   return (
-    <div
-      className={cn(className, treeMapChartStyle.container)}
-      data-testid={dataTestId}
-      style={{ height }}
-    >
+    <div className={cn(className, treeMapChartStyle.container)} data-testid={dataTestId} style={{ height }}>
       <ResponsiveTreeMapHtml
         animate={false}
         borderColor={theme.colors.neutral.background}
@@ -78,9 +72,7 @@ export const TreeMapChart = ({
         data={data}
         enableParentLabel={false}
         identity="id" // The property name used to uniquely identify each node
-        label={node =>
-          typeof node.data.content === 'string' ? node.data.content : node.id
-        }
+        label={node => (typeof node.data.content === 'string' ? node.data.content : node.id)}
         labelSkipSize={20} // Minimum node size (in pixels) before labels are hidden
         labelTextColor={theme.colors.neutral.background}
         leavesOnly // Only show leaf nodes, not parent containers

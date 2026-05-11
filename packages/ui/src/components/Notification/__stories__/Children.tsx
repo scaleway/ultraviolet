@@ -16,20 +16,10 @@ export const Children: StoryFn<typeof NotificationContainer> = args => (
                   You were invited to join the organization [Org_A]
                 </Text>
                 <Stack direction="row" gap={1}>
-                  <Button
-                    onClick={closeToast}
-                    sentiment="neutral"
-                    size="small"
-                    variant="outlined"
-                  >
+                  <Button onClick={closeToast} sentiment="neutral" size="small" variant="outlined">
                     Decline
                   </Button>
-                  <Button
-                    onClick={closeToast}
-                    sentiment="primary"
-                    size="small"
-                    variant="filled"
-                  >
+                  <Button onClick={closeToast} sentiment="primary" size="small" variant="filled">
                     Accept
                   </Button>
                 </Stack>

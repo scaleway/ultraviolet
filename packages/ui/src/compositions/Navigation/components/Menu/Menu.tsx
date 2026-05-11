@@ -20,13 +20,7 @@ export const ItemMenu = ({
   hasActiveChildren,
   'data-flip-id': dataFlipId,
 }: ItemMenuType) => (
-  <Stack
-    alignItems="center"
-    gap={1}
-    justifyContent="flex-start"
-    style={style}
-    data-flip-id={dataFlipId}
-  >
+  <Stack alignItems="center" gap={1} justifyContent="flex-start" style={style} data-flip-id={dataFlipId}>
     {Children.count(children) > 0 ? (
       <Menu
         className={navigationStyle.itemMenuContainer}
@@ -39,12 +33,7 @@ export const ItemMenu = ({
             className={navigationStyle.itemCollapsed}
           >
             {categoryIcon ? (
-              <Stack
-                alignItems="center"
-                direction="row"
-                gap={1}
-                justifyContent="center"
-              >
+              <Stack alignItems="center" direction="row" gap={1} justifyContent="center">
                 {categoryIcon}
               </Stack>
             ) : (
@@ -69,17 +58,8 @@ export const ItemMenu = ({
           variant={active ? 'filled' : 'ghost'}
           className={navigationStyle.itemCollapsed}
         >
-          <Stack
-            alignItems="center"
-            direction="row"
-            gap={1}
-            justifyContent="center"
-          >
-            {categoryIcon ?? (
-              <OrganizationDashboardCategoryIcon
-                variant={active ? 'primary' : 'neutral'}
-              />
-            )}
+          <Stack alignItems="center" direction="row" gap={1} justifyContent="center">
+            {categoryIcon ?? <OrganizationDashboardCategoryIcon variant={active ? 'primary' : 'neutral'} />}
           </Stack>
         </Button>
       </Tooltip>

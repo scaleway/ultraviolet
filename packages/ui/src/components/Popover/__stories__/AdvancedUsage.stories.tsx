@@ -31,24 +31,14 @@ export const AdvancedUsage: StoryFn<typeof Popover> = () => {
     <Popover
       content={
         <>
-          <Modal
-            disclosure={() => <Button sentiment="neutral">Open Modal</Button>}
-          >
+          <Modal disclosure={() => <Button sentiment="neutral">Open Modal</Button>}>
             <div>
               <div>Modal</div>
-              <SelectInput
-                label="Choose an option"
-                name="options"
-                options={options}
-              />
+              <SelectInput label="Choose an option" name="options" options={options} />
               <TextInput label="Type something here" />
             </div>
           </Modal>
-          <SelectInput
-            label="Choose an option"
-            name="options"
-            options={options}
-          />
+          <SelectInput label="Choose an option" name="options" options={options} />
           <TextInput label="Type something here" />
         </>
       }
@@ -66,8 +56,7 @@ export const AdvancedUsage: StoryFn<typeof Popover> = () => {
 AdvancedUsage.parameters = {
   docs: {
     description: {
-      story:
-        'An advanced usage of a Popover with inputs inside and a button to open a modal with also inputs inside.',
+      story: 'An advanced usage of a Popover with inputs inside and a button to open a modal with also inputs inside.',
     },
   },
 }

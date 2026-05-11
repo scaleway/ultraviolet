@@ -8,48 +8,27 @@ import { TimeInput } from '..'
 const DEFAULT_VALUE = new Date('01/01/2000 11:23:14')
 
 describe('timeInput', () => {
-  it('renders correctly with base props', () =>
-    shouldMatchSnapshot(<TimeInput />))
+  it('renders correctly with base props', () => shouldMatchSnapshot(<TimeInput />))
 
-  it('renders correctly disabled', () =>
-    shouldMatchSnapshot(<TimeInput disabled label="test" />))
+  it('renders correctly disabled', () => shouldMatchSnapshot(<TimeInput disabled label="test" />))
 
-  it('renders correctly readOnly', () =>
-    shouldMatchSnapshot(<TimeInput label="test" readOnly />))
+  it('renders correctly readOnly', () => shouldMatchSnapshot(<TimeInput label="test" readOnly />))
 
-  it('renders correctly with error', () =>
-    shouldMatchSnapshot(<TimeInput error="error" label="test" />))
+  it('renders correctly with error', () => shouldMatchSnapshot(<TimeInput error="error" label="test" />))
 
-  it('renders correctly required', () =>
-    shouldMatchSnapshot(<TimeInput label="test" required />))
+  it('renders correctly required', () => shouldMatchSnapshot(<TimeInput label="test" required />))
 
-  it('renders correctly small', () =>
-    shouldMatchSnapshot(<TimeInput label="test" size="small" />))
+  it('renders correctly small', () => shouldMatchSnapshot(<TimeInput label="test" size="small" />))
 
-  it('renders correctly large', () =>
-    shouldMatchSnapshot(<TimeInput label="test" size="large" />))
+  it('renders correctly large', () => shouldMatchSnapshot(<TimeInput label="test" size="large" />))
 
-  it('renders correctly with 12-hour format', () =>
-    shouldMatchSnapshot(<TimeInput label="test" timeFormat={12} />))
+  it('renders correctly with 12-hour format', () => shouldMatchSnapshot(<TimeInput label="test" timeFormat={12} />))
 
   it('renders correctly with label description and helper', () =>
-    shouldMatchSnapshot(
-      <TimeInput
-        helper="helper"
-        label="label"
-        labelDescription={<h1>label</h1>}
-      />,
-    ))
+    shouldMatchSnapshot(<TimeInput helper="helper" label="label" labelDescription={<h1>label</h1>} />))
 
   it('renders correctly with helper and error', () =>
-    shouldMatchSnapshot(
-      <TimeInput
-        error
-        helper="helper"
-        label="label"
-        labelDescription="label description"
-      />,
-    ))
+    shouldMatchSnapshot(<TimeInput error helper="helper" label="label" labelDescription="label description" />))
 
   it('renders correctly controlled - 12-hour format', async () => {
     const mockOnChange = vi.fn()

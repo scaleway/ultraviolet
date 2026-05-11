@@ -18,37 +18,21 @@ export const ItemChildren = ({
   const context = useNavigation()
 
   if (!context) {
-    throw new Error(
-      'Navigation.Item can only be used inside a NavigationProvider.',
-    )
+    throw new Error('Navigation.Item can only be used inside a NavigationProvider.')
   }
 
   return (
     <>
       {noExpand ? (
         <ItemProvider>
-          <Stack
-            gap={0.25}
-            className={
-              noExpand || type === 'pinnedGroup'
-                ? ''
-                : navigationStyle.itemPaddingStack
-            }
-          >
+          <Stack gap={0.25} className={noExpand || type === 'pinnedGroup' ? '' : navigationStyle.itemPaddingStack}>
             {children}
           </Stack>
         </ItemProvider>
       ) : (
         <ItemProvider>
           <Expandable animationDuration={0} opened={internalExpanded}>
-            <Stack
-              gap={0.25}
-              className={
-                noExpand || type === 'pinnedGroup'
-                  ? ''
-                  : navigationStyle.itemPaddingStack
-              }
-            >
+            <Stack gap={0.25} className={noExpand || type === 'pinnedGroup' ? '' : navigationStyle.itemPaddingStack}>
               {children}
             </Stack>
           </Expandable>

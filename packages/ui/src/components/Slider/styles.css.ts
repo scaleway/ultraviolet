@@ -188,8 +188,7 @@ const double = recipe({
         ...sliderThumbDefaultStyle,
         left: leftVar,
       },
-      '&::-moz-range-track, &::-ms-track, &:focus::-webkit-slider-runnable-track':
-        trackStyle,
+      '&::-moz-range-track, &::-ms-track, &:focus::-webkit-slider-runnable-track': trackStyle,
       '&::-webkit-slider-thumb': {
         ...sliderThumbDefaultStyle,
         left: leftVar,

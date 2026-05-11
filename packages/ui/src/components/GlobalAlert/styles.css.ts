@@ -22,18 +22,9 @@ const containerBase = style({
 })
 
 const container = styleVariants({
-  danger: [
-    containerBase,
-    { backgroundColor: theme.colors.danger.backgroundStrong },
-  ],
-  info: [
-    containerBase,
-    { backgroundColor: theme.colors.info.backgroundStrong },
-  ],
-  promotional: [
-    containerBase,
-    { background: theme.colors.other.gradients.background.linear.aqua },
-  ],
+  danger: [containerBase, { backgroundColor: theme.colors.danger.backgroundStrong }],
+  info: [containerBase, { backgroundColor: theme.colors.info.backgroundStrong }],
+  promotional: [containerBase, { background: theme.colors.other.gradients.background.linear.aqua }],
 })
 
 export const globalAlertStyle = {

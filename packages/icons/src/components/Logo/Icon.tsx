@@ -18,20 +18,8 @@ export type IconProps = {
 /**
  * Logo component is used to render a set of logos. Their style cannot be changed
  */
-export const Icon = ({
-  size = 'small',
-  className,
-  children,
-  style,
-  title,
-}: IconProps) => (
-  <svg
-    className={cn(className, logo[size])}
-    height="20"
-    style={style}
-    viewBox="0 0 20 20"
-    width="20"
-  >
+export const Icon = ({ size = 'small', className, children, style, title }: IconProps) => (
+  <svg className={cn(className, logo[size])} height="20" style={style} viewBox="0 0 20 20" width="20">
     <title>{title}</title>
     {children}
   </svg>

@@ -9,11 +9,7 @@ type CarouselItemProps = {
   width?: string
   style?: CSSProperties
 }
-export const CarouselItem = ({
-  children,
-  width = '240px',
-  style,
-}: CarouselItemProps) => (
+export const CarouselItem = ({ children, width = '240px', style }: CarouselItemProps) => (
   <div
     className={carouselStyle.borderWrapper}
     draggable="true"

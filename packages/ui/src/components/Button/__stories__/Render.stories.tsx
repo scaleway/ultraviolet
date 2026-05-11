@@ -9,14 +9,13 @@ import type { StoryFn } from '@storybook/react-vite'
 const buttonVariants = ['ghost', 'filled', 'outlined'] as const
 
 // Mock component simulating Next.js Link (must spread props and forward ref)
-const MockNextLink = forwardRef<
-  HTMLAnchorElement,
-  React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }
->(({ href, children, ...props }, ref) => (
-  <a href={href} ref={ref} {...props}>
-    {children}
-  </a>
-))
+const MockNextLink = forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }>(
+  ({ href, children, ...props }, ref) => (
+    <a href={href} ref={ref} {...props}>
+      {children}
+    </a>
+  ),
+)
 MockNextLink.displayName = 'MockNextLink'
 
 export const Render: StoryFn<typeof Button> = () => (
@@ -25,11 +24,7 @@ export const Render: StoryFn<typeof Button> = () => (
       <strong>Element form (props auto-merged):</strong>
       <Stack alignItems="center" direction="row" gap={2}>
         {buttonVariants.map(variant => (
-          <Button
-            key={variant}
-            render={<MockNextLink href="/about" />}
-            variant={variant}
-          >
+          <Button key={variant} render={<MockNextLink href="/about" />} variant={variant}>
             <PencilIcon />
             {variant}
           </Button>
@@ -40,10 +35,7 @@ export const Render: StoryFn<typeof Button> = () => (
     <Stack direction="column" gap={1}>
       <strong>Function form (you control prop merging):</strong>
       <Stack alignItems="center" direction="row" gap={2}>
-        <Button
-          render={props => <MockNextLink {...props} href="/about" />}
-          variant="filled"
-        >
+        <Button render={props => <MockNextLink {...props} href="/about" />} variant="filled">
           <PencilIcon />
           Click me
         </Button>

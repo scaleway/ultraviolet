@@ -1,10 +1,7 @@
 import { Stack } from '@ultraviolet/ui'
 import { useState } from 'react'
 
-import {
-  animationShowCaseAnimatedElement,
-  animationShowCaseContainer,
-} from './styles.css'
+import { animationShowCaseAnimatedElement, animationShowCaseContainer } from './styles.css'
 
 export const ShowcaseAnimations = ({ animation }: { animation: string }) => {
   const [className, setClassName] = useState('')

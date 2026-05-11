@@ -6,9 +6,7 @@ import { Submit } from '../../../components/Submit'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const Required: StoryFn<
-  ComponentProps<typeof CustomerSatisfactionField>
-> = args => (
+export const Required: StoryFn<ComponentProps<typeof CustomerSatisfactionField>> = args => (
   <Stack gap={1}>
     <CustomerSatisfactionField {...args} />
     <Submit>Submit</Submit>

@@ -22,9 +22,7 @@ export const Examples: StoryFn = args => {
         {...args}
         legend="First group"
         name="First group"
-        onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-          onChange(event.currentTarget.value)
-        }
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
         showTick
         type="radio"
         value={value}
@@ -44,8 +42,7 @@ export const Examples: StoryFn = args => {
           value="label-14"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 1.99€ and provide you with a lot of
-            happiness
+            This option will cost you 1.99€ and provide you with a lot of happiness
           </Text>
         </SelectableCardGroup.Card>
         <SelectableCardGroup.Card
@@ -63,8 +60,7 @@ export const Examples: StoryFn = args => {
           value="label-15"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
+            This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCardGroup.Card>
       </SelectableCardGroup>
@@ -102,8 +98,7 @@ export const Examples: StoryFn = args => {
           value="label-22"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
+            This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCardGroup.Card>
         <SelectableCardGroup.Card
@@ -122,8 +117,7 @@ export const Examples: StoryFn = args => {
           value="label-23"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
+            This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCardGroup.Card>
 
@@ -142,8 +136,7 @@ export const Examples: StoryFn = args => {
           value="label-24"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
+            This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCardGroup.Card>
 
@@ -162,8 +155,7 @@ export const Examples: StoryFn = args => {
           value="label-25"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
+            This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCardGroup.Card>
       </SelectableCardGroup>

@@ -13,18 +13,10 @@ type TabMenuItemProps = {
   value?: string | number
 } & ComponentProps<typeof Menu.Item>
 
-export const TabMenuItem = ({
-  value,
-  children,
-  onClick,
-  ...props
-}: TabMenuItemProps) => {
+export const TabMenuItem = ({ value, children, onClick, ...props }: TabMenuItemProps) => {
   const { selected, onChange } = useTabsContext()
 
-  const isSelected = useMemo(
-    () => value !== undefined && selected === value,
-    [value, selected],
-  )
+  const isSelected = useMemo(() => value !== undefined && selected === value, [value, selected])
 
   return (
     <Menu.Item

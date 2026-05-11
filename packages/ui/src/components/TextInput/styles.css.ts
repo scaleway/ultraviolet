@@ -49,10 +49,7 @@ const inputWrapperSizes = styleVariants(
     (acc, size) => ({
       ...acc,
       [size]: {
-        height:
-          theme.sizing[
-            TEXTINPUT_SIZE_HEIGHT[size as keyof typeof TEXTINPUT_SIZE_HEIGHT]
-          ],
+        height: theme.sizing[TEXTINPUT_SIZE_HEIGHT[size as keyof typeof TEXTINPUT_SIZE_HEIGHT]],
       },
     }),
     {} as Record<keyof typeof TEXTINPUT_SIZE_HEIGHT, { height: string }>,

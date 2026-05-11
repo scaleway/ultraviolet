@@ -9,16 +9,8 @@ describe('groupField', () => {
   it('should render correctly checked', async () => {
     const { asFragment } = renderWithForm(
       <ToggleGroupField legend="Label" name="Group" onChange={() => {}}>
-        <ToggleGroupField.Toggle
-          label="value 1"
-          name="value-1"
-          value="value-1"
-        />
-        <ToggleGroupField.Toggle
-          label="value 1"
-          name="value-2"
-          value="value-2"
-        />
+        <ToggleGroupField.Toggle label="value 1" name="value-1" value="value-1" />
+        <ToggleGroupField.Toggle label="value 1" name="value-2" value="value-2" />
       </ToggleGroupField>,
       {
         defaultValues: {
@@ -40,22 +32,9 @@ describe('groupField', () => {
     const onChange = vi.fn(() => {})
 
     const { asFragment } = renderWithForm(
-      <ToggleGroupField
-        legend="ToggleGroupField events"
-        name="test"
-        onChange={onChange}
-        required
-      >
-        <ToggleGroupField.Toggle
-          label="value 1"
-          name="value-1"
-          value="value-1"
-        />
-        <ToggleGroupField.Toggle
-          label="value 1"
-          name="value-2"
-          value="value-2"
-        />
+      <ToggleGroupField legend="ToggleGroupField events" name="test" onChange={onChange} required>
+        <ToggleGroupField.Toggle label="value 1" name="value-1" value="value-1" />
+        <ToggleGroupField.Toggle label="value 1" name="value-2" value="value-2" />
       </ToggleGroupField>,
       {
         defaultValues: {

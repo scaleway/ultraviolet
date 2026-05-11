@@ -19,12 +19,7 @@ type NoticeProps = {
 /**
  * A Notice is used to display a short message to the user.
  */
-export const Notice = ({
-  children,
-  className,
-  'data-testid': dataTestId,
-  style,
-}: NoticeProps) => (
+export const Notice = ({ children, className, 'data-testid': dataTestId, style }: NoticeProps) => (
   <Text
     as="span"
     className={cn(className, noticeStyle.notice)}
@@ -34,11 +29,7 @@ export const Notice = ({
     style={style}
     variant="caption"
   >
-    <InformationOutlineIcon
-      prominence="weak"
-      sentiment="neutral"
-      size="small"
-    />
+    <InformationOutlineIcon prominence="weak" sentiment="neutral" size="small" />
     {children}
   </Text>
 )

@@ -10,9 +10,4 @@ const supportPlansKeyvisual = `${BASE_URL}/products/supportPlans/support-plans-k
 const supportPlansOriginal = `${BASE_URL}/products/supportPlans/support-plans-original.webp`
 const supportPlansWire = `${BASE_URL}/products/supportPlans/support-plans-wire.svg`
 
-export {
-  supportPlansContent,
-  supportPlansKeyvisual,
-  supportPlansOriginal,
-  supportPlansWire,
-}
+export { supportPlansContent, supportPlansKeyvisual, supportPlansOriginal, supportPlansWire }

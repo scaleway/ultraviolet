@@ -41,9 +41,6 @@ describe(usePrefersReducedMotion, () => {
 
     unmount()
 
-    expect(mockRemoveListener).toHaveBeenCalledWith(
-      'change',
-      expect.any(Function),
-    )
+    expect(mockRemoveListener).toHaveBeenCalledWith('change', expect.any(Function))
   })
 })

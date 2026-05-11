@@ -10,10 +10,7 @@ import { checkboxGroupStyle } from './styles.css'
 
 import type { ComponentProps } from 'react'
 
-type CheckboxGroupCheckboxProps = Omit<
-  ComponentProps<typeof Checkbox>,
-  'onChange' | 'checked'
-> & {
+type CheckboxGroupCheckboxProps = Omit<ComponentProps<typeof Checkbox>, 'onChange' | 'checked'> & {
   value: string
 }
 
@@ -37,9 +34,7 @@ export const CheckboxGroupCheckbox = ({
   const context = useContext(CheckboxGroupContext)
 
   if (!context) {
-    throw new Error(
-      'CheckboxGroup.Checkbox can only be used inside a CheckboxGroup',
-    )
+    throw new Error('CheckboxGroup.Checkbox can only be used inside a CheckboxGroup')
   }
 
   const { groupName, onChange, groupValues, error: errorContext } = context

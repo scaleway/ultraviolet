@@ -14,12 +14,4 @@ export const PROMINENCES = {
   weak: 'weak',
 } as const
 
-export const SENTIMENTS = [
-  'primary',
-  'secondary',
-  'neutral',
-  'success',
-  'danger',
-  'warning',
-  'info',
-] as const
+export const SENTIMENTS = ['primary', 'secondary', 'neutral', 'success', 'danger', 'warning', 'info'] as const

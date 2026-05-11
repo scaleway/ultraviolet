@@ -22,11 +22,7 @@ export const getMax = (values: AllowedValue[] = []): number =>
 
 export const getAverage = (values: AllowedValue[] = []): number =>
   values.length > 0
-    ? Math.round(
-        (values.reduce<number>((sum, curr) => sum + parse(curr), 0) /
-          values.length) *
-          100,
-      ) / 100
+    ? Math.round((values.reduce<number>((sum, curr) => sum + parse(curr), 0) / values.length) * 100) / 100
     : 0
 
 export const getMaxChartValue = (preppedData?: LineSeries[]): number => {
@@ -34,9 +30,7 @@ export const getMaxChartValue = (preppedData?: LineSeries[]): number => {
     return 0
   }
 
-  const maximum = Math.max(
-    ...preppedData.map(({ data }) => getMax(data.map(({ y }) => y ?? 0))),
-  )
+  const maximum = Math.max(...preppedData.map(({ data }) => getMax(data.map(({ y }) => y ?? 0))))
 
   return Math.ceil(maximum + maximum * 0.1)
 }
@@ -46,9 +40,7 @@ export const getMinChartValue = (preppedData?: LineSeries[]): number => {
     return 0
   }
 
-  const minimum = Math.min(
-    ...preppedData.map(({ data }) => getMin(data.map(({ y }) => y ?? 0))),
-  )
+  const minimum = Math.min(...preppedData.map(({ data }) => getMin(data.map(({ y }) => y ?? 0))))
 
   return Math.floor(minimum - minimum * 0.1)
 }
@@ -59,11 +51,7 @@ export const getCurrent = (values: number[] = []): number => {
   return val ?? 0
 }
 
-export const getSelected = (
-  label: string,
-  index: number,
-  selected: string[] = [],
-): string[] => {
+export const getSelected = (label: string, index: number, selected: string[] = []): string[] => {
   const labelIndexed = label + index.toString()
   const found = selected.indexOf(labelIndexed)
 

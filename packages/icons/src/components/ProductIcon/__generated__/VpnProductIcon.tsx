@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const VpnProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const VpnProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="VpnProductIcon">
     <g className="sentiment=original, size=xlarge, disabled=false">
       <g className=".Square">
@@ -41,10 +39,7 @@ export const VpnProductIcon = ({
             d="M28 9a4 4 0 0 1 4-4l.2.005a4 4 0 0 1 3.655 5.066l12.974 7.49A3.993 3.993 0 0 1 52 16l.2.005a4 4 0 0 1 .719 7.889v15.212A4.002 4.002 0 0 1 52 47l-.2-.005a3.982 3.982 0 0 1-2.351-.914l-13.594 7.848A4.003 4.003 0 0 1 32 59l-.2-.005A4 4 0 0 1 32 51l.2.005a3.988 3.988 0 0 1 2.654 1.192l13.417-7.746a4.002 4.002 0 0 1 2.647-5.303V23.852a4.002 4.002 0 0 1-2.876-4.435l-13.188-7.615A3.988 3.988 0 0 1 32 13l-.2-.005A4 4 0 0 1 28 9Zm4 44a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm20-12a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm0-23a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM32 7a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z"
             clipRule="evenodd"
           />
-          <path
-            fill="#fff"
-            d="M32 32a1 1 0 0 1 .993.883L33 33v2a1 1 0 0 1-1.993.117L31 35v-2a1 1 0 0 1 1-1Z"
-          />
+          <path fill="#fff" d="M32 32a1 1 0 0 1 .993.883L33 33v2a1 1 0 0 1-1.993.117L31 35v-2a1 1 0 0 1 1-1Z" />
           <path
             fill="#fff"
             fillRule="evenodd"

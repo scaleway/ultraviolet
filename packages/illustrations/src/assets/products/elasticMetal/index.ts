@@ -10,9 +10,4 @@ const elasticMetalKeyvisual = `${BASE_URL}/products/elasticMetal/elastic-metal-k
 const elasticMetalOriginal = `${BASE_URL}/products/elasticMetal/elastic-metal-original.webp`
 const elasticMetalWire = `${BASE_URL}/products/elasticMetal/elastic-metal-wire.svg`
 
-export {
-  elasticMetalContent,
-  elasticMetalKeyvisual,
-  elasticMetalOriginal,
-  elasticMetalWire,
-}
+export { elasticMetalContent, elasticMetalKeyvisual, elasticMetalOriginal, elasticMetalWire }

@@ -53,9 +53,7 @@ export const Slider = ({
   // we check if options exists if so we set the bounds to the length of the options
 
   const correctedBounds =
-    options && !defaultScale
-      ? { max: Array.isArray(options) ? options.length - 1 : max, min: 0 }
-      : { max, min }
+    options && !defaultScale ? { max: Array.isArray(options) ? options.length - 1 : max, min: 0 } : { max, min }
 
   const gap = useMemo(() => {
     if (options) {
@@ -139,12 +137,7 @@ export const Slider = ({
         />
       )}
       {error || helper ? (
-        <Text
-          as="p"
-          prominence="weak"
-          sentiment={error ? 'danger' : 'neutral'}
-          variant="caption"
-        >
+        <Text as="p" prominence="weak" sentiment={error ? 'danger' : 'neutral'} variant="caption">
           {typeof error === 'string' ? error : helper}
         </Text>
       ) : null}

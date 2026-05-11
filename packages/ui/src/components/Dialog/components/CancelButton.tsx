@@ -11,19 +11,8 @@ type DialogCancelButtonProps = {
   style?: CSSProperties
 }
 
-export const DialogCancelButton = ({
-  children,
-  onClick,
-  disabled,
-  style,
-}: DialogCancelButtonProps) => (
-  <Button
-    disabled={disabled}
-    onClick={onClick}
-    sentiment="neutral"
-    style={style}
-    variant="outlined"
-  >
+export const DialogCancelButton = ({ children, onClick, disabled, style }: DialogCancelButtonProps) => (
+  <Button disabled={disabled} onClick={onClick} sentiment="neutral" style={style} variant="outlined">
     {children}
   </Button>
 )

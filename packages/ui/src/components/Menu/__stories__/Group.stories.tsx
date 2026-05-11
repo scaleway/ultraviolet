@@ -20,12 +20,7 @@ export const Group: StoryFn<typeof Menu> = ({ ...props }) => (
       }
     >
       <Menu.Item borderless>
-        <Stack
-          alignItems="center"
-          direction="row"
-          flex={1}
-          justifyContent="space-between"
-        >
+        <Stack alignItems="center" direction="row" flex={1} justifyContent="space-between">
           Information&nbsp;
           <Badge sentiment="success" size="small">
             New
@@ -40,12 +35,7 @@ export const Group: StoryFn<typeof Menu> = ({ ...props }) => (
     </Menu.Group>
     <Menu.Group label="Dedicated Server">
       <Menu.Item borderless>
-        <Stack
-          alignItems="center"
-          direction="row"
-          flex={1}
-          justifyContent="space-between"
-        >
+        <Stack alignItems="center" direction="row" flex={1} justifyContent="space-between">
           Information&nbsp;
           <Badge sentiment="success" size="small">
             New

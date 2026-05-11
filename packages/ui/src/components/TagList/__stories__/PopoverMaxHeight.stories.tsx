@@ -5,8 +5,7 @@ export const PopoverMaxHeight = Template.bind({})
 PopoverMaxHeight.parameters = {
   docs: {
     description: {
-      story:
-        '`popoverMaxHeight` can be used to control the popover max height when having a lot of items.',
+      story: '`popoverMaxHeight` can be used to control the popover max height when having a lot of items.',
     },
   },
 }
@@ -14,14 +13,7 @@ PopoverMaxHeight.parameters = {
 PopoverMaxHeight.args = {
   popoverMaxHeight: '10rem',
   popoverTitle: 'Additional tags',
-  tags: [
-    'very',
-    ...new Array<string>(50).fill('item'),
-    'tooltip',
-    'scaleway',
-    'paris',
-    'cloud',
-  ],
+  tags: ['very', ...new Array<string>(50).fill('item'), 'tooltip', 'scaleway', 'paris', 'cloud'],
   threshold: 5,
 }
 

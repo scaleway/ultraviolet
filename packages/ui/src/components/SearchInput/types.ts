@@ -9,17 +9,10 @@ type ChildrenProps = {
   toggleIsOpen: DispatchWithoutAction
 }
 
-export type SearchBarChildrenFunctionProps = ({
-  searchTerms,
-  isOpen,
-  toggleIsOpen,
-}: ChildrenProps) => ReactNode
+export type SearchBarChildrenFunctionProps = ({ searchTerms, isOpen, toggleIsOpen }: ChildrenProps) => ReactNode
 
 export type SearchInputProps = {
-  popupPlacement?: Exclude<
-    ComponentProps<typeof Popup>['placement'],
-    'nested-menu'
-  >
+  popupPlacement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
   threshold?: number
   children?: SearchBarChildrenFunctionProps | ReactNode
   onSearch: (value: string) => void
@@ -33,11 +26,5 @@ export type SearchInputProps = {
   className?: string
 } & Exclude<
   ComponentProps<typeof TextInput>,
-  | 'prefix'
-  | 'suffix'
-  | 'clearable'
-  | 'success'
-  | 'onRandomize'
-  | 'onChange'
-  | 'type'
+  'prefix' | 'suffix' | 'clearable' | 'success' | 'onRandomize' | 'onChange' | 'type'
 >

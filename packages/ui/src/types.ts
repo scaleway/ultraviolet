@@ -1,9 +1,7 @@
 import type { ReactNode } from 'react'
 
 type Without<T, U> = { [P in Exclude<keyof T, keyof U>]?: never }
-type SingleXOR<T, U> = T | U extends object
-  ? (Without<T, U> & U) | (Without<U, T> & T)
-  : T | U
+type SingleXOR<T, U> = T | U extends object ? (Without<T, U> & U) | (Without<U, T> & T) : T | U
 
 export type XOR<T extends unknown[]> = T extends [infer Only]
   ? Only
@@ -11,13 +9,9 @@ export type XOR<T extends unknown[]> = T extends [infer Only]
     ? XOR<[SingleXOR<A, B>, ...Rest]>
     : never
 
-export type PascalToCamelCase<S extends string> =
-  S extends `${infer P1}${infer P2}` ? `${Lowercase<P1>}${P2}` : S
+export type PascalToCamelCase<S extends string> = S extends `${infer P1}${infer P2}` ? `${Lowercase<P1>}${P2}` : S
 
-export type RemoveSuffix<
-  S extends string,
-  Suffix extends string,
-> = S extends `${infer Prefix}${Suffix}` ? Prefix : S
+export type RemoveSuffix<S extends string, Suffix extends string> = S extends `${infer Prefix}${Suffix}` ? Prefix : S
 
 /**
  * This type removes the suffix from a PascalCase string and converts it to camelCase. Pretty useful for Icon, CategoryIcon and ProductIcon components.

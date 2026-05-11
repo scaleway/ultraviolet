@@ -28,13 +28,7 @@ import type { CSSProperties } from 'react'
 // Note: Get type optional from omit values
 type TableProps = Omit<
   TableProviderProps,
-  | 'selectable'
-  | 'loading'
-  | 'bordered'
-  | 'stripped'
-  | 'autoCollapse'
-  | 'columns'
-  | 'expandButton'
+  'selectable' | 'loading' | 'bordered' | 'stripped' | 'autoCollapse' | 'columns' | 'expandButton'
 > & {
   selectable?: boolean
   /**
@@ -82,11 +76,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
     >
       <TableContainer>
         <table
-          className={cn(
-            tableStyle.table,
-            stripped ? tableStyle.stripped : '',
-            bordered ? tableStyle.bordered : '',
-          )}
+          className={cn(tableStyle.table, stripped ? tableStyle.stripped : '', bordered ? tableStyle.bordered : '')}
           ref={ref}
           style={style}
         >
@@ -112,11 +102,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
           </Header>
           {loading ? (
             <Body>
-              <SkeletonRows
-                cols={columns.length}
-                rows={5}
-                selectable={selectable}
-              />
+              <SkeletonRows cols={columns.length} rows={5} selectable={selectable} />
             </Body>
           ) : (
             children

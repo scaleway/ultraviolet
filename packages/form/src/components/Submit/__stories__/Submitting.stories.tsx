@@ -20,9 +20,7 @@ export const Submitting: StoryFn = () => {
         })
       }
     >
-      <Submit>
-        {isSubmitting ? 'This form is submitting' : 'Click to submit for 5sec'}
-      </Submit>
+      <Submit>{isSubmitting ? 'This form is submitting' : 'Click to submit for 5sec'}</Submit>
     </Form>
   )
 }

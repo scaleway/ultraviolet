@@ -45,11 +45,7 @@ const Render = () => {
           title="Popover Title"
           visible={opened}
         >
-          <Button
-            onClick={() => setOpened(true)}
-            sentiment="neutral"
-            ref={btnRef}
-          >
+          <Button onClick={() => setOpened(true)} sentiment="neutral" ref={btnRef}>
             Open Popover
           </Button>
         </Popover>

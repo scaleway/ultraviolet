@@ -1,8 +1,4 @@
-import {
-  categoryAZ,
-  categoryCustomContent,
-  categoryOptions,
-} from './productsExample'
+import { categoryAZ, categoryCustomContent, categoryOptions } from './productsExample'
 import { Template } from './Template.stories'
 
 export const CustomContent = Template.bind({})

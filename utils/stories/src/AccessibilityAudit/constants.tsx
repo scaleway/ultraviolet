@@ -1,8 +1,4 @@
-import {
-  SettingsOutlineIcon,
-  ShieldCheckOutlineIcon,
-  ProgressCheckIcon,
-} from '@ultraviolet/icons'
+import { SettingsOutlineIcon, ShieldCheckOutlineIcon, ProgressCheckIcon } from '@ultraviolet/icons'
 import { Text } from '@ultraviolet/ui'
 
 import type { ReactNode } from 'react'
@@ -35,14 +31,12 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
   {
     id: 'keyboard-focus',
     title: '1. Keyboard & Focus Management',
-    description:
-      'Ensure all interactive elements are accessible via keyboard and focus is managed correctly.',
+    description: 'Ensure all interactive elements are accessible via keyboard and focus is managed correctly.',
     criteria: [
       {
         name: 'Keyboard Accessible',
         wcagLevel: '2.1.1 - A',
-        description:
-          'All interactive elements can be triggered using Tab, Enter, or Space.',
+        description: 'All interactive elements can be triggered using Tab, Enter, or Space.',
         examples: [
           'Buttons respond to Enter/Space keys',
           'Links respond to Enter key',
@@ -52,8 +46,7 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'No Keyboard Trap',
         wcagLevel: '2.1.2 - A',
-        description:
-          'Focus never gets stuck inside a component (e.g., Modals, Datepickers).',
+        description: 'Focus never gets stuck inside a component (e.g., Modals, Datepickers).',
         examples: [
           'Modal: Can close with Escape and focus returns to trigger',
           'Datepicker: Can navigate with arrow keys and close',
@@ -63,8 +56,7 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'Focus Order',
         wcagLevel: '2.4.3 - A',
-        description:
-          'Tab order follows the visual and logical flow of the component.',
+        description: 'Tab order follows the visual and logical flow of the component.',
         examples: [
           'Tab order goes left-to-right, top-to-bottom',
           'Focus order matches reading order',
@@ -74,10 +66,8 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'Focus Visible',
         wcagLevel: '2.4.7 - AA',
-        description:
-          'Highly visible focus indicator (outline) on all interactive elements.',
-        aaaNote:
-          'Focus indicator has a contrast ratio of at least 4.5:1 against the background (2.4.11 - AAA).',
+        description: 'Highly visible focus indicator (outline) on all interactive elements.',
+        aaaNote: 'Focus indicator has a contrast ratio of at least 4.5:1 against the background (2.4.11 - AAA).',
         examples: [
           'Clear outline on focused buttons',
           'Visible focus ring on input fields',
@@ -87,8 +77,7 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'Focus Restoration',
         wcagLevel: 'Best Practice',
-        description:
-          'Focus returns to the trigger element after closing overlays/menus.',
+        description: 'Focus returns to the trigger element after closing overlays/menus.',
         examples: [
           'Modal closes → focus returns to trigger button',
           'Dropdown closes → focus returns to dropdown button',
@@ -100,16 +89,13 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
   {
     id: 'contrast-visuals',
     title: '2. Contrast & Visuals',
-    description:
-      'Ensure sufficient color contrast and that information is not conveyed by color alone.',
+    description: 'Ensure sufficient color contrast and that information is not conveyed by color alone.',
     criteria: [
       {
         name: 'Text Contrast',
         wcagLevel: '1.4.3 - AA',
-        description:
-          'Minimum 4.5:1 for normal text; 3:1 for large text (18pt or 14pt bold).',
-        aaaNote:
-          'Minimum 7:1 for normal text; 4.5:1 for large text (1.4.6 - AAA).',
+        description: 'Minimum 4.5:1 for normal text; 3:1 for large text (18pt or 14pt bold).',
+        aaaNote: 'Minimum 7:1 for normal text; 4.5:1 for large text (1.4.6 - AAA).',
         examples: [
           'Body text has 4.5:1 contrast ratio',
           'Heading text meets contrast requirements',
@@ -119,8 +105,7 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'Non-Text Contrast',
         wcagLevel: '1.4.11 - AA',
-        description:
-          'Minimum 3:1 for UI components (borders, icons) and focus states.',
+        description: 'Minimum 3:1 for UI components (borders, icons) and focus states.',
         examples: [
           'Input borders have 3:1 contrast',
           'Icons have sufficient contrast against background',
@@ -130,8 +115,7 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'Use of Color',
         wcagLevel: '1.4.1 - A',
-        description:
-          'Color is not the only way to convey info (e.g., error states use icons/text + color).',
+        description: 'Color is not the only way to convey info (e.g., error states use icons/text + color).',
         examples: [
           'Error fields have icon + red color + error message',
           'Success states use checkmark + color + text',
@@ -141,8 +125,7 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'Text Spacing',
         wcagLevel: '1.4.12 - AA',
-        description:
-          'Component remains functional when line height/letter spacing is increased.',
+        description: 'Component remains functional when line height/letter spacing is increased.',
         examples: [
           `Text doesn't overlap when line-height is 1.5x`,
           `Content doesn't truncate when letter-spacing is increased`,
@@ -154,14 +137,12 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
   {
     id: 'semantics-screen-reader',
     title: '3. Semantics & Screen Reader (VoiceOver)',
-    description:
-      'Use proper semantic HTML and ARIA attributes to ensure screen reader compatibility.',
+    description: 'Use proper semantic HTML and ARIA attributes to ensure screen reader compatibility.',
     criteria: [
       {
         name: 'Name, Role, Value',
         wcagLevel: '4.1.2 - A',
-        description:
-          'Every component has a valid ARIA role and a programmatic name (e.g., aria-label).',
+        description: 'Every component has a valid ARIA role and a programmatic name (e.g., aria-label).',
         examples: [
           'Custom buttons have role="button" and accessible name',
           'Icons have aria-label or aria-hidden="true"',
@@ -171,8 +152,7 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'Info & Relationships',
         wcagLevel: '1.3.1 - A',
-        description:
-          'Proper HTML tags used (e.g., <ul> for lists, <button> for actions).',
+        description: 'Proper HTML tags used (e.g., <ul> for lists, <button> for actions).',
         examples: [
           'Lists use <ul>/<ol> and <li> elements',
           'Buttons use <button> not <div>',
@@ -182,8 +162,7 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'Status Messages',
         wcagLevel: '4.1.3 - AA',
-        description:
-          'Dynamic updates (success, loading, errors) use aria-live or role="status".',
+        description: 'Dynamic updates (success, loading, errors) use aria-live or role="status".',
         examples: [
           'Form submissions use aria-live for status updates',
           'Loading states announce to screen readers',
@@ -193,8 +172,7 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'State Transparency',
         wcagLevel: 'Best Practice',
-        description:
-          'Attributes like aria-expanded, aria-selected, or aria-checked update correctly on interaction.',
+        description: 'Attributes like aria-expanded, aria-selected, or aria-checked update correctly on interaction.',
         examples: [
           'Accordion: aria-expanded updates on toggle',
           'Tabs: aria-selected updates on tab change',
@@ -222,8 +200,7 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'Pointer Cancellation',
         wcagLevel: '2.5.2 - A',
-        description:
-          'Actions are triggered on the "Up" event (click), not the "Down" event, allowing users to abort.',
+        description: 'Actions are triggered on the "Up" event (click), not the "Down" event, allowing users to abort.',
         examples: [
           'Click activates on mouseup, not mousedown',
           'Touch actions complete on touchend',
@@ -233,8 +210,7 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'Label in Name',
         wcagLevel: '2.5.3 - A',
-        description:
-          'For buttons with text, the accessible name must contain the visible text.',
+        description: 'For buttons with text, the accessible name must contain the visible text.',
         examples: [
           'Button "Submit" has accessible name containing "Submit"',
           'Icon + text buttons include text in accessible name',
@@ -251,8 +227,7 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'Forms',
         wcagLevel: '3.3.2 - A',
-        description:
-          'Every input has a visible <label> or an aria-labelledby association.',
+        description: 'Every input has a visible <label> or an aria-labelledby association.',
         examples: [
           'Inputs have associated <label> elements',
           'Labels are visible (not just placeholders)',
@@ -262,8 +237,7 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'Error Identification',
         wcagLevel: '3.3.1 - A',
-        description:
-          'Errors are clear and programmatically linked via aria-describedby.',
+        description: 'Errors are clear and programmatically linked via aria-describedby.',
         examples: [
           'Error messages linked with aria-describedby',
           'Invalid fields have aria-invalid="true"',
@@ -273,8 +247,7 @@ export const AUDIT_CATEGORIES: AuditCategory[] = [
       {
         name: 'Tables',
         wcagLevel: '1.3.1 - A',
-        description:
-          'Structural headers (<th>) are correctly associated with data cells (<td>).',
+        description: 'Structural headers (<th>) are correctly associated with data cells (<td>).',
         examples: [
           'Table headers use <th> elements',
           'scope attribute on headers (row/col)',
@@ -311,9 +284,8 @@ export const A11Y_LEVELS: Record<
     label: 'Partial',
     description: (
       <Text as="p" variant="body">
-        A11y Partial means the component has some accessibility improvements but
-        is not fully compliant. Work is in progress to meet accessibility
-        standards.
+        A11y Partial means the component has some accessibility improvements but is not fully compliant. Work is in
+        progress to meet accessibility standards.
       </Text>
     ),
   },
@@ -323,9 +295,8 @@ export const A11Y_LEVELS: Record<
     label: 'Compliant',
     description: (
       <Text as="p" variant="body">
-        A11y Compliant means the component meets basic accessibility standards
-        (WCAG 2.1 Level AA). The component has been audited and validated for
-        accessibility.
+        A11y Compliant means the component meets basic accessibility standards (WCAG 2.1 Level AA). The component has
+        been audited and validated for accessibility.
       </Text>
     ),
   },
@@ -335,9 +306,8 @@ export const A11Y_LEVELS: Record<
     label: 'Certified',
     description: (
       <Text as="p" variant="body">
-        A11y Certified means the component has been thoroughly tested and
-        certified for accessibility compliance (WCAG 2.1 Level AAA). This is the
-        highest level of accessibility validation.
+        A11y Certified means the component has been thoroughly tested and certified for accessibility compliance (WCAG
+        2.1 Level AAA). This is the highest level of accessibility validation.
       </Text>
     ),
   },
@@ -357,9 +327,7 @@ export type ComponentStoryParameters = {
   audit?: ComponentAuditStatus
 }
 
-export const getComponentAuditCategories = (
-  parameters: ComponentStoryParameters,
-): AuditCategories => {
+export const getComponentAuditCategories = (parameters: ComponentStoryParameters): AuditCategories => {
   if (!parameters?.audit) {
     return AUDIT_CATEGORIES.map(cat => ({ id: cat.id, completed: false }))
   }
@@ -375,8 +343,7 @@ export const findA11yStatus = (parameters: { a11y?: boolean | A11yLevel }) => {
     return null
   }
 
-  const a11yLevel =
-    typeof parameters.a11y === 'string' ? parameters.a11y : 'compliant'
+  const a11yLevel = typeof parameters.a11y === 'string' ? parameters.a11y : 'compliant'
 
   return A11Y_LEVELS[a11yLevel]
 }

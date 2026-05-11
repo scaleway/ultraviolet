@@ -15,12 +15,7 @@ type CustomUnitInputProps = {
 }
 
 export const CustomUnitInput = memo(
-  ({
-    defaultTimeUnit = 'hours',
-    setIteration,
-    iteration,
-    timeUnits,
-  }: CustomUnitInputProps) => {
+  ({ defaultTimeUnit = 'hours', setIteration, iteration, timeUnits }: CustomUnitInputProps) => {
     const { locales } = useEstimateCost()
 
     const options = useMemo(

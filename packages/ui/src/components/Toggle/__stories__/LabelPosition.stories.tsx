@@ -11,8 +11,7 @@ LabelPosition.args = {
 LabelPosition.parameters = {
   docs: {
     description: {
-      story:
-        'Easily change the position of the label by passing `labelPosition` prop.',
+      story: 'Easily change the position of the label by passing `labelPosition` prop.',
     },
   },
 }

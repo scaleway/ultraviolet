@@ -86,12 +86,7 @@ export const Alert = ({
         justifyContent="space-between"
         wrap
       >
-        <Stack
-          alignItems="flex-start"
-          direction="row"
-          flex="1 1 auto"
-          gap={size === 'small' ? 1 : 2}
-        >
+        <Stack alignItems="flex-start" direction="row" flex="1 1 auto" gap={size === 'small' ? 1 : 2}>
           <Icon
             aria-hidden="true"
             className={alertStyle.icon}
@@ -108,13 +103,7 @@ export const Alert = ({
             wrap
           >
             {title ? (
-              <Text
-                as="span"
-                sentiment={sentiment}
-                variant={
-                  size === 'small' ? 'bodySmallStronger' : 'bodyStronger'
-                }
-              >
+              <Text as="span" sentiment={sentiment} variant={size === 'small' ? 'bodySmallStronger' : 'bodyStronger'}>
                 {title}
               </Text>
             ) : null}

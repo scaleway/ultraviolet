@@ -1,20 +1,8 @@
-import {
-  Controls,
-  Description,
-  Primary,
-  Stories,
-  Subtitle,
-  Title,
-} from '@storybook/addon-docs/blocks'
+import { Controls, Description, Primary, Stories, Subtitle, Title } from '@storybook/addon-docs/blocks'
 import { linkTo } from '@storybook/addon-links'
 import { Alert, Stack, Text } from '@ultraviolet/ui'
 
-import {
-  h2Decorator,
-  storiesDecorator,
-  storiesTheme,
-  titleDecorator,
-} from './globalStyle.css'
+import { h2Decorator, storiesDecorator, storiesTheme, titleDecorator } from './globalStyle.css'
 
 type PageProps = {
   deprecated?: boolean
@@ -24,13 +12,7 @@ type PageProps = {
   experimental?: boolean
 }
 
-const Page = ({
-  deprecated,
-  deprecatedReason,
-  migrationLink,
-  hideArgsTable,
-  experimental,
-}: PageProps) => (
+const Page = ({ deprecated, deprecatedReason, migrationLink, hideArgsTable, experimental }: PageProps) => (
   <div className={storiesTheme}>
     <Stack gap={1}>
       <div>
@@ -43,8 +25,7 @@ const Page = ({
             onClickButton={migrationLink ? linkTo(migrationLink) : undefined}
             title="Deprecated component"
           >
-            {deprecatedReason ??
-              'This component is deprecated and should not be used in new projects.'}
+            {deprecatedReason ?? 'This component is deprecated and should not be used in new projects.'}
           </Alert>
         ) : null}
         {experimental ? (
@@ -54,8 +35,7 @@ const Page = ({
             sentiment="warning"
             title="Experimental component"
           >
-            This component is at an unstable stage and is subject to change in
-            future releases.
+            This component is at an unstable stage and is subject to change in future releases.
           </Alert>
         ) : null}
       </div>

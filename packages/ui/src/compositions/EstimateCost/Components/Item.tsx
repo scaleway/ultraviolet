@@ -4,11 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { memo, useCallback, useEffect, useId, useMemo, useState } from 'react'
 
-import {
-  maximumFractionDigits,
-  maximumFractionDigitsLong,
-  multiplier,
-} from '../constants'
+import { maximumFractionDigits, maximumFractionDigitsLong, multiplier } from '../constants'
 import { useEstimateCost } from '../EstimateCostProvider'
 import { calculatePrice } from '../helper'
 import { useOverlay } from '../OverlayContext'
@@ -18,12 +14,7 @@ import { ItemLeftSide } from './ItemLeftSide'
 import { ItemPrice } from './ItemPrice'
 
 import type { Text } from '../../../components/Text'
-import type {
-  BareEstimateProduct,
-  EstimateProduct,
-  Iteration,
-  Units,
-} from '../types'
+import type { BareEstimateProduct, EstimateProduct, Iteration, Units } from '../types'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 type ItemProps = {
@@ -241,10 +232,7 @@ export const Item = memo(
     const id = useId()
 
     // We remove Item from object list when Iem component unmount to avoid duplicates
-    useEffect(
-      () => () => productsCallback?.remove({ id }),
-      [id, productsCallback],
-    )
+    useEffect(() => () => productsCallback?.remove({ id }), [id, productsCallback])
 
     useEffect(() => {
       if (!isOverlay) {
@@ -305,9 +293,7 @@ export const Item = memo(
         return undefined
       }
 
-      return longFractionDigits
-        ? maximumFractionDigitsLong[iteration?.unit]
-        : maximumFractionDigits[iteration?.unit]
+      return longFractionDigits ? maximumFractionDigitsLong[iteration?.unit] : maximumFractionDigits[iteration?.unit]
     }, [iteration?.unit, longFractionDigits])
 
     return (

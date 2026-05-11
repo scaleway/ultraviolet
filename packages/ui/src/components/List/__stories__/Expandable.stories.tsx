@@ -28,9 +28,7 @@ export const Expandable: StoryFn<typeof List> = props => {
           >
             <List.Cell>
               {planet.name}
-              {planet.id === 'mercury'
-                ? ' (A disabled row cannot be expanded)'
-                : ''}
+              {planet.id === 'mercury' ? ' (A disabled row cannot be expanded)' : ''}
             </List.Cell>
             <List.Cell>{planet.perihelion}AU</List.Cell>
             <List.Cell>{planet.aphelion}AU</List.Cell>

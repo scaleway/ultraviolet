@@ -107,23 +107,12 @@ export const Toggle = forwardRef(
               </Row>
             ) : null}
             {typeof error === 'string' ? (
-              <Text
-                as="p"
-                disabled={disabled}
-                prominence="default"
-                sentiment="danger"
-                variant="bodySmall"
-              >
+              <Text as="p" disabled={disabled} prominence="default" sentiment="danger" variant="bodySmall">
                 {error}
               </Text>
             ) : null}
             {helper && !error ? (
-              <Text
-                as="p"
-                prominence="weak"
-                sentiment="neutral"
-                variant="caption"
-              >
+              <Text as="p" prominence="weak" sentiment="neutral" variant="caption">
                 {helper}
               </Text>
             ) : null}

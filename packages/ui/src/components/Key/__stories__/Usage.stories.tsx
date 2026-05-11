@@ -9,10 +9,7 @@ import type { StoryFn } from '@storybook/react-vite'
 
 export const Usage: StoryFn<typeof Key> = () => {
   const [counter, setCounter] = useState(0)
-  const updateCounter = useCallback(
-    (amount?: number) => setCounter(counter + (amount ?? 1)),
-    [counter],
-  )
+  const updateCounter = useCallback((amount?: number) => setCounter(counter + (amount ?? 1)), [counter])
 
   useEffect(() => {
     const shortcutFunction = (event: KeyboardEvent) => {
@@ -35,8 +32,7 @@ export const Usage: StoryFn<typeof Key> = () => {
 
   return (
     <Stack gap={1}>
-      To add to counter, click on the button or use the shortcut (see tooltip on
-      hover of the button)
+      To add to counter, click on the button or use the shortcut (see tooltip on hover of the button)
       <Tooltip
         text={
           <Stack direction="row" gap={1}>

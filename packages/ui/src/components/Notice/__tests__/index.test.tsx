@@ -4,6 +4,5 @@ import { describe, it } from 'vitest'
 import { Notice } from '..'
 
 describe('notice', () => {
-  it('renders correctly with default props', () =>
-    shouldMatchSnapshot(<Notice>Hello</Notice>))
+  it('renders correctly with default props', () => shouldMatchSnapshot(<Notice>Hello</Notice>))
 })

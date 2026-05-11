@@ -6,10 +6,7 @@ import { Link } from '../Link'
 
 import type { ComponentProps } from 'react'
 
-type GlobalAlertLinkProps = Omit<
-  ComponentProps<typeof Link>,
-  'sentiment' | 'prominence' | 'size' | 'render'
-> &
+type GlobalAlertLinkProps = Omit<ComponentProps<typeof Link>, 'sentiment' | 'prominence' | 'size' | 'render'> &
   NonNullable<Pick<ComponentProps<typeof Link>, 'href'>>
 
 export const GlobalAlertLink = ({

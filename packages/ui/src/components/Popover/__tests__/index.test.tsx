@@ -46,26 +46,12 @@ const AdvancedPopover = () => {
           >
             <div>
               <div>Modal</div>
-              <SelectInput
-                label="Choose an option"
-                name="options"
-                options={options}
-              />
-              <TextInput
-                data-testid="modal-text-input"
-                label="Type something here"
-              />
+              <SelectInput label="Choose an option" name="options" options={options} />
+              <TextInput data-testid="modal-text-input" label="Type something here" />
             </div>
           </Modal>
-          <SelectInput
-            label="Choose an option"
-            name="options"
-            options={options}
-          />
-          <TextInput
-            data-testid="popover-text-input"
-            label="Type something here"
-          />
+          <SelectInput label="Choose an option" name="options" options={options} />
+          <TextInput data-testid="popover-text-input" label="Type something here" />
         </>
       }
       data-testid="popover"
@@ -73,11 +59,7 @@ const AdvancedPopover = () => {
       title="Popover Title"
       visible={opened}
     >
-      <Button
-        data-testid="button-popover"
-        onClick={() => setOpened(true)}
-        sentiment="neutral"
-      >
+      <Button data-testid="button-popover" onClick={() => setOpened(true)} sentiment="neutral">
         Open Popover
       </Button>
     </Popover>
@@ -128,13 +110,7 @@ describe('tooltip', () => {
     ;(['neutral', 'primary'] as const).forEach(sentiment => {
       it(`should renders tooltip with placement ${sentiment}`, () => {
         shouldMatchSnapshot(
-          <Popover
-            content="Test"
-            onClose={() => {}}
-            sentiment={sentiment}
-            title="Test"
-            visible
-          >
+          <Popover content="Test" onClose={() => {}} sentiment={sentiment} title="Test" visible>
             <p data-testid="children">Children</p>
           </Popover>,
         )
@@ -165,13 +141,7 @@ describe('tooltip', () => {
     const onClose = vi.fn(() => {})
 
     renderWithTheme(
-      <Popover
-        content="Test"
-        data-testid="popover"
-        onClose={onClose}
-        title="Test"
-        visible
-      >
+      <Popover content="Test" data-testid="popover" onClose={onClose} title="Test" visible>
         Children
       </Popover>,
     )
@@ -191,13 +161,7 @@ describe('tooltip', () => {
     renderWithTheme(
       <div>
         <div style={{ height: '500px', width: '500px' }}>
-          <Popover
-            content="Test"
-            data-testid="popover"
-            onClose={onClose}
-            title="Test"
-            visible
-          >
+          <Popover content="Test" data-testid="popover" onClose={onClose} title="Test" visible>
             Children
           </Popover>
         </div>

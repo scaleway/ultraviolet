@@ -173,10 +173,9 @@ export const itemDragIcon = style({
   margin: `0 ${theme.space['0.25']}`,
   opacity: 0,
   selectors: {
-    [`${itemShowDraggable}:hover &, ${itemShowDraggable}:focus &, ${itemShowDraggable}:active & `]:
-      {
-        opacity: 1,
-      },
+    [`${itemShowDraggable}:hover &, ${itemShowDraggable}:focus &, ${itemShowDraggable}:active & `]: {
+      opacity: 1,
+    },
   },
 })
 export const itemWrapText = recipe({
@@ -228,14 +227,12 @@ export const itemBadge = style({
       opacity: 1,
     },
 
-    [`${itemMenuPinned}:hover &, ${itemMenuPinned}:focus &, ${itemMenuPinned}:active &`]:
-      {
-        opacity: 0,
-      },
-    [`${itemShowPinButton}:hover &, ${itemShowPinButton}:active &, ${itemShowPinButton}:focus &`]:
-      {
-        opacity: 0,
-      },
+    [`${itemMenuPinned}:hover &, ${itemMenuPinned}:focus &, ${itemMenuPinned}:active &`]: {
+      opacity: 0,
+    },
+    [`${itemShowPinButton}:hover &, ${itemShowPinButton}:active &, ${itemShowPinButton}:focus &`]: {
+      opacity: 0,
+    },
   },
 })
 
@@ -257,11 +254,10 @@ export const itemPinnedButton = style({
       opacity: 1,
       pointerEvents: 'auto',
     },
-    [`${itemShowPinButton}:hover &, ${itemShowPinButton}:active &, ${itemShowPinButton}:focus &`]:
-      {
-        opacity: 1,
-        pointerEvents: 'auto',
-      },
+    [`${itemShowPinButton}:hover &, ${itemShowPinButton}:active &, ${itemShowPinButton}:focus &`]: {
+      opacity: 1,
+      pointerEvents: 'auto',
+    },
   },
   top: 0,
   visibility: 'visible',

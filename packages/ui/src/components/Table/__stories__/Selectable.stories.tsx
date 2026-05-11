@@ -21,9 +21,7 @@ export const Selectable: StoryFn<typeof Table> = args => {
               <Table.Row
                 id={movie.id}
                 key={movie.id}
-                selectDisabled={
-                  movie.id === '1' ? 'This movie is not selectable' : undefined
-                }
+                selectDisabled={movie.id === '1' ? 'This movie is not selectable' : undefined}
               >
                 <Table.Cell>{movie.name}</Table.Cell>
                 <Table.Cell>{movie.releaseYear}</Table.Cell>
@@ -35,18 +33,10 @@ export const Selectable: StoryFn<typeof Table> = args => {
         </Table.Body>
         <Table.SelectBar data={data} idKey="id">
           {({ selectedItems, unselectAll }) => (
-            <Stack
-              alignItems="center"
-              direction="row"
-              gap={2}
-              justifyContent="space-between"
-            >
+            <Stack alignItems="center" direction="row" gap={2} justifyContent="space-between">
               <Text as="p" sentiment="primary" variant="bodyStrong">
                 {selectedItems.length} item(s) selected (
-                {selectedItems.map(
-                  (item, index) => `${index > 0 ? ', ' : ''}${item.name}`,
-                )}
-                )
+                {selectedItems.map((item, index) => `${index > 0 ? ', ' : ''}${item.name}`)})
               </Text>
               <Button
                 onClick={() => {

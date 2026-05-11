@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const OrganizationCategoryIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const OrganizationCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="OrganizationCategoryIcon">
     <path
       d="M12.4 9.88889C11.512 9.88889 10.8 10.5811 10.8 11.4444C10.8 12.3036 11.5163 13 12.4 13C13.2837 13 14 12.3036 14 11.4444C14 10.5811 13.28 9.88889 12.4 9.88889Z"

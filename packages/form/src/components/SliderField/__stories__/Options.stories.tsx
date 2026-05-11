@@ -6,20 +6,11 @@ import { Submit } from '../../Submit'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const Options: StoryFn<ComponentProps<typeof SliderField>> = ({
-  name,
-  label,
-  ...args
-}) => (
+export const Options: StoryFn<ComponentProps<typeof SliderField>> = ({ name, label, ...args }) => (
   <Stack gap={5}>
     <Stack gap={2}>
       <SliderField label={label} name={name} {...args} />
-      <SliderField
-        {...args}
-        double
-        label={`${label}-double`}
-        name={`${name}-double`}
-      />
+      <SliderField {...args} double label={`${label}-double`} name={`${name}-double`} />
     </Stack>
     <Submit>Submit</Submit>
   </Stack>

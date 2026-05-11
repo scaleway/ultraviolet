@@ -9,37 +9,27 @@ import { cities, planets } from './resources'
 
 describe('selectInputField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(
-      <SelectInputField name="test" options={cities} />,
-    )
+    const { asFragment } = renderWithForm(<SelectInputField name="test" options={cities} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly disabled', () => {
-    const { asFragment } = renderWithForm(
-      <SelectInputField disabled name="test" options={cities} />,
-    )
+    const { asFragment } = renderWithForm(<SelectInputField disabled name="test" options={cities} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly multiselect', () => {
-    const { asFragment } = renderWithForm(
-      <SelectInputField multiselect name="test" options={cities} />,
-    )
+    const { asFragment } = renderWithForm(<SelectInputField multiselect name="test" options={cities} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly grouped', () => {
-    const { asFragment } = renderWithForm(
-      <SelectInputField multiselect name="test" options={planets} />,
-    )
+    const { asFragment } = renderWithForm(<SelectInputField multiselect name="test" options={planets} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should display right value on grouped options', async () => {
-    const { asFragment } = renderWithForm(
-      <SelectInputField name="test" options={planets} searchable={false} />,
-    )
+    const { asFragment } = renderWithForm(<SelectInputField name="test" options={planets} searchable={false} />)
     const select = screen.getByTestId('select-input-test')
     await userEvent.click(select)
     fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
@@ -58,12 +48,7 @@ describe('selectInputField', () => {
     const onChange = vi.fn()
 
     const { asFragment } = renderWithForm(
-      <SelectInputField
-        name="test"
-        onChange={onChange}
-        options={planets}
-        searchable={false}
-      />,
+      <SelectInputField name="test" onChange={onChange} options={planets} searchable={false} />,
     )
     const select = screen.getByTestId('select-input-test')
     await userEvent.click(select)

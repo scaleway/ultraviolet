@@ -10,13 +10,7 @@ import debian from './assets/debian.svg'
 import mysql from './assets/mysql.svg'
 import postgresql from './assets/postgresql.svg'
 import ubuntu from './assets/ubuntu.svg'
-import {
-  centosOptions,
-  debianOptions,
-  mysqlOptions,
-  postgresqlOptions,
-  ubuntuOptionsLegacy,
-} from './constants'
+import { centosOptions, debianOptions, mysqlOptions, postgresqlOptions, ubuntuOptionsLegacy } from './constants'
 
 import type { StoryFn } from '@storybook/react-vite'
 
@@ -33,9 +27,7 @@ export const Examples: StoryFn<typeof SelectableCardOptionGroup> = args => {
         <SelectableCardOptionGroup
           {...args}
           columns={4}
-          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-            onChange(event.currentTarget.value)
-          }
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
           onChangeOption={(newValue: string) => onChangeOption(newValue)}
           optionValue={option}
           size="large"
@@ -52,45 +44,17 @@ export const Examples: StoryFn<typeof SelectableCardOptionGroup> = args => {
             options={ubuntuOptionsLegacy}
             value="ubuntu"
           >
-            <Text
-              as="p"
-              placement="center"
-              prominence="weak"
-              sentiment="neutral"
-              variant="bodySmall"
-            >
+            <Text as="p" placement="center" prominence="weak" sentiment="neutral" variant="bodySmall">
               New versions has been added recently
             </Text>
           </SelectableCardOptionGroup.Option>
-          <SelectableCardOptionGroup.Option
-            image={debian}
-            label="Debian"
-            options={debianOptions}
-            value="debian"
-          >
-            <Text
-              as="p"
-              placement="center"
-              prominence="weak"
-              sentiment="neutral"
-              variant="bodySmall"
-            >
+          <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian">
+            <Text as="p" placement="center" prominence="weak" sentiment="neutral" variant="bodySmall">
               Easy to configure and maintain
             </Text>
           </SelectableCardOptionGroup.Option>
-          <SelectableCardOptionGroup.Option
-            image={centos}
-            label="CentOS"
-            options={centosOptions}
-            value="centos"
-          >
-            <Text
-              as="p"
-              placement="center"
-              prominence="weak"
-              sentiment="neutral"
-              variant="bodySmall"
-            >
+          <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos">
+            <Text as="p" placement="center" prominence="weak" sentiment="neutral" variant="bodySmall">
               Used by many enterprises
             </Text>
           </SelectableCardOptionGroup.Option>
@@ -116,20 +80,13 @@ export const Examples: StoryFn<typeof SelectableCardOptionGroup> = args => {
       <SelectableCardOptionGroup
         {...args}
         columns={4}
-        onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-          onChange2(event.currentTarget.value)
-        }
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange2(event.currentTarget.value)}
         onChangeOption={(newValue: string) => onChangeOption2(newValue)}
         optionValue={option2}
         size="large"
         value={value2}
       >
-        <SelectableCardOptionGroup.Option
-          image={mysql}
-          label="MySQL"
-          options={mysqlOptions}
-          value="mysql"
-        />
+        <SelectableCardOptionGroup.Option image={mysql} label="MySQL" options={mysqlOptions} value="mysql" />
         <SelectableCardOptionGroup.Option
           image={postgresql}
           label="PostgreSQL"

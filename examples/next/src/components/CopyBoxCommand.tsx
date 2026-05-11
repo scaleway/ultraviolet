@@ -14,11 +14,9 @@ type CopyBoxProps = {
 }
 
 const CopyBox = ({ children }: CopyBoxProps) => {
-  const flatChild = (
-    Children.map(children, child =>
-      isValidElement(child) ? child : undefined,
-    ) || []
-  ).filter(child => !!child)
+  const flatChild = (Children.map(children, child => (isValidElement(child) ? child : undefined)) || []).filter(
+    child => !!child,
+  )
   const [tab, setTab] = useState(0)
 
   return (

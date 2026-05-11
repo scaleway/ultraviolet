@@ -13,6 +13,4 @@ type SelectableCardGroupContextType = {
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
-export const SelectableCardGroupContext = createContext<
-  SelectableCardGroupContextType | undefined
->(undefined)
+export const SelectableCardGroupContext = createContext<SelectableCardGroupContextType | undefined>(undefined)

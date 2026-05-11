@@ -4,9 +4,7 @@ import { data, overflowColumns } from './resources'
 
 import type { StoryFn } from '@storybook/react-vite'
 
-export const Overflow: StoryFn<typeof Table> = ({ ...props }) => (
-  <Table {...props} />
-)
+export const Overflow: StoryFn<typeof Table> = ({ ...props }) => <Table {...props} />
 
 Overflow.args = {
   children: (

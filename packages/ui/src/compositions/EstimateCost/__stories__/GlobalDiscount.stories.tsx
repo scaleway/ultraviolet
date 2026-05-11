@@ -6,22 +6,10 @@ export const GlobalDiscount = Template.bind({})
 
 GlobalDiscount.args = {
   children: [
-    <EstimateCost.Item
-      amount={100}
-      key="Storage"
-      label="Storage"
-      price={0.001}
-      unit="GB"
-    >
+    <EstimateCost.Item amount={100} key="Storage" label="Storage" price={0.001} unit="GB">
       <EstimateCost.Unit unit="GB" />
     </EstimateCost.Item>,
-    <EstimateCost.Item
-      amount={100}
-      key="Screen pixels"
-      label="Screen pixels"
-      price={1}
-      unit="Px"
-    >
+    <EstimateCost.Item amount={100} key="Screen pixels" label="Screen pixels" price={1} unit="Px">
       <EstimateCost.Unit />
     </EstimateCost.Item>,
   ],

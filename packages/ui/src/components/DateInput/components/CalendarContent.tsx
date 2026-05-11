@@ -33,23 +33,13 @@ export const CalendarContent = () => {
       <Stack direction="row" justifyContent="space-between" width="100%">
         <Button
           data-testid="previous-month"
-          disabled={
-            !!(minDate && minDate > new Date(yearToShow, monthToShow - 1, 0)) ||
-            disabled
-          }
+          disabled={!!(minDate && minDate > new Date(yearToShow, monthToShow - 1, 0)) || disabled}
           onClick={() => {
-            if (
-              (!minDate ||
-                minDate <= new Date(yearToShow, monthToShow - 1, 0)) &&
-              !readOnly
-            ) {
+            if ((!minDate || minDate <= new Date(yearToShow, monthToShow - 1, 0)) && !readOnly) {
               if (showMonthYearPicker) {
                 setYearToShow(yearToShow - 1)
               } else {
-                const [prevMonth, year] = getPreviousMonth(
-                  monthToShow,
-                  yearToShow,
-                )
+                const [prevMonth, year] = getPreviousMonth(monthToShow, yearToShow)
                 setMonthToShow(prevMonth)
                 setYearToShow(year)
               }
@@ -73,15 +63,9 @@ export const CalendarContent = () => {
         </Text>
         <Button
           data-testid="next-month"
-          disabled={
-            !!(maxDate && maxDate < new Date(yearToShow, monthToShow, 1)) ||
-            disabled
-          }
+          disabled={!!(maxDate && maxDate < new Date(yearToShow, monthToShow, 1)) || disabled}
           onClick={() => {
-            if (
-              (!maxDate || maxDate >= new Date(yearToShow, monthToShow, 1)) &&
-              !readOnly
-            ) {
+            if ((!maxDate || maxDate >= new Date(yearToShow, monthToShow, 1)) && !readOnly) {
               if (showMonthYearPicker) {
                 setYearToShow(yearToShow + 1)
               } else {

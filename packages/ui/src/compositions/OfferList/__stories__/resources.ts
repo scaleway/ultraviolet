@@ -52,9 +52,8 @@ export const data = [
   },
 ]
 
-export const columns: NonNullable<ComponentProps<typeof OfferList>['columns']> =
-  [
-    { label: 'Solar system Planet' },
-    { label: 'Perihelion', width: '200px' },
-    { label: 'Aphelion', width: '200px' },
-  ]
+export const columns: NonNullable<ComponentProps<typeof OfferList>['columns']> = [
+  { label: 'Solar system Planet' },
+  { label: 'Perihelion', width: '200px' },
+  { label: 'Aphelion', width: '200px' },
+]

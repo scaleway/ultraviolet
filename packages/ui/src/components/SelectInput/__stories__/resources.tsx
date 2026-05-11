@@ -117,8 +117,7 @@ export const dataGrouped = {
       value: 'mars',
     },
     {
-      description:
-        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+      description: 'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
       label: 'Pluto',
       value: 'pluto',
     },
@@ -172,8 +171,7 @@ export const dataGroupedWithEmptyName = {
       value: 'mars',
     },
     {
-      description:
-        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+      description: 'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
       label: 'Pluto',
       value: 'pluto',
     },
@@ -227,8 +225,7 @@ export const OptionalInfo = {
       value: 'mars',
     },
     {
-      description:
-        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+      description: 'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
       disabled: false,
       label: (
         <Text as="div" italic variant="body">
@@ -325,11 +322,7 @@ export const OptionalInfo5 = [
     disabled: true,
     label: 'Warsaw',
     optionalInfo: (
-      <Button
-        onClick={() => alert('We will enable Warsaw soon!')}
-        sentiment="neutral"
-        size="xsmall"
-      >
+      <Button onClick={() => alert('We will enable Warsaw soon!')} sentiment="neutral" size="xsmall">
         <EmailOutlineIcon />
         Contact us
       </Button>

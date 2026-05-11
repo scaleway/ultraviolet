@@ -13,9 +13,6 @@ type OverlayContextProviderProps = {
   value: { isOverlay: boolean }
 }
 
-export const OverlayContextProvider = ({
-  children,
-  value,
-}: OverlayContextProviderProps) => (
+export const OverlayContextProvider = ({ children, value }: OverlayContextProviderProps) => (
   <OverlayContext.Provider value={value}>{children}</OverlayContext.Provider>
 )

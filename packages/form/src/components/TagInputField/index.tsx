@@ -47,8 +47,7 @@ export const TagInputField = <
       validate: {
         ...(regexes
           ? {
-              pattern: value =>
-                (value as string[]).every(val => validateRegex(val, regexes)),
+              pattern: value => (value as string[]).every(val => validateRegex(val, regexes)),
             }
           : {}),
         ...validate,
@@ -60,10 +59,7 @@ export const TagInputField = <
     <TagInput
       {...props}
       aria-label={ariaLabel}
-      error={getError(
-        { label: errorLabel ?? label ?? ariaLabel ?? name, regex: regexes },
-        error,
-      )}
+      error={getError({ label: errorLabel ?? label ?? ariaLabel ?? name, regex: regexes }, error)}
       label={label}
       name={field.name}
       onChange={newTags => {

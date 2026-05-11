@@ -20,9 +20,7 @@ export const Children: StoryFn = args => {
         checked={value === 'label-9'}
         label="Left Radio"
         name="label-9"
-        onChange={(event: ChangeEvent<HTMLInputElement>) =>
-          onChange(event.currentTarget.value)
-        }
+        onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
         type="radio"
         value="label-9"
       >
@@ -30,10 +28,7 @@ export const Children: StoryFn = args => {
           <Stack gap={1}>
             <Text as="p" prominence="weak" sentiment="neutral" variant="body">
               I am a children with a badge &nbsp;
-              <Badge
-                prominence={checked ? 'default' : 'strong'}
-                sentiment={checked ? 'info' : 'neutral'}
-              >
+              <Badge prominence={checked ? 'default' : 'strong'} sentiment={checked ? 'info' : 'neutral'}>
                 info
               </Badge>
             </Text>
@@ -45,9 +40,7 @@ export const Children: StoryFn = args => {
         checked={value === 'label-10'}
         label="Middle Radio"
         name="label-10"
-        onChange={(event: ChangeEvent<HTMLInputElement>) =>
-          onChange(event.currentTarget.value)
-        }
+        onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
         type="radio"
         value="label-10"
       >
@@ -79,9 +72,7 @@ export const Children: StoryFn = args => {
         disabled
         label="Right Radio"
         name="label-11"
-        onChange={(event: ChangeEvent<HTMLInputElement>) =>
-          onChange(event.currentTarget.value)
-        }
+        onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
         type="radio"
         value="label-11"
       >

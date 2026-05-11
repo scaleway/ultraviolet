@@ -98,15 +98,7 @@ const SteppedListCard = ({
       setDone,
       setHidden,
     }),
-    [
-      currentStep,
-      setCurrentStep,
-      numberOfSteps,
-      done,
-      setDone,
-      setHidden,
-      onClickHide,
-    ],
+    [currentStep, setCurrentStep, numberOfSteps, done, setDone, setHidden, onClickHide],
   )
 
   const onClickHideButton = () => {
@@ -120,11 +112,7 @@ const SteppedListCard = ({
   return (
     <Data.Provider value={values}>
       <Stack gap={2} width="100%">
-        <Stack
-          alignItems="center"
-          direction="row"
-          justifyContent="space-between"
-        >
+        <Stack alignItems="center" direction="row" justifyContent="space-between">
           {typeof header === 'string' ? (
             <Text as="h3" variant="heading">
               {header}
@@ -148,17 +136,11 @@ const SteppedListCard = ({
         {hidden ? null : (
           <Card className={steppedListCardStyle.steppedListCard}>
             <Row templateColumns="1fr 3fr">
-              <Stack
-                className={steppedListCardStyle.wrapper}
-                direction="column"
-                gap={4}
-              >
+              <Stack className={steppedListCardStyle.wrapper} direction="column" gap={4}>
                 <StepList>
                   {steps.map((step, index) => {
-                    const stepTitle =
-                      typeof step === 'string' ? step : step.title
-                    const stepIcon =
-                      typeof step === 'string' ? undefined : step.icon
+                    const stepTitle = typeof step === 'string' ? step : step.title
+                    const stepIcon = typeof step === 'string' ? undefined : step.icon
 
                     return (
                       <SteppedList

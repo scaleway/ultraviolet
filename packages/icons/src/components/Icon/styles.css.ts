@@ -23,12 +23,10 @@ function getIconColor(
     return 'currentColor'
   }
 
-  const definedProminence =
-    sentiment === 'neutral' ? capitalize(PROMINENCES[prominence]) : ''
+  const definedProminence = sentiment === 'neutral' ? capitalize(PROMINENCES[prominence]) : ''
 
   const themeColor = theme.colors[sentiment]
-  const iconToken =
-    `icon${definedProminence}${disabled ? 'Disabled' : ''}` as keyof typeof themeColor
+  const iconToken = `icon${definedProminence}${disabled ? 'Disabled' : ''}` as keyof typeof themeColor
 
   return themeColor[iconToken]
 }
@@ -42,11 +40,7 @@ export const icon = recipe({
     Object.keys(PROMINENCES).flatMap(prominence =>
       [...SENTIMENTS, undefined].map(sentiment => ({
         style: {
-          fill: getIconColor(
-            prominence as keyof typeof PROMINENCES,
-            sentiment,
-            disabled,
-          ),
+          fill: getIconColor(prominence as keyof typeof PROMINENCES, sentiment, disabled),
         },
         // We need to add undefined to have the variant where sentiment is undefined
         variants: {
@@ -66,29 +60,23 @@ export const icon = recipe({
       false: {},
       true: {},
     },
-    prominence: Object.fromEntries(
-      Object.keys(PROMINENCES).map(prominence => [prominence, {}]),
-    ) as Record<keyof typeof PROMINENCES, object>,
-    sentiment: Object.fromEntries(
-      SENTIMENTS.map(sentiment => [sentiment, {}]),
-    ) as Record<(typeof SENTIMENTS)[number], object>,
-    size: Object.fromEntries(
-      Object.keys(SIZES).map(size => [
-        size,
-        generateSizeStyle(size as keyof typeof SIZES),
-      ]),
-    ),
+    prominence: Object.fromEntries(Object.keys(PROMINENCES).map(prominence => [prominence, {}])) as Record<
+      keyof typeof PROMINENCES,
+      object
+    >,
+    sentiment: Object.fromEntries(SENTIMENTS.map(sentiment => [sentiment, {}])) as Record<
+      (typeof SENTIMENTS)[number],
+      object
+    >,
+    size: Object.fromEntries(Object.keys(SIZES).map(size => [size, generateSizeStyle(size as keyof typeof SIZES)])),
   },
 })
 
 for (const prominence of Object.keys(PROMINENCES)) {
   for (const sentiment of SENTIMENTS) {
-    globalStyle(
-      `${icon({ prominence: prominence as keyof typeof PROMINENCES, sentiment })} .fillStroke`,
-      {
-        fill: 'none',
-        stroke: getIconColor(prominence as keyof typeof PROMINENCES, sentiment),
-      },
-    )
+    globalStyle(`${icon({ prominence: prominence as keyof typeof PROMINENCES, sentiment })} .fillStroke`, {
+      fill: 'none',
+      stroke: getIconColor(prominence as keyof typeof PROMINENCES, sentiment),
+    })
   }
 }

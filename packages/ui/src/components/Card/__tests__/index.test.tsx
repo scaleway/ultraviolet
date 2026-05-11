@@ -4,17 +4,13 @@ import { describe, it } from 'vitest'
 import { Card } from '..'
 
 describe('card', () => {
-  it('renders correctly with header', () =>
-    shouldMatchSnapshot(<Card header="Title">Hello</Card>))
+  it('renders correctly with header', () => shouldMatchSnapshot(<Card header="Title">Hello</Card>))
 
   it('renders correctly with advanced header', () =>
     shouldMatchSnapshot(<Card header={<h2>Advanced Title</h2>}>Hello</Card>))
   it('renders correctly with advanced subHeader', () =>
-    shouldMatchSnapshot(
-      <Card subHeader={<h2>Advanced subHeader</h2>}>Hello</Card>,
-    ))
-  it('renders correctly with subHeader', () =>
-    shouldMatchSnapshot(<Card subHeader="Title">Hello</Card>))
+    shouldMatchSnapshot(<Card subHeader={<h2>Advanced subHeader</h2>}>Hello</Card>))
+  it('renders correctly with subHeader', () => shouldMatchSnapshot(<Card subHeader="Title">Hello</Card>))
 
   it('renders correctly with header and subHeader', () =>
     shouldMatchSnapshot(
@@ -25,19 +21,14 @@ describe('card', () => {
 
   it('renders correctly with advanced header and subHeader', () =>
     shouldMatchSnapshot(
-      <Card
-        header={<h2>Advanced Title</h2>}
-        subHeader={<h2>Advanced subHeader</h2>}
-      >
+      <Card header={<h2>Advanced Title</h2>} subHeader={<h2>Advanced subHeader</h2>}>
         Hello
       </Card>,
     ))
 
-  it('renders correctly without header', () =>
-    shouldMatchSnapshot(<Card>Hello</Card>))
+  it('renders correctly without header', () => shouldMatchSnapshot(<Card>Hello</Card>))
 
-  it('renders correctly with disabled', () =>
-    shouldMatchSnapshot(<Card disabled>Hello</Card>))
+  it('renders correctly with disabled', () => shouldMatchSnapshot(<Card disabled>Hello</Card>))
 
   it('renders correctly with disabled and header', () =>
     shouldMatchSnapshot(
@@ -46,8 +37,7 @@ describe('card', () => {
       </Card>,
     ))
 
-  it('renders correctly with active', () =>
-    shouldMatchSnapshot(<Card active>Hello</Card>))
+  it('renders correctly with active', () => shouldMatchSnapshot(<Card active>Hello</Card>))
 
   it('renders correctly with active and disabled', () =>
     shouldMatchSnapshot(
@@ -56,9 +46,7 @@ describe('card', () => {
       </Card>,
     ))
 
-  it('renders correctly with className', () =>
-    shouldMatchSnapshot(<Card className="test">Hello</Card>))
+  it('renders correctly with className', () => shouldMatchSnapshot(<Card className="test">Hello</Card>))
 
-  it('renders correctly with data-testid', () =>
-    shouldMatchSnapshot(<Card data-testid="test">Hello</Card>))
+  it('renders correctly with data-testid', () => shouldMatchSnapshot(<Card data-testid="test">Hello</Card>))
 })

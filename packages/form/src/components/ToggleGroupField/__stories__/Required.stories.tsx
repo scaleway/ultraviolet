@@ -13,11 +13,7 @@ export const Required: StoryFn<typeof ToggleGroupField> = args => (
         name="weekly-save"
         value="weekly-save"
       />
-      <ToggleGroupField.Toggle
-        label="Reboot server every day at 9 am"
-        name="daily-reboot"
-        value="daily-reboot"
-      />
+      <ToggleGroupField.Toggle label="Reboot server every day at 9 am" name="daily-reboot" value="daily-reboot" />
     </ToggleGroupField>
     <Submit>Submit</Submit>
   </Stack>

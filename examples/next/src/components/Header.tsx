@@ -11,13 +11,7 @@ import Logo from './Logo'
 
 type Themes = 'light' | 'dark'
 
-const TopBar = ({
-  setTheme,
-  className,
-}: {
-  setTheme: (theme: Themes) => void
-  className?: string
-}) => {
+const TopBar = ({ setTheme, className }: { setTheme: (theme: Themes) => void; className?: string }) => {
   const { theme } = useTheme()
 
   return (

@@ -50,10 +50,7 @@ export const Chip = ({
 
     return 'default'
   }, [isActive, disabled])
-  const value = useMemo(
-    () => ({ disabled, iconRef, isActive }),
-    [isActive, disabled, iconRef],
-  )
+  const value = useMemo(() => ({ disabled, iconRef, isActive }), [isActive, disabled, iconRef])
   useEffect(() => {
     setIsActive(active)
   }, [active])
@@ -74,11 +71,7 @@ export const Chip = ({
 
   return (
     <ChipContext.Provider value={value}>
-      <Text
-        as="div"
-        style={style}
-        variant={size === 'large' ? 'bodySmall' : 'caption'}
-      >
+      <Text as="div" style={style} variant={size === 'large' ? 'bodySmall' : 'caption'}>
         <Stack
           alignItems="center"
           className={cn(className, chipStyle.container)}

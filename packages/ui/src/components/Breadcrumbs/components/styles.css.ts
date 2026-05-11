@@ -49,12 +49,9 @@ export const itemContainer = recipe({
 export const contentBreadcrumbsText = style({})
 export const item = style({})
 
-globalStyle(
-  `${item}:not(:first-child) ${link}, ${item}:not(:first-child) ${contentBreadcrumbsText}`,
-  {
-    padding: `0 ${theme.space[1]}`,
-  },
-)
+globalStyle(`${item}:not(:first-child) ${link}, ${item}:not(:first-child) ${contentBreadcrumbsText}`, {
+  padding: `0 ${theme.space[1]}`,
+})
 
 globalStyle(`${item}:last-child ${link}`, {
   pointerEvents: 'none',

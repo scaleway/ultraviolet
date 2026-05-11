@@ -14,9 +14,7 @@ export const Controlled: StoryFn = args => {
         checked={value === 'label-1'}
         label="Label 1"
         name="label-1"
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          onChange(e.currentTarget.value)
-        }
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.currentTarget.value)}
         value="label-1"
       />
       <Radio
@@ -24,9 +22,7 @@ export const Controlled: StoryFn = args => {
         checked={value === 'label-2'}
         label="Label 2"
         name="label-2"
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          onChange(e.currentTarget.value)
-        }
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.currentTarget.value)}
         value="label-2"
       />
     </>
@@ -35,8 +31,7 @@ export const Controlled: StoryFn = args => {
 Controlled.parameters = {
   docs: {
     description: {
-      story:
-        'Radio only work as a controlled component. You need to pass `onChange` callback to control it.',
+      story: 'Radio only work as a controlled component. You need to pass `onChange` callback to control it.',
     },
   },
 }

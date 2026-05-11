@@ -33,9 +33,7 @@ export default {
               <Text as="p" variant="bodyStrong">
                 Form input values:
               </Text>
-              <Snippet prefix="lines">
-                {JSON.stringify(methods.watch(), null, 1)}
-              </Snippet>
+              <Snippet prefix="lines">{JSON.stringify(methods.watch(), null, 1)}</Snippet>
             </Stack>
             <Stack gap={1}>
               <Text as="p" variant="bodyStrong">

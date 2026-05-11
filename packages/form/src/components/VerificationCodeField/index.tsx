@@ -12,8 +12,7 @@ import type { FieldPath, FieldValues } from 'react-hook-form'
 type VerificationCodeFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof VerificationCode>, 'value'>
+> = BaseFieldProps<TFieldValues, TFieldName> & Omit<ComponentProps<typeof VerificationCode>, 'value'>
 
 export const VerificationCodeField = <
   TFieldValues extends FieldValues,
@@ -54,10 +53,7 @@ export const VerificationCodeField = <
   return (
     <VerificationCode
       {...props}
-      error={getError(
-        { label: errorLabel ?? label ?? 'verification-code-field' },
-        error,
-      )}
+      error={getError({ label: errorLabel ?? label ?? 'verification-code-field' }, error)}
       fields={fields}
       inputId={inputId}
       label={label}

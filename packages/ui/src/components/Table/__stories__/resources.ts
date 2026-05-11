@@ -84,9 +84,7 @@ export const columns: NonNullable<ComponentProps<typeof Table>['columns']> = [
   { label: 'Director' },
 ]
 
-export const overflowColumns: NonNullable<
-  ComponentProps<typeof Table>['columns']
-> = [
+export const overflowColumns: NonNullable<ComponentProps<typeof Table>['columns']> = [
   { label: 'Movie name', minWidth: '500px' },
   { label: 'Release year', minWidth: '500px' },
   { label: 'Trilogy', minWidth: '500px' },

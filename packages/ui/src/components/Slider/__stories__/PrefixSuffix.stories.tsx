@@ -90,15 +90,7 @@ export const PrefixSuffix: StoryFn<typeof Slider> = args => {
         unit="GB"
         value={[15, 70]}
       />
-      <Slider
-        {...args}
-        label="Suffix"
-        max={100}
-        onChange={() => {}}
-        suffix="%"
-        tooltip={false}
-        value={34}
-      />
+      <Slider {...args} label="Suffix" max={100} onChange={() => {}} suffix="%" tooltip={false} value={34} />
       <Slider {...args} label="Prefix" prefix="+" />
       <Slider
         {...args}
@@ -110,14 +102,7 @@ export const PrefixSuffix: StoryFn<typeof Slider> = args => {
         unit="GB"
         value={[15, 70]}
       />
-      <Slider
-        {...args}
-        label="Interactive label"
-        onChange={onChange}
-        suffix={suffix}
-        tooltip={false}
-        value={value}
-      />
+      <Slider {...args} label="Interactive label" onChange={onChange} suffix={suffix} tooltip={false} value={value} />
       <Slider
         {...args}
         double
@@ -127,14 +112,7 @@ export const PrefixSuffix: StoryFn<typeof Slider> = args => {
         tooltip={false}
         value={values}
       />
-      <Slider
-        {...args}
-        label="Unit"
-        onChange={() => {}}
-        tooltip={false}
-        unit="€"
-        value={53}
-      />
+      <Slider {...args} label="Unit" onChange={() => {}} tooltip={false} unit="€" value={53} />
     </Stack>
   )
 }

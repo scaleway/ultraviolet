@@ -11,21 +11,12 @@ import { flexVar, maxWidthVar, minWidthVar, widthVar } from './variables.css'
 import type { UltravioletUITheme } from '../../theme'
 import type { AlignItemsType, JustifyContentType } from './styles.css'
 import type { PolymorphicComponentProps } from './types'
-import type {
-  CSSProperties,
-  ElementType,
-  PropsWithChildren,
-  ReactElement,
-} from 'react'
+import type { CSSProperties, ElementType, PropsWithChildren, ReactElement } from 'react'
 
-type ResponsiveProp<T> =
-  | T
-  | Partial<Record<keyof UltravioletUITheme['breakpoints'], T>>
+type ResponsiveProp<T> = T | Partial<Record<keyof UltravioletUITheme['breakpoints'], T>>
 
 // convert union type string into same union type in number
-type ToNumber<T extends string> = T extends `${infer N extends number}`
-  ? N
-  : never
+type ToNumber<T extends string> = T extends `${infer N extends number}` ? N : never
 
 // It will give a rem value for each breakpoint key
 // Ex: gap={{ small: 2, xsmall: 1 }} => { small: '0.5rem', xsmall: '0.25rem' }
@@ -33,8 +24,7 @@ const mapRepsonsiveGap = (
   object?: Partial<
     Record<
       keyof typeof consoleLightTheme.breakpoints,
-      | keyof typeof consoleLightTheme.space
-      | ToNumber<keyof typeof consoleLightTheme.space>
+      keyof typeof consoleLightTheme.space | ToNumber<keyof typeof consoleLightTheme.space>
     >
   >,
 ) =>
@@ -42,25 +32,15 @@ const mapRepsonsiveGap = (
     ? Object.keys(object).reduce(
         (acc, key) => ({
           ...acc,
-          [key]:
-            consoleLightTheme.space[
-              object[
-                key as keyof typeof object
-              ] as keyof typeof consoleLightTheme.space
-            ],
+          [key]: consoleLightTheme.space[object[key as keyof typeof object] as keyof typeof consoleLightTheme.space],
         }),
         {},
       )
     : {}
 
 type OwnStackProps = {
-  gap?: ResponsiveProp<
-    | keyof UltravioletUITheme['space']
-    | ToNumber<keyof UltravioletUITheme['space']>
-  >
-  direction?: ResponsiveProp<
-    'row' | 'column' | 'row-reverse' | 'column-reverse'
-  >
+  gap?: ResponsiveProp<keyof UltravioletUITheme['space'] | ToNumber<keyof UltravioletUITheme['space']>>
+  direction?: ResponsiveProp<'row' | 'column' | 'row-reverse' | 'column-reverse'>
   alignItems?: ResponsiveProp<AlignItemsType>
   justifyContent?: ResponsiveProp<JustifyContentType>
   wrap?: ResponsiveProp<boolean | CSSProperties['flexWrap']>
@@ -73,8 +53,7 @@ type OwnStackProps = {
   id?: string
 }
 
-export type StackProps<T extends ElementType = 'div'> =
-  PolymorphicComponentProps<T, OwnStackProps>
+export type StackProps<T extends ElementType = 'div'> = PolymorphicComponentProps<T, OwnStackProps>
 
 /**
  * We can't easily type a GenericComponent with forwardRef
@@ -125,20 +104,12 @@ const IStack = forwardRef<any, PropsWithChildren<StackProps>>(
     const Component = as ?? 'div'
 
     const sprinkleClassName = sprinkles({
-      alignItems:
-        typeof alignItems === 'object' ? alignItems : { xxsmall: alignItems },
-      flexDirection:
-        typeof direction === 'object' ? direction : { xxsmall: direction },
-      flexWrap:
-        typeof wrapValue === 'object' ? wrapValue : { xxsmall: wrapValue },
+      alignItems: typeof alignItems === 'object' ? alignItems : { xxsmall: alignItems },
+      flexDirection: typeof direction === 'object' ? direction : { xxsmall: direction },
+      flexWrap: typeof wrapValue === 'object' ? wrapValue : { xxsmall: wrapValue },
       gap:
-        typeof gap === 'object'
-          ? mapRepsonsiveGap(gap)
-          : { xxsmall: gap ? consoleLightTheme.space[gap] : undefined },
-      justifyContent:
-        typeof justifyContent === 'object'
-          ? justifyContent
-          : { xxsmall: justifyContent },
+        typeof gap === 'object' ? mapRepsonsiveGap(gap) : { xxsmall: gap ? consoleLightTheme.space[gap] : undefined },
+      justifyContent: typeof justifyContent === 'object' ? justifyContent : { xxsmall: justifyContent },
     })
 
     return (
@@ -164,6 +135,4 @@ const IStack = forwardRef<any, PropsWithChildren<StackProps>>(
   },
 )
 
-export const Stack = IStack as <T extends ElementType = 'div'>(
-  props: StackProps<T>,
-) => ReactElement
+export const Stack = IStack as <T extends ElementType = 'div'>(props: StackProps<T>) => ReactElement

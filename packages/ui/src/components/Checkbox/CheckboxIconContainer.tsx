@@ -4,11 +4,7 @@ import { useTheme } from '@ultraviolet/themes'
 
 import { checkboxStyle } from './styles.css'
 
-export const CheckboxIconContainer = ({
-  checked,
-}: {
-  checked?: boolean | 'indeterminate'
-}) => {
+export const CheckboxIconContainer = ({ checked }: { checked?: boolean | 'indeterminate' }) => {
   const theme = useTheme()
 
   return (
@@ -35,14 +31,7 @@ export const CheckboxIconContainer = ({
           y="4"
         />
       ) : (
-        <rect
-          className={checkboxStyle.checkMixedMark}
-          height="2"
-          rx="1"
-          width="12"
-          x="6"
-          y="11"
-        />
+        <rect className={checkboxStyle.checkMixedMark} height="2" rx="1" width="12" x="6" y="11" />
       )}
     </g>
   )

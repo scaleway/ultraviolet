@@ -7,8 +7,7 @@ const STORYBOOK_A11Y_PARTIAL = {
     name: 'a11y-partial',
     type: 'suggestion',
     docs: {
-      description:
-        'Report components with a11y: partial in index.stories.tsx files',
+      description: 'Report components with a11y: partial in index.stories.tsx files',
       category: 'Accessibility',
       recommended: false,
     },
@@ -23,10 +22,7 @@ const STORYBOOK_A11Y_PARTIAL = {
   create(context) {
     const fileName = context.getFilename()
 
-    if (
-      !fileName.endsWith('index.stories.tsx') &&
-      !fileName.endsWith('index.stories.ts')
-    ) {
+    if (!fileName.endsWith('index.stories.tsx') && !fileName.endsWith('index.stories.ts')) {
       return {}
     }
 

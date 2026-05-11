@@ -3,14 +3,7 @@
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import {
-  forwardRef,
-  useEffect,
-  useId,
-  useImperativeHandle,
-  useMemo,
-  useRef,
-} from 'react'
+import { forwardRef, useEffect, useId, useImperativeHandle, useMemo, useRef } from 'react'
 
 import { Button } from '../Button'
 import { SIZE_HEIGHT as ButtonSizeHeight } from '../Button/constants'
@@ -147,9 +140,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         }
 
         if (textArea && (maxRows || typeof rows === 'number')) {
-          const lineHeight = Number.parseFloat(
-            getComputedStyle(textArea).lineHeight,
-          )
+          const lineHeight = Number.parseFloat(getComputedStyle(textArea).lineHeight)
 
           if (maxRows) {
             textArea.style.height = 'auto'
@@ -189,11 +180,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     return (
       <Stack className={className} gap="0.5">
         {label || labelDescription ? (
-          <Label
-            htmlFor={id ?? localId}
-            labelDescription={labelDescription}
-            required={required}
-          >
+          <Label htmlFor={id ?? localId} labelDescription={labelDescription} required={required}>
             {label}
           </Label>
         ) : null}
@@ -234,12 +221,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               tabIndex={tabIndex}
               value={value}
             />
-            <Stack
-              alignItems="center"
-              className={textAreaStyle.clearableContainer}
-              direction="row"
-              gap="1"
-            >
+            <Stack alignItems="center" className={textAreaStyle.clearableContainer} direction="row" gap="1">
               {computedClearable ? (
                 <Button
                   aria-label="clear value"

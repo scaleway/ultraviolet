@@ -52,9 +52,7 @@ export const data = [
   },
 ]
 
-export const columns: NonNullable<
-  ComponentProps<typeof OfferListField>['columns']
-> = [
+export const columns: NonNullable<ComponentProps<typeof OfferListField>['columns']> = [
   { label: 'Solar system Planet' },
   { label: 'Perihelion', width: '200px' },
   { label: 'Aphelion', width: '200px' },

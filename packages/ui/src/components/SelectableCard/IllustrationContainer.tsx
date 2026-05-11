@@ -26,27 +26,13 @@ export const IllustrationContainer = ({
       : null
 
     return (
-      <Stack
-        alignItems="stretch"
-        direction="row"
-        flex={1}
-        justifyContent="space-between"
-        width="100%"
-      >
-        <Stack className={selectableCardStyle.illustration}>
-          {subChildren}
-        </Stack>
-        <Stack justifyContent="center">
-          {productIcon ? productIcon : null}
-        </Stack>
+      <Stack alignItems="stretch" direction="row" flex={1} justifyContent="space-between" width="100%">
+        <Stack className={selectableCardStyle.illustration}>{subChildren}</Stack>
+        <Stack justifyContent="center">{productIcon ? productIcon : null}</Stack>
 
         {illustration ? (
           <div className={selectableCardStyle.div}>
-            {illustration ? (
-              <div className={selectableCardStyle.image}>
-                {computedIllustration}
-              </div>
-            ) : null}
+            {illustration ? <div className={selectableCardStyle.image}>{computedIllustration}</div> : null}
           </div>
         ) : null}
       </Stack>

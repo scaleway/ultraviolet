@@ -11,19 +11,8 @@ export const Size: StoryFn<typeof TagInput> = args => {
 
   return (
     <Stack gap="2">
-      {(
-        Object.keys(
-          TAGINPUT_SIZE_PADDING,
-        ) as (keyof typeof TAGINPUT_SIZE_PADDING)[]
-      ).map(size => (
-        <TagInput
-          key={size}
-          {...args}
-          label={size}
-          onChange={setTags}
-          size={size}
-          value={tags}
-        />
+      {(Object.keys(TAGINPUT_SIZE_PADDING) as (keyof typeof TAGINPUT_SIZE_PADDING)[]).map(size => (
+        <TagInput key={size} {...args} label={size} onChange={setTags} size={size} value={tags} />
       ))}
     </Stack>
   )

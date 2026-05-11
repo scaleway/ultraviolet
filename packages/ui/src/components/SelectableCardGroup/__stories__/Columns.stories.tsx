@@ -41,8 +41,7 @@ Columns.args = {
 Columns.parameters = {
   docs: {
     description: {
-      story:
-        'Use the `column` prop to change the number of columns of the group.',
+      story: 'Use the `column` prop to change the number of columns of the group.',
     },
   },
 }

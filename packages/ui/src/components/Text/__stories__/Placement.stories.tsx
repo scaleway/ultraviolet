@@ -8,25 +8,22 @@ export const Placement: StoryFn<typeof Text> = args => (
     <div>
       <strong>start</strong>
       <Text {...args} as="div" placement="start" variant="body">
-        This text is quite long. Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.
       </Text>
     </div>
     <div>
       <strong>center</strong>
       <Text {...args} as="div" placement="center" variant="body">
-        This text is quite long. Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.
       </Text>
     </div>
     <div>
       <strong>right</strong>
       <Text {...args} as="div" placement="end" variant="body">
-        This text is quite long. Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.
       </Text>
     </div>
   </Stack>

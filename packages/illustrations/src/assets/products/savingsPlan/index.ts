@@ -10,9 +10,4 @@ const savingsPlanKeyvisual = `${BASE_URL}/products/savingsPlan/savings-plan-keyv
 const savingsPlanOriginal = `${BASE_URL}/products/savingsPlan/savings-plan-original.webp`
 const savingsPlanWire = `${BASE_URL}/products/savingsPlan/savings-plan-wire.svg`
 
-export {
-  savingsPlanContent,
-  savingsPlanKeyvisual,
-  savingsPlanOriginal,
-  savingsPlanWire,
-}
+export { savingsPlanContent, savingsPlanKeyvisual, savingsPlanOriginal, savingsPlanWire }

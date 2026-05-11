@@ -12,12 +12,7 @@ export const Examples = (args: ComponentProps<typeof Link>) => {
     <>
       <Text as="p" variant="body">
         To know more about that feature please visit{' '}
-        <Link
-          {...props}
-          href="https://example.com"
-          target="_blank"
-          variant="inline"
-        >
+        <Link {...props} href="https://example.com" target="_blank" variant="inline">
           our website
         </Link>{' '}
         that is available any time.

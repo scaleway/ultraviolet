@@ -14,13 +14,7 @@ import { listStyle } from './styles.css'
 import { TableContainer } from './TableContainer'
 
 import type { ColumnProps } from './types'
-import type {
-  CSSProperties,
-  Dispatch,
-  ReactNode,
-  RefAttributes,
-  SetStateAction,
-} from 'react'
+import type { CSSProperties, Dispatch, ReactNode, RefAttributes, SetStateAction } from 'react'
 
 // Note: Get type optional type from omit values of ListContext
 type ListProps = {
@@ -77,11 +71,7 @@ const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(
       selectable={selectable}
     >
       <TableContainer>
-        <table
-          className={cn(className, listStyle.list)}
-          ref={ref}
-          style={style}
-        >
+        <table className={cn(className, listStyle.list)} ref={ref} style={style}>
           <HeaderRow hasSelectAllColumn={selectable}>
             {columns.map((column, index) => (
               <HeaderCell
@@ -99,17 +89,7 @@ const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(
               </HeaderCell>
             ))}
           </HeaderRow>
-          <tbody>
-            {loading ? (
-              <SkeletonRows
-                cols={columns.length}
-                rows={5}
-                selectable={selectable}
-              />
-            ) : (
-              children
-            )}
-          </tbody>
+          <tbody>{loading ? <SkeletonRows cols={columns.length} rows={5} selectable={selectable} /> : children}</tbody>
         </table>
       </TableContainer>
     </ListProvider>

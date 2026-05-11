@@ -23,11 +23,7 @@ export const ContainerId: StoryFn<typeof NotificationContainer> = args => (
     >
       ContainerId: &quot; notification1 &quot;
     </Button>
-    <NotificationContainer
-      {...args}
-      containerId="notification2"
-      position="bottom-left"
-    />
+    <NotificationContainer {...args} containerId="notification2" position="bottom-left" />
     <Button
       onClick={() =>
         notification(

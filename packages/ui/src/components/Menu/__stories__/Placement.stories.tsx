@@ -12,19 +12,14 @@ export const DefaultDisclosure = (
   </Button>
 )
 
-export const Placement: StoryFn<typeof Menu> = ({
-  disclosure = DefaultDisclosure,
-  ...props
-}) => (
+export const Placement: StoryFn<typeof Menu> = ({ disclosure = DefaultDisclosure, ...props }) => (
   <>
     <Stack alignItems="flex-end" justifyContent="left" width="100%">
       <>
-        Placement = &quot;auto-right&quot;: not enough room on the right, so
-        second priority (left)
+        Placement = &quot;auto-right&quot;: not enough room on the right, so second priority (left)
         <Menu disclosure={disclosure} placement="auto-right">
           <Menu.Item borderless key="borderless">
-            Information with a very long name. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
+            Information with a very long name. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Menu.Item>
           <Menu.Item borderless key="power on">
             Power on
@@ -32,12 +27,10 @@ export const Placement: StoryFn<typeof Menu> = ({
         </Menu>
       </>
       <>
-        Placement = &quot;right&quot;: not enough room on the right but force
-        placement on the right
+        Placement = &quot;right&quot;: not enough room on the right but force placement on the right
         <Menu disclosure={disclosure} placement="right">
           <Menu.Item borderless key="borderless">
-            Information with a very long name. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
+            Information with a very long name. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Menu.Item>
           <Menu.Item borderless key="power on">
             Power on
@@ -55,8 +48,7 @@ export const Placement: StoryFn<typeof Menu> = ({
       You can play with the placement here using storybook controls
       <Menu disclosure={disclosure} {...props}>
         <Menu.Item borderless key="borderless">
-          Information with a very long name. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
+          Information with a very long name. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Menu.Item>
         <Menu.Item borderless key="power on">
           Power on

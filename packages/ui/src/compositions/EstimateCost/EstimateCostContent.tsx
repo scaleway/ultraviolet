@@ -20,12 +20,7 @@ import { OverlayComponent } from './OverlayComponent'
 import { OverlayContextProvider } from './OverlayContext'
 import { estimateCostStyle } from './styles.css'
 
-import type {
-  BareEstimateProduct,
-  EstimateCostProps,
-  EstimateProduct,
-  Units,
-} from './types'
+import type { BareEstimateProduct, EstimateCostProps, EstimateProduct, Units } from './types'
 
 const DEFAULT_UNIT_LIST: Units[] = ['hours', 'days', 'months']
 
@@ -105,9 +100,7 @@ export const EstimateCostContent = ({
       add: (newProduct: EstimateProduct) => {
         setProducts(total => {
           if (total.find(product => product.id === newProduct.id)) {
-            return total.map(product =>
-              product.id === newProduct.id ? newProduct : product,
-            )
+            return total.map(product => (product.id === newProduct.id ? newProduct : product))
           }
 
           return [...total, newProduct]
@@ -125,17 +118,14 @@ export const EstimateCostContent = ({
     // this variable check if there is a maxAmount in each product
     // if not we do not need to calculate maxTotal, maxHourly, maxOverlayHourly
     const isMaxAmountInProducts = products.find(product => product.maxAmount)
-    setIsLongFractionDigits(
-      !!products.find(product => product.longFractionDigits),
-    )
+    setIsLongFractionDigits(!!products.find(product => product.longFractionDigits))
     setTotalPrice({
       hourly: products.reduce(
         (acc, product) =>
           acc +
           (product.noIteration
             ? 0
-            : (product.price - product.price * product.discount) *
-              Math.max(product.amount - product.amountFree, 0)),
+            : (product.price - product.price * product.discount) * Math.max(product.amount - product.amountFree, 0)),
         0,
       ),
       maxHourly: isMaxAmountInProducts
@@ -180,8 +170,7 @@ export const EstimateCostContent = ({
           acc +
           (product.noIteration
             ? 0
-            : (product.price - product.price * product.discount) *
-              Math.max(product.amount - product.amountFree, 0)),
+            : (product.price - product.price * product.discount) * Math.max(product.amount - product.amountFree, 0)),
         0,
       ),
       total: hideTotal
@@ -217,10 +206,7 @@ export const EstimateCostContent = ({
   ])
 
   useEffect(() => {
-    if (
-      hideTimeUnit &&
-      (iteration.value > 1 || iteration.unit !== (defaultTimeUnit ?? 'hours'))
-    ) {
+    if (hideTimeUnit && (iteration.value > 1 || iteration.unit !== (defaultTimeUnit ?? 'hours'))) {
       setIteration({ unit: defaultTimeUnit ?? 'hours', value: 1 })
     }
   }, [hideTimeUnit, iteration, defaultTimeUnit])
@@ -235,11 +221,7 @@ export const EstimateCostContent = ({
           backgroundProminence={backgroundProminence}
         />
       ) : null}
-      <Stack
-        className={estimateCostStyle.content[compact ? 'compact' : 'default']}
-        gap={2}
-        style={style}
-      >
+      <Stack className={estimateCostStyle.content[compact ? 'compact' : 'default']} gap={2} style={style}>
         {hideOverlay ? null : (
           <OverlayComponent
             disableOverlayLeft={disableOverlayLeft}
@@ -256,9 +238,7 @@ export const EstimateCostContent = ({
             {children}
           </OverlayComponent>
         )}
-        {description === false ? null : (
-          <Description description={description} locales={locales} />
-        )}
+        {description === false ? null : <Description description={description} locales={locales} />}
         {alert ? (
           <Alert sentiment={alertVariant} title={alertTitle}>
             {alert}
@@ -294,26 +274,14 @@ export const EstimateCostContent = ({
             )}
             {commitmentFees !== undefined || monthlyFees !== undefined ? (
               <>
-                <Text
-                  as="h3"
-                  className={estimateCostStyle.feesText}
-                  variant="headingSmall"
-                >
-                  {
-                    locales[
-                      `estimate.cost.fees.${commitmentFees ? 'oneTime' : 'monthly'}.title`
-                    ]
-                  }
+                <Text as="h3" className={estimateCostStyle.feesText} variant="headingSmall">
+                  {locales[`estimate.cost.fees.${commitmentFees ? 'oneTime' : 'monthly'}.title`]}
                 </Text>
                 <table className={estimateCostStyle.feesTable}>
                   <tbody>
                     <Item
                       isLastElement
-                      label={
-                        commitmentFees
-                          ? locales['estimate.cost.fees.commitment']
-                          : monthlyFeesLabel
-                      }
+                      label={commitmentFees ? locales['estimate.cost.fees.commitment'] : monthlyFeesLabel}
                       noIteration
                       price={commitmentFees || monthlyFees}
                       productsCallback={{
@@ -321,9 +289,7 @@ export const EstimateCostContent = ({
                         remove: () => {},
                       }}
                     >
-                      {commitmentFees
-                        ? commitmentFeesContent
-                        : monthlyFeesContent}
+                      {commitmentFees ? commitmentFeesContent : monthlyFeesContent}
                     </Item>
                   </tbody>
                 </table>

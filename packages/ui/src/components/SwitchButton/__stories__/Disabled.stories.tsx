@@ -6,11 +6,7 @@ import type { ComponentProps } from 'react'
 export const Disabled: StoryFn<ComponentProps<typeof SwitchButton>> = args => (
   <SwitchButton {...args} size="small">
     <SwitchButton.Option value="option1">Option 1</SwitchButton.Option>
-    <SwitchButton.Option
-      disabled
-      tooltip="This option is disabled"
-      value="option2"
-    >
+    <SwitchButton.Option disabled tooltip="This option is disabled" value="option2">
       Option Disabled
     </SwitchButton.Option>
     <SwitchButton.Option value="option3">Option 3</SwitchButton.Option>

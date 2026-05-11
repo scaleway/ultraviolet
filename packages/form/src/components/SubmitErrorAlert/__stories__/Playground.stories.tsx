@@ -10,11 +10,7 @@ export const Playground: StoryFn = () => {
   const methods = useForm()
 
   return (
-    <Form
-      errors={mockErrors}
-      methods={methods}
-      onSubmit={() => 'An error occurred'}
-    >
+    <Form errors={mockErrors} methods={methods} onSubmit={() => 'An error occurred'}>
       <Stack gap={1}>
         <SubmitErrorAlert />
         <Submit>Click Me</Submit>

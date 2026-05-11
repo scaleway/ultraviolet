@@ -10,8 +10,7 @@ describe('keyValueField', () => {
     const { asFragment } = renderWithForm(
       <KeyValueField
         addButton={{
-          maxSizeReachedTooltip:
-            'This is a tooltip when the max size is reached',
+          maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
           name: 'add',
           tooltip: 'This is a tooltip',
         }}
@@ -36,8 +35,7 @@ describe('keyValueField', () => {
     const { asFragment } = renderWithForm(
       <KeyValueField
         addButton={{
-          maxSizeReachedTooltip:
-            'This is a tooltip when the max size is reached',
+          maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
           name: 'add',
           tooltip: 'This is a tooltip',
         }}
@@ -58,8 +56,7 @@ describe('keyValueField', () => {
     const { asFragment } = renderWithForm(
       <KeyValueField
         addButton={{
-          maxSizeReachedTooltip:
-            'This is a tooltip when the max size is reached',
+          maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
           name: 'add',
           tooltip: 'This is a tooltip',
         }}

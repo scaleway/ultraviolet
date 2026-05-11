@@ -33,11 +33,7 @@ export const Icon = ({
   title,
 }: IconProps) => (
   <svg
-    className={cn(
-      className,
-      productIconSizes[size],
-      productIconVariants[`${variant}${disabled ? 'Disabled' : ''}`],
-    )}
+    className={cn(className, productIconSizes[size], productIconVariants[`${variant}${disabled ? 'Disabled' : ''}`])}
     height="64"
     style={style}
     viewBox="0 0 64 64"

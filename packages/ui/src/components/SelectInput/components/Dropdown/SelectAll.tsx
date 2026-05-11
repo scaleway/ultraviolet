@@ -8,20 +8,8 @@ import { selectInputStyle } from '../../styles.css'
 
 import type { OptionType } from '../../types'
 
-export const SelectAll = ({
-  textVariant,
-}: {
-  textVariant: 'body' | 'bodySmall' | 'caption'
-}) => {
-  const {
-    onChange,
-    options,
-    multiselect,
-    selectAll,
-    setSelectedData,
-    selectedData,
-    size,
-  } = useSelectInput()
+export const SelectAll = ({ textVariant }: { textVariant: 'body' | 'bodySmall' | 'caption' }) => {
+  const { onChange, options, multiselect, selectAll, setSelectedData, selectedData, size } = useSelectInput()
   const selectAllOptions = () => {
     if (multiselect) {
       setSelectedData({ type: 'selectAll' })
@@ -61,9 +49,7 @@ export const SelectAll = ({
         )}
         data-testid="select-all"
         onClick={selectAllOptions}
-        onKeyDown={event =>
-          [' ', 'Enter'].includes(event.key) ? selectAllOptions() : null
-        }
+        onKeyDown={event => ([' ', 'Enter'].includes(event.key) ? selectAllOptions() : null)}
         role="option"
         tabIndex={0}
       >

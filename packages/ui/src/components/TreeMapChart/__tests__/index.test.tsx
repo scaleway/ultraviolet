@@ -6,10 +6,7 @@ import { useState } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 
 import { TreeMapChart } from '..'
-import {
-  treeMapChartSimpleData,
-  treeMapChartWithCustomContentData,
-} from '../__stories__/mockData'
+import { treeMapChartSimpleData, treeMapChartWithCustomContentData } from '../__stories__/mockData'
 
 import type { DataType } from '../types'
 import type { ReactNode } from 'react'
@@ -38,21 +35,14 @@ type MockedResponsiveTreeMapHtmlType = {
 // This mock renders a simplified but predictable structure that represents the data
 // accurately for snapshot testing
 vi.mock('@nivo/treemap', () => ({
-  ResponsiveTreeMapHtml: ({
-    data,
-    tooltip,
-    label,
-  }: MockedResponsiveTreeMapHtmlType) => {
+  ResponsiveTreeMapHtml: ({ data, tooltip, label }: MockedResponsiveTreeMapHtmlType) => {
     const [hoveredNode, setHoveredNode] = useState<MockedNodeType | null>(null)
 
     const { children } = data
 
     return (
       <>
-        <div
-          data-testid="treemap-mock"
-          style={{ height: '500px', position: 'relative', width: '1000px' }}
-        >
+        <div data-testid="treemap-mock" style={{ height: '500px', position: 'relative', width: '1000px' }}>
           {children?.map((child: DataType, index: number) => {
             const mockNode = {
               color: '#641cb3',
@@ -66,9 +56,7 @@ vi.mock('@nivo/treemap', () => ({
               y: 0,
             }
 
-            const labelContent = label
-              ? label({ data: child, id: child.id })
-              : child.content
+            const labelContent = label ? label({ data: child, id: child.id }) : child.content
 
             return (
               <div
@@ -99,19 +87,13 @@ vi.mock('@nivo/treemap', () => ({
 
 describe('treeMapChart', () => {
   it('renders correctly with data', () => {
-    const { asFragment } = renderWithTheme(
-      <TreeMapChart data={treeMapChartSimpleData} />,
-      consoleLightTheme,
-    )
+    const { asFragment } = renderWithTheme(<TreeMapChart data={treeMapChartSimpleData} />, consoleLightTheme)
 
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders complex content with React components', () => {
-    const { asFragment } = renderWithTheme(
-      <TreeMapChart data={treeMapChartWithCustomContentData} />,
-      consoleLightTheme,
-    )
+    const { asFragment } = renderWithTheme(<TreeMapChart data={treeMapChartWithCustomContentData} />, consoleLightTheme)
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -133,10 +115,7 @@ describe('treeMapChart', () => {
     }))
 
     const { container } = renderWithTheme(
-      <TreeMapChart
-        data={treeMapChartSimpleData}
-        tooltipFunction={tooltipFunction}
-      />,
+      <TreeMapChart data={treeMapChartSimpleData} tooltipFunction={tooltipFunction} />,
       consoleLightTheme,
     )
 
@@ -149,9 +128,7 @@ describe('treeMapChart', () => {
 
     // Verify tooltip function was called
     expect(tooltipFunction).toHaveBeenCalled()
-    expect(tooltipFunction).toHaveBeenCalledWith(
-      expect.objectContaining(treeMapChartSimpleData.children[0]),
-    )
+    expect(tooltipFunction).toHaveBeenCalledWith(expect.objectContaining(treeMapChartSimpleData.children[0]))
 
     // Check that tooltip is visible with custom content
     expect(screen.getByText(/Custom: Compute/i)).toBeInTheDocument()

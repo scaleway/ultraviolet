@@ -22,10 +22,7 @@ export const BarChartTooltip = ({
   className,
   'data-testid': dataTestId,
 }: BarChartTooltipProps) => (
-  <div
-    className={cn(className, barChartStyle.tooltipContainer)}
-    data-testid={dataTestId}
-  >
+  <div className={cn(className, barChartStyle.tooltipContainer)} data-testid={dataTestId}>
     <div>
       <span
         className={barChartStyle.tooltipContainer}

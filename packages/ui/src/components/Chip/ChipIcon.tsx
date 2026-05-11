@@ -17,11 +17,7 @@ type ChipIconType = {
   'data-testid'?: string
 }
 
-export const ChipIcon = ({
-  icon,
-  onClick,
-  'data-testid': dataTestId,
-}: ChipIconType) => {
+export const ChipIcon = ({ icon, onClick, 'data-testid': dataTestId }: ChipIconType) => {
   const context = useContext(ChipContext)
 
   if (!context) {

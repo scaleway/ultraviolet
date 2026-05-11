@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const ServerlessJobsProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const ServerlessJobsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="ServerlessJobsProductIcon">
     <g className="Serverless-Jobs">
       <g className="icon" clipPath="url(#a)">
@@ -58,29 +56,15 @@ export const ServerlessJobsProductIcon = ({
               fillRule="evenodd"
             />
           </g>
-          <g
-            fill="#4F0599"
-            className="fill"
-            clipRule="evenodd"
-            fillRule="evenodd"
-          >
+          <g fill="#4F0599" className="fill" clipRule="evenodd" fillRule="evenodd">
             <path
               d="M27.427 28a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-12a3 3 0 0 1-3-3zm3-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1z"
               className="fill"
             />
             <g className="fill">
-              <path
-                d="M32 27.924a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1"
-                className="Vector 214 (Stroke)"
-              />
-              <path
-                d="M36.5 27.924a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1"
-                className="Vector 215 (Stroke)"
-              />
-              <path
-                d="M41 27.924a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1"
-                className="Vector 216 (Stroke)"
-              />
+              <path d="M32 27.924a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1" className="Vector 214 (Stroke)" />
+              <path d="M36.5 27.924a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1" className="Vector 215 (Stroke)" />
+              <path d="M41 27.924a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1" className="Vector 216 (Stroke)" />
             </g>
           </g>
           <g fill="#4F0599" className="fill">

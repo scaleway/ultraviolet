@@ -20,12 +20,7 @@ export type TableProviderProps = Omit<ListProviderProps, 'columns'> & {
   columns: ColumnProps[]
 }
 
-const Provider = ({
-  children,
-  bordered,
-  stripped,
-  columns,
-}: TableProviderProps) => {
+const Provider = ({ children, bordered, stripped, columns }: TableProviderProps) => {
   const { subscribeHandler, ...listContext } = useListContext()
 
   useEffect(subscribeHandler, [subscribeHandler])
@@ -45,20 +40,9 @@ const Provider = ({
 }
 
 // oxlint-disable-next-line react/no-multi-comp
-export const TableProvider = ({
-  children,
-  bordered,
-  stripped,
-  columns,
-  ...props
-}: TableProviderProps) => (
+export const TableProvider = ({ children, bordered, stripped, columns, ...props }: TableProviderProps) => (
   <ListProvider columns={[]} {...props}>
-    <Provider
-      bordered={bordered}
-      columns={columns}
-      stripped={stripped}
-      {...props}
-    >
+    <Provider bordered={bordered} columns={columns} stripped={stripped} {...props}>
       {children}
     </Provider>
   </ListProvider>

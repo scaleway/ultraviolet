@@ -37,15 +37,7 @@ type TabProps<T extends ElementType = 'button'> = {
   style?: CSSProperties
 } & Omit<
   ComponentProps<T>,
-  | 'as'
-  | 'badge'
-  | 'children'
-  | 'className'
-  | 'counter'
-  | 'disabled'
-  | 'value'
-  | 'tooltip'
-  | 'role'
+  'as' | 'badge' | 'children' | 'className' | 'counter' | 'disabled' | 'value' | 'tooltip' | 'role'
 >
 
 export const Tab = forwardRef(
@@ -69,10 +61,7 @@ export const Tab = forwardRef(
     const { selected, onChange } = useTabsContext()
     const computedAs = as ?? 'button'
     const ComputedComponent = as ?? 'button'
-    const isSelected = useMemo(
-      () => value !== undefined && selected === value,
-      [value, selected],
-    )
+    const isSelected = useMemo(() => value !== undefined && selected === value, [value, selected])
 
     return (
       <Tooltip text={tooltip}>
@@ -113,17 +102,13 @@ export const Tab = forwardRef(
                   {counter}
                 </Badge>
               ) : null}
-              {badge ? (
-                <span className={tabsStyle.badgeContainer}>{badge}</span>
-              ) : null}
+              {badge ? <span className={tabsStyle.badgeContainer}>{badge}</span> : null}
             </Stack>
             {subtitle ? (
               <Stack direction="row">
                 <Text
                   as="span"
-                  className={
-                    tabsStyle.textSelected[isSelected ? 'selected' : 'default']
-                  }
+                  className={tabsStyle.textSelected[isSelected ? 'selected' : 'default']}
                   prominence="weak"
                   sentiment="neutral"
                   variant="bodySmall"

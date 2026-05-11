@@ -20,8 +20,7 @@ Indented.args = {
 Indented.parameters = {
   docs: {
     description: {
-      story:
-        'If you add indentation to the code snippet, it will be preserved.',
+      story: 'If you add indentation to the code snippet, it will be preserved.',
     },
   },
 }

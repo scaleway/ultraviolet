@@ -19,9 +19,7 @@ export const useFileInput = () => {
   const context = useContext(FileInputContext)
 
   if (!context) {
-    throw new Error(
-      'FileInputContext should be inside FileInput to work properly.',
-    )
+    throw new Error('FileInputContext should be inside FileInput to work properly.')
   }
 
   return context

@@ -35,10 +35,7 @@ const orderSummaryHeaderContainerBase = style({
 
 const headerContainer = styleVariants({
   hideDetails: [orderSummaryHeaderContainerBase],
-  showDetails: [
-    orderSummaryHeaderContainerBase,
-    { borderBottom: `1px solid ${theme.colors.neutral.border}` },
-  ],
+  showDetails: [orderSummaryHeaderContainerBase, { borderBottom: `1px solid ${theme.colors.neutral.border}` }],
 })
 
 const stackBackground = style({

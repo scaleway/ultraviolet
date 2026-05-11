@@ -15,8 +15,7 @@ export default {
     },
     docs: {
       description: {
-        component:
-          'This is the main component that is needed to wrap your fields',
+        component: 'This is the main component that is needed to wrap your fields',
       },
     },
   },

@@ -11,12 +11,7 @@ import type { StoryFn } from '@storybook/react-vite'
 
 export const Image: StoryFn = props => (
   <Stack direction="row" gap={2}>
-    <Modal
-      disclosure={<Button>Open Modal with image (incorrect ratio)</Button>}
-      image={image}
-      size="medium"
-      {...props}
-    >
+    <Modal disclosure={<Button>Open Modal with image (incorrect ratio)</Button>} image={image} size="medium" {...props}>
       <Stack direction="column" gap="2">
         <Badge prominence="strong" sentiment="warning">
           Beta
@@ -47,8 +42,7 @@ export const Image: StoryFn = props => (
         <Text as="p" sentiment="neutral" variant="body">
           <strong>Content</strong>
           <br />
-          When the image does have the correct ratio, it fills the entire
-          container and it is not cropped.
+          When the image does have the correct ratio, it fills the entire container and it is not cropped.
         </Text>
       </Stack>
     </Modal>

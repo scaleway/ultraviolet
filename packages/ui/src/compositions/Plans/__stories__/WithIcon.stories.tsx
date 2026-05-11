@@ -44,9 +44,7 @@ const planStarter = {
       <StyledDiv>
         <Separator />
 
-        <p style={{ paddingInline: '16px' }}>
-          For developers & non mission-critical projects
-        </p>
+        <p style={{ paddingInline: '16px' }}>For developers & non mission-critical projects</p>
         <Separator />
       </StyledDiv>
     ),
@@ -109,9 +107,7 @@ const planAdvanced = {
       <StyledDiv>
         <Separator />
 
-        <p style={{ paddingInline: '16px' }}>
-          For fast-growing starups & mission-critical infrastructure
-        </p>
+        <p style={{ paddingInline: '16px' }}>For fast-growing starups & mission-critical infrastructure</p>
         <Separator />
       </StyledDiv>
     ),

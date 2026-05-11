@@ -15,9 +15,7 @@ const ThemeContext = createContext(consoleLightTheme)
 export const useTheme = () => {
   const context = useContext(ThemeContext)
   if (!context) {
-    throw new Error(
-      'useTheme must be used within a ThemeProvider imported from @ultraviolet/themes',
-    )
+    throw new Error('useTheme must be used within a ThemeProvider imported from @ultraviolet/themes')
   }
 
   return context
@@ -36,10 +34,7 @@ type ThemeProviderProps = {
  * ThemeProvider will apply generated global CSS variables to the application in the `<head>`.
  * If no theme is provided, it will default to `lightTheme`.
  */
-export const ThemeProvider = ({
-  children,
-  theme = consoleLightTheme,
-}: ThemeProviderProps) => {
+export const ThemeProvider = ({ children, theme = consoleLightTheme }: ThemeProviderProps) => {
   useLayoutEffect(() => {
     const styleId = 'uv-theme'
     const iconsStyleId = 'uv-icons'

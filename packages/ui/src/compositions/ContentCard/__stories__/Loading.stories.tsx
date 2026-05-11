@@ -27,7 +27,6 @@ Loading.args = { ...Template.args }
 
 Loading.parameters = {
   description: {
-    story:
-      'You can easily enable a loading state by passing `loading` it will render a placeholder skeleton.',
+    story: 'You can easily enable a loading state by passing `loading` it will render a placeholder skeleton.',
   },
 }

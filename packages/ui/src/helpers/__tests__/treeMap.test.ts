@@ -95,13 +95,7 @@ describe(getAllIds, () => {
       ],
       id: 'root',
     }
-    expect(getAllIds(datum)).toEqual([
-      'root',
-      'child1',
-      'grandchild1',
-      'grandchild2',
-      'child2',
-    ])
+    expect(getAllIds(datum)).toEqual(['root', 'child1', 'grandchild1', 'grandchild2', 'child2'])
   })
 
   it('should handle deeply nested structures', () => {

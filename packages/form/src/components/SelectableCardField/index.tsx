@@ -7,10 +7,10 @@ import type { BaseFieldProps } from '../../types'
 import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 
-type SelectableCardFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
+type SelectableCardFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = Omit<
+  BaseFieldProps<TFieldValues, TFieldName>,
+  'label'
+> &
   Omit<ComponentProps<typeof SelectableCard>, 'name' | 'onChange' | 'value'>
 
 export const SelectableCardField = <
@@ -47,9 +47,7 @@ export const SelectableCardField = <
   })
 
   const isChecked =
-    (type === 'checkbox' || type === 'toggle') &&
-    Array.isArray(field.value) &&
-    value
+    (type === 'checkbox' || type === 'toggle') && Array.isArray(field.value) && value
       ? (field.value ?? []).includes(value)
       : field.value === value
 
@@ -69,23 +67,14 @@ export const SelectableCardField = <
         if (type === 'checkbox' || type === 'toggle') {
           const fieldValue = (field.value ?? []) as string[]
           if (fieldValue?.includes(event.currentTarget.value)) {
-            field.onChange(
-              fieldValue?.filter(
-                currentValue => currentValue !== event.currentTarget.value,
-              ),
-            )
+            field.onChange(fieldValue?.filter(currentValue => currentValue !== event.currentTarget.value))
           } else {
             field.onChange([...fieldValue, event.currentTarget.value])
           }
         } else {
           field.onChange(event)
         }
-        onChange?.(
-          event.currentTarget.value as PathValue<
-            TFieldValues,
-            Path<TFieldValues>
-          >,
-        )
+        onChange?.(event.currentTarget.value as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       onFocus={event => {
         onFocus?.(event)

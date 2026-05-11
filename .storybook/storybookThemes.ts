@@ -19,12 +19,7 @@ type GenerateStorybookThemeProps = {
   brandImage: typeof lightBrandImage
 }
 
-const generateStorybookTheme = ({
-  base,
-  theme,
-  brandUrl,
-  brandImage,
-}: GenerateStorybookThemeProps) =>
+const generateStorybookTheme = ({ base, theme, brandUrl, brandImage }: GenerateStorybookThemeProps) =>
   create({
     // UI
     appBg: theme.colors.neutral.background,

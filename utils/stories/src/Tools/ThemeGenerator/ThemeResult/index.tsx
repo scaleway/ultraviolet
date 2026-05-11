@@ -2,13 +2,7 @@ import { ArrowLeftIcon } from '@ultraviolet/icons/ArrowLeftIcon'
 import { EyeIcon } from '@ultraviolet/icons/EyeIcon'
 import { EyeOffIcon } from '@ultraviolet/icons/EyeOffIcon'
 import { ThemeProvider } from '@ultraviolet/themes'
-import {
-  Button,
-  theme as consoleLightTheme,
-  Row,
-  Stack,
-  Text,
-} from '@ultraviolet/ui'
+import { Button, theme as consoleLightTheme, Row, Stack, Text } from '@ultraviolet/ui'
 import { useCallback, useState } from 'react'
 
 import { CodeIntegration } from './CodeIntegration'
@@ -23,12 +17,7 @@ type ThemeResultProps = {
   setStep: (step: number) => void
 }
 
-export const ThemeResult = ({
-  theme,
-  setTheme,
-  generatedPalette,
-  setStep,
-}: ThemeResultProps) => {
+export const ThemeResult = ({ theme, setTheme, generatedPalette, setStep }: ThemeResultProps) => {
   const [isVisible, setIsVisible] = useState(false)
 
   const onMouseUp = useCallback(() => {
@@ -45,11 +34,7 @@ export const ThemeResult = ({
     <Stack gap={4}>
       <Row alignItems="center" templateColumns="1fr 2fr 1fr">
         <div style={{ display: 'inline-block' }}>
-          <Button
-            onClick={() => setStep(0)}
-            sentiment="neutral"
-            variant="filled"
-          >
+          <Button onClick={() => setStep(0)} sentiment="neutral" variant="filled">
             <ArrowLeftIcon />
             Back
           </Button>

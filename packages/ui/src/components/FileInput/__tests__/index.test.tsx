@@ -55,9 +55,7 @@ const defaultFile = [
 
 describe('fileInput', () => {
   it('renders correctly', () => {
-    const { asFragment } = renderWithTheme(
-      <FileInput helper="helper" label="label" title="title" />,
-    )
+    const { asFragment } = renderWithTheme(<FileInput helper="helper" label="label" title="title" />)
     expect(asFragment()).toMatchSnapshot()
   })
   it('renders correctly as an overlay', () => {
@@ -69,9 +67,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
   it('renders correctly small', () => {
-    const { asFragment } = renderWithTheme(
-      <FileInput label="label" size="small" title="title" />,
-    )
+    const { asFragment } = renderWithTheme(<FileInput label="label" size="small" title="title" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -94,18 +90,14 @@ describe('fileInput', () => {
   })
 
   it('renders correctly with bottom', () => {
-    const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" bottom={<FileInput.List />} />,
-    )
+    const { asFragment } = renderWithTheme(<FileInput aria-label="label" bottom={<FileInput.List />} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly disabled', () => {
     const { asFragment } = renderWithTheme(
       <FileInput aria-label="label" disabled>
-        <FileInput.Button data-testid="button">
-          Disabled button
-        </FileInput.Button>
+        <FileInput.Button data-testid="button">Disabled button</FileInput.Button>
       </FileInput>,
     )
 
@@ -115,15 +107,8 @@ describe('fileInput', () => {
 
   it('renders correctly with error', () => {
     const { asFragment } = renderWithTheme(
-      <FileInput
-        aria-label="label"
-        defaultFiles={defaultFile}
-        disabled
-        error="error"
-      >
-        <FileInput.Button data-testid="button">
-          Disabled button
-        </FileInput.Button>
+      <FileInput aria-label="label" defaultFiles={defaultFile} disabled error="error">
+        <FileInput.Button data-testid="button">Disabled button</FileInput.Button>
       </FileInput>,
     )
 
@@ -136,12 +121,7 @@ describe('fileInput', () => {
     const onDelete = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <FileInput
-        aria-label="label"
-        defaultFiles={defaultFile}
-        multiple
-        onChange={onChange}
-      >
+      <FileInput aria-label="label" defaultFiles={defaultFile} multiple onChange={onChange}>
         <FileInput.List onDelete={onDelete} />
       </FileInput>,
     )
@@ -160,12 +140,7 @@ describe('fileInput', () => {
   it('renders correctly onChangeFiles', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
-      <FileInput
-        aria-label="label"
-        defaultFiles={defaultFile}
-        multiple
-        onChangeFiles={onChange}
-      >
+      <FileInput aria-label="label" defaultFiles={defaultFile} multiple onChangeFiles={onChange}>
         <FileInput.List />
       </FileInput>,
     )
@@ -184,12 +159,7 @@ describe('fileInput', () => {
   it('should work correctly with listLimit', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
-      <FileInput
-        aria-label="label"
-        defaultFiles={defaultFile}
-        multiple
-        onChangeFiles={onChange}
-      >
+      <FileInput aria-label="label" defaultFiles={defaultFile} multiple onChangeFiles={onChange}>
         <FileInput.List limit={3} textLimit="see all" />
       </FileInput>,
     )
@@ -212,12 +182,7 @@ describe('fileInput', () => {
     const onChange = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <FileInput
-        aria-label="label"
-        defaultFiles={defaultFile}
-        multiple
-        onChangeFiles={onChange}
-      >
+      <FileInput aria-label="label" defaultFiles={defaultFile} multiple onChangeFiles={onChange}>
         <FileInput.List />
         <FileInput.Button>button</FileInput.Button>
       </FileInput>,
@@ -227,9 +192,9 @@ describe('fileInput', () => {
   })
 
   it('should throw error with FileInput.Button outside of FileInput', () => {
-    expect(() =>
-      shouldMatchSnapshot(<FileInput.Button>button</FileInput.Button>),
-    ).toThrow('FileInputContext should be inside FileInput to work properly.')
+    expect(() => shouldMatchSnapshot(<FileInput.Button>button</FileInput.Button>)).toThrow(
+      'FileInputContext should be inside FileInput to work properly.',
+    )
   })
 
   it('should work with function children and title', () => {
@@ -314,9 +279,7 @@ describe('fileInput', () => {
   })
 
   it('should handle drag state in dropzone variant', () => {
-    const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" title="upload files" variant="dropzone" />,
-    )
+    const { asFragment } = renderWithTheme(<FileInput aria-label="label" title="upload files" variant="dropzone" />)
 
     const dropzoneElement = screen.getByTestId('drag-container')
     fireEvent.dragOver(dropzoneElement)
@@ -328,11 +291,7 @@ describe('fileInput', () => {
   it('should handle adding a file when selecting via the hidden file input', async () => {
     const onChangeFiles = vi.fn()
     const { asFragment } = renderWithTheme(
-      <FileInput
-        aria-label="label"
-        data-testid="test"
-        onChangeFiles={onChangeFiles}
-      >
+      <FileInput aria-label="label" data-testid="test" onChangeFiles={onChangeFiles}>
         <FileInput.List />
       </FileInput>,
     )
@@ -343,9 +302,7 @@ describe('fileInput', () => {
     await userEvent.upload(input, file)
 
     expect(onChangeFiles).toHaveBeenCalledWith(
-      expect.arrayContaining([
-        expect.objectContaining({ fileName: 'upload.png' }),
-      ]),
+      expect.arrayContaining([expect.objectContaining({ fileName: 'upload.png' })]),
     )
 
     const added = screen.getByTestId('upload.png')
@@ -357,11 +314,7 @@ describe('fileInput', () => {
   it('should add a file with drag and drop', () => {
     const onChangeFiles = vi.fn()
     renderWithTheme(
-      <FileInput
-        accept="image/*"
-        aria-label="label"
-        onChangeFiles={onChangeFiles}
-      >
+      <FileInput accept="image/*" aria-label="label" onChangeFiles={onChangeFiles}>
         <FileInput.List />
       </FileInput>,
     )
@@ -378,9 +331,7 @@ describe('fileInput', () => {
     } as unknown as DragEvent)
 
     expect(onChangeFiles).toHaveBeenCalledWith(
-      expect.arrayContaining([
-        expect.objectContaining({ fileName: 'dnd.png' }),
-      ]),
+      expect.arrayContaining([expect.objectContaining({ fileName: 'dnd.png' })]),
     )
 
     const added = screen.getByTestId('dnd.png')
@@ -389,13 +340,7 @@ describe('fileInput', () => {
 
   it('should add a file with drag and drop which when accept is defined', () => {
     const onChangeFiles = vi.fn()
-    renderWithTheme(
-      <FileInput
-        accept="image/*"
-        aria-label="label"
-        onChangeFiles={onChangeFiles}
-      />,
-    )
+    renderWithTheme(<FileInput accept="image/*" aria-label="label" onChangeFiles={onChangeFiles} />)
 
     const dropzone = screen.getByTestId('drag-container')
     const file = new File(['dnd'], 'dnd.png', { type: 'image/png' })
@@ -412,9 +357,7 @@ describe('fileInput', () => {
     } as unknown as DragEvent)
 
     expect(onChangeFiles).toHaveBeenCalledWith(
-      expect.arrayContaining([
-        expect.objectContaining({ fileName: 'dnd.png' }),
-      ]),
+      expect.arrayContaining([expect.objectContaining({ fileName: 'dnd.png' })]),
     )
 
     fireEvent.drop(dropzone, {
@@ -426,21 +369,13 @@ describe('fileInput', () => {
     } as unknown as DragEvent)
 
     expect(onChangeFiles).not.toHaveBeenCalledWith(
-      expect.arrayContaining([
-        expect.objectContaining({ fileName: 'not-added.pdf' }),
-      ]),
+      expect.arrayContaining([expect.objectContaining({ fileName: 'not-added.pdf' })]),
     )
   })
 
   it('should add a file with drag and drop which when accept is defined and precise', () => {
     const onChangeFiles = vi.fn()
-    renderWithTheme(
-      <FileInput
-        accept="image/png"
-        aria-label="label"
-        onChangeFiles={onChangeFiles}
-      />,
-    )
+    renderWithTheme(<FileInput accept="image/png" aria-label="label" onChangeFiles={onChangeFiles} />)
 
     const dropzone = screen.getByTestId('drag-container')
     const file = new File(['dnd'], 'dnd.png', { type: 'image/png' })
@@ -458,9 +393,7 @@ describe('fileInput', () => {
     } as unknown as DragEvent)
 
     expect(onChangeFiles).toHaveBeenCalledWith(
-      expect.arrayContaining([
-        expect.objectContaining({ fileName: 'dnd.png' }),
-      ]),
+      expect.arrayContaining([expect.objectContaining({ fileName: 'dnd.png' })]),
     )
 
     fireEvent.drop(dropzone, {
@@ -472,9 +405,7 @@ describe('fileInput', () => {
     } as unknown as DragEvent)
 
     expect(onChangeFiles).not.toHaveBeenCalledWith(
-      expect.arrayContaining([
-        expect.objectContaining({ fileName: 'not-added.pdf' }),
-      ]),
+      expect.arrayContaining([expect.objectContaining({ fileName: 'not-added.pdf' })]),
     )
 
     fireEvent.drop(dropzone, {
@@ -486,17 +417,13 @@ describe('fileInput', () => {
     } as unknown as DragEvent)
 
     expect(onChangeFiles).not.toHaveBeenCalledWith(
-      expect.arrayContaining([
-        expect.objectContaining({ fileName: 'dnd.jpg' }),
-      ]),
+      expect.arrayContaining([expect.objectContaining({ fileName: 'dnd.jpg' })]),
     )
   })
 
   it('should add a file with drag and drop which when accept but not valid', () => {
     const onChangeFiles = vi.fn()
-    renderWithTheme(
-      <FileInput accept=" " aria-label="label" onChangeFiles={onChangeFiles} />,
-    )
+    renderWithTheme(<FileInput accept=" " aria-label="label" onChangeFiles={onChangeFiles} />)
 
     const dropzone = screen.getByTestId('drag-container')
     const file = new File(['dnd'], 'dnd.png', { type: 'image/png' })
@@ -510,9 +437,7 @@ describe('fileInput', () => {
     } as unknown as DragEvent)
 
     expect(onChangeFiles).toHaveBeenCalledWith(
-      expect.arrayContaining([
-        expect.objectContaining({ fileName: 'dnd.png' }),
-      ]),
+      expect.arrayContaining([expect.objectContaining({ fileName: 'dnd.png' })]),
     )
   })
 })

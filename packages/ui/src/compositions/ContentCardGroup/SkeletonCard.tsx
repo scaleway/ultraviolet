@@ -13,10 +13,7 @@ export const SkeletonCard = () => (
         <Skeleton variant="line" />
         <Skeleton variant="line" />
       </Stack>
-      <Skeleton
-        className={contentCardGroupStyle.squareSkeleton}
-        variant="square"
-      />
+      <Skeleton className={contentCardGroupStyle.squareSkeleton} variant="square" />
     </Stack>
   </div>
 )

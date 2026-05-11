@@ -83,64 +83,23 @@ export const Playground: StoryFn<typeof Form> = () => {
           I&apos;m disabling the field name to remove validation
         </CheckboxField>
         <Stack direction="row" gap={2}>
-          <RadioField
-            control={methods.control}
-            label="1"
-            name="choice"
-            required
-            value="1"
-          />
-          <RadioField
-            control={methods.control}
-            label="2"
-            name="choice"
-            required
-            value="2"
-          />
-          <RadioField
-            control={methods.control}
-            label="3"
-            name="choice"
-            required
-            value="3"
-          />
+          <RadioField control={methods.control} label="1" name="choice" required value="1" />
+          <RadioField control={methods.control} label="2" name="choice" required value="2" />
+          <RadioField control={methods.control} label="3" name="choice" required value="3" />
         </Stack>
         <Stack direction="row" gap={2}>
-          <DateInputField
-            control={methods.control}
-            label="Date"
-            name="date"
-            required
-          />
+          <DateInputField control={methods.control} label="Date" name="date" required />
           <TimeInputField control={methods.control} name="time" required />
         </Stack>
 
         <Stack direction="row" gap={2}>
-          <SelectableCardField
-            aria-label="Select"
-            control={methods.control}
-            name="selectableCard"
-            required
-            value="1"
-          >
+          <SelectableCardField aria-label="Select" control={methods.control} name="selectableCard" required value="1">
             Selectable Card 1
           </SelectableCardField>
-          <SelectableCardField
-            aria-label="Select"
-            control={methods.control}
-            name="selectableCard"
-            required
-            value="2"
-          >
+          <SelectableCardField aria-label="Select" control={methods.control} name="selectableCard" required value="2">
             Selectable Card 2
           </SelectableCardField>
-          <SelectableCardField
-            aria-label="Select"
-            control={methods.control}
-            name="selectableCard"
-            required
-            value="3"
-          >
+          <SelectableCardField aria-label="Select" control={methods.control} name="selectableCard" required value="3">
             Selectable Card 3
           </SelectableCardField>
         </Stack>
@@ -154,12 +113,7 @@ export const Playground: StoryFn<typeof Form> = () => {
           placeholder="John"
           required={!disableName}
         />
-        <NumberInputField
-          control={methods.control}
-          max={99}
-          min={1}
-          name="age"
-        />
+        <NumberInputField control={methods.control} max={99} min={1} name="age" />
         <TextInputField
           control={methods.control}
           label="Email"
@@ -170,30 +124,16 @@ export const Playground: StoryFn<typeof Form> = () => {
           type="email"
         />
 
-        <SelectInputField
-          control={methods.control}
-          name="select"
-          options={data}
-          required
-          searchable={false}
-        />
+        <SelectInputField control={methods.control} name="select" options={data} required searchable={false} />
 
-        <TagInputField
-          control={methods.control}
-          name="tags"
-          placeholder="TagInput..."
-        />
+        <TagInputField control={methods.control} name="tags" placeholder="TagInput..." />
 
         <Stack direction="row" gap={2} justifyContent="center">
           <CheckboxField control={methods.control} name="receiveEmailUpdates">
             I&apos;d like to receive news updates
           </CheckboxField>
 
-          <ToggleField
-            control={methods.control}
-            label="Toggle"
-            name="receiveEmailUpdates"
-          />
+          <ToggleField control={methods.control} label="Toggle" name="receiveEmailUpdates" />
         </Stack>
 
         <SubmitErrorAlert />

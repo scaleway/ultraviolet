@@ -18,12 +18,7 @@ type ColumnProviderProps = {
 }
 const ColumnContext = createContext<ContextType>(undefined)
 
-export const ColumnProvider = ({
-  width,
-  minWidth,
-  maxWidth,
-  children,
-}: ColumnProviderProps) => {
+export const ColumnProvider = ({ width, minWidth, maxWidth, children }: ColumnProviderProps) => {
   const value = useMemo(
     () => ({
       maxWidth,
@@ -32,9 +27,7 @@ export const ColumnProvider = ({
     }),
     [maxWidth, minWidth, width],
   )
-  return (
-    <ColumnContext.Provider value={value}>{children}</ColumnContext.Provider>
-  )
+  return <ColumnContext.Provider value={value}>{children}</ColumnContext.Provider>
 }
 
 export const useColumnProvider = () => useContext(ColumnContext)

@@ -109,8 +109,7 @@ export const InfiniteScroll = ({
     if (!hasMore) {
       return
     }
-    let scrollableContainer =
-      scrollParentRef?.current ?? containerRef.current?.parentElement
+    let scrollableContainer = scrollParentRef?.current ?? containerRef.current?.parentElement
     while (scrollableContainer && scrollableContainer !== document.body) {
       const { overflowY } = window.getComputedStyle(scrollableContainer)
       if (overflowY === 'auto' || overflowY === 'scroll') {
@@ -123,10 +122,7 @@ export const InfiniteScroll = ({
       return
     }
 
-    const debouncedHandleScroll = debounce(
-      () => handleScroll(scrollableContainer),
-      100,
-    )
+    const debouncedHandleScroll = debounce(() => handleScroll(scrollableContainer), 100)
     scrollableContainer.addEventListener('scroll', debouncedHandleScroll)
 
     // We need to return to remove the event listener when the component is unmounted

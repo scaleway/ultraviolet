@@ -14,8 +14,7 @@ type RowProps = {
 }
 
 export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
-  const { allRowSelectValue, selectAllHandler, selectedRowIds, expandButton } =
-    useListContext()
+  const { allRowSelectValue, selectAllHandler, selectedRowIds, expandButton } = useListContext()
 
   const selectableRowCount = Object.keys(selectedRowIds).length
 
@@ -34,11 +33,7 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
             />
           </HeaderCell>
         ) : null}
-        {expandButton ? (
-          <HeaderCell className={listStyle.noPaddingHeaderCell}>
-            {null}
-          </HeaderCell>
-        ) : null}
+        {expandButton ? <HeaderCell className={listStyle.noPaddingHeaderCell}>{null}</HeaderCell> : null}
         {children}
       </tr>
     </thead>

@@ -12,15 +12,9 @@ export const ExpandButton = Template.bind({})
 ExpandButton.args = {
   ...Template.args,
   children: data.map(planet => (
-    <List.Row
-      disabled={planet.id === 'mercury'}
-      expandable="Planet description"
-      id={planet.id}
-      key={planet.id}
-    >
+    <List.Row disabled={planet.id === 'mercury'} expandable="Planet description" id={planet.id} key={planet.id}>
       <List.Cell>
-        {planet.name}{' '}
-        {planet.id === 'mercury' ? ' (A disabled row cannot be expanded)' : ''}
+        {planet.name} {planet.id === 'mercury' ? ' (A disabled row cannot be expanded)' : ''}
       </List.Cell>
       <List.Cell>{planet.perihelion}AU</List.Cell>
       <List.Cell>{planet.aphelion}AU</List.Cell>

@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const VaultLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const VaultLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="VaultLogo">
     <g>
       <path

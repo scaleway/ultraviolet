@@ -24,13 +24,7 @@ export type IconProps = {
   title: string
 } & Pick<
   SVGProps<SVGSVGElement>,
-  | 'className'
-  | 'stroke'
-  | 'cursor'
-  | 'strokeWidth'
-  | 'aria-label'
-  | 'aria-hidden'
-  | 'style'
+  'className' | 'stroke' | 'cursor' | 'strokeWidth' | 'aria-label' | 'aria-hidden' | 'style'
 >
 
 /**
@@ -57,19 +51,13 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
     },
     ref,
   ) => {
-    const defaultHW =
-      typeof size === 'string' && ['xsmall', 'small'].includes(size)
-        ? '16'
-        : '20'
+    const defaultHW = typeof size === 'string' && ['xsmall', 'small'].includes(size) ? '16' : '20'
 
     return (
       <svg
         aria-hidden={ariaHidden}
         aria-label={ariaLabel}
-        className={cn(
-          className,
-          icon({ disabled, prominence, sentiment, size }),
-        )}
+        className={cn(className, icon({ disabled, prominence, sentiment, size }))}
         cursor={cursor}
         data-testid={dataTestId}
         height={defaultHW}
@@ -77,11 +65,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
         stroke={stroke}
         strokeWidth={strokeWidth}
         style={style}
-        viewBox={
-          typeof size === 'string' && ['xsmall', 'small'].includes(size)
-            ? '0 0 16 16'
-            : '0 0 20 20'
-        }
+        viewBox={typeof size === 'string' && ['xsmall', 'small'].includes(size) ? '0 0 16 16' : '0 0 20 20'}
         width={defaultHW}
       >
         <title>{title}</title>

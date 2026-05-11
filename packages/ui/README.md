@@ -13,18 +13,9 @@ $ pnpm add @ultraviolet/ui @ultraviolet/themes
 You will also need to import fonts in your project by adding:
 
 ```html
-<link
-  href="https://fonts.cdnfonts.com/css/inter?styles=29139,29137,29140"
-  rel="stylesheet"
-/>
-<link
-  href="https://fonts.cdnfonts.com/css/jetbrains-mono-2?styles=156604"
-  rel="stylesheet"
-/>
-<link
-  href="https://fonts.cdnfonts.com/css/space-grotesk?styles=24816,24815,24817"
-  rel="stylesheet"
-/>
+<link href="https://fonts.cdnfonts.com/css/inter?styles=29139,29137,29140" rel="stylesheet" />
+<link href="https://fonts.cdnfonts.com/css/jetbrains-mono-2?styles=156604" rel="stylesheet" />
+<link href="https://fonts.cdnfonts.com/css/space-grotesk?styles=24816,24815,24817" rel="stylesheet" />
 ```
 
 Or if you prefer to install the package for it you can add:
@@ -72,16 +63,11 @@ If your app still uses `Emotion`, you can combine both theme providers:
 
 ```js
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
-import {
-  consoleLightTheme,
-  ThemeProvider as UVThemeProvider,
-} from '@ultraviolet/ui'
+import { consoleLightTheme, ThemeProvider as UVThemeProvider } from '@ultraviolet/ui'
 
 const App = () => (
   <UVThemeProvider theme={consoleLightTheme}>
-    <EmotionThemeProvider theme={consoleLightTheme}>
-      {children}
-    </EmotionThemeProvider>
+    <EmotionThemeProvider theme={consoleLightTheme}>{children}</EmotionThemeProvider>
   </UVThemeProvider>
 )
 ```

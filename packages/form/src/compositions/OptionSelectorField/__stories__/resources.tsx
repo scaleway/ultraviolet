@@ -1,9 +1,4 @@
-import {
-  DebianLogo,
-  ProxmoxLogo,
-  UbuntuLogo,
-  WindowsLogo,
-} from '@ultraviolet/icons/logo'
+import { DebianLogo, ProxmoxLogo, UbuntuLogo, WindowsLogo } from '@ultraviolet/icons/logo'
 
 export const firstSelectorOptions = [
   {

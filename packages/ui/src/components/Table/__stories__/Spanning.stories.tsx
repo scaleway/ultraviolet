@@ -24,15 +24,10 @@ export const Spanning: StoryFn = args => (
               {movie.trilogy}
             </Table.Cell>
           ) : null}
-          <Table.Cell
-            colSpan={movie.director === movie.storyBy ? 2 : 1}
-            sentiment="success"
-          >
+          <Table.Cell colSpan={movie.director === movie.storyBy ? 2 : 1} sentiment="success">
             {movie.director}
           </Table.Cell>
-          {movie.director !== movie.storyBy ? (
-            <Table.Cell sentiment="info">{movie.storyBy}</Table.Cell>
-          ) : null}
+          {movie.director !== movie.storyBy ? <Table.Cell sentiment="info">{movie.storyBy}</Table.Cell> : null}
         </Table.Row>
       ))}
     </Table.Body>
@@ -42,8 +37,7 @@ export const Spanning: StoryFn = args => (
 Spanning.parameters = {
   docs: {
     description: {
-      story:
-        'You can use the html table `colSpan` and `rowSpan` property on a Cell.',
+      story: 'You can use the html table `colSpan` and `rowSpan` property on a Cell.',
     },
   },
 }

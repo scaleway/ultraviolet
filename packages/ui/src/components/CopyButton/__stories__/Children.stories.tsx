@@ -9,8 +9,7 @@ Children.args = {
 Children.parameters = {
   docs: {
     description: {
-      story:
-        'If needed you can add a `children` prop to the component to customize the text inside the button.',
+      story: 'If needed you can add a `children` prop to the component to customize the text inside the button.',
     },
   },
 }

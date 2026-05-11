@@ -53,13 +53,7 @@ export const OrderSummary = ({
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
 
   const categoriesPrice = useMemo(
-    () =>
-      computeCategoriesPrice(
-        items,
-        hideTimeUnit,
-        timePeriodAmount,
-        timePeriodUnit,
-      ),
+    () => computeCategoriesPrice(items, hideTimeUnit, timePeriodAmount, timePeriodUnit),
     [hideTimeUnit, items, timePeriodAmount, timePeriodUnit],
   )
 
@@ -117,19 +111,8 @@ export const OrderSummary = ({
   }, [periodOptions, locales])
 
   useEffect(() => {
-    onChange?.(
-      categoriesPrice,
-      totalPrice,
-      unitaryCategoriesPrice,
-      unitaryTotalPrice,
-    )
-  }, [
-    categoriesPrice,
-    totalPrice,
-    onChange,
-    unitaryTotalPrice,
-    unitaryCategoriesPrice,
-  ])
+    onChange?.(categoriesPrice, totalPrice, unitaryCategoriesPrice, unitaryTotalPrice)
+  }, [categoriesPrice, totalPrice, onChange, unitaryTotalPrice, unitaryCategoriesPrice])
 
   return (
     <OrderSummaryContext.Provider value={valueContext}>
@@ -147,21 +130,12 @@ export const OrderSummary = ({
         {header ? (
           <Stack
             alignItems="center"
-            className={
-              orderSummaryStyle.headerContainer[
-                hideDetails ? 'hideDetails' : 'showDetails'
-              ]
-            }
+            className={orderSummaryStyle.headerContainer[hideDetails ? 'hideDetails' : 'showDetails']}
             direction="row"
             gap={2}
             justifyContent="space-between"
           >
-            <Text
-              as="h3"
-              prominence="strong"
-              sentiment="neutral"
-              variant="headingSmallStrong"
-            >
+            <Text as="h3" prominence="strong" sentiment="neutral" variant="headingSmallStrong">
               {header}
             </Text>
             {hideTimeUnit || hideDetails ? null : (
@@ -192,8 +166,7 @@ export const OrderSummary = ({
         <NonScrollableContent
           additionalInfo={additionalInfo}
           defaultPriceInformation={
-            priceInformation === true ||
-            (hideDetails && !priceInformation && priceInformation !== false)
+            priceInformation === true || (hideDetails && !priceInformation && priceInformation !== false)
           }
           discount={discount}
           footer={footer}

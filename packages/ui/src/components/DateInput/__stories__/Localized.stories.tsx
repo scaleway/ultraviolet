@@ -15,13 +15,7 @@ const locales = [
 
 export const Localized = (props: ComponentProps<typeof DateInput>) =>
   locales.map(({ label, locale }) => (
-    <DateInput
-      key={label}
-      {...props}
-      label={label}
-      locale={locale}
-      onChange={() => {}}
-    />
+    <DateInput key={label} {...props} label={label} locale={locale} onChange={() => {}} />
   ))
 
 Localized.args = Template.args
@@ -29,8 +23,7 @@ Localized.args = Template.args
 Localized.parameters = {
   docs: {
     description: {
-      story:
-        'You can import locale from `date-fns/locale` package and pass it as `locale` prop to localize the input.',
+      story: 'You can import locale from `date-fns/locale` package and pass it as `locale` prop to localize the input.',
     },
   },
 }

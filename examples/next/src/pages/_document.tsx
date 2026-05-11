@@ -9,43 +9,20 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta charSet="utf-8" />
-          <meta
-            content="Scaleway Open Source Component Library"
-            name="description"
-          />
+          <meta content="Scaleway Open Source Component Library" name="description" />
           <meta content="Ultraviolet UI" property="og:title" />
-          <meta
-            content="Scaleway Open Source Component Library"
-            property="og:description"
-          />
+          <meta content="Scaleway Open Source Component Library" property="og:description" />
           <meta content="website" property="og:type" />
           <meta content="https://ultraviolet.scaleway.com" property="og:url" />
           <meta content="en_US" property="og:local" />
-          <meta
-            content="https://ultraviolet.scaleway.com/social.png"
-            property="og:image"
-          />
+          <meta content="https://ultraviolet.scaleway.com/social.png" property="og:image" />
           <meta content="summary_large_image" name="twitter:card" />
           <meta content="Ultraviolet UI" name="twitter:title" />
-          <meta
-            content="Scaleway Open Source Component Library"
-            name="twitter:description"
-          />
-          <meta
-            content="https://ultraviolet.scaleway.com/social.png"
-            name="twitter:image"
-          />
-          <link
-            href="/favicon/favicon-lightdark.svg"
-            rel="icon"
-            type="image/svg+xml"
-          />
+          <meta content="Scaleway Open Source Component Library" name="twitter:description" />
+          <meta content="https://ultraviolet.scaleway.com/social.png" name="twitter:image" />
+          <link href="/favicon/favicon-lightdark.svg" rel="icon" type="image/svg+xml" />
           <link href="/favicon/favicon.ico" rel="icon" />
-          <link
-            href="/favicon/apple-touch-icon-180x180.png"
-            rel="apple-touch-icon"
-            sizes="180x180"
-          />
+          <link href="/favicon/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
 
           <script
             {...jsonLdScriptProps<CreativeWork>({
@@ -57,8 +34,7 @@ class MyDocument extends Document {
               },
               dateCreated: '2020-12-10',
               description: 'A beautiful React UI library created by Scaleway.',
-              keywords:
-                'react, ui, styled-components, ui-components, scaleway, ui-library, reakit',
+              keywords: 'react, ui, styled-components, ui-components, scaleway, ui-library, reakit',
               name: 'Ultraviolet UI',
               url: 'https://ultraviolet.scaleway.com',
             })}

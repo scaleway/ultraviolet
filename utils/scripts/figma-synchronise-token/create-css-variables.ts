@@ -17,14 +17,11 @@ const makeCSSVariablesRec = (
       )
       .join('')
   }
-  const cssValue = Object.keys(fontWeightMap).includes(
-    innerValue as unknown as keyof typeof fontWeightMap,
-  )
+  const cssValue = Object.keys(fontWeightMap).includes(innerValue as unknown as keyof typeof fontWeightMap)
     ? fontWeightMap[innerValue as unknown as keyof typeof fontWeightMap]
     : innerValue
 
-  const finalCSSValue =
-    typeof cssValue === 'string' ? cssValue.replace(/;$/, '') : cssValue
+  const finalCSSValue = typeof cssValue === 'string' ? cssValue.replace(/;$/, '') : cssValue
   const formattedInnerKey = innerKey
     .replace(/([A-Z])/g, '-$1')
     .replace(/\./g, '-')
@@ -62,13 +59,7 @@ type UvThemeType = {
   breakpoints: Record<string, string>
 }
 
-export const generateThemeCss = ({
-  uvTheme,
-  filename,
-}: {
-  uvTheme: UvThemeType
-  filename: string
-}) =>
+export const generateThemeCss = ({ uvTheme, filename }: { uvTheme: UvThemeType; filename: string }) =>
   `:root,\n:root.${filename}-theme {\n${
     createCssVariables('color', uvTheme.colors) +
     createCssVariables('radius', uvTheme.radii) +

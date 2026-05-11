@@ -59,10 +59,7 @@ type DateInputProps<IsRange extends undefined | boolean = false> = {
   input?: 'calendar' | 'text'
   selectsRange?: IsRange
   onChange?: IsRange extends true
-    ? (
-        date: Date[] | [Date | null, Date | null],
-        event?: React.SyntheticEvent,
-      ) => void
+    ? (date: Date[] | [Date | null, Date | null], event?: React.SyntheticEvent) => void
     : (date: Date | null, event?: React.SyntheticEvent) => void
 }
 
@@ -131,9 +128,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
     return new Date().getFullYear()
   }, [endDate, selectsRange, startDate, value])
 
-  const [computedValue, setValue] = useState(
-    value && !selectsRange ? new Date(value) : null,
-  )
+  const [computedValue, setValue] = useState(value && !selectsRange ? new Date(value) : null)
   const [computedRange, setRange] = useState({
     end: endDate ?? null,
     start: startDate ?? null,
@@ -142,13 +137,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
   const [monthToShow, setMonthToShow] = useState(defaultMonthToShow)
   const [yearToShow, setYearToShow] = useState(defaultYearToShow)
   const [inputValue, setInputValue] = useState(
-    formatValue(
-      computedValue,
-      computedRange,
-      showMonthYearPicker,
-      selectsRange,
-      format,
-    ),
+    formatValue(computedValue, computedRange, showMonthYearPicker, selectsRange, format),
   )
   const [hoveredDate, setHoveredDate] = useState<Date | null>(null)
   const refInput = useRef<HTMLInputElement>(null)
@@ -213,13 +202,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
     if (!selectsRange) {
       setValue(value ?? null)
       setInputValue(
-        formatValue(
-          value ? new Date(value) : null,
-          null,
-          showMonthYearPicker,
-          selectsRange,
-          format,
-        ) ?? '', // Text Input which will use this value, won't update value if value is undefined, so we need force empty string is there is no date
+        formatValue(value ? new Date(value) : null, null, showMonthYearPicker, selectsRange, format) ?? '', // Text Input which will use this value, won't update value if value is undefined, so we need force empty string is there is no date
       )
     }
     if (selectsRange) {
@@ -228,13 +211,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
         start: startDate ?? null,
       })
       setInputValue(
-        formatValue(
-          null,
-          { start: startDate ?? null, end: endDate ?? null },
-          showMonthYearPicker,
-          true,
-          format,
-        ),
+        formatValue(null, { start: startDate ?? null, end: endDate ?? null }, showMonthYearPicker, true, format),
       )
     }
   }, [endDate, startDate, value, selectsRange, format, showMonthYearPicker])
@@ -243,11 +220,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
     const newValue = event.currentTarget.value
 
     if (!newValue) {
-      onChange?.(
-        (selectsRange ? [null, null] : null) as
-          | (Date[] & Date)
-          | ([Date | null, Date | null] & Date),
-      )
+      onChange?.((selectsRange ? [null, null] : null) as (Date[] & Date) | ([Date | null, Date | null] & Date))
     }
 
     if (selectsRange) {
@@ -261,12 +234,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
         setYearToShow(computedNewRange[0].getFullYear())
       }
     } else {
-      const computedDate = createDate(
-        newValue,
-        showMonthYearPicker,
-        minDate,
-        maxDate,
-      )
+      const computedDate = createDate(newValue, showMonthYearPicker, minDate, maxDate)
 
       if (computedDate) {
         setMonthToShow(computedDate.getMonth() + 1)
@@ -281,26 +249,14 @@ export const DateInput = <IsRange extends undefined | boolean>({
     // Only call onChange when there is a date typed in the input and the user did not click on the calendar (which triggers onChange itself)
     if (inputValue) {
       if (selectsRange) {
-        const computedNewRange = createDateRange(
-          inputValue,
-          showMonthYearPicker,
+        const computedNewRange = createDateRange(inputValue, showMonthYearPicker)
+        ;(onChange as (date: Date[] | [Date | null, Date | null], event: React.SyntheticEvent | undefined) => void)?.(
+          computedNewRange,
+          undefined,
         )
-        ;(
-          onChange as (
-            date: Date[] | [Date | null, Date | null],
-            event: React.SyntheticEvent | undefined,
-          ) => void
-        )?.(computedNewRange, undefined)
       } else {
-        const computedDate = createDate(
-          inputValue,
-          showMonthYearPicker,
-          minDate,
-          maxDate,
-        )
-        ;(
-          onChange as (date: Date | null, event?: React.SyntheticEvent) => void
-        )?.(computedDate, undefined)
+        const computedDate = createDate(inputValue, showMonthYearPicker, minDate, maxDate)
+        ;(onChange as (date: Date | null, event?: React.SyntheticEvent) => void)?.(computedDate, undefined)
       }
     }
   }
@@ -362,13 +318,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
               required={required}
               size={size}
               success={success}
-              suffix={
-                <CalendarRangeIcon
-                  disabled={disabled}
-                  sentiment="neutral"
-                  size="medium"
-                />
-              }
+              suffix={<CalendarRangeIcon disabled={disabled} sentiment="neutral" size="medium" />}
               tooltip={tooltip}
               value={inputValue}
             />
@@ -377,30 +327,17 @@ export const DateInput = <IsRange extends undefined | boolean>({
           <Stack gap={0.5}>
             {labelDescription ? (
               <Stack direction="row" gap="1">
-                <Text
-                  as="label"
-                  prominence="strong"
-                  sentiment="neutral"
-                  variant="bodyStrong"
-                >
+                <Text as="label" prominence="strong" sentiment="neutral" variant="bodyStrong">
                   {label}
                 </Text>
                 {labelDescription}
               </Stack>
             ) : (
-              <Text
-                as="label"
-                prominence="strong"
-                sentiment="neutral"
-                variant="bodyStrong"
-              >
+              <Text as="label" prominence="strong" sentiment="neutral" variant="bodyStrong">
                 {label}
               </Text>
             )}
-            <Card
-              className={dateInputStyle.calendarContentWrapper({ disabled })}
-              disabled={disabled}
-            >
+            <Card className={dateInputStyle.calendarContentWrapper({ disabled })} disabled={disabled}>
               <CalendarContent />
             </Card>
           </Stack>

@@ -61,20 +61,18 @@ const iconBase = style({
     [`${containerBase}[aria-disabled='true'] &`]: {
       fill: theme.colors.neutral.borderDisabled,
     },
-    [`${containerBase}[aria-disabled='true'] input[aria-invalid="true"]:checked + &`]:
-      {
-        fill: theme.colors.danger.backgroundStrongDisabled,
-      },
+    [`${containerBase}[aria-disabled='true'] input[aria-invalid="true"]:checked + &`]: {
+      fill: theme.colors.danger.backgroundStrongDisabled,
+    },
     [`${containerBase}[aria-disabled='true'] input[aria-invalid="true"] + &`]: {
       fill: theme.colors.danger.background,
     },
     [`${containerBase}[aria-disabled='true'] input:checked + &`]: {
       fill: theme.colors.primary.backgroundStrongDisabled,
     },
-    [`${containerBase}[aria-disabled='true'] input[aria-checked="mixed"] + &`]:
-      {
-        fill: theme.colors.primary.backgroundStrongDisabled,
-      },
+    [`${containerBase}[aria-disabled='true'] input[aria-checked="mixed"] + &`]: {
+      fill: theme.colors.primary.backgroundStrongDisabled,
+    },
     [`${containerBase} input[aria-invalid="true"] + &`]: {
       fill: theme.colors.danger.backgroundStrong,
     },
@@ -88,14 +86,12 @@ const iconBase = style({
       fill: theme.colors.danger.background,
       outline: `1px solid ${theme.shadows.focusDanger}`,
     },
-    [`${inputBase}:not(:disabled):checked + &, ${inputBase}:not(:disabled)[aria-checked='mixed'] + &`]:
-      {
-        fill: theme.colors.primary.backgroundStrong,
-      },
-    [`${inputBase}:not(:disabled)[aria-invalid='true'] + &, ${inputBase}:not(:disabled)[aria-invalid='mixed'] + &`]:
-      {
-        fill: theme.colors.danger.background,
-      },
+    [`${inputBase}:not(:disabled):checked + &, ${inputBase}:not(:disabled)[aria-checked='mixed'] + &`]: {
+      fill: theme.colors.primary.backgroundStrong,
+    },
+    [`${inputBase}:not(:disabled)[aria-invalid='true'] + &, ${inputBase}:not(:disabled)[aria-invalid='mixed'] + &`]: {
+      fill: theme.colors.danger.background,
+    },
   },
 })
 
@@ -129,25 +125,22 @@ const innerCheckbox = style({
       fill: theme.colors.neutral.backgroundDisabled,
       stroke: theme.colors.neutral.borderStrongDisabled,
     },
-    [`${containerBase}[aria-disabled='true'] input[aria-invalid="true"]:checked + ${iconBase} &`]:
-      {
-        fill: theme.colors.danger.backgroundStrongDisabled,
-        stroke: theme.colors.danger.borderStrongDisabled,
-      },
-    [`${containerBase}[aria-disabled='true'] input[aria-invalid="true"] + ${iconBase} &`]:
-      {
-        fill: theme.colors.danger.background,
-        stroke: theme.colors.danger.borderDisabled,
-      },
+    [`${containerBase}[aria-disabled='true'] input[aria-invalid="true"]:checked + ${iconBase} &`]: {
+      fill: theme.colors.danger.backgroundStrongDisabled,
+      stroke: theme.colors.danger.borderStrongDisabled,
+    },
+    [`${containerBase}[aria-disabled='true'] input[aria-invalid="true"] + ${iconBase} &`]: {
+      fill: theme.colors.danger.background,
+      stroke: theme.colors.danger.borderDisabled,
+    },
     [`${containerBase}[aria-disabled='true'] input:checked + ${iconBase} &`]: {
       fill: theme.colors.primary.borderDisabled,
       stroke: theme.colors.primary.borderDisabled,
     },
-    [`${containerBase}[aria-disabled='true'] input[aria-checked="mixed"] + ${iconBase} &`]:
-      {
-        fill: theme.colors.primary.backgroundStrongDisabled,
-        stroke: theme.colors.primary.borderStrongDisabled,
-      },
+    [`${containerBase}[aria-disabled='true'] input[aria-checked="mixed"] + ${iconBase} &`]: {
+      fill: theme.colors.primary.backgroundStrongDisabled,
+      stroke: theme.colors.primary.borderStrongDisabled,
+    },
     [`${containerBase} input:checked + ${iconBase} &`]: {
       fill: theme.colors.primary.backgroundStrong,
       stroke: theme.colors.primary.borderStrong,
@@ -182,11 +175,10 @@ const innerCheckbox = style({
         fill: theme.colors.danger.backgroundHover,
         stroke: theme.colors.danger.borderHover,
       },
-    [`${containerBase}:hover[aria-disabled='false'] input[aria-invalid='true'][aria-checked='true'] + ${iconBase} &`]:
-      {
-        fill: theme.colors.danger.backgroundStrongHover,
-        stroke: theme.colors.danger.borderStrongHover,
-      },
+    [`${containerBase}:hover[aria-disabled='false'] input[aria-invalid='true'][aria-checked='true'] + ${iconBase} &`]: {
+      fill: theme.colors.danger.backgroundStrongHover,
+      stroke: theme.colors.danger.borderStrongHover,
+    },
     [`${containerBase} input[aria-invalid="true"] + ${iconBase} &`]: {
       fill: theme.colors.danger.background,
       stroke: theme.colors.danger.backgroundStrong,

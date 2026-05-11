@@ -11,6 +11,4 @@ type ToggleGroupContextType = {
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
-export const ToggleGroupContext = createContext<
-  ToggleGroupContextType | undefined
->(undefined)
+export const ToggleGroupContext = createContext<ToggleGroupContextType | undefined>(undefined)

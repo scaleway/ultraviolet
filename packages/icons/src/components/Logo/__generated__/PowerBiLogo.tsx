@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const PowerBiLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const PowerBiLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="PowerBiLogo">
     <g clipPath="url(#clip0_116_656025)">
       <path
@@ -52,21 +50,9 @@ export const PowerBiLogo = ({
         />
         <feOffset dx="0.507937" dy="0.253968" />
         <feGaussianBlur stdDeviation="0.253968" />
-        <feColorMatrix
-          type="matrix"
-          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0530212 0"
-        />
-        <feBlend
-          mode="normal"
-          in2="BackgroundImageFix"
-          result="effect1_dropShadow_116_656025"
-        />
-        <feBlend
-          mode="normal"
-          in="SourceGraphic"
-          in2="effect1_dropShadow_116_656025"
-          result="shape"
-        />
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0530212 0" />
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_116_656025" />
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_116_656025" result="shape" />
       </filter>
       <linearGradient
         id="paint0_linear_116_656025"

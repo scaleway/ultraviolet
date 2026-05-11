@@ -22,8 +22,7 @@ Variants.decorators = [
 Variants.parameters = {
   docs: {
     description: {
-      story:
-        'Using `variant` prop you can change the variant of the component. Each variant has a default icon set.',
+      story: 'Using `variant` prop you can change the variant of the component. Each variant has a default icon set.',
     },
   },
 }

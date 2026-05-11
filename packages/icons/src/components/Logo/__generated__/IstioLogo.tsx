@@ -9,14 +9,9 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const IstioLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const IstioLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="IstioLogo">
-    <path
-      d="M16.8333 16.6667L9.33333 15.8333V0L16.8333 16.6667Z"
-      fill="#466BB0"
-    />
+    <path d="M16.8333 16.6667L9.33333 15.8333V0L16.8333 16.6667Z" fill="#466BB0" />
     <path d="M3.5 16.6667L8.5 15.8333V6.66666L3.5 16.6667Z" fill="#466BB0" />
     <path d="M3.5 17.5H16.8333L8.5 20L3.5 17.5Z" fill="#466BB0" />
   </Icon>

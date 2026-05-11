@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const RouterProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const RouterProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="RouterProductIcon">
     <g className="Router">
       <g className="Router">
@@ -24,10 +22,7 @@ export const RouterProductIcon = ({
         </g>
         <g fillRule="evenodd" className="icon" clipRule="evenodd">
           <g fill="#521094" className="fill">
-            <path
-              d="M32 29a3 3 0 1 0 0 6 3 3 0 0 0 0-6m-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0"
-              className="fill"
-            />
+            <path d="M32 29a3 3 0 1 0 0 6 3 3 0 0 0 0-6m-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0" className="fill" />
             <path
               d="M32 11c-11.598 0-21 9.402-21 21s9.402 21 21 21 21-9.402 21-21-9.402-21-21-21M9 32C9 19.297 19.297 9 32 9s23 10.297 23 23-10.297 23-23 23S9 44.703 9 32"
               className="fill"

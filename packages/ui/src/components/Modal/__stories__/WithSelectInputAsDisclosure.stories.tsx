@@ -22,13 +22,8 @@ const OPTIONS = [
 export const WithSelectInputAsDisclosure: StoryFn = props => (
   <SelectInput
     footer={
-      <Modal
-        disclosure={<Button>Open Modal with SelectInput</Button>}
-        {...props}
-      >
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
-          Test
-        </div>
+      <Modal disclosure={<Button>Open Modal with SelectInput</Button>} {...props}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>Test</div>
       </Modal>
     }
     label="Choose an option"

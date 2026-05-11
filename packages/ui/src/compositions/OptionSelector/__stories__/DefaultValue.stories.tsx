@@ -2,37 +2,27 @@ import { useState } from 'react'
 
 import { OptionSelector } from '..'
 import { Stack } from '../../../components/Stack'
-import {
-  firstSelectorOptions,
-  franceOptions,
-  netherlandsOptions,
-  polandOptions,
-} from '../__mock__/resources'
+import { firstSelectorOptions, franceOptions, netherlandsOptions, polandOptions } from '../__mock__/resources'
 
 import type { ValueType } from '../__mock__/resources'
 import type { SelectorOption } from '../types'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const DefaultValue: StoryFn<
-  ComponentProps<typeof OptionSelector>
-> = props => {
-  const [zoneFirstExample, setZoneFirstExample] =
-    useState<SelectorOption[]>(franceOptions)
+export const DefaultValue: StoryFn<ComponentProps<typeof OptionSelector>> = props => {
+  const [zoneFirstExample, setZoneFirstExample] = useState<SelectorOption[]>(franceOptions)
   const [valueFirstExample, setValueFirstExample] = useState<ValueType>({
     first: 'fr',
     second: zoneFirstExample[0].value,
   })
 
-  const [zoneSecondExample, setZoneSecondExample] =
-    useState<SelectorOption[]>(franceOptions)
+  const [zoneSecondExample, setZoneSecondExample] = useState<SelectorOption[]>(franceOptions)
   const [valueSecondExample, setValueSecondExample] = useState<ValueType>({
     first: 'fr',
     second: '',
   })
 
-  const [zoneThirdExample, setZoneThirdExample] =
-    useState<SelectorOption[]>(franceOptions)
+  const [zoneThirdExample, setZoneThirdExample] = useState<SelectorOption[]>(franceOptions)
   const [valueThirdExample, setValueThirdExample] = useState<ValueType>({
     first: '',
     second: zoneThirdExample[0].value,

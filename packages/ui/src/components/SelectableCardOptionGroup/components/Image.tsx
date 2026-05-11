@@ -22,10 +22,7 @@ type ImageType = {
 export const Image = ({ src, alt, size, disabled, className }: ImageType) => (
   <img
     alt={alt}
-    className={cn(
-      className,
-      disabled ? selectableCardOptionGroupStyle.disabledImage : '',
-    )}
+    className={cn(className, disabled ? selectableCardOptionGroupStyle.disabledImage : '')}
     data-disabled={disabled}
     height={IMAGE_SIZES[size]}
     src={src}

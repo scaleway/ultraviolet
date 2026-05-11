@@ -23,15 +23,7 @@ type CellProps = {
   style?: CSSProperties
 }
 
-export const Cell = ({
-  children,
-  className,
-  colSpan,
-  rowSpan,
-  sentiment,
-  align = 'left',
-  style,
-}: CellProps) => {
+export const Cell = ({ children, className, colSpan, rowSpan, sentiment, align = 'left', style }: CellProps) => {
   const context = useColumnProvider()
 
   return (

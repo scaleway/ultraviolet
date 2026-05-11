@@ -11,11 +11,7 @@ import { planAdvanced, planStarter } from './plans'
 describe('plansField', () => {
   it('should render correctly', async () => {
     const { asFragment } = renderWithForm(
-      <PlansField
-        features={[gb, pipeline, domain, ssl, fees]}
-        name="plans"
-        plans={[planStarter, planAdvanced]}
-      />,
+      <PlansField features={[gb, pipeline, domain, ssl, fees]} name="plans" plans={[planStarter, planAdvanced]} />,
     )
     const advancedPlan = screen.getByText('€109.99')
     await userEvent.click(advancedPlan)

@@ -21,10 +21,7 @@ export const CellWithCopyButton = ({
   copyContent: string
   buttonSize?: ComponentProps<typeof CopyButton>['size']
 } & CellProps &
-  Pick<
-    ComponentProps<typeof CopyButton>,
-    'copiedText' | 'copyText' | 'onCopy'
-  >) => (
+  Pick<ComponentProps<typeof CopyButton>, 'copiedText' | 'copyText' | 'onCopy'>) => (
   <InfoTableCell multiline={multiline} style={style} title={title}>
     <Row alignItems="center" gap={1} templateColumns="1fr auto">
       <Text as="p" oneLine variant="body">

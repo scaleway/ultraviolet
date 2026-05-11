@@ -11,10 +11,7 @@ type ChildType = {
 /**
  * Search inside a children (React Element) recursively until a result is found
  */
-export const searchChildren = (
-  children: ReactNode,
-  searchString: string,
-): ReactNode[] => {
+export const searchChildren = (children: ReactNode, searchString: string): ReactNode[] => {
   const searchRegex = new RegExp(searchString, 'i')
 
   const matches = Children.map(children, child => {
@@ -67,10 +64,7 @@ export const searchChildren = (
 const getButtonOrLink = (element: Element | null) => {
   const tag = element?.firstElementChild?.tagName.toLowerCase()
   if (element) {
-    if (
-      tag === 'button' &&
-      !(element.firstElementChild as HTMLButtonElement).disabled
-    ) {
+    if (tag === 'button' && !(element.firstElementChild as HTMLButtonElement).disabled) {
       return element.firstElementChild as HTMLButtonElement
     }
     if (tag === 'a') {
@@ -83,9 +77,5 @@ const getButtonOrLink = (element: Element | null) => {
 
 export const getListItem = (listItems: Element[]) =>
   listItems
-    .map(child =>
-      getButtonOrLink(child)
-        ? getButtonOrLink(child)
-        : getButtonOrLink(child.firstElementChild),
-    )
+    .map(child => (getButtonOrLink(child) ? getButtonOrLink(child) : getButtonOrLink(child.firstElementChild)))
     .filter(element => typeof element !== 'boolean')

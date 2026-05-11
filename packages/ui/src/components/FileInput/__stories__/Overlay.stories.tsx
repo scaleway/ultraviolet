@@ -26,19 +26,10 @@ const Prompt = ({
   <Stack className={promptWrapper} direction="column" gap="1.5" width="700px">
     <FileInput.List limit={3} prominence="strong" textLimit="See all" />
     <Stack direction="row" gap={0.5} width="fit-content">
-      <Button
-        onClick={() => inputRef.current?.click()}
-        sentiment="neutral"
-        size="medium"
-      >
+      <Button onClick={() => inputRef.current?.click()} sentiment="neutral" size="medium">
         <UploadIcon />
       </Button>
-      <TextInput
-        className={promptInput}
-        helper="this is an helper"
-        placeholder="Placeholder"
-        size="medium"
-      />
+      <TextInput className={promptInput} helper="this is an helper" placeholder="Placeholder" size="medium" />
       <Button onClick={() => setFiles([])} sentiment="neutral" size="medium">
         <RebootIcon />
       </Button>
@@ -54,12 +45,7 @@ export const Overlay: StoryFn<typeof FileInput> = args => {
 
   return (
     <Stack direction="column" gap={2}>
-      <FileInput
-        aria-label="label-2"
-        disabled={args.disabled}
-        title="Drop here"
-        variant="overlay"
-      >
+      <FileInput aria-label="label-2" disabled={args.disabled} title="Drop here" variant="overlay">
         <Text as="div" variant="headingSmall">
           Some content (this is an overlay) <UploadIcon />
         </Text>
@@ -71,12 +57,7 @@ export const Overlay: StoryFn<typeof FileInput> = args => {
         multiple
         onChangeFiles={newFiles => setFiles(newFiles)}
         title={
-          <Stack
-            alignItems="center"
-            direction="row"
-            gap={1}
-            justifyContent="center"
-          >
+          <Stack alignItems="center" direction="row" gap={1} justifyContent="center">
             <UploadIcon /> Drag file to this area to upload
           </Stack>
         }

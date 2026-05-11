@@ -34,9 +34,7 @@ export const ItemContent = ({
 >) => {
   const context = useNavigation()
   if (!context) {
-    throw new Error(
-      'Navigation.Item can only be used inside a NavigationProvider.',
-    )
+    throw new Error('Navigation.Item can only be used inside a NavigationProvider.')
   }
 
   const { expanded, animation } = context
@@ -45,18 +43,9 @@ export const ItemContent = ({
   const hasParents = !!itemProvider
 
   return (
-    <Stack
-      alignItems={categoryIcon ? 'flex-start' : 'center'}
-      direction="row"
-      gap={1}
-      justifyContent="center"
-    >
+    <Stack alignItems={categoryIcon ? 'flex-start' : 'center'} direction="row" gap={1} justifyContent="center">
       {categoryIcon ? (
-        <Stack
-          alignItems="center"
-          className={navigationStyle.itemCategoryIcon}
-          justifyContent="center"
-        >
+        <Stack alignItems="center" className={navigationStyle.itemCategoryIcon} justifyContent="center">
           {categoryIcon}
         </Stack>
       ) : null}
@@ -79,19 +68,13 @@ export const ItemContent = ({
           })}
           data-animation={animation}
           disabled={disabled}
-          prominence={
-            (categoryIcon || !hasParents) && !active ? 'strong' : 'default'
-          }
+          prominence={(categoryIcon || !hasParents) && !active ? 'strong' : 'default'}
           sentiment={active ? 'primary' : 'neutral'}
           variant="bodySmallStrong"
           whiteSpace="pre-wrap"
         >
           {label}
-          {labelDescription ? (
-            <span className={navigationStyle.itemPadded}>
-              {labelDescription}
-            </span>
-          ) : null}
+          {labelDescription ? <span className={navigationStyle.itemPadded}>{labelDescription}</span> : null}
         </Text>
         {subLabel && expanded ? (
           <Text

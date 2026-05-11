@@ -225,8 +225,7 @@ export const Popup = forwardRef(
     })
 
     // There are some issue when mixing animation and maxHeight on some browsers, so we disable animation if maxHeight is set.
-    const animationDuration =
-      disableAnimation || maxHeight ? 0 : DEFAULT_ANIMATION_DURATION
+    const animationDuration = disableAnimation || maxHeight ? 0 : DEFAULT_ANIMATION_DURATION
 
     // Debounce timer will be used to prevent the popup from flickering when the user moves the mouse out and in the children element.
     const debounceTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
@@ -238,10 +237,7 @@ export const Popup = forwardRef(
     const uniqueId = useId()
     const generatedId = id ?? uniqueId
     const isControlled = visible !== undefined
-    const isAnimated = useMemo(
-      () => animationDuration > 0 && !maxHeight,
-      [animationDuration, maxHeight],
-    )
+    const isAnimated = useMemo(() => animationDuration > 0 && !maxHeight, [animationDuration, maxHeight])
 
     const generatePopupPositions = useCallback(() => {
       if (childrenRef.current && innerPopupRef.current && popupPortalTarget) {
@@ -309,13 +305,7 @@ export const Popup = forwardRef(
           debounceDelay && !disableAnimation ? debounceDelay : 0,
         )
       }
-    }, [
-      animationDuration,
-      disableAnimation,
-      debounceDelay,
-      onClose,
-      unmountPopupFromDom,
-    ])
+    }, [animationDuration, disableAnimation, debounceDelay, onClose, unmountPopupFromDom])
 
     /**
      * When mouse hover or stop hovering children this function display or hide popup. A timeout is set to allow animation
@@ -408,13 +398,7 @@ export const Popup = forwardRef(
           timer.current = undefined
         }
       }
-    }, [
-      generatePopupPositions,
-      onWindowChangeDetected,
-      visibleInDom,
-      maxWidth,
-      popupPortalTarget,
-    ])
+    }, [generatePopupPositions, onWindowChangeDetected, visibleInDom, maxWidth, popupPortalTarget])
 
     // This will be triggered when positions are computed and popup is visible in the dom.
     useLayoutEffect(() => {
@@ -473,13 +457,7 @@ export const Popup = forwardRef(
         document.body.removeEventListener('keyup', handleEscPress)
         document.body.removeEventListener('click', handleClickOutside)
       }
-    }, [
-      closePopup,
-      visibleInDom,
-      innerPopupRef,
-      childrenRef,
-      hideOnClickOutside,
-    ])
+    }, [closePopup, visibleInDom, innerPopupRef, childrenRef, hideOnClickOutside])
 
     /**
      * This event will occur only for dialog and will trap focus inside the dialog.
@@ -506,19 +484,13 @@ export const Popup = forwardRef(
         const lastFocusableEl = elems.at(-1)
 
         if (event.shiftKey) {
-          if (
-            document.activeElement === firstFocusableEl ||
-            document.activeElement === innerPopupRef.current
-          ) {
+          if (document.activeElement === firstFocusableEl || document.activeElement === innerPopupRef.current) {
             if (lastFocusableEl instanceof HTMLElement) {
               lastFocusableEl.focus()
             }
             event.preventDefault()
           }
-        } else if (
-          document.activeElement === lastFocusableEl ||
-          document.activeElement === innerPopupRef.current
-        ) {
+        } else if (document.activeElement === lastFocusableEl || document.activeElement === innerPopupRef.current) {
           if (firstFocusableEl instanceof HTMLElement) {
             firstFocusableEl.focus()
           }
@@ -622,20 +594,12 @@ export const Popup = forwardRef(
                   className,
                   popupStyle.popup({
                     hasArrow,
-                    visibleInDom: dynamicDomRendering
-                      ? undefined
-                      : visibleInDom,
+                    visibleInDom: dynamicDomRendering ? undefined : visibleInDom,
                   }),
-                  isAnimated
-                    ? popupStyle.animation[
-                        reverseAnimation ? 'reverse' : 'notReverse'
-                      ]
-                    : '',
+                  isAnimated ? popupStyle.animation[reverseAnimation ? 'reverse' : 'notReverse'] : '',
                 )}
                 data-testid={dataTestId}
-                data-visible-in-dom={
-                  dynamicDomRendering ? undefined : visibleInDom
-                }
+                data-visible-in-dom={dynamicDomRendering ? undefined : visibleInDom}
                 id={generatedId}
                 onClick={stopClickPropagation}
                 onKeyDown={role === 'dialog' ? handleFocusTrap : undefined}
@@ -651,12 +615,8 @@ export const Popup = forwardRef(
                     [popupPosition]: positions.popupPosition,
                     [animationDurationPopup]: `${animationDuration}ms`,
                     [popupInitialPosition]: positions.popupInitialPosition,
-                    [maxWidthPopup]:
-                      typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth,
-                    [maxHeightPopup]:
-                      typeof maxHeight === 'number'
-                        ? `${maxHeight}px`
-                        : maxHeight,
+                    [maxWidthPopup]: typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth,
+                    [maxHeightPopup]: typeof maxHeight === 'number' ? `${maxHeight}px` : maxHeight,
                   }),
                   ...style,
                 }}
@@ -666,10 +626,7 @@ export const Popup = forwardRef(
                     hasMaxHeight: !!maxHeight,
                   })}
                   style={assignInlineVars({
-                    [maxHeightPopup]:
-                      typeof maxHeight === 'number'
-                        ? `${maxHeight}px`
-                        : maxHeight,
+                    [maxHeightPopup]: typeof maxHeight === 'number' ? `${maxHeight}px` : maxHeight,
                   })}
                 >
                   {text}

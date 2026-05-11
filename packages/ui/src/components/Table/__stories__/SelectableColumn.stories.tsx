@@ -23,21 +23,15 @@ const selectableCell = (
       setter(current => {
         const index = current.indexOf(channel)
 
-        return index === -1
-          ? [...current, channel]
-          : [...current.slice(0, index), ...current.slice(index + 1)]
+        return index === -1 ? [...current, channel] : [...current.slice(0, index), ...current.slice(index + 1)]
       })
     }}
   />
 )
 
 export const SelectableColumn: StoryFn = () => {
-  const [incidentNotifications, setIndicentNotifications] = useState<string[]>(
-    [],
-  )
-  const [technicalNotifications, setTechnicalNotifications] = useState<
-    string[]
-  >([])
+  const [incidentNotifications, setIndicentNotifications] = useState<string[]>([])
+  const [technicalNotifications, setTechnicalNotifications] = useState<string[]>([])
   const [billingNotifications, setBillingNotifications] = useState<string[]>([])
 
   const getAllState = (items: string[]) => {
@@ -90,10 +84,7 @@ export const SelectableColumn: StoryFn = () => {
           },
           {
             label: (
-              <Checkbox
-                checked={getAllState(billingNotifications)}
-                onChange={() => selectAll(setBillingNotifications)}
-              >
+              <Checkbox checked={getAllState(billingNotifications)} onChange={() => selectAll(setBillingNotifications)}>
                 <Text as="span" variant="bodySmall">
                   Billing notifications
                 </Text>
@@ -108,50 +99,27 @@ export const SelectableColumn: StoryFn = () => {
             <Table.Row id={channel} key={channel}>
               <Table.Cell>{channel}</Table.Cell>
               <Table.Cell>
-                {selectableCell(
-                  channel,
-                  'incident',
-                  incidentNotifications,
-                  setIndicentNotifications,
-                )}
+                {selectableCell(channel, 'incident', incidentNotifications, setIndicentNotifications)}
               </Table.Cell>
               <Table.Cell>
-                {selectableCell(
-                  channel,
-                  'technical',
-                  technicalNotifications,
-                  setTechnicalNotifications,
-                )}
+                {selectableCell(channel, 'technical', technicalNotifications, setTechnicalNotifications)}
               </Table.Cell>
               <Table.Cell>
-                {selectableCell(
-                  channel,
-                  'billing',
-                  billingNotifications,
-                  setBillingNotifications,
-                )}
+                {selectableCell(channel, 'billing', billingNotifications, setBillingNotifications)}
               </Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>
       </Table>
       <div>
-        Incident notifications channels :{' '}
-        {incidentNotifications.length > 0
-          ? incidentNotifications.join(',')
-          : 'none'}
+        Incident notifications channels : {incidentNotifications.length > 0 ? incidentNotifications.join(',') : 'none'}
       </div>
       <div>
         Technical notifications channels :{' '}
-        {technicalNotifications.length > 0
-          ? technicalNotifications.join(',')
-          : 'none'}
+        {technicalNotifications.length > 0 ? technicalNotifications.join(',') : 'none'}
       </div>
       <div>
-        Billing notifications channels :{' '}
-        {billingNotifications.length > 0
-          ? billingNotifications.join(',')
-          : 'none'}
+        Billing notifications channels : {billingNotifications.length > 0 ? billingNotifications.join(',') : 'none'}
       </div>
     </Stack>
   )

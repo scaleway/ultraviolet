@@ -33,18 +33,9 @@ export const Item = ({
   disabled = false,
   className,
 }: ItemProps) => (
-  <li
-    className={cn(className, stepListStyle.step({ disabled }))}
-    onClick={onClick}
-    onKeyDown={onKeyDown}
-  >
+  <li className={cn(className, stepListStyle.step({ disabled }))} onClick={onClick} onKeyDown={onKeyDown}>
     {bulletContent ? (
-      <Bullet
-        disabled={disabled}
-        prominence={prominence}
-        sentiment={sentiment}
-        size={size}
-      >
+      <Bullet disabled={disabled} prominence={prominence} sentiment={sentiment} size={size}>
         {bulletContent}
       </Bullet>
     ) : null}

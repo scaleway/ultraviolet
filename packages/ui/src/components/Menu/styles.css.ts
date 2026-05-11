@@ -10,10 +10,7 @@ export const heightAvailableSpace = createVar()
 const ANIMATION_DURATION = 200 // in ms
 const ITEM_SENTIMENT = ['neutral', 'danger', 'primary'] as const
 
-function makeItemStyle(
-  sentiment: keyof typeof theme.colors,
-  disabled: boolean,
-) {
+function makeItemStyle(sentiment: keyof typeof theme.colors, disabled: boolean) {
   const color = theme.colors[sentiment] as typeof theme.colors.neutral
 
   const base = {
@@ -177,28 +174,20 @@ const item = recipe({
         cursor: 'not-allowed',
       },
     },
-    sentiment: Object.fromEntries(
-      ITEM_SENTIMENT.map(sentiment => [sentiment, {}]),
-    ),
+    sentiment: Object.fromEntries(ITEM_SENTIMENT.map(sentiment => [sentiment, {}])),
   },
 })
 
 ITEM_SENTIMENT.map(sentiment =>
-  globalStyle(
-    `${item({ borderless: false, disabled: false, sentiment })} > svg`,
-    {
-      fill: theme.colors[sentiment].text,
-    },
-  ),
+  globalStyle(`${item({ borderless: false, disabled: false, sentiment })} > svg`, {
+    fill: theme.colors[sentiment].text,
+  }),
 )
 
 ITEM_SENTIMENT.map(sentiment =>
-  globalStyle(
-    `${item({ borderless: false, disabled: true, sentiment })} > svg`,
-    {
-      fill: theme.colors[sentiment].textDisabled,
-    },
-  ),
+  globalStyle(`${item({ borderless: false, disabled: true, sentiment })} > svg`, {
+    fill: theme.colors[sentiment].textDisabled,
+  }),
 )
 
 ITEM_SENTIMENT.map(sentiment =>
@@ -211,21 +200,15 @@ ITEM_SENTIMENT.map(sentiment =>
 )
 
 ITEM_SENTIMENT.map(sentiment =>
-  globalStyle(
-    `${item({ borderless: true, disabled: false, sentiment })} > svg`,
-    {
-      fill: theme.colors[sentiment].text,
-    },
-  ),
+  globalStyle(`${item({ borderless: true, disabled: false, sentiment })} > svg`, {
+    fill: theme.colors[sentiment].text,
+  }),
 )
 
 ITEM_SENTIMENT.map(sentiment =>
-  globalStyle(
-    `${item({ borderless: true, disabled: true, sentiment })} > svg`,
-    {
-      fill: theme.colors[sentiment].textDisabled,
-    },
-  ),
+  globalStyle(`${item({ borderless: true, disabled: true, sentiment })} > svg`, {
+    fill: theme.colors[sentiment].textDisabled,
+  }),
 )
 
 export const menuStyle = {

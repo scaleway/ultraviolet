@@ -36,10 +36,7 @@ export const Key = ({
   'data-testid': dataTestId,
   style,
 }: KeyProps) => {
-  const specialKey = useMemo(
-    () => Object.keys(KEYS_MATCH).find(key => key === children.toLowerCase()),
-    [children],
-  )
+  const specialKey = useMemo(() => Object.keys(KEYS_MATCH).find(key => key === children.toLowerCase()), [children])
   const textProminence = useMemo(() => {
     if (prominence === 'default') {
       return 'default'
@@ -54,10 +51,7 @@ export const Key = ({
 
   return (
     <kbd
-      className={cn(
-        className,
-        keyStyle.key({ disabled, prominence, sentiment, size }),
-      )}
+      className={cn(className, keyStyle.key({ disabled, prominence, sentiment, size }))}
       data-disabled={disabled}
       data-prominence={prominence}
       data-sentiment={sentiment}
@@ -73,9 +67,7 @@ export const Key = ({
         sentiment={sentiment}
         variant={size === 'medium' ? 'caption' : 'captionSmall'}
       >
-        {specialKey
-          ? KEYS_MATCH[specialKey as keyof typeof KEYS_MATCH]
-          : children}
+        {specialKey ? KEYS_MATCH[specialKey as keyof typeof KEYS_MATCH] : children}
       </Text>
     </kbd>
   )

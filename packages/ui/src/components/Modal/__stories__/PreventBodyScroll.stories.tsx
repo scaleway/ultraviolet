@@ -6,23 +6,11 @@ import type { StoryFn } from '@storybook/react-vite'
 
 export const PreventBodyScroll: StoryFn = props => (
   <Stack direction="row" gap={2}>
-    <Modal
-      {...props}
-      disclosure={<Button>Scroll prevented</Button>}
-      preventBodyScroll
-    >
-      <div style={{ padding: 32 }}>
-        Try to scroll on body ( outside of the Modal )
-      </div>
+    <Modal {...props} disclosure={<Button>Scroll prevented</Button>} preventBodyScroll>
+      <div style={{ padding: 32 }}>Try to scroll on body ( outside of the Modal )</div>
     </Modal>
-    <Modal
-      {...props}
-      disclosure={<Button>Scroll not prevented</Button>}
-      preventBodyScroll={false}
-    >
-      <div style={{ padding: 32 }}>
-        Try to scroll on body ( outside of the Modal )
-      </div>
+    <Modal {...props} disclosure={<Button>Scroll not prevented</Button>} preventBodyScroll={false}>
+      <div style={{ padding: 32 }}>Try to scroll on body ( outside of the Modal )</div>
     </Modal>
   </Stack>
 )
@@ -30,8 +18,7 @@ export const PreventBodyScroll: StoryFn = props => (
 PreventBodyScroll.parameters = {
   docs: {
     description: {
-      story:
-        'To prevent body scroll outside of the modal, use `preventBodyScroll`',
+      story: 'To prevent body scroll outside of the modal, use `preventBodyScroll`',
     },
   },
 }

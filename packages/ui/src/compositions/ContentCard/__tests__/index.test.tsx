@@ -20,16 +20,12 @@ describe('contentCard', () => {
   })
 
   it('renders correctly with title with custom tag', () => {
-    const { asFragment } = renderWithTheme(
-      <ContentCard headingTag="h1" title="test" />,
-    )
+    const { asFragment } = renderWithTheme(<ContentCard headingTag="h1" title="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with disabled', () => {
-    const { asFragment } = renderWithTheme(
-      <ContentCard disabled title="test" />,
-    )
+    const { asFragment } = renderWithTheme(<ContentCard disabled title="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -39,38 +35,28 @@ describe('contentCard', () => {
   })
 
   it('renders correctly with href', () => {
-    const { asFragment } = renderWithTheme(
-      <ContentCard href="https://scaleway.com" title="test" />,
-    )
+    const { asFragment } = renderWithTheme(<ContentCard href="https://scaleway.com" title="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with href and direction row', () => {
-    const { asFragment } = renderWithTheme(
-      <ContentCard direction="row" href="https://scaleway.com" title="test" />,
-    )
+    const { asFragment } = renderWithTheme(<ContentCard direction="row" href="https://scaleway.com" title="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with href and target', () => {
-    const { asFragment } = renderWithTheme(
-      <ContentCard href="https://scaleway.com" target="_blank" title="test" />,
-    )
+    const { asFragment } = renderWithTheme(<ContentCard href="https://scaleway.com" target="_blank" title="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with onClick', () => {
-    const { asFragment } = renderWithTheme(
-      <ContentCard onClick={() => {}} title="test" />,
-    )
+    const { asFragment } = renderWithTheme(<ContentCard onClick={() => {}} title="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with children', () => {
     const { asFragment } = renderWithTheme(
-      <ContentCard title="test">
-        This is the children of the component
-      </ContentCard>,
+      <ContentCard title="test">This is the children of the component</ContentCard>,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -92,31 +78,21 @@ describe('contentCard', () => {
     const directions = ['row', 'column'] as const
     directions.forEach(direction => {
       it(`renders correctly direction ${direction}`, () => {
-        const { asFragment } = renderWithTheme(
-          <ContentCard direction={direction} title="test" />,
-        )
+        const { asFragment } = renderWithTheme(<ContentCard direction={direction} title="test" />)
         expect(asFragment()).toMatchSnapshot()
       })
     })
 
     directions.forEach(direction => {
       it(`renders correctly direction ${direction} and loading`, () => {
-        const { asFragment } = renderWithTheme(
-          <ContentCard direction={direction} loading title="test" />,
-        )
+        const { asFragment } = renderWithTheme(<ContentCard direction={direction} loading title="test" />)
         expect(asFragment()).toMatchSnapshot()
       })
     })
 
     directions.forEach(direction => {
       it(`renders correctly direction ${direction} and image`, () => {
-        const { asFragment } = renderWithTheme(
-          <ContentCard
-            direction={direction}
-            image={illustration}
-            title="test"
-          />,
-        )
+        const { asFragment } = renderWithTheme(<ContentCard direction={direction} image={illustration} title="test" />)
         expect(asFragment()).toMatchSnapshot()
       })
     })

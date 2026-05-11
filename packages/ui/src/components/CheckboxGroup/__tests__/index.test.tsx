@@ -20,23 +20,14 @@ describe('checkboxGroup', () => {
   it('renders correctly with no CheckboxGroup.Checkbox name', () =>
     shouldMatchSnapshot(
       <CheckboxGroup legend="Label" name="Checkbox" onChange={() => {}}>
-        <CheckboxGroup.Checkbox value="value-1">
-          Checkbox 1
-        </CheckboxGroup.Checkbox>
-        <CheckboxGroup.Checkbox value="value-2">
-          Checkbox 2
-        </CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox value="value-1">Checkbox 1</CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox value="value-2">Checkbox 2</CheckboxGroup.Checkbox>
       </CheckboxGroup>,
     ))
 
   it('renders correctly with direction row', () =>
     shouldMatchSnapshot(
-      <CheckboxGroup
-        direction="row"
-        legend="Label"
-        name="Checkbox"
-        onChange={() => {}}
-      >
+      <CheckboxGroup direction="row" legend="Label" name="Checkbox" onChange={() => {}}>
         <CheckboxGroup.Checkbox name="value-1" value="value-1">
           Checkbox 1
         </CheckboxGroup.Checkbox>
@@ -48,12 +39,7 @@ describe('checkboxGroup', () => {
 
   it('renders correctly with helper content', () =>
     shouldMatchSnapshot(
-      <CheckboxGroup
-        helper="Helper content"
-        legend="Label"
-        name="Checkbox"
-        onChange={() => {}}
-      >
+      <CheckboxGroup helper="Helper content" legend="Label" name="Checkbox" onChange={() => {}}>
         <CheckboxGroup.Checkbox name="value-1" value="value-1">
           Checkbox 1
         </CheckboxGroup.Checkbox>
@@ -65,12 +51,7 @@ describe('checkboxGroup', () => {
 
   it('renders correctly with error content', () =>
     shouldMatchSnapshot(
-      <CheckboxGroup
-        error="Eror content"
-        legend="Label"
-        name="Checkbox"
-        onChange={() => {}}
-      >
+      <CheckboxGroup error="Eror content" legend="Label" name="Checkbox" onChange={() => {}}>
         <CheckboxGroup.Checkbox name="value-1" value="value-1">
           Checkbox 1
         </CheckboxGroup.Checkbox>
@@ -82,12 +63,7 @@ describe('checkboxGroup', () => {
 
   it('renders correctly with required prop', () =>
     shouldMatchSnapshot(
-      <CheckboxGroup
-        legend="Label"
-        name="Checkbox"
-        onChange={() => {}}
-        required
-      >
+      <CheckboxGroup legend="Label" name="Checkbox" onChange={() => {}} required>
         <CheckboxGroup.Checkbox name="value-1" value="value-1">
           Checkbox 1
         </CheckboxGroup.Checkbox>

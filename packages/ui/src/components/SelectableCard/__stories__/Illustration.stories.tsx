@@ -43,8 +43,7 @@ export const Illustration: StoryFn = args => {
           value="label-30"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            Offer the best experience to your Mac, iPhone and iPad users with
-            VNC, the remote desktop-sharing protocol.
+            Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol.
           </Text>
           <Link href="scaleway.com" size="small" target="_blank">
             Learn more
@@ -101,8 +100,7 @@ export const Illustration: StoryFn = args => {
           value="label-24"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            Offer the best experience to your Mac, iPhone and iPad users with
-            VNC, the remote desktop-sharing protocol.
+            Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol.
           </Text>
           <Link href="scaleway.com" size="small" target="_blank">
             Learn more

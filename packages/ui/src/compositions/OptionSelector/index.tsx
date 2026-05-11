@@ -16,26 +16,16 @@ import type { SelectInput } from '../../components/SelectInput'
 import type { OptionSelectorProps, SelectorOption } from './types'
 import type { ComponentProps } from 'react'
 
-const makeSelectInputOptions = (
-  options: SelectorOption[],
-): ComponentProps<typeof SelectInput>['options'] =>
+const makeSelectInputOptions = (options: SelectorOption[]): ComponentProps<typeof SelectInput>['options'] =>
   options.map(option => {
     const optionLabel = option.hoverContent ? (
       <RevealOnHover
-        content={
-          <IconWithContent content={option.content} icon={option.icon} />
-        }
-        hoverContent={
-          <IconWithContent content={option.hoverContent} icon={option.icon} />
-        }
+        content={<IconWithContent content={option.content} icon={option.icon} />}
+        hoverContent={<IconWithContent content={option.hoverContent} icon={option.icon} />}
         key={option.value}
       />
     ) : (
-      <IconWithContent
-        content={option.content}
-        icon={option.icon}
-        key={option.value}
-      />
+      <IconWithContent content={option.content} icon={option.icon} key={option.value} />
     )
 
     return {
@@ -107,9 +97,7 @@ export const OptionSelector = ({
   }, [secondSelector, value?.first, value?.second, onChange])
 
   const firstSelectorOptions = makeSelectInputOptions(firstSelector.options)
-  const secondSelectorOptions = secondSelector?.options
-    ? makeSelectInputOptions(secondSelector.options)
-    : undefined
+  const secondSelectorOptions = secondSelector?.options ? makeSelectInputOptions(secondSelector.options) : undefined
 
   const onChangeFirstSelector = (val: string) => {
     onChange?.({ first: val, second: value?.second, changingValue: 'first' })
@@ -134,11 +122,7 @@ export const OptionSelector = ({
       style={style}
     >
       {isHorizontal ? (
-        <Label
-          className={optionSelectorStyle.firstLabel}
-          required={required}
-          size={size}
-        >
+        <Label className={optionSelectorStyle.firstLabel} required={required} size={size}>
           {firstSelector.label}
         </Label>
       ) : null}
@@ -161,9 +145,7 @@ export const OptionSelector = ({
         size={size}
         value={firstValue}
       />
-      {secondSelector &&
-      secondSelectorOptions &&
-      !(hideWhenEmpty && !firstValue) ? (
+      {secondSelector && secondSelectorOptions && !(hideWhenEmpty && !firstValue) ? (
         <>
           <Arrow direction={direction} size={size} />
           <Selector
@@ -191,9 +173,7 @@ export const OptionSelector = ({
           isFirst
         />
       ) : null}
-      {secondSelector &&
-      isHorizontal &&
-      (secondSelectorStringError || secondSelector?.helper) ? (
+      {secondSelector && isHorizontal && (secondSelectorStringError || secondSelector?.helper) ? (
         <SelectorHelper
           error={secondSelector.error}
           helper={secondSelector.helper}

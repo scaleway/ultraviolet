@@ -7,16 +7,12 @@ import { TimeInputField } from '..'
 
 describe('textInputField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(
-      <TimeInputField label="Test" name="test" />,
-    )
+    const { asFragment } = renderWithForm(<TimeInputField label="Test" name="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly disabled', () => {
-    const { asFragment } = renderWithForm(
-      <TimeInputField label="Test" name="test" />,
-    )
+    const { asFragment } = renderWithForm(<TimeInputField label="Test" name="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -26,12 +22,7 @@ describe('textInputField', () => {
     const onBlur = vi.fn()
     renderWithForm(
       <>
-        <TimeInputField
-          name="Test"
-          onBlur={onBlur}
-          onChange={onChange}
-          onFocus={onFocus}
-        />
+        <TimeInputField name="Test" onBlur={onBlur} onChange={onChange} onFocus={onFocus} />
         blur
       </>,
     )

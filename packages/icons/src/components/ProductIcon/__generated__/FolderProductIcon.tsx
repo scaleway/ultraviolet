@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const FolderProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const FolderProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="FolderProductIcon">
     <g className="Folder" clipPath="url(#a)">
       <g className=".Square">
@@ -41,11 +39,7 @@ export const FolderProductIcon = ({
           clipRule="evenodd"
           fillRule="evenodd"
         />
-        <path
-          fill="#A060F6"
-          d="M18 23a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1"
-          className="fillStrong"
-        />
+        <path fill="#A060F6" d="M18 23a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1" className="fillStrong" />
       </g>
     </g>
   </Icon>

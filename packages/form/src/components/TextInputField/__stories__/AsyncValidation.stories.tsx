@@ -21,9 +21,7 @@ const emailValidate = {
   },
 }
 
-export const AsyncValidation: StoryFn<
-  ComponentProps<typeof TextInputField>
-> = args => (
+export const AsyncValidation: StoryFn<ComponentProps<typeof TextInputField>> = args => (
   <Stack gap={1}>
     <TextInputField {...args} validate={emailValidate} />
     <SubmitErrorAlert />

@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const CdnProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const CdnProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="CdnProductIcon">
     <g className="CDN">
       <g className=".Square">

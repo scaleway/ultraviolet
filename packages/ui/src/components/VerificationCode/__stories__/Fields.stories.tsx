@@ -9,8 +9,7 @@ Fields.args = {
 Fields.parameters = {
   docs: {
     description: {
-      story:
-        'Use `fields` prop to set the amount of field case you want to have',
+      story: 'Use `fields` prop to set the amount of field case you want to have',
     },
   },
 }

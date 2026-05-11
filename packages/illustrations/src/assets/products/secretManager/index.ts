@@ -10,9 +10,4 @@ const secretManagerKeyvisual = `${BASE_URL}/products/secretManager/secret-manage
 const secretManagerOriginal = `${BASE_URL}/products/secretManager/secret-manager-original.webp`
 const secretManagerWire = `${BASE_URL}/products/secretManager/secret-manager-wire.svg`
 
-export {
-  secretManagerContent,
-  secretManagerKeyvisual,
-  secretManagerOriginal,
-  secretManagerWire,
-}
+export { secretManagerContent, secretManagerKeyvisual, secretManagerOriginal, secretManagerWire }

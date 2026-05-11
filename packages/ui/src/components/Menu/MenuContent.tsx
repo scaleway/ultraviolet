@@ -24,30 +24,18 @@ import { DisclosureContext, useMenu } from './MenuProvider'
 import { heightAvailableSpace, heightMenu, menuStyle } from './styles.css'
 
 import type { MenuProps } from './types'
-import type {
-  ButtonHTMLAttributes,
-  KeyboardEvent,
-  MouseEvent,
-  ReactNode,
-  Ref,
-} from 'react'
+import type { ButtonHTMLAttributes, KeyboardEvent, MouseEvent, ReactNode, Ref } from 'react'
 
 const SPACE_DISCLOSURE_POPUP = 24 // in px
 
-const moveFocusDown = (
-  indexOfCurrent: number,
-  listItem: (HTMLButtonElement | HTMLAnchorElement)[],
-) => {
+const moveFocusDown = (indexOfCurrent: number, listItem: (HTMLButtonElement | HTMLAnchorElement)[]) => {
   if (indexOfCurrent < listItem.length - 1) {
     listItem[indexOfCurrent + 1].focus()
   } else {
     listItem[0].focus()
   }
 }
-const moveFocusUp = (
-  indexOfCurrent: number,
-  listItem: (HTMLButtonElement | HTMLAnchorElement)[],
-) => {
+const moveFocusUp = (indexOfCurrent: number, listItem: (HTMLButtonElement | HTMLAnchorElement)[]) => {
   if (indexOfCurrent > 0) {
     listItem[indexOfCurrent - 1].focus()
   } else {
@@ -78,15 +66,7 @@ export const Menu = forwardRef(
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
-    const {
-      isVisible,
-      setIsVisible,
-      isNested,
-      disclosureRef,
-      menuRef,
-      setShouldBeVisible,
-      shouldBeVisible,
-    } = useMenu()
+    const { isVisible, setIsVisible, isNested, disclosureRef, menuRef, setShouldBeVisible, shouldBeVisible } = useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
     const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
     const [popupMaxHeight, setPopupMaxHeight] = useState(maxHeight ?? '30rem')
@@ -96,9 +76,7 @@ export const Menu = forwardRef(
     const isTriggerMethodHover = triggerMethod === 'hover'
 
     // if you need dialog inside your component, use function, otherwise component is fine
-    const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(
-      disclosure,
-    )
+    const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(disclosure)
       ? disclosure
       : disclosure({ visible: isVisible })
     const innerRef = useRef(target as unknown as HTMLButtonElement)
@@ -147,12 +125,8 @@ export const Menu = forwardRef(
         }
 
         disclosureRef.current.addEventListener('focus', () => handler(true))
-        disclosureRef.current.addEventListener('mouseenter', () =>
-          handler(true),
-        )
-        disclosureRef.current.addEventListener('mouseleave', () =>
-          handler(false),
-        )
+        disclosureRef.current.addEventListener('mouseenter', () => handler(true))
+        disclosureRef.current.addEventListener('mouseleave', () => handler(false))
         disclosureRef.current.addEventListener('keydown', event => {
           if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
             handler(false) // force close menu when navigating with arrow keys
@@ -210,9 +184,7 @@ export const Menu = forwardRef(
       if (contentRef.current) {
         const listItem = getListItem([...contentRef.current.children])
         if (listItem) {
-          const currentElement = listItem.find(
-            item => item === document.activeElement,
-          )
+          const currentElement = listItem.find(item => item === document.activeElement)
           if (currentElement) {
             const indexOfCurrent = listItem.indexOf(currentElement)
             event.preventDefault()
@@ -228,8 +200,7 @@ export const Menu = forwardRef(
         const disclosureRect = disclosureRef.current.getBoundingClientRect()
         const disclosureBottom = disclosureRect.bottom
         const targetSize = portalTarget.getBoundingClientRect().bottom
-        const availableSpace =
-          targetSize - disclosureBottom - SPACE_DISCLOSURE_POPUP
+        const availableSpace = targetSize - disclosureBottom - SPACE_DISCLOSURE_POPUP
         setPopupMaxHeight(`${availableSpace}px`)
       }
     }, [isVisible, portalTarget, disclosureRef, placement, shrink])
@@ -238,10 +209,7 @@ export const Menu = forwardRef(
       <Popup
         align={align}
         aria-label={ariaLabel}
-        className={cn(
-          className,
-          menuStyle.menu({ arrow: hasArrow, searchable }),
-        )}
+        className={cn(className, menuStyle.menu({ arrow: hasArrow, searchable }))}
         debounceDelay={isTriggerMethodHover ? 250 : 0}
         dynamicDomRendering={dynamicDomRendering}
         hasArrow={hasArrow}
@@ -278,25 +246,16 @@ export const Menu = forwardRef(
           >
             <Stack className={menuStyle.content} ref={contentRef}>
               {searchable && typeof children !== 'function' ? (
-                <SearchInput
-                  className={menuStyle.searchInput}
-                  onSearch={onSearch}
-                  ref={searchInputRef}
-                  size="small"
-                />
+                <SearchInput className={menuStyle.searchInput} onSearch={onSearch} ref={searchInputRef} size="small" />
               ) : null}
               {finalChild}
             </Stack>
-            {footer ? (
-              <Stack className={menuStyle.footer}>{footer}</Stack>
-            ) : null}
+            {footer ? <Stack className={menuStyle.footer}>{footer}</Stack> : null}
           </Stack>
         }
         visible={triggerMethod === 'click' ? isVisible : shouldBeVisible}
       >
-        <DisclosureContext.Provider value>
-          {finalDisclosure}
-        </DisclosureContext.Provider>
+        <DisclosureContext.Provider value>{finalDisclosure}</DisclosureContext.Provider>
       </Popup>
     )
   },

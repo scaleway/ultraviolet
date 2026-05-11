@@ -1,12 +1,6 @@
 'use client'
 
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useMemo,
-  useState,
-} from 'react'
+import { createContext, useCallback, useContext, useMemo, useState } from 'react'
 
 import type { ReactNode, RefObject } from 'react'
 
@@ -22,9 +16,7 @@ type ModalContextValues = {
   previsousOpenedModales: ModalObject[] // This will be usefull for animation, we will trigger when the modal appear but not when it's closing
 }
 
-export const ModalContext = createContext<ModalContextValues | undefined>(
-  undefined,
-)
+export const ModalContext = createContext<ModalContextValues | undefined>(undefined)
 
 export const useModal = () => {
   const context = useContext(ModalContext)
@@ -41,9 +33,7 @@ type ModalProviderProps = {
 
 export const ModalProvider = ({ children }: ModalProviderProps) => {
   const [openedModals, setOpenedModals] = useState<ModalObject[]>([])
-  const [previsousOpenedModales, setPreviousOpenedModales] = useState<
-    ModalObject[]
-  >([])
+  const [previsousOpenedModales, setPreviousOpenedModales] = useState<ModalObject[]>([])
 
   const registerModal = useCallback((object: ModalObject) => {
     setOpenedModals(prev => {

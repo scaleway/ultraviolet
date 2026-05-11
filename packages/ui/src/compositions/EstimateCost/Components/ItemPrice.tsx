@@ -4,13 +4,7 @@ import { calculatePrice } from '../helper'
 
 import type { ItemPriceProps, Units } from '../types'
 
-const TIME_RELATED_UNIT: Units[] = [
-  'seconds',
-  'minutes',
-  'hours',
-  'days',
-  'months',
-]
+const TIME_RELATED_UNIT: Units[] = ['seconds', 'minutes', 'hours', 'days', 'months']
 
 export const ItemPrice = ({
   computedItemPrice,
@@ -37,16 +31,8 @@ export const ItemPrice = ({
       <Text
         as="p"
         placement="right"
-        prominence={
-          computedItemPrice === 0 && computedMaxItemPrice === 0
-            ? 'weak'
-            : 'default'
-        }
-        sentiment={
-          computedItemPrice === 0 && computedMaxItemPrice === 0
-            ? 'neutral'
-            : 'primary'
-        }
+        prominence={computedItemPrice === 0 && computedMaxItemPrice === 0 ? 'weak' : 'default'}
+        sentiment={computedItemPrice === 0 && computedMaxItemPrice === 0 ? 'neutral' : 'primary'}
         strikeThrough={strikeThrough}
         variant={noIterationText ? 'headingSmall' : 'bodyStrong'}
       >
@@ -67,8 +53,7 @@ export const ItemPrice = ({
             })}`
           : null}
       </Text>
-      {(amount - amountFree !== 1 && computedItemPrice > 0) ||
-      (maxAmount > 0 && computedMaxItemPrice > 0) ? (
+      {(amount - amountFree !== 1 && computedItemPrice > 0) || (maxAmount > 0 && computedMaxItemPrice > 0) ? (
         <Text as="p" placement="right" variant="body">
           {formatNumber(
             calculatePrice({
@@ -79,17 +64,11 @@ export const ItemPrice = ({
               timeUnit: 'hours',
             }),
             {
-              maximumFractionDigits: longFractionDigits
-                ? maximumFractionDigitsLong.hours
-                : maximumFractionDigits.hours,
+              maximumFractionDigits: longFractionDigits ? maximumFractionDigitsLong.hours : maximumFractionDigits.hours,
             },
           )}
-          {TIME_RELATED_UNIT.includes(unit)
-            ? locales[`estimate.cost.units.${unit}.label`].toLowerCase()
-            : `/${unit}`}
-          {noIteration
-            ? null
-            : `/${locales['estimate.cost.units.hours.label'].toLowerCase()}`}
+          {TIME_RELATED_UNIT.includes(unit) ? locales[`estimate.cost.units.${unit}.label`].toLowerCase() : `/${unit}`}
+          {noIteration ? null : `/${locales['estimate.cost.units.hours.label'].toLowerCase()}`}
         </Text>
       ) : null}
     </>

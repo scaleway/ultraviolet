@@ -75,9 +75,7 @@ const planAdvanced = {
   value: 'advanced',
 }
 
-export const Highlight: StoryFn<ComponentProps<typeof Plans>> = ({
-  ...props
-}) => <Plans {...props} fieldName="plans" />
+export const Highlight: StoryFn<ComponentProps<typeof Plans>> = ({ ...props }) => <Plans {...props} fieldName="plans" />
 
 Highlight.args = {
   features: [gb, pipeline, domain, ssl, fees],

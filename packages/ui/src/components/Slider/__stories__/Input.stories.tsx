@@ -16,8 +16,7 @@ Input.args = {
 Input.parameters = {
   docs: {
     description: {
-      story:
-        'To allow the user to directly write the desired value, set prop `input` to `true`.',
+      story: 'To allow the user to directly write the desired value, set prop `input` to `true`.',
     },
   },
 }

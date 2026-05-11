@@ -1,21 +1,9 @@
 import type { LabelProp } from '../../types'
-import type {
-  ChangeEventHandler,
-  CSSProperties,
-  FocusEventHandler,
-  ReactElement,
-  ReactNode,
-  RefObject,
-} from 'react'
+import type { ChangeEventHandler, CSSProperties, FocusEventHandler, ReactElement, ReactNode, RefObject } from 'react'
 
 export type SelectableCardProps = {
   name?: string
-  children?:
-    | (({
-        disabled,
-        checked,
-      }: Pick<SelectableCardProps, 'checked' | 'disabled'>) => ReactNode)
-    | ReactNode
+  children?: (({ disabled, checked }: Pick<SelectableCardProps, 'checked' | 'disabled'>) => ReactNode) | ReactNode
   value: string | number
   onChange: ChangeEventHandler<HTMLInputElement>
   showTick?: boolean

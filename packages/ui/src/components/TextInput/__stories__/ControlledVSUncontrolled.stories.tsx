@@ -13,12 +13,7 @@ export const ControlledVSUncontrolled: StoryFn<typeof TextInput> = props => {
     <Stack direction="column" gap={2}>
       <TextInput defaultValue="content" label="Uncontrolled" {...props} />
       <Stack gap={1}>
-        <TextInput
-          label="Controlled"
-          onChange={event => setValue(event.target.value)}
-          value={value}
-          {...props}
-        />
+        <TextInput label="Controlled" onChange={event => setValue(event.target.value)} value={value} {...props} />
         <Text as="p" sentiment="neutral" variant="body">
           We can get the value from the input, which is:{' '}
           <Text as="span" italic sentiment="neutral" variant="body">

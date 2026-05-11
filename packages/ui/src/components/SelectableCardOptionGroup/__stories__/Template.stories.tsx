@@ -29,24 +29,9 @@ export const Template: StoryFn<typeof SelectableCardOptionGroup> = args => {
         optionValue={option}
         value={value}
       >
-        <SelectableCardOptionGroup.Option
-          image={ubuntu}
-          label="Ubuntu"
-          options={ubuntuOptions}
-          value="ubuntu"
-        />
-        <SelectableCardOptionGroup.Option
-          image={debian}
-          label="Debian"
-          options={debianOptions}
-          value="debian"
-        />
-        <SelectableCardOptionGroup.Option
-          image={centos}
-          label="CentOS"
-          options={centosOptions}
-          value="centos"
-        />
+        <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
+        <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
+        <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
       </SelectableCardOptionGroup>
       <Stack>
         <Text as="h2" variant="bodyStrong">

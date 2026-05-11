@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const DocumentationProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const DocumentationProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="DocumentationProductIcon">
     <g className="Documentation">
       <g className=".Square">
@@ -44,10 +42,7 @@ export const DocumentationProductIcon = ({
               clipRule="evenodd"
               fillRule="evenodd"
             />
-            <path
-              d="M34.166 34.736a1.736 1.736 0 1 1-3.472 0 1.736 1.736 0 0 1 3.472 0"
-              className="fill"
-            />
+            <path d="M34.166 34.736a1.736 1.736 0 1 1-3.472 0 1.736 1.736 0 0 1 3.472 0" className="fill" />
           </g>
         </g>
       </g>

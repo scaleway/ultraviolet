@@ -3,9 +3,7 @@ import { ContentCardGroup } from '..'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const Description: StoryFn<ComponentProps<typeof ContentCardGroup>> = ({
-  ...props
-}) => (
+export const Description: StoryFn<ComponentProps<typeof ContentCardGroup>> = ({ ...props }) => (
   <ContentCardGroup {...props}>
     <ContentCardGroup.Card
       href="https://www.scaleway.com/docs/containers/kubernetes/reference-content/multi-az-clusters/"

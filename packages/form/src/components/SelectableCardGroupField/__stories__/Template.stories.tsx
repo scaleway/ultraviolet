@@ -3,9 +3,7 @@ import { SelectableCardGroupField } from '../..'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const Template: StoryFn<
-  ComponentProps<typeof SelectableCardGroupField>
-> = args => (
+export const Template: StoryFn<ComponentProps<typeof SelectableCardGroupField>> = args => (
   <SelectableCardGroupField {...args}>
     <SelectableCardGroupField.Card label="Radio 1" value="radio 1" />
     <SelectableCardGroupField.Card label="Radio 2" value="radio 2" />

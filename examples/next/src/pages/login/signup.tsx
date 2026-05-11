@@ -1,12 +1,4 @@
-import {
-  DateInputField,
-  Form,
-  RadioGroupField,
-  Submit,
-  TextInputField,
-  useForm,
-  useWatch,
-} from '@ultraviolet/form'
+import { DateInputField, Form, RadioGroupField, Submit, TextInputField, useForm, useWatch } from '@ultraviolet/form'
 import { ProfileIcon } from '@ultraviolet/icons/ProfileIcon'
 import { Alert, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
@@ -78,11 +70,7 @@ const SignUp = () => {
   }
   return (
     <Stack className={styles.signupContainer}>
-      <Form<FormValues>
-        errors={mockErrors}
-        methods={methods}
-        onSubmit={handleSubmit}
-      >
+      <Form<FormValues> errors={mockErrors} methods={methods} onSubmit={handleSubmit}>
         <Stack alignItems="center" gap={1}>
           <ProfileIcon size="small" />
           <Text as="div" placement="center" variant="heading">
@@ -109,12 +97,7 @@ const SignUp = () => {
                 required
               />
             </Stack>
-            <DateInputField
-              className="age-input"
-              label="Birth Date"
-              name="birthdate"
-              required
-            />
+            <DateInputField className="age-input" label="Birth Date" name="birthdate" required />
             <TextInputField
               className={`inputs ${styles.signupInput}`}
               label="Email"

@@ -9,19 +9,10 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const UbuntuLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const UbuntuLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="UbuntuLogo">
     <circle fill="#f47421" cx="10" cy="10" r="9" />
-    <circle
-      fill="none"
-      stroke="#ffffff"
-      strokeWidth="1.71"
-      cx="10"
-      cy="10"
-      r="4.365"
-    />
+    <circle fill="none" stroke="#ffffff" strokeWidth="1.71" cx="10" cy="10" r="4.365" />
     <g>
       <circle fill="#f47421" cx="3.88" cy="10" r="1.68752" />
       <path stroke="#f47421" strokeWidth="0.64756" d="M13.4,10H15.4" />

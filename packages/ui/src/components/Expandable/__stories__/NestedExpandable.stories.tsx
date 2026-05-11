@@ -46,8 +46,7 @@ NestedExpandable.decorators = [
 NestedExpandable.parameters = {
   docs: {
     description: {
-      story:
-        'Expandable can be nested inside another Expandable the component can handle it.',
+      story: 'Expandable can be nested inside another Expandable the component can handle it.',
     },
   },
 }

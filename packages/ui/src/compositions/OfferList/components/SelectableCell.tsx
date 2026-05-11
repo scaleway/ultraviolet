@@ -67,9 +67,7 @@ export const SelectableCell = ({
         </BadgeUV>
       ) : null}
       <div className={offerListStyle.rowSelectableContainer}>
-        <Tooltip
-          text={typeof selectDisabled === 'string' ? selectDisabled : undefined}
-        >
+        <Tooltip text={typeof selectDisabled === 'string' ? selectDisabled : undefined}>
           {selectable === 'radio' ? (
             <Radio
               aria-label={`select-${id}`}

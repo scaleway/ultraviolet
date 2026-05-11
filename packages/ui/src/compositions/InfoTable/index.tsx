@@ -23,22 +23,12 @@ type InfoTableProps = {
  * Use this component to display offers.
  * Create rows with `InfoTable.Row` and place cells within each row using `InfoTable.Cell`.
  */
-const BaseInfoTable = ({
-  children,
-  width,
-  className,
-  style,
-  'data-testid': dataTestId,
-}: InfoTableProps) => {
+const BaseInfoTable = ({ children, width, className, style, 'data-testid': dataTestId }: InfoTableProps) => {
   const value = useMemo(() => ({ width }), [width])
 
   return (
     <InfoTableContext.Provider value={value}>
-      <dl
-        className={cn(className, infoTableStyle.dl)}
-        data-testid={dataTestId}
-        style={style}
-      >
+      <dl className={cn(className, infoTableStyle.dl)} data-testid={dataTestId} style={style}>
         {children}
       </dl>
     </InfoTableContext.Provider>

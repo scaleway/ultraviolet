@@ -10,15 +10,8 @@ export const Controlled: StoryFn<typeof ExpandableCard> = args => {
 
   return (
     <Stack gap={1}>
-      <Button onClick={onToggleExpand}>
-        Click me to {expanded ? 'collapse' : 'expanded'} the card
-      </Button>
-      <ExpandableCard
-        {...args}
-        expanded={expanded}
-        header="Controlled"
-        onToggleExpand={onToggleExpand}
-      >
+      <Button onClick={onToggleExpand}>Click me to {expanded ? 'collapse' : 'expanded'} the card</Button>
+      <ExpandableCard {...args} expanded={expanded} header="Controlled" onToggleExpand={onToggleExpand}>
         A nice content
       </ExpandableCard>
     </Stack>

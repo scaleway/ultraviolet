@@ -27,8 +27,7 @@ Separator.args = {
 Separator.parameters = {
   docs: {
     description: {
-      story:
-        'Steps can be separated by a separator or not. By default there is a separator.',
+      story: 'Steps can be separated by a separator or not. By default there is a separator.',
     },
   },
 }

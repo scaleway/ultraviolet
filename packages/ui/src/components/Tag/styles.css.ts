@@ -2,15 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-export const SENTIMENTS = [
-  'danger',
-  'info',
-  'neutral',
-  'primary',
-  'secondary',
-  'success',
-  'warning',
-] as const
+export const SENTIMENTS = ['danger', 'info', 'neutral', 'primary', 'secondary', 'success', 'warning'] as const
 
 const container = recipe({
   base: {
@@ -91,10 +83,7 @@ const container = recipe({
         selectors: {
           '&:hover, &:active': {
             background: theme.colors[sentiment].backgroundHover,
-            borderColor:
-              theme.colors[sentiment][
-                sentiment === 'neutral' ? 'borderStrongHover' : 'borderHover'
-              ],
+            borderColor: theme.colors[sentiment][sentiment === 'neutral' ? 'borderStrongHover' : 'borderHover'],
           },
         },
       },

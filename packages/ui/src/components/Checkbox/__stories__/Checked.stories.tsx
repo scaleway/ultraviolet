@@ -7,12 +7,7 @@ export const Checked: StoryFn = args => (
     <Checkbox {...args} checked onChange={() => {}}>
       Checked checkbox
     </Checkbox>
-    <Checkbox
-      {...args}
-      checked="indeterminate"
-      helper="Helper"
-      onChange={() => {}}
-    >
+    <Checkbox {...args} checked="indeterminate" helper="Helper" onChange={() => {}}>
       Indeterminate checkbox
     </Checkbox>
   </>
@@ -21,8 +16,7 @@ export const Checked: StoryFn = args => (
 Checked.parameters = {
   docs: {
     description: {
-      story:
-        'Checkbox can have two state `checked` or `indeterminate` defined by prop `checked`.',
+      story: 'Checkbox can have two state `checked` or `indeterminate` defined by prop `checked`.',
     },
   },
 }

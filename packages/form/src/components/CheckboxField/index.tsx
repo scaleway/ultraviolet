@@ -9,10 +9,10 @@ import type { BaseFieldProps } from '../../types'
 import type { ComponentProps, ReactNode } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 
-type CheckboxFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'value'> &
+type CheckboxFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = Omit<
+  BaseFieldProps<TFieldValues, TFieldName>,
+  'value'
+> &
   Omit<ComponentProps<typeof Checkbox>, 'value' | 'onChange'> & {
     className?: string
     children?: ReactNode
@@ -57,10 +57,7 @@ export const CheckboxField = <
       required={required}
       checked={!!field.value}
       disabled={field.disabled}
-      error={getError(
-        { label: errorLabel ?? label ?? ariaLabel ?? name },
-        error,
-      )}
+      error={getError({ label: errorLabel ?? label ?? ariaLabel ?? name }, error)}
       name={field.name}
       onBlur={event => {
         field.onBlur()
@@ -68,14 +65,10 @@ export const CheckboxField = <
       }}
       onChange={event => {
         field.onChange(event.target.checked)
-        onChange?.(
-          event.target.checked as PathValue<TFieldValues, Path<TFieldValues>>,
-        )
+        onChange?.(event.target.checked as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       ref={field.ref}
-      {...(children
-        ? { 'aria-label': undefined, children }
-        : { 'aria-label': ariaLabel! })}
+      {...(children ? { 'aria-label': undefined, children } : { 'aria-label': ariaLabel! })}
     />
   )
 }

@@ -4,10 +4,7 @@ import { renderWithForm } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 
 import { OptionSelectorField } from '..'
-import {
-  firstSelectorOptions,
-  secondSelectorOptions,
-} from '../__stories__/resources'
+import { firstSelectorOptions, secondSelectorOptions } from '../__stories__/resources'
 
 describe('optionSelectorField', () => {
   it('should render correctly', () => {

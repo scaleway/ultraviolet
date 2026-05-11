@@ -6,8 +6,7 @@ export const JustifyContent = Template.bind({})
 JustifyContent.parameters = {
   docs: {
     description: {
-      story:
-        'prop `justifyContent` support every value of css property `justify-content`',
+      story: 'prop `justifyContent` support every value of css property `justify-content`',
     },
   },
 }

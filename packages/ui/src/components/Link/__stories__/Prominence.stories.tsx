@@ -8,11 +8,7 @@ import type { ComponentProps } from 'react'
 
 export const Prominence = (props: ComponentProps<typeof Link>) =>
   Object.keys(PROMINENCES).map(prominence => (
-    <Link
-      key={prominence}
-      {...props}
-      prominence={prominence as ProminenceProps}
-    >
+    <Link key={prominence} {...props} prominence={prominence as ProminenceProps}>
       {prominence}
     </Link>
   ))

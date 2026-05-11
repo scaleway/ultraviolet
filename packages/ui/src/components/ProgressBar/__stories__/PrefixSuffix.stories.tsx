@@ -5,13 +5,7 @@ import type { StoryFn } from '@storybook/react-vite'
 
 export const PrefixSuffix: StoryFn = props => (
   <Stack gap={2}>
-    <ProgressBar
-      {...props}
-      label="Prefix"
-      prefix="Value : "
-      suffix={false}
-      value={30}
-    />
+    <ProgressBar {...props} label="Prefix" prefix="Value : " suffix={false} value={30} />
     <ProgressBar {...props} label="Suffix" suffix="/100" value={30} />
   </Stack>
 )

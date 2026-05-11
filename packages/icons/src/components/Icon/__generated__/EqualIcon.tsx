@@ -9,12 +9,9 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const EqualIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const EqualIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="EqualIcon">
-    {typeof props.size === 'string' &&
-    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
+    {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M19 10H5V8h14zm0 6H5v-2h14z" />
     ) : (
       <path d="M19 10H5V8h14zm0 6H5v-2h14z" />

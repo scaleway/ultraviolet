@@ -117,10 +117,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
                     {label}
                   </Text>
                 ) : (
-                  <label
-                    className={cn(radioStyle.labelStyle, radioStyle.label)}
-                    htmlFor={localId}
-                  >
+                  <label className={cn(radioStyle.labelStyle, radioStyle.label)} htmlFor={localId}>
                     {label}
                   </label>
                 )}
@@ -128,13 +125,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
             ) : null}
           </div>
           {helper ? (
-            <Text
-              as="span"
-              className={radioStyle.margedText}
-              prominence="weak"
-              sentiment="neutral"
-              variant="caption"
-            >
+            <Text as="span" className={radioStyle.margedText} prominence="weak" sentiment="neutral" variant="caption">
               {helper}
             </Text>
           ) : null}

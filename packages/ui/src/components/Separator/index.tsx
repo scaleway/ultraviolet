@@ -36,10 +36,7 @@ export const Separator = ({
   children ? (
     <div
       aria-orientation={direction}
-      className={cn(
-        className,
-        separatorStyle.iconWraper({ direction, sentiment }),
-      )}
+      className={cn(className, separatorStyle.iconWraper({ direction, sentiment }))}
       data-testid={dataTestId}
       data-flip-id={flipId}
       role="separator"

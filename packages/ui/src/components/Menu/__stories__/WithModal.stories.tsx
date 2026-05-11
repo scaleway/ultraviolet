@@ -8,12 +8,8 @@ import type { StoryFn } from '@storybook/react-vite'
 
 const NestedModal = () => (
   <Modal disclosure={<Menu.Item>MenuItem with Modal</Menu.Item>}>
-    <div style={{ padding: 32 }}>
-      Content should be present in center of the modal
-    </div>
-    <div style={{ padding: 32 }}>
-      Content should be present in center of the modal
-    </div>
+    <div style={{ padding: 32 }}>Content should be present in center of the modal</div>
+    <div style={{ padding: 32 }}>Content should be present in center of the modal</div>
     <TextInput label="Test input events" name="test" />
   </Modal>
 )
@@ -21,9 +17,7 @@ const NestedModal = () => (
 export const WithModal: StoryFn<typeof Menu> = () => (
   <Menu disclosure={DefaultDisclosure}>
     <Menu.Item>Menu Item</Menu.Item>
-    <Menu.Item href="/?path=/docs/components-navigation-menu--modal">
-      Menu Item Link
-    </Menu.Item>
+    <Menu.Item href="/?path=/docs/components-navigation-menu--modal">Menu Item Link</Menu.Item>
     <NestedModal />
   </Menu>
 )

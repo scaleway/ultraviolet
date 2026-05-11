@@ -13,12 +13,7 @@ import { selectableCardStyle } from './styles.css'
 import { inputDisplay, labelDisplay, widthSelectable } from './variables.css'
 
 import type { SelectableCardProps } from './types'
-import type {
-  ForwardedRef,
-  KeyboardEventHandler,
-  MouseEventHandler,
-  ReactNode,
-} from 'react'
+import type { ForwardedRef, KeyboardEventHandler, MouseEventHandler, ReactNode } from 'react'
 
 /**
  * SelectableCard is a component that can be used to create a radio or checkbox card.
@@ -91,28 +86,19 @@ export const SelectableCard = forwardRef(
       [innerRef],
     )
 
-    const isComplexChildren = ['function', 'array', 'object'].includes(
-      typeof children,
-    )
+    const isComplexChildren = ['function', 'array', 'object'].includes(typeof children)
 
     const onClickContainer: MouseEventHandler<HTMLDivElement> = useCallback(
       event => {
         if (innerRef.current && !disabled) {
           const inputElement = innerRef.current
-          const labelElement = document.querySelector(
-            `label[for="${inputElement.id}"]`,
-          )
+          const labelElement = document.querySelector(`label[for="${inputElement.id}"]`)
 
           // oxlint-disable-next-line typescript/no-unsafe-type-assertion
           const targetNode = event.target as Node
 
           // Check if the event target is the input element, its associated label, or the children content
-          if (
-            !(
-              inputElement.contains(targetNode) ||
-              labelElement?.contains(targetNode)
-            )
-          ) {
+          if (!(inputElement.contains(targetNode) || labelElement?.contains(targetNode))) {
             inputElement.click()
           }
         }
@@ -129,8 +115,7 @@ export const SelectableCard = forwardRef(
           className={cn(
             className,
             selectableCardStyle.container({
-              cursor:
-                isCheckboxOrToggle && isComplexChildren ? 'default' : 'custom',
+              cursor: isCheckboxOrToggle && isComplexChildren ? 'default' : 'custom',
               image,
             }),
             label
@@ -145,11 +130,7 @@ export const SelectableCard = forwardRef(
           direction={label ? 'column' : 'row'}
           flex={1}
           gap={0.5}
-          onClick={
-            isCheckboxOrToggle && isComplexChildren
-              ? undefined
-              : onClickContainer
-          }
+          onClick={isCheckboxOrToggle && isComplexChildren ? undefined : onClickContainer}
           onKeyDown={onKeyDown}
           ref={ref}
           // oxlint-disable-next-line jsx_a11y/prefer-tag-over-role
@@ -164,10 +145,7 @@ export const SelectableCard = forwardRef(
           }}
           tabIndex={disabled ? undefined : 0}
         >
-          <IllustrationContainer
-            illustration={illustration}
-            productIcon={productIcon}
-          >
+          <IllustrationContainer illustration={illustration} productIcon={productIcon}>
             <MultiStateInput
               aria-label={ariaLabel}
               checked={checked}
@@ -189,21 +167,15 @@ export const SelectableCard = forwardRef(
               <Stack
                 className={cn(
                   selectableCardStyle.stack,
-                  !!label && showTick && indented
-                    ? selectableCardStyle.indentedCard
-                    : undefined,
+                  !!label && showTick && indented ? selectableCardStyle.indentedCard : undefined,
                 )}
-                data-has-default-cursor={
-                  isCheckboxOrToggle && isComplexChildren
-                }
+                data-has-default-cursor={isCheckboxOrToggle && isComplexChildren}
                 data-has-label={!!label && showTick}
                 onKeyDown={event => event.stopPropagation()}
                 ref={childrenRef}
                 width="100%"
               >
-                {typeof children === 'function'
-                  ? children({ checked, disabled })
-                  : children}
+                {typeof children === 'function' ? children({ checked, disabled }) : children}
               </Stack>
             ) : null}
           </IllustrationContainer>

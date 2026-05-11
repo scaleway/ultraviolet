@@ -9,14 +9,11 @@ import type { BaseFieldProps } from '../../types'
 import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 
-type TimeInputFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<
-    ComponentProps<typeof TimeInput>,
-    'value' | 'error' | 'name' | 'onChange'
-  >
+type TimeInputFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
+  TFieldValues,
+  TFieldName
+> &
+  Omit<ComponentProps<typeof TimeInput>, 'value' | 'error' | 'name' | 'onChange'>
 
 /**
  * This component offers a form field based on Ultraviolet UI TimeInput component

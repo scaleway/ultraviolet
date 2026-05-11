@@ -12,13 +12,7 @@ export const Header: StoryFn<typeof ExpandableCard> = () => (
     <ExpandableCard header="This is a basic header">content</ExpandableCard>
     <ExpandableCard
       header={
-        <Stack
-          alignItems="center"
-          direction="row"
-          gap={2}
-          justifyContent="space-between"
-          width="100%"
-        >
+        <Stack alignItems="center" direction="row" gap={2} justifyContent="space-between" width="100%">
           <Stack alignItems="center" direction="row" gap={1}>
             <KubernetesProductIcon />
             <div>

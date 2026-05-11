@@ -4,9 +4,7 @@ import { barChartSimpleData } from './mockData'
 
 import type { StoryFn } from '@storybook/react-vite'
 
-export const Label: StoryFn<typeof BarChart> = ({ ...props }) => (
-  <BarChart data={barChartSimpleData} {...props} />
-)
+export const Label: StoryFn<typeof BarChart> = ({ ...props }) => <BarChart data={barChartSimpleData} {...props} />
 
 Label.args = {
   chartProps: {

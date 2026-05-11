@@ -9,14 +9,9 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const AdvancedSupportProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const AdvancedSupportProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="AdvancedSupportProductIcon">
-    <g
-      className="sentiment=original, size=xlarge, disabled=false"
-      clipPath="url(#a)"
-    >
+    <g className="sentiment=original, size=xlarge, disabled=false" clipPath="url(#a)">
       <g className=".Square">
         <g className="fillWeak">
           <path

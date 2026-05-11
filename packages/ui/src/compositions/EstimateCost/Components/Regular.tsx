@@ -17,23 +17,11 @@ type RegularProps = {
 }
 
 export const Regular = memo(
-  ({
-    variant = 'normal',
-    isDisabledOnOverlay = false,
-    children = null,
-    className,
-    style,
-  }: RegularProps) => {
+  ({ variant = 'normal', isDisabledOnOverlay = false, children = null, className, style }: RegularProps) => {
     const { isOverlay } = useOverlay()
 
     return isDisabledOnOverlay && isOverlay ? null : (
-      <div
-        className={cn(
-          className,
-          estimateCostStyle.regular({ isOverlay, variant }),
-        )}
-        style={style}
-      >
+      <div className={cn(className, estimateCostStyle.regular({ isOverlay, variant }))} style={style}>
         {children}
       </div>
     )

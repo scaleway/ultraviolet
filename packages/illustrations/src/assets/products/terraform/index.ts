@@ -10,9 +10,4 @@ const terraformKeyvisual = `${BASE_URL}/products/terraform/terraform-keyvisual.w
 const terraformOriginal = `${BASE_URL}/products/terraform/terraform-original.webp`
 const terraformWire = `${BASE_URL}/products/terraform/terraform-wire.svg`
 
-export {
-  terraformContent,
-  terraformKeyvisual,
-  terraformOriginal,
-  terraformWire,
-}
+export { terraformContent, terraformKeyvisual, terraformOriginal, terraformWire }

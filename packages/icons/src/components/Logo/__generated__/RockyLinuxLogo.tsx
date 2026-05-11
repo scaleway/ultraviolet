@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const RockyLinuxLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const RockyLinuxLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="RockyLinuxLogo">
     <path
       fillRule="evenodd"

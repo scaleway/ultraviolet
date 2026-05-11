@@ -11,28 +11,19 @@ export const Sentiments: StoryFn<typeof Dialog> = props => (
       <Dialog
         key={sentiment}
         {...props}
-        disclosure={
-          <Button sentiment={sentiment}>Open Dialog ({sentiment})</Button>
-        }
+        disclosure={<Button sentiment={sentiment}>Open Dialog ({sentiment})</Button>}
         sentiment={sentiment}
         title={sentiment}
       >
         {({ close }) => (
           <Dialog.Stack>
             <Dialog.Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis
-              consectetur est. Donec lorem orci, feugiat vitae lacinia bibendum,
-              malesuada vitae elit.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis consectetur est. Donec lorem orci,
+              feugiat vitae lacinia bibendum, malesuada vitae elit.
             </Dialog.Text>
             <Dialog.Buttons
-              primaryButton={
-                <Dialog.Button onClick={close}>Confirm</Dialog.Button>
-              }
-              secondaryButton={
-                <Dialog.CancelButton onClick={close}>
-                  Cancel
-                </Dialog.CancelButton>
-              }
+              primaryButton={<Dialog.Button onClick={close}>Confirm</Dialog.Button>}
+              secondaryButton={<Dialog.CancelButton onClick={close}>Cancel</Dialog.CancelButton>}
             />
           </Dialog.Stack>
         )}

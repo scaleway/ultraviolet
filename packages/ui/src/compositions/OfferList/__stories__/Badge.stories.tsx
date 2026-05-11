@@ -50,8 +50,7 @@ Badge.args = {
 Badge.parameters = {
   docs: {
     description: {
-      story:
-        'Use props `badge` to add a badge to the row. When a row is disabled, its badge is also disabled.',
+      story: 'Use props `badge` to add a badge to the row. When a row is disabled, its badge is also disabled.',
     },
   },
 }

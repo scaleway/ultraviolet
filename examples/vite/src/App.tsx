@@ -1,15 +1,5 @@
 import { consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
-import {
-  Alert,
-  Button,
-  Card,
-  Row,
-  Stack,
-  Text,
-  ThemeProvider,
-  Badge,
-  SelectableCardOptionGroup,
-} from '@ultraviolet/ui'
+import { Alert, Button, Card, Row, Stack, Text, ThemeProvider, Badge, SelectableCardOptionGroup } from '@ultraviolet/ui'
 import { InfoTable } from '@ultraviolet/ui/compositions/InfoTable'
 import { useState } from 'react'
 import '@ultraviolet/ui/styles' // Import styles for the UI components
@@ -48,33 +38,16 @@ export const App = () => {
           optionValue={option}
           value={value}
         >
-          <SelectableCardOptionGroup.Option
-            image={ubuntu}
-            label="Ubuntu"
-            options={ubuntuOptions}
-            value="ubuntu"
-          />
-          <SelectableCardOptionGroup.Option
-            image={debian}
-            label="Debian"
-            options={debianOptions}
-            value="debian"
-          />
-          <SelectableCardOptionGroup.Option
-            image={centos}
-            label="CentOS"
-            options={centosOptions}
-            value="centos"
-          />
+          <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
+          <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
+          <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
         </SelectableCardOptionGroup>
         <Card>
           <Text as="h1" variant="headingSmall">
             Classic
           </Text>
           <Stack direction="row" gap="2">
-            <Button onClick={() => setCount(prevCount => prevCount + 1)}>
-              +
-            </Button>
+            <Button onClick={() => setCount(prevCount => prevCount + 1)}>+</Button>
             <Alert>Alert General</Alert>
             <Button onClick={() => setCount(0)}>Reset</Button>
             <Button onClick={() => setDarkMode(!darkMode)} sentiment="danger">

@@ -28,35 +28,21 @@ export const Item = ({
   textVariant: 'caption' | 'body' | 'bodySmall'
   optionalInfoPlacement: 'left' | 'right'
 }) => {
-  const {
-    setIsDropdownVisible,
-    onChange,
-    multiselect,
-    setSelectedData,
-    selectedData,
-    size,
-  } = useSelectInput()
+  const { setIsDropdownVisible, onChange, multiselect, setSelectedData, selectedData, size } = useSelectInput()
 
   const handleClick = ({
     clickedOption,
     event,
   }: {
     clickedOption: OptionType
-    event:
-      | MouseEvent<HTMLDivElement>
-      | KeyboardEvent<HTMLDivElement>
-      | ChangeEvent<HTMLDivElement>
+    event: MouseEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement> | ChangeEvent<HTMLDivElement>
   }) => {
     event.stopPropagation()
 
     setSelectedData({ clickedOption, group, type: 'selectOption' })
     if (multiselect) {
       if (selectedData.selectedValues.includes(clickedOption.value)) {
-        onChange?.(
-          selectedData.selectedValues.filter(
-            value => value !== clickedOption.value,
-          ),
-        )
+        onChange?.(selectedData.selectedValues.filter(value => value !== clickedOption.value))
       } else {
         onChange?.([...selectedData.selectedValues, clickedOption.value])
       }
@@ -70,16 +56,12 @@ export const Item = ({
     <div
       aria-disabled={!!option.disabled}
       aria-label={option.value}
-      aria-selected={
-        selectedData.selectedValues.includes(option.value) && !option.disabled
-      }
+      aria-selected={selectedData.selectedValues.includes(option.value) && !option.disabled}
       className={cn(
         selectInputStyle.dropdownItem({
           disabled: !!option.disabled,
           size,
-          selected:
-            selectedData.selectedValues.includes(option.value) &&
-            !option.disabled,
+          selected: selectedData.selectedValues.includes(option.value) && !option.disabled,
         }),
       )}
       data-testid={`option-${option.value}`}
@@ -101,21 +83,13 @@ export const Item = ({
           })
         }
       }}
-      ref={
-        option.value === defaultSearchValue ||
-        option.searchText === defaultSearchValue
-          ? focusedItemRef
-          : null
-      }
+      ref={option.value === defaultSearchValue || option.searchText === defaultSearchValue ? focusedItemRef : null}
       role="option"
       tabIndex={option.disabled ? -1 : 0}
     >
       {multiselect ? (
         <Checkbox
-          checked={
-            selectedData.selectedValues.includes(option.value) &&
-            !option.disabled
-          }
+          checked={selectedData.selectedValues.includes(option.value) && !option.disabled}
           className={selectInputStyle.dropdownCheckbox}
           disabled={option.disabled}
           onChange={event => {

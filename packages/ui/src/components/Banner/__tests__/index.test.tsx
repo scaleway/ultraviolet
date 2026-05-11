@@ -9,8 +9,7 @@ import { Banner } from '..'
 // import image from '../__stories__/Image.png'
 
 describe('banner', () => {
-  it('renders correctly with default values', () =>
-    shouldMatchSnapshot(<Banner title="Title">Description</Banner>))
+  it('renders correctly with default values', () => shouldMatchSnapshot(<Banner title="Title">Description</Banner>))
 
   it('renders correctly with a button', () =>
     shouldMatchSnapshot(

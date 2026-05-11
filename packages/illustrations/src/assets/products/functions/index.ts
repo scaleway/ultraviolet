@@ -10,9 +10,4 @@ const functionsKeyvisual = `${BASE_URL}/products/functions/functions-keyvisual.w
 const functionsOriginal = `${BASE_URL}/products/functions/functions-original.webp`
 const functionsWire = `${BASE_URL}/products/functions/functions-wire.svg`
 
-export {
-  functionsContent,
-  functionsKeyvisual,
-  functionsOriginal,
-  functionsWire,
-}
+export { functionsContent, functionsKeyvisual, functionsOriginal, functionsWire }

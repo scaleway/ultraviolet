@@ -15,13 +15,7 @@ export const Tooltip: StoryFn<typeof Slider> = args => {
 
   return (
     <Stack gap={4}>
-      <Slider
-        {...args}
-        label="Tooltip: true"
-        onChange={() => {}}
-        tooltip
-        value={3}
-      />
+      <Slider {...args} label="Tooltip: true" onChange={() => {}} tooltip value={3} />
       <Slider
         {...args}
         double
@@ -31,14 +25,7 @@ export const Tooltip: StoryFn<typeof Slider> = args => {
         tooltip
         value={[5, 14]}
       />
-      <Slider
-        {...args}
-        double={false}
-        label="Custom"
-        onChange={setValue}
-        tooltip={label}
-        value={value}
-      />
+      <Slider {...args} double={false} label="Custom" onChange={setValue} tooltip={label} value={value} />
       <Slider
         {...args}
         double
@@ -58,14 +45,7 @@ export const Tooltip: StoryFn<typeof Slider> = args => {
         tooltipPosition="bottom"
         value={values2}
       />
-      <Slider
-        {...args}
-        label="Tooltip bottom"
-        onChange={() => {}}
-        tooltip
-        tooltipPosition="bottom"
-        value={3}
-      />
+      <Slider {...args} label="Tooltip bottom" onChange={() => {}} tooltip tooltipPosition="bottom" value={3} />
     </Stack>
   )
 }

@@ -40,8 +40,7 @@ export const Indented: StoryFn = args => {
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             <Stack gap={3} width="100%">
-              This option will cost you 1.99€ and provide you with a lot of
-              happiness
+              This option will cost you 1.99€ and provide you with a lot of happiness
               <Separator />
               <SelectInput
                 label="Select a sub option"
@@ -82,8 +81,7 @@ export const Indented: StoryFn = args => {
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             <Stack gap={3} width="100%">
-              This option will cost you 1.99€ and provide you with a lot of
-              happiness
+              This option will cost you 1.99€ and provide you with a lot of happiness
               <Separator />
               <SelectInput
                 label="Select a sub option"

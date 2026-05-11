@@ -77,15 +77,11 @@ const planAdvanced = {
   value: 'advanced',
 }
 
-export const Selectable: StoryFn<ComponentProps<typeof Plans>> = ({
-  ...props
-}) => {
+export const Selectable: StoryFn<ComponentProps<typeof Plans>> = ({ ...props }) => {
   const [value, setValue] = useState('advanced')
   const onChange = (newValue?: string) => setValue(newValue ?? 'advanced')
 
-  return (
-    <Plans {...props} fieldName="plans" onChange={onChange} value={value} />
-  )
+  return <Plans {...props} fieldName="plans" onChange={onChange} value={value} />
 }
 
 Selectable.args = {

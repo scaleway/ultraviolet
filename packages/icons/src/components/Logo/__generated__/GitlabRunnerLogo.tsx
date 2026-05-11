@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const GitlabRunnerLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const GitlabRunnerLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="GitlabRunnerLogo">
     <rect fill="url(#pattern0_341_672)" />
     <defs>

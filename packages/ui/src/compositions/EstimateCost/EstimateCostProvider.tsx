@@ -32,17 +32,8 @@ type FormatNumberOption = {
   maximumSignificantDigits?: number
 }
 
-export const EstimateCostProvider = ({
-  children,
-  locales,
-  currency,
-  numberLocales,
-}: EstimateCostProviderProps) => {
-  const newLocales = useMemo(
-    () =>
-      locales ? { ...EstimateCostLocales, ...locales } : EstimateCostLocales,
-    [locales],
-  )
+export const EstimateCostProvider = ({ children, locales, currency, numberLocales }: EstimateCostProviderProps) => {
+  const newLocales = useMemo(() => (locales ? { ...EstimateCostLocales, ...locales } : EstimateCostLocales), [locales])
 
   const formatNumber = useCallback(
     (number: number, options: FormatNumberOption) => {
@@ -65,9 +56,5 @@ export const EstimateCostProvider = ({
     [formatNumber, newLocales],
   )
 
-  return (
-    <EstimateCostContext.Provider value={value}>
-      {children}
-    </EstimateCostContext.Provider>
-  )
+  return <EstimateCostContext.Provider value={value}>{children}</EstimateCostContext.Provider>
 }

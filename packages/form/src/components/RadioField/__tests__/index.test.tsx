@@ -7,27 +7,18 @@ import { RadioField } from '..'
 
 describe('radioField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(
-      <RadioField label="Radio field" name="test" value="test" />,
-    )
+    const { asFragment } = renderWithForm(<RadioField label="Radio field" name="test" value="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly with aria-label', () => {
-    const { asFragment } = renderWithForm(
-      <RadioField aria-label="Radio field" name="test" value="test" />,
-    )
+    const { asFragment } = renderWithForm(<RadioField aria-label="Radio field" name="test" value="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
-      <RadioField
-        disabled
-        label="Radio field disabled"
-        name="test"
-        value="disabled"
-      />,
+      <RadioField disabled label="Radio field disabled" name="test" value="disabled" />,
     )
     const input = screen.getByRole('radio', { hidden: true })
     expect(input).toBeDisabled()
@@ -35,12 +26,9 @@ describe('radioField', () => {
   })
 
   it('should render correctly checked', () => {
-    const { asFragment } = renderWithForm(
-      <RadioField label="Radio field checked" name="test" value="checked" />,
-      {
-        defaultValues: { test: 'checked' },
-      },
-    )
+    const { asFragment } = renderWithForm(<RadioField label="Radio field checked" name="test" value="checked" />, {
+      defaultValues: { test: 'checked' },
+    })
     const input = screen.getByRole('radio', { hidden: true })
     expect(input).toBeChecked()
     expect(asFragment()).toMatchSnapshot()

@@ -3,11 +3,7 @@ import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, it, vi } from 'vitest'
 
 import { BarChart } from '..'
-import {
-  barChartMultiData,
-  barChartPositiveNegativeData,
-  barChartSimpleData,
-} from '../__stories__/mockData'
+import { barChartMultiData, barChartPositiveNegativeData, barChartSimpleData } from '../__stories__/mockData'
 
 import type * as Nivo from '@nivo/core'
 import type { ComponentProps } from 'react'
@@ -17,9 +13,7 @@ vi.mock('@nivo/core', async importOriginal => {
   const actual = await importOriginal<typeof Nivo>()
   return {
     ...actual,
-    ResponsiveWrapper: ({
-      children,
-    }: ComponentProps<typeof actual.ResponsiveWrapper>) => (
+    ResponsiveWrapper: ({ children }: ComponentProps<typeof actual.ResponsiveWrapper>) => (
       <div>{children({ height: 500, width: 1000 })}</div>
     ),
   }
@@ -28,8 +22,7 @@ vi.mock('@nivo/core', async importOriginal => {
 describe('barChart', () => {
   it('renders correctly without data', () => shouldMatchSnapshot(<BarChart />))
 
-  it('renders correctly with data', () =>
-    shouldMatchSnapshot(<BarChart data={barChartSimpleData} />))
+  it('renders correctly with data', () => shouldMatchSnapshot(<BarChart data={barChartSimpleData} />))
 
   it('renders correctly with data transformer', () =>
     shouldMatchSnapshot(
@@ -41,8 +34,7 @@ describe('barChart', () => {
       />,
     ))
 
-  it('renders correctly with multiple series', () =>
-    shouldMatchSnapshot(<BarChart data={barChartMultiData} />))
+  it('renders correctly with multiple series', () => shouldMatchSnapshot(<BarChart data={barChartMultiData} />))
 
   it('renders correctly with negative values', () =>
     shouldMatchSnapshot(<BarChart data={barChartPositiveNegativeData} />))

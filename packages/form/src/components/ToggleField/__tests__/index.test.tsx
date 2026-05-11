@@ -27,14 +27,11 @@ describe('toggleField', () => {
   })
 
   it('should render correctly with label and checked', () => {
-    const { asFragment } = renderWithForm(
-      <ToggleField label="test" name="test" />,
-      {
-        defaultValues: {
-          test: true,
-        },
+    const { asFragment } = renderWithForm(<ToggleField label="test" name="test" />, {
+      defaultValues: {
+        test: true,
       },
-    )
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 })

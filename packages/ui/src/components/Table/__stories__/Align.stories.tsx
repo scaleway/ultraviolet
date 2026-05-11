@@ -4,9 +4,7 @@ import { columns, data } from './resources'
 
 import type { StoryFn } from '@storybook/react-vite'
 
-export const Align: StoryFn<typeof Table> = ({ ...props }) => (
-  <Table {...props} />
-)
+export const Align: StoryFn<typeof Table> = ({ ...props }) => <Table {...props} />
 
 Align.args = {
   children: (
@@ -32,8 +30,7 @@ Align.args = {
 Align.parameters = {
   docs: {
     description: {
-      story:
-        'Using `align` prop on `columns` or on `<Table.Cell />` you can easily align the content as you need.',
+      story: 'Using `align` prop on `columns` or on `<Table.Cell />` you can easily align the content as you need.',
     },
   },
 }

@@ -124,9 +124,7 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
    * Default value, must be one of the options
    */
   value?: IsMulti extends true ? string[] : string
-  onChange?: IsMulti extends true
-    ? (value: string[]) => void
-    : (value: string) => void
+  onChange?: IsMulti extends true ? (value: string[]) => void : (value: string) => void
   'data-testid'?: string
   /**
    * In some cases, when the space is limited, you will need to change the `portalTarget` of the dropdown for a higher parent element.
@@ -140,10 +138,7 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
   onOpen?: () => void
   groupError?: Record<string, ReactNode>
   groupEmptyState?: Record<string, ReactNode>
-} & Pick<
-  HTMLAttributes<HTMLDivElement>,
-  'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className' | 'style'
->
+} & Pick<HTMLAttributes<HTMLDivElement>, 'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className' | 'style'>
 /**
  * SelectInput component is used to select one or many elements from a selection.
  */
@@ -200,11 +195,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
 
   const numberOfDisabledOptions = Array.isArray(options)
     ? options.filter(option => option.disabled).length
-    : Object.values(options).reduce(
-        (acc, current) =>
-          acc + current.filter(option => option.disabled).length,
-        0,
-      )
+    : Object.values(options).reduce((acc, current) => acc + current.filter(option => option.disabled).length, 0)
 
   const finalDataTestId = dataTestId ?? `select-input-${name ?? 'name'}`
 
@@ -249,12 +240,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
         >
           <Stack aria-label={ariaLabel} gap={0.5}>
             {label || labelDescription ? (
-              <Label
-                htmlFor={finalId}
-                labelDescription={labelDescription}
-                required={required}
-                size={size}
-              >
+              <Label htmlFor={finalId} labelDescription={labelDescription} required={required} size={size}>
                 {label}
               </Label>
             ) : null}

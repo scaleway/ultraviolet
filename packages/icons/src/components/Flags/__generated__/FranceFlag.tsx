@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const FranceFlag = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const FranceFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="FranceFlag">
     {props.disabled ? (
       <>

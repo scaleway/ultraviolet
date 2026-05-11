@@ -6,9 +6,7 @@ import { InfiniteScroll } from '..'
 
 describe('infiniteScroll', () => {
   it('renders correctly ', () => {
-    const { asFragment } = renderWithTheme(
-      <InfiniteScroll onLoadMore={() => {}} />,
-    )
+    const { asFragment } = renderWithTheme(<InfiniteScroll onLoadMore={() => {}} />)
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -17,10 +15,7 @@ describe('infiniteScroll', () => {
     const onLoadMore = vi.fn()
 
     renderWithTheme(
-      <div
-        data-testid="infinite-scroll-container"
-        style={{ height: '10px', overflowY: 'scroll' }}
-      >
+      <div data-testid="infinite-scroll-container" style={{ height: '10px', overflowY: 'scroll' }}>
         <p>Test</p>
         <p>Test</p>
         <p>Test</p>
@@ -58,10 +53,7 @@ describe('infiniteScroll', () => {
     )
 
     renderWithTheme(
-      <div
-        data-testid="infinite-scroll-container"
-        style={{ height: '10px', overflowY: 'scroll' }}
-      >
+      <div data-testid="infinite-scroll-container" style={{ height: '10px', overflowY: 'scroll' }}>
         <p>Test</p>
         <p>Test</p>
         <p>Test</p>

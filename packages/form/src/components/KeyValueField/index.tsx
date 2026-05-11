@@ -33,10 +33,7 @@ type KeyValuePair = {
   value: string
 }
 
-type KeyValueFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldArrayName extends FieldArrayPath<TFieldValues>,
-> = {
+type KeyValueFieldProps<TFieldValues extends FieldValues, TFieldArrayName extends FieldArrayPath<TFieldValues>> = {
   name: TFieldArrayName
   inputKey: InputKeyProps
   inputValue: InputValueProps
@@ -53,8 +50,7 @@ type KeyValueFieldProps<
  */
 export const KeyValueField = <
   TFieldValues extends FieldValues = FieldValues,
-  TFieldArrayName extends FieldArrayPath<TFieldValues> =
-    FieldArrayPath<TFieldValues>,
+  TFieldArrayName extends FieldArrayPath<TFieldValues> = FieldArrayPath<TFieldValues>,
 >({
   name,
   inputKey,
@@ -82,21 +78,14 @@ export const KeyValueField = <
   }
 
   const canAdd = fields.length !== undefined && fields.length < maxSize
-  const maxSizeReachedTooltip =
-    addButton.maxSizeReachedTooltip ??
-    `Cannot add more than ${maxSize} elements`
+  const maxSizeReachedTooltip = addButton.maxSizeReachedTooltip ?? `Cannot add more than ${maxSize} elements`
 
   return (
     <Stack gap={3}>
       {fields.length > 0 ? (
         <Stack gap={3}>
           {fields.map((field, index) => (
-            <Row
-              alignItems="flex-end"
-              gap={2}
-              key={field.id}
-              templateColumns="1fr 1fr auto"
-            >
+            <Row alignItems="flex-end" gap={2} key={field.id} templateColumns="1fr 1fr auto">
               <TextInputField
                 label={inputKey.label}
                 name={`${name}.${index}.key`}

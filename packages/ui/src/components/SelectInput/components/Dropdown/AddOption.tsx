@@ -21,13 +21,7 @@ export const AddOption = ({
   searchable?: boolean
   isEmpty?: boolean
 }) => {
-  const {
-    setIsDropdownVisible,
-    multiselect,
-    onSearch,
-    searchInput,
-    setSearchInput,
-  } = useSelectInput()
+  const { setIsDropdownVisible, multiselect, onSearch, searchInput, setSearchInput } = useSelectInput()
 
   const handleClickCustomValue = () => {
     const newOption = { label: searchInput, value: searchInput }

@@ -22,8 +22,7 @@ export const Open: StoryFn = props => {
 Open.parameters = {
   docs: {
     description: {
-      story:
-        '`open` prop allow you to control when modal is open instead of using the `disclosure` prop',
+      story: '`open` prop allow you to control when modal is open instead of using the `disclosure` prop',
     },
   },
 }

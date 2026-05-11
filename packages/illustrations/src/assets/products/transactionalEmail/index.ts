@@ -10,9 +10,4 @@ const transactionalEmailKeyvisual = `${BASE_URL}/products/transactionalEmail/tra
 const transactionalEmailOriginal = `${BASE_URL}/products/transactionalEmail/transactional-email-original.webp`
 const transactionalEmailWire = `${BASE_URL}/products/transactionalEmail/transactional-email-wire.svg`
 
-export {
-  transactionalEmailContent,
-  transactionalEmailKeyvisual,
-  transactionalEmailOriginal,
-  transactionalEmailWire,
-}
+export { transactionalEmailContent, transactionalEmailKeyvisual, transactionalEmailOriginal, transactionalEmailWire }

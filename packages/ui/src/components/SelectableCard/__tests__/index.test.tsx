@@ -11,116 +11,66 @@ import { IllustrationExample } from './illustrationTest'
 import type { ComponentProps } from 'react'
 
 describe('selectableCard', () => {
-  const types: TupleUnion<
-    NonNullable<ComponentProps<typeof SelectableCard>['type']>
-  > = ['radio', 'checkbox', 'toggle'] as const
+  const types: TupleUnion<NonNullable<ComponentProps<typeof SelectableCard>['type']>> = [
+    'radio',
+    'checkbox',
+    'toggle',
+  ] as const
 
   for (const type of types) {
     describe(type, () => {
       it('renders correctly with default props', () =>
         shouldMatchSnapshot(
-          <SelectableCard
-            label="test"
-            name="test"
-            onChange={() => {}}
-            value="choice"
-          >
+          <SelectableCard label="test" name="test" onChange={() => {}} value="choice">
             SelectableCard
           </SelectableCard>,
         ))
 
       it('renders correctly with aria label', () =>
         shouldMatchSnapshot(
-          <SelectableCard
-            aria-label="test"
-            name="test"
-            onChange={() => {}}
-            value="choice"
-          >
+          <SelectableCard aria-label="test" name="test" onChange={() => {}} value="choice">
             SelectableCard
           </SelectableCard>,
         ))
 
       it('renders correctly with showTick', () =>
         shouldMatchSnapshot(
-          <SelectableCard
-            aria-label="test"
-            name="test"
-            onChange={() => {}}
-            showTick
-            type={type}
-            value="choice"
-          >
+          <SelectableCard aria-label="test" name="test" onChange={() => {}} showTick type={type} value="choice">
             SelectableCard
           </SelectableCard>,
         ))
 
       it('renders correctly with checked prop', () =>
         shouldMatchSnapshot(
-          <SelectableCard
-            aria-label="test"
-            checked
-            name="test"
-            onChange={() => {}}
-            type={type}
-            value="choice"
-          >
+          <SelectableCard aria-label="test" checked name="test" onChange={() => {}} type={type} value="choice">
             SelectableCard
           </SelectableCard>,
         ))
 
       it('renders correctly with disabled prop', () =>
         shouldMatchSnapshot(
-          <SelectableCard
-            aria-label="test"
-            disabled
-            name="test"
-            onChange={() => {}}
-            type={type}
-            value="choice"
-          >
+          <SelectableCard aria-label="test" disabled name="test" onChange={() => {}} type={type} value="choice">
             SelectableCard
           </SelectableCard>,
         ))
 
       it('renders correctly with isError prop', () =>
         shouldMatchSnapshot(
-          <SelectableCard
-            isError
-            label="test"
-            name="test"
-            onChange={() => {}}
-            type={type}
-            value="choice"
-          >
+          <SelectableCard isError label="test" name="test" onChange={() => {}} type={type} value="choice">
             SelectableCard
           </SelectableCard>,
         ))
 
       it('renders correctly with tooltip prop', () =>
         shouldMatchSnapshot(
-          <SelectableCard
-            label="test"
-            name="test"
-            onChange={() => {}}
-            tooltip="test"
-            type={type}
-            value="choice"
-          >
+          <SelectableCard label="test" name="test" onChange={() => {}} tooltip="test" type={type} value="choice">
             SelectableCard
           </SelectableCard>,
         ))
 
       it('renders correctly with complex children', () =>
         shouldMatchSnapshot(
-          <SelectableCard
-            disabled
-            label="test"
-            name="test"
-            onChange={() => {}}
-            type={type}
-            value="choice"
-          >
+          <SelectableCard disabled label="test" name="test" onChange={() => {}} type={type} value="choice">
             {({ checked, disabled }) => (
               <div
                 style={{
@@ -147,8 +97,8 @@ describe('selectableCard', () => {
             type={type}
             value="label-14"
           >
-            Offer the best experience to your Mac, iPhone and iPad users with
-            VNC, the remote desktop-sharing protocol. Learn more
+            Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol.
+            Learn more
           </SelectableCard>,
         ))
 
@@ -163,8 +113,8 @@ describe('selectableCard', () => {
             type={type}
             value="label-14"
           >
-            Offer the best experience to your Mac, iPhone and iPad users with
-            VNC, the remote desktop-sharing protocol. Learn more
+            Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol.
+            Learn more
           </SelectableCard>,
         ))
 
@@ -179,8 +129,8 @@ describe('selectableCard', () => {
             type={type}
             value="label-14"
           >
-            Offer the best experience to your Mac, iPhone and iPad users with
-            VNC, the remote desktop-sharing protocol. Learn more
+            Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol.
+            Learn more
           </SelectableCard>,
         ))
 
@@ -188,13 +138,7 @@ describe('selectableCard', () => {
         const onChange = vi.fn()
 
         renderWithTheme(
-          <SelectableCard
-            label="test"
-            name="test"
-            onChange={onChange}
-            type={type}
-            value="choice"
-          >
+          <SelectableCard label="test" name="test" onChange={onChange} type={type} value="choice">
             {`${type.charAt(0).toUpperCase() + type.slice(1)} card`}
           </SelectableCard>,
         )
@@ -212,13 +156,7 @@ describe('selectableCard', () => {
         const onChange = vi.fn()
 
         renderWithTheme(
-          <SelectableCard
-            label="test"
-            name="test"
-            onChange={onChange}
-            type={type}
-            value="choice"
-          >
+          <SelectableCard label="test" name="test" onChange={onChange} type={type} value="choice">
             {`${type.charAt(0).toUpperCase() + type.slice(1)} card`}
           </SelectableCard>,
         )
@@ -235,13 +173,7 @@ describe('selectableCard', () => {
         const onChange = vi.fn()
 
         renderWithTheme(
-          <SelectableCard
-            label="labelName"
-            name="test"
-            onChange={onChange}
-            type={type}
-            value="choice"
-          >
+          <SelectableCard label="labelName" name="test" onChange={onChange} type={type} value="choice">
             {`${type.charAt(0).toUpperCase() + type.slice(1)} card`}
           </SelectableCard>,
         )
@@ -262,13 +194,7 @@ describe('selectableCard', () => {
         const onChange = vi.fn()
 
         renderWithTheme(
-          <SelectableCard
-            label="test"
-            name="test"
-            onChange={onChange}
-            type={type}
-            value="choice"
-          >
+          <SelectableCard label="test" name="test" onChange={onChange} type={type} value="choice">
             {`${type.charAt(0).toUpperCase() + type.slice(1)} card`}
           </SelectableCard>,
         )

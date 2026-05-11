@@ -10,9 +10,4 @@ const k8sKapsuleKeyvisual = `${BASE_URL}/products/k8sKapsule/k8s-kapsule-keyvisu
 const k8sKapsuleOriginal = `${BASE_URL}/products/k8sKapsule/k8s-kapsule-original.webp`
 const k8sKapsuleWire = `${BASE_URL}/products/k8sKapsule/k8s-kapsule-wire.svg`
 
-export {
-  k8sKapsuleContent,
-  k8sKapsuleKeyvisual,
-  k8sKapsuleOriginal,
-  k8sKapsuleWire,
-}
+export { k8sKapsuleContent, k8sKapsuleKeyvisual, k8sKapsuleOriginal, k8sKapsuleWire }

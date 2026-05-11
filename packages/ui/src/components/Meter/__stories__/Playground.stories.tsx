@@ -27,18 +27,8 @@ export const Playground: StoryFn<typeof Meter> = args => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <TextInput
-        label="Password"
-        name="basic"
-        onChangeValue={setPassword}
-        value={password}
-      />
-      <Meter
-        {...args}
-        strength={strength}
-        title="Password Strength"
-        value={value}
-      />
+      <TextInput label="Password" name="basic" onChangeValue={setPassword} value={password} />
+      <Meter {...args} strength={strength} title="Password Strength" value={value} />
     </div>
   )
 }

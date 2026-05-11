@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const ComputeOptimizedInstancesProductIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const ComputeOptimizedInstancesProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="ComputeOptimizedInstancesProductIcon">
     <g clipPath="url(#clip0_791_2095)">
       <path

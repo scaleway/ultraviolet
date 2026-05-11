@@ -64,11 +64,7 @@ export const OnChange: StoryFn<typeof SelectInput> = args => {
           value={values}
         />
         Selected values:
-        <ul>
-          {values.length > 0
-            ? values.map(val => <li key={val}>{val}</li>)
-            : null}
-        </ul>
+        <ul>{values.length > 0 ? values.map(val => <li key={val}>{val}</li>) : null}</ul>
       </Stack>
       <SelectInput
         {...args}
@@ -96,8 +92,7 @@ OnChange.args = {
 OnChange.parameters = {
   docs: {
     description: {
-      story:
-        'You can pass a function to `OnChange` to deal with selection of options.',
+      story: 'You can pass a function to `OnChange` to deal with selection of options.',
     },
   },
 }

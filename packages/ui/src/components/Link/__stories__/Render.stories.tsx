@@ -6,14 +6,13 @@ import { Stack } from '../../Stack'
 import type { Decorator, StoryFn } from '@storybook/react-vite'
 
 // Mock component simulating Next.js Link (must spread props and forward ref)
-const MockNextLink = forwardRef<
-  HTMLAnchorElement,
-  React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }
->(({ href, children, ...props }, ref) => (
-  <a href={href} ref={ref} {...props}>
-    {children}
-  </a>
-))
+const MockNextLink = forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }>(
+  ({ href, children, ...props }, ref) => (
+    <a href={href} ref={ref} {...props}>
+      {children}
+    </a>
+  ),
+)
 MockNextLink.displayName = 'MockNextLink'
 
 export const Render: StoryFn<typeof Link> = () => (
@@ -26,21 +25,14 @@ export const Render: StoryFn<typeof Link> = () => (
       <Link render={<MockNextLink href="/about" />} sentiment="info">
         Info Link
       </Link>
-      <Link
-        render={<MockNextLink href="/about" />}
-        sentiment="primary"
-        size="small"
-      >
+      <Link render={<MockNextLink href="/about" />} sentiment="primary" size="small">
         Small Link
       </Link>
     </Stack>
 
     <Stack direction="column" gap={1}>
       <strong>Function form (you control prop merging):</strong>
-      <Link
-        render={props => <MockNextLink {...props} href="/about" />}
-        sentiment="primary"
-      >
+      <Link render={props => <MockNextLink {...props} href="/about" />} sentiment="primary">
         Primary Link (function)
       </Link>
     </Stack>

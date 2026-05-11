@@ -3,9 +3,7 @@ import { SwitchButtonField } from '..'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
-export const Template: StoryFn<
-  ComponentProps<typeof SwitchButtonField>
-> = args => (
+export const Template: StoryFn<ComponentProps<typeof SwitchButtonField>> = args => (
   <SwitchButtonField {...args}>
     <SwitchButtonField.Option value="left">Left</SwitchButtonField.Option>
     <SwitchButtonField.Option value="center">Center</SwitchButtonField.Option>

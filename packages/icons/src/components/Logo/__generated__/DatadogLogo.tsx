@@ -9,9 +9,7 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const DatadogLogo = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const DatadogLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="DatadogLogo">
     <g transform="scale(0.35714285714285715)">
       <path

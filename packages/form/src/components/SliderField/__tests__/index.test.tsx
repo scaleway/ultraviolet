@@ -24,23 +24,17 @@ describe('sliderField', () => {
   })
 
   it('should render correctly with possible values', () => {
-    const { asFragment } = renderWithForm(
-      <SliderField name="test" options={options} />,
-    )
+    const { asFragment } = renderWithForm(<SliderField name="test" options={options} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly with possible values and double', () => {
-    const { asFragment } = renderWithForm(
-      <SliderField double name="test" options={options} />,
-    )
+    const { asFragment } = renderWithForm(<SliderField double name="test" options={options} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly disabled', () => {
-    const { asFragment } = renderWithForm(
-      <SliderField aria-label="Slider Input" disabled name="test" value={10} />,
-    )
+    const { asFragment } = renderWithForm(<SliderField aria-label="Slider Input" disabled name="test" value={10} />)
     const input = screen.getAllByLabelText('Slider Input')[1]
     expect(input).toBeDisabled()
 
@@ -52,16 +46,7 @@ describe('sliderField', () => {
     const onBlur = vi.fn(() => {})
 
     const { asFragment } = renderWithForm(
-      <SliderField
-        input
-        label="Test"
-        max={10}
-        min={0}
-        name="test"
-        onBlur={onBlur}
-        onFocus={onFocus}
-        required
-      />,
+      <SliderField input label="Test" max={10} min={0} name="test" onBlur={onBlur} onFocus={onFocus} required />,
     )
     const input = screen.getByRole('slider', { hidden: true })
     act(() => input.focus())
@@ -91,15 +76,7 @@ describe('sliderField', () => {
           onSubmit(value)
         }}
       >
-        <SliderField
-          input
-          label="Test"
-          max={10}
-          min={0}
-          name="test"
-          onBlur={onBlur}
-          required
-        />
+        <SliderField input label="Test" max={10} min={0} name="test" onBlur={onBlur} required />
         <Submit>Submit</Submit>
       </Form>,
     )
@@ -122,11 +99,7 @@ describe('sliderField', () => {
     const { result } = renderHook(() => useForm({ mode: 'onChange' }))
 
     renderWithTheme(
-      <Form
-        errors={mockFormErrors}
-        methods={result.current}
-        onSubmit={() => {}}
-      >
+      <Form errors={mockFormErrors} methods={result.current} onSubmit={() => {}}>
         <SliderField label="Test" name="test" options={options} />
       </Form>,
     )
@@ -146,11 +119,7 @@ describe('sliderField', () => {
     const { result } = renderHook(() => useForm({ mode: 'onChange' }))
 
     renderWithTheme(
-      <Form
-        errors={mockFormErrors}
-        methods={result.current}
-        onSubmit={() => {}}
-      >
+      <Form errors={mockFormErrors} methods={result.current} onSubmit={() => {}}>
         <SliderField double label="Test" name="test" options={options} />
       </Form>,
     )

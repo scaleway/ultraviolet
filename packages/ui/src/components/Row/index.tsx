@@ -11,24 +11,17 @@ import type { UltravioletUITheme } from '../../theme'
 import type { AlignItemsType, JustifyContentType } from './styles.css'
 import type { CSSProperties, ReactNode } from 'react'
 
-type ResponsiveProp<T> =
-  | T
-  | Partial<Record<keyof UltravioletUITheme['breakpoints'], T>>
+type ResponsiveProp<T> = T | Partial<Record<keyof UltravioletUITheme['breakpoints'], T>>
 
 // convert union type string into same union type in number
-type ToNumber<T extends string> = T extends `${infer N extends number}`
-  ? N
-  : never
+type ToNumber<T extends string> = T extends `${infer N extends number}` ? N : never
 
 type RowProps = {
   className?: string
   'data-testid'?: string
   children: ReactNode
   templateColumns: ResponsiveProp<string>
-  gap?: ResponsiveProp<
-    | keyof UltravioletUITheme['space']
-    | ToNumber<keyof UltravioletUITheme['space']>
-  >
+  gap?: ResponsiveProp<keyof UltravioletUITheme['space'] | ToNumber<keyof UltravioletUITheme['space']>>
   alignItems?: ResponsiveProp<AlignItemsType>
   justifyContent?: ResponsiveProp<JustifyContentType>
   padding?: ResponsiveProp<CSSProperties['padding']>
@@ -41,8 +34,7 @@ const mapRepsonsiveGap = (
   object?: Partial<
     Record<
       keyof typeof consoleLightTheme.breakpoints,
-      | keyof typeof consoleLightTheme.space
-      | ToNumber<keyof typeof consoleLightTheme.space>
+      keyof typeof consoleLightTheme.space | ToNumber<keyof typeof consoleLightTheme.space>
     >
   >,
 ) =>
@@ -50,12 +42,7 @@ const mapRepsonsiveGap = (
     ? Object.keys(object).reduce(
         (acc, key) => ({
           ...acc,
-          [key]:
-            consoleLightTheme.space[
-              object[
-                key as keyof typeof object
-              ] as keyof typeof consoleLightTheme.space
-            ],
+          [key]: consoleLightTheme.space[object[key as keyof typeof object] as keyof typeof consoleLightTheme.space],
         }),
         {},
       )
@@ -80,16 +67,10 @@ export const Row = ({
       className,
       rowStyle.row,
       sprinkles({
-        alignItems:
-          typeof alignItems === 'object' ? alignItems : { xxsmall: alignItems },
+        alignItems: typeof alignItems === 'object' ? alignItems : { xxsmall: alignItems },
         gap:
-          typeof gap === 'object'
-            ? mapRepsonsiveGap(gap)
-            : { xxsmall: gap ? consoleLightTheme.space[gap] : undefined },
-        justifyContent:
-          typeof justifyContent === 'object'
-            ? justifyContent
-            : { xxsmall: justifyContent },
+          typeof gap === 'object' ? mapRepsonsiveGap(gap) : { xxsmall: gap ? consoleLightTheme.space[gap] : undefined },
+        justifyContent: typeof justifyContent === 'object' ? justifyContent : { xxsmall: justifyContent },
       }),
     )}
     data-testid={dataTestId}
@@ -109,9 +90,7 @@ export const Row = ({
           (acc, localPadding) => ({
             ...acc,
             [paddings[localPadding as keyof typeof padding]]:
-              typeof padding === 'object'
-                ? padding[localPadding as keyof typeof templateColumns] || ''
-                : padding,
+              typeof padding === 'object' ? padding[localPadding as keyof typeof templateColumns] || '' : padding,
           }),
           {},
         ),

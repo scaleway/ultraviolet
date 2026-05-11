@@ -11,9 +11,8 @@ export const Directions: StoryFn = args => (
       linkText="Learn more"
       title="Apply to Scaleway Startup programs"
     >
-      The Scaleway Startup programs offer the perfect combination of cloud
-      credits, infrastructure advisors and startup experts to develop your
-      business and limit your expenses.
+      The Scaleway Startup programs offer the perfect combination of cloud credits, infrastructure advisors and startup
+      experts to develop your business and limit your expenses.
     </Banner>
     <Banner
       {...args}
@@ -22,9 +21,8 @@ export const Directions: StoryFn = args => (
       linkText="Learn more"
       title="Apply to Scaleway Startup programs"
     >
-      The Scaleway Startup programs offer the perfect combination of cloud
-      credits, infrastructure advisors and startup experts to develop your
-      business and limit your expenses.
+      The Scaleway Startup programs offer the perfect combination of cloud credits, infrastructure advisors and startup
+      experts to develop your business and limit your expenses.
     </Banner>
   </>
 )
@@ -32,8 +30,7 @@ export const Directions: StoryFn = args => (
 Directions.parameters = {
   docs: {
     description: {
-      story:
-        'You can define the direction of the Banner using the `direction` property.',
+      story: 'You can define the direction of the Banner using the `direction` property.',
     },
   },
 }

@@ -39,8 +39,7 @@ export const Direction: StoryFn = props => (
 Direction.parameters = {
   docs: {
     description: {
-      story:
-        'prop `direction` allows the stack to behave as a column (default) or a row',
+      story: 'prop `direction` allows the stack to behave as a column (default) or a row',
     },
   },
 }

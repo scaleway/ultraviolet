@@ -9,8 +9,7 @@ import type { Meta } from '@storybook/react-vite'
 export default {
   component: SelectableCardOptionGroupField,
   subcomponents: {
-    'SelectableCardOptionGroupField.Option':
-      SelectableCardOptionGroupField.Option,
+    'SelectableCardOptionGroupField.Option': SelectableCardOptionGroupField.Option,
   },
   decorators: [
     ChildStory => {

@@ -1,11 +1,5 @@
 export const IllustrationExample = () => (
-  <svg
-    fill="none"
-    height="550"
-    viewBox="0 0 550 550"
-    width="550"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg fill="none" height="550" viewBox="0 0 550 550" width="550" xmlns="http://www.w3.org/2000/svg">
     <title>illustration</title>
     <path
       clipRule="evenodd"

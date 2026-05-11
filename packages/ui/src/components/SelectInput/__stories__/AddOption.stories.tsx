@@ -47,9 +47,7 @@ export const AddOption: StoryFn<typeof SelectInput> = args => {
   const onChangeGrouped = (value: string) => {
     if (
       '' in addOptionDataGrouped &&
-      !(addOptionDataGrouped[''] as { value: string }[]).some(
-        (data: { value: string }) => data.value === value,
-      )
+      !(addOptionDataGrouped[''] as { value: string }[]).some((data: { value: string }) => data.value === value)
     ) {
       setDataGrouped(dataGrouped)
       setValueGrouped(value)
@@ -64,9 +62,7 @@ export const AddOption: StoryFn<typeof SelectInput> = args => {
   }
   const onChangeMulti = (value: string[]) => {
     const newDataMulti = addOptionDataMulti.filter(
-      data =>
-        value.includes(data.value) ||
-        dataUnGrouped.some(val => val.value === data.value),
+      data => value.includes(data.value) || dataUnGrouped.some(val => val.value === data.value),
     )
 
     setDataMulti(newDataMulti)

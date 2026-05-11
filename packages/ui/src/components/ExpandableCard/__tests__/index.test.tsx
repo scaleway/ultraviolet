@@ -8,9 +8,7 @@ import { Text } from '../../Text'
 
 describe('expandableCard', () => {
   it('renders correctly with default values', () => {
-    const { asFragment } = renderWithTheme(
-      <ExpandableCard header="Title">Content</ExpandableCard>,
-    )
+    const { asFragment } = renderWithTheme(<ExpandableCard header="Title">Content</ExpandableCard>)
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -103,12 +101,7 @@ describe('expandableCard', () => {
   it('works properly when controlled and open with key interaction', async () => {
     const onToggleExpand = vi.fn()
     renderWithTheme(
-      <ExpandableCard
-        data-testid="expandablecard"
-        expanded={false}
-        header="Title"
-        onToggleExpand={onToggleExpand}
-      >
+      <ExpandableCard data-testid="expandablecard" expanded={false} header="Title" onToggleExpand={onToggleExpand}>
         Content
       </ExpandableCard>,
     )

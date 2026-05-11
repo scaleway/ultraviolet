@@ -29,8 +29,7 @@ pnpm test:unit`,
 LongMultilineExpanded.parameters = {
   docs: {
     description: {
-      story:
-        'Using the prop `initiallyExpanded` you can set the snippet to be expanded by default.',
+      story: 'Using the prop `initiallyExpanded` you can set the snippet to be expanded by default.',
     },
   },
 }

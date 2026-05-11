@@ -2,12 +2,7 @@ import { useState } from 'react'
 
 import { OptionSelector } from '..'
 import { Stack } from '../../../components/Stack'
-import {
-  firstSelectorOptions,
-  franceOptions,
-  netherlandsOptions,
-  polandOptions,
-} from '../__mock__/resources'
+import { firstSelectorOptions, franceOptions, netherlandsOptions, polandOptions } from '../__mock__/resources'
 
 import type { ValueType } from '../__mock__/resources'
 import type { SelectorOption } from '../types'
@@ -66,25 +61,16 @@ export const Error: StoryFn<ComponentProps<typeof OptionSelector>> = props => {
       <OptionSelector
         {...props}
         firstSelector={{
-          error:
-            valueFirstExample.first === 'fr'
-              ? 'France cannot be selected'
-              : false,
+          error: valueFirstExample.first === 'fr' ? 'France cannot be selected' : false,
           label: 'Region',
           options: firstSelectorOptions,
         }}
         onChange={onChangeErrorRegion}
         secondSelector={{
-          helper:
-            valueFirstExample.second === 'fr'
-              ? 'Disabled because the first selector has an error'
-              : '',
+          helper: valueFirstExample.second === 'fr' ? 'Disabled because the first selector has an error' : '',
           label: 'Zone',
           options: zone,
-          tooltip:
-            valueFirstExample.first === 'fr'
-              ? 'Select a valid region'
-              : undefined,
+          tooltip: valueFirstExample.first === 'fr' ? 'Select a valid region' : undefined,
         }}
         value={valueFirstExample}
       />
@@ -96,10 +82,7 @@ export const Error: StoryFn<ComponentProps<typeof OptionSelector>> = props => {
         }}
         onChange={onChangeErrorZone}
         secondSelector={{
-          error:
-            valueSecondExample.second === zone2[0].value
-              ? 'Cannot select this zone'
-              : '',
+          error: valueSecondExample.second === zone2[0].value ? 'Cannot select this zone' : '',
           label: 'Zone',
           options: zone2,
         }}

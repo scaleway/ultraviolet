@@ -12,8 +12,5 @@ export const getLegendColor = (theme: typeof UVTheme): string[] => {
 
       return 1
     })
-    .map(
-      key =>
-        colors.other.data.charts[key as keyof typeof colors.other.data.charts],
-    )
+    .map(key => colors.other.data.charts[key as keyof typeof colors.other.data.charts])
 }

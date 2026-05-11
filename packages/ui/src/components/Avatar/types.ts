@@ -2,21 +2,9 @@ import type { SENTIMENTS, sizes } from './constants'
 import type { CSSProperties, MouseEvent, ReactNode } from 'react'
 
 // This type defines an array of string that should have a length of 0, 1, or 2
-export type Colors =
-  | []
-  | [string]
-  | [string, string]
-  | readonly [string, string]
-  | readonly [string]
-  | readonly []
+export type Colors = [] | [string] | [string, string] | readonly [string, string] | readonly [string] | readonly []
 
-export type SentimentColors =
-  | 'primary'
-  | 'neutral'
-  | 'success'
-  | 'danger'
-  | 'warning'
-  | 'info'
+export type SentimentColors = 'primary' | 'neutral' | 'success' | 'danger' | 'warning' | 'info'
 
 export type Shape = 'circle' | 'square'
 
@@ -81,5 +69,4 @@ type VariantColors = {
   children?: never
 }
 
-export type AvatarProps = CommonProps &
-  (VariantImage | VariantIcon | VariantText | VariantColors | VariantUser)
+export type AvatarProps = CommonProps & (VariantImage | VariantIcon | VariantText | VariantColors | VariantUser)

@@ -21,11 +21,7 @@ export const mergeProps = (parentProps: Props, childProps: Props): Props => {
     const childValue = childProps[key]
 
     // Merge className
-    if (
-      key === 'className' &&
-      typeof parentValue === 'string' &&
-      typeof childValue === 'string'
-    ) {
+    if (key === 'className' && typeof parentValue === 'string' && typeof childValue === 'string') {
       merged[key] = `${parentValue} ${childValue}`
     }
     // Merge style
@@ -42,9 +38,7 @@ export const mergeProps = (parentProps: Props, childProps: Props): Props => {
  * - A React element: `render={<NextLink href="/about" />}`
  * - A function receiving props: `render={(props) => <NextLink {...props} href="/about" />}`
  */
-export type RenderProp<P = HTMLAttributes<HTMLElement>> =
-  | ReactElement
-  | ((props: P) => ReactElement)
+export type RenderProp<P = HTMLAttributes<HTMLElement>> = ReactElement | ((props: P) => ReactElement)
 
 /**
  * Renders a custom element with merged props.

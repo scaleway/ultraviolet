@@ -14,8 +14,7 @@ type SelectableCardGroupProps = ComponentProps<typeof SelectableCardGroup>
 type SelectableCardGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<SelectableCardGroupProps, 'name' | 'onChange' | 'value'>
+> = BaseFieldProps<TFieldValues, TFieldName> & Omit<SelectableCardGroupProps, 'name' | 'onChange' | 'value'>
 
 const SelectableCardGroupFieldComponent = <
   TFieldValues extends FieldValues,
@@ -59,23 +58,14 @@ const SelectableCardGroupFieldComponent = <
         if (type === 'checkbox') {
           const fieldValue = (field.value ?? []) as string[]
           if (fieldValue?.includes(event.currentTarget.value)) {
-            field.onChange(
-              fieldValue?.filter(
-                currentValue => currentValue !== event.currentTarget.value,
-              ),
-            )
+            field.onChange(fieldValue?.filter(currentValue => currentValue !== event.currentTarget.value))
           } else {
             field.onChange([...fieldValue, event.currentTarget.value])
           }
         } else {
           field.onChange(event)
         }
-        onChange?.(
-          event.currentTarget.value as PathValue<
-            TFieldValues,
-            Path<TFieldValues>
-          >,
-        )
+        onChange?.(event.currentTarget.value as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       required={required}
       type={type}
@@ -88,7 +78,6 @@ type SelectableCardGroupFieldType = typeof SelectableCardGroupFieldComponent & {
   Card: typeof SelectableCardGroup.Card
 }
 
-export const SelectableCardGroupField: SelectableCardGroupFieldType =
-  Object.assign(SelectableCardGroupFieldComponent, {
-    Card: SelectableCardGroup.Card,
-  })
+export const SelectableCardGroupField: SelectableCardGroupFieldType = Object.assign(SelectableCardGroupFieldComponent, {
+  Card: SelectableCardGroup.Card,
+})

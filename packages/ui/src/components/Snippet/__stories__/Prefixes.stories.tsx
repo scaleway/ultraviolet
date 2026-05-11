@@ -8,9 +8,7 @@ pnpm install
 pnpm start`
 
 export const Prefixes = (props: ComponentProps<typeof Snippet>) =>
-  (['command', 'lines'] as const).map(suffix => (
-    <Snippet key={suffix} {...props} prefix={suffix} />
-  ))
+  (['command', 'lines'] as const).map(suffix => <Snippet key={suffix} {...props} prefix={suffix} />)
 
 Prefixes.args = {
   children: VALUE,

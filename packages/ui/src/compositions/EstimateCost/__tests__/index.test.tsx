@@ -1,8 +1,5 @@
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import {
-  resetIntersectionMocking,
-  setupIntersectionMocking,
-} from 'react-intersection-observer/test-utils'
+import { resetIntersectionMocking, setupIntersectionMocking } from 'react-intersection-observer/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { EstimateCost } from '..'
@@ -89,12 +86,7 @@ describe('estimateCost - index', () => {
   it('render with item discount 50% and text', () =>
     shouldMatchSnapshot(
       <EstimateCost>
-        <EstimateCost.Item
-          discount={0.5}
-          discountText="Nice discount"
-          label="Test"
-          monthlyPrice={99}
-        >
+        <EstimateCost.Item discount={0.5} discountText="Nice discount" label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
@@ -111,9 +103,7 @@ describe('estimateCost - index', () => {
 
   it('render with all timeUnits values', () =>
     shouldMatchSnapshot(
-      <EstimateCost
-        timeUnits={['seconds', 'minutes', 'hours', 'days', 'months']}
-      >
+      <EstimateCost timeUnits={['seconds', 'minutes', 'hours', 'days', 'months']}>
         <EstimateCost.Item label="Test">
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
@@ -238,12 +228,7 @@ describe('estimateCost - index', () => {
 
   it('render compact', () =>
     shouldMatchSnapshot(
-      <EstimateCost
-        compact
-        defaultTimeUnit="months"
-        discount={0}
-        backgroundProminence="strong"
-      >
+      <EstimateCost compact defaultTimeUnit="months" discount={0} backgroundProminence="strong">
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>

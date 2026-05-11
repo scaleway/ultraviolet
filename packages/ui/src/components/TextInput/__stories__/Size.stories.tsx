@@ -11,11 +11,7 @@ export const Size: StoryFn<typeof TextInput> = args => {
 
   return (
     <Stack gap="2">
-      {(
-        Object.keys(
-          TEXTINPUT_SIZE_HEIGHT,
-        ) as (keyof typeof TEXTINPUT_SIZE_HEIGHT)[]
-      ).map(size => (
+      {(Object.keys(TEXTINPUT_SIZE_HEIGHT) as (keyof typeof TEXTINPUT_SIZE_HEIGHT)[]).map(size => (
         <TextInput
           key={size}
           {...args}

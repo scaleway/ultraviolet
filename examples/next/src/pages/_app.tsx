@@ -1,8 +1,4 @@
-import {
-  consoleDarkTheme,
-  consoleLightTheme,
-  ThemeProvider,
-} from '@ultraviolet/themes'
+import { consoleDarkTheme, consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import { extendTheme, Stack } from '@ultraviolet/ui'
 import { useCallback, useLayoutEffect, useState } from 'react'
 
@@ -69,12 +65,8 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   useLayoutEffect(() => {
     if (typeof window !== 'undefined') {
-      const matchtTheme = window.matchMedia('(prefers-color-scheme: dark)')
-        .matches
-        ? 'dark'
-        : 'light'
-      const storageTheme =
-        (localStorage.getItem(themeKey) as 'light' | 'dark') ?? matchtTheme
+      const matchtTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      const storageTheme = (localStorage.getItem(themeKey) as 'light' | 'dark') ?? matchtTheme
       if (storageTheme) {
         setTheme(storageTheme)
       }

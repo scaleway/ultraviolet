@@ -25,19 +25,10 @@ type ShowAllProp = {
 }
 
 export const ShowHide = memo(
-  ({
-    showContent,
-    hideContent,
-    onShowHide,
-    tooltip,
-    'data-testid': dataTestId,
-    style,
-  }: ShowAllProp) => {
+  ({ showContent, hideContent, onShowHide, tooltip, 'data-testid': dataTestId, style }: ShowAllProp) => {
     const context = useNavigation()
     if (!context) {
-      throw new Error(
-        'Navigation.ShowAll can only be used inside a NavigationProvider.',
-      )
+      throw new Error('Navigation.ShowAll can only be used inside a NavigationProvider.')
     }
     const { expanded, animation, showHide } = context
 
@@ -72,12 +63,7 @@ export const ShowHide = memo(
 
     // When the navigation is collapsed
     return (
-      <Stack
-        alignItems="start"
-        className={navigationStyle.showHideStack()}
-        justifyContent="flex-end"
-        style={style}
-      >
+      <Stack alignItems="start" className={navigationStyle.showHideStack()} justifyContent="flex-end" style={style}>
         <Button
           data-testid={dataTestId}
           onClick={onClick}

@@ -8,10 +8,7 @@ import { ToggleGroupContext } from './Context'
 
 import type { ComponentProps } from 'react'
 
-type ToggleGroupToggleProps = Omit<
-  ComponentProps<typeof Toggle>,
-  'onChange' | 'checked' | 'required'
-> & {
+type ToggleGroupToggleProps = Omit<ComponentProps<typeof Toggle>, 'onChange' | 'checked' | 'required'> & {
   value: string
 }
 

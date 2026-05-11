@@ -2,15 +2,7 @@
 
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn } from '@ultraviolet/utils'
-import {
-  Children,
-  isValidElement,
-  memo,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-} from 'react'
+import { Children, isValidElement, memo, useContext, useEffect, useMemo, useRef } from 'react'
 
 import { Stack } from '../../../../components/Stack'
 import { Tooltip } from '../../../../components/Tooltip'
@@ -25,13 +17,7 @@ import { ItemContext } from './ItemProvider'
 
 import type { Badge } from '../../../../components/Badge'
 import type { ItemType, PinUnPinType } from '../../types'
-import type {
-  ComponentProps,
-  CSSProperties,
-  DragEvent,
-  ElementType,
-  ReactNode,
-} from 'react'
+import type { ComponentProps, CSSProperties, DragEvent, ElementType, ReactNode } from 'react'
 
 type LinkProps = {
   to: string
@@ -154,22 +140,12 @@ export const Item = memo(
   }: ItemProps) => {
     const context = useNavigation()
     if (!context) {
-      throw new Error(
-        'Navigation.Item can only be used inside a NavigationProvider.',
-      )
+      throw new Error('Navigation.Item can only be used inside a NavigationProvider.')
     }
 
     const hasParents = !!useContext(ItemContext)
 
-    const {
-      expanded,
-      locales,
-      pinnedFeature,
-      pinnedItems,
-      pinLimit,
-      registerItem,
-      showHide,
-    } = context
+    const { expanded, locales, pinnedFeature, pinnedItems, pinLimit, registerItem, showHide } = context
 
     const makeRegisterRef = useRef<() => void>(null)
 
@@ -188,8 +164,7 @@ export const Item = memo(
     }, [type, pinnedFeature, active, id, label, registerItem])
 
     const hasHrefAndNoChildren = href && !children
-    const hasPinnedFeatureAndNoChildren =
-      pinnedFeature && !children && !noPinButton
+    const hasPinnedFeatureAndNoChildren = pinnedFeature && !children && !noPinButton
     const isItemPinned = pinnedItems.includes(id)
     const shouldShowPinnedButton = useMemo(() => {
       if (href || disabled) {
@@ -379,12 +354,7 @@ export const Item = memo(
     if (!hasParents && href) {
       return (
         <Tooltip placement="right" text={label}>
-          <Stack
-            alignItems="center"
-            data-flip-id={categoryIcon ? id : undefined}
-            gap={1}
-            justifyContent="flex-start"
-          >
+          <Stack alignItems="center" data-flip-id={categoryIcon ? id : undefined} gap={1} justifyContent="flex-start">
             <Stack
               alignItems="center"
               as={containerTag}

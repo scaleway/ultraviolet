@@ -50,11 +50,7 @@ export const EstimateCost = ({
   onTotalPriceChange,
   backgroundProminence = 'default',
 }: EstimateCostProps) => (
-  <EstimateCostProvider
-    currency={currency}
-    locales={locales}
-    numberLocales={numberLocales}
-  >
+  <EstimateCostProvider currency={currency} locales={locales} numberLocales={numberLocales}>
     <EstimateCostContent
       alert={alert}
       alertTitle={alertTitle}

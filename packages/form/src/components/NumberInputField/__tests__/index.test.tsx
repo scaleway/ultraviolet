@@ -9,20 +9,13 @@ import { Form } from '../../Form'
 
 describe('numberInputField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(
-      <NumberInputField name="test" value={0} />,
-    )
+    const { asFragment } = renderWithForm(<NumberInputField name="test" value={0} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
-      <NumberInputField
-        aria-label="Number Input"
-        disabled
-        name="test"
-        value={10}
-      />,
+      <NumberInputField aria-label="Number Input" disabled name="test" value={10} />,
     )
     const input = screen.getByLabelText('Number Input')
     expect(input).toBeDisabled()

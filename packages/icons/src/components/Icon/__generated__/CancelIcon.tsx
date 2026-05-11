@@ -9,12 +9,9 @@ import { Icon } from '../Icon'
 
 import type { IconProps } from '../Icon'
 
-export const CancelIcon = ({
-  ...props
-}: Omit<IconProps, 'children' | 'title'>) => (
+export const CancelIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="CancelIcon">
-    {typeof props.size === 'string' &&
-    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
+    {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="m5.965 4.904 9.131 9.131a6.5 6.5 0 0 0-9.131-9.131m8.07 10.192L4.904 5.965a6.5 6.5 0 0 0 9.131 9.131M4.343 4.343a8 8 0 1 1 11.314 11.314A8 8 0 0 1 4.343 4.343"
         clipRule="evenodd"

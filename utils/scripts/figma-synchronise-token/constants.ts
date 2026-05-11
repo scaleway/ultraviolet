@@ -1,5 +1,4 @@
-export const TOKENS_URL =
-  'https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json'
+export const TOKENS_URL = 'https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json'
 
 export const header = `
 /**

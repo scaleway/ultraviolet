@@ -30,10 +30,8 @@ describe('carousel', () => {
       </Carousel>,
     )
 
-    const scrollbarBefore =
-      screen.getByTestId<HTMLInputElement>('scrollbar-before')
-    const scrollbarAfter =
-      screen.getByTestId<HTMLInputElement>('scrollbar-after')
+    const scrollbarBefore = screen.getByTestId<HTMLInputElement>('scrollbar-before')
+    const scrollbarAfter = screen.getByTestId<HTMLInputElement>('scrollbar-after')
     await userEvent.hover(scrollbarBefore)
     await userEvent.hover(scrollbarAfter)
   })

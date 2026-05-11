@@ -41,19 +41,14 @@ const showContent = (
     </Badge>
   </>
 )
-const onClickPinUnpin: ComponentProps<
-  typeof Navigation.Item
->['onClickPinUnpin'] = ({ totalPinned }) => {
+const onClickPinUnpin: ComponentProps<typeof Navigation.Item>['onClickPinUnpin'] = ({ totalPinned }) => {
   console.log('total pinned items:', totalPinned)
 }
 export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
   const navigationExpanded = localStorage.getItem('expanded') === 'true'
   const navigationWidth = Number(localStorage.getItem('width')) || undefined
   const storageItems = localStorage.getItem('pinnedItems')
-  const pinnedItems = useMemo(
-    () => (storageItems ? storageItems.split(',') : []),
-    [storageItems],
-  )
+  const pinnedItems = useMemo(() => (storageItems ? storageItems.split(',') : []), [storageItems])
   const [showHide, setShowHide] = useState<'show' | 'hide'>('hide')
 
   const onShowHide = (newValue: typeof showHide) => setShowHide(newValue)
@@ -61,9 +56,7 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
   const [pinnedItemsExpanded, setPinnedItemsExpanded] = useState(false)
 
   const saveExpandedInLocalStorage = useCallback((localExpanded: boolean) => {
-    console.log(
-      `expanded state with value ${localExpanded} saved in local storage`,
-    )
+    console.log(`expanded state with value ${localExpanded} saved in local storage`)
     localStorage.setItem('expanded', localExpanded.toString())
   }, [])
 
@@ -97,21 +90,10 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
         <Navigation
           {...props}
           logo={
-            <a
-              aria-label="logo"
-              href="https://scaleway.com"
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a aria-label="logo" href="https://scaleway.com" rel="noreferrer" target="_blank">
               <Stack direction="row" gap={1}>
                 <img alt="" width="16px" src={logoSmall} />
-                <img
-                  alt=""
-                  className={logoStyle()}
-                  height="22px"
-                  src={logo}
-                  width="auto"
-                />
+                <img alt="" className={logoStyle()} height="22px" src={logo} width="auto" />
               </Stack>
             </a>
           }
@@ -121,9 +103,7 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
           <Navigation.Item
             active={active === 'Organization Dashboard'}
             alwaysVisible
-            categoryIcon={
-              <OrganizationDashboardCategoryIcon variant="neutral" />
-            }
+            categoryIcon={<OrganizationDashboardCategoryIcon variant="neutral" />}
             id="organization-dashboard"
             label="Organization Dashboard"
             noPinButton
@@ -295,11 +275,7 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 onToggle={() => setActive('VPC')}
               />
             </Navigation.Item>
-            <Navigation.Item
-              categoryIcon={<DatabaseCategoryIcon variant="primary" />}
-              id="database"
-              label="Database"
-            >
+            <Navigation.Item categoryIcon={<DatabaseCategoryIcon variant="primary" />} id="database" label="Database">
               <Navigation.Item
                 active={active === 'Managed Database'}
                 id="managed-database"
@@ -349,11 +325,7 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 onToggle={() => setActive('Alerts')}
               />
             </Navigation.Item>
-            <Navigation.Item
-              categoryIcon={<SecurityCategoryIcon variant="primary" />}
-              id="security"
-              label="Security"
-            >
+            <Navigation.Item categoryIcon={<SecurityCategoryIcon variant="primary" />} id="security" label="Security">
               <Navigation.Item
                 active={active === 'Firewall'}
                 id="firewall"
@@ -384,12 +356,7 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
             tooltip={showHide === 'hide' ? 'Click to show' : 'Hide content'}
           />
           <Navigation.Separator />
-          <Navigation.Item
-            alwaysVisible
-            id="quick-links"
-            label="Quick Links"
-            noExpand
-          >
+          <Navigation.Item alwaysVisible id="quick-links" label="Quick Links" noExpand>
             <Navigation.Item
               active={active === 'Support'}
               alwaysVisible
@@ -444,92 +411,58 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
           padding: '16px',
         }}
       >
-        <img
-          alt="logo"
-          height="256px"
-          src="https://via.placeholder.com/256"
-          width="256px"
-        />
+        <img alt="logo" height="256px" src="https://via.placeholder.com/256" width="256px" />
         <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor
-          aliquam dui, a laoreet ante faucibus a. In accumsan pharetra dui, a
-          lobortis eros suscipit ut. In dapibus quam et massa commodo tincidunt.
-          Cras bibendum pharetra ultricies. Sed eget vulputate dui. Morbi nisi
-          ipsum, gravida at tristique eu, varius ut nibh. Curabitur non odio
-          neque. Curabitur in ante non risus malesuada tempus. Maecenas vel
-          ipsum justo. Sed sed nulla eu diam vestibulum molestie vitae nec
-          risus. Cras volutpat sollicitudin est in blandit. Proin non sem non
-          dolor vulputate faucibus quis pulvinar justo. In porta quis risus
-          luctus volutpat. Quisque sagittis aliquam justo, vitae ultrices eros.
-          Sed ac arcu ligula. Pellentesque condimentum mattis lacus ut dapibus.
-          Nam in sapien eros. Phasellus sagittis ipsum congue augue porta
-          placerat. Maecenas quis egestas mauris, non eleifend elit. In turpis
-          risus, ultrices ut sem a, auctor lobortis nisi. In molestie porttitor
-          commodo. Pellentesque eu convallis nunc. Cras vel ipsum odio. Mauris
-          faucibus ac nunc eget vehicula. Quisque at eros aliquam, pretium lacus
-          eu, volutpat ligula. Fusce fringilla dolor non pulvinar accumsan.
-          Curabitur ullamcorper purus neque, fringilla sollicitudin urna tempus
-          quis. Etiam sagittis, purus et venenatis sodales, sapien ipsum
-          vestibulum nisl, ut laoreet dolor diam nec erat. Donec ullamcorper
-          ante non dolor lobortis, quis lacinia ante ultrices. Pellentesque quis
-          condimentum arcu. Nulla ac fringilla eros. Nam at leo at lorem
-          sagittis auctor. Suspendisse fringilla pulvinar efficitur. Suspendisse
-          non eleifend enim. Pellentesque sit amet lectus vitae enim luctus
-          feugiat. Pellentesque porttitor augue at dui placerat congue sed at
-          quam. Praesent imperdiet augue urna. Proin a ligula vitae enim
-          venenatis ultricies ac vel sapien. Ut dolor massa, vulputate commodo
-          accumsan quis, dapibus et purus. Suspendisse at purus massa. Nunc et
-          ante at felis pharetra laoreet vel et lectus. Integer euismod urna
-          eget mollis commodo. Phasellus blandit mauris sed fermentum accumsan.
-          Curabitur eros felis, rutrum vitae dolor sed, efficitur laoreet est.
-          Pellentesque blandit eros sed pellentesque vestibulum. Suspendisse nec
-          magna diam. Suspendisse feugiat nisi ut augue condimentum, sed
-          ullamcorper mauris porta. Sed porttitor libero in condimentum
-          scelerisque. Vestibulum ut felis maximus, mollis ante vitae, consequat
-          ante. Vivamus ac lacinia arcu, eget fermentum lectus. Vivamus gravida
-          sodales metus a facilisis. Nam condimentum massa ut magna sagittis,
-          quis varius augue sagittis. Aenean vitae ipsum ac lectus consequat
-          convallis ut nec augue. Donec orci tortor, tincidunt rutrum cursus
-          non, blandit sed quam. Nunc pulvinar euismod ultrices. Curabitur non
-          arcu sed augue faucibus aliquet vitae vitae odio. Cras tincidunt eget
-          mi quis rhoncus. Curabitur eleifend pharetra tincidunt. Cras quis
-          tortor pellentesque, porttitor massa eget, mattis felis. Nulla aliquet
-          sodales tortor sit amet accumsan. Sed vitae interdum ipsum. Sed ut
-          volutpat nunc. Praesent aliquam ipsum ex, ac interdum odio vestibulum
-          dictum. Suspendisse neque quam, rhoncus aliquam diam eu, finibus
-          fringilla metus. Aliquam tristique enim arcu, non dapibus augue
-          volutpat eu. Integer ut sollicitudin nulla. Integer et est rutrum,
-          placerat orci in, fermentum neque. Sed facilisis nulla a orci finibus
-          tempus. Duis consectetur nisi nisl, ut eleifend libero facilisis a.
-          Nam quis neque lacus. Morbi a risus vestibulum, varius ex nec, varius
-          purus. In non quam risus. Mauris finibus justo erat, sed laoreet sem
-          luctus a. In cursus augue id eros ultricies, a pulvinar turpis
-          lobortis. Donec malesuada pellentesque venenatis. Nullam semper metus
-          at ligula venenatis egestas. Aenean metus nisl, sodales eget
-          condimentum sit amet, ullamcorper a nunc. Nullam pulvinar ornare
-          turpis a cursus. Ut egestas, nunc eu tempor sollicitudin, eros est
-          porttitor magna, vel lobortis quam est in felis. Nam sed sem est.
-          Morbi congue egestas felis, eu auctor ex. Integer non diam eu nibh
-          congue malesuada. Suspendisse ullamcorper nec odio in eleifend. Nullam
-          vehicula, risus quis sodales semper, diam risus ornare odio, ac
-          consectetur nisi orci at arcu. Aliquam vulputate nulla non urna
-          venenatis aliquet. Aenean tincidunt purus nisi, sit amet semper orci
-          lobortis non. Phasellus turpis dolor, rhoncus id pretium eget, auctor
-          sed lacus. Cras rutrum urna bibendum augue feugiat tempus. Quisque
-          iaculis sapien tellus, consequat semper felis consectetur ac.
-          Suspendisse tristique orci pretium, venenatis ante et, venenatis
-          risus. Phasellus scelerisque, nisi quis egestas ultrices, arcu libero
-          fringilla libero, ut molestie arcu turpis sed leo. Nullam finibus
-          libero tristique neque eleifend hendrerit. Praesent non molestie
-          libero, sit amet dapibus est. In congue ac nibh id sodales. Mauris
-          aliquet ante sit amet est varius congue quis vitae elit. In lectus ex,
-          malesuada quis eros eu, gravida ullamcorper lorem. Aliquam porttitor
-          odio condimentum nisi pellentesque ullamcorper quis vitae mauris.
-          Pellentesque et tortor sem. Duis suscipit orci massa. Duis a tellus
-          vitae nunc semper eleifend. Pellentesque venenatis maximus tellus in
-          bibendum. Ut risus justo, viverra id lacinia quis, egestas at augue.
-          Nulla dolor odio, malesuada nec posuere sed, molestie vitae quam.
-          Suspendisse at augue augue.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor aliquam dui, a laoreet ante faucibus a. In
+          accumsan pharetra dui, a lobortis eros suscipit ut. In dapibus quam et massa commodo tincidunt. Cras bibendum
+          pharetra ultricies. Sed eget vulputate dui. Morbi nisi ipsum, gravida at tristique eu, varius ut nibh.
+          Curabitur non odio neque. Curabitur in ante non risus malesuada tempus. Maecenas vel ipsum justo. Sed sed
+          nulla eu diam vestibulum molestie vitae nec risus. Cras volutpat sollicitudin est in blandit. Proin non sem
+          non dolor vulputate faucibus quis pulvinar justo. In porta quis risus luctus volutpat. Quisque sagittis
+          aliquam justo, vitae ultrices eros. Sed ac arcu ligula. Pellentesque condimentum mattis lacus ut dapibus. Nam
+          in sapien eros. Phasellus sagittis ipsum congue augue porta placerat. Maecenas quis egestas mauris, non
+          eleifend elit. In turpis risus, ultrices ut sem a, auctor lobortis nisi. In molestie porttitor commodo.
+          Pellentesque eu convallis nunc. Cras vel ipsum odio. Mauris faucibus ac nunc eget vehicula. Quisque at eros
+          aliquam, pretium lacus eu, volutpat ligula. Fusce fringilla dolor non pulvinar accumsan. Curabitur ullamcorper
+          purus neque, fringilla sollicitudin urna tempus quis. Etiam sagittis, purus et venenatis sodales, sapien ipsum
+          vestibulum nisl, ut laoreet dolor diam nec erat. Donec ullamcorper ante non dolor lobortis, quis lacinia ante
+          ultrices. Pellentesque quis condimentum arcu. Nulla ac fringilla eros. Nam at leo at lorem sagittis auctor.
+          Suspendisse fringilla pulvinar efficitur. Suspendisse non eleifend enim. Pellentesque sit amet lectus vitae
+          enim luctus feugiat. Pellentesque porttitor augue at dui placerat congue sed at quam. Praesent imperdiet augue
+          urna. Proin a ligula vitae enim venenatis ultricies ac vel sapien. Ut dolor massa, vulputate commodo accumsan
+          quis, dapibus et purus. Suspendisse at purus massa. Nunc et ante at felis pharetra laoreet vel et lectus.
+          Integer euismod urna eget mollis commodo. Phasellus blandit mauris sed fermentum accumsan. Curabitur eros
+          felis, rutrum vitae dolor sed, efficitur laoreet est. Pellentesque blandit eros sed pellentesque vestibulum.
+          Suspendisse nec magna diam. Suspendisse feugiat nisi ut augue condimentum, sed ullamcorper mauris porta. Sed
+          porttitor libero in condimentum scelerisque. Vestibulum ut felis maximus, mollis ante vitae, consequat ante.
+          Vivamus ac lacinia arcu, eget fermentum lectus. Vivamus gravida sodales metus a facilisis. Nam condimentum
+          massa ut magna sagittis, quis varius augue sagittis. Aenean vitae ipsum ac lectus consequat convallis ut nec
+          augue. Donec orci tortor, tincidunt rutrum cursus non, blandit sed quam. Nunc pulvinar euismod ultrices.
+          Curabitur non arcu sed augue faucibus aliquet vitae vitae odio. Cras tincidunt eget mi quis rhoncus. Curabitur
+          eleifend pharetra tincidunt. Cras quis tortor pellentesque, porttitor massa eget, mattis felis. Nulla aliquet
+          sodales tortor sit amet accumsan. Sed vitae interdum ipsum. Sed ut volutpat nunc. Praesent aliquam ipsum ex,
+          ac interdum odio vestibulum dictum. Suspendisse neque quam, rhoncus aliquam diam eu, finibus fringilla metus.
+          Aliquam tristique enim arcu, non dapibus augue volutpat eu. Integer ut sollicitudin nulla. Integer et est
+          rutrum, placerat orci in, fermentum neque. Sed facilisis nulla a orci finibus tempus. Duis consectetur nisi
+          nisl, ut eleifend libero facilisis a. Nam quis neque lacus. Morbi a risus vestibulum, varius ex nec, varius
+          purus. In non quam risus. Mauris finibus justo erat, sed laoreet sem luctus a. In cursus augue id eros
+          ultricies, a pulvinar turpis lobortis. Donec malesuada pellentesque venenatis. Nullam semper metus at ligula
+          venenatis egestas. Aenean metus nisl, sodales eget condimentum sit amet, ullamcorper a nunc. Nullam pulvinar
+          ornare turpis a cursus. Ut egestas, nunc eu tempor sollicitudin, eros est porttitor magna, vel lobortis quam
+          est in felis. Nam sed sem est. Morbi congue egestas felis, eu auctor ex. Integer non diam eu nibh congue
+          malesuada. Suspendisse ullamcorper nec odio in eleifend. Nullam vehicula, risus quis sodales semper, diam
+          risus ornare odio, ac consectetur nisi orci at arcu. Aliquam vulputate nulla non urna venenatis aliquet.
+          Aenean tincidunt purus nisi, sit amet semper orci lobortis non. Phasellus turpis dolor, rhoncus id pretium
+          eget, auctor sed lacus. Cras rutrum urna bibendum augue feugiat tempus. Quisque iaculis sapien tellus,
+          consequat semper felis consectetur ac. Suspendisse tristique orci pretium, venenatis ante et, venenatis risus.
+          Phasellus scelerisque, nisi quis egestas ultrices, arcu libero fringilla libero, ut molestie arcu turpis sed
+          leo. Nullam finibus libero tristique neque eleifend hendrerit. Praesent non molestie libero, sit amet dapibus
+          est. In congue ac nibh id sodales. Mauris aliquet ante sit amet est varius congue quis vitae elit. In lectus
+          ex, malesuada quis eros eu, gravida ullamcorper lorem. Aliquam porttitor odio condimentum nisi pellentesque
+          ullamcorper quis vitae mauris. Pellentesque et tortor sem. Duis suscipit orci massa. Duis a tellus vitae nunc
+          semper eleifend. Pellentesque venenatis maximus tellus in bibendum. Ut risus justo, viverra id lacinia quis,
+          egestas at augue. Nulla dolor odio, malesuada nec posuere sed, molestie vitae quam. Suspendisse at augue
+          augue.
         </div>
       </div>
     </div>

@@ -10,14 +10,7 @@ import { getListItem } from '../helpers'
 import { useDisclosureContext, useMenu } from '../MenuProvider'
 import { menuStyle } from '../styles.css'
 
-import type {
-  CSSProperties,
-  KeyboardEvent,
-  MouseEvent,
-  MouseEventHandler,
-  ReactNode,
-  Ref,
-} from 'react'
+import type { CSSProperties, KeyboardEvent, MouseEvent, MouseEventHandler, ReactNode, Ref } from 'react'
 
 type MenuItemSentiment = 'neutral' | 'primary' | 'danger'
 
@@ -43,9 +36,7 @@ type ItemProps = {
   hideOnClick?: boolean | undefined
 }
 
-const focusFistElement = (
-  firstElementInNestedMenu: HTMLAnchorElement | HTMLButtonElement,
-) => {
+const focusFistElement = (firstElementInNestedMenu: HTMLAnchorElement | HTMLButtonElement) => {
   if (['BUTTON', 'A'].includes(firstElementInNestedMenu.tagName)) {
     ;(firstElementInNestedMenu as HTMLElement).focus()
   } else if (firstElementInNestedMenu.firstChild instanceof HTMLElement) {
@@ -76,15 +67,8 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
     },
     ref,
   ) => {
-    const {
-      hideOnClickItem,
-      setIsVisible,
-      isVisible,
-      menuRef,
-      isNested,
-      parentDisclosureRef,
-      disclosureRef,
-    } = useMenu()
+    const { hideOnClickItem, setIsVisible, isVisible, menuRef, isNested, parentDisclosureRef, disclosureRef } =
+      useMenu()
     const isDisclosure = useDisclosureContext()
 
     const onClickHandle = useCallback(
@@ -102,16 +86,12 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
       [disabled, hideOnClickItem, hideOnClick, onClick, setIsVisible],
     )
 
-    const handleKeyDown = (
-      event: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>,
-    ) => {
+    const handleKeyDown = (event: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>) => {
       if (isDisclosure && ['Enter', ' ', 'ArrowRight'].includes(event.key)) {
         disclosureRef?.current?.click()
         setTimeout(() => {
           if (menuRef.current?.children) {
-            const listItem = getListItem([
-              ...menuRef.current.children[0].children[0].children,
-            ])
+            const listItem = getListItem([...menuRef.current.children[0].children[0].children])
             if (listItem[0]) {
               focusFistElement(listItem[0])
             }
@@ -120,9 +100,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
       } else if (
         event.key === 'ArrowLeft' &&
         isNested &&
-        ((isDisclosure &&
-          parentDisclosureRef?.current?.dataset['isMenuItem']) ||
-          !isDisclosure) &&
+        ((isDisclosure && parentDisclosureRef?.current?.dataset['isMenuItem']) || !isDisclosure) &&
         parentDisclosureRef?.current
       ) {
         // Focus the disclosure in the parent menu & close the nested menu
@@ -133,17 +111,10 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
 
     if (href && !disabled) {
       return (
-        <div
-          className={menuStyle.itemContainer({ borderless })}
-          data-search-text={searchText}
-          style={style}
-        >
+        <div className={menuStyle.itemContainer({ borderless })} data-search-text={searchText} style={style}>
           <Tooltip text={tooltip}>
             <a
-              className={cn(
-                className,
-                menuStyle.item({ borderless: true, disabled, sentiment }),
-              )}
+              className={cn(className, menuStyle.item({ borderless: true, disabled, sentiment }))}
               data-active={active}
               data-is-disclosure={isDisclosure}
               data-is-menu-item
@@ -158,12 +129,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
               target={target}
             >
               {isDisclosure || rightComponent ? (
-                <Stack
-                  alignItems="center"
-                  direction="row"
-                  justifyContent="space-between"
-                  width="100%"
-                >
+                <Stack alignItems="center" direction="row" justifyContent="space-between" width="100%">
                   {children}
                   {rightComponent ? (
                     <div
@@ -192,17 +158,10 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
     }
 
     return (
-      <div
-        className={menuStyle.itemContainer({ borderless })}
-        data-search-text={searchText}
-        style={style}
-      >
+      <div className={menuStyle.itemContainer({ borderless })} data-search-text={searchText} style={style}>
         <Tooltip text={tooltip}>
           <button
-            className={cn(
-              className,
-              menuStyle.item({ borderless, disabled, sentiment }),
-            )}
+            className={cn(className, menuStyle.item({ borderless, disabled, sentiment }))}
             data-active={active || (isVisible && isDisclosure)}
             data-is-disclosure={isDisclosure}
             data-is-menu-item
@@ -224,12 +183,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
             type="button"
           >
             {isDisclosure || rightComponent ? (
-              <Stack
-                alignItems="center"
-                direction="row"
-                justifyContent="space-between"
-                width="100%"
-              >
+              <Stack alignItems="center" direction="row" justifyContent="space-between" width="100%">
                 {children}
                 {rightComponent ? (
                   <div
