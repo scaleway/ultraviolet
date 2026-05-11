@@ -45,8 +45,8 @@ importers:
         specifier: 1.59.1
         version: 1.59.1
       '@scaleway/oxlint-config':
-        specifier: 0.1.12
-        version: 0.1.12(oxlint@1.62.0(oxlint-tsgolint@0.22.1))
+        specifier: 0.1.13
+        version: 0.1.13(oxlint@1.62.0(oxlint-tsgolint@0.22.1))
       '@scaleway/tsconfig':
         specifier: 1.1.4
         version: 1.1.4
@@ -3118,8 +3118,8 @@ packages:
     resolution: {integrity: sha512-7wafArqq/fSVy0epmpE0RN6e7foOO5EctgG94UBY26Fq2vWN9eJ2Nm1vE8vX+CPBiKZpm4M/Fc45WCKJG75KVQ==}
     engines: {node: '>=20.x'}
 
-  '@scaleway/oxlint-config@0.1.12':
-    resolution: {integrity: sha512-bhU2zgtJssHzR3f9awCaJTzmeeAgo9iilfRUHB3mE4/P6nTNruVP6pn8YXpRjJSviyUVtQTjL1uNXuN3IlMZZA==}
+  '@scaleway/oxlint-config@0.1.13':
+    resolution: {integrity: sha512-LairEiD+WbPYdlOowTcXW6UQCO1028F1uAOXIbcL4GCtHG6A//xfW9Wwb1luW6sRa3OfoG7l1kLBFrfll/SOcg==}
     peerDependencies:
       oxlint: '>=1.55.0'
 
@@ -9535,7 +9535,7 @@ snapshots:
 
   '@scaleway/fuzzy-search@1.0.2': {}
 
-  '@scaleway/oxlint-config@0.1.12(oxlint@1.62.0(oxlint-tsgolint@0.22.1))':
+  '@scaleway/oxlint-config@0.1.13(oxlint@1.62.0(oxlint-tsgolint@0.22.1))':
     dependencies:
       oxlint: 1.62.0(oxlint-tsgolint@0.22.1)
 
