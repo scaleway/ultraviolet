@@ -3,15 +3,12 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useMemo, useState } from 'react'
-
+import type { CSSProperties, KeyboardEventHandler, MouseEventHandler, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
 import { barStackStyle, wrapperWidth } from './styles.css'
-
-import type { CSSProperties, KeyboardEventHandler, MouseEventHandler, ReactNode } from 'react'
 
 type BarProps = {
   /**

@@ -13,17 +13,14 @@ import {
   useRef,
   useState,
 } from 'react'
-
+import type { Ref } from 'react'
 import { isClientSide } from '../../helpers/isClientSide'
 import { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import { TextInput } from '../TextInput'
-
 import { KeyGroup } from './KeyGroup'
-import { searchInputStyle } from './styles.css'
-
 import type { SearchInputProps } from './types'
-import type { Ref } from 'react'
+import { searchInputStyle } from './styles.css'
 
 /**
  * SearchInput is a component that allows users to search for items. It is a combination of a TextInput and a Popup. The Popup is used to display search results.

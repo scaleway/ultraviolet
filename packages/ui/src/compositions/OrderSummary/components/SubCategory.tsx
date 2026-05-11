@@ -1,13 +1,10 @@
 import { AttachIcon } from '@ultraviolet/icons/AttachIcon'
-
 import { NumberInput } from '../../../components/NumberInput'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
-import { orderSummaryStyle } from '../styles.css'
-
-import { SubCategoryPrice } from './SubCategoryPrice'
-
 import type { SubCategoryType } from '../types'
+import { SubCategoryPrice } from './SubCategoryPrice'
+import { orderSummaryStyle } from '../styles.css'
 
 export const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => (
   <Stack direction="column" gap={1}>

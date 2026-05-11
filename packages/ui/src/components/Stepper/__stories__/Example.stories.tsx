@@ -1,11 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { AutoFixIcon } from '@ultraviolet/icons/AutoFixIcon'
 import { useState } from 'react'
-
 import { Stepper } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Example: StoryFn<typeof Stepper> = args => {
   const [selected, setStep] = useState(1)

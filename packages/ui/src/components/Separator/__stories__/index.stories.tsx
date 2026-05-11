@@ -1,6 +1,5 @@
-import { Separator } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Separator } from '..'
 
 export default {
   component: Separator,

@@ -3,15 +3,12 @@
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn } from '@ultraviolet/utils'
 import { useReducer } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { GlobalAlertLink } from './GlobalAlertLink'
 import { globalAlertStyle } from './styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type GlobalAlertProps = {
   children: ReactNode

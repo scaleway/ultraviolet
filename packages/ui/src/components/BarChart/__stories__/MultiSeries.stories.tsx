@@ -1,10 +1,7 @@
-import { format } from 'date-fns'
-
-import { BarChart } from '..'
-
-import { barChartMultiData } from './mockData'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { format } from 'date-fns'
+import { BarChart } from '..'
+import { barChartMultiData } from './mockData'
 
 export const MultiSeries: StoryFn<typeof BarChart> = props => (
   <BarChart

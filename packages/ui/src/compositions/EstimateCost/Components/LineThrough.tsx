@@ -1,10 +1,8 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-
-import { estimateCostStyle } from '../styles.css'
-
 import type { ComponentProps } from 'react'
+import { estimateCostStyle } from '../styles.css'
 
 type LineThroughProps = ComponentProps<'span'> & {
   isActive?: boolean

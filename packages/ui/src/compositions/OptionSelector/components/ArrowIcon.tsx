@@ -1,6 +1,5 @@
 import { RayStartArrowIcon } from '@ultraviolet/icons/RayStartArrowIcon'
 import { RayTopArrowIcon } from '@ultraviolet/icons/RayTopArrowIcon'
-
 import { optionSelectorStyle } from '../styles.css'
 
 export const Arrow = ({

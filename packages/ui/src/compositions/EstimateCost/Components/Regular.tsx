@@ -2,11 +2,9 @@
 
 import { cn } from '@ultraviolet/utils'
 import { memo } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { useOverlay } from '../OverlayContext'
 import { estimateCostStyle } from '../styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type RegularProps = {
   variant?: 'normal' | 'small' | 'big' | 'capitalized'

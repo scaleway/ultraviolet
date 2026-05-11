@@ -1,11 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
-
+import type { ComponentProps } from 'react'
 import { DateInputField } from '..'
 import { Submit } from '../../Submit'
 import { TimeInputField } from '../../TimeInputField'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 export const MinMaxDateWithTimeField: StoryFn<ComponentProps<typeof DateInputField>> = ({
   name,

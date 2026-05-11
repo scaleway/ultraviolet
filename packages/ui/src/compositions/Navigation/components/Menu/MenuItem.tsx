@@ -1,15 +1,13 @@
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn } from '@ultraviolet/utils'
-
 import { Menu } from '../../../../components/Menu'
 import { Stack } from '../../../../components/Stack'
 import { Text } from '../../../../components/Text'
 import { useNavigation } from '../../NavigationProvider'
-import { navigationStyle } from '../../styles.css'
+import type { ItemMenuItemType } from '../ComponentsTypes'
 import { ItemBadge } from '../Item/Badge'
 import { ItemPinnedButton } from '../Item/PinnedButton'
-
-import type { ItemMenuItemType } from '../ComponentsTypes'
+import { navigationStyle } from '../../styles.css'
 
 export const ItemMenuItem = ({
   active,

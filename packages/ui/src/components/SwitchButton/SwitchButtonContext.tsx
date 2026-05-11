@@ -1,5 +1,4 @@
 import { createContext, useContext } from 'react'
-
 import type { ChangeEvent, Dispatch, FocusEventHandler, SetStateAction } from 'react'
 
 export type RefOptionType = { value: string; current: HTMLInputElement }

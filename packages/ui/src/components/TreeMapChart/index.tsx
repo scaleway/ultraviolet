@@ -1,18 +1,15 @@
 'use client'
 
 import { ResponsiveTreeMapHtml } from '@nivo/treemap'
+import type { TooltipProps, TreeMapSvgProps } from '@nivo/treemap'
 import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { useCallback, useMemo } from 'react'
-
-import { getDataColors } from '../../helpers/treeMap'
-
-import { treeMapChartStyle } from './styles.css'
-import { Tooltip } from './Tooltip'
-
-import type { DataType } from './types'
-import type { TooltipProps, TreeMapSvgProps } from '@nivo/treemap'
 import type { ComponentProps } from 'react'
+import { getDataColors } from '../../helpers/treeMap'
+import { Tooltip } from './Tooltip'
+import type { DataType } from './types'
+import { treeMapChartStyle } from './styles.css'
 
 type TreeMapChartProps = {
   height?: string | number

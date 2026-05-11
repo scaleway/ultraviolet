@@ -1,17 +1,14 @@
 import { HelpCircleOutlineIcon } from '@ultraviolet/icons/HelpCircleOutlineIcon'
 import { Children, cloneElement, isValidElement } from 'react'
-
 import { Badge } from '../../../components/Badge'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
 import { Tooltip } from '../../../components/Tooltip'
 import { useEstimateCost } from '../EstimateCostProvider'
 import { useOverlay } from '../OverlayContext'
-import { estimateCostStyle } from '../styles.css'
-
-import { estimateCostMaxWidthText } from './components.css'
-
 import type { ItemLeftSideProps } from '../types'
+import { estimateCostStyle } from '../styles.css'
+import { estimateCostMaxWidthText } from './components.css'
 
 type ExtraProps = {
   itemCallback: (amount: number, isVariant: boolean) => void

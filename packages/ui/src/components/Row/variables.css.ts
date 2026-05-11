@@ -1,6 +1,5 @@
-import { createVar } from '@vanilla-extract/css'
-
 import type { theme } from '@ultraviolet/themes'
+import { createVar } from '@vanilla-extract/css'
 
 export const templateColumn: Record<keyof typeof theme.breakpoints, ReturnType<typeof createVar>> = {
   large: createVar({

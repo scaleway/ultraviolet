@@ -1,12 +1,10 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
 import { infoTableStyle } from '../styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 export type CellProps = {
   children: ReactNode

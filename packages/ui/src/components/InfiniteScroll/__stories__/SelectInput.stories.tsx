@@ -1,14 +1,11 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { InfiniteScroll } from '..'
 import { SelectInput as SelectInputUV } from '../../SelectInput'
 import { Skeleton } from '../../Skeleton'
 import { Stack } from '../../Stack'
-
 import { generateRandomNamesArray, SELECT_INPUT_DATA } from './data'
 import { infiniteScrollSelectInput } from './style.css'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const InfiniteScrollLoader = (
   <Stack className={infiniteScrollSelectInput} direction="column" gap="3">

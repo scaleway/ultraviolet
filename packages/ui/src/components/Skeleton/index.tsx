@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-
+import type { CSSProperties } from 'react'
 import { Block } from './Block'
 import { Blocks } from './Blocks'
 import { BoxWithIcon } from './BoxWithIcon'
@@ -11,8 +11,6 @@ import { List } from './List'
 import { Slider } from './Slider'
 import { Square } from './Square'
 import { skeletonStyle } from './styles.css'
-
-import type { CSSProperties } from 'react'
 
 const variants = {
   block: Block,

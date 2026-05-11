@@ -1,15 +1,13 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
-
+import type { ComponentProps } from 'react'
 import { Breadcrumbs } from '..'
 import { Avatar } from '../../Avatar'
 import { Button } from '../../Button'
 import { Menu } from '../../Menu'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 export const AdvancedUsage: StoryFn<ComponentProps<typeof Breadcrumbs>> = props => (
   <Stack gap={4}>

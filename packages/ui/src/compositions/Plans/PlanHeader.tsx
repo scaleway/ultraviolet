@@ -2,11 +2,9 @@ import { Badge } from '../../components/Badge'
 import { Separator } from '../../components/Separator'
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
-
 import PlansLocales from './locales/en'
-import { plansStyle } from './styles.css'
-
 import type { PlanType } from './types'
+import { plansStyle } from './styles.css'
 
 type PlanHeaderProps = {
   fieldName?: string

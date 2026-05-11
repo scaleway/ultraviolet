@@ -3,20 +3,17 @@
 import { AutoFixIcon } from '@ultraviolet/icons/AutoFixIcon'
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useCallback, useId, useImperativeHandle, useRef, useState } from 'react'
-
+import type { ChangeEventHandler } from 'react'
 import { Button } from '../Button'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
-
 import { BottomText } from './BottomText'
 import { PrefixSuffix } from './PrefixSuffix'
 import { RightIcon } from './RightIcon'
 import { ShowHidePassword } from './ShowHidePassword'
-import { textInputStyle } from './styles.css'
-
 import type { TextInputProps } from './type'
-import type { ChangeEventHandler } from 'react'
+import { textInputStyle } from './styles.css'
 
 /**
  * This component offers an extended input HTML. The component can be controlled or uncontrolled.

@@ -1,8 +1,7 @@
-import { ContentCardGroup } from '..'
-import { Row } from '../../../components/Row'
-
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { ContentCardGroup } from '..'
+import { Row } from '../../../components/Row'
 
 export const WithRow: StoryFn<ComponentProps<typeof ContentCardGroup>> = ({ ...props }) => (
   <Row gap={1} templateColumns="repeat(2, 1fr)">

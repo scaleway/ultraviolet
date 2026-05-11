@@ -1,9 +1,7 @@
 import { describe, expect, it } from 'vitest'
-
 import { screens } from '../../../theme'
-import { down, up } from '../utilities'
-
 import type { ScreenSize } from '../../../theme'
+import { down, up } from '../utilities'
 
 describe('responsive utilities', () => {
   describe(up, () => {

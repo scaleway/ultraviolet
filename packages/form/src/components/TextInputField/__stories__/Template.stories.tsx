@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
-
+import type { ComponentProps } from 'react'
 import { TextInputField } from '..'
 import { Submit } from '../..'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 export const Template: StoryFn<ComponentProps<typeof TextInputField>> = args => (
   <Stack gap="1">

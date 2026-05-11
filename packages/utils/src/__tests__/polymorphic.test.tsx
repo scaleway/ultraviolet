@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
-
 import { mergeProps, renderElement } from '../polymorphic'
 import '@testing-library/jest-dom/vitest'
 

@@ -1,10 +1,8 @@
 import { Menu } from '../../../../components/Menu'
-import { navigationStyle } from '../../styles.css'
-import { ItemProvider } from '../Item/ItemProvider'
-
-import { ItemMenuItem } from './MenuItem'
-
 import type { ItemMenuItemType, ItemMenuType } from '../ComponentsTypes'
+import { ItemProvider } from '../Item/ItemProvider'
+import { ItemMenuItem } from './MenuItem'
+import { navigationStyle } from '../../styles.css'
 
 export const NestedMenu = ({
   children,

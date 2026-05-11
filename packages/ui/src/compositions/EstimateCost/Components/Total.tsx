@@ -1,15 +1,12 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
 import { Badge } from '../../../components/Badge'
 import { Text } from '../../../components/Text'
 import { maximumFractionDigits, maximumFractionDigitsLong } from '../constants'
 import { useEstimateCost } from '../EstimateCostProvider'
-import { estimateCostStyle, paddingLeftCell } from '../styles.css'
-
-import { LineThrough } from './LineThrough'
-
 import type { TotalContentProps } from '../types'
+import { LineThrough } from './LineThrough'
+import { estimateCostStyle, paddingLeftCell } from '../styles.css'
 
 export const Total = ({
   isBeta,

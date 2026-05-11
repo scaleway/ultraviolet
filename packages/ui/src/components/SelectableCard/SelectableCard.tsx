@@ -3,17 +3,14 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { forwardRef, useCallback, useMemo, useRef } from 'react'
-
+import type { ForwardedRef, KeyboardEventHandler, MouseEventHandler, ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
-
 import { IllustrationContainer } from './IllustrationContainer'
 import { MultiStateInput } from './MultiStateInput'
+import type { SelectableCardProps } from './types'
 import { selectableCardStyle } from './styles.css'
 import { inputDisplay, labelDisplay, widthSelectable } from './variables.css'
-
-import type { SelectableCardProps } from './types'
-import type { ForwardedRef, KeyboardEventHandler, MouseEventHandler, ReactNode } from 'react'
 
 /**
  * SelectableCard is a component that can be used to create a radio or checkbox card.

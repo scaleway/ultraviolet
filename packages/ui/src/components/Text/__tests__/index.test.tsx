@@ -1,7 +1,6 @@
 import { textVariants } from '@ultraviolet/themes'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
-
 import { Text } from '..'
 
 describe('text', () => {

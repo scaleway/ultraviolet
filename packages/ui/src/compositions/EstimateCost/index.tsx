@@ -13,7 +13,6 @@ import { EstimateCostContent } from './EstimateCostContent'
 import { EstimateCostProvider } from './EstimateCostProvider'
 import { Image } from './Image'
 import estimateCostDefaultLocales from './locales/en'
-
 import type { EstimateCostProps, Units } from './types'
 
 const DEFAULT_UNIT_LIST: Units[] = ['hours', 'days', 'months']

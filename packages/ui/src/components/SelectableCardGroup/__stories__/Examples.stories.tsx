@@ -1,15 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { SelectableCardGroup } from '..'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
 import fr from './assets/fr.svg'
 import nl from './assets/nl.svg'
 import pl from './assets/pl.svg'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Examples: StoryFn = args => {
   const [value, onChange] = useState('label-14')

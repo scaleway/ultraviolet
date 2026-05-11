@@ -1,7 +1,5 @@
 import { useMemo } from 'react'
-
 import { Text } from '../Text'
-
 import type { TextInputProps } from './type'
 
 export const BottomText = ({

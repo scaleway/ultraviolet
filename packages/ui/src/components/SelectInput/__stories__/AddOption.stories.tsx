@@ -1,12 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { SelectInput } from '..'
 import { Stack } from '../../Stack'
-
 import { dataGrouped, dataUnGrouped } from './resources'
 import { Template } from './Template.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const AddOption: StoryFn<typeof SelectInput> = args => {
   const [addOptionDataUngrouped, setDataUngrouped] = useState(dataUnGrouped)

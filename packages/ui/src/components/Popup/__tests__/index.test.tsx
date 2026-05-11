@@ -1,11 +1,9 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
-import { describe, expect, it, vi } from 'vitest'
-
-import { Popup } from '../../index'
-
 import type { ComponentProps } from 'react'
+import { describe, expect, it, vi } from 'vitest'
+import { Popup } from '../../index'
 
 describe('popup', () => {
   it('should render correctly', () =>

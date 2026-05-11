@@ -1,6 +1,5 @@
-import { SearchInput } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { SearchInput } from '..'
 
 export default {
   component: SearchInput,

@@ -1,10 +1,8 @@
 'use client'
 
 import { createContext, useCallback, useContext, useMemo } from 'react'
-
-import EstimateCostLocales from './locales/en'
-
 import type { ReactNode } from 'react'
+import EstimateCostLocales from './locales/en'
 
 const EstimateCostContext = createContext<{
   locales: Record<keyof typeof EstimateCostLocales, string>

@@ -1,14 +1,11 @@
 import { theme } from '@ultraviolet/themes'
-
+import type { RefObject } from 'react'
 import { Checkbox } from '../Checkbox'
 import { Tooltip } from '../Tooltip'
-
 import { Cell } from './Cell'
 import { ColumnProvider } from './ColumnProvider'
 import { useListContext } from './ListContext'
 import { listStyle } from './styles.css'
-
-import type { RefObject } from 'react'
 
 export const SelectRowCell = ({
   selectDisabled,

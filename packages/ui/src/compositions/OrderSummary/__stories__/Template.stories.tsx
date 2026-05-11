@@ -1,9 +1,7 @@
-import { OrderSummary } from '..'
-
-import { categoryAZ, categoryDefault, categoryM2, categoryOptions } from './productsExample'
-
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { OrderSummary } from '..'
+import { categoryAZ, categoryDefault, categoryM2, categoryOptions } from './productsExample'
 
 const mockItems = [categoryAZ, categoryM2, categoryOptions, categoryDefault]
 

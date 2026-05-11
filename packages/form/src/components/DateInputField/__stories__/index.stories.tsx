@@ -1,10 +1,8 @@
+import type { Meta } from '@storybook/react-vite'
 import { Button, Snippet, Stack, Text } from '@ultraviolet/ui'
-
 import { DateInputField, Form } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
-
-import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: DateInputField,

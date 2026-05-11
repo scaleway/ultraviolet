@@ -1,6 +1,6 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { PencilIcon } from '@ultraviolet/icons/PencilIcon'
 import { useMemo, useState } from 'react'
-
 import { List } from '..'
 import { Button } from '../../Button/index'
 import { Menu } from '../../Menu'
@@ -8,10 +8,7 @@ import { Modal } from '../../Modal'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { TextInput } from '../../TextInput'
-
 import { data as sourceData } from './resources'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Example: StoryFn = args => {
   const [currentOrder, setCurrentOrder] = useState<{

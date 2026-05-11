@@ -2,11 +2,9 @@
 
 import { cn } from '@ultraviolet/utils'
 import { forwardRef } from 'react'
-
-import { icon } from './styles.css'
-
-import type { PROMINENCES, SENTIMENTS, SIZES } from './constants'
 import type { ReactNode, SVGProps } from 'react'
+import type { PROMINENCES, SENTIMENTS, SIZES } from './constants'
+import { icon } from './styles.css'
 
 type SizesProps = keyof typeof SIZES
 

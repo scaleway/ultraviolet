@@ -1,15 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { SelectableCardOptionGroup } from '..'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
 import centos from './assets/centos.svg'
 import debian from './assets/debian.svg'
 import ubuntu from './assets/ubuntu.svg'
 import { centosOptions, debianOptions, ubuntuOptions } from './constants'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Sizes: StoryFn<typeof SelectableCardOptionGroup> = args => {
   const [value, onChange] = useState<string>()

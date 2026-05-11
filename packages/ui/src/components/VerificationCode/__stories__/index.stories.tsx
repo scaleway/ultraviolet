@@ -1,6 +1,5 @@
-import { VerificationCode } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { VerificationCode } from '..'
 
 export default {
   component: VerificationCode,

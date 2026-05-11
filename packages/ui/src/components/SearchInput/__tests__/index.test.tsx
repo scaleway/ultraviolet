@@ -3,7 +3,6 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useState } from 'react'
 import { describe, expect, it } from 'vitest'
-
 import { SearchInput } from '..'
 import { Button } from '../../Button'
 

@@ -1,6 +1,5 @@
-import { SelectInput } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { SelectInput } from '..'
 
 export default {
   component: SelectInput,

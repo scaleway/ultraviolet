@@ -1,6 +1,5 @@
-import { Text } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Text } from '..'
 
 export default {
   component: Text,

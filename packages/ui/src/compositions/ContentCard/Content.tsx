@@ -2,7 +2,6 @@
 
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
-
 import type { ContentCardProps } from './type'
 
 export const CardContent = ({

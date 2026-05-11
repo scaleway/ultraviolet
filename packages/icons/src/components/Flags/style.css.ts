@@ -1,6 +1,5 @@
 import { theme } from '@ultraviolet/themes'
 import { styleVariants } from '@vanilla-extract/css'
-
 import { SIZES } from './constant'
 
 export const flag = styleVariants(

@@ -1,20 +1,17 @@
 'use client'
 
 import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
-
+import type { ChangeEvent, DragEvent as DragEventReact } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { FileInputButton } from './components/Button'
 import { ListFiles } from './components/List'
 import { DropzoneContent } from './DropzoneContent'
 import { FileInputContext } from './FileInputProvider'
 import { fileIsAccepted } from './helpers'
-import { fileInputStyle } from './styles.css'
-
 import type { ErrorType, FileInputProps } from './types'
-import type { ChangeEvent, DragEvent as DragEventReact } from 'react'
+import { fileInputStyle } from './styles.css'
 
 /**
  * FileInput allow user to drag & drop and upload one or multiple files.

@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
-
 import { ToggleGroupField } from '..'
 import { Submit } from '../..'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Required: StoryFn<typeof ToggleGroupField> = args => (
   <Stack gap={1}>

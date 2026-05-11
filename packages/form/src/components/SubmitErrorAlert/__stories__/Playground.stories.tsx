@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
-
 import { Submit, SubmitErrorAlert, useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 import { Form } from '../../Form'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Playground: StoryFn = () => {
   const methods = useForm()

@@ -1,11 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { SelectInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-
 import { dataGrouped } from './resources'
 import { Template } from './Template.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const PopupFooter = () => (
   <Stack direction="row" gap="1" width="100%">

@@ -1,7 +1,6 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Dialog } from '..'
 import { Button } from '../../Button'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Specifications: StoryFn<typeof Dialog> = props => (
   <Dialog {...props} disclosure={<Button>Open Dialog</Button>} sentiment="danger" title="Discard changes?">

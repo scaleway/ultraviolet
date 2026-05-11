@@ -2,7 +2,6 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-
 import { Dialog } from '..'
 import { Button } from '../../Button'
 

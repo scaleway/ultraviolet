@@ -1,6 +1,5 @@
-import { CustomerSatisfaction } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { CustomerSatisfaction } from '..'
 
 export default {
   component: CustomerSatisfaction,

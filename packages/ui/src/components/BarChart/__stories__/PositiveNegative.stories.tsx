@@ -1,11 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useTheme } from '@ultraviolet/themes'
 import { format } from 'date-fns'
-
 import { BarChart } from '..'
-
 import { barChartPositiveNegativeData } from './mockData'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const PositiveNegative: StoryFn<typeof BarChart> = props => {
   const theme = useTheme()

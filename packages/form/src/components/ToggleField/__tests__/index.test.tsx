@@ -1,7 +1,6 @@
 import { screen } from '@testing-library/react'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, it } from 'vitest'
-
 import { ToggleField } from '..'
 
 describe('toggleField', () => {

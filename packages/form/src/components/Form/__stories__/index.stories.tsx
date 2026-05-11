@@ -1,6 +1,5 @@
-import { Form } from '../..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Form } from '../..'
 
 export default {
   component: Form,

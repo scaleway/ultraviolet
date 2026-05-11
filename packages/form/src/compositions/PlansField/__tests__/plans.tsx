@@ -1,6 +1,5 @@
 import { EntrepriseSupportProductIcon } from '@ultraviolet/icons/product'
 import { Button, Separator } from '@ultraviolet/ui'
-
 import type { Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 

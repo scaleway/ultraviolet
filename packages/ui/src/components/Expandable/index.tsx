@@ -3,7 +3,6 @@
 import { AnimatedExpandable } from './AnimatedExpandable'
 import { ANIMATION_DURATION } from './constant'
 import { NoAnimationExpandable } from './NonAnimatedExpandable'
-
 import type { ExpandableProps } from './types'
 
 /**

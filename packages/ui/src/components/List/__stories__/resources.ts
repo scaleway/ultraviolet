@@ -1,5 +1,5 @@
-import type { List } from '..'
 import type { ComponentProps } from 'react'
+import type { List } from '..'
 
 export const data = [
   {

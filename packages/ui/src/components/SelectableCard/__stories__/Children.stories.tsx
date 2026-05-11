@@ -1,14 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
+import type { ChangeEvent } from 'react'
 import { SelectableCard } from '..'
 import { Badge } from '../../Badge'
 import { Checkbox } from '../../Checkbox'
 import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ChangeEvent } from 'react'
 
 export const Children: StoryFn = args => {
   const [value, onChange] = useState('label-9')

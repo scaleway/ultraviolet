@@ -1,6 +1,5 @@
-import { DateInput } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { DateInput } from '..'
 
 export default {
   component: DateInput,

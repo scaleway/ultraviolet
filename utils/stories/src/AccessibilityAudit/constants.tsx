@@ -1,6 +1,5 @@
 import { SettingsOutlineIcon, ShieldCheckOutlineIcon, ProgressCheckIcon } from '@ultraviolet/icons'
 import { Text } from '@ultraviolet/ui'
-
 import type { ReactNode } from 'react'
 
 export type A11yLevel = 'partial' | 'compliant' | 'certified'

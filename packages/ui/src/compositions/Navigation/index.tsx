@@ -7,7 +7,6 @@ import { Separator } from './components/Separator'
 import { ShowHide } from './components/ShowHide'
 import { NavigationContent } from './NavigationContent'
 import { NavigationProvider, useNavigation } from './NavigationProvider'
-
 import type { NavigationProps } from './types'
 
 /**

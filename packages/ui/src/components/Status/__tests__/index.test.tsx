@@ -1,6 +1,5 @@
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
-
 import { Status } from '..'
 import { SENTIMENTS } from '../constant'
 

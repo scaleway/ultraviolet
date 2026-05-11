@@ -1,5 +1,4 @@
 import { Conversation } from '..'
-
 import { Template } from './Template.stories'
 
 export const MessageInfos = Template.bind({})

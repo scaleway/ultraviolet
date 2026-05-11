@@ -1,9 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Dialog } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { DIALOG_SENTIMENTS } from '../constants'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Sentiments: StoryFn<typeof Dialog> = props => (
   <Stack direction="row" gap={1}>

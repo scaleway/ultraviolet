@@ -2,7 +2,6 @@
 //
 import { appendFileSync, readdirSync, statSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
-
 import { updateDynamicIllustrations, updateWireIllustrations } from './update-components'
 
 const ILLUSTRATIONS_DIR = 'packages/illustrations/src/assets'

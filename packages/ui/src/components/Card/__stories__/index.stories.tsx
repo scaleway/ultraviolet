@@ -1,6 +1,5 @@
-import { Card } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Card } from '..'
 
 export default {
   component: Card,

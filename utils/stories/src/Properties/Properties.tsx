@@ -1,9 +1,7 @@
 // oxlint-disable no-underscore-dangle
 import { Stack, Table, Text } from '@ultraviolet/ui'
-
-import * as components from '../../../../packages/ui/src/components'
-
 import type { ComponentType } from 'react'
+import * as components from '../../../../packages/ui/src/components'
 
 type PropertyType = {
   defaultValue: {

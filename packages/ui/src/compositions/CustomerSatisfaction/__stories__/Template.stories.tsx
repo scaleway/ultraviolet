@@ -1,9 +1,7 @@
-import { useState } from 'react'
-
-import { CustomerSatisfaction } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { useState } from 'react'
 import type { ComponentProps } from 'react'
+import { CustomerSatisfaction } from '..'
 
 export const Template: StoryFn<ComponentProps<typeof CustomerSatisfaction>> = props => {
   const [value, setValue] = useState<1 | 2 | 3 | 4 | 5>(1)

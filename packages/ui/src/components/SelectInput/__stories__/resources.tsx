@@ -1,6 +1,5 @@
 import { NetworkCategoryIcon } from '@ultraviolet/icons/category/NetworkCategoryIcon'
 import { EmailOutlineIcon } from '@ultraviolet/icons/EmailOutlineIcon'
-
 import { Badge } from '../../Badge'
 import { Bullet } from '../../Bullet'
 import { Button } from '../../Button'

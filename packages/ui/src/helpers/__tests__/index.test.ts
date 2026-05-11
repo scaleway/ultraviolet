@@ -1,11 +1,9 @@
+import type { KeyboardEvent } from 'react'
 // oxlint-disable typescript/no-unsafe-type-assertion
 import { describe, expect, it, vi } from 'vitest'
-
 import onKeyOnlyNumbers from '../keycode'
 import parseIntOr from '../numbers'
 import recursivelyGetChildrenString from '../recursivelyGetChildrenString'
-
-import type { KeyboardEvent } from 'react'
 
 describe(recursivelyGetChildrenString, () => {
   const complexChildrenWithStringNestedChildren = {

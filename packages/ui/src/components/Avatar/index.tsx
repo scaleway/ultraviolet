@@ -5,14 +5,11 @@ import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
 import { theme as UVTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
 import { Text } from '../Text'
-
 import { DEFAULT_COLORS, sizes, TEXT_VARIANT_BY_SIZE } from './constants'
+import type { AvatarProps, SentimentColors } from './types'
 import { avatarStyle } from './styles.css'
 import { finalColorAvatar, finalSizeAvatar, halvedColorAvatar } from './variables.css'
-
-import type { AvatarProps, SentimentColors } from './types'
 
 /**
  * The Avatar component is used to represent a user, product, or entity. It can be used to display an image, an icon, a text or a set of colors.

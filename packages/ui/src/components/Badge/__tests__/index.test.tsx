@@ -1,7 +1,6 @@
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
-
 import { Badge } from '..'
 import { SENTIMENTS } from '../../../theme'
 import { PROMINENCES, SIZES } from '../constant'

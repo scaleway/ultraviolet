@@ -1,14 +1,12 @@
 import { AttachIcon } from '@ultraviolet/icons/AttachIcon'
 import { useContext } from 'react'
-
 import { NumberInput } from '../../../components/NumberInput'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
 import { DisplayPrice } from '../helpers'
 import { OrderSummaryContext } from '../Provider'
-import { orderSummaryStyle } from '../styles.css'
-
 import type { ItemsType } from '../types'
+import { orderSummaryStyle } from '../styles.css'
 
 export const CategoryName = ({ category }: { category: ItemsType }) => {
   const { categoriesPrice } = useContext(OrderSummaryContext)

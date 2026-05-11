@@ -1,8 +1,6 @@
-import { Text } from '../index'
-
-import { oneLineContainer } from './style.css'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { Text } from '../index'
+import { oneLineContainer } from './style.css'
 
 export const OneLine: StoryFn<typeof Text> = args => (
   <>

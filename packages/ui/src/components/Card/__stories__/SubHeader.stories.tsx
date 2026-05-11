@@ -1,12 +1,10 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
-
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Tooltip } from '../../Tooltip'
 import { Card } from '../index'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const SubHeader: StoryFn = args => (
   <Stack>

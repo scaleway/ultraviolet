@@ -1,10 +1,8 @@
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles'
-
-import { paddings, templateColumn } from './variables.css'
-
 import type { CSSProperties } from 'react'
+import { paddings, templateColumn } from './variables.css'
 
 const row = style({
   '@media': {

@@ -1,7 +1,6 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
 import { IconSkeleton } from './IconSkeleton'
 import { Line } from './Line'
 import { skeletonStyle } from './styles.css'

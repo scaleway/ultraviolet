@@ -4,9 +4,8 @@ import '@ultraviolet/ui/styles'
 import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import { Text } from '@ultraviolet/ui'
 import { lazy } from 'react'
-import { Link as ReactRouterLink, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-
 import type { ReactNode } from 'react'
+import { Link as ReactRouterLink, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
 const GlobalWrapper = ({ children }: { children: ReactNode }) => <div style={{ padding: '48px' }}>{children}</div>
 

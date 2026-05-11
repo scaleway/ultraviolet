@@ -1,12 +1,9 @@
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
-import { labelStyle } from './styles.css'
-
 import type { LabelProps } from './type'
+import { labelStyle } from './styles.css'
 
 export const LabelRequiredOrNot = ({
   children,

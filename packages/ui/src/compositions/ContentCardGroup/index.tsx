@@ -1,14 +1,11 @@
 'use client'
 
 import { Children, forwardRef } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../../components/Stack'
-
 import { Card } from './Card'
 import { SkeletonCard } from './SkeletonCard'
 import { contentCardGroupStyle } from './styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type BaseContentCardGroupProps = {
   children: ReactNode

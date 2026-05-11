@@ -1,6 +1,5 @@
-import { FileInput } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { FileInput } from '..'
 
 export default {
   component: FileInput,

@@ -1,6 +1,5 @@
-import { Chip } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Chip } from '..'
 
 export default {
   component: Chip,

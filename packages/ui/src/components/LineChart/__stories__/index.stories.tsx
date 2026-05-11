@@ -1,6 +1,5 @@
-import { LineChart } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { LineChart } from '..'
 
 export default {
   component: LineChart,

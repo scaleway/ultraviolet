@@ -2,16 +2,13 @@
 
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
-
 import { Stack } from '../../components/Stack'
-
 import { CardContent } from './Content'
 import { ImageContent } from './ImageContent'
 import { LinkContent } from './LinkContent'
 import { Skeleton } from './Skeleton'
-import { contentCardStyle } from './styles.css'
-
 import type { ContentCardProps } from './type'
+import { contentCardStyle } from './styles.css'
 
 /**
  * ContentCard is a component that displays a title, subtitle, description, image and icon in a card.

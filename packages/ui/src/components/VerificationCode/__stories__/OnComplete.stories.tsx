@@ -1,6 +1,5 @@
-import { VerificationCode } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { VerificationCode } from '..'
 
 const onCompleteHandler = (value: unknown) => {
   console.log('Code is fully typed', value)

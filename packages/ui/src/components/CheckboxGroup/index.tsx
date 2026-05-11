@@ -2,16 +2,13 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-
+import type { InputHTMLAttributes, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { CheckboxGroupContext } from './Context'
 import { CheckboxGroupCheckbox } from './SingleCheckbox'
 import { checkboxGroupStyle } from './styles.css'
-
-import type { InputHTMLAttributes, ReactNode } from 'react'
 
 type CheckboxGroupProps = {
   legend?: string

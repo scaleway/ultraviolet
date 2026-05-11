@@ -1,6 +1,5 @@
-import { Radio } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Radio } from '..'
 
 export default {
   component: Radio,

@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { VerifyCardProductIcon } from '@ultraviolet/icons/product/VerifyCardProductIcon'
-
 import { NotificationContainer, notification } from '..'
 import { Button, Stack, Text } from '../../index'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const ContainerId: StoryFn<typeof NotificationContainer> = args => (
   <Stack gap={2}>

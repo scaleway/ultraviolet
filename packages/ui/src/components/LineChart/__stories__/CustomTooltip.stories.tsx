@@ -1,5 +1,4 @@
 import { format } from 'date-fns'
-
 import { lineChartHoursData } from './mockData'
 import { Template } from './Template.stories'
 

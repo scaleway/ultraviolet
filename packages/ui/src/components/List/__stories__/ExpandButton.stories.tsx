@@ -1,5 +1,4 @@
 import { List } from '..'
-
 import { data } from './resources'
 import { Template } from './Template.stories'
 

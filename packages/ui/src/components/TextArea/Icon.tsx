@@ -1,6 +1,5 @@
 import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
-
 import { STATE_ICON_SIZE } from './constant'
 
 export const SuccessErrorIcon = ({ success, error }: { success: boolean; error: boolean }) => (

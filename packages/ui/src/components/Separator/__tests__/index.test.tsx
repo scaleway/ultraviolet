@@ -1,7 +1,6 @@
 import { RayTopArrowIcon } from '@ultraviolet/icons/RayTopArrowIcon'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
-
 import { Separator } from '..'
 
 describe('separator', () => {

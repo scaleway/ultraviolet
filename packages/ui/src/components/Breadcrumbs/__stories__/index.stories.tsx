@@ -1,7 +1,6 @@
+import type { Meta } from '@storybook/react-vite'
 import { Breadcrumbs } from '..'
 import { Item } from '../components/Item'
-
-import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: Breadcrumbs,

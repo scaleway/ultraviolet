@@ -1,8 +1,6 @@
-import { useState } from 'react'
-
-import { Checkbox } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { useState } from 'react'
+import { Checkbox } from '..'
 
 export const Template: StoryFn<typeof Checkbox> = ({ 'aria-label': ariaLabel, ...args }) => {
   const [checked, setChecked] = useState(false)

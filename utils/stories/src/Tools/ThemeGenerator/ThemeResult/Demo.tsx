@@ -23,15 +23,13 @@ import {
   Toggle,
 } from '@ultraviolet/ui'
 import { useState } from 'react'
-
+import type { ChangeEvent } from 'react'
 import {
   themeGeneratorContainer,
   themeGeneratorStack,
   themeGeneratorStepList,
   themeGeneratorStepper,
 } from './styles.css'
-
-import type { ChangeEvent } from 'react'
 
 export const Demo = () => {
   const [tabState, setTabState] = useState<number | string>(1)

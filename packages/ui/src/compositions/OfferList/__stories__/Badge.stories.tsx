@@ -1,9 +1,7 @@
-import { OfferList } from '..'
-
-import { columns, data } from './resources'
-
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { OfferList } from '..'
+import { columns, data } from './resources'
 
 const getTextBadge = (index: number) => {
   if (index === 1) {

@@ -2,13 +2,10 @@
 
 import { cn, useClipboard } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-
 import { Tooltip } from '../Tooltip'
-
-import { tagStyle } from './styles.css'
 import { TagInner } from './TagInner'
-
 import type { TagProps } from './type'
+import { tagStyle } from './styles.css'
 
 const COPY_DURATION = 2500
 

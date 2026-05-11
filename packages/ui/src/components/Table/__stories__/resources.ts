@@ -1,5 +1,5 @@
-import type { Table } from '..'
 import type { ComponentProps } from 'react'
+import type { Table } from '..'
 
 export const data = [
   {

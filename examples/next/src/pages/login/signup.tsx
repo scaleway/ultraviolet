@@ -2,9 +2,8 @@ import { DateInputField, Form, RadioGroupField, Submit, TextInputField, useForm,
 import { ProfileIcon } from '@ultraviolet/icons/ProfileIcon'
 import { Alert, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
-
-import styles from '../../../styles/login.module.scss'
 import { EMAIL_REGEX, mockErrors } from '../../constants'
+import styles from '../../../styles/login.module.scss'
 
 type FormValues = {
   email: string

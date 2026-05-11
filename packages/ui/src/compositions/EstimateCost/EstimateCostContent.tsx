@@ -2,11 +2,9 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
-
 import { Alert } from '../../components/Alert'
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
-
 import { CompactEstimateCost } from './CompactEstimateCost'
 import { ChildrenComponent } from './Components/Children'
 import { Description } from './Components/Description'
@@ -18,9 +16,8 @@ import { calculatePrice } from './helper'
 import EstimateCostLocales from './locales/en'
 import { OverlayComponent } from './OverlayComponent'
 import { OverlayContextProvider } from './OverlayContext'
-import { estimateCostStyle } from './styles.css'
-
 import type { BareEstimateProduct, EstimateCostProps, EstimateProduct, Units } from './types'
+import { estimateCostStyle } from './styles.css'
 
 const DEFAULT_UNIT_LIST: Units[] = ['hours', 'days', 'months']
 

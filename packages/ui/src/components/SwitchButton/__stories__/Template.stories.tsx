@@ -1,7 +1,6 @@
-import { SwitchButton } from '../index'
-
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { SwitchButton } from '../index'
 
 export const Template: StoryFn<ComponentProps<typeof SwitchButton>> = args => (
   <SwitchButton {...args} value="option1">

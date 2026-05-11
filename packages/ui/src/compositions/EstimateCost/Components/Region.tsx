@@ -1,15 +1,12 @@
 'use client'
 
 import { memo } from 'react'
-
+import type { ComponentProps, ReactNode } from 'react'
 import { useEstimateCost } from '../EstimateCostProvider'
-import { estimateCostStyle } from '../styles.css'
-
+import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
 import { Item } from './Item'
 import { Strong } from './Strong'
-
-import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
-import type { ComponentProps, ReactNode } from 'react'
+import { estimateCostStyle } from '../styles.css'
 
 type RegionProps = {
   shouldBeHidden?: boolean

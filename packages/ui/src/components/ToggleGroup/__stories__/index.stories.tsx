@@ -1,6 +1,5 @@
-import { ToggleGroup } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { ToggleGroup } from '..'
 
 export default {
   component: ToggleGroup,

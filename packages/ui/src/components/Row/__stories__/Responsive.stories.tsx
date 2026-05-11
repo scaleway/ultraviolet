@@ -1,12 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { useEffect, useState } from 'react'
-
 import { Row } from '..'
 import { Stack } from '../../Stack'
-
 import { divWithBackground } from './DivWithBackground.css'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Responsive: StoryFn = props => {
   const [breakpoint, setBreakpoint] = useState<'xxsmall' | 'xsmall' | 'small'>('xxsmall')

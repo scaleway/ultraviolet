@@ -1,6 +1,5 @@
-import { Tag } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Tag } from '..'
 
 export default {
   component: Tag,

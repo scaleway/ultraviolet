@@ -1,6 +1,5 @@
 import { renderWithForm } from '@utils/test'
 import { describe, expect, it } from 'vitest'
-
 import { VerificationCodeField } from '..'
 
 describe('verificationCodeField', () => {

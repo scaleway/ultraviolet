@@ -1,7 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-
 import { VerificationCode } from '..'
 
 const pasteEventWithValue = (selector: HTMLElement, value: string) =>

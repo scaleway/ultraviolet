@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { DateInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Controlled: StoryFn = args => {
   const [value, setValue] = useState<Date | Date[] | [Date | null, Date | null] | null>(

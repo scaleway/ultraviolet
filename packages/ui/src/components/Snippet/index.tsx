@@ -3,19 +3,16 @@
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { cn } from '@ultraviolet/utils'
 import { useReducer } from 'react'
-
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useTheme } from '../../theme/ThemeProvider'
 import { CopyButton } from '../CopyButton'
 import { Expandable } from '../Expandable'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { CodeContent } from './CodeContent'
-import { snippetStyle } from './styles.css'
-
 import type { Prefixes } from './CodeContent'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import { snippetStyle } from './styles.css'
 
 const LINES_BREAK_REGEX = /\r\n|\r|\n/
 

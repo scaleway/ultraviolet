@@ -1,8 +1,6 @@
-import { useState } from 'react'
-
-import { TagInput } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { useState } from 'react'
+import { TagInput } from '..'
 
 export const Template: StoryFn<typeof TagInput> = args => {
   const [tags, setTags] = useState(['default'])

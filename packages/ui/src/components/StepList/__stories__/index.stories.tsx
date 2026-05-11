@@ -1,6 +1,5 @@
-import { StepList } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { StepList } from '..'
 
 export default {
   component: StepList,

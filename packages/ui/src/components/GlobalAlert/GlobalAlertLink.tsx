@@ -1,10 +1,8 @@
 'use client'
 
 import { useTheme } from '@ultraviolet/themes'
-
-import { Link } from '../Link'
-
 import type { ComponentProps } from 'react'
+import { Link } from '../Link'
 
 type GlobalAlertLinkProps = Omit<ComponentProps<typeof Link>, 'sentiment' | 'prominence' | 'size' | 'render'> &
   NonNullable<Pick<ComponentProps<typeof Link>, 'href'>>

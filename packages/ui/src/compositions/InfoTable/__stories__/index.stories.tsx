@@ -1,6 +1,5 @@
-import { InfoTable } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { InfoTable } from '..'
 
 export default {
   component: InfoTable,

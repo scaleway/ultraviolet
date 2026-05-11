@@ -3,21 +3,18 @@
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn } from '@ultraviolet/utils'
 import { Children, isValidElement, memo, useContext, useEffect, useMemo, useRef } from 'react'
-
+import type { ComponentProps, CSSProperties, DragEvent, ElementType, ReactNode } from 'react'
+import type { Badge } from '../../../../components/Badge'
 import { Stack } from '../../../../components/Stack'
 import { Tooltip } from '../../../../components/Tooltip'
 import { useNavigation } from '../../NavigationProvider'
-import { navigationStyle } from '../../styles.css'
+import type { ItemType, PinUnPinType } from '../../types'
 import { ItemMenu } from '../Menu/Menu'
 import { ItemMenuItem } from '../Menu/MenuItem'
 import { NestedMenu } from '../Menu/NestedMenu'
-
 import { ItemExpanded } from './ItemExpanded'
 import { ItemContext } from './ItemProvider'
-
-import type { Badge } from '../../../../components/Badge'
-import type { ItemType, PinUnPinType } from '../../types'
-import type { ComponentProps, CSSProperties, DragEvent, ElementType, ReactNode } from 'react'
+import { navigationStyle } from '../../styles.css'
 
 type LinkProps = {
   to: string

@@ -2,7 +2,6 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-
 import { TimeInput } from '..'
 
 const DEFAULT_VALUE = new Date('01/01/2000 11:23:14')

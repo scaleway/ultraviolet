@@ -1,8 +1,6 @@
-import { Stack } from '..'
-
-import { child, firstChild, secondChild, thirdChild } from './styles.css'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { Stack } from '..'
+import { child, firstChild, secondChild, thirdChild } from './styles.css'
 
 export const Template: StoryFn<typeof Stack> = props => (
   <Stack {...props}>

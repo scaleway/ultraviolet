@@ -1,8 +1,7 @@
 'use client'
 
-import { Text } from '../../Text'
-
 import type { ComponentProps } from 'react'
+import { Text } from '../../Text'
 
 export type ExpandableCardTitleProps = {
   size?: 'medium' | 'large'

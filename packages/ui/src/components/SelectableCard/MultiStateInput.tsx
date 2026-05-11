@@ -1,10 +1,8 @@
 import { Checkbox } from '../Checkbox'
 import { Radio } from '../Radio'
 import { Toggle } from '../Toggle'
-
-import { selectableCardStyle } from './styles.css'
-
 import type { MultiStateProps } from './types'
+import { selectableCardStyle } from './styles.css'
 
 export const MultiStateInput = ({
   checked,

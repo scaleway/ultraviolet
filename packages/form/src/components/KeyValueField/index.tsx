@@ -3,12 +3,10 @@
 import { DeleteIcon } from '@ultraviolet/icons/DeleteIcon'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { Button, Row, Stack } from '@ultraviolet/ui'
-import { useFieldArray, useFormContext } from 'react-hook-form'
-
-import { TextInputField } from '../TextInputField'
-
 import type { ComponentProps } from 'react'
+import { useFieldArray, useFormContext } from 'react-hook-form'
 import type { Control, FieldArrayPath, FieldValues } from 'react-hook-form'
+import { TextInputField } from '../TextInputField'
 
 type InputKeyProps = {
   label: ComponentProps<typeof TextInputField>['label']

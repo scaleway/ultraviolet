@@ -2,16 +2,13 @@
 
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId } from 'react'
-
+import type { InputHTMLAttributes, ReactNode } from 'react'
+import type { LabelProp } from '../../types'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
 import { RadioMarkedIcon } from './MarkedIcon'
 import { radioStyle } from './styles.css'
-
-import type { LabelProp } from '../../types'
-import type { InputHTMLAttributes, ReactNode } from 'react'
 
 type RadioProps = {
   error?: ReactNode

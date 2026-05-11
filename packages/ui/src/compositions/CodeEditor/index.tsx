@@ -6,17 +6,14 @@ import CodeMirror from '@uiw/react-codemirror'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useState } from 'react'
-
 import { Expandable } from '../../components/Expandable'
 import { Label } from '../../components/Label'
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
-
 import { CodeEditorCopyButton } from './components/CopyButton'
 import { CodeEditorExpandable } from './components/Expandable'
-import { codeEditorStyle, disabledStack, maxHeightVar } from './styles.css'
-
 import type { CodeEditorProps } from './type'
+import { codeEditorStyle, disabledStack, maxHeightVar } from './styles.css'
 
 /**
  * A code editor is a specialized tool designed to help developers write, edit, and manage code efficiently.

@@ -1,6 +1,5 @@
-import { TagList } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { TagList } from '..'
 
 export default {
   component: TagList,

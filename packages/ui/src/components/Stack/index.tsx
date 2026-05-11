@@ -4,14 +4,12 @@ import { consoleLightTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { forwardRef, useMemo } from 'react'
-
-import { sprinkles, stackStyle } from './styles.css'
-import { flexVar, maxWidthVar, minWidthVar, widthVar } from './variables.css'
-
-import type { UltravioletUITheme } from '../../theme'
-import type { AlignItemsType, JustifyContentType } from './styles.css'
-import type { PolymorphicComponentProps } from './types'
 import type { CSSProperties, ElementType, PropsWithChildren, ReactElement } from 'react'
+import type { UltravioletUITheme } from '../../theme'
+import type { PolymorphicComponentProps } from './types'
+import { sprinkles, stackStyle } from './styles.css'
+import type { AlignItemsType, JustifyContentType } from './styles.css'
+import { flexVar, maxWidthVar, minWidthVar, widthVar } from './variables.css'
 
 type ResponsiveProp<T> = T | Partial<Record<keyof UltravioletUITheme['breakpoints'], T>>
 

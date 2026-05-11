@@ -1,9 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { SENTIMENTS } from '../../../theme'
+import type { ExtendedColor } from '../../../theme'
 import { Stack } from '../../Stack'
 import { Loader } from '../index'
-
-import type { ExtendedColor } from '../../../theme'
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Sentiments: StoryFn = props => (
   <Stack gap={4}>

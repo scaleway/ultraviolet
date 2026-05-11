@@ -1,14 +1,11 @@
 import { DragIcon } from '@ultraviolet/icons/DragIcon'
 import { useContext } from 'react'
-
 import { Stack } from '../../../../components/Stack'
 import { Text } from '../../../../components/Text'
 import { useNavigation } from '../../NavigationProvider'
-import { navigationStyle } from '../../styles.css'
-
-import { ItemContext } from './ItemProvider'
-
 import type { ItemExpandedType } from '../ComponentsTypes'
+import { ItemContext } from './ItemProvider'
+import { navigationStyle } from '../../styles.css'
 
 export const ItemContent = ({
   disabled,

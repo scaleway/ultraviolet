@@ -1,5 +1,4 @@
 import { useCallback, useRef } from 'react'
-
 import type { RefObject } from 'react'
 
 type UseFlipOptions = {

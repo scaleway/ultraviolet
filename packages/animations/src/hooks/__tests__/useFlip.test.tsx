@@ -1,6 +1,5 @@
 import { renderHook, act } from '@testing-library/react'
 import { describe, expect, expectTypeOf, it, vi } from 'vitest'
-
 import { useFlip } from '../useFlip'
 
 const createMockRect = (options: Partial<DOMRect> = {}): ReturnType<Element['getBoundingClientRect']> => ({

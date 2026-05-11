@@ -1,7 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-
 import { SIZES_WIDTH } from './constant'
 
 function createSizesPopover(size: keyof typeof SIZES_WIDTH) {

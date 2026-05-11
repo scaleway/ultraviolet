@@ -2,13 +2,10 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useContext } from 'react'
-
+import type { ComponentProps } from 'react'
 import { Checkbox } from '../Checkbox'
-
 import { CheckboxGroupContext } from './Context'
 import { checkboxGroupStyle } from './styles.css'
-
-import type { ComponentProps } from 'react'
 
 type CheckboxGroupCheckboxProps = Omit<ComponentProps<typeof Checkbox>, 'onChange' | 'checked'> & {
   value: string

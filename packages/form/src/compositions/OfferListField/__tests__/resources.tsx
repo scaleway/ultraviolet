@@ -1,5 +1,5 @@
-import type { OfferListField } from '..'
 import type { ComponentProps } from 'react'
+import type { OfferListField } from '..'
 
 export const data = [
   {

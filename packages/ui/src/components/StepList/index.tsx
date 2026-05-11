@@ -1,11 +1,9 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Item } from './Item'
 import { stepListStyle } from './styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type StepListProps = {
   children: ReactNode

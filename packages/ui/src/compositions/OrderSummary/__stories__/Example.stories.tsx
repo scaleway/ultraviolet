@@ -1,16 +1,13 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
+import type { ComponentProps, Dispatch } from 'react'
 import { OrderSummary } from '..'
 import { Button } from '../../../components/Button'
 import { Checkbox } from '../../../components/Checkbox'
 import { Link } from '../../../components/Link'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
-
 import { categoryM2, categoryOptions, categoryStorage, negativeItem } from './productsExample'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps, Dispatch } from 'react'
 
 const mockItems = (requestsAmount: number | null, setRequestsAmount: Dispatch<React.SetStateAction<number | null>>) => {
   const categoryNumberOfRequests = {

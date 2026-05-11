@@ -1,8 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { recipe } from '@vanilla-extract/recipes'
-
 import { ping } from '../../utils'
-
 import { SENTIMENTS } from './constant'
 
 const HEIGHT = '10px'

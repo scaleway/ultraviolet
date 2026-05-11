@@ -1,9 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, keyframes, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-
 import { SENTIMENTS } from '../../theme'
-
 import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 import {
   listCellPadding,

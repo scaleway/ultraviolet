@@ -1,7 +1,6 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { ToastContainer, toast } from '..'
 import { Button, Stack } from '../../index'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const ContainerId: StoryFn<typeof ToastContainer> = args => (
   <Stack direction="row" gap={2}>

@@ -1,13 +1,11 @@
 import { PinOutlineIcon } from '@ultraviolet/icons/PinOutlineIcon'
 import { UnpinIcon } from '@ultraviolet/icons/UnpinIcon'
 import { useMemo } from 'react'
-
+import type { MouseEvent } from 'react'
 import { Tooltip } from '../../../../components/Tooltip'
 import { useNavigation } from '../../NavigationProvider'
-import { navigationStyle } from '../../styles.css'
-
 import type { ItemExpandedType } from '../ComponentsTypes'
-import type { MouseEvent } from 'react'
+import { navigationStyle } from '../../styles.css'
 
 export const ItemPinnedButton = ({
   shouldShowPinnedButton,

@@ -1,19 +1,16 @@
 'use client'
 
 import { forwardRef, useId, useImperativeHandle, useMemo, useRef } from 'react'
-
+import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
 import { Controls } from './components/Controls'
 import { Unit } from './components/Unit'
-import { numberInputStyle } from './styles.css'
-
 import type { SIZES } from './constant'
-import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
+import { numberInputStyle } from './styles.css'
 
 type Sizes = keyof typeof SIZES
 

@@ -5,12 +5,10 @@ import { userEvent } from '@testing-library/user-event'
 import { ThemeProvider } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useState } from 'react'
+import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { describe, expect, it, vi } from 'vitest'
-
 import { Table } from '..'
 import defaultTheme from '../../../theme'
-
-import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 
 type WrapperProps = {
   theme?: typeof defaultTheme

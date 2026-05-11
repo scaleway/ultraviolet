@@ -1,12 +1,10 @@
+import type { StoryFn } from '@storybook/react-vite'
+import type { ComponentProps } from 'react'
 import { OrderSummary } from '..'
 import { Badge } from '../../../components/Badge'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
-
 import { categoryAZ, categoryDefault } from './productsExample'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 const elements = [categoryAZ, categoryDefault]
 export const PriceInformation: StoryFn<ComponentProps<typeof OrderSummary>> = () => (

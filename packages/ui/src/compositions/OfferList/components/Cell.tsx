@@ -1,15 +1,12 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-
+import type { ComponentProps } from 'react'
 import { List } from '../../../components/List'
 import { Skeleton } from '../../../components/Skeleton'
 import { useOfferListContext } from '../OfferListProvider'
-import { offerListStyle } from '../styles.css'
-
 import { useOfferListRowContext } from './OfferListRowProvider'
-
-import type { ComponentProps } from 'react'
+import { offerListStyle } from '../styles.css'
 
 export const Cell = ({
   children,

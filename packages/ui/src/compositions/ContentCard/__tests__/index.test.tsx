@@ -1,6 +1,5 @@
 import { renderWithTheme } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-
 import { ContentCard } from '..'
 import illustration from '../assets/illustration.png'
 

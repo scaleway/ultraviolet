@@ -4,19 +4,16 @@ import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { forwardRef, useEffect, useId, useImperativeHandle, useMemo, useRef } from 'react'
-
+import type { CSSProperties, DOMAttributes, ReactNode } from 'react'
 import { Button } from '../Button'
 import { SIZE_HEIGHT as ButtonSizeHeight } from '../Button/constants'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
-
 import { STATE_ICON_SIZE } from './constant'
 import { SuccessErrorIcon } from './Icon'
 import { Notice } from './Notice'
 import { paddingRightVar, textAreaStyle } from './styles.css'
-
-import type { CSSProperties, DOMAttributes, ReactNode } from 'react'
 
 type LabelProps =
   | {

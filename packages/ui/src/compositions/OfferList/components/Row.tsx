@@ -6,18 +6,15 @@ import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Children, useCallback, useMemo, useState } from 'react'
-
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import type { Badge as BadgeUV } from '../../../components/Badge'
 import { Button } from '../../../components/Button'
 import { List } from '../../../components/List'
 import { useOfferListContext } from '../OfferListProvider'
-import { expandablePadding as expandablePaddingVar, offerListStyle } from '../styles.css'
-
 import { Banner } from './Banner'
 import { OfferListRowContext } from './OfferListRowProvider'
 import { SelectableCell } from './SelectableCell'
-
-import type { Badge as BadgeUV } from '../../../components/Badge'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import { expandablePadding as expandablePaddingVar, offerListStyle } from '../styles.css'
 
 type RowProps = ComponentProps<typeof List.Row> & {
   banner?: {

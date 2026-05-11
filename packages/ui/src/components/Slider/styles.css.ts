@@ -1,10 +1,8 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style } from '@vanilla-extract/css'
-import { recipe } from '@vanilla-extract/recipes'
-
-import { THUMB_SIZE } from './constant'
-
 import type { CSSProperties } from '@vanilla-extract/css'
+import { recipe } from '@vanilla-extract/recipes'
+import { THUMB_SIZE } from './constant'
 
 export const tooltipLeft = createVar()
 export const thumbColor = createVar()

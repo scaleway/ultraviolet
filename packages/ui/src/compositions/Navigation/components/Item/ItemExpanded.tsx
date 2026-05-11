@@ -3,18 +3,15 @@ import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn } from '@ultraviolet/utils'
 import { useCallback, useMemo, useReducer } from 'react'
-
+import type { DragEvent } from 'react'
 import { Stack } from '../../../../components/Stack'
 import { useNavigation } from '../../NavigationProvider'
-import { navigationStyle } from '../../styles.css'
-
+import type { ItemExpandedType } from '../ComponentsTypes'
 import { ItemBadge } from './Badge'
 import { ItemChildren } from './Children'
 import { ItemContent } from './Content'
 import { ItemPinnedButton } from './PinnedButton'
-
-import type { ItemExpandedType } from '../ComponentsTypes'
-import type { DragEvent } from 'react'
+import { navigationStyle } from '../../styles.css'
 
 export const ItemExpanded = ({
   categoryIcon,

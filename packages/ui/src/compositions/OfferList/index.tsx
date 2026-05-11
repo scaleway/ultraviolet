@@ -2,15 +2,12 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useEffect, useState } from 'react'
-
+import type { ComponentProps, CSSProperties } from 'react'
 import { List } from '../../components/List'
-
 import { Cell } from './components/Cell'
 import { Row } from './components/Row'
 import { OfferListProvider } from './OfferListProvider'
 import { offerListStyle } from './styles.css'
-
-import type { ComponentProps, CSSProperties } from 'react'
 
 type OfferListProps = Omit<ComponentProps<typeof List>, 'selectable' | 'onSelectedChange' | 'colMode'> & {
   /**

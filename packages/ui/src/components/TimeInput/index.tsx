@@ -1,11 +1,10 @@
 'use client'
 
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
-
+import type { CSSProperties, FocusEvent, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { DEFAULT_DATE, DEFAULT_PLACEHOLDER, TIME_KEYS } from './constants'
 import {
   canConcat,
@@ -19,8 +18,6 @@ import {
 } from './helpers'
 import { RightIcon } from './RightIcon'
 import { timeInputStyle } from './styles.css'
-
-import type { CSSProperties, FocusEvent, ReactNode } from 'react'
 
 export type Time = {
   h: string

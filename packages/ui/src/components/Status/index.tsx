@@ -1,13 +1,10 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-
-import { Tooltip } from '../Tooltip'
-
-import { statusStyle } from './styles.css'
-
-import type { SENTIMENTS } from './constant'
 import type { CSSProperties } from 'react'
+import { Tooltip } from '../Tooltip'
+import type { SENTIMENTS } from './constant'
+import { statusStyle } from './styles.css'
 
 type StatusSentiment = (typeof SENTIMENTS)[number]
 

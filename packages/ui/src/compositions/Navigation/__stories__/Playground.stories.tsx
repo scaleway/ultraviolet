@@ -1,3 +1,4 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { BaremetalCategoryIcon } from '@ultraviolet/icons/category/BaremetalCategoryIcon'
 import { DataAndAnalyticsCategoryIcon } from '@ultraviolet/icons/category/DataAndAnalyticsCategoryIcon'
 import { DatabaseCategoryIcon } from '@ultraviolet/icons/category/DatabaseCategoryIcon'
@@ -8,18 +9,14 @@ import { SecurityCategoryIcon } from '@ultraviolet/icons/category/SecurityCatego
 import { UseCaseCategoryIcon } from '@ultraviolet/icons/category/UseCaseCategoryIcon'
 import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import { useCallback, useEffect, useState } from 'react'
-
+import type { ComponentProps, ReactNode } from 'react'
 import { Navigation, NavigationProvider, useNavigation } from '..'
 import { Button } from '../../../components'
 import { Stack } from '../../../components/Stack'
 import { Tooltip } from '../../../components/Tooltip'
-
 import logoSmall from './assets/logo-small.svg'
 import logo from './assets/logo.svg'
 import { logoStyle } from './styles.css'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps, ReactNode } from 'react'
 
 const onClickPinUnpin: ComponentProps<typeof Navigation.Item>['onClickPinUnpin'] = ({ totalPinned }) => {
   console.log('total pinned items:', totalPinned)

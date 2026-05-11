@@ -1,7 +1,6 @@
 import { createContext, useContext } from 'react'
-
-import type { FilesType } from './types'
 import type { Dispatch, RefObject, SetStateAction } from 'react'
+import type { FilesType } from './types'
 
 type FileInputContextType =
   | {

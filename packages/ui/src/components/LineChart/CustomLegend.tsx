@@ -1,19 +1,16 @@
 'use client'
 
+import type { DatumValue } from '@nivo/core'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
 import { getLegendColor } from '../../helpers/legend'
 import { Checkbox } from '../Checkbox'
 import { Text } from '../Text'
-
 import { getAverage, getCurrent, getMax, getMin, getSelected } from './helpers'
+import type { Serie } from './helpers'
 import { Cell } from './LegendCell'
 import { backgroundColorLegend, lineChartStyle } from './styles.css'
-
-import type { Serie } from './helpers'
-import type { DatumValue } from '@nivo/core'
 
 type Transformer = (value: DatumValue) => string
 

@@ -2,7 +2,6 @@ import { theme } from '@ultraviolet/themes'
 import { capitalize } from '@ultraviolet/utils'
 import { globalStyle } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-
 import { PROMINENCES, SENTIMENTS, SIZES } from './constants'
 
 function generateSizeStyle(size: keyof typeof SIZES) {

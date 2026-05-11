@@ -1,11 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
-
 import { SelectableCardField } from '..'
 import { useForm } from '../../..'
-import { Form } from '../../Form'
-
 import type { FormErrors } from '../../../types'
-import type { StoryFn } from '@storybook/react-vite'
+import { Form } from '../../Form'
 
 export const Checked: StoryFn<{ errors: FormErrors }> = ({ errors }) => {
   const methods = useForm({ defaultValues: { foo: 'bar' } })

@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import { forwardRef } from 'react'
-
+import type { CSSProperties } from 'react'
 import { Body } from './Body'
 import { Cell } from './Cell'
 import { Header } from './Header'
@@ -11,13 +11,11 @@ import { HeaderRow } from './HeaderRow'
 import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
-import { tableStyle } from './styles.css'
 import { TableContainer } from './TableContainer'
 import { TableProvider, useTableContext } from './TableContext'
-
 import type { TableProviderProps } from './TableContext'
 import type { ColumnProps } from './types'
-import type { CSSProperties } from 'react'
+import { tableStyle } from './styles.css'
 
 // type OptionalKeys<T> = {
 //   [K in keyof T]: {} extends Pick<T, K> ? K : never

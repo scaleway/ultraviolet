@@ -1,6 +1,5 @@
-import { optionSelectorStyle } from '../styles.css'
-
 import type { ReactNode } from 'react'
+import { optionSelectorStyle } from '../styles.css'
 
 export const RevealOnHover = ({ content, hoverContent }: { content: ReactNode; hoverContent: ReactNode }) => (
   <>

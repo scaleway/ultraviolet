@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { SunIcon } from '@ultraviolet/icons/SunIcon'
-
 import { Stepper } from '..'
 import { Text } from '../../Text'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Children: StoryFn<typeof Stepper> = args => (
   <Stepper {...args}>

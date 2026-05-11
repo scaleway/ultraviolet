@@ -2,11 +2,9 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { BaremetalCategoryIcon, UseCaseCategoryIcon } from '@ultraviolet/icons/category'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, it, vi } from 'vitest'
-
-import { Navigation, NavigationProvider } from '..'
-
 import type { ComponentProps } from 'react'
+import { describe, expect, it, vi } from 'vitest'
+import { Navigation, NavigationProvider } from '..'
 
 type BasicNavigationProps = Pick<ComponentProps<typeof NavigationProvider>, 'pinnedFeature'>
 

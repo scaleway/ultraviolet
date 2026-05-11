@@ -1,7 +1,6 @@
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles'
-
 import { flexVar, maxWidthVar, minWidthVar, widthVar } from './variables.css'
 
 const stack = style({

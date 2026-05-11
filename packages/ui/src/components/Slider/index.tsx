@@ -2,16 +2,13 @@
 'use client'
 
 import { useMemo } from 'react'
-
+import type { ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { DoubleSlider } from './components/DoubleSlider'
 import { SingleSlider } from './components/SingleSlider'
-import { sliderStyle } from './styles.css'
-
 import type { SliderProps } from './types'
-import type { ReactNode } from 'react'
+import { sliderStyle } from './styles.css'
 
 /**
  * You can define simple or double sliders with the slider component.

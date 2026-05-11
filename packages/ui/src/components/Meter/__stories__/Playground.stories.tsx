@@ -1,11 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useEffect, useState } from 'react'
 import zxcvbn from 'zxcvbn'
-
 import { Meter } from '..'
 import { colors } from '../../../theme'
 import { TextInput } from '../../TextInput'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const strength = [
   { color: colors.danger.text, text: 'veryWeak' },

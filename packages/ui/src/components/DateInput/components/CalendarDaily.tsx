@@ -1,7 +1,7 @@
 'use client'
 
 import { useContext, useState } from 'react'
-
+import type { MouseEvent as MouseEventReact } from 'react'
 import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { Text } from '../../Text'
@@ -16,8 +16,6 @@ import {
   isSameDay,
 } from '../helpers'
 import { dateInputStyle } from '../styles.css'
-
-import type { MouseEvent as MouseEventReact } from 'react'
 
 export const Daily = () => {
   const {

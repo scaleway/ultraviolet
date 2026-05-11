@@ -1,15 +1,12 @@
 import { CalculatorIcon } from '@ultraviolet/icons/CalculatorIcon'
 import { useContext } from 'react'
-
+import type { ReactNode } from 'react'
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
-
 import { DisplayPrice } from './helpers'
 import { OrderSummaryContext } from './Provider'
-import { orderSummaryStyle } from './styles.css'
-
 import type { PriceTypeSingle, TimeUnit } from './types'
-import type { ReactNode } from 'react'
+import { orderSummaryStyle } from './styles.css'
 
 type NonScrollableContentProps = {
   discount: number

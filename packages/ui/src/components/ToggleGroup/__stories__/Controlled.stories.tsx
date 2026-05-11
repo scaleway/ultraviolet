@@ -1,8 +1,6 @@
-import { useState } from 'react'
-
-import { ToggleGroup } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { useState } from 'react'
+import { ToggleGroup } from '..'
 
 export const Controlled: StoryFn = args => {
   const [values, onChange] = useState(['weekly-save'])

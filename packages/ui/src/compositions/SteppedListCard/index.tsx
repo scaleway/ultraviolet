@@ -1,20 +1,17 @@
 'use client'
 
 import { Children, useMemo, useState } from 'react'
-
+import type { ReactNode } from 'react'
 import { Button } from '../../components/Button'
 import { Card } from '../../components/Card'
 import { Row } from '../../components/Row'
 import { Stack } from '../../components/Stack'
 import { StepList } from '../../components/StepList'
 import { Text } from '../../components/Text'
-
 import { Data } from './helper'
 import { SteppedList } from './Step'
 import { SteppedListContent } from './SteppedListContent'
 import { steppedListCardStyle } from './styles.css'
-
-import type { ReactNode } from 'react'
 
 type SteppedListContainerProps = {
   /**

@@ -1,9 +1,8 @@
 'use client'
 
+import type { ReactNode } from 'react'
 import { Row } from '../Row'
 import { Text } from '../Text'
-
-import type { ReactNode } from 'react'
 
 export const Notice = ({
   maxLength,

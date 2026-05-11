@@ -1,6 +1,5 @@
-import { Plans } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Plans } from '..'
 
 export default {
   component: Plans,

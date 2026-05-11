@@ -1,5 +1,4 @@
 import { cn } from '@ultraviolet/utils'
-
 import { Checkbox } from '../../../Checkbox'
 import { Text } from '../../../Text'
 import { useSelectInput } from '../../SelectInputProvider'

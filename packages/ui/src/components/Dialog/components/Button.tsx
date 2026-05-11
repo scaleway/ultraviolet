@@ -1,9 +1,8 @@
 'use client'
 
+import type { ComponentProps, ReactNode } from 'react'
 import { Button } from '../../Button'
 import { useDialogContext } from '../Context'
-
-import type { ComponentProps, ReactNode } from 'react'
 
 type DialogButtonProps = {
   children: ReactNode

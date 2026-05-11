@@ -1,8 +1,6 @@
 import { cn } from '@ultraviolet/utils'
-
-import { estimateCostStyle } from './styles.css'
-
 import type { ComponentProps } from 'react'
+import { estimateCostStyle } from './styles.css'
 
 export const Image = (props: ComponentProps<'img'>) => (
   <img

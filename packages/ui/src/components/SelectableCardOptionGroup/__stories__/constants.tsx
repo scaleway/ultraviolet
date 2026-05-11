@@ -1,7 +1,6 @@
-import { Badge } from '../../Badge'
-
-import type { SelectInput } from '../../SelectInput'
 import type { ComponentProps } from 'react'
+import { Badge } from '../../Badge'
+import type { SelectInput } from '../../SelectInput'
 
 export const mysqlOptions: ComponentProps<typeof SelectInput>['options'] = [
   {

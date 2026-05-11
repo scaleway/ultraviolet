@@ -2,15 +2,12 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { StepBullet } from './Bullet'
 import { useStepper } from './StepperProvider'
 import { stepperStyle } from './styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type StepProps = {
   onClick?: (index: number) => void

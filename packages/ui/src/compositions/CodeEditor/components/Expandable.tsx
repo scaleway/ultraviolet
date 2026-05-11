@@ -1,11 +1,9 @@
 'use client'
 
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
-
+import type { Dispatch, SetStateAction } from 'react'
 import { Text } from '../../../components/Text'
 import { codeEditorStyle } from '../styles.css'
-
-import type { Dispatch, SetStateAction } from 'react'
 
 export const CodeEditorExpandable = ({
   expanded,

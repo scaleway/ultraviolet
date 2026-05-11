@@ -1,9 +1,7 @@
-import { SmsProductIcon } from '@ultraviolet/icons/product/SmsProductIcon'
-
-import { FAQ } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { SmsProductIcon } from '@ultraviolet/icons/product/SmsProductIcon'
 import type { ComponentProps } from 'react'
+import { FAQ } from '..'
 
 export const Template: StoryFn<ComponentProps<typeof FAQ>> = props => <FAQ {...props} />
 

@@ -1,8 +1,6 @@
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
-import { theme as themeContract } from '../vanilla/themes.css'
-
 import type { consoleLightTheme } from '../themes'
+import { theme as themeContract } from '../vanilla/themes.css'
 
 export const generateObjectStyleFromTheme = (theme: typeof consoleLightTheme) => {
   const cssVars = assignInlineVars(themeContract, theme)

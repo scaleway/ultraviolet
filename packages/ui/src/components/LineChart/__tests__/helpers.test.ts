@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest'
-
 import { getAverage, getCurrent, getMax, getMaxChartValue, getMin, getMinChartValue, getSelected } from '../helpers'
 
 const chartValues = [

@@ -1,5 +1,4 @@
 import { Badge } from '@ultraviolet/ui'
-
 import type { SelectInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 

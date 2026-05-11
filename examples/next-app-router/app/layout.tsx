@@ -10,9 +10,8 @@ import {
   consoleLightTheme,
   generateObjectStyleFromTheme,
 } from '@ultraviolet/themes'
-import { cookies } from 'next/headers'
-
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
 import type { ReactNode } from 'react'
 
 export const metadata: Metadata = {

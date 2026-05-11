@@ -5,16 +5,13 @@ import { DragIcon } from '@ultraviolet/icons/DragIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useCallback, useRef, useState } from 'react'
-
+import type { CSSProperties, DetailsHTMLAttributes, DragEvent, ForwardedRef, KeyboardEvent, ReactNode } from 'react'
+import type { XOR } from '../../types'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
-
 import { ExpandableCardTitle } from './components/Title'
-import { expandableCardStyle } from './styles.css'
-
-import type { XOR } from '../../types'
 import type { EXPANDABLE_CARD_SIZE } from './constants'
-import type { CSSProperties, DetailsHTMLAttributes, DragEvent, ForwardedRef, KeyboardEvent, ReactNode } from 'react'
+import { expandableCardStyle } from './styles.css'
 
 type DraggableListType = { value?: string }
 type ExpandableCardSize = (typeof EXPANDABLE_CARD_SIZE)[number]

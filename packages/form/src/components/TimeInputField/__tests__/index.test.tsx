@@ -2,7 +2,6 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-
 import { TimeInputField } from '..'
 
 describe('textInputField', () => {

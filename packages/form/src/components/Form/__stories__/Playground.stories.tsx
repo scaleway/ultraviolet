@@ -1,5 +1,5 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-
 import {
   CheckboxField,
   DateInputField,
@@ -17,8 +17,6 @@ import {
 } from '../..'
 import { useForm } from '../../..'
 import { emailRegex, mockErrors } from '../../../mocks/mockErrors'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const data = [
   { disabled: false, label: '1', value: '1' },

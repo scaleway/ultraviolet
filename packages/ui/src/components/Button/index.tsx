@@ -2,16 +2,13 @@
 
 import { useTheme } from '@ultraviolet/themes'
 import { cn, renderElement } from '@ultraviolet/utils'
+import type { RenderProp } from '@ultraviolet/utils'
 import { forwardRef, useMemo } from 'react'
-
+import type { AriaRole, ButtonHTMLAttributes, CSSProperties, MouseEventHandler, ReactNode, Ref } from 'react'
 import { Loader } from '../Loader'
 import { Tooltip } from '../Tooltip'
-
 import { buttonStyle } from './styles.css'
-
 import type { ButtonVariants } from './styles.css'
-import type { RenderProp } from '@ultraviolet/utils'
-import type { AriaRole, ButtonHTMLAttributes, CSSProperties, MouseEventHandler, ReactNode, Ref } from 'react'
 
 type CommonProps = {
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type']

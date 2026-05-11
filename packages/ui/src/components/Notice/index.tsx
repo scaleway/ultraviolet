@@ -2,12 +2,9 @@
 
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { cn } from '@ultraviolet/utils'
-
-import { Text } from '../Text'
-
-import { noticeStyle } from './styles.css'
-
 import type { CSSProperties, ReactNode } from 'react'
+import { Text } from '../Text'
+import { noticeStyle } from './styles.css'
 
 type NoticeProps = {
   children: ReactNode

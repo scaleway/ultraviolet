@@ -1,7 +1,6 @@
-import { ContentCardGroup } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { ContentCardGroup } from '..'
 
 export const Subtitle: StoryFn<ComponentProps<typeof ContentCardGroup>> = ({ ...props }) => (
   <ContentCardGroup {...props}>

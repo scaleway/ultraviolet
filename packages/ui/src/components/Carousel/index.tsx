@@ -2,11 +2,9 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useEffect, useRef, useState } from 'react'
-
+import type { ReactNode } from 'react'
 import { CarouselItem } from './Item'
 import { carouselStyle } from './styles.css'
-
-import type { ReactNode } from 'react'
 
 type CarouselProps = {
   className?: string

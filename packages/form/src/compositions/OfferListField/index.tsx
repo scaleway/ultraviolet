@@ -1,11 +1,9 @@
+import type { BaseFieldProps, FieldPath, FieldValues, Path, PathValue } from '@ultraviolet/form'
 import { Label, Stack, Text } from '@ultraviolet/ui'
 import { OfferList } from '@ultraviolet/ui/compositions/OfferList'
-import { useController } from 'react-hook-form'
-
-import { useErrors } from '../../providers'
-
-import type { BaseFieldProps, FieldPath, FieldValues, Path, PathValue } from '@ultraviolet/form'
 import type { ComponentProps, ReactNode } from 'react'
+import { useController } from 'react-hook-form'
+import { useErrors } from '../../providers'
 
 type OfferListFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
   TFieldValues,

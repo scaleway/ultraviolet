@@ -1,11 +1,8 @@
 import { CalculatorIcon } from '@ultraviolet/icons/CalculatorIcon'
-
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
-
-import { estimateCostStyle } from './styles.css'
-
 import type { Iteration } from './types'
+import { estimateCostStyle } from './styles.css'
 
 type TotalPrice = {
   hourly: number

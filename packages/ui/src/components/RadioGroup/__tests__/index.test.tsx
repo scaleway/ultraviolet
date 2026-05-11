@@ -1,7 +1,6 @@
 import { render } from '@testing-library/react'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it } from 'vitest'
-
 import { RadioGroup } from '..'
 
 describe('radioGroup', () => {

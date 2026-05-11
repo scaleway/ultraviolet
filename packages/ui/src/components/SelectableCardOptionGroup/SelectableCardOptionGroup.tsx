@@ -2,18 +2,15 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-
+import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { Option } from './components/Option'
 import { SelectableCardOptionGroupContext } from './Provider'
-import { selectableCardOptionGroupStyle } from './styles.css'
-
 import type { Sizes } from './types'
-import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
+import { selectableCardOptionGroupStyle } from './styles.css'
 
 type SelectableCardOptionGroupProps = {
   legend?: string

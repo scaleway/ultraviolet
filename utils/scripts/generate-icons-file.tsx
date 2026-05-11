@@ -3,7 +3,6 @@
 
 import { existsSync, promises } from 'node:fs'
 import path from 'node:path'
-
 import { DEPRECATED_ICONS } from '../../packages/icons/src/deprecatedIcons'
 
 const COMPONENTS = [

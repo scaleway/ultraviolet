@@ -2,10 +2,8 @@
 
 import { cn } from '@ultraviolet/utils'
 import { memo } from 'react'
-
-import { estimateCostStyle } from '../styles.css'
-
 import type { CSSProperties, ReactNode } from 'react'
+import { estimateCostStyle } from '../styles.css'
 
 type StrongProps = {
   variant?: 'normal' | 'small' | 'big' | 'capitalized'

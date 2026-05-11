@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Menu } from '..'
 import { Stack } from '../../Stack'
-
 import { DefaultDisclosure } from './Template.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Overflowing: StoryFn<typeof Menu> = () => (
   <Stack gap={9}>

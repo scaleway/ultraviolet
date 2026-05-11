@@ -1,7 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-
 import { SIZES } from './constants'
 
 export const heightMenu = createVar()

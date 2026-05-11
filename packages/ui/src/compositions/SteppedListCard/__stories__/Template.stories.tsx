@@ -1,14 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
-
+import type { ComponentProps } from 'react'
 import { SteppedListCard } from '..'
 import { Button } from '../../../components/Button'
 import { Snippet } from '../../../components/Snippet'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
 import { blockStorageWire } from '../__mocks__/blockStorageWire'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 export const Template: StoryFn<ComponentProps<typeof SteppedListCard>> = props => (
   <SteppedListCard {...props}>

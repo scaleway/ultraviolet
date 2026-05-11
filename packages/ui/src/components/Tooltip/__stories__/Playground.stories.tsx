@@ -1,6 +1,5 @@
-import { Template } from './Template.stories'
-
 import type { Decorator } from '@storybook/react-vite'
+import { Template } from './Template.stories'
 
 export const Playground = Template.bind({})
 

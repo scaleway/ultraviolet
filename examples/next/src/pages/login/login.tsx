@@ -3,9 +3,8 @@ import { CheckboxField, Form, Submit, TextInputField, useForm, useWatch } from '
 import { IdIcon } from '@ultraviolet/icons/IdIcon'
 import { Link, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
-
-import styles from '../../../styles/login.module.scss'
 import { mockErrors } from '../../constants'
+import styles from '../../../styles/login.module.scss'
 
 type FormValues = {
   email: string

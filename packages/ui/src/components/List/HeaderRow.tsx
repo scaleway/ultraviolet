@@ -1,12 +1,10 @@
 'use client'
 
+import type { ReactNode } from 'react'
 import { Checkbox } from '../Checkbox'
-
 import { HeaderCell } from './HeaderCell'
 import { useListContext } from './ListContext'
 import { listStyle } from './styles.css'
-
-import type { ReactNode } from 'react'
 
 type RowProps = {
   hasSelectAllColumn: boolean

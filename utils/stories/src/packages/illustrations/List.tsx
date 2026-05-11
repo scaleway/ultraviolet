@@ -6,7 +6,6 @@ import * as productsIllustrations from '@ultraviolet/illustrations/products'
 import * as variousIllustrations from '@ultraviolet/illustrations/various'
 import { Button, Expandable, Snippet, Stack, Text } from '@ultraviolet/ui'
 import { useReducer } from 'react'
-
 import {
   buttonStory,
   cardStory,

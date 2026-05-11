@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { forwardRef } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { useColumnProvider } from './ColumnProvider'
 import { useListContext } from './ListContext'
 import { listStyle } from './styles.css'
@@ -16,8 +16,6 @@ import {
   widthCell,
   widthChildrenCell,
 } from './variables.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type CellProps = {
   children?: ReactNode

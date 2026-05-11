@@ -1,6 +1,5 @@
-import { SubmitErrorAlert } from '../..'
-
 import type { Meta } from '@storybook/react-vite'
+import { SubmitErrorAlert } from '../..'
 
 export default {
   component: SubmitErrorAlert,

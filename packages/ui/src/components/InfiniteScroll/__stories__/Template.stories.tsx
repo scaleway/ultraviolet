@@ -1,10 +1,7 @@
-import { useState } from 'react'
-
-import { InfiniteScroll } from '..'
-
-import { DATA, generateRandomNamesArray } from './data'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { useState } from 'react'
+import { InfiniteScroll } from '..'
+import { DATA, generateRandomNamesArray } from './data'
 
 export const Template: StoryFn<typeof InfiniteScroll> = args => {
   const [data, setData] = useState(DATA)

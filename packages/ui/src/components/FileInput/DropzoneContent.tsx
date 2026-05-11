@@ -1,11 +1,8 @@
 import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
-
-import { Text } from '../Text'
-
-import { fileInputStyle } from './styles.css'
-
-import type { FileInputProps } from './types'
 import type { RefObject } from 'react'
+import { Text } from '../Text'
+import type { FileInputProps } from './types'
+import { fileInputStyle } from './styles.css'
 
 export const DropzoneContent = ({
   disabled,

@@ -1,8 +1,6 @@
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
-import { carouselStyle, widthVar } from './styles.css'
-
 import type { CSSProperties, ReactNode } from 'react'
+import { carouselStyle, widthVar } from './styles.css'
 
 type CarouselItemProps = {
   children: ReactNode

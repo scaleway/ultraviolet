@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useReducer, useState } from 'react'
-
+import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import {
   clearAllAction,
   resetAction,
@@ -10,9 +10,7 @@ import {
   selectOptionAction,
   updateAction,
 } from './reducerFunctions'
-
 import type { DataType, OptionType, ReducerAction, ReducerState } from './types'
-import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 
 type ContextProps = {
   options: DataType

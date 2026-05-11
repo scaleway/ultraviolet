@@ -1,6 +1,5 @@
-import { Menu } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Menu } from '..'
 
 export default {
   component: Menu,

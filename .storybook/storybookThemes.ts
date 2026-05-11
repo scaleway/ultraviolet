@@ -1,10 +1,7 @@
 import { create } from 'storybook/theming'
-
 import lightTheme, { darkerTheme, darkTheme } from '../packages/ui/src/theme'
-
 import logoDark from './assets/logo-dark.png'
 import logoLight from './assets/logo-light.png'
-
 import type lightBrandImage from './assets/scaleway-text-light.png'
 
 enum Base {

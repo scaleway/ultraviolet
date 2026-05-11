@@ -3,13 +3,11 @@
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { memo, useState } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Button } from '../../../components/Button'
 import { Stack } from '../../../components/Stack'
 import { useNavigation } from '../NavigationProvider'
 import { navigationStyle } from '../styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type ShowAllProp = {
   showContent: ReactNode

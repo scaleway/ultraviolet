@@ -1,18 +1,15 @@
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { useState } from 'react'
-
+import type { CSSProperties } from 'react'
 import { Badge } from '../../components/Badge'
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
-
 import { FeatureHint } from './FeatureHint'
 import PlansLocales from './locales/en'
 import { PlanHeader } from './PlanHeader'
-import { plansStyle } from './styles.css'
-
 import type { Feature, PlanType } from './types'
-import type { CSSProperties } from 'react'
+import { plansStyle } from './styles.css'
 
 type PlansProps<T extends string> = {
   fieldName?: string

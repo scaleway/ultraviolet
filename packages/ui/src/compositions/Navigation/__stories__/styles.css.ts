@@ -1,5 +1,4 @@
 import { recipe } from '@vanilla-extract/recipes'
-
 import { ANIMATION_DURATION, ANIMATION_EASING } from '../constants'
 
 export const logoStyle = recipe({

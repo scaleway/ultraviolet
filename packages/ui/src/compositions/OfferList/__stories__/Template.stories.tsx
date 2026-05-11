@@ -1,9 +1,7 @@
-import { OfferList } from '..'
-
-import { columns, data } from './resources'
-
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { OfferList } from '..'
+import { columns, data } from './resources'
 
 export const Template: StoryFn<ComponentProps<typeof OfferList>> = props => (
   <OfferList {...props}>

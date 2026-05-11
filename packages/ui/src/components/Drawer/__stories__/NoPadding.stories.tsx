@@ -1,6 +1,5 @@
 import { Drawer } from '../../Drawer'
 import { Separator } from '../../Separator'
-
 import { DefaultDisclosure, Template } from './Template.stories'
 
 export const NoPadding = Template.bind({})

@@ -1,6 +1,5 @@
-import { Meter } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Meter } from '..'
 
 export default {
   component: Meter,

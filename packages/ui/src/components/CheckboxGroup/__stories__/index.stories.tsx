@@ -1,6 +1,5 @@
-import { CheckboxGroup } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { CheckboxGroup } from '..'
 
 export default {
   component: CheckboxGroup,

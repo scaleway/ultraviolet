@@ -5,17 +5,14 @@ import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useId, useMemo, useState } from 'react'
-
+import type { ComponentProps, CSSProperties, InputHTMLAttributes, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { SelectInput } from '../SelectInput'
+import type { OptionType } from '../SelectInput/types'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { unitInputStyle, widthSelectInput } from './styles.css'
-
-import type { OptionType } from '../SelectInput/types'
-import type { ComponentProps, CSSProperties, InputHTMLAttributes, ReactNode } from 'react'
 
 type UnitInputValue = { inputValue: number; unit: string }
 

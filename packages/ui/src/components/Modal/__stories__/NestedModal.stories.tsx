@@ -1,9 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Button } from '../../Button'
 import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 import { Modal } from '../index'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const OPTIONS = [
   {

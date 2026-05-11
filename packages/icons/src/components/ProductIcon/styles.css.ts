@@ -1,6 +1,5 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, styleVariants } from '@vanilla-extract/css'
-
 import { SIZES, VARIANTS } from './constants'
 
 const PROMINENCES = ['Weak', 'Strong', ''] as const

@@ -1,11 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { LeafIcon } from '@ultraviolet/icons/LeafIcon'
 import { useMemo, useState } from 'react'
-
+import type { ComponentProps } from 'react'
 import { OfferList } from '..'
 import { Stack } from '../../../components/Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 const data = [
   {

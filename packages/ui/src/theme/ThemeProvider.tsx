@@ -4,7 +4,6 @@ import { iconStyles } from '@ultraviolet/icons/iconStyles'
 import { consoleLightTheme, theme as themeContract } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { createContext, useContext, useLayoutEffect } from 'react'
-
 import type { ReactNode } from 'react'
 
 const ThemeContext = createContext(consoleLightTheme)

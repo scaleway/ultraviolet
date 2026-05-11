@@ -1,11 +1,9 @@
 import { Expandable } from '../../../../components/Expandable'
 import { Stack } from '../../../../components/Stack'
 import { useNavigation } from '../../NavigationProvider'
-import { navigationStyle } from '../../styles.css'
-
-import { ItemProvider } from './ItemProvider'
-
 import type { ItemExpandedType } from '../ComponentsTypes'
+import { ItemProvider } from './ItemProvider'
+import { navigationStyle } from '../../styles.css'
 
 export const ItemChildren = ({
   noExpand,

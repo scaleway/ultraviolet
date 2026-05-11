@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useReducer } from 'react'
-
 import { ExpandableCard } from '..'
 import { Button, Stack } from '../..'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Controlled: StoryFn<typeof ExpandableCard> = args => {
   const [expanded, onToggleExpand] = useReducer(prevState => !prevState, false)

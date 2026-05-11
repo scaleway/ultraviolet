@@ -1,7 +1,6 @@
-import { SelectableCardGroupField } from '../..'
-
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { SelectableCardGroupField } from '../..'
 
 export const Checkbox: StoryFn<ComponentProps<typeof SelectableCardGroupField>> = args => (
   <SelectableCardGroupField {...args} type="checkbox">

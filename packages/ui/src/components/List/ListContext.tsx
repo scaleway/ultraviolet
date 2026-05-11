@@ -1,9 +1,6 @@
 'use client'
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
-
-import type { Checkbox } from '../Checkbox'
-import type { ColumnProps } from './types'
 import type {
   ComponentProps,
   Dispatch,
@@ -12,6 +9,8 @@ import type {
   RefObject,
   SetStateAction,
 } from 'react'
+import type { Checkbox } from '../Checkbox'
+import type { ColumnProps } from './types'
 
 type RowState = Record<string | number, boolean>
 

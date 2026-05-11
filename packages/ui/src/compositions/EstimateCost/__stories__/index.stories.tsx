@@ -1,3 +1,4 @@
+import type { Meta } from '@storybook/react-vite'
 import { EstimateCost } from '..'
 import { Item } from '../Components/Item'
 import { LineThrough } from '../Components/LineThrough'
@@ -6,8 +7,6 @@ import { Region } from '../Components/Region'
 import { Regular } from '../Components/Regular'
 import { Strong } from '../Components/Strong'
 import { Unit } from '../Components/Unit'
-
-import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: EstimateCost,

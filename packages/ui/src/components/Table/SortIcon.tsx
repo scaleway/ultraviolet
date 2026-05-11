@@ -1,6 +1,5 @@
 import { SortIcon as SortIconUV } from '@ultraviolet/icons/SortIcon'
 import { SouthShortIcon } from '@ultraviolet/icons/SouthShortIcon'
-
 import { listStyle } from '../List/styles.css'
 
 export const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) =>

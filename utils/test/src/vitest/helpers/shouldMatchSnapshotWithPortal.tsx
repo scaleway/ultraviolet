@@ -1,7 +1,6 @@
 import { render } from '@testing-library/react'
-import { expect, vi } from 'vitest'
-
 import type { ReactElement } from 'react'
+import { expect, vi } from 'vitest'
 
 export const makeShouldMatchSnapshotWithPortal = (
   children: ReactElement,

@@ -1,6 +1,5 @@
 import { renderWithForm } from '@utils/test'
 import { describe, expect, it } from 'vitest'
-
 import { SelectableCardOptionGroupField } from '../..'
 import centos from '../__stories__/assets/centos.svg'
 import debian from '../__stories__/assets/debian.svg'

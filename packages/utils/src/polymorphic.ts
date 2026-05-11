@@ -1,5 +1,4 @@
 import { cloneElement, isValidElement } from 'react'
-
 import type { HTMLAttributes, ReactElement, ReactNode, Ref } from 'react'
 
 type Props = Record<string, unknown>

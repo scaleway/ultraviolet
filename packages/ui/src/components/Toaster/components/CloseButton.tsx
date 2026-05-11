@@ -1,11 +1,9 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-
+import type { SENTIMENTS } from '../../../theme'
 import { Button } from '../../Button'
 import { toasterStyle } from '../styles.css'
-
-import type { SENTIMENTS } from '../../../theme'
 
 type SENTIMENT = (typeof SENTIMENTS)[number]
 

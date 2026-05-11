@@ -1,8 +1,7 @@
 import { createContext, useContext } from 'react'
-
+import type { ComponentProps, InputHTMLAttributes } from 'react'
 import type { SelectInput } from '../SelectInput'
 import type { Sizes } from './types'
-import type { ComponentProps, InputHTMLAttributes } from 'react'
 
 type SelectableCardOptionGroupContextType = {
   groupName?: string

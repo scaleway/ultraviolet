@@ -2,23 +2,20 @@
 
 import { CalendarRangeIcon } from '@ultraviolet/icons/CalendarRangeIcon'
 import { cn } from '@ultraviolet/utils'
+import type { Locale } from 'date-fns'
 import { useEffect, useMemo, useRef, useState } from 'react'
-
+import type { ChangeEvent, CSSProperties, FocusEvent } from 'react'
 import { Card } from '../Card'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { TextInput } from '../TextInput'
-
 import { CalendarContent } from './components/CalendarContent'
 import { CalendarPopup } from './components/Popup'
 import { DateInputContext } from './Context'
+import type { ContextProps } from './Context'
 import { createDate, createDateRange, formatValue } from './helpers'
 import { getDays, getLocalizedMonths, getMonths } from './helpersLocale'
 import { dateInputStyle } from './styles.css'
-
-import type { ContextProps } from './Context'
-import type { Locale } from 'date-fns'
-import type { ChangeEvent, CSSProperties, FocusEvent } from 'react'
 
 type DateInputProps<IsRange extends undefined | boolean = false> = {
   autoFocus?: boolean

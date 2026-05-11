@@ -1,6 +1,5 @@
-import { CodeEditor } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { CodeEditor } from '..'
 
 export default {
   component: CodeEditor,

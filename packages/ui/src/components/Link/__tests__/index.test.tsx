@@ -3,11 +3,9 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { forwardRef } from 'react'
 import { describe, expect, it, vi } from 'vitest'
-
 import { Link } from '..'
-import { PROMINENCES } from '../constants'
-
 import type { ProminenceProps } from '..'
+import { PROMINENCES } from '../constants'
 
 // Mock component simulating Next.js Link
 const MockNextLink = forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }>(

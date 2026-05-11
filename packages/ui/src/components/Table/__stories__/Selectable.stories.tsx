@@ -1,13 +1,10 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { Table } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
 import { columns, data } from './resources'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Selectable: StoryFn<typeof Table> = args => {
   const [clicked, setClick] = useState(true)

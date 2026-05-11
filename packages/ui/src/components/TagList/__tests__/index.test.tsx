@@ -2,9 +2,7 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { afterAll, describe, expect, it, vi } from 'vitest'
-
 import { TagList } from '..'
-
 import type { TagType } from '..'
 
 // - This function mocks the offsetWidth of DOM elements:

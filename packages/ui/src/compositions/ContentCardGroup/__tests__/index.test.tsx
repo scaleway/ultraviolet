@@ -1,6 +1,5 @@
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-
 import { ContentCardGroup } from '..'
 
 describe('contentCardGroup', () => {

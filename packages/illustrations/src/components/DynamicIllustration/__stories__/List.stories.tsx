@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack, Text } from '@ultraviolet/ui'
-
 import { DynamicIllustration } from '..'
 import { ILLUSTRATIONS } from '../__generated__/Illustrations'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const List: StoryFn = props => (
   <Stack gap={1}>

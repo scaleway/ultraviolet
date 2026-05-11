@@ -1,7 +1,6 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { SelectableCard } from '..'
 import { Text } from '../../Text'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Template: StoryFn<typeof SelectableCard> = ({ ...props }) => <SelectableCard {...props} />
 

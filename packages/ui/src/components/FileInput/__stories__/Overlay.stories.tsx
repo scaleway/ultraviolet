@@ -1,20 +1,17 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { RebootIcon } from '@ultraviolet/icons/RebootIcon'
 import { SendIcon } from '@ultraviolet/icons/SendIcon'
 import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
 import { useState } from 'react'
-
+import type { Dispatch, RefObject, SetStateAction } from 'react'
 import { FileInput } from '..'
 import { Button } from '../../Button'
 import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { TextInput } from '../../TextInput'
-
-import { promptInput, promptWrapper } from './styles.css'
-
 import type { FilesType } from '../types'
-import type { StoryFn } from '@storybook/react-vite'
-import type { Dispatch, RefObject, SetStateAction } from 'react'
+import { promptInput, promptWrapper } from './styles.css'
 
 const Prompt = ({
   inputRef,

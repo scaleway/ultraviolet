@@ -3,14 +3,11 @@ import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIco
 import { CloseCircleOutlineIcon } from '@ultraviolet/icons/CloseCircleOutlineIcon'
 import { Button, Stack, Table, Text, Tooltip, ProgressBar } from '@ultraviolet/ui'
 import { useState, useEffect } from 'react'
-
+import type { ReactNode } from 'react'
 import { findComponentState } from '../ComponentState/constants'
 import { storiesCompositionsModules, storiesComponentModules } from '../constants'
-
 import { AUDIT_CATEGORIES, A11Y_LEVELS, findA11yStatus, getComponentAuditCategories } from './constants'
-
 import type { A11yLevel, ComponentAuditStatus, AuditCategories, ComponentStoryParameters } from './constants'
-import type { ReactNode } from 'react'
 
 type ComponentInfo = {
   title: string

@@ -1,6 +1,5 @@
-import { Button } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Button } from '..'
 
 export default {
   component: Button,

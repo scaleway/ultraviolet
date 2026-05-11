@@ -3,6 +3,7 @@ import addonDocs from '@storybook/addon-docs'
 import addonLinks from '@storybook/addon-links'
 import addonTheme, { withThemeByClassName } from '@storybook/addon-themes'
 import { definePreview } from '@storybook/react-vite'
+import type { Decorator, Preview } from '@storybook/react-vite'
 import {
   consoleDarkerTheme as darkerTheme,
   consoleDarkTheme as darkTheme,
@@ -11,13 +12,11 @@ import {
 } from '@ultraviolet/themes'
 import { scan } from 'react-scan'
 import { themes } from 'storybook/theming'
-
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
-import { dark, light } from './storybookThemes'
 import '@ultraviolet/fonts/fonts.css'
 
-import type { Decorator, Preview } from '@storybook/react-vite'
+import { dark, light } from './storybookThemes'
 
 const BREAKPOINT_ORDER = ['xlarge', 'large', 'medium', 'small', 'xsmall', 'xxsmall'] as const
 

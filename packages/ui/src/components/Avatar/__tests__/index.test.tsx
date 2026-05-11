@@ -3,7 +3,6 @@ import { userEvent } from '@testing-library/user-event'
 import { MosaicIcon } from '@ultraviolet/icons/MosaicIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-
 import { Avatar } from '..'
 import support from '../__stories__/assets/avatar.svg'
 

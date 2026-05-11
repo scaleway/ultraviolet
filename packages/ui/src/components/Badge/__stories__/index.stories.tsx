@@ -1,6 +1,5 @@
-import { Badge } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Badge } from '..'
 
 export default {
   component: Badge,

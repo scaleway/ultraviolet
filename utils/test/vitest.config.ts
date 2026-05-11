@@ -1,5 +1,4 @@
 import { configDefaults, defineConfig, mergeConfig } from 'vitest/config'
-
 import type { TestUserConfig, ViteUserConfig } from 'vitest/config'
 
 const defaultConfig = defineConfig({

@@ -1,10 +1,8 @@
+import type { ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
-import { textInputStyle } from './styles.css'
-
 import type { TextInputProps } from './type'
-import type { ReactNode } from 'react'
+import { textInputStyle } from './styles.css'
 
 export const PrefixSuffix = ({
   size,

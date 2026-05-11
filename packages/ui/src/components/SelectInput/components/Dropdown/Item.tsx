@@ -1,13 +1,10 @@
 import { cn } from '@ultraviolet/utils'
-
+import type { ChangeEvent, KeyboardEvent, MouseEvent, RefObject } from 'react'
 import { Checkbox } from '../../../Checkbox'
 import { useSelectInput } from '../../SelectInputProvider'
-import { selectInputStyle } from '../../styles.css'
-
-import { DisplayOption } from './Option'
-
 import type { OptionType } from '../../types'
-import type { ChangeEvent, KeyboardEvent, MouseEvent, RefObject } from 'react'
+import { DisplayOption } from './Option'
+import { selectInputStyle } from '../../styles.css'
 
 export const Item = ({
   option,

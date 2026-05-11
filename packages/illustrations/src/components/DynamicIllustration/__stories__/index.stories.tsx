@@ -1,6 +1,5 @@
-import { DynamicIllustration } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { DynamicIllustration } from '..'
 
 export default {
   component: DynamicIllustration,

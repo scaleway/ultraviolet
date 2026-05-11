@@ -4,9 +4,7 @@ import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
 import { Button, Row, Stack, Text, Tooltip } from '@ultraviolet/ui'
 import { useState } from 'react'
-
 import { hexadecimalColorRegex, INITIAL_VALUES } from '../contants'
-
 import { capitalizeText, row } from './style.css'
 
 export const FormContent = () => {

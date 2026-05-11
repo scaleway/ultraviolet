@@ -1,5 +1,4 @@
 import { Badge, SelectInput } from '@ultraviolet/ui'
-
 import type { ComponentProps } from 'react'
 
 export const mysqlOptions: ComponentProps<typeof SelectInput>['options'] = [

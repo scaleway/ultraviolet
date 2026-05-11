@@ -1,15 +1,13 @@
 import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category/OrganizationDashboardCategoryIcon'
 import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import { Children } from 'react'
-
 import { Button } from '../../../../components/Button'
 import { Menu } from '../../../../components/Menu'
 import { Stack } from '../../../../components/Stack'
 import { Tooltip } from '../../../../components/Tooltip'
-import { navigationStyle } from '../../styles.css'
-import { ItemProvider } from '../Item/ItemProvider'
-
 import type { ItemMenuType } from '../ComponentsTypes'
+import { ItemProvider } from '../Item/ItemProvider'
+import { navigationStyle } from '../../styles.css'
 
 export const ItemMenu = ({
   style,

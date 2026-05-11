@@ -1,16 +1,13 @@
 import { Form, useForm } from '@ultraviolet/form'
 import { theme as consoleLightTheme, Stack, Text } from '@ultraviolet/ui'
+import type { UltravioletUITheme } from '@ultraviolet/ui'
 import { useCallback, useEffect, useState } from 'react'
-
 import { TOKENS_URL } from '../../../../scripts/figma-synchronise-token/constants'
 import { generatePalette } from '../../../../scripts/figma-synchronise-token/generatePalette'
-
 import { INITIAL_VALUES, SHADES_KEYS, SHADES_KEYS_MATCHING } from './contants'
 import { FormContent } from './FormContent'
 import { generateShadeContrast } from './helpers'
 import { ThemeResult } from './ThemeResult'
-
-import type { UltravioletUITheme } from '@ultraviolet/ui'
 
 type JsonTokenType = {
   paletteLight: {

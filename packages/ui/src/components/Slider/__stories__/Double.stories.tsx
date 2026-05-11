@@ -1,8 +1,6 @@
-import { useState } from 'react'
-
-import { Slider } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { useState } from 'react'
+import { Slider } from '..'
 
 export const Double: StoryFn<typeof Slider> = () => {
   const [value, setValue] = useState([1, 3])

@@ -1,8 +1,7 @@
 import { SelectInput } from '../../../components/SelectInput'
-import { optionSelectorStyle } from '../styles.css'
-
 import type { DataType } from '../../../components/SelectInput/types'
 import type { OptionSelectorProps } from '../types'
+import { optionSelectorStyle } from '../styles.css'
 
 export const Selector = ({
   isFirst,

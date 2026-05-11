@@ -3,14 +3,11 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useMemo, useRef, useState } from 'react'
-
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
-
 import { DEFAULT_POPOVER_MAX_HEIGHT, MIN_TAG_WIDTH, TAGS_GAP } from './constant'
 import { popoverTriggerWidthVar, tagListStyle } from './styles.css'
-
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 
 export type TagType = string | { label: string; icon: ReactNode }
 

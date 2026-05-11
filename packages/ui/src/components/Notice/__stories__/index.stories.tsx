@@ -1,6 +1,5 @@
-import { Notice } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Notice } from '..'
 
 export default {
   component: Notice,

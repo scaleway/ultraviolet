@@ -1,12 +1,10 @@
 import { theme } from '@ultraviolet/themes'
 import { keyframes, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-
+import { DEFAULT_ARROW_WIDTH } from './helpers'
 import { tagStyle } from '../Tag/styles.css'
 import { tagListStyle } from '../TagList/styles.css'
 import { textStyle } from '../Text/style.css'
-
-import { DEFAULT_ARROW_WIDTH } from './helpers'
 import {
   animationDurationPopup,
   arrowLeft,

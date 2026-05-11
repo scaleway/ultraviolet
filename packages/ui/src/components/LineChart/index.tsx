@@ -1,22 +1,19 @@
 'use client'
 
-import { ResponsiveLine } from '@nivo/line'
-import { useTheme } from '@ultraviolet/themes'
-import { useEffect, useState } from 'react'
-
-import { getLegendColor } from '../../helpers/legend'
-import { getNivoTheme } from '../../helpers/nivoTheme'
-
-import { CustomLegend } from './CustomLegend'
-import { getMaxChartValue, getMinChartValue } from './helpers'
-import { LineChartTooltip } from './Tooltip'
-
-import type { Serie } from './helpers'
 import type { Box as NivoBox, ValueFormat } from '@nivo/core'
+import { ResponsiveLine } from '@nivo/line'
 import type { LineSvgProps, Point, LineSeries, AllowedValue } from '@nivo/line'
 import type { ScaleSpec } from '@nivo/scales'
+import { useTheme } from '@ultraviolet/themes'
 import type { theme as UVTheme } from '@ultraviolet/themes'
+import { useEffect, useState } from 'react'
 import type { ComponentProps, CSSProperties } from 'react'
+import { getLegendColor } from '../../helpers/legend'
+import { getNivoTheme } from '../../helpers/nivoTheme'
+import { CustomLegend } from './CustomLegend'
+import { getMaxChartValue, getMinChartValue } from './helpers'
+import type { Serie } from './helpers'
+import { LineChartTooltip } from './Tooltip'
 
 type LineChartProps = {
   height?: string | number

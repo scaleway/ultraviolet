@@ -6,7 +6,6 @@
  * PLEASE DO NOT EDIT HERE
  */
 import { Icon } from '../Icon'
-
 import type { IconProps } from '../Icon'
 
 export const AuditTrailProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (

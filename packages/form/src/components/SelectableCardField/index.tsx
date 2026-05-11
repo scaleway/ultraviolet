@@ -1,11 +1,10 @@
 'use client'
 
 import { SelectableCard } from '@ultraviolet/ui'
-import { useController } from 'react-hook-form'
-
-import type { BaseFieldProps } from '../../types'
 import type { ComponentProps } from 'react'
+import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import type { BaseFieldProps } from '../../types'
 
 type SelectableCardFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = Omit<
   BaseFieldProps<TFieldValues, TFieldName>,

@@ -1,8 +1,7 @@
 'use client'
 
-import { Button } from '../../Button'
-
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import { Button } from '../../Button'
 
 type DialogCancelButtonProps = {
   children: ReactNode

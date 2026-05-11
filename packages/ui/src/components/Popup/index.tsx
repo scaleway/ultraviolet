@@ -14,11 +14,19 @@ import {
   useRef,
   useState,
 } from 'react'
+import type {
+  CSSProperties,
+  HTMLAttributes,
+  KeyboardEventHandler,
+  MouseEventHandler,
+  ReactNode,
+  Ref,
+  RefObject,
+} from 'react'
 import { createPortal } from 'react-dom'
-
 import { isClientSide } from '../../helpers/isClientSide'
-
 import { computePositions, DEFAULT_POSITIONS } from './helpers'
+import type { PopupAlign, PopupPlacement } from './helpers'
 import { popupStyle } from './styles.css'
 import {
   animationDurationPopup,
@@ -30,17 +38,6 @@ import {
   popupInitialPosition,
   popupPosition,
 } from './variables.css'
-
-import type { PopupAlign, PopupPlacement } from './helpers'
-import type {
-  CSSProperties,
-  HTMLAttributes,
-  KeyboardEventHandler,
-  MouseEventHandler,
-  ReactNode,
-  Ref,
-  RefObject,
-} from 'react'
 
 const DEFAULT_ANIMATION_DURATION = 230 // in ms
 const DEFAULT_DEBOUNCE_DURATION = 200 // in ms

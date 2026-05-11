@@ -1,6 +1,5 @@
-import { PieChart } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { PieChart } from '..'
 
 export default {
   component: PieChart,

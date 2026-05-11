@@ -1,5 +1,5 @@
-import type { Popup } from '../Popup'
 import type { ButtonHTMLAttributes, ComponentProps, ReactElement, ReactNode, Ref } from 'react'
+import type { Popup } from '../Popup'
 
 type ChildMenuProps = {
   toggle: () => void

@@ -5,11 +5,9 @@ import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useState } from 'react'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-
-import { List } from '..'
-
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { List } from '..'
 
 type WrapperProps = {
   theme?: typeof consoleLightTheme

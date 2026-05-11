@@ -1,6 +1,5 @@
-import { Link } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Link } from '..'
 
 export default {
   component: Link,

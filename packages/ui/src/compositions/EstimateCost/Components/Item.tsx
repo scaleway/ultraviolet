@@ -3,19 +3,16 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { memo, useCallback, useEffect, useId, useMemo, useState } from 'react'
-
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import type { Text } from '../../../components/Text'
 import { maximumFractionDigits, maximumFractionDigitsLong, multiplier } from '../constants'
 import { useEstimateCost } from '../EstimateCostProvider'
 import { calculatePrice } from '../helper'
 import { useOverlay } from '../OverlayContext'
-import { estimateCostStyle, paddingLeftCell } from '../styles.css'
-
+import type { BareEstimateProduct, EstimateProduct, Iteration, Units } from '../types'
 import { ItemLeftSide } from './ItemLeftSide'
 import { ItemPrice } from './ItemPrice'
-
-import type { Text } from '../../../components/Text'
-import type { BareEstimateProduct, EstimateProduct, Iteration, Units } from '../types'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import { estimateCostStyle, paddingLeftCell } from '../styles.css'
 
 type ItemProps = {
   amount?: number

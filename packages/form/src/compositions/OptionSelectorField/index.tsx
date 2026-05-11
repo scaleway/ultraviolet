@@ -1,13 +1,11 @@
 'use client'
 
 import { OptionSelector } from '@ultraviolet/ui/compositions/OptionSelector'
-import { useController } from 'react-hook-form'
-
-import { useErrors } from '../../providers'
-
-import type { BaseFieldProps } from '../../types'
 import type { ComponentProps } from 'react'
+import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues } from 'react-hook-form'
+import { useErrors } from '../../providers'
+import type { BaseFieldProps } from '../../types'
 
 type OptionSelectorFieldProps<
   TFieldValues extends FieldValues,

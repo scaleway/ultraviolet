@@ -1,5 +1,4 @@
 import { Badge } from '../../Badge'
-
 import { Template } from './Template.stories'
 
 export const LabelHelper = Template.bind({})

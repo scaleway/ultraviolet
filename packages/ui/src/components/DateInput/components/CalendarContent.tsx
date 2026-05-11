@@ -3,16 +3,14 @@
 import { ArrowLeftIcon } from '@ultraviolet/icons/ArrowLeftIcon'
 import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { useContext } from 'react'
-
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { DateInputContext } from '../Context'
 import { getNextMonth, getPreviousMonth } from '../helpers'
-import { dateInputStyle } from '../styles.css'
-
 import { Daily } from './CalendarDaily'
 import { Monthly } from './CalendarMonthly'
+import { dateInputStyle } from '../styles.css'
 
 export const CalendarContent = () => {
   const {

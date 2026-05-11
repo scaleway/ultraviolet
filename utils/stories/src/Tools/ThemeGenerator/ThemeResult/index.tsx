@@ -3,12 +3,10 @@ import { EyeIcon } from '@ultraviolet/icons/EyeIcon'
 import { EyeOffIcon } from '@ultraviolet/icons/EyeOffIcon'
 import { ThemeProvider } from '@ultraviolet/themes'
 import { Button, theme as consoleLightTheme, Row, Stack, Text } from '@ultraviolet/ui'
+import type { UltravioletUITheme } from '@ultraviolet/ui'
 import { useCallback, useState } from 'react'
-
 import { CodeIntegration } from './CodeIntegration'
 import { Demo } from './Demo' // For some reason Global doesn't work here this is the workaround I found
-
-import type { UltravioletUITheme } from '@ultraviolet/ui'
 
 type ThemeResultProps = {
   theme: UltravioletUITheme

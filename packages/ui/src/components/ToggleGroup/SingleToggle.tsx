@@ -1,12 +1,9 @@
 'use client'
 
 import { useContext } from 'react'
-
-import { Toggle } from '../Toggle'
-
-import { ToggleGroupContext } from './Context'
-
 import type { ComponentProps } from 'react'
+import { Toggle } from '../Toggle'
+import { ToggleGroupContext } from './Context'
 
 type ToggleGroupToggleProps = Omit<ComponentProps<typeof Toggle>, 'onChange' | 'checked' | 'required'> & {
   value: string

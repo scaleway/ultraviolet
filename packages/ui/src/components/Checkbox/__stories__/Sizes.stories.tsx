@@ -1,8 +1,6 @@
-import { useState } from 'react'
-
-import { Checkbox } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { useState } from 'react'
+import { Checkbox } from '..'
 
 export const Sizes: StoryFn<typeof Checkbox> = () => {
   const [checked, setChecked] = useState(false)

@@ -3,15 +3,12 @@
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
+import type { ReactNode } from 'react'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
 import { SortIcon } from './SortIcon'
 import { tableStyle } from './styles.css'
 import { headerCellMaxWidth, headerCellMinWidth, headerCellWidth } from './variables.css'
-
-import type { ReactNode } from 'react'
 
 type HeaderCellProps = {
   children: ReactNode

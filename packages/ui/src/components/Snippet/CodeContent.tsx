@@ -3,9 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Children } from 'react'
-
 import { Text } from '../Text'
-
 import { rowsVar, snippetStyle } from './styles.css'
 
 export type Prefixes = 'lines' | 'command'

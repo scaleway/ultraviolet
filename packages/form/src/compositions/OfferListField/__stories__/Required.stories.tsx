@@ -1,11 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
-
+import type { ComponentProps } from 'react'
 import { OfferListField } from '..'
 import { Submit } from '../../../components/Submit'
 import { columns, data } from '../__tests__/resources'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 export const Required: StoryFn<ComponentProps<typeof OfferListField>> = args => (
   <Stack gap={1}>

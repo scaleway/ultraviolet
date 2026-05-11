@@ -1,12 +1,9 @@
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { useState } from 'react'
-
 import { Popover } from '../../components/Popover'
 import { Tooltip } from '../../components/Tooltip'
-
-import { plansStyle } from './styles.css'
-
 import type { Hint } from './types'
+import { plansStyle } from './styles.css'
 
 type FeatureHintProps = {
   hint?: Hint

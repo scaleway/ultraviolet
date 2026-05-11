@@ -3,20 +3,17 @@
 import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useCallback, useContext, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
-
+import type { ComponentProps, Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { ModalContext } from '../../../Modal/ModalProvider'
 import { Popup } from '../../../Popup'
 import { Stack } from '../../../Stack'
 import { DROPDOWN_MAX_HEIGHT, INPUT_SIZE_HEIGHT } from '../../constants'
 import { useSelectInput } from '../../SelectInputProvider'
-import { selectInputStyle } from '../../styles.css'
-
-import { CreateDropdown } from './Content'
-import { dropdownWidth } from './dropdown.css'
-import { SearchBar } from './SearchBar'
-
 import type { DataType } from '../../types'
-import type { ComponentProps, Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
+import { CreateDropdown } from './Content'
+import { SearchBar } from './SearchBar'
+import { selectInputStyle } from '../../styles.css'
+import { dropdownWidth } from './dropdown.css'
 
 export type DropdownProps = {
   id?: string

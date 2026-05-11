@@ -1,7 +1,6 @@
-import { Tooltip } from '..'
-
 import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { Tooltip } from '..'
 
 const PLACEMENTS: ComponentProps<typeof Tooltip>['placement'][] = ['auto', 'top', 'bottom', 'left', 'right']
 

@@ -1,6 +1,5 @@
-import { Submit } from '../..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Submit } from '../..'
 
 export default {
   component: Submit,

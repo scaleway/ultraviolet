@@ -2,7 +2,6 @@ import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
 import { MoonOutlineIcon } from '@ultraviolet/icons/MoonOutlineIcon'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
-
 import { Bullet } from '..'
 import { SENTIMENTS } from '../../../theme'
 

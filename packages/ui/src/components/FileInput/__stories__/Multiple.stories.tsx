@@ -1,7 +1,6 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { FileInput } from '..'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const defaultFile = [
   {

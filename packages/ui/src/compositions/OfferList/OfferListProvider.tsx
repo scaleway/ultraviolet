@@ -1,5 +1,4 @@
 import { createContext, useContext, useMemo } from 'react'
-
 import type { Dispatch, ReactNode, SetStateAction } from 'react'
 
 type OfferListContextValue = {

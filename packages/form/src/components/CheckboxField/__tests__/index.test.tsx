@@ -3,7 +3,6 @@ import { userEvent } from '@testing-library/user-event'
 import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
 import { describe, expect, vi, it } from 'vitest'
-
 import { CheckboxField } from '../..'
 import { Form } from '../../Form'
 

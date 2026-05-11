@@ -3,12 +3,9 @@
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { cn } from '@ultraviolet/utils'
 import { forwardRef } from 'react'
-
-import { Menu } from '../Menu'
-
-import { tabsStyle } from './styles.css'
-
 import type { ButtonHTMLAttributes, ComponentProps, ReactNode, Ref } from 'react'
+import { Menu } from '../Menu'
+import { tabsStyle } from './styles.css'
 
 type TabMenuProps = {
   children: ReactNode

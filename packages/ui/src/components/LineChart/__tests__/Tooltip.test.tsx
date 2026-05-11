@@ -1,9 +1,7 @@
+import type { LineSeries, Point } from '@nivo/line'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
-
 import { LineChartTooltip } from '../Tooltip'
-
-import type { LineSeries, Point } from '@nivo/line'
 
 describe('lineChart Tooltip', () => {
   it('renders correctly ', () =>

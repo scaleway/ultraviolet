@@ -1,8 +1,7 @@
-import { TagInputField } from '..'
-import { Submit } from '../../Submit'
-
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { TagInputField } from '..'
+import { Submit } from '../../Submit'
 
 export const Required: StoryFn<ComponentProps<typeof TagInputField>> = args => (
   <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>

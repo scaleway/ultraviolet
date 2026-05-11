@@ -1,13 +1,10 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
-
+import type { ComponentProps } from 'react'
 import { TextInputField } from '..'
 import { Submit } from '../../Submit'
 import { SubmitErrorAlert } from '../../SubmitErrorAlert'
-
 import { Template } from './Template.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 const emailValidate = {
   pattern: async (value: string) => {

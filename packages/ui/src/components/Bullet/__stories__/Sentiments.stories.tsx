@@ -1,9 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Bullet } from '..'
 import { SENTIMENTS } from '../../../theme'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Sentiments: StoryFn = props => (
   <Stack gap={1}>

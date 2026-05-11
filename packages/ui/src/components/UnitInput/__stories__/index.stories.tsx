@@ -1,6 +1,5 @@
-import { UnitInput } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { UnitInput } from '..'
 
 export default {
   component: UnitInput,

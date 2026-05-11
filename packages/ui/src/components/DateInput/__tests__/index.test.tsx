@@ -4,7 +4,6 @@ import { renderWithTheme } from '@utils/test'
 import { es, fr, ru } from 'date-fns/locale'
 import tk from 'timekeeper'
 import { describe, expect, it, vi } from 'vitest'
-
 import { DateInput } from '..'
 
 tk.freeze(new Date(1_609_503_120_000))

@@ -3,15 +3,13 @@
 import { isFuzzyMatch, normalizeString } from '@scaleway/fuzzy-search'
 import { SearchIcon } from '@ultraviolet/icons/SearchIcon'
 import { useEffect, useRef } from 'react'
-
+import type { Dispatch, KeyboardEvent, SetStateAction } from 'react'
 import { TextInput } from '../../../TextInput'
 import { OPTION_SELECTOR } from '../../constants'
 import { useSelectInput } from '../../SelectInputProvider'
-import { selectInputStyle } from '../../styles.css'
-import { computeSelectedDataMultiselect, computeSelectedDataSingleSelect } from '../helpers'
-
 import type { DataType, OptionType } from '../../types'
-import type { Dispatch, KeyboardEvent, SetStateAction } from 'react'
+import { computeSelectedDataMultiselect, computeSelectedDataSingleSelect } from '../helpers'
+import { selectInputStyle } from '../../styles.css'
 
 type SearchBarProps = {
   placeholder: string

@@ -2,17 +2,14 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useCallback, useState } from 'react'
+import type { ComponentProps } from 'react'
 import { describe, expect, it, vi } from 'vitest'
-
 import { Popover } from '..'
 import { Button } from '../../Button'
 import { Modal } from '../../Modal'
 import { SelectInput } from '../../SelectInput'
 import { TextInput } from '../../TextInput'
-
 import { customPopover } from './style.css'
-
-import type { ComponentProps } from 'react'
 
 const options: ComponentProps<typeof SelectInput>['options'] = [
   {

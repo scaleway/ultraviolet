@@ -1,5 +1,5 @@
-import type { Table } from '../../Table'
 import type { ComponentProps } from 'react'
+import type { Table } from '../../Table'
 
 export const generateRandomName = (nameLength: number) =>
   String.fromCharCode(...Array.from({ length: nameLength }, () => Math.floor(Math.random() * 26) + 97)).replace(

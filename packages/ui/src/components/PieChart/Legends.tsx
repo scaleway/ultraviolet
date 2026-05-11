@@ -1,13 +1,10 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
 import { Tooltip } from '../Tooltip'
-
-import { colorBullet, pieChartStyle } from './styles.css'
 import { Tooltip as TooltipContainer } from './Tooltip'
-
 import type { Data } from './types'
+import { colorBullet, pieChartStyle } from './styles.css'
 
 type LegendsProps = {
   data?: Data[]

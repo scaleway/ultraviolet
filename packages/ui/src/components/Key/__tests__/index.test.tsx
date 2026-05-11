@@ -1,7 +1,6 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it } from 'vitest'
-
 import { KEYS_MATCH } from '../constants'
 import { Key } from '../index'
 

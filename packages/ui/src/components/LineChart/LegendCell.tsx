@@ -1,11 +1,8 @@
-import { cn } from '@ultraviolet/utils'
-
-import { Text } from '../Text'
-
-import { lineChartStyle } from './styles.css'
-
 import type { DatumValue } from '@nivo/core'
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
+import { Text } from '../Text'
+import { lineChartStyle } from './styles.css'
 
 type CellProps = {
   value?: DatumValue

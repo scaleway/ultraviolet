@@ -3,15 +3,12 @@
 import { ArrowLeftDoubleIcon } from '@ultraviolet/icons/ArrowLeftDoubleIcon'
 import { ArrowRightDoubleIcon } from '@ultraviolet/icons/ArrowRightDoubleIcon'
 import { useCallback, useLayoutEffect, useMemo, useState } from 'react'
-
+import type { RefObject } from 'react'
 import { Button } from '../../components/Button'
 import { Tooltip } from '../../components/Tooltip'
-
 import { useNavigation } from './NavigationProvider'
-import { navigationStyle } from './styles.css'
-
 import type { NavigationProps } from './types'
-import type { RefObject } from 'react'
+import { navigationStyle } from './styles.css'
 
 type FooterProps = {
   onToggleExpand: NavigationProps['onToggleExpand']

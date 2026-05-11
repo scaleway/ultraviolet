@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-
+import type { ComponentProps, ReactNode } from 'react'
 import { Badge as BadgeUV } from '../../../components/Badge'
 import { Checkbox } from '../../../components/Checkbox'
 import { List } from '../../../components/List'
@@ -9,8 +9,6 @@ import { Radio } from '../../../components/Radio'
 import { Tooltip } from '../../../components/Tooltip'
 import { useOfferListContext } from '../OfferListProvider'
 import { offerListStyle } from '../styles.css'
-
-import type { ComponentProps, ReactNode } from 'react'
 
 export const SelectableCell = ({
   disabled,

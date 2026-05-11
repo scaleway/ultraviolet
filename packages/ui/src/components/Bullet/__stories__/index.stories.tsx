@@ -1,6 +1,5 @@
-import { Bullet } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Bullet } from '..'
 
 export default {
   component: Bullet,

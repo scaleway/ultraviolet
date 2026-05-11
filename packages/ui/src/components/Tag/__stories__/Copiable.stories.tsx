@@ -1,7 +1,6 @@
+import type { Decorator, StoryFn } from '@storybook/react-vite'
 import { Tag } from '..'
 import { Stack } from '../../Stack'
-
-import type { Decorator, StoryFn } from '@storybook/react-vite'
 
 export const Copiable: StoryFn<typeof Tag> = args => (
   <Stack gap={1}>

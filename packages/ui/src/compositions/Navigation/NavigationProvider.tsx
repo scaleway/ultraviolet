@@ -3,13 +3,11 @@
 import { useFlip, usePrefersReducedMotion } from '@ultraviolet/animations'
 import { setElementVars } from '@vanilla-extract/dynamic'
 import { createContext, useCallback, useContext, useMemo, useReducer, useRef, useState } from 'react'
-
+import type { Dispatch, ReactNode, RefObject } from 'react'
 import { ANIMATION_DURATION, ANIMATION_EASING, NAVIGATION_WIDTH } from './constants'
 import NavigationLocales from './locales/en'
-import { widthNavigationContainerDuration } from './variables.css'
-
 import type { PinUnPinType } from './types'
-import type { Dispatch, ReactNode, RefObject } from 'react'
+import { widthNavigationContainerDuration } from './variables.css'
 type Item = {
   label: string
   active?: boolean

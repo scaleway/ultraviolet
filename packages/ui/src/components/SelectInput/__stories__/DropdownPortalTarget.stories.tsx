@@ -1,8 +1,6 @@
-import { SelectInput } from '..'
-
-import { dataGrouped } from './resources'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { SelectInput } from '..'
+import { dataGrouped } from './resources'
 
 export const DropdownPortalTarget: StoryFn<typeof SelectInput> = args => (
   <SelectInput {...args} label="Portal target: document.body" portalTarget={document.body} />

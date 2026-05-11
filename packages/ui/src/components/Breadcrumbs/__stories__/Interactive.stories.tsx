@@ -1,14 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
 import { useCallback, useState } from 'react'
-
+import type { ComponentProps, MouseEvent } from 'react'
 import { Breadcrumbs } from '..'
 import { Button } from '../../Button'
 import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps, MouseEvent } from 'react'
 
 type ItemProp = { label: string; to?: string }[]
 

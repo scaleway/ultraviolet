@@ -1,8 +1,6 @@
-import { List } from '..'
-
-import { data, overflowColumns } from './resources'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { List } from '..'
+import { data, overflowColumns } from './resources'
 
 export const Overflow: StoryFn = args => (
   <List {...args} columns={overflowColumns} selectable>

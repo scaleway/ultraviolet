@@ -3,14 +3,11 @@ import {
   BasicSupportProductIcon,
   EntrepriseSupportProductIcon,
 } from '@ultraviolet/icons/product'
-
+import type { ReactNode } from 'react'
 import { Button } from '../../../components/Button'
 import { Separator } from '../../../components/Separator'
-
 import { domain, fees, gb, pipeline, ssl } from './features'
 import { Template } from './Template.stories'
-
-import type { ReactNode } from 'react'
 
 const StyledDiv = ({ children }: { children: ReactNode }) => (
   <div

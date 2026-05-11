@@ -1,3 +1,4 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { BaremetalCategoryIcon } from '@ultraviolet/icons/category/BaremetalCategoryIcon'
@@ -11,19 +12,15 @@ import { UseCaseCategoryIcon } from '@ultraviolet/icons/category/UseCaseCategory
 import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import { SettingsIcon } from '@ultraviolet/icons/SettingsIcon'
 import { useCallback, useEffect, useMemo, useState } from 'react'
-
+import type { ComponentProps } from 'react'
 import { Navigation, NavigationProvider } from '..'
 import { Badge } from '../../../components/Badge'
 import { Button } from '../../../components/Button'
 import { Stack } from '../../../components/Stack'
 import { Tooltip } from '../../../components/Tooltip'
-
 import logoSmall from './assets/logo-small.svg'
 import logo from './assets/logo.svg'
 import { logoStyle } from './styles.css'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 const hideContent = (
   <>

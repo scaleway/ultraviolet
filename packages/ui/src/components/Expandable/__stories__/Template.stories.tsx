@@ -1,6 +1,5 @@
-import { Expandable } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { Expandable } from '..'
 
 export const Template: StoryFn<typeof Expandable> = ({ opened, ...args }) => (
   <Expandable opened={opened ?? true} {...args}>

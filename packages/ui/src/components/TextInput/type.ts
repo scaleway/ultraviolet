@@ -1,5 +1,5 @@
-import type { TEXTINPUT_SIZE_HEIGHT } from './constants'
 import type { InputHTMLAttributes, ReactNode } from 'react'
+import type { TEXTINPUT_SIZE_HEIGHT } from './constants'
 
 export type TextInputProps = {
   className?: string

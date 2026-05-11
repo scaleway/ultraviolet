@@ -3,15 +3,12 @@
 import { PinCategoryIcon } from '@ultraviolet/icons/category'
 import { useTheme } from '@ultraviolet/themes'
 import { useCallback } from 'react'
-
+import type { CSSProperties, DragEvent, ReactElement } from 'react'
 import { Text } from '../../../components/Text'
 import { useNavigation } from '../NavigationProvider'
-import { navigationStyle } from '../styles.css'
-
-import { Item } from './Item/Item'
-
 import type { DragNDropData } from '../types'
-import type { CSSProperties, DragEvent, ReactElement } from 'react'
+import { Item } from './Item/Item'
+import { navigationStyle } from '../styles.css'
 
 type PinnedItemsProps = {
   /**

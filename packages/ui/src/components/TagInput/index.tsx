@@ -5,18 +5,15 @@ import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIco
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn, getUUID } from '@ultraviolet/utils'
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
-
+import type { ChangeEvent, CSSProperties, KeyboardEventHandler, ReactNode } from 'react'
 import { Button } from '../Button'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Tag } from '../Tag'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
 import { tagInputStyle } from './styles.css'
-
 import type { TAGINPUT_SIZE_PADDING } from './styles.css'
-import type { ChangeEvent, CSSProperties, KeyboardEventHandler, ReactNode } from 'react'
 
 type TagInputSize = keyof typeof TAGINPUT_SIZE_PADDING
 

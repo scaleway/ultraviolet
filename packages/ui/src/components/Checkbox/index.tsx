@@ -2,15 +2,12 @@
 
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId } from 'react'
-
+import type { InputHTMLAttributes, ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
 import { CheckboxIconContainer } from './CheckboxIconContainer'
 import { checkboxStyle } from './styles.css'
-
-import type { InputHTMLAttributes, ReactNode } from 'react'
 
 type LabelProp =
   | {

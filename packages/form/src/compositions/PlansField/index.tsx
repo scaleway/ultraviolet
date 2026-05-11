@@ -1,9 +1,8 @@
 import { Plans } from '@ultraviolet/ui/compositions/Plans'
-import { useController } from 'react-hook-form'
-
-import type { BaseFieldProps } from '../../types'
 import type { ComponentProps } from 'react'
+import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues } from 'react-hook-form'
+import type { BaseFieldProps } from '../../types'
 
 type PlanFieldsProps<
   TFieldValues extends FieldValues,

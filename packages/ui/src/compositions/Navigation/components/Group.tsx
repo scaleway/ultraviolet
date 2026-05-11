@@ -1,13 +1,11 @@
 'use client'
 
 import { Children, useId } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
 import { useNavigation } from '../NavigationProvider'
 import { navigationStyle } from '../styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type GroupProps = {
   children: ReactNode

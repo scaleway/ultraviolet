@@ -1,6 +1,5 @@
-import { RadioGroup } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { RadioGroup } from '..'
 
 export default {
   component: RadioGroup,

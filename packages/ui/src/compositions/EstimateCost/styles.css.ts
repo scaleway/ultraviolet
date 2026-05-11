@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-
+import { MAX_CELL_WIDTH, PRICE_MAX_CELL_WIDTH } from './constants'
 import {
   badgeItem,
   div,
@@ -19,7 +19,6 @@ import {
   tooltip,
   tr,
 } from './Components/components.css'
-import { MAX_CELL_WIDTH, PRICE_MAX_CELL_WIDTH } from './constants'
 
 export const paddingLeftCell = createVar()
 export const overlayMarginVar = createVar()

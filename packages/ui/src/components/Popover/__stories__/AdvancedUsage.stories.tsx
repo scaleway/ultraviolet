@@ -1,13 +1,11 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useCallback, useState } from 'react'
-
+import type { ComponentProps } from 'react'
 import { Button } from '../../Button'
 import { Modal } from '../../Modal'
 import { SelectInput } from '../../SelectInput'
 import { TextInput } from '../../TextInput'
 import { Popover } from '../index'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 const options: ComponentProps<typeof SelectInput>['options'] = [
   {

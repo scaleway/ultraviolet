@@ -1,6 +1,5 @@
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
-
 import { EmptyState } from '..'
 import kapsuleLogo from '../__stories__/illustrations/kapsule.webp'
 

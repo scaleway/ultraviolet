@@ -1,17 +1,14 @@
+import type { StoryFn } from '@storybook/react-vite'
 import {
   DynamicIllustration,
   // @ts-expect-error can't import ultraviolet/illustration in ui (cyclic dependencies)
 } from '@ultraviolet/illustrations'
-
 import { SelectInput } from '..'
 import { EmptyState as EmptyStateComponent } from '../../EmptyState'
 import { Link } from '../../Link'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
 import { Template } from './Template.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const emptyStateText = (
   <Stack alignItems="center" gap={2}>

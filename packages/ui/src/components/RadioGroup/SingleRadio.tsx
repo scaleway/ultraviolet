@@ -1,12 +1,9 @@
 'use client'
 
 import { useContext } from 'react'
-
-import { Radio } from '../Radio'
-
-import { RadioGroupContext } from './Context'
-
 import type { ComponentProps } from 'react'
+import { Radio } from '../Radio'
+import { RadioGroupContext } from './Context'
 
 type RadioGroupRadioProps = Omit<ComponentProps<typeof Radio>, 'onChange' | 'checked' | 'required' | 'name'>
 export const RadioGroupRadio = ({

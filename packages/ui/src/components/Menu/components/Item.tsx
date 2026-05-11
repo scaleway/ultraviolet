@@ -3,14 +3,12 @@
 import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useCallback } from 'react'
-
+import type { CSSProperties, KeyboardEvent, MouseEvent, MouseEventHandler, ReactNode, Ref } from 'react'
 import { Stack } from '../../Stack'
 import { Tooltip } from '../../Tooltip'
 import { getListItem } from '../helpers'
 import { useDisclosureContext, useMenu } from '../MenuProvider'
 import { menuStyle } from '../styles.css'
-
-import type { CSSProperties, KeyboardEvent, MouseEvent, MouseEventHandler, ReactNode, Ref } from 'react'
 
 type MenuItemSentiment = 'neutral' | 'primary' | 'danger'
 

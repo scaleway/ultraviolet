@@ -3,19 +3,16 @@
 import { CalculatorIcon } from '@ultraviolet/icons/CalculatorIcon'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Children, cloneElement, isValidElement, useMemo } from 'react'
-
+import type { JSX, ReactNode } from 'react'
 import { Badge } from '../../components/Badge'
 import { Stack } from '../../components/Stack'
-
 import { LineThrough } from './Components/LineThrough'
 import { Strong } from './Components/Strong'
 import { maximumFractionDigits, multiplier } from './constants'
 import { useEstimateCost } from './EstimateCostProvider'
 import { OverlayContextProvider } from './OverlayContext'
-import { estimateCostStyle, overlayMarginVar } from './styles.css'
-
 import type { Units } from './types'
-import type { JSX, ReactNode } from 'react'
+import { estimateCostStyle, overlayMarginVar } from './styles.css'
 
 type ExtraProps = {
   isFirstElement?: boolean

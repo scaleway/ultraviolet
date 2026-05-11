@@ -1,13 +1,10 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
+import type { ComponentProps } from 'react'
 import { OfferList } from '..'
 import { Button } from '../../../components/Button'
 import { Stack } from '../../../components/Stack'
-
 import { columns, data } from './resources'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 export const OnChange: StoryFn<ComponentProps<typeof OfferList>> = props => {
   const [selectedRow, setSelectedRow] = useState<string | string[]>('venus-offer')

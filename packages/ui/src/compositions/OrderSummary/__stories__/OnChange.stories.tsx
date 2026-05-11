@@ -1,14 +1,11 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
+import type { ComponentProps } from 'react'
 import { OrderSummary } from '..'
 import { Button } from '../../../components/Button'
 import { Stack } from '../../../components/Stack'
-
-import { categoryAZ, categoryDefault } from './productsExample'
-
 import type { PriceType } from '../types'
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
+import { categoryAZ, categoryDefault } from './productsExample'
 
 export const OnChange: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
   const [prices, setPrices] = useState<PriceType>({})

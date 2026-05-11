@@ -1,16 +1,14 @@
 import { DocsContainer as BaseContainer, Unstyled } from '@storybook/addon-docs/blocks'
+import type { DocsContainerProps as BaseContainerProps } from '@storybook/addon-docs/blocks'
 import { consoleLightTheme as lightTheme, ThemeProvider as ThemeProviderUV } from '@ultraviolet/themes'
 import { GlobalAlert } from '@ultraviolet/ui'
 import { cloneElement, isValidElement, useState } from 'react'
-
-import { globalStyleStoryBook } from './globalStyle.css'
 import '@ultraviolet/fonts/fonts.css'
-
 // don't know how it's work today
 import '../../packages/themes/dist/themes.css'
 
-import type { DocsContainerProps as BaseContainerProps } from '@storybook/addon-docs/blocks'
 import type { ReactNode } from 'react'
+import { globalStyleStoryBook } from './globalStyle.css'
 
 type A11yLevel = 'partial' | 'compliant' | 'certified'
 

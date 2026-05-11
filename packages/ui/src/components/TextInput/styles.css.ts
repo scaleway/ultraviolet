@@ -1,9 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style, styleVariants } from '@vanilla-extract/css'
-
-import { searchInputStyle } from '../SearchInput/styles.css'
-
 import { TEXTINPUT_SIZE_HEIGHT } from './constants'
+import { searchInputStyle } from '../SearchInput/styles.css'
 
 export const hasFocusVar = createVar()
 

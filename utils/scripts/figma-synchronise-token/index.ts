@@ -2,7 +2,6 @@
 // oxlint-disable import/no-nodejs-modules
 
 import { writeFile, writeFileSync } from 'node:fs'
-
 import { header, TOKENS_URL } from './constants'
 import { generateThemeCss } from './create-css-variables'
 import { generatePalette } from './generatePalette'

@@ -1,13 +1,11 @@
 'use client'
 
 import { useMemo } from 'react'
-
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
 import { Tooltip } from '../../../Tooltip'
-import { selectInputStyle } from '../../styles.css'
-
 import type { OptionType } from '../../types'
+import { selectInputStyle } from '../../styles.css'
 
 type DisplayOptionProps = {
   option: OptionType

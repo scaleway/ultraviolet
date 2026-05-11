@@ -1,6 +1,6 @@
+import type { ComponentProps, ReactNode } from 'react'
 import type { Popup } from '../Popup'
 import type { SIZES_WIDTH } from './constant'
-import type { ComponentProps, ReactNode } from 'react'
 
 type SentimentType = 'neutral' | 'primary'
 

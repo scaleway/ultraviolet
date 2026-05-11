@@ -1,6 +1,5 @@
-import { OfferList } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { OfferList } from '..'
 
 export default {
   component: OfferList,

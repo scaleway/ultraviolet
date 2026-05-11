@@ -2,16 +2,13 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-
+import type { InputHTMLAttributes, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { RadioGroupContext } from './Context'
 import { RadioGroupRadio } from './SingleRadio'
 import { radioGRoupStyle } from './styles.css'
-
-import type { InputHTMLAttributes, ReactNode } from 'react'
 
 type RadioGroupProps = {
   legend?: string

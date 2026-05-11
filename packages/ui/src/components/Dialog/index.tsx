@@ -4,22 +4,19 @@ import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-
+import type { ComponentProps } from 'react'
 import { Bullet } from '../Bullet'
 import { Modal } from '../Modal'
 import { Text } from '../Text'
-
 import { DialogButton } from './components/Button'
 import { DialogButtons } from './components/Buttons'
 import { DialogCancelButton } from './components/CancelButton'
 import { DialogStack } from './components/Stack'
 import { DialogText } from './components/Text'
-import { DialogContext, useDialogContext } from './Context'
-import { dialogStyle } from './styles.css'
-
 import type { DialogSentiment } from './constants'
+import { DialogContext, useDialogContext } from './Context'
 import type { DialogContextType } from './Context'
-import type { ComponentProps } from 'react'
+import { dialogStyle } from './styles.css'
 
 const DIALOG_SIZE = 'xsmall'
 

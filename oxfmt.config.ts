@@ -1,14 +1,3 @@
-import config, { mergeConfig } from '@scaleway/oxfmt-config'
-import { defineConfig } from 'oxfmt'
+import config from '@scaleway/oxfmt-config'
 
-export default mergeConfig(
-  config,
-  defineConfig({
-    ...config,
-    sortImports: {
-      order: 'asc',
-      groups: ['builtin', 'internal', 'external', 'parent', 'sibling', 'type'],
-      newlinesBetween: true,
-    },
-  }),
-)
+export default config

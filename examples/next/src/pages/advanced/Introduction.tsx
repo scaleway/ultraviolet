@@ -1,13 +1,12 @@
 import { Stack, Text } from '@ultraviolet/ui'
 import Image from 'next/image'
-
-import styles from '../../../styles/advanced.module.scss'
 import swA11y from '../../assets/icons/icon-scaleway-a11y.svg'
 import swCustom from '../../assets/icons/icon-scaleway-custom.svg'
 import swDx from '../../assets/icons/icon-scaleway-dx.svg'
 import introductionIllustration from '../../assets/illustrations/introduction.svg'
 import Card from '../../components/Card'
 import GithubAndDocumentationButtons from '../../components/GithubAndDocumentationButtons'
+import styles from '../../../styles/advanced.module.scss'
 
 const Introduction = () => (
   <Stack gap={6}>

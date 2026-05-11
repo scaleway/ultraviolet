@@ -1,9 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { BarStack } from '..'
 import { Stack } from '../../Stack'
-
 import { fakeData } from './mockData'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Size: StoryFn<typeof BarStack> = ({ ...props }) => (
   <Stack direction="column" gap={2}>

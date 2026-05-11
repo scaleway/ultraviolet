@@ -1,6 +1,5 @@
-import { BarStack } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { BarStack } from '..'
 
 export default {
   component: BarStack,

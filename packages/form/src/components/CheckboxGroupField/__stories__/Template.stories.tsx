@@ -1,9 +1,7 @@
-import { Stack } from '@ultraviolet/ui'
-
-import { CheckboxGroupField } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
+import { CheckboxGroupField } from '..'
 
 const CheckboxGroupTemplate = (args: ComponentProps<typeof CheckboxGroupField>) => (
   <Stack gap={2}>

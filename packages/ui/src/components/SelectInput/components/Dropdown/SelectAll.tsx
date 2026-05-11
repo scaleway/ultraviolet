@@ -1,12 +1,10 @@
 import { cn } from '@ultraviolet/utils'
-
 import { Checkbox } from '../../../Checkbox'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
 import { useSelectInput } from '../../SelectInputProvider'
-import { selectInputStyle } from '../../styles.css'
-
 import type { OptionType } from '../../types'
+import { selectInputStyle } from '../../styles.css'
 
 export const SelectAll = ({ textVariant }: { textVariant: 'body' | 'bodySmall' | 'caption' }) => {
   const { onChange, options, multiselect, selectAll, setSelectedData, selectedData, size } = useSelectInput()

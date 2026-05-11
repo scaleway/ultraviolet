@@ -1,15 +1,12 @@
 import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-
+import type { ChangeEvent, ChangeEventHandler, Dispatch, RefObject, SetStateAction } from 'react'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
 import { Stack } from '../Stack'
-
-import { textInputStyle } from './styles.css'
-
 import type { TextInputProps } from './type'
-import type { ChangeEvent, ChangeEventHandler, Dispatch, RefObject, SetStateAction } from 'react'
+import { textInputStyle } from './styles.css'
 
 export const RightIcon = ({
   success,

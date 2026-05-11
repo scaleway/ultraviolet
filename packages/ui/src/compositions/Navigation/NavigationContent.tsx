@@ -3,21 +3,18 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars, setElementVars } from '@vanilla-extract/dynamic'
 import { useEffect, useRef } from 'react'
-
 import { Stack } from '../../components/Stack'
-
 import { ANIMATION_DURATION, NAVIGATION_COLLASPED_WIDTH, NAVIGATION_MAX_WIDTH, NAVIGATION_MIN_WIDTH } from './constants'
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { useNavigation } from './NavigationProvider'
+import type { NavigationProps } from './types'
 import { navigationStyle } from './styles.css'
 import {
   widthNavigationContainer,
   widthNavigationContainerDuration,
   widthNavigationContainerExpanded,
 } from './variables.css'
-
-import type { NavigationProps } from './types'
 
 function clamp(min: number, value: number, max: number) {
   return Math.min(max, Math.max(min, value))

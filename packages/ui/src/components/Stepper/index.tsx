@@ -2,12 +2,10 @@
 
 import { cn } from '@ultraviolet/utils'
 import { Children, Fragment, isValidElement } from 'react'
-
+import type { CSSProperties, ReactNode } from 'react'
 import { Step } from './Step'
 import { StepperProvider } from './StepperProvider'
 import { stepperStyle } from './styles.css'
-
-import type { CSSProperties, ReactNode } from 'react'
 
 type StepperProps = {
   animated?: boolean

@@ -1,6 +1,5 @@
-import { RadioGroup } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { RadioGroup } from '..'
 
 export const Template: StoryFn<typeof RadioGroup> = args => (
   <RadioGroup {...args}>

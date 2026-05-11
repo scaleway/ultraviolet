@@ -1,11 +1,9 @@
 import { useTheme } from '@ultraviolet/themes'
+import type { consoleLightTheme } from '@ultraviolet/themes'
 import { Card, Row, Separator, Stack, Text } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
-import { capitalizedText, card, computedBackground, noMarginText, paddingCard, separator } from '../styles.css'
 import ThemeWrapper from '../ThemeWrapper'
-
-import type { consoleLightTheme } from '@ultraviolet/themes'
+import { capitalizedText, card, computedBackground, noMarginText, paddingCard, separator } from '../styles.css'
 
 type Color = Extract<
   keyof typeof consoleLightTheme.colors,

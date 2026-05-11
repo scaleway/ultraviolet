@@ -1,10 +1,8 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { TagList } from '..'
 import { Slider } from '../../Slider'
 import { Stack } from '../../Stack'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const ParentWithDefinedWidth: StoryFn<typeof TagList> = args => {
   const [width, setWidth] = useState(298)

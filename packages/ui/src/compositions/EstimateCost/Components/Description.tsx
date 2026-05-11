@@ -1,9 +1,7 @@
 import { memo } from 'react'
-
-import { Text } from '../../../components/Text'
-
-import type EstimateCostLocales from '../locales/en'
 import type { ReactNode } from 'react'
+import { Text } from '../../../components/Text'
+import type EstimateCostLocales from '../locales/en'
 
 export const Description = memo(
   ({ description, locales }: { description: ReactNode; locales: Record<keyof typeof EstimateCostLocales, string> }) =>

@@ -5,7 +5,7 @@ import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
-
+import type { RefObject } from 'react'
 import { Button } from '../../../Button'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
@@ -13,13 +13,10 @@ import { Tooltip } from '../../../Tooltip'
 import { SIZES_TAG } from '../../constants'
 import { findOptionInOptions } from '../../findOptionInOptions'
 import { useSelectInput } from '../../SelectInputProvider'
-import { selectInputStyle } from '../../styles.css'
-import { computeOverflowVars, getTagsWidth } from '../helpers'
-
-import { DisplayValues } from './Values'
-
 import type { OptionType } from '../../types'
-import type { RefObject } from 'react'
+import { computeOverflowVars, getTagsWidth } from '../helpers'
+import { DisplayValues } from './Values'
+import { selectInputStyle } from '../../styles.css'
 
 type SelectBarProps = {
   size: 'small' | 'medium' | 'large'

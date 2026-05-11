@@ -2,9 +2,7 @@ import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
-
 import { SelectInput } from '..'
-
 import { cities, dataGroupEmpty, dataGrouped, dataUnGrouped, OptionalInfo } from './resources'
 
 // export type OptionType = {

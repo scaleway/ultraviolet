@@ -2,19 +2,16 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useId, useRef } from 'react'
-
+import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
 import { Label } from '../Label'
+import type { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
 import { Dropdown } from './components/Dropdown/Dropdown'
 import { SelectBar } from './components/SelectBar/SelectBar'
 import { SelectInputProvider } from './SelectInputProvider'
-import { selectInputStyle } from './styles.css'
-
-import type { Popup } from '../Popup'
 import type { DataType } from './types'
-import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
+import { selectInputStyle } from './styles.css'
 
 type SelectInputProps<IsMulti extends undefined | boolean = false> = {
   /**

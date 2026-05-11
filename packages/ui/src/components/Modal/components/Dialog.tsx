@@ -3,13 +3,6 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { createPortal } from 'react-dom'
-
-import { Stack } from '../../Stack'
-import { useModal } from '../ModalProvider'
-import { modalStyle, positionModal, topModal } from '../styles.css'
-
-import type { DialogProps } from '../types'
 import type {
   FocusEventHandler,
   KeyboardEvent,
@@ -17,6 +10,11 @@ import type {
   MouseEventHandler,
   ReactEventHandler,
 } from 'react'
+import { createPortal } from 'react-dom'
+import { Stack } from '../../Stack'
+import { useModal } from '../ModalProvider'
+import type { DialogProps } from '../types'
+import { modalStyle, positionModal, topModal } from '../styles.css'
 
 // Prevent default behaviour on Escape
 const stopCancel: ReactEventHandler = event => {

@@ -1,8 +1,6 @@
 import { cn } from '@ultraviolet/utils'
-
-import { conversationStyle } from '../styles.css'
-
 import type { CSSProperties, ReactNode } from 'react'
+import { conversationStyle } from '../styles.css'
 
 type MessageProps = {
   className?: string

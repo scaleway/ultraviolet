@@ -1,7 +1,5 @@
 import { useContext } from 'react'
-
 import { Stack } from '../../components/Stack'
-
 import { CategoryName } from './components/Category'
 import { SubCategory } from './components/SubCategory'
 import { OrderSummaryContext } from './Provider'

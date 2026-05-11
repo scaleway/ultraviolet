@@ -1,11 +1,9 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-
-import { categoryIcon } from './style.css'
-
-import type { VARIANTS } from './style.css'
 import type { CSSProperties, ReactNode } from 'react'
+import { categoryIcon } from './style.css'
+import type { VARIANTS } from './style.css'
 
 export type IconProps = {
   variant?: (typeof VARIANTS)[number]

@@ -1,9 +1,8 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-
+import type { CSSProperties } from 'react'
 import { Stack } from '../../components/Stack'
-
 import rating1 from './assets/1-5.svg'
 import rating1NS from './assets/1-5NB.svg'
 import rating2 from './assets/2-5.svg'
@@ -15,8 +14,6 @@ import rating4NS from './assets/4-5NB.svg'
 import rating5 from './assets/5-5.svg'
 import rating5NS from './assets/5-5NB.svg'
 import { customerSatisfactionStyle } from './styles.css'
-
-import type { CSSProperties } from 'react'
 
 const ratings = [
   {

@@ -1,5 +1,4 @@
 import { Alert } from '../../../components/Alert'
-
 import { Template } from './Template.stories'
 
 const alert = (

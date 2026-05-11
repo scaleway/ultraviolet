@@ -1,7 +1,6 @@
-import { SIZES_TAG } from '../constants'
-
-import type { DataType, OptionType, ReducerAction, ReducerState } from '../types'
 import type { ReactNode } from 'react'
+import { SIZES_TAG } from '../constants'
+import type { DataType, OptionType, ReducerAction, ReducerState } from '../types'
 
 export const getTagsWidth = (
   toMeasureElementsArray: Element[],

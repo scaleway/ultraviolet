@@ -1,12 +1,9 @@
 import { Stack, SwitchButton } from '@ultraviolet/ui'
 import { useState } from 'react'
-
-import styles from '../../../styles/login.module.scss'
-
+import type { JSX } from 'react'
 import LogIn from './login'
 import SignUp from './signup'
-
-import type { JSX } from 'react'
+import styles from '../../../styles/login.module.scss'
 
 const Content = (props: { tab: string }) => {
   let tabLoaded: null | JSX.Element = null

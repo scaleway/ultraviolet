@@ -1,8 +1,7 @@
-import { Stack } from '../../Stack'
-import { SwitchButton } from '../index'
-
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
+import { Stack } from '../../Stack'
+import { SwitchButton } from '../index'
 
 export const Sentiment: StoryFn<ComponentProps<typeof SwitchButton>> = args => (
   <Stack gap={1}>

@@ -3,7 +3,6 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
 import { describe, expect, vi, it } from 'vitest'
-
 import { Form, Submit, TagInputField } from '../..'
 import { mockErrors } from '../../../mocks'
 

@@ -1,8 +1,6 @@
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
-
 import { Button } from '../../../components/Button'
 import { Text } from '../../../components/Text'
-
 import { domain, fees, gb, pipeline, ssl } from './features'
 import { Template } from './Template.stories'
 

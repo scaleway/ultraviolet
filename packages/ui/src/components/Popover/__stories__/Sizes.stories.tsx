@@ -1,12 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useCallback, useState } from 'react'
-
+import type { Dispatch, SetStateAction } from 'react'
 import { Button } from '../../Button'
 import { Popover } from '../index'
-
 import { Playground } from './Playground.stories'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { Dispatch, SetStateAction } from 'react'
 
 export const Sizes: StoryFn<typeof Popover> = () => {
   const [openedSmall, setOpenedSmall] = useState(false)

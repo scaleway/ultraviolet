@@ -1,8 +1,6 @@
-import { TreeMapChart } from '..'
-
-import { treeMapChartSimpleData } from './mockData'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { TreeMapChart } from '..'
+import { treeMapChartSimpleData } from './mockData'
 
 export const Template: StoryFn<typeof TreeMapChart> = ({ ...props }) => (
   <TreeMapChart

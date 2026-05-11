@@ -1,6 +1,5 @@
-import { OrderSummary } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { OrderSummary } from '..'
 
 export default {
   component: OrderSummary,

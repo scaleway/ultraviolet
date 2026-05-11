@@ -1,11 +1,9 @@
 import { shouldMatchSnapshot } from '@utils/test'
+import type { ComponentProps } from 'react'
 import { describe, it } from 'vitest'
-
 import { Loader } from '..'
 import { SENTIMENTS } from '../../../theme'
 import { SIZES } from '../constants'
-
-import type { ComponentProps } from 'react'
 
 describe('loader', () => {
   it('renders default props', () => shouldMatchSnapshot(<Loader label="Loading test" />))

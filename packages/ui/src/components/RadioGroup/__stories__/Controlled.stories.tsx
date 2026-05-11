@@ -1,8 +1,6 @@
-import { useState } from 'react'
-
-import { RadioGroup } from '..'
-
 import type { StoryFn } from '@storybook/react-vite'
+import { useState } from 'react'
+import { RadioGroup } from '..'
 
 export const Controlled: StoryFn = args => {
   const [value, onChange] = useState('label-1')

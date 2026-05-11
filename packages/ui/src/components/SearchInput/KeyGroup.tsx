@@ -1,11 +1,9 @@
 'use client'
 
+import type { ComponentProps } from 'react'
 import { Key } from '../Key'
 import { Stack } from '../Stack'
-
 import { searchInputStyle } from './styles.css'
-
-import type { ComponentProps } from 'react'
 
 type KeyGroupProps = {
   keys: ComponentProps<typeof Key>['children'][]

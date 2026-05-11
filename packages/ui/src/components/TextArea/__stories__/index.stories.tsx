@@ -1,6 +1,5 @@
-import { TextArea } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { TextArea } from '..'
 
 export default {
   component: TextArea,

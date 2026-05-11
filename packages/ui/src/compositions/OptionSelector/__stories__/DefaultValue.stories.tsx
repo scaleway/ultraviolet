@@ -1,13 +1,11 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
+import type { ComponentProps } from 'react'
 import { OptionSelector } from '..'
 import { Stack } from '../../../components/Stack'
 import { firstSelectorOptions, franceOptions, netherlandsOptions, polandOptions } from '../__mock__/resources'
-
 import type { ValueType } from '../__mock__/resources'
 import type { SelectorOption } from '../types'
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 export const DefaultValue: StoryFn<ComponentProps<typeof OptionSelector>> = props => {
   const [zoneFirstExample, setZoneFirstExample] = useState<SelectorOption[]>(franceOptions)

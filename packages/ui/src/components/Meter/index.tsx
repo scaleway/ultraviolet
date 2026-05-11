@@ -1,12 +1,9 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-
-import { Text } from '../Text'
-
-import { colorMeter, meterStyle } from './styles.css'
-
 import type { CSSProperties } from 'react'
+import { Text } from '../Text'
+import { colorMeter, meterStyle } from './styles.css'
 
 type Strength = {
   /**

@@ -1,13 +1,10 @@
 import { cn } from '@ultraviolet/utils'
 import { Children, cloneElement, isValidElement } from 'react'
-
 import { useEstimateCost } from '../EstimateCostProvider'
-import { estimateCostStyle } from '../styles.css'
-
+import type { ChildrenComponentType, ExtraProps } from '../types'
 import { CustomUnitInput } from './CustomUnitInput'
 import { Title } from './Title'
-
-import type { ChildrenComponentType, ExtraProps } from '../types'
+import { estimateCostStyle } from '../styles.css'
 
 export const ChildrenComponent = ({
   hideTotal,

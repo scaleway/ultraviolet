@@ -1,15 +1,12 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
-
+import type { ComponentProps } from 'react'
 import { SelectableCardOptionGroupField } from '..'
 import { Submit } from '../..'
-
 import centos from './assets/centos.svg'
 import debian from './assets/debian.svg'
 import ubuntu from './assets/ubuntu.svg'
 import { centosOptions, debianOptions, ubuntuOptions } from './constants'
-
-import type { StoryFn } from '@storybook/react-vite'
-import type { ComponentProps } from 'react'
 
 export const Required: StoryFn<ComponentProps<typeof SelectableCardOptionGroupField>> = args => (
   <Stack gap={1}>

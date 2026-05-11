@@ -1,8 +1,7 @@
+import type { ComponentProps } from 'react'
 import { Notice } from '..'
 import { Link } from '../../Link'
 import { Text } from '../../Text'
-
-import type { ComponentProps } from 'react'
 
 export const ComplexChildren = (args: ComponentProps<typeof Notice>) => (
   <Notice {...args}>

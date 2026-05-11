@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
-
-import { ProgressBar } from '..'
-
 import type { ComponentProps } from 'react'
+import { ProgressBar } from '..'
 
 const UncontrolledProgressBar = (props: ComponentProps<typeof ProgressBar>) => {
   const [value, setValue] = useState(0)
