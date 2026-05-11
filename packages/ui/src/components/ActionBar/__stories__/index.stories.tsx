@@ -2,11 +2,15 @@ import { ActionBar } from '..'
 
 import type { Meta } from '@storybook/react-vite'
 
-export default {
+const meta: Meta<typeof ActionBar> = {
   component: ActionBar,
   title: 'UI/Overlay/ActionBar',
+  tags: ['test'],
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
+    a11y: {
+      test: 'error',
+    },
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,
@@ -15,7 +19,9 @@ export default {
       'specific-patterns': false,
     },
   },
-} as Meta
+}
+
+export default meta
 
 export { Playground } from './Playground.stories'
 export { Ranks } from './Ranks.stories'

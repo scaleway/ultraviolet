@@ -34,7 +34,7 @@ const STORYBOOK_A11Y_PARTIAL = {
       Property(node) {
         if (
           node.key.type === 'Identifier' &&
-          node.key.name === 'a11y' &&
+          node.key.name === 'a11yStatus' &&
           node.value.type === 'Literal' &&
           node.value.value === 'partial'
         ) {

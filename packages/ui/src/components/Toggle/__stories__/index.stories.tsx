@@ -6,7 +6,7 @@ export default {
   component: Toggle,
   title: 'UI/Data Entry/Toggle',
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,

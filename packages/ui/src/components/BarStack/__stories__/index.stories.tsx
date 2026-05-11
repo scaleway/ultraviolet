@@ -6,7 +6,7 @@ export default {
   component: BarStack,
   title: 'UI/Data Display/BarStack',
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,
