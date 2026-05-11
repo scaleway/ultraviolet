@@ -1,5 +1,5 @@
 // oxlint-disable typescript/no-unsafe-type-assertion
-import { fireEvent, screen } from '@testing-library/react'
+import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
@@ -436,7 +436,7 @@ describe('fileInput', () => {
     const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput
-        accept="image/png"
+        accept="image/png, .mp3"
         aria-label="label"
         onChangeFiles={onChangeFiles}
       />,
@@ -446,6 +446,9 @@ describe('fileInput', () => {
     const file = new File(['dnd'], 'dnd.png', { type: 'image/png' })
     const fileJpg = new File(['dnd'], 'dnd.jpg', { type: 'image/jpg' })
     const filePdf = new File(['not-added'], 'not-added.pdf', {
+      type: 'application/pdf',
+    })
+    const filemp3 = new File(['added'], 'added.mp3', {
       type: 'application/pdf',
     })
 
@@ -485,9 +488,18 @@ describe('fileInput', () => {
       },
     } as unknown as DragEvent)
 
+    fireEvent.drop(dropzone, {
+      dataTransfer: {
+        files: [filemp3],
+        items: [],
+        types: ['Files'],
+      },
+    } as unknown as DragEvent)
+
     expect(onChangeFiles).not.toHaveBeenCalledWith(
       expect.arrayContaining([
         expect.objectContaining({ fileName: 'dnd.jpg' }),
+        expect.objectContaining({ fileName: 'added.mp3' }),
       ]),
     )
   })
@@ -514,5 +526,86 @@ describe('fileInput', () => {
         expect.objectContaining({ fileName: 'dnd.png' }),
       ]),
     )
+  })
+
+  it('should add files from dropped directory with allowDirectories', async () => {
+    const onChangeFiles = vi.fn()
+    renderWithTheme(
+      <FileInput
+        aria-label="label"
+        onChangeFiles={onChangeFiles}
+        allowDirectories
+        bottom={<FileInput.List />}
+        size="small"
+        title="title"
+      />,
+    )
+
+    const dropzone = screen.getByRole('button', { name: 'UploadIcon title' })
+    const dirFile = new File(['content1'], 'dir/file1.png', {
+      type: 'image/png',
+    })
+    const singleFile = new File(['content2'], 'single.png', {
+      type: 'image/png',
+    })
+
+    let callCount = 0
+    const dirFileEntry = {
+      isFile: true,
+      isDirectory: false,
+      file: (success: (file: File) => void) => success(dirFile),
+    } as unknown as FileSystemFileEntry
+
+    const directoryEntry = {
+      isFile: false,
+      isDirectory: true,
+      name: 'dir',
+      createReader: () => ({
+        readEntries: (resolve: (entries: FileSystemEntry[]) => void) => {
+          // oxlint-disable-next-line vitest/no-conditional-in-test
+          if (callCount === 0) {
+            callCount += 1
+            resolve([dirFileEntry])
+          } else {
+            resolve([])
+          }
+        },
+      }),
+    } as unknown as FileSystemDirectoryEntry
+
+    const dirItem = {
+      kind: 'file',
+      type: dirFile.type,
+      webkitGetAsEntry: () => directoryEntry,
+    } as unknown as DataTransferItem
+
+    const singleFileEntry = {
+      isFile: true,
+      isDirectory: false,
+      file: (success: (file: File) => void) => success(singleFile),
+    } as unknown as FileSystemFileEntry
+
+    const singleItem = {
+      kind: 'file',
+      type: singleFile.type,
+      webkitGetAsEntry: () => singleFileEntry,
+    } as unknown as DataTransferItem
+
+    fireEvent.drop(dropzone, {
+      dataTransfer: {
+        files: [dirFile, singleFile],
+        items: [dirItem, singleItem],
+        types: ['Files'],
+      },
+    } as unknown as DragEvent)
+
+    await waitFor(() => {
+      expect(onChangeFiles).toHaveBeenCalledWith(
+        expect.arrayContaining([
+          expect.objectContaining({ fileName: 'dir/file1.png' }),
+          expect.objectContaining({ fileName: 'single.png' }),
+        ]),
+      )
+    })
   })
 })
