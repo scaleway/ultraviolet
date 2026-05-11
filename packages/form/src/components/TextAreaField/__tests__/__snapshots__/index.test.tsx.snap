@@ -75,7 +75,7 @@ exports[`textAreaField > should render correctly generated 1`] = `
             id="_r_7_"
             name="test"
             rows="3"
-            style="--uv_hlf4vn0: calc(1.5rem + 300px + 0px); resize: vertical; height: auto; min-height: calc(NaNpx + 2*0.75rem);"
+            style="--uv_hlf4vn0: calc(1.5rem + 300px + 0px); resize: vertical; height: auto; min-height: calc(1.5rem + nanpx);"
           >
             This is an example
           </textarea>
@@ -142,7 +142,7 @@ exports[`textAreaField > should submit with onSubmitEnter prop 1`] = `
             id="_r_3_"
             name="test"
             rows="3"
-            style="--uv_hlf4vn0: calc(1.5rem + 0px + 0px); resize: vertical; height: auto; min-height: calc(NaNpx + 2*0.75rem);"
+            style="--uv_hlf4vn0: calc(1.5rem + 0px + 0px); resize: vertical; height: auto; min-height: calc(1.5rem + nanpx);"
           >
             This is an example
           </textarea>
