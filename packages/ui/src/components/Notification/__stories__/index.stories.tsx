@@ -5,7 +5,7 @@ export default {
   component: NotificationContainer,
   title: 'UI/Feedback/Notification',
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,

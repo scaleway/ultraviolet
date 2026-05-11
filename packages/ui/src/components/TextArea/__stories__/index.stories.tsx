@@ -5,7 +5,7 @@ export default {
   component: TextArea,
   title: 'UI/Data Entry/TextArea',
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,

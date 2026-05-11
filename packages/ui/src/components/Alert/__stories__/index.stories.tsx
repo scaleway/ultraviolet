@@ -5,7 +5,7 @@ export default {
   component: Alert,
   title: 'UI/Feedback/Alert',
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,

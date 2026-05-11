@@ -5,7 +5,7 @@ export default {
   component: InfiniteScroll,
   title: 'UI/Data Display/InfiniteScroll',
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,

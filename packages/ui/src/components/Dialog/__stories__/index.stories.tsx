@@ -5,7 +5,7 @@ export default {
   component: Dialog,
   title: 'UI/Overlay/Dialog',
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,

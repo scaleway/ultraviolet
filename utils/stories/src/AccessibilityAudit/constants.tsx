@@ -322,7 +322,7 @@ export type AuditCategories = {
 export type ComponentStoryParameters = {
   deprecated?: boolean
   experimental?: boolean
-  a11y?: boolean | A11yLevel
+  a11yStatus?: boolean | A11yLevel
   audit?: ComponentAuditStatus
 }
 
@@ -337,12 +337,12 @@ export const getComponentAuditCategories = (parameters: ComponentStoryParameters
   }))
 }
 
-export const findA11yStatus = (parameters: { a11y?: boolean | A11yLevel }) => {
-  if (!parameters?.a11y) {
+export const findA11yStatus = (parameters: { a11yStatus?: boolean | A11yLevel }) => {
+  if (!parameters?.a11yStatus) {
     return null
   }
 
-  const a11yLevel = typeof parameters.a11y === 'string' ? parameters.a11y : 'compliant'
+  const a11yLevel = typeof parameters.a11yStatus === 'string' ? parameters.a11yStatus : 'compliant'
 
   return A11Y_LEVELS[a11yLevel]
 }

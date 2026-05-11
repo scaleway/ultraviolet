@@ -9,7 +9,7 @@ const ComponentState = () => {
     | PromiseSettledResult<{
         default: {
           title: string
-          parameters: { deprecated: boolean; a11y: boolean }
+          parameters: { deprecated: boolean }
         }
       }>[]
     | null

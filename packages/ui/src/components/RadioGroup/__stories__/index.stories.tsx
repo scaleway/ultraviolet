@@ -5,7 +5,7 @@ export default {
   component: RadioGroup,
   title: 'UI/Data Entry/RadioGroup',
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,

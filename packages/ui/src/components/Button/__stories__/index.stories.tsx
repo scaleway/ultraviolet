@@ -5,7 +5,10 @@ export default {
   component: Button,
   title: 'UI/Action/Button',
   parameters: {
-    a11y: 'partial',
+    a11y: {
+      statut: 'partial',
+      test: 'error',
+    },
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,
