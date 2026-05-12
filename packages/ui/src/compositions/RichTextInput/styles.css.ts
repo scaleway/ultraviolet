@@ -15,6 +15,12 @@ export const errorIcon = style({
   top: theme.space['1'],
 })
 
+export const successIcon = style({
+  position: 'relative',
+  right: theme.space['1'],
+  top: theme.space['1'],
+})
+
 export const toolbarRow = style({
   borderBottom: `1px solid ${theme.colors.neutral.border}`,
   flexShrink: 0,
@@ -70,6 +76,7 @@ export const richTextInputStyle = {
   docRegion,
   editorSurface,
   errorIcon,
+  successIcon,
   wrapper,
   toolbarRow,
 }
