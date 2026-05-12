@@ -3,7 +3,9 @@
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId } from 'react'
 import type { InputHTMLAttributes, ReactNode } from 'react'
+import { hasHelperText } from '../../helpers/hasHelperText'
 import type { LabelProp } from '../../types'
+import { Description } from '../Description'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
@@ -32,6 +34,7 @@ type RadioProps = {
     | 'checked'
     | 'onClick'
     | 'style'
+    | 'aria-describedby'
   > &
   LabelProp
 
@@ -57,6 +60,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
       tooltip,
       'aria-label': ariaLabel,
       'data-testid': dataTestId,
+      'aria-describedby': ariaDescribedBy,
       tabIndex,
       id,
       style,
@@ -64,6 +68,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
     forwadedRef,
   ) => {
     const generatedId = useId()
+    const helperId = useId()
     const localId = id ?? generatedId
 
     return (
@@ -77,6 +82,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
             data-testid={dataTestId}
           >
             <input
+              aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
               aria-disabled={disabled}
               aria-invalid={!!error} // oxlint-disable-line eslint-plugin-jsx-a11y(role-supports-aria-props)
               aria-label={ariaLabel}
@@ -121,11 +127,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               </>
             ) : null}
           </div>
-          {helper ? (
-            <Text as="span" className={radioStyle.margedText} prominence="weak" sentiment="neutral" variant="caption">
-              {helper}
-            </Text>
-          ) : null}
+          <Description error={error} helper={helper} id={ariaDescribedBy ?? helperId} disabled={disabled} />
         </Stack>
       </Tooltip>
     )

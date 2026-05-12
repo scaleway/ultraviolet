@@ -1,10 +1,11 @@
 // oxlint-disable typescript/no-unsafe-type-assertion
 'use client'
 
-import { useMemo } from 'react'
 import type { ReactNode } from 'react'
+import { useId, useMemo } from 'react'
+import { hasHelperText } from '../../helpers/hasHelperText'
+import { Description } from '../Description'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
 import { DoubleSlider } from './components/DoubleSlider'
 import { SingleSlider } from './components/SingleSlider'
 import type { SliderProps } from './types'
@@ -46,6 +47,7 @@ export const Slider = ({
   labelDescription,
   'aria-label': ariaLabel,
   defaultScale = false,
+  'aria-describedby': ariaDescribedBy,
 }: SliderProps) => {
   // we check if options exists if so we set the bounds to the length of the options
 
@@ -62,6 +64,7 @@ export const Slider = ({
 
     return 1
   }, [options, input, double, helper])
+  const helperId = useId()
 
   return (
     <Stack
@@ -74,6 +77,7 @@ export const Slider = ({
     >
       {double ? (
         <DoubleSlider
+          aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
           aria-label={ariaLabel}
           className={className}
           customValueDisplay={customValueDisplay}
@@ -104,6 +108,7 @@ export const Slider = ({
         />
       ) : (
         <SingleSlider
+          aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
           aria-label={ariaLabel}
           className={className}
           customValueDisplay={customValueDisplay}
@@ -133,11 +138,7 @@ export const Slider = ({
           value={value as number}
         />
       )}
-      {error || helper ? (
-        <Text as="p" prominence="weak" sentiment={error ? 'danger' : 'neutral'} variant="caption">
-          {typeof error === 'string' ? error : helper}
-        </Text>
-      ) : null}
+      <Description helper={helper} error={error} id={ariaDescribedBy ?? helperId} disabled={disabled} />
     </Stack>
   )
 }

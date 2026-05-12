@@ -32,7 +32,10 @@ import {
 } from './components/SelectBar/selectBar.css'
 
 const container = style({ width: '100%' })
-const helper = style({ paddingTop: theme.space['0.5'] })
+const helper = style({
+  display: 'block',
+  paddingTop: theme.space['0.5'],
+})
 
 export const selectInputStyle = {
   container,

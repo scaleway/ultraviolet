@@ -1,12 +1,13 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { useMemo } from 'react'
 import type { InputHTMLAttributes, ReactNode } from 'react'
+import { useId, useMemo } from 'react'
+import { hasHelperText } from '../../helpers/hasHelperText'
+import { Description } from '../Description'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
 import { SelectableCardGroupContext } from './Context'
 import { CardSelectableCard } from './SingleCard'
 import { selectableCardGroupStyle } from './styles.css'
@@ -24,7 +25,8 @@ type SelectableCardGroupProps = {
   required?: boolean
   showTick?: boolean
   name?: string
-} & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>>
+} & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'aria-describedby'>
 
 /**
  * SelectableCardGroup is a component that allows users to select cards from a list of cards using SelectableCard.
@@ -43,6 +45,7 @@ const SelectableCardGroupComponent = ({
   required = false,
   type,
   showTick = false,
+  'aria-describedby': ariaDescribedBy,
 }: SelectableCardGroupProps) => {
   const contextValue = useMemo(
     () => ({
@@ -56,11 +59,15 @@ const SelectableCardGroupComponent = ({
     }),
     [name, value, onChange, required, type, showTick, error],
   )
+  const helperId = useId()
 
   return (
     <SelectableCardGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset className={cn(className, selectableCardGroupStyle.fieldset)}>
+        <fieldset
+          className={cn(className, selectableCardGroupStyle.fieldset)}
+          aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
+        >
           <Stack gap={1.5}>
             {legend ? (
               <Label as="legend" labelDescription={legendDescription} required={required}>
@@ -72,16 +79,7 @@ const SelectableCardGroupComponent = ({
             </Row>
           </Stack>
         </fieldset>
-        {helper ? (
-          <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
-            {helper}
-          </Text>
-        ) : null}
-        {error ? (
-          <Text as="span" sentiment="danger" variant="caption">
-            {error}
-          </Text>
-        ) : null}
+        <Description helper={helper} error={error} id={ariaDescribedBy ?? helperId} />
       </Stack>
     </SelectableCardGroupContext.Provider>
   )

@@ -5,7 +5,8 @@ import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
-import type { RefObject } from 'react'
+import type { ReactNode, RefObject } from 'react'
+import { hasHelperText } from '../../../../helpers/hasHelperText'
 import { Button } from '../../../Button'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
@@ -33,6 +34,9 @@ type SelectBarProps = {
   label?: string
   tooltip?: string
   dropdownId?: string
+  helperId: string
+  'aria-describedby'?: string
+  helper?: ReactNode
 }
 
 const SelectBar = ({
@@ -50,6 +54,9 @@ const SelectBar = ({
   'data-testid': dataTestId,
   label,
   dropdownId,
+  helperId,
+  helper,
+  'aria-describedby': ariaDescribedBy,
 }: SelectBarProps) => {
   const { isDropdownVisible, onChange, setIsDropdownVisible, options, selectedData, setSelectedData, multiselect } =
     useSelectInput()
@@ -174,6 +181,7 @@ const SelectBar = ({
   return (
     <Tooltip disableAnimation text={tooltip}>
       <div
+        aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
         aria-controls={dropdownId}
         aria-expanded={isDropdownVisible}
         aria-label={label}

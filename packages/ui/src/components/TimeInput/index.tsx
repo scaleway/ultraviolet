@@ -2,6 +2,8 @@
 
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import type { CSSProperties, FocusEvent, ReactNode } from 'react'
+import { hasHelperText } from '../../helpers/hasHelperText'
+import { Description } from '../Description'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -49,6 +51,7 @@ type TimeInputProps = {
    */
   autoFocus?: boolean
   style?: CSSProperties
+  'aria-describedby'?: string
 } & (
   | {
       label?: string
@@ -86,8 +89,11 @@ export const TimeInput = ({
   'data-testid': dataTestId,
   placeholder = DEFAULT_PLACEHOLDER,
   'aria-label': ariaLabel,
+  'aria-describedby': ariaDescribedBy,
 }: TimeInputProps) => {
   const localId = useId()
+  const helperId = useId()
+
   const defaultPeriod = useMemo(() => {
     if (value) {
       return value.getHours() >= 12 ? 'pm' : 'am'
@@ -240,7 +246,6 @@ export const TimeInput = ({
     }
   }
 
-  const bottomText = error || helper
   const isEditable = readOnly || disabled
 
   return (
@@ -305,6 +310,7 @@ export const TimeInput = ({
             return (
               <Stack direction="row" key={type}>
                 <input
+                  aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
                   aria-label={ariaLabel}
                   aria-valuemax={computeMaxValue()}
                   aria-valuemin={type === 'h' && timeFormat === 12 ? 1 : 0}
@@ -318,6 +324,7 @@ export const TimeInput = ({
                   data-size={size}
                   data-testid={`${fullName()}-input`}
                   disabled={disabled}
+                  id={id ?? localId}
                   onChange={event => {
                     if (!isEditable) {
                       const key = getLastTypedChar(event.target.value, getValueByType(type, time))
@@ -368,6 +375,7 @@ export const TimeInput = ({
           })}
           {timeFormat === 12 ? (
             <input
+              aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
               aria-label={ariaLabel}
               aria-valuemax={12}
               aria-valuemin={0}
@@ -378,6 +386,7 @@ export const TimeInput = ({
               data-size={size}
               data-testid="am-pm-input"
               disabled={disabled}
+              id={id ?? localId}
               onChange={event => {
                 if (!isEditable) {
                   const key = event.target.value.slice(-1)
@@ -417,17 +426,7 @@ export const TimeInput = ({
           />
         ) : null}
       </Stack>
-      {bottomText ? (
-        <Text
-          as="p"
-          disabled={disabled}
-          prominence={error ? 'default' : 'weak'}
-          sentiment={error ? 'danger' : 'neutral'}
-          variant="caption"
-        >
-          {bottomText}
-        </Text>
-      ) : null}
+      <Description error={error} helper={helper} disabled={disabled} size={size} id={ariaDescribedBy ?? helperId} />
     </Stack>
   )
 }

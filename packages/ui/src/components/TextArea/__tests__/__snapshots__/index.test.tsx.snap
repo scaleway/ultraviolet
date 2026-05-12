@@ -10,7 +10,7 @@ exports[`textArea > should render correctly when input  has a error sentiment 1`
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_s_"
+        for="_r_14_"
       >
         Test
       </label>
@@ -18,9 +18,10 @@ exports[`textArea > should render correctly when input  has a error sentiment 1`
         class="styles__hlf4vn1"
       >
         <textarea
+          aria-describedby="_r_15_"
           aria-invalid="true"
           class="styles__hlf4vn3 styles_error_true__hlf4vn4"
-          id="_r_s_"
+          id="_r_14_"
           rows="3"
           style="--hlf4vn0: calc(1.5rem + 0px + smallpx);"
         >
@@ -50,13 +51,12 @@ exports[`textArea > should render correctly when input  has a error sentiment 1`
         class="styles__x6hyh50 styles_gap_0.5rem_xxsmall__x6hyh52j"
         style="--_3mg8xe0: minmax(0, 1fr) min-content; --_3mg8xe1: minmax(0, 1fr) min-content; --_3mg8xe2: minmax(0, 1fr) min-content; --_3mg8xe3: minmax(0, 1fr) min-content; --_3mg8xe4: minmax(0, 1fr) min-content; --_3mg8xe5: minmax(0, 1fr) min-content;"
       >
-        <div>
-          <p
-            class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
-          >
-            success
-          </p>
-        </div>
+        <span
+          class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+          id="_r_15_"
+        >
+          success
+        </span>
       </div>
     </div>
   </div>
@@ -73,7 +73,7 @@ exports[`textArea > should render correctly when input has a success sentiment 1
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_o_"
+        for="_r_v_"
       >
         Test
       </label>
@@ -81,9 +81,10 @@ exports[`textArea > should render correctly when input has a success sentiment 1
         class="styles__hlf4vn1"
       >
         <textarea
+          aria-describedby="_r_10_"
           aria-invalid="false"
           class="styles__hlf4vn3 styles_success_true__hlf4vn5"
-          id="_r_o_"
+          id="_r_v_"
           rows="3"
           style="--hlf4vn0: calc(1.5rem + 0px + smallpx);"
         >
@@ -113,13 +114,12 @@ exports[`textArea > should render correctly when input has a success sentiment 1
         class="styles__x6hyh50 styles_gap_0.5rem_xxsmall__x6hyh52j"
         style="--_3mg8xe0: minmax(0, 1fr) min-content; --_3mg8xe1: minmax(0, 1fr) min-content; --_3mg8xe2: minmax(0, 1fr) min-content; --_3mg8xe3: minmax(0, 1fr) min-content; --_3mg8xe4: minmax(0, 1fr) min-content; --_3mg8xe5: minmax(0, 1fr) min-content;"
       >
-        <div>
-          <p
-            class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_success__m4c9owe style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_56__m4c9ow2u"
-          >
-            success
-          </p>
-        </div>
+        <span
+          class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_success__m4c9owe style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_56__m4c9ow2u"
+          id="_r_10_"
+        >
+          success
+        </span>
       </div>
     </div>
   </div>
@@ -136,7 +136,7 @@ exports[`textArea > should render correctly when input is disabled 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_a_"
+        for="_r_d_"
       >
         Test
       </label>
@@ -147,7 +147,7 @@ exports[`textArea > should render correctly when input is disabled 1`] = `
           aria-invalid="false"
           class="styles__hlf4vn3"
           disabled=""
-          id="_r_a_"
+          id="_r_d_"
           rows="3"
           style="--hlf4vn0: calc(1.5rem + 0px + 0px);"
         >
@@ -172,7 +172,7 @@ exports[`textArea > should render correctly when input is readOnly 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_d_"
+        for="_r_h_"
       >
         Test
       </label>
@@ -182,7 +182,7 @@ exports[`textArea > should render correctly when input is readOnly 1`] = `
         <textarea
           aria-invalid="false"
           class="styles__hlf4vn3"
-          id="_r_d_"
+          id="_r_h_"
           readonly=""
           rows="3"
           style="--hlf4vn0: calc(1.5rem + 0px + 0px);"
@@ -211,7 +211,7 @@ exports[`textArea > should render correctly when it is required 1`] = `
       >
         <label
           class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-          for="_r_g_"
+          for="_r_l_"
         >
           Test
         </label>
@@ -227,7 +227,7 @@ exports[`textArea > should render correctly when it is required 1`] = `
         <textarea
           aria-invalid="false"
           class="styles__hlf4vn3"
-          id="_r_g_"
+          id="_r_l_"
           rows="3"
           style="--hlf4vn0: calc(1.5rem + 0px + 0px);"
         >
@@ -287,7 +287,7 @@ exports[`textArea > should render correctly with maxlength 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_k_"
+        for="_r_q_"
       >
         Test
       </label>
@@ -297,7 +297,7 @@ exports[`textArea > should render correctly with maxlength 1`] = `
         <textarea
           aria-invalid="false"
           class="styles__hlf4vn3"
-          id="_r_k_"
+          id="_r_q_"
           maxlength="3"
           rows="3"
           style="--hlf4vn0: calc(1.5rem + 0px + 0px);"
@@ -334,7 +334,7 @@ exports[`textArea > should render with AutoExpandMax 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_14_"
+        for="_r_1e_"
       >
         Test
       </label>
@@ -342,9 +342,10 @@ exports[`textArea > should render with AutoExpandMax 1`] = `
         class="styles__hlf4vn1"
       >
         <textarea
+          aria-describedby="_r_1f_"
           aria-invalid="true"
           class="styles__hlf4vn3 styles_error_true__hlf4vn4"
-          id="_r_14_"
+          id="_r_1e_"
           rows="3"
           style="--hlf4vn0: calc(1.5rem + 0px + smallpx);"
         >
@@ -374,13 +375,12 @@ exports[`textArea > should render with AutoExpandMax 1`] = `
         class="styles__x6hyh50 styles_gap_0.5rem_xxsmall__x6hyh52j"
         style="--_3mg8xe0: minmax(0, 1fr) min-content; --_3mg8xe1: minmax(0, 1fr) min-content; --_3mg8xe2: minmax(0, 1fr) min-content; --_3mg8xe3: minmax(0, 1fr) min-content; --_3mg8xe4: minmax(0, 1fr) min-content; --_3mg8xe5: minmax(0, 1fr) min-content;"
       >
-        <div>
-          <p
-            class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
-          >
-            success
-          </p>
-        </div>
+        <span
+          class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+          id="_r_1f_"
+        >
+          success
+        </span>
       </div>
     </div>
   </div>
@@ -397,7 +397,7 @@ exports[`textArea > should render with AutoExpandMax and rows 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_18_"
+        for="_r_1j_"
       >
         Test
       </label>
@@ -405,9 +405,10 @@ exports[`textArea > should render with AutoExpandMax and rows 1`] = `
         class="styles__hlf4vn1"
       >
         <textarea
+          aria-describedby="_r_1k_"
           aria-invalid="true"
           class="styles__hlf4vn3 styles_error_true__hlf4vn4"
-          id="_r_18_"
+          id="_r_1j_"
           rows="2"
           style="--hlf4vn0: calc(1.5rem + 0px + smallpx);"
         >
@@ -437,13 +438,12 @@ exports[`textArea > should render with AutoExpandMax and rows 1`] = `
         class="styles__x6hyh50 styles_gap_0.5rem_xxsmall__x6hyh52j"
         style="--_3mg8xe0: minmax(0, 1fr) min-content; --_3mg8xe1: minmax(0, 1fr) min-content; --_3mg8xe2: minmax(0, 1fr) min-content; --_3mg8xe3: minmax(0, 1fr) min-content; --_3mg8xe4: minmax(0, 1fr) min-content; --_3mg8xe5: minmax(0, 1fr) min-content;"
       >
-        <div>
-          <p
-            class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
-          >
-            success
-          </p>
-        </div>
+        <span
+          class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+          id="_r_1k_"
+        >
+          success
+        </span>
       </div>
     </div>
   </div>
@@ -460,7 +460,7 @@ exports[`textArea > should render with auto rows 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="_r_10_"
+        for="_r_19_"
       >
         Test
       </label>
@@ -468,9 +468,10 @@ exports[`textArea > should render with auto rows 1`] = `
         class="styles__hlf4vn1"
       >
         <textarea
+          aria-describedby="_r_1a_"
           aria-invalid="true"
           class="styles__hlf4vn3 styles_error_true__hlf4vn4"
-          id="_r_10_"
+          id="_r_19_"
           rows="1"
           style="--hlf4vn0: calc(1.5rem + 0px + smallpx);"
         >
@@ -500,13 +501,12 @@ exports[`textArea > should render with auto rows 1`] = `
         class="styles__x6hyh50 styles_gap_0.5rem_xxsmall__x6hyh52j"
         style="--_3mg8xe0: minmax(0, 1fr) min-content; --_3mg8xe1: minmax(0, 1fr) min-content; --_3mg8xe2: minmax(0, 1fr) min-content; --_3mg8xe3: minmax(0, 1fr) min-content; --_3mg8xe4: minmax(0, 1fr) min-content; --_3mg8xe5: minmax(0, 1fr) min-content;"
       >
-        <div>
-          <p
-            class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
-          >
-            success
-          </p>
-        </div>
+        <span
+          class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+          id="_r_1a_"
+        >
+          success
+        </span>
       </div>
     </div>
   </div>

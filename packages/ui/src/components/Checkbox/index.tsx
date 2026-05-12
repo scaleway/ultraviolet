@@ -3,6 +3,8 @@
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId } from 'react'
 import type { InputHTMLAttributes, ReactNode } from 'react'
+import { hasHelperText } from '../../helpers/hasHelperText'
+import { Description } from '../Description'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
@@ -20,7 +22,7 @@ type LabelProp =
     }
 
 type CheckboxProps = {
-  error?: string | ReactNode
+  error?: ReactNode
   helper?: ReactNode
   disabled?: boolean
   checked?: boolean | 'indeterminate'
@@ -43,6 +45,7 @@ type CheckboxProps = {
   | 'tabIndex'
   | 'value'
   | 'style'
+  | 'aria-describedby'
 > &
   LabelProp
 
@@ -68,6 +71,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       className,
       'data-visibility': dataVisibility,
       'aria-label': ariaLabel,
+      'aria-describedby': ariaDescribedBy,
       required,
       'data-testid': dataTestId,
       tooltip,
@@ -89,6 +93,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           prominence="default"
           sentiment="neutral"
           variant={size === 'small' ? 'bodySmall' : 'body'}
+          disabled={disabled}
         >
           {children}
         </Text>
@@ -101,7 +106,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
 
     const childStack =
       children || required ? (
-        <Stack alignItems="center" direction="row" flex={1} gap={0.5}>
+        <Stack alignItems="center" direction="row" gap={0.5}>
           {children ? styledChildren : null}
           {required ? (
             <Text as="sup" sentiment="danger" variant="body">
@@ -123,7 +128,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         >
           <input
             aria-checked={checked === 'indeterminate' ? 'mixed' : isCheck}
-            aria-describedby={error ? `${localId}-hint` : undefined}
+            aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? `${localId}-hint` : undefined)}
             aria-invalid={!!error}
             aria-label={ariaLabel}
             autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
@@ -150,17 +155,12 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           {children || required || helper || error ? (
             <Stack flex={1} gap={0.5}>
               {childStack}
-              {helper ? (
-                <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
-                  {helper}
-                </Text>
-              ) : null}
-
-              {error && typeof error !== 'boolean' ? (
-                <Text as="span" className={checkboxStyle.errorText} sentiment="danger" variant="caption">
-                  {error}
-                </Text>
-              ) : null}
+              <Description
+                helper={helper}
+                error={error}
+                id={ariaDescribedBy ?? `${localId}-hint`}
+                disabled={disabled && !error}
+              />
             </Stack>
           ) : null}
         </div>

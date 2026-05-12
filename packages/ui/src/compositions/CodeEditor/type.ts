@@ -35,4 +35,5 @@ export type CodeEditorProps = {
   lineNumbers?: boolean
   style?: CSSProperties
   required?: boolean
+  'aria-describedby'?: string
 }

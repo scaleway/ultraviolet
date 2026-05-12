@@ -1,8 +1,10 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { useMemo } from 'react'
 import type { InputHTMLAttributes, ReactNode } from 'react'
+import { useId, useMemo } from 'react'
+import { hasHelperText } from '../../helpers/hasHelperText'
+import { Description } from '../Description'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -22,7 +24,7 @@ type CheckboxGroupProps = {
   required?: boolean
   description?: ReactNode
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'style'>
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'style' | 'aria-describedby'>
 
 /**
  * CheckboxGroup is a component that groups a set of checkboxes together with a legend and helper/error text.
@@ -41,6 +43,7 @@ const CheckboxGroup = ({
   description,
   required = false,
   style,
+  'aria-describedby': ariaDescribedBy,
 }: CheckboxGroupProps) => {
   const contextValue = useMemo(
     () => ({
@@ -53,10 +56,16 @@ const CheckboxGroup = ({
     [name, value, onChange, required, error],
   )
 
+  const helperId = useId()
+
   return (
     <CheckboxGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset className={cn(className, checkboxGroupStyle.fieldset)} style={style}>
+        <fieldset
+          className={cn(className, checkboxGroupStyle.fieldset)}
+          style={style}
+          aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
+        >
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>
@@ -82,16 +91,7 @@ const CheckboxGroup = ({
             </Stack>
           </Stack>
         </fieldset>
-        {helper ? (
-          <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
-            {helper}
-          </Text>
-        ) : null}
-        {error ? (
-          <Text as="span" sentiment="danger" variant="caption">
-            {error}
-          </Text>
-        ) : null}
+        <Description helper={helper} error={error} id={ariaDescribedBy ?? helperId} />
       </Stack>
     </CheckboxGroupContext.Provider>
   )

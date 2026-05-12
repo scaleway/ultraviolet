@@ -1,15 +1,15 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { useMemo } from 'react'
 import type { ComponentProps } from 'react'
+import { useId, useMemo } from 'react'
+import { Description } from '../../components/Description'
 import { Label } from '../../components/Label'
 import type { SelectInput } from '../../components/SelectInput'
 import { Arrow } from './components/ArrowIcon'
 import { IconWithContent } from './components/IconWithContent'
 import { RevealOnHover } from './components/RevealOnHover'
 import { Selector } from './components/Selector'
-import { SelectorHelper } from './components/SelectorLabel'
 import type { OptionSelectorProps, SelectorOption } from './types'
 import { optionSelectorStyle } from './styles.css'
 
@@ -57,6 +57,9 @@ export const OptionSelector = ({
   hideWhenEmpty,
   direction = 'horizontal',
 }: OptionSelectorProps) => {
+  const firstSelectorHelperId = useId()
+  const secondSelectorHelperId = useId()
+
   const firstValue = useMemo(() => {
     if (value?.first) {
       return value.first
@@ -110,6 +113,9 @@ export const OptionSelector = ({
   const firstSelectorStringError = typeof firstSelector.error === 'string'
   const secondSelectorStringError = typeof secondSelector?.error === 'string'
 
+  const displayFirstDescription = firstSelectorStringError || firstSelector.helper || error
+  const displaySecondDescription = secondSelectorStringError || secondSelector?.helper || error
+
   return (
     <fieldset
       aria-label={ariaLabel}
@@ -141,6 +147,7 @@ export const OptionSelector = ({
         required={required}
         size={size}
         value={firstValue}
+        helperId={displayFirstDescription && !error ? firstSelectorHelperId : undefined}
       />
       {secondSelector && secondSelectorOptions && !(hideWhenEmpty && !firstValue) ? (
         <>
@@ -158,23 +165,29 @@ export const OptionSelector = ({
             required={required}
             size={size}
             value={secondValue}
+            helperId={displaySecondDescription && !error ? secondSelectorHelperId : undefined}
           />
         </>
       ) : null}
       {/** Do not use error and helper directly from SelectInput to avoid misalignment issues when direction="horizontal" */}
-      {isHorizontal && (firstSelectorStringError || firstSelector.helper) ? (
-        <SelectorHelper
+      {isHorizontal && displayFirstDescription ? (
+        <Description
           error={firstSelector.error}
           helper={firstSelector.helper}
-          isError={firstSelectorStringError}
-          isFirst
+          id={firstSelectorHelperId}
+          size={size}
+          disabled={firstSelector.disabled || disabled}
+          className={optionSelectorStyle.errorFirstSelector}
         />
       ) : null}
-      {secondSelector && isHorizontal && (secondSelectorStringError || secondSelector?.helper) ? (
-        <SelectorHelper
+      {secondSelector && isHorizontal && displaySecondDescription ? (
+        <Description
           error={secondSelector.error}
           helper={secondSelector.helper}
-          isError={secondSelectorStringError}
+          id={secondSelectorHelperId}
+          size={size}
+          disabled={secondSelector.disabled || disabled}
+          className={optionSelectorStyle.errorSecondSelector}
         />
       ) : null}
     </fieldset>

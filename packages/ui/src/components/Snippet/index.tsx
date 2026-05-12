@@ -2,10 +2,12 @@
 
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { cn } from '@ultraviolet/utils'
-import { useReducer } from 'react'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import { useId, useReducer } from 'react'
+import { hasHelperText } from '../../helpers/hasHelperText'
 import { useTheme } from '../../theme/ThemeProvider'
 import { CopyButton } from '../CopyButton'
+import { Description } from '../Description'
 import { Expandable } from '../Expandable'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
@@ -33,9 +35,10 @@ type SnippetProps = {
   noExpandable?: boolean
   onCopy?: () => void
   style?: CSSProperties
-  helper?: string
+  helper?: ReactNode
   label?: string
   labelDescription?: ReactNode
+  'aria-describedby'?: string
 } & Pick<ComponentProps<typeof CopyButton>, 'copyText' | 'copiedText'>
 
 /**
@@ -59,8 +62,11 @@ export const Snippet = ({
   helper,
   label,
   labelDescription,
+  'aria-describedby': ariaDescribedBy,
 }: SnippetProps) => {
   const theme = useTheme()
+  const helperId = useId()
+
   const [showMore, setShowMore] = useReducer(value => !value, initiallyExpanded ?? false)
   const lines = children.split(LINES_BREAK_REGEX)
 
@@ -79,7 +85,10 @@ export const Snippet = ({
         data-testid={dataTestId}
         style={style}
       >
-        <Stack className={snippetStyle.stackStyle}>
+        <Stack
+          className={snippetStyle.stackStyle}
+          aria-describedby={ariaDescribedBy || (hasHelperText(helper) ? helperId : undefined)}
+        >
           {hasShowMoreButton ? (
             <Expandable minHeight={minHeight} opened={showMore}>
               <CodeContent lines={lines} multiline={multiline} noExpandable={noExpandable} prefix={prefix} rows={rows}>
@@ -118,11 +127,7 @@ export const Snippet = ({
           ) : null}
         </Stack>
       </div>
-      {helper ? (
-        <Text as="p" prominence="weak" sentiment="neutral" variant="caption">
-          {helper}
-        </Text>
-      ) : null}
+      <Description helper={helper} id={ariaDescribedBy ?? helperId} />
     </Stack>
   )
 }
