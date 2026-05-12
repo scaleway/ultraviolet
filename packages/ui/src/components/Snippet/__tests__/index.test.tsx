@@ -57,7 +57,7 @@ describe('snippet', () => {
   it('should click on extend button to display full content on ', async () => {
     const { asFragment } = renderWithTheme(<Snippet>{TEST_VALUE_MULTILINE}</Snippet>)
 
-    await userEvent.click(screen.getByRole('button', { name: 'Show ArrowDownIcon' }))
+    await userEvent.click(screen.getByRole('button', { name: /Show.*/ }))
 
     expect(asFragment()).toMatchSnapshot()
   })

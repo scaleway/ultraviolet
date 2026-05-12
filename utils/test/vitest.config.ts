@@ -13,7 +13,6 @@ const defaultConfig = defineConfig({
     },
     allowOnly: false,
     clearMocks: true,
-
     pool: 'forks',
     coverage: {
       exclude: [

@@ -1,7 +1,7 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { BaremetalCategoryIcon, UseCaseCategoryIcon } from '@ultraviolet/icons/category'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { renderWithTheme } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Navigation, NavigationProvider } from '..'
@@ -106,11 +106,21 @@ const NavigationNested = ({ pinnedFeature = true }: BasicNavigationProps & { onS
 )
 
 describe('navigation', () => {
-  it('render with basic content', () => shouldMatchSnapshot(<BasicNavigation />))
+  it('render with basic content', () => {
+    const { asFragment } = renderWithTheme(<BasicNavigation />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('render without pinnedFeature', () => shouldMatchSnapshot(<BasicNavigation pinnedFeature={false} />))
+  it('render without pinnedFeature', () => {
+    const { asFragment } = renderWithTheme(<BasicNavigation pinnedFeature={false} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('render with basic content and no expand', () => shouldMatchSnapshot(<BasicNavigationNoExpand />))
+  it('render with basic content and no expand', () => {
+    const { asFragment } = renderWithTheme(<BasicNavigationNoExpand />)
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('click on expand / collapse button', async () => {
     const { asFragment } = renderWithTheme(<BasicNavigation />)

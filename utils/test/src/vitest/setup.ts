@@ -11,6 +11,19 @@ const MockResize = vi.fn(function mock() {
   }
 })
 
+const MockMatchMedia = vi.fn(function mock(query: string): MediaQueryList {
+  return {
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: vi.fn(),
+    removeListener: vi.fn(),
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+    dispatchEvent: vi.fn(),
+  }
+})
+
 export const setup = () => {
   process.env['TZ'] = 'UTC'
   expect.extend(matchers)
@@ -20,6 +33,15 @@ export const setup = () => {
     vi.spyOn(globalThis.Math, 'random').mockReturnValue(0.415_591_366_944_480_4)
 
     window.ResizeObserver = vi.fn().mockImplementation(MockResize)
+    window.matchMedia = vi.fn().mockImplementation(MockMatchMedia)
+
+    if (!globalThis.navigator.clipboard) {
+      // @ts-expect-error mock clipboard API
+      globalThis.navigator.clipboard = {
+        writeText: vi.fn().mockResolvedValue(undefined),
+        readText: vi.fn().mockResolvedValue(''),
+      }
+    }
   })
 
   //
