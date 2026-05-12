@@ -1,7 +1,7 @@
 'use client'
 
 import { ProseMirror, ProseMirrorDoc } from '@handlewithcare/react-prosemirror'
-import { AlertCircleIcon } from '@ultraviolet/icons'
+import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
@@ -145,7 +145,11 @@ export const RichTextInput = ({
           static={!isEditable}
         >
           <div className={richTextInputStyle.toolbarRow}>
-            <Toolbar showList={showList} showMarks={showMarks} />
+            <Toolbar
+              showList={showList}
+              showMarks={showMarks}
+              disabled={disabled}
+            />
           </div>
           <div className={richTextInputStyle.wrapper}>
             <ProseMirrorDoc
@@ -169,6 +173,12 @@ export const RichTextInput = ({
               <AlertCircleIcon
                 className={richTextInputStyle.errorIcon}
                 sentiment="danger"
+              />
+            ) : null}
+            {success ? (
+              <CheckCircleIcon
+                className={richTextInputStyle.successIcon}
+                sentiment="success"
               />
             ) : null}
           </div>
