@@ -4,8 +4,8 @@ import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId } from 'react'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
+import type { LabelProp } from '../../types'
 import { Description } from '../Description'
-import type { LabelProps } from '../Label/type'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
@@ -36,7 +36,7 @@ type RadioProps = {
     | 'style'
     | 'aria-describedby'
   > &
-  LabelProps
+  LabelProp
 
 /**
  * Radio component is used to select a single option from a list of options. It is a type of input component.

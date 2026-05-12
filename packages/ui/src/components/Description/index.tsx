@@ -1,11 +1,9 @@
 'use client'
 
 import { useMemo } from 'react'
-
+import type { HTMLAttributes, ReactNode } from 'react'
 import { canDisplay } from '../../helpers/hasHelperText'
 import { Text } from '../Text'
-
-import type { HTMLAttributes, ReactNode } from 'react'
 
 type HelperProps = {
   helper?: ReactNode

@@ -1,8 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { Description } from '..'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 export const Success: StoryFn<typeof Description> = props => (
   <Stack direction="column" alignItems="baseline" gap={1}>

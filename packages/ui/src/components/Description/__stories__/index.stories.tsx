@@ -1,6 +1,5 @@
-import { Description } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { Description } from '..'
 
 export default {
   component: Description,
