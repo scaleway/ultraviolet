@@ -5,13 +5,11 @@ export const vitestConfig = createVitestConfig({
   plugins: [
     vanillaExtractPlugin({
       identifiers: ({ hash }) => `uv_${hash}`,
-      // Enable unstable mode for better compatibility with Vitest
       unstable_mode: 'transform',
     }),
   ],
   test: {
-    testTimeout: 10_000,
-    name: 'uv/ui',
+    name: 'uv/icons',
     setupFiles: ['./vitest.setup.ts'],
   },
 })

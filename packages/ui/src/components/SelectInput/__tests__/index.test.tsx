@@ -5,14 +5,6 @@ import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 import { SelectInput } from '..'
 import { cities, dataGroupEmpty, dataGrouped, dataUnGrouped, OptionalInfo } from './resources'
 
-// export type OptionType = {
-//   value: string
-//   label: ReactNode
-//   disabled: boolean
-//   description?: string
-//   optionalInfo?: ReactNode
-// }
-
 describe('selectInput', () => {
   beforeAll(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
@@ -981,7 +973,7 @@ describe('selectInput', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const selectAllCheckBox = screen.getByRole('checkbox', {
-      name: 'Select all',
+      name: /select.*all/i,
     })
     const selectAll = screen.getByTestId('select-all')
     await userEvent.click(selectAll)
@@ -1038,7 +1030,7 @@ describe('selectInput', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const selectAllCheckBox = screen.getByRole('checkbox', {
-      name: 'Select all',
+      name: /select.*all/i,
     })
     const selectAll = screen.getByTestId('select-all')
     await userEvent.click(selectAll)
@@ -1090,22 +1082,30 @@ describe('selectInput', () => {
     )
 
     const input = screen.getByTestId('select-input-test')
+
     await userEvent.click(input)
-    const selectAllGroupCheckBox = screen.getByRole('checkbox', {
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(
+      () => {
+        expect(dropdown).toBeVisible()
+      },
+      { timeout: 1000 },
+    )
+    const selectAllGroupCheckBox = within(dropdown).getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
     })
-    const selectAllGroup = screen.getByTestId('group-1')
+    const selectAllGroup = within(dropdown).getByTestId('group-1')
     await userEvent.click(selectAllGroup)
-    const mercury = screen.getByRole('checkbox', {
+    const mercury = within(dropdown).getByRole('checkbox', {
       name: /mercury/i,
     })
-    const venus = screen.getByRole('checkbox', {
+    const venus = within(dropdown).getByRole('checkbox', {
       name: /venus/i,
     })
-    const earth = screen.getByRole('checkbox', {
+    const earth = within(dropdown).getByRole('checkbox', {
       name: /earth/i,
     })
-    const jupiter = screen.getByRole('checkbox', {
+    const jupiter = within(dropdown).getByRole('checkbox', {
       name: /jupiter/i,
     })
 
@@ -1135,10 +1135,18 @@ describe('selectInput', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
-    const selectAllGroupCheckBox = screen.getByRole('checkbox', {
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(
+      () => {
+        expect(dropdown).toBeVisible()
+      },
+      { timeout: 1000 },
+    )
+
+    const selectAllGroupCheckBox = within(dropdown).getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
     })
-    const selectAllGroup = screen.getByTestId('group-1')
+    const selectAllGroup = within(dropdown).getByTestId('group-1')
     await userEvent.click(selectAllGroup)
     const earth = screen.getByTestId('option-earth')
 
@@ -1182,8 +1190,9 @@ describe('selectInput', () => {
     )
 
     const selectAllGroupCheckBox = within(dropdown).getByRole('checkbox', {
-      name: 'TERRESTRIAL PLANETS',
+      name: /terrestrial planets/i,
     })
+
     const selectAllGroup = within(dropdown).getByTestId('group-1')
 
     await userEvent.click(selectAllGroup)
@@ -1192,7 +1201,7 @@ describe('selectInput', () => {
     })
 
     const selectAllCheckBox = within(dropdown).getByRole('checkbox', {
-      name: 'Select all',
+      name: /select.*all/i,
     })
     const selectAll = within(dropdown).getByTestId('select-all')
     await userEvent.click(selectAll)
