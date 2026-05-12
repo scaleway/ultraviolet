@@ -46,6 +46,11 @@ describe('pieChart', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  it('displays a header above the legend to display the unit', () => {
+    renderWithTheme(<PieChart data={dataWithLegendsAndDetails} legendHeader="Euro (€)" withLegend />)
+    expect(screen.getByText('Euro (€)')).toBeVisible()
+  })
+
   it('renders correctly with detailed legend and discount', () => {
     const { asFragment } = renderWithTheme(<PieChart data={dataWithLegendsDetailsAndDiscount} withLegend />)
     expect(asFragment()).toMatchSnapshot()
