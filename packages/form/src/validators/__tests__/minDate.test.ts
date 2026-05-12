@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { minDateValidator } from '../minDate'
 
-const today = new Date()
 const hourInMs = 60 * 60 * 1000
+const today = new Date('2000-01-01T12:00:00Z')
 const twoHoursLater = new Date(today.getTime() + 2 * hourInMs)
 const yesterday = new Date(today.getTime() - 24 * hourInMs)
 const tomorrow = new Date(today.getTime() + 24 * hourInMs)

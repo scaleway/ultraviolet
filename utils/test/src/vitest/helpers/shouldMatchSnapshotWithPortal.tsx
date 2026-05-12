@@ -2,6 +2,9 @@ import { render } from '@testing-library/react'
 import type { ReactElement } from 'react'
 import { expect, vi } from 'vitest'
 
+/**
+ * @deprecated
+ */
 export const makeShouldMatchSnapshotWithPortal = (
   children: ReactElement,
   {

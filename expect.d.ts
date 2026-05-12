@@ -1,7 +1,8 @@
-import 'expect'
+import 'vitest-axe/extend-expect'
+import type { AxeCore } from 'axe-core'
 
-declare module 'expect' {
-  type Matchers<R extends void | Promise<void>, T = unknown> = {
-    toHaveNoViolations(): R
-  } & jest.Matchers<R, T>
+declare module 'vitest' {
+  interface Assertion<T = any> {
+    toHaveNoViolations(): void
+  }
 }

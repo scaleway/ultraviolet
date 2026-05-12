@@ -2,6 +2,9 @@ import { render } from '@testing-library/react'
 import type { ReactNode } from 'react'
 import { expect } from 'vitest'
 
+/**
+ * @deprecated
+ */
 export const makeShouldMatchSnapshot = (
   children: ReactNode,
   {
@@ -11,6 +14,5 @@ export const makeShouldMatchSnapshot = (
   },
 ) => {
   const { asFragment } = render(children, { wrapper })
-
   expect(asFragment()).toMatchSnapshot()
 }
