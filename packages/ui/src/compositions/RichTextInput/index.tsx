@@ -5,27 +5,15 @@ import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { EditorState } from 'prosemirror-state'
 import { useId, useMemo, useState } from 'react'
-
+import type { CSSProperties, DOMAttributes, ReactNode } from 'react'
 import { Label } from '../../components/Label'
 import { Stack } from '../../components/Stack'
-
-import {
-  createEditorState,
-  docFromHtml,
-  editorDocToHtml,
-  editorSchema,
-} from './editorCore'
+import { createEditorState, docFromHtml, editorDocToHtml, editorSchema } from './editorCore'
 import { Notice } from './Notice'
-import {
-  docRegionMaxHeightVar,
-  docRegionMinHeightVar,
-  richTextInputStyle,
-} from './styles.css'
 import { Toolbar } from './Toolbar'
-
-import type { EditorState } from 'prosemirror-state'
-import type { CSSProperties, DOMAttributes, ReactNode } from 'react'
+import { docRegionMaxHeightVar, docRegionMinHeightVar, richTextInputStyle } from './styles.css'
 
 const RICH_TEXT_EDITOR_LINE_HEIGHT_EM = 1.5
 
@@ -82,10 +70,7 @@ export const RichTextInput = ({
   const lineHeightEm = RICH_TEXT_EDITOR_LINE_HEIGHT_EM
   const padding = theme.space[1]
   const minHeight = `calc(${lineHeightEm}em * ${rows} + 2 * ${padding})`
-  const maxHeight =
-    typeof maxRows === 'number'
-      ? `calc(${lineHeightEm}em * ${maxRows} + 2 * ${padding})`
-      : 'none'
+  const maxHeight = typeof maxRows === 'number' ? `calc(${lineHeightEm}em * ${maxRows} + 2 * ${padding})` : 'none'
 
   const sentiment = useMemo(() => {
     if (error) {
@@ -101,9 +86,7 @@ export const RichTextInput = ({
 
   const notice = success || error || helper
 
-  const [editorState, setEditorState] = useState<EditorState>(() =>
-    createEditorState(docFromHtml(value, editorSchema)),
-  )
+  const [editorState, setEditorState] = useState<EditorState>(() => createEditorState(docFromHtml(value, editorSchema)))
 
   return (
     <Stack gap="0.5">
@@ -133,9 +116,7 @@ export const RichTextInput = ({
               const next = prev.apply(transaction)
               if (!prev.doc.eq(next.doc)) {
                 const isEmpty = next.doc.textContent.trim() === ''
-                onChange?.(
-                  isEmpty ? '' : editorDocToHtml(next.doc, editorSchema),
-                )
+                onChange?.(isEmpty ? '' : editorDocToHtml(next.doc, editorSchema))
               }
 
               return next
@@ -145,11 +126,7 @@ export const RichTextInput = ({
           static={!isEditable}
         >
           <div className={richTextInputStyle.toolbarRow}>
-            <Toolbar
-              showList={showList}
-              showMarks={showMarks}
-              disabled={disabled}
-            />
+            <Toolbar showList={showList} showMarks={showMarks} disabled={disabled} />
           </div>
           <div className={richTextInputStyle.wrapper}>
             <ProseMirrorDoc
@@ -169,18 +146,8 @@ export const RichTextInput = ({
               onBlur={onBlur}
               onFocus={onFocus}
             />
-            {error ? (
-              <AlertCircleIcon
-                className={richTextInputStyle.errorIcon}
-                sentiment="danger"
-              />
-            ) : null}
-            {success ? (
-              <CheckCircleIcon
-                className={richTextInputStyle.successIcon}
-                sentiment="success"
-              />
-            ) : null}
+            {error ? <AlertCircleIcon className={richTextInputStyle.errorIcon} sentiment="danger" /> : null}
+            {success ? <CheckCircleIcon className={richTextInputStyle.successIcon} sentiment="success" /> : null}
           </div>
         </ProseMirror>
       </Stack>

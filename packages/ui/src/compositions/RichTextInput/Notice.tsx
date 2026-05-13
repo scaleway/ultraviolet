@@ -1,9 +1,8 @@
 'use client'
 
+import type { ReactNode } from 'react'
 import { Row } from '../../components/Row'
 import { Text } from '../../components/Text'
-
-import type { ReactNode } from 'react'
 
 export const Notice = ({
   error,
@@ -33,9 +32,7 @@ export const Notice = ({
           {error || success || helper}
         </Text>
       ) : null}
-      {!(error || success) && typeof helper !== 'string' && helper
-        ? helper
-        : null}
+      {!(error || success) && typeof helper !== 'string' && helper ? helper : null}
     </Row>
   </div>
 )

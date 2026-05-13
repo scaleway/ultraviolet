@@ -1,33 +1,26 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
-
+import { describe, expect, it, vi } from 'vitest'
 import { RichTextInput } from '..'
 
 describe('richTextInput', () => {
-  test('should render correctly with basic props', () =>
-    shouldMatchSnapshot(
-      <RichTextInput aria-label="Test" onChange={() => {}} value="test" />,
-    ))
+  it('should render correctly with basic props', () =>
+    shouldMatchSnapshot(<RichTextInput aria-label="Test" onChange={() => {}} value="test" />))
 
-  test('should render the value', () => {
+  it('should render the value', () => {
     const onChange = vi.fn()
 
-    renderWithTheme(
-      <RichTextInput aria-label="Test" onChange={onChange} value="test" />,
-    )
+    renderWithTheme(<RichTextInput aria-label="Test" onChange={onChange} value="test" />)
 
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
     expect(doc.textContent).toContain('test')
   })
 
-  test('should call onChange when typing', async () => {
+  it('should call onChange when typing', async () => {
     const onChange = vi.fn()
 
-    renderWithTheme(
-      <RichTextInput aria-label="Test" onChange={onChange} value="test" />,
-    )
+    renderWithTheme(<RichTextInput aria-label="Test" onChange={onChange} value="test" />)
 
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
     await userEvent.click(doc)
@@ -38,12 +31,10 @@ describe('richTextInput', () => {
     expect(lastHtml).toBe('<p>testa</p>')
   })
 
-  test('should return empty string when cleared', async () => {
+  it('should return empty string when cleared', async () => {
     const onChange = vi.fn()
 
-    renderWithTheme(
-      <RichTextInput aria-label="Test" onChange={onChange} value="test" />,
-    )
+    renderWithTheme(<RichTextInput aria-label="Test" onChange={onChange} value="test" />)
 
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
     await userEvent.click(doc)
@@ -53,12 +44,10 @@ describe('richTextInput', () => {
     expect(onChange).toHaveBeenLastCalledWith('')
   })
 
-  test('should apply italic formatting', async () => {
+  it('should apply italic formatting', async () => {
     const onChange = vi.fn()
 
-    renderWithTheme(
-      <RichTextInput aria-label="Test" onChange={onChange} value="" />,
-    )
+    renderWithTheme(<RichTextInput aria-label="Test" onChange={onChange} value="" />)
 
     const italicButton = screen.getByRole('button', { name: 'Italic' })
     await userEvent.click(italicButton)
@@ -72,12 +61,10 @@ describe('richTextInput', () => {
     expect(lastHtml).toBe('<p><em>hello</em></p>')
   })
 
-  test('should apply bullet list formatting', async () => {
+  it('should apply bullet list formatting', async () => {
     const onChange = vi.fn()
 
-    renderWithTheme(
-      <RichTextInput aria-label="Test" onChange={onChange} value="" />,
-    )
+    renderWithTheme(<RichTextInput aria-label="Test" onChange={onChange} value="" />)
 
     const bulletListButton = screen.getByRole('button', { name: 'Bullet List' })
     await userEvent.click(bulletListButton)
@@ -91,17 +78,10 @@ describe('richTextInput', () => {
     expect(lastHtml).toBe('<ul><li><p>item</p></li></ul>')
   })
 
-  test('should not be editable when disabled', async () => {
+  it('should not be editable when disabled', async () => {
     const onChange = vi.fn()
 
-    renderWithTheme(
-      <RichTextInput
-        aria-label="Test"
-        disabled
-        onChange={onChange}
-        value="test"
-      />,
-    )
+    renderWithTheme(<RichTextInput aria-label="Test" disabled onChange={onChange} value="test" />)
 
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
     fireEvent.focus(doc)
@@ -109,18 +89,12 @@ describe('richTextInput', () => {
     expect(onChange).not.toHaveBeenCalled()
   })
 
-  test('should display success message', () => {
+  it('should display success message', () => {
     const onChange = vi.fn()
     const successMessage = 'success message'
 
     renderWithTheme(
-      <RichTextInput
-        id="id-test"
-        label="Test"
-        onChange={onChange}
-        success={successMessage}
-        value="test"
-      />,
+      <RichTextInput id="id-test" label="Test" onChange={onChange} success={successMessage} value="test" />,
     )
 
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
@@ -128,57 +102,35 @@ describe('richTextInput', () => {
     expect(screen.getByRole('status')).toHaveTextContent(successMessage)
   })
 
-  test('should display error message', () => {
+  it('should display error message', () => {
     const onChange = vi.fn()
     const errorMessage = 'error!'
 
-    renderWithTheme(
-      <RichTextInput
-        id="id-test"
-        label="Test"
-        onChange={onChange}
-        error={errorMessage}
-        value="test"
-      />,
-    )
+    renderWithTheme(<RichTextInput id="id-test" label="Test" onChange={onChange} error={errorMessage} value="test" />)
 
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
     expect(doc).toHaveAccessibleDescription(errorMessage)
     expect(screen.getByRole('status')).toHaveTextContent(errorMessage)
   })
 
-  test('should display helper message', () => {
+  it('should display helper message', () => {
     const onChange = vi.fn()
     const helperMessage = 'helper'
 
-    renderWithTheme(
-      <RichTextInput
-        id="id-test"
-        helper={helperMessage}
-        label="Test"
-        onChange={onChange}
-        value="test"
-      />,
-    )
+    renderWithTheme(<RichTextInput id="id-test" helper={helperMessage} label="Test" onChange={onChange} value="test" />)
 
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
     expect(doc).toHaveAccessibleDescription(helperMessage)
     expect(screen.getByRole('status')).toHaveTextContent(helperMessage)
   })
 
-  test('should not display helper message when success is displayed', () => {
+  it('should not display helper message when success is displayed', () => {
     const onChange = vi.fn()
     const successMessage = 'success message'
     const helperMessage = 'helper'
 
     renderWithTheme(
-      <RichTextInput
-        helper={helperMessage}
-        label="Test"
-        onChange={onChange}
-        success={successMessage}
-        value="test"
-      />,
+      <RichTextInput helper={helperMessage} label="Test" onChange={onChange} success={successMessage} value="test" />,
     )
 
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
@@ -187,7 +139,7 @@ describe('richTextInput', () => {
     expect(screen.getByRole('status')).toHaveTextContent(successMessage)
   })
 
-  test('should not display helper message when error is displayed', () => {
+  it('should not display helper message when error is displayed', () => {
     const onChange = vi.fn()
     const errorMessage = 'error!'
     const helperMessage = 'helper'

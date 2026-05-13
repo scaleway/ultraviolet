@@ -1,11 +1,9 @@
+import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-
 import { RichTextInputField } from '..'
 import { useForm } from '../../..'
 import { Form } from '../../../components'
 import { mockErrors } from '../../../mocks'
-
-import type { Meta } from '@storybook/react-vite'
 
 export default {
   component: RichTextInputField,

@@ -2,20 +2,14 @@ import { reactKeys } from '@handlewithcare/react-prosemirror'
 import { baseKeymap, toggleMark } from 'prosemirror-commands'
 import { keymap } from 'prosemirror-keymap'
 import { DOMParser, DOMSerializer, Schema } from 'prosemirror-model'
+import type { Node } from 'prosemirror-model'
 import { schema as basicSchema } from 'prosemirror-schema-basic'
 import { addListNodes } from 'prosemirror-schema-list'
 import { EditorState } from 'prosemirror-state'
-
+import type { Plugin } from 'prosemirror-state'
 import { createToggleListCommand, escapeHtml } from './helpers'
 
-import type { Node } from 'prosemirror-model'
-import type { Plugin } from 'prosemirror-state'
-
-const nodesWithLists = addListNodes(
-  basicSchema.spec.nodes.remove('image'),
-  'paragraph block*',
-  'block',
-)
+const nodesWithLists = addListNodes(basicSchema.spec.nodes.remove('image'), 'paragraph block*', 'block')
 
 export const editorSchema: Schema = new Schema({
   nodes: nodesWithLists,
@@ -45,9 +39,7 @@ export const createPlugins = () => {
     plugins.push(keymap({ 'Mod-i': toggleMark(editorSchema.marks['em']) }))
   }
   if (editorSchema.marks['underline']) {
-    plugins.push(
-      keymap({ 'Mod-u': toggleMark(editorSchema.marks['underline']) }),
-    )
+    plugins.push(keymap({ 'Mod-u': toggleMark(editorSchema.marks['underline']) }))
   }
   if (bulletListNode) {
     plugins.push(
@@ -75,10 +67,7 @@ export const createEditorState = (doc: Node) =>
     plugins: createPlugins(),
   })
 
-export const docFromHtml = (
-  html: string | undefined,
-  schema: Schema = editorSchema,
-): Node => {
+export const docFromHtml = (html: string | undefined, schema: Schema = editorSchema): Node => {
   const normalizedHtml = html ?? ''
 
   if (normalizedHtml.trim() === '') {
@@ -90,17 +79,12 @@ export const docFromHtml = (
   }
 
   const container = document.createElement('div')
-  container.innerHTML = normalizedHtml.includes('<')
-    ? normalizedHtml
-    : `<p>${escapeHtml(normalizedHtml)}</p>`
+  container.innerHTML = normalizedHtml.includes('<') ? normalizedHtml : `<p>${escapeHtml(normalizedHtml)}</p>`
 
   return DOMParser.fromSchema(schema).parse(container)
 }
 
-export const editorDocToHtml = (
-  doc: Node,
-  schema: Schema = editorSchema,
-): string => {
+export const editorDocToHtml = (doc: Node, schema: Schema = editorSchema): string => {
   if (typeof document === 'undefined') {
     return ''
   }
