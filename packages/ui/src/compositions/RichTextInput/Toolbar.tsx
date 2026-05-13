@@ -1,34 +1,19 @@
-import {
-  useEditorEventCallback,
-  useEditorState,
-} from '@handlewithcare/react-prosemirror'
-import {
-  BoldIcon,
-  ItalicIcon,
-  ListBulletIcon,
-  ListNumberIcon,
-  UnderlineIcon,
-} from '@ultraviolet/icons'
+import { useEditorEventCallback, useEditorState } from '@handlewithcare/react-prosemirror'
+import { BoldIcon, ItalicIcon, ListBulletIcon, ListNumberIcon, UnderlineIcon } from '@ultraviolet/icons'
 import { toggleMark } from 'prosemirror-commands'
+import type { MarkType } from 'prosemirror-model'
 import { liftListItem, wrapInList } from 'prosemirror-schema-list'
-
+import type { EditorState, Transaction } from 'prosemirror-state'
 import { Button } from '../../components/Button'
 import { Stack } from '../../components/Stack'
-
 import { isSelectionInNodeType } from './helpers'
-
-import type { MarkType } from 'prosemirror-model'
-import type { EditorState, Transaction } from 'prosemirror-state'
 
 type ToolbarProps = {
   disabled?: boolean
   showList: boolean
   showMarks: boolean
 }
-type EditorCommand = (
-  state: EditorState,
-  dispatch?: (tr: Transaction) => void,
-) => boolean
+type EditorCommand = (state: EditorState, dispatch?: (tr: Transaction) => void) => boolean
 
 const isMarkActive = (state: EditorState, markType?: MarkType) => {
   if (!markType) {
@@ -51,10 +36,7 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
   const runCommand = useEditorEventCallback((view, command: EditorCommand) => {
     command(view.state, view.dispatch)
   })
-  const runCommandOnEnter = (
-    event: React.KeyboardEvent<HTMLButtonElement>,
-    command: EditorCommand,
-  ) => {
+  const runCommandOnEnter = (event: React.KeyboardEvent<HTMLButtonElement>, command: EditorCommand) => {
     if (event.key !== 'Enter') {
       return
     }
@@ -121,9 +103,7 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
             aria-label="Underline"
             disabled={disabled}
             size="small"
-            variant={
-              isMarkActive(editorState, underlineMark) ? 'filled' : 'ghost'
-            }
+            variant={isMarkActive(editorState, underlineMark) ? 'filled' : 'ghost'}
             sentiment="neutral"
             onMouseDown={event => {
               event.preventDefault()
@@ -151,19 +131,10 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
             sentiment="neutral"
             onMouseDown={event => {
               event.preventDefault()
-              runCommand(
-                isInBulletList
-                  ? liftListItem(listItem)
-                  : wrapInList(bulletList),
-              )
+              runCommand(isInBulletList ? liftListItem(listItem) : wrapInList(bulletList))
             }}
             onKeyDown={event => {
-              runCommandOnEnter(
-                event,
-                isInBulletList
-                  ? liftListItem(listItem)
-                  : wrapInList(bulletList),
-              )
+              runCommandOnEnter(event, isInBulletList ? liftListItem(listItem) : wrapInList(bulletList))
             }}
           >
             <ListBulletIcon />
@@ -176,19 +147,10 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
             sentiment="neutral"
             onMouseDown={event => {
               event.preventDefault()
-              runCommand(
-                isInOrderedList
-                  ? liftListItem(listItem)
-                  : wrapInList(orderedList),
-              )
+              runCommand(isInOrderedList ? liftListItem(listItem) : wrapInList(orderedList))
             }}
             onKeyDown={event => {
-              runCommandOnEnter(
-                event,
-                isInOrderedList
-                  ? liftListItem(listItem)
-                  : wrapInList(orderedList),
-              )
+              runCommandOnEnter(event, isInOrderedList ? liftListItem(listItem) : wrapInList(orderedList))
             }}
           >
             <ListNumberIcon />

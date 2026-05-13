@@ -1,6 +1,5 @@
-import { RichTextInput } from '..'
-
 import type { Meta } from '@storybook/react-vite'
+import { RichTextInput } from '..'
 
 export default {
   component: RichTextInput,

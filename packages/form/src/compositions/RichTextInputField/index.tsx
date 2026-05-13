@@ -1,13 +1,11 @@
 'use client'
 
 import { RichTextInput } from '@ultraviolet/ui/compositions/RichTextInput'
-import { useController } from 'react-hook-form'
-
-import { useErrors } from '../../providers'
-
-import type { BaseFieldProps } from '../../types'
 import type { ComponentProps, FocusEvent } from 'react'
+import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useErrors } from '../../providers'
+import type { BaseFieldProps } from '../../types'
 
 export type RichTextInputFieldProps<
   TFieldValues extends FieldValues,

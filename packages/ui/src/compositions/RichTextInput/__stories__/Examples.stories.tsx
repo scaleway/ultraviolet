@@ -1,8 +1,7 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { RichTextInput } from '..'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
-
-import type { StoryFn } from '@storybook/react-vite'
 
 const PLAIN_TEXT_VALUE = 'Hello, world!'
 
@@ -16,8 +15,7 @@ const LONG_VALUE = `<p>A long time ago, in a galaxy far, far away, amidst the sw
 export const Examples: StoryFn<typeof RichTextInput> = () => (
   <Stack gap={2}>
     <Text as="div" variant="body">
-      Examples of initial content (plain text, HTML, lists, multi-paragraphs)
-      and long content.
+      Examples of initial content (plain text, HTML, lists, multi-paragraphs) and long content.
     </Text>
 
     <RichTextInput label="Plain text" value={PLAIN_TEXT_VALUE} />
@@ -25,21 +23,8 @@ export const Examples: StoryFn<typeof RichTextInput> = () => (
     <RichTextInput label="Rich content (HTML)" value={HTML_VALUE} />
 
     <RichTextInput label="Bulleted list" value={LIST_VALUE} />
-    <RichTextInput
-      label="Long content"
-      maxRows={20}
-      rows={8}
-      value={LONG_VALUE}
-    />
-    <RichTextInput
-      label="Toolbar without lists"
-      showList={false}
-      value={PLAIN_TEXT_VALUE}
-    />
-    <RichTextInput
-      label="Toolbar without marks (bold/italic/underline)"
-      showMarks={false}
-      value={PLAIN_TEXT_VALUE}
-    />
+    <RichTextInput label="Long content" maxRows={20} rows={8} value={LONG_VALUE} />
+    <RichTextInput label="Toolbar without lists" showList={false} value={PLAIN_TEXT_VALUE} />
+    <RichTextInput label="Toolbar without marks (bold/italic/underline)" showMarks={false} value={PLAIN_TEXT_VALUE} />
   </Stack>
 )
