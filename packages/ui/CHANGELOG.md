@@ -1,5 +1,75 @@
 # Change Log
 
+## 3.15.0
+
+### Minor Changes
+
+- [#6398](https://github.com/scaleway/ultraviolet/pull/6398) [`f93cbf5`](https://github.com/scaleway/ultraviolet/commit/f93cbf545e0dad0bfb9828010138fdaf38747e6d) Thanks [@jsulpis](https://github.com/jsulpis)! - Fix the design and animation of the Navigation component
+
+### Patch Changes
+
+- [#6406](https://github.com/scaleway/ultraviolet/pull/6406) [`461cbb0`](https://github.com/scaleway/ultraviolet/commit/461cbb07909b6eaa413d13460482f8439349de01) Thanks [@jsulpis](https://github.com/jsulpis)! - correct display of the close button on the tag
+
+- [#6357](https://github.com/scaleway/ultraviolet/pull/6357) [`c499bd8`](https://github.com/scaleway/ultraviolet/commit/c499bd855d03752f3c7d2336af3f90f4e967e9e5) Thanks [@jsulpis](https://github.com/jsulpis)! - Fix Popup alignment and flipping condition (affects the Tooltip, Popover, SelectInput etc)
+
+- [#6369](https://github.com/scaleway/ultraviolet/pull/6369) [`420663b`](https://github.com/scaleway/ultraviolet/commit/420663b2487a5493ec07fafa306bfb51fe8659e0) Thanks [@lisalupi](https://github.com/lisalupi)! - `FileInput`: update validator type so that it can return `null` or `undefined`, fix `fileRejection` (in `onChange`) to return correct file names and fix wrapper overlay width
+
+- [#6404](https://github.com/scaleway/ultraviolet/pull/6404) [`bc4d6a8`](https://github.com/scaleway/ultraviolet/commit/bc4d6a8bac91b8f8bec94de153232dde3eaacd91) Thanks [@lisalupi](https://github.com/lisalupi)! - `Drawer`:
+
+  - content should be full height
+  - remove empty div when `footer` is undefined
+
+- [#6341](https://github.com/scaleway/ultraviolet/pull/6341) [`6ba8c5c`](https://github.com/scaleway/ultraviolet/commit/6ba8c5c666ddd49d087c8b7435f0cda102dda7bf) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@nivo/bar` to `0.99.0`.
+  Updated dependency `@nivo/core` to `0.99.0`.
+  Updated dependency `@nivo/line` to `0.99.0`.
+  Updated dependency `@nivo/pie` to `0.99.0`.
+  Updated dependency `@nivo/scales` to `0.99.0`.
+  Updated dependency `@nivo/treemap` to `0.99.0`.
+
+  `LineChart`: ⚠️ Breaking change: type of `point` in `tooltipFunction` has changed slightly: use `point.x` instead of `point.data.x` (and similarly `point.y` instead of `point.data.y`). `xFormatted` and `yFormatted` remain unchanged
+
+- [#6418](https://github.com/scaleway/ultraviolet/pull/6418) [`4aaf605`](https://github.com/scaleway/ultraviolet/commit/4aaf6058a2ecbf082aacc5f548de61d318f725ea) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.11`.
+
+- [#6359](https://github.com/scaleway/ultraviolet/pull/6359) [`df71e8a`](https://github.com/scaleway/ultraviolet/commit/df71e8a71d1d8cbfed8e6ed025090c22d3b3cfe5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@vanilla-extract/css` to `1.20.1`.
+  Updated dependency `@vanilla-extract/vite-plugin` to `5.2.2`.
+
+- [#6374](https://github.com/scaleway/ultraviolet/pull/6374) [`3f4ed9c`](https://github.com/scaleway/ultraviolet/commit/3f4ed9c015991adb56565aa25da352be6db9f0ab) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-toastify` to `11.1.0`.
+
+- [#6371](https://github.com/scaleway/ultraviolet/pull/6371) [`7017759`](https://github.com/scaleway/ultraviolet/commit/70177594df4a9eed580374b90db42ce6edfb9074) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.10`.
+
+- [#6419](https://github.com/scaleway/ultraviolet/pull/6419) [`add20f4`](https://github.com/scaleway/ultraviolet/commit/add20f4e08f43019eaed6992646f05d2fddc804c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.13`.
+
+- [#6356](https://github.com/scaleway/ultraviolet/pull/6356) [`75a6a3a`](https://github.com/scaleway/ultraviolet/commit/75a6a3a6193363bb2dc740095ebbe52bbb92c0b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.9`.
+
+- [#6402](https://github.com/scaleway/ultraviolet/pull/6402) [`f95aba8`](https://github.com/scaleway/ultraviolet/commit/f95aba836bbd2668f37179b582d729eb17f5cf98) Thanks [@lisalupi](https://github.com/lisalupi)! - Helper improvement:
+
+  - Standardize `helper` prop type as `ReactNode` in all components
+  - New component `Description` component to centralize helper logic and improve accessibility
+  - Implement `aria-describedby` support: when using `<Description />` instead of the internal `helper` prop, pass the Description's `id` to the component's `aria-describedby` prop to correctly link the content
+  - ⚠️ Some components (such as `Checkbox`) previously displayed both an error message and the helper text when both prop were defined. This is **not** the case anymore: an `error` message now always **replaces** the helper content. ⚠️ Priority: `error` > `success` > `helper`.
+
+- [#6407](https://github.com/scaleway/ultraviolet/pull/6407) [`e9746d9`](https://github.com/scaleway/ultraviolet/commit/e9746d9ae33ff4b0a33c3ca4fb7276db471555dc) Thanks [@jsulpis](https://github.com/jsulpis)! - `Slider`: align the thumb with the left and right sides
+
+- [#6278](https://github.com/scaleway/ultraviolet/pull/6278) [`ad81cdd`](https://github.com/scaleway/ultraviolet/commit/ad81cdd877013bcf99f4c406b4dc2da27b83ccfd) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`:
+
+  - new prop `compact` for a very compact view of the component, similar to `EstimateCost`,
+  - new prop `backgroundProminence` to be able to change the component background prominence
+  - new prop `calculartorIcon` to add next to the price total
+
+  `EstimateCost`: new prop `backgroundProminence`, similar to `OrderSummary`
+
+- [#6367](https://github.com/scaleway/ultraviolet/pull/6367) [`c168072`](https://github.com/scaleway/ultraviolet/commit/c168072d4c9e7c7dd02e3b07d8e49c455940a471) Thanks [@PierreBertinet](https://github.com/PierreBertinet)! - Add hideOnClickItem on Menu.Item in addition to Menu
+
+- [#6382](https://github.com/scaleway/ultraviolet/pull/6382) [`f4a5da1`](https://github.com/scaleway/ultraviolet/commit/f4a5da1ea4671363a5e5f928c94c19299b3a6785) Thanks [@lisalupi](https://github.com/lisalupi)! - `Menu`: remove event.stopPropagation on nested menu items
+
+- [#6370](https://github.com/scaleway/ultraviolet/pull/6370) [`19f385d`](https://github.com/scaleway/ultraviolet/commit/19f385db72ab459f9ea71e413d8920f61c1d0c81) Thanks [@lisalupi](https://github.com/lisalupi)! - `OptionSelector`: remove unwanted browser default padding and margin from fieldset
+
+- Updated dependencies [[`135502d`](https://github.com/scaleway/ultraviolet/commit/135502df01b9dc975c42339262a62e77be0a8bb9), [`30b4faa`](https://github.com/scaleway/ultraviolet/commit/30b4faa88c03c58306d948bbf51f994355ea61e8), [`4aaf605`](https://github.com/scaleway/ultraviolet/commit/4aaf6058a2ecbf082aacc5f548de61d318f725ea), [`df71e8a`](https://github.com/scaleway/ultraviolet/commit/df71e8a71d1d8cbfed8e6ed025090c22d3b3cfe5), [`7017759`](https://github.com/scaleway/ultraviolet/commit/70177594df4a9eed580374b90db42ce6edfb9074), [`add20f4`](https://github.com/scaleway/ultraviolet/commit/add20f4e08f43019eaed6992646f05d2fddc804c), [`75a6a3a`](https://github.com/scaleway/ultraviolet/commit/75a6a3a6193363bb2dc740095ebbe52bbb92c0b3), [`aeb25db`](https://github.com/scaleway/ultraviolet/commit/aeb25db78ba7437c68378412d63f73fee6409acd)]:
+  - @ultraviolet/icons@5.3.3
+  - @ultraviolet/animations@1.0.0
+  - @ultraviolet/utils@1.0.11
+  - @ultraviolet/themes@3.1.6
+
 ## 3.14.0
 
 ### Minor Changes
