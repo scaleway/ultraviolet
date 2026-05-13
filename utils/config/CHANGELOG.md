@@ -1,5 +1,15 @@
 # @repo/config
 
+## 0.0.7
+
+### Patch Changes
+
+- [#6418](https://github.com/scaleway/ultraviolet/pull/6418) [`4aaf605`](https://github.com/scaleway/ultraviolet/commit/4aaf6058a2ecbf082aacc5f548de61d318f725ea) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.11`.
+
+- [#6371](https://github.com/scaleway/ultraviolet/pull/6371) [`7017759`](https://github.com/scaleway/ultraviolet/commit/70177594df4a9eed580374b90db42ce6edfb9074) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.10`.
+
+- [#6356](https://github.com/scaleway/ultraviolet/pull/6356) [`75a6a3a`](https://github.com/scaleway/ultraviolet/commit/75a6a3a6193363bb2dc740095ebbe52bbb92c0b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.9`.
+
 ## 0.0.6
 
 ### Patch Changes

@@ -1,5 +1,19 @@
 # @ultraviolet/nextjs
 
+## 3.0.29
+
+### Patch Changes
+
+- [#6418](https://github.com/scaleway/ultraviolet/pull/6418) [`4aaf605`](https://github.com/scaleway/ultraviolet/commit/4aaf6058a2ecbf082aacc5f548de61d318f725ea) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.11`.
+
+- [#6371](https://github.com/scaleway/ultraviolet/pull/6371) [`7017759`](https://github.com/scaleway/ultraviolet/commit/70177594df4a9eed580374b90db42ce6edfb9074) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.10`.
+
+- [#6356](https://github.com/scaleway/ultraviolet/pull/6356) [`75a6a3a`](https://github.com/scaleway/ultraviolet/commit/75a6a3a6193363bb2dc740095ebbe52bbb92c0b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.9`.
+
+- Updated dependencies [[`461cbb0`](https://github.com/scaleway/ultraviolet/commit/461cbb07909b6eaa413d13460482f8439349de01), [`c499bd8`](https://github.com/scaleway/ultraviolet/commit/c499bd855d03752f3c7d2336af3f90f4e967e9e5), [`420663b`](https://github.com/scaleway/ultraviolet/commit/420663b2487a5493ec07fafa306bfb51fe8659e0), [`f93cbf5`](https://github.com/scaleway/ultraviolet/commit/f93cbf545e0dad0bfb9828010138fdaf38747e6d), [`bc4d6a8`](https://github.com/scaleway/ultraviolet/commit/bc4d6a8bac91b8f8bec94de153232dde3eaacd91), [`6ba8c5c`](https://github.com/scaleway/ultraviolet/commit/6ba8c5c666ddd49d087c8b7435f0cda102dda7bf), [`4aaf605`](https://github.com/scaleway/ultraviolet/commit/4aaf6058a2ecbf082aacc5f548de61d318f725ea), [`df71e8a`](https://github.com/scaleway/ultraviolet/commit/df71e8a71d1d8cbfed8e6ed025090c22d3b3cfe5), [`3f4ed9c`](https://github.com/scaleway/ultraviolet/commit/3f4ed9c015991adb56565aa25da352be6db9f0ab), [`7017759`](https://github.com/scaleway/ultraviolet/commit/70177594df4a9eed580374b90db42ce6edfb9074), [`add20f4`](https://github.com/scaleway/ultraviolet/commit/add20f4e08f43019eaed6992646f05d2fddc804c), [`75a6a3a`](https://github.com/scaleway/ultraviolet/commit/75a6a3a6193363bb2dc740095ebbe52bbb92c0b3), [`f95aba8`](https://github.com/scaleway/ultraviolet/commit/f95aba836bbd2668f37179b582d729eb17f5cf98), [`e9746d9`](https://github.com/scaleway/ultraviolet/commit/e9746d9ae33ff4b0a33c3ca4fb7276db471555dc), [`ad81cdd`](https://github.com/scaleway/ultraviolet/commit/ad81cdd877013bcf99f4c406b4dc2da27b83ccfd), [`c168072`](https://github.com/scaleway/ultraviolet/commit/c168072d4c9e7c7dd02e3b07d8e49c455940a471), [`f4a5da1`](https://github.com/scaleway/ultraviolet/commit/f4a5da1ea4671363a5e5f928c94c19299b3a6785), [`19f385d`](https://github.com/scaleway/ultraviolet/commit/19f385db72ab459f9ea71e413d8920f61c1d0c81)]:
+  - @ultraviolet/ui@3.15.0
+  - @ultraviolet/themes@3.1.6
+
 ## 3.0.28
 
 ### Patch Changes
