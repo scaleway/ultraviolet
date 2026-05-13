@@ -7,16 +7,11 @@ export const docRegionMinHeightVar = createVar()
 
 export const wrapper = style({
   display: 'flex',
+  position: 'relative',
 })
 
-export const errorIcon = style({
-  position: 'relative',
-  right: theme.space['1'],
-  top: theme.space['1'],
-})
-
-export const successIcon = style({
-  position: 'relative',
+export const statusIcon = style({
+  position: 'absolute',
   right: theme.space['1'],
   top: theme.space['1'],
 })
@@ -75,8 +70,7 @@ export const docRegion = style({
 export const richTextInputStyle = {
   docRegion,
   editorSurface,
-  errorIcon,
-  successIcon,
+  statusIcon,
   wrapper,
   toolbarRow,
 }

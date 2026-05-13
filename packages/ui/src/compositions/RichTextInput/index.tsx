@@ -146,8 +146,8 @@ export const RichTextInput = ({
               onBlur={onBlur}
               onFocus={onFocus}
             />
-            {error ? <AlertCircleIcon className={richTextInputStyle.errorIcon} sentiment="danger" /> : null}
-            {success ? <CheckCircleIcon className={richTextInputStyle.successIcon} sentiment="success" /> : null}
+            {error ? <AlertCircleIcon className={richTextInputStyle.statusIcon} sentiment="danger" /> : null}
+            {success ? <CheckCircleIcon className={richTextInputStyle.statusIcon} sentiment="success" /> : null}
           </div>
         </ProseMirror>
       </Stack>

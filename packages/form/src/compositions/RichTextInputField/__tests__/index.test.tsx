@@ -2,12 +2,18 @@ import { renderHook, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
-import { describe, expect, it, vi } from 'vitest'
+import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { RichTextInputField } from '..'
 import { Submit } from '../../../components'
 import { Form } from '../../../components/Form'
 
 describe('richTextInputField', () => {
+  beforeAll(() => {
+    if (typeof document.elementFromPoint !== 'function') {
+      document.elementFromPoint = vi.fn(() => null)
+    }
+  })
+
   it('should render correctly', () => {
     const { asFragment } = renderWithForm(<RichTextInputField label="Test" name="test" />)
 

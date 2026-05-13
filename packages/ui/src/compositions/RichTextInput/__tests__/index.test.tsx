@@ -1,10 +1,16 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, it, vi } from 'vitest'
+import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { RichTextInput } from '..'
 
 describe('richTextInput', () => {
+  beforeAll(() => {
+    if (typeof document.elementFromPoint !== 'function') {
+      document.elementFromPoint = vi.fn(() => null)
+    }
+  })
+
   it('should render correctly with basic props', () =>
     shouldMatchSnapshot(<RichTextInput aria-label="Test" onChange={() => {}} value="test" />))
 
@@ -109,6 +115,7 @@ describe('richTextInput', () => {
     renderWithTheme(<RichTextInput id="id-test" label="Test" onChange={onChange} error={errorMessage} value="test" />)
 
     const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    expect(doc).toBeInvalid()
     expect(doc).toHaveAccessibleDescription(errorMessage)
     expect(screen.getByRole('status')).toHaveTextContent(errorMessage)
   })
