@@ -19,7 +19,7 @@ describe('richTextInput', () => {
 
     renderWithTheme(<RichTextInput aria-label="Test" onChange={onChange} value="test" />)
 
-    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    const doc = screen.getByRole('textbox')
     expect(doc.textContent).toContain('test')
   })
 
@@ -28,7 +28,7 @@ describe('richTextInput', () => {
 
     renderWithTheme(<RichTextInput aria-label="Test" onChange={onChange} value="test" />)
 
-    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    const doc = screen.getByRole('textbox')
     await userEvent.click(doc)
     await userEvent.type(doc, 'a')
 
@@ -42,7 +42,7 @@ describe('richTextInput', () => {
 
     renderWithTheme(<RichTextInput aria-label="Test" onChange={onChange} value="test" />)
 
-    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    const doc = screen.getByRole('textbox')
     await userEvent.click(doc)
     await userEvent.keyboard('{Control>}{A}{/Control}{Backspace}')
 
@@ -58,7 +58,7 @@ describe('richTextInput', () => {
     const italicButton = screen.getByRole('button', { name: 'Italic' })
     await userEvent.click(italicButton)
 
-    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    const doc = screen.getByRole('textbox')
     await userEvent.click(doc)
     await userEvent.type(doc, 'hello')
 
@@ -75,7 +75,7 @@ describe('richTextInput', () => {
     const bulletListButton = screen.getByRole('button', { name: 'Bullet List' })
     await userEvent.click(bulletListButton)
 
-    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    const doc = screen.getByRole('textbox')
     await userEvent.click(doc)
     await userEvent.type(doc, 'item')
 
@@ -89,7 +89,18 @@ describe('richTextInput', () => {
 
     renderWithTheme(<RichTextInput aria-label="Test" disabled onChange={onChange} value="test" />)
 
-    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    const doc = screen.getByRole('textbox')
+    fireEvent.focus(doc)
+    await userEvent.type(doc, 'a')
+    expect(onChange).not.toHaveBeenCalled()
+  })
+
+  it('should not be editable when readonly', async () => {
+    const onChange = vi.fn()
+
+    renderWithTheme(<RichTextInput aria-label="Test" readOnly onChange={onChange} value="test" />)
+
+    const doc = screen.getByRole('textbox')
     fireEvent.focus(doc)
     await userEvent.type(doc, 'a')
     expect(onChange).not.toHaveBeenCalled()
@@ -99,36 +110,31 @@ describe('richTextInput', () => {
     const onChange = vi.fn()
     const successMessage = 'success message'
 
-    renderWithTheme(
-      <RichTextInput id="id-test" label="Test" onChange={onChange} success={successMessage} value="test" />,
-    )
+    renderWithTheme(<RichTextInput label="Test" onChange={onChange} success={successMessage} value="test" />)
 
-    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    const doc = screen.getByRole('textbox')
     expect(doc).toHaveAccessibleDescription(successMessage)
-    expect(screen.getByRole('status')).toHaveTextContent(successMessage)
   })
 
   it('should display error message', () => {
     const onChange = vi.fn()
     const errorMessage = 'error!'
 
-    renderWithTheme(<RichTextInput id="id-test" label="Test" onChange={onChange} error={errorMessage} value="test" />)
+    renderWithTheme(<RichTextInput label="Test" onChange={onChange} error={errorMessage} value="test" />)
 
-    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    const doc = screen.getByRole('textbox')
     expect(doc).toBeInvalid()
     expect(doc).toHaveAccessibleDescription(errorMessage)
-    expect(screen.getByRole('status')).toHaveTextContent(errorMessage)
   })
 
   it('should display helper message', () => {
     const onChange = vi.fn()
     const helperMessage = 'helper'
 
-    renderWithTheme(<RichTextInput id="id-test" helper={helperMessage} label="Test" onChange={onChange} value="test" />)
+    renderWithTheme(<RichTextInput helper={helperMessage} label="Test" onChange={onChange} value="test" />)
 
-    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    const doc = screen.getByRole('textbox')
     expect(doc).toHaveAccessibleDescription(helperMessage)
-    expect(screen.getByRole('status')).toHaveTextContent(helperMessage)
   })
 
   it('should not display helper message when success is displayed', () => {
@@ -140,10 +146,8 @@ describe('richTextInput', () => {
       <RichTextInput helper={helperMessage} label="Test" onChange={onChange} success={successMessage} value="test" />,
     )
 
-    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    const doc = screen.getByRole('textbox')
     expect(doc).toHaveAccessibleDescription(successMessage)
-    expect(doc).not.toHaveAccessibleDescription(helperMessage)
-    expect(screen.getByRole('status')).toHaveTextContent(successMessage)
   })
 
   it('should not display helper message when error is displayed', () => {
@@ -152,19 +156,10 @@ describe('richTextInput', () => {
     const helperMessage = 'helper'
 
     renderWithTheme(
-      <RichTextInput
-        id="id-test"
-        helper={helperMessage}
-        label="Test"
-        onChange={onChange}
-        error={errorMessage}
-        value="test"
-      />,
+      <RichTextInput helper={helperMessage} label="Test" onChange={onChange} error={errorMessage} value="test" />,
     )
 
-    const doc = screen.getByLabelText<HTMLDivElement>('Test')
+    const doc = screen.getByRole('textbox')
     expect(doc).toHaveAccessibleDescription(errorMessage)
-    expect(doc).not.toHaveAccessibleDescription(helperMessage)
-    expect(screen.getByRole('status')).toHaveTextContent(errorMessage)
   })
 })

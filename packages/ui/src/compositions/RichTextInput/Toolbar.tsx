@@ -12,6 +12,7 @@ type ToolbarProps = {
   disabled?: boolean
   showList: boolean
   showMarks: boolean
+  size: 'large' | 'medium' | 'small'
 }
 type EditorCommand = (state: EditorState, dispatch?: (tr: Transaction) => void) => boolean
 
@@ -31,7 +32,7 @@ const isMarkActive = (state: EditorState, markType?: MarkType) => {
   return state.doc.rangeHasMark(from, to, markType)
 }
 
-export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
+export const Toolbar = ({ disabled, showList, showMarks, size }: ToolbarProps) => {
   const editorState = useEditorState()
   const runCommand = useEditorEventCallback((view, command: EditorCommand) => {
     command(view.state, view.dispatch)
@@ -54,6 +55,7 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
   const listItem = editorState.schema.nodes['list_item']
   const isInBulletList = isSelectionInNodeType(editorState, bulletList)
   const isInOrderedList = isSelectionInNodeType(editorState, orderedList)
+  const buttonSize = size === 'small' ? 'xsmall' : 'small'
 
   return (
     <Stack alignItems="center" direction="row" gap={1} role="toolbar">
@@ -62,7 +64,7 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
           <Button
             aria-label="Bold"
             disabled={disabled}
-            size="small"
+            size={buttonSize}
             variant={isMarkActive(editorState, strongMark) ? 'filled' : 'ghost'}
             sentiment="neutral"
             onMouseDown={event => {
@@ -82,7 +84,7 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
           <Button
             aria-label="Italic"
             disabled={disabled}
-            size="small"
+            size={buttonSize}
             variant={isMarkActive(editorState, emMark) ? 'filled' : 'ghost'}
             sentiment="neutral"
             onMouseDown={event => {
@@ -102,7 +104,7 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
           <Button
             aria-label="Underline"
             disabled={disabled}
-            size="small"
+            size={buttonSize}
             variant={isMarkActive(editorState, underlineMark) ? 'filled' : 'ghost'}
             sentiment="neutral"
             onMouseDown={event => {
@@ -126,7 +128,7 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
           <Button
             aria-label="Bullet List"
             disabled={disabled || isInOrderedList}
-            size="small"
+            size={buttonSize}
             variant={isInBulletList ? 'filled' : 'ghost'}
             sentiment="neutral"
             onMouseDown={event => {
@@ -142,7 +144,7 @@ export const Toolbar = ({ disabled, showList, showMarks }: ToolbarProps) => {
           <Button
             aria-label="Ordered List"
             disabled={disabled || isInBulletList}
-            size="small"
+            size={buttonSize}
             variant={isInOrderedList ? 'filled' : 'ghost'}
             sentiment="neutral"
             onMouseDown={event => {
