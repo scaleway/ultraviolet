@@ -36,6 +36,7 @@ export const NavigationContent = ({
   }
 
   const { setWidth, width, expanded, toggleExpand, navigationRef, allowNavigationResize, shouldAnimate } = context
+  const clampedWidth = clamp(NAVIGATION_MIN_WIDTH, width, NAVIGATION_MAX_WIDTH)
 
   const sliderRef = useRef<HTMLDivElement | null>(null)
   const contentRef = useRef<HTMLDivElement | null>(null)
@@ -80,7 +81,7 @@ export const NavigationContent = ({
           onToggleExpand?.(!expanded)
           if (navigationRef.current) {
             setElementVars(navigationRef.current, {
-              [widthNavigationContainerExpanded]: `${width}px`,
+              [widthNavigationContainerExpanded]: `${clampedWidth}px`,
             })
           }
         }
@@ -114,7 +115,7 @@ export const NavigationContent = ({
     return () => {
       sliderRefCurrent?.removeEventListener('mousedown', mousedown)
     }
-  }, [expanded, navigationRef, onToggleExpand, onWidthResize, setWidth, toggleExpand, shouldAnimate, width])
+  }, [expanded, navigationRef, onToggleExpand, onWidthResize, setWidth, toggleExpand, shouldAnimate, clampedWidth])
 
   return (
     <nav className={cn(className, navigationStyle.navigation)} data-testid={dataTestId} id={id}>
@@ -122,8 +123,8 @@ export const NavigationContent = ({
         className={navigationStyle.container()}
         ref={navigationRef}
         style={assignInlineVars({
-          [widthNavigationContainer]: `${expanded ? width : NAVIGATION_COLLASPED_WIDTH}px`,
-          [widthNavigationContainerExpanded]: `${width}px`,
+          [widthNavigationContainer]: `${expanded ? clampedWidth : NAVIGATION_COLLASPED_WIDTH}px`,
+          [widthNavigationContainerExpanded]: `${clampedWidth}px`,
           [widthNavigationContainerDuration]: `${shouldAnimate ? ANIMATION_DURATION : 0}ms`,
         })}
       >

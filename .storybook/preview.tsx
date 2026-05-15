@@ -10,7 +10,9 @@ import {
   consoleLightTheme as lightTheme,
   ThemeProvider as ThemeProviderUI,
 } from '@ultraviolet/themes'
+import type { ReactNode } from 'react'
 import { scan } from 'react-scan'
+import { Fragment } from 'react/jsx-runtime'
 import { themes } from 'storybook/theming'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
@@ -124,13 +126,29 @@ const getThemeColor = (theme: string) => {
   return { background, textColor }
 }
 
+function DottedBackground({ theme, children }: { theme: string; children: ReactNode }) {
+  const { background, textColor } = getThemeColor(theme)
+
+  return (
+    <div
+      style={{
+        background,
+        backgroundPosition: '-4px -4px',
+        backgroundSize: '12px 12px',
+        color: textColor,
+        padding: '30px',
+      }}
+    >
+      {children}
+    </div>
+  )
+}
+
 const decorators: Decorator[] = [
   (Story, args) => {
     const { context } = args
     const { theme: globalTheme } = context.globals
     const theme = (globalTheme as 'light' | 'dark' | undefined) || 'light'
-
-    const { background, textColor } = getThemeColor(theme)
     const finalTheme = () => {
       if (theme === 'light') {
         return lightTheme
@@ -142,20 +160,14 @@ const decorators: Decorator[] = [
       return darkerTheme
     }
 
+    const Wrapper = context.parameters['layout'] === 'fullscreen' ? Fragment : DottedBackground
+
     return (
-      <div
-        style={{
-          background,
-          backgroundPosition: '-4px -4px',
-          backgroundSize: '12px 12px',
-          color: textColor,
-          padding: '30px',
-        }}
-      >
+      <Wrapper theme={theme}>
         <ThemeProviderUI theme={finalTheme()}>
           <Story {...context} />
         </ThemeProviderUI>
-      </div>
+      </Wrapper>
     )
   },
   withThemeByClassName({

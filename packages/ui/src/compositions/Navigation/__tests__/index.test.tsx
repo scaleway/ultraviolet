@@ -5,11 +5,12 @@ import { renderWithTheme } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Navigation, NavigationProvider } from '..'
+import { NAVIGATION_MIN_WIDTH } from '../constants'
 
-type BasicNavigationProps = Pick<ComponentProps<typeof NavigationProvider>, 'pinnedFeature'>
+type BasicNavigationProps = Partial<ComponentProps<typeof NavigationProvider>>
 
-const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
-  <NavigationProvider animation={false} pinnedFeature={pinnedFeature}>
+const BasicNavigation = ({ initialWidth, pinnedFeature = true }: BasicNavigationProps) => (
+  <NavigationProvider animation={false} pinnedFeature={pinnedFeature} initialWidth={initialWidth}>
     <Navigation logo={<p>Logo</p>}>
       <Navigation.PinnedItems />
       <Navigation.Separator />
@@ -162,6 +163,15 @@ describe('navigation', () => {
     slider.dispatchEvent(mouseEventExtend)
 
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should not accept an initialWidth smaller than the minimum accepted width', () => {
+    renderWithTheme(<BasicNavigation initialWidth={100} />)
+
+    expect(document.querySelector('nav > div')).toHaveAttribute(
+      'style',
+      expect.stringContaining(NAVIGATION_MIN_WIDTH.toString()),
+    )
   })
 
   it('pin and unpin an item', async () => {
