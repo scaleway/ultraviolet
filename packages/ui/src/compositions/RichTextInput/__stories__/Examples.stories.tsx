@@ -19,12 +19,15 @@ export const Examples: StoryFn<typeof RichTextInput> = () => (
     </Text>
 
     <RichTextInput label="Plain text" value={PLAIN_TEXT_VALUE} />
-
-    <RichTextInput label="Rich content (HTML)" value={HTML_VALUE} />
-
+    <RichTextInput label="Rich content" labelDescription="(HTML)" value={HTML_VALUE} />
     <RichTextInput label="Bulleted list" value={LIST_VALUE} />
     <RichTextInput label="Long content" maxRows={20} rows={8} value={LONG_VALUE} />
     <RichTextInput label="Toolbar without lists" showList={false} value={PLAIN_TEXT_VALUE} />
-    <RichTextInput label="Toolbar without marks (bold/italic/underline)" showMarks={false} value={PLAIN_TEXT_VALUE} />
+    <RichTextInput
+      label="Toolbar without marks"
+      labelDescription="(bold/italic/underline)"
+      showMarks={false}
+      value={PLAIN_TEXT_VALUE}
+    />
   </Stack>
 )
