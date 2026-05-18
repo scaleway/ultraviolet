@@ -13,7 +13,7 @@ export const wrapper = style({
 
 export const statusIcon = style({
   position: 'absolute',
-  right: theme.space['2'],
+  right: theme.space['1'],
   top: theme.space['1'],
 })
 
@@ -33,6 +33,11 @@ export const docRegion = style({
   background: docRegionBackground,
   whiteSpace: 'pre-wrap',
   width: '100%',
+  selectors: {
+    [`${wrapper}:has(${statusIcon}) &`]: {
+      paddingRight: theme.space['3'],
+    },
+  },
 })
 
 export const editorSurface = recipe({
