@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.15.1
+
+### Patch Changes
+
+- [#6442](https://github.com/scaleway/ultraviolet/pull/6442) [`8a1447f`](https://github.com/scaleway/ultraviolet/commit/8a1447f78849c2888026b2346145b9deffdc5bb1) Thanks [@jsulpis](https://github.com/jsulpis)! - `Navigation`: prevent the Navigation from having a width smaller than the minimal width
+
 ## 3.15.0
 
 ### Minor Changes
