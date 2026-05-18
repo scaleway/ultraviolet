@@ -8,8 +8,11 @@
     "start": "next start",
     "typecheck": "tsgo --noEmit"
   },
-  "dependencies": {
+  "devDependencies": {
     "@scaleway/regex": "5.8.1",
+    "@types/node": "24.12.2",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
     "@ultraviolet/fonts": "workspace:*",
     "@ultraviolet/form": "workspace:*",
     "@ultraviolet/icons": "workspace:*",
@@ -18,12 +21,7 @@
     "@ultraviolet/ui": "workspace:*",
     "next": "16.2.6",
     "react": "19.2.6",
-    "react-dom": "19.2.6"
-  },
-  "devDependencies": {
-    "@types/node": "24.12.2",
-    "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3",
+    "react-dom": "19.2.6",
     "typescript": "6.0.3"
   }
 }

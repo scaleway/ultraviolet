@@ -15,8 +15,12 @@
     "start": "next start",
     "typecheck": "tsgo --noEmit"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@babel/core": "7.29.0",
     "@scaleway/regex": "5.8.1",
+    "@types/node": "24.12.2",
+    "@types/react": "19.2.14",
+    "@types/react-syntax-highlighter": "15.5.13",
     "@ultraviolet/fonts": "workspace:*",
     "@ultraviolet/form": "workspace:*",
     "@ultraviolet/icons": "workspace:*",
@@ -25,18 +29,12 @@
     "@ultraviolet/ui": "workspace:*",
     "@ultraviolet/utils": "workspace:*",
     "next": "16.2.6",
+    "next-transpile-modules": "10.0.1",
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "react-schemaorg": "2.0.1",
     "react-syntax-highlighter": "16.1.1",
     "sass": "1.99.0",
     "schema-dts": "2.0.0"
-  },
-  "devDependencies": {
-    "@babel/core": "7.29.0",
-    "@types/node": "24.12.2",
-    "@types/react": "19.2.14",
-    "@types/react-syntax-highlighter": "15.5.13",
-    "next-transpile-modules": "10.0.1"
   }
 }

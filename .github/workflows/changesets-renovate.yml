@@ -12,7 +12,7 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-24.04
-    if: github.actor == 'renovate[bot]' && github.repository == 'scaleway/ultraviolet' && github.event.pull_request.head.repo.full_name == 'scaleway/ultraviolet'
+    if: github.actor == 'renovate[bot]' && github.repository == 'scaleway/ultraviolet' && github.event.pull_request.head.repo.full_name == 'scaleway/ultraviolet' && startsWith(github.event.pull_request.title, 'fix(deps)')
     steps:
       - name: Checkout
         uses: actions/checkout@v6
