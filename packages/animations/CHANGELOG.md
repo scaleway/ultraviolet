@@ -1,5 +1,11 @@
 # @ultraviolet/animations
 
+## 1.0.1
+
+### Patch Changes
+
+- [#6430](https://github.com/scaleway/ultraviolet/pull/6430) [`511c90e`](https://github.com/scaleway/ultraviolet/commit/511c90e9bbaf366f6859133fe9457e348f2f522c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.12`.
+
 ## 1.0.0
 
 ### Major Changes
