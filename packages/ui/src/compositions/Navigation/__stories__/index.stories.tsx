@@ -22,6 +22,7 @@ export default {
       'specific-patterns': false,
     },
     experimental: true,
+    layout: 'fullscreen',
   },
 } as Meta
 
