@@ -27,7 +27,7 @@ OneLine.parameters = {
   docs: {
     description: {
       story:
-        ' `oneLine` prop will force link to be display on a single line by adding `...` after cropped text and will display a tooltip with full text when hovered.',
+        'The `oneLine` property will force the link to be display on a single line by adding an ellipsis `...` after the cropped text and will display a tooltip with the full text when hovered.',
     },
   },
 }
