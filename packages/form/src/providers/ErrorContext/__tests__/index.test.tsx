@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react'
-import { mockFormErrors, renderWithTheme } from '@utils/test'
+import { mockFormErrors, renderWithForm } from '@utils/test'
 import type { ReactNode } from 'react'
 import { useForm } from 'react-hook-form'
 import { describe, expect, it } from 'vitest'
@@ -18,12 +18,7 @@ const HookWrapper = ({ children }: { children: ReactNode }) => {
 
 describe('errorProvider', () => {
   it('renders correctly ', () => {
-    const { result } = renderHook(() => useForm())
-    const { asFragment } = renderWithTheme(
-      <Form errors={mockFormErrors} methods={result.current} onSubmit={() => null}>
-        Test
-      </Form>,
-    )
+    const { asFragment } = renderWithForm(<>Test</>)
     expect(asFragment()).toMatchSnapshot()
   })
 

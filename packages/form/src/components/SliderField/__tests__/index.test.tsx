@@ -1,10 +1,8 @@
-import { act, fireEvent, renderHook, screen } from '@testing-library/react'
+import { act, fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
-import { useForm } from 'react-hook-form'
+import { mockFormErrors, renderWithForm } from '@utils/test'
 import { describe, expect, vi, it } from 'vitest'
 import { SliderField, Submit } from '../..'
-import { Form } from '../../Form'
 
 const options = [
   { label: '1Mb', value: 1 },
@@ -58,31 +56,29 @@ describe('sliderField', () => {
   it('should work fine with form setValue', async () => {
     const onSubmit = vi.fn()
     const onBlur = vi.fn(() => {})
-    const { result } = renderHook(() =>
-      useForm<{ test: number | null }>({
+    const { resultForm } = renderWithForm(
+      <>
+        <SliderField input label="Test" max={10} min={0} name="test" onBlur={onBlur} required />
+        <Submit>Submit</Submit>
+      </>,
+      {
         defaultValues: {
           test: 10,
         },
         mode: 'onChange',
-      }),
-    )
-
-    renderWithTheme(
-      <Form
-        errors={mockFormErrors}
-        methods={result.current}
-        onSubmit={value => {
+      },
+      {
+        errors: mockFormErrors,
+        onSubmit: value => {
           onSubmit(value)
-        }}
-      >
-        <SliderField input label="Test" max={10} min={0} name="test" onBlur={onBlur} required />
-        <Submit>Submit</Submit>
-      </Form>,
+        },
+      },
     )
 
     const slider = screen.getByRole<HTMLInputElement>('slider')
     const submit = screen.getByText('Submit')
     expect(slider).toHaveValue('10')
+    expect(resultForm.current.getValues('test')).toBe(10)
     await userEvent.click(submit)
     expect(onSubmit).toHaveBeenCalledWith({
       test: 10,
@@ -95,43 +91,35 @@ describe('sliderField', () => {
   })
 
   it('should work correctly with possibleValues', () => {
-    const { result } = renderHook(() => useForm({ mode: 'onChange' }))
-
-    renderWithTheme(
-      <Form errors={mockFormErrors} methods={result.current} onSubmit={() => {}}>
-        <SliderField label="Test" name="test" options={options} />
-      </Form>,
-    )
+    const { resultForm } = renderWithForm(<SliderField label="Test" name="test" options={options} />, {
+      mode: 'onChange',
+    })
 
     const input = screen.getByRole('slider', { hidden: true })
 
     fireEvent.change(input, { target: { value: '2' } })
     expect(input).toHaveValue('2')
-    expect(result.current.getValues('test')).toBe(5)
+    expect(resultForm.current.getValues('test')).toBe(5)
 
     fireEvent.change(input, { target: { value: '5' } })
     expect(input).toHaveValue('5')
-    expect(result.current.getValues('test')).toBe(100)
+    expect(resultForm.current.getValues('test')).toBe(100)
   })
 
   it('should work correctly with possibleValues and double', () => {
-    const { result } = renderHook(() => useForm({ mode: 'onChange' }))
-
-    renderWithTheme(
-      <Form errors={mockFormErrors} methods={result.current} onSubmit={() => {}}>
-        <SliderField double label="Test" name="test" options={options} />
-      </Form>,
-    )
+    const { resultForm } = renderWithForm(<SliderField double label="Test" name="test" options={options} />, {
+      mode: 'onChange',
+    })
 
     const input1 = screen.getAllByRole('slider', { hidden: true })[0]
     const input2 = screen.getAllByRole('slider', { hidden: true })[1]
 
     fireEvent.change(input1, { target: { value: '2' } })
     expect(input1).toHaveValue('2')
-    expect(result.current.getValues('test')).toStrictEqual([5, 500])
+    expect(resultForm.current.getValues('test')).toStrictEqual([5, 500])
 
     fireEvent.change(input2, { target: { value: '5' } })
     expect(input2).toHaveValue('5')
-    expect(result.current.getValues('test')).toStrictEqual([5, 100])
+    expect(resultForm.current.getValues('test')).toStrictEqual([5, 100])
   })
 })

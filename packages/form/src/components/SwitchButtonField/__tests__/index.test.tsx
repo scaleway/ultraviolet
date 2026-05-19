@@ -1,9 +1,8 @@
-import { renderHook, screen, waitFor } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithForm, renderWithTheme } from '@utils/test'
-import { useForm } from 'react-hook-form'
+import { renderWithForm } from '@utils/test'
 import { describe, expect, vi, it } from 'vitest'
-import { Form, Submit, SwitchButtonField } from '../..'
+import { Submit, SwitchButtonField } from '../..'
 import { mockErrors } from '../../../mocks'
 
 describe('switchButtonField', () => {
@@ -19,16 +18,17 @@ describe('switchButtonField', () => {
 
   it('should works with defaultValues', async () => {
     const onSubmit = vi.fn()
-    const { result } = renderHook(() => useForm<{ test: string[] }>({ defaultValues: { test: ['right'] } }))
 
-    const { asFragment } = renderWithTheme(
-      <Form errors={mockErrors} methods={result.current} onSubmit={onSubmit}>
+    const { asFragment } = renderWithForm(
+      <>
         <SwitchButtonField name="test" onChange={() => vi.fn()}>
           <SwitchButtonField.Option value="left">Left</SwitchButtonField.Option>
           <SwitchButtonField.Option value="right">Right</SwitchButtonField.Option>
         </SwitchButtonField>
         ,<Submit>Submit</Submit>
-      </Form>,
+      </>,
+      { defaultValues: { test: ['right'] } },
+      { onSubmit, errors: mockErrors },
     )
 
     await userEvent.click(screen.getByText('Submit'))

@@ -1,10 +1,8 @@
-import { act, renderHook, screen, waitFor } from '@testing-library/react'
+import { act, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
-import { useForm } from 'react-hook-form'
+import { mockFormErrors, renderWithForm } from '@utils/test'
 import { describe, expect, vi, it } from 'vitest'
 import { NumberInputField, Submit } from '../..'
-import { Form } from '../../Form'
 
 describe('numberInputField', () => {
   it('should render correctly', () => {
@@ -29,26 +27,23 @@ describe('numberInputField', () => {
 
   it('should work fine with form setValue', async () => {
     const onSubmit = vi.fn()
-    const { result } = renderHook(() =>
-      useForm<{ test: number | null }>({
+    const { resultForm } = renderWithForm(
+      <>
+        <NumberInputField label="Test" name="test" required />
+        <Submit>Submit</Submit>
+      </>,
+      {
         defaultValues: {
           test: 10,
         },
         mode: 'onChange',
-      }),
-    )
-
-    renderWithTheme(
-      <Form
-        errors={mockFormErrors}
-        methods={result.current}
-        onSubmit={value => {
+      },
+      {
+        errors: mockFormErrors,
+        onSubmit: value => {
           onSubmit(value)
-        }}
-      >
-        <NumberInputField label="Test" name="test" required />
-        <Submit>Submit</Submit>
-      </Form>,
+        },
+      },
     )
 
     const numberInput = screen.getByLabelText('Test')
@@ -62,7 +57,7 @@ describe('numberInputField', () => {
     expect(numberInput).toHaveValue(null)
     expect(submit).toBeDisabled()
     act(() => {
-      result.current.setValue('test', 40, { shouldValidate: true })
+      resultForm.current.setValue('test', 40, { shouldValidate: true })
     })
     await waitFor(() => {
       expect(numberInput).toHaveValue(40)
