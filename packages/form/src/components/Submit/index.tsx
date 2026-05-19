@@ -3,20 +3,23 @@
 import { Button } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
 import { useFormState } from 'react-hook-form'
+import type { FieldValues } from 'react-hook-form'
+import type { BaseFieldProps } from '../../types'
 
-type SubmitProps = {
+type RHFBase<TFieldValues extends FieldValues> = Pick<BaseFieldProps<TFieldValues>, 'control'>
+type SubmitButtonProps = {
   children?: ReactNode
   className?: string
-  disabled?: boolean
-  size?: ComponentProps<typeof Button>['size']
-  variant?: ComponentProps<typeof Button>['variant']
-  sentiment?: ComponentProps<typeof Button>['sentiment']
-  tooltip?: ComponentProps<typeof Button>['tooltip']
-  fullWidth?: ComponentProps<typeof Button>['fullWidth']
-  onClick?: ComponentProps<typeof Button>['onClick']
-}
+} & Partial<
+  Pick<
+    ComponentProps<typeof Button>,
+    'size' | 'sentiment' | 'variant' | 'tooltip' | 'fullWidth' | 'onClick' | 'disabled' | 'className'
+  >
+>
 
-export const Submit = ({
+type SubmitProps<TFieldValues extends FieldValues> = RHFBase<TFieldValues> & SubmitButtonProps
+
+export const Submit = <TFieldValues extends FieldValues>({
   children,
   className,
   disabled = false,
@@ -26,10 +29,11 @@ export const Submit = ({
   tooltip,
   fullWidth,
   onClick,
-}: SubmitProps) => {
-  const { isSubmitting, isValid } = useFormState()
+  control,
+}: SubmitProps<TFieldValues>) => {
+  const { isSubmitting, isValid, isValidating } = useFormState({ control })
 
-  const isDisabled = disabled || isSubmitting || !isValid
+  const isDisabled = disabled || isSubmitting || isValidating || !isValid
 
   return (
     <Button
