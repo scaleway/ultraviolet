@@ -387,7 +387,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
               min="2"
               name="slider"
               step="1"
-              style="--a5ifr12: calc(25% - 4px); --a5ifr11: #ffffff;"
+              style="--a5ifr12: calc(0% - 0px); --a5ifr11: #ffffff;"
               type="range"
               value="2"
             />
@@ -401,7 +401,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
               min="2"
               name="slider"
               step="1"
-              style="--a5ifr12: calc(125% - 20px); --a5ifr11: #ffffff;"
+              style="--a5ifr12: calc(100% - 16px); --a5ifr11: #ffffff;"
               type="range"
               value="10"
             />
@@ -1616,7 +1616,7 @@ exports[`double slider > renders correctly double min max 1`] = `
               data-testid="value-left"
               style="--textAlign__qabug40: right;"
             >
-              1
+              2
             </span>
             <span
               class="styles__a5ifr1h styles_isDouble_true__a5ifr1j style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodySmall__m4c9owk style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
@@ -1636,7 +1636,7 @@ exports[`double slider > renders correctly double min max 1`] = `
                 aria-disabled="false"
                 class="styles__a5ifr1x"
                 data-error="false"
-                style="left: 0%; right: 66.66666666666666%;"
+                style="left: 20%; right: 40%;"
               />
             </div>
             <input
@@ -1645,13 +1645,13 @@ exports[`double slider > renders correctly double min max 1`] = `
               data-direction="column"
               data-testid="handle-left"
               id="_r_56_"
-              max="10"
+              max="6"
               min="1"
               name="Name"
               step="1"
-              style="--a5ifr12: calc(11.11111111111111% - 1.7777777777777777px); --a5ifr11: #ffffff;"
+              style="--a5ifr12: calc(20% - 3.2px); --a5ifr11: #ffffff;"
               type="range"
-              value="1"
+              value="2"
             />
             <input
               aria-label="Name"
@@ -1659,11 +1659,11 @@ exports[`double slider > renders correctly double min max 1`] = `
               data-direction="column"
               data-testid="handle-right"
               id="_r_56_"
-              max="10"
+              max="6"
               min="1"
               name="Name"
               step="1"
-              style="--a5ifr12: calc(44.44444444444444% - 7.111111111111111px); --a5ifr11: #ffffff;"
+              style="--a5ifr12: calc(60% - 9.6px); --a5ifr11: #ffffff;"
               type="range"
               value="4"
             />
@@ -2334,7 +2334,7 @@ exports[`double slider > renders correctly double with value outside of min-max 
               min="10"
               name="Name"
               step="1"
-              style="--a5ifr12: calc(25% - 4px); --a5ifr11: #ffffff;"
+              style="--a5ifr12: calc(0% - 0px); --a5ifr11: #ffffff;"
               type="range"
               value="10"
             />
@@ -2348,7 +2348,7 @@ exports[`double slider > renders correctly double with value outside of min-max 
               min="10"
               name="Name"
               step="1"
-              style="--a5ifr12: calc(125% - 20px); --a5ifr11: #ffffff;"
+              style="--a5ifr12: calc(100% - 16px); --a5ifr11: #ffffff;"
               type="range"
               value="50"
             />
