@@ -57,8 +57,14 @@ describe('double slider', () => {
       <Slider data-testid="slider" double label="Label" max={50} min={10} name="Name" value={[-140, 140]} />,
     )
     expect(asFragment()).toMatchSnapshot()
-    expect(screen.getByTestId<HTMLInputElement>('slider-left').value).toBe('10')
-    expect(screen.getByTestId<HTMLInputElement>('slider-right').value).toBe('50')
+
+    const firstSlider = screen.getAllByRole('slider')[0]
+    const secondSlider = screen.getAllByRole('slider')[1]
+
+    expect(firstSlider).toHaveValue('10')
+    expect(secondSlider).toHaveValue('50')
+    expect(firstSlider.getAttribute('style')).toStrictEqual(expect.stringContaining('calc(0% - 0px)'))
+    expect(secondSlider.getAttribute('style')).toStrictEqual(expect.stringContaining('calc(100% - 16px)'))
   })
 
   it('renders correctly double disabled', () => {
@@ -124,7 +130,13 @@ describe('double slider', () => {
   })
 
   it('renders correctly double min max', () => {
-    shouldMatchSnapshot(<Slider double label="Label" max={10} min={1} name="Name" value={[1, 4]} />)
+    shouldMatchSnapshot(<Slider double label="Label" max={6} min={1} name="Name" value={[2, 4]} />)
+
+    const firstSlider = screen.getAllByRole('slider')[0]
+    const secondSlider = screen.getAllByRole('slider')[1]
+
+    expect(firstSlider.getAttribute('style')).toStrictEqual(expect.stringContaining('calc(20% - 3.2px)'))
+    expect(secondSlider.getAttribute('style')).toStrictEqual(expect.stringContaining('calc(60% - 9.6px)'))
   })
 
   it('renders correctly double step', () => {
