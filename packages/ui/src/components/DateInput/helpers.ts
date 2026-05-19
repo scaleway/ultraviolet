@@ -1,5 +1,5 @@
-const SPLIT_REGEX = /\D+/
-const DATE_SEPARATOR_REGEX = /[^a-zA-Z0-9]+/
+const SPLIT_REGEX = /\D+/u
+const DATE_SEPARATOR_REGEX = /[^a-zA-Z0-9]+/u
 // First day of the month for a given year
 export const getMonthFirstDay = (month: number, year: number) => {
   const firstDay = new Date(year, month - 1, 1).getDay()

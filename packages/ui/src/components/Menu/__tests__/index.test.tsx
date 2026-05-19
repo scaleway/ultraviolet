@@ -178,7 +178,7 @@ describe('menu', () => {
     await userEvent.type(searchInput, 'Disk')
 
     const items = screen.getAllByRole<HTMLButtonElement>('menuitem')
-    expect(items.length).toBe(1)
+    expect(items).toHaveLength(1)
     expect(items[0]).toHaveTextContent('Disk')
   })
 
@@ -214,7 +214,7 @@ describe('menu', () => {
     await userEvent.type(searchInput, 'Disk')
 
     const items = screen.getAllByRole<HTMLButtonElement>('menuitem')
-    expect(items.length).toBe(1)
+    expect(items).toHaveLength(1)
     expect(items[0]).toHaveTextContent('Disk')
   })
   it('renders with footer', () =>

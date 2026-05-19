@@ -17,7 +17,9 @@ export const CheckboxIconContainer = ({ checked }: { checked?: boolean | 'indete
         x="4"
         y="4"
       />
-      {checked !== 'indeterminate' ? (
+      {checked === 'indeterminate' ? (
+        <rect className={checkboxStyle.checkMixedMark} height="2" rx="1" width="12" x="6" y="11" />
+      ) : (
         <path
           className={checkboxStyle.iconPath}
           clipRule="evenodd"
@@ -29,8 +31,6 @@ export const CheckboxIconContainer = ({ checked }: { checked?: boolean | 'indete
           x="5"
           y="4"
         />
-      ) : (
-        <rect className={checkboxStyle.checkMixedMark} height="2" rx="1" width="12" x="6" y="11" />
       )}
     </g>
   )

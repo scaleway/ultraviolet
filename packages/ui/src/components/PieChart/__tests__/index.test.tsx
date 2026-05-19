@@ -13,11 +13,12 @@ import {
 describe('pieChart', () => {
   beforeAll(() => {
     // Have to mock ResizeObserver as Nivo doesn't add automatically ResizeObserver polyfill anymore (v0.79.0)
-    window.ResizeObserver = vi.fn().mockImplementation(() => ({
+    // oxlint-disable-next-line vitest/prefer-spy-on
+    window.ResizeObserver = vi.fn().mockReturnValue({
       disconnect: vi.fn(),
       observe: vi.fn(),
       unobserve: vi.fn(),
-    }))
+    })
   })
 
   it('renders correctly with no props', () => {

@@ -129,7 +129,7 @@ describe('treeMapChart', () => {
     expect(tooltipFunction).toHaveBeenCalledWith(expect.objectContaining(treeMapChartSimpleData.children[0]))
 
     // Check that tooltip is visible with custom content
-    expect(screen.getByText(/Custom: Compute/i)).toBeInTheDocument()
-    expect(screen.getByText(/20/i)).toBeInTheDocument() // value * 2
+    expect(screen.getByText(/Custom: Compute/iu)).toBeInTheDocument()
+    expect(screen.getByText(/20/iu)).toBeInTheDocument() // value * 2
   })
 })

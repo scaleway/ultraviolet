@@ -76,7 +76,7 @@ export const HeaderCell = ({
       <Text
         as="div"
         className={tableStyle.headerCellText}
-        sentiment={order !== undefined ? 'primary' : 'neutral'}
+        sentiment={order === undefined ? 'neutral' : 'primary'}
         variant="bodySmallStronger"
       >
         {children}

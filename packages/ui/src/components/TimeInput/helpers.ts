@@ -1,6 +1,6 @@
 import type { TIME_KEYS } from './constants'
 
-const regexNumber = /^\d+$/
+const regexNumber = /^\d+$/u
 
 export const isNumber = (key: string) => regexNumber.test(key)
 export const isAOrP = (key: string) => ['a', 'A', 'p', 'P'].includes(key)

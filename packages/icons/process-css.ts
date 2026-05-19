@@ -23,10 +23,10 @@ let entryContent = readFileSync(entryPath, 'utf8')
 
 // Replace the empty export with the actual CSS
 const escapedCss = cssContent
-  .replace(/\\/g, String.raw`\\`)
-  .replace(/'/g, String.raw`\'`)
-  .replace(/`/g, '\\`')
-  .replace(/\${/g, '\\${')
+  .replace(/\\/gu, String.raw`\\`)
+  .replace(/'/gu, String.raw`\'`)
+  .replace(/`/gu, '\\`')
+  .replace(/\$\{/gu, '\\${')
 
 if (escapedCss === '') {
   throw new Error('broken css export')

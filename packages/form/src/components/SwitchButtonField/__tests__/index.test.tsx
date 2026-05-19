@@ -35,7 +35,7 @@ describe('switchButtonField', () => {
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledOnce()
     })
-    expect(onSubmit.mock.calls[0][0]).toEqual({
+    expect(onSubmit.mock.calls[0][0]).toStrictEqual({
       test: ['right'],
     })
     expect(asFragment()).toMatchSnapshot()

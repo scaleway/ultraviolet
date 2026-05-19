@@ -10,7 +10,7 @@ describe('estimateCost - helper', () => {
         timeAmount: 24,
         timeUnit: 'hours',
       }),
-    ).toEqual(0)
+    ).toBe(0)
   })
 
   it('should calculate negative price of -1, amount 1, amountFree 0 for 24 hours', () => {
@@ -21,7 +21,7 @@ describe('estimateCost - helper', () => {
         timeAmount: 24,
         timeUnit: 'hours',
       }),
-    ).toEqual(-24)
+    ).toBe(-24)
   })
 
   it('should calculate price of 0.004, amount 5, amountFree 2 for 3 months', () => {
@@ -33,7 +33,7 @@ describe('estimateCost - helper', () => {
         timeAmount: 3,
         timeUnit: 'months',
       }),
-    ).toEqual(9.198)
+    ).toStrictEqual(9.198)
   })
 
   it('should calculate work with NaN timeAmount number', () => {
@@ -45,6 +45,6 @@ describe('estimateCost - helper', () => {
         timeAmount: Number.NaN,
         timeUnit: 'months',
       }),
-    ).toEqual(0)
+    ).toBe(0)
   })
 })

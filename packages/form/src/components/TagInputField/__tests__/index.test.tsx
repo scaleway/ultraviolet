@@ -6,7 +6,7 @@ import { describe, expect, vi, it } from 'vitest'
 import { Form, Submit, TagInputField } from '../..'
 import { mockErrors } from '../../../mocks'
 
-const alpha = /^[a-zA-Z]*$/
+const alpha = /^[a-zA-Z]*$/u
 
 describe('tagInputField', () => {
   it('should render correctly', () => {
@@ -40,7 +40,7 @@ describe('tagInputField', () => {
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledOnce()
     })
-    expect(onSubmit.mock.calls[0][0]).toEqual({
+    expect(onSubmit.mock.calls[0][0]).toStrictEqual({
       test: ['First'],
     })
     expect(asFragment()).toMatchSnapshot()

@@ -177,7 +177,7 @@ const Colors = () => {
 
                       const gradient = gradientBackgroundColorsType[
                         background as keyof typeof gradientBackgroundColorsType
-                      ].replace(/;$/, '')
+                      ].replace(/;$/u, '')
 
                       return (
                         <Stack key={background}>

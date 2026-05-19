@@ -21,10 +21,10 @@ const makeCSSVariablesRec = (
     ? fontWeightMap[innerValue as unknown as keyof typeof fontWeightMap]
     : innerValue
 
-  const finalCSSValue = typeof cssValue === 'string' ? cssValue.replace(/;$/, '') : cssValue
+  const finalCSSValue = typeof cssValue === 'string' ? cssValue.replace(/;$/u, '') : cssValue
   const formattedInnerKey = innerKey
-    .replace(/([A-Z])/g, '-$1')
-    .replace(/\./g, '-')
+    .replace(/([A-Z])/gu, '-$1')
+    .replace(/\./gu, '-')
     .toLowerCase() // Replace caps and dots by dashes, convert to kebab-case
 
   return `    --${prefix}-${formattedKey}-${formattedInnerKey}: ${finalCSSValue};\n`
@@ -34,8 +34,8 @@ const createCssVariables = (prefix: string, obj: object) =>
   Object.entries(obj)
     .map(([key, value]: [string, string | object]) => {
       const formattedKey = key
-        .replace(/([A-Z])/g, '-$1')
-        .replace(/\./g, '-')
+        .replace(/([A-Z])/gu, '-$1')
+        .replace(/\./gu, '-')
         .toLowerCase()
 
       if (typeof value === 'object' && value !== null) {

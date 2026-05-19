@@ -28,11 +28,12 @@ describe('numberInput', () => {
   it('should renders correctly max value', () => shouldMatchSnapshot(<NumberInput max={100} min={0} />))
 
   describe('should renders correctly all sizes', () => {
-    ;(['large', 'medium', 'small'] as const).forEach(size => {
-      it(`with size ${size}`, () => shouldMatchSnapshot(<NumberInput max={100} min={0} size={size} />))
-      it(`with size ${size} and unit`, () =>
-        shouldMatchSnapshot(<NumberInput max={100} min={0} size={size} unit="GB" />))
-    })
+    it.each(['large', 'medium', 'small'] as const)(`with size %s`, size =>
+      shouldMatchSnapshot(<NumberInput max={100} min={0} size={size} />),
+    )
+    it.each(['large', 'medium', 'small'] as const)(`with size %s and unit`, size =>
+      shouldMatchSnapshot(<NumberInput max={100} min={0} size={size} unit="GB" />),
+    )
   })
 
   it('should click on min button', async () => {
