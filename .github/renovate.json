@@ -1,9 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "assignees": ["team:console"],
-  "assigneesSampleSize": 1,
   "enabledManagers": ["dockerfile", "github-actions", "npm"],
-  "extends": ["config:recommended", ":combinePatchMinorReleases"],
+  "extends": ["config:best-practices", ":combinePatchMinorReleases", "schedule:weekends"],
   "ignorePaths": [
     "**/node_modules/**",
     "**/bower_components/**",
@@ -11,83 +9,33 @@
     "**/__tests__/**",
     "**/__fixtures__/**"
   ],
-  "labels": ["dependencies"],
+  "prConcurrentLimit": 10,
+  "reviewers": ["team:console"],
+  "reviewersSampleSize": 2,
+  "semanticCommitType": "chore",
+  "semanticCommitScope": "deps",
   "packageRules": [
     {
       "matchDepTypes": ["engines", "peerDependencies"],
       "rangeStrategy": "widen"
     },
     {
-      "matchManagers": ["dockerfile", "github-actions"],
+      "matchManagers": ["dockerfile", "github-actions", "packageManager", "devDependencies"],
       "semanticCommitScope": "devDeps"
     },
     {
-      "matchDepTypes": ["packageManager", "devDependencies"],
-      "matchUpdateTypes": ["major"],
-      "semanticCommitScope": "devDeps"
-    },
-    {
-      "automerge": true,
-      "automergeType": "branch",
-      "matchDepTypes": ["packageManager", "devDependencies"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "semanticCommitScope": "devDeps"
-    },
-    {
-      "automerge": false,
       "matchPackageNames": ["/^@scaleway//"],
-      "matchUpdateTypes": ["major", "minor", "patch"],
       "minimumReleaseAge": null
     },
     {
-      "automerge": true,
-      "groupName": "Code Editor",
-      "groupSlug": "uiw-code-editor-react",
       "matchPackageNames": ["/^@uiw//"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "minimumReleaseAge": "5 days"
+      "groupName": "Code Editor",
+      "groupSlug": "uiw-code-editor-react"
     },
     {
-      "automerge": false,
-      "groupName": "Code Editor",
-      "groupSlug": "uiw-code-editor-react",
-      "matchPackageNames": ["/^@uiw//"],
-      "matchUpdateTypes": ["major"],
-      "minimumReleaseAge": "5 days"
-    },
-    {
-      "groupName": "Testing library",
-      "groupSlug": "testing-library",
       "matchPackageNames": ["/^@testing-library/"],
-      "matchUpdateTypes": ["major", "minor", "patch"]
-    },
-    {
-      "labels": ["UPDATE-MAJOR"],
-      "matchUpdateTypes": ["major"],
-      "minimumReleaseAge": "14 days"
-    },
-    {
-      "automerge": true,
-      "labels": ["UPDATE-MINOR"],
-      "matchUpdateTypes": ["minor"],
-      "minimumReleaseAge": "5 days"
-    },
-    {
-      "automerge": true,
-      "labels": ["UPDATE-PATCH"],
-      "matchUpdateTypes": ["patch"],
-      "minimumReleaseAge": "1 day"
-    },
-    {
-      "matchDepTypes": ["engines"],
-      "rangeStrategy": "widen"
+      "groupName": "Testing library",
+      "groupSlug": "testing-library"
     }
-  ],
-  "prConcurrentLimit": 10,
-  "prHourlyLimit": 5,
-  "rangeStrategy": "pin",
-  "reviewers": ["team:console"],
-  "reviewersSampleSize": 2,
-  "semanticCommitScope": "deps",
-  "semanticCommitType": "chore"
+  ]
 }
