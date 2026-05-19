@@ -45,8 +45,8 @@ importers:
         specifier: 1.59.1
         version: 1.59.1
       '@scaleway/oxfmt-config':
-        specifier: 1.1.0
-        version: 1.1.0(oxfmt@0.47.0)
+        specifier: 1.1.1
+        version: 1.1.1(oxfmt@0.47.0)
       '@scaleway/oxlint-config':
         specifier: 0.1.13
         version: 0.1.13(oxlint@1.62.0(oxlint-tsgolint@0.22.1))
@@ -2803,8 +2803,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@react-grab/cli@0.1.34':
-    resolution: {integrity: sha512-L2eAxN46Vq2Ss3nDegrH7wQVMeWH03ahawp+OdzUtQWqL3cq6Bt149q9XhY3cWc9fJsxuWjLfCn+3T9uApIlBA==}
+  '@react-grab/cli@0.1.37':
+    resolution: {integrity: sha512-1ln28VkVHUbd5qy+ccXG68voWc0mgZMhBnwG0umxfD+wbkXUcvRzVrLjSqao7N8hCrDqp+Pt5j9Tsqef+9yQQQ==}
     hasBin: true
 
   '@react-spring/animated@9.7.5':
@@ -3117,8 +3117,8 @@ packages:
     resolution: {integrity: sha512-7wafArqq/fSVy0epmpE0RN6e7foOO5EctgG94UBY26Fq2vWN9eJ2Nm1vE8vX+CPBiKZpm4M/Fc45WCKJG75KVQ==}
     engines: {node: '>=20.x'}
 
-  '@scaleway/oxfmt-config@1.1.0':
-    resolution: {integrity: sha512-3lXu+TprOlwi3Xejk//H+GGMqp/JEY4/p0dqlCOlMivpnJiy2yqm3JABtgJZs22odWxU2PUugOHx4ZXuydvS9Q==}
+  '@scaleway/oxfmt-config@1.1.1':
+    resolution: {integrity: sha512-sQAVkG8352hV0UARHPpZx1xQg+2NgAv13vPmgrHdYPVV8dPJvymsz8F1WYKpDgKiuzCeyghDdW55jQHGowVO+A==}
     peerDependencies:
       oxfmt: '>=0.45.0'
 
@@ -4069,8 +4069,8 @@ packages:
     peerDependencies:
       react: '>=17.0.1'
 
-  bippy@0.5.40:
-    resolution: {integrity: sha512-3QPSDG5tgd7FCIkcKsUqmbGdlHxBxP7II5drXPNp1I0rpA9+4+/VjQOigDTbzeqTi6Xkaf1Dq7x4E8vbOuwOkA==}
+  bippy@0.5.41:
+    resolution: {integrity: sha512-jCP2pXXLhXqPrAN+iSEFZmLI4uUM4fjSqajh0K+TmM062VehfDT3ZJNkrTGyN701Z5XMejs9qAudSqkMGhSMKg==}
     peerDependencies:
       react: '>=17.0.1'
 
@@ -6076,8 +6076,8 @@ packages:
     peerDependencies:
       react: ^19.2.6
 
-  react-grab@0.1.34:
-    resolution: {integrity: sha512-jtdOdv0kb90oqL+pMszSh9DOLgVRaX4ZE6XN4GkDEpNNUqveQfZT014+EeJraljpqQfuWKW+96NrrRqUD93D2g==}
+  react-grab@0.1.37:
+    resolution: {integrity: sha512-XVAc/qPyxsDT8Putu9UnP7iVHmAORMzvaN/3GDTOfbuLIRXWdOt7vebPOzM9RVTVUjucXv0135JI++kSVPSfYg==}
     hasBin: true
     peerDependencies:
       react: '>=17.0.0'
@@ -9365,7 +9365,7 @@ snapshots:
       - react-native-b4a
       - supports-color
 
-  '@react-grab/cli@0.1.34':
+  '@react-grab/cli@0.1.37':
     dependencies:
       commander: 14.0.3
       ignore: 7.0.5
@@ -9576,7 +9576,7 @@ snapshots:
 
   '@scaleway/fuzzy-search@1.0.2': {}
 
-  '@scaleway/oxfmt-config@1.1.0(oxfmt@0.47.0)':
+  '@scaleway/oxfmt-config@1.1.1(oxfmt@0.47.0)':
     dependencies:
       deepmerge-ts: 7.1.5
       oxfmt: 0.47.0
@@ -10739,7 +10739,7 @@ snapshots:
     dependencies:
       react: 19.2.6
 
-  bippy@0.5.40(react@19.2.6):
+  bippy@0.5.41(react@19.2.6):
     dependencies:
       react: 19.2.6
 
@@ -12962,10 +12962,10 @@ snapshots:
       react: 19.2.6
       scheduler: 0.27.0
 
-  react-grab@0.1.34(react@19.2.6):
+  react-grab@0.1.37(react@19.2.6):
     dependencies:
-      '@react-grab/cli': 0.1.34
-      bippy: 0.5.40(react@19.2.6)
+      '@react-grab/cli': 0.1.37
+      bippy: 0.5.41(react@19.2.6)
     optionalDependencies:
       react: 19.2.6
 
@@ -13010,7 +13010,7 @@ snapshots:
       prompts: 2.4.2
       react: 19.2.6
       react-dom: 19.2.6(react@19.2.6)
-      react-grab: 0.1.34(react@19.2.6)
+      react-grab: 0.1.37(react@19.2.6)
     optionalDependencies:
       esbuild: 0.27.4
       unplugin: 2.1.0
