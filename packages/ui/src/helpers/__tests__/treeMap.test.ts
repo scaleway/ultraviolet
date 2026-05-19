@@ -71,7 +71,7 @@ describe(percentToHex, () => {
 describe(getAllIds, () => {
   it('should return single ID for node without children', () => {
     const datum: DefaultTreeMapDatum = { id: 'root' }
-    expect(getAllIds(datum)).toEqual(['root'])
+    expect(getAllIds(datum)).toStrictEqual(['root'])
   })
 
   it('should return all IDs from simple tree with children', () => {
@@ -79,7 +79,7 @@ describe(getAllIds, () => {
       children: [{ id: 'child1' }, { id: 'child2' }],
       id: 'root',
     }
-    expect(getAllIds(datum)).toEqual(['root', 'child1', 'child2'])
+    expect(getAllIds(datum)).toStrictEqual(['root', 'child1', 'child2'])
   })
 
   it('should return all IDs from nested tree structure', () => {
@@ -93,7 +93,7 @@ describe(getAllIds, () => {
       ],
       id: 'root',
     }
-    expect(getAllIds(datum)).toEqual(['root', 'child1', 'grandchild1', 'grandchild2', 'child2'])
+    expect(getAllIds(datum)).toStrictEqual(['root', 'child1', 'grandchild1', 'grandchild2', 'child2'])
   })
 
   it('should handle deeply nested structures', () => {
@@ -111,7 +111,7 @@ describe(getAllIds, () => {
       ],
       id: 'level1',
     }
-    expect(getAllIds(datum)).toEqual(['level1', 'level2', 'level3', 'level4'])
+    expect(getAllIds(datum)).toStrictEqual(['level1', 'level2', 'level3', 'level4'])
   })
 
   it('should handle empty children array', () => {
@@ -119,7 +119,7 @@ describe(getAllIds, () => {
       children: [],
       id: 'root',
     }
-    expect(getAllIds(datum)).toEqual(['root'])
+    expect(getAllIds(datum)).toStrictEqual(['root'])
   })
 })
 
@@ -136,7 +136,7 @@ describe(getDataColors, () => {
     const data: DefaultTreeMapDatum = { id: 'root' }
     const colors = getDataColors(data, mockTheme)
 
-    expect(colors[0]).toMatch(/^#3B82F6[0-9A-F]{2}$/)
+    expect(colors[0]).toMatch(/^#3B82F6[0-9A-F]{2}$/u)
   })
 
   it('should generate different colors for multiple nodes', () => {

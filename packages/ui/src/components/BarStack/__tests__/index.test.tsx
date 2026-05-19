@@ -34,11 +34,9 @@ describe('barStack', () => {
     )
     expect(asFragment()).toMatchSnapshot()
   })
-  Object.keys(['xsmall', 'small', 'large', 'medium']).forEach(size => {
-    it(`renders correctly size ${size}`, () => {
-      const { asFragment } = renderWithTheme(<BarStack data={fakeData} />)
-      expect(asFragment()).toMatchSnapshot()
-    })
+  it.each(['xsmall', 'small', 'large', 'medium'] as const)(`renders correctly size %s`, size => {
+    const { asFragment } = renderWithTheme(<BarStack data={fakeData} size={size} />)
+    expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly with legend outside', () => {

@@ -32,7 +32,7 @@ const getReferenceText = (option: OptionType) => {
 const searchRegex = (data: OptionType[], query: string) =>
   data.filter(option => {
     const referenceText = getReferenceText(option)
-    const regex = new RegExp(query, 'i')
+    const regex = new RegExp(query, 'iu')
 
     return (
       (query.length > 2 ? isFuzzyMatch(query, referenceText) : referenceText.match(regex)) ||
@@ -69,7 +69,7 @@ const findClosestOption = (options: DataType, searchInput: string | undefined) =
   return null
 }
 
-const escapeRegExp = (string: string) => string.replace(/[.*+?^{}()|[\]\\]/g, String.raw`\$&`)
+const escapeRegExp = (string: string) => string.replace(/[.*+?^{}()|[\]\\]/gu, String.raw`\$&`)
 
 export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }: SearchBarProps) => {
   const searchInputRef = useRef<HTMLInputElement>(null)

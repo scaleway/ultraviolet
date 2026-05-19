@@ -560,7 +560,7 @@ describe('selectInput', () => {
     await userEvent.keyboard('[arrowDown]')
     await userEvent.keyboard('[arrowUp]')
     const mercury = screen.getByRole('option', {
-      name: /mercury/i,
+      name: /mercury/iu,
     })
     expect(mercury).toHaveFocus()
   })
@@ -608,7 +608,7 @@ describe('selectInput', () => {
     await userEvent.keyboard('[arrowDown]')
     await userEvent.keyboard('[arrowUp]')
     const jupiter = screen.getByRole('option', {
-      name: /jupiter/i,
+      name: /jupiter/iu,
     })
     expect(jupiter).toHaveFocus()
   })
@@ -696,7 +696,7 @@ describe('selectInput', () => {
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     const venus = screen.getByRole('option', {
-      name: /venus/i,
+      name: /venus/iu,
     })
     await userEvent.type(dropdown, 'v')
     expect(venus).toHaveFocus()
@@ -833,7 +833,7 @@ describe('selectInput', () => {
     const venus = screen.getByText('Venus')
     const earth = screen.getByText('Earth')
     const earthCheckbox = screen.getByRole('checkbox', {
-      name: /earth/i,
+      name: /earth/iu,
     })
     await userEvent.keyboard('[Enter]') // empty search doesn't do anything
     await userEvent.keyboard('e')
@@ -973,7 +973,7 @@ describe('selectInput', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const selectAllCheckBox = screen.getByRole('checkbox', {
-      name: /select.*all/i,
+      name: /select.*all/iu,
     })
     const selectAll = screen.getByTestId('select-all')
     await userEvent.click(selectAll)
@@ -983,7 +983,7 @@ describe('selectInput', () => {
     const venus = screen.getByTestId('option-venus')
     const earth = screen.getByTestId('option-earth')
     const earthCheckbox = screen.getByRole('checkbox', {
-      name: /earth/i,
+      name: /earth/iu,
     })
     await userEvent.click(venus)
     expect(selectAllCheckBox).not.toBeChecked()
@@ -1030,7 +1030,7 @@ describe('selectInput', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const selectAllCheckBox = screen.getByRole('checkbox', {
-      name: /select.*all/i,
+      name: /select.*all/iu,
     })
     const selectAll = screen.getByTestId('select-all')
     await userEvent.click(selectAll)
@@ -1039,7 +1039,7 @@ describe('selectInput', () => {
 
     const venus = screen.getByTestId('option-venus')
     const earthCheckbox = screen.getByRole('checkbox', {
-      name: /earth/i,
+      name: /earth/iu,
     })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(venus)
@@ -1097,16 +1097,16 @@ describe('selectInput', () => {
     const selectAllGroup = within(dropdown).getByTestId('group-1')
     await userEvent.click(selectAllGroup)
     const mercury = within(dropdown).getByRole('checkbox', {
-      name: /mercury/i,
+      name: /mercury/iu,
     })
     const venus = within(dropdown).getByRole('checkbox', {
-      name: /venus/i,
+      name: /venus/iu,
     })
     const earth = within(dropdown).getByRole('checkbox', {
-      name: /earth/i,
+      name: /earth/iu,
     })
     const jupiter = within(dropdown).getByRole('checkbox', {
-      name: /jupiter/i,
+      name: /jupiter/iu,
     })
 
     expect(mercury).toBeChecked()
@@ -1190,18 +1190,18 @@ describe('selectInput', () => {
     )
 
     const selectAllGroupCheckBox = within(dropdown).getByRole('checkbox', {
-      name: /terrestrial planets/i,
+      name: /terrestrial planets/iu,
     })
 
     const selectAllGroup = within(dropdown).getByTestId('group-1')
 
     await userEvent.click(selectAllGroup)
     const venus = within(dropdown).getByRole('checkbox', {
-      name: /venus/i,
+      name: /venus/iu,
     })
 
     const selectAllCheckBox = within(dropdown).getByRole('checkbox', {
-      name: /select.*all/i,
+      name: /select.*all/iu,
     })
     const selectAll = within(dropdown).getByTestId('select-all')
     await userEvent.click(selectAll)

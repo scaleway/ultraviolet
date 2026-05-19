@@ -4,9 +4,9 @@ import { ProgressBar } from '..'
 import { PROGRESS_BAR_SENTIMENTS } from '../constants'
 
 describe('progressBar', () => {
-  PROGRESS_BAR_SENTIMENTS.forEach(sentiment => {
-    it(`renders ${sentiment}`, () => shouldMatchSnapshot(<ProgressBar sentiment={sentiment} value={40} />))
-  })
+  it.each(PROGRESS_BAR_SENTIMENTS)(`renders %s`, sentiment =>
+    shouldMatchSnapshot(<ProgressBar sentiment={sentiment} value={40} />),
+  )
 
   it('renders progression', () => shouldMatchSnapshot(<ProgressBar progress />))
 

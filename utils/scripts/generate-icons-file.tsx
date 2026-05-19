@@ -44,7 +44,7 @@ const COMPONENTS = [
 ]
 
 const wrapSvg = (svgContent: string) => {
-  const hasMultipleElements = svgContent.trim().split(/<path|<rect|<circle|<line|<ellipse|<g/).length > 2
+  const hasMultipleElements = svgContent.trim().split(/<path|<rect|<circle|<line|<ellipse|<g/u).length > 2
 
   return hasMultipleElements ? `<>${svgContent}</>` : svgContent
 }
@@ -90,7 +90,7 @@ const templateIcon = (iconName: string, svg: string, svgSmall?: string, svgDisab
 `
 }
 
-const toPascalCase = (str: string) => str.replace(/(^\w|-\w)/g, match => match.replace('-', '').toUpperCase())
+const toPascalCase = (str: string) => str.replace(/(^\w|-\w)/gu, match => match.replace('-', '').toUpperCase())
 
 const generateVariableName = (filePath: string) => {
   const parsedPath = path.parse(filePath)
@@ -124,29 +124,29 @@ const readDirectoryRecursive = async (dir: string) => {
 
 const readSvg = async (filePath: string, suffix: string) => {
   const svgContent = await promises.readFile(filePath, 'utf8')
-  const innerSvgContent = svgContent.replace(/<svg[^>]*>|<\/svg>/g, '') // Remove <svg ...> and </svg> tags
+  const innerSvgContent = svgContent.replace(/<svg[^>]*>|<\/svg>/gu, '') // Remove <svg ...> and </svg> tags
 
   // Replace class with className
   const updatedSvgContent = innerSvgContent
-    .replace(/class=/g, 'className=')
-    .replace(/fill-rule=/g, 'fillRule=')
-    .replace(/fill-opacity=/g, 'fillOpacity=')
-    .replace(/clip-rule=/g, 'clipRule=')
-    .replace(/clip-path=/g, 'clipPath=')
-    .replace(/stop-color=/g, 'stopColor=')
-    .replace(/flood-opacity=/g, 'floodOpacity=')
-    .replace(/stroke-width=/g, 'strokeWidth=')
-    .replace(/stroke-linecap=/g, 'strokeLinecap=')
-    .replace(/stroke-linejoin=/g, 'strokeLinejoin=')
-    .replace(/stop-opacity=/g, 'stopOpacity=')
-    .replace(/color-interpolation-filters=/g, 'colorInterpolationFilters=')
-    .replace(/xlink:href=/g, 'xlinkHref=')
-    .replace(/`/g, '\\`')
-    .replace(/height="[^"]*"/g, '')
-    .replace(/width="[^"]*"/g, '')
+    .replace(/class=/gu, 'className=')
+    .replace(/fill-rule=/gu, 'fillRule=')
+    .replace(/fill-opacity=/gu, 'fillOpacity=')
+    .replace(/clip-rule=/gu, 'clipRule=')
+    .replace(/clip-path=/gu, 'clipPath=')
+    .replace(/stop-color=/gu, 'stopColor=')
+    .replace(/flood-opacity=/gu, 'floodOpacity=')
+    .replace(/stroke-width=/gu, 'strokeWidth=')
+    .replace(/stroke-linecap=/gu, 'strokeLinecap=')
+    .replace(/stroke-linejoin=/gu, 'strokeLinejoin=')
+    .replace(/stop-opacity=/gu, 'stopOpacity=')
+    .replace(/color-interpolation-filters=/gu, 'colorInterpolationFilters=')
+    .replace(/xlink:href=/gu, 'xlinkHref=')
+    .replace(/`/gu, '\\`')
+    .replace(/height="[^"]*"/gu, '')
+    .replace(/width="[^"]*"/gu, '')
 
   if (suffix === 'Icon') {
-    return updatedSvgContent.replaceAll(/fill="[^"]*"/g, '')
+    return updatedSvgContent.replaceAll(/fill="[^"]*"/gu, '')
   }
 
   return updatedSvgContent

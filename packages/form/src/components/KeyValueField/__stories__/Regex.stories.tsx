@@ -11,8 +11,8 @@ export const Regex: StoryFn<ComponentProps<typeof KeyValueField>> = args => (
   </Stack>
 )
 
-const alpha = /^[a-zA-Z]*$/
-const accessKeyRegex = /^SCW[A-Z0-9]{17}$/i
+const alpha = /^[a-zA-Z]*$/u
+const accessKeyRegex = /^SCW[A-Z0-9]{17}$/iu
 
 Regex.args = {
   addButton: {

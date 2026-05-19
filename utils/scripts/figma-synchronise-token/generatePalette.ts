@@ -29,7 +29,7 @@ type ThemeType = {
   boxShadow: Record<string, ColorType>
 }
 
-const hexColorRegex = /#(?:(?:[\da-f]{3}){1,2}(?:[\da-f]{2}){0,1})/gi
+const hexColorRegex = /#(?:(?:[\da-f]{3}){1,2}(?:[\da-f]{2}){0,1})/giu
 
 const alphaOrder = (obj: JsonType) => {
   const orderedKeys = Object.keys(obj ?? {}).toSorted()
@@ -78,7 +78,7 @@ const evalValue = (value: string, variables: string | object) => {
 
   let returnedValue = value
   if (value.includes('$')) {
-    const temp = value.replaceAll(/\$[a-zA-Z0-9\\.]+/g, match => {
+    const temp = value.replaceAll(/\$[a-zA-Z0-9\\.]+/gu, match => {
       const keyParts = match.slice(1).split('.')
 
       let base = variables
@@ -118,7 +118,7 @@ const getValues = (
     })
 
     if (newValue !== null) {
-      values[key.replaceAll(/,/g, '.')] = newValue
+      values[key.replaceAll(/,/gu, '.')] = newValue
     }
 
     return values

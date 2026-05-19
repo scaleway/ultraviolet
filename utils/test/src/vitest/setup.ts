@@ -32,7 +32,9 @@ export const setup = () => {
     setupIntersectionMocking(vi.fn)
     vi.spyOn(globalThis.Math, 'random').mockReturnValue(0.415_591_366_944_480_4)
 
+    // oxlint-disable-next-line vitest/prefer-spy-on
     window.ResizeObserver = vi.fn().mockImplementation(MockResize)
+    // oxlint-disable-next-line vitest/prefer-spy-on
     window.matchMedia = vi.fn().mockImplementation(MockMatchMedia)
 
     if (!globalThis.navigator.clipboard) {

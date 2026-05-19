@@ -39,7 +39,7 @@ describe('toaster', () => {
         toastId: 'success',
       })
     })
-    expect(await screen.findByText('This is a success')).toMatchSnapshot()
+    await expect(screen.findByText('This is a success')).resolves.toMatchSnapshot()
 
     act(() => {
       toast.error('This is an error', {
@@ -47,7 +47,7 @@ describe('toaster', () => {
       })
     })
 
-    expect(await screen.findByText('This is an error')).toMatchSnapshot()
+    await expect(screen.findByText('This is an error')).resolves.toMatchSnapshot()
 
     act(() => {
       toast.warning('This is a warning', {
@@ -55,7 +55,7 @@ describe('toaster', () => {
       })
     })
 
-    expect(await screen.findByText('This is a warning')).toMatchSnapshot()
+    await expect(screen.findByText('This is a warning')).resolves.toMatchSnapshot()
 
     expect(asFragment()).toMatchSnapshot()
   })

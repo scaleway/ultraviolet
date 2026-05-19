@@ -120,6 +120,9 @@
         "vitest/no-hooks": "off",
         "vitest/expect-expect": "off",
         "vitest/valid-title": "off",
+        "vitest/prefer-snapshot-hint": "off",
+        "vitest/require-hook": "warn",
+        "vitest/prefer-called-with": "off",
         "vitest/max-expects": [
           "error",
           {
@@ -198,6 +201,7 @@
     ],
 
     "jsx-a11y/no-static-element-interactions": "warn",
+    "jsx-a11y/prefer-tag-over-role": "warn",
 
     "typescript/dot-notation": "off",
     "typescript/no-confusing-void-expression": "off",

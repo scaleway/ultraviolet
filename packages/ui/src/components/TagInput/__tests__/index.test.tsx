@@ -61,7 +61,7 @@ describe('tagInput', () => {
 
     renderWithTheme(<TagInput onChange={mockOnChange} value={['first', 'second']} />)
 
-    const firstTag = screen.queryByText(/first/)
+    const firstTag = screen.queryByText(/first/u)
     expect(firstTag).toBeInTheDocument()
     // remove Tag
     const tagsClose = screen.getAllByTestId('close-tag')
@@ -76,7 +76,7 @@ describe('tagInput', () => {
     const mockOnChange = vi.fn()
     renderWithTheme(<TagInput id="test" name="radio" onChange={mockOnChange} value={['hello', 'world']} />)
     const input = screen.getByRole<HTMLInputElement>('textbox')
-    const lastTag = screen.queryByText(/world/)
+    const lastTag = screen.queryByText(/world/u)
     expect(lastTag).toBeInTheDocument()
     await userEvent.click(input)
     expect(input).toHaveFocus()

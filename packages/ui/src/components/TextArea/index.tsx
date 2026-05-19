@@ -198,7 +198,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               placeholder={placeholder}
               readOnly={!!readOnly}
               ref={textAreaRef}
-              rows={rows !== 'auto' ? rows : 1}
+              rows={rows === 'auto' ? 1 : rows}
               style={{
                 ...assignInlineVars({
                   [paddingRightVar]: `calc(${theme.space[computedClearable && (!!success || !!error) ? '4' : '3']} + ${

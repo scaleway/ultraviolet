@@ -202,11 +202,11 @@ export const Plans = <T extends string>({
                     {plan.data[featureKey] === true ? (
                       <CheckCircleIcon disabled={computedDisabled} sentiment="success" size="medium" />
                     ) : null}
-                    {typeof plan.data[featureKey] !== 'boolean' ? (
+                    {typeof plan.data[featureKey] === 'boolean' ? null : (
                       <Text as="span" disabled={computedDisabled} sentiment="neutral" variant="body">
                         {plan.data[featureKey]}
                       </Text>
-                    ) : null}
+                    )}
                   </td>
                 )
               })}

@@ -25,7 +25,7 @@ export const Spanning: StoryFn = args => (
           <Table.Cell colSpan={movie.director === movie.storyBy ? 2 : 1} sentiment="success">
             {movie.director}
           </Table.Cell>
-          {movie.director !== movie.storyBy ? <Table.Cell sentiment="info">{movie.storyBy}</Table.Cell> : null}
+          {movie.director === movie.storyBy ? null : <Table.Cell sentiment="info">{movie.storyBy}</Table.Cell>}
         </Table.Row>
       ))}
     </Table.Body>

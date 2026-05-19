@@ -55,10 +55,10 @@ export const getSelected = (label: string, index: number, selected: string[] = [
   const labelIndexed = label + index.toString()
   const found = selected.indexOf(labelIndexed)
 
-  if (found !== -1) {
-    selected.splice(found, 1)
-  } else {
+  if (found === -1) {
     selected.push(labelIndexed)
+  } else {
+    selected.splice(found, 1)
   }
 
   return selected

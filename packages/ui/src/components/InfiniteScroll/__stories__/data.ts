@@ -3,7 +3,7 @@ import type { Table } from '../../Table'
 
 export const generateRandomName = (nameLength: number) =>
   String.fromCharCode(...Array.from({ length: nameLength }, () => Math.floor(Math.random() * 26) + 97)).replace(
-    /^./,
+    /^./u,
     c => c.toUpperCase(),
   )
 

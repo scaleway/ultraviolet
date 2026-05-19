@@ -130,6 +130,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
                 <Stack alignItems="center" direction="row" justifyContent="space-between" width="100%">
                   {children}
                   {rightComponent ? (
+                    // oxlint-disable-next-line jsx-a11y/interactive-supports-focus
                     <div
                       onClick={event => {
                         event.stopPropagation()
@@ -184,6 +185,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
               <Stack alignItems="center" direction="row" justifyContent="space-between" width="100%">
                 {children}
                 {rightComponent ? (
+                  // oxlint-disable-next-line jsx-a11y/interactive-supports-focus
                   <div
                     onClick={event => {
                       event.stopPropagation()

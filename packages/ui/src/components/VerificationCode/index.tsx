@@ -105,11 +105,11 @@ export const VerificationCode = ({
   const inputOnChange = (index: number) => (event: ChangeEvent<HTMLInputElement>) => {
     let { value } = event.target
     if (type === 'number') {
-      value = event.target.value.replace(/[^\d]/gi, '')
+      value = event.target.value.replace(/[^\d]/giu, '')
     }
     const newValues = [...values]
 
-    if (value === '' || (type === 'number' && !new RegExp(event.target.pattern).test(value))) {
+    if (value === '' || (type === 'number' && !new RegExp(event.target.pattern, 'u').test(value))) {
       newValues[index] = ''
       setValues(newValues)
 
@@ -192,7 +192,7 @@ export const VerificationCode = ({
       // oxlint-disable-next-line typescript/no-misused-spread
       const pastedValue = [...event.clipboardData.getData('Text')].map((copiedValue: string) =>
         // Replace non number char with empty char when type is number
-        type === 'number' ? copiedValue.replace(/[^\d]/gi, '') : copiedValue,
+        type === 'number' ? copiedValue.replace(/[^\d]/giu, '') : copiedValue,
       )
 
       // Trim array to avoid array overflow

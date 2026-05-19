@@ -32,7 +32,7 @@ describe('textInputField', () => {
     await userEvent.type(textInput, 'This is an example')
     await userEvent.click(screen.getByText('Submit'))
     await waitFor(() => {
-      expect(onSubmit.mock.calls[0][0]).toEqual({
+      expect(onSubmit.mock.calls[0][0]).toStrictEqual({
         test: 'This is an example',
       })
     })

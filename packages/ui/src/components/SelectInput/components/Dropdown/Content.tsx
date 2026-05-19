@@ -148,6 +148,7 @@ export const CreateDropdown = ({
   }
 
   return Array.isArray(displayedOptions) ? (
+    // oxlint-disable-next-line jsx-a11y/interactive-supports-focus
     <Stack
       className={cn(selectInputStyle.dropdownContainer, selectInputStyle.dropdownContainerUnGrouped)}
       gap={0.25}
@@ -187,6 +188,7 @@ export const CreateDropdown = ({
       </Stack>
     </Stack>
   ) : (
+    // oxlint-disable-next-line jsx-a11y/interactive-supports-focus
     <Stack
       className={selectInputStyle.dropdownContainer}
       data-grouped

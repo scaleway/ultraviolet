@@ -14,7 +14,7 @@ describe('toaster', () => {
       notification('Description', 'Title', 'icon', true)
     })
 
-    expect(await screen.findAllByText('Title')).toMatchSnapshot()
+    await expect(screen.findAllByText('Title')).resolves.toMatchSnapshot()
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -33,7 +33,7 @@ describe('toaster', () => {
       )
     })
 
-    expect(await screen.findAllByText('Decline')).toMatchSnapshot()
+    await expect(screen.findAllByText('Decline')).resolves.toMatchSnapshot()
     expect(asFragment()).toMatchSnapshot()
   })
 })

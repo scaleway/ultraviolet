@@ -86,51 +86,33 @@ describe('tooltip', () => {
     ))
 
   describe('should render correctly with placement', () => {
-    ;['top', 'left', 'right', 'bottom'].forEach(placement => {
-      it(`should renders tooltip with placement ${placement}`, () => {
-        shouldMatchSnapshot(
-          <Popover
-            content="Test"
-            onClose={() => {}}
-            placement={placement as ComponentProps<typeof Popover>['placement']}
-            title="Test"
-            visible
-          >
-            <p data-testid="children">Children</p>
-          </Popover>,
-        )
-      })
+    it.each(['top', 'left', 'right', 'bottom'] as const)(`should renders tooltip with placement %s`, placement => {
+      shouldMatchSnapshot(
+        <Popover content="Test" onClose={() => {}} placement={placement} title="Test" visible>
+          <p data-testid="children">Children</p>
+        </Popover>,
+      )
     })
   })
 
   describe('should render correctly with sentiment', () => {
-    ;(['neutral', 'primary'] as const).forEach(sentiment => {
-      it(`should renders tooltip with placement ${sentiment}`, () => {
-        shouldMatchSnapshot(
-          <Popover content="Test" onClose={() => {}} sentiment={sentiment} title="Test" visible>
-            <p data-testid="children">Children</p>
-          </Popover>,
-        )
-      })
+    it.each(['neutral', 'primary'] as const)(`should renders tooltip with placement %s`, sentiment => {
+      shouldMatchSnapshot(
+        <Popover content="Test" onClose={() => {}} sentiment={sentiment} title="Test" visible>
+          <p data-testid="children">Children</p>
+        </Popover>,
+      )
     })
   })
 
   describe('should render correctly with sizes', () => {
-    ;['small', 'medium', 'large'].forEach(size => {
-      it(`should renders tooltip with placement ${size}`, () => {
-        const { asFragment } = renderWithTheme(
-          <Popover
-            content="Test"
-            onClose={() => {}}
-            size={size as ComponentProps<typeof Popover>['size']}
-            title="Test"
-            visible
-          >
-            <p data-testid="children">Children</p>
-          </Popover>,
-        )
-        expect(asFragment()).toMatchSnapshot()
-      })
+    it.each(['small', 'medium', 'large'] as const)(`should renders tooltip with placement %s`, size => {
+      const { asFragment } = renderWithTheme(
+        <Popover content="Test" onClose={() => {}} size={size} title="Test" visible>
+          <p data-testid="children">Children</p>
+        </Popover>,
+      )
+      expect(asFragment()).toMatchSnapshot()
     })
   })
 

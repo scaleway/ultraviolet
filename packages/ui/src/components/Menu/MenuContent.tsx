@@ -229,6 +229,7 @@ export const Menu = forwardRef(
         style={style}
         tabIndex={-1}
         text={
+          // oxlint-disable-next-line jsx-a11y/interactive-supports-focus
           <Stack
             className={cn(className, menuStyle.list)}
             data-testid={dataTestId}
