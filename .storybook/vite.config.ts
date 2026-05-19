@@ -48,23 +48,23 @@ export const defaultConfig: UserConfigExport = {
 
       // Icons - specific icon files (must come before base aliases)
       {
-        find: /^@ultraviolet\/icons\/([A-Z][a-zA-Z]+Icon)$/,
+        find: /^@ultraviolet\/icons\/([A-Z][a-zA-Z]+Icon)$/u,
         replacement: resolve('packages/icons/src/components/Icon/__generated__/$1.tsx'),
       },
       {
-        find: /^@ultraviolet\/icons\/product\/([A-Z][a-zA-Z]+ProductIcon)$/,
+        find: /^@ultraviolet\/icons\/product\/([A-Z][a-zA-Z]+ProductIcon)$/u,
         replacement: resolve('packages/icons/src/components/ProductIcon/__generated__/$1.tsx'),
       },
       {
-        find: /^@ultraviolet\/icons\/logo\/([A-Z][a-zA-Z]+Logo)$/,
+        find: /^@ultraviolet\/icons\/logo\/([A-Z][a-zA-Z]+Logo)$/u,
         replacement: resolve('packages/icons/src/components/Logo/__generated__/$1.tsx'),
       },
       {
-        find: /^@ultraviolet\/icons\/category\/([A-Z][a-zA-Z]+CategoryIcon)$/,
+        find: /^@ultraviolet\/icons\/category\/([A-Z][a-zA-Z]+CategoryIcon)$/u,
         replacement: resolve('packages/icons/src/components/CategoryIcon/__generated__/$1.tsx'),
       },
       {
-        find: /^@ultraviolet\/icons\/flags\/([A-Z][a-zA-Z]+Flag)$/,
+        find: /^@ultraviolet\/icons\/flags\/([A-Z][a-zA-Z]+Flag)$/u,
         replacement: resolve('packages/icons/src/components/Flags/__generated__/$1.tsx'),
       },
 
@@ -114,7 +114,7 @@ export const defaultConfig: UserConfigExport = {
 
       // UI - compositions (must come before base alias)
       {
-        find: /^@ultraviolet\/ui\/compositions\/(.*)/,
+        find: /^@ultraviolet\/ui\/compositions\/(.*)/u,
         replacement: resolve('packages/ui/src/compositions/$1'),
       },
       {
@@ -130,7 +130,7 @@ export const defaultConfig: UserConfigExport = {
 
       // Form - compositions (must come before base alias)
       {
-        find: /^@ultraviolet\/form\/compositions\/(.*)/,
+        find: /^@ultraviolet\/form\/compositions\/(.*)/u,
         replacement: resolve('packages/form/src/compositions/$1.tsx'),
       },
       {

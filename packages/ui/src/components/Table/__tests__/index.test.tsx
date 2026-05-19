@@ -67,7 +67,7 @@ describe('table', () => {
           </Table.Row>
         )),
       ),
-    ).toThrow()
+    ).toThrow('Error')
     expect(consoleErrMock).toHaveBeenCalled()
     consoleErrMock.mockRestore()
   })
@@ -222,7 +222,7 @@ describe('table', () => {
     })
     expect(tableHeaderCells).toHaveLength(columns.length)
     if (tableHeaderCells[0] && tableHeaderCells[1]) {
-      expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBe(null)
+      expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBeNull()
       await userEvent.click(tableHeaderCells[0])
       expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBe('ascending')
       if (tableHeaderCells[0]) {
@@ -231,7 +231,7 @@ describe('table', () => {
       expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBe('descending')
       fireEvent.keyDown(tableHeaderCells[0], { key: 'Space' })
       await userEvent.click(tableHeaderCells[1])
-      expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBe(null)
+      expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBeNull()
       expect(tableHeaderCells[1]?.getAttribute('aria-sort')).toBe('ascending')
       expect(asFragment()).toMatchSnapshot()
     }

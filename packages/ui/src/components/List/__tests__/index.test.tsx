@@ -87,7 +87,7 @@ describe('list', () => {
           </List.Row>
         )),
       )
-    }).toThrow()
+    }).toThrow('Error')
 
     expect(consoleErrMock).toHaveBeenCalled()
     consoleErrMock.mockRestore()
@@ -378,14 +378,14 @@ describe('list', () => {
 
     expect(listHeaderCells).toHaveLength(columns.length)
     if (listHeaderCells[0] && listHeaderCells[1]) {
-      expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
+      expect(listHeaderCells[0].getAttribute('aria-sort')).toBeNull()
       await userEvent.click(listHeaderCells[0])
       expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('ascending')
       fireEvent.keyDown(listHeaderCells[0], { key: 'Enter' })
       expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('descending')
       fireEvent.keyDown(listHeaderCells[0], { key: 'Space' })
       await userEvent.click(listHeaderCells[1])
-      expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
+      expect(listHeaderCells[0].getAttribute('aria-sort')).toBeNull()
       expect(listHeaderCells[1].getAttribute('aria-sort')).toBe('ascending')
     }
     expect(asFragment()).toMatchSnapshot()

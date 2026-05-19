@@ -5,10 +5,8 @@ import { down, up } from '../utilities'
 
 describe('responsive utilities', () => {
   describe(up, () => {
-    ;(Object.keys(screens) as ScreenSize[]).forEach(brk => {
-      it(`works with ${brk}`, () => {
-        expect(up(brk, 'border: 1px solid red;')).toMatchSnapshot()
-      })
+    it.each(Object.keys(screens) as ScreenSize[])(`works with %s`, brk => {
+      expect(up(brk, 'border: 1px solid red;')).toMatchSnapshot()
     })
     it('should return null when unknown size', () => {
       // @ts-expect-error we send the wrong screen size on purpose
@@ -16,10 +14,8 @@ describe('responsive utilities', () => {
     })
   })
   describe(down, () => {
-    ;(Object.keys(screens) as ScreenSize[]).forEach(brk => {
-      it(`works with ${brk}`, () => {
-        expect(down(brk, 'border: 1px solid red;')).toMatchSnapshot()
-      })
+    it.each(Object.keys(screens) as ScreenSize[])(`works with %s`, brk => {
+      expect(down(brk, 'border: 1px solid red;')).toMatchSnapshot()
     })
     it('should return null when unknown size', () => {
       // @ts-expect-error we send the wrong screen size on purpose

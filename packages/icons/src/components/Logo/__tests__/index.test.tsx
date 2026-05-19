@@ -12,7 +12,6 @@ import {
   CentosLogo,
   CPanelLogo,
 } from '..'
-import type { IconProps } from '../Icon'
 
 describe('logos', () => {
   const logos = [
@@ -28,6 +27,7 @@ describe('logos', () => {
     CPanelLogo,
   ]
 
+  // oxlint-disable-next-line vitest/require-hook
   logos.forEach(LogoComponent => {
     const logoName = LogoComponent.name
 
@@ -37,13 +37,9 @@ describe('logos', () => {
         expect(asFragment()).toMatchSnapshot()
       })
 
-      it(`renders ${logoName} with custom size`, () => {
-        const sizes: IconProps['size'][] = ['small', 'medium', 'large', 'xlarge']
-
-        sizes.forEach(size => {
-          const { asFragment } = render(<LogoComponent size={size} />)
-          expect(asFragment()).toMatchSnapshot()
-        })
+      it.each(['small', 'medium', 'large', 'xlarge'] as const)(`renders ${logoName} with custom size %s`, size => {
+        const { asFragment } = render(<LogoComponent size={size} />)
+        expect(asFragment()).toMatchSnapshot()
       })
 
       it(`renders ${logoName} with custom className`, () => {

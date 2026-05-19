@@ -9,21 +9,21 @@ describe('polymorphic', () => {
       const parent = { id: 'parent', title: 'parent' }
       const child = { id: 'child' }
       const result = mergeProps(parent, child)
-      expect(result).toEqual({ id: 'child', title: 'parent' })
+      expect(result).toStrictEqual({ id: 'child', title: 'parent' })
     })
 
     it('concatenates className', () => {
       const parent = { className: 'parent-class' }
       const child = { className: 'child-class' }
       const result = mergeProps(parent, child)
-      expect(result).toEqual({ className: 'parent-class child-class' })
+      expect(result).toStrictEqual({ className: 'parent-class child-class' })
     })
 
     it('merges styles, child overrides parent', () => {
       const parent = { style: { color: 'red', display: 'block' } }
       const child = { style: { color: 'blue' } }
       const result = mergeProps(parent, child)
-      expect(result['style']).toEqual({ color: 'blue', display: 'block' })
+      expect(result['style']).toStrictEqual({ color: 'blue', display: 'block' })
     })
 
     it('does not merge event handlers', () => {

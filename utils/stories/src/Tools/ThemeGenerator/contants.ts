@@ -1,4 +1,4 @@
-export const hexadecimalColorRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/i
+export const hexadecimalColorRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/iu
 
 export const SHADES_KEYS = [
   '100',

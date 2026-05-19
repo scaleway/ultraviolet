@@ -16,7 +16,7 @@ import { CodeContent } from './CodeContent'
 import type { Prefixes } from './CodeContent'
 import { snippetStyle } from './styles.css'
 
-const LINES_BREAK_REGEX = /\r\n|\r|\n/
+const LINES_BREAK_REGEX = /\r\n|\r|\n/u
 
 type SnippetProps = {
   className?: string

@@ -7,6 +7,7 @@ import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 import { SwitchButton } from '..'
 
+// oxlint-disable-next-line vitest/require-hook
 let resizeCallback: ResizeObserverCallback = () => {}
 
 describe('switchButton', () => {

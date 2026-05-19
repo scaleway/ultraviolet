@@ -12,7 +12,6 @@ import {
   ApiKeyProductIcon,
   ApiProductIcon,
 } from '..'
-import type { IconProps } from '../Icon'
 
 describe('productIcons', () => {
   const productIcons = [
@@ -28,6 +27,7 @@ describe('productIcons', () => {
     ApiProductIcon,
   ]
 
+  // oxlint-disable-next-line vitest/require-hook
   productIcons.forEach(ProductIconComponent => {
     const productName = ProductIconComponent.name
 
@@ -37,23 +37,21 @@ describe('productIcons', () => {
         expect(asFragment()).toMatchSnapshot()
       })
 
-      it(`renders ${productName} with custom size`, () => {
-        const sizes: IconProps['size'][] = ['xsmall', 'small', 'medium', 'large', 'xlarge']
-
-        sizes.forEach(size => {
+      it.each(['xsmall', 'small', 'medium', 'large', 'xlarge'] as const)(
+        `renders ${productName} with custom size %s`,
+        size => {
           const { asFragment } = render(<ProductIconComponent size={size} />)
           expect(asFragment()).toMatchSnapshot()
-        })
-      })
+        },
+      )
 
-      it(`renders ${productName} with custom variant`, () => {
-        const variants: IconProps['variant'][] = ['primary', 'danger', 'warning', 'original']
-
-        variants.forEach(variant => {
+      it.each(['primary', 'danger', 'warning', 'original'] as const)(
+        `renders ${productName} with custom variant %s`,
+        variant => {
           const { asFragment } = render(<ProductIconComponent variant={variant} />)
           expect(asFragment()).toMatchSnapshot()
-        })
-      })
+        },
+      )
 
       it(`renders ${productName} with disabled state`, () => {
         const { asFragment } = render(<ProductIconComponent disabled />)

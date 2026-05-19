@@ -25,10 +25,9 @@ describe('globalAlert', () => {
     ))
 
   describe('renders correctly with all variants', () => {
-    ;(['info', 'danger', 'promotional'] as const).forEach(variant => {
-      it(`renders correctly variant ${variant}`, () =>
-        shouldMatchSnapshot(<GlobalAlert variant={variant}>Sample GlobalAlert</GlobalAlert>))
-    })
+    it.each(['info', 'danger', 'promotional'] as const)(`renders correctly variant %s`, variant =>
+      shouldMatchSnapshot(<GlobalAlert variant={variant}>Sample GlobalAlert</GlobalAlert>),
+    )
   })
 
   it('should render GlobalAlert and then close it', async () => {

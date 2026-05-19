@@ -11,7 +11,7 @@ type ChildType = {
  * Search inside a children (React Element) recursively until a result is found
  */
 export const searchChildren = (children: ReactNode, searchString: string): ReactNode[] => {
-  const searchRegex = new RegExp(searchString, 'i')
+  const searchRegex = new RegExp(searchString, 'iu')
 
   const matches = Children.map(children, child => {
     if (typeof child === 'string' && child.match(searchRegex)) {

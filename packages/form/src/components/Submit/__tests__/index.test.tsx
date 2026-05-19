@@ -4,7 +4,7 @@ import { renderWithForm } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Submit, TextInputField } from '../..'
 
-const alpha = /^[a-zA-Z]*$/
+const alpha = /^[a-zA-Z]*$/u
 
 describe('submit', () => {
   it('renders correctly ', () => {
