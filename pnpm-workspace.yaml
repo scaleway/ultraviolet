@@ -1,8 +1,43 @@
+# https://github.com/lirantal/npm-security-best-practices#1-disable-post-install-scripts
+strictDepBuilds: true
+engineStrict: true
+
+# one day
+minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  - '@scaleway/*'
+
+allowBuilds:
+  '@parcel/watcher': false
+  esbuild: true
+  sharp: false
+
+trustPolicy: off
+
+blockExoticSubdeps: true
+
 autoInstallPeers: true
 savePrefix: ''
 strictPeerDependencies: false
+
 packages:
   - 'packages/*'
   - 'utils/*'
   - 'examples/*'
   - 'e2e'
+
+pmOnFail: error
+# Needed as we run a pnpm install after building packages
+optimisticRepeatInstall: false
+
+overrides:
+  vite: $vite
+  vitest: $vitest
+
+peerDependencyRules:
+  allowedVersions:
+    '@types/react': 18 || 19
+
+supportedArchitectures:
+  cpu: [ arm64, current ]
+  os: [ darwin, current ]
