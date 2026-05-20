@@ -41,9 +41,14 @@ const defaultAxeOptions: AxeCore.RunOptions = {
   rules,
 } as const
 
-const expectNoViolations = async (container: string | Element, options = defaultAxeOptions) => {
-  const axeResult = await axe(container, options)
+const expectNoViolations = async (container: string | Element, customOptions: AxeCore.RunOptions = {}) => {
+  const opts = {
+    ...customOptions,
+    ...defaultAxeOptions,
+  } satisfies AxeCore.RunOptions
+
+  const axeResult = await axe(container, opts)
   expect(axeResult).toHaveNoViolations()
 }
 
-export { defaultResult, defaultAxeOptions, expectNoViolations }
+export { defaultResult, expectNoViolations }

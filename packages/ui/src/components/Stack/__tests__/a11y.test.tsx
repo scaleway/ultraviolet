@@ -11,7 +11,6 @@ describe('stack - A11Y', { tags: ['a11y'] }, () => {
         <div>third child</div>
       </Stack>,
     )
-
     await expectNoViolations(container)
   })
 })
