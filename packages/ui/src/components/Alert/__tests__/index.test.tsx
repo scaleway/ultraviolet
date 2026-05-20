@@ -6,7 +6,7 @@ import { Alert } from '..'
 
 describe('alert', () => {
   beforeAll(() => {
-    vi.spyOn(console, 'error').mockImplementation(() => null)
+    vi.spyOn(console, 'error').mockImplementation(() => {})
   })
 
   afterAll(() => {

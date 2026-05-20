@@ -12,7 +12,7 @@ export const Environnement: StoryFn<ComponentProps<typeof KeyValueField>> = args
 )
 
 const HIDDEN_SECRET_VALUE = '************'
-const alphanumDashUnderscoreDots = /^[a-zA-Z0-9-._]*$/
+const alphanumDashUnderscoreDots = /^[a-zA-Z0-9-._]*$/u
 
 Environnement.args = {
   addButton: {

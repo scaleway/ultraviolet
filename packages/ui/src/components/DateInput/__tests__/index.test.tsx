@@ -3,15 +3,21 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { es, fr, ru } from 'date-fns/locale'
 import tk from 'timekeeper'
-import { describe, expect, it, vi } from 'vitest'
+import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 import { DateInput } from '..'
 
-tk.freeze(new Date(1_609_503_120_000))
-
-const DECEMBER = /December/i
-const YEAR = /1995/i
+const DECEMBER = /December/iu
+const YEAR = /1995/iu
 
 describe('dateInput', () => {
+  beforeAll(() => {
+    tk.freeze(new Date(1_609_503_120_000))
+  })
+
+  afterAll(() => {
+    tk.reset()
+  })
+
   it('renders correctly with default props', () => {
     const { asFragment } = renderWithTheme(
       <DateInput

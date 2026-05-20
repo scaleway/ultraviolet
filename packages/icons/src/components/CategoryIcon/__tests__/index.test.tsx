@@ -27,6 +27,7 @@ describe('categoryIcons', () => {
     PartnersCategoryIcon,
   ]
 
+  // oxlint-disable-next-line vitest/require-hook
   categoryIcons.forEach(CategoryIconComponent => {
     const categoryName = CategoryIconComponent.name
 

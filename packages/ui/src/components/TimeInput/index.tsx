@@ -356,6 +356,7 @@ export const TimeInput = ({
                   placeholder={placeholder[type]}
                   readOnly={readOnly}
                   ref={computedRef()}
+                  // oxlint-disable-next-line jsx-a11y/no-redundant-roles
                   role="spinbutton"
                   value={filled[type] ? format(getValueByType(type, time), type, timeFormat) : ''}
                 />
@@ -411,6 +412,7 @@ export const TimeInput = ({
               placeholder={placeholder.period ?? 'AM'}
               readOnly={readOnly}
               ref={refPeriod}
+              // oxlint-disable-next-line jsx-a11y/no-redundant-roles
               role="spinbutton"
               value={period?.toUpperCase()}
             />

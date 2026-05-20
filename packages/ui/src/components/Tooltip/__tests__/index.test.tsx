@@ -124,8 +124,9 @@ describe('tooltip', () => {
   })
 
   describe('defined placement', () => {
-    ;['top', 'left', 'right', 'bottom'].forEach(placement => {
-      it(`should renders tooltip with placement ${placement}`, async () => {
+    it.each(['top', 'left', 'right', 'bottom'] as const)(
+      `should renders tooltip with placement %s`,
+      async placement => {
         renderWithTheme(
           <Tooltip
             debounceDelay={0}
@@ -141,8 +142,8 @@ describe('tooltip', () => {
 
         const tooltipPortal = screen.getByText('test success!')
         expect(tooltipPortal).toBeVisible()
-      })
-    })
+      },
+    )
   })
 
   it('should verify accessibility', async () => {

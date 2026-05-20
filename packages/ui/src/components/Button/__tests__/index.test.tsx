@@ -49,14 +49,13 @@ describe('button', () => {
     })
   })
 
-  buttonSizes.forEach(size => {
-    it(`render ${size}`, () =>
-      shouldMatchSnapshot(
-        <Button onClick={MockOnClick} size={size}>
-          Hello
-        </Button>,
-      ))
-  })
+  it.each(buttonSizes)(`render %s`, size =>
+    shouldMatchSnapshot(
+      <Button onClick={MockOnClick} size={size}>
+        Hello
+      </Button>,
+    ),
+  )
 
   it('work with onPointerDown and onKeyDown', async () => {
     const onPointerDown = vi.fn()

@@ -43,12 +43,12 @@ for (const file of filesToAnalyze) {
 
     const content = readFileSync(file, 'utf8')
 
-    const matches = content.matchAll(/import\s+(?:.*?from\s+)?(['"])(.*?)(['"])|export\s+{?\s*(\w+)?\s*}?$/g)
+    const matches = content.matchAll(/import\s+(?:.*?from\s+)?(['"])(.*?)(['"])|export\s+\{?\s*(\w+)?\s*\}?$/gu)
 
     for (const match of matches) {
       const importedFile = match[2] || null
       if (importedFile) {
-        const normalizedFile = relative(srcDir, join(dirname(file), importedFile)).replace(/\.tsx?$/, '')
+        const normalizedFile = relative(srcDir, join(dirname(file), importedFile)).replace(/\.tsx?$/u, '')
 
         if (
           !['react', 'react-vite', 'vitest', 'styled', 'components/'].some(string => normalizedFile.endsWith(string))

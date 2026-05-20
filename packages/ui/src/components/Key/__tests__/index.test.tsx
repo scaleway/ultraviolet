@@ -50,12 +50,10 @@ describe('key', () => {
 
   it('renders small', () => shouldMatchSnapshot(<Key size="small">A</Key>))
 
-  Object.keys(KEYS_MATCH).map(key =>
-    it(`renders with special key ${key}`, () => {
-      renderWithTheme(<Key data-testid="key">{key}</Key>)
+  it.each(Object.keys(KEYS_MATCH))(`renders with special key %s`, key => {
+    renderWithTheme(<Key data-testid="key">{key}</Key>)
 
-      const element = screen.getByTestId('key')
-      expect(element.textContent).toBe(KEYS_MATCH[key as keyof typeof KEYS_MATCH])
-    }),
-  )
+    const element = screen.getByTestId('key')
+    expect(element.textContent).toBe(KEYS_MATCH[key as keyof typeof KEYS_MATCH])
+  })
 })

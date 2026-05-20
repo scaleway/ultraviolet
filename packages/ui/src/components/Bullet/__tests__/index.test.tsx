@@ -25,14 +25,12 @@ describe('bullet', () => {
   it('renders correctly disabled', () => shouldMatchSnapshot(<Bullet disabled>1</Bullet>))
 
   describe('sentiment', () => {
-    SENTIMENTS.forEach(sentiment => {
-      it(`render ${sentiment}`, () => shouldMatchSnapshot(<Bullet sentiment={sentiment}>1</Bullet>))
-    })
+    it.each(SENTIMENTS)(`render %s`, sentiment => shouldMatchSnapshot(<Bullet sentiment={sentiment}>1</Bullet>))
   })
 
   describe('size', () => {
-    ;(['medium', 'small', 'xsmall', 'xxsmall'] as const).forEach(size => {
-      it(`render ${size}`, () => shouldMatchSnapshot(<Bullet size={size}>1</Bullet>))
-    })
+    it.each(['medium', 'small', 'xsmall', 'xxsmall'] as const)(`render %s`, size =>
+      shouldMatchSnapshot(<Bullet size={size}>1</Bullet>),
+    )
   })
 })

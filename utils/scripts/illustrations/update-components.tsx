@@ -37,7 +37,7 @@ export const updateWireIllustrations = (illustrations: { dir: string; category: 
       .map(element => {
         const { dir: directory, category: categorySnake } = element
 
-        const categoryNotCapitalized = categorySnake.replace(/-./g, x => x[1].toUpperCase())
+        const categoryNotCapitalized = categorySnake.replace(/-./gu, x => x[1].toUpperCase())
 
         return `${categoryNotCapitalized}: "${baseUrl}/products/${directory}/${categorySnake}-wire.svg",`
       })
@@ -49,7 +49,7 @@ export const updateWireIllustrations = (illustrations: { dir: string; category: 
 
 const filterDynamicIllustrations = (dynamicIllustrations: { dir: string; category: string }[]) => {
   // Remove -dark and -light from the names
-  const bases = dynamicIllustrations.map(illustration => illustration.category.replace(/-(dark|light)$/, ''))
+  const bases = dynamicIllustrations.map(illustration => illustration.category.replace(/-(dark|light)$/u, ''))
 
   // Keep the ones with dark & light version available
   const finalIllustrations = [...new Set(bases)].filter(

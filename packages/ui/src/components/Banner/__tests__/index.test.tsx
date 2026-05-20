@@ -25,16 +25,18 @@ describe('banner', () => {
     ))
 
   describe('sizes and variants', () => {
-    ;(['medium', 'small'] as const).map(size =>
-      (['intro', 'promotional'] as const).forEach(variant => {
-        it(`renders correctly with size ${size} and variant ${variant}`, () =>
-          shouldMatchSnapshot(
-            <Banner size={size} title="Title" variant={variant}>
-              Description
-            </Banner>,
-          ))
-      }),
-    )
+    it.each([
+      ['medium', 'intro'],
+      ['medium', 'promotional'],
+      ['small', 'intro'],
+      ['small', 'promotional'],
+    ] as const)('renders correctly with size %s and variant %s', (size, variant) => {
+      shouldMatchSnapshot(
+        <Banner size={size} title="Title" variant={variant}>
+          Description
+        </Banner>,
+      )
+    })
   })
 
   it('renders correctly with direction row', () =>

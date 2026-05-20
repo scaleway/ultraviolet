@@ -75,25 +75,19 @@ describe('contentCard', () => {
 
   describe('renders correctly with all directions', () => {
     const directions = ['row', 'column'] as const
-    directions.forEach(direction => {
-      it(`renders correctly direction ${direction}`, () => {
-        const { asFragment } = renderWithTheme(<ContentCard direction={direction} title="test" />)
-        expect(asFragment()).toMatchSnapshot()
-      })
+    it.each(directions)(`renders correctly direction %s`, direction => {
+      const { asFragment } = renderWithTheme(<ContentCard direction={direction} title="test" />)
+      expect(asFragment()).toMatchSnapshot()
     })
 
-    directions.forEach(direction => {
-      it(`renders correctly direction ${direction} and loading`, () => {
-        const { asFragment } = renderWithTheme(<ContentCard direction={direction} loading title="test" />)
-        expect(asFragment()).toMatchSnapshot()
-      })
+    it.each(directions)(`renders correctly direction %s and loading`, direction => {
+      const { asFragment } = renderWithTheme(<ContentCard direction={direction} loading title="test" />)
+      expect(asFragment()).toMatchSnapshot()
     })
 
-    directions.forEach(direction => {
-      it(`renders correctly direction ${direction} and image`, () => {
-        const { asFragment } = renderWithTheme(<ContentCard direction={direction} image={illustration} title="test" />)
-        expect(asFragment()).toMatchSnapshot()
-      })
+    it.each(directions)(`renders correctly direction %s and image`, direction => {
+      const { asFragment } = renderWithTheme(<ContentCard direction={direction} image={illustration} title="test" />)
+      expect(asFragment()).toMatchSnapshot()
     })
   })
 })

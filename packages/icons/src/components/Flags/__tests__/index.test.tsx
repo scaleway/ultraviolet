@@ -12,7 +12,6 @@ import {
   FinlandFlag,
   FranceFlag,
 } from '..'
-import type { IconProps } from '../Icon'
 
 describe('flags', () => {
   const flags = [
@@ -28,6 +27,7 @@ describe('flags', () => {
     FranceFlag,
   ]
 
+  // oxlint-disable-next-line vitest/require-hook
   flags.forEach(FlagComponent => {
     const flagName = FlagComponent.name
 
@@ -37,14 +37,13 @@ describe('flags', () => {
         expect(asFragment()).toMatchSnapshot()
       })
 
-      it(`renders ${flagName} with custom size`, () => {
-        const sizes: IconProps['size'][] = ['xsmall', 'small', 'medium', 'large', 'xlarge', 'xxlarge']
-
-        sizes.forEach(size => {
+      it.each(['xsmall', 'small', 'medium', 'large', 'xlarge', 'xxlarge'] as const)(
+        `renders ${flagName} with custom size %s`,
+        size => {
           const { asFragment } = render(<FlagComponent size={size} />)
           expect(asFragment()).toMatchSnapshot()
-        })
-      })
+        },
+      )
 
       it(`renders ${flagName} with disabled state`, () => {
         const { asFragment } = render(<FlagComponent disabled />)

@@ -147,7 +147,7 @@ export const ItemExpanded = ({
           subLabel={subLabel}
           type={type}
         />
-        {animation !== 'collapse' ? (
+        {animation === 'collapse' ? null : (
           <Stack alignItems="center" direction="row" gap={href ? 1 : undefined}>
             {badgeText || hasPinnedFeatureAndNoChildren ? (
               <>
@@ -170,7 +170,7 @@ export const ItemExpanded = ({
               <ArrowIcon className={navigationStyle.itemArrowIcon} prominence="weak" sentiment="neutral" />
             ) : null}
           </Stack>
-        ) : null}
+        )}
       </Stack>
       {children && expanded ? (
         <ItemChildren internalExpanded={internalExpanded} noExpand={noExpand} type={type}>

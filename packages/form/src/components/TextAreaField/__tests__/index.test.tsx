@@ -30,7 +30,7 @@ describe('textAreaField', () => {
     const textareaInput = screen.getByLabelText('Test')
     await userEvent.type(textareaInput, 'This is an example{Enter}')
     await waitFor(() => {
-      expect(onSubmit.mock.calls[0][0]).toEqual({
+      expect(onSubmit.mock.calls[0][0]).toStrictEqual({
         test: 'This is an example',
       })
     })
@@ -56,7 +56,7 @@ describe('textAreaField', () => {
     await userEvent.type(textareaInput, 'This is an example')
     await userEvent.click(screen.getByText('Submit'))
     await waitFor(() => {
-      expect(onSubmit.mock.calls[0][0]).toEqual({
+      expect(onSubmit.mock.calls[0][0]).toStrictEqual({
         test: 'This is an example',
       })
     })

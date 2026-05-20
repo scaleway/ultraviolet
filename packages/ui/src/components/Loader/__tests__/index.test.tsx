@@ -22,12 +22,11 @@ describe('loader', () => {
       </>,
     ))
 
-  SENTIMENTS.slice(0, 5).forEach(color => {
-    it(`renders with sentiment ${color}`, () => shouldMatchSnapshot(<Loader label="Loading test" sentiment={color} />))
-  })
+  it.each(SENTIMENTS.slice(0, 5))(`renders with sentiment %s`, sentiment =>
+    shouldMatchSnapshot(<Loader label="Loading test" sentiment={sentiment} />),
+  )
 
-  Object.keys(SIZES).forEach(size => {
-    it(`renders with size ${size}`, () =>
-      shouldMatchSnapshot(<Loader label="Loading test" size={size as ComponentProps<typeof Loader>['size']} />))
-  })
+  it.each(Object.keys(SIZES))(`renders with size %s`, size =>
+    shouldMatchSnapshot(<Loader label="Loading test" size={size as ComponentProps<typeof Loader>['size']} />),
+  )
 })

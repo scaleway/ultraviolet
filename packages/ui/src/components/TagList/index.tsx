@@ -318,7 +318,7 @@ export const TagList = ({
               }
             }}
             ref={popoverTriggerRef}
-            // oxlint-disable jsx_a11y/no-noninteractive-tabindex : to fix
+            // oxlint-disable-next-line jsx-a11y/no-noninteractive-tabindex
             tabIndex={0}
           >
             +{hiddenTags.length}

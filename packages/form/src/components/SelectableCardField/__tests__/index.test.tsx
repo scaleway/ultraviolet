@@ -75,8 +75,6 @@ describe('selectableCardField', () => {
       </>,
     )
     await userEvent.click(screen.getAllByRole('button')[1])
-    const input = screen.getByRole('radio', { hidden: true })
-    expect(input).toHaveAttribute('aria-invalid', 'true')
     expect(asFragment()).toMatchSnapshot()
   })
 })

@@ -34,7 +34,7 @@ describe('dateInputField', () => {
       expect(onChange).toHaveBeenCalledOnce()
     })
 
-    expect(resultForm.current.getValues('test')).toEqual(new Date('2022-09-15T00:00:00.000Z'))
+    expect(resultForm.current.getValues('test')).toStrictEqual(new Date('2022-09-15T00:00:00.000Z'))
 
     expect(asFragment()).toMatchSnapshot()
   }, 10_000)
@@ -60,7 +60,7 @@ describe('dateInputField', () => {
       expect(onChange).toHaveBeenCalledTimes(2)
     })
 
-    expect(resultForm.current.getValues('test')).toEqual([
+    expect(resultForm.current.getValues('test')).toStrictEqual([
       new Date('2022-09-15T00:00:00.000Z'),
       new Date('2022-09-18T00:00:00.000Z'),
     ])
@@ -87,7 +87,7 @@ describe('dateInputField', () => {
       expect(onChange).toHaveBeenCalledOnce()
     })
 
-    expect(resultForm.current.getValues('test')).toEqual(null)
+    expect(resultForm.current.getValues('test')).toBeNull()
 
     expect(asFragment()).toMatchSnapshot()
   }, 10_000)

@@ -18,18 +18,15 @@ describe('badge', () => {
 
   it('renders correctly when disabled', () => shouldMatchSnapshot(<Badge disabled>Sample badge</Badge>))
 
-  SENTIMENTS.forEach(sentiment => {
-    it(`renders correctly sentiment ${sentiment}`, () =>
-      shouldMatchSnapshot(<Badge sentiment={sentiment}>Sample badge</Badge>))
-  })
+  it.each(SENTIMENTS)(`renders correctly sentiment %s`, sentiment =>
+    shouldMatchSnapshot(<Badge sentiment={sentiment}>Sample badge</Badge>),
+  )
 
-  Object.keys(SIZES).forEach(size => {
-    it(`renders correctly size ${size}`, () =>
-      shouldMatchSnapshot(<Badge size={size as keyof typeof SIZES}>Sample badge</Badge>))
-  })
+  it.each(Object.keys(SIZES))(`renders correctly size %s`, size =>
+    shouldMatchSnapshot(<Badge size={size as keyof typeof SIZES}>Sample badge</Badge>),
+  )
 
-  Object.keys(PROMINENCES).forEach(prominence => {
-    it(`renders correctly prominence ${prominence}`, () =>
-      shouldMatchSnapshot(<Badge prominence={prominence as keyof typeof PROMINENCES}>Sample badge</Badge>))
-  })
+  it.each(Object.keys(PROMINENCES))(`renders correctly prominence %s`, prominence =>
+    shouldMatchSnapshot(<Badge prominence={prominence as keyof typeof PROMINENCES}>Sample badge</Badge>),
+  )
 })
