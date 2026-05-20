@@ -31,3 +31,5 @@ jobs:
           cache: 'pnpm'
       - name: Run changesets-renovate
         run: pnpm dlx @scaleway/changesets-renovate
+        env:
+          EXCLUDE_DEVDEPS: true
