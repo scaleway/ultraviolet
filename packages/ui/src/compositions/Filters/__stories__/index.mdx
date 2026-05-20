@@ -1,0 +1,422 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Compositions/Filters" />
+
+# Filters
+
+Filters allow you to filter offers based on various criteria. This document describes a proposed API to implement the filters.
+
+## Configuration
+
+### Built-in Filter Types
+
+1. **Text (`text`)**: Allows filtering by text with optional debouncing.
+2. **Select (`select`)**: Allows choosing an option from a list.
+3. **Multi-select (`multiSelect`)**: Allows choosing multiple options from a list.
+4. **Slider (`slider`)**: Allows defining a range of values (single or double).
+5. **Date Range (`dateRange`)**: Allows selecting a date range.
+
+### Custom Filter Types
+
+Any string can be used for a filter type, allowing to render custom filter components that will have to be provided.
+
+### Filter Configuration
+
+A configuration array is used to define all the filters to display.
+
+```typescript
+const filters: FilterConfig<FilterValues> = [
+  // Text filter with debouncing
+  {
+    type: 'text',
+    id: 'search',
+    label: 'Search',
+    debounceMs: 500,
+    placeholder: 'Type to search...',
+  },
+
+  // Select filter
+  {
+    type: 'select',
+    id: 'status',
+    label: 'Status',
+    options: [
+      { label: 'Active', value: 'active' },
+      { label: 'Inactive', value: 'inactive' },
+    ],
+  },
+
+  // Multi-select filter
+  {
+    type: 'multiSelect',
+    id: 'tags',
+    label: 'Tags',
+    options: [
+      { label: 'Production', value: 'prod' },
+      { label: 'Development', value: 'dev' },
+      { label: 'Staging', value: 'staging' },
+    ],
+    searchable: true,
+  },
+
+  // Slider filter (single value)
+  {
+    type: 'slider',
+    id: 'price',
+    label: 'Price',
+    min: 0,
+    max: 1000,
+    step: 10,
+  },
+
+  // Slider filter (range)
+  {
+    type: 'slider',
+    id: 'range',
+    label: 'Range',
+    min: 0,
+    max: 100,
+    double: true,
+  },
+
+  // Group of filters
+  {
+    type: 'group',
+    id: 'advanced',
+    label: 'Advanced',
+    expanded: true,
+    filters: [
+      {
+        id: 'gpu',
+        type: 'select',
+        label: 'GPU',
+        options: [...],
+      },
+    ],
+  },
+
+  // Custom filter type
+  {
+    id: 'zones',
+    type: 'zones',
+    label: 'Zones',
+    foo: 'bar'
+  },
+]
+```
+
+## Using the Filters Component
+
+The Filter component implements the filter UI pattern that displays a few filters (2-3), a button to open a Drawer containing all filters, and a clear button.
+
+### Basic Usage
+
+```typescript
+import { Filters, type FilterConfig } from '@ultraviolet/form'
+
+// default values when no filter is applied
+const defaultValues: FilterValues = {
+  name: '',
+  regions: [],
+  ram: [1, 64],
+  gpu: 'none',
+}
+
+// initial values applied on the first mount
+const initialValues: FilterValues = {
+  ram: [16, 32],
+}
+
+const config: FilterConfig<FilterValues> = [
+  ...
+]
+
+function MyPage() {
+  return (
+    <Filters
+      config={config}
+      defaultValues={defaultValues}
+      initialValues={initialValues}
+      onChange={(values) => {
+        // Called on every user interaction with a filter
+        updatePreview(values)
+      }}
+      onSubmit={(values) => {
+        // Called when filters are committed (button "see results" or update in the main row)
+        refetch({ filters: values })
+      }}
+      onDrawerOpen={() => {
+        trackEvent('filters_opened') // Example analytics call
+      }}
+      labels={{
+        seeAll: 'All Filters',
+        clearAll: 'Clear All',
+        submit: 'See Results',
+        clear: 'Clear',
+        drawerHeader: 'Filters',
+      }}
+    />
+  )
+}
+```
+
+### Layout Configuration
+
+- `mainFilters`: control which filters appear in the main row. If not specified, the first 3 non-group filters are shown in the main row
+- `templateColumns`: layout of the main filters row (can be responsive)
+
+```typescript
+<Filters
+  config={config}
+  layout={{
+    mainFilters: ['search', 'status'],
+    templateColumns: '2fr 1fr auto'
+  }}
+  // ... other props
+/>
+```
+
+### Custom Field Components
+
+Custom filter types can be provided in the configuration array to extend the builtin types. For each custom type, a component must be provided to render the corresponding field.
+
+```typescript
+import { Filters, type FilterConfig } from '@ultraviolet/form'
+
+const config: FilterConfig<FilterValues> = [
+  ...
+  // Custom filter type
+  {
+    id: 'zones',
+    type: 'zones',
+    label: 'Zones',
+    customProp: 'foo'
+  },
+]
+
+function MyPage() {
+  return (
+    <Filters
+      config={config}
+      components={{
+        zones: MyZonesFilter,
+      }}
+      // ... other props
+    />
+  )
+}
+
+// Custom component definition
+function MyZonesFilter({ value, onChange, label, disabled, customProp }) {
+  return (
+    <div>
+      <label>{label}</label>
+      <ZoneSelector
+        selectedZones={value}
+        onChange={onChange}
+        disabled={disabled}
+        customProp={customProp}
+      />
+    </div>
+  )
+}
+```
+
+### Main Filters vs Drawer Filters
+
+**Main Filters (auto-commit):**
+
+```typescript
+// main filters auto-submit when they are modified
+const handleMainFilterChange = (key, value) => {
+  setValue(key, value) // Updates values, triggers onChange
+  submit() // Commits, triggers onSubmit
+}
+```
+
+**Drawer Filters (manual commit):**
+
+```typescript
+// drawer filters require explicit commit
+const handleDrawerFilterChange = (key, value) => {
+  setValue(key, value) // Updates values, triggers onChange
+  // No submit yet - user must click "See Results"
+}
+
+const handleSeeResults = () => {
+  submit() // Commits all changes, triggers onSubmit
+}
+
+const handleDrawerClose = () => {
+  discard() // Reverts to last submitted values
+}
+```
+
+## Implementation ideas
+
+### UI agnostic hook
+
+The Filters component uses a `useFilters` hook which handles all the filters logic without any relation to the UI.
+
+```typescript
+import { useFilters } from '@ultraviolet/form'
+
+function MyCustomFilterUI() {
+  const {
+    values,
+    defaultValues,
+    dirtyFields,
+    setValue,
+    setValues,
+    resetField,
+    reset,
+    submit,
+    discard,
+  } = useFilters({
+    config,
+    defaultValues,
+    initialValues,
+    onChange: (values, changedField) => {
+      console.log('Filter changed:', changedField, values)
+    },
+    onSubmit: (values) => {
+      console.log('Filters submitted:', values)
+    },
+  })
+
+  return (
+    <div>
+      {/* Search input */}
+      <input
+        type="text"
+        value={values.search}
+        onChange={(e) => setValue('search', e.target.value)}
+        placeholder="Search..."
+      />
+
+      {/* Status select */}
+      <select
+        value={values.status}
+        onChange={(e) => setValue('status', e.target.value)}
+      >
+        <option value="">All</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>
+
+      {/* Price slider */}
+      <input
+        type="range"
+        min={0}
+        max={1000}
+        value={values.price}
+        onChange={(e) => setValue('price', Number(e.target.value))}
+      />
+
+      {/* Actions */}
+      <button onClick={() => reset()}>Reset All</button>
+      <button onClick={() => resetField('status')}>Reset Status</button>
+      <button onClick={() => submit()}>Apply Filters</button>
+
+      {/* Dirty fields indicator */}
+      {dirtyFields.length > 0 && (
+        <span>Changed: {dirtyFields.join(', ')}</span>
+      )}
+    </div>
+  )
+}
+```
+
+#### API Reference
+
+```typescript
+interface UseFiltersOptions<T> {
+  config: FilterConfig<T>[]
+  initialValues?: Partial<T>
+  defaultValues?: Partial<T>
+  onChange?: (liveValues: T, changedField?: keyof T) => void
+  onSubmit?: (values: T) => void
+}
+
+interface UseFiltersReturn<T> {
+  // Current values
+  values: T
+  defaultValues: T
+  dirtyFields: (keyof T)[]
+
+  // Actions
+  setValue: <K extends keyof T>(key: K, value: T[K]) => void
+  setValues: (values: Partial<T>) => void
+  resetField: <K extends keyof T>(key: K) => void
+  reset: () => void
+  submit: () => void
+  discard: () => void
+}
+```
+
+### State Management
+
+#### Values Lifecycle
+
+```
+defaultValues (defined in config)
+      ↓
+initialValues (defined in config)
+      ↓
+values (current UI state)
+      ↓
+lastSubmittedValues (last committed state - internal)
+```
+
+The `values` store the current state of the fields in the UI. When the user interacts with a field, it updates the `values` and triggers `onChange` if provided. When the user submits the form (clicks on 'see results'), `onSubmit` is triggered and the `values` are copied to `lastSubmittedValues` (internal state).
+
+The UI can be restored to the last submitted state by calling the `discard` function, when closing the Drawer without validating for instance. Then the `values` are reset to the `lastSubmittedValues` and the `onChange` function is called.
+
+### Actions Behavior
+
+| Action       | Updates                           | Triggers `onChange` | Triggers `onSubmit` |
+| ------------ | --------------------------------- | ------------------- | ------------------- |
+| `setValue`   | values                            | ✅                  | ❌                  |
+| `setValues`  | values                            | ✅                  | ❌                  |
+| `resetField` | values                            | ✅                  | ❌                  |
+| `reset`      | values                            | ✅                  | ❌                  |
+| `submit`     | lastSubmittedValues               | ❌                  | ✅                  |
+| `discard`    | values (from lastSubmittedValues) | ✅                  | ❌                  |
+
+## Possible evolutions
+
+The Filters component could allow to override some parts of the UI, or some field components.
+
+These features could be added later without breaking the current public API.
+
+### Override UI
+
+The `Filters` component could expose subcomponents like `FiltersMainSection`, `FilterDrawer`, `FilterClearButton` etc to allow more control over the UI. This would probably require to add a React context to share the state between the components.
+
+### Override field components
+
+By default a field is rendered with a component associated with its type (builtin component or provided by the `components` prop).
+
+A prop `renderField` could be added to allow overriding a single field component:
+
+```ts
+<Filters
+  renderField={(field) => {
+    if (field.type === 'zone' && field.id === 'zone-1') {
+      return <CustomZoneField />
+    }
+  }}
+/>
+```
+
+## Summary
+
+- **`Filters`**: Main component with default UI
+- **`useFilters`**: Headless hook for custom UI
+- **`config`**: Array of filter definitions
+- **`components`**: Prop for custom filter types (zones, regions, etc.)
+- **`onChange`**: Called on every user interaction
+- **`onSubmit`**: Called when filters are committed
+- **`submit`**: Commits current values, triggers `onSubmit`
+- **`discard`**: Reverts to last submitted values
+- **`reset`**: Reverts to `defaultValues`
