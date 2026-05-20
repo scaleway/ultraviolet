@@ -236,8 +236,8 @@ export const DoubleSlider = ({
   const [leftToShow, rightToShow] =
     options && !defaultScale ? [options[selectedIndexes[0]].value, options[selectedIndexes[1]].value] : selectedIndexes
 
-  const leftSliderProgress = ((selectedIndexes[0] ?? 0 - min) * 100) / (max - min)
-  const rightSliderProgress = ((selectedIndexes[1] ?? 0 - min) * 100) / (max - min)
+  const leftSliderProgress = (((selectedIndexes[0] ?? 0) - min) * 100) / (max - min)
+  const rightSliderProgress = (((selectedIndexes[1] ?? 0) - min) * 100) / (max - min)
 
   // Make the component controllable
   useEffect(() => {
