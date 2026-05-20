@@ -8,12 +8,8 @@ export const consoleMapThemes = new Map<ThemeName, typeof consoleLightTheme>([
   ['consoleLightTheme', consoleLightTheme],
   ['consoleDarkTheme', consoleDarkTheme],
   ['consoleDarkerTheme', consoleDarkerTheme],
-] as const)
+])
 
-export const consoleThemes: (typeof consoleLightTheme)[] = [
-  consoleLightTheme,
-  consoleDarkTheme,
-  consoleDarkerTheme,
-] as const
+export const consoleThemes: (typeof consoleLightTheme)[] = [consoleLightTheme, consoleDarkTheme, consoleDarkerTheme]
 
 export { consoleDarkTheme, consoleDarkerTheme, consoleLightTheme }
