@@ -1,9 +1,8 @@
-import { renderHook, screen, waitFor } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithForm, renderWithTheme } from '@utils/test'
-import { useForm } from 'react-hook-form'
+import { renderWithForm } from '@utils/test'
 import { describe, expect, vi, it } from 'vitest'
-import { Form, Submit, TagInputField } from '../..'
+import { Submit, TagInputField } from '../..'
 import { mockErrors } from '../../../mocks'
 
 const alpha = /^[a-zA-Z]*$/u
@@ -27,13 +26,14 @@ describe('tagInputField', () => {
 
   it('should works with defaultValues', async () => {
     const onSubmit = vi.fn()
-    const { result } = renderHook(() => useForm<{ test: string[] }>({ defaultValues: { test: ['First'] } }))
 
-    const { asFragment } = renderWithTheme(
-      <Form errors={mockErrors} methods={result.current} onSubmit={onSubmit}>
+    const { asFragment } = renderWithForm(
+      <>
         <TagInputField clearable label="Test" name="test" required />
         <Submit>Submit</Submit>
-      </Form>,
+      </>,
+      { defaultValues: { test: ['First'] } },
+      { errors: mockErrors, onSubmit },
     )
 
     await userEvent.click(screen.getByText('Submit'))

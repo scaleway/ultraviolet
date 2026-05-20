@@ -1,11 +1,9 @@
-import { renderHook, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithForm, renderWithTheme } from '@utils/test'
-import { useForm } from 'react-hook-form'
+import { renderWithForm } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Submit, UnitInputField } from '../..'
 import { mockErrors } from '../../../mocks'
-import { Form } from '../../Form'
 
 const optionsSelect = [
   {
@@ -33,23 +31,9 @@ describe('unitInputField', () => {
 
   it('should handles onChange and selection', async () => {
     const onSubmit = vi.fn()
-    const { result } = renderHook(() =>
-      useForm<{ test: number | null }>({
-        defaultValues: {
-          test: 10,
-        },
-        mode: 'onChange',
-      }),
-    )
 
-    const { asFragment } = renderWithTheme(
-      <Form
-        errors={mockErrors}
-        methods={result.current}
-        onSubmit={value => {
-          onSubmit(value)
-        }}
-      >
+    const { asFragment } = renderWithForm(
+      <>
         <UnitInputField
           label="Test"
           name="test"
@@ -59,7 +43,19 @@ describe('unitInputField', () => {
           required
         />
         <Submit>Submit</Submit>
-      </Form>,
+      </>,
+      {
+        defaultValues: {
+          test: 10,
+        },
+        mode: 'onChange',
+      },
+      {
+        errors: mockErrors,
+        onSubmit: value => {
+          onSubmit(value)
+        },
+      },
     )
 
     const selectBar = screen.getByTestId('select-input-test-unit')

@@ -1,10 +1,8 @@
-import { act, renderHook, screen } from '@testing-library/react'
+import { act, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
-import { useForm } from 'react-hook-form'
+import { mockFormErrors, renderWithForm } from '@utils/test'
 import { describe, expect, vi, it } from 'vitest'
 import { CheckboxField } from '../..'
-import { Form } from '../../Form'
 
 describe('checkboxField', () => {
   it('should render correctly', () => {
@@ -70,14 +68,15 @@ describe('checkboxField', () => {
   })
 
   it('should render correctly with errors', async () => {
-    const { result } = renderHook(() => useForm({ mode: 'onChange' }))
-    const { asFragment } = renderWithTheme(
-      <Form errors={mockFormErrors} methods={result.current} onSubmit={() => {}}>
+    const { asFragment } = renderWithForm(
+      <>
         <CheckboxField name="test" required errorLabel="errorLabel">
           Checkbox field error
         </CheckboxField>
         <div>Focus</div>
-      </Form>,
+      </>,
+      { mode: 'onChange' },
+      { errors: mockFormErrors },
     )
 
     await userEvent.click(screen.getByRole('checkbox', { hidden: true }))

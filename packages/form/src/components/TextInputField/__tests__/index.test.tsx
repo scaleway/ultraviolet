@@ -1,11 +1,9 @@
-import { renderHook, screen, waitFor } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
-import { useForm } from 'react-hook-form'
+import { mockFormErrors, renderWithForm } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { TextInputField } from '..'
 import { Submit } from '../..'
-import { Form } from '../../Form'
 
 describe('textInputField', () => {
   it('should render correctly', () => {
@@ -15,13 +13,14 @@ describe('textInputField', () => {
 
   it('should render correctly generated', async () => {
     const onSubmit = vi.fn()
-    const { result } = renderHook(() => useForm<{ test: string | null }>({ defaultValues: { test: null } }))
 
-    const { asFragment } = renderWithTheme(
-      <Form errors={mockFormErrors} methods={result.current} onSubmit={onSubmit}>
+    const { asFragment } = renderWithForm(
+      <>
         <TextInputField clearable label="Test" name="test" required />
         <Submit>Submit</Submit>
-      </Form>,
+      </>,
+      { defaultValues: { test: null } },
+      { errors: mockFormErrors, onSubmit },
     )
 
     await userEvent.click(screen.getByText('Submit'))
