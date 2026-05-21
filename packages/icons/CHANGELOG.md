@@ -1,5 +1,17 @@
 # Change Log
 
+## 5.3.4
+
+### Patch Changes
+
+- [#6453](https://github.com/scaleway/ultraviolet/pull/6453) [`837450a`](https://github.com/scaleway/ultraviolet/commit/837450aaf083b2e03b07c50098c1ce752f909474) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.13`.
+
+- [#6430](https://github.com/scaleway/ultraviolet/pull/6430) [`511c90e`](https://github.com/scaleway/ultraviolet/commit/511c90e9bbaf366f6859133fe9457e348f2f522c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.12`.
+
+- Updated dependencies [[`837450a`](https://github.com/scaleway/ultraviolet/commit/837450aaf083b2e03b07c50098c1ce752f909474), [`511c90e`](https://github.com/scaleway/ultraviolet/commit/511c90e9bbaf366f6859133fe9457e348f2f522c), [`9bf2366`](https://github.com/scaleway/ultraviolet/commit/9bf2366c947b97e30e1de0ca9d0becfb279e3b2a)]:
+  - @ultraviolet/themes@3.1.7
+  - @ultraviolet/utils@1.0.12
+
 ## 5.3.3
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @ultraviolet/utils
 
+## 1.0.12
+
+### Patch Changes
+
+- [#6453](https://github.com/scaleway/ultraviolet/pull/6453) [`837450a`](https://github.com/scaleway/ultraviolet/commit/837450aaf083b2e03b07c50098c1ce752f909474) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.13`.
+
+- [#6430](https://github.com/scaleway/ultraviolet/pull/6430) [`511c90e`](https://github.com/scaleway/ultraviolet/commit/511c90e9bbaf366f6859133fe9457e348f2f522c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.12`.
+
+- [#6459](https://github.com/scaleway/ultraviolet/pull/6459) [`9bf2366`](https://github.com/scaleway/ultraviolet/commit/9bf2366c947b97e30e1de0ca9d0becfb279e3b2a) Thanks [@chambo-e](https://github.com/chambo-e)! - migrate to @scaleway/use-clipboard
+
 ## 1.0.11
 
 ### Patch Changes
