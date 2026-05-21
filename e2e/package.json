@@ -10,22 +10,20 @@
     "preview": "vite preview",
     "start": "vite"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@playwright/test": "1.59.1",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
     "@ultraviolet/fonts": "workspace:*",
     "@ultraviolet/form": "workspace:*",
     "@ultraviolet/icons": "workspace:*",
     "@ultraviolet/themes": "workspace:*",
     "@ultraviolet/ui": "workspace:*",
-    "react": "19.2.6",
-    "react-dom": "19.2.6",
-    "react-router-dom": "7.15.1"
-  },
-  "devDependencies": {
-    "@playwright/test": "1.59.1",
-    "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.1",
     "globals": "17.6.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-router-dom": "7.15.1",
     "typescript": "6.0.3",
     "vite": "8.0.13"
   }
