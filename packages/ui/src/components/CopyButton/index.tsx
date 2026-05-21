@@ -1,8 +1,8 @@
 'use client'
 
+import { useClipboard } from '@scaleway/use-clipboard'
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { CopyContentIcon } from '@ultraviolet/icons/CopyContentIcon'
-import { useClipboard } from '@ultraviolet/utils'
 import type { CSSProperties } from 'react'
 import { Button } from '../Button'
 
