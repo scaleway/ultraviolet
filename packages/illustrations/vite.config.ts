@@ -19,6 +19,8 @@ const input = Object.fromEntries(
   ]),
 )
 
+console.log(input)
+
 export const config = mergeConfig(defineConfig(defaultConfig), {
   build: {
     rolldownOptions: {

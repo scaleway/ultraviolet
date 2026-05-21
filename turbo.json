@@ -32,6 +32,21 @@
         "storybook-static/**"
       ]
     },
+    "tsdown": {
+      "cache": true,
+      "dependsOn": ["^tsdown"],
+      "inputs": ["$TURBO_DEFAULT$", "!**/*.stories.{tsx,jsx}", "vite.config.ts"],
+      "outputLogs": "new-only",
+      "outputs": [
+        ".generated/**",
+        "build/**",
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**",
+        "out/**",
+        "storybook-static/**"
+      ]
+    },
     "e2e": {
       "dependsOn": ["build"]
     },

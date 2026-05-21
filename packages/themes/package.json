@@ -22,27 +22,16 @@
     "**/*.css",
     "**/*.css.ts"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
-    },
-    "./*.css": "./dist/style/*.css",
-    "./console/*": {
-      "types": "./dist/themes/console/*/index.d.ts",
-      "import": "./dist/themes/console/*/index.js",
-      "require": "./dist/themes/console/*/index.js"
-    },
-    "./global": "./dist/themes.css",
-    "./theme.css": "./dist/themes.css"
+    ".": "./dist/index.js",
+    "./package.json": "./package.json",
+    "./global.css": "./dist/global.css"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "tsdown": "tsdown",
     "build": "vite build  && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "lintpublish": "pnpm publint",

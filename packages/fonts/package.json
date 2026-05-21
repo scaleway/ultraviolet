@@ -19,23 +19,15 @@
   ],
   "type": "module",
   "exports": {
-    ".": {
-      "style": "./dist/fonts.css",
-      "require": "./dist/fonts.css",
-      "import": "./dist/fonts.css",
-      "default": "./dist/fonts.css"
-    },
-    "./fonts.css": {
-      "style": "./dist/fonts.css",
-      "require": "./dist/fonts.css",
-      "import": "./dist/fonts.css",
-      "default": "./dist/fonts.css"
-    }
+    ".": "./dist/fonts.css",
+    "./package.json": "./package.json",
+    "./fonts.css": "./dist/fonts.css"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "tsdown": "tsdown",
     "build": "vite build ",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "lintpublish": "pnpm publint",

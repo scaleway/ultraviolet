@@ -5,11 +5,13 @@
   "files": [
     "tsconfig/"
   ],
+  "type": "module",
   "dependencies": {
     "vite": "8.0.12"
   },
   "export": {
     "./tsconfig/*": "./tsconfig/*.json",
-    "./vite/*": "./vite/*.config.ts"
+    "./vite/*": "./vite/*.config.ts",
+    "./tsdown/*": "./tsdown/*.config.ts"
   }
 }

@@ -26,40 +26,20 @@
     "**/*.css",
     "**/*.css.ts"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "default": "./dist/index.js"
-    },
-    "./styles": "./dist/ui.css",
-    "./compositions/*": {
-      "types": "./dist/compositions/*/index.d.ts",
-      "import": "./dist/compositions/*/index.js",
-      "require": "./dist/compositions/*/index.js",
-      "default": "./dist/compositions/*/index.js"
-    },
-    "./compositions": {
-      "types": "./dist/compositions/index.d.ts",
-      "import": "./dist/compositions/index.js",
-      "require": "./dist/compositions/index.js",
-      "default": "./dist/compositions/index.js"
-    },
-    "./compositions/styles": {
-      "types": "./dist/compositions/styles.d.ts",
-      "import": "./dist/compositions/styles.js",
-      "require": "./dist/compositions/styles.js",
-      "default": "./dist/compositions/styles.js"
-    }
+    ".": "./dist/index.js",
+    "./composition": "./dist/composition.js",
+    "./compositions/EstimateCost": "./dist/compositions/EstimateCost/index.js",
+    "./compositions/Navigation": "./dist/compositions/Navigation/index.js",
+    "./package.json": "./package.json",
+    "./ui.css": "./dist/ui.css"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "tsdown": "tsdown",
     "build": "vite build  && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "lintpublish": "publint",
@@ -95,6 +75,7 @@
     "@vanilla-extract/sprinkles": "1.6.5",
     "codemirror": "6.0.2",
     "csstype": "3.2.3",
+    "date-fns": "4.1.0",
     "deepmerge": "4.3.1",
     "react-intersection-observer": "10.0.3",
     "react-toastify": "11.1.0"
