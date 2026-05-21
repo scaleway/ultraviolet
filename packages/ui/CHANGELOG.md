@@ -1,5 +1,31 @@
 # Change Log
 
+## 3.16.0
+
+### Minor Changes
+
+- [#6429](https://github.com/scaleway/ultraviolet/pull/6429) [`3872694`](https://github.com/scaleway/ultraviolet/commit/3872694ac2d06ba440f294744f2f4d457160e329) Thanks [@jsulpis](https://github.com/jsulpis)! - Pie Chart: add a header to the legend to display the unit
+
+### Patch Changes
+
+- [#6458](https://github.com/scaleway/ultraviolet/pull/6458) [`eaeb7c0`](https://github.com/scaleway/ultraviolet/commit/eaeb7c02c1fac6a56cc29ceeb92391afea24c221) Thanks [@jsulpis](https://github.com/jsulpis)! - `Radio`: fix styles
+
+- [#6447](https://github.com/scaleway/ultraviolet/pull/6447) [`a0a81ba`](https://github.com/scaleway/ultraviolet/commit/a0a81ba8b6a45b31922a898ffdc4d00cff679332) Thanks [@jsulpis](https://github.com/jsulpis)! - `Slider` fix thumbs positioning on a double Slider with min/max
+
+- [#6453](https://github.com/scaleway/ultraviolet/pull/6453) [`837450a`](https://github.com/scaleway/ultraviolet/commit/837450aaf083b2e03b07c50098c1ce752f909474) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.13`.
+
+- [#6430](https://github.com/scaleway/ultraviolet/pull/6430) [`511c90e`](https://github.com/scaleway/ultraviolet/commit/511c90e9bbaf366f6859133fe9457e348f2f522c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `vite` to `8.0.12`.
+
+- [#6438](https://github.com/scaleway/ultraviolet/pull/6438) [`c36d10f`](https://github.com/scaleway/ultraviolet/commit/c36d10fe94555cd312955a2424051347991b8007) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/node` to `24.12.4`.
+
+- [#6459](https://github.com/scaleway/ultraviolet/pull/6459) [`9bf2366`](https://github.com/scaleway/ultraviolet/commit/9bf2366c947b97e30e1de0ca9d0becfb279e3b2a) Thanks [@chambo-e](https://github.com/chambo-e)! - migrate to @scaleway/use-clipboard
+
+- Updated dependencies [[`837450a`](https://github.com/scaleway/ultraviolet/commit/837450aaf083b2e03b07c50098c1ce752f909474), [`511c90e`](https://github.com/scaleway/ultraviolet/commit/511c90e9bbaf366f6859133fe9457e348f2f522c), [`9bf2366`](https://github.com/scaleway/ultraviolet/commit/9bf2366c947b97e30e1de0ca9d0becfb279e3b2a)]:
+  - @ultraviolet/animations@1.0.1
+  - @ultraviolet/icons@5.3.4
+  - @ultraviolet/themes@3.1.7
+  - @ultraviolet/utils@1.0.12
+
 ## 3.15.1
 
 ### Patch Changes
