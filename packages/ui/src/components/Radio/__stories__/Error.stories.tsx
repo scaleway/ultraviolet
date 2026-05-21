@@ -12,15 +12,16 @@ export const Error: StoryFn = args => {
         checked={value === 'error-label-1'}
         error="invalid"
         label="Label 1"
-        name="error-label-1"
+        name="error-label"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.currentTarget.value)}
         value="error-label-1"
       />
       <Radio
         {...args}
         checked={value === 'error-label-2'}
+        error="invalid"
         label="Label 1"
-        name="error-label-2"
+        name="error-label"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.currentTarget.value)}
         value="error-label-2"
       />

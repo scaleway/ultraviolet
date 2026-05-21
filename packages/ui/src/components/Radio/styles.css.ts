@@ -107,36 +107,37 @@ const ring = style({
   height: theme.sizing['300'],
   minHeight: theme.sizing['300'],
   minWidth: theme.sizing['300'],
+  transition: 'fill 100ms',
   selectors: {
-    [`${container} ${radio}:checked[aria-disabled='false'][aria-invalid='false'] + &`]: {
+    [`${container}[data-invalid='false'] ${radio}:checked + &`]: {
       fill: theme.colors.primary.backgroundStrong,
     },
-    [`${container} ${radio}:checked[aria-disabled='true'][aria-invalid='false'] + &`]: {
+    [`${container} ${radio}:checked:disabled + &`]: {
       fill: theme.colors.primary.borderDisabled,
     },
-    [`${container} ${radio}[aria-invalid='true']:not([aria-disabled='true']) + &`]: {
-      fill: theme.colors.danger.backgroundStrong,
+    [`${container}[data-invalid='true'] &`]: {
+      fill: theme.colors.danger.borderStrong,
     },
-    [`${container} ${radio}[aria-disabled='false']:active + &`]: {
-      backgroundColor: '#5e127e40',
+    [`${container}[data-invalid='true'] ${radio}:disabled + &`]: {
+      fill: theme.colors.danger.backgroundStrongDisabled,
+    },
+    [`${container}[data-invalid='false'] ${radio}:not(:disabled):active + &`]: {
+      backgroundColor: theme.colors.primary.backgroundHover,
       fill: theme.colors.primary.backgroundStrong,
     },
-    [`${container} ${radio}[aria-disabled='false']:focus-visible + &`]: {
+    [`${container} ${radio}:not(:disabled):focus-visible + &`]: {
       outline: '-webkit-focus-ring-color auto 1px',
     },
-    [`${container} ${radio}[aria-invalid='true']:focus + &`]: {
-      backgroundColor: '#f91b6c40',
+    [`${container}[data-invalid='true'] ${radio}:not(:disabled):active + &`]: {
+      backgroundColor: theme.colors.danger.backgroundHover,
       fill: theme.colors.danger.backgroundStrong,
     },
-    [`${container}:hover[aria-disabled='false'] &`]: {
+    [`${container}[data-invalid='false']:hover ${radio}:not(:disabled) + &`]: {
       fill: theme.colors.primary.border,
     },
-    [`${container}[aria-disabled='true'] &`]: {
+    [`${container}:disabled &`]: {
       cursor: 'not-allowed',
       fill: theme.colors.neutral.borderDisabled,
-    },
-    [`${container} ${radio}[aria-invalid='true'] + &`]: {
-      fill: theme.colors.danger.border,
     },
   },
   width: theme.sizing['300'],
@@ -144,10 +145,10 @@ const ring = style({
 
 const mark = style({
   selectors: {
-    [`${container} ${radio} + ${ring} &`]: {
+    [`${radio} + ${ring} &`]: {
       transform: 'scale(0)',
     },
-    [`${container} ${radio}:checked + ${ring} &`]: {
+    [`${radio}:checked + ${ring} &`]: {
       transform: 'scale(1)',
     },
   },
@@ -156,21 +157,25 @@ const mark = style({
 })
 
 const innerCircleRing = style({
+  transition: 'fill 100ms',
   selectors: {
-    [`${container}:hover[aria-disabled='false'] ${ring} &`]: {
+    [`${container}:hover &`]: {
       fill: theme.colors.primary.backgroundHover,
     },
-    [`${container}[aria-disabled='true'] ${ring} &`]: {
+    [`${radio}:disabled + ${ring} &`]: {
       fill: theme.colors.neutral.backgroundDisabled,
     },
-    [`${container}:hover ${radio}[aria-invalid='true'] + ${ring} &`]: {
+    [`${container}[data-invalid='true'] &`]: {
+      fill: theme.colors.danger.background,
+    },
+    [`${container}[data-invalid='true']:hover &`]: {
       fill: theme.colors.danger.backgroundHover,
+    },
+    [`${container}[data-invalid='true'] ${radio}:disabled + ${ring} &`]: {
+      fill: theme.colors.danger.backgroundDisabled,
     },
     [`${ring} &`]: {
       fill: theme.colors.neutral.background,
-    },
-    [`${container}[aria-disabled='true'] ${ring} &`]: {
-      fill: theme.colors.neutral.backgroundDisabled,
     },
   },
 })

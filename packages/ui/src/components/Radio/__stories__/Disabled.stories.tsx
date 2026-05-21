@@ -1,32 +1,22 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { useState } from 'react'
 import { Radio } from '..'
 
-export const Disabled: StoryFn = args => {
-  const [value, onChange] = useState('disabled-label-2')
-
-  return (
-    <>
-      <Radio
-        {...args}
-        checked={value === 'disabled-label-1'}
-        disabled
-        label="Label 1"
-        name="disabled-label-1"
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.currentTarget.value)}
-        value="disabled-label-1"
-      />
-      <Radio
-        {...args}
-        checked={value === 'disabled-label-2'}
-        label="Label 2"
-        name="disabled-label-2"
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.currentTarget.value)}
-        value="disabled-label-2"
-      />
-    </>
-  )
-}
+export const Disabled: StoryFn = args => (
+  <>
+    <Radio value="1" label="Radio disabled" {...args} disabled onChange={() => {}} />
+    <Radio value="2" label="Radio disabled and in error" {...args} disabled error onChange={() => {}} />
+    <Radio value="3" label="Radio checked and disabled" {...args} checked disabled onChange={() => {}} />
+    <Radio
+      value="4"
+      label="Radio checked, disabled and in error"
+      {...args}
+      checked
+      disabled
+      error
+      onChange={() => {}}
+    />
+  </>
+)
 
 Disabled.parameters = {
   docs: {
