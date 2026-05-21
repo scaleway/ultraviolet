@@ -14,17 +14,6 @@ export const defaultConfig: UserConfigExport = {
     },
     outDir: 'build',
     reportCompressedSize: true,
-
-    // rolldownOptions: {
-    //   experimental: {
-    //     chunkOptimization: true,
-    //   },
-    //   output: {
-    //     strictExecutionOrder: true,
-    //   },
-    //   platform: 'browser',
-    //   preserveEntrySignatures: false,
-    // },
   },
   optimizeDeps: {
     exclude: ['@ultraviolet/*'],

@@ -44,6 +44,10 @@ type ExtraProps = {
     'pointer-touch': boolean
     'specific-patterns': boolean
   }
+  /**
+   * Auto-injected accessibility documentation from a11y.md file
+   */
+  a11yDocs?: string
 }
 
 type DocsContainerProps = BaseContainerProps & {
@@ -98,6 +102,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
                   experimental: isPlusLibrary ? true : parameters?.experimental,
                   hideArgsTable: parameters?.hideArgsTable,
                   migrationLink: parameters?.migrationLink,
+                  a11yDocs: parameters?.a11yDocs,
                 })
               : children}
           </BaseContainer>
