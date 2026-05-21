@@ -20,6 +20,7 @@ type PieChartProps = {
   height?: number
   width?: number
   emptyLegend?: string
+  legendHeader?: string
   content?: ReactNode
   withLegend?: boolean
   margin?: Box
@@ -39,6 +40,7 @@ export const PieChart = ({
   width = 206,
   data = undefined,
   emptyLegend,
+  legendHeader,
   content,
   withLegend = false,
   margin = DEFAULT_MARGIN,
@@ -50,30 +52,8 @@ export const PieChart = ({
   const emptyTooltip = useCallback(() => <span />, [])
   const isEmpty = !data || data.length === 0
 
-  const EmptyLegendDisplayed = useCallback(
-    () =>
-      emptyLegend ? (
-        <div className={pieChartStyle.emptyLegend}>
-          <Text as="p" variant="body">
-            {emptyLegend}
-          </Text>
-        </div>
-      ) : null,
-    [emptyLegend],
-  )
-
   // oxlint-disable-next-line typescript/no-unsafe-type-assertion
   const localColors = getLegendColor(theme as typeof UVTheme)
-
-  const LegendDisplayer = useCallback(
-    () =>
-      isEmpty ? (
-        <EmptyLegendDisplayed />
-      ) : (
-        <Legends colors={localColors} data={data} focused={currentFocusIndex} onFocusChange={setCurrentFocusIndex} />
-      ),
-    [isEmpty, currentFocusIndex, data, EmptyLegendDisplayed, localColors],
-  )
 
   return (
     <div
@@ -85,7 +65,7 @@ export const PieChart = ({
         ...style,
       }}
     >
-      <div style={{ position: 'relative' }}>
+      <div className={pieChartStyle.pieContainer}>
         <Pie
           activeOuterRadiusOffset={isEmpty ? 0 : 4}
           colors={localColors}
@@ -133,7 +113,22 @@ export const PieChart = ({
         />
         {content ? <div className={pieChartStyle.content}>{content}</div> : null}
       </div>
-      {withLegend ? <LegendDisplayer /> : null}
+
+      {withLegend && !isEmpty ? (
+        <Legends
+          colors={localColors}
+          data={data}
+          legendHeader={legendHeader}
+          focused={currentFocusIndex}
+          onFocusChange={setCurrentFocusIndex}
+        />
+      ) : null}
+
+      {withLegend && isEmpty && emptyLegend ? (
+        <Text as="p" variant="body" className={pieChartStyle.emptyLegend}>
+          {emptyLegend}
+        </Text>
+      ) : null}
     </div>
   )
 }

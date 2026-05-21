@@ -1,32 +1,30 @@
 import { theme } from '@ultraviolet/themes'
-import { createVar, keyframes, style, styleVariants } from '@vanilla-extract/css'
+import { createVar, globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+import { flash } from '../../utils'
 
 export const heightContainerPie = createVar()
 export const colorBullet = createVar()
 
-const bulletFlashAnimation = keyframes({
-  '0%': {
-    opacity: 1,
-  },
-  '50%': {
-    opacity: 0.1,
-  },
-  '100%': {
-    opacity: 1,
-  },
+const container = style({
+  alignItems: 'start',
+  display: 'flex',
+  gap: `${85 - 12}px`, // compensate for the space inside the Pie component
+  height: heightContainerPie,
+  padding: `0 ${theme.space[1.5]}`,
 })
 
-const container = style({
-  alignItems: 'center',
+const pieContainer = style({
+  position: 'relative',
+})
+
+// patch the div container in the Pie component which has a wrong height
+globalStyle(`${pieContainer} > div:first-child`, {
   display: 'flex',
-  height: heightContainerPie,
 })
 
 const emptyLegend = style({
-  alignItems: 'center',
-  display: 'flex',
-  marginLeft: theme.space[5],
+  alignSelf: 'center',
 })
 
 const content = style({
@@ -46,45 +44,57 @@ const list = style({
   display: 'flex',
   flex: '1',
   flexDirection: 'column',
+  gap: theme.space[1],
   fontSize: theme.typography.bodySmall.fontSize,
   listStyleType: 'none',
   maxHeight: '100%',
   overflowY: 'auto',
+  margin: 0,
+  padding: 0,
 })
 
 const listItem = recipe({
   base: {
     alignItems: 'center',
     display: 'flex',
-    marginTop: theme.space[1],
+    gap: theme.space[1],
     width: '100%',
+    color: theme.colors.neutral.text,
   },
   variants: {
     isFocused: {
-      false: {
-        color: theme.colors.neutral.text,
-      },
       true: {
         color: theme.colors.primary.text,
+        fontWeight: 500,
       },
     },
   },
 })
 
-const bullet = recipe({
-  base: {
-    background: colorBullet,
-    borderRadius: theme.radii.circle,
-    display: 'inline-block',
-    height: 10,
-    margin: `0 ${theme.space[1]}`,
-    width: 10,
-  },
-  variants: {
-    isFocused: {
-      true: {
-        animation: `${bulletFlashAnimation} linear 1500ms infinite`,
-      },
+const legendContainer = style({
+  display: 'flex',
+  flex: '1',
+  flexDirection: 'column',
+  gap: theme.space[1],
+  maxHeight: '100%',
+  overflowY: 'auto',
+  padding: `${theme.space[1.5]} 0`,
+})
+
+const legendHeader = style({
+  textAlign: 'end',
+})
+
+const bullet = style({
+  background: colorBullet,
+  borderRadius: theme.radii.circle,
+  display: 'inline-block',
+  height: 10,
+  width: 10,
+  flexShrink: 0,
+  selectors: {
+    [`${listItem.classNames.variants.isFocused.true} &`]: {
+      animation: `${flash} linear 1500ms infinite`,
     },
   },
 })
@@ -95,35 +105,6 @@ const label = style({
   flex: '1',
 })
 
-const value = styleVariants({
-  default: {
-    fontWeight: 400,
-    marginLeft: theme.space[1],
-  },
-  isFocused: {
-    fontWeight: 500,
-    marginLeft: theme.space[1],
-  },
-})
-
-const text = recipe({
-  base: {
-    flex: 'none',
-    marginRight: theme.space[1],
-    maxWidth: '100%',
-  },
-  variants: {
-    isFocused: {
-      false: {
-        fontWeight: 400,
-      },
-      true: {
-        fontWeight: 500,
-      },
-    },
-  },
-})
-
 const toggleBox = style({
   height: 21,
   position: 'absolute',
@@ -132,27 +113,11 @@ const toggleBox = style({
 
 const line = style({
   borderBottom: `1px solid ${theme.colors.neutral.border}`,
-  position: 'relative',
-  width: '100%',
-})
-
-const progressiveLine = recipe({
-  base: {
-    borderBottom: `1px solid ${theme.colors.primary.border}`,
-    bottom: -1,
-    left: 0,
-    position: 'absolute',
-    top: 0,
-    transition: 'width 500ms ease',
-  },
-  variants: {
-    isFocused: {
-      false: {
-        width: '0%',
-      },
-      true: {
-        width: '100%',
-      },
+  flex: 1,
+  paddingTop: theme.space[1],
+  selectors: {
+    [`${listItem.classNames.variants.isFocused.true} &`]: {
+      borderColor: theme.colors.primary.border,
     },
   },
 })
@@ -175,16 +140,16 @@ const itemTooltip = style({
 export const pieChartStyle = {
   container,
   emptyLegend,
+  legendContainer,
+  legendHeader,
+  pieContainer,
   content,
   listItem,
   list,
   bullet,
   label,
-  value,
-  text,
   toggleBox,
   line,
-  progressiveLine,
   listTooltip,
   itemTooltip,
 }
