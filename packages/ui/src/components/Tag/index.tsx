@@ -1,6 +1,7 @@
 'use client'
 
-import { cn, useClipboard } from '@ultraviolet/utils'
+import { useClipboard } from '@scaleway/use-clipboard'
+import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
 import { Tooltip } from '../Tooltip'
 import { TagInner } from './TagInner'
