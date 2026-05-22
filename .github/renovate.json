@@ -1,7 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "enabledManagers": ["dockerfile", "github-actions", "npm"],
-  "extends": ["config:best-practices", ":combinePatchMinorReleases", "schedule:weekends"],
+  "enabledManagers": ["github-actions", "npm", "nvm"],
+  "extends": [
+    "config:best-practices",
+    "config:js-app",
+    ":combinePatchMinorReleases",
+    ":gitSignOff",
+    "schedule:weekends"
+  ],
   "ignorePaths": [
     "**/node_modules/**",
     "**/bower_components/**",
