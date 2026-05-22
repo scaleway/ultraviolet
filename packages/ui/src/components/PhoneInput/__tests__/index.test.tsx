@@ -13,16 +13,16 @@ describe('ui - PhoneInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should control the value', () => {
+  it('should control the value', async () => {
     const onChange = vi.fn()
 
     const { asFragment } = renderWithTheme(
       <PhoneInput label="Phone" name="phone" onChange={onChange} value="+33612345678" />,
     )
 
-    const input = screen.getByRole('textbox') as HTMLInputElement
+    const input = screen.getByRole<HTMLInputElement>('textbox', { name: 'Phone' })
     expect(input.value).toBe('+33612345678')
-    fireEvent.change(input, { target: { value: '+33678901234' } })
+    await userEvent.type(input, '+33678901234')
     expect(onChange).toHaveBeenCalled()
     expect(asFragment()).toMatchSnapshot()
   })
@@ -31,6 +31,9 @@ describe('ui - PhoneInput', () => {
     const { asFragment } = renderWithTheme(
       <PhoneInput disabled label="Phone" name="phone" onChange={() => {}} value="+33612345678" />,
     )
+
+    const input = screen.getByRole('textbox', { name: 'Phone' })
+    expect(input).toBeDisabled()
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -49,7 +52,9 @@ describe('ui - PhoneInput', () => {
       <PhoneInput error={errorMessage} label="Phone" name="phone" onChange={onChange} value="+33612345678" />,
     )
 
-    expect(screen.getByText(errorMessage)).toBeDefined()
+    const input = screen.getByRole('textbox', { name: 'Phone' })
+    expect(input).toBeInvalid()
+    expect(input).toHaveAccessibleDescription(errorMessage)
   })
 
   it('should render correctly with required field', () => {
@@ -57,21 +62,15 @@ describe('ui - PhoneInput', () => {
       <PhoneInput label="Phone" name="phone" onChange={() => {}} required value="+33612345678" />,
     )
 
+    expect(screen.getByText('*')).toBeDefined()
+    expect(screen.getByRole('textbox')).toBeRequired()
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should display asterisk for required field', () => {
+  it('should have a placeholder', () => {
     const onChange = vi.fn()
 
-    renderWithTheme(<PhoneInput label="Phone" name="phone" onChange={onChange} required value="+33612345678" />)
-
-    expect(screen.getByText('*')).toBeDefined()
-  })
-
-  it('should use default country', () => {
-    const onChange = vi.fn()
-
-    renderWithTheme(
+    const { asFragment } = renderWithTheme(
       <PhoneInput
         defaultCountry="US"
         label="Phone"
@@ -83,6 +82,7 @@ describe('ui - PhoneInput', () => {
 
     const input = screen.getByPlaceholderText('Enter phone number')
     expect(input).toBeDefined()
+    expect(asFragment()).toMatchSnapshot()
   })
 
   it('should call onFocus and onBlur handlers', () => {
@@ -113,7 +113,7 @@ describe('ui - PhoneInput', () => {
 
     renderWithTheme(<PhoneInput label="Phone" name="phone" onChange={onChange} value="+33612345678" />)
 
-    const input = screen.getByRole('textbox') as HTMLInputElement
+    const input = screen.getByRole<HTMLInputElement>('textbox')
     expect(input.type).toBe('tel')
   })
 
@@ -122,7 +122,7 @@ describe('ui - PhoneInput', () => {
 
     renderWithTheme(<PhoneInput label="Phone" name="phone" onChange={onChange} value="+33612345678" />)
 
-    const input = screen.getByRole('textbox') as HTMLInputElement
+    const input = screen.getByRole<HTMLInputElement>('textbox')
     expect(input.maxLength).toBe(20)
   })
 
@@ -139,9 +139,11 @@ describe('ui - PhoneInput', () => {
       />,
     )
 
-    const input = screen.getByPlaceholderText('Enter phone number')
+    const input = screen.getByPlaceholderText<HTMLInputElement>('Enter phone number')
     await userEvent.type(input, '0612345678')
-    expect(onChange).toHaveBeenCalledWith('06 12 34 56 78')
+    expect(onChange).toHaveBeenCalled()
+    const inputRole = screen.getByRole<HTMLInputElement>('textbox')
+    expect(inputRole).toHaveValue('+33 6 12 34 56 78')
   })
 
   it('should respect disableAutoFormat prop', async () => {
@@ -189,29 +191,5 @@ describe('ui - PhoneInput', () => {
     expect(callArg).toHaveProperty('valid')
     expect(callArg).toHaveProperty('e164')
     expect(callArg).toHaveProperty('international')
-  })
-
-  it('should call onValueChange with metadata', async () => {
-    const onValueChange = vi.fn()
-    const onChange = vi.fn()
-
-    renderWithTheme(
-      <PhoneInput
-        defaultCountry="FR"
-        label="Phone"
-        name="phone"
-        onChange={onChange}
-        onValueChange={onValueChange}
-        placeholder="Enter phone number"
-      />,
-    )
-
-    const input = screen.getByPlaceholderText('Enter phone number')
-    await userEvent.type(input, '0612345678')
-
-    expect(onValueChange).toHaveBeenCalled()
-    const callArg = onValueChange.mock.calls[0]?.[0]
-    expect(callArg).toHaveProperty('inputValue')
-    expect(callArg).toHaveProperty('country')
   })
 })

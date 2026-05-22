@@ -41,6 +41,7 @@ export const PhoneInputField = <
   parseNumberErrorMessage = "This doesn't appear to be a valid phone number.",
   onParsingError,
   shouldUnregister,
+  ...props
 }: PhoneFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
   const {
@@ -73,6 +74,7 @@ export const PhoneInputField = <
 
   return (
     <PhoneInput
+      {...props}
       className={className}
       data-testid={dataTestId}
       defaultCountry={defaultCountry}

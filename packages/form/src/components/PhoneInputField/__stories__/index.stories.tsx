@@ -65,7 +65,7 @@ export default {
       )
     },
   ],
-  title: 'Form/Components/Fields/PhoneField',
+  title: 'Form/Components/Fields/PhoneInputField',
 } as Meta<typeof PhoneInputField>
 
 export { Playground } from './Playground.stories'

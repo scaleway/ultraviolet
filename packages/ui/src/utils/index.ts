@@ -1,4 +1,4 @@
-export type { ComparableType, ParsedPhoneNumber } from '@ultraviolet/utils'
+export type { ComparableType } from '@ultraviolet/utils'
 export { capitalize, getUUID, orderBy } from '@ultraviolet/utils'
 export {
   bounce as bounceDefault,

@@ -21,17 +21,18 @@ type InputProps = Partial<
   Pick<
     InputHTMLAttributes<HTMLInputElement>,
     | 'aria-atomic'
+    | 'aria-describedby'
     | 'aria-label'
     | 'aria-labelledby'
-    | 'aria-describedby'
     | 'aria-live'
     | 'disabled'
     | 'id'
+    | 'name'
     | 'onBlur'
     | 'onFocus'
     | 'placeholder'
+    | 'readOnly'
     | 'role'
-    | 'name'
   >
 > &
   Partial<DescriptionProps>
@@ -86,6 +87,7 @@ export const PhoneInput: PhoneInputType = ({
   onParsingError,
   onValueChange,
   placeholder,
+  readOnly,
   ref,
   role,
   required,
@@ -172,13 +174,15 @@ export const PhoneInput: PhoneInputType = ({
           </Stack>
           <input
             aria-invalid={!!error}
-            aria-label={ariaLabel}
+            aria-label={label ? undefined : ariaLabel}
             aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
             aria-labelledby={ariaLabelledBy}
             className={phoneInputStyle.input}
             data-testid={dataTestId}
             data-size={size}
             disabled={disabled}
+            required={required}
+            readOnly={readOnly}
             id={localId}
             maxLength={20}
             name={name}

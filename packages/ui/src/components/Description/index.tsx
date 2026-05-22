@@ -55,6 +55,7 @@ export const Description = ({
 
   return helper || hasTextError || hasTextSuccess ? (
     <Text
+      aria-live="polite"
       as="span"
       variant={size === 'small' ? 'captionSmall' : 'caption'}
       sentiment={computedSentiment}

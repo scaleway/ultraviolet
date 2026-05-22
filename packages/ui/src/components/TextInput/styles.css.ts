@@ -115,9 +115,6 @@ const input = style({
     [`${searchInputStyle.searchInput} &`]: {
       padding: 0,
     },
-    [`${inputWrapper} > &`]: {
-      color: theme.colors.neutral.text,
-    },
     [`${inputWrapper} > &::placeholder`]: {
       color: theme.colors.neutral.textWeak,
     },

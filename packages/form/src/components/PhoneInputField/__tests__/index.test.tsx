@@ -115,11 +115,11 @@ describe('form - PhoneInputField', () => {
 
     const phoneInput = screen.getByRole('textbox')
     await userEvent.type(phoneInput, 'invalid')
-    await userEvent.click(screen.getByText('Submit'))
+    await userEvent.click(screen.getByRole('button', { name: 'Submit' }))
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledTimes(0)
     })
-    expect(screen.getByText("This doesn't appear to be a valid phone number.")).toBeDefined()
+    expect(screen.getByRole('textbox')).toHaveAccessibleDescription("This doesn't appear to be a valid phone number.")
   })
 
   it('should be disabled when disabled prop is true', () => {
