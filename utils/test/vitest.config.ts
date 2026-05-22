@@ -23,7 +23,7 @@ const defaultConfig = defineConfig({
         'build',
         'dist',
         'node_modules',
-        '**/{webpack,vite,vitest,babel}.config.*',
+        '**/{webpack,vite,vitest}.config.*',
         '**.snap',
         '**/__stories__/**',
         '**.svg',
