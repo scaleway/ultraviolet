@@ -64,7 +64,7 @@ export const defaultConfig: UserConfig = {
         preserveModules: true,
         preserveModulesRoot: 'src',
         keepNames: true,
-        legalComments: 'none',
+        comments: { legal: false },
         minify: false,
         minifyInternalExports: false,
         strictExecutionOrder: true,

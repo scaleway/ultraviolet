@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
   compress: true,
   images: {
     formats: ['image/avif', 'image/webp'],
-    domains: ['assets.scaleway.com'],
     // loader: 'imgix',
     // path: 'https://ultraviolet.scaleway.com',
     remotePatterns: [
