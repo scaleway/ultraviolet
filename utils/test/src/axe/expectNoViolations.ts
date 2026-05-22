@@ -2,27 +2,6 @@ import { expect } from 'vitest'
 import { axe } from 'vitest-axe'
 import type { AxeCore } from 'vitest-axe'
 
-const defaultResult: AxeCore.AxeResults = {
-  testEngine: {
-    name: '',
-    version: '',
-  },
-  testRunner: {
-    name: '',
-  },
-  testEnvironment: {
-    userAgent: 'userAgent',
-    windowWidth: 0,
-    windowHeight: 0,
-  },
-  url: 'string',
-  timestamp: '',
-  toolOptions: {},
-  passes: [],
-  violations: [],
-  incomplete: [],
-  inapplicable: [],
-}
 /**
  * https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md
  */
@@ -51,4 +30,4 @@ const expectNoViolations = async (container: string | Element, customOptions: Ax
   expect(axeResult).toHaveNoViolations()
 }
 
-export { defaultResult, expectNoViolations }
+export { expectNoViolations }

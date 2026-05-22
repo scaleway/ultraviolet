@@ -225,6 +225,9 @@ importers:
       vitest:
         specifier: 4.1.5
         version: 4.1.5(@types/node@24.12.4)(@vitest/coverage-istanbul@4.1.5)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(happy-dom@20.9.0)(jsdom@29.1.1)(vite@8.0.13(@types/node@24.12.4)(esbuild@0.28.0)(jiti@2.6.1)(sass@1.99.0)(terser@5.47.1)(tsx@4.21.0)(yaml@2.9.0))
+      vitest-axe:
+        specifier: 0.1.0
+        version: 0.1.0(vitest@4.1.5)
       vitest-canvas-mock:
         specifier: 1.1.4
         version: 1.1.4(vitest@4.1.5)
@@ -5492,6 +5495,9 @@ packages:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
 
+  lodash-es@4.18.1:
+    resolution: {integrity: sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==}
+
   lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
 
@@ -6997,6 +7003,11 @@ packages:
         optional: true
       yaml:
         optional: true
+
+  vitest-axe@0.1.0:
+    resolution: {integrity: sha512-jvtXxeQPg8R/2ANTY8QicA5pvvdRP4F0FsVUAHANJ46YCDASie/cuhlSzu0DGcLmZvGBSBNsNuK3HqfaeknyvA==}
+    peerDependencies:
+      vitest: 4.1.5
 
   vitest-canvas-mock@1.1.4:
     resolution: {integrity: sha512-4boWHY+STwAxGl1+uwakNNoQky5EjPLC8HuponXNoAscYyT1h/F7RUvTkl4IyF/MiWr3V8Q626je3Iel3eArqA==}
@@ -12180,6 +12191,8 @@ snapshots:
     dependencies:
       p-locate: 5.0.0
 
+  lodash-es@4.18.1: {}
+
   lodash.debounce@4.0.8: {}
 
   lodash.map@4.6.0: {}
@@ -13966,6 +13979,16 @@ snapshots:
       terser: 5.47.1
       tsx: 4.21.0
       yaml: 2.9.0
+
+  vitest-axe@0.1.0(vitest@4.1.5):
+    dependencies:
+      aria-query: 5.3.2
+      axe-core: 4.11.4
+      chalk: 5.6.2
+      dom-accessibility-api: 0.5.16
+      lodash-es: 4.18.1
+      redent: 3.0.0
+      vitest: 4.1.5(@types/node@24.12.4)(@vitest/coverage-istanbul@4.1.5)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(happy-dom@20.9.0)(jsdom@29.1.1)(vite@8.0.13(@types/node@24.12.4)(esbuild@0.28.0)(jiti@2.6.1)(sass@1.99.0)(terser@5.47.1)(tsx@4.21.0)(yaml@2.9.0))
 
   vitest-canvas-mock@1.1.4(vitest@4.1.5):
     dependencies:

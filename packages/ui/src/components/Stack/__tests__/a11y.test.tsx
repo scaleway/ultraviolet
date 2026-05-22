@@ -3,7 +3,7 @@ import { describe, it } from 'vitest'
 import { Stack } from '..'
 
 describe('stack - A11Y', { tags: ['a11y'] }, () => {
-  it('should render correctly with default props', async () => {
+  it('should not have violation with default props', async () => {
     const { container } = renderWithTheme(
       <Stack>
         <div>first child</div>

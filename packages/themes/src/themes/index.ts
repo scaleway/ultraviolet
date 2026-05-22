@@ -4,7 +4,7 @@ import { lightTheme as consoleLightTheme } from './console/light/__generated__'
 
 type ThemeName = 'consoleLightTheme' | 'consoleDarkTheme' | 'consoleDarkerTheme'
 
-export const consoleMapThemes = new Map<ThemeName, typeof consoleLightTheme>([
+export const consoleThemesMap = new Map<ThemeName, typeof consoleLightTheme>([
   ['consoleLightTheme', consoleLightTheme],
   ['consoleDarkTheme', consoleDarkTheme],
   ['consoleDarkerTheme', consoleDarkerTheme],
