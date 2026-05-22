@@ -12,15 +12,25 @@
   "prConcurrentLimit": 10,
   "reviewers": ["team:console"],
   "reviewersSampleSize": 2,
-  "semanticCommitType": "chore",
-  "semanticCommitScope": "deps",
+  "labels": ["dependencies"],
   "packageRules": [
     {
       "matchDepTypes": ["engines", "peerDependencies"],
       "rangeStrategy": "widen"
     },
     {
-      "matchManagers": ["dockerfile", "github-actions", "packageManager", "devDependencies"],
+      "matchDepTypes": ["dependencies"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "deps"
+    },
+    {
+      "matchManagers": ["dockerfile", "github-actions"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "devDeps"
+    },
+    {
+      "matchDepTypes": ["packageManager", "devDependencies"],
+      "semanticCommitType": "chore",
       "semanticCommitScope": "devDeps"
     },
     {
