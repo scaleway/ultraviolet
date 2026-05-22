@@ -1,19 +1,19 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
+import { describe, expect, it, vi, afterEach, beforeEach } from 'vitest'
 import { SelectInput } from '..'
 import { cities, dataGroupEmpty, dataGrouped, dataUnGrouped, OptionalInfo } from './resources'
 
 describe('selectInput', () => {
-  beforeAll(() => {
+  beforeEach(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
       configurable: true,
       value: 500,
     })
   })
 
-  afterAll(() => {
+  afterEach(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {})
   })
 

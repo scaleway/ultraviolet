@@ -114,6 +114,7 @@ describe('navigation', () => {
 
   it('render without pinnedFeature', () => {
     const { asFragment } = renderWithTheme(<BasicNavigation pinnedFeature={false} />)
+
     expect(asFragment()).toMatchSnapshot()
   })
 

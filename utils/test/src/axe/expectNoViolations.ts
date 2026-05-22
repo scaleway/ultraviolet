@@ -1,0 +1,33 @@
+import { expect } from 'vitest'
+import { axe } from 'vitest-axe'
+import type { AxeCore } from 'vitest-axe'
+
+/**
+ * https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md
+ */
+const rules: AxeCore.RuleObject = {
+  'color-contrast-enhanced': {
+    enabled: true,
+  },
+  'identical-links-same-purpose': {
+    enabled: true,
+  },
+} as const
+
+const defaultAxeOptions: AxeCore.RunOptions = {
+  performanceTimer: false,
+  reporter: 'v2',
+  rules,
+} as const
+
+const expectNoViolations = async (container: string | Element, customOptions: AxeCore.RunOptions = {}) => {
+  const opts = {
+    ...customOptions,
+    ...defaultAxeOptions,
+  } satisfies AxeCore.RunOptions
+
+  const axeResult = await axe(container, opts)
+  expect(axeResult).toHaveNoViolations()
+}
+
+export { expectNoViolations }
