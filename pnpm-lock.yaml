@@ -292,8 +292,8 @@ importers:
         specifier: 7.29.0
         version: 7.29.0
       '@scaleway/regex':
-        specifier: 5.8.1
-        version: 5.8.1
+        specifier: 6.0.2
+        version: 6.0.2
       '@types/node':
         specifier: 24.12.4
         version: 24.12.4
@@ -352,8 +352,8 @@ importers:
   examples/next-app-router:
     devDependencies:
       '@scaleway/regex':
-        specifier: 5.8.1
-        version: 5.8.1
+        specifier: 6.0.2
+        version: 6.0.2
       '@types/node':
         specifier: 24.12.4
         version: 24.12.4
@@ -3251,9 +3251,9 @@ packages:
     resolution: {integrity: sha512-+rDbZG1317VGovkE79dLaDe0n1cCwtQUrQ1KxMct8vzzZwRA+viiU6VQePMSmu/MMhed2OUtDSM45tbmwE7BeQ==}
     engines: {node: '>=20.x'}
 
-  '@scaleway/regex@5.8.1':
-    resolution: {integrity: sha512-4sp5QrVXIDHA+/ui+h0eLi3AylvXhIuH+UB7vL9RDgJDJzVlFboSx268kx1WkQodcjtNsiOYWlnEBjb2GC8ioA==}
-    engines: {node: '>=20.x'}
+  '@scaleway/regex@6.0.2':
+    resolution: {integrity: sha512-xh8hZF45TZfBytQJEHDEp5T84l15Uh2oRLbyPAw/6hRo34+fEo8O1fE6QUhar2Vjj+tFj9dEYmu4OUucq7vXkQ==}
+    engines: {node: '>=24.x'}
 
   '@scaleway/tsconfig@1.1.4':
     resolution: {integrity: sha512-h1sy6014YIeZqw76i5VsHG54SROlB3MkD093ucZ3RQ2+eMv6OeOVfxyekcZg9yLKC5BIGUXNl8LvkZTNBS6DOQ==}
@@ -9750,7 +9750,7 @@ snapshots:
 
   '@scaleway/random-name@5.1.4': {}
 
-  '@scaleway/regex@5.8.1': {}
+  '@scaleway/regex@6.0.2': {}
 
   '@scaleway/tsconfig@1.1.4': {}
 
