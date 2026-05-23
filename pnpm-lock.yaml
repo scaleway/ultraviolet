@@ -657,8 +657,8 @@ importers:
         specifier: 1.0.2
         version: 1.0.2
       '@scaleway/random-name':
-        specifier: 5.1.4
-        version: 5.1.4
+        specifier: 6.0.2
+        version: 6.0.2
       '@scaleway/use-clipboard':
         specifier: 1.0.0
         version: 1.0.0(react@19.2.6)
@@ -3247,9 +3247,9 @@ packages:
     peerDependencies:
       oxlint: '>=1.55.0'
 
-  '@scaleway/random-name@5.1.4':
-    resolution: {integrity: sha512-+rDbZG1317VGovkE79dLaDe0n1cCwtQUrQ1KxMct8vzzZwRA+viiU6VQePMSmu/MMhed2OUtDSM45tbmwE7BeQ==}
-    engines: {node: '>=20.x'}
+  '@scaleway/random-name@6.0.2':
+    resolution: {integrity: sha512-fhR2aCzxoZlOZcCM42srbALdpdqMy79LwOK5mVf4sGG1uknn095mr5PQ/0/zwfk/FX2KycZwbKJzr4zP6CG3Zg==}
+    engines: {node: '>=24.x'}
 
   '@scaleway/regex@5.8.1':
     resolution: {integrity: sha512-4sp5QrVXIDHA+/ui+h0eLi3AylvXhIuH+UB7vL9RDgJDJzVlFboSx268kx1WkQodcjtNsiOYWlnEBjb2GC8ioA==}
@@ -9748,7 +9748,7 @@ snapshots:
     dependencies:
       oxlint: 1.64.0(oxlint-tsgolint@0.22.1)
 
-  '@scaleway/random-name@5.1.4': {}
+  '@scaleway/random-name@6.0.2': {}
 
   '@scaleway/regex@5.8.1': {}
 
