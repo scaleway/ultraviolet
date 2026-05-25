@@ -7,7 +7,7 @@
   ],
   "type": "module",
   "scripts": {
-    "preinstall": "git config --local include.path $PWD/.gitconfig",
+    "preinstall": "git config --local include.path $PWD/.gitconfig || true",
     "analyse:deps:form": "tsx ./utils/scripts/analyse-deps.ts packages/form/src/components",
     "analyse:deps:ui": "tsx ./utils/scripts/analyse-deps.ts packages/ui/src/components",
     "analyse:dist": "tsx ./utils/scripts/compare/compare-dist-migration.ts",
