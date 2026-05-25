@@ -8,6 +8,7 @@ import { ANIMATION_DURATION, ANIMATION_EASING, NAVIGATION_WIDTH } from './consta
 import NavigationLocales from './locales/en'
 import type { PinUnPinType } from './types'
 import { widthNavigationContainerDuration } from './variables.css'
+
 type Item = {
   label: string
   active?: boolean

@@ -2,6 +2,7 @@ import { screen } from '@testing-library/react'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Description } from '..'
+import { Label } from '../../Label'
 
 describe('description', () => {
   it('renders correctly with default props', () => {
@@ -102,8 +103,9 @@ describe('description', () => {
   it('renders correctly with aria-describedby', () => {
     const { asFragment } = renderWithTheme(
       <div>
+        <Label id="id-label">Label</Label>
         <Description id="id-helper" size="small" helper="helper" />
-        <input data-testid="test-input" aria-describedby="id-helper" type="text" />
+        <input data-testid="test-input" aria-labelledby="id-label" aria-describedby="id-helper" type="text" />
       </div>,
     )
 

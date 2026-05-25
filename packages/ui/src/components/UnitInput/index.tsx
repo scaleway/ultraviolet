@@ -43,6 +43,7 @@ type UnitInputProps = {
   templateColumns?: ComponentProps<typeof Row>['templateColumns']
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
+  | 'aria-label'
   | 'onFocus'
   | 'onBlur'
   | 'name'
@@ -58,6 +59,7 @@ type UnitInputProps = {
 >
 
 export const UnitInput = ({
+  'aria-label': ariaLabel,
   id,
   name = '',
   max = Number.MAX_SAFE_INTEGER,
@@ -123,10 +125,13 @@ export const UnitInput = ({
     }
   }, [value])
 
+  const hasLabel = label || labelInformation
+  const labelId = `${localId}-label`
+
   return (
     <Stack gap={0.5} maxWidth={maxWidth} onBlur={onBlur} onFocus={onFocus} onKeyDown={onKeyDown} width={width}>
-      {label || labelInformation ? (
-        <Label htmlFor={localId} labelDescription={labelInformation} required={required} size={size}>
+      {hasLabel ? (
+        <Label id={labelId} htmlFor={localId} labelDescription={labelInformation} required={required} size={size}>
           {label}
         </Label>
       ) : null}
@@ -138,8 +143,10 @@ export const UnitInput = ({
       >
         <div className={unitInputStyle.numberWrapper} id="input-field">
           <input
+            aria-labelledby={hasLabel ? labelId : undefined}
             aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
             aria-invalid={!!error}
+            aria-label={hasLabel ? undefined : ariaLabel}
             autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
             className={cn(className, unitInputStyle.number[size])}
             data-testid="unit-input"
