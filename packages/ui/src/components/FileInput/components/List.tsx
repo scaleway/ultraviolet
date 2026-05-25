@@ -73,7 +73,7 @@ export const ListFiles = ({ limit, textLimit, prominence = 'default', onDelete }
           const sentiment = file.error ? 'danger' : 'neutral'
 
           return (
-            <Stack data-testid={file.fileName} gap={0.5} key={file.fileName} as="li">
+            <Stack data-testid={file.fileName} gap={0.5} key={`${file.fileName}-${file.size}`} as="li">
               <Stack
                 alignItems="center"
                 className={fileInputStyle.fileViewerContainer[file.error || error ? 'error' : prominence]}

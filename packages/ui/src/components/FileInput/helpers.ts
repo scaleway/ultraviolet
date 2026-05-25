@@ -25,7 +25,7 @@ export const formatFileSize = (bytes: number): string => {
   return `${formattedSize} ${units[unitIndex]}`
 }
 
-export const fileIsAccepted = (fileType: string, fileName: string, accept?: string) => {
+export const fileIsAccepted = (file: File, accept?: string) => {
   if (!accept) {
     return true
   }
@@ -37,6 +37,8 @@ export const fileIsAccepted = (fileType: string, fileName: string, accept?: stri
   if (acceptItems.length === 0) {
     return true
   }
+
+  const { name: fileName, type: fileType } = file
 
   for (const item of acceptItems) {
     if (item.endsWith('/*')) {
@@ -54,79 +56,62 @@ export const fileIsAccepted = (fileType: string, fileName: string, accept?: stri
   return false
 }
 
-const isFileSystemFileEntry = (entry: FileSystemEntry): entry is FileSystemFileEntry => !!entry.isFile
-
-const isFileSystemDirEntry = (entry: FileSystemEntry): entry is FileSystemDirectoryEntry => !!entry.isDirectory
+const isFileEntry = (entry: FileSystemEntry): entry is FileSystemFileEntry => !!entry.isFile
+const isDirectoryEntry = (entry: FileSystemEntry): entry is FileSystemDirectoryEntry => !!entry.isDirectory
 
 const convertEntryToFile = (entry: FileSystemFileEntry): Promise<File> =>
   new Promise((resolve, reject) => {
-    if (entry.isFile) {
-      entry.file(
-        file => resolve(file),
-        error => reject(error),
-      )
-    } else {
-      reject(new Error('Entry is not a file'))
-    }
+    entry.file(resolve, reject)
   })
 
-// Recursive function to read all the files inside nested directories
-const readEntries = async (
-  directory: FileSystemDirectoryEntry,
-  onDropError?: (error?: unknown) => void,
-): Promise<FileSystemFileEntry[]> => {
+async function readEntriesInDirectory(directory: FileSystemDirectoryEntry) {
   const reader = directory.createReader()
-  const entries: FileSystemFileEntry[] = []
-  const subdirs: FileSystemDirectoryEntry[] = []
+  const nestedEntries = []
 
-  while (true) {
-    const results = await new Promise<FileSystemEntry[]>((resolve, reject) => {
+  let results = []
+  do {
+    results = await new Promise<FileSystemEntry[]>((resolve, reject) => {
       reader.readEntries(resolve, reject)
-    }).catch((error: unknown) => onDropError?.(error))
+    })
+    nestedEntries.push(...results)
+  } while (results?.length > 0)
 
-    if (results?.length === 0 || !results) {
-      break
-    }
-
-    const computedFiles = results.filter(entry => isFileSystemFileEntry(entry)).map(entry => entry)
-    const computedDirs = results.filter(entry => isFileSystemDirEntry(entry)).map(entry => entry)
-
-    entries.push(...computedFiles)
-    subdirs.push(...computedDirs)
-  }
-
-  // Process all subdirectories in parallel with promise.all
-  const subdirFiles = await Promise.all(subdirs.map(subdir => readEntries(subdir, onDropError))).catch(
-    (error: unknown) => onDropError?.(error),
-  )
-
-  if (subdirFiles) {
-    for (const files of subdirFiles) {
-      entries.push(...files)
-    }
-  }
-
-  return entries
+  return nestedEntries
 }
 
-export const readEntry = async (dataTransfer: DataTransfer, onDropError?: (error: unknown) => void) => {
-  const items = [...dataTransfer.items].map(entry => entry.webkitGetAsEntry())
-  const dataTransferComputed = new DataTransfer()
+/**
+ * Recursive function to read all the files in a list of FileSystemEntry objects (files or directories)
+ */
+async function readEntries(entries: FileSystemEntry[]): Promise<File[]> {
+  const readFilesPromises = entries.filter(entry => isFileEntry(entry)).map(entry => convertEntryToFile(entry))
+  const files = await Promise.all(readFilesPromises)
 
-  for (const entry of items) {
-    if (entry && isFileSystemFileEntry(entry)) {
-      const file = await convertEntryToFile(entry)
-      dataTransferComputed.items.add(file)
-    } else if (entry && isFileSystemDirEntry(entry)) {
-      const directory = entry
-      const entries = await readEntries(directory, onDropError)
+  const readFoldersPromises = entries
+    .filter(entry => isDirectoryEntry(entry))
+    .map(async directory => {
+      const nestedEntries = await readEntriesInDirectory(directory)
 
-      for (const file of entries) {
-        const convertedFile = await convertEntryToFile(file)
-        dataTransferComputed.items.add(convertedFile)
+      if (nestedEntries.length > 0) {
+        files.push(...(await readEntries(nestedEntries)))
       }
-    }
+    })
+
+  await Promise.all(readFoldersPromises)
+
+  return files
+}
+
+/**
+ * Read the entries of a DataTransfer object, including the content of directories
+ */
+export const readTransferredFiles = async (dataTransfer: DataTransfer) => {
+  const items = [...dataTransfer.items].map(entry => entry.webkitGetAsEntry()).filter(item => !!item)
+  const files = await readEntries(items)
+
+  const outputDataTransfer = new DataTransfer()
+  for (const file of files) {
+    outputDataTransfer.items.add(file)
   }
 
-  return dataTransferComputed.files
+  return outputDataTransfer.files
 }

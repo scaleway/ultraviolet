@@ -11,7 +11,7 @@ import { FileInputButton } from './components/Button'
 import { ListFiles } from './components/List'
 import { DropzoneContent } from './DropzoneContent'
 import { FileInputContext } from './FileInputProvider'
-import { fileIsAccepted, readEntry } from './helpers'
+import { fileIsAccepted, readTransferredFiles } from './helpers'
 import type { ErrorType, FileInputProps } from './types'
 import { fileInputStyle } from './styles.css'
 
@@ -110,7 +110,7 @@ const FileInputBase = ({
     const errorFiles: ErrorType[] = []
 
     for (const file of droppedFiles) {
-      const isAccepted = fileIsAccepted(file.type, file.name, accept)
+      const isAccepted = fileIsAccepted(file, accept)
       const customError = validator?.(file)
 
       if (isAccepted && !customError) {
@@ -162,16 +162,13 @@ const FileInputBase = ({
   const onDropComputed = async (event: DragEventReact<HTMLElement>) => {
     event.preventDefault()
 
-    if (!disabled && allowDirectories && !disabledDragndrop) {
-      const readFile = await readEntry(event.dataTransfer, onDropError).catch(onDropError)
-      if (readFile) {
-        const [acceptedFiles, errorFiles] = addFiles(readFile)
-        onDrop?.(event, acceptedFiles, errorFiles)
-      }
-    } else if (!(disabled || disabledDragndrop)) {
-      const [acceptedFiles, errorFiles] = addFiles(event.dataTransfer?.files)
-      onDrop?.(event, acceptedFiles, errorFiles)
+    if (disabled || disabledDragndrop) {
+      return
     }
+
+    const fileList = allowDirectories ? await readTransferredFiles(event.dataTransfer) : event.dataTransfer?.files
+    const [acceptedFiles, errorFiles] = addFiles(fileList)
+    onDrop?.(event, acceptedFiles, errorFiles)
   }
 
   const computedChildren = typeof children === 'function' ? children(inputId, inputRef) : children

@@ -1,7 +1,7 @@
 // oxlint-disable typescript/no-unsafe-type-assertion
-import { fireEvent, screen, waitFor } from '@testing-library/react'
+import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { FileInput } from '..'
 
@@ -191,7 +191,7 @@ describe('fileInput', () => {
   })
 
   it('should throw error with FileInput.Button outside of FileInput', () => {
-    expect(() => shouldMatchSnapshot(<FileInput.Button>button</FileInput.Button>)).toThrow(
+    expect(() => render(<FileInput.Button>button</FileInput.Button>)).toThrow(
       'FileInputContext should be inside FileInput to work properly.',
     )
   })
@@ -383,7 +383,7 @@ describe('fileInput', () => {
       type: 'application/pdf',
     })
     const filemp3 = new File(['added'], 'added.mp3', {
-      type: 'application/pdf',
+      type: 'audio/mpeg',
     })
 
     fireEvent.drop(dropzone, {
@@ -455,18 +455,6 @@ describe('fileInput', () => {
   })
 
   it('should add files from dropped directory with allowDirectories', async () => {
-    const onChangeFiles = vi.fn()
-    renderWithTheme(
-      <FileInput
-        aria-label="label"
-        onChangeFiles={onChangeFiles}
-        allowDirectories
-        bottom={<FileInput.List />}
-        size="small"
-        title="title"
-      />,
-    )
-
     class MockDataTransfer {
       readonly #files: File[] = []
 
@@ -487,21 +475,25 @@ describe('fileInput', () => {
       writable: true,
     })
 
-    const dropzone = screen.getByRole('button', { name: 'UploadIcon title' })
-    const dirFile = new File(['content1'], 'dir/file1.png', {
-      type: 'image/png',
-    })
-    const singleFile = new File(['content2'], 'single.png', {
-      type: 'image/png',
-    })
+    const onChangeFiles = vi.fn()
+    renderWithTheme(
+      <FileInput
+        aria-label="label"
+        onChangeFiles={onChangeFiles}
+        allowDirectories
+        bottom={<FileInput.List />}
+        size="small"
+        title="title"
+      />,
+    )
 
+    const dirFile = new File(['content1'], 'dir/file1.png', { type: 'image/png' })
     let callCount = 0
     const dirFileEntry = {
       isFile: true,
       isDirectory: false,
       file: (success: (file: File) => void) => success(dirFile),
     } as unknown as FileSystemFileEntry
-
     const directoryEntry = {
       isFile: false,
       isDirectory: true,
@@ -518,25 +510,25 @@ describe('fileInput', () => {
         },
       }),
     } as unknown as FileSystemDirectoryEntry
-
     const dirItem = {
       kind: 'file',
       type: dirFile.type,
       webkitGetAsEntry: () => directoryEntry,
     } as unknown as DataTransferItem
 
+    const singleFile = new File(['content2'], 'single.png', { type: 'image/png' })
     const singleFileEntry = {
       isFile: true,
       isDirectory: false,
       file: (success: (file: File) => void) => success(singleFile),
     } as unknown as FileSystemFileEntry
-
     const singleItem = {
       kind: 'file',
       type: singleFile.type,
       webkitGetAsEntry: () => singleFileEntry,
     } as unknown as DataTransferItem
 
+    const dropzone = screen.getByRole('button', { name: 'UploadIcon title' })
     fireEvent.drop(dropzone, {
       dataTransfer: {
         files: [dirFile, singleFile],
