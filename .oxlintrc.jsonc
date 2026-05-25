@@ -39,6 +39,7 @@
       "rules": {
         "eslint/no-alert": "off",
         "eslint/no-console": "off",
+        "eslint/prefer-arrow-callback": "off",
 
         "import/no-anonymous-default-export": "off",
         "import/no-named-export": "off",
@@ -52,6 +53,7 @@
         "react/no-multi-comp": "off",
         "react/no-array-index-key": "off",
         "react/only-export-components": "off",
+        "react/no-unstable-nested-components": "off",
 
         "typescript/strict-void-return": "off",
         "typescript/no-useless-default-assignment": "off",
@@ -60,6 +62,7 @@
         "typescript/no-unsafe-member-access": "warn",
         "typescript/no-unsafe-return": "warn",
 
+        "unicorn/consistent-function-scoping": "off",
         "@ultraviolet/a11y-partial": "warn",
       },
     },
@@ -73,6 +76,7 @@
         "*.config.ts",
         ".vitest/**",
         "vitest.setup.ts",
+        "**/setup.ts",
         "**/vitest.setup.ts",
         "**/vitest/setup.ts",
       ],
@@ -106,6 +110,7 @@
         "unicorn/no-new-array": "off",
         "unicorn/prefer-logical-operator-over-ternary": "off",
         "unicorn/prefer-set-has": "off",
+        "unicorn/consistent-function-scoping": "off",
 
         "vitest/no-importing-vitest-globals": "off",
         "vitest/prefer-called-times": "off",
@@ -203,6 +208,12 @@
 
     "jsx-a11y/no-static-element-interactions": "warn",
     "jsx-a11y/prefer-tag-over-role": "warn",
+    "jsx-a11y/control-has-associated-label": [
+      "error",
+      {
+        "ignoreElements": ["tr", "td"],
+      },
+    ],
 
     "typescript/dot-notation": "off",
     "typescript/no-confusing-void-expression": "off",

@@ -248,7 +248,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             aria-labelledby={ariaLabelledby}
             aria-live={ariaLive}
             autoComplete={autoComplete}
-            autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
+            autoFocus={autoFocus}
             className={cn(className, searchInputStyle.searchInput)}
             clearable
             data-testid={dataTestId}
