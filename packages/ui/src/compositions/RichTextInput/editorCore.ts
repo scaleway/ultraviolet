@@ -4,7 +4,7 @@ import { keymap } from 'prosemirror-keymap'
 import { DOMParser, DOMSerializer, Schema } from 'prosemirror-model'
 import type { Node } from 'prosemirror-model'
 import { schema as basicSchema } from 'prosemirror-schema-basic'
-import { addListNodes } from 'prosemirror-schema-list'
+import { addListNodes, splitListItem } from 'prosemirror-schema-list'
 import { EditorState } from 'prosemirror-state'
 import type { Plugin } from 'prosemirror-state'
 import { createToggleListCommand, escapeHtml } from './helpers'
@@ -54,6 +54,9 @@ export const createPlugins = () => {
         'Mod-Shift-9': createToggleListCommand(listItemNode, orderedListNode),
       }),
     )
+  }
+  if (listItemNode) {
+    plugins.push(keymap({ Enter: splitListItem(listItemNode) }))
   }
   plugins.push(keymap(baseKeymap))
 
