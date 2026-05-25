@@ -31,8 +31,8 @@ importers:
         specifier: 1.59.1
         version: 1.59.1
       '@scaleway/oxfmt-config':
-        specifier: 1.1.1
-        version: 1.1.1(oxfmt@0.49.0)
+        specifier: 1.1.3
+        version: 1.1.3(oxfmt@0.49.0)
       '@scaleway/oxlint-config':
         specifier: 0.1.15
         version: 0.1.15(oxlint@1.64.0(oxlint-tsgolint@0.22.1))
@@ -3237,8 +3237,8 @@ packages:
     resolution: {integrity: sha512-7wafArqq/fSVy0epmpE0RN6e7foOO5EctgG94UBY26Fq2vWN9eJ2Nm1vE8vX+CPBiKZpm4M/Fc45WCKJG75KVQ==}
     engines: {node: '>=20.x'}
 
-  '@scaleway/oxfmt-config@1.1.1':
-    resolution: {integrity: sha512-sQAVkG8352hV0UARHPpZx1xQg+2NgAv13vPmgrHdYPVV8dPJvymsz8F1WYKpDgKiuzCeyghDdW55jQHGowVO+A==}
+  '@scaleway/oxfmt-config@1.1.3':
+    resolution: {integrity: sha512-ePgG9BCYDR5q/pstpcCa/YoiFS1DQMOAQ6lnjv8QTzoRqw+O7yypyVr7Is+SccQ2gdCtnb16rGz0AhNtuPTNuQ==}
     peerDependencies:
       oxfmt: '>=0.45.0'
 
@@ -9739,7 +9739,7 @@ snapshots:
 
   '@scaleway/fuzzy-search@1.0.2': {}
 
-  '@scaleway/oxfmt-config@1.1.1(oxfmt@0.49.0)':
+  '@scaleway/oxfmt-config@1.1.3(oxfmt@0.49.0)':
     dependencies:
       deepmerge-ts: 7.1.5
       oxfmt: 0.49.0
