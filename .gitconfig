@@ -1,0 +1,11 @@
+[hook "pre-commit commitlint"]
+  event = commit-msg
+  command = pnpm commitlint --edit
+
+[hook "pre-commit lint-staged"]
+  event = pre-commit
+  command = pnpm lint-staged
+
+[hook "pre-push lint-staged"]
+  event = pre-push
+  command = pnpm lint-staged
