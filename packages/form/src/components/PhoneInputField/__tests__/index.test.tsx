@@ -35,14 +35,14 @@ describe('form - PhoneInputField', () => {
       },
     )
 
-    await userEvent.click(screen.getByText('Submit'))
+    await userEvent.click(screen.getByRole('button', { name: 'Submit' }))
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledTimes(0)
     })
 
     const phoneInput = screen.getByRole('textbox')
     await userEvent.type(phoneInput, '+33612345678')
-    await userEvent.click(screen.getByText('Submit'))
+    await userEvent.click(screen.getByRole('button', { name: 'Submit' }))
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledOnce()
     })
@@ -77,7 +77,7 @@ describe('form - PhoneInputField', () => {
 
     const phoneInput = screen.getByRole('textbox')
     await userEvent.type(phoneInput, '+12025551234')
-    await userEvent.click(screen.getByText('Submit'))
+    await userEvent.click(screen.getByRole('button', { name: 'Submit' }))
     await waitFor(() => {
       expect(onSubmit.mock.calls[0][0]).toStrictEqual({
         phone: '+1 202-555-1234',

@@ -52,21 +52,19 @@ export const NumberInputField = <
     shouldUnregister,
   })
 
-  const internalError = getError(
-    {
-      isInteger: step,
-      label: errorLabel ?? label ?? ariaLabel ?? name,
-      max,
-      min,
-    },
-    error,
-  )
-
   return (
     <NumberInput
       {...props}
       aria-label={ariaLabel}
-      error={internalError}
+      error={getError(
+        {
+          isInteger: step,
+          label: errorLabel ?? label ?? ariaLabel ?? name,
+          max,
+          min,
+        },
+        error,
+      )}
       label={label}
       max={max}
       min={min}

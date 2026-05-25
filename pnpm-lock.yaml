@@ -459,6 +459,9 @@ importers:
 
   packages/form:
     dependencies:
+      '@scaleway/phonenumber':
+        specifier: 1.0.0
+        version: 1.0.0
       '@ultraviolet/icons':
         specifier: workspace:*
         version: link:../icons
@@ -468,12 +471,6 @@ importers:
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:../ui
-      '@ultraviolet/utils':
-        specifier: workspace:*
-        version: link:../utils
-      awesome-phonenumber:
-        specifier: 7.8.0
-        version: 7.8.0
       react-hook-form:
         specifier: 7.76.1
         version: 7.76.1(react@19.2.6)
@@ -481,9 +478,6 @@ importers:
       '@repo/config':
         specifier: workspace:*
         version: link:../../utils/config
-      '@types/final-form-focus':
-        specifier: 1.1.7
-        version: 1.1.7
       '@types/react':
         specifier: 19.2.14
         version: 19.2.14
@@ -659,6 +653,9 @@ importers:
       '@scaleway/fuzzy-search':
         specifier: 2.0.2
         version: 2.0.2
+      '@scaleway/phonenumber':
+        specifier: 1.0.0
+        version: 1.0.0
       '@scaleway/use-clipboard':
         specifier: 1.0.1
         version: 1.0.1(react@19.2.6)
@@ -743,10 +740,6 @@ importers:
         version: 8.0.13(@types/node@24.12.4)(esbuild@0.28.0)(jiti@2.6.1)(sass@1.99.0)(terser@5.47.1)(tsx@4.21.0)(yaml@2.9.0)
 
   packages/utils:
-    dependencies:
-      awesome-phonenumber:
-        specifier: 7.8.0
-        version: 7.8.0
     devDependencies:
       '@repo/config':
         specifier: workspace:*
@@ -3254,6 +3247,10 @@ packages:
     peerDependencies:
       oxlint: '>=1.55.0'
 
+  '@scaleway/phonenumber@1.0.0':
+    resolution: {integrity: sha512-Sk0tNh2FPn/QRmTxImDGqCzPMehrqSJYetUiamgCztKl31Oh5DAOQPhDBSCs4sdjp5fHO3hJrjTT27fWNWZuVA==}
+    engines: {node: '>=24.x'}
+
   '@scaleway/random-name@6.0.2':
     resolution: {integrity: sha512-fhR2aCzxoZlOZcCM42srbALdpdqMy79LwOK5mVf4sGG1uknn095mr5PQ/0/zwfk/FX2KycZwbKJzr4zP6CG3Zg==}
     engines: {node: '>=24.x'}
@@ -3624,9 +3621,6 @@ packages:
 
   '@types/estree@1.0.9':
     resolution: {integrity: sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==}
-
-  '@types/final-form-focus@1.1.7':
-    resolution: {integrity: sha512-vC0lKyLSVxKOuBfOjtYPBuEGyKBh6PK9RadmSBHNr3d5Lm4ZJMGt4O53QS/4oREATmPq4qmwcjOiuCeeaFkf0w==}
 
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
@@ -4923,10 +4917,6 @@ packages:
 
   fill-range@7.1.1:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
-    engines: {node: '>=8'}
-
-  final-form@4.20.10:
-    resolution: {integrity: sha512-TL48Pi1oNHeMOHrKv1bCJUrWZDcD3DIG6AGYVNOnyZPr7Bd/pStN0pL+lfzF5BNoj/FclaoiaLenk4XUIFVYng==}
     engines: {node: '>=8'}
 
   find-chrome-bin@2.0.4:
@@ -9762,6 +9752,10 @@ snapshots:
     dependencies:
       oxlint: 1.64.0(oxlint-tsgolint@0.23.0)
 
+  '@scaleway/phonenumber@1.0.0':
+    dependencies:
+      awesome-phonenumber: 7.8.0
+
   '@scaleway/random-name@6.0.2': {}
 
   '@scaleway/regex@6.0.2': {}
@@ -10199,10 +10193,6 @@ snapshots:
   '@types/estree@1.0.8': {}
 
   '@types/estree@1.0.9': {}
-
-  '@types/final-form-focus@1.1.7':
-    dependencies:
-      final-form: 4.20.10
 
   '@types/hast@3.0.4':
     dependencies:
@@ -11612,10 +11602,6 @@ snapshots:
   fill-range@7.1.1:
     dependencies:
       to-regex-range: 5.0.1
-
-  final-form@4.20.10:
-    dependencies:
-      '@babel/runtime': 7.29.2
 
   find-chrome-bin@2.0.4:
     dependencies:

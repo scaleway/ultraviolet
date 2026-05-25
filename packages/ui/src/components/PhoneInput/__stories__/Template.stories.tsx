@@ -10,6 +10,7 @@ export const Template: StoryFn<typeof PhoneInput> = ({ ...args }) => {
 
 Template.args = {
   defaultCountry: 'FR',
+  disableAutoFormat: false,
   label: 'Phone Number',
   name: 'phone',
   placeholder: 'Enter phone number',

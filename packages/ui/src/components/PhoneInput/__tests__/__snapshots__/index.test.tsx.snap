@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ui - PhoneInput > should control the value 1`] = `
+exports[`ui - PhoneInput > should call onValueChange with parsed metadata 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
@@ -10,12 +10,11 @@ exports[`ui - PhoneInput > should control the value 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="phone-phone"
+        for="phone-_r_1e_"
       >
         Phone
       </label>
       <div
-        aria-disabled="false"
         class="styles__f9zn1x4 styles_large__f9zn1x1"
         data-disabled="false"
         data-error="false"
@@ -29,14 +28,61 @@ exports[`ui - PhoneInput > should control the value 1`] = `
           aria-invalid="false"
           class="styles__f9zn1x5"
           data-size="large"
-          id="phone-phone"
+          id="phone-_r_1e_"
+          maxlength="20"
+          name="phone"
+          placeholder="Enter phone number"
+          type="tel"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ui - PhoneInput > should display error message 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+    >
+      <label
+        class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
+        for="phone-_r_c_"
+      >
+        Phone
+      </label>
+      <div
+        class="styles__f9zn1x4 styles_large__f9zn1x1"
+        data-disabled="false"
+        data-error="true"
+      >
+        <div
+          class="styles__f9zn1x0 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d"
+        >
+          🇫🇷
+        </div>
+        <input
+          aria-describedby="_r_d_"
+          aria-invalid="true"
+          class="styles__f9zn1x5"
+          data-size="large"
+          id="phone-_r_c_"
           maxlength="20"
           name="phone"
           placeholder="+33 6 12 34 56 78"
           type="tel"
-          value="+33612345678"
         />
       </div>
+      <span
+        class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
+        id="_r_d_"
+        role="status"
+      >
+        Invalid phone number format
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -52,12 +98,11 @@ exports[`ui - PhoneInput > should have a placeholder 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="phone-phone"
+        for="phone-_r_m_"
       >
         Phone
       </label>
       <div
-        aria-disabled="false"
         class="styles__f9zn1x4 styles_large__f9zn1x1"
         data-disabled="false"
         data-error="false"
@@ -71,7 +116,7 @@ exports[`ui - PhoneInput > should have a placeholder 1`] = `
           aria-invalid="false"
           class="styles__f9zn1x5"
           data-size="large"
-          id="phone-phone"
+          id="phone-_r_m_"
           maxlength="20"
           name="phone"
           placeholder="Enter phone number"
@@ -93,12 +138,11 @@ exports[`ui - PhoneInput > should render correctly when input is disabled 1`] = 
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="phone-phone"
+        for="phone-_r_8_"
       >
         Phone
       </label>
       <div
-        aria-disabled="true"
         class="styles__f9zn1x4 styles_large__f9zn1x1"
         data-disabled="true"
         data-error="false"
@@ -113,12 +157,11 @@ exports[`ui - PhoneInput > should render correctly when input is disabled 1`] = 
           class="styles__f9zn1x5"
           data-size="large"
           disabled=""
-          id="phone-phone"
+          id="phone-_r_8_"
           maxlength="20"
           name="phone"
           placeholder="+33 6 12 34 56 78"
           type="tel"
-          value="+33612345678"
         />
       </div>
     </div>
@@ -136,12 +179,11 @@ exports[`ui - PhoneInput > should render correctly with basic props 1`] = `
     >
       <label
         class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="phone-phone"
+        for="phone-_r_0_"
       >
         Phone
       </label>
       <div
-        aria-disabled="false"
         class="styles__f9zn1x4 styles_large__f9zn1x1"
         data-disabled="false"
         data-error="false"
@@ -155,63 +197,13 @@ exports[`ui - PhoneInput > should render correctly with basic props 1`] = `
           aria-invalid="false"
           class="styles__f9zn1x5"
           data-size="large"
-          id="phone-phone"
+          id="phone-_r_0_"
           maxlength="20"
           name="phone"
           placeholder="+33 6 12 34 56 78"
           type="tel"
-          value="+33612345678"
         />
       </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`ui - PhoneInput > should render correctly with error 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <div
-      class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
-    >
-      <label
-        class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-        for="phone-phone"
-      >
-        Phone
-      </label>
-      <div
-        aria-disabled="false"
-        class="styles__f9zn1x4 styles_large__f9zn1x1"
-        data-disabled="false"
-        data-error="true"
-      >
-        <div
-          class="styles__f9zn1x0 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d"
-        >
-          🇫🇷
-        </div>
-        <input
-          aria-describedby="_r_9_"
-          aria-invalid="true"
-          class="styles__f9zn1x5"
-          data-size="large"
-          id="phone-phone"
-          maxlength="20"
-          name="phone"
-          placeholder="+33 6 12 34 56 78"
-          type="tel"
-          value="+33612345678"
-        />
-      </div>
-      <span
-        class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
-        id="_r_9_"
-      >
-        Invalid phone number
-      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -230,7 +222,7 @@ exports[`ui - PhoneInput > should render correctly with required field 1`] = `
       >
         <label
           class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-          for="phone-phone"
+          for="phone-_r_h_"
         >
           Phone
         </label>
@@ -241,7 +233,6 @@ exports[`ui - PhoneInput > should render correctly with required field 1`] = `
         </span>
       </div>
       <div
-        aria-disabled="false"
         class="styles__f9zn1x4 styles_large__f9zn1x1"
         data-disabled="false"
         data-error="false"
@@ -255,13 +246,12 @@ exports[`ui - PhoneInput > should render correctly with required field 1`] = `
           aria-invalid="false"
           class="styles__f9zn1x5"
           data-size="large"
-          id="phone-phone"
+          id="phone-_r_h_"
           maxlength="20"
           name="phone"
           placeholder="+33 6 12 34 56 78"
           required=""
           type="tel"
-          value="+33612345678"
         />
       </div>
     </div>

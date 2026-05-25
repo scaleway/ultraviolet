@@ -11,6 +11,11 @@ const flag = style({
   alignItems: 'center',
   justifyContent: 'center',
   alignSelf: 'center',
+  selectors: {
+    "&[data-disabled='true']": {
+      opacity: 0.7,
+    },
+  },
 })
 
 const inputWrapperSizes = styleVariants(
@@ -36,24 +41,25 @@ const inputWrapper = style({
     '&:not([data-disabled="true"]):not([data-readonly="true"]):hover': {
       borderColor: theme.colors.primary.border,
     },
-    "&[data-disabled='true']": {
-      background: theme.colors.neutral.backgroundDisabled,
-      borderColor: theme.colors.neutral.borderDisabled,
+    '&:focus-within': {
+      border: `1px solid ${theme.colors.primary.border}`,
+      boxShadow: theme.shadows.focusPrimary,
+    },
+    "&[data-success='true']": {
+      borderColor: theme.colors.success.border,
+      color: theme.colors.success.text,
     },
     '&[data-error="true"]': {
       borderColor: theme.colors.danger.border,
       color: theme.colors.danger.text,
     },
-    '&:focus-within': {
-      border: `1px solid ${theme.colors.primary.border}`,
-      boxShadow: theme.shadows.focusPrimary,
-    },
     "&[data-readonly='true']": {
       background: theme.colors.neutral.backgroundWeak,
       borderColor: theme.colors.neutral.border,
     },
-    "&[data-success='true']": {
-      borderColor: theme.colors.success.border,
+    "&[data-disabled='true']": {
+      background: theme.colors.neutral.backgroundDisabled,
+      borderColor: theme.colors.neutral.borderDisabled,
     },
   },
   width: '100%',
@@ -86,12 +92,6 @@ const input = style({
     },
     '&:focus': {
       outline: 'none',
-    },
-    [`${inputWrapper} > &`]: {
-      color: theme.colors.neutral.text,
-    },
-    [`${inputWrapper} > &::placeholder`]: {
-      color: theme.colors.neutral.textWeak,
     },
     [`${inputWrapper}[data-disabled='true'] > &`]: {
       color: theme.colors.neutral.textDisabled,

@@ -9,14 +9,14 @@ export const ControlledVSUncontrolled: StoryFn<typeof PhoneInput> = props => {
 
   return (
     <Stack direction="column" gap={2}>
-      <PhoneInput defaultCountry="FR" label="Uncontrolled" {...props} />
+      <PhoneInput {...props} defaultCountry="FR" label="Uncontrolled" />
       <Stack gap={1}>
         <PhoneInput
+          {...props}
           defaultCountry="FR"
           label="Controlled"
           onChange={event => setValue(event.target.value)}
           value={value}
-          {...props}
         />
         <Text as="p" sentiment="neutral" variant="body">
           Current value:{' '}

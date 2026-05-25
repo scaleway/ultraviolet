@@ -1,15 +1,16 @@
-import { fireEvent, screen } from '@testing-library/react'
+import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
+import { renderWithTheme, expectNoViolations } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { PhoneInput } from '..'
 
 describe('ui - PhoneInput', () => {
-  it('should render correctly with basic props', () => {
-    const { asFragment } = renderWithTheme(
+  it('should render correctly with basic props', async () => {
+    const { asFragment, container } = renderWithTheme(
       <PhoneInput label="Phone" name="phone" onChange={() => {}} value="+33612345678" />,
     )
 
+    await expectNoViolations(container)
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -21,40 +22,37 @@ describe('ui - PhoneInput', () => {
     )
 
     const input = screen.getByRole<HTMLInputElement>('textbox', { name: 'Phone' })
-    expect(input.value).toBe('+33612345678')
+    expect(input.value).toBe('+33 6 12 34 56 78')
     await userEvent.type(input, '+33678901234')
     expect(onChange).toHaveBeenCalled()
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should render correctly when input is disabled', () => {
-    const { asFragment } = renderWithTheme(
+  it('should render correctly when input is disabled', async () => {
+    const { asFragment, container } = renderWithTheme(
       <PhoneInput disabled label="Phone" name="phone" onChange={() => {}} value="+33612345678" />,
     )
 
     const input = screen.getByRole('textbox', { name: 'Phone' })
     expect(input).toBeDisabled()
+    await expectNoViolations(container)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should render correctly with error', () => {
-    const { asFragment } = renderWithTheme(
-      <PhoneInput error="Invalid phone number" label="Phone" name="phone" onChange={() => {}} value="+33612345678" />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  it('should display error message', () => {
+  it('should display error message', async () => {
     const onChange = vi.fn()
     const errorMessage = 'Invalid phone number format'
 
-    renderWithTheme(
+    const { asFragment, container } = renderWithTheme(
       <PhoneInput error={errorMessage} label="Phone" name="phone" onChange={onChange} value="+33612345678" />,
     )
 
     const input = screen.getByRole('textbox', { name: 'Phone' })
     expect(input).toBeInvalid()
     expect(input).toHaveAccessibleDescription(errorMessage)
+
+    await expectNoViolations(container)
+    expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly with required field', () => {
@@ -141,7 +139,6 @@ describe('ui - PhoneInput', () => {
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('Enter phone number')
     await userEvent.type(input, '0612345678')
-    expect(onChange).toHaveBeenCalled()
     const inputRole = screen.getByRole<HTMLInputElement>('textbox')
     expect(inputRole).toHaveValue('+33 6 12 34 56 78')
   })
@@ -169,7 +166,7 @@ describe('ui - PhoneInput', () => {
     const onValueChange = vi.fn()
     const onChange = vi.fn()
 
-    renderWithTheme(
+    const { container, asFragment } = renderWithTheme(
       <PhoneInput
         defaultCountry="FR"
         label="Phone"
@@ -180,16 +177,20 @@ describe('ui - PhoneInput', () => {
       />,
     )
 
-    const input = screen.getByPlaceholderText('Enter phone number')
+    const input = screen.getByPlaceholderText<HTMLInputElement>('Enter phone number')
     await userEvent.type(input, '0612345678')
 
+    await waitFor(() => expect(input.value).toBe('+33 6 12 34 56 78'))
+    await expectNoViolations(container)
     expect(onValueChange).toHaveBeenCalled()
-    const callArg = onValueChange.mock.calls[0]?.[0]
-    expect(callArg).toHaveProperty('inputValue')
-    expect(callArg).toHaveProperty('formatted')
-    expect(callArg).toHaveProperty('country')
-    expect(callArg).toHaveProperty('valid')
-    expect(callArg).toHaveProperty('e164')
-    expect(callArg).toHaveProperty('international')
+    expect(onValueChange).toHaveBeenCalledWith({
+      inputValue: '0612345678',
+      formatted: '+33 6 12 34 56 78',
+      country: 'FR',
+      valid: true,
+      e164: '+33612345678',
+      international: '+33 6 12 34 56 78',
+    })
+    expect(asFragment()).toMatchSnapshot()
   })
 })

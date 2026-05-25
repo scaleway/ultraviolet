@@ -1,5 +1,5 @@
+import { parsePhoneValue } from '@scaleway/phonenumber'
 import type { StoryFn } from '@storybook/react-vite'
-import { phoneUtils } from '@ultraviolet/utils'
 import { useState } from 'react'
 import { PhoneInput } from '..'
 
@@ -11,7 +11,7 @@ export const WithUserControlledFormatting: StoryFn<typeof PhoneInput> = () => {
     const inputValue = event.target.value
     setValue(inputValue)
 
-    const parsed = phoneUtils.parsePhoneValue(inputValue, 'FR')
+    const parsed = parsePhoneValue(inputValue, 'FR')
     setParsedData(JSON.stringify(parsed, null, 2))
   }
 
@@ -81,7 +81,7 @@ export const WithExternalValidation: StoryFn<typeof PhoneInput> = () => {
     const inputValue = event.target.value
     setValue(inputValue)
 
-    const parsed = phoneUtils.parsePhoneValue(inputValue, 'FR')
+    const parsed = parsePhoneValue(inputValue, 'FR')
     if (inputValue.length > 0 && !parsed.valid) {
       setError('Invalid phone number format')
     } else {
@@ -92,7 +92,6 @@ export const WithExternalValidation: StoryFn<typeof PhoneInput> = () => {
   return (
     <PhoneInput
       defaultCountry="FR"
-      disableAutoFormat
       error={error}
       label="Phone Number (External Validation)"
       name="phone-validation"

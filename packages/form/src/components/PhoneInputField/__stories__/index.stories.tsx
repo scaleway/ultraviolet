@@ -9,7 +9,9 @@ export default {
   component: PhoneInputField,
   decorators: [
     ChildStory => {
-      const methods = useForm()
+      const methods = useForm({
+        mode: 'onChange',
+      })
       const {
         errors,
         isDirty,

@@ -1,8 +1,9 @@
 'use client'
 
-import { cn, phoneUtils } from '@ultraviolet/utils'
-import { useImperativeHandle, useId, useRef, useState } from 'react'
-import type { ChangeEvent, ComponentType, InputHTMLAttributes, Ref } from 'react'
+import { parsePhoneNumber, getPhoneCountryFlag, getPhoneExample } from '@scaleway/phonenumber'
+import { cn } from '@ultraviolet/utils'
+import { useImperativeHandle, useId, useRef, useState, useEffect, forwardRef, useCallback } from 'react'
+import type { ChangeEvent, ComponentType, InputHTMLAttributes, ForwardedRef, Ref } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { Description } from '../Description'
 import type { DescriptionProps } from '../Description'
@@ -20,11 +21,10 @@ type PhoneInputLabelProps = {
 type InputProps = Partial<
   Pick<
     InputHTMLAttributes<HTMLInputElement>,
-    | 'aria-atomic'
-    | 'aria-describedby'
     | 'aria-label'
     | 'aria-labelledby'
     | 'aria-live'
+    | 'aria-describedby'
     | 'disabled'
     | 'id'
     | 'name'
@@ -61,157 +61,167 @@ type PhoneInputProps = PhoneInputLabelProps & {
 
 type PhoneInputType = ComponentType<PhoneInputProps>
 
-export const PhoneInput: PhoneInputType = ({
-  'data-testid': dataTestId,
-  'aria-labelledby': ariaLabelledBy,
-  'aria-describedby': ariaDescribedBy,
-  'aria-label': ariaLabel,
-  'aria-live': ariaLive,
-  'aria-atomic': ariaAtomic,
-  className,
-  defaultCountry = 'FR',
-  disableAutoFormat = false,
-  disabled = false,
-  error: customError,
-  id,
-  label = 'Phone',
-  success,
-  error,
-  helper,
-  tooltip,
-  name,
-  size = 'large',
-  onBlur,
-  onChange,
-  onFocus,
-  onParsingError,
-  onValueChange,
-  placeholder,
-  readOnly,
-  ref,
-  role,
-  required,
-  value,
-}) => {
-  const inputRef = useRef<HTMLInputElement>(null)
+export const PhoneInput: PhoneInputType = forwardRef(
+  (
+    {
+      'data-testid': dataTestId,
+      'aria-labelledby': ariaLabelledBy,
+      'aria-describedby': ariaDescribedBy,
+      'aria-label': ariaLabel,
+      className,
+      defaultCountry = 'FR',
+      disableAutoFormat = false,
+      disabled = false,
+      error: customError,
+      id,
+      label,
+      success,
+      error,
+      helper,
+      tooltip,
+      name,
+      size = 'large',
+      onBlur,
+      onChange,
+      onFocus,
+      onParsingError,
+      onValueChange,
+      placeholder,
+      readOnly,
+      role,
+      required,
+      value,
+    },
+    ref: ForwardedRef<HTMLInputElement>,
+  ) => {
+    const localRef = useRef<HTMLInputElement>(null)
 
-  useImperativeHandle(ref, () => inputRef.current!, [inputRef])
+    useImperativeHandle(ref, () => localRef.current!)
+    const [countryFlag, setCountryFlag] = useState(defaultCountry)
 
-  const [countryFlag, setCountryFlag] = useState(defaultCountry)
-
-  const formatNumber = ({ inputValue }: { inputValue: string }) => {
-    try {
-      const parsed = phoneUtils.parsePhoneNumber(inputValue)
-      const country = parsed.regionCode
-      let phoneNumber = inputValue
-
-      if (country) {
-        setCountryFlag(country)
-      } else {
-        setCountryFlag(defaultCountry)
-        if (phoneNumber.length === 10) {
-          phoneNumber = `+33${phoneNumber}`
+    const formatPhoneNumber = useCallback(
+      ({ inputValue }: { inputValue: string }) => {
+        if (disableAutoFormat) {
+          return inputValue
         }
+
+        try {
+          const parsed = parsePhoneNumber(inputValue)
+          const { regionCode = defaultCountry } = parsed
+
+          const isValid = inputValue.length > 4 && parsePhoneNumber(inputValue, { regionCode }).valid
+
+          const formattedNumber = isValid
+            ? parsePhoneNumber(inputValue, { regionCode }).number?.international
+            : inputValue
+
+          const e164 = isValid ? parsePhoneNumber(inputValue, { regionCode }).number?.e164 : null
+
+          const result = {
+            inputValue,
+            formatted: formattedNumber ?? inputValue,
+            country: regionCode,
+            valid: isValid,
+            e164: e164 ?? null,
+            international: formattedNumber ?? null,
+          }
+          onValueChange?.(result)
+          setCountryFlag(regionCode)
+
+          return formattedNumber
+          // oxlint-disable-next-line eslint/no-shadow
+        } catch (error: unknown) {
+          if (error instanceof Error) {
+            onParsingError?.({
+              error,
+              inputValue,
+            })
+          }
+
+          return inputValue
+        }
+      },
+      [onParsingError, disableAutoFormat, onValueChange, defaultCountry],
+    )
+
+    const handleOnChangeCallback = useCallback(
+      (inputValue: string) => {
+        if (localRef.current) {
+          localRef.current.value =
+            formatPhoneNumber({
+              inputValue,
+            }) ?? ''
+        }
+      },
+      [formatPhoneNumber],
+    )
+
+    useEffect(() => {
+      if (value) {
+        handleOnChangeCallback(value)
       }
+    }, [handleOnChangeCallback, value])
 
-      const isValid =
-        phoneNumber.length > 4 && phoneUtils.parsePhoneNumber(phoneNumber, { regionCode: countryFlag }).valid
+    const uniqueId = useId()
+    const helperId = useId()
+    const localId = id || `phone-${uniqueId}`
 
-      const formattedNumber = isValid
-        ? phoneUtils.parsePhoneNumber(phoneNumber, { regionCode: countryFlag }).number?.international
-        : phoneNumber
-
-      const e164 = isValid ? phoneUtils.parsePhoneNumber(phoneNumber, { regionCode: countryFlag }).number?.e164 : null
-
-      const result = {
-        inputValue,
-        formatted: formattedNumber ?? inputValue,
-        country: country ?? countryFlag,
-        valid: isValid,
-        e164: e164 ?? null,
-        international: formattedNumber ?? null,
-      }
-
-      onValueChange?.(result)
-
-      if (disableAutoFormat) {
-        return inputValue
-      }
-
-      return formattedNumber
-      // oxlint-disable-next-line eslint/no-shadow
-    } catch (error: unknown) {
-      if (error instanceof Error) {
-        onParsingError?.({
-          error,
-          inputValue,
-        })
-      }
-
-      return inputValue
-    }
-  }
-
-  const localId = id || `phone-${name}`
-  const helperId = useId()
-
-  return (
-    <Stack aria-atomic={ariaAtomic} aria-live={ariaLive} className={className} gap={0.5} role={role}>
-      {label ? (
-        <Label htmlFor={id ?? localId} id={ariaLabelledBy} required={required} size={size}>
-          {label}
-        </Label>
-      ) : null}
-      <Tooltip text={tooltip}>
-        <div
-          aria-disabled={disabled}
-          className={cn(className, phoneInputStyle.inputWrapper, phoneInputStyle.inputWrapperSizes[size])}
-          data-disabled={disabled}
-          data-error={!!customError}
-        >
-          <Stack alignItems="center" className={phoneInputStyle.flag}>
-            {phoneUtils.getPhoneCountryFlag(countryFlag)}
-          </Stack>
-          <input
-            aria-invalid={!!error}
-            aria-label={label ? undefined : ariaLabel}
-            aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
-            aria-labelledby={ariaLabelledBy}
-            className={phoneInputStyle.input}
-            data-testid={dataTestId}
-            data-size={size}
-            disabled={disabled}
-            required={required}
-            readOnly={readOnly}
-            id={localId}
-            maxLength={20}
-            name={name}
-            onBlur={onBlur}
-            onChange={event => {
-              if (inputRef.current) {
-                inputRef.current.value =
-                  formatNumber({
-                    inputValue: inputRef.current.value,
-                  }) ?? ''
-              }
-              onChange?.(event)
-            }}
-            onFocus={onFocus}
-            placeholder={placeholder ?? phoneUtils.getPhoneExample(countryFlag, 'mobile').number?.international}
-            ref={inputRef}
-            type="tel"
-            value={value}
-          />
-        </div>
-      </Tooltip>
-      <Description
-        helper={helper}
-        error={error}
-        success={success}
-        size={size}
-        disabled={disabled}
-        id={ariaDescribedBy ?? helperId}
-      />
-    </Stack>
-  )
-}
+    return (
+      <Stack className={className} gap={0.5} role={role}>
+        {label ? (
+          <Label htmlFor={localId} required={required} size={size}>
+            {label}
+          </Label>
+        ) : null}
+        <Tooltip text={tooltip}>
+          <div
+            className={cn(className, phoneInputStyle.inputWrapper, phoneInputStyle.inputWrapperSizes[size])}
+            data-disabled={disabled}
+            data-readonly={readOnly}
+            data-success={readOnly}
+            data-error={!!customError}
+          >
+            <Stack alignItems="center" className={phoneInputStyle.flag} data-disabled={disabled}>
+              {getPhoneCountryFlag(countryFlag)}
+            </Stack>
+            <input
+              aria-invalid={!!error}
+              aria-label={label ? undefined : ariaLabel}
+              aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
+              aria-labelledby={ariaLabelledBy}
+              className={phoneInputStyle.input}
+              data-testid={dataTestId}
+              data-size={size}
+              disabled={disabled}
+              required={required}
+              readOnly={readOnly}
+              id={localId}
+              maxLength={20}
+              name={name}
+              onBlur={onBlur}
+              onChange={event => {
+                if (localRef.current) {
+                  handleOnChangeCallback(localRef.current.value)
+                }
+                onChange?.(event)
+              }}
+              onFocus={onFocus}
+              placeholder={placeholder ?? getPhoneExample(countryFlag, 'mobile').number?.international}
+              ref={localRef}
+              type="tel"
+              value={localRef.current?.value}
+            />
+          </div>
+        </Tooltip>
+        <Description
+          helper={helper}
+          error={error}
+          success={success}
+          size={size}
+          disabled={disabled}
+          id={ariaDescribedBy ?? helperId}
+        />
+      </Stack>
+    )
+  },
+)

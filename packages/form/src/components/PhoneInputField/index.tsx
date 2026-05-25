@@ -1,8 +1,8 @@
 'use client'
 
+import { parsePhoneNumber } from '@scaleway/phonenumber'
 import type { BaseFieldProps, FieldPath, FieldValues } from '@ultraviolet/form'
 import { PhoneInput } from '@ultraviolet/ui'
-import { phoneUtils } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
@@ -24,19 +24,20 @@ export const PhoneInputField = <
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
+  'aria-label': ariaLabel,
   className,
-  disabled,
-  id,
-  errorLabel,
-  label,
   control,
+  defaultCountry,
+  disabled,
+  errorLabel,
+  id,
+  label,
   name,
   onBlur,
   onChange,
   onFocus,
-  required,
-  defaultCountry,
   placeholder,
+  required,
   'data-testid': dataTestId,
   parseNumberErrorMessage = "This doesn't appear to be a valid phone number.",
   onParsingError,
@@ -51,10 +52,9 @@ export const PhoneInputField = <
     control,
     name,
     rules: {
-      required,
       validate: (phoneNumber: PhoneInputValue) => {
         try {
-          return !!phoneNumber && !phoneUtils.parsePhoneNumber(phoneNumber).valid ? parseNumberErrorMessage : undefined
+          return !!phoneNumber && !parsePhoneNumber(phoneNumber).valid ? parseNumberErrorMessage : undefined
         } catch (error: unknown) {
           if (error instanceof Error) {
             onParsingError?.({
@@ -66,12 +66,18 @@ export const PhoneInputField = <
           return phoneNumber
         }
       },
+      required,
     },
     shouldUnregister,
   })
 
-  const internalError = getError({ label: errorLabel ?? label ?? name }, fieldError)
-
+  const internalError = getError(
+    {
+      label: errorLabel ?? label ?? ariaLabel ?? name,
+      value: field.value,
+    },
+    fieldError,
+  )
   return (
     <PhoneInput
       {...props}
@@ -96,7 +102,6 @@ export const PhoneInputField = <
       }}
       onParsingError={onParsingError}
       placeholder={placeholder}
-      ref={field.ref}
       required={required}
       value={field.value}
     />
