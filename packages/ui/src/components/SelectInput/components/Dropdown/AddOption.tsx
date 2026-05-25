@@ -11,7 +11,7 @@ export const AddOption = ({
   isEmpty,
 }: {
   option: OptionType
-  textVariant: 'caption' | 'body' | 'bodySmall'
+  textVariant: 'body' | 'bodySmall'
   addOption?: {
     text: string
     onClick: (searchText: string) => void

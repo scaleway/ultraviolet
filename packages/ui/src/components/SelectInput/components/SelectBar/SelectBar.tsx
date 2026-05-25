@@ -167,16 +167,7 @@ const SelectBar = ({
     )
   }, [multiselect, options, potentiallyNonOverflowedValues.length, selectedData.selectedValues])
 
-  const textVariant = useMemo(() => {
-    if (size === 'large') {
-      return 'body'
-    }
-    if (size === 'medium') {
-      return 'bodySmall'
-    }
-
-    return 'caption'
-  }, [size])
+  const textVariant = useMemo(() => (size === 'large' ? 'body' : 'bodySmall'), [size])
 
   return (
     <Tooltip disableAnimation text={tooltip}>

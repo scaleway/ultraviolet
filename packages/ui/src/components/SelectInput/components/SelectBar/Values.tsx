@@ -26,7 +26,7 @@ type DisplayValuesProps = {
   overflow?: boolean
   refPlusTag: RefObject<HTMLDivElement | null>
   displayShadowCopy?: boolean
-  textVariant: 'body' | 'bodySmall' | 'caption'
+  textVariant: 'body' | 'bodySmall'
 }
 
 export const DisplayValues = ({

@@ -22,7 +22,7 @@ export const Item = ({
   defaultSearchValue: string | null
   focusedItemRef: RefObject<HTMLDivElement | null>
   descriptionDirection: 'column' | 'row'
-  textVariant: 'caption' | 'body' | 'bodySmall'
+  textVariant: 'body' | 'bodySmall'
   optionalInfoPlacement: 'left' | 'right'
 }) => {
   const { setIsDropdownVisible, onChange, multiselect, setSelectedData, selectedData, size } = useSelectInput()

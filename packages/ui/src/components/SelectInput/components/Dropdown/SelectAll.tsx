@@ -6,7 +6,7 @@ import { useSelectInput } from '../../SelectInputProvider'
 import type { OptionType } from '../../types'
 import { selectInputStyle } from '../../styles.css'
 
-export const SelectAll = ({ textVariant }: { textVariant: 'body' | 'bodySmall' | 'caption' }) => {
+export const SelectAll = ({ textVariant }: { textVariant: 'body' | 'bodySmall' }) => {
   const { onChange, options, multiselect, selectAll, setSelectedData, selectedData, size } = useSelectInput()
   const selectAllOptions = () => {
     if (multiselect) {
@@ -69,7 +69,7 @@ export const SelectAll = ({ textVariant }: { textVariant: 'body' | 'bodySmall' |
               placement="left"
               prominence="weak"
               sentiment="neutral"
-              variant={size === 'small' ? 'captionSmall' : 'bodySmall'}
+              variant={size === 'large' ? 'bodySmall' : 'caption'}
             >
               {selectAll?.description}
             </Text>

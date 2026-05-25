@@ -2,7 +2,7 @@
 
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { cn } from '@ultraviolet/utils'
-import { useEffect, useMemo, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import type { KeyboardEvent, ReactNode } from 'react'
 import { Skeleton } from '../../../Skeleton'
 import { Stack } from '../../../Stack'
@@ -30,25 +30,25 @@ type CreateDropdownProps = {
 }
 
 const moveFocusDown = () => {
-  const options = document.querySelectorAll(OPTION_SELECTOR)
+  const options = document.querySelectorAll<HTMLElement>(OPTION_SELECTOR)
   const activeItem = document.activeElement
   if (options) {
     for (let i = 0; i < options?.length; i += 1) {
       const listLength = options.length
       if (activeItem === options[i] && activeItem !== options[listLength - 1]) {
-        ;(options[i + 1] as HTMLElement).focus()
+        options[i + 1].focus()
       }
     }
   }
 }
 const moveFocusUp = () => {
-  const options = document.querySelectorAll(OPTION_SELECTOR)
+  const options = document.querySelectorAll<HTMLElement>(OPTION_SELECTOR)
   const activeItem = document.activeElement
 
   if (options) {
     for (let i = 0; i < options.length; i += 1) {
       if (activeItem === options[i] && activeItem !== options[0]) {
-        ;(options[i - 1] as HTMLElement).focus()
+        options[i - 1].focus()
       }
     }
   }
@@ -92,18 +92,8 @@ export const CreateDropdown = ({
     }
   }, [defaultSearchValue])
 
-  const textVariant = useMemo(() => {
-    if (size === 'large') {
-      return 'body'
-    }
-    if (size === 'medium') {
-      return 'bodySmall'
-    }
+  const textVariant = size === 'large' ? 'body' : 'bodySmall'
 
-    return 'caption'
-  }, [size])
-
-  const textVariantSmall = size === 'small' ? 'captionStrong' : 'bodySmallStrong'
   const sizeVariantIcon = size === 'small' ? 'xsmall' : 'small'
 
   const computedEmptyState = emptyState ?? (
@@ -115,7 +105,7 @@ export const CreateDropdown = ({
   const addOptionLabel = (
     <Stack alignItems="center" direction="row" gap="1">
       <PlusIcon sentiment="primary" size={sizeVariantIcon} />
-      <Text as="span" sentiment="primary" variant={textVariantSmall}>
+      <Text as="span" sentiment="primary" variant="bodySmallStrong">
         {addOption?.text} {searchInput}
       </Text>
     </Stack>
