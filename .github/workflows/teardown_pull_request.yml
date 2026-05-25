@@ -13,9 +13,9 @@ jobs:
       SCW_DNS: ${{ github.ref_name == 'main' && 'storybook.ultraviolet.scaleway.com' || '' }}
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - name: Inject slug/short variables
-        uses: rlespinasse/github-slug-action@v5
+        uses: rlespinasse/github-slug-action@e6f261660910b273384c5c42b17a0217881b217a # v5
 
       - name: Export custom variables
         run: |
@@ -23,7 +23,7 @@ jobs:
           echo "STORYBOOK_BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL" >> $GITHUB_ENV
 
       - name: Deploy Serverless Container Scaleway
-        uses: philibea/scaleway-containers-deploy@v1.1.5
+        uses: philibea/scaleway-containers-deploy@0d640c31f4e7d2e3c7b830e89d19b9253624c40f # v1.1.5
         id: deploy
         with:
           type: 'teardown'
@@ -34,7 +34,7 @@ jobs:
           scw_registry: ${{ env.IMAGE_NAME }}:${{ env.STORYBOOK_BRANCH_SLUG }}
 
       - name: Remove storybook deployment
-        uses: bobheadxi/deployments@v1.5.0
+        uses: bobheadxi/deployments@648679e8e4915b27893bd7dbc35cb504dc915bc8 # v1.5.0
         with:
           step: deactivate-env
           token: ${{ secrets.GITHUB_TOKEN }}
