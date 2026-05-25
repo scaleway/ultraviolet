@@ -1,11 +1,9 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-
 import { FileInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-
 import type { FilesType } from '../types'
-import type { StoryFn } from '@storybook/react-vite'
 
 export const AllowDirectories: StoryFn<typeof FileInput> = args => {
   const [files, setFiles] = useState<FilesType[]>()
@@ -24,9 +22,7 @@ export const AllowDirectories: StoryFn<typeof FileInput> = args => {
       >
         {(_, inputRef) => (
           <>
-            <Button onClick={() => inputRef.current?.click()}>
-              Click to add
-            </Button>
+            <Button onClick={() => inputRef.current?.click()}>Click to add</Button>
             Number of files: {files?.length ?? 0}
           </>
         )}

@@ -1,7 +1,7 @@
 'use client'
 
 import type { ChangeEvent, DragEvent as DragEventReact } from 'react'
-import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { Description } from '../Description'
 import { Label } from '../Label'
@@ -46,7 +46,11 @@ const FileInputBase = ({
   onKeyUp,
   disabledDragndrop = false,
   validator,
-  onDropError,
+  onDropError = (e: unknown) => {
+    if (e instanceof Error) {
+      throw e
+    }
+  },
   'data-testid': dataTestid,
   'aria-describedby': ariaDescribedBy,
   allowDirectories,
@@ -100,55 +104,52 @@ const FileInputBase = ({
     }
   }, [defaultFiles])
 
-  const addFiles = useCallback(
-    (addedFiles: FileList | null): [File[], ErrorType[]] => {
-      const droppedFiles = [...(addedFiles ?? [])]
-      const newFiles: File[] = []
-      const errorFiles: ErrorType[] = []
+  const addFiles = (addedFiles: FileList | null): [File[], ErrorType[]] => {
+    const droppedFiles = [...(addedFiles ?? [])]
+    const newFiles: File[] = []
+    const errorFiles: ErrorType[] = []
 
-      for (const file of droppedFiles) {
-        const isAccepted = fileIsAccepted(file.type, file.name, accept)
-        const customError = validator?.(file)
+    for (const file of droppedFiles) {
+      const isAccepted = fileIsAccepted(file.type, file.name, accept)
+      const customError = validator?.(file)
 
-        if (isAccepted && !customError) {
-          newFiles.push(file)
-        } else {
-          const acceptArray = accept?.split(',')
-          const defaultMessage = acceptArray
-            ? `File type must be ${acceptArray.length > 1 ? `one of ${acceptArray.join(', ')}` : acceptArray[0]}`
-            : 'Error'
+      if (isAccepted && !customError) {
+        newFiles.push(file)
+      } else {
+        const acceptArray = accept?.split(',')
+        const defaultMessage = acceptArray
+          ? `File type must be ${acceptArray.length > 1 ? `one of ${acceptArray.join(', ')}` : acceptArray[0]}`
+          : 'Error'
 
-          errorFiles.push({
-            fileName: file.name,
-            error: customError ?? defaultMessage,
-          })
-        }
+        errorFiles.push({
+          fileName: file.name,
+          error: customError ?? defaultMessage,
+        })
       }
+    }
 
-      const formattedNewFiles = newFiles.map(file => ({
-        file: URL.createObjectURL(file),
-        fileName: file.name,
-        lastModified: file.lastModified,
-        size: file.size,
-        type: file.type,
-      }))
+    const formattedNewFiles = newFiles.map(file => ({
+      file: URL.createObjectURL(file),
+      fileName: file.name,
+      lastModified: file.lastModified,
+      size: file.size,
+      type: file.type,
+    }))
 
-      const formattedFiles = computedMultiple ? [...files, ...formattedNewFiles] : [formattedNewFiles[0]]
-      setFiles(formattedFiles)
-      onChangeFiles?.(formattedFiles)
+    const formattedFiles = computedMultiple ? [...files, ...formattedNewFiles] : [formattedNewFiles[0]]
+    setFiles(formattedFiles)
+    onChangeFiles?.(formattedFiles)
 
-      if (addedFiles) {
-        onChange?.(addedFiles)
-      }
+    if (addedFiles) {
+      onChange?.(addedFiles)
+    }
 
-      if (inputRef.current) {
-        inputRef.current.value = ''
-      }
+    if (inputRef.current) {
+      inputRef.current.value = ''
+    }
 
-      return [newFiles, errorFiles]
-    },
-    [onChangeFiles, computedMultiple, files, accept, validator, onChange],
-  )
+    return [newFiles, errorFiles]
+  }
 
   const onChangeLocal = (event: ChangeEvent<HTMLInputElement>) => {
     event.preventDefault()
@@ -158,33 +159,20 @@ const FileInputBase = ({
     }
   }
 
-  const onDropComputed = useCallback(
-    async (event: DragEventReact<HTMLElement>) => {
-      event.preventDefault()
+  const onDropComputed = async (event: DragEventReact<HTMLElement>) => {
+    event.preventDefault()
 
-      if (!disabled && allowDirectories && !disabledDragndrop) {
-        const readFile = await readEntry(event.dataTransfer, onDropError).catch(
-          // oxlint-disable-next-line unicorn/catch-error-name : a const `error` is defined elsewhere
-          (e: unknown) => onDropError?.(e),
-        )
-        if (readFile) {
-          const [acceptedFiles, errorFiles] = addFiles(readFile)
-          onDrop?.(event, acceptedFiles, errorFiles)
-        }
-      } else if (!(disabled || disabledDragndrop)) {
-        const [acceptedFiles, errorFiles] = addFiles(event.dataTransfer?.files)
+    if (!disabled && allowDirectories && !disabledDragndrop) {
+      const readFile = await readEntry(event.dataTransfer, onDropError).catch(onDropError)
+      if (readFile) {
+        const [acceptedFiles, errorFiles] = addFiles(readFile)
         onDrop?.(event, acceptedFiles, errorFiles)
       }
-    },
-    [
-      disabled,
-      onDrop,
-      allowDirectories,
-      addFiles,
-      disabledDragndrop,
-      onDropError,
-    ],
-  )
+    } else if (!(disabled || disabledDragndrop)) {
+      const [acceptedFiles, errorFiles] = addFiles(event.dataTransfer?.files)
+      onDrop?.(event, acceptedFiles, errorFiles)
+    }
+  }
 
   const computedChildren = typeof children === 'function' ? children(inputId, inputRef) : children
 
@@ -258,10 +246,7 @@ const FileInputBase = ({
                 }
                 onDragOver={event => event.preventDefault()}
                 onDrop={event => {
-                  // oxlint-disable-next-line unicorn/catch-error-name : a const `error` is defined elsewhere
-                  onDropComputed(event).catch((e: unknown) => {
-                    onDropError?.(e)
-                  })
+                  onDropComputed(event).catch(onDropError)
                 }}
                 style={style}
               >
@@ -309,9 +294,7 @@ const FileInputBase = ({
             data-testid="drag-container"
             onDragOver={onDragOver}
             onDrop={event => {
-              onDropComputed(event).catch(() => {
-                throw new Error('An error occured')
-              })
+              onDropComputed(event).catch(onDropError)
             }}
           >
             <DropzoneContent

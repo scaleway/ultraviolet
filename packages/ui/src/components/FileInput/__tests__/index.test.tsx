@@ -467,6 +467,26 @@ describe('fileInput', () => {
       />,
     )
 
+    class MockDataTransfer {
+      readonly #files: File[] = []
+
+      public get items() {
+        return {
+          add: (file: File) => {
+            this.#files.push(file)
+          },
+        }
+      }
+
+      public get files(): FileList {
+        return this.#files as unknown as FileList
+      }
+    }
+    Object.defineProperty(globalThis, 'DataTransfer', {
+      value: MockDataTransfer,
+      writable: true,
+    })
+
     const dropzone = screen.getByRole('button', { name: 'UploadIcon title' })
     const dirFile = new File(['content1'], 'dir/file1.png', {
       type: 'image/png',

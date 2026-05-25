@@ -25,11 +25,7 @@ export const formatFileSize = (bytes: number): string => {
   return `${formattedSize} ${units[unitIndex]}`
 }
 
-export const fileIsAccepted = (
-  fileType: string,
-  fileName: string,
-  accept?: string,
-) => {
+export const fileIsAccepted = (fileType: string, fileName: string, accept?: string) => {
   if (!accept) {
     return true
   }
@@ -58,13 +54,9 @@ export const fileIsAccepted = (
   return false
 }
 
-const isFileSystemFileEntry = (
-  entry: FileSystemEntry,
-): entry is FileSystemFileEntry => !!entry.isFile
+const isFileSystemFileEntry = (entry: FileSystemEntry): entry is FileSystemFileEntry => !!entry.isFile
 
-const isFileSystemDirEntry = (
-  entry: FileSystemEntry,
-): entry is FileSystemDirectoryEntry => !!entry.isDirectory
+const isFileSystemDirEntry = (entry: FileSystemEntry): entry is FileSystemDirectoryEntry => !!entry.isDirectory
 
 const convertEntryToFile = (entry: FileSystemFileEntry): Promise<File> =>
   new Promise((resolve, reject) => {
@@ -96,21 +88,17 @@ const readEntries = async (
       break
     }
 
-    const computedFiles = results
-      .filter(entry => isFileSystemFileEntry(entry))
-      .map(entry => entry)
-    const computedDirs = results
-      .filter(entry => isFileSystemDirEntry(entry))
-      .map(entry => entry)
+    const computedFiles = results.filter(entry => isFileSystemFileEntry(entry)).map(entry => entry)
+    const computedDirs = results.filter(entry => isFileSystemDirEntry(entry)).map(entry => entry)
 
     entries.push(...computedFiles)
     subdirs.push(...computedDirs)
   }
 
   // Process all subdirectories in parallel with promise.all
-  const subdirFiles = await Promise.all(
-    subdirs.map(subdir => readEntries(subdir, onDropError)),
-  ).catch((error: unknown) => onDropError?.(error))
+  const subdirFiles = await Promise.all(subdirs.map(subdir => readEntries(subdir, onDropError))).catch(
+    (error: unknown) => onDropError?.(error),
+  )
 
   if (subdirFiles) {
     for (const files of subdirFiles) {
@@ -121,10 +109,7 @@ const readEntries = async (
   return entries
 }
 
-export const readEntry = async (
-  dataTransfer: DataTransfer,
-  onDropError?: (error: unknown) => void,
-) => {
+export const readEntry = async (dataTransfer: DataTransfer, onDropError?: (error: unknown) => void) => {
   const items = [...dataTransfer.items].map(entry => entry.webkitGetAsEntry())
   const dataTransferComputed = new DataTransfer()
 

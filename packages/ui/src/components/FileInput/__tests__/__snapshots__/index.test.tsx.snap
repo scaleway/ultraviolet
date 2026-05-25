@@ -191,14 +191,14 @@ exports[`fileInput > renders correctly onChange 1`] = `
             class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_headingSmallStrong__m4c9ow16 style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
             style="--textAlign__qabug40: left;"
           />
-          <div
-            class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
+          <ul
+            class="styles__12cubgsl styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
           >
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="cat.png"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -245,13 +245,13 @@ exports[`fileInput > renders correctly onChange 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="error_example.png"
             >
-              <li
+              <div
                 class="styles_error__12cubgso styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -310,18 +310,18 @@ exports[`fileInput > renders correctly onChange 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
+              </div>
               <p
                 class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
               >
                 Maximum file size exceeded
               </p>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="doc.pdf"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -380,13 +380,13 @@ exports[`fileInput > renders correctly onChange 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="video.mp4"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -446,13 +446,13 @@ exports[`fileInput > renders correctly onChange 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="loading_example.pdf"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -528,9 +528,9 @@ exports[`fileInput > renders correctly onChange 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -582,14 +582,14 @@ exports[`fileInput > renders correctly onChangeFiles 1`] = `
             class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_headingSmallStrong__m4c9ow16 style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
             style="--textAlign__qabug40: left;"
           />
-          <div
-            class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
+          <ul
+            class="styles__12cubgsl styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
           >
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="cat.png"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -636,13 +636,13 @@ exports[`fileInput > renders correctly onChangeFiles 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="error_example.png"
             >
-              <li
+              <div
                 class="styles_error__12cubgso styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -701,18 +701,18 @@ exports[`fileInput > renders correctly onChangeFiles 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
+              </div>
               <p
                 class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
               >
                 Maximum file size exceeded
               </p>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="doc.pdf"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -771,13 +771,13 @@ exports[`fileInput > renders correctly onChangeFiles 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="video.mp4"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -837,13 +837,13 @@ exports[`fileInput > renders correctly onChangeFiles 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="loading_example.pdf"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -919,9 +919,9 @@ exports[`fileInput > renders correctly onChangeFiles 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -951,14 +951,14 @@ exports[`fileInput > renders correctly ondrop, ondrag 1`] = `
         <div
           class="styles__12cubgsc"
         >
-          <div
-            class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
+          <ul
+            class="styles__12cubgsl styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
           >
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="cat.png"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -1005,13 +1005,13 @@ exports[`fileInput > renders correctly ondrop, ondrag 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="error_example.png"
             >
-              <li
+              <div
                 class="styles_error__12cubgso styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -1070,18 +1070,18 @@ exports[`fileInput > renders correctly ondrop, ondrag 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
+              </div>
               <p
                 class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
               >
                 Maximum file size exceeded
               </p>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="sound.mp3"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -1150,13 +1150,13 @@ exports[`fileInput > renders correctly ondrop, ondrag 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="doc.pdf"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -1215,13 +1215,13 @@ exports[`fileInput > renders correctly ondrop, ondrag 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="video.mp4"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -1281,13 +1281,13 @@ exports[`fileInput > renders correctly ondrop, ondrag 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="loading_example.pdf"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -1363,9 +1363,9 @@ exports[`fileInput > renders correctly ondrop, ondrag 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+          </ul>
           nodrag
           <div
             class="styles_default__12cubgse styles__12cubgsd"
@@ -1457,14 +1457,14 @@ exports[`fileInput > renders correctly when drag and drop disabled 1`] = `
         <div
           class="styles__12cubgsc"
         >
-          <div
-            class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
+          <ul
+            class="styles__12cubgsl styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
           >
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="cat.png"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -1511,13 +1511,13 @@ exports[`fileInput > renders correctly when drag and drop disabled 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="error_example.png"
             >
-              <li
+              <div
                 class="styles_error__12cubgso styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -1576,18 +1576,18 @@ exports[`fileInput > renders correctly when drag and drop disabled 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
+              </div>
               <p
                 class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
               >
                 Maximum file size exceeded
               </p>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="sound.mp3"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -1656,13 +1656,13 @@ exports[`fileInput > renders correctly when drag and drop disabled 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="doc.pdf"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -1721,13 +1721,13 @@ exports[`fileInput > renders correctly when drag and drop disabled 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="video.mp4"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -1787,13 +1787,13 @@ exports[`fileInput > renders correctly when drag and drop disabled 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="loading_example.pdf"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -1869,9 +1869,9 @@ exports[`fileInput > renders correctly when drag and drop disabled 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+          </ul>
           nodrag
           <div
             class="styles_default__12cubgse styles__12cubgsd"
@@ -1927,14 +1927,14 @@ exports[`fileInput > renders correctly with FileInput.Button 1`] = `
             class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_headingSmallStrong__m4c9ow16 style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
             style="--textAlign__qabug40: left;"
           />
-          <div
-            class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
+          <ul
+            class="styles__12cubgsl styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
           >
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="cat.png"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -1981,13 +1981,13 @@ exports[`fileInput > renders correctly with FileInput.Button 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="error_example.png"
             >
-              <li
+              <div
                 class="styles_error__12cubgso styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -2046,18 +2046,18 @@ exports[`fileInput > renders correctly with FileInput.Button 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
+              </div>
               <p
                 class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
               >
                 Maximum file size exceeded
               </p>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="sound.mp3"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -2126,13 +2126,13 @@ exports[`fileInput > renders correctly with FileInput.Button 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="doc.pdf"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -2191,13 +2191,13 @@ exports[`fileInput > renders correctly with FileInput.Button 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="video.mp4"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -2257,13 +2257,13 @@ exports[`fileInput > renders correctly with FileInput.Button 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="loading_example.pdf"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -2339,9 +2339,9 @@ exports[`fileInput > renders correctly with FileInput.Button 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+          </ul>
           <button
             class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_primary__e1wcoe9 styles_size_large__e1wcoee styles_variant_filled__e1wcoei styles_undefined_compound_0__e1wcoel"
             type="button"
@@ -2561,14 +2561,14 @@ exports[`fileInput > renders correctly with multiple and list 1`] = `
             class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_headingSmallStrong__m4c9ow16 style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
             style="--textAlign__qabug40: left;"
           />
-          <div
-            class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
+          <ul
+            class="styles__12cubgsl styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
           >
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="cat.png"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -2615,13 +2615,13 @@ exports[`fileInput > renders correctly with multiple and list 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="error_example.png"
             >
-              <li
+              <div
                 class="styles_error__12cubgso styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -2680,18 +2680,18 @@ exports[`fileInput > renders correctly with multiple and list 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
+              </div>
               <p
                 class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
               >
                 Maximum file size exceeded
               </p>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="sound.mp3"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -2760,13 +2760,13 @@ exports[`fileInput > renders correctly with multiple and list 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="doc.pdf"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -2825,13 +2825,13 @@ exports[`fileInput > renders correctly with multiple and list 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="video.mp4"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -2891,13 +2891,13 @@ exports[`fileInput > renders correctly with multiple and list 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="loading_example.pdf"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -2973,9 +2973,9 @@ exports[`fileInput > renders correctly with multiple and list 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -3027,14 +3027,14 @@ exports[`fileInput > should handle adding a file when selecting via the hidden f
             class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_headingSmallStrong__m4c9ow16 style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
             style="--textAlign__qabug40: left;"
           />
-          <div
-            class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
+          <ul
+            class="styles__12cubgsl styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
           >
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="upload.png"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -3093,9 +3093,9 @@ exports[`fileInput > should handle adding a file when selecting via the hidden f
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -3199,14 +3199,14 @@ exports[`fileInput > should work correctly with listLimit 1`] = `
             class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_headingSmallStrong__m4c9ow16 style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
             style="--textAlign__qabug40: left;"
           />
-          <div
-            class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
+          <ul
+            class="styles__12cubgsl styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
           >
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="cat.png"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -3253,13 +3253,13 @@ exports[`fileInput > should work correctly with listLimit 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="error_example.png"
             >
-              <li
+              <div
                 class="styles_error__12cubgso styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -3318,18 +3318,18 @@ exports[`fileInput > should work correctly with listLimit 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
+              </div>
               <p
                 class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
               >
                 Maximum file size exceeded
               </p>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="sound.mp3"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -3398,13 +3398,13 @@ exports[`fileInput > should work correctly with listLimit 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="doc.pdf"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -3463,13 +3463,13 @@ exports[`fileInput > should work correctly with listLimit 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="video.mp4"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -3529,13 +3529,13 @@ exports[`fileInput > should work correctly with listLimit 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-            <ul
-              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </div>
+            </li>
+            <li
+              class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
               data-testid="loading_example.pdf"
             >
-              <li
+              <div
                 class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
               >
                 <div
@@ -3611,9 +3611,9 @@ exports[`fileInput > should work correctly with listLimit 1`] = `
                     />
                   </svg>
                 </button>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -3665,14 +3665,14 @@ exports[`fileInput > should work with function children and title 1`] = `
             class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_headingSmallStrong__m4c9ow16 style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
             style="--textAlign__qabug40: left;"
           >
-            <div
-              class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
+            <ul
+              class="styles__12cubgsl styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u37 styles_gap_0.5rem_xxsmall__toi52u3p"
             >
-              <ul
-                class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              <li
+                class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
                 data-testid="cat.png"
               >
-                <li
+                <div
                   class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
                 >
                   <div
@@ -3719,13 +3719,13 @@ exports[`fileInput > should work with function children and title 1`] = `
                       />
                     </svg>
                   </button>
-                </li>
-              </ul>
-              <ul
-                class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+                </div>
+              </li>
+              <li
+                class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
                 data-testid="error_example.png"
               >
-                <li
+                <div
                   class="styles_error__12cubgso styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
                 >
                   <div
@@ -3784,18 +3784,18 @@ exports[`fileInput > should work with function children and title 1`] = `
                       />
                     </svg>
                   </button>
-                </li>
+                </div>
                 <p
                   class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_danger__m4c9ow9 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_48__m4c9ow2m"
                 >
                   Maximum file size exceeded
                 </p>
-              </ul>
-              <ul
-                class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+              </li>
+              <li
+                class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
                 data-testid="sound.mp3"
               >
-                <li
+                <div
                   class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
                 >
                   <div
@@ -3864,13 +3864,13 @@ exports[`fileInput > should work with function children and title 1`] = `
                       />
                     </svg>
                   </button>
-                </li>
-              </ul>
-              <ul
-                class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+                </div>
+              </li>
+              <li
+                class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
                 data-testid="doc.pdf"
               >
-                <li
+                <div
                   class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
                 >
                   <div
@@ -3929,13 +3929,13 @@ exports[`fileInput > should work with function children and title 1`] = `
                       />
                     </svg>
                   </button>
-                </li>
-              </ul>
-              <ul
-                class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+                </div>
+              </li>
+              <li
+                class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
                 data-testid="video.mp4"
               >
-                <li
+                <div
                   class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
                 >
                   <div
@@ -3995,13 +3995,13 @@ exports[`fileInput > should work with function children and title 1`] = `
                       />
                     </svg>
                   </button>
-                </li>
-              </ul>
-              <ul
-                class="styles__12cubgsl styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+                </div>
+              </li>
+              <li
+                class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
                 data-testid="loading_example.pdf"
               >
-                <li
+                <div
                   class="styles_default__12cubgsn styles__12cubgsm styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_center_xxsmall__toi52u61"
                 >
                   <div
@@ -4077,9 +4077,9 @@ exports[`fileInput > should work with function children and title 1`] = `
                       />
                     </svg>
                   </button>
-                </li>
-              </ul>
-            </div>
+                </div>
+              </li>
+            </ul>
             <label
               for="_r_4b_"
             >
