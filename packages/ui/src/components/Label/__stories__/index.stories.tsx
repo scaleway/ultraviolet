@@ -5,7 +5,7 @@ export default {
   component: Label,
   title: 'UI/Typography/Label',
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,

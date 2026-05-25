@@ -5,7 +5,7 @@ export default {
   component: ProgressBar,
   title: 'UI/Feedback/ProgressBar',
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,

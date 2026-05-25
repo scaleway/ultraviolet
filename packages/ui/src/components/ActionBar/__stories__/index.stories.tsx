@@ -4,8 +4,12 @@ import { ActionBar } from '..'
 export default {
   component: ActionBar,
   title: 'UI/Overlay/ActionBar',
+  tags: [],
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
+    a11y: {
+      test: 'error',
+    },
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,
@@ -14,7 +18,7 @@ export default {
       'specific-patterns': false,
     },
   },
-} as Meta
+} satisfies Meta<typeof ActionBar>
 
 export { Playground } from './Playground.stories'
 export { Ranks } from './Ranks.stories'

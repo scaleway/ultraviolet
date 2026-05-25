@@ -5,7 +5,7 @@ export default {
   component: Radio,
   title: 'UI/Data Entry/Radio',
   parameters: {
-    a11y: 'partial',
+    a11yStatus: 'partial',
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,
