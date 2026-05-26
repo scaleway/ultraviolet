@@ -32,7 +32,6 @@ type InputProps = Partial<
     | 'onFocus'
     | 'placeholder'
     | 'readOnly'
-    | 'role'
   >
 > &
   Partial<DescriptionProps>
@@ -88,7 +87,6 @@ export const PhoneInput: PhoneInputType = forwardRef(
       onValueChange,
       placeholder,
       readOnly,
-      role,
       required,
       value,
     },
@@ -108,21 +106,18 @@ export const PhoneInput: PhoneInputType = forwardRef(
         try {
           const parsed = parsePhoneNumber(inputValue)
           const { regionCode = defaultCountry } = parsed
+          const { valid, number } = parsePhoneNumber(inputValue, { regionCode })
 
-          const isValid = inputValue.length > 4 && parsePhoneNumber(inputValue, { regionCode }).valid
+          const isValid = inputValue.length > 4 && valid
 
-          const formattedNumber = isValid
-            ? parsePhoneNumber(inputValue, { regionCode }).number?.international
-            : inputValue
-
-          const e164 = isValid ? parsePhoneNumber(inputValue, { regionCode }).number?.e164 : null
+          const formattedNumber = isValid ? number?.international : inputValue
 
           const result = {
             inputValue,
-            formatted: formattedNumber ?? inputValue,
+            formatted: isValid ? number?.international : inputValue,
             country: regionCode,
             valid: isValid,
-            e164: e164 ?? null,
+            e164: isValid ? number?.e164 : null,
             international: formattedNumber ?? null,
           }
           onValueChange?.(result)
@@ -167,7 +162,7 @@ export const PhoneInput: PhoneInputType = forwardRef(
     const localId = id || `phone-${uniqueId}`
 
     return (
-      <Stack className={className} gap={0.5} role={role}>
+      <Stack className={className} gap={0.5}>
         {label ? (
           <Label htmlFor={localId} required={required} size={size}>
             {label}
