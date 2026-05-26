@@ -18,13 +18,15 @@ describe('ui - PhoneInput', () => {
     const onChange = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <PhoneInput label="Phone" name="phone" onChange={onChange} value="+33612345678" />,
+      <PhoneInput defaultCountry="FR" label="Phone" name="phone" onChange={onChange} value="+33612345678" />,
     )
 
     const input = screen.getByRole<HTMLInputElement>('textbox', { name: 'Phone' })
     expect(input.value).toBe('+33 6 12 34 56 78')
+    await userEvent.clear(input)
     await userEvent.type(input, '+33678901234')
     expect(onChange).toHaveBeenCalled()
+    expect(input.value).toBe('+33 6 78 90 12 34')
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -192,5 +194,49 @@ describe('ui - PhoneInput', () => {
       international: '+33 6 12 34 56 78',
     })
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should format value when value prop changes', () => {
+    const onValueChange = vi.fn()
+    const onChange = vi.fn()
+    const firstPhone = '0612345678'
+    const secondPhone = '0699887766'
+
+    const { rerender } = renderWithTheme(
+      <PhoneInput
+        defaultCountry="FR"
+        label="Phone"
+        name="phone"
+        onChange={onChange}
+        onValueChange={onValueChange}
+        value={firstPhone}
+      />,
+    )
+
+    const input = screen.getByRole<HTMLInputElement>('textbox', { name: 'Phone' })
+    expect(input.value).toBe('+33 6 12 34 56 78')
+
+    onValueChange.mockClear()
+
+    rerender(
+      <PhoneInput
+        defaultCountry="FR"
+        label="Phone"
+        name="phone"
+        onChange={onChange}
+        onValueChange={onValueChange}
+        value={secondPhone}
+      />,
+    )
+
+    expect(input.value).toBe('+33 6 99 88 77 66')
+    expect(onValueChange).toHaveBeenCalledWith({
+      inputValue: '0699887766',
+      formatted: '+33 6 99 88 77 66',
+      country: 'FR',
+      valid: true,
+      e164: '+33699887766',
+      international: '+33 6 99 88 77 66',
+    })
   })
 })

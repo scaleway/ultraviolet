@@ -14,18 +14,18 @@ exports[`form - PhoneInputField > should be disabled when disabled prop is true 
       >
         <label
           class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9own uv_m4c9ow1a uv_m4c9ow32"
-          for="phone-phone"
+          for="phone-_r_o_"
         >
           Phone Number
         </label>
         <div
-          aria-disabled="true"
           class="uv_f9zn1x4 uv_f9zn1x1"
           data-disabled="true"
           data-error="false"
         >
           <div
             class="uv_f9zn1x0 uv_toi52u0 uv_toi52ud uv_toi52u2d"
+            data-disabled="true"
           >
             🇫🇷
           </div>
@@ -34,7 +34,7 @@ exports[`form - PhoneInputField > should be disabled when disabled prop is true 
             class="uv_f9zn1x5"
             data-size="large"
             disabled=""
-            id="phone-phone"
+            id="phone-_r_o_"
             maxlength="20"
             name="phone"
             placeholder="+33 6 12 34 56 78"
@@ -61,18 +61,18 @@ exports[`form - PhoneInputField > should render correctly 1`] = `
       >
         <label
           class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9own uv_m4c9ow1a uv_m4c9ow32"
-          for="phone-phone"
+          for="phone-_r_0_"
         >
           Phone Number
         </label>
         <div
-          aria-disabled="false"
           class="uv_f9zn1x4 uv_f9zn1x1"
           data-disabled="false"
           data-error="false"
         >
           <div
             class="uv_f9zn1x0 uv_toi52u0 uv_toi52ud uv_toi52u2d"
+            data-disabled="false"
           >
             🇫🇷
           </div>
@@ -80,7 +80,7 @@ exports[`form - PhoneInputField > should render correctly 1`] = `
             aria-invalid="false"
             class="uv_f9zn1x5"
             data-size="large"
-            id="phone-phone"
+            id="phone-_r_0_"
             maxlength="20"
             name="phone"
             placeholder="+33 6 12 34 56 78"
@@ -107,18 +107,18 @@ exports[`form - PhoneInputField > should work with default country 1`] = `
       >
         <label
           class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9own uv_m4c9ow1a uv_m4c9ow32"
-          for="phone-phone"
+          for="phone-_r_b_"
         >
           Phone Number
         </label>
         <div
-          aria-disabled="false"
           class="uv_f9zn1x4 uv_f9zn1x1"
           data-disabled="false"
           data-error="false"
         >
           <div
             class="uv_f9zn1x0 uv_toi52u0 uv_toi52ud uv_toi52u2d"
+            data-disabled="false"
           >
             🇺🇸
           </div>
@@ -126,7 +126,7 @@ exports[`form - PhoneInputField > should work with default country 1`] = `
             aria-invalid="false"
             class="uv_f9zn1x5"
             data-size="large"
-            id="phone-phone"
+            id="phone-_r_b_"
             maxlength="20"
             name="phone"
             placeholder="+1 201-555-0123"

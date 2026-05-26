@@ -1,8 +1,10 @@
 'use client'
 
 import { parsePhoneNumber, getPhoneCountryFlag, getPhoneExample } from '@scaleway/phonenumber'
+import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
+import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
 import { cn } from '@ultraviolet/utils'
-import { useImperativeHandle, useId, useRef, useState, useEffect, forwardRef, useCallback } from 'react'
+import { useImperativeHandle, useId, useRef, useState, forwardRef, useCallback, useLayoutEffect } from 'react'
 import type { ChangeEvent, ComponentType, InputHTMLAttributes, ForwardedRef, Ref } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { Description } from '../Description'
@@ -104,8 +106,8 @@ export const PhoneInput: PhoneInputType = forwardRef(
         }
 
         try {
-          const parsed = parsePhoneNumber(inputValue)
-          const { regionCode = defaultCountry } = parsed
+          // This first parsing is here to guess the RegionCode
+          const { regionCode = defaultCountry } = parsePhoneNumber(inputValue)
           const { valid, number } = parsePhoneNumber(inputValue, { regionCode })
 
           const isValid = inputValue.length > 4 && valid
@@ -120,8 +122,8 @@ export const PhoneInput: PhoneInputType = forwardRef(
             e164: isValid ? number?.e164 : null,
             international: formattedNumber ?? null,
           }
-          onValueChange?.(result)
           setCountryFlag(regionCode)
+          onValueChange?.(result)
 
           return formattedNumber
           // oxlint-disable-next-line eslint/no-shadow
@@ -141,21 +143,25 @@ export const PhoneInput: PhoneInputType = forwardRef(
 
     const handleOnChangeCallback = useCallback(
       (inputValue: string) => {
-        if (localRef.current) {
-          localRef.current.value =
-            formatPhoneNumber({
-              inputValue,
-            }) ?? ''
+        if (!localRef.current) {
+          return
         }
+
+        const formatted =
+          formatPhoneNumber({
+            inputValue,
+          }) ?? ''
+
+        localRef.current.value = formatted
       },
       [formatPhoneNumber],
     )
 
-    useEffect(() => {
-      if (value) {
+    useLayoutEffect(() => {
+      if (value !== undefined) {
         handleOnChangeCallback(value)
       }
-    }, [handleOnChangeCallback, value])
+    }, [value, handleOnChangeCallback])
 
     const uniqueId = useId()
     const helperId = useId()
@@ -173,7 +179,7 @@ export const PhoneInput: PhoneInputType = forwardRef(
             className={cn(className, phoneInputStyle.inputWrapper, phoneInputStyle.inputWrapperSizes[size])}
             data-disabled={disabled}
             data-readonly={readOnly}
-            data-success={readOnly}
+            data-success={success}
             data-error={!!customError}
           >
             <Stack alignItems="center" className={phoneInputStyle.flag} data-disabled={disabled}>
@@ -206,6 +212,8 @@ export const PhoneInput: PhoneInputType = forwardRef(
               type="tel"
               value={localRef.current?.value}
             />
+            {success ? <CheckCircleOutlineIcon disabled={disabled} sentiment="success" size="small" /> : null}
+            {error ? <AlertCircleIcon disabled={disabled} sentiment="danger" size="small" /> : null}
           </div>
         </Tooltip>
         <Description
