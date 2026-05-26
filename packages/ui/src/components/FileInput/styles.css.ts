@@ -134,6 +134,11 @@ const dropzoneOverlayDisabled = styleVariants({
   page: [dropzoneOverlayDisabledOver],
 })
 
+const fileListContainer = style({
+  margin: 0,
+  padding: 0,
+})
+
 const fileViewerContainerBase = style({
   borderRadius: theme.radii.default,
   padding: theme.space[1],
@@ -202,5 +207,6 @@ export const fileInputStyle = {
   fileViewerContainer,
   fileViewerImageBase,
   fileInfo,
+  fileListContainer,
   fileViewerImage,
 }

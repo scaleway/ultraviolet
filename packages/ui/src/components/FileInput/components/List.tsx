@@ -65,7 +65,7 @@ export const ListFiles = ({ limit, textLimit, prominence = 'default', onDelete }
   const { files, setFiles, onChangeFiles, error } = useFileInput()
 
   return files.length > 0 ? (
-    <Stack direction="row" gap={1} wrap="wrap">
+    <Stack direction="row" gap={1} wrap="wrap" as="ul" className={fileInputStyle.fileListContainer}>
       {files.map((file, index) => {
         if (!computedLimit || index < computedLimit) {
           const fileType = getMimeTypeType(file.type)
@@ -73,7 +73,7 @@ export const ListFiles = ({ limit, textLimit, prominence = 'default', onDelete }
           const sentiment = file.error ? 'danger' : 'neutral'
 
           return (
-            <Stack data-testid={file.fileName} gap={0.5} key={file.fileName}>
+            <Stack data-testid={file.fileName} gap={0.5} key={`${file.fileName}-${file.size}`} as="li">
               <Stack
                 alignItems="center"
                 className={fileInputStyle.fileViewerContainer[file.error || error ? 'error' : prominence]}
@@ -120,7 +120,7 @@ export const ListFiles = ({ limit, textLimit, prominence = 'default', onDelete }
       })}
       {computedLimit && files.length > computedLimit ? (
         <Button data-testid="see-all" onClick={seeAllOnClick} sentiment="primary" size="large" variant="ghost">
-          {textLimit} ({files.length})
+          {textLimit} ({files.length - (limit ?? 0)})
         </Button>
       ) : null}
     </Stack>
