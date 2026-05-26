@@ -1,5 +1,24 @@
 # Change Log
 
+## 3.17.0
+
+### Minor Changes
+
+- [#6276](https://github.com/scaleway/ultraviolet/pull/6276) [`863a931`](https://github.com/scaleway/ultraviolet/commit/863a9314546da499e7c9e5852d66a3126bc9fef6) Thanks [@philibea](https://github.com/philibea)! - Add PhoneInput, PhoneInputField
+
+### Patch Changes
+
+- [#6478](https://github.com/scaleway/ultraviolet/pull/6478) [`cae1be7`](https://github.com/scaleway/ultraviolet/commit/cae1be7aa56126df763cdf2437dc488ba568305d) Thanks [@jsulpis](https://github.com/jsulpis)! - `SelectInput`: fix font sizes on small size
+
+- [#6469](https://github.com/scaleway/ultraviolet/pull/6469) [`1fee117`](https://github.com/scaleway/ultraviolet/commit/1fee11702d74e9350e5c38d040d70cc04d2a6745) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/fuzzy-search` to `2.0.2`.
+
+- [#6464](https://github.com/scaleway/ultraviolet/pull/6464) [`7a6b518`](https://github.com/scaleway/ultraviolet/commit/7a6b518fca36d52e065242b6dc9d7db13cc62db9) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/use-clipboard` to `1.0.1`.
+
+- [#6383](https://github.com/scaleway/ultraviolet/pull/6383) [`4c5ea00`](https://github.com/scaleway/ultraviolet/commit/4c5ea00cc559dca29f879189b102b29093af103d) Thanks [@lisalupi](https://github.com/lisalupi)! - `FileInput`:
+  - can read files inside drag and dropped directories
+  - improve "accept" function on drag and drop
+  - "see more" should display the number of hidden files, not the total number of files
+
 ## 3.16.0
 
 ### Minor Changes

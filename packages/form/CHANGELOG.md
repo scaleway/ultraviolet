@@ -1,5 +1,18 @@
 # Change Log
 
+## 6.4.0
+
+### Minor Changes
+
+- [#6276](https://github.com/scaleway/ultraviolet/pull/6276) [`863a931`](https://github.com/scaleway/ultraviolet/commit/863a9314546da499e7c9e5852d66a3126bc9fef6) Thanks [@philibea](https://github.com/philibea)! - Add PhoneInput, PhoneInputField
+
+### Patch Changes
+
+- [#6405](https://github.com/scaleway/ultraviolet/pull/6405) [`8be94b6`](https://github.com/scaleway/ultraviolet/commit/8be94b664eea7a35fae60f16a534a3d68d3b48f2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.76.0`.
+
+- Updated dependencies [[`cae1be7`](https://github.com/scaleway/ultraviolet/commit/cae1be7aa56126df763cdf2437dc488ba568305d), [`863a931`](https://github.com/scaleway/ultraviolet/commit/863a9314546da499e7c9e5852d66a3126bc9fef6), [`1fee117`](https://github.com/scaleway/ultraviolet/commit/1fee11702d74e9350e5c38d040d70cc04d2a6745), [`7a6b518`](https://github.com/scaleway/ultraviolet/commit/7a6b518fca36d52e065242b6dc9d7db13cc62db9), [`4c5ea00`](https://github.com/scaleway/ultraviolet/commit/4c5ea00cc559dca29f879189b102b29093af103d)]:
+  - @ultraviolet/ui@3.17.0
+
 ## 6.3.3
 
 ### Patch Changes
