@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
-import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
+import { renderWithTheme } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 import { Drawer } from '..'
 
@@ -14,26 +14,35 @@ describe('drawer', () => {
     vi.restoreAllMocks()
   })
 
-  it('renders with default Props', () =>
-    shouldMatchSnapshotWithPortal(
+  it('renders with default Props', () => {
+    const { asFragment } = renderWithTheme(
       <Drawer disclosure={<button type="button">Test</button>} header="header">
         <div>test</div>
       </Drawer>,
-    ))
+    )
 
-  it('renders without disclosure', () =>
-    shouldMatchSnapshotWithPortal(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders without disclosure', () => {
+    const { asFragment } = renderWithTheme(
       <Drawer disclosure={undefined} header="header">
         <div>test</div>
       </Drawer>,
-    ))
+    )
 
-  it('renders without separator', () =>
-    shouldMatchSnapshotWithPortal(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders without separator', () => {
+    const { asFragment } = renderWithTheme(
       <Drawer disclosure={undefined} header="header" separator={false}>
         <div>test</div>
       </Drawer>,
-    ))
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('renders with default Props and function children', async () => {
     const { asFragment } = renderWithTheme(
@@ -46,25 +55,31 @@ describe('drawer', () => {
       </Drawer>,
     )
 
-    await userEvent.click(screen.getByText('Open'))
-    await userEvent.click(screen.getByText('Close'))
+    await userEvent.click(screen.getByRole('button', { name: 'Open' }))
+    await userEvent.click(screen.getByRole('button', { name: 'Close' }))
 
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('renders with default Props and function children open', () =>
-    shouldMatchSnapshotWithPortal(
+  it('renders with default Props and function children open', () => {
+    const { asFragment } = renderWithTheme(
       <Drawer header="header" open>
         {() => <div>test</div>}
       </Drawer>,
-    ))
+    )
 
-  it('renders with open={true}', () =>
-    shouldMatchSnapshotWithPortal(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders with open={true}', () => {
+    const { asFragment } = renderWithTheme(
       <Drawer header="header" open>
         <div>test</div>
       </Drawer>,
-    ))
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('renders custom size=medium', async () => {
     const { asFragment } = renderWithTheme(
@@ -101,19 +116,25 @@ describe('drawer', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('renders with custom classNames', () =>
-    shouldMatchSnapshotWithPortal(
+  it('renders with custom classNames', () => {
+    const { asFragment } = renderWithTheme(
       <Drawer className="test" header="header" open>
         <div>test</div>
       </Drawer>,
-    ))
+    )
 
-  it('renders with disclosure', () =>
-    shouldMatchSnapshotWithPortal(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders with disclosure', () => {
+    const { asFragment } = renderWithTheme(
       <Drawer ariaLabel="drawer-test" disclosure={<button type="button">Test</button>} header="header" id="drawer-test">
         <div>drawer</div>
       </Drawer>,
-    ))
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('renders with disclosure and onClose', async () => {
     let count = 0
@@ -136,8 +157,8 @@ describe('drawer', () => {
       },
     )
 
-    await userEvent.click(screen.getByText('Open drawer'))
-    const closeButton = screen.getByTestId('test-close-button')
+    await userEvent.click(screen.getByRole('button', { name: 'Open drawer' }))
+    const closeButton = screen.getByRole('button', { name: 'close' })
     await userEvent.click(closeButton)
     expect(count).toBe(1)
     expect(asFragment()).toMatchSnapshot()
@@ -278,14 +299,14 @@ describe('drawer', () => {
       </Drawer>,
     )
 
-    await userEvent.click(screen.getByText('Open'))
-    await userEvent.click(screen.getByText('Close'))
+    await userEvent.click(screen.getByRole('button', { name: 'Open' }))
+    await userEvent.click(screen.getByRole('button', { name: 'Close' }))
 
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('with footer', () => {
-    shouldMatchSnapshotWithPortal(
+    const { asFragment } = renderWithTheme(
       <Drawer
         ariaLabel="drawer-test"
         disclosure={<button type="button">Open</button>}
@@ -296,10 +317,12 @@ describe('drawer', () => {
         <div> test</div>
       </Drawer>,
     )
+
+    expect(asFragment()).toMatchSnapshot()
   })
 
   it('custom header', () => {
-    shouldMatchSnapshotWithPortal(
+    const { asFragment } = renderWithTheme(
       <Drawer
         ariaLabel="drawer-test"
         disclosure={<button type="button">Open</button>}
@@ -311,6 +334,8 @@ describe('drawer', () => {
         <div> test</div>
       </Drawer>,
     )
+
+    expect(asFragment()).toMatchSnapshot()
   })
 
   it('function header', async () => {
@@ -339,8 +364,8 @@ describe('drawer', () => {
         <div> test</div>
       </Drawer>,
     )
-    await userEvent.click(screen.getByText('Open'))
-    await userEvent.click(screen.getByText('Close'))
+    await userEvent.click(screen.getByRole('button', { name: 'Open' }))
+    await userEvent.click(screen.getByRole('button', { name: 'Close' }))
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -368,8 +393,8 @@ describe('drawer', () => {
         <div> test</div>
       </Drawer>,
     )
-    await userEvent.click(screen.getByText('Open'))
-    await userEvent.click(screen.getByText('Close'))
+    await userEvent.click(screen.getByRole('button', { name: 'Open' }))
+    await userEvent.click(screen.getByRole('button', { name: 'Close' }))
 
     expect(asFragment()).toMatchSnapshot()
   })

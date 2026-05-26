@@ -5,7 +5,6 @@ import type { ComponentProps, ReactElement, ReactNode } from 'react'
 import type { FormErrors, UseFormProps } from '../../../../../packages/form/src'
 import { Form, useForm } from '../../../../../packages/form/src/index'
 import { makeShouldMatchSnapshot } from './shouldMatchSnapshot'
-import { makeShouldMatchSnapshotWithPortal } from './shouldMatchSnapshotWithPortal'
 
 export const ComponentWrapper = ({
   children,
@@ -43,24 +42,6 @@ export const mockFormErrors: FormErrors = {
       .join(' and ')}`,
   required: () => 'This field is required',
 }
-
-/**
- * @deprecated
- * use `asFragment()` from the `render` directly
- *
- * @example
- * ```tsx
- *  const { asFragment } = render(...)
- *
- *  expect(asFragment()).toMatchSnapshot()
- * ```
- *
- */
-
-export const shouldMatchSnapshotWithPortal = (component: ReactElement, theme?: typeof consoleLightTheme) =>
-  makeShouldMatchSnapshotWithPortal(component, {
-    wrapper: ({ children }) => <ComponentWrapper theme={theme}>{children}</ComponentWrapper>,
-  })
 
 /**
  * @deprecated

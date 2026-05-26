@@ -1,7 +1,7 @@
 import { renderHook, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
-import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
+import { renderWithTheme } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 import { Modal } from '..'
 import illustration from '../__stories__/assets/illustration.webp'
@@ -23,67 +23,87 @@ describe('modal', () => {
     expect(() => renderHook(() => useModal())).toThrow('useModal must be used within a ModalProvider')
   })
 
-  it('renders with default Props', () =>
-    shouldMatchSnapshotWithPortal(
+  it('renders with default Props', () => {
+    const { asFragment } = renderWithTheme(
       <Modal disclosure={<button type="button">Test</button>}>
         <div>test</div>
       </Modal>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('renders without disclosure', () =>
-    shouldMatchSnapshotWithPortal(
+  it('renders without disclosure', () => {
+    const { asFragment } = renderWithTheme(
       <Modal disclosure={undefined}>
         <div>test</div>
       </Modal>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('renders with default Props and function children', () =>
-    shouldMatchSnapshotWithPortal(<Modal>{() => <div>test</div>}</Modal>))
+  it('renders with default Props and function children', () => {
+    const { asFragment } = renderWithTheme(<Modal>{() => <div>test</div>}</Modal>)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('renders with default Props and function children open', () =>
-    shouldMatchSnapshotWithPortal(<Modal open>{() => <div>test</div>}</Modal>))
+  it('renders with default Props and function children open', () => {
+    const { asFragment } = renderWithTheme(<Modal open>{() => <div>test</div>}</Modal>)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('renders with open={true}', () =>
-    shouldMatchSnapshotWithPortal(
+  it('renders with open={true}', () => {
+    const { asFragment } = renderWithTheme(
       <Modal open>
         <div>test</div>
       </Modal>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('renders with open={true} and no close icon', () =>
-    shouldMatchSnapshotWithPortal(
+  it('renders with open={true} and no close icon', () => {
+    const { asFragment } = renderWithTheme(
       <Modal isClosable={false} open>
         <div>test</div>
       </Modal>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('renders open custom size', () =>
-    shouldMatchSnapshotWithPortal(
+  it('renders open custom size', () => {
+    const { asFragment } = renderWithTheme(
       <Modal open size="medium">
         <div>test</div>
       </Modal>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('renders with custom classNames', () =>
-    shouldMatchSnapshotWithPortal(
+  it('renders with custom classNames', () => {
+    const { asFragment } = renderWithTheme(
       <Modal backdropClassName={customDialogBackdropStyles} className={customDialogStyles} open>
         <div>test</div>
       </Modal>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('renders with image', () =>
-    shouldMatchSnapshotWithPortal(
+  it('renders with image', () => {
+    const { asFragment } = renderWithTheme(
       <Modal image={illustration} isClosable={false} open>
         <div>test</div>
       </Modal>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('renders with disclosure', () =>
-    shouldMatchSnapshotWithPortal(
+  it('renders with disclosure', () => {
+    const { asFragment } = renderWithTheme(
       <Modal ariaLabel="modal-test" disclosure={<button type="button">Test</button>} id="modal-test">
         <div>modal</div>
       </Modal>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('renders with disclosure and onBeforeClose', async () => {
     let count = 0

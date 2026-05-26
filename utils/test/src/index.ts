@@ -7,7 +7,6 @@ export {
   renderWithTheme,
   setup,
   shouldMatchSnapshot,
-  shouldMatchSnapshotWithPortal,
 } from './vitest'
 
 export * from './axe'
