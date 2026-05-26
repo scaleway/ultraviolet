@@ -11,7 +11,7 @@ type DisplayOptionProps = {
   option: OptionType
   descriptionDirection: 'row' | 'column'
   optionalInfoPlacement: 'left' | 'right'
-  textVariant: 'body' | 'bodySmall' | 'caption'
+  textVariant: 'body' | 'bodySmall'
 }
 
 export const DisplayOption = ({
@@ -20,17 +20,7 @@ export const DisplayOption = ({
   descriptionDirection,
   textVariant,
 }: DisplayOptionProps) => {
-  const captionSize = useMemo(() => {
-    if (textVariant === 'body') {
-      return 'bodySmall'
-    }
-
-    if (textVariant === 'bodySmall') {
-      return 'caption'
-    }
-
-    return 'captionSmall'
-  }, [textVariant])
+  const captionSize = useMemo(() => (textVariant === 'body' ? 'bodySmall' : 'caption'), [textVariant])
 
   const optionDescription = option.description ? (
     <Text
