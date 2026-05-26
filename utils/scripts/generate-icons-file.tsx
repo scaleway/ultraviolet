@@ -41,7 +41,7 @@ const COMPONENTS = [
     suffix: 'Flag',
     typeName: 'FlagIconNames',
   },
-]
+] as const
 
 const wrapSvg = (svgContent: string) => {
   const hasMultipleElements = svgContent.trim().split(/<path|<rect|<circle|<line|<ellipse|<g/u).length > 2
@@ -88,6 +88,36 @@ const templateIcon = (iconName: string, svg: string, svgSmall?: string, svgDisab
   }
 
 `
+}
+
+const templateLogo = (logoName: string, svg: string, svgDark?: string) => {
+  const deprecated = DEPRECATED_ICONS.find(icon => icon.name === logoName)
+
+  return `${COMMENT_HEADER}
+  import { Icon } from '../Icon'
+  import type { IconProps } from '../Icon'
+${svgDark ? `import { useTheme } from '@ultraviolet/themes'` : ''}
+  ${
+    deprecated
+      ? `
+  /**
+    * @deprecated ${deprecated.deprecatedReason}
+    */`
+      : ''
+  }
+ export const ${logoName} = ({
+    ...props
+  }: Omit<IconProps, 'children' | 'title'>) => ${
+    svgDark
+      ? `{
+  const { theme } = useTheme()
+  const isLight = theme === "light"
+  
+  return (
+      <Icon {...props} title="${logoName}">{isLight ? <>${svg}</> : <>${svgDark}</>}</Icon>
+  )}`
+      : `(<Icon {...props} title="${logoName}">${svg}</Icon>)`
+  }`
 }
 
 const toPascalCase = (str: string) => str.replace(/(^\w|-\w)/gu, match => match.replace('-', '').toUpperCase())
@@ -152,6 +182,23 @@ const readSvg = async (filePath: string, suffix: string) => {
   return updatedSvgContent
 }
 
+const getDisabledFile = (file: string) => {
+  const disabledFileName = file.replace('default', 'disabled')
+  return existsSync(disabledFileName) ? disabledFileName : file
+}
+
+const getSmallFile = (file: string) => {
+  const smallFileName = file.replace('default', 'small')
+
+  return existsSync(smallFileName) ? smallFileName : file
+}
+
+const getDarkFile = (file: string) => {
+  const darkFileName = file.replace('light', 'dark')
+
+  return existsSync(darkFileName) ? darkFileName : file
+}
+
 const appendExportToIndex = async (output: string, iconName: string) => {
   const exportStatement = `export { ${iconName} } from './${iconName}'\n`
 
@@ -199,20 +246,22 @@ const main = async () => {
     try {
       const files = await readDirectoryRecursive(component.input)
       for (const file of files) {
-        if (file.includes('small') || file.includes('disabled')) {
-          break
+        if (
+          file.includes('small') ||
+          file.includes('disabled') ||
+          (file.includes('/dark/') && component.name === 'Logo')
+        ) {
+          continue
         }
-
-        const smallFileName = file.replace('default', 'small')
-        const smallFile = existsSync(smallFileName) ? smallFileName : file
-
-        const disabledFileName = file.replace('default', 'disabled')
-        const disabledFile = existsSync(disabledFileName) ? disabledFileName : file
 
         const svgContent = await readSvg(file, component.suffix)
         const generatedName = `${generateVariableName(file)}${component.suffix}`
 
         iconNames.push(generatedName)
+
+        const smallFile = getSmallFile(file)
+        const disabledFile = getDisabledFile(file)
+        const darkFile = getDarkFile(file)
 
         const svgContentSmall = smallFile === file ? undefined : await readSvg(smallFile, component.suffix)
 
@@ -221,7 +270,13 @@ const main = async () => {
             ? await readSvg(disabledFile, component.suffix)
             : undefined
 
-        const generatedComponent = templateIcon(generatedName, svgContent, svgContentSmall, svgContentDisabled)
+        const svgContentDark =
+          component.name === 'Logo' && darkFile !== file ? await readSvg(darkFile, component.suffix) : undefined
+
+        const generatedComponent =
+          component.name === 'Logo'
+            ? templateLogo(generatedName, svgContent, svgContentDark)
+            : templateIcon(generatedName, svgContent, svgContentSmall, svgContentDisabled)
         const filePath = `${component.output}/${generatedName}.tsx`
 
         try {
