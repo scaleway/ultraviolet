@@ -1,26 +1,26 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { renderWithTheme } from '@utils/test'
 import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { RichTextInput } from '..'
 
 describe('richTextInput', () => {
   beforeAll(() => {
-    if (typeof document.elementFromPoint !== 'function') {
-      document.elementFromPoint = vi.fn(() => null)
-    }
+    Object.defineProperty(document, 'elementFromPoint', {
+      value: vi.fn().mockReturnValue(null),
+      writable: true,
+      configurable: true,
+    })
   })
 
-  it('should render correctly with basic props', () =>
-    shouldMatchSnapshot(<RichTextInput aria-label="Test" onChange={() => {}} value="test" />))
-
-  it('should render the value', () => {
+  it('should render correctly with basic props', () => {
     const onChange = vi.fn()
-
-    renderWithTheme(<RichTextInput aria-label="Test" onChange={onChange} value="test" />)
+    const { asFragment } = renderWithTheme(<RichTextInput aria-label="Test" onChange={onChange} value="test" />)
 
     const doc = screen.getByRole('textbox')
     expect(doc.textContent).toContain('test')
+
+    expect(asFragment()).toMatchSnapshot()
   })
 
   it('should call onChange when typing', async () => {

@@ -9,11 +9,12 @@ import { Form } from '../../../components/Form'
 
 describe('richTextInputField', () => {
   beforeAll(() => {
-    if (typeof document.elementFromPoint !== 'function') {
-      document.elementFromPoint = vi.fn(() => null)
-    }
+    Object.defineProperty(document, 'elementFromPoint', {
+      value: vi.fn().mockReturnValue(null),
+      writable: true,
+      configurable: true,
+    })
   })
-
   it('should render correctly', () => {
     const { asFragment } = renderWithForm(<RichTextInputField label="Test" name="test" />)
 
@@ -45,7 +46,7 @@ describe('richTextInputField', () => {
 
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledOnce()
-      expect(onSubmit.mock.calls[0][0]).toEqual({
+      expect(onSubmit.mock.calls[0][0]).toStrictEqual({
         test: '<p>This is an example</p>',
       })
     })
@@ -80,7 +81,7 @@ describe('richTextInputField', () => {
 
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledOnce()
-      expect(onSubmit.mock.calls[0][0]).toEqual({
+      expect(onSubmit.mock.calls[0][0]).toStrictEqual({
         test: '<ul><li><p><em>Styled item</em></p></li></ul>',
       })
     })
