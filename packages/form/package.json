@@ -51,6 +51,7 @@
     "watch:build": "vite build  --watch"
   },
   "dependencies": {
+    "@scaleway/phonenumber": "1.0.0",
     "@ultraviolet/icons": "workspace:*",
     "@ultraviolet/themes": "workspace:*",
     "@ultraviolet/ui": "workspace:*",
@@ -58,7 +59,6 @@
   },
   "devDependencies": {
     "@repo/config": "workspace:*",
-    "@types/final-form-focus": "1.1.7",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@utils/test": "workspace:*",

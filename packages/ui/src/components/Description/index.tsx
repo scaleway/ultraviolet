@@ -5,7 +5,7 @@ import type { HTMLAttributes, ReactNode } from 'react'
 import { canDisplay } from '../../helpers/hasHelperText'
 import { Text } from '../Text'
 
-type HelperProps = {
+export type DescriptionProps = {
   helper?: ReactNode
   success?: string | boolean
   error?: ReactNode
@@ -25,7 +25,7 @@ export const Description = ({
   error,
   style,
   className,
-}: HelperProps) => {
+}: DescriptionProps) => {
   const hasTextError = typeof error === 'string' || canDisplay(error)
   const hasTextSuccess = typeof success === 'string'
 
@@ -55,6 +55,7 @@ export const Description = ({
 
   return helper || hasTextError || hasTextSuccess ? (
     <Text
+      role="status"
       as="span"
       variant={size === 'small' ? 'captionSmall' : 'caption'}
       sentiment={computedSentiment}
