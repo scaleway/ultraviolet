@@ -247,44 +247,44 @@ const main = async () => {
       const files = await readDirectoryRecursive(component.input)
       for (const file of files) {
         if (
-          file.includes('small') ||
-          file.includes('disabled') ||
-          (file.includes('/dark/') && component.name === 'Logo')
+          !(
+            file.includes('small') ||
+            file.includes('disabled') ||
+            (file.includes('/dark/') && component.name === 'Logo')
+          )
         ) {
-          continue
-        }
+          const svgContent = await readSvg(file, component.suffix)
+          const generatedName = `${generateVariableName(file)}${component.suffix}`
 
-        const svgContent = await readSvg(file, component.suffix)
-        const generatedName = `${generateVariableName(file)}${component.suffix}`
+          iconNames.push(generatedName)
 
-        iconNames.push(generatedName)
+          const smallFile = getSmallFile(file)
+          const disabledFile = getDisabledFile(file)
+          const darkFile = getDarkFile(file)
 
-        const smallFile = getSmallFile(file)
-        const disabledFile = getDisabledFile(file)
-        const darkFile = getDarkFile(file)
+          const svgContentSmall = smallFile === file ? undefined : await readSvg(smallFile, component.suffix)
 
-        const svgContentSmall = smallFile === file ? undefined : await readSvg(smallFile, component.suffix)
+          const svgContentDisabled =
+            component.name === 'Flags' && disabledFile !== file
+              ? await readSvg(disabledFile, component.suffix)
+              : undefined
 
-        const svgContentDisabled =
-          component.name === 'Flags' && disabledFile !== file
-            ? await readSvg(disabledFile, component.suffix)
-            : undefined
+          const svgContentDark =
+            component.name === 'Logo' && darkFile !== file ? await readSvg(darkFile, component.suffix) : undefined
 
-        const svgContentDark =
-          component.name === 'Logo' && darkFile !== file ? await readSvg(darkFile, component.suffix) : undefined
+          const generatedComponent =
+            component.name === 'Logo'
+              ? templateLogo(generatedName, svgContent, svgContentDark)
+              : templateIcon(generatedName, svgContent, svgContentSmall, svgContentDisabled)
+          const filePath = `${component.output}/${generatedName}.tsx`
 
-        const generatedComponent =
-          component.name === 'Logo'
-            ? templateLogo(generatedName, svgContent, svgContentDark)
-            : templateIcon(generatedName, svgContent, svgContentSmall, svgContentDisabled)
-        const filePath = `${component.output}/${generatedName}.tsx`
-
-        try {
-          await promises.writeFile(filePath, generatedComponent)
-          console.log(`File has been written to ${filePath}`)
-          await appendExportToIndex(component.output, generatedName)
-        } catch (error) {
-          console.error('Error writing to file:', error)
+          try {
+            await promises.writeFile(filePath, generatedComponent)
+            console.log(`File has been written to ${filePath}`)
+            await appendExportToIndex(component.output, generatedName)
+          } catch (error) {
+            console.error('Error writing to file:', error)
+          }
         }
       }
 
