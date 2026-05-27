@@ -1,11 +1,12 @@
 'use client'
 
 import { parsePhoneNumber } from '@scaleway/phonenumber'
-import type { BaseFieldProps, FieldPath, FieldValues } from '@ultraviolet/form'
 import { PhoneInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
+import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
+import type { BaseFieldProps } from '../../types'
 
 type PhoneInputValue = NonNullable<ComponentProps<typeof PhoneInput>['value']>
 
