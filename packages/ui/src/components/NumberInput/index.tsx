@@ -227,7 +227,6 @@ export const NumberInput = forwardRef(
           error={error}
           helper={helper}
           disabled={isDisabledOrReadOnly}
-          size={size}
           success={success}
           id={ariaDescribedBy ?? helperId}
         />

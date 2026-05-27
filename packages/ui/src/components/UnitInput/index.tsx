@@ -202,7 +202,6 @@ export const UnitInput = ({
         error={error}
         success={success}
         disabled={disabled}
-        size={size}
         id={ariaDescribedBy ?? helperId}
       />
     </Stack>

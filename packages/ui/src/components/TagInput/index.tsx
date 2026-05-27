@@ -268,7 +268,6 @@ export const TagInput = ({
         success={success}
         id={ariaDescribedBy ?? helperId}
         disabled={disabled || readOnly}
-        size={size}
       />
     </Stack>
   )

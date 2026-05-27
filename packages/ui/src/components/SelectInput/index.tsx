@@ -271,7 +271,6 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
           error={error}
           success={success}
           helper={helper}
-          size={size}
           disabled={disabled}
           id={ariaDescribedBy ?? helperId}
           className={selectInputStyle.helper}

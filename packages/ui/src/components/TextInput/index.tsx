@@ -191,7 +191,6 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
           helper={helper}
           error={error}
           success={success}
-          size={size}
           disabled={disabled}
           id={ariaDescribedBy ?? helperId}
         />

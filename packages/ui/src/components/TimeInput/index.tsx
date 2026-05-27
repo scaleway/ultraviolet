@@ -428,7 +428,7 @@ export const TimeInput = ({
           />
         ) : null}
       </Stack>
-      <Description error={error} helper={helper} disabled={disabled} size={size} id={ariaDescribedBy ?? helperId} />
+      <Description error={error} helper={helper} disabled={disabled} id={ariaDescribedBy ?? helperId} />
     </Stack>
   )
 }
