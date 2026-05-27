@@ -2,7 +2,6 @@ import { theme } from '@ultraviolet/themes'
 import { keyframes, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { DEFAULT_ARROW_WIDTH } from './helpers'
-import { codeEditorStyle } from '../../compositions/CodeEditor/styles.css'
 import { tagStyle } from '../Tag/styles.css'
 import { tagListStyle } from '../TagList/styles.css'
 import { textStyle } from '../Text/style.css'
@@ -125,11 +124,6 @@ const childrenContainer = recipe({
       },
       [`&:has(.${textStyle.oneLine})`]: {
         minWidth: 0,
-      },
-      [`&:has(> ${codeEditorStyle.copyButton})`]: {
-        position: 'absolute',
-        right: theme.space[1],
-        top: theme.space[1],
       },
     },
   },
