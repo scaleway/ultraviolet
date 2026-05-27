@@ -8,19 +8,26 @@ export const disabledStack = style({ cursor: 'not-allowed' })
 const copyButton = style({
   backgroundColor: consoleDarkTheme.colors.neutral.backgroundWeak,
   color: consoleDarkTheme.colors.neutral.textStrong,
-  position: 'absolute',
-  right: theme.space[1],
   selectors: {
     '&:hover': {
       backgroundColor: consoleDarkTheme.colors.neutral.backgroundHover,
       color: consoleDarkTheme.colors.neutral.textStrongHover,
     },
   },
+})
+
+// FIXME: remove this patch when we fix the Tooltip so that it doesn't generate a div around the button
+globalStyle(`div[aria-describedby]:has(> ${copyButton})`, {
+  position: 'absolute',
+  right: theme.space[1],
   top: theme.space[1],
 })
 
-globalStyle(`${copyButton} svg > path`, {
-  fill: consoleDarkTheme.colors.other.icon.product.original.fill,
+// FIXME: put this fallback style back in the button when the Tooltip is fixed
+globalStyle(`div:not([aria-describedby]) > ${copyButton}`, {
+  position: 'absolute',
+  right: theme.space[1],
+  top: theme.space[1],
 })
 
 const codeEditorBase = style({
