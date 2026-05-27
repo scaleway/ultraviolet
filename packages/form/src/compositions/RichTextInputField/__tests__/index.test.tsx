@@ -34,7 +34,7 @@ describe('richTextInputField', () => {
 
     await userEvent.click(screen.getByRole('button', { name: 'Submit' }))
     await waitFor(() => {
-      expect(onSubmit).toHaveBeenCalledTimes(0)
+      expect(onSubmit).not.toHaveBeenCalled()
     })
 
     const doc = document.querySelector<HTMLDivElement>('[contenteditable="true"]')
@@ -46,7 +46,7 @@ describe('richTextInputField', () => {
 
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledOnce()
-      expect(onSubmit.mock.calls[0][0]).toStrictEqual({
+      expect(onSubmit).toHaveBeenCalledWith({
         test: '<p>This is an example</p>',
       })
     })
@@ -81,7 +81,7 @@ describe('richTextInputField', () => {
 
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledOnce()
-      expect(onSubmit.mock.calls[0][0]).toStrictEqual({
+      expect(onSubmit).toHaveBeenCalledWith({
         test: '<ul><li><p><em>Styled item</em></p></li></ul>',
       })
     })

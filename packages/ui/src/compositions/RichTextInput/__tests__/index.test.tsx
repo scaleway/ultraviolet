@@ -33,8 +33,7 @@ describe('richTextInput', () => {
     await userEvent.type(doc, 'a')
 
     expect(onChange).toHaveBeenCalled()
-    const lastHtml = onChange.mock.calls.at(-1)?.[0]
-    expect(lastHtml).toBe('<p>testa</p>')
+    expect(onChange).toHaveBeenLastCalledWith('<p>testa</p>')
   })
 
   it('should return empty string when cleared', async () => {
@@ -63,8 +62,7 @@ describe('richTextInput', () => {
     await userEvent.type(doc, 'hello')
 
     expect(onChange).toHaveBeenCalled()
-    const lastHtml = onChange.mock.calls.at(-1)?.[0]
-    expect(lastHtml).toBe('<p><em>hello</em></p>')
+    expect(onChange).toHaveBeenLastCalledWith('<p><em>hello</em></p>')
   })
 
   it('should apply bullet list formatting', async () => {
@@ -80,8 +78,7 @@ describe('richTextInput', () => {
     await userEvent.type(doc, 'item')
 
     expect(onChange).toHaveBeenCalled()
-    const lastHtml = onChange.mock.calls.at(-1)?.[0]
-    expect(lastHtml).toBe('<ul><li><p>item</p></li></ul>')
+    expect(onChange).toHaveBeenLastCalledWith('<ul><li><p>item</p></li></ul>')
   })
 
   it('should not be editable when disabled', async () => {
