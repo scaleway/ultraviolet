@@ -106,7 +106,7 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build
-      - run: pnpm run oxc:type-aware --quiet
+      - run: pnpm run lint --format=github
 
   format:
     runs-on: ubuntu-24.04
