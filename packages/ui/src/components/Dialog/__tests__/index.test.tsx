@@ -1,13 +1,13 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
+import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Dialog } from '..'
 import { Button } from '../../Button'
 
 describe('dialog', () => {
-  it('should renders correctly', () =>
-    shouldMatchSnapshotWithPortal(
+  it('should render correctly', () => {
+    const { asFragment } = renderWithTheme(
       <Dialog open sentiment="primary" title="Test">
         <Dialog.Stack>
           <Dialog.Text>text example</Dialog.Text>
@@ -17,7 +17,10 @@ describe('dialog', () => {
           />
         </Dialog.Stack>
       </Dialog>,
-    ))
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('should handle disclosure & render prop', async () => {
     renderWithTheme(
@@ -34,13 +37,15 @@ describe('dialog', () => {
       </Dialog>,
     )
 
-    const disclosure = screen.getByText('Open Dialog')
-    expect(screen.queryByText('Title Test')).not.toBeInTheDocument()
+    const disclosure = screen.getByRole('button', { name: 'Open Dialog' })
+    expect(screen.queryByRole('heading', { name: 'Title Test' })).not.toBeInTheDocument()
+
     await userEvent.click(disclosure)
-    expect(screen.getByText('Title Test')).toBeInTheDocument()
-    const cancelButton = screen.getByText('Cancel')
+    expect(screen.getByRole('heading', { name: 'Title Test' })).toBeVisible()
+
+    const cancelButton = screen.getByRole('button', { name: 'Cancel' })
     await userEvent.click(cancelButton)
-    expect(screen.queryByText('Title Test')).not.toBeInTheDocument()
+    expect(screen.queryByRole('heading', { name: 'Title Test' })).not.toBeInTheDocument()
   })
 
   it('[CancelButton] : should handle click', async () => {
@@ -48,7 +53,7 @@ describe('dialog', () => {
 
     renderWithTheme(<Dialog.CancelButton onClick={onClick}>Cancel</Dialog.CancelButton>)
 
-    const button = screen.getByText('Cancel')
+    const button = screen.getByRole('button', { name: 'Cancel' })
     await userEvent.click(button)
     expect(onClick).toHaveBeenCalledOnce()
   })

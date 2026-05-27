@@ -1,6 +1,6 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshot, shouldMatchSnapshotWithPortal } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 import { Menu } from '..'
 
@@ -19,49 +19,67 @@ describe('menu', () => {
     vi.restoreAllMocks()
   })
 
-  it('renders with disclosure not a function', () =>
-    shouldMatchSnapshotWithPortal(
+  it('renders with disclosure not a function', () => {
+    const { asFragment } = renderWithTheme(
       <Menu disclosure={disclosure}>
         <Menu.Item>Menu.Item should not be visible in test</Menu.Item>
       </Menu>,
-    ))
-  it('renders with visible=false', () =>
-    shouldMatchSnapshotWithPortal(
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+  it('renders with visible=false', () => {
+    const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure}>
         <Menu.Item>Menu.Item should not be visible in test</Menu.Item>
       </Menu>,
-    ))
-  it('renders with Menu.Item', () =>
-    shouldMatchSnapshotWithPortal(
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+  it('renders with Menu.Item', () => {
+    const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Item>Menu.Item</Menu.Item>
       </Menu>,
-    ))
+    )
 
-  it('renders with Menu.Group', () =>
-    shouldMatchSnapshotWithPortal(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders with Menu.Group', () => {
+    const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Group label="Group">
           <Menu.Item>Menu.Item</Menu.Item>
         </Menu.Group>
       </Menu>,
-    ))
+    )
 
-  it('renders with Menu.Group and labelDescription', () =>
-    shouldMatchSnapshotWithPortal(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders with Menu.Group and labelDescription', () => {
+    const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Group label="Group" labelDescription="This is a description">
           <Menu.Item>Menu.Item</Menu.Item>
         </Menu.Group>
       </Menu>,
-    ))
+    )
 
-  it('renders with Menu.ItemLink', () =>
-    shouldMatchSnapshotWithPortal(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders with Menu.ItemLink', () => {
+    const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
       </Menu>,
-    ))
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it(`renders with triggerMethod "hover"`, async () => {
     renderWithTheme(
@@ -88,15 +106,18 @@ describe('menu', () => {
     await waitFor(() => expect(menu).not.toBeVisible())
   })
 
-  it('renders with Menu.ItemLink & Menu.Item disabled', () =>
-    shouldMatchSnapshotWithPortal(
+  it('renders with Menu.ItemLink & Menu.Item disabled', () => {
+    const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Item disabled>Menu.Item disabled</Menu.Item>
         <Menu.Item disabled href="/link">
           Menu.Item Link disabled
         </Menu.Item>
       </Menu>,
-    ))
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('disclosure Component render with function disclosure', async () => {
     renderWithTheme(

@@ -1,20 +1,26 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
+import { renderWithTheme } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Popup } from '../../index'
 
 describe('popup', () => {
-  it('should render correctly', () =>
-    shouldMatchSnapshotWithPortal(
+  it('should render correctly', () => {
+    const { asFragment } = renderWithTheme(
       <Popup debounceDelay={0} text="test">
         Hover me
       </Popup>,
-    ))
+    )
 
-  it('should render correctly without text', () =>
-    shouldMatchSnapshotWithPortal(<Popup debounceDelay={0}>Hover me</Popup>))
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should render correctly without text', () => {
+    const { asFragment } = renderWithTheme(<Popup debounceDelay={0}>Hover me</Popup>)
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('should display Popup on hover', async () => {
     renderWithTheme(
