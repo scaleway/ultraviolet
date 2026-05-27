@@ -32,6 +32,7 @@ export { SlovakiaFlag } from './SlovakiaFlag'
 export { SloveniaFlag } from './SloveniaFlag'
 export { SpainFlag } from './SpainFlag'
 export { SwedenFlag } from './SwedenFlag'
+export { UnitedKingdomFlag } from './UnitedKingdomFlag'
 export { UnitedStatesFlag } from './UnitedStatesFlag'
 export type FlagIconNames =
   | 'AustriaFlag'
@@ -61,4 +62,5 @@ export type FlagIconNames =
   | 'SloveniaFlag'
   | 'SpainFlag'
   | 'SwedenFlag'
+  | 'UnitedKingdomFlag'
   | 'UnitedStatesFlag'
