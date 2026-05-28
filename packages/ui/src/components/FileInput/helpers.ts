@@ -48,8 +48,8 @@ export const fileIsAccepted = (file: File, accept?: string) => {
       }
     } else if (fileType === item) {
       return true
-    } else if (item.startsWith('.')) {
-      return fileName.toLocaleLowerCase().endsWith(item)
+    } else if (item.startsWith('.') && fileName.toLocaleLowerCase().endsWith(item)) {
+      return true
     }
   }
 
