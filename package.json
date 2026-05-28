@@ -21,12 +21,9 @@
     "format:check": "oxfmt --check .",
     "icons:update": "tsx ./utils/scripts/generate-icons-file.tsx && pnpm run format packages/icons",
     "illustrations:update": "BUCKET_NAME=scaleway-assets BUCKET_REGION=fr-par tsx utils/scripts/illustrations/update-illustrations.tsx && pnpm format packages/illustrations/src/",
-    "lint:fix": "pnpm run oxc:type-aware --fix && pnpm run oxc:lint",
     "lintpublish": "turbo run lintpublish",
-    "oxc": "oxlint -c .oxlintrc.jsonc",
-    "oxc:fix": "pnpm run oxc --fix",
-    "oxc:lint": "pnpm -w oxlint -c .oxlintrc.jsonc",
-    "oxc:type-aware": "oxlint -c .oxlintrc.jsonc --type-aware",
+    "lint": "oxlint -c .oxlintrc.jsonc",
+    "lint:fix": "pnpm run lint --fix",
     "release": "pnpm build && pnpm changeset publish",
     "size": "turbo run size",
     "start": "STORYBOOK_ENVIRONMENT=development storybook dev -p 6006",
@@ -119,7 +116,7 @@
   "lint-staged": {
     "*.(j|t|mj)s?(x)": [
       "pnpm run format",
-      "pnpm run oxc:lint"
+      "pnpm run lint"
     ],
     "packages/illustrations/**/*.svg": [
       "pnpm run svg"
