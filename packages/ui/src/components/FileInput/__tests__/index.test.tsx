@@ -374,7 +374,7 @@ describe('fileInput', () => {
 
   it('should add a file with drag and drop which when accept is defined and precise', () => {
     const onChangeFiles = vi.fn()
-    renderWithTheme(<FileInput accept="image/png, .mp3" aria-label="label" onChangeFiles={onChangeFiles} />)
+    renderWithTheme(<FileInput accept=".mp3, image/png" aria-label="label" onChangeFiles={onChangeFiles} />)
 
     const dropzone = screen.getByTestId('drag-container')
     const file = new File(['dnd'], 'dnd.png', { type: 'image/png' })
