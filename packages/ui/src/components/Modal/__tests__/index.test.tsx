@@ -124,8 +124,8 @@ describe('modal', () => {
         container: document.body,
       },
     )
-    await userEvent.click(screen.getByText('Open modal'))
-    const closeButton = screen.getByTestId('test-close-button')
+    await userEvent.click(screen.getByRole('button', { name: 'Open modal' }))
+    const closeButton = screen.getByRole('button', { name: 'close' })
     await userEvent.click(closeButton)
     expect(count).toBe(1)
 
@@ -152,11 +152,30 @@ describe('modal', () => {
       },
     )
 
-    await userEvent.click(screen.getByText('Open modal'))
-    const closeButton = screen.getByTestId('test-close-button')
+    await userEvent.click(screen.getByRole('button', { name: 'Open modal' }))
+    const closeButton = screen.getByRole('button', { name: 'close' })
     await userEvent.click(closeButton)
     expect(count).toBe(1)
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should allow to change the sentiment of the close button on dark background image', async () => {
+    renderWithTheme(
+      <Modal
+        ariaLabel="modal-test"
+        disclosure={<button type="button">Open modal</button>}
+        image="dark-image.png"
+        closeButtonSentiment="white"
+      >
+        <div>modal</div>
+      </Modal>,
+      consoleLightTheme,
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: 'Open modal' }))
+
+    const closeButton = screen.getByRole('button', { name: 'close' })
+    expect(closeButton.className).toContain('sentiment_white')
   })
 
   it('disclosure function render onClick props is called', async () => {

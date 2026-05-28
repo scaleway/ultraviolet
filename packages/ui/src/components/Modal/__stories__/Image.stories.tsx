@@ -9,7 +9,13 @@ import imageCorrectFormat from './assets/illustrationCorrectFormat.webp'
 
 export const Image: StoryFn = props => (
   <Stack direction="row" gap={2}>
-    <Modal disclosure={<Button>Open Modal with image (incorrect ratio)</Button>} image={image} size="medium" {...props}>
+    <Modal
+      disclosure={<Button>Open Modal with image (incorrect ratio)</Button>}
+      image={image}
+      size="medium"
+      closeButtonSentiment="white"
+      {...props}
+    >
       <Stack direction="column" gap="2">
         <Badge prominence="strong" sentiment="warning">
           Beta
@@ -27,6 +33,7 @@ export const Image: StoryFn = props => (
     <Modal
       disclosure={<Button>Open Modal with image (correct ratio)</Button>}
       image={imageCorrectFormat}
+      closeButtonSentiment="white"
       size="xsmall"
       {...props}
     >

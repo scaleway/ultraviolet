@@ -17,6 +17,8 @@ const container = style({
 
 const imageContainer = style({
   backgroundColor: theme.colors.primary.background,
+  borderTopLeftRadius: 'inherit',
+  borderTopRightRadius: 'inherit',
   height: '15rem',
   overflow: 'hidden',
   width: '100%',
