@@ -5902,6 +5902,951 @@ exports[`offerList > should work with expandable 1`] = `
 </DocumentFragment>
 `;
 
+exports[`offerList > should work with expandable false on a row 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__inoh541"
+    >
+      <table
+        class="styles__6c7s4u1 styles__inoh542"
+      >
+        <thead>
+          <tr
+            class="styles__inoh546"
+          >
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_0.5rem_xxsmall__toi52u3p"
+              />
+            </th>
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_0.5rem_xxsmall__toi52u3p"
+              />
+            </th>
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_0.5rem_xxsmall__toi52u3p"
+              >
+                Solar system Planet
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              style="--_1431nf60: 200px;"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_0.5rem_xxsmall__toi52u3p"
+              >
+                Perihelion
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              style="--_1431nf60: 200px;"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_0.5rem_xxsmall__toi52u3p"
+              >
+                Aphelion
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="styles__6c7s4u16 styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f"
+            data-highlight="false"
+            tabindex="-1"
+          >
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <div
+                class="styles__6c7s4u19"
+              >
+                <div
+                  class="styles__17da2jl0 styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+                >
+                  <div
+                    aria-disabled="false"
+                    class="styles__17da2jl2"
+                    data-checked="false"
+                    data-invalid="false"
+                  >
+                    <input
+                      aria-disabled="false"
+                      aria-label="select-mercury"
+                      class="styles__17da2jl6"
+                      id="mercury"
+                      name="radio-offer-list-mercury"
+                      type="radio"
+                      value="mercury"
+                    />
+                    <svg
+                      class="styles__17da2jl7"
+                      viewBox="0 0 24 24"
+                    >
+                      <title>
+                        radio
+                      </title>
+                      <g>
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke-width="2"
+                        />
+                        <circle
+                          class="styles__17da2jl9"
+                          cx="12"
+                          cy="12"
+                          r="8"
+                        />
+                        <circle
+                          class="styles__17da2jl8"
+                          cx="12"
+                          cy="12"
+                          r="5"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <button
+                aria-label="expand"
+                class="styles__e1wcoe0 styles_disabled_true__e1wcoe2 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+                data-testid="list-expand-button"
+                disabled=""
+                type="button"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <title>
+                    ArrowDownIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Mercury
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              0.307AU
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              0.467AU
+            </td>
+          </tr>
+          <tr
+            class="styles__6c7s4u16 styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f"
+            data-highlight="false"
+            tabindex="-1"
+          >
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <div
+                class="styles__6c7s4u19"
+              >
+                <div
+                  class="styles__17da2jl0 styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+                >
+                  <div
+                    aria-disabled="false"
+                    class="styles__17da2jl2"
+                    data-checked="false"
+                    data-invalid="false"
+                  >
+                    <input
+                      aria-disabled="false"
+                      aria-label="select-venus"
+                      class="styles__17da2jl6"
+                      id="venus"
+                      name="radio-offer-list-venus"
+                      type="radio"
+                      value="venus"
+                    />
+                    <svg
+                      class="styles__17da2jl7"
+                      viewBox="0 0 24 24"
+                    >
+                      <title>
+                        radio
+                      </title>
+                      <g>
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke-width="2"
+                        />
+                        <circle
+                          class="styles__17da2jl9"
+                          cx="12"
+                          cy="12"
+                          r="8"
+                        />
+                        <circle
+                          class="styles__17da2jl8"
+                          cx="12"
+                          cy="12"
+                          r="5"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <button
+                aria-label="expand"
+                class="styles__e1wcoe0 styles_disabled_true__e1wcoe2 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+                data-testid="list-expand-button"
+                disabled=""
+                type="button"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <title>
+                    ArrowDownIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Venus
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              0.718AU
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              0.728AU
+            </td>
+          </tr>
+          <tr
+            class="styles__6c7s4u16 styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f"
+            data-highlight="false"
+            tabindex="-1"
+          >
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <div
+                class="styles__6c7s4u19"
+              >
+                <div
+                  class="styles__17da2jl0 styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+                >
+                  <div
+                    aria-disabled="false"
+                    class="styles__17da2jl2"
+                    data-checked="false"
+                    data-invalid="false"
+                  >
+                    <input
+                      aria-disabled="false"
+                      aria-label="select-home-sweet-home"
+                      class="styles__17da2jl6"
+                      id="home-sweet-home"
+                      name="radio-offer-list-home-sweet-home"
+                      type="radio"
+                      value="home-sweet-home"
+                    />
+                    <svg
+                      class="styles__17da2jl7"
+                      viewBox="0 0 24 24"
+                    >
+                      <title>
+                        radio
+                      </title>
+                      <g>
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke-width="2"
+                        />
+                        <circle
+                          class="styles__17da2jl9"
+                          cx="12"
+                          cy="12"
+                          r="8"
+                        />
+                        <circle
+                          class="styles__17da2jl8"
+                          cx="12"
+                          cy="12"
+                          r="5"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <button
+                aria-label="expand"
+                class="styles__e1wcoe0 styles_disabled_true__e1wcoe2 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+                data-testid="list-expand-button"
+                disabled=""
+                type="button"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <title>
+                    ArrowDownIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Earth
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              0.983AU
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              1.017AU
+            </td>
+          </tr>
+          <tr
+            class="styles__6c7s4u16 styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f"
+            data-highlight="false"
+            tabindex="-1"
+          >
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <div
+                class="styles__6c7s4u19"
+              >
+                <div
+                  class="styles__17da2jl0 styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+                >
+                  <div
+                    aria-disabled="false"
+                    class="styles__17da2jl2"
+                    data-checked="false"
+                    data-invalid="false"
+                  >
+                    <input
+                      aria-disabled="false"
+                      aria-label="select-mars"
+                      class="styles__17da2jl6"
+                      id="mars"
+                      name="radio-offer-list-mars"
+                      type="radio"
+                      value="mars"
+                    />
+                    <svg
+                      class="styles__17da2jl7"
+                      viewBox="0 0 24 24"
+                    >
+                      <title>
+                        radio
+                      </title>
+                      <g>
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke-width="2"
+                        />
+                        <circle
+                          class="styles__17da2jl9"
+                          cx="12"
+                          cy="12"
+                          r="8"
+                        />
+                        <circle
+                          class="styles__17da2jl8"
+                          cx="12"
+                          cy="12"
+                          r="5"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <button
+                aria-label="expand"
+                class="styles__e1wcoe0 styles_disabled_true__e1wcoe2 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+                data-testid="list-expand-button"
+                disabled=""
+                type="button"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <title>
+                    ArrowDownIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Mars
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              1.381AU
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              1.666AU
+            </td>
+          </tr>
+          <tr
+            class="styles__6c7s4u16 styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f"
+            data-highlight="false"
+            tabindex="-1"
+          >
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <div
+                class="styles__6c7s4u19"
+              >
+                <div
+                  class="styles__17da2jl0 styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+                >
+                  <div
+                    aria-disabled="false"
+                    class="styles__17da2jl2"
+                    data-checked="false"
+                    data-invalid="false"
+                  >
+                    <input
+                      aria-disabled="false"
+                      aria-label="select-jupiter"
+                      class="styles__17da2jl6"
+                      id="jupiter"
+                      name="radio-offer-list-jupiter"
+                      type="radio"
+                      value="jupiter"
+                    />
+                    <svg
+                      class="styles__17da2jl7"
+                      viewBox="0 0 24 24"
+                    >
+                      <title>
+                        radio
+                      </title>
+                      <g>
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke-width="2"
+                        />
+                        <circle
+                          class="styles__17da2jl9"
+                          cx="12"
+                          cy="12"
+                          r="8"
+                        />
+                        <circle
+                          class="styles__17da2jl8"
+                          cx="12"
+                          cy="12"
+                          r="5"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <button
+                aria-label="expand"
+                class="styles__e1wcoe0 styles_disabled_true__e1wcoe2 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+                data-testid="list-expand-button"
+                disabled=""
+                type="button"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <title>
+                    ArrowDownIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Jupiter
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              4.951AU
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              5.457AU
+            </td>
+          </tr>
+          <tr
+            class="styles__6c7s4u16 styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f"
+            data-highlight="false"
+            tabindex="-1"
+          >
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <div
+                class="styles__6c7s4u19"
+              >
+                <div
+                  class="styles__17da2jl0 styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+                >
+                  <div
+                    aria-disabled="false"
+                    class="styles__17da2jl2"
+                    data-checked="false"
+                    data-invalid="false"
+                  >
+                    <input
+                      aria-disabled="false"
+                      aria-label="select-saturn"
+                      class="styles__17da2jl6"
+                      id="saturn"
+                      name="radio-offer-list-saturn"
+                      type="radio"
+                      value="saturn"
+                    />
+                    <svg
+                      class="styles__17da2jl7"
+                      viewBox="0 0 24 24"
+                    >
+                      <title>
+                        radio
+                      </title>
+                      <g>
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke-width="2"
+                        />
+                        <circle
+                          class="styles__17da2jl9"
+                          cx="12"
+                          cy="12"
+                          r="8"
+                        />
+                        <circle
+                          class="styles__17da2jl8"
+                          cx="12"
+                          cy="12"
+                          r="5"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <button
+                aria-label="expand"
+                class="styles__e1wcoe0 styles_disabled_true__e1wcoe2 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+                data-testid="list-expand-button"
+                disabled=""
+                type="button"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <title>
+                    ArrowDownIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Saturn
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              9.041AU
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              10.124AU
+            </td>
+          </tr>
+          <tr
+            class="styles__6c7s4u16 styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f"
+            data-highlight="false"
+            tabindex="-1"
+          >
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <div
+                class="styles__6c7s4u19"
+              >
+                <div
+                  class="styles__17da2jl0 styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+                >
+                  <div
+                    aria-disabled="false"
+                    class="styles__17da2jl2"
+                    data-checked="false"
+                    data-invalid="false"
+                  >
+                    <input
+                      aria-disabled="false"
+                      aria-label="select-uranus"
+                      class="styles__17da2jl6"
+                      id="uranus"
+                      name="radio-offer-list-uranus"
+                      type="radio"
+                      value="uranus"
+                    />
+                    <svg
+                      class="styles__17da2jl7"
+                      viewBox="0 0 24 24"
+                    >
+                      <title>
+                        radio
+                      </title>
+                      <g>
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke-width="2"
+                        />
+                        <circle
+                          class="styles__17da2jl9"
+                          cx="12"
+                          cy="12"
+                          r="8"
+                        />
+                        <circle
+                          class="styles__17da2jl8"
+                          cx="12"
+                          cy="12"
+                          r="5"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <button
+                aria-label="expand"
+                class="styles__e1wcoe0 styles_disabled_true__e1wcoe2 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+                data-testid="list-expand-button"
+                disabled=""
+                type="button"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <title>
+                    ArrowDownIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Uranus
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              18.286AU
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              20.097AU
+            </td>
+          </tr>
+          <tr
+            class="styles__6c7s4u16 styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f"
+            data-highlight="false"
+            tabindex="-1"
+          >
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <div
+                class="styles__6c7s4u19"
+              >
+                <div
+                  class="styles__17da2jl0 styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+                >
+                  <div
+                    aria-disabled="false"
+                    class="styles__17da2jl2"
+                    data-checked="false"
+                    data-invalid="false"
+                  >
+                    <input
+                      aria-disabled="false"
+                      aria-label="select-id-neptune"
+                      class="styles__17da2jl6"
+                      id="id-neptune"
+                      name="radio-offer-list-id-neptune"
+                      type="radio"
+                      value="id-neptune"
+                    />
+                    <svg
+                      class="styles__17da2jl7"
+                      viewBox="0 0 24 24"
+                    >
+                      <title>
+                        radio
+                      </title>
+                      <g>
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke-width="2"
+                        />
+                        <circle
+                          class="styles__17da2jl9"
+                          cx="12"
+                          cy="12"
+                          r="8"
+                        />
+                        <circle
+                          class="styles__17da2jl8"
+                          cx="12"
+                          cy="12"
+                          r="5"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="styles__6c7s4u13 styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              <button
+                aria-label="expand"
+                class="styles__e1wcoe0 styles_disabled_true__e1wcoe2 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+                data-testid="list-expand-button"
+                disabled=""
+                type="button"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <title>
+                    ArrowDownIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Neptune
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              29.81AU
+            </td>
+            <td
+              class="styles__6c7s4u1b styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              30.33AU
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`offerList > should work with selectable - checkbox 1`] = `
 <DocumentFragment>
   <div

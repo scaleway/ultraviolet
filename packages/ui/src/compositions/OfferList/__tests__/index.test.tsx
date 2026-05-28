@@ -1,13 +1,13 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { OfferList } from '..'
 import { columns, data } from './resources'
 
 describe('offerList', () => {
-  it('should work with default props', () =>
-    shouldMatchSnapshot(
+  it('should work with default props', () => {
+    const { asFragment } = renderWithTheme(
       <OfferList columns={columns}>
         {data.map(planet => (
           <OfferList.Row id={planet.id} key={planet.id} offerName={planet.id}>
@@ -17,10 +17,13 @@ describe('offerList', () => {
           </OfferList.Row>
         ))}
       </OfferList>,
-    ))
+    )
 
-  it('should work with sentiment', () =>
-    shouldMatchSnapshot(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should work with sentiment', () => {
+    const { asFragment } = renderWithTheme(
       <OfferList columns={columns}>
         {data.map(planet => (
           <OfferList.Row id={planet.id} key={planet.id} offerName={planet.id}>
@@ -30,10 +33,13 @@ describe('offerList', () => {
           </OfferList.Row>
         ))}
       </OfferList>,
-    ))
+    )
 
-  it('should work with banner', () =>
-    shouldMatchSnapshot(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should work with banner', () => {
+    const { asFragment } = renderWithTheme(
       <OfferList columns={columns} expandable>
         {data.map(planet => (
           <OfferList.Row
@@ -53,10 +59,12 @@ describe('offerList', () => {
           </OfferList.Row>
         ))}
       </OfferList>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should work with banner open', () =>
-    shouldMatchSnapshot(
+  it('should work with banner open', () => {
+    const { asFragment } = renderWithTheme(
       <OfferList columns={columns} expandable>
         {data.map(planet => (
           <OfferList.Row
@@ -74,10 +82,13 @@ describe('offerList', () => {
           </OfferList.Row>
         ))}
       </OfferList>,
-    ))
+    )
 
-  it('should work with badge', () =>
-    shouldMatchSnapshot(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should work with badge', () => {
+    const { asFragment } = renderWithTheme(
       <OfferList columns={columns} expandable>
         {data.map(planet => (
           <OfferList.Row
@@ -93,10 +104,13 @@ describe('offerList', () => {
           </OfferList.Row>
         ))}
       </OfferList>,
-    ))
+    )
 
-  it('should work loading', () =>
-    shouldMatchSnapshot(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should work loading', () => {
+    const { asFragment } = renderWithTheme(
       <OfferList columns={columns} loading>
         {data.map(planet => (
           <OfferList.Row id={planet.id} key={planet.id} offerName={planet.id}>
@@ -106,7 +120,10 @@ describe('offerList', () => {
           </OfferList.Row>
         ))}
       </OfferList>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   it('should work with selectable - radio', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
@@ -173,7 +190,7 @@ describe('offerList', () => {
       </OfferList>,
     )
 
-    const expandButton = screen.getAllByTestId('list-expand-button')[0]
+    const expandButton = screen.getAllByRole('button', { name: 'expand' })[0]
     await userEvent.click(expandButton)
 
     const expandText = screen.getByText('expandable content')
@@ -184,9 +201,27 @@ describe('offerList', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  it('should work with expandable false on a row', () => {
+    const { asFragment } = renderWithTheme(
+      <OfferList columns={columns} expandable>
+        {data.map(planet => (
+          <OfferList.Row expandable={false} id={planet.id} key={planet.id} offerName={planet.id}>
+            <OfferList.Cell>{planet.name}</OfferList.Cell>
+            <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
+            <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>
+          </OfferList.Row>
+        ))}
+      </OfferList>,
+    )
+
+    const expandButton = screen.getAllByRole('button', { name: 'expand' })[0]
+    expect(expandButton).toBeDisabled()
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   it('should throw an error when using OfferList.Row outside OfferList', () => {
     expect(() =>
-      shouldMatchSnapshot(
+      renderWithTheme(
         <OfferList.Row id="cell" offerName="cell">
           <OfferList.Cell>a cell</OfferList.Cell>
         </OfferList.Row>,
