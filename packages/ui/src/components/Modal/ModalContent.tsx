@@ -41,6 +41,7 @@ export const ModalContent = ({
   handleToggle,
   finalId,
   image,
+  closeButtonSentiment,
   style,
   ref,
   isDrawer,
@@ -79,7 +80,7 @@ export const ModalContent = ({
             aria-label="close"
             data-testid={dataTestId ? `${dataTestId}-close-button` : undefined}
             onClick={handleClose}
-            sentiment="neutral"
+            sentiment={closeButtonSentiment}
             size="small"
             variant="ghost"
           >

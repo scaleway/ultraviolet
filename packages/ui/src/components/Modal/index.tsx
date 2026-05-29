@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useContext, useId, useRef, useState } from 'react'
+import { Fragment, useCallback, useContext, useId, useRef, useState } from 'react'
 import type { CSSProperties, ReactElement, ReactNode, RefObject } from 'react'
 import { Disclosure } from './components/Disclosure'
 import { ModalContent } from './ModalContent'
@@ -15,6 +15,14 @@ export type ModalProps = {
   ariaLabel?: string
   disclosure?: ReactElement | ((state: ModalState) => ReactElement)
   isClosable?: boolean
+  /**
+   * When using a background image, set the sentiment of the close button so that it has a good contrast with the image:
+   * - 'neutral': default value for when there is no background image
+   * - 'black': use on light images
+   * - 'white': use on dark images
+   * @default 'neutral'
+   */
+  closeButtonSentiment?: 'neutral' | 'black' | 'white'
   onClose?: () => void
   onOpen?: () => void
   onBeforeClose?: () => Promise<void> | void
@@ -46,6 +54,7 @@ export const Modal = ({
   hideOnClickOutside = true,
   hideOnEsc = true,
   isClosable = true,
+  closeButtonSentiment = 'neutral',
   onClose,
   onBeforeClose,
   onOpen,
@@ -95,6 +104,8 @@ export const Modal = ({
   // the first modal to render will create the context, and the others will use it.
   const context = useContext(ModalContext)
 
+  const Container = context ? Fragment : ModalProvider
+
   return (
     <>
       {disclosure ? (
@@ -108,7 +119,7 @@ export const Modal = ({
           visible={visible}
         />
       ) : null}
-      {context ? (
+      <Container>
         <ModalContent
           ariaLabel={ariaLabel}
           backdropClassName={backdropClassName}
@@ -122,6 +133,7 @@ export const Modal = ({
           hideOnClickOutside={hideOnClickOutside}
           hideOnEsc={hideOnEsc}
           image={image}
+          closeButtonSentiment={closeButtonSentiment}
           isClosable={isClosable}
           isDrawer={isDrawer}
           open={open}
@@ -133,34 +145,7 @@ export const Modal = ({
         >
           {children}
         </ModalContent>
-      ) : (
-        <ModalProvider>
-          <ModalContent
-            ariaLabel={ariaLabel}
-            backdropClassName={backdropClassName}
-            className={className}
-            dataTestId={dataTestId}
-            finalId={finalId}
-            finalSize={size}
-            handleClose={handleClose}
-            handleOpen={handleOpen}
-            handleToggle={handleToggle}
-            hideOnClickOutside={hideOnClickOutside}
-            hideOnEsc={hideOnEsc}
-            image={image}
-            isClosable={isClosable}
-            isDrawer={isDrawer}
-            open={open}
-            placement={placement}
-            preventBodyScroll={preventBodyScroll}
-            ref={ref}
-            style={style}
-            visible={visible}
-          >
-            {children}
-          </ModalContent>
-        </ModalProvider>
-      )}
+      </Container>
     </>
   )
 }
