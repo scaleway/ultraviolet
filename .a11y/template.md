@@ -1,63 +1,63 @@
-# [Component Name] - Accessibilité
+# [Component Name] - Accessibility
 
-## Résumé
+## Summary
 
-**Statut** : ✅ Compliant / ⚠️ Needs Work / ❌ Non-compliant  
-**Type** : [Layout Primitive / Interactive / Feedback / etc.]
+**Status**: ✅ Compliant / ⚠️ Needs Work / ❌ Non-compliant  
+**Type**: [Layout Primitive / Interactive / Feedback / etc.]
 
-## Checks rapides
+## Quick Checks
 
-- [ ] Clavier : [OK / À améliorer / N/A]
-- [ ] ARIA : [OK / À améliorer / N/A]
-- [ ] Focus : [OK / À améliorer / N/A]
-- [ ] Contraste : [OK / À améliorer / N/A]
-- [ ] Screen Readers : [OK / À améliorer / N/A]
+- [ ] Keyboard: [OK / Needs improvement / N/A]
+- [ ] ARIA: [OK / Needs improvement / N/A]
+- [ ] Focus: [OK / Needs improvement / N/A]
+- [ ] Contrast: [OK / Needs improvement / N/A]
+- [ ] Screen Readers: [OK / Needs improvement / N/A]
 
-## Actions requises
+## Required Actions
 
-### Critiques
+### Critical
 
-1. [Action prioritaire]
-2. [Action prioritaire]
+1. [Priority action]
+2. [Priority action]
 
-### Secondaires
+### Secondary
 
-- [Action secondaire]
+- [Secondary action]
 
 ## Implementation
 
 ```tsx
-// Code snippet pour résoudre les problèmes
+// Code snippet to resolve issues
 ```
 
-## Bonnes pratiques
+## Best Practices
 
-### ✅ Faire
+### ✅ Do
 
 ```tsx
-// Exemple d'usage accessible
+// Example of accessible usage
 ```
 
-### ❌ Éviter
+### ❌ Avoid
 
 ```tsx
-// Exemple d'usage non accessible
+// Example of inaccessible usage
 ```
 
 ## Tests
 
-Voir [`__tests__/a11y.test.tsx`](./__tests__/a11y.test.tsx)
+See [`__tests__/a11y.test.tsx`](./__tests__/a11y.test.tsx)
 
-### Checklist manuelle
+### Manual Checklist
 
-- [ ] Navigation clavier
-- [ ] Tests screen readers (NVDA/VoiceOver)
-- [ ] Contraste des couleurs
+- [ ] Keyboard navigation
+- [ ] Screen reader tests (NVDA/VoiceOver)
+- [ ] Color contrast
 
-## Ressources
+## Resources
 
-- [Lien vers WAI-ARIA / WCAG si pertinent]
+- [Link to WAI-ARIA / WCAG if relevant]
 
-## Composants liés
+## Related Components
 
-- **Component** - Description courte
+- **Component** - Short description

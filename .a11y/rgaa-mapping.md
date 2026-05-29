@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document maps RGAA 4.1.2 criteria to component accessibility requirements. RGAA (Référentiel Général d'Amélioration de l'Accessibilité) is the French standard for web accessibility.
+This document maps RGAA 4.1.2 criteria to component accessibility requirements. RGAA (General Repository for Accessibility Improvement) is the French standard for web accessibility.
 
 ## Image Criteria
 

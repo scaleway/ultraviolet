@@ -41,9 +41,7 @@
 
 ### Content & Structure
 
-- [ ] Page has proper heading hierarchy (h1-h6)
-- [ ] Language is declared in HTML
-- [ ] Links have descriptive text
+- [ ] heading hierarchy (h1-h6)
 - [ ] Tables have proper headers and captions
 - [ ] Lists are properly marked up
 
@@ -57,7 +55,6 @@
 ### Forms
 
 - [ ] All inputs have visible labels
-- [ ] Error messages are clear and helpful
 - [ ] Error messages are programmatically associated
 - [ ] Required fields are indicated
 - [ ] Form submission provides feedback

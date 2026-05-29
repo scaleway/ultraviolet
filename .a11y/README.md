@@ -15,8 +15,7 @@ This initiative aims to achieve **WCAG 2.1 AA** compliance and **RGAA 4.1.2** co
 ## Standards & Guidelines
 
 - **WCAG 2.1 Level AA** - Web Content Accessibility Guidelines
-- **RGAA 4.1.2** - Référentiel Général d'Amélioration de l'Accessibilité
-- **DSFR** - Système de Design de l'État (French Government Design System)
+- **RGAA 4.1.2** - General Repository for Accessibility Improvement (French standard)
 - **WAI-ARIA 1.2** - Accessible Rich Internet Applications
 
 ## Priority Components
@@ -27,17 +26,18 @@ This initiative aims to achieve **WCAG 2.1 AA** compliance and **RGAA 4.1.2** co
 2. **Tooltip** - Screen reader announcements, timing
 3. **Modal** - Focus trap, escape key, role dialog
 4. **Dialog** - Similar to Modal, proper ARIA
+4. **Drawer** - Similar to Modal
 5. **Button** - Foundational component, keyboard support
 
 ### Phase 2: High-Impact Components
 
-- Form components (Input, Select, Checkbox, Radio)
+- Input components (Input, Select, Checkbox, Radio)
 - Navigation components (Tabs, Breadcrumbs, Menu)
 - Feedback components (Alert, Notification, Badge)
 
 ### Phase 3: Remaining Components
 
-- All other UI components (79 total)
+- All other UI components
 
 ## Testing Tools
 
