@@ -54,7 +54,7 @@ const SelectableCardGroupFieldComponent = <
       name={name}
       onChange={event => {
         if (type === 'checkbox') {
-          const fieldValue = (field.value ?? []) as string[]
+          const fieldValue = Array.isArray(field.value) ? field.value as string[] : []
           if (fieldValue?.includes(event.currentTarget.value)) {
             field.onChange(fieldValue?.filter(currentValue => currentValue !== event.currentTarget.value))
           } else {
