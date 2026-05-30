@@ -631,7 +631,7 @@ importers:
     dependencies:
       '@handlewithcare/react-prosemirror':
         specifier: 3.0.0
-        version: 3.0.0(prosemirror-model@1.25.1)(prosemirror-state@1.4.3)(prosemirror-view@1.41.4)(react-dom@19.2.6(react@19.2.6))(react-reconciler@0.33.0(react@19.2.6))(react@19.2.6)
+        version: 3.0.0(prosemirror-model@1.25.7)(prosemirror-state@1.4.3)(prosemirror-view@1.41.4)(react-dom@19.2.6(react@19.2.6))(react-reconciler@0.33.0(react@19.2.6))(react@19.2.6)
       '@nivo/bar':
         specifier: 0.99.0
         version: 0.99.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -711,8 +711,8 @@ importers:
         specifier: 1.2.1
         version: 1.2.1
       prosemirror-model:
-        specifier: 1.25.1
-        version: 1.25.1
+        specifier: 1.25.7
+        version: 1.25.7
       prosemirror-schema-basic:
         specifier: 1.2.4
         version: 1.2.4
@@ -6148,6 +6148,9 @@ packages:
   prosemirror-model@1.25.1:
     resolution: {integrity: sha512-AUvbm7qqmpZa5d9fPKMvH1Q5bqYQvAZWOGRvxsB6iFLyycvC9MwNemNVjHVrWgjaoxAfY8XVg7DbvQ/qxvI9Eg==}
 
+  prosemirror-model@1.25.7:
+    resolution: {integrity: sha512-A79aN8QEFUwI6cax8Yq4Rpcx1TJZ3Kagn+ii7qLo4/V8H3mMiHrhFyhTyHHvpSnOgMPpWiDGSwM3etwrxE50ug==}
+
   prosemirror-schema-basic@1.2.4:
     resolution: {integrity: sha512-ELxP4TlX3yr2v5rM7Sb70SqStq5NvI15c0j9j/gjsrO5vaw+fnnpovCLEGIcpeGfifkuqJwl4fon6b+KdrODYQ==}
 
@@ -8790,10 +8793,10 @@ snapshots:
 
   '@exodus/bytes@1.15.1': {}
 
-  '@handlewithcare/react-prosemirror@3.0.0(prosemirror-model@1.25.1)(prosemirror-state@1.4.3)(prosemirror-view@1.41.4)(react-dom@19.2.6(react@19.2.6))(react-reconciler@0.33.0(react@19.2.6))(react@19.2.6)':
+  '@handlewithcare/react-prosemirror@3.0.0(prosemirror-model@1.25.7)(prosemirror-state@1.4.3)(prosemirror-view@1.41.4)(react-dom@19.2.6(react@19.2.6))(react-reconciler@0.33.0(react@19.2.6))(react@19.2.6)':
     dependencies:
       classnames: 2.5.1
-      prosemirror-model: 1.25.1
+      prosemirror-model: 1.25.7
       prosemirror-state: 1.4.3
       prosemirror-view: 1.41.4
       react: 19.2.6
@@ -13078,6 +13081,10 @@ snapshots:
       w3c-keyname: 2.2.8
 
   prosemirror-model@1.25.1:
+    dependencies:
+      orderedmap: 2.1.1
+
+  prosemirror-model@1.25.7:
     dependencies:
       orderedmap: 2.1.1
 
