@@ -630,8 +630,8 @@ importers:
   packages/ui:
     dependencies:
       '@handlewithcare/react-prosemirror':
-        specifier: 3.0.0
-        version: 3.0.0(prosemirror-model@1.25.1)(prosemirror-state@1.4.3)(prosemirror-view@1.41.4)(react-dom@19.2.6(react@19.2.6))(react-reconciler@0.33.0(react@19.2.6))(react@19.2.6)
+        specifier: 3.0.6
+        version: 3.0.6(prosemirror-model@1.25.1)(prosemirror-state@1.4.3)(prosemirror-view@1.41.4)(react-dom@19.2.6(react@19.2.6))(react-reconciler@0.33.0(react@19.2.6))(react@19.2.6)
       '@nivo/bar':
         specifier: 0.99.0
         version: 0.99.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -2091,13 +2091,13 @@ packages:
       '@noble/hashes':
         optional: true
 
-  '@handlewithcare/react-prosemirror@3.0.0':
-    resolution: {integrity: sha512-mfWBLLgZOzU9kLhNs9BDg2BzzaQ9oZL7VwoNE0Qu3mvSrGnHfwRsmLZorE5csglnW6bMdw/tozLcCagD8c4KOA==}
+  '@handlewithcare/react-prosemirror@3.0.6':
+    resolution: {integrity: sha512-7HNwItwpi1dZ0lq2KvqCvGhZaP3QXDFQOcyap3mNb9HyFPYXWdTQm1XQEGQ1sZ5656OOwAzzYU/q7ncRvIJ45w==}
     engines: {node: '>=16.9'}
     peerDependencies:
       prosemirror-model: ^1.0.0
       prosemirror-state: ^1.0.0
-      prosemirror-view: 1.41.4
+      prosemirror-view: 1.41.7
       react: '>=17 <20'
       react-dom: '>=17 <20'
       react-reconciler: '>=0.26.1 <=0.33.0'
@@ -8786,7 +8786,7 @@ snapshots:
 
   '@exodus/bytes@1.15.1': {}
 
-  '@handlewithcare/react-prosemirror@3.0.0(prosemirror-model@1.25.1)(prosemirror-state@1.4.3)(prosemirror-view@1.41.4)(react-dom@19.2.6(react@19.2.6))(react-reconciler@0.33.0(react@19.2.6))(react@19.2.6)':
+  '@handlewithcare/react-prosemirror@3.0.6(prosemirror-model@1.25.1)(prosemirror-state@1.4.3)(prosemirror-view@1.41.4)(react-dom@19.2.6(react@19.2.6))(react-reconciler@0.33.0(react@19.2.6))(react@19.2.6)':
     dependencies:
       classnames: 2.5.1
       prosemirror-model: 1.25.1
