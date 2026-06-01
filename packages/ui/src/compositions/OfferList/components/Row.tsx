@@ -185,7 +185,7 @@ export const Row = ({
             <Button
               aria-label="expand"
               data-testid="list-expand-button"
-              disabled={(disabled ?? !expandable) || loading}
+              disabled={(disabled ?? !expandableContent) || loading}
               onClick={event => {
                 event.stopPropagation()
                 toggleRowExpand()
