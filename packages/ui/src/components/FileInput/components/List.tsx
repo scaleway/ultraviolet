@@ -13,7 +13,7 @@ import { formatFileSize, getMimeTypeType } from '../helpers'
 import type { ListProps, MimeType } from '../types'
 import { fileInputStyle } from '../styles.css'
 
-const getIllustration = (type: MimeType, file: string, error: boolean, loading?: boolean) => {
+const getIllustration = (type: MimeType, error: boolean, loading: boolean, file?: string) => {
   const state = error ? 'error' : 'default'
   const sentiment = error ? 'danger' : 'primary'
 
@@ -38,12 +38,10 @@ const getIllustration = (type: MimeType, file: string, error: boolean, loading?:
       </div>
     )
   }
-  if (type === 'image' && !error) {
-    return <img alt="" className={fileInputStyle.fileViewerImage.default} height="auto" src={file} width="auto" />
-  }
-
-  if (type === 'image' && error) {
-    return (
+  if (type === 'image') {
+    return !error && file ? (
+      <img alt="" className={fileInputStyle.fileViewerImage.default} height="auto" src={file} width="auto" />
+    ) : (
       <div className={fileInputStyle.fileViewerImage[state]}>
         <ImageIcon sentiment={sentiment} size="medium" />
       </div>
@@ -69,11 +67,11 @@ export const ListFiles = ({ limit, textLimit, prominence = 'default', onDelete }
       {files.map((file, index) => {
         if (!computedLimit || index < computedLimit) {
           const fileType = getMimeTypeType(file.type)
-          const illustration = getIllustration(fileType, file.file, !!file.error || error, file.loading)
+          const illustration = getIllustration(fileType, !!file.error || error, !!file.loading, file.file)
           const sentiment = file.error ? 'danger' : 'neutral'
 
           return (
-            <Stack data-testid={file.fileName} gap={0.5} key={`${file.fileName}-${file.size}`} as="li">
+            <Stack data-testid={file.name} gap={0.5} key={`${file.name}-${file.size}`} as="li">
               <Stack
                 alignItems="center"
                 className={fileInputStyle.fileViewerContainer[file.error || error ? 'error' : prominence]}
@@ -85,7 +83,7 @@ export const ListFiles = ({ limit, textLimit, prominence = 'default', onDelete }
                   {illustration}
                   <Stack className={fileInputStyle.fileInfo} direction="column">
                     <Text as="p" oneLine sentiment={sentiment} variant="bodySmallStrong">
-                      {file.fileName}
+                      {file.name}
                     </Text>
                     <Text as="p" sentiment={sentiment} variant="caption">
                       {formatFileSize(file.size)}
@@ -93,12 +91,12 @@ export const ListFiles = ({ limit, textLimit, prominence = 'default', onDelete }
                   </Stack>
                 </Stack>
                 <Button
-                  data-testid={`remove-${file.fileName}`}
+                  data-testid={`remove-${file.name}`}
                   onClick={() => {
                     const newFiles = files.filter(oldFile => file.file !== oldFile.file)
                     setFiles(newFiles)
                     onChangeFiles?.(newFiles)
-                    onDelete?.(file.fileName)
+                    onDelete?.(file.name)
                   }}
                   sentiment={sentiment}
                   size="xsmall"

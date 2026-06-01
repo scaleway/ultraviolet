@@ -1,16 +1,19 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { FileInput } from '..'
 import { Stack } from '../../Stack'
+import type { FilesType } from '../types'
 
+// oxlint-disable-next-line typescript/no-unsafe-type-assertion
 const defaultFile = [
   {
     file: 'https://upload.wikimedia.org/wikipedia/commons/4/41/Photo_Chat_Noir_et_blanc.jpg',
-    fileName: 'cat.png',
+    name: 'cat.png',
     lastModified: 1,
     size: 30_460,
     type: 'image/png',
   },
-]
+] as FilesType[]
+
 export const Multiple: StoryFn<typeof FileInput> = args => (
   <Stack direction="column" gap={3}>
     <FileInput

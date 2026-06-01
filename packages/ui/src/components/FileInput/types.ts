@@ -3,14 +3,10 @@ import type { DragEvent, InputHTMLAttributes, ReactNode, RefObject } from 'react
 type ChildrenType = ReactNode | ((inputId: string, inputRef: RefObject<HTMLInputElement | null>) => ReactNode)
 
 export type FilesType = {
-  fileName: string
-  file: string
-  size: number
-  lastModified: number
-  type: string
+  file?: string
   loading?: boolean
   error?: string
-}
+} & File
 
 export type ErrorType = { fileName?: string; error: string }
 /**

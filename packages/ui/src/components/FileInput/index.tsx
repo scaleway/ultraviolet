@@ -128,20 +128,23 @@ const FileInputBase = ({
       }
     }
 
-    const formattedNewFiles = newFiles.map(file => ({
-      file: URL.createObjectURL(file),
-      fileName: file.name,
-      lastModified: file.lastModified,
-      size: file.size,
-      type: file.type,
-    }))
+    const formattedNewFiles = newFiles.map(file =>
+      Object.assign(file, {
+        file: URL.createObjectURL(file),
+      }),
+    )
 
     const formattedFiles = computedMultiple ? [...files, ...formattedNewFiles] : [formattedNewFiles[0]]
     setFiles(formattedFiles)
     onChangeFiles?.(formattedFiles)
 
-    if (addedFiles) {
-      onChange?.(addedFiles)
+    if (addedFiles && onChange) {
+      const dataTransfer = new DataTransfer()
+      formattedFiles.forEach(formattedFile => {
+        // Since File type is included in FileType
+        dataTransfer.items.add(formattedFile satisfies File)
+      })
+      onChange(dataTransfer.files)
     }
 
     if (inputRef.current) {

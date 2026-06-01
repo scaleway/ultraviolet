@@ -2,39 +2,41 @@ import type { StoryFn } from '@storybook/react-vite'
 import { FileInput } from '..'
 import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
+import type { FilesType } from '../types'
 
+// oxlint-disable-next-line typescript/no-unsafe-type-assertion
 const defaultFile = [
   {
     file: 'https://upload.wikimedia.org/wikipedia/commons/4/41/Photo_Chat_Noir_et_blanc.jpg',
-    fileName: 'cat.png',
+    name: 'cat.png',
     lastModified: 1,
     size: 30_460,
     type: 'image/png',
   },
   {
     file: 'sound.mp3',
-    fileName: 'sound.mp3',
+    name: 'sound.mp3',
     lastModified: 1,
     size: 30_460,
     type: 'audio/mp3',
   },
   {
     file: 'doc.pdf',
-    fileName: 'doc.pdf',
+    name: 'doc.pdf',
     lastModified: 1,
     size: 304_600,
     type: 'application/pdf',
   },
   {
     file: 'video.mp4',
-    fileName: 'video.mp4',
+    name: 'video.mp4',
     lastModified: 1,
     size: 40_460_000,
     type: 'video/mp4',
   },
   {
     file: 'loading.pdf',
-    fileName: 'loading_example.pdf',
+    name: 'loading_example.pdf',
     lastModified: 1,
     loading: true,
     size: 40_460_000,
@@ -42,13 +44,13 @@ const defaultFile = [
   },
   {
     error: 'Maximum file size exceeded',
-    file: 'error.png',
-    fileName: 'error_example.png',
+    name: 'error_example.png',
     lastModified: 1,
     size: 4_046_000_000,
     type: 'image/png',
   },
-]
+] as FilesType[]
+
 export const List: StoryFn<typeof FileInput> = args => (
   <Stack direction="column" gap={3}>
     <FileInput

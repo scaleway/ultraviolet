@@ -4,6 +4,24 @@ import { Form, FileInputField } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 
+// Needed to correcty display an element of type File in the snippet
+const serializeValues = (values: Record<string, File>) =>
+  Object.entries(values).reduce<Record<string, unknown>>((acc, [key, value]) => {
+    if (Array.isArray(value)) {
+      acc[key] = [...value].map(file => ({
+        name: file.name,
+        size: file.size,
+        type: file.type,
+        lastModified: file.lastModified,
+        webkitRelativePath: file.webkitRelativePath,
+        file: URL.createObjectURL(file),
+      }))
+    } else {
+      acc[key] = value
+    }
+    return acc
+  }, {})
+
 export default {
   component: FileInputField,
   decorators: [
@@ -32,7 +50,7 @@ export default {
                 Form input values:
               </Text>
               <Snippet initiallyExpanded prefix="lines">
-                {JSON.stringify(methods.watch(), null, 1)}
+                {JSON.stringify(serializeValues(methods.watch()), null, 1)}
               </Snippet>
             </Stack>
             <Stack gap={1}>
