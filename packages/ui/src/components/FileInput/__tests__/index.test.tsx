@@ -4,54 +4,7 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { FileInput } from '..'
-import type { FilesType } from '../types'
-
-const defaultFile = [
-  {
-    file: 'https://upload.wikimedia.org/wikipedia/commons/4/41/Photo_Chat_Noir_et_blanc.jpg',
-    name: 'cat.png',
-    lastModified: Date.now(),
-    size: 30_460,
-    type: 'image/png',
-  },
-  {
-    error: 'Maximum file size exceeded',
-    file: 'error.png',
-    name: 'error_example.png',
-    lastModified: Date.now(),
-    size: 4_046_000_000,
-    type: 'image/png',
-  },
-  {
-    file: 'sound.mp3',
-    name: 'sound.mp3',
-    lastModified: Date.now(),
-    size: 0,
-    type: 'audio/mp3',
-  },
-  {
-    file: 'doc.pdf',
-    name: 'doc.pdf',
-    lastModified: Date.now(),
-    size: 304_600,
-    type: 'application/pdf',
-  },
-  {
-    file: 'video.mp4',
-    name: 'video.mp4',
-    lastModified: Date.now(),
-    size: 40_460_000,
-    type: 'video/png',
-  },
-  {
-    file: 'loading.pdf',
-    name: 'loading_example.pdf',
-    lastModified: Date.now(),
-    loading: true,
-    size: 40_460_000,
-    type: 'application/pdf',
-  },
-] as FilesType[]
+import { defaultFiles } from '../__mock__/mockFile'
 
 describe('fileInput', () => {
   it('renders correctly', () => {
@@ -73,7 +26,7 @@ describe('fileInput', () => {
 
   it('renders correctly with multiple and list', () => {
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" defaultFiles={defaultFile} multiple>
+      <FileInput aria-label="label" defaultFiles={defaultFiles} multiple>
         <FileInput.List />
       </FileInput>,
     )
@@ -107,7 +60,7 @@ describe('fileInput', () => {
 
   it('renders correctly with error', () => {
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" defaultFiles={defaultFile} disabled error="error">
+      <FileInput aria-label="label" defaultFiles={defaultFiles} disabled error="error">
         <FileInput.Button data-testid="button">Disabled button</FileInput.Button>
       </FileInput>,
     )
@@ -121,7 +74,7 @@ describe('fileInput', () => {
     const onDelete = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" defaultFiles={defaultFile} multiple onChange={onChange}>
+      <FileInput aria-label="label" defaultFiles={defaultFiles} multiple onChange={onChange}>
         <FileInput.List onDelete={onDelete} />
       </FileInput>,
     )
@@ -140,7 +93,7 @@ describe('fileInput', () => {
   it('renders correctly onChangeFiles', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" defaultFiles={defaultFile} multiple onChangeFiles={onChange}>
+      <FileInput aria-label="label" defaultFiles={defaultFiles} multiple onChangeFiles={onChange}>
         <FileInput.List />
       </FileInput>,
     )
@@ -159,7 +112,7 @@ describe('fileInput', () => {
   it('should work correctly with listLimit', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" defaultFiles={defaultFile} multiple onChangeFiles={onChange}>
+      <FileInput aria-label="label" defaultFiles={defaultFiles} multiple onChangeFiles={onChange}>
         <FileInput.List limit={3} textLimit="see all" />
       </FileInput>,
     )
@@ -182,7 +135,7 @@ describe('fileInput', () => {
     const onChange = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" defaultFiles={defaultFile} multiple onChangeFiles={onChange}>
+      <FileInput aria-label="label" defaultFiles={defaultFiles} multiple onChangeFiles={onChange}>
         <FileInput.List />
         <FileInput.Button>button</FileInput.Button>
       </FileInput>,
@@ -202,7 +155,7 @@ describe('fileInput', () => {
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
-        defaultFiles={defaultFile}
+        defaultFiles={defaultFiles}
         multiple
         onChangeFiles={onChange}
         title={(inputId, inputRef) => (
@@ -234,7 +187,7 @@ describe('fileInput', () => {
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
-        defaultFiles={defaultFile}
+        defaultFiles={defaultFiles}
         multiple
         onChangeFiles={onChange}
         title="dragging"
@@ -259,7 +212,7 @@ describe('fileInput', () => {
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
-        defaultFiles={defaultFile}
+        defaultFiles={defaultFiles}
         multiple
         onChangeFiles={onChange}
         title="dragging"
