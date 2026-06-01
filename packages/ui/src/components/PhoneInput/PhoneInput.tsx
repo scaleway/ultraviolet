@@ -220,7 +220,6 @@ export const PhoneInput: PhoneInputType = forwardRef(
           helper={helper}
           error={error}
           success={success}
-          size={size}
           disabled={disabled}
           id={ariaDescribedBy ?? helperId}
         />

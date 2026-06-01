@@ -174,7 +174,7 @@ const FileInputBase = ({
   const computedChildren = typeof children === 'function' ? children(inputId, inputRef) : children
 
   const computedHelper = (
-    <Description error={error} helper={helper} id={ariaDescribedBy ?? helperId} size={size} disabled={disabled} />
+    <Description error={error} helper={helper} id={ariaDescribedBy ?? helperId} disabled={disabled} />
   )
 
   const input = (
