@@ -27,7 +27,7 @@ export const RadioGroupRadio = ({
     throw new Error('RadioGroup.Radio can only be used inside a RadioGroup')
   }
 
-  const { groupName, onChange, groupValue, error: errorContext } = context
+  const { groupName, onChange, groupValue, error: errorContext, size } = context
 
   return (
     <Radio
@@ -44,6 +44,7 @@ export const RadioGroupRadio = ({
       onChange={onChange}
       onFocus={onFocus}
       onKeyDown={onKeyDown}
+      size={size}
       style={style}
       tooltip={tooltip}
       value={value}

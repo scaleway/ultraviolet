@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { style } from '@vanilla-extract/css'
+import { style, styleVariants } from '@vanilla-extract/css'
 import { selectableCardStyle } from '../SelectableCard/styles.css'
 import { widthSelectable } from '../SelectableCard/variables.css'
 import { selectableCardOptionGroupStyle } from '../SelectableCardOptionGroup/styles.css'
@@ -25,11 +25,10 @@ const margedText = style({
   marginLeft: theme.space['4'],
 })
 
-const container = style({
+const containerBase = style({
   alignItems: 'flex-start',
   display: 'flex',
   flex: 1,
-  gap: theme.space['1'],
   position: 'relative',
   selectors: {
     "&[aria-disabled='false']": {
@@ -42,15 +41,30 @@ const container = style({
   },
 })
 
-const textLabel = style({
+const container = styleVariants({
+  small: [containerBase, { gap: theme.space['0.5'] }],
+  medium: [containerBase, { gap: theme.space['1'] }],
+})
+
+const textLabelBase = style({
   cursor: 'pointer',
   flex: 1,
   selectors: {
-    [`${container}[aria-disabled='true'] > &`]: {
+    [`${containerBase}[aria-disabled='true'] > &`]: {
       color: theme.colors.neutral.textDisabled,
       cursor: 'not-allowed',
     },
   },
+})
+
+const textLabel = styleVariants({
+  small: [
+    textLabelBase,
+    {
+      paddingTop: theme.space['0.25'],
+    },
+  ],
+  medium: [textLabelBase],
 })
 
 const label = style({
@@ -109,38 +123,32 @@ const ring = style({
   minWidth: theme.sizing['300'],
   transition: 'fill 100ms',
   selectors: {
-    [`${container}[data-invalid='false'] ${radio}:checked + &`]: {
+    [`${containerBase}[data-invalid='false'] ${radio}:checked + &`]: {
       fill: theme.colors.primary.backgroundStrong,
     },
-    [`${container} ${radio}:checked:disabled + &`]: {
+    [`${containerBase} ${radio}:checked:disabled + &`]: {
       fill: theme.colors.primary.borderDisabled,
     },
-    [`${container}[data-invalid='true'] &`]: {
+    [`${containerBase}[data-invalid='true'] &`]: {
       fill: theme.colors.danger.borderStrong,
     },
-    [`${container}[data-invalid='true'] ${radio}:disabled + &`]: {
+    [`${containerBase}[data-invalid='true'] ${radio}:disabled + &`]: {
       fill: theme.colors.danger.backgroundStrongDisabled,
     },
-    [`${container}[data-invalid='false'] ${radio}:not(:disabled):active + &`]: {
-      backgroundColor: theme.colors.primary.backgroundHover,
+    [`${containerBase}[data-invalid='false'] ${radio}:not(:disabled):active + &`]: {
       fill: theme.colors.primary.backgroundStrong,
     },
-    [`${container} ${radio}:not(:disabled):focus-visible + &`]: {
-      outline: '-webkit-focus-ring-color auto 1px',
-    },
-    [`${container}[data-invalid='true'] ${radio}:not(:disabled):active + &`]: {
-      backgroundColor: theme.colors.danger.backgroundHover,
+    [`${containerBase}[data-invalid='true'] ${radio}:not(:disabled):active + &`]: {
       fill: theme.colors.danger.backgroundStrong,
     },
-    [`${container}[data-invalid='false']:hover ${radio}:not(:disabled) + &`]: {
+    [`${containerBase}[data-invalid='false']:hover ${radio}:not(:disabled) + &`]: {
       fill: theme.colors.primary.border,
     },
-    [`${container}:disabled &`]: {
+    [`${containerBase}:disabled &`]: {
       cursor: 'not-allowed',
       fill: theme.colors.neutral.borderDisabled,
     },
   },
-  width: theme.sizing['300'],
 })
 
 const mark = style({
@@ -159,23 +167,46 @@ const mark = style({
 const innerCircleRing = style({
   transition: 'fill 100ms',
   selectors: {
-    [`${container}:hover &`]: {
+    [`${containerBase}:hover &`]: {
       fill: theme.colors.primary.backgroundHover,
     },
     [`${radio}:disabled + ${ring} &`]: {
       fill: theme.colors.neutral.backgroundDisabled,
     },
-    [`${container}[data-invalid='true'] &`]: {
+    [`${containerBase}[data-invalid='true'] &`]: {
       fill: theme.colors.danger.background,
     },
-    [`${container}[data-invalid='true']:hover &`]: {
+    [`${containerBase}[data-invalid='true']:hover &`]: {
       fill: theme.colors.danger.backgroundHover,
     },
-    [`${container}[data-invalid='true'] ${radio}:disabled + ${ring} &`]: {
+    [`${containerBase}[data-invalid='true'] ${radio}:disabled + ${ring} &`]: {
       fill: theme.colors.danger.backgroundDisabled,
     },
     [`${ring} &`]: {
       fill: theme.colors.neutral.background,
+    },
+  },
+})
+
+const focusRing = style({
+  fill: 'none',
+  opacity: 0,
+  stroke: theme.colors.primary.backgroundHover,
+  transition: 'opacity 100ms',
+  selectors: {
+    [`${containerBase}[data-invalid='false'] ${radio}:not(:disabled):focus-visible + ${ring} &`]: {
+      opacity: 1,
+    },
+    [`${containerBase}[data-invalid='false'] ${radio}:not(:disabled):active + ${ring} &`]: {
+      opacity: 1,
+    },
+    [`${containerBase}[data-invalid='true'] ${radio}:not(:disabled):focus-visible + ${ring} &`]: {
+      stroke: theme.colors.danger.backgroundHover,
+      opacity: 1,
+    },
+    [`${containerBase}[data-invalid='true'] ${radio}:not(:disabled):active + ${ring} &`]: {
+      stroke: theme.colors.danger.backgroundHover,
+      opacity: 1,
     },
   },
 })
@@ -191,4 +222,5 @@ export const radioStyle = {
   ring,
   mark,
   innerCircleRing,
+  focusRing,
 }
