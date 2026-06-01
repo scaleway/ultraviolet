@@ -175,7 +175,6 @@ export const OptionSelector = ({
           error={firstSelector.error}
           helper={firstSelector.helper}
           id={firstSelectorHelperId}
-          size={size}
           disabled={firstSelector.disabled || disabled}
           className={optionSelectorStyle.errorFirstSelector}
         />
@@ -185,7 +184,6 @@ export const OptionSelector = ({
           error={secondSelector.error}
           helper={secondSelector.helper}
           id={secondSelectorHelperId}
-          size={size}
           disabled={secondSelector.disabled || disabled}
           className={optionSelectorStyle.errorSecondSelector}
         />

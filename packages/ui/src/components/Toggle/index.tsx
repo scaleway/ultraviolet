@@ -108,13 +108,7 @@ export const Toggle = forwardRef(
                 ) : null}
               </Row>
             ) : null}
-            <Description
-              helper={helper}
-              error={error}
-              id={ariaDescribedBy ?? helperId}
-              disabled={disabled}
-              size={size}
-            />
+            <Description helper={helper} error={error} id={ariaDescribedBy ?? helperId} disabled={disabled} />
           </Stack>
           <div
             className={toggleStyle.toggle({

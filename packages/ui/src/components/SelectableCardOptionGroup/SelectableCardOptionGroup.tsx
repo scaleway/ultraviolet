@@ -95,7 +95,7 @@ const SelectableCardOptionGroupComponent = ({
             </Row>
           </Stack>
         </fieldset>
-        <Description id={ariaDescribedBy ?? helperId} error={error} helper={helper} disabled={disabled} size={size} />
+        <Description id={ariaDescribedBy ?? helperId} error={error} helper={helper} disabled={disabled} />
       </Stack>
     </SelectableCardOptionGroupContext.Provider>
   )
