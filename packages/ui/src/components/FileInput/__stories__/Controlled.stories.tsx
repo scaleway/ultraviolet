@@ -27,7 +27,7 @@ export const Controlled: StoryFn<typeof FileInput> = args => {
         {files.length > 0 ? (
           <ul>
             {files.map(file => (
-              <li key={file.fileName}>{file.fileName}</li>
+              <li key={file.name}>{file.name}</li>
             ))}
           </ul>
         ) : (

@@ -1,21 +1,13 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { FileInput } from '..'
 import { Stack } from '../../Stack'
+import { defaultFiles } from '../__mock__/mockFile'
 
-const defaultFile = [
-  {
-    file: 'https://upload.wikimedia.org/wikipedia/commons/4/41/Photo_Chat_Noir_et_blanc.jpg',
-    fileName: 'cat.png',
-    lastModified: 1,
-    size: 30_460,
-    type: 'image/png',
-  },
-]
 export const Multiple: StoryFn<typeof FileInput> = args => (
   <Stack direction="column" gap={3}>
     <FileInput
       bottom={<FileInput.List />}
-      defaultFiles={defaultFile}
+      defaultFiles={[defaultFiles[0]]}
       disabled={args.disabled}
       label="Multiple"
       multiple
@@ -25,7 +17,7 @@ export const Multiple: StoryFn<typeof FileInput> = args => (
     />
     <FileInput
       bottom={<FileInput.List />}
-      defaultFiles={defaultFile}
+      defaultFiles={[defaultFiles[0]]}
       disabled={args.disabled}
       label="Not multiple (default behavior)"
       size="small"

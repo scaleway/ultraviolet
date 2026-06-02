@@ -2,58 +2,13 @@ import type { StoryFn } from '@storybook/react-vite'
 import { FileInput } from '..'
 import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
+import { defaultFiles } from '../__mock__/mockFile'
 
-const defaultFile = [
-  {
-    file: 'https://upload.wikimedia.org/wikipedia/commons/4/41/Photo_Chat_Noir_et_blanc.jpg',
-    fileName: 'cat.png',
-    lastModified: 1,
-    size: 30_460,
-    type: 'image/png',
-  },
-  {
-    file: 'sound.mp3',
-    fileName: 'sound.mp3',
-    lastModified: 1,
-    size: 30_460,
-    type: 'audio/mp3',
-  },
-  {
-    file: 'doc.pdf',
-    fileName: 'doc.pdf',
-    lastModified: 1,
-    size: 304_600,
-    type: 'application/pdf',
-  },
-  {
-    file: 'video.mp4',
-    fileName: 'video.mp4',
-    lastModified: 1,
-    size: 40_460_000,
-    type: 'video/mp4',
-  },
-  {
-    file: 'loading.pdf',
-    fileName: 'loading_example.pdf',
-    lastModified: 1,
-    loading: true,
-    size: 40_460_000,
-    type: 'application/pdf',
-  },
-  {
-    error: 'Maximum file size exceeded',
-    file: 'error.png',
-    fileName: 'error_example.png',
-    lastModified: 1,
-    size: 4_046_000_000,
-    type: 'image/png',
-  },
-]
 export const List: StoryFn<typeof FileInput> = args => (
   <Stack direction="column" gap={3}>
     <FileInput
       bottom={<FileInput.List />}
-      defaultFiles={defaultFile}
+      defaultFiles={defaultFiles}
       disabled={args.disabled}
       label="type='dropzone'"
       multiple
@@ -64,7 +19,7 @@ export const List: StoryFn<typeof FileInput> = args => (
     <Separator />
     <FileInput
       aria-label="label"
-      defaultFiles={defaultFile}
+      defaultFiles={defaultFiles}
       disabled={args.disabled}
       multiple
       title="dnd here"
@@ -76,7 +31,7 @@ export const List: StoryFn<typeof FileInput> = args => (
     <Separator />
     <FileInput
       bottom={<FileInput.List limit={3} textLimit="See all" />}
-      defaultFiles={defaultFile}
+      defaultFiles={defaultFiles}
       disabled={args.disabled}
       label="With prop listLimit"
       multiple

@@ -4,53 +4,7 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { FileInput } from '..'
-
-const defaultFile = [
-  {
-    file: 'https://upload.wikimedia.org/wikipedia/commons/4/41/Photo_Chat_Noir_et_blanc.jpg',
-    fileName: 'cat.png',
-    lastModified: 1,
-    size: 30_460,
-    type: 'image/png',
-  },
-  {
-    error: 'Maximum file size exceeded',
-    file: 'error.png',
-    fileName: 'error_example.png',
-    lastModified: 1,
-    size: 4_046_000_000,
-    type: 'image/png',
-  },
-  {
-    file: 'sound.mp3',
-    fileName: 'sound.mp3',
-    lastModified: 1,
-    size: 0,
-    type: 'audio/mp3',
-  },
-  {
-    file: 'doc.pdf',
-    fileName: 'doc.pdf',
-    lastModified: 1,
-    size: 304_600,
-    type: 'application/pdf',
-  },
-  {
-    file: 'video.mp4',
-    fileName: 'video.mp4',
-    lastModified: 1,
-    size: 40_460_000,
-    type: 'video/png',
-  },
-  {
-    file: 'loading.pdf',
-    fileName: 'loading_example.pdf',
-    lastModified: 1,
-    loading: true,
-    size: 40_460_000,
-    type: 'application/pdf',
-  },
-]
+import { defaultFiles } from '../__mock__/mockFile'
 
 describe('fileInput', () => {
   it('renders correctly', () => {
@@ -72,7 +26,7 @@ describe('fileInput', () => {
 
   it('renders correctly with multiple and list', () => {
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" defaultFiles={defaultFile} multiple>
+      <FileInput aria-label="label" defaultFiles={defaultFiles} multiple>
         <FileInput.List />
       </FileInput>,
     )
@@ -106,7 +60,7 @@ describe('fileInput', () => {
 
   it('renders correctly with error', () => {
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" defaultFiles={defaultFile} disabled error="error">
+      <FileInput aria-label="label" defaultFiles={defaultFiles} disabled error="error">
         <FileInput.Button data-testid="button">Disabled button</FileInput.Button>
       </FileInput>,
     )
@@ -120,7 +74,7 @@ describe('fileInput', () => {
     const onDelete = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" defaultFiles={defaultFile} multiple onChange={onChange}>
+      <FileInput aria-label="label" defaultFiles={defaultFiles} multiple onChange={onChange}>
         <FileInput.List onDelete={onDelete} />
       </FileInput>,
     )
@@ -139,7 +93,7 @@ describe('fileInput', () => {
   it('renders correctly onChangeFiles', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" defaultFiles={defaultFile} multiple onChangeFiles={onChange}>
+      <FileInput aria-label="label" defaultFiles={defaultFiles} multiple onChangeFiles={onChange}>
         <FileInput.List />
       </FileInput>,
     )
@@ -158,7 +112,7 @@ describe('fileInput', () => {
   it('should work correctly with listLimit', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" defaultFiles={defaultFile} multiple onChangeFiles={onChange}>
+      <FileInput aria-label="label" defaultFiles={defaultFiles} multiple onChangeFiles={onChange}>
         <FileInput.List limit={3} textLimit="see all" />
       </FileInput>,
     )
@@ -181,7 +135,7 @@ describe('fileInput', () => {
     const onChange = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" defaultFiles={defaultFile} multiple onChangeFiles={onChange}>
+      <FileInput aria-label="label" defaultFiles={defaultFiles} multiple onChangeFiles={onChange}>
         <FileInput.List />
         <FileInput.Button>button</FileInput.Button>
       </FileInput>,
@@ -201,7 +155,7 @@ describe('fileInput', () => {
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
-        defaultFiles={defaultFile}
+        defaultFiles={defaultFiles}
         multiple
         onChangeFiles={onChange}
         title={(inputId, inputRef) => (
@@ -233,7 +187,7 @@ describe('fileInput', () => {
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
-        defaultFiles={defaultFile}
+        defaultFiles={defaultFiles}
         multiple
         onChangeFiles={onChange}
         title="dragging"
@@ -258,7 +212,7 @@ describe('fileInput', () => {
     const { asFragment } = renderWithTheme(
       <FileInput
         aria-label="label"
-        defaultFiles={defaultFile}
+        defaultFiles={defaultFiles}
         multiple
         onChangeFiles={onChange}
         title="dragging"
@@ -301,7 +255,7 @@ describe('fileInput', () => {
     await userEvent.upload(input, file)
 
     expect(onChangeFiles).toHaveBeenCalledWith(
-      expect.arrayContaining([expect.objectContaining({ fileName: 'upload.png' })]),
+      expect.arrayContaining([expect.objectContaining({ name: 'upload.png' })]),
     )
 
     const added = screen.getByTestId('upload.png')
@@ -329,9 +283,7 @@ describe('fileInput', () => {
       },
     } as unknown as DragEvent)
 
-    expect(onChangeFiles).toHaveBeenCalledWith(
-      expect.arrayContaining([expect.objectContaining({ fileName: 'dnd.png' })]),
-    )
+    expect(onChangeFiles).toHaveBeenCalledWith(expect.arrayContaining([expect.objectContaining({ name: 'dnd.png' })]))
 
     const added = screen.getByTestId('dnd.png')
     expect(added).toBeInTheDocument()
@@ -355,9 +307,7 @@ describe('fileInput', () => {
       },
     } as unknown as DragEvent)
 
-    expect(onChangeFiles).toHaveBeenCalledWith(
-      expect.arrayContaining([expect.objectContaining({ fileName: 'dnd.png' })]),
-    )
+    expect(onChangeFiles).toHaveBeenCalledWith(expect.arrayContaining([expect.objectContaining({ name: 'dnd.png' })]))
 
     fireEvent.drop(dropzone, {
       dataTransfer: {
@@ -368,7 +318,7 @@ describe('fileInput', () => {
     } as unknown as DragEvent)
 
     expect(onChangeFiles).not.toHaveBeenCalledWith(
-      expect.arrayContaining([expect.objectContaining({ fileName: 'not-added.pdf' })]),
+      expect.arrayContaining([expect.objectContaining({ name: 'not-added.pdf' })]),
     )
   })
 
@@ -394,9 +344,7 @@ describe('fileInput', () => {
       },
     } as unknown as DragEvent)
 
-    expect(onChangeFiles).toHaveBeenCalledWith(
-      expect.arrayContaining([expect.objectContaining({ fileName: 'dnd.png' })]),
-    )
+    expect(onChangeFiles).toHaveBeenCalledWith(expect.arrayContaining([expect.objectContaining({ name: 'dnd.png' })]))
 
     fireEvent.drop(dropzone, {
       dataTransfer: {
@@ -407,7 +355,7 @@ describe('fileInput', () => {
     } as unknown as DragEvent)
 
     expect(onChangeFiles).not.toHaveBeenCalledWith(
-      expect.arrayContaining([expect.objectContaining({ fileName: 'not-added.pdf' })]),
+      expect.arrayContaining([expect.objectContaining({ name: 'not-added.pdf' })]),
     )
 
     fireEvent.drop(dropzone, {
@@ -428,8 +376,8 @@ describe('fileInput', () => {
 
     expect(onChangeFiles).not.toHaveBeenCalledWith(
       expect.arrayContaining([
-        expect.objectContaining({ fileName: 'dnd.jpg' }),
-        expect.objectContaining({ fileName: 'added.mp3' }),
+        expect.objectContaining({ name: 'dnd.jpg' }),
+        expect.objectContaining({ name: 'added.mp3' }),
       ]),
     )
   })
@@ -449,9 +397,7 @@ describe('fileInput', () => {
       },
     } as unknown as DragEvent)
 
-    expect(onChangeFiles).toHaveBeenCalledWith(
-      expect.arrayContaining([expect.objectContaining({ fileName: 'dnd.png' })]),
-    )
+    expect(onChangeFiles).toHaveBeenCalledWith(expect.arrayContaining([expect.objectContaining({ name: 'dnd.png' })]))
   })
 
   it('should add files from dropped directory with allowDirectories', async () => {
@@ -540,8 +486,8 @@ describe('fileInput', () => {
     await waitFor(() => {
       expect(onChangeFiles).toHaveBeenCalledWith(
         expect.arrayContaining([
-          expect.objectContaining({ fileName: 'dir/file1.png' }),
-          expect.objectContaining({ fileName: 'single.png' }),
+          expect.objectContaining({ name: 'dir/file1.png' }),
+          expect.objectContaining({ name: 'single.png' }),
         ]),
       )
     })
