@@ -1,5 +1,15 @@
 # Change Log
 
+## 5.4.0
+
+### Minor Changes
+
+- [#6481](https://github.com/scaleway/ultraviolet/pull/6481) [`61dc908`](https://github.com/scaleway/ultraviolet/commit/61dc908de2cde74c79015b2b4860e7480926fe51) Thanks [@lisalupi](https://github.com/lisalupi)! - `Logos` now support dark versions. When no dark version is provided (i.e. `/assets/dark/NAME.svg` does not exist while `/assets/light/NAME.svg` does), the light version is displayed as a fallback. _Light_ assets are required, as components are indexed from `/assets/light/`.
+
+### Patch Changes
+
+- [#6487](https://github.com/scaleway/ultraviolet/pull/6487) [`8d278e6`](https://github.com/scaleway/ultraviolet/commit/8d278e6a6f13bfbd283cf02f041ab7e5375cb3a0) Thanks [@lisalupi](https://github.com/lisalupi)! - New flag: `UnitedKingdomFlag`
+
 ## 5.3.4
 
 ### Patch Changes

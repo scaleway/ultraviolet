@@ -1,5 +1,38 @@
 # Change Log
 
+## 3.18.0
+
+### Minor Changes
+
+- [#6492](https://github.com/scaleway/ultraviolet/pull/6492) [`04b2877`](https://github.com/scaleway/ultraviolet/commit/04b28779020f92d2dea277c93d90b46c5eba4fec) Thanks [@lisalupi](https://github.com/lisalupi)! - `Description`: inputs should not use small description as it is hard to read
+
+- [#6318](https://github.com/scaleway/ultraviolet/pull/6318) [`900db9d`](https://github.com/scaleway/ultraviolet/commit/900db9d7852688f39ade3ac828be83e9559497a3) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - `RichTextInput`: create component `RichTextInput` and `RichTextInputField`
+
+### Patch Changes
+
+- [#6494](https://github.com/scaleway/ultraviolet/pull/6494) [`845e3ac`](https://github.com/scaleway/ultraviolet/commit/845e3ac83ea12f32e444bc0ff735c29add79d69f) Thanks [@lisalupi](https://github.com/lisalupi)! - `FileInput`: fix "accept" behavior issue with explicit types ('.mp3', '.png')
+
+- [#6482](https://github.com/scaleway/ultraviolet/pull/6482) [`bdf0992`](https://github.com/scaleway/ultraviolet/commit/bdf099227e5ec099ed27faf1db20d8f6802f65c5) Thanks [@jsulpis](https://github.com/jsulpis)! - `Modal`:
+
+  - add a prop `closeButtonSentiment` to change the sentiment of the close button to have good contrast with the background image
+  - fix the top border radius when using a background image
+
+- [#6483](https://github.com/scaleway/ultraviolet/pull/6483) [`6c5abc2`](https://github.com/scaleway/ultraviolet/commit/6c5abc2aec338019d3032a706551c3a03e391178) Thanks [@PierreBertinet](https://github.com/PierreBertinet)! - Expose Toast component for Toast.Button and Toast.Link
+
+- [#6504](https://github.com/scaleway/ultraviolet/pull/6504) [`4e82e5c`](https://github.com/scaleway/ultraviolet/commit/4e82e5c646fb1257ce1223197c25f61ee04538c2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prosemirror-schema-basic` to `1.2.4`.
+
+- [#6497](https://github.com/scaleway/ultraviolet/pull/6497) [`be63e34`](https://github.com/scaleway/ultraviolet/commit/be63e34d1214082d7f23413d12f037e039b81962) Thanks [@lisalupi](https://github.com/lisalupi)! - `FileInput`:
+
+  - update FileList type to more closely match default File type. ⚠️ This is a breaking change for typing ⚠️
+  - fix onChange: returns the whole list of files (as a FileList), not just the newly added one.
+
+- [#6486](https://github.com/scaleway/ultraviolet/pull/6486) [`960e086`](https://github.com/scaleway/ultraviolet/commit/960e086308429b2467f051f373b766c4ee6af5ba) Thanks [@jsulpis](https://github.com/jsulpis)! - `CodeEditor`: fix the position of the tooltip on the CopyButton
+
+- [#6488](https://github.com/scaleway/ultraviolet/pull/6488) [`b13e40a`](https://github.com/scaleway/ultraviolet/commit/b13e40a8dc5235499a8552ea7960a4bcd2eef53f) Thanks [@lisalupi](https://github.com/lisalupi)! - `OfferList`: disabled expand button on a row when `expandable={false}`
+
+- Updated dependencies [[`61dc908`](https://github.com/scaleway/ultraviolet/commit/61dc908de2cde74c79015b2b4860e7480926fe51), [`8d278e6`](https://github.com/scaleway/ultraviolet/commit/8d278e6a6f13bfbd283cf02f041ab7e5375cb3a0)]:
+  - @ultraviolet/icons@5.4.0
+
 ## 3.17.0
 
 ### Minor Changes

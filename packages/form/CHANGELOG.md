@@ -1,5 +1,17 @@
 # Change Log
 
+## 6.5.0
+
+### Minor Changes
+
+- [#6318](https://github.com/scaleway/ultraviolet/pull/6318) [`900db9d`](https://github.com/scaleway/ultraviolet/commit/900db9d7852688f39ade3ac828be83e9559497a3) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - `RichTextInput`: create component `RichTextInput` and `RichTextInputField`
+
+### Patch Changes
+
+- Updated dependencies [[`04b2877`](https://github.com/scaleway/ultraviolet/commit/04b28779020f92d2dea277c93d90b46c5eba4fec), [`845e3ac`](https://github.com/scaleway/ultraviolet/commit/845e3ac83ea12f32e444bc0ff735c29add79d69f), [`bdf0992`](https://github.com/scaleway/ultraviolet/commit/bdf099227e5ec099ed27faf1db20d8f6802f65c5), [`900db9d`](https://github.com/scaleway/ultraviolet/commit/900db9d7852688f39ade3ac828be83e9559497a3), [`61dc908`](https://github.com/scaleway/ultraviolet/commit/61dc908de2cde74c79015b2b4860e7480926fe51), [`6c5abc2`](https://github.com/scaleway/ultraviolet/commit/6c5abc2aec338019d3032a706551c3a03e391178), [`4e82e5c`](https://github.com/scaleway/ultraviolet/commit/4e82e5c646fb1257ce1223197c25f61ee04538c2), [`be63e34`](https://github.com/scaleway/ultraviolet/commit/be63e34d1214082d7f23413d12f037e039b81962), [`960e086`](https://github.com/scaleway/ultraviolet/commit/960e086308429b2467f051f373b766c4ee6af5ba), [`b13e40a`](https://github.com/scaleway/ultraviolet/commit/b13e40a8dc5235499a8552ea7960a4bcd2eef53f), [`8d278e6`](https://github.com/scaleway/ultraviolet/commit/8d278e6a6f13bfbd283cf02f041ab7e5375cb3a0)]:
+  - @ultraviolet/ui@3.18.0
+  - @ultraviolet/icons@5.4.0
+
 ## 6.4.0
 
 ### Minor Changes
