@@ -50,10 +50,10 @@ export const GlobalAlert = ({
       data-testid={dataTestId}
       data-variant={variant}
       direction="row"
-      justifyContent="center"
+      justifyContent="space-between"
       style={style}
     >
-      <Stack alignItems="center" direction="row" gap={2} justifyContent="center">
+      <Stack alignItems="center" direction="row" gap={2} justifyContent="center" width="100%">
         <Text as="p" sentiment="white" variant="bodySmall">
           {children}
         </Text>
