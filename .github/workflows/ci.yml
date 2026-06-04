@@ -277,7 +277,8 @@ jobs:
         id: deploy
         with:
           type: 'deploy'
-          scw_dns: 'storybook.ultraviolet.scaleway.com'
+          # doesn't set dns for preview env, keep default container dns setup.
+          scw_dns: ${{ env.STORYBOOK_BRANCH_SLUG == 'main' && 'storybook.ultraviolet.scaleway.com' || '' }}
           root_zone: ${{ env.STORYBOOK_BRANCH_SLUG == 'main' }}
           scw_access_key: ${{ vars.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
