@@ -17,6 +17,7 @@ type RadioProps = {
   value: string | number
   helper?: ReactNode
   className?: string
+  size?: 'small' | 'medium'
   'data-testid'?: string
   tooltip?: string
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
@@ -57,6 +58,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
       className,
       autoFocus,
       onKeyDown,
+      size = 'medium',
       tooltip,
       'aria-label': ariaLabel,
       'data-testid': dataTestId,
@@ -76,7 +78,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
         <Stack className={radioStyle.stack} gap={0.5}>
           <div
             aria-disabled={disabled}
-            className={cn(className, radioStyle.container)}
+            className={cn(className, radioStyle.container[size])}
             data-checked={checked}
             data-invalid={!!error}
             data-testid={dataTestId}
@@ -103,7 +105,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
             />
             <svg className={radioStyle.ring} viewBox="0 0 24 24">
               <title>radio</title>
-              <RadioMarkedIcon />
+              <RadioMarkedIcon size={size} />
             </svg>
             {label ? (
               // biome-ignore lint/complexity/noUselessFragments: needed
@@ -111,10 +113,10 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
                 {typeof label === 'string' ? (
                   <Text
                     as="label"
-                    className={cn(radioStyle.textLabel, radioStyle.label)}
+                    className={cn(radioStyle.textLabel[size], radioStyle.label)}
                     htmlFor={localId}
                     prominence="default"
-                    variant="body"
+                    variant={size === 'small' ? 'bodySmall' : 'body'}
                   >
                     {label}
                   </Text>

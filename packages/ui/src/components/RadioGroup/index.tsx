@@ -22,6 +22,7 @@ type RadioGroupProps = {
   direction?: 'row' | 'column'
   children: ReactNode
   description?: ReactNode
+  size?: 'small' | 'medium'
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'name' | 'aria-describedby'>
 
@@ -41,6 +42,7 @@ const RadioGroupComponent = ({
   name,
   description,
   required = false,
+  size = 'medium',
   'aria-describedby': ariaDescribedBy,
 }: RadioGroupProps) => {
   const contextValue = useMemo(
@@ -50,8 +52,9 @@ const RadioGroupComponent = ({
       groupValue: value,
       onChange,
       required,
+      size,
     }),
-    [name, value, onChange, required, error],
+    [name, value, onChange, required, error, size],
   )
   const helperId = useId()
 
@@ -66,7 +69,12 @@ const RadioGroupComponent = ({
             {legend || description ? (
               <Stack gap={0.5}>
                 {legend ? (
-                  <Label as="legend" labelDescription={legendDescription} required={required}>
+                  <Label
+                    as="legend"
+                    labelDescription={legendDescription}
+                    required={required}
+                    size={size === 'medium' ? 'large' : 'small'}
+                  >
                     {legend}
                   </Label>
                 ) : null}
