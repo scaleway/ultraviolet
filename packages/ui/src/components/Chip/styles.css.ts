@@ -35,16 +35,12 @@ const container = style({
     '&[data-active="true"]': {
       backgroundColor: theme.colors.primary.backgroundStrong,
       borderColor: theme.colors.primary.backgroundStrong,
-      color: theme.colors.neutral.textStronger,
+      color: theme.colors.primary.textStrong,
     },
     '&[data-active="true"][data-disabled="false"]:hover': {
       backgroundColor: theme.colors.primary.backgroundStrongHover,
       borderColor: theme.colors.primary.backgroundStrongHover,
-      color: theme.colors.neutral.textStrongerHover,
-    },
-    '&[data-active="true"][data-disabled="true"]': {
-      backgroundColor: theme.colors.primary.backgroundStrongDisabled,
-      border: 'none',
+      color: theme.colors.primary.textStrong,
     },
     '&[data-disabled="false"]:hover': {
       backgroundColor: theme.colors.neutral.backgroundHover,
@@ -56,6 +52,11 @@ const container = style({
       borderColor: theme.colors.neutral.borderWeakDisabled,
       color: theme.colors.neutral.textDisabled,
       cursor: 'not-allowed',
+    },
+    '&[data-active="true"][data-disabled="true"]': {
+      backgroundColor: theme.colors.primary.backgroundStrongDisabled,
+      border: 'none',
+      color: theme.colors.primary.textStrongDisabled,
     },
     '&[data-size="large"]': {
       height: theme.space[4],
