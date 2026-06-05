@@ -38,7 +38,7 @@ export const DisplayOption = ({
     return (
       <Tooltip disableAnimation text={option.tooltip}>
         <Stack data-testid={`option-stack-${option.value}`} direction="row" gap={0.5} justifyContent="left">
-          <Stack alignItems="center" className={selectInputStyle.dropdownInfoContainer} direction="row" gap={0.5}>
+          <Stack alignItems="flex-start" className={selectInputStyle.dropdownInfoContainer} direction="row" gap={0.5}>
             {option.optionalInfo}
             <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
               {option.label}
@@ -80,6 +80,7 @@ export const DisplayOption = ({
           direction="row"
           gap={0.5}
           justifyContent={option.optionalInfo ? 'left' : 'space-between'}
+          className={selectInputStyle.optionalInfoPadding}
         >
           {option.optionalInfo}
 
@@ -107,6 +108,7 @@ export const DisplayOption = ({
           direction="row"
           gap={0.5}
           justifyContent="space-between"
+          alignItems="flex-start"
         >
           <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
             {option.label}

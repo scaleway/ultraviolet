@@ -65,6 +65,7 @@ export const selectBarBase = style({
   alignItems: 'center',
   background: theme.colors.neutral.background,
   borderRadius: theme.radii.default,
+  border: `1px solid transparent`,
   boxShadow: 'none',
   cursor: 'pointer',
   display: 'grid',

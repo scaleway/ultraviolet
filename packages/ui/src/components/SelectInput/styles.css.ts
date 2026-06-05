@@ -19,6 +19,7 @@ import {
   emptyStateGroupStyle,
   footer,
   searchBar,
+  optionalInfoPadding,
 } from './components/Dropdown/dropdown.css'
 import {
   multiselectStack,
@@ -66,4 +67,5 @@ export const selectInputStyle = {
   plusTag,
   multiselectStack,
   searchBar,
+  optionalInfoPadding,
 }

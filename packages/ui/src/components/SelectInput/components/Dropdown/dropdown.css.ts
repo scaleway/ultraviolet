@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { createVar, style } from '@vanilla-extract/css'
+import { createVar, globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 const DROPDOWN_MAX_HEIGHT = 256
@@ -152,7 +152,7 @@ export const dropdownCheckbox = style({
   width: '100%',
   position: 'static',
   textAlign: 'left',
-  alignItems: 'center',
+  alignItems: 'flex-start',
   pointerEvents: 'none',
 })
 
@@ -191,3 +191,9 @@ export const comboboxCreate = style([
     },
   },
 ])
+
+export const optionalInfoPadding = style({})
+
+globalStyle(`${optionalInfoPadding} > :first-child`, {
+  marginTop: theme.space['0.25'],
+})
