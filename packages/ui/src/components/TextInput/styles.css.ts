@@ -12,9 +12,15 @@ const basicPrefix = style({
   height: '100%',
 
   selectors: {
-    '&[data-size="small"]': { padding: theme.space['1'] },
+    '&[data-size="small"]': {
+      padding: theme.space['1'],
+    },
     [`${searchInputStyle.searchInput} &`]: {
       border: 'none',
+      padding: `0 ${theme.space[1]} 0 ${theme.space[2]}`,
+    },
+    [`${searchInputStyle.searchInput} &[data-size="small"]`]: {
+      paddingLeft: theme.space[1.5],
     },
   },
 })
