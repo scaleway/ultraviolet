@@ -37,8 +37,8 @@ importers:
         specifier: 0.1.15
         version: 0.1.15(oxlint@1.64.0(oxlint-tsgolint@0.23.0))
       '@scaleway/tsconfig':
-        specifier: 1.1.4
-        version: 1.1.4
+        specifier: 1.1.6
+        version: 1.1.6
       '@size-limit/file':
         specifier: 12.1.0
         version: 12.1.0(size-limit@12.1.0(jiti@2.6.1))
@@ -2961,8 +2961,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@react-grab/cli@0.1.43':
-    resolution: {integrity: sha512-S+UBB0Mwu1g0Cjhff5YzsA33YFYu91DmazPL9uVvF1wDjsO2Lu9hKN/OzBCHYjWlxdBT7TLy2A6pNTS3Sx8o9w==}
+  '@react-grab/cli@0.1.44':
+    resolution: {integrity: sha512-gMDYY2rw6OWajCcDlXSIgs2LC432YJXSb3Lm5yM187uhRgBYddoEVULi36h+IolX3r7jSb3ew7vn9FfI8NSo0A==}
     hasBin: true
 
   '@react-spring/animated@10.1.0':
@@ -3294,8 +3294,8 @@ packages:
     resolution: {integrity: sha512-xh8hZF45TZfBytQJEHDEp5T84l15Uh2oRLbyPAw/6hRo34+fEo8O1fE6QUhar2Vjj+tFj9dEYmu4OUucq7vXkQ==}
     engines: {node: '>=24.x'}
 
-  '@scaleway/tsconfig@1.1.4':
-    resolution: {integrity: sha512-h1sy6014YIeZqw76i5VsHG54SROlB3MkD093ucZ3RQ2+eMv6OeOVfxyekcZg9yLKC5BIGUXNl8LvkZTNBS6DOQ==}
+  '@scaleway/tsconfig@1.1.6':
+    resolution: {integrity: sha512-iU1AlvlPWL0R77lWhFD5gAPIeac6Pixb0sOYjZLovsqLp5jQgKM8BgcPtRHJ2xPHg4p7azuJQ8PQsMedB2YRwA==}
 
   '@scaleway/use-clipboard@1.0.1':
     resolution: {integrity: sha512-9EEjLeK59eeZBcQ5nLH6jUelDJ9q9VaDQL8bM1SGxtHfAwyWc1qYOlhq5p2OI9mRXd4oXkdXjGnGQ0UOjvFQhA==}
@@ -6213,8 +6213,8 @@ packages:
     peerDependencies:
       react: ^19.2.6
 
-  react-grab@0.1.43:
-    resolution: {integrity: sha512-3wplt0CobZE5k1Vf3PBqBm3vlNQnVWEpSGBMHRnnFcj/khYYwGXSMSTedW1s8MI5FqkdhU/CFoJ7hQqGwzqFIA==}
+  react-grab@0.1.44:
+    resolution: {integrity: sha512-bDEwBdI90ljq2lhUtPqmWis/HwYB/CvfT0m5i+P9F83Pt0Ot8o9XL8v00s9jcWzdQUlsFDzmq2FO2CHUe8JY8A==}
     hasBin: true
     peerDependencies:
       react: '>=17.0.0'
@@ -6562,10 +6562,6 @@ packages:
   smart-buffer@4.2.0:
     resolution: {integrity: sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==}
     engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
-
-  smol-toml@1.6.1:
-    resolution: {integrity: sha512-dWUG8F5sIIARXih1DTaQAX4SsiTXhInKf1buxdY9DIg4ZYPZK5nGM1VRIYmEbDbsHt7USo99xSLFu5Q1IqTmsg==}
-    engines: {node: '>= 18'}
 
   snake-case@3.0.4:
     resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
@@ -9606,17 +9602,15 @@ snapshots:
       - react-native-b4a
       - supports-color
 
-  '@react-grab/cli@0.1.43':
+  '@react-grab/cli@0.1.44':
     dependencies:
       agent-install: 0.0.5
       commander: 14.0.3
       ignore: 7.0.5
-      jsonc-parser: 3.3.1
       ora: 9.4.0
       package-manager-detector: 1.6.0
       picocolors: 1.1.1
       prompts: 2.4.2
-      smol-toml: 1.6.1
       tinyexec: 1.2.2
 
   '@react-spring/animated@10.1.0(react@19.2.6)':
@@ -9834,7 +9828,7 @@ snapshots:
 
   '@scaleway/regex@6.0.2': {}
 
-  '@scaleway/tsconfig@1.1.4': {}
+  '@scaleway/tsconfig@1.1.6': {}
 
   '@scaleway/use-clipboard@1.0.1(react@19.2.6)':
     dependencies:
@@ -13190,9 +13184,9 @@ snapshots:
       react: 19.2.6
       scheduler: 0.27.0
 
-  react-grab@0.1.43(react@19.2.6):
+  react-grab@0.1.44(react@19.2.6):
     dependencies:
-      '@react-grab/cli': 0.1.43
+      '@react-grab/cli': 0.1.44
       bippy: 0.5.41(react@19.2.6)
     optionalDependencies:
       react: 19.2.6
@@ -13243,7 +13237,7 @@ snapshots:
       prompts: 2.4.2
       react: 19.2.6
       react-dom: 19.2.6(react@19.2.6)
-      react-grab: 0.1.43(react@19.2.6)
+      react-grab: 0.1.44(react@19.2.6)
     optionalDependencies:
       esbuild: 0.28.0
       unplugin: 2.1.0
@@ -13621,8 +13615,6 @@ snapshots:
       is-fullwidth-code-point: 5.1.0
 
   smart-buffer@4.2.0: {}
-
-  smol-toml@1.6.1: {}
 
   snake-case@3.0.4:
     dependencies:
