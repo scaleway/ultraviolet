@@ -108,7 +108,7 @@ export const selectBar = recipe({
     {
       style: {
         selectors: {
-          "&:not([data-disabked='true'])": {
+          "&:not([data-disabled='true'])": {
             borderColor: theme.colors.primary.borderHover,
           },
         },
@@ -118,7 +118,7 @@ export const selectBar = recipe({
     {
       style: {
         selectors: {
-          "&:not([data-disabked='true'])": {
+          "&:not([data-disabled='true'])": {
             borderColor: theme.colors.success.borderHover,
           },
         },
@@ -128,7 +128,7 @@ export const selectBar = recipe({
     {
       style: {
         selectors: {
-          "&:not([data-disabked='true'])": {
+          "&:not([data-disabled='true'])": {
             borderColor: theme.colors.danger.borderHover,
           },
         },
