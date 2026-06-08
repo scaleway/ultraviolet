@@ -13,9 +13,9 @@ jobs:
       SCW_DNS: ${{ github.ref_name == 'main' && 'storybook.ultraviolet.scaleway.com' || '' }}
 
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
       - name: Inject slug/short variables
-        uses: rlespinasse/github-slug-action@e6f261660910b273384c5c42b17a0217881b217a # v5
+        uses: rlespinasse/github-slug-action@e6f261660910b273384c5c42b17a0217881b217a # v5.6.0
 
       - name: Export custom variables
         run: |
