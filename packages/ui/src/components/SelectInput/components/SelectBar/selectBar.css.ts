@@ -107,31 +107,19 @@ export const selectBar = recipe({
   compoundVariants: [
     {
       style: {
-        selectors: {
-          "&:not([data-disabled='true'])": {
-            borderColor: theme.colors.primary.borderHover,
-          },
-        },
+        borderColor: theme.colors.primary.borderHover,
       },
       variants: { dropdownVisible: true, state: 'neutral' },
     },
     {
       style: {
-        selectors: {
-          "&:not([data-disabled='true'])": {
-            borderColor: theme.colors.success.borderHover,
-          },
-        },
+        borderColor: theme.colors.success.borderHover,
       },
       variants: { dropdownVisible: true, state: 'success' },
     },
     {
       style: {
-        selectors: {
-          "&:not([data-disabled='true'])": {
-            borderColor: theme.colors.danger.borderHover,
-          },
-        },
+        borderColor: theme.colors.danger.borderHover,
       },
       variants: { dropdownVisible: true, state: 'danger' },
     },

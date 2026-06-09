@@ -33,6 +33,7 @@ export type DropdownProps = {
   groupError?: Record<string, ReactNode>
   groupEmptyState?: Record<string, ReactNode>
   addOption?: { text: string; onClick: (searchText: string) => void }
+  disabled?: boolean
 }
 
 const NON_SEARCHABLE_KEYS = [
@@ -116,6 +117,7 @@ export const Dropdown = ({
   groupError,
   groupEmptyState,
   addOption,
+  disabled,
 }: DropdownProps) => {
   const { setIsDropdownVisible, isDropdownVisible, onSearch, searchInput, options, displayedOptions, numberOfOptions } =
     useSelectInput()
@@ -291,7 +293,7 @@ export const Dropdown = ({
           {computedFooter}
         </Stack>
       }
-      visible={isDropdownVisible}
+      visible={!disabled && isDropdownVisible}
     >
       {children}
     </Popup>

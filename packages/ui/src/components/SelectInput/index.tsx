@@ -224,6 +224,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
       >
         <Dropdown
           addOption={addOption}
+          disabled={disabled}
           descriptionDirection={descriptionDirection}
           dropdownAlign={dropdownAlign}
           emptyState={emptyState}
