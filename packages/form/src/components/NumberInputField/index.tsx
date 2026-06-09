@@ -58,7 +58,8 @@ export const NumberInputField = <
       aria-label={ariaLabel}
       error={getError(
         {
-          isInteger: step,
+          isNumber: !Number.isNaN(field.value),
+          isInteger: Number.isInteger(step),
           label: errorLabel ?? label ?? ariaLabel ?? name,
           max,
           min,

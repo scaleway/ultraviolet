@@ -12,7 +12,8 @@ import type {
 } from 'react-hook-form'
 
 export type MetaField = {
-  isInteger?: number | string
+  isNumber?: boolean
+  isInteger?: boolean
   min?: number | string
   max?: number | string
   minLength?: number

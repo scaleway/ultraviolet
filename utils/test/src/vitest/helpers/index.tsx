@@ -19,13 +19,12 @@ export const ComponentWrapper = ({
 )
 
 export const mockFormErrors: FormErrors = {
-  isInteger: ({ isInteger }) => {
-    if (typeof isInteger === 'number') {
-      if (Number.isInteger(isInteger)) {
-        return 'This field should be a decimal number'
+  isInteger: ({ isInteger, isNumber }) => {
+    if (isNumber) {
+      if (isInteger) {
+        return 'This field should be a whole number'
       }
-
-      return 'This field should be a whole number'
+      return 'This field should be a decimal number'
     }
 
     return 'This field should be a number'

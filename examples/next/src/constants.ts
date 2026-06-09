@@ -3,15 +3,13 @@ export const APP_MAX_WIDTH = 1140
 
 export const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 export const mockErrors: FormErrors = {
-  isInteger: ({ isInteger }) => {
-    if (typeof isInteger === 'number') {
-      if (Number.isInteger(isInteger)) {
-        return 'This field should be a decimal number'
+  isInteger: ({ isInteger, isNumber }) => {
+    if (isNumber) {
+      if (isInteger) {
+        return 'This field should be a whole number'
       }
-
-      return 'This field should be a whole number'
+      return 'This field should be a decimal number'
     }
-
     return 'This field should be a number'
   },
   max: ({ max }) => `This field is too high (maximum is : ${max})`,
