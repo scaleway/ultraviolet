@@ -108,7 +108,7 @@ export const DisplayOption = ({
           direction="row"
           gap={0.5}
           justifyContent="space-between"
-          alignItems="flex-start"
+          alignItems={optionDescription ? 'flex-start' : 'center'}
         >
           <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
             {option.label}
