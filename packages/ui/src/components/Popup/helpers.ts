@@ -268,8 +268,13 @@ const placementBottom = (
   // To make sure the popup does not overflow (negative X position)
   const finalPositionX = isPopupPortalTargetBody ? Math.max(computedPositionX, 0) : computedPositionX
 
+  const childrenCenterInParent = overloadedChildrenLeft + childrenWidth / 2
+
+  // Center the arrow with the children (in popup coordinates)
+  const arrowLeft = childrenCenterInParent - finalPositionX
+
   return {
-    arrowLeft: isAligned ? childrenWidth / 2 : popupWidth / 2 - popupOverflow,
+    arrowLeft,
     arrowTop: -arrowWidth - 5,
     arrowTransform: '',
     placement: 'bottom',
@@ -415,8 +420,13 @@ const placementTop = (
   // To make sure the popup does not overflow (negative X position)
   const finalPositionX = isPopupPortalTargetBody ? Math.max(computedPositionX, 0) : computedPositionX
 
+  const childrenCenterInParent = overloadedChildrenLeft + childrenWidth / 2
+
+  // Center the arrow with the children (in popup coordinates)
+  const arrowLeft = childrenCenterInParent - finalPositionX
+
   return {
-    arrowLeft: isAligned ? childrenWidth / 2 : popupWidth / 2 - popupOverflow,
+    arrowLeft,
     arrowTop: popupHeight - 1,
     arrowTransform: '',
     placement: 'top',
