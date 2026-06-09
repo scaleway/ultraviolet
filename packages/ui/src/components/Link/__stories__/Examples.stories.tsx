@@ -1,4 +1,5 @@
 import type { Decorator } from '@storybook/react-vite'
+import { DocPaperIcon } from '@ultraviolet/icons/DocPaperIcon'
 import type { ComponentProps } from 'react'
 import { Link } from '..'
 import { Stack } from '../../Stack'
@@ -11,24 +12,20 @@ export const Examples = (args: ComponentProps<typeof Link>) => {
     <>
       <Text as="p" variant="body">
         To know more about that feature please visit{' '}
-        <Link {...props} href="https://example.com" target="_blank" variant="inline">
-          our website
-        </Link>{' '}
-        that is available any time.
-      </Text>
-      <Text as="p" variant="body">
-        To know more about that feature please visit{' '}
         <Link {...props} href="https://example.com" target="_blank">
           our website
-        </Link>{' '}
-        that is available any time.
+        </Link>
+        .
       </Text>
       <Text as="p" variant="body">
-        To know more about that feature please visit{' '}
-        <Link {...props} href="https://example.com" iconPosition="right">
-          our website
-        </Link>{' '}
-        that is available any time.
+        Update the view using the{' '}
+        <Link {...props}>
+          filters panel <DocPaperIcon />
+        </Link>
+        .
+      </Text>
+      <Text as="p" variant="body">
+        Go to your <Link {...props}>profile page</Link> to update your preferences.
       </Text>
     </>
   )
