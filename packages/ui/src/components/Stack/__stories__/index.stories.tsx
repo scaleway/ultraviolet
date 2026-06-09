@@ -1,11 +1,13 @@
 import type { Meta } from '@storybook/react-vite'
 import { Stack } from '..'
+import a11yDoc from '../a11y.md?raw'
 
 export default {
   component: Stack,
   title: 'UI/Layout/Stack',
   parameters: {
     a11y: 'compliant',
+    a11yContent: a11yDoc,
     audit: {
       'keyboard-focus': true,
       'contrast-visuals': true,

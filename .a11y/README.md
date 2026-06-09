@@ -26,8 +26,8 @@ This initiative aims to achieve **WCAG 2.1 AA** compliance and **RGAA 4.1.2** co
 2. **Tooltip** - Screen reader announcements, timing
 3. **Modal** - Focus trap, escape key, role dialog
 4. **Dialog** - Similar to Modal, proper ARIA
-4. **Drawer** - Similar to Modal
-5. **Button** - Foundational component, keyboard support
+5. **Drawer** - Similar to Modal
+6. **Button** - Foundational component, keyboard support
 
 ### Phase 2: High-Impact Components
 

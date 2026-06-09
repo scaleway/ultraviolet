@@ -1,11 +1,13 @@
 import type { Meta } from '@storybook/react-vite'
 import { Row } from '..'
+import a11yDoc from '../a11y.md?raw'
 
 export default {
   component: Row,
   title: 'UI/Layout/Row',
   parameters: {
     a11y: 'compliant',
+    a11yContent: a11yDoc,
     audit: {
       'keyboard-focus': true,
       'contrast-visuals': true,
@@ -14,7 +16,7 @@ export default {
       'specific-patterns': true,
     },
   },
-} as Meta<typeof Row>
+} satisfies Meta<typeof Row>
 
 export { Playground } from './Playground.stories'
 export { Gap } from './Gap.stories'

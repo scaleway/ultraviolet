@@ -1,11 +1,13 @@
 import type { Meta } from '@storybook/react-vite'
 import { Alert } from '..'
+import a11yDoc from '../a11y.md?raw'
 
 export default {
   component: Alert,
   title: 'UI/Feedback/Alert',
   parameters: {
     a11yStatus: 'partial',
+    a11yContent: a11yDoc,
     audit: {
       'keyboard-focus': false,
       'contrast-visuals': false,

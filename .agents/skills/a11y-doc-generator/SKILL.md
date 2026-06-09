@@ -12,12 +12,14 @@ This skill generates simplified accessibility documentation for UI components in
 1. **Creates `a11y.md`** - Simplified accessibility audit (following `.a11y/template.md`)
 2. **Creates `__tests__/a11y.test.tsx`** - Accessibility test file with automated checks
 3. **References RGAA criteria** - Uses `.a11y/rgaa-mapping.md` for accessibility standards mapping
+4. **Updates Storybook** - Adds `a11y.md` import and parameters to `__stories__/index.stories.tsx`
 
 ## Workflow
 
 ### Step 1: Read the reference documents
 
 Always start by reading:
+
 - `.a11y/template.md` - Follow the current structure (do NOT modify)
 - `.a11y/rgaa-mapping.md` - Reference RGAA criteria for your component type
 - `.a11y/checklist.md` - Use relevant checklist items for your component category
@@ -27,6 +29,7 @@ Always start by reading:
 **Important**: Start skeptical. Assume the React component has accessibility issues until proven otherwise.
 
 **Map to RGAA criteria**: Reference `.a11y/rgaa-mapping.md` to identify which RGAA 4.1.2 criteria apply to your component:
+
 - Image criteria (3.x) - For components with images
 - Color criteria (3.3, 10.x) - For all components (contrast, color-only information)
 - Script criteria (7.x) - Keyboard accessibility, focus management, timing
@@ -77,6 +80,7 @@ Only mark as ✅ Compliant if you can verify:
 **Default to skepticism**: If in doubt, mark as ⚠️ Needs Work. It's better to over-report potential issues than to miss real accessibility barriers.
 
 **Verify related components exist**: Before listing components in "Related Components", verify they exist in the library by checking:
+
 - `packages/ui/src/components/[ComponentName]/index.tsx`
 - Or search for component exports in the codebase
 
@@ -152,7 +156,45 @@ See [`__tests__/a11y.test.tsx`](./__tests__/a11y.test.tsx)
 
 ````
 
-### Step 4: Generate `a11y.test.tsx`
+### Step 4: Update Storybook configuration
+
+Add the `a11y.md` import and parameters to `__stories__/index.stories.tsx`:
+
+```tsx
+import type { Meta } from '@storybook/react-vite'
+import { Component } from '..'
+import a11yDoc from '../a11y.md?raw'
+
+export default {
+  component: Component,
+  title: 'UI/Category/Component',
+  parameters: {
+    a11y: 'compliant' | 'partial' | 'non-compliant', // Match the status from a11y.md
+    a11yContent: a11yDoc,
+    audit: {
+      'keyboard-focus': true | false,
+      'contrast-visuals': true | false,
+      'semantics-screen-reader': true | false,
+      'pointer-touch': true | false,
+      'specific-patterns': true | false,
+    },
+  },
+} satisfies Meta<typeof Component>
+```
+
+**Set `a11y` status based on component status:**
+- ✅ Compliant → `a11y: 'compliant'`
+- ⚠️ Needs Work → `a11y: 'partial'`
+- ❌ Non-compliant → `a11y: 'non-compliant'`
+
+**Set `audit` flags based on Quick Checks:**
+- `'keyboard-focus'`: true if Keyboard check is ✅
+- `'contrast-visuals'`: true if Contrast check is ✅
+- `'semantics-screen-reader'`: true if ARIA and Screen Readers are ✅
+- `'pointer-touch'`: true if component supports pointer/touch appropriately
+- `'specific-patterns'`: true if component-specific patterns are implemented
+
+### Step 5: Generate `a11y.test.tsx`
 
 Create comprehensive tests with the `a11y` tag for filtering.
 
@@ -252,10 +294,115 @@ For a form component (Input, Select, Checkbox):
 
 **Remember**: Users with disabilities depend on this documentation. Being overly optimistic about accessibility creates barriers. Always verify claims with actual tests.
 
-## Files to create
+## Files to create/update
 
 1. `[Component]/a11y.md` - Documentation
 2. `[Component]/__tests__/a11y.test.tsx` - Tests (if doesn't exist)
+3. `[Component]/__stories__/index.stories.tsx` - Update with a11y parameters
+
+## Action Summary & Prioritization
+
+After analyzing a component, provide a short summary with:
+
+### Priority Level
+
+- **P0 - Critical**: Blocks users with disabilities (keyboard traps, missing labels, no keyboard access)
+- **P1 - High**: Significant barriers (missing ARIA, poor focus management, contrast issues)
+- **P2 - Medium**: Usability issues (missing optional ARIA, inconsistent patterns)
+- **P3 - Low**: Nice to have (enhancements, edge cases)
+
+### Dependencies
+
+Identify if this component depends on other components being fixed first:
+
+```markdown
+**Dependencies**:
+
+- Fix [Component A] before this component (provides shared hook/util)
+- Can be fixed independently
+- Blocks [Component B] (this component is used by B)
+```
+
+### Proposed Actions
+
+List concrete next steps:
+
+```markdown
+**Quick wins** (< 1 day):
+
+- [ ] Add role="alert" to Alert component
+- [ ] Add aria-live regions
+
+**Requires design** (1-3 days):
+
+- [ ] Define focus trap behavior for Modal
+- [ ] Design keyboard navigation pattern for Dropdown
+
+**Requires refactoring** (3+ days):
+
+- [ ] Migrate to forwardRef for proper focus management
+- [ ] Extract keyboard logic to shared hook
+```
+
+### Ticket Template
+
+If issues found, suggest a ticket:
+
+```markdown
+**Title**: [A11Y] Fix [Component] - [Priority]
+
+**Description**:
+
+- Status: ⚠️ Needs Work
+- RGAA Criteria: [list from rgaa-mapping.md]
+- Critical issues: [list]
+- Dependencies: [list or "none"]
+- Estimated effort: [XS/S/M/L/XL]
+
+**Acceptance Criteria**:
+
+- [ ] Keyboard navigation works (Tab, Enter, Escape)
+- [ ] Screen readers announce component correctly
+- [ ] Focus is visible and managed properly
+- [ ] ARIA attributes are correct
+```
+
+### Related Components to Check
+
+If fixing this component, suggest checking related components:
+
+```markdown
+**Check also**:
+- [Component A] - Uses same pattern
+- [Component B] - Shares keyboard logic
+- [Component C] - Similar ARIA requirements
+```
+
+## Extend Accessibility Capabilities
+
+After completing the component audit, consider asking:
+
+**"Would you like me to create a dedicated accessibility skill for your codebase?"**
+
+A custom a11y skill could provide:
+
+- 🎯 **Component-specific patterns** - Keyboard navigation, focus management, ARIA templates
+- 📋 **Automated checks** - ESLint rules, testing utilities, CI/CD integration
+- 🔄 **Batch operations** - Audit multiple components, generate reports, track progress
+- 📊 **Dashboard & tracking** - RGAA/WCAG compliance score, component status overview
+- 🧪 **Test generation** - Auto-create a11y tests based on component type
+- 📚 **Best practices library** - Reusable hooks, HOCs, utilities for common patterns
+- 🎨 **Design system integration** - Color contrast checking, focus indicator tokens
+- 📖 **Documentation generator** - Auto-update a11y.md when components change
+
+**Example specialized skills:**
+- `a11y-auditor` - Batch audit all components, generate compliance reports
+- `a11y-test-generator` - Auto-create accessibility tests from component props
+- `a11y-focus-manager` - Shared focus trap, focus restoration, keyboard navigation hooks
+- `a11y-contrast-checker` - Automated color contrast validation for themes
+- `a11y-progress-tracker` - Track a11y improvements, generate stakeholder reports
+
+This creates a compounding effect: each skill makes future accessibility work faster and more consistent.
 
 ## Reference documents (read-only)
 
