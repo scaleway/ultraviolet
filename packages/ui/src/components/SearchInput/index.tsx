@@ -272,7 +272,12 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
                 data-testid={`search-icon${dataTestId ? `-${dataTestId}` : ''}`}
                 onClick={() => innerSearchInputRef.current?.focus()}
               >
-                <SearchIcon disabled={disabled} sentiment="neutral" />
+                <SearchIcon
+                  disabled={disabled}
+                  size={size === 'large' ? 'medium' : 'small'}
+                  sentiment="neutral"
+                  prominence="weak"
+                />
               </Stack>
             }
             readOnly={readOnly}
