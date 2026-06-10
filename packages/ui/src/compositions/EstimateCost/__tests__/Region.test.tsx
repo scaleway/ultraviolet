@@ -20,4 +20,15 @@ describe('estimateCost - Region', () => {
     )
     expect(asFragment()).toMatchSnapshot()
   })
+
+  it('render region component, with custom children', () => {
+    const { asFragment } = renderWithTheme(
+      <EstimateCost defaultTimeUnit="hours">
+        <EstimateCost.Region animated>
+          <img src="" alt="" /> fr-par
+        </EstimateCost.Region>
+      </EstimateCost>,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

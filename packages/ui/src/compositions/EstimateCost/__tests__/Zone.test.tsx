@@ -19,10 +19,19 @@ describe('estimateCost - Zone', () => {
       </EstimateCost>,
     ))
 
-  it('render region component, with animation', () =>
+  it('render zone component, with animation', () =>
     shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="hours">
         <EstimateCost.Zone animated image={frFlag} label="nl-ams-1" />
+      </EstimateCost>,
+    ))
+
+  it('render zone component, with custom children', () =>
+    shouldMatchSnapshot(
+      <EstimateCost defaultTimeUnit="hours">
+        <EstimateCost.Zone animated>
+          <img src="" alt="" /> fr-par
+        </EstimateCost.Zone>
       </EstimateCost>,
     ))
 })

@@ -1,7 +1,7 @@
 'use client'
 
 import { memo } from 'react'
-import type { CSSProperties } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { useEstimateCost } from '../EstimateCostProvider'
 import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
 import { Item } from './Item'
@@ -10,7 +10,7 @@ import { estimateCostStyle } from '../styles.css'
 
 type RegionProps = {
   shouldBeHidden?: boolean
-  priceText?: string
+  priceText?: ReactNode
   animated?: boolean
   isFirstElement?: boolean
   isLastElement?: boolean
@@ -20,12 +20,18 @@ type RegionProps = {
   }
   iteration?: Iteration
   discount?: number
-  label: string
-  image: string
   noBorder?: boolean
   noPrice?: boolean
   style?: CSSProperties
-}
+} & XOR<
+  [
+    {
+      label: string
+      image: string
+    },
+    { children: ReactNode },
+  ]
+>
 
 export const Zone = memo(
   ({
@@ -42,6 +48,7 @@ export const Zone = memo(
     noBorder,
     noPrice,
     style,
+    children,
   }: RegionProps) => {
     const { locales } = useEstimateCost()
 
@@ -61,8 +68,12 @@ export const Zone = memo(
         style={style}
       >
         <Strong>
-          <img alt={label} className={estimateCostStyle.image} height="auto" src={image} width="auto" />
-          {label}
+          {children ?? (
+            <>
+              <img alt={label} className={estimateCostStyle.image} height="auto" src={image} width="auto" />
+              {label}
+            </>
+          )}
         </Strong>
       </Item>
     )

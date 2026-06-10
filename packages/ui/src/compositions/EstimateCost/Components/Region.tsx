@@ -20,11 +20,18 @@ type RegionProps = {
   }
   iteration?: Iteration
   discount?: number
-  label: string
-  image: string
   noBorder?: boolean
   noPrice?: boolean
-} & Pick<ComponentProps<typeof Item>, 'hideFromOverlay' | 'style'>
+} & Pick<ComponentProps<typeof Item>, 'hideFromOverlay' | 'style'> &
+  XOR<
+    [
+      {
+        label: string
+        image: string
+      },
+      { children: ReactNode },
+    ]
+  >
 
 export const Region = memo(
   ({
@@ -42,6 +49,7 @@ export const Region = memo(
     noPrice,
     hideFromOverlay,
     style,
+    children,
   }: RegionProps) => {
     const { locales } = useEstimateCost()
 
@@ -62,8 +70,12 @@ export const Region = memo(
         style={style}
       >
         <Strong>
-          <img alt={label} className={estimateCostStyle.image} height="auto" src={image} width="auto" />
-          {label}
+          {children ?? (
+            <>
+              <img alt={label} className={estimateCostStyle.image} height="auto" src={image} width="auto" />
+              {label}
+            </>
+          )}
         </Strong>
       </Item>
     )
