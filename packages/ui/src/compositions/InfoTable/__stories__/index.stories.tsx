@@ -25,4 +25,6 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { MultiLine } from './MultiLine.stories'
+export { Size } from './Size.stories'
+export { Header } from './Header.stories'
 export { ComplexExample } from './ComplexExample.stories'
