@@ -1,5 +1,7 @@
-import { Label, RadioGroup, SelectInput } from '@ultraviolet/ui'
 import { useMemo } from 'react'
+import { Label } from '../../../components/Label'
+import { RadioGroup } from '../../../components/RadioGroup'
+import { SelectInput } from '../../../components/SelectInput'
 import type { FilterConfigItemSelect, AnyObject, FilterComponentProps } from '../types'
 
 const DISPLAY_THRESHOLD = 10

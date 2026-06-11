@@ -1,4 +1,4 @@
-import { Slider } from '@ultraviolet/ui'
+import { Slider } from '../../../components/Slider'
 import type { FilterConfigItemSlider, FilterComponentProps } from '../types'
 
 type FilterSliderProps = FilterComponentProps<number | number[], FilterConfigItemSlider>

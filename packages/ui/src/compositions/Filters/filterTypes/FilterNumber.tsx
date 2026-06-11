@@ -1,4 +1,4 @@
-import { NumberInput } from '@ultraviolet/ui'
+import { NumberInput } from '../../../components/NumberInput'
 import type { FilterComponentProps, FilterConfigItemNumber } from '../types'
 
 type FilterNumberProps = FilterComponentProps<number | null, FilterConfigItemNumber>

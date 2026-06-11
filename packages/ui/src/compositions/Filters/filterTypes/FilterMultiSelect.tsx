@@ -1,5 +1,7 @@
-import { CheckboxGroup, Label, SelectInput } from '@ultraviolet/ui'
 import { useMemo } from 'react'
+import { CheckboxGroup } from '../../../components/CheckboxGroup'
+import { Label } from '../../../components/Label'
+import { SelectInput } from '../../../components/SelectInput'
 import type { FilterConfigItemMultiSelect, AnyObject, FilterComponentProps } from '../types'
 
 const DISPLAY_THRESHOLD = 10
