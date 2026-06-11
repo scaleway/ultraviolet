@@ -14,13 +14,13 @@ describe('numberInputField', () => {
     const { asFragment } = renderWithForm(
       <NumberInputField aria-label="Number Input" disabled name="test" value={10} />,
     )
-    const input = screen.getByLabelText('Number Input')
+    const input = screen.getByRole('spinbutton', { name: 'Number Input' })
     expect(input).toBeDisabled()
 
-    const inputMinus = screen.getByLabelText('minus')
+    const inputMinus = screen.getByRole('button', { name: 'minus' })
     expect(inputMinus).toBeDisabled()
 
-    const inputPlus = screen.getByLabelText('plus')
+    const inputPlus = screen.getByRole('button', { name: 'plus' })
     expect(inputPlus).toBeDisabled()
     expect(asFragment()).toMatchSnapshot()
   })
@@ -46,8 +46,8 @@ describe('numberInputField', () => {
       },
     )
 
-    const numberInput = screen.getByLabelText('Test')
-    const submit = screen.getByText('Submit')
+    const numberInput = screen.getByRole('spinbutton', { name: 'Test' })
+    const submit = screen.getByRole('button', { name: 'Submit' })
     expect(numberInput).toHaveValue(10)
     await userEvent.click(submit)
 
@@ -101,10 +101,10 @@ describe('numberInputField', () => {
       },
     )
 
-    const numberInput1 = screen.getByLabelText('Test1')
-    const numberInput2 = screen.getByLabelText('Test2')
+    const numberInput1 = screen.getByRole('spinbutton', { name: 'Test1' })
+    const numberInput2 = screen.getByRole('spinbutton', { name: 'Test2' })
 
-    const submit = screen.getByText('Submit')
+    const submit = screen.getByRole('button', { name: 'Submit' })
     expect(numberInput1).toHaveValue(10)
     await userEvent.click(submit)
 
@@ -169,6 +169,107 @@ describe('numberInputField', () => {
       expect(onSubmit).toHaveBeenCalledWith({
         test1: 11,
         test2: 21,
+      })
+    })
+  })
+
+  describe('validators', () => {
+    it('should pass validation for valid numbers', async () => {
+      const onSubmit = vi.fn()
+      renderWithForm(
+        <>
+          <NumberInputField aria-label="Test" name="test" />
+          <Submit>Submit</Submit>
+        </>,
+        { defaultValues: { test: 0 }, mode: 'onChange' },
+        { errors: mockFormErrors, onSubmit },
+      )
+
+      const input = screen.getByRole('spinbutton', { name: 'Test' })
+      const submit = screen.getByRole('button', { name: 'Submit' })
+
+      await userEvent.type(input, '42')
+      await userEvent.click(submit)
+
+      await waitFor(() => {
+        expect(onSubmit).toHaveBeenCalledExactlyOnceWith({ test: 42 })
+      })
+    })
+
+    it('should fail validation when value is not a decimal number', async () => {
+      const onSubmit = vi.fn()
+      renderWithForm(
+        <>
+          <NumberInputField aria-label="Test" name="test" />
+          <Submit>Submit</Submit>
+        </>,
+        { defaultValues: { test: 0 }, mode: 'onChange' },
+        { errors: mockFormErrors, onSubmit },
+      )
+
+      const input = screen.getByRole('spinbutton', { name: 'Test' })
+      const submit = screen.getByRole('button', { name: 'Submit' })
+
+      await userEvent.type(input, 'e')
+      await userEvent.click(submit)
+
+      await waitFor(() => {
+        expect(input).toHaveAccessibleDescription('This field should be a number')
+        expect(onSubmit).not.toHaveBeenCalled()
+      })
+    })
+
+    it('should pass validation for decimal numbers when step is decimal', async () => {
+      const onSubmit = vi.fn()
+      renderWithForm(
+        <>
+          <NumberInputField aria-label="Test" name="test" step={0.1} />
+          <Submit>Submit</Submit>
+        </>,
+        { defaultValues: { test: 0 }, mode: 'onChange' },
+        { errors: mockFormErrors, onSubmit },
+      )
+
+      const input = screen.getByRole('spinbutton', { name: 'Test' })
+      const submit = screen.getByRole('button', { name: 'Submit' })
+
+      await userEvent.type(input, '3.14')
+      await userEvent.click(submit)
+
+      await waitFor(() => {
+        expect(onSubmit).toHaveBeenCalledExactlyOnceWith({ test: 3.14 })
+      })
+    })
+
+    it('should fail validation for decimal numbers when step is integer', async () => {
+      const onSubmit = vi.fn()
+      renderWithForm(
+        <>
+          <NumberInputField aria-label="Test" name="test" step={2} />
+          <Submit>Submit</Submit>
+        </>,
+        { defaultValues: { test: 0 }, mode: 'onChange' },
+        { errors: mockFormErrors, onSubmit },
+      )
+
+      const input = screen.getByRole('spinbutton', { name: 'Test' })
+      const submit = screen.getByRole('button', { name: 'Submit' })
+
+      await userEvent.type(input, '3.14')
+      await userEvent.click(submit)
+
+      await waitFor(() => {
+        expect(input).toHaveAccessibleDescription('This field should be an integer')
+        expect(onSubmit).not.toHaveBeenCalled()
+      })
+
+      await userEvent.clear(input)
+      await userEvent.type(input, '4')
+      await userEvent.click(submit)
+
+      await waitFor(() => {
+        expect(input).toHaveAccessibleDescription('')
+        expect(onSubmit).toHaveBeenCalledExactlyOnceWith({ test: 4 })
       })
     })
   })
