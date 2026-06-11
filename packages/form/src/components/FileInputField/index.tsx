@@ -11,9 +11,15 @@ type FileInputFieldProps<TFieldValues extends FieldValues, TFieldName extends Fi
   TFieldValues,
   TFieldName
 > &
-  Omit<ComponentProps<typeof FileInput>, 'error' | 'name' | 'onChangeFiles' | 'label' | 'aria-label'> & {
-    label: string
-  }
+  Omit<ComponentProps<typeof FileInput>, 'error' | 'name' | 'onChangeFiles' | 'label' | 'aria-label'> &
+  XOR<
+    [
+      {
+        label: string
+      },
+      { 'aria-label': string },
+    ]
+  >
 
 /**
  * This component offers a form field based on Ultraviolet UI FileInput component
@@ -36,9 +42,12 @@ const FileInputFieldBase = <
   bottom,
   children,
   errorLabel,
+  'aria-label': ariaLabel,
   ...props
 }: FileInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
+
+  const computedLabel = label ?? ariaLabel ?? name
 
   const {
     field,
@@ -52,12 +61,14 @@ const FileInputFieldBase = <
     shouldUnregister,
   })
 
+  const inputLabelProps = label ? { label } : { 'aria-label': ariaLabel ?? name }
+
   if (variant === 'overlay' && children) {
     return (
       <FileInput
         {...props}
-        error={getError({ label: errorLabel ?? label }, error)}
-        label={label}
+        error={getError({ label: errorLabel ?? computedLabel }, error)}
+        aria-label={computedLabel}
         onChangeFiles={files => {
           field.onChange(files)
           onChange?.(files as PathValue<TFieldValues, Path<TFieldValues>>)
@@ -75,8 +86,7 @@ const FileInputFieldBase = <
     <FileInput
       {...props}
       bottom={bottom}
-      error={getError({ label }, error)}
-      label={label}
+      error={getError({ label: errorLabel ?? computedLabel }, error)}
       onChangeFiles={files => {
         field.onChange(files)
         onChange?.(files as PathValue<TFieldValues, Path<TFieldValues>>)
@@ -85,6 +95,7 @@ const FileInputFieldBase = <
       size={size}
       title={title}
       variant="dropzone"
+      {...inputLabelProps}
     >
       {typeof children === 'function' ? (inputId, inputRef) => children(inputId, inputRef) : children}
     </FileInput>
