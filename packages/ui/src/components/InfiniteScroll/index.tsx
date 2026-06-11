@@ -1,5 +1,6 @@
 'use client'
 
+import { useDebouncedCallback } from '@ultraviolet/utils'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { CSSProperties, ElementType, ReactNode, RefObject } from 'react'
 import { Loader } from '../Loader'
@@ -61,19 +62,6 @@ export const InfiniteScroll = ({
   const [isLoading, setIsLoading] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
-  const debounce = useCallback((func: () => void, delay: number) => {
-    let timeoutId: ReturnType<typeof setTimeout>
-
-    return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId)
-      }
-      timeoutId = setTimeout(() => {
-        func()
-      }, delay)
-    }
-  }, [])
-
   const handleScroll = useCallback(
     (scrollableContainer: HTMLElement) => {
       if (!containerRef.current) {
@@ -103,9 +91,11 @@ export const InfiniteScroll = ({
     [onLoadMore, heightThreshold],
   )
 
+  const debouncedHandleScroll = useDebouncedCallback(handleScroll, 100)
+
   useEffect(() => {
     if (!hasMore) {
-      return
+      return undefined
     }
     let scrollableContainer = scrollParentRef?.current ?? containerRef.current?.parentElement
     while (scrollableContainer && scrollableContainer !== document.body) {
@@ -117,19 +107,16 @@ export const InfiniteScroll = ({
     }
 
     if (!scrollableContainer) {
-      return
+      return undefined
     }
 
-    const debouncedHandleScroll = debounce(() => handleScroll(scrollableContainer), 100)
-    scrollableContainer.addEventListener('scroll', debouncedHandleScroll)
+    const scrollListener = () => debouncedHandleScroll(scrollableContainer)
+    scrollableContainer.addEventListener('scroll', scrollListener)
 
-    // We need to return to remove the event listener when the component is unmounted
-    // As we return void above eslint is not happy
-    // eslint-disable-next-line consistent-return
     return () => {
-      scrollableContainer.removeEventListener('scroll', debouncedHandleScroll)
+      scrollableContainer?.removeEventListener('scroll', scrollListener)
     }
-  }, [debounce, handleScroll, hasMore, onLoadMore, scrollParentRef])
+  }, [debouncedHandleScroll, handleScroll, hasMore, onLoadMore, scrollParentRef])
 
   const localLoader = useMemo(() => loader ?? <Loader active />, [loader])
 
