@@ -1,7 +1,11 @@
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
-import { Button, Label, Row, Stack, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { useState } from 'react'
+import { Button } from '../../../components/Button'
+import { Label } from '../../../components/Label'
+import { Row } from '../../../components/Row'
+import { Stack } from '../../../components/Stack'
+import { Text } from '../../../components/Text'
 
 export const ExpandableFilterGroup = ({
   label,

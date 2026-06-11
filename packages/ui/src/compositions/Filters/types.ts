@@ -1,5 +1,7 @@
-import type { DateInput, SelectInput, Slider } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
+import type { DateInput } from '../../components/DateInput'
+import type { SelectInput } from '../../components/SelectInput'
+import type { Slider } from '../../components/Slider'
 import type { DatetimeRangeLocales } from './filterTypes/FilterDatetimeRange/type'
 
 export type AnyObject = Record<string, unknown>
