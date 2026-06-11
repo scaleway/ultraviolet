@@ -1,0 +1,287 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta
+  title="Compositions/Filters/Usage"
+  parameters={{
+    a11yStatus: 'partial',
+    audit: {
+      'keyboard-focus': false,
+      'contrast-visuals': false,
+      'semantics-screen-reader': false,
+      'pointer-touch': false,
+      'specific-patterns': false,
+    },
+  }}
+/>
+
+# Filters
+
+Filters allow you to filter items based on various criteria. The component allows to define filters using a configuration array, display some of them in a row and the others in a drawer.
+
+## Configuration
+
+### Built-in Filter Types
+
+1. **Text (`text`)** : Allows filtering by text.
+2. **Search (`search`)** : Use a SearchInput to filter by text.
+3. **Select (`select`)** : Allows choosing an option from a list.
+4. **Multi-select (`multiselect`)** : Allows choosing multiple options from a list.
+5. **Slider (`slider`)** : Allows defining a range of values.
+6. **Number (`number`)** : Allows filtering by a number value.
+7. **Datetime Range (`datetimeRange`)** : Allows filtering by a date range.
+
+### Custom Filter Types
+
+Any string can be used for a filter type, allowing to render custom filter components that will have to be provided. See [custom field components](#custom-field-components).
+
+### Example Configuration
+
+A configuration array is used to define all the filters to display. Customize the `FilterValues` type to describe your own values.
+
+Each kind of filter has its own configuration type (`FilterConfigItemSlider`, `FilterConfigItemText` etc.) that you can use to enforce a proper configuration and get autocompletion. Or you can use an array of `FilterConfig` which is the union of all possible configuration types.
+
+```typescript
+import type { FilterConfig } from '@ultraviolet/ui'
+
+type FilterValues = {
+  name: string
+  status: string
+  env: string[]
+  ram: [number, number]
+  gpu: string
+}
+
+const config: FilterConfig<FilterValues>[] = [
+  {
+    type: 'search',
+    name: 'name',
+    hideInDrawer: true,
+    label: 'Name',
+    debounceDuration: 500,
+    placeholder: 'Type to search...',
+  },
+  {
+    type: 'select',
+    name: 'status',
+    label: 'Status',
+    placeholder: 'Select status',
+    options: [
+      { label: 'Active', value: 'active' },
+      { label: 'Inactive', value: 'inactive' },
+    ],
+  },
+  {
+    type: 'multiselect',
+    name: 'env',
+    label: 'Environment',
+    placeholder: 'Select environment',
+    options: [
+      { label: 'Production', value: 'prod' },
+      { label: 'Development', value: 'dev' },
+      { label: 'Staging', value: 'staging' },
+    ],
+    searchable: true,
+  },
+  {
+    type: 'slider',
+    name: 'ram',
+    label: 'RAM',
+    min: 1,
+    max: 64,
+    double: true,
+  },
+  {
+    type: 'group',
+    name: 'advanced',
+    label: 'Advanced',
+    expanded: true,
+    items: [
+      {
+        name: 'gpu',
+        type: 'select',
+        label: 'GPU',
+        options: [],
+      },
+    ],
+  },
+]
+```
+
+## Using the Filters Component
+
+The Filters component implements the filter UI pattern that displays a few filters (2-3), a button to open a Drawer containing all filters, and a clear button.
+
+### Basic Usage
+
+The Filters components is an _uncontrolled component_ which manages its internal state. It takes two arrays to initialize the values:
+
+- `defaultValues`: the values when no filter is applied. This is what will be applied when clearing the values.
+- `initialValues`: the values applied on the first mount. They can be different from the default values, in which case a "clear" button will appear in the drawer.
+
+Then, two callbacks allow to retrieve the filter values as they are updated:
+
+- `onChange`: called on every filter update, in the main row or the drawer. This can be used for instance to update the number of results in the drawer before actually submitting. When closing the drawer without submitting, the updates in the drawer are discarded and the `onChange` callback is called (but not `onSubmit`).
+- `onSubmit`: called when filters are submitted, either by clicking the button in the drawer, or when updating filters in the main row. This is the callback to use for filtering your data.
+
+```typescript
+import { Filters, type FilterConfig } from '@ultraviolet/ui'
+
+const defaultValues: FilterValues = {
+  name: "",
+  status: "",
+  env: [],
+  ram: [0, 64],
+  gpu: ""
+}
+
+const initialValues: Partial<FilterValues> = {
+  ram: [16, 32],
+}
+
+const config: FilterConfig<FilterValues>[] = [
+  ...
+]
+
+function MyPage() {
+  const [liveValues, setLiveValues] = useState({...defaultValues, ...initialValues})
+  const [submittedValues, setSubmittedValues] = useState({...defaultValues, ...initialValues})
+
+  return (
+    <Filters
+      config={config}
+      defaultValues={defaultValues}
+      initialValues={initialValues}
+      onChange={setLiveValues}
+      onSubmit={setSubmittedValues}
+      onDrawerOpen={() => {
+        trackEvent('filters_opened')
+      }}
+      labels={{
+        seeAll: 'All Filters',
+        clearAll: 'Clear All',
+        submit: 'See Results',
+        clear: 'Clear',
+        drawerHeader: 'Filters',
+      }}
+    />
+    // ... display filtered data using `submittedValues`
+  )
+}
+```
+
+### Layout Configuration
+
+- `mainFilters`: control which filters appear in the main row. If not specified, the first 3 non-group filters are shown in the main row
+- `templateColumns`: layout of the main filters row (can be responsive). The default value should cover most cases.
+- `size`: use a `large` size when the main row contains a slider, otherwise keep the default `medium` size
+
+```typescript
+<Filters
+  layout={{
+    mainFilters: ['search', 'status'],
+    templateColumns: '2fr 1fr auto'
+  }}
+  // ... other props
+/>
+```
+
+### Custom Field Components
+
+Custom filter types can be provided in the configuration array to extend the builtin types. For each custom type, a component must be provided to the `Filters` component to render the corresponding field.
+
+You can extend base types for the configuration and props of the custom field.
+
+```typescript
+import { Filters } from '@ultraviolet/form'
+import type { FilterConfig, FilterConfigItemBase, FilterComponentProps } from '@ultraviolet/form'
+
+
+type FilterConfigItemZones = FilterConfigItemBase & {
+  type: 'zones'
+  zones: ZoneType[]
+  displayImpact?: boolean
+}
+
+export type FilterZonesProps = FilterComponentProps<string[], FilterConfigItemZones> & {
+  customProp?: string
+}
+
+// Custom component definition
+function MyZonesFilter({ config, value, onChange, customProp }: FilterZonesProps) {
+  return (
+    <div>
+      <label>{config.label}</label>
+      <ZoneSelector
+        selectedZones={value}
+        onChange={onChange}
+        customProp={customProp}
+      />
+    </div>
+  )
+}
+
+function MyPage() {
+  const configZone: FilterConfigItemZones = {
+    id: 'zones',
+    type: 'zones',
+    label: 'Zones',
+    zones: ["par-1"],
+    displayImpact: true
+  }
+
+  const config: FilterConfig<FilterValues> = [
+    configZone
+  ]
+
+  return (
+    <Filters
+      config={config}
+      components={{
+        zones: MyZonesFilter, // <- "zones" corresponds to the custom filter type
+      }}
+      // ... other props
+    />
+  )
+}
+
+```
+
+Be careful not to redefine the custom components at each render, otherwise React won't be able to preserve the DOM nodes and the markup will be re-created at each render.
+
+```tsx
+// DON'T DO THIS
+return (
+  <Filters
+    components={{
+      zones: props => <MyZonesFilter {...props} foo="bar" />, // <- MyZoneFilter will be re-created at each render
+    }}
+  />
+)
+```
+
+For very specific use cases, custom filter components can use the filters context to execute various operations like resetting the filters or submitting.
+
+```ts
+import { useFiltersContext } from '@ultraviolet/ui'
+
+function CustomFilterComponents({ config, value }) {
+  const { filters } = useFiltersContext<FilterValues>()
+
+  return (
+    <SwitchButton
+      value={value}
+      onChange={event => {
+        const newValues = { ...filters.defaultValues, foo: event.target.value }
+        filters.reset(newValues)
+        filters.submit(newValues)
+      }}
+    >
+      {(config.options).map(option => (
+        <SwitchButton.Option key={option.value} value={option.value}>
+          {option.label}
+        </SwitchButton.Option>
+      ))}
+    </SwitchButton>
+  )
+}
+```
