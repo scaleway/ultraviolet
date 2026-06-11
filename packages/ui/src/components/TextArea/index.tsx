@@ -7,7 +7,7 @@ import { forwardRef, useEffect, useId, useImperativeHandle, useRef } from 'react
 import type { CSSProperties, ReactNode, TextareaHTMLAttributes } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { Button } from '../Button'
-import { SIZE_HEIGHT as ButtonSizeHeight } from '../Button/constants'
+import { SIZE_HEIGHT as buttonSizeHeight } from '../Button/constants'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
@@ -161,9 +161,14 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       requestAnimationFrame(updateHeight)
     }, [value, rows, theme, maxRows, textAreaRef.current?.value])
 
-    const notice = success || error || helper
+    const nonDefaultState = success || error
 
     const computedClearable = clearable && !!value
+    const defaultPadding = theme.space[1]
+    const spaceForClearButton = computedClearable ? theme.sizing[buttonSizeHeight.xsmall] : '0px'
+    const spaceForStateIcon = nonDefaultState ? theme.sizing[STATE_ICON_SIZE] : '0px'
+    const gapBetweenButtons = computedClearable && nonDefaultState ? theme.space['1'] : '0px'
+    const gapButtonsContent = computedClearable || nonDefaultState ? theme.space[0.5] : '0px'
 
     return (
       <Stack className={className} gap="0.5">
@@ -201,9 +206,9 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               rows={rows === 'auto' ? 1 : rows}
               style={{
                 ...assignInlineVars({
-                  [paddingRightVar]: `calc(${theme.space[computedClearable && (!!success || !!error) ? '4' : '3']} + ${
-                    computedClearable ? `${ButtonSizeHeight.xsmall}px` : '0px'
-                  } + ${!!success || !!error ? `${STATE_ICON_SIZE}px` : '0px'})`,
+                  [paddingRightVar]: `calc(${defaultPadding} + ${
+                    spaceForClearButton
+                  } + ${spaceForStateIcon} + ${gapBetweenButtons} + ${gapButtonsContent}) `,
                 }),
                 ...style,
               }}
@@ -220,6 +225,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
                   sentiment="neutral"
                   size="xsmall"
                   variant="ghost"
+                  disabled={disabled || readOnly}
                 >
                   <CloseIcon />
                 </Button>
@@ -228,7 +234,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
             </Stack>
           </div>
         </Tooltip>
-        {notice || maxLength ? (
+        {nonDefaultState || helper || maxLength ? (
           <Notice
             disabled={disabled}
             error={error}
