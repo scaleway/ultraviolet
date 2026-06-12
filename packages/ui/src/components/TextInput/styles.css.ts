@@ -72,14 +72,10 @@ const inputWrapper = style({
     '&:not([data-disabled="true"]):not([data-readonly="true"]):hover': {
       borderColor: theme.colors.primary.border,
     },
-    "&[data-disabled='true']": {
-      background: theme.colors.neutral.backgroundDisabled,
-      borderColor: theme.colors.neutral.borderDisabled,
-    },
     "&[data-error='true']": {
       borderColor: theme.colors.danger.border,
     },
-    "&[data-has-focus='true']": {
+    '&:focus-within': {
       border: `1px solid ${theme.colors.primary.border}`,
       boxShadow: theme.shadows.focusPrimary,
     },
@@ -89,6 +85,25 @@ const inputWrapper = style({
     },
     "&[data-success='true']": {
       borderColor: theme.colors.success.border,
+    },
+    "&[data-error='true']:focus-within": {
+      boxShadow: theme.shadows.focusDanger,
+      borderColor: theme.colors.danger.border,
+    },
+    "&[data-success='true']:focus-within": {
+      boxShadow: theme.shadows.focusSuccess,
+      borderColor: theme.colors.success.border,
+    },
+    '&:not([data-disabled="true"]):not([data-readonly="true"])[data-success="true"]:hover': {
+      borderColor: theme.colors.success.borderHover,
+    },
+    '&:not([data-disabled="true"]):not([data-readonly="true"])[data-error="true"]:hover': {
+      borderColor: theme.colors.danger.borderHover,
+    },
+
+    "&[data-disabled='true']": {
+      background: theme.colors.neutral.backgroundDisabled,
+      borderColor: theme.colors.neutral.borderDisabled,
     },
   },
   width: '100%',

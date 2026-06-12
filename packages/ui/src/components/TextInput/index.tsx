@@ -70,7 +70,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
   ) => {
     const localId = useId()
     const helperId = useId()
-    const [hasFocus, setHasFocus] = useState(false)
+
     const [localValue, setLocalValue] = useState(defaultValue)
     const inputRef = useRef<HTMLInputElement>(null)
     useImperativeHandle(ref, () => inputRef.current!)
@@ -108,7 +108,6 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             className={cn(textInputStyle.inputWrapper, textInputStyle.inputWrapperSizes[size])}
             data-disabled={disabled}
             data-error={!!error}
-            data-has-focus={hasFocus}
             data-readonly={readOnly}
             data-success={!!success}
           >
@@ -130,15 +129,9 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               maxLength={maxLength}
               minLength={minLength}
               name={name}
-              onBlur={event => {
-                setHasFocus(false)
-                onBlur?.(event)
-              }}
+              onBlur={onBlur}
               onChange={onChangeCallback}
-              onFocus={event => {
-                setHasFocus(true)
-                onFocus?.(event)
-              }}
+              onFocus={onFocus}
               onKeyDown={onKeyDown}
               onKeyUp={onKeyUp}
               placeholder={placeholder}
