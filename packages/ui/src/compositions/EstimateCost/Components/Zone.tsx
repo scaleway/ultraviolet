@@ -8,7 +8,7 @@ import { Item } from './Item'
 import { Strong } from './Strong'
 import { estimateCostStyle } from '../styles.css'
 
-type RegionProps = {
+type ZoneProps = {
   shouldBeHidden?: boolean
   priceText?: ReactNode
   animated?: boolean
@@ -49,7 +49,7 @@ export const Zone = memo(
     noPrice,
     style,
     children,
-  }: RegionProps) => {
+  }: ZoneProps) => {
     const { locales } = useEstimateCost()
 
     return (

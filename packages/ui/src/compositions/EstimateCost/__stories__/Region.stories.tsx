@@ -11,6 +11,7 @@ Region.args = {
     <EstimateCost.Region image={frFlag} key={frFlag} label="PAR" />,
     <EstimateCost.Region image={nlFlag} key={nlFlag} label="AMS" />,
     <EstimateCost.Region image={plFlag} key={plFlag} label="WAW" />,
+    <EstimateCost.Region key="custom">Custom Children</EstimateCost.Region>,
   ],
 }
 
