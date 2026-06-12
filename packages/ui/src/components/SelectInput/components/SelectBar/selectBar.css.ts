@@ -65,6 +65,7 @@ export const selectBarBase = style({
   alignItems: 'center',
   background: theme.colors.neutral.background,
   borderRadius: theme.radii.default,
+  border: `1px solid transparent`,
   boxShadow: 'none',
   cursor: 'pointer',
   display: 'grid',
@@ -106,31 +107,19 @@ export const selectBar = recipe({
   compoundVariants: [
     {
       style: {
-        selectors: {
-          "&:not([data-disabked='true'])": {
-            borderColor: theme.colors.primary.borderHover,
-          },
-        },
+        borderColor: theme.colors.primary.borderHover,
       },
       variants: { dropdownVisible: true, state: 'neutral' },
     },
     {
       style: {
-        selectors: {
-          "&:not([data-disabked='true'])": {
-            borderColor: theme.colors.success.borderHover,
-          },
-        },
+        borderColor: theme.colors.success.borderHover,
       },
       variants: { dropdownVisible: true, state: 'success' },
     },
     {
       style: {
-        selectors: {
-          "&:not([data-disabked='true'])": {
-            borderColor: theme.colors.danger.borderHover,
-          },
-        },
+        borderColor: theme.colors.danger.borderHover,
       },
       variants: { dropdownVisible: true, state: 'danger' },
     },
