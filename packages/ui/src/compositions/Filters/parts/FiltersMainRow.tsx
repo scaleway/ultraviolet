@@ -87,7 +87,7 @@ export const FiltersMainRow = <V extends AnyObject>({
       <Stack direction="row" gap={2} alignItems="center">
         {shouldDisplayDrawer ? (
           <Button onClick={openDrawer} size={filterSize} variant="outlined">
-            <AdjustmentsHorizontalIcon /> {labels.seeAll}
+            <AdjustmentsHorizontalIcon aria-hidden="true" /> {labels.seeAll}
             {filters.appliedFilters.length > 0 ? ` (${filters.appliedFilters.length})` : null}
           </Button>
         ) : null}
