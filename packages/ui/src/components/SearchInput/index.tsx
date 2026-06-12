@@ -36,7 +36,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       label,
       labelDescription,
       loading,
-      size,
+      size = 'large',
       popupPlacement,
       threshold = 0,
       children,
