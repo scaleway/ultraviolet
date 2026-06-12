@@ -19,17 +19,8 @@ export const ComponentWrapper = ({
 )
 
 export const mockFormErrors: FormErrors = {
-  isInteger: ({ isInteger }) => {
-    if (typeof isInteger === 'number') {
-      if (Number.isInteger(isInteger)) {
-        return 'This field should be a decimal number'
-      }
-
-      return 'This field should be a whole number'
-    }
-
-    return 'This field should be a number'
-  },
+  isNumber: () => 'This field should be a number',
+  isInteger: () => 'This field should be an integer',
   max: ({ max }) => `This field is too high (maximum is : ${max ?? ''})`,
   maxDate: ({ maxDate }) => `This field should be before ${maxDate?.toString() ?? ''}`,
   maxLength: ({ maxLength }) => `This field should have a length lower than ${maxLength ?? ''}`,

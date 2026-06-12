@@ -6,7 +6,6 @@ import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
-import { isInteger } from '../../validators/isInteger'
 
 type NumberInputProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
   TFieldValues,
@@ -46,7 +45,8 @@ export const NumberInputField = <
       required,
       validate: {
         ...validate,
-        isInteger: isInteger(step),
+        isNumber: value => Number.isFinite(value),
+        ...(Number.isInteger(step) ? { isInteger: value => Number.isInteger(value) } : null),
       },
     },
     shouldUnregister,
@@ -62,6 +62,7 @@ export const NumberInputField = <
           label: errorLabel ?? label ?? ariaLabel ?? name,
           max,
           min,
+          value: field.value,
         },
         error,
       )}

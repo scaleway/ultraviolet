@@ -125,6 +125,7 @@ export const ThemeGenerator = () => {
           </Stack>
           <Form
             errors={{
+              isNumber: () => '',
               isInteger: () => '',
               max: () => '',
               maxDate: () => '',
