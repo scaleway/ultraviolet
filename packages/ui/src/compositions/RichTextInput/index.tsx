@@ -6,7 +6,7 @@ import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { EditorState } from 'prosemirror-state'
-import { useId, useState } from 'react'
+import { useEffect, useId, useState } from 'react'
 import type { CSSProperties, DOMAttributes, ReactNode } from 'react'
 import { Description } from '../../components/Description'
 import { Label } from '../../components/Label'
@@ -80,6 +80,18 @@ export const RichTextInput = ({
   const maxHeight = typeof maxRows === 'number' ? `calc(${lineHeightEm}em * ${maxRows} + 2 * ${padding})` : 'none'
 
   const [editorState, setEditorState] = useState<EditorState>(() => createEditorState(docFromHtml(value, editorSchema)))
+
+  useEffect(() => {
+    setEditorState(prev => {
+      const currentValue = prev.doc.textContent.trim() === '' ? '' : editorDocToHtml(prev.doc, editorSchema)
+
+      if (value === currentValue) {
+        return prev
+      }
+
+      return createEditorState(docFromHtml(value, editorSchema))
+    })
+  }, [value])
 
   return (
     <Stack gap="0.5">

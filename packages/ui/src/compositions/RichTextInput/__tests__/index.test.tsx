@@ -160,4 +160,24 @@ describe('richTextInput', () => {
     const doc = screen.getByRole('textbox')
     expect(doc).toHaveAccessibleDescription(errorMessage)
   })
+
+  it('should sync editor content when value prop changes externally', async () => {
+    const { rerender } = renderWithTheme(<RichTextInput aria-label="Test" value="<p>edited</p>" />)
+
+    rerender(<RichTextInput aria-label="Test" value="<p>default</p>" />)
+
+    await waitFor(() => {
+      expect(screen.getByRole('textbox').textContent?.trim()).toBe('default')
+    })
+  })
+
+  it('should clear editor content when value prop is reset to empty string', async () => {
+    const { rerender } = renderWithTheme(<RichTextInput aria-label="Test" value="<p>typed content</p>" />)
+
+    rerender(<RichTextInput aria-label="Test" value="" />)
+
+    await waitFor(() => {
+      expect(screen.getByRole('textbox').textContent?.trim()).toBe('')
+    })
+  })
 })
