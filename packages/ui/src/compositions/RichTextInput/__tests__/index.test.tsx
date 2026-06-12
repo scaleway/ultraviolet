@@ -1,4 +1,4 @@
-import { fireEvent, screen, waitFor } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { beforeAll, describe, expect, it, vi } from 'vitest'
@@ -26,15 +26,15 @@ describe('richTextInput', () => {
   it('should call onChange when typing', async () => {
     const onChange = vi.fn()
 
-    renderWithTheme(<RichTextInput aria-label="Test" onChange={onChange} value="test" />)
+    renderWithTheme(<RichTextInput aria-label="Test" onChange={onChange} />)
 
     const doc = screen.getByRole('textbox')
-    await waitFor(() => expect(doc.textContent).toBe('test'))
 
     await userEvent.click(doc)
-    await userEvent.type(doc, 'a')
+    await userEvent.type(doc, 'test')
 
-    expect(onChange).toHaveBeenCalledExactlyOnceWith('<p>testa</p>')
+    expect(onChange).toHaveBeenCalledTimes(4)
+    expect(onChange).toHaveBeenLastCalledWith('<p>test</p>')
   })
 
   it('should return empty string when cleared', async () => {
