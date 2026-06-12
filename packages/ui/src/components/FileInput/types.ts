@@ -14,7 +14,14 @@ export type ErrorType = { fileName?: string; error: string }
  */
 export type MimeType = 'application' | 'audio' | 'example' | 'font' | 'image' | 'model' | 'text' | 'video'
 
-type LabelType = { label: string; 'aria-label'?: never } | { label?: never; 'aria-label': string }
+type LabelType = XOR<
+  [
+    {
+      label: string
+    },
+    { 'aria-label': string },
+  ]
+>
 
 /**
  * Add the dropzone inside any content: when hovering, replace the content with the dropzone overlay
