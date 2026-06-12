@@ -1,12 +1,15 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { TextArea } from '..'
 
 describe('textArea', () => {
-  it('should render correctly with basic props', () =>
-    shouldMatchSnapshot(<TextArea label="Test" onChange={() => {}} value="test" />))
+  it('should render correctly with basic props', () => {
+    const { asFragment } = renderWithTheme(<TextArea label="Test" onChange={() => {}} value="test" />)
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('should control the value', () => {
     const onChange = vi.fn()
@@ -32,33 +35,55 @@ describe('textArea', () => {
     expect(onChange).toHaveBeenCalledWith('')
   })
 
-  it('should render correctly when input is disabled', () =>
-    shouldMatchSnapshot(<TextArea disabled label="Test" onChange={() => {}} value="test" />))
+  it('should render correctly when input is disabled', () => {
+    const { asFragment } = renderWithTheme(<TextArea disabled label="Test" onChange={() => {}} value="test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should render correctly when input is readOnly', () =>
-    shouldMatchSnapshot(<TextArea label="Test" onChange={() => {}} readOnly value="test" />))
+  it('should render correctly when input is readOnly', () => {
+    const { asFragment } = renderWithTheme(<TextArea label="Test" onChange={() => {}} readOnly value="test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should render correctly when it is required', () =>
-    shouldMatchSnapshot(<TextArea label="Test" onChange={() => {}} required value="test" />))
+  it('should render correctly when it is required', () => {
+    const { asFragment } = renderWithTheme(<TextArea label="Test" onChange={() => {}} required value="test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should render correctly with maxlength', () =>
-    shouldMatchSnapshot(<TextArea label="Test" maxLength={3} onChange={() => {}} value="test" />))
+  it('should render correctly with maxlength', () => {
+    const { asFragment } = renderWithTheme(<TextArea label="Test" maxLength={3} onChange={() => {}} value="test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should render correctly when input has a success sentiment', () =>
-    shouldMatchSnapshot(<TextArea label="Test" onChange={() => {}} success="success" value="test" />))
+  it('should render correctly when input has a success sentiment', () => {
+    const { asFragment } = renderWithTheme(<TextArea label="Test" onChange={() => {}} success="success" value="test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should render correctly when input  has a error sentiment', () =>
-    shouldMatchSnapshot(<TextArea error="success" label="Test" onChange={() => {}} value="test" />))
+  it('should render correctly when input  has a error sentiment', () => {
+    const { asFragment } = renderWithTheme(<TextArea error="success" label="Test" onChange={() => {}} value="test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should render with auto rows', () =>
-    shouldMatchSnapshot(<TextArea error="success" label="Test" onChange={() => {}} rows="auto" value="test" />))
+  it('should render with auto rows', () => {
+    const { asFragment } = renderWithTheme(
+      <TextArea error="success" label="Test" onChange={() => {}} rows="auto" value="test" />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should render with AutoExpandMax', () =>
-    shouldMatchSnapshot(<TextArea error="success" label="Test" maxRows={3} onChange={() => {}} value="test" />))
-  it('should render with AutoExpandMax and rows', () =>
-    shouldMatchSnapshot(
+  it('should render with AutoExpandMax', () => {
+    const { asFragment } = renderWithTheme(
+      <TextArea error="success" label="Test" maxRows={3} onChange={() => {}} value="test" />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+  it('should render with AutoExpandMax and rows', () => {
+    const { asFragment } = renderWithTheme(
       <TextArea error="success" label="Test" maxRows={3} onChange={() => {}} rows={2} value="test" />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('should display success message', () => {
     const onChange = vi.fn()
@@ -109,5 +134,10 @@ describe('textArea', () => {
 
     expect(screen.getByText(error)).toBeDefined()
     expect(screen.queryByText(helperMessage)).toBeNull()
+  })
+
+  it.each(['small', 'medium', 'large'] as const)(`renders correctly with size %s`, size => {
+    const { asFragment } = renderWithTheme(<TextArea label="Test" onChange={() => {}} value="test" size={size} />)
+    expect(asFragment()).toMatchSnapshot()
   })
 })
