@@ -14,7 +14,7 @@ export const Context: StoryFn = () => {
         {({ filters }) => (
           <>
             <FiltersMainRow
-              config={demoFilters.slice(0, 3)}
+              config={demoFilters.slice(0, 2)}
               labels={{
                 clearAll: 'Clear all',
                 seeAll: 'All filters',

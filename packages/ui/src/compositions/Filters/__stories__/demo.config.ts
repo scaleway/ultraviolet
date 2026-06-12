@@ -28,26 +28,33 @@ export const demoFilters: FilterConfig<FilterValues>[] = [
     placeholder: 'Type to search...',
   },
   {
-    type: 'select',
-    name: 'status',
-    label: 'Status',
-    placeholder: 'Select status',
-    options: [
-      { label: 'Active', value: 'active' },
-      { label: 'Inactive', value: 'inactive' },
+    type: 'group',
+    label: 'Infos',
+    name: 'infos',
+    items: [
+      {
+        type: 'select',
+        name: 'status',
+        label: 'Status',
+        placeholder: 'Select status',
+        options: [
+          { label: 'Active', value: 'active' },
+          { label: 'Inactive', value: 'inactive' },
+        ],
+      },
+      {
+        type: 'multiselect',
+        name: 'env',
+        label: 'Environment',
+        placeholder: 'Select environment',
+        options: [
+          { label: 'Production', value: 'prod' },
+          { label: 'Development', value: 'dev' },
+          { label: 'Staging', value: 'staging' },
+        ],
+        searchable: true,
+      },
     ],
-  },
-  {
-    type: 'multiselect',
-    name: 'env',
-    label: 'Environment',
-    placeholder: 'Select environment',
-    options: [
-      { label: 'Production', value: 'prod' },
-      { label: 'Development', value: 'dev' },
-      { label: 'Staging', value: 'staging' },
-    ],
-    searchable: true,
   },
   {
     type: 'slider',
@@ -65,19 +72,5 @@ export const demoFilters: FilterConfig<FilterValues>[] = [
     min: 0,
     max: 64,
     double: true,
-  },
-  {
-    type: 'group',
-    name: 'advanced',
-    label: 'Advanced',
-    expanded: true,
-    items: [
-      {
-        name: 'gpu',
-        type: 'select',
-        label: 'GPU',
-        options: [],
-      },
-    ],
   },
 ]
