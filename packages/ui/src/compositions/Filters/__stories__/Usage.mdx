@@ -202,6 +202,7 @@ type FilterConfigItemZones = FilterConfigItemBase & {
   displayImpact?: boolean
 }
 
+// string[] is the type of the `value` of the filter
 export type FilterZonesProps = FilterComponentProps<string[], FilterConfigItemZones> & {
   customProp?: string
 }
@@ -259,7 +260,42 @@ return (
 )
 ```
 
-For very specific use cases, custom filter components can use the filters context to execute various operations like resetting the filters or submitting.
+## Updating the filters
+
+You can update the filter values by consuming the Filters context. To do that you will need to "eject" the Filters component and use its sub-components instead:
+
+```tsx
+import { FiltersProvider, FiltersMainRow, FiltersDrawer } from '@ultraviolet/ui'
+
+function MyPage() {
+  return (
+    <FiltersProvider
+      defaultValues={defaultValues}
+      initialValues={initialValues}
+      onChange={onChange}
+      onSubmit={onSubmit}
+      onDrawerOpen={onDrawerOpen}
+    >
+      <FiltersMainRow config={config} components={components} labels={labels} layout={layout} />
+      <FiltersDrawer config={config} components={components} labels={labels} />
+      {/* ... your template */}
+    </FiltersProvider>
+  )
+}
+```
+
+Then, you can access the filters context in two ways:
+
+### useFiltersContext
+
+The `useFiltersContext` hook gives you direct access to the filters context in a component that is a child of the `FiltersProvider`.
+
+<br />
+
+Keep in mind:
+
+- you must call `filters.submit` if you want the updates to be applied immediately (in the main row).
+- since the state updates are asynchronous, you need to pass the new values to the submit function after an update
 
 ```ts
 import { useFiltersContext } from '@ultraviolet/ui'
@@ -282,6 +318,35 @@ function CustomFilterComponents({ config, value }) {
         </SwitchButton.Option>
       ))}
     </SwitchButton>
+  )
+}
+```
+
+### Function as Child Component
+
+When you just want to access the context in your template without creating a child component, you can use a function as child component of the context, and get the context value from the parameter.
+
+```tsx
+import { FiltersProvider, FiltersMainRow, FiltersDrawer } from '@ultraviolet/ui'
+
+function MyPage() {
+  return (
+    <FiltersProvider defaultValues={defaultValues} initialValues={initialValues} onSubmit={onSubmit}>
+      {({ filters }) => (
+        <>
+          <FiltersMainRow config={config} labels={labels} layout={layout} />
+
+          <Button
+            onClick={() => {
+              filters.reset()
+              filters.submit(filters.defaultValues)
+            }}
+          >
+            Reset from outside of the component
+          </Button>
+        </>
+      )}
+    </FiltersProvider>
   )
 }
 ```

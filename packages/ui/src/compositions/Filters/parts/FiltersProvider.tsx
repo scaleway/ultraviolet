@@ -24,7 +24,7 @@ export const FiltersProvider = <V extends AnyObject = AnyObject>({
   onChange,
   onSubmit,
   onDrawerOpen,
-}: FiltersProviderProps<V> & { children: ReactNode }) => {
+}: FiltersProviderProps<V> & { children: ReactNode | ((ctx: FiltersContextValue<V>) => ReactNode) }) => {
   const filters = useFilters({ initialValues, defaultValues: initialDefaultValues, onChange, onSubmit })
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
@@ -48,7 +48,11 @@ export const FiltersProvider = <V extends AnyObject = AnyObject>({
     [filters, isDrawerOpen, openDrawer, closeDrawer],
   )
 
-  return <FiltersContext.Provider value={value as FiltersContextValue}>{children}</FiltersContext.Provider>
+  return (
+    <FiltersContext.Provider value={value as FiltersContextValue}>
+      {typeof children === 'function' ? children(value) : children}
+    </FiltersContext.Provider>
+  )
 }
 
 export const useFiltersContext = <V extends AnyObject>(): FiltersContextValue<V> => {

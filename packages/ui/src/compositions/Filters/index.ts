@@ -1,5 +1,7 @@
 export { Filters, type FiltersProps } from './Filters'
-export { useFiltersContext } from './parts/FiltersProvider'
+export { useFiltersContext, FiltersProvider } from './parts/FiltersProvider'
+export { FiltersMainRow } from './parts/FiltersMainRow'
+export { FiltersDrawer } from './parts/FiltersDrawer'
 export type {
   FilterConfig,
   FilterConfigGroup,

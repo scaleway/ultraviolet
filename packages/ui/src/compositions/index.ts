@@ -13,7 +13,7 @@ export { RichTextInput } from './RichTextInput'
 export { OrderSummary } from './OrderSummary'
 export { Plans } from './Plans'
 export { SteppedListCard } from './SteppedListCard'
-export { Filters, useFiltersContext } from './Filters'
+export { Filters, useFiltersContext, FiltersProvider, FiltersMainRow, FiltersDrawer } from './Filters'
 export type {
   FiltersProps,
   FilterConfig,
