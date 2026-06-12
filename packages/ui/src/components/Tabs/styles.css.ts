@@ -63,19 +63,21 @@ const button = style({
   outline: 'none',
   padding: `${theme.space[1]} ${theme.space[2]}`,
   selectors: {
-    '&:focus-visible': {
-      outline: 'auto',
-    },
     '&:hover, &:active, &:focus': {
       outline: 'none',
       textDecoration: 'none',
     },
-    '&[aria-disabled="false"]:not(:disabled):focus, &[aria-disabled="false"]:not(:disabled):hover, &[aria-disabled="false"]:not(:disabled):active':
-      {
-        borderBottomColor: theme.colors.primary.border,
-        color: theme.colors.primary.text,
-        outline: 'none',
-      },
+    '&[aria-disabled="false"]:not(:disabled):hover': {
+      borderBottomColor: theme.colors.primary.border,
+      color: theme.colors.primary.text,
+      outline: 'none',
+    },
+    '&[aria-disabled="false"]:not(:disabled):focus-visible': {
+      boxShadow: `inset ${theme.shadows.focusPrimary}`,
+      borderBottomColor: theme.colors.primary.border,
+      color: theme.colors.primary.text,
+      outline: 'none',
+    },
     '&[aria-disabled="true"], &:disabled': {
       cursor: 'not-allowed',
       filter: 'grayscale(1) opacity(50%)',
