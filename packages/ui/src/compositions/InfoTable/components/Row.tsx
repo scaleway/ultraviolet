@@ -14,11 +14,11 @@ type RowProps = {
 }
 
 export const InfoTableRow = ({ children, templateColumns, style }: RowProps) => {
-  const { width } = useContext(InfoTableContext)
+  const { width, size } = useContext(InfoTableContext)
 
   return (
     <Row
-      className={infoTableStyle.row}
+      className={infoTableStyle.row({ size })}
       style={{
         ...assignInlineVars({
           [rowWidth]: width ?? '100%',
@@ -26,6 +26,7 @@ export const InfoTableRow = ({ children, templateColumns, style }: RowProps) => 
         ...style,
       }}
       templateColumns={templateColumns}
+      gap={2}
     >
       {children}
     </Row>

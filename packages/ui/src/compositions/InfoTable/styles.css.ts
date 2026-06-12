@@ -1,5 +1,7 @@
 import { theme } from '@ultraviolet/themes'
-import { createVar, globalStyle, style } from '@vanilla-extract/css'
+import { createVar, globalStyle, style, styleVariants } from '@vanilla-extract/css'
+import { recipe } from '@vanilla-extract/recipes'
+import { cardStyle } from '../../components/styles'
 
 export const rowWidth = createVar()
 
@@ -13,27 +15,27 @@ const dl = style({
   width: '100%',
 })
 
-const row = style({
-  borderBottom: `1px ${theme.colors.neutral.border} solid`,
-  paddingBlock: theme.space[2],
-  selectors: {
-    '&:first-of-type': {
-      paddingTop: 0,
+const row = recipe({
+  base: {
+    borderBottom: `1px ${theme.colors.neutral.border} solid`,
+    selectors: {
+      '&:first-of-type': {
+        paddingTop: 0,
+      },
+      '&:last-of-type': {
+        borderBottomColor: 'transparent',
+        paddingBottom: 0,
+      },
     },
-    '&:last-of-type': {
-      borderBottomColor: 'transparent',
-      paddingBottom: 0,
+    width: rowWidth,
+  },
+  variants: {
+    size: {
+      small: { paddingBlock: theme.space[1] },
+      large: { paddingBlock: theme.space[2] },
     },
   },
-  width: rowWidth,
-})
-
-const cell = style({
-  selectors: {
-    '&:not(:last-child)': {
-      paddingRight: theme.space[2],
-    },
-  },
+  defaultVariants: { size: 'large' },
 })
 
 const term = style({
@@ -72,12 +74,23 @@ globalStyle(`${desc} > *`, {
   alignItems: 'center',
 })
 
+const card = styleVariants({
+  small: {},
+  large: {},
+})
+
+// Global style to avoid importing infoTableStyle in packages/ui/src/components/Card/styles.css.ts
+// which could cause build issues (css order)
+globalStyle(`${card.small} > ${cardStyle.borderedBox}`, {
+  padding: theme.space[2],
+})
+
 export const infoTableStyle = {
   dl,
   row,
-  cell,
   term,
   desc,
   descFlex,
   cellWithCopyButton,
+  card,
 }
