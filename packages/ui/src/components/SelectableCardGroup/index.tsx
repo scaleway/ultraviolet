@@ -9,6 +9,7 @@ import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { SelectableCardGroupContext } from './Context'
+import { SelectableCardGroupLabel } from './Label'
 import { CardSelectableCard } from './SingleCard'
 import { selectableCardGroupStyle } from './styles.css'
 
@@ -87,8 +88,10 @@ const SelectableCardGroupComponent = ({
 
 type SelectableCardOptionGroupType = typeof SelectableCardGroupComponent & {
   Card: typeof CardSelectableCard
+  Label: typeof SelectableCardGroupLabel
 }
 
 export const SelectableCardGroup: SelectableCardOptionGroupType = Object.assign(SelectableCardGroupComponent, {
   Card: CardSelectableCard,
+  Label: SelectableCardGroupLabel,
 })

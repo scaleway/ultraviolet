@@ -74,8 +74,10 @@ const SelectableCardGroupFieldComponent = <
 
 type SelectableCardGroupFieldType = typeof SelectableCardGroupFieldComponent & {
   Card: typeof SelectableCardGroup.Card
+  Label: typeof SelectableCardGroup.Label
 }
 
 export const SelectableCardGroupField: SelectableCardGroupFieldType = Object.assign(SelectableCardGroupFieldComponent, {
   Card: SelectableCardGroup.Card,
+  Label: SelectableCardGroup.Label,
 })
