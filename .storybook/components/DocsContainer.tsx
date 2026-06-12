@@ -12,7 +12,7 @@ import { globalStyleStoryBook } from './globalStyle.css'
 
 type A11yLevel = 'partial' | 'compliant' | 'certified'
 
-type ExtraProps = {
+export type PageExtraProps = {
   /**
    * When a component is deprecated we can set this property to true
    */
@@ -37,6 +37,7 @@ type ExtraProps = {
    * This prop can be used to define the accessibility compliance level
    */
   a11y?: boolean | A11yLevel
+  a11yContent?: string
   audit?: {
     'keyboard-focus': boolean
     'contrast-visuals': boolean
@@ -44,6 +45,10 @@ type ExtraProps = {
     'pointer-touch': boolean
     'specific-patterns': boolean
   }
+  /**
+   * Auto-injected accessibility documentation from a11y.md file
+   */
+  a11yDocs?: string
 }
 
 type DocsContainerProps = BaseContainerProps & {
@@ -53,7 +58,7 @@ type DocsContainerProps = BaseContainerProps & {
   }
 } & { children: ReactNode }
 
-const DocsContainer = ({ children, context }: DocsContainerProps) => {
+export const DocsContainer = ({ children, context }: DocsContainerProps) => {
   const [isBeta, setIsBeta] = useState(false)
   const scope = context?.attachedCSFFiles?.values()?.next()?.value?.meta
   const parameters = scope?.parameters
@@ -89,15 +94,17 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
             </GlobalAlert>
           ) : null}
           <BaseContainer context={context}>
-            {isValidElement<ExtraProps>(children)
+            {isValidElement<PageExtraProps>(children)
               ? cloneElement(children, {
                   a11y: parameters?.a11y,
+                  a11yContent: parameters?.a11yContent,
                   audit: parameters?.audit,
                   deprecated: parameters?.deprecated,
                   deprecatedReason: parameters?.deprecatedReason,
                   experimental: isPlusLibrary ? true : parameters?.experimental,
                   hideArgsTable: parameters?.hideArgsTable,
                   migrationLink: parameters?.migrationLink,
+                  a11yDocs: parameters?.a11yDocs,
                 })
               : children}
           </BaseContainer>
@@ -106,5 +113,3 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
     </Unstyled>
   )
 }
-
-export default DocsContainer

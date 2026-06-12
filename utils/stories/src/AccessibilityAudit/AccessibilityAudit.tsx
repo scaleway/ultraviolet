@@ -65,8 +65,6 @@ const AccessibilityAudit = () => {
       .map(module => {
         const destructuredName: string[] = module.value.default.title.split('/') ?? []
 
-        console.debug('destructuredName', destructuredName)
-
         const componentCategory = destructuredName.slice(1, -1).join('/')
         const componentName = destructuredName.at(-1) ?? 'Unknown'
         const a11yStatus = findA11yStatus(module.value.default.parameters)
@@ -237,7 +235,7 @@ const AccessibilityAudit = () => {
             { label: 'Name' },
             { label: 'Category' },
             { label: 'Accessibility' },
-            { label: 'Audit A11y Progress' },
+            { label: 'Accessibility Progress' },
           ]}
           stripped
         >

@@ -14,7 +14,7 @@ import { Text } from '../Text'
 import type { AlertSentiment } from './type'
 import { alertStyle } from './styles.css'
 
-const sentimentIcons = {
+const sentimentIcons: Record<AlertSentiment, typeof AlertCircleIcon> = {
   danger: AlertCircleIcon,
   info: InformationIcon,
   neutral: LightBulbIcon,
