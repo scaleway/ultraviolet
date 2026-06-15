@@ -660,8 +660,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       '@scaleway/use-clipboard':
-        specifier: 1.0.1
-        version: 1.0.1(react@19.2.6)
+        specifier: 1.1.0
+        version: 1.1.0(react@19.2.6)
       '@uiw/codemirror-extensions-langs':
         specifier: 4.25.10
         version: 4.25.10(@codemirror/autocomplete@6.20.2)(@codemirror/language@6.12.3)(@codemirror/state@6.6.0)(@codemirror/view@6.43.0)(@lezer/common@1.5.2)(@lezer/highlight@1.2.3)(@lezer/javascript@1.5.4)(@lezer/lr@1.4.10)
@@ -3742,8 +3742,8 @@ packages:
   '@scaleway/tsconfig@1.1.6':
     resolution: {integrity: sha512-iU1AlvlPWL0R77lWhFD5gAPIeac6Pixb0sOYjZLovsqLp5jQgKM8BgcPtRHJ2xPHg4p7azuJQ8PQsMedB2YRwA==}
 
-  '@scaleway/use-clipboard@1.0.1':
-    resolution: {integrity: sha512-9EEjLeK59eeZBcQ5nLH6jUelDJ9q9VaDQL8bM1SGxtHfAwyWc1qYOlhq5p2OI9mRXd4oXkdXjGnGQ0UOjvFQhA==}
+  '@scaleway/use-clipboard@1.1.0':
+    resolution: {integrity: sha512-aXXU6cWfNdOTBS0+BMrzERYiZWwvmt2VcBNinvEwOFyPTuihxjbBjLqw9AzLRJQb4ScJDb93QpHaPHeoqvjGLA==}
     engines: {node: '>=24.x'}
     peerDependencies:
       react: 18.x || 19.x
@@ -10850,7 +10850,7 @@ snapshots:
 
   '@scaleway/tsconfig@1.1.6': {}
 
-  '@scaleway/use-clipboard@1.0.1(react@19.2.6)':
+  '@scaleway/use-clipboard@1.1.0(react@19.2.6)':
     dependencies:
       react: 19.2.6
 
