@@ -9,7 +9,7 @@ export type FilterValues = {
   gpu: string
 }
 
-export const defaultValues: FilterValues = {
+export const demoDefaultValues: FilterValues = {
   name: '',
   status: '',
   env: [],

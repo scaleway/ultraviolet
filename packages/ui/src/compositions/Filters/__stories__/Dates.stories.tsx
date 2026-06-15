@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
+import type { FiltersProps } from '../Filters'
 import { Filters } from '../Filters'
 import type { FilterConfig } from '../types'
 
@@ -52,23 +53,26 @@ const config: FilterConfig<FilterValues>[] = [
   },
 ]
 
-export const Dates: StoryFn = () => (
-  <Filters
-    config={config}
-    defaultValues={{
-      dates: {
-        preset: 'last_30days',
-        startAt: null,
-        endAt: null,
-      },
-      name: 'John Doe',
-    }}
-    labels={{
-      clear: 'Clear',
-      clearAll: 'Clear all',
-      seeAll: 'All filters',
-      drawerHeader: 'Filters',
-      submit: 'See results',
-    }}
-  />
-)
+export const Dates: StoryFn<FiltersProps<FilterValues>> = props => <Filters {...props} />
+
+Dates.args = {
+  config,
+  layout: {
+    templateColumns: 'repeat(auto-fit, minmax(min(30ch, 100%), 1fr))',
+  },
+  defaultValues: {
+    dates: {
+      preset: 'last_30days',
+      startAt: null,
+      endAt: null,
+    },
+    name: 'John Doe',
+  },
+  labels: {
+    clear: 'Clear',
+    clearAll: 'Clear all',
+    seeAll: 'All filters',
+    drawerHeader: 'Filters',
+    submit: 'See results',
+  },
+}

@@ -16,7 +16,7 @@ export default {
   },
 } as Meta
 
-export { Demo } from './Demo.stories'
+export { Playground } from './Playground.stories'
 export { Layout } from './Layout.stories'
 export { Dates } from './Dates.stories'
 export { Context } from './Context.stories'

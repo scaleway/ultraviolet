@@ -3,14 +3,14 @@ import { useState } from 'react'
 import { Button, Stack } from '../../../components'
 import { FiltersMainRow } from '../parts/FiltersMainRow'
 import { FiltersProvider } from '../parts/FiltersProvider'
-import { defaultValues, demoFilters } from './demo.config'
+import { demoDefaultValues, demoFilters } from './demo.config'
 
 export const Context: StoryFn = () => {
-  const [filterValues, setFilterValues] = useState(defaultValues)
+  const [filterValues, setFilterValues] = useState(demoDefaultValues)
 
   return (
     <Stack gap="4">
-      <FiltersProvider defaultValues={defaultValues} onSubmit={setFilterValues}>
+      <FiltersProvider defaultValues={demoDefaultValues} onSubmit={setFilterValues}>
         {({ filters }) => (
           <>
             <FiltersMainRow

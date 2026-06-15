@@ -1,6 +1,6 @@
 import { AdjustmentsHorizontalIcon } from '@ultraviolet/icons'
 import { useMemo } from 'react'
-import type { ComponentType } from 'react'
+import type { ComponentProps, ComponentType } from 'react'
 import { Button } from '../../../components/Button'
 import { Row } from '../../../components/Row'
 import { Stack } from '../../../components/Stack'
@@ -20,7 +20,7 @@ export type MainRowProps<V extends AnyObject> = {
   layout?: {
     mainFilters?: (keyof V)[]
     size?: 'large' | 'medium'
-    templateColumns?: string
+    templateColumns?: ComponentProps<typeof Row>['templateColumns']
   }
   className?: string
 }
