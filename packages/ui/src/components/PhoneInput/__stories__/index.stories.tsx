@@ -3,7 +3,7 @@ import { PhoneInput } from '..'
 
 export default {
   component: PhoneInput,
-  title: 'Components/Data Entry/PhoneInput',
+  title: 'UI/Data Entry/PhoneInput',
 } as Meta<typeof PhoneInput>
 
 export { Playground } from './Playground.stories'
