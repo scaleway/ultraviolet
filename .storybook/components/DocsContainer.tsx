@@ -10,8 +10,6 @@ import '../../packages/themes/dist/themes.css'
 import type { ReactNode } from 'react'
 import { globalStyleStoryBook } from './globalStyle.css'
 
-type A11yLevel = 'partial' | 'compliant' | 'certified'
-
 type ExtraProps = {
   /**
    * When a component is deprecated we can set this property to true
@@ -33,16 +31,11 @@ type ExtraProps = {
    * This prop can be used to define if a component is being tested and not prod ready
    */
   experimental?: boolean
-  /**
-   * This prop can be used to define the accessibility compliance level
-   */
-  a11y?: boolean | A11yLevel
-  audit?: {
-    'keyboard-focus': boolean
-    'contrast-visuals': boolean
-    'semantics-screen-reader': boolean
-    'pointer-touch': boolean
-    'specific-patterns': boolean
+  a11yStatus?: {
+    perceivable: boolean
+    operable: boolean
+    understandable: boolean
+    robust: boolean
   }
 }
 
@@ -91,8 +84,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
           <BaseContainer context={context}>
             {isValidElement<ExtraProps>(children)
               ? cloneElement(children, {
-                  a11y: parameters?.a11y,
-                  audit: parameters?.audit,
+                  a11yStatus: parameters?.a11yStatus,
                   deprecated: parameters?.deprecated,
                   deprecatedReason: parameters?.deprecatedReason,
                   experimental: isPlusLibrary ? true : parameters?.experimental,

@@ -5,16 +5,11 @@ export default {
   component: Button,
   title: 'UI/Action/Button',
   parameters: {
-    a11y: {
-      statut: 'partial',
-      test: 'error',
-    },
-    audit: {
-      'keyboard-focus': false,
-      'contrast-visuals': false,
-      'semantics-screen-reader': false,
-      'pointer-touch': false,
-      'specific-patterns': false,
+    a11yStatus: {
+      perceivable: false,
+      operable: false,
+      understandable: false,
+      robust: false,
     },
   },
 } as Meta<typeof Button>

@@ -66,13 +66,6 @@ export default {
   ],
   parameters: {
     a11y: false,
-    audit: {
-      'keyboard-focus': false,
-      'contrast-visuals': false,
-      'semantics-screen-reader': false,
-      'pointer-touch': false,
-      'specific-patterns': false,
-    },
     docs: {
       description: {
         component: 'A selectable card field',

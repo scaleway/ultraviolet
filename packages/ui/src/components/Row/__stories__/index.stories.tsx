@@ -5,13 +5,11 @@ export default {
   component: Row,
   title: 'UI/Layout/Row',
   parameters: {
-    a11y: 'compliant',
-    audit: {
-      'keyboard-focus': true,
-      'contrast-visuals': true,
-      'semantics-screen-reader': true,
-      'pointer-touch': true,
-      'specific-patterns': true,
+    a11yStatus: {
+      perceivable: true,
+      operable: true,
+      understandable: true,
+      robust: true,
     },
   },
 } as Meta<typeof Row>

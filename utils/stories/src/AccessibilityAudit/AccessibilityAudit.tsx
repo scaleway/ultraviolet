@@ -1,13 +1,25 @@
 import { linkTo } from '@storybook/addon-links'
-import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
+import { CheckCircleIcon } from '@ultraviolet/icons'
 import { CloseCircleOutlineIcon } from '@ultraviolet/icons/CloseCircleOutlineIcon'
-import { Button, Stack, Table, Text, Tooltip, ProgressBar } from '@ultraviolet/ui'
+import { Button, Stack, Table, Text, Tooltip, ProgressBar, Link } from '@ultraviolet/ui'
 import { useState, useEffect } from 'react'
 import type { ReactNode } from 'react'
 import { findComponentState } from '../ComponentState/constants'
 import { storiesCompositionsModules, storiesComponentModules } from '../constants'
-import { AUDIT_CATEGORIES, A11Y_LEVELS, findA11yStatus, getComponentAuditCategories } from './constants'
-import type { A11yLevel, ComponentAuditStatus, AuditCategories, ComponentStoryParameters } from './constants'
+import {
+  A11Y_LEVELS,
+  findA11yLevel,
+  getComponentA11yStatus,
+  getComponentAuditCategories,
+  WCAG_PRINCIPLES,
+} from './constants'
+import type {
+  A11yLevel,
+  ComponentA11yStatus,
+  AuditCategories,
+  ComponentStoryParameters,
+  WcagPrinciple,
+} from './constants'
 
 type ComponentInfo = {
   title: string
@@ -19,11 +31,9 @@ type ComponentInfo = {
     description: ReactNode
   }
   a11yLevel: A11yLevel | null
-  audit: ComponentAuditStatus
+  a11yStatus: ComponentA11yStatus
   auditCategories: AuditCategories
 }
-
-const getComponentAudit = (parameters: ComponentStoryParameters): ComponentAuditStatus => parameters?.audit ?? {}
 
 const AccessibilityAudit = () => {
   const [modules, setModules] = useState<
@@ -63,41 +73,36 @@ const AccessibilityAudit = () => {
         }> => module.status === 'fulfilled',
       )
       .map(module => {
+        const parameters = module.value.default.parameters
         const destructuredName: string[] = module.value.default.title.split('/') ?? []
-
-        console.debug('destructuredName', destructuredName)
 
         const componentCategory = destructuredName.slice(1, -1).join('/')
         const componentName = destructuredName.at(-1) ?? 'Unknown'
-        const a11yStatus = findA11yStatus(module.value.default.parameters)
-        const auditCategories = getComponentAuditCategories(module.value.default.parameters)
-        const audit = getComponentAudit(module.value.default.parameters)
 
         return {
           title: module.value.default.title,
           name: componentName,
           category: componentCategory || 'Others',
-          state: findComponentState(module.value.default.parameters),
-          a11yLevel: a11yStatus?.level ?? null,
-          audit,
-          auditCategories,
+          state: findComponentState(parameters),
+          a11yLevel: findA11yLevel(parameters),
+          a11yStatus: getComponentA11yStatus(parameters),
+          auditCategories: getComponentAuditCategories(parameters),
         } satisfies ComponentInfo
       }) ?? []
 
-  const getCategoryCompletion = (categoryId: string) => {
+  const getPrincipleCompletion = (principle: WcagPrinciple) => {
     const total = componentsInfo.length
-    const completed = componentsInfo.filter(c => c.audit[categoryId]).length
+    const completed = componentsInfo.filter(c => c.a11yStatus[principle]).length
     return total > 0 ? Math.round((completed / total) * 100) : 0
   }
 
-  const getComponentsForCategory = (categoryId: string) => componentsInfo.filter(c => c.audit[categoryId])
+  const getComponentsForCategory = (categoryId: WcagPrinciple) => componentsInfo.filter(c => c.a11yStatus[categoryId])
 
   return (
     <Stack gap={5}>
       <Stack gap={2}>
         <Text as="p" variant="body">
-          Comprehensive accessibility audit checklist and tracking for all Ultraviolet components. Use this page to
-          track progress and understand accessibility requirements.
+          Accessibility audit tracking for all Ultraviolet components.
         </Text>
       </Stack>
 
@@ -107,10 +112,10 @@ const AccessibilityAudit = () => {
         </Text>
         <Stack gap={2} direction="row">
           {Object.entries(A11Y_LEVELS).map(([key, { icon, label, description }]) => (
-            <Stack key={key} gap={2} justifyContent="left">
-              <Stack direction="row" gap={2} alignItems="center">
+            <Stack key={key} gap={1} justifyContent="left">
+              <Stack direction="row" gap={1} alignItems="center">
                 {icon}
-                <Text as="h3" variant="headingSmall">
+                <Text as="h3" variant="headingSmall" style={{ margin: 0 }}>
                   {label}
                 </Text>
               </Stack>
@@ -120,28 +125,35 @@ const AccessibilityAudit = () => {
         </Stack>
       </Stack>
 
-      <Stack gap={3}>
+      <Stack gap={2}>
         <Text as="h2" variant="heading">
-          Audit Categories Overview
+          WCAG Principles
+        </Text>
+        <Text as="p" variant="body">
+          Based on the <Link href="https://www.w3.org/WAI/WCAG22/Understanding/">WCAG 2.2 documentation</Link>.
+        </Text>
+        <Text as="p" variant="body">
+          A component validates a principle if it has been audited and we found no violation of all rules within this
+          principle.
         </Text>
         <Table
           columns={[
-            { label: 'Category' },
+            { label: 'Principle' },
             { label: 'Progress', minWidth: '50%', width: '300px' },
             { label: 'Components' },
           ]}
           stripped
         >
           <Table.Body>
-            {AUDIT_CATEGORIES.map(category => {
-              const percentage = getCategoryCompletion(category.id)
-              const completedCount = getComponentsForCategory(category.id).length
+            {WCAG_PRINCIPLES.map(principle => {
+              const percentage = getPrincipleCompletion(principle)
+              const completedCount = getComponentsForCategory(principle).length
 
               return (
-                <Table.Row id={category.id} key={category.id}>
+                <Table.Row id={principle} key={principle}>
                   <Table.Cell>
-                    <Text as="span" variant="bodyStrong">
-                      {category.title}
+                    <Text as="span" variant="body">
+                      {principle[0].toUpperCase() + principle.slice(1)}
                     </Text>
                   </Table.Cell>
                   <Table.Cell align="left">
@@ -165,66 +177,6 @@ const AccessibilityAudit = () => {
         </Table>
       </Stack>
 
-      {/* Detailed Audit Checklist */}
-      <Stack gap={4}>
-        {AUDIT_CATEGORIES.map(category => (
-          <Stack gap={2} key={category.id}>
-            <Text as="h2" variant="heading">
-              {category.title}&nbsp;
-              <Text as="span" variant="bodySmall">
-                {getCategoryCompletion(category.id)}% complete
-              </Text>
-            </Text>
-
-            {category.description && (
-              <Text as="p" variant="body">
-                {category.description}
-              </Text>
-            )}
-
-            <Stack gap={3}>
-              {category.criteria.map(criterion => (
-                <Stack gap={2} key={criterion.name}>
-                  <Text as="p" variant="headingSmall">
-                    {criterion.name}
-                  </Text>
-                  <Text as="span" variant="bodySmall">
-                    {criterion.wcagLevel}
-                  </Text>
-                  <Text as="p" variant="body">
-                    {criterion.description}
-                  </Text>
-                  {criterion.aaaNote && (
-                    <Text as="p" variant="bodySmall">
-                      <Text as="span" variant="bodySmallStronger">
-                        Note AAA:{' '}
-                      </Text>
-                      {criterion.aaaNote}
-                    </Text>
-                  )}
-                  {criterion.examples && (
-                    <Stack gap={1}>
-                      <Text as="span" variant="bodySmallStronger">
-                        Examples:
-                      </Text>
-                      <ul>
-                        {criterion.examples.map(example => (
-                          <li key={example}>
-                            <Text as="span" variant="bodySmall">
-                              {example}
-                            </Text>
-                          </li>
-                        ))}
-                      </ul>
-                    </Stack>
-                  )}
-                </Stack>
-              ))}
-            </Stack>
-          </Stack>
-        ))}
-      </Stack>
-
       <Stack gap={3}>
         <Text as="h2" variant="heading">
           All Components
@@ -236,8 +188,8 @@ const AccessibilityAudit = () => {
           columns={[
             { label: 'Name' },
             { label: 'Category' },
-            { label: 'Accessibility' },
-            { label: 'Audit A11y Progress' },
+            { label: 'Accessibility Level' },
+            { label: 'Accessibility Progress' },
           ]}
           stripped
         >
@@ -256,7 +208,7 @@ const AccessibilityAudit = () => {
                 </Table.Cell>
                 <Table.Cell>
                   {component.a11yLevel ? (
-                    <Stack direction="row" gap={1} alignItems="center">
+                    <Stack direction="row" gap={0.5} alignItems="center">
                       {A11Y_LEVELS[component.a11yLevel].icon}
                       <Text as="span" variant="body">
                         {A11Y_LEVELS[component.a11yLevel].label}
@@ -274,7 +226,7 @@ const AccessibilityAudit = () => {
                       <Text as="span" key={category.id} variant="bodySmall">
                         <Tooltip text={category.id}>
                           {category.completed ? (
-                            <CheckCircleOutlineIcon size="medium" sentiment="success" />
+                            <CheckCircleIcon size="medium" sentiment="success" />
                           ) : (
                             <CloseCircleOutlineIcon size="medium" sentiment="danger" />
                           )}
