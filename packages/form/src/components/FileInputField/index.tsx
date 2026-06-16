@@ -105,8 +105,7 @@ const FileInputFieldBase = <
 /**
  * List is a component that displays a list of items based on the columns you provide and the data you pass.
  */
-type FileInputFieldType = {
-  (props: FileInputFieldProps<FieldValues, FieldPath<FieldValues>>): ReactNode
+type FileInputFieldType = typeof FileInputFieldBase & {
   List: typeof FileInput.List
   Button: typeof FileInput.Button
 }
