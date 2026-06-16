@@ -3,6 +3,7 @@ import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import {
   CheckboxField,
   DateInputField,
+  FileInputField,
   Form,
   NumberInputField,
   RadioField,
@@ -36,6 +37,7 @@ type FormValues = {
   age: number
   select: (typeof data)[number]['value']
   taginput: string[]
+  file: File[]
 }
 
 export const Playground: StoryFn<typeof Form> = () => {
@@ -47,6 +49,7 @@ export const Playground: StoryFn<typeof Form> = () => {
       receiveEmailUpdates: true,
       selectableCard: '1',
       tags: ['cloud', 'of', 'choice'],
+      file: [],
     },
     mode: 'onChange',
   })
@@ -126,6 +129,15 @@ export const Playground: StoryFn<typeof Form> = () => {
 
         <TagInputField control={methods.control} name="tags" placeholder="TagInput..." />
 
+        <FileInputField
+          control={methods.control}
+          name="file"
+          label="File"
+          title="Add a file"
+          size="small"
+          allowDirectories
+          bottom={<FileInputField.List />}
+        />
         <Stack direction="row" gap={2} justifyContent="center">
           <CheckboxField control={methods.control} name="receiveEmailUpdates">
             I&apos;d like to receive news updates
