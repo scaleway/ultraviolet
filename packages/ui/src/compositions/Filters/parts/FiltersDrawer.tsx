@@ -10,7 +10,7 @@ import { ExpandableFilterGroup } from './ExpandableFilterGroup'
 import { useFiltersContext } from './FiltersProvider'
 import { isFilterConfigGroup } from './helpers'
 
-export type DrawerProps<V extends AnyObject> = {
+export type DrawerProps<V extends AnyObject = AnyObject> = {
   config: FilterConfig<V>[]
   components?: Record<string, ComponentType<FilterComponentProps>>
   labels: {
@@ -55,9 +55,9 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
     >
       <form
         id={formId}
-        onSubmit={(e: SubmitEvent) => {
-          e.preventDefault()
-          e.stopPropagation()
+        onSubmit={(event: SubmitEvent) => {
+          event.preventDefault()
+          event.stopPropagation()
           filters.submit()
           closeDrawer()
         }}

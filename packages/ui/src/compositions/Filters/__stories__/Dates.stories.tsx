@@ -58,7 +58,7 @@ export const Dates: StoryFn<FiltersProps<FilterValues>> = props => <Filters {...
 Dates.args = {
   config,
   layout: {
-    templateColumns: 'repeat(auto-fit, minmax(min(30ch, 100%), 1fr))',
+    templateColumns: 'repeat(auto-fit, minmax(min(32ch, 100%), 1fr))',
   },
   defaultValues: {
     dates: {
@@ -69,10 +69,6 @@ Dates.args = {
     name: 'John Doe',
   },
   labels: {
-    clear: 'Clear',
     clearAll: 'Clear all',
-    seeAll: 'All filters',
-    drawerHeader: 'Filters',
-    submit: 'See results',
   },
 }

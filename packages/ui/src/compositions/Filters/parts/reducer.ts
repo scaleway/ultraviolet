@@ -16,7 +16,7 @@ export type FiltersAction<V extends AnyObject> =
   | { type: 'SUBMIT' }
   | { type: 'DISCARD' }
 
-function getNewState<V extends AnyObject>(newValues: V, state: FiltersState<V>) {
+const getNewState = <V extends AnyObject>(newValues: V, state: FiltersState<V>) => {
   if (isSameValues(newValues, state.values)) {
     return state
   }

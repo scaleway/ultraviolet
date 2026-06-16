@@ -6,7 +6,12 @@ import { FiltersProvider } from './parts/FiltersProvider'
 import type { FiltersProviderProps } from './parts/FiltersProvider'
 import type { AnyObject } from './types'
 
-export type FiltersProps<V extends AnyObject = AnyObject> = MainRowProps<V> & DrawerProps<V> & FiltersProviderProps<V>
+export type FiltersProps<V extends AnyObject = AnyObject> = MainRowProps<V> & {
+  labels: Partial<DrawerProps<V>['labels']>
+} & FiltersProviderProps<V>
+
+const hasFullDrawerLabels = (labels: Partial<DrawerProps['labels']>): labels is Required<DrawerProps['labels']> =>
+  !!labels.clear && !!labels.submit && !!labels.drawerHeader
 
 export const Filters = <V extends AnyObject>({
   config,
@@ -28,6 +33,6 @@ export const Filters = <V extends AnyObject>({
     onDrawerOpen={onDrawerOpen}
   >
     <FiltersMainRow config={config} components={components} labels={labels} layout={layout} className={className} />
-    <FiltersDrawer config={config} components={components} labels={labels} />
+    {hasFullDrawerLabels(labels) ? <FiltersDrawer config={config} components={components} labels={labels} /> : null}
   </FiltersProvider>
 )

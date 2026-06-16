@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { Button, Stack } from '../../../components'
+import { Button, Snippet, Stack } from '../../../components'
 import { FiltersMainRow } from '../parts/FiltersMainRow'
 import { FiltersProvider } from '../parts/FiltersProvider'
 import { demoDefaultValues, demoFilters } from './demo.config'
@@ -36,9 +36,7 @@ export const Context: StoryFn = () => {
         <div>
           <strong>Submitted values</strong>
           <p>Updated when changing a filter in the main row or when submitting in the Drawer.</p>
-          <small>
-            <pre>{JSON.stringify(filterValues, null, 2)}</pre>
-          </small>
+          <Snippet initiallyExpanded>{JSON.stringify(filterValues, null, 2)}</Snippet>
         </div>
       </Stack>
     </Stack>

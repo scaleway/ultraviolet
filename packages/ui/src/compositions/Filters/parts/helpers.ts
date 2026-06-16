@@ -1,10 +1,9 @@
 import type { AnyObject, FilterConfig, FilterConfigGroup } from '../types'
 
-export function isFilterConfigGroup<V extends AnyObject>(item: FilterConfig<V>): item is FilterConfigGroup<V> {
-  return item.type === 'group'
-}
+export const isFilterConfigGroup = <V extends AnyObject>(item: FilterConfig<V>): item is FilterConfigGroup<V> =>
+  item.type === 'group'
 
-export function getKeysWithDifferentValues<Values extends AnyObject>(a?: Values, b?: Values): (keyof Values)[] {
+export const getKeysWithDifferentValues = <Values extends AnyObject>(a?: Values, b?: Values): (keyof Values)[] => {
   if (a === b) {
     return []
   }
@@ -39,16 +38,13 @@ export function getKeysWithDifferentValues<Values extends AnyObject>(a?: Values,
       if (valueA.length !== valueB.length) {
         return true
       }
-      // Tuples for Slider, in case of slect input it can cause a rerender if they are not sorted the same way but I prefer to keep 1 useless rerender
-      // Instead of making this functions more complicated
+      // Tuples for Slider, in case of a select input it can cause a rerender if they are not sorted the same way but we can accept 1 useless rerender
+      // Instead of making this function more complicated
       if (valueA.length === 2 && valueB.length === 2 && (valueA[0] !== valueB[0] || valueA[1] !== valueB[1])) {
         return true
       }
       // Multiple select input check all match
-      if (!valueA.every(aValueInValueA => valueB.includes(aValueInValueA))) {
-        return true
-      }
-      return false
+      return !valueA.every(aValueInValueA => valueB.includes(aValueInValueA))
     }
 
     return true
@@ -59,7 +55,7 @@ export function getKeysWithDifferentValues<Values extends AnyObject>(a?: Values,
 
 // This function is a very lightweight deepCompare according to the possible FormValues type aka values can be string | number | [string, string] | [number, number] | string[]
 // We dont use JSON.stringify because its extremly slow
-export function isSameValues<Values extends AnyObject>(a?: Values, b?: Values) {
+export const isSameValues = <Values extends AnyObject>(a?: Values, b?: Values) => {
   if (a === b) {
     return true
   }

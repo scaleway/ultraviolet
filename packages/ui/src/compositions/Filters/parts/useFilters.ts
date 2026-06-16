@@ -55,27 +55,27 @@ export const useFilters = <V extends AnyObject>({
     [state.values, state.defaultValues],
   )
 
-  function setValue<K extends keyof V>(name: K, value: V[K]) {
+  const setValue = <K extends keyof V>(name: K, value: V[K]) => {
     dispatch({ type: 'SET_VALUE', payload: { name, value } })
   }
 
-  function setValues(values: Partial<V>) {
+  const setValues = (values: Partial<V>) => {
     dispatch({ type: 'SET_VALUES', payload: { values } })
   }
 
-  function resetField<K extends keyof V>(name: K, options?: { defaultValue?: V[K] }) {
+  const resetField = <K extends keyof V>(name: K, options?: { defaultValue?: V[K] }) => {
     dispatch({ type: 'RESET_FIELD', payload: { name, defaultValue: options?.defaultValue } })
   }
 
-  function resetFields(names: (keyof V)[]) {
+  const resetFields = (names: (keyof V)[]) => {
     dispatch({ type: 'RESET_FIELDS', payload: { names } })
   }
 
-  function reset(values?: Partial<V>) {
+  const reset = (values?: Partial<V>) => {
     dispatch({ type: 'RESET', payload: { values } })
   }
 
-  function submit(overrideValues?: Partial<V>) {
+  const submit = (overrideValues?: Partial<V>) => {
     dispatch({ type: 'SUBMIT' })
 
     const newValues = { ...state.values, ...overrideValues }
@@ -84,7 +84,7 @@ export const useFilters = <V extends AnyObject>({
     }
   }
 
-  function discard() {
+  const discard = () => {
     dispatch({ type: 'DISCARD' })
   }
 

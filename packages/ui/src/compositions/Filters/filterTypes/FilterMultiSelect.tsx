@@ -3,8 +3,7 @@ import { CheckboxGroup } from '../../../components/CheckboxGroup'
 import { Label } from '../../../components/Label'
 import { SelectInput } from '../../../components/SelectInput'
 import type { FilterConfigItemMultiSelect, AnyObject, FilterComponentProps } from '../types'
-
-const DISPLAY_THRESHOLD = 10
+import { SELECT_DISPLAY_THRESHOLD } from './FilterSelect'
 
 type FilterMultiSelectProps<Values extends AnyObject> = FilterComponentProps<
   string[],
@@ -27,7 +26,7 @@ export const FilterMultiSelect = <V extends AnyObject>({
     [values, configOptions],
   )
 
-  if (directionContext === 'column' && Array.isArray(options) && options.length < DISPLAY_THRESHOLD) {
+  if (directionContext === 'column' && Array.isArray(options) && options.length < SELECT_DISPLAY_THRESHOLD) {
     return (
       <CheckboxGroup
         description={hideLabel ? undefined : <Label>{config.label}</Label>}

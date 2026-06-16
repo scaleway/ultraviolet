@@ -35,9 +35,8 @@ export const AbstractFilter = ({
   const shouldHideLabel = directionContext === 'column' && hideLabel
   const availableComponents = { ...defaultFieldComponents, ...customComponents }
 
-  function isAvailableType(configItem: unknown): configItem is { type: keyof typeof availableComponents } {
-    return (configItem as FilterConfig).type in availableComponents
-  }
+  const isAvailableType = (configItem: unknown): configItem is { type: keyof typeof availableComponents } =>
+    (configItem as FilterConfig).type in availableComponents
 
   if (isAvailableType(config)) {
     const Component = availableComponents[config.type] as ComponentType<FilterComponentProps>

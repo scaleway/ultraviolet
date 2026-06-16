@@ -1,20 +1,21 @@
 import { AdjustmentsHorizontalIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
 import type { ComponentProps, ComponentType } from 'react'
 import { Button } from '../../../components/Button'
 import { Row } from '../../../components/Row'
 import { Stack } from '../../../components/Stack'
-import { useTheme } from '../../../theme/ThemeProvider'
 import type { AnyObject, FilterComponentProps, FilterConfig } from '../types'
 import { AbstractFilter } from './AbstractFilter'
 import { useFiltersContext } from './FiltersProvider'
 import { isFilterConfigGroup } from './helpers'
+import { filterStyles } from './styles.css'
 
-export type MainRowProps<V extends AnyObject> = {
+export type MainRowProps<V extends AnyObject = AnyObject> = {
   config: FilterConfig<V>[]
   components?: Record<string, ComponentType<FilterComponentProps>>
   labels: {
-    seeAll: string
+    seeAll?: string
     clearAll: string
   }
   layout?: {
@@ -33,7 +34,6 @@ export const FiltersMainRow = <V extends AnyObject>({
   className,
 }: MainRowProps<V>) => {
   const { filters, openDrawer } = useFiltersContext()
-  const theme = useTheme()
 
   const configItems = useMemo(() => config.flatMap(item => (isFilterConfigGroup(item) ? item.items : [item])), [config])
   const mainFiltersNames = useMemo(
@@ -61,12 +61,7 @@ export const FiltersMainRow = <V extends AnyObject>({
 
   return (
     <Row
-      className={className}
-      style={{
-        background: theme.colors.neutral.backgroundWeak,
-        borderRadius: theme.radii.default,
-      }}
-      padding={theme.space[2]}
+      className={cn(filterStyles.mainRow, className)}
       alignItems="end"
       gap={2}
       templateColumns={layout?.templateColumns ?? 'repeat(auto-fit, minmax(200px, 1fr))'}
