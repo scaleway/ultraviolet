@@ -15,6 +15,12 @@ import { fileIsAccepted, readTransferredFiles } from './helpers'
 import type { ErrorType, FileInputProps } from './types'
 import { fileInputStyle } from './styles.css'
 
+const defaultOnDropError = (e: unknown) => {
+  if (e instanceof Error) {
+    throw e
+  }
+}
+
 /**
  * FileInput allow user to drag & drop and upload one or multiple files.
  */
@@ -30,6 +36,7 @@ const FileInputBase = ({
   labelDescription,
   disabled,
   accept,
+  id,
   'aria-label': ariaLabel,
   defaultFiles,
   onChangeFiles,
@@ -46,11 +53,7 @@ const FileInputBase = ({
   onKeyUp,
   disabledDragndrop = false,
   validator,
-  onDropError = (e: unknown) => {
-    if (e instanceof Error) {
-      throw e
-    }
-  },
+  onDropError = defaultOnDropError,
   'data-testid': dataTestid,
   'aria-describedby': ariaDescribedBy,
   allowDirectories,
@@ -58,7 +61,8 @@ const FileInputBase = ({
   const [dragState, setDragState] = useState<'over' | 'default' | 'page'>('default')
   const [files, setFiles] = useState(defaultFiles ?? [])
 
-  const inputId = useId()
+  const generatedId = useId()
+  const inputId = id ?? generatedId
   const helperId = useId()
   const inputRef = useRef<HTMLInputElement>(null)
 

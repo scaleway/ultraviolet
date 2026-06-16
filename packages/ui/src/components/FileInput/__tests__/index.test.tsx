@@ -400,6 +400,23 @@ describe('fileInput', () => {
     expect(onChangeFiles).toHaveBeenCalledWith(expect.arrayContaining([expect.objectContaining({ name: 'dnd.png' })]))
   })
 
+  it('should use provided id prop', () => {
+    const customId = 'custom-file-input-id'
+    const label = 'Select files'
+    renderWithTheme(<FileInput id={customId} label={label} title="title" />)
+
+    const inputElement = screen.getByLabelText(label)
+    expect(inputElement).toHaveAttribute('id', customId)
+  })
+
+  it('should use generated id when no id prop provided', () => {
+    const label = 'Select files'
+    renderWithTheme(<FileInput label={label} title="title" />)
+
+    const inputElement = screen.getByLabelText(label)
+    expect(inputElement).toHaveAttribute('id')
+  })
+
   it('should add files from dropped directory with allowDirectories', async () => {
     class MockDataTransfer {
       readonly #files: File[] = []

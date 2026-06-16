@@ -79,7 +79,7 @@ exports[`fileInputField > should render correctly as an overlay 1`] = `
             aria-label="Test"
             class="uv_12cubgs9"
             id="_r_8_"
-            name="Test"
+            name="test"
             type="file"
           />
           <div
@@ -142,6 +142,66 @@ exports[`fileInputField > should render correctly disabled 1`] = `
             </svg>
             <div
               class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9owb uv_m4c9ow16 uv_m4c9ow22"
+              style="--uv_qabug40: left;"
+            />
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`fileInputField > should use provided id prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+      style="display: contents;"
+    >
+      <div
+        class="uv_toi52u0 uv_toi52u2d uv_toi52u3p"
+        style="--uv_4k0ekn0: 100%;"
+      >
+        <div
+          class="uv_toi52u0 uv_toi52u2d uv_toi52u5j"
+        >
+          <label
+            class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owl uv_m4c9ow1a uv_m4c9ow32"
+            for="custom-file-input-field-id"
+          >
+            Test files
+          </label>
+          <input
+            class="uv_12cubgs9"
+            id="custom-file-input-field-id"
+            name="Test files"
+            type="file"
+          />
+          <div
+            class="uv_12cubgs0 uv_12cubgs2 uv_12cubgs4"
+            data-testid="drag-container"
+          >
+            <svg
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkz7 uv_icons_1sbwqkzh uv_icons_1sbwqkz1g"
+              height="20"
+              viewBox="0 0 20 20"
+              width="20"
+            >
+              <title>
+                UploadIcon
+              </title>
+              <path
+                d="M9.25 13.25a.75.75 0 0 0 1.5 0V4.636l2.955 3.129a.75.75 0 0 0 1.09-1.03l-4.25-4.5a.75.75 0 0 0-1.09 0l-4.25 4.5a.75.75 0 1 0 1.09 1.03L9.25 4.636z"
+              />
+              <path
+                d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25z"
+              />
+            </svg>
+            <div
+              class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9ow16 uv_m4c9ow1a uv_m4c9ow32"
               style="--uv_qabug40: left;"
             />
           </div>

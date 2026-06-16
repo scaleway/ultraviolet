@@ -59,6 +59,7 @@ export type FileInputProps = {
   multiple?: boolean
   'data-testid'?: string
   error?: boolean | string
+  id?: string
   disabledDragndrop?: boolean
   onChange?: (files: FileList) => void
   /**
