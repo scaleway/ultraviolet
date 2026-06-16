@@ -47,4 +47,30 @@ describe('fileInputField', () => {
       expect(onChange).toHaveBeenCalledOnce()
     })
   })
+
+  it('should use provided id prop', () => {
+    const customId = 'custom-file-input-field-id'
+    const label = 'Test files'
+    const { asFragment } = renderWithForm(<FileInputField id={customId} label={label} name="test" />)
+
+    const input = screen.getByLabelText(label)
+    expect(input).toHaveAttribute('id', customId)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should trigger onBlur when input loses focus', () => {
+    const onBlur = vi.fn()
+    const label = 'Test files'
+
+    renderWithForm(
+      <FileInputField label={label} name="test" onBlur={onBlur}>
+        <FileInputField.Button>Add here</FileInputField.Button>
+      </FileInputField>,
+    )
+
+    const input = screen.getByLabelText(label)
+    input.focus()
+    input.blur()
+    expect(onBlur).toHaveBeenCalled()
+  })
 })

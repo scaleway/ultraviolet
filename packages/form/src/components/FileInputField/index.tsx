@@ -31,14 +31,16 @@ const FileInputFieldBase = <
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   onChange,
+  onBlur,
   label,
   required = false,
   name,
   shouldUnregister,
   control,
   variant,
-  size,
   title,
+  size,
+  id,
   bottom,
   children,
   errorLabel,
@@ -69,9 +71,15 @@ const FileInputFieldBase = <
         {...props}
         error={getError({ label: errorLabel ?? computedLabel }, error)}
         aria-label={computedLabel}
+        name={field.name}
+        id={id}
         onChangeFiles={files => {
           field.onChange(files)
           onChange?.(files as PathValue<TFieldValues, Path<TFieldValues>>)
+        }}
+        onBlur={event => {
+          field.onBlur()
+          onBlur?.(event)
         }}
         required={required}
         title={title as ReactNode}
@@ -87,6 +95,11 @@ const FileInputFieldBase = <
       {...props}
       bottom={bottom}
       error={getError({ label: errorLabel ?? computedLabel }, error)}
+      id={id}
+      onBlur={event => {
+        field.onBlur()
+        onBlur?.(event)
+      }}
       onChangeFiles={files => {
         field.onChange(files)
         onChange?.(files as PathValue<TFieldValues, Path<TFieldValues>>)
