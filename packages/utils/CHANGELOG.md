@@ -1,5 +1,11 @@
 # @ultraviolet/utils
 
+## 1.0.13
+
+### Patch Changes
+
+- [#6573](https://github.com/scaleway/ultraviolet/pull/6573) [`980b1d8`](https://github.com/scaleway/ultraviolet/commit/980b1d8aa8f35ee2d65babe2695384c9c6b606a6) Thanks [@lisalupi](https://github.com/lisalupi)! - New hook `useDebouncedCallback`
+
 ## 1.0.12
 
 ### Patch Changes
