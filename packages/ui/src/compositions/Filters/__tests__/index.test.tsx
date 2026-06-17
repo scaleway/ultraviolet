@@ -2,7 +2,8 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-import { Filters } from '..'
+import { Filters, FiltersMainRow, FiltersProvider } from '..'
+import { Button } from '../../../components'
 import type { FilterComponentProps, FilterConfig } from '../types'
 
 export type FilterValues = {
@@ -289,5 +290,41 @@ describe('filters', () => {
     )
 
     expect(screen.getByRole('button', { name: 'Custom component' })).toBeVisible()
+  })
+
+  it('should provide the context for access outside of the main components', async () => {
+    const onSubmit = vi.fn()
+
+    renderWithTheme(
+      <FiltersProvider
+        defaultValues={defaultValues}
+        initialValues={{
+          name: 'John',
+          status: 'active',
+        }}
+        onSubmit={onSubmit}
+      >
+        {({ filters }) => (
+          <>
+            <FiltersMainRow config={config} labels={labels} />
+            <Button
+              onClick={() => {
+                filters.reset()
+                filters.submit(filters.defaultValues)
+              }}
+            >
+              Reset from outside of the component
+            </Button>
+          </>
+        )}
+      </FiltersProvider>,
+    )
+
+    expect(screen.getByRole('textbox', { name: 'Name' })).toHaveValue('John')
+
+    await userEvent.click(screen.getByRole('button', { name: 'Reset from outside of the component' }))
+
+    expect(onSubmit).toHaveBeenCalledExactlyOnceWith(defaultValues)
+    expect(screen.getByRole('textbox', { name: 'Name' })).toHaveValue('')
   })
 })
