@@ -1,5 +1,13 @@
 # Change Log
 
+## 6.5.2
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @ultraviolet/icons@5.4.2
+  - @ultraviolet/ui@3.18.2
+
 ## 6.5.1
 
 ### Patch Changes

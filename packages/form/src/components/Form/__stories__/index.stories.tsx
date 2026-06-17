@@ -5,13 +5,6 @@ export default {
   component: Form,
   parameters: {
     a11y: false,
-    audit: {
-      'keyboard-focus': false,
-      'contrast-visuals': false,
-      'semantics-screen-reader': false,
-      'pointer-touch': false,
-      'specific-patterns': false,
-    },
     docs: {
       description: {
         component: 'This is the main component that is needed to wrap your fields',
