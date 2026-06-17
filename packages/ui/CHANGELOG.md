@@ -1,5 +1,56 @@
 # Change Log
 
+## 3.18.1
+
+### Patch Changes
+
+- [#6534](https://github.com/scaleway/ultraviolet/pull/6534) [`ea8b368`](https://github.com/scaleway/ultraviolet/commit/ea8b3688ed53b901c00bc386249980636502a076) Thanks [@lisalupi](https://github.com/lisalupi)! - `Tabs`: add focus ring
+
+- [#6515](https://github.com/scaleway/ultraviolet/pull/6515) [`33ad3d0`](https://github.com/scaleway/ultraviolet/commit/33ad3d01c4fea601f682a2343027f6aac64f091e) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`: remove empty div when a sub-category doesn't have details
+
+- [#6517](https://github.com/scaleway/ultraviolet/pull/6517) [`7f096ed`](https://github.com/scaleway/ultraviolet/commit/7f096ed9f4e5991ccb32c40263117e801ee9d804) Thanks [@jsulpis](https://github.com/jsulpis)! - `SearchInput`: fix icon size, padding and color
+
+- [#6553](https://github.com/scaleway/ultraviolet/pull/6553) [`61db2bf`](https://github.com/scaleway/ultraviolet/commit/61db2bfe22d3f6eea496b65590f9a491af338a8a) Thanks [@philibea](https://github.com/philibea)! - Add id to FileInput, forward onBlur from field to FileInput.
+
+- [#6536](https://github.com/scaleway/ultraviolet/pull/6536) [`76a2260`](https://github.com/scaleway/ultraviolet/commit/76a226065d2eb0f7aa6cfbe79aa5aa2812a4021e) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - fix(rich-text-input): spread changement value for richtextinput component
+
+- [#6512](https://github.com/scaleway/ultraviolet/pull/6512) [`2cb7239`](https://github.com/scaleway/ultraviolet/commit/2cb7239f404f574d12543fa6a3ac0d3982cbe10c) Thanks [@lisalupi](https://github.com/lisalupi)! - `TextArea`: fix padding right on content and disable clear button when input is read-only or disabled
+
+- [#6491](https://github.com/scaleway/ultraviolet/pull/6491) [`e79f9d3`](https://github.com/scaleway/ultraviolet/commit/e79f9d306f9c959f45789028dbac51de2fddea9f) Thanks [@lisalupi](https://github.com/lisalupi)! - `Radio`, `RadioGroup`: new prop size
+
+- [#6516](https://github.com/scaleway/ultraviolet/pull/6516) [`9ba6b1a`](https://github.com/scaleway/ultraviolet/commit/9ba6b1aa869ca840d30fa603bda8866b08331b36) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`:
+
+  - add a transparent border when disabled to avoid sizing differences between read-only, default, and disabled states
+  - fix options alignment with checkbox and `OptionalInfo`
+
+- [#6493](https://github.com/scaleway/ultraviolet/pull/6493) [`ad9625e`](https://github.com/scaleway/ultraviolet/commit/ad9625eba4f04ec72d8b24985129f1ebd1e5f21f) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - `Chip`: update text colors
+
+- [#6500](https://github.com/scaleway/ultraviolet/pull/6500) [`c6a4159`](https://github.com/scaleway/ultraviolet/commit/c6a4159e8c467bc5c91a873bd3324862bcd2c19c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.25.10`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.25.10`.
+  Updated dependency `@uiw/react-codemirror` to `4.25.10`.
+
+- [#6549](https://github.com/scaleway/ultraviolet/pull/6549) [`7b5cc0c`](https://github.com/scaleway/ultraviolet/commit/7b5cc0cf7e3ba438497f14fad1e5800735c6c46f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/use-clipboard` to `1.1.0`.
+
+- [#6530](https://github.com/scaleway/ultraviolet/pull/6530) [`14fb99e`](https://github.com/scaleway/ultraviolet/commit/14fb99e2ada6488f5df29442c12977e760214b3d) Thanks [@lisalupi](https://github.com/lisalupi)! - `InfoTable`: various improvements:
+
+  - new prop `size`
+  - new prop `header`
+  - use _gap_ instead of _margin_ between Cells
+
+- [#6527](https://github.com/scaleway/ultraviolet/pull/6527) [`48a44bb`](https://github.com/scaleway/ultraviolet/commit/48a44bb4708edb8c5a1190100d20dc199cb133df) Thanks [@lisalupi](https://github.com/lisalupi)! - `Popup`: arrow should be centered with children container (when computed position is top or bottom)
+
+- [#6511](https://github.com/scaleway/ultraviolet/pull/6511) [`07e3e18`](https://github.com/scaleway/ultraviolet/commit/07e3e1891e3ee22556245fca81a54a01657e3a34) Thanks [@lisalupi](https://github.com/lisalupi)! - `GlobalAlert`: fix layout
+
+- [#6538](https://github.com/scaleway/ultraviolet/pull/6538) [`3831751`](https://github.com/scaleway/ultraviolet/commit/383175188e35594f94169662e6c338b9c1bd1e41) Thanks [@lisalupi](https://github.com/lisalupi)! - `TextInput`:
+
+  - replace React useState focus management with native CSS pseudo-selector
+  - fix hover and focus styles with error and success states
+
+- [#6552](https://github.com/scaleway/ultraviolet/pull/6552) [`4e88684`](https://github.com/scaleway/ultraviolet/commit/4e88684841b743aa497bb4aa26f84d86663698da) Thanks [@lisalupi](https://github.com/lisalupi)! - Export `OptionType` and `DataType` from `SelectInput`
+
+- Updated dependencies [[`05be6b1`](https://github.com/scaleway/ultraviolet/commit/05be6b17852731a5e39371bad0b5044d0c793dbf)]:
+  - @ultraviolet/icons@5.4.1
+
 ## 3.18.0
 
 ### Minor Changes

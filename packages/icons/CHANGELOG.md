@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.4.1
+
+### Patch Changes
+
+- [#6556](https://github.com/scaleway/ultraviolet/pull/6556) [`05be6b1`](https://github.com/scaleway/ultraviolet/commit/05be6b17852731a5e39371bad0b5044d0c793dbf) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix `ExpandMoreIcon`
+
 ## 5.4.0
 
 ### Minor Changes
