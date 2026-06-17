@@ -1,25 +1,14 @@
 import { linkTo } from '@storybook/addon-links'
-import { CheckCircleIcon } from '@ultraviolet/icons'
+import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseCircleOutlineIcon } from '@ultraviolet/icons/CloseCircleOutlineIcon'
 import { Button, Stack, Table, Text, Tooltip, ProgressBar, Link } from '@ultraviolet/ui'
 import { useState, useEffect } from 'react'
 import type { ReactNode } from 'react'
 import { findComponentState } from '../ComponentState/constants'
 import { storiesCompositionsModules, storiesComponentModules } from '../constants'
-import {
-  A11Y_LEVELS,
-  findA11yLevel,
-  getComponentA11yStatus,
-  getComponentAuditCategories,
-  WCAG_PRINCIPLES,
-} from './constants'
-import type {
-  A11yLevel,
-  ComponentA11yStatus,
-  AuditCategories,
-  ComponentStoryParameters,
-  WcagPrinciple,
-} from './constants'
+import { A11Y_LEVELS, WCAG_PRINCIPLES } from './constants'
+import { findA11yLevel, getComponentA11yStatus, getComponentAuditCategories } from './helpers'
+import type { A11yLevel, ComponentA11yStatus, AuditCategories, ComponentStoryParameters, WcagPrinciple } from './types'
 
 type ComponentInfo = {
   title: string
@@ -146,14 +135,14 @@ const AccessibilityAudit = () => {
         >
           <Table.Body>
             {WCAG_PRINCIPLES.map(principle => {
-              const percentage = getPrincipleCompletion(principle)
-              const completedCount = getComponentsForCategory(principle).length
+              const percentage = getPrincipleCompletion(principle.name)
+              const completedCount = getComponentsForCategory(principle.name).length
 
               return (
-                <Table.Row id={principle} key={principle}>
+                <Table.Row id={principle.name} key={principle.name}>
                   <Table.Cell>
                     <Text as="span" variant="body">
-                      {principle[0].toUpperCase() + principle.slice(1)}
+                      {principle.label}
                     </Text>
                   </Table.Cell>
                   <Table.Cell align="left">
@@ -224,7 +213,7 @@ const AccessibilityAudit = () => {
                   <Stack direction="row" gap={1}>
                     {component.auditCategories.map(category => (
                       <Text as="span" key={category.id} variant="bodySmall">
-                        <Tooltip text={category.id}>
+                        <Tooltip text={category.label}>
                           {category.completed ? (
                             <CheckCircleIcon size="medium" sentiment="success" />
                           ) : (
