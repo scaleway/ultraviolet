@@ -1,0 +1,80 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="[Component Path]/A11y" />
+
+# [Component] - Accessibility
+
+## Summary
+
+- **Status**: ✅ Compliant / ⚠️ Needs Work / ❌ Non-compliant
+- **Type**: [Layout Primitive / Interactive / Feedback / etc.]
+
+## Quick Checks
+
+- ✅/⚠️/❌ Keyboard: ...
+- ✅/⚠️/❌ ARIA: ...
+- ✅/⚠️/❌ Focus: ...
+- ✅/⚠️/❌ Contrast: ...
+- ✅/⚠️/❌ Screen Readers: ...
+
+## ARIA Pattern
+
+{/* If you found an ARIA pattern, link it here. Otherwise add "No ARIA pattern found for this component". */}
+
+## Rules
+
+{/* List RGAA or ARIA rules here with links to their documentation or examples in this project if available. If no rules apply, write "No specific rules apply to this component." */}
+
+Enforced by the component:
+
+{/* Rules that can be enforced by the component implementation. The following rules are examples, replace them with relevant rules. */}
+
+- ✅ [WCAG 1.4.1: Use of Color - Level A](https://www.w3.org/WAI/WCAG22/quickref/#use-of-color)
+- ❌ [RGAA 10.7: Dans chaque page web, pour chaque élément recevant le focus, la prise de focus est-elle visible ?](https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#10.7)
+
+To apply when using the component:
+
+{/* Rules that depend on how the component is used by developers. The following rules are examples, replace them with relevant rules. */}
+
+- [RGAA 1.1: Chaque image porteuse d’information a-t-elle une alternative textuelle](https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.1)
+
+## Accessibility issues
+
+{/\* List issues that were found during the audit. Group them by criticity:
+
+- **Critical**: Blocks users with disabilities (keyboard traps, missing labels, no keyboard access)
+- **High**: Significant barriers (missing ARIA, poor focus management, contrast issues)
+- **Medium**: Usability issues (missing optional ARIA, inconsistent patterns)
+- **Low**: Nice to have (enhancements, edge cases)
+
+For each issue, propose one ore more concrete actions to fix them.
+
+If possible, propose modifications that don't create breaking changes to the component public API. The components should handle as much accessibility rules as possible to make them easy to use.
+
+\*/}
+
+## Dependencies
+
+{/* If some accessibility issues are caused by other components that must be fixed before this one, list those components here. If there is no dependency remove this section. */}
+
+## Implementation
+
+{/* Add one or more code snippets to show how to implement the proposed actions */}
+
+```tsx
+// Code snippet
+```
+
+## Best Practices
+
+### ✅ Do
+
+```tsx
+// Example of accessible usage
+```
+
+### ❌ Avoid
+
+```tsx
+// Example of inaccessible usage
+```

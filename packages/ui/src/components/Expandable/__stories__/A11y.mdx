@@ -1,0 +1,223 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Action/Expandable/A11y" />
+
+# Expandable - Accessibility
+
+## Summary
+
+- **Status**: ❌ Non-compliant
+- **Type**: Layout Primitive
+
+## Quick Checks
+
+- ❌ **Keyboard**: No keyboard handlers built into the component. Toggle mechanism must be implemented externally with no guidance.
+- ❌ **ARIA**: Missing `aria-hidden` when collapsed, no `role="region"`, no `aria-labelledby` association with trigger.
+- ❌ **Focus**: No focus management. Focus can be trapped in hidden content or lost when content collapses.
+- ✅ **Contrast**: No visual contrast issues (component doesn't have inherent styling that affects contrast).
+- ❌ **Screen Readers**: Content visibility changes are not announced to screen readers. No live region support.
+
+## ARIA Pattern
+
+[ARIA Disclosure Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/) - The Expandable component should follow the disclosure pattern where:
+
+- A trigger button has `aria-expanded` and `aria-controls`
+- The expandable region has `role="region"` and `aria-labelledby` pointing to the trigger
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/quickref/#name-role-value) - Component lacks proper ARIA attributes for expandable regions
+- ❌ [WCAG 2.1.1: Keyboard](https://www.w3.org/WAI/WCAG21/quickref/#keyboard) - No keyboard interaction support
+- ❌ [WCAG 2.4.3: Focus Order](https://www.w3.org/WAI/WCAG21/quickref/#focus-order) - Focus order is not managed when content expands/collapses
+- ❌ [WCAG 2.4.7: Focus Visible](https://www.w3.org/WAI/WCAG21/quickref/#focus-visible) - No focus visible management
+- ❌ [RGAA 10.7: Prise de focus visible](https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#10.7) - La prise de focus n'est pas gérée par le composant
+- ❌ [WCAG 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/quickref/#info-and-relationships) - Relationship between trigger and content is not established
+- ❌ [WCAG 2.3.3: Animation from Interactions](https://www.w3.org/WAI/WCAG21/quickref/#animation-from-interactions) - Does not respect `prefers-reduced-motion`
+
+To apply when using the component:
+
+- [WCAG 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/quickref/#name-role-value) - Developers must ensure trigger button has `aria-expanded` and `aria-controls`
+- [RGAA 10.2: Dans chaque page web, le contenu visible en présence d'une prise de focus reste-t-il identique ?](https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#10.2) - Ensure content visibility matches focus state
+
+## Accessibility issues
+
+### **Critical**
+
+1. **Missing `aria-hidden` when collapsed**: When `opened={false}`, the content is visually hidden but remains in the accessibility tree. Screen reader users can still access hidden content.
+
+   **Fix**: Add `aria-hidden={!opened}` to the expandable div.
+
+2. **No focus management**: When content collapses, any focused elements inside become inaccessible but may retain focus. This creates a keyboard trap.
+
+   **Fix**: Implement focus management to move focus to the trigger when content collapses, or use `inert` attribute (modern browsers).
+
+3. **No keyboard interaction**: The component is purely presentational with no built-in keyboard handlers. While this is intentional for a layout primitive, it should provide utilities or hooks to help implementers.
+
+   **Fix**: Provide a hook or utility to handle keyboard interactions for the trigger button.
+
+### **High**
+
+4. **Missing ARIA region role**: The expandable content should have `role="region"` to be recognized as a landmark by screen readers.
+
+   **Fix**: Add `role="region"` when opened.
+
+5. **No `aria-labelledby` association**: There's no way to associate the expandable content with its trigger button.
+
+   **Fix**: Accept an `aria-labelledby` prop to link to the trigger's id.
+
+6. **No `prefers-reduced-motion` support**: The animation always plays regardless of user's motion preferences.
+
+   **Fix**: Check for `prefers-reduced-motion: reduce` media query and disable or reduce animation duration.
+
+### **Medium**
+
+7. **No live region announcement**: When content expands/collapses, screen reader users are not notified of the change.
+
+   **Fix**: Optionally support `aria-live` for dynamic content announcements.
+
+8. **NonAnimatedExpandable uses `display: none`**: While this removes content from accessibility tree, it's inconsistent with AnimatedExpandable which doesn't use `aria-hidden`.
+
+   **Fix**: Standardize behavior across both implementations.
+
+## Implementation
+
+```tsx
+// AnimatedExpandable.tsx - Proposed changes
+export const AnimatedExpandable = ({
+  children,
+  opened,
+  minHeight = 0,
+  className,
+  'data-testid': dataTestId,
+  style,
+  animationDuration = ANIMATION_DURATION,
+  'aria-labelledby': ariaLabelledBy,
+  'aria-hidden': ariaHidden,
+  id,
+}: ExpandableProps) => {
+  // ... existing logic
+
+  // Check for reduced motion preference
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setPrefersReducedMotion(mediaQuery.matches)
+
+    const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches)
+    mediaQuery.addEventListener('change', handler)
+    return () => mediaQuery.removeEventListener('change', handler)
+  }, [])
+
+  const effectiveDuration = prefersReducedMotion ? 0 : animationDuration
+
+  return (
+    <div
+      className={cn(className, expandableStyle.expandable)}
+      data-is-animated={shouldBeAnimated && !isFirstRender.current}
+      data-testid={dataTestId}
+      ref={ref}
+      id={id}
+      role="region"
+      aria-labelledby={ariaLabelledBy}
+      aria-hidden={!opened}
+      style={{
+        ...assignInlineVars({
+          [animationDurationVar]: `${effectiveDuration}ms`,
+        }),
+        ...style,
+      }}
+    >
+      {children}
+    </div>
+  )
+}
+```
+
+```tsx
+// types.ts - Proposed changes
+export type ExpandableProps = {
+  children: ReactNode
+  opened?: boolean
+  minHeight?: number
+  className?: string
+  'data-testid'?: string
+  animationDuration?: number
+  style?: CSSProperties
+  // Accessibility props
+  id?: string
+  'aria-labelledby'?: string
+  'aria-hidden'?: boolean
+  'aria-live'?: 'polite' | 'assertive' | 'off'
+}
+```
+
+```tsx
+// Example usage with accessible trigger
+const AccessibleExpandableExample = () => {
+  const [opened, setOpened] = useState(false)
+  const triggerId = 'expandable-trigger'
+  const contentId = 'expandable-content'
+
+  return (
+    <>
+      <button id={triggerId} onClick={() => setOpened(!opened)} aria-expanded={opened} aria-controls={contentId}>
+        Toggle content
+      </button>
+      <Expandable id={contentId} opened={opened} aria-labelledby={triggerId}>
+        Expandable content
+      </Expandable>
+    </>
+  )
+}
+```
+
+## Best Practices
+
+### ✅ Do
+
+```tsx
+// Provide accessible trigger with proper ARIA attributes
+<button
+  id="trigger"
+  aria-expanded={opened}
+  aria-controls="content"
+  onClick={() => setOpened(!opened)}
+>
+  Toggle
+</button>
+
+<Expandable
+  id="content"
+  opened={opened}
+  aria-labelledby="trigger"
+  role="region"
+>
+  Content
+</Expandable>
+```
+
+```tsx
+// Handle focus when collapsing
+const handleToggle = () => {
+  if (opened) {
+    // Move focus back to trigger when collapsing
+    triggerRef.current?.focus()
+  }
+  setOpened(!opened)
+}
+```
+
+### ❌ Avoid
+
+```tsx
+// Don't use Expandable without connecting it to a trigger
+<Expandable opened={opened}>Content</Expandable>
+```
+
+```tsx
+// Don't forget aria-expanded on the trigger
+<button onClick={() => setOpened(!opened)}>Toggle</button>
+```

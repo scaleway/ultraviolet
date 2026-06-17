@@ -84,7 +84,9 @@ const parameters: Preview['parameters'] = {
     container: DocsContainer,
     page: Page,
     source: { excludeDecorators: true }, // Exclude decorators from source code
-    toc: true,
+    toc: {
+      headingSelector: 'h2, h3',
+    },
   },
   options: {
     storySort: {
