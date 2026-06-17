@@ -5,13 +5,11 @@ export default {
   component: Drawer,
   title: 'UI/Overlay/Drawer',
   parameters: {
-    a11yStatus: 'partial',
-    audit: {
-      'keyboard-focus': false,
-      'contrast-visuals': false,
-      'semantics-screen-reader': false,
-      'pointer-touch': false,
-      'specific-patterns': false,
+    a11yStatus: {
+      perceivable: false,
+      operable: false,
+      understandable: false,
+      robust: false,
     },
   },
 } as Meta<typeof Drawer>

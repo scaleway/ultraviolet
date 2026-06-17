@@ -5,13 +5,11 @@ export default {
   component: Toggle,
   title: 'UI/Data Entry/Toggle',
   parameters: {
-    a11yStatus: 'partial',
-    audit: {
-      'keyboard-focus': false,
-      'contrast-visuals': false,
-      'semantics-screen-reader': false,
-      'pointer-touch': false,
-      'specific-patterns': false,
+    a11yStatus: {
+      perceivable: false,
+      operable: false,
+      understandable: false,
+      robust: false,
     },
   },
 } as Meta<typeof Toggle>

@@ -1,5 +1,5 @@
 /**
- * @fileoverview Rule to check for a11y: partial in Storybook stories
+ * @fileoverview Rule to check for failed accessibility principles in Storybook stories
  */
 
 const STORYBOOK_A11Y_PARTIAL = {
@@ -7,7 +7,7 @@ const STORYBOOK_A11Y_PARTIAL = {
     name: 'a11y-partial',
     type: 'suggestion',
     docs: {
-      description: 'Report components with a11y: partial in index.stories.tsx files',
+      description: 'Report components with failed accessibility principles in index.stories.tsx files',
       category: 'Accessibility',
       recommended: false,
     },
@@ -15,7 +15,7 @@ const STORYBOOK_A11Y_PARTIAL = {
     schema: [],
     messages: {
       a11yPartialFound:
-        'Found a11y: partial for this component. Ensure accessibility improvements are tracked and documented.',
+        'Found a failed accessibility principle for this component. Ensure accessibility improvements are tracked and documented.',
     },
   },
 
@@ -30,9 +30,8 @@ const STORYBOOK_A11Y_PARTIAL = {
       Property(node) {
         if (
           node.key.type === 'Identifier' &&
-          node.key.name === 'a11yStatus' &&
-          node.value.type === 'Literal' &&
-          node.value.value === 'partial'
+          ['perceivable', 'operable', 'understandable', 'robust'].includes(node.key.name) &&
+          node.value.value === false
         ) {
           context.report({
             node,
