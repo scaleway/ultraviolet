@@ -1,5 +1,24 @@
 # Change Log
 
+## 6.5.1
+
+### Patch Changes
+
+- [#6555](https://github.com/scaleway/ultraviolet/pull/6555) [`2d84ee5`](https://github.com/scaleway/ultraviolet/commit/2d84ee51611e7bb8af49b8d17c72e537cd072809) Thanks [@lisalupi](https://github.com/lisalupi)! - `FileInputField`: fix typing
+
+- [#6553](https://github.com/scaleway/ultraviolet/pull/6553) [`61db2bf`](https://github.com/scaleway/ultraviolet/commit/61db2bfe22d3f6eea496b65590f9a491af338a8a) Thanks [@philibea](https://github.com/philibea)! - Add id to FileInput, forward onBlur from field to FileInput.
+
+- [#6537](https://github.com/scaleway/ultraviolet/pull/6537) [`4cdffef`](https://github.com/scaleway/ultraviolet/commit/4cdffef789ff073984106f7f07ac91904d0f1db0) Thanks [@lisalupi](https://github.com/lisalupi)! - `FileInput`: fix label type
+
+- [#6550](https://github.com/scaleway/ultraviolet/pull/6550) [`d72be72`](https://github.com/scaleway/ultraviolet/commit/d72be725aacd2f510ff9b994976b4c6aba93e14c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.78.0`.
+
+- [#6535](https://github.com/scaleway/ultraviolet/pull/6535) [`9f3ce9f`](https://github.com/scaleway/ultraviolet/commit/9f3ce9fc8465169eb6f856d217448ea71b1b1764) Thanks [@jsulpis](https://github.com/jsulpis)! - `NumberInputField`:
+  - fix the `isInteger` validator function to correctly check that the value is an integer
+  - add a `isNumber` validator function to check that the value is a decimal number
+- Updated dependencies [[`ea8b368`](https://github.com/scaleway/ultraviolet/commit/ea8b3688ed53b901c00bc386249980636502a076), [`33ad3d0`](https://github.com/scaleway/ultraviolet/commit/33ad3d01c4fea601f682a2343027f6aac64f091e), [`7f096ed`](https://github.com/scaleway/ultraviolet/commit/7f096ed9f4e5991ccb32c40263117e801ee9d804), [`61db2bf`](https://github.com/scaleway/ultraviolet/commit/61db2bfe22d3f6eea496b65590f9a491af338a8a), [`76a2260`](https://github.com/scaleway/ultraviolet/commit/76a226065d2eb0f7aa6cfbe79aa5aa2812a4021e), [`2cb7239`](https://github.com/scaleway/ultraviolet/commit/2cb7239f404f574d12543fa6a3ac0d3982cbe10c), [`e79f9d3`](https://github.com/scaleway/ultraviolet/commit/e79f9d306f9c959f45789028dbac51de2fddea9f), [`9ba6b1a`](https://github.com/scaleway/ultraviolet/commit/9ba6b1aa869ca840d30fa603bda8866b08331b36), [`ad9625e`](https://github.com/scaleway/ultraviolet/commit/ad9625eba4f04ec72d8b24985129f1ebd1e5f21f), [`c6a4159`](https://github.com/scaleway/ultraviolet/commit/c6a4159e8c467bc5c91a873bd3324862bcd2c19c), [`7b5cc0c`](https://github.com/scaleway/ultraviolet/commit/7b5cc0cf7e3ba438497f14fad1e5800735c6c46f), [`14fb99e`](https://github.com/scaleway/ultraviolet/commit/14fb99e2ada6488f5df29442c12977e760214b3d), [`48a44bb`](https://github.com/scaleway/ultraviolet/commit/48a44bb4708edb8c5a1190100d20dc199cb133df), [`05be6b1`](https://github.com/scaleway/ultraviolet/commit/05be6b17852731a5e39371bad0b5044d0c793dbf), [`07e3e18`](https://github.com/scaleway/ultraviolet/commit/07e3e1891e3ee22556245fca81a54a01657e3a34), [`3831751`](https://github.com/scaleway/ultraviolet/commit/383175188e35594f94169662e6c338b9c1bd1e41), [`4e88684`](https://github.com/scaleway/ultraviolet/commit/4e88684841b743aa497bb4aa26f84d86663698da)]:
+  - @ultraviolet/ui@3.18.1
+  - @ultraviolet/icons@5.4.1
+
 ## 6.5.0
 
 ### Minor Changes
