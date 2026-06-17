@@ -178,7 +178,7 @@ const AccessibilityAudit = () => {
             { label: 'Name' },
             { label: 'Category' },
             { label: 'Accessibility Level' },
-            { label: 'Accessibility Progress' },
+            { label: 'Accessibility Status' },
           ]}
           stripped
         >

@@ -6,9 +6,9 @@ export default {
   title: 'UI/Feedback/Alert',
   parameters: {
     a11yStatus: {
-      perceivable: false,
+      perceivable: true,
       operable: false,
-      understandable: false,
+      understandable: true,
       robust: false,
     },
   },
