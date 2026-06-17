@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Feedback/Alert/A11y" />
+
+# Alert - Accessibility
+
+## Summary
+
+1. ✅ Perceivable: correct color contrast and text presentation
+2. ⚠️ Operable: accessible to keyboard but loss of focus when closing
+3. ✅ Understandable: content is properly readable
+4. ❌ Robust: missing role and name, Alert not announced when dynamically inserted
+
+## ARIA Pattern
+
+[ARIA Alert Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/alert/)
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - Ensure close button focus indicator is visible when used
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - Missing role attribute prevents proper identification and title not associated with the Alert.
+- ❌ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - Alert lacks `role="alert"` for programmatic determination by assistive technologies
+
+To apply when using the component:
+
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Ensure the sentiment is also conveyed through text (title or content) for screen reader users
+
+## Accessibility issues
+
+**Critical:**
+
+- Missing `role="alert"` - Screen readers will not announce the alert when it is dynamically inserted into the page. This is the core requirement of the ARIA Alert pattern.
+
+**High:**
+
+- No focus management on dismiss - When the close button is activated, focus is not redirected. Keyboard users who dismiss the alert may lose context of where focus should go next.
+
+**Medium:**
+
+- Consider a role `status` instead of `alert` for sentiments other than `danger`

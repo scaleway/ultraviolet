@@ -15,17 +15,17 @@ Once you have identified the component, tell the user a few words about this com
 
 ### Step 2: Find a corresponding ARIA Pattern
 
-Given the type of component to audit, browse the [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) and see if there is an existing ARIA Pattern for the component, or guidelines for implementing ARIA roles, states, and properties
+Given the type of component to audit, browse the [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/) and see if there is an existing ARIA Pattern for the component, or guidelines for implementing ARIA roles, states, and properties
 
-Tell the use if you found something and keep this reference for later.
+Tell the user if you found something and keep this reference for later.
 
-### Step 2: Find RGAA rules
+### Step 3: Find WCAG rules
 
-Given the type of component to audit, read the [RGAA 4.1.2 Criteria](https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/) and find relevent rules that apply to the component. You can search for h2 tags for the categories and h3 tags for the rules.
+**Important**: Take all the time you need for this step, it is crucial that you don't miss any rules. It is better to have too many rules than to miss relevant ones.
 
-Once you have found rules, ask the user if they think these rules are indeed relevant or if they think other rules should be considered. Move on to step 3 only when the user has validated the rules.
+Given the type of component to audit, use the WCAP MCP to find relevent rules that apply to the component.
 
-### Step 3: Analyze the React component
+### Step 4: Analyze the React component
 
 **Important**: Start skeptical. Assume the React component has accessibility issues until proven otherwise.
 
@@ -38,17 +38,17 @@ Read the component file(s) to understand:
 - Focus management (tabindex, focus traps, etc.)
 - React-specific patterns (portals, context, hooks)
 
-Based on the ARIA pattern and RGAA rules that you found in previous steps, identify any accessibility issues or missing features. Be as comprehensive as possible.
+Based on the ARIA pattern and WCAG rules that you found in previous steps, identify any accessibility issues or missing features. Be as comprehensive as possible.
 
-### Step 4: Generate and fill `A11y.mdx` file
+### Step 5: Generate and fill `A11y.mdx` file
 
-Create a file `path/to/component/__stories__/A11y.mdx` following the template `a11y-template.mdx`. You can find the "Component Path" in the stories `path/to/component/__stories__/index.stories.tsx`.
+Create a file `path/to/component/__stories__/A11y.mdx` following the template `.agents/skills/a11y-audit/resources/audit-template.mdx`. You can find the "Component Path" in the stories `path/to/component/__stories__/index.stories.tsx`.
 
-Fill the template with your findings from the previous step and following indications in the template file.
+Fill the `A11y.mdx` file with your findings from the previous step and following indications in the template file. You can find an example of a full `A11y.mdx` file in `.agents/skills/a11y-audit/resources/audit-example.mdx`.
 
-### Step 4: Update Storybook configuration
+### Step 6: Update Storybook configuration
 
-Update the `path/to/component/__stories__/index.stories.tsx` file and complete the `a11yStatus` and `audit` parameters.
+Update the `path/to/component/__stories__/index.stories.tsx` file and complete or update the `a11yStatus` parameter.
 
 ```tsx
 import type { Meta } from '@storybook/react-vite'
@@ -58,31 +58,22 @@ export default {
   component: Component,
   title: 'UI/Category/Component',
   parameters: {
-    a11yStatus: 'compliant' | 'partial' | 'non-compliant', // Match the status from A11y.mdx
-    audit: {
-      'keyboard-focus': true | false,
-      'contrast-visuals': true | false,
-      'semantics-screen-reader': true | false,
-      'pointer-touch': true | false,
-      'specific-patterns': true | false,
+    a11yStatus: {
+      perceivable: true | false,
+      operable: true | false,
+      understandable: true | false,
+      robust: true | false,
     },
   },
 } satisfies Meta<typeof Component>
 ```
 
-**Set `a11yStatus` status based on component status:**
+**Set `a11yStatus` flags based on the WCAG rules identified earlier:**
 
-- ✅ Compliant → `a11y: 'compliant'`
-- ⚠️ Needs Work → `a11y: 'partial'`
-- ❌ Non-compliant → `a11y: 'non-compliant'`
-
-**Set `audit` flags based on Quick Checks:**
-
-- `'keyboard-focus'`: true if Keyboard check is ✅
-- `'contrast-visuals'`: true if Contrast check is ✅
-- `'semantics-screen-reader'`: true if ARIA and Screen Readers are ✅
-- `'pointer-touch'`: true if component supports pointer/touch appropriately
-- `'specific-patterns'`: true if component-specific patterns are implemented
+- `perceivable`: false if at least one rule with index 1.x.x fails, otherwise true
+- `operable`: false if at least one rule with index 2.x.x fails, otherwise true
+- `understandable`: false if at least one rule with index 3.x.x fails, otherwise true
+- `robust`: false if at least one rule with index 4.x.x fails, otherwise true
 
 ## Action Summary & Prioritization
 
@@ -93,32 +84,18 @@ After analyzing a component, provide a short summary with:
 If issues found, suggest a ticket:
 
 ```markdown
-**Title**: [A11Y] Fix [Component] - [Priority]
+**Title**: [A11Y] Fix [Component]
 
 **Description**:
 
-- Status: ⚠️ Needs Work
-- RGAA Criteria: ...
 - Critical issues: ...
 - Dependencies: [list or "none"]
 - Estimated effort: [XS/S/M/L/XL]
 
-**Acceptance Criteria**:
+**Acceptance rules**:
 
 - [ ] Keyboard navigation works (Tab, Enter, Escape)
 - [ ] Screen readers announce component correctly
 - [ ] Focus is visible and managed properly
 - [ ] ARIA attributes are correct
-```
-
-### Related Components to Check
-
-If fixing this component, suggest checking related components:
-
-```markdown
-**Check also**:
-
-- [Component A] - Uses same pattern
-- [Component B] - Shares keyboard logic
-- [Component C] - Similar ARIA requirements
 ```
