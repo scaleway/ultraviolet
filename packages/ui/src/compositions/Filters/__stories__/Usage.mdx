@@ -185,6 +185,39 @@ function MyPage() {
 />
 ```
 
+### Dynamic configuration
+
+The `config` property can be updated dynamically based on a filter value or any other condition. All filter values will be preserved when the config changes, so the filters state will be restored when switching between configs.
+
+See [Dynamic Config story](?path=/story/compositions-filters--dynamic-config)
+
+If you don't want to preserve the state and instead update or reset some filter values when changing a filter, you can do so by creating a custom component and using the filters context in it (see sections below).
+
+```ts
+
+export const DynamicConfig = () => {
+  const [filterValues, setFilterValues] = useState(defaultValues)
+
+  const config = useMemo(() => {
+    if (filterValues['category'] === 'category 1') {
+      return [...baseConfig, confid1]
+    } else if (filterValues['category'] === 'category 2') {
+      return [...baseConfig, config2]
+    }
+    return baseConfig
+  }, [filterValues])
+
+  return (
+    <Filters
+      config={config}
+      labels={{ clearAll: 'Clear all' }}
+      defaultValues={defaultValues}
+      onSubmit={setFilterValues}
+    />
+  )
+}
+```
+
 ### Custom Field Components
 
 Custom filter types can be provided in the configuration array to extend the builtin types. For each custom type, a component must be provided to the `Filters` component to render the corresponding field.
@@ -203,19 +236,17 @@ type FilterConfigItemZones = FilterConfigItemBase & {
 }
 
 // string[] is the type of the `value` of the filter
-export type FilterZonesProps = FilterComponentProps<string[], FilterConfigItemZones> & {
-  customProp?: string
-}
+export type FilterZonesProps = FilterComponentProps<string[], FilterConfigItemZones>
 
 // Custom component definition
-function MyZonesFilter({ config, value, onChange, customProp }: FilterZonesProps) {
+function MyZonesFilter({ config, value, onChange }: FilterZonesProps) {
   return (
     <div>
       <label>{config.label}</label>
       <ZoneSelector
         selectedZones={value}
         onChange={onChange}
-        customProp={customProp}
+        displayImpact={config.displayImpact}
       />
     </div>
   )
