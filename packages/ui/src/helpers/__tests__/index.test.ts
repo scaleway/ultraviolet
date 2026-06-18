@@ -39,10 +39,7 @@ describe(onKeyOnlyNumbers, () => {
         preventDefault,
       } as unknown as KeyboardEvent)
 
-      expect(preventDefault).toHaveBeenCalledTimes(
-        // oxlint-disable-next-line vitest/no-conditional-in-test
-        keyCode < 48 || keyCode > 57 ? 1 : 0,
-      )
+      expect(preventDefault).toHaveBeenCalledTimes(keyCode < 48 || keyCode > 57 ? 1 : 0)
     })
   })
 })

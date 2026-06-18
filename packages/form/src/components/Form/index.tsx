@@ -7,12 +7,7 @@ import { ErrorProvider } from '../../providers'
 import type { FormErrors } from '../../types'
 import { defaultErrors } from './defaultErrors'
 
-type OnSubmitReturn =
-  | string
-  | null
-  | undefined
-  // oxlint-disable-next-line typescript/no-invalid-void-type
-  | void
+type OnSubmitReturn = string | null | undefined | void
 
 type FormProps<TFieldValues extends FieldValues> = {
   children?: ReactNode

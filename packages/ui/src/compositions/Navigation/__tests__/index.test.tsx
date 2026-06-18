@@ -187,7 +187,6 @@ describe('navigation', () => {
     // Find the button that contains "Servers" text
     const firstServersButton = allButtonsNav.find(button => button.textContent?.includes('Servers'))
 
-    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (firstServersButton) {
       // Hover over the button to reveal the pin button
       await userEvent.hover(firstServersButton)
@@ -233,12 +232,10 @@ describe('navigation', () => {
     // Find the button that contains "Servers" text
     const serversButton = allButtons.find(button => button.textContent?.includes('Servers'))
 
-    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (serversButton) {
       await userEvent.hover(serversButton)
     }
 
-    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (unpinButton) {
       await userEvent.click(unpinButton)
     }

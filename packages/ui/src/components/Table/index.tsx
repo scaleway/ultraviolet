@@ -85,7 +85,6 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
                   align={column.align}
                   info={column.info}
                   isOrdered={column.isOrdered}
-                  // oxlint-disable-next-line react/no-array-index-key
                   key={`header-column-${index}`}
                   maxWidth={column.maxWidth}
                   minWidth={column.minWidth}

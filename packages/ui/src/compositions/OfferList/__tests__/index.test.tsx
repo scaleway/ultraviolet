@@ -44,7 +44,6 @@ describe('offerList', () => {
         {data.map(planet => (
           <OfferList.Row
             banner={{
-              // oxlint-disable-next-line vitest/no-conditional-in-test
               sentiment: planet.id === 'mercury' ? 'warning' : undefined,
               text: 'text',
             }}

@@ -81,7 +81,6 @@ describe('expandableCard', () => {
     fireEvent.dragOver(dropZone)
     fireEvent.drop(dropZone, {
       dataTransfer: {
-        // oxlint-disable-next-line vitest/no-conditional-in-test
         getData: (type: string) => (type === 'text' ? data : ''),
       },
     })

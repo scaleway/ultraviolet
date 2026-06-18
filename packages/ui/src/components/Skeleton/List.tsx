@@ -1,4 +1,3 @@
-// oxlint-disable no-shadow
 'use client'
 
 import { Line } from './Line'

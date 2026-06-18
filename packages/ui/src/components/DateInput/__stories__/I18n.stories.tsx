@@ -43,7 +43,6 @@ export const I18n: StoryFn = args => {
       <SelectInput
         label="Switch Locale"
         name="locale-switcher"
-        // oxlint-disable-next-line typescript/no-misused-promises
         onChange={onChange}
         options={localesOptions}
         searchable={false}

@@ -42,7 +42,6 @@ describe('lineChart', () => {
       <LineChart
         data={lineChartData}
         pointFormatters={{
-          // oxlint-disable-next-line vitest/no-conditional-in-test
           x: value => value?.toString() ?? '',
           y: value => `${value as number} unit`,
         }}
@@ -63,7 +62,6 @@ describe('lineChart', () => {
   it.skip('renders correctly when chart is hovered', async () => {
     const { asFragment } = renderWithTheme(<LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />)
     const line = document.querySelector('svg[role="img"] g path')
-    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (!line) {
       throw new Error('LineChart line path not found')
     }

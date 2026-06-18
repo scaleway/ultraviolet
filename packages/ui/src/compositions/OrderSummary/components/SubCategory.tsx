@@ -59,13 +59,7 @@ export const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) =
       <Stack className={orderSummaryStyle.details} direction="column" gap={0.5}>
         {subCategory.details.map((detail, index) =>
           detail ? (
-            <Text
-              as="span"
-              // oxlint-disable-next-line react/no-array-index-key
-              key={`${subCategory.title}-${index}`}
-              sentiment="neutral"
-              variant="bodySmall"
-            >
+            <Text as="span" key={`${subCategory.title}-${index}`} sentiment="neutral" variant="bodySmall">
               {detail}
             </Text>
           ) : null,

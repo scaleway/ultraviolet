@@ -51,7 +51,6 @@ describe('barChart', () => {
     )
 
     const bar = container.querySelector('svg[role="img"] g line')
-    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (!bar) {
       throw new Error('BarChart column not found')
     }

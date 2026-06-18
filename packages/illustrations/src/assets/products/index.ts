@@ -3,8 +3,6 @@
  * PLEASE DO NOT EDIT HERE
  */
 
-// oxlint-disable import/no-namespace
-
 import * as accountExperience from './accountExperience'
 import * as annotations from './annotations'
 import * as apiGateway from './apiGateway'

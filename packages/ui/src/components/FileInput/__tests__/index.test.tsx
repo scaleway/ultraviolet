@@ -463,7 +463,6 @@ describe('fileInput', () => {
       name: 'dir',
       createReader: () => ({
         readEntries: (resolve: (entries: FileSystemEntry[]) => void) => {
-          // oxlint-disable-next-line vitest/no-conditional-in-test
           if (callCount === 0) {
             callCount += 1
             resolve([dirFileEntry])
