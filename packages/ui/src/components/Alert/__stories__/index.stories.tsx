@@ -12,7 +12,7 @@ export default {
       robust: false,
     },
   },
-} as Meta
+} satisfies Meta<typeof Alert>
 
 export { Playground } from './Playground.stories'
 export { Title } from './Title.stories'

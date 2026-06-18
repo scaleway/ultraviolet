@@ -6,41 +6,66 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 ## Description
 
-A feedback component that displays short, important messages to attract user attention without interrupting tasks. Supports 5 sentiment types (danger, info, success, warning, neutral), optional title, action button, and dismissible functionality.
+A feedback component that displays short, important messages to attract user attention without interrupting tasks. Supports 5 sentiment types (danger, info, neutral, success, warning), an optional title, an action button, dismissible functionality, and two sizes.
 
 ## Summary
 
-- ✅ **Perceivable**: correct color contrast and text presentation
-- ⚠️ **Operable**: accessible to keyboard but loss of focus when closing
-- ✅ **Understandable**: content is properly readable
-- ❌ **Robust**: missing role and name, Alert not announced when dynamically inserted
+1. ✅ Perceivable: text contrast and presentation are correct, decorative icon is hidden from assistive technologies
+2. ⚠️ Operable: controls are keyboard accessible via native `<Button>`, but focus is lost when the alert is dismissed
+3. ✅ Understandable: content is properly readable, close button has an accessible name
+4. ❌ Robust: missing `role="alert"` on the container, alert not announced when dynamically inserted, title not programmatically associated
 
 ## ARIA Pattern
 
 [ARIA Alert Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/alert/)
 
+The pattern requires a `role="alert"` on the widget container so that dynamically rendered alerts are automatically announced by screen readers. The pattern also specifies that alerts must not affect keyboard focus (the [Alert Dialog Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/alertdialog/) is for situations where interrupting the workflow is necessary).
+
 ## Rules
 
 Enforced by the component:
 
-- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - Ensure close button focus indicator is visible when used
-- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - Missing role attribute prevents proper identification and title not associated with the Alert.
-- ❌ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - Alert lacks `role="alert"` for programmatic determination by assistive technologies
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Title is rendered with a stronger text variant and content as a paragraph, preserving visual structure. However, the title is not programmatically associated with the alert container.
+- ✅ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - Text uses sentiment colors from the theme that meet contrast requirements.
+- ✅ [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - The sentiment icon and the 4px left border provide additional visual cues with sufficient contrast.
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - The action button and close button use the native `<Button>` component, which is fully operable from the keyboard (Tab to move, Enter/Space to activate).
+- ✅ [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) - Focus can move in and out of the alert freely.
+- ✅ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - Focus order follows the visual reading order: content, action button, close button.
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - The native `<Button>` component provides a visible focus indicator.
+- ✅ [WCAG 2.5.3 - Label in Name (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html) - The close button has no visible text label (icon only), so this rule is not applicable; an `aria-label` is provided instead.
+- ✅ [WCAG 3.2.1 - On Focus (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/on-focus.html) - Receiving focus does not trigger any change of context.
+- ✅ [WCAG 3.2.2 - On Input (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/on-input.html) - No change of context is triggered by user input.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The alert container has no `role` attribute, preventing assistive technologies from identifying it as an alert. The title is also not programmatically associated with the alert.
+- ❌ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - The alert lacks `role="alert"` (or `role="status"`), so status messages cannot be programmatically determined and announced by assistive technologies when dynamically inserted.
 
 To apply when using the component:
 
-- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Ensure the sentiment is also conveyed through text (title or content) for screen reader users
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The sentiment is conveyed through color and an icon, but the icon is hidden from screen readers (`aria-hidden="true"`). Ensure the sentiment is also conveyed through text in the title or content (e.g., "Error: ...", "Success: ...") so that the meaning is not dependent on color alone.
 
 ## Accessibility issues
 
 **Critical:**
 
-- Missing `role="alert"` - Screen readers will not announce the alert when it is dynamically inserted into the page. This is the core requirement of the ARIA Alert pattern.
+- Missing `role="alert"` on the alert container (`Stack` in `index.tsx:71`). Screen readers will not announce the alert when it is dynamically inserted into the page. This is the core requirement of the [ARIA Alert Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) and a direct failure of WCAG 4.1.2 and 4.1.3.
 
 **High:**
 
-- No focus management on dismiss - When the close button is activated, focus is not redirected. Keyboard users who dismiss the alert may lose context of where focus should go next.
+- No focus management on dismiss. When the close button is activated (`index.tsx:128-142`), the component returns `null` and focus is lost. Keyboard users who dismiss the alert may lose their place in the page. Focus should be redirected to a logical element (e.g., the element that triggered the alert, or the previous focusable element in the page).
+
+- Title not programmatically associated with the alert. The title is rendered as a `<span>` (`index.tsx:103`) but is not referenced via `aria-labelledby` on the alert container. When `role="alert"` is added, the title should be associated so that screen readers announce it as the alert's name.
 
 **Medium:**
 
-- Consider a role `status` instead of `alert` for sentiments other than `danger`
+- The close button `aria-label="close"` (`index.tsx:130`) is generic. When multiple alerts are displayed on the same page, screen reader users cannot distinguish which alert they are closing. Consider deriving the label from the alert title (e.g., `Close {title} alert`) or providing a more descriptive label.
+
+- Consider using `role="status"` instead of `role="alert"` for non-danger sentiments (`info`, `neutral`, `success`, `warning`). `role="alert"` is assertive and interrupts the user, while `role="status"` is polite and more appropriate for non-critical information. This could be tied to the `sentiment` prop (e.g., `danger` and `warning` use `alert`, others use `status`).
+
+- The `CloseIcon` inside the close button (`index.tsx:140`) is not marked as `aria-hidden="true"`. Although the button's `aria-label` overrides the icon for the accessible name calculation, it is best practice to hide decorative icons explicitly. (Note: the sentiment icon at the start of the alert is correctly hidden with `aria-hidden="true"` at `index.tsx:88`.)
+
+**Low:**
+
+- Consider supporting an optional prop (e.g., `role` or `politeness`) to let consumers control the live region behavior (assertive vs. polite) based on the context in which the alert is used.
+
+## Dependencies
+
+- The focus management on dismiss issue depends on the consumer providing a fallback element to move focus to. The `Alert` component could accept an optional `focusAfterClose` ref or manage focus internally by tracking the previously focused element before the alert was opened.
