@@ -1,0 +1,28 @@
+/*
+ * Self-hosted version of Ultraviolet fonts.
+ * Expose relative fonts instead of using CDN.
+ */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  src: url('./assets/inter/Inter-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains';
+  font-style: normal;
+  src: url('./assets/jetbrains/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  src: url('./assets/space-grotesk/SpaceGrotesk-Variable.woff2') format('woff2');
+  font-weight: 300 700;
+  font-display: swap;
+}

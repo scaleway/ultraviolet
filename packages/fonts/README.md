@@ -12,9 +12,27 @@ $ pnpm add @ultraviolet/fonts
 
 ### Usage
 
+This package provides two ways to use the fonts:
+
+#### CDN (default)
+
+Fonts are loaded from Scaleway's CDN. No font files are bundled with your application.
+
 ```js
+import '@ultraviolet/fonts'
+// or
 import '@ultraviolet/fonts/fonts.css'
 ```
+
+#### Bundled
+
+Fonts are bundled with your application and served from your own server.
+
+```js
+import '@ultraviolet/fonts/fonts-bundled.css'
+```
+
+**Note:** Vite and Next.js handle font assets natively—no additional configuration needed. For other build tools, ensure they are configured to copy font assets to your output directory.
 
 ## How to add a new font
 

@@ -24,7 +24,7 @@ const external = (id: string) => {
   return isExternal && !isBundled
 }
 
-export const defaultConfig: UserConfig = {
+export const defaultConfig = {
   build: {
     cssCodeSplit: false,
     emitAssets: true,
@@ -85,4 +85,4 @@ export const defaultConfig: UserConfig = {
     }),
     preserveDirectives(),
   ],
-}
+} as const satisfies UserConfig
