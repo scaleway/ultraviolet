@@ -207,7 +207,7 @@ export const selectedValues = style({
 export const plusTag = style({ width: theme.sizing[500] })
 
 export const multiselectStack = style({
-  height: '100%',
+  height: 'auto',
   maxWidth: '100%',
   overflow: 'hidden',
 })
