@@ -6,8 +6,8 @@ import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import { LightBulbIcon } from '@ultraviolet/icons/LightBulbIcon'
 import { cn } from '@ultraviolet/utils'
-import { useState } from 'react'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode, RefObject } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -20,6 +20,15 @@ const sentimentIcons = {
   neutral: LightBulbIcon,
   success: CheckCircleIcon,
   warning: AlertCircleIcon,
+}
+
+// `danger` and `warning` are assertive and interrupt the user, other sentiments are polite status updates.
+const sentimentRole: Record<AlertSentiment, 'alert' | 'status'> = {
+  danger: 'alert',
+  info: 'status',
+  neutral: 'status',
+  success: 'status',
+  warning: 'alert',
 }
 
 type AlertProps = {
@@ -41,6 +50,11 @@ type AlertProps = {
   disabled?: boolean
   style?: CSSProperties
   size?: 'medium' | 'small'
+  /**
+   * Element to move focus to when the alert is dismissed. When not provided,
+   * focus is restored to the element that had focus before the close button.
+   */
+  focusAfterClose?: RefObject<HTMLElement | null>
 }
 
 /**
@@ -59,20 +73,55 @@ export const Alert = ({
   'data-testid': dataTestId,
   size = 'medium',
   style,
+  focusAfterClose,
 }: AlertProps) => {
   const [opened, setOpened] = useState(true)
   const Icon = sentimentIcons[sentiment]
+  const titleId = useId()
+  const closeButtonRef = useRef<HTMLElement>(null)
+  const previousFocusRef = useRef<HTMLElement | null>(null)
+  const showClose = closable || onClose
+
+  useEffect(() => {
+    const node = closeButtonRef.current
+    const handleFocus = (event: FocusEvent) => {
+      const related = event.relatedTarget
+
+      previousFocusRef.current = related instanceof HTMLElement && document.contains(related) ? related : null
+    }
+    if (node) {
+      node.addEventListener('focus', handleFocus)
+    }
+
+    return () => {
+      if (node) {
+        node.removeEventListener('focus', handleFocus)
+      }
+    }
+  }, [showClose])
 
   if (!opened) {
     return null
   }
 
+  const handleClose = () => {
+    const fallback = focusAfterClose?.current ?? previousFocusRef.current
+
+    if (fallback && document.contains(fallback)) {
+      fallback.focus()
+    }
+    setOpened(false)
+    onClose?.()
+  }
+
   return (
     <Stack
+      aria-labelledby={title ? titleId : undefined}
       className={cn(className, alertStyle.alert({ sentiment, size }))}
       data-testid={dataTestId}
       direction="row"
       gap={1}
+      role={sentimentRole[sentiment]}
       style={style}
     >
       <Stack
@@ -100,7 +149,12 @@ export const Alert = ({
             wrap
           >
             {title ? (
-              <Text as="span" sentiment={sentiment} variant={size === 'small' ? 'bodySmallStronger' : 'bodyStronger'}>
+              <Text
+                as="span"
+                id={titleId}
+                sentiment={sentiment}
+                variant={size === 'small' ? 'bodySmallStronger' : 'bodyStronger'}
+              >
                 {title}
               </Text>
             ) : null}
@@ -125,19 +179,17 @@ export const Alert = ({
           </Button>
         ) : null}
       </Stack>
-      {closable || onClose ? (
+      {showClose ? (
         <Button
-          aria-label="close"
+          aria-label={title ? `Close ${title} alert` : 'close'}
           className={alertStyle.buttonClose}
-          onClick={() => {
-            setOpened(false)
-            onClose?.()
-          }}
+          onClick={handleClose}
+          ref={closeButtonRef}
           sentiment={sentiment}
           size="xsmall"
           variant="ghost"
         >
-          <CloseIcon sentiment="neutral" />
+          <CloseIcon aria-hidden="true" sentiment="neutral" />
         </Button>
       ) : null}
     </Stack>
