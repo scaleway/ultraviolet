@@ -1,0 +1,48 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="[Component Path]/A11y" />
+
+# [Component] - Accessibility
+
+## Description
+
+{/* Short description of the component (1-2 sentences) to help identify accessibility requirements. */}
+
+## Summary
+
+1. ✅/⚠️/❌ **Perceivable**: ... {/* what passes or fails all WCAG rules 1.x.x */}
+2. ✅/⚠️/❌ **Operable**: ... {/* what passes or fails all WCAG rules 2.x.x */}
+3. ✅/⚠️/❌ **Understandable**: ... {/* what passes or fails all WCAG rules 3.x.x */}
+4. ✅/⚠️/❌ **Robust**: ... {/* what passes or fails all WCAG rules 4.x.x */}
+
+## ARIA Pattern
+
+{/* If you found an ARIA pattern, link it here. */}
+
+## Rules
+
+{/* List ALL WCAG or ARIA rules found during the exploration with links to their documentation. If no rules apply, write "No specific rules apply to this component." */}
+
+Enforced by the component:
+
+{/* Rules that can be enforced by the component implementation */}
+
+To apply when using the component:
+
+{/* Rules that depend on how the component is used by developers */}
+
+## Accessibility issues
+
+{/* prettier-ignore */}
+{/* List issues that were found during the audit. Group them by criticity:
+
+- **Critical**: Blocks users with disabilities (keyboard traps, missing labels, no keyboard access)
+- **High**: Significant barriers (missing ARIA, poor focus management, contrast issues)
+- **Medium**: Usability issues (missing optional ARIA, inconsistent patterns)
+- **Low**: Nice to have (enhancements, edge cases)
+
+\*/}
+
+## Dependencies
+
+{/* If some accessibility issues are caused by other components that must be fixed before this one, list those components here. If there is no dependency, don't add this section. */}

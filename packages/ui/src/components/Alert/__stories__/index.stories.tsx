@@ -6,13 +6,13 @@ export default {
   title: 'UI/Feedback/Alert',
   parameters: {
     a11yStatus: {
-      perceivable: false,
+      perceivable: true,
       operable: false,
-      understandable: false,
+      understandable: true,
       robust: false,
     },
   },
-} as Meta
+} satisfies Meta<typeof Alert>
 
 export { Playground } from './Playground.stories'
 export { Title } from './Title.stories'

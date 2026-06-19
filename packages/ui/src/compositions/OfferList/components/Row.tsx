@@ -46,6 +46,7 @@ export const Row = ({
   'data-testid': dataTestId,
   style,
   badge,
+  onClick,
 }: RowProps) => {
   const {
     selectable,
@@ -151,7 +152,7 @@ export const Row = ({
         expanded={expanded ?? expandedRowIds[id]}
         highlightAnimation={highlightAnimation}
         id={id}
-        onClick={() => {
+        onClick={(localId: string) => {
           if (selectDisabled || disabled || loading) {
             return
           }
@@ -162,6 +163,8 @@ export const Row = ({
           if (selectable === 'checkbox') {
             handleChangeCheckbox()
           }
+
+          onClick?.(localId)
         }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
