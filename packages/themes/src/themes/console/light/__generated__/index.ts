@@ -426,7 +426,7 @@ export const lightTheme = {
     '0.25': '0.125rem',
     '0.5': '0.25rem',
     '1.5': '0.75rem',
-  },
+  } as const,
   theme: 'light',
   typography: {
     body: {

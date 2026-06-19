@@ -18,6 +18,7 @@ export const TagInner = ({
   copiable,
   variant,
   sentiment,
+  size,
   copyButton,
 }: TagInnerProps) => (
   <>
@@ -38,7 +39,7 @@ export const TagInner = ({
         disabled={disabled}
         onClick={onClose}
         sentiment={sentiment}
-        size="xsmall"
+        size={size}
         variant="ghost"
       >
         <CloseIcon size="small" />

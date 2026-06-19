@@ -370,6 +370,13 @@ const button = recipe({
         paddingRight: theme.space[SIZE_PADDING_KEY.xsmall],
         ...sharedSizeStyled,
       },
+      xxsmall: {
+        gap: theme.space[SIZE_GAP_KEY.xxsmall],
+        height: theme.sizing[SIZE_HEIGHT.xxsmall],
+        paddingLeft: theme.space[SIZE_PADDING_KEY.xxsmall],
+        paddingRight: theme.space[SIZE_PADDING_KEY.xxsmall],
+        ...sharedSizeStyled,
+      },
     },
     variant: {
       filled: {},

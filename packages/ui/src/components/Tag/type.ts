@@ -1,11 +1,12 @@
-import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, MouseEventHandler, ReactNode } from 'react'
+import type { Button } from '../Button'
 import type { SENTIMENTS } from './styles.css'
 
 export type TagProps = {
   isLoading?: boolean
   sentiment?: (typeof SENTIMENTS)[number]
   disabled?: boolean
-
+  size?: ComponentProps<typeof Button>['size']
   className?: string
   variant?: 'default' | 'code'
   'data-testid'?: string
@@ -26,7 +27,6 @@ export type TagProps = {
       copiable?: boolean
       copyButton?: boolean
       copyText?: string
-
       copiedText?: string
       onClose?: MouseEventHandler<HTMLButtonElement>
     }

@@ -3,6 +3,7 @@ import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 export const SENTIMENTS = ['danger', 'info', 'neutral', 'primary', 'secondary', 'success', 'warning'] as const
+export const SIZE_KEY = ['large', 'medium', 'small', 'xsmall', 'xxsmall'] as const
 
 const container = recipe({
   base: {

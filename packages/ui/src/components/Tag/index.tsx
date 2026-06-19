@@ -25,6 +25,7 @@ export const Tag = ({
   disabled,
   sentiment = 'neutral',
   variant = 'default',
+  size = 'xsmall',
   className,
   style,
   keyValue,

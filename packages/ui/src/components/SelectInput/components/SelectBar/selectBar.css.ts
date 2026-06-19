@@ -186,7 +186,7 @@ export const selectBar = recipe({
 })
 
 const selectBarTagsBase = style({
-  height: 'max-content',
+  // height: 'fit-content',
   maxWidth: maxWidthTag,
   minWidth: minWidthTag,
   width: 'fit-content',
