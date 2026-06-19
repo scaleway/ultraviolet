@@ -13,7 +13,7 @@
     "dev": "next dev --webpack",
     "export": "next export",
     "start": "next start",
-    "typecheck": "tsgo --noEmit"
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@babel/core": "8.0.1",

@@ -67,8 +67,8 @@
     "test:unit": "TZ=UTC LC_ALL=en_US.UTF-8  pnpm vitest --run ",
     "test:unit:coverage": "pnpm test:unit --coverage",
     "test:watch": "LC_ALL=en_US.UTF-8  pnpm vitest watch ",
-    "type:generate": "tsgo --declaration -p tsconfig.build.json",
-    "typecheck": "tsgo --noEmit",
+    "type:generate": "tsc --declaration -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
     "watch": "pnpm run '/^watch:.*/'",
     "watch:build": "vite build  --watch"
   },
