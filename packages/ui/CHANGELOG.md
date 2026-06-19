@@ -1,5 +1,17 @@
 # Change Log
 
+## 3.19.0
+
+### Minor Changes
+
+- [#6533](https://github.com/scaleway/ultraviolet/pull/6533) [`ea70e33`](https://github.com/scaleway/ultraviolet/commit/ea70e33ab2234f5978ee3ae1762605744ee7e6f2) Thanks [@jsulpis](https://github.com/jsulpis)! - `Filters`: add the Filters component
+
+### Patch Changes
+
+- [#6587](https://github.com/scaleway/ultraviolet/pull/6587) [`2472a8d`](https://github.com/scaleway/ultraviolet/commit/2472a8d6c5a8cdd54939bffb981f7d4682e18051) Thanks [@jsulpis](https://github.com/jsulpis)! - `MultiSelect`: fix truncated Tags in size medium
+
+- [#6580](https://github.com/scaleway/ultraviolet/pull/6580) [`f8b0bce`](https://github.com/scaleway/ultraviolet/commit/f8b0bce10b0dd9524efb42f0ec75c724a468842b) Thanks [@chambo-e](https://github.com/chambo-e)! - properly pass onClick to List in OfferListField.Row
+
 ## 3.18.2
 
 ### Patch Changes

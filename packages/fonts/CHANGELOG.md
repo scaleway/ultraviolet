@@ -1,5 +1,11 @@
 # @ultraviolet/fonts
 
+## 2.2.0
+
+### Minor Changes
+
+- [#6579](https://github.com/scaleway/ultraviolet/pull/6579) [`8e812c3`](https://github.com/scaleway/ultraviolet/commit/8e812c36bcf87e5c95730fd11f387dd4b87d4034) Thanks [@philibea](https://github.com/philibea)! - Gives users the option to self-host fonts for better privacy/control
+
 ## 2.1.7
 
 ### Patch Changes
