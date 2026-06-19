@@ -1,0 +1,237 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`filters > should render main row with filters 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1mgfhqz0 styles__x6hyh50 styles_alignItems_end_xxsmall__x6hyh5p styles_gap_1rem_xxsmall__x6hyh52p"
+      style="--_3mg8xe0: repeat(auto-fit, minmax(200px, 1fr)); --_3mg8xe1: repeat(auto-fit, minmax(200px, 1fr)); --_3mg8xe2: repeat(auto-fit, minmax(200px, 1fr)); --_3mg8xe3: repeat(auto-fit, minmax(200px, 1fr)); --_3mg8xe4: repeat(auto-fit, minmax(200px, 1fr)); --_3mg8xe5: repeat(auto-fit, minmax(200px, 1fr));"
+    >
+      <div
+        style="width: 100%;"
+      >
+        <div
+          class="styles__r3pe3n1 styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+        >
+          <label
+            class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodySmallStrong__m4c9owl style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
+            for="_r_1_"
+          >
+            Name
+          </label>
+          <div
+            class="styles__q3q8048 styles_medium__q3q8046"
+            data-disabled="false"
+            data-error="false"
+            data-readonly="false"
+            data-success="false"
+          >
+            <div
+              class="styles__q3q8041 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j"
+              data-size="medium"
+            >
+              <div
+                class="styles__r3pe3n2 styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d"
+                data-testid="search-icon"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz6 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz26"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <title>
+                    SearchIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06zM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <input
+              aria-invalid="false"
+              class="styles__q3q8049"
+              data-size="medium"
+              id="_r_1_"
+              name="name"
+              placeholder="Type to search..."
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="status"
+        class="styles__uf6pag0"
+      >
+        <div
+          aria-controls="_r_7_"
+          aria-describedby="_r_7_"
+          class="styles__w40vpo9 styles_fullWidth_true__w40vpob"
+          tabindex="-1"
+        >
+          <div
+            class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+          >
+            <label
+              class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodySmallStrong__m4c9owl style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
+              for="_r_5_"
+            >
+              Status
+            </label>
+            <div
+              aria-controls="_r_7_"
+              aria-expanded="false"
+              aria-label="Status"
+              class="selectBar__r8qe46 selectBar__r8qe45 selectBar_size_medium__r8qe4b selectBar_state_neutral__r8qe4e"
+              data-disabled="false"
+              data-readonly="false"
+              data-testid="select-input-status"
+              id="_r_5_"
+              role="combobox"
+              tabindex="0"
+            >
+              <span
+                class="selectBar__r8qe44 style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_neutral__m4c9owb style_variant_bodySmall__m4c9owk style_undefined_compound_3__m4c9ow1d style_undefined_compound_67__m4c9ow35"
+              >
+                Select status
+              </span>
+              <div
+                class="selectBar_small__r8qe43 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_0.5rem_xxsmall__toi52u3p"
+              >
+                <svg
+                  aria-label="show dropdown"
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz1i"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <title>
+                    ArrowDownIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="env"
+        class="styles__uf6pag0"
+      >
+        <div
+          aria-controls="_r_e_"
+          aria-describedby="_r_e_"
+          class="styles__w40vpo9 styles_fullWidth_true__w40vpob"
+          tabindex="-1"
+        >
+          <div
+            class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+          >
+            <label
+              class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodySmallStrong__m4c9owl style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
+              for="_r_c_"
+            >
+              Environment
+            </label>
+            <div
+              aria-controls="_r_e_"
+              aria-expanded="false"
+              aria-label="Environment"
+              class="selectBar__r8qe46 selectBar__r8qe45 selectBar_size_medium__r8qe4b selectBar_state_neutral__r8qe4e"
+              data-disabled="false"
+              data-readonly="false"
+              data-testid="select-input-env"
+              id="_r_c_"
+              role="combobox"
+              tabindex="0"
+            >
+              <span
+                class="selectBar__r8qe44 style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_neutral__m4c9owb style_variant_bodySmall__m4c9owk style_undefined_compound_3__m4c9ow1d style_undefined_compound_67__m4c9ow35"
+              >
+                Select environment
+              </span>
+              <div
+                class="selectBar_small__r8qe43 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_0.5rem_xxsmall__toi52u3p"
+              >
+                <svg
+                  aria-label="show dropdown"
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz1i"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <title>
+                    ArrowDownIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_1rem_xxsmall__toi52u3v"
+      >
+        <button
+          class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_primary__e1wcoe9 styles_size_medium__e1wcoef styles_variant_outlined__e1wcoek styles_undefined_compound_9__e1wcoeu"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              AdjustmentsHorizontalIcon
+            </title>
+            <path
+              d="M6.84615 1.80769C6.84615 1.36162 6.48454 1 6.03846 1C5.59239 1 5.23077 1.36162 5.23077 1.80769V5.03846C5.23077 5.48454 5.59239 5.84615 6.03846 5.84615C6.48454 5.84615 6.84615 5.48454 6.84615 5.03846V4.23077H14.1154C14.5615 4.23077 14.9231 3.86915 14.9231 3.42308C14.9231 2.977 14.5615 2.61538 14.1154 2.61538H6.84615V1.80769Z"
+            />
+            <path
+              d="M11.6923 6.38462C11.6923 5.93854 11.3307 5.57692 10.8846 5.57692C10.4385 5.57692 10.0769 5.93854 10.0769 6.38462V9.61539C10.0769 10.0615 10.4385 10.4231 10.8846 10.4231C11.3307 10.4231 11.6923 10.0615 11.6923 9.61539V8.80769H14.1154C14.5615 8.80769 14.9231 8.44608 14.9231 8C14.9231 7.55392 14.5615 7.19231 14.1154 7.19231H11.6923V6.38462Z"
+            />
+            <path
+              d="M6.03846 10.1538C6.48454 10.1538 6.84615 10.5155 6.84615 10.9615V11.7692H14.1154C14.5615 11.7692 14.9231 12.1308 14.9231 12.5769C14.9231 13.023 14.5615 13.3846 14.1154 13.3846H6.84615V14.1923C6.84615 14.6384 6.48454 15 6.03846 15C5.59239 15 5.23077 14.6384 5.23077 14.1923V10.9615C5.23077 10.5155 5.59239 10.1538 6.03846 10.1538Z"
+            />
+            <path
+              d="M2.80769 7.19231H9V8.80769H2.80769C2.36162 8.80769 2 8.44608 2 8C2 7.55392 2.36162 7.19231 2.80769 7.19231Z"
+            />
+            <path
+              d="M4.15385 2.61538H2.80769C2.36162 2.61538 2 2.977 2 3.42308C2 3.86915 2.36162 4.23077 2.80769 4.23077H4.15385V2.61538Z"
+            />
+            <path
+              d="M2.80769 11.7692H4.15385V13.3846H2.80769C2.36162 13.3846 2 13.023 2 12.5769C2 12.1308 2.36162 11.7692 2.80769 11.7692Z"
+            />
+          </svg>
+           All filters
+        </button>
+        <button
+          class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_primary__e1wcoe9 styles_size_medium__e1wcoef styles_variant_ghost__e1wcoej styles_undefined_compound_18__e1wcoe13"
+          type="button"
+        >
+          Clear all
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
