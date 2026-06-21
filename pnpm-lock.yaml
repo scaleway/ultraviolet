@@ -28,8 +28,8 @@ importers:
         specifier: 0.25.1
         version: 0.25.1
       '@playwright/test':
-        specifier: 1.60.0
-        version: 1.60.0
+        specifier: 1.61.0
+        version: 1.61.0
       '@scaleway/oxfmt-config':
         specifier: 1.1.3
         version: 1.1.3(oxfmt@0.54.0)
@@ -232,8 +232,8 @@ importers:
   e2e:
     devDependencies:
       '@playwright/test':
-        specifier: 1.60.0
-        version: 1.60.0
+        specifier: 1.61.0
+        version: 1.61.0
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -317,7 +317,7 @@ importers:
         version: link:../../packages/utils
       next:
         specifier: 16.2.9
-        version: 16.2.9(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.101.0)
+        version: 16.2.9(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.101.0)
       next-transpile-modules:
         specifier: 10.0.1
         version: 10.0.1
@@ -374,7 +374,7 @@ importers:
         version: link:../../packages/ui
       next:
         specifier: 16.2.9
-        version: 16.2.9(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.101.0)
+        version: 16.2.9(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.101.0)
       react:
         specifier: 19.2.7
         version: 19.2.7
@@ -591,7 +591,7 @@ importers:
         version: link:../../utils/config
       next:
         specifier: 16.2.9
-        version: 16.2.9(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.101.0)
+        version: 16.2.9(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.101.0)
       react:
         specifier: 19.2.7
         version: 19.2.7
@@ -3653,8 +3653,8 @@ packages:
     resolution: {integrity: sha512-tmmZ3lQxAe/k/+rNnXQRawJ4NjxO2hqiOLTHvWchtGZULp4RyFeh6aU4XdOYBFe2KE1oShQTv4AblOs2iOrNnQ==}
     engines: {node: '>= 10.0.0'}
 
-  '@playwright/test@1.60.0':
-    resolution: {integrity: sha512-O71yZIbAh/PxDMNGns37GHBIfrVkEVyn+AXyIa5dOTfb4/xNvRWV+Vv/NMbNCtODB/pO7vLlF2OTmMVLhmr7Ag==}
+  '@playwright/test@1.61.0':
+    resolution: {integrity: sha512-cKA5B6lpFEMyMGjxF54QihfYpB4FkEGH+qZhtArDEG+wezQAJY8Pq6C7T1SjWz+FFzt3TbyoXBQYk/0292TdJA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -5545,8 +5545,8 @@ packages:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
     engines: {node: '>=6'}
 
-  deslop-js@0.0.24:
-    resolution: {integrity: sha512-ygcRwJXCUedo+hN1L4Ysm7luo4VWOvKEz/kRKWMlFp5bAtTKeXo+8fk/hQaJKsJ/nfahiqkhlYTlrKIR/5nsQg==}
+  deslop-js@0.5.8:
+    resolution: {integrity: sha512-Vq9D2x4dAIW24zcH55DTrl3/vi13UNKfXgw0yj7ULTssZ6KOdw/oyBHtlvE94KFC9yYEhgFTrGjaqqZKvV9pwA==}
 
   detect-file@1.0.0:
     resolution: {integrity: sha512-DtCOLG98P007x7wiiOmfI0fi3eIKyWiLTGJ2MDnVi/E04lWGbf+JzrRHMm0rgIIZJGtHpKpbVgLWHrv8xXpc3Q==}
@@ -7037,8 +7037,8 @@ packages:
       vite-plus:
         optional: true
 
-  oxlint-plugin-react-doctor@0.5.7:
-    resolution: {integrity: sha512-LLOi7sQVMVPelbrds6R8po+S856Jc/y3AIiojSBc3x7Z6eeaYUlREJW2Fpfw//CSXpX0wq1XfStKIrFQFfL/ag==}
+  oxlint-plugin-react-doctor@0.5.8:
+    resolution: {integrity: sha512-L0jveKAMbqF1qAqA2Ksu8aH0/Q8FDQxLwXmHYgALa2XlsxEUuamJ+1Da2MhPWJ2ahn+ekFbnWK20qixxD+fw6A==}
     engines: {node: ^20.19.0 || >=22.13.0}
 
   oxlint-tsgolint@0.23.0:
@@ -7207,13 +7207,13 @@ packages:
   pkg-types@1.3.1:
     resolution: {integrity: sha512-/Jm5M4RvtBFVkKWRu2BLUTNP8/M2a+UwuAX+ae4770q1qVGtfjG+WTCupoZixokjmHiry8uI+dlY8KXYV5HVVQ==}
 
-  playwright-core@1.60.0:
-    resolution: {integrity: sha512-9bW6zvX/m0lEbgTKJ6YppOKx8H3VOPBMOCFh2irXFOT4BbHgrx5hPjwJYLT40Lu+4qtD36qKc/Hn56StUW57IA==}
+  playwright-core@1.61.0:
+    resolution: {integrity: sha512-caX7TrY3Ml6egyDX0WUcTHDxodl/b51y5wJOdCEA36QviK/s2g081hvmGs8eaE3DWb6NYZQ6BjO/QkNRPenoPA==}
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright@1.60.0:
-    resolution: {integrity: sha512-hheHdokM8cdqCb0lcE3s+zT4t4W+vvjpGxsZlDnikarzx8tSzMebh3UiFtgqwFwnTnjYQcsyMF8ei2mCO/tpeA==}
+  playwright@1.61.0:
+    resolution: {integrity: sha512-Z+7BeeqQPRRzklHsVFP4KTGIyMxKUmfeRA4WisM6G3/XW6nwGeX6fX9qYaDa+CiUqpOkb2f6X3nar05R3kSuJQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -7341,8 +7341,8 @@ packages:
     resolution: {integrity: sha512-aEZ9qP+/M+58x2qgfSFEWH1BxLyHe5+qkLNJOZQb5iGS017jpbRnoKhNRrXPeA6RfBrZO5wZrT9DMC1UqE1f1w==}
     engines: {node: ^20.9.0 || >=22}
 
-  react-doctor@0.5.7:
-    resolution: {integrity: sha512-m+HhlAvV7xkiJfjyIrB8ZzLPDzG9XylQQEnH1CPifAsp1OEAfU3jT/1DomVlGQYcbuUNHcDYpALtWm6I+qFAPQ==}
+  react-doctor@0.5.8:
+    resolution: {integrity: sha512-gDXDQ+48KeFq2jkVgsUhQ67oQ+kUMdnIaA+YeS9VXXZFXSg9wxY5dDxurEpILSh8RwO06W8p6uCnTR+wn5B/GA==}
     engines: {node: ^20.19.0 || >=22.13.0}
     hasBin: true
 
@@ -11284,9 +11284,9 @@ snapshots:
       '@parcel/watcher-win32-x64': 2.5.6
     optional: true
 
-  '@playwright/test@1.60.0':
+  '@playwright/test@1.61.0':
     dependencies:
-      playwright: 1.60.0
+      playwright: 1.61.0
 
   '@pnpm/config.env-replace@1.1.0': {}
 
@@ -13263,7 +13263,7 @@ snapshots:
 
   dequal@2.0.3: {}
 
-  deslop-js@0.0.24:
+  deslop-js@0.5.8:
     dependencies:
       '@oxc-project/types': 0.132.0
       fast-glob: 3.3.3
@@ -14855,7 +14855,7 @@ snapshots:
     dependencies:
       enhanced-resolve: 5.24.0
 
-  next@16.2.9(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.101.0):
+  next@16.2.9(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.61.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.101.0):
     dependencies:
       '@next/env': 16.2.9
       '@swc/helpers': 0.5.15
@@ -14875,7 +14875,7 @@ snapshots:
       '@next/swc-win32-arm64-msvc': 16.2.9
       '@next/swc-win32-x64-msvc': 16.2.9
       '@opentelemetry/api': 1.9.1
-      '@playwright/test': 1.60.0
+      '@playwright/test': 1.61.0
       sass: 1.101.0
       sharp: 0.34.5
     transitivePeerDependencies:
@@ -15096,7 +15096,7 @@ snapshots:
       '@oxfmt/binding-win32-ia32-msvc': 0.54.0
       '@oxfmt/binding-win32-x64-msvc': 0.54.0
 
-  oxlint-plugin-react-doctor@0.5.7:
+  oxlint-plugin-react-doctor@0.5.8:
     dependencies:
       '@typescript-eslint/types': 8.61.1
       eslint-scope: 9.1.2
@@ -15297,11 +15297,11 @@ snapshots:
       mlly: 1.8.2
       pathe: 2.0.3
 
-  playwright-core@1.60.0: {}
+  playwright-core@1.61.0: {}
 
-  playwright@1.60.0:
+  playwright@1.61.0:
     dependencies:
-      playwright-core: 1.60.0
+      playwright-core: 1.61.0
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -15477,19 +15477,19 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  react-doctor@0.5.7(eslint@10.5.0(jiti@2.7.0))(oxlint-tsgolint@0.23.0):
+  react-doctor@0.5.8(eslint@10.5.0(jiti@2.7.0))(oxlint-tsgolint@0.23.0):
     dependencies:
       '@babel/code-frame': 7.29.7
       '@sentry/node': 10.58.0
       agent-install: 0.0.5
       conf: 15.1.0
       confbox: 0.2.4
-      deslop-js: 0.0.24
+      deslop-js: 0.5.8
       eslint-plugin-react-hooks: 7.1.1(eslint@10.5.0(jiti@2.7.0))
       jiti: 2.7.0
       magicast: 0.5.3
       oxlint: 1.66.0(oxlint-tsgolint@0.23.0)
-      oxlint-plugin-react-doctor: 0.5.7
+      oxlint-plugin-react-doctor: 0.5.8
       prompts: 2.4.2
       typescript: 6.0.3
       vscode-languageserver: 9.0.1
@@ -15556,7 +15556,7 @@ snapshots:
       preact: 10.29.2
       prompts: 2.4.2
       react: 19.2.7
-      react-doctor: 0.5.7(eslint@10.5.0(jiti@2.7.0))(oxlint-tsgolint@0.23.0)
+      react-doctor: 0.5.8(eslint@10.5.0(jiti@2.7.0))(oxlint-tsgolint@0.23.0)
       react-dom: 19.2.7(react@19.2.7)
       react-grab: 0.1.47(react@19.2.7)
     optionalDependencies:
