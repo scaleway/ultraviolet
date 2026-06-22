@@ -26,13 +26,14 @@ export default {
       return (
         <Form errors={mockErrors} methods={methods} onSubmit={() => {}}>
           <Stack gap={2}>
-            <div
+            <Stack
+              gap={2}
               style={{
                 width: '250px',
               }}
             >
               <ChildStory />
-            </div>
+            </Stack>
             <Stack gap={1}>
               <Text as="p" variant="bodyStrong">
                 Form input values:

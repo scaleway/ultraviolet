@@ -182,6 +182,7 @@ export const NumberInput = forwardRef(
                   max={max}
                   min={min}
                   name={name}
+                  inputMode={Number.isInteger(step) ? 'numeric' : 'decimal'}
                   onBlur={event => {
                     if (value && value > max) {
                       onChange?.(max)
@@ -191,10 +192,13 @@ export const NumberInput = forwardRef(
                     onBlur?.(event)
                   }}
                   onChange={
+                    //  onChange is not trigger with a string when type=number, so you can't validate "string" value
                     onChange
                       ? event => {
-                          const newNumber = Number.parseFloat(event.target.value)
-                          onChange(Number.isNaN(newNumber) ? null : newNumber)
+                          const { target } = event
+                          if (!Number.isNaN(target.valueAsNumber)) {
+                            onChange(target.valueAsNumber)
+                          }
                         }
                       : undefined
                   }

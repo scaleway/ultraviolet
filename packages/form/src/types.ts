@@ -11,11 +11,11 @@ import type {
   Validate,
 } from 'react-hook-form'
 
+/**
+ * this type is used by the packages/form/src/providers/ErrorContext/index.tsx
+ * should be migrate
+ */
 export type MetaField = {
-  /**
-   * @deprecated this field is not relevant, use the `value` instead to check what you want
-   */
-  isInteger?: number | string
   min?: number | string
   max?: number | string
   minLength?: number
@@ -48,8 +48,9 @@ export type FormErrors = {
 export type BaseFieldProps<
   TFieldValues extends FieldValues = FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  ValueType extends FieldValues[TFieldName] = FieldValues[TFieldName],
 > = {
-  name: TFieldName
+  name: TFieldValues[TFieldName] extends ValueType ? TFieldName : never
   required?: boolean
   validate?: Record<string, Validate<FieldPathValue<TFieldValues, TFieldName>, TFieldValues>>
   defaultValue?: PathValue<TFieldValues, Path<TFieldValues>>
