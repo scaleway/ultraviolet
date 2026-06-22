@@ -32,7 +32,7 @@ export const CodeEditor = ({
   copyButton,
   id,
   helper,
-  onClick,
+  onFocus,
   labelDescription,
   expandableHeight,
   hideText = 'Hide',
@@ -73,7 +73,7 @@ export const CodeEditor = ({
         height={expandableEnabled ? undefined : height}
         id={id}
         onBlur={onBlur}
-        onClick={onClick}
+        onFocus={onFocus}
         onChange={onChange}
         onUpdate={() => {
           if (disabled) {
