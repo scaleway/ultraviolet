@@ -326,7 +326,7 @@ importers:
         version: 19.2.7(react@19.2.7)
       react-schemaorg:
         specifier: 2.0.1
-        version: 2.0.1(react@19.2.7)(schema-dts@2.0.0(typescript@7.0.1-rc))(typescript@7.0.1-rc)
+        version: 2.0.1(react@19.2.7)(schema-dts@2.0.0(typescript@6.0.3))(typescript@6.0.3)
       react-syntax-highlighter:
         specifier: 16.1.1
         version: 16.1.1(react@19.2.7)
@@ -335,7 +335,10 @@ importers:
         version: 1.101.0
       schema-dts:
         specifier: 2.0.0
-        version: 2.0.0(typescript@7.0.1-rc)
+        version: 2.0.0(typescript@6.0.3)
+      typescript:
+        specifier: npm:typescript@6.0.3
+        version: 6.0.3
 
   examples/next-app-router:
     devDependencies:
@@ -379,8 +382,8 @@ importers:
         specifier: 19.2.7
         version: 19.2.7(react@19.2.7)
       typescript:
-        specifier: 7.0.1-rc
-        version: 7.0.1-rc
+        specifier: npm:typescript@6.0.3
+        version: 6.0.3
 
   examples/vite:
     devDependencies:
@@ -15614,11 +15617,11 @@ snapshots:
       - supports-color
       - vite
 
-  react-schemaorg@2.0.1(react@19.2.7)(schema-dts@2.0.0(typescript@7.0.1-rc))(typescript@7.0.1-rc):
+  react-schemaorg@2.0.1(react@19.2.7)(schema-dts@2.0.0(typescript@6.0.3))(typescript@6.0.3):
     dependencies:
       react: 19.2.7
-      schema-dts: 2.0.0(typescript@7.0.1-rc)
-      typescript: 7.0.1-rc
+      schema-dts: 2.0.0(typescript@6.0.3)
+      typescript: 6.0.3
 
   react-syntax-highlighter@16.1.1(react@19.2.7):
     dependencies:
@@ -15895,13 +15898,13 @@ snapshots:
 
   scheduler@0.27.0: {}
 
-  schema-dts-lib@1.0.0(typescript@7.0.1-rc):
+  schema-dts-lib@1.0.0(typescript@6.0.3):
     dependencies:
-      typescript: 7.0.1-rc
+      typescript: 6.0.3
 
-  schema-dts@2.0.0(typescript@7.0.1-rc):
+  schema-dts@2.0.0(typescript@6.0.3):
     dependencies:
-      schema-dts-lib: 1.0.0(typescript@7.0.1-rc)
+      schema-dts-lib: 1.0.0(typescript@6.0.3)
     transitivePeerDependencies:
       - typescript
 
