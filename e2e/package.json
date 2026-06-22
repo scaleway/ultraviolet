@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsgo -b && vite build",
+    "build": "tsc -b && vite build",
     "e2e": "playwright test",
     "e2e:debug": "playwright test --ui",
     "preview": "vite preview",
@@ -24,7 +24,7 @@
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "react-router-dom": "7.18.0",
-    "typescript": "6.0.3",
+    "typescript": "7.0.1-rc",
     "vite": "8.0.16"
   }
 }

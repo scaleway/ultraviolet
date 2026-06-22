@@ -19,8 +19,7 @@
   ],
   "type": "module",
   "scripts": {
-    "typecheck": "tsgo --noEmit",
-    "typecheck:go": "tsgo --noEmit"
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@repo/config": "workspace:*",

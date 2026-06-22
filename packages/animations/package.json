@@ -35,8 +35,8 @@
     "test:unit": "vitest --run",
     "test:unit:coverage": "pnpm test:unit --coverage",
     "test:watch": "vitest",
-    "type:generate": "tsgo --declaration -p tsconfig.build.json",
-    "typecheck": "tsgo --noEmit"
+    "type:generate": "tsc --declaration -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@repo/config": "workspace:*",

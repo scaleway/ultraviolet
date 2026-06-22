@@ -6,7 +6,7 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "typecheck": "tsgo --noEmit"
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@scaleway/regex": "6.0.2",
@@ -22,6 +22,6 @@
     "next": "16.2.9",
     "react": "19.2.7",
     "react-dom": "19.2.7",
-    "typescript": "6.0.3"
+    "typescript": "npm:typescript@6.0.3"
   }
 }

@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsgo -b && vite build",
+    "build": "tsc -b && vite build",
     "preview": "vite preview",
     "start": "vite",
-    "typecheck": "tsgo --noEmit"
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/react": "19.2.17",
@@ -18,7 +18,7 @@
     "@vitejs/plugin-react": "6.0.2",
     "react": "19.2.7",
     "react-dom": "19.2.7",
-    "typescript": "6.0.3",
+    "typescript": "7.0.1-rc",
     "vite": "8.0.16"
   }
 }
