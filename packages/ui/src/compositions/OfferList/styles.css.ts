@@ -37,7 +37,7 @@ const bannerText = recipe({
   base: {
     border: `1px solid ${theme.colors.neutral.border}`,
     borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
-    borderTopColor: 'transparent',
+    borderTopWidth: 0,
     marginTop: `calc((${theme.space[2]} * -1) - 1px)`,
     paddingBlock: theme.space['0.5'],
     paddingInline: theme.space[1],
@@ -55,13 +55,13 @@ const bannerText = recipe({
     {
       style: {
         border: `1px solid ${theme.colors.primary.border}`,
-        borderTopColor: 'transparent',
+        borderTopWidth: 0,
       },
       variants: { disabled: false, primaryBorder: true },
     },
     {
       style: {
-        borderTopColor: 'transparent',
+        borderTopWidth: 0,
       },
       variants: { disabled: true, primaryBorder: true },
     },
@@ -80,9 +80,7 @@ const bannerText = recipe({
     primaryBorder: {
       false: {
         border: `1px solid ${theme.colors.neutral.border}`,
-        selectors: {
-          '&&': { borderTop: '1px solid transparent' },
-        },
+        borderTopWidth: 0,
       },
     },
     sentiment: Object.fromEntries(SENTIMENTS.map(sentiment => [sentiment, {}])),
@@ -97,6 +95,11 @@ const bannerCell = style({
   width: '100%',
   borderBottom: '1px solid transparent',
   transition: 'box-shadow 200ms ease, border-color 200ms ease',
+  selectors: {
+    '&&': {
+      borderInline: 'none', // Need to add specificity to overload List.Cell style
+    },
+  },
 })
 
 const bannerStack = recipe({
