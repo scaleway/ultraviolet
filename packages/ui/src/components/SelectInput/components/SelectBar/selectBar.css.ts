@@ -30,6 +30,8 @@ export const selectbarState = styleVariants({
 export const placeholder = style({
   alignSelf: 'center',
   userSelect: 'none',
+  textOverflow: 'ellipsis',
+  overflow: 'hidden',
 })
 
 function capitalizeFirstLetter(string: string) {

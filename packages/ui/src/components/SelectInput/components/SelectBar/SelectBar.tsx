@@ -232,6 +232,7 @@ const SelectBar = ({
             prominence="weak"
             sentiment="neutral"
             variant={textVariant}
+            whiteSpace="nowrap"
           >
             {placeholder}
           </Text>
