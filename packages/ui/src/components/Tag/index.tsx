@@ -1,10 +1,15 @@
 'use client'
 
 import { useClipboard } from '@scaleway/use-clipboard'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
+import { CopyContentIcon } from '@ultraviolet/icons/CopyContentIcon'
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
+import { Loader } from '../Loader'
+import { Separator } from '../Separator'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-import { TagInner } from './TagInner'
 import type { TagProps } from './type'
 import { tagStyle } from './styles.css'
 
@@ -39,111 +44,86 @@ export const Tag = ({
       return children.filter(child => typeof child === 'string').join('')
     }
 
+    if (typeof children === 'number') {
+      return children.toString()
+    }
+
+    if (keyValue) {
+      return `${keyValue.key}:${keyValue.value}`
+    }
+
     return ''
-  }, [children])
+  }, [children, keyValue])
 
   const [isCopied, setCopied] = useClipboard(stringChildren, {
     successDuration: COPY_DURATION,
   })
 
-  if (keyValue) {
-    return (
-      <>
-        <span
-          className={cn(
-            className,
-            tagStyle.container({
-              disabled,
-              sentiment,
-              isKey: true,
-              isKeyValue: true,
-            }),
-          )}
-          data-testid={dataTestId}
-          style={style}
-        >
-          <TagInner
-            copyButton={copyButton}
-            disabled={disabled}
-            isLoading={isLoading}
-            onClose={onClose}
-            variant={variant}
-          >
-            {keyValue.key}
-          </TagInner>
-        </span>
-        <span
-          className={cn(
-            className,
-            tagStyle.container({
-              disabled,
-              sentiment,
-              isValue: true,
-              isKeyValue: true,
-            }),
-          )}
-          data-testid={dataTestId}
-          style={style}
-        >
-          <TagInner
-            copyButton={copyButton}
-            disabled={disabled}
-            isLoading={isLoading}
-            onClose={onClose}
-            variant={variant}
-          >
-            {keyValue.value}
-          </TagInner>
-        </span>
-      </>
-    )
-  }
+  const isCopiable = copiable && !disabled
+  const TagInner = copiable ? 'button' : 'span'
+  const copyTextTooltip = isCopied ? copiedText : copyText
 
-  if (copiable && !disabled) {
-    return (
-      <Tooltip text={isCopied ? copiedText : copyText}>
-        <button
+  return (
+    <Tooltip text={isCopiable ? copyTextTooltip : null}>
+      <Stack direction="row">
+        <TagInner
           className={cn(
             className,
             tagStyle.container({
-              copiable,
               disabled,
               sentiment,
               closable: !!onClose,
+              copiable: copiable && !disabled,
             }),
           )}
           data-testid={dataTestId}
-          disabled={disabled}
+          style={style}
           onClick={() => {
-            setCopied().catch(() => null)
+            if (isCopiable) {
+              setCopied().catch(() => null)
+            }
           }}
-          type="button"
         >
-          <TagInner
-            copiable
-            copyButton={copyButton}
+          <Text
+            aria-disabled={disabled}
+            as="span"
+            className={tagStyle.text}
+            oneLine
+            variant={variant === 'code' ? 'code' : 'caption'}
+            sentiment={disabled ? 'neutral' : sentiment}
             disabled={disabled}
-            isLoading={isLoading}
-            onClose={onClose}
-            sentiment={sentiment}
-            variant={variant}
           >
-            {children}
-          </TagInner>
-        </button>
-      </Tooltip>
-    )
-  }
-
-  return (
-    <span
-      className={cn(className, tagStyle.container({ disabled, sentiment, closable: !!onClose }))}
-      data-testid={dataTestId}
-      style={style}
-    >
-      <TagInner disabled={disabled} isLoading={isLoading} onClose={onClose} sentiment={sentiment} variant={variant}>
-        {children}
-      </TagInner>
-    </span>
+            {keyValue ? (
+              <Stack direction="row" gap={1}>
+                {keyValue.key}
+                <Separator
+                  sentiment={disabled ? 'neutral' : sentiment}
+                  direction="vertical"
+                  thickness={1}
+                  className={tagStyle.separator}
+                />
+                {keyValue.value}
+              </Stack>
+            ) : (
+              children
+            )}
+          </Text>
+          {copiable && copyButton && !isLoading ? <CopyContentIcon size="xsmall" /> : null}
+          {isLoading ? <Loader active size="small" /> : null}
+        </TagInner>
+        {onClose ? (
+          <button
+            aria-label="Close tag"
+            data-testid="close-tag"
+            disabled={disabled}
+            onClick={onClose}
+            type="button"
+            className={tagStyle.container({ disabled, isButton: true, sentiment })}
+          >
+            <CloseIcon size="small" />
+          </button>
+        ) : null}
+      </Stack>
+    </Tooltip>
   )
 }

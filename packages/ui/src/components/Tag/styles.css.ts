@@ -40,8 +40,8 @@ const container = recipe({
     },
     closable: {
       true: {
-        paddingRight: theme.space[0.5],
         gap: theme.space[0.5],
+        borderRadius: `${theme.radii.default} 0 0 ${theme.radii.default}`,
       },
     },
 
@@ -50,32 +50,24 @@ const container = recipe({
         sentiment,
         {
           background: theme.colors[sentiment].background,
-          border: `solid 1px ${sentiment === 'neutral' ? theme.colors.neutral.border : theme.colors[sentiment].background}`,
+          border: `solid 1px ${theme.colors[sentiment].border}`,
           color: theme.colors[sentiment].text,
         },
       ]),
     ),
-    isKey: {
-      true: {
-        borderRadius: `${theme.radii.default} 0 0 ${theme.radii.default}`,
-      },
-    },
-    isValue: {
+    isButton: {
       true: {
         borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
+        width: theme.sizing[300],
       },
-    },
-    isKeyValue: {
-      true: {},
     },
   },
   defaultVariants: {
     copiable: false,
     disabled: false,
     sentiment: 'neutral',
-    isValue: false,
-    isKey: false,
-    isKeyValue: false,
+    isButton: false,
+    closable: false,
   },
   compoundVariants: [
     ...SENTIMENTS.map(sentiment => ({
@@ -85,21 +77,14 @@ const container = recipe({
             background: theme.colors[sentiment].backgroundHover,
             borderColor: theme.colors[sentiment][sentiment === 'neutral' ? 'borderStrongHover' : 'borderHover'],
           },
+          '&:active': {
+            boxShadow: theme.shadows[
+              `focus${sentiment.charAt(0).toUpperCase() + sentiment.slice(1)}` as keyof typeof theme.shadows
+            ] as string,
+          },
         },
       },
       variants: { copiable: true, sentiment, disabled: false },
-    })),
-    ...SENTIMENTS.map(sentiment => ({
-      style: {
-        borderWidth: '1px 0 1px 1px',
-      },
-      variants: { isKey: true, sentiment },
-    })),
-    ...SENTIMENTS.map(sentiment => ({
-      style: {
-        borderColor: theme.colors[sentiment]['border'],
-      },
-      variants: { isKeyValue: true, sentiment, disabled: false },
     })),
     ...SENTIMENTS.map(sentiment => ({
       style: {
@@ -111,9 +96,16 @@ const container = recipe({
     })),
     ...SENTIMENTS.map(sentiment => ({
       style: {
-        borderWidth: '1px 0 1px 1px',
+        background: theme.colors[sentiment].background,
+        cursor: 'pointer',
+        borderLeft: 'none',
+        selectors: {
+          '&:hover': {
+            background: theme.colors[sentiment].backgroundHover,
+          },
+        },
       },
-      variants: { isKey: true, sentiment, disabled: true },
+      variants: { isButton: true, sentiment, disabled: false },
     })),
   ],
 })
@@ -122,4 +114,6 @@ const text = style({
   maxWidth: '14.5rem',
 })
 
-export const tagStyle = { container, text }
+const separator = style({})
+
+export const tagStyle = { container, text, separator }

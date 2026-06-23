@@ -5,15 +5,19 @@ exports[`tag > renders correctly 1`] = `
   <div
     data-testid="testing"
   >
-    <span
-      class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6"
+    <div
+      class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
     >
       <span
-        class="styles__d6zknp1d style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style__m4c9ow3e"
+        class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6"
       >
-        test
+        <span
+          class="styles__d6zknpx style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32 style__m4c9ow3e"
+        >
+          test
+        </span>
       </span>
-    </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -23,15 +27,19 @@ exports[`tag > renders correctly colored 1`] = `
   <div
     data-testid="testing"
   >
-    <span
-      class="styles__d6zknp0 styles_sentiment_primary__d6zknp7"
+    <div
+      class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
     >
       <span
-        class="styles__d6zknp1d style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style__m4c9ow3e"
+        class="styles__d6zknp0 styles_sentiment_primary__d6zknp7"
       >
-        test
+        <span
+          class="styles__d6zknpx style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_primary__m4c9owc style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_40__m4c9ow2e style__m4c9ow3e"
+        >
+          test
+        </span>
       </span>
-    </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -41,15 +49,19 @@ exports[`tag > renders correctly disabled 1`] = `
   <div
     data-testid="testing"
   >
-    <span
-      class="styles__d6zknp0 styles_disabled_true__d6zknp2 styles_sentiment_neutral__d6zknp6 styles_undefined_compound_23__d6zknp11"
+    <div
+      class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
     >
       <span
-        class="styles__d6zknp1d style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style__m4c9ow3e"
+        class="styles__d6zknp0 styles_disabled_true__d6zknp2 styles_sentiment_neutral__d6zknp6 styles_undefined_compound_9__d6zknpl"
       >
-        test
+        <span
+          class="styles__d6zknpx style__m4c9ow0 style_disabled_true__m4c9ow1 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_28__m4c9ow22 style__m4c9ow3e"
+        >
+          test
+        </span>
       </span>
-    </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -59,15 +71,19 @@ exports[`tag > renders correctly neutral 1`] = `
   <div
     data-testid="testing"
   >
-    <span
-      class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6"
+    <div
+      class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
     >
       <span
-        class="styles__d6zknp1d style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style__m4c9ow3e"
+        class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6"
       >
-        test
+        <span
+          class="styles__d6zknpx style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32 style__m4c9ow3e"
+        >
+          test
+        </span>
       </span>
-    </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -77,40 +93,18 @@ exports[`tag > renders correctly with code variant 1`] = `
   <div
     data-testid="testing"
   >
-    <span
-      class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6"
+    <div
+      class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
     >
       <span
-        class="styles__d6zknp1d style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_code__m4c9owv style_undefined_compound_0__m4c9ow1a style__m4c9ow3e"
-      >
-        test
-      </span>
-    </span>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`tag > renders correctly with copiable 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <div
-      aria-controls="_r_8_"
-      aria-describedby="_r_8_"
-      class="styles__w40vpo9"
-      tabindex="0"
-    >
-      <button
-        class="styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp6 styles_undefined_compound_2__d6zknpg"
-        type="button"
+        class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6"
       >
         <span
-          class="styles__d6zknp1d style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style__m4c9ow3e"
+          class="styles__d6zknpx style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_code__m4c9owv style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32 style__m4c9ow3e"
         >
           test
         </span>
-      </button>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -122,41 +116,44 @@ exports[`tag > renders correctly with copiable and copy button 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="_r_a_"
-      aria-describedby="_r_a_"
+      aria-controls="_r_m_"
+      aria-describedby="_r_m_"
       class="styles__w40vpo9"
       tabindex="0"
     >
-      <button
-        class="styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp6 styles_undefined_compound_2__d6zknpg"
-        type="button"
+      <div
+        class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
       >
-        <span
-          class="styles__d6zknp1d style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style__m4c9ow3e"
+        <button
+          class="styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp6 styles_undefined_compound_2__d6zknpe"
         >
-          test
-        </span>
-        <svg
-          class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzi uv_icons_1sbwqkz1n"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
-        >
-          <title>
-            CopyContentIcon
-          </title>
-          <path
-            clip-rule="evenodd"
-            d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
-            fill-rule="evenodd"
-          />
-          <path
-            clip-rule="evenodd"
-            d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
+          <span
+            class="styles__d6zknpx style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32 style__m4c9ow3e"
+          >
+            test
+          </span>
+          <svg
+            class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzi uv_icons_1sbwqkz1n"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              CopyContentIcon
+            </title>
+            <path
+              clip-rule="evenodd"
+              d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -167,30 +164,34 @@ exports[`tag > renders correctly with icon 1`] = `
   <div
     data-testid="testing"
   >
-    <span
-      class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6"
+    <div
+      class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
     >
       <span
-        class="styles__d6zknp1d style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style__m4c9ow3e"
+        class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6"
       >
-        <svg
-          class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
+        <span
+          class="styles__d6zknpx style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32 style__m4c9ow3e"
         >
-          <title>
-            LockIcon
-          </title>
-          <path
-            clip-rule="evenodd"
-            d="M8 1C6.067 1 4.5 2.567 4.5 4.5L4.5 7C3.67157 7 3 7.67157 3 8.5V13.5C3 14.3284 3.67157 15 4.5 15H11.5C12.3284 15 13 14.3284 13 13.5V8.5C13 7.67157 12.3284 7 11.5 7V4.5C11.5 2.567 9.933 1 8 1ZM10 7V4.5C10 3.39543 9.10457 2.5 8 2.5C6.89543 2.5 6 3.39543 6 4.5V7H10Z"
-            fill-rule="evenodd"
-          />
-        </svg>
-        test
+          <svg
+            class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              LockIcon
+            </title>
+            <path
+              clip-rule="evenodd"
+              d="M8 1C6.067 1 4.5 2.567 4.5 4.5L4.5 7C3.67157 7 3 7.67157 3 8.5V13.5C3 14.3284 3.67157 15 4.5 15H11.5C12.3284 15 13 14.3284 13 13.5V8.5C13 7.67157 12.3284 7 11.5 7V4.5C11.5 2.567 9.933 1 8 1ZM10 7V4.5C10 3.39543 9.10457 2.5 8 2.5C6.89543 2.5 6 3.39543 6 4.5V7H10Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          test
+        </span>
       </span>
-    </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -200,47 +201,51 @@ exports[`tag > renders correctly with isLoading 1`] = `
   <div
     data-testid="testing"
   >
-    <span
-      class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6"
+    <div
+      class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
     >
       <span
-        class="styles__d6zknp1d style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style__m4c9ow3e"
+        class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6"
       >
-        test
+        <span
+          class="styles__d6zknpx style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32 style__m4c9ow3e"
+        >
+          test
+        </span>
+        <svg
+          aria-label="Loading"
+          aria-valuemax="100"
+          aria-valuemin="0"
+          aria-valuenow="20"
+          aria-valuetext="20%"
+          class="styles__tkulld2"
+          role="progressbar"
+          style="height: 1rem; width: 1rem;"
+          viewBox="0 0 100 100"
+        >
+          <circle
+            class="styles__tkulld1"
+            cx="50"
+            cy="50"
+            fill="none"
+            r="42"
+            stroke-width="16"
+          />
+          <circle
+            class="styles__tkulld3"
+            cx="50"
+            cy="50"
+            fill="none"
+            r="42"
+            stroke="#8c40ef"
+            stroke-dasharray="263.89378290154264"
+            stroke-dashoffset="211.11502632123413"
+            stroke-linecap="round"
+            stroke-width="16"
+          />
+        </svg>
       </span>
-      <svg
-        aria-label="Loading"
-        aria-valuemax="100"
-        aria-valuemin="0"
-        aria-valuenow="20"
-        aria-valuetext="20%"
-        class="styles__tkulld2"
-        role="progressbar"
-        style="height: 1rem; width: 1rem;"
-        viewBox="0 0 100 100"
-      >
-        <circle
-          class="styles__tkulld1"
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke-width="16"
-        />
-        <circle
-          class="styles__tkulld3"
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="#8c40ef"
-          stroke-dasharray="263.89378290154264"
-          stroke-dashoffset="211.11502632123413"
-          stroke-linecap="round"
-          stroke-width="16"
-        />
-      </svg>
-    </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -250,24 +255,29 @@ exports[`tag > renders correctly with key-value variant 1`] = `
   <div
     data-testid="testing"
   >
-    <span
-      class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6 styles_isKey_true__d6zknpb styles_isKeyValue_true__d6zknpd styles_undefined_compound_9__d6zknpn styles_undefined_compound_16__d6zknpu"
+    <div
+      class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
     >
       <span
-        class="styles__d6zknp1d style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style__m4c9ow3e"
+        class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6"
       >
-        key
+        <span
+          class="styles__d6zknpx style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32 style__m4c9ow3e"
+        >
+          <div
+            class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_gap_0.5rem_xxsmall__toi52u3p"
+          >
+            key
+            <hr
+              aria-orientation="vertical"
+              class="styles__d6zknpy styles__bu43fbb styles_direction_vertical__bu43fbd styles_sentiment_neutral__bu43fbi"
+              style="--bu43fb0: 1px;"
+            />
+            value
+          </div>
+        </span>
       </span>
-    </span>
-    <span
-      class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6 styles_isValue_true__d6zknpc styles_isKeyValue_true__d6zknpd styles_undefined_compound_16__d6zknpu"
-    >
-      <span
-        class="styles__d6zknp1d style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style__m4c9ow3e"
-      >
-        value
-      </span>
-    </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -277,17 +287,21 @@ exports[`tag > renders correctly with onClose 1`] = `
   <div
     data-testid="testing"
   >
-    <span
-      class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6 styles_closable_true__d6zknp3"
+    <div
+      class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
     >
       <span
-        class="styles__d6zknp1d style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style__m4c9ow3e"
+        class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6 styles_closable_true__d6zknp3"
       >
-        test
+        <span
+          class="styles__d6zknpx style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32 style__m4c9ow3e"
+        >
+          test
+        </span>
       </span>
       <button
         aria-label="Close tag"
-        class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_xsmall__e1wcoeh styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+        class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6 styles_isButton_true__d6zknpb styles_undefined_compound_16__d6zknps"
         data-testid="close-tag"
         type="button"
       >
@@ -305,7 +319,221 @@ exports[`tag > renders correctly with onClose 1`] = `
           />
         </svg>
       </button>
-    </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tag > renders correctly with onClose and key-value 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
+    >
+      <span
+        class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6 styles_closable_true__d6zknp3"
+      >
+        <span
+          class="styles__d6zknpx style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32 style__m4c9ow3e"
+        >
+          <div
+            class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_gap_0.5rem_xxsmall__toi52u3p"
+          >
+            myKey
+            <hr
+              aria-orientation="vertical"
+              class="styles__d6zknpy styles__bu43fbb styles_direction_vertical__bu43fbd styles_sentiment_neutral__bu43fbi"
+              style="--bu43fb0: 1px;"
+            />
+            myValue
+          </div>
+        </span>
+      </span>
+      <button
+        aria-label="Close tag"
+        class="styles__d6zknp0 styles_sentiment_neutral__d6zknp6 styles_isButton_true__d6zknpb styles_undefined_compound_16__d6zknps"
+        data-testid="close-tag"
+        type="button"
+      >
+        <svg
+          class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <title>
+            CloseIcon
+          </title>
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tag > should not close with onClose and disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
+    >
+      <span
+        class="styles__d6zknp0 styles_disabled_true__d6zknp2 styles_sentiment_neutral__d6zknp6 styles_closable_true__d6zknp3 styles_undefined_compound_9__d6zknpl"
+      >
+        <span
+          class="styles__d6zknpx style__m4c9ow0 style_disabled_true__m4c9ow1 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_28__m4c9ow22 style__m4c9ow3e"
+        >
+          test
+        </span>
+      </span>
+      <button
+        aria-label="Close tag"
+        class="styles__d6zknp0 styles_disabled_true__d6zknp2 styles_sentiment_neutral__d6zknp6 styles_isButton_true__d6zknpb styles_undefined_compound_9__d6zknpl"
+        data-testid="close-tag"
+        disabled=""
+        type="button"
+      >
+        <svg
+          class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <title>
+            CloseIcon
+          </title>
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tag > should not copy with copiable and disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
+    >
+      <button
+        class="styles__d6zknp0 styles_disabled_true__d6zknp2 styles_sentiment_neutral__d6zknp6 styles_undefined_compound_9__d6zknpl"
+      >
+        <span
+          class="styles__d6zknpx style__m4c9ow0 style_disabled_true__m4c9ow1 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_28__m4c9ow22 style__m4c9ow3e"
+        >
+          test
+        </span>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tag > works correctly with copiable - number children 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="_r_g_"
+      aria-describedby="_r_g_"
+      class="styles__w40vpo9"
+      tabindex="0"
+    >
+      <div
+        class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
+      >
+        <button
+          class="styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp6 styles_undefined_compound_2__d6zknpe"
+        >
+          <span
+            class="styles__d6zknpx style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32 style__m4c9ow3e"
+          >
+            3
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tag > works correctly with copiable 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="_r_e_"
+      aria-describedby="_r_e_"
+      class="styles__w40vpo9"
+      tabindex="0"
+    >
+      <div
+        class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
+      >
+        <button
+          class="styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp6 styles_undefined_compound_2__d6zknpe"
+        >
+          <span
+            class="styles__d6zknpx style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32 style__m4c9ow3e"
+          >
+            test
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tag > works correctly with copiable and key-value 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="_r_u_"
+      aria-describedby="_r_u_"
+      class="styles__w40vpo9"
+      tabindex="0"
+    >
+      <div
+        class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
+      >
+        <button
+          class="styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp6 styles_undefined_compound_2__d6zknpe"
+        >
+          <span
+            class="styles__d6zknpx style__m4c9ow0 style_oneLine_true__m4c9ow3 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_caption__m4c9owp style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32 style__m4c9ow3e"
+          >
+            <div
+              class="styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j styles_gap_0.5rem_xxsmall__toi52u3p"
+            >
+              myKey
+              <hr
+                aria-orientation="vertical"
+                class="styles__d6zknpy styles__bu43fbb styles_direction_vertical__bu43fbd styles_sentiment_neutral__bu43fbi"
+                style="--bu43fb0: 1px;"
+              />
+              myValue
+            </div>
+          </span>
+        </button>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
