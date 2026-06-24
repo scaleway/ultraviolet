@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.19.1
+
+### Patch Changes
+
+- [#6541](https://github.com/scaleway/ultraviolet/pull/6541) [`bf34e64`](https://github.com/scaleway/ultraviolet/commit/bf34e6491c4fd5f8756a2ee0a17d471ca4c9d7d0) Thanks [@lisalupi](https://github.com/lisalupi)! - `TextArea`: new prop `size`
+
+- [#6551](https://github.com/scaleway/ultraviolet/pull/6551) [`44e89ac`](https://github.com/scaleway/ultraviolet/commit/44e89ac5c4c41cc02cb18e5a70dbbf24cae0507b) Thanks [@lisalupi](https://github.com/lisalupi)! - `OfferList`: fix issues with banner and borders
+
+- Updated dependencies [[`3461160`](https://github.com/scaleway/ultraviolet/commit/346116028d404460d39ec4026ec6bb9d1fbe9823)]:
+  - @ultraviolet/icons@5.4.3
+
 ## 3.19.0
 
 ### Minor Changes
