@@ -27,14 +27,26 @@ describe(getPageNumbers, () => {
     it('should get 2,3,4,5,6 if current page is 6, with 6 pages', () => {
       expect(getPageNumbers(6, 6)).toStrictEqual([1, 2, 3, 4, 5, 6])
     })
-    it('should get 3,4,5,6,7 if current page is 7, with 7 pages', () => {
+    it('should get 1,3,4,5,6,7 if current page is 7, with 7 pages', () => {
       expect(getPageNumbers(7, 7)).toStrictEqual([1, 3, 4, 5, 6, 7])
     })
     it('should get 1,2,3,4 if current page is 5, with 4 pages', () => {
       expect(getPageNumbers(5, 4)).toStrictEqual([1, 2, 3, 4])
     })
-    it('should get 8,9,10,11,12 if current page is 10, with 20 pages', () => {
+    it('should get 1,9,10,11,20 if current page is 10, with 20 pages', () => {
       expect(getPageNumbers(10, 20)).toStrictEqual([1, 9, 10, 11, 20])
+    })
+    it('should get 1,2,3,4,5,6,20 if current page is 5, with 20 pages and range = 6', () => {
+      expect(getPageNumbers(5, 20, 6)).toStrictEqual([1, 2, 3, 4, 5, 6, 20])
+    })
+    it('should get 9,10,11,20 if current page is 10, with 20 pages an hideFirstPage is true', () => {
+      expect(getPageNumbers(10, 20, 5, true)).toStrictEqual([9, 10, 11, 20])
+    })
+    it('should get 9,10,11 if current page is 10, with 20 pages an hideLastPage is true', () => {
+      expect(getPageNumbers(10, 20, 5, false, true)).toStrictEqual([1, 9, 10, 11])
+    })
+    it('should get 9,10,11 if current page is 10, with 20 pages an hideFirstPage & hideLastPageis true', () => {
+      expect(getPageNumbers(10, 20, 5, true, true)).toStrictEqual([9, 10, 11])
     })
   })
 })

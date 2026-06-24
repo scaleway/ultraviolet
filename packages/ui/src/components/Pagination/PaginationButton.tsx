@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '../Button'
-import { Text } from '../Text'
+import { Ellipsis } from './Ellipsis'
 import { paginationStyle } from './styles.css'
 
 type MakeButtonProps = {
@@ -10,7 +10,7 @@ type MakeButtonProps = {
   disabled?: boolean
   page: number
   handlePageClick: (pageNumber: number) => () => void
-  perPage: boolean
+  size: 'small' | 'medium'
 }
 export const MakeButton = ({
   hasEllipsisBefore,
@@ -18,30 +18,17 @@ export const MakeButton = ({
   disabled,
   page,
   handlePageClick,
-  perPage,
+  size,
 }: MakeButtonProps) => (
   <>
-    {hasEllipsisBefore ? (
-      <Text
-        aria-label="ellipsis"
-        as="span"
-        className={paginationStyle.ellipsisClass[perPage ? 'small' : 'medium']}
-        disabled={disabled}
-        placement="center"
-        prominence="default"
-        sentiment="neutral"
-        variant="body"
-      >
-        ...
-      </Text>
-    ) : null}
+    {hasEllipsisBefore ? <Ellipsis disabled={disabled} size={size} /> : null}
     <Button
       aria-current={pageNumber === page}
-      className={paginationStyle.pageButton[perPage ? 'small' : 'medium']}
+      className={paginationStyle.pageButton[size]}
       disabled={disabled}
       onClick={handlePageClick(pageNumber)}
       sentiment={pageNumber === page ? 'primary' : 'neutral'}
-      size={perPage ? 'small' : 'medium'}
+      size={size}
       type="button"
       variant={pageNumber === page ? 'filled' : 'outlined'}
     >
