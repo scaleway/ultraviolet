@@ -15,6 +15,7 @@ describe('richTextInputField', () => {
       configurable: true,
     })
   })
+
   it('should render correctly', () => {
     const { asFragment } = renderWithForm(<RichTextInputField label="Test" name="test" />)
 
@@ -72,8 +73,10 @@ describe('richTextInputField', () => {
     const doc = document.querySelector<HTMLDivElement>('[contenteditable="true"]')
     expect(doc).not.toBeNull()
     const editor = doc!
-    await userEvent.click(editor)
+
+    // Click buttons before focusing editor to avoid prose mirror state issues in test
     await userEvent.click(italicButton)
+    await userEvent.click(editor)
     await userEvent.type(editor, 'Styled ')
     await userEvent.click(bulletListButton)
     await userEvent.type(editor, 'item')
