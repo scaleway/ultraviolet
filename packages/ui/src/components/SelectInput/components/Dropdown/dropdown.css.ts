@@ -90,6 +90,7 @@ export const dropdownItemBase = style([
   emptyStateGroupStyle,
   {
     backgroundColor: theme.colors.other.elevation.background.raised,
+    display: 'grid',
   },
 ])
 
