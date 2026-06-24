@@ -104,14 +104,13 @@ describe('codeEditor', () => {
     const onFocus = vi.fn()
     renderWithTheme(
       <CodeEditor
-        data-testid="code-editor"
         onFocus={onFocus}
         value="configuration: 1/ntest: 'ok'"
         extensions="yaml"
         onChange={newValue => newValue}
       />,
     )
-    const codeEditor = screen.getByTestId('code-editor')
+    const codeEditor = screen.getByRole('textbox')
     await userEvent.click(codeEditor)
     expect(onFocus).toHaveBeenCalledOnce()
   })
