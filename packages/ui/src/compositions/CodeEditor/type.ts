@@ -8,6 +8,7 @@ export type CodeEditorProps = {
   extensions: keyof typeof langs
   onBlur?: () => void
   height?: string
+  onFocus?: () => void
   readOnly?: boolean
   autoCompletion?: boolean
   disabled?: boolean
