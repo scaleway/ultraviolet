@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.4.3
+
+### Patch Changes
+
+- [#6572](https://github.com/scaleway/ultraviolet/pull/6572) [`3461160`](https://github.com/scaleway/ultraviolet/commit/346116028d404460d39ec4026ec6bb9d1fbe9823) Thanks [@lisalupi](https://github.com/lisalupi)! - New icon `PasskeyIcon`
+
 ## 5.4.2
 
 ### Patch Changes
