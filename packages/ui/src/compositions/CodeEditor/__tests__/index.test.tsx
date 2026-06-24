@@ -1,4 +1,4 @@
-import { fireEvent, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
@@ -100,7 +100,7 @@ describe('codeEditor', () => {
     expect(showButton).toHaveTextContent('hide')
   })
 
-  it('handles focus events with render prop', () => {
+  it('handles focus events with render prop', async () => {
     const onFocus = vi.fn()
     renderWithTheme(
       <CodeEditor
@@ -112,7 +112,7 @@ describe('codeEditor', () => {
       />,
     )
     const codeEditor = screen.getByTestId('code-editor')
-    fireEvent.focus(codeEditor)
+    await userEvent.click(codeEditor)
     expect(onFocus).toHaveBeenCalledOnce()
   })
 })
