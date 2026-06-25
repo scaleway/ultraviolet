@@ -122,6 +122,9 @@ const numberinput = recipe({
       '&:focus': {
         outline: 'none',
       },
+      '&:has(input:out-of-range)': {
+        borderBlock: `1px solid ${theme.colors.danger.border}`,
+      },
     },
     textAlign: 'center',
     width: '100%',
@@ -171,8 +174,8 @@ const numberinput = recipe({
 const container = recipe({
   base: {
     alignItems: 'center',
-    border: `1px solid ${theme.colors.neutral.border}`,
     borderRadius: theme.radii.default,
+    border: `1px solid ${theme.colors.neutral.border}`,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -182,7 +185,11 @@ const container = recipe({
         boxShadow: theme.shadows.focusPrimary,
       },
       '&:hover': {
-        borderColor: theme.colors.primary.borderHover,
+        border: `1px solid ${theme.colors.primary.borderHover}`,
+      },
+      '&:has(input:out-of-range), &:has(input:invalid), &:has(:user-invalid)': {
+        borderColor: theme.colors.danger.borderHover,
+        boxShadow: theme.shadows.focusDanger,
       },
     },
   },

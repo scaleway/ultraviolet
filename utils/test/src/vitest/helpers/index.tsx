@@ -19,7 +19,7 @@ export const ComponentWrapper = ({
 )
 
 export const mockFormErrors: FormErrors = {
-  isNumber: ({ value }) => `this field should be a number: ${value} `,
+  isNumber: ({ value }) => `This field should be a number: ${value} `,
   isInteger: ({ value }) => `This field should be an integer ${value} `,
   max: ({ max }) => `This field is too high (maximum is : ${max ?? ''})`,
   maxDate: ({ maxDate }) => `This field should be before ${maxDate?.toString() ?? ''}`,

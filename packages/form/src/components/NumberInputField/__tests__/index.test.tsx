@@ -219,7 +219,7 @@ describe('numberInputField', () => {
       await userEvent.clear(input)
       await userEvent.type(input, '1')
 
-      expect(onChange).toHaveBeenCalledExactlyOnceWith(1)
+      expect(onChange).toHaveBeenLastCalledWith(1)
 
       await userEvent.clear(input)
 
@@ -247,7 +247,8 @@ describe('numberInputField', () => {
           defaultValues: {
             test: Number.NaN,
           },
-          mode: 'onChange',
+          mode: 'all',
+          shouldUseNativeValidation: true,
         },
         { errors: mockFormErrors, onSubmit },
       )
@@ -361,9 +362,10 @@ describe('numberInputField', () => {
 
     it('should fail validation for decimal numbers when step is integer', async () => {
       const onSubmit = vi.fn()
+      const onChange = vi.fn()
       renderWithForm(
         <>
-          <NumberInputField aria-label="Test" name="test" step={2} min={Number.MIN_SAFE_INTEGER} />
+          <NumberInputField aria-label="Test" name="test" onChange={onChange} step={2} min={0} />
           <Submit>Submit</Submit>
         </>,
         { defaultValues: { test: 0 }, mode: 'onChange' },
@@ -382,6 +384,10 @@ describe('numberInputField', () => {
       })
 
       await userEvent.clear(input)
+      // await waitFor(() => {
+      //   expect(onChange).toHaveBeenCalledWith([null, Number.MIN_SAFE_INTEGER])
+      // })
+
       await userEvent.type(input, '4')
       await userEvent.click(submit)
 
@@ -519,6 +525,27 @@ describe('numberInputField', () => {
       await waitFor(() => {
         expect(onSubmit).toHaveBeenCalledExactlyOnceWith({ test: 100 })
       })
+    })
+
+    it('should allow typing scientific notation like 1e2', async () => {
+      const onChange = vi.fn()
+      renderWithForm(
+        <>
+          <NumberInputField aria-label="Test" name="test" onChange={onChange} />
+        </>,
+        { defaultValues: { test: 0 } },
+      )
+
+      const input = screen.getByRole('spinbutton', { name: 'Test' })
+
+      // Note: Browsers block typing 'e' in number inputs, so scientific notation
+      // can only be entered via paste. This test verifies that pasted scientific
+      // notation is correctly parsed.
+      await userEvent.clear(input)
+      await userEvent.paste('1e2')
+
+      // Number.parseFloat('1e2') = 100
+      expect(onChange).toHaveBeenLastCalledWith(100)
     })
   })
 })

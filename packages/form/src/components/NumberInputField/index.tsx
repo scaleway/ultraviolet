@@ -7,12 +7,12 @@ import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type NumberInput = ComponentProps<typeof NumberInput>
+type NumberInputComponentProps = ComponentProps<typeof NumberInput>
 
 export type NumberInputFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = NumberInput & BaseFieldProps<TFieldValues, TFieldName, NumberInput['value']>
+> = NumberInputComponentProps & BaseFieldProps<TFieldValues, TFieldName, NumberInputComponentProps['value']>
 
 export const NumberInputField = <
   TFieldValues extends FieldValues = FieldValues,
@@ -46,23 +46,22 @@ export const NumberInputField = <
       required,
       validate: {
         ...validate,
-        // isNumber will never happen with input[type=number] as onChange is never trigger
-        isNumber: (value: NumberInput['value']) => {
-          if (!required && value === undefined) {
+        // isNumber will never happen with input[type=number] as onChange is never trigger, but can be trigger if the defaultValue is NaN or null or string
+        isNumber: (newValue: NumberInputComponentProps['value']) => {
+          if (!required && newValue === undefined) {
             return true
           }
-
-          return Number.isFinite(value)
+          return Number.isFinite(newValue)
         },
-        // we can m
-        isInteger: (value: NumberInput['value']) => {
-          if (!required && value === undefined) {
+        isInteger: (newValue: NumberInputComponentProps['value']) => {
+          if (!required && newValue === undefined) {
             return true
           }
 
           if (Number.isInteger(step)) {
-            return Number.isInteger(value)
+            return Number.isInteger(newValue)
           }
+
           return true
         },
       },
@@ -96,8 +95,8 @@ export const NumberInputField = <
       }}
       onChange={newValue => {
         // React hook form doesnt allow undefined values after definition https://react-hook-form.com/docs/usecontroller/controller (that make sense)
-        onChange?.(newValue)
         field.onChange(newValue)
+        onChange?.(newValue)
       }}
       required={required}
       step={step}

@@ -1,5 +1,6 @@
 'use client'
 
+import { isNullOrUndefined } from '@ultraviolet/utils'
 import { forwardRef, useId, useImperativeHandle, useMemo, useRef } from 'react'
 import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
@@ -15,7 +16,7 @@ import { numberInputStyle } from './styles.css'
 
 type Sizes = keyof typeof SIZES
 
-type NumberInputProps = {
+export type NumberInputProps = {
   size?: Sizes
   /**
    * Text displayed into component at the right of number value.
@@ -119,14 +120,6 @@ export const NumberInput = forwardRef(
       return 'default'
     }, [error, success, disabled, readOnly])
 
-    let inputValue: string | undefined
-    if (value !== undefined) {
-      inputValue = value !== null && typeof value === 'number' ? value.toString() : ''
-
-      if (localRef.current) {
-        localRef.current.value = inputValue
-      }
-    }
     const isDisabledOrReadOnly = disabled || readOnly
 
     return (
@@ -184,19 +177,37 @@ export const NumberInput = forwardRef(
                   name={name}
                   inputMode={Number.isInteger(step) ? 'numeric' : 'decimal'}
                   onBlur={event => {
-                    if (value && value > max) {
-                      onChange?.(max)
-                    } else if (value && value < min) {
-                      onChange?.(min)
+                    const { valueAsNumber } = event.target
+                    if (valueAsNumber) {
+                      if (!isNullOrUndefined(max) && valueAsNumber > max) {
+                        onChange?.(max)
+                      }
+                      if (!isNullOrUndefined(min) && valueAsNumber < min) {
+                        onChange?.(min)
+                      }
                     }
                     onBlur?.(event)
                   }}
                   onChange={
-                    //  onChange is not trigger with a string when type=number, so you can't validate "string" value
+                    // onChange is not triggered with a string when type=number, so you can't validate "string" value.
+                    //
+                    // ⚠️  LIMITATION: Scientific notation (e.g., "1e2") cannot be typed character-by-character
+                    // because browsers block the 'e' character in number inputs. When a user tries to type "1e2":
+                    // - Typing "1" works fine
+                    // - Typing "e" is blocked by the browser and the value stays at "1"
+                    // - The user can never complete "1e2" by typing
+                    //
+                    // Workarounds:
+                    // - Pasting "1e2" works correctly (Number.parseFloat handles scientific notation)
+                    // - Programmatic value setting works (e.g., form.setValue('field', 1e2))
+                    //
                     onChange
                       ? event => {
                           const { target } = event
-                          if (!Number.isNaN(target.valueAsNumber)) {
+                          const isNan = Number.isNaN(target.valueAsNumber)
+                          if (isNan) {
+                            onChange(null)
+                          } else {
                             onChange(target.valueAsNumber)
                           }
                         }
@@ -210,7 +221,7 @@ export const NumberInput = forwardRef(
                   step={step}
                   style={style}
                   type="number"
-                  value={inputValue}
+                  value={value?.toString()}
                 />
                 <Unit controls={controls} disabled={disabled} readOnly={readOnly} size={size} unit={unit} />
               </Row>

@@ -100,7 +100,10 @@ describe('numberInput', () => {
 
   it('should focus input and modify value', async () => {
     const onChange = vi.fn()
-    const { asFragment } = renderWithTheme(<NumberInput max={100} min={10} onChange={onChange} step={10} value={1} />)
+    const minValue = 10
+    const { asFragment } = renderWithTheme(
+      <NumberInput max={100} min={minValue} onChange={onChange} step={10} value={1} />,
+    )
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
     await userEvent.click(input)
@@ -108,12 +111,16 @@ describe('numberInput', () => {
     input.blur()
 
     await userEvent.clear(input)
-    expect(onChange).toHaveBeenCalledTimes(2)
+    expect(onChange).toHaveBeenNthCalledWith(1, minValue)
+    expect(onChange).toHaveBeenNthCalledWith(2, null)
     expect(asFragment()).toMatchSnapshot()
   })
   it('should focus input and modify value when value > max', async () => {
     const onChange = vi.fn()
-    const { asFragment } = renderWithTheme(<NumberInput max={5} min={1} onChange={onChange} step={1} value={10} />)
+    const maxValue = 5
+    const { asFragment } = renderWithTheme(
+      <NumberInput max={maxValue} min={1} onChange={onChange} step={1} value={10} />,
+    )
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
     await userEvent.click(input)
@@ -122,6 +129,8 @@ describe('numberInput', () => {
 
     await userEvent.clear(input)
     expect(onChange).toHaveBeenCalledTimes(2)
+    expect(onChange).toHaveBeenNthCalledWith(1, 5)
+    expect(onChange).toHaveBeenNthCalledWith(2, null)
     expect(asFragment()).toMatchSnapshot()
   })
 

@@ -4,18 +4,22 @@ import { NumberInput } from '..'
 
 export const Template: StoryFn<typeof NumberInput> = props => {
   const [value, setValue] = useState<number | null>(10)
+  console.debug(props.helper)
 
   return <NumberInput {...props} onChange={setValue} value={value} />
 }
 
 export const MinMax = Template.bind({})
 
+const min = 10
+const max = 100
+
 MinMax.args = {
-  helper: 'You should enter a number between 0 and 100',
+  helper: `You should enter a number between ${min} and ${max}`,
   id: 'number-input',
   label: 'Number Input',
-  max: 100,
-  min: 0,
+  max,
+  min,
   name: 'number-input',
 }
 
