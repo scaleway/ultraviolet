@@ -1,0 +1,57 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Action/Button/A11y" />
+
+# Button - Accessibility
+
+## Description
+
+A fundamental interactive component used to trigger actions or events (submitting forms, opening dialogs, canceling actions, etc.). Supports multiple variants (filled, outlined, ghost), sentiments, sizes, and can render as a native button, anchor tag, or custom element via render prop.
+
+## Summary
+
+1. ⚠️ **Perceivable**: Focus indicator implementation unclear, relies on browser default or theme shadows
+2. ⚠️ **Operable**: Keyboard support present but focus visibility needs verification
+3. ✅ **Understandable**: Content is readable and labels are supported
+4. ✅ **Robust**: Uses semantic HTML (button/anchor) with proper ARIA attribute support
+
+## ARIA Pattern
+
+[ARIA Button Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/button/)
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - Uses semantic `<button>` and `<a>` elements with proper ARIA attributes support
+- ⚠️ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - Focus ring implemented via `boxShadow` on `:active` state only; no explicit `:focus-visible` style defined
+- ⚠️ [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Focus indicator contrast depends on theme shadow values; needs visual verification
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Native button/anchor elements provide inherent keyboard support (Enter, Space)
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - `aria-label` prop supported for accessible naming
+
+To apply when using the component:
+
+- [WCAG 2.4.4 - Link Purpose (In Context) (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html) - When used as anchor (`href` prop), ensure button text describes the link destination
+- [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - Ensure text color has sufficient contrast (4.5:1) against button background for chosen sentiment/variant combination
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Do not rely solely on color (sentiment) to convey meaning; provide additional text or icons
+- [WCAG 3.2.4 - Consistent Identification (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html) - Use consistent button labels for same functionality across pages
+- [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - Do not forget to use prop `aria-label` for accessible naming if no text content is provided
+
+## Accessibility issues
+
+**High:**
+
+- Missing explicit `:focus-visible` styles - Focus ring only appears on `:active` state via `boxShadow`. The component relies on browser default focus outline or theme shadows, which may not be visible in all contexts. Should add explicit `:focus-visible` styles for consistent focus indication across browsers.
+
+**Medium:**
+
+- `aria-disabled` prop available but not coordinated with native `disabled` - When `isLoading` is true, button uses native `disabled` attribute. The `aria-disabled` prop is separate and could create confusion if both are used inconsistently.
+- No built-in support for toggle button pattern - While `aria-pressed` is supported, there's no built-in state management for toggle buttons. Developers must manually manage pressed state.
+
+**Low:**
+
+- Icon-only buttons require manual `aria-label` - When using the button with only an icon (no text children), developers must remember to provide `aria-label` prop for screen reader users.
+
+## Dependencies
+
+- Tooltip/Popup: The component receives a `aria-describedby` attribute pointing to a non-existent element when the tooltip is not visible.
