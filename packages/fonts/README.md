@@ -40,6 +40,21 @@ import '@ultraviolet/fonts/fonts-bundled.css'
 2. Edit `src/fonts.css` and add the font-face declaration following same directory order as you did locally but with S3 URL.
 3. Push your pull request, once merged your font will be uploaded on S3 and available for use.
 
+## How to use fallbacks fonts
+
+Available font custom props that expose fallbacks are `--font-inter`, `--font-jetbrains` and `--font-space-grotesk`
+
+You can map the pre-configured font tokens to your local semantic roles inside your application's global CSS file.
+
+```CSS
+/* Usage example */
+:root {
+   --font-body: var(--font-inter);
+   --font-heading: var(--font-space-grotesk);
+   --font-code: var(--font-jetbrains);
+}
+```
+
 ## Documentation
 
 Checkout our [documentation website](https://storybook.ultraviolet.scaleway.com/).
