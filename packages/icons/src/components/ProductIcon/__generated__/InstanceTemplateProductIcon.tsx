@@ -36,3 +36,5 @@ export const InstanceTemplateProductIcon = ({ ...props }: Omit<IconProps, 'child
     />
   </Icon>
 )
+
+InstanceTemplateProductIcon.displayName = 'InstanceTemplateProductIcon'

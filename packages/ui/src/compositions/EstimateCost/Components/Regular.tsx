@@ -25,3 +25,5 @@ export const Regular = memo(
     )
   },
 )
+
+Regular.displayName = 'EstimateCost.Regular'

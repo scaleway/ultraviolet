@@ -44,3 +44,5 @@ export const SmtpProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </g>
   </Icon>
 )
+
+SmtpProductIcon.displayName = 'SmtpProductIcon'

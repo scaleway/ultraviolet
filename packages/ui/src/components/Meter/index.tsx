@@ -86,3 +86,5 @@ export const Meter = ({
     </div>
   )
 }
+
+Meter.displayName = 'Meter'

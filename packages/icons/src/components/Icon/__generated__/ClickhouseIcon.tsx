@@ -29,3 +29,5 @@ export const ClickhouseIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     )}
   </Icon>
 )
+
+ClickhouseIcon.displayName = 'ClickhouseIcon'

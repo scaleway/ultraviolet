@@ -40,3 +40,5 @@ export const InstanceWopProductIcon = ({ ...props }: Omit<IconProps, 'children' 
     </defs>
   </Icon>
 )
+
+InstanceWopProductIcon.displayName = 'InstanceWopProductIcon'

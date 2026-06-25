@@ -25,3 +25,5 @@ export const BoldIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     )}
   </Icon>
 )
+
+BoldIcon.displayName = 'BoldIcon'

@@ -60,3 +60,5 @@ export const EntrepriseSupportProductIcon = ({ ...props }: Omit<IconProps, 'chil
     </defs>
   </Icon>
 )
+
+EntrepriseSupportProductIcon.displayName = 'EntrepriseSupportProductIcon'

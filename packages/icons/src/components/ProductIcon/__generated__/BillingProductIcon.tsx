@@ -49,3 +49,5 @@ export const BillingProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     </g>
   </Icon>
 )
+
+BillingProductIcon.displayName = 'BillingProductIcon'

@@ -111,3 +111,5 @@ export const Step = ({
     </Stack>
   )
 }
+
+Step.displayName = 'Stepper.Step'

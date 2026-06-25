@@ -318,6 +318,8 @@ const FileInputBase = ({
   )
 }
 
+FileInputBase.displayName = 'FileInput'
+
 export const FileInput = Object.assign(FileInputBase, {
   Button: FileInputButton,
   List: ListFiles,

@@ -55,3 +55,5 @@ export const TrycatchProductIcon = ({ ...props }: Omit<IconProps, 'children' | '
     </defs>
   </Icon>
 )
+
+TrycatchProductIcon.displayName = 'TrycatchProductIcon'

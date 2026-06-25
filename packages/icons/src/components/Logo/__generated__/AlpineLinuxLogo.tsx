@@ -143,3 +143,5 @@ export const AlpineLinuxLogo = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </Icon>
   )
 }
+
+AlpineLinuxLogo.displayName = 'AlpineLinuxLogo'

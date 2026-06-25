@@ -36,3 +36,5 @@ export const LogstashLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>
     </Icon>
   )
 }
+
+LogstashLogo.displayName = 'LogstashLogo'

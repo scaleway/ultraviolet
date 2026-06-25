@@ -54,3 +54,5 @@ export const Group = ({ children, label, style, additionalData }: GroupProps) =>
 
   return null
 }
+
+Group.displayName = 'Navigation.Group'

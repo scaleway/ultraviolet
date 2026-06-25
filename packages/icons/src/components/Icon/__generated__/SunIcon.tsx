@@ -27,3 +27,5 @@ export const SunIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => 
     )}
   </Icon>
 )
+
+SunIcon.displayName = 'SunIcon'

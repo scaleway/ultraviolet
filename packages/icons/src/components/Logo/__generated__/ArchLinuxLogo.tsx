@@ -40,3 +40,5 @@ export const ArchLinuxLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'
     </Icon>
   )
 }
+
+ArchLinuxLogo.displayName = 'ArchLinuxLogo'

@@ -30,3 +30,5 @@ export const IntegrationServicesCategoryIcon = ({ ...props }: Omit<IconProps, 'c
     </g>
   </Icon>
 )
+
+IntegrationServicesCategoryIcon.displayName = 'IntegrationServicesCategoryIcon'

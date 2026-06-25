@@ -85,3 +85,5 @@ export const NumberInputField = <
     />
   )
 }
+
+NumberInputField.displayName = 'NumberInputField'

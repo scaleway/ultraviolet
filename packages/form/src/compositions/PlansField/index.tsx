@@ -48,3 +48,5 @@ export const PlansField = <
     />
   )
 }
+
+PlansField.displayName = 'PlansField'

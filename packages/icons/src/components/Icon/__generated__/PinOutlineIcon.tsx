@@ -24,3 +24,5 @@ export const PinOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     )}
   </Icon>
 )
+
+PinOutlineIcon.displayName = 'PinOutlineIcon'

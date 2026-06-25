@@ -24,3 +24,5 @@ export const CalendarRangeOutlineIcon = ({ ...props }: Omit<IconProps, 'children
     )}
   </Icon>
 )
+
+CalendarRangeOutlineIcon.displayName = 'CalendarRangeOutlineIcon'

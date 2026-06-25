@@ -72,6 +72,8 @@ const SelectableCardGroupFieldComponent = <
   )
 }
 
+SelectableCardGroupFieldComponent.displayName = 'SelectableCardField'
+
 type SelectableCardGroupFieldType = typeof SelectableCardGroupFieldComponent & {
   Card: typeof SelectableCardGroup.Card
 }

@@ -24,3 +24,5 @@ export const PrivacyIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+PrivacyIcon.displayName = 'PrivacyIcon'

@@ -84,3 +84,5 @@ export const Avatar = ({
     </div>
   )
 }
+
+Avatar.displayName = 'Avatar'

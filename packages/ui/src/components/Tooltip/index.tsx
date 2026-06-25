@@ -78,3 +78,5 @@ export const Tooltip = forwardRef(
     </Popup>
   ),
 )
+
+Tooltip.displayName = 'Tooltip'

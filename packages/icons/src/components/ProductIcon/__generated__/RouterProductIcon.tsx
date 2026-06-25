@@ -37,3 +37,5 @@ export const RouterProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     </g>
   </Icon>
 )
+
+RouterProductIcon.displayName = 'RouterProductIcon'

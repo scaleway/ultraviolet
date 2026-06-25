@@ -30,3 +30,5 @@ export const WeatherNightIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     )}
   </Icon>
 )
+
+WeatherNightIcon.displayName = 'WeatherNightIcon'

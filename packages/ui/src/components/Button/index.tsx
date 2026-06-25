@@ -243,3 +243,5 @@ export const Button = forwardRef<Element, BaseButtonProps>(
     )
   },
 )
+
+Button.displayName = 'Button'

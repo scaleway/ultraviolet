@@ -21,3 +21,5 @@ export const MusicIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+MusicIcon.displayName = 'MusicIcon'

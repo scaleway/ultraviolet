@@ -26,3 +26,5 @@ export const ToucanTocoLogo = ({ ...props }: Omit<IconProps, 'children' | 'title
     />
   </Icon>
 )
+
+ToucanTocoLogo.displayName = 'ToucanTocoLogo'

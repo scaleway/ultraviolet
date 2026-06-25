@@ -227,3 +227,5 @@ export const PhoneInput: PhoneInputType = forwardRef(
     )
   },
 )
+
+PhoneInput.displayName = 'PhoneInput'

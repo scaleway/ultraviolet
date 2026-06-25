@@ -182,3 +182,5 @@ export const Row = ({
     </>
   )
 }
+
+Row.displayName = 'Table.Row'

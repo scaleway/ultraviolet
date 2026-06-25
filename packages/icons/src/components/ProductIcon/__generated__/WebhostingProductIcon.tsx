@@ -39,3 +39,5 @@ export const WebhostingProductIcon = ({ ...props }: Omit<IconProps, 'children' |
     </g>
   </Icon>
 )
+
+WebhostingProductIcon.displayName = 'WebhostingProductIcon'

@@ -21,3 +21,5 @@ export const CloseCircleOutlineIcon = ({ ...props }: Omit<IconProps, 'children' 
     )}
   </Icon>
 )
+
+CloseCircleOutlineIcon.displayName = 'CloseCircleOutlineIcon'

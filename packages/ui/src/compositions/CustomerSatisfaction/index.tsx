@@ -104,3 +104,5 @@ export const CustomerSatisfaction = ({
     </Stack>
   )
 }
+
+CustomerSatisfaction.displayName = 'CustomerSatisfaction'

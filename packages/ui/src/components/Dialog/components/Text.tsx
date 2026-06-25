@@ -13,3 +13,4 @@ export const DialogText = ({ children, style }: DialogTextProps) => (
     {children}
   </Text>
 )
+DialogText.displayName = 'Dialog.Text'

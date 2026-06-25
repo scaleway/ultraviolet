@@ -17,3 +17,5 @@ export const SendIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     )}
   </Icon>
 )
+
+SendIcon.displayName = 'SendIcon'

@@ -39,3 +39,5 @@ export const ChangelogProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
     </g>
   </Icon>
 )
+
+ChangelogProductIcon.displayName = 'ChangelogProductIcon'

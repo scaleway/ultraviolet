@@ -25,3 +25,5 @@ export const SearchIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+SearchIcon.displayName = 'SearchIcon'

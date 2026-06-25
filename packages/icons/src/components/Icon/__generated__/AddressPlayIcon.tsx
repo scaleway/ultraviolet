@@ -40,3 +40,5 @@ export const AddressPlayIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+AddressPlayIcon.displayName = 'AddressPlayIcon'

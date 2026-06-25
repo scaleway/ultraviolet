@@ -112,3 +112,5 @@ export const VpcPeeringProductIcon = ({ ...props }: Omit<IconProps, 'children' |
     </defs>
   </Icon>
 )
+
+VpcPeeringProductIcon.displayName = 'VpcPeeringProductIcon'

@@ -25,3 +25,5 @@ export const TicketIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+TicketIcon.displayName = 'TicketIcon'

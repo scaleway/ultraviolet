@@ -117,3 +117,5 @@ export const CodeEditor = ({
     </Stack>
   )
 }
+
+CodeEditor.displayName = 'CodeEditor'

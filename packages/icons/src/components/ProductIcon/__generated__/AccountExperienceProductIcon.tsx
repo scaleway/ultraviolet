@@ -32,3 +32,5 @@ export const AccountExperienceProductIcon = ({ ...props }: Omit<IconProps, 'chil
     </g>
   </Icon>
 )
+
+AccountExperienceProductIcon.displayName = 'AccountExperienceProductIcon'

@@ -40,3 +40,5 @@ export const StoreServersProductIcon = ({ ...props }: Omit<IconProps, 'children'
     </defs>
   </Icon>
 )
+
+StoreServersProductIcon.displayName = 'StoreServersProductIcon'

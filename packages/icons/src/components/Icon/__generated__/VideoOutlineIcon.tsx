@@ -17,3 +17,5 @@ export const VideoOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     )}
   </Icon>
 )
+
+VideoOutlineIcon.displayName = 'VideoOutlineIcon'

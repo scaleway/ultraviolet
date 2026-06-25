@@ -57,3 +57,5 @@ export const CyprusFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+CyprusFlag.displayName = 'CyprusFlag'

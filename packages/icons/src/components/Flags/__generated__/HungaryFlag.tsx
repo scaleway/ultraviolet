@@ -57,3 +57,5 @@ export const HungaryFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+HungaryFlag.displayName = 'HungaryFlag'

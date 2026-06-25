@@ -33,3 +33,5 @@ export const AndroidLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     </Icon>
   )
 }
+
+AndroidLogo.displayName = 'AndroidLogo'

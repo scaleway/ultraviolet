@@ -17,3 +17,5 @@ export const OrganizationIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     )}
   </Icon>
 )
+
+OrganizationIcon.displayName = 'OrganizationIcon'

@@ -18,3 +18,5 @@ export const Message = ({ className, children, avatar, align = 'right', style }:
     <div className={conversationStyle.avatar}>{avatar}</div>
   </div>
 )
+
+Message.displayName = 'Conversation.Message'

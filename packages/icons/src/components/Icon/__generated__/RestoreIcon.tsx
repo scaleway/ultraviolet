@@ -17,3 +17,5 @@ export const RestoreIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+RestoreIcon.displayName = 'RestoreIcon'

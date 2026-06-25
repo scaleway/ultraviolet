@@ -34,3 +34,5 @@ export const NextcloudLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'
     </Icon>
   )
 }
+
+NextcloudLogo.displayName = 'NextcloudLogo'

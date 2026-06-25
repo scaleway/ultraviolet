@@ -54,3 +54,5 @@ export const ServerlessDbProductIcon = ({ ...props }: Omit<IconProps, 'children'
     </g>
   </Icon>
 )
+
+ServerlessDbProductIcon.displayName = 'ServerlessDbProductIcon'

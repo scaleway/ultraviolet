@@ -25,3 +25,5 @@ export const CheckCircleIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+CheckCircleIcon.displayName = 'CheckCircleIcon'

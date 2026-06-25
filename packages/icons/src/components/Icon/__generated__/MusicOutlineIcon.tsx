@@ -17,3 +17,5 @@ export const MusicOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     )}
   </Icon>
 )
+
+MusicOutlineIcon.displayName = 'MusicOutlineIcon'

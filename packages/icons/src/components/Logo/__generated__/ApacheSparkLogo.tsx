@@ -153,3 +153,5 @@ export const ApacheSparkLogo = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </Icon>
   )
 }
+
+ApacheSparkLogo.displayName = 'ApacheSparkLogo'

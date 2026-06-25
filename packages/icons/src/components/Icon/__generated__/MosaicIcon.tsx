@@ -22,3 +22,5 @@ export const MosaicIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+MosaicIcon.displayName = 'MosaicIcon'

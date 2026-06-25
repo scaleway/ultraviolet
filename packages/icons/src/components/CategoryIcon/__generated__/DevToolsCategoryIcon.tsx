@@ -38,3 +38,5 @@ export const DevToolsCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 
     </g>
   </Icon>
 )
+
+DevToolsCategoryIcon.displayName = 'DevToolsCategoryIcon'

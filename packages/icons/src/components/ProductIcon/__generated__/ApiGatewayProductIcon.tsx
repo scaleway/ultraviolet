@@ -37,3 +37,5 @@ export const ApiGatewayProductIcon = ({ ...props }: Omit<IconProps, 'children' |
     </g>
   </Icon>
 )
+
+ApiGatewayProductIcon.displayName = 'ApiGatewayProductIcon'

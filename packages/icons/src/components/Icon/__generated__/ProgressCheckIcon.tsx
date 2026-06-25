@@ -23,3 +23,5 @@ export const ProgressCheckIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+ProgressCheckIcon.displayName = 'ProgressCheckIcon'

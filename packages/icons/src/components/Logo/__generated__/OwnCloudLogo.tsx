@@ -186,3 +186,5 @@ export const OwnCloudLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>
     </Icon>
   )
 }
+
+OwnCloudLogo.displayName = 'OwnCloudLogo'

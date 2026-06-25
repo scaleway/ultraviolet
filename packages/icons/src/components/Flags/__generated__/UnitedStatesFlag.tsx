@@ -81,3 +81,5 @@ export const UnitedStatesFlag = ({ ...props }: Omit<IconProps, 'children' | 'tit
     )}
   </Icon>
 )
+
+UnitedStatesFlag.displayName = 'UnitedStatesFlag'

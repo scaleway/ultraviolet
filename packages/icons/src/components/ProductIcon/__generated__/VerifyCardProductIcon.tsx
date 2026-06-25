@@ -36,3 +36,5 @@ export const VerifyCardProductIcon = ({ ...props }: Omit<IconProps, 'children' |
     </g>
   </Icon>
 )
+
+VerifyCardProductIcon.displayName = 'VerifyCardProductIcon'

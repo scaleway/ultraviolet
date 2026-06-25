@@ -39,3 +39,5 @@ export const RouteRulesProductIcon = ({ ...props }: Omit<IconProps, 'children' |
     </defs>
   </Icon>
 )
+
+RouteRulesProductIcon.displayName = 'RouteRulesProductIcon'

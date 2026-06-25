@@ -31,3 +31,5 @@ export const OpenInNewIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'
     )}
   </Icon>
 )
+
+OpenInNewIcon.displayName = 'OpenInNewIcon'

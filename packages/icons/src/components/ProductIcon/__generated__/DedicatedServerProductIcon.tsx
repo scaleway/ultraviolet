@@ -35,3 +35,5 @@ export const DedicatedServerProductIcon = ({ ...props }: Omit<IconProps, 'childr
     </g>
   </Icon>
 )
+
+DedicatedServerProductIcon.displayName = 'DedicatedServerProductIcon'

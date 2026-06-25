@@ -64,3 +64,5 @@ export const JoomlaLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     </Icon>
   )
 }
+
+JoomlaLogo.displayName = 'JoomlaLogo'

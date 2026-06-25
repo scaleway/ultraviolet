@@ -69,3 +69,5 @@ export const AlmaLinuxLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'
     </Icon>
   )
 }
+
+AlmaLinuxLogo.displayName = 'AlmaLinuxLogo'

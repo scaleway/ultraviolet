@@ -48,3 +48,5 @@ export const ComputeOptimizedInstancesProductIcon = ({ ...props }: Omit<IconProp
     </g>
   </Icon>
 )
+
+ComputeOptimizedInstancesProductIcon.displayName = 'ComputeOptimizedInstancesProductIcon'

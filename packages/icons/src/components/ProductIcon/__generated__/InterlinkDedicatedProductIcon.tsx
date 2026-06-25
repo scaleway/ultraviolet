@@ -38,3 +38,5 @@ export const InterlinkDedicatedProductIcon = ({ ...props }: Omit<IconProps, 'chi
     </defs>
   </Icon>
 )
+
+InterlinkDedicatedProductIcon.displayName = 'InterlinkDedicatedProductIcon'

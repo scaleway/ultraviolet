@@ -40,3 +40,5 @@ export const DdxProServersProductIcon = ({ ...props }: Omit<IconProps, 'children
     </defs>
   </Icon>
 )
+
+DdxProServersProductIcon.displayName = 'DdxProServersProductIcon'

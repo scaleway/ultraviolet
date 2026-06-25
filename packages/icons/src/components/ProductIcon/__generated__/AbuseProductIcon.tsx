@@ -31,3 +31,5 @@ export const AbuseProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     />
   </Icon>
 )
+
+AbuseProductIcon.displayName = 'AbuseProductIcon'

@@ -23,3 +23,5 @@ export const SortIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     )}
   </Icon>
 )
+
+SortIcon.displayName = 'SortIcon'

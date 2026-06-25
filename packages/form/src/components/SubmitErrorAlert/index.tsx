@@ -12,3 +12,5 @@ export const SubmitErrorAlert = ({ className }: { className?: string }) => {
     </Alert>
   ) : null
 }
+
+SubmitErrorAlert.displayName = 'SubmitErrorAlert'

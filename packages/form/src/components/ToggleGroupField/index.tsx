@@ -67,6 +67,7 @@ const ToggleGroupFieldComponent = <
     />
   )
 }
+ToggleGroupFieldComponent.displayName = 'ToggleGroupField'
 
 type RadioGroupFieldType = typeof ToggleGroupFieldComponent & {
   Toggle: typeof ToggleGroup.Toggle

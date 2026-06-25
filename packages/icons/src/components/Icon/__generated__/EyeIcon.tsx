@@ -31,3 +31,5 @@ export const EyeIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => 
     )}
   </Icon>
 )
+
+EyeIcon.displayName = 'EyeIcon'

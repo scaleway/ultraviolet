@@ -124,3 +124,5 @@ export const ListFiles = ({ limit, textLimit, prominence = 'default', onDelete }
     </Stack>
   ) : null
 }
+
+ListFiles.displayName = 'FileInput.List'

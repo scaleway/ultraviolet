@@ -22,3 +22,5 @@ export const TicketOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+TicketOutlineIcon.displayName = 'TicketOutlineIcon'

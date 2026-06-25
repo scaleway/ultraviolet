@@ -30,3 +30,5 @@ export const SecurityCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 
     </g>
   </Icon>
 )
+
+SecurityCategoryIcon.displayName = 'SecurityCategoryIcon'

@@ -12,3 +12,5 @@ export const Image = (props: ComponentProps<'img'>) => (
     className={cn(props.className, estimateCostStyle.image)}
   />
 )
+
+Image.displayName = 'EstimateCost.Image'

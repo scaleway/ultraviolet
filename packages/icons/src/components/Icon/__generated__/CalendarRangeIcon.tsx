@@ -34,3 +34,5 @@ export const CalendarRangeIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+CalendarRangeIcon.displayName = 'CalendarRangeIcon'

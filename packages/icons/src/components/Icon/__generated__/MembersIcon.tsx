@@ -24,3 +24,5 @@ export const MembersIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+MembersIcon.displayName = 'MembersIcon'

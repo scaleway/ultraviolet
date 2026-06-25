@@ -36,3 +36,4 @@ export const CellWithCopyButton = ({
     </Row>
   </InfoTableCell>
 )
+CellWithCopyButton.displayName = 'Infotable.Button'

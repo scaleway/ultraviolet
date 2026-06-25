@@ -31,3 +31,5 @@ export const AttachIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+AttachIcon.displayName = 'AttachIcon'

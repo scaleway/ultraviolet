@@ -24,3 +24,5 @@ export const WebHostingCategoryIcon = ({ ...props }: Omit<IconProps, 'children' 
     </g>
   </Icon>
 )
+
+WebHostingCategoryIcon.displayName = 'WebHostingCategoryIcon'

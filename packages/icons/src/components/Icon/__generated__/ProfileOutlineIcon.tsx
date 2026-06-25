@@ -24,3 +24,5 @@ export const ProfileOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     )}
   </Icon>
 )
+
+ProfileOutlineIcon.displayName = 'ProfileOutlineIcon'

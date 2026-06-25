@@ -35,3 +35,5 @@ export const RocketIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+RocketIcon.displayName = 'RocketIcon'

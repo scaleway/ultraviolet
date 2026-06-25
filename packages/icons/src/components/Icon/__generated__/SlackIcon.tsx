@@ -25,3 +25,5 @@ export const SlackIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+SlackIcon.displayName = 'SlackIcon'

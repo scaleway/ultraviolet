@@ -54,3 +54,5 @@ export const AdvancedSupportProductIcon = ({ ...props }: Omit<IconProps, 'childr
     </defs>
   </Icon>
 )
+
+AdvancedSupportProductIcon.displayName = 'AdvancedSupportProductIcon'

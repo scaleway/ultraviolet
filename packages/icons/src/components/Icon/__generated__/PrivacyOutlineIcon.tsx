@@ -25,3 +25,5 @@ export const PrivacyOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     )}
   </Icon>
 )
+
+PrivacyOutlineIcon.displayName = 'PrivacyOutlineIcon'

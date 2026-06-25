@@ -181,3 +181,5 @@ export const SelectableCard = forwardRef(
     )
   },
 )
+
+SelectableCard.displayName = 'SelectableCard'

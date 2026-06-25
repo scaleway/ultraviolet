@@ -23,3 +23,5 @@ export const CheckIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+CheckIcon.displayName = 'CheckIcon'

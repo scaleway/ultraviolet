@@ -41,3 +41,5 @@ export const GenerativeApiProductIcon = ({ ...props }: Omit<IconProps, 'children
     </g>
   </Icon>
 )
+
+GenerativeApiProductIcon.displayName = 'GenerativeApiProductIcon'

@@ -53,3 +53,5 @@ export const ElasticMetalBerylliumProductIcon = ({ ...props }: Omit<IconProps, '
     </defs>
   </Icon>
 )
+
+ElasticMetalBerylliumProductIcon.displayName = 'ElasticMetalBerylliumProductIcon'

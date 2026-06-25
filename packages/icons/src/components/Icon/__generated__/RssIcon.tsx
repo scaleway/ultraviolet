@@ -23,3 +23,5 @@ export const RssIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => 
     )}
   </Icon>
 )
+
+RssIcon.displayName = 'RssIcon'

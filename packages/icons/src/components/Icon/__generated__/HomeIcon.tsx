@@ -25,3 +25,5 @@ export const HomeIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     )}
   </Icon>
 )
+
+HomeIcon.displayName = 'HomeIcon'

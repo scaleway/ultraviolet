@@ -172,4 +172,5 @@ export const SwitchButton = ({
   )
 }
 
+SwitchButton.displayName = 'SwitchButton'
 SwitchButton.Option = Option

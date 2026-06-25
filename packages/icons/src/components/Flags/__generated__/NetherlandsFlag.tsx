@@ -57,3 +57,5 @@ export const NetherlandsFlag = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+NetherlandsFlag.displayName = 'NetherlandsFlag'

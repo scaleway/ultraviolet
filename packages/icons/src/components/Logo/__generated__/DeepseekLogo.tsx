@@ -18,3 +18,5 @@ export const DeepseekLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>
     </g>
   </Icon>
 )
+
+DeepseekLogo.displayName = 'DeepseekLogo'

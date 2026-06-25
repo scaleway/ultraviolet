@@ -89,6 +89,8 @@ type SelectableCardOptionGroupType = typeof SelectableCardGroupComponent & {
   Card: typeof CardSelectableCard
 }
 
+SelectableCardGroupComponent.displayName = 'SelectableCardGroup'
+
 export const SelectableCardGroup: SelectableCardOptionGroupType = Object.assign(SelectableCardGroupComponent, {
   Card: CardSelectableCard,
 })

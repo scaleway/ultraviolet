@@ -74,3 +74,5 @@ export const UnitInputField = <
     />
   )
 }
+
+UnitInputField.displayName = 'UnitInputField'

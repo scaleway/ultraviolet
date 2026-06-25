@@ -24,3 +24,5 @@ export const UnlockOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+UnlockOutlineIcon.displayName = 'UnlockOutlineIcon'

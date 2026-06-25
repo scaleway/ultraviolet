@@ -24,3 +24,5 @@ export const SparklesOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | '
     )}
   </Icon>
 )
+
+SparklesOutlineIcon.displayName = 'SparklesOutlineIcon'

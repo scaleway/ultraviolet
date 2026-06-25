@@ -46,3 +46,5 @@ export const K8sKosmosProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
     </g>
   </Icon>
 )
+
+K8sKosmosProductIcon.displayName = 'K8sKosmosProductIcon'

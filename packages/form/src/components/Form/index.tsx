@@ -62,3 +62,5 @@ export const Form = <TFieldValues extends FieldValues>({
     </FormProvider>
   )
 }
+
+Form.displayName = 'Form'

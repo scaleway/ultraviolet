@@ -328,3 +328,5 @@ export const TagList = ({
     </div>
   )
 }
+
+TagList.displayName = 'TagList'

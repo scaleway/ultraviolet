@@ -81,3 +81,5 @@ export const NginxLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     </Icon>
   )
 }
+
+NginxLogo.displayName = 'NginxLogo'

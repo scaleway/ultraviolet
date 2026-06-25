@@ -24,3 +24,5 @@ export const PlayOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+PlayOutlineIcon.displayName = 'PlayOutlineIcon'

@@ -42,3 +42,5 @@ export const WafProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     </g>
   </Icon>
 )
+
+WafProductIcon.displayName = 'WafProductIcon'

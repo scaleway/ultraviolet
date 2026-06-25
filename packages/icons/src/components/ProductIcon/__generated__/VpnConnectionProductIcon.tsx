@@ -49,3 +49,5 @@ export const VpnConnectionProductIcon = ({ ...props }: Omit<IconProps, 'children
     </g>
   </Icon>
 )
+
+VpnConnectionProductIcon.displayName = 'VpnConnectionProductIcon'

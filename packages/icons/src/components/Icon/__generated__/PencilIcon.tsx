@@ -23,3 +23,5 @@ export const PencilIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+PencilIcon.displayName = 'PencilIcon'

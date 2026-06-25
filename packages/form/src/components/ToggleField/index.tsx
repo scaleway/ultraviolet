@@ -97,3 +97,5 @@ export const ToggleField = <
     />
   )
 }
+
+ToggleField.displayName = 'ToggleField'

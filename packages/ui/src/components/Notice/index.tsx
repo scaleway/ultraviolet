@@ -30,3 +30,5 @@ export const Notice = ({ children, className, 'data-testid': dataTestId, style }
     {children}
   </Text>
 )
+
+Notice.displayName = 'Notice'

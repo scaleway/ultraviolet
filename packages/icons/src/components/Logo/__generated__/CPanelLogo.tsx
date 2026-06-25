@@ -33,3 +33,5 @@ export const CPanelLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     </Icon>
   )
 }
+
+CPanelLogo.displayName = 'CPanelLogo'

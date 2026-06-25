@@ -30,3 +30,5 @@ export const DocumentationCategoryIcon = ({ ...props }: Omit<IconProps, 'childre
     </g>
   </Icon>
 )
+
+DocumentationCategoryIcon.displayName = 'DocumentationCategoryIcon'

@@ -17,3 +17,5 @@ export const TwitterIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+TwitterIcon.displayName = 'TwitterIcon'

@@ -17,3 +17,5 @@ export const HandOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+HandOutlineIcon.displayName = 'HandOutlineIcon'

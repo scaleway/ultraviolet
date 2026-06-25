@@ -50,3 +50,5 @@ export const TableauLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     </g>
   </Icon>
 )
+
+TableauLogo.displayName = 'TableauLogo'

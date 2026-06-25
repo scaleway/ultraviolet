@@ -22,3 +22,5 @@ export const DataAndAnalyticsCategoryIcon = ({ ...props }: Omit<IconProps, 'chil
     </g>
   </Icon>
 )
+
+DataAndAnalyticsCategoryIcon.displayName = 'DataAndAnalyticsCategoryIcon'

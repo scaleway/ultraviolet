@@ -25,3 +25,5 @@ export const EarthOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     )}
   </Icon>
 )
+
+EarthOutlineIcon.displayName = 'EarthOutlineIcon'

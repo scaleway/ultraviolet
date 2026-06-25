@@ -39,3 +39,5 @@ export const AdvancedSettingsProductIcon = ({ ...props }: Omit<IconProps, 'child
     </g>
   </Icon>
 )
+
+AdvancedSettingsProductIcon.displayName = 'AdvancedSettingsProductIcon'

@@ -35,3 +35,5 @@ export const DirectConnectProductIcon = ({ ...props }: Omit<IconProps, 'children
     </g>
   </Icon>
 )
+
+DirectConnectProductIcon.displayName = 'DirectConnectProductIcon'

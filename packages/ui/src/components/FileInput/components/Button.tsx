@@ -12,3 +12,5 @@ export const FileInputButton = ({ children, disabled, ...props }: ComponentProps
     </Button>
   )
 }
+
+FileInputButton.displayName = 'FileInput.Button'

@@ -147,3 +147,5 @@ export const Tag = ({
     </span>
   )
 }
+
+Tag.displayName = 'Tag'

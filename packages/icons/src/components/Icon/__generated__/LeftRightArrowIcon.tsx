@@ -23,3 +23,5 @@ export const LeftRightArrowIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     )}
   </Icon>
 )
+
+LeftRightArrowIcon.displayName = 'LeftRightArrowIcon'

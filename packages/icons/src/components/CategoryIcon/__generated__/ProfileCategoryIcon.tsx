@@ -26,3 +26,5 @@ export const ProfileCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | '
     />
   </Icon>
 )
+
+ProfileCategoryIcon.displayName = 'ProfileCategoryIcon'

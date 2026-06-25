@@ -24,3 +24,5 @@ export const PhoneIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+PhoneIcon.displayName = 'PhoneIcon'

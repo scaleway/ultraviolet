@@ -61,3 +61,5 @@ export const PleskLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     </Icon>
   )
 }
+
+PleskLogo.displayName = 'PleskLogo'

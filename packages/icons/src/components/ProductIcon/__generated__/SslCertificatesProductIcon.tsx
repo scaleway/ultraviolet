@@ -36,3 +36,5 @@ export const SslCertificatesProductIcon = ({ ...props }: Omit<IconProps, 'childr
     </g>
   </Icon>
 )
+
+SslCertificatesProductIcon.displayName = 'SslCertificatesProductIcon'

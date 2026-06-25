@@ -8,3 +8,5 @@ export const Separator = () => {
   const id = useId()
   return <UVSeparator className={navigationStyle.separator} data-flip-id={id} />
 }
+
+Separator.displayName = 'Navigation.Separator'

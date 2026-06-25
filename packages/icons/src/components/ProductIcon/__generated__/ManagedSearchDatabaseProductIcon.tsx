@@ -55,3 +55,5 @@ export const ManagedSearchDatabaseProductIcon = ({ ...props }: Omit<IconProps, '
     </g>
   </Icon>
 )
+
+ManagedSearchDatabaseProductIcon.displayName = 'ManagedSearchDatabaseProductIcon'

@@ -35,3 +35,5 @@ export const VpcProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     </g>
   </Icon>
 )
+
+VpcProductIcon.displayName = 'VpcProductIcon'

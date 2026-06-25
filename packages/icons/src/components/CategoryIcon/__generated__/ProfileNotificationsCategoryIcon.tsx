@@ -22,3 +22,5 @@ export const ProfileNotificationsCategoryIcon = ({ ...props }: Omit<IconProps, '
     />
   </Icon>
 )
+
+ProfileNotificationsCategoryIcon.displayName = 'ProfileNotificationsCategoryIcon'

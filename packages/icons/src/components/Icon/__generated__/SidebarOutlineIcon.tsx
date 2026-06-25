@@ -23,3 +23,5 @@ export const SidebarOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     )}
   </Icon>
 )
+
+SidebarOutlineIcon.displayName = 'SidebarOutlineIcon'

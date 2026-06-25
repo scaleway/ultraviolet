@@ -16,3 +16,5 @@ export const Strong = memo(({ variant = 'normal', children = null, style }: Stro
     {children}
   </div>
 ))
+
+Strong.displayName = 'EstimateCost.Strong'

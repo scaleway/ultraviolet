@@ -24,3 +24,5 @@ export const RocketOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+RocketOutlineIcon.displayName = 'RocketOutlineIcon'

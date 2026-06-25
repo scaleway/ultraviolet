@@ -29,3 +29,5 @@ export const CustomModelProductIcon = ({ ...props }: Omit<IconProps, 'children' 
     </g>
   </Icon>
 )
+
+CustomModelProductIcon.displayName = 'CustomModelProductIcon'

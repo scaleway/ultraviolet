@@ -37,3 +37,5 @@ export const BlockStorageProductIcon = ({ ...props }: Omit<IconProps, 'children'
     </g>
   </Icon>
 )
+
+BlockStorageProductIcon.displayName = 'BlockStorageProductIcon'

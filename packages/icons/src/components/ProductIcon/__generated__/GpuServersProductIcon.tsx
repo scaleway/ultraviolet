@@ -38,3 +38,5 @@ export const GpuServersProductIcon = ({ ...props }: Omit<IconProps, 'children' |
     </g>
   </Icon>
 )
+
+GpuServersProductIcon.displayName = 'GpuServersProductIcon'

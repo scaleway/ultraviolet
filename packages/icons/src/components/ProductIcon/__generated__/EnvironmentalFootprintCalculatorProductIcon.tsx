@@ -33,3 +33,5 @@ export const EnvironmentalFootprintCalculatorProductIcon = ({ ...props }: Omit<I
     </g>
   </Icon>
 )
+
+EnvironmentalFootprintCalculatorProductIcon.displayName = 'EnvironmentalFootprintCalculatorProductIcon'

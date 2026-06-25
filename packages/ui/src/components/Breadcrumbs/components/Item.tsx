@@ -95,3 +95,5 @@ export const Item = ({
     </li>
   )
 }
+
+Item.displayName = 'Breadcrumbs.Item'

@@ -40,3 +40,5 @@ export const DnsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     </g>
   </Icon>
 )
+
+DnsProductIcon.displayName = 'DnsProductIcon'

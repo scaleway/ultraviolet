@@ -35,3 +35,5 @@ export const PoolProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </g>
   </Icon>
 )
+
+PoolProductIcon.displayName = 'PoolProductIcon'

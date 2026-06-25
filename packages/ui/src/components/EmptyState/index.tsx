@@ -116,3 +116,5 @@ export const EmptyState = ({
     </Stack>
   </Stack>
 )
+
+EmptyState.displayName = 'EmptyState'

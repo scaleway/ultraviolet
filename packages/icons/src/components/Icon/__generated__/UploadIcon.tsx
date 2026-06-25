@@ -23,3 +23,5 @@ export const UploadIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+UploadIcon.displayName = 'UploadIcon'

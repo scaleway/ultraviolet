@@ -35,3 +35,5 @@ export const FlexibleIpProductIcon = ({ ...props }: Omit<IconProps, 'children' |
     </g>
   </Icon>
 )
+
+FlexibleIpProductIcon.displayName = 'FlexibleIpProductIcon'

@@ -17,3 +17,5 @@ export const DragIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     )}
   </Icon>
 )
+
+DragIcon.displayName = 'DragIcon'

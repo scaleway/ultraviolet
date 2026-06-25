@@ -111,6 +111,8 @@ export const BaseDialog = ({
   )
 }
 
+BaseDialog.displayName = 'Dialog'
+
 /**
  * The Dialog component is used to show content on top of an overlay that requires user interaction.
  */

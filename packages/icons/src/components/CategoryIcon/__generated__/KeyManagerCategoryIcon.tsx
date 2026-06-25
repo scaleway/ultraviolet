@@ -26,3 +26,5 @@ export const KeyManagerCategoryIcon = ({ ...props }: Omit<IconProps, 'children' 
     />
   </Icon>
 )
+
+KeyManagerCategoryIcon.displayName = 'KeyManagerCategoryIcon'

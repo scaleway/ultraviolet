@@ -24,3 +24,5 @@ export const SettingsIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>
     )}
   </Icon>
 )
+
+SettingsIcon.displayName = 'SettingsIcon'

@@ -31,3 +31,5 @@ export const RayStartArrowIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+RayStartArrowIcon.displayName = 'RayStartArrowIcon'

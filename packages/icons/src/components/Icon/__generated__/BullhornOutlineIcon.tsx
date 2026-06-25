@@ -24,3 +24,5 @@ export const BullhornOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | '
     )}
   </Icon>
 )
+
+BullhornOutlineIcon.displayName = 'BullhornOutlineIcon'

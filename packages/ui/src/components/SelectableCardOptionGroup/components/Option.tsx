@@ -134,3 +134,5 @@ export const Option = ({
     </SelectableCard>
   )
 }
+
+Option.displayName = 'SelectableCardOptionGroup.Option'

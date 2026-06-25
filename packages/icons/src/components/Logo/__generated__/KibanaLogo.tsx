@@ -57,3 +57,5 @@ export const KibanaLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     </Icon>
   )
 }
+
+KibanaLogo.displayName = 'KibanaLogo'

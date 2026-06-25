@@ -64,3 +64,5 @@ export const IpfsNamingProductIcon = ({ ...props }: Omit<IconProps, 'children' |
     </g>
   </Icon>
 )
+
+IpfsNamingProductIcon.displayName = 'IpfsNamingProductIcon'

@@ -40,3 +40,5 @@ export const PrometheusLogo = ({ ...props }: Omit<IconProps, 'children' | 'title
     </Icon>
   )
 }
+
+PrometheusLogo.displayName = 'PrometheusLogo'

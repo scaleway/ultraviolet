@@ -22,4 +22,5 @@ export const StepList = ({ children, className, style, 'data-testid': dataTestId
   </ul>
 )
 
+StepList.displayName = 'StepList'
 StepList.Item = Item

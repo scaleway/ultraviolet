@@ -27,3 +27,5 @@ export const CustomerSatisfactionField = <
 
   return <CustomerSatisfaction onChange={field.onChange} value={field.value ?? 1} />
 }
+
+CustomerSatisfactionField.displayName = 'CustomerSatisfactionField'

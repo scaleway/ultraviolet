@@ -234,3 +234,5 @@ export const NumberInput = forwardRef(
     )
   },
 )
+
+NumberInput.displayName = 'NumberInput'

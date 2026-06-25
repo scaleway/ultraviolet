@@ -42,3 +42,5 @@ export const PrivateNetworkProductIcon = ({ ...props }: Omit<IconProps, 'childre
     </g>
   </Icon>
 )
+
+PrivateNetworkProductIcon.displayName = 'PrivateNetworkProductIcon'

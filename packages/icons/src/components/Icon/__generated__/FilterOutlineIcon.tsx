@@ -24,3 +24,5 @@ export const FilterOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+FilterOutlineIcon.displayName = 'FilterOutlineIcon'

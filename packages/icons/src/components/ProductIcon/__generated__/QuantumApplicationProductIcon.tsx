@@ -35,3 +35,5 @@ export const QuantumApplicationProductIcon = ({ ...props }: Omit<IconProps, 'chi
     </g>
   </Icon>
 )
+
+QuantumApplicationProductIcon.displayName = 'QuantumApplicationProductIcon'

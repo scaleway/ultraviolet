@@ -48,3 +48,5 @@ export const DocumentationProductIcon = ({ ...props }: Omit<IconProps, 'children
     </g>
   </Icon>
 )
+
+DocumentationProductIcon.displayName = 'DocumentationProductIcon'

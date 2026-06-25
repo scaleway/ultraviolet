@@ -31,3 +31,5 @@ export const HubRoutesProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
     </g>
   </Icon>
 )
+
+HubRoutesProductIcon.displayName = 'HubRoutesProductIcon'

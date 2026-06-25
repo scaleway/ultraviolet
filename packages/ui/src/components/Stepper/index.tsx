@@ -84,4 +84,5 @@ export const Stepper = ({
   )
 }
 
+Stepper.displayName = 'Stepper'
 Stepper.Step = Step

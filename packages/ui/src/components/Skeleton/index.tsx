@@ -67,4 +67,6 @@ export const Skeleton = ({
   )
 }
 
+Skeleton.displayName = 'Skeleton'
+
 export const skeletonTypes = Object.keys(variants) as SkeletonVariant[]

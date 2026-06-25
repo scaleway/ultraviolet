@@ -25,3 +25,5 @@ export const AddressIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+AddressIcon.displayName = 'AddressIcon'

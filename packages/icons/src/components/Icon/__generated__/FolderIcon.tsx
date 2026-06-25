@@ -20,3 +20,5 @@ export const FolderIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+FolderIcon.displayName = 'FolderIcon'

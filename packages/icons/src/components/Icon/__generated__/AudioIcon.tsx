@@ -29,3 +29,5 @@ export const AudioIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+AudioIcon.displayName = 'AudioIcon'

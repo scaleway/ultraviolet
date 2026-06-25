@@ -103,3 +103,5 @@ export const SliderField = <
     />
   )
 }
+
+SliderField.displayName = 'SliderField'

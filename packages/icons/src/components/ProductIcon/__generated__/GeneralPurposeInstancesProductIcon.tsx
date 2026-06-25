@@ -43,3 +43,5 @@ export const GeneralPurposeInstancesProductIcon = ({ ...props }: Omit<IconProps,
     </g>
   </Icon>
 )
+
+GeneralPurposeInstancesProductIcon.displayName = 'GeneralPurposeInstancesProductIcon'

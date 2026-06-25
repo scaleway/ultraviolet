@@ -25,3 +25,5 @@ export const ThumbsDownOutlineIcon = ({ ...props }: Omit<IconProps, 'children' |
     )}
   </Icon>
 )
+
+ThumbsDownOutlineIcon.displayName = 'ThumbsDownOutlineIcon'

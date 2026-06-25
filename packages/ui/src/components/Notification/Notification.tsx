@@ -45,3 +45,5 @@ export const notification = (
     ),
     containerId: containerId ?? 'notification',
   })
+
+notification.displayName = 'notification'

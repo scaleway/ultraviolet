@@ -13,3 +13,5 @@ export const DialogStack = ({ children, style }: DialogStackProps) => (
     {children}
   </Stack>
 )
+
+DialogStack.displayName = 'Dialog.Stack'

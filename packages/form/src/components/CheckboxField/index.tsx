@@ -70,3 +70,5 @@ export const CheckboxField = <
     />
   )
 }
+
+CheckboxField.displayName = 'CheckboxField'

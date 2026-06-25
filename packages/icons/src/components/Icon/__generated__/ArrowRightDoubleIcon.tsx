@@ -25,3 +25,5 @@ export const ArrowRightDoubleIcon = ({ ...props }: Omit<IconProps, 'children' | 
     )}
   </Icon>
 )
+
+ArrowRightDoubleIcon.displayName = 'ArrowRightDoubleIcon'

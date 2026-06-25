@@ -39,3 +39,5 @@ export const OriginsResourcesProductIcon = ({ ...props }: Omit<IconProps, 'child
     </defs>
   </Icon>
 )
+
+OriginsResourcesProductIcon.displayName = 'OriginsResourcesProductIcon'

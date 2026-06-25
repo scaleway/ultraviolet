@@ -25,3 +25,5 @@ export const StopIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     )}
   </Icon>
 )
+
+StopIcon.displayName = 'StopIcon'

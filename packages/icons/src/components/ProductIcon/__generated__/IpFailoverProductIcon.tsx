@@ -40,3 +40,5 @@ export const IpFailoverProductIcon = ({ ...props }: Omit<IconProps, 'children' |
     </g>
   </Icon>
 )
+
+IpFailoverProductIcon.displayName = 'IpFailoverProductIcon'

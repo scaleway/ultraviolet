@@ -22,3 +22,5 @@ export const BusinessDetailsCategoryIcon = ({ ...props }: Omit<IconProps, 'child
     />
   </Icon>
 )
+
+BusinessDetailsCategoryIcon.displayName = 'BusinessDetailsCategoryIcon'

@@ -26,3 +26,5 @@ export const PinCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </g>
   </Icon>
 )
+
+PinCategoryIcon.displayName = 'PinCategoryIcon'

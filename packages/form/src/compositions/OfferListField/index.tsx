@@ -88,4 +88,6 @@ const OfferListField = <
 OfferListField.Row = OfferList.Row
 OfferListField.Cell = OfferList.Cell
 
+OfferListField.displayName = 'OfferListField'
+
 export { OfferListField }

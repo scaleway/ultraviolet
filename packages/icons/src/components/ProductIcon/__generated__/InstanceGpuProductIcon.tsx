@@ -35,3 +35,5 @@ export const InstanceGpuProductIcon = ({ ...props }: Omit<IconProps, 'children' 
     </g>
   </Icon>
 )
+
+InstanceGpuProductIcon.displayName = 'InstanceGpuProductIcon'

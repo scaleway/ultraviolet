@@ -39,3 +39,5 @@ export const Item = ({
     <div className={stepListStyle.stepDiv({ size })}>{children}</div>
   </li>
 )
+
+Item.displayName = 'StepList.Item'

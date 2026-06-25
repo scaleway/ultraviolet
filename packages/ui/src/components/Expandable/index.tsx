@@ -46,3 +46,5 @@ export const Expandable = ({
     </NoAnimationExpandable>
   )
 }
+
+Expandable.displayName = 'Expandable'

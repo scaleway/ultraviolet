@@ -68,6 +68,8 @@ const BaseInfoTable = ({
   )
 }
 
+BaseInfoTable.displayName = 'Infotable'
+
 export const InfoTable = Object.assign(BaseInfoTable, {
   Row: InfoTableRow,
   Cell: InfoTableCell,

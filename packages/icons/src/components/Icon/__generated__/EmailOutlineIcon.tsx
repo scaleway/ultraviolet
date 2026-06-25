@@ -24,3 +24,5 @@ export const EmailOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     )}
   </Icon>
 )
+
+EmailOutlineIcon.displayName = 'EmailOutlineIcon'

@@ -24,3 +24,5 @@ export const SupportOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     )}
   </Icon>
 )
+
+SupportOutlineIcon.displayName = 'SupportOutlineIcon'

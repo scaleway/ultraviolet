@@ -40,3 +40,5 @@ export const Status = ({
     </span>
   </Tooltip>
 )
+
+Status.displayName = 'Status'

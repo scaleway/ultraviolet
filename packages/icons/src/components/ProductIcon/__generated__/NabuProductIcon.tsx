@@ -35,3 +35,5 @@ export const NabuProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </g>
   </Icon>
 )
+
+NabuProductIcon.displayName = 'NabuProductIcon'

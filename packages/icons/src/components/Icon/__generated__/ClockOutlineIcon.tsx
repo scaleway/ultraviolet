@@ -25,3 +25,5 @@ export const ClockOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     )}
   </Icon>
 )
+
+ClockOutlineIcon.displayName = 'ClockOutlineIcon'

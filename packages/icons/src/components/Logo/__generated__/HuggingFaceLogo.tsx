@@ -42,3 +42,5 @@ export const HuggingFaceLogo = ({ ...props }: Omit<IconProps, 'children' | 'titl
     />
   </Icon>
 )
+
+HuggingFaceLogo.displayName = 'HuggingFaceLogo'

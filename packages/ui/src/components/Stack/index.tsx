@@ -133,4 +133,6 @@ const IStack = forwardRef<any, PropsWithChildren<StackProps>>(
   },
 )
 
+IStack.displayName = 'Stack'
+
 export const Stack = IStack as <T extends ElementType = 'div'>(props: StackProps<T>) => ReactElement

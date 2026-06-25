@@ -89,3 +89,5 @@ export const PythonLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     </Icon>
   )
 }
+
+PythonLogo.displayName = 'PythonLogo'

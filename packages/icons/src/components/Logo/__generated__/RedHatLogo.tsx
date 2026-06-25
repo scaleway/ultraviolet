@@ -43,3 +43,5 @@ export const RedHatLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     </Icon>
   )
 }
+
+RedHatLogo.displayName = 'RedHatLogo'

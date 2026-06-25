@@ -30,3 +30,5 @@ export const BillingCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | '
     </g>
   </Icon>
 )
+
+BillingCategoryIcon.displayName = 'BillingCategoryIcon'

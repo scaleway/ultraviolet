@@ -39,3 +39,5 @@ export const FAQ = ({ productIcon, illustrationText, title, description, notes, 
     </Stack>
   </Card>
 )
+
+FAQ.displayName = 'FAQ'

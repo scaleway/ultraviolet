@@ -24,3 +24,5 @@ export const IdOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'
     )}
   </Icon>
 )
+
+IdOutlineIcon.displayName = 'IdOutlineIcon'

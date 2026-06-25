@@ -24,3 +24,5 @@ export const NotificationIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     )}
   </Icon>
 )
+
+NotificationIcon.displayName = 'NotificationIcon'

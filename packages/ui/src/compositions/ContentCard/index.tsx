@@ -109,3 +109,5 @@ export const ContentCard = forwardRef<HTMLAnchorElement & HTMLButtonElement & HT
     )
   },
 )
+
+ContentCard.displayName = 'ContentCard'

@@ -38,3 +38,5 @@ export const WebPlatformProductIcon = ({ ...props }: Omit<IconProps, 'children' 
     </defs>
   </Icon>
 )
+
+WebPlatformProductIcon.displayName = 'WebPlatformProductIcon'

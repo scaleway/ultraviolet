@@ -24,3 +24,5 @@ export const CostAndImpactManagementCategoryIcon = ({ ...props }: Omit<IconProps
     </g>
   </Icon>
 )
+
+CostAndImpactManagementCategoryIcon.displayName = 'CostAndImpactManagementCategoryIcon'

@@ -43,3 +43,5 @@ export const DataWarehouseProductIcon = ({ ...props }: Omit<IconProps, 'children
     </defs>
   </Icon>
 )
+
+DataWarehouseProductIcon.displayName = 'DataWarehouseProductIcon'
