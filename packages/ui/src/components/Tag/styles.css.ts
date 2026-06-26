@@ -1,8 +1,19 @@
 import { theme } from '@ultraviolet/themes'
-import { style } from '@vanilla-extract/css'
+import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 export const SENTIMENTS = ['danger', 'info', 'neutral', 'primary', 'secondary', 'success', 'warning'] as const
+
+const wrapper = styleVariants({
+  copiable: {},
+  notCopiable: {},
+})
+
+const separator = style({})
+const content = styleVariants({
+  copiable: {},
+  notCopiable: {},
+})
 
 const container = recipe({
   base: {
@@ -59,6 +70,15 @@ const container = recipe({
       true: {
         borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
         width: theme.sizing[300],
+        marginLeft: -1,
+      },
+      false: {
+        selectors: {
+          [`${wrapper.copiable}:hover &:not(:hover), ${wrapper.copiable}:focus-visible &:not(:focus-visible), ${wrapper.notCopiable}:hover &:not(:hover), ${wrapper.notCopiable}:focus-visible &:not(:focus-visible)`]:
+            {
+              borderRightColor: 'transparent',
+            },
+        },
       },
     },
   },
@@ -73,9 +93,9 @@ const container = recipe({
     ...SENTIMENTS.map(sentiment => ({
       style: {
         selectors: {
-          '&:hover, &:active': {
+          '&:hover, &:active, &:focus-visible': {
             background: theme.colors[sentiment].backgroundHover,
-            borderColor: theme.colors[sentiment][sentiment === 'neutral' ? 'borderStrongHover' : 'borderHover'],
+            borderColor: theme.colors[sentiment].borderHover,
           },
           '&:active': {
             boxShadow: theme.shadows[
@@ -98,10 +118,13 @@ const container = recipe({
       style: {
         background: theme.colors[sentiment].background,
         cursor: 'pointer',
-        borderLeft: 'none',
         selectors: {
-          '&:hover': {
+          '&:hover, &:focus-visible': {
             background: theme.colors[sentiment].backgroundHover,
+            border: `1px solid ${theme.colors[sentiment].borderHover}`,
+          },
+          [`${wrapper.copiable}:hover &:not(:hover), ${wrapper.copiable}:focus-visible &:not(:focus-visible)`]: {
+            borderLeft: `1px solid ${theme.colors[sentiment].borderHover}`,
           },
         },
       },
@@ -114,6 +137,4 @@ const text = style({
   maxWidth: '14.5rem',
 })
 
-const separator = style({})
-
-export const tagStyle = { container, text, separator }
+export const tagStyle = { container, text, separator, wrapper, content }

@@ -65,15 +65,17 @@ export const Tag = ({
 
   return (
     <Tooltip text={isCopiable ? copyTextTooltip : null}>
-      <Stack direction="row">
+      <Stack direction="row" className={tagStyle.wrapper[copiable ? 'copiable' : 'notCopiable']} width="fit-content">
         <TagInner
           className={cn(
             className,
+            tagStyle.content[copiable ? 'copiable' : 'notCopiable'],
             tagStyle.container({
               disabled,
               sentiment,
               closable: !!onClose,
               copiable: copiable && !disabled,
+              isButton: false,
             }),
           )}
           data-testid={dataTestId}

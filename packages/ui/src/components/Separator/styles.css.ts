@@ -86,6 +86,9 @@ const hr = recipe({
           [`&${tagStyle.separator}`]: {
             backgroundColor: theme.colors.neutral.border,
           },
+          [`${tagStyle.content.copiable}:hover  &${tagStyle.separator}`]: {
+            backgroundColor: theme.colors.neutral.borderHover,
+          },
         },
       },
       primary: makeColors(true, 'primary'),
