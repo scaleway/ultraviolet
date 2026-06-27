@@ -1,6 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
+import type { RenderProp } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useMemo } from 'react'
 import type { KeyboardEvent, MouseEvent as ReactMouseEvent, ReactNode } from 'react'
@@ -13,17 +14,42 @@ import { maxWidthVar, minWidthVar } from './styles.css'
 type ItemProps = {
   children: ReactNode
   'aria-current'?: boolean | 'false' | 'true' | 'page' | 'step' | 'location' | 'date' | 'time'
-  /**
-   * Make the component act a `Link` tag
-   */
-  to?: string
   disabled?: boolean
   onClick?: (event: ReactMouseEvent<HTMLElement>) => void
   onKeyDown?: (event: KeyboardEvent<HTMLElement>) => void
   className?: string
   maxWidth?: string
   minWidth?: string
-}
+  /**
+   * Custom element or render function to use instead of the default link/button.
+   * Useful for integrating with routing libraries (e.g., React Router, Next.js).
+   *
+   * Element form (props auto-merged):
+   * ```tsx
+   * <Breadcrumbs.Item render={<NextLink href="/about" />}>About</Breadcrumbs.Item>
+   * ```
+   *
+   * Function form (you control prop merging):
+   * ```tsx
+   * <Breadcrumbs.Item render={(props) => <NextLink {...props} href="/about" />}>
+   *   About
+   * </Breadcrumbs.Item>
+   * ```
+   */
+  render?: RenderProp
+} & XOR<
+  [
+    {
+      /**
+       * Make the component act a `Link` tag
+       */
+      to?: string
+    },
+    {
+      render: RenderProp
+    },
+  ]
+>
 
 export const Item = ({
   to,
@@ -35,30 +61,38 @@ export const Item = ({
   className,
   maxWidth,
   minWidth,
+  render,
 }: ItemProps) => {
   const renderedChildren = useMemo(() => {
-    if (to) {
+    if (to || render) {
       return (
         <Link
           className={breadcrumbsStyle.link}
-          href={to}
           onClick={onClick}
           onKeyDown={onKeyDown}
           prominence="stronger"
           size="small"
+          {...(render
+            ? {
+                render,
+              }
+            : {
+                href: to,
+              })}
         >
           {children}
         </Link>
       )
     }
 
-    if (onClick) {
+    if (onClick || render) {
       return (
         <Button
           className={breadcrumbsStyle.content}
           disabled={disabled}
           sentiment="neutral"
           size="small"
+          render={render}
           style={assignInlineVars({
             [minWidthVar]: minWidth?.toString(),
             [maxWidthVar]: maxWidth?.toString(),
@@ -79,7 +113,7 @@ export const Item = ({
         {children}
       </Text>
     )
-  }, [children, disabled, maxWidth, minWidth, onClick, to, onKeyDown])
+  }, [children, disabled, maxWidth, minWidth, onClick, to, onKeyDown, render])
 
   return (
     <li
