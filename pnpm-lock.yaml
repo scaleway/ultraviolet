@@ -627,8 +627,8 @@ importers:
   packages/ui:
     dependencies:
       '@handlewithcare/react-prosemirror':
-        specifier: 3.2.1
-        version: 3.2.1(prosemirror-model@1.25.9)(prosemirror-state@1.4.4)(prosemirror-view@1.41.9)(react-dom@19.2.7(react@19.2.7))(react-reconciler@0.33.0(react@19.2.7))(react@19.2.7)
+        specifier: 3.2.3
+        version: 3.2.3(prosemirror-model@1.25.9)(prosemirror-state@1.4.4)(prosemirror-view@1.41.9)(react-dom@19.2.7(react@19.2.7))(react-reconciler@0.33.0(react@19.2.7))(react@19.2.7)
       '@nivo/bar':
         specifier: 0.99.0
         version: 0.99.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -2056,13 +2056,13 @@ packages:
       '@noble/hashes':
         optional: true
 
-  '@handlewithcare/react-prosemirror@3.2.1':
-    resolution: {integrity: sha512-cvKCCy8fjhhuc4bARqJlpOlTnUONqI4CXeVJ9+XKMmONPovTBCqQu1e3cTPc5S5FnBj7iyHKXda2eJAao8dBrA==}
+  '@handlewithcare/react-prosemirror@3.2.3':
+    resolution: {integrity: sha512-ZxTIAotJB4kzd+jHX4pi4mtBxh4/tjsO8eFwmmguUItYCC5m/jUTsaVLqWgW6ZNa6KhlWtideSUXIPYANS+pQg==}
     engines: {node: '>=16.9'}
     peerDependencies:
-      '@tiptap/core': ^3.15.3
-      '@tiptap/pm': ^3.15.3
-      '@tiptap/react': ^3.15.3
+      '@tiptap/core': ^3.0.0
+      '@tiptap/pm': ^3.0.0
+      '@tiptap/react': ^3.0.0
       prosemirror-model: ^1.0.0
       prosemirror-state: ^1.0.0
       prosemirror-view: 1.41.7
@@ -6020,6 +6020,7 @@ packages:
   git-raw-commits@5.0.1:
     resolution: {integrity: sha512-Y+csSm2GD/PCSh6Isd/WiMjNAydu0VBiG9J7EdQsNA5P9uXvLayqjmTsNlK5Gs9IhblFZqOU0yid5Il5JPoLiQ==}
     engines: {node: '>=18'}
+    deprecated: Deprecated and no longer maintained. Use @conventional-changelog/git-client instead.
     hasBin: true
 
   glob-parent@5.1.2:
@@ -10148,7 +10149,7 @@ snapshots:
 
   '@exodus/bytes@1.15.1': {}
 
-  '@handlewithcare/react-prosemirror@3.2.1(prosemirror-model@1.25.9)(prosemirror-state@1.4.4)(prosemirror-view@1.41.9)(react-dom@19.2.7(react@19.2.7))(react-reconciler@0.33.0(react@19.2.7))(react@19.2.7)':
+  '@handlewithcare/react-prosemirror@3.2.3(prosemirror-model@1.25.9)(prosemirror-state@1.4.4)(prosemirror-view@1.41.9)(react-dom@19.2.7(react@19.2.7))(react-reconciler@0.33.0(react@19.2.7))(react@19.2.7)':
     dependencies:
       classnames: 2.5.1
       prosemirror-model: 1.25.9
