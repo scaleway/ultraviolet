@@ -4,6 +4,7 @@ import { recipe } from '@vanilla-extract/recipes'
 import type { RecipeVariants } from '@vanilla-extract/recipes'
 import type { Color } from '../../theme'
 import { drawerStyle } from '../Drawer/styles.css'
+import { tagStyle } from '../Tag/styles.css'
 
 export const thicknessSeparator = createVar()
 
@@ -81,6 +82,12 @@ const hr = recipe({
           [`${drawerStyle.base} &`]: {
             backgroundColor: theme.colors.neutral.border,
             minHeight: 1,
+          },
+          [`&${tagStyle.separator}`]: {
+            backgroundColor: theme.colors.neutral.border,
+          },
+          [`${tagStyle.content.copiable}:hover  &${tagStyle.separator}`]: {
+            backgroundColor: theme.colors.neutral.borderHover,
           },
         },
       },

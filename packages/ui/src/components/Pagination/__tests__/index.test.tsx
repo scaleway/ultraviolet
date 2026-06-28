@@ -17,6 +17,18 @@ describe('pagination', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  it('should render correctly small', async () => {
+    const mockOnClick = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <Pagination onChange={mockOnClick} page={1} pageCount={5} pageTabCount={5} size="small" />,
+    )
+    const nextButton = screen.getByRole('button', { name: 'Next' })
+    await userEvent.click(nextButton)
+    expect(mockOnClick).toHaveBeenCalledOnce()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   it('should render correctly with pageCount is 1', async () => {
     const mockOnClick = vi.fn()
 
@@ -147,5 +159,37 @@ describe('pagination', () => {
     const elementsPerPage25 = screen.getByTestId('option-25')
     await userEvent.click(elementsPerPage25)
     expect(mockOnClickPerPage).toHaveBeenCalledOnce()
+  })
+
+  it('should render correctly with hideFirstPage', () => {
+    const mockOnClick = vi.fn()
+
+    const { asFragment } = renderWithTheme(<Pagination onChange={mockOnClick} page={6} pageCount={10} hideFirstPage />)
+
+    const page5Button = screen.getByRole('button', { name: '5' })
+    expect(page5Button).toBeVisible()
+
+    expect(screen.queryByRole('button', { name: '1' })).not.toBeInTheDocument()
+
+    const page10Button = screen.getByRole('button', { name: '10' })
+    expect(page10Button).toBeVisible()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should render correctly with hideLastPage', () => {
+    const mockOnClick = vi.fn()
+
+    const { asFragment } = renderWithTheme(<Pagination onChange={mockOnClick} page={6} pageCount={10} hideLastPage />)
+
+    const page5Button = screen.getByRole('button', { name: '5' })
+    expect(page5Button).toBeVisible()
+
+    expect(screen.queryByRole('button', { name: '10' })).not.toBeInTheDocument()
+
+    const page1Button = screen.getByRole('button', { name: '1' })
+    expect(page1Button).toBeVisible()
+
+    expect(asFragment()).toMatchSnapshot()
   })
 })

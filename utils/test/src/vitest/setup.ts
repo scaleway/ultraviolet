@@ -25,6 +25,12 @@ const MockMatchMedia = vi.fn(function mock(query: string): MediaQueryList {
   }
 })
 
+// Mock InputEvent.getTargetRanges() for ProseMirror beforeinput plugin
+// jsdom doesn't implement this method, but @handlewithcare/react-prosemirror@3.2.1 requires it
+const MockGetTargetRanges = vi.fn(function mockGetTargetRanges(): StaticRange[] {
+  return []
+})
+
 export const setup = () => {
   process.env['TZ'] = 'UTC'
   expect.extend(domMatchers)
@@ -43,6 +49,12 @@ export const setup = () => {
         writeText: vi.fn().mockResolvedValue(undefined),
         readText: vi.fn().mockResolvedValue(''),
       }
+    }
+
+    // Mock InputEvent.getTargetRanges() for ProseMirror beforeinput plugin
+    // jsdom doesn't implement this method, but @handlewithcare/react-prosemirror@3.2.1 requires it
+    if (!globalThis.InputEvent.prototype.getTargetRanges) {
+      globalThis.InputEvent.prototype.getTargetRanges = MockGetTargetRanges
     }
   })
 

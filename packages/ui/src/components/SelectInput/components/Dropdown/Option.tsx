@@ -37,14 +37,18 @@ export const DisplayOption = ({
   if (descriptionDirection === 'row' && optionalInfoPlacement === 'left') {
     return (
       <Tooltip disableAnimation text={option.tooltip}>
-        <Stack data-testid={`option-stack-${option.value}`} direction="row" gap={0.5} justifyContent="left">
-          <Stack alignItems="flex-start" className={selectInputStyle.dropdownInfoContainer} direction="row" gap={0.5}>
-            {option.optionalInfo}
-            <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
-              {option.label}
-            </Text>
-            {optionDescription}
-          </Stack>
+        <Stack
+          alignItems={optionDescription ? 'flex-start' : 'center'}
+          className={selectInputStyle.dropdownInfoContainer}
+          direction="row"
+          data-testid={`option-stack-${option.value}`}
+          gap={0.5}
+        >
+          {option.optionalInfo}
+          <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
+            {option.label}
+          </Text>
+          {optionDescription}
         </Stack>
       </Tooltip>
     )
@@ -83,7 +87,6 @@ export const DisplayOption = ({
           className={selectInputStyle.optionalInfoPadding}
         >
           {option.optionalInfo}
-
           <Stack
             className={selectInputStyle.dropdownInfoContainer}
             data-testid={`option-stack-${option.value}`}

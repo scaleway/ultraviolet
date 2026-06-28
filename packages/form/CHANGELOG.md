@@ -1,5 +1,22 @@
 # Change Log
 
+## 6.5.4
+
+### Patch Changes
+
+- [#6595](https://github.com/scaleway/ultraviolet/pull/6595) [`724214a`](https://github.com/scaleway/ultraviolet/commit/724214a1d30d5b2baa33ca31506506e232083e78) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.79.0`.
+
+- Updated dependencies [[`bf34e64`](https://github.com/scaleway/ultraviolet/commit/bf34e6491c4fd5f8756a2ee0a17d471ca4c9d7d0), [`3461160`](https://github.com/scaleway/ultraviolet/commit/346116028d404460d39ec4026ec6bb9d1fbe9823), [`44e89ac`](https://github.com/scaleway/ultraviolet/commit/44e89ac5c4c41cc02cb18e5a70dbbf24cae0507b)]:
+  - @ultraviolet/ui@3.19.1
+  - @ultraviolet/icons@5.4.3
+
+## 6.5.3
+
+### Patch Changes
+
+- Updated dependencies [[`2472a8d`](https://github.com/scaleway/ultraviolet/commit/2472a8d6c5a8cdd54939bffb981f7d4682e18051), [`ea70e33`](https://github.com/scaleway/ultraviolet/commit/ea70e33ab2234f5978ee3ae1762605744ee7e6f2), [`f8b0bce`](https://github.com/scaleway/ultraviolet/commit/f8b0bce10b0dd9524efb42f0ec75c724a468842b)]:
+  - @ultraviolet/ui@3.19.0
+
 ## 6.5.2
 
 ### Patch Changes

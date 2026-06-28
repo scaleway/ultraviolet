@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { CodeEditor } from '..'
 
 // We are skipping this as CodeEditor seems to be generating new classNames
@@ -98,5 +98,20 @@ describe('codeEditor', () => {
 
     await userEvent.click(showButton)
     expect(showButton).toHaveTextContent('hide')
+  })
+
+  it('handles focus events with render prop', async () => {
+    const onFocus = vi.fn()
+    renderWithTheme(
+      <CodeEditor
+        onFocus={onFocus}
+        value="configuration: 1/ntest: 'ok'"
+        extensions="yaml"
+        onChange={newValue => newValue}
+      />,
+    )
+    const codeEditor = screen.getByRole('textbox')
+    await userEvent.click(codeEditor)
+    expect(onFocus).toHaveBeenCalledOnce()
   })
 })

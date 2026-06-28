@@ -5,29 +5,23 @@ export type TagProps = {
   isLoading?: boolean
   sentiment?: (typeof SENTIMENTS)[number]
   disabled?: boolean
-
+  copyText?: string
+  copiedText?: string
+  copiable?: boolean
   className?: string
   variant?: 'default' | 'code'
   'data-testid'?: string
   style?: CSSProperties
+  onClose?: MouseEventHandler<HTMLButtonElement>
 } & (
   | {
       keyValue: { key: string; value: string }
       children?: never
-      copiable?: never
       copyButton?: never
-      copyText?: never
-      copiedText?: never
-      onClose?: never
     }
   | {
       keyValue?: never
       children: ReactNode
-      copiable?: boolean
       copyButton?: boolean
-      copyText?: string
-
-      copiedText?: string
-      onClose?: MouseEventHandler<HTMLButtonElement>
     }
 )

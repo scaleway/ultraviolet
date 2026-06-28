@@ -116,6 +116,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
                     className={cn(radioStyle.textLabel[size], radioStyle.label)}
                     htmlFor={localId}
                     prominence="default"
+                    sentiment="neutral"
                     variant={size === 'small' ? 'bodySmall' : 'body'}
                   >
                     {label}

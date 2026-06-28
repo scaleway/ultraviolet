@@ -21,7 +21,6 @@ const textArea = recipe({
     border: `1px solid ${theme.colors.neutral.border}`,
     borderRadius: theme.radii.default,
     color: theme.colors.neutral.text,
-    minHeight: theme.sizing[600],
     padding: `${theme.space['1.5']} ${theme.space['1']} ${theme.space['1.5']} ${theme.space['2']}`,
     paddingRight: paddingRightVar,
     resize: 'vertical',
@@ -55,6 +54,7 @@ const textArea = recipe({
   defaultVariants: {
     error: false,
     success: false,
+    size: 'large',
   },
   variants: {
     error: {
@@ -65,6 +65,20 @@ const textArea = recipe({
     success: {
       true: {
         borderColor: theme.colors.success.border,
+      },
+    },
+    size: {
+      small: {
+        fontSize: theme.typography.bodySmall.fontSize,
+        minHeight: theme.sizing[700],
+      },
+      medium: {
+        fontSize: theme.typography.bodySmall.fontSize,
+        minHeight: theme.sizing[800],
+      },
+      large: {
+        fontSize: theme.typography.body.fontSize,
+        minHeight: theme.sizing[900],
       },
     },
   },

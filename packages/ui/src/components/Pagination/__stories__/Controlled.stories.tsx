@@ -1,7 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { Pagination } from '..'
-import { Badge } from '../../Badge'
 
 export const Controlled: StoryFn = props => {
   const [page, setPage] = useState(1)
@@ -11,16 +10,6 @@ export const Controlled: StoryFn = props => {
       Current page : {page} <Pagination {...props} onChange={setPage} page={page} pageCount={10} />
     </>
   )
-}
-
-Controlled.args = {
-  label: 'Label',
-  labelDescription: (
-    <Badge sentiment="primary" size="small">
-      New
-    </Badge>
-  ),
-  value: 40,
 }
 
 Controlled.parameters = {

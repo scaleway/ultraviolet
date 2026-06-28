@@ -5,6 +5,7 @@ import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { useCallback, useMemo } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
+import { Ellipsis } from './Ellipsis'
 import { getPageNumbers } from './getPageNumbers'
 import { MakeButton } from './PaginationButton'
 import { paginationStyle } from './styles.css'
@@ -14,10 +15,12 @@ type PaginationButtonsProps = {
   disabled: boolean
   onChange: (newPage: number) => void
   pageCount: number
-  pageTabCount?: number
+  pageTabCount: number
   className?: string
   'data-testid'?: string
-  perPage: boolean
+  hideFirstPage?: boolean
+  hideLastPage?: boolean
+  size: 'small' | 'medium'
 }
 
 export const PaginationButtons = ({
@@ -28,7 +31,9 @@ export const PaginationButtons = ({
   pageTabCount,
   'data-testid': dataTestId,
   className,
-  perPage,
+  hideFirstPage,
+  hideLastPage,
+  size,
 }: PaginationButtonsProps) => {
   const goToNextPage = useCallback(() => {
     onChange(page + 1)
@@ -39,8 +44,8 @@ export const PaginationButtons = ({
   }, [onChange, page])
 
   const pageNumbersToDisplay = useMemo(
-    () => (pageCount > 1 ? getPageNumbers(page, pageCount, pageTabCount) : [1]),
-    [page, pageCount, pageTabCount],
+    () => (pageCount > 1 ? getPageNumbers(page, pageCount, pageTabCount, hideFirstPage, hideLastPage) : [1]),
+    [page, pageCount, pageTabCount, hideFirstPage, hideLastPage],
   )
 
   const handlePageClick = useCallback(
@@ -58,7 +63,7 @@ export const PaginationButtons = ({
           disabled={page <= 1 || disabled}
           onClick={goToPreviousPage}
           sentiment="primary"
-          size={perPage ? 'small' : 'medium'}
+          size={size}
           variant="outlined"
         >
           <ArrowLeftIcon />
@@ -69,13 +74,16 @@ export const PaginationButtons = ({
           <MakeButton
             disabled={disabled}
             handlePageClick={handlePageClick}
-            hasEllipsisBefore={!(index === 0 || pageNumbersToDisplay[index - 1] === pageNumber - 1)}
+            hasEllipsisBefore={
+              !(index === 0 || pageNumbersToDisplay[index - 1] === pageNumber - 1) || (index === 0 && pageNumber !== 1)
+            }
             key={pageNumber}
             page={page}
             pageNumber={pageNumber}
-            perPage={perPage}
+            size={size}
           />
         ))}
+        {pageNumbersToDisplay.at(-1) === pageCount ? null : <Ellipsis disabled={disabled} size={size} />}
       </Stack>
       <Stack gap={1}>
         <Button
@@ -83,7 +91,7 @@ export const PaginationButtons = ({
           disabled={page >= pageCount || disabled}
           onClick={goToNextPage}
           sentiment="primary"
-          size={perPage ? 'small' : 'medium'}
+          size={size}
           variant="outlined"
         >
           <ArrowRightIcon />

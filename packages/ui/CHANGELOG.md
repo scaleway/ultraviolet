@@ -1,5 +1,28 @@
 # Change Log
 
+## 3.19.1
+
+### Patch Changes
+
+- [#6541](https://github.com/scaleway/ultraviolet/pull/6541) [`bf34e64`](https://github.com/scaleway/ultraviolet/commit/bf34e6491c4fd5f8756a2ee0a17d471ca4c9d7d0) Thanks [@lisalupi](https://github.com/lisalupi)! - `TextArea`: new prop `size`
+
+- [#6551](https://github.com/scaleway/ultraviolet/pull/6551) [`44e89ac`](https://github.com/scaleway/ultraviolet/commit/44e89ac5c4c41cc02cb18e5a70dbbf24cae0507b) Thanks [@lisalupi](https://github.com/lisalupi)! - `OfferList`: fix issues with banner and borders
+
+- Updated dependencies [[`3461160`](https://github.com/scaleway/ultraviolet/commit/346116028d404460d39ec4026ec6bb9d1fbe9823)]:
+  - @ultraviolet/icons@5.4.3
+
+## 3.19.0
+
+### Minor Changes
+
+- [#6533](https://github.com/scaleway/ultraviolet/pull/6533) [`ea70e33`](https://github.com/scaleway/ultraviolet/commit/ea70e33ab2234f5978ee3ae1762605744ee7e6f2) Thanks [@jsulpis](https://github.com/jsulpis)! - `Filters`: add the Filters component
+
+### Patch Changes
+
+- [#6587](https://github.com/scaleway/ultraviolet/pull/6587) [`2472a8d`](https://github.com/scaleway/ultraviolet/commit/2472a8d6c5a8cdd54939bffb981f7d4682e18051) Thanks [@jsulpis](https://github.com/jsulpis)! - `MultiSelect`: fix truncated Tags in size medium
+
+- [#6580](https://github.com/scaleway/ultraviolet/pull/6580) [`f8b0bce`](https://github.com/scaleway/ultraviolet/commit/f8b0bce10b0dd9524efb42f0ec75c724a468842b) Thanks [@chambo-e](https://github.com/chambo-e)! - properly pass onClick to List in OfferListField.Row
+
 ## 3.18.2
 
 ### Patch Changes

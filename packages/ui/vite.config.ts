@@ -9,6 +9,7 @@ export const config = mergeConfig(defineConfig(defaultConfig), {
       entry: {
         'compositions/Navigation/index': resolve(import.meta.dirname, 'src/compositions/Navigation/index.tsx'),
         'compositions/EstimateCost/index': resolve(import.meta.dirname, 'src/compositions/EstimateCost/index.tsx'),
+        'compositions/Filters/index': resolve(import.meta.dirname, 'src/compositions/Filters/index.ts'),
         composition: 'src/composition.ts',
         index: 'src/index.ts',
       },

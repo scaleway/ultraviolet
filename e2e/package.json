@@ -4,14 +4,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsgo -b && vite build",
+    "build": "tsc -b && vite build",
     "e2e": "playwright test",
     "e2e:debug": "playwright test --ui",
     "preview": "vite preview",
     "start": "vite"
   },
   "devDependencies": {
-    "@playwright/test": "1.60.0",
+    "@playwright/test": "1.61.0",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "@ultraviolet/fonts": "workspace:*",
@@ -19,12 +19,12 @@
     "@ultraviolet/icons": "workspace:*",
     "@ultraviolet/themes": "workspace:*",
     "@ultraviolet/ui": "workspace:*",
-    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-react": "6.0.3",
     "globals": "17.6.0",
     "react": "19.2.7",
     "react-dom": "19.2.7",
-    "react-router-dom": "7.17.0",
-    "typescript": "6.0.3",
+    "react-router-dom": "7.18.0",
+    "typescript": "7.0.1-rc",
     "vite": "8.0.16"
   }
 }

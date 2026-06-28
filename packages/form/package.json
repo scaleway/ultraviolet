@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/form",
-  "version": "6.5.2",
+  "version": "6.5.4",
   "description": "Ultraviolet Form",
   "keywords": [
     "react",
@@ -45,8 +45,8 @@
     "size": "size-limit",
     "test:unit": "LC_ALL=en_US.UTF-8 pnpm vitest --run ",
     "test:unit:coverage": "pnpm test:unit --coverage",
-    "type:generate": "tsgo --declaration -p tsconfig.build.json",
-    "typecheck": "tsgo --noEmit",
+    "type:generate": "tsc --declaration -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
     "watch": "pnpm run '/^watch:.*/'",
     "watch:build": "vite build  --watch"
   },
@@ -55,7 +55,7 @@
     "@ultraviolet/icons": "workspace:*",
     "@ultraviolet/themes": "workspace:*",
     "@ultraviolet/ui": "workspace:*",
-    "react-hook-form": "7.78.0"
+    "react-hook-form": "7.79.0"
   },
   "devDependencies": {
     "@repo/config": "workspace:*",

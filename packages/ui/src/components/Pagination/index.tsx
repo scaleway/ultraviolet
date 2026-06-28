@@ -20,9 +20,11 @@ type PaginationProps = {
   */
   pageCount: number
   /**
-    How many page button you want to have
+    How many page button you want to have before truncation
   */
   pageTabCount?: number
+  hideFirstPage?: boolean
+  hideLastPage?: boolean
   /**
     Disable all buttons
   */
@@ -56,6 +58,7 @@ type PaginationProps = {
        * Defines the target element for the perPage dropdown menu
        */
       perPagePortalTarget?: HTMLElement
+      size?: never
     }
   | {
       perPage?: never
@@ -64,6 +67,7 @@ type PaginationProps = {
       numberOfItemsText?: never
       numberOfItems?: never
       perPagePortalTarget?: never
+      size?: 'small' | 'medium'
     }
 )
 
@@ -84,6 +88,9 @@ export const Pagination = ({
   numberOfItemsText,
   numberOfItems,
   perPagePortalTarget,
+  hideFirstPage,
+  hideLastPage,
+  size = 'medium',
   'data-testid': dataTestId,
   style,
 }: PaginationProps) => {
@@ -126,7 +133,9 @@ export const Pagination = ({
         page={page}
         pageCount={pageCount}
         pageTabCount={pageTabCount}
-        perPage={!!perPage}
+        size={perPage ? 'small' : size}
+        hideFirstPage={hideFirstPage}
+        hideLastPage={hideLastPage}
       />
     </Stack>
   )

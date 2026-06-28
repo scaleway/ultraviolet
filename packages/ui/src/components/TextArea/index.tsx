@@ -67,6 +67,7 @@ type TextAreaProps = {
   maxRows?: number
   minLength?: number
   maxLength?: number
+  size?: 'small' | 'medium' | 'large'
   tooltip?: string
   required?: boolean
   'data-testid'?: string
@@ -108,6 +109,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       onBlur,
       onKeyDown,
       clearable = false,
+      size = 'large',
       labelDescription,
       'aria-label': ariaLabel,
       style,
@@ -173,7 +175,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     return (
       <Stack className={className} gap="0.5">
         {label || labelDescription ? (
-          <Label htmlFor={id ?? localId} labelDescription={labelDescription} required={required}>
+          <Label htmlFor={id ?? localId} labelDescription={labelDescription} required={required} size={size}>
             {label}
           </Label>
         ) : null}
@@ -187,6 +189,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               className={textAreaStyle.textArea({
                 error: !!error,
                 success: !!success,
+                size,
               })}
               data-testid={dataTestId}
               disabled={disabled}

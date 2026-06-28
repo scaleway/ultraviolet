@@ -46,8 +46,8 @@
     "build": "vite build  && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "lintpublish": "pnpm publint",
-    "type:generate": "tsgo --declaration -p tsconfig.build.json",
-    "typecheck": "tsgo --noEmit",
+    "type:generate": "tsc --declaration -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
     "watch": "pnpm run '/^watch:.*/'",
     "watch:build": "vite build  --watch"
   },

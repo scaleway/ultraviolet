@@ -1,8 +1,19 @@
 import { theme } from '@ultraviolet/themes'
-import { style } from '@vanilla-extract/css'
+import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 export const SENTIMENTS = ['danger', 'info', 'neutral', 'primary', 'secondary', 'success', 'warning'] as const
+
+const wrapper = styleVariants({
+  copiable: {},
+  notCopiable: {},
+})
+
+const separator = style({})
+const content = styleVariants({
+  copiable: {},
+  notCopiable: {},
+})
 
 const container = recipe({
   base: {
@@ -40,8 +51,8 @@ const container = recipe({
     },
     closable: {
       true: {
-        paddingRight: theme.space[0.5],
         gap: theme.space[0.5],
+        borderRadius: `${theme.radii.default} 0 0 ${theme.radii.default}`,
       },
     },
 
@@ -50,56 +61,50 @@ const container = recipe({
         sentiment,
         {
           background: theme.colors[sentiment].background,
-          border: `solid 1px ${sentiment === 'neutral' ? theme.colors.neutral.border : theme.colors[sentiment].background}`,
+          border: `solid 1px ${theme.colors[sentiment].border}`,
           color: theme.colors[sentiment].text,
         },
       ]),
     ),
-    isKey: {
-      true: {
-        borderRadius: `${theme.radii.default} 0 0 ${theme.radii.default}`,
-      },
-    },
-    isValue: {
+    isButton: {
       true: {
         borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
+        width: theme.sizing[300],
+        marginLeft: -1,
       },
-    },
-    isKeyValue: {
-      true: {},
+      false: {
+        selectors: {
+          [`${wrapper.copiable}:hover &:not(:hover), ${wrapper.copiable}:focus-visible &:not(:focus-visible), ${wrapper.notCopiable}:hover &:not(:hover), ${wrapper.notCopiable}:focus-visible &:not(:focus-visible)`]:
+            {
+              borderRightColor: 'transparent',
+            },
+        },
+      },
     },
   },
   defaultVariants: {
     copiable: false,
     disabled: false,
     sentiment: 'neutral',
-    isValue: false,
-    isKey: false,
-    isKeyValue: false,
+    isButton: false,
+    closable: false,
   },
   compoundVariants: [
     ...SENTIMENTS.map(sentiment => ({
       style: {
         selectors: {
-          '&:hover, &:active': {
+          '&:hover, &:active, &:focus-visible': {
             background: theme.colors[sentiment].backgroundHover,
-            borderColor: theme.colors[sentiment][sentiment === 'neutral' ? 'borderStrongHover' : 'borderHover'],
+            borderColor: theme.colors[sentiment].borderHover,
+          },
+          '&:active': {
+            boxShadow: theme.shadows[
+              `focus${sentiment.charAt(0).toUpperCase() + sentiment.slice(1)}` as keyof typeof theme.shadows
+            ] as string,
           },
         },
       },
       variants: { copiable: true, sentiment, disabled: false },
-    })),
-    ...SENTIMENTS.map(sentiment => ({
-      style: {
-        borderWidth: '1px 0 1px 1px',
-      },
-      variants: { isKey: true, sentiment },
-    })),
-    ...SENTIMENTS.map(sentiment => ({
-      style: {
-        borderColor: theme.colors[sentiment]['border'],
-      },
-      variants: { isKeyValue: true, sentiment, disabled: false },
     })),
     ...SENTIMENTS.map(sentiment => ({
       style: {
@@ -111,9 +116,19 @@ const container = recipe({
     })),
     ...SENTIMENTS.map(sentiment => ({
       style: {
-        borderWidth: '1px 0 1px 1px',
+        background: theme.colors[sentiment].background,
+        cursor: 'pointer',
+        selectors: {
+          '&:hover, &:focus-visible': {
+            background: theme.colors[sentiment].backgroundHover,
+            border: `1px solid ${theme.colors[sentiment].borderHover}`,
+          },
+          [`${wrapper.copiable}:hover &:not(:hover), ${wrapper.copiable}:focus-visible &:not(:focus-visible)`]: {
+            borderLeft: `1px solid ${theme.colors[sentiment].borderHover}`,
+          },
+        },
       },
-      variants: { isKey: true, sentiment, disabled: true },
+      variants: { isButton: true, sentiment, disabled: false },
     })),
   ],
 })
@@ -122,4 +137,4 @@ const text = style({
   maxWidth: '14.5rem',
 })
 
-export const tagStyle = { container, text }
+export const tagStyle = { container, text, separator, wrapper, content }
