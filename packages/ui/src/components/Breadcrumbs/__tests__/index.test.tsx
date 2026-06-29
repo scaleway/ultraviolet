@@ -85,7 +85,7 @@ describe('breadcrumbs', () => {
       </Breadcrumbs>,
     )
 
-    const customLink = screen.getByText('Custom Link').closest('a')
+    const customLink = screen.getByRole('link', { name: 'Custom Link' })
     expect(customLink).toHaveAttribute('data-custom-link', 'true')
     expect(customLink).toHaveAttribute('href', '/custom')
     expect(asFragment()).toMatchSnapshot()
