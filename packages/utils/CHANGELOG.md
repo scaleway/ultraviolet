@@ -1,5 +1,11 @@
 # @ultraviolet/utils
 
+## 1.0.14
+
+### Patch Changes
+
+- [#6628](https://github.com/scaleway/ultraviolet/pull/6628) [`3fd5403`](https://github.com/scaleway/ultraviolet/commit/3fd54035059af1776280b4ee59c7005829b53134) Thanks [@philibea](https://github.com/philibea)! - add isNullOrUndefined
+
 ## 1.0.13
 
 ### Patch Changes
