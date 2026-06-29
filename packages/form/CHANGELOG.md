@@ -1,5 +1,12 @@
 # Change Log
 
+## 6.5.5
+
+### Patch Changes
+
+- Updated dependencies [[`767ce60`](https://github.com/scaleway/ultraviolet/commit/767ce60bcc32e331dfe402a3b01f9aee2b2b075a), [`e382f50`](https://github.com/scaleway/ultraviolet/commit/e382f502cdb07fb56d1249917b81d7dd029c620e), [`3791bf2`](https://github.com/scaleway/ultraviolet/commit/3791bf2720af0236ddf367563b85d30e00856ed8), [`e382f50`](https://github.com/scaleway/ultraviolet/commit/e382f502cdb07fb56d1249917b81d7dd029c620e), [`b3e7d68`](https://github.com/scaleway/ultraviolet/commit/b3e7d684e27d27ee553e2d8effa2ce870f0aa1f4), [`8b71854`](https://github.com/scaleway/ultraviolet/commit/8b71854ef302a6a2557ad9538ffbfdc56e8003d3), [`60d5231`](https://github.com/scaleway/ultraviolet/commit/60d5231202629ce69d1a73b934adb95278b161df), [`4362cd6`](https://github.com/scaleway/ultraviolet/commit/4362cd62cee3e611c47457f5c0d9b675472cdd22), [`45a29ef`](https://github.com/scaleway/ultraviolet/commit/45a29efcae94a2c72ca1b230709ded5a2873491d), [`adcf383`](https://github.com/scaleway/ultraviolet/commit/adcf3839f4ad6d2155c66098d9465f27471b0edb)]:
+  - @ultraviolet/ui@3.20.0
+
 ## 6.5.4
 
 ### Patch Changes

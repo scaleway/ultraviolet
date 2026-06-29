@@ -1,5 +1,11 @@
 # @ultraviolet/fonts
 
+## 2.2.1
+
+### Patch Changes
+
+- [#6616](https://github.com/scaleway/ultraviolet/pull/6616) [`d10e9f5`](https://github.com/scaleway/ultraviolet/commit/d10e9f5ebcdb02367491355b23d744fce5fe79bd) Thanks [@iManu](https://github.com/iManu)! - Add root custom props for fonts family fallbacks
+
 ## 2.2.0
 
 ### Minor Changes
