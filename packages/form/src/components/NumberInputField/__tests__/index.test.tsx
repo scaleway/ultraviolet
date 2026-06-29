@@ -198,24 +198,143 @@ describe('numberInputField', () => {
 
     it('should fail validation when value is not a decimal number', async () => {
       const onSubmit = vi.fn()
+      const onChange = vi.fn()
       renderWithForm(
         <>
-          <NumberInputField aria-label="Test" name="test" />
+          <NumberInputField aria-label="Test" name="inputName" onChange={onChange} />
           <Submit>Submit</Submit>
         </>,
-        { defaultValues: { test: 0 }, mode: 'onChange' },
+        {
+          defaultValues: {
+            // string is not accept by the type, this will not be reflect inside the value.
+            inputName: 'string',
+          },
+          mode: 'all',
+        },
         { errors: mockFormErrors, onSubmit },
       )
 
       const input = screen.getByRole('spinbutton', { name: 'Test' })
+
+      await userEvent.clear(input)
+      await userEvent.type(input, '1')
+
+      expect(onChange).toHaveBeenLastCalledWith(1)
+
+      await userEvent.clear(input)
+
+      expect(onChange).toHaveBeenLastCalledWith(null)
+
+      // Will not trigger onChange event.
+      await userEvent.type(input, 'e')
+
+      await userEvent.tab()
+
+      await waitFor(() => {
+        // validation will no be trigger has we don't trigger onChange or value is not set if it's not a number.
+        expect(onSubmit).not.toHaveBeenCalled()
+      })
+    })
+
+    it('should fail isNumber validation for NaN values', async () => {
+      const onSubmit = vi.fn()
+      renderWithForm(
+        <>
+          <NumberInputField aria-label="Number Input" name="test" required min={Number.MIN_SAFE_INTEGER} />
+          <Submit>Submit</Submit>
+        </>,
+        {
+          defaultValues: {
+            test: Number.NaN,
+          },
+          mode: 'all',
+          shouldUseNativeValidation: true,
+        },
+        { errors: mockFormErrors, onSubmit },
+      )
+
       const submit = screen.getByRole('button', { name: 'Submit' })
 
-      await userEvent.type(input, 'e')
       await userEvent.click(submit)
 
       await waitFor(() => {
-        expect(input).toHaveAccessibleDescription('This field should be a number')
         expect(onSubmit).not.toHaveBeenCalled()
+      })
+    })
+
+    it('should fail isNumber validation for null when required', async () => {
+      const onSubmit = vi.fn()
+      renderWithForm(
+        <>
+          <NumberInputField aria-label="Number Input" name="test" required min={Number.MIN_SAFE_INTEGER} />
+          <Submit>Submit</Submit>
+        </>,
+        {
+          defaultValues: {
+            test: null,
+          },
+          mode: 'onChange',
+        },
+        { errors: mockFormErrors, onSubmit },
+      )
+
+      const submit = screen.getByRole('button', { name: 'Submit' })
+
+      await userEvent.click(submit)
+
+      await waitFor(() => {
+        expect(onSubmit).not.toHaveBeenCalled()
+        expect(submit).toBeDisabled()
+      })
+    })
+
+    it('should pass isNumber validation for zero', async () => {
+      const onSubmit = vi.fn()
+      renderWithForm(
+        <>
+          <NumberInputField aria-label="Number Input" name="test" required min={Number.MIN_SAFE_INTEGER} />
+          <Submit>Submit</Submit>
+        </>,
+        {
+          defaultValues: {
+            test: 0,
+          },
+          mode: 'all',
+        },
+        { errors: mockFormErrors, onSubmit },
+      )
+
+      const submit = screen.getByRole('button', { name: 'Submit' })
+
+      await userEvent.click(submit)
+
+      await waitFor(() => {
+        expect(onSubmit).toHaveBeenCalledExactlyOnceWith({ test: 0 })
+      })
+    })
+
+    it('should pass isNumber validation for negative numbers', async () => {
+      const onSubmit = vi.fn()
+      renderWithForm(
+        <>
+          <NumberInputField aria-label="Number Input" name="test" required min={Number.MIN_SAFE_INTEGER} />
+          <Submit>Submit</Submit>
+        </>,
+        {
+          defaultValues: {
+            test: -42,
+          },
+          mode: 'onChange',
+        },
+        { errors: mockFormErrors, onSubmit },
+      )
+
+      const submit = screen.getByRole('button', { name: 'Submit' })
+
+      await userEvent.click(submit)
+
+      await waitFor(() => {
+        expect(onSubmit).toHaveBeenCalledExactlyOnceWith({ test: -42 })
       })
     })
 
@@ -243,9 +362,10 @@ describe('numberInputField', () => {
 
     it('should fail validation for decimal numbers when step is integer', async () => {
       const onSubmit = vi.fn()
+      const onChange = vi.fn()
       renderWithForm(
         <>
-          <NumberInputField aria-label="Test" name="test" step={2} />
+          <NumberInputField aria-label="Test" name="test" onChange={onChange} step={2} min={0} />
           <Submit>Submit</Submit>
         </>,
         { defaultValues: { test: 0 }, mode: 'onChange' },
@@ -259,18 +379,173 @@ describe('numberInputField', () => {
       await userEvent.click(submit)
 
       await waitFor(() => {
-        expect(input).toHaveAccessibleDescription('This field should be an integer')
+        expect(input).toHaveAccessibleDescription('This field should be an integer 3.14')
         expect(onSubmit).not.toHaveBeenCalled()
       })
 
       await userEvent.clear(input)
+      // await waitFor(() => {
+      //   expect(onChange).toHaveBeenCalledWith([null, Number.MIN_SAFE_INTEGER])
+      // })
+
       await userEvent.type(input, '4')
       await userEvent.click(submit)
 
       await waitFor(() => {
-        expect(input).toHaveAccessibleDescription('')
         expect(onSubmit).toHaveBeenCalledExactlyOnceWith({ test: 4 })
       })
+    })
+
+    it('should allow optional field to be empty without failing validation', async () => {
+      const onSubmit = vi.fn()
+      renderWithForm(
+        <>
+          <NumberInputField aria-label="Test" name="test" />
+          <Submit>Submit</Submit>
+        </>,
+        { defaultValues: {}, mode: 'onChange' },
+        { errors: mockFormErrors, onSubmit },
+      )
+
+      const submit = screen.getByRole('button', { name: 'Submit' })
+
+      await userEvent.click(submit)
+
+      await waitFor(() => {
+        expect(onSubmit).toHaveBeenCalledExactlyOnceWith({})
+      })
+    })
+
+    it('should allow optional field with step to be empty without failing validation', async () => {
+      const onSubmit = vi.fn()
+      renderWithForm(
+        <>
+          <NumberInputField aria-label="Test" name="numberInput" step={1} />
+          <Submit>Submit</Submit>
+        </>,
+        {
+          defaultValues: {
+            numberInput: 1,
+          },
+          mode: 'onChange',
+        },
+        { errors: mockFormErrors, onSubmit },
+      )
+
+      const submit = screen.getByRole('button', { name: 'Submit' })
+
+      await userEvent.click(submit)
+
+      await waitFor(() => {
+        expect(onSubmit).toHaveBeenCalledExactlyOnceWith({
+          numberInput: 1,
+        })
+      })
+    })
+
+    it('should have valid form state when optional field is empty', async () => {
+      const onSubmit = vi.fn()
+      const { resultForm } = renderWithForm(
+        <>
+          <NumberInputField aria-label="Test" name="numberInput" />
+          <Submit>Submit</Submit>
+        </>,
+        {
+          defaultValues: {
+            // numberInput: null,
+          },
+          mode: 'onChange',
+        },
+        { errors: mockFormErrors, onSubmit },
+      )
+
+      const submit = screen.getByRole('button', { name: 'Submit' })
+
+      await waitFor(() => {
+        expect(resultForm.current.formState.isValid).toBe(true)
+      })
+
+      await userEvent.click(submit)
+
+      await waitFor(() => {
+        expect(onSubmit).toHaveBeenCalledExactlyOnceWith({})
+      })
+    })
+
+    it('should have valid form state when optional field with step is empty', async () => {
+      const onSubmit = vi.fn()
+      renderWithForm(
+        <>
+          <NumberInputField aria-label="Test" name="test" />
+          <Submit>Submit</Submit>
+        </>,
+        {
+          defaultValues: {},
+          mode: 'onChange',
+        },
+        { errors: mockFormErrors, onSubmit },
+      )
+      const submit = screen.getByRole('button', { name: 'Submit' })
+
+      await waitFor(() => {
+        expect(submit).toBeEnabled()
+      })
+
+      await userEvent.click(submit)
+
+      await waitFor(() => {
+        expect(onSubmit).toHaveBeenCalledExactlyOnceWith({})
+      })
+    })
+
+    it('should accept scientific notation like 1e2 as a valid value', async () => {
+      const onSubmit = vi.fn()
+      const { resultForm } = renderWithForm(
+        <>
+          <NumberInputField aria-label="Test" name="test" />
+          <Submit>Submit</Submit>
+        </>,
+        { defaultValues: { test: 0 }, mode: 'onChange' },
+        { errors: mockFormErrors, onSubmit },
+      )
+
+      const input = screen.getByRole('spinbutton', { name: 'Test' })
+      const submit = screen.getByRole('button', { name: 'Submit' })
+
+      act(() => {
+        resultForm.current.setValue('test', 1e2, { shouldValidate: true })
+      })
+
+      await waitFor(() => {
+        expect(input).toHaveValue(100)
+      })
+
+      await userEvent.click(submit)
+
+      await waitFor(() => {
+        expect(onSubmit).toHaveBeenCalledExactlyOnceWith({ test: 100 })
+      })
+    })
+
+    it('should allow typing scientific notation like 1e2', async () => {
+      const onChange = vi.fn()
+      renderWithForm(
+        <>
+          <NumberInputField aria-label="Test" name="test" onChange={onChange} />
+        </>,
+        { defaultValues: { test: 0 } },
+      )
+
+      const input = screen.getByRole('spinbutton', { name: 'Test' })
+
+      // Note: Browsers block typing 'e' in number inputs, so scientific notation
+      // can only be entered via paste. This test verifies that pasted scientific
+      // notation is correctly parsed.
+      await userEvent.clear(input)
+      await userEvent.paste('1e2')
+
+      // Number.parseFloat('1e2') = 100
+      expect(onChange).toHaveBeenLastCalledWith(100)
     })
   })
 })

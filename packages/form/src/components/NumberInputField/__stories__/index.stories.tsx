@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import { Form, NumberInputField } from '../..'
+import { Form, NumberInputField, Submit } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 
@@ -8,7 +8,14 @@ export default {
   component: NumberInputField,
   decorators: [
     ChildStory => {
-      const methods = useForm()
+      const methods = useForm<{
+        value: number
+      }>({
+        mode: 'all',
+        defaultValues: {
+          value: 0,
+        },
+      })
       const {
         errors,
         isDirty,
@@ -24,15 +31,17 @@ export default {
       } = methods.formState
 
       return (
-        <Form errors={mockErrors} methods={methods} onSubmit={() => {}}>
+        <Form errors={mockErrors} methods={methods} onSubmit={console.debug}>
           <Stack gap={2}>
-            <div
+            <Stack
+              gap={2}
               style={{
                 width: '250px',
               }}
             >
               <ChildStory />
-            </div>
+              <Submit>Submit</Submit>
+            </Stack>
             <Stack gap={1}>
               <Text as="p" variant="bodyStrong">
                 Form input values:

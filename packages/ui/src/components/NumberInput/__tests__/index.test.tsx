@@ -1,39 +1,70 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { NumberInput } from '..'
 
 describe('numberInput', () => {
-  it('should renders correctly', () => shouldMatchSnapshot(<NumberInput max={100} min={0} onChange={() => {}} />))
+  it('should renders correctly', () => {
+    const { asFragment } = renderWithTheme(<NumberInput max={100} min={0} onChange={() => {}} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly disabled', () => shouldMatchSnapshot(<NumberInput disabled />))
+  it('should renders correctly disabled', () => {
+    const { asFragment } = renderWithTheme(<NumberInput disabled />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly without controls', () => shouldMatchSnapshot(<NumberInput controls={false} />))
+  it('should renders correctly without controls', () => {
+    const { asFragment } = renderWithTheme(<NumberInput controls={false} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly with label', () => shouldMatchSnapshot(<NumberInput label="Label" />))
+  it('should renders correctly with label', () => {
+    const { asFragment } = renderWithTheme(<NumberInput label="Label" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly with label description', () =>
-    shouldMatchSnapshot(<NumberInput labelDescription={<div>label description</div>} />))
+  it('should renders correctly with label description', () => {
+    const { asFragment } = renderWithTheme(<NumberInput labelDescription={<div>label description</div>} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly with error', () => shouldMatchSnapshot(<NumberInput error="This is an error" />))
+  it('should renders correctly with error', () => {
+    const { asFragment } = renderWithTheme(<NumberInput error="This is an error" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly with success', () => shouldMatchSnapshot(<NumberInput success="This is a success" />))
+  it('should renders correctly with success', () => {
+    const { asFragment } = renderWithTheme(<NumberInput success="This is a success" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly with placeholder', () =>
-    shouldMatchSnapshot(<NumberInput placeholder="Enter a value here" />))
+  it('should renders correctly with placeholder', () => {
+    const { asFragment } = renderWithTheme(<NumberInput placeholder="Enter a value here" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly min value', () => shouldMatchSnapshot(<NumberInput max={100} min={0} />))
+  it('should renders correctly min value', () => {
+    const { asFragment } = renderWithTheme(<NumberInput max={100} min={0} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly max value', () => shouldMatchSnapshot(<NumberInput max={100} min={0} />))
+  it('should renders correctly max value', () => {
+    const { asFragment } = renderWithTheme(<NumberInput max={100} min={0} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   describe('should renders correctly all sizes', () => {
-    it.each(['large', 'medium', 'small'] as const)(`with size %s`, size =>
-      shouldMatchSnapshot(<NumberInput max={100} min={0} size={size} />),
-    )
-    it.each(['large', 'medium', 'small'] as const)(`with size %s and unit`, size =>
-      shouldMatchSnapshot(<NumberInput max={100} min={0} size={size} unit="GB" />),
-    )
+    it.each(['large', 'medium', 'small'] as const)(`with size %s`, size => {
+      const { asFragment } = renderWithTheme(<NumberInput max={100} min={0} size={size} />)
+      expect(asFragment()).toMatchSnapshot()
+    })
+
+    it.each(['large', 'medium', 'small'] as const)(`with size %s and unit`, size => {
+      const { asFragment } = renderWithTheme(<NumberInput max={100} min={0} size={size} unit="GB" />)
+      expect(asFragment()).toMatchSnapshot()
+    })
   })
 
   it('should click on min button', async () => {
@@ -69,7 +100,10 @@ describe('numberInput', () => {
 
   it('should focus input and modify value', async () => {
     const onChange = vi.fn()
-    const { asFragment } = renderWithTheme(<NumberInput max={100} min={10} onChange={onChange} step={10} value={1} />)
+    const minValue = 10
+    const { asFragment } = renderWithTheme(
+      <NumberInput max={100} min={minValue} onChange={onChange} step={10} value={1} />,
+    )
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
     await userEvent.click(input)
@@ -77,12 +111,16 @@ describe('numberInput', () => {
     input.blur()
 
     await userEvent.clear(input)
-    expect(onChange).toHaveBeenCalledTimes(2)
+    expect(onChange).toHaveBeenNthCalledWith(1, minValue)
+    expect(onChange).toHaveBeenNthCalledWith(2, null)
     expect(asFragment()).toMatchSnapshot()
   })
   it('should focus input and modify value when value > max', async () => {
     const onChange = vi.fn()
-    const { asFragment } = renderWithTheme(<NumberInput max={5} min={1} onChange={onChange} step={1} value={10} />)
+    const maxValue = 5
+    const { asFragment } = renderWithTheme(
+      <NumberInput max={maxValue} min={1} onChange={onChange} step={1} value={10} />,
+    )
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
     await userEvent.click(input)
@@ -91,6 +129,8 @@ describe('numberInput', () => {
 
     await userEvent.clear(input)
     expect(onChange).toHaveBeenCalledTimes(2)
+    expect(onChange).toHaveBeenNthCalledWith(1, 5)
+    expect(onChange).toHaveBeenNthCalledWith(2, null)
     expect(asFragment()).toMatchSnapshot()
   })
 

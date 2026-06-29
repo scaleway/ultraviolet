@@ -3,18 +3,19 @@
 import { NumberInput } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent } from 'react'
 import { useController } from 'react-hook-form'
-import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type NumberInputProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
-  TFieldValues,
-  TFieldName
-> &
-  Omit<ComponentProps<typeof NumberInput>, 'onChange'>
+type NumberInputComponentProps = ComponentProps<typeof NumberInput>
+
+export type NumberInputFieldProps<
+  TFieldValues extends FieldValues,
+  TFieldName extends FieldPath<TFieldValues>,
+> = NumberInputComponentProps & BaseFieldProps<TFieldValues, TFieldName, NumberInputComponentProps['value']>
 
 export const NumberInputField = <
-  TFieldValues extends FieldValues,
+  TFieldValues extends FieldValues = FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   control,
@@ -31,7 +32,7 @@ export const NumberInputField = <
   validate,
   errorLabel,
   ...props
-}: NumberInputProps<TFieldValues, TFieldName>) => {
+}: NumberInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
     field,
@@ -45,27 +46,45 @@ export const NumberInputField = <
       required,
       validate: {
         ...validate,
-        isNumber: value => Number.isFinite(value),
-        ...(Number.isInteger(step) ? { isInteger: value => Number.isInteger(value) } : null),
+        // isNumber will never happen with input[type=number] as onChange is never trigger, but can be trigger if the defaultValue is NaN or null or string
+        isNumber: (newValue: NumberInputComponentProps['value']) => {
+          if (!required && newValue === undefined) {
+            return true
+          }
+          return Number.isFinite(newValue)
+        },
+        isInteger: (newValue: NumberInputComponentProps['value']) => {
+          if (!required && newValue === undefined) {
+            return true
+          }
+
+          if (Number.isInteger(step)) {
+            return Number.isInteger(newValue)
+          }
+
+          return true
+        },
       },
     },
+
     shouldUnregister,
   })
+
+  const errorField = getError(
+    {
+      label: errorLabel ?? label ?? ariaLabel ?? name,
+      max,
+      min,
+      value: field.value,
+    },
+    error,
+  )
 
   return (
     <NumberInput
       {...props}
       aria-label={ariaLabel}
-      error={getError(
-        {
-          isInteger: step,
-          label: errorLabel ?? label ?? ariaLabel ?? name,
-          max,
-          min,
-          value: field.value,
-        },
-        error,
-      )}
+      error={errorField}
       label={label}
       max={max}
       min={min}
@@ -77,7 +96,7 @@ export const NumberInputField = <
       onChange={newValue => {
         // React hook form doesnt allow undefined values after definition https://react-hook-form.com/docs/usecontroller/controller (that make sense)
         field.onChange(newValue)
-        onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
+        onChange?.(newValue)
       }}
       required={required}
       step={step}

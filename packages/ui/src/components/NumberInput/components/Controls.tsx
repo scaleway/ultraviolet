@@ -1,10 +1,9 @@
 import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { useCallback } from 'react'
-import type { RefObject } from 'react'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-import type { SIZES } from '../constant'
+import type { ControlsProps } from '../types'
 import { numberInputStyle } from '../styles.css'
 
 export const Controls = ({
@@ -16,16 +15,7 @@ export const Controls = ({
   min,
   onChange,
   isDisabledOrReadOnly,
-}: {
-  controls?: boolean
-  direction: 'up' | 'down'
-  size: keyof typeof SIZES
-  localRef: RefObject<HTMLInputElement | null>
-  max?: number
-  min?: number
-  isDisabledOrReadOnly?: boolean
-  onChange?: (newValue: number | null) => void
-}) => {
+}: ControlsProps) => {
   const isUp = direction === 'up'
   const isPlusDisabled = useCallback(() => {
     if (!localRef?.current?.value || localRef?.current?.value === '') {

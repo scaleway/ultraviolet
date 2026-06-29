@@ -1,7 +1,8 @@
 'use client'
 
+import { isNullOrUndefined } from '@ultraviolet/utils'
 import { forwardRef, useId, useImperativeHandle, useMemo, useRef } from 'react'
-import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
+import type { ForwardedRef } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { Description } from '../Description'
 import { Label } from '../Label'
@@ -10,52 +11,8 @@ import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 import { Controls } from './components/Controls'
 import { Unit } from './components/Unit'
-import type { SIZES } from './constant'
+import { NumberInputProps } from './types'
 import { numberInputStyle } from './styles.css'
-
-type Sizes = keyof typeof SIZES
-
-type NumberInputProps = {
-  size?: Sizes
-  /**
-   * Text displayed into component at the right of number value.
-   */
-  unit?: string
-  tooltip?: string
-  className?: string
-  'data-testid'?: string
-  label?: string
-  /**
-   * Label description displayed right next to the label. It allows you to customize the label content.
-   */
-  labelDescription?: ReactNode
-  /**
-   * Whether to show controls
-   */
-  controls?: boolean
-  error?: string | boolean
-  success?: string | boolean
-  helper?: ReactNode
-  value?: number | null
-  onChange?: (newValue: number | null) => void
-  min?: number
-  max?: number
-} & Pick<
-  InputHTMLAttributes<HTMLInputElement>,
-  | 'onFocus'
-  | 'onBlur'
-  | 'name'
-  | 'id'
-  | 'placeholder'
-  | 'aria-label'
-  | 'disabled'
-  | 'step'
-  | 'readOnly'
-  | 'required'
-  | 'autoFocus'
-  | 'style'
-  | 'aria-describedby'
->
 
 /**
  * NumberInput component is used to increment / decrement a number value by clicking on + / - buttons or
@@ -119,14 +76,6 @@ export const NumberInput = forwardRef(
       return 'default'
     }, [error, success, disabled, readOnly])
 
-    let inputValue: string | undefined
-    if (value !== undefined) {
-      inputValue = value !== null && typeof value === 'number' ? value.toString() : ''
-
-      if (localRef.current) {
-        localRef.current.value = inputValue
-      }
-    }
     const isDisabledOrReadOnly = disabled || readOnly
 
     return (
@@ -182,19 +131,39 @@ export const NumberInput = forwardRef(
                   max={max}
                   min={min}
                   name={name}
+                  inputMode={Number.isInteger(step) ? 'numeric' : 'decimal'}
                   onBlur={event => {
-                    if (value && value > max) {
-                      onChange?.(max)
-                    } else if (value && value < min) {
-                      onChange?.(min)
+                    const { valueAsNumber } = event.target
+                    if (valueAsNumber) {
+                      if (!isNullOrUndefined(max) && valueAsNumber > max) {
+                        onChange?.(max)
+                      }
+                      if (!isNullOrUndefined(min) && valueAsNumber < min) {
+                        onChange?.(min)
+                      }
                     }
                     onBlur?.(event)
                   }}
                   onChange={
+                    // ⚠️  LIMITATION: Scientific notation (e.g., "1e2") cannot be typed character-by-character
+                    // because browsers block the 'e' character in number inputs. When a user tries to type "1e2":
+                    // - Typing "1" works fine
+                    // - Typing "e" is blocked by the browser and the value stays at "1" as we control the value and the onChange is not trigger if the value inside the input is "1e", this only show inside the shadow dom
+                    // - The user can never complete "1e2" by typing
+                    //
+                    // Workarounds:
+                    // - Pasting "1e2" works correctly (Number.parseFloat handles scientific notation)
+                    // - Programmatic value setting works (e.g., form.setValue('field', 1e2))
+                    //
                     onChange
                       ? event => {
-                          const newNumber = Number.parseFloat(event.target.value)
-                          onChange(Number.isNaN(newNumber) ? null : newNumber)
+                          const { target } = event
+                          const isNan = Number.isNaN(target.valueAsNumber)
+                          if (isNan) {
+                            onChange(null)
+                          } else {
+                            onChange(target.valueAsNumber)
+                          }
                         }
                       : undefined
                   }
@@ -206,7 +175,7 @@ export const NumberInput = forwardRef(
                   step={step}
                   style={style}
                   type="number"
-                  value={inputValue}
+                  value={value?.toString()}
                 />
                 <Unit controls={controls} disabled={disabled} readOnly={readOnly} size={size} unit={unit} />
               </Row>
