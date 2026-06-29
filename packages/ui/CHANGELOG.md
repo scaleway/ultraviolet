@@ -1,5 +1,77 @@
 # Change Log
 
+## 3.20.0
+
+### Minor Changes
+
+- [#6624](https://github.com/scaleway/ultraviolet/pull/6624) [`767ce60`](https://github.com/scaleway/ultraviolet/commit/767ce60bcc32e331dfe402a3b01f9aee2b2b075a) Thanks [@philibea](https://github.com/philibea)! - `Breadcrumbs.Item`: add `render` prop to support custom link components (e.g., React Router `Link`, Next.js `Link`)
+
+  ### Added
+
+  - `render` prop to `Breadcrumbs.Item` component for custom element rendering
+  - Support for both element form (`render={<CustomLink />}`) and function form (`render={(props) => <CustomLink {...props} />}`)
+
+  ### Usage Example
+
+  ```tsx
+  import Link from "next/link";
+  import { Breadcrumbs } from "@ultraviolet/ui";
+
+  <Breadcrumbs>
+    <Breadcrumbs.Item render={(props) => <Link {...props} href="/" />}>
+      Home
+    </Breadcrumbs.Item>
+    <Breadcrumbs.Item render={(props) => <Link {...props} href="/products" />}>
+      Product
+    </Breadcrumbs.Item>
+    <Breadcrumbs.Item>Current Page</Breadcrumbs.Item>
+  </Breadcrumbs>;
+  ```
+
+  This change enables seamless integration with routing libraries while preserving Breadcrumbs styling and accessibility features.
+
+- [#6610](https://github.com/scaleway/ultraviolet/pull/6610) [`60d5231`](https://github.com/scaleway/ultraviolet/commit/60d5231202629ce69d1a73b934adb95278b161df) Thanks [@lisalupi](https://github.com/lisalupi)! - `Tag`: add border, new format for key-value variant, and add a separator between the content and close button
+
+- [#6578](https://github.com/scaleway/ultraviolet/pull/6578) [`adcf383`](https://github.com/scaleway/ultraviolet/commit/adcf3839f4ad6d2155c66098d9465f27471b0edb) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - feat(code-editor): add onclick prop for code editor component
+
+### Patch Changes
+
+- [#6596](https://github.com/scaleway/ultraviolet/pull/6596) [`e382f50`](https://github.com/scaleway/ultraviolet/commit/e382f502cdb07fb56d1249917b81d7dd029c620e) Thanks [@renovate](https://github.com/apps/renovate)! - fix(RichTextInput): resolve ProseMirror dependency conflicts and test failures
+
+  Fixed critical issues with ProseMirror dependency updates from v3.0.0 to v3.2.1:
+
+  1. Added mock for `InputEvent.getTargetRanges()` in test setup to support the new beforeinput plugin in @handlewithcare/react-prosemirror@3.2.1
+  2. Resolved multiple prosemirror-model version conflict by adding pnpm overrides and configuration for better dependency deduplication
+  3. All 14 RichTextInput tests now pass successfully
+
+  The component now works correctly with:
+
+  - @handlewithcare/react-prosemirror@3.2.1
+  - prosemirror-model@1.25.9
+  - prosemirror-state@1.4.4
+  - prosemirror-view@1.41.9
+  - prosemirror-commands@1.7.1
+  - prosemirror-schema-list@1.5.1
+  - prosemirror-keymap@1.2.3
+
+- [#6609](https://github.com/scaleway/ultraviolet/pull/6609) [`3791bf2`](https://github.com/scaleway/ultraviolet/commit/3791bf2720af0236ddf367563b85d30e00856ed8) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: fix placeholder overflow
+
+- [#6596](https://github.com/scaleway/ultraviolet/pull/6596) [`e382f50`](https://github.com/scaleway/ultraviolet/commit/e382f502cdb07fb56d1249917b81d7dd029c620e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@handlewithcare/react-prosemirror` to `3.2.1`.
+  Updated dependency `prosemirror-commands` to `1.7.1`.
+  Updated dependency `prosemirror-keymap` to `1.2.3`.
+  Updated dependency `prosemirror-model` to `1.25.9`.
+  Updated dependency `prosemirror-schema-list` to `1.5.1`.
+  Updated dependency `prosemirror-state` to `1.4.4`.
+  Updated dependency `prosemirror-view` to `1.41.9`.
+
+- [#6620](https://github.com/scaleway/ultraviolet/pull/6620) [`b3e7d68`](https://github.com/scaleway/ultraviolet/commit/b3e7d684e27d27ee553e2d8effa2ce870f0aa1f4) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@handlewithcare/react-prosemirror` to `3.2.3`.
+
+- [#6618](https://github.com/scaleway/ultraviolet/pull/6618) [`8b71854`](https://github.com/scaleway/ultraviolet/commit/8b71854ef302a6a2557ad9538ffbfdc56e8003d3) Thanks [@lisalupi](https://github.com/lisalupi)! - `FileInput`: keep file path when dropping folders
+
+- [#6613](https://github.com/scaleway/ultraviolet/pull/6613) [`4362cd6`](https://github.com/scaleway/ultraviolet/commit/4362cd62cee3e611c47457f5c0d9b675472cdd22) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: fix checkbox alignment when no description (dropdown item)
+
+- [#6612](https://github.com/scaleway/ultraviolet/pull/6612) [`45a29ef`](https://github.com/scaleway/ultraviolet/commit/45a29efcae94a2c72ca1b230709ded5a2873491d) Thanks [@lisalupi](https://github.com/lisalupi)! - `Pagination`: new props `hideLastPage`, `hideFirstPage`, and `size`
+
 ## 3.19.1
 
 ### Patch Changes
