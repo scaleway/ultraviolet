@@ -13,12 +13,13 @@
     "**/bower_components/**",
     "**/vendor/**",
     "**/__tests__/**",
-    "**/__fixtures__/**"
+    "**/__fixtures__/**",
+    "**/examples/**"
   ],
   "toolSettings": {
     "nodeMaxMemory": 2900
   },
-  "prConcurrentLimit": 10,
+  "prConcurrentLimit": 5,
   "reviewers": ["team:console"],
   "reviewersSampleSize": 2,
   "labels": ["dependencies"],
