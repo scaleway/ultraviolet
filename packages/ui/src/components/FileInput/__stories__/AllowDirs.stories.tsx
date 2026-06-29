@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { FileInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import { Text } from '../../Text'
 import type { FilesType } from '../types'
 
 export const AllowDirectories: StoryFn<typeof FileInput> = args => {
@@ -27,6 +28,18 @@ export const AllowDirectories: StoryFn<typeof FileInput> = args => {
           </>
         )}
       </FileInput>
+      {files ? (
+        <Text as="div" variant="body">
+          File{files?.length > 1 ? 's' : ''} (with path):
+          <Text as="ul" variant="body">
+            {files?.map(file => (
+              <Text key={file.webkitRelativePath} as="li" variant="body">
+                <strong>{file.name}</strong>: {file.webkitRelativePath}
+              </Text>
+            ))}
+          </Text>
+        </Text>
+      ) : null}
     </Stack>
   )
 }

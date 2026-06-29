@@ -61,10 +61,25 @@ const isDirectoryEntry = (entry: FileSystemEntry): entry is FileSystemDirectoryE
 
 const convertEntryToFile = (entry: FileSystemFileEntry): Promise<File> =>
   new Promise((resolve, reject) => {
-    entry.file(resolve, reject)
+    entry.file(file => {
+      const cleanPath = entry.fullPath?.startsWith('/') ? entry.fullPath.slice(1) : entry.fullPath
+
+      // If cleanPath === file.name => the file was NOT dropped from a folder, so we don't need to correct the webkitRelativePath
+      // If cleanPath === file.webkitRelativePath => no issue in webkitRelativePath so no need to correct it
+      if (cleanPath !== file.webkitRelativePath && cleanPath !== file.name) {
+        Object.defineProperty(file, 'webkitRelativePath', {
+          value: cleanPath,
+          writable: true,
+          enumerable: true,
+          configurable: true,
+        })
+      }
+
+      resolve(file)
+    }, reject)
   })
 
-async function readEntriesInDirectory(directory: FileSystemDirectoryEntry) {
+const readEntriesInDirectory = async (directory: FileSystemDirectoryEntry) => {
   const reader = directory.createReader()
   const nestedEntries = []
 
@@ -82,8 +97,9 @@ async function readEntriesInDirectory(directory: FileSystemDirectoryEntry) {
 /**
  * Recursive function to read all the files in a list of FileSystemEntry objects (files or directories)
  */
-async function readEntries(entries: FileSystemEntry[]): Promise<File[]> {
+const readEntries = async (entries: FileSystemEntry[]): Promise<File[]> => {
   const readFilesPromises = entries.filter(entry => isFileEntry(entry)).map(entry => convertEntryToFile(entry))
+
   const files = await Promise.all(readFilesPromises)
 
   const readFoldersPromises = entries
