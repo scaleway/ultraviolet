@@ -2,7 +2,7 @@
 
 import { isNullOrUndefined } from '@ultraviolet/utils'
 import { forwardRef, useId, useImperativeHandle, useMemo, useRef } from 'react'
-import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
+import type { ForwardedRef } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { Description } from '../Description'
 import { Label } from '../Label'
@@ -11,52 +11,8 @@ import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 import { Controls } from './components/Controls'
 import { Unit } from './components/Unit'
-import type { SIZES } from './constant'
+import { NumberInputProps } from './types'
 import { numberInputStyle } from './styles.css'
-
-type Sizes = keyof typeof SIZES
-
-export type NumberInputProps = {
-  size?: Sizes
-  /**
-   * Text displayed into component at the right of number value.
-   */
-  unit?: string
-  tooltip?: string
-  className?: string
-  'data-testid'?: string
-  label?: string
-  /**
-   * Label description displayed right next to the label. It allows you to customize the label content.
-   */
-  labelDescription?: ReactNode
-  /**
-   * Whether to show controls
-   */
-  controls?: boolean
-  error?: string | boolean
-  success?: string | boolean
-  helper?: ReactNode
-  value?: number | null
-  onChange?: (newValue: number | null) => void
-  min?: number
-  max?: number
-} & Pick<
-  InputHTMLAttributes<HTMLInputElement>,
-  | 'onFocus'
-  | 'onBlur'
-  | 'name'
-  | 'id'
-  | 'placeholder'
-  | 'aria-label'
-  | 'disabled'
-  | 'step'
-  | 'readOnly'
-  | 'required'
-  | 'autoFocus'
-  | 'style'
-  | 'aria-describedby'
->
 
 /**
  * NumberInput component is used to increment / decrement a number value by clicking on + / - buttons or
@@ -189,12 +145,10 @@ export const NumberInput = forwardRef(
                     onBlur?.(event)
                   }}
                   onChange={
-                    // onChange is not triggered with a string when type=number, so you can't validate "string" value.
-                    //
                     // ⚠️  LIMITATION: Scientific notation (e.g., "1e2") cannot be typed character-by-character
                     // because browsers block the 'e' character in number inputs. When a user tries to type "1e2":
                     // - Typing "1" works fine
-                    // - Typing "e" is blocked by the browser and the value stays at "1"
+                    // - Typing "e" is blocked by the browser and the value stays at "1" as we control the value and the onChange is not trigger if the value inside the input is "1e", this only show inside the shadow dom
                     // - The user can never complete "1e2" by typing
                     //
                     // Workarounds:

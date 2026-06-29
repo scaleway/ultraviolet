@@ -1,19 +1,8 @@
 import { Text } from '../../Text'
+import type { UnitProps } from '../types'
 import { numberInputStyle } from '../styles.css'
 
-export const Unit = ({
-  unit,
-  disabled,
-  readOnly,
-  size,
-  controls,
-}: {
-  unit?: string
-  disabled?: boolean
-  readOnly?: boolean
-  size: 'large' | 'medium' | 'small'
-  controls?: boolean
-}) =>
+export const Unit = ({ unit, disabled, readOnly, size, controls }: UnitProps) =>
   unit ? (
     <Text
       as="span"
