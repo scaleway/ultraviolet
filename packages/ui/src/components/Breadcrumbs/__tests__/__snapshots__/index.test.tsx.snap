@@ -210,3 +210,52 @@ exports[`breadcrumbs > renders correctly with minWidth and maxWidth 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`breadcrumbs > should render with custom render prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <nav
+      aria-label="breadcrumb"
+    >
+      <ol
+        class="styles__qxa0fl0"
+      >
+        <li
+          class="styles__1yxbbx44 styles__1yxbbx47"
+        >
+          <a
+            class="styles__1yxbbx42 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
+            data-variant="standalone"
+            href="/step1"
+          >
+            Step 1
+          </a>
+        </li>
+        <li
+          class="styles__1yxbbx44 styles__1yxbbx47"
+        >
+          <a
+            class="styles__1yxbbx42 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
+            data-custom-link="true"
+            data-variant="standalone"
+            href="/custom"
+          >
+            Custom Link
+          </a>
+        </li>
+        <li
+          class="styles__1yxbbx44 styles__1yxbbx47"
+        >
+          <div
+            class="styles__1yxbbx43 styles__1yxbbx46 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_bodySmallStrong__m4c9owl style_undefined_compound_0__m4c9ow1a"
+          >
+            Step 3
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</DocumentFragment>
+`;
