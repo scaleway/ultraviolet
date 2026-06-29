@@ -75,7 +75,6 @@ const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(
               <HeaderCell
                 info={column.info}
                 isOrdered={column.isOrdered}
-                // oxlint-disable-next-line react/no-array-index-key
                 key={`header-column-${index}`}
                 maxWidth={column.maxWidth}
                 minWidth={column.minWidth}
@@ -104,10 +103,7 @@ type ListType = {
    * @deprecated Use `colMode="strict"`
    */
 
-  (
-    // oxlint-disable-next-line typescript/unified-signatures
-    props: LegacyListProps & RefAttributes<HTMLTableElement>,
-  ): ReactNode
+  (props: LegacyListProps & RefAttributes<HTMLTableElement>): ReactNode
   Cell: typeof Cell
   Row: typeof Row
   SelectBar: typeof SelectBar

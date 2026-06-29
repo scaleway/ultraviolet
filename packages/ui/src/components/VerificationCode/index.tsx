@@ -238,7 +238,6 @@ export const VerificationCode = ({
             data-testid={index}
             disabled={disabled}
             id={`${id}-${index}`}
-            // oxlint-disable-next-line react/no-array-index-key
             key={`field-${index}`}
             onChange={inputOnChange(index)}
             onFocus={inputOnFocus}

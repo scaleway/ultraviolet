@@ -13,7 +13,6 @@ import {
 describe('pieChart', () => {
   beforeAll(() => {
     // Have to mock ResizeObserver as Nivo doesn't add automatically ResizeObserver polyfill anymore (v0.79.0)
-    // oxlint-disable-next-line vitest/prefer-spy-on
     window.ResizeObserver = vi.fn().mockReturnValue({
       disconnect: vi.fn(),
       observe: vi.fn(),
@@ -65,7 +64,6 @@ describe('pieChart', () => {
   it.skip('renders correctly when chart is hovered', async () => {
     const { container } = renderWithTheme(<PieChart data={dataWithLegendsAndDetails} withLegend />)
     const slice = container.querySelector('svg g path')
-    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (!slice) {
       throw new Error('PieChart slice path not found')
     }

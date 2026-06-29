@@ -18,7 +18,6 @@ export const CompositionsList = () => {
   const componentsList: ComponentInfo[] = Object.entries(Compositions)
     .map(([name, component]) => ({
       name,
-      // oxlint-disable-next-line no-underscore-dangle
       description: (component as ReactComponentWithDocGen).__docgenInfo?.description,
     }))
     .filter(component => !NOT_COMPONENTS.has(component.name))

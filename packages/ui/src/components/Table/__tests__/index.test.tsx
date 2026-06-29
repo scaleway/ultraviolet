@@ -1,5 +1,3 @@
-// oxlint-disable vitest/no-conditional-in-test
-// oxlint-disable vitest/no-conditional-expect
 import { fireEvent, render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { ThemeProvider } from '@ultraviolet/themes'
@@ -132,11 +130,9 @@ describe('table', () => {
     const allCheckbox = checkboxes.find(({ value }) => value === 'all')
     expect(firstRowCheckbox).toBeInTheDocument()
     expect(allCheckbox).toBeInTheDocument()
-    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (!firstRowCheckbox) {
       throw new Error('First checkbox is not defined')
     }
-    // oxlint-disable-next-line vitest/no-conditional-in-test
     if (!allCheckbox) {
       throw new Error('Select all checkbox is not defined')
     }

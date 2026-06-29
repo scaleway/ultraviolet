@@ -3,7 +3,6 @@
   "extends": [
     "./node_modules/@scaleway/oxlint-config/configs/index.json",
     "./node_modules/@scaleway/oxlint-config/configs/react.json",
-    "./node_modules/@scaleway/oxlint-config/configs/typescript.json",
   ],
   "jsPlugins": ["./.oxlint/rules/storybook-a11y-partial.cjs"],
   "options": {

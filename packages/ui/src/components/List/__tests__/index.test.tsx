@@ -1,5 +1,3 @@
-// oxlint-disable vitest/no-conditional-in-test
-// oxlint-disable vitest/no-conditional-expect
 import { fireEvent, render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'

@@ -70,9 +70,7 @@ describe('selectableCard', () => {
           {({ checked, disabled }) => (
             <div
               style={{
-                // oxlint-disable-next-line vitest/no-conditional-in-test
                 background: disabled ? 'gray' : 'green',
-                // oxlint-disable-next-line vitest/no-conditional-in-test
                 color: checked ? 'green' : 'gray',
               }}
             >
@@ -174,7 +172,6 @@ describe('selectableCard', () => {
         </SelectableCard>,
       )
 
-      // oxlint-disable-next-line vitest/no-conditional-in-test
       const role = type === 'toggle' ? 'checkbox' : type
       const label = screen.getByRole(role, {
         name: 'labelName',

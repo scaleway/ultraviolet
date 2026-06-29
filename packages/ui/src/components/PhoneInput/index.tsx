@@ -126,7 +126,6 @@ export const PhoneInput: PhoneInputType = forwardRef(
           onValueChange?.(result)
 
           return formattedNumber
-          // oxlint-disable-next-line eslint/no-shadow
         } catch (error: unknown) {
           if (error instanceof Error) {
             onParsingError?.({

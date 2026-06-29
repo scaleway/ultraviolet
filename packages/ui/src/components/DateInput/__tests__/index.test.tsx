@@ -21,7 +21,6 @@ describe('dateInput', () => {
   it('renders correctly with default props', () => {
     const { asFragment } = renderWithTheme(
       <DateInput
-        // oxlint-disable-next-line vitest/no-conditional-in-test
         format={value => (value instanceof Date ? value.toISOString() : value)}
         label="Date"
         locale={fr}
@@ -358,7 +357,6 @@ describe('dateInput', () => {
     const { asFragment } = renderWithTheme(
       <DateInput
         endDate={new Date('1995-12-11T03:24:00.000+00:00')}
-        // oxlint-disable-next-line vitest/no-conditional-in-test
         format={value => (value instanceof Date ? value.toISOString() : value)}
         label="Date"
         name="test"
