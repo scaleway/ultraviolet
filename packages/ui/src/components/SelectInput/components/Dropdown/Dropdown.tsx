@@ -270,7 +270,7 @@ export const Dropdown = ({
       tabIndex={-1}
       text={
         <Stack>
-          {searchable && !isLoading && (numberOfOptions >= 6 || addOption) ? (
+          {searchable && !isLoading ? (
             <SearchBar
               displayedOptions={displayedOptions}
               placeholder={placeholder}

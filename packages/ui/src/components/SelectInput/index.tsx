@@ -83,6 +83,10 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
    * Display an error message under the select bar
    */
   error?: string | boolean
+  /**
+   * @deprecated This property is automatically enabled when options.length >= 6 or if addOption is enable.
+   * Otherwise, no search bar
+   */
   searchable?: boolean
   /**
    * When searchable, set a combobox to dynamically add an option
@@ -165,7 +169,6 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   footer,
   placeholderSearch = 'Search in list',
   placeholder = 'Select item',
-  searchable = true,
   disabled = false,
   readOnly = false,
   clearable = false,
@@ -238,7 +241,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
           placeholder={placeholderSearch}
           portalTarget={portalTarget}
           refSelect={ref}
-          searchable={searchable}
+          searchable={numberOfOptions >= 6 || !!addOption}
           size={size}
         >
           <Stack aria-label={ariaLabel} gap={0.5}>
