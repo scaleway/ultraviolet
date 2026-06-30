@@ -4,7 +4,6 @@ import { NumberInput } from '..'
 
 export const Template: StoryFn<typeof NumberInput> = props => {
   const [value, setValue] = useState<number | null>(10)
-  console.debug(props.helper)
 
   return <NumberInput {...props} onChange={setValue} value={value} />
 }

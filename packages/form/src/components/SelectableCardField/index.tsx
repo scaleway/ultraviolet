@@ -8,9 +8,9 @@ import type { BaseFieldProps } from '../../types'
 
 type SelectableCardFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = Omit<
   BaseFieldProps<TFieldValues, TFieldName>,
-  'label'
+  'label' | 'value'
 > &
-  Omit<ComponentProps<typeof SelectableCard>, 'name' | 'onChange' | 'value'>
+  Omit<ComponentProps<typeof SelectableCard>, 'name' | 'onChange'>
 
 export const SelectableCardField = <
   TFieldValues extends FieldValues,
@@ -18,13 +18,13 @@ export const SelectableCardField = <
 >({
   name,
   control,
-  value,
   onChange,
   type,
   onFocus,
   onBlur,
   required,
   label,
+  value,
   shouldUnregister = false,
   validate,
   productIcon,
@@ -47,7 +47,7 @@ export const SelectableCardField = <
 
   const isChecked =
     (type === 'checkbox' || type === 'toggle') && Array.isArray(field.value) && value
-      ? (field.value ?? []).includes(value)
+      ? ((field.value ?? []) as (string | number)[]).includes(value)
       : field.value === value
 
   return (
