@@ -8,8 +8,8 @@ export default {
     a11yStatus: {
       perceivable: false,
       operable: false,
-      understandable: false,
-      robust: false,
+      understandable: true,
+      robust: true,
     },
   },
 } as Meta<typeof Button>
