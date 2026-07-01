@@ -16,3 +16,4 @@ export type ExtendedColor = Color | Monochrome
 export type TextVariant = keyof typeof typography
 export type TextStyleObject = typeof typography.body
 export const textVariants = Object.keys(typography) as TextVariant[]
+export type UltravioletUITheme = typeof lightTheme

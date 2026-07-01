@@ -32,6 +32,7 @@ type ThemeProviderProps = {
 /**
  * ThemeProvider will apply generated global CSS variables to the application in the `<head>`.
  * If no theme is provided, it will default to `lightTheme`.
+ * @deprecated use ThemeProvider from \@ultraviolet/themes
  */
 export const ThemeProvider = ({ children, theme = consoleLightTheme }: ThemeProviderProps) => {
   useLayoutEffect(() => {
