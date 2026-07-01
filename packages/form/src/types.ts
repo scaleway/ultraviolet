@@ -5,10 +5,10 @@ import type {
   FieldPath,
   FieldPathValue,
   FieldValues,
-  Path,
   PathValue,
   UseControllerProps,
   Validate,
+  NativeFieldValue,
 } from 'react-hook-form'
 
 /**
@@ -48,14 +48,19 @@ export type FormErrors = {
 export type BaseFieldProps<
   TFieldValues extends FieldValues = FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
-  ValueType extends FieldValues[TFieldName] = FieldValues[TFieldName],
+  ValueType extends NativeFieldValue = FieldPathValue<TFieldValues, TFieldName>,
 > = {
-  name: TFieldValues[TFieldName] extends ValueType ? TFieldName : never
+  name: [ValueType] extends [never]
+    ? TFieldName
+    : FieldPathValue<TFieldValues, TFieldName> extends ValueType
+      ? TFieldName
+      : never
+
   required?: boolean
   validate?: Record<string, Validate<FieldPathValue<TFieldValues, TFieldName>, TFieldValues>>
-  defaultValue?: PathValue<TFieldValues, Path<TFieldValues>>
+  defaultValue?: ValueType
   label?: string
-  value?: PathValue<TFieldValues, Path<TFieldValues>>
+  value?: ValueType
   onChange?: (value?: PathValue<TFieldValues, TFieldName>) => void
   shouldUnregister?: UseControllerProps<TFieldValues, TFieldName>['shouldUnregister']
   control?: Control<TFieldValues>
