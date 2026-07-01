@@ -31,6 +31,7 @@ export const Examples: StoryFn<typeof Avatar> = props => {
           ref={inputRef}
           style={{ display: 'none' }}
           type="file"
+          aria-label="File Input"
         />
         <Stack alignItems="flex-start" direction="column">
           <p>

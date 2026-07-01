@@ -45,7 +45,7 @@ describe('label', () => {
         <Label htmlFor="id" id="id-label" size="small">
           Label
         </Label>
-        <input data-testid="test-input" id="id" />
+        <input data-testid="test-input" id="id" aria-labelledby="id-label" />
       </div>,
     )
 

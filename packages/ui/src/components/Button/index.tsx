@@ -33,6 +33,7 @@ type CommonProps = {
   'aria-keyshortcuts'?: string
   onClick?: MouseEventHandler<HTMLElement>
   tooltip?: string
+  form?: ButtonHTMLAttributes<HTMLButtonElement>['form']
   tabIndex?: ButtonHTMLAttributes<HTMLButtonElement>['tabIndex']
   onMouseDown?: MouseEventHandler<HTMLElement>
   onMouseUp?: MouseEventHandler<HTMLElement>

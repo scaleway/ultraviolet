@@ -22,6 +22,7 @@ const defaultFieldComponents = {
   number: FilterNumber,
 }
 
+const defaultCustomComponents = {}
 export const AbstractFilter = ({
   hideLabel,
   config,
@@ -29,7 +30,7 @@ export const AbstractFilter = ({
   onChange,
   value,
   values,
-  customComponents = {},
+  customComponents = defaultCustomComponents,
   size,
 }: AbstractFilterProps) => {
   const shouldHideLabel = directionContext === 'column' && hideLabel

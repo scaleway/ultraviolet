@@ -30,6 +30,7 @@ export const Item = ({
   disabled = false,
   className,
 }: ItemProps) => (
+  // oxlint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
   <li className={cn(className, stepListStyle.step({ disabled }))} onClick={onClick} onKeyDown={onKeyDown}>
     {bulletContent ? (
       <Bullet disabled={disabled} prominence={prominence} sentiment={sentiment} size={size}>
