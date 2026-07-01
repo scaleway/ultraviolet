@@ -271,7 +271,6 @@ describe('filters', () => {
   })
 
   it('should accept custom filter components', () => {
-    // oxlint-disable-next-line unicorn/consistent-function-scoping no-shadow
     const CustomFilter = ({ config }: FilterComponentProps) => <button type="button">{config.label}</button>
 
     renderWithTheme(
