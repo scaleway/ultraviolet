@@ -122,12 +122,12 @@ export const categoryCustomContent = {
 }
 
 export const rangePriceContent = {
-  category: 'Nodes',
+  category: 'Pool #1: poolpar-1-peaceful-nightingale',
   subCategories: [
     {
-      amount: [20, 30],
+      amount: [10987.56, 12493.78],
       price: 10,
-      title: '20-30 nodes',
+      title: '20-30 nodes at least',
     },
   ],
 }

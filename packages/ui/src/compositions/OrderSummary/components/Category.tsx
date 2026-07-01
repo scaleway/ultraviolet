@@ -20,10 +20,10 @@ export const CategoryName = ({ category }: { category: ItemsType }) => {
   }
 
   return category.category ? (
-    <Stack alignItems="center" direction="row" justifyContent="space-between">
+    <Stack alignItems="center" direction="row" justifyContent="space-between" gap={2}>
       {category.additionalInfo ? (
-        <Stack alignItems="center" direction="row" gap={1}>
-          <Text as="span" prominence="strong" sentiment="neutral" variant="bodyStrong">
+        <Stack alignItems="center" direction="row" gap={1} wrap="wrap">
+          <Text as="span" prominence="strong" sentiment="neutral" variant="bodyStrong" oneLine>
             {category.anchor ? (
               <a className={orderSummaryStyle.anchor} href={category.anchor}>
                 <AttachIcon className={orderSummaryStyle.anchorIcon({ size: 'medium' })} sentiment="info" />
@@ -33,12 +33,12 @@ export const CategoryName = ({ category }: { category: ItemsType }) => {
               category.category
             )}
           </Text>
-          <Text as="span" italic sentiment="primary" variant="bodySmall">
+          <Text as="span" italic sentiment="primary" variant="bodySmall" oneLine>
             {category.additionalInfo}
           </Text>
         </Stack>
       ) : (
-        <Text as="span" prominence="strong" sentiment="neutral" variant="bodyStrong">
+        <Text as="span" prominence="strong" sentiment="neutral" variant="bodyStrong" oneLine>
           {category.anchor ? (
             <a className={orderSummaryStyle.anchor} href={category.anchor}>
               <AttachIcon className={orderSummaryStyle.anchorIcon({ size: 'medium' })} sentiment="info" />
@@ -62,7 +62,13 @@ export const CategoryName = ({ category }: { category: ItemsType }) => {
       ) : null}
       {!(category.customContent || category.numberInput) &&
       categoryPrice.totalPrice === categoryPrice.totalPriceWithDiscount ? (
-        <Text as="span" prominence="strong" sentiment="neutral" variant="bodyStrong">
+        <Text
+          as="span"
+          prominence="strong"
+          sentiment="neutral"
+          variant="bodyStrong"
+          className={orderSummaryStyle.categoryPrice}
+        >
           <DisplayPrice beforeOrAfter="after" price={categoryPrice} />
         </Text>
       ) : null}
@@ -70,10 +76,23 @@ export const CategoryName = ({ category }: { category: ItemsType }) => {
       {!(category.customContent || category.numberInput) &&
       categoryPrice.totalPrice !== categoryPrice.totalPriceWithDiscount ? (
         <Stack alignItems="center" direction="row" gap={1}>
-          <Text as="span" prominence="weak" sentiment="neutral" strikeThrough variant="bodySmallStrong">
+          <Text
+            as="span"
+            prominence="weak"
+            sentiment="neutral"
+            strikeThrough
+            variant="bodySmallStrong"
+            className={orderSummaryStyle.categoryPrice}
+          >
             <DisplayPrice beforeOrAfter="before" price={categoryPrice} />
           </Text>
-          <Text as="span" prominence="strong" sentiment="neutral" variant="bodyStrong">
+          <Text
+            as="span"
+            prominence="strong"
+            sentiment="neutral"
+            variant="bodyStrong"
+            className={orderSummaryStyle.categoryPrice}
+          >
             <DisplayPrice beforeOrAfter="after" price={categoryPrice} />
           </Text>
         </Stack>

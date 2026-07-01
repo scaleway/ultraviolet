@@ -122,14 +122,19 @@ const totalPrice = styleVariants({
     display: 'flex',
     alignItems: 'center',
     gap: theme.space[1],
+    minWidth: 'fit-content',
   },
-  default: {},
+  default: { minWidth: 'fit-content' },
 })
 
 const compactTotalPrice = style({
   display: 'flex',
   alignItems: 'center',
   gap: theme.space[1],
+})
+
+const categoryPrice = style({
+  minWidth: 'fit-content',
 })
 
 export const orderSummaryStyle = {
@@ -145,4 +150,5 @@ export const orderSummaryStyle = {
   totalPrice,
   numberInput,
   compactTotalPrice,
+  categoryPrice,
 }
