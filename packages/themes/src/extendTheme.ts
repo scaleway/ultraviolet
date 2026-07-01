@@ -1,0 +1,15 @@
+import deepmerge from 'deepmerge'
+import { UltravioletUITheme } from './constants'
+import { consoleLightTheme } from './themes'
+
+type RecursivePartial<T> = {
+  [P in keyof T]?: RecursivePartial<T[P]>
+}
+
+/**
+ * Will extend theme with new theme properties
+ * @param {UltravioletUITheme} baseTheme the theme you want to extend from, by default it is set to light theme
+ * @param {RecursivePartial<UltravioletUITheme>} extendedTheme the properties of a new theme you want to apply from baseTheme
+ */
+export const extendTheme = (extendedTheme: RecursivePartial<UltravioletUITheme>) =>
+  deepmerge(consoleLightTheme, extendedTheme) as UltravioletUITheme

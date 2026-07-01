@@ -1,5 +1,5 @@
-import { consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
-import { Alert, Button, Card, Row, Stack, Text, ThemeProvider, Badge, SelectableCardOptionGroup } from '@ultraviolet/ui'
+import { consoleDarkTheme, consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
+import { Alert, Button, Card, Row, Stack, Text, Badge, SelectableCardOptionGroup } from '@ultraviolet/ui'
 import { InfoTable } from '@ultraviolet/ui/compositions/InfoTable'
 import { useState } from 'react'
 import '@ultraviolet/ui/styles' // Import styles for the UI components

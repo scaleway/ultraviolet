@@ -1,11 +1,11 @@
 'use client'
 
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
+import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useId, useReducer } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { useTheme } from '../../theme/ThemeProvider'
 import { CopyButton } from '../CopyButton'
 import { Description } from '../Description'
 import { Expandable } from '../Expandable'
