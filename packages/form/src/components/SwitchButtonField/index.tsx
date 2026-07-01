@@ -57,6 +57,8 @@ const SwitchButtonField = <
   )
 }
 
+SwitchButtonField.displayName = 'SwitchButtonField'
+
 SwitchButtonField.Option = SwitchButton.Option
 
 export { SwitchButtonField }

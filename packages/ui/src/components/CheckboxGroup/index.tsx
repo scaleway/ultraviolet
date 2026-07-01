@@ -97,6 +97,7 @@ const CheckboxGroup = ({
   )
 }
 
+CheckboxGroup.displayName = 'CheckboxGroup'
 CheckboxGroup.Checkbox = CheckboxGroupCheckbox
 
 export { CheckboxGroupCheckbox, CheckboxGroup }

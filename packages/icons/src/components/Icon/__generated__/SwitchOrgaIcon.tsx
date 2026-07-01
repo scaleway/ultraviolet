@@ -17,3 +17,5 @@ export const SwitchOrgaIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     )}
   </Icon>
 )
+
+SwitchOrgaIcon.displayName = 'SwitchOrgaIcon'

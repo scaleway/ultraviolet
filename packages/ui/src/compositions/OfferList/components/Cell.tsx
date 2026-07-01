@@ -38,3 +38,5 @@ export const Cell = ({
     </List.Cell>
   )
 }
+
+Cell.displayName = 'OfferList.Cell'

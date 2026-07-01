@@ -24,3 +24,5 @@ export const PhoneOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     )}
   </Icon>
 )
+
+PhoneOutlineIcon.displayName = 'PhoneOutlineIcon'

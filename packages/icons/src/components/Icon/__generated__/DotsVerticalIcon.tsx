@@ -17,3 +17,5 @@ export const DotsVerticalIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     )}
   </Icon>
 )
+
+DotsVerticalIcon.displayName = 'DotsVerticalIcon'

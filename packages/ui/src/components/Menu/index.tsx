@@ -18,4 +18,6 @@ const Component = forwardRef(
   ),
 )
 
+Component.displayName = 'Menu'
+
 export const Menu = Object.assign(Component, { Group, Item })

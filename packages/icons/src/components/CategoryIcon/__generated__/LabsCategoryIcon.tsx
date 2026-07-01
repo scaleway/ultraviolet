@@ -33,3 +33,5 @@ export const LabsCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     </g>
   </Icon>
 )
+
+LabsCategoryIcon.displayName = 'LabsCategoryIcon'

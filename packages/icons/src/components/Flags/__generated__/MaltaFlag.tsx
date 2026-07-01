@@ -51,3 +51,5 @@ export const MaltaFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+MaltaFlag.displayName = 'MaltaFlag'

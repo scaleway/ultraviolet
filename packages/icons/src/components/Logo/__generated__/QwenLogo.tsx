@@ -18,3 +18,5 @@ export const QwenLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     />
   </Icon>
 )
+
+QwenLogo.displayName = 'QwenLogo'

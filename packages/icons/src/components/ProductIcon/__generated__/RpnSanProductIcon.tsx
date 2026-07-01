@@ -40,3 +40,5 @@ export const RpnSanProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     </defs>
   </Icon>
 )
+
+RpnSanProductIcon.displayName = 'RpnSanProductIcon'

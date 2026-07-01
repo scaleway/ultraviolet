@@ -25,3 +25,5 @@ export const PlayIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     )}
   </Icon>
 )
+
+PlayIcon.displayName = 'PlayIcon'

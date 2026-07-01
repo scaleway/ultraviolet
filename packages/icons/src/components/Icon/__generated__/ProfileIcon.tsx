@@ -20,3 +20,5 @@ export const ProfileIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+ProfileIcon.displayName = 'ProfileIcon'

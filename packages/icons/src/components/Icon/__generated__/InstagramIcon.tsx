@@ -25,3 +25,5 @@ export const InstagramIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'
     )}
   </Icon>
 )
+
+InstagramIcon.displayName = 'InstagramIcon'

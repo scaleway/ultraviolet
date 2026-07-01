@@ -91,3 +91,5 @@ export const OfferList = ({
 
 OfferList.Row = Row
 OfferList.Cell = Cell
+
+OfferList.displayName = 'OfferList'

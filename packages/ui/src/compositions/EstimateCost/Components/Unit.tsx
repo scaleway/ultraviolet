@@ -49,3 +49,5 @@ export const Unit = ({ amount, itemCallback, getAmountValue, unit, style }: Unit
     </div>
   )
 }
+
+Unit.displayName = 'EstimateCost.Unit'

@@ -65,3 +65,5 @@ export const VpsStoreServersProductIcon = ({ ...props }: Omit<IconProps, 'childr
     />
   </Icon>
 )
+
+VpsStoreServersProductIcon.displayName = 'VpsStoreServersProductIcon'

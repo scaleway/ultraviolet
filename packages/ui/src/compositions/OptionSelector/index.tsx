@@ -191,3 +191,5 @@ export const OptionSelector = ({
     </fieldset>
   )
 }
+
+OptionSelector.displayName = 'OptionSelector'

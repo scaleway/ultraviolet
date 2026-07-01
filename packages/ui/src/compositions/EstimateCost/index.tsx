@@ -103,4 +103,6 @@ EstimateCost.Zone = Zone
 
 EstimateCost.Ellipsis = Ellipsis
 
+EstimateCost.displayName = 'EstimateCost'
+
 export { estimateCostDefaultLocales }

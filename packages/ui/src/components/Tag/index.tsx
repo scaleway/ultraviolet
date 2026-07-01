@@ -129,3 +129,5 @@ export const Tag = ({
     </Tooltip>
   )
 }
+
+Tag.displayName = 'Tag'

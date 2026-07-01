@@ -25,3 +25,5 @@ export const AlertCircleIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+AlertCircleIcon.displayName = 'AlertCircleIcon'

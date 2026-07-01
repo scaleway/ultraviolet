@@ -25,3 +25,5 @@ export const ExpandIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+ExpandIcon.displayName = 'ExpandIcon'

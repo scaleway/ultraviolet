@@ -39,3 +39,5 @@ export const ListNumberIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     )}
   </Icon>
 )
+
+ListNumberIcon.displayName = 'ListNumberIcon'

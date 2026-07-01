@@ -42,3 +42,5 @@ export const IotEdgeProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     </g>
   </Icon>
 )
+
+IotEdgeProductIcon.displayName = 'IotEdgeProductIcon'

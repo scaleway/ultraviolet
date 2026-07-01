@@ -55,3 +55,5 @@ export const OpenVpnLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     </Icon>
   )
 }
+
+OpenVpnLogo.displayName = 'OpenVpnLogo'

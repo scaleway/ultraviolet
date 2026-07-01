@@ -29,3 +29,5 @@ export const BaaiLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     </g>
   </Icon>
 )
+
+BaaiLogo.displayName = 'BaaiLogo'

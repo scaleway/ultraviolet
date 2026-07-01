@@ -25,3 +25,5 @@ export const DeleteIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+DeleteIcon.displayName = 'DeleteIcon'

@@ -37,3 +37,5 @@ export const AppleSiliconProductIcon = ({ ...props }: Omit<IconProps, 'children'
     </g>
   </Icon>
 )
+
+AppleSiliconProductIcon.displayName = 'AppleSiliconProductIcon'

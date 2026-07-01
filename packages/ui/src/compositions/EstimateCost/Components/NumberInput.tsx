@@ -49,3 +49,5 @@ export const NumberInput = ({
     />
   )
 }
+
+NumberInput.displayName = 'EstimateCost.NumberInput'

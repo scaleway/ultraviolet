@@ -37,3 +37,5 @@ export const LeafOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+LeafOutlineIcon.displayName = 'LeafOutlineIcon'

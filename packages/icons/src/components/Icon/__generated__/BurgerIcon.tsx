@@ -25,3 +25,5 @@ export const BurgerIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+BurgerIcon.displayName = 'BurgerIcon'

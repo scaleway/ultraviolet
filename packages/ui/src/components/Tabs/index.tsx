@@ -110,6 +110,7 @@ export const Tabs = ({
   )
 }
 
+Tabs.displayName = 'Tabs'
 Tabs.Tab = Tab
 Tabs.Menu = TabMenu
 Tabs.MenuItem = TabMenuItem

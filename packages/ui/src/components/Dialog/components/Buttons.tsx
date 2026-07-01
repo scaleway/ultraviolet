@@ -14,3 +14,5 @@ export const DialogButtons = ({ secondaryButton, primaryButton }: DialogButtonsP
     {primaryButton}
   </Stack>
 )
+
+DialogButtons.displayName = 'Dialog.Buttons'

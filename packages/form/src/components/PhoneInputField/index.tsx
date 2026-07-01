@@ -108,3 +108,5 @@ export const PhoneInputField = <
     />
   )
 }
+
+PhoneInputField.displayName = 'PhoneInputField'

@@ -65,3 +65,5 @@ export const DedilinkProductIcon = ({ ...props }: Omit<IconProps, 'children' | '
     />
   </Icon>
 )
+
+DedilinkProductIcon.displayName = 'DedilinkProductIcon'

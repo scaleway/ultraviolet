@@ -207,3 +207,5 @@ export const UnitInput = ({
     </Stack>
   )
 }
+
+UnitInput.displayName = 'UnitInput'

@@ -17,3 +17,5 @@ export const CloseIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+CloseIcon.displayName = 'CloseIcon'

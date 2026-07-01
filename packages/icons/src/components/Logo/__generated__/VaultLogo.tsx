@@ -80,3 +80,5 @@ export const VaultLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     </Icon>
   )
 }
+
+VaultLogo.displayName = 'VaultLogo'

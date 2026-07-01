@@ -68,3 +68,5 @@ export const TagInputField = <
     />
   )
 }
+
+TagInputField.displayName = 'TagInputField'

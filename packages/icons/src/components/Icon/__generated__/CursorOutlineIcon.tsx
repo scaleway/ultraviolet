@@ -17,3 +17,5 @@ export const CursorOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+CursorOutlineIcon.displayName = 'CursorOutlineIcon'

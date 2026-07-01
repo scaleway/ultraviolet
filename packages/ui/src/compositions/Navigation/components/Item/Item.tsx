@@ -372,3 +372,5 @@ export const Item = memo(
     return null
   },
 )
+
+Item.displayName = 'Navigation.Item'

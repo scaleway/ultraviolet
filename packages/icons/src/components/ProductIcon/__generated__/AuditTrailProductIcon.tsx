@@ -35,3 +35,5 @@ export const AuditTrailProductIcon = ({ ...props }: Omit<IconProps, 'children' |
     </g>
   </Icon>
 )
+
+AuditTrailProductIcon.displayName = 'AuditTrailProductIcon'

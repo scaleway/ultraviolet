@@ -30,3 +30,5 @@ export const DatacenterCategoryIcon = ({ ...props }: Omit<IconProps, 'children' 
     </g>
   </Icon>
 )
+
+DatacenterCategoryIcon.displayName = 'DatacenterCategoryIcon'

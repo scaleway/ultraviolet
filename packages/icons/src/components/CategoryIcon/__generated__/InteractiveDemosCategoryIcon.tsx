@@ -22,3 +22,5 @@ export const InteractiveDemosCategoryIcon = ({ ...props }: Omit<IconProps, 'chil
     />
   </Icon>
 )
+
+InteractiveDemosCategoryIcon.displayName = 'InteractiveDemosCategoryIcon'

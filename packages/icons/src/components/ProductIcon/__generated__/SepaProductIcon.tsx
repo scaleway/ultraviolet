@@ -35,3 +35,5 @@ export const SepaProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </g>
   </Icon>
 )
+
+SepaProductIcon.displayName = 'SepaProductIcon'

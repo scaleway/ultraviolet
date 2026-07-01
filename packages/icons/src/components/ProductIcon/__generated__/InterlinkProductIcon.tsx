@@ -35,3 +35,5 @@ export const InterlinkProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
     </g>
   </Icon>
 )
+
+InterlinkProductIcon.displayName = 'InterlinkProductIcon'

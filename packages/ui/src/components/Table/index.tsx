@@ -110,6 +110,8 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
   ),
 )
 
+BaseTable.displayName = 'Table'
+
 /**
  * Table is a component that displays data in a tabular format.
  */

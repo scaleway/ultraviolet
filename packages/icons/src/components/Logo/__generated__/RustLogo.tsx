@@ -40,3 +40,5 @@ export const RustLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     </Icon>
   )
 }
+
+RustLogo.displayName = 'RustLogo'

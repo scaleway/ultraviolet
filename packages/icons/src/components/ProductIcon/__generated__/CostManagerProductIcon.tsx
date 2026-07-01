@@ -64,3 +64,5 @@ export const CostManagerProductIcon = ({ ...props }: Omit<IconProps, 'children' 
     </defs>
   </Icon>
 )
+
+CostManagerProductIcon.displayName = 'CostManagerProductIcon'

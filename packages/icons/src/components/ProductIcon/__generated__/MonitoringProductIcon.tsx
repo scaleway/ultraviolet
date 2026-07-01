@@ -40,3 +40,5 @@ export const MonitoringProductIcon = ({ ...props }: Omit<IconProps, 'children' |
     </defs>
   </Icon>
 )
+
+MonitoringProductIcon.displayName = 'MonitoringProductIcon'

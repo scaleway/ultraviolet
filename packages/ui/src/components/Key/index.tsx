@@ -69,3 +69,5 @@ export const Key = ({
     </kbd>
   )
 }
+
+Key.displayName = 'Key'

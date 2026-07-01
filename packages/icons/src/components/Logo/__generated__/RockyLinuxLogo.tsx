@@ -37,3 +37,5 @@ export const RockyLinuxLogo = ({ ...props }: Omit<IconProps, 'children' | 'title
     </Icon>
   )
 }
+
+RockyLinuxLogo.displayName = 'RockyLinuxLogo'

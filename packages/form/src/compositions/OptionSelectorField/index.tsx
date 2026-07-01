@@ -72,3 +72,5 @@ export const OptionSelectorField = <
     />
   )
 }
+
+OptionSelectorField.displayName = 'OptionSelectorField'

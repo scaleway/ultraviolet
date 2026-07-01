@@ -57,3 +57,5 @@ export const IrelandFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+IrelandFlag.displayName = 'IrelandFlag'

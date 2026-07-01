@@ -346,3 +346,5 @@ export const DateInput = <IsRange extends undefined | boolean>({
     </DateInputContext.Provider>
   )
 }
+
+DateInput.displayName = 'DateInput'

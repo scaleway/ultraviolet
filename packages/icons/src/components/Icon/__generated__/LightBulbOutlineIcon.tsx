@@ -26,3 +26,5 @@ export const LightBulbOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 
     )}
   </Icon>
 )
+
+LightBulbOutlineIcon.displayName = 'LightBulbOutlineIcon'

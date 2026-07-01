@@ -33,3 +33,5 @@ export const BaremetalCategoryIcon = ({ ...props }: Omit<IconProps, 'children' |
     </g>
   </Icon>
 )
+
+BaremetalCategoryIcon.displayName = 'BaremetalCategoryIcon'

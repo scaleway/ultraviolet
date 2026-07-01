@@ -23,3 +23,5 @@ export const SidebarIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+SidebarIcon.displayName = 'SidebarIcon'

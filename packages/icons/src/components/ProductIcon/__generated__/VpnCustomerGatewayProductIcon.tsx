@@ -56,3 +56,5 @@ export const VpnCustomerGatewayProductIcon = ({ ...props }: Omit<IconProps, 'chi
     </g>
   </Icon>
 )
+
+VpnCustomerGatewayProductIcon.displayName = 'VpnCustomerGatewayProductIcon'

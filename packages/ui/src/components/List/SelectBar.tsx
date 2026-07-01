@@ -39,3 +39,5 @@ export const SelectBar = <T,>({ children, data, idKey, className }: SelectBarPro
     </ActionBar>
   )
 }
+
+SelectBar.displayName = 'List.SelectBar'

@@ -37,3 +37,5 @@ export const LifeCycleRulesProductIcon = ({ ...props }: Omit<IconProps, 'childre
     </g>
   </Icon>
 )
+
+LifeCycleRulesProductIcon.displayName = 'LifeCycleRulesProductIcon'

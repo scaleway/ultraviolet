@@ -47,3 +47,5 @@ export const DynamicIllustration = ({
     />
   )
 }
+
+DynamicIllustration.displayName = 'DynamicIllustration'

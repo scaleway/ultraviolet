@@ -151,3 +151,5 @@ export const Banner = ({
     </Stack>
   )
 }
+
+Banner.displayName = 'Banner'

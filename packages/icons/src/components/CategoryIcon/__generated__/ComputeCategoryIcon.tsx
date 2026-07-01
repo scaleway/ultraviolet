@@ -31,3 +31,5 @@ export const ComputeCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | '
     </g>
   </Icon>
 )
+
+ComputeCategoryIcon.displayName = 'ComputeCategoryIcon'

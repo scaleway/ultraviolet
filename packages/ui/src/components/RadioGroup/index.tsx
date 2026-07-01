@@ -105,6 +105,8 @@ type SelectableCardOptionGroupType = typeof RadioGroupComponent & {
   Radio: typeof RadioGroupRadio
 }
 
+RadioGroupComponent.displayName = 'RadioGroup'
+
 export const RadioGroup: SelectableCardOptionGroupType = Object.assign(RadioGroupComponent, {
   Radio: RadioGroupRadio,
 })

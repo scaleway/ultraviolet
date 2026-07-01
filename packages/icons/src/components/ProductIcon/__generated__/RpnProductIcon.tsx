@@ -42,3 +42,5 @@ export const RpnProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     </g>
   </Icon>
 )
+
+RpnProductIcon.displayName = 'RpnProductIcon'

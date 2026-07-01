@@ -65,3 +65,5 @@ export const Separator = ({
       })}
     />
   )
+
+Separator.displayName = 'Separator'

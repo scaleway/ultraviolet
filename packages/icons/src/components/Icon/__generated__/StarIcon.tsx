@@ -25,3 +25,5 @@ export const StarIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     )}
   </Icon>
 )
+
+StarIcon.displayName = 'StarIcon'

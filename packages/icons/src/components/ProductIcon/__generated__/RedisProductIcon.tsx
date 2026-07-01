@@ -35,3 +35,5 @@ export const RedisProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     </g>
   </Icon>
 )
+
+RedisProductIcon.displayName = 'RedisProductIcon'

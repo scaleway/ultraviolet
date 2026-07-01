@@ -20,3 +20,5 @@ export const BullhornIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>
     )}
   </Icon>
 )
+
+BullhornIcon.displayName = 'BullhornIcon'

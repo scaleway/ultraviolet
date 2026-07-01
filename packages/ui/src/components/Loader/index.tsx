@@ -83,3 +83,5 @@ export const Loader = ({
     </svg>
   )
 }
+
+Loader.displayName = 'Loader'

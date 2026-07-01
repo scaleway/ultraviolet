@@ -432,3 +432,5 @@ export const TimeInput = ({
     </Stack>
   )
 }
+
+TimeInput.displayName = 'TimeInput'

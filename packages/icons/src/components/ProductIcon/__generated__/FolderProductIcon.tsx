@@ -43,3 +43,5 @@ export const FolderProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     </g>
   </Icon>
 )
+
+FolderProductIcon.displayName = 'FolderProductIcon'

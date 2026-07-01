@@ -66,3 +66,5 @@ export const DistributedDataLabProductIcon = ({ ...props }: Omit<IconProps, 'chi
     </g>
   </Icon>
 )
+
+DistributedDataLabProductIcon.displayName = 'DistributedDataLabProductIcon'

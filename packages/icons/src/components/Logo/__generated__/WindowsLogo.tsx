@@ -40,3 +40,5 @@ export const WindowsLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     </Icon>
   )
 }
+
+WindowsLogo.displayName = 'WindowsLogo'

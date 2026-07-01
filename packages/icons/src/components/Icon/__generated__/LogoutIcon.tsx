@@ -25,3 +25,5 @@ export const LogoutIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+LogoutIcon.displayName = 'LogoutIcon'

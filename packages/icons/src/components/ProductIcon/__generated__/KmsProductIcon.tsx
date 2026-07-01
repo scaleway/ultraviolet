@@ -80,3 +80,5 @@ export const KmsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     </defs>
   </Icon>
 )
+
+KmsProductIcon.displayName = 'KmsProductIcon'

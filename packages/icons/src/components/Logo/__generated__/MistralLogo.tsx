@@ -46,3 +46,5 @@ export const MistralLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     </g>
   </Icon>
 )
+
+MistralLogo.displayName = 'MistralLogo'

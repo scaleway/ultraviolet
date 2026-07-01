@@ -35,3 +35,5 @@ export const ImagesProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     </g>
   </Icon>
 )
+
+ImagesProductIcon.displayName = 'ImagesProductIcon'

@@ -25,3 +25,5 @@ export const ClockIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+ClockIcon.displayName = 'ClockIcon'

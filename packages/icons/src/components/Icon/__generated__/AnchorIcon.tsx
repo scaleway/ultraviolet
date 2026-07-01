@@ -17,3 +17,5 @@ export const AnchorIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+AnchorIcon.displayName = 'AnchorIcon'

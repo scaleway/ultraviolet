@@ -35,3 +35,5 @@ export const PublicGatewayProductIcon = ({ ...props }: Omit<IconProps, 'children
     </g>
   </Icon>
 )
+
+PublicGatewayProductIcon.displayName = 'PublicGatewayProductIcon'

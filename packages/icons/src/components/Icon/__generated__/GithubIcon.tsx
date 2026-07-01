@@ -25,3 +25,5 @@ export const GithubIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+GithubIcon.displayName = 'GithubIcon'

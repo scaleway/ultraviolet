@@ -113,3 +113,5 @@ export const AirflowLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     </Icon>
   )
 }
+
+AirflowLogo.displayName = 'AirflowLogo'

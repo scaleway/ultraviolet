@@ -173,3 +173,5 @@ export const TraefikLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     </Icon>
   )
 }
+
+TraefikLogo.displayName = 'TraefikLogo'

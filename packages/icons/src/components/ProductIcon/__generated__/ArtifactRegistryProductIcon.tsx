@@ -76,3 +76,5 @@ export const ArtifactRegistryProductIcon = ({ ...props }: Omit<IconProps, 'child
     />
   </Icon>
 )
+
+ArtifactRegistryProductIcon.displayName = 'ArtifactRegistryProductIcon'

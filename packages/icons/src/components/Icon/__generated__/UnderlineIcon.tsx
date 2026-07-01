@@ -25,3 +25,5 @@ export const UnderlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'
     )}
   </Icon>
 )
+
+UnderlineIcon.displayName = 'UnderlineIcon'

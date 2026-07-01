@@ -47,3 +47,5 @@ export const NetworkAclsProductIcon = ({ ...props }: Omit<IconProps, 'children' 
     </g>
   </Icon>
 )
+
+NetworkAclsProductIcon.displayName = 'NetworkAclsProductIcon'

@@ -148,3 +148,5 @@ export const PinnedItems = ({ toggle = true, onReorder, onToggle, itemWrapper, s
 
   return null
 }
+
+PinnedItems.displayName = 'Navigation.PinnedItems'

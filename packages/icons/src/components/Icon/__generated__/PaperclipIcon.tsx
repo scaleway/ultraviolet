@@ -25,3 +25,5 @@ export const PaperclipIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'
     )}
   </Icon>
 )
+
+PaperclipIcon.displayName = 'PaperclipIcon'

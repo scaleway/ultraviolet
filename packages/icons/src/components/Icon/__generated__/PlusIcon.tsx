@@ -17,3 +17,5 @@ export const PlusIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     )}
   </Icon>
 )
+
+PlusIcon.displayName = 'PlusIcon'

@@ -211,3 +211,5 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
     )
   },
 )
+
+Item.displayName = 'Menu.Item'

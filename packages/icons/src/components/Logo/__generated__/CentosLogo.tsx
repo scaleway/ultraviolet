@@ -56,3 +56,5 @@ export const CentosLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     </Icon>
   )
 }
+
+CentosLogo.displayName = 'CentosLogo'

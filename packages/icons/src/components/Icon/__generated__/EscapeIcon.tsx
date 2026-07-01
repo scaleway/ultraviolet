@@ -25,3 +25,5 @@ export const EscapeIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+EscapeIcon.displayName = 'EscapeIcon'

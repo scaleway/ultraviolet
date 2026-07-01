@@ -52,3 +52,5 @@ export const InferenceProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
     />
   </Icon>
 )
+
+InferenceProductIcon.displayName = 'InferenceProductIcon'

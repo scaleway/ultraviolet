@@ -33,3 +33,5 @@ export const BandwidthProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
     </g>
   </Icon>
 )
+
+BandwidthProductIcon.displayName = 'BandwidthProductIcon'

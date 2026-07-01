@@ -33,3 +33,5 @@ export const PhpLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => 
     </Icon>
   )
 }
+
+PhpLogo.displayName = 'PhpLogo'

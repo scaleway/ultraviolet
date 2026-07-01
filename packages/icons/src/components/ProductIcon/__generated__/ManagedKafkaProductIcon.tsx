@@ -93,3 +93,5 @@ export const ManagedKafkaProductIcon = ({ ...props }: Omit<IconProps, 'children'
     />
   </Icon>
 )
+
+ManagedKafkaProductIcon.displayName = 'ManagedKafkaProductIcon'

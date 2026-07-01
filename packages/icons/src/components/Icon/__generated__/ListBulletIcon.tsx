@@ -31,3 +31,5 @@ export const ListBulletIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     )}
   </Icon>
 )
+
+ListBulletIcon.displayName = 'ListBulletIcon'

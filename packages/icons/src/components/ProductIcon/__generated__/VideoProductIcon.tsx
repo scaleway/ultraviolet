@@ -39,3 +39,5 @@ export const VideoProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     </g>
   </Icon>
 )
+
+VideoProductIcon.displayName = 'VideoProductIcon'

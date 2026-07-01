@@ -24,3 +24,5 @@ export const CreditCardOutlineIcon = ({ ...props }: Omit<IconProps, 'children' |
     )}
   </Icon>
 )
+
+CreditCardOutlineIcon.displayName = 'CreditCardOutlineIcon'

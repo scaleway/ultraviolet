@@ -33,3 +33,5 @@ export const IotProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     </g>
   </Icon>
 )
+
+IotProductIcon.displayName = 'IotProductIcon'

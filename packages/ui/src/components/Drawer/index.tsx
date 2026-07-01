@@ -147,6 +147,8 @@ export const BaseDrawer = ({
   )
 }
 
+BaseDrawer.displayName = 'Drawer'
+
 export const Drawer = Object.assign(BaseDrawer, {
   Content: DrawerContent,
 })

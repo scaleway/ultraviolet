@@ -35,3 +35,5 @@ export const KubernetesProductIcon = ({ ...props }: Omit<IconProps, 'children' |
     </g>
   </Icon>
 )
+
+KubernetesProductIcon.displayName = 'KubernetesProductIcon'

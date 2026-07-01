@@ -17,3 +17,5 @@ export const HomeOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+HomeOutlineIcon.displayName = 'HomeOutlineIcon'

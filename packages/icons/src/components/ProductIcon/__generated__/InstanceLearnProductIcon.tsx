@@ -35,3 +35,5 @@ export const InstanceLearnProductIcon = ({ ...props }: Omit<IconProps, 'children
     </g>
   </Icon>
 )
+
+InstanceLearnProductIcon.displayName = 'InstanceLearnProductIcon'

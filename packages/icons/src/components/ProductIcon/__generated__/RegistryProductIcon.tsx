@@ -42,3 +42,5 @@ export const RegistryProductIcon = ({ ...props }: Omit<IconProps, 'children' | '
     </g>
   </Icon>
 )
+
+RegistryProductIcon.displayName = 'RegistryProductIcon'

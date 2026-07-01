@@ -60,3 +60,5 @@ export const GitlabLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     </Icon>
   )
 }
+
+GitlabLogo.displayName = 'GitlabLogo'

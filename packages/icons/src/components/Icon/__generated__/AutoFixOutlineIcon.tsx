@@ -22,3 +22,5 @@ export const AutoFixOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     )}
   </Icon>
 )
+
+AutoFixOutlineIcon.displayName = 'AutoFixOutlineIcon'

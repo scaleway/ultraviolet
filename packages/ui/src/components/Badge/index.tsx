@@ -51,3 +51,5 @@ export const Badge = ({
     </Text>
   )
 }
+
+Badge.displayName = 'Badge'

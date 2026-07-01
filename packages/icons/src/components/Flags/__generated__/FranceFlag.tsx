@@ -57,3 +57,5 @@ export const FranceFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+FranceFlag.displayName = 'FranceFlag'

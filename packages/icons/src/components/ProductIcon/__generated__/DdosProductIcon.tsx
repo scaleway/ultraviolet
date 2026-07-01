@@ -49,3 +49,5 @@ export const DdosProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </defs>
   </Icon>
 )
+
+DdosProductIcon.displayName = 'DdosProductIcon'

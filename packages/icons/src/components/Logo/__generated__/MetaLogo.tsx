@@ -41,3 +41,5 @@ export const MetaLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     </defs>
   </Icon>
 )
+
+MetaLogo.displayName = 'MetaLogo'

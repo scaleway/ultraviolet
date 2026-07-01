@@ -31,3 +31,5 @@ export const IstioLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     </Icon>
   )
 }
+
+IstioLogo.displayName = 'IstioLogo'

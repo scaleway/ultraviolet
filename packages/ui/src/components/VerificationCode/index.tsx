@@ -262,3 +262,5 @@ export const VerificationCode = ({
     </fieldset>
   )
 }
+
+VerificationCode.displayName = 'VerificationCode'

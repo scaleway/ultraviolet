@@ -14,3 +14,5 @@ export const MessageInfos = ({
     {children}
   </div>
 )
+
+MessageInfos.displayName = 'Conversation.MessageInfos'

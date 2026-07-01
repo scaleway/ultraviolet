@@ -35,3 +35,5 @@ export const JeroProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </g>
   </Icon>
 )
+
+JeroProductIcon.displayName = 'JeroProductIcon'

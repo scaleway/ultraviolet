@@ -25,3 +25,5 @@ export const ShieldIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+ShieldIcon.displayName = 'ShieldIcon'

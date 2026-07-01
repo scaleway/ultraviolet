@@ -52,3 +52,5 @@ export const Submit = <TFieldValues extends FieldValues>({
     </Button>
   )
 }
+
+Submit.displayName = 'Submit'

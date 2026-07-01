@@ -127,3 +127,5 @@ export const FileInputField: FileInputFieldType = Object.assign(FileInputFieldBa
   Button: FileInput.Button,
   List: FileInput.List,
 })
+
+FileInputFieldBase.displayName = 'FileInputField'

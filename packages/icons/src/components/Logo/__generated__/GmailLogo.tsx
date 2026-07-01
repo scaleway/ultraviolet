@@ -24,3 +24,5 @@ export const GmailLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     </defs>
   </Icon>
 )
+
+GmailLogo.displayName = 'GmailLogo'

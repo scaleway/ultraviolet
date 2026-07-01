@@ -47,3 +47,5 @@ export const Bullet = ({
     </div>
   </Tooltip>
 )
+
+Bullet.displayName = 'Bullet'

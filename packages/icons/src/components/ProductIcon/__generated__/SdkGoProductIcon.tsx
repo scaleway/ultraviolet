@@ -47,3 +47,5 @@ export const SdkGoProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     </defs>
   </Icon>
 )
+
+SdkGoProductIcon.displayName = 'SdkGoProductIcon'

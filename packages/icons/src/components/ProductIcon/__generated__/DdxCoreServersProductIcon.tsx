@@ -40,3 +40,5 @@ export const DdxCoreServersProductIcon = ({ ...props }: Omit<IconProps, 'childre
     </defs>
   </Icon>
 )
+
+DdxCoreServersProductIcon.displayName = 'DdxCoreServersProductIcon'

@@ -69,3 +69,5 @@ export const Region = memo(
     )
   },
 )
+
+Region.displayName = 'EstimateCost.Region'

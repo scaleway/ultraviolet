@@ -23,3 +23,5 @@ export const EmailIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+EmailIcon.displayName = 'EmailIcon'

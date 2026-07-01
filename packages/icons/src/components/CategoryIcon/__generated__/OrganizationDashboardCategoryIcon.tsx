@@ -30,3 +30,5 @@ export const OrganizationDashboardCategoryIcon = ({ ...props }: Omit<IconProps, 
     </g>
   </Icon>
 )
+
+OrganizationDashboardCategoryIcon.displayName = 'OrganizationDashboardCategoryIcon'

@@ -28,3 +28,5 @@ export const DedicatedServerCategoryIcon = ({ ...props }: Omit<IconProps, 'child
     </g>
   </Icon>
 )
+
+DedicatedServerCategoryIcon.displayName = 'DedicatedServerCategoryIcon'

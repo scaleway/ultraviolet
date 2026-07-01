@@ -181,3 +181,5 @@ export const NodeJsLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     </Icon>
   )
 }
+
+NodeJsLogo.displayName = 'NodeJsLogo'

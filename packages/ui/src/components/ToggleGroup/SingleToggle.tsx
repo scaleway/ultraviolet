@@ -50,3 +50,5 @@ export const ToggleGroupToggle = ({
     />
   )
 }
+
+ToggleGroupToggle.displayName = 'ToggleGroup.Toggle'

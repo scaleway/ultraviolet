@@ -84,3 +84,5 @@ export const ElasticSearchLogo = ({ ...props }: Omit<IconProps, 'children' | 'ti
     </Icon>
   )
 }
+
+ElasticSearchLogo.displayName = 'ElasticSearchLogo'

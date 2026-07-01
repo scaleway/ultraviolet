@@ -143,3 +143,5 @@ export const Alert = ({
     </Stack>
   )
 }
+
+Alert.displayName = 'Alert'

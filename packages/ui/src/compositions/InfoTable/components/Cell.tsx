@@ -42,3 +42,4 @@ export const InfoTableCell = ({ children, title, multiline = false, style }: Cel
     </Stack>
   )
 }
+InfoTableCell.displayName = 'Infotable.Cell'

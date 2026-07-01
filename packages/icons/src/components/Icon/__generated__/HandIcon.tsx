@@ -17,3 +17,5 @@ export const HandIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     )}
   </Icon>
 )
+
+HandIcon.displayName = 'HandIcon'

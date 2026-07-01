@@ -98,3 +98,5 @@ export const OutlookLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     </defs>
   </Icon>
 )
+
+OutlookLogo.displayName = 'OutlookLogo'

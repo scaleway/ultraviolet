@@ -33,3 +33,5 @@ export const InstanceEnterpriseProductIcon = ({ ...props }: Omit<IconProps, 'chi
     </g>
   </Icon>
 )
+
+InstanceEnterpriseProductIcon.displayName = 'InstanceEnterpriseProductIcon'

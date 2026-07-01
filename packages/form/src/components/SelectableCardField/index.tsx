@@ -83,3 +83,5 @@ export const SelectableCardField = <
     />
   )
 }
+
+SelectableCardField.displayName = 'SelectableCardField'

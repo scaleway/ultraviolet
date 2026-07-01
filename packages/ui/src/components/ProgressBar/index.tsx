@@ -113,3 +113,5 @@ export const ProgressBar = ({
     </Stack>
   )
 }
+
+ProgressBar.displayName = 'ProgressBar'

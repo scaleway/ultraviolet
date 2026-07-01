@@ -31,3 +31,5 @@ export const EyeOffIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+EyeOffIcon.displayName = 'EyeOffIcon'

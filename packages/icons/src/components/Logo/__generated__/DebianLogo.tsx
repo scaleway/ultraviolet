@@ -131,3 +131,5 @@ export const DebianLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     </Icon>
   )
 }
+
+DebianLogo.displayName = 'DebianLogo'

@@ -66,3 +66,5 @@ export const CopyButton = ({
     </Button>
   )
 }
+
+CopyButton.displayName = 'CopyButton'

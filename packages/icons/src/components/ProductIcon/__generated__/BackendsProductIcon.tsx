@@ -35,3 +35,5 @@ export const BackendsProductIcon = ({ ...props }: Omit<IconProps, 'children' | '
     </g>
   </Icon>
 )
+
+BackendsProductIcon.displayName = 'BackendsProductIcon'

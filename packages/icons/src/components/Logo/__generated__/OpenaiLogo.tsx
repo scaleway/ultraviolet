@@ -34,3 +34,5 @@ export const OpenaiLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     </Icon>
   )
 }
+
+OpenaiLogo.displayName = 'OpenaiLogo'

@@ -28,3 +28,5 @@ export const DocPaperIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>
     )}
   </Icon>
 )
+
+DocPaperIcon.displayName = 'DocPaperIcon'

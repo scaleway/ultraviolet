@@ -46,3 +46,5 @@ export const PasswordCheck = ({ rules, className, 'data-testid': dataTestId, sty
     ))}
   </div>
 )
+
+PasswordCheck.displayName = 'PasswordCheck'

@@ -89,3 +89,5 @@ export const SlovakiaFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>
     )}
   </Icon>
 )
+
+SlovakiaFlag.displayName = 'SlovakiaFlag'

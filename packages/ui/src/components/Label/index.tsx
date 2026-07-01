@@ -58,3 +58,5 @@ export const Label = ({
       {children}
     </LabelRequiredOrNot>
   )
+
+Label.displayName = 'Label'

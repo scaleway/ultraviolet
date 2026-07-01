@@ -28,3 +28,5 @@ export const ManagementAndGovernanceCategoryIcon = ({ ...props }: Omit<IconProps
     </g>
   </Icon>
 )
+
+ManagementAndGovernanceCategoryIcon.displayName = 'ManagementAndGovernanceCategoryIcon'

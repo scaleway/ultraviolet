@@ -7,3 +7,5 @@ export const DateComponent = ({ children, style }: { children: ReactNode; style?
     {children}
   </Text>
 )
+
+DateComponent.displayName = 'Conversation.Date'

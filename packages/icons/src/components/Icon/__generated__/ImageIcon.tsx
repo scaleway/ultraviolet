@@ -25,3 +25,5 @@ export const ImageIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+ImageIcon.displayName = 'ImageIcon'

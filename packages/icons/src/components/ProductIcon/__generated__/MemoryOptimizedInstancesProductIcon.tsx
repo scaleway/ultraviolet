@@ -48,3 +48,5 @@ export const MemoryOptimizedInstancesProductIcon = ({ ...props }: Omit<IconProps
     </g>
   </Icon>
 )
+
+MemoryOptimizedInstancesProductIcon.displayName = 'MemoryOptimizedInstancesProductIcon'

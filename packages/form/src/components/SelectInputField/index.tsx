@@ -71,3 +71,5 @@ export const SelectInputField = <
     />
   )
 }
+
+SelectInputField.displayName = 'SelectInputField'

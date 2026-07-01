@@ -23,3 +23,5 @@ export const WestShortIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'
     )}
   </Icon>
 )
+
+WestShortIcon.displayName = 'WestShortIcon'

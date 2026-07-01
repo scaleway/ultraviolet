@@ -58,3 +58,5 @@ export const NotificationContainer = ({
     transition={Slide}
   />
 )
+
+NotificationContainer.displayName = 'NotificationContainer'

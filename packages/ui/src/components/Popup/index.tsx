@@ -635,3 +635,5 @@ export const Popup = forwardRef(
     )
   },
 )
+
+Popup.displayName = 'Popup'

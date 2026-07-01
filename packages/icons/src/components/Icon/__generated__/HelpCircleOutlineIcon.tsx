@@ -24,3 +24,5 @@ export const HelpCircleOutlineIcon = ({ ...props }: Omit<IconProps, 'children' |
     )}
   </Icon>
 )
+
+HelpCircleOutlineIcon.displayName = 'HelpCircleOutlineIcon'

@@ -17,3 +17,5 @@ export const UnlockIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+UnlockIcon.displayName = 'UnlockIcon'

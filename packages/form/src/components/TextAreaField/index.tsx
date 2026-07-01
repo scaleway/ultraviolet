@@ -111,3 +111,5 @@ export const TextAreaField = <
     />
   )
 }
+
+TextAreaField.displayName = 'TextAreaField'

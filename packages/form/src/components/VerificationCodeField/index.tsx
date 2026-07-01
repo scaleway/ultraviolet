@@ -63,3 +63,5 @@ export const VerificationCodeField = <
     />
   )
 }
+
+VerificationCodeField.displayName = 'VerificationCodeField'

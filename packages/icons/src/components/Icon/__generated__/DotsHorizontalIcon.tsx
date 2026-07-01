@@ -17,3 +17,5 @@ export const DotsHorizontalIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     )}
   </Icon>
 )
+
+DotsHorizontalIcon.displayName = 'DotsHorizontalIcon'

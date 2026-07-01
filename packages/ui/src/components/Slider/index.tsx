@@ -142,3 +142,5 @@ export const Slider = ({
     </Stack>
   )
 }
+
+Slider.displayName = 'Slider'

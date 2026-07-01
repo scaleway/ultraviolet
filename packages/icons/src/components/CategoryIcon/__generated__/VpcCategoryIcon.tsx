@@ -70,3 +70,5 @@ export const VpcCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </g>
   </Icon>
 )
+
+VpcCategoryIcon.displayName = 'VpcCategoryIcon'

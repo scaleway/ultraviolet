@@ -25,3 +25,5 @@ export const ArrowUpIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+ArrowUpIcon.displayName = 'ArrowUpIcon'

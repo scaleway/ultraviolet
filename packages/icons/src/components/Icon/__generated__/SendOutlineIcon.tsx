@@ -24,3 +24,5 @@ export const SendOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+SendOutlineIcon.displayName = 'SendOutlineIcon'

@@ -17,3 +17,5 @@ export const CursorIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+CursorIcon.displayName = 'CursorIcon'

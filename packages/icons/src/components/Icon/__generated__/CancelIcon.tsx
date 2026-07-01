@@ -23,3 +23,5 @@ export const CancelIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+CancelIcon.displayName = 'CancelIcon'

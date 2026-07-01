@@ -7,3 +7,5 @@ type BodyProps = {
 }
 
 export const Body = ({ children }: BodyProps) => <tbody>{children}</tbody>
+
+Body.displayName = 'Table.Body'

@@ -193,3 +193,5 @@ export const BarStack = ({
     </Stack>
   )
 }
+
+BarStack.displayName = 'BarStack'

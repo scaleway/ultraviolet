@@ -11,3 +11,5 @@ type LineThroughProps = ComponentProps<'span'> & {
 export const LineThrough = ({ isActive, className, ...props }: LineThroughProps) => (
   <span className={cn(className, isActive ? estimateCostStyle.lineThrough : '')} {...props} />
 )
+
+LineThrough.displayName = 'EstimateCost.LineThrough'

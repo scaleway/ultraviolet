@@ -17,3 +17,5 @@ export const PinIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => 
     )}
   </Icon>
 )
+
+PinIcon.displayName = 'PinIcon'

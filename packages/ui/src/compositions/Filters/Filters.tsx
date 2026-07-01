@@ -36,3 +36,5 @@ export const Filters = <V extends AnyObject>({
     {hasFullDrawerLabels(labels) ? <FiltersDrawer config={config} components={components} labels={labels} /> : null}
   </FiltersProvider>
 )
+
+Filters.displayName = 'Filters'

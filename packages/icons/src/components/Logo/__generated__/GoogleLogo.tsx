@@ -35,3 +35,5 @@ export const GoogleLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     </defs>
   </Icon>
 )
+
+GoogleLogo.displayName = 'GoogleLogo'

@@ -117,3 +117,5 @@ export const RedisLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     </Icon>
   )
 }
+
+RedisLogo.displayName = 'RedisLogo'

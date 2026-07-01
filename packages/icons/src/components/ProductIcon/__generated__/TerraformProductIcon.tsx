@@ -38,3 +38,5 @@ export const TerraformProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
     </g>
   </Icon>
 )
+
+TerraformProductIcon.displayName = 'TerraformProductIcon'

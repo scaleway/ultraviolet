@@ -53,3 +53,5 @@ export const PolicyProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     </g>
   </Icon>
 )
+
+PolicyProductIcon.displayName = 'PolicyProductIcon'

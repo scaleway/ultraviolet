@@ -54,3 +54,5 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
     </a>
   ),
 )
+
+Card.displayName = 'ContentCardGroup.Card'

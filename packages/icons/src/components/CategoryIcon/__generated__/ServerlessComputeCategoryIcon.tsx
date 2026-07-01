@@ -26,3 +26,5 @@ export const ServerlessComputeCategoryIcon = ({ ...props }: Omit<IconProps, 'chi
     </g>
   </Icon>
 )
+
+ServerlessComputeCategoryIcon.displayName = 'ServerlessComputeCategoryIcon'

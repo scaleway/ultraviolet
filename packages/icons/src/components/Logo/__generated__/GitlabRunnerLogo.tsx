@@ -47,3 +47,5 @@ export const GitlabRunnerLogo = ({ ...props }: Omit<IconProps, 'children' | 'tit
     </Icon>
   )
 }
+
+GitlabRunnerLogo.displayName = 'GitlabRunnerLogo'

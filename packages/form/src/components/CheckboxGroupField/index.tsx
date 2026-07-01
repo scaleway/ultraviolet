@@ -123,3 +123,5 @@ type RadioGroupFieldType = typeof CheckboxGroupFieldComponent & {
 export const CheckboxGroupField: RadioGroupFieldType = Object.assign(CheckboxGroupFieldComponent, {
   Checkbox: CheckboxGroup.Checkbox,
 })
+
+CheckboxGroupFieldComponent.displayName = 'CheckboxGroupField'

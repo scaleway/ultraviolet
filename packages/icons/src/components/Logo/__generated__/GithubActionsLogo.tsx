@@ -192,3 +192,5 @@ export const GithubActionsLogo = ({ ...props }: Omit<IconProps, 'children' | 'ti
     </Icon>
   )
 }
+
+GithubActionsLogo.displayName = 'GithubActionsLogo'

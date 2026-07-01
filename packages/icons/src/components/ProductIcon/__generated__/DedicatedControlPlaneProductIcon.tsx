@@ -81,3 +81,5 @@ export const DedicatedControlPlaneProductIcon = ({ ...props }: Omit<IconProps, '
     </g>
   </Icon>
 )
+
+DedicatedControlPlaneProductIcon.displayName = 'DedicatedControlPlaneProductIcon'

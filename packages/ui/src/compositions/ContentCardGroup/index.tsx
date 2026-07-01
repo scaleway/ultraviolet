@@ -24,3 +24,5 @@ const BaseContentCardGroup = forwardRef<HTMLDivElement, BaseContentCardGroupProp
 export const ContentCardGroup = Object.assign(BaseContentCardGroup, {
   Card,
 })
+
+ContentCardGroup.displayName = 'ContentCardGroup'

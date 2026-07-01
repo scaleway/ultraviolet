@@ -44,3 +44,5 @@ export const CbProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'
     </g>
   </Icon>
 )
+
+CbProductIcon.displayName = 'CbProductIcon'

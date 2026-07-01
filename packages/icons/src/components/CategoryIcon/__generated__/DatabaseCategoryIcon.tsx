@@ -26,3 +26,5 @@ export const DatabaseCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 
     </g>
   </Icon>
 )
+
+DatabaseCategoryIcon.displayName = 'DatabaseCategoryIcon'

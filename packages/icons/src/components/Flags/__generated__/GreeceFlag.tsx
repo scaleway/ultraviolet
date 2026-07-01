@@ -69,3 +69,5 @@ export const GreeceFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+GreeceFlag.displayName = 'GreeceFlag'

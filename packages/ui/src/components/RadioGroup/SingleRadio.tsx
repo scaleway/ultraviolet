@@ -51,3 +51,4 @@ export const RadioGroupRadio = ({
     />
   )
 }
+RadioGroupRadio.displayName = 'RadioGroup.Radio'

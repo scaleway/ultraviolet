@@ -22,3 +22,5 @@ export const StorageCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | '
     </g>
   </Icon>
 )
+
+StorageCategoryIcon.displayName = 'StorageCategoryIcon'

@@ -67,3 +67,5 @@ export const SteppedListContent = ({
 
   return null
 }
+
+SteppedListContent.displayName = 'SteppedListCard.Step'

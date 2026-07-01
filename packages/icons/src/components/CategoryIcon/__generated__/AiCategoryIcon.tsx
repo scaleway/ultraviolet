@@ -24,3 +24,5 @@ export const AiCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     </g>
   </Icon>
 )
+
+AiCategoryIcon.displayName = 'AiCategoryIcon'
