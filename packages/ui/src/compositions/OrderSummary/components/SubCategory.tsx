@@ -8,11 +8,11 @@ import { orderSummaryStyle } from '../styles.css'
 
 export const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => (
   <Stack direction="column" gap={1}>
-    <Stack alignItems="center" direction="row" justifyContent="space-between">
+    <Stack alignItems="center" direction="row" justifyContent="space-between" gap={2}>
       {subCategory.additionalInfo || subCategory.icon ? (
-        <Stack alignItems="center" direction="row" gap={1}>
+        <Stack alignItems="center" direction="row" gap={1} wrap="wrap">
           {subCategory.icon}
-          <Text as="span" prominence="strong" sentiment="neutral" variant="bodySmallStrong">
+          <Text as="span" prominence="strong" sentiment="neutral" variant="bodySmallStrong" oneLine>
             {subCategory.anchor ? (
               <a className={orderSummaryStyle.anchor} href={subCategory.anchor}>
                 <AttachIcon className={orderSummaryStyle.anchorIcon({ size: 'small' })} sentiment="info" />
@@ -27,7 +27,7 @@ export const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) =
           </Text>
         </Stack>
       ) : (
-        <Text as="span" prominence="strong" sentiment="neutral" variant="bodySmallStrong">
+        <Text as="span" prominence="strong" sentiment="neutral" variant="bodySmallStrong" oneLine>
           {subCategory.anchor ? (
             <a className={orderSummaryStyle.anchor} href={subCategory.anchor}>
               <AttachIcon className={orderSummaryStyle.anchorIcon({ size: 'small' })} sentiment="info" />

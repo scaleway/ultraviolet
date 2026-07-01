@@ -59,6 +59,7 @@ export const NonScrollableContent = ({
                 sentiment="neutral"
                 variant="bodyStrong"
                 className={calculatorIcon ? orderSummaryStyle.compactTotalPrice : undefined}
+                placement="right"
               >
                 {calculatorIcon ? <CalculatorIcon sentiment="primary" size="medium" /> : null}
                 {locales['order.summary.total']}
@@ -76,6 +77,7 @@ export const NonScrollableContent = ({
               sentiment="neutral"
               variant="bodyStrong"
               className={calculatorIcon ? orderSummaryStyle.compactTotalPrice : undefined}
+              placement="right"
             >
               {calculatorIcon ? <CalculatorIcon sentiment="primary" size="medium" /> : null}
               {locales['order.summary.total']}
@@ -98,6 +100,7 @@ export const NonScrollableContent = ({
               prominence="strong"
               sentiment="neutral"
               variant="headingSmallStrong"
+              placement="right"
             >
               <DisplayPrice beforeOrAfter="after" divisor={divisor} price={totalPrice} />
               {defaultPriceInformation ? `/${unitSingular}` : null}
@@ -105,7 +108,14 @@ export const NonScrollableContent = ({
             </Text>
           ) : (
             <Stack alignItems="center" direction="row" gap={1}>
-              <Text as="span" prominence="weak" sentiment="neutral" strikeThrough variant="bodySmallStrong">
+              <Text
+                as="span"
+                prominence="weak"
+                sentiment="neutral"
+                strikeThrough
+                variant="bodySmallStrong"
+                placement="right"
+              >
                 <DisplayPrice beforeOrAfter="before" divisor={divisor} price={totalPrice} />
               </Text>
               <Text
@@ -115,6 +125,7 @@ export const NonScrollableContent = ({
                 prominence="strong"
                 sentiment="neutral"
                 variant="headingSmallStrong"
+                placement="right"
               >
                 <DisplayPrice beforeOrAfter="after" divisor={divisor} price={totalPrice} />
                 {defaultPriceInformation ? `/${unitSingular}` : null}
