@@ -79,7 +79,6 @@ export const selectBarBase = style({
   width: '100%',
   selectors: {
     [`.${unitInputStyle.unit} &`]: {
-      background: 'transparent',
       border: 'none !important',
     },
     [`${selectableCardOptionGroupStyle.optionSelectInput} &`]: {

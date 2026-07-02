@@ -39,7 +39,14 @@ const inputContainer = recipe({
 })
 
 const unit = recipe({
-  base: { alignItems: 'center', display: 'flex', padding: theme.space[1] },
+  base: {
+    alignItems: 'center',
+    display: 'flex',
+    padding: theme.space[1],
+    borderBlockWidth: 1,
+    borderColor: 'inherit',
+    borderBlockStyle: 'solid',
+  },
   defaultVariants: {
     disabled: false,
     readOnly: false,
@@ -79,6 +86,8 @@ const unit = recipe({
     controls: {
       false: {
         borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
+        borderRightWidth: 1,
+        borderRightStyle: 'solid',
       },
     },
   },
@@ -86,8 +95,9 @@ const unit = recipe({
 
 const numberinput = recipe({
   base: {
-    background: 'none',
-    border: 'none',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: 'inherit',
     color: theme.colors.neutral.text,
     fontFamily: theme.typography.bodySmall.fontFamily,
     fontSize: theme.typography.bodySmall.fontSize,
@@ -140,11 +150,15 @@ const numberinput = recipe({
         textAlign: 'left',
         borderRadius: `${theme.radii.default} 0 0 ${theme.radii.default}`,
       },
+      true: {
+        borderInline: 'none',
+      },
     },
     hasUnit: {
       true: {
         padding: `${theme.space['1']} 0 ${theme.space['1']} ${theme.space['1']}`,
         textAlign: 'left',
+        borderRightWidth: 0,
       },
     },
     size: {
@@ -179,6 +193,7 @@ const container = recipe({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    background: theme.colors.neutral.background,
     selectors: {
       '&:focus-within': {
         borderColor: theme.colors.primary.borderHover,
@@ -187,9 +202,14 @@ const container = recipe({
       '&:hover': {
         border: `1px solid ${theme.colors.primary.borderHover}`,
       },
-      '&:has(input:out-of-range), &:has(input:invalid), &:has(:user-invalid)': {
-        borderColor: theme.colors.danger.borderHover,
+      '&:has(input:out-of-range), &:has(:user-invalid:focus)': {
         boxShadow: theme.shadows.focusDanger,
+      },
+      '&:has(input:out-of-range), &:has(:user-invalid)': {
+        borderColor: theme.colors.danger.borderHover,
+      },
+      '&[data-controls="false"]': {
+        borderWidth: 0,
       },
     },
   },
