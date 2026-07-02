@@ -57,7 +57,6 @@ const nonScrollableContainer = recipe({
 })
 
 const numberInput = style({
-  backgroundColor: theme.colors.neutral.background,
   maxWidth: '12.5rem',
 })
 

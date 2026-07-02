@@ -9,6 +9,7 @@ Unit.args = {
   name: 'number-input',
   onChange: () => {},
   unit: 'GB',
+  controls: true,
 }
 
 Unit.parameters = {

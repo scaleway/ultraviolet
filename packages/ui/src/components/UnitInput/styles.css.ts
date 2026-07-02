@@ -43,6 +43,7 @@ const number = styleVariants({
 const unitInputNumberWrapperBase = style({
   border: `1px solid ${theme.colors.neutral.border}`,
   borderRadius: theme.radii.default,
+  background: theme.colors.neutral.background,
   selectors: {
     '&:focus-within': {
       borderColor: theme.colors.primary.borderHover,
