@@ -467,7 +467,7 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should be searchable when there are less more than 6 items', async () => {
+  it('should be searchable when there are more than 6 items', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         name="test"
