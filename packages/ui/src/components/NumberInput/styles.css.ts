@@ -95,6 +95,7 @@ const unit = recipe({
 
 const numberinput = recipe({
   base: {
+    background: 'none',
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: 'inherit',
@@ -205,8 +206,11 @@ const container = recipe({
       '&:has(input:out-of-range), &:has(:user-invalid:focus)': {
         boxShadow: theme.shadows.focusDanger,
       },
-      '&:has(input:out-of-range), &:has(:user-invalid)': {
+      '&:has(input:out-of-range:hover), &:has(:user-invalid:hover)': {
         borderColor: theme.colors.danger.borderHover,
+      },
+      '&:has(input:out-of-range), &:has(:user-invalid)': {
+        borderColor: theme.colors.danger.border,
       },
       '&[data-controls="false"]': {
         borderWidth: 0,
