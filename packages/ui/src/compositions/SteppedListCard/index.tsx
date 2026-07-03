@@ -160,6 +160,8 @@ const SteppedListCard = ({
   )
 }
 
+SteppedListCard.displayName = 'SteppedListCard'
+
 SteppedListCard.Step = SteppedListContent
 
 export { SteppedListCard }

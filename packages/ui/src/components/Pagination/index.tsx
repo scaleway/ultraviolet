@@ -140,3 +140,5 @@ export const Pagination = ({
     </Stack>
   )
 }
+
+Pagination.displayName = 'Pagination'

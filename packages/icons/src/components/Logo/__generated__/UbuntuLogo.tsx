@@ -46,3 +46,5 @@ export const UbuntuLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     </Icon>
   )
 }
+
+UbuntuLogo.displayName = 'UbuntuLogo'

@@ -32,3 +32,5 @@ export const UseCasesCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 
     />
   </Icon>
 )
+
+UseCasesCategoryIcon.displayName = 'UseCasesCategoryIcon'

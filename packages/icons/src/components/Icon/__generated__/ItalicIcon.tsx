@@ -25,3 +25,5 @@ export const ItalicIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+ItalicIcon.displayName = 'ItalicIcon'

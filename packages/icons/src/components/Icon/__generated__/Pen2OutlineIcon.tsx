@@ -24,3 +24,5 @@ export const Pen2OutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+Pen2OutlineIcon.displayName = 'Pen2OutlineIcon'

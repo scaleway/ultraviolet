@@ -64,3 +64,5 @@ export const ApiKeyProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     </g>
   </Icon>
 )
+
+ApiKeyProductIcon.displayName = 'ApiKeyProductIcon'

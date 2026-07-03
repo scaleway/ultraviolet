@@ -24,3 +24,5 @@ export const AdjustmentsHorizontalIcon = ({ ...props }: Omit<IconProps, 'childre
     )}
   </Icon>
 )
+
+AdjustmentsHorizontalIcon.displayName = 'AdjustmentsHorizontalIcon'

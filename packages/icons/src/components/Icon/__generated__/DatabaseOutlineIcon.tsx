@@ -24,3 +24,5 @@ export const DatabaseOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | '
     )}
   </Icon>
 )
+
+DatabaseOutlineIcon.displayName = 'DatabaseOutlineIcon'

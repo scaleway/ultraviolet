@@ -25,3 +25,5 @@ export const LockOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+LockOutlineIcon.displayName = 'LockOutlineIcon'

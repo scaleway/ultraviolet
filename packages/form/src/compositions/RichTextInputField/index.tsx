@@ -65,3 +65,5 @@ export const RichTextInputField = <
     />
   )
 }
+
+RichTextInputField.displayName = 'RichTextInputField'

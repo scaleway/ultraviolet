@@ -53,3 +53,5 @@ export const WireIllustration = ({
     }}
   />
 )
+
+WireIllustration.displayName = 'WireIllustration'

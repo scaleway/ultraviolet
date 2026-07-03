@@ -25,3 +25,5 @@ export const DeleteOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+DeleteOutlineIcon.displayName = 'DeleteOutlineIcon'

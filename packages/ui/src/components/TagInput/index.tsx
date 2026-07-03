@@ -272,3 +272,5 @@ export const TagInput = ({
     </Stack>
   )
 }
+
+TagInput.displayName = 'TagInput'

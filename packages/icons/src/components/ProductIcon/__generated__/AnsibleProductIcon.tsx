@@ -26,3 +26,5 @@ export const AnsibleProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     </g>
   </Icon>
 )
+
+AnsibleProductIcon.displayName = 'AnsibleProductIcon'

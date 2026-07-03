@@ -42,3 +42,5 @@ export const MongoDbProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     </g>
   </Icon>
 )
+
+MongoDbProductIcon.displayName = 'MongoDbProductIcon'

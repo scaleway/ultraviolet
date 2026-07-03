@@ -81,4 +81,5 @@ export const GlobalAlert = ({
   )
 }
 
+GlobalAlert.displayName = 'GlobalAlert'
 GlobalAlert.Link = GlobalAlertLink

@@ -7,3 +7,5 @@ export const MessageTag = ({ children, style }: { children: ReactNode; style?: C
     {children}
   </Tag>
 )
+
+MessageTag.displayName = 'Conversation.Tag'

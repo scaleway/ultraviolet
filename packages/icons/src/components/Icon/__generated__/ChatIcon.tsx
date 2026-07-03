@@ -20,3 +20,5 @@ export const ChatIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     )}
   </Icon>
 )
+
+ChatIcon.displayName = 'ChatIcon'

@@ -17,3 +17,5 @@ export const ViewIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     )}
   </Icon>
 )
+
+ViewIcon.displayName = 'ViewIcon'

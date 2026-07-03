@@ -101,6 +101,8 @@ const SelectableCardOptionGroupComponent = ({
   )
 }
 
+SelectableCardOptionGroupComponent.displayName = 'SelectableCardOptionGroup'
+
 type SelectableCardOptionGroupType = typeof SelectableCardOptionGroupComponent & {
   Option: typeof Option
 }

@@ -24,3 +24,5 @@ export const EyeOffOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+EyeOffOutlineIcon.displayName = 'EyeOffOutlineIcon'

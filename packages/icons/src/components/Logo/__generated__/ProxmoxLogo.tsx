@@ -64,3 +64,5 @@ export const ProxmoxLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     </Icon>
   )
 }
+
+ProxmoxLogo.displayName = 'ProxmoxLogo'

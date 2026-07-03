@@ -283,3 +283,5 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
     </SelectInputProvider>
   )
 }
+
+SelectInput.displayName = 'SelectInput'

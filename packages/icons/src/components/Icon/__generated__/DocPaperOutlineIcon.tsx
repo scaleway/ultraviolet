@@ -29,3 +29,5 @@ export const DocPaperOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | '
     )}
   </Icon>
 )
+
+DocPaperOutlineIcon.displayName = 'DocPaperOutlineIcon'

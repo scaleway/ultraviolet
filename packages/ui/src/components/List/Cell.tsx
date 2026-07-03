@@ -65,3 +65,5 @@ export const Cell = forwardRef<HTMLTableCellElement, CellProps>(
     )
   },
 )
+
+Cell.displayName = 'List.Cell'

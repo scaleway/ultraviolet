@@ -62,6 +62,8 @@ const RadioGroupFieldComponent = <
   )
 }
 
+RadioGroupFieldComponent.displayName = 'RadioGroupField'
+
 type RadioGroupFieldType = typeof RadioGroupFieldComponent & {
   Radio: typeof RadioGroup.Radio
 }

@@ -25,3 +25,5 @@ export const CalculatorIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     )}
   </Icon>
 )
+
+CalculatorIcon.displayName = 'CalculatorIcon'

@@ -217,3 +217,5 @@ export const Plans = <T extends string>({
     </table>
   )
 }
+
+Plans.displayName = 'Plans'

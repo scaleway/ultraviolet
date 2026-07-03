@@ -249,6 +249,8 @@ const BaseExpandableCard = forwardRef(
   },
 )
 
+BaseExpandableCard.displayName = 'ExpandableCard'
+
 // /**
 //  * ExpandableCard is a card that can be collapsed and expanded to reveal more content.
 //  */

@@ -37,3 +37,5 @@ export const SmsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     </g>
   </Icon>
 )
+
+SmsProductIcon.displayName = 'SmsProductIcon'

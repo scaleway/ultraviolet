@@ -298,3 +298,5 @@ export const JenkinsLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     </Icon>
   )
 }
+
+JenkinsLogo.displayName = 'JenkinsLogo'

@@ -131,3 +131,5 @@ export const Snippet = ({
     </Stack>
   )
 }
+
+Snippet.displayName = 'Snippet'

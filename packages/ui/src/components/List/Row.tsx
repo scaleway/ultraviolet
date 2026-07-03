@@ -232,3 +232,5 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
     )
   },
 )
+
+Row.displayName = 'List.Row'

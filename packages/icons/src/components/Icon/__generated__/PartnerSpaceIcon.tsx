@@ -31,3 +31,5 @@ export const PartnerSpaceIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     )}
   </Icon>
 )
+
+PartnerSpaceIcon.displayName = 'PartnerSpaceIcon'

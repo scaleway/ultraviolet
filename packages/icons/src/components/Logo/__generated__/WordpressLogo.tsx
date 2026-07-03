@@ -56,3 +56,5 @@ export const WordpressLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'
     </Icon>
   )
 }
+
+WordpressLogo.displayName = 'WordpressLogo'

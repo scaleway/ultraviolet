@@ -60,3 +60,5 @@ export const CodeEditorField = <
     </Stack>
   )
 }
+
+CodeEditorField.displayName = 'CodeEditorField'

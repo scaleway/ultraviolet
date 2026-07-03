@@ -23,3 +23,5 @@ export const LeafIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     )}
   </Icon>
 )
+
+LeafIcon.displayName = 'LeafIcon'

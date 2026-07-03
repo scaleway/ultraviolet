@@ -27,3 +27,5 @@ export const DetachIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+DetachIcon.displayName = 'DetachIcon'

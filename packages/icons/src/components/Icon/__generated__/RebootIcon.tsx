@@ -25,3 +25,5 @@ export const RebootIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+RebootIcon.displayName = 'RebootIcon'

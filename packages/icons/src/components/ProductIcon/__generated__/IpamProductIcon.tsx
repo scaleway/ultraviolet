@@ -49,3 +49,5 @@ export const IpamProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </g>
   </Icon>
 )
+
+IpamProductIcon.displayName = 'IpamProductIcon'

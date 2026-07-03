@@ -96,4 +96,5 @@ export const Chip = ({
   )
 }
 
+Chip.displayName = 'Chip'
 Chip.Icon = ChipIcon

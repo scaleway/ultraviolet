@@ -41,3 +41,5 @@ export const OdooLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     </Icon>
   )
 }
+
+OdooLogo.displayName = 'OdooLogo'

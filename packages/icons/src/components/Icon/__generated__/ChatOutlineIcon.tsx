@@ -24,3 +24,5 @@ export const ChatOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+ChatOutlineIcon.displayName = 'ChatOutlineIcon'

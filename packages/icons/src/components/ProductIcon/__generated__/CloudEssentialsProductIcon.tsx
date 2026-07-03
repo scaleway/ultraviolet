@@ -36,3 +36,5 @@ export const CloudEssentialsProductIcon = ({ ...props }: Omit<IconProps, 'childr
     />
   </Icon>
 )
+
+CloudEssentialsProductIcon.displayName = 'CloudEssentialsProductIcon'

@@ -37,3 +37,5 @@ export const ConsoleProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     </g>
   </Icon>
 )
+
+ConsoleProductIcon.displayName = 'ConsoleProductIcon'

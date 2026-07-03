@@ -34,3 +34,4 @@ export const Group = ({ label, children, labelDescription, emptyState, style }: 
     </>
   )
 }
+Group.displayName = 'Menu.Group'

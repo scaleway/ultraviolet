@@ -50,3 +50,5 @@ export const SavingPlanProductIcon = ({ ...props }: Omit<IconProps, 'children' |
     </defs>
   </Icon>
 )
+
+SavingPlanProductIcon.displayName = 'SavingPlanProductIcon'

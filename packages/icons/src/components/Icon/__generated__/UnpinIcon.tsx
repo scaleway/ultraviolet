@@ -20,3 +20,5 @@ export const UnpinIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+UnpinIcon.displayName = 'UnpinIcon'

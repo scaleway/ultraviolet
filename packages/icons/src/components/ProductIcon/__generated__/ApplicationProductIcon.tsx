@@ -51,3 +51,5 @@ export const ApplicationProductIcon = ({ ...props }: Omit<IconProps, 'children' 
     </g>
   </Icon>
 )
+
+ApplicationProductIcon.displayName = 'ApplicationProductIcon'

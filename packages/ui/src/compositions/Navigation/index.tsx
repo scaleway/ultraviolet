@@ -43,5 +43,7 @@ Navigation.PinnedItems = PinnedItems
 Navigation.Separator = Separator
 Navigation.ShowHide = ShowHide
 
+Navigation.displayName = 'Navigation'
+
 export { NavigationProvider, useNavigation }
 export type { NavigationProps }

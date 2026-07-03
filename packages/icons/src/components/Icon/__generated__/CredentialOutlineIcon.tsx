@@ -24,3 +24,5 @@ export const CredentialOutlineIcon = ({ ...props }: Omit<IconProps, 'children' |
     )}
   </Icon>
 )
+
+CredentialOutlineIcon.displayName = 'CredentialOutlineIcon'

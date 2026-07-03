@@ -37,3 +37,5 @@ export const MacMiniM2ProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
     </g>
   </Icon>
 )
+
+MacMiniM2ProductIcon.displayName = 'MacMiniM2ProductIcon'

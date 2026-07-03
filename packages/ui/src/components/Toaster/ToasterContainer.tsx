@@ -71,3 +71,5 @@ export const ToastContainer = ({
     transition={Slide}
   />
 )
+
+ToastContainer.displayName = 'ToastContainer'

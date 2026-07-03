@@ -58,3 +58,4 @@ export const ChipIcon = ({ icon, onClick, 'data-testid': dataTestId }: ChipIconT
     </div>
   )
 }
+ChipIcon.displayName = 'Chip.Icon'

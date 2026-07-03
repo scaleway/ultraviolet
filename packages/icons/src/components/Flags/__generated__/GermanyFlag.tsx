@@ -57,3 +57,5 @@ export const GermanyFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+GermanyFlag.displayName = 'GermanyFlag'

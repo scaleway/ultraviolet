@@ -38,3 +38,5 @@ export const MailboxProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     />
   </Icon>
 )
+
+MailboxProductIcon.displayName = 'MailboxProductIcon'

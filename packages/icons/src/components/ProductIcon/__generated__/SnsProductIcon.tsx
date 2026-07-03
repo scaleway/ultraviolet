@@ -86,3 +86,5 @@ export const SnsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     </g>
   </Icon>
 )
+
+SnsProductIcon.displayName = 'SnsProductIcon'

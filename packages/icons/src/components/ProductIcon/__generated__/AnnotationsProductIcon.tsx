@@ -50,3 +50,5 @@ export const AnnotationsProductIcon = ({ ...props }: Omit<IconProps, 'children' 
     />
   </Icon>
 )
+
+AnnotationsProductIcon.displayName = 'AnnotationsProductIcon'

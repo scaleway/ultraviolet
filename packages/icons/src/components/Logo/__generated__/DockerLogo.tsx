@@ -96,3 +96,5 @@ export const DockerLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     />
   </Icon>
 )
+
+DockerLogo.displayName = 'DockerLogo'

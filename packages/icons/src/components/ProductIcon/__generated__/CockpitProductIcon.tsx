@@ -57,3 +57,5 @@ export const CockpitProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     </g>
   </Icon>
 )
+
+CockpitProductIcon.displayName = 'CockpitProductIcon'

@@ -78,3 +78,5 @@ export const PlacementGroupProductIcon = ({ ...props }: Omit<IconProps, 'childre
     </g>
   </Icon>
 )
+
+PlacementGroupProductIcon.displayName = 'PlacementGroupProductIcon'

@@ -25,3 +25,5 @@ export const IdIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
     )}
   </Icon>
 )
+
+IdIcon.displayName = 'IdIcon'

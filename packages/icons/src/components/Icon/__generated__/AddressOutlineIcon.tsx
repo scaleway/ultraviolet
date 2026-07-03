@@ -25,3 +25,5 @@ export const AddressOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     )}
   </Icon>
 )
+
+AddressOutlineIcon.displayName = 'AddressOutlineIcon'

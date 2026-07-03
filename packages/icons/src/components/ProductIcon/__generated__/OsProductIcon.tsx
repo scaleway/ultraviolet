@@ -53,3 +53,5 @@ export const OsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'
     </defs>
   </Icon>
 )
+
+OsProductIcon.displayName = 'OsProductIcon'

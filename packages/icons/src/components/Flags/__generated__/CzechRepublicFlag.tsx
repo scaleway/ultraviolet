@@ -57,3 +57,5 @@ export const CzechRepublicFlag = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+CzechRepublicFlag.displayName = 'CzechRepublicFlag'

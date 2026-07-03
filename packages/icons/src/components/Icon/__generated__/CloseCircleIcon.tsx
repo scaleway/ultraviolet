@@ -25,3 +25,5 @@ export const CloseCircleIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+CloseCircleIcon.displayName = 'CloseCircleIcon'

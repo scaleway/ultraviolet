@@ -35,3 +35,5 @@ export const NetworkCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | '
     </g>
   </Icon>
 )
+
+NetworkCategoryIcon.displayName = 'NetworkCategoryIcon'

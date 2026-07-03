@@ -92,3 +92,5 @@ export const ServerlessJobsProductIcon = ({ ...props }: Omit<IconProps, 'childre
     </g>
   </Icon>
 )
+
+ServerlessJobsProductIcon.displayName = 'ServerlessJobsProductIcon'

@@ -40,3 +40,5 @@ export const MacMiniProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     </g>
   </Icon>
 )
+
+MacMiniProductIcon.displayName = 'MacMiniProductIcon'

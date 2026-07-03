@@ -56,3 +56,5 @@ export const DediboxProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     </g>
   </Icon>
 )
+
+DediboxProductIcon.displayName = 'DediboxProductIcon'

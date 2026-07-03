@@ -40,3 +40,5 @@ export const DrupalLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     </Icon>
   )
 }
+
+DrupalLogo.displayName = 'DrupalLogo'

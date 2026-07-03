@@ -35,3 +35,5 @@ export const ObjectStorageProductIcon = ({ ...props }: Omit<IconProps, 'children
     </g>
   </Icon>
 )
+
+ObjectStorageProductIcon.displayName = 'ObjectStorageProductIcon'

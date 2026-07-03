@@ -33,3 +33,5 @@ export const KafkaLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     </Icon>
   )
 }
+
+KafkaLogo.displayName = 'KafkaLogo'

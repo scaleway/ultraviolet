@@ -60,3 +60,5 @@ export const DaskLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     </defs>
   </Icon>
 )
+
+DaskLogo.displayName = 'DaskLogo'

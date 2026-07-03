@@ -52,3 +52,5 @@ export const ActionBar = ({
     </div>,
     document.body,
   )
+
+ActionBar.displayName = 'ActionBar'

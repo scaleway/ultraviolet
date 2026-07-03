@@ -33,3 +33,5 @@ export const FedoraLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     </Icon>
   )
 }
+
+FedoraLogo.displayName = 'FedoraLogo'

@@ -27,3 +27,5 @@ export const AdjustmentsHorizontalOutlineIcon = ({ ...props }: Omit<IconProps, '
     )}
   </Icon>
 )
+
+AdjustmentsHorizontalOutlineIcon.displayName = 'AdjustmentsHorizontalOutlineIcon'

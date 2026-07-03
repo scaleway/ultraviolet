@@ -197,3 +197,5 @@ export const ArgoLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     </Icon>
   )
 }
+
+ArgoLogo.displayName = 'ArgoLogo'

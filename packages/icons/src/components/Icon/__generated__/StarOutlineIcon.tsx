@@ -25,3 +25,5 @@ export const StarOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+StarOutlineIcon.displayName = 'StarOutlineIcon'

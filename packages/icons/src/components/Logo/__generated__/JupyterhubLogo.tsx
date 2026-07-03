@@ -148,3 +148,5 @@ export const JupyterhubLogo = ({ ...props }: Omit<IconProps, 'children' | 'title
     </Icon>
   )
 }
+
+JupyterhubLogo.displayName = 'JupyterhubLogo'

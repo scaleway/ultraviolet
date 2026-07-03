@@ -52,3 +52,5 @@ export const SwitchProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     </defs>
   </Icon>
 )
+
+SwitchProductIcon.displayName = 'SwitchProductIcon'

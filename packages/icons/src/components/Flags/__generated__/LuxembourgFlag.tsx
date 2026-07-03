@@ -57,3 +57,5 @@ export const LuxembourgFlag = ({ ...props }: Omit<IconProps, 'children' | 'title
     )}
   </Icon>
 )
+
+LuxembourgFlag.displayName = 'LuxembourgFlag'

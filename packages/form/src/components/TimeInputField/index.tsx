@@ -70,3 +70,5 @@ export const TimeInputField = <
     />
   )
 }
+
+TimeInputField.displayName = 'TimeInputField'

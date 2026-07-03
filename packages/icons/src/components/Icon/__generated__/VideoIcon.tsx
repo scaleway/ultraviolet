@@ -23,3 +23,5 @@ export const VideoIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+VideoIcon.displayName = 'VideoIcon'

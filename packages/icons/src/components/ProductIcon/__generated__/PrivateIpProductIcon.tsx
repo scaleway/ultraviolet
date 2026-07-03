@@ -75,3 +75,5 @@ export const PrivateIpProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
     </defs>
   </Icon>
 )
+
+PrivateIpProductIcon.displayName = 'PrivateIpProductIcon'

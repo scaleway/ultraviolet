@@ -42,3 +42,5 @@ export const QaasProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </g>
   </Icon>
 )
+
+QaasProductIcon.displayName = 'QaasProductIcon'

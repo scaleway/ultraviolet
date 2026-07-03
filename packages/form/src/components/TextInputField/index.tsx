@@ -93,3 +93,5 @@ export const TextInputField = <
     />
   )
 }
+
+TextInputField.displayName = 'TextInputField'

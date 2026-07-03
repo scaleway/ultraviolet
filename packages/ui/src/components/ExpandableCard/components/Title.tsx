@@ -19,3 +19,5 @@ export const ExpandableCardTitle = ({ as, size = 'medium', children, disabled, s
     {children}
   </Text>
 )
+
+ExpandableCardTitle.displayName = 'ExpandableCard.Title'

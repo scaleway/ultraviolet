@@ -17,3 +17,5 @@ export const EqualIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+EqualIcon.displayName = 'EqualIcon'

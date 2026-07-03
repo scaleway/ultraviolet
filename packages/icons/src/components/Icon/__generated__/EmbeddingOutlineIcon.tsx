@@ -51,3 +51,5 @@ export const EmbeddingOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 
     )}
   </Icon>
 )
+
+EmbeddingOutlineIcon.displayName = 'EmbeddingOutlineIcon'

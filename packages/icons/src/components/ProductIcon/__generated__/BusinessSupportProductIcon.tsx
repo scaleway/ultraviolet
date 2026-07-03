@@ -56,3 +56,5 @@ export const BusinessSupportProductIcon = ({ ...props }: Omit<IconProps, 'childr
     </defs>
   </Icon>
 )
+
+BusinessSupportProductIcon.displayName = 'BusinessSupportProductIcon'

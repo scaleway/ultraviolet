@@ -39,3 +39,5 @@ export const CopyContentIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+CopyContentIcon.displayName = 'CopyContentIcon'

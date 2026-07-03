@@ -45,3 +45,5 @@ export const SnapshotsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
     </g>
   </Icon>
 )
+
+SnapshotsProductIcon.displayName = 'SnapshotsProductIcon'

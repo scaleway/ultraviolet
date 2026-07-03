@@ -100,3 +100,5 @@ export const Card = forwardRef(
       </div>
     ),
 )
+
+Card.displayName = 'Card'

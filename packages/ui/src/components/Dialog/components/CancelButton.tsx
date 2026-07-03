@@ -15,3 +15,5 @@ export const DialogCancelButton = ({ children, onClick, disabled, style }: Dialo
     {children}
   </Button>
 )
+
+DialogCancelButton.displayName = 'Dialog.CancelButton'

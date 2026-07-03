@@ -17,3 +17,5 @@ export const BoxEssentialsIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+BoxEssentialsIcon.displayName = 'BoxEssentialsIcon'

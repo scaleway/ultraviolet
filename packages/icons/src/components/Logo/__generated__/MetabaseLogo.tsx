@@ -111,3 +111,5 @@ export const MetabaseLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>
     />
   </Icon>
 )
+
+MetabaseLogo.displayName = 'MetabaseLogo'

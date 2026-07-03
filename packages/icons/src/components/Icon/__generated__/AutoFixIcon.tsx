@@ -22,3 +22,5 @@ export const AutoFixIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+AutoFixIcon.displayName = 'AutoFixIcon'

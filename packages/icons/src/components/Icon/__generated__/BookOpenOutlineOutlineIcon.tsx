@@ -25,3 +25,5 @@ export const BookOpenOutlineOutlineIcon = ({ ...props }: Omit<IconProps, 'childr
     )}
   </Icon>
 )
+
+BookOpenOutlineOutlineIcon.displayName = 'BookOpenOutlineOutlineIcon'

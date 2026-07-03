@@ -25,3 +25,5 @@ export const YoutubeIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+YoutubeIcon.displayName = 'YoutubeIcon'

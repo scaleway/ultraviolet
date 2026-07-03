@@ -35,3 +35,5 @@ export const RdbProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     </g>
   </Icon>
 )
+
+RdbProductIcon.displayName = 'RdbProductIcon'

@@ -17,3 +17,5 @@ export const ShieldOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+ShieldOutlineIcon.displayName = 'ShieldOutlineIcon'

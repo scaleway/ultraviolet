@@ -47,3 +47,5 @@ export const NatsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     />
   </Icon>
 )
+
+NatsProductIcon.displayName = 'NatsProductIcon'

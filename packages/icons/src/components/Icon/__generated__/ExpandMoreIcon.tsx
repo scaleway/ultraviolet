@@ -39,3 +39,5 @@ export const ExpandMoreIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     )}
   </Icon>
 )
+
+ExpandMoreIcon.displayName = 'ExpandMoreIcon'

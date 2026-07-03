@@ -85,3 +85,5 @@ export const TreeMapChart = ({
     </div>
   )
 }
+
+TreeMapChart.displayName = 'TreeMapChart'

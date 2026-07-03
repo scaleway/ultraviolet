@@ -38,3 +38,5 @@ export const InstanceScallingGroupsProductIcon = ({ ...props }: Omit<IconProps, 
     </g>
   </Icon>
 )
+
+InstanceScallingGroupsProductIcon.displayName = 'InstanceScallingGroupsProductIcon'

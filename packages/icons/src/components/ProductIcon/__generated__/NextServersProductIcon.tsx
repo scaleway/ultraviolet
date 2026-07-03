@@ -99,3 +99,5 @@ export const NextServersProductIcon = ({ ...props }: Omit<IconProps, 'children' 
     />
   </Icon>
 )
+
+NextServersProductIcon.displayName = 'NextServersProductIcon'

@@ -32,3 +32,4 @@ export const InfoTableRow = ({ children, templateColumns, style }: RowProps) => 
     </Row>
   )
 }
+InfoTableRow.displayName = 'Infotable.Row'

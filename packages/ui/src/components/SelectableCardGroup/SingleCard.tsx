@@ -55,3 +55,5 @@ export const CardSelectableCard = ({
     </SelectableCard>
   )
 }
+
+CardSelectableCard.displayName = 'SelectableCardGroup.Card'

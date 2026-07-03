@@ -35,3 +35,5 @@ export const Ellipsis = ({
     </div>
   )
 }
+
+Ellipsis.displayName = 'EstimateCost.Ellipsis'

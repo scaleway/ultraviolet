@@ -45,3 +45,5 @@ export const ForkProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </defs>
   </Icon>
 )
+
+ForkProductIcon.displayName = 'ForkProductIcon'

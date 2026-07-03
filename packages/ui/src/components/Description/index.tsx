@@ -69,3 +69,5 @@ export const Description = ({
     </Text>
   ) : null
 }
+
+Description.displayName = 'Description'

@@ -54,3 +54,5 @@ export const SupportProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     </defs>
   </Icon>
 )
+
+SupportProductIcon.displayName = 'SupportProductIcon'

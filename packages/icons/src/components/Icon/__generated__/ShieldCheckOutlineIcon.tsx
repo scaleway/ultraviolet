@@ -24,3 +24,5 @@ export const ShieldCheckOutlineIcon = ({ ...props }: Omit<IconProps, 'children' 
     )}
   </Icon>
 )
+
+ShieldCheckOutlineIcon.displayName = 'ShieldCheckOutlineIcon'

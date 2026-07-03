@@ -99,4 +99,5 @@ export const Carousel = ({ children, className, 'data-testid': dataTestId = 'scr
   )
 }
 
+Carousel.displayName = 'Carousel'
 Carousel.Item = CarouselItem

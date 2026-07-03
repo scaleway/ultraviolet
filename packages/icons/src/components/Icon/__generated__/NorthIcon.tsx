@@ -25,3 +25,5 @@ export const NorthIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+NorthIcon.displayName = 'NorthIcon'

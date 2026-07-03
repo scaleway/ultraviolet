@@ -99,3 +99,5 @@ type SelectableCardOptionGroupType = typeof ToggleGroupComponent & {
 export const ToggleGroup: SelectableCardOptionGroupType = Object.assign(ToggleGroupComponent, {
   Toggle: ToggleGroupToggle,
 })
+
+ToggleGroupComponent.displayName = 'ToggleGroup'

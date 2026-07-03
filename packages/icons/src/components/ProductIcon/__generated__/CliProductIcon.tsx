@@ -37,3 +37,5 @@ export const CliProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     </g>
   </Icon>
 )
+
+CliProductIcon.displayName = 'CliProductIcon'

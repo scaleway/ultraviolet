@@ -33,3 +33,5 @@ export const GoLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => {
     </Icon>
   )
 }
+
+GoLogo.displayName = 'GoLogo'

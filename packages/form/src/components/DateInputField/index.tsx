@@ -118,3 +118,5 @@ export const DateInputField = <
     />
   )
 }
+
+DateInputField.displayName = 'DateInputField'

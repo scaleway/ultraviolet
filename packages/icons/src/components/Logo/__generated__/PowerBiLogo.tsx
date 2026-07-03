@@ -89,3 +89,5 @@ export const PowerBiLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     </defs>
   </Icon>
 )
+
+PowerBiLogo.displayName = 'PowerBiLogo'

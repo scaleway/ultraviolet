@@ -24,3 +24,5 @@ export const ConsoleOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     )}
   </Icon>
 )
+
+ConsoleOutlineIcon.displayName = 'ConsoleOutlineIcon'

@@ -87,6 +87,7 @@ const templateIcon = (iconName: string, svg: string, svgSmall?: string, svgDisab
   )`
   }
 
+  ${iconName}.displayName = '${iconName}'
 `
 }
 
@@ -117,7 +118,10 @@ ${svgDark ? `import { useTheme } from '@ultraviolet/themes'` : ''}
       <Icon {...props} title="${logoName}">{isLight ? <>${svg}</> : <>${svgDark}</>}</Icon>
   )}`
       : `(<Icon {...props} title="${logoName}">${svg}</Icon>)`
-  }`
+  }
+  
+  ${logoName}.displayName = '${logoName}'
+`
 }
 
 const toPascalCase = (str: string) => str.replace(/(^\w|-\w)/gu, match => match.replace('-', '').toUpperCase())

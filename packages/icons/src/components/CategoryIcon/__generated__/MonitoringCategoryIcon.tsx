@@ -22,3 +22,5 @@ export const MonitoringCategoryIcon = ({ ...props }: Omit<IconProps, 'children' 
     </g>
   </Icon>
 )
+
+MonitoringCategoryIcon.displayName = 'MonitoringCategoryIcon'

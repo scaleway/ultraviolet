@@ -20,3 +20,5 @@ export const FilterIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     )}
   </Icon>
 )
+
+FilterIcon.displayName = 'FilterIcon'

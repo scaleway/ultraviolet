@@ -110,6 +110,8 @@ type ListType = {
   useListContext: typeof useListContext
 }
 
+BaseList.displayName = 'List'
+
 export const List: ListType = Object.assign(BaseList, {
   Cell,
   Row,

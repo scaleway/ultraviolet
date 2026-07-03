@@ -33,3 +33,5 @@ export const RabbitmqLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>
     </Icon>
   )
 }
+
+RabbitmqLogo.displayName = 'RabbitmqLogo'

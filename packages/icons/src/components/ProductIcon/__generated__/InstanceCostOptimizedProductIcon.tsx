@@ -35,3 +35,5 @@ export const InstanceCostOptimizedProductIcon = ({ ...props }: Omit<IconProps, '
     </g>
   </Icon>
 )
+
+InstanceCostOptimizedProductIcon.displayName = 'InstanceCostOptimizedProductIcon'

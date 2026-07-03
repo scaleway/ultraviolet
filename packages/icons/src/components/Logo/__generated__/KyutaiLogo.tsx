@@ -21,3 +21,5 @@ export const KyutaiLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) 
     />
   </Icon>
 )
+
+KyutaiLogo.displayName = 'KyutaiLogo'

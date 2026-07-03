@@ -40,3 +40,5 @@ export const SecurityGroupProductIcon = ({ ...props }: Omit<IconProps, 'children
     </g>
   </Icon>
 )
+
+SecurityGroupProductIcon.displayName = 'SecurityGroupProductIcon'

@@ -25,3 +25,5 @@ export const DocIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => 
     )}
   </Icon>
 )
+
+DocIcon.displayName = 'DocIcon'

@@ -42,3 +42,5 @@ export const DedibackupProductIcon = ({ ...props }: Omit<IconProps, 'children' |
     </g>
   </Icon>
 )
+
+DedibackupProductIcon.displayName = 'DedibackupProductIcon'

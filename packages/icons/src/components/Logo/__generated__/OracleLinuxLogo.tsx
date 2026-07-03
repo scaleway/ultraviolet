@@ -40,3 +40,5 @@ export const OracleLinuxLogo = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </Icon>
   )
 }
+
+OracleLinuxLogo.displayName = 'OracleLinuxLogo'

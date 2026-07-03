@@ -24,3 +24,5 @@ export const SupportIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+SupportIcon.displayName = 'SupportIcon'

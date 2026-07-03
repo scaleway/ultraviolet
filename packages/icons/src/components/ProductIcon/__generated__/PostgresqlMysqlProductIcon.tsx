@@ -42,3 +42,5 @@ export const PostgresqlMysqlProductIcon = ({ ...props }: Omit<IconProps, 'childr
     </g>
   </Icon>
 )
+
+PostgresqlMysqlProductIcon.displayName = 'PostgresqlMysqlProductIcon'

@@ -24,3 +24,5 @@ export const FolderOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+FolderOutlineIcon.displayName = 'FolderOutlineIcon'

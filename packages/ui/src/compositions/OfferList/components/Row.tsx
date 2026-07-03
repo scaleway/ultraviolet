@@ -217,3 +217,5 @@ export const Row = ({
     </>
   )
 }
+
+Row.displayName = 'OfferList.Row'

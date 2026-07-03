@@ -38,3 +38,5 @@ export const ApplicationLibraryProductIcon = ({ ...props }: Omit<IconProps, 'chi
     />
   </Icon>
 )
+
+ApplicationLibraryProductIcon.displayName = 'ApplicationLibraryProductIcon'

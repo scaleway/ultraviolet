@@ -20,3 +20,5 @@ export const OpenTelemetryLogo = ({ ...props }: Omit<IconProps, 'children' | 'ti
     />
   </Icon>
 )
+
+OpenTelemetryLogo.displayName = 'OpenTelemetryLogo'

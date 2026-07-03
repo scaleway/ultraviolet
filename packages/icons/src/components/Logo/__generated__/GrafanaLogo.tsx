@@ -59,3 +59,5 @@ export const GrafanaLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     </Icon>
   )
 }
+
+GrafanaLogo.displayName = 'GrafanaLogo'

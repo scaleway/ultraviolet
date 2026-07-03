@@ -21,3 +21,4 @@ export const CarouselItem = ({ children, width = '240px', style }: CarouselItemP
     {children}
   </div>
 )
+CarouselItem.displayName = 'Carousel.Item'

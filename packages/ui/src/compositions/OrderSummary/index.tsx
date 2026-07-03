@@ -184,3 +184,5 @@ export const OrderSummary = ({
     </OrderSummaryContext.Provider>
   )
 }
+
+OrderSummary.displayName = 'OrderSummary'

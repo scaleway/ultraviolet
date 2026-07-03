@@ -76,3 +76,5 @@ export const ShowHide = memo(
     )
   },
 )
+
+ShowHide.displayName = 'Navigation.ShowHide'

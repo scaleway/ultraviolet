@@ -75,3 +75,5 @@ export const DatadogLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     </Icon>
   )
 }
+
+DatadogLogo.displayName = 'DatadogLogo'

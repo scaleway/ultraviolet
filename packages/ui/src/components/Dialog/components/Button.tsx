@@ -17,3 +17,5 @@ export const DialogButton = ({ children, onClick, disabled, tooltip, style }: Di
     </Button>
   )
 }
+
+DialogButton.displayName = 'Dialog.Button'

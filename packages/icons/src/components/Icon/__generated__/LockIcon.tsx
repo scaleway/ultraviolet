@@ -25,3 +25,5 @@ export const LockIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =>
     )}
   </Icon>
 )
+
+LockIcon.displayName = 'LockIcon'

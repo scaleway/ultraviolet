@@ -57,3 +57,5 @@ export const ItalyFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+ItalyFlag.displayName = 'ItalyFlag'

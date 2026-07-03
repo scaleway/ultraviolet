@@ -22,3 +22,5 @@ export const PrivacyCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | '
     />
   </Icon>
 )
+
+PrivacyCategoryIcon.displayName = 'PrivacyCategoryIcon'

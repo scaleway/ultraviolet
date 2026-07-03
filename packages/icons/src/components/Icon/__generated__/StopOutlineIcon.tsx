@@ -24,3 +24,5 @@ export const StopOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+StopOutlineIcon.displayName = 'StopOutlineIcon'

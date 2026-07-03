@@ -42,3 +42,5 @@ export const Cell = ({ children, className, colSpan, rowSpan, sentiment, align =
     </td>
   )
 }
+
+Cell.displayName = 'Table.Cell'

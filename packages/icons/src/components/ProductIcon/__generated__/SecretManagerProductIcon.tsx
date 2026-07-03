@@ -43,3 +43,5 @@ export const SecretManagerProductIcon = ({ ...props }: Omit<IconProps, 'children
     </g>
   </Icon>
 )
+
+SecretManagerProductIcon.displayName = 'SecretManagerProductIcon'

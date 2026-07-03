@@ -24,3 +24,5 @@ export const MicrosoftLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'
     </defs>
   </Icon>
 )
+
+MicrosoftLogo.displayName = 'MicrosoftLogo'

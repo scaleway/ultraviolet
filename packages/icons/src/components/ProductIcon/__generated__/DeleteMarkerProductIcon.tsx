@@ -52,3 +52,5 @@ export const DeleteMarkerProductIcon = ({ ...props }: Omit<IconProps, 'children'
     </g>
   </Icon>
 )
+
+DeleteMarkerProductIcon.displayName = 'DeleteMarkerProductIcon'

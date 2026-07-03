@@ -103,3 +103,5 @@ export const BarChart = ({
     </div>
   )
 }
+
+BarChart.displayName = 'BarChart'

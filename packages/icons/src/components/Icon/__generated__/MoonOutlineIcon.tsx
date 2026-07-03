@@ -24,3 +24,5 @@ export const MoonOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     )}
   </Icon>
 )
+
+MoonOutlineIcon.displayName = 'MoonOutlineIcon'

@@ -23,3 +23,5 @@ export const DownloadIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>
     )}
   </Icon>
 )
+
+DownloadIcon.displayName = 'DownloadIcon'

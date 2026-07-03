@@ -86,3 +86,5 @@ export const DataOrchestratorProductIcon = ({ ...props }: Omit<IconProps, 'child
     />
   </Icon>
 )
+
+DataOrchestratorProductIcon.displayName = 'DataOrchestratorProductIcon'

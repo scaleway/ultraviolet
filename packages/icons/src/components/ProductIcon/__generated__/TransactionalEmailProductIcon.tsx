@@ -35,3 +35,5 @@ export const TransactionalEmailProductIcon = ({ ...props }: Omit<IconProps, 'chi
     </g>
   </Icon>
 )
+
+TransactionalEmailProductIcon.displayName = 'TransactionalEmailProductIcon'

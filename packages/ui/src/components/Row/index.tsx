@@ -99,3 +99,5 @@ export const Row = ({
     {children}
   </div>
 )
+
+Row.displayName = 'Row'

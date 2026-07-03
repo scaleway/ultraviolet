@@ -149,3 +149,5 @@ export const LineChart = ({
     </>
   )
 }
+
+LineChart.displayName = 'LineChart'

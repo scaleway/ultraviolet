@@ -33,3 +33,5 @@ export const PasskeyIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>)
     )}
   </Icon>
 )
+
+PasskeyIcon.displayName = 'PasskeyIcon'

@@ -21,3 +21,5 @@ export const MinusIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) =
     )}
   </Icon>
 )
+
+MinusIcon.displayName = 'MinusIcon'

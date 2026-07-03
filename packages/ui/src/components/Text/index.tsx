@@ -107,3 +107,5 @@ export const Text = ({
     </Tooltip>
   )
 }
+
+Text.displayName = 'Text'

@@ -17,3 +17,5 @@ export const BoxEssentialsOutlineIcon = ({ ...props }: Omit<IconProps, 'children
     )}
   </Icon>
 )
+
+BoxEssentialsOutlineIcon.displayName = 'BoxEssentialsOutlineIcon'

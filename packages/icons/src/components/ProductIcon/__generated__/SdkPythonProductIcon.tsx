@@ -47,3 +47,5 @@ export const SdkPythonProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
     </defs>
   </Icon>
 )
+
+SdkPythonProductIcon.displayName = 'SdkPythonProductIcon'

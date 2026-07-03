@@ -58,3 +58,5 @@ export const SqsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     </g>
   </Icon>
 )
+
+SqsProductIcon.displayName = 'SqsProductIcon'

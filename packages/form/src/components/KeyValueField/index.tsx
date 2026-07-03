@@ -144,3 +144,5 @@ export const KeyValueField = <
     </Stack>
   )
 }
+
+KeyValueField.displayName = 'KeyValueField'

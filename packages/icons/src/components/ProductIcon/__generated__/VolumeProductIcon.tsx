@@ -35,3 +35,5 @@ export const VolumeProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     </g>
   </Icon>
 )
+
+VolumeProductIcon.displayName = 'VolumeProductIcon'

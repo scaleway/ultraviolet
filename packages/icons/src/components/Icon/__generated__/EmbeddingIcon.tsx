@@ -27,3 +27,5 @@ export const EmbeddingIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'
     )}
   </Icon>
 )
+
+EmbeddingIcon.displayName = 'EmbeddingIcon'

@@ -35,3 +35,5 @@ export const QueueingProductIcon = ({ ...props }: Omit<IconProps, 'children' | '
     </g>
   </Icon>
 )
+
+QueueingProductIcon.displayName = 'QueueingProductIcon'

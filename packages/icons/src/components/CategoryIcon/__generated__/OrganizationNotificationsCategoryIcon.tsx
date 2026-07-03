@@ -22,3 +22,5 @@ export const OrganizationNotificationsCategoryIcon = ({ ...props }: Omit<IconPro
     />
   </Icon>
 )
+
+OrganizationNotificationsCategoryIcon.displayName = 'OrganizationNotificationsCategoryIcon'

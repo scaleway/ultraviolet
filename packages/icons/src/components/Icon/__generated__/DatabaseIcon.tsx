@@ -25,3 +25,5 @@ export const DatabaseIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>
     )}
   </Icon>
 )
+
+DatabaseIcon.displayName = 'DatabaseIcon'

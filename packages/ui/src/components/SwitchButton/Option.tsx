@@ -52,3 +52,5 @@ export const Option = ({ value, children, 'data-testid': dataTestId, disabled, t
     />
   )
 }
+
+Option.displayName = 'SwitchButton.Option'

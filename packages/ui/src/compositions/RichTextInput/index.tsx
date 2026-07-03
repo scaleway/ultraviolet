@@ -165,3 +165,5 @@ export const RichTextInput = ({
     </Stack>
   )
 }
+
+RichTextInput.displayName = 'RichTextInput'

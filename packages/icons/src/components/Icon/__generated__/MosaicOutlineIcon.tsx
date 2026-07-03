@@ -24,3 +24,5 @@ export const MosaicOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     )}
   </Icon>
 )
+
+MosaicOutlineIcon.displayName = 'MosaicOutlineIcon'

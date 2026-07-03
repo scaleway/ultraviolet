@@ -40,3 +40,5 @@ export const EdgeServicesProductIcon = ({ ...props }: Omit<IconProps, 'children'
     </defs>
   </Icon>
 )
+
+EdgeServicesProductIcon.displayName = 'EdgeServicesProductIcon'

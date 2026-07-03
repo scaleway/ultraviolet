@@ -56,3 +56,5 @@ export const FileStorageProductIcon = ({ ...props }: Omit<IconProps, 'children' 
     </defs>
   </Icon>
 )
+
+FileStorageProductIcon.displayName = 'FileStorageProductIcon'

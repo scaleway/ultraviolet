@@ -25,3 +25,5 @@ export const PackerProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     </g>
   </Icon>
 )
+
+PackerProductIcon.displayName = 'PackerProductIcon'

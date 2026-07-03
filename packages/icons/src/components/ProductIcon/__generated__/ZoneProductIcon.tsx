@@ -35,3 +35,5 @@ export const ZoneProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     </g>
   </Icon>
 )
+
+ZoneProductIcon.displayName = 'ZoneProductIcon'

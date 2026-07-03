@@ -144,3 +144,5 @@ export const Toggle = forwardRef(
     )
   },
 )
+
+Toggle.displayName = 'Toggle'

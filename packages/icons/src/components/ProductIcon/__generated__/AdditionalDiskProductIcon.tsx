@@ -47,3 +47,5 @@ export const AdditionalDiskProductIcon = ({ ...props }: Omit<IconProps, 'childre
     </defs>
   </Icon>
 )
+
+AdditionalDiskProductIcon.displayName = 'AdditionalDiskProductIcon'

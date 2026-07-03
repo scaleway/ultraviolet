@@ -25,3 +25,5 @@ export const LinkedinIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>
     )}
   </Icon>
 )
+
+LinkedinIcon.displayName = 'LinkedinIcon'
