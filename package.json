@@ -20,7 +20,7 @@
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
     "icons:update": "pnpm run svg:icons && tsx ./utils/scripts/generate-icons-file.tsx && pnpm run format packages/icons",
-    "illustrations:update": "BUCKET_NAME=scaleway-assets BUCKET_REGION=fr-par tsx utils/scripts/illustrations/update-illustrations.tsx && pnpm run svg:illustrations && pnpm format packages/illustrations/src/",
+    "illustrations:update": "BUCKET_NAME=scaleway-assets BUCKET_REGION=fr-par && pnpm run svg:illustrations && tsx utils/scripts/illustrations/update-illustrations.tsx && pnpm format packages/illustrations/src/",
     "lintpublish": "turbo run lintpublish",
     "lint": "oxlint -c .oxlintrc.jsonc",
     "lint:fix": "pnpm run lint --fix",
