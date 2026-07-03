@@ -13,7 +13,7 @@ export const MacMiniProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     <g className="MacMini">
       <g className=".Square">
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
         />
@@ -26,12 +26,12 @@ export const MacMiniProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
             className="fill"
           />
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M45 18.5a5 5 0 0 0-5-5H24a5 5 0 0 0-5 5v16a5 5 0 0 0 5 5h16a5 5 0 0 0 5-5zm-21-3h16l.176.005A3 3 0 0 1 43 18.5v16l-.005.176A3 3 0 0 1 40 37.5H24l-.176-.005A3 3 0 0 1 21 34.5v-16l.005-.176A3 3 0 0 1 24 15.5"
             className="fillStrong"
           />
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M34.5 24h-5v5h5zm-5-2a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h5a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2z"
             className="fillStrong"
           />

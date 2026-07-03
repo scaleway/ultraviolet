@@ -14,7 +14,7 @@ export const PrivateIpProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
       <g className="Private-Ip">
         <g className=".Square">
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
             className="fillWeak"
           />
@@ -26,33 +26,33 @@ export const PrivateIpProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
             className="fill"
           />
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M23.584 24.999a6.417 6.417 0 1 1 12.833 0 6.417 6.417 0 0 1-12.833 0m10.833 0a4.417 4.417 0 1 0-8.833 0 4.417 4.417 0 0 0 8.833 0"
             className="fillStrong"
           />
         </g>
         <g className="Lock">
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             fillRule="evenodd"
             d="M39 32c3.382 0 4.924 1.96 4.997 5.232l.003.248v1.646c1.725.444 3 2.01 3 3.874v6a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4v-6a4 4 0 0 1 3-3.874V37.48c0-3.42 1.533-5.48 5-5.48m3 7v-1.52c0-2.422-.788-3.48-3-3.48-2.141 0-2.948.99-2.998 3.25l-.002.23V39zm1 2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2z"
             className="fillWeak"
             clipRule="evenodd"
           />
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             d="M42 37.48V39h-6v-1.52l.002-.23C36.052 34.99 36.86 34 39 34c2.212 0 3 1.058 3 3.48"
             className="fillWeak"
           />
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             fillRule="evenodd"
             d="M45 43a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zm-6 1a1 1 0 0 1 .993.883L40 45v2a1 1 0 0 1-1.993.117L38 47v-2a1 1 0 0 1 1-1"
             className="fillWeak"
             clipRule="evenodd"
           />
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             fillRule="evenodd"
             d="M39 32c3.382 0 4.924 1.96 4.997 5.232l.003.248v1.646c1.725.444 3 2.01 3 3.874v6a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4v-6a4 4 0 0 1 3-3.874V37.48c0-3.42 1.533-5.48 5-5.48m3 7v-1.52c0-2.422-.788-3.48-3-3.48-2.141 0-2.948.99-2.998 3.25l-.002.23V39zm1 2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2z"
             className="fill"

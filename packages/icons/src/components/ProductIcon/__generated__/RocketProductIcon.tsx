@@ -13,7 +13,7 @@ export const RocketProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     <g className="Rocket">
       <g className=".Square">
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
         />
@@ -35,7 +35,7 @@ export const RocketProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
             fillRule="evenodd"
           />
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M35.73 27.007a2.158 2.158 0 1 0-3.052 3.052 2.158 2.158 0 0 0 3.051-3.052Zm-4.467-1.414a4.158 4.158 0 1 1 5.88 5.88 4.158 4.158 0 0 1-5.88-5.88M19.032 38.998a1 1 0 0 1 .81 1.159l-.593 3.365a1.105 1.105 0 0 0 1.28 1.28l3.365-.594a1 1 0 1 1 .348 1.97l-3.365.594c-2.123.374-3.973-1.475-3.598-3.598l.594-3.365a1 1 0 0 1 1.159-.81Z"
             className="fillStrong (Stroke)"
             clipRule="evenodd"

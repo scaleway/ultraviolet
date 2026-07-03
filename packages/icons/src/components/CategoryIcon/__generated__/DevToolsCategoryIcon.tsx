@@ -11,7 +11,7 @@ import type { IconProps } from '../Icon'
 export const DevToolsCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="DevToolsCategoryIcon">
     <g className="DevTools">
-      <g fill="#A365F6">
+      <g fill="#a365f6">
         <path
           d="M16.828 13.101a2.25 2.25 0 1 1-2.177-3.363c.339-.035.512.338.342.633l-.554.96a.5.5 0 0 0 .183.684l.353.204a.5.5 0 0 0 .683-.183l.555-.96c.17-.295.58-.332.72-.021a2.25 2.25 0 0 1-.105 2.046"
           className="fillStrong"
@@ -21,7 +21,7 @@ export const DevToolsCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 
           className="fillStrong"
         />
       </g>
-      <g fill="#4F0599">
+      <g fill="#4f0599">
         <path
           d="M2.5 6a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v2.5a1 1 0 1 1-2 0V6a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1H10a1 1 0 1 1 0 2H5.5a3 3 0 0 1-3-3z"
           className="fill"

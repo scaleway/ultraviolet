@@ -13,7 +13,7 @@ export const DataWarehouseProductIcon = ({ ...props }: Omit<IconProps, 'children
     <g className="Datawarehouse" clipPath="url(#a)">
       <g className=".Square">
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
         />
@@ -26,7 +26,7 @@ export const DataWarehouseProductIcon = ({ ...props }: Omit<IconProps, 'children
           className="fill"
           clipRule="evenodd"
         />
-        <g fill="#A060F6" className="fillStrong">
+        <g fill="#a060f6" className="fillStrong">
           <path d="M32.752 28.844a.986.986 0 0 0-1.973 0v9.593a.986.986 0 0 0 1.973 0zm-3.947 3.118a.986.986 0 0 0-1.972 0v6.475a.986.986 0 0 0 1.972 0zm7.674 3.118a.986.986 0 0 0-1.972 0v3.357a.986.986 0 0 0 1.972 0z" />
           <path
             fillRule="evenodd"

@@ -13,7 +13,7 @@ export const BandwidthProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
     <g className="Bandwidth">
       <g className=".Square">
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M16 64C7.163 64 0 56.837 0 48V16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16z"
           className="fillWeak"
         />
@@ -25,7 +25,7 @@ export const BandwidthProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
           className="fill"
         />
         <path
-          fill="#A060F6"
+          fill="#a060f6"
           d="M16.476 52.05a1 1 0 0 0 .116 1.993h9.155l.117-.007a1 1 0 0 0-.117-1.993h-9.155zm0-4.575a1 1 0 0 0 .116 1.993h9.155l.117-.006a1 1 0 0 0-.117-1.994h-9.155zm20.159-31.943a1 1 0 0 0 .883.994l.117.006h9.155a1 1 0 0 0 .116-1.993l-.116-.007h-9.155a1 1 0 0 0-1 1m.883-3.58a1 1 0 0 1 .117-1.994h9.155l.116.007a1 1 0 0 1-.116 1.993h-9.155l-.117-.007Z"
           className="fillStrong"
         />

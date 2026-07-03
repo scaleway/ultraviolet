@@ -17,7 +17,7 @@ export const CostAndImpactManagementCategoryIcon = ({ ...props }: Omit<IconProps
         className="fill"
       />
       <path
-        fill="#A060F6"
+        fill="#a060f6"
         d="M10.848 7.697a1 1 0 0 1-.318 1.379c-1.355.848-4.159 3.576-4.331 7.468a1 1 0 1 1-1.998-.088c.212-4.78 3.584-8.022 5.269-9.076a1 1 0 0 1 1.378.317"
         className="fillStrong"
       />

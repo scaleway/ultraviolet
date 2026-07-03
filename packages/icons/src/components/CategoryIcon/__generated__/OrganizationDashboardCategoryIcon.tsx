@@ -13,14 +13,14 @@ export const OrganizationDashboardCategoryIcon = ({ ...props }: Omit<IconProps, 
     <g className="Console">
       <g className="Console-icon">
         <path
-          fill="#4F0599"
+          fill="#4f0599"
           d="M5 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm7 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1z"
           className="fill"
           clipRule="evenodd"
           fillRule="evenodd"
         />
         <path
-          fill="#A365F6"
+          fill="#a365f6"
           d="M12 4a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-7 9a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1z"
           className="fillStrong"
           clipRule="evenodd"

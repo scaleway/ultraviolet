@@ -14,7 +14,7 @@ export const IpfsNamingProductIcon = ({ ...props }: Omit<IconProps, 'children' |
       <g className="Serverless-Functions">
         <g className=".Square">
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
             className="fillWeak"
           />
@@ -28,14 +28,14 @@ export const IpfsNamingProductIcon = ({ ...props }: Omit<IconProps, 'children' |
             fillRule="evenodd"
           />
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M27.873 25.765c.27.493.097 1.117-.385 1.393L19 32.014v13.974l13 7.437 13-7.437V32.014l-8.488-4.856a1.037 1.037 0 0 1-.385-1.393.99.99 0 0 1 1.36-.395l9 5.15c.317.18.513.522.513.893v15.176c0 .37-.196.712-.512.893l-14 8.01a.98.98 0 0 1-.976 0l-14-8.01A1.03 1.03 0 0 1 17 46.59V31.413c0-.371.196-.713.512-.894l9-5.149a.99.99 0 0 1 1.36.395Z"
             className="fillStrong"
             clipRule="evenodd"
             fillRule="evenodd"
           />
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M47.707 56.888c.39-.4.39-1.048 0-1.448l-5.5-5.63a.984.984 0 0 0-1.414 0 1.04 1.04 0 0 0 0 1.447l5.5 5.63c.39.4 1.024.4 1.414 0Zm-31.414 0c-.39-.4-.39-1.048 0-1.448l5.5-5.63a.984.984 0 0 1 1.414 0c.39.399.39 1.047 0 1.447l-5.5 5.63c-.39.4-1.024.4-1.414 0ZM46 38.76c0-.565.448-1.024 1-1.024h7.5c.552 0 1 .459 1 1.024s-.448 1.024-1 1.024H47c-.552 0-1-.459-1-1.024m-38 0c0-.565.448-1.024 1-1.024h7.5c.552 0 1 .459 1 1.024s-.448 1.024-1 1.024H9c-.552 0-1-.459-1-1.024"
             className="fillStrong"
             clipRule="evenodd"

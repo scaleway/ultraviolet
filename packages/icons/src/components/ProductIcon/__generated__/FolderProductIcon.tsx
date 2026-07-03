@@ -13,21 +13,21 @@ export const FolderProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
     <g className="Folder" clipPath="url(#a)">
       <g className=".Square">
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
         />
       </g>
       <g className="Icon">
         <path
-          fill="#A060F6"
+          fill="#a060f6"
           d="M23 15a4 4 0 0 0-4 4v20a4 4 0 0 0 4 4h26a4 4 0 0 0 4-4V24a4 4 0 0 0-4-4H37.937a2.52 2.52 0 0 1-2.25-1.39l-.159-.317c-.44-.88-.972-1.734-1.595-2.355C33.317 15.323 32.681 15 32 15zm-6 4a6 6 0 0 1 6-6h9c1.384 0 2.498.676 3.346 1.522.841.84 1.488 1.91 1.971 2.876l.159.317a.52.52 0 0 0 .46.285H49a6 6 0 0 1 6 6v15a6 6 0 0 1-6 6H23a6 6 0 0 1-6-6z"
           className="fillStrong"
           clipRule="evenodd"
           fillRule="evenodd"
         />
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M17 48h26a5 5 0 0 0 5-5V28a5 5 0 0 0-5-5H31.936a1.52 1.52 0 0 1-1.355-.838l-.158-.316C29.499 19.998 28.065 18 26 18h-9a5 5 0 0 0-5 5v20a5 5 0 0 0 5 5"
           className="fillWeak"
         />
@@ -38,7 +38,7 @@ export const FolderProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
           clipRule="evenodd"
           fillRule="evenodd"
         />
-        <path fill="#A060F6" d="M18 23a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1" className="fillStrong" />
+        <path fill="#a060f6" d="M18 23a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1" className="fillStrong" />
       </g>
     </g>
   </Icon>

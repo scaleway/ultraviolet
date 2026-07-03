@@ -14,7 +14,7 @@ export const RouterProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
       <g className="Router">
         <g className=".Square">
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
             className="fillWeak"
           />
@@ -28,7 +28,7 @@ export const RouterProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'ti
             />
           </g>
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M44.707 28.293a1 1 0 0 1 0 1.414L43.414 31H50a1 1 0 1 1 0 2h-6.586l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.414l3-3a1 1 0 0 1 1.414 0m-25.414 7.414a1 1 0 0 1 0-1.414L20.586 33H14a1 1 0 1 1 0-2h6.586l-1.293-1.293a1 1 0 0 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 0 1-1.414 0m16.414-18a1 1 0 0 1-1.414 0L33 16.414V23a1 1 0 1 1-2 0v-6.586l-1.293 1.293a1 1 0 0 1-1.414-1.414l3-3a1 1 0 0 1 1.414 0l3 3a1 1 0 0 1 0 1.414m-7.414 28.586a1 1 0 0 1 1.414 0L31 47.586V41a1 1 0 1 1 2 0v6.586l1.293-1.293a1 1 0 0 1 1.414 1.414l-3 3a1 1 0 0 1-1.414 0l-3-3a1 1 0 0 1 0-1.414"
             className="fillStrong"
           />

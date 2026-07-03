@@ -13,7 +13,7 @@ export const AnsibleProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
     <g className="Ansible">
       <g className=".Square">
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
         />

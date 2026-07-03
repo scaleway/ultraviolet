@@ -13,7 +13,7 @@ export const IconElasticMetalProductIcon = ({ ...props }: Omit<IconProps, 'child
     <g className="Icon Elasticmetal">
       <g className=".Square">
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
         />
@@ -21,7 +21,7 @@ export const IconElasticMetalProductIcon = ({ ...props }: Omit<IconProps, 'child
       <g className="Elasticmetal">
         <g className="Serveur">
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             fillRule="evenodd"
             d="M24 35a3 3 0 1 0-6 0 3 3 0 0 0 6 0m-4 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0"
             className="fillStrong"
@@ -29,7 +29,7 @@ export const IconElasticMetalProductIcon = ({ ...props }: Omit<IconProps, 'child
           />
         </g>
         <path
-          fill="#A060F6"
+          fill="#a060f6"
           d="M17.063 20.717C18.079 15.088 22.47 11 27.578 11c3.6 0 6.829 2.019 8.792 5.19a1 1 0 0 0 1.54.198c.776-.739 1.78-1.174 2.868-1.174 2.135 0 3.664 1.147 4.529 2.79q1.126.03 2.191.256a1 1 0 0 0-.072-.44c-1.04-2.538-3.304-4.606-6.648-4.606a6.06 6.06 0 0 0-3.331 1C35.13 11.055 31.587 9 27.577 9c-5.984 0-10.896 4.553-12.315 10.559C11.09 19.899 8 23.87 8 28.437c0 3.862 2.184 7.25 5.367 8.449a1 1 0 1 0 .705-1.872C11.776 34.15 10 31.59 10 28.437c0-3.948 2.741-6.896 5.835-6.902l.224.005a1 1 0 0 0 1.004-.823"
           className="fillStrong"
         />
@@ -39,7 +39,7 @@ export const IconElasticMetalProductIcon = ({ ...props }: Omit<IconProps, 'child
         </g>
         <g className="Rv">
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="m48.601 35.455-2.404-6.344h1.861l1.097 3.292q.135.425.245.856.117.432.222.874.099-.442.204-.868.111-.431.251-.862l1.085-3.292H53l-2.41 6.344zm-9.601 0V27h3.39q1.482 0 2.293.755.816.75.816 1.997 0 .869-.396 1.487-.397.612-1.144.92l1.85 3.296h-1.972l-1.657-3.019h-1.4v3.019zm1.78-4.42h1.283q1.599 0 1.599-1.283 0-.641-.397-.982-.39-.34-1.208-.34H40.78z"
             className="fillStrong"
           />

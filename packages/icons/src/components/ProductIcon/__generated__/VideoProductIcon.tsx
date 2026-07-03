@@ -13,7 +13,7 @@ export const VideoProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
     <g className="Video">
       <g className=".Square">
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
         />
@@ -28,7 +28,7 @@ export const VideoProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'tit
             fillRule="evenodd"
           />
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M29.134 27.171c-.489.28-.967.984-.967 2.362v4.934c0 1.368.477 2.073.968 2.356.491.284 1.343.345 2.532-.34l4.267-2.466c1.19-.685 1.562-1.452 1.562-2.017s-.373-1.332-1.562-2.017l-4.266-2.466c-1.191-.686-2.044-.627-2.534-.346m-.997-1.734c1.323-.76 2.97-.55 4.529.346l.001.001 2.133 1.234 2.132 1.232h.001c1.56.9 2.563 2.224 2.563 3.75s-1.002 2.85-2.563 3.75l-4.267 2.467c-1.561.898-3.21 1.101-4.53.339-1.322-.763-1.97-2.29-1.97-4.09v-4.933c0-1.805.647-3.335 1.971-4.096"
             className="fillStrong"
             clipRule="evenodd"

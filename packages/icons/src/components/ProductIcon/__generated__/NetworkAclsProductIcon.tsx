@@ -13,7 +13,7 @@ export const NetworkAclsProductIcon = ({ ...props }: Omit<IconProps, 'children' 
     <g className="sentiment=primary, disabled=false, size=xlarge">
       <g className="icon">
         <g className=".Square">
-          <g fill="#F1EEFC" className="fillWeak">
+          <g fill="#f1eefc" className="fillWeak">
             <path d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z" />
             <path
               fillRule="evenodd"
@@ -29,7 +29,7 @@ export const NetworkAclsProductIcon = ({ ...props }: Omit<IconProps, 'children' 
           className="fill"
           clipRule="evenodd"
         />
-        <g fill="#A060F6" className="fillStrong">
+        <g fill="#a060f6" className="fillStrong">
           <path
             fillRule="evenodd"
             d="M17 20c0 .463-.079.907-.223 1.32l3.42 2.356a1 1 0 1 1-1.135 1.647l-3.397-2.34A4 4 0 1 1 17 20m-2 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0"

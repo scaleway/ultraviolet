@@ -11,12 +11,12 @@ import type { IconProps } from '../Icon'
 export const InferenceProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="InferenceProductIcon">
     <path
-      fill="#F1EEFC"
+      fill="#f1eefc"
       d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
       className="fillWeak"
     />
     <path
-      fill="#A060F6"
+      fill="#a060f6"
       fillRule="evenodd"
       d="M13 18.32A5.32 5.32 0 0 1 18.32 13h27.36A5.32 5.32 0 0 1 51 18.32V24a1 1 0 1 1-2 0v-5.68A3.32 3.32 0 0 0 45.68 15H18.32A3.32 3.32 0 0 0 15 18.32V24a1 1 0 1 1-2 0zM14 39a1 1 0 0 1 1 1v5.68A3.32 3.32 0 0 0 18.32 49h27.36A3.32 3.32 0 0 0 49 45.68V40a1 1 0 1 1 2 0v5.68A5.32 5.32 0 0 1 45.68 51H18.32A5.32 5.32 0 0 1 13 45.68V40a1 1 0 0 1 1-1"
       className="fillStrong"
@@ -44,7 +44,7 @@ export const InferenceProductIcon = ({ ...props }: Omit<IconProps, 'children' | 
       clipRule="evenodd"
     />
     <path
-      fill="#A060F6"
+      fill="#a060f6"
       fillRule="evenodd"
       d="M15 55a1 1 0 0 1 1-1h10.8a1 1 0 1 1 0 2H16a1 1 0 0 1-1-1M34 9a1 1 0 0 1 1-1h10.8a1 1 0 1 1 0 2H35a1 1 0 0 1-1-1"
       className="fillStrong"

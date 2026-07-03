@@ -12,7 +12,7 @@ export const InstanceScallingGroupsProductIcon = ({ ...props }: Omit<IconProps, 
   <Icon {...props} title="InstanceScallingGroupsProductIcon">
     <g className="sentiment=primary, size=xlarge, disabled=false">
       <g className=".Square">
-        <g fill="#F1EEFC" className="fillWeak">
+        <g fill="#f1eefc" className="fillWeak">
           <path d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z" />
           <path
             fillRule="evenodd"
@@ -22,7 +22,7 @@ export const InstanceScallingGroupsProductIcon = ({ ...props }: Omit<IconProps, 
         </g>
       </g>
       <path
-        fill="#A060F6"
+        fill="#a060f6"
         d="M10 15a5 5 0 0 1 5-5h22.25a1 1 0 1 1 0 2H15a3 3 0 0 0-3 3v1a1 1 0 1 1-2 0zm43 10.75a1 1 0 0 1 1 1V49a5 5 0 0 1-5 5h-1a1 1 0 1 1 0-2h1a3 3 0 0 0 3-3V26.75a1 1 0 0 1 1-1M15 18q-.671.002-1.294.17a1 1 0 1 0 .517 1.931q.37-.1.777-.101h.969a1 1 0 0 0 0-2zm3.844 1a1 1 0 0 1 1-1h1.937a1 1 0 1 1 0 2h-1.937a1 1 0 0 1-1-1m6.812-1a1 1 0 0 0 0 2h1.938a1 1 0 0 0 0-2zm4.813 1a1 1 0 0 1 1-1h1.937a1 1 0 1 1 0 2H31.47a1 1 0 0 1-1-1Zm6.812-1a1 1 0 0 0 0 2h.969a1 1 0 1 0 0-2zm-25.887 2.998a1 1 0 0 1 .707 1.225A3 3 0 0 0 12 23v1.083a1 1 0 1 1-2 0V23q.002-.671.17-1.294a1 1 0 0 1 1.224-.708M46 26.75a1 1 0 1 0-2 0v.927a1 1 0 1 0 2 0zm-35.992 3.962a4.98 4.98 0 0 1 1.412-3.203 1 1 0 0 0-1.42.908v2.166q0 .066.008.129m23.28 23.28q.063.008.129.008h2.166a1 1 0 0 0 .908-1.42 4.98 4.98 0 0 1-3.203 1.412M46 31.385a1 1 0 1 0-2 0v1.855a1 1 0 1 0 2 0zm0 5.563a1 1 0 1 0-2 0v1.854a1 1 0 1 0 2 0zm0 5.562a1 1 0 1 0-2 0v1.855a1 1 0 1 0 2 0zm0 5.563a1 1 0 1 0-2 0V49q0 .406-.102.777a1 1 0 0 0 1.933.517q.167-.623.169-1.294zm-3.706 5.757a1 1 0 1 0-.517-1.931A3 3 0 0 1 41 52h-1.083a1 1 0 1 0 0 2H41c.446 0 .88-.059 1.294-.17"
         className="fillStrong"
       />

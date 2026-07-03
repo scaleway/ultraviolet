@@ -13,7 +13,7 @@ export const DeleteMarkerProductIcon = ({ ...props }: Omit<IconProps, 'children'
     <g className="deleteMarker">
       <g className=".Square">
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
         />
@@ -31,7 +31,7 @@ export const DeleteMarkerProductIcon = ({ ...props }: Omit<IconProps, 'children'
           </g>
           <g className="fillStrong">
             <path
-              fill="#BF95F9"
+              fill="#bf95f9"
               fillRule="evenodd"
               d="M27.657 39.97c-.39-.39-.38-1.033.023-1.436l9.853-9.854c.404-.403 1.047-.413 1.438-.023.39.39.38 1.034-.023 1.437l-9.854 9.854c-.403.403-1.047.413-1.437.023Z"
               className="fillStrong"
@@ -39,7 +39,7 @@ export const DeleteMarkerProductIcon = ({ ...props }: Omit<IconProps, 'children'
             />
             <g className="Group 5">
               <path
-                fill="#BF95F9"
+                fill="#bf95f9"
                 fillRule="evenodd"
                 d="M38.97 39.97c-.39.39-1.034.38-1.437-.023l-9.854-9.854c-.403-.403-.413-1.046-.022-1.437.39-.39 1.034-.38 1.437.023l9.853 9.854c.404.403.414 1.046.023 1.437"
                 className="fillStrong"

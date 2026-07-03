@@ -11,11 +11,11 @@ import type { IconProps } from '../Icon'
 export const MicrosoftLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="MicrosoftLogo">
     <g clipPath="url(#a)">
-      <path fill="#F3F3F3" d="M2 2h16v16H2z" />
-      <path fill="#F35325" d="M2.696 2.696h6.956v6.956H2.696z" />
-      <path fill="#81BC06" d="M10.348 2.696h6.956v6.956h-6.956z" />
-      <path fill="#05A6F0" d="M2.696 10.348h6.956v6.956H2.696z" />
-      <path fill="#FFBA08" d="M10.348 10.348h6.956v6.956h-6.956z" />
+      <path fill="#f3f3f3" d="M2 2h16v16H2z" />
+      <path fill="#f35325" d="M2.696 2.696h6.956v6.956H2.696z" />
+      <path fill="#81bc06" d="M10.348 2.696h6.956v6.956h-6.956z" />
+      <path fill="#05a6f0" d="M2.696 10.348h6.956v6.956H2.696z" />
+      <path fill="#ffba08" d="M10.348 10.348h6.956v6.956h-6.956z" />
     </g>
     <defs>
       <clipPath id="a">

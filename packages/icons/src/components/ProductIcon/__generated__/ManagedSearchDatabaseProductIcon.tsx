@@ -12,7 +12,7 @@ export const ManagedSearchDatabaseProductIcon = ({ ...props }: Omit<IconProps, '
   <Icon {...props} title="ManagedSearchDatabaseProductIcon">
     <g className="managed-search-database">
       <g className=".Square">
-        <g fill="#F1EEFC" className="fillWeak">
+        <g fill="#f1eefc" className="fillWeak">
           <path d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z" />
           <path
             fillRule="evenodd"
@@ -39,14 +39,14 @@ export const ManagedSearchDatabaseProductIcon = ({ ...props }: Omit<IconProps, '
         clipRule="evenodd"
       />
       <path
-        fill="#A060F6"
+        fill="#a060f6"
         fillRule="evenodd"
         d="M25.453 29.357a1 1 0 0 1 1-1h23.5a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-28a1 1 0 0 1 0-2h28a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1h-23.5a1 1 0 0 1-1-1"
         className="fillStrong"
         clipRule="evenodd"
       />
       <path
-        fill="#A060F6"
+        fill="#a060f6"
         fillRule="evenodd"
         d="M27 36a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1m6 0a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1m6 0a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1m6 0a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1"
         className="fillStrong"

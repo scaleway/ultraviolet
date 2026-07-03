@@ -13,20 +13,20 @@ export const KmsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     <g className="kms" clipPath="url(#a)">
       <g className=".Square">
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
         />
       </g>
       <path
-        fill="#A060F6"
+        fill="#a060f6"
         fillRule="evenodd"
         d="m41.068 41.63-4.404-9.718 1.821-.825 4.578 10.099a1 1 0 0 1 .022.773l-1.116 2.888a1 1 0 0 1-1.276.579l-3.877-1.419a1 1 0 0 1-.618-1.213l.42-1.471-.97-2.138-1.544-.565a1 1 0 0 1-.567-.526l-1.89-4.172 1.821-.825 1.718 3.789 1.544.565a1 1 0 0 1 .567.526l1.294 2.854a1 1 0 0 1 .05.688l-.265.93 2.082.76z"
         className="fillStrong"
         clipRule="evenodd"
       />
       <path
-        fill="#A060F6"
+        fill="#a060f6"
         fillRule="evenodd"
         d="M37.8 25.699a4.85 4.85 0 1 0-8.834 4.004 4.85 4.85 0 0 0 8.833-4.004Zm-7.245-4.236A6.85 6.85 0 1 1 36.21 33.94a6.85 6.85 0 0 1-5.655-12.477"
         className="fillStrong"
@@ -40,7 +40,7 @@ export const KmsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
         clipRule="evenodd"
       />
       <path
-        fill="#F1EEFC"
+        fill="#f1eefc"
         d="M28.027 34.052a6.415 6.415 0 1 1 1.821-12.701 6.415 6.415 0 0 1-1.82 12.701Z"
         className="fillWeak"
       />
@@ -59,7 +59,7 @@ export const KmsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
         clipRule="evenodd"
       />
       <path
-        fill="#A060F6"
+        fill="#a060f6"
         fillRule="evenodd"
         d="M24.154 18.316c-1.643.824-2.282 1.78-2.282 2.54 0 .7.539 1.569 1.945 2.36 1.365.767 3.335 1.322 5.618 1.46a1 1 0 1 1-.121 1.997c-2.508-.152-4.789-.765-6.477-1.714-1.648-.927-2.965-2.323-2.965-4.104 0-1.922 1.527-3.394 3.385-4.327 1.917-.962 4.496-1.528 7.29-1.528s5.372.566 7.29 1.528c1.858.933 3.385 2.405 3.385 4.327 0 1.53-.98 2.78-2.277 3.675a1 1 0 0 1-1.136-1.646c1.025-.707 1.413-1.427 1.413-2.029 0-.76-.64-1.715-2.282-2.54C35.355 17.522 33.097 17 30.547 17s-4.808.52-6.393 1.316"
         className="fillStrong"

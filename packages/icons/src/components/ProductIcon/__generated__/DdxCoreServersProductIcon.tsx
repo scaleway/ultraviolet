@@ -14,7 +14,7 @@ export const DdxCoreServersProductIcon = ({ ...props }: Omit<IconProps, 'childre
       <g className="Core-Servers-icon" clipPath="url(#a)">
         <g className=".Square">
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
             className="fillWeak"
           />
@@ -26,7 +26,7 @@ export const DdxCoreServersProductIcon = ({ ...props }: Omit<IconProps, 'childre
             className="fill"
           />
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M23.631 20.943a3.057 3.057 0 0 0 .964 4.214l4.236 2.66a6.05 6.05 0 0 0 6.437 0l4.236-2.66a3.057 3.057 0 0 0 0-5.178l-4.236-2.66a6.05 6.05 0 0 0-6.437 0l-4.236 2.66a3.06 3.06 0 0 0-.964.964m2.027.73 4.236-2.66a4.05 4.05 0 0 1 4.31 0l4.236 2.66a1.057 1.057 0 0 1 0 1.79l-4.236 2.66a4.05 4.05 0 0 1-4.31 0l-4.235-2.66a1.057 1.057 0 0 1 0-1.79Zm21.354 15.932a1 1 0 0 0-1.379-.316l-8.637 5.423-.277.168a9.3 9.3 0 0 1-9.616-.168l-8.638-5.423-.102-.056a1 1 0 0 0-.961 1.75l8.637 5.423.292.178a11.3 11.3 0 0 0 11.728-.178l8.638-5.423.095-.067a1 1 0 0 0 .22-1.311"
             className="fillStrong"
           />
