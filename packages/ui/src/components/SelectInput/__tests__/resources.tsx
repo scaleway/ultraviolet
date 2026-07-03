@@ -117,6 +117,35 @@ export const dataGrouped = {
   ],
 }
 
+export const dataGroupedSmall = {
+  'jovian planets': [
+    {
+      description:
+        'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
+      disabled: false,
+      label: 'Jupiter',
+      value: 'jupiter',
+    },
+    {
+      disabled: false,
+      label: 'Saturn',
+      value: 'saturn',
+    },
+  ],
+  'terrestrial planets': [
+    {
+      disabled: false,
+      label: 'Mercury',
+      value: 'mercury',
+    },
+    {
+      disabled: false,
+      label: 'Venus',
+      value: 'venus',
+    },
+  ],
+}
+
 export const OptionalInfo = {
   'jovian planets': [
     {

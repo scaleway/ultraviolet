@@ -3,7 +3,7 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi, afterEach, beforeEach } from 'vitest'
 import { SelectInput } from '..'
-import { cities, dataGroupEmpty, dataGrouped, dataUnGrouped, OptionalInfo } from './resources'
+import { cities, dataGroupEmpty, dataGrouped, dataUnGrouped, OptionalInfo, dataGroupedSmall } from './resources'
 
 describe('selectInput', () => {
   beforeEach(() => {
@@ -44,7 +44,6 @@ describe('selectInput', () => {
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
         value={dataUnGrouped[4].value}
       />,
     )
@@ -69,7 +68,7 @@ describe('selectInput', () => {
       },
       { timeout: 1000 },
     )
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -83,7 +82,7 @@ describe('selectInput', () => {
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -103,7 +102,7 @@ describe('selectInput', () => {
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -124,7 +123,7 @@ describe('selectInput', () => {
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -145,7 +144,7 @@ describe('selectInput', () => {
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -160,7 +159,6 @@ describe('selectInput', () => {
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
       />,
     )
     const input = screen.getByText('placeholder')
@@ -186,7 +184,6 @@ describe('selectInput', () => {
         options={dataGroupEmpty}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable
       />,
     )
     const input = screen.getByText('placeholder')
@@ -209,7 +206,6 @@ describe('selectInput', () => {
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
       />,
     )
     const input = screen.getByText('placeholder')
@@ -239,7 +235,7 @@ describe('selectInput', () => {
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -260,7 +256,7 @@ describe('selectInput', () => {
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -281,7 +277,7 @@ describe('selectInput', () => {
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -294,7 +290,6 @@ describe('selectInput', () => {
         options={cities}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
       />,
     )
     expect(asFragment()).toMatchSnapshot()
@@ -351,7 +346,7 @@ describe('selectInput', () => {
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -373,7 +368,7 @@ describe('selectInput', () => {
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -409,7 +404,7 @@ describe('selectInput', () => {
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -429,18 +424,17 @@ describe('selectInput', () => {
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('renders correctly with not searchable', async () => {
+  it('should not be searchable when there are less than 6 items', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         name="test"
-        options={dataUnGrouped}
+        options={[dataUnGrouped[0]]}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
       />,
     )
     const input = screen.getByText('placeholder')
@@ -448,6 +442,47 @@ describe('selectInput', () => {
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
       expect(dropdown).toBeVisible()
+      expect(screen.queryByRole('textbox', { name: 'search-bar' })).not.toBeInTheDocument()
+    })
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should be searchable when there are less than 6 items but addOption is enabled', async () => {
+    const { asFragment } = renderWithTheme(
+      <SelectInput
+        name="test"
+        options={[dataUnGrouped[0]]}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        addOption={{ text: 'text', onClick: vi.fn() }}
+      />,
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+      expect(screen.getByRole('textbox', { name: 'search-bar' })).toBeInTheDocument()
+    })
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should be searchable when there are more than 6 items', async () => {
+    const { asFragment } = renderWithTheme(
+      <SelectInput
+        name="test"
+        options={[dataUnGrouped[0]]}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        addOption={{ text: 'text', onClick: vi.fn() }}
+      />,
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+      expect(screen.getByRole('textbox', { name: 'search-bar' })).toBeInTheDocument()
     })
     expect(asFragment()).toMatchSnapshot()
   })
@@ -460,7 +495,6 @@ describe('selectInput', () => {
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
       />,
     )
 
@@ -484,7 +518,6 @@ describe('selectInput', () => {
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
         size="medium"
       />,
     )
@@ -510,7 +543,6 @@ describe('selectInput', () => {
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
         value={[dataUnGrouped[1].value]}
       />,
     )
@@ -530,7 +562,6 @@ describe('selectInput', () => {
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         readOnly
-        searchable={false}
         value={[dataUnGrouped[1].value]}
       />,
     )
@@ -545,7 +576,6 @@ describe('selectInput', () => {
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
       />,
     )
 
@@ -571,7 +601,6 @@ describe('selectInput', () => {
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
       />,
     )
 
@@ -589,10 +618,9 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         name="test"
-        options={dataGrouped}
+        options={dataGroupedSmall}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
       />,
     )
 
@@ -621,7 +649,6 @@ describe('selectInput', () => {
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
         value={dataUnGrouped[4].value}
       />,
     )
@@ -686,10 +713,9 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         name="test"
-        options={dataUnGrouped}
+        options={[dataUnGrouped[1]]}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -710,7 +736,6 @@ describe('selectInput', () => {
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
         size="medium"
       />,
     )
@@ -729,7 +754,6 @@ describe('selectInput', () => {
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -747,7 +771,6 @@ describe('selectInput', () => {
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable={false}
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -776,7 +799,7 @@ describe('selectInput', () => {
     const venus = screen.getByTestId('option-venus')
     const earth = screen.getByTestId('option-earth')
 
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.keyboard('e')
 
     expect(earth).toBeVisible()
@@ -821,7 +844,6 @@ describe('selectInput', () => {
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -857,7 +879,7 @@ describe('selectInput', () => {
     const mars = screen.getByTestId('option-mars')
     expect(mars).toBeVisible()
     await userEvent.click(mars)
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
 
     const options = screen.getAllByRole('option')
     await userEvent.keyboard('aa')
@@ -881,7 +903,6 @@ describe('selectInput', () => {
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -905,7 +926,7 @@ describe('selectInput', () => {
     const mars = screen.getByTestId('option-mars')
     expect(mars).toBeVisible()
     await userEvent.click(mars)
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
 
     const options = screen.getAllByRole('option')
     await userEvent.keyboard('aa')
@@ -995,14 +1016,14 @@ describe('selectInput', () => {
 
     await userEvent.click(selectAll)
     await userEvent.click(earth)
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
 
     await userEvent.keyboard('ea')
     await userEvent.keyboard('[Enter]')
 
     expect(earthCheckbox).toBeChecked()
 
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.tab()
     await userEvent.keyboard(' ')
     expect(selectAllCheckBox).not.toBeChecked()
@@ -1052,14 +1073,14 @@ describe('selectInput', () => {
 
     await userEvent.click(selectAll)
     await userEvent.click(earth)
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
 
     await userEvent.keyboard('ea')
     await userEvent.keyboard('[Enter]')
 
     expect(earthCheckbox).toBeChecked()
 
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.tab()
     await userEvent.keyboard(' ')
     expect(selectAllCheckBox).not.toBeChecked()
@@ -1151,7 +1172,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
 
     await userEvent.click(earth)
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
 
     await userEvent.keyboard('ea')
     await userEvent.keyboard('[Enter]')
@@ -1207,7 +1228,7 @@ describe('selectInput', () => {
     await userEvent.click(selectAll)
 
     await userEvent.click(screen.getByTestId('option-venus'))
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
 
     await userEvent.keyboard('ve')
     await userEvent.keyboard('[Enter]')
@@ -1472,7 +1493,6 @@ describe('selectInput', () => {
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -1485,7 +1505,7 @@ describe('selectInput', () => {
 
     expect(venus).toBeVisible()
 
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.keyboard('new value')
 
     expect(venus).not.toBeVisible()
@@ -1510,7 +1530,6 @@ describe('selectInput', () => {
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -1523,7 +1542,7 @@ describe('selectInput', () => {
 
     expect(venus).toBeVisible()
 
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.keyboard('new value')
 
     expect(venus).not.toBeVisible()
@@ -1549,7 +1568,6 @@ describe('selectInput', () => {
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -1564,7 +1582,7 @@ describe('selectInput', () => {
     expect(venus).toBeVisible()
     expect(earth).toBeVisible()
 
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.keyboard('ven')
 
     expect(venus).toBeVisible()
@@ -1577,7 +1595,7 @@ describe('selectInput', () => {
     await userEvent.keyboard('[arrowDown]')
     await userEvent.keyboard('[Enter]')
 
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.keyboard('new-planet')
 
     expect(screen.getByTestId('add-option')).toBeVisible()
@@ -1602,7 +1620,6 @@ describe('selectInput', () => {
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        searchable
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -1617,7 +1634,7 @@ describe('selectInput', () => {
     expect(venus).toBeVisible()
     expect(earth).toBeVisible()
 
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.keyboard('ven')
 
     expect(venus).toBeVisible()
@@ -1630,7 +1647,7 @@ describe('selectInput', () => {
     await userEvent.keyboard('[arrowDown]')
     await userEvent.keyboard('[Enter]')
 
-    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.keyboard('new-planet')
 
     expect(screen.getByTestId('add-option')).toBeVisible()

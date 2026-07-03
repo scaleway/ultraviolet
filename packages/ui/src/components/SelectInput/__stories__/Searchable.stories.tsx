@@ -5,13 +5,14 @@ import { OptionalInfo, OptionalInfo2 } from './resources'
 
 export const Searchable: StoryFn<typeof SelectInput> = args => (
   <Stack gap="2" width="50%">
-    <SelectInput {...args} label="Searchable true : >= 6 elements" options={OptionalInfo} searchable />
+    <SelectInput {...args} label="Searchable: >= 6 elements" options={OptionalInfo} />
+    <SelectInput {...args} label="Not searchable: <6 elements" optionalInfoPlacement="right" options={OptionalInfo2} />
     <SelectInput
       {...args}
-      label="Searchable true : <6 elements"
+      label="Searchable: addOption enabled"
       optionalInfoPlacement="right"
       options={OptionalInfo2}
-      searchable
+      addOption={{ text: 'Add option', onClick: () => null }}
     />
   </Stack>
 )
@@ -22,14 +23,15 @@ Searchable.args = {
   name: 'example',
   placeholder: 'Select item',
   placeholderSearch: 'Search in list',
-  searchable: false,
 }
 
 Searchable.parameters = {
   docs: {
     description: {
-      story:
-        'Add a search bar in the dropdown to search through the different options. If there are less than 6 options, the search bar will **not** appear, even if the prop is set to `true`.',
+      story: `
+A search bar appears if there are more than 6 options, or if the \`addOption\` prop 
+(see [Add Option story](?path=/story/ui-data-entry-selectinput--add-option&globals=theme:light)) is enabled.
+      `.trim(),
     },
   },
 }

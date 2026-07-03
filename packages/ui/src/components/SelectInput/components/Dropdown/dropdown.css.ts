@@ -3,6 +3,8 @@ import { createVar, globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 const DROPDOWN_MAX_HEIGHT = 256
+const DROPDOWN_MIN_WIDTH = 320
+
 export const dropdownWidth = createVar()
 
 export const dropdown = style({
@@ -10,14 +12,14 @@ export const dropdown = style({
   color: theme.colors.neutral.text,
   boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
   marginBottom: theme.space[10],
-  minWidth: 320,
+  minWidth: DROPDOWN_MIN_WIDTH,
   overflow: 'hidden',
   padding: theme.space[0],
   width: dropdownWidth,
 })
 
 export const dropdownContainer = style({
-  maxHeight: `${DROPDOWN_MAX_HEIGHT}px`,
+  maxHeight: DROPDOWN_MAX_HEIGHT,
   overflowY: 'auto',
   padding: theme.space[0],
   paddingBottom: theme.space['0.5'],
