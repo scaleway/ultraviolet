@@ -126,7 +126,7 @@ export const Banner = ({
               </Button>
             ) : null}
             {linkText ? (
-              <Link href={linkHref ?? ''} prominence={prominence} sentiment="primary" size="small" target="_blank">
+              <Link href={linkHref ?? ''} prominence={prominence} size="small" target="_blank">
                 {linkText}
               </Link>
             ) : null}
