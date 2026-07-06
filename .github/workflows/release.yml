@@ -14,7 +14,7 @@ jobs:
     permissions: write-all
     steps:
       - name: Pull Secrets
-        uses: scaleway/action-scw-secret@9f2ead1e62c0b201b34035cd2ae5274f64c58787 # v0.0.9
+        uses: scaleway/action-scw-secret@3658f2234f185b17405d19254557b34484bf4f99 # v0.0.11
         with:
           secret-names: |
             NPM_TOKEN, /npm/token_ultraviolet
