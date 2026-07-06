@@ -14,19 +14,19 @@ export const DistributedDataLabProductIcon = ({ ...props }: Omit<IconProps, 'chi
       <g className="Container-Registry">
         <g className=".Square">
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
             className="fillWeak"
           />
         </g>
-        <g fill="#A060F6" fillRule="evenodd" className="fillStrong" clipRule="evenodd">
+        <g fill="#a060f6" fillRule="evenodd" className="fillStrong" clipRule="evenodd">
           <path d="M44 31.901a1 1 0 0 1 1-1h12.79a1 1 0 1 1 0 2H45a1 1 0 0 1-1-1" className="fillStrong" />
           <path
             d="M53.502 27.813a1 1 0 0 1 1.4-.2l4.651 3.489a1 1 0 0 1 0 1.6l-4.65 3.488a1 1 0 0 1-1.2-1.6l3.584-2.689-3.585-2.688a1 1 0 0 1-.2-1.4"
             className="fillStrong"
           />
         </g>
-        <g fill="#A060F6" fillRule="evenodd" className="fillStrong" clipRule="evenodd">
+        <g fill="#a060f6" fillRule="evenodd" className="fillStrong" clipRule="evenodd">
           <path
             d="M35.741 28.154a1 1 0 0 1 0-1.414l10.465-10.465a1 1 0 0 1 1.414 1.414L37.155 28.154a1 1 0 0 1-1.414 0"
             className="fillStrong"
@@ -36,7 +36,7 @@ export const DistributedDataLabProductIcon = ({ ...props }: Omit<IconProps, 'chi
             className="fillStrong"
           />
         </g>
-        <g fill="#A060F6" fillRule="evenodd" className="fillStrong" clipRule="evenodd">
+        <g fill="#a060f6" fillRule="evenodd" className="fillStrong" clipRule="evenodd">
           <path
             d="M35.741 35.192a1 1 0 0 0 0 1.414L46.206 47.07a1 1 0 0 0 1.414-1.414L37.155 35.192a1 1 0 0 0-1.414 0"
             className="fillStrong"
@@ -55,7 +55,7 @@ export const DistributedDataLabProductIcon = ({ ...props }: Omit<IconProps, 'chi
         />
         <g className="fillStrong">
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             fillRule="evenodd"
             d="M14.475 32.227a1 1 0 0 0-1-1H6a1 1 0 1 0 0 2h7.475a1 1 0 0 0 1-1m4.153-5.814a1 1 0 0 0-1-1h-7.475a1 1 0 0 0 0 2h7.475a1 1 0 0 0 1-1m0 11.628a1 1 0 0 0-1-1h-7.475a1 1 0 0 0 0 2h7.475a1 1 0 0 0 1-1"
             className="fillStrong"

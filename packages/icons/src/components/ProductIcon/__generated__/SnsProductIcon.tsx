@@ -13,7 +13,7 @@ export const SnsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
     <g className="SNS" clipPath="url(#a)">
       <g className=".Square">
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
         />
@@ -76,7 +76,7 @@ export const SnsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
           />
         </g>
         <path
-          fill="#A060F6"
+          fill="#a060f6"
           d="M27.882 18a2 2 0 0 1 2-2h11.8a2 2 0 0 1 2 2v9.083a2 2 0 0 1-2 2h-9.486l-3.943 2.738a1 1 0 0 1-1.495-1.202l1.124-2.733zm13.8 0h-11.8v9.886q0 .2-.04.396l1.213-.841a2 2 0 0 1 1.14-.358h9.487z"
           className="fillStrong"
           clipRule="evenodd"

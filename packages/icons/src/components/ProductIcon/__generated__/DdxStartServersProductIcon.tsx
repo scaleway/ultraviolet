@@ -14,7 +14,7 @@ export const DdxStartServersProductIcon = ({ ...props }: Omit<IconProps, 'childr
       <g className="Start-Servers-icon" clipPath="url(#a)">
         <g className=".Square">
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
             className="fillWeak"
           />
@@ -26,7 +26,7 @@ export const DdxStartServersProductIcon = ({ ...props }: Omit<IconProps, 'childr
             className="fill"
           />
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M32.186 24.931h-.481l-6.214 3.106-.102.058a1 1 0 0 0-.346 1.283l.058.102a1 1 0 0 0 1.284.346l5.56-2.78 5.561 2.78.107.046a1 1 0 0 0 .787-1.835zm4.814 9a1 1 0 0 1 .117 1.993l-.117.007H27a1 1 0 0 1-.116-1.993L27 33.93zm0 6a1 1 0 0 1 .117 1.993l-.117.007H27a1 1 0 0 1-.116-1.993L27 39.93z"
             className="fillStrong"
           />

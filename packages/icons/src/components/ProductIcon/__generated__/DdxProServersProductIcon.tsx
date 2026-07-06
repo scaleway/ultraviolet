@@ -14,7 +14,7 @@ export const DdxProServersProductIcon = ({ ...props }: Omit<IconProps, 'children
       <g className="Pro-Servers-icon" clipPath="url(#a)">
         <g className=".Square">
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
             className="fillWeak"
           />
@@ -26,7 +26,7 @@ export const DdxProServersProductIcon = ({ ...props }: Omit<IconProps, 'children
             className="fill"
           />
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M31.99 27.931h.02a1 1 0 0 1 .443.104l12.99 6.412a1 1 0 0 1 .557.906l-.06 6.587a1 1 0 0 1-1.444.888L32 36.658l-12.497 6.17a1 1 0 0 1-1.435-.774l-.007-.114L18 35.353a1 1 0 0 1 .557-.906l12.99-6.413a1 1 0 0 1 .443-.103m12.004 8.031L32 30.041l-11.994 5.921.04 4.367 11.511-5.682a1 1 0 0 1 .763-.051l.123.05 11.51 5.683.04-4.367Z"
             className="fillStrong"
           />

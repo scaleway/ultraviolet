@@ -12,7 +12,7 @@ export const SavingPlanProductIcon = ({ ...props }: Omit<IconProps, 'children' |
   <Icon {...props} title="SavingPlanProductIcon">
     <g className="saving-plan" clipPath="url(#a)">
       <g className=".Square">
-        <g fill="#F1EEFC" className="fillWeak">
+        <g fill="#f1eefc" className="fillWeak">
           <path d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z" />
           <path
             fillRule="evenodd"
@@ -21,7 +21,7 @@ export const SavingPlanProductIcon = ({ ...props }: Omit<IconProps, 'children' |
           />
         </g>
       </g>
-      <g fill="#A060F6" className="fillStrong">
+      <g fill="#a060f6" className="fillStrong">
         <path
           fillRule="evenodd"
           d="M11 22.334c0-.567.448-1.026 1-1.026h40c.552 0 1 .46 1 1.026s-.448 1.025-1 1.025H12c-.552 0-1-.459-1-1.025"

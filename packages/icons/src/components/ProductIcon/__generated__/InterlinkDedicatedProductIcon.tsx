@@ -14,13 +14,13 @@ export const InterlinkDedicatedProductIcon = ({ ...props }: Omit<IconProps, 'chi
       <g className="interlink-dedicated" clipPath="url(#a)">
         <g className=".Square">
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48V16Z"
             className="fillWeak"
           />
         </g>
         <path
-          fill="#A060F6"
+          fill="#a060f6"
           d="M20 33.501h8.24v13.044c0 .746.519 1.361 1.188 1.445l.157.01h6.822c.743 0 1.345-.651 1.345-1.455 0-.745-.52-1.36-1.188-1.444l-.157-.01H30.93V18.909h6.725c.69 0 1.258-.561 1.336-1.285l.009-.17c0-.745-.52-1.36-1.188-1.444l-.157-.01h-8.07c-.69 0-1.259.561-1.336 1.285l-.01.17v13.137H20v2.91Z"
           className="fillStrong"
         />

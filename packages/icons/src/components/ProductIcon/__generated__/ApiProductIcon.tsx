@@ -14,7 +14,7 @@ export const ApiProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
       <g className="Icon API">
         <g className=".Square">
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
             className="fillWeak"
           />
@@ -28,14 +28,14 @@ export const ApiProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
             clipRule="evenodd"
           />
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             fillRule="evenodd"
             d="M19 31.97c0-7.18 5.82-13 13-13s13 5.82 13 13-5.82 13-13 13-13-5.82-13-13m24 0c0-6.075-4.925-11-11-11s-11 4.925-11 11 4.925 11 11 11 11-4.925 11-11"
             className="fillStrong"
             clipRule="evenodd"
           />
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M28.71 33.63h-2.78l-.46 1.33H24l2.51-6.99h1.63l2.51 6.99h-1.48zm-.38-1.12-1.01-2.92-1.01 2.92zm8.349-2.37q0 .56-.27 1.05-.26.49-.83.79-.56.3-1.42.3h-1.17v2.68h-1.4v-6.98h2.57q.81 0 1.38.28t.85.77q.29.49.29 1.11m-2.58 1.01q.58 0 .86-.26.28-.27.28-.75 0-1.02-1.14-1.02h-1.11v2.03zm4.974-3.17v6.98h-1.4v-6.98z"
             className="fillStrong"
           />

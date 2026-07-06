@@ -14,7 +14,7 @@ export const AdditionalDiskProductIcon = ({ ...props }: Omit<IconProps, 'childre
       <g className="Additional-Disk-icon" clipPath="url(#a)">
         <g className=".Square">
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
             className="fillWeak"
           />
@@ -31,7 +31,7 @@ export const AdditionalDiskProductIcon = ({ ...props }: Omit<IconProps, 'childre
             <path d="M38.532 11.001V15h-2v-3.999zm-5 0V15h-2v-3.999z" />
           </g>
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             fillRule="evenodd"
             d="M44 19c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10m0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16m1.026 2.883a1 1 0 0 0-1.994.117v4h-4l-.116.007A1 1 0 0 0 39.033 30h3.999v4l.007.117A1 1 0 0 0 45.032 34v-4h4l.117-.007A1 1 0 0 0 49.032 28h-4v-4z"
             className="fillStrong"

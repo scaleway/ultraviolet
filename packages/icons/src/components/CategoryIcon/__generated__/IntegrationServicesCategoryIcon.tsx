@@ -20,7 +20,7 @@ export const IntegrationServicesCategoryIcon = ({ ...props }: Omit<IconProps, 'c
           fillRule="evenodd"
         />
         <path
-          fill="#A060F6"
+          fill="#a060f6"
           d="M4 7.25a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0V8A.75.75 0 0 1 4 7.25m3 0a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0V8A.75.75 0 0 1 7 7.25m4 0a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0V8a.75.75 0 0 1 .75-.75m5 0a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0V8a.75.75 0 0 1 .75-.75"
           className="fill"
           clipRule="evenodd"

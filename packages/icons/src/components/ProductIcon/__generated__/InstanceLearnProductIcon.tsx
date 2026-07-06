@@ -13,7 +13,7 @@ export const InstanceLearnProductIcon = ({ ...props }: Omit<IconProps, 'children
     <g className="Instance-Learn">
       <g className=".Square">
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
         />
@@ -27,7 +27,7 @@ export const InstanceLearnProductIcon = ({ ...props }: Omit<IconProps, 'children
           clipRule="evenodd"
         />
         <path
-          fill="#A060F6"
+          fill="#a060f6"
           d="M24.59 34.092h2.3v1.11h-3.7v-6.98h1.4zm6.79 1.11-1.54-2.72h-.66v2.72h-1.4v-6.98h2.62q.81 0 1.38.29.57.28.85.77.29.48.29 1.08a2.1 2.1 0 0 1-.4 1.25q-.4.55-1.19.76l1.67 2.83zm-2.2-3.77h1.17q.57 0 .85-.27.28-.28.28-.77 0-.48-.28-.74-.28-.27-.85-.27h-1.17zm10.976 3.77h-1.4l-3.17-4.79v4.79h-1.4v-6.99h1.4l3.17 4.8v-4.8h1.4z"
           className="fillStrong"
         />

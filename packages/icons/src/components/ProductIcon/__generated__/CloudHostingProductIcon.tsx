@@ -14,14 +14,14 @@ export const CloudHostingProductIcon = ({ ...props }: Omit<IconProps, 'children'
       <g className="Cloud-Hosting-icon" clipPath="url(#a)">
         <g className=".Square">
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
             className="fillWeak"
           />
         </g>
         <g fillRule="evenodd" className="Icon" clipRule="evenodd">
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M52.996 17.65A5.87 5.87 0 0 0 47.13 12H16.87l-.22.004A5.87 5.87 0 0 0 11 17.87v23.26l.005.242a5.87 5.87 0 0 0 4.32 5.423 1 1 0 1 0 .526-1.93A3.87 3.87 0 0 1 13 41.13V22h38v19.13l-.005.198a3.87 3.87 0 0 1-3.108 3.598 1 1 0 1 0 .388 1.962A5.87 5.87 0 0 0 53 41.13V17.87zM51 20v-2.13a3.87 3.87 0 0 0-3.67-3.865l-.2-.005H16.87a3.87 3.87 0 0 0-3.865 3.67l-.005.2V20z"
             className="fillStrong"
           />

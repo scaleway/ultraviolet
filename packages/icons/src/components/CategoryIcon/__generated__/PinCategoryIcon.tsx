@@ -12,7 +12,7 @@ export const PinCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
   <Icon {...props} title="PinCategoryIcon">
     <g className="Pin">
       <path
-        fill="#A060F6"
+        fill="#a060f6"
         d="M6.343 12.284a.97.97 0 1 1 1.373 1.373l-2.06 2.059a.97.97 0 1 1-1.372-1.373l2.06-2.059Z"
         className="fillStrong"
       />

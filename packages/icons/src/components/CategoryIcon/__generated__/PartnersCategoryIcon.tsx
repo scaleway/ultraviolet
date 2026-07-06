@@ -17,7 +17,7 @@ export const PartnersCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 
         className="fill"
       />
       <path
-        fill="#A060F6"
+        fill="#a060f6"
         d="M7 8a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2v6h6V9a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z"
         className="fillStrong"
       />

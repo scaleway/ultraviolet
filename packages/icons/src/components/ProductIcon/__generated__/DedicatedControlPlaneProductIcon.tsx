@@ -14,7 +14,7 @@ export const DedicatedControlPlaneProductIcon = ({ ...props }: Omit<IconProps, '
       <g className="Dedicated-Control-Plane">
         <g className=".Square">
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
             className="fillWeak"
           />
@@ -40,7 +40,7 @@ export const DedicatedControlPlaneProductIcon = ({ ...props }: Omit<IconProps, '
             d="M42.99 34.279a.99.99 0 0 1 1.188-.754l10.918 2.5a1 1 0 0 1 .748 1.197.99.99 0 0 1-1.188.753l-10.917-2.5a1 1 0 0 1-.748-1.196Zm-21.884 0a.99.99 0 0 0-1.188-.754l-10.917 2.5a1 1 0 0 0 .44 1.95l10.917-2.5a1 1 0 0 0 .748-1.196"
             className="fill"
           />
-          <g fill="#A060F6" className="fillStrong">
+          <g fill="#a060f6" className="fillStrong">
             <g className="fillStrong">
               <path
                 d="M32.048 15c.549 0 .993.448.993 1v15.457c0 .552-.444 1-.993 1a.996.996 0 0 1-.992-1V16c0-.552.444-1 .992-1"

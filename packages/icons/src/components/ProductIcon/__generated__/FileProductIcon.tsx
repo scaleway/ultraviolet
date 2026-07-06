@@ -13,7 +13,7 @@ export const FileProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
     <g className="File">
       <g className=".Square">
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
         />
@@ -36,7 +36,7 @@ export const FileProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'titl
             />
           </g>
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M24.5 21a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2zm0 13a1 1 0 1 0 0 2H38a1 1 0 1 0 0-2zm-1 8a1 1 0 0 1 1-1h9a1 1 0 1 1 0 2h-9a1 1 0 0 1-1-1m1-14.5a1 1 0 1 0 0 2H42a1 1 0 1 0 0-2z"
             className="fillStrong"
             clipRule="evenodd"

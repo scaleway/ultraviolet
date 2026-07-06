@@ -14,7 +14,7 @@ export const ElasticMetalAluminiumProductIcon = ({ ...props }: Omit<IconProps, '
       <g className="Elasticmetal-Aluminium-icon" clipPath="url(#a)">
         <g className=".Square">
           <path
-            fill="#F1EEFC"
+            fill="#f1eefc"
             d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
             className="fillWeak"
           />
@@ -22,7 +22,7 @@ export const ElasticMetalAluminiumProductIcon = ({ ...props }: Omit<IconProps, '
         <g className="Elasticmetal">
           <g className="Serveur">
             <path
-              fill="#A060F6"
+              fill="#a060f6"
               fillRule="evenodd"
               d="M24 35a3 3 0 1 0-6 0 3 3 0 0 0 6 0m-4 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0"
               className="fillStrong"
@@ -30,7 +30,7 @@ export const ElasticMetalAluminiumProductIcon = ({ ...props }: Omit<IconProps, '
             />
           </g>
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M17.063 20.717C18.079 15.088 22.47 11 27.578 11c3.6 0 6.829 2.019 8.792 5.19a1 1 0 0 0 1.54.198c.776-.739 1.78-1.174 2.868-1.174 2.135 0 3.664 1.147 4.529 2.79q1.126.03 2.191.256a1 1 0 0 0-.072-.44c-1.04-2.538-3.304-4.606-6.648-4.606a6.06 6.06 0 0 0-3.331 1C35.13 11.055 31.587 9 27.577 9c-5.984 0-10.896 4.553-12.315 10.559C11.09 19.899 8 23.87 8 28.437c0 3.862 2.184 7.25 5.367 8.449a1 1 0 1 0 .705-1.872C11.776 34.15 10 31.59 10 28.437c0-3.948 2.741-6.896 5.835-6.902l.224.005a1 1 0 0 0 1.004-.823"
             className="fillStrong"
           />
@@ -39,7 +39,7 @@ export const ElasticMetalAluminiumProductIcon = ({ ...props }: Omit<IconProps, '
             <path d="M45 19c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12M31 31c0-7.732 6.268-14 14-14s14 6.268 14 14-6.268 14-14 14-14-6.268-14-14" />
           </g>
           <path
-            fill="#A060F6"
+            fill="#a060f6"
             d="M44.652 33.284h-3.336l-.552 1.596H39l3.012-8.388h1.956l3.012 8.388h-1.776zm-.456-1.344-1.212-3.504-1.212 3.504zm5.59-5.94v8.88h-1.68V26z"
             className="fillStrong"
           />

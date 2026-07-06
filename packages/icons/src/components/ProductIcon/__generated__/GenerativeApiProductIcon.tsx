@@ -13,7 +13,7 @@ export const GenerativeApiProductIcon = ({ ...props }: Omit<IconProps, 'children
     <g className="generative-api">
       <g className=".Square">
         <path
-          fill="#F1EEFC"
+          fill="#f1eefc"
           d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
         />
@@ -25,7 +25,7 @@ export const GenerativeApiProductIcon = ({ ...props }: Omit<IconProps, 'children
         className="fill"
         clipRule="evenodd"
       />
-      <g fill="#A060F6" className="fillStrong">
+      <g fill="#a060f6" className="fillStrong">
         <path
           fillRule="evenodd"
           d="M19.5 17.897a1 1 0 0 1-.5.866l-6.75 3.897a1 1 0 0 1-1.5-.866V14a1 1 0 0 1 1.5-.866L19 17.031a1 1 0 0 1 .5.866m-6.75-2.165v4.33l3.75-2.165z"

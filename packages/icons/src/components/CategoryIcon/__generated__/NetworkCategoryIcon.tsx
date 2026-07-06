@@ -11,7 +11,7 @@ import type { IconProps } from '../Icon'
 export const NetworkCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="NetworkCategoryIcon">
     <g className="Network">
-      <g fill="#A365F6" className="fillStrong">
+      <g fill="#a365f6" className="fillStrong">
         <path
           d="M9.955 6.883c-4.372 0-7.917 1.375-7.917 3.072 0 1.696 3.545 3.072 7.917 3.072 4.373 0 7.917-1.376 7.917-3.072s-3.544-3.072-7.917-3.072m0 1.5c3.773 0 5.97 1.058 6.377 1.572-.408.513-2.604 1.572-6.377 1.572s-5.968-1.059-6.377-1.572c.41-.514 2.604-1.572 6.377-1.572"
           className="fillStrong"
@@ -26,7 +26,7 @@ export const NetworkCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | '
         />
       </g>
       <path
-        fill="#4F0599"
+        fill="#4f0599"
         d="M10 2a8 8 0 1 0 .001 16.001A8 8 0 0 0 10 2m0 2.011A5.995 5.995 0 0 1 15.989 10 5.996 5.996 0 0 1 10 15.989 5.996 5.996 0 0 1 4.011 10 5.995 5.995 0 0 1 10 4.011"
         className="fill"
         clipRule="evenodd"

@@ -12,7 +12,7 @@ export const EnvironmentalFootprintCalculatorProductIcon = ({ ...props }: Omit<I
   <Icon {...props} title="EnvironmentalFootprintCalculatorProductIcon">
     <g className="sentiment=primary, size=xlarge, disabled=false">
       <g className=".Square">
-        <g fill="#F1EEFC" className="fillWeak">
+        <g fill="#f1eefc" className="fillWeak">
           <path d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z" />
           <path
             fillRule="evenodd"
@@ -21,7 +21,7 @@ export const EnvironmentalFootprintCalculatorProductIcon = ({ ...props }: Omit<I
           />
         </g>
       </g>
-      <g fill="#A060F6" fillRule="evenodd" className="fillStrong" clipRule="evenodd">
+      <g fill="#a060f6" fillRule="evenodd" className="fillStrong" clipRule="evenodd">
         <path d="M12.052 11.683a1 1 0 0 1 1.265-.631l4.553 1.522a1 1 0 0 1 .683.949v7.406l3.272 1.126a1 1 0 1 1-.65 1.89l-3.948-1.357a1 1 0 0 1-.674-.946v-7.4l-3.87-1.293a1 1 0 0 1-.631-1.266m27.415 20.971a1 1 0 0 1 1.379.313l3.969 6.294 6.425-1.727a1 1 0 0 1 1 .294l5 5.5a1 1 0 0 1-1.48 1.345l-4.59-5.049-6.548 1.76a1 1 0 0 1-1.105-.432l-4.363-6.918a1 1 0 0 1 .313-1.38" />
         <path d="M8 11a1 1 0 0 1 1 1v39h48a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1V12a1 1 0 0 1 1-1" />
       </g>
