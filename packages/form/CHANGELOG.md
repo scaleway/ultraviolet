@@ -1,5 +1,17 @@
 # Change Log
 
+## 6.5.7
+
+### Patch Changes
+
+- [#6637](https://github.com/scaleway/ultraviolet/pull/6637) [`7bfd60a`](https://github.com/scaleway/ultraviolet/commit/7bfd60a0775b94534f6c23e3c1d608bf13cb251e) Thanks [@philibea](https://github.com/philibea)! - revert type validation on field name
+
+- [#6615](https://github.com/scaleway/ultraviolet/pull/6615) [`2c7e8de`](https://github.com/scaleway/ultraviolet/commit/2c7e8de8d8a46343ae75f8c425ff05b56b1c5428) Thanks [@lisalupi](https://github.com/lisalupi)! - Add a `displayName` to every component
+
+- Updated dependencies [[`b7d6971`](https://github.com/scaleway/ultraviolet/commit/b7d697113719fe9136de3b7ff51eeab1b5685af9), [`2c7e8de`](https://github.com/scaleway/ultraviolet/commit/2c7e8de8d8a46343ae75f8c425ff05b56b1c5428), [`400f4e2`](https://github.com/scaleway/ultraviolet/commit/400f4e2efabc53bc0c737a58114adbb90474fff7)]:
+  - @ultraviolet/ui@3.20.2
+  - @ultraviolet/icons@5.4.5
+
 ## 6.5.6
 
 ### Patch Changes
