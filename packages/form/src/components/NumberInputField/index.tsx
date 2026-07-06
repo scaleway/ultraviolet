@@ -12,7 +12,7 @@ type NumberInputComponentProps = ComponentProps<typeof NumberInput>
 export type NumberInputFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = NumberInputComponentProps & BaseFieldProps<TFieldValues, TFieldName, NumberInputComponentProps['value']>
+> = NumberInputComponentProps & BaseFieldProps<TFieldValues, TFieldName>
 
 export const NumberInputField = <
   TFieldValues extends FieldValues = FieldValues,
