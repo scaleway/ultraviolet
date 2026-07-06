@@ -2,8 +2,8 @@ import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import CopyBox from '../../components/CopyBoxCommand'
 import GithubAndDocumentationButtons from '../../components/GithubAndDocumentationButtons'
 
-const themeExample = `import { theme, Button } from "@ultraviolet/ui"
-import { ThemeProvider } from "@ultraviolet/themes"
+const themeExample = `import { Button } from "@ultraviolet/ui"
+import { ThemeProvider, consoleLightTheme } from "@ultraviolet/themes"
 
 const App = () => (
     <ThemeProvider theme={theme}>

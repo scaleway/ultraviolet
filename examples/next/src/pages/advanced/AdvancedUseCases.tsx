@@ -2,8 +2,8 @@ import { Stack, Text } from '@ultraviolet/ui'
 import CopyBox from '../../components/CopyBoxCommand'
 import styles from '../../../styles/advanced.module.scss'
 
-const useCase1 = `import { theme as lightTheme, dark as darkTheme, Button, Text } from '@ultraviolet/ui'
-import { ThemeProvider } from '@ultraviolet/themes'
+const useCase1 = `import { theme as lightTheme, Button, Text } from '@ultraviolet/ui'
+import { ThemeProvider, consoleDarkTheme as darkTheme } from '@ultraviolet/themes'
 import React, { useCallback, useState } from 'react'
 
 const App = () => {

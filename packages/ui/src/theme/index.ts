@@ -17,7 +17,6 @@ type RecursivePartial<T> = {
 
 /**
  * Will extend theme with new theme properties
- * @param {UltravioletUITheme} baseTheme the theme you want to extend from, by default it is set to light theme
  * @param {RecursivePartial<UltravioletUITheme>} extendedTheme the properties of a new theme you want to apply from baseTheme
  */
 const extendTheme = (extendedTheme: RecursivePartial<UltravioletUITheme>) =>
