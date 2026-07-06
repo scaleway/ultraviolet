@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 6.0.21
+
+### Patch Changes
+
+- [#6615](https://github.com/scaleway/ultraviolet/pull/6615) [`2c7e8de`](https://github.com/scaleway/ultraviolet/commit/2c7e8de8d8a46343ae75f8c425ff05b56b1c5428) Thanks [@lisalupi](https://github.com/lisalupi)! - Add a `displayName` to every component
+
 ## 6.0.20
 
 ### Patch Changes
