@@ -32,10 +32,10 @@ export const KeyValueInput = ({
   keyvalues = [],
   maxSize = 100,
 }: KeyValueInputProps) => {
-  const handleChange = (index: number, key?: string, value?: string) => {
+  const handleChange = (index: number, operationType: 'add' | 'change', key?: string, value?: string) => {
     const newKeyValues = [...keyvalues]
     newKeyValues[index] = { key: key ?? newKeyValues[index].key, value: value ?? newKeyValues[index].value }
-    onChange?.(newKeyValues)
+    onChange?.(newKeyValues, index, operationType)
   }
 
   const canAdd = (keyvalues && keyvalues.length !== undefined && keyvalues.length < maxSize) || !keyvalues
@@ -58,12 +58,12 @@ export const KeyValueInput = ({
                   readOnly={readOnly}
                   required={inputKey.required || required}
                   size={size}
-                  onChange={(key: string) => handleChange(index, key)} // can't properly infer type of onChange
+                  onChange={(key: string) => handleChange(index, 'change', key)} // can't properly infer type of onChange
                   disabled={disabled}
                   data-testid={`${dataTestid}-${index}.key`}
                   aria-describedby={ariaDescribedBy}
-                  onFocus={() => onFocus?.(keyvalues)}
-                  onBlur={() => onBlur?.(keyvalues)}
+                  onFocus={() => onFocus?.(keyvalues, index)}
+                  onBlur={() => onBlur?.(keyvalues, index)}
                   value={keyvalues[index].key}
                 />
               ) : (
@@ -73,12 +73,12 @@ export const KeyValueInput = ({
                   readOnly={readOnly}
                   required={inputKey.required || required}
                   size={size}
-                  onChangeValue={key => handleChange(index, key)}
+                  onChangeValue={key => handleChange(index, 'change', key)}
                   disabled={disabled}
                   data-testid={`${dataTestid}-${index}.key`}
                   aria-describedby={ariaDescribedBy}
-                  onFocus={() => onFocus?.(keyvalues)}
-                  onBlur={() => onBlur?.(keyvalues)}
+                  onFocus={() => onFocus?.(keyvalues, index)}
+                  onBlur={() => onBlur?.(keyvalues, index)}
                   value={keyvalues[index].key}
                 />
               )}
@@ -91,12 +91,12 @@ export const KeyValueInput = ({
                   readOnly={readOnly}
                   required={inputValue.required || required}
                   size={size}
-                  onChange={(value: string) => handleChange(index, undefined, value)}
+                  onChange={(value: string) => handleChange(index, 'change', undefined, value)}
                   disabled={disabled}
                   data-testid={`${dataTestid}-${index}.value`}
                   aria-describedby={ariaDescribedBy}
-                  onBlur={() => onBlur?.(keyvalues)}
-                  onFocus={() => onFocus?.(keyvalues)}
+                  onBlur={() => onBlur?.(keyvalues, index)}
+                  onFocus={() => onFocus?.(keyvalues, index)}
                   value={keyvalues[index].value}
                 />
               ) : (
@@ -109,12 +109,12 @@ export const KeyValueInput = ({
                   required={inputValue.required || required}
                   type={inputValue.type}
                   size={size}
-                  onChangeValue={value => handleChange(index, undefined, value)}
+                  onChangeValue={value => handleChange(index, 'change', undefined, value)}
                   disabled={disabled}
                   data-testid={`${dataTestid}-${index}.value`}
                   aria-describedby={ariaDescribedBy}
-                  onBlur={() => onBlur?.(keyvalues)}
-                  onFocus={() => onFocus?.(keyvalues)}
+                  onBlur={() => onBlur?.(keyvalues, index)}
+                  onFocus={() => onFocus?.(keyvalues, index)}
                   value={keyvalues[index].value}
                 />
               )}
@@ -124,7 +124,7 @@ export const KeyValueInput = ({
                 disabled={!editable}
                 onClick={() => {
                   const newKeyValues = keyvalues.filter((_, i) => index !== i)
-                  onChange?.(newKeyValues)
+                  onChange?.(newKeyValues, index, 'remove')
                 }}
                 sentiment="danger"
                 size={size}
@@ -143,7 +143,7 @@ export const KeyValueInput = ({
           fullWidth={addButton.fullWidth}
           onClick={() => {
             const index = keyvalues ? keyvalues.length : 0
-            handleChange(index, '', '')
+            handleChange(index, 'add', '', '')
           }}
           sentiment="primary"
           tooltip={canAdd ? addButton.tooltip : maxSizeReachedTooltip}

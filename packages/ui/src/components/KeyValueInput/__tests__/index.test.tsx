@@ -177,11 +177,11 @@ describe('keyValueInput', () => {
     expect(keyInput).toBeInTheDocument()
 
     await userEvent.type(keyInput, '1')
-    expect(onChange).toHaveBeenCalledExactlyOnceWith([{ key: '1', value: '' }])
+    expect(onChange).toHaveBeenCalledExactlyOnceWith([{ key: '1', value: '' }], 0, 'change')
 
     await userEvent.type(valueInput, '2')
     expect(onChange).toHaveBeenCalledTimes(2)
-    expect(onChange).toHaveBeenCalledWith([{ key: '', value: '2' }])
+    expect(onChange).toHaveBeenCalledWith([{ key: '', value: '2' }], 0, 'change')
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -251,7 +251,7 @@ describe('keyValueInput', () => {
     })
 
     await userEvent.click(option1Key)
-    expect(onChange).toHaveBeenCalledExactlyOnceWith([{ key: 'option-1', value: '' }])
+    expect(onChange).toHaveBeenCalledExactlyOnceWith([{ key: 'option-1', value: '' }], 0, 'change')
 
     await userEvent.click(valueInput)
 
@@ -261,7 +261,7 @@ describe('keyValueInput', () => {
 
     await userEvent.click(option2Value)
     expect(onChange).toHaveBeenCalledTimes(2)
-    expect(onChange).toHaveBeenCalledWith([{ key: '', value: 'option-2' }])
+    expect(onChange).toHaveBeenCalledWith([{ key: '', value: 'option-2' }], 0, 'change')
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -292,10 +292,14 @@ describe('keyValueInput', () => {
     expect(addButton).not.toBeDisabled()
 
     await userEvent.click(addButton)
-    expect(onChange).toHaveBeenCalledExactlyOnceWith([
-      { key: 'key1', value: 'value1' },
-      { key: '', value: '' },
-    ])
+    expect(onChange).toHaveBeenCalledExactlyOnceWith(
+      [
+        { key: 'key1', value: 'value1' },
+        { key: '', value: '' },
+      ],
+      1,
+      'add',
+    )
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -326,7 +330,7 @@ describe('keyValueInput', () => {
     expect(deleteButton).not.toBeDisabled()
 
     await userEvent.click(deleteButton)
-    expect(onChange).toHaveBeenCalledExactlyOnceWith([])
+    expect(onChange).toHaveBeenCalledExactlyOnceWith([], 0, 'remove')
 
     expect(asFragment()).toMatchSnapshot()
   })
