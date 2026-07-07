@@ -73,3 +73,4 @@ export default {
 export { Playground } from './Playground.stories'
 export { Environnement } from './Environnement.stories'
 export { Regex } from './Regex.stories'
+export { WithSelect } from './WithSelect.stories'

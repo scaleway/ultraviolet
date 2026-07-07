@@ -49,9 +49,9 @@ export type KeyValueInputProps = {
   disabled?: boolean
   readOnly?: boolean
   error?: boolean | string
-  onChange?: (keyValues: KeyValuePair[]) => void
-  onBlur?: (keyValues: KeyValuePair[]) => void
-  onFocus?: (keyValues: KeyValuePair[]) => void
+  onChange?: (keyValues: KeyValuePair[], index?: number, operationType?: 'change' | 'add' | 'remove') => void
+  onBlur?: (keyValues: KeyValuePair[], index?: number) => void
+  onFocus?: (keyValues: KeyValuePair[], index?: number) => void
   style?: CSSProperties
   className?: string
   'data-testid'?: string
