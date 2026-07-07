@@ -7,21 +7,16 @@ import type { BaseFieldProps } from '../../types'
 type PlanFieldsProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
-> = Pick<ComponentProps<typeof Plans>, 'features' | 'plans' | 'hideLabels' | 'onChange' | 'highlight'> &
-  Pick<BaseFieldProps<TFieldValues, TFieldName>, 'name' | 'control' | 'required'>
-
+> = BaseFieldProps<TFieldValues, TFieldName> & Omit<ComponentProps<typeof Plans>, 'value' | 'fieldName'>
 export const PlansField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   name,
   control,
-  features,
-  plans,
-  hideLabels,
-  highlight,
   onChange,
   required,
+  ...props
 }: PlanFieldsProps<TFieldValues, TFieldName>) => {
   const { field } = useController({
     control,
@@ -33,18 +28,15 @@ export const PlansField = <
 
   return (
     <Plans
-      features={features}
       fieldName={field.name}
-      hideLabels={hideLabels}
-      highlight={highlight}
       onChange={value => {
         field.onChange(value)
         if (onChange) {
           onChange(value)
         }
       }}
-      plans={plans}
       value={field.value as string | undefined}
+      {...props}
     />
   )
 }

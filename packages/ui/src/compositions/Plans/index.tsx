@@ -109,6 +109,7 @@ export const Plans = <T extends string>({
                   onChange={onChange}
                   plan={plan}
                   setFocusedPlan={setFocusedPlan}
+                  locales={locales}
                 />
               </td>
             )
