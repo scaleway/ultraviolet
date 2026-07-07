@@ -32,8 +32,13 @@ pmOnFail: error
 optimisticRepeatInstall: false
 
 overrides:
-  vite: $vite
-  vitest: $vitest
+  vite: "catalog:"
+  vitest: "catalog:"
+
+catalog:
+  vite: 8.0.16
+  vitest: 4.1.9
+
 
 peerDependencyRules:
   allowedVersions:
