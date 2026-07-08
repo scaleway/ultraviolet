@@ -28,6 +28,7 @@ export const PlansField = <
 
   return (
     <Plans
+      {...props}
       fieldName={field.name}
       onChange={value => {
         field.onChange(value)
@@ -36,7 +37,6 @@ export const PlansField = <
         }
       }}
       value={field.value as string | undefined}
-      {...props}
     />
   )
 }
