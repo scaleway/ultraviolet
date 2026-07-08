@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import { PropsWithChildren } from 'react'
+import type { PropsWithChildren } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Breadcrumbs } from '..'
 

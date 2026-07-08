@@ -35,11 +35,11 @@ const AdvancedPopover = () => {
         <>
           <Modal
             data-testid="modal"
-            disclosure={() => (
+            disclosure={
               <Button data-testid="button-modal" sentiment="neutral">
                 Open Modal
               </Button>
-            )}
+            }
           >
             <div>
               <div>Modal</div>

@@ -53,7 +53,6 @@
         "react/no-array-index-key": "off",
         "react/only-export-components": "off",
         "react/no-unstable-nested-components": "off",
-
         "typescript/strict-void-return": "off",
         "typescript/no-useless-default-assignment": "off",
         "typescript/no-unsafe-assignment": "warn",
@@ -100,7 +99,7 @@
         "no-console": "off",
         "node/no-process-env": "off",
 
-        "typescript/consistent-type-imports": "off",
+        "typescript/consistent-type-imports": "error",
         "typescript/no-unsafe-assignment": "warn",
         "typescript/no-unsafe-member-access": "off",
         "typescript/promise-function-async": "warn",
@@ -220,6 +219,7 @@
     "typescript/no-misused-spread": "warn",
     "typescript/no-unsafe-argument": "off",
     "typescript/no-unsafe-type-assertion": "warn",
+    "typescript/consistent-type-imports": "error",
     "typescript/no-useless-default-assignment": "off",
     "typescript/promise-function-async": "off",
     "typescript/strict-boolean-expressions": "off",

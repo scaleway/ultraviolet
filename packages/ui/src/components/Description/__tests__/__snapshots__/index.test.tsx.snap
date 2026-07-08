@@ -54,6 +54,12 @@ exports[`description > renders correctly with aria-describedby 1`] = `
     data-testid="testing"
   >
     <div>
+      <label
+        class="styles_default__17td3g90 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodyStrong__m4c9own style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
+        id="id-label"
+      >
+        Label
+      </label>
       <span
         class="style__m4c9ow0 style_prominence_weak__m4c9ow7 style_sentiment_neutral__m4c9owb style_variant_captionSmall__m4c9owq style_undefined_compound_3__m4c9ow1d style_undefined_compound_67__m4c9ow35"
         id="id-helper"
@@ -63,6 +69,7 @@ exports[`description > renders correctly with aria-describedby 1`] = `
       </span>
       <input
         aria-describedby="id-helper"
+        aria-labelledby="id-label"
         data-testid="test-input"
         type="text"
       />

@@ -43,7 +43,7 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
   return (
     <Drawer
       footer={
-        <Button type="submit" form={formId}>
+        <Button form={formId} type="submit">
           {labels.submit}
         </Button>
       }

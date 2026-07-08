@@ -1,7 +1,7 @@
-import { FocusEvent } from 'react'
-import { FieldValues, FieldPath, FieldPathValue, RefCallBack } from 'react-hook-form'
+import type { FocusEvent } from 'react'
+import type { FieldValues, FieldPath, FieldPathValue, RefCallBack } from 'react-hook-form'
 import { useFormRegisterMode } from '../components/Form/registerMode'
-import { BaseFieldProps, MetaField } from '../types'
+import type { BaseFieldProps, MetaField } from '../types'
 import { useControlledField } from './useControlledField'
 import { useRegisterField } from './useRegisterField'
 
@@ -21,6 +21,10 @@ export type FieldProps<
   error: string | undefined
 }
 
+const useFieldStrategy = (mode: boolean) => {
+  return mode ? useRegisterField : useControlledField
+}
+
 /**
  * Hook to use in Field components to centralize the logic linked to React-Hook-Form and other common field props.
  */
@@ -30,7 +34,7 @@ export const useField = <
 >(
   props: UseFieldProps<TFieldValues, TFieldName>,
 ) => {
-  const registerField = useFormRegisterMode()
+  const mode = useFormRegisterMode()
 
-  return registerField ? useRegisterField(props) : useControlledField(props)
+  return useFieldStrategy(mode)(props)
 }

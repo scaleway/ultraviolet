@@ -1,5 +1,6 @@
 import type { FocusEvent } from 'react'
-import { FieldPath, FieldValues, Path, PathValue, useController } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../providers'
 import { validateRegex } from '../utils/validateRegex'
 import type { UseFieldProps, FieldProps } from './useField'

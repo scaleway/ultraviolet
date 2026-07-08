@@ -18,6 +18,7 @@ exports[`unitInputField > should handles onChange and selection 1`] = `
           <label
             class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9own uv_m4c9ow1a uv_m4c9ow32"
             for="_r_9_"
+            id="_r_9_-label"
           >
             Test
           </label>
@@ -37,6 +38,7 @@ exports[`unitInputField > should handles onChange and selection 1`] = `
           >
             <input
               aria-invalid="false"
+              aria-labelledby="_r_9_-label"
               class="uv_gwf0fl2 uv_gwf0fl1"
               data-testid="unit-input"
               id="_r_9_"
@@ -132,6 +134,7 @@ exports[`unitInputField > should render correctly 1`] = `
         <label
           class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9own uv_m4c9ow1a uv_m4c9ow32"
           for="_r_0_"
+          id="_r_0_-label"
         >
           Test
         </label>
@@ -145,6 +148,7 @@ exports[`unitInputField > should render correctly 1`] = `
           >
             <input
               aria-invalid="false"
+              aria-labelledby="_r_0_-label"
               class="uv_gwf0fl2 uv_gwf0fl1"
               data-testid="unit-input"
               id="_r_0_"

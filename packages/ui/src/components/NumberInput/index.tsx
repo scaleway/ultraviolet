@@ -11,7 +11,7 @@ import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 import { Controls } from './components/Controls'
 import { Unit } from './components/Unit'
-import { NumberInputProps } from './types'
+import type { NumberInputProps } from './types'
 import { numberInputStyle } from './styles.css'
 
 const getValueAsNumber = (input: HTMLInputElement) => {

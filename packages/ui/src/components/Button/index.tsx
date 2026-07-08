@@ -104,6 +104,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
       onPointerDown,
       onKeyDown,
       name,
+      form,
       'aria-label': ariaLabel,
       'aria-current': ariaCurrent,
       'aria-controls': ariaControls,
@@ -160,6 +161,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
             'data-flip-id': dataFlipId,
             // oxlint-disable-next-line typescript/no-unsafe-type-assertion
             ref: ref as Ref<HTMLElement>,
+            form,
             style,
           })}
         </Tooltip>
@@ -222,6 +224,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
           data-flip-id={dataFlipId}
           disabled={computeIsDisabled}
           name={name}
+          form={form}
           onBlur={onBlur}
           onClick={onClick}
           onKeyDown={onKeyDown}
