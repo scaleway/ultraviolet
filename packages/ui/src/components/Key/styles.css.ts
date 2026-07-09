@@ -15,8 +15,8 @@ const key = recipe({
   compoundVariants: [
     {
       style: {
-        backgroundColor: theme.colors.neutral.backgroundWeakDisabled,
-        borderColor: theme.colors.neutral.borderWeakDisabled,
+        backgroundColor: theme.colors.neutral.backgroundStronger,
+        borderColor: theme.colors.neutral.border,
       },
       variants: { prominence: 'strong', sentiment: 'neutral' },
     },
@@ -38,12 +38,14 @@ const key = recipe({
     {
       style: {
         backgroundColor: theme.colors.primary.backgroundStrong,
+        border: theme.colors.neutral.border,
       },
       variants: { prominence: 'strong', sentiment: 'primary' },
     },
     {
       style: {
         backgroundColor: theme.colors.primary.backgroundStrongDisabled,
+        border: theme.colors.neutral.borderDisabled,
       },
       variants: { disabled: true, prominence: 'strong', sentiment: 'primary' },
     },
