@@ -153,8 +153,8 @@ const fullSizeSeparator = style({ width: '100%' })
 const currentWrapper = style({
   alignItems: 'center',
   display: 'flex',
-  /* Same as button */
-  height: theme.sizing[600],
+  /* Same as medium button, the recommended size for the cta button in the component */
+  height: theme.sizing[500],
 })
 
 export const plansStyle = {

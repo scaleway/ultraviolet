@@ -13,7 +13,7 @@ type PlanHeaderProps = {
   currentPlanValue?: string
   plan: PlanType<string>
   disabled: boolean
-  locales?: Record<keyof typeof PlansLocales, string>
+  locales: Record<keyof typeof PlansLocales, string>
 }
 
 export const PlanHeader = ({
@@ -23,7 +23,7 @@ export const PlanHeader = ({
   currentPlanValue,
   plan,
   disabled,
-  locales = PlansLocales,
+  locales,
 }: PlanHeaderProps) => (
   <>
     {fieldName && onChange && !disabled ? (
