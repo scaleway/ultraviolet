@@ -14,10 +14,10 @@ export default {
   title: 'UI/Other/Key',
   parameters: {
     a11yStatus: {
-      perceivable: false,
-      operable: false,
-      understandable: false,
-      robust: false,
+      perceivable: true,
+      operable: true,
+      understandable: true,
+      robust: true,
     },
   },
 } as Meta<typeof Key>
