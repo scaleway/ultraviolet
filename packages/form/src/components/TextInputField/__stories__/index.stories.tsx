@@ -42,7 +42,7 @@ export default {
               <Text as="p" variant="bodyStrong">
                 Form values:
               </Text>
-              <Snippet prefix="lines">
+              <Snippet prefix="lines" initiallyExpanded>
                 {JSON.stringify(
                   {
                     errors,
@@ -57,7 +57,12 @@ export default {
                     isValidating,
                     isSubmitSuccessful,
                   },
-                  null,
+                  (_key, value) => {
+                    if (value instanceof HTMLElement) {
+                      return { name: value.getAttribute('name') }
+                    }
+                    return value
+                  },
                   1,
                 )}
               </Snippet>

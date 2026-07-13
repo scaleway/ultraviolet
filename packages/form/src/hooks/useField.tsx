@@ -1,11 +1,24 @@
-import { useState, useEffect, useMemo, FocusEvent, ChangeEvent } from 'react'
-import { FieldValues, FieldPath, useFormContext, PathValue, Path } from 'react-hook-form'
-import { useErrors } from '../providers'
+import { FocusEvent } from 'react'
+import { FieldValues, FieldPath, FieldPathValue, RefCallBack } from 'react-hook-form'
+import { useFormRegisterMode } from '../components/Form/registerMode'
 import { BaseFieldProps, MetaField } from '../types'
-import { validateRegex } from '../utils/validateRegex'
+import { useControlledField } from './useControlledField'
+import { useRegisterField } from './useRegisterField'
 
-function isChangeEvent(payload: unknown): payload is ChangeEvent<HTMLInputElement> {
-  return typeof payload === 'object' && payload !== null && 'type' in payload && (payload as Event).type === 'change'
+export type UseFieldProps<
+  TFieldValues extends FieldValues,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> & Omit<MetaField, 'label'> & { 'aria-label'?: string }
+
+export type FieldProps<
+  TFieldValues extends FieldValues,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+> = {
+  onBlur: (event: FocusEvent) => Promise<void>
+  onChange: (payload: unknown) => Promise<void>
+  value?: FieldPathValue<TFieldValues, TFieldName>
+  ref: RefCallBack
+  error: string | undefined
 }
 
 /**
@@ -14,90 +27,10 @@ function isChangeEvent(payload: unknown): payload is ChangeEvent<HTMLInputElemen
 export const useField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
->({
-  name,
-  label,
-  'aria-label': ariaLabel,
-  required,
-  minLength,
-  maxLength,
-  min,
-  max,
-  errorLabel,
-  shouldUnregister,
-  validate,
-  onBlur,
-  onChange,
-  regex,
-}: BaseFieldProps<TFieldValues, TFieldName> & Omit<MetaField, 'label'> & { 'aria-label'?: string }) => {
-  const { register, subscribe, getFieldState } = useFormContext<TFieldValues>()
-  const { getError } = useErrors()
-  const [error, setError] = useState<string>()
+>(
+  props: UseFieldProps<TFieldValues, TFieldName>,
+) => {
+  const registerField = useFormRegisterMode()
 
-  const errorMeta = useMemo(
-    () => ({
-      label: errorLabel ?? label ?? ariaLabel ?? name,
-      maxLength,
-      minLength,
-      min,
-      max,
-      regex,
-    }),
-    [errorLabel, label, ariaLabel, name, maxLength, minLength, min, max, regex],
-  )
-
-  useEffect(() => {
-    const unsubscribe = subscribe({
-      name: [name],
-      formState: {
-        errors: true,
-      },
-      callback: ({ values }) => {
-        const error = getError({ ...errorMeta, value: values[name] }, getFieldState(name).error)
-        setError(error)
-      },
-    })
-    return unsubscribe
-  }, [subscribe, getFieldState, name, errorMeta, getError])
-
-  const registeredField = register(name, {
-    maxLength,
-    minLength,
-    required,
-    min,
-    max,
-    validate: {
-      ...(regex ? { pattern: value => validateRegex(value, regex) } : {}),
-      ...validate,
-    },
-    shouldUnregister,
-  })
-
-  const fieldProps = {
-    name: registeredField.name,
-    onBlur: async (event: FocusEvent) => {
-      await registeredField.onBlur(event)
-      onBlur?.(event)
-    },
-    onChange: async (payload: unknown) => {
-      // some components (SelectInput) send an event, others (TextInput) send a value
-      const value = (isChangeEvent(payload) ? payload.target.value : payload) as PathValue<
-        TFieldValues,
-        Path<TFieldValues>
-      >
-      const event = isChangeEvent(payload) ? payload : { target: { value, name } }
-
-      await registeredField.onChange(event)
-      onChange?.(value)
-    },
-    ref: registeredField.ref,
-    minLength,
-    maxLength,
-    min,
-    max,
-    required,
-    error,
-  }
-
-  return { fieldProps, registeredField }
+  return registerField ? useRegisterField(props) : useControlledField(props)
 }

@@ -33,6 +33,7 @@ export const DemoForm = () => {
       }}
       methods={methods}
       onSubmit={handleSubmit}
+      _experimentalRegisterMode
     >
       <Stack gap="3" maxWidth="400px">
         <TextInputField<FormValues> name="name" minLength={3} label="Name" placeholder="Doe" required />
