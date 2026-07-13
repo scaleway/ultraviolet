@@ -34,8 +34,8 @@ export const useRegisterField = <
   const errorMeta = useMemo(
     () => ({
       label: errorLabel ?? label ?? ariaLabel ?? name,
-      maxLength,
       minLength,
+      maxLength,
       min,
       max,
       regex,
@@ -58,8 +58,8 @@ export const useRegisterField = <
   }, [subscribe, getFieldState, name, errorMeta, getError])
 
   const registeredField = register(name, {
-    maxLength,
     minLength,
+    maxLength,
     required,
     min,
     max,
@@ -77,11 +77,9 @@ export const useRegisterField = <
     },
     onChange: async (payload: unknown) => {
       // some components (SelectInput) send an event, others (TextInput) send a value
-      const value = (isChangeEvent(payload) ? payload.target.value : payload) as PathValue<
-        TFieldValues,
-        Path<TFieldValues>
-      >
-      const event = isChangeEvent(payload) ? payload : { target: { value, name } }
+      const isEvent = isChangeEvent(payload)
+      const value = (isEvent ? payload.target.value : payload) as PathValue<TFieldValues, Path<TFieldValues>>
+      const event = isEvent ? payload : { target: { value, name } }
 
       await registeredField.onChange(event)
       onChange?.(value)

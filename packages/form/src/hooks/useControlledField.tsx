@@ -32,8 +32,10 @@ export const useControlledField = <
   } = useController<TFieldValues, TFieldName>({
     name,
     rules: {
-      maxLength,
       minLength,
+      maxLength,
+      min,
+      max,
       required,
       validate: {
         ...(regex ? { pattern: value => validateRegex(value, regex) } : {}),
@@ -50,11 +52,9 @@ export const useControlledField = <
     },
     onChange: async (payload: unknown) => {
       // some components (SelectInput) send an event, others (TextInput) send a value
-      const value = (isChangeEvent(payload) ? payload.target.value : payload) as PathValue<
-        TFieldValues,
-        Path<TFieldValues>
-      >
-      const event = isChangeEvent(payload) ? payload : { target: { value, name } }
+      const isEvent = isChangeEvent(payload)
+      const value = (isEvent ? payload.target.value : payload) as PathValue<TFieldValues, Path<TFieldValues>>
+      const event = isEvent ? payload : { target: { value, name } }
 
       field.onChange(event)
       onChange?.(value)
@@ -64,8 +64,8 @@ export const useControlledField = <
     error: getError(
       {
         label: errorLabel ?? label ?? ariaLabel ?? name,
-        maxLength,
         minLength,
+        maxLength,
         min,
         max,
         regex,

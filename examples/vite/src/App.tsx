@@ -8,7 +8,7 @@ import centos from './assets/centos.svg'
 import debian from './assets/debian.svg'
 import ubuntu from './assets/ubuntu.svg'
 import { centosOptions, debianOptions, ubuntuOptions } from './constants'
-import { DemoForm } from './Form'
+import { DemoForm } from './DemoForm'
 
 export const App = () => {
   const [count, setCount] = useState(0)

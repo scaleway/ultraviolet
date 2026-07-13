@@ -12,9 +12,11 @@ type FormValues = {
 
 export const DemoForm = () => {
   const methods = useForm<FormValues>({
+    mode: 'onChange',
     defaultValues: {
-      // number: 5,
-      // text: 'test',
+      number: null,
+      name: 'Doe',
+      firstname: 'John',
     },
   })
 
@@ -30,6 +32,8 @@ export const DemoForm = () => {
         pattern: () => 'pattern',
         min: () => 'min',
         minLength: ({ minLength }) => `min ${minLength} characters`,
+        isInteger: () => 'should be an integer',
+        isNumber: () => 'should be a number',
       }}
       methods={methods}
       onSubmit={handleSubmit}
@@ -38,7 +42,13 @@ export const DemoForm = () => {
       <Stack gap="3" maxWidth="400px">
         <TextInputField<FormValues> name="name" minLength={3} label="Name" placeholder="Doe" required />
         <TextInputField<FormValues> name="firstname" minLength={3} label="FirstName" placeholder="John" required />
-        <NumberInputField<FormValues> label="Number Input" name="number" min={10} placeholder="Enter a number" />
+        <NumberInputField<FormValues>
+          label="Number Input"
+          name="number"
+          min={10}
+          placeholder="Enter a number"
+          step="1"
+        />
         <DateInputField<FormValues> label="Date Input" name="date" placeholder="YYYY-MM-DD" />
         <Button type="submit">Submit</Button>
       </Stack>
