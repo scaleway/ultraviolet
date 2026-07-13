@@ -173,6 +173,50 @@ describe('numberInputField', () => {
     })
   })
 
+  describe('with the _experimentalRegisterMode of the Form', () => {
+    it('should submit the form with correct values after typing', async () => {
+      const onSubmit = vi.fn()
+      const { resultForm } = renderWithForm(
+        <>
+          <NumberInputField label="Test" name="test" />
+          <Submit>Submit</Submit>
+        </>,
+        {
+          defaultValues: { test: 0 },
+          mode: 'onChange',
+        },
+        {
+          _experimentalRegisterMode: true,
+          errors: mockFormErrors,
+          onSubmit: onSubmit,
+        },
+      )
+
+      const input = screen.getByRole<HTMLInputElement>('spinbutton', { name: 'Test' })
+      const submitButton = screen.getByRole('button', { name: 'Submit' })
+
+      await waitFor(() => {
+        expect(resultForm.current.formState.isDirty).toBe(false)
+        expect(resultForm.current.formState.isValid).toBe(true)
+        expect(submitButton).toBeEnabled()
+      })
+
+      await userEvent.type(input, '12')
+      input.blur() // trigger onBlur which updates the value with "setValueAs"
+      expect(resultForm.current.getValues()).toStrictEqual({ test: 12 })
+
+      await userEvent.click(submitButton)
+      expect(onSubmit).toHaveBeenCalledExactlyOnceWith({ test: 12 })
+
+      await userEvent.type(input, '{backspace}')
+      expect(resultForm.current.getValues()).toStrictEqual({ test: 1 })
+      await userEvent.type(input, '{backspace}')
+      expect(resultForm.current.getValues()).toStrictEqual({ test: 0 })
+      await userEvent.type(input, '{backspace}')
+      expect(resultForm.current.getValues()).toStrictEqual({ test: null })
+    })
+  })
+
   describe('validators', () => {
     it('should pass validation for valid numbers', async () => {
       const onSubmit = vi.fn()

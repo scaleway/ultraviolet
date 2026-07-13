@@ -15,7 +15,7 @@ export const SelectInputField = <
   control,
   ...props
 }: BaseFieldProps<TFieldValues, TFieldName> & SelectInputFieldExtraProps) => {
-  const { fieldProps } = useField<TFieldValues, TFieldName>(props)
+  const { fieldProps } = useField(props)
 
   return <SelectInput {...props} {...fieldProps} />
 }

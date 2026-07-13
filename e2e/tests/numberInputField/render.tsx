@@ -2,6 +2,12 @@ import { useForm, Submit, Form, NumberInputField } from '@ultraviolet/form'
 import { Snippet, Stack } from '@ultraviolet/ui'
 import { mockErrors } from '../../mocks/mockErrors'
 
+const getQueryParam = (param: string, defaultValue: string): string | null => {
+  if (typeof window === 'undefined') return defaultValue
+  const params = new URLSearchParams(window.location.search)
+  return params.get(param) ?? defaultValue
+}
+
 const Render = () => {
   const methods = useForm<{ example: number }>({
     mode: 'onChange',
@@ -10,10 +16,12 @@ const Render = () => {
     },
   })
 
-  const { errors, isDirty, isValid } = methods.formState
+  const registerMode = getQueryParam('registerMode', 'false') != 'false'
+
+  const { errors, isDirty, isValid, isSubmitSuccessful } = methods.formState
 
   return (
-    <Form errors={mockErrors} methods={methods} onSubmit={console.log}>
+    <Form errors={mockErrors} methods={methods} onSubmit={console.log} _experimentalRegisterMode={registerMode}>
       <Stack gap={2}>
         <Stack gap={2} width="250px">
           <NumberInputField min={0} max={10} name="example" label="Test" />
@@ -27,6 +35,7 @@ const Render = () => {
               errors,
               isDirty,
               isValid,
+              isSubmitSuccessful,
             },
             (_key, value) => {
               if (value instanceof HTMLElement) {

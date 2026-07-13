@@ -1,182 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`numberInput > should click on min button 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <div
-      class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
-    >
-      <div>
-        <div
-          class="styles__1ce7gb6k styles_size_large__1ce7gb6l styles_state_default__1ce7gb6o"
-          data-controls="true"
-          data-disabled="false"
-          data-error="false"
-          data-size="large"
-          data-success="false"
-          data-unit="false"
-        >
-          <div
-            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
-            data-size="large"
-          >
-            <button
-              aria-label="minus"
-              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
-              type="button"
-            >
-              <svg
-                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-              >
-                <title>
-                  MinusIcon
-                </title>
-                <path
-                  d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh5d styles_justifyContent_space-between_xxsmall__x6hyh561"
-            style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
-          >
-            <input
-              class="styles__1ce7gb6c styles_controls_true__1ce7gb6e styles_size_large__1ce7gb6g"
-              id="_r_2l_"
-              inputmode="numeric"
-              max="100"
-              min="0"
-              placeholder=""
-              step="1"
-              type="number"
-              value="10"
-            />
-          </div>
-          <div
-            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
-            data-size="large"
-          >
-            <button
-              aria-label="plus"
-              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
-              type="button"
-            >
-              <svg
-                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-              >
-                <title>
-                  PlusIcon
-                </title>
-                <path
-                  d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`numberInput > should click on plus button with a step value 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <div
-      class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
-    >
-      <div>
-        <div
-          class="styles__1ce7gb6k styles_size_large__1ce7gb6l styles_state_default__1ce7gb6o"
-          data-controls="true"
-          data-disabled="false"
-          data-error="false"
-          data-size="large"
-          data-success="false"
-          data-unit="false"
-        >
-          <div
-            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
-            data-size="large"
-          >
-            <button
-              aria-label="minus"
-              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
-              type="button"
-            >
-              <svg
-                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-              >
-                <title>
-                  MinusIcon
-                </title>
-                <path
-                  d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh5d styles_justifyContent_space-between_xxsmall__x6hyh561"
-            style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
-          >
-            <input
-              class="styles__1ce7gb6c styles_controls_true__1ce7gb6e styles_size_large__1ce7gb6g"
-              id="_r_2q_"
-              inputmode="numeric"
-              max="100"
-              min="0"
-              placeholder=""
-              step="10"
-              type="number"
-            />
-          </div>
-          <div
-            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
-            data-size="large"
-          >
-            <button
-              aria-label="plus"
-              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
-              type="button"
-            >
-              <svg
-                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-              >
-                <title>
-                  PlusIcon
-                </title>
-                <path
-                  d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`numberInput > should click on plus button with a step value and an in-between value set 1`] = `
 <DocumentFragment>
   <div
@@ -232,184 +55,6 @@ exports[`numberInput > should click on plus button with a step value and an in-b
               placeholder=""
               step="10"
               type="number"
-            />
-          </div>
-          <div
-            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
-            data-size="large"
-          >
-            <button
-              aria-label="plus"
-              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
-              type="button"
-            >
-              <svg
-                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-              >
-                <title>
-                  PlusIcon
-                </title>
-                <path
-                  d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`numberInput > should focus input and modify value 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <div
-      class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
-    >
-      <div>
-        <div
-          class="styles__1ce7gb6k styles_size_large__1ce7gb6l styles_state_default__1ce7gb6o"
-          data-controls="true"
-          data-disabled="false"
-          data-error="false"
-          data-size="large"
-          data-success="false"
-          data-unit="false"
-        >
-          <div
-            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
-            data-size="large"
-          >
-            <button
-              aria-label="minus"
-              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
-              type="button"
-            >
-              <svg
-                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-              >
-                <title>
-                  MinusIcon
-                </title>
-                <path
-                  d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh5d styles_justifyContent_space-between_xxsmall__x6hyh561"
-            style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
-          >
-            <input
-              class="styles__1ce7gb6c styles_controls_true__1ce7gb6e styles_size_large__1ce7gb6g"
-              id="_r_2v_"
-              inputmode="numeric"
-              max="100"
-              min="10"
-              placeholder=""
-              step="10"
-              type="number"
-              value="1"
-            />
-          </div>
-          <div
-            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
-            data-size="large"
-          >
-            <button
-              aria-label="plus"
-              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
-              type="button"
-            >
-              <svg
-                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-              >
-                <title>
-                  PlusIcon
-                </title>
-                <path
-                  d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`numberInput > should focus input and modify value when value > max 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <div
-      class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
-    >
-      <div>
-        <div
-          class="styles__1ce7gb6k styles_size_large__1ce7gb6l styles_state_default__1ce7gb6o"
-          data-controls="true"
-          data-disabled="false"
-          data-error="false"
-          data-size="large"
-          data-success="false"
-          data-unit="false"
-        >
-          <div
-            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
-            data-size="large"
-          >
-            <button
-              aria-label="minus"
-              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
-              type="button"
-            >
-              <svg
-                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-              >
-                <title>
-                  MinusIcon
-                </title>
-                <path
-                  d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh5d styles_justifyContent_space-between_xxsmall__x6hyh561"
-            style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
-          >
-            <input
-              class="styles__1ce7gb6c styles_controls_true__1ce7gb6e styles_size_large__1ce7gb6g"
-              id="_r_34_"
-              inputmode="numeric"
-              max="5"
-              min="1"
-              placeholder=""
-              step="1"
-              type="number"
-              value="10"
             />
           </div>
           <div
@@ -1830,6 +1475,361 @@ exports[`numberInput > should renders correctly without controls 1`] = `
               placeholder=""
               type="number"
             />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`numberInput > should update the value on blur when it is above the max value 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+    >
+      <div>
+        <div
+          class="styles__1ce7gb6k styles_size_large__1ce7gb6l styles_state_default__1ce7gb6o"
+          data-controls="true"
+          data-disabled="false"
+          data-error="false"
+          data-size="large"
+          data-success="false"
+          data-unit="false"
+        >
+          <div
+            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
+            data-size="large"
+          >
+            <button
+              aria-label="minus"
+              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+              type="button"
+            >
+              <svg
+                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <title>
+                  MinusIcon
+                </title>
+                <path
+                  d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh5d styles_justifyContent_space-between_xxsmall__x6hyh561"
+            style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
+          >
+            <input
+              class="styles__1ce7gb6c styles_controls_true__1ce7gb6e styles_size_large__1ce7gb6g"
+              id="_r_34_"
+              inputmode="numeric"
+              max="5"
+              min="1"
+              placeholder=""
+              step="1"
+              type="number"
+              value="10"
+            />
+          </div>
+          <div
+            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
+            data-size="large"
+          >
+            <button
+              aria-label="plus"
+              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+              type="button"
+            >
+              <svg
+                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <title>
+                  PlusIcon
+                </title>
+                <path
+                  d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`numberInput > should update the value on blur when it is below the min value 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+    >
+      <div>
+        <div
+          class="styles__1ce7gb6k styles_size_large__1ce7gb6l styles_state_default__1ce7gb6o"
+          data-controls="true"
+          data-disabled="false"
+          data-error="false"
+          data-size="large"
+          data-success="false"
+          data-unit="false"
+        >
+          <div
+            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
+            data-size="large"
+          >
+            <button
+              aria-label="minus"
+              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+              type="button"
+            >
+              <svg
+                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <title>
+                  MinusIcon
+                </title>
+                <path
+                  d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh5d styles_justifyContent_space-between_xxsmall__x6hyh561"
+            style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
+          >
+            <input
+              class="styles__1ce7gb6c styles_controls_true__1ce7gb6e styles_size_large__1ce7gb6g"
+              id="_r_2v_"
+              inputmode="numeric"
+              max="100"
+              min="10"
+              placeholder=""
+              step="10"
+              type="number"
+              value="1"
+            />
+          </div>
+          <div
+            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
+            data-size="large"
+          >
+            <button
+              aria-label="plus"
+              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+              type="button"
+            >
+              <svg
+                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <title>
+                  PlusIcon
+                </title>
+                <path
+                  d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`numberInput > should update the value when clicking on the minus button 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+    >
+      <div>
+        <div
+          class="styles__1ce7gb6k styles_size_large__1ce7gb6l styles_state_default__1ce7gb6o"
+          data-controls="true"
+          data-disabled="false"
+          data-error="false"
+          data-size="large"
+          data-success="false"
+          data-unit="false"
+        >
+          <div
+            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
+            data-size="large"
+          >
+            <button
+              aria-label="minus"
+              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+              type="button"
+            >
+              <svg
+                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <title>
+                  MinusIcon
+                </title>
+                <path
+                  d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh5d styles_justifyContent_space-between_xxsmall__x6hyh561"
+            style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
+          >
+            <input
+              class="styles__1ce7gb6c styles_controls_true__1ce7gb6e styles_size_large__1ce7gb6g"
+              id="_r_2l_"
+              inputmode="numeric"
+              max="100"
+              min="0"
+              placeholder=""
+              step="1"
+              type="number"
+              value="10"
+            />
+          </div>
+          <div
+            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
+            data-size="large"
+          >
+            <button
+              aria-label="plus"
+              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+              type="button"
+            >
+              <svg
+                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <title>
+                  PlusIcon
+                </title>
+                <path
+                  d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`numberInput > should update the value when clicking on the plus button 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
+    >
+      <div>
+        <div
+          class="styles__1ce7gb6k styles_size_large__1ce7gb6l styles_state_default__1ce7gb6o"
+          data-controls="true"
+          data-disabled="false"
+          data-error="false"
+          data-size="large"
+          data-success="false"
+          data-unit="false"
+        >
+          <div
+            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
+            data-size="large"
+          >
+            <button
+              aria-label="minus"
+              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+              type="button"
+            >
+              <svg
+                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <title>
+                  MinusIcon
+                </title>
+                <path
+                  d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh5d styles_justifyContent_space-between_xxsmall__x6hyh561"
+            style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
+          >
+            <input
+              class="styles__1ce7gb6c styles_controls_true__1ce7gb6e styles_size_large__1ce7gb6g"
+              id="_r_2q_"
+              inputmode="numeric"
+              max="100"
+              min="0"
+              placeholder=""
+              step="10"
+              type="number"
+            />
+          </div>
+          <div
+            class="styles_large__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_column_xxsmall__toi52u2d styles_justifyContent_center_xxsmall__toi52u61"
+            data-size="large"
+          >
+            <button
+              aria-label="plus"
+              class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_small__e1wcoeg styles_variant_ghost__e1wcoej styles_undefined_compound_24__e1wcoe19"
+              type="button"
+            >
+              <svg
+                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <title>
+                  PlusIcon
+                </title>
+                <path
+                  d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>

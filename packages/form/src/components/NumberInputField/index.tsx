@@ -2,18 +2,12 @@
 
 import { NumberInput } from '@ultraviolet/ui'
 import { isNullOrUndefined } from '@ultraviolet/utils'
-import type { ComponentProps, FocusEvent } from 'react'
-import { useController } from 'react-hook-form'
+import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues } from 'react-hook-form'
-import { useErrors } from '../../providers'
+import { useField } from '../../hooks/useField'
 import type { BaseFieldProps } from '../../types'
 
 type NumberInputComponentProps = ComponentProps<typeof NumberInput>
-
-export type NumberInputFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = NumberInputComponentProps & BaseFieldProps<TFieldValues, TFieldName>
 
 export const NumberInputField = <
   TFieldValues extends FieldValues = FieldValues,
@@ -22,87 +16,36 @@ export const NumberInputField = <
   control,
   max = Number.MAX_SAFE_INTEGER,
   min = 0,
-  name,
-  onChange,
-  onBlur,
-  step,
-  label,
-  'aria-label': ariaLabel,
-  required,
-  shouldUnregister = false,
   validate,
-  errorLabel,
   ...props
-}: NumberInputFieldProps<TFieldValues, TFieldName>) => {
-  const { getError } = useErrors()
-  const {
-    field,
-    fieldState: { error },
-  } = useController<TFieldValues, TFieldName>({
-    control,
-    name,
-    rules: {
-      max,
-      min,
-      required,
-      validate: {
-        ...validate,
-        isNumber: (newValue: NumberInputComponentProps['value']) => {
-          if (!required && isNullOrUndefined(newValue)) {
-            return true
-          }
-          return Number.isFinite(newValue)
-        },
-        isInteger: (newValue: NumberInputComponentProps['value']) => {
-          if (!required && isNullOrUndefined(newValue)) {
-            return true
-          }
-
-          if (Number.isInteger(Number(step))) {
-            return Number.isInteger(newValue)
-          }
-
+}: BaseFieldProps<TFieldValues, TFieldName> & NumberInputComponentProps) => {
+  const { fieldProps } = useField({
+    ...props,
+    min,
+    max,
+    validate: {
+      ...validate,
+      isNumber: (newValue: NumberInputComponentProps['value']) => {
+        if (!props.required && isNullOrUndefined(newValue)) {
           return true
-        },
+        }
+        return Number.isFinite(newValue)
+      },
+      isInteger: (newValue: NumberInputComponentProps['value']) => {
+        if (!props.required && isNullOrUndefined(newValue)) {
+          return true
+        }
+
+        if (Number.isInteger(Number(props.step))) {
+          return Number.isInteger(newValue)
+        }
+
+        return true
       },
     },
-
-    shouldUnregister,
   })
 
-  const errorField = getError(
-    {
-      label: errorLabel ?? label ?? ariaLabel ?? name,
-      max,
-      min,
-      value: field.value,
-    },
-    error,
-  )
-
-  return (
-    <NumberInput
-      {...props}
-      aria-label={ariaLabel}
-      error={errorField}
-      label={label}
-      max={max}
-      min={min}
-      name={field.name}
-      onBlur={(event: FocusEvent<HTMLInputElement>) => {
-        field.onBlur()
-        onBlur?.(event)
-      }}
-      onChange={newValue => {
-        // React hook form doesnt allow undefined values after definition https://react-hook-form.com/docs/usecontroller/controller (that make sense)
-        field.onChange(newValue)
-        onChange?.(newValue)
-      }}
-      required={required}
-      step={step}
-      value={field.value}
-    />
-  )
+  return <NumberInput {...props} min={min} max={max} {...fieldProps} />
 }
 
 NumberInputField.displayName = 'NumberInputField'

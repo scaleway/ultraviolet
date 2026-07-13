@@ -6,16 +6,7 @@ import { Stack } from '../../Stack'
 import type { ControlsProps } from '../types'
 import { numberInputStyle } from '../styles.css'
 
-export const Controls = ({
-  controls,
-  direction,
-  size,
-  localRef,
-  max,
-  min,
-  onChange,
-  isDisabledOrReadOnly,
-}: ControlsProps) => {
+export const Controls = ({ controls, direction, size, localRef, max, min, isDisabledOrReadOnly }: ControlsProps) => {
   const isUp = direction === 'up'
   const isPlusDisabled = useCallback(() => {
     if (!localRef?.current?.value || localRef?.current?.value === '') {
@@ -53,8 +44,8 @@ export const Controls = ({
     } else if (direction === 'down') {
       localRef.current?.stepDown()
     }
-    onChange?.(Number.parseFloat(localRef.current?.value ?? '') ?? min)
-  }, [localRef, min, onChange, direction])
+    localRef.current?.dispatchEvent(new Event('input', { bubbles: true, cancelable: false }))
+  }, [localRef, direction])
 
   const isDisabled = isUp ? isPlusDisabled() : isMinusDisabled()
 
