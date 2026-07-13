@@ -2,11 +2,9 @@
 
 import { TextInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
-import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
-import { validateRegex } from '../../utils/validateRegex'
+import { useField } from './useField'
 
 type TextInputFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
   TFieldValues,
@@ -23,73 +21,26 @@ export const TextInputField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  regex: regexes,
   onChange,
-  label,
-  required = false,
-  name,
   onBlur,
-  minLength,
-  maxLength,
-  'aria-label': ariaLabel,
-  shouldUnregister,
-  validate,
   control,
-  errorLabel,
   ...props
 }: TextInputFieldProps<TFieldValues, TFieldName>) => {
-  const { getError } = useErrors()
-
-  const {
-    field,
-    fieldState: { error },
-  } = useController<TFieldValues, TFieldName>({
-    control,
-    name,
-    rules: {
-      maxLength,
-      minLength,
-      required,
-      validate: {
-        ...(regexes
-          ? {
-              pattern: value => validateRegex(value, regexes),
-            }
-          : {}),
-        ...validate,
-      },
-    },
-    shouldUnregister,
-  })
+  const { fieldProps, error } = useField(props)
 
   return (
     <TextInput
       {...props}
-      aria-label={ariaLabel}
-      error={getError(
-        {
-          label: errorLabel ?? label ?? ariaLabel ?? name,
-          maxLength,
-          minLength,
-          regex: regexes,
-          value: field.value,
-        },
-        error,
-      )}
-      label={label}
-      maxLength={maxLength}
-      minLength={minLength}
-      name={name}
+      {...fieldProps}
+      error={error}
       onBlur={event => {
         onBlur?.(event)
-        field.onBlur()
+        fieldProps.onBlur(event)
       }}
       onChange={event => {
-        field.onChange(event)
+        fieldProps.onChange(event)
         onChange?.(event.target.value as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
-      required={required}
-      value={field.value ?? ''}
     />
   )
 }
