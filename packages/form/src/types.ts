@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { FocusEvent, ReactNode } from 'react'
 import type {
   Control,
   FieldError,
@@ -56,6 +56,7 @@ export type BaseFieldProps<
   label?: string
   value?: PathValue<TFieldValues, Path<TFieldValues>>
   onChange?: (value?: PathValue<TFieldValues, TFieldName>) => void
+  onBlur?: (event?: FocusEvent) => void
   shouldUnregister?: UseControllerProps<TFieldValues, TFieldName>['shouldUnregister']
   control?: Control<TFieldValues>
   errorLabel?: string

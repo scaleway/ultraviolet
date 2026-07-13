@@ -1,8 +1,12 @@
-import { useState, useEffect, useMemo } from 'react'
-import { FieldValues, FieldPath, useFormContext } from 'react-hook-form'
-import { useErrors } from '../../providers'
-import { BaseFieldProps, MetaField } from '../../types'
-import { validateRegex } from '../../utils/validateRegex'
+import { useState, useEffect, useMemo, FocusEvent, ChangeEvent } from 'react'
+import { FieldValues, FieldPath, useFormContext, PathValue, Path } from 'react-hook-form'
+import { useErrors } from '../providers'
+import { BaseFieldProps, MetaField } from '../types'
+import { validateRegex } from '../utils/validateRegex'
+
+function isChangeEvent(payload: unknown): payload is ChangeEvent<HTMLInputElement> {
+  return typeof payload === 'object' && payload !== null && 'type' in payload && (payload as Event).type === 'change'
+}
 
 /**
  * Hook to use in Field components to centralize the logic linked to React-Hook-Form and other common field props.
@@ -22,6 +26,8 @@ export const useField = <
   errorLabel,
   shouldUnregister,
   validate,
+  onBlur,
+  onChange,
   regex,
 }: BaseFieldProps<TFieldValues, TFieldName> & Omit<MetaField, 'label'> & { 'aria-label'?: string }) => {
   const { register, subscribe, getFieldState } = useFormContext<TFieldValues>()
@@ -42,6 +48,7 @@ export const useField = <
 
   useEffect(() => {
     const unsubscribe = subscribe({
+      name: [name],
       formState: {
         errors: true,
       },
@@ -68,15 +75,29 @@ export const useField = <
 
   const fieldProps = {
     name: registeredField.name,
-    onBlur: registeredField.onBlur,
-    onChange: registeredField.onChange,
+    onBlur: async (event: FocusEvent) => {
+      await registeredField.onBlur(event)
+      onBlur?.(event)
+    },
+    onChange: async (payload: unknown) => {
+      // some components (SelectInput) send an event, others (TextInput) send a value
+      const value = (isChangeEvent(payload) ? payload.target.value : payload) as PathValue<
+        TFieldValues,
+        Path<TFieldValues>
+      >
+      const event = isChangeEvent(payload) ? payload : { target: { value, name } }
+
+      await registeredField.onChange(event)
+      onChange?.(value)
+    },
     ref: registeredField.ref,
     minLength,
     maxLength,
     min,
     max,
     required,
+    error,
   }
 
-  return { error, fieldProps }
+  return { fieldProps, registeredField }
 }
