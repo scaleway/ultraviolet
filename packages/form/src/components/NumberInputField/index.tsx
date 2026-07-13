@@ -1,6 +1,7 @@
 'use client'
 
 import { NumberInput } from '@ultraviolet/ui'
+import { isNullOrUndefined } from '@ultraviolet/utils'
 import type { ComponentProps, FocusEvent } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues } from 'react-hook-form'
@@ -46,19 +47,18 @@ export const NumberInputField = <
       required,
       validate: {
         ...validate,
-        // isNumber will never happen with input[type=number] as onChange is never trigger, but can be trigger if the defaultValue is NaN or null or string
         isNumber: (newValue: NumberInputComponentProps['value']) => {
-          if (!required && newValue === undefined) {
+          if (!required && isNullOrUndefined(newValue)) {
             return true
           }
           return Number.isFinite(newValue)
         },
         isInteger: (newValue: NumberInputComponentProps['value']) => {
-          if (!required && newValue === undefined) {
+          if (!required && isNullOrUndefined(newValue)) {
             return true
           }
 
-          if (Number.isInteger(step)) {
+          if (Number.isInteger(Number(step))) {
             return Number.isInteger(newValue)
           }
 
