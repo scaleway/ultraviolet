@@ -10,13 +10,23 @@ type FormValues = {
   date: Date | null
 }
 
+const mockFormErrors: import('@ultraviolet/form').FormErrors = {
+  required: () => 'field required',
+  pattern: () => 'pattern',
+  min: () => 'min',
+  max: () => 'max',
+  minLength: ({ minLength }) => `min ${minLength} characters`,
+  maxLength: ({ maxLength }) => `max ${maxLength} characters`,
+  isInteger: () => 'should be an integer',
+  isNumber: () => 'should be a number',
+  minDate: () => 'min date',
+  maxDate: () => 'max date',
+}
 export const DemoForm = () => {
   const methods = useForm<FormValues>({
     mode: 'onChange',
     defaultValues: {
       number: null,
-      name: 'Doe',
-      firstname: 'John',
     },
   })
 
@@ -25,20 +35,7 @@ export const DemoForm = () => {
   }
 
   return (
-    <Form
-      // @ts-expect-error we don't need all errors here
-      errors={{
-        required: () => 'field required',
-        pattern: () => 'pattern',
-        min: () => 'min',
-        minLength: ({ minLength }) => `min ${minLength} characters`,
-        isInteger: () => 'should be an integer',
-        isNumber: () => 'should be a number',
-      }}
-      methods={methods}
-      onSubmit={handleSubmit}
-      _experimentalRegisterMode
-    >
+    <Form errors={mockFormErrors} methods={methods} onSubmit={handleSubmit} _experimentalRegisterMode>
       <Stack gap="3" maxWidth="400px">
         <TextInputField<FormValues> name="name" minLength={3} label="Name" placeholder="Doe" required />
         <TextInputField<FormValues> name="firstname" minLength={3} label="FirstName" placeholder="John" required />
