@@ -115,7 +115,7 @@
   "lint-staged": {
     "*.(j|t|mj)s?(x)": [
       "pnpm run format",
-      "pnpm run lint"
+      "pnpm run lint --no-error-on-unmatched-pattern"
     ],
     "packages/illustrations/**/*.svg": [
       "pnpm run svg"

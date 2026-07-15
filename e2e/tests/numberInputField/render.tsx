@@ -15,12 +15,7 @@ const Render = () => {
   return (
     <Form errors={mockErrors} methods={methods} onSubmit={console.log}>
       <Stack gap={2}>
-        <Stack
-          gap={2}
-          style={{
-            width: '250px',
-          }}
-        >
+        <Stack gap={2} width="250px">
           <NumberInputField min={0} max={10} name="example" label="Test" />
           <Submit>Submit</Submit>
         </Stack>
