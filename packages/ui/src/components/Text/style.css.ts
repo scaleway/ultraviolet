@@ -9,11 +9,7 @@ import { textVars } from './variables.css'
 
 type ProminenceProps = keyof typeof PROMINENCES
 
-const isStronger = (prominence: ProminenceProps): prominence is 'stronger' => prominence === 'stronger'
-
 const isStrong = (prominence: ProminenceProps): prominence is 'strong' => prominence === 'strong'
-
-const isWeak = (prominence: ProminenceProps): prominence is 'weak' => prominence === 'weak'
 
 const sentiments = [
   'primary',
@@ -64,13 +60,12 @@ function generateStyles(prominence: ProminenceProps, disabled: boolean, sentimen
   }
 
   /*
-   * Actually (weak | stronger | strong) prominence are only define inside neutral sentiment.
+   * Currently "weak" and "stronger" prominence are only defined inside neutral sentiment.
    * We should ask to define theses var inside the theme instead
    */
   if (sentiment) {
-    if (isWeak(prominence) || isStronger(prominence) || isStrong(prominence)) {
-      const definedProminence = prominence === 'strong' ? capitalize(PROMINENCES[prominence]) : ''
-      const text = `text${definedProminence}${disabled ? 'Disabled' : ''}` as const
+    if (isStrong(prominence)) {
+      const text = `textStrong${disabled ? 'Disabled' : ''}` as const
 
       return { color: theme.colors[sentiment][text] }
     }
