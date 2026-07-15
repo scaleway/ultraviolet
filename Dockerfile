@@ -7,7 +7,7 @@ ENV TURBO_TOKEN ${TURBO_TOKEN}
 
 COPY . .
 
-RUN npm install -g corepack@0.31.0
+RUN npm install -g corepack@0.35.0
 RUN corepack enable
 RUN pnpm install --frozen-lockfile
 RUN pnpm turbo run build:storybook
