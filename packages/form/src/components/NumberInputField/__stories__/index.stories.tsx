@@ -9,11 +9,11 @@ export default {
   decorators: [
     ChildStory => {
       const methods = useForm<{
-        value: number
+        value: number | string
       }>({
-        mode: 'all',
+        mode: 'onChange',
         defaultValues: {
-          value: 0,
+          value: 5,
         },
       })
       const {
@@ -31,7 +31,7 @@ export default {
       } = methods.formState
 
       return (
-        <Form errors={mockErrors} methods={methods} onSubmit={console.debug}>
+        <Form errors={mockErrors} methods={methods} onSubmit={console.log}>
           <Stack gap={2}>
             <Stack
               gap={2}
@@ -47,7 +47,7 @@ export default {
                 Form input values:
               </Text>
               <Snippet initiallyExpanded prefix="lines">
-                {JSON.stringify(methods.watch(), null, 1)}
+                {JSON.stringify(methods.watch(), (_key, value) => (Number.isNaN(value) ? 'NaN' : value), 1)}
               </Snippet>
             </Stack>
             <Stack gap={1}>

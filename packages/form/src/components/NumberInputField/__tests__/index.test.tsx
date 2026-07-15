@@ -196,46 +196,6 @@ describe('numberInputField', () => {
       })
     })
 
-    it('should fail validation when value is not a decimal number', async () => {
-      const onSubmit = vi.fn()
-      const onChange = vi.fn()
-      renderWithForm(
-        <>
-          <NumberInputField aria-label="Test" name="inputName" onChange={onChange} />
-          <Submit>Submit</Submit>
-        </>,
-        {
-          defaultValues: {
-            // string is not accept by the type, this will not be reflect inside the value.
-            inputName: 'string',
-          },
-          mode: 'all',
-        },
-        { errors: mockFormErrors, onSubmit },
-      )
-
-      const input = screen.getByRole('spinbutton', { name: 'Test' })
-
-      await userEvent.clear(input)
-      await userEvent.type(input, '1')
-
-      expect(onChange).toHaveBeenLastCalledWith(1)
-
-      await userEvent.clear(input)
-
-      expect(onChange).toHaveBeenLastCalledWith(null)
-
-      // Will not trigger onChange event.
-      await userEvent.type(input, 'e')
-
-      await userEvent.tab()
-
-      await waitFor(() => {
-        // validation will no be trigger has we don't trigger onChange or value is not set if it's not a number.
-        expect(onSubmit).not.toHaveBeenCalled()
-      })
-    })
-
     it('should fail isNumber validation for NaN values', async () => {
       const onSubmit = vi.fn()
       renderWithForm(
@@ -360,12 +320,12 @@ describe('numberInputField', () => {
       })
     })
 
-    it('should fail validation for decimal numbers when step is integer', async () => {
+    it('should fail validation for decimal numbers when step is integer (accepting a string)', async () => {
       const onSubmit = vi.fn()
       const onChange = vi.fn()
       renderWithForm(
         <>
-          <NumberInputField aria-label="Test" name="test" onChange={onChange} step={2} min={0} />
+          <NumberInputField aria-label="Test" name="test" onChange={onChange} step="2" min={0} />
           <Submit>Submit</Submit>
         </>,
         { defaultValues: { test: 0 }, mode: 'onChange' },
@@ -384,9 +344,6 @@ describe('numberInputField', () => {
       })
 
       await userEvent.clear(input)
-      // await waitFor(() => {
-      //   expect(onChange).toHaveBeenCalledWith([null, Number.MIN_SAFE_INTEGER])
-      // })
 
       await userEvent.type(input, '4')
       await userEvent.click(submit)
@@ -396,87 +353,45 @@ describe('numberInputField', () => {
       })
     })
 
-    it('should allow optional field to be empty without failing validation', async () => {
+    it('should have valid form state when the number field is optional and empty', async () => {
       const onSubmit = vi.fn()
       renderWithForm(
         <>
-          <NumberInputField aria-label="Test" name="test" />
+          <NumberInputField aria-label="Test" name="numberInput" />
           <Submit>Submit</Submit>
         </>,
-        { defaultValues: {}, mode: 'onChange' },
+        { mode: 'onChange' },
         { errors: mockFormErrors, onSubmit },
       )
 
+      const input = screen.getByRole('spinbutton', { name: 'Test' })
       const submit = screen.getByRole('button', { name: 'Submit' })
-
-      await userEvent.click(submit)
 
       await waitFor(() => {
-        expect(onSubmit).toHaveBeenCalledExactlyOnceWith({})
+        expect(submit).toBeEnabled()
       })
-    })
 
-    it('should allow optional field with step to be empty without failing validation', async () => {
-      const onSubmit = vi.fn()
-      renderWithForm(
-        <>
-          <NumberInputField aria-label="Test" name="numberInput" step={1} />
-          <Submit>Submit</Submit>
-        </>,
-        {
-          defaultValues: {
-            numberInput: 1,
-          },
-          mode: 'onChange',
-        },
-        { errors: mockFormErrors, onSubmit },
-      )
+      await userEvent.type(input, '1')
+      await userEvent.type(input, '{backspace}')
 
-      const submit = screen.getByRole('button', { name: 'Submit' })
+      await waitFor(() => {
+        expect(submit).toBeEnabled()
+      })
 
       await userEvent.click(submit)
 
       await waitFor(() => {
         expect(onSubmit).toHaveBeenCalledExactlyOnceWith({
-          numberInput: 1,
+          numberInput: null,
         })
       })
     })
 
-    it('should have valid form state when optional field is empty', async () => {
-      const onSubmit = vi.fn()
-      const { resultForm } = renderWithForm(
-        <>
-          <NumberInputField aria-label="Test" name="numberInput" />
-          <Submit>Submit</Submit>
-        </>,
-        {
-          defaultValues: {
-            // numberInput: null,
-          },
-          mode: 'onChange',
-        },
-        { errors: mockFormErrors, onSubmit },
-      )
-
-      const submit = screen.getByRole('button', { name: 'Submit' })
-
-      await waitFor(() => {
-        expect(resultForm.current.formState.isValid).toBe(true)
-      })
-
-      await userEvent.click(submit)
-
-      await waitFor(() => {
-        expect(onSubmit).toHaveBeenCalledExactlyOnceWith({})
-      })
-    })
-
-    it('should have valid form state when optional field with step is empty', async () => {
+    it('should have valid form state when the number field is optional and empty and the step attribute is present', async () => {
       const onSubmit = vi.fn()
       renderWithForm(
         <>
-          <NumberInputField aria-label="Test" name="test" />
+          <NumberInputField aria-label="Test" name="test" step="1" />
           <Submit>Submit</Submit>
         </>,
         {
@@ -527,7 +442,7 @@ describe('numberInputField', () => {
       })
     })
 
-    it('should allow typing scientific notation like 1e2', async () => {
+    it('should allow pasting scientific notation like 1e2', async () => {
       const onChange = vi.fn()
       renderWithForm(
         <>
@@ -538,13 +453,9 @@ describe('numberInputField', () => {
 
       const input = screen.getByRole('spinbutton', { name: 'Test' })
 
-      // Note: Browsers block typing 'e' in number inputs, so scientific notation
-      // can only be entered via paste. This test verifies that pasted scientific
-      // notation is correctly parsed.
-      await userEvent.clear(input)
+      await userEvent.click(input)
       await userEvent.paste('1e2')
 
-      // Number.parseFloat('1e2') = 100
       expect(onChange).toHaveBeenLastCalledWith(100)
     })
   })

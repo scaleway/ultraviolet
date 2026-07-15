@@ -145,25 +145,11 @@ export const NumberInput = forwardRef(
                     onBlur?.(event)
                   }}
                   onChange={
-                    // ⚠️  LIMITATION: Scientific notation (e.g., "1e2") cannot be typed character-by-character
-                    // because browsers block the 'e' character in number inputs. When a user tries to type "1e2":
-                    // - Typing "1" works fine
-                    // - Typing "e" is blocked by the browser and the value stays at "1" as we control the value and the onChange is not trigger if the value inside the input is "1e", this only show inside the shadow dom
-                    // - The user can never complete "1e2" by typing
-                    //
-                    // Workarounds:
-                    // - Pasting "1e2" works correctly (Number.parseFloat handles scientific notation)
-                    // - Programmatic value setting works (e.g., form.setValue('field', 1e2))
-                    //
                     onChange
                       ? event => {
-                          const { target } = event
-                          const isNan = Number.isNaN(target.valueAsNumber)
-                          if (isNan) {
-                            onChange(null)
-                          } else {
-                            onChange(target.valueAsNumber)
-                          }
+                          const isEmpty = event.target.value === '' && !event.target.validity.badInput
+
+                          onChange(isEmpty ? null : event.target.valueAsNumber)
                         }
                       : undefined
                   }
@@ -175,7 +161,7 @@ export const NumberInput = forwardRef(
                   step={step}
                   style={style}
                   type="number"
-                  value={value?.toString()}
+                  value={value === null || Number.isNaN(value) ? '' : value}
                 />
                 <Unit controls={controls} disabled={disabled} readOnly={readOnly} size={size} unit={unit} />
               </Row>
