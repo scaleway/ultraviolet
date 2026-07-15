@@ -143,11 +143,22 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.11.0",
+      "onFail": "download"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "24.18.x || 26.x",
+      "onFail": "error"
+    }
+  },
   "engines": {
     "node": ">=20.x",
     "pnpm": ">=10.x"
   },
-  "packageManager": "pnpm@11.11.0",
   "manypkg": {
     "ignoredRules": [
       "INTERNAL_MISMATCH"
