@@ -14,6 +14,11 @@ import { Unit } from './components/Unit'
 import { NumberInputProps } from './types'
 import { numberInputStyle } from './styles.css'
 
+const getValueAsNumber = (input: HTMLInputElement) => {
+  const isEmpty = input.value === '' && !input.validity.badInput
+  return isEmpty ? null : input.valueAsNumber
+}
+
 /**
  * NumberInput component is used to increment / decrement a number value by clicking on + / - buttons or
  * by typing into input. If the value is out of the min / max range, the input will automatically be the min / max value on blur.
@@ -53,8 +58,32 @@ export const NumberInput = forwardRef(
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
     const localRef = useRef<HTMLInputElement>(null)
-    useImperativeHandle(ref, () => localRef.current!)
 
+    /**
+     * Expose a custom ref for react-hook-form which reads the `value` prop of the native input when using the `register` function.
+     * We return a modified `value` to differentiate empty (null) from invalid (NaN), like we do in the `onChange` callback.
+     */
+    useImperativeHandle(ref, () => {
+      if (!localRef.current) return null!
+
+      return new Proxy(localRef.current, {
+        get(target, prop: keyof HTMLInputElement) {
+          if (prop === 'value') {
+            return getValueAsNumber(target)
+          }
+
+          const value = Reflect.get(target, prop)
+          return typeof value === 'function' ? value.bind(target) : value
+        },
+        set(target, prop, newValue) {
+          if (prop === 'value' && Number.isNaN(newValue)) {
+            // do nothing otherwise the input is emptied when typing an invalid number like "1-"
+            return true
+          }
+          return Reflect.set(target, prop, newValue)
+        },
+      })
+    })
     const uniqueId = useId()
     const helperId = useId()
     const localId = id ?? uniqueId
@@ -134,22 +163,22 @@ export const NumberInput = forwardRef(
                   inputMode={Number.isInteger(step) ? 'numeric' : 'decimal'}
                   onBlur={event => {
                     const { valueAsNumber } = event.target
-                    if (valueAsNumber) {
+                    if (valueAsNumber && localRef.current) {
                       if (!isNullOrUndefined(max) && valueAsNumber > max) {
-                        onChange?.(max)
+                        localRef.current.valueAsNumber = max
                       }
                       if (!isNullOrUndefined(min) && valueAsNumber < min) {
-                        onChange?.(min)
+                        localRef.current.valueAsNumber = min
                       }
+                      localRef.current.dispatchEvent(new Event('input', { bubbles: true, cancelable: false }))
                     }
+
                     onBlur?.(event)
                   }}
                   onChange={
                     onChange
                       ? event => {
-                          const isEmpty = event.target.value === '' && !event.target.validity.badInput
-
-                          onChange(isEmpty ? null : event.target.valueAsNumber)
+                          onChange(getValueAsNumber(event.target))
                         }
                       : undefined
                   }
