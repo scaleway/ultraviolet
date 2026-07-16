@@ -7,7 +7,6 @@ const normalize = () => `
   ${modernNormalize}
 
   html {
-    font-size: 16px;
     line-height: 1.5;
     -webkit-tap-highlight-color: transparent;
     margin: 0;
