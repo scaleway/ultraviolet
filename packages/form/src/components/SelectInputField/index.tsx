@@ -1,75 +1,23 @@
 'use client'
 
 import { SelectInput } from '@ultraviolet/ui'
-import { useCallback } from 'react'
 import type { ComponentProps } from 'react'
-import { useController } from 'react-hook-form'
-import type { FieldPath, FieldValues, PathValue } from 'react-hook-form'
-import { useErrors } from '../../providers'
+import type { FieldPath, FieldValues } from 'react-hook-form'
+import { useField } from '../../hooks/useField'
 import type { BaseFieldProps } from '../../types'
 
-type SelectInputFieldProps<
-  TFieldValues extends FieldValues,
-  TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> & Omit<ComponentProps<typeof SelectInput>, 'value' | 'onChange'>
+type SelectInputFieldExtraProps = Omit<ComponentProps<typeof SelectInput>, 'value' | 'onChange'>
 
 export const SelectInputField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  label = '',
-  onBlur,
-  required,
-  name,
-  'aria-label': ariaLabel,
-  shouldUnregister = false,
   control,
-  validate,
-  onChange,
-  multiselect,
-  errorLabel,
   ...props
-}: SelectInputFieldProps<TFieldValues, TFieldName>) => {
-  const {
-    field,
-    fieldState: { error },
-  } = useController<TFieldValues, TFieldName>({
-    control,
-    name,
-    rules: {
-      required,
-      validate,
-    },
-    shouldUnregister,
-  })
+}: BaseFieldProps<TFieldValues, TFieldName> & SelectInputFieldExtraProps) => {
+  const { fieldProps } = useField<TFieldValues, TFieldName>(props)
 
-  const { getError } = useErrors()
-
-  const handleChange: ComponentProps<typeof SelectInput<typeof multiselect>>['onChange'] = useCallback(
-    (value: string | string[]) => {
-      onChange?.(value as PathValue<TFieldValues, TFieldName>)
-      field.onChange(value)
-    },
-    [onChange, field],
-  )
-
-  return (
-    <SelectInput
-      aria-label={ariaLabel}
-      error={getError({ label: errorLabel ?? label ?? ariaLabel ?? name }, error)}
-      label={label}
-      multiselect={multiselect}
-      name={field.name}
-      onBlur={event => {
-        field.onBlur()
-        onBlur?.(event)
-      }}
-      onChange={handleChange}
-      required={required}
-      value={field.value as string | string[]}
-      {...props}
-    />
-  )
+  return <SelectInput {...props} {...fieldProps} />
 }
 
 SelectInputField.displayName = 'SelectInputField'

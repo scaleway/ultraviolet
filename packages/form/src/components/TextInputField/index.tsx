@@ -2,96 +2,23 @@
 
 import { TextInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { useController } from 'react-hook-form'
-import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
-import { useErrors } from '../../providers'
+import type { FieldPath, FieldValues } from 'react-hook-form'
+import { useField } from '../../hooks/useField'
 import type { BaseFieldProps } from '../../types'
-import { validateRegex } from '../../utils/validateRegex'
 
-type TextInputFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
-  TFieldValues,
-  TFieldName
-> &
-  Omit<ComponentProps<typeof TextInput>, 'value' | 'error' | 'name' | 'onChange'> & {
-    regex?: (RegExp | RegExp[])[]
-  }
+type TextInputFieldExtraProps = Omit<ComponentProps<typeof TextInput>, 'value' | 'error' | 'name' | 'onChange'> & {
+  regex?: (RegExp | RegExp[])[]
+}
 
-/**
- * This component offers a form field based on Ultraviolet UI TextInput component
- */
 export const TextInputField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
->({
-  regex: regexes,
-  onChange,
-  label,
-  required = false,
-  name,
-  onBlur,
-  minLength,
-  maxLength,
-  'aria-label': ariaLabel,
-  shouldUnregister,
-  validate,
-  control,
-  errorLabel,
-  ...props
-}: TextInputFieldProps<TFieldValues, TFieldName>) => {
-  const { getError } = useErrors()
+>(
+  props: BaseFieldProps<TFieldValues, TFieldName> & TextInputFieldExtraProps,
+) => {
+  const { fieldProps } = useField(props)
 
-  const {
-    field,
-    fieldState: { error },
-  } = useController<TFieldValues, TFieldName>({
-    control,
-    name,
-    rules: {
-      maxLength,
-      minLength,
-      required,
-      validate: {
-        ...(regexes
-          ? {
-              pattern: value => validateRegex(value, regexes),
-            }
-          : {}),
-        ...validate,
-      },
-    },
-    shouldUnregister,
-  })
-
-  return (
-    <TextInput
-      {...props}
-      aria-label={ariaLabel}
-      error={getError(
-        {
-          label: errorLabel ?? label ?? ariaLabel ?? name,
-          maxLength,
-          minLength,
-          regex: regexes,
-          value: field.value,
-        },
-        error,
-      )}
-      label={label}
-      maxLength={maxLength}
-      minLength={minLength}
-      name={name}
-      onBlur={event => {
-        onBlur?.(event)
-        field.onBlur()
-      }}
-      onChange={event => {
-        field.onChange(event)
-        onChange?.(event.target.value as PathValue<TFieldValues, Path<TFieldValues>>)
-      }}
-      required={required}
-      value={field.value ?? ''}
-    />
-  )
+  return <TextInput {...props} {...fieldProps} />
 }
 
 TextInputField.displayName = 'TextInputField'
