@@ -2,7 +2,7 @@
 //
 import { appendFileSync, readdirSync, statSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
-import { updateDynamicIllustrations, updateWireIllustrations } from './update-components'
+import { updateDynamicIllustrations, updateWireIllustrations } from './update-components.ts'
 
 const ILLUSTRATIONS_DIR = 'packages/illustrations/src/assets'
 const BASE_URL = 'https://assets.scaleway.com/illustrations'

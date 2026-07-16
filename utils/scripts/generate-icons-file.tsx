@@ -3,7 +3,7 @@
 
 import { existsSync, promises } from 'node:fs'
 import path from 'node:path'
-import { DEPRECATED_ICONS } from '../../packages/icons/src/deprecatedIcons'
+import { DEPRECATED_ICONS } from '../../packages/icons/src/deprecatedIcons.ts'
 
 const COMPONENTS = [
   {
@@ -113,13 +113,13 @@ ${svgDark ? `import { useTheme } from '@ultraviolet/themes'` : ''}
       ? `{
   const { theme } = useTheme()
   const isLight = theme === "light"
-  
+
   return (
       <Icon {...props} title="${logoName}">{isLight ? <>${svg}</> : <>${svgDark}</>}</Icon>
   )}`
       : `(<Icon {...props} title="${logoName}">${svg}</Icon>)`
   }
-  
+
   ${logoName}.displayName = '${logoName}'
 `
 }

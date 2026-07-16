@@ -2,9 +2,9 @@
 // oxlint-disable import/no-nodejs-modules
 
 import { writeFile, writeFileSync } from 'node:fs'
-import { header, TOKENS_URL } from './constants'
-import { generateThemeCss } from './create-css-variables'
-import { generatePalette } from './generatePalette'
+import { header, TOKENS_URL } from './constants.ts'
+import { generateThemeCss } from './create-css-variables.ts'
+import { generatePalette } from './generatePalette.ts'
 
 export type JsonType = Record<string, object | string>
 
