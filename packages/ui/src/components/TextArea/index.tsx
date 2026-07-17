@@ -58,7 +58,7 @@ type TextAreaProps = {
    */
   helper?: ReactNode
   /**
-   * Number of rows to display. If 'auto', the textarea will grow with the content and won't be resizable
+   * Number of rows to display. If 'auto', the textarea will grow with the content
    */
   rows?: number | 'auto'
   /**
@@ -77,6 +77,9 @@ type TextAreaProps = {
   style?: CSSProperties
 } & LabelProps &
   Pick<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onFocus' | 'onBlur' | 'onKeyDown' | 'aria-describedby'>
+
+const BORDERS_WIDTH = '2px'
+const AUTO_ROWS = 2
 
 /**
  * This component offers an extended textarea HTML
@@ -124,44 +127,46 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     const textAreaRef = useRef<HTMLTextAreaElement>(null)
     useImperativeHandle(ref, () => textAreaRef.current!)
 
+    // native automatic resize
+    useEffect(() => {
+      if (textAreaRef.current && window.CSS && CSS.supports('field-sizing', 'content')) {
+        textAreaRef.current.style.fieldSizing = rows === 'auto' ? 'content' : 'fixed'
+      }
+    }, [rows])
+
+    // fallback for older browsers
     useEffect(() => {
       const textArea = textAreaRef.current
-      const padding = theme.space['1.5']
+      if (!textArea || rows !== 'auto') {
+        return
+      }
+
+      const userResized = textArea.style.height.match(/^\d+px$/)
+      const hasNativeAutoResize = textArea.style.fieldSizing === 'content'
+      if (userResized || hasNativeAutoResize) {
+        return
+      }
+
+      textArea.style.height = `calc(${textArea.scrollHeight}px + ${BORDERS_WIDTH})`
+    }, [value, rows])
+
+    // Set min and max heights
+    useEffect(() => {
+      const textArea = textAreaRef.current
       if (!textArea) {
         return
       }
 
-      const updateHeight = () => {
-        if (textArea && rows === 'auto' && !maxRows) {
-          textArea.style.height = 'auto'
-          textArea.style.resize = 'none'
-          textArea.style.height = `${textArea.scrollHeight + 2}px`
-        } else {
-          textArea.style.resize = 'vertical'
-        }
+      const padding = theme.space['1.5']
+      const lineHeight = Number.parseFloat(getComputedStyle(textArea).lineHeight)
 
-        if (textArea && (maxRows || typeof rows === 'number')) {
-          const lineHeight = Number.parseFloat(getComputedStyle(textArea).lineHeight)
-
-          if (maxRows) {
-            textArea.style.height = 'auto'
-            const maxHeight = maxRows * lineHeight
-
-            textArea.style.height = `${textArea.scrollHeight + 2}px`
-            textArea.style.maxHeight = `calc(${maxHeight}px + 2*${padding})`
-          } else if (typeof rows === 'number') {
-            textArea.style.height = 'auto'
-          }
-
-          if (typeof rows === 'number') {
-            const minHeight = rows * lineHeight
-            textArea.style.minHeight = `calc(${minHeight}px + 2*${padding})`
-          }
-        }
+      if (maxRows) {
+        textArea.style.maxBlockSize = `calc(${maxRows * lineHeight}px + 2*${padding} + ${BORDERS_WIDTH})`
       }
 
-      requestAnimationFrame(updateHeight)
-    }, [value, rows, theme, maxRows, textAreaRef.current?.value])
+      const minRows = rows === 'auto' ? AUTO_ROWS : rows
+      textArea.style.minBlockSize = `calc(${minRows * lineHeight}px + 2*${padding} + ${BORDERS_WIDTH})`
+    }, [maxRows, rows, theme.space])
 
     const nonDefaultState = success || error
 
@@ -206,7 +211,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               placeholder={placeholder}
               readOnly={!!readOnly}
               ref={textAreaRef}
-              rows={rows === 'auto' ? 1 : rows}
+              rows={rows === 'auto' ? AUTO_ROWS : rows}
               style={{
                 ...assignInlineVars({
                   [paddingRightVar]: `calc(${defaultPadding} + ${
