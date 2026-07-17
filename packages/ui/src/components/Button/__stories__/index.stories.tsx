@@ -8,7 +8,7 @@ export default {
     a11yStatus: {
       perceivable: false,
       operable: false,
-      understandable: false,
+      understandable: true,
       robust: false,
     },
   },
