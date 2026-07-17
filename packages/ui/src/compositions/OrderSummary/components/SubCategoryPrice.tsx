@@ -4,6 +4,7 @@ import { Text } from '../../../components/Text'
 import { calculateSubCategoryPrice, formatNumber } from '../helpers'
 import { OrderSummaryContext } from '../Provider'
 import type { SubCategoryType } from '../types'
+import { orderSummaryStyle } from '../styles.css'
 
 export const SubCategoryPrice = ({ subCategory }: { subCategory: SubCategoryType }) => {
   const { currency, localeFormat, hideTimeUnit, timePeriodAmount, timePeriodUnit, fractionDigits } =
@@ -19,7 +20,13 @@ export const SubCategoryPrice = ({ subCategory }: { subCategory: SubCategoryType
       !subCategory.hidePrice &&
       subCategoryPrice.default[0] === subCategoryPrice.discounted[0] &&
       subCategoryPrice.default[1] === subCategoryPrice.discounted[1] ? (
-        <Text as="span" prominence="strong" sentiment="neutral" variant="bodySmallStrong">
+        <Text
+          as="span"
+          prominence="strong"
+          sentiment="neutral"
+          variant="bodySmallStrong"
+          className={orderSummaryStyle.categoryPrice}
+        >
           {subCategoryPrice.discounted[0] === subCategoryPrice.discounted[1] || subCategory.priceUnit
             ? formatNumber(getCorrectPrice('discounted', 0), localeFormat, currency, fractionDigits)
             : `${formatNumber(subCategoryPrice.discounted[0], localeFormat, currency, fractionDigits)} - ${formatNumber(
@@ -36,7 +43,14 @@ export const SubCategoryPrice = ({ subCategory }: { subCategory: SubCategoryType
       (subCategoryPrice.default[0] !== subCategoryPrice.discounted[0] ||
         subCategoryPrice.default[1] !== subCategoryPrice.discounted[1]) ? (
         <Stack alignItems="center" direction="row" gap={1}>
-          <Text as="span" prominence="weak" sentiment="neutral" strikeThrough variant="bodySmallStrong">
+          <Text
+            as="span"
+            prominence="weak"
+            sentiment="neutral"
+            strikeThrough
+            variant="bodySmallStrong"
+            className={orderSummaryStyle.categoryPrice}
+          >
             {subCategoryPrice.default[0] === subCategoryPrice.default[1] || subCategory.priceUnit
               ? formatNumber(getCorrectPrice('default', 0), localeFormat, currency, fractionDigits)
               : `${formatNumber(subCategoryPrice.default[0], localeFormat, currency, fractionDigits)} - ${formatNumber(
@@ -48,7 +62,13 @@ export const SubCategoryPrice = ({ subCategory }: { subCategory: SubCategoryType
             {subCategory.priceUnit ? ` /${subCategory.priceUnit}` : ''}
           </Text>
 
-          <Text as="span" prominence="strong" sentiment="neutral" variant="bodySmallStrong">
+          <Text
+            as="span"
+            prominence="strong"
+            sentiment="neutral"
+            variant="bodySmallStrong"
+            className={orderSummaryStyle.categoryPrice}
+          >
             {subCategoryPrice.discounted[0] === subCategoryPrice.discounted[1] || subCategory.priceUnit
               ? formatNumber(getCorrectPrice('discounted', 0), localeFormat, currency, fractionDigits)
               : `${formatNumber(

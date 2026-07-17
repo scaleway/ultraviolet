@@ -15,7 +15,15 @@ RangeAmount.parameters = {
   docs: {
     description: {
       story:
-        'You can give a range for the `subCategory.amount`. In that case, the subCategoryPrice and the total price will be shown as a range.',
+        'You can give a range for the `subCategory.amount`. In that case, the subCategoryPrice and the total price will be shown as a range. The story has a small width in order to display overflow behavior.',
     },
   },
 }
+
+RangeAmount.decorators = [
+  StoryComponent => (
+    <div style={{ width: '500px' }}>
+      <StoryComponent />
+    </div>
+  ),
+]
