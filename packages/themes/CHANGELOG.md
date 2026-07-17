@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.1.8
+
+### Patch Changes
+
+- [#6651](https://github.com/scaleway/ultraviolet/pull/6651) [`13e10f5`](https://github.com/scaleway/ultraviolet/commit/13e10f589dad364aee60b761aec7faa1d74f8d79) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@vanilla-extract/css` to `1.21.1`.
+  Updated dependency `@vanilla-extract/sprinkles` to `1.7.0`.
+  Updated dependency `@vanilla-extract/vite-plugin` to `5.2.3`.
+
+- [#6674](https://github.com/scaleway/ultraviolet/pull/6674) [`17fa3c8`](https://github.com/scaleway/ultraviolet/commit/17fa3c8222bfd3b8abdb2c873cfcbbf7d7d3f7ff) Thanks [@jsulpis](https://github.com/jsulpis)! - Remove `font-size: 16px` from the CSS normalize for accessibility
+
 ## 3.1.7
 
 ### Patch Changes
