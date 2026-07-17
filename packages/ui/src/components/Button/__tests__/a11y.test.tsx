@@ -1,10 +1,16 @@
+import { render } from '@testing-library/react'
 import { PencilIcon } from '@ultraviolet/icons/PencilIcon'
-import { consoleThemesMap } from '@ultraviolet/themes'
-import { renderWithTheme, expectNoViolations } from '@utils/test'
-import { describe, it } from 'vitest'
+import { ThemeProvider, consoleThemesMap } from '@ultraviolet/themes'
+import type { consoleLightTheme } from '@ultraviolet/themes'
+import axe from 'axe-core'
+import { describe, it, expect } from 'vitest'
 import { Button } from '..'
 
-describe('button - A11y', { tags: ['a11y'] }, () => {
+const renderWithTheme = (ui: React.ReactElement, theme: typeof consoleLightTheme) => {
+  return render(<ThemeProvider theme={theme}>{ui}</ThemeProvider>)
+}
+
+describe('button - A11y', () => {
   it.for([...consoleThemesMap.entries()])('should not have violations with (theme: %s)', async ([, currentTheme]) => {
     const { container } = renderWithTheme(
       <Button disabled onClick={() => {}}>
@@ -14,15 +20,17 @@ describe('button - A11y', { tags: ['a11y'] }, () => {
       currentTheme,
     )
 
-    await expectNoViolations(container)
+    const results = await axe.run(container)
+    expect(results).toHaveNoViolations()
   })
 
-  it.todo.for([...consoleThemesMap.entries()])(
-    'should not have violations with tooltips (theme: %s )',
+  it.for([...consoleThemesMap.entries()])(
+    'should not have violations with tooltips (theme: %s)',
     async ([, currentTheme]) => {
       const { container } = renderWithTheme(<Button tooltip="toto">Hello</Button>, currentTheme)
 
-      await expectNoViolations(container)
+      const results = await axe.run(container)
+      expect(results).toHaveNoViolations()
     },
   )
 })
