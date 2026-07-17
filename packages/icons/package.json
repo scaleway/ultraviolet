@@ -103,6 +103,7 @@
     "postbuild": "node ./process-css.ts",
     "size": "size-limit",
     "test:unit": "LC_ALL=en_US.UTF-8 pnpm vitest --run ",
+    "test:unit:coverage": "pnpm test:unit --coverage",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "watch": "pnpm run '/^watch:.*/'",
