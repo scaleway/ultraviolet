@@ -1,5 +1,31 @@
 # Change Log
 
+## 3.20.3
+
+### Patch Changes
+
+- [#6667](https://github.com/scaleway/ultraviolet/pull/6667) [`d4d0406`](https://github.com/scaleway/ultraviolet/commit/d4d04061de2b4ca7c2bc454b6b995d6708e5db00) Thanks [@jsulpis](https://github.com/jsulpis)! - `NumberInputField`: support the experimental register mode of the `Form` component
+
+- [#6626](https://github.com/scaleway/ultraviolet/pull/6626) [`31c8739`](https://github.com/scaleway/ultraviolet/commit/31c8739563b89f1e1554395c8e5e5e286ae5f4f0) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`: fix overflow with long (sub-)category name and prices
+
+- [#6679](https://github.com/scaleway/ultraviolet/pull/6679) [`e0ec453`](https://github.com/scaleway/ultraviolet/commit/e0ec4536a0dbc9da4a01af214c49f2090d971e33) Thanks [@lisalupi](https://github.com/lisalupi)! - Update `@handlewithcare/react-prosemirror`, `prosemirror-model` and `prosemirror-view` versions to fix issue with `RichTextInput`
+
+- [#6651](https://github.com/scaleway/ultraviolet/pull/6651) [`13e10f5`](https://github.com/scaleway/ultraviolet/commit/13e10f589dad364aee60b761aec7faa1d74f8d79) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@vanilla-extract/css` to `1.21.1`.
+  Updated dependency `@vanilla-extract/sprinkles` to `1.7.0`.
+  Updated dependency `@vanilla-extract/vite-plugin` to `5.2.3`.
+
+- [#6666](https://github.com/scaleway/ultraviolet/pull/6666) [`9b14344`](https://github.com/scaleway/ultraviolet/commit/9b14344132333a8aab2d7764777874f774516c48) Thanks [@jsulpis](https://github.com/jsulpis)! - `NumberInput`, `NumberInputField`: better management of NaN values, fix `isNumber` validator that prevented empty number fields
+
+- [#6661](https://github.com/scaleway/ultraviolet/pull/6661) [`65f8f73`](https://github.com/scaleway/ultraviolet/commit/65f8f734c07f8c886b0455a072e9810ecbc48aca) Thanks [@lisalupi](https://github.com/lisalupi)! - `Plans`: fix cta wrapper size to match recommended button size (40px) and correctly pass custom locales to header
+
+- [#6674](https://github.com/scaleway/ultraviolet/pull/6674) [`17fa3c8`](https://github.com/scaleway/ultraviolet/commit/17fa3c8222bfd3b8abdb2c873cfcbbf7d7d3f7ff) Thanks [@jsulpis](https://github.com/jsulpis)! - Remove `font-size: 16px` from the CSS normalize for accessibility
+
+- [#6662](https://github.com/scaleway/ultraviolet/pull/6662) [`8994e0e`](https://github.com/scaleway/ultraviolet/commit/8994e0ed08c40d011c163d2f1ed7fcafc97a5dc3) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: fix group select vertical alignment
+
+- Updated dependencies [[`13e10f5`](https://github.com/scaleway/ultraviolet/commit/13e10f589dad364aee60b761aec7faa1d74f8d79), [`17fa3c8`](https://github.com/scaleway/ultraviolet/commit/17fa3c8222bfd3b8abdb2c873cfcbbf7d7d3f7ff)]:
+  - @ultraviolet/icons@5.4.6
+  - @ultraviolet/themes@3.1.8
+
 ## 3.20.2
 
 ### Patch Changes

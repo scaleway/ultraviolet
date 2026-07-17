@@ -1,5 +1,24 @@
 # Change Log
 
+## 6.5.8
+
+### Patch Changes
+
+- [#6667](https://github.com/scaleway/ultraviolet/pull/6667) [`d4d0406`](https://github.com/scaleway/ultraviolet/commit/d4d04061de2b4ca7c2bc454b6b995d6708e5db00) Thanks [@jsulpis](https://github.com/jsulpis)! - `NumberInputField`: support the experimental register mode of the `Form` component
+
+- [#6638](https://github.com/scaleway/ultraviolet/pull/6638) [`03c1ecb`](https://github.com/scaleway/ultraviolet/commit/03c1ecbf444f51456eb1a73a89b19958e4e41ae9) Thanks [@jsulpis](https://github.com/jsulpis)! - `Form`: add an `_experimentalRegisterMode` property to opt-in to uncontrolled fields which trigger less re-renders, with the caveat that either `defaultValues` or `values` are necessary for correct dirty states.
+
+- [#6641](https://github.com/scaleway/ultraviolet/pull/6641) [`c32d267`](https://github.com/scaleway/ultraviolet/commit/c32d267a498b66fe15dd94e2060c8293e55f8540) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.80.0`.
+
+- [#6666](https://github.com/scaleway/ultraviolet/pull/6666) [`9b14344`](https://github.com/scaleway/ultraviolet/commit/9b14344132333a8aab2d7764777874f774516c48) Thanks [@jsulpis](https://github.com/jsulpis)! - `NumberInput`, `NumberInputField`: better management of NaN values, fix `isNumber` validator that prevented empty number fields
+
+- [#6661](https://github.com/scaleway/ultraviolet/pull/6661) [`65f8f73`](https://github.com/scaleway/ultraviolet/commit/65f8f734c07f8c886b0455a072e9810ecbc48aca) Thanks [@lisalupi](https://github.com/lisalupi)! - `PlansField`: all props from `Plans` should be usable
+
+- Updated dependencies [[`d4d0406`](https://github.com/scaleway/ultraviolet/commit/d4d04061de2b4ca7c2bc454b6b995d6708e5db00), [`31c8739`](https://github.com/scaleway/ultraviolet/commit/31c8739563b89f1e1554395c8e5e5e286ae5f4f0), [`e0ec453`](https://github.com/scaleway/ultraviolet/commit/e0ec4536a0dbc9da4a01af214c49f2090d971e33), [`13e10f5`](https://github.com/scaleway/ultraviolet/commit/13e10f589dad364aee60b761aec7faa1d74f8d79), [`9b14344`](https://github.com/scaleway/ultraviolet/commit/9b14344132333a8aab2d7764777874f774516c48), [`65f8f73`](https://github.com/scaleway/ultraviolet/commit/65f8f734c07f8c886b0455a072e9810ecbc48aca), [`17fa3c8`](https://github.com/scaleway/ultraviolet/commit/17fa3c8222bfd3b8abdb2c873cfcbbf7d7d3f7ff), [`8994e0e`](https://github.com/scaleway/ultraviolet/commit/8994e0ed08c40d011c163d2f1ed7fcafc97a5dc3)]:
+  - @ultraviolet/ui@3.20.3
+  - @ultraviolet/icons@5.4.6
+  - @ultraviolet/themes@3.1.8
+
 ## 6.5.7
 
 ### Patch Changes
