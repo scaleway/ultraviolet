@@ -52,7 +52,7 @@ AutomaticRows.parameters = {
   docs: {
     description: {
       story:
-        'You can set a number of rows to display in the input, which will change its height. You can set rows="auto" and the textarea will automatically adjust its height based on the content. Use prop `maxRows` so that textArea automatically adjusts its height based on the content until it reaches maxRows (upper bound). When both `maxRows` and `row` are defined, they will respectively be used as an upper bound and a lower bound in the number of rows to display.',
+        'You can set a number of rows to display in the textarea, which will set its initial height. With `rows="auto"`, the textarea will dynamically adjust its height based on the content and update it when typing.\n\nThe textarea is always resizable using the native handle. A maximum height can be set using the prop `maxRows`, and the minimum height is given by the prop `rows` (which defaults to 2 when `rows="auto"`)',
     },
   },
 }
