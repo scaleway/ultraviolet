@@ -120,9 +120,9 @@ const badge = style({
   selectors: {
     [`${button}:not(:disabled)[aria-selected="false"]:hover &, ${button}[aria-selected="false"]:active &, ${button}[aria-selected="false"]:focus-visible &`]:
       {
-        backgroundColor: theme.colors.primary.background,
-        borderColor: theme.colors.primary.background,
-        color: theme.colors.primary.text,
+        backgroundColor: theme.colors.neutral.backgroundWeak,
+        borderColor: theme.colors.neutral.backgroundWeak,
+        color: theme.colors.neutral.text,
       },
   },
 })
