@@ -209,7 +209,20 @@
     "jsx-a11y/control-has-associated-label": [
       "error",
       {
-        "ignoreElements": ["tr", "td"],
+        "depth": 5,
+        "ignoreElements": [
+          // default values
+          "audio",
+          "canvas",
+          "embed",
+          "input",
+          "textarea",
+          "video",
+          "tr",
+
+          // custom
+          "td",
+        ],
       },
     ],
 

@@ -137,11 +137,10 @@ export const UnitInput = ({
         templateColumns={templateColumns ?? '1fr auto'}
       >
         <div className={unitInputStyle.numberWrapper} id="input-field">
-          {/* oxlint-disable-next-line jsx-a11y/control-has-associated-label */}
           <input
             aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
             aria-invalid={!!error}
-            autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
+            autoFocus={autoFocus}
             className={cn(className, unitInputStyle.number[size])}
             data-testid="unit-input"
             disabled={disabled}

@@ -27,7 +27,6 @@ export const PlanHeader = ({
 }: PlanHeaderProps) => (
   <>
     {fieldName && onChange && !disabled ? (
-      // oxlint-disable-next-line jsx-a11y/control-has-associated-label
       <input
         className={plansStyle.headerInput}
         data-testid={plan.value}

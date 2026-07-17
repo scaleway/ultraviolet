@@ -356,6 +356,7 @@ export const TimeInput = ({
                   placeholder={placeholder[type]}
                   readOnly={readOnly}
                   ref={computedRef()}
+                  role="spinbutton"
                   value={filled[type] ? format(getValueByType(type, time), type, timeFormat) : ''}
                 />
                 {type === 's' ? null : (
@@ -410,6 +411,7 @@ export const TimeInput = ({
               placeholder={placeholder.period ?? 'AM'}
               readOnly={readOnly}
               ref={refPeriod}
+              role="spinbutton"
               value={period?.toUpperCase()}
             />
           ) : null}
