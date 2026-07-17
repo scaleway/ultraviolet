@@ -1,0 +1,70 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Badges/Badge/A11y" />
+
+# Badge - Accessibility
+
+## Description
+
+A presentational component that displays status or labels in a small colored container. Supports 7 sentiment types (neutral, primary, secondary, danger, info, success, warning), 4 sizes, 2 prominence levels, and disabled state. Renders as a non-interactive `<span>` element.
+
+## Summary
+
+1. ❌ **Perceivable**: Text-to-background contrast ratios fall below 4.5:1 for several sentiment/prominence combinations; color is primary means of conveying sentiment; aria-label inconsistently applied and not descriptive
+2. ✅ **Operable**: Non-interactive component, no keyboard interaction required
+3. ✅ **Understandable**: Content is readable with appropriate text styling
+4. ⚠️ **Robust**: Missing semantic role for status indicators; aria-label logic is inconsistent
+
+## ARIA Pattern
+
+No specific ARIA pattern exists for Badge components. Badges are typically presentational elements. Related guidance:
+
+- [ARIA Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - for dynamic status indicators
+- Presentational elements should use `role="presentation"` or ensure content is conveyed through text
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - Text-to-background contrast ratios below 4.5:1 for normal text. Known failures:
+  - light theme, secondary sentiment, default prominence: 4.43:1
+  - dark theme, danger sentiment, strong prominence: 4.29:1
+  - darker theme, success sentiment, strong prominence: 4.47:1
+  - darker theme, danger sentiment, strong prominence: 3.86:1
+  - darker theme, info sentiment, strong prominence: 4.49:1
+- ⚠️ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Sentiment is conveyed primarily through color; aria-label added for some sentiments but inconsistent and not descriptive enough
+- ⚠️ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Status relationships should be programmatically determinable; current aria-label implementation is incomplete
+- ⚠️ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - When icons are used, they must have appropriate text alternatives or be marked as decorative
+
+To apply when using the component:
+
+- [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Ensure badge maintains 3:1 contrast ratio against its background in all sentiment/prominence combinations
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Ensure sentiment is also conveyed through text content (not just color) for screen reader users
+
+## Accessibility issues
+
+**Critical:**
+
+- None identified for presentational use case
+
+**High:**
+
+- **Failing contrast ratios (WCAG 1.4.3)** - Multiple theme/sentiment/prominence combinations have text-to-background contrast below 4.5:1, making text difficult to read for users with low vision or contrast sensitivity loss. Requires theme color adjustments.
+- Inconsistent aria-label application - only applied to sentiments other than 'neutral' and 'primary', creating inconsistent screen reader experience
+- aria-label value is just the sentiment name (e.g., "danger") which is not meaningful without context
+- aria-label is not supported by component `Text` so those aria-label are not even set.
+
+**Medium:**
+
+- Missing semantic role - consider adding `role="status"` when used for dynamic status indicators
+- No mechanism to provide contextual information about what the badge represents (e.g., "Status: Error" vs just "danger")
+- Icon-only badges would not have accessible text alternative; when using icons, ensure they are either decorative (aria-hidden) or have appropriate accessible labels. Avoid icon-ony badges.
+
+**Low:**
+
+- Consider allowing custom `aria-label` override for more descriptive labels
+- Consider documenting proper usage patterns for accessibility in component docs
+
+## Dependencies
+
+`Text`: need to add aria-label
