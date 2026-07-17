@@ -42,6 +42,7 @@ export const setup = () => {
 
     window.ResizeObserver = vi.fn().mockImplementation(MockResize)
     window.matchMedia = vi.fn().mockImplementation(MockMatchMedia)
+    window.CSS.supports = vi.fn().mockReturnValue(false)
 
     if (!globalThis.navigator.clipboard) {
       // @ts-expect-error mock clipboard API

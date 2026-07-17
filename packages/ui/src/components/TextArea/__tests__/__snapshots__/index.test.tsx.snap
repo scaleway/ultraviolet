@@ -22,7 +22,7 @@ exports[`textArea > renders correctly with size large 1`] = `
           class="styles__hlf4vn3 styles_size_large__hlf4vn8"
           id="_r_2p_"
           rows="3"
-          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px);"
+          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px); min-block-size: calc(2px + 48px + 1.5rem);"
         >
           test
         </textarea>
@@ -57,7 +57,7 @@ exports[`textArea > renders correctly with size medium 1`] = `
           class="styles__hlf4vn3 styles_size_medium__hlf4vn7"
           id="_r_2l_"
           rows="3"
-          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px);"
+          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px); min-block-size: calc(2px + 48px + 1.5rem);"
         >
           test
         </textarea>
@@ -92,7 +92,7 @@ exports[`textArea > renders correctly with size small 1`] = `
           class="styles__hlf4vn3 styles_size_small__hlf4vn6"
           id="_r_2h_"
           rows="3"
-          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px);"
+          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px); min-block-size: calc(2px + 48px + 1.5rem);"
         >
           test
         </textarea>
@@ -128,7 +128,7 @@ exports[`textArea > should render correctly when input  has a error sentiment 1`
           class="styles__hlf4vn3 styles_error_true__hlf4vn4 styles_size_large__hlf4vn8"
           id="_r_14_"
           rows="3"
-          style="--hlf4vn0: calc(0.5rem + 0px + 1rem + 0px + 0.25rem);"
+          style="--hlf4vn0: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); min-block-size: calc(2px + 48px + 1.5rem);"
         >
           test
         </textarea>
@@ -192,7 +192,7 @@ exports[`textArea > should render correctly when input has a success sentiment 1
           class="styles__hlf4vn3 styles_success_true__hlf4vn5 styles_size_large__hlf4vn8"
           id="_r_v_"
           rows="3"
-          style="--hlf4vn0: calc(0.5rem + 0px + 1rem + 0px + 0.25rem);"
+          style="--hlf4vn0: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); min-block-size: calc(2px + 48px + 1.5rem);"
         >
           test
         </textarea>
@@ -256,7 +256,7 @@ exports[`textArea > should render correctly when input is disabled 1`] = `
           disabled=""
           id="_r_d_"
           rows="3"
-          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px);"
+          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px); min-block-size: calc(2px + 48px + 1.5rem);"
         >
           test
         </textarea>
@@ -292,7 +292,7 @@ exports[`textArea > should render correctly when input is readOnly 1`] = `
           id="_r_h_"
           readonly=""
           rows="3"
-          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px);"
+          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px); min-block-size: calc(2px + 48px + 1.5rem);"
         >
           test
         </textarea>
@@ -336,7 +336,7 @@ exports[`textArea > should render correctly when it is required 1`] = `
           class="styles__hlf4vn3 styles_size_large__hlf4vn8"
           id="_r_l_"
           rows="3"
-          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px);"
+          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px); min-block-size: calc(2px + 48px + 1.5rem);"
         >
           test
         </textarea>
@@ -371,7 +371,7 @@ exports[`textArea > should render correctly with basic props 1`] = `
           class="styles__hlf4vn3 styles_size_large__hlf4vn8"
           id="_r_0_"
           rows="3"
-          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px);"
+          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px); min-block-size: calc(2px + 48px + 1.5rem);"
         >
           test
         </textarea>
@@ -407,7 +407,7 @@ exports[`textArea > should render correctly with maxlength 1`] = `
           id="_r_q_"
           maxlength="3"
           rows="3"
-          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px);"
+          style="--hlf4vn0: calc(0.5rem + 0px + 0px + 0px + 0px); min-block-size: calc(2px + 48px + 1.5rem);"
         >
           test
         </textarea>
@@ -454,7 +454,7 @@ exports[`textArea > should render with AutoExpandMax 1`] = `
           class="styles__hlf4vn3 styles_error_true__hlf4vn4 styles_size_large__hlf4vn8"
           id="_r_1e_"
           rows="3"
-          style="--hlf4vn0: calc(0.5rem + 0px + 1rem + 0px + 0.25rem);"
+          style="--hlf4vn0: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); max-block-size: calc(2px + 48px + 1.5rem); min-block-size: calc(2px + 48px + 1.5rem);"
         >
           test
         </textarea>
@@ -518,7 +518,7 @@ exports[`textArea > should render with AutoExpandMax and rows 1`] = `
           class="styles__hlf4vn3 styles_error_true__hlf4vn4 styles_size_large__hlf4vn8"
           id="_r_1j_"
           rows="2"
-          style="--hlf4vn0: calc(0.5rem + 0px + 1rem + 0px + 0.25rem);"
+          style="--hlf4vn0: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); max-block-size: calc(2px + 48px + 1.5rem); min-block-size: calc(2px + 32px + 1.5rem);"
         >
           test
         </textarea>
@@ -581,8 +581,8 @@ exports[`textArea > should render with auto rows 1`] = `
           aria-invalid="true"
           class="styles__hlf4vn3 styles_error_true__hlf4vn4 styles_size_large__hlf4vn8"
           id="_r_19_"
-          rows="1"
-          style="--hlf4vn0: calc(0.5rem + 0px + 1rem + 0px + 0.25rem);"
+          rows="2"
+          style="--hlf4vn0: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); height: calc(2px); min-block-size: calc(2px + 32px + 1.5rem);"
         >
           test
         </textarea>

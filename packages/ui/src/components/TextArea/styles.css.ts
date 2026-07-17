@@ -70,15 +70,12 @@ const textArea = recipe({
     size: {
       small: {
         fontSize: theme.typography.bodySmall.fontSize,
-        minHeight: theme.sizing[700],
       },
       medium: {
         fontSize: theme.typography.bodySmall.fontSize,
-        minHeight: theme.sizing[800],
       },
       large: {
         fontSize: theme.typography.body.fontSize,
-        minHeight: theme.sizing[900],
       },
     },
   },
