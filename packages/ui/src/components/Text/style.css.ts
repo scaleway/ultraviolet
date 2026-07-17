@@ -64,13 +64,7 @@ function generateStyles(prominence: ProminenceProps, disabled: boolean, sentimen
    * We should ask to define theses var inside the theme instead
    */
   if (sentiment) {
-    if (isStrong(prominence)) {
-      const text = `textStrong${disabled ? 'Disabled' : ''}` as const
-
-      return { color: theme.colors[sentiment][text] }
-    }
-
-    const text = `text${disabled ? 'Disabled' : ''}` as const
+    const text = `text${isStrong(prominence) ? 'Strong' : ''}${disabled ? 'Disabled' : ''}` as const
 
     return { color: theme.colors[sentiment][text] }
   }

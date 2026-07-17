@@ -4,13 +4,12 @@ import { cn } from '@ultraviolet/utils'
 import { Text } from '..'
 import { Stack, Table, Tooltip } from '../..'
 import { SENTIMENTS } from '../../../theme'
+import { PROMINENCE_ARRAY } from '../constants'
 import { showCase } from './style.css'
-
-const textProminences = ['weak', 'default', 'strong', 'stronger'] as const
 
 const COLUMNS = [
   { label: '' },
-  ...textProminences.map(prominence => ({
+  ...PROMINENCE_ARRAY.map(prominence => ({
     label: prominence.toUpperCase(),
   })),
 ]
@@ -29,7 +28,7 @@ export const Showcase: StoryFn<typeof Text> = args => (
               {sentiment.toUpperCase()}
             </Text>
           </Table.Cell>
-          {textProminences.map(prominence => (
+          {PROMINENCE_ARRAY.map(prominence => (
             <Table.Cell key={prominence} className={cn(showCase({ sentiment, prominence }))}>
               <Text {...args} sentiment={sentiment} as="p" variant="body" prominence={prominence}>
                 <Stack direction="row" gap={1} alignItems="center">
