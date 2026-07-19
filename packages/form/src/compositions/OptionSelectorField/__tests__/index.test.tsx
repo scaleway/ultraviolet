@@ -1,8 +1,8 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithForm } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { OptionSelectorField } from '..'
+import { renderWithForm } from '../../../__tests__/helpers'
 import { firstSelectorOptions, secondSelectorOptions } from '../__stories__/resources'
 
 describe('optionSelectorField', () => {

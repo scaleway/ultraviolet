@@ -1,9 +1,9 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { mockFormErrors, renderWithForm } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, it, Mock, vi } from 'vitest'
 import { TextAreaField } from '..'
 import { Submit } from '../..'
+import { mockFormErrors, renderWithForm } from '../../../__tests__/helpers'
 
 describe('textAreaField', () => {
   let spyGetComputedStyle: Mock

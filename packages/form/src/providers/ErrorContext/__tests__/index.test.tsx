@@ -1,9 +1,9 @@
 import { renderHook } from '@testing-library/react'
-import { mockFormErrors, renderWithForm } from '@utils/test'
 import type { ReactNode } from 'react'
 import { useForm } from 'react-hook-form'
 import { describe, expect, it } from 'vitest'
 import { useErrors } from '..'
+import { mockFormErrors, renderWithForm } from '../../../__tests__/helpers'
 import { Form } from '../../../components/Form'
 
 const HookWrapper = ({ children }: { children: ReactNode }) => {

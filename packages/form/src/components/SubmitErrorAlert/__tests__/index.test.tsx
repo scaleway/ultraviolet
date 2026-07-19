@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithForm } from '@utils/test'
 import { describe, expect, vi, it } from 'vitest'
 import { Submit, SubmitErrorAlert } from '../..'
+import { renderWithForm } from '../../../__tests__/helpers'
 
 describe('submitErrorAlert', () => {
   it('should render nothing if no error', () => {

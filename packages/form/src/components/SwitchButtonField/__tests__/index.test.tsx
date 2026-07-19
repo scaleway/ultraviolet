@@ -1,8 +1,8 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithForm } from '@utils/test'
 import { describe, expect, vi, it } from 'vitest'
 import { Submit, SwitchButtonField } from '../..'
+import { renderWithForm } from '../../../__tests__/helpers'
 import { mockErrors } from '../../../mocks'
 
 describe('switchButtonField', () => {
