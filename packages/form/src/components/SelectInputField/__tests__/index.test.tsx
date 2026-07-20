@@ -1,8 +1,8 @@
 import { act, fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithForm } from '@utils/test'
 import { describe, expect, vi, it } from 'vitest'
 import { SelectInputField } from '..'
+import { renderWithForm } from '../../../__tests__/helpers'
 import { cities, planets } from './resources'
 
 describe('selectInputField', () => {

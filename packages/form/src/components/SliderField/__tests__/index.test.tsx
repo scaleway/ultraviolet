@@ -1,8 +1,8 @@
 import { act, fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { mockFormErrors, renderWithForm } from '@utils/test'
 import { describe, expect, vi, it } from 'vitest'
 import { SliderField, Submit } from '../..'
+import { mockFormErrors, renderWithForm } from '../../../__tests__/helpers'
 
 const options = [
   { label: '1Mb', value: 1 },

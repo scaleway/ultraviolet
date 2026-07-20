@@ -1,9 +1,9 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { mockFormErrors, renderWithForm } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { TextInputField } from '..'
 import { Submit } from '../..'
+import { mockFormErrors, renderWithForm } from '../../../__tests__/helpers'
 
 describe('textInputField', () => {
   it('should render correctly', () => {
