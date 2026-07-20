@@ -1,11 +1,13 @@
 'use client'
 
 import { DeleteIcon, PlusIcon } from '@ultraviolet/icons'
+import { useId } from 'react'
+import { hasHelperText } from '../../helpers/hasHelperText'
 import { Button } from '../Button'
+import { Description } from '../Description'
 import { Row } from '../Row'
 import { SelectInput } from '../SelectInput'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
 import { TextInput } from '../TextInput'
 import { KeyValueInputProps } from './types'
 
@@ -23,7 +25,6 @@ export const KeyValueInput = ({
   onFocus,
   onBlur,
   name,
-  'data-testid': dataTestid,
   'aria-describedby': ariaDescribedBy,
   inputKey,
   inputValue,
@@ -32,6 +33,7 @@ export const KeyValueInput = ({
   keyvalues = [],
   maxSize = 100,
 }: KeyValueInputProps) => {
+  const errorId = useId()
   const handleChange = (index: number, operationType: 'add' | 'change', key?: string, value?: string) => {
     const newKeyValues = [...keyvalues]
     newKeyValues[index] = { key: key ?? newKeyValues[index].key, value: value ?? newKeyValues[index].value }
@@ -44,8 +46,27 @@ export const KeyValueInput = ({
 
   const maxSizeReachedTooltip = addButton.maxSizeReachedTooltip ?? `Cannot add more than ${maxSize} elements`
 
+  const commonProps = (index: number, type: 'key' | 'value') => {
+    const input = type === 'key' ? inputKey : inputValue
+
+    return {
+      label: input.label,
+      readOnly: readOnly,
+      disabled: disabled,
+      required: input.required || required,
+      size: size,
+      'aria-describedby': ariaDescribedBy || (hasHelperText(undefined, error) ? errorId : undefined),
+      error: !!error,
+      name: `${name}.${index}.${type}`,
+      onFocus: () => onFocus?.(keyvalues, index),
+      onBlur: () => onBlur?.(keyvalues, index),
+      value: keyvalues[index][type],
+      placeholder: input.placeholder,
+    }
+  }
+
   return (
-    <Stack gap={3} style={style} className={className} data-testid={dataTestid}>
+    <Stack gap={3} style={style} className={className}>
       {keyvalues && keyvalues?.length > 0 ? (
         <Stack gap={3}>
           {keyvalues.map((_, index) => (
@@ -53,69 +74,24 @@ export const KeyValueInput = ({
               {inputKey.inputType === 'select' ? (
                 <SelectInput
                   options={inputKey.options}
-                  label={inputKey.label}
-                  name={`${name}.${index}.key`}
-                  readOnly={readOnly}
-                  required={inputKey.required || required}
-                  size={size}
                   onChange={(key: string) => handleChange(index, 'change', key)} // can't properly infer type of onChange
-                  disabled={disabled}
-                  data-testid={`${dataTestid}-${index}.key`}
-                  aria-describedby={ariaDescribedBy}
-                  onFocus={() => onFocus?.(keyvalues, index)}
-                  onBlur={() => onBlur?.(keyvalues, index)}
-                  value={keyvalues[index].key}
+                  {...commonProps(index, 'key')}
                 />
               ) : (
-                <TextInput
-                  label={inputKey.label}
-                  name={`${name}.${index}.key`}
-                  readOnly={readOnly}
-                  required={inputKey.required || required}
-                  size={size}
-                  onChangeValue={key => handleChange(index, 'change', key)}
-                  disabled={disabled}
-                  data-testid={`${dataTestid}-${index}.key`}
-                  aria-describedby={ariaDescribedBy}
-                  onFocus={() => onFocus?.(keyvalues, index)}
-                  onBlur={() => onBlur?.(keyvalues, index)}
-                  value={keyvalues[index].key}
-                />
+                <TextInput onChangeValue={key => handleChange(index, 'change', key)} {...commonProps(index, 'key')} />
               )}
               {inputValue.inputType === 'select' ? (
                 <SelectInput
                   options={inputValue.options}
-                  label={inputValue.label}
-                  name={`${name}.${index}.value`}
-                  placeholder={inputValue.placeholder}
-                  readOnly={readOnly}
-                  required={inputValue.required || required}
-                  size={size}
                   onChange={(value: string) => handleChange(index, 'change', undefined, value)}
-                  disabled={disabled}
-                  data-testid={`${dataTestid}-${index}.value`}
-                  aria-describedby={ariaDescribedBy}
-                  onBlur={() => onBlur?.(keyvalues, index)}
-                  onFocus={() => onFocus?.(keyvalues, index)}
-                  value={keyvalues[index].value}
+                  {...commonProps(index, 'value')}
                 />
               ) : (
                 <TextInput
                   autoComplete="off"
-                  label={inputValue.label}
-                  name={`${name}.${index}.value`}
-                  placeholder={inputValue.placeholder}
-                  readOnly={readOnly}
-                  required={inputValue.required || required}
                   type={inputValue.type}
-                  size={size}
                   onChangeValue={value => handleChange(index, 'change', undefined, value)}
-                  disabled={disabled}
-                  data-testid={`${dataTestid}-${index}.value`}
-                  aria-describedby={ariaDescribedBy}
-                  onBlur={() => onBlur?.(keyvalues, index)}
-                  onFocus={() => onFocus?.(keyvalues, index)}
-                  value={keyvalues[index].value}
+                  {...commonProps(index, 'value')}
                 />
               )}
 
@@ -154,11 +130,7 @@ export const KeyValueInput = ({
           {addButton.name}
         </Button>
       </Stack>
-      {typeof error === 'string' ? (
-        <Text as="p" variant="bodySmall" sentiment="danger">
-          {error}
-        </Text>
-      ) : null}
+      <Description error={error} id={ariaDescribedBy ?? errorId} />
     </Stack>
   )
 }

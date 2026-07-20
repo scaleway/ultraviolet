@@ -55,7 +55,7 @@ describe('keyValueInput', () => {
   it('renders readOnly', () => {
     const { asFragment } = renderWithTheme(
       <KeyValueInput
-        disabled
+        readOnly
         name="key-value-input"
         addButton={{
           maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
@@ -93,29 +93,6 @@ describe('keyValueInput', () => {
         size={size}
       />,
     )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  it('renders readOnly', () => {
-    const { asFragment } = renderWithTheme(
-      <KeyValueInput
-        disabled
-        name="key-value-input"
-        addButton={{
-          maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
-          name: 'add',
-          tooltip: 'This is a tooltip',
-        }}
-        inputKey={{
-          label: 'key',
-        }}
-        inputValue={{
-          label: 'value',
-        }}
-      />,
-    )
-
-    expect(screen.getByRole('button', { name: /add/i })).toBeDisabled()
     expect(asFragment()).toMatchSnapshot()
   })
 

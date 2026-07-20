@@ -27,10 +27,12 @@ Template.args = {
   inputKey: {
     label: 'Key',
     required: true,
+    placeholder: 'Placeholder',
   },
   inputValue: {
     label: 'Value',
     required: false,
+    placeholder: 'Placeholder',
   },
   name: 'keyValues',
   size: 'large',

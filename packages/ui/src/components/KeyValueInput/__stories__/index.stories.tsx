@@ -3,7 +3,6 @@ import { KeyValueInput } from '..'
 
 export default {
   component: KeyValueInput,
-  decorators: [StoryComponent => <StoryComponent />],
   title: 'UI/Data Entry/KeyValueInput',
   parameters: {
     a11yStatus: {
@@ -19,5 +18,6 @@ export { Playground } from './Playground.stories'
 export { Size } from './Size.stories'
 export { ReadOnly } from './ReadOnly.stories'
 export { Disabled } from './Disabled.stories'
+export { Error } from './Error.stories'
 export { MaxSize } from './MaxSize.stories'
 export { WithSelectInput } from './WithSelectInput.stories'
