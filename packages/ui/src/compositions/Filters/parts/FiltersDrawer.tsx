@@ -42,7 +42,11 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
 
   return (
     <Drawer
-      footer={<Button render={<button form={formId} type="submit" />}>{labels.submit}</Button>}
+      footer={
+        <Button form={formId} type="submit">
+          {labels.submit}
+        </Button>
+      }
       header={labels.drawerHeader}
       hideOnClickOutside={false}
       onClose={() => {

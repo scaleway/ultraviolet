@@ -1,7 +1,8 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import { afterEach, beforeEach, describe, expect, it, Mock, vi } from 'vitest'
+import type { Mock } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { TextArea } from '..'
 
 describe('textArea', () => {

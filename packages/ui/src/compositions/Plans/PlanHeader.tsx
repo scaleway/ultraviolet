@@ -2,7 +2,7 @@ import { Badge } from '../../components/Badge'
 import { Separator } from '../../components/Separator'
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
-import PlansLocales from './locales/en'
+import type PlansLocales from './locales/en'
 import type { PlanType } from './types'
 import { plansStyle } from './styles.css'
 

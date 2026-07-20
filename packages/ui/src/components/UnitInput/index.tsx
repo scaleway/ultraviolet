@@ -140,7 +140,7 @@ export const UnitInput = ({
           <input
             aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
             aria-invalid={!!error}
-            autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
+            autoFocus={autoFocus}
             className={cn(className, unitInputStyle.number[size])}
             data-testid="unit-input"
             disabled={disabled}

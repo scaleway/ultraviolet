@@ -1,8 +1,10 @@
-import { useState, useEffect, useMemo, FocusEvent, ChangeEvent } from 'react'
-import { FieldValues, FieldPath, useFormContext, PathValue, Path } from 'react-hook-form'
+import type { FocusEvent, ChangeEvent } from 'react'
+import { useState, useEffect, useMemo } from 'react'
+import type { FieldValues, FieldPath, PathValue, Path } from 'react-hook-form'
+import { useFormContext } from 'react-hook-form'
 import { useErrors } from '../providers'
 import { validateRegex } from '../utils/validateRegex'
-import { FieldProps, UseFieldProps } from './useField'
+import type { FieldProps, UseFieldProps } from './useField'
 
 export function isChangeEvent(payload: unknown): payload is ChangeEvent<HTMLInputElement> {
   return typeof payload === 'object' && payload !== null && 'type' in payload && (payload as Event).type === 'change'
