@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithForm } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Submit, TextInputField } from '../..'
+import { renderWithForm } from '../../../__tests__/helpers'
 
 const alpha = /^[a-zA-Z]*$/u
 

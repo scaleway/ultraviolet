@@ -1,6 +1,6 @@
-import { renderWithForm } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { CodeEditorField } from '..'
+import { renderWithForm } from '../../../__tests__/helpers'
 
 describe('optionSelectorField', () => {
   it('should render correctly', () => {

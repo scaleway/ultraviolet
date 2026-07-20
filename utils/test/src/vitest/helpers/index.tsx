@@ -1,9 +1,7 @@
-import { render, renderHook } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import type { RenderOptions } from '@testing-library/react'
 import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
-import type { ComponentProps, ReactElement, ReactNode } from 'react'
-import type { FormErrors, UseFormProps } from '../../../../../packages/form/src'
-import { Form, useForm } from '../../../../../packages/form/src/index'
+import type { ReactNode } from 'react'
 import { makeShouldMatchSnapshot } from './shouldMatchSnapshot'
 
 export const ComponentWrapper = ({
@@ -17,22 +15,6 @@ export const ComponentWrapper = ({
     <div data-testid="testing">{children}</div>
   </ThemeProvider>
 )
-
-export const mockFormErrors: FormErrors = {
-  isNumber: ({ value }) => `This field should be a number: ${value} `,
-  isInteger: ({ value }) => `This field should be an integer ${value} `,
-  max: ({ max }) => `This field is too high (maximum is : ${max ?? ''})`,
-  maxDate: ({ maxDate }) => `This field should be before ${maxDate?.toString() ?? ''}`,
-  maxLength: ({ maxLength }) => `This field should have a length lower than ${maxLength ?? ''}`,
-  min: ({ min }) => `This field is too low (minimum is: ${min ?? ''})`,
-  minDate: ({ minDate }) => `This field should be after ${minDate?.toString() ?? ''}`,
-  minLength: ({ minLength }) => `This field should have a length greater than ${minLength ?? ''}`,
-  pattern: ({ regex }) =>
-    `This field should match the regex ${(regex ?? [])
-      .map(r => (Array.isArray(r) ? r.map(nestedRegex => nestedRegex.source).join(' or ') : r.source))
-      .join(' and ')}`,
-  required: () => 'This field is required',
-}
 
 /**
  * @deprecated
@@ -59,26 +41,3 @@ export const renderWithTheme = (compoment: ReactNode, theme?: typeof consoleLigh
 
   return result
 }
-
-export const renderWithForm = (
-  compoment: ReactElement,
-  useFormProps?: UseFormProps,
-  formProps?: Partial<ComponentProps<typeof Form>>,
-  theme?: typeof consoleLightTheme,
-) => {
-  const { result } = renderHook(() => useForm({ mode: 'onChange', ...useFormProps }))
-
-  const renderResult = renderWithTheme(
-    <Form errors={mockFormErrors} methods={result.current} onSubmit={() => {}} {...formProps}>
-      {compoment}
-    </Form>,
-    theme,
-  )
-
-  return {
-    ...renderResult,
-    resultForm: result,
-  }
-}
-
-export const defaultError = new Error('Default error message')

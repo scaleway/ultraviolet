@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithForm } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Submit, UnitInputField } from '../..'
+import { renderWithForm } from '../../../__tests__/helpers'
 import { mockErrors } from '../../../mocks'
 
 const optionsSelect = [
