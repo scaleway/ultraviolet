@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Other/Key/A11y" />
+
+# Key - Accessibility
+
+## Description
+
+A visual component used to display keyboard shortcuts in a styled format. Renders as a semantic `<kbd>` element and supports special key mappings (e.g., "shift" → symbol), variants (size, sentiment, prominence), and a disabled state.
+
+## Summary
+
+1. ✅ **Perceivable**: Visual contrast is sufficient
+2. ✅ **Operable**: Component is purely visual/informational, no interaction required
+3. ✅ **Understandable**: Content is readable and clear
+4. ✅ **Robust**: Missing `aria-disabled` when disabled; semantic `<kbd>` used correctly
+
+## ARIA Pattern
+
+No specific ARIA pattern required. The component correctly uses the semantic `<kbd>` HTML element which is the standard for representing keyboard input.
+
+[MDN kbd element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd)
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - The `<kbd>` element semantically conveys that content represents keyboard input
+- ✅ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - Text contrast respects 4.5:1 ratio
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - Native `<kbd>` element provides proper role information to assistive technologies
+
+To apply when using the component:
+
+- [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - When displaying keyboard shortcuts, ensure surrounding context explains what action the shortcut triggers
+
+## Accessibility issues
+
+None
+
+## Dependencies
+
+- None
