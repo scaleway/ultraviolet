@@ -18,11 +18,11 @@ type InputProps = XOR<[TextInputProps, SelectInputProps]>
 type InputKeyProps = {
   label: ComponentProps<typeof TextInput>['label']
   required?: ComponentProps<typeof TextInput>['required']
+  placeholder?: ComponentProps<typeof TextInput>['placeholder']
 } & InputProps
 
 type InputValueProps = {
   type?: ComponentProps<typeof TextInput>['type']
-  placeholder?: ComponentProps<typeof TextInput>['placeholder']
 } & InputKeyProps
 
 type AddButtonProps = {
@@ -54,6 +54,5 @@ export type KeyValueInputProps = {
   onFocus?: (keyValues: KeyValuePair[], index?: number) => void
   style?: CSSProperties
   className?: string
-  'data-testid'?: string
   'aria-describedby'?: string
 }

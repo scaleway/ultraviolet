@@ -2,7 +2,7 @@ import { Template } from './Template.stories'
 
 export const MaxSize = Template.bind({})
 
-MaxSize.args = { ...Template.args, size: 'small', maxSize: 3 }
+MaxSize.args = { ...Template.args, maxSize: 3 }
 
 MaxSize.parameters = {
   docs: {
