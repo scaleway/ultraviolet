@@ -10,5 +10,5 @@ type RecursivePartial<T> = {
  * Will extend theme with new theme properties
  * @param {RecursivePartial<UltravioletUITheme>} extendedTheme the properties of a new theme you want to apply from baseTheme
  */
-export const extendTheme = (extendedTheme: RecursivePartial<UltravioletUITheme>) =>
+export const extendTheme = (extendedTheme: RecursivePartial<UltravioletUITheme>): UltravioletUITheme =>
   deepmerge(consoleLightTheme, extendedTheme) as UltravioletUITheme
