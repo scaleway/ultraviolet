@@ -67,15 +67,16 @@ const button = style({
       outline: 'none',
       textDecoration: 'none',
     },
-    '&[aria-disabled="false"]:not(:disabled):hover': {
+    '&[aria-disabled="false"]:not(:disabled):active': {
       borderBottomColor: theme.colors.primary.border,
       color: theme.colors.primary.text,
       outline: 'none',
     },
+    '&[aria-disabled="false"]:not(:disabled):hover': {
+      background: theme.colors.neutral.backgroundHover,
+    },
     '&[aria-disabled="false"]:not(:disabled):focus-visible': {
       boxShadow: `inset ${theme.shadows.focusPrimary}`,
-      borderBottomColor: theme.colors.primary.border,
-      color: theme.colors.primary.text,
       outline: 'none',
     },
     '&[aria-disabled="true"], &:disabled': {
@@ -116,18 +117,19 @@ const badge = style({
   marginLeft: theme.space[1],
   padding: `0 ${theme.space[1]}`,
   selectors: {
-    [`${button}[aria-selected="false"]:hover &, ${button}[aria-selected="false"]:active &`]: {
-      backgroundColor: theme.colors.primary.background,
-      borderColor: theme.colors.primary.background,
-      color: theme.colors.primary.text,
-    },
+    [`${button}:not(:disabled)[aria-selected="false"]:hover &, ${button}[aria-selected="false"]:active &, ${button}[aria-selected="false"]:focus-visible &`]:
+      {
+        backgroundColor: theme.colors.neutral.backgroundWeak,
+        borderColor: theme.colors.neutral.backgroundWeak,
+        color: theme.colors.neutral.text,
+      },
   },
 })
 
 const textSelected = styleVariants({
   default: {
     selectors: {
-      [`${button}:hover &, ${button}:focus &, ${button}:active &`]: {
+      [`${button}:not(:disabled):hover &, ${button}:focus &, ${button}:active &`]: {
         color: theme.colors.primary.text,
       },
     },
