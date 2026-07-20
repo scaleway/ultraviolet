@@ -67,6 +67,8 @@
     "test:unit": "TZ=UTC LC_ALL=en_US.UTF-8  pnpm vitest --run ",
     "test:unit:coverage": "pnpm test:unit --coverage",
     "test:watch": "LC_ALL=en_US.UTF-8  pnpm vitest watch ",
+    "test:browser": " pnpm vitest --run --config vitest.browser.config",
+    "test:browser:watch": " pnpm vitest watch --config vitest.browser.config",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "watch": "pnpm run '/^watch:.*/'",
@@ -116,6 +118,7 @@
     "@types/react-dom": "19.2.3",
     "@utils/test": "workspace:*",
     "@vanilla-extract/vite-plugin": "5.2.3",
+    "axe-core": "catalog:",
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "vite": "catalog:"
