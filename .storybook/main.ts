@@ -38,16 +38,6 @@ const main = defineMain({
     '../utils/stories/src/**/*.mdx',
     '../utils/stories/src/**/*.stories.tsx',
   ],
-
-  typescript: {
-    reactDocgen: 'react-docgen-typescript',
-    reactDocgenTypescriptOptions: {
-      compilerOptions: {
-        esModuleInterop: true,
-      },
-      shouldRemoveUndefinedFromOptional: true,
-    },
-  },
 })
 
 export default main
