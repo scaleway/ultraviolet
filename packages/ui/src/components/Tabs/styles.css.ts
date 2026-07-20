@@ -78,7 +78,6 @@ const button = style({
     '&[aria-disabled="false"]:not(:disabled):focus-visible': {
       boxShadow: `inset ${theme.shadows.focusPrimary}`,
       outline: 'none',
-      background: theme.colors.neutral.backgroundHover,
     },
     '&[aria-disabled="true"], &:disabled': {
       cursor: 'not-allowed',
