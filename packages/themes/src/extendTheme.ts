@@ -1,5 +1,5 @@
 import deepmerge from 'deepmerge'
-import { UltravioletUITheme } from './constants'
+import type { UltravioletUITheme } from './constants'
 import { consoleLightTheme } from './themes'
 
 type RecursivePartial<T> = {

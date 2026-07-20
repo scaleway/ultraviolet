@@ -1,6 +1,7 @@
 'use client'
 
-import { consoleLightTheme, UltravioletUITheme } from '@ultraviolet/themes'
+import { consoleLightTheme } from '@ultraviolet/themes'
+import type { UltravioletUITheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { forwardRef, useMemo } from 'react'
