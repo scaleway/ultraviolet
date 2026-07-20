@@ -37,8 +37,8 @@ For the library to work properly, you need to wrap your application with the `Th
 You will also need to import styles of components for them to have the correct styles.
 
 ```tsx
-import { ThemeProvider } from '@ultraviolet/themes'
-import { Button, theme } from '@ultraviolet/ui'
+import { ThemeProvider, consoleLightTheme as theme } from '@ultraviolet/themes'
+import { Button } from '@ultraviolet/ui'
 import '@ultraviolet/ui/styles'
 
 const App = () => (
@@ -63,7 +63,7 @@ If your app still uses `Emotion`, you can combine both theme providers:
 
 ```js
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
-import { consoleLightTheme, ThemeProvider as UVThemeProvider } from '@ultraviolet/ui'
+import { consoleLightTheme, ThemeProvider as UVThemeProvider } from '@ultraviolet/themes'
 
 const App = () => (
   <UVThemeProvider theme={consoleLightTheme}>

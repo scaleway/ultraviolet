@@ -1,11 +1,11 @@
 'use client'
 
 import { consoleLightTheme } from '@ultraviolet/themes'
+import type { UltravioletUITheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { forwardRef, useMemo } from 'react'
 import type { CSSProperties, ElementType, PropsWithChildren, ReactElement } from 'react'
-import type { UltravioletUITheme } from '../../theme'
 import type { PolymorphicComponentProps } from './types'
 import { sprinkles, stackStyle } from './styles.css'
 import type { AlignItemsType, JustifyContentType } from './styles.css'

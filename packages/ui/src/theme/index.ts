@@ -4,6 +4,9 @@ import { ThemeProvider } from './ThemeProvider'
 
 export type ScreenSize = keyof typeof consoleLightTheme.breakpoints
 
+/**
+ * @deprecated use `UltravioletUITheme` from `@ultraviolet/themes` instead
+ */
 type UltravioletUITheme = typeof consoleLightTheme
 
 const { colors, shadows, typography, space, radii, breakpoints } = consoleLightTheme
@@ -14,7 +17,6 @@ type RecursivePartial<T> = {
 
 /**
  * Will extend theme with new theme properties
- * @param {UltravioletUITheme} baseTheme the theme you want to extend from, by default it is set to light theme
  * @param {RecursivePartial<UltravioletUITheme>} extendedTheme the properties of a new theme you want to apply from baseTheme
  */
 const extendTheme = (extendedTheme: RecursivePartial<UltravioletUITheme>) =>
@@ -40,14 +42,32 @@ export {
   space,
   radii,
   breakpoints as screens,
+  /**
+   * @deprecated use `consoleDarkTheme` from `@ultraviolet/themes` instead
+   */
   consoleDarkTheme as darkTheme,
+  /**
+   * @deprecated use `consoleDarkerTheme` from `@ultraviolet/themes` instead
+   */
   consoleDarkerTheme as darkerTheme,
+  /**
+   * @deprecated use `extendTheme` from `@ultraviolet/themes` instead
+   */
   extendTheme,
   SENTIMENTS,
   SENTIMENTS_WITHOUT_NEUTRAL,
   typography,
+  /**
+   * @deprecated use `ThemeProvider` from `@ultraviolet/themes` instead
+   */
   ThemeProvider,
+  /**
+   * @deprecated use `useTheme` from `@ultraviolet/themes` instead
+   */
   useTheme,
 }
 
+/**
+ * @deprecated use `consoleLightTheme` from `@ultraviolet/themes` instead
+ */
 export default consoleLightTheme
