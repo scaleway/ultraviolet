@@ -7,8 +7,8 @@ export default {
   parameters: {
     a11yStatus: {
       perceivable: false,
-      operable: false,
-      understandable: false,
+      operable: true,
+      understandable: true,
       robust: false,
     },
   },
