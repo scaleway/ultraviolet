@@ -7,12 +7,12 @@ export default {
   parameters: {
     a11yStatus: {
       perceivable: false,
-      operable: false,
-      understandable: false,
+      operable: true,
+      understandable: true,
       robust: false,
     },
   },
-} as Meta<typeof Badge>
+} satisfies Meta<typeof Badge>
 
 export { Playground } from './Playground.stories'
 export { Sentiments } from './Sentiments.stories'
