@@ -430,7 +430,7 @@ export const lightTheme = {
   theme: 'light',
   typography: {
     body: {
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
       fontSize: '1rem',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -441,7 +441,7 @@ export const lightTheme = {
       weight: '400',
     },
     bodySmall: {
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
       fontSize: '0.875rem',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -452,7 +452,7 @@ export const lightTheme = {
       weight: '400',
     },
     bodySmallStrong: {
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
       fontSize: '0.875rem',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -463,7 +463,7 @@ export const lightTheme = {
       weight: '500',
     },
     bodySmallStronger: {
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
       fontSize: '0.875rem',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
@@ -474,7 +474,7 @@ export const lightTheme = {
       weight: '600',
     },
     bodyStrong: {
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
       fontSize: '1rem',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -485,7 +485,7 @@ export const lightTheme = {
       weight: '500',
     },
     bodyStronger: {
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
       fontSize: '1rem',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
@@ -496,7 +496,7 @@ export const lightTheme = {
       weight: '600',
     },
     caption: {
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
       fontSize: '0.75rem',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -507,7 +507,7 @@ export const lightTheme = {
       weight: '400',
     },
     captionSmall: {
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
       fontSize: '0.625rem',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -518,7 +518,7 @@ export const lightTheme = {
       weight: '400',
     },
     captionSmallStrong: {
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
       fontSize: '0.625rem',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -529,7 +529,7 @@ export const lightTheme = {
       weight: '500',
     },
     captionSmallStronger: {
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
       fontSize: '0.625rem',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
@@ -540,7 +540,7 @@ export const lightTheme = {
       weight: '600',
     },
     captionStrong: {
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
       fontSize: '0.75rem',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -551,7 +551,7 @@ export const lightTheme = {
       weight: '500',
     },
     captionStronger: {
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
       fontSize: '0.75rem',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
@@ -562,7 +562,7 @@ export const lightTheme = {
       weight: '600',
     },
     code: {
-      fontFamily: 'JetBrains, monospace',
+      fontFamily: 'JetBrains, Consolas, Monaco, Andale Mono, monospace',
       fontSize: '0.875rem',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -573,7 +573,7 @@ export const lightTheme = {
       weight: '400',
     },
     codeSmall: {
-      fontFamily: 'JetBrains, monospace',
+      fontFamily: 'JetBrains, Consolas, Monaco, Andale Mono, monospace',
       fontSize: '0.75rem',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -584,7 +584,7 @@ export const lightTheme = {
       weight: '400',
     },
     codeSmallStrong: {
-      fontFamily: 'JetBrains, monospace',
+      fontFamily: 'JetBrains, Consolas, Monaco, Andale Mono, monospace',
       fontSize: '0.75rem',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -595,7 +595,7 @@ export const lightTheme = {
       weight: '500',
     },
     codeSmallStronger: {
-      fontFamily: 'JetBrains, monospace',
+      fontFamily: 'JetBrains, Consolas, Monaco, Andale Mono, monospace',
       fontSize: '0.75rem',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
@@ -606,7 +606,7 @@ export const lightTheme = {
       weight: '600',
     },
     codeStrong: {
-      fontFamily: 'JetBrains, monospace',
+      fontFamily: 'JetBrains, Consolas, Monaco, Andale Mono, monospace',
       fontSize: '0.875rem',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -617,7 +617,7 @@ export const lightTheme = {
       weight: '500',
     },
     codeStronger: {
-      fontFamily: 'JetBrains, monospace',
+      fontFamily: 'JetBrains, Consolas, Monaco, Andale Mono, monospace',
       fontSize: '0.875rem',
       fontWeight: 'Bold',
       letterSpacing: '0',
@@ -628,7 +628,7 @@ export const lightTheme = {
       weight: '600',
     },
     heading: {
-      fontFamily: 'Space Grotesk, sans-serif',
+      fontFamily: 'Space Grotesk, Century Gothic, Futura, sans-serif',
       fontSize: '1.5625rem',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -639,7 +639,7 @@ export const lightTheme = {
       weight: '400',
     },
     headingLarge: {
-      fontFamily: 'Space Grotesk, sans-serif',
+      fontFamily: 'Space Grotesk, Century Gothic, Futura, sans-serif',
       fontSize: '2.1875rem',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -650,7 +650,7 @@ export const lightTheme = {
       weight: '400',
     },
     headingLargeStrong: {
-      fontFamily: 'Space Grotesk, sans-serif',
+      fontFamily: 'Space Grotesk, Century Gothic, Futura, sans-serif',
       fontSize: '2.1875rem',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -661,7 +661,7 @@ export const lightTheme = {
       weight: '500',
     },
     headingLargeStronger: {
-      fontFamily: 'Space Grotesk, sans-serif',
+      fontFamily: 'Space Grotesk, Century Gothic, Futura, sans-serif',
       fontSize: '2.1875rem',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
@@ -672,7 +672,7 @@ export const lightTheme = {
       weight: '600',
     },
     headingSmall: {
-      fontFamily: 'Space Grotesk, sans-serif',
+      fontFamily: 'Space Grotesk, Century Gothic, Futura, sans-serif',
       fontSize: '1.3125rem',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -683,7 +683,7 @@ export const lightTheme = {
       weight: '400',
     },
     headingSmallStrong: {
-      fontFamily: 'Space Grotesk, sans-serif',
+      fontFamily: 'Space Grotesk, Century Gothic, Futura, sans-serif',
       fontSize: '1.3125rem',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -694,7 +694,7 @@ export const lightTheme = {
       weight: '500',
     },
     headingSmallStronger: {
-      fontFamily: 'Space Grotesk, sans-serif',
+      fontFamily: 'Space Grotesk, Century Gothic, Futura, sans-serif',
       fontSize: '1.3125rem',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
@@ -705,7 +705,7 @@ export const lightTheme = {
       weight: '600',
     },
     headingStrong: {
-      fontFamily: 'Space Grotesk, sans-serif',
+      fontFamily: 'Space Grotesk, Century Gothic, Futura, sans-serif',
       fontSize: '1.5625rem',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -716,7 +716,7 @@ export const lightTheme = {
       weight: '500',
     },
     headingStronger: {
-      fontFamily: 'Space Grotesk, sans-serif',
+      fontFamily: 'Space Grotesk, Century Gothic, Futura, sans-serif',
       fontSize: '1.5625rem',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
