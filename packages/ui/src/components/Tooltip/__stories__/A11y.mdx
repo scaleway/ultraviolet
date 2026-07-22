@@ -1,0 +1,78 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Overlay/Tooltip/A11y" />
+
+# Tooltip - Accessibility
+
+## Description
+
+A component that displays additional information related to an element when the element receives keyboard focus or mouse hover. It is a thin wrapper around the `Popup` component with `role="tooltip"` and `pointer-events: none`. It renders its content into a portal and supports placement, max width, debounce delay, and controlled visibility.
+
+## Summary
+
+1. ❌ **Perceivable**: Tooltip is not hoverable (`pointer-events: none` violates WCAG 1.4.13). When using function children, the relationship between trigger and tooltip is not conveyed (missing `aria-describedby`).
+2. ❌ **Operable**: The wrapping `div` has `tabIndex={0}` and creates an extra tab stop when children is already focusable (WCAG 2.4.3).
+3. ✅ **Understandable**: Content is readable and appears/disappears on focus/blur as expected.
+4. ❌ **Robust**: When using function children, `aria-describedby` is not passed to the render props, so assistive technologies cannot programmatically associate the trigger with the tooltip (WCAG 4.1.2).
+
+## ARIA Pattern
+
+[Tooltip Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/)
+
+Key requirements from the pattern:
+
+- The tooltip container has `role="tooltip"`.
+- The trigger element references the tooltip with `aria-describedby`.
+- Tooltips do not receive focus.
+- Escape dismisses the tooltip.
+- Focus stays on the triggering element while the tooltip is displayed.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - When using ReactNode children, the wrapping `div` correctly sets `aria-describedby` to associate the trigger with the tooltip.
+- ✅ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - White text (`#ffffff`) on dark navy background (`#151a2d`) provides well above 4.5:1 contrast.
+- ✅ [WCAG 1.4.4 - Resize Text (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html) - Uses `rem` units so text scales with user font size settings.
+- ❌ [WCAG 1.4.13 - Content on Hover or Focus (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html) - The tooltip is dismissible (Escape) and persistent, but NOT hoverable: `pointer-events: none` on the tooltip prevents users from moving the cursor over the tooltip content without it being dismissed.
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Tooltip appears on keyboard focus and can be dismissed with Escape.
+- ✅ [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) - Focus is not trapped; Tab moves freely and Escape dismisses the tooltip.
+- ⚠️ [WCAG 2.4.11 - Focus Not Obscured (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured.html) - Depends on placement and viewport position; the `auto` placement helps, but `top`/`bottom`/`left`/`right` may obscure the trigger or be obscured by viewport edges.
+- ✅ [WCAG 2.5.1 - Pointer Gestures (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures.html) - Only simple hover/focus is required; no multi-point or path-based gestures.
+- ✅ [WCAG 3.2.1 - On Focus (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/on-focus.html) - No unexpected context change when the trigger receives focus.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - `role="tooltip"` is correctly set on the tooltip container, but when using function children the `aria-describedby` attribute is not forwarded in the render props, so the trigger is not programmatically associated with the tooltip content.
+
+To apply when using the component:
+
+- [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - When children is already a focusable element (e.g., `Button`, `a`), prefer function children or pass `tabIndex={-1}` on the wrapper to avoid creating a double tab stop.
+- [WCAG 2.4.11 - Focus Not Obscured (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured.html) - Choose a `placement` that does not obscure the trigger or other focused content in the viewport.
+
+## Accessibility issues
+
+**Critical:**
+
+- Missing `aria-describedby` when using function children - The `Popup` render-prop API passes `onBlur`, `onFocus`, `onPointerEnter`, `onPointerLeave` and `ref` to the children function, but does NOT forward `aria-describedby` (or the tooltip `id`). As a result, when consumers use the function form of children, the trigger element is never associated with the tooltip, and screen readers will not announce the tooltip content on focus. This is the core requirement of the WAI-ARIA tooltip pattern.
+
+**High:**
+
+- Tooltip is not hoverable (`pointer-events: none`) - The `tooltipStyle.tooltip` rule sets `pointer-events: none`, so users cannot move the pointer onto the tooltip without it being dismissed (the trigger's `onPointerLeave` fires and the tooltip closes after the debounce delay). This fails the "Hoverable" requirement of WCAG 1.4.13.
+- Extra tab stop when children is focusable - When a focusable element (e.g., `Button`) is passed as children, the wrapping `div` with default `tabIndex={0}` adds a second tab stop before the actual interactive element, confusing focus order and providing no focus indicator on the wrapper.
+
+**Medium:**
+
+- `aria-controls` is incorrectly set on the trigger - The `Popup` always renders `aria-controls={generatedId}` on the children container. For tooltips, the WAI-ARIA pattern only requires `aria-describedby`; `aria-controls` is redundant and may confuse assistive technologies that expect it to indicate a controllable widget (dialog, menu, etc.).
+- Debounce delay may cause race condition with screen readers - With the default `debounceDelay` of 200ms, the tooltip is not rendered into the DOM until 200ms after focus. Because `dynamicDomRendering` defaults to `true`, `aria-describedby` references an element that does not exist yet. Screen readers querying the description immediately after focus may find nothing to announce.
+- `role` is overridable - The Tooltip exposes `role` as a prop (defaulting to `"tooltip"`). Consumers can override it with `"dialog"` or `"popup"`, which would enable the focus trap or break the tooltip semantics. This is a footgun.
+- The Tooltip doesn't allow to be linked as a label using the `aria-labelledby` attribute instead of `aria-describedby`. Choosing between a label and a description could be necessary with icon buttons. See the RFC about [Accessible Icons and Hidden Labels](https://github.com/scaleway/ultraviolet/discussions/6585).
+
+**Low:**
+
+- Tooltip font size is `0.8rem` (12.8px) - Relatively small; may be harder to read for users with low vision, though it does scale with `rem`.
+
+## Dependencies
+
+- This component is a thin wrapper around `Popup` (`packages/ui/src/components/Popup/index.tsx`). Most accessibility issues originate from `Popup`:
+  - `aria-controls` being unconditionally set on the children container
+  - `aria-describedby` not being forwarded to function children
+  - Default `tabIndex={0}` and missing focus styles on the `childrenContainer` recipe
+    Fixing these issues in `Popup` will automatically improve the `Tooltip` component.
