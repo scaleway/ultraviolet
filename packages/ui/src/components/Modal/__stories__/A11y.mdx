@@ -1,0 +1,68 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Overlay/Modal/A11y" />
+
+# Modal - Accessibility
+
+## Description
+
+Modal is a dialog component that displays content on top of other page content, commonly used for dialogs with additional information or confirmations. It supports focus trapping, keyboard navigation (Escape to close), and various placements.
+
+## Summary
+
+1. ✅ **Perceivable**: Uses `aria-label` for accessible naming, close button labeled, semantic `<dialog>` element.
+2. ⚠️ **Operable**: Keyboard support (Escape, focus trap) present, but focus management has issues: initial focus on dialog element (not inside), incomplete focus restoration for programmatic modals (with prop `open` without disclosure).
+3. ✅ **Understandable**: Clear labeling via `ariaLabel`, consistent behavior.
+4. ⚠️ **Robust**: Native `<dialog>` provides role, but `aria-modal` always `true` (even when background not inert), missing `aria-labelledby` which may be less optimal for modals with visible titles, not using native `showModal()`/`close()` methods.
+
+## ARIA Pattern
+
+[Dialog (Modal) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) - Focus trap via `handleFocusTrap`
+- ⚠️ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - Initial focus on dialog element (not inside), incomplete focus restoration: it only works when a `disclosure` element is provided. Programmatic modals don't restore focus to a logical element on close
+- ⚠️ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - Missing `aria-labelledby`, `aria-modal` always `true` even when the background content is not truly inert (`preventBodyScroll={false}`)
+
+To apply when using the component:
+
+- [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Ensure semantic structure (headings, lists) within modal content
+- [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Ensure 3:1 contrast for interactive elements within modal
+- [WCAG 2.4.4 - Link Purpose (In Context) (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html) - Ensure descriptive link text within modal
+- [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - Provide labels for form inputs within modal
+- [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - When modal has a visible title, the relationship between the title and dialog should be programmatically determined via `aria-labelledby` (currently not supported by the component)
+- [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) - Avoid combining `hideOnEsc={false}`, `isClosable={false}`, and `hideOnClickOutside={false}` without providing a manual close button in the modal content
+
+## Accessibility issues
+
+### Medium
+
+- **Incorrect initial focus placement**: Focus lands on `<dialog>` element itself instead of an element **inside** the dialog: screen reader users hear container focus instead of meaningful content.
+
+> Focus should go on the first focusable element inside (unless it causes a scroll in the page), an element with `tabindex="-1"` (title/paragraph) at the start for complex content, the least destructive action of irreversible actions (prefer `Dialog` for this use case), or the most frequently used element for simple _OK/Continue_ dialogs
+
+- **Missing `title` prop and `aria-labelledby`**: Only supports `aria-label`, not `aria-labelledby` for visible titles. Dialogs should have `aria-labelledby` referencing a visible title (preferred) or `aria-label` fallback. Adding a `title` prop that renders visible heading and sets `aria-labelledby` automatically would ensures that screen reader users hear the same title as sighted users without requiring developers to manually wire up IDs.
+
+- **`aria-modal` always true**: Set unconditionally, even when `preventBodyScroll={false}`. Only set to true when background is truly inert.
+
+- **Not using native `<dialog>` methods**: Uses a native `<dialog>` element but doesn't leverage `showModal()` and `close()` methods. Using native methods would provide better built-in accessibility: automatic focus management & focus trap, native Escape key handling, and proper focus return on close. The current custom implementation may have edge cases not covered by the manual focus trap.
+
+- **No focus restoration for programmatic modals**: When using `open` prop without `disclosure`, focus isn't restored on close. Focus should return to the invoking element. If the invoking element no longer exists, focus should be set on another element that provides logical work flow. `Modal` should track previously focused element and restore on close, or accept prop specifying restoration target.
+
+### Low
+
+- **No `aria-describedby` support**: Could help announce context for simple dialogs (optional for complex content with semantic structures).
+
+- **Image alt text is generic**: `alt="illustration"` is not descriptive. Add `imageAlt` prop or provide an empty `alt` by default for decorative images.
+
+- **Hardcoded English `aria-label="close"`**: Close button label not translatable. See the RFC about [Accessible Icons and Hidden Labels](https://github.com/scaleway/ultraviolet/discussions/6585).
+
+- **No `ariaLabelledBy` prop**: In addition to adding a `title` prop, the component should also support an `ariaLabelledBy` prop for advanced use cases referencing external title elements.
+
+## Dependencies
+
+- **Button component**: Focus visibility (WCAG 2.4.7) and contrast (WCAG 1.4.3) depend on Button implementation
+- **Dialog component**: Underlying implementation affects accessibility semantics
