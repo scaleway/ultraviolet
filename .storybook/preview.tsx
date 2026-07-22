@@ -117,6 +117,7 @@ const parameters: Preview['parameters'] = {
   },
   controls: {
     exclude: 'data-flip-id',
+    expanded: true,
   },
   viewMode: 'docs',
   viewport: {
