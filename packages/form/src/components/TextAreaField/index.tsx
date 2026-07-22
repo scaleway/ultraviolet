@@ -2,11 +2,9 @@
 
 import { TextArea } from '@ultraviolet/ui'
 import type { ComponentProps, KeyboardEvent } from 'react'
-import { useController } from 'react-hook-form'
-import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
-import { useErrors } from '../../providers'
+import type { FieldPath, FieldValues } from 'react-hook-form'
+import { useField } from '../../hooks/useField'
 import type { BaseFieldProps } from '../../types'
-import { validateRegex } from '../../utils/validateRegex'
 
 export type TextAreaFieldProps<
   TFieldValues extends FieldValues,
@@ -26,42 +24,12 @@ export const TextAreaField = <
 >({
   control,
   label,
-  onChange,
-  minLength,
-  maxLength,
-  name,
-  onBlur,
-  onKeyDown,
-  required,
-  regex: regexes,
-  submitOnEnter,
-  validate,
-  errorLabel,
   'aria-label': ariaLabel,
+  submitOnEnter,
+  onKeyDown,
   ...props
 }: TextAreaFieldProps<TFieldValues, TFieldName>) => {
-  const { getError } = useErrors()
-
-  const {
-    field,
-    fieldState: { error },
-  } = useController<TFieldValues, TFieldName>({
-    control,
-    name,
-    rules: {
-      maxLength,
-      minLength,
-      required,
-      validate: {
-        ...(regexes
-          ? {
-              pattern: value => validateRegex(value, regexes),
-            }
-          : {}),
-        ...validate,
-      },
-    },
-  })
+  const { fieldProps } = useField({ ...props, label, 'aria-label': ariaLabel })
 
   const onKeyDownHandler = (event: KeyboardEvent<HTMLTextAreaElement>) => {
     if (submitOnEnter && event.key === 'Enter' && !event.shiftKey) {
@@ -83,30 +51,8 @@ export const TextAreaField = <
   return (
     <TextArea
       {...props}
-      error={getError(
-        {
-          label: errorLabel ?? label ?? ariaLabel ?? name,
-          maxLength,
-          minLength,
-          regex: regexes,
-          value: field.value,
-        },
-        error,
-      )}
-      maxLength={maxLength}
-      minLength={minLength}
-      name={name}
-      onBlur={event => {
-        onBlur?.(event)
-        field.onBlur()
-      }}
-      onChange={event => {
-        field.onChange(event)
-        onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
-      }}
+      {...fieldProps}
       onKeyDown={onKeyDownHandler}
-      required={required}
-      value={field.value}
       {...(label ? { label } : { 'aria-label': ariaLabel! })}
     />
   )
