@@ -1,5 +1,7 @@
 // oxlint-disable eslint/no-console
 
+import { FONTS_FALLBACK } from './constants.ts'
+
 export type JsonType = Record<string, object | string>
 
 type ThemeMatchType = {
@@ -111,6 +113,7 @@ const getValues = (
   if (isColorType(data)) {
     return data.type === typeFilter && 'value' in data ? evalValue(data.value, variables) : null
   }
+
   const res = Object.keys(data).reduce((values: JsonType, key) => {
     const newValue = getValues((data as Record<string, ColorType | ThemeType>)[key], {
       typeFilter,
@@ -118,6 +121,12 @@ const getValues = (
     })
 
     if (newValue !== null) {
+      if (typeFilter === 'typography' && typeof newValue === 'object') {
+        const defaultFontFamily = newValue['fontFamily'] as string
+        const adaptedFontFamily = FONTS_FALLBACK[defaultFontFamily]
+
+        newValue['fontFamily'] = adaptedFontFamily ?? defaultFontFamily
+      }
       values[key.replaceAll(/,/gu, '.')] = newValue
     }
 
