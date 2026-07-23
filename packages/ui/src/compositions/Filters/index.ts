@@ -9,6 +9,8 @@ export type {
   FilterConfigItemBase,
   FilterConfigItem,
   FilterConfigItemDatetimeRange,
+  FilterConfigItemDateRange,
+  FilterConfigItemSearch,
   FilterConfigItemMultiSelect,
   FilterConfigItemNumber,
   FilterConfigItemSelect,
