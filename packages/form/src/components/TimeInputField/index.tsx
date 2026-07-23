@@ -2,9 +2,8 @@
 
 import { TimeInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { useController } from 'react-hook-form'
-import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
-import { useErrors } from '../../providers'
+import type { FieldPath, FieldValues } from 'react-hook-form'
+import { useField } from '../../hooks/useField'
 import type { BaseFieldProps } from '../../types'
 
 type TimeInputFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
@@ -21,52 +20,23 @@ export const TimeInputField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  onChange,
+  control,
   label,
   required = false,
-  name,
-  onBlur,
   'aria-label': ariaLabel,
-  shouldUnregister,
-  control,
-  errorLabel,
   ...props
 }: TimeInputFieldProps<TFieldValues, TFieldName>) => {
-  const { getError } = useErrors()
-
-  const {
-    field,
-    fieldState: { error },
-  } = useController<TFieldValues, TFieldName>({
-    control,
-    name,
-    rules: {
-      required,
-    },
-    shouldUnregister,
-  })
+  const { fieldProps } = useField({ ...props, required, label, 'aria-label': ariaLabel })
 
   return (
     <TimeInput
       {...props}
-      error={getError(
-        {
-          label: errorLabel ?? label ?? ariaLabel ?? name,
-          value: field.value,
-        },
-        error,
-      )}
-      label={label}
-      onBlur={event => {
-        onBlur?.(event)
-        field.onBlur()
-      }}
-      onChange={value => {
-        field.onChange(value)
-        onChange?.(value as PathValue<TFieldValues, Path<TFieldValues>>)
-      }}
+      error={fieldProps.error}
+      onBlur={fieldProps.onBlur}
+      onChange={fieldProps.onChange}
       required={required}
-      value={field.value}
+      value={fieldProps.value}
+      {...(label ? { label } : { 'aria-label': ariaLabel! })}
     />
   )
 }
