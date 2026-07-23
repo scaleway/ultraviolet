@@ -2,7 +2,6 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { es, fr, ru } from 'date-fns/locale'
-import tk from 'timekeeper'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 import { DateInput } from '..'
 
@@ -11,11 +10,11 @@ const YEAR = /1995/iu
 
 describe('dateInput', () => {
   beforeAll(() => {
-    tk.freeze(new Date(1_609_503_120_000))
+    vi.useFakeTimers({ now: new Date(1_609_503_120_000), toFake: ['Date'] })
   })
 
   afterAll(() => {
-    tk.reset()
+    vi.useRealTimers()
   })
 
   it('renders correctly with default props', () => {

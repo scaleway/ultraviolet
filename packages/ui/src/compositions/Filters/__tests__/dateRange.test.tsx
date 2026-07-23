@@ -1,7 +1,6 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import tk from 'timekeeper'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 import { Filters } from '..'
 import type { FilterConfig } from '../types'
@@ -39,11 +38,11 @@ const labels = {
 describe('dateRange filter', () => {
   beforeAll(() => {
     // Freeze time to January 1, 2021 so the calendar always shows January 2021
-    tk.freeze(new Date(1_609_503_120_000))
+    vi.useFakeTimers({ now: new Date(1_609_503_120_000), toFake: ['Date'] })
   })
 
   afterAll(() => {
-    tk.reset()
+    vi.useRealTimers()
   })
 
   it('should display the initialValue in the input', () => {
