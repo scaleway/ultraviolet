@@ -8,7 +8,7 @@ import { TEXT_VARIANT } from './constant'
 import { badgeStyle } from './styles.css'
 import type { BadgeVariants } from './styles.css'
 
-type BadgeProps = {
+export type BadgeProps = {
   className?: string
   children: ReactNode
   'data-testid'?: string
