@@ -1,5 +1,14 @@
 # Change Log
 
+## 5.4.7
+
+### Patch Changes
+
+- [#6678](https://github.com/scaleway/ultraviolet/pull/6678) [`194c485`](https://github.com/scaleway/ultraviolet/commit/194c48575723b469d92754263aec08e2e335370b) Thanks [@lisalupi](https://github.com/lisalupi)! - New `HsmBackendProductIcon`
+
+- Updated dependencies [[`22be569`](https://github.com/scaleway/ultraviolet/commit/22be569544b7b812b4fd70f7046ace2c63de8d60), [`940f087`](https://github.com/scaleway/ultraviolet/commit/940f087f6ef64c120cbe63f2255b8c3b04af969d)]:
+  - @ultraviolet/themes@3.1.9
+
 ## 5.4.6
 
 ### Patch Changes

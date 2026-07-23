@@ -1,5 +1,41 @@
 # Change Log
 
+## 3.21.0
+
+### Minor Changes
+
+- [#6700](https://github.com/scaleway/ultraviolet/pull/6700) [`72c600a`](https://github.com/scaleway/ultraviolet/commit/72c600ae20d82563aff17ea093d2bd4450613938) Thanks [@jsulpis](https://github.com/jsulpis)! - `Filters`: add a DateRange filter type using the DateInput component
+
+### Patch Changes
+
+- [#6664](https://github.com/scaleway/ultraviolet/pull/6664) [`6081b17`](https://github.com/scaleway/ultraviolet/commit/6081b1740ec54678cc8b70dc1ae0e0ecb19c89bd) Thanks [@lisalupi](https://github.com/lisalupi)! - `Key`: fix background color when `prominence="strong"`
+
+- [#6664](https://github.com/scaleway/ultraviolet/pull/6664) [`6081b17`](https://github.com/scaleway/ultraviolet/commit/6081b1740ec54678cc8b70dc1ae0e0ecb19c89bd) Thanks [@lisalupi](https://github.com/lisalupi)! - `Text`: correctly apply prominences style
+
+- [#6633](https://github.com/scaleway/ultraviolet/pull/6633) [`940f087`](https://github.com/scaleway/ultraviolet/commit/940f087f6ef64c120cbe63f2255b8c3b04af969d) Thanks [@lisalupi](https://github.com/lisalupi)! - Deprecate `ThemeProvider`, `darkTheme`, `darkerTheme`, `theme`, and `useTheme` from @ultraviolet/ui. Use the equivalents from @ultraviolet/themes instead.
+
+  ⚠️⚠️ **Future breaking change** ⚠️⚠️
+  The `ThemeProvider` from `@ultraviolet/ui` automatically injects styles from `@ultraviolet/icons`.
+  The replacement `ThemeProvider` in `@ultraviolet/themes` does **not** include this side effect.
+
+  When these exports are removed in the next major version, you must manually import the icon styles to avoid visual regressions:
+
+  ```js
+  import "@ultraviolet/icons/styles";
+  ```
+
+- [#6680](https://github.com/scaleway/ultraviolet/pull/6680) [`516b5a1`](https://github.com/scaleway/ultraviolet/commit/516b5a164002a6ca45340fd830155db119e2c5a0) Thanks [@jsulpis](https://github.com/jsulpis)! - `TextArea`: fix automatic resize when rows="auto"
+
+- [#6687](https://github.com/scaleway/ultraviolet/pull/6687) [`973df6d`](https://github.com/scaleway/ultraviolet/commit/973df6d9e90ed908630c1d4f386c0b31b4c6ba42) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.25.11`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.25.11`.
+  Updated dependency `@uiw/react-codemirror` to `4.25.11`.
+
+- [#6677](https://github.com/scaleway/ultraviolet/pull/6677) [`63dec88`](https://github.com/scaleway/ultraviolet/commit/63dec88025e74e71a3bc4d9a9879c4e20e2d35a0) Thanks [@lisalupi](https://github.com/lisalupi)! - `Tabs`: improve hover/focus state
+
+- Updated dependencies [[`22be569`](https://github.com/scaleway/ultraviolet/commit/22be569544b7b812b4fd70f7046ace2c63de8d60), [`194c485`](https://github.com/scaleway/ultraviolet/commit/194c48575723b469d92754263aec08e2e335370b), [`940f087`](https://github.com/scaleway/ultraviolet/commit/940f087f6ef64c120cbe63f2255b8c3b04af969d)]:
+  - @ultraviolet/themes@3.1.9
+  - @ultraviolet/icons@5.4.7
+
 ## 3.20.3
 
 ### Patch Changes
