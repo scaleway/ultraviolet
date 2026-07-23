@@ -9,6 +9,14 @@ export type XOR<T extends unknown[]> = T extends [infer Only]
     ? XOR<[SingleXOR<A, B>, ...Rest]>
     : never
 
+/**
+ * Enforces that at least one of the given keys is provided.
+ * Useful for accessible labelling patterns like `label | aria-label | aria-labelledby`.
+ */
+export type AtLeastOne<T extends Record<string, unknown>> = {
+  [K in keyof T]: { [P in K]: T[P] } & { [P in Exclude<keyof T, K>]?: T[P] }
+}[keyof T]
+
 export type PascalToCamelCase<S extends string> = S extends `${infer P1}${infer P2}` ? `${Lowercase<P1>}${P2}` : S
 
 export type RemoveSuffix<S extends string, Suffix extends string> = S extends `${infer Prefix}${Suffix}` ? Prefix : S
@@ -25,8 +33,7 @@ export type PascalToCamelCaseWithoutSuffix<
   : never
 
 /**
- * Classic prop type where label is a ReactNode and aria-label is a string.
- * One or another is required.
+ * @deprecated use type FormComponentProps instead which will handle all form props required.
  */
 export type LabelProp =
   | {
@@ -44,3 +51,32 @@ export type LabelProp =
       'aria-label'?: never
       id: string
     }
+
+export type ChecboxLabelProp =
+  | {
+      children: ReactNode
+      'aria-label'?: string
+    }
+  | {
+      children?: never
+      'aria-label': string
+    }
+
+export type PartialLabelProps = Partial<{
+  label: string
+  'aria-label': string
+  'aria-labelledby': string
+}>
+
+export type LabelProps = AtLeastOne<{
+  label: string
+  'aria-label': string
+  'aria-labelledby': string
+}>
+
+export type BaseFormComponentProps = {
+  disabled?: boolean
+  required?: boolean
+  id?: string
+  name?: string
+} & PartialLabelProps

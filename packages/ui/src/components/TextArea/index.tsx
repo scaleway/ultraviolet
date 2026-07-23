@@ -6,6 +6,7 @@ import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { forwardRef, useEffect, useId, useImperativeHandle, useRef } from 'react'
 import type { CSSProperties, ReactNode, TextareaHTMLAttributes } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
+import type { BaseFormComponentProps, LabelProps } from '../../types'
 import { Button } from '../Button'
 import { SIZE_HEIGHT as buttonSizeHeight } from '../Button/constants'
 import { Label } from '../Label'
@@ -16,67 +17,54 @@ import { SuccessErrorIcon } from './Icon'
 import { Notice } from './Notice'
 import { paddingRightVar, textAreaStyle } from './styles.css'
 
-type LabelProps =
-  | {
-      label: string
-      'aria-label'?: never
-    }
-  | {
-      label?: never
-      'aria-label': string
-    }
-
-type TextAreaProps = {
-  id?: string
-  className?: string
-  tabIndex?: number
-  autoFocus?: boolean
-  value?: string
-  onChange: (newValue: string) => void
-  placeholder?: string
-  /**
-   * Override others properties : readyOnly, success, error.
-   */
-  disabled?: boolean
-  /**
-   * Override others properties : success, error.
-   * Ignored if following props are provided : disabled.
-   */
-  readOnly?: boolean
-  /**
-   * Override others properties : error, helper.
-   * Ignored if following props are provided : disabled, readyOnly.
-   */
-  success?: string
-  /**
-   * Override others properties : helper.
-   * Ignored if following props are provided : disabled, readyOnly, success.
-   */
-  error?: string
-  /**
-   * Ignored if following props are provided : readyOnly, success.
-   */
-  helper?: ReactNode
-  /**
-   * Number of rows to display. If 'auto', the textarea will grow with the content
-   */
-  rows?: number | 'auto'
-  /**
-   * Text area will grow with the content with a maximum number of rows.
-   */
-  maxRows?: number
-  minLength?: number
-  maxLength?: number
-  size?: 'small' | 'medium' | 'large'
-  tooltip?: string
-  required?: boolean
-  'data-testid'?: string
-  name?: string
-  clearable?: boolean
-  labelDescription?: ReactNode
-  style?: CSSProperties
-} & LabelProps &
-  Pick<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onFocus' | 'onBlur' | 'onKeyDown' | 'aria-describedby'>
+type TextAreaProps = BaseFormComponentProps &
+  LabelProps & {
+    className?: string
+    tabIndex?: number
+    autoFocus?: boolean
+    value?: string
+    onChange: (newValue: string) => void
+    placeholder?: string
+    /**
+     * Override others properties : readyOnly, success, error.
+     */
+    disabled?: boolean
+    /**
+     * Override others properties : success, error.
+     * Ignored if following props are provided : disabled.
+     */
+    readOnly?: boolean
+    /**
+     * Override others properties : error, helper.
+     * Ignored if following props are provided : disabled, readyOnly.
+     */
+    success?: string
+    /**
+     * Override others properties : helper.
+     * Ignored if following props are provided : disabled, readyOnly, success.
+     */
+    error?: string
+    /**
+     * Ignored if following props are provided : readyOnly, success.
+     */
+    helper?: ReactNode
+    /**
+     * Number of rows to display. If 'auto', the textarea will grow with the content
+     */
+    rows?: number | 'auto'
+    /**
+     * Text area will grow with the content with a maximum number of rows.
+     */
+    maxRows?: number
+    minLength?: number
+    maxLength?: number
+    size?: 'small' | 'medium' | 'large'
+    tooltip?: string
+    'data-testid'?: string
+    clearable?: boolean
+    labelDescription?: ReactNode
+    style?: CSSProperties
+  } & Pick<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onFocus' | 'onBlur' | 'onKeyDown' | 'aria-describedby'>
 
 const BORDERS_WIDTH = '2px'
 const AUTO_ROWS = 2

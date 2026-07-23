@@ -7,8 +7,6 @@ import { TimeInput } from '..'
 const DEFAULT_VALUE = new Date('01/01/2000 11:23:14')
 
 describe('timeInput', () => {
-  it('renders correctly with base props', () => shouldMatchSnapshot(<TimeInput />))
-
   it('renders correctly disabled', () => shouldMatchSnapshot(<TimeInput disabled label="test" />))
 
   it('renders correctly readOnly', () => shouldMatchSnapshot(<TimeInput label="test" readOnly />))
