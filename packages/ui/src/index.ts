@@ -65,3 +65,5 @@ export {
   zoomOut,
   zoomOutDefault,
 } from './utils'
+
+export type { FormComponentProps } from './types'
