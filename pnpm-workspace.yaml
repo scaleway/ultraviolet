@@ -5,6 +5,8 @@ engineStrict: true
 minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
   - '@scaleway/*'
+  # Renovate security update: svgo@4.0.2
+  - svgo@4.0.2
 
 allowBuilds:
   '@parcel/watcher': false
@@ -37,7 +39,6 @@ overrides:
 catalog:
   vite: 8.1.5
   vitest: 4.1.10
-
 
 peerDependencyRules:
   allowedVersions:
