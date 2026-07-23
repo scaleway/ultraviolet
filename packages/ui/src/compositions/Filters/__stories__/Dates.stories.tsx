@@ -1,18 +1,23 @@
 import type { StoryFn } from '@storybook/react-vite'
+import { useState } from 'react'
+import { Stack, Snippet } from '../../../components'
 import type { FiltersProps } from '../Filters'
 import { Filters } from '../Filters'
 import type { FilterConfig } from '../types'
 
 type FilterValues = {
-  dates: {
+  datetimes: {
     preset: string
     startAt: Date | null
     endAt: Date | null
   }
-  name: string
+  dates: {
+    startAt: Date | null
+    endAt: Date | null
+  }
 }
 
-const dateFormat = new Intl.DateTimeFormat('en-US', {
+const datetimeFormat = new Intl.DateTimeFormat('en-US', {
   timeStyle: 'medium',
   dateStyle: 'short',
 })
@@ -20,10 +25,9 @@ const dateFormat = new Intl.DateTimeFormat('en-US', {
 const config: FilterConfig<FilterValues>[] = [
   {
     type: 'datetimeRange',
-    name: 'dates',
-    label: 'Dates',
-    dateFormatter: date => dateFormat.format(date),
-    dateInputLocale: 'fr',
+    name: 'datetimes',
+    label: 'DateTime Range',
+    dateFormatter: date => datetimeFormat.format(date),
     maxDate: new Date(),
     minDate: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
     relativePresets: [
@@ -45,15 +49,32 @@ const config: FilterConfig<FilterValues>[] = [
     },
   },
   {
-    type: 'search',
-    name: 'name',
-    hideInDrawer: true,
-    label: 'Name',
-    placeholder: 'Type to search...',
+    type: 'dateRange',
+    name: 'dates',
+    label: 'Date Range',
+    placeholder: 'DD/MM/YYYY - DD/MM/YYYY',
   },
 ]
 
-export const Dates: StoryFn<FiltersProps<FilterValues>> = props => <Filters {...props} />
+export const Dates: StoryFn<FiltersProps<FilterValues>> = props => {
+  const [submittedValues, setSubmittedValues] = useState({ ...props.defaultValues, ...props.initialValues })
+
+  return (
+    <Stack gap="4">
+      <Filters onSubmit={setSubmittedValues} {...props} />
+      <Stack direction="row" wrap gap="4">
+        <div>
+          <strong>Submitted values</strong>
+          <Snippet initiallyExpanded>{JSON.stringify(submittedValues, null, 2)}</Snippet>
+        </div>
+      </Stack>
+    </Stack>
+  )
+}
+
+const today = new Date()
+today.setHours(0, 0, 0, 0)
+const oneWeekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000)
 
 Dates.args = {
   config,
@@ -61,12 +82,21 @@ Dates.args = {
     templateColumns: 'repeat(auto-fit, minmax(min(32ch, 100%), 1fr))',
   },
   defaultValues: {
-    dates: {
+    datetimes: {
       preset: 'last_30days',
       startAt: null,
       endAt: null,
     },
-    name: 'John Doe',
+    dates: {
+      startAt: null,
+      endAt: null,
+    },
+  },
+  initialValues: {
+    dates: {
+      startAt: oneWeekAgo,
+      endAt: today,
+    },
   },
   labels: {
     clearAll: 'Clear all',

@@ -35,7 +35,6 @@ export const Context: StoryFn = () => {
       <Stack direction="row" gap="4">
         <div>
           <strong>Submitted values</strong>
-          <p>Updated when changing a filter in the main row or when submitting in the Drawer.</p>
           <Snippet initiallyExpanded>{JSON.stringify(filterValues, null, 2)}</Snippet>
         </div>
       </Stack>

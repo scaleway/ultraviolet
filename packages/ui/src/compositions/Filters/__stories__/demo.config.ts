@@ -7,6 +7,10 @@ export type FilterValues = {
   price: [number, number]
   ram: [number, number]
   gpu: string
+  dates: {
+    startAt: Date | null
+    endAt: Date | null
+  }
 }
 
 export const demoDefaultValues: FilterValues = {
@@ -16,6 +20,10 @@ export const demoDefaultValues: FilterValues = {
   price: [0, 1000],
   ram: [0, 64],
   gpu: '',
+  dates: {
+    startAt: null,
+    endAt: null,
+  },
 }
 
 export const demoFilters: FilterConfig<FilterValues>[] = [
@@ -55,6 +63,12 @@ export const demoFilters: FilterConfig<FilterValues>[] = [
         searchable: true,
       },
     ],
+  },
+  {
+    type: 'dateRange',
+    name: 'dates',
+    label: 'Dates',
+    placeholder: 'DD/MM/YYYY - DD/MM/YYYY',
   },
   {
     type: 'slider',
