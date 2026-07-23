@@ -68,6 +68,7 @@ export const demoFilters: FilterConfig<FilterValues>[] = [
     type: 'dateRange',
     name: 'dates',
     label: 'Dates',
+    placeholder: 'DD/MM/YYYY - DD/MM/YYYY',
   },
   {
     type: 'slider',

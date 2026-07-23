@@ -52,6 +52,7 @@ const config: FilterConfig<FilterValues>[] = [
     type: 'dateRange',
     name: 'dates',
     label: 'Date Range',
+    placeholder: 'DD/MM/YYYY - DD/MM/YYYY',
   },
 ]
 
