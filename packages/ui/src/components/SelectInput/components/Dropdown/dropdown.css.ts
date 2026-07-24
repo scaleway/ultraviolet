@@ -22,11 +22,6 @@ export const dropdownContainer = style({
   maxHeight: DROPDOWN_MAX_HEIGHT,
   overflowY: 'auto',
   padding: theme.space[0],
-  paddingBottom: theme.space['0.5'],
-})
-
-export const dropdownContainerUnGrouped = style({
-  paddingTop: theme.space['0.5'],
 })
 
 export const dropdownGroup = style({
@@ -52,8 +47,8 @@ export const dropdownGroup = style({
 
 export const dropdownGroupSelectable = recipe({
   base: {
-    paddingLeft: theme.space[2],
-    borderLeft: `${theme.space['0.5']} solid ${theme.colors.neutral.backgroundWeak}`,
+    paddingLeft: `calc(${theme.space[2]} + ${theme.space[0.5]})`,
+    border: '1px solid transparent',
     selectors: {
       '&:focus': {
         backgroundColor: theme.colors.neutral.backgroundHover,
@@ -71,6 +66,18 @@ export const dropdownGroupSelectable = recipe({
   },
   defaultVariants: {
     size: 'large',
+  },
+})
+
+export const dropdownSection = style({
+  paddingBlock: theme.space[0.5],
+  selectors: {
+    ['&:not(:first-child)']: {
+      borderTop: `1px solid ${theme.colors.neutral.borderWeak}`,
+    },
+    [`&:has(${dropdownGroup})`]: {
+      paddingTop: 0,
+    },
   },
 })
 

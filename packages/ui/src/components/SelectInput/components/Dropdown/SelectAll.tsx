@@ -8,35 +8,37 @@ import { selectInputStyle } from '../../styles.css'
 
 export const SelectAll = ({ textVariant }: { textVariant: 'body' | 'bodySmall' }) => {
   const { onChange, options, multiselect, selectAll, setSelectedData, selectedData, size } = useSelectInput()
-  const selectAllOptions = () => {
-    if (multiselect) {
-      setSelectedData({ type: 'selectAll' })
-      if (selectedData.allSelected && onChange) {
-        onChange([])
-      } else {
-        const allValues: OptionType[] = []
-        if (Array.isArray(options)) {
-          options.map(option => allValues.push(option))
-        } else {
-          Object.keys(options).map((group: string) =>
-            options[group].map(option => {
-              if (!option.disabled) {
-                allValues.push(option)
-              }
 
-              return null
-            }),
-          )
-        }
-        onChange?.(allValues.map(value => value.value))
+  if (!(selectAll && multiselect)) {
+    return null
+  }
+
+  const selectAllOptions = () => {
+    setSelectedData({ type: 'selectAll' })
+    if (selectedData.allSelected && onChange) {
+      onChange([])
+    } else {
+      const allValues: OptionType[] = []
+      if (Array.isArray(options)) {
+        options.map(option => allValues.push(option))
+      } else {
+        Object.keys(options).map((group: string) =>
+          options[group].map(option => {
+            if (!option.disabled) {
+              allValues.push(option)
+            }
+
+            return null
+          }),
+        )
       }
+      onChange?.(allValues.map(value => value.value))
     }
   }
 
-  return selectAll && multiselect ? (
-    <Stack gap={0.25} id="items" tabIndex={-1}>
+  return (
+    <Stack gap={0.25} id="items" tabIndex={-1} className={selectInputStyle.dropdownSection}>
       <div
-        aria-disabled={false}
         aria-label="select-all"
         aria-selected={selectedData.allSelected}
         className={cn(
@@ -77,5 +79,5 @@ export const SelectAll = ({ textVariant }: { textVariant: 'body' | 'bodySmall' }
         </Checkbox>
       </div>
     </Stack>
-  ) : null
+  )
 }
