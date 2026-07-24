@@ -3,47 +3,52 @@ import { Checkbox } from '../../../Checkbox'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
 import { useSelectInput } from '../../SelectInputProvider'
-import type { OptionType } from '../../types'
 import { selectInputStyle } from '../../styles.css'
 
 export const SelectAll = ({ textVariant }: { textVariant: 'body' | 'bodySmall' }) => {
-  const { onChange, options, multiselect, selectAll, setSelectedData, selectedData, size } = useSelectInput()
+  const {
+    onChange,
+    options,
+    numberOfOptions,
+    numberOfDisabledOptions,
+    multiselect,
+    selectAll,
+    setSelectedData,
+    selectedData,
+    size,
+  } = useSelectInput()
 
   if (!(selectAll && multiselect)) {
     return null
   }
 
+  const allSelected = selectedData.selectedValues.length === numberOfOptions - numberOfDisabledOptions
+
   const selectAllOptions = () => {
     setSelectedData({ type: 'selectAll' })
-    if (selectedData.allSelected && onChange) {
-      onChange([])
-    } else {
-      const allValues: OptionType[] = []
-      if (Array.isArray(options)) {
-        options.map(option => allValues.push(option))
-      } else {
-        Object.keys(options).map((group: string) =>
-          options[group].map(option => {
-            if (!option.disabled) {
-              allValues.push(option)
-            }
 
-            return null
-          }),
-        )
-      }
-      onChange?.(allValues.map(value => value.value))
+    if (!onChange) {
+      return
     }
+
+    let newValues: string[] = []
+
+    if (!allSelected) {
+      const allOptions = Array.isArray(options) ? options : Object.values(options).flat()
+      const optionsToSelect = allOptions.filter(option => !option.disabled)
+      newValues = optionsToSelect.map(option => option.value)
+    }
+    onChange(newValues)
   }
 
   return (
     <Stack gap={0.25} id="items" tabIndex={-1} className={selectInputStyle.dropdownSection}>
       <div
         aria-label="select-all"
-        aria-selected={selectedData.allSelected}
+        aria-selected={allSelected}
         className={cn(
           selectInputStyle.dropdownItem({
-            selected: selectedData.allSelected,
+            selected: allSelected,
             size,
           }),
         )}
@@ -54,7 +59,7 @@ export const SelectAll = ({ textVariant }: { textVariant: 'body' | 'bodySmall' }
         tabIndex={0}
       >
         <Checkbox
-          checked={selectedData.allSelected}
+          checked={allSelected}
           className={selectInputStyle.dropdownCheckbox}
           data-testid="select-all-checkbox"
           disabled={false}
