@@ -16,7 +16,13 @@ export type FilterConfigItemBase = {
   name: string
   label: string
   placeholder?: string
+  /**
+   * When true, the filter/group will not be displayed in the Drawer. Make sure it appears in the main row.
+   */
   hideInDrawer?: boolean
+  /**
+   * Expand/collapse the filter/group in the Drawer
+   */
   expanded?: boolean
 }
 
@@ -38,6 +44,13 @@ export type FilterConfigItemSelect<V extends AnyObject = AnyObject> = FilterConf
     | ComponentProps<typeof SelectInput>['options']
     | ((values: V) => ComponentProps<typeof SelectInput>['options'])
   clearable?: boolean
+  /**
+   * When the filter is displayed in the Drawer, the
+   * options are rendered as a RadioGroup if their count is below this threshold.
+   * Grouped options always render as a Select.
+   * @default 5
+   */
+  displayThreshold?: number
 }
 
 export type FilterConfigItemMultiSelect<V extends AnyObject = AnyObject> = FilterConfigItemBase &
@@ -46,6 +59,13 @@ export type FilterConfigItemMultiSelect<V extends AnyObject = AnyObject> = Filte
     options:
       | ComponentProps<typeof SelectInput>['options']
       | ((values: V) => ComponentProps<typeof SelectInput>['options'])
+    /**
+     * When the filter is displayed in the Drawer, the
+     * options are rendered as a CheckboxGroup if their count is below this
+     * threshold. Grouped options or a `selectAll` config always render as a MultiSelect.
+     * @default 5
+     */
+    displayThreshold?: number
   }
 
 export type FilterConfigItemSlider = FilterConfigItemBase &

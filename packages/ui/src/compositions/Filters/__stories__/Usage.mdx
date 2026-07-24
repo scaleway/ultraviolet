@@ -30,6 +30,28 @@ Filters allow you to filter items based on various criteria. The component allow
 6. **Number (`number`)** : Allows filtering by a number value.
 7. **Datetime Range (`datetimeRange`)** : Allows filtering by a date range.
 
+### Select and Multi-select display
+
+When a `select` or `multiselect` filter is displayed in the drawer, the options are rendered as a `RadioGroup` or `CheckboxGroup` instead of a dropdown when their count is below a threshold. This provides a better UX for small lists.
+
+- The default threshold is **5** options. It can be overridden per filter with the `displayThreshold` config property.
+- When the options are **grouped** (provided as an object instead of an array), the dropdown is always kept regardless of the number of options.
+- When a `selectAll` config is provided on a `multiselect` filter, the dropdown is always kept so the "select all" action stays available.
+
+```typescript
+{
+  type: 'select',
+  name: 'status',
+  label: 'Status',
+  // Render as a RadioGroup in the drawer unless there are 8+ options
+  displayThreshold: 8,
+  options: [
+    { label: 'Active', value: 'active' },
+    { label: 'Inactive', value: 'inactive' },
+  ],
+}
+```
+
 ### Custom Filter Types
 
 Any string can be used for a filter type, allowing to render custom filter components that will have to be provided. See [custom field components](#custom-field-components).

@@ -26,7 +26,12 @@ export const FilterMultiSelect = <V extends AnyObject>({
     [values, configOptions],
   )
 
-  if (directionContext === 'column' && Array.isArray(options) && options.length < SELECT_DISPLAY_THRESHOLD) {
+  if (
+    directionContext === 'column' &&
+    Array.isArray(options) &&
+    !config.selectAll &&
+    options.length < (config.displayThreshold ?? SELECT_DISPLAY_THRESHOLD)
+  ) {
     return (
       <CheckboxGroup
         description={hideLabel ? undefined : <Label>{config.label}</Label>}
