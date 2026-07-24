@@ -18,7 +18,6 @@ export type DataType = Record<string, OptionType[]> | OptionType[]
 
 export type ReducerState = {
   selectedValues: string[]
-  allSelected: boolean
   selectedGroups: string[]
 }
 

@@ -1,27 +1,27 @@
 import type { DataType, OptionType, ReducerState } from './types'
 
-export const selectAllAction = (state: ReducerState, allGroups: string[], allValues: OptionType[]) => {
-  if (state.allSelected) {
-    return { allSelected: false, selectedGroups: [], selectedValues: [] }
+export const selectAllAction = (
+  state: ReducerState,
+  allGroups: string[],
+  allValues: OptionType[],
+  numberOfOptions: number,
+  numberOfDisabledOptions: number,
+) => {
+  const allSelected = state.selectedValues.length === numberOfOptions - numberOfDisabledOptions
+
+  if (allSelected) {
+    return { selectedGroups: [], selectedValues: [] }
   }
   return {
-    allSelected: true,
     selectedGroups: allGroups,
     selectedValues: allValues.map(option => option.value),
   }
 }
 
-export const selectGroupAction = (
-  state: ReducerState,
-  selectedGroupAction: string,
-  options: DataType,
-  numberOfOptions: number,
-  numberOfDisabledOptions: number,
-) => {
+export const selectGroupAction = (state: ReducerState, selectedGroupAction: string, options: DataType) => {
   if (!Array.isArray(options)) {
     if (state.selectedGroups.includes(selectedGroupAction)) {
       return {
-        allSelected: false,
         selectedGroups: state.selectedGroups.filter(selectedGroup => selectedGroup !== selectedGroupAction),
         selectedValues: [...state.selectedValues].filter(
           selectedValue => !options[selectedGroupAction].find(option => option.value === selectedValue),
@@ -37,7 +37,6 @@ export const selectGroupAction = (
     )
 
     return {
-      allSelected: newSelectedValues.length === numberOfOptions - numberOfDisabledOptions,
       selectedGroups: [...state.selectedGroups, selectedGroupAction],
       selectedValues: newSelectedValues,
     }
@@ -49,8 +48,6 @@ export const selectGroupAction = (
 export const selectOptionAction = (
   state: ReducerState,
   options: DataType,
-  numberOfOptions: number,
-  numberOfDisabledOptions: number,
   multiselect: boolean,
   clickedOption: OptionType,
   group?: string,
@@ -58,7 +55,6 @@ export const selectOptionAction = (
   if (multiselect) {
     if (state.selectedValues.includes(clickedOption.value)) {
       return {
-        allSelected: false,
         selectedGroups:
           group && state.selectedGroups.includes(group)
             ? state.selectedGroups.filter(selectedGroup => selectedGroup !== group)
@@ -68,7 +64,6 @@ export const selectOptionAction = (
     }
 
     return {
-      allSelected: state.selectedValues.length + 1 === numberOfOptions - numberOfDisabledOptions,
       selectedGroups:
         !Array.isArray(options) &&
         group &&
@@ -82,20 +77,17 @@ export const selectOptionAction = (
   }
 
   return {
-    allSelected: false,
     selectedGroups: state.selectedGroups,
     selectedValues: [clickedOption.value],
   }
 }
 
 export const clearAllAction = () => ({
-  allSelected: false,
   selectedGroups: [],
   selectedValues: [],
 })
 
 export const updateAction = (state: ReducerState, options: DataType) => ({
-  allSelected: state.allSelected,
   selectedGroups: state.selectedGroups,
   selectedValues: state.selectedValues.filter(selectedValue => {
     if (!Array.isArray(options)) {
@@ -109,7 +101,6 @@ export const updateAction = (state: ReducerState, options: DataType) => ({
 })
 
 export const resetAction = (selectedGroups: string[], selectedValues: string[]) => ({
-  allSelected: false,
   selectedGroups,
   selectedValues,
 })
