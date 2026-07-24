@@ -326,4 +326,132 @@ describe('filters', () => {
     expect(onSubmit).toHaveBeenCalledExactlyOnceWith(defaultValues)
     expect(screen.getByRole('textbox', { name: 'Name' })).toHaveValue('')
   })
+
+  describe('select and multiselect display threshold', () => {
+    const fiveOptions = Array.from({ length: 5 }, (_, i) => ({
+      label: `Option ${i}`,
+      value: `option-${i}`,
+    }))
+
+    const openDrawer = async () => {
+      await userEvent.click(screen.getByRole('button', { name: 'All filters' }))
+    }
+
+    it('should render a select as a dropdown in the drawer when options reach the default threshold', async () => {
+      renderWithTheme(
+        <Filters
+          config={[
+            {
+              type: 'select',
+              name: 'status',
+              label: 'Status',
+              options: fiveOptions,
+            },
+          ]}
+          defaultValues={{ status: '' }}
+          labels={labels}
+          layout={{ mainFilters: [] }}
+        />,
+      )
+
+      await openDrawer()
+
+      expect(screen.getByTestId('select-input-status')).toBeVisible()
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument()
+    })
+
+    it('should render a multiselect as a dropdown in the drawer when options reach the default threshold', async () => {
+      renderWithTheme(
+        <Filters
+          config={[
+            {
+              type: 'multiselect',
+              name: 'env',
+              label: 'Environment',
+              options: fiveOptions,
+            },
+          ]}
+          defaultValues={{ env: [] }}
+          labels={labels}
+          layout={{ mainFilters: [] }}
+        />,
+      )
+
+      await openDrawer()
+
+      expect(screen.getByTestId('select-input-env')).toBeVisible()
+      expect(screen.queryByRole('checkbox')).not.toBeInTheDocument()
+    })
+
+    it('should render a select as a RadioGroup when below the configured displayThreshold', async () => {
+      renderWithTheme(
+        <Filters
+          config={[
+            {
+              type: 'select',
+              name: 'status',
+              label: 'Status',
+              displayThreshold: 10,
+              options: fiveOptions,
+            },
+          ]}
+          defaultValues={{ status: '' }}
+          labels={labels}
+          layout={{ mainFilters: [] }}
+        />,
+      )
+
+      await openDrawer()
+
+      expect(screen.queryByTestId('select-input-status')).not.toBeInTheDocument()
+      expect(screen.getAllByRole('radio')).toHaveLength(fiveOptions.length)
+    })
+
+    it('should always render grouped options as a dropdown regardless of the threshold', async () => {
+      renderWithTheme(
+        <Filters
+          config={[
+            {
+              type: 'multiselect',
+              name: 'env',
+              label: 'Environment',
+              options: { group: fiveOptions },
+            },
+          ]}
+          defaultValues={{ env: [] }}
+          labels={labels}
+          layout={{ mainFilters: [] }}
+        />,
+      )
+
+      await openDrawer()
+
+      expect(screen.getByTestId('select-input-env')).toBeVisible()
+      expect(screen.queryByRole('checkbox')).not.toBeInTheDocument()
+    })
+
+    it('should keep the multiselect as a dropdown when a selectAll config is provided', async () => {
+      renderWithTheme(
+        <Filters
+          config={[
+            {
+              type: 'multiselect',
+              name: 'env',
+              label: 'Environment',
+              selectAll: { label: 'All Environments' },
+              options: fiveOptions,
+            },
+          ]}
+          defaultValues={{ env: [] }}
+          labels={labels}
+          layout={{ mainFilters: [] }}
+        />,
+      )
+
+      await openDrawer()
+
+      expect(screen.getByTestId('select-input-env')).toBeVisible()
+      expect(screen.queryByRole('checkbox')).not.toBeInTheDocument()
+    })
+  })
 })
