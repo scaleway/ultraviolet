@@ -25,8 +25,7 @@ export type PascalToCamelCaseWithoutSuffix<
   : never
 
 /**
- * Classic prop type where label is a ReactNode and aria-label is a string.
- * One or another is required.
+ * @deprecated use type FormComponentProps instead which will handle all form props required.
  */
 export type LabelProp =
   | {
@@ -44,3 +43,16 @@ export type LabelProp =
       'aria-label'?: never
       id: string
     }
+
+/**
+ * Classic prop type where label is a ReactNode and aria-label is a string.
+ * One or another is required.
+ */
+export type FormComponentProps = {
+  disabled?: boolean
+  required?: boolean
+  id?: string
+  label?: string
+  'aria-label'?: string
+  name?: string
+}

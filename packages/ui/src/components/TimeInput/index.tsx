@@ -3,6 +3,7 @@
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import type { CSSProperties, FocusEvent, ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
+import type { FormComponentProps } from '../../types'
 import { Description } from '../Description'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
@@ -32,10 +33,8 @@ type TimeInputProps = {
   placeholder?: Time
   value?: Date | null
   clearable?: boolean
-  required?: boolean
   labelDescription?: ReactNode
   helper?: ReactNode
-  disabled?: boolean
   readOnly?: boolean
   error?: boolean | string
   'data-testid'?: string
@@ -43,7 +42,6 @@ type TimeInputProps = {
   onBlur?: (event: FocusEvent<HTMLInputElement>) => void
   onFocus?: (event: FocusEvent<HTMLInputElement>) => void
   className?: string
-  id?: string
   size?: 'small' | 'medium' | 'large'
   timeFormat?: 12 | 24
   /**
@@ -52,16 +50,7 @@ type TimeInputProps = {
   autoFocus?: boolean
   style?: CSSProperties
   'aria-describedby'?: string
-} & (
-  | {
-      label?: string
-      'aria-label'?: never
-    }
-  | {
-      label?: never
-      'aria-label': string
-    }
-)
+} & FormComponentProps
 
 /**
  * A time input component that allows users to type a time in a 24 or 12-hour format.

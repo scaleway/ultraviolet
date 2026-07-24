@@ -6,6 +6,7 @@ import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { forwardRef, useEffect, useId, useImperativeHandle, useRef } from 'react'
 import type { CSSProperties, ReactNode, TextareaHTMLAttributes } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
+import type { FormComponentProps } from '../../types'
 import { Button } from '../Button'
 import { SIZE_HEIGHT as buttonSizeHeight } from '../Button/constants'
 import { Label } from '../Label'
@@ -16,18 +17,7 @@ import { SuccessErrorIcon } from './Icon'
 import { Notice } from './Notice'
 import { paddingRightVar, textAreaStyle } from './styles.css'
 
-type LabelProps =
-  | {
-      label: string
-      'aria-label'?: never
-    }
-  | {
-      label?: never
-      'aria-label': string
-    }
-
 type TextAreaProps = {
-  id?: string
   className?: string
   tabIndex?: number
   autoFocus?: boolean
@@ -69,13 +59,11 @@ type TextAreaProps = {
   maxLength?: number
   size?: 'small' | 'medium' | 'large'
   tooltip?: string
-  required?: boolean
   'data-testid'?: string
-  name?: string
   clearable?: boolean
   labelDescription?: ReactNode
   style?: CSSProperties
-} & LabelProps &
+} & FormComponentProps &
   Pick<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onFocus' | 'onBlur' | 'onKeyDown' | 'aria-describedby'>
 
 const BORDERS_WIDTH = '2px'

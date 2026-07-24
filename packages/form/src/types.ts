@@ -1,4 +1,5 @@
-import type { FocusEvent, ReactNode } from 'react'
+import type { FormComponentProps } from '@ultraviolet/ui'
+import type { FocusEvent } from 'react'
 import type {
   Control,
   FieldError,
@@ -23,7 +24,7 @@ export type MetaField = {
   regex?: (RegExp | RegExp[])[]
   minDate?: Date
   maxDate?: Date
-  label: string
+  label?: string
   value?: string | number
 }
 
@@ -50,31 +51,15 @@ export type BaseFieldProps<
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 > = {
   name: TFieldName
-  required?: boolean
   validate?: Record<string, Validate<FieldPathValue<TFieldValues, TFieldName>, TFieldValues>>
   defaultValue?: PathValue<TFieldValues, Path<TFieldValues>>
-  label?: string
   value?: PathValue<TFieldValues, Path<TFieldValues>>
   onChange?: (value?: PathValue<TFieldValues, TFieldName>) => void
   onBlur?: (event?: FocusEvent) => void
   shouldUnregister?: UseControllerProps<TFieldValues, TFieldName>['shouldUnregister']
   control?: Control<TFieldValues>
   errorLabel?: string
-}
-
-/**
- * Classic prop type where label is a ReactNode and aria-label is a string.
- * One or another is required.
- */
-export type LabelProp =
-  | {
-      label: ReactNode
-      'aria-label'?: never
-    }
-  | {
-      label?: never
-      'aria-label': string
-    }
+} & FormComponentProps
 
 export type PascalToCamelCase<S extends string> = S extends `${infer P1}${infer P2}` ? `${Lowercase<P1>}${P2}` : S
 
