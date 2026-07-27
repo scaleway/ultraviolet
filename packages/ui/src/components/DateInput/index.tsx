@@ -318,7 +318,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
               required={required}
               size={size}
               success={success}
-              suffix={<CalendarRangeIcon disabled={disabled} sentiment="neutral" size="medium" />}
+              suffix={<CalendarRangeIcon disabled={disabled} sentiment="neutral" prominence="weak" size="small" />}
               tooltip={tooltip}
               value={inputValue}
             />
