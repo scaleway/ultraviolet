@@ -32,7 +32,7 @@
     },
     {
       "extends": ["packages:linters"],
-      "matchPackageNames": ["oxfmt", "publint", "lint-staged"],
+      "matchPackageNames": ["/oxfmt/", "/oxlint/", "publint", "lint-staged"],
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "non-major linters devDependencies",
