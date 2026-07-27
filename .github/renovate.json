@@ -31,6 +31,26 @@
       "groupSlug": "non-major-dev-deps"
     },
     {
+      "extends": ["packages:linters"],
+      "matchPackageNames": ["oxfmt", "publint", "lint-staged"],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "non-major linters devDependencies",
+      "groupSlug": "non-major-linters-dev-deps"
+    },
+    {
+      "extends": ["packages:jsUnitTest"],
+      "matchPackageNames": ["happy-dom", "jsdom"],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "non-major tests devDependencies",
+      "groupSlug": "non-major-tests-dev-deps"
+    },
+    {
+      "matchPackageNames": ["/storybook/"],
+      "groupName": "storybook"
+    },
+    {
       "matchDepTypes": ["dependencies"],
       "semanticCommitType": "chore",
       "semanticCommitScope": "deps"
@@ -51,17 +71,15 @@
     },
     {
       "matchPackageNames": ["/^@uiw//"],
-      "groupName": "Code Editor",
-      "groupSlug": "uiw-code-editor-react"
+      "groupName": "CodeMirror",
+      "groupSlug": "codemirror"
     },
     {
       "matchPackageNames": ["/^@testing-library/"],
-      "groupName": "Testing library",
-      "groupSlug": "testing-library",
       "semanticCommitScope": "devDeps"
     },
     {
-      "matchPackageNames": ["/^prosemirror-/", "@handlewithcare/react-prosemirror"],
+      "matchPackageNames": ["/prosemirror/"],
       "groupName": "ProseMirror",
       "groupSlug": "prosemirror"
     }
