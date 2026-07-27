@@ -1,7 +1,6 @@
 'use client'
 
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
-import { cn } from '@ultraviolet/utils'
 import { useEffect, useRef } from 'react'
 import type { KeyboardEvent, ReactNode } from 'react'
 import { Skeleton } from '../../../Skeleton'
@@ -140,8 +139,7 @@ export const CreateDropdown = ({
   return Array.isArray(displayedOptions) ? (
     // oxlint-disable-next-line jsx-a11y/interactive-supports-focus
     <Stack
-      className={cn(selectInputStyle.dropdownContainer, selectInputStyle.dropdownContainerUnGrouped)}
-      gap={0.25}
+      className={selectInputStyle.dropdownContainer}
       id="select-dropdown"
       onKeyDown={handleKeyDownSelect}
       role="listbox"
@@ -157,7 +155,8 @@ export const CreateDropdown = ({
         textVariant={textVariant}
       />
       <SelectAll textVariant={textVariant} />
-      <Stack gap={0.25} id="items">
+
+      <Stack gap={0.25} id="items" className={selectInputStyle.dropdownSection}>
         {isLoading ? (
           <Skeleton variant="block" />
         ) : (
@@ -201,13 +200,14 @@ export const CreateDropdown = ({
             textVariant={textVariant}
           />
           <SelectAll textVariant={textVariant} />
+
           {Object.keys(displayedOptions).map((group, index) => {
             const hasElements = displayedOptions[group].length > 0
             const emptyStateGroup = groupEmptyState?.[group] ?? null
             const errorGroup = groupError?.[group] ?? null
 
             return (
-              <Stack gap={0.25} key={group}>
+              <Stack gap={0.25} key={group} className={selectInputStyle.dropdownSection}>
                 {hasElements || emptyStateGroup ? <Group group={group} index={index} /> : null}
                 <Stack gap="0.25" id="items">
                   {!hasElements && emptyStateGroup ? (

@@ -2,8 +2,10 @@
 
 import { isFuzzyMatch, normalizeString } from '@scaleway/fuzzy-search'
 import { SearchIcon } from '@ultraviolet/icons/SearchIcon'
+import { cn } from '@ultraviolet/utils'
 import { useEffect, useRef } from 'react'
 import type { Dispatch, KeyboardEvent, SetStateAction } from 'react'
+import { searchInputStyle } from '../../../styles'
 import { TextInput } from '../../../TextInput'
 import { OPTION_SELECTOR } from '../../constants'
 import { useSelectInput } from '../../SelectInputProvider'
@@ -138,14 +140,14 @@ export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }:
   return (
     <TextInput
       aria-label="search-bar"
-      className={selectInputStyle.searchBar}
+      className={cn(selectInputStyle.searchBar, searchInputStyle.searchInput)}
       data-testid="search-bar"
       onBlur={() => setSearchBarActive(false)}
       onChange={event => handleChange(event.target.value)}
       onFocus={() => setSearchBarActive(true)}
       onKeyDown={event => handleKeyDown(event, searchInput)}
       placeholder={placeholder}
-      prefix={<SearchIcon sentiment="neutral" size={size === 'small' ? 'xsmall' : 'small'} />}
+      prefix={<SearchIcon sentiment="neutral" prominence="weak" size="small" />}
       ref={searchInputRef}
       size={size === 'small' ? 'small' : 'medium'}
       value={searchInput}
