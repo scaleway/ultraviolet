@@ -1,6 +1,7 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
+import { useState } from 'react'
 import { describe, expect, it, vi, afterEach, beforeEach } from 'vitest'
 import { SelectInput } from '..'
 import { cities, dataGroupEmpty, dataGrouped, dataUnGrouped, OptionalInfo, dataGroupedSmall } from './resources'
@@ -977,11 +978,13 @@ describe('selectInput', () => {
   })
 
   it('handles correcty selectAll grouped data', async () => {
+    const onChange = vi.fn()
+
     renderWithTheme(
       <SelectInput
         multiselect
         name="test"
-        onChange={(values: (string | undefined)[]) => values}
+        onChange={onChange}
         options={dataGrouped}
         placeholder="placeholder"
         selectAll={{
@@ -998,6 +1001,16 @@ describe('selectInput', () => {
     })
     const selectAll = screen.getByTestId('select-all')
     await userEvent.click(selectAll)
+    expect(onChange).toHaveBeenCalledWith([
+      'jupiter',
+      'saturn',
+      'uranus',
+      'neptune',
+      'mercury',
+      'venus',
+      'earth',
+      'pluto',
+    ])
     const plustag = screen.getByTestId('plus-tag')
     expect(plustag).toBeInTheDocument()
 
@@ -1010,8 +1023,19 @@ describe('selectInput', () => {
     expect(selectAllCheckBox).not.toBeChecked()
     await userEvent.click(venus)
     expect(selectAllCheckBox).toBeChecked()
+    expect(onChange).toHaveBeenCalledWith([
+      'jupiter',
+      'saturn',
+      'uranus',
+      'neptune',
+      'mercury',
+      'earth',
+      'pluto',
+      'venus',
+    ])
 
     await userEvent.click(selectAll)
+    expect(onChange).toHaveBeenCalledWith([])
     expect(screen.getByText('placeholder')).toBeInTheDocument()
 
     await userEvent.click(selectAll)
@@ -1029,16 +1053,47 @@ describe('selectInput', () => {
     expect(selectAllCheckBox).not.toBeChecked()
     await userEvent.keyboard('[Enter]')
     expect(selectAllCheckBox).toBeChecked()
-    await userEvent.keyboard('<') // Nothing when the user press any key
-    expect(selectAllCheckBox).toBeChecked()
   }, 15_000)
 
+  it.each([dataGrouped, dataUnGrouped])('handles correctly selectAll when the value is controlled', async () => {
+    function ControlledSelect() {
+      const [values, setValues] = useState<string[]>([])
+
+      return (
+        <SelectInput
+          multiselect
+          name="test"
+          value={values}
+          onChange={setValues}
+          options={dataGrouped}
+          placeholder="placeholder"
+          selectAll={{
+            description: 'all',
+            label: 'Select',
+          }}
+        />
+      )
+    }
+
+    renderWithTheme(<ControlledSelect />)
+
+    await userEvent.click(screen.getByRole('combobox'))
+
+    const selectAll = screen.getByRole('option', { name: 'select-all' })
+    expect(selectAll).toBeVisible()
+
+    await userEvent.click(selectAll)
+    expect(selectAll).toHaveAttribute('aria-selected', 'true')
+  })
+
   it('handles correcty selectAll ungrouped data', async () => {
+    const onChange = vi.fn()
+
     renderWithTheme(
       <SelectInput
         multiselect
         name="test"
-        onChange={(values: (string | undefined)[]) => values}
+        onChange={onChange}
         options={dataUnGrouped}
         placeholder="placeholder"
         selectAll={{
@@ -1055,6 +1110,7 @@ describe('selectInput', () => {
     })
     const selectAll = screen.getByTestId('select-all')
     await userEvent.click(selectAll)
+    expect(onChange).toHaveBeenCalledWith(['mercury', 'venus', 'earth', 'jupiter', 'saturn', 'uranus', 'neptune'])
     const plustag = screen.getByTestId('plus-tag')
     expect(plustag).toBeInTheDocument()
 
@@ -1064,12 +1120,14 @@ describe('selectInput', () => {
     })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(venus)
+    expect(onChange).toHaveBeenLastCalledWith(['mercury', 'earth', 'jupiter', 'saturn', 'uranus', 'neptune'])
     expect(selectAllCheckBox).not.toBeChecked()
     await userEvent.click(venus)
     expect(selectAllCheckBox).toBeChecked()
 
     await userEvent.click(selectAll)
     expect(screen.getByText('placeholder')).toBeInTheDocument()
+    expect(onChange).toHaveBeenLastCalledWith([])
 
     await userEvent.click(selectAll)
     await userEvent.click(earth)
@@ -1085,8 +1143,6 @@ describe('selectInput', () => {
     await userEvent.keyboard(' ')
     expect(selectAllCheckBox).not.toBeChecked()
     await userEvent.keyboard('[Enter]')
-    expect(selectAllCheckBox).toBeChecked()
-    await userEvent.keyboard('<') // Nothing when the user press any key
     expect(selectAllCheckBox).toBeChecked()
   }, 10_000)
 

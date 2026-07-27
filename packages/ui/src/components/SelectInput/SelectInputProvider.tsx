@@ -22,6 +22,7 @@ type ContextProps = {
   selectAll?: { label: ReactNode; description?: string }
   selectAllGroup: boolean
   numberOfOptions: number
+  numberOfDisabledOptions: number
   displayedOptions: DataType
   selectedData: ReducerState
   size: 'small' | 'medium' | 'large'
@@ -42,13 +43,14 @@ const SelectInputContext = createContext<ContextProps>({
   isDropdownVisible: false,
   multiselect: false as true | false,
   numberOfOptions: 0,
+  numberOfDisabledOptions: 0,
   onChange: () => {},
   onSearch: () => {},
   options: [],
   searchInput: '',
   selectAll: { label: '' },
   selectAllGroup: false,
-  selectedData: { allSelected: false, selectedGroups: [], selectedValues: [] },
+  selectedData: { selectedGroups: [], selectedValues: [] },
   setIsDropdownVisible: () => {},
   setSearchInput: () => {},
   setSelectedData: () => {},
@@ -143,23 +145,15 @@ export const SelectInputProvider = <T extends boolean>({
   const reducer = (state: ReducerState, action: ReducerAction): ReducerState => {
     switch (action.type) {
       case 'selectAll': {
-        return selectAllAction(state, allGroups, allValues)
+        return selectAllAction(state, allGroups, allValues, numberOfOptions, numberOfDisabledOptions)
       }
 
       case 'selectGroup': {
-        return selectGroupAction(state, action.selectedGroup, options, numberOfOptions, numberOfDisabledOptions)
+        return selectGroupAction(state, action.selectedGroup, options)
       }
 
       case 'selectOption': {
-        return selectOptionAction(
-          state,
-          options,
-          numberOfOptions,
-          numberOfDisabledOptions,
-          multiselect,
-          action.clickedOption,
-          action.group,
-        )
+        return selectOptionAction(state, options, multiselect, action.clickedOption, action.group)
       }
 
       case 'clearAll': {
@@ -181,7 +175,6 @@ export const SelectInputProvider = <T extends boolean>({
   }
 
   const [selectedData, setSelectedData] = useReducer(reducer, {
-    allSelected: false,
     selectedGroups,
     selectedValues: currentValue,
   })
