@@ -13,8 +13,7 @@
     "**/bower_components/**",
     "**/vendor/**",
     "**/__tests__/**",
-    "**/__fixtures__/**",
-    "**/examples/**"
+    "**/__fixtures__/**"
   ],
   "prConcurrentLimit": 5,
   "reviewers": ["team:console"],
@@ -24,6 +23,12 @@
     {
       "matchDepTypes": ["engines", "peerDependencies"],
       "rangeStrategy": "widen"
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "non-major devDependencies",
+      "groupSlug": "non-major-dev-deps"
     },
     {
       "matchDepTypes": ["dependencies"],
