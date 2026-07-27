@@ -593,7 +593,9 @@ describe('selectInput', () => {
     const mercury = screen.getByRole('option', {
       name: /mercury/iu,
     })
-    expect(mercury).toHaveFocus()
+    await waitFor(() => {
+      expect(mercury).toHaveFocus()
+    })
   })
   it('handles correctly dropdown with arrow pressing enter or space', async () => {
     renderWithTheme(
