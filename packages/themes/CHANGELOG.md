@@ -1,5 +1,23 @@
 # Change Log
 
+## 3.1.9
+
+### Patch Changes
+
+- [#6696](https://github.com/scaleway/ultraviolet/pull/6696) [`22be569`](https://github.com/scaleway/ultraviolet/commit/22be569544b7b812b4fd70f7046ace2c63de8d60) Thanks [@lisalupi](https://github.com/lisalupi)! - Add font fallbacks directly in the theme, with fallback similar to `--font-inter`, `--font-jetbrains`, and `--font-space-grotesk` (from `@ultraviolet/fonts`).
+
+- [#6633](https://github.com/scaleway/ultraviolet/pull/6633) [`940f087`](https://github.com/scaleway/ultraviolet/commit/940f087f6ef64c120cbe63f2255b8c3b04af969d) Thanks [@lisalupi](https://github.com/lisalupi)! - Deprecate `ThemeProvider`, `darkTheme`, `darkerTheme`, `theme`, and `useTheme` from @ultraviolet/ui. Use the equivalents from @ultraviolet/themes instead.
+
+  ⚠️⚠️ **Future breaking change** ⚠️⚠️
+  The `ThemeProvider` from `@ultraviolet/ui` automatically injects styles from `@ultraviolet/icons`.
+  The replacement `ThemeProvider` in `@ultraviolet/themes` does **not** include this side effect.
+
+  When these exports are removed in the next major version, you must manually import the icon styles to avoid visual regressions:
+
+  ```js
+  import "@ultraviolet/icons/styles";
+  ```
+
 ## 3.1.8
 
 ### Patch Changes
