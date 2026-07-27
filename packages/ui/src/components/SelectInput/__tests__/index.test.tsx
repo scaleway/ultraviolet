@@ -584,17 +584,24 @@ describe('selectInput', () => {
     await userEvent.tab()
     expect(input).toHaveFocus()
     await userEvent.keyboard('[arrowDown]')
-    const dropdown = screen.getByRole('dialog')
+    const searchbar = screen.getByRole('textbox', { name: 'search-bar' })
     await waitFor(() => {
-      expect(dropdown).toBeVisible()
+      expect(searchbar).toBeVisible()
+      expect(searchbar).toHaveFocus()
     })
+
     await userEvent.keyboard('[arrowDown]')
+    const mercury = screen.getByRole('option', { name: /mercury/iu })
+    expect(mercury).toHaveFocus()
+
+    await userEvent.keyboard('[arrowDown]')
+    const venus = screen.getByRole('option', { name: /venus/iu })
+    expect(venus).toHaveFocus()
+
     await userEvent.keyboard('[arrowUp]')
-    const mercury = screen.getByRole('option', {
-      name: /mercury/iu,
-    })
     expect(mercury).toHaveFocus()
   })
+
   it('handles correctly dropdown with arrow pressing enter or space', async () => {
     renderWithTheme(
       <SelectInput
