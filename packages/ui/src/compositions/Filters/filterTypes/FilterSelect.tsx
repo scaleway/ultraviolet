@@ -4,7 +4,7 @@ import { RadioGroup } from '../../../components/RadioGroup'
 import { SelectInput } from '../../../components/SelectInput'
 import type { FilterConfigItemSelect, AnyObject, FilterComponentProps } from '../types'
 
-export const SELECT_DISPLAY_THRESHOLD = 10
+export const SELECT_DISPLAY_THRESHOLD = 5
 
 type FilterSelectProps<Values extends AnyObject> = FilterComponentProps<string, FilterConfigItemSelect, Values>
 
@@ -23,7 +23,11 @@ export const FilterSelect = <V extends AnyObject>({
     [values, configOptions],
   )
 
-  if (directionContext === 'column' && Array.isArray(options) && options.length < SELECT_DISPLAY_THRESHOLD) {
+  if (
+    directionContext === 'column' &&
+    Array.isArray(options) &&
+    options.length < (config.displayThreshold ?? SELECT_DISPLAY_THRESHOLD)
+  ) {
     return (
       <RadioGroup
         description={hideLabel ? undefined : <Label>{config.label}</Label>}

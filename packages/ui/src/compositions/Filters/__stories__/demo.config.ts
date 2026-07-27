@@ -55,12 +55,14 @@ export const demoFilters: FilterConfig<FilterValues>[] = [
         name: 'env',
         label: 'Environment',
         placeholder: 'Select environment',
+        selectAll: {
+          label: 'All Environments',
+        },
         options: [
           { label: 'Production', value: 'prod' },
           { label: 'Development', value: 'dev' },
           { label: 'Staging', value: 'staging' },
         ],
-        searchable: true,
       },
     ],
   },
