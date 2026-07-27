@@ -1,4 +1,4 @@
-import { StoryFn } from '@storybook/react-vite'
+import type { StoryFn } from '@storybook/react-vite'
 import { KeyValueInput } from '..'
 import { Template } from './Template.stories'
 

@@ -1,7 +1,7 @@
-import { ComponentProps, CSSProperties } from 'react'
-import { Button } from '../Button'
-import { SelectInput } from '../SelectInput'
-import { TextInput } from '../TextInput'
+import type { ComponentProps, CSSProperties } from 'react'
+import type { Button } from '../Button'
+import type { SelectInput } from '../SelectInput'
+import type { TextInput } from '../TextInput'
 
 type TextInputProps = {
   inputType?: 'text'
@@ -49,6 +49,7 @@ export type KeyValueInputProps = {
   disabled?: boolean
   readOnly?: boolean
   error?: boolean | string
+  fieldErrors?: Record<number, KeyValuePair>
   onChange?: (keyValues: KeyValuePair[], index?: number, operationType?: 'change' | 'add' | 'remove') => void
   onBlur?: (keyValues: KeyValuePair[], index?: number) => void
   onFocus?: (keyValues: KeyValuePair[], index?: number) => void

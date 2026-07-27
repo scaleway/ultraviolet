@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { KeyValueInput } from '..'
-import { KeyValuePair } from '../types'
+import type { KeyValuePair } from '../types'
 
 const keyOptions = [
   { value: 'key-1', label: 'First key' },

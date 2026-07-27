@@ -73,4 +73,41 @@ describe('keyValueField', () => {
     expect(addButton).toBeDisabled()
     expect(asFragment()).toMatchSnapshot()
   })
+
+  it('should add error with unvalidated regex', async () => {
+    const { asFragment } = renderWithForm(
+      <KeyValueField
+        addButton={{
+          maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
+          name: 'add',
+          tooltip: 'This is a tooltip',
+        }}
+        inputKey={{
+          label: 'key',
+        }}
+        inputValue={{
+          label: 'value',
+          regex: [/^[a-zA-Z]*$/u],
+        }}
+        name="test"
+      />,
+    )
+    const addButton = screen.getByRole('button', { name: /add/i })
+    await userEvent.click(addButton)
+
+    const input = screen.getByRole('textbox', { name: 'value' })
+    expect(input).toBeInTheDocument()
+
+    await userEvent.type(input, '2')
+    expect(input).toHaveAccessibleDescription(/This field should match the regex/i)
+    expect(input).toBeInvalid()
+
+    await userEvent.clear(input)
+    await userEvent.type(input, 'a')
+    screen.debug()
+
+    expect(input).toBeValid()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

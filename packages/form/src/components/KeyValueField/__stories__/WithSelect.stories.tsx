@@ -1,4 +1,5 @@
 import { Template } from './Template.stories'
+
 const keyOptions = [
   { value: 'key-1', label: 'First key' },
   { value: 'key-2', label: 'Second key' },
