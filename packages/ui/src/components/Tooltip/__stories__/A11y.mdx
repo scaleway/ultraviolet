@@ -64,6 +64,9 @@ To apply when using the component:
 - Debounce delay may cause race condition with screen readers - With the default `debounceDelay` of 200ms, the tooltip is not rendered into the DOM until 200ms after focus. Because `dynamicDomRendering` defaults to `true`, `aria-describedby` references an element that does not exist yet. Screen readers querying the description immediately after focus may find nothing to announce.
 - `role` is overridable - The Tooltip exposes `role` as a prop (defaulting to `"tooltip"`). Consumers can override it with `"dialog"` or `"popup"`, which would enable the focus trap or break the tooltip semantics. This is a footgun.
 - The Tooltip doesn't allow to be linked as a label using the `aria-labelledby` attribute instead of `aria-describedby`. Choosing between a label and a description could be necessary with icon buttons. See the RFC about [Accessible Icons and Hidden Labels](https://github.com/scaleway/ultraviolet/discussions/6585).
+- The Tooltip content is initially not rendered in the page, which makes it unreadable by bots that read the page without interacting with it. The ideal behavior would be:
+  - render the tooltip content hidden and next to the trigger at load time to keep it in the same context and accessible to bots
+  - after an interaction (hover, focus), move the tooltip to the body and display it
 
 **Low:**
 
@@ -75,4 +78,5 @@ To apply when using the component:
   - `aria-controls` being unconditionally set on the children container
   - `aria-describedby` not being forwarded to function children
   - Default `tabIndex={0}` and missing focus styles on the `childrenContainer` recipe
-    Fixing these issues in `Popup` will automatically improve the `Tooltip` component.
+
+  Fixing these issues in `Popup` will automatically improve the `Tooltip` component.
