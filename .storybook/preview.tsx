@@ -11,7 +11,6 @@ import {
   ThemeProvider as ThemeProviderUI,
 } from '@ultraviolet/themes'
 import type { ReactNode } from 'react'
-import { scan } from 'react-scan'
 import { Fragment } from 'react/jsx-runtime'
 import { themes } from 'storybook/theming'
 import DocsContainer from './components/DocsContainer'
@@ -38,10 +37,9 @@ const VIEWPORTS = BREAKPOINT_ORDER.reduce((acc, key) => {
   return acc
 }, {})
 
-scan({
-  enabled: true,
-  log: true,
-})
+if (import.meta.env.DEV) {
+  import('react-scan').then(({ scan }) => scan()).catch(() => {})
+}
 
 const parameters: Preview['parameters'] = {
   a11y: {
