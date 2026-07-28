@@ -49,6 +49,7 @@ const status = recipe({
     display: 'flex',
     height: HEIGHT,
     width: WIDTH,
+    position: 'relative',
   },
   variants: {
     notification: {
