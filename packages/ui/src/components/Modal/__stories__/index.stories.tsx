@@ -6,9 +6,9 @@ export default {
   title: 'UI/Overlay/Modal',
   parameters: {
     a11yStatus: {
-      perceivable: false,
+      perceivable: true,
       operable: false,
-      understandable: false,
+      understandable: true,
       robust: false,
     },
   },
@@ -34,3 +34,4 @@ export { Open } from './Open.stories'
 export { NestedModal } from './NestedModal.stories'
 export { Image } from './Image.stories'
 export { Carousel } from './Carousel.stories'
+export { FocusManagement } from './FocusManagement.stories'
