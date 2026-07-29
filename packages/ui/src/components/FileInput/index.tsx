@@ -138,7 +138,10 @@ const FileInputBase = ({
       }),
     )
 
-    const formattedFiles = computedMultiple ? [...files, ...formattedNewFiles] : [formattedNewFiles[0]]
+    const formattedFiles = (computedMultiple ? [...files, ...formattedNewFiles] : [formattedNewFiles[0]]).filter(
+      Boolean,
+    )
+
     setFiles(formattedFiles)
     onChangeFiles?.(formattedFiles)
 
