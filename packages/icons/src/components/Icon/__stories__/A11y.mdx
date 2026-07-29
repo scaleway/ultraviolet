@@ -51,7 +51,7 @@ To apply when using the component:
 **High:**
 
 - No explicit `role="img"`. The `<svg>` element does not declare `role="img"`. While some browsers map an SVG containing a `<title>` to the `img` role, this mapping is inconsistent across browsers and assistive technologies. Explicitly setting `role="img"` (only when the icon is informative and not `aria-hidden`) would make identification robust. This affects WCAG 4.1.2.
-- `<title>` is always rendered and the `title` prop is required. Because `title` is a required prop, a `<title>` element is always inserted inside the SVG. When the icon is decorative (`aria-hidden="true"`), the title is ignored by assistive technologies but still present in the DOM, which is contradictory. Consumers are also forced to provide a value even for decorative icons. The `title` prop should be optional and the `<title>` element should only be rendered when the icon is informative.
+- `<title>` is always rendered and cannot be changed. When the icon is decorative (aria-hidden="true"), the title is ignored by assistive technologies but still present in the DOM. The `title` prop should be renamed to `accessibleLabel` to be consistent with the decision in RFC #6585 and added to the generated component (i.e. InformationIcon, FolderIcon etc.) as an optional property to provide an adequate label for informative icons. The `<title>` element should only be rendered when an `accessibleLabel` is provided.
 
 **Medium:**
 
