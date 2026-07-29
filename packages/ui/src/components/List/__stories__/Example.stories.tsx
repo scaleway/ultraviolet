@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
+import { DotsVerticalIcon } from '@ultraviolet/icons'
 import { PencilIcon } from '@ultraviolet/icons/PencilIcon'
 import { useMemo, useState } from 'react'
 import { List } from '..'
@@ -90,8 +91,14 @@ export const Example: StoryFn = args => {
           <List.Cell>{planet.perihelion}AU</List.Cell>
           <List.Cell>{planet.aphelion}AU</List.Cell>
           <List.Cell>
-            <Menu disclosure={<button type="button">Menu</button>}>
-              <Menu.Item>MenuItem</Menu.Item>
+            <Menu
+              disclosure={
+                <Button size="small" sentiment="neutral" variant="outlined">
+                  <DotsVerticalIcon />
+                </Button>
+              }
+            >
+              <Menu.Item>Menu item</Menu.Item>
             </Menu>
           </List.Cell>
         </List.Row>
