@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Modal } from '..'
 import { Button } from '../../Button'
-import { MODAL_WIDTH } from '../constants'
+import { MODAL_WIDTH } from '../constants.css'
 
 export const Size: StoryFn = props => (
   <>

@@ -136,12 +136,11 @@ export const Modal = ({
           closeButtonSentiment={closeButtonSentiment}
           isClosable={isClosable}
           isDrawer={isDrawer}
-          open={open}
+          open={visible || open}
           placement={placement}
           preventBodyScroll={preventBodyScroll}
           ref={ref}
           style={style}
-          visible={visible}
         >
           {children}
         </ModalContent>

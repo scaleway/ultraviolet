@@ -1,15 +1,16 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
+import { useEffect, useState } from 'react'
 import type { ComponentProps, CSSProperties } from 'react'
 import type { Modal } from '.'
 import { Button } from '../Button'
 import { Dialog } from './components/Dialog'
 import type { ModalPlacement, ModalSize } from './types'
+import { ANIMATION_DURATION_MS } from './constants.css'
 import { modalStyle } from './styles.css'
 
 type ModalContentProps = ComponentProps<typeof Modal> & {
-  visible: boolean
   open: boolean
   placement: ModalPlacement
   finalSize: ModalSize
@@ -23,7 +24,6 @@ type ModalContentProps = ComponentProps<typeof Modal> & {
 }
 
 export const ModalContent = ({
-  visible,
   open,
   placement,
   finalSize,
@@ -45,8 +45,14 @@ export const ModalContent = ({
   style,
   ref,
   isDrawer,
-}: ModalContentProps) =>
-  visible || open ? (
+}: ModalContentProps) => {
+  const shouldRender = useDelayUnmount(open, ANIMATION_DURATION_MS)
+
+  if (!shouldRender) {
+    return null
+  }
+
+  return (
     <Dialog
       ariaLabel={ariaLabel}
       backdropClassName={backdropClassName}
@@ -58,7 +64,7 @@ export const ModalContent = ({
       image={image}
       isDrawer={isDrawer}
       onClose={handleClose}
-      open={visible || open}
+      open={open}
       placement={placement}
       preventBodyScroll={preventBodyScroll}
       ref={ref}
@@ -71,7 +77,7 @@ export const ModalContent = ({
             modalId: finalId,
             show: handleOpen,
             toggle: handleToggle,
-            visible,
+            visible: open,
           })
         : children}
       <div className={modalStyle.container}>
@@ -89,4 +95,21 @@ export const ModalContent = ({
         ) : null}
       </div>
     </Dialog>
-  ) : null
+  )
+}
+
+function useDelayUnmount(open?: boolean, delayTime?: number) {
+  const [shouldRender, setShouldRender] = useState(open)
+
+  useEffect(() => {
+    let timeoutId: ReturnType<typeof setTimeout>
+    if (open && !shouldRender) {
+      setShouldRender(true)
+    } else if (!open && shouldRender) {
+      timeoutId = setTimeout(() => setShouldRender(false), delayTime)
+    }
+    return () => clearTimeout(timeoutId)
+  }, [open, delayTime, shouldRender])
+
+  return shouldRender
+}

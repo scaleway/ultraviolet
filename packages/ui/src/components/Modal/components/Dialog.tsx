@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import type {
   FocusEventHandler,
   KeyboardEvent,
@@ -39,30 +39,28 @@ export const Dialog = ({
   style,
   ref,
   isDrawer,
+  open,
 }: DialogProps) => {
-  const [isVisible, setIsVisible] = useState(false)
-
   const containerRef = useRef(document.createElement('div'))
   const nonDefaultRef = useRef<HTMLDialogElement>(null)
   const dialogRef = ref ?? nonDefaultRef
   const onCloseRef = useRef(onClose)
-  const { registerModal, unregisterModal, openedModals, previsousOpenedModales } = useModal()
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
+  const { registerModal, unregisterModal, openedModals } = useModal()
 
   // register/unregister the modal to handle nested modals
   useEffect(() => {
     // a drawer should not be registered since it does not stack with other modals
-    if (!isDrawer) {
+    if (open && !isDrawer) {
       registerModal({ id, ref: dialogRef })
+    }
+    if (!open) {
+      unregisterModal(id)
     }
 
     return () => {
       unregisterModal(id)
     }
-  }, [id, registerModal, unregisterModal, dialogRef, isDrawer])
+  }, [id, open, registerModal, unregisterModal, dialogRef, isDrawer])
 
   // Portal to put the modal in
   useEffect(() => {
@@ -83,8 +81,10 @@ export const Dialog = ({
 
   // On open focus the modal
   useEffect(() => {
-    dialogRef.current?.focus()
-  }, [dialogRef])
+    if (open) {
+      dialogRef.current?.focus()
+    }
+  }, [open, dialogRef])
 
   // Handle body scroll
   useEffect(() => {
@@ -201,13 +201,10 @@ export const Dialog = ({
     top = (modalAbove?.ref?.current?.offsetHeight ?? 0) / 2 - currentModalHeight / 2 + 20
   }
 
-  const animation = openedModals.length > 1 && position === 0 && previsousOpenedModales.length < openedModals.length
-
   return createPortal(
     <div
-      className={cn(backdropClassName, modalStyle.backdrop({ open: true, visible: isVisible }))}
+      className={cn(backdropClassName, modalStyle.backdrop)}
       data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
-      data-visible={isVisible}
       onPointerDown={handlePointerDown}
       onPointerUp={handleClose}
       onFocus={stopFocus}
@@ -219,7 +216,6 @@ export const Dialog = ({
         className={cn(
           className,
           modalStyle.modal({
-            animation,
             image: !!image,
             placement,
             positivePosition: position > 0,
@@ -233,7 +229,7 @@ export const Dialog = ({
         onClose={stopCancel}
         onKeyDown={handleFocusTrap}
         onKeyUp={handleKeyUp}
-        open
+        open={open}
         ref={dialogRef}
         style={{
           ...assignInlineVars({
