@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.21.1
+
+### Patch Changes
+
+- [#6728](https://github.com/scaleway/ultraviolet/pull/6728) [`4d624a3`](https://github.com/scaleway/ultraviolet/commit/4d624a3d2c73eea9306fded9e81b7e11745a7661) Thanks [@jsulpis](https://github.com/jsulpis)! - fix error "CSS.supports is not a function" in tests
+
+- [#6702](https://github.com/scaleway/ultraviolet/pull/6702) [`1fb7b25`](https://github.com/scaleway/ultraviolet/commit/1fb7b257eaa1d1effffba818124f4209d5b6244b) Thanks [@lisalupi](https://github.com/lisalupi)! - `FileInput`: add more file check to ensure an `undefined` object is not added to dataTransfer (onChange behavior)
+
+- [#6723](https://github.com/scaleway/ultraviolet/pull/6723) [`0242868`](https://github.com/scaleway/ultraviolet/commit/02428680551a137adf0e5de5d066c99ce1e9ae02) Thanks [@jsulpis](https://github.com/jsulpis)! - `Status`: missing position relative causing issue on animated Status
+
 ## 3.21.0
 
 ### Minor Changes
