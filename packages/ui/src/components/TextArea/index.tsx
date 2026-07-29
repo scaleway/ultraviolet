@@ -129,7 +129,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
     // native automatic resize
     useEffect(() => {
-      if (textAreaRef.current && window.CSS && CSS.supports('field-sizing', 'content')) {
+      if (textAreaRef.current && CSS?.supports?.('field-sizing', 'content')) {
         textAreaRef.current.style.fieldSizing = rows === 'auto' ? 'content' : 'fixed'
       }
     }, [rows])
