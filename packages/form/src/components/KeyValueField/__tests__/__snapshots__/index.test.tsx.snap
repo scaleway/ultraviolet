@@ -16,7 +16,7 @@ exports[`keyValueField > should add error with unvalidated regex 1`] = `
           class="uv_toi52u0 uv_toi52u2d uv_toi52u41"
         >
           <div
-            class="uv_x6hyh50 uv_x6hyh511 uv_x6hyh52p"
+            class="uv_5jnvwo2 uv_x6hyh50 uv_x6hyh511"
             style="--uv_3mg8xe0: 1fr 1fr auto; --uv_3mg8xe1: 1fr 1fr auto; --uv_3mg8xe2: 1fr 1fr auto; --uv_3mg8xe3: 1fr 1fr auto; --uv_3mg8xe4: 1fr 1fr auto; --uv_3mg8xe5: 1fr 1fr auto;"
           >
             <div
@@ -129,6 +129,56 @@ exports[`keyValueField > should add error with unvalidated regex 1`] = `
           </div>
         </div>
       </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`keyValueField > should disable submit button when required and empty 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+      style="display: contents;"
+    >
+      <div
+        class="uv_toi52u0 uv_toi52u2d uv_toi52u41"
+      >
+        <div
+          class="uv_toi52u0 uv_toi52u2j uv_toi52u6j"
+        >
+          <button
+            class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoee uv_e1wcoek uv_e1wcoeu"
+            data-testid="add-button"
+            type="button"
+          >
+            <svg
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <title>
+                PlusIcon
+              </title>
+              <path
+                d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+              />
+            </svg>
+            add
+          </button>
+        </div>
+      </div>
+      ,
+      <button
+        class="uv_e1wcoe0 uv_e1wcoe2 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoee uv_e1wcoei uv_e1wcoel"
+        disabled=""
+        type="submit"
+      >
+        Submit
+      </button>
     </form>
   </div>
 </DocumentFragment>

@@ -49,7 +49,7 @@ export type KeyValueInputProps = {
   disabled?: boolean
   readOnly?: boolean
   error?: boolean | string
-  fieldErrors?: Record<number, KeyValuePair>
+  fieldErrors?: ({ key?: string; value?: string } | null)[]
   onChange?: (keyValues: KeyValuePair[], index?: number, operationType?: 'change' | 'add' | 'remove') => void
   onBlur?: (keyValues: KeyValuePair[], index?: number) => void
   onFocus?: (keyValues: KeyValuePair[], index?: number) => void

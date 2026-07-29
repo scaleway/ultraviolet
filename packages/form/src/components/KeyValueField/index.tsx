@@ -3,14 +3,12 @@
 import { KeyValueInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldArray, FieldArrayPath, FieldPath, FieldValues } from 'react-hook-form'
-import { useController, useFieldArray, useFormContext } from 'react-hook-form'
+import { useFieldArray, useFormContext } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 import { validateRegex } from '../../utils/validateRegex'
 
 type KeyValueType = NonNullable<ComponentProps<typeof KeyValueInput>['keyvalues']>
-
-type KeyValueFieldError = KeyValueType[number]
 
 type KeyValueFieldProps<
   TFieldValues extends FieldValues,
@@ -36,36 +34,42 @@ export const KeyValueField = <
   inputValue,
   inputKey,
   errorLabel,
+  required,
   label,
   ...props
 }: KeyValueFieldProps<TFieldValues, TFieldArrayName, TFieldName>) => {
   const regexKey = inputKey.inputType !== 'select' ? inputKey.regex : undefined
   const regexValue = inputValue.inputType !== 'select' ? inputValue.regex : undefined
   const { errors } = useErrors()
-  const {
-    fieldState: { error },
-  } = useController<TFieldValues, TFieldName>({
+  const { fields, append, remove, update } = useFieldArray({
     control,
     name,
     rules: {
       validate:
-        regexKey || regexValue
+        regexKey || regexValue || inputKey.required || inputValue.required || required
           ? {
-              pattern: (value: KeyValueType) =>
-                value
-                  ? value.every(item => validateRegex(item?.value, regexValue) && validateRegex(item?.key, regexKey))
-                  : true,
+              pattern: value => {
+                const keyValueArray = value as KeyValueType
+                if (!keyValueArray) return !required
+
+                return keyValueArray.every(item => {
+                  const keyValid =
+                    (required || inputKey.required) && item?.key && (!regexKey || validateRegex(item?.key, regexKey))
+                  const valueValid =
+                    (required || inputValue.required) &&
+                    item?.value &&
+                    (!regexValue || validateRegex(item?.value, regexValue))
+                  return keyValid && valueValid
+                })
+              },
             }
           : undefined,
+      required,
     },
   })
 
-  const { fields, append, remove, update } = useFieldArray({
-    control,
-    name,
-  })
-
-  const { getValues } = useFormContext()
+  const { getValues, formState } = useFormContext()
+  const error = formState.errors?.[name]?.root
 
   const handleFieldChange = (keyValues: KeyValueType, index?: number, operationType?: string) => {
     if (operationType === 'add') {
@@ -80,20 +84,20 @@ export const KeyValueField = <
 
   const currentValues = (getValues(name) ?? []) as KeyValueType
 
-  const fieldErrors = fields.reduce<Record<number, KeyValueFieldError>>((acc, _, index) => {
+  const fieldErrors = fields.map((_, index) => {
     const entry = currentValues[index]
     const keyError = regexKey ? !validateRegex(entry.key ?? '', regexKey) : false
     const valueError = regexValue ? !validateRegex(entry.value ?? '', regexValue) : false
 
     if (keyError || valueError) {
-      acc[index] = {
+      return {
         key: keyError ? (errorLabel ?? errors.pattern({ label: label ?? '', regex: regexKey })) : '',
         value: valueError ? (errorLabel ?? errors.pattern({ label: label ?? '', regex: regexValue })) : '',
       }
     }
 
-    return acc
-  }, {})
+    return null
+  })
 
   return (
     <KeyValueInput
@@ -107,7 +111,7 @@ export const KeyValueField = <
       onBlur={onBlur}
       inputValue={inputValue}
       inputKey={inputKey}
-      error={error?.message}
+      error={error?.message as string}
       fieldErrors={fieldErrors}
     />
   )

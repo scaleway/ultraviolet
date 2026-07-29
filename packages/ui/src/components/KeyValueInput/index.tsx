@@ -49,9 +49,8 @@ export const KeyValueInput = ({
 
   const maxSizeReachedTooltip = addButton.maxSizeReachedTooltip ?? `Cannot add more than ${maxSize} elements`
 
-  const commonProps = (index: number, type: 'key' | 'value', hasError: boolean) => {
+  const commonProps = (index: number, type: 'key' | 'value', inputError?: string) => {
     const input = type === 'key' ? inputKey : inputValue
-    const inputError = fieldErrors?.[index]?.[type]
 
     return {
       label: input.label,
@@ -59,7 +58,7 @@ export const KeyValueInput = ({
       disabled: disabled,
       required: input.required || required,
       size: size,
-      'aria-describedby': hasError
+      'aria-describedby': inputError
         ? `error-${type}-${index}`
         : ariaDescribedBy || (hasHelperText(undefined, error) ? errorId : undefined),
       error: !!(inputError || error),
@@ -80,31 +79,31 @@ export const KeyValueInput = ({
             const errorValue = fieldErrors?.[index]?.value
 
             return (
-              <Row alignItems="flex-end" gap={2} key={index} templateColumns="1fr 1fr auto">
+              <Row alignItems="flex-end" key={index} templateColumns="1fr 1fr auto" className={keyValueInputStyle.row}>
                 {inputKey.inputType === 'select' ? (
                   <SelectInput
                     options={inputKey.options}
                     onChange={(key: string) => handleChange(index, 'change', key)} // can't properly infer type of onChange
-                    {...commonProps(index, 'key', !!errorKey)}
+                    {...commonProps(index, 'key', errorKey)}
                   />
                 ) : (
                   <TextInput
                     onChangeValue={key => handleChange(index, 'change', key)}
-                    {...commonProps(index, 'key', !!errorKey)}
+                    {...commonProps(index, 'key', errorKey)}
                   />
                 )}
                 {inputValue.inputType === 'select' ? (
                   <SelectInput
                     options={inputValue.options}
                     onChange={(value: string) => handleChange(index, 'change', undefined, value)}
-                    {...commonProps(index, 'value', !!errorValue)}
+                    {...commonProps(index, 'value', errorValue)}
                   />
                 ) : (
                   <TextInput
                     autoComplete="off"
                     type={inputValue.type}
                     onChangeValue={value => handleChange(index, 'change', undefined, value)}
-                    {...commonProps(index, 'value', !!errorValue)}
+                    {...commonProps(index, 'value', errorValue)}
                   />
                 )}
 
