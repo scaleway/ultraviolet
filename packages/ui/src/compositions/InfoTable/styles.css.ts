@@ -66,7 +66,7 @@ const cellWithCopyButton = style({
   minWidth: 0,
 })
 
-globalStyle(`${desc} > *`, {
+globalStyle(`:where(${desc}) > *`, {
   marginRight: theme.space[1],
   minWidth: 0,
   maxWidth: '100%',

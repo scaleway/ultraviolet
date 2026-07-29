@@ -19,10 +19,10 @@ describe(recursivelyGetChildrenString, () => {
   it.each`
     test                                                      | value                                         | expected
     ${'is bare string'}                                       | ${'hello'}                                    | ${'hello'}
-    ${'is array'}                                             | ${['hello', 'world']}                         | ${''}
+    ${'is array'}                                             | ${['hello', 'world']}                         | ${'hello world'}
     ${'is Boolean'}                                           | ${true}                                       | ${''}
     ${'is complex children with a nested string children'}    | ${complexChildrenWithStringNestedChildren}    | ${'hello'}
-    ${'is complex children with a nested array children'}     | ${complexChildrenWithArrayNestedChildren}     | ${''}
+    ${'is complex children with a nested array children'}     | ${complexChildrenWithArrayNestedChildren}     | ${'hello'}
     ${'is complex children without a nested string children'} | ${complexChildrenWithoutStringNestedChildren} | ${''}
   `('returns "$expected" when $test', current => {
     expect(recursivelyGetChildrenString(current.value as string)).toBe(current.expected)
