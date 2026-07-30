@@ -5,6 +5,12 @@ import Documentation from './Documentation.md?raw'
 export default {
   component: AddressIcon,
   parameters: {
+    a11yStatus: {
+      perceivable: false,
+      operable: true,
+      understandable: true,
+      robust: false,
+    },
     docs: {
       description: {
         component: Documentation,
