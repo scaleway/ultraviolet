@@ -16,6 +16,7 @@ import {
 
 export const topModal = createVar()
 export const positionModal = createVar()
+const modalWidth = createVar()
 
 const container = style({
   position: 'absolute',
@@ -85,6 +86,13 @@ const backdrop = style({
       pointerEvents: 'none',
     },
   },
+  '@media': {
+    '(prefers-reduced-motion: reduce)': {
+      vars: {
+        [animationDuration]: '0s !important',
+      },
+    },
+  },
 })
 
 const modal = recipe({
@@ -99,32 +107,35 @@ const modal = recipe({
       opacity ${animationDuration} ${ANIMATION_EASING_OPACITY},
       width ${animationDurationTranslation} ${animationEasingTranslation},
       transform ${animationDurationTranslation} ${animationEasingTranslation},
-      display ${animationDurationTranslation} ${animationEasingTranslation} allow-discrete,
       box-shadow ${animationDurationTranslation} ${animationEasingTranslation}
     `,
-    width: `${MODAL_WIDTH.medium}rem`,
+    width: modalWidth,
     '@starting-style': {
       opacity: 0,
       transform: offscreenTranslation,
     },
-    '@media': {
-      '(prefers-reduced-motion: reduce)': {
-        vars: {
-          [offscreenTranslation]: '0',
-        },
-      },
-    },
     selectors: {
+      '&:not([open])': {
+        opacity: 0,
+        display: 'block',
+        transform: offscreenTranslation,
+      },
+      '&:not([open])[data-close-action=confirm]': {
+        transform: 'scale(1.03)',
+      },
       [`&${drawerStyle.base}`]: {
+        borderRadius: '0',
+        marginRight: '0',
+        padding: '0',
         '@starting-style': {
           opacity: 1,
-          transform: 'translateX(99%)',
+          transform: `translateX(calc(${modalWidth} * 0.9))`,
           boxShadow: 'none',
         },
       },
       [`&${drawerStyle.base}:not([open])`]: {
         opacity: 1,
-        transform: 'translateX(100%)',
+        transform: `translateX(${modalWidth})`,
         boxShadow: 'none',
         borderLeft: `1px solid ${theme.colors.neutral.border}`,
         vars: {
@@ -136,39 +147,28 @@ const modal = recipe({
         boxShadow: 'none',
         pointerEvents: 'auto',
       },
-      [`&${drawerStyle.drawer.large}, &${drawerStyle.drawer.small}, &${drawerStyle.drawer.medium}`]: {
-        borderRadius: '0',
-        marginRight: '0',
-        padding: '0',
-      },
       [`&${drawerStyle.drawer.large}`]: {
-        width: `${SIZES.large}rem`,
+        vars: {
+          [modalWidth]: `min(100dvw, ${SIZES.large}rem)`,
+        },
       },
       [`&${drawerStyle.drawer.small}`]: {
-        width: `${SIZES.small}rem`,
+        vars: {
+          [modalWidth]: `min(100dvw, ${SIZES.small}rem)`,
+        },
       },
       [`&${drawerStyle.drawer.medium}`]: {
-        width: `${SIZES.medium}rem`,
+        vars: {
+          [modalWidth]: `min(100dvw, ${SIZES.medium}rem)`,
+        },
       },
       [`&${dialogStyle.xsmall}`]: {
-        width: '32.5rem',
-      },
-      '&:not([open])': {
-        opacity: 0,
-        transform: offscreenTranslation,
-      },
-      '&:not([open])[data-close-action=confirm]': {
-        transform: 'scale(1.03)',
+        vars: {
+          [modalWidth]: 'min(100dvw, 32.5rem)',
+        },
       },
     },
   },
-  compoundVariants: Object.keys(MODAL_WIDTH).map(size => ({
-    style: {
-      transform: `translate3d(0, ${topModal}, 0)`,
-      width: `calc(${MODAL_WIDTH[size as keyof typeof MODAL_WIDTH]}rem - ${positionModal}) !important`,
-    },
-    variants: { positivePosition: true, size },
-  })),
   defaultVariants: {
     image: false,
     placement: 'center',
@@ -183,9 +183,21 @@ const modal = recipe({
     },
     placement: MODAL_PLACEMENT,
     positivePosition: {
-      true: {},
+      true: {
+        transform: `translate3d(0, ${topModal}, 0)`,
+        width: `calc(${modalWidth} - ${positionModal}) !important`,
+      },
     },
-    size: Object.fromEntries(Object.entries(MODAL_WIDTH).map(([size, width]) => [size, { width: `${width}rem` }])),
+    size: Object.fromEntries(
+      Object.entries(MODAL_WIDTH).map(([size, width]) => [
+        size,
+        {
+          vars: {
+            [modalWidth]: `min(${width}rem, 100dvw)`,
+          },
+        },
+      ]),
+    ),
   },
 })
 
