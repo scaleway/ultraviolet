@@ -52,20 +52,24 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       maxLength,
       tooltip,
       onFocus,
+      tabIndex,
       onBlur,
       name,
       id,
       'aria-live': ariaLive,
       'aria-atomic': ariaAtomic,
       'aria-labelledby': ariaLabelledby,
+      'aria-describedby': ariaDescribedBy,
       readOnly,
       required,
       autoFocus,
       autoComplete,
       onKeyDown,
+      onKeyUp,
       role,
       value,
       style,
+      'aria-label': ariaLabel,
     }: SearchInputProps,
     ref: Ref<HTMLInputElement>,
   ) => {
@@ -245,6 +249,8 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
         >
           <TextInput
             aria-atomic={ariaAtomic}
+            aria-describedby={ariaDescribedBy}
+            aria-label={ariaLabel}
             aria-labelledby={ariaLabelledby}
             aria-live={ariaLive}
             autoComplete={autoComplete}
@@ -265,6 +271,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             onChange={event => onSearchCallback(event.target.value)}
             onFocus={onFocus}
             onKeyDown={onKeyDown}
+            onKeyUp={onKeyUp}
             placeholder={placeholder}
             prefix={
               <Stack
@@ -291,6 +298,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
                 <KeyGroup disabled={disabled} keys={keys} onClick={() => innerSearchInputRef.current?.focus()} />
               ) : undefined
             }
+            tabIndex={tabIndex}
             tooltip={tooltip}
             value={searchTerms}
           />
