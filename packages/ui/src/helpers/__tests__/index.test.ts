@@ -1,6 +1,7 @@
 import type { KeyboardEvent } from 'react'
 // oxlint-disable typescript/no-unsafe-type-assertion
 import { describe, expect, it, vi } from 'vitest'
+import { isStringOrNumberArray } from '../isStringOrNumberArray'
 import onKeyOnlyNumbers from '../keycode'
 import parseIntOr from '../numbers'
 import recursivelyGetChildrenString from '../recursivelyGetChildrenString'
@@ -63,5 +64,21 @@ describe(parseIntOr, () => {
     ${'is String'}                      | ${'hello'}             | ${fallback}
   `('returns $expected when $test', current => {
     expect(parseIntOr(current.value as string, fallback)).toBe(current.expected)
+  })
+
+  describe(isStringOrNumberArray, () => {
+    it.each`
+      test                           | value                     | expected
+      ${'is number[]'}               | ${[1, 2]}                 | ${true}
+      ${'is string[]'}               | ${['hello', 'world']}     | ${true}
+      ${'is (number | string)[]'}    | ${['', 'true', 1, 0]}     | ${true}
+      ${'is empty'}                  | ${[]}                     | ${true}
+      ${'is (string | undefined)[]'} | ${['test', undefined]}    | ${false}
+      ${'is string'}                 | ${'test'}                 | ${false}
+      ${'is number'}                 | ${1}                      | ${false}
+      ${'is (string[] | string)[]'}  | ${['string', ['string']]} | ${false}
+    `('returns "$expected" when $test', current => {
+      expect(isStringOrNumberArray(current.value as string)).toBe(current.expected)
+    })
   })
 })

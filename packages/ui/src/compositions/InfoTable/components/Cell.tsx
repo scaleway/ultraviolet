@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
-import { isStringNumberArray } from '../../../helpers/isStringNumberArray'
+import { isStringOrNumberArray } from '../../../helpers/isStringOrNumberArray'
 import { InfoTableContext } from '../Context'
 import { infoTableStyle } from '../styles.css'
 
@@ -34,7 +34,7 @@ export const InfoTableCell = ({ children, title, multiline = false, style }: Cel
         as="dd"
         className={cn(
           infoTableStyle.desc,
-          typeof children === 'string' || isStringNumberArray(children) ? '' : infoTableStyle.descFlex,
+          typeof children === 'string' || isStringOrNumberArray(children) ? '' : infoTableStyle.descFlex,
         )}
         oneLine={!multiline}
         prominence="default"

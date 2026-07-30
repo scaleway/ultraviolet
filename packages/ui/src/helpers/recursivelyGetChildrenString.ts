@@ -1,22 +1,20 @@
 import type { ReactNode } from 'react'
-import { isStringNumberArray } from './isStringNumberArray'
+import { isStringOrNumberArray } from './isStringOrNumberArray'
 
 const recursivelyGetChildrenString = (children: ReactNode): string => {
-  if (typeof children === 'string') {
-    return children
+  if (typeof children === 'string' || typeof children === 'number') {
+    return String(children)
   }
 
-  if (isStringNumberArray(children)) {
+  if (isStringOrNumberArray(children)) {
     return children.join(' ')
   }
 
   if (Array.isArray(children)) {
-    let finalString = ''
-    for (const child of children) {
-      finalString = finalString.concat(' ', recursivelyGetChildrenString(child))
-    } // Recursively add every string or number of the array
-
-    return finalString
+    return children
+      .map(child => recursivelyGetChildrenString(child))
+      .filter(Boolean)
+      .join(' ')
   }
 
   if (typeof children === 'object') {
