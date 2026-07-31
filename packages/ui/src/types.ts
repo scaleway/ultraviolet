@@ -52,7 +52,7 @@ export type LabelProp =
       id: string
     }
 
-export type ChecboxLabelProp =
+export type CheckboxLabelProp =
   | {
       children: ReactNode
       'aria-label'?: string

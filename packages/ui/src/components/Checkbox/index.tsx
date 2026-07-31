@@ -4,7 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId } from 'react'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import type { BaseFormComponentProps, ChecboxLabelProp } from '../../types'
+import type { BaseFormComponentProps, CheckboxLabelProp } from '../../types'
 import { Description } from '../Description'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -13,7 +13,7 @@ import { CheckboxIconContainer } from './CheckboxIconContainer'
 import { checkboxStyle } from './styles.css'
 
 type CheckboxProps = BaseFormComponentProps &
-  ChecboxLabelProp & {
+  CheckboxLabelProp & {
     error?: ReactNode
     helper?: ReactNode
     checked?: boolean | 'indeterminate'
