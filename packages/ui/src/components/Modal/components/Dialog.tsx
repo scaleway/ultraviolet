@@ -14,7 +14,7 @@ import { createPortal } from 'react-dom'
 import { Stack } from '../../Stack'
 import { useModal } from '../ModalProvider'
 import type { DialogProps } from '../types'
-import { modalStyle, positionModal, topModal } from '../styles.css'
+import { modalStyle, nestedModalScale, nestedModalTop } from '../styles.css'
 
 // Prevent default behaviour on Escape
 const stopCancel: ReactEventHandler = event => {
@@ -233,8 +233,8 @@ export const Dialog = ({
         ref={dialogRef}
         style={{
           ...assignInlineVars({
-            [topModal]: `-${top}px`,
-            [positionModal]: `${position * 50}px`,
+            [nestedModalTop]: `-${top}px`,
+            [nestedModalScale]: String(1 - position * 0.1),
           }),
           ...style,
         }}

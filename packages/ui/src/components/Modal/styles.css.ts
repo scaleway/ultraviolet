@@ -14,8 +14,8 @@ import {
   offscreenTranslation,
 } from './constants.css'
 
-export const topModal = createVar()
-export const positionModal = createVar()
+export const nestedModalTop = createVar()
+export const nestedModalScale = createVar()
 const modalWidth = createVar()
 
 const container = style({
@@ -45,7 +45,6 @@ const content = style({
 })
 
 const backdrop = style({
-  backgroundColor: theme.colors.overlay,
   height: '100%',
   width: '100%',
   overflow: 'auto',
@@ -54,9 +53,7 @@ const backdrop = style({
   zIndex: 1,
   display: 'flex',
   padding: theme.space[2],
-  transition: `background-color ${animationDuration} ${ANIMATION_EASING_OPACITY}`, // animate the background and not opacity to allow the drawer to be fully opaque during the whole transition
   '@starting-style': {
-    backgroundColor: 'transparent',
     overflow: 'hidden',
   },
   vars: {
@@ -65,25 +62,36 @@ const backdrop = style({
     [animationDurationTranslation]: `calc(${animationDuration} * 1.5)`,
   },
   selectors: {
+    ['&::before']: {
+      content: '',
+      position: 'fixed',
+      inset: '0',
+      background: theme.colors.overlay,
+      transition: `opacity ${animationDuration} ${ANIMATION_EASING_OPACITY}`,
+      '@starting-style': {
+        opacity: 0,
+      },
+    },
+    ['&:not(:has(dialog[open]))::before']: {
+      opacity: 0,
+    },
     [`&:not(:has(dialog[open]))`]: {
       vars: {
         [animationDuration]: `${ANIMATION_DURATION_MS * 0.7}ms`,
         [animationDurationTranslation]: animationDuration,
       },
-      backgroundColor: 'transparent',
       overflow: 'hidden',
       transitionDelay: '0s',
     },
     [`&:has(${drawerStyle.base})`]: {
       padding: 0,
-      transitionProperty: 'background-color, overflow',
-      transitionDuration: `${animationDuration}, 0s`,
-      transitionDelay: `0s, ${animationDurationTranslation}`, // delay the overflow transition to prevent a horizontal scrollbar
-      transitionBehavior: 'allow-discrete',
+      transition: `overflow 0s ${animationDurationTranslation} allow-discrete`, // prevent a horizontal scrollbar
     },
     [`&:has(${drawerStyle.push})`]: {
-      background: 'none',
       pointerEvents: 'none',
+    },
+    [`&:has(${drawerStyle.push})::before`]: {
+      background: 'none',
     },
   },
   '@media': {
@@ -184,8 +192,8 @@ const modal = recipe({
     placement: MODAL_PLACEMENT,
     positivePosition: {
       true: {
-        transform: `translate3d(0, ${topModal}, 0)`,
-        width: `calc(${modalWidth} - ${positionModal}) !important`,
+        transformOrigin: 'top',
+        transform: `translateY(${nestedModalTop}) scale(${nestedModalScale})`,
       },
     },
     size: Object.fromEntries(
