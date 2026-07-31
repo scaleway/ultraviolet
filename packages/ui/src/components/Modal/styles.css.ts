@@ -54,14 +54,14 @@ const backdrop = style({
   zIndex: 1,
   display: 'flex',
   padding: theme.space[2],
-  transition: `background-color ${animationDuration} ${ANIMATION_EASING_OPACITY}`,
+  transition: `background-color ${animationDuration} ${ANIMATION_EASING_OPACITY}`, // animate the background and not opacity to allow the drawer to be fully opaque during the whole transition
   '@starting-style': {
     backgroundColor: 'transparent',
     overflow: 'hidden',
   },
   vars: {
     [animationDuration]: `${ANIMATION_DURATION_MS}ms`,
-    [animationEasingTranslation]: 'cubic-bezier(0.22, 1, 0.36, 1)',
+    [animationEasingTranslation]: 'cubic-bezier(0.22, 1, 0.36, 1)', // easeOutQuint
     [animationDurationTranslation]: `calc(${animationDuration} * 1.5)`,
   },
   selectors: {
@@ -117,7 +117,7 @@ const modal = recipe({
     selectors: {
       '&:not([open])': {
         opacity: 0,
-        display: 'block',
+        display: 'block', // the default `display: none` breaks the transition on Firefox and Safari
         transform: offscreenTranslation,
       },
       '&:not([open])[data-close-action=confirm]': {

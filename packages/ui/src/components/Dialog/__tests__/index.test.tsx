@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
@@ -45,7 +45,9 @@ describe('dialog', () => {
 
     const cancelButton = screen.getByRole('button', { name: 'Cancel' })
     await userEvent.click(cancelButton)
-    expect(screen.queryByRole('heading', { name: 'Title Test' })).not.toBeInTheDocument()
+    await waitFor(() => {
+      expect(screen.queryByRole('heading', { name: 'Title Test' })).not.toBeInTheDocument()
+    })
   })
 
   it('[CancelButton] : should handle click', async () => {
