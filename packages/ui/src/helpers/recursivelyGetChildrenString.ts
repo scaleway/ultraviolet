@@ -1,12 +1,22 @@
 import type { ReactNode } from 'react'
+import { isStringOrNumberArray } from './isStringOrNumberArray'
 
 const recursivelyGetChildrenString = (children: ReactNode): string => {
-  if (typeof children === 'string') {
-    return children
+  if (typeof children === 'string' || typeof children === 'number') {
+    return String(children)
   }
+
+  if (isStringOrNumberArray(children)) {
+    return children.join(' ')
+  }
+
   if (Array.isArray(children)) {
-    return ''
-  } // We can't determine which string to display in tooltip
+    return children
+      .map(child => recursivelyGetChildrenString(child))
+      .filter(Boolean)
+      .join(' ')
+  }
+
   if (typeof children === 'object') {
     const childProps = ((children as unknown as Record<string, unknown>)?.['props'] as Record<string, unknown>)?.[
       'children'
