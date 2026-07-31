@@ -41,6 +41,9 @@ export type KeyValueInputProps = {
   name?: string
   keyvalues?: KeyValuePair[]
   size?: 'small' | 'medium' | 'large'
+  /**
+   * When set to true, both the key & value inputs are required
+   */
   required?: boolean
   maxSize?: number
   inputKey: InputKeyProps

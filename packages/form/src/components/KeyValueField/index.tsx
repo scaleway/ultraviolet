@@ -53,12 +53,14 @@ export const KeyValueField = <
                 if (!keyValueArray) return !required
 
                 return keyValueArray.every(item => {
-                  const keyValid =
-                    (required || inputKey.required) && item?.key && (!regexKey || validateRegex(item?.key, regexKey))
-                  const valueValid =
-                    (required || inputValue.required) &&
-                    item?.value &&
-                    (!regexValue || validateRegex(item?.value, regexValue))
+                  const keyValidRegex = !regexKey || validateRegex(item?.key, regexKey)
+                  const keyValidRequired = !(required || inputKey.required) || item?.key
+                  const keyValid = keyValidRegex && keyValidRequired
+
+                  const valueValidRegex = !regexValue || validateRegex(item?.value, regexValue)
+                  const valueValidRequired = !(required || inputValue.required) || item?.value
+                  const valueValid = valueValidRegex && valueValidRequired
+
                   return keyValid && valueValid
                 })
               },
@@ -113,6 +115,7 @@ export const KeyValueField = <
       inputKey={inputKey}
       error={error?.message as string}
       fieldErrors={fieldErrors}
+      required={required}
     />
   )
 }

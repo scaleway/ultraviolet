@@ -148,4 +148,47 @@ describe('keyValueField', () => {
     expect(submitButton).toBeDisabled()
     expect(asFragment()).toMatchSnapshot()
   })
+
+  it('should enable submit button when typing on key with regex and nothing required', async () => {
+    const { asFragment } = renderWithForm(
+      <>
+        <KeyValueField
+          addButton={{
+            name: 'add',
+          }}
+          inputKey={{
+            label: 'key',
+            regex: [/^[a-zA-Z]*$/u],
+          }}
+          inputValue={{
+            label: 'value',
+          }}
+          name="test"
+        />
+        ,<Submit>Submit</Submit>
+      </>,
+      {
+        mode: 'onChange',
+      },
+      {
+        errors: mockFormErrors,
+      },
+    )
+
+    const addButton = screen.getByRole('button', { name: /add/i })
+    await userEvent.click(addButton)
+
+    const keyInput = screen.getByRole('textbox', { name: 'key' })
+    const submitButton = screen.getByRole('button', { name: 'Submit' })
+
+    await userEvent.type(keyInput, 'a')
+    expect(keyInput).toBeValid()
+    expect(submitButton).toBeEnabled()
+
+    await userEvent.type(keyInput, '@')
+    expect(keyInput).toBeInvalid()
+    expect(submitButton).toBeDisabled()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 })
