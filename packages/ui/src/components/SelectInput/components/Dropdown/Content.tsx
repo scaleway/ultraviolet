@@ -137,7 +137,6 @@ export const CreateDropdown = ({
   }
 
   return Array.isArray(displayedOptions) ? (
-    // oxlint-disable-next-line jsx-a11y/interactive-supports-focus
     <Stack
       className={selectInputStyle.dropdownContainer}
       id="select-dropdown"
@@ -177,7 +176,6 @@ export const CreateDropdown = ({
       </Stack>
     </Stack>
   ) : (
-    // oxlint-disable-next-line jsx-a11y/interactive-supports-focus
     <Stack
       className={selectInputStyle.dropdownContainer}
       data-grouped
