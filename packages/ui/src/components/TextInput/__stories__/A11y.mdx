@@ -46,10 +46,10 @@ To apply when using the component:
 
 **Medium:**
 
-- Password visibility toggle buttons lack accessible labels that indicate the action. "show" and "hide" are ambiguous without context. Should be "Show password" and "Hide password", or use `tooltipLabel` prop.
+- Password visibility toggle buttons lack accessible labels that indicate the action. "show" and "hide" are ambiguous without context. Should be "Show password" and "Hide password". Consider adding a `labels` prop as an object to define all internal labels (password toggle, clear button).
 - **Duplicate live region announcements**: Both the Stack wrapper (`aria-live="polite"`) AND Description component (`role="status"`) are live regions. This causes screen readers to announce error/success messages twice. Remove `aria-live` from wrapper or conditionally apply `role="status"` only for dynamic error/success messages (not static helper text)
 - Loading state uses a visual Loader component but no aria-busy or aria-live announcement to inform screen reader users that the input is temporarily unavailable.
-- Clear button has `aria-label="clear value"` which is not descriptive enough. Should indicate what is being cleared, e.g., "Clear [field name]", or use `tooltipLabel` prop.
+- Clear button has `aria-label="clear value"` which is not descriptive enough. Should indicate what is being cleared, e.g., "Clear [field name]". Could be addressed via the same `labels` prop object.
 
 **Low:**
 
