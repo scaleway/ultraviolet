@@ -3,15 +3,13 @@ import type { SIZES } from './constant'
 type Sizes = keyof typeof SIZES
 import type { BaseFormComponentProps } from '../../types'
 
-export type NumberInputProps = BaseFormComponentProps & {
+export type NumberInputProps = BaseFormComponentProps<HTMLInputElement> & {
   size?: Sizes
   /**
    * Text displayed into component at the right of number value.
    */
   unit?: string
   tooltip?: string
-  className?: string
-  'data-testid'?: string
   /**
    * Label description displayed right next to the label. It allows you to customize the label content.
    */
@@ -22,15 +20,11 @@ export type NumberInputProps = BaseFormComponentProps & {
   controls?: boolean
   error?: string | boolean
   success?: string | boolean
-  helper?: ReactNode
   value?: number | null
   onChange?: (newValue: number | null) => void
   min?: number
   max?: number
-} & Pick<
-    InputHTMLAttributes<HTMLInputElement>,
-    'onFocus' | 'onBlur' | 'placeholder' | 'step' | 'readOnly' | 'autoFocus' | 'style' | 'aria-describedby'
-  >
+} & Pick<InputHTMLAttributes<HTMLInputElement>, 'placeholder' | 'step' | 'readOnly'>
 
 export type ControlsProps = {
   controls?: NumberInputProps['controls']

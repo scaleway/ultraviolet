@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { HTMLAttributes, AllHTMLAttributes, AriaAttributes, ReactNode } from 'react'
 
 type Without<T, U> = { [P in Exclude<keyof T, keyof U>]?: never }
 type SingleXOR<T, U> = T | U extends object ? (Without<T, U> & U) | (Without<U, T> & T) : T | U
@@ -62,27 +62,33 @@ export type CheckboxLabelProp =
       'aria-label': string
     }
 
-export type PartialLabelProps = Partial<{
+type DefaultLabel = {
   label: string
   'aria-label': string
   'aria-labelledby': string
-}>
-
-export type LabelProps = AtLeastOne<{
-  label: string
-  'aria-label': string
-  'aria-labelledby': string
-}>
-
-type BaseAriaProps = {
-  'aria-describedby'?: string
 }
 
-export type BaseFormComponentProps = {
-  disabled?: boolean
-  required?: boolean
-  id?: string
-  name?: string
+export type PartialLabelProps = Partial<DefaultLabel>
+
+export type LabelProps = AtLeastOne<DefaultLabel>
+
+type BaseAriaProps = Pick<AriaAttributes, 'aria-describedby' | 'aria-labelledby'>
+
+type StyleBaseProps<E extends HTMLElement> = Pick<HTMLAttributes<E>, 'style' | 'className'>
+
+type InputBaseProps<E extends HTMLElement> = Pick<HTMLAttributes<E>, 'onFocus' | 'onBlur' | 'onKeyDown' | 'autoFocus'>
+
+type DefaultProps<E extends HTMLElement> = {
+  'data-testid'?: string
   helper?: ReactNode
-} & BaseAriaProps &
-  PartialLabelProps
+} & Pick<AllHTMLAttributes<E>, 'disabled' | 'required' | 'readOnly' | 'id' | 'name'>
+
+/*
+ * Avoid the case by default we PartialLabelProps and surcharged with LabelProps component where we try to enforce the type
+ **/
+type Label<Enforce extends boolean> = [Enforce] extends [true] ? LabelProps : PartialLabelProps
+
+export type BaseFormComponentProps<
+  E extends HTMLElement = HTMLInputElement,
+  LabelEnforced extends boolean = false,
+> = DefaultProps<E> & InputBaseProps<E> & StyleBaseProps<E> & BaseAriaProps & Label<LabelEnforced>

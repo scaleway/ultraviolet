@@ -9,11 +9,10 @@ import type { BaseFieldProps, DistributiveOmit } from '../../types'
 export type TextAreaFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
-  DistributiveOmit<ComponentProps<typeof TextArea>, 'value' | 'error' | 'name' | 'onChange'> & {
-    regex?: (RegExp | RegExp[])[]
-    submitOnEnter?: boolean
-  }
+> = DistributiveOmit<ComponentProps<typeof TextArea>, 'value' | 'error' | 'name' | 'onChange'> & {
+  regex?: (RegExp | RegExp[])[]
+  submitOnEnter?: boolean
+} & BaseFieldProps<TFieldValues, TFieldName>
 
 /**
  * This component offers a form field based on Ultraviolet UI TextArea component

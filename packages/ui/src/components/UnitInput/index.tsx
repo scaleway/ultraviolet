@@ -18,8 +18,7 @@ import { unitInputStyle, widthSelectInput } from './styles.css'
 
 type UnitInputValue = { inputValue: number; unit: string }
 
-type UnitInputProps = BaseFormComponentProps & {
-  className?: string
+type UnitInputProps = BaseFormComponentProps<HTMLInputElement> & {
   max?: number
   min?: number
   value?: UnitInputValue['inputValue']
@@ -29,8 +28,6 @@ type UnitInputProps = BaseFormComponentProps & {
   options: OptionType[]
   selectInputWidth?: number | string
   size?: 'small' | 'medium' | 'large'
-  'data-testid'?: string
-  helper?: ReactNode
   unitError?: string
   width?: CSSProperties['width']
   maxWidth?: CSSProperties['maxWidth']
@@ -41,10 +38,7 @@ type UnitInputProps = BaseFormComponentProps & {
   step?: number | string
   dropdownAlign?: ComponentProps<typeof SelectInput>['dropdownAlign']
   templateColumns?: ComponentProps<typeof Row>['templateColumns']
-} & Pick<
-    InputHTMLAttributes<HTMLInputElement>,
-    'onFocus' | 'onBlur' | 'placeholder' | 'readOnly' | 'autoFocus' | 'onKeyDown' | 'style'
-  >
+} & Pick<InputHTMLAttributes<HTMLInputElement>, 'placeholder' | 'readOnly'>
 
 export const UnitInput = ({
   id,

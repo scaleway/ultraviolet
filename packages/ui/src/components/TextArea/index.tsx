@@ -4,7 +4,7 @@ import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { forwardRef, useEffect, useId, useImperativeHandle, useRef } from 'react'
-import type { CSSProperties, ReactNode, TextareaHTMLAttributes } from 'react'
+import type { ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
 import type { BaseFormComponentProps, LabelProps } from '../../types'
 import { Button } from '../Button'
@@ -17,11 +17,9 @@ import { SuccessErrorIcon } from './Icon'
 import { Notice } from './Notice'
 import { paddingRightVar, textAreaStyle } from './styles.css'
 
-type TextAreaProps = BaseFormComponentProps &
+type TextAreaProps = BaseFormComponentProps<HTMLTextAreaElement> &
   LabelProps & {
-    className?: string
     tabIndex?: number
-    autoFocus?: boolean
     value?: string
     onChange: (newValue: string) => void
     placeholder?: string
@@ -41,10 +39,6 @@ type TextAreaProps = BaseFormComponentProps &
      */
     error?: string
     /**
-     * Ignored if following props are provided : readyOnly, success.
-     */
-    helper?: ReactNode
-    /**
      * Number of rows to display. If 'auto', the textarea will grow with the content
      */
     rows?: number | 'auto'
@@ -56,11 +50,9 @@ type TextAreaProps = BaseFormComponentProps &
     maxLength?: number
     size?: 'small' | 'medium' | 'large'
     tooltip?: string
-    'data-testid'?: string
     clearable?: boolean
     labelDescription?: ReactNode
-    style?: CSSProperties
-  } & Pick<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onFocus' | 'onBlur' | 'onKeyDown' | 'aria-describedby'>
+  }
 
 const BORDERS_WIDTH = '2px'
 const AUTO_ROWS = 2
@@ -71,36 +63,36 @@ const AUTO_ROWS = 2
 export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   (
     {
-      id,
+      'aria-describedby': ariaDescribedBy,
+      'aria-label': ariaLabel,
+      'data-testid': dataTestId,
+      autoFocus,
       className,
-      tabIndex,
-      value,
-      onChange,
-      placeholder,
-      rows = 3,
-      maxRows,
+      clearable = false,
       disabled = false,
-      readOnly = false,
-      success,
       error,
       helper,
-      minLength,
-      maxLength,
-      tooltip,
+      id,
       label,
-      autoFocus,
-      required = false,
-      'data-testid': dataTestId,
-      name,
-      onFocus,
-      onBlur,
-      onKeyDown,
-      clearable = false,
-      size = 'large',
       labelDescription,
-      'aria-label': ariaLabel,
+      maxLength,
+      maxRows,
+      minLength,
+      name,
+      onBlur,
+      onChange,
+      onFocus,
+      onKeyDown,
+      placeholder,
+      readOnly = false,
+      required = false,
+      rows = 3,
+      size = 'large',
       style,
-      'aria-describedby': ariaDescribedBy,
+      success,
+      tabIndex,
+      tooltip,
+      value,
     },
     ref,
   ) => {

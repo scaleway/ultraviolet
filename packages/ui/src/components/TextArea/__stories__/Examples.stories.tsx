@@ -29,7 +29,6 @@ export const Examples: StoryFn<typeof TextArea> = () => {
         <TextInput label="textInput" />
       </Stack>
       <TextArea
-        aria-label={undefined}
         label={`Change on focus: rows=${rows}`}
         name="example-1"
         onBlur={() => setRows(1)}

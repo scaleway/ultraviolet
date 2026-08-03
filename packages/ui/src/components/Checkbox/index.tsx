@@ -12,29 +12,14 @@ import { Tooltip } from '../Tooltip'
 import { CheckboxIconContainer } from './CheckboxIconContainer'
 import { checkboxStyle } from './styles.css'
 
-type CheckboxProps = BaseFormComponentProps &
+type CheckboxProps = BaseFormComponentProps<HTMLInputElement> &
   CheckboxLabelProp & {
     error?: ReactNode
-    helper?: ReactNode
     checked?: boolean | 'indeterminate'
-    className?: string
     ['data-visibility']?: string
-    'data-testid'?: string
     tooltip?: string
     size?: 'default' | 'small'
-  } & Pick<
-    InputHTMLAttributes<HTMLInputElement>,
-    | 'autoFocus'
-    | 'onBlur'
-    | 'onChange'
-    | 'onKeyDown'
-    | 'onClick'
-    | 'onFocus'
-    | 'tabIndex'
-    | 'value'
-    | 'style'
-    | 'aria-describedby'
-  >
+  } & Pick<InputHTMLAttributes<HTMLInputElement>, 'autoFocus' | 'onChange' | 'onClick' | 'tabIndex' | 'value'>
 
 /**
  * Checkbox is an input component used to select or deselect an option.
