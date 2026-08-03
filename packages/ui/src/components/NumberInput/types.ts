@@ -29,7 +29,7 @@ export type NumberInputProps = BaseFormComponentProps & {
   max?: number
 } & Pick<
     InputHTMLAttributes<HTMLInputElement>,
-    'onFocus' | 'onBlur' | 'placeholder' | 'disabled' | 'step' | 'readOnly' | 'autoFocus' | 'style' | 'aria-describedby'
+    'onFocus' | 'onBlur' | 'placeholder' | 'step' | 'readOnly' | 'autoFocus' | 'style' | 'aria-describedby'
   >
 
 export type ControlsProps = {

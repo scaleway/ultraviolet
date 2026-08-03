@@ -25,8 +25,6 @@ type CheckboxProps = BaseFormComponentProps &
   } & Pick<
     InputHTMLAttributes<HTMLInputElement>,
     | 'autoFocus'
-    | 'id'
-    | 'name'
     | 'onBlur'
     | 'onChange'
     | 'onKeyDown'

@@ -52,13 +52,12 @@ export const PerPage = ({
     setPerPage(intValue)
   }
 
-  const labelText = perPageText ?? 'Items per page'
   const labelId = useId()
 
   return (
     <Stack alignItems="center" direction="row" gap="2">
       <Text as="label" id={labelId} prominence="weak" sentiment="neutral" variant="body">
-        {labelText}
+        {perPageText ?? 'Items per page'}
       </Text>
       <SelectInput
         name="select-items-per-page"

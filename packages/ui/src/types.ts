@@ -74,9 +74,14 @@ export type LabelProps = AtLeastOne<{
   'aria-labelledby': string
 }>
 
+type BaseAriaProps = {
+  'aria-describedby'?: string
+}
+
 export type BaseFormComponentProps = {
   disabled?: boolean
   required?: boolean
   id?: string
   name?: string
-} & PartialLabelProps
+} & BaseAriaProps &
+  PartialLabelProps

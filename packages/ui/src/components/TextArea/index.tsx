@@ -26,10 +26,6 @@ type TextAreaProps = BaseFormComponentProps &
     onChange: (newValue: string) => void
     placeholder?: string
     /**
-     * Override others properties : readyOnly, success, error.
-     */
-    disabled?: boolean
-    /**
      * Override others properties : success, error.
      * Ignored if following props are provided : disabled.
      */
