@@ -57,7 +57,6 @@ const backdrop = style({
     overflow: 'hidden',
   },
   vars: {
-    [animationDuration]: `${ANIMATION_DURATION_MS}ms`,
     [animationEasingTranslation]: 'cubic-bezier(0.22, 1, 0.36, 1)', // easeOutQuint
     [animationDurationTranslation]: `calc(${animationDuration} * 1.5)`,
   },
@@ -92,13 +91,6 @@ const backdrop = style({
     },
     [`&:has(${drawerStyle.push})::before`]: {
       background: 'none',
-    },
-  },
-  '@media': {
-    '(prefers-reduced-motion: reduce)': {
-      vars: {
-        [animationDuration]: '0s !important',
-      },
     },
   },
 })

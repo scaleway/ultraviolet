@@ -34,6 +34,7 @@ export type DisclosureProps = {
 export type DialogProps = {
   ariaLabel?: string
   backdropClassName?: string
+  backdropStyle?: CSSProperties
   id: string
   open: boolean
   size: ModalSize

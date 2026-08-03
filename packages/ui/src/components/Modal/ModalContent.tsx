@@ -1,13 +1,15 @@
 'use client'
 
+import { usePrefersReducedMotion } from '@ultraviolet/animations'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useState } from 'react'
 import type { ComponentProps, CSSProperties } from 'react'
 import type { Modal } from '.'
 import { Button } from '../Button'
 import { Dialog } from './components/Dialog'
 import type { ModalPlacement, ModalSize } from './types'
-import { ANIMATION_DURATION_MS } from './constants.css'
+import { ANIMATION_DURATION_MS, animationDuration } from './constants.css'
 import { modalStyle } from './styles.css'
 
 type ModalContentProps = ComponentProps<typeof Modal> & {
@@ -46,7 +48,9 @@ export const ModalContent = ({
   ref,
   isDrawer,
 }: ModalContentProps) => {
-  const shouldRender = useDelayUnmount(open, ANIMATION_DURATION_MS)
+  const prefersReducedMotion = usePrefersReducedMotion()
+  const animationDurationMs = prefersReducedMotion ? 0 : ANIMATION_DURATION_MS
+  const shouldRender = useDelayUnmount(open, animationDurationMs)
 
   if (!shouldRender) {
     return null
@@ -56,6 +60,9 @@ export const ModalContent = ({
     <Dialog
       ariaLabel={ariaLabel}
       backdropClassName={backdropClassName}
+      backdropStyle={assignInlineVars({
+        [animationDuration]: `${animationDurationMs}ms`,
+      })}
       className={className}
       data-testid={dataTestId}
       hideOnClickOutside={hideOnClickOutside}

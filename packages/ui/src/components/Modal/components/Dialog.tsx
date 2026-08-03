@@ -35,6 +35,7 @@ export const Dialog = ({
   preventBodyScroll,
   hideOnEsc,
   backdropClassName,
+  backdropStyle,
   image,
   style,
   ref,
@@ -204,6 +205,7 @@ export const Dialog = ({
   return createPortal(
     <div
       className={cn(backdropClassName, modalStyle.backdrop)}
+      style={backdropStyle}
       data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
       onPointerDown={handlePointerDown}
       onPointerUp={handleClose}
