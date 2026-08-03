@@ -1,5 +1,351 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`keyValueField > should add error with unvalidated regex 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+      style="display: contents;"
+    >
+      <div
+        class="uv_toi52u0 uv_toi52u2d uv_toi52u41"
+      >
+        <div
+          class="uv_toi52u0 uv_toi52u2d uv_toi52u41"
+        >
+          <div
+            class="uv_5jnvwo2 uv_x6hyh50 uv_x6hyh511"
+            style="--uv_3mg8xe0: 1fr 1fr auto; --uv_3mg8xe1: 1fr 1fr auto; --uv_3mg8xe2: 1fr 1fr auto; --uv_3mg8xe3: 1fr 1fr auto; --uv_3mg8xe4: 1fr 1fr auto; --uv_3mg8xe5: 1fr 1fr auto;"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u2d uv_toi52u5j"
+            >
+              <label
+                class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9own uv_m4c9ow1a uv_m4c9ow32"
+                for="_r_h_"
+              >
+                key
+              </label>
+              <div
+                class="uv_q3q8048 uv_q3q8045"
+                data-disabled="false"
+                data-error="false"
+                data-readonly="false"
+                data-success="false"
+              >
+                <input
+                  aria-invalid="false"
+                  class="uv_q3q8049"
+                  data-size="large"
+                  id="_r_h_"
+                  name="test.0.key"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="uv_toi52u0 uv_toi52u2d uv_toi52u5j"
+            >
+              <label
+                class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9own uv_m4c9ow1a uv_m4c9ow32"
+                for="_r_l_"
+              >
+                value
+              </label>
+              <div
+                class="uv_q3q8048 uv_q3q8045"
+                data-disabled="false"
+                data-error="false"
+                data-readonly="false"
+                data-success="false"
+              >
+                <input
+                  aria-invalid="false"
+                  autocomplete="off"
+                  class="uv_q3q8049"
+                  data-size="large"
+                  id="_r_l_"
+                  name="test.0.value"
+                  type="text"
+                  value="a"
+                />
+              </div>
+            </div>
+            <button
+              class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoee uv_e1wcoek uv_e1wcoew"
+              data-testid="remove-button-0"
+              type="button"
+            >
+              <svg
+                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <title>
+                  DeleteIcon
+                </title>
+                <path
+                  clip-rule="evenodd"
+                  d="M5 3.25V4H2.75C2.33579 4 2 4.33579 2 4.75C2 5.16421 2.33579 5.5 2.75 5.5H3.05L3.86493 13.6493C3.94161 14.4161 4.58685 15 5.35748 15H10.6425C11.4131 15 12.0584 14.4161 12.1351 13.6493L12.95 5.5H13.25C13.6642 5.5 14 5.16421 14 4.75C14 4.33579 13.6642 4 13.25 4H11V3.25C11 2.00736 9.99264 1 8.75 1H7.25C6.00736 1 5 2.00736 5 3.25ZM7.25 2.5C6.83579 2.5 6.5 2.83579 6.5 3.25V4H9.5V3.25C9.5 2.83579 9.16421 2.5 8.75 2.5H7.25ZM6.05044 6.00094C6.46413 5.98025 6.81627 6.29885 6.83696 6.71255L7.11195 12.2125C7.13264 12.6262 6.81404 12.9784 6.40034 12.9991C5.98665 13.0197 5.63451 12.7011 5.61383 12.2875L5.33883 6.78745C5.31814 6.37376 5.63674 6.02162 6.05044 6.00094ZM9.95034 6.00094C10.364 6.02162 10.6826 6.37376 10.662 6.78745L10.387 12.2875C10.3663 12.7011 10.0141 13.0197 9.60044 12.9991C9.18674 12.9784 8.86814 12.6262 8.88883 12.2125L9.16383 6.71255C9.18451 6.29885 9.53665 5.98025 9.95034 6.00094Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="uv_toi52u0 uv_toi52u2j uv_toi52u6j"
+        >
+          <div
+            aria-controls="_r_g_"
+            aria-describedby="_r_g_"
+            class="uv_w40vpo9"
+            tabindex="0"
+          >
+            <button
+              class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoee uv_e1wcoek uv_e1wcoeu"
+              data-testid="add-button"
+              type="button"
+            >
+              <svg
+                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <title>
+                  PlusIcon
+                </title>
+                <path
+                  d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                />
+              </svg>
+              add
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`keyValueField > should disable submit button when required and empty 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+      style="display: contents;"
+    >
+      <div
+        class="uv_toi52u0 uv_toi52u2d uv_toi52u41"
+      >
+        <div
+          class="uv_toi52u0 uv_toi52u2j uv_toi52u6j"
+        >
+          <button
+            class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoee uv_e1wcoek uv_e1wcoeu"
+            data-testid="add-button"
+            type="button"
+          >
+            <svg
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <title>
+                PlusIcon
+              </title>
+              <path
+                d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+              />
+            </svg>
+            add
+          </button>
+        </div>
+      </div>
+      ,
+      <button
+        class="uv_e1wcoe0 uv_e1wcoe2 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoee uv_e1wcoei uv_e1wcoel"
+        disabled=""
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`keyValueField > should enable submit button when typing on key with regex and nothing required 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+      style="display: contents;"
+    >
+      <div
+        class="uv_toi52u0 uv_toi52u2d uv_toi52u41"
+      >
+        <div
+          class="uv_toi52u0 uv_toi52u2d uv_toi52u41"
+        >
+          <div
+            class="uv_5jnvwo2 uv_x6hyh50 uv_x6hyh511"
+            style="--uv_3mg8xe0: 1fr 1fr auto; --uv_3mg8xe1: 1fr 1fr auto; --uv_3mg8xe2: 1fr 1fr auto; --uv_3mg8xe3: 1fr 1fr auto; --uv_3mg8xe4: 1fr 1fr auto; --uv_3mg8xe5: 1fr 1fr auto;"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u2d uv_toi52u5j"
+            >
+              <label
+                class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9own uv_m4c9ow1a uv_m4c9ow32"
+                for="_r_11_"
+              >
+                key
+              </label>
+              <div
+                class="uv_q3q8048 uv_q3q8045"
+                data-disabled="false"
+                data-error="true"
+                data-readonly="false"
+                data-success="false"
+              >
+                <input
+                  aria-describedby="error-key-0"
+                  aria-invalid="true"
+                  class="uv_q3q8049"
+                  data-size="large"
+                  id="_r_11_"
+                  name="test.0.key"
+                  type="text"
+                  value="a@"
+                />
+                <div
+                  class="uv_q3q8042 uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u3p"
+                >
+                  <svg
+                    class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzg uv_icons_1sbwqkz1k"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <title>
+                      AlertCircleIcon
+                    </title>
+                    <path
+                      clip-rule="evenodd"
+                      d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM8 4C8.41421 4 8.75 4.33579 8.75 4.75V7.75C8.75 8.16421 8.41421 8.5 8 8.5C7.58579 8.5 7.25 8.16421 7.25 7.75V4.75C7.25 4.33579 7.58579 4 8 4ZM8 12C8.55228 12 9 11.5523 9 11C9 10.4477 8.55228 10 8 10C7.44772 10 7 10.4477 7 11C7 11.5523 7.44772 12 8 12Z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="uv_toi52u0 uv_toi52u2d uv_toi52u5j"
+            >
+              <label
+                class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9own uv_m4c9ow1a uv_m4c9ow32"
+                for="_r_15_"
+              >
+                value
+              </label>
+              <div
+                class="uv_q3q8048 uv_q3q8045"
+                data-disabled="false"
+                data-error="false"
+                data-readonly="false"
+                data-success="false"
+              >
+                <input
+                  aria-invalid="false"
+                  autocomplete="off"
+                  class="uv_q3q8049"
+                  data-size="large"
+                  id="_r_15_"
+                  name="test.0.value"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <button
+              class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoee uv_e1wcoek uv_e1wcoew"
+              data-testid="remove-button-0"
+              type="button"
+            >
+              <svg
+                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <title>
+                  DeleteIcon
+                </title>
+                <path
+                  clip-rule="evenodd"
+                  d="M5 3.25V4H2.75C2.33579 4 2 4.33579 2 4.75C2 5.16421 2.33579 5.5 2.75 5.5H3.05L3.86493 13.6493C3.94161 14.4161 4.58685 15 5.35748 15H10.6425C11.4131 15 12.0584 14.4161 12.1351 13.6493L12.95 5.5H13.25C13.6642 5.5 14 5.16421 14 4.75C14 4.33579 13.6642 4 13.25 4H11V3.25C11 2.00736 9.99264 1 8.75 1H7.25C6.00736 1 5 2.00736 5 3.25ZM7.25 2.5C6.83579 2.5 6.5 2.83579 6.5 3.25V4H9.5V3.25C9.5 2.83579 9.16421 2.5 8.75 2.5H7.25ZM6.05044 6.00094C6.46413 5.98025 6.81627 6.29885 6.83696 6.71255L7.11195 12.2125C7.13264 12.6262 6.81404 12.9784 6.40034 12.9991C5.98665 13.0197 5.63451 12.7011 5.61383 12.2875L5.33883 6.78745C5.31814 6.37376 5.63674 6.02162 6.05044 6.00094ZM9.95034 6.00094C10.364 6.02162 10.6826 6.37376 10.662 6.78745L10.387 12.2875C10.3663 12.7011 10.0141 13.0197 9.60044 12.9991C9.18674 12.9784 8.86814 12.6262 8.88883 12.2125L9.16383 6.71255C9.18451 6.29885 9.53665 5.98025 9.95034 6.00094Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <span
+              class="uv_5jnvwo0 uv_m4c9ow0 uv_m4c9ow4 uv_m4c9ow9 uv_m4c9owp uv_m4c9ow1a uv_m4c9ow2m"
+              id="error-key-0"
+              role="status"
+            >
+              This field should match the regex ^[a-zA-Z]*$
+            </span>
+          </div>
+        </div>
+        <div
+          class="uv_toi52u0 uv_toi52u2j uv_toi52u6j"
+        >
+          <button
+            class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoee uv_e1wcoek uv_e1wcoeu"
+            data-testid="add-button"
+            type="button"
+          >
+            <svg
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <title>
+                PlusIcon
+              </title>
+              <path
+                d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+              />
+            </svg>
+            add
+          </button>
+        </div>
+      </div>
+      ,
+      <button
+        class="uv_e1wcoe0 uv_e1wcoe2 uv_e1wcoe3 uv_e1wcoe9 uv_e1wcoee uv_e1wcoei uv_e1wcoel"
+        disabled=""
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`keyValueField > should render with default props & max size 1`] = `
 <DocumentFragment>
   <div
@@ -16,8 +362,8 @@ exports[`keyValueField > should render with default props & max size 1`] = `
           class="uv_toi52u0 uv_toi52u2j uv_toi52u6j"
         >
           <div
-            aria-controls="_r_a_"
-            aria-describedby="_r_a_"
+            aria-controls="_r_c_"
+            aria-describedby="_r_c_"
             class="uv_w40vpo9"
             tabindex="0"
           >
@@ -65,8 +411,8 @@ exports[`keyValueField > should render with default props 1`] = `
           class="uv_toi52u0 uv_toi52u2j uv_toi52u6j"
         >
           <div
-            aria-controls="_r_0_"
-            aria-describedby="_r_0_"
+            aria-controls="_r_1_"
+            aria-describedby="_r_1_"
             class="uv_w40vpo9"
             tabindex="0"
           >
@@ -114,8 +460,8 @@ exports[`keyValueField > should render with default props in readonly mode 1`] =
           class="uv_toi52u0 uv_toi52u2j uv_toi52u6j"
         >
           <div
-            aria-controls="_r_b_"
-            aria-describedby="_r_b_"
+            aria-controls="_r_e_"
+            aria-describedby="_r_e_"
             class="uv_w40vpo9"
             tabindex="0"
           >
@@ -126,7 +472,7 @@ exports[`keyValueField > should render with default props in readonly mode 1`] =
               type="button"
             >
               <svg
-                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz2 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkzr"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"

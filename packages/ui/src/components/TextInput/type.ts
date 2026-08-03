@@ -5,7 +5,7 @@ export type TextInputProps = {
   className?: string
   clearable?: boolean
   'data-testid'?: string
-  error?: string
+  error?: string | boolean
   helper?: ReactNode
   label?: string
   labelDescription?: ReactNode
