@@ -45,7 +45,7 @@ export const MODAL_PLACEMENT: Record<ModalPlacement, StyleRule> = {
   center: {
     margin: 'auto',
     vars: {
-      [offscreenTranslation]: 'scale(.97)',
+      [offscreenTranslation]: 'translateY(8px)',
     },
   },
   left: {

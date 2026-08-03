@@ -129,7 +129,7 @@ const modal = recipe({
         transform: offscreenTranslation,
       },
       '&:not([open])[data-close-action=confirm]': {
-        transform: 'scale(1.03)',
+        transform: 'scale(0.96)',
       },
       [`&${drawerStyle.base}`]: {
         borderRadius: '0',
