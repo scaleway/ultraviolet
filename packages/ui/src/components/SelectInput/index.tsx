@@ -25,10 +25,6 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = BaseFormCom
    */
   placeholderSearch?: string
   /**
-   * Description text to give more information to the user
-   */
-  helper?: ReactNode
-  /**
    * Selectable options
    */
   options: DataType

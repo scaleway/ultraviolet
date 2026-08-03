@@ -43,15 +43,7 @@ type UnitInputProps = BaseFormComponentProps & {
   templateColumns?: ComponentProps<typeof Row>['templateColumns']
 } & Pick<
     InputHTMLAttributes<HTMLInputElement>,
-    | 'onFocus'
-    | 'onBlur'
-    | 'placeholder'
-    | 'disabled'
-    | 'readOnly'
-    | 'autoFocus'
-    | 'onKeyDown'
-    | 'style'
-    | 'aria-describedby'
+    'onFocus' | 'onBlur' | 'placeholder' | 'readOnly' | 'autoFocus' | 'onKeyDown' | 'style'
   >
 
 export const UnitInput = ({

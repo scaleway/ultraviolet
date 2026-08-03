@@ -83,5 +83,6 @@ export type BaseFormComponentProps = {
   required?: boolean
   id?: string
   name?: string
+  helper?: ReactNode
 } & BaseAriaProps &
   PartialLabelProps
