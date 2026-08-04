@@ -2,13 +2,18 @@
 
 import { KeyValueInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import type { FieldArray, FieldArrayPath, FieldPath, FieldValues } from 'react-hook-form'
+import type { FieldArrayPath, FieldArrayPathValue, FieldPath, FieldValues } from 'react-hook-form'
 import { useFieldArray, useFormContext } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 import { validateRegex } from '../../utils/validateRegex'
 
 type KeyValueType = NonNullable<ComponentProps<typeof KeyValueInput>['keyvalues']>
+
+type FieldArrayItem<
+  TFieldValues extends FieldValues,
+  TFieldArrayName extends FieldArrayPath<TFieldValues>,
+> = NonNullable<FieldArrayPathValue<TFieldValues, TFieldArrayName>>[number]
 
 type KeyValueFieldProps<
   TFieldValues extends FieldValues,
@@ -75,11 +80,11 @@ export const KeyValueField = <
 
   const handleFieldChange = (keyValues: KeyValueType, index?: number, operationType?: string) => {
     if (operationType === 'add') {
-      append({ key: '', value: '' } as FieldArray<TFieldValues, TFieldArrayName>)
+      append({ key: '', value: '' } as FieldArrayItem<TFieldValues, TFieldArrayName>)
     } else if (operationType === 'remove') {
       remove(index)
     } else if (operationType === 'change' && index !== undefined) {
-      update(index, keyValues?.[index] as FieldArray<TFieldValues, TFieldArrayName>)
+      update(index, keyValues?.[index] as FieldArrayItem<TFieldValues, TFieldArrayName>)
     }
     onChange?.(getValues(name))
   }
