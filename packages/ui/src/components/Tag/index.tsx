@@ -65,7 +65,12 @@ export const Tag = ({
 
   return (
     <Tooltip text={isCopiable ? copyTextTooltip : null}>
-      <Stack direction="row" className={tagStyle.wrapper[copiable ? 'copiable' : 'notCopiable']} width="fit-content">
+      <Stack
+        direction="row"
+        className={tagStyle.wrapper[copiable ? 'copiable' : 'notCopiable']}
+        width="fit-content"
+        maxWidth="100%"
+      >
         <TagInner
           className={cn(
             className,
