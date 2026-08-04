@@ -1,0 +1,63 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/TextInput/A11y" />
+
+# TextInput - Accessibility
+
+## Description
+
+A controlled or uncontrolled form input component that extends HTML input functionality. Supports text, password, URL, and email types with features like prefix/suffix elements, clearable value, show/hide password toggle, loading state, success/error validation states, and optional randomization.
+
+## Summary
+
+1. ✅ **Perceivable**: Labels and descriptions are properly associated; error states use aria-invalid
+2. ✅ **Operable**: Focus indicator on wrapper via :focus-within (acceptable pattern)
+3. ❌ **Understandable**: Uses deprecated `aria-label` pattern; missing `accessibleLabel` prop per RFC #6585
+4. ⚠️ **Robust**: Password visibility toggle missing aria-pressed state; status messages not using live regions properly
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html): Label component properly associated via htmlFor/id
+- ✅ [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html): Error state uses aria-invalid="true" and error message linked via aria-describedby
+- ✅ [WCAG 2.4.6 - Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html): Labels are descriptive when provided
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html): Focus indicator applied to wrapper via `:focus-within` (acceptable pattern). Input has `outline: none`. Border color on focus exceeds 3:1 requirement
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): Input has proper accessible name via label or aria-label
+- ⚠️ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html): Description component uses `role="status"` even for static helper text (should only use for dynamic error/success). Additionally, both the Stack wrapper (`aria-live="polite"`) AND Description (`role="status"`) are live regions, causing potential **double announcements** to screen reader users
+- ✅ [WCAG 1.3.5 - Identify Input Purpose (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html): Component supports `autoComplete` prop (passed to native input). Developers must add appropriate `autoComplete` value when input collects user information (name, email, tel, etc.)
+
+To apply when using the component:
+
+- [WCAG 3.3.3 - Error Suggestion (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html): Provide helpful error messages that suggest how to correct input errors
+- [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html): When using prefix or suffix props with icons, ensure icons are `aria-hidden="true"` if decorative, or provide text alternatives via `VisuallyHidden` or tooltip if informative
+- [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html): **Do not use `placeholder` as a substitute for visible `label`**. Placeholder text disappears when user types, causing memory issues for users with cognitive disabilities. Use placeholder for example input format only (e.g., "DD/MM/YYYY"), not as the primary label
+- ⚠️ [RFC #6585 - Accessible Icons and Hidden Labels](https://github.com/scaleway/ultraviolet/discussions/6585): Component uses deprecated `aria-label` pattern. Should migrate to `accessibleLabel` prop (for hidden labels) per new team standards
+- **When using external `Label` or `Notice` components**: If you render `Label` and/or `Notice` (for helper/error/success messages) externally instead of using the built-in props, you **must** manually manage ARIA associations:
+  - Ensure `Label` has a `htmlFor` attribute matching the input's `id`
+  - Pass the `Notice` component's `id` to the input's `aria-describedby` prop
+
+## Accessibility issues
+
+**High:**
+
+- Show/hide password button missing `aria-pressed` state to indicate current visibility state. The button toggles between show/hide but screen readers cannot determine the current state. Should use `aria-pressed={isPasswordVisible}` or `aria-expanded={isPasswordVisible}`.
+- Uses deprecated `aria-label` pattern. Per [RFC #6585](https://github.com/scaleway/ultraviolet/discussions/6585), should migrate to `accessibleLabel` prop for hidden labels or `tooltipLabel` for tooltip-based labels. Current `aria-label` prop should be deprecated in favor of the new pattern.
+
+**Medium:**
+
+- Password visibility toggle buttons lack accessible labels that indicate the action. "show" and "hide" are ambiguous without context. Should be "Show password" and "Hide password". Consider adding a `labels` prop as an object to define all internal labels (password toggle, clear button).
+- **Duplicate live region announcements**: Both the Stack wrapper (`aria-live="polite"`) AND Description component (`role="status"`) are live regions. This causes screen readers to announce error/success messages twice. Remove `aria-live` from wrapper or conditionally apply `role="status"` only for dynamic error/success messages (not static helper text)
+- Loading state uses a visual Loader component but no aria-busy or aria-live announcement to inform screen reader users that the input is temporarily unavailable.
+- Clear button has `aria-label="clear value"` which is not descriptive enough. Should indicate what is being cleared, e.g., "Clear [field name]". Could be addressed via the same `labels` prop object.
+
+**Low:**
+
+- Tooltip component wraps the input wrapper div but tooltips may not be accessible to keyboard-only users or screen reader users depending on implementation.
+
+## Dependencies
+
+- Button component used for clear and password toggle buttons must be keyboard accessible and have proper focus states
+- Tooltip component must be accessible to keyboard and screen reader users
+- Loader component should have appropriate aria attributes for loading states
+- Migration depends on RFC #6585 implementation: `accessibleLabel`, `tooltipLabel`, `tooltipDescription` props and `VisuallyHidden` component / `sr-only` CSS class
