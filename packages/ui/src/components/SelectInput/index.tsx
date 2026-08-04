@@ -21,6 +21,10 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = BaseFormCom
    */
   placeholder?: string
   /**
+   * Whether the component in readOnly
+   */
+  readOnly?: boolean
+  /**
    * When searchable, placeholder when no value is searched
    */
   placeholderSearch?: string

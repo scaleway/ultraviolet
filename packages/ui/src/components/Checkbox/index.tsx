@@ -19,7 +19,7 @@ type CheckboxProps = BaseFormComponentProps<HTMLInputElement> &
     ['data-visibility']?: string
     tooltip?: string
     size?: 'default' | 'small'
-  } & Pick<InputHTMLAttributes<HTMLInputElement>, 'autoFocus' | 'onChange' | 'onClick' | 'tabIndex' | 'value'>
+  } & Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'onClick' | 'tabIndex' | 'value'>
 
 /**
  * Checkbox is an input component used to select or deselect an option.

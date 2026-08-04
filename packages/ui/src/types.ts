@@ -81,14 +81,10 @@ type InputBaseProps<E extends HTMLElement> = Pick<HTMLAttributes<E>, 'onFocus' |
 type DefaultProps<E extends HTMLElement> = {
   'data-testid'?: string
   helper?: ReactNode
-} & Pick<AllHTMLAttributes<E>, 'disabled' | 'required' | 'readOnly' | 'id' | 'name'>
+} & Pick<AllHTMLAttributes<E>, 'disabled' | 'required' | 'id' | 'name'>
 
-/*
- * Avoid the case by default we PartialLabelProps and surcharged with LabelProps component where we try to enforce the type
- **/
-type Label<Enforce extends boolean> = [Enforce] extends [true] ? LabelProps : PartialLabelProps
-
-export type BaseFormComponentProps<
-  E extends HTMLElement = HTMLInputElement,
-  LabelEnforced extends boolean = false,
-> = DefaultProps<E> & InputBaseProps<E> & StyleBaseProps<E> & BaseAriaProps & Label<LabelEnforced>
+export type BaseFormComponentProps<E extends HTMLElement = HTMLInputElement> = DefaultProps<E> &
+  InputBaseProps<E> &
+  StyleBaseProps<E> &
+  BaseAriaProps &
+  PartialLabelProps

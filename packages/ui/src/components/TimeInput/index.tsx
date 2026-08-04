@@ -31,6 +31,7 @@ export type Time = {
 
 type TimeInputProps = BaseFormComponentProps<HTMLInputElement> & {
   placeholder?: Time
+  readOnly?: boolean
   value?: Date | null
   clearable?: boolean
   labelDescription?: ReactNode
