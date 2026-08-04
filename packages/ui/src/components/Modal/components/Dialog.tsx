@@ -7,7 +7,7 @@ import type {
   FocusEventHandler,
   KeyboardEvent,
   KeyboardEventHandler,
-  MouseEventHandler,
+  PointerEventHandler,
   ReactEventHandler,
 } from 'react'
 import { createPortal } from 'react-dom'
@@ -124,16 +124,20 @@ export const Dialog = ({
     [hideOnEsc],
   )
 
-  const handleClose: MouseEventHandler = useCallback(
+  const pointerDownTargetRef = useRef<HTMLElement>(null)
+
+  const handlePointerDown: PointerEventHandler = useCallback(event => {
+    pointerDownTargetRef.current = event.target as HTMLElement
+  }, [])
+
+  const handleClose: PointerEventHandler = useCallback(
     event => {
-      // if the user actually click outside of modal
-      if (
-        hideOnClickOutside &&
+      const clickedOutside =
         dialogRef.current &&
-        // oxlint-disable-next-line typescript/no-unsafe-type-assertion
-        !dialogRef.current.contains(event.target as Node) &&
-        (isDrawer || position === 0)
-      ) {
+        !dialogRef.current.contains(pointerDownTargetRef.current) &&
+        !dialogRef.current.contains(event.target as HTMLElement)
+
+      if (hideOnClickOutside && clickedOutside && (isDrawer || position === 0)) {
         onCloseRef.current()
       }
     },
@@ -204,7 +208,8 @@ export const Dialog = ({
       className={cn(backdropClassName, modalStyle.backdrop({ open: true, visible: isVisible }))}
       data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
       data-visible={isVisible}
-      onClick={handleClose}
+      onPointerDown={handlePointerDown}
+      onPointerUp={handleClose}
       onFocus={stopFocus}
       onKeyDown={() => {}}
     >

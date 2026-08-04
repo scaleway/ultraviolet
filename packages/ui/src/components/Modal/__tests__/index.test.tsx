@@ -288,42 +288,117 @@ describe('modal', () => {
     expect(mockOnClose).not.toHaveBeenCalled()
   })
 
-  it('test hideOnClickOutside is true', async () => {
-    const mockOnClose = vi.fn(() => {})
+  it('should close when clicking on the backdrop with hideOnClickOutside', async () => {
+    const mockOnBeforeClose = vi.fn(() => {})
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
         data-testid="test"
+        disclosure={<button type="button">Open</button>}
         hideOnClickOutside
-        id="modal-test"
-        onBeforeClose={mockOnClose}
-        open
+        onBeforeClose={mockOnBeforeClose}
       >
-        <div> test</div>
+        <div>test</div>
       </Modal>,
     )
-    await userEvent.click(screen.getByRole('dialog'))
+
+    await userEvent.click(screen.getByRole('button', { name: 'Open' }))
+
+    const dialog = screen.queryByRole('dialog')
+    expect(dialog).toBeVisible()
+
     await userEvent.click(screen.getByTestId('test-backdrop'))
 
-    expect(mockOnClose).toHaveBeenCalledOnce()
+    expect(dialog).not.toBeInTheDocument()
+    expect(mockOnBeforeClose).toHaveBeenCalledOnce()
   })
 
-  it('test hideOnClickOutside is false', async () => {
+  it('should not close when clicking on the backdrop with hideOnClickOutside=false', async () => {
+    const mockOnBeforeClose = vi.fn(() => {})
+    renderWithTheme(
+      <Modal
+        ariaLabel="modal-test"
+        data-testid="test"
+        disclosure={<button type="button">Open</button>}
+        hideOnClickOutside={false}
+        onBeforeClose={mockOnBeforeClose}
+      >
+        <div>test</div>
+      </Modal>,
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: 'Open' }))
+
+    const dialog = screen.queryByRole('dialog')
+    expect(dialog).toBeVisible()
+
+    await userEvent.click(screen.getByTestId('test-backdrop'))
+
+    expect(dialog).toBeVisible()
+    expect(mockOnBeforeClose).not.toHaveBeenCalled()
+  })
+
+  it('should not close when pointer down starts inside the dialog and releases on the backdrop', async () => {
+    const mockOnBeforeClose = vi.fn(() => {})
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
         data-testid="test"
-        hideOnClickOutside={false}
-        id="modal-test"
-        onBeforeClose={mockOnClose}
-        open
+        disclosure={<button type="button">Open</button>}
+        hideOnClickOutside
+        onBeforeClose={mockOnBeforeClose}
+        onClose={mockOnClose}
       >
-        <div> test</div>
+        <div>test</div>
       </Modal>,
     )
-    await userEvent.click(screen.getByTestId('test-backdrop'))
 
+    await userEvent.click(screen.getByRole('button', { name: 'Open' }))
+
+    const backdrop = screen.getByTestId('test-backdrop')
+    const dialog = screen.getByRole('dialog')
+    expect(dialog).toBeVisible()
+
+    await userEvent.pointer([
+      { target: dialog, keys: '[MouseLeft>]' },
+      { target: backdrop, keys: '[/MouseLeft]' },
+    ])
+
+    expect(dialog).toBeVisible()
     expect(mockOnClose).not.toHaveBeenCalled()
+    expect(mockOnBeforeClose).not.toHaveBeenCalled()
+  })
+
+  it('should not close when pointer down starts on the backdrop and releases inside the dialog', async () => {
+    const mockOnBeforeClose = vi.fn(() => {})
+    const mockOnClose = vi.fn(() => {})
+    renderWithTheme(
+      <Modal
+        ariaLabel="modal-test"
+        data-testid="test"
+        disclosure={<button type="button">Open</button>}
+        hideOnClickOutside
+        onBeforeClose={mockOnBeforeClose}
+        onClose={mockOnClose}
+      >
+        <div>test</div>
+      </Modal>,
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: 'Open' }))
+
+    const backdrop = screen.getByTestId('test-backdrop')
+    const dialog = screen.getByRole('dialog')
+    expect(dialog).toBeVisible()
+
+    await userEvent.pointer([
+      { target: backdrop, keys: '[MouseLeft>]' },
+      { target: dialog, keys: '[/MouseLeft]' },
+    ])
+
+    expect(dialog).toBeVisible()
+    expect(mockOnClose).not.toHaveBeenCalled()
+    expect(mockOnBeforeClose).not.toHaveBeenCalled()
   })
 })
