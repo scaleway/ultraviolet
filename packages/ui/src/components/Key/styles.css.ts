@@ -16,16 +16,9 @@ const key = recipe({
     {
       style: {
         backgroundColor: theme.colors.neutral.backgroundStronger,
-        borderColor: theme.colors.neutral.border,
+        border: 'none',
       },
       variants: { prominence: 'strong', sentiment: 'neutral' },
-    },
-    {
-      style: {
-        backgroundColor: theme.colors.neutral.backgroundStrongerDisabled,
-        borderColor: theme.colors.neutral.borderDisabled,
-      },
-      variants: { disabled: true, prominence: 'strong', sentiment: 'neutral' },
     },
     {
       style: {
@@ -38,16 +31,9 @@ const key = recipe({
     {
       style: {
         backgroundColor: theme.colors.primary.backgroundStrong,
-        border: theme.colors.neutral.border,
+        border: 'none',
       },
       variants: { prominence: 'strong', sentiment: 'primary' },
-    },
-    {
-      style: {
-        backgroundColor: theme.colors.primary.backgroundStrongDisabled,
-        border: theme.colors.neutral.borderDisabled,
-      },
-      variants: { disabled: true, prominence: 'strong', sentiment: 'primary' },
     },
     {
       style: {
@@ -56,6 +42,20 @@ const key = recipe({
         cursor: 'not-allowed',
       },
       variants: { disabled: true, sentiment: 'primary' },
+    },
+    {
+      style: {
+        backgroundColor: theme.colors.primary.backgroundStrongDisabled,
+        border: 'none',
+      },
+      variants: { disabled: true, prominence: 'strong', sentiment: 'primary' },
+    },
+    {
+      style: {
+        backgroundColor: theme.colors.neutral.backgroundStrongerDisabled,
+        border: 'none',
+      },
+      variants: { disabled: true, prominence: 'strong', sentiment: 'neutral' },
     },
   ],
   defaultVariants: {
