@@ -38,7 +38,6 @@ export const Form = <TFieldValues extends FieldValues>({
   onSubmit,
   name,
   _experimentalRegisterMode = false,
-  'aria-label': ariaLabel,
 }: FormProps<TFieldValues>) => {
   const handleSubmit = methods.handleSubmit(async values => {
     const result = await onSubmit(values)
@@ -56,7 +55,6 @@ export const Form = <TFieldValues extends FieldValues>({
       <FormRegisterModeContext.Provider value={_experimentalRegisterMode}>
         <ErrorProvider errors={{ ...defaultErrors, ...errors }}>
           <form
-            aria-label={ariaLabel}
             name={name}
             noValidate
             onSubmit={e => {
