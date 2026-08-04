@@ -19,6 +19,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   experimental: {
     cssChunking: true,
+    useTypeScriptCli: true,
   },
 }
 

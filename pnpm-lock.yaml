@@ -203,6 +203,12 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    typescript:
+      specifier: 7.0.2
+      version: 7.0.2
+
 overrides:
   vite: 8.2.0
   vitest: 4.1.10
@@ -392,7 +398,7 @@ importers:
         specifier: 2.10.7
         version: 2.10.7
       typescript:
-        specifier: 7.0.2
+        specifier: 'catalog:'
         version: 7.0.2
       vite:
         specifier: 8.2.0
@@ -458,7 +464,7 @@ importers:
         specifier: 7.18.2
         version: 7.18.2(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       typescript:
-        specifier: 7.0.2
+        specifier: 'catalog:'
         version: 7.0.2
       vite:
         specifier: 8.2.0
@@ -516,7 +522,7 @@ importers:
         version: 19.2.8(react@19.2.8)
       react-schemaorg:
         specifier: 2.0.1
-        version: 2.0.1(react@19.2.8)(schema-dts@2.0.0(typescript@6.0.3))(typescript@6.0.3)
+        version: 2.0.1(react@19.2.8)(schema-dts@2.0.0(typescript@7.0.2))(typescript@7.0.2)
       react-syntax-highlighter:
         specifier: 16.1.1
         version: 16.1.1(react@19.2.8)
@@ -525,10 +531,10 @@ importers:
         version: 1.102.0
       schema-dts:
         specifier: 2.0.0
-        version: 2.0.0(typescript@6.0.3)
+        version: 2.0.0(typescript@7.0.2)
       typescript:
-        specifier: npm:typescript@6.0.3
-        version: 6.0.3
+        specifier: 'catalog:'
+        version: 7.0.2
 
   examples/next-app-router:
     devDependencies:
@@ -572,8 +578,8 @@ importers:
         specifier: 19.2.8
         version: 19.2.8(react@19.2.8)
       typescript:
-        specifier: npm:typescript@6.0.3
-        version: 6.0.3
+        specifier: 'catalog:'
+        version: 7.0.2
 
   examples/vite:
     devDependencies:
@@ -605,7 +611,7 @@ importers:
         specifier: 19.2.8
         version: 19.2.8(react@19.2.8)
       typescript:
-        specifier: 7.0.2
+        specifier: 'catalog:'
         version: 7.0.2
       vite:
         specifier: 8.2.0
@@ -8264,11 +8270,6 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@6.0.3:
-    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
-    engines: {node: '>=14.17'}
-    hasBin: true
-
   typescript@7.0.2:
     resolution: {integrity: sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==}
     engines: {node: '>=16.20.0'}
@@ -15790,11 +15791,11 @@ snapshots:
       - utf-8-validate
       - vite-plus
 
-  react-schemaorg@2.0.1(react@19.2.8)(schema-dts@2.0.0(typescript@6.0.3))(typescript@6.0.3):
+  react-schemaorg@2.0.1(react@19.2.8)(schema-dts@2.0.0(typescript@7.0.2))(typescript@7.0.2):
     dependencies:
       react: 19.2.8
-      schema-dts: 2.0.0(typescript@6.0.3)
-      typescript: 6.0.3
+      schema-dts: 2.0.0(typescript@7.0.2)
+      typescript: 7.0.2
 
   react-syntax-highlighter@16.1.1(react@19.2.8):
     dependencies:
@@ -16076,13 +16077,13 @@ snapshots:
 
   scheduler@0.27.0: {}
 
-  schema-dts-lib@1.0.0(typescript@6.0.3):
+  schema-dts-lib@1.0.0(typescript@7.0.2):
     dependencies:
-      typescript: 6.0.3
+      typescript: 7.0.2
 
-  schema-dts@2.0.0(typescript@6.0.3):
+  schema-dts@2.0.0(typescript@7.0.2):
     dependencies:
-      schema-dts-lib: 1.0.0(typescript@6.0.3)
+      schema-dts-lib: 1.0.0(typescript@7.0.2)
     transitivePeerDependencies:
       - typescript
 
@@ -16594,8 +16595,6 @@ snapshots:
   typed-query-selector@2.12.2: {}
 
   typescript@5.9.3: {}
-
-  typescript@6.0.3: {}
 
   typescript@7.0.2:
     optionalDependencies:
