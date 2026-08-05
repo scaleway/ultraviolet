@@ -39,17 +39,8 @@ type TimeInputProps = BaseFormComponentProps<HTMLInputElement> & {
   onChange?: (value: Date | undefined, valuePeriod?: string) => void
   size?: 'small' | 'medium' | 'large'
   timeFormat?: 12 | 24
-<<<<<<< HEAD
-  /**
-   * Automatically focus on the element on render. Autofocus is applied to the hour input
-   */
-  autoFocus?: boolean
-  style?: CSSProperties
   'aria-describedby'?: string
 } & LabelProps
-=======
-}
->>>>>>> 9922f556b (feat(type): add html input element to base field props)
 
 /**
  * A time input component that allows users to type a time in a 24 or 12-hour format.
