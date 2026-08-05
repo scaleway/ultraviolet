@@ -1,3 +1,4 @@
+import { theme } from '@ultraviolet/themes'
 import type { StyleRule } from '@vanilla-extract/css'
 import { createVar } from '@vanilla-extract/css'
 import type { ModalPlacement, ModalSize } from './types'
@@ -23,7 +24,7 @@ export const MODAL_PLACEMENT: Record<ModalPlacement, StyleRule> = {
     margin: 'auto',
     marginBottom: 0,
     vars: {
-      [offscreenTranslation]: 'translateY(8px)',
+      [offscreenTranslation]: `translateY(${theme.space[1]})`,
     },
   },
   'bottom-left': {
@@ -31,7 +32,7 @@ export const MODAL_PLACEMENT: Record<ModalPlacement, StyleRule> = {
     marginBottom: 0,
     marginLeft: 0,
     vars: {
-      [offscreenTranslation]: 'translateY(8px)',
+      [offscreenTranslation]: `translateY(${theme.space[1]})`,
     },
   },
   'bottom-right': {
@@ -39,34 +40,34 @@ export const MODAL_PLACEMENT: Record<ModalPlacement, StyleRule> = {
     marginBottom: 0,
     marginRight: 0,
     vars: {
-      [offscreenTranslation]: 'translateY(8px)',
+      [offscreenTranslation]: `translateY(${theme.space[1]})`,
     },
   },
   center: {
     margin: 'auto',
     vars: {
-      [offscreenTranslation]: 'translateY(8px)',
+      [offscreenTranslation]: `translateY(${theme.space[1]})`,
     },
   },
   left: {
     margin: 'auto',
     marginLeft: 0,
     vars: {
-      [offscreenTranslation]: 'translateX(-8px)',
+      [offscreenTranslation]: `translateX(calc(-1 * ${theme.space[1]}))`,
     },
   },
   right: {
     margin: 'auto',
     marginRight: 0,
     vars: {
-      [offscreenTranslation]: 'translateX(8px)',
+      [offscreenTranslation]: `translateX(${theme.space[1]})`,
     },
   },
   top: {
     margin: 'auto',
     marginTop: 0,
     vars: {
-      [offscreenTranslation]: 'translateY(-8px)',
+      [offscreenTranslation]: `translateY(calc(-1 * ${theme.space[1]}))`,
     },
   },
   'top-left': {
@@ -74,7 +75,7 @@ export const MODAL_PLACEMENT: Record<ModalPlacement, StyleRule> = {
     marginLeft: 0,
     marginTop: 0,
     vars: {
-      [offscreenTranslation]: 'translateY(-8px)',
+      [offscreenTranslation]: `translateY(calc(-1 * ${theme.space[1]}))`,
     },
   },
   'top-right': {
@@ -82,7 +83,7 @@ export const MODAL_PLACEMENT: Record<ModalPlacement, StyleRule> = {
     marginRight: 0,
     marginTop: 0,
     vars: {
-      [offscreenTranslation]: 'translateY(-8px)',
+      [offscreenTranslation]: `translateY(calc(-1 * ${theme.space[1]}))`,
     },
   },
 }

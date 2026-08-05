@@ -2,14 +2,13 @@
 
 import { usePrefersReducedMotion } from '@ultraviolet/animations'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { useEffect, useState } from 'react'
 import type { ComponentProps, CSSProperties } from 'react'
 import type { Modal } from '.'
 import { Button } from '../Button'
 import { Dialog } from './components/Dialog'
 import type { ModalPlacement, ModalSize } from './types'
-import { ANIMATION_DURATION_MS, animationDuration } from './constants.css'
+import { useDelayUnmount } from './useDelayUnmount'
+import { ANIMATION_DURATION_MS } from './constants.css'
 import { modalStyle } from './styles.css'
 
 type ModalContentProps = ComponentProps<typeof Modal> & {
@@ -49,8 +48,7 @@ export const ModalContent = ({
   isDrawer,
 }: ModalContentProps) => {
   const prefersReducedMotion = usePrefersReducedMotion()
-  const animationDurationMs = prefersReducedMotion ? 0 : ANIMATION_DURATION_MS
-  const shouldRender = useDelayUnmount(open, animationDurationMs)
+  const shouldRender = useDelayUnmount(open, prefersReducedMotion ? 0 : ANIMATION_DURATION_MS)
 
   if (!shouldRender) {
     return null
@@ -60,9 +58,6 @@ export const ModalContent = ({
     <Dialog
       ariaLabel={ariaLabel}
       backdropClassName={backdropClassName}
-      backdropStyle={assignInlineVars({
-        [animationDuration]: `${animationDurationMs}ms`,
-      })}
       className={className}
       data-testid={dataTestId}
       hideOnClickOutside={hideOnClickOutside}
@@ -103,20 +98,4 @@ export const ModalContent = ({
       </div>
     </Dialog>
   )
-}
-
-function useDelayUnmount(open?: boolean, delayTime?: number) {
-  const [shouldRender, setShouldRender] = useState(open)
-
-  useEffect(() => {
-    let timeoutId: ReturnType<typeof setTimeout>
-    if (open && !shouldRender) {
-      setShouldRender(true)
-    } else if (!open && shouldRender) {
-      timeoutId = setTimeout(() => setShouldRender(false), delayTime)
-    }
-    return () => clearTimeout(timeoutId)
-  }, [open, delayTime, shouldRender])
-
-  return shouldRender
 }

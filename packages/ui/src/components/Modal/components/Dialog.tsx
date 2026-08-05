@@ -50,11 +50,13 @@ export const Dialog = ({
 
   // register/unregister the modal to handle nested modals
   useEffect(() => {
-    // a drawer should not be registered since it does not stack with other modals
-    if (open && !isDrawer) {
-      registerModal({ id, ref: dialogRef })
+    if (isDrawer) {
+      // a drawer should not be registered since it does not stack with other modals
+      return
     }
-    if (!open) {
+    if (open) {
+      registerModal({ id, ref: dialogRef })
+    } else {
       unregisterModal(id)
     }
 
