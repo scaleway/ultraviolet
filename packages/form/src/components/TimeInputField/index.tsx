@@ -22,11 +22,9 @@ export const TimeInputField = <
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   onChange,
-  label,
   required = false,
   name,
   onBlur,
-  'aria-label': ariaLabel,
   shouldUnregister,
   control,
   errorLabel,
@@ -51,12 +49,11 @@ export const TimeInputField = <
       {...props}
       error={getError(
         {
-          label: errorLabel ?? label ?? ariaLabel ?? name,
+          label: errorLabel ?? props['label'] ?? props['aria-label'] ?? name,
           value: field.value,
         },
         error,
       )}
-      label={label}
       onBlur={event => {
         onBlur?.(event)
         field.onBlur()

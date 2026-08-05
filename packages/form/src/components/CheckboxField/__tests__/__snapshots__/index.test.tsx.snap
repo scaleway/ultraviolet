@@ -54,6 +54,21 @@ exports[`checkboxField > should render correctly 1`] = `
             />
           </g>
         </svg>
+        <div
+          class="uv_toi52u0 uv_toi52u2d uv_toi52u5j"
+          style="--uv_4k0ekn3: 1;"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u5j"
+          >
+            <label
+              class="uv_9pjq8oc uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owj uv_m4c9ow1a uv_m4c9ow32"
+              for="_r_0_"
+            >
+              test
+            </label>
+          </div>
+        </div>
       </div>
     </form>
   </div>
@@ -80,7 +95,7 @@ exports[`checkboxField > should render correctly checked without value 1`] = `
           aria-invalid="false"
           checked=""
           class="uv_9pjq8o4 uv_9pjq8o3"
-          id="_r_6_"
+          id="_r_8_"
           name="checked"
           type="checkbox"
         />
@@ -115,6 +130,21 @@ exports[`checkboxField > should render correctly checked without value 1`] = `
             />
           </g>
         </svg>
+        <div
+          class="uv_toi52u0 uv_toi52u2d uv_toi52u5j"
+          style="--uv_4k0ekn3: 1;"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u5j"
+          >
+            <label
+              class="uv_9pjq8oc uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owj uv_m4c9ow1a uv_m4c9ow32"
+              for="_r_8_"
+            >
+              test
+            </label>
+          </div>
+        </div>
       </div>
     </form>
   </div>
@@ -141,7 +171,7 @@ exports[`checkboxField > should render correctly disabled 1`] = `
           aria-invalid="false"
           class="uv_9pjq8o4 uv_9pjq8o3"
           disabled=""
-          id="_r_4_"
+          id="_r_5_"
           name="test"
           type="checkbox"
         />
@@ -176,6 +206,21 @@ exports[`checkboxField > should render correctly disabled 1`] = `
             />
           </g>
         </svg>
+        <div
+          class="uv_toi52u0 uv_toi52u2d uv_toi52u5j"
+          style="--uv_4k0ekn3: 1;"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u5j"
+          >
+            <label
+              class="uv_9pjq8oc uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9owb uv_m4c9owj uv_m4c9ow22"
+              for="_r_5_"
+            >
+              test
+            </label>
+          </div>
+        </div>
       </div>
     </form>
   </div>
@@ -200,8 +245,9 @@ exports[`checkboxField > should render correctly not checked without value 1`] =
         <input
           aria-checked="false"
           aria-invalid="false"
+          aria-label="test"
           class="uv_9pjq8o4 uv_9pjq8o3"
-          id="_r_8_"
+          id="_r_b_"
           name="checked"
           type="checkbox"
         />
@@ -262,7 +308,7 @@ exports[`checkboxField > should render correctly with aria-label 1`] = `
           aria-invalid="false"
           aria-label="test"
           class="uv_9pjq8o4 uv_9pjq8o3"
-          id="_r_2_"
+          id="_r_3_"
           name="test"
           type="checkbox"
         />
@@ -320,10 +366,10 @@ exports[`checkboxField > should render correctly with errors 1`] = `
       >
         <input
           aria-checked="false"
-          aria-describedby="_r_d_-hint"
+          aria-describedby="_r_g_-hint"
           aria-invalid="true"
           class="uv_9pjq8o4 uv_9pjq8o3"
-          id="_r_d_"
+          id="_r_g_"
           name="test"
           required=""
           type="checkbox"
@@ -368,7 +414,7 @@ exports[`checkboxField > should render correctly with errors 1`] = `
           >
             <label
               class="uv_9pjq8oc uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owj uv_m4c9ow1a uv_m4c9ow32"
-              for="_r_d_"
+              for="_r_g_"
             >
               Checkbox field error
             </label>
@@ -380,7 +426,7 @@ exports[`checkboxField > should render correctly with errors 1`] = `
           </div>
           <span
             class="uv_m4c9ow0 uv_m4c9ow4 uv_m4c9ow9 uv_m4c9owp uv_m4c9ow1a uv_m4c9ow2m"
-            id="_r_d_-hint"
+            id="_r_g_-hint"
             role="status"
           >
             This field is required
@@ -414,7 +460,7 @@ exports[`checkboxField > should trigger events correctly 1`] = `
           aria-checked="true"
           aria-invalid="false"
           class="uv_9pjq8o4 uv_9pjq8o3"
-          id="_r_a_"
+          id="_r_d_"
           name="test"
           type="checkbox"
         />
@@ -458,7 +504,7 @@ exports[`checkboxField > should trigger events correctly 1`] = `
           >
             <label
               class="uv_9pjq8oc uv_m4c9ow0 uv_m4c9ow4 uv_m4c9owb uv_m4c9owj uv_m4c9ow1a uv_m4c9ow32"
-              for="_r_a_"
+              for="_r_d_"
             >
               Checkbox field events
             </label>
