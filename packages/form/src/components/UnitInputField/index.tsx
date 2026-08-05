@@ -5,13 +5,13 @@ import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
 type UnitInputFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
   TFieldValues,
   TFieldName
 > &
-  Omit<ComponentProps<typeof UnitInput>, 'value' | 'onChange' | 'label'> & {
+  DistributiveOmit<ComponentProps<typeof UnitInput>, 'value' | 'onChange' | 'label'> & {
     optionName?: string
   }
 

@@ -12,6 +12,16 @@ import type {
 } from 'react-hook-form'
 
 /**
+ * A distributive version of `Omit` that preserves union types (including XOR patterns).
+ *
+ * The built-in `Omit<T, K>` does not reliably distribute over unions when the
+ * mapped type is non-homomorphic, which breaks XOR constraints that rely on
+ * `?: never` properties. This version forces distribution by using a conditional
+ * type, ensuring each union member is processed independently.
+ */
+export type DistributiveOmit<T, K extends string | number | symbol> = T extends unknown ? Omit<T, K> : never
+
+/**
  * this type is used by the packages/form/src/providers/ErrorContext/index.tsx
  * should be migrate
  */

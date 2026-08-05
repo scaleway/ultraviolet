@@ -4,13 +4,13 @@ import { SelectableCard } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
-type SelectableCardFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = Omit<
-  BaseFieldProps<TFieldValues, TFieldName>,
-  'label'
-> &
-  Omit<ComponentProps<typeof SelectableCard>, 'name' | 'onChange' | 'value'>
+type SelectableCardFieldProps<
+  TFieldValues extends FieldValues,
+  TFieldName extends FieldPath<TFieldValues>,
+> = DistributiveOmit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
+  DistributiveOmit<ComponentProps<typeof SelectableCard>, 'name' | 'onChange' | 'value'>
 
 export const SelectableCardField = <
   TFieldValues extends FieldValues,
@@ -24,12 +24,10 @@ export const SelectableCardField = <
   onFocus,
   onBlur,
   required,
-  label,
   shouldUnregister = false,
   validate,
   productIcon,
   illustration,
-  'aria-label': ariaLabel,
   ...props
 }: SelectableCardFieldProps<TFieldValues, TFieldName>) => {
   const {
@@ -54,7 +52,6 @@ export const SelectableCardField = <
     <SelectableCard
       {...props}
       {...(productIcon ? { productIcon } : { illustration })}
-      {...(label ? { label } : { 'aria-label': ariaLabel! })}
       checked={isChecked}
       isError={!!error}
       name={field.name}

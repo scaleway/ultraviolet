@@ -4,9 +4,9 @@ import { SelectInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useField } from '../../hooks/useField'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
-type SelectInputFieldExtraProps = Omit<ComponentProps<typeof SelectInput>, 'value' | 'onChange'>
+type SelectInputFieldExtraProps = DistributiveOmit<ComponentProps<typeof SelectInput>, 'value' | 'onChange'>
 
 export const SelectInputField = <
   TFieldValues extends FieldValues,

@@ -4,13 +4,13 @@ import { SwitchButton } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, PathValue } from 'react-hook-form'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
 type SwitchButtonFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof SwitchButton>, 'value' | 'name' | 'onChange'> &
+  DistributiveOmit<ComponentProps<typeof SwitchButton>, 'value' | 'name' | 'onChange'> &
   Partial<Pick<ComponentProps<typeof SwitchButton>, 'onChange'>> & {
     name: FieldPath<TFieldValues>
   }

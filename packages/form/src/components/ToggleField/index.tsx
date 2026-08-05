@@ -6,13 +6,13 @@ import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
-type ToggleFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = Omit<
+type ToggleFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = DistributiveOmit<
   BaseFieldProps<TFieldValues, TFieldName>,
   'label'
 > &
-  Omit<ComponentProps<typeof Toggle>, 'value' | 'onChange'> & {
+  DistributiveOmit<ComponentProps<typeof Toggle>, 'value' | 'onChange'> & {
     parse?: (value: boolean) => PathValue<TFieldValues, TFieldName>
     format?: (value: PathValue<TFieldValues, TFieldName>) => boolean
   }

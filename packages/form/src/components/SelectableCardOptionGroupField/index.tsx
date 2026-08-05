@@ -5,16 +5,16 @@ import type { ComponentProps, JSX } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
 type SelectableCardOptionGroupUI = typeof SelectableCardOptionGroup
 
 type SelectableCardOptionGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = Omit<ComponentProps<SelectableCardOptionGroupUI>, 'onChange' | 'onChangeOption'> &
+> = DistributiveOmit<ComponentProps<SelectableCardOptionGroupUI>, 'onChange' | 'onChangeOption'> &
   Partial<Pick<ComponentProps<SelectableCardOptionGroupUI>, 'onChangeOption' | 'onChange'>> &
-  Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> & {
+  DistributiveOmit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> & {
     optionName?: string
   }
 
