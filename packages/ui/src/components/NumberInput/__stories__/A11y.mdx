@@ -28,7 +28,7 @@ Enforced by the component:
 - ⚠️ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html): Native type="number" provides arrow key increment/decrement; buttons are clickable, but shouldn't be focusable.
 - ✅ [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html): Error state communicated via error prop and linked description
 - ✅ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html): Labels provided via label prop with optional helper text
-- ⚠️ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): Native input provides role/value but missing aria-invalid for error state; icons should follow RFC #6585
+- ⚠️ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): Native input provides role/value but missing aria-invalid for error state; icons should follow RFC #6585; buttons should have aria-controls pointing to input
 
 To apply when using the component:
 
@@ -43,6 +43,7 @@ To apply when using the component:
 - When increment/decrement buttons are clicked, focus remains on the button rather than returning to the input, which can be disorienting for keyboard users.
 - When the `error` prop is set, the input should have `aria-invalid="true"` to inform assistive technologies of the invalid state. Currently the error is only communicated visually and via `aria-describedby`, but not programmatically as invalid.
 - Icons in Controls should be aria-hidden. The accessible name should be provided on the interactive parent (Button).
+- The increment/decrement buttons should have `aria-controls` pointing to the input's ID to explicitly indicate which element they control, following ARIA best practices for spinbutton patterns.
 
 **Medium:**
 
