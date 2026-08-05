@@ -12,4 +12,4 @@ export const TimeFormat: StoryFn<ComponentProps<typeof TimeInputField>> = args =
   </Stack>
 )
 
-TimeFormat.args = { ...Template.args, label: '12-hour format', timeFormat: 12 }
+TimeFormat.args = { ...Template.args, timeFormat: 12 }

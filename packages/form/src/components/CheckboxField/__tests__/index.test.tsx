@@ -6,7 +6,7 @@ import { mockFormErrors, renderWithForm } from '../../../__tests__/helpers'
 
 describe('checkboxField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(<CheckboxField name="test" />)
+    const { asFragment } = renderWithForm(<CheckboxField name="test">test</CheckboxField>)
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -16,7 +16,11 @@ describe('checkboxField', () => {
   })
 
   it('should render correctly disabled', () => {
-    const { asFragment } = renderWithForm(<CheckboxField disabled name="test" />)
+    const { asFragment } = renderWithForm(
+      <CheckboxField disabled name="test">
+        test
+      </CheckboxField>,
+    )
 
     const input = screen.getByRole('checkbox', { hidden: true })
     expect(input).toBeDisabled()
@@ -25,7 +29,7 @@ describe('checkboxField', () => {
   })
 
   it('should render correctly checked without value', () => {
-    const { asFragment } = renderWithForm(<CheckboxField name="checked" />, {
+    const { asFragment } = renderWithForm(<CheckboxField name="checked">test</CheckboxField>, {
       defaultValues: {
         checked: true,
       },
@@ -37,7 +41,7 @@ describe('checkboxField', () => {
   })
 
   it('should render correctly not checked without value', () => {
-    const { asFragment } = renderWithForm(<CheckboxField name="checked" />, {
+    const { asFragment } = renderWithForm(<CheckboxField aria-label="test" name="checked" />, {
       defaultValues: {},
     })
 
