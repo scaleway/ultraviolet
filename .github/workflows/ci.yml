@@ -155,7 +155,7 @@ jobs:
       - name: Cache Docker layers
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          path: /tmp/.buildx-cache
+          path: /tmp/docs/.buildx-cache
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
@@ -176,6 +176,7 @@ jobs:
           SOURCE_DATE_EPOCH: 0
           TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
         with:
+          context: .
           push: true
           tags: ${{ env.IMAGE }}
           file: Dockerfile
