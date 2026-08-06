@@ -1,13 +1,22 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { slideFromBottom } from '../../utils'
-import { MODAL_PLACEMENT, MODAL_WIDTH } from './constants'
 import { dialogStyle } from '../Dialog/styles.css'
 import { drawerStyle, SIZES } from '../Drawer/styles.css'
+import {
+  ANIMATION_DURATION_MS,
+  ANIMATION_EASING_OPACITY,
+  animationDuration,
+  animationDurationTranslation,
+  animationEasingTranslation,
+  MODAL_PLACEMENT,
+  MODAL_WIDTH,
+  offscreenTranslation,
+} from './constants.css'
 
-export const topModal = createVar()
-export const positionModal = createVar()
+export const nestedModalTop = createVar()
+export const nestedModalScale = createVar()
+const modalWidth = createVar()
 
 const container = style({
   position: 'absolute',
@@ -35,45 +44,60 @@ const content = style({
   padding: theme.space[3],
 })
 
-const backdropBase = style({
-  backgroundColor: theme.colors.overlay,
-  height: 0,
-  opacity: 0,
-  overflow: 'hidden',
+const backdrop = style({
+  height: '100%',
+  width: '100%',
+  overflow: 'auto',
   position: 'fixed',
-  right: 0,
-  top: 0,
-  width: 0,
+  inset: 0,
   zIndex: 1,
-  selectors: {
-    [`&:has(${drawerStyle.base})`]: {
-      padding: 0,
-      transition: 'opacity 100ms ease-in-out',
-    },
-    [`&:has(${drawerStyle.push})`]: {
-      background: 'none',
-      pointerEvents: 'none',
-    },
+  display: 'flex',
+  padding: theme.space[2],
+  '@starting-style': {
+    overflow: 'hidden',
   },
-})
-
-const backdrop = recipe({
-  base: backdropBase,
-  variants: {
-    open: {
-      true: {
-        bottom: 0,
-        display: 'flex',
-        height: '100%',
-        left: 0,
-        overflow: 'auto',
-        padding: theme.space[2],
-        width: '100%',
+  vars: {
+    [animationDuration]: `${ANIMATION_DURATION_MS}ms`,
+    [animationEasingTranslation]: 'cubic-bezier(0.22, 1, 0.36, 1)', // easeOutQuint
+    [animationDurationTranslation]: `calc(${animationDuration} * 1.5)`,
+  },
+  selectors: {
+    ['&::before']: {
+      content: '',
+      position: 'fixed',
+      inset: '0',
+      background: theme.colors.overlay,
+      transition: `opacity ${animationDuration} ${ANIMATION_EASING_OPACITY}`,
+      '@starting-style': {
+        opacity: 0,
       },
     },
-    visible: {
-      true: {
-        opacity: 1,
+    ['&:not(:has(dialog[open]))::before']: {
+      opacity: 0,
+    },
+    [`&:not(:has(dialog[open]))`]: {
+      vars: {
+        [animationDuration]: `${ANIMATION_DURATION_MS * 0.7}ms`,
+        [animationDurationTranslation]: animationDuration,
+      },
+      overflow: 'hidden',
+      transitionDelay: '0s',
+    },
+    [`&:has(${drawerStyle.base})`]: {
+      padding: 0,
+      transition: `overflow 0s ${animationDurationTranslation} allow-discrete`, // prevent a horizontal scrollbar
+    },
+    [`&:has(${drawerStyle.push})`]: {
+      pointerEvents: 'none',
+    },
+    [`&:has(${drawerStyle.push})::before`]: {
+      background: 'none',
+    },
+  },
+  '@media': {
+    '(prefers-reduced-motion: reduce)': {
+      vars: {
+        [animationDuration]: '0s !important',
       },
     },
   },
@@ -87,63 +111,101 @@ const modal = recipe({
     boxShadow: `${theme.shadows.overlay[0]}, ${theme.shadows.overlay[1]}`,
     padding: theme.space[3],
     position: 'relative',
-    transition: 'width 0.3s ease-in-out, transform 0.3s ease-in-out',
-    width: `${MODAL_WIDTH.medium}rem`,
+    transition: `
+      opacity ${animationDuration} ${ANIMATION_EASING_OPACITY},
+      width ${animationDurationTranslation} ${animationEasingTranslation},
+      transform ${animationDurationTranslation} ${animationEasingTranslation},
+      box-shadow ${animationDurationTranslation} ${animationEasingTranslation}
+    `,
+    width: modalWidth,
+    '@starting-style': {
+      opacity: 0,
+      transform: offscreenTranslation,
+    },
     selectors: {
+      '&:not([open])': {
+        opacity: 0,
+        display: 'block', // the default `display: none` breaks the transition on Firefox and Safari
+        transform: offscreenTranslation,
+      },
+      '&:not([open])[data-close-action=confirm]': {
+        transform: 'scale(0.96)',
+      },
+      [`&${drawerStyle.base}`]: {
+        borderRadius: '0',
+        marginRight: '0',
+        padding: '0',
+        '@starting-style': {
+          opacity: 1,
+          transform: `translateX(calc(${modalWidth} * 0.9))`,
+          boxShadow: 'none',
+        },
+      },
+      [`&${drawerStyle.base}:not([open])`]: {
+        opacity: 1,
+        transform: `translateX(${modalWidth})`,
+        boxShadow: 'none',
+        borderLeft: `1px solid ${theme.colors.neutral.border}`,
+        vars: {
+          [animationEasingTranslation]: 'cubic-bezier(0.5, 0, 0.1, 1)',
+        },
+      },
       [`&${drawerStyle.push}`]: {
         borderLeft: `1px solid ${theme.colors.neutral.border}`,
         boxShadow: 'none',
         pointerEvents: 'auto',
       },
-      [`&${drawerStyle.drawer.large}, &${drawerStyle.drawer.small}, &${drawerStyle.drawer.medium}`]: {
-        borderRadius: '0',
-        marginRight: '0',
-        padding: '0',
-      },
       [`&${drawerStyle.drawer.large}`]: {
-        width: `${SIZES.large}rem`,
+        vars: {
+          [modalWidth]: `min(100dvw, ${SIZES.large}rem)`,
+        },
       },
       [`&${drawerStyle.drawer.small}`]: {
-        width: `${SIZES.small}rem`,
+        vars: {
+          [modalWidth]: `min(100dvw, ${SIZES.small}rem)`,
+        },
       },
       [`&${drawerStyle.drawer.medium}`]: {
-        width: `${SIZES.medium}rem`,
+        vars: {
+          [modalWidth]: `min(100dvw, ${SIZES.medium}rem)`,
+        },
       },
       [`&${dialogStyle.xsmall}`]: {
-        width: '32.5rem',
+        vars: {
+          [modalWidth]: 'min(100dvw, 32.5rem)',
+        },
       },
     },
   },
-  compoundVariants: Object.keys(MODAL_WIDTH).map(size => ({
-    style: {
-      transform: `translate3d(0, ${topModal}, 0)`,
-      width: `calc(${MODAL_WIDTH[size as keyof typeof MODAL_WIDTH]}rem - ${positionModal}) !important`,
-    },
-    variants: { positivePosition: true, size },
-  })),
   defaultVariants: {
-    animation: false,
     image: false,
     placement: 'center',
     positivePosition: false,
     size: 'medium',
   },
   variants: {
-    animation: {
-      true: {
-        animation: `${slideFromBottom} 0.3s ease-in-out forwards`,
-      },
-    },
     image: {
       true: {
         padding: 0,
       },
     },
-    placement: Object.fromEntries(Object.entries(MODAL_PLACEMENT).map(([placement, value]) => [placement, value])),
+    placement: MODAL_PLACEMENT,
     positivePosition: {
-      true: {},
+      true: {
+        transformOrigin: 'top',
+        transform: `translateY(${nestedModalTop}) scale(${nestedModalScale})`,
+      },
     },
-    size: Object.fromEntries(Object.entries(MODAL_WIDTH).map(([size, width]) => [size, { width: `${width}rem` }])),
+    size: Object.fromEntries(
+      Object.entries(MODAL_WIDTH).map(([size, width]) => [
+        size,
+        {
+          vars: {
+            [modalWidth]: `min(${width}rem, 100dvw)`,
+          },
+        },
+      ]),
+    ),
   },
 })
 
@@ -152,7 +214,6 @@ export const modalStyle = {
   imageContainer,
   image,
   content,
-  backdropBase,
   backdrop,
   modal,
 }

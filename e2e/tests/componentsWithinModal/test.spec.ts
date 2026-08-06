@@ -29,7 +29,9 @@ test('open modal, select an option, open nested modal through select input, clos
   await page.getByTestId('select-input-color').click()
 
   await page.getByRole('button', { name: 'Open Nested Modal' }).click()
-  await page.locator('dialog').filter({ hasText: 'This is the nested modal' }).getByLabel('close').click()
+  const nestedModal = page.locator('dialog').filter({ hasText: 'This is the nested modal' })
+  await nestedModal.getByLabel('close').click()
+  await expect(nestedModal).not.toBeAttached()
 
   await page.getByLabel('close').click()
   await expect(page.locator('dialog')).not.toBeVisible()

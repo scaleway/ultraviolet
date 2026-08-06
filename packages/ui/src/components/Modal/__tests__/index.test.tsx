@@ -1,4 +1,4 @@
-import { renderHook, screen } from '@testing-library/react'
+import { renderHook, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme } from '@utils/test'
@@ -127,8 +127,10 @@ describe('modal', () => {
     await userEvent.click(screen.getByRole('button', { name: 'Open modal' }))
     const closeButton = screen.getByRole('button', { name: 'close' })
     await userEvent.click(closeButton)
-    expect(count).toBe(1)
 
+    await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
+
+    expect(count).toBe(1)
     expect(asFragment()).toMatchSnapshot()
   })
 

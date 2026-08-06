@@ -1,15 +1,17 @@
 'use client'
 
+import { usePrefersReducedMotion } from '@ultraviolet/animations'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import type { ComponentProps, CSSProperties } from 'react'
 import type { Modal } from '.'
 import { Button } from '../Button'
 import { Dialog } from './components/Dialog'
 import type { ModalPlacement, ModalSize } from './types'
+import { useDelayUnmount } from './useDelayUnmount'
+import { ANIMATION_DURATION_MS } from './constants.css'
 import { modalStyle } from './styles.css'
 
 type ModalContentProps = ComponentProps<typeof Modal> & {
-  visible: boolean
   open: boolean
   placement: ModalPlacement
   finalSize: ModalSize
@@ -23,7 +25,6 @@ type ModalContentProps = ComponentProps<typeof Modal> & {
 }
 
 export const ModalContent = ({
-  visible,
   open,
   placement,
   finalSize,
@@ -45,8 +46,15 @@ export const ModalContent = ({
   style,
   ref,
   isDrawer,
-}: ModalContentProps) =>
-  visible || open ? (
+}: ModalContentProps) => {
+  const prefersReducedMotion = usePrefersReducedMotion()
+  const shouldRender = useDelayUnmount(open, prefersReducedMotion ? 0 : ANIMATION_DURATION_MS)
+
+  if (!shouldRender) {
+    return null
+  }
+
+  return (
     <Dialog
       ariaLabel={ariaLabel}
       backdropClassName={backdropClassName}
@@ -58,7 +66,7 @@ export const ModalContent = ({
       image={image}
       isDrawer={isDrawer}
       onClose={handleClose}
-      open={visible || open}
+      open={open}
       placement={placement}
       preventBodyScroll={preventBodyScroll}
       ref={ref}
@@ -71,7 +79,7 @@ export const ModalContent = ({
             modalId: finalId,
             show: handleOpen,
             toggle: handleToggle,
-            visible,
+            visible: open,
           })
         : children}
       <div className={modalStyle.container}>
@@ -89,4 +97,5 @@ export const ModalContent = ({
         ) : null}
       </div>
     </Dialog>
-  ) : null
+  )
+}
