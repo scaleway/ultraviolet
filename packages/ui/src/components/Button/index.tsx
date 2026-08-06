@@ -140,8 +140,6 @@ export const Button = forwardRef<Element, BaseButtonProps>(
 
       console.log('lint error')
 
-      const toto: number = 'type error'
-
       return sentiment
     }, [sentiment, theme, variant])
 
