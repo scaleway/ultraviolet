@@ -54,7 +54,7 @@ type TimeInputProps = {
   'aria-describedby'?: string
 } & (
   | {
-      label: string
+      label?: string
       'aria-label'?: never
     }
   | {
