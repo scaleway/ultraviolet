@@ -3,7 +3,7 @@
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import type { BaseFormComponentProps, LabelProps } from '../../types'
+import type { BaseFormComponentProps } from '../../types'
 import { Description } from '../Description'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
@@ -40,7 +40,7 @@ type TimeInputProps = BaseFormComponentProps<HTMLInputElement> & {
   size?: 'small' | 'medium' | 'large'
   timeFormat?: 12 | 24
   'aria-describedby'?: string
-} & LabelProps
+}
 
 /**
  * A time input component that allows users to type a time in a 24 or 12-hour format.
