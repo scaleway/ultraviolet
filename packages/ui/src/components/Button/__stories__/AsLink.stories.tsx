@@ -30,5 +30,3 @@ AsLink.parameters = {
     },
   },
 }
-
-const test: number = 'type error'

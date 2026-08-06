@@ -138,8 +138,6 @@ export const Button = forwardRef<Element, BaseButtonProps>(
         return 'black'
       }
 
-      console.log('lint error')
-
       return sentiment
     }, [sentiment, theme, variant])
 

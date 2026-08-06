@@ -74,7 +74,6 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec manypkg check
-        if: ${{ !cancelled() }}
       - run: pnpm run format:check
         if: ${{ !cancelled() }}
       - run: pnpm typecheck
