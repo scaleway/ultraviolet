@@ -58,6 +58,25 @@ Add this import for normalized css:
 import '@ultraviolet/themes/global'
 ```
 
+It also provides a `visually-hidden` class that visually hides a component while keeping it accessible to screen readers. It can be applied to Ultraviolet components.
+
+Usage:
+
+```tsx
+import { Text } from '@ultraviolet/ui'
+
+const HiddenComponent = () => {
+  return (
+    <>
+      <p className="visually-hidden">I am hidden</p>
+      <Text as="p" variant="body" className="visually-hidden">
+        So am I
+      </Text>
+    </>
+  )
+}
+```
+
 ## Documentation
 
 Checkout our [documentation website](https://storybook.ultraviolet.scaleway.com/).
