@@ -1,17 +1,15 @@
 import type { RefObject, InputHTMLAttributes, ReactNode } from 'react'
 import type { SIZES } from './constant'
 type Sizes = keyof typeof SIZES
+import type { BaseFormComponentProps } from '../../types'
 
-export type NumberInputProps = {
+export type NumberInputProps = BaseFormComponentProps<HTMLInputElement> & {
   size?: Sizes
   /**
    * Text displayed into component at the right of number value.
    */
   unit?: string
   tooltip?: string
-  className?: string
-  'data-testid'?: string
-  label?: string
   /**
    * Label description displayed right next to the label. It allows you to customize the label content.
    */
@@ -22,27 +20,11 @@ export type NumberInputProps = {
   controls?: boolean
   error?: string | boolean
   success?: string | boolean
-  helper?: ReactNode
   value?: number | null
   onChange?: (newValue: number | null) => void
   min?: number
   max?: number
-} & Pick<
-  InputHTMLAttributes<HTMLInputElement>,
-  | 'onFocus'
-  | 'onBlur'
-  | 'name'
-  | 'id'
-  | 'placeholder'
-  | 'aria-label'
-  | 'disabled'
-  | 'step'
-  | 'readOnly'
-  | 'required'
-  | 'autoFocus'
-  | 'style'
-  | 'aria-describedby'
->
+} & Pick<InputHTMLAttributes<HTMLInputElement>, 'placeholder' | 'step' | 'readOnly'>
 
 export type ControlsProps = {
   controls?: NumberInputProps['controls']

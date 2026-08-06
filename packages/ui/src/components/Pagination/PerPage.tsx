@@ -1,6 +1,7 @@
 'use client'
 
 import type { Dispatch, SetStateAction } from 'react'
+import { useId } from 'react'
 import { SelectInput } from '../SelectInput'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -51,13 +52,16 @@ export const PerPage = ({
     setPerPage(intValue)
   }
 
+  const labelId = useId()
+
   return (
     <Stack alignItems="center" direction="row" gap="2">
-      <Text as="span" prominence="weak" sentiment="neutral" variant="body">
+      <Text as="label" id={labelId} prominence="weak" sentiment="neutral" variant="body">
         {perPageText ?? 'Items per page'}
       </Text>
       <SelectInput
         name="select-items-per-page"
+        aria-labelledby={labelId}
         onChange={handleChange}
         options={optionsItemsPerPage}
         portalTarget={portalTarget}

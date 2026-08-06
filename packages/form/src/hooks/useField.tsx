@@ -1,14 +1,14 @@
 import type { FocusEvent } from 'react'
 import type { FieldValues, FieldPath, FieldPathValue, RefCallBack } from 'react-hook-form'
 import { useFormRegisterMode } from '../components/Form/registerMode'
-import type { BaseFieldProps, DistributiveOmit, MetaField } from '../types'
+import type { BaseFieldProps, MetaField } from '../types'
 import { useControlledField } from './useControlledField'
 import { useRegisterField } from './useRegisterField'
 
 export type UseFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> & DistributiveOmit<MetaField, 'label'> & { 'aria-label'?: string }
+> = BaseFieldProps<TFieldValues, TFieldName> & MetaField
 
 export type FieldProps<
   TFieldValues extends FieldValues,

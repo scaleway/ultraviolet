@@ -2,8 +2,9 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useId, useRef } from 'react'
-import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
+import type { BaseFormComponentProps } from '../../types'
 import { Description } from '../Description'
 import { Label } from '../Label'
 import type { Popup } from '../Popup'
@@ -14,27 +15,19 @@ import { SelectInputProvider } from './SelectInputProvider'
 import type { DataType } from './types'
 import { selectInputStyle } from './styles.css'
 
-type SelectInputProps<IsMulti extends undefined | boolean = false> = {
-  /**
-   * Input name
-   */
-  name?: string
+type SelectInputProps<IsMulti extends undefined | boolean = false> = BaseFormComponentProps<HTMLDivElement> & {
   /**
    * Place holder when no value defined
    */
   placeholder?: string
   /**
+   * Whether the component in readOnly
+   */
+  readOnly?: boolean
+  /**
    * When searchable, placeholder when no value is searched
    */
   placeholderSearch?: string
-  /**
-   * Label of the component
-   */
-  label?: string
-  /**
-   * Description text to give more information to the user
-   */
-  helper?: ReactNode
   /**
    * Selectable options
    */
@@ -44,14 +37,6 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
    */
   emptyState?: ReactNode
   /**
-   * Whether the component in disabled
-   */
-  disabled?: boolean
-  /**
-   * Whether the component in readOnly
-   */
-  readOnly?: boolean
-  /**
    * Whether it is possible to clear the search input
    */
   clearable?: boolean
@@ -59,10 +44,6 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
    * Size of the input
    */
   size?: 'small' | 'medium' | 'large'
-  /**
-   * Whether field is required
-   */
-  required?: boolean
   /**
    * More information regarding/description ofs the selectInput
    */
@@ -127,7 +108,6 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
    */
   value?: IsMulti extends true ? string[] : string
   onChange?: IsMulti extends true ? (value: string[]) => void : (value: string) => void
-  'data-testid'?: string
   /**
    * In some cases, when the space is limited, you will need to change the `portalTarget` of the dropdown for a higher parent element.
    * If you don't know which element to target, you can use `document.body`.
@@ -140,55 +120,53 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
   onOpen?: () => void
   groupError?: Record<string, ReactNode>
   groupEmptyState?: Record<string, ReactNode>
-} & Pick<
-  HTMLAttributes<HTMLDivElement>,
-  'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className' | 'style' | 'aria-describedby'
->
+}
 /**
  * SelectInput component is used to select one or many elements from a selection.
  */
 export const SelectInput = <IsMulti extends undefined | boolean>({
-  name,
-  id,
-  onBlur,
-  onFocus,
-  onChange,
+  'aria-describedby': ariaDescribedBy,
   'aria-label': ariaLabel,
-  value,
-  label,
-  helper,
-  options,
-  size = 'large',
-  emptyState,
-  descriptionDirection = 'column',
-  success,
-  error,
+  'aria-labelledby': ariaLabelledby,
   'data-testid': dataTestId,
-  className,
-  tooltip,
-  footer,
-  placeholderSearch = 'Search in list',
-  placeholder = 'Select item',
-  disabled = false,
-  readOnly = false,
-  clearable = false,
-  multiselect = false,
-  required = false,
-  labelDescription,
+  addOption,
   autofocus,
-  loadMore,
-  optionalInfoPlacement = 'right',
-  isLoading,
-  selectAll,
-  selectAllGroup = false,
+  className,
+  clearable = false,
+  descriptionDirection = 'column',
+  disabled = false,
   dropdownAlign,
-  portalTarget,
-  onOpen,
+  emptyState,
+  error,
+  footer,
   groupEmptyState,
   groupError,
+  helper,
+  id,
+  isLoading,
+  label,
+  labelDescription,
+  loadMore,
+  multiselect = false,
+  name,
+  onBlur,
+  onChange,
+  onFocus,
+  onOpen,
+  optionalInfoPlacement = 'right',
+  options,
+  placeholder = 'Select item',
+  placeholderSearch = 'Search in list',
+  portalTarget,
+  readOnly = false,
+  required = false,
+  selectAll,
+  selectAllGroup = false,
+  size = 'large',
   style,
-  addOption,
-  'aria-describedby': ariaDescribedBy,
+  success,
+  tooltip,
+  value,
 }: SelectInputProps<IsMulti>) => {
   const localId = useId()
   const finalId = id ?? localId
@@ -252,6 +230,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
             ) : null}
             <SelectBar
               aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
+              aria-labelledby={ariaLabelledby}
               autoFocus={autofocus} // oxlint-disable-line jsx_a11y/no-autofocus
               clearable={clearable}
               data-testid={finalDataTestId}

@@ -7,6 +7,7 @@ import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useId, useMemo, useState } from 'react'
 import type { ComponentProps, CSSProperties, InputHTMLAttributes, ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
+import type { BaseFormComponentProps } from '../../types'
 import { Description } from '../Description'
 import { Label } from '../Label'
 import { Row } from '../Row'
@@ -17,8 +18,7 @@ import { unitInputStyle, widthSelectInput } from './styles.css'
 
 type UnitInputValue = { inputValue: number; unit: string }
 
-type UnitInputProps = {
-  className?: string
+type UnitInputProps = BaseFormComponentProps<HTMLInputElement> & {
   max?: number
   min?: number
   value?: UnitInputValue['inputValue']
@@ -28,34 +28,17 @@ type UnitInputProps = {
   options: OptionType[]
   selectInputWidth?: number | string
   size?: 'small' | 'medium' | 'large'
-  'data-testid'?: string
-  helper?: ReactNode
   unitError?: string
   width?: CSSProperties['width']
   maxWidth?: CSSProperties['maxWidth']
   placeholderUnit?: string
   error?: boolean | string
   success?: boolean | string
-  label?: string
   labelInformation?: ReactNode
   step?: number | string
   dropdownAlign?: ComponentProps<typeof SelectInput>['dropdownAlign']
   templateColumns?: ComponentProps<typeof Row>['templateColumns']
-} & Pick<
-  InputHTMLAttributes<HTMLInputElement>,
-  | 'onFocus'
-  | 'onBlur'
-  | 'name'
-  | 'id'
-  | 'placeholder'
-  | 'disabled'
-  | 'readOnly'
-  | 'required'
-  | 'autoFocus'
-  | 'onKeyDown'
-  | 'style'
-  | 'aria-describedby'
->
+} & Pick<InputHTMLAttributes<HTMLInputElement>, 'placeholder' | 'readOnly'>
 
 export const UnitInput = ({
   id,

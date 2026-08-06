@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { HTMLAttributes, AllHTMLAttributes, AriaAttributes, ReactNode } from 'react'
 
 type Without<T, U> = { [P in Exclude<keyof T, keyof U>]?: never }
 type SingleXOR<T, U> = T | U extends object ? (Without<T, U> & U) | (Without<U, T> & T) : T | U
@@ -8,6 +8,14 @@ export type XOR<T extends unknown[]> = T extends [infer Only]
   : T extends [infer A, infer B, ...infer Rest]
     ? XOR<[SingleXOR<A, B>, ...Rest]>
     : never
+
+/**
+ * Enforces that at least one of the given keys is provided.
+ * Useful for accessible labelling patterns like `label | aria-label | aria-labelledby`.
+ */
+export type AtLeastOne<T extends Record<string, unknown>> = {
+  [K in keyof T]: { [P in K]: T[P] } & { [P in Exclude<keyof T, K>]?: T[P] }
+}[keyof T]
 
 export type PascalToCamelCase<S extends string> = S extends `${infer P1}${infer P2}` ? `${Lowercase<P1>}${P2}` : S
 
@@ -25,8 +33,7 @@ export type PascalToCamelCaseWithoutSuffix<
   : never
 
 /**
- * Classic prop type where label is a ReactNode and aria-label is a string.
- * One or another is required.
+ * @deprecated use type FormComponentProps instead which will handle all form props required.
  */
 export type LabelProp =
   | {
@@ -44,3 +51,40 @@ export type LabelProp =
       'aria-label'?: never
       id: string
     }
+
+export type CheckboxLabelProp =
+  | {
+      children: ReactNode
+      'aria-label'?: string
+    }
+  | {
+      children?: never
+      'aria-label': string
+    }
+
+type DefaultLabel = {
+  label: string
+  'aria-label': string
+  'aria-labelledby': string
+}
+
+export type PartialLabelProps = Partial<DefaultLabel>
+
+export type LabelProps = AtLeastOne<DefaultLabel>
+
+type BaseAriaProps = Pick<AriaAttributes, 'aria-describedby' | 'aria-labelledby'>
+
+type StyleBaseProps<E extends HTMLElement> = Pick<HTMLAttributes<E>, 'style' | 'className'>
+
+type InputBaseProps<E extends HTMLElement> = Pick<HTMLAttributes<E>, 'onFocus' | 'onBlur' | 'onKeyDown' | 'autoFocus'>
+
+type DefaultProps<E extends HTMLElement> = {
+  'data-testid'?: string
+  helper?: ReactNode
+} & Pick<AllHTMLAttributes<E>, 'disabled' | 'required' | 'id' | 'name'>
+
+export type BaseFormComponentProps<E extends HTMLElement = HTMLInputElement> = DefaultProps<E> &
+  InputBaseProps<E> &
+  StyleBaseProps<E> &
+  BaseAriaProps &
+  PartialLabelProps

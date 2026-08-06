@@ -4,6 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId } from 'react'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
+import type { BaseFormComponentProps, CheckboxLabelProp } from '../../types'
 import { Description } from '../Description'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -11,43 +12,14 @@ import { Tooltip } from '../Tooltip'
 import { CheckboxIconContainer } from './CheckboxIconContainer'
 import { checkboxStyle } from './styles.css'
 
-type LabelProp =
-  | {
-      children: ReactNode
-      'aria-label'?: never
-    }
-  | {
-      children?: never
-      'aria-label': string
-    }
-
-type CheckboxProps = {
-  error?: ReactNode
-  helper?: ReactNode
-  disabled?: boolean
-  checked?: boolean | 'indeterminate'
-  className?: string
-  ['data-visibility']?: string
-  required?: boolean
-  'data-testid'?: string
-  tooltip?: string
-  size?: 'default' | 'small'
-} & Pick<
-  InputHTMLAttributes<HTMLInputElement>,
-  | 'autoFocus'
-  | 'id'
-  | 'name'
-  | 'onBlur'
-  | 'onChange'
-  | 'onKeyDown'
-  | 'onClick'
-  | 'onFocus'
-  | 'tabIndex'
-  | 'value'
-  | 'style'
-  | 'aria-describedby'
-> &
-  LabelProp
+type CheckboxProps = BaseFormComponentProps<HTMLInputElement> &
+  CheckboxLabelProp & {
+    error?: ReactNode
+    checked?: boolean | 'indeterminate'
+    ['data-visibility']?: string
+    tooltip?: string
+    size?: 'default' | 'small'
+  } & Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'onClick' | 'tabIndex' | 'value'>
 
 /**
  * Checkbox is an input component used to select or deselect an option.

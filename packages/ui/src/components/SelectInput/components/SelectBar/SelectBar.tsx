@@ -36,6 +36,7 @@ type SelectBarProps = {
   dropdownId?: string
   helperId: string
   'aria-describedby'?: string
+  'aria-labelledby'?: string
   helper?: ReactNode
 }
 
@@ -57,6 +58,7 @@ const SelectBar = ({
   helperId,
   helper,
   'aria-describedby': ariaDescribedBy,
+  'aria-labelledby': ariaLabelledby,
 }: SelectBarProps) => {
   const { isDropdownVisible, onChange, setIsDropdownVisible, options, selectedData, setSelectedData, multiselect } =
     useSelectInput()
@@ -173,6 +175,7 @@ const SelectBar = ({
     <Tooltip disableAnimation text={tooltip}>
       <div
         aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
+        aria-labelledby={ariaLabelledby}
         aria-controls={dropdownId}
         aria-expanded={isDropdownVisible}
         aria-label={label}
