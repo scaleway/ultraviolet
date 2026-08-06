@@ -74,38 +74,12 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec manypkg check
-        id: manypkg
-        continue-on-error: true
       - run: pnpm run format:check
-        id: format
-        continue-on-error: true
-      - run: pnpm run build
-        id: build
       - run: pnpm typecheck
-        id: typecheck
-        continue-on-error: true
       - run: pnpm typecheck:root
-        id: typecheck-root
-        continue-on-error: true
       - run: pnpm run lint --format=github
-        id: lint
-        continue-on-error: true
       - run: pnpm publint packages/*
-        id: publint
-        continue-on-error: true
-      - name: Aggregate results
-        if: always()
-        run: |
-          echo "manypkg=${{ steps.manypkg.outcome }} format=${{ steps.format.outcome }} build=${{ steps.build.outcome }} typecheck=${{ steps.typecheck.outcome }} typecheck-root=${{ steps.typecheck-root.outcome }} lint=${{ steps.lint.outcome }} publint=${{ steps.publint.outcome }}"
-          if [[ "${{ steps.manypkg.outcome }}" == "failure" || \
-                "${{ steps.format.outcome }}" == "failure" || \
-                "${{ steps.build.outcome }}" == "failure" || \
-                "${{ steps.typecheck.outcome }}" == "failure" || \
-                "${{ steps.typecheck-root.outcome }}" == "failure" || \
-                "${{ steps.lint.outcome }}" == "failure" || \
-                "${{ steps.publint.outcome }}" == "failure" ]]; then
-            exit 1
-          fi
+      - run: pnpm run size
 
   test:
     runs-on: ubuntu-24.04
