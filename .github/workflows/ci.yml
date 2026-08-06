@@ -74,12 +74,19 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec manypkg check
+        if: ${{ !cancelled() }}
       - run: pnpm run format:check
+        if: ${{ !cancelled() }}
       - run: pnpm typecheck
+        if: ${{ !cancelled() }}
       - run: pnpm typecheck:root
+        if: ${{ !cancelled() }}
       - run: pnpm run lint --format=github
+        if: ${{ !cancelled() }}
       - run: pnpm publint packages/*
+        if: ${{ !cancelled() }}
       - run: pnpm run size
+        if: ${{ !cancelled() }}
 
   test:
     runs-on: ubuntu-24.04
