@@ -1,20 +1,17 @@
 'use client'
 
 import { Checkbox } from '@ultraviolet/ui'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
-type CheckboxFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = Omit<
-  BaseFieldProps<TFieldValues, TFieldName>,
-  'value'
-> &
-  Omit<ComponentProps<typeof Checkbox>, 'value' | 'onChange'> & {
-    className?: string
-    children?: ReactNode
-  }
+type CheckboxFieldProps<
+  TFieldValues extends FieldValues,
+  TFieldName extends FieldPath<TFieldValues>,
+> = DistributiveOmit<BaseFieldProps<TFieldValues, TFieldName>, 'value'> &
+  DistributiveOmit<ComponentProps<typeof Checkbox>, 'value' | 'onChange'>
 
 export const CheckboxField = <
   TFieldValues extends FieldValues,
@@ -25,13 +22,11 @@ export const CheckboxField = <
   label,
   disabled,
   required,
-  children,
   onChange,
   onBlur,
   shouldUnregister = false,
   validate,
   errorLabel,
-  'aria-label': ariaLabel,
   ...props
 }: CheckboxFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -55,7 +50,7 @@ export const CheckboxField = <
       required={required}
       checked={!!field.value}
       disabled={field.disabled}
-      error={getError({ label: errorLabel ?? label ?? ariaLabel ?? name }, error)}
+      error={getError({ label: errorLabel ?? label ?? props['aria-label'] ?? name }, error)}
       name={field.name}
       onBlur={event => {
         field.onBlur()
@@ -66,7 +61,6 @@ export const CheckboxField = <
         onChange?.(event.target.checked as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       ref={field.ref}
-      {...(children ? { 'aria-label': undefined, children } : { 'aria-label': ariaLabel! })}
     />
   )
 }

@@ -5,12 +5,12 @@ import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
 type VerificationCodeFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> & Omit<ComponentProps<typeof VerificationCode>, 'value'>
+> = BaseFieldProps<TFieldValues, TFieldName> & DistributiveOmit<ComponentProps<typeof VerificationCode>, 'value'>
 
 export const VerificationCodeField = <
   TFieldValues extends FieldValues,

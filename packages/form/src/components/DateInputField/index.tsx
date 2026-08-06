@@ -5,7 +5,7 @@ import type { ComponentProps, FocusEvent } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 import { maxDateValidator } from '../../validators/maxDate'
 import { minDateValidator } from '../../validators/minDate'
 
@@ -15,7 +15,7 @@ type DateInputFieldProps<TFieldValues extends FieldValues, TFieldName extends Fi
   TFieldValues,
   TFieldName
 > &
-  Omit<ComponentProps<typeof DateInput>, 'required' | 'name' | 'onChange' | 'value'>
+  DistributiveOmit<ComponentProps<typeof DateInput>, 'required' | 'name' | 'onChange' | 'value'>
 
 const parseDate = (value: string | Date): Date => (typeof value === 'string' ? new Date(value) : value)
 

@@ -3,13 +3,13 @@ import { CodeEditor } from '@ultraviolet/ui/compositions/CodeEditor'
 import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues } from 'react-hook-form'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
 export type CodeEditorFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof CodeEditor>, 'value' | 'onChange' | 'onBlur'> & {
+  DistributiveOmit<ComponentProps<typeof CodeEditor>, 'value' | 'onChange' | 'onBlur'> & {
     regex?: (RegExp | RegExp[])[]
     onChange?: (value: string) => void
     onBlur?: (value: string) => void

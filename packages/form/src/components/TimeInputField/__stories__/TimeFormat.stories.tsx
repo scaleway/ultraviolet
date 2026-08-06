@@ -3,7 +3,6 @@ import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { TimeInputField } from '..'
 import { Submit } from '../../Submit'
-import { Template } from './Template.stories'
 
 export const TimeFormat: StoryFn<ComponentProps<typeof TimeInputField>> = args => (
   <Stack gap={1}>
@@ -12,4 +11,7 @@ export const TimeFormat: StoryFn<ComponentProps<typeof TimeInputField>> = args =
   </Stack>
 )
 
-TimeFormat.args = { ...Template.args, label: '12-hour format', timeFormat: 12 }
+TimeFormat.args = {
+  label: '12-hour format',
+  timeFormat: 12,
+} as const

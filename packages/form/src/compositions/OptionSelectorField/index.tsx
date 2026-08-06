@@ -5,12 +5,12 @@ import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
 type OptionSelectorFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> & Omit<ComponentProps<typeof OptionSelector>, 'value'>
+> = BaseFieldProps<TFieldValues, TFieldName> & DistributiveOmit<ComponentProps<typeof OptionSelector>, 'value'>
 
 export const OptionSelectorField = <
   TFieldValues extends FieldValues,

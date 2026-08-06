@@ -4,9 +4,12 @@ import { TextInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useField } from '../../hooks/useField'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
-type TextInputFieldExtraProps = Omit<ComponentProps<typeof TextInput>, 'value' | 'error' | 'name' | 'onChange'> & {
+type TextInputFieldExtraProps = DistributiveOmit<
+  ComponentProps<typeof TextInput>,
+  'value' | 'error' | 'name' | 'onChange'
+> & {
   regex?: (RegExp | RegExp[])[]
 }
 

@@ -6,13 +6,13 @@ import type { ComponentProps, FocusEvent, ReactNode } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
 type SliderFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
   TFieldValues,
   TFieldName
 > &
-  Omit<ComponentProps<typeof Slider>, 'value' | 'onChange'> & {
+  DistributiveOmit<ComponentProps<typeof Slider>, 'value' | 'onChange'> & {
     suffix?: string | ReactNode[]
   }
 

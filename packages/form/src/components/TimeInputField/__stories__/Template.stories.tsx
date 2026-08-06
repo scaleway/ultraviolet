@@ -14,4 +14,4 @@ export const Template: StoryFn<ComponentProps<typeof TimeInputField>> = args => 
 Template.args = {
   label: 'Label',
   name: 'example',
-}
+} as const

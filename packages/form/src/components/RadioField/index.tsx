@@ -6,13 +6,13 @@ import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
-type RadioFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = Omit<
-  BaseFieldProps<TFieldValues, TFieldName>,
-  'label'
+type RadioFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = BaseFieldProps<
+  TFieldValues,
+  TFieldName
 > &
-  Omit<ComponentProps<typeof Radio>, 'value' | 'onChange'>
+  DistributiveOmit<ComponentProps<typeof Radio>, 'value' | 'onChange'>
 
 export const RadioField = <
   TFieldValues extends FieldValues,

@@ -5,14 +5,14 @@ import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 import { validateRegex } from '../../utils/validateRegex'
 
 export type TagInputFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof TagInput>, 'name' | 'onChange' | 'value'> & {
+  DistributiveOmit<ComponentProps<typeof TagInput>, 'name' | 'onChange' | 'value'> & {
     regex?: (RegExp | RegExp[])[]
   }
 

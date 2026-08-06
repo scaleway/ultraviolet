@@ -37,7 +37,7 @@ const Wrapper = ({ children, defaultValues }: Wrapers) => {
     <ThemeProvider theme={lightTheme}>
       <Form<FormValues> errors={mockErrors} methods={methods} onSubmit={() => {}}>
         {children}
-        <CheckboxField name="check" />
+        <CheckboxField name="check" aria-label="check" />
         <TextInputField name="textInputName" type="text" />
       </Form>
     </ThemeProvider>

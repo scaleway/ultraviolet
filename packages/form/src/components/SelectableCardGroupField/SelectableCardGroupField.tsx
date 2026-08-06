@@ -5,14 +5,14 @@ import type { ComponentProps, JSX } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
 type SelectableCardGroupProps = ComponentProps<typeof SelectableCardGroup>
 
 type SelectableCardGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> & Omit<SelectableCardGroupProps, 'name' | 'onChange' | 'value'>
+> = BaseFieldProps<TFieldValues, TFieldName> & DistributiveOmit<SelectableCardGroupProps, 'name' | 'onChange' | 'value'>
 
 const SelectableCardGroupFieldComponent = <
   TFieldValues extends FieldValues,

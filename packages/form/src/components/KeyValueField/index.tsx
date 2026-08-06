@@ -5,7 +5,7 @@ import type { ComponentProps } from 'react'
 import type { FieldArrayPath, FieldArrayPathValue, FieldPath, FieldValues } from 'react-hook-form'
 import { useFieldArray, useFormContext } from 'react-hook-form'
 import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 import { validateRegex } from '../../utils/validateRegex'
 
 type KeyValueType = NonNullable<ComponentProps<typeof KeyValueInput>['keyvalues']>
@@ -21,8 +21,8 @@ type KeyValueFieldProps<
   TFieldName extends FieldPath<TFieldValues>,
 > = {
   name: TFieldArrayName
-} & Omit<ComponentProps<typeof KeyValueInput>, 'value' | 'onChange'> &
-  BaseFieldProps<TFieldValues, TFieldName>
+} & DistributiveOmit<ComponentProps<typeof KeyValueInput>, 'value' | 'onChange'> &
+  DistributiveOmit<BaseFieldProps<TFieldValues, TFieldName>, 'onBlur'>
 
 /**
  * A React component that allows users to manage key-value pairs

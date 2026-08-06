@@ -1,4 +1,4 @@
-import type { BaseFieldProps, FieldPath, FieldValues, Path, PathValue } from '@ultraviolet/form'
+import type { BaseFieldProps, DistributiveOmit, FieldPath, FieldValues, Path, PathValue } from '@ultraviolet/form'
 import { Label, Stack, Text } from '@ultraviolet/ui'
 import { OfferList } from '@ultraviolet/ui/compositions/OfferList'
 import type { ComponentProps, ReactNode } from 'react'
@@ -9,7 +9,7 @@ type OfferListFieldProps<TFieldValues extends FieldValues, TFieldName extends Fi
   TFieldValues,
   TFieldName
 > &
-  Omit<ComponentProps<typeof OfferList>, 'selected' | 'onChangeSelect'> & {
+  DistributiveOmit<ComponentProps<typeof OfferList>, 'selected' | 'onChangeSelect'> & {
     className?: string
     id?: string
     name: string

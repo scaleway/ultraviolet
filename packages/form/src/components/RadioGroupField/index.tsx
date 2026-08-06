@@ -5,13 +5,13 @@ import type { ComponentProps, JSX } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, DistributiveOmit } from '../../types'
 
-type RadioGroupFieldProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = Omit<
-  BaseFieldProps<TFieldValues, TFieldName>,
-  'label'
-> &
-  Omit<ComponentProps<typeof RadioGroup>, 'value' | 'onChange' | 'legend'> &
+type RadioGroupFieldProps<
+  TFieldValues extends FieldValues,
+  TFieldName extends FieldPath<TFieldValues>,
+> = DistributiveOmit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
+  DistributiveOmit<ComponentProps<typeof RadioGroup>, 'value' | 'onChange' | 'legend'> &
   Partial<Pick<ComponentProps<typeof RadioGroup>, 'legend'>>
 
 const RadioGroupFieldComponent = <
