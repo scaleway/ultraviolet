@@ -141,6 +141,8 @@ export const Button = forwardRef<Element, BaseButtonProps>(
       return sentiment
     }, [sentiment, theme, variant])
 
+    console.log('fail lint')
+
     const content = (
       <>
         {isLoading ? <Loader active sentiment={computedSentimentLoader} size="small" /> : null}
