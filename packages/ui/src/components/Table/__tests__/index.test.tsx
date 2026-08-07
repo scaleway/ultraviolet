@@ -1,12 +1,11 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { ThemeProvider } from '@ultraviolet/themes'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { theme as defaultTheme, ThemeProvider } from '@ultraviolet/themes'
+import { renderWithTheme } from '@utils/test'
 import { useState } from 'react'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Table } from '..'
-import defaultTheme from '../../../theme'
 
 type WrapperProps = {
   theme?: typeof defaultTheme
@@ -70,8 +69,8 @@ describe('table', () => {
     consoleErrMock.mockRestore()
   })
 
-  it('should render correctly', () =>
-    shouldMatchSnapshot(
+  it('should render correctly', () => {
+    const { asFragment } = renderWithTheme(
       <Table columns={columns}>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -85,10 +84,13 @@ describe('table', () => {
           ))}
         </Table.Body>
       </Table>,
-    ))
+    )
 
-  it('should render correctly with loading', () =>
-    shouldMatchSnapshot(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should render correctly with loading', () => {
+    const { asFragment } = renderWithTheme(
       <Table columns={columns} loading>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -102,7 +104,9 @@ describe('table', () => {
           ))}
         </Table.Body>
       </Table>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('should render correctly with selectable then click on first row then uncheck all, then check all', async () => {
     const { asFragment } = renderWithTheme(
@@ -217,20 +221,19 @@ describe('table', () => {
       queryFallbacks: true,
     })
     expect(tableHeaderCells).toHaveLength(columns.length)
-    if (tableHeaderCells[0] && tableHeaderCells[1]) {
-      expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBeNull()
-      await userEvent.click(tableHeaderCells[0])
-      expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBe('ascending')
-      if (tableHeaderCells[0]) {
-        fireEvent.keyDown(tableHeaderCells[0], { key: 'Enter' })
-      }
-      expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBe('descending')
-      fireEvent.keyDown(tableHeaderCells[0], { key: 'Space' })
-      await userEvent.click(tableHeaderCells[1])
-      expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBeNull()
-      expect(tableHeaderCells[1]?.getAttribute('aria-sort')).toBe('ascending')
-      expect(asFragment()).toMatchSnapshot()
+
+    expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBeNull()
+    await userEvent.click(tableHeaderCells[0])
+    expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBe('ascending')
+    if (tableHeaderCells[0]) {
+      fireEvent.keyDown(tableHeaderCells[0], { key: 'Enter' })
     }
+    expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBe('descending')
+    fireEvent.keyDown(tableHeaderCells[0], { key: 'Space' })
+    await userEvent.click(tableHeaderCells[1])
+    expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBeNull()
+    expect(tableHeaderCells[1]?.getAttribute('aria-sort')).toBe('ascending')
+    expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly with bad sort value', () => {
@@ -295,8 +298,8 @@ describe('table', () => {
     )
   })
 
-  it('should render correctly with selectDisabled as a string', () =>
-    shouldMatchSnapshot(
+  it('should render correctly with selectDisabled as a string', () => {
+    const { asFragment } = renderWithTheme(
       <Table columns={columns}>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -310,10 +313,12 @@ describe('table', () => {
           ))}
         </Table.Body>
       </Table>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should render correctly with stipped', () =>
-    shouldMatchSnapshot(
+  it('should render correctly with stipped', () => {
+    const { asFragment } = renderWithTheme(
       <Table bordered columns={columns} stripped>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -327,10 +332,12 @@ describe('table', () => {
           ))}
         </Table.Body>
       </Table>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should render correctly with info', () =>
-    shouldMatchSnapshot(
+  it('should render correctly with info', () => {
+    const { asFragment } = renderWithTheme(
       <Table bordered columns={[{ info: 'This column is important', label: 'Name' }, ...columns.slice(1, 3)]} stripped>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -344,10 +351,12 @@ describe('table', () => {
           ))}
         </Table.Body>
       </Table>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should render correctly with highlightHeader', () =>
-    shouldMatchSnapshot(
+  it('should render correctly with highlightHeader', () => {
+    const { asFragment } = renderWithTheme(
       <Table columns={columns} highlightHeader>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -361,10 +370,12 @@ describe('table', () => {
           ))}
         </Table.Body>
       </Table>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should render correctly with highlight animation on Table.Row', () =>
-    shouldMatchSnapshot(
+  it('should render correctly with highlight animation on Table.Row', () => {
+    const { asFragment } = renderWithTheme(
       <Table columns={[{ info: 'This column is important', label: 'Name' }, ...columns.slice(1, 3)]}>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -378,7 +389,9 @@ describe('table', () => {
           ))}
         </Table.Body>
       </Table>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('should render correctly with selectable and shift click', async () => {
     const { asFragment } = renderWithTheme(

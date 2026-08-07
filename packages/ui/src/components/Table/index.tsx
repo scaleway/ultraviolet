@@ -42,6 +42,7 @@ type TableProps = Omit<
   autoCollapse?: boolean
   expandButton?: boolean
   columns: ColumnProps[]
+  size?: 'small' | 'medium' | 'large'
   highlightHeader?: boolean
   style?: CSSProperties
 }
@@ -60,6 +61,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
       onSelectedChange,
       style,
       highlightHeader,
+      size = 'medium',
     },
     ref,
   ) => (
@@ -71,6 +73,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
       onSelectedChange={onSelectedChange}
       selectable={selectable}
       stripped={stripped}
+      size={size}
     >
       <TableContainer>
         <table

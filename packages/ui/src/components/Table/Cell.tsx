@@ -5,6 +5,7 @@ import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import type { Color } from '../../theme'
 import { useColumnProvider } from '../List/ColumnProvider'
+import { useTableContext } from './TableContext'
 import { tableStyle } from './styles.css'
 import { maxWidthCell, minWidthCell, widthCell } from './variables.css'
 
@@ -22,11 +23,12 @@ type CellProps = {
 
 export const Cell = ({ children, className, colSpan, rowSpan, sentiment, align = 'left', style }: CellProps) => {
   const context = useColumnProvider()
+  const { size } = useTableContext()
 
   return (
     <td
       align={align}
-      className={cn(className, tableStyle.cell({ align, sentiment }))}
+      className={cn(className, tableStyle.cell({ align, sentiment, size }))}
       colSpan={colSpan}
       rowSpan={rowSpan}
       style={{
