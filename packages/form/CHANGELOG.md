@@ -1,5 +1,26 @@
 # Change Log
 
+## 6.6.0
+
+### Minor Changes
+
+- [#6762](https://github.com/scaleway/ultraviolet/pull/6762) [`87351aa`](https://github.com/scaleway/ultraviolet/commit/87351aa788235ff426e7d5fa969c2a4d208ad306) Thanks [@philibea](https://github.com/philibea)! - Fix a type constraint that was ignored on components using XOR patterns: Checkbox, TimeInput, Radio, SelectableCard, FileInput now require either a label or an aria-label property
+
+### Patch Changes
+
+- [#6639](https://github.com/scaleway/ultraviolet/pull/6639) [`e61ad06`](https://github.com/scaleway/ultraviolet/commit/e61ad0605d53946bb6c1e44db5192e8ec63dca3e) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `KeyValueInput` and use it inside `KeyValueField`. Made a couple of addition to each component: new prop `size` and it is now possible to have a SelectInput instead of a TextInput (use `inputType: "select"` in inputValue and inputKey)
+
+- [#6757](https://github.com/scaleway/ultraviolet/pull/6757) [`0bcc680`](https://github.com/scaleway/ultraviolet/commit/0bcc6804ce753a79adeba69944565dd1d7bc5778) Thanks [@philibea](https://github.com/philibea)! - remove unused aria-label on form component
+
+- [#6745](https://github.com/scaleway/ultraviolet/pull/6745) [`4c50d24`](https://github.com/scaleway/ultraviolet/commit/4c50d24c3c626ada791125d9ebec352262bb38f7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.83.0`.
+
+- [#6705](https://github.com/scaleway/ultraviolet/pull/6705) [`70dd8d6`](https://github.com/scaleway/ultraviolet/commit/70dd8d6ac3b3dbf848ab4c61b2945980a6e3dd4f) Thanks [@philibea](https://github.com/philibea)! - use new useField hook to TimeInputField, TextAreaField which allow usage of the rhf register api"
+
+- Updated dependencies [[`5d6c646`](https://github.com/scaleway/ultraviolet/commit/5d6c646ce8baa67055fb35e7d4b3d532190f4705), [`0a49bf6`](https://github.com/scaleway/ultraviolet/commit/0a49bf66b44ed591939dd9a0a79affccc7424a9d), [`e61ad06`](https://github.com/scaleway/ultraviolet/commit/e61ad0605d53946bb6c1e44db5192e8ec63dca3e), [`181ca55`](https://github.com/scaleway/ultraviolet/commit/181ca5592a31dfedfe25a59006a6bf6b25e3df9c), [`70dd8d6`](https://github.com/scaleway/ultraviolet/commit/70dd8d6ac3b3dbf848ab4c61b2945980a6e3dd4f), [`0a984a6`](https://github.com/scaleway/ultraviolet/commit/0a984a69a1d45afe269dd42456124df8297c92c5), [`e5ea1e1`](https://github.com/scaleway/ultraviolet/commit/e5ea1e12afca98afd90f763380768e129d7fe873), [`7a4e1a4`](https://github.com/scaleway/ultraviolet/commit/7a4e1a468c61efb60a68dbcebcfe6507c8b0e01f), [`2ee063f`](https://github.com/scaleway/ultraviolet/commit/2ee063fb3cdf8abbca4c43115c05716275553d34), [`43a100c`](https://github.com/scaleway/ultraviolet/commit/43a100ccb525d024c5b643044b3e38c633e4b805), [`e113064`](https://github.com/scaleway/ultraviolet/commit/e113064267925c16269ffce186ccd9cb95dd4ce0), [`ba2ed93`](https://github.com/scaleway/ultraviolet/commit/ba2ed9318fffb414cbcf48140bbd2a464ca3e7e2), [`5b721fd`](https://github.com/scaleway/ultraviolet/commit/5b721fd80df4384abf753b3721b12b68c349315b), [`e23911f`](https://github.com/scaleway/ultraviolet/commit/e23911f2ae33f68605eddd37cb7013a29ad25af0)]:
+  - @ultraviolet/icons@5.4.8
+  - @ultraviolet/ui@3.21.2
+  - @ultraviolet/themes@3.1.10
+
 ## 6.5.10
 
 ### Patch Changes

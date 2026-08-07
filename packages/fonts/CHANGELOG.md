@@ -1,5 +1,11 @@
 # @ultraviolet/fonts
 
+## 2.2.2
+
+### Patch Changes
+
+- [#6758](https://github.com/scaleway/ultraviolet/pull/6758) [`7aef943`](https://github.com/scaleway/ultraviolet/commit/7aef94316e76a848cdcdc026027b1d23cb9960c1) Thanks [@jsulpis](https://github.com/jsulpis)! - remove unused fonts variables
+
 ## 2.2.1
 
 ### Patch Changes
