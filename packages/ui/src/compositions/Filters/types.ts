@@ -1,4 +1,4 @@
-import type { ComponentProps } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import type { DateInput } from '../../components/DateInput'
 import type { SelectInput } from '../../components/SelectInput'
 import type { Slider } from '../../components/Slider'
@@ -24,6 +24,7 @@ export type FilterConfigItemBase = {
    * Expand/collapse the filter/group in the Drawer
    */
   expanded?: boolean
+  labelDescription?: ReactNode
 }
 
 export type FilterConfigItemText = FilterConfigItemBase & {
@@ -117,6 +118,7 @@ export type FilterConfigItem<V extends AnyObject = AnyObject> =
 export type FilterConfigGroup<V extends AnyObject = AnyObject> = {
   type: 'group'
   label: string
+  labelDescription?: ReactNode
   items: FilterConfigItem<V>[]
   hideInDrawer?: boolean
   expanded?: boolean
