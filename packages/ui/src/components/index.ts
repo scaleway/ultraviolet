@@ -76,5 +76,6 @@ export { Tooltip } from './Tooltip'
 export { TreeMapChart } from './TreeMapChart'
 export { UnitInput } from './UnitInput'
 export { VerificationCode } from './VerificationCode'
+export { VisuallyHidden } from './VisuallyHidden'
 
 export type { OptionType, DataType } from './SelectInput/types'
