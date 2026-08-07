@@ -5,7 +5,7 @@ import { Stack } from '../../Stack'
 
 export const FocusableChildren: StoryFn<typeof VisuallyHidden> = props => (
   <Stack gap={2} width="fit-content">
-    Tab to to focus on VisuallyHidden content
+    Tab to focus on VisuallyHidden content
     <VisuallyHidden {...props} as="p">
       With a link in child:
       <Link href="www.scaleway.com">scaleway.com</Link>
