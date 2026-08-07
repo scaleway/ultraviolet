@@ -47,6 +47,7 @@ jobs:
         with:
           name: storybook-static
           path: storybook-static/
+          retention-days: 1
 
   build_examples:
     runs-on: ubuntu-24.04
@@ -265,7 +266,20 @@ jobs:
           node-version-file: .nvmrc
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
-      - run: pnpm exec playwright install --with-deps
+      - name: Get installed Playwright version
+        run: echo "PLAYWRIGHT_VERSION=$(pnpm playwright --version | cut -d' ' -f2)" >> $GITHUB_ENV
+      - name: Cache Playwright Browsers
+        uses: actions/cache@v6
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ env.PLAYWRIGHT_VERSION }}
+      - name: Install Playwright OS Dependencies only
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: pnpm playwright install-deps
+      - name: Install Playwright Browsers & OS Dependencies
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: pnpm playwright install --with-deps --only-shell
       - run: pnpm run test:e2e
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: ${{ !cancelled() }}
