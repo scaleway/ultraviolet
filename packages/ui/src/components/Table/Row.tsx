@@ -112,7 +112,7 @@ export const Row = ({
       >
         {selectable ? (
           <ColumnProvider width={theme.sizing[300]}>
-            <Cell className={listStyle.noPaddingCell}>
+            <Cell>
               <div className={tableStyle.checkboxContainer}>
                 <Tooltip text={typeof selectDisabled === 'string' ? selectDisabled : undefined}>
                   <Checkbox
@@ -132,7 +132,7 @@ export const Row = ({
         ) : null}
         {expandButton ? (
           <ColumnProvider width={theme.sizing[300]}>
-            <Cell className={listStyle.noPaddingCell}>
+            <Cell>
               <Button
                 aria-label="expand"
                 data-testid="list-expand-button"
