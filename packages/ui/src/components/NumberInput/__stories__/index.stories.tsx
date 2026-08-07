@@ -17,9 +17,9 @@ export default {
   title: 'UI/Data Entry/NumberInput',
   parameters: {
     a11yStatus: {
-      perceivable: false,
+      perceivable: true,
       operable: false,
-      understandable: false,
+      understandable: true,
       robust: false,
     },
   },

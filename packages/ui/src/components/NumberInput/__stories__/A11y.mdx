@@ -1,0 +1,56 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/NumberInput/A11y" />
+
+# NumberInput - Accessibility
+
+## Description
+
+A form control for entering numeric values with optional increment/decrement buttons, min/max constraints, step values, and validation states (error, success, disabled, read-only). Uses native `<input type="number">` which provides built-in spinbutton semantics and keyboard support.
+
+## Summary
+
+1. ✅ **Perceivable**: labels and error/helper text properly associated with input
+2. ⚠️ **Operable**: native arrow key support from type="number"; increment/decrement buttons should not be focusable (tabindex="-1")
+3. ✅ **Understandable**: labels, error/success states, and helper text provide clear instructions
+4. ⚠️ **Robust**: missing aria-invalid for error state; icons should follow RFC #6585 (aria-hidden with accessible name on parent)
+
+## ARIA Pattern
+
+[WAI-ARIA Spinbutton Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/spinbutton/)
+
+## Rules
+
+Enforced by the component:
+
+- ⚠️ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html): Icons in controls have aria-label on buttons, but per RFC #6585 should be aria-hidden="true" with label on parent via `VisuallyHidden`
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html): Label associated via htmlFor/id; error/helper linked via aria-describedby
+- ⚠️ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html): Native type="number" provides arrow key increment/decrement; buttons are clickable, but shouldn't be focusable.
+- ✅ [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html): Error state communicated via error prop and linked description
+- ✅ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html): Labels provided via label prop with optional helper text
+- ⚠️ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): Native input provides role/value but missing aria-invalid for error state; icons should follow RFC #6585; buttons should have aria-controls pointing to input
+
+To apply when using the component:
+
+- [WCAG 1.3.5 - Identify Input Purpose (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html): Consider autocomplete for user-specific numeric data.
+- [WCAG 2.4.6 - Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html): Ensure labels are descriptive. Do **not** use placeholder as a label.
+- **When using external `Label` or `Notice` components**: If you render `Label` and/or `Notice` (for helper/error/success messages) externally instead of using the built-in props, you **must** manually manage ARIA associations.
+
+## Accessibility issues
+
+**High:**
+
+- When increment/decrement buttons are clicked, focus remains on the button rather than returning to the input, which can be disorienting for keyboard users.
+- When the `error` prop is set, the input should have `aria-invalid="true"` to inform assistive technologies of the invalid state. Currently the error is only communicated visually and via `aria-describedby`, but not programmatically as invalid.
+- Icons in Controls should be aria-hidden. The accessible name should be provided on the interactive parent (Button).
+- The increment/decrement buttons should have `aria-controls` pointing to the input's ID to explicitly indicate which element they control, following ARIA best practices for spinbutton patterns.
+
+**Medium:**
+
+- The increment/decrement buttons should not be focusable and should be removed from the tab order with `tabindex="-1"` since the arrow keys on the input provide the same functionality. The buttons should remain clickable for mouse/touch users.
+- Error/success states rely on color alone - When `error` or `success` is set to `true` without a descriptive string, the state is communicated through color only. Color should not be the only visual means of conveying information. Adding icons (e.g., error icon, checkmark) would provide a non-color visual indicator. **Note:** When `error="message"` or `success="message"` includes text, the text description satisfies this requirement.
+
+## Dependencies
+
+- The `VisuallyHidden` component or global `sr-only` CSS class must be available for hidden labels on increment/decrement buttons
+- Tooltip
