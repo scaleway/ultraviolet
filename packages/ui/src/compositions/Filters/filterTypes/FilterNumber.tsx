@@ -9,6 +9,7 @@ export const FilterNumber = ({ config, hideLabel, onChange, value, size }: Filte
     min={config.min}
     aria-label={hideLabel ? config.label : undefined}
     label={hideLabel ? undefined : config.label}
+    labelDescription={hideLabel ? undefined : config.labelDescription}
     size={size}
     name={config.name}
     onChange={onChange}

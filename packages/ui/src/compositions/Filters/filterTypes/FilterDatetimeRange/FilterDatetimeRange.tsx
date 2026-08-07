@@ -46,7 +46,11 @@ export const FilterDatetimeRange = ({ onChange, value, hideLabel, config, size }
       visible={isPopupVisible}
     >
       <Stack gap={0.5} width="100%">
-        {hideLabel ? null : <Label size={size}>{config.label}</Label>}
+        {hideLabel ? null : (
+          <Label size={size} labelDescription={config.labelDescription}>
+            {config.label}
+          </Label>
+        )}
         <Button
           className={filterDatetimeRangeStyles.button}
           size={size}

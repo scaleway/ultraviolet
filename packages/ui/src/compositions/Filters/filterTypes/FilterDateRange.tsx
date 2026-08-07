@@ -23,7 +23,7 @@ export const FilterDateRange = ({ config, hideLabel, onChange, value, size }: Fi
     endDate={value?.endAt}
     locale={config.locale}
     excludeDates={config.excludeDates}
-    labelDescription={config.labelDescription}
+    labelDescription={hideLabel ? undefined : config.labelDescription}
     onChange={dates => {
       onChange({
         startAt: dates[0],

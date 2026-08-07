@@ -9,12 +9,14 @@ import { Text } from '../../../components/Text'
 
 export const ExpandableFilterGroup = ({
   label,
+  labelDescription,
   children,
   defaultExpanded = true,
   onReset,
   clearText,
 }: {
   label: string
+  labelDescription?: ReactNode
   children: ReactNode
   defaultExpanded?: boolean
   onReset?: () => void
@@ -25,7 +27,9 @@ export const ExpandableFilterGroup = ({
   return (
     <Stack gap={2}>
       <Row gap={1} templateColumns="1fr auto">
-        <Label size="medium">{label}</Label>
+        <Label size="medium" labelDescription={labelDescription}>
+          {label}
+        </Label>
         <Stack direction="row" gap={1}>
           {typeof onReset === 'function' ? (
             <Button onClick={onReset} sentiment="neutral" size="xsmall" variant="ghost">

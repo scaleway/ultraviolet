@@ -62,6 +62,7 @@ export const FilterMultiSelect = <V extends AnyObject>({
       name={config.name}
       size={size}
       clearable={config.clearable}
+      labelDescription={hideLabel ? undefined : config.labelDescription}
       onChange={onChange}
       options={options}
       placeholder={config.placeholder}

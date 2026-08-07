@@ -1,9 +1,10 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
+import { InformationIcon } from '@ultraviolet/icons'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Filters, FiltersMainRow, FiltersProvider } from '..'
-import { Button } from '../../../components'
+import { Button, Tooltip } from '../../../components'
 import type { FilterComponentProps, FilterConfig } from '../types'
 
 export type FilterValues = {
@@ -24,12 +25,19 @@ export const defaultValues: FilterValues = {
   gpu: '',
 }
 
+const labelDescription = (
+  <Tooltip text="Info">
+    <InformationIcon sentiment="neutral" />
+  </Tooltip>
+)
+
 export const config: FilterConfig<FilterValues>[] = [
   {
     type: 'search',
     name: 'name',
     hideInDrawer: true,
     label: 'Name',
+    labelDescription,
     debounceDuration: 500,
     placeholder: 'Type to search...',
   },
@@ -42,6 +50,7 @@ export const config: FilterConfig<FilterValues>[] = [
         type: 'select',
         name: 'status',
         label: 'Status',
+        labelDescription,
         placeholder: 'Select status',
         options: [
           { label: 'Active', value: 'active' },
@@ -52,6 +61,7 @@ export const config: FilterConfig<FilterValues>[] = [
         type: 'multiselect',
         name: 'env',
         label: 'Environment',
+        labelDescription,
         placeholder: 'Select environment',
         options: [
           { label: 'Production', value: 'prod' },
@@ -66,6 +76,7 @@ export const config: FilterConfig<FilterValues>[] = [
     type: 'slider',
     name: 'price',
     label: 'Price',
+    labelDescription,
     min: 0,
     double: true,
     max: 1000,
@@ -75,6 +86,7 @@ export const config: FilterConfig<FilterValues>[] = [
     type: 'slider',
     name: 'ram',
     label: 'RAM',
+    labelDescription,
     min: 0,
     max: 64,
     double: true,
@@ -83,6 +95,7 @@ export const config: FilterConfig<FilterValues>[] = [
     type: 'group',
     name: 'advanced',
     label: 'Advanced',
+    labelDescription,
     expanded: true,
     items: [
       {
