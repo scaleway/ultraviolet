@@ -8,6 +8,7 @@ import type { ColumnProps } from './types'
 type TableContextValue = Omit<ListContextValue, 'columns'> & {
   stripped: boolean
   columns: ColumnProps[]
+  size: 'small' | 'medium' | 'large'
 }
 
 const TableContext = createContext<TableContextValue | undefined>(undefined)
@@ -16,9 +17,10 @@ export type TableProviderProps = Omit<ListProviderProps, 'columns'> & {
   stripped: boolean
   bordered: boolean
   columns: ColumnProps[]
+  size?: 'small' | 'medium' | 'large'
 }
 
-const Provider = ({ children, bordered, stripped, columns }: TableProviderProps) => {
+const Provider = ({ children, bordered, stripped, columns, size = 'medium' }: TableProviderProps) => {
   const { subscribeHandler, ...listContext } = useListContext()
 
   useEffect(subscribeHandler, [subscribeHandler])
@@ -30,8 +32,9 @@ const Provider = ({ children, bordered, stripped, columns }: TableProviderProps)
       columns,
       stripped,
       subscribeHandler,
+      size,
     }),
-    [bordered, columns, stripped, subscribeHandler, listContext],
+    [bordered, columns, stripped, subscribeHandler, listContext, size],
   )
 
   return <TableContext.Provider value={value}>{children}</TableContext.Provider>
