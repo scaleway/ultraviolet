@@ -38,7 +38,7 @@ To apply when using the component:
 
 **Critical:**
 
-- Focus indicator contrast ratio is 1.14:1 on white background, which fails WCAG 1.4.11 Non-text Contrast (requires minimum 3:1). Keyboard users with low vision cannot see which element has focus.
+- Focus indicator contrast ratio is 1.14:1 on white background, which fails WCAG 1.4.11 Non-text Contrast (requires minimum 3:1). Keyboard users with low vision cannot see which element has focus. Accessibility recommendations state to never disable `outline`. Use `:focus-visible` to target only keyboard interactions without visual pollution for mouse users.
 - SVG `<title>{name}</title>` exposes the form `name` attribute to screen readers, which is not meaningful and can cause confusion. The SVG is decorative and should have `aria-hidden="true"` or remove the title element.
 
 **High:**
