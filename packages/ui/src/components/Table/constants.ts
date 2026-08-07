@@ -1,2 +1,11 @@
-export const SELECTABLE_CHECKBOX_SIZE = '500' // sizing token from theme
-export const EXPANDABLE_COLUMN_SIZE = '500'
+export const SELECTABLE_CHECKBOX_SIZE = {
+  small: '400',
+  medium: '500',
+  large: '700',
+} as const // sizing token from theme
+
+export const EXPANDABLE_COLUMN_SIZE = {
+  small: '400',
+  medium: '500',
+  large: '700',
+} as const
