@@ -47,5 +47,4 @@ export default defineConfig({
     url: baseURL,
     reuseExistingServer: !isCI,
   },
-  workers: isCI ? 1 : undefined,
 })
