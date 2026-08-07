@@ -1,0 +1,54 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/Checkbox/A11y" />
+
+# Checkbox - Accessibility
+
+## Description
+
+A form input component used to select or deselect an option. Supports checked/unchecked/indeterminate states, error states with helper text, disabled state, required field indication, and tooltip support.
+
+## Summary
+
+1. ❌ **Perceivable**: Focus indicator contrast is insufficient (1.14:1)
+2. ❌ **Operable**: Focus indicator contrast fails WCAG 1.4.11; tooltip wrapper may interfere with keyboard navigation
+3. ✅ **Understandable**: Labels and helper text are provided through Description component
+4. ❌ **Robust**: SVG contains confusing `<title>` element using form `name` attribute
+
+## ARIA Pattern
+
+[ARIA Checkbox Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/)
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Focus indicator contrast ratio is 1.14:1, minimum required is 3:1
+- ✅ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - Labels provided via children or aria-label, helper text supported
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - SVG `<title>{name}</title>` exposes form name to AT, causing confusion
+- ✅ [ARIA Checkbox Role](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/) - Native `<input type="checkbox">` provides correct role, aria-checked supports true/false/mixed
+
+To apply when using the component:
+
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Ensure error state is not conveyed by color alone (component provides error text)
+- ⚠️ [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - When `error` prop is a boolean, provide a descriptive error message and ensure it's properly linked to the checkbox (via component `Description`).
+- ⚠️ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - When using `children` prop, do NOT pass complex ReactNodes containing labelable elements (button, input, select, textarea, etc.). Per HTML spec, `<label>` cannot contain other labelable elements.
+
+## Accessibility issues
+
+**Critical:**
+
+- Focus indicator contrast ratio is 1.14:1 on white background, which fails WCAG 1.4.11 Non-text Contrast (requires minimum 3:1). Keyboard users with low vision cannot see which element has focus. Accessibility recommendations state to never disable `outline`. Use `:focus-visible` to target only keyboard interactions without visual pollution for mouse users.
+- SVG `<title>{name}</title>` exposes the form `name` attribute to screen readers, which is not meaningful and can cause confusion. The SVG is decorative and should have `aria-hidden="true"` or remove the title element.
+
+**High:**
+
+- Tooltip wrapper around the entire checkbox may interfere with screen reader announcements and keyboard navigation depending on implementation.
+
+**Medium:**
+
+- **Usage warning**: When using the `children` prop, avoid passing complex ReactNodes containing labelable elements (button, input, select, textarea, etc.). Per HTML spec, `<label>` cannot contain other labelable elements when already associated with a form control.
+
+## Dependencies
+
+- `Tooltip` component must be accessibility-compliant to not interfere with checkbox keyboard navigation and screen reader announcements
