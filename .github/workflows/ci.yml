@@ -153,17 +153,6 @@ jobs:
           env: ${{ env.DEPLOYMENT_NAME }}
           ref: ${{ github.head_ref }}
 
-      - name: Cache Docker layers
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
-        with:
-          path: /tmp/docs/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-buildx-
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@bb05f3f5519dd87d3ba754cc423b652a5edd6d2c # v4.2.0
-
       - name: Login to Registry
         uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4.6.0
         with:
@@ -181,8 +170,6 @@ jobs:
           push: true
           tags: ${{ env.IMAGE }}
           file: Dockerfile
-          cache-from: type=local,src=/tmp/docs/.buildx-cache
-          cache-to: type=local,dest=/tmp/docs/.buildx-cache-new,mode=max
 
       - name: Set scw_max_concurrency
         id: set-max-concurrency
@@ -245,10 +232,6 @@ jobs:
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
           env_url: ${{ steps.deploy.outputs.url }}
-      - name: Move cache
-        run: |
-          rm -rf /tmp/docs/.buildx-cache
-          mv /tmp/docs/.buildx-cache-new /tmp/docs/.buildx-cache
 
   e2e:
     timeout-minutes: 10
