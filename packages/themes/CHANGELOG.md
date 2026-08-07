@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.1.10
+
+### Patch Changes
+
+- [#6764](https://github.com/scaleway/ultraviolet/pull/6764) [`e5ea1e1`](https://github.com/scaleway/ultraviolet/commit/e5ea1e12afca98afd90f763380768e129d7fe873) Thanks [@lisalupi](https://github.com/lisalupi)! - New CSS class `visually-hidden`: use this class to visually hide an element while leaving it available to screen readers
+
+- [#6739](https://github.com/scaleway/ultraviolet/pull/6739) [`e113064`](https://github.com/scaleway/ultraviolet/commit/e113064267925c16269ffce186ccd9cb95dd4ce0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@vanilla-extract/css` to `1.21.2`.
+
 ## 3.1.9
 
 ### Patch Changes

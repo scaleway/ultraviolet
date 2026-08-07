@@ -1,5 +1,61 @@
 # Change Log
 
+## 3.21.2
+
+### Patch Changes
+
+- [#6727](https://github.com/scaleway/ultraviolet/pull/6727) [`0a49bf6`](https://github.com/scaleway/ultraviolet/commit/0a49bf66b44ed591939dd9a0a79affccc7424a9d) Thanks [@lisalupi](https://github.com/lisalupi)! - `InfoTable.Cell`:
+
+  - should not override the custom style of its children.
+  - when children are an array of strings or numbers, the same style is applied as for a single string.
+
+  `Text`: updated tooltip detection logic to handle overflowing content when children are of type `(string | number)[]`. Such arrays are now converted to strings for tooltip display. For example:
+
+  ```js
+  <Text as="p" variant="body">
+    Ready?{isReady ? "Yes!" : "No..."}
+  </Text>
+  ```
+
+  Previously, no tooltip appeared when overflowing since the computed child was `['Ready?', 'Yes!']` (or `['Ready?', 'No...']`). Now, the tooltip correctly displays `Ready? Yes!`.
+
+- [#6639](https://github.com/scaleway/ultraviolet/pull/6639) [`e61ad06`](https://github.com/scaleway/ultraviolet/commit/e61ad0605d53946bb6c1e44db5192e8ec63dca3e) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `KeyValueInput` and use it inside `KeyValueField`. Made a couple of addition to each component: new prop `size` and it is now possible to have a SelectInput instead of a TextInput (use `inputType: "select"` in inputValue and inputKey)
+
+- [#6734](https://github.com/scaleway/ultraviolet/pull/6734) [`181ca55`](https://github.com/scaleway/ultraviolet/commit/181ca5592a31dfedfe25a59006a6bf6b25e3df9c) Thanks [@jsulpis](https://github.com/jsulpis)! - `Modal`: don't close the modal when clicking on the dialog element and releasing on the backdrop
+
+- [#6705](https://github.com/scaleway/ultraviolet/pull/6705) [`70dd8d6`](https://github.com/scaleway/ultraviolet/commit/70dd8d6ac3b3dbf848ab4c61b2945980a6e3dd4f) Thanks [@philibea](https://github.com/philibea)! - Fix accesbility issue inside Pagination PerPage label.
+
+- [#6738](https://github.com/scaleway/ultraviolet/pull/6738) [`0a984a6`](https://github.com/scaleway/ultraviolet/commit/0a984a69a1d45afe269dd42456124df8297c92c5) Thanks [@lisalupi](https://github.com/lisalupi)! - `Key`: remove border on prominence strong and fix disabled style when prominence strong and sentiment primary
+
+- [#6730](https://github.com/scaleway/ultraviolet/pull/6730) [`7a4e1a4`](https://github.com/scaleway/ultraviolet/commit/7a4e1a468c61efb60a68dbcebcfe6507c8b0e01f) Thanks [@lisalupi](https://github.com/lisalupi)! - `SearchInput`: fix props definition. It might be a breaking change (some **ignored** props have be removed, so it will not have an impact on runtime behavior)
+
+- [#6750](https://github.com/scaleway/ultraviolet/pull/6750) [`2ee063f`](https://github.com/scaleway/ultraviolet/commit/2ee063fb3cdf8abbca4c43115c05716275553d34) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@vanilla-extract/css` to `1.21.2`.
+  Updated dependency `@types/react` to `19.2.18`.
+  Updated dependency `@types/react-dom` to `19.2.4`.
+  Updated dependency `@vanilla-extract/vite-plugin` to `5.2.6`.
+  Updated dependency `next` to `16.2.12`.
+  Updated dependency `@playwright/test` to `1.62.1`.
+  Updated dependency `@vitejs/plugin-react` to `6.0.5`.
+  Updated dependency `globals` to `17.8.0`.
+  Updated dependency `postcss` to `8.5.25`.
+  Updated dependency `turbo` to `2.10.7`.
+  Updated dependency `sass` to `1.102.0`.
+  Updated dependency `react-router-dom` to `7.18.2`.
+
+- [#6740](https://github.com/scaleway/ultraviolet/pull/6740) [`43a100c`](https://github.com/scaleway/ultraviolet/commit/43a100ccb525d024c5b643044b3e38c633e4b805) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prosemirror-view` to `1.42.2`.
+
+- [#6739](https://github.com/scaleway/ultraviolet/pull/6739) [`e113064`](https://github.com/scaleway/ultraviolet/commit/e113064267925c16269ffce186ccd9cb95dd4ce0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@vanilla-extract/css` to `1.21.2`.
+
+- [#6736](https://github.com/scaleway/ultraviolet/pull/6736) [`ba2ed93`](https://github.com/scaleway/ultraviolet/commit/ba2ed9318fffb414cbcf48140bbd2a464ca3e7e2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-intersection-observer` to `11.0.0`.
+
+- [#6756](https://github.com/scaleway/ultraviolet/pull/6756) [`5b721fd`](https://github.com/scaleway/ultraviolet/commit/5b721fd80df4384abf753b3721b12b68c349315b) Thanks [@lisalupi](https://github.com/lisalupi)! - `Tag`: add `maxWidth` to its wrapper to improve overflow behavior
+
+- [#6729](https://github.com/scaleway/ultraviolet/pull/6729) [`e23911f`](https://github.com/scaleway/ultraviolet/commit/e23911f2ae33f68605eddd37cb7013a29ad25af0) Thanks [@jsulpis](https://github.com/jsulpis)! - `Modal`, `Dialog`, `Drawer`: improve opening/closing animations
+
+- Updated dependencies [[`5d6c646`](https://github.com/scaleway/ultraviolet/commit/5d6c646ce8baa67055fb35e7d4b3d532190f4705), [`e5ea1e1`](https://github.com/scaleway/ultraviolet/commit/e5ea1e12afca98afd90f763380768e129d7fe873), [`2ee063f`](https://github.com/scaleway/ultraviolet/commit/2ee063fb3cdf8abbca4c43115c05716275553d34), [`e113064`](https://github.com/scaleway/ultraviolet/commit/e113064267925c16269ffce186ccd9cb95dd4ce0)]:
+  - @ultraviolet/icons@5.4.8
+  - @ultraviolet/themes@3.1.10
+
 ## 3.21.1
 
 ### Patch Changes
