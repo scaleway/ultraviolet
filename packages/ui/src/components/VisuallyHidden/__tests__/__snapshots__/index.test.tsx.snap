@@ -1,0 +1,141 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`visuallyHidden > render correct html element 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__u0p5n50"
+    >
+      hidden
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`visuallyHidden > renders correctly with default props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__u0p5n50"
+    >
+      hidden
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`visuallyHidden > should be visible when focusable (tabIndex) 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__u0p5n50"
+      tabindex="0"
+    >
+      hidden
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`visuallyHidden > should be visible when it is a focusable element 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__u0p5n50"
+    >
+      hidden
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`visuallyHidden > should be visible when it is has focusable element 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__u0p5n50"
+    >
+      <button
+        type="button"
+      >
+        click
+      </button>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`visuallyHidden > should not be visible 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__u0p5n50"
+    >
+      hidden
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`visuallyHidden > should work to label and describe elements 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <title>
+          DownloadIcon
+        </title>
+        <path
+          d="M8.75 2.75a.75.75 0 0 0-1.5 0v5.69L5.03 6.22a.75.75 0 0 0-1.06 1.06l3.5 3.5a.75.75 0 0 0 1.06 0l3.5-3.5a.75.75 0 0 0-1.06-1.06L8.75 8.44z"
+        />
+        <path
+          d="M3.5 9.75a.75.75 0 0 0-1.5 0v1.5A2.75 2.75 0 0 0 4.75 14h6.5A2.75 2.75 0 0 0 14 11.25v-1.5a.75.75 0 0 0-1.5 0v1.5c0 .69-.56 1.25-1.25 1.25h-6.5c-.69 0-1.25-.56-1.25-1.25z"
+        />
+      </svg>
+      <span
+        class="styles__u0p5n50"
+      >
+        download
+      </span>
+    </button>
+    <input
+      aria-describedby="example_desc"
+      aria-labelledby="example_label"
+    />
+    <span
+      class="styles__u0p5n50"
+      id="example_label"
+    >
+      label
+    </span>
+    <span
+      class="styles__u0p5n50"
+      id="example_desc"
+    >
+      desc
+    </span>
+  </div>
+</DocumentFragment>
+`;
