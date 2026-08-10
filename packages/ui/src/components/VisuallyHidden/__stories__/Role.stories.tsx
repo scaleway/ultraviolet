@@ -11,7 +11,7 @@ As.parameters = {
   docs: {
     description: {
       story:
-        'You can change the element type using prop `as`. Do not use any interactive element, as the element is not visible.',
+        'You can change the element type using prop `as`. Be careful when using interactive elements (button, a, etc.), as the element is not visible unless focused (via Tab).',
     },
   },
 }

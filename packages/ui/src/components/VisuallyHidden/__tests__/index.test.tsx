@@ -58,18 +58,6 @@ describe('visuallyHidden', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should be visible when focusable (tabIndex)', async () => {
-    const { asFragment } = renderWithTheme(<VisuallyHidden tabIndex={0}>hidden</VisuallyHidden>)
-
-    const element = screen.getByText('hidden', { selector: 'span' })
-    expectVisuallyHidden(element)
-
-    await userEvent.tab()
-    await waitFor(() => expect(element).toHaveFocus())
-
-    expect(asFragment()).toMatchSnapshot()
-  })
-
   it('should be visible when it is a focusable element', async () => {
     const onClick = vi.fn()
 

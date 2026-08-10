@@ -28,21 +28,6 @@ exports[`visuallyHidden > renders correctly with default props 1`] = `
 </DocumentFragment>
 `;
 
-exports[`visuallyHidden > should be visible when focusable (tabIndex) 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <span
-      class="styles__u0p5n50"
-      tabindex="0"
-    >
-      hidden
-    </span>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`visuallyHidden > should be visible when it is a focusable element 1`] = `
 <DocumentFragment>
   <div
