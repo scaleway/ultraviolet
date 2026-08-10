@@ -1,7 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { keyframes, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 import {
   headerCellMaxWidth,
   headerCellMinWidth,
@@ -35,7 +34,6 @@ const cell = recipe({
     fontSize: theme.typography.bodySmall.fontSize,
     maxWidth: maxWidthCell,
     minWidth: minWidthCell,
-    padding: theme.space[1],
     verticalAlign: 'middle',
     width: widthCell,
   },
@@ -55,6 +53,15 @@ const cell = recipe({
       secondary: { backgroundColor: theme.colors.secondary.background },
       success: { backgroundColor: theme.colors.success.background },
       warning: { backgroundColor: theme.colors.warning.background },
+    },
+    size: {
+      small: {
+        padding: theme.space[0.5],
+      },
+      medium: {
+        padding: theme.space[1],
+      },
+      large: { padding: theme.space[1.5] },
     },
   },
 })
@@ -80,7 +87,6 @@ const headerCell = recipe({
     display: 'table-cell',
     maxWidth: headerCellMaxWidth,
     minWidth: headerCellMinWidth,
-    padding: theme.space[1],
     selectors: {
       "&[role*='button']": {
         cursor: 'pointer',
@@ -97,13 +103,16 @@ const headerCell = recipe({
       right: { textAlign: 'right' },
     },
     checked: {
-      true: {
-        selectors: {
-          '&:first-of-type': {
-            paddingLeft: theme.space[2],
-          },
-        },
+      true: {},
+    },
+    size: {
+      small: {
+        padding: theme.space[0.5],
       },
+      medium: {
+        padding: theme.space[1],
+      },
+      large: { padding: theme.space[1.5] },
     },
   },
 })
@@ -128,7 +137,6 @@ const expandableWrapper = style({
 
 const checkboxContainer = style({
   display: 'flex',
-  width: theme.sizing[SELECTABLE_CHECKBOX_SIZE],
 })
 
 const trAnimation = style({

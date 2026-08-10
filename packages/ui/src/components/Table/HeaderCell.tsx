@@ -7,6 +7,7 @@ import type { ReactNode } from 'react'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 import { SortIcon } from './SortIcon'
+import { useTableContext } from './TableContext'
 import { tableStyle } from './styles.css'
 import { headerCellMaxWidth, headerCellMinWidth, headerCellWidth } from './variables.css'
 
@@ -45,12 +46,13 @@ export const HeaderCell = ({
   }
 
   const handleOrder = onOrder ? () => onOrder(order === 'ascending' ? 'desc' : 'asc') : undefined
+  const { size } = useTableContext()
 
   return (
     <th
       align={align}
       aria-sort={order}
-      className={cn(className, tableStyle.headerCell({ align, checked: isCheckbox }))}
+      className={cn(className, tableStyle.headerCell({ align, checked: isCheckbox, size }))}
       onClick={handleOrder}
       onKeyDown={
         handleOrder
