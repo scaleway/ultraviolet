@@ -1,4 +1,4 @@
-import type { ComponentProps } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import type { DateInput } from '../../components/DateInput'
 import type { SelectInput } from '../../components/SelectInput'
 import type { Slider } from '../../components/Slider'
@@ -24,6 +24,7 @@ export type FilterConfigItemBase = {
    * Expand/collapse the filter/group in the Drawer
    */
   expanded?: boolean
+  labelDescription?: ReactNode
 }
 
 export type FilterConfigItemText = FilterConfigItemBase & {
