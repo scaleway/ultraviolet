@@ -1,5 +1,29 @@
 # Change Log
 
+## 5.4.8
+
+### Patch Changes
+
+- [#6759](https://github.com/scaleway/ultraviolet/pull/6759) [`5d6c646`](https://github.com/scaleway/ultraviolet/commit/5d6c646ce8baa67055fb35e7d4b3d532190f4705) Thanks [@lisalupi](https://github.com/lisalupi)! - New flag: `EuropeanUnionFlag`
+
+- [#6750](https://github.com/scaleway/ultraviolet/pull/6750) [`2ee063f`](https://github.com/scaleway/ultraviolet/commit/2ee063fb3cdf8abbca4c43115c05716275553d34) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@vanilla-extract/css` to `1.21.2`.
+  Updated dependency `@types/react` to `19.2.18`.
+  Updated dependency `@types/react-dom` to `19.2.4`.
+  Updated dependency `@vanilla-extract/vite-plugin` to `5.2.6`.
+  Updated dependency `next` to `16.2.12`.
+  Updated dependency `@playwright/test` to `1.62.1`.
+  Updated dependency `@vitejs/plugin-react` to `6.0.5`.
+  Updated dependency `globals` to `17.8.0`.
+  Updated dependency `postcss` to `8.5.25`.
+  Updated dependency `turbo` to `2.10.7`.
+  Updated dependency `sass` to `1.102.0`.
+  Updated dependency `react-router-dom` to `7.18.2`.
+
+- [#6739](https://github.com/scaleway/ultraviolet/pull/6739) [`e113064`](https://github.com/scaleway/ultraviolet/commit/e113064267925c16269ffce186ccd9cb95dd4ce0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@vanilla-extract/css` to `1.21.2`.
+
+- Updated dependencies [[`e5ea1e1`](https://github.com/scaleway/ultraviolet/commit/e5ea1e12afca98afd90f763380768e129d7fe873), [`e113064`](https://github.com/scaleway/ultraviolet/commit/e113064267925c16269ffce186ccd9cb95dd4ce0)]:
+  - @ultraviolet/themes@3.1.10
+
 ## 5.4.7
 
 ### Patch Changes
