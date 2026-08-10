@@ -168,7 +168,7 @@ describe('tooltip', () => {
 
   it('should link the tooltip to an interactive trigger as an accessible label', async () => {
     renderWithTheme(
-      <Tooltip delay={{ open: 0 }} text="the label" role="label">
+      <Tooltip delay={{ open: 0 }} text="the label" relation="label">
         <button type="button">
           <SettingsIcon aria-hidden />
         </button>

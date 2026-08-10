@@ -24,20 +24,20 @@ const FOCUSABLE_ELEMENTS = `
 type TooltipChildrenProps = {
   tooltip: ReturnType<typeof useTooltip>
   tooltipId: string
-} & Pick<TooltipProps, 'children' | 'tabIndex' | 'role' | 'containerFullHeight' | 'containerFullWidth'>
+} & Pick<TooltipProps, 'children' | 'tabIndex' | 'relation' | 'containerFullHeight' | 'containerFullWidth'>
 
 export function TooltipChildren({
   children,
   tooltip,
   tooltipId,
   tabIndex = 0,
-  role,
+  relation,
   containerFullHeight,
   containerFullWidth,
 }: TooltipChildrenProps) {
   const eventHandlers = tooltip.getReferenceProps()
 
-  const ariaAttributeName = role === 'label' ? 'aria-labelledby' : 'aria-describedby'
+  const ariaAttributeName = relation === 'label' ? 'aria-labelledby' : 'aria-describedby'
   const ariaAttributeValue = tooltip.isMounted ? tooltipId : null
 
   const tooltipWrapperRef = useRef<HTMLDivElement>(null)

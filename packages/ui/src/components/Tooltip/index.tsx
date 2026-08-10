@@ -53,7 +53,7 @@ export type TooltipProps = {
   /**
    * Preferred placement for the Tooltip.
    * If there is not enough space, the direction will be flipped so that the Tooltip stays visible.
-   * @default top
+   * @default 'top'
    */
   placement?: TooltipPlacement
   /**
@@ -65,9 +65,16 @@ export type TooltipProps = {
    */
   className?: string
   /**
-   *
+   * @deprecated use relation instead
    */
-  role?: 'tooltip' | 'label'
+  role?: string
+  /**
+   * Role of the tooltip in relation to its reference element
+   * - use "description" only if the reference element already has an accessible label
+   * - use "label" if the tooltip text should be the label of the reference element
+   * @default 'description'
+   */
+  relation?: 'description' | 'label'
   'data-testid'?: string
   /**
    * It will add `width: 100%` to the tooltip trigger container.
@@ -123,7 +130,7 @@ export const Tooltip = ({
   visible,
   'data-testid': dataTestId,
   portalTarget,
-  role,
+  relation,
   debounceDelay,
   delay,
   tabIndex = 0,
@@ -152,7 +159,7 @@ export const Tooltip = ({
         containerFullHeight={containerFullHeight}
         containerFullWidth={containerFullWidth}
         tooltipId={tooltipId}
-        role={role}
+        relation={relation}
         tabIndex={tabIndex}
       >
         {children}
