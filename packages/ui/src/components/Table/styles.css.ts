@@ -61,7 +61,7 @@ const cell = recipe({
       medium: {
         padding: theme.space[1],
       },
-      large: { padding: theme.space[2] },
+      large: { padding: theme.space[1.5] },
     },
   },
 })
@@ -112,7 +112,7 @@ const headerCell = recipe({
       medium: {
         padding: theme.space[1],
       },
-      large: { padding: theme.space[2] },
+      large: { padding: theme.space[1.5] },
     },
   },
 })
