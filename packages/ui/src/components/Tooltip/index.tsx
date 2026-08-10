@@ -28,7 +28,7 @@ export type TooltipRenderProps = Pick<
 > & {
   // `Ref<HTMLElement>` causes a type error on children functions
   // oxlint-disable-next-line typescript/no-explicit-any
-  ref?: Ref<any>
+  ref: Ref<any>
 }
 
 export type TooltipProps = {

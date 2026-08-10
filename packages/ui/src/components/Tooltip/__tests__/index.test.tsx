@@ -6,6 +6,7 @@ import { renderWithTheme } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Tooltip } from '..'
+import { TextInput } from '../../TextInput'
 
 describe('tooltip', () => {
   it('should render a focusable wrapper div around the children if a text is provided', () => {
@@ -181,6 +182,20 @@ describe('tooltip', () => {
     await userEvent.hover(trigger)
     expect(trigger).toHaveAccessibleName('the label')
     expect(trigger).not.toHaveAccessibleDescription()
+  })
+
+  it('should ADD the tooltip text to an existing description', async () => {
+    renderWithTheme(
+      <Tooltip delay={{ open: 0 }} text="tooltip">
+        <TextInput helper="existing description" label="Label" />
+      </Tooltip>,
+    )
+
+    const trigger = screen.getByRole('textbox', { name: 'Label' })
+    expect(trigger).toHaveAccessibleDescription('existing description')
+
+    await userEvent.hover(trigger)
+    expect(trigger).toHaveAccessibleDescription('existing description tooltip')
   })
 
   it('should link the tooltip to a focusable wrapper div if there is no interactive element inside', async () => {
