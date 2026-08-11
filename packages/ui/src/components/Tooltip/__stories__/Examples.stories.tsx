@@ -6,11 +6,11 @@ import { Stack } from '../../Stack'
 
 export const Examples = () => (
   <>
-    <Tooltip text="Information" role="label">
+    <Tooltip text="Information" relation="label">
       <InformationIcon prominence="weak" sentiment="neutral" />
     </Tooltip>
 
-    <Tooltip text="Label" role="label">
+    <Tooltip text="Label" relation="label">
       <Button size="medium" sentiment="neutral" variant="ghost">
         <HelpCircleOutlineIcon size="medium" />
       </Button>

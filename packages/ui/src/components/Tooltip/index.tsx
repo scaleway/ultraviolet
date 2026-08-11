@@ -28,7 +28,7 @@ export type TooltipRenderProps = Pick<
 > & {
   // `Ref<HTMLElement>` causes a type error on children functions
   // oxlint-disable-next-line typescript/no-explicit-any
-  ref: Ref<any>
+  ref?: Ref<any>
 }
 
 export type TooltipProps = {
@@ -84,6 +84,9 @@ export type TooltipProps = {
    * It will add `height: 100%` to the tooltip trigger container.
    */
   containerFullHeight?: boolean
+  /**
+   * Render the tooltip in a portal target if you need it to overflow from a scroll container, at the cost of a small lag of the tooltip behind its reference element when scrolling.
+   */
   portalTarget?: HTMLElement
   /**
    * tabindex attribute for the tooltip trigger container
@@ -150,7 +153,15 @@ export const Tooltip = ({
     return typeof children === 'function' ? children({}) : children
   }
 
-  const portalTargetEl = portalTarget ?? (typeof window !== 'undefined' ? document.body : null)
+  const tooltipProps = {
+    tooltip: tooltip,
+    id: tooltipId,
+    className: className,
+    style: style,
+    'data-testid': dataTestId,
+    maxWidth: maxWidth,
+    text: text,
+  }
 
   return (
     <>
@@ -165,20 +176,13 @@ export const Tooltip = ({
         {children}
       </TooltipChildren>
 
-      {tooltip.isMounted && portalTargetEl
-        ? createPortal(
-            <TooltipElement
-              tooltip={tooltip}
-              id={tooltipId}
-              className={className}
-              style={style}
-              data-testid={dataTestId}
-              maxWidth={maxWidth}
-              text={text}
-            />,
-            portalTargetEl,
-          )
-        : null}
+      {tooltip.isMounted ? (
+        portalTarget ? (
+          createPortal(<TooltipElement {...tooltipProps} />, portalTarget)
+        ) : (
+          <TooltipElement {...tooltipProps} />
+        )
+      ) : null}
     </>
   )
 }
