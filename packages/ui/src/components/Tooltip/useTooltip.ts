@@ -1,5 +1,5 @@
 'use client'
-import type { Placement } from '@floating-ui/react'
+import type { ExtendedRefs, Placement, ReferenceType } from '@floating-ui/react'
 import {
   offset,
   flip,
@@ -82,7 +82,7 @@ export const useTooltip = ({ visible, placement, delay, onOpenChange }: UseToolt
   }
 
   return {
-    refs,
+    refs: refs as ExtendedRefs<ReferenceType>,
     arrowRef,
     arrowStyle,
     finalPlacement,

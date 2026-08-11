@@ -6,10 +6,10 @@ export default {
   title: 'UI/Overlay/Tooltip',
   parameters: {
     a11yStatus: {
-      perceivable: false,
-      operable: false,
+      perceivable: true,
+      operable: true,
       understandable: true,
-      robust: false,
+      robust: true,
     },
   },
 } as Meta

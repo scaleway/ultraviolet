@@ -14,7 +14,8 @@ const tooltip = style({
   backgroundColor: theme.colors.neutral.backgroundStronger,
   borderRadius: theme.radii.default,
   color: theme.colors.neutral.textStronger,
-  fontSize: '0.8rem',
+  fontSize: theme.typography.caption.fontSize,
+  lineHeight: theme.typography.caption.lineHeight,
   overflowWrap: 'break-word',
   padding: `${theme.space['0.5']} ${theme.space[1]}`,
   textAlign: 'center',
@@ -54,8 +55,8 @@ const content = style({
 })
 
 const animation = styleVariants({
-  enter: { animation: `${ANIMATION_DURATION}ms ${fadeIn} forwards` },
-  exit: { animation: `${ANIMATION_DURATION / 2}ms ${fadeOut} forwards` },
+  open: { animation: `${ANIMATION_DURATION}ms ${fadeIn} forwards` },
+  close: { animation: `${ANIMATION_DURATION / 2}ms ${fadeOut} forwards` },
 })
 
 const childrenContainer = recipe({

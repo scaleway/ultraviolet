@@ -153,6 +153,8 @@ export const Tooltip = ({
     return typeof children === 'function' ? children({}) : children
   }
 
+  const shouldRenderTooltipElement = relation === 'label' ? true : tooltip.isMounted
+
   const tooltipProps = {
     tooltip: tooltip,
     id: tooltipId,
@@ -170,13 +172,14 @@ export const Tooltip = ({
         containerFullHeight={containerFullHeight}
         containerFullWidth={containerFullWidth}
         tooltipId={tooltipId}
+        isTooltipVisible={shouldRenderTooltipElement}
         relation={relation}
         tabIndex={tabIndex}
       >
         {children}
       </TooltipChildren>
 
-      {tooltip.isMounted ? (
+      {shouldRenderTooltipElement ? (
         portalTarget ? (
           createPortal(<TooltipElement {...tooltipProps} />, portalTarget)
         ) : (
