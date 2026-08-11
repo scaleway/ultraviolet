@@ -49,6 +49,7 @@ export const FilterSelect = <V extends AnyObject>({
       aria-label={hideLabel ? config.label : undefined}
       clearable={config.clearable}
       label={hideLabel ? undefined : config.label}
+      labelDescription={hideLabel ? undefined : config.labelDescription}
       size={size}
       name={config.name}
       onChange={onChange}

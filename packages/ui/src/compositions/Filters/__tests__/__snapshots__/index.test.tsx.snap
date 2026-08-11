@@ -15,12 +15,38 @@ exports[`filters > should render main row with filters 1`] = `
         <div
           class="styles__r3pe3n1 styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
         >
-          <label
-            class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodySmallStrong__m4c9owl style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-            for="_r_1_"
+          <div
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_0.5rem_xxsmall__toi52u3p"
           >
-            Name
-          </label>
+            <label
+              class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodySmallStrong__m4c9owl style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
+              for="_r_1_"
+            >
+              Name
+            </label>
+            <div
+              aria-controls="_r_4_"
+              aria-describedby="_r_4_"
+              class="styles__w40vpo9"
+              tabindex="0"
+            >
+              <svg
+                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz1i"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <title>
+                  InformationIcon
+                </title>
+                <path
+                  clip-rule="evenodd"
+                  d="M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8ZM9 5C9 5.55228 8.55228 6 8 6C7.44772 6 7 5.55228 7 5C7 4.44772 7.44772 4 8 4C8.55228 4 9 4.44772 9 5ZM6.75 8C6.33579 8 6 8.33579 6 8.75C6 9.16421 6.33579 9.5 6.75 9.5H7.5V11.25C7.5 11.6642 7.83579 12 8.25 12C8.66421 12 9 11.6642 9 11.25V8.75C9 8.33579 8.66421 8 8.25 8H6.75Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
           <div
             class="styles__q3q8048 styles_medium__q3q8046"
             data-disabled="false"
@@ -71,29 +97,55 @@ exports[`filters > should render main row with filters 1`] = `
         class="styles__uf6pag0"
       >
         <div
-          aria-controls="_r_7_"
-          aria-describedby="_r_7_"
+          aria-controls="_r_8_"
+          aria-describedby="_r_8_"
           class="styles__w40vpo9 styles_fullWidth_true__w40vpob"
           tabindex="-1"
         >
           <div
             class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
           >
-            <label
-              class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodySmallStrong__m4c9owl style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-              for="_r_5_"
-            >
-              Status
-            </label>
             <div
-              aria-controls="_r_7_"
+              class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_0.5rem_xxsmall__toi52u3p"
+            >
+              <label
+                class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodySmallStrong__m4c9owl style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
+                for="_r_6_"
+              >
+                Status
+              </label>
+              <div
+                aria-controls="_r_b_"
+                aria-describedby="_r_b_"
+                class="styles__w40vpo9"
+                tabindex="0"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz1i"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <title>
+                    InformationIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8ZM9 5C9 5.55228 8.55228 6 8 6C7.44772 6 7 5.55228 7 5C7 4.44772 7.44772 4 8 4C8.55228 4 9 4.44772 9 5ZM6.75 8C6.33579 8 6 8.33579 6 8.75C6 9.16421 6.33579 9.5 6.75 9.5H7.5V11.25C7.5 11.6642 7.83579 12 8.25 12C8.66421 12 9 11.6642 9 11.25V8.75C9 8.33579 8.66421 8 8.25 8H6.75Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              aria-controls="_r_8_"
               aria-expanded="false"
               aria-label="Status"
               class="selectBar__r8qe46 selectBar__r8qe45 selectBar_size_medium__r8qe4b selectBar_state_neutral__r8qe4e"
               data-disabled="false"
               data-readonly="false"
               data-testid="select-input-status"
-              id="_r_5_"
+              id="_r_6_"
               role="combobox"
               tabindex="0"
             >
@@ -132,29 +184,55 @@ exports[`filters > should render main row with filters 1`] = `
         class="styles__uf6pag0"
       >
         <div
-          aria-controls="_r_e_"
-          aria-describedby="_r_e_"
+          aria-controls="_r_g_"
+          aria-describedby="_r_g_"
           class="styles__w40vpo9 styles_fullWidth_true__w40vpob"
           tabindex="-1"
         >
           <div
             class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
           >
-            <label
-              class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodySmallStrong__m4c9owl style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
-              for="_r_c_"
-            >
-              Environment
-            </label>
             <div
-              aria-controls="_r_e_"
+              class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_gap_0.5rem_xxsmall__toi52u3p"
+            >
+              <label
+                class="styles_htmlFor__17td3g92 style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_bodySmallStrong__m4c9owl style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
+                for="_r_e_"
+              >
+                Environment
+              </label>
+              <div
+                aria-controls="_r_j_"
+                aria-describedby="_r_j_"
+                class="styles__w40vpo9"
+                tabindex="0"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz1i"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <title>
+                    InformationIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8ZM9 5C9 5.55228 8.55228 6 8 6C7.44772 6 7 5.55228 7 5C7 4.44772 7.44772 4 8 4C8.55228 4 9 4.44772 9 5ZM6.75 8C6.33579 8 6 8.33579 6 8.75C6 9.16421 6.33579 9.5 6.75 9.5H7.5V11.25C7.5 11.6642 7.83579 12 8.25 12C8.66421 12 9 11.6642 9 11.25V8.75C9 8.33579 8.66421 8 8.25 8H6.75Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              aria-controls="_r_g_"
               aria-expanded="false"
               aria-label="Environment"
               class="selectBar__r8qe46 selectBar__r8qe45 selectBar_size_medium__r8qe4b selectBar_state_neutral__r8qe4e"
               data-disabled="false"
               data-readonly="false"
               data-testid="select-input-env"
-              id="_r_c_"
+              id="_r_e_"
               role="combobox"
               tabindex="0"
             >

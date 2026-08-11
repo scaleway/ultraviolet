@@ -18,6 +18,7 @@ export const FilterSearch = ({ config, hideLabel, onChange, value, size }: Filte
     <SearchInput
       aria-label={hideLabel ? config.label : undefined}
       label={hideLabel ? undefined : config.label}
+      labelDescription={hideLabel ? undefined : config.labelDescription}
       loading={tempValue !== value}
       name={config.name}
       size={size}

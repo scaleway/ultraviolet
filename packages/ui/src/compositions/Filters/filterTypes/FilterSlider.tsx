@@ -15,6 +15,7 @@ export const FilterSlider = ({ value, onChange, config, hideLabel }: FilterSlide
     options: config.options,
     step: config.step,
     unit: config.unit,
+    labelDescription: hideLabel ? undefined : config.labelDescription,
   }
 
   if (config.double) {

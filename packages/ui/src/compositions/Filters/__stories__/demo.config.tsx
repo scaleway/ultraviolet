@@ -1,3 +1,5 @@
+import { InformationIcon } from '@ultraviolet/icons'
+import { Tooltip } from '../../../components'
 import type { FilterConfig } from '../types'
 
 export type FilterValues = {
@@ -12,6 +14,12 @@ export type FilterValues = {
     endAt: Date | null
   }
 }
+
+const labelDescription = (
+  <Tooltip text="Info">
+    <InformationIcon sentiment="neutral" />
+  </Tooltip>
+)
 
 export const demoDefaultValues: FilterValues = {
   name: '',
@@ -54,6 +62,7 @@ export const demoFilters: FilterConfig<FilterValues>[] = [
         type: 'multiselect',
         name: 'env',
         label: 'Environment',
+        labelDescription,
         placeholder: 'Select environment',
         selectAll: {
           label: 'All Environments',
@@ -76,6 +85,7 @@ export const demoFilters: FilterConfig<FilterValues>[] = [
     type: 'slider',
     name: 'price',
     label: 'Price',
+    labelDescription,
     min: 0,
     double: true,
     max: 1000,
