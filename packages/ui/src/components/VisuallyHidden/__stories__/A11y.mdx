@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Other/VisuallyHidden/A11y" />
+
+# VisuallyHidden - Accessibility
+
+## Description
+
+A utility component that hides content visually while keeping it accessible to screen readers. Uses CSS positioning and clipping to hide elements from sighted users while maintaining their presence in the accessibility tree. Commonly used for accessible labels, skip links, and providing context to icon-only elements.
+
+## Summary
+
+1. ✅ **Perceivable**: Content remains available to assistive technologies while visually hidden
+2. ✅ **Operable**: Focus states make content visible when focused or active, supporting keyboard navigation
+3. ✅ **Understandable**: Content structure and relationships are preserved in the accessibility tree
+4. ✅ **Robust**: Uses standard HTML elements and CSS, compatible with all assistive technologies
+
+## ARIA Pattern
+
+No specific ARIA pattern for this utility component. It supports implementation of various ARIA patterns by providing accessible hidden text.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - Provides text alternatives for non-text content (icons, images)
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Preserves information structure for assistive technologies
+- ✅ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - Maintains logical focus order; content becomes visible on focus
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - Does not interfere with accessible name computation
+
+To apply when using the component:
+
+- [WCAG 2.4.1 - Bypass Blocks (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html) - When used for skip links, ensure proper placement at page top
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Ensure information is not conveyed by color alone when visible on focus
+
+## Accessibility issues
+
+None
+
+## Dependencies
+
+None
