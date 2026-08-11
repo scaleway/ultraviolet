@@ -895,8 +895,8 @@ importers:
         specifier: 0.5.7
         version: 0.5.7(@vanilla-extract/css@1.21.2)
       '@vanilla-extract/sprinkles':
-        specifier: 1.7.0
-        version: 1.7.0(@vanilla-extract/css@1.21.2)
+        specifier: 1.7.1
+        version: 1.7.1(@vanilla-extract/css@1.21.2)
       codemirror:
         specifier: 6.0.2
         version: 6.0.2
@@ -4710,11 +4710,6 @@ packages:
 
   '@vanilla-extract/recipes@0.5.7':
     resolution: {integrity: sha512-Fvr+htdyb6LVUu+PhH61UFPhwkjgDEk8L4Zq9oIdte42sntpKrgFy90MyTRtGwjVALmrJ0pwRUVr8UoByYeW8A==}
-    peerDependencies:
-      '@vanilla-extract/css': ^1.0.0
-
-  '@vanilla-extract/sprinkles@1.7.0':
-    resolution: {integrity: sha512-7I8rt3m1OIEMJRtpMTnPwMy+C1DHpgvenNF1P7lgFFXGzxAoW57+Qk439cJFqONaqsLsTiYOAOVnP4QigCWa1A==}
     peerDependencies:
       '@vanilla-extract/css': ^1.0.0
 
@@ -12408,10 +12403,6 @@ snapshots:
   '@vanilla-extract/private@1.0.9': {}
 
   '@vanilla-extract/recipes@0.5.7(@vanilla-extract/css@1.21.2)':
-    dependencies:
-      '@vanilla-extract/css': 1.21.2
-
-  '@vanilla-extract/sprinkles@1.7.0(@vanilla-extract/css@1.21.2)':
     dependencies:
       '@vanilla-extract/css': 1.21.2
 
