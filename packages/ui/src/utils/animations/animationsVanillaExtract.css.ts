@@ -73,8 +73,8 @@ export const fadeIn = keyframes({
 })
 
 export const fadeOut = keyframes({
-  '0%': { background: 'rgba(0,0,0,.4)' },
-  '100%': { background: 'rgba(0,0,0,.0)' },
+  '0%': { opacity: 1 },
+  '100%': { opacity: 0 },
 })
 
 export const scaleUp = keyframes({
