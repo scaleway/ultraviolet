@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.1.11
+
+### Patch Changes
+
+- [#6773](https://github.com/scaleway/ultraviolet/pull/6773) [`d45b34d`](https://github.com/scaleway/ultraviolet/commit/d45b34d5af1a7d4e2ce2fa3f7bb365e651346ab3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@vanilla-extract/css` to `1.21.2`.
+
 ## 3.1.10
 
 ### Patch Changes
