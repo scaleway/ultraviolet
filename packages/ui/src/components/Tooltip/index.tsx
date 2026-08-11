@@ -1,11 +1,11 @@
 'use client'
 
-import { cn } from '@ultraviolet/utils'
-import { isValidElement, useId } from 'react'
+import { useId } from 'react'
 import type { CSSProperties, HTMLAttributes, ReactNode, Ref } from 'react'
 import { createPortal } from 'react-dom'
+import { TooltipChildren } from './TooltipChildren'
+import { TooltipElement } from './TooltipElement'
 import { useTooltip } from './useTooltip'
-import { tooltipStyle } from './styles.css'
 
 export type TooltipPlacement = 'top' | 'bottom' | 'left' | 'right' | LegacyTooltipPlacement
 
@@ -14,30 +14,8 @@ export type TooltipPlacement = 'top' | 'bottom' | 'left' | 'right' | LegacyToolt
  */
 type LegacyTooltipPlacement = 'auto' | 'auto-top' | 'auto-bottom' | 'auto-left' | 'auto-right'
 
-const FOCUSABLE_TAGS = new Set([
-  'a',
-  'button',
-  'input',
-  'select',
-  'textarea',
-  'audio',
-  'video',
-  'iframe',
-  'details',
-  'summary',
-])
-
-const isFocusableElement = (child: ReactNode): boolean => {
-  if (!isValidElement(child)) {
-    return false
-  }
-
-  return typeof child.type === 'string' && FOCUSABLE_TAGS.has(child.type)
-}
-
 export type TooltipRenderProps = Pick<
   HTMLAttributes<HTMLElement>,
-  | 'className'
   | 'onBlur'
   | 'onFocus'
   | 'onKeyDown'
@@ -48,7 +26,9 @@ export type TooltipRenderProps = Pick<
   | 'aria-describedby'
   | 'aria-labelledby'
 > & {
-  ref?: Ref<HTMLDivElement | null>
+  // `Ref<HTMLElement>` causes a type error on children functions
+  // oxlint-disable-next-line typescript/no-explicit-any
+  ref?: Ref<any>
 }
 
 export type TooltipProps = {
@@ -62,6 +42,9 @@ export type TooltipProps = {
    * on the trigger element.
    */
   children: ReactNode | ((renderProps: TooltipRenderProps) => ReactNode)
+  /**
+   * max-width of the tooltip element
+   */
   maxWidth?: number | string
   /**
    * Content of the tooltip, preferably text inside. When omitted, no tooltip is rendered.
@@ -77,6 +60,9 @@ export type TooltipProps = {
    * Force the tooltip to be visible. When set, the tooltip is controlled and won't react to hover/focus.
    */
   visible?: boolean
+  /**
+   * className added on the tooltip element
+   */
   className?: string
   /**
    *
@@ -92,6 +78,9 @@ export type TooltipProps = {
    */
   containerFullHeight?: boolean
   portalTarget?: HTMLElement
+  /**
+   * tabindex attribute for the tooltip trigger container
+   */
   tabIndex?: number
   /**
    * Delay (in ms) before the tooltip opens and closes.
@@ -106,6 +95,9 @@ export type TooltipProps = {
    * @deprecated The animation cannot be disabled
    */
   disableAnimation?: boolean
+  /**
+   * style added on the tooltip element
+   */
   style?: CSSProperties
   /**
    * Called when the tooltip visibility changes (open/close, including Escape dismiss).
@@ -134,7 +126,7 @@ export const Tooltip = ({
   role,
   debounceDelay,
   delay,
-  tabIndex,
+  tabIndex = 0,
   style,
   onOpenChange,
 }: TooltipProps) => {
@@ -153,51 +145,30 @@ export const Tooltip = ({
 
   const portalTargetEl = portalTarget ?? (typeof window !== 'undefined' ? document.body : null)
 
-  const renderProps: TooltipRenderProps = {
-    ...tooltip.getReferenceProps(),
-    className: tooltipStyle.childrenContainer({
-      fullHeight: containerFullHeight,
-      fullWidth: containerFullWidth,
-    }),
-    ref: tooltip.refs.setReference,
-  }
-
-  if (tooltip.isMounted) {
-    renderProps[role === 'label' ? 'aria-labelledby' : 'aria-describedby'] = tooltipId
-  }
-
   return (
     <>
-      {typeof children === 'function' ? (
-        children(renderProps)
-      ) : (
-        <div {...renderProps} tabIndex={tabIndex ?? (isFocusableElement(children) ? -1 : 0)}>
-          {children}
-        </div>
-      )}
+      <TooltipChildren
+        tooltip={tooltip}
+        containerFullHeight={containerFullHeight}
+        containerFullWidth={containerFullWidth}
+        tooltipId={tooltipId}
+        role={role}
+        tabIndex={tabIndex}
+      >
+        {children}
+      </TooltipChildren>
+
       {tooltip.isMounted && portalTargetEl
         ? createPortal(
-            <div
-              {...tooltip.getFloatingProps()}
+            <TooltipElement
+              tooltip={tooltip}
               id={tooltipId}
-              className={cn(
-                className,
-                tooltipStyle.tooltip,
-                tooltip.status === 'close' ? tooltipStyle.animation.exit : tooltipStyle.animation.enter,
-              )}
-              data-placement={tooltip.finalPlacement}
+              className={className}
+              style={style}
               data-testid={dataTestId}
-              ref={tooltip.refs.setFloating}
-              role="tooltip"
-              style={{
-                ...tooltip.floatingStyles,
-                maxWidth: typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth,
-                ...style,
-              }}
-            >
-              <div className={tooltipStyle.arrow} ref={tooltip.arrowRef} style={tooltip.arrowStyle} />
-              <div className={tooltipStyle.content}>{text}</div>
-            </div>,
+              maxWidth={maxWidth}
+              text={text}
+            />,
             portalTargetEl,
           )
         : null}

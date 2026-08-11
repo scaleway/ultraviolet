@@ -14,7 +14,7 @@ export const Placement = (props: ComponentProps<typeof Tooltip>) =>
 
 Placement.decorators = [
   Story => (
-    <Stack alignItems={'center'} gap={5} style={{ margin: '1rem' }}>
+    <Stack alignItems={'center'} gap={5} style={{ margin: '2rem 1rem 1rem' }}>
       <Story />
     </Stack>
   ),

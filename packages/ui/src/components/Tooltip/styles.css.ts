@@ -54,8 +54,8 @@ const content = style({
 })
 
 const animation = styleVariants({
-  enter: { animation: `${ANIMATION_DURATION}ms ${fadeIn}` },
-  exit: { animation: `${ANIMATION_DURATION}ms ${fadeOut}` },
+  enter: { animation: `${ANIMATION_DURATION}ms ${fadeIn} forwards` },
+  exit: { animation: `${ANIMATION_DURATION / 2}ms ${fadeOut} forwards` },
 })
 
 const childrenContainer = recipe({

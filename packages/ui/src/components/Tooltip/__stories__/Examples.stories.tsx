@@ -6,20 +6,20 @@ import { Stack } from '../../Stack'
 
 export const Examples = () => (
   <>
-    <Tooltip text="Information">
+    <Tooltip text="Information" role="label">
       <InformationIcon prominence="weak" sentiment="neutral" />
     </Tooltip>
-    <Tooltip text="Label">
+
+    <Tooltip text="Label" role="label">
       <Button size="medium" sentiment="neutral" variant="ghost">
         <HelpCircleOutlineIcon size="medium" />
       </Button>
     </Tooltip>
+
     <Tooltip text="Description">
-      {props => (
-        <Button {...props} size="medium" variant="outlined">
-          <SettingsOutlineIcon size="small" /> Settings
-        </Button>
-      )}
+      <Button size="medium" variant="outlined">
+        <SettingsOutlineIcon size="small" /> Settings
+      </Button>
     </Tooltip>
   </>
 )

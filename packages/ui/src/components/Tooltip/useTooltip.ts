@@ -14,6 +14,7 @@ import {
   useDismiss,
   useInteractions,
 } from '@floating-ui/react'
+import { usePrefersReducedMotion } from '@ultraviolet/animations'
 import { useState, useRef, useCallback } from 'react'
 import type { CSSProperties } from 'react'
 import type { TooltipPlacement } from '.'
@@ -57,8 +58,11 @@ export const useTooltip = ({ visible, placement, delay, onOpenChange }: UseToolt
     placement: (placement.replace(/auto-?/, '') || 'top') as Placement,
   })
 
+  // remove the transition when prefers reduced motion, mostly to avoid waiting in tests
+  const prefersReducedMotion = usePrefersReducedMotion()
+
   const { isMounted, status } = useTransitionStatus(context, {
-    duration: ANIMATION_DURATION,
+    duration: prefersReducedMotion ? 0 : ANIMATION_DURATION,
   })
 
   const hover = useHover(context, {
