@@ -1,7 +1,7 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import { beforeAll, describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { PieChart } from '..'
 import {
   data,
@@ -11,15 +11,6 @@ import {
 } from '../__stories__/mockData'
 
 describe('pieChart', () => {
-  beforeAll(() => {
-    // Have to mock ResizeObserver as Nivo doesn't add automatically ResizeObserver polyfill anymore (v0.79.0)
-    window.ResizeObserver = vi.fn().mockReturnValue({
-      disconnect: vi.fn(),
-      observe: vi.fn(),
-      unobserve: vi.fn(),
-    })
-  })
-
   it('renders correctly with no props', () => {
     const { asFragment } = renderWithTheme(<PieChart />)
     expect(asFragment()).toMatchSnapshot()
