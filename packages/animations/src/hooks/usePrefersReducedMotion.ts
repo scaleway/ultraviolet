@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 const QUERY = '(prefers-reduced-motion: no-preference)'
 
@@ -19,11 +19,17 @@ const QUERY = '(prefers-reduced-motion: no-preference)'
  * ```
  */
 export function usePrefersReducedMotion() {
+  const supportsMatchMedia = useMemo(() => typeof window !== 'undefined' && typeof window.matchMedia === 'function', [])
+
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(
-    typeof window === 'undefined' ? true : !window.matchMedia(QUERY).matches,
+    supportsMatchMedia ? !window.matchMedia(QUERY).matches : true,
   )
 
   useEffect(() => {
+    if (!supportsMatchMedia) {
+      return
+    }
+
     const mediaQueryList = window.matchMedia(QUERY)
 
     const listener = (event: MediaQueryListEvent) => {
@@ -34,7 +40,7 @@ export function usePrefersReducedMotion() {
     return () => {
       mediaQueryList.removeEventListener('change', listener)
     }
-  }, [])
+  }, [supportsMatchMedia])
 
   return prefersReducedMotion
 }

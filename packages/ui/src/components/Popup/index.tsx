@@ -352,6 +352,12 @@ export const Popup = forwardRef(
 
     useLayoutEffect(() => {
       const currentRef = childrenRef.current
+
+      if (typeof ResizeObserver === 'undefined') {
+        generatePopupPositions()
+        return
+      }
+
       const mutationObserver = new MutationObserver(() => {
         generatePopupPositions()
       })

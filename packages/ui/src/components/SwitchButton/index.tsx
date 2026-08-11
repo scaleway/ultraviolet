@@ -76,7 +76,7 @@ export const SwitchButton = ({
 
   useEffect(() => {
     const element = getElement(localValue)
-    if (!element) {
+    if (!element || typeof ResizeObserver === 'undefined') {
       return undefined
     }
 
