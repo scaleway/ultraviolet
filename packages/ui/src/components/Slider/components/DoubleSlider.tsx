@@ -229,8 +229,8 @@ export const DoubleSlider = ({
   }, [tooltip, selectedIndexes])
 
   const placementTooltip = [
-    ((selectedIndexes[0] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) + THUMB_SIZE / 2,
-    ((selectedIndexes[1] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) + THUMB_SIZE / 2,
+    ((selectedIndexes[0] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) + THUMB_SIZE / 2 - sliderWidth / 2,
+    ((selectedIndexes[1] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) + THUMB_SIZE / 2 - sliderWidth / 2,
   ]
 
   const [leftToShow, rightToShow] =
@@ -305,15 +305,7 @@ export const DoubleSlider = ({
               <input
                 aria-describedby={ariaDescribedBy}
                 aria-label={ariaLabel ?? name}
-                className={cn(
-                  className,
-                  sliderStyle.double({ disabled, hasTooltip: !!tooltip }),
-                  sliderStyle.thumbStyle({
-                    disabled: !!disabled,
-                    hasTooltipDouble: !!tooltip,
-                    isDouble: true,
-                  }),
-                )}
+                className={cn(className, sliderStyle.double({ disabled }), sliderStyle.thumbStyle({ disabled }))}
                 data-direction={direction}
                 data-error={error}
                 data-testid={`${dataTestId ?? 'handle'}-left`}
@@ -350,15 +342,7 @@ export const DoubleSlider = ({
               <input
                 aria-describedby={ariaDescribedBy}
                 aria-label={ariaLabel ?? name}
-                className={cn(
-                  className,
-                  sliderStyle.double({ disabled, hasTooltip: !!tooltip }),
-                  sliderStyle.thumbStyle({
-                    disabled,
-                    hasTooltipDouble: !!tooltip,
-                    isDouble: true,
-                  }),
-                )}
+                className={cn(className, sliderStyle.double({ disabled }), sliderStyle.thumbStyle({ disabled }))}
                 data-direction={direction}
                 data-error={error}
                 data-testid={`${dataTestId ?? 'handle'}-right`}

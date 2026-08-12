@@ -12,7 +12,7 @@ export const leftOption = createVar()
 const container = style({ marginBottom: theme.space[3] })
 
 const tooltip = style({
-  left: tooltipLeft,
+  left: `${tooltipLeft} !important`,
   position: 'absolute',
   width: 'fit-content',
 })
@@ -69,13 +69,13 @@ const sliderThumbDefaultStyle = {
   transition: 'background 0.3s ease-in-out',
   WebkitAppearance: 'none',
   width: `${THUMB_SIZE}px`,
+  top: '50%',
+  transform: 'translateY(-50%)',
 } as CSSProperties
 
 const thumbStyle = recipe({
   defaultVariants: {
     disabled: false,
-    hasTooltipDouble: true,
-    isDouble: false,
   },
   variants: {
     disabled: {
@@ -112,34 +112,6 @@ const thumbStyle = recipe({
           },
           '&::-webkit-slider-thumb': {
             cursor: 'not-allowed',
-          },
-        },
-      },
-    },
-    hasTooltipDouble: {
-      false: {
-        selectors: {
-          '&::-webkit-slider-thumb': {
-            top: `-${THUMB_SIZE / 2}px`,
-          },
-        },
-      },
-    },
-    isDouble: {
-      false: {
-        selectors: {
-          '&::-moz-range-thumb': {
-            top: `-${THUMB_SIZE / 4}px`,
-          },
-          '&::-webkit-slider-thumb': {
-            top: `-${THUMB_SIZE / 4}px`,
-          },
-        },
-      },
-      true: {
-        selectors: {
-          '&::-webkit-slider-thumb': {
-            top: `${THUMB_SIZE / 8}px`,
           },
         },
       },
@@ -190,14 +162,13 @@ const double = recipe({
       '&::-webkit-slider-thumb': {
         ...sliderThumbDefaultStyle,
         left: leftVar,
-        top: `calc(-1 * ${theme.space['1']})`,
       },
     },
     width: '100%',
+    inset: 0,
   },
   defaultVariants: {
     disabled: false,
-    hasTooltip: false,
   },
   variants: {
     disabled: {
@@ -210,16 +181,6 @@ const double = recipe({
         },
       },
       true: {},
-    },
-
-    hasTooltip: {
-      true: {
-        selectors: {
-          '&::-moz-range-thumb': {
-            transform: 'translate(0, -10px)',
-          },
-        },
-      },
     },
   },
 })
@@ -247,6 +208,7 @@ const single = recipe({
       },
     },
     width: '100%',
+    inset: 0,
   },
   variants: {
     direction: {

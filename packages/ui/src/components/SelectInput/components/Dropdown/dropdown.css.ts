@@ -87,6 +87,7 @@ export const dropdownGroupWrapper = style({
 })
 
 export const emptyStateGroupStyle = style({
+  flexGrow: 1,
   textAlign: 'left',
   paddingBlock: theme.space['1.5'],
   paddingInline: theme.space[2],

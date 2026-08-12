@@ -250,19 +250,76 @@ export const TagInput = ({
                   <Button
                     aria-label="clear value"
                     disabled={disabled}
-                    onClick={clearAll}
+                    isLoading={status[tag.index] === STATUS.LOADING}
+                    key={tag.index}
+                    onClose={
+                      readOnly
+                        ? undefined
+                        : e => {
+                            e.stopPropagation()
+                            deleteTag(tag.index)
+                          }
+                    }
                     sentiment="neutral"
-                    size="xsmall"
-                    variant="ghost"
                   >
-                    <CloseIcon />
-                  </Button>
-                ) : null}
-                {success ? <CheckCircleOutlineIcon disabled={disabled} sentiment="success" size="small" /> : null}
-                {error ? <AlertCircleIcon disabled={disabled} sentiment="danger" size="small" /> : null}
+                    {tag.label}
+                  </Tag>
+                ))}
+                {disabled ? null : (
+                  <input
+                    {...tooltipProps}
+                    aria-describedby={
+                      tooltipProps['aria-describedby'] ||
+                      ariaDescribedBy ||
+                      (hasHelperText(helper, error, success) ? helperId : undefined)
+                    }
+                    aria-label={ariaLabel}
+                    className={tagInputStyle.tagInput}
+                    data-size={size}
+                    id={localId}
+                    name={name}
+                    onBlur={e => {
+                      addTag()
+                      tooltipProps.onBlur?.(e)
+                    }}
+                    onChange={onInputChange}
+                    onKeyDown={e => {
+                      handleInputKeydown(e)
+                      tooltipProps.onKeyDown?.(e)
+                    }}
+                    placeholder={tagInputState.length === 0 ? placeholder : ''}
+                    readOnly={readOnly}
+                    ref={ref => {
+                      inputRef.current = ref
+                      if (typeof tooltipProps.ref === 'function') tooltipProps.ref(ref)
+                      else if (tooltipProps.ref) tooltipProps.ref.current = ref
+                    }}
+                    style={style}
+                    type="text"
+                    value={input}
+                  />
+                )}
               </div>
-            ) : null}
-          </div>
+              {computedClearable || success || error ? (
+                <div className={tagInputStyle.stateContainer}>
+                  {computedClearable ? (
+                    <Button
+                      aria-label="clear value"
+                      disabled={disabled}
+                      onClick={clearAll}
+                      sentiment="neutral"
+                      size="xsmall"
+                      variant="ghost"
+                    >
+                      <CloseIcon />
+                    </Button>
+                  ) : null}
+                  {success ? <CheckCircleOutlineIcon disabled={disabled} sentiment="success" size="small" /> : null}
+                  {error ? <AlertCircleIcon disabled={disabled} sentiment="danger" size="small" /> : null}
+                </div>
+              ) : null}
+            </div>
+          )}
         </Tooltip>
       </div>
       <Description

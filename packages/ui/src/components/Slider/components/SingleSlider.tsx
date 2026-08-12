@@ -213,7 +213,7 @@ export const SingleSlider = ({
             className={cn(
               className,
               sliderStyle.single({ direction, disabled, error: !!error }),
-              sliderStyle.thumbStyle({ disabled, isDouble: false }),
+              sliderStyle.thumbStyle({ disabled }),
             )}
             data-direction={direction}
             data-error={!!error}
