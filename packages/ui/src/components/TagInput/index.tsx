@@ -5,7 +5,7 @@ import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIco
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn, getUUID } from '@ultraviolet/utils'
 import { useEffect, useId, useRef, useState } from 'react'
-import type { ChangeEvent, CSSProperties, KeyboardEventHandler, ReactNode } from 'react'
+import type { ChangeEvent, ComponentProps, CSSProperties, KeyboardEventHandler, ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { Button } from '../Button'
 import { Description } from '../Description'
@@ -60,7 +60,7 @@ type TagInputProps = {
   clearable?: boolean
   style?: CSSProperties
   'aria-describedBy'?: string
-}
+} & Pick<ComponentProps<typeof Tag>, 'sentiment' | 'variant'>
 
 /**
  * TagInput is a component that allows users to input tags.
@@ -86,6 +86,8 @@ export const TagInput = ({
   tooltip,
   clearable = false,
   style,
+  variant = 'default',
+  sentiment = 'neutral',
   'aria-describedBy': ariaDescribedBy,
 }: TagInputProps) => {
   const [tagInputState, setTagInput] = useState(convertTagArrayToTagStateArray(value))
@@ -216,7 +218,8 @@ export const TagInput = ({
                           deleteTag(tag.index)
                         }
                   }
-                  sentiment="neutral"
+                  sentiment={sentiment}
+                  variant={variant}
                 >
                   {tag.label}
                 </Tag>

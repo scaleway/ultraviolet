@@ -9,7 +9,9 @@ import { Tag } from '../Tag'
 import { DEFAULT_POPOVER_MAX_HEIGHT, MIN_TAG_WIDTH, TAGS_GAP } from './constant'
 import { popoverTriggerWidthVar, tagListStyle } from './styles.css'
 
-export type TagType = string | { label: string; icon: ReactNode }
+type TagKeyValue = { key: string; value: string }
+type TagIcon = { label: string; icon: ReactNode }
+export type TagType = string | TagKeyValue | TagIcon
 
 type TagListProps = {
   /**
@@ -42,11 +44,27 @@ type TagListProps = {
   className?: string
   'data-testid'?: string
   style?: CSSProperties
-} & Pick<ComponentProps<typeof Tag>, 'copiable' | 'copyText' | 'copiedText'>
+} & Pick<ComponentProps<typeof Tag>, 'copiable' | 'copyText' | 'copiedText' | 'variant' | 'sentiment'>
 
 const DEFAULT_TAGS: TagListProps['tags'] = []
 
-const getTagLabel = (tag: NonNullable<TagListProps['tags']>[number]) => (typeof tag === 'object' ? tag.label : tag)
+const isLabelIconTag = (tag: TagType): tag is TagIcon =>
+  typeof tag === 'object' && tag !== null && 'label' in tag && 'icon' in tag
+
+const isKeyValueTag = (tag: TagType): tag is TagKeyValue =>
+  typeof tag === 'object' && tag !== null && 'key' in tag && 'value' in tag
+
+const getTagLabel = (tag: NonNullable<TagListProps['tags']>[number]) => {
+  if (isKeyValueTag(tag)) {
+    return `${tag.key}-${tag.value}`
+  }
+
+  if (isLabelIconTag(tag)) {
+    return tag.label
+  }
+
+  return tag
+}
 
 /**
  * This component is used to display a list of tags with a threshold and a popover when there are too many tags.
@@ -62,6 +80,8 @@ export const TagList = ({
   copiable,
   copyText,
   copiedText,
+  sentiment = 'neutral',
+  variant = 'default',
   className,
   'data-testid': dataTestId,
   style,
@@ -218,32 +238,30 @@ export const TagList = ({
     }
   }, [hiddenTags, threshold, visibleTags, visibleTags.length, containerRef.current?.parentElement?.offsetWidth])
 
-  const renderTag = (tag: TagType, index: number, isEllipsis = false, hidden?: boolean) =>
-    typeof tag !== 'string' && tag.icon ? (
-      <Tag
-        className={cn(isEllipsis ? 'ellipsed' : '', tagListStyle.ellipsisChild)}
-        copiable={copiable}
-        copiedText={copiedText}
-        copyText={copyText}
-        // useful when two tags are identical `${tag}-${index}`
-        key={`${getTagLabel(tag)}-${index}`}
-        data-testid={hidden ? '' : getTagLabel(tag)}
-      >
-        {tag.icon}
-        {getTagLabel(tag)}
-      </Tag>
-    ) : (
-      <Tag
-        className={cn(isEllipsis ? 'ellipsed' : '', tagListStyle.ellipsisChild)}
-        copiable={copiable}
-        copiedText={copiedText}
-        copyText={copyText}
-        key={`${getTagLabel(tag)}-${index}`}
-        data-testid={hidden ? '' : getTagLabel(tag)}
-      >
+  const renderTag = (tag: TagType, index: number, isEllipsis = false, hidden?: boolean) => {
+    const commonProps = {
+      className: cn(isEllipsis ? 'ellipsed' : '', tagListStyle.ellipsisChild),
+      copiable: copiable,
+      copiedText: copiedText,
+      copyText: copyText,
+      // useful when two tags are identical `${tag}-${index}`
+      key: `${getTagLabel(tag)}-${index}`,
+      'data-testid': hidden ? '' : getTagLabel(tag),
+      variant: variant,
+      sentiment: sentiment,
+    }
+
+    if (isKeyValueTag(tag)) {
+      return <Tag keyValue={tag} {...commonProps} />
+    }
+
+    return (
+      <Tag {...commonProps}>
+        {isLabelIconTag(tag) ? tag.icon : undefined}
         {getTagLabel(tag)}
       </Tag>
     )
+  }
 
   return (
     <div
