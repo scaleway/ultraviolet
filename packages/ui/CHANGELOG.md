@@ -1,5 +1,24 @@
 # Change Log
 
+## 3.22.0
+
+### Minor Changes
+
+- [#6767](https://github.com/scaleway/ultraviolet/pull/6767) [`a213459`](https://github.com/scaleway/ultraviolet/commit/a213459fa2375092f292b12681a11493c76f9566) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `VisuallyHidden`: use this component to visually hide content while leaving it available to screen readers. It is preferred to `aria-label` for accessible labels.
+
+### Patch Changes
+
+- [#6782](https://github.com/scaleway/ultraviolet/pull/6782) [`70adb71`](https://github.com/scaleway/ultraviolet/commit/70adb710bf8ed407ce3e9de007b80ddc495e590b) Thanks [@jsulpis](https://github.com/jsulpis)! - avoid crashing when window.matchMedia or ResizeObserver are not defined (e.g. in tests)
+
+- [#6770](https://github.com/scaleway/ultraviolet/pull/6770) [`4e9faf4`](https://github.com/scaleway/ultraviolet/commit/4e9faf40669ddf865c473059806e3ec9cf1562c6) Thanks [@lisalupi](https://github.com/lisalupi)! - `Filters`: add prop `labelDescription` to all filter items (date, multiselect, search, etc.)
+
+- [#6773](https://github.com/scaleway/ultraviolet/pull/6773) [`d45b34d`](https://github.com/scaleway/ultraviolet/commit/d45b34d5af1a7d4e2ce2fa3f7bb365e651346ab3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@vanilla-extract/css` to `1.21.2`.
+
+- Updated dependencies [[`70adb71`](https://github.com/scaleway/ultraviolet/commit/70adb710bf8ed407ce3e9de007b80ddc495e590b), [`d45b34d`](https://github.com/scaleway/ultraviolet/commit/d45b34d5af1a7d4e2ce2fa3f7bb365e651346ab3)]:
+  - @ultraviolet/animations@1.0.2
+  - @ultraviolet/icons@5.4.9
+  - @ultraviolet/themes@3.1.11
+
 ## 3.21.2
 
 ### Patch Changes

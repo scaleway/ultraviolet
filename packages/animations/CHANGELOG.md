@@ -1,5 +1,11 @@
 # @ultraviolet/animations
 
+## 1.0.2
+
+### Patch Changes
+
+- [#6782](https://github.com/scaleway/ultraviolet/pull/6782) [`70adb71`](https://github.com/scaleway/ultraviolet/commit/70adb710bf8ed407ce3e9de007b80ddc495e590b) Thanks [@jsulpis](https://github.com/jsulpis)! - avoid crashing when window.matchMedia or ResizeObserver are not defined (e.g. in tests)
+
 ## 1.0.1
 
 ### Patch Changes
