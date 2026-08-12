@@ -66,18 +66,18 @@ describe('tag', () => {
   })
 
   it('works correctly with copiable', async () => {
-    const { asFragment } = renderWithTheme(<Tag copiable>test</Tag>)
+    renderWithTheme(<Tag copiable>test</Tag>)
 
     const tag = screen.getByRole('button', { name: 'test' })
 
     await userEvent.click(tag)
     expect(writeTextMock).toHaveBeenCalledExactlyOnceWith('test')
-
-    expect(asFragment()).toMatchSnapshot()
+    expect(tag).toHaveAccessibleDescription('Copied!')
+    expect(screen.getByRole('tooltip', { name: 'Copied!' })).toBeVisible()
   })
 
   it('works correctly with copiable - number children', async () => {
-    const { asFragment } = renderWithTheme(<Tag copiable>3</Tag>)
+    renderWithTheme(<Tag copiable>3</Tag>)
 
     const tag = screen.getByRole('button', { name: '3' })
 
@@ -85,7 +85,8 @@ describe('tag', () => {
 
     expect(writeTextMock).toHaveBeenCalledExactlyOnceWith('3')
 
-    expect(asFragment()).toMatchSnapshot()
+    expect(tag).toHaveAccessibleDescription('Copied!')
+    expect(screen.getByRole('tooltip', { name: 'Copied!' })).toBeVisible()
   })
 
   it('should not close with onClose and disabled', async () => {
@@ -153,13 +154,13 @@ describe('tag', () => {
   })
 
   it('works correctly with copiable and key-value', async () => {
-    const { asFragment } = renderWithTheme(<Tag copiable keyValue={{ key: 'myKey', value: 'myValue' }} />)
+    renderWithTheme(<Tag copiable keyValue={{ key: 'myKey', value: 'myValue' }} />)
 
     const tag = screen.getByRole('button', { name: 'myKey myValue' })
 
     await userEvent.click(tag)
     expect(writeTextMock).toHaveBeenCalledExactlyOnceWith('myKey:myValue')
-
-    expect(asFragment()).toMatchSnapshot()
+    expect(tag).toHaveAccessibleDescription('Copied!')
+    expect(screen.getByRole('tooltip', { name: 'Copied!' })).toBeVisible()
   })
 })
