@@ -5,4 +5,4 @@ COPY ./storybook-static ./storybook-static
 
 EXPOSE 80/tcp
 
-CMD npx http-server@14.1.1 ./storybook-static -p 80
+CMD npx http-server@14.1.1 ./storybook-static --port 80 --gzip --brotli
