@@ -42,7 +42,7 @@ export const IpfsNamingProductIcon = ({ ...props }: Omit<IconProps, 'children' |
             fillRule="evenodd"
           />
         </g>
-        <g>
+        <g fill="#521094" className="fill">
           <path
             d="M17 9.071C17 7.375 18.343 6 20 6h24c1.657 0 3 1.375 3 3.071V19.31c0 1.696-1.343 3.071-3 3.071H20c-1.657 0-3-1.375-3-3.071zm3-1.024c-.552 0-1 .459-1 1.024V19.31c0 .565.448 1.023 1 1.023h24c.552 0 1-.458 1-1.023V9.07c0-.565-.448-1.024-1-1.024H20Z"
             clipRule="evenodd"
