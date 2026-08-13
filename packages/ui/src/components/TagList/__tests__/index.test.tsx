@@ -246,7 +246,13 @@ describe('tagList', () => {
   })
 
   it('renders correctly when clicking on popover', async () => {
-    const tags: TagType[] = [{ icon: 'id', label: 'smooth' }, 'code', { icon: 'lock', label: 'hello' }, 'world']
+    const tags: TagType[] = [
+      { icon: 'id', label: 'smooth' },
+      'code',
+      { icon: 'lock', label: 'hello' },
+      'world',
+      { key: 'key', value: 'value' },
+    ]
 
     mockOffsetWidth()
 
@@ -302,7 +308,14 @@ describe('tagList', () => {
     mockOffsetWidth()
 
     const { asFragment } = renderWithTheme(
-      <TagList data-testid="taglist" popoverMaxHeight="100px" popoverTitle="Additional" tags={tags} threshold={5} />,
+      <TagList
+        data-testid="taglist"
+        popoverMaxHeight="100px"
+        popoverTitle="Additional"
+        tags={tags}
+        threshold={5}
+        variant="code"
+      />,
     )
 
     expect(screen.queryByText('Additional')).not.toBeInTheDocument()
