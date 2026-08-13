@@ -1,12 +1,14 @@
-![](.storybook/assets/logo-dark.png#gh-dark-mode-only)
-![](.storybook/assets/logo-light.png#gh-light-mode-only)
-
-![Codecov](https://img.shields.io/codecov/c/github/scaleway/ultraviolet)
-![GitHub last commit](https://img.shields.io/github/last-commit/scaleway/ultraviolet)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/scaleway/ultraviolet)
-![GitHub contributors](https://img.shields.io/github/contributors/scaleway/ultraviolet)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/scaleway/ultraviolet)
-![GitHub](https://img.shields.io/github/license/scaleway/ultraviolet)
+<p align="center">
+  <img src=".storybook/assets/logo-dark.png#gh-dark-mode-only" width="400" alt="Ultraviolet logo" />
+  <img src=".storybook/assets/logo-light.png#gh-light-mode-only" width="400" alt="Ultraviolet logo" />
+  <br />
+  <img src="https://img.shields.io/codecov/c/github/scaleway/ultraviolet" alt="Codecov" style="margin: 2px"/>
+  <img src="https://img.shields.io/github/last-commit/scaleway/ultraviolet" alt="GitHub last commit" style="margin: 2px"/>
+  <img src="https://img.shields.io/github/issues-closed/scaleway/ultraviolet" alt="GitHub closed issues" style="margin: 2px"/>
+  <img src="https://img.shields.io/github/contributors/scaleway/ultraviolet" alt="GitHub contributors" style="margin: 2px"/>
+  <img src="https://img.shields.io/github/commit-activity/m/scaleway/ultraviolet" alt="GitHub commit activity" style="margin: 2px"/>
+  <img src="https://img.shields.io/github/license/scaleway/ultraviolet" alt="GitHub" style="margin: 2px"/>
+</p>
 
 # Ultraviolet Core
 
