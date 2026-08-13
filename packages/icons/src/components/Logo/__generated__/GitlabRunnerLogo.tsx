@@ -17,7 +17,7 @@ export const GitlabRunnerLogo = ({ ...props }: Omit<IconProps, 'children' | 'tit
     <Icon {...props} title="GitlabRunnerLogo">
       {isLight ? (
         <>
-          <path fill="url(#pattern0_341_672)" d="M0 0H20V20H0z" />
+          <path fill="url(#pattern0_341_672)" d="M0 0h20v20H0z" />
           <defs>
             <pattern id="pattern0_341_672" patternContentUnits="objectBoundingBox">
               <use xlinkHref="#image0_341_672" transform="scale(.00284)" />
@@ -31,7 +31,7 @@ export const GitlabRunnerLogo = ({ ...props }: Omit<IconProps, 'children' | 'tit
         </>
       ) : (
         <>
-          <path fill="url(#pattern0_378_452)" d="M0 0H20V20H0z" />
+          <path fill="url(#pattern0_378_452)" d="M0 0h20v20H0z" />
           <defs>
             <pattern id="pattern0_378_452" patternContentUnits="objectBoundingBox">
               <use xlinkHref="#image0_378_452" transform="scale(.00284)" />
