@@ -121,10 +121,7 @@ exports[`tag > renders correctly with copiable and copy button 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="_r_m_"
-      aria-describedby="_r_m_"
-      class="styles__w40vpo9"
-      tabindex="0"
+      class="styles__1y5sygv5"
     >
       <div
         class="styles_copiable__d6zknp0 styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
@@ -191,7 +188,7 @@ exports[`tag > renders correctly with icon 1`] = `
             </title>
             <path
               clip-rule="evenodd"
-              d="M8 1a3.5 3.5 0 0 0-3.5 3.5V7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7V4.5A3.5 3.5 0 0 0 8 1m2 6V4.5a2 2 0 1 0-4 0V7z"
+              d="M8 1C6.067 1 4.5 2.567 4.5 4.5L4.5 7C3.67157 7 3 7.67157 3 8.5V13.5C3 14.3284 3.67157 15 4.5 15H11.5C12.3284 15 13 14.3284 13 13.5V8.5C13 7.67157 12.3284 7 11.5 7V4.5C11.5 2.567 9.933 1 8 1ZM10 7V4.5C10 3.39543 9.10457 2.5 8 2.5C6.89543 2.5 6 3.39543 6 4.5V7H10Z"
               fill-rule="evenodd"
             />
           </svg>
@@ -460,16 +457,14 @@ exports[`tag > works correctly with copiable - number children 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="_r_g_"
-      aria-describedby="_r_g_"
-      class="styles__w40vpo9"
-      tabindex="0"
+      class="styles__1y5sygv5"
     >
       <div
         class="styles_copiable__d6zknp0 styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
         style="--_4k0ekn0: fit-content; --_4k0ekn1: 100%;"
       >
         <button
+          aria-describedby="_r_11_"
           class="styles_copiable__d6zknp3 styles__d6zknp5 styles_copiable_true__d6zknp6 styles_sentiment_neutral__d6zknpb styles_isButton_false__d6zknph styles_undefined_compound_2__d6zknpk"
         >
           <span
@@ -478,6 +473,25 @@ exports[`tag > works correctly with copiable - number children 1`] = `
             3
           </span>
         </button>
+      </div>
+    </div>
+    <div
+      class="styles__1y5sygv0"
+      data-floating-ui-focusable=""
+      data-placement="top"
+      id="_r_11_"
+      role="tooltip"
+      style="position: absolute; left: 0px; top: 0px; max-width: 232px; transform: translate(0px, -8px);"
+      tabindex="-1"
+    >
+      <div
+        class="styles__1y5sygv1"
+        style="left: 0px;"
+      />
+      <div
+        class="styles__1y5sygv2"
+      >
+        Copied!
       </div>
     </div>
   </div>
@@ -490,16 +504,14 @@ exports[`tag > works correctly with copiable 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="_r_e_"
-      aria-describedby="_r_e_"
-      class="styles__w40vpo9"
-      tabindex="0"
+      class="styles__1y5sygv5"
     >
       <div
         class="styles_copiable__d6zknp0 styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
         style="--_4k0ekn0: fit-content; --_4k0ekn1: 100%;"
       >
         <button
+          aria-describedby="_r_t_"
           class="styles_copiable__d6zknp3 styles__d6zknp5 styles_copiable_true__d6zknp6 styles_sentiment_neutral__d6zknpb styles_isButton_false__d6zknph styles_undefined_compound_2__d6zknpk"
         >
           <span
@@ -508,6 +520,25 @@ exports[`tag > works correctly with copiable 1`] = `
             test
           </span>
         </button>
+      </div>
+    </div>
+    <div
+      class="styles__1y5sygv0"
+      data-floating-ui-focusable=""
+      data-placement="top"
+      id="_r_t_"
+      role="tooltip"
+      style="position: absolute; left: 0px; top: 0px; max-width: 232px; transform: translate(0px, -8px);"
+      tabindex="-1"
+    >
+      <div
+        class="styles__1y5sygv1"
+        style="left: 0px;"
+      />
+      <div
+        class="styles__1y5sygv2"
+      >
+        Copied!
       </div>
     </div>
   </div>
@@ -520,16 +551,14 @@ exports[`tag > works correctly with copiable and key-value 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="_r_u_"
-      aria-describedby="_r_u_"
-      class="styles__w40vpo9"
-      tabindex="0"
+      class="styles__1y5sygv5"
     >
       <div
         class="styles_copiable__d6zknp0 styles__toi52u0 styles_flexDirection_row_xxsmall__toi52u2j"
         style="--_4k0ekn0: fit-content; --_4k0ekn1: 100%;"
       >
         <button
+          aria-describedby="_r_1t_"
           class="styles_copiable__d6zknp3 styles__d6zknp5 styles_copiable_true__d6zknp6 styles_sentiment_neutral__d6zknpb styles_isButton_false__d6zknph styles_undefined_compound_2__d6zknpk"
         >
           <span
@@ -548,6 +577,25 @@ exports[`tag > works correctly with copiable and key-value 1`] = `
             </div>
           </span>
         </button>
+      </div>
+    </div>
+    <div
+      class="styles__1y5sygv0"
+      data-floating-ui-focusable=""
+      data-placement="top"
+      id="_r_1t_"
+      role="tooltip"
+      style="position: absolute; left: 0px; top: 0px; max-width: 232px; transform: translate(0px, -8px);"
+      tabindex="-1"
+    >
+      <div
+        class="styles__1y5sygv1"
+        style="left: 0px;"
+      />
+      <div
+        class="styles__1y5sygv2"
+      >
+        Copied!
       </div>
     </div>
   </div>
