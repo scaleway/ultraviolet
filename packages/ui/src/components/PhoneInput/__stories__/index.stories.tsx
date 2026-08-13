@@ -4,7 +4,15 @@ import { PhoneInput } from '..'
 export default {
   component: PhoneInput,
   title: 'UI/Data Entry/PhoneInput',
-} as Meta<typeof PhoneInput>
+  parameters: {
+    a11yStatus: {
+      perceivable: false,
+      operable: true,
+      understandable: false,
+      robust: true,
+    },
+  },
+} satisfies Meta<typeof PhoneInput>
 
 export { Playground } from './Playground.stories'
 export { Default } from './Default.stories'
