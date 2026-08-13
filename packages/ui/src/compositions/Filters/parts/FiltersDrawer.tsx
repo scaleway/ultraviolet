@@ -1,5 +1,6 @@
 import { useId } from 'react'
 import type { ComponentType, SubmitEvent } from 'react'
+import { Row } from '../../../components'
 import { Button } from '../../../components/Button'
 import { Drawer } from '../../../components/Drawer'
 import { Separator } from '../../../components/Separator'
@@ -16,6 +17,7 @@ export type DrawerProps<V extends AnyObject = AnyObject> = {
   labels: {
     submit: string
     clear: string
+    clearAll: string
     drawerHeader: string
   }
 }
@@ -43,9 +45,14 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
   return (
     <Drawer
       footer={
-        <Button form={formId} type="submit">
-          {labels.submit}
-        </Button>
+        <Row gap={2} templateColumns="1fr 1fr">
+          <Button variant="outlined" onClick={() => filters.reset()} disabled={filters.dirtyFilters.length === 0}>
+            {labels.clearAll}
+          </Button>
+          <Button form={formId} type="submit">
+            {labels.submit}
+          </Button>
+        </Row>
       }
       header={labels.drawerHeader}
       hideOnClickOutside={false}

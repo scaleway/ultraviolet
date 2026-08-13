@@ -86,7 +86,7 @@ export const FiltersMainRow = <V extends AnyObject>({
             {filters.appliedFilters.length > 0 ? ` (${filters.appliedFilters.length})` : null}
           </Button>
         ) : null}
-        <Button onClick={handleReset} size={filterSize} variant="ghost">
+        <Button onClick={handleReset} size={filterSize} variant="ghost" disabled={filters.appliedFilters.length === 0}>
           {labels.clearAll}
         </Button>
       </Stack>
