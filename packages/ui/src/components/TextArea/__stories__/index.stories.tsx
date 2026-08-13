@@ -6,8 +6,8 @@ export default {
   title: 'UI/Data Entry/TextArea',
   parameters: {
     a11yStatus: {
-      perceivable: false,
-      operable: false,
+      perceivable: true,
+      operable: true,
       understandable: false,
       robust: false,
     },
