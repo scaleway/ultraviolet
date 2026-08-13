@@ -1,0 +1,59 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/Radio/A11y" />
+
+# Radio - Accessibility
+
+## Description
+
+A form input component used to select a single option from a group of options. Supports checked/unchecked states, error states with helper text, disabled state, required field indication, tooltip support, and two sizes (small/medium).
+
+## Summary
+
+1. ❌ **Perceivable**: Focus indicator contrast is insufficient (1.32:1 light, 1.63:1 dark, 1.34:1 darker themes)
+2. ❌ **Operable**: Focus indicator contrast fails WCAG 1.4.11 (all themes below 3:1 minimum); tooltip wrapper may interfere with keyboard navigation
+3. ✅ **Understandable**: Labels and helper text are properly associated via htmlFor and aria-describedby
+4. ❌ **Robust**: SVG contains `<title>radio</title>` which is confusing; missing radiogroup semantics at component level
+
+## ARIA Pattern
+
+[ARIA Radio Group Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/radio/)
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Focus ring contrast ratio is 1.32:1 (light theme), 1.63:1 (dark theme), 1.34:1 (darker theme); minimum required is 3:1
+- ✅ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - Label provided via label prop, associated via htmlFor
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - SVG `<title>radio</title>` is confusing and not meaningful to screen readers
+- ✅ [ARIA Radio Role](https://www.w3.org/WAI/ARIA/apg/patterns/radio/) - Native `<input type="radio">` provides correct role and aria-checked state
+
+To apply when using the component:
+
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Ensure error state is not conveyed by color alone (component provides error text via Description)
+- [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - When `error` prop is a boolean, provide a descriptive error message and ensure it's properly linked to the radio (via component `Description`)
+- [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - When multiple Radio components are used together, they must be wrapped in a container with `role="radiogroup"` and `aria-label` or `aria-labelledby` to convey the group relationship
+- [WCAG 2.4.6 - Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html) - Ensure the `label` prop provides a clear, descriptive, and accessible label that explains the option being selected. Avoid generic labels like "Option 1" or "Yes/No" without context
+- [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - The `label` prop must always be provided with meaningful text. When using ReactNode for complex labels, ensure the content is accessible and provides clear instructions about what the radio option represents
+
+## Accessibility issues
+
+**Critical:**
+
+- Focus ring contrast ratio is insufficient: 1.32:1 (light theme), 1.63:1 (dark theme), 1.34:1 (darker theme). All are below the WCAG 1.4.11 minimum of 3:1. Keyboard users with low vision cannot see which element has focus. Accessibility recommendations state to never disable `outline`. Use `:focus-visible` to target only keyboard interactions without visual pollution for mouse users.
+- SVG `<title>radio</title>` exposes a non-meaningful title to screen readers. The SVG is decorative and should have `aria-hidden="true"` or remove the title element entirely.
+
+**High:**
+
+- Tooltip wrapper around the radio may interfere with screen reader announcements and keyboard navigation.
+
+**Medium:**
+
+- `tooltip` prop should be deprecated in favor of a `tooltipDescription` prop
+- `aria-label` should be deprecated in favor of an `accessibleLabel` prop
+- **Usage warning**: When using the `label` prop with ReactNode, avoid passing complex ReactNodes containing labelable elements (button, input, select, textarea, etc.). Per HTML spec, `<label>` cannot contain other labelable elements.
+
+## Dependencies
+
+- `Tooltip` component must be accessibility-compliant to not interfere with radio keyboard navigation and screen reader announcements
+- `RadioGroup` component to provide proper `role="radiogroup"` and arrow key navigation
