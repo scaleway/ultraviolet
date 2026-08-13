@@ -2,9 +2,6 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { fadeIn, fadeOut } from '../../utils'
-import { tagStyle } from '../Tag/styles.css'
-import { tagListStyle } from '../TagList/styles.css'
-import { textStyle } from '../Text/style.css'
 
 export const ARROW_SIZE = 8
 const ARROW_RADIUS = 2
@@ -62,18 +59,7 @@ const animation = styleVariants({
 const childrenContainer = recipe({
   base: {
     display: 'inherit',
-    selectors: {
-      [`${tagListStyle.ellipsisChild} > &`]: {
-        minWidth: 0,
-      },
-      [`&:has(${tagStyle.text})`]: {
-        minWidth: 0,
-        width: '100%',
-      },
-      [`&:has(.${textStyle.oneLine})`]: {
-        minWidth: 0,
-      },
-    },
+    maxWidth: '100%',
   },
   variants: {
     fullHeight: {

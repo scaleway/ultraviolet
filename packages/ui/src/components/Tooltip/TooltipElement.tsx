@@ -8,7 +8,7 @@ type TooltipElementProps = Pick<TooltipProps, 'id' | 'className' | 'style' | 'da
   tooltip: ReturnType<typeof useTooltip>
 }
 
-export function TooltipElement({
+export const TooltipElement = ({
   tooltip,
   id,
   className,
@@ -16,7 +16,7 @@ export function TooltipElement({
   'data-testid': dataTestId,
   maxWidth,
   text,
-}: TooltipElementProps) {
+}: TooltipElementProps) => {
   return (
     <div
       {...tooltip.getFloatingProps()}

@@ -27,7 +27,7 @@ type TooltipChildrenProps = {
   isTooltipVisible: boolean
 } & Pick<TooltipProps, 'children' | 'tabIndex' | 'relation' | 'containerFullHeight' | 'containerFullWidth'>
 
-export function TooltipChildren({
+export const TooltipChildren = ({
   children,
   tooltip,
   tooltipId,
@@ -36,7 +36,7 @@ export function TooltipChildren({
   isTooltipVisible,
   containerFullHeight,
   containerFullWidth,
-}: TooltipChildrenProps) {
+}: TooltipChildrenProps) => {
   const eventHandlers = tooltip.getReferenceProps()
 
   const ariaAttributeName = relation === 'label' ? 'aria-labelledby' : 'aria-describedby'

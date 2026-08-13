@@ -5,14 +5,8 @@ import type { CSSProperties, HTMLAttributes, ReactNode, Ref } from 'react'
 import { createPortal } from 'react-dom'
 import { TooltipChildren } from './TooltipChildren'
 import { TooltipElement } from './TooltipElement'
+import type { TooltipPlacement } from './types'
 import { useTooltip } from './useTooltip'
-
-export type TooltipPlacement = 'top' | 'bottom' | 'left' | 'right' | LegacyTooltipPlacement
-
-/**
- * @deprecated "auto" is not required since the Tooltip placement is always flipped if needed to remain visible.
- */
-type LegacyTooltipPlacement = 'auto' | 'auto-top' | 'auto-bottom' | 'auto-left' | 'auto-right'
 
 export type TooltipRenderProps = Pick<
   HTMLAttributes<HTMLElement>,

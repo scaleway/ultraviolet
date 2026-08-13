@@ -9,7 +9,8 @@ import { Tooltip } from '..'
 describe('tooltip', () => {
   describe('wrapper div', () => {
     it('should render a focusable wrapper div around the children if a text is provided', () => {
-      const { asFragment } = renderWithTheme(<Tooltip text="test">Hover me</Tooltip>, consoleLightTheme)
+      const { asFragment, container } = renderWithTheme(<Tooltip text="test">Hover me</Tooltip>, consoleLightTheme)
+      expect(container.querySelector('[tabindex="0"]')).toBeDefined()
       expect(asFragment()).toMatchSnapshot()
     })
 
@@ -19,7 +20,7 @@ describe('tooltip', () => {
     })
 
     it('should not add a tabindex on the wrapper div if there is an interactive element in the children', () => {
-      const { asFragment } = renderWithTheme(
+      const { asFragment, container } = renderWithTheme(
         <Tooltip text="test">
           <div className="some complex component">
             <button type="button">interactive element</button>
@@ -27,6 +28,7 @@ describe('tooltip', () => {
         </Tooltip>,
         consoleLightTheme,
       )
+      expect(container.querySelector('[tabindex="0"]')).toBeNull()
       expect(asFragment()).toMatchSnapshot()
     })
 

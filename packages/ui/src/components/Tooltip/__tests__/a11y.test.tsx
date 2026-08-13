@@ -28,7 +28,7 @@ describe('tooltip - A11y', { tags: ['a11y'] }, () => {
     it('should open with focus (Tab) and close with Escape', async () => {
       renderWithTheme(
         <Tooltip delay={{ open: 0 }} maxWidth={100} text="test success!">
-          <p data-testid="children">Hover me</p>
+          <p>Hover me</p>
         </Tooltip>,
       )
 

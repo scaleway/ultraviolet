@@ -17,7 +17,7 @@ import {
 import { usePrefersReducedMotion } from '@ultraviolet/animations'
 import { useState, useRef, useCallback } from 'react'
 import type { CSSProperties } from 'react'
-import type { TooltipPlacement } from '.'
+import type { TooltipPlacement } from './types'
 import { ANIMATION_DURATION } from './styles.css'
 
 export type UseTooltipOptions = {
