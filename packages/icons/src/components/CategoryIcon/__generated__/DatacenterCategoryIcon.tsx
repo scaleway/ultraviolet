@@ -10,19 +10,19 @@ import type { IconProps } from '../Icon'
 
 export const DatacenterCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="DatacenterCategoryIcon">
-    <g className="Datacenter">
-      <g className="Datacenters-icon">
+    <g>
+      <g>
         <path
-          fill="#a365f6"
-          d="M15 9V7H5v2zm0 4v-2H5v2z"
+          fill="#a060f6"
           className="fillStrong"
+          d="M15 9V7H5v2zm0 4v-2H5v2z"
           clipRule="evenodd"
           fillRule="evenodd"
         />
         <path
-          fill="#4f0599"
-          d="M5 3h10a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1m9 12V5H6v10z"
+          fill="#521094"
           className="fill"
+          d="M5 3h10a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1m9 12V5H6v10z"
           clipRule="evenodd"
           fillRule="evenodd"
         />

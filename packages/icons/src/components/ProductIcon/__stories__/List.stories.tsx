@@ -11,6 +11,7 @@ export const List: StoryFn = props => (
 
       return (
         <Stack alignItems="center" direction="row" gap={1} key={iconName}>
+          <FoundProductIcon size="large" {...props} variant="original" />
           <FoundProductIcon size="large" {...props} />
           <div style={{ width: '880px' }}>
             <Text as="code" strikeThrough={!!deprecated} variant="code">

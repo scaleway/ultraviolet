@@ -10,14 +10,14 @@ import type { IconProps } from '../Icon'
 
 export const MonitoringCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="MonitoringCategoryIcon">
-    <g className="Observability">
-      <g className="icon">
+    <g>
+      <g>
         <path
-          fill="#4f0599"
-          d="M3 7.25a1.25 1.25 0 1 1 2.5 0v7.5a1.25 1.25 0 1 1-2.5 0zm11.5-2a1.25 1.25 0 1 1 2.5 0v9.5a1.25 1.25 0 1 1-2.5 0z"
+          fill="#521094"
           className="fill"
+          d="M3 7.25a1.25 1.25 0 1 1 2.5 0v7.5a1.25 1.25 0 1 1-2.5 0zm11.5-2a1.25 1.25 0 1 1 2.5 0v9.5a1.25 1.25 0 1 1-2.5 0z"
         />
-        <path fill="#a365f6" d="M8.75 9.25a1.25 1.25 0 1 1 2.5 0v5.5a1.25 1.25 0 1 1-2.5 0z" className="fillStrong" />
+        <path fill="#a060f6" className="fillStrong" d="M8.75 9.25a1.25 1.25 0 1 1 2.5 0v5.5a1.25 1.25 0 1 1-2.5 0z" />
       </g>
     </g>
   </Icon>

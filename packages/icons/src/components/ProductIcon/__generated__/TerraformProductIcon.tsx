@@ -10,27 +10,27 @@ import type { IconProps } from '../Icon'
 
 export const TerraformProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="TerraformProductIcon">
-    <g className="Terraform">
-      <g className=".Square">
+    <g>
+      <g>
         <path
-          fill="#eef"
-          d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
+          fill="#f1eefc"
           className="fillWeak"
+          d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
         />
       </g>
-      <g className="Icon Terraform">
+      <g>
         <path
-          fill="#a365f6"
-          d="M39.367 24.622v14.759L52.151 32V17.238z"
+          fill="#a060f6"
           className="fillStrong"
+          d="M39.367 24.622v14.759L52.151 32V17.238z"
           clipRule="evenodd"
           fillRule="evenodd"
           opacity=".7"
         />
         <path
-          fill="#4f0599"
-          d="m11 23.758 12.784 7.386V16.38L11 9zm14.187-6.515 12.784 7.38V39.38L25.187 32V17.244Zm12.777 38.52-12.777-7.385V33.619L37.964 41z"
+          fill="#521094"
           className="fill"
+          d="m11 23.758 12.784 7.386V16.38L11 9zm14.187-6.515 12.784 7.38V39.38L25.187 32V17.244Zm12.777 38.52-12.777-7.385V33.619L37.964 41z"
           clipRule="evenodd"
           fillRule="evenodd"
         />

@@ -10,15 +10,15 @@ import type { IconProps } from '../Icon'
 
 export const RabbitMqProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="RabbitMqProductIcon">
-    <g className="Managed-RabbitMQ">
-      <g className=".Square">
+    <g>
+      <g>
         <path
           fill="#f1eefc"
-          d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
+          d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
         />
       </g>
-      <g className="icon">
+      <g>
         <g fill="#521094" className="fill">
           <path
             d="M7 24a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V25a1 1 0 0 0-1-1zm1 14V26h3v12z"

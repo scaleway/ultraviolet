@@ -10,8 +10,8 @@ import type { IconProps } from '../Icon'
 
 export const SupportProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="SupportProductIcon">
-    <g className="sentiment=original, size=xlarge, disabled=false" clipPath="url(#a)">
-      <g className=".Square">
+    <g clipPath="url(#a)">
+      <g>
         <g fill="#521094" className="fillWeak">
           <path d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48V16Z" />
           <path
@@ -21,12 +21,12 @@ export const SupportProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
           />
         </g>
       </g>
-      <g className="Icon">
+      <g>
         <path
           fill="#bf95f9"
+          className="fillStrong"
           fillRule="evenodd"
           d="M32 16.5c-8.56 0-15.5 6.94-15.5 15.5 0 3.1.909 5.984 2.474 8.404a1 1 0 0 1 .126.802l-1.608 6.003 6.33-1.696a1 1 0 0 1 .739.089A15.426 15.426 0 0 0 32 47.5c8.56 0 15.5-6.94 15.5-15.5 0-8.56-6.94-15.5-15.5-15.5ZM14.5 32c0-9.665 7.835-17.5 17.5-17.5S49.5 22.335 49.5 32 41.665 49.5 32 49.5a17.43 17.43 0 0 1-8.042-1.953l-7.622 2.042a1 1 0 0 1-1.224-1.225l1.943-7.254A17.423 17.423 0 0 1 14.5 32Z"
-          className="fillStrong"
           clipRule="evenodd"
         />
         <g fill="#fff" className="fill">
@@ -40,8 +40,8 @@ export const SupportProductIcon = ({ ...props }: Omit<IconProps, 'children' | 't
       </g>
     </g>
     <defs>
-      <clipPath id="a" className="a">
-        <path fill="#fff" d="M0 0h64v64H0z" />
+      <clipPath id="a">
+        <path fill="#fff" className="fill" d="M0 0h64v64H0z" />
       </clipPath>
     </defs>
   </Icon>

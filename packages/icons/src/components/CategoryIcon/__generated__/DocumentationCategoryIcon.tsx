@@ -10,19 +10,19 @@ import type { IconProps } from '../Icon'
 
 export const DocumentationCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="DocumentationCategoryIcon">
-    <g className="Documentation">
-      <g className="Icon">
+    <g>
+      <g>
         <path
-          fill="#a365f6"
-          d="M10 7.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-1 1a1 1 0 0 0 0 2v3a1 1 0 1 0 2 0v-5z"
+          fill="#a060f6"
           className="fillStrong"
+          d="M10 7.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-1 1a1 1 0 0 0 0 2v3a1 1 0 1 0 2 0v-5z"
           clipRule="evenodd"
           fillRule="evenodd"
         />
         <path
-          fill="#4f0599"
-          d="M10 4.5a5.5 5.5 0 0 0-4.582 8.544 1 1 0 0 1 .146.764L5.29 15.08l1.27-.363a1 1 0 0 1 .763.088A5.5 5.5 0 1 0 10 4.5M2.5 10a7.5 7.5 0 1 1 4.228 6.75l-2.489.712a1 1 0 0 1-1.253-1.171l.538-2.507A7.47 7.47 0 0 1 2.5 10"
+          fill="#521094"
           className="fill"
+          d="M10 4.5a5.5 5.5 0 0 0-4.582 8.544 1 1 0 0 1 .146.764L5.29 15.08l1.27-.363a1 1 0 0 1 .763.088A5.5 5.5 0 1 0 10 4.5M2.5 10a7.5 7.5 0 1 1 4.228 6.75l-2.489.712a1 1 0 0 1-1.253-1.171l.538-2.507A7.47 7.47 0 0 1 2.5 10"
           clipRule="evenodd"
           fillRule="evenodd"
         />

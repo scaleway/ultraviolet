@@ -10,14 +10,14 @@ import type { IconProps } from '../Icon'
 
 export const DataAndAnalyticsCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="DataAndAnalyticsCategoryIcon">
-    <g className="Managed-Services">
-      <g className="Group 42">
+    <g>
+      <g>
         <path
-          fill="#4f0599"
-          d="M12 5.5 14.5 3 17 5.5 14.5 8zm0 9 2.5-2.5 2.5 2.5-2.5 2.5zm-9 0L5.5 12 8 14.5 5.5 17zm0-9L5.5 3 8 5.5 5.5 8z"
+          fill="#521094"
           className="fill"
+          d="M12 5.5 14.5 3 17 5.5 14.5 8zm0 9 2.5-2.5 2.5 2.5-2.5 2.5zm-9 0L5.5 12 8 14.5 5.5 17zm0-9L5.5 3 8 5.5 5.5 8z"
         />
-        <path fill="#a365f6" d="m7 10 3-3 3 3-3 3z" className="fillStrong" />
+        <path fill="#a060f6" className="fillStrong" d="m7 10 3-3 3 3-3 3z" />
       </g>
     </g>
   </Icon>

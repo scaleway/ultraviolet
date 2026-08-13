@@ -179,6 +179,32 @@ const readSvg = async (filePath: string, suffix: string) => {
     .replace(/height="[^"]*"/gu, '')
     .replace(/width="[^"]*"/gu, '')
 
+  if (['ProductIcon', 'CategoryIcon'].includes(suffix)) {
+    const svgWithClassNames = updatedSvgContent.replaceAll(/className="[^"]*"/gu, '')
+
+    const colorToClass: Record<string, string> = filePath.includes(`${path.sep}original${path.sep}`)
+      ? {
+          '#521094': 'fillWeak',
+          '#BF95F9': 'fillStrong',
+          '#FFFFFF': 'fill',
+          '#FFF': 'fill',
+        }
+      : {
+          '#F1EEFC': 'fillWeak',
+          '#A060F6': 'fillStrong',
+          '#521094': 'fill',
+        }
+
+    return svgWithClassNames.replace(/fill="([^"]*)"/giu, (match: string, color: string) => {
+      const className = colorToClass[color.toUpperCase()]
+      if (className) return `${match} className="${className}"`
+      if (!['NONE', '#FFF'].includes(color.toUpperCase())) {
+        console.error(`Unrecognized fill color "${color}" in file: ${filePath}`)
+      }
+      return match
+    })
+  }
+
   if (suffix === 'Icon') {
     return updatedSvgContent.replaceAll(/fill="[^"]*"/gu, '')
   }
@@ -287,7 +313,6 @@ const main = async () => {
 
         try {
           await promises.writeFile(filePath, generatedComponent)
-          console.log(`File has been written to ${filePath}`)
           await appendExportToIndex(component.output, generatedName)
         } catch (error) {
           console.error('Error writing to file:', error)

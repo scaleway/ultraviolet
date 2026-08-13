@@ -10,9 +10,9 @@ import type { IconProps } from '../Icon'
 
 export const NetworkAclsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="NetworkAclsProductIcon">
-    <g className="sentiment=primary, disabled=false, size=xlarge">
-      <g className="icon">
-        <g className=".Square">
+    <g>
+      <g>
+        <g>
           <g fill="#f1eefc" className="fillWeak">
             <path d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z" />
             <path
@@ -24,9 +24,9 @@ export const NetworkAclsProductIcon = ({ ...props }: Omit<IconProps, 'children' 
         </g>
         <path
           fill="#521094"
+          className="fill"
           fillRule="evenodd"
           d="M33 13.874A4.002 4.002 0 0 0 32 6a4 4 0 0 0-1 7.874v10.188a8 8 0 0 0-6.247 11.332l-9.013 5.692a4 4 0 1 0 1.069 1.69l9.014-5.692A8 8 0 0 0 31 39.938v10.188A4.002 4.002 0 0 0 32 58a4 4 0 0 0 1-7.874V39.938a8.001 8.001 0 0 0 0-15.876zM32 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4m0 26a6 6 0 1 0 0-12 6 6 0 0 0 0 12m0 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4M15 44a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
-          className="fill"
           clipRule="evenodd"
         />
         <g fill="#a060f6" className="fillStrong">

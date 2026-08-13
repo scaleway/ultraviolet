@@ -10,8 +10,8 @@ import type { IconProps } from '../Icon'
 
 export const VpnProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="VpnProductIcon">
-    <g className="sentiment=original, size=xlarge, disabled=false">
-      <g className=".Square">
+    <g>
+      <g>
         <g fill="#521094" className="fillWeak">
           <path d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48V16Z" />
           <path
@@ -21,11 +21,11 @@ export const VpnProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title
           />
         </g>
       </g>
-      <g className="Icon">
+      <g>
         <path
           fill="#bf95f9"
-          d="M39.327 28.779a4.018 4.018 0 0 0-1.582-1.38l10.884-6.614 1.039 1.709-10.341 6.285Zm.639 8.744A4.04 4.04 0 0 0 40 37v-1.734l9.808 5.321-.953 1.758-8.889-4.822Zm-8.967-17.459v-7.93h2v7.93a7.54 7.54 0 0 0-1-.064 7.53 7.53 0 0 0-1 .064Zm0 20.936h2v10.88h-2V41Z"
           className="fillStrong"
+          d="M39.327 28.779a4.018 4.018 0 0 0-1.582-1.38l10.884-6.614 1.039 1.709-10.341 6.285Zm.639 8.744A4.04 4.04 0 0 0 40 37v-1.734l9.808 5.321-.953 1.758-8.889-4.822Zm-8.967-17.459v-7.93h2v7.93a7.54 7.54 0 0 0-1-.064 7.53 7.53 0 0 0-1 .064Zm0 20.936h2v10.88h-2V41Z"
         />
         <g fill="#fff" className="fill">
           <path

@@ -10,38 +10,38 @@ import type { IconProps } from '../Icon'
 
 export const NatsProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="NatsProductIcon">
-    <g className=".Square">
+    <g>
       <path
-        fill="#eef"
-        d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
+        fill="#f1eefc"
         className="fillWeak"
+        d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
       />
     </g>
     <path
-      fill="#4f0599"
+      fill="#521094"
+      className="fill"
       d="M38.5 39.5a1 1 0 0 1-1-1v-12a1 1 0 1 1 2 0v12a1 1 0 0 1-1 1"
-      className="fill"
       clipRule="evenodd"
       fillRule="evenodd"
     />
     <path
-      fill="#a365f6"
+      fill="#a060f6"
+      className="fillStrong"
       d="M38.293 41.293a1 1 0 0 1 1.414 0l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 0 1-1.414-1.414L39.586 46H23.5a1 1 0 1 1 0-2h16.086l-1.293-1.293a1 1 0 0 1 0-1.414"
-      className="fillStrong"
       clipRule="evenodd"
       fillRule="evenodd"
     />
     <path
-      fill="#4f0599"
-      d="M31.5 39.5a1 1 0 0 1-1-1v-12a1 1 0 1 1 2 0v12a1 1 0 0 1-1 1m-4 0a1 1 0 0 1-1-1v-12a1 1 0 1 1 2 0v12a1 1 0 0 1-1 1m-3 0a1 1 0 0 1-1-1v-12a1 1 0 1 1 2 0v12a1 1 0 0 1-1 1m18.5 1a1 1 0 0 1 1-1h7v-14h-7a1 1 0 1 1 0-2h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1M12 41a1 1 0 0 1-1-1V24a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1zm1-2h6V25h-6z"
+      fill="#521094"
       className="fill"
+      d="M31.5 39.5a1 1 0 0 1-1-1v-12a1 1 0 1 1 2 0v12a1 1 0 0 1-1 1m-4 0a1 1 0 0 1-1-1v-12a1 1 0 1 1 2 0v12a1 1 0 0 1-1 1m-3 0a1 1 0 0 1-1-1v-12a1 1 0 1 1 2 0v12a1 1 0 0 1-1 1m18.5 1a1 1 0 0 1 1-1h7v-14h-7a1 1 0 1 1 0-2h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1M12 41a1 1 0 0 1-1-1V24a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1zm1-2h6V25h-6z"
       clipRule="evenodd"
       fillRule="evenodd"
     />
     <path
-      fill="#a365f6"
-      d="M38.293 16.293a1 1 0 0 1 1.414 0l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 0 1-1.414-1.414L39.586 21H23.5a1 1 0 1 1 0-2h16.086l-1.293-1.293a1 1 0 0 1 0-1.414"
+      fill="#a060f6"
       className="fillStrong"
+      d="M38.293 16.293a1 1 0 0 1 1.414 0l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 0 1-1.414-1.414L39.586 21H23.5a1 1 0 1 1 0-2h16.086l-1.293-1.293a1 1 0 0 1 0-1.414"
       clipRule="evenodd"
       fillRule="evenodd"
     />

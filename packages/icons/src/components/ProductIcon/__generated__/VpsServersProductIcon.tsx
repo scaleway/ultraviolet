@@ -10,16 +10,16 @@ import type { IconProps } from '../Icon'
 
 export const VpsServersProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="VpsServersProductIcon">
-    <g className="VPS-servers">
-      <g className="VPS-servers" clipPath="url(#a)">
-        <g className=".Square">
+    <g>
+      <g clipPath="url(#a)">
+        <g>
           <path
             fill="#f1eefc"
-            d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
             className="fillWeak"
+            d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           />
         </g>
-        <g className="icon VPS">
+        <g>
           <g fill="#a060f6" className="fillStrong">
             <path
               fillRule="evenodd"
@@ -30,16 +30,16 @@ export const VpsServersProductIcon = ({ ...props }: Omit<IconProps, 'children' |
           </g>
           <path
             fill="#521094"
+            className="fill"
             fillRule="evenodd"
             d="M32.202 30H14.5A6.5 6.5 0 0 0 8 36.5v7a6.5 6.5 0 0 0 6.5 6.5h17.702c2.525 2.474 5.983 4 9.798 4 7.732 0 14-6.268 14-14s-6.268-14-14-14a13.96 13.96 0 0 0-9.798 4M30 40c0-6.627 5.373-12 12-12s12 5.373 12 12-5.373 12-12 12-12-5.373-12-12m.51-8A13.94 13.94 0 0 0 28 40c0 2.974.928 5.732 2.51 8H14.5a4.5 4.5 0 0 1-4.5-4.5v-7a4.5 4.5 0 0 1 4.5-4.5z"
-            className="fill"
             clipRule="evenodd"
           />
         </g>
       </g>
     </g>
     <defs>
-      <clipPath id="a" className="a">
+      <clipPath id="a">
         <path fill="#fff" d="M0 0h64v64H0z" />
       </clipPath>
     </defs>

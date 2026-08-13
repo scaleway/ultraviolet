@@ -10,8 +10,8 @@ import type { IconProps } from '../Icon'
 
 export const VpnConnectionProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="VpnConnectionProductIcon">
-    <g className="sentiment=original, size=xlarge, disabled=false">
-      <g className=".Square">
+    <g>
+      <g>
         <g fill="#521094" className="fillWeak">
           <path d="M16 64C7.163 64 0 56.837 0 48V16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16Z" />
           <path
@@ -21,12 +21,12 @@ export const VpnConnectionProductIcon = ({ ...props }: Omit<IconProps, 'children
           />
         </g>
       </g>
-      <g className="Icon">
+      <g>
         <path
           fill="#bf95f9"
+          className="fillStrong"
           fillRule="evenodd"
           d="M32 11c-8.72 0-16.2 5.315-19.375 12.887a1 1 0 0 1-1.845-.774C14.255 14.825 22.446 9 32 9c9.554 0 17.745 5.825 21.22 14.113a1 1 0 1 1-1.844.774C48.202 16.315 40.72 11 32 11ZM10.97 38.56a1 1 0 0 1 1.282.6C15.18 47.233 22.918 53 32 53c9.083 0 16.82-5.766 19.749-13.84a1 1 0 1 1 1.88.68C50.423 48.682 41.95 55 32 55c-9.95 0-18.423-6.319-21.628-15.16a1 1 0 0 1 .599-1.28Z"
-          className="fillStrong"
           clipRule="evenodd"
         />
         <g fill="#fff" className="fill">

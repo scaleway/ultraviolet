@@ -10,19 +10,19 @@ import type { IconProps } from '../Icon'
 
 export const OrganizationDashboardCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="OrganizationDashboardCategoryIcon">
-    <g className="Console">
-      <g className="Console-icon">
+    <g>
+      <g>
         <path
-          fill="#4f0599"
-          d="M5 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm7 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1z"
+          fill="#521094"
           className="fill"
+          d="M5 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm7 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1z"
           clipRule="evenodd"
           fillRule="evenodd"
         />
         <path
-          fill="#a365f6"
-          d="M12 4a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-7 9a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1z"
+          fill="#a060f6"
           className="fillStrong"
+          d="M12 4a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-7 9a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1z"
           clipRule="evenodd"
           fillRule="evenodd"
         />
