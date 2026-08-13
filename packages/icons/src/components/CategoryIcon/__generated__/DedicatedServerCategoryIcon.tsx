@@ -10,18 +10,18 @@ import type { IconProps } from '../Icon'
 
 export const DedicatedServerCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="DedicatedServerCategoryIcon">
-    <g className="Dedicated-Server">
+    <g>
       <path
-        fill="#a365f6"
-        d="M10.25 14a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5H11a.75.75 0 0 1-.75-.75m0-7.7a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5H11a.75.75 0 0 1-.75-.75"
+        fill="#a060f6"
         className="fillStrong"
+        d="M10.25 14a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5H11a.75.75 0 0 1-.75-.75m0-7.7a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5H11a.75.75 0 0 1-.75-.75"
         clipRule="evenodd"
         fillRule="evenodd"
       />
       <path
-        fill="#4f0599"
-        d="M3 13.5a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zm3-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1zM3 5.8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zm3-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1z"
+        fill="#521094"
         className="fill"
+        d="M3 13.5a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zm3-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1zM3 5.8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zm3-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1z"
         clipRule="evenodd"
         fillRule="evenodd"
       />

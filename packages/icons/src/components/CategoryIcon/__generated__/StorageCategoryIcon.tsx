@@ -10,15 +10,15 @@ import type { IconProps } from '../Icon'
 
 export const StorageCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="StorageCategoryIcon">
-    <g className="Storage">
+    <g>
       <path
-        fill="#4f0599"
-        d="M10 4.303 4.998 7.161v5.678L10 15.697l5.004-2.858V7.161zM17.006 6 10 2 2.997 6v8L10 18l7.004-4V6Z"
+        fill="#521094"
         className="fill"
+        d="M10 4.303 4.998 7.161v5.678L10 15.697l5.004-2.858V7.161zM17.006 6 10 2 2.997 6v8L10 18l7.004-4V6Z"
         clipRule="evenodd"
         fillRule="evenodd"
       />
-      <path fill="#a365f6" d="m10 7 2.627 1.5v3L10.001 13l-2.627-1.5v-3z" className="fillStrong" />
+      <path fill="#a060f6" className="fillStrong" d="m10 7 2.627 1.5v3L10.001 13l-2.627-1.5v-3z" />
     </g>
   </Icon>
 )

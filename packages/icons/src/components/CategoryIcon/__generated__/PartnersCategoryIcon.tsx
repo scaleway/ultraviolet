@@ -10,16 +10,16 @@ import type { IconProps } from '../Icon'
 
 export const PartnersCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="PartnersCategoryIcon">
-    <g fillRule="evenodd" className="Partners" clipRule="evenodd">
+    <g fillRule="evenodd" clipRule="evenodd">
       <path
         fill="#521094"
-        d="M3 4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2V5H5v6a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1z"
         className="fill"
+        d="M3 4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2V5H5v6a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1z"
       />
       <path
         fill="#a060f6"
-        d="M7 8a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2v6h6V9a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z"
         className="fillStrong"
+        d="M7 8a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2v6h6V9a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z"
       />
     </g>
   </Icon>
