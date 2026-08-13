@@ -1,6 +1,3 @@
-// oxlint-disable import/no-nodejs-modules
-// oxlint-disable eslint/no-console
-
 import { existsSync, promises } from 'node:fs'
 import path from 'node:path'
 import { DEPRECATED_ICONS } from '../../packages/icons/src/deprecatedIcons.ts'
