@@ -80,8 +80,9 @@ export type TooltipProps = {
   containerFullHeight?: boolean
   /**
    * Render the tooltip in a portal target if you need it to overflow from a scroll container, at the cost of a small lag of the tooltip behind its reference element when scrolling.
+   * @default document.body
    */
-  portalTarget?: HTMLElement
+  portalTarget?: HTMLElement | null
   /**
    * tabindex attribute for the tooltip trigger container
    */
@@ -126,7 +127,7 @@ export const Tooltip = ({
   maxWidth = 232,
   visible,
   'data-testid': dataTestId,
-  portalTarget,
+  portalTarget = typeof window === 'undefined' ? null : document.body,
   relation,
   debounceDelay,
   delay,
