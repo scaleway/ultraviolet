@@ -5,7 +5,7 @@ import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn, renderElement } from '@ultraviolet/utils'
 import type { RenderProp } from '@ultraviolet/utils'
-import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
+import { forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react'
 import type {
   AnchorHTMLAttributes,
   CSSProperties,
@@ -14,14 +14,11 @@ import type {
   KeyboardEventHandler,
   MouseEventHandler,
   ReactNode,
-  RefObject,
 } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { Tooltip } from '../Tooltip'
-import type { PROMINENCES } from './constants'
+import type { ProminenceType } from './constants'
 import { linkStyle } from './styles.css'
-
-export type ProminenceProps = keyof typeof PROMINENCES
 
 type LinkSizes = 'large' | 'small' | 'xsmall'
 type LinkIconPosition = 'left' | 'right'
@@ -30,8 +27,13 @@ type LinkProps = {
   children: ReactNode
   target?: HTMLAttributeAnchorTarget
   download?: string | boolean
+  /**
+   * - "primary" is for a link to an internal page
+   * - "info" is for a link to an external page (which should also have `target="_blank"`)
+   * @default "info" if target="_blank", "primary" otherwise.
+   */
   sentiment?: 'primary' | 'info'
-  prominence?: ProminenceProps
+  prominence?: ProminenceType
   size?: LinkSizes
   iconPosition?: LinkIconPosition
   rel?: AnchorHTMLAttributes<HTMLAnchorElement>['rel']
@@ -44,6 +46,9 @@ type LinkProps = {
   'aria-keyshortcuts'?: string
   oneLine?: boolean
   'data-testid'?: string
+  /**
+   * @deprecated the "variant" property has been removed.
+   */
   variant?: 'inline' | 'standalone'
   style?: CSSProperties
 } & XOR<
@@ -84,7 +89,7 @@ export const Link = forwardRef(
       href,
       target,
       download,
-      sentiment = 'info',
+      sentiment = target === '_blank' ? 'info' : 'primary',
       prominence,
       size = 'large',
       iconPosition,
@@ -97,20 +102,19 @@ export const Link = forwardRef(
       'aria-keyshortcuts': ariaKeyshortcuts,
       oneLine = false,
       'data-testid': dataTestId,
-      variant = 'standalone',
       style,
       render,
     }: LinkProps,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     const isBlank = target === '_blank'
-    const computedRel = rel ?? (isBlank ? 'noopener noreferrer' : undefined)
     const [isTruncated, setIsTruncated] = useState(false)
-    const elementRef = useRef<HTMLAnchorElement>(null)
 
-    const usedRef = (ref as RefObject<HTMLAnchorElement>) ?? elementRef
+    const elementRef = useRef<HTMLAnchorElement>(null)
+    useImperativeHandle(ref, () => elementRef.current!)
 
     const finalStringChildren = recursivelyGetChildrenString(children)
+
     const textVariant = useMemo(() => {
       if (size === 'xsmall') {
         return 'captionStrong'
@@ -121,12 +125,13 @@ export const Link = forwardRef(
 
       return 'bodyStrong'
     }, [size])
+
     useEffect(() => {
-      if (oneLine && usedRef?.current) {
-        const { offsetWidth, scrollWidth } = usedRef.current
+      if (oneLine && elementRef?.current) {
+        const { offsetWidth, scrollWidth } = elementRef.current
         setIsTruncated(offsetWidth < scrollWidth)
       }
-    }, [oneLine, ref, usedRef])
+    }, [oneLine, ref, elementRef])
 
     const computedClassName = cn(
       className,
@@ -134,7 +139,6 @@ export const Link = forwardRef(
         oneLine,
         prominence,
         sentiment,
-        type: variant,
         variant: textVariant,
       }),
       linkStyle.defaultLink,
@@ -147,8 +151,7 @@ export const Link = forwardRef(
             children,
             className: computedClassName,
             'data-testid': dataTestId,
-            'data-variant': variant,
-            ref: usedRef,
+            ref: elementRef,
             style,
           })}
         </Tooltip>
@@ -163,13 +166,12 @@ export const Link = forwardRef(
           aria-label={ariaLabel}
           className={computedClassName}
           data-testid={dataTestId}
-          data-variant={variant}
           download={download}
           href={href}
           onClick={onClick}
           onKeyDown={onKeyDown}
-          ref={usedRef}
-          rel={computedRel}
+          ref={elementRef}
+          rel={rel ?? (isBlank ? 'noopener noreferrer' : undefined)}
           style={style}
           target={target}
         >
@@ -179,9 +181,10 @@ export const Link = forwardRef(
           {children}
 
           {isBlank ? (
-            <span className={linkStyle.containerIcon}>
-              <OpenInNewIcon className={linkStyle.iconRight} size={BLANK_TARGET_ICON_SIZE} />
-            </span>
+            <OpenInNewIcon
+              className={cn(linkStyle.iconRight, linkStyle.externalIcon[size])}
+              size={BLANK_TARGET_ICON_SIZE}
+            />
           ) : null}
 
           {!isBlank && iconPosition === 'right' ? (

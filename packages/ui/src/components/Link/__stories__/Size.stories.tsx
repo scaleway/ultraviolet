@@ -14,13 +14,13 @@ export const Size = (props: ComponentProps<typeof Link>) =>
 
 Size.parameters = {
   docs: {
-    description: { story: 'Edit `size` prop to change the size of the text' },
+    description: { story: 'Edit the `size` property to change the size of the text' },
   },
 }
 
 Size.decorators = [
   Story => (
-    <Stack>
+    <Stack direction="row" alignItems="end" gap={2}>
       <Story />
     </Stack>
   ),
