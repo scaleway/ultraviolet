@@ -65,12 +65,9 @@ const sliderThumbDefaultStyle = {
   boxShadow: `${theme.shadows.fixed[0]}, ${theme.shadows.fixed[1]}`,
   height: `${THUMB_SIZE}px`,
   pointerEvents: 'all',
-  position: 'absolute',
   transition: 'background 0.3s ease-in-out',
   WebkitAppearance: 'none',
   width: `${THUMB_SIZE}px`,
-  top: '50%',
-  transform: 'translateY(-50%)',
 } as CSSProperties
 
 const thumbStyle = recipe({
@@ -154,15 +151,9 @@ const double = recipe({
     pointerEvents: 'none',
     position: 'absolute',
     selectors: {
-      '&::-moz-range-thumb': {
-        ...sliderThumbDefaultStyle,
-        left: leftVar,
-      },
+      '&::-moz-range-thumb': sliderThumbDefaultStyle,
       '&::-moz-range-track, &::-ms-track, &:focus::-webkit-slider-runnable-track': trackStyle,
-      '&::-webkit-slider-thumb': {
-        ...sliderThumbDefaultStyle,
-        left: leftVar,
-      },
+      '&::-webkit-slider-thumb': sliderThumbDefaultStyle,
     },
     width: '100%',
     inset: 0,
@@ -197,15 +188,9 @@ const single = recipe({
     outline: 'none',
     position: 'relative',
     selectors: {
-      '&::-moz-range-thumb': {
-        ...sliderThumbDefaultStyle,
-        left: leftVar,
-      },
+      '&::-moz-range-thumb': sliderThumbDefaultStyle,
       '&::-webkit-slider-runnable-track, &::-moz-range-track': trackStyle,
-      '&::-webkit-slider-thumb': {
-        ...sliderThumbDefaultStyle,
-        left: leftVar,
-      },
+      '&::-webkit-slider-thumb': sliderThumbDefaultStyle,
     },
     width: '100%',
     inset: 0,
