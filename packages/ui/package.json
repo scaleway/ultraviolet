@@ -24,7 +24,8 @@
   "type": "module",
   "sideEffects": [
     "**/*.css",
-    "**/*.css.ts"
+    "**/*.css.ts",
+    "**/compositions/*/index.js"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
