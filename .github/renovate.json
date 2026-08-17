@@ -16,8 +16,6 @@
     "**/__fixtures__/**"
   ],
   "prConcurrentLimit": 5,
-  "reviewers": ["team:console"],
-  "reviewersSampleSize": 2,
   "labels": ["dependencies"],
   "packageRules": [
     {
@@ -41,10 +39,11 @@
     {
       "extends": ["packages:jsUnitTest"],
       "matchPackageNames": ["happy-dom", "jsdom"],
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": ["devDependencies", "dependencies"],
       "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "non-major tests devDependencies",
-      "groupSlug": "non-major-tests-dev-deps"
+      "groupName": "non-major tests dependencies",
+      "groupSlug": "non-major-tests-deps",
+      "semanticCommitScope": "devdeps"
     },
     {
       "matchPackageNames": ["/storybook/"],
@@ -73,10 +72,6 @@
       "matchPackageNames": ["/^@uiw//"],
       "groupName": "CodeMirror",
       "groupSlug": "codemirror"
-    },
-    {
-      "matchPackageNames": ["/^@testing-library/"],
-      "semanticCommitScope": "devDeps"
     },
     {
       "matchPackageNames": ["/prosemirror/"],
