@@ -1,0 +1,61 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/TextArea/A11y" />
+
+# TextArea - Accessibility
+
+## Description
+
+A controlled or uncontrolled form input component that extends HTML textarea functionality. Supports features like clearable value, success/error validation states, character counter (maxLength), auto-resize capability, and optional label description.
+
+## Summary
+
+1. ✅ **Perceivable**: Labels and descriptions are properly associated; error states use aria-invalid
+2. ✅ **Operable**: Keyboard navigation works; tooltip wrapper may interfere with keyboard navigation
+3. ⚠️ **Understandable**: Uses deprecated `aria-label` pattern; missing `accessibleLabel` prop per RFC #6585
+4. ⚠️ **Robust**: Clear button missing contextual label; Description component has `role="status"` issue (dependency)
+
+## ARIA Pattern
+
+No specific ARIA pattern for textarea - uses native `<textarea>` element which provides proper semantics automatically.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html): Label component properly associated via htmlFor/id
+- ✅ [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html): Error state uses aria-invalid="true" and error message linked via aria-describedby
+- ✅ [WCAG 2.4.6 - Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html): Labels are descriptive when provided
+- ⚠️ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): Textarea has proper accessible name via label or aria-label but not according to RFC #6585 (accessibleLabel, tooltipDescription).
+- ✅ [WCAG 1.3.5 - Identify Input Purpose (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html): Component supports `autoComplete` prop (passed to native textarea). Developers must add appropriate `autoComplete` value when textarea collects user information
+
+To apply when using the component:
+
+- [WCAG 3.3.3 - Error Suggestion (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html): Provide helpful error messages that suggest how to correct input errors
+- [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html): **Do not use `placeholder` as a substitute for visible `label`**. Use placeholder for example input format only, not as the primary label
+- ⚠️ [RFC #6585 - Accessible Icons and Hidden Labels](https://github.com/scaleway/ultraviolet/discussions/6585): Component uses deprecated `aria-label` pattern. Should migrate to `accessibleLabel` prop (for hidden labels) per new team standards
+- **When using external `Label` or `Description` components**: If you render `Label` and/or `Notice` (for helper/error/success messages) externally instead of using the built-in props, you **must** manually manage ARIA associations:
+  - Ensure `Label` has a `htmlFor` attribute matching the textarea's `id`
+  - Pass the `Description` component's `id` to the textarea's `aria-describedby` prop
+
+## Accessibility issues
+
+**High:**
+
+- Uses deprecated `aria-label` pattern. Per [RFC #6585](https://github.com/scaleway/ultraviolet/discussions/6585), should migrate to `accessibleLabel` prop for hidden labels. Current `aria-label` prop should be deprecated in favor of the new pattern.
+- Clear button has `aria-label="clear value"` which is not descriptive enough. Should indicate what is being cleared, e.g., "Clear [field name]". Consider adding a `labels` prop as an object to define all internal labels (clear button, etc.).
+
+**Medium:**
+
+- Character counter (maxLength) displays current/max characters but is not announced to screen readers when approaching or reaching the limit. Should consider aria-live region or aria-valuemax/aria-valuemin/aria-valuenow pattern.
+
+**Low:**
+
+- Tooltip component wraps the textarea wrapper div but tooltips may not be accessible to keyboard-only users or screen reader users depending on implementation.
+
+## Dependencies
+
+- **Description component**: Uses `role="status"` for all content including static helper text (should only be for dynamic error/success messages) - affects WCAG 4.1.3
+- Tooltip component must be accessible to keyboard and screen reader users
+- Icon components (CheckCircleIcon, AlertCircleIcon, CloseIcon) must default to `aria-hidden="true"` when used decoratively
+- Migration depends on RFC #6585 implementation: `accessibleLabel`, `tooltipDescription` props and `VisuallyHidden` component.

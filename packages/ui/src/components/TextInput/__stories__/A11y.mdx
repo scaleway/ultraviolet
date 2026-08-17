@@ -33,9 +33,9 @@ To apply when using the component:
 - [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html): When using prefix or suffix props with icons, ensure icons are `aria-hidden="true"` if decorative, or provide text alternatives via `VisuallyHidden` or tooltip if informative
 - [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html): **Do not use `placeholder` as a substitute for visible `label`**. Placeholder text disappears when user types, causing memory issues for users with cognitive disabilities. Use placeholder for example input format only (e.g., "DD/MM/YYYY"), not as the primary label
 - ⚠️ [RFC #6585 - Accessible Icons and Hidden Labels](https://github.com/scaleway/ultraviolet/discussions/6585): Component uses deprecated `aria-label` pattern. Should migrate to `accessibleLabel` prop (for hidden labels) per new team standards
-- **When using external `Label` or `Notice` components**: If you render `Label` and/or `Notice` (for helper/error/success messages) externally instead of using the built-in props, you **must** manually manage ARIA associations:
+- **When using external `Label` or `Description` components**: If you render `Label` and/or `Description` (for helper/error/success messages) externally instead of using the built-in props, you **must** manually manage ARIA associations:
   - Ensure `Label` has a `htmlFor` attribute matching the input's `id`
-  - Pass the `Notice` component's `id` to the input's `aria-describedby` prop
+  - Pass the `Description` component's `id` to the input's `aria-describedby` prop
 
 ## Accessibility issues
 
