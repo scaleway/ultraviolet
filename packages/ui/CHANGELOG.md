@@ -1,5 +1,22 @@
 # Change Log
 
+## 3.23.0
+
+### Minor Changes
+
+- [#6784](https://github.com/scaleway/ultraviolet/pull/6784) [`5f3fe0b`](https://github.com/scaleway/ultraviolet/commit/5f3fe0b4c1d426ce9710edbf5a3100068c2b1837) Thanks [@lisalupi](https://github.com/lisalupi)! - `TagList`, `TagInput`: new props `sentiment` and `variant`.
+
+  `TagList` now accepts key-value tags.
+
+### Patch Changes
+
+- [#6795](https://github.com/scaleway/ultraviolet/pull/6795) [`469f84e`](https://github.com/scaleway/ultraviolet/commit/469f84e58cb9ad15e650e622757db09f931fea11) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prosemirror-commands` to `1.7.2`.
+
+- [#6793](https://github.com/scaleway/ultraviolet/pull/6793) [`7437443`](https://github.com/scaleway/ultraviolet/commit/743744352b7e7bf803182824966b32e51398e641) Thanks [@jsulpis](https://github.com/jsulpis)! - Fix sideEffects configuration to avoid a tree shaking error in some components (Navigation, EstimateCost, Filters)
+
+- Updated dependencies [[`f26d777`](https://github.com/scaleway/ultraviolet/commit/f26d777f7a07e02f4e8d0157094deb7f86030bd6), [`faff800`](https://github.com/scaleway/ultraviolet/commit/faff800c78ffcf9a98a78a0167cb06e74e373445), [`faff800`](https://github.com/scaleway/ultraviolet/commit/faff800c78ffcf9a98a78a0167cb06e74e373445)]:
+  - @ultraviolet/icons@5.5.0
+
 ## 3.22.0
 
 ### Minor Changes

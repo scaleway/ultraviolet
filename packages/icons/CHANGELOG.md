@@ -1,5 +1,17 @@
 # Change Log
 
+## 5.5.0
+
+### Minor Changes
+
+- [#6788](https://github.com/scaleway/ultraviolet/pull/6788) [`faff800`](https://github.com/scaleway/ultraviolet/commit/faff800c78ffcf9a98a78a0167cb06e74e373445) Thanks [@jsulpis](https://github.com/jsulpis)! - Add footer, header, json and ocr System Icons
+
+- [#6788](https://github.com/scaleway/ultraviolet/pull/6788) [`faff800`](https://github.com/scaleway/ultraviolet/commit/faff800c78ffcf9a98a78a0167cb06e74e373445) Thanks [@jsulpis](https://github.com/jsulpis)! - Add ResourceExplorer Product Icon
+
+### Patch Changes
+
+- [#6787](https://github.com/scaleway/ultraviolet/pull/6787) [`f26d777`](https://github.com/scaleway/ultraviolet/commit/f26d777f7a07e02f4e8d0157094deb7f86030bd6) Thanks [@jsulpis](https://github.com/jsulpis)! - Update svgo config to make icons lighter
+
 ## 5.4.9
 
 ### Patch Changes
