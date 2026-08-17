@@ -16,8 +16,6 @@
     "**/__fixtures__/**"
   ],
   "prConcurrentLimit": 5,
-  "reviewers": ["team:console"],
-  "reviewersSampleSize": 2,
   "labels": ["dependencies"],
   "packageRules": [
     {
@@ -31,6 +29,16 @@
       "groupSlug": "non-major-dev-deps"
     },
     {
+      "matchDepTypes": ["dependencies"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "deps"
+    },
+    {
+      "matchDepTypes": ["packageManager", "devDependencies"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "devDeps"
+    },
+    {
       "extends": ["packages:linters"],
       "matchPackageNames": ["/oxfmt/", "/oxlint/", "publint", "lint-staged"],
       "matchDepTypes": ["devDependencies"],
@@ -41,27 +49,18 @@
     {
       "extends": ["packages:jsUnitTest"],
       "matchPackageNames": ["happy-dom", "jsdom"],
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": ["devDependencies", "dependencies"],
       "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "non-major tests devDependencies",
-      "groupSlug": "non-major-tests-dev-deps"
+      "groupName": "non-major tests dependencies",
+      "groupSlug": "non-major-tests-deps",
+      "semanticCommitScope": "devdeps"
     },
     {
       "matchPackageNames": ["/storybook/"],
       "groupName": "storybook"
     },
     {
-      "matchDepTypes": ["dependencies"],
-      "semanticCommitType": "chore",
-      "semanticCommitScope": "deps"
-    },
-    {
       "matchManagers": ["dockerfile", "github-actions"],
-      "semanticCommitType": "chore",
-      "semanticCommitScope": "devDeps"
-    },
-    {
-      "matchDepTypes": ["packageManager", "devDependencies"],
       "semanticCommitType": "chore",
       "semanticCommitScope": "devDeps"
     },
@@ -73,10 +72,6 @@
       "matchPackageNames": ["/^@uiw//"],
       "groupName": "CodeMirror",
       "groupSlug": "codemirror"
-    },
-    {
-      "matchPackageNames": ["/^@testing-library/"],
-      "semanticCommitScope": "devDeps"
     },
     {
       "matchPackageNames": ["/prosemirror/"],
