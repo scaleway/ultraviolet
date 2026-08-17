@@ -8,26 +8,51 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const LatviaFlag = (props: Omit<IconProps, 'children'>) => (
-  <Icon {...props}>
-    {props.disabled ? (
-      <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path
-          fill="#343434"
-          d="M12 0C6.455 0 1.79 3.76.413 8.87h23.173C22.209 3.76 17.544 0 12 0m0 24c5.544 0 10.209-3.761 11.586-8.87H.413C1.79 20.239 6.455 24 12 24"
-        />
-      </>
-    ) : (
-      <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path
-          fill="#a2001d"
-          d="M12 0C6.455 0 1.79 3.76.413 8.87h23.173C22.209 3.76 17.544 0 12 0m0 24c5.544 0 10.209-3.761 11.586-8.87H.413C1.79 20.239 6.455 24 12 24"
-        />
-      </>
-    )}
-  </Icon>
-)
+export const LatviaFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
+  if (['small', 'xsmall'].includes(size)) {
+    return (
+      <Icon {...props} title="LatviaFlag">
+        {disabled ? (
+          <>
+            <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+            <path
+              fill="#343434"
+              d="M8 1a7 7 0 0 0-6.76 5.174h13.518A7 7 0 0 0 7.999 1M8 15a7 7 0 0 0 6.759-5.174H1.24A7 7 0 0 0 8 15"
+            />
+          </>
+        ) : (
+          <>
+            <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+            <path
+              fill="#a2001d"
+              d="M8 1a7 7 0 0 0-6.76 5.174h13.518A7 7 0 0 0 7.999 1M8 15a7 7 0 0 0 6.759-5.174H1.24A7 7 0 0 0 8 15"
+            />
+          </>
+        )}
+      </Icon>
+    )
+  }
+  return (
+    <Icon {...props} title="LatviaFlag">
+      {disabled ? (
+        <>
+          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+          <path
+            fill="#343434"
+            d="M12 2.5c-4.39 0-8.083 2.977-9.173 7.022h18.346C20.083 5.477 16.389 2.5 12 2.5m0 19c4.389 0 8.082-2.977 9.173-7.022H2.826C3.917 18.523 7.611 21.5 12 21.5"
+          />
+        </>
+      ) : (
+        <>
+          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+          <path
+            fill="#a2001d"
+            d="M12 2.5c-4.39 0-8.083 2.977-9.173 7.022h18.346C20.083 5.477 16.389 2.5 12 2.5m0 19c4.389 0 8.082-2.977 9.173-7.022H2.826C3.917 18.523 7.611 21.5 12 21.5"
+          />
+        </>
+      )}
+    </Icon>
+  )
+}
 
 LatviaFlag.displayName = 'LatviaFlag'
