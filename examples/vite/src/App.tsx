@@ -1,3 +1,4 @@
+import { instanceOriginal } from '@ultraviolet/illustrations/products/instance'
 import { consoleDarkTheme, consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import { Alert, Button, Card, Row, Stack, Text, Badge, SelectableCardOptionGroup } from '@ultraviolet/ui'
 import { InfoTable } from '@ultraviolet/ui/compositions/InfoTable'
@@ -23,9 +24,12 @@ export const App = () => {
           Playground
         </Text>
         <Row gap="3" templateColumns="auto auto">
-          <Badge sentiment="danger" prominence="strong">
-            test
-          </Badge>
+          <Stack>
+            <Badge sentiment="danger" prominence="strong">
+              test
+            </Badge>
+            <img src={instanceOriginal} width="200" />
+          </Stack>
           <InfoTable>
             <InfoTable.Row templateColumns="1fr">
               <InfoTable.Cell title="title">Coucou</InfoTable.Cell>
