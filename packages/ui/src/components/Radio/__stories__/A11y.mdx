@@ -46,6 +46,7 @@ To apply when using the component:
 **High:**
 
 - Tooltip wrapper around the radio may interfere with screen reader announcements and keyboard navigation.
+- Hover state management is placed on the parent `div` (`radioStyle.container`), which is a non-interactive element that cannot receive focus. The component should manage all interaction states on the `input` field only, and the CSS should target those input states (e.g. `:hover`, `:focus-visible`) relative to the `svg` sibling instead of relying on hover selectors on the parent container.
 
 **Medium:**
 
