@@ -1,6 +1,9 @@
 import { Markdown, Meta } from '@storybook/addon-docs/blocks'
 import Readme from '../../../README.md?raw'
+import logoLight from '../../../.storybook/assets/logo-light.png'
 
 <Meta title="Get started" />
 
-<Markdown>{Readme}</Markdown>
+<Markdown>
+  {Readme.replace('.storybook/assets/logo-light.png', logoLight).replace(/<img[^>]+logo-dark[^>]+\/>/, '')}
+</Markdown>
