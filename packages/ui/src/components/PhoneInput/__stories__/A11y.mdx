@@ -24,7 +24,7 @@ Enforced by the component:
 - ✅ [WCAG 2.4.6 - Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html): Label component properly associated with input via `htmlFor`
 - ✅ [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html): Error and success icons use sentiment colors with enough contrast
 - ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html): Input has native focus indicator with sufficient contrast
-- ❌ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html): Country flag emoji lacks `role="img"` and `aria-label` with country name
+- ❌ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html): Country flag emoji lacks `aria-hidden` and `accessibleName` with country name
 - ⚠️ [RFC #6585 - Accessible Icons and Hidden Labels](https://github.com/scaleway/ultraviolet/discussions/6585): Component uses deprecated `aria-label` pattern. Should migrate to `accessibleLabel` prop (for hidden labels) per new team standards
 
 To apply when using the component:
@@ -41,7 +41,7 @@ To apply when using the component:
 
 **High:**
 
-- Flag emoji lacks accessible name - The country flag emoji (`getPhoneCountryFlag(countryFlag)`) is decorative but conveys meaningful information (selected country). Screen readers may announce emoji flags inconsistently. Should add `role="img"` and accessible label (via `VisuallyHidden` component) with the country name.
+- Flag emoji lacks accessible name - The country flag emoji (`getPhoneCountryFlag(countryFlag)`) is decorative but conveys meaningful information (selected country). Screen readers may announce emoji flags inconsistently. Should add `aria-hidden` and accessible label (via `VisuallyHidden` component) with the country name.
 
 **Medium:**
 
