@@ -29,6 +29,16 @@
       "groupSlug": "non-major-dev-deps"
     },
     {
+      "matchDepTypes": ["dependencies"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "deps"
+    },
+    {
+      "matchDepTypes": ["packageManager", "devDependencies"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "devDeps"
+    },
+    {
       "extends": ["packages:linters"],
       "matchPackageNames": ["/oxfmt/", "/oxlint/", "publint", "lint-staged"],
       "matchDepTypes": ["devDependencies"],
@@ -50,17 +60,7 @@
       "groupName": "storybook"
     },
     {
-      "matchDepTypes": ["dependencies"],
-      "semanticCommitType": "chore",
-      "semanticCommitScope": "deps"
-    },
-    {
       "matchManagers": ["dockerfile", "github-actions"],
-      "semanticCommitType": "chore",
-      "semanticCommitScope": "devDeps"
-    },
-    {
-      "matchDepTypes": ["packageManager", "devDependencies"],
       "semanticCommitType": "chore",
       "semanticCommitScope": "devDeps"
     },
