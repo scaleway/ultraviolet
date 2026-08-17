@@ -8,26 +8,51 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const FinlandFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="FinlandFlag">
-    {props.disabled ? (
-      <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path
-          fill="#444"
-          d="M23.898 10.435H9.391V.285C8.282.531 7.231.93 6.261 1.46v8.976H.1a12 12 0 0 0 0 3.13h6.16v8.976c.97.53 2.021.928 3.13 1.174v-10.15h14.507a12 12 0 0 0 0-3.13"
-        />
-      </>
-    ) : (
-      <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path
-          fill="#0052b4"
-          d="M23.898 10.435H9.391V.285C8.282.531 7.231.93 6.261 1.46v8.976H.1a12 12 0 0 0 0 3.13h6.16v8.976c.97.53 2.021.928 3.13 1.174v-10.15h14.507a12 12 0 0 0 0-3.13"
-        />
-      </>
-    )}
-  </Icon>
-)
+export const FinlandFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
+  if (['small', 'xsmall'].includes(size)) {
+    return (
+      <Icon {...props} title="FinlandFlag">
+        {disabled ? (
+          <>
+            <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+            <path
+              fill="#444"
+              d="M14.94 7.087H6.479v-5.92a7 7 0 0 0-1.826.684v5.236H1.06a7 7 0 0 0 0 1.826h3.593v5.236a7 7 0 0 0 1.826.685v-5.92h8.463a7 7 0 0 0 0-1.827"
+            />
+          </>
+        ) : (
+          <>
+            <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+            <path
+              fill="#0052b4"
+              d="M14.94 7.087H6.479v-5.92a7 7 0 0 0-1.826.684v5.236H1.06a7 7 0 0 0 0 1.826h3.593v5.236a7 7 0 0 0 1.826.685v-5.92h8.463a7 7 0 0 0 0-1.827"
+            />
+          </>
+        )}
+      </Icon>
+    )
+  }
+  return (
+    <Icon {...props} title="FinlandFlag">
+      {disabled ? (
+        <>
+          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+          <path
+            fill="#444"
+            d="M21.42 10.76H9.935V2.727c-.878.195-1.71.51-2.478.93v7.105H2.58a9.6 9.6 0 0 0 0 2.478h4.876v7.106c.769.419 1.6.735 2.479.93V13.24H21.42a9.6 9.6 0 0 0 0-2.478"
+          />
+        </>
+      ) : (
+        <>
+          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+          <path
+            fill="#0052b4"
+            d="M21.42 10.76H9.935V2.727c-.878.195-1.71.51-2.478.93v7.105H2.58a9.6 9.6 0 0 0 0 2.478h4.876v7.106c.769.419 1.6.735 2.479.93V13.24H21.42a9.6 9.6 0 0 0 0-2.478"
+          />
+        </>
+      )}
+    </Icon>
+  )
+}
 
 FinlandFlag.displayName = 'FinlandFlag'

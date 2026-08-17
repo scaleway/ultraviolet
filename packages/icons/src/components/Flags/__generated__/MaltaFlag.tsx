@@ -8,22 +8,43 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const MaltaFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="MaltaFlag">
-    {props.disabled ? (
-      <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path fill="#454545" d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12" />
-        <path fill="#acacac" d="M8.348 4.695V3.13H6.783v1.565H5.218v1.566h1.565v1.565h1.565V6.26h1.565V4.695z" />
-      </>
-    ) : (
-      <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path fill="#d80027" d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12" />
-        <path fill="#acabb1" d="M8.348 4.695V3.13H6.783v1.565H5.218v1.566h1.565v1.565h1.565V6.26h1.565V4.695z" />
-      </>
-    )}
-  </Icon>
-)
+export const MaltaFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
+  if (['small', 'xsmall'].includes(size)) {
+    return (
+      <Icon {...props} title="MaltaFlag">
+        {disabled ? (
+          <>
+            <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+            <path fill="#454545" d="M8 1a7 7 0 0 1 0 14" />
+            <path fill="#acacac" d="M5.87 3.739v-.913h-.913v.913h-.913v.913h.913v.913h.913v-.913h.913v-.913z" />
+          </>
+        ) : (
+          <>
+            <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+            <path fill="#d80027" d="M8 1a7 7 0 0 1 0 14" />
+            <path fill="#acabb1" d="M5.87 3.739v-.913h-.913v.913h-.913v.913h.913v.913h.913v-.913h.913v-.913z" />
+          </>
+        )}
+      </Icon>
+    )
+  }
+  return (
+    <Icon {...props} title="MaltaFlag">
+      {disabled ? (
+        <>
+          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+          <path fill="#454545" d="M12 2.5a9.5 9.5 0 0 1 0 19" />
+          <path fill="#acacac" d="M9.109 6.217V4.978h-1.24v1.24H6.632v1.238H7.87v1.24h1.239v-1.24h1.239V6.217z" />
+        </>
+      ) : (
+        <>
+          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+          <path fill="#d80027" d="M12 2.5a9.5 9.5 0 0 1 0 19" />
+          <path fill="#acabb1" d="M9.109 6.217V4.978h-1.24v1.24H6.632v1.238H7.87v1.24h1.239v-1.24h1.239V6.217z" />
+        </>
+      )}
+    </Icon>
+  )
+}
 
 MaltaFlag.displayName = 'MaltaFlag'

@@ -8,25 +8,70 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const SwedenFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="SwedenFlag">
-    {props.disabled ? (
-      <>
-        <path fill="#414141" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path fill="#c4c4c4" d="M7-1.25h5v27H7z" />
-        <path fill="#c4c4c4" d="M-1 9.75h28v5H-1z" />
-      </>
-    ) : (
-      <>
-        <path fill="#005293" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <g mask="url(#mask0_3023_239)">
-          <path fill="#005293" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-          <path fill="#fecb00" d="M7-1.25h5v27H7z" />
-          <path fill="#fecb00" d="M-1 9.75h28v5H-1z" />
-        </g>
-      </>
-    )}
-  </Icon>
-)
+export const SwedenFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
+  if (['small', 'xsmall'].includes(size)) {
+    return (
+      <Icon {...props} title="SwedenFlag">
+        {disabled ? (
+          <>
+            <g clipPath="url(#clip0_3237_1286)">
+              <mask id="mask0_3237_1286" x="0" y="0" maskUnits="userSpaceOnUse">
+                <path fill="#fff" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
+              </mask>
+              <g mask="url(#mask0_3237_1286)">
+                <path fill="#414141" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
+                <path fill="#c4c4c4" d="M4.583-.23H7.5v15.75H4.583z" />
+                <path fill="#c4c4c4" d="M-.083 6.188H16.25v2.916H-.083z" />
+              </g>
+            </g>
+            <defs>
+              <clipPath id="clip0_3237_1286">
+                <path fill="#fff" d="M0 0h16v16H0z" />
+              </clipPath>
+            </defs>
+          </>
+        ) : (
+          <>
+            <mask id="mask0_3237_1281" x="0" y="0">
+              <path fill="#fff" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
+            </mask>
+            <g mask="url(#mask0_3237_1281)">
+              <path fill="#005293" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
+              <path fill="#fecb00" d="M4.583-.23H7.5v15.75H4.583z" />
+              <path fill="#fecb00" d="M-.083 6.188H16.25v2.916H-.083z" />
+            </g>
+          </>
+        )}
+      </Icon>
+    )
+  }
+  return (
+    <Icon {...props} title="SwedenFlag">
+      {disabled ? (
+        <>
+          <mask id="mask0_3023_247" x="2" y="2" maskUnits="userSpaceOnUse">
+            <path fill="#ffff" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+          </mask>
+          <g mask="url(#mask0_3023_247)">
+            <path fill="#414141" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+            <path fill="#c4c4c4" d="M8.042 1.51H12v21.375H8.042z" />
+            <path fill="#c4c4c4" d="M1.708 10.219h22.167v3.958H1.708z" />
+          </g>
+        </>
+      ) : (
+        <>
+          <mask id="mask0_3023_239" x="2" y="2" maskUnits="userSpaceOnUse">
+            <path fill="#fff" d="M12.25 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+          </mask>
+          <g mask="url(#mask0_3023_239)">
+            <path fill="#005293" d="M12.25 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+            <path fill="#fecb00" d="M8.042 1.51H12v21.375H8.042z" />
+            <path fill="#fecb00" d="M1.708 10.219h22.167v3.958H1.708z" />
+          </g>
+        </>
+      )}
+    </Icon>
+  )
+}
 
 SwedenFlag.displayName = 'SwedenFlag'
