@@ -12,7 +12,7 @@ A form input component used to select a single option from a group of options. S
 
 1. ❌ **Perceivable**: Focus indicator contrast is insufficient (1.32:1 light, 1.63:1 dark, 1.34:1 darker themes)
 2. ❌ **Operable**: Focus indicator contrast fails WCAG 1.4.11 (all themes below 3:1 minimum); tooltip wrapper may interfere with keyboard navigation
-3. ✅ **Understandable**: Labels and helper text are properly associated via htmlFor and aria-describedby
+3. ❌ **Understandable**: Labels and helper text are properly associated, but error state is not announced when `error` is a boolean (no `aria-invalid` and no linked message)
 4. ❌ **Robust**: SVG contains `<title>radio</title>` which is confusing; missing radiogroup semantics at component level
 
 ## ARIA Pattern
@@ -25,6 +25,7 @@ Enforced by the component:
 
 - ❌ [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Focus ring contrast ratio is 1.32:1 (light theme), 1.63:1 (dark theme), 1.34:1 (darker theme); minimum required is 3:1
 - ✅ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - Label provided via label prop, associated via htmlFor
+- ❌ [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - When `error` is a boolean (as passed by `RadioGroup`), the input gets no `aria-invalid` and no `aria-describedby` link, so the error is not announced to assistive technologies
 - ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - SVG `<title>radio</title>` is confusing and not meaningful to screen readers
 - ✅ [ARIA Radio Role](https://www.w3.org/WAI/ARIA/apg/patterns/radio/) - Native `<input type="radio">` provides correct role and aria-checked state
 
@@ -45,6 +46,7 @@ To apply when using the component:
 
 **High:**
 
+- When `error` is passed as a boolean (e.g. from `RadioGroup`, RadioGroup/SingleRadio.tsx:39), the input receives no `aria-invalid` attribute and no `aria-describedby` link, and no error text is rendered: the error state is only exposed as `data-invalid` on the container div, which is invisible to assistive technologies. `aria-invalid` should be set on the input and a linked descriptive error message provided.
 - Tooltip wrapper around the radio may interfere with screen reader announcements and keyboard navigation.
 - Hover state management is placed on the parent `div` (`radioStyle.container`), which is a non-interactive element that cannot receive focus. The component should manage all interaction states on the `input` field only, and the CSS should target those input states (e.g. `:hover`, `:focus-visible`) relative to the `svg` sibling instead of relying on hover selectors on the parent container.
 
