@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 6.0.26
+
+### Patch Changes
+
+- [#6801](https://github.com/scaleway/ultraviolet/pull/6801) [`c7e2674`](https://github.com/scaleway/ultraviolet/commit/c7e26743a9d1d6b81893eceb184b95e5d09c5b88) Thanks [@jsulpis](https://github.com/jsulpis)! - update sideEffects config to avoid overly-aggressive tree-shaking
+
 ## 6.0.25
 
 ### Patch Changes
