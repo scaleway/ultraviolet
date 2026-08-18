@@ -1,7 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import type { RecipeVariants } from '@vanilla-extract/recipes'
 
 const banner = recipe({
   base: {
@@ -84,7 +83,6 @@ const closeButton = style({
   },
 })
 
-export type BannerVariants = NonNullable<RecipeVariants<typeof banner>>
 export const bannerStyle = {
   banner,
   imageStack,

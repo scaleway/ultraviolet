@@ -1,7 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import type { RecipeVariants } from '@vanilla-extract/recipes'
 import type { Color } from '../../theme'
 import { drawerStyle } from '../Drawer/styles.css'
 import { tagStyle } from '../Tag/styles.css'
@@ -98,8 +97,6 @@ const hr = recipe({
     },
   },
 })
-
-export type SeparatorVariants = NonNullable<RecipeVariants<typeof iconWraper>>
 
 export const separatorStyle = {
   thicknessSeparator,

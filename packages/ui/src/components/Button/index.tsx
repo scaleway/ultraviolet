@@ -8,7 +8,6 @@ import type { AriaRole, ButtonHTMLAttributes, CSSProperties, MouseEventHandler, 
 import { Loader } from '../Loader'
 import { Tooltip } from '../Tooltip'
 import { buttonStyle } from './styles.css'
-import type { ButtonVariants } from './styles.css'
 
 type CommonProps = {
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type']
@@ -44,7 +43,12 @@ type CommonProps = {
   onPointerDown?: ButtonHTMLAttributes<HTMLButtonElement>['onPointerDown']
   onKeyDown?: ButtonHTMLAttributes<HTMLButtonElement>['onKeyDown']
   style?: CSSProperties
-} & ButtonVariants
+  disabled?: boolean
+  fullWidth?: boolean
+  sentiment?: 'danger' | 'info' | 'neutral' | 'primary' | 'secondary' | 'success' | 'warning' | 'black' | 'white'
+  size?: 'small' | 'medium' | 'large' | 'xsmall'
+  variant?: 'filled' | 'outlined' | 'ghost'
+}
 
 type BaseButtonProps = CommonProps & {
   children: ReactNode

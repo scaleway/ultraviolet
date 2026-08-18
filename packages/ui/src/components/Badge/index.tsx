@@ -6,14 +6,17 @@ import type { CSSProperties, ReactNode } from 'react'
 import { Text } from '../Text'
 import { TEXT_VARIANT } from './constant'
 import { badgeStyle } from './styles.css'
-import type { BadgeVariants } from './styles.css'
 
 type BadgeProps = {
+  disabled?: boolean
+  prominence?: 'default' | 'strong'
+  sentiment?: 'danger' | 'info' | 'success' | 'warning' | 'neutral' | 'black' | 'white' | 'primary' | 'secondary'
+  size?: 'medium' | 'small' | 'large' | 'xsmall'
   className?: string
   children: ReactNode
   'data-testid'?: string
   style?: CSSProperties
-} & BadgeVariants
+}
 
 /**
  * Badge component is used to display a status or a label in a small container.
