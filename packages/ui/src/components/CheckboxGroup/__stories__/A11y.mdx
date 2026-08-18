@@ -1,0 +1,50 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/CheckboxGroup/A11y" />
+
+# CheckboxGroup - Accessibility
+
+## Description
+
+A form component that groups a set of checkboxes inside a native `<fieldset>` with an optional `<legend>`, helper/error text, and required indication. Each option is rendered through the `CheckboxGroup.Checkbox` sub-component which wraps the `Checkbox` component.
+
+## Summary
+
+1. ❌ **Perceivable**: Grouping relationship is provided natively via `fieldset`/`legend` (1.3.1), but the group inherits the Checkbox focus indicator contrast failure (1.4.11)
+2. ❌ **Operable**: Inherits Checkbox focus-visible contrast failure (2.4.7); independent checkboxes require no arrow-key navigation
+3. ❌ **Understandable**: Group error/helper text is associated only with the `<fieldset>`, not with the individual checkbox inputs, so options announce "invalid" without the descriptive message (3.3.1)
+4. ❌ **Robust**: A `fieldset` without `legend` has no accessible name (4.1.2)
+
+## ARIA Pattern
+
+[ARIA Checkbox Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/) - individual options. For grouping, the native HTML `fieldset`/`legend` elements are the recommended mechanism and already used here.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - The group is wrapped in a native `<fieldset>` with an optional `<legend>` (rendered via `Label as="legend"`), programmatically conveying that the checkboxes belong together
+- ✅ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - The legend labels the group and each option is labeled by the underlying `Checkbox`
+- ❌ [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - Group error text is associated only with the `<fieldset>` via `aria-describedby`; the individual checkboxes receive only `aria-invalid`/styling but are not linked to the descriptive error message
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - A `<fieldset>` rendered without a `legend` has no accessible name; the user-supplied `aria-describedby` value is also reused as the Description id, which can orphan the helper/error text
+
+To apply when using the component:
+
+- [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Always provide a `legend` so the group has an accessible name; a bare `<fieldset>` without a legend conveys no grouping information to assistive technologies
+- ⚠️ [RFC #6585 - Accessible Icons and Hidden Labels](https://github.com/scaleway/ultraviolet/discussions/6585) - When the `legend` is omitted but a visually-hidden name is still needed, provide an `accessibleLegend` prop that renders a `<legend>` hidden via the `VisuallyHidden` component (or `sr-only` class), so the `<fieldset>` keeps an accessible name without visible text
+- [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - When `error` is a boolean, provide a descriptive error message and ensure it is associated with each checkbox input via `aria-describedby`, so the reason for the error is announced when an option receives focus
+
+## Accessibility issues
+
+**High:**
+
+- Group error text is associated only with the `<fieldset>` via `aria-describedby`, while each `CheckboxGroup.Checkbox` input gets only `aria-invalid`/styling. Screen reader users tabbing through options hear "invalid" without the message. Fix: associate the group error/helper `id` with each checkbox input via `aria-describedby` (the underlying `Checkbox` already supports it), keeping the fieldset association as a complement.
+- `legend` is optional, but a `<fieldset>` without a `<legend>` has no accessible name. When `legend` is omitted the group still renders a `<fieldset>` (index.tsx:64) with no name, failing to convey the grouping relationship required by 1.3.1 / 4.1.2. Add an `accessibleLegend` prop that renders a hidden `<legend>` via the `VisuallyHidden` component (per RFC #6585) to name the `fieldset`.
+
+**Medium:**
+
+- The `aria-describedby` prop is overloaded: when a consumer supplies it, it is used both as the `fieldset`'s `aria-describedby` and as the `Description` element `id`. This can collide with the id of the external element it points to (duplicate id in the document).
+
+## Dependencies
+
+- `Checkbox` component: the group inherits its focus indicator contrast, SVG `<title>` name exposure, and tooltip wrapping issues. Fix those in `Checkbox` first.
