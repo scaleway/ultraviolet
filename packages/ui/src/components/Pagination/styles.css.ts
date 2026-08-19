@@ -1,10 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 
-const paginationContainer = style({
-  containerType: 'inline-size',
-})
-
 const pageNumbersContainer = style({
   margin: `0 ${theme.space['1']}`,
 })
@@ -12,42 +8,6 @@ const pageNumbersContainer = style({
 const pageButton = styleVariants({
   medium: { width: theme.sizing[500] },
   small: { width: theme.sizing[400] },
-})
-
-const hiddenOnSmall = styleVariants({
-  medium: {
-    '@container': {
-      '(max-width: 320px)': {
-        display: 'none',
-      },
-    },
-  },
-  small: {
-    '@container': {
-      '(max-width: 280px)': {
-        display: 'none',
-      },
-    },
-  },
-})
-
-const showOnSmall = styleVariants({
-  medium: {
-    display: 'none',
-    '@container': {
-      '(max-width: 320px)': {
-        display: 'flex',
-      },
-    },
-  },
-  small: {
-    display: 'none',
-    '@container': {
-      '(max-width: 280px)': {
-        display: 'flex',
-      },
-    },
-  },
 })
 
 const ellipsisBase = style({
@@ -73,10 +33,7 @@ const ellipsisClass = styleVariants({
 })
 
 export const paginationStyle = {
-  paginationContainer,
   pageNumbersContainer,
   pageButton,
-  hiddenOnSmall,
-  showOnSmall,
   ellipsisClass,
 }

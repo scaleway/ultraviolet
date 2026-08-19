@@ -9,15 +9,11 @@ export const Size: StoryFn = props => {
   return (
     <Stack gap={1}>
       Small:
-      <Pagination {...props} onChange={setPage} page={page} pageCount={20} size="small" />
+      <Pagination pageCount={20} {...props} onChange={setPage} page={page} size="small" />
       Medium (default value):
-      <Pagination {...props} onChange={setPage} page={page} pageCount={20} size="medium" />
+      <Pagination pageCount={20} {...props} onChange={setPage} page={page} size="medium" />
     </Stack>
   )
-}
-
-Size.args = {
-  pageTabCount: 5,
 }
 
 Size.parameters = {

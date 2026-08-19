@@ -4,13 +4,12 @@ import { paginationStyle } from './styles.css'
 type EllipsisProps = {
   disabled?: boolean
   size: 'small' | 'medium'
-  className?: string
 }
-export const Ellipsis = ({ disabled, size, className }: EllipsisProps) => (
+export const Ellipsis = ({ disabled, size }: EllipsisProps) => (
   <Text
     aria-label="ellipsis"
     as="span"
-    className={`${paginationStyle.ellipsisClass[size]}${className ? ` ${className}` : ''}`}
+    className={paginationStyle.ellipsisClass[size]}
     disabled={disabled}
     placement="center"
     prominence="default"
