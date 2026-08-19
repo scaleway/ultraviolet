@@ -10,35 +10,40 @@ import type { IconProps } from '../Icon'
 
 export const FileProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
   <Icon {...props} title="FileProductIcon">
-    <g>
-      <g>
-        <path
-          fill="#f1eefc"
-          className="fillWeak"
-          d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
-        />
-      </g>
-      <g>
-        <g>
-          <g>
-            <path
-              d="M21 14a1 1 0 0 0-1 1v33a1 1 0 0 0 1 1h15a1 1 0 1 1 0 2H21a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3h17.5a1 1 0 0 1 .791.389l8.5 11A1 1 0 0 1 48 24v8.5a1 1 0 1 1-2 0v-8.159L38.009 14z"
-              clipRule="evenodd"
-              fillRule="evenodd"
-            />
-            <path d="M47 25h-1v23a1 1 0 0 1-1 1H30a1 1 0 1 0 0 2h15a3 3 0 0 0 3-3V25z" />
-            <path d="M37.5 22v-8.5h2V22a1 1 0 0 0 1 1H47v2h-6.5a3 3 0 0 1-3-3" clipRule="evenodd" fillRule="evenodd" />
-          </g>
-          <path
-            fill="#a060f6"
-            className="fillStrong"
-            d="M24.5 21a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2zm0 13a1 1 0 1 0 0 2H38a1 1 0 1 0 0-2zm-1 8a1 1 0 0 1 1-1h9a1 1 0 1 1 0 2h-9a1 1 0 0 1-1-1m1-14.5a1 1 0 1 0 0 2H42a1 1 0 1 0 0-2z"
-            clipRule="evenodd"
-            fillRule="evenodd"
-          />
-        </g>
-      </g>
-    </g>
+    <path
+      fill="#f1eefc"
+      className="fillWeak"
+      d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
+    />
+    <path
+      fill="#f1eefc"
+      className="fillWeak"
+      fillRule="evenodd"
+      d="M48 2H16C8.268 2 2 8.268 2 16v32c0 7.732 6.268 14 14 14h32c7.732 0 14-6.268 14-14V16c0-7.732-6.268-14-14-14M16 0C7.163 0 0 7.163 0 16v32c0 8.837 7.163 16 16 16h32c8.837 0 16-7.163 16-16V16c0-8.837-7.163-16-16-16z"
+      clipRule="evenodd"
+    />
+    <path
+      fill="#521094"
+      className="fill"
+      fillRule="evenodd"
+      d="M21 14a1 1 0 0 0-1 1v33a1 1 0 0 0 1 1h15a1 1 0 1 1 0 2H21a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3h17.5a1 1 0 0 1 .791.389l8.5 11A1 1 0 0 1 48 24v8.5a1 1 0 1 1-2 0v-8.159L38.009 14z"
+      clipRule="evenodd"
+    />
+    <path fill="#521094" className="fill" d="M47 25h-1v23a1 1 0 0 1-1 1H30a1 1 0 1 0 0 2h15a3 3 0 0 0 3-3V25z" />
+    <path
+      fill="#521094"
+      className="fill"
+      fillRule="evenodd"
+      d="M37.5 22v-8.5h2V22a1 1 0 0 0 1 1H47v2h-6.5a3 3 0 0 1-3-3"
+      clipRule="evenodd"
+    />
+    <path
+      fill="#a060f6"
+      className="fillStrong"
+      fillRule="evenodd"
+      d="M24.5 21a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2zm0 13a1 1 0 1 0 0 2H38a1 1 0 1 0 0-2zm-1 8a1 1 0 0 1 1-1h9a1 1 0 1 1 0 2h-9a1 1 0 0 1-1-1m1-14.5a1 1 0 1 0 0 2H42a1 1 0 1 0 0-2z"
+      clipRule="evenodd"
+    />
   </Icon>
 )
 
