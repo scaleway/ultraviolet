@@ -5,6 +5,7 @@ import type { CSSProperties } from 'react'
 import { Stack } from '../Stack'
 import { PaginationButtons } from './PaginationButtons'
 import { PerPage } from './PerPage'
+import { paginationStyle } from './styles.css'
 
 type PaginationProps = {
   /**
@@ -112,7 +113,12 @@ export const Pagination = ({
   }, [perPage])
 
   return (
-    <Stack direction="row" justifyContent="space-between" style={style}>
+    <Stack
+      className={paginationStyle.paginationContainer}
+      direction="row"
+      justifyContent="space-between"
+      style={style}
+    >
       {perPage ? (
         <PerPage
           numberOfItems={numberOfItems}
