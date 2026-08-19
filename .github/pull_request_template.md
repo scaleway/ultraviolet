@@ -1,31 +1,20 @@
-## Summary
+### Summary
 
-## Type
+**Type:** `Bug / Feature / Enhancement / Documentation / Migration / Refactor`
 
-- Bug
-- Feature
-- Enhancement
-- Documentation
-- Migration
-- Refactor
+(Explain briefly the purpose of this PR)
 
-### Summarize concisely:
+### What is expected?
 
-#### What is expected?
+(Short description of the new behavior)
 
-(Description of the new behavior)
+### The following changes were made:
 
-#### The following changes were made:
+- change 1
+- change 2
+- ...
 
-(Describe what you did)
-
-1.
-
-2.
-
-3.
-
-## Relevant logs and/or screenshots
+### Relevant logs and/or screenshots
 
 | Page |   Before   |      After |
 | :--- | :--------: | ---------: |
