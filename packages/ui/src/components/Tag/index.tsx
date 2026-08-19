@@ -6,6 +6,7 @@ import { CopyContentIcon } from '@ultraviolet/icons/CopyContentIcon'
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
 import { Loader } from '../Loader'
+import { Row } from '../Row'
 import { Separator } from '../Separator'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -91,30 +92,48 @@ export const Tag = ({
             }
           }}
         >
-          <Text
-            aria-disabled={disabled}
-            as="span"
-            className={tagStyle.text}
-            oneLine
-            variant={variant === 'code' ? 'code' : 'caption'}
-            sentiment={disabled ? 'neutral' : sentiment}
-            disabled={disabled}
-          >
-            {keyValue ? (
-              <Stack direction="row" gap={1}>
+          {keyValue ? (
+            <Row templateColumns="minmax(0, auto) 1px minmax(0, auto)" gap={1} className={tagStyle.text}>
+              <Text
+                aria-disabled={disabled}
+                as="span"
+                variant={variant === 'code' ? 'code' : 'caption'}
+                oneLine
+                sentiment={disabled ? 'neutral' : sentiment}
+                disabled={disabled}
+              >
                 {keyValue.key}
-                <Separator
-                  sentiment={disabled ? 'neutral' : sentiment}
-                  direction="vertical"
-                  thickness={1}
-                  className={tagStyle.separator}
-                />
+              </Text>
+              <Separator
+                sentiment={disabled ? 'neutral' : sentiment}
+                direction="vertical"
+                thickness={1}
+                className={tagStyle.separator}
+              />
+              <Text
+                aria-disabled={disabled}
+                as="span"
+                variant={variant === 'code' ? 'code' : 'caption'}
+                oneLine
+                sentiment={disabled ? 'neutral' : sentiment}
+                disabled={disabled}
+              >
                 {keyValue.value}
-              </Stack>
-            ) : (
-              children
-            )}
-          </Text>
+              </Text>
+            </Row>
+          ) : (
+            <Text
+              aria-disabled={disabled}
+              as="span"
+              className={tagStyle.text}
+              oneLine
+              variant={variant === 'code' ? 'code' : 'caption'}
+              sentiment={disabled ? 'neutral' : sentiment}
+              disabled={disabled}
+            >
+              {children}
+            </Text>
+          )}
           {copiable && copyButton && !isLoading ? <CopyContentIcon size="xsmall" /> : null}
           {isLoading ? <Loader active size="small" /> : null}
         </TagInner>

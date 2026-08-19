@@ -9,6 +9,16 @@ export const KeyValue: StoryFn<typeof Tag> = args => (
     Closable: <Tag {...args} onClose={() => {}} />
     Copiable: <Tag {...args} copiable copyText="Copy" copiedText="Copied" />
     Closable & copiable: <Tag {...args} onClose={() => {}} copiable copyText="Copy" copiedText="Copied" />
+    With overflow:
+    <Tag
+      keyValue={{ key: 'key key key key key key key key key key', value: 'value value value value value value value' }}
+    />
+    <Tag keyValue={{ key: 'key', value: 'value value value value value value value' }} />
+    <Tag keyValue={{ key: 'key key key key key key key key key key', value: 'value' }} />
+    <Tag
+      keyValue={{ key: 'key key key key key key key key key key', value: 'value value value value value value value' }}
+      onClose={() => {}}
+    />
   </Stack>
 )
 
