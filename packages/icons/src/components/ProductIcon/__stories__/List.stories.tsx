@@ -31,3 +31,7 @@ export const List: StoryFn = props => (
     })}
   </Stack>
 )
+
+List.args = {
+  variant: 'primary',
+}
