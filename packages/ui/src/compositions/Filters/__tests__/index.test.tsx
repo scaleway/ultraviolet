@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { screen, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { InformationIcon } from '@ultraviolet/icons'
 import { renderWithTheme } from '@utils/test'
@@ -243,12 +243,18 @@ describe('filters', () => {
     renderWithTheme(<Filters config={config} defaultValues={defaultValues} labels={labels} />)
 
     await userEvent.click(screen.getByRole('button', { name: 'All filters' }))
-    expect(screen.getByRole('dialog')).toBeVisible()
+
+    const drawer = screen.getByRole('dialog')
+    expect(drawer).toBeVisible()
+
+    const clearAllButton = within(drawer).getByRole('button', { name: 'Clear all' })
+    expect(clearAllButton).toBeDisabled()
 
     expect(screen.queryByRole('button', { name: 'Clear' })).not.toBeInTheDocument()
 
     await userEvent.click(screen.getByRole('checkbox', { name: 'Production' }))
     expect(screen.getByRole('button', { name: 'Clear' })).toBeVisible()
+    expect(clearAllButton).not.toBeDisabled()
 
     await userEvent.click(screen.getByRole('checkbox', { name: 'Production' }))
     expect(screen.queryByRole('button', { name: 'Clear' })).not.toBeInTheDocument()
