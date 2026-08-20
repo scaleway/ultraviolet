@@ -63,6 +63,7 @@ export const Controls = ({ controls, direction, size, localRef, max, min, isDisa
         sentiment="neutral"
         size={size === 'small' ? 'xsmall' : 'small'}
         variant="ghost"
+        tabIndex={-1}
       >
         {isUp ? (
           <PlusIcon size={size === 'large' ? 'small' : 'small'} />

@@ -12,7 +12,7 @@ export const leftOption = createVar()
 const container = style({ marginBottom: theme.space[3] })
 
 const tooltip = style({
-  left: tooltipLeft,
+  left: `${tooltipLeft} !important`,
   position: 'absolute',
   width: 'fit-content',
 })
@@ -65,7 +65,6 @@ const sliderThumbDefaultStyle = {
   boxShadow: `${theme.shadows.fixed[0]}, ${theme.shadows.fixed[1]}`,
   height: `${THUMB_SIZE}px`,
   pointerEvents: 'all',
-  position: 'absolute',
   transition: 'background 0.3s ease-in-out',
   WebkitAppearance: 'none',
   width: `${THUMB_SIZE}px`,
@@ -74,8 +73,6 @@ const sliderThumbDefaultStyle = {
 const thumbStyle = recipe({
   defaultVariants: {
     disabled: false,
-    hasTooltipDouble: true,
-    isDouble: false,
   },
   variants: {
     disabled: {
@@ -112,34 +109,6 @@ const thumbStyle = recipe({
           },
           '&::-webkit-slider-thumb': {
             cursor: 'not-allowed',
-          },
-        },
-      },
-    },
-    hasTooltipDouble: {
-      false: {
-        selectors: {
-          '&::-webkit-slider-thumb': {
-            top: `-${THUMB_SIZE / 2}px`,
-          },
-        },
-      },
-    },
-    isDouble: {
-      false: {
-        selectors: {
-          '&::-moz-range-thumb': {
-            top: `-${THUMB_SIZE / 4}px`,
-          },
-          '&::-webkit-slider-thumb': {
-            top: `-${THUMB_SIZE / 4}px`,
-          },
-        },
-      },
-      true: {
-        selectors: {
-          '&::-webkit-slider-thumb': {
-            top: `${THUMB_SIZE / 8}px`,
           },
         },
       },
@@ -182,22 +151,15 @@ const double = recipe({
     pointerEvents: 'none',
     position: 'absolute',
     selectors: {
-      '&::-moz-range-thumb': {
-        ...sliderThumbDefaultStyle,
-        left: leftVar,
-      },
+      '&::-moz-range-thumb': sliderThumbDefaultStyle,
       '&::-moz-range-track, &::-ms-track, &:focus::-webkit-slider-runnable-track': trackStyle,
-      '&::-webkit-slider-thumb': {
-        ...sliderThumbDefaultStyle,
-        left: leftVar,
-        top: `calc(-1 * ${theme.space['1']})`,
-      },
+      '&::-webkit-slider-thumb': sliderThumbDefaultStyle,
     },
     width: '100%',
+    inset: 0,
   },
   defaultVariants: {
     disabled: false,
-    hasTooltip: false,
   },
   variants: {
     disabled: {
@@ -210,16 +172,6 @@ const double = recipe({
         },
       },
       true: {},
-    },
-
-    hasTooltip: {
-      true: {
-        selectors: {
-          '&::-moz-range-thumb': {
-            transform: 'translate(0, -10px)',
-          },
-        },
-      },
     },
   },
 })
@@ -236,17 +188,12 @@ const single = recipe({
     outline: 'none',
     position: 'relative',
     selectors: {
-      '&::-moz-range-thumb': {
-        ...sliderThumbDefaultStyle,
-        left: leftVar,
-      },
+      '&::-moz-range-thumb': sliderThumbDefaultStyle,
       '&::-webkit-slider-runnable-track, &::-moz-range-track': trackStyle,
-      '&::-webkit-slider-thumb': {
-        ...sliderThumbDefaultStyle,
-        left: leftVar,
-      },
+      '&::-webkit-slider-thumb': sliderThumbDefaultStyle,
     },
     width: '100%',
+    inset: 0,
   },
   variants: {
     direction: {

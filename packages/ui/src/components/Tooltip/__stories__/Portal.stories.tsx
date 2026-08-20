@@ -44,7 +44,6 @@ export const Portal = (props: ComponentProps<typeof Tooltip>) => {
           placement="auto"
           {...props}
           text="This can overflow from the scroll container and has a little lag on scroll"
-          portalTarget={document.body}
           visible
         >
           <Button ref={secondBtnRef}>Portal to document.body</Button>
@@ -55,6 +54,7 @@ export const Portal = (props: ComponentProps<typeof Tooltip>) => {
           placement="auto"
           {...props}
           text="This will stay in the scroll container and has no lag on scroll"
+          portalTarget={null}
           visible
         >
           <Button ref={firsBtnRef}>No portal</Button>

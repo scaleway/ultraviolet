@@ -1,6 +1,7 @@
 import { cn } from '@ultraviolet/utils'
 import type { ChangeEvent, KeyboardEvent, MouseEvent, RefObject } from 'react'
 import { Checkbox } from '../../../Checkbox'
+import { Tooltip } from '../../../Tooltip'
 import { useSelectInput } from '../../SelectInputProvider'
 import type { OptionType } from '../../types'
 import { DisplayOption } from './Option'
@@ -50,72 +51,73 @@ export const Item = ({
   }
 
   return (
-    <div
-      aria-disabled={!!option.disabled}
-      aria-label={option.value}
-      aria-selected={selectedData.selectedValues.includes(option.value) && !option.disabled}
-      className={cn(
-        selectInputStyle.dropdownItem({
-          disabled: !!option.disabled,
-          size,
-          selected: selectedData.selectedValues.includes(option.value) && !option.disabled,
-        }),
-      )}
-      data-testid={`option-${option.value}`}
-      id={`option-${indexOption}`}
-      onClick={event => {
-        if (!option.disabled) {
-          handleClick({
-            clickedOption: option,
-            event,
-          })
-        }
-      }}
-      onKeyDown={event => {
-        const shouldClick = [' ', 'Enter'].includes(event.key)
-        if (shouldClick) {
-          handleClick({
-            clickedOption: option,
-            event,
-          })
-        }
-      }}
-      ref={option.value === defaultSearchValue || option.searchText === defaultSearchValue ? focusedItemRef : null}
-      role="option"
-      tabIndex={option.disabled ? -1 : 0}
-    >
-      {multiselect ? (
-        <Checkbox
-          checked={selectedData.selectedValues.includes(option.value) && !option.disabled}
-          className={selectInputStyle.dropdownCheckbox}
-          disabled={option.disabled}
-          onChange={event => {
-            if (!option.disabled) {
-              handleClick({
-                clickedOption: option,
-                event,
-              })
-            }
-          }}
-          tabIndex={-1}
-          tooltip={option.tooltip}
-          value={option.value}
-        >
+    <Tooltip containerFullWidth text={option.tooltip}>
+      <div
+        aria-disabled={!!option.disabled}
+        aria-label={option.value}
+        aria-selected={selectedData.selectedValues.includes(option.value) && !option.disabled}
+        className={cn(
+          selectInputStyle.dropdownItem({
+            disabled: !!option.disabled,
+            size,
+            selected: selectedData.selectedValues.includes(option.value) && !option.disabled,
+          }),
+        )}
+        data-testid={`option-${option.value}`}
+        id={`option-${indexOption}`}
+        onClick={event => {
+          if (!option.disabled) {
+            handleClick({
+              clickedOption: option,
+              event,
+            })
+          }
+        }}
+        onKeyDown={event => {
+          const shouldClick = [' ', 'Enter'].includes(event.key) && !option.disabled
+          if (shouldClick) {
+            handleClick({
+              clickedOption: option,
+              event,
+            })
+          }
+        }}
+        ref={option.value === defaultSearchValue || option.searchText === defaultSearchValue ? focusedItemRef : null}
+        role="option"
+        tabIndex={0}
+      >
+        {multiselect ? (
+          <Checkbox
+            checked={selectedData.selectedValues.includes(option.value) && !option.disabled}
+            className={selectInputStyle.dropdownCheckbox}
+            disabled={option.disabled}
+            onChange={event => {
+              if (!option.disabled) {
+                handleClick({
+                  clickedOption: option,
+                  event,
+                })
+              }
+            }}
+            tabIndex={-1}
+            value={option.value}
+          >
+            <DisplayOption
+              descriptionDirection={descriptionDirection}
+              option={option}
+              optionalInfoPlacement={optionalInfoPlacement}
+              textVariant={textVariant}
+            />
+          </Checkbox>
+        ) : (
           <DisplayOption
             descriptionDirection={descriptionDirection}
             option={option}
             optionalInfoPlacement={optionalInfoPlacement}
             textVariant={textVariant}
           />
-        </Checkbox>
-      ) : (
-        <DisplayOption
-          descriptionDirection={descriptionDirection}
-          option={option}
-          optionalInfoPlacement={optionalInfoPlacement}
-          textVariant={textVariant}
-        />
-      )}
-    </div>
+        )}
+      </div>
+    </Tooltip>
   )
 }

@@ -136,6 +136,7 @@ export const SwitchButton = ({
           className={cn(className, switchButtonStyle.container[size])}
           data-testid={dataTestId}
           direction="row"
+          tabIndex={tooltip ? 0 : undefined}
           onMouseDown={event => {
             const rect = event.currentTarget.getBoundingClientRect()
             const clickX = event.clientX - rect.left

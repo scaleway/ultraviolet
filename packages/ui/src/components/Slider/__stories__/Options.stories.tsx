@@ -166,6 +166,7 @@ export const Options: StoryFn<typeof Slider> = args => {
           data-testid="slider"
           double
           name="slider"
+          tooltip="Tooltip"
           onChange={setDoubleValue}
           options={options}
           unit="Mb"

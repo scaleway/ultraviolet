@@ -3,7 +3,6 @@
 import { useMemo } from 'react'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
-import { Tooltip } from '../../../Tooltip'
 import type { OptionType } from '../../types'
 import { selectInputStyle } from '../../styles.css'
 
@@ -36,90 +35,82 @@ export const DisplayOption = ({
 
   if (descriptionDirection === 'row' && optionalInfoPlacement === 'left') {
     return (
-      <Tooltip disableAnimation text={option.tooltip}>
-        <Stack
-          alignItems={optionDescription ? 'flex-start' : 'center'}
-          className={selectInputStyle.dropdownInfoContainer}
-          direction="row"
-          data-testid={`option-stack-${option.value}`}
-          gap={0.5}
-        >
-          {option.optionalInfo}
-          <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
-            {option.label}
-          </Text>
-          {optionDescription}
-        </Stack>
-      </Tooltip>
+      <Stack
+        alignItems={optionDescription ? 'flex-start' : 'center'}
+        className={selectInputStyle.dropdownInfoContainer}
+        direction="row"
+        data-testid={`option-stack-${option.value}`}
+        gap={0.5}
+      >
+        {option.optionalInfo}
+        <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
+          {option.label}
+        </Text>
+        {optionDescription}
+      </Stack>
     )
   }
 
   if (descriptionDirection === 'row' && optionalInfoPlacement === 'right') {
     return (
-      <Tooltip disableAnimation text={option.tooltip}>
-        <Stack
-          alignItems="baseline"
-          data-testid={`option-stack-${option.value}`}
-          direction="row"
-          gap={0.5}
-          justifyContent="space-between"
-        >
-          <Stack alignItems="baseline" className={selectInputStyle.dropdownInfoContainer} direction="row" gap={0.5}>
-            <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
-              {option.label}
-            </Text>
-            {optionDescription}
-          </Stack>
-          {option.optionalInfo ? <div className={selectInputStyle.dropdownInfo}>{option.optionalInfo}</div> : null}
+      <Stack
+        alignItems="baseline"
+        data-testid={`option-stack-${option.value}`}
+        direction="row"
+        gap={0.5}
+        justifyContent="space-between"
+      >
+        <Stack alignItems="baseline" className={selectInputStyle.dropdownInfoContainer} direction="row" gap={0.5}>
+          <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
+            {option.label}
+          </Text>
+          {optionDescription}
         </Stack>
-      </Tooltip>
+        {option.optionalInfo ? <div className={selectInputStyle.dropdownInfo}>{option.optionalInfo}</div> : null}
+      </Stack>
     )
   }
 
   if (descriptionDirection === 'column' && optionalInfoPlacement === 'left') {
     return (
-      <Tooltip disableAnimation text={option.tooltip}>
-        <Stack
-          alignItems="normal"
-          direction="row"
-          gap={0.5}
-          justifyContent={option.optionalInfo ? 'left' : 'space-between'}
-          className={selectInputStyle.optionalInfoPadding}
-        >
-          {option.optionalInfo}
-          <Stack
-            className={selectInputStyle.dropdownInfoContainer}
-            data-testid={`option-stack-${option.value}`}
-            direction="column"
-            gap={0.5}
-          >
-            <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
-              {option.label}
-            </Text>
-            {optionDescription}
-          </Stack>
-        </Stack>
-      </Tooltip>
-    )
-  }
-
-  return (
-    <Tooltip disableAnimation text={option.tooltip}>
-      <Stack alignItems="normal" data-testid={`option-stack-${option.value}`} direction="column" gap={0.5}>
+      <Stack
+        alignItems="normal"
+        direction="row"
+        gap={0.5}
+        justifyContent={option.optionalInfo ? 'left' : 'space-between'}
+        className={selectInputStyle.optionalInfoPadding}
+      >
+        {option.optionalInfo}
         <Stack
           className={selectInputStyle.dropdownInfoContainer}
-          direction="row"
+          data-testid={`option-stack-${option.value}`}
+          direction="column"
           gap={0.5}
-          justifyContent="space-between"
-          alignItems={optionDescription ? 'flex-start' : 'center'}
         >
           <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
             {option.label}
           </Text>
-          {option.optionalInfo ? <div className={selectInputStyle.dropdownInfo}>{option.optionalInfo}</div> : null}
+          {optionDescription}
         </Stack>
-        {optionDescription}
       </Stack>
-    </Tooltip>
+    )
+  }
+
+  return (
+    <Stack alignItems="normal" data-testid={`option-stack-${option.value}`} direction="column" gap={0.5}>
+      <Stack
+        className={selectInputStyle.dropdownInfoContainer}
+        direction="row"
+        gap={0.5}
+        justifyContent="space-between"
+        alignItems={optionDescription ? 'flex-start' : 'center'}
+      >
+        <Text as="span" className={selectInputStyle.dropdownInfoTextItem} placement="left" variant={textVariant}>
+          {option.label}
+        </Text>
+        {option.optionalInfo ? <div className={selectInputStyle.dropdownInfo}>{option.optionalInfo}</div> : null}
+      </Stack>
+      {optionDescription}
+    </Stack>
   )
 }
