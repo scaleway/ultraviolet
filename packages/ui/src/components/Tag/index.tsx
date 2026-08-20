@@ -64,6 +64,15 @@ export const Tag = ({
   const TagInner = copiable ? 'button' : 'span'
   const copyTextTooltip = isCopied ? copiedText : copyText
 
+  const textProps = {
+    'aria-disabled': disabled,
+    as: 'span',
+    variant: variant === 'code' ? 'code' : 'caption',
+    oneLine: true,
+    sentiment: disabled ? 'neutral' : sentiment,
+    disabled: disabled,
+  } as const
+
   return (
     <Tooltip text={isCopiable ? copyTextTooltip : null}>
       <Stack
@@ -94,43 +103,17 @@ export const Tag = ({
         >
           {keyValue ? (
             <Row templateColumns="minmax(0, auto) 1px minmax(0, auto)" gap={1} className={tagStyle.text}>
-              <Text
-                aria-disabled={disabled}
-                as="span"
-                variant={variant === 'code' ? 'code' : 'caption'}
-                oneLine
-                sentiment={disabled ? 'neutral' : sentiment}
-                disabled={disabled}
-              >
-                {keyValue.key}
-              </Text>
+              <Text {...textProps}>{keyValue.key}</Text>
               <Separator
                 sentiment={disabled ? 'neutral' : sentiment}
                 direction="vertical"
                 thickness={1}
                 className={tagStyle.separator}
               />
-              <Text
-                aria-disabled={disabled}
-                as="span"
-                variant={variant === 'code' ? 'code' : 'caption'}
-                oneLine
-                sentiment={disabled ? 'neutral' : sentiment}
-                disabled={disabled}
-              >
-                {keyValue.value}
-              </Text>
+              <Text {...textProps}>{keyValue.value}</Text>
             </Row>
           ) : (
-            <Text
-              aria-disabled={disabled}
-              as="span"
-              className={tagStyle.text}
-              oneLine
-              variant={variant === 'code' ? 'code' : 'caption'}
-              sentiment={disabled ? 'neutral' : sentiment}
-              disabled={disabled}
-            >
+            <Text className={tagStyle.text} {...textProps}>
               {children}
             </Text>
           )}
