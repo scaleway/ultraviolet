@@ -1,9 +1,8 @@
 import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
-import type { SENTIMENTS } from './styles.css'
 
 export type TagProps = {
   isLoading?: boolean
-  sentiment?: (typeof SENTIMENTS)[number]
+  sentiment?: 'danger' | 'info' | 'neutral' | 'primary' | 'secondary' | 'success' | 'warning'
   disabled?: boolean
   copyText?: string
   copiedText?: string

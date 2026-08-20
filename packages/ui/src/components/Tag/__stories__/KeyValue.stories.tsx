@@ -2,15 +2,37 @@ import type { StoryFn } from '@storybook/react-vite'
 import { Tag } from '..'
 import { Stack } from '../../Stack'
 
-export const KeyValue: StoryFn<typeof Tag> = args => (
-  <Stack gap={1}>
-    Default:
-    <Tag {...args} />
-    Closable: <Tag {...args} onClose={() => {}} />
-    Copiable: <Tag {...args} copiable copyText="Copy" copiedText="Copied" />
-    Closable & copiable: <Tag {...args} onClose={() => {}} copiable copyText="Copy" copiedText="Copied" />
-  </Stack>
-)
+export const KeyValue: StoryFn<typeof Tag> = args => {
+  const { children, copyButton, keyValue, ...tagArgs } = args
+
+  return (
+    <Stack gap={1}>
+      Default:
+      <Tag {...args} />
+      Closable: <Tag {...args} onClose={() => {}} />
+      Copiable: <Tag {...args} copiable copyText="Copy" copiedText="Copied" />
+      Closable & copiable: <Tag {...args} onClose={() => {}} copiable copyText="Copy" copiedText="Copied" />
+      With overflow:
+      <Tag
+        keyValue={{
+          key: 'key key key key key key key key key key',
+          value: 'value value value value value value value',
+        }}
+        {...tagArgs}
+      />
+      <Tag keyValue={{ key: 'key', value: 'value value value value value value value' }} {...tagArgs} />
+      <Tag keyValue={{ key: 'key key key key key key key key key key', value: 'value' }} {...tagArgs} />
+      <Tag
+        keyValue={{
+          key: 'key key key key key key key key key key',
+          value: 'value value value value value value value',
+        }}
+        onClose={() => {}}
+        {...tagArgs}
+      />
+    </Stack>
+  )
+}
 
 KeyValue.args = {
   keyValue: { key: 'myKey', value: 'myValue' },
