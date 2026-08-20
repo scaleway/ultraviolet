@@ -31,6 +31,7 @@ export type FilterConfigItemText = FilterConfigItemBase & {
   type: 'text'
   regexp?: RegExp
   debounceDuration?: number
+  clearable?: boolean
 }
 
 export type FilterConfigItemSearch = FilterConfigItemBase & {

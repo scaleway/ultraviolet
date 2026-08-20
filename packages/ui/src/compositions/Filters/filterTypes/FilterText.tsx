@@ -17,6 +17,7 @@ export const FilterText = ({ config, hideLabel, onChange, value, size }: FilterT
   return (
     <TextInput
       aria-label={hideLabel ? config.label : undefined}
+      clearable={config.clearable}
       label={hideLabel ? undefined : config.label}
       labelDescription={hideLabel ? undefined : config.labelDescription}
       loading={tempValue !== value}

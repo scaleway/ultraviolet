@@ -3,8 +3,8 @@ import { Tooltip } from '../../../components'
 import type { FilterConfig } from '../types'
 
 export type FilterValues = {
-  name: string
-  status: string
+  name: string | undefined
+  status: string | undefined
   env: string[]
   price: [number, number]
   ram: [number, number]
@@ -22,8 +22,8 @@ const labelDescription = (
 )
 
 export const demoDefaultValues: FilterValues = {
-  name: '',
-  status: '',
+  name: undefined,
+  status: undefined,
   env: [],
   price: [0, 1000],
   ram: [0, 64],
@@ -52,6 +52,7 @@ export const demoFilters: FilterConfig<FilterValues>[] = [
         type: 'select',
         name: 'status',
         label: 'Status',
+        clearable: true,
         placeholder: 'Select status',
         options: [
           { label: 'Active', value: 'active' },
