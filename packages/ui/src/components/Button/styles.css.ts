@@ -1,6 +1,5 @@
 import { theme } from '@ultraviolet/themes'
 import { recipe } from '@vanilla-extract/recipes'
-import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { SIZE_GAP_KEY, SIZE_HEIGHT, SIZE_PADDING_KEY } from './constants'
 
 const { monochrome } = theme.colors.other
@@ -378,7 +377,5 @@ const button = recipe({
     },
   },
 })
-
-export type ButtonVariants = NonNullable<RecipeVariants<typeof button>>
 
 export const buttonStyle = { button }

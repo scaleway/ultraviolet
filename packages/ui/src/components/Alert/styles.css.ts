@@ -1,7 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import type { RecipeVariants } from '@vanilla-extract/recipes'
 import type { AlertSentiment } from './type'
 
 function createStyleAlert(sentiment: AlertSentiment) {
@@ -65,8 +64,6 @@ const button = styleVariants({
 const buttonClose = style({
   alignSelf: 'flex-start',
 })
-
-export type AlertVariants = NonNullable<RecipeVariants<typeof alert>>
 
 const icon = style({
   marginTop: theme.space['0.25'],

@@ -1,6 +1,5 @@
 import { theme } from '@ultraviolet/themes'
 import { recipe } from '@vanilla-extract/recipes'
-import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { SIZES } from './constant'
 
 const sentiments = ['primary', 'secondary', 'danger', 'info', 'success', 'warning', 'neutral'] as const
@@ -120,5 +119,4 @@ const badge = recipe({
   },
 })
 
-export type BadgeVariants = NonNullable<RecipeVariants<typeof badge>>
 export const badgeStyle = { badge }

@@ -4,9 +4,10 @@ import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import { separatorStyle, thicknessSeparator } from './styles.css'
-import type { SeparatorVariants } from './styles.css'
 
 type SeparatorProps = {
+  direction?: 'horizontal' | 'vertical'
+  sentiment?: 'danger' | 'info' | 'neutral' | 'primary' | 'secondary' | 'success' | 'warning'
   thickness?: number
   className?: string
   'data-testid'?: string
@@ -16,7 +17,7 @@ type SeparatorProps = {
   'data-flip-id'?: string
   children?: ReactNode
   style?: CSSProperties
-} & SeparatorVariants
+}
 
 /**
  * Separator component used to separate content with a horizontal or vertical line.

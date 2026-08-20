@@ -12,7 +12,6 @@ import { Text } from '../Text'
 import defaultIllustrationSmall from './assets/default-image-small.svg'
 import defaultIllustration from './assets/default-image.svg'
 import { bannerStyle } from './styles.css'
-import type { BannerVariants } from './styles.css'
 
 type BannerProps = {
   title: string
@@ -32,7 +31,9 @@ type BannerProps = {
   className?: string
   'data-testid'?: string
   style?: CSSProperties
-} & BannerVariants
+  size?: 'small' | 'medium'
+  variant?: 'intro' | 'promotional'
+}
 
 /**
  * Banner component is used to display an informative message to the user with style.
