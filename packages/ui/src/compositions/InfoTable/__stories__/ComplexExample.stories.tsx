@@ -11,8 +11,8 @@ export const ComplexExample: StoryFn<ComponentProps<typeof InfoTable>> = props =
   <InfoTable {...props} header="Instance information">
     <InfoTable.Row templateColumns="repeat(4, 1fr)">
       <InfoTable.Cell title="Status">
-        <Status sentiment="success" />
-        Ready
+        <Status animated sentiment="info" />
+        Starting
       </InfoTable.Cell>
       <InfoTable.Cell title="Type">
         GP1-S{' '}

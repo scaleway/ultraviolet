@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, globalStyle, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { cardStyle } from '../../components/styles'
+import { cardStyle, statusStyle } from '../../components/styles'
 
 export const rowWidth = createVar()
 
@@ -51,6 +51,12 @@ const desc = style({
   minWidth: 0,
   width: '100%',
   maxWidth: '100%',
+  selectors: {
+    [`&:has(${statusStyle.animatedCircle()})`]: {
+      marginLeft: `calc(-1 * ${theme.space[1]})`,
+      paddingLeft: theme.space[1],
+    },
+  },
 })
 
 const descFlex = style({
