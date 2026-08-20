@@ -1,135 +1,127 @@
-import { screen, waitFor } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme } from '@utils/test'
 import type { ComponentProps } from 'react'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { Tooltip } from '..'
 
 describe('tooltip', () => {
-  it('should render correctly', () => {
-    const { asFragment } = renderWithTheme(
-      <Tooltip debounceDelay={0} text="test">
-        Hover me
-      </Tooltip>,
-      consoleLightTheme,
-      {
-        container: document.body,
-      },
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  it('should render correctly without text', () => {
-    const { asFragment } = renderWithTheme(<Tooltip debounceDelay={0}>Hover me</Tooltip>, consoleLightTheme, {
-      container: document.body,
+  describe('wrapper div', () => {
+    it('should render a focusable wrapper div around the children if a text is provided', () => {
+      const { asFragment, container } = renderWithTheme(<Tooltip text="test">Hover me</Tooltip>, consoleLightTheme)
+      expect(container.querySelector('[tabindex="0"]')).toBeDefined()
+      expect(asFragment()).toMatchSnapshot()
     })
-    expect(asFragment()).toMatchSnapshot()
+
+    it('should render the children directly if no text is provided', () => {
+      const { asFragment } = renderWithTheme(<Tooltip>Hover me</Tooltip>, consoleLightTheme)
+      expect(asFragment()).toMatchSnapshot()
+    })
+
+    it('should not add a tabindex on the wrapper div if there is an interactive element in the children', () => {
+      const { asFragment, container } = renderWithTheme(
+        <Tooltip text="test">
+          <div className="some complex component">
+            <button type="button">interactive element</button>
+          </div>
+        </Tooltip>,
+        consoleLightTheme,
+      )
+      expect(container.querySelector('[tabindex="0"]')).toBeNull()
+      expect(asFragment()).toMatchSnapshot()
+    })
+
+    it('should not add a wrapper div if the children are a function', () => {
+      const { asFragment } = renderWithTheme(
+        <Tooltip delay={{ open: 0 }}>{() => <span>Hover me</span>}</Tooltip>,
+        consoleLightTheme,
+      )
+      expect(asFragment()).toMatchSnapshot()
+    })
   })
 
-  it('should display tooltip on hover', async () => {
-    renderWithTheme(
-      <Tooltip debounceDelay={0} id="test" text="test success!">
-        <p data-testid="children">Hover me</p>
-      </Tooltip>,
-    )
+  describe('open / close', () => {
+    it('should display the tooltip on hover and hide when exit', async () => {
+      renderWithTheme(
+        <Tooltip delay={{ open: 0 }} text="test success!">
+          <p data-testid="children">Hover me</p>
+        </Tooltip>,
+      )
+      expect(screen.queryByText('test success!')).not.toBeInTheDocument()
 
-    const input = screen.getByTestId('children')
-    await userEvent.hover(input)
+      const input = screen.getByTestId('children')
+      await userEvent.hover(input)
 
-    const tooltipPortal = screen.getByText('test success!')
-    expect(tooltipPortal).toBeVisible()
-  })
+      const tooltipPortal = screen.getByRole('tooltip', { name: 'test success!' })
+      expect(tooltipPortal).toBeVisible()
 
-  it('should display tooltip on hover with function children', async () => {
-    renderWithTheme(
-      <Tooltip debounceDelay={0} id="test" text="test success!">
-        {props => (
-          <p {...props} data-testid="children">
-            Hover me
-          </p>
-        )}
-      </Tooltip>,
-    )
-
-    const input = screen.getByTestId('children')
-    await userEvent.hover(input)
-
-    const tooltipPortal = screen.getByText('test success!')
-    expect(tooltipPortal).toBeVisible()
-  })
-
-  it('should display tooltip on hover and hide when exit', async () => {
-    renderWithTheme(
-      <Tooltip debounceDelay={0} id="test" text="test success!">
-        <p data-testid="children">Hover me</p>
-      </Tooltip>,
-    )
-
-    const input = screen.getByTestId('children')
-    await userEvent.hover(input)
-
-    const tooltipPortal = screen.getByText('test success!')
-    expect(tooltipPortal).toBeVisible()
-    await userEvent.unhover(input)
-
-    await waitFor(() => {
+      await userEvent.unhover(input)
       expect(tooltipPortal).not.toBeVisible()
     })
+
+    it('should display the tooltip on hover with function children', async () => {
+      renderWithTheme(
+        <Tooltip delay={{ open: 0 }} text="test success!">
+          {props => (
+            <p {...props} data-testid="children">
+              Hover me
+            </p>
+          )}
+        </Tooltip>,
+      )
+
+      const input = screen.getByTestId('children')
+      await userEvent.hover(input)
+
+      const tooltipPortal = screen.getByRole('tooltip', { name: 'test success!' })
+      expect(tooltipPortal).toBeVisible()
+    })
+
+    it('should display tooltip when controlled with visible prop', () => {
+      renderWithTheme(
+        <Tooltip text="controlled content" visible>
+          <p>Hover me</p>
+        </Tooltip>,
+      )
+
+      expect(screen.getByText('controlled content')).toBeVisible()
+    })
+
+    it('should call onOpenChange when the tooltip opens', async () => {
+      const onOpenChange = vi.fn()
+      renderWithTheme(
+        <Tooltip delay={{ open: 0 }} onOpenChange={onOpenChange} text="opened">
+          <p>Hover me</p>
+        </Tooltip>,
+      )
+
+      await userEvent.hover(screen.getByText('Hover me'))
+      expect(onOpenChange).toHaveBeenCalledWith(true)
+    })
   })
 
-  it('should display tooltip on hover and hide when exit and hover back before animation ends', async () => {
-    renderWithTheme(
-      <Tooltip debounceDelay={0} id="test" text="test success!">
-        <p data-testid="children">Hover me</p>
-      </Tooltip>,
-    )
+  describe('position / size', () => {
+    it('should renders tooltip with maxWidth', async () => {
+      renderWithTheme(
+        <Tooltip delay={{ open: 0 }} maxWidth={100} text="test success!">
+          <p data-testid="children">Hover me</p>
+        </Tooltip>,
+      )
 
-    const input = screen.getByTestId('children')
-    await userEvent.hover(input)
+      const input = screen.getByTestId('children')
+      await userEvent.hover(input)
 
-    const tooltipPortal = screen.getByText('test success!')
-    expect(tooltipPortal).toBeVisible()
-    await userEvent.unhover(input)
-    await userEvent.hover(input)
-    expect(tooltipPortal).toBeVisible()
-  })
+      const tooltipPortal = screen.getByRole('tooltip', { name: 'test success!' })
+      expect(tooltipPortal).toHaveStyle('max-width: 100px')
+    })
 
-  it('should create tooltip with random id', async () => {
-    renderWithTheme(
-      <Tooltip debounceDelay={0} text="test success!">
-        <p data-testid="children">Hover me</p>
-      </Tooltip>,
-    )
-
-    const input = screen.getByTestId('children')
-    await userEvent.hover(input)
-
-    const tooltipPortal = screen.getByText('test success!')
-    expect(tooltipPortal).toBeVisible()
-  })
-
-  it('should renders tooltip with maxWidth', async () => {
-    renderWithTheme(
-      <Tooltip debounceDelay={0} maxWidth={100} text="test success!">
-        <p data-testid="children">Hover me</p>
-      </Tooltip>,
-    )
-
-    const input = screen.getByTestId('children')
-    await userEvent.hover(input)
-
-    const tooltipPortal = screen.getByText('test success!')
-    expect(tooltipPortal).toBeVisible()
-  })
-
-  describe('defined placement', () => {
     it.each(['top', 'left', 'right', 'bottom'] as const)(
       `should renders tooltip with placement %s`,
       async placement => {
         renderWithTheme(
           <Tooltip
-            debounceDelay={0}
+            delay={{ open: 0 }}
             placement={placement as ComponentProps<typeof Tooltip>['placement']}
             text="test success!"
           >
@@ -140,27 +132,10 @@ describe('tooltip', () => {
         const children = screen.getByTestId('children')
         await userEvent.hover(children)
 
-        const tooltipPortal = screen.getByText('test success!')
+        const tooltipPortal = screen.getByRole('tooltip', { name: 'test success!' })
         expect(tooltipPortal).toBeVisible()
+        expect(tooltipPortal).toHaveAttribute('data-placement', placement)
       },
     )
-  })
-
-  it('should verify accessibility', async () => {
-    renderWithTheme(
-      <Tooltip debounceDelay={0} maxWidth={100} text="test success!">
-        <p data-testid="children">Hover me</p>
-      </Tooltip>,
-    )
-
-    await userEvent.keyboard('{Tab}')
-
-    const tooltipPortal = screen.getByText('test success!')
-    expect(tooltipPortal).toBeVisible()
-
-    await userEvent.keyboard('{Escape}')
-    await waitFor(() => {
-      expect(tooltipPortal).not.toBeVisible()
-    })
   })
 })

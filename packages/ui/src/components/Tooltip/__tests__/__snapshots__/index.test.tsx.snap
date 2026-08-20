@@ -1,14 +1,46 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`tooltip > should render correctly 1`] = `
+exports[`tooltip > wrapper div > should not add a tabindex on the wrapper div if there is an interactive element in the children 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
   >
     <div
-      aria-controls="_r_0_"
-      aria-describedby="_r_0_"
-      class="styles__w40vpo9"
+      class="styles__1y5sygv5"
+    >
+      <div
+        class="some complex component"
+      >
+        <button
+          type="button"
+        >
+          interactive element
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tooltip > wrapper div > should not add a wrapper div if the children are a function 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span>
+      Hover me
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tooltip > wrapper div > should render a focusable wrapper div around the children if a text is provided 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1y5sygv5"
       tabindex="0"
     >
       Hover me
@@ -17,7 +49,7 @@ exports[`tooltip > should render correctly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`tooltip > should render correctly without text 1`] = `
+exports[`tooltip > wrapper div > should render the children directly if no text is provided 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"

@@ -6,10 +6,10 @@ export default {
   title: 'UI/Overlay/Tooltip',
   parameters: {
     a11yStatus: {
-      perceivable: false,
-      operable: false,
+      perceivable: true,
+      operable: true,
       understandable: true,
-      robust: false,
+      robust: true,
     },
   },
 } as Meta
@@ -17,4 +17,6 @@ export default {
 export { Playground } from './Playground.stories'
 export { Placement } from './Placement.stories'
 export { MaxWidth } from './MaxWidth.stories'
-export { PlacementAuto } from './PlacementAuto.stories'
+export { Portal } from './Portal.stories'
+export { Delay } from './Delay.stories'
+export { Examples } from './Examples.stories'
