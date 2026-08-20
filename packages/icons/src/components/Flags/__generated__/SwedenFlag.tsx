@@ -11,7 +11,7 @@ import type { IconProps } from '../Icon'
 export const SwedenFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
   if (['small', 'xsmall'].includes(size)) {
     return (
-      <Icon {...props} title="SwedenFlag">
+      <Icon {...props} size={size} title="SwedenFlag">
         {disabled ? (
           <>
             <g clipPath="url(#clip0_3237_1286)">
@@ -46,7 +46,7 @@ export const SwedenFlag = ({ size = 'medium', disabled, ...props }: Omit<IconPro
     )
   }
   return (
-    <Icon {...props} title="SwedenFlag">
+    <Icon {...props} size={size} title="SwedenFlag">
       {disabled ? (
         <>
           <mask id="mask0_3023_247" x="2" y="2" maskUnits="userSpaceOnUse">
