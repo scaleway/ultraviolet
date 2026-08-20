@@ -273,112 +273,118 @@ export const DoubleSlider = ({
         ) : (
           styledValue(leftToShow, 'left')
         )}
-        <div className={sliderStyle.doubleWrapper}>
-          <Tooltip
-            className={sliderStyle.tooltip}
-            placement={tooltipPosition}
-            style={assignInlineVars({
-              [tooltipLeft]: `${(placementTooltip[0] + placementTooltip[1]) / 2}px`,
-            })}
-            text={typeof tooltipText === 'string' ? tooltipText : undefined}
-          >
-            <div className={sliderStyle.customRail}>
-              <div
-                aria-disabled={!!disabled}
-                className={sliderStyle.innerRail({
-                  disabled: !!disabled,
-                  error: !!error,
-                })}
-                data-error={!!error}
-                style={{ left: `${minPos}%`, right: `${100 - maxPos}%` }}
-              />
-            </div>
+        <Tooltip
+          className={sliderStyle.tooltip}
+          placement={tooltipPosition}
+          style={assignInlineVars({
+            [tooltipLeft]: `${(placementTooltip[0] + placementTooltip[1]) / 2}px`,
+          })}
+          text={typeof tooltipText === 'string' ? tooltipText : undefined}
+        >
+          {tooltipProps => (
+            <div className={sliderStyle.doubleWrapper} {...tooltipProps}>
+              <div className={sliderStyle.customRail}>
+                <div
+                  aria-disabled={!!disabled}
+                  className={sliderStyle.innerRail({
+                    disabled: !!disabled,
+                    error: !!error,
+                  })}
+                  data-error={!!error}
+                  style={{ left: `${minPos}%`, right: `${100 - maxPos}%` }}
+                />
+              </div>
 
-            <Tooltip
-              className={sliderStyle.tooltip}
-              placement={tooltipPosition}
-              style={assignInlineVars({
-                [tooltipLeft]: `${placementTooltip[0]}px`,
-              })}
-              text={Array.isArray(tooltipText) ? tooltipText[0] : undefined}
-            >
-              <input
-                aria-describedby={ariaDescribedBy}
-                aria-label={ariaLabel ?? name}
-                className={cn(className, sliderStyle.double({ disabled }), sliderStyle.thumbStyle({ disabled }))}
-                data-direction={direction}
-                data-error={error}
-                data-testid={`${dataTestId ?? 'handle'}-left`}
-                disabled={!!disabled}
-                id={finalId}
-                max={max}
-                min={min}
-                name={name}
-                onBlur={onBlur}
-                onChange={event => {
-                  event.preventDefault()
-                  handleMinChange(Number.parseFloat(event.target.value))
-                }}
-                onFocus={onFocus}
-                ref={refSlider}
-                step={step}
+              <Tooltip
+                className={sliderStyle.tooltip}
+                placement={tooltipPosition}
                 style={assignInlineVars({
-                  [leftVar]: `calc(${leftSliderProgress}% - ${(THUMB_SIZE * leftSliderProgress) / 100}px)`,
-                  [thumbColor]:
-                    theme.theme === 'light' ? theme.colors.neutral.background : theme.colors.neutral.backgroundStronger,
+                  [tooltipLeft]: `${placementTooltip[0]}px`,
                 })}
-                type="range"
-                value={selectedIndexes[0]}
-              />
-            </Tooltip>
-            <Tooltip
-              className={sliderStyle.tooltip}
-              placement={tooltipPosition}
-              style={assignInlineVars({
-                [tooltipLeft]: `${placementTooltip[1]}px`,
-              })}
-              text={Array.isArray(tooltipText) ? tooltipText[1] : undefined}
-            >
-              <input
-                aria-describedby={ariaDescribedBy}
-                aria-label={ariaLabel ?? name}
-                className={cn(className, sliderStyle.double({ disabled }), sliderStyle.thumbStyle({ disabled }))}
-                data-direction={direction}
-                data-error={error}
-                data-testid={`${dataTestId ?? 'handle'}-right`}
-                disabled={!!disabled}
-                id={finalId}
-                max={max}
-                min={min}
-                name={name}
-                onBlur={onBlur}
-                onChange={event => {
-                  event.preventDefault()
-                  handleMaxChange(Number.parseFloat(event.target.value))
-                }}
-                onFocus={onFocus}
-                step={step}
+                text={Array.isArray(tooltipText) ? tooltipText[0] : undefined}
+              >
+                <input
+                  aria-describedby={ariaDescribedBy}
+                  aria-label={ariaLabel ?? name}
+                  className={cn(className, sliderStyle.double({ disabled }), sliderStyle.thumbStyle({ disabled }))}
+                  data-direction={direction}
+                  data-error={error}
+                  data-testid={`${dataTestId ?? 'handle'}-left`}
+                  disabled={!!disabled}
+                  id={finalId}
+                  max={max}
+                  min={min}
+                  name={name}
+                  onBlur={onBlur}
+                  onChange={event => {
+                    event.preventDefault()
+                    handleMinChange(Number.parseFloat(event.target.value))
+                  }}
+                  onFocus={onFocus}
+                  ref={refSlider}
+                  step={step}
+                  style={assignInlineVars({
+                    [leftVar]: `calc(${leftSliderProgress}% - ${(THUMB_SIZE * leftSliderProgress) / 100}px)`,
+                    [thumbColor]:
+                      theme.theme === 'light'
+                        ? theme.colors.neutral.background
+                        : theme.colors.neutral.backgroundStronger,
+                  })}
+                  type="range"
+                  value={selectedIndexes[0]}
+                />
+              </Tooltip>
+              <Tooltip
+                className={sliderStyle.tooltip}
+                placement={tooltipPosition}
                 style={assignInlineVars({
-                  [leftVar]: `calc(${rightSliderProgress}% - ${(THUMB_SIZE * rightSliderProgress) / 100}px)`,
-                  [thumbColor]:
-                    theme.theme === 'light' ? theme.colors.neutral.background : theme.colors.neutral.backgroundStronger,
+                  [tooltipLeft]: `${placementTooltip[1]}px`,
                 })}
-                type="range"
-                value={selectedIndexes[1]}
-              />
-            </Tooltip>
-          </Tooltip>
-          {options ? (
-            <Options
-              defaultScale={defaultScale}
-              max={max}
-              min={min}
-              step={step}
-              ticks={ticks}
-              value={selectedIndexes}
-            />
-          ) : null}
-        </div>
+                text={Array.isArray(tooltipText) ? tooltipText[1] : undefined}
+              >
+                <input
+                  aria-describedby={ariaDescribedBy}
+                  aria-label={ariaLabel ?? name}
+                  className={cn(className, sliderStyle.double({ disabled }), sliderStyle.thumbStyle({ disabled }))}
+                  data-direction={direction}
+                  data-error={error}
+                  data-testid={`${dataTestId ?? 'handle'}-right`}
+                  disabled={!!disabled}
+                  id={finalId}
+                  max={max}
+                  min={min}
+                  name={name}
+                  onBlur={onBlur}
+                  onChange={event => {
+                    event.preventDefault()
+                    handleMaxChange(Number.parseFloat(event.target.value))
+                  }}
+                  onFocus={onFocus}
+                  step={step}
+                  style={assignInlineVars({
+                    [leftVar]: `calc(${rightSliderProgress}% - ${(THUMB_SIZE * rightSliderProgress) / 100}px)`,
+                    [thumbColor]:
+                      theme.theme === 'light'
+                        ? theme.colors.neutral.background
+                        : theme.colors.neutral.backgroundStronger,
+                  })}
+                  type="range"
+                  value={selectedIndexes[1]}
+                />
+              </Tooltip>
+              {options ? (
+                <Options
+                  defaultScale={defaultScale}
+                  max={max}
+                  min={min}
+                  step={step}
+                  ticks={ticks}
+                  value={selectedIndexes}
+                />
+              ) : null}
+            </div>
+          )}
+        </Tooltip>
         {direction === 'row' ? styledValue(rightToShow, 'right') : null}
       </Stack>
     </Stack>

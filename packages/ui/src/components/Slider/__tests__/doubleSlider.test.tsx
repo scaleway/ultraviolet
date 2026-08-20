@@ -117,6 +117,18 @@ describe('double slider', () => {
     shouldMatchSnapshot(<Slider double label="Label" name="Name" tooltip="tooltip" value={[12, 14]} />)
   })
 
+  it('shows single string tooltip when hovering anywhere on the slider', async () => {
+    renderWithTheme(<Slider data-testid="slider" double label="Label" name="Name" tooltip="tooltip" value={[12, 14]} />)
+    expect(screen.queryByRole('tooltip', { name: 'tooltip' })).not.toBeInTheDocument()
+
+    const rightHandle = screen.getByTestId('slider-right')
+    const slider = rightHandle.parentElement
+    expect(slider).not.toBeNull()
+    await userEvent.hover(slider!)
+
+    expect(await screen.findByRole('tooltip', { name: 'tooltip' })).toBeVisible()
+  })
+
   it('renders correctly double with default ticks', () => {
     shouldMatchSnapshot(<Slider double label="Label" name="Name" unit="%" value={[12, 14]} />)
   })
