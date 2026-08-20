@@ -64,10 +64,14 @@ export const pinnedItemContainer = recipe({
 })
 
 export const separator = style({
-  margin: `${theme.space['2']} calc(${theme.space['2']} * -1)`,
-  flexShrink: 0,
-  width: widthNavigationContainer,
-  transition: `width ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
+  selectors: {
+    '&&': {
+      margin: `${theme.space['2']} calc(${theme.space['2']} * -1)`,
+      flexShrink: 0,
+      width: widthNavigationContainer,
+      transition: `width ${ANIMATION_DURATION}ms ${ANIMATION_EASING}`,
+    },
+  },
 })
 
 export const showHideStack = recipe({
