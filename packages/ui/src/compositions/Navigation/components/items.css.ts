@@ -11,9 +11,13 @@ export const itemRelative = style({ position: 'relative' })
 export const itemPadded = style({ paddingLeft: theme.space[1] })
 
 export const itemCollapsed = style({
-  height: theme.sizing['400'],
-  width: theme.sizing['400'],
-  padding: 0,
+  selectors: {
+    '&&': {
+      height: theme.sizing['400'],
+      width: theme.sizing['400'],
+      padding: 0,
+    },
+  },
 })
 
 const itemPinIconBase = style({
