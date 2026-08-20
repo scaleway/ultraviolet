@@ -164,6 +164,59 @@ describe('filters', () => {
     expect(onSubmit).toHaveBeenLastCalledWith(defaultValues)
   })
 
+  it('should treat empty fields as inactive even when their default value is undefined', async () => {
+    type Values = { name?: string; status?: string }
+
+    const selectAndTextConfig: FilterConfig<Values>[] = [
+      {
+        type: 'search',
+        name: 'name',
+        label: 'Name',
+        debounceDuration: 0,
+      },
+      {
+        type: 'select',
+        name: 'status',
+        label: 'Status',
+        clearable: true,
+        options: [
+          { label: 'Active', value: 'active' },
+          { label: 'Inactive', value: 'inactive' },
+        ],
+      },
+      {
+        type: 'text',
+        name: 'drawer',
+        label: 'drawer',
+      },
+    ]
+
+    renderWithTheme(
+      <Filters
+        layout={{ mainFilters: ['name', 'status'] }}
+        config={selectAndTextConfig}
+        defaultValues={{ name: undefined, status: undefined }}
+        labels={labels}
+      />,
+    )
+
+    expect(screen.getByRole('button', { name: 'Clear all' })).toBeDisabled()
+
+    await userEvent.type(screen.getByRole('textbox', { name: 'Name' }), 'John')
+    await userEvent.click(screen.getByRole('combobox', { name: 'Status' }))
+    await userEvent.click(screen.getByRole('option', { name: 'active' }))
+
+    expect(screen.getByRole('button', { name: 'Clear all' })).not.toBeDisabled()
+    expect(screen.getByRole('button', { name: 'All filters (2)' })).toBeVisible()
+
+    const clearButtons = screen.getAllByRole('button', { name: 'clear value' })
+    await userEvent.click(clearButtons[0])
+    await userEvent.click(clearButtons[1])
+
+    expect(screen.getByRole('button', { name: 'All filters' })).toBeVisible()
+    expect(screen.getByRole('button', { name: 'Clear all' })).toBeDisabled()
+  })
+
   it('should submit only after clicking the submit button in the drawer', async () => {
     const onSubmit = vi.fn()
     const onChange = vi.fn()

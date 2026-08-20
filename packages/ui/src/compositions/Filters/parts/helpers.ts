@@ -3,6 +3,8 @@ import type { AnyObject, FilterConfig, FilterConfigGroup } from '../types'
 export const isFilterConfigGroup = <V extends AnyObject>(item: FilterConfig<V>): item is FilterConfigGroup<V> =>
   item.type === 'group'
 
+const isEmpty = (value: unknown) => value === undefined || value === null || value === ''
+
 export const getKeysWithDifferentValues = <Values extends AnyObject>(a?: Values, b?: Values): (keyof Values)[] => {
   if (a === b) {
     return []
@@ -29,7 +31,11 @@ export const getKeysWithDifferentValues = <Values extends AnyObject>(a?: Values,
     const valueA = a[keyA]
     const valueB = b[keyA]
 
-    // Typical cse for string | number
+    if (isEmpty(valueA) && isEmpty(valueB)) {
+      return false
+    }
+
+    // Typical case for string | number
     if (valueA === valueB) {
       return false
     }
