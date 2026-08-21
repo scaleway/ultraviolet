@@ -1,5 +1,40 @@
 # Change Log
 
+## 3.24.0
+
+### Minor Changes
+
+- [#6783](https://github.com/scaleway/ultraviolet/pull/6783) [`b54f194`](https://github.com/scaleway/ultraviolet/commit/b54f194a67977859942cab322cc3e81e4936eee0) Thanks [@jsulpis](https://github.com/jsulpis)! - `Tooltip`: rebuilt on Floating UI instead of the `Popup`, fixing multiple positioning and accessibility bugs.
+  - The tooltip can be used as a label or a description
+  - The tooltip can be rendered next to its reference element or in a React Portal
+  - The trigger wrapper `tabIndex` defaults to `-1` when the children is already a focusable element, removing the double tab stop
+  - The redundant `aria-controls` is no longer set, and `role` is hard-pinned to `tooltip`
+  - `aria-describedby` is now forwarded to render-function children and is only set while the tooltip is open
+  - The tooltip is now hoverable
+  - Multiple props were added or deprecated, staying backward-compatible
+
+### Patch Changes
+
+- [#6811](https://github.com/scaleway/ultraviolet/pull/6811) [`6ec195d`](https://github.com/scaleway/ultraviolet/commit/6ec195d7cfa01458e0cd2423c0333ef8e1502670) Thanks [@jsulpis](https://github.com/jsulpis)! - `Navigation`: fix CSS specificity issues breaking the styles on the separators and collapsed items
+
+- [#6806](https://github.com/scaleway/ultraviolet/pull/6806) [`5b58999`](https://github.com/scaleway/ultraviolet/commit/5b5899985dd13d7af34fe586f60b3393f1780a20) Thanks [@lisalupi](https://github.com/lisalupi)! - `Tag`: fix overflow on `keyValue` variant
+
+- [#6805](https://github.com/scaleway/ultraviolet/pull/6805) [`0be396f`](https://github.com/scaleway/ultraviolet/commit/0be396f1c9867a1bce97f13be805a702ec7d9145) Thanks [@lisalupi](https://github.com/lisalupi)! - `Badge`, `Banner`, `Button` & `Separator`: define props directly instead of inferring from vanilla-extract recipes
+
+  `Text`, `Alert`: remove unused vanilla-extract type export
+
+- [#6812](https://github.com/scaleway/ultraviolet/pull/6812) [`e184a72`](https://github.com/scaleway/ultraviolet/commit/e184a725850525687263157f47bf54008ddffaaa) Thanks [@jsulpis](https://github.com/jsulpis)! - `InfoTable`: avoid clipping an animated Status at the start of a cell
+
+- [#6810](https://github.com/scaleway/ultraviolet/pull/6810) [`6c9bcb3`](https://github.com/scaleway/ultraviolet/commit/6c9bcb32a4147e2ec6f3ee6d82dba07d9a7bcd59) Thanks [@jsulpis](https://github.com/jsulpis)! - `Filters`:
+
+  - treat empty filters ('') as inactive even when their default value is undefined
+  - add `clearable` option on the text filter
+
+- [#6791](https://github.com/scaleway/ultraviolet/pull/6791) [`0e63fa1`](https://github.com/scaleway/ultraviolet/commit/0e63fa1cd099753dbbcd1ee15cfd927fc3136475) Thanks [@lisalupi](https://github.com/lisalupi)! - `Filters`: add clear all button in drawer (without submit) and disable all clear all buttons when there are no dirty filter
+
+- Updated dependencies [[`faa7799`](https://github.com/scaleway/ultraviolet/commit/faa779966efa01f69b56c85e2e70a624cf50c881)]:
+  - @ultraviolet/icons@5.5.1
+
 ## 3.23.0
 
 ### Minor Changes

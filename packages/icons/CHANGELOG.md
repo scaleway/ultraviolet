@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.5.1
+
+### Patch Changes
+
+- [#6808](https://github.com/scaleway/ultraviolet/pull/6808) [`faa7799`](https://github.com/scaleway/ultraviolet/commit/faa779966efa01f69b56c85e2e70a624cf50c881) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix `FileProductIcon`
+
 ## 5.5.0
 
 ### Minor Changes
