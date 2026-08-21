@@ -8,22 +8,43 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const LuxembourgFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="LuxembourgFlag">
-    {props.disabled ? (
-      <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path fill="#454545" d="M12 0C6.84 0 2.442 3.257.747 7.826h22.507C21.558 3.256 17.16 0 12 0" />
-        <path fill="#7b7b7b" d="M12 24c5.16 0 9.558-3.256 11.254-7.826H.747C2.442 20.744 6.84 24 12 24" />
-      </>
-    ) : (
-      <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path fill="#d80027" d="M12 0C6.84 0 2.442 3.257.747 7.826h22.507C21.558 3.256 17.16 0 12 0" />
-        <path fill="#338af3" d="M12 24c5.16 0 9.558-3.256 11.254-7.826H.747C2.442 20.744 6.84 24 12 24" />
-      </>
-    )}
-  </Icon>
-)
+export const LuxembourgFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
+  if (['small', 'xsmall'].includes(size)) {
+    return (
+      <Icon {...props} size={size} title="LuxembourgFlag">
+        {disabled ? (
+          <>
+            <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+            <path fill="#454545" d="M8 1C4.99 1 2.425 2.9 1.435 5.565h13.13A7 7 0 0 0 8 1" />
+            <path fill="#7b7b7b" d="M8 15c3.01 0 5.576-1.9 6.565-4.565H1.435A7 7 0 0 0 8 15" />
+          </>
+        ) : (
+          <>
+            <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+            <path fill="#d80027" d="M8 1C4.99 1 2.425 2.9 1.435 5.565h13.13A7 7 0 0 0 8 1" />
+            <path fill="#338af3" d="M8 15c3.01 0 5.576-1.9 6.565-4.565H1.435A7 7 0 0 0 8 15" />
+          </>
+        )}
+      </Icon>
+    )
+  }
+  return (
+    <Icon {...props} size={size} title="LuxembourgFlag">
+      {disabled ? (
+        <>
+          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+          <path fill="#454545" d="M12 2.5a9.5 9.5 0 0 0-8.909 6.196h17.818A9.5 9.5 0 0 0 12 2.5" />
+          <path fill="#7b7b7b" d="M12 21.5a9.5 9.5 0 0 0 8.91-6.196H3.09A9.5 9.5 0 0 0 12 21.5" />
+        </>
+      ) : (
+        <>
+          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+          <path fill="#d80027" d="M12 2.5a9.5 9.5 0 0 0-8.909 6.196h17.818A9.5 9.5 0 0 0 12 2.5" />
+          <path fill="#338af3" d="M12 21.5a9.5 9.5 0 0 0 8.91-6.196H3.09A9.5 9.5 0 0 0 12 21.5" />
+        </>
+      )}
+    </Icon>
+  )
+}
 
 LuxembourgFlag.displayName = 'LuxembourgFlag'

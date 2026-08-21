@@ -8,22 +8,43 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const NetherlandsFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="NetherlandsFlag">
-    {props.disabled ? (
-      <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path fill="#343434" d="M12 0C6.84 0 2.442 3.257.747 7.826h22.507C21.558 3.256 17.16 0 12 0" />
-        <path fill="#444" d="M12 24c5.16 0 9.558-3.256 11.254-7.826H.747C2.442 20.744 6.84 24 12 24" />
-      </>
-    ) : (
-      <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path fill="#a2001d" d="M12 0C6.84 0 2.442 3.257.747 7.826h22.507C21.558 3.256 17.16 0 12 0" />
-        <path fill="#0052b4" d="M12 24c5.16 0 9.558-3.256 11.254-7.826H.747C2.442 20.744 6.84 24 12 24" />
-      </>
-    )}
-  </Icon>
-)
+export const NetherlandsFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
+  if (['small', 'xsmall'].includes(size)) {
+    return (
+      <Icon {...props} size={size} title="NetherlandsFlag">
+        {disabled ? (
+          <>
+            <path fill="#f0f0f0" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
+            <path fill="#343434" d="M7.5.5C4.49.5 1.925 2.4.935 5.065h13.13A7 7 0 0 0 7.5.5" />
+            <path fill="#444" d="M7.5 14.5c3.01 0 5.576-1.9 6.565-4.565H.935A7 7 0 0 0 7.5 14.5" />
+          </>
+        ) : (
+          <>
+            <path fill="#f0f0f0" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
+            <path fill="#a2001d" d="M7.5.5C4.49.5 1.925 2.4.935 5.065h13.13A7 7 0 0 0 7.5.5" />
+            <path fill="#0052b4" d="M7.5 14.5c3.01 0 5.576-1.9 6.565-4.565H.935A7 7 0 0 0 7.5 14.5" />
+          </>
+        )}
+      </Icon>
+    )
+  }
+  return (
+    <Icon {...props} size={size} title="NetherlandsFlag">
+      {disabled ? (
+        <>
+          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+          <path fill="#343434" d="M12 2.5a9.5 9.5 0 0 0-8.909 6.196h17.818A9.5 9.5 0 0 0 12 2.5" />
+          <path fill="#444" d="M12 21.5a9.5 9.5 0 0 0 8.91-6.196H3.09A9.5 9.5 0 0 0 12 21.5" />
+        </>
+      ) : (
+        <>
+          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+          <path fill="#a2001d" d="M12 2.5a9.5 9.5 0 0 0-8.909 6.196h17.818A9.5 9.5 0 0 0 12 2.5" />
+          <path fill="#0052b4" d="M12 21.5a9.5 9.5 0 0 0 8.91-6.196H3.09A9.5 9.5 0 0 0 12 21.5" />
+        </>
+      )}
+    </Icon>
+  )
+}
 
 NetherlandsFlag.displayName = 'NetherlandsFlag'

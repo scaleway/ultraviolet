@@ -8,22 +8,43 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const FranceFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="FranceFlag">
-    {props.disabled ? (
-      <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path fill="#454545" d="M24 12c0-5.16-3.256-9.558-7.826-11.254v22.508C20.744 21.558 24 17.16 24 12" />
-        <path fill="#444" d="M0 12c0 5.16 3.257 9.558 7.826 11.254V.746C3.256 2.442 0 6.84 0 12" />
-      </>
-    ) : (
-      <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path fill="#d80027" d="M24 12c0-5.16-3.256-9.558-7.826-11.254v22.508C20.744 21.558 24 17.16 24 12" />
-        <path fill="#0052b4" d="M0 12c0 5.16 3.257 9.558 7.826 11.254V.746C3.256 2.442 0 6.84 0 12" />
-      </>
-    )}
-  </Icon>
-)
+export const FranceFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
+  if (['small', 'xsmall'].includes(size)) {
+    return (
+      <Icon {...props} size={size} title="FranceFlag">
+        {disabled ? (
+          <>
+            <path fill="#f0f0f0" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
+            <path fill="#454545" d="M14.5 7.5c0-3.01-1.9-5.576-4.565-6.565v13.13A7 7 0 0 0 14.5 7.5" />
+            <path fill="#444" d="M.5 7.5c0 3.01 1.9 5.576 4.565 6.565V.935A7 7 0 0 0 .5 7.5" />
+          </>
+        ) : (
+          <>
+            <path fill="#f0f0f0" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
+            <path fill="#d80027" d="M14.5 7.5c0-3.01-1.9-5.576-4.565-6.565v13.13A7 7 0 0 0 14.5 7.5" />
+            <path fill="#0052b4" d="M.5 7.5c0 3.01 1.9 5.576 4.565 6.565V.935A7 7 0 0 0 .5 7.5" />
+          </>
+        )}
+      </Icon>
+    )
+  }
+  return (
+    <Icon {...props} size={size} title="FranceFlag">
+      {disabled ? (
+        <>
+          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+          <path fill="#454545" d="M21.5 12a9.5 9.5 0 0 0-6.196-8.91v17.82A9.5 9.5 0 0 0 21.5 12" />
+          <path fill="#444" d="M2.5 12a9.5 9.5 0 0 0 6.196 8.91V3.09A9.5 9.5 0 0 0 2.5 12" />
+        </>
+      ) : (
+        <>
+          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
+          <path fill="#d80027" d="M21.5 12a9.5 9.5 0 0 0-6.196-8.91v17.82A9.5 9.5 0 0 0 21.5 12" />
+          <path fill="#0052b4" d="M2.5 12a9.5 9.5 0 0 0 6.196 8.91V3.09A9.5 9.5 0 0 0 2.5 12" />
+        </>
+      )}
+    </Icon>
+  )
+}
 
 FranceFlag.displayName = 'FranceFlag'
