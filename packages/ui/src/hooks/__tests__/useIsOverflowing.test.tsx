@@ -1,83 +1,125 @@
-import { renderHook, waitFor } from '@testing-library/react'
-import { describe, expect, it, vi } from 'vitest'
+import { act, renderHook } from '@testing-library/react'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { useIsOverflowing } from '../useIsOverflowing'
 
+class MockResizeObserver {
+  static disconnect = vi.fn()
+
+  callback: ResizeObserverCallback
+
+  constructor(callback: ResizeObserverCallback) {
+    this.callback = callback
+  }
+
+  observe() {
+    this.callback([], this as unknown as ResizeObserver)
+  }
+
+  unobserve() {}
+
+  disconnect() {
+    MockResizeObserver.disconnect()
+  }
+}
+
 describe(useIsOverflowing, () => {
-  it('should be false with no overflow', async () => {
-    const { result } = renderHook(() => useIsOverflowing({ current: document.createElement('div') }))
-    await waitFor(() => {
-      expect(result.current).toBe(false)
-    })
+  beforeEach(() => {
+    MockResizeObserver.disconnect.mockClear()
+    vi.stubGlobal('ResizeObserver', MockResizeObserver)
   })
 
-  it('should be false with no overflow and callback at false too', async () => {
+  afterEach(() => {
+    vi.unstubAllGlobals()
+  })
+
+  it('should be false with no overflow', () => {
     const callback = vi.fn()
-    const { result } = renderHook(() => useIsOverflowing({ current: document.createElement('div') }, callback))
-    await waitFor(() => {
-      expect(result.current).toBe(false)
+    const { result } = renderHook(() => useIsOverflowing({ callback }))
+    const [setElement, isOverflowing] = result.current
+
+    act(() => {
+      setElement(document.createElement('div'))
     })
 
-    expect(callback).toHaveBeenCalledOnce()
+    expect(isOverflowing).toBe(false)
+    expect(callback).toHaveBeenCalledWith(false)
   })
 
-  it('should be true with overflow', async () => {
-    const element = document.createElement('div')
-
-    const { result } = renderHook(() =>
-      useIsOverflowing({
-        current: {
-          ...element,
-          clientWidth: 100,
-          scrollWidth: 200,
-        },
-      }),
-    )
-
-    await waitFor(() => {
-      expect(result.current).toBe(true)
-    })
-  })
-
-  it('should be true with overflow and callback at true too', async () => {
+  it('should be true with overflow', () => {
     const callback = vi.fn()
+    const { result } = renderHook(() => useIsOverflowing({ callback }))
+    const [setElement] = result.current
+
     const element = document.createElement('div')
+    Object.defineProperty(element, 'clientWidth', { value: 100 })
+    Object.defineProperty(element, 'scrollWidth', { value: 200 })
 
-    const { result } = renderHook(() =>
-      useIsOverflowing(
-        {
-          current: {
-            ...element,
-            clientWidth: 100,
-            scrollWidth: 200,
-          },
-        },
-        callback,
-      ),
-    )
-
-    await waitFor(() => {
-      expect(result.current).toBe(true)
+    act(() => {
+      setElement(element)
     })
 
+    expect(result.current[1]).toBe(true)
     expect(callback).toHaveBeenCalledWith(true)
-    expect(callback).toHaveBeenCalledTimes(2) // 1 for initial render, 1 for overflow
   })
 
-  it('should cleanup event listener', () => {
-    const { unmount } = renderHook(() => useIsOverflowing({ current: document.createElement('div') }))
+  it('should recompute when the element changes', () => {
+    const { result } = renderHook(() => useIsOverflowing())
+    const [setElement] = result.current
 
-    const removeEventListenerSpy = vi.spyOn(window, 'removeEventListener')
+    const overflowElement = document.createElement('div')
+    Object.defineProperty(overflowElement, 'clientWidth', { value: 100 })
+    Object.defineProperty(overflowElement, 'scrollWidth', { value: 200 })
+
+    act(() => {
+      setElement(overflowElement)
+    })
+    expect(result.current[1]).toBe(true)
+
+    act(() => {
+      setElement(document.createElement('div'))
+    })
+    expect(result.current[1]).toBe(false)
+  })
+
+  it('should cleanup the ResizeObserver', () => {
+    const { result, unmount } = renderHook(() => useIsOverflowing())
+    const [setElement] = result.current
+
+    act(() => {
+      setElement(document.createElement('div'))
+    })
     unmount()
 
-    expect(removeEventListenerSpy).toHaveBeenCalledWith('resize', expect.any(Function))
-    removeEventListenerSpy.mockRestore()
+    expect(MockResizeObserver.disconnect).toHaveBeenCalled()
   })
 
-  it('should handle undefined ref', async () => {
-    const { result } = renderHook(() => useIsOverflowing({ current: undefined }))
+  it('should not create the observer when disabled', () => {
+    const callback = vi.fn()
+    const { result } = renderHook(() => useIsOverflowing({ callback, enabled: false }))
+    const [setElement, isOverflowing] = result.current
 
-    await waitFor(() => {
-      expect(result.current).toBe(false)
+    act(() => {
+      setElement(document.createElement('div'))
     })
+
+    expect(isOverflowing).toBe(false)
+    expect(callback).not.toHaveBeenCalled()
+  })
+
+  it('should handle no element', () => {
+    const { result } = renderHook(() => useIsOverflowing())
+
+    expect(result.current[1]).toBe(false)
+  })
+
+  it('should not throw error if ResizeObserver is not defined', () => {
+    vi.unstubAllGlobals()
+    const { result } = renderHook(() => useIsOverflowing())
+    const [setElement, isOverflowing] = result.current
+
+    act(() => {
+      setElement(document.createElement('div'))
+    })
+    expect(isOverflowing).toBe(false)
   })
 })
