@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const RpnV1ProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="RpnV1ProductIcon">
+export const RpnV1ProductIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <g>
       <g>
         <path

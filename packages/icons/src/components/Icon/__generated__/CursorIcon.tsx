@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const CursorIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="CursorIcon">
+export const CursorIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M2.293 2.293a1 1 0 0 1 1.154-.188l14 7a1 1 0 0 1-.13 1.844l-4.778 1.591-1.59 4.777a1.001 1.001 0 0 1-1.844.13l-7-14a1 1 0 0 1 .188-1.154" />
     ) : (

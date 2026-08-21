@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const PasskeyIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="PasskeyIcon">
+export const PasskeyIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M8.367 10a7 7 0 0 1 6.537 4.49 1.23 1.23 0 0 1-.408 1.41A9.96 9.96 0 0 1 8.364 18a9.96 9.96 0 0 1-6.126-2.096 1.23 1.23 0 0 1-.408-1.41A7 7 0 0 1 8.367 10" />

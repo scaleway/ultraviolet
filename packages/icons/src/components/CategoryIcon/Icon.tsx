@@ -11,25 +11,36 @@ export type IconProps = {
   children: ReactNode
   className?: string
   style?: CSSProperties
-  title: string
+  accessibleLabel?: string
+  'aria-hidden'?: boolean
 }
 
 /**
  * CategoryIcon component is used to render category icons, those icons are more complex than system icons
  * as they involve multiple colors that changes depending on theme.
  */
-export const Icon = ({ variant = 'primary', disabled, children, className, style, title }: IconProps) => {
+export const Icon = ({
+  variant = 'primary',
+  disabled,
+  children,
+  className,
+  style,
+  'aria-hidden': ariaHidden,
+  accessibleLabel,
+}: IconProps) => {
   const computedVariant = `${variant}${disabled ? 'Disabled' : ''}` as const
 
   return (
     <svg
+      aria-hidden={ariaHidden ?? !accessibleLabel}
       className={cn(className, categoryIcon[computedVariant])}
       height="20"
+      role={accessibleLabel ? 'img' : undefined}
       style={style}
       viewBox="0 0 20 20"
       width="20"
     >
-      <title>{title}</title>
+      {accessibleLabel ? <title>{accessibleLabel}</title> : null}
       {children}
     </svg>
   )

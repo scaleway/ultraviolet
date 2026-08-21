@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const AdvancedSupportProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="AdvancedSupportProductIcon">
+export const AdvancedSupportProductIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <g clipPath="url(#a)">
       <g>
         <g fill="#521094" className="fillWeak">

@@ -490,7 +490,7 @@ describe('fileInput', () => {
       webkitGetAsEntry: () => singleFileEntry,
     } as unknown as DataTransferItem
 
-    const dropzone = screen.getByRole('button', { name: 'UploadIcon title' })
+    const dropzone = screen.getByRole('button', { name: 'title' })
     fireEvent.drop(dropzone, {
       dataTransfer: {
         files: [dirFile, singleFile],

@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ContainersCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="ContainersCategoryIcon">
+export const ContainersCategoryIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <g>
       <path
         fill="#521094"

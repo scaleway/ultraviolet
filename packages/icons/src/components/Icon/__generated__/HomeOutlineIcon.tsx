@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const HomeOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="HomeOutlineIcon">
+export const HomeOutlineIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M11.063 16.343v-2.718a.156.156 0 0 0-.157-.156H9.094a.156.156 0 0 0-.156.156v2.718c0 .915-.742 1.657-1.657 1.657H5.47a1.656 1.656 0 0 1-1.656-1.657v-4.687h-.157a1.656 1.656 0 0 1-1.17-2.827L8.83 2.485a1.656 1.656 0 0 1 2.342 0l6.344 6.344a1.656 1.656 0 0 1-1.171 2.827h-.157v4.687c0 .915-.741 1.657-1.656 1.657H12.72a1.656 1.656 0 0 1-1.656-1.657m1.5 0c0 .087.07.157.156.157h1.812c.087 0 .156-.07.156-.157v-5.437a.75.75 0 0 1 .75-.75h.907a.157.157 0 0 0 .11-.267L10.11 3.546a.156.156 0 0 0-.22 0L3.546 9.889a.156.156 0 0 0 .11.267h.907a.75.75 0 0 1 .75.75v5.437c0 .087.07.157.156.157H7.28c.087 0 .157-.07.157-.157v-2.718c0-.915.741-1.656 1.656-1.656h1.812c.915 0 1.656.741 1.656 1.656z" />
     ) : (

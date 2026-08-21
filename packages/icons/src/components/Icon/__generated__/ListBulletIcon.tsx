@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ListBulletIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="ListBulletIcon">
+export const ListBulletIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M5.007 6.092a1.004 1.004 0 1 1-2.008 0 1.004 1.004 0 0 1 2.008 0m1.585.004c0-.413.335-.748.748-.748h8.912a.748.748 0 0 1 0 1.496H7.34a.75.75 0 0 1-.748-.748M5.007 10a1.003 1.003 0 1 1-2.006 0 1.003 1.003 0 0 1 2.006 0m1.585.003c0-.413.335-.748.748-.748h8.912a.748.748 0 0 1 0 1.496H7.34a.747.747 0 0 1-.748-.748m-1.585 3.904A1.003 1.003 0 1 1 3 13.908a1.003 1.003 0 0 1 2.007-.001m1.585.004c0-.413.335-.748.748-.748h8.912a.748.748 0 0 1 0 1.496H7.34a.75.75 0 0 1-.748-.748" />
     ) : (

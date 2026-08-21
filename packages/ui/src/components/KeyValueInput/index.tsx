@@ -9,6 +9,7 @@ import { Row } from '../Row'
 import { SelectInput } from '../SelectInput'
 import { Stack } from '../Stack'
 import { TextInput } from '../TextInput'
+import { VisuallyHidden } from '../VisuallyHidden'
 import type { KeyValueInputProps } from './types'
 import { keyValueInputStyle } from './styles.css'
 
@@ -118,6 +119,10 @@ export const KeyValueInput = ({
                   size={size}
                   variant="outlined"
                 >
+                  {/* TODO
+                   * Correctly label delete button
+                   */}
+                  <VisuallyHidden>Delete</VisuallyHidden>
                   <DeleteIcon disabled={!editable} />
                 </Button>
                 {errorKey ? (

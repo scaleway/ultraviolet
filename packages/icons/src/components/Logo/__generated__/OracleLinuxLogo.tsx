@@ -9,12 +9,12 @@ import { useTheme } from '@ultraviolet/themes'
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const OracleLinuxLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => {
+export const OracleLinuxLogo = ({ ...props }: Omit<IconProps, 'children'>) => {
   const { theme } = useTheme()
   const isLight = theme === 'light'
 
   return (
-    <Icon {...props} title="OracleLinuxLogo">
+    <Icon {...props}>
       {isLight ? (
         <>
           <path
