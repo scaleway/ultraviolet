@@ -9,12 +9,12 @@ import { useTheme } from '@ultraviolet/themes'
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const GitlabRunnerLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => {
+export const GitlabRunnerLogo = ({ ...props }: Omit<IconProps, 'children'>) => {
   const { theme } = useTheme()
   const isLight = theme === 'light'
 
   return (
-    <Icon {...props} title="GitlabRunnerLogo">
+    <Icon {...props}>
       {isLight ? (
         <>
           <path fill="url(#pattern0_341_672)" d="M0 0h20v20H0z" />

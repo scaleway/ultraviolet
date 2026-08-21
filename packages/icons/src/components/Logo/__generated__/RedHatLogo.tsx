@@ -9,12 +9,12 @@ import { useTheme } from '@ultraviolet/themes'
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const RedHatLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => {
+export const RedHatLogo = ({ ...props }: Omit<IconProps, 'children'>) => {
   const { theme } = useTheme()
   const isLight = theme === 'light'
 
   return (
-    <Icon {...props} title="RedHatLogo">
+    <Icon {...props}>
       {isLight ? (
         <>
           <g fill="currentColor">

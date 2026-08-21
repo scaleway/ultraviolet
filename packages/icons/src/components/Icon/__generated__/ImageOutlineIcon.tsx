@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ImageOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="ImageOutlineIcon">
+export const ImageOutlineIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="m16.5 13.099-1.943-1.944a.923.923 0 0 0-1.306 0l-.518.518.585.585a.75.75 0 1 1-1.06 1.06L8.422 9.482a.923.923 0 0 0-1.306 0L3.5 13.1v1.362c0 .202.164.366.365.366h12.27a.366.366 0 0 0 .365-.366zm-4.722-6.911a1.03 1.03 0 1 1-1.129 1.128l-.004-.105.004-.105a1.03 1.03 0 0 1 1.024-.923zm4.722-.65a.365.365 0 0 0-.365-.365H3.865a.365.365 0 0 0-.365.365v5.44l2.556-2.556a2.423 2.423 0 0 1 3.426 0l2.19 2.19.518-.517a2.423 2.423 0 0 1 3.427 0l.883.882zm1.5 8.923c0 1.03-.835 1.866-1.865 1.866H3.865A1.866 1.866 0 0 1 2 14.461V5.538c0-1.03.835-1.865 1.865-1.865h12.27c1.03 0 1.865.835 1.865 1.865z" />
     ) : (

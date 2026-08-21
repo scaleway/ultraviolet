@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const DatabaseIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="DatabaseIcon">
+export const DatabaseIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M10 2c3.437 0 6.222 1.592 6.222 3.556S13.436 9.11 10 9.11 3.778 7.52 3.778 5.556 6.564 2 10 2" />

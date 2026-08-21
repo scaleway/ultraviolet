@@ -9,12 +9,12 @@ import { useTheme } from '@ultraviolet/themes'
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const LogstashLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => {
+export const LogstashLogo = ({ ...props }: Omit<IconProps, 'children'>) => {
   const { theme } = useTheme()
   const isLight = theme === 'light'
 
   return (
-    <Icon {...props} title="LogstashLogo">
+    <Icon {...props}>
       {isLight ? (
         <>
           <path fill="#f3bd19" d="M10.31 10.691H1.035V0h2.8c3.6 0 6.473 2.91 6.473 6.473z" />

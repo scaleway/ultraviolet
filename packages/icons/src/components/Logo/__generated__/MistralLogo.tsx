@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const MistralLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="MistralLogo">
+export const MistralLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <path
       fill="#000"
       d="M7.472 11.401h-2.69l.001-2.689h2.69zm2.689 2.689h-2.69l.001-2.689h2.691zm.002-2.689h-2.69V8.712h2.691z"

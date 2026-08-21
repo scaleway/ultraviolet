@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const OutlookLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="OutlookLogo">
+export const OutlookLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <g clipPath="url(#a)">
       <path
         fill="#0a2767"

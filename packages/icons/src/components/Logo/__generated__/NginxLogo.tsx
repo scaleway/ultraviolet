@@ -9,12 +9,12 @@ import { useTheme } from '@ultraviolet/themes'
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const NginxLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => {
+export const NginxLogo = ({ ...props }: Omit<IconProps, 'children'>) => {
   const { theme } = useTheme()
   const isLight = theme === 'light'
 
   return (
-    <Icon {...props} title="NginxLogo">
+    <Icon {...props}>
       {isLight ? (
         <>
           <path

@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const DockerLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="DockerLogo">
+export const DockerLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <path
       fill="#3a4d54"
       d="M11.53 7.94h1.77v1.8h.89c.41 0 .83-.08 1.22-.2.19-.06.41-.16.59-.27-.25-.33-.38-.73-.41-1.14-.05-.55.06-1.27.44-1.69l.19-.22.22.17c.56.45 1.02 1.06 1.11 1.78.67-.2 1.45-.16 2.05.19l.23.14-.13.25c-.5.97-1.55 1.28-2.56 1.22-1.53 3.8-4.84 5.59-8.88 5.59-2.08 0-3.98-.78-5.08-2.63l-.02-.03-.16-.33c-.38-.82-.48-1.7-.41-2.59l.03-.27h1.5V7.94h1.77V6.19h3.52V4.42h2.11v3.52z"

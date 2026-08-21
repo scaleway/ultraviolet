@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const HandIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="HandIcon">
+export const HandIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M8.966 2.8a.8.8 0 1 1 1.6 0v5.845q.553.173 1.066.468V3.867a.8.8 0 0 1 1.6 0v7.777a3.2 3.2 0 0 0-2.31 1.688 6.4 6.4 0 0 1 2.844-.665.533.533 0 0 0 .533-.534v-1.611c.003-.61.237-1.22.703-1.686a.8.8 0 0 1 1.131 1.132.8.8 0 0 0-.234.561v2.138h-.003a4.27 4.27 0 0 1-1.247 2.85l-1.234 1.233c-.8.8-1.885 1.25-3.017 1.25H8.966a5.333 5.333 0 0 1-5.334-5.333V6a.8.8 0 0 1 1.6 0v3.925A5.3 5.3 0 0 1 6.3 9.113V3.867a.8.8 0 1 1 1.6 0v4.64A5.4 5.4 0 0 1 8.966 8.4z" />
     ) : (

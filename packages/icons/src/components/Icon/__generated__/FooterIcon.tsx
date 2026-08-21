@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const FooterIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="FooterIcon">
+export const FooterIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M2 6.806c0-1.245 0-1.867.249-2.343.219-.418.569-.758.999-.971.489-.242 1.129-.242 2.409-.242h8.686c1.28 0 1.92 0 2.409.242.43.213.78.553.999.971C18 4.939 18 5.561 18 6.806v2.888c0 1.245 0 1.867-.249 2.343a2.26 2.26 0 0 1-.999.971c-.489.242-1.129.242-2.409.242H5.657c-1.28 0-1.92 0-2.409-.242a2.26 2.26 0 0 1-.999-.971C2 11.561 2 10.939 2 9.694zm15.143 8.444c.473 0 .857.336.857.75s-.384.75-.857.75H2.857C2.384 16.75 2 16.414 2 16s.384-.75.857-.75z" />
     ) : (

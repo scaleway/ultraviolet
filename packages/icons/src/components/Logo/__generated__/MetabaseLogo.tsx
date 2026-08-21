@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const MetabaseLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="MetabaseLogo">
+export const MetabaseLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <path
       fill="#509ee3"
       d="M4.637 7.06a.966.966 0 0 0 .958-.973.965.965 0 0 0-.958-.973.965.965 0 0 0-.958.973c0 .537.429.973.958.973m0 2.724a.965.965 0 0 0 .958-.973.966.966 0 0 0-.958-.973.966.966 0 0 0-.958.973c0 .538.429.973.958.973"

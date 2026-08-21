@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const DaskLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="DaskLogo">
+export const DaskLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <path
       fill="url(#paint0_linear_341_676)"
       d="M17.971 8.51q.019-.2.032-.398a13 13 0 0 0-1.332-6.625L15.93 0l-.343 1.628a11.85 11.85 0 0 1-6.982 8.457l-.51.216.193.52c.626 1.674.861 3.47.687 5.25-.092.961-.3 1.908-.622 2.82L7.963 20l1.116-.367A13.01 13.01 0 0 0 17.971 8.51m-7.58 9.321-.596.303.129-.655q.128-.645.19-1.3a12.9 12.9 0 0 0-.492-4.988l-.079-.263.244-.121a13.07 13.07 0 0 0 6.116-6.433l.382-.87.23.921c.323 1.298.422 2.641.292 3.972a11.8 11.8 0 0 1-6.417 9.434"

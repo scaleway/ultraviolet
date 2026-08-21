@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const SendIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="SendIcon">
+export const SendIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M2.778 2.213a.609.609 0 0 0-.751.764L4 9.39h6.91a.609.609 0 0 1 0 1.218H4l-1.974 6.414a.609.609 0 0 0 .752.764 49.1 49.1 0 0 0 14.968-7.293.61.61 0 0 0 0-.988A49.1 49.1 0 0 0 2.778 2.213" />
     ) : (
