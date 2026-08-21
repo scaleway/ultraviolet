@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/RadioGroup/A11y" />
+
+# RadioGroup - Accessibility
+
+## Description
+
+A form component that groups a set of radio options inside a native `<fieldset>` with an optional `<legend>`, helper/error text, and required indication. Each option is rendered through the `RadioGroup.Radio` sub-component which wraps the `Radio` component. Radios share a common `name` so native radio-group semantics and arrow-key navigation apply.
+
+## Summary
+
+1. ❌ **Perceivable**: Grouping is provided natively via `fieldset`/`legend`, but the group inherits the Radio focus indicator contrast failure.
+2. ❌ **Operable**: Native arrow-key navigation depends on a shared `name` which is optional; when omitted the group has no native radiogroup behavior. Also inherits Radio focus-visible contrast failure.
+3. ❌ **Understandable**: Group error text is associated only with the `<fieldset>`, not the individual radio inputs, so options announce "invalid" without the message.
+4. ❌ **Robust**: A `<fieldset>` without `legend` has no accessible name; an omitted `name` breaks the native radiogroup role.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - The group is wrapped in a native `<fieldset>` with an optional `<legend>` (via `Label as="legend"`), and radios share a `name`, giving native radiogroup semantics
+- ✅ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - The legend labels the group and each option is labeled by the underlying `Radio`
+- ✅ [WCAG 2.4.6 - Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html) - Legend and per-option labels are provided; ensure they are descriptive
+- ❌ [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - Group error text is associated only with the `<fieldset>` via `aria-describedby`; the individual radios receive only `aria-invalid`/styling but are not linked to the descriptive error message
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - A `<fieldset>` without a `legend` has no accessible name; if `name` is omitted the radios lose their native radiogroup role
+- ❌ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Ensure error state is not conveyed by color alone when `error` is a boolean (via an error-icon for instance)
+
+To apply when using the component:
+
+- ⚠️ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Always provide a `legend` or `accessibleLabel` so the group has an accessible name; a bare `<fieldset>` without a legend conveys no grouping information
+- ⚠️ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - Always pass a `name` to `RadioGroup`; without it the radios are not a native radio group, so arrow-key navigation, roving tabindex, and mutual exclusivity are lost
+- [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - When `error` is a boolean, provide a descriptive error message and ensure it is associated with each radio input via `aria-describedby`, so the reason for the error is announced when an option receives focus
+
+## Accessibility issues
+
+**High:**
+
+- `name` is optional, yet the entire native radio-group behavior depends on it. The `name` prop should be required (as it is in `CheckboxGroup`) or a name should be generated when none is provided.
+- Group error text is associated only with the `<fieldset>` via `aria-describedby`. Associate the group error/helper `id` with each radio input via `aria-describedby` (the underlying `Radio` already supports it), keeping the fieldset association as a complement.
+- `legend` is optional, but a `<fieldset>` without a `<legend>` has no accessible name. Add an `accessibleLabel` prop that renders a hidden `<legend>` via the `VisuallyHidden` component (per RFC #6585).
+
+**Medium:**
+
+- The `aria-describedby` prop is overloaded: when a consumer supplies it, it is used both as the `fieldset`'s `aria-describedby` and as the `Description` element `id`. This can collide with the id of the external element it points to (duplicate id in the document) and means the group's own helper/error text no longer receives a generated id, so it is no longer associated with the fieldset.
+
+## Dependencies
+
+- `Radio` component - the group inherits its focus indicator contrast (1.4.11 / 2.4.7), SVG `<title>radio</title>` exposure, and tooltip wrapping issues. Fix those in `Radio` first.
