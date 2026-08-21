@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const AustriaFlag = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="AustriaFlag">
+export const AustriaFlag = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {props.disabled ? (
       <>
         <path

@@ -9,12 +9,12 @@ import { useTheme } from '@ultraviolet/themes'
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const UbuntuLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => {
+export const UbuntuLogo = ({ ...props }: Omit<IconProps, 'children'>) => {
   const { theme } = useTheme()
   const isLight = theme === 'light'
 
   return (
-    <Icon {...props} title="UbuntuLogo">
+    <Icon {...props}>
       {isLight ? (
         <>
           <circle cx="10" cy="10" r="9" fill="#f47421" />

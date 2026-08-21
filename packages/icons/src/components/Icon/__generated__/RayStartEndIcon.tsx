@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const RayStartEndIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="RayStartEndIcon">
+export const RayStartEndIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M6.5 10a1.75 1.75 0 1 1-3.499.001A1.75 1.75 0 0 1 6.5 10m7 0a1.75 1.75 0 1 0 3.5 0 1.75 1.75 0 0 0-3.5 0" />

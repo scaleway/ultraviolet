@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const TableauLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="TableauLogo">
+export const TableauLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <g clipPath="url(#clip0_110_655540)">
       <path fill="#7099a6" d="M9.746 2.88v.728H8.444v.474h1.302V5.53h.508V4.08h1.334v-.473h-1.334V2.156h-.508z" />
       <path fill="#eb912c" d="M5.493 4.726v1.056h-1.97v.663h1.97v2.144h.73V6.445h2v-.663h-2V3.67h-.73z" />
