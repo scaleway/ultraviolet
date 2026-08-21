@@ -40,13 +40,13 @@ describe(getPageNumbers, () => {
       expect(getPageNumbers(5, 20, 6)).toStrictEqual([1, 2, 3, 4, 5, 6, 20])
     })
     it('should get 9,10,11,20 if current page is 10, with 20 pages an hideFirstPage is true', () => {
-      expect(getPageNumbers(10, 20, 5, true)).toStrictEqual([9, 10, 11, 20])
+      expect(getPageNumbers(10, 20, 5, 3, true)).toStrictEqual([9, 10, 11, 20])
     })
     it('should get 9,10,11 if current page is 10, with 20 pages an hideLastPage is true', () => {
-      expect(getPageNumbers(10, 20, 5, false, true)).toStrictEqual([1, 9, 10, 11])
+      expect(getPageNumbers(10, 20, 5, 3, false, true)).toStrictEqual([1, 9, 10, 11])
     })
     it('should get 9,10,11 if current page is 10, with 20 pages an hideFirstPage & hideLastPageis true', () => {
-      expect(getPageNumbers(10, 20, 5, true, true)).toStrictEqual([9, 10, 11])
+      expect(getPageNumbers(10, 20, 5, 3, true, true)).toStrictEqual([9, 10, 11])
     })
   })
 })
