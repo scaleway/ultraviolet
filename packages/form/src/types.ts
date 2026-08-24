@@ -43,17 +43,19 @@ export type RequiredErrors = {
 }
 
 export type FormErrors = {
-  [key in
-    | 'required'
-    | 'isNumber'
-    | 'isInteger'
-    | 'min'
-    | 'max'
-    | 'minLength'
-    | 'maxLength'
-    | 'pattern'
-    | 'minDate'
-    | 'maxDate']: RequiredErrors[key]
+  [
+    key in
+      | 'required'
+      | 'isNumber'
+      | 'isInteger'
+      | 'min'
+      | 'max'
+      | 'minLength'
+      | 'maxLength'
+      | 'pattern'
+      | 'minDate'
+      | 'maxDate'
+  ]: RequiredErrors[key]
 }
 
 export type BaseFieldProps<
