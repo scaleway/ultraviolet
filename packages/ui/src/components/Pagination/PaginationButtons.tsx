@@ -77,13 +77,18 @@ export const PaginationButtons = ({
             hasEllipsisBefore={
               !(index === 0 || pageNumbersToDisplay[index - 1] === pageNumber - 1) || (index === 0 && pageNumber !== 1)
             }
+            hideFirstPage={hideFirstPage}
+            hideLastPage={hideLastPage}
             key={pageNumber}
             page={page}
+            pageCount={pageCount}
             pageNumber={pageNumber}
             size={size}
           />
         ))}
-        {pageNumbersToDisplay.at(-1) === pageCount ? null : <Ellipsis disabled={disabled} size={size} />}
+        {pageNumbersToDisplay.at(-1) === pageCount ? null : (
+          <Ellipsis className={paginationStyle.hiddenOnSmall[size]} disabled={disabled} size={size} />
+        )}
       </Stack>
       <Stack gap={1}>
         <Button
