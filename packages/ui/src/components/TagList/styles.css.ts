@@ -8,6 +8,7 @@ export const popoverTriggerWidthVar = createVar()
 const container = style({
   display: 'flex',
   width: '100% !important', // It should always have a width of 100% for overflow computation
+  position: 'relative',
 })
 
 const tagContainer = recipe({
