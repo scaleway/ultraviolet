@@ -38,7 +38,7 @@ describe(useBreakpoints, () => {
   it('should handle undefined ref', async () => {
     const { result } = renderHook(() => {
       const ref = useRef<HTMLElement | null>(null)
-      return useBreakpoints(ref, { small: 0 })
+      return useBreakpoints(ref, { small: 320 })
     })
     expect(result.current).toEqual({ small: false })
   })

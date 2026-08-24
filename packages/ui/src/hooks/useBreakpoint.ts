@@ -30,9 +30,10 @@ export const useBreakpoints = <T extends string>(
   breakpoints: Record<T, number>,
 ): BreakpointState<T> => {
   const breakpointsRef = useRef(breakpoints)
-  const [current, setCurrent] = useState<BreakpointState<T>>(
-    () => Object.fromEntries(Object.keys(breakpoints).map(name => [name, false])) as BreakpointState<T>,
-  )
+  const [current, setCurrent] = useState<BreakpointState<T>>(() => {
+    const width = ref.current?.getBoundingClientRect?.()?.width ?? 0
+    return getActive(width, breakpoints)
+  })
 
   useEffect(() => {
     const element = ref.current

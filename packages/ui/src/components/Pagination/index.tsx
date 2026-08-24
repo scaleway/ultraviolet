@@ -6,6 +6,7 @@ import { useBreakpoints } from '../../hooks/useBreakpoint'
 import { Stack } from '../Stack'
 import { PaginationButtons } from './PaginationButtons'
 import { PerPage } from './PerPage'
+import { paginationStyle } from './styles.css'
 
 type PaginationProps = {
   /**
@@ -115,7 +116,13 @@ export const Pagination = ({
   }, [perPage])
 
   return (
-    <Stack direction="row" justifyContent="space-between" ref={rootRef} style={style}>
+    <Stack
+      direction="row"
+      className={rootRef.current ? undefined : paginationStyle.hiddenContainer}
+      justifyContent="space-between"
+      ref={rootRef}
+      style={style}
+    >
       {perPage ? (
         <PerPage
           numberOfItems={numberOfItems}
