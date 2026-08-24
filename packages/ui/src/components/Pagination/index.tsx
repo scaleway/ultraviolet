@@ -1,10 +1,12 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
+import { useBreakpoints } from '../../hooks/useBreakpoint'
 import { Stack } from '../Stack'
 import { PaginationButtons } from './PaginationButtons'
 import { PerPage } from './PerPage'
+import { paginationStyle } from './styles.css'
 
 type PaginationProps = {
   /**
@@ -80,7 +82,7 @@ export const Pagination = ({
   page,
   pageCount,
   onChange,
-  pageTabCount = 5,
+  pageTabCount,
   className,
   perPage,
   onChangePerPage,
@@ -95,6 +97,8 @@ export const Pagination = ({
   style,
 }: PaginationProps) => {
   const [perPageComputed, setPerPage] = useState(perPage ?? 10)
+  const rootRef = useRef<HTMLDivElement>(null)
+  const breakpoint = useBreakpoints(rootRef, { small: 0, large: 420 })
 
   useEffect(() => {
     if (page < 1) {
@@ -112,7 +116,13 @@ export const Pagination = ({
   }, [perPage])
 
   return (
-    <Stack direction="row" justifyContent="space-between" style={style}>
+    <Stack
+      direction="row"
+      className={rootRef.current ? undefined : paginationStyle.hiddenContainer}
+      justifyContent="space-between"
+      ref={rootRef}
+      style={style}
+    >
       {perPage ? (
         <PerPage
           numberOfItems={numberOfItems}
@@ -129,10 +139,11 @@ export const Pagination = ({
         className={className}
         data-testid={dataTestId}
         disabled={disabled}
+        isSmall={breakpoint.small}
         onChange={onChange}
         page={page}
         pageCount={pageCount}
-        pageTabCount={pageTabCount}
+        pageTabCount={pageTabCount ?? (breakpoint.small ? 3 : 5)}
         size={perPage ? 'small' : size}
         hideFirstPage={hideFirstPage}
         hideLastPage={hideLastPage}

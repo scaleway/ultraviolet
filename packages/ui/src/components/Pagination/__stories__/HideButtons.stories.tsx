@@ -9,11 +9,11 @@ export const HideButtons: StoryFn = props => {
   return (
     <Stack gap={1}>
       Hide first page:
-      <Pagination {...props} onChange={setPage} page={page} pageCount={20} hideFirstPage />
+      <Pagination pageCount={20} {...props} onChange={setPage} page={page} hideFirstPage />
       Hide last page:
-      <Pagination {...props} onChange={setPage} page={page} pageCount={20} hideLastPage />
+      <Pagination pageCount={20} {...props} onChange={setPage} page={page} hideLastPage />
       Hide both:
-      <Pagination {...props} onChange={setPage} page={page} pageCount={20} hideFirstPage hideLastPage />
+      <Pagination pageCount={20} {...props} onChange={setPage} page={page} hideFirstPage hideLastPage />
     </Stack>
   )
 }

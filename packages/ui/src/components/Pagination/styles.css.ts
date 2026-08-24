@@ -1,6 +1,10 @@
 import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 
+const hiddenContainer = style({
+  visibility: 'hidden',
+})
+
 const pageNumbersContainer = style({
   margin: `0 ${theme.space['1']}`,
 })
@@ -33,6 +37,7 @@ const ellipsisClass = styleVariants({
 })
 
 export const paginationStyle = {
+  hiddenContainer,
   pageNumbersContainer,
   pageButton,
   ellipsisClass,

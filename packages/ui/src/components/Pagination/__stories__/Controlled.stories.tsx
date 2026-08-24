@@ -7,7 +7,7 @@ export const Controlled: StoryFn = props => {
 
   return (
     <>
-      Current page : {page} <Pagination {...props} onChange={setPage} page={page} pageCount={10} />
+      Current page : {page} <Pagination pageCount={10} {...props} onChange={setPage} page={page} />
     </>
   )
 }
