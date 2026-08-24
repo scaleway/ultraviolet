@@ -47,62 +47,38 @@ To apply when using the component:
 **Critical:**
 
 - ✅ Icons are not `aria-hidden` by default
-
-  <details>
-    <summary>Resolved</summary>
-    The component now defaults `aria-hidden` to `true` unless the icon is informative. Previously it only forwarded
+  - The component now defaults `aria-hidden` to `true` unless the icon is informative. Previously it only forwarded
     `aria-hidden` if it was explicitly passed, defaulting to `undefined`, so every icon was exposed to the accessibility
     tree even when purely decorative. This implements decision #1 of RFC #6585 ("All Icons Are `aria-hidden`") and
     satisfies WCAG 1.1.1 and 4.1.2.
-  </details>
 
 - ✅ Generated icons expose the technical component name as the accessible name
-
-  <details>
-    <summary>Resolved</summary>
-    The `title` prop (hard-coded to the icon name, e.g. `title="AddressIcon"`) has been removed entirely, along with the
+  - The `title` prop (hard-coded to the icon name, e.g. `title="AddressIcon"`) has been removed entirely, along with the
     always-rendered `<title>` element. Screen readers no longer announce meaningless names such as "ArrowRightIcon". This
     satisfies WCAG 1.1.1 (the text alternative must serve an equivalent purpose).
-  </details>
 
 **High:**
 
 - ✅ No explicit `role="img"`
-
-  <details>
-    <summary>Resolved</summary>
-    When an icon is informative (an `accessibleLabel` is provided), the `<svg>` now declares `role="img"`, making
+  - When an icon is informative (an `accessibleLabel` is provided), the `<svg>` now declares `role="img"`, making
     identification robust across browsers and assistive technologies instead of relying on inconsistent implicit SVG
     mapping. This satisfies WCAG 4.1.2.
-  </details>
 
 - ✅ `<title>` is always rendered and cannot be changed
-
-  <details>
-    <summary>Resolved</summary>
-    The `title` prop was not usable by consumers (the base `Icon` is not exposed; generated icons hard-coded it to the
+  - The `title` prop was not usable by consumers (the base `Icon` is not exposed; generated icons hard-coded it to the
     icon name) so it has been removed entirely. The `<title>` element is no longer rendered. Informative icons now get
     their accessible name via `accessibleLabel`.
-  </details>
 
 **Medium:**
 
 - ✅ `aria-label` is the only built-in way to set a meaningful accessible name
-
-  <details>
-    <summary>Resolved</summary>
-    Icons that carry meaning can now be given an accessible name with `accessibleLabel`, which sets `role="img"` and
+  - Icons that carry meaning can now be given an accessible name with `accessibleLabel`, which sets `role="img"` and
     un-hides the icon. The API and documentation guide consumers toward labelling the interactive parent via
     `VisuallyHidden` or a tooltip (see "To apply when using the component").
-  </details>
 
 - ✅ No `focusable="false"` attribute
-
-  <details>
-    <summary>Resolved</summary>
-    The `<svg>` now sets `focusable="false"`, preventing decorative icons from accidentally entering the tab order in
+  - The `<svg>` now sets `focusable="false"`, preventing decorative icons from accidentally entering the tab order in
     browsers that historically made SVGs focusable.
-  </details>
 
 **Low:**
 

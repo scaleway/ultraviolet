@@ -270,7 +270,7 @@ const SelectBar = ({
               <CloseIcon />
             </Button>
           ) : null}
-          <ArrowDownIcon aria-label="show dropdown" disabled={disabled || readOnly} sentiment="neutral" size="small" />
+          <ArrowDownIcon disabled={disabled || readOnly} sentiment="neutral" size="small" />
         </Stack>
       </div>
     </Tooltip>
