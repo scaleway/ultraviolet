@@ -87,7 +87,7 @@ export const TagList = ({
 }: TagListProps) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const measureRef = useRef<HTMLDivElement>(null)
-  const popoverTriggerRef = useRef<HTMLDivElement>(null)
+  const popoverTriggerRef = useRef<HTMLButtonElement>(null)
 
   const [isPopoverVisible, setIsPopoverVisible] = useState(false)
   const [visibleTags, setVisibleTags] = useState<TagType[]>([tags[0]])
@@ -199,56 +199,50 @@ export const TagList = ({
   return (
     <div className={cn(className, tagListStyle.container)} data-testid={dataTestId} ref={containerRef} style={style}>
       <div
-        className={cn(
-          tagListStyle.tagContainer({
-            multiline,
-          }),
-        )}
+        className={cn(tagListStyle.tagContainer({ multiline }))}
         data-testid={`${dataTestId ?? 'taglist'}-container`}
       >
         {visibleTags.map((tag, index) => renderTag(tag, index, true))}
+
+        {hiddenTags.length > 0 && (
+          <Popover
+            content={
+              <div className={tagListStyle.tagContainer({ multiline: true })}>
+                {hiddenTags.map((tag, index) => renderTag(tag, index))}
+              </div>
+            }
+            maxHeight={popoverMaxHeight}
+            onClose={() => setIsPopoverVisible(false)}
+            placement={popoverPlacement}
+            size="small"
+            title={popoverTitle}
+            visible={isPopoverVisible}
+          >
+            <button
+              type="button"
+              className={tagListStyle.counter}
+              data-testid={`${dataTestId ?? 'taglist'}-open`}
+              onClick={() => setIsPopoverVisible(true)}
+              onKeyDown={event => {
+                if ([' ', 'Enter'].includes(event.key)) {
+                  setIsPopoverVisible(true)
+                }
+              }}
+            >
+              +{hiddenTags.length}
+            </button>
+          </Popover>
+        )}
       </div>
 
-      {hiddenTags.length > 0 && (
-        <Popover
-          content={
-            <div className={tagListStyle.tagContainer({ multiline: true })}>
-              {hiddenTags.map((tag, index) => renderTag(tag, index))}
-            </div>
-          }
-          maxHeight={popoverMaxHeight}
-          onClose={() => setIsPopoverVisible(false)}
-          placement={popoverPlacement}
-          size="small"
-          title={popoverTitle}
-          visible={isPopoverVisible}
-        >
-          {/* oxlint-disable-next-line jsx-a11y/no-static-element-interactions */}
-          <span
-            className={tagListStyle.counter}
-            data-testid={`${dataTestId ?? 'taglist'}-open`}
-            onClick={() => setIsPopoverVisible(true)}
-            onKeyDown={event => {
-              if ([' ', 'Enter'].includes(event.key)) {
-                setIsPopoverVisible(true)
-              }
-            }}
-            // oxlint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-            tabIndex={0}
-          >
-            +{hiddenTags.length}
-          </span>
-        </Popover>
-      )}
-
       {/* A hidden div which renders the tags so we can measure them */}
-      <div ref={measureRef} className={tagListStyle.measurementContainer}>
+      <div aria-hidden="true" ref={measureRef} className={tagListStyle.measurementContainer}>
         <div className={tagListStyle.tagContainer({ multiline })}>
           {potentiallyVisibleTags.map((tag, index) => renderTag(tag, index))}
         </div>
-        <span className={tagListStyle.counter} ref={popoverTriggerRef}>
+        <button type="button" className={tagListStyle.counter} ref={popoverTriggerRef}>
           +{surelyHiddenTags.length}
-        </span>
+        </button>
       </div>
     </div>
   )
