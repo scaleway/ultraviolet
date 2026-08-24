@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { TAGS_GAP } from './constant'
+import { MIN_TAG_WIDTH_PX, TAGS_GAP_PX } from './constant'
 
 export const popoverTriggerWidthVar = createVar()
 
@@ -11,12 +11,22 @@ const container = style({
   position: 'relative',
 })
 
+const measurementContainer = style({
+  position: 'absolute',
+  visibility: 'hidden',
+  whiteSpace: 'nowrap',
+  pointerEvents: 'none',
+  display: 'flex',
+})
+
 const tagContainer = recipe({
   base: {
     alignItems: 'center',
     color: theme.colors.neutral.text,
     display: 'flex',
-    gap: TAGS_GAP,
+    gap: `${TAGS_GAP_PX}px`,
+    maxWidth: '100%',
+    overflow: 'hidden',
   },
   variants: {
     multiline: {
@@ -27,28 +37,13 @@ const tagContainer = recipe({
   },
 })
 
-const ellipsisContainer = style({
-  selectors: {
-    '&:has(.ellipsed)': {
-      maxWidth: 'fit-content',
-      width: `calc(100% - ${popoverTriggerWidthVar})`,
-    },
-  },
+const tag = style({
+  maxWidth: 'fit-content',
+  minWidth: MIN_TAG_WIDTH_PX,
+  width: '100%',
 })
 
-const ellipsisChild = style({
-  selectors: {
-    [`${ellipsisContainer} &`]: {
-      maxWidth: 'fit-content',
-      width: '100%',
-    },
-    '&.ellipsed': {
-      minWidth: 0,
-    },
-  },
-})
-
-const tagsWrapper = style({
+const counter = style({
   alignSelf: 'center',
   backgroundColor: 'transparent',
   border: 'none',
@@ -66,7 +61,7 @@ const tagsWrapper = style({
 export const tagListStyle = {
   container,
   tagContainer,
-  ellipsisChild,
-  ellipsisContainer,
-  tagsWrapper,
+  tag,
+  counter,
+  measurementContainer,
 }

@@ -1,13 +1,12 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
-import { DEFAULT_POPOVER_MAX_HEIGHT, MIN_TAG_WIDTH, TAGS_GAP } from './constant'
-import { popoverTriggerWidthVar, tagListStyle } from './styles.css'
+import { DEFAULT_POPOVER_MAX_HEIGHT, TAGS_GAP_PX } from './constant'
+import { tagListStyle } from './styles.css'
 
 type TagKeyValue = { key: string; value: string }
 type TagIcon = { label: string; icon: ReactNode }
@@ -15,21 +14,20 @@ export type TagType = string | TagKeyValue | TagIcon
 
 type TagListProps = {
   /**
-   * This property define maximum characters length of all tags until it hide tags into tooltip.
+   * Maximum character length of all tags before hiding them into a popover.
    */
   maxLength?: number
   tags?: TagType[]
   /**
-   * This property define maximum characters length of all tags until it hide tags into tooltip.
-   * NB: this will be overridden if the parent width is smaller and cannot show all the tags
+   * Maximum number of tags to display before hiding them in a popover.
    */
   threshold?: number
   /**
-   * This property define maximum width of each tag. This doesn't apply for tags in tooltip.
+   * Wrap the tags on multiple lines instead of containing them on the first one.
    */
   multiline?: boolean
   /**
-   * This property define the title of the Popover, when some tags are hidden because of the threshold.
+   * Title of the Popover added when some tags are hidden because of the `threshold` or `maxLength` properties.
    */
   popoverTitle: string
   /**
@@ -38,7 +36,8 @@ type TagListProps = {
    */
   popoverPlacement?: ComponentProps<typeof Popover>['placement']
   /**
-   * The popover maxHeight, defaults to 12.5rem
+   * The popover maxHeight
+   * @default 12.5rem
    */
   popoverMaxHeight?: ComponentProps<typeof Popover>['maxHeight']
   className?: string
@@ -90,40 +89,26 @@ export const TagList = ({
   const measureRef = useRef<HTMLDivElement>(null)
   const popoverTriggerRef = useRef<HTMLDivElement>(null)
 
-  // A flag to keep of when we show the component as we we might update the visible tags list
-  // after the first render ( to know if we should add ellipsis to the last visible tag
-  // or readjust the tags when joined with the popover trigger might overflow the parent )
-  // and this causes some flickering
-  const [isReady, setIsReady] = useState(false)
-
   const [isPopoverVisible, setIsPopoverVisible] = useState(false)
-  const [popoverTriggerWidth, setPopoverTriggerWidth] = useState(0)
-  const [visibleTags, setVisibleTags] = useState<TagType[]>([])
+  const [visibleTags, setVisibleTags] = useState<TagType[]>([tags[0]])
   const [hiddenTags, setHiddenTags] = useState<TagType[]>([])
 
-  // Compute tmpThreshold, potentially visible tags and surely hidden tags
-  const memoizedResult = useMemo(() => {
-    let tmpThreshold = threshold
-    while (
-      tmpThreshold > 1 &&
-      tags.length > 0 &&
-      tags.slice(0, tmpThreshold).reduce<string>((acc, tag) => acc + getTagLabel(tag), '').length > maxLength
-    ) {
-      tmpThreshold -= 1
+  const [potentiallyVisibleTags, surelyHiddenTags] = useMemo(() => {
+    if (tags.length === 0) {
+      return [[], []]
     }
+    const limit = Math.min(threshold, tags.length)
+    let visibleCount = 0
+    let currentLength = 0
 
-    const potentiallyVisibleTagsLength = Math.max(1, tags.length > tmpThreshold ? tmpThreshold : tags.length)
-    const potentiallyVisibleTags = tags.slice(0, potentiallyVisibleTagsLength)
-    const surelyHiddenTags = tags.slice(potentiallyVisibleTagsLength)
-
-    return {
-      potentiallyVisibleTags,
-      surelyHiddenTags,
-      tmpThreshold,
+    for (let i = 0; i < limit; i++) {
+      currentLength += getTagLabel(tags[i]).length
+      if (currentLength > maxLength) break
+      visibleCount++
     }
+    visibleCount = Math.max(visibleCount, 1)
+    return [tags.slice(0, visibleCount), tags.slice(visibleCount)]
   }, [maxLength, tags, threshold])
-
-  const { tmpThreshold, potentiallyVisibleTags, surelyHiddenTags } = memoizedResult
 
   // Compute visible tags and hidden ones based on the container width and
   // what can fit into it from the potentially visible tags
@@ -132,185 +117,98 @@ export const TagList = ({
       return
     }
 
-    if (multiline) {
+    if (multiline || typeof ResizeObserver === 'undefined') {
       setVisibleTags(potentiallyVisibleTags)
       setHiddenTags(surelyHiddenTags)
-      setIsReady(true)
 
       return
     }
 
-    const parentWidth = (containerRef.current.parentElement?.offsetWidth ?? 0) - MIN_TAG_WIDTH
-
-    const toMeasureElements: HTMLCollection = measureRef.current.children[0].children
-
-    const toMeasureElementsArray = [...toMeasureElements]
-
-    const { measuredVisibleTags, measuredHiddenTags } = toMeasureElementsArray.reduce(
-      (
-        accumulator: {
-          measuredVisibleTags: TagType[]
-          measuredHiddenTags: TagType[]
-          accumulatedWidth: number
-        },
-        currentValue,
-        index,
-      ): {
-        measuredVisibleTags: TagType[]
-        measuredHiddenTags: TagType[]
-        accumulatedWidth: number
-      } => {
-        const tagWidth = (currentValue as HTMLDivElement).offsetWidth
-        const gap = index > 0 ? Number.parseInt(TAGS_GAP, 10) : 0
-        const newAccumulatedWidth = accumulator.accumulatedWidth + tagWidth + gap
-
-        const minWidthAccumulatedWidth = accumulator.accumulatedWidth + MIN_TAG_WIDTH + gap
-
-        // The tag fits (with or without needing shrinking)
-        if (minWidthAccumulatedWidth <= parentWidth) {
-          return {
-            accumulatedWidth: newAccumulatedWidth,
-            measuredHiddenTags: accumulator.measuredHiddenTags,
-            measuredVisibleTags: [...accumulator.measuredVisibleTags, tags[index]],
-          }
-        }
-
-        // The tag doesn't fit at all (available space < min-width)
-        return {
-          accumulatedWidth: accumulator.accumulatedWidth,
-          measuredHiddenTags: [...accumulator.measuredHiddenTags, tags[index]],
-          measuredVisibleTags: accumulator.measuredVisibleTags,
-        }
-      },
-      {
-        accumulatedWidth: 0,
-        measuredHiddenTags: [],
-        measuredVisibleTags: [],
-      },
-    )
-
-    const finalHiddenTags = [...measuredHiddenTags, ...surelyHiddenTags]
-
-    setVisibleTags(measuredVisibleTags)
-    setHiddenTags(finalHiddenTags)
-
-    if (finalHiddenTags.length === 0) {
-      setIsReady(true)
-    }
-  }, [
-    multiline,
-    potentiallyVisibleTags,
-    surelyHiddenTags,
-    tags,
-    threshold,
-    tmpThreshold,
-    containerRef.current?.parentElement?.offsetWidth,
-  ])
-
-  // Once the popover trigger is available we have to:
-  // - to get the popover trigger width so the last visible tags can have ellipsis if needed
-  // - remove the last tag if the popover have no place and push it in to the hidden tags list
-  useEffect(() => {
-    if (popoverTriggerRef.current?.offsetWidth) {
-      const newPopoverTriggerWidth = popoverTriggerRef.current.offsetWidth
-
-      // Set popover trigger width
-      setPopoverTriggerWidth(newPopoverTriggerWidth)
-
-      // Remove the last tag if we have a popover and add it to the hidden tags
-      const tagsContainer = containerRef.current
-      const tagsContainerWidth = containerRef.current?.offsetWidth ?? 0
-      const parentWidth = tagsContainer?.parentElement?.offsetWidth ?? 0
-
-      if (
-        visibleTags.length > 1 &&
-        hiddenTags.length > 0 &&
-        tagsContainerWidth + newPopoverTriggerWidth > parentWidth
-      ) {
-        const visibleTagsCopy = visibleTags.filter((_, index) => index < visibleTags.length - 1)
-        const tagToMove = visibleTags.at(-1) ?? ''
-
-        setVisibleTags(visibleTagsCopy)
-        setHiddenTags([tagToMove, ...hiddenTags])
+    const handleResize = (entries: ResizeObserverEntry[]) => {
+      if (!containerRef.current || !measureRef.current || !popoverTriggerRef.current) {
+        return
       }
 
-      setIsReady(true)
-    }
-  }, [hiddenTags, threshold, visibleTags, visibleTags.length, containerRef.current?.parentElement?.offsetWidth])
+      const totalAvailableWidth = entries[0].contentBoxSize[0].inlineSize
 
-  const renderTag = (tag: TagType, index: number, isEllipsis = false, hidden?: boolean) => {
+      if (measureRef.current.offsetWidth < totalAvailableWidth) {
+        setVisibleTags(potentiallyVisibleTags)
+        setHiddenTags(surelyHiddenTags)
+        return
+      }
+
+      const elementsToMeasure = [...measureRef.current.children[0].children] as HTMLElement[]
+      const counterWidth = popoverTriggerRef.current.offsetWidth
+
+      let visibleTagsCount = 0
+      let visibleTagsWidth = 0
+
+      for (let i = 0; i < potentiallyVisibleTags.length; i++) {
+        if (i > 0) visibleTagsWidth += TAGS_GAP_PX
+        visibleTagsWidth += elementsToMeasure[i].offsetWidth
+
+        const notLastTag = i < tags.length - 1
+        const availableWidth = notLastTag ? totalAvailableWidth - counterWidth : totalAvailableWidth
+
+        if (visibleTagsWidth > availableWidth) {
+          break
+        }
+        visibleTagsCount++
+      }
+
+      if (visibleTagsCount === 0) {
+        visibleTagsCount = 1
+      }
+
+      setVisibleTags(tags.slice(0, visibleTagsCount))
+      setHiddenTags(tags.slice(visibleTagsCount))
+    }
+
+    const resizeObserver = new ResizeObserver(handleResize)
+    resizeObserver.observe(containerRef.current)
+
+    return () => {
+      resizeObserver.disconnect()
+    }
+  }, [multiline, potentiallyVisibleTags, surelyHiddenTags, tags])
+
+  const renderTag = (tag: TagType, index: number, hidden?: boolean) => {
+    const tagLabel = getTagLabel(tag)
     const commonProps = {
-      className: cn(isEllipsis ? 'ellipsed' : '', tagListStyle.ellipsisChild),
+      className: tagListStyle.tag,
       copiable: copiable,
       copiedText: copiedText,
       copyText: copyText,
-      // useful when two tags are identical `${tag}-${index}`
-      key: `${getTagLabel(tag)}-${index}`,
-      'data-testid': hidden ? '' : getTagLabel(tag),
+      'data-testid': hidden ? '' : tagLabel,
       variant: variant,
       sentiment: sentiment,
     }
 
     if (isKeyValueTag(tag)) {
-      return <Tag keyValue={tag} {...commonProps} />
+      return <Tag keyValue={tag} {...commonProps} key={`${tagLabel}-${index}`} />
     }
 
     return (
-      <Tag {...commonProps}>
+      <Tag {...commonProps} key={`${tagLabel}-${index}`}>
         {isLabelIconTag(tag) ? tag.icon : undefined}
-        {getTagLabel(tag)}
+        {tagLabel}
       </Tag>
     )
   }
 
   return (
-    <div
-      className={cn(className, tagListStyle.container)}
-      data-testid={dataTestId}
-      style={{ visibility: isReady ? 'visible' : 'hidden', ...style }}
-    >
+    <div className={cn(className, tagListStyle.container)} data-testid={dataTestId} ref={containerRef} style={style}>
       <div
         className={cn(
           tagListStyle.tagContainer({
             multiline,
           }),
-          (visibleTags.length === 1 && hiddenTags.length === 0) || popoverTriggerWidth
-            ? tagListStyle.ellipsisContainer
-            : '',
         )}
         data-testid={`${dataTestId ?? 'taglist'}-container`}
-        ref={containerRef}
-        style={assignInlineVars({
-          [popoverTriggerWidthVar]: `${popoverTriggerWidth || 0}px`,
-        })}
       >
-        {visibleTags.map((tag, index) =>
-          renderTag(
-            tag,
-            index,
-            // add ellipsis to last tag
-            index === visibleTags.length - 1,
-            true,
-          ),
-        )}
+        {visibleTags.map((tag, index) => renderTag(tag, index, true))}
       </div>
-      {/* A hidden div which renders the tags so we can measure them */}
-      <div
-        ref={measureRef}
-        style={{
-          position: 'absolute',
-          visibility: 'hidden',
-          whiteSpace: 'nowrap',
-          pointerEvents: 'none',
-        }}
-      >
-        <div
-          className={tagListStyle.tagContainer({ multiline })}
-          data-testid={`${dataTestId ?? 'taglist'}-measure-container`}
-        >
-          {potentiallyVisibleTags.map((tag, index) => renderTag(tag, index))}
-        </div>
-      </div>
+
       {hiddenTags.length > 0 && (
         <Popover
           content={
@@ -327,7 +225,7 @@ export const TagList = ({
         >
           {/* oxlint-disable-next-line jsx-a11y/no-static-element-interactions */}
           <span
-            className={tagListStyle.tagsWrapper}
+            className={tagListStyle.counter}
             data-testid={`${dataTestId ?? 'taglist'}-open`}
             onClick={() => setIsPopoverVisible(true)}
             onKeyDown={event => {
@@ -335,7 +233,6 @@ export const TagList = ({
                 setIsPopoverVisible(true)
               }
             }}
-            ref={popoverTriggerRef}
             // oxlint-disable-next-line jsx-a11y/no-noninteractive-tabindex
             tabIndex={0}
           >
@@ -343,6 +240,16 @@ export const TagList = ({
           </span>
         </Popover>
       )}
+
+      {/* A hidden div which renders the tags so we can measure them */}
+      <div ref={measureRef} className={tagListStyle.measurementContainer}>
+        <div className={tagListStyle.tagContainer({ multiline })}>
+          {potentiallyVisibleTags.map((tag, index) => renderTag(tag, index))}
+        </div>
+        <span className={tagListStyle.counter} ref={popoverTriggerRef}>
+          +{surelyHiddenTags.length}
+        </span>
+      </div>
     </div>
   )
 }
