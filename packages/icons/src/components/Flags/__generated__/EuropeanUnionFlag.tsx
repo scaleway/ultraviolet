@@ -11,7 +11,7 @@ import type { IconProps } from '../Icon'
 export const EuropeanUnionFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
   if (['small', 'xsmall'].includes(size)) {
     return (
-      <Icon {...props} title="EuropeanUnionFlag">
+      <Icon {...props} size={size} title="EuropeanUnionFlag">
         {disabled ? (
           <>
             <g clipPath="url(#clip0_3357_136)">
@@ -47,7 +47,7 @@ export const EuropeanUnionFlag = ({ size = 'medium', disabled, ...props }: Omit<
     )
   }
   return (
-    <Icon {...props} title="EuropeanUnionFlag">
+    <Icon {...props} size={size} title="EuropeanUnionFlag">
       {disabled ? (
         <>
           <g clipPath="url(#clip0_3357_117)">

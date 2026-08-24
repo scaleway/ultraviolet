@@ -11,7 +11,7 @@ import type { IconProps } from '../Icon'
 export const SpainFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
   if (['small', 'xsmall'].includes(size)) {
     return (
-      <Icon {...props} title="SpainFlag">
+      <Icon {...props} size={size} title="SpainFlag">
         {disabled ? (
           <>
             <path
@@ -33,7 +33,7 @@ export const SpainFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProp
     )
   }
   return (
-    <Icon {...props} title="SpainFlag">
+    <Icon {...props} size={size} title="SpainFlag">
       {disabled ? (
         <>
           <path

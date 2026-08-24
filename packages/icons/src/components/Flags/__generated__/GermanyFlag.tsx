@@ -11,7 +11,7 @@ import type { IconProps } from '../Icon'
 export const GermanyFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
   if (['small', 'xsmall'].includes(size)) {
     return (
-      <Icon {...props} title="GermanyFlag">
+      <Icon {...props} size={size} title="GermanyFlag">
         {disabled ? (
           <>
             <path fill="#d5d5d5" d="M1.435 10.435a7.002 7.002 0 0 0 13.13 0L8 9.826z" />
@@ -35,7 +35,7 @@ export const GermanyFlag = ({ size = 'medium', disabled, ...props }: Omit<IconPr
     )
   }
   return (
-    <Icon {...props} title="GermanyFlag">
+    <Icon {...props} size={size} title="GermanyFlag">
       {disabled ? (
         <>
           <path fill="#d5d5d5" d="M3.091 15.304a9.503 9.503 0 0 0 17.818 0L12 14.478z" />

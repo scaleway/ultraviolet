@@ -112,9 +112,9 @@ const templateFlag = (
   }: Omit<IconProps, 'children' | 'title'>) => {
   
   if (['small', 'xsmall'].includes(size)) {
-    return <Icon {...props} title="${iconName}">{disabled ? ${wrapSvg(svgDisabledSmall ?? svg)} : ${wrapSvg(svgSmall ?? svg)}}</Icon>
+    return <Icon {...props} size={size} title="${iconName}">{disabled ? ${wrapSvg(svgDisabledSmall ?? svg)} : ${wrapSvg(svgSmall ?? svg)}}</Icon>
 }
-    return <Icon {...props} title="${iconName}">{disabled ? ${wrapSvg(svgDisabled ?? svg)} : ${wrapSvg(svg)}}</Icon>
+    return <Icon {...props} size={size} title="${iconName}">{disabled ? ${wrapSvg(svgDisabled ?? svg)} : ${wrapSvg(svg)}}</Icon>
    }
 
   ${iconName}.displayName = '${iconName}'
