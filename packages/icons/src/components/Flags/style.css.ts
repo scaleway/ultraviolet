@@ -7,9 +7,10 @@ export const flag = styleVariants(
     Object.keys(SIZES).map(size => [
       size,
       {
-        height: theme.sizing[SIZES[size as keyof typeof SIZES]],
-        minWidth: theme.sizing[SIZES[size as keyof typeof SIZES]],
-        width: theme.sizing[SIZES[size as keyof typeof SIZES]],
+        height: theme.sizing[SIZES[size as keyof typeof SIZES].size],
+        minWidth: theme.sizing[SIZES[size as keyof typeof SIZES].size],
+        width: theme.sizing[SIZES[size as keyof typeof SIZES].size],
+        padding: SIZES[size as keyof typeof SIZES].padding,
       },
     ]),
   ),

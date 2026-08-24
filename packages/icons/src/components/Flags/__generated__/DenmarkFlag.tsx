@@ -8,51 +8,26 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const DenmarkFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
-  if (['small', 'xsmall'].includes(size)) {
-    return (
-      <Icon {...props} size={size} title="DenmarkFlag">
-        {disabled ? (
-          <>
-            <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
-            <path
-              fill="#454545"
-              d="M6.419 7.087h8.462a7 7 0 0 0-8.462-5.92zm-1.826 0V1.851A7 7 0 0 0 1 7.087zm0 1.826H1a7 7 0 0 0 3.593 5.236zm1.826 0v5.92Q7.155 15 7.94 15a7 7 0 0 0 6.94-6.087z"
-            />
-          </>
-        ) : (
-          <>
-            <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
-            <path
-              fill="#d80027"
-              d="M6.478 7.087h8.463a7 7 0 0 0-8.463-5.92zm-1.826 0V1.85A7 7 0 0 0 1.06 7.087zm0 1.826H1.06a7 7 0 0 0 3.593 5.236zm1.826 0v5.92a7 7 0 0 0 8.462-5.92z"
-            />
-          </>
-        )}
-      </Icon>
-    )
-  }
-  return (
-    <Icon {...props} size={size} title="DenmarkFlag">
-      {disabled ? (
-        <>
-          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
-          <path
-            fill="#454545"
-            d="M9.854 10.76H21.34c-.607-4.66-4.593-8.26-9.42-8.26-.709 0-1.4.078-2.065.226zm-2.478 0V3.656A9.5 9.5 0 0 0 2.5 10.761zm0 2.48H2.5a9.5 9.5 0 0 0 4.876 7.105zm2.478 0v8.034a9.5 9.5 0 0 0 2.066.226c4.826 0 8.812-3.6 9.419-8.26z"
-          />
-        </>
-      ) : (
-        <>
-          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
-          <path
-            fill="#d80027"
-            d="M9.935 10.76h11.484C20.812 6.1 16.826 2.5 12 2.5c-.709 0-1.4.078-2.064.226zm-2.479 0V3.656a9.5 9.5 0 0 0-4.876 7.106zm0 2.48H2.58a9.5 9.5 0 0 0 4.876 7.105zm2.479 0v8.034A9.5 9.5 0 0 0 12 21.5c4.826 0 8.812-3.6 9.42-8.26z"
-          />
-        </>
-      )}
-    </Icon>
-  )
-}
+export const DenmarkFlag = ({ disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => (
+  <Icon {...props} title="DenmarkFlag">
+    {disabled ? (
+      <>
+        <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        <path
+          fill="#454545"
+          d="M6.419 7.087h8.462a7 7 0 0 0-8.462-5.92zm-1.826 0V1.851A7 7 0 0 0 1 7.087zm0 1.826H1a7 7 0 0 0 3.593 5.236zm1.826 0v5.92Q7.155 15 7.94 15a7 7 0 0 0 6.94-6.087z"
+        />
+      </>
+    ) : (
+      <>
+        <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        <path
+          fill="#d80027"
+          d="M6.478 7.087h8.463a7 7 0 0 0-8.463-5.92zm-1.826 0V1.85A7 7 0 0 0 1.06 7.087zm0 1.826H1.06a7 7 0 0 0 3.593 5.236zm1.826 0v5.92a7 7 0 0 0 8.462-5.92z"
+        />
+      </>
+    )}
+  </Icon>
+)
 
 DenmarkFlag.displayName = 'DenmarkFlag'

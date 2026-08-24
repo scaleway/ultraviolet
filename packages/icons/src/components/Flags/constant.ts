@@ -1,8 +1,8 @@
 export const SIZES = {
-  large: '300',
-  medium: '250',
-  small: '200',
-  xlarge: '400',
-  xsmall: '150',
-  xxlarge: '700',
+  large: { padding: '1px', size: '300' },
+  medium: { padding: '1px', size: '250' },
+  small: { padding: '0px', size: '200' },
+  xlarge: { padding: '1.25px', size: '400' },
+  xsmall: { padding: '0px', size: '150' },
+  xxlarge: { padding: '1.25px', size: '700' },
 } as const

@@ -8,43 +8,22 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const IrelandFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
-  if (['small', 'xsmall'].includes(size)) {
-    return (
-      <Icon {...props} size={size} title="IrelandFlag">
-        {disabled ? (
-          <>
-            <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
-            <path fill="#a8a8a8" d="M15 8c0-3.01-1.9-5.575-4.565-6.564v13.129A7 7 0 0 0 15 8" />
-            <path fill="#8a8a8a" d="M1 8c0 3.01 1.9 5.576 4.565 6.565V1.435A7 7 0 0 0 1 8" />
-          </>
-        ) : (
-          <>
-            <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
-            <path fill="#ff9811" d="M15 8c0-3.01-1.9-5.575-4.565-6.564v13.129A7 7 0 0 0 15 8" />
-            <path fill="#6da544" d="M1 8c0 3.01 1.9 5.576 4.565 6.565V1.435A7 7 0 0 0 1 8" />
-          </>
-        )}
-      </Icon>
-    )
-  }
-  return (
-    <Icon {...props} size={size} title="IrelandFlag">
-      {disabled ? (
-        <>
-          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
-          <path fill="#a8a8a8" d="M21.5 12a9.5 9.5 0 0 0-6.196-8.909V20.91A9.5 9.5 0 0 0 21.5 12" />
-          <path fill="#8a8a8a" d="M2.5 12a9.5 9.5 0 0 0 6.196 8.91V3.09A9.5 9.5 0 0 0 2.5 12" />
-        </>
-      ) : (
-        <>
-          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
-          <path fill="#ff9811" d="M21.5 12a9.5 9.5 0 0 0-6.196-8.909V20.91A9.5 9.5 0 0 0 21.5 12" />
-          <path fill="#6da544" d="M2.5 12a9.5 9.5 0 0 0 6.196 8.91V3.09A9.5 9.5 0 0 0 2.5 12" />
-        </>
-      )}
-    </Icon>
-  )
-}
+export const IrelandFlag = ({ disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => (
+  <Icon {...props} title="IrelandFlag">
+    {disabled ? (
+      <>
+        <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        <path fill="#a8a8a8" d="M15 8c0-3.01-1.9-5.575-4.565-6.564v13.129A7 7 0 0 0 15 8" />
+        <path fill="#8a8a8a" d="M1 8c0 3.01 1.9 5.576 4.565 6.565V1.435A7 7 0 0 0 1 8" />
+      </>
+    ) : (
+      <>
+        <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        <path fill="#ff9811" d="M15 8c0-3.01-1.9-5.575-4.565-6.564v13.129A7 7 0 0 0 15 8" />
+        <path fill="#6da544" d="M1 8c0 3.01 1.9 5.576 4.565 6.565V1.435A7 7 0 0 0 1 8" />
+      </>
+    )}
+  </Icon>
+)
 
 IrelandFlag.displayName = 'IrelandFlag'

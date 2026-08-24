@@ -84,13 +84,7 @@ const templateIcon = (iconName: string, svg: string, svgSmall?: string, svgDisab
 `
 }
 
-const templateFlag = (
-  iconName: string,
-  svg: string,
-  svgSmall?: string,
-  svgDisabled?: string,
-  svgDisabledSmall?: string,
-) => {
+const templateFlag = (iconName: string, svg: string, svgDisabled?: string) => {
   const deprecated = DEPRECATED_ICONS.find(icon => icon.name === iconName)
 
   return `${COMMENT_HEADER}
@@ -106,16 +100,9 @@ const templateFlag = (
       : ''
   }
  export const ${iconName} = ({
-    size = "medium",
     disabled,
     ...props
-  }: Omit<IconProps, 'children' | 'title'>) => {
-  
-  if (['small', 'xsmall'].includes(size)) {
-    return <Icon {...props} size={size} title="${iconName}">{disabled ? ${wrapSvg(svgDisabledSmall ?? svg)} : ${wrapSvg(svgSmall ?? svg)}}</Icon>
-}
-    return <Icon {...props} size={size} title="${iconName}">{disabled ? ${wrapSvg(svgDisabled ?? svg)} : ${wrapSvg(svg)}}</Icon>
-   }
+  }: Omit<IconProps, 'children' | 'title'>) =><Icon {...props} title="${iconName}">{disabled ? ${wrapSvg(svgDisabled ?? svg)} : ${wrapSvg(svg)}}</Icon>
 
   ${iconName}.displayName = '${iconName}'
 `
@@ -256,12 +243,6 @@ const getDarkFile = (file: string) => {
   return existsSync(darkFileName) ? darkFileName : file
 }
 
-const getDisabledSmallFile = (file: string) => {
-  const disabledSmallName = file.replace('default', 'small-disabled')
-
-  return existsSync(disabledSmallName) ? disabledSmallName : file
-}
-
 const generateContent = (
   type: string,
   generatedName: string,
@@ -272,7 +253,7 @@ const generateContent = (
   }
 
   if (type === 'Flags') {
-    return templateFlag(generatedName, svg.default, svg.small, svg.disabled, svg.smallDisabled)
+    return templateFlag(generatedName, svg.default, svg.disabled)
   }
 
   return templateIcon(generatedName, svg.default, svg.small, svg.disabled)
@@ -309,7 +290,6 @@ const resetIconsFolder = async (folderPath: string) => {
   }
 }
 
-// oxlint-disable-next-line max-statements
 const main = async () => {
   for (const component of COMPONENTS) {
     console.log(`Generating ${component.name}...`)
@@ -344,7 +324,6 @@ const main = async () => {
         const smallFile = getSmallFile(file)
         const disabledFile = getDisabledFile(file)
         const darkFile = getDarkFile(file)
-        const disabledSmallFile = getDisabledSmallFile(file)
 
         const svgContentSmall = smallFile === file ? undefined : await readSvg(smallFile, component.suffix)
 
@@ -356,17 +335,11 @@ const main = async () => {
         const svgContentDark =
           component.name === 'Logo' && darkFile !== file ? await readSvg(darkFile, component.suffix) : undefined
 
-        const svgContentSmallDisabled =
-          component.name === 'Flags' && disabledSmallFile !== file
-            ? await readSvg(disabledSmallFile, component.suffix)
-            : undefined
-
         const generatedComponent = generateContent(component.name, generatedName, {
           default: svgContent,
           small: svgContentSmall,
           disabled: svgContentDisabled,
           dark: svgContentDark,
-          smallDisabled: svgContentSmallDisabled,
         })
 
         const filePath = `${component.output}/${generatedName}.tsx`

@@ -8,43 +8,22 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const CzechRepublicFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
-  if (['small', 'xsmall'].includes(size)) {
-    return (
-      <Icon {...props} size={size} title="CzechRepublicFlag">
-        {disabled ? (
-          <>
-            <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
-            <path fill="#454545" d="M7.391 8s-4.337 4.95-4.34 4.95A7 7 0 0 0 15 8z" />
-            <path fill="#444" d="M3.05 3.05a7 7 0 0 0 0 9.9L8 8z" />
-          </>
-        ) : (
-          <>
-            <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
-            <path fill="#d80027" d="M7.391 8s-4.337 4.95-4.34 4.95A7 7 0 0 0 15 8z" />
-            <path fill="#0052b4" d="M3.05 3.05a7 7 0 0 0 0 9.9L8 8z" />
-          </>
-        )}
-      </Icon>
-    )
-  }
-  return (
-    <Icon {...props} size={size} title="CzechRepublicFlag">
-      {disabled ? (
-        <>
-          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
-          <path fill="#454545" d="M11.174 12s-5.886 6.719-5.892 6.718A9.5 9.5 0 0 0 21.5 12z" />
-          <path fill="#444" d="M5.282 5.282a9.5 9.5 0 0 0 0 13.436L12 12z" />
-        </>
-      ) : (
-        <>
-          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
-          <path fill="#d80027" d="M11.174 12s-5.886 6.719-5.892 6.718A9.5 9.5 0 0 0 21.5 12z" />
-          <path fill="#0052b4" d="M5.282 5.282a9.5 9.5 0 0 0 0 13.436L12 12z" />
-        </>
-      )}
-    </Icon>
-  )
-}
+export const CzechRepublicFlag = ({ disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => (
+  <Icon {...props} title="CzechRepublicFlag">
+    {disabled ? (
+      <>
+        <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        <path fill="#454545" d="M7.391 8s-4.337 4.95-4.34 4.95A7 7 0 0 0 15 8z" />
+        <path fill="#444" d="M3.05 3.05a7 7 0 0 0 0 9.9L8 8z" />
+      </>
+    ) : (
+      <>
+        <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        <path fill="#d80027" d="M7.391 8s-4.337 4.95-4.34 4.95A7 7 0 0 0 15 8z" />
+        <path fill="#0052b4" d="M3.05 3.05a7 7 0 0 0 0 9.9L8 8z" />
+      </>
+    )}
+  </Icon>
+)
 
 CzechRepublicFlag.displayName = 'CzechRepublicFlag'

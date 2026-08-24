@@ -8,39 +8,20 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const PolandFlag = ({ size = 'medium', disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => {
-  if (['small', 'xsmall'].includes(size)) {
-    return (
-      <Icon {...props} size={size} title="PolandFlag">
-        {disabled ? (
-          <>
-            <path fill="#f0f0f0" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
-            <path fill="#454545" d="M14.5 7.5a7 7 0 0 1-14 0" />
-          </>
-        ) : (
-          <>
-            <path fill="#f0f0f0" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
-            <path fill="#d80027" d="M14.5 7.5a7 7 0 0 1-14 0" />
-          </>
-        )}
-      </Icon>
-    )
-  }
-  return (
-    <Icon {...props} size={size} title="PolandFlag">
-      {disabled ? (
-        <>
-          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
-          <path fill="#454545" d="M21.5 12a9.5 9.5 0 0 1-19 0" />
-        </>
-      ) : (
-        <>
-          <path fill="#f0f0f0" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19" />
-          <path fill="#d80027" d="M21.5 12a9.5 9.5 0 0 1-19 0" />
-        </>
-      )}
-    </Icon>
-  )
-}
+export const PolandFlag = ({ disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => (
+  <Icon {...props} title="PolandFlag">
+    {disabled ? (
+      <>
+        <path fill="#f0f0f0" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
+        <path fill="#454545" d="M14.5 7.5a7 7 0 0 1-14 0" />
+      </>
+    ) : (
+      <>
+        <path fill="#f0f0f0" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
+        <path fill="#d80027" d="M14.5 7.5a7 7 0 0 1-14 0" />
+      </>
+    )}
+  </Icon>
+)
 
 PolandFlag.displayName = 'PolandFlag'
