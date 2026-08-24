@@ -6,8 +6,7 @@ import { useCallback, useMemo } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Ellipsis } from './Ellipsis'
-import { getPageNumbers } from './getPageNumbers'
-import { MakeButton } from './PaginationButton'
+import { getPageItems } from './getPageItems'
 import { paginationStyle } from './styles.css'
 
 type PaginationButtonsProps = {
@@ -20,6 +19,7 @@ type PaginationButtonsProps = {
   'data-testid'?: string
   hideFirstPage?: boolean
   hideLastPage?: boolean
+  isSmall: boolean
   size: 'small' | 'medium'
 }
 
@@ -33,6 +33,7 @@ export const PaginationButtons = ({
   className,
   hideFirstPage,
   hideLastPage,
+  isSmall,
   size,
 }: PaginationButtonsProps) => {
   const goToNextPage = useCallback(() => {
@@ -43,10 +44,10 @@ export const PaginationButtons = ({
     onChange(page - 1)
   }, [onChange, page])
 
-  const pageNumbersToDisplay = useMemo(
-    () => (pageCount > 1 ? getPageNumbers(page, pageCount, pageTabCount, hideFirstPage, hideLastPage) : [1]),
-    [page, pageCount, pageTabCount, hideFirstPage, hideLastPage],
-  )
+  const pageItems = useMemo(() => {
+    const buttonsInCenter = isSmall ? 1 : 3
+    return getPageItems(page, pageCount, pageTabCount, buttonsInCenter, hideFirstPage, hideLastPage)
+  }, [isSmall, page, pageCount, pageTabCount, hideFirstPage, hideLastPage])
 
   const handlePageClick = useCallback(
     (pageNumber: number) => () => {
@@ -70,24 +71,24 @@ export const PaginationButtons = ({
         </Button>
       </Stack>
       <Stack className={paginationStyle.pageNumbersContainer} direction="row" gap={1}>
-        {pageNumbersToDisplay.map((pageNumber, index) => (
-          <MakeButton
-            disabled={disabled}
-            handlePageClick={handlePageClick}
-            hasEllipsisBefore={
-              !(index === 0 || pageNumbersToDisplay[index - 1] === pageNumber - 1) || (index === 0 && pageNumber !== 1)
-            }
-            hideFirstPage={hideFirstPage}
-            hideLastPage={hideLastPage}
-            key={pageNumber}
-            page={page}
-            pageCount={pageCount}
-            pageNumber={pageNumber}
-            size={size}
-          />
-        ))}
-        {pageNumbersToDisplay.at(-1) === pageCount ? null : (
-          <Ellipsis className={paginationStyle.hiddenOnSmall[size]} disabled={disabled} size={size} />
+        {pageItems.map((item, index) =>
+          item.type === 'ellipsis' ? (
+            <Ellipsis disabled={disabled} key={`ellipsis-${index}`} size={size} />
+          ) : (
+            <Button
+              aria-current={item.page === page}
+              className={paginationStyle.pageButton[size]}
+              disabled={disabled}
+              key={item.page}
+              onClick={handlePageClick(item.page)}
+              sentiment={item.page === page ? 'primary' : 'neutral'}
+              size={size}
+              type="button"
+              variant={item.page === page ? 'filled' : 'outlined'}
+            >
+              {item.page}
+            </Button>
+          ),
         )}
       </Stack>
       <Stack gap={1}>
