@@ -49,7 +49,6 @@
     {
       "extends": ["packages:jsUnitTest"],
       "matchPackageNames": ["happy-dom", "jsdom"],
-      "matchDepTypes": ["devDependencies", "dependencies"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "non-major tests dependencies",
       "groupSlug": "non-major-tests-deps",
