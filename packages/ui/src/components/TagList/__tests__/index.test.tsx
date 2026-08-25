@@ -81,7 +81,7 @@ describe('tagList', () => {
 
     const { asFragment } = renderWithTheme(<TagList data-testid="taglist" popoverTitle="Additional" tags={tags} />)
 
-    expect(screen.getByText('+1')).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: '+1' })).toBeInTheDocument()
     expect(screen.getByTestId('scaleway')).toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
@@ -171,7 +171,7 @@ describe('tagList', () => {
 
     expect(screen.getByTestId('scaleway')).toBeInTheDocument()
     expect(screen.queryByText('cloud')).not.toBeInTheDocument()
-    expect(screen.getByText('+2')).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: '+2' })).toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -201,7 +201,7 @@ describe('tagList', () => {
 
     expect(screen.getByTestId('database')).toBeInTheDocument()
     expect(screen.queryByText('private-network')).not.toBeInTheDocument()
-    expect(screen.getByText('+2')).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: '+2' })).toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
   })
