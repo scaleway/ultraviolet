@@ -91,14 +91,7 @@ export const Alert = ({
             sentiment={sentiment}
             size={size === 'small' ? 'small' : 'medium'}
           />
-          <Stack
-            alignItems="center"
-            className={alertStyle.text}
-            direction="row"
-            flex="1 1 auto"
-            gap={size === 'small' ? 0.5 : 1}
-            wrap
-          >
+          <Stack className={alertStyle.text} direction="row" flex="1 1 auto" gap={size === 'small' ? 0.5 : 1} wrap>
             {title ? (
               <Text as="span" sentiment={sentiment} variant={size === 'small' ? 'bodySmallStronger' : 'bodyStronger'}>
                 {title}
