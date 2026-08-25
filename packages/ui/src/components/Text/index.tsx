@@ -3,7 +3,6 @@
 import type { TextVariant } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { useRef } from 'react'
 import type { CSSProperties, AriaRole, ElementType, ReactNode } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { useIsOverflowing } from '../../hooks/useIsOverflowing'
@@ -65,13 +64,12 @@ export const Text = ({
   'aria-hidden': ariaHidden,
   style,
 }: TextProps) => {
-  const elementRef = useRef(null)
-  const isOverflowing = useIsOverflowing(elementRef)
+  const [setElement, isOverflowing] = useIsOverflowing({ enabled: oneLine === true })
 
   const finalStringChildren = recursivelyGetChildrenString(children)
 
   return (
-    <Tooltip text={oneLine && isOverflowing ? finalStringChildren : ''}>
+    <Tooltip text={isOverflowing ? finalStringChildren : ''}>
       <Component
         role={role}
         aria-hidden={ariaHidden}
@@ -93,7 +91,7 @@ export const Text = ({
         dir={dir}
         htmlFor={htmlFor}
         id={id}
-        ref={elementRef}
+        ref={setElement}
         style={{
           ...assignInlineVars(textVars, {
             textAlign: placement ?? '',

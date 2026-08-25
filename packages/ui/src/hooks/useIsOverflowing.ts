@@ -1,43 +1,38 @@
 import { useEffect, useState } from 'react'
-import type { RefObject } from 'react'
+
+type UseIsOverflowingOptions = {
+  callback?: (hasOverflow: boolean) => void
+  enabled?: boolean
+}
 
 /**
- * This hook checks if the element has overflow based on the offsetWidth and scrollWidth of the element.
+ * Check if the element has overflow based on the clientWidth and scrollWidth of the element.
  */
-export const useIsOverflowing = (
-  ref: RefObject<HTMLElement | HTMLDivElement | undefined | null>,
-  callback?: (hasOverflow: boolean) => void,
-) => {
+export const useIsOverflowing = ({ callback, enabled = true }: UseIsOverflowingOptions = {}) => {
+  const [element, setElement] = useState<HTMLElement | null>(null)
   const [isOverflowing, setIsOverflowing] = useState(false)
 
   useEffect(() => {
+    if (!enabled || !element || typeof ResizeObserver === 'undefined') {
+      return
+    }
+
     const handleResize = () => {
-      if (!ref.current) {
-        return
-      }
+      const hasOverflow = element.scrollWidth > element.clientWidth
 
-      const element = ref.current
-
-      const hasOverflow = element.clientWidth < element.scrollWidth
       setIsOverflowing(hasOverflow)
       if (callback) {
         callback(hasOverflow)
       }
     }
 
-    // This will add the function into the browser event queue after the DOM is painted
-    // which is needed to get the correct offsetWidth and scrollWidth
-    const timeout = setTimeout(() => handleResize(), 0)
+    const resizeObserver = new ResizeObserver(handleResize)
+    resizeObserver.observe(element)
 
-    // Listen for resize events
-    window.addEventListener('resize', handleResize)
-
-    // Cleanup the event listener
     return () => {
-      window.removeEventListener('resize', handleResize)
-      clearTimeout(timeout)
+      resizeObserver.disconnect()
     }
-  }, [ref, callback])
+  }, [element, callback, enabled])
 
-  return isOverflowing
+  return [setElement, isOverflowing] as const
 }
