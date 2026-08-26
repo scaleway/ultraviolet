@@ -1,0 +1,317 @@
+import { screen, waitFor } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { useState } from 'react'
+import { describe, expect, it } from 'vitest'
+import { SearchInput } from '..'
+import { Button } from '../../../action/Button'
+
+describe('searchInput', () => {
+  it('renders correctly without children props', () =>
+    shouldMatchSnapshot(
+      <SearchInput onClose={() => {}} onSearch={() => {}} placeholder="Type something" popupPlacement="bottom">
+        <div />
+      </SearchInput>,
+    ))
+
+  it('renders with disabled prop', () =>
+    shouldMatchSnapshot(
+      <SearchInput disabled onClose={() => {}} onSearch={() => {}} placeholder="Type something" popupPlacement="bottom">
+        <div />
+      </SearchInput>,
+    ))
+
+  describe('renders with shortcut prop', () => {
+    it('as boolean', () =>
+      shouldMatchSnapshot(
+        <SearchInput
+          onClose={() => {}}
+          onSearch={() => {}}
+          placeholder="Type something"
+          popupPlacement="bottom"
+          shortcut
+        >
+          <div />
+        </SearchInput>,
+      ))
+    it('as array of string', () =>
+      shouldMatchSnapshot(
+        <SearchInput
+          onClose={() => {}}
+          onSearch={() => {}}
+          placeholder="Type something"
+          popupPlacement="bottom"
+          shortcut={['Control', 'Shift', 'A']}
+        >
+          <div />
+        </SearchInput>,
+      ))
+  })
+
+  it('renders with error prop', () =>
+    shouldMatchSnapshot(
+      <SearchInput
+        error="there is an error"
+        onClose={() => {}}
+        onSearch={() => {}}
+        placeholder="Type something"
+        popupPlacement="bottom"
+      >
+        <div />
+      </SearchInput>,
+    ))
+
+  it('renders correctly with children props and triggers onSearch then clear the search', async () => {
+    let searchValue = ''
+
+    renderWithTheme(
+      <SearchInput
+        data-testid="search-bar"
+        label="input-label"
+        onSearch={value => {
+          searchValue = value
+        }}
+        placeholder="Type something"
+        popupPlacement="bottom"
+        size="medium"
+        threshold={2}
+      >
+        {({ searchTerms }) => <div>{searchTerms}</div>}
+      </SearchInput>,
+    )
+
+    const SearchInputElement = screen.getByTestId('search-bar')
+    await userEvent.type(SearchInputElement, 'scw')
+    await waitFor(() => expect(searchValue).toBe('scw'))
+
+    // The tab will focus the cross
+    await userEvent.keyboard('{Tab}')
+    await userEvent.keyboard('{Enter}')
+    await waitFor(() => expect(searchValue).toBe(''))
+  })
+
+  it('renders correctly and verify accessibility', async () => {
+    let searchValue = ''
+
+    renderWithTheme(
+      <SearchInput
+        data-testid="search-bar"
+        label="input-label"
+        onSearch={value => {
+          searchValue = value
+        }}
+        placeholder="Type something"
+        popupPlacement="bottom"
+        size="large"
+      >
+        <div>
+          <a data-testid="children-1" href="/">
+            Result 1
+          </a>
+          <a data-testid="children-2" href="/">
+            Result 2
+          </a>
+        </div>
+      </SearchInput>,
+    )
+
+    const SearchInputElement = screen.getByTestId('search-bar')
+    await userEvent.type(SearchInputElement, 'scw')
+    await waitFor(() => expect(searchValue).toBe('scw'))
+
+    const popupSearchInput = screen.getByTestId('popup-search-bar')
+    const childrenOne = screen.getByTestId('children-1')
+    const childrenTwo = screen.getByTestId('children-2')
+
+    expect(popupSearchInput).toBeVisible()
+
+    // The first tab will focus the cross
+    await userEvent.keyboard('{Tab}')
+    await userEvent.keyboard('{Tab}')
+    await waitFor(() => {
+      expect(childrenOne).toHaveFocus()
+    })
+
+    await userEvent.keyboard('{ArrowDown}')
+    await waitFor(() => {
+      expect(childrenOne).not.toHaveFocus()
+    })
+    expect(childrenTwo).toHaveFocus()
+
+    await userEvent.keyboard('{ArrowUp}')
+    await waitFor(() => {
+      expect(childrenTwo).not.toHaveFocus()
+    })
+    expect(childrenOne).toHaveFocus()
+
+    await userEvent.keyboard('{ArrowUp}')
+    await waitFor(() => {
+      expect(childrenOne).not.toHaveFocus()
+    })
+    expect(childrenTwo).toHaveFocus()
+
+    await userEvent.keyboard('{Escape}')
+    await waitFor(() => {
+      expect(popupSearchInput).not.toBeVisible()
+    })
+  })
+
+  it('check if shortcut as boolean works', async () => {
+    renderWithTheme(
+      <SearchInput
+        data-testid="search-bar"
+        label="input-label"
+        onSearch={() => {}}
+        placeholder="Type something"
+        popupPlacement="bottom"
+        shortcut
+        size="large"
+      >
+        <div>
+          <a data-testid="children-1" href="/">
+            Result 1
+          </a>
+          <a data-testid="children-2" href="/">
+            Result 2
+          </a>
+        </div>
+      </SearchInput>,
+    )
+    const SearchInputElement = screen.getByTestId('search-bar')
+
+    await userEvent.keyboard('{Control>}k')
+    await userEvent.keyboard('{Meta>}k')
+    expect(SearchInputElement).toHaveFocus()
+  })
+
+  it('check if custom shortcut works', async () => {
+    renderWithTheme(
+      <SearchInput
+        data-testid="search-bar"
+        label="input-label"
+        onSearch={() => {}}
+        placeholder="Type something"
+        popupPlacement="bottom"
+        shortcut={['Control', 'Shift', 'A']}
+        size="large"
+      >
+        <div>
+          <a data-testid="children-1" href="/">
+            Result 1
+          </a>
+          <a data-testid="children-2" href="/">
+            Result 2
+          </a>
+        </div>
+      </SearchInput>,
+    )
+
+    const SearchInputElement = screen.getByTestId('search-bar')
+
+    await userEvent.keyboard('{Control>}{Shift>}a')
+    expect(SearchInputElement).toHaveFocus()
+  })
+
+  it('search icon is clickable', async () => {
+    renderWithTheme(
+      <SearchInput
+        data-testid="search-bar"
+        label="input-label"
+        onSearch={() => {}}
+        placeholder="Type something"
+        popupPlacement="bottom"
+        shortcut={['Control', 'Shift', 'A']}
+        size="large"
+      >
+        <div>
+          <a data-testid="children-1" href="/">
+            Result 1
+          </a>
+          <a data-testid="children-2" href="/">
+            Result 2
+          </a>
+        </div>
+      </SearchInput>,
+    )
+
+    const SearchInputElement = screen.getByTestId('search-bar')
+    const searchIcon = screen.getByTestId('search-icon-search-bar')
+    await userEvent.click(searchIcon)
+
+    await waitFor(() => {
+      expect(SearchInputElement).toHaveFocus()
+    })
+  })
+
+  it('search shotcut are clickable', async () => {
+    renderWithTheme(
+      <SearchInput
+        data-testid="search-bar"
+        label="input-label"
+        onSearch={() => {}}
+        placeholder="Type something"
+        popupPlacement="bottom"
+        shortcut={['Control']}
+        size="large"
+      >
+        <div>
+          <a data-testid="children-1" href="/">
+            Result 1
+          </a>
+          <a data-testid="children-2" href="/">
+            Result 2
+          </a>
+        </div>
+      </SearchInput>,
+    )
+
+    const SearchInputElement = screen.getByTestId('search-bar')
+    const shortcutKey = screen.getByTestId('key-Ctrl')
+    await userEvent.click(shortcutKey)
+
+    await waitFor(() => {
+      expect(SearchInputElement).toHaveFocus()
+    })
+  })
+
+  it('resets to empty string when value is manually reset', async () => {
+    const TestComponent = () => {
+      const [value, setValue] = useState<string | undefined>('initial value')
+
+      return (
+        <>
+          <Button data-testid="reset-button" onClick={() => setValue(undefined)}>
+            Reset
+          </Button>
+          <SearchInput
+            data-testid="search-bar"
+            label="input-label"
+            onSearch={() => {}}
+            placeholder="Type something"
+            popupPlacement="bottom"
+            size="large"
+            value={value}
+          >
+            <div />
+          </SearchInput>
+        </>
+      )
+    }
+
+    renderWithTheme(<TestComponent />)
+
+    const SearchInputElement = screen.getByTestId('search-bar')
+    const resetButton = screen.getByTestId('reset-button')
+
+    // Initially should have the initial value
+    expect(SearchInputElement).toHaveValue('initial value')
+
+    // Click reset button to clear the value
+    await userEvent.click(resetButton)
+
+    // Should have an empty string value after reset
+    await waitFor(() => {
+      expect(SearchInputElement).toHaveValue('')
+    })
+  })
+})

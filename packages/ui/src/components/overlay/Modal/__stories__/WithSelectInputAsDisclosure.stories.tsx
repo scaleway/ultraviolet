@@ -1,0 +1,48 @@
+import type { StoryFn } from '@storybook/react-vite'
+import { Modal } from '..'
+import { Button } from '../../../action/Button'
+import { SelectInput } from '../../../data-entry/SelectInput'
+
+const OPTIONS = [
+  {
+    label: 'Option 1',
+    value: 'option-1',
+  },
+  {
+    label: 'Option 2',
+    value: 'option-2',
+  },
+  {
+    label: 'Option 3',
+    value: 'option-3',
+  },
+]
+
+export const WithSelectInputAsDisclosure: StoryFn = props => (
+  <SelectInput
+    footer={
+      <Modal disclosure={<Button>Open Modal with SelectInput</Button>} {...props}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>Test</div>
+      </Modal>
+    }
+    label="Choose an option"
+    name="example"
+    options={OPTIONS}
+  />
+)
+WithSelectInputAsDisclosure.parameters = {
+  docs: {
+    description: {
+      story:
+        'Having a select input inside a modal is a common use case and shows you how to modal and select input can work together.',
+    },
+  },
+}
+
+WithSelectInputAsDisclosure.decorators = [
+  Story => (
+    <div style={{ height: '350px' }}>
+      <Story />
+    </div>
+  ),
+]

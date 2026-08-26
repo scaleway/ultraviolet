@@ -1,4 +1,4 @@
-import { Badge } from '../../../../components/Badge'
+import { Badge } from '../../../../components/badges/Badge'
 import type { ItemExpandedType } from '../ComponentsTypes'
 import { navigationStyle } from '../../styles.css'
 

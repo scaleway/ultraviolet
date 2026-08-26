@@ -1,4 +1,4 @@
-import { NumberInput } from '../../../components/NumberInput'
+import { NumberInput } from '../../../components/data-entry/NumberInput'
 import type { FilterComponentProps, FilterConfigItemNumber } from '../types'
 
 type FilterNumberProps = FilterComponentProps<number | null, FilterConfigItemNumber>

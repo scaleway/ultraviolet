@@ -1,7 +1,7 @@
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Children } from 'react'
 import type { ReactNode } from 'react'
-import { Text } from '../../components/Text'
+import { Text } from '../../components/typography/Text'
 import { useOverlay } from './OverlayContext'
 import { maxWidthTextVar } from './Components/components.css'
 import { estimateCostStyle } from './styles.css'

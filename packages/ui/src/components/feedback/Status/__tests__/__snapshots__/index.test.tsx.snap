@@ -1,0 +1,116 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`status > render animated 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__e5tb1kc"
+    >
+      <span
+        class="styles__e5tb1k6 styles_sentiment_success__e5tb1ka"
+      />
+      <span
+        class="styles__e5tb1k0 styles_sentiment_success__e5tb1k4"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`status > render with className 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="test styles__e5tb1kc"
+    >
+      <span
+        class="styles__e5tb1k0 styles_sentiment_success__e5tb1k4"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`status > renders correctly with type="danger" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__e5tb1kc"
+    >
+      <span
+        class="styles__e5tb1k0 styles_sentiment_danger__e5tb1k1"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`status > renders correctly with type="info" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__e5tb1kc"
+    >
+      <span
+        class="styles__e5tb1k0 styles_sentiment_info__e5tb1k2"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`status > renders correctly with type="neutral" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__e5tb1kc"
+    >
+      <span
+        class="styles__e5tb1k0 styles_sentiment_neutral__e5tb1k3"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`status > renders correctly with type="success" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__e5tb1kc"
+    >
+      <span
+        class="styles__e5tb1k0 styles_sentiment_success__e5tb1k4"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`status > renders correctly with type="warning" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__e5tb1kc"
+    >
+      <span
+        class="styles__e5tb1k0 styles_sentiment_warning__e5tb1k5"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;

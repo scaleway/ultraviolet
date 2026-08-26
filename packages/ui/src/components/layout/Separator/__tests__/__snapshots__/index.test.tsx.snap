@@ -1,0 +1,231 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`separator > renders correctly horizontally 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <hr
+      aria-orientation="horizontal"
+      class="styles__60da8lb styles_direction_horizontal__60da8lc styles_sentiment_neutral__60da8li"
+      style="--_60da8l0: 1px;"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`separator > renders correctly vertically 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <hr
+      aria-orientation="vertical"
+      class="styles__60da8lb styles_direction_vertical__60da8ld styles_sentiment_neutral__60da8li"
+      style="--_60da8l0: 1px;"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`separator > renders correctly with custom icon 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-orientation="horizontal"
+      class="styles__60da8l1 styles_direction_horizontal__60da8l2 styles_sentiment_neutral__60da8l6"
+      role="separator"
+    >
+      <hr
+        class="styles__60da8lb styles_direction_horizontal__60da8lc styles_hasIcon_true__60da8lf styles_sentiment_neutral__60da8li"
+        style="--_60da8l0: 1px;"
+      />
+      <svg
+        class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <title>
+          RayTopArrowIcon
+        </title>
+        <path
+          clip-rule="evenodd"
+          d="M8 2a.75.75 0 0 1 .75.75v8.69l1.22-1.22a.75.75 0 1 1 1.06 1.06l-2.5 2.5a.75.75 0 0 1-1.06 0l-2.5-2.5a.75.75 0 1 1 1.06-1.06l1.22 1.22V2.75A.75.75 0 0 1 8 2"
+        />
+        <path
+          d="M10 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+        />
+      </svg>
+      <hr
+        class="styles__60da8lb styles_direction_horizontal__60da8lc styles_hasIcon_true__60da8lf styles_sentiment_neutral__60da8li"
+        style="--_60da8l0: 1px;"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`separator > renders correctly with custom icon horizontally 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-orientation="horizontal"
+      class="styles__60da8l1 styles_direction_horizontal__60da8l2 styles_sentiment_neutral__60da8l6"
+      role="separator"
+    >
+      <hr
+        class="styles__60da8lb styles_direction_horizontal__60da8lc styles_hasIcon_true__60da8lf styles_sentiment_neutral__60da8li"
+        style="--_60da8l0: 1px;"
+      />
+      <svg
+        class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <title>
+          RayTopArrowIcon
+        </title>
+        <path
+          clip-rule="evenodd"
+          d="M8 2a.75.75 0 0 1 .75.75v8.69l1.22-1.22a.75.75 0 1 1 1.06 1.06l-2.5 2.5a.75.75 0 0 1-1.06 0l-2.5-2.5a.75.75 0 1 1 1.06-1.06l1.22 1.22V2.75A.75.75 0 0 1 8 2"
+        />
+        <path
+          d="M10 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+        />
+      </svg>
+      <hr
+        class="styles__60da8lb styles_direction_horizontal__60da8lc styles_hasIcon_true__60da8lf styles_sentiment_neutral__60da8li"
+        style="--_60da8l0: 1px;"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`separator > renders correctly with custom icon vertically 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-orientation="vertical"
+      class="styles__60da8l1 styles_direction_vertical__60da8l3 styles_sentiment_neutral__60da8l6"
+      role="separator"
+    >
+      <hr
+        class="styles__60da8lb styles_direction_vertical__60da8ld styles_hasIcon_true__60da8lf styles_sentiment_neutral__60da8li"
+        style="--_60da8l0: 1px;"
+      />
+      <svg
+        class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <title>
+          RayTopArrowIcon
+        </title>
+        <path
+          clip-rule="evenodd"
+          d="M8 2a.75.75 0 0 1 .75.75v8.69l1.22-1.22a.75.75 0 1 1 1.06 1.06l-2.5 2.5a.75.75 0 0 1-1.06 0l-2.5-2.5a.75.75 0 1 1 1.06-1.06l1.22 1.22V2.75A.75.75 0 0 1 8 2"
+        />
+        <path
+          d="M10 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+        />
+      </svg>
+      <hr
+        class="styles__60da8lb styles_direction_vertical__60da8ld styles_hasIcon_true__60da8lf styles_sentiment_neutral__60da8li"
+        style="--_60da8l0: 1px;"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`separator > renders correctly with custom sentiment 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <hr
+      aria-orientation="horizontal"
+      class="styles__60da8lb styles_direction_horizontal__60da8lc styles_sentiment_primary__60da8lj"
+      style="--_60da8l0: 1px;"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`separator > renders correctly with custom sentiment and icon 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-orientation="horizontal"
+      class="styles__60da8l1 styles_direction_horizontal__60da8l2 styles_sentiment_primary__60da8l7"
+      role="separator"
+    >
+      <hr
+        class="styles__60da8lb styles_direction_horizontal__60da8lc styles_hasIcon_true__60da8lf styles_sentiment_primary__60da8lj"
+        style="--_60da8l0: 1px;"
+      />
+      <svg
+        class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <title>
+          RayTopArrowIcon
+        </title>
+        <path
+          clip-rule="evenodd"
+          d="M8 2a.75.75 0 0 1 .75.75v8.69l1.22-1.22a.75.75 0 1 1 1.06 1.06l-2.5 2.5a.75.75 0 0 1-1.06 0l-2.5-2.5a.75.75 0 1 1 1.06-1.06l1.22 1.22V2.75A.75.75 0 0 1 8 2"
+        />
+        <path
+          d="M10 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+        />
+      </svg>
+      <hr
+        class="styles__60da8lb styles_direction_horizontal__60da8lc styles_hasIcon_true__60da8lf styles_sentiment_primary__60da8lj"
+        style="--_60da8l0: 1px;"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`separator > renders correctly with custom thickness 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <hr
+      aria-orientation="horizontal"
+      class="styles__60da8lb styles_direction_horizontal__60da8lc styles_sentiment_neutral__60da8li"
+      style="--_60da8l0: 3px;"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`separator > renders correctly with default props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <hr
+      aria-orientation="horizontal"
+      class="styles__60da8lb styles_direction_horizontal__60da8lc styles_sentiment_neutral__60da8li"
+      style="--_60da8l0: 1px;"
+    />
+  </div>
+</DocumentFragment>
+`;

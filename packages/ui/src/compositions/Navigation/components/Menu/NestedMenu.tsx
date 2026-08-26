@@ -1,4 +1,4 @@
-import { Menu } from '../../../../components/Menu'
+import { Menu } from '../../../../components/overlay/Menu'
 import type { ItemMenuItemType, ItemMenuType } from '../ComponentsTypes'
 import { ItemProvider } from '../Item/ItemProvider'
 import { ItemMenuItem } from './MenuItem'

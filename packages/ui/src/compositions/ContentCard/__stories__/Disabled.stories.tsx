@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { CockpitProductIcon } from '@ultraviolet/icons/product/CockpitProductIcon'
-import { Row } from '../../../components/Row'
-import { Stack } from '../../../components/Stack'
-import { Text } from '../../../components/Text'
+import { Row } from '../../../components/layout/Row'
+import { Stack } from '../../../components/layout/Stack'
+import { Text } from '../../../components/typography/Text'
 import illustration from '../assets/illustration.png'
 import { ContentCard } from '../index'
 

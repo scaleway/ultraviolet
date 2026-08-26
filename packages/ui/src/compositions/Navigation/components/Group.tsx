@@ -2,8 +2,8 @@
 
 import { Children, useId } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { Stack } from '../../../components/Stack'
-import { Text } from '../../../components/Text'
+import { Stack } from '../../../components/layout/Stack'
+import { Text } from '../../../components/typography/Text'
 import { useNavigation } from '../NavigationProvider'
 import { navigationStyle } from '../styles.css'
 

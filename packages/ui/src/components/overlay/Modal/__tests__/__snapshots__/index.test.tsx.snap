@@ -1,0 +1,175 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`modal > renders open custom size 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`modal > renders with custom classNames 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`modal > renders with default Props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="_r_0_"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Test
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`modal > renders with default Props and function children 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`modal > renders with default Props and function children open 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`modal > renders with disclosure 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="modal-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Test
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`modal > renders with disclosure and onBeforeClose 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="modal-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open modal
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`modal > renders with disclosure and onClose 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="modal-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open modal
+    </button>
+  </div>
+  <div>
+    <div
+      class="styles__1h53v067"
+      data-testid="test-backdrop"
+    >
+      <dialog
+        aria-label="modal-test"
+        aria-modal="true"
+        class="styles__1h53v068 styles_placement_center__1h53v06d styles_size_small__1h53v06m"
+        data-size="small"
+        data-testid="test"
+        id="modal-test"
+        open=""
+        style="--_1h53v060: -0px; --_1h53v061: 1;"
+        tabindex="0"
+      >
+        <div>
+          modal
+        </div>
+        <div
+          class="styles__1h53v063"
+        >
+          <button
+            aria-label="close"
+            class="styles__1x0t66m0 styles_disabled_false__1x0t66m1 styles_fullWidth_false__1x0t66m3 styles_sentiment_neutral__1x0t66m8 styles_size_small__1x0t66mg styles_variant_ghost__1x0t66mj styles_undefined_compound_24__1x0t66m19"
+            data-testid="test-close-button"
+            type="button"
+          >
+            <svg
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <title>
+                CloseIcon
+              </title>
+              <path
+                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+              />
+            </svg>
+          </button>
+        </div>
+      </dialog>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`modal > renders with image 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`modal > renders with open={true} 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`modal > renders with open={true} and no close icon 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`modal > renders without disclosure 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;

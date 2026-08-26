@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import type { CSSProperties } from 'react'
-import { Stack } from '../../components/Stack'
+import { Stack } from '../../components/layout/Stack'
 import rating1 from './assets/1-5.svg'
 import rating1NS from './assets/1-5NB.svg'
 import rating2 from './assets/2-5.svg'

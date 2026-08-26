@@ -1,0 +1,35 @@
+import type { Meta } from '@storybook/react-vite'
+import { Snippet } from '..'
+import { Stack } from '../../../layout/Stack'
+
+export default {
+  component: Snippet,
+  decorators: [
+    StoryComponent => (
+      <Stack direction="row" gap={2}>
+        <StoryComponent />
+      </Stack>
+    ),
+  ],
+  title: 'UI/Data Display/Snippet',
+  parameters: {
+    a11yStatus: {
+      perceivable: false,
+      operable: false,
+      understandable: false,
+      robust: false,
+    },
+  },
+} as Meta<typeof Snippet>
+
+export { Playground } from './Playground.stories'
+export { SingleLine } from './SingleLine.stories'
+export { LabelHelper } from './LabelHelper.stories'
+export { LongSingleLine } from './LongSingleLine.stories'
+export { Multiline } from './Multiline.stories'
+export { LongMultiline } from './LongMultiline.stories'
+export { LongMultilineExpanded } from './LongMultilineExpanded.stories'
+export { Prefixes } from './Prefixes.stories'
+export { Rows } from './Rows.stories'
+export { NoExpandable } from './NoExpandable.stories'
+export { Indented } from './Indented.stories'

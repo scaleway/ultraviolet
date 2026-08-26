@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { useEffect, useState } from 'react'
 import type { ComponentProps, CSSProperties } from 'react'
-import { List } from '../../components/List'
+import { List } from '../../components/data-display/List'
 import { Cell } from './components/Cell'
 import { Row } from './components/Row'
 import { OfferListProvider } from './OfferListProvider'

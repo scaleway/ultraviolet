@@ -1,7 +1,7 @@
 'use client'
 
 import type { CSSProperties, ReactNode } from 'react'
-import { Stack } from '../../components/Stack'
+import { Stack } from '../../components/layout/Stack'
 import { DateComponent } from './components/Date'
 import { Message } from './components/Message'
 import { MessageInfos } from './components/MessageInfos'

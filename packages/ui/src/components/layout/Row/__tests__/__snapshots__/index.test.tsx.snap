@@ -1,0 +1,101 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`row > renders correctly with default props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__78oem50"
+      style="--ivy5ld0: repeat(2, 1fr); --ivy5ld1: repeat(2, 1fr); --ivy5ld2: repeat(2, 1fr); --ivy5ld3: repeat(2, 1fr); --ivy5ld4: repeat(2, 1fr); --ivy5ld5: repeat(2, 1fr);"
+    >
+      <div>
+        First col
+      </div>
+      <div>
+        Second col
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`row > renders correctly with responsive values 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__78oem50 styles_alignItems_flex-end_large__78oem515 styles_alignItems_center_medium__78oem5g styles_alignItems_flex-start_small__78oem5x styles_gap_1.5rem_large__78oem52z styles_gap_1rem_medium__78oem52s styles_gap_0.5rem_small__78oem52l styles_justifyContent_flex-end_large__78oem55n styles_justifyContent_center_medium__78oem54y styles_justifyContent_flex-start_small__78oem55f"
+      style="--ivy5ld0: 2fr 1fr; --ivy5ld1: 1fr 1fr; --ivy5ld2: 1fr 2fr; --ivy5ld6: 2; --ivy5ld7: 1;"
+    >
+      <div>
+        First col
+      </div>
+      <div>
+        Second col
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`row > renders correctly with specific align 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_gap_0.5rem_xxsmall__78oem52j"
+      style="--ivy5ld0: repeat(2, 1fr); --ivy5ld1: repeat(2, 1fr); --ivy5ld2: repeat(2, 1fr); --ivy5ld3: repeat(2, 1fr); --ivy5ld4: repeat(2, 1fr); --ivy5ld5: repeat(2, 1fr);"
+    >
+      <div>
+        First col
+      </div>
+      <div>
+        Second col
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`row > renders correctly with specific gap 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__78oem50 styles_gap_0.5rem_xxsmall__78oem52j"
+      style="--ivy5ld0: repeat(2, 1fr); --ivy5ld1: repeat(2, 1fr); --ivy5ld2: repeat(2, 1fr); --ivy5ld3: repeat(2, 1fr); --ivy5ld4: repeat(2, 1fr); --ivy5ld5: repeat(2, 1fr);"
+    >
+      <div>
+        First col
+      </div>
+      <div>
+        Second col
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`row > renders correctly with specific padding 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__78oem50 styles_gap_0.5rem_xxsmall__78oem52j"
+      style="--ivy5ld0: repeat(2, 1fr); --ivy5ld1: repeat(2, 1fr); --ivy5ld2: repeat(2, 1fr); --ivy5ld3: repeat(2, 1fr); --ivy5ld4: repeat(2, 1fr); --ivy5ld5: repeat(2, 1fr); --ivy5ld6: 10px; --ivy5ld7: 10px; --ivy5ld8: 10px; --ivy5ld9: 10px; --ivy5lda: 10px; --ivy5ldb: 10px;"
+    >
+      <div>
+        First col
+      </div>
+      <div>
+        Second col
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

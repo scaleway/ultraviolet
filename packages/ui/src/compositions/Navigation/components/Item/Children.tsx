@@ -1,5 +1,5 @@
-import { Expandable } from '../../../../components/Expandable'
-import { Stack } from '../../../../components/Stack'
+import { Expandable } from '../../../../components/action/Expandable'
+import { Stack } from '../../../../components/layout/Stack'
 import { useNavigation } from '../../NavigationProvider'
 import type { ItemExpandedType } from '../ComponentsTypes'
 import { ItemProvider } from './ItemProvider'

@@ -1,0 +1,73 @@
+'use client'
+
+import { cn } from '@ultraviolet/utils'
+import { useMemo } from 'react'
+import type { CSSProperties } from 'react'
+import { Text } from '../../typography/Text'
+import { KEYS_MATCH } from './constants'
+import { keyStyle } from './styles.css'
+
+type KeyProps = {
+  children: string
+  prominence?: 'strong' | 'default'
+  disabled?: boolean
+  size?: 'small' | 'medium'
+  sentiment?: 'neutral' | 'primary'
+  id?: string
+  className?: string
+  'data-testid'?: string
+  style?: CSSProperties
+}
+
+/**
+ * Key is a visual component used to display keyboard shortcuts.
+ */
+export const Key = ({
+  children,
+  prominence = 'default',
+  disabled,
+  size = 'medium',
+  sentiment = 'neutral',
+  id,
+  className,
+  'data-testid': dataTestId,
+  style,
+}: KeyProps) => {
+  const specialKey = useMemo(() => Object.keys(KEYS_MATCH).find(key => key === children.toLowerCase()), [children])
+  const textProminence = useMemo(() => {
+    if (prominence === 'default') {
+      return 'default'
+    }
+
+    if (sentiment === 'primary') {
+      return 'strong'
+    }
+
+    return 'stronger'
+  }, [sentiment, prominence])
+
+  return (
+    <kbd
+      className={cn(className, keyStyle.key({ disabled, prominence, sentiment, size }))}
+      data-disabled={disabled}
+      data-prominence={prominence}
+      data-sentiment={sentiment}
+      data-size={size}
+      data-testid={dataTestId}
+      id={id}
+      style={style}
+    >
+      <Text
+        as="span"
+        disabled={disabled}
+        prominence={textProminence}
+        sentiment={sentiment}
+        variant={size === 'medium' ? 'caption' : 'captionSmall'}
+      >
+        {specialKey ? KEYS_MATCH[specialKey as keyof typeof KEYS_MATCH] : children}
+      </Text>
+    </kbd>
+  )
+}
+
+Key.displayName = 'Key'

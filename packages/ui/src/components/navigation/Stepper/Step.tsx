@@ -1,0 +1,115 @@
+'use client'
+
+import { cn } from '@ultraviolet/utils'
+import { useMemo } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
+import { Stack } from '../../layout/Stack'
+import { Text } from '../../typography/Text'
+import { StepBullet } from './Bullet'
+import { useStepper } from './StepperProvider'
+import { stepperStyle } from './styles.css'
+
+type StepProps = {
+  onClick?: (index: number) => void
+  /**
+   * Automatically attribued by the parent Stepper
+   */
+  index?: number
+  /**
+   * Whether the step is disabled
+   */
+  disabled?: boolean
+  /**
+   * Title of the step
+   */
+  title?: ReactNode
+  /**
+   * For additional information.
+   * Use prop `title` to properly name the step
+   */
+  children?: ReactNode
+  className?: string
+  'data-testid'?: string
+  style?: CSSProperties
+}
+
+export const Step = ({
+  index = 0,
+  onClick,
+  disabled = false,
+  title,
+  children,
+  className,
+  style,
+  'data-testid': dataTestId,
+}: StepProps) => {
+  const { separator, labelPosition, animated, size, interactive, step, setStep } = useStepper()
+  const isActive = index === step
+  const isDone = index < step
+  const separatorBottom = separator && labelPosition === 'bottom'
+  const interactiveDone = isDone && interactive
+
+  const textVariant = useMemo(() => {
+    if (size === 'medium') {
+      return isActive ? 'bodyStrong' : 'body'
+    }
+
+    return isActive ? 'bodySmallStrong' : 'bodySmall'
+  }, [size, isActive])
+
+  return (
+    <Stack
+      alignItems="center"
+      className={cn(
+        className,
+        'step',
+        stepperStyle.stepContainer,
+        separatorBottom
+          ? stepperStyle.containerRecipe({
+              animated,
+              disabled,
+              done: isDone,
+              labelPosition,
+              separator,
+              size,
+            })
+          : '',
+        isActive && separator && animated ? stepperStyle.animationStepperContainer[size] : '',
+        interactiveDone && !disabled ? stepperStyle.interactive[isActive ? 'active' : 'inactive'] : '',
+      )}
+      data-testid={dataTestId ?? `stepper-step-${index}`}
+      direction={labelPosition === 'right' ? 'row' : 'column'}
+      gap={labelPosition === 'right' ? 1 : 0}
+      justifyContent="flex-start"
+      onClick={() => {
+        if (interactive && !disabled) {
+          if (index < step) {
+            setStep(index)
+          }
+          onClick?.(index)
+        }
+      }}
+      style={style}
+    >
+      <StepBullet disabled={disabled} index={index} isActive={isActive} isDone={isDone} />
+      {title ? (
+        <Text
+          as="span"
+          className={stepperStyle.stepText({
+            addMarginTop: separator && labelPosition !== 'right',
+            disabled,
+          })}
+          prominence={isDone || isActive ? 'default' : 'weak'}
+          sentiment={isActive ? 'primary' : 'neutral'}
+          variant={textVariant}
+          whiteSpace="normal"
+        >
+          {title}
+        </Text>
+      ) : null}
+      {children ?? null}
+    </Stack>
+  )
+}
+
+Step.displayName = 'Stepper.Step'

@@ -1,0 +1,1020 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`checkbox > renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-disabled="false"
+      class="styles_default__1pz5vwp1 styles__1pz5vwp0"
+      data-checked="false"
+      data-error="false"
+    >
+      <input
+        aria-checked="false"
+        aria-invalid="false"
+        class="styles_default__1pz5vwp4 styles__1pz5vwp3"
+        id="_r_0_"
+        name="testing"
+        type="checkbox"
+      />
+      <svg
+        class="styles_default__1pz5vwp7 styles__1pz5vwp6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <title>
+          testing
+        </title>
+        <g>
+          <rect
+            class="styles__1pz5vwp9"
+            height="16"
+            rx="0.125rem"
+            stroke-width="2"
+            width="16"
+            x="4"
+            y="4"
+          />
+          <path
+            class="styles__1pz5vwpa"
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="9"
+            width="12"
+            x="5"
+            y="4"
+          />
+        </g>
+      </svg>
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        style="--_1o893js3: 1;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <label
+            class="styles__1pz5vwpc style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_0_"
+          >
+            Checkbox Label
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`checkbox > renders correctly checked 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-disabled="false"
+      class="styles_default__1pz5vwp1 styles__1pz5vwp0"
+      data-checked="true"
+      data-error="false"
+    >
+      <input
+        aria-checked="true"
+        aria-invalid="false"
+        checked=""
+        class="styles_default__1pz5vwp4 styles__1pz5vwp3"
+        id="_r_p_"
+        type="checkbox"
+      />
+      <svg
+        class="styles_default__1pz5vwp7 styles__1pz5vwp6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <title />
+        <g>
+          <rect
+            class="styles__1pz5vwp9"
+            height="16"
+            rx="0.125rem"
+            stroke-width="2"
+            width="16"
+            x="4"
+            y="4"
+          />
+          <path
+            class="styles__1pz5vwpa"
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="9"
+            width="12"
+            x="5"
+            y="4"
+          />
+        </g>
+      </svg>
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        style="--_1o893js3: 1;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <label
+            class="styles__1pz5vwpc style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_p_"
+          >
+            Checkbox Label
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`checkbox > renders correctly checked and disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-disabled="true"
+      class="styles_default__1pz5vwp1 styles__1pz5vwp0"
+      data-checked="true"
+      data-error="false"
+    >
+      <input
+        aria-checked="true"
+        aria-invalid="false"
+        checked=""
+        class="styles_default__1pz5vwp4 styles__1pz5vwp3"
+        disabled=""
+        id="_r_1f_"
+        type="checkbox"
+      />
+      <svg
+        class="styles_default__1pz5vwp7 styles__1pz5vwp6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <title />
+        <g>
+          <rect
+            class="styles__1pz5vwp9"
+            height="16"
+            rx="0.125rem"
+            stroke-width="2"
+            width="16"
+            x="4"
+            y="4"
+          />
+          <path
+            class="styles__1pz5vwpa"
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="9"
+            width="12"
+            x="5"
+            y="4"
+          />
+        </g>
+      </svg>
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        style="--_1o893js3: 1;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <label
+            class="styles__1pz5vwpc style__1yhcak80 style_disabled_true__1yhcak81 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_28__1yhcak822"
+            for="_r_1f_"
+          >
+            Checkbox Label
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`checkbox > renders correctly checked with helper 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-disabled="false"
+      class="styles_default__1pz5vwp1 styles__1pz5vwp0"
+      data-checked="true"
+      data-error="false"
+    >
+      <input
+        aria-checked="true"
+        aria-describedby="_r_u_-hint"
+        aria-invalid="false"
+        checked=""
+        class="styles_default__1pz5vwp4 styles__1pz5vwp3"
+        id="_r_u_"
+        type="checkbox"
+      />
+      <svg
+        class="styles_default__1pz5vwp7 styles__1pz5vwp6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <title />
+        <g>
+          <rect
+            class="styles__1pz5vwp9"
+            height="16"
+            rx="0.125rem"
+            stroke-width="2"
+            width="16"
+            x="4"
+            y="4"
+          />
+          <path
+            class="styles__1pz5vwpa"
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="9"
+            width="12"
+            x="5"
+            y="4"
+          />
+        </g>
+      </svg>
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        style="--_1o893js3: 1;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <label
+            class="styles__1pz5vwpc style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_u_"
+          >
+            Checkbox Label
+          </label>
+        </div>
+        <span
+          class="style__1yhcak80 style_prominence_weak__1yhcak87 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_3__1yhcak81d style_undefined_compound_67__1yhcak835"
+          id="_r_u_-hint"
+          role="status"
+        >
+          helper
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`checkbox > renders correctly disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-disabled="true"
+      class="styles_default__1pz5vwp1 styles__1pz5vwp0"
+      data-checked="false"
+      data-error="false"
+    >
+      <input
+        aria-checked="false"
+        aria-invalid="false"
+        class="styles_default__1pz5vwp4 styles__1pz5vwp3"
+        disabled=""
+        id="_r_8_"
+        type="checkbox"
+      />
+      <svg
+        class="styles_default__1pz5vwp7 styles__1pz5vwp6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <title />
+        <g>
+          <rect
+            class="styles__1pz5vwp9"
+            height="16"
+            rx="0.125rem"
+            stroke-width="2"
+            width="16"
+            x="4"
+            y="4"
+          />
+          <path
+            class="styles__1pz5vwpa"
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="9"
+            width="12"
+            x="5"
+            y="4"
+          />
+        </g>
+      </svg>
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        style="--_1o893js3: 1;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <label
+            class="styles__1pz5vwpc style__1yhcak80 style_disabled_true__1yhcak81 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_28__1yhcak822"
+            for="_r_8_"
+          >
+            Checkbox Label
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`checkbox > renders correctly indeterminate 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-disabled="false"
+      class="styles_default__1pz5vwp1 styles__1pz5vwp0"
+      data-checked="indeterminate"
+      data-error="false"
+    >
+      <input
+        aria-checked="mixed"
+        aria-invalid="false"
+        class="styles_default__1pz5vwp4 styles__1pz5vwp3"
+        id="_r_15_"
+        type="checkbox"
+      />
+      <svg
+        class="styles_default__1pz5vwp7 styles__1pz5vwp6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <title />
+        <g>
+          <rect
+            class="styles__1pz5vwp9"
+            height="16"
+            rx="0.125rem"
+            stroke-width="2"
+            width="16"
+            x="4"
+            y="4"
+          />
+          <rect
+            class="styles__1pz5vwpb"
+            height="2"
+            rx="1"
+            width="12"
+            x="6"
+            y="11"
+          />
+        </g>
+      </svg>
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        style="--_1o893js3: 1;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <label
+            class="styles__1pz5vwpc style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_15_"
+          >
+            Checkbox Label
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`checkbox > renders correctly indeterminate and disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-disabled="true"
+      class="styles_default__1pz5vwp1 styles__1pz5vwp0"
+      data-checked="indeterminate"
+      data-error="false"
+    >
+      <input
+        aria-checked="mixed"
+        aria-invalid="false"
+        class="styles_default__1pz5vwp4 styles__1pz5vwp3"
+        disabled=""
+        id="_r_1k_"
+        type="checkbox"
+      />
+      <svg
+        class="styles_default__1pz5vwp7 styles__1pz5vwp6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <title />
+        <g>
+          <rect
+            class="styles__1pz5vwp9"
+            height="16"
+            rx="0.125rem"
+            stroke-width="2"
+            width="16"
+            x="4"
+            y="4"
+          />
+          <rect
+            class="styles__1pz5vwpb"
+            height="2"
+            rx="1"
+            width="12"
+            x="6"
+            y="11"
+          />
+        </g>
+      </svg>
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        style="--_1o893js3: 1;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <label
+            class="styles__1pz5vwpc style__1yhcak80 style_disabled_true__1yhcak81 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_28__1yhcak822"
+            for="_r_1k_"
+          >
+            Checkbox Label
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`checkbox > renders correctly invisible 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-disabled="false"
+      class="styles_default__1pz5vwp1 styles__1pz5vwp0"
+      data-checked="false"
+      data-error="false"
+      data-visibility="true"
+    >
+      <input
+        aria-checked="false"
+        aria-invalid="false"
+        class="styles_default__1pz5vwp4 styles__1pz5vwp3"
+        id="_r_1p_"
+        type="checkbox"
+      />
+      <svg
+        class="styles_default__1pz5vwp7 styles__1pz5vwp6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <title />
+        <g>
+          <rect
+            class="styles__1pz5vwp9"
+            height="16"
+            rx="0.125rem"
+            stroke-width="2"
+            width="16"
+            x="4"
+            y="4"
+          />
+          <path
+            class="styles__1pz5vwpa"
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="9"
+            width="12"
+            x="5"
+            y="4"
+          />
+        </g>
+      </svg>
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        style="--_1o893js3: 1;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <label
+            class="styles__1pz5vwpc style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_1p_"
+          >
+            Checkbox Label
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`checkbox > renders correctly no child 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-disabled="false"
+      class="styles_default__1pz5vwp1 styles__1pz5vwp0"
+      data-checked="false"
+      data-error="false"
+    >
+      <input
+        aria-checked="false"
+        aria-invalid="false"
+        aria-label="check"
+        class="styles_default__1pz5vwp4 styles__1pz5vwp3"
+        id="_r_5_"
+        type="checkbox"
+      />
+      <svg
+        class="styles_default__1pz5vwp7 styles__1pz5vwp6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <title />
+        <g>
+          <rect
+            class="styles__1pz5vwp9"
+            height="16"
+            rx="0.125rem"
+            stroke-width="2"
+            width="16"
+            x="4"
+            y="4"
+          />
+          <path
+            class="styles__1pz5vwpa"
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="9"
+            width="12"
+            x="5"
+            y="4"
+          />
+        </g>
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`checkbox > renders correctly required 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-disabled="false"
+      class="styles_default__1pz5vwp1 styles__1pz5vwp0"
+      data-checked="false"
+      data-error="false"
+    >
+      <input
+        aria-checked="false"
+        aria-invalid="false"
+        class="styles_default__1pz5vwp4 styles__1pz5vwp3"
+        id="_r_d_"
+        required=""
+        type="checkbox"
+      />
+      <svg
+        class="styles_default__1pz5vwp7 styles__1pz5vwp6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <title />
+        <g>
+          <rect
+            class="styles__1pz5vwp9"
+            height="16"
+            rx="0.125rem"
+            stroke-width="2"
+            width="16"
+            x="4"
+            y="4"
+          />
+          <path
+            class="styles__1pz5vwpa"
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="9"
+            width="12"
+            x="5"
+            y="4"
+          />
+        </g>
+      </svg>
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        style="--_1o893js3: 1;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <label
+            class="styles__1pz5vwpc style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_d_"
+          >
+            Checkbox Label
+          </label>
+          <sup
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_danger__1yhcak89 style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_48__1yhcak82m"
+          >
+            *
+          </sup>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`checkbox > renders correctly small 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-disabled="false"
+      class="styles_small__1pz5vwp2 styles__1pz5vwp0"
+      data-checked="false"
+      data-error="false"
+    >
+      <input
+        aria-checked="false"
+        aria-invalid="false"
+        class="styles_small__1pz5vwp5 styles__1pz5vwp3"
+        id="_r_1a_"
+        type="checkbox"
+      />
+      <svg
+        class="styles_small__1pz5vwp8 styles__1pz5vwp6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <title />
+        <g>
+          <rect
+            class="styles__1pz5vwp9"
+            height="16"
+            rx="0.125rem"
+            stroke-width="2"
+            width="16"
+            x="4"
+            y="4"
+          />
+          <path
+            class="styles__1pz5vwpa"
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="9"
+            width="12"
+            x="5"
+            y="4"
+          />
+        </g>
+      </svg>
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        style="--_1o893js3: 1;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <label
+            class="styles__1pz5vwpc style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_1a_"
+          >
+            Checkbox Label
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`checkbox > renders correctly with a value 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-disabled="false"
+      class="styles_default__1pz5vwp1 styles__1pz5vwp0"
+      data-checked="false"
+      data-error="false"
+    >
+      <input
+        aria-checked="false"
+        aria-invalid="false"
+        class="styles_default__1pz5vwp4 styles__1pz5vwp3"
+        id="_r_25_"
+        type="checkbox"
+        value="test"
+      />
+      <svg
+        class="styles_default__1pz5vwp7 styles__1pz5vwp6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <title />
+        <g>
+          <rect
+            class="styles__1pz5vwp9"
+            height="16"
+            rx="0.125rem"
+            stroke-width="2"
+            width="16"
+            x="4"
+            y="4"
+          />
+          <path
+            class="styles__1pz5vwpa"
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="9"
+            width="12"
+            x="5"
+            y="4"
+          />
+        </g>
+      </svg>
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        style="--_1o893js3: 1;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <label
+            class="styles__1pz5vwpc style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_25_"
+          >
+            Checkbox Label
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`checkbox > renders correctly with an error 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-disabled="false"
+      class="styles_default__1pz5vwp1 styles__1pz5vwp0"
+      data-checked="false"
+      data-error="true"
+    >
+      <input
+        aria-checked="false"
+        aria-describedby="_r_1u_-hint"
+        aria-invalid="true"
+        class="styles_default__1pz5vwp4 styles__1pz5vwp3"
+        id="_r_1u_"
+        type="checkbox"
+      />
+      <svg
+        class="styles_default__1pz5vwp7 styles__1pz5vwp6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <title />
+        <g>
+          <rect
+            class="styles__1pz5vwp9"
+            height="16"
+            rx="0.125rem"
+            stroke-width="2"
+            width="16"
+            x="4"
+            y="4"
+          />
+          <path
+            class="styles__1pz5vwpa"
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="9"
+            width="12"
+            x="5"
+            y="4"
+          />
+        </g>
+      </svg>
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        style="--_1o893js3: 1;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <label
+            class="styles__1pz5vwpc style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_1u_"
+          >
+            Checkbox Label
+          </label>
+        </div>
+        <span
+          class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_danger__1yhcak89 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_48__1yhcak82m"
+          id="_r_1u_-hint"
+          role="status"
+        >
+          test error
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`checkbox > renders correctly with indeterminate state 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-disabled="false"
+      class="styles_default__1pz5vwp1 styles__1pz5vwp0"
+      data-checked="indeterminate"
+      data-error="false"
+    >
+      <input
+        aria-checked="mixed"
+        aria-invalid="false"
+        class="styles_default__1pz5vwp4 styles__1pz5vwp3"
+        id="_r_2a_"
+        type="checkbox"
+      />
+      <svg
+        class="styles_default__1pz5vwp7 styles__1pz5vwp6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <title />
+        <g>
+          <rect
+            class="styles__1pz5vwp9"
+            height="16"
+            rx="0.125rem"
+            stroke-width="2"
+            width="16"
+            x="4"
+            y="4"
+          />
+          <rect
+            class="styles__1pz5vwpb"
+            height="2"
+            rx="1"
+            width="12"
+            x="6"
+            y="11"
+          />
+        </g>
+      </svg>
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        style="--_1o893js3: 1;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <label
+            class="styles__1pz5vwpc style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_2a_"
+          >
+            Checkbox Label
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`checkbox > renders correctly with tooltip 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1u0cyic5"
+    >
+      <div
+        aria-disabled="false"
+        class="styles_default__1pz5vwp1 styles__1pz5vwp0"
+        data-checked="false"
+        data-error="false"
+      >
+        <input
+          aria-checked="false"
+          aria-invalid="false"
+          class="styles_default__1pz5vwp4 styles__1pz5vwp3"
+          id="_r_k_"
+          type="checkbox"
+        />
+        <svg
+          class="styles_default__1pz5vwp7 styles__1pz5vwp6"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <title />
+          <g>
+            <rect
+              class="styles__1pz5vwp9"
+              height="16"
+              rx="0.125rem"
+              stroke-width="2"
+              width="16"
+              x="4"
+              y="4"
+            />
+            <path
+              class="styles__1pz5vwpa"
+              clip-rule="evenodd"
+              d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+              fill="white"
+              fill-rule="evenodd"
+              height="9"
+              width="12"
+              x="5"
+              y="4"
+            />
+          </g>
+        </svg>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+          style="--_1o893js3: 1;"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+          >
+            <label
+              class="styles__1pz5vwpc style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              for="_r_k_"
+            >
+              Checkbox Label
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -2,9 +2,9 @@ import { screen } from '@testing-library/react'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { InfoTable } from '..'
-import { Button } from '../../../components/Button'
-import { Stack } from '../../../components/Stack'
-import { Text } from '../../../components/Text'
+import { Button } from '../../../components/action/Button'
+import { Stack } from '../../../components/layout/Stack'
+import { Text } from '../../../components/typography/Text'
 
 describe('infoTable', () => {
   it('should work with default props', () => {

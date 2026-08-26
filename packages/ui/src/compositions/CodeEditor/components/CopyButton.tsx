@@ -1,6 +1,6 @@
 'use client'
 
-import { CopyButton } from '../../../components/CopyButton'
+import { CopyButton } from '../../../components/action/CopyButton'
 import type { CodeEditorProps } from '../type'
 import { codeEditorStyle } from '../styles.css'
 

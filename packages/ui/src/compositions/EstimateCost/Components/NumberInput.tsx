@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { NumberInput as NumberInputUV } from '../../../components/NumberInput'
+import { NumberInput as NumberInputUV } from '../../../components/data-entry/NumberInput'
 import { useOverlay } from '../OverlayContext'
 import { Regular } from './Regular'
 import { estimateCostStyle } from '../styles.css'

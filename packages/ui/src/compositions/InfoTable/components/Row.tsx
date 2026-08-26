@@ -3,7 +3,7 @@
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useContext } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { Row } from '../../../components/Row'
+import { Row } from '../../../components/layout/Row'
 import { InfoTableContext } from '../Context'
 import { infoTableStyle, rowWidth } from '../styles.css'
 

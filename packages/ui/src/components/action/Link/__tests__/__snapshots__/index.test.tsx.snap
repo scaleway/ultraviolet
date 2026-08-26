@@ -1,0 +1,454 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`link > prominence > render prominence default 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      Hello
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > prominence > render prominence strong 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_strong__o0z6wk4 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_5__o0z6wkj styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      Hello
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > prominence > render prominence stronger 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_stronger__o0z6wk5 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_6__o0z6wkk styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      Hello
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > prominence > render prominence weak 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_weak__o0z6wk6 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_7__o0z6wkl styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      Hello
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render correctly prop primary 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_primary__o0z6wk1 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_0__o0z6wke styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      Hello
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render correctly with bad sentiment 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      Hello
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render correctly with href props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      <svg
+        class="styles__o0z6wko uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <title>
+          ArrowLeftIcon
+        </title>
+        <path
+          clip-rule="evenodd"
+          d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+          fill-rule="evenodd"
+        />
+      </svg>
+      Hello
+    </a>
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      Hello
+      <svg
+        class="styles__o0z6wkp uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <title>
+          ArrowRightIcon
+        </title>
+        <path
+          clip-rule="evenodd"
+          d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </a>
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Hello
+      <span
+        class="styles__o0z6wkm"
+      >
+        <svg
+          class="styles__o0z6wkp uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <title>
+            OpenInNewIcon
+          </title>
+          <path
+            d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69z"
+          />
+          <path
+            d="M3.5 6.75c0-.69.56-1.25 1.25-1.25H7A.75.75 0 0 0 7 4H4.75A2.75 2.75 0 0 0 2 6.75v4.5A2.75 2.75 0 0 0 4.75 14h4.5A2.75 2.75 0 0 0 12 11.25V9a.75.75 0 0 0-1.5 0v2.25c0 .69-.56 1.25-1.25 1.25h-4.5c-.69 0-1.25-.56-1.25-1.25z"
+          />
+        </svg>
+      </span>
+    </a>
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Hello
+      <span
+        class="styles__o0z6wkm"
+      >
+        <svg
+          class="styles__o0z6wkp uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <title>
+            OpenInNewIcon
+          </title>
+          <path
+            d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69z"
+          />
+          <path
+            d="M3.5 6.75c0-.69.56-1.25 1.25-1.25H7A.75.75 0 0 0 7 4H4.75A2.75 2.75 0 0 0 2 6.75v4.5A2.75 2.75 0 0 0 4.75 14h4.5A2.75 2.75 0 0 0 12 11.25V9a.75.75 0 0 0-1.5 0v2.25c0 .69-.56 1.25-1.25 1.25h-4.5c-.69 0-1.25-.56-1.25-1.25z"
+          />
+        </svg>
+      </span>
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render correctly with no sentiment 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      Hello
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render correctly with oneLine 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      style="margin-bottom: 16px; margin-top: 8px; width: 200px;"
+    >
+      <a
+        class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_true__o0z6wk7 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+        data-variant="standalone"
+        href="/"
+      >
+        Hello this is a very long text that should be truncated
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render correctly with sizes 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      Hello
+    </a>
+    ,
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodySmallStrong__o0z6wka styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      Hello
+    </a>
+    ,
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_captionStrong__o0z6wk9 styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      Hello
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render correctly with target blank 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Hello
+      <span
+        class="styles__o0z6wkm"
+      >
+        <svg
+          class="styles__o0z6wkp uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <title>
+            OpenInNewIcon
+          </title>
+          <path
+            d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69z"
+          />
+          <path
+            d="M3.5 6.75c0-.69.56-1.25 1.25-1.25H7A.75.75 0 0 0 7 4H4.75A2.75 2.75 0 0 0 2 6.75v4.5A2.75 2.75 0 0 0 4.75 14h4.5A2.75 2.75 0 0 0 12 11.25V9a.75.75 0 0 0-1.5 0v2.25c0 .69-.56 1.25-1.25 1.25h-4.5c-.69 0-1.25-.56-1.25-1.25z"
+          />
+        </svg>
+      </span>
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render correctly with variants props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_inline__o0z6wkc styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="inline"
+      href="/"
+    >
+      Hello
+    </a>
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      Hello
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render prop > element form > render correctly with render prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_primary__o0z6wk1 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_0__o0z6wke styles__o0z6wkn"
+      data-variant="standalone"
+      href="/about"
+    >
+      About
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render prop > element form > render correctly with render prop and different sentiments 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_primary__o0z6wk1 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_0__o0z6wke styles__o0z6wkn"
+      data-variant="standalone"
+      href="/about"
+    >
+      Primary
+    </a>
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/about"
+    >
+      Info
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render prop > element form > render correctly with render prop and sizes 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/about"
+    >
+      Large
+    </a>
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodySmallStrong__o0z6wka styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/about"
+    >
+      Small
+    </a>
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_captionStrong__o0z6wk9 styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/about"
+    >
+      XSmall
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render prop > function form > render correctly with render function 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_primary__o0z6wk1 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_0__o0z6wke styles__o0z6wkn"
+      data-variant="standalone"
+      href="/about"
+    >
+      About
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > sentiment > render info 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      Hello
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > sentiment > render primary 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_primary__o0z6wk1 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_0__o0z6wke styles__o0z6wkn"
+      data-variant="standalone"
+      href="/"
+    >
+      Hello
+    </a>
+  </div>
+</DocumentFragment>
+`;

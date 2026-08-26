@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import type { CSSProperties } from 'react'
-import { NumberInput } from '../../../components/NumberInput'
+import { NumberInput } from '../../../components/data-entry/NumberInput'
 import { useOverlay } from '../OverlayContext'
 import { Regular } from './Regular'
 import { estimateCostStyle } from '../styles.css'

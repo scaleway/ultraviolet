@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars, setElementVars } from '@vanilla-extract/dynamic'
 import { useEffect, useRef } from 'react'
-import { Stack } from '../../components/Stack'
+import { Stack } from '../../components/layout/Stack'
 import { ANIMATION_DURATION, NAVIGATION_COLLASPED_WIDTH, NAVIGATION_MAX_WIDTH, NAVIGATION_MIN_WIDTH } from './constants'
 import { Footer } from './Footer'
 import { Header } from './Header'

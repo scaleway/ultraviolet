@@ -1,0 +1,232 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`textInput > should render correctly when input  has a error sentiment 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_18_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__dk0fjs8 styles_large__dk0fjs5"
+        data-disabled="false"
+        data-error="true"
+        data-readonly="false"
+        data-success="false"
+      >
+        <input
+          aria-describedby="_r_19_"
+          aria-invalid="true"
+          class="styles__dk0fjs9"
+          data-size="large"
+          id="_r_18_"
+          type="text"
+          value="test"
+        />
+        <div
+          class="styles__dk0fjs2 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        >
+          <svg
+            class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzg uv_icons_1sbwqkz1k"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              AlertCircleIcon
+            </title>
+            <path
+              clip-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14M8 4a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 8 4m0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <span
+        class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_danger__1yhcak89 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_48__1yhcak82m"
+        id="_r_19_"
+        role="status"
+      >
+        success
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textInput > should render correctly when input has a success sentiment 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_10_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__dk0fjs8 styles_large__dk0fjs5"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="true"
+      >
+        <input
+          aria-describedby="_r_11_"
+          aria-invalid="false"
+          class="styles__dk0fjs9"
+          data-size="large"
+          id="_r_10_"
+          type="text"
+          value="test"
+        />
+        <div
+          class="styles__dk0fjs2 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        >
+          <svg
+            class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkza uv_icons_1sbwqkzg uv_icons_1sbwqkz1j"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              CheckCircleIcon
+            </title>
+            <path
+              clip-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14m3.844-8.791a.75.75 0 0 0-1.187-.918l-3.7 4.79-1.65-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <span
+        class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_success__1yhcak8e style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_56__1yhcak82u"
+        id="_r_11_"
+        role="status"
+      >
+        success
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textInput > should render correctly when input is disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_k_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__dk0fjs8 styles_large__dk0fjs5"
+        data-disabled="true"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
+      >
+        <input
+          aria-invalid="false"
+          class="styles__dk0fjs9"
+          data-size="large"
+          disabled=""
+          id="_r_k_"
+          type="text"
+          value="test"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textInput > should render correctly when input is readOnly 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_q_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__dk0fjs8 styles_large__dk0fjs5"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="true"
+        data-success="false"
+      >
+        <input
+          aria-invalid="false"
+          class="styles__dk0fjs9"
+          data-size="large"
+          id="_r_q_"
+          readonly=""
+          type="text"
+          value="test"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textInput > should render correctly with basic props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_0_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__dk0fjs8 styles_large__dk0fjs5"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
+      >
+        <input
+          aria-invalid="false"
+          class="styles__dk0fjs9"
+          data-size="large"
+          id="_r_0_"
+          type="text"
+          value="test"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

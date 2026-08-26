@@ -2,8 +2,8 @@ import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import type { ComponentProps } from 'react'
 import { EstimateCost } from '..'
-import { Button } from '../../../components/Button'
-import { Stack } from '../../../components/Stack'
+import { Button } from '../../../components/action/Button'
+import { Stack } from '../../../components/layout/Stack'
 
 export const Unit: StoryFn<ComponentProps<typeof EstimateCost>> = props => {
   const [value, setValue] = useState<number | undefined>(0)

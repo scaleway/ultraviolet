@@ -1,6 +1,6 @@
 import { CalculatorIcon } from '@ultraviolet/icons/CalculatorIcon'
-import { Stack } from '../../components/Stack'
-import { Text } from '../../components/Text'
+import { Stack } from '../../components/layout/Stack'
+import { Text } from '../../components/typography/Text'
 import type { Iteration } from './types'
 import { estimateCostStyle } from './styles.css'
 

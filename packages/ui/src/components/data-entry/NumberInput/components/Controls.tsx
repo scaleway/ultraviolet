@@ -1,0 +1,76 @@
+import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
+import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
+import { useCallback } from 'react'
+import { Button } from '../../../action/Button'
+import { Stack } from '../../../layout/Stack'
+import type { ControlsProps } from '../types'
+import { numberInputStyle } from '../styles.css'
+
+export const Controls = ({ controls, direction, size, localRef, max, min, isDisabledOrReadOnly }: ControlsProps) => {
+  const isUp = direction === 'up'
+  const isPlusDisabled = useCallback(() => {
+    if (!localRef?.current?.value || localRef?.current?.value === '') {
+      return false
+    }
+
+    const numericValue = Number(localRef?.current?.value)
+    if (Number.isNaN(numericValue)) {
+      return false
+    }
+
+    const maxValue = typeof max === 'number' ? max : Number(max)
+
+    return numericValue >= maxValue
+  }, [localRef?.current?.value, max])
+
+  const isMinusDisabled = useCallback(() => {
+    if (!localRef?.current?.value || localRef?.current?.value === '') {
+      return false
+    }
+
+    const numericValue = Number(localRef?.current?.value)
+    if (Number.isNaN(numericValue)) {
+      return false
+    }
+
+    const minValue = typeof min === 'number' ? min : Number(min)
+
+    return Number.isNaN(numericValue) || numericValue <= minValue
+  }, [localRef?.current?.value, min])
+
+  const onClickSideButton = useCallback(() => {
+    if (direction === 'up') {
+      localRef.current?.stepUp()
+    } else if (direction === 'down') {
+      localRef.current?.stepDown()
+    }
+    localRef.current?.dispatchEvent(new Event('input', { bubbles: true, cancelable: false }))
+  }, [localRef, direction])
+
+  const isDisabled = isUp ? isPlusDisabled() : isMinusDisabled()
+
+  return controls ? (
+    <Stack
+      alignItems="center"
+      className={numberInputStyle.sideContainer[size]}
+      data-size={size}
+      justifyContent="center"
+    >
+      <Button
+        aria-label={isUp ? 'plus' : 'minus'}
+        disabled={isDisabledOrReadOnly || isDisabled}
+        onClick={onClickSideButton}
+        sentiment="neutral"
+        size={size === 'small' ? 'xsmall' : 'small'}
+        variant="ghost"
+        tabIndex={-1}
+      >
+        {isUp ? (
+          <PlusIcon size={size === 'large' ? 'small' : 'small'} />
+        ) : (
+          <MinusIcon size={size === 'large' ? 'small' : 'small'} />
+        )}
+      </Button>
+    </Stack>
+  ) : null
+}

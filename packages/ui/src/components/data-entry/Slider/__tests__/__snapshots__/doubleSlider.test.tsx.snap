@@ -1,0 +1,2616 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`double slider > handles correctly onChange custom scale double 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__12tz9gc4 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_1.5rem_xxsmall__mxir9341"
+      data-double="true"
+      data-options="true"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="slider-value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              1Mb
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="slider-value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              100Mb
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 0%; right: 33.33333333333333%;"
+              />
+            </div>
+            <input
+              aria-label="slider"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="slider-left"
+              id="_r_b5_"
+              max="3"
+              min="0"
+              name="slider"
+              step="1"
+              style="--_12tz9gc2: calc(0% - 0px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="0"
+            />
+            <input
+              aria-label="slider"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="slider-right"
+              id="_r_b5_"
+              max="3"
+              min="0"
+              name="slider"
+              step="1"
+              style="--_12tz9gc2: calc(66.66666666666667% - 10.666666666666668px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="2"
+            />
+            <datalist
+              class="styles__12tz9gc6 styles_double_true__12tz9gc7"
+              data-double="true"
+            >
+              <span
+                class="styles__12tz9gc8 styles_left_true__12tz9gc9"
+                data-element-left="true"
+                data-element-right="false"
+                data-value="0"
+                style="--_12tz9gc3: calc(0% - 0px + 8px);"
+              >
+                <p
+                  class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_primary__1yhcak8c style_variant_captionStrong__1yhcak8t style_undefined_compound_0__1yhcak81a style_undefined_compound_40__1yhcak82e"
+                >
+                  1Mb
+                </p>
+              </span>
+              <span
+                class="styles__12tz9gc8"
+                data-element-left="false"
+                data-element-right="false"
+                data-value="1"
+                style="--_12tz9gc3: calc(33.333333333333336% - 5.333333333333334px + 8px);"
+              >
+                <p
+                  class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+                >
+                  10MB
+                </p>
+              </span>
+              <span
+                class="styles__12tz9gc8"
+                data-element-left="false"
+                data-element-right="false"
+                data-value="2"
+                style="--_12tz9gc3: calc(66.66666666666667% - 10.666666666666668px + 8px);"
+              >
+                <p
+                  class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_primary__1yhcak8c style_variant_captionStrong__1yhcak8t style_undefined_compound_0__1yhcak81a style_undefined_compound_40__1yhcak82e"
+                >
+                  100Mb
+                </p>
+              </span>
+              <span
+                class="styles__12tz9gc8 styles_right_true__12tz9gca"
+                data-element-left="false"
+                data-element-right="true"
+                data-value="3"
+                style="--_12tz9gc3: calc(100% - 16px + 8px);"
+              >
+                <p
+                  class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+                >
+                  200Mb
+                </p>
+              </span>
+            </datalist>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > handles correctly onChange double 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <div
+              class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+            >
+              <div>
+                <div
+                  class="styles__1p4qkknk styles_size_small__1p4qkknn styles_state_default__1p4qkkno"
+                  data-controls="false"
+                  data-disabled="false"
+                  data-error="false"
+                  data-size="small"
+                  data-success="false"
+                  data-unit="false"
+                >
+                  <div
+                    class="styles__1p4qkkn3 styles_controls_false__1p4qkkn4 styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_justifyContent_space-between_xxsmall__78oem561"
+                    style="--ivy5ld0: 1fr auto; --ivy5ld1: 1fr auto; --ivy5ld2: 1fr auto; --ivy5ld3: 1fr auto; --ivy5ld4: 1fr auto; --ivy5ld5: 1fr auto;"
+                  >
+                    <input
+                      aria-label="input-left"
+                      class="styles__1p4qkknc styles_controls_false__1p4qkknd styles_size_small__1p4qkkni styles_undefined_compound_0__1p4qkknj"
+                      data-testid="slider-input-left"
+                      id="_r_a6_"
+                      inputmode="numeric"
+                      max="100"
+                      min="0"
+                      placeholder=""
+                      step="1"
+                      type="number"
+                      value="35"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+            >
+              <div>
+                <div
+                  class="styles__1p4qkknk styles_size_small__1p4qkknn styles_state_default__1p4qkkno"
+                  data-controls="false"
+                  data-disabled="false"
+                  data-error="false"
+                  data-size="small"
+                  data-success="false"
+                  data-unit="false"
+                >
+                  <div
+                    class="styles__1p4qkkn3 styles_controls_false__1p4qkkn4 styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_justifyContent_space-between_xxsmall__78oem561"
+                    style="--ivy5ld0: 1fr auto; --ivy5ld1: 1fr auto; --ivy5ld2: 1fr auto; --ivy5ld3: 1fr auto; --ivy5ld4: 1fr auto; --ivy5ld5: 1fr auto;"
+                  >
+                    <input
+                      aria-label="input-right"
+                      class="styles__1p4qkknc styles_controls_false__1p4qkknd styles_size_small__1p4qkkni styles_undefined_compound_0__1p4qkknj"
+                      data-testid="slider-input-right"
+                      id="_r_aa_"
+                      inputmode="numeric"
+                      max="100"
+                      min="0"
+                      placeholder=""
+                      step="1"
+                      type="number"
+                      value="75"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 35%; right: 25%;"
+              />
+            </div>
+            <input
+              aria-label="slider"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="slider-left"
+              id="_r_a5_"
+              max="100"
+              min="0"
+              name="slider"
+              step="1"
+              style="--_12tz9gc2: calc(35% - 5.6px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="35"
+            />
+            <input
+              aria-label="slider"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="slider-right"
+              id="_r_a5_"
+              max="100"
+              min="0"
+              name="slider"
+              step="1"
+              style="--_12tz9gc2: calc(75% - 12px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="75"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > handles correctly onChange with min and max double 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <div
+              class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+            >
+              <div>
+                <div
+                  class="styles__1p4qkknk styles_size_small__1p4qkknn styles_state_default__1p4qkkno"
+                  data-controls="false"
+                  data-disabled="false"
+                  data-error="false"
+                  data-size="small"
+                  data-success="false"
+                  data-unit="false"
+                >
+                  <div
+                    class="styles__1p4qkkn3 styles_controls_false__1p4qkkn4 styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_justifyContent_space-between_xxsmall__78oem561"
+                    style="--ivy5ld0: 1fr auto; --ivy5ld1: 1fr auto; --ivy5ld2: 1fr auto; --ivy5ld3: 1fr auto; --ivy5ld4: 1fr auto; --ivy5ld5: 1fr auto;"
+                  >
+                    <input
+                      aria-label="input-left"
+                      class="styles__1p4qkknc styles_controls_false__1p4qkknd styles_size_small__1p4qkkni styles_undefined_compound_0__1p4qkknj"
+                      data-testid="slider-input-left"
+                      id="_r_am_"
+                      inputmode="numeric"
+                      max="10"
+                      min="2"
+                      placeholder=""
+                      step="1"
+                      type="number"
+                      value="2"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+            >
+              <div>
+                <div
+                  class="styles__1p4qkknk styles_size_small__1p4qkknn styles_state_default__1p4qkkno"
+                  data-controls="false"
+                  data-disabled="false"
+                  data-error="false"
+                  data-size="small"
+                  data-success="false"
+                  data-unit="false"
+                >
+                  <div
+                    class="styles__1p4qkkn3 styles_controls_false__1p4qkkn4 styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_justifyContent_space-between_xxsmall__78oem561"
+                    style="--ivy5ld0: 1fr auto; --ivy5ld1: 1fr auto; --ivy5ld2: 1fr auto; --ivy5ld3: 1fr auto; --ivy5ld4: 1fr auto; --ivy5ld5: 1fr auto;"
+                  >
+                    <input
+                      aria-label="input-right"
+                      class="styles__1p4qkknc styles_controls_false__1p4qkknd styles_size_small__1p4qkkni styles_undefined_compound_0__1p4qkknj"
+                      data-testid="slider-input-right"
+                      id="_r_aq_"
+                      inputmode="numeric"
+                      max="10"
+                      min="2"
+                      placeholder=""
+                      step="1"
+                      type="number"
+                      value="10"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 0%; right: 0%;"
+              />
+            </div>
+            <input
+              aria-label="slider"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="slider-left"
+              id="_r_al_"
+              max="10"
+              min="2"
+              name="slider"
+              step="1"
+              style="--_12tz9gc2: calc(0% - 0px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="2"
+            />
+            <input
+              aria-label="slider"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="slider-right"
+              id="_r_al_"
+              max="10"
+              min="2"
+              name="slider"
+              step="1"
+              style="--_12tz9gc2: calc(100% - 16px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="10"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly custom value  1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_55_"
+          >
+            Label
+          </label>
+          customValue
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              12
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              14
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 12%; right: 86%;"
+              />
+            </div>
+            <div
+              class="styles__1u0cyic5"
+            >
+              <input
+                aria-label="Name"
+                class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+                data-direction="column"
+                data-testid="handle-left"
+                id="_r_55_"
+                max="100"
+                min="0"
+                name="Name"
+                step="1"
+                style="--_12tz9gc2: calc(12% - 1.92px); --_12tz9gc1: #ffffff;"
+                type="range"
+                value="12"
+              />
+            </div>
+            <div
+              class="styles__1u0cyic5"
+            >
+              <input
+                aria-label="Name"
+                class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+                data-direction="column"
+                data-testid="handle-right"
+                id="_r_55_"
+                max="100"
+                min="0"
+                name="Name"
+                step="1"
+                style="--_12tz9gc2: calc(14% - 2.24px); --_12tz9gc1: #ffffff;"
+                type="range"
+                value="14"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly custom value - direction "row" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_5j_"
+          >
+            Label
+          </label>
+          customValue
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <span
+            class="styles__12tz9gce styles_isDouble_true__12tz9gcg styles_isPadded_true__12tz9gch style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            data-testid="value-left"
+            style="--textAlign__1eu8od80: center;"
+          >
+            12
+          </span>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 12%; right: 86%;"
+              />
+            </div>
+            <div
+              class="styles__1u0cyic5"
+            >
+              <input
+                aria-label="Name"
+                class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+                data-direction="row"
+                data-testid="handle-left"
+                id="_r_5j_"
+                max="100"
+                min="0"
+                name="Name"
+                step="1"
+                style="--_12tz9gc2: calc(12% - 1.92px); --_12tz9gc1: #ffffff;"
+                type="range"
+                value="12"
+              />
+            </div>
+            <div
+              class="styles__1u0cyic5"
+            >
+              <input
+                aria-label="Name"
+                class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+                data-direction="row"
+                data-testid="handle-right"
+                id="_r_5j_"
+                max="100"
+                min="0"
+                name="Name"
+                step="1"
+                style="--_12tz9gc2: calc(14% - 2.24px); --_12tz9gc1: #ffffff;"
+                type="range"
+                value="14"
+              />
+            </div>
+          </div>
+          <span
+            class="styles__12tz9gce styles_isDouble_true__12tz9gcg styles_isPadded_true__12tz9gch style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            data-testid="value-right"
+            style="--textAlign__1eu8od80: center;"
+          >
+            14
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly custom value with input  1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_61_"
+          >
+            Label
+          </label>
+          customValue
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <div
+              class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+            >
+              <div>
+                <div
+                  class="styles__1p4qkknk styles_size_small__1p4qkknn styles_state_default__1p4qkkno"
+                  data-controls="false"
+                  data-disabled="false"
+                  data-error="false"
+                  data-size="small"
+                  data-success="false"
+                  data-unit="false"
+                >
+                  <div
+                    class="styles__1p4qkkn3 styles_controls_false__1p4qkkn4 styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_justifyContent_space-between_xxsmall__78oem561"
+                    style="--ivy5ld0: 1fr auto; --ivy5ld1: 1fr auto; --ivy5ld2: 1fr auto; --ivy5ld3: 1fr auto; --ivy5ld4: 1fr auto; --ivy5ld5: 1fr auto;"
+                  >
+                    <input
+                      aria-label="input-left"
+                      class="styles__1p4qkknc styles_controls_false__1p4qkknd styles_size_small__1p4qkkni styles_undefined_compound_0__1p4qkknj"
+                      data-testid="slider-input-left"
+                      id="_r_64_"
+                      inputmode="numeric"
+                      max="100"
+                      min="0"
+                      placeholder=""
+                      step="1"
+                      type="number"
+                      value="12"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+            >
+              <div>
+                <div
+                  class="styles__1p4qkknk styles_size_small__1p4qkknn styles_state_default__1p4qkkno"
+                  data-controls="false"
+                  data-disabled="false"
+                  data-error="false"
+                  data-size="small"
+                  data-success="false"
+                  data-unit="false"
+                >
+                  <div
+                    class="styles__1p4qkkn3 styles_controls_false__1p4qkkn4 styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_justifyContent_space-between_xxsmall__78oem561"
+                    style="--ivy5ld0: 1fr auto; --ivy5ld1: 1fr auto; --ivy5ld2: 1fr auto; --ivy5ld3: 1fr auto; --ivy5ld4: 1fr auto; --ivy5ld5: 1fr auto;"
+                  >
+                    <input
+                      aria-label="input-right"
+                      class="styles__1p4qkknc styles_controls_false__1p4qkknd styles_size_small__1p4qkkni styles_undefined_compound_0__1p4qkknj"
+                      data-testid="slider-input-right"
+                      id="_r_68_"
+                      inputmode="numeric"
+                      max="100"
+                      min="0"
+                      placeholder=""
+                      step="1"
+                      type="number"
+                      value="14"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 12%; right: 86%;"
+              />
+            </div>
+            <div
+              class="styles__1u0cyic5"
+            >
+              <input
+                aria-label="Name"
+                class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+                data-direction="column"
+                data-testid="handle-left"
+                id="_r_61_"
+                max="100"
+                min="0"
+                name="Name"
+                step="1"
+                style="--_12tz9gc2: calc(12% - 1.92px); --_12tz9gc1: #ffffff;"
+                type="range"
+                value="12"
+              />
+            </div>
+            <div
+              class="styles__1u0cyic5"
+            >
+              <input
+                aria-label="Name"
+                class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+                data-direction="column"
+                data-testid="handle-right"
+                id="_r_61_"
+                max="100"
+                min="0"
+                name="Name"
+                step="1"
+                style="--_12tz9gc2: calc(14% - 2.24px); --_12tz9gc1: #ffffff;"
+                type="range"
+                value="14"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly direction row double 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+          >
+            <label
+              class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              for="_r_1_"
+            >
+              Label
+            </label>
+            <span
+              class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a"
+            >
+              labeldescription
+            </span>
+          </div>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <span
+            class="styles__12tz9gce styles_isDouble_true__12tz9gcg styles_isPadded_true__12tz9gch style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            data-testid="value-left"
+            style="--textAlign__1eu8od80: center;"
+          >
+            1
+          </span>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 1%; right: 86%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="row"
+              data-testid="handle-left"
+              id="_r_1_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(1% - 0.16px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="1"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="row"
+              data-testid="handle-right"
+              id="_r_1_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(14% - 2.24px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="14"
+            />
+          </div>
+          <span
+            class="styles__12tz9gce styles_isDouble_true__12tz9gcg styles_isPadded_true__12tz9gch style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            data-testid="value-right"
+            style="--textAlign__1eu8od80: center;"
+          >
+            14
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly direction row double with input 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_1r_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+          >
+            <div>
+              <div
+                class="styles__1p4qkknk styles_size_small__1p4qkknn styles_state_default__1p4qkkno"
+                data-controls="false"
+                data-disabled="false"
+                data-error="false"
+                data-size="small"
+                data-success="false"
+                data-unit="false"
+              >
+                <div
+                  class="styles__1p4qkkn3 styles_controls_false__1p4qkkn4 styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_justifyContent_space-between_xxsmall__78oem561"
+                  style="--ivy5ld0: 1fr auto; --ivy5ld1: 1fr auto; --ivy5ld2: 1fr auto; --ivy5ld3: 1fr auto; --ivy5ld4: 1fr auto; --ivy5ld5: 1fr auto;"
+                >
+                  <input
+                    aria-label="input-left"
+                    class="styles__1p4qkknc styles_controls_false__1p4qkknd styles_size_small__1p4qkkni styles_undefined_compound_0__1p4qkknj"
+                    data-testid="slider-input-left"
+                    id="_r_1u_"
+                    inputmode="numeric"
+                    max="100"
+                    min="0"
+                    placeholder=""
+                    step="1"
+                    type="number"
+                    value="1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 1%; right: 86%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="row"
+              data-testid="handle-left"
+              id="_r_1r_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(1% - 0.16px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="1"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="row"
+              data-testid="handle-right"
+              id="_r_1r_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(14% - 2.24px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="14"
+            />
+          </div>
+          <div
+            class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+          >
+            <div>
+              <div
+                class="styles__1p4qkknk styles_size_small__1p4qkknn styles_state_default__1p4qkkno"
+                data-controls="false"
+                data-disabled="false"
+                data-error="false"
+                data-size="small"
+                data-success="false"
+                data-unit="false"
+              >
+                <div
+                  class="styles__1p4qkkn3 styles_controls_false__1p4qkkn4 styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_justifyContent_space-between_xxsmall__78oem561"
+                  style="--ivy5ld0: 1fr auto; --ivy5ld1: 1fr auto; --ivy5ld2: 1fr auto; --ivy5ld3: 1fr auto; --ivy5ld4: 1fr auto; --ivy5ld5: 1fr auto;"
+                >
+                  <input
+                    aria-label="input-right"
+                    class="styles__1p4qkknc styles_controls_false__1p4qkknd styles_size_small__1p4qkkni styles_undefined_compound_0__1p4qkknj"
+                    data-testid="slider-input-right"
+                    id="_r_28_"
+                    inputmode="numeric"
+                    max="100"
+                    min="0"
+                    placeholder=""
+                    step="1"
+                    type="number"
+                    value="14"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly double  1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_2d_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              12
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              14
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 12%; right: 86%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-left"
+              id="_r_2d_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(12% - 1.92px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="12"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-right"
+              id="_r_2d_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(14% - 2.24px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="14"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly double custom tooltip 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_49_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              12
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              14
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 12%; right: 86%;"
+              />
+            </div>
+            <div
+              class="styles__1u0cyic5"
+            >
+              <input
+                aria-label="Name"
+                class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+                data-direction="column"
+                data-testid="handle-left"
+                id="_r_49_"
+                max="100"
+                min="0"
+                name="Name"
+                step="1"
+                style="--_12tz9gc2: calc(12% - 1.92px); --_12tz9gc1: #ffffff;"
+                type="range"
+                value="12"
+              />
+            </div>
+            <div
+              class="styles__1u0cyic5"
+            >
+              <input
+                aria-label="Name"
+                class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+                data-direction="column"
+                data-testid="handle-right"
+                id="_r_49_"
+                max="100"
+                min="0"
+                name="Name"
+                step="1"
+                style="--_12tz9gc2: calc(14% - 2.24px); --_12tz9gc1: #ffffff;"
+                type="range"
+                value="14"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly double default toolip  1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_4n_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              12
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              14
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 12%; right: 86%;"
+              />
+            </div>
+            <div
+              class="styles__1u0cyic5"
+            >
+              <input
+                aria-label="Name"
+                class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+                data-direction="column"
+                data-testid="handle-left"
+                id="_r_4n_"
+                max="100"
+                min="0"
+                name="Name"
+                step="1"
+                style="--_12tz9gc2: calc(12% - 1.92px); --_12tz9gc1: #ffffff;"
+                type="range"
+                value="12"
+              />
+            </div>
+            <div
+              class="styles__1u0cyic5"
+            >
+              <input
+                aria-label="Name"
+                class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+                data-direction="column"
+                data-testid="handle-right"
+                id="_r_4n_"
+                max="100"
+                min="0"
+                name="Name"
+                step="1"
+                style="--_12tz9gc2: calc(14% - 2.24px); --_12tz9gc1: #ffffff;"
+                type="range"
+                value="14"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly double disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_39_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              12
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              14
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="true"
+                class="styles__12tz9gct styles_disabled_true__12tz9gcu"
+                data-error="false"
+                style="left: 12%; right: 86%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_true__12tz9gck styles__12tz9gcb styles_disabled_true__12tz9gcd"
+              data-direction="column"
+              data-testid="handle-left"
+              disabled=""
+              id="_r_39_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(12% - 1.92px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="12"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_true__12tz9gck styles__12tz9gcb styles_disabled_true__12tz9gcd"
+              data-direction="column"
+              data-testid="handle-right"
+              disabled=""
+              id="_r_39_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(14% - 2.24px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="14"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly double input 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_3n_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <div
+              class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+            >
+              <div>
+                <div
+                  class="styles__1p4qkknk styles_size_small__1p4qkknn styles_state_default__1p4qkkno"
+                  data-controls="false"
+                  data-disabled="false"
+                  data-error="false"
+                  data-size="small"
+                  data-success="false"
+                  data-unit="false"
+                >
+                  <div
+                    class="styles__1p4qkkn3 styles_controls_false__1p4qkkn4 styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_justifyContent_space-between_xxsmall__78oem561"
+                    style="--ivy5ld0: 1fr auto; --ivy5ld1: 1fr auto; --ivy5ld2: 1fr auto; --ivy5ld3: 1fr auto; --ivy5ld4: 1fr auto; --ivy5ld5: 1fr auto;"
+                  >
+                    <input
+                      aria-label="input-left"
+                      class="styles__1p4qkknc styles_controls_false__1p4qkknd styles_size_small__1p4qkkni styles_undefined_compound_0__1p4qkknj"
+                      data-testid="slider-input-left"
+                      id="_r_3q_"
+                      inputmode="numeric"
+                      max="100"
+                      min="0"
+                      placeholder=""
+                      step="1"
+                      type="number"
+                      value="12"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+            >
+              <div>
+                <div
+                  class="styles__1p4qkknk styles_size_small__1p4qkknn styles_state_default__1p4qkkno"
+                  data-controls="false"
+                  data-disabled="false"
+                  data-error="false"
+                  data-size="small"
+                  data-success="false"
+                  data-unit="false"
+                >
+                  <div
+                    class="styles__1p4qkkn3 styles_controls_false__1p4qkkn4 styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_justifyContent_space-between_xxsmall__78oem561"
+                    style="--ivy5ld0: 1fr auto; --ivy5ld1: 1fr auto; --ivy5ld2: 1fr auto; --ivy5ld3: 1fr auto; --ivy5ld4: 1fr auto; --ivy5ld5: 1fr auto;"
+                  >
+                    <input
+                      aria-label="input-right"
+                      class="styles__1p4qkknc styles_controls_false__1p4qkknd styles_size_small__1p4qkkni styles_undefined_compound_0__1p4qkknj"
+                      data-testid="slider-input-right"
+                      id="_r_3u_"
+                      inputmode="numeric"
+                      max="100"
+                      min="0"
+                      placeholder=""
+                      step="1"
+                      type="number"
+                      value="14"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 12%; right: 86%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-left"
+              id="_r_3n_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(12% - 1.92px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="12"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-right"
+              id="_r_3n_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(14% - 2.24px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="14"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly double min max 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_99_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              2
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              4
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 20%; right: 40%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-left"
+              id="_r_99_"
+              max="6"
+              min="1"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(20% - 3.2px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="2"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-right"
+              id="_r_99_"
+              max="6"
+              min="1"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(60% - 9.6px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="4"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly double step 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_9n_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              12
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              14
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 12%; right: 86%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-left"
+              id="_r_9n_"
+              max="100"
+              min="0"
+              name="Name"
+              step="0.5"
+              style="--_12tz9gc2: calc(12% - 1.92px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="12"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-right"
+              id="_r_9n_"
+              max="100"
+              min="0"
+              name="Name"
+              step="0.5"
+              style="--_12tz9gc2: calc(14% - 2.24px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="14"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly double with custom ticks 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__12tz9gc4 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_1.5rem_xxsmall__mxir9341"
+      data-double="true"
+      data-options="true"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_7t_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              1
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              200
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 0%; right: 0%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-left"
+              id="_r_7t_"
+              max="3"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(0% - 0px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="0"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-right"
+              id="_r_7t_"
+              max="3"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(100% - 16px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="3"
+            />
+            <datalist
+              class="styles__12tz9gc6 styles_double_true__12tz9gc7"
+              data-double="true"
+            >
+              <span
+                class="styles__12tz9gc8 styles_left_true__12tz9gc9"
+                data-element-left="true"
+                data-element-right="false"
+                data-value="0"
+                style="--_12tz9gc3: calc(0% - 0px + 8px);"
+              >
+                <p
+                  class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_primary__1yhcak8c style_variant_captionStrong__1yhcak8t style_undefined_compound_0__1yhcak81a style_undefined_compound_40__1yhcak82e"
+                >
+                  1Mb
+                </p>
+              </span>
+              <span
+                class="styles__12tz9gc8"
+                data-element-left="false"
+                data-element-right="false"
+                data-value="1"
+                style="--_12tz9gc3: calc(33.333333333333336% - 5.333333333333334px + 8px);"
+              >
+                <p
+                  class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+                >
+                  10MB
+                </p>
+              </span>
+              <span
+                class="styles__12tz9gc8"
+                data-element-left="false"
+                data-element-right="false"
+                data-value="2"
+                style="--_12tz9gc3: calc(66.66666666666667% - 10.666666666666668px + 8px);"
+              >
+                <p
+                  class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+                >
+                  100Mb
+                </p>
+              </span>
+              <span
+                class="styles__12tz9gc8 styles_right_true__12tz9gca"
+                data-element-left="false"
+                data-element-right="true"
+                data-value="3"
+                style="--_12tz9gc3: calc(100% - 16px + 8px);"
+              >
+                <p
+                  class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_primary__1yhcak8c style_variant_captionStrong__1yhcak8t style_undefined_compound_0__1yhcak81a style_undefined_compound_40__1yhcak82e"
+                >
+                  200Mb
+                </p>
+              </span>
+            </datalist>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly double with custom ticks and defaultScale 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__12tz9gc4 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_1.5rem_xxsmall__mxir9341"
+      data-double="true"
+      data-options="true"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_8j_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              0
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              3
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 0%; right: 97%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-left"
+              id="_r_8j_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(0% - 0px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="0"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-right"
+              id="_r_8j_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(3% - 0.48px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="3"
+            />
+            <datalist
+              class="styles__12tz9gc6 styles_double_true__12tz9gc7"
+              data-double="true"
+            >
+              <span
+                class="styles__12tz9gc8 styles_left_true__12tz9gc9"
+                data-element-left="true"
+                data-element-right="false"
+                data-value="1"
+                style="--_12tz9gc3: calc(1% - 0.16px + 8px);"
+              >
+                <p
+                  class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+                >
+                  1Mb
+                </p>
+              </span>
+              <span
+                class="styles__12tz9gc8"
+                data-element-left="false"
+                data-element-right="false"
+                data-value="10"
+                style="--_12tz9gc3: calc(10% - 1.6px + 8px);"
+              >
+                <p
+                  class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+                >
+                  10MB
+                </p>
+              </span>
+              <span
+                class="styles__12tz9gc8 styles_right_true__12tz9gca"
+                data-element-left="false"
+                data-element-right="false"
+                data-value="100"
+                style="--_12tz9gc3: calc(100% - 16px + 8px);"
+              >
+                <p
+                  class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+                >
+                  100Mb
+                </p>
+              </span>
+              <span
+                class="styles__12tz9gc8"
+                data-element-left="false"
+                data-element-right="true"
+                data-value="200"
+                style="--_12tz9gc3: calc(200% - 32px + 8px);"
+              >
+                <p
+                  class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+                >
+                  200Mb
+                </p>
+              </span>
+            </datalist>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly double with default ticks 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_7f_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              12%
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              14%
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 12%; right: 86%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-left"
+              id="_r_7f_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(12% - 1.92px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="12"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-right"
+              id="_r_7f_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(14% - 2.24px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="14"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly double with single tooltip 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_6j_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              12
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              14
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 12%; right: 86%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-left"
+              id="_r_6j_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(12% - 1.92px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="12"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-right"
+              id="_r_6j_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(14% - 2.24px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="14"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly double with value outside of min-max 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_2r_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="slider-value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              10
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="slider-value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              50
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 0%; right: 0%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="slider-left"
+              id="_r_2r_"
+              max="50"
+              min="10"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(0% - 0px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="10"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="slider-right"
+              id="_r_2r_"
+              max="50"
+              min="10"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(100% - 16px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="50"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly with value empty 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_h_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              0
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              100
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 0%; right: 0%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-left"
+              id="_r_h_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(0% - 0px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="0"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-right"
+              id="_r_h_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(100% - 16px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="100"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly with value empty array and no min max 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_v_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              0
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              100
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 0%; right: 0%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-left"
+              id="_r_v_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(0% - 0px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="0"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-right"
+              id="_r_v_"
+              max="100"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(100% - 16px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="100"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`double slider > renders correctly with value empty array with min max 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-double="true"
+      data-options="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p styles_justifyContent_left_xxsmall__mxir936v"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        >
+          <label
+            class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_1d_"
+          >
+            Label
+          </label>
+        </div>
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+          style="--_1o893js0: 100%;"
+        >
+          <div
+            class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+          >
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-left"
+              style="--textAlign__1eu8od80: right;"
+            >
+              0
+            </span>
+            <span
+              class="styles__12tz9gce styles_isDouble_true__12tz9gcg style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              data-testid="value-right"
+              style="--textAlign__1eu8od80: right;"
+            >
+              10
+            </span>
+          </div>
+          <div
+            class="styles__12tz9gcr"
+          >
+            <div
+              class="styles__12tz9gcs"
+            >
+              <div
+                aria-disabled="false"
+                class="styles__12tz9gct"
+                data-error="false"
+                style="left: 0%; right: 0%;"
+              />
+            </div>
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-left"
+              id="_r_1d_"
+              max="10"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(0% - 0px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="0"
+            />
+            <input
+              aria-label="Name"
+              class="styles__12tz9gci styles_disabled_false__12tz9gcj styles__12tz9gcb styles_disabled_false__12tz9gcc"
+              data-direction="column"
+              data-testid="handle-right"
+              id="_r_1d_"
+              max="10"
+              min="0"
+              name="Name"
+              step="1"
+              style="--_12tz9gc2: calc(100% - 16px); --_12tz9gc1: #ffffff;"
+              type="range"
+              value="10"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

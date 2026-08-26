@@ -1,9 +1,9 @@
 import { FranceFlag, NetherlandsFlag, PolandFlag } from '@ultraviolet/icons/flags'
 import { LeafIcon } from '@ultraviolet/icons/LeafIcon'
 import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
-import { Stack } from '../../../components/Stack'
-import { Text } from '../../../components/Text'
-import { Tooltip } from '../../../components/Tooltip'
+import { Stack } from '../../../components/layout/Stack'
+import { Tooltip } from '../../../components/overlay/Tooltip'
+import { Text } from '../../../components/typography/Text'
 
 export const firstSelectorOptions = [
   {

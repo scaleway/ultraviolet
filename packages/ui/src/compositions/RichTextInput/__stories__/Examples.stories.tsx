@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { RichTextInput } from '..'
-import { Stack } from '../../../components/Stack'
-import { Text } from '../../../components/Text'
+import { Stack } from '../../../components/layout/Stack'
+import { Text } from '../../../components/typography/Text'
 
 const PLAIN_TEXT_VALUE = 'Hello, world!'
 
