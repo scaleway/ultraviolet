@@ -1,5 +1,11 @@
 # @ultraviolet/fonts
 
+## 2.2.3
+
+### Patch Changes
+
+- [#6827](https://github.com/scaleway/ultraviolet/pull/6827) [`3124e4c`](https://github.com/scaleway/ultraviolet/commit/3124e4ce21faf6d216761f2160bd2e9fa0371dc5) Thanks [@lisalupi](https://github.com/lisalupi)! - Reference `.woff2` font files as separate assets instead of inlining them in `fonts-bundled.css`.
+
 ## 2.2.2
 
 ### Patch Changes
