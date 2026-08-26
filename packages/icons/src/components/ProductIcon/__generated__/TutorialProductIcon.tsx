@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const TutorialProductIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const TutorialProductIcon = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <g>
       <g>

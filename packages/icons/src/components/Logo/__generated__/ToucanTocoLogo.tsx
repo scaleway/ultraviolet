@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ToucanTocoLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const ToucanTocoLogo = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <path
       fill="#a0d1c5"

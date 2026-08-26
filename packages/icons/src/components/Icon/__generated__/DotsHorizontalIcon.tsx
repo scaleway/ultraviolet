@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const DotsHorizontalIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const DotsHorizontalIcon = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M3 10.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0m5.5 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0m7-1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />

@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ApiGatewayProductIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const ApiGatewayProductIcon = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <g>
       <g>

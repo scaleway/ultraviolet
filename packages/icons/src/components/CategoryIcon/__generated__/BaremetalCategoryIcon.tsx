@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const BaremetalCategoryIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const BaremetalCategoryIcon = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <g>
       <path

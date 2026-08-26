@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ClickhouseIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const ClickhouseIcon = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M8.753 4c.326 0 .559.233.559.559V51.44a.54.54 0 0 1-.559.56H4.559A.54.54 0 0 1 4 51.44V4.559C4 4.233 4.233 4 4.559 4zm10.673 0c.326 0 .559.233.559.559V51.44a.54.54 0 0 1-.559.56h-4.194a.54.54 0 0 1-.559-.56V4.559c0-.326.233-.559.559-.559zm10.671 0c.326 0 .559.233.559.559V51.44a.54.54 0 0 1-.559.56h-4.194a.54.54 0 0 1-.559-.56V4.559c0-.326.233-.559.559-.559zM40.77 4c.326 0 .559.233.559.559V51.44a.54.54 0 0 1-.559.56h-4.194a.54.54 0 0 1-.56-.56V4.559a.54.54 0 0 1 .56-.559zm10.671 18.669c.326 0 .559.232.559.559v9.544a.54.54 0 0 1-.559.559h-4.194a.54.54 0 0 1-.559-.559v-9.544c0-.327.233-.559.559-.559z" />

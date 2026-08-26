@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const BoxEssentialsIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const BoxEssentialsIcon = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M8.987 10.52a.38.38 0 0 1 .206.334v7.852c0 .277-.29.458-.54.337L1.461 15.54a.38.38 0 0 1-.211-.338V7.206c0-.28.295-.461.545-.335zm9.764 4.691c0 .143-.08.273-.208.336l-6.998 3.476a.375.375 0 0 1-.542-.336v-7.84c0-.14.078-.269.203-.333l6.998-3.622c.25-.13.547.052.547.333zM17.028 4.793a.375.375 0 0 1 .002.667l-6.765 3.501a.38.38 0 0 1-.342.002L3.02 5.46a.375.375 0 0 1 .002-.67l6.901-3.456a.38.38 0 0 1 .339.001z" />

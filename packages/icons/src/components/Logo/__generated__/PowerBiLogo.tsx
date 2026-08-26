@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const PowerBiLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const PowerBiLogo = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <g clipPath="url(#clip0_116_656025)">
       <path

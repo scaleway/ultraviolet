@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const CustomModelProductIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const CustomModelProductIcon = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <g clipPath="url(#clip0_4253_5045)">
       <path

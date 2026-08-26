@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const KyutaiLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const KyutaiLogo = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <path fill="#000" d="M2 2h16v16H2z" />
     <path

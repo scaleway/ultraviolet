@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const VerifyCardProductIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const VerifyCardProductIcon = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <g>
       <g>

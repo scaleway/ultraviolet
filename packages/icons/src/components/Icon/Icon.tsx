@@ -55,7 +55,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
     ref,
   ) => {
     const defaultHW = typeof size === 'string' && ['xsmall', 'small'].includes(size) ? '16' : '20'
-    const informative = accessibleLabel || ariaLabel
+    const informative = accessibleLabel || ariaLabel || ariaLabelledBy
 
     return (
       <svg
@@ -65,7 +65,6 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
         className={cn(className, icon({ disabled, prominence, sentiment, size }))}
         cursor={cursor}
         data-testid={dataTestId}
-        focusable={false}
         height={defaultHW}
         ref={ref}
         role={informative ? 'img' : undefined}
@@ -75,7 +74,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
         viewBox={typeof size === 'string' && ['xsmall', 'small'].includes(size) ? '0 0 16 16' : '0 0 20 20'}
         width={defaultHW}
       >
-        {accessibleLabel || ariaLabel ? <title>{accessibleLabel ?? ariaLabel}</title> : null}
+        {accessibleLabel || ariaLabel ? <title>{accessibleLabel || ariaLabel}</title> : null}
         {children}
       </svg>
     )

@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const K8sKosmosProductIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const K8sKosmosProductIcon = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <g>
       <g>

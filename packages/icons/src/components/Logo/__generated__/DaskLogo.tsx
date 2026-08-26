@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const DaskLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const DaskLogo = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <path
       fill="url(#paint0_linear_341_676)"

@@ -9,7 +9,7 @@ import { useTheme } from '@ultraviolet/themes'
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const GithubActionsLogo = ({ ...props }: Omit<IconProps, 'children'>) => {
+export const GithubActionsLogo = (props: Omit<IconProps, 'children'>) => {
   const { theme } = useTheme()
   const isLight = theme === 'light'
 

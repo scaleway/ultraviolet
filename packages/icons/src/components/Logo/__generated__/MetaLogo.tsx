@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const MetaLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const MetaLogo = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <g clipPath="url(#a)">
       <path

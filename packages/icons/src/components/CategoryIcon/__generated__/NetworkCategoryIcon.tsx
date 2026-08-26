@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const NetworkCategoryIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const NetworkCategoryIcon = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <g>
       <g fill="#a060f6" className="fillStrong">

@@ -9,7 +9,7 @@ import { useTheme } from '@ultraviolet/themes'
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const OpenVpnLogo = ({ ...props }: Omit<IconProps, 'children'>) => {
+export const OpenVpnLogo = (props: Omit<IconProps, 'children'>) => {
   const { theme } = useTheme()
   const isLight = theme === 'light'
 

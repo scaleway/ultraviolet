@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const OcrOutlineIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const OcrOutlineIcon = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M3.45 16.38V3.62c0-.895.725-1.62 1.62-1.62h3.77a7.71 7.71 0 0 1 7.71 7.71v6.67A1.62 1.62 0 0 1 14.93 18H5.07a1.62 1.62 0 0 1-1.62-1.62m7.54-4.64a1.28 1.28 0 1 0-2.561 0 1.28 1.28 0 0 0 2.56 0m1.5 0c0 .495-.132.959-.359 1.362l.72.717a.75.75 0 0 1-1.061 1.06l-.72-.717a2.78 2.78 0 1 1 1.419-2.422m-.58-5.22c0 .066.053.12.12.12h1.16c.407 0 .797.072 1.158.205A6.23 6.23 0 0 0 11.704 4.2c.133.362.206.753.206 1.16zm-6.96 9.86c0 .066.054.12.12.12h9.86a.12.12 0 0 0 .12-.12V10a1.86 1.86 0 0 0-1.86-1.86h-1.16a1.62 1.62 0 0 1-1.62-1.62V5.36A1.86 1.86 0 0 0 8.55 3.5H5.07a.12.12 0 0 0-.12.12z" />

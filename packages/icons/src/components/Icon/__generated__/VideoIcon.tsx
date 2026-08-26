@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const VideoIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const VideoIcon = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M4 4.667a2 2 0 0 0-2 2v6.666a2 2 0 0 0 2 2h6.667a2 2 0 0 0 2-2V6.667a2 2 0 0 0-2-2zm14 .666a.666.666 0 0 0-1.138-.471l-2.667 2.667A.67.67 0 0 0 14 8v4c0 .177.07.347.195.472l2.667 2.666A.667.667 0 0 0 18 14.667z" />

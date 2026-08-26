@@ -1,5 +1,5 @@
 import type { Decorator } from '@storybook/react-vite'
-import { Stack, VisuallyHidden, Text, Tooltip, Button } from '@ultraviolet/ui'
+import { Stack, VisuallyHidden, Text, Button } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { EyeIcon } from '../__generated__'
 
@@ -21,22 +21,6 @@ export const Label = (args: ComponentProps<typeof EyeIcon>) => (
         </Text>
         : <VisuallyHidden id="example-1">See</VisuallyHidden>
         <EyeIcon {...args} aria-labelledby="example-1" />
-      </Stack>
-    </li>
-    <li>
-      <Stack direction="row" alignItems="baseline" gap={1}>
-        Using
-        <Text as="span" variant="code">
-          Tooltip
-        </Text>
-        from
-        <Text as="span" variant="code">
-          @ultraviolet/ui
-        </Text>
-        :
-        <Tooltip relation="label" text="See">
-          <EyeIcon {...args} />
-        </Tooltip>
       </Stack>
     </li>
     <li>

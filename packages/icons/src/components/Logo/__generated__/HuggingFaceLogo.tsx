@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const HuggingFaceLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const HuggingFaceLogo = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <path
       fill="#fff"

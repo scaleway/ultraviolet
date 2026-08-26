@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const CostManagerProductIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const CostManagerProductIcon = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <defs>
       <path id="d" fill="#fff" d="M0 0h64v64H0z" />

@@ -72,14 +72,10 @@ const templateIcon = (iconName: string, svg: string, svgSmall?: string, svgDisab
   }
   ${
     svgSmall
-      ? `export const ${iconName} = ({
-    ...props
-  }: Omit<IconProps, 'children'>) => (
+      ? `export const ${iconName} = (props: Omit<IconProps, 'children'>) => (
       <Icon {...props}>{typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? ${wrapSvg(svg)} : ${wrapSvg(svgSmall)}}</Icon>
   )`
-      : `export const ${iconName} = ({
-    ...props
-  }: Omit<IconProps, 'children'>) => (
+      : `export const ${iconName} = (props: Omit<IconProps, 'children'>) => (
       <Icon {...props}>${svgDisabled ? `{props.disabled ? ${wrapSvg(svgDisabled)} : ${wrapSvg(svg)}}` : svg}</Icon>
   )`
   }
@@ -103,19 +99,17 @@ ${svgDark ? `import { useTheme } from '@ultraviolet/themes'` : ''}
     */`
       : ''
   }
- export const ${logoName} = ({
-    ...props
-  }: Omit<IconProps, 'children'>) => ${
-    svgDark
-      ? `{
+ export const ${logoName} = (props: Omit<IconProps, 'children'>) => ${
+   svgDark
+     ? `{
   const { theme } = useTheme()
   const isLight = theme === "light"
 
   return (
       <Icon {...props}>{isLight ? <>${svg}</> : <>${svgDark}</>}</Icon>
   )}`
-      : `(<Icon {...props}>${svg}</Icon>)`
-  }
+     : `(<Icon {...props}>${svg}</Icon>)`
+ }
 
   ${logoName}.displayName = '${logoName}'
 `

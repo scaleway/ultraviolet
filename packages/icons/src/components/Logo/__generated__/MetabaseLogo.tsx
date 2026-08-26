@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const MetabaseLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const MetabaseLogo = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <path
       fill="#509ee3"

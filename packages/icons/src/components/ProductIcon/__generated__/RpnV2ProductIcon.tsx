@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const RpnV2ProductIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const RpnV2ProductIcon = (props: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <g>
       <g>
