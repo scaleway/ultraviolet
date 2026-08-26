@@ -2,6 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { fadeIn, fadeOut } from '../../utils'
+import { textStyle } from '../Text/style.css'
 
 export const ARROW_SIZE = 8
 const ARROW_RADIUS = 2
@@ -60,6 +61,11 @@ const childrenContainer = recipe({
   base: {
     display: 'inherit',
     maxWidth: '100%',
+    selectors: {
+      [`&:has(.${textStyle.oneLine})`]: {
+        minWidth: 0,
+      },
+    },
   },
   variants: {
     fullHeight: {
