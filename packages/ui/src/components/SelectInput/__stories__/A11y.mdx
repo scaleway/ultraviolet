@@ -1,0 +1,108 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/SelectInput/A11y" />
+
+# SelectInput - Accessibility
+
+## Description
+
+A combobox form control that lets users pick one or many options from a dropdown list. Supports search (fuzzy "smart" search and type-ahead "dumb" search), grouped options, multiselect with removable tags, "select all", dynamic "add option", lazy loading, tooltips, and error/success/helper states.
+
+## Summary
+
+1. ❌ **Perceivable**: single-select selected option is conveyed by background color only
+2. ❌ **Operable**: every option is a tab stop (`tabIndex={0}`), so Tab steps through each option and, when open, leaves the dropdown open as it moves to the next field. No Home/End support (optional).
+3. ⚠️ **Understandable**: required state and error validity are not programmatically conveyed to the control; filtered search results / empty state are not announced.
+4. ❌ **Robust**: missing accessible name without a `label`; options named by `value` not label; `aria-controls` points at the popup (dialog) instead of the listbox; no `aria-activedescendant` on search; duplicate IDs (edge case).
+
+## ARIA Pattern
+
+- [ARIA Combobox Pattern (select-only variant)](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/)
+- [ARIA Listbox Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/)
+
+## Keyboard navigation & native `<select>` comparison
+
+Native `<select>` has a single tab stop, Arrow/Home/End navigation, in-control type-ahead, and Escape closes with focus returning. The component deviates in these ways:
+
+- **Multiple tab stops**: every `role="option"` is `tabIndex={0}` (`Item.tsx:85`) instead of a roving tabindex (only the active option in the tab order). Tab moves through each option; from the last one focus leaves to the next field **without closing the dropdown**. When collapsed, Tab moves straight on (correcy behavior).
+- **No Home/End**: `Content.tsx:55-70` handles Arrow up/down only. Home/End is part of the APG Listbox keyboard model but not a WCAG failure — 2.1.1 is satisfied via Arrow keys. Optional.
+- **Value change not announced**: combobox name is `aria-label={label}` which overrides the inner value text. After selecting, the visible value text changes inside the combobox but is not part of the name and there is no live region, so screen readers do not announce the new selection the way a native select does.
+
+### "Dumb" search (non-searchable type-ahead)
+
+Enabled when there is no search bar (`searchable=false`). `handleKeyDown` listens on `document` and moves focus to the first option matching typed characters. Inert while closed (popup only in the DOM when open). Notes:
+
+- **Works only when not searchable**: the listener is attached only when `searchable === false`. When the "smart" search exists and its input is not focused, type-ahead does nothing. Either the search input should be focused, or the dumb select should be used.
+- **Does not work while collapsed**: type-ahead is inert unless the dropdown is open (the popup `ref` is null while closed). Native `<select>` type-aheads even when collapsed (focused but closed), typing jumps the selection to the first matching option. Consider supporting type-ahead on the focused-but-closed select bar too.
+- **Search buffer never resets while open**: `search`/`defaultSearch` only clear when the dropdown closes (`Dropdown.tsx:190-194`), with no timeout as in a native select. Successive characters accumulate indefinitely while open.
+- No modifier-key guard: Ctrl/Cmd+char while open is swallowed as type-ahead.
+- No Home/End and no feedback when nothing matches.
+
+### "Smart" search (searchable)
+
+Enabled automatically when `options.length >= 6` or `addOption` is set. The fuzzy `SearchBar` is a plain `TextInput` with `aria-label="search-bar"`. Notes:
+
+- The typing input is a plain `TextInput`, not an ARIA combobox; it has no `aria-activedescendant`, so there is no announced "active option" while typing.
+- Filtered results / "No options" empty state (`Content.tsx:98-119`) are not exposed as a live region (4.1.3).
+
+## Rules
+
+Enforced by the component:
+
+- ⚠️ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html): Long tab sequence over every option; dropdown stays open when tabbing out.
+- ✅ [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html): The popup does not trap focus.
+- ⚠️ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html): Every option is `tabIndex={0}`, producing a very long tab sequence instead of a roving focus.
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html): Relies on the default browser outline.
+- ❌ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html): Single-select selected option is conveyed only by background color.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html): Missing name without `label`; options named by value; `aria-controls` not pointing at the listbox; duplicate IDs; nested interactive roles.
+- ❌ [WCAG 2.5.3 - Label in Name (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): Options named by value; `aria-controls` points at the popup, not the listbox; no name without `label`; no `aria-activedescendant` on search.
+- ⚠️ [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html): Error text is provided and associated via `aria-describedby`, but `aria-invalid` is not set on the control.
+- ⚠️ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html): `required` not surfaced (missing `aria-required`).
+- ⚠️ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html): Search empty state / filtered results are not announced.
+
+To apply when using the component:
+
+- [WCAG 3.3.2 - Labels or Instructions (A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html): **do not rely on `placeholder`/`placeholderSearch` as a substitute for a visible `label`** — placeholder disappears when interacting and causes memory issues. Use it only as an example format.
+- [WCAG 4.1.2 - Name, Role, Value (A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): **always pass a `label`** (or `aria-labelledby`): without it the combobox has no accessible name.
+- [WCAG 1.1.1 - Non-text Content (A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html): icons used inside labels/options are hidden by default (Icons `aria-hidden`); when an icon is informative, provide a text alternative or tooltip.
+- **External `Label`/`Description`**: if rendered outside the component's built-in props, manage associations yourself: `Label` `htmlFor`/`aria-labelledby` matching the combobox id, and the `Description` id in `aria-describedby`.
+
+## Accessibility issues
+
+**Critical:**
+
+- **Options are named by `option.value`, not the visible label**: `aria-label={option.value}` overrides the label text (which may be a `ReactNode` or differ from the value). Screen readers announce the raw value (2.5.3, 4.1.2). Fix: remove `aria-label` and let the visible label compute the name.
+- **`aria-controls` points at the popup, not the listbox**: it references `dropdownId`, the element that also carries `role="dialog"` (`Dropdown.tsx:266`), not the `role="listbox"`. Per the combobox pattern it must point at the listbox; `aria-haspopup` is also missing. Fix: point `aria-controls` at the listbox id and add `aria-haspopup="listbox"`.
+- **No accessible name without a `label` prop**: the name relies solely on `aria-label={label}`. The `<Label htmlFor={finalId}>` targets a `<div>`, which is not a labelable element, so the native `for` association does not work. Fix: use `aria-labelledby` referencing the `Label`'s id (so the visible label names the combobox), or render the trigger as a labelable control.
+
+**High:**
+
+- **Duplicate IDs**:
+  - `id="option-{indexOption}"` is group-local, so grouped data produces multiple `option-0` (etc.) elements;
+  - `id="items"` is repeated;
+    These break `getElementById`, `aria-controls`/label associations, and confuse assistive technology.
+- **Every option is a tab stop**: with all options `tabIndex={0}`, Tab steps through each option and, when the popup is open, leaves it open while focus moves to the next page field. Fix: roving tabindex (only the active option `tabIndex={0}`, others `-1`) and close the dropdown when focus leaves.
+- **Selection change is not announced**: combobox name is `aria-label={label}`, overriding the inner value text; no live region. Consider including the selected value in the accessible name or announcing it on change.
+
+**Medium:**
+
+- **No `aria-invalid` / `aria-required`** on the combobox: error is conveyed visually by color + an icon + the description text, but the field's invalid state is not programmatically determinable. `aria-invalid={!!error}` is required so SR announces the field as invalid, and `aria-required={required}` surfaces requiredness.
+- **"Select group" button is not reachable via Arrow up/down**: it is a `<button>`, but arrow navigation uses a selector which only matches `div[role="option"]`. So the group button (and its checkbox) is skipped. Fix: include the group button in the arrow-navigation target set.
+- **Search input is not an ARIA combobox, no `aria-activedescendant`**: typing gives no announced "active option", and the empty state is not announced. Fix: move combobox semantics onto the search input or add `aria-activedescendant` + a live region for empty results.
+- **Nested interactive roles**: `role="option"` contains a `role="checkbox"` and `Group.tsx:37-83` wraps a `<button>` around a `<Checkbox>`. In practice the checkboxes are `tabIndex={-1}`/`pointer-events: none` (decorative), so the impact is limited, but exposing a checkbox inside an option/button is ambiguous. Fix: render the checkbox as presentational (`aria-hidden`) or restructure.
+- **Non-actionable group `<button>`**: when `selectAllGroup` is false it renders `<button tabIndex={-1}>` that does nothing. Fix: render a plain element when not selectable.
+- **In a Modal, Escape closes the modal instead of the dropdown**: when the dropdown is open inside a Modal, the Modal's Escape handler wins over the `Popup`'s, so Escape dismisses the whole modal rather than first closing the dropdown. Keyboard users lose their selection context.
+
+**Low:**
+
+- **No Home/End**: recommended by the Listbox APG but not a WCAG failure; optional.
+- **Search bar autofocus**: focus moves to the search input 50ms after open — acceptable for searchable combobox, but can be disorienting.
+- **"Dumb" search modifier keys**: browser shortcuts while open are swallowed as type-ahead; add a `ctrlKey/metaKey/altKey` guard.
+
+## Dependencies
+
+- **Popup**: `aria-controls` references an element with `role="dialog"`; the dropdown should expose the listbox (no dialog role) so associations and semantics are correct.
+- **Tooltip**: hover/focus behavior on options and the select bar.
+- **Description**: error/success/helper uses `role="status"`; error messages ideally announced with an assertive role.
+- **Modal**: its Escape handler intercepts Escape before the `Popup`, closing the modal instead of the dropdown.
+- **Icons**: once all icons are `aria-hidden` by default (per team standard), the decorative arrow/error/success icons resolve.
