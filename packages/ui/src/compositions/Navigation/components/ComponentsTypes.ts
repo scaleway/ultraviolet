@@ -1,5 +1,5 @@
 import type { ComponentProps, CSSProperties, DragEvent, ElementType, ReactNode } from 'react'
-import type { Badge } from '../../../components/Badge'
+import type { Badge } from '../../../components/badges/Badge'
 import type { ItemType, PinUnPinType } from '../types'
 
 export type ItemExpandedType = {

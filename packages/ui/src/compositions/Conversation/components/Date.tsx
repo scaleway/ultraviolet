@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react'
-import { Text } from '../../../components/Text'
+import { Text } from '../../../components/typography/Text'
 import { conversationStyle } from '../styles.css'
 
 export const DateComponent = ({ children, style }: { children: ReactNode; style?: CSSProperties }) => (

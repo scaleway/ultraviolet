@@ -1,7 +1,7 @@
 'use client'
 
-import { Stack } from '../../components/Stack'
-import { Text } from '../../components/Text'
+import { Stack } from '../../components/layout/Stack'
+import { Text } from '../../components/typography/Text'
 import type { ContentCardProps } from './type'
 
 export const CardContent = ({

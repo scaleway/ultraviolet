@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
-import { CheckboxGroup } from '../../../components/CheckboxGroup'
-import { Label } from '../../../components/Label'
-import { SelectInput } from '../../../components/SelectInput'
+import { CheckboxGroup } from '../../../components/data-entry/CheckboxGroup'
+import { SelectInput } from '../../../components/data-entry/SelectInput'
+import { Label } from '../../../components/typography/Label'
 import type { FilterConfigItemMultiSelect, AnyObject, FilterComponentProps } from '../types'
 import { SELECT_DISPLAY_THRESHOLD } from './FilterSelect'
 

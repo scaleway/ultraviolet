@@ -1,0 +1,1331 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`tabs > renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__rm7scg2"
+      role="tablist"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tabs > renders correctly with Tabs and last disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__rm7scg2"
+      role="tablist"
+    >
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            First
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-label="1"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Second
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="true"
+        aria-label="2"
+        aria-selected="true"
+        class="styles__rm7scg4"
+        data-is-selected="true"
+        disabled=""
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tabs > renders correctly with Tabs menu selected 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__rm7scg2"
+      role="tablist"
+    >
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            First
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-label="1"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Second
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-label="2"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </button>
+      <div
+        class="styles__rm7scg9"
+      >
+        <div
+          aria-controls="menu-test"
+          aria-describedby="menu-test"
+          class="styles__pjfil59"
+          tabindex="-1"
+        >
+          <button
+            aria-disabled="false"
+            aria-expanded="true"
+            aria-haspopup="dialog"
+            class="styles__rm7scg4"
+            role="tab"
+            type="button"
+          >
+            More
+            <svg
+              class="styles__rm7scg8 uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <title>
+                ArrowDownIcon
+              </title>
+              <path
+                clip-rule="evenodd"
+                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="styles__rm7scg9"
+      >
+        <div
+          aria-controls="menu-_r_3e_"
+          aria-describedby="menu-_r_3e_"
+          class="styles__pjfil59"
+          tabindex="-1"
+        >
+          <button
+            aria-disabled="true"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            class="styles__rm7scg4"
+            disabled=""
+            role="tab"
+            type="button"
+          >
+            More again
+            <svg
+              class="styles__rm7scg8 uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <title>
+                ArrowDownIcon
+              </title>
+              <path
+                clip-rule="evenodd"
+                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tabs > renders correctly with Tabs name 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__rm7scg2"
+      role="tablist"
+    >
+      <button
+        aria-disabled="false"
+        aria-label="first"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            First
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-label="second"
+        aria-selected="true"
+        class="styles__rm7scg4"
+        data-is-selected="true"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Second
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="true"
+        aria-label="three"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        disabled=""
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tabs > renders correctly with Tabs with prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__rm7scg2"
+      role="tablist"
+    >
+      <button
+        aria-disabled="false"
+        aria-selected="true"
+        class="styles__rm7scg4"
+        data-is-selected="true"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            First
+            <span
+              class="styles__rm7scg5 styles__14m2a200 styles_prominence_strong__14m2a203 styles_sentiment_primary__14m2a208 styles_size_medium__14m2a20e styles_undefined_compound_7__14m2a20o style__1yhcak80 style_prominence_default__1yhcak84 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a"
+              style="--whiteSpace__1eu8od81: nowrap;"
+            >
+              2
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-label="1"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Second
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Undefined
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Counter
+            <span
+              class="styles__rm7scg5 styles__14m2a200 styles_prominence_default__14m2a202 styles_sentiment_neutral__14m2a207 styles_size_medium__14m2a20e styles_undefined_compound_6__14m2a20n style__1yhcak80 style_prominence_default__1yhcak84 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a"
+              style="--whiteSpace__1eu8od81: nowrap;"
+            >
+              12
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-label="2"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Counter no items
+            <span
+              class="styles__rm7scg5 styles__14m2a200 styles_prominence_default__14m2a202 styles_sentiment_neutral__14m2a207 styles_size_medium__14m2a20e styles_undefined_compound_6__14m2a20n style__1yhcak80 style_prominence_default__1yhcak84 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a"
+              style="--whiteSpace__1eu8od81: nowrap;"
+            >
+              0
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Conter and badge
+            <span
+              class="styles__rm7scg5 styles__14m2a200 styles_prominence_default__14m2a202 styles_sentiment_neutral__14m2a207 styles_size_medium__14m2a20e styles_undefined_compound_6__14m2a20n style__1yhcak80 style_prominence_default__1yhcak84 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a"
+              style="--whiteSpace__1eu8od81: nowrap;"
+            >
+              12
+            </span>
+            <span
+              class="styles__rm7scg3"
+            >
+              Badge
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Badge
+            <span
+              class="styles__rm7scg3"
+            >
+              Badge
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+        type="button"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </button>
+      <div
+        class="styles__rm7scg9"
+      >
+        <div
+          aria-controls="menu-test"
+          aria-describedby="menu-test"
+          class="styles__pjfil59"
+          tabindex="-1"
+        >
+          <button
+            aria-disabled="false"
+            aria-expanded="true"
+            aria-haspopup="dialog"
+            class="styles__rm7scg4"
+            role="tab"
+            type="button"
+          >
+            Blabla
+            <svg
+              class="styles__rm7scg8 uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <title>
+                ArrowDownIcon
+              </title>
+              <path
+                clip-rule="evenodd"
+                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="styles__rm7scg9"
+      >
+        <div
+          aria-controls="menu-_r_1e_"
+          aria-describedby="menu-_r_1e_"
+          class="styles__pjfil59"
+          tabindex="-1"
+        >
+          <button
+            aria-disabled="false"
+            aria-expanded="true"
+            aria-haspopup="dialog"
+            class="styles__rm7scg1 styles__rm7scg4"
+            role="tab"
+            type="button"
+          >
+            More
+            <svg
+              class="styles__rm7scg8 uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <title>
+                ArrowDownIcon
+              </title>
+              <path
+                clip-rule="evenodd"
+                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="styles__gzh6qn2 styles__pjfil54"
+    id="menu-test"
+    role="dialog"
+    style="--_1meq2bv0: -5px; --_1meq2bv1: 0px; --_1meq2bv2: rotate(180deg); --_1meq2bv4: translate3d(0px, 4px, 0); --_1meq2bv5: 0ms; --_1meq2bv6: translate3d(0px, 4px, 0); --_1meq2bv7: 14.5rem; --_1meq2bv3: fit-content; opacity: 1; animation: none;"
+  >
+    <div
+      class="styles__pjfil52 styles_hasMaxHeight_true__pjfil53"
+      style="--_1meq2bv3: fit-content;"
+    >
+      <div
+        class="styles__gzh6qn7 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+        role="menu"
+        style="--gzh6qn0: 30rem; --gzh6qn1: 30rem;"
+      >
+        <div
+          class="styles__gzh6qn5 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+        >
+          <div
+            class="styles__gzh6qna styles_borderless_false__gzh6qnb"
+          >
+            <button
+              class="styles_default__rm7scg6 styles__gzh6qnd styles_sentiment_neutral__gzh6qng styles_undefined_compound_0__gzh6qnj"
+              data-active="false"
+              data-is-disclosure="false"
+              data-is-menu-item="true"
+              role="menuitem"
+              type="button"
+            >
+              Test
+            </button>
+          </div>
+          <div
+            class="styles__gzh6qna styles_borderless_false__gzh6qnb"
+          >
+            <button
+              class="styles_default__rm7scg6 styles__gzh6qnd styles_sentiment_neutral__gzh6qng styles_undefined_compound_0__gzh6qnj"
+              data-active="false"
+              data-is-disclosure="false"
+              data-is-menu-item="true"
+              role="menuitem"
+              type="button"
+            >
+              Test 2
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="styles__gzh6qn2 styles__pjfil54"
+    id="menu-_r_1e_"
+    role="dialog"
+    style="--_1meq2bv0: -5px; --_1meq2bv1: 0px; --_1meq2bv2: rotate(180deg); --_1meq2bv4: translate3d(0px, 4px, 0); --_1meq2bv5: 0ms; --_1meq2bv6: translate3d(0px, 4px, 0); --_1meq2bv7: 14.5rem; --_1meq2bv3: fit-content; opacity: 1; animation: none;"
+  >
+    <div
+      class="styles__pjfil52 styles_hasMaxHeight_true__pjfil53"
+      style="--_1meq2bv3: fit-content;"
+    >
+      <div
+        class="styles__gzh6qn7 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+        role="menu"
+        style="--gzh6qn0: 30rem; --gzh6qn1: 30rem;"
+      >
+        <div
+          class="styles__gzh6qn5 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+        >
+          <div
+            class="styles__rm7scg0"
+          >
+            <button
+              aria-disabled="false"
+              aria-selected="true"
+              class="styles__rm7scg4"
+              data-is-selected="true"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  First
+                  <span
+                    class="styles__rm7scg5 styles__14m2a200 styles_prominence_strong__14m2a203 styles_sentiment_primary__14m2a208 styles_size_medium__14m2a20e styles_undefined_compound_7__14m2a20o style__1yhcak80 style_prominence_default__1yhcak84 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a"
+                    style="--whiteSpace__1eu8od81: nowrap;"
+                  >
+                    2
+                  </span>
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-label="1"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Second
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Undefined
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Counter
+                  <span
+                    class="styles__rm7scg5 styles__14m2a200 styles_prominence_default__14m2a202 styles_sentiment_neutral__14m2a207 styles_size_medium__14m2a20e styles_undefined_compound_6__14m2a20n style__1yhcak80 style_prominence_default__1yhcak84 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a"
+                    style="--whiteSpace__1eu8od81: nowrap;"
+                  >
+                    12
+                  </span>
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-label="2"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Counter no items
+                  <span
+                    class="styles__rm7scg5 styles__14m2a200 styles_prominence_default__14m2a202 styles_sentiment_neutral__14m2a207 styles_size_medium__14m2a20e styles_undefined_compound_6__14m2a20n style__1yhcak80 style_prominence_default__1yhcak84 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a"
+                    style="--whiteSpace__1eu8od81: nowrap;"
+                  >
+                    0
+                  </span>
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Conter and badge
+                  <span
+                    class="styles__rm7scg5 styles__14m2a200 styles_prominence_default__14m2a202 styles_sentiment_neutral__14m2a207 styles_size_medium__14m2a20e styles_undefined_compound_6__14m2a20n style__1yhcak80 style_prominence_default__1yhcak84 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a"
+                    style="--whiteSpace__1eu8od81: nowrap;"
+                  >
+                    12
+                  </span>
+                  <span
+                    class="styles__rm7scg3"
+                  >
+                    Badge
+                  </span>
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Badge
+                  <span
+                    class="styles__rm7scg3"
+                  >
+                    Badge
+                  </span>
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Very long tab name
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Very long tab name
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Very long tab name
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Very long tab name
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Very long tab name
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Very long tab name
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Very long tab name
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Very long tab name
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Very long tab name
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Very long tab name
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-selected="false"
+              class="styles__rm7scg4"
+              data-is-selected="false"
+              role="tab"
+              type="button"
+            >
+              <div
+                class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <div
+                  class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+                >
+                  Very long tab name
+                </div>
+              </div>
+            </button>
+            <div
+              class="styles__rm7scg9"
+            >
+              <div
+                aria-controls="menu-test"
+                aria-describedby="menu-test"
+                class="styles__pjfil59"
+                tabindex="-1"
+              >
+                <button
+                  aria-disabled="false"
+                  aria-expanded="true"
+                  aria-haspopup="dialog"
+                  class="styles__rm7scg4"
+                  role="tab"
+                  type="button"
+                >
+                  Blabla
+                  <svg
+                    class="styles__rm7scg8 uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <title>
+                      ArrowDownIcon
+                    </title>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="styles__gzh6qn2 styles__pjfil54"
+    id="menu-test"
+    role="dialog"
+    style="--_1meq2bv0: 0px; --_1meq2bv1: -5px; --_1meq2bv2: translate(50%, -50%) rotate(90deg); --_1meq2bv4: translate3d(8px, 0px, 0); --_1meq2bv5: 0ms; --_1meq2bv6: translate3d(8px, 0px, 0); --_1meq2bv7: 14.5rem; --_1meq2bv3: fit-content; opacity: 1; animation: none;"
+  >
+    <div
+      class="styles__pjfil52 styles_hasMaxHeight_true__pjfil53"
+      style="--_1meq2bv3: fit-content;"
+    >
+      <div
+        class="styles__gzh6qn7 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+        role="menu"
+        style="--gzh6qn0: 30rem; --gzh6qn1: 30rem;"
+      >
+        <div
+          class="styles__gzh6qn5 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+        >
+          <div
+            class="styles__gzh6qna styles_borderless_false__gzh6qnb"
+          >
+            <button
+              class="styles_default__rm7scg6 styles__gzh6qnd styles_sentiment_neutral__gzh6qng styles_undefined_compound_0__gzh6qnj"
+              data-active="false"
+              data-is-disclosure="false"
+              data-is-menu-item="true"
+              role="menuitem"
+              type="button"
+            >
+              Test
+            </button>
+          </div>
+          <div
+            class="styles__gzh6qna styles_borderless_false__gzh6qnb"
+          >
+            <button
+              class="styles_default__rm7scg6 styles__gzh6qnd styles_sentiment_neutral__gzh6qng styles_undefined_compound_0__gzh6qnj"
+              data-active="false"
+              data-is-disclosure="false"
+              data-is-menu-item="true"
+              role="menuitem"
+              type="button"
+            >
+              Test 2
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tabs > renders correctly with custom Tabs component 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__rm7scg2"
+      role="tablist"
+    >
+      <div
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            First
+          </div>
+        </div>
+      </div>
+      <a
+        aria-disabled="false"
+        aria-selected="false"
+        class="styles__rm7scg4"
+        data-is-selected="false"
+        role="tab"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Second
+          </div>
+        </div>
+      </a>
+      <a
+        class="styles__rm7scg4 styles__o0z6wk0 styles_prominence_default__o0z6wk3 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodyStrong__o0z6wkb styles_type_standalone__o0z6wkd styles_undefined_compound_4__o0z6wki styles__o0z6wkn"
+        data-variant="standalone"
+        href="#"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+          >
+            Very long tab name
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;

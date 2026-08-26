@@ -1,0 +1,136 @@
+'use client'
+
+import type { Box } from '@nivo/core'
+import { Pie } from '@nivo/pie'
+import { useTheme } from '@ultraviolet/themes'
+import type { theme as UVTheme } from '@ultraviolet/themes'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import { useCallback, useState } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
+import { getLegendColor } from '../../../../helpers/legend'
+import { getNivoTheme } from '../../../../helpers/nivoTheme'
+import { Text } from '../../../typography/Text'
+import { Legends } from './Legends'
+import type { Data } from './types'
+import { heightContainerPie, pieChartStyle } from './styles.css'
+
+type PieChartProps = {
+  chartProps?: Record<string, unknown>
+  data?: Data[]
+  height?: number
+  width?: number
+  emptyLegend?: string
+  legendHeader?: string
+  content?: ReactNode
+  withLegend?: boolean
+  margin?: Box
+  style?: CSSProperties
+}
+
+const DEFAULT_CHARTPROPS = {}
+const DEFAULT_MARGIN = { bottom: 10, left: 10, right: 10, top: 10 }
+
+/**
+ * PieChart component is a wrapper around the Nivo Pie component to display a pie chart.
+ * See https://nivo.rocks/pie/ for more information.
+ * @experimental This component is experimental and may be subject to breaking changes in the future.
+ */
+export const PieChart = ({
+  height = 206,
+  width = 206,
+  data = undefined,
+  emptyLegend,
+  legendHeader,
+  content,
+  withLegend = false,
+  margin = DEFAULT_MARGIN,
+  chartProps = DEFAULT_CHARTPROPS,
+  style,
+}: PieChartProps) => {
+  const theme = useTheme()
+  const [currentFocusIndex, setCurrentFocusIndex] = useState<string>()
+  const emptyTooltip = useCallback(() => <span />, [])
+  const isEmpty = !data || data.length === 0
+
+  // oxlint-disable-next-line typescript/no-unsafe-type-assertion
+  const localColors = getLegendColor(theme as typeof UVTheme)
+
+  return (
+    <div
+      className={pieChartStyle.container}
+      style={{
+        ...assignInlineVars({
+          [heightContainerPie]: height ? `${height}px` : '',
+        }),
+        ...style,
+      }}
+    >
+      <div className={pieChartStyle.pieContainer}>
+        <Pie
+          activeOuterRadiusOffset={isEmpty ? 0 : 4}
+          colors={localColors}
+          cornerRadius={0}
+          data={
+            isEmpty
+              ? [
+                  {
+                    id: 'empty',
+                    percent: 100,
+                  },
+                ]
+              : data
+          }
+          defs={[
+            {
+              background: 'inherit',
+              color: theme.colors.neutral.textStrong,
+              id: 'lines',
+              lineWidth: 2,
+              rotation: 0,
+              spacing: 5,
+              type: 'patternLines',
+            },
+          ]}
+          enableArcLabels={false}
+          enableArcLinkLabels={false}
+          height={height}
+          innerRadius={0.8}
+          margin={margin}
+          onMouseEnter={(datum, event) => {
+            if (!isEmpty) {
+              const pie = event.currentTarget
+              pie.style.cursor = 'pointer'
+              setCurrentFocusIndex(datum.id.toString())
+            }
+          }}
+          onMouseLeave={() => setCurrentFocusIndex(undefined)}
+          padAngle={1}
+          theme={getNivoTheme(theme)}
+          tooltip={emptyTooltip}
+          value="percent"
+          width={width}
+          {...chartProps}
+        />
+        {content ? <div className={pieChartStyle.content}>{content}</div> : null}
+      </div>
+
+      {withLegend && !isEmpty ? (
+        <Legends
+          colors={localColors}
+          data={data}
+          legendHeader={legendHeader}
+          focused={currentFocusIndex}
+          onFocusChange={setCurrentFocusIndex}
+        />
+      ) : null}
+
+      {withLegend && isEmpty && emptyLegend ? (
+        <Text as="p" variant="body" className={pieChartStyle.emptyLegend}>
+          {emptyLegend}
+        </Text>
+      ) : null}
+    </div>
+  )
+}
+
+PieChart.displayName = 'PieChart'

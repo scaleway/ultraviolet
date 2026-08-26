@@ -1,6 +1,6 @@
 import { useDebouncedCallback } from '@ultraviolet/utils'
 import { useEffect, useState } from 'react'
-import { SearchInput } from '../../../components/SearchInput'
+import { SearchInput } from '../../../components/data-entry/SearchInput'
 import type { FilterConfigItemSearch, FilterComponentProps } from '../types'
 
 type FilterSearchProps = FilterComponentProps<string, FilterConfigItemSearch>

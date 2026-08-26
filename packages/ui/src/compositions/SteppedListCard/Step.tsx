@@ -3,8 +3,8 @@
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { useContext } from 'react'
 import type { ReactNode } from 'react'
-import { StepList } from '../../components/StepList'
-import { Text } from '../../components/Text'
+import { StepList } from '../../components/data-display/StepList'
+import { Text } from '../../components/typography/Text'
 import { Data } from './helper'
 import { steppedListCardStyle } from './styles.css'
 

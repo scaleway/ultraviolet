@@ -1,7 +1,7 @@
 'use client'
 
 import { memo } from 'react'
-import { Stack } from '../../components/Stack'
+import { Stack } from '../../components/layout/Stack'
 import { useNavigation } from './NavigationProvider'
 import type { NavigationProps } from './types'
 import { navigationStyle } from './styles.css'

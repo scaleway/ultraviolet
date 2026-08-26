@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
-import { Stack } from '../../components/Stack'
+import { Stack } from '../../components/layout/Stack'
 import { CardContent } from './Content'
 import { ImageContent } from './ImageContent'
 import { LinkContent } from './LinkContent'

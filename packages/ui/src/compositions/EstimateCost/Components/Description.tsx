@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import type { ReactNode } from 'react'
-import { Text } from '../../../components/Text'
+import { Text } from '../../../components/typography/Text'
 import type EstimateCostLocales from '../locales/en'
 
 export const Description = memo(

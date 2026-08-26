@@ -1,0 +1,29 @@
+'use client'
+
+import type { ComponentProps, MouseEvent, ReactNode } from 'react'
+import { Button } from '../../../action/Button'
+import { useDialogContext } from '../Context'
+
+type DialogButtonProps = {
+  children: ReactNode
+} & Pick<ComponentProps<typeof Button>, 'onClick' | 'disabled' | 'tooltip' | 'style'>
+
+export const DialogButton = ({ children, onClick, disabled, tooltip, style }: DialogButtonProps) => {
+  const context = useDialogContext()
+
+  function onButtonClick(e: MouseEvent<HTMLElement>) {
+    const dialog = (e.target as HTMLElement).closest('dialog')
+    if (dialog) {
+      dialog.dataset['closeAction'] = 'confirm'
+    }
+    onClick?.(e)
+  }
+
+  return (
+    <Button disabled={disabled} onClick={onButtonClick} sentiment={context.sentiment} style={style} tooltip={tooltip}>
+      {children}
+    </Button>
+  )
+}
+
+DialogButton.displayName = 'Dialog.Button'

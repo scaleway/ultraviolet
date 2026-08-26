@@ -2,8 +2,8 @@ import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import type { ComponentProps } from 'react'
 import { OfferList } from '..'
-import { Button } from '../../../components/Button'
-import { Stack } from '../../../components/Stack'
+import { Button } from '../../../components/action/Button'
+import { Stack } from '../../../components/layout/Stack'
 import { columns, data } from './resources'
 
 export const OnChange: StoryFn<ComponentProps<typeof OfferList>> = props => {

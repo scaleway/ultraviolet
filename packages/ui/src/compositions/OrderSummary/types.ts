@@ -1,5 +1,5 @@
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
-import type { UnitInput } from '../../components/UnitInput'
+import type { UnitInput } from '../../components/data-entry/UnitInput'
 import type orderSummaryLocales from './locales/en'
 
 export type TimeUnit = 'seconds' | 'minutes' | 'hours' | 'days' | 'months'

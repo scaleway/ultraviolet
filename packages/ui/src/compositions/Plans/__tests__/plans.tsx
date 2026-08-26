@@ -1,8 +1,8 @@
 import { EntrepriseSupportProductIcon } from '@ultraviolet/icons/product'
 import type { ComponentProps } from 'react'
-import { Button } from '../../../components/Button'
-import { Separator } from '../../../components/Separator'
-import type { Text } from '../../../components/Text'
+import { Button } from '../../../components/action/Button'
+import { Separator } from '../../../components/layout/Separator'
+import type { Text } from '../../../components/typography/Text'
 
 export const planStarter = {
   data: {

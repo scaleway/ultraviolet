@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { Stack } from '../../../components/Stack'
+import { Stack } from '../../../components/layout/Stack'
 
 export const IconWithContent = ({ content, icon }: { content: ReactNode; icon: ReactNode }) => (
   <Stack alignItems="center" direction="row" gap="1.5">

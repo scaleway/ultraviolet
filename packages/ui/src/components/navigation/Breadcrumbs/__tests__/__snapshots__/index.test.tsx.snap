@@ -1,0 +1,261 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`breadcrumbs > click on middle item 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <nav
+      aria-label="breadcrumb"
+    >
+      <ol
+        class="styles__wfj6m80"
+      >
+        <li
+          class="styles__18ww0024 styles__18ww0027"
+        >
+          <a
+            class="styles__18ww0022 styles__o0z6wk0 styles_prominence_stronger__o0z6wk5 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodySmallStrong__o0z6wka styles_type_standalone__o0z6wkd styles_undefined_compound_6__o0z6wkk styles__o0z6wkn"
+            data-variant="standalone"
+            href="/step1"
+          >
+            Step 1
+          </a>
+        </li>
+        <li
+          class="styles__18ww0024 styles_clickable_true__18ww0025 styles__18ww0027"
+        >
+          <button
+            class="styles__18ww0023 styles__1x0t66m0 styles_disabled_false__1x0t66m1 styles_fullWidth_false__1x0t66m3 styles_sentiment_neutral__1x0t66m8 styles_size_small__1x0t66mg styles_variant_ghost__1x0t66mj styles_undefined_compound_24__1x0t66m19"
+            type="button"
+          >
+            Step 2
+          </button>
+        </li>
+        <li
+          class="styles__18ww0024 styles__18ww0027"
+        >
+          <div
+            class="styles__18ww0023 styles__18ww0026 style__1yhcak80 style_prominence_default__1yhcak84 style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a"
+          >
+            Step 3
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`breadcrumbs > last item should no be clickable 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <nav
+      aria-label="breadcrumb"
+    >
+      <ol
+        class="styles__wfj6m80"
+      >
+        <li
+          class="styles__18ww0024 styles__18ww0027"
+        >
+          <a
+            class="styles__18ww0022 styles__o0z6wk0 styles_prominence_stronger__o0z6wk5 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodySmallStrong__o0z6wka styles_type_standalone__o0z6wkd styles_undefined_compound_6__o0z6wkk styles__o0z6wkn"
+            data-variant="standalone"
+            href="/step1"
+          >
+            Step 1
+          </a>
+        </li>
+        <li
+          class="styles__18ww0024 styles__18ww0027"
+        >
+          <a
+            class="styles__18ww0022 styles__o0z6wk0 styles_prominence_stronger__o0z6wk5 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodySmallStrong__o0z6wka styles_type_standalone__o0z6wkd styles_undefined_compound_6__o0z6wkk styles__o0z6wkn"
+            data-variant="standalone"
+            href="/step1/step2"
+          >
+            I'm a very long long long long long long long long long long long long step
+          </a>
+        </li>
+        <li
+          class="styles__18ww0024 styles_clickable_true__18ww0025 styles__18ww0027"
+        >
+          <button
+            class="styles__18ww0023 styles__1x0t66m0 styles_disabled_false__1x0t66m1 styles_fullWidth_false__1x0t66m3 styles_sentiment_neutral__1x0t66m8 styles_size_small__1x0t66mg styles_variant_ghost__1x0t66mj styles_undefined_compound_24__1x0t66m19"
+            type="button"
+          >
+            Step 3
+          </button>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`breadcrumbs > renders correctly with default values 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <nav
+      aria-label="breadcrumb"
+    >
+      <ol
+        class="styles__wfj6m80"
+      >
+        <li
+          class="styles__18ww0024 styles__18ww0027"
+        >
+          <a
+            class="styles__18ww0022 styles__o0z6wk0 styles_prominence_stronger__o0z6wk5 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodySmallStrong__o0z6wka styles_type_standalone__o0z6wkd styles_undefined_compound_6__o0z6wkk styles__o0z6wkn"
+            data-variant="standalone"
+            href="/step1"
+          >
+            Step 1
+          </a>
+        </li>
+        <li
+          class="styles__18ww0024 styles__18ww0027"
+        >
+          <a
+            class="styles__18ww0022 styles__o0z6wk0 styles_prominence_stronger__o0z6wk5 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodySmallStrong__o0z6wka styles_type_standalone__o0z6wkd styles_undefined_compound_6__o0z6wkk styles__o0z6wkn"
+            data-variant="standalone"
+            href="/step1/step2"
+          >
+            I'm a very long long long long long long long long long long long long step
+          </a>
+        </li>
+        <li
+          class="styles__18ww0024 styles__18ww0027"
+        >
+          <div
+            class="styles__18ww0023 styles__18ww0026 style__1yhcak80 style_prominence_default__1yhcak84 style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a"
+          >
+            Step 3
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`breadcrumbs > renders correctly with invalid child 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <nav
+      aria-label="breadcrumb"
+    >
+      <ol
+        class="styles__wfj6m80"
+      >
+        Invalid child
+      </ol>
+    </nav>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`breadcrumbs > renders correctly with minWidth and maxWidth 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <nav
+      aria-label="breadcrumb"
+    >
+      <ol
+        class="styles__wfj6m80"
+      >
+        <li
+          class="styles__18ww0024 styles__18ww0027"
+        >
+          <a
+            class="styles__18ww0022 styles__o0z6wk0 styles_prominence_stronger__o0z6wk5 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodySmallStrong__o0z6wka styles_type_standalone__o0z6wkd styles_undefined_compound_6__o0z6wkk styles__o0z6wkn"
+            data-variant="standalone"
+            href="/step1"
+          >
+            Step 1
+          </a>
+        </li>
+        <li
+          class="styles__18ww0024 styles__18ww0027"
+          style="--_18ww0021: 100px; --_18ww0020: 200px;"
+        >
+          <a
+            class="styles__18ww0022 styles__o0z6wk0 styles_prominence_stronger__o0z6wk5 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodySmallStrong__o0z6wka styles_type_standalone__o0z6wkd styles_undefined_compound_6__o0z6wkk styles__o0z6wkn"
+            data-variant="standalone"
+            href="/step1/step2"
+          >
+            I'm a very long long long long long long long long long long long long step
+          </a>
+        </li>
+        <li
+          class="styles__18ww0024 styles__18ww0027"
+        >
+          <div
+            class="styles__18ww0023 styles__18ww0026 style__1yhcak80 style_prominence_default__1yhcak84 style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a"
+          >
+            Step 3
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`breadcrumbs > should render with custom render prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <nav
+      aria-label="breadcrumb"
+    >
+      <ol
+        class="styles__wfj6m80"
+      >
+        <li
+          class="styles__18ww0024 styles__18ww0027"
+        >
+          <a
+            class="styles__18ww0022 styles__o0z6wk0 styles_prominence_stronger__o0z6wk5 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodySmallStrong__o0z6wka styles_type_standalone__o0z6wkd styles_undefined_compound_6__o0z6wkk styles__o0z6wkn"
+            data-variant="standalone"
+            href="/step1"
+          >
+            Step 1
+          </a>
+        </li>
+        <li
+          class="styles__18ww0024 styles__18ww0027"
+        >
+          <a
+            class="styles__18ww0022 styles__o0z6wk0 styles_prominence_stronger__o0z6wk5 styles_sentiment_info__o0z6wk2 styles_oneLine_false__o0z6wk8 styles_variant_bodySmallStrong__o0z6wka styles_type_standalone__o0z6wkd styles_undefined_compound_6__o0z6wkk styles__o0z6wkn"
+            data-custom-link="true"
+            data-variant="standalone"
+            href="/custom"
+          >
+            Custom Link
+          </a>
+        </li>
+        <li
+          class="styles__18ww0024 styles__18ww0027"
+        >
+          <div
+            class="styles__18ww0023 styles__18ww0026 style__1yhcak80 style_prominence_default__1yhcak84 style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a"
+          >
+            Step 3
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</DocumentFragment>
+`;

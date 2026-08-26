@@ -1,7 +1,7 @@
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { useState } from 'react'
-import { Popover } from '../../components/Popover'
-import { Tooltip } from '../../components/Tooltip'
+import { Popover } from '../../components/overlay/Popover'
+import { Tooltip } from '../../components/overlay/Tooltip'
 import type { Hint } from './types'
 import { plansStyle } from './styles.css'
 

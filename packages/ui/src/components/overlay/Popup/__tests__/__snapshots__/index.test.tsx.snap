@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`popup > should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="_r_0_"
+      aria-describedby="_r_0_"
+      class="styles__pjfil59"
+      tabindex="0"
+    >
+      Hover me
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`popup > should render correctly without text 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    Hover me
+  </div>
+</DocumentFragment>
+`;

@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { ContentCardGroup } from '..'
-import { Row } from '../../../components/Row'
+import { Row } from '../../../components/layout/Row'
 
 export const WithLargeHeight: StoryFn<ComponentProps<typeof ContentCardGroup>> = ({ ...props }) => (
   <Row gap={1} templateColumns="repeat(2, 1fr)">

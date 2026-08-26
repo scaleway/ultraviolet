@@ -1,0 +1,138 @@
+'use client'
+
+import { cn } from '@ultraviolet/utils'
+import { useId } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
+import { Stack } from '../../../layout/Stack'
+import { Label } from '../../../typography/Label'
+import { SelectableCard } from '../../SelectableCard'
+import { SelectInput } from '../../SelectInput'
+import { useSelectableCardOptionGroup } from '../Provider'
+import { Image } from './Image'
+import { selectableCardOptionGroupStyle } from '../styles.css'
+
+type OptionProps = Omit<ComponentProps<typeof SelectableCard>, 'onChange'> & {
+  value: string
+  className?: string
+  children?: ReactNode
+  options: ComponentProps<typeof SelectInput>['options']
+  optionValue?: ComponentProps<typeof SelectInput>['value']
+  optionPlaceholder?: ComponentProps<typeof SelectInput>['placeholder']
+  image?: ReactNode
+  labelDescription?: ComponentProps<typeof Label>['labelDescription']
+  id?: string
+  'data-testid'?: string
+  tooltip?: string
+}
+
+export const Option = ({
+  value,
+  label,
+  labelDescription,
+  'aria-label': ariaLabel,
+  children,
+  className,
+  options,
+  optionPlaceholder,
+  image,
+  disabled,
+  id,
+  'data-testid': dataTestId,
+  tooltip,
+  style,
+}: OptionProps) => {
+  const {
+    onChange,
+    onChangeOption,
+    groupValue,
+    disabled: groupDisabled,
+    size,
+    error,
+    optionValue,
+  } = useSelectableCardOptionGroup()
+
+  const generatedId = useId()
+  const inputId = id ?? generatedId
+
+  const isDisabled = disabled || groupDisabled
+
+  return (
+    <SelectableCard
+      checked={groupValue === value}
+      className={cn(className, selectableCardOptionGroupStyle.selectableCard)}
+      data-testid={dataTestId}
+      disabled={isDisabled}
+      isError={error}
+      onChange={event => {
+        onChange?.(event)
+        if (Array.isArray(options)) {
+          onChangeOption?.(options?.[0]?.value)
+        }
+      }}
+      showTick
+      style={style}
+      tooltip={tooltip}
+      type="radio"
+      value={value}
+      {...(label ? { id: inputId } : { 'aria-label': ariaLabel! })}
+    >
+      <Stack
+        className={selectableCardOptionGroupStyle.optionFullHeight}
+        direction="column"
+        flex="1 1 auto"
+        gap={2}
+        justifyContent="space-between"
+        width="100%"
+      >
+        <Stack
+          alignItems="center"
+          className={selectableCardOptionGroupStyle.optionPadded}
+          direction="column"
+          gap={1}
+          justifyContent="center"
+          width="100%"
+        >
+          {typeof image === 'string' ? (
+            <Image alt={typeof label === 'string' ? label : value} disabled={isDisabled} size={size} src={image} />
+          ) : (
+            image
+          )}
+          <Stack alignItems="center" direction="column" gap={0.5} justifyContent="center" width="100%">
+            {typeof label === 'string' ? (
+              <Label
+                disabled={isDisabled}
+                htmlFor={inputId}
+                labelDescription={labelDescription}
+                sentiment={groupValue === value ? 'primary' : 'neutral'}
+              >
+                {label}
+              </Label>
+            ) : (
+              label
+            )}
+            {children}
+          </Stack>
+        </Stack>
+        <SelectInput
+          aria-label={typeof label === 'string' ? `${label} option` : `${value} option`}
+          className={cn(
+            selectableCardOptionGroupStyle.optionSelectInput,
+            isDisabled ? selectableCardOptionGroupStyle.optionSelectInputDisabled : '',
+            error ? selectableCardOptionGroupStyle.optionSelectInputError : '',
+          )}
+          data-testid={dataTestId ? `${dataTestId}-select` : undefined}
+          disabled={isDisabled}
+          error={error}
+          name="selectable-card-option"
+          onChange={onChangeOption}
+          options={options}
+          placeholder={optionPlaceholder}
+          size="medium"
+          value={optionValue}
+        />
+      </Stack>
+    </SelectableCard>
+  )
+}
+
+Option.displayName = 'SelectableCardOptionGroup.Option'

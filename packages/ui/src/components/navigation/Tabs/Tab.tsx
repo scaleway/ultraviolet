@@ -1,0 +1,122 @@
+'use client'
+
+import { cn } from '@ultraviolet/utils'
+import { forwardRef, useMemo } from 'react'
+import type {
+  ComponentProps,
+  CSSProperties,
+  ElementType,
+  ForwardedRef,
+  KeyboardEventHandler,
+  MouseEventHandler,
+  ReactNode,
+  Ref,
+} from 'react'
+import { Badge } from '../../badges/Badge'
+import { Stack } from '../../layout/Stack'
+import { Tooltip } from '../../overlay/Tooltip'
+import { Text } from '../../typography/Text'
+import { useTabsContext } from './TabsContext'
+import { tabsStyle } from './styles.css'
+
+type TabProps<T extends ElementType = 'button'> = {
+  as?: T
+  badge?: ReactNode
+  children?: ReactNode
+  className?: string
+  counter?: number | string
+  disabled?: boolean
+  onClick?: MouseEventHandler<HTMLElement>
+  onKeyDown?: KeyboardEventHandler<HTMLElement>
+  subtitle?: string
+  tooltip?: string
+  value?: string | number
+  style?: CSSProperties
+} & Omit<
+  ComponentProps<T>,
+  'as' | 'badge' | 'children' | 'className' | 'counter' | 'disabled' | 'value' | 'tooltip' | 'role'
+>
+
+export const Tab = forwardRef(
+  <T extends ElementType = 'button'>(
+    {
+      as,
+      badge,
+      children,
+      className,
+      counter,
+      disabled = false,
+      onClick,
+      onKeyDown,
+      subtitle,
+      tooltip,
+      value,
+      ...props
+    }: TabProps<T>,
+    ref: ForwardedRef<HTMLElement>,
+  ) => {
+    const { selected, onChange } = useTabsContext()
+    const computedAs = as ?? 'button'
+    const ComputedComponent = as ?? 'button'
+    const isSelected = useMemo(() => value !== undefined && selected === value, [value, selected])
+
+    return (
+      <Tooltip text={tooltip}>
+        <ComputedComponent
+          aria-disabled={disabled}
+          aria-label={value ? `${value}` : undefined}
+          aria-selected={isSelected}
+          className={cn(className, tabsStyle.button)}
+          data-is-selected={isSelected}
+          disabled={computedAs === 'button' ? disabled : undefined}
+          onClick={event => {
+            if (value !== undefined) {
+              onChange(value)
+            }
+            onClick?.(event)
+          }}
+          onKeyDown={event => {
+            onKeyDown?.(event)
+            if (!(event.defaultPrevented || disabled) && value) {
+              onChange(value)
+            }
+          }}
+          ref={ref as unknown as Ref<HTMLButtonElement>}
+          role="tab"
+          type={computedAs === 'button' ? 'button' : undefined}
+          {...props}
+        >
+          <Stack direction="column" gap={0.5}>
+            <Stack alignItems="center" direction="row">
+              {children}
+              {typeof counter === 'number' || typeof counter === 'string' ? (
+                <Badge
+                  className={tabsStyle.badge}
+                  prominence={isSelected ? 'strong' : 'default'}
+                  sentiment={isSelected ? 'primary' : 'neutral'}
+                  size="medium"
+                >
+                  {counter}
+                </Badge>
+              ) : null}
+              {badge ? <span className={tabsStyle.badgeContainer}>{badge}</span> : null}
+            </Stack>
+            {subtitle ? (
+              <Stack direction="row">
+                <Text
+                  as="span"
+                  className={tabsStyle.textSelected[isSelected ? 'selected' : 'default']}
+                  prominence="weak"
+                  sentiment="neutral"
+                  variant="bodySmall"
+                >
+                  {subtitle}
+                </Text>
+              </Stack>
+            ) : null}
+          </Stack>
+        </ComputedComponent>
+      </Tooltip>
+    )
+  },
+)

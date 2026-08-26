@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react'
-import { Tag } from '../../../components/Tag'
+import { Tag } from '../../../components/badges/Tag'
 import { conversationStyle } from '../styles.css'
 
 export const MessageTag = ({ children, style }: { children: ReactNode; style?: CSSProperties }) => (

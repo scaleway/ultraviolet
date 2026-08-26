@@ -1,0 +1,333 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`expandableCard > renders correctly with complex header 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__2mvrdk2 styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_gap_1rem_xxsmall__mxir933v"
+      style="--_1o893js0: 100%;"
+    >
+      <details
+        class="styles__2mvrdk3"
+        data-clicking="false"
+      >
+        <summary
+          class="styles__2mvrdk1"
+          data-disabled="false"
+        >
+          <svg
+            class="styles__2mvrdk4 uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz1i"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              ArrowDownIcon
+            </title>
+            <path
+              clip-rule="evenodd"
+              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div>
+            <h2
+              class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            >
+              Title
+            </h2>
+            <p
+              class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a"
+            >
+              Description
+            </p>
+          </div>
+        </summary>
+        <div
+          class="styles__2mvrdk5"
+        >
+          Content
+        </div>
+      </details>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`expandableCard > renders correctly with default values 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__2mvrdk2 styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_gap_1rem_xxsmall__mxir933v"
+      style="--_1o893js0: 100%;"
+    >
+      <details
+        class="styles__2mvrdk3"
+        data-clicking="false"
+      >
+        <summary
+          class="styles__2mvrdk1"
+          data-disabled="false"
+        >
+          <svg
+            class="styles__2mvrdk4 uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz1i"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              ArrowDownIcon
+            </title>
+            <path
+              clip-rule="evenodd"
+              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <h2
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+          >
+            Title
+          </h2>
+        </summary>
+        <div
+          class="styles__2mvrdk5"
+        >
+          Content
+        </div>
+      </details>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`expandableCard > works properly draggable 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__2mvrdk2 styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_gap_1rem_xxsmall__mxir933v"
+      data-draggable="true"
+      data-value="card-1"
+      draggable="true"
+      style="--_1o893js0: 100%;"
+    >
+      <div
+        class="styles__2mvrdk6 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_justifyContent_center_xxsmall__mxir9361"
+        data-testid="draggable-icon-card-1"
+        data-visible="true"
+      >
+        <div
+          class="styles__1u0cyic5"
+          tabindex="0"
+        >
+          <svg
+            class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz4 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz1q"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              DragIcon
+            </title>
+            <path
+              d="M5.5 14q-.618 0-1.06-.44A1.45 1.45 0 0 1 4 12.5q0-.619.44-1.06Q4.883 11 5.5 11t1.06.44q.44.442.44 1.06t-.44 1.06Q6.12 14 5.5 14m4.5 0q-.619 0-1.06-.44a1.45 1.45 0 0 1-.44-1.06q0-.619.44-1.06Q9.382 11 10 11t1.06.44q.44.442.44 1.06t-.44 1.06Q10.617 14 10 14M5.5 9.5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 8q0-.619.44-1.06.442-.44 1.06-.44t1.06.44Q7 7.383 7 8t-.44 1.06q-.44.44-1.06.44m4.5 0q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 8q0-.619.44-1.06.441-.44 1.06-.44t1.06.44q.44.442.44 1.06t-.44 1.06q-.442.44-1.06.44M5.5 5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 3.5q0-.62.44-1.06Q4.883 2 5.5 2t1.06.44Q7 2.883 7 3.5q0 .62-.44 1.06T5.5 5M10 5q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 3.5q0-.62.44-1.06Q9.382 2 10 2t1.06.44q.44.442.44 1.06 0 .62-.44 1.06Q10.617 5 10 5"
+            />
+          </svg>
+        </div>
+      </div>
+      <details
+        class="styles__2mvrdk3"
+        data-clicking="true"
+      >
+        <summary
+          class="styles__2mvrdk1"
+          data-disabled="false"
+        >
+          <svg
+            class="styles__2mvrdk4 uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz1i"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              ArrowDownIcon
+            </title>
+            <path
+              clip-rule="evenodd"
+              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <h2
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+          >
+            Title
+          </h2>
+        </summary>
+        <div
+          class="styles__2mvrdk5"
+        >
+          Content
+        </div>
+      </details>
+      <div
+        class="styles__2mvrdk0"
+        data-first="true"
+      />
+      <div
+        class="styles__2mvrdk0"
+        data-testid="card-1-dropable-area"
+        style="border-color: transparent;"
+      />
+    </div>
+    <div
+      class="styles__2mvrdk2 styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_gap_1rem_xxsmall__mxir933v"
+      data-draggable="true"
+      data-value="card-2"
+      draggable="true"
+      style="--_1o893js0: 100%;"
+    >
+      <div
+        class="styles__2mvrdk6 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_justifyContent_center_xxsmall__mxir9361"
+        data-testid="draggable-icon-card-2"
+        data-visible="false"
+      >
+        <div
+          class="styles__1u0cyic5"
+          tabindex="0"
+        >
+          <svg
+            class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz6 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz26"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              DragIcon
+            </title>
+            <path
+              d="M5.5 14q-.618 0-1.06-.44A1.45 1.45 0 0 1 4 12.5q0-.619.44-1.06Q4.883 11 5.5 11t1.06.44q.44.442.44 1.06t-.44 1.06Q6.12 14 5.5 14m4.5 0q-.619 0-1.06-.44a1.45 1.45 0 0 1-.44-1.06q0-.619.44-1.06Q9.382 11 10 11t1.06.44q.44.442.44 1.06t-.44 1.06Q10.617 14 10 14M5.5 9.5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 8q0-.619.44-1.06.442-.44 1.06-.44t1.06.44Q7 7.383 7 8t-.44 1.06q-.44.44-1.06.44m4.5 0q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 8q0-.619.44-1.06.441-.44 1.06-.44t1.06.44q.44.442.44 1.06t-.44 1.06q-.442.44-1.06.44M5.5 5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 3.5q0-.62.44-1.06Q4.883 2 5.5 2t1.06.44Q7 2.883 7 3.5q0 .62-.44 1.06T5.5 5M10 5q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 3.5q0-.62.44-1.06Q9.382 2 10 2t1.06.44q.44.442.44 1.06 0 .62-.44 1.06Q10.617 5 10 5"
+            />
+          </svg>
+        </div>
+      </div>
+      <details
+        class="styles__2mvrdk3"
+        data-clicking="false"
+      >
+        <summary
+          class="styles__2mvrdk1"
+          data-disabled="false"
+        >
+          <svg
+            class="styles__2mvrdk4 uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz1i"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              ArrowDownIcon
+            </title>
+            <path
+              clip-rule="evenodd"
+              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <h2
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+          >
+            Title
+          </h2>
+        </summary>
+        <div
+          class="styles__2mvrdk5"
+        >
+          Content
+        </div>
+      </details>
+      <div
+        class="styles__2mvrdk0"
+        data-testid="card-2-dropable-area"
+      />
+    </div>
+    <div
+      class="styles__2mvrdk2 styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_gap_1rem_xxsmall__mxir933v"
+      data-draggable="true"
+      data-value="card-3"
+      draggable="true"
+      style="--_1o893js0: 100%;"
+    >
+      <div
+        class="styles__2mvrdk6 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_justifyContent_center_xxsmall__mxir9361"
+        data-testid="draggable-icon-card-3"
+        data-visible="false"
+      >
+        <div
+          class="styles__1u0cyic5"
+          tabindex="0"
+        >
+          <svg
+            class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz6 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz26"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              DragIcon
+            </title>
+            <path
+              d="M5.5 14q-.618 0-1.06-.44A1.45 1.45 0 0 1 4 12.5q0-.619.44-1.06Q4.883 11 5.5 11t1.06.44q.44.442.44 1.06t-.44 1.06Q6.12 14 5.5 14m4.5 0q-.619 0-1.06-.44a1.45 1.45 0 0 1-.44-1.06q0-.619.44-1.06Q9.382 11 10 11t1.06.44q.44.442.44 1.06t-.44 1.06Q10.617 14 10 14M5.5 9.5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 8q0-.619.44-1.06.442-.44 1.06-.44t1.06.44Q7 7.383 7 8t-.44 1.06q-.44.44-1.06.44m4.5 0q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 8q0-.619.44-1.06.441-.44 1.06-.44t1.06.44q.44.442.44 1.06t-.44 1.06q-.442.44-1.06.44M5.5 5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 3.5q0-.62.44-1.06Q4.883 2 5.5 2t1.06.44Q7 2.883 7 3.5q0 .62-.44 1.06T5.5 5M10 5q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 3.5q0-.62.44-1.06Q9.382 2 10 2t1.06.44q.44.442.44 1.06 0 .62-.44 1.06Q10.617 5 10 5"
+            />
+          </svg>
+        </div>
+      </div>
+      <details
+        class="styles__2mvrdk3"
+        data-clicking="false"
+      >
+        <summary
+          class="styles__2mvrdk1"
+          data-disabled="false"
+        >
+          <svg
+            class="styles__2mvrdk4 uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz1i"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              ArrowDownIcon
+            </title>
+            <path
+              clip-rule="evenodd"
+              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <h2
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+          >
+            Title
+          </h2>
+        </summary>
+        <div
+          class="styles__2mvrdk5"
+        >
+          Content
+        </div>
+      </details>
+      <div
+        class="styles__2mvrdk0"
+        data-testid="card-3-dropable-area"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

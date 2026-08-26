@@ -1,5 +1,5 @@
-import { SelectInput } from '../../../components/SelectInput'
-import type { DataType } from '../../../components/SelectInput/types'
+import { SelectInput } from '../../../components/data-entry/SelectInput'
+import type { DataType } from '../../../components/data-entry/SelectInput/types'
 import type { OptionSelectorProps } from '../types'
 import { optionSelectorStyle } from '../styles.css'
 

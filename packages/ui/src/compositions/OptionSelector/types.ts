@@ -1,5 +1,5 @@
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
-import type { SelectInput } from '../../components/SelectInput'
+import type { SelectInput } from '../../components/data-entry/SelectInput'
 
 export type SelectorOption = {
   content: ReactNode

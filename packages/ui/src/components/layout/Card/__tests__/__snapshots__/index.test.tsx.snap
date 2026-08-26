@@ -1,0 +1,288 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`card > renders correctly with active 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1mv9gt41"
+      data-disabled="false"
+      data-is-active="true"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with active and disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1mv9gt41"
+      data-disabled="true"
+      data-is-active="true"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with advanced header 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1mv9gt40 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-disabled="false"
+    >
+      <h2>
+        Advanced Title
+      </h2>
+      <div
+        class="styles__1mv9gt41"
+        data-disabled="false"
+        data-is-active="false"
+      >
+        Hello
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with advanced header and subHeader 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1mv9gt40 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-disabled="false"
+    >
+      <h2>
+        Advanced Title
+      </h2>
+      <div
+        class="styles__1mv9gt41"
+        data-disabled="false"
+        data-is-active="false"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_1rem_xxsmall__mxir933v"
+        >
+          <h2>
+            Advanced subHeader
+          </h2>
+          Hello
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with advanced subHeader 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1mv9gt41"
+      data-disabled="false"
+      data-is-active="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_1rem_xxsmall__mxir933v"
+      >
+        <h2>
+          Advanced subHeader
+        </h2>
+        Hello
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with className 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="test styles__1mv9gt41"
+      data-disabled="false"
+      data-is-active="false"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with data-testid 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1mv9gt41"
+      data-disabled="false"
+      data-is-active="false"
+      data-testid="test"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1mv9gt41"
+      data-disabled="true"
+      data-is-active="false"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with disabled and header 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1mv9gt40 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-disabled="true"
+    >
+      <h2
+        class="style__1yhcak80 style_disabled_true__1yhcak81 style_prominence_strong__1yhcak85 style_sentiment_neutral__1yhcak8b style_variant_heading__1yhcak811 style_undefined_compound_29__1yhcak823"
+      >
+        Title
+      </h2>
+      <div
+        class="styles__1mv9gt41"
+        data-disabled="true"
+        data-is-active="false"
+      >
+        Hello
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with header 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1mv9gt40 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-disabled="false"
+    >
+      <h2
+        class="style__1yhcak80 style_prominence_strong__1yhcak85 style_sentiment_neutral__1yhcak8b style_variant_heading__1yhcak811 style_undefined_compound_1__1yhcak81b style_undefined_compound_65__1yhcak833"
+      >
+        Title
+      </h2>
+      <div
+        class="styles__1mv9gt41"
+        data-disabled="false"
+        data-is-active="false"
+      >
+        Hello
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with header and subHeader 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1mv9gt40 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+      data-disabled="false"
+    >
+      <h2
+        class="style__1yhcak80 style_prominence_strong__1yhcak85 style_sentiment_neutral__1yhcak8b style_variant_heading__1yhcak811 style_undefined_compound_1__1yhcak81b style_undefined_compound_65__1yhcak833"
+      >
+        Main title
+      </h2>
+      <div
+        class="styles__1mv9gt41"
+        data-disabled="false"
+        data-is-active="false"
+      >
+        <div
+          class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_1rem_xxsmall__mxir933v"
+        >
+          <h3
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_headingSmallStrong__1yhcak816 style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+          >
+            Title
+          </h3>
+          Hello
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with subHeader 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1mv9gt41"
+      data-disabled="false"
+      data-is-active="false"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_1rem_xxsmall__mxir933v"
+      >
+        <h3
+          class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_headingSmallStrong__1yhcak816 style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        >
+          Title
+        </h3>
+        Hello
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly without header 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1mv9gt41"
+      data-disabled="false"
+      data-is-active="false"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;

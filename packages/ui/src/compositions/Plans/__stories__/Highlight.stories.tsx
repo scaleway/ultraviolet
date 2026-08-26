@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { Plans } from '..'
-import { Button } from '../../../components/Button'
+import { Button } from '../../../components/action/Button'
 import { domain, fees, gb, pipeline, ssl } from './features'
 
 const planStarter = {

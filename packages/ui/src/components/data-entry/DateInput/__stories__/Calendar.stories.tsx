@@ -1,0 +1,43 @@
+import type { StoryFn } from '@storybook/react-vite'
+import { useState } from 'react'
+import { DateInput } from '..'
+import { Stack } from '../../../layout/Stack'
+
+export const Calendar: StoryFn = args => {
+  const [value, setValue] = useState<Date | null>()
+
+  return (
+    <Stack gap={2}>
+      <DateInput
+        {...args}
+        input="calendar"
+        label="As a calendar"
+        onChange={setValue}
+        selectsRange={false}
+        value={value}
+      />
+      Selected date: {value?.toDateString()}
+    </Stack>
+  )
+}
+
+Calendar.args = {
+  input: 'calendar',
+}
+
+Calendar.decorators = [
+  StoryComponent => (
+    <div style={{ height: '350px' }}>
+      <StoryComponent />
+    </div>
+  ),
+]
+
+Calendar.parameters = {
+  docs: {
+    description: {
+      story:
+        'Set prop `input` to "calendar" in order to only display the calendar part of the component (no popover, no text input).',
+    },
+  },
+}

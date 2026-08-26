@@ -1,5 +1,5 @@
 import { Conversation } from '..'
-import { Avatar } from '../../../components/Avatar'
+import { Avatar } from '../../../components/other/Avatar'
 import { Template } from './Template.stories'
 
 export const Playground = Template.bind({})

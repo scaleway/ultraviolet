@@ -1,0 +1,301 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`drawer > custom header 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="drawer-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`drawer > function footer 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="drawer-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`drawer > function header 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="drawer-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`drawer > renders custom size=large 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="_r_n_"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      button
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`drawer > renders custom size=medium 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="_r_i_"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      button
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`drawer > renders custom size=small 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="_r_s_"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      button
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`drawer > renders with custom classNames 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`drawer > renders with default Props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="_r_0_"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Test
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`drawer > renders with default Props and function children 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="_r_3_"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`drawer > renders with default Props and function children open 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`drawer > renders with disclosure 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="drawer-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Test
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`drawer > renders with disclosure and onClose 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="drawer-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open drawer
+    </button>
+  </div>
+  <div>
+    <div
+      class="backdrop-drawer styles__1h53v067"
+      data-testid="test-backdrop"
+    >
+      <dialog
+        aria-label="drawer-test"
+        aria-modal="true"
+        class="styles_medium__1ygoju31 styles__1ygoju38 styles__1h53v068 styles_placement_right__1h53v06f styles_size_medium__1h53v06l"
+        data-size="medium"
+        data-testid="test"
+        id="drawer-test"
+        open=""
+        style="--_1h53v060: -0px; --_1h53v061: 1.1;"
+        tabindex="0"
+      >
+        <div
+          class="styles__1ygoju33 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_1rem_xxsmall__mxir933v"
+        >
+          <h2
+            class="styles__1ygoju36 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_headingSmallStrong__1yhcak816 style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+          >
+            header
+          </h2>
+          <hr
+            aria-orientation="horizontal"
+            class="styles__60da8lb styles_direction_horizontal__60da8lc styles_sentiment_neutral__60da8li"
+            style="--_60da8l0: 1px;"
+          />
+          <div
+            class="styles__1ygoju34"
+          >
+            <div
+              class="styles__1ygoju35"
+            >
+              <div>
+                drawer
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="styles__1h53v063"
+        >
+          <button
+            aria-label="close"
+            class="styles__1x0t66m0 styles_disabled_false__1x0t66m1 styles_fullWidth_false__1x0t66m3 styles_sentiment_neutral__1x0t66m8 styles_size_small__1x0t66mg styles_variant_ghost__1x0t66mj styles_undefined_compound_24__1x0t66m19"
+            data-testid="test-close-button"
+            type="button"
+          >
+            <svg
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzg uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <title>
+                CloseIcon
+              </title>
+              <path
+                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+              />
+            </svg>
+          </button>
+        </div>
+      </dialog>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`drawer > renders with open={true} 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`drawer > renders with push 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="drawer-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`drawer > renders without disclosure 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`drawer > renders without separator 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`drawer > with footer 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="drawer-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open
+    </button>
+  </div>
+</DocumentFragment>
+`;

@@ -3,8 +3,8 @@
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { forwardRef } from 'react'
 import type { AnchorHTMLAttributes, CSSProperties, ElementType, ReactNode } from 'react'
-import { Stack } from '../../components/Stack'
-import { Text } from '../../components/Text'
+import { Stack } from '../../components/layout/Stack'
+import { Text } from '../../components/typography/Text'
 import { contentCardGroupStyle } from './styles.css'
 
 type CardProps = {

@@ -1,5 +1,5 @@
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
-import { Stack } from '../../components/Stack'
+import { Stack } from '../../components/layout/Stack'
 import { contentCardStyle } from './styles.css'
 
 export const LinkContent = ({ direction, disabled }: { direction: 'column' | 'row'; disabled?: boolean }) => (

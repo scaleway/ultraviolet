@@ -4,8 +4,8 @@ import { toggleMark } from 'prosemirror-commands'
 import type { MarkType } from 'prosemirror-model'
 import { liftListItem, wrapInList } from 'prosemirror-schema-list'
 import type { EditorState, Transaction } from 'prosemirror-state'
-import { Button } from '../../components/Button'
-import { Stack } from '../../components/Stack'
+import { Button } from '../../components/action/Button'
+import { Stack } from '../../components/layout/Stack'
 import { isSelectionInNodeType } from './helpers'
 
 type ToolbarProps = {

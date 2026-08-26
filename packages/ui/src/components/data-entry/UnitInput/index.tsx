@@ -1,0 +1,194 @@
+'use client'
+
+import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
+import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
+import { cn } from '@ultraviolet/utils'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import { useEffect, useId, useMemo, useState } from 'react'
+import type { ComponentProps, CSSProperties, InputHTMLAttributes, ReactNode } from 'react'
+import { hasHelperText } from '../../../helpers/hasHelperText'
+import type { BaseFormComponentProps } from '../../../types'
+import { Row } from '../../layout/Row'
+import { Stack } from '../../layout/Stack'
+import { Description } from '../../typography/Description'
+import { Label } from '../../typography/Label'
+import { SelectInput } from '../SelectInput'
+import type { OptionType } from '../SelectInput/types'
+import { unitInputStyle, widthSelectInput } from './styles.css'
+
+type UnitInputValue = { inputValue: number; unit: string }
+
+type UnitInputProps = BaseFormComponentProps<HTMLInputElement> & {
+  max?: number
+  min?: number
+  value?: UnitInputValue['inputValue']
+  unitValue?: UnitInputValue['unit']
+  onChange?: (value: UnitInputValue['inputValue']) => void
+  onChangeUnitValue?: (values: string) => void
+  options: OptionType[]
+  selectInputWidth?: number | string
+  size?: 'small' | 'medium' | 'large'
+  unitError?: string
+  width?: CSSProperties['width']
+  maxWidth?: CSSProperties['maxWidth']
+  placeholderUnit?: string
+  error?: boolean | string
+  success?: boolean | string
+  labelInformation?: ReactNode
+  step?: number | string
+  dropdownAlign?: ComponentProps<typeof SelectInput>['dropdownAlign']
+  templateColumns?: ComponentProps<typeof Row>['templateColumns']
+} & Pick<InputHTMLAttributes<HTMLInputElement>, 'placeholder' | 'readOnly'>
+
+export const UnitInput = ({
+  id,
+  name = '',
+  max = Number.MAX_SAFE_INTEGER,
+  min = 0,
+  autoFocus = false,
+  size = 'large',
+  placeholder = '0',
+  placeholderUnit = 'Select item',
+  onChange,
+  onChangeUnitValue,
+  value,
+  unitValue,
+  selectInputWidth = '12.6rem',
+  disabled = false,
+  options,
+  className,
+  label,
+  step = 1,
+  error,
+  required,
+  helper,
+  unitError,
+  success,
+  'data-testid': dataTestId,
+  width,
+  maxWidth,
+  labelInformation,
+  readOnly,
+  onFocus,
+  onBlur,
+  onKeyDown,
+  dropdownAlign,
+  templateColumns,
+  style,
+  'aria-describedby': ariaDescribedBy,
+}: UnitInputProps) => {
+  const [val, setVal] = useState(value)
+  const uniqueId = useId()
+  const helperId = useId()
+
+  const localId = id ?? uniqueId
+
+  const computedState = useMemo(() => {
+    if (disabled) {
+      return 'disabled'
+    }
+    if (readOnly) {
+      return 'readOnly'
+    }
+    if (error) {
+      return 'error'
+    }
+    if (success) {
+      return 'success'
+    }
+
+    return 'default'
+  }, [disabled, readOnly, success, error])
+
+  useEffect(() => {
+    if (value !== undefined) {
+      setVal(value)
+    }
+  }, [value])
+
+  return (
+    <Stack gap={0.5} maxWidth={maxWidth} onBlur={onBlur} onFocus={onFocus} onKeyDown={onKeyDown} width={width}>
+      {label || labelInformation ? (
+        <Label htmlFor={localId} labelDescription={labelInformation} required={required} size={size}>
+          {label}
+        </Label>
+      ) : null}
+      <Row
+        className={cn(unitInputStyle.size[size], unitInputStyle.state[computedState])}
+        data-disabled={!!disabled}
+        data-testid={dataTestId}
+        templateColumns={templateColumns ?? '1fr auto'}
+      >
+        <div className={unitInputStyle.numberWrapper} id="input-field">
+          <input
+            aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
+            aria-invalid={!!error}
+            autoFocus={autoFocus}
+            className={cn(className, unitInputStyle.number[size])}
+            data-testid="unit-input"
+            disabled={disabled}
+            id={localId}
+            max={max}
+            min={min}
+            name={`${name}-value`}
+            onChange={event => {
+              const numericValue = Number.parseInt(event.target.value, 10)
+              if (numericValue > max) {
+                setVal(max)
+                onChange?.(max)
+              } else if (numericValue < min) {
+                setVal(min)
+                onChange?.(min)
+              } else {
+                setVal(numericValue)
+                onChange?.(numericValue)
+              }
+            }}
+            placeholder={placeholder}
+            readOnly={readOnly}
+            required={required}
+            step={step}
+            style={style}
+            type="number"
+            value={val}
+          />
+          {error ? <AlertCircleIcon sentiment="danger" /> : null}
+          {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
+        </div>
+        <SelectInput
+          aria-describedby={!ariaDescribedBy && hasHelperText(helper, error) ? helperId : ariaDescribedBy}
+          className={cn(unitInputStyle.unit, unitInputStyle.unitWidth)}
+          clearable={false}
+          data-disabled={disabled}
+          disabled={disabled}
+          dropdownAlign={dropdownAlign}
+          error={unitError}
+          id="unit"
+          multiselect={false}
+          name={`${name}-unit`}
+          onChange={(newValue: string) => {
+            onChangeUnitValue?.(newValue)
+          }}
+          options={options}
+          placeholder={placeholderUnit}
+          readOnly={readOnly}
+          searchable={false}
+          size={size}
+          style={assignInlineVars({
+            [widthSelectInput]: selectInputWidth.toString(),
+          })}
+          value={unitValue}
+        />
+      </Row>
+      <Description
+        helper={helper}
+        error={error}
+        success={success}
+        disabled={disabled}
+        id={ariaDescribedBy ?? helperId}
+      />
+    </Stack>
+  )
+}
+
+UnitInput.displayName = 'UnitInput'

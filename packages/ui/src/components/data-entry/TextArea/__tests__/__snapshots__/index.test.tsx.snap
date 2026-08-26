@@ -1,0 +1,624 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`textArea > renders correctly with size large 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_4c_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__hwn4511"
+      >
+        <textarea
+          aria-invalid="false"
+          class="styles__hwn4513 styles_size_large__hwn4518"
+          id="_r_4c_"
+          rows="3"
+          style="--hwn4510: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+        >
+          test
+        </textarea>
+        <div
+          class="styles__hwn4512 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textArea > renders correctly with size medium 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_46_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__hwn4511"
+      >
+        <textarea
+          aria-invalid="false"
+          class="styles__hwn4513 styles_size_medium__hwn4517"
+          id="_r_46_"
+          rows="3"
+          style="--hwn4510: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+        >
+          test
+        </textarea>
+        <div
+          class="styles__hwn4512 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textArea > renders correctly with size small 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_40_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__hwn4511"
+      >
+        <textarea
+          aria-invalid="false"
+          class="styles__hwn4513 styles_size_small__hwn4516"
+          id="_r_40_"
+          rows="3"
+          style="--hwn4510: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+        >
+          test
+        </textarea>
+        <div
+          class="styles__hwn4512 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textArea > should render correctly when input  has a error sentiment 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_1o_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__hwn4511"
+      >
+        <textarea
+          aria-describedby="_r_1p_"
+          aria-invalid="true"
+          class="styles__hwn4513 styles_error_true__hwn4514 styles_size_large__hwn4518"
+          id="_r_1o_"
+          rows="3"
+          style="--hwn4510: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+        >
+          test
+        </textarea>
+        <div
+          class="styles__hwn4512 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        >
+          <svg
+            class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzg uv_icons_1sbwqkz1k"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              AlertCircleIcon
+            </title>
+            <path
+              clip-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14M8 4a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 8 4m0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="styles__78oem50 styles_gap_0.5rem_xxsmall__78oem52j"
+        style="--ivy5ld0: minmax(0, 1fr) min-content; --ivy5ld1: minmax(0, 1fr) min-content; --ivy5ld2: minmax(0, 1fr) min-content; --ivy5ld3: minmax(0, 1fr) min-content; --ivy5ld4: minmax(0, 1fr) min-content; --ivy5ld5: minmax(0, 1fr) min-content;"
+      >
+        <span
+          class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_danger__1yhcak89 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_48__1yhcak82m"
+          id="_r_1p_"
+          role="status"
+        >
+          success
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textArea > should render correctly when input has a success sentiment 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_1g_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__hwn4511"
+      >
+        <textarea
+          aria-describedby="_r_1h_"
+          aria-invalid="false"
+          class="styles__hwn4513 styles_success_true__hwn4515 styles_size_large__hwn4518"
+          id="_r_1g_"
+          rows="3"
+          style="--hwn4510: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+        >
+          test
+        </textarea>
+        <div
+          class="styles__hwn4512 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        >
+          <svg
+            class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkza uv_icons_1sbwqkzg uv_icons_1sbwqkz1j"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              CheckCircleIcon
+            </title>
+            <path
+              clip-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14m3.844-8.791a.75.75 0 0 0-1.187-.918l-3.7 4.79-1.65-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="styles__78oem50 styles_gap_0.5rem_xxsmall__78oem52j"
+        style="--ivy5ld0: minmax(0, 1fr) min-content; --ivy5ld1: minmax(0, 1fr) min-content; --ivy5ld2: minmax(0, 1fr) min-content; --ivy5ld3: minmax(0, 1fr) min-content; --ivy5ld4: minmax(0, 1fr) min-content; --ivy5ld5: minmax(0, 1fr) min-content;"
+      >
+        <span
+          class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_success__1yhcak8e style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_56__1yhcak82u"
+          id="_r_1h_"
+          role="status"
+        >
+          success
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textArea > should render correctly when input is disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_k_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__hwn4511"
+      >
+        <textarea
+          aria-invalid="false"
+          class="styles__hwn4513 styles_size_large__hwn4518"
+          disabled=""
+          id="_r_k_"
+          rows="3"
+          style="--hwn4510: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+        >
+          test
+        </textarea>
+        <div
+          class="styles__hwn4512 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textArea > should render correctly when input is readOnly 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_q_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__hwn4511"
+      >
+        <textarea
+          aria-invalid="false"
+          class="styles__hwn4513 styles_size_large__hwn4518"
+          id="_r_q_"
+          readonly=""
+          rows="3"
+          style="--hwn4510: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+        >
+          test
+        </textarea>
+        <div
+          class="styles__hwn4512 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textArea > should render correctly when it is required 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_flex-start_xxsmall__mxir93v styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+      >
+        <label
+          class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+          for="_r_10_"
+        >
+          Test
+        </label>
+        <span
+          class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_danger__1yhcak89 style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_48__1yhcak82m"
+        >
+          *
+        </span>
+      </div>
+      <div
+        class="styles__hwn4511"
+      >
+        <textarea
+          aria-invalid="false"
+          class="styles__hwn4513 styles_size_large__hwn4518"
+          id="_r_10_"
+          rows="3"
+          style="--hwn4510: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+        >
+          test
+        </textarea>
+        <div
+          class="styles__hwn4512 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textArea > should render correctly with basic props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_0_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__hwn4511"
+      >
+        <textarea
+          aria-invalid="false"
+          class="styles__hwn4513 styles_size_large__hwn4518"
+          id="_r_0_"
+          rows="3"
+          style="--hwn4510: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+        >
+          test
+        </textarea>
+        <div
+          class="styles__hwn4512 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textArea > should render correctly with maxlength 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_18_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__hwn4511"
+      >
+        <textarea
+          aria-invalid="false"
+          class="styles__hwn4513 styles_size_large__hwn4518"
+          id="_r_18_"
+          maxlength="3"
+          rows="3"
+          style="--hwn4510: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+        >
+          test
+        </textarea>
+        <div
+          class="styles__hwn4512 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        />
+      </div>
+      <div
+        class="styles__78oem50 styles_gap_0.5rem_xxsmall__78oem52j"
+        style="--ivy5ld0: minmax(0, 1fr) min-content; --ivy5ld1: minmax(0, 1fr) min-content; --ivy5ld2: minmax(0, 1fr) min-content; --ivy5ld3: minmax(0, 1fr) min-content; --ivy5ld4: minmax(0, 1fr) min-content; --ivy5ld5: minmax(0, 1fr) min-content;"
+      >
+        <div />
+        <div
+          class="style__1yhcak80 style_prominence_weak__1yhcak87 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_3__1yhcak81d style_undefined_compound_67__1yhcak835"
+        >
+          4/3
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textArea > should render with AutoExpandMax 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_28_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__hwn4511"
+      >
+        <textarea
+          aria-describedby="_r_29_"
+          aria-invalid="true"
+          class="styles__hwn4513 styles_error_true__hwn4514 styles_size_large__hwn4518"
+          id="_r_28_"
+          rows="3"
+          style="--hwn4510: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); field-sizing: fixed; max-block-size: calc(2px + 48px + 1.5rem); min-block-size: calc(2px + 48px + 1.5rem);"
+        >
+          test
+        </textarea>
+        <div
+          class="styles__hwn4512 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        >
+          <svg
+            class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzg uv_icons_1sbwqkz1k"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              AlertCircleIcon
+            </title>
+            <path
+              clip-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14M8 4a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 8 4m0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="styles__78oem50 styles_gap_0.5rem_xxsmall__78oem52j"
+        style="--ivy5ld0: minmax(0, 1fr) min-content; --ivy5ld1: minmax(0, 1fr) min-content; --ivy5ld2: minmax(0, 1fr) min-content; --ivy5ld3: minmax(0, 1fr) min-content; --ivy5ld4: minmax(0, 1fr) min-content; --ivy5ld5: minmax(0, 1fr) min-content;"
+      >
+        <span
+          class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_danger__1yhcak89 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_48__1yhcak82m"
+          id="_r_29_"
+          role="status"
+        >
+          success
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textArea > should render with AutoExpandMax and rows 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_2g_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__hwn4511"
+      >
+        <textarea
+          aria-describedby="_r_2h_"
+          aria-invalid="true"
+          class="styles__hwn4513 styles_error_true__hwn4514 styles_size_large__hwn4518"
+          id="_r_2g_"
+          rows="2"
+          style="--hwn4510: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); field-sizing: fixed; max-block-size: calc(2px + 48px + 1.5rem); min-block-size: calc(2px + 32px + 1.5rem);"
+        >
+          test
+        </textarea>
+        <div
+          class="styles__hwn4512 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        >
+          <svg
+            class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzg uv_icons_1sbwqkz1k"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              AlertCircleIcon
+            </title>
+            <path
+              clip-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14M8 4a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 8 4m0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="styles__78oem50 styles_gap_0.5rem_xxsmall__78oem52j"
+        style="--ivy5ld0: minmax(0, 1fr) min-content; --ivy5ld1: minmax(0, 1fr) min-content; --ivy5ld2: minmax(0, 1fr) min-content; --ivy5ld3: minmax(0, 1fr) min-content; --ivy5ld4: minmax(0, 1fr) min-content; --ivy5ld5: minmax(0, 1fr) min-content;"
+      >
+        <span
+          class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_danger__1yhcak89 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_48__1yhcak82m"
+          id="_r_2h_"
+          role="status"
+        >
+          success
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`textArea > should render with auto rows 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+    >
+      <label
+        class="styles_htmlFor__f32sl2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        for="_r_20_"
+      >
+        Test
+      </label>
+      <div
+        class="styles__hwn4511"
+      >
+        <textarea
+          aria-describedby="_r_21_"
+          aria-invalid="true"
+          class="styles__hwn4513 styles_error_true__hwn4514 styles_size_large__hwn4518"
+          id="_r_20_"
+          rows="2"
+          style="--hwn4510: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); field-sizing: content; min-block-size: calc(2px + 32px + 1.5rem);"
+        >
+          test
+        </textarea>
+        <div
+          class="styles__hwn4512 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        >
+          <svg
+            class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzg uv_icons_1sbwqkz1k"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <title>
+              AlertCircleIcon
+            </title>
+            <path
+              clip-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14M8 4a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 8 4m0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="styles__78oem50 styles_gap_0.5rem_xxsmall__78oem52j"
+        style="--ivy5ld0: minmax(0, 1fr) min-content; --ivy5ld1: minmax(0, 1fr) min-content; --ivy5ld2: minmax(0, 1fr) min-content; --ivy5ld3: minmax(0, 1fr) min-content; --ivy5ld4: minmax(0, 1fr) min-content; --ivy5ld5: minmax(0, 1fr) min-content;"
+      >
+        <span
+          class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_danger__1yhcak89 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_48__1yhcak82m"
+          id="_r_21_"
+          role="status"
+        >
+          success
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,564 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`text > renders correctly with dir 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
+    >
+      <div
+        class="style__1yhcak80 style_oneLine_true__1yhcak83 style_prominence_default__1yhcak84 style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style__1yhcak83e"
+        dir="rtl"
+      >
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with htmlFor 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
+    >
+      <div
+        class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a"
+        for="test"
+      >
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with placement 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
+    >
+      <div
+        class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a"
+        style="--textAlign__1eu8od80: end;"
+      >
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with tooltip 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
+    >
+      <div
+        class="style__1yhcak80 style_oneLine_true__1yhcak83 style_prominence_default__1yhcak84 style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style__1yhcak83e"
+      >
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="body" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a"
+    >
+      body
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="bodySmall" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a"
+    >
+      bodySmall
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="bodySmallStrong" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a"
+    >
+      bodySmallStrong
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="bodySmallStronger" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_bodySmallStronger__1yhcak8m style_undefined_compound_0__1yhcak81a"
+    >
+      bodySmallStronger
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="bodyStrong" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_bodyStrong__1yhcak8n style_undefined_compound_0__1yhcak81a"
+    >
+      bodyStrong
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="bodyStronger" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_bodyStronger__1yhcak8o style_undefined_compound_0__1yhcak81a"
+    >
+      bodyStronger
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="caption" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a"
+    >
+      caption
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="captionSmall" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_captionSmall__1yhcak8q style_undefined_compound_0__1yhcak81a"
+    >
+      captionSmall
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="captionSmallStrong" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_captionSmallStrong__1yhcak8r style_undefined_compound_0__1yhcak81a"
+    >
+      captionSmallStrong
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="captionSmallStronger" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_captionSmallStronger__1yhcak8s style_undefined_compound_0__1yhcak81a"
+    >
+      captionSmallStronger
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="captionStrong" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_captionStrong__1yhcak8t style_undefined_compound_0__1yhcak81a"
+    >
+      captionStrong
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="captionStronger" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_captionStronger__1yhcak8u style_undefined_compound_0__1yhcak81a"
+    >
+      captionStronger
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="code" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_code__1yhcak8v style_undefined_compound_0__1yhcak81a"
+    >
+      code
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="codeSmall" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_codeSmall__1yhcak8w style_undefined_compound_0__1yhcak81a"
+    >
+      codeSmall
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="codeSmallStrong" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_codeSmallStrong__1yhcak8x style_undefined_compound_0__1yhcak81a"
+    >
+      codeSmallStrong
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="codeSmallStronger" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_codeSmallStronger__1yhcak8y style_undefined_compound_0__1yhcak81a"
+    >
+      codeSmallStronger
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="codeStrong" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_codeStrong__1yhcak8z style_undefined_compound_0__1yhcak81a"
+    >
+      codeStrong
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="codeStronger" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_codeStronger__1yhcak810 style_undefined_compound_0__1yhcak81a"
+    >
+      codeStronger
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="heading" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_heading__1yhcak811 style_undefined_compound_0__1yhcak81a"
+    >
+      heading
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="headingLarge" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_headingLarge__1yhcak812 style_undefined_compound_0__1yhcak81a"
+    >
+      headingLarge
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="headingLargeStrong" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_headingLargeStrong__1yhcak813 style_undefined_compound_0__1yhcak81a"
+    >
+      headingLargeStrong
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="headingLargeStronger" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_headingLargeStronger__1yhcak814 style_undefined_compound_0__1yhcak81a"
+    >
+      headingLargeStronger
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="headingSmall" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_headingSmall__1yhcak815 style_undefined_compound_0__1yhcak81a"
+    >
+      headingSmall
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="headingSmallStrong" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_headingSmallStrong__1yhcak816 style_undefined_compound_0__1yhcak81a"
+    >
+      headingSmallStrong
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="headingSmallStronger" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_headingSmallStronger__1yhcak817 style_undefined_compound_0__1yhcak81a"
+    >
+      headingSmallStronger
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="headingStrong" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_headingStrong__1yhcak818 style_undefined_compound_0__1yhcak81a"
+    >
+      headingStrong
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with type="headingStronger" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_headingStronger__1yhcak819 style_undefined_compound_0__1yhcak81a"
+    >
+      headingStronger
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > renders correctly with whiteSpace 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a"
+      style="--whiteSpace__1eu8od81: nowrap;"
+    >
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > with disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_disabled_true__1yhcak81 style_prominence_default__1yhcak84 style_variant_body__1yhcak8j"
+    >
+      Lorem Ipsum
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > with italic 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_italic_true__1yhcak82 style_prominence_default__1yhcak84 style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a"
+    >
+      Lorem Ipsum
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > with monochrome 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_black__1yhcak88 style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_68__1yhcak836"
+    >
+      Lorem Ipsum
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > with multiple nested children renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a"
+    >
+      Lorem
+      <span>
+        Ipsum
+      </span>
+      <span
+        class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_heading__1yhcak811 style_undefined_compound_0__1yhcak81a"
+      >
+        <span>
+          Dolor
+        </span>
+      </span>
+      Sit
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > with prominence stronger on non neutral 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_stronger__1yhcak86 style_sentiment_danger__1yhcak89 style_variant_body__1yhcak8j style_undefined_compound_2__1yhcak81c style_undefined_compound_50__1yhcak82o"
+    >
+      Lorem Ipsum
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`text > with underline 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="style__1yhcak80 style_prominence_default__1yhcak84 style_underline_true__1yhcak8i style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a"
+    >
+      Lorem Ipsum
+    </div>
+  </div>
+</DocumentFragment>
+`;

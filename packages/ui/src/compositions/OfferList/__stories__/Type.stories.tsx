@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { OfferList } from '..'
-import { Stack } from '../../../components/Stack'
-import { Text } from '../../../components/Text'
+import { Stack } from '../../../components/layout/Stack'
+import { Text } from '../../../components/typography/Text'
 import { columns, data } from './resources'
 
 export const Type: StoryFn<ComponentProps<typeof OfferList>> = props => (

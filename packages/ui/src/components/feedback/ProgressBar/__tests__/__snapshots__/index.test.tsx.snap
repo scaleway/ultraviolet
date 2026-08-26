@@ -1,0 +1,598 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`progressBar > renders correctly when value < 0 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+    >
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="-250"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_primary__18tgm9i6 styles__18tgm9i5"
+          style="--sbhj6d0: 0%;"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders correctly when value > 100 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+    >
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="250"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_primary__18tgm9i6 styles__18tgm9i5"
+          style="--sbhj6d0: 100%;"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders correctly with label, labelDescription and showProgress, direction column 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        style="--_1o893js0: 100%;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        >
+          <label
+            class="styles_default__f32sl0 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+          >
+            Label
+          </label>
+          <span
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a"
+          >
+            Label
+          </span>
+        </div>
+        <label
+          class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+          style="--textAlign__1eu8od80: right;"
+        >
+          40%
+        </label>
+      </div>
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_primary__18tgm9i6 styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders correctly with label, labelDescription and showProgress, direction row 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_1rem_xxsmall__mxir933v"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+      >
+        <label
+          class="styles_default__f32sl0 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        >
+          Label
+        </label>
+        <span
+          class="style__1yhcak80 style_prominence_default__1yhcak84 style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a"
+        >
+          Label
+        </span>
+      </div>
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_primary__18tgm9i6 styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+      <div
+        class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        style="--_1o893js0: fit-content;"
+      >
+        <label
+          class="styles_withSuffix__18tgm9i2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        >
+          40%
+        </label>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders correctly with label, labelDescription as ReactNode, direction column 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        style="--_1o893js0: 100%;"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        >
+          <label
+            class="styles_default__f32sl0 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+          >
+            Label
+          </label>
+          <div>
+            Label
+          </div>
+        </div>
+      </div>
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_primary__18tgm9i6 styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders correctly with label, labelDescription as ReactNode, direction row 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_1rem_xxsmall__mxir933v"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+      >
+        <label
+          class="styles_default__f32sl0 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        >
+          Label
+        </label>
+        <div>
+          Label
+        </div>
+      </div>
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_primary__18tgm9i6 styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders correctly with max 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_1rem_xxsmall__mxir933v"
+    >
+      <label
+        class="styles_default__f32sl0 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+      >
+        label
+      </label>
+      <div
+        aria-valuemax="10"
+        aria-valuemin="0"
+        aria-valuenow="4"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_primary__18tgm9i6 styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders correctly with only label, direction column 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        style="--_1o893js0: 100%;"
+      >
+        <label
+          class="styles_default__f32sl0 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        >
+          label
+        </label>
+      </div>
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_primary__18tgm9i6 styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders correctly with only showProgress, direction column 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_right_xxsmall__mxir9371"
+        style="--_1o893js0: 100%;"
+      >
+        <label
+          class="styles_default__f32sl0 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        />
+        <label
+          class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+          style="--textAlign__1eu8od80: right;"
+        >
+          40%
+        </label>
+      </div>
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_primary__18tgm9i6 styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders correctly with only showProgress, direction row 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_1rem_xxsmall__mxir933v"
+    >
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_primary__18tgm9i6 styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+      <div
+        class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        style="--_1o893js0: fit-content;"
+      >
+        <label
+          class="styles_withSuffix__18tgm9i2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        >
+          40%
+        </label>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders correctly with suffix and prefix, direction column 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+    >
+      <div
+        class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_justifyContent_space-between_xxsmall__mxir9377"
+        style="--_1o893js0: 100%;"
+      >
+        <label
+          class="styles_default__f32sl0 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        >
+          label
+        </label>
+        <label
+          class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+          style="--textAlign__1eu8od80: right;"
+        >
+          prefix40suffix
+        </label>
+      </div>
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_primary__18tgm9i6 styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders correctly with suffix and prefix, direction row 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_1rem_xxsmall__mxir933v"
+    >
+      <label
+        class="styles_default__f32sl0 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmallStrong__1yhcak8l style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+      >
+        label
+      </label>
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_primary__18tgm9i6 styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+      <div
+        class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+        style="--_1o893js0: fit-content;"
+      >
+        <label
+          class="styles_withSuffix__18tgm9i2 style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_bodySmall__1yhcak8k style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+        >
+          prefix40suffix
+        </label>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders danger 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+    >
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_danger__18tgm9i9 styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders info 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+    >
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_info__18tgm9ib styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders primary 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+    >
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_primary__18tgm9i6 styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders progression 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+    >
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="0"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles__18tgm9i4"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders success 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+    >
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_success__18tgm9i8 styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`progressBar > renders warning 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.5rem_xxsmall__mxir933p"
+    >
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="styles__18tgm9i1"
+        role="progressbar"
+      >
+        <div
+          class="styles_warning__18tgm9ia styles__18tgm9i5"
+          style="--sbhj6d0: 40%;"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

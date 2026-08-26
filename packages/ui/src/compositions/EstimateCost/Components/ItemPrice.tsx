@@ -1,4 +1,4 @@
-import { Text } from '../../../components/Text'
+import { Text } from '../../../components/typography/Text'
 import { useEstimateCost } from '../EstimateCostProvider'
 import { calculatePrice } from '../helper'
 import type { ItemPriceProps, Units } from '../types'

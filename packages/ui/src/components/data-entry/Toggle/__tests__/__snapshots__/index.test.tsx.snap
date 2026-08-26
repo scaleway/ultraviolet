@@ -1,0 +1,572 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`toggle > renders and click on toggle on 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="styles__mhtya39 styles_disabled_false__mhtya3a styles_labelPosition_right__mhtya3d"
+      for="_r_1s_"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_baseline_xxsmall__mxir931j styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.125rem_xxsmall__mxir935d"
+      >
+        <div
+          class="styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_gap_0.5rem_xxsmall__78oem52j"
+          style="--ivy5ld0: auto 1fr; --ivy5ld1: auto 1fr; --ivy5ld2: auto 1fr; --ivy5ld3: auto 1fr; --ivy5ld4: auto 1fr; --ivy5ld5: auto 1fr;"
+        >
+          <span
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_1s_"
+          >
+            labelName
+          </span>
+        </div>
+      </div>
+      <div
+        class="styles__mhtya30 styles_disabled_false__mhtya31 styles_error_false__mhtya33 styles_size_large__mhtya35"
+      >
+        <input
+          aria-disabled="false"
+          aria-invalid="false"
+          class="styles__mhtya38"
+          id="_r_1s_"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`toggle > renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="styles__mhtya39 styles_disabled_false__mhtya3a styles_labelPosition_right__mhtya3d"
+      for="_r_0_"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_baseline_xxsmall__mxir931j styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.125rem_xxsmall__mxir935d"
+      />
+      <div
+        class="styles__mhtya30 styles_disabled_false__mhtya31 styles_error_false__mhtya33 styles_size_large__mhtya35"
+      >
+        <input
+          aria-disabled="false"
+          aria-invalid="false"
+          class="styles__mhtya38"
+          id="_r_0_"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`toggle > renders correctly label 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="styles__mhtya39 styles_disabled_false__mhtya3a styles_labelPosition_right__mhtya3d"
+      for="_r_10_"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_baseline_xxsmall__mxir931j styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.125rem_xxsmall__mxir935d"
+      >
+        <div
+          class="styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_gap_0.5rem_xxsmall__78oem52j"
+          style="--ivy5ld0: auto 1fr; --ivy5ld1: auto 1fr; --ivy5ld2: auto 1fr; --ivy5ld3: auto 1fr; --ivy5ld4: auto 1fr; --ivy5ld5: auto 1fr;"
+        >
+          <span
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_10_"
+          >
+            This is a label
+          </span>
+        </div>
+      </div>
+      <div
+        class="styles__mhtya30 styles_disabled_false__mhtya31 styles_error_false__mhtya33 styles_size_large__mhtya35"
+      >
+        <input
+          aria-disabled="false"
+          aria-invalid="false"
+          class="styles__mhtya38"
+          id="_r_10_"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`toggle > renders correctly when checked 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="styles__mhtya39 styles_disabled_false__mhtya3a styles_labelPosition_right__mhtya3d"
+      for="_r_4_"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_baseline_xxsmall__mxir931j styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.125rem_xxsmall__mxir935d"
+      />
+      <div
+        class="styles__mhtya30 styles_disabled_false__mhtya31 styles_error_false__mhtya33 styles_size_large__mhtya35"
+      >
+        <input
+          aria-disabled="false"
+          aria-invalid="false"
+          checked=""
+          class="styles__mhtya38"
+          id="_r_4_"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`toggle > renders correctly when disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="true"
+      class="styles__mhtya39 styles_disabled_true__mhtya3b styles_labelPosition_right__mhtya3d"
+      for="_r_8_"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_baseline_xxsmall__mxir931j styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.125rem_xxsmall__mxir935d"
+      />
+      <div
+        class="styles__mhtya30 styles_disabled_true__mhtya32 styles_error_false__mhtya33 styles_size_large__mhtya35"
+      >
+        <input
+          aria-disabled="true"
+          aria-invalid="false"
+          class="styles__mhtya38"
+          disabled=""
+          id="_r_8_"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`toggle > renders correctly when required with label 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="styles__mhtya39 styles_disabled_false__mhtya3a styles_labelPosition_right__mhtya3d"
+      for="_r_c_"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_baseline_xxsmall__mxir931j styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.125rem_xxsmall__mxir935d"
+      >
+        <div
+          class="styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_gap_0.5rem_xxsmall__78oem52j"
+          style="--ivy5ld0: auto 1fr; --ivy5ld1: auto 1fr; --ivy5ld2: auto 1fr; --ivy5ld3: auto 1fr; --ivy5ld4: auto 1fr; --ivy5ld5: auto 1fr;"
+        >
+          <span
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_c_"
+          >
+            test
+          </span>
+          <sup
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_danger__1yhcak89 style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_48__1yhcak82m"
+          >
+            *
+          </sup>
+        </div>
+      </div>
+      <div
+        class="styles__mhtya30 styles_disabled_false__mhtya31 styles_error_false__mhtya33 styles_size_large__mhtya35"
+      >
+        <input
+          aria-disabled="false"
+          aria-invalid="false"
+          class="styles__mhtya38"
+          id="_r_c_"
+          name="test"
+          required=""
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`toggle > renders correctly when required with label left 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="styles__mhtya39 styles_disabled_false__mhtya3a styles_labelPosition_left__mhtya3c"
+      for="_r_k_"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_baseline_xxsmall__mxir931j styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.125rem_xxsmall__mxir935d"
+      >
+        <div
+          class="styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_gap_0.5rem_xxsmall__78oem52j"
+          style="--ivy5ld0: auto 1fr; --ivy5ld1: auto 1fr; --ivy5ld2: auto 1fr; --ivy5ld3: auto 1fr; --ivy5ld4: auto 1fr; --ivy5ld5: auto 1fr;"
+        >
+          <span
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_k_"
+          >
+            test
+          </span>
+          <sup
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_danger__1yhcak89 style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_48__1yhcak82m"
+          >
+            *
+          </sup>
+        </div>
+      </div>
+      <div
+        class="styles__mhtya30 styles_disabled_false__mhtya31 styles_error_false__mhtya33 styles_size_large__mhtya35"
+      >
+        <input
+          aria-disabled="false"
+          aria-invalid="false"
+          class="styles__mhtya38"
+          id="_r_k_"
+          name="test"
+          required=""
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`toggle > renders correctly with complex label 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="styles__mhtya39 styles_disabled_false__mhtya3a styles_labelPosition_right__mhtya3d"
+      for="_r_1o_"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_baseline_xxsmall__mxir931j styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.125rem_xxsmall__mxir935d"
+      >
+        <div
+          class="styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_gap_0.5rem_xxsmall__78oem52j"
+          style="--ivy5ld0: auto 1fr; --ivy5ld1: auto 1fr; --ivy5ld2: auto 1fr; --ivy5ld3: auto 1fr; --ivy5ld4: auto 1fr; --ivy5ld5: auto 1fr;"
+        >
+          <span>
+            Custom label rendered
+          </span>
+        </div>
+      </div>
+      <div
+        class="styles__mhtya30 styles_disabled_false__mhtya31 styles_error_false__mhtya33 styles_size_large__mhtya35"
+      >
+        <input
+          aria-disabled="false"
+          aria-invalid="false"
+          class="styles__mhtya38"
+          id="_r_1o_"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`toggle > renders correctly with custom labels on right 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="styles__mhtya39 styles_disabled_false__mhtya3a styles_labelPosition_right__mhtya3d"
+      for="_r_1i_"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_baseline_xxsmall__mxir931j styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.125rem_xxsmall__mxir935d"
+      >
+        <div
+          class="styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_gap_0.5rem_xxsmall__78oem52j"
+          style="--ivy5ld0: auto 1fr; --ivy5ld1: auto 1fr; --ivy5ld2: auto 1fr; --ivy5ld3: auto 1fr; --ivy5ld4: auto 1fr; --ivy5ld5: auto 1fr;"
+        >
+          <span
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_1i_"
+          >
+            This is a label
+          </span>
+        </div>
+      </div>
+      <div
+        class="styles__mhtya30 styles_disabled_false__mhtya31 styles_error_false__mhtya33 styles_size_large__mhtya35"
+      >
+        <input
+          aria-disabled="false"
+          aria-invalid="false"
+          class="styles__mhtya38"
+          id="_r_1i_"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`toggle > renders correctly with error 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="styles__mhtya39 styles_disabled_false__mhtya3a styles_labelPosition_right__mhtya3d"
+      for="_r_2a_"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_baseline_xxsmall__mxir931j styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.125rem_xxsmall__mxir935d"
+      >
+        <div
+          class="styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_gap_0.5rem_xxsmall__78oem52j"
+          style="--ivy5ld0: auto 1fr; --ivy5ld1: auto 1fr; --ivy5ld2: auto 1fr; --ivy5ld3: auto 1fr; --ivy5ld4: auto 1fr; --ivy5ld5: auto 1fr;"
+        >
+          <span
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_2a_"
+          >
+            This is a label
+          </span>
+        </div>
+        <span
+          class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_danger__1yhcak89 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_48__1yhcak82m"
+          id="_r_2b_"
+          role="status"
+        >
+          error text
+        </span>
+      </div>
+      <div
+        class="styles__mhtya30 styles_disabled_false__mhtya31 styles_error_true__mhtya34 styles_size_large__mhtya35"
+      >
+        <input
+          aria-describedby="_r_2b_"
+          aria-disabled="false"
+          aria-invalid="true"
+          class="styles__mhtya38"
+          id="_r_2a_"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`toggle > renders correctly with helper 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="styles__mhtya39 styles_disabled_false__mhtya3a styles_labelPosition_right__mhtya3d"
+      for="_r_22_"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_baseline_xxsmall__mxir931j styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.125rem_xxsmall__mxir935d"
+      >
+        <div
+          class="styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_gap_0.5rem_xxsmall__78oem52j"
+          style="--ivy5ld0: auto 1fr; --ivy5ld1: auto 1fr; --ivy5ld2: auto 1fr; --ivy5ld3: auto 1fr; --ivy5ld4: auto 1fr; --ivy5ld5: auto 1fr;"
+        >
+          <span
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_22_"
+          >
+            This is a label
+          </span>
+        </div>
+        <span
+          class="style__1yhcak80 style_prominence_weak__1yhcak87 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_3__1yhcak81d style_undefined_compound_67__1yhcak835"
+          id="_r_23_"
+          role="status"
+        >
+          This is a helper
+        </span>
+      </div>
+      <div
+        class="styles__mhtya30 styles_disabled_false__mhtya31 styles_error_false__mhtya33 styles_size_large__mhtya35"
+      >
+        <input
+          aria-describedby="_r_23_"
+          aria-disabled="false"
+          aria-invalid="false"
+          class="styles__mhtya38"
+          id="_r_22_"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`toggle > renders correctly with labels on left 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="styles__mhtya39 styles_disabled_false__mhtya3a styles_labelPosition_left__mhtya3c"
+      for="_r_1c_"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_baseline_xxsmall__mxir931j styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.125rem_xxsmall__mxir935d"
+      >
+        <div
+          class="styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_gap_0.5rem_xxsmall__78oem52j"
+          style="--ivy5ld0: auto 1fr; --ivy5ld1: auto 1fr; --ivy5ld2: auto 1fr; --ivy5ld3: auto 1fr; --ivy5ld4: auto 1fr; --ivy5ld5: auto 1fr;"
+        >
+          <span
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+            for="_r_1c_"
+          >
+            This is a label
+          </span>
+        </div>
+      </div>
+      <div
+        class="styles__mhtya30 styles_disabled_false__mhtya31 styles_error_false__mhtya33 styles_size_large__mhtya35"
+      >
+        <input
+          aria-disabled="false"
+          aria-invalid="false"
+          class="styles__mhtya38"
+          id="_r_1c_"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`toggle > renders correctly with non default size 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="styles__mhtya39 styles_disabled_false__mhtya3a styles_labelPosition_right__mhtya3d"
+      for="_r_s_"
+    >
+      <div
+        class="styles__mxir930 styles_alignItems_baseline_xxsmall__mxir931j styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.125rem_xxsmall__mxir935d"
+      />
+      <div
+        class="styles__mhtya30 styles_disabled_false__mhtya31 styles_error_false__mhtya33 styles_size_small__mhtya36"
+      >
+        <input
+          aria-disabled="false"
+          aria-invalid="false"
+          class="styles__mhtya38"
+          id="_r_s_"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`toggle > renders correctly with tooltip 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1u0cyic5"
+    >
+      <label
+        aria-disabled="false"
+        class="styles__mhtya39 styles_disabled_false__mhtya3a styles_labelPosition_right__mhtya3d"
+        for="_r_16_"
+      >
+        <div
+          class="styles__mxir930 styles_alignItems_baseline_xxsmall__mxir931j styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.125rem_xxsmall__mxir935d"
+        >
+          <div
+            class="styles__78oem50 styles_alignItems_center_xxsmall__78oem5d styles_gap_0.5rem_xxsmall__78oem52j"
+            style="--ivy5ld0: auto 1fr; --ivy5ld1: auto 1fr; --ivy5ld2: auto 1fr; --ivy5ld3: auto 1fr; --ivy5ld4: auto 1fr; --ivy5ld5: auto 1fr;"
+          >
+            <span
+              class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_body__1yhcak8j style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+              for="_r_16_"
+            >
+              This is a label
+            </span>
+          </div>
+        </div>
+        <div
+          class="styles__mhtya30 styles_disabled_false__mhtya31 styles_error_false__mhtya33 styles_size_large__mhtya35"
+        >
+          <input
+            aria-disabled="false"
+            aria-invalid="false"
+            class="styles__mhtya38"
+            id="_r_16_"
+            name="test"
+            type="checkbox"
+          />
+        </div>
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;

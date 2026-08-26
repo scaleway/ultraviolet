@@ -3,7 +3,7 @@ import { LeafIcon } from '@ultraviolet/icons/LeafIcon'
 import { useMemo, useState } from 'react'
 import type { ComponentProps } from 'react'
 import { OfferList } from '..'
-import { Stack } from '../../../components/Stack'
+import { Stack } from '../../../components/layout/Stack'
 
 const data = [
   {

@@ -1,0 +1,184 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`stack > should render correctly max width 100% 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+      style="--_1o893js1: 100%;"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render correctly min width 100% 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+      style="--_1o893js2: 100%;"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render correctly with alignCenter 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render correctly with default props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+      <div>
+        third child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render correctly with row direction 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+      <div>
+        third child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render correctly with width 100% 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+      style="--_1o893js0: 100%;"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render correctly with wrap as boolean 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_flexWrap_wrap_xxsmall__mxir9337"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render correctly with wrap as string 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_flexWrap_wrap-reverse_xxsmall__mxir933d"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render different direction and gap on different viewport sizes 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__mxir930 styles_flexDirection_row_large__mxir932n styles_flexDirection_row_medium__mxir932m styles_flexDirection_row_small__mxir932l styles_flexDirection_row_xlarge__mxir932o styles_flexDirection_column_xsmall__mxir932e styles_flexDirection_column_xxsmall__mxir932d styles_gap_2.5rem_large__mxir934h styles_gap_2rem_medium__mxir934a styles_gap_1.5rem_small__mxir9343 styles_gap_3rem_xlarge__mxir934o styles_gap_1rem_xsmall__mxir933w styles_gap_0.5rem_xxsmall__mxir933p"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+      <div>
+        third child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

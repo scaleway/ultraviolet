@@ -1,0 +1,442 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`searchInput > renders correctly without children props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      style="width: 100%;"
+    >
+      <div
+        aria-controls="_r_0_"
+        aria-describedby="_r_0_"
+        class="styles__pjfil59"
+        tabindex="0"
+      >
+        <div
+          class="styles__17syp631 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__dk0fjs8 styles_large__dk0fjs5"
+            data-disabled="false"
+            data-error="false"
+            data-readonly="false"
+            data-success="false"
+          >
+            <div
+              class="styles__dk0fjs1 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+              data-size="large"
+            >
+              <div
+                class="styles__17syp632 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+                data-testid="search-icon"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz6 uv_icons_1sbwqkz9 uv_icons_1sbwqkzf uv_icons_1sbwqkz26"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  width="20"
+                >
+                  <title>
+                    SearchIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <input
+              aria-invalid="false"
+              class="styles__dk0fjs9"
+              data-size="large"
+              id="_r_1_"
+              placeholder="Type something"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`searchInput > renders with disabled prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      style="width: 100%;"
+    >
+      <div
+        aria-controls="_r_5_"
+        aria-describedby="_r_5_"
+        class="styles__pjfil59"
+        tabindex="0"
+      >
+        <div
+          class="styles__17syp631 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__dk0fjs8 styles_large__dk0fjs5"
+            data-disabled="true"
+            data-error="false"
+            data-readonly="false"
+            data-success="false"
+          >
+            <div
+              class="styles__dk0fjs1 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+              data-size="large"
+            >
+              <div
+                class="styles__17syp632 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+                data-testid="search-icon"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz2 uv_icons_1sbwqkz6 uv_icons_1sbwqkz9 uv_icons_1sbwqkzf uv_icons_1sbwqkz1a"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  width="20"
+                >
+                  <title>
+                    SearchIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <input
+              aria-invalid="false"
+              class="styles__dk0fjs9"
+              data-size="large"
+              disabled=""
+              id="_r_6_"
+              placeholder="Type something"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`searchInput > renders with error prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      style="width: 100%;"
+    >
+      <div
+        aria-controls="_r_u_"
+        aria-describedby="_r_u_"
+        class="styles__pjfil59"
+        tabindex="0"
+      >
+        <div
+          class="styles__17syp631 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__dk0fjs8 styles_large__dk0fjs5"
+            data-disabled="false"
+            data-error="true"
+            data-readonly="false"
+            data-success="false"
+          >
+            <div
+              class="styles__dk0fjs1 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+              data-size="large"
+            >
+              <div
+                class="styles__17syp632 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+                data-testid="search-icon"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz6 uv_icons_1sbwqkz9 uv_icons_1sbwqkzf uv_icons_1sbwqkz26"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  width="20"
+                >
+                  <title>
+                    SearchIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <input
+              aria-describedby="_r_10_"
+              aria-invalid="true"
+              class="styles__dk0fjs9"
+              data-size="large"
+              id="_r_v_"
+              placeholder="Type something"
+              type="text"
+              value=""
+            />
+            <div
+              class="styles__dk0fjs2 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.5rem_xxsmall__mxir933p"
+            >
+              <svg
+                class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzg uv_icons_1sbwqkz1k"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <title>
+                  AlertCircleIcon
+                </title>
+                <path
+                  clip-rule="evenodd"
+                  d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14M8 4a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 8 4m0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+          <span
+            class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_danger__1yhcak89 style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_48__1yhcak82m"
+            id="_r_10_"
+            role="status"
+          >
+            there is an error
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      style="width: 100%;"
+    >
+      <div
+        aria-controls="_r_j_"
+        aria-describedby="_r_j_"
+        class="styles__pjfil59"
+        tabindex="0"
+      >
+        <div
+          class="styles__17syp631 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__dk0fjs8 styles_large__dk0fjs5"
+            data-disabled="false"
+            data-error="false"
+            data-readonly="false"
+            data-success="false"
+          >
+            <div
+              class="styles__dk0fjs1 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+              data-size="large"
+            >
+              <div
+                class="styles__17syp632 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+                data-testid="search-icon"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz6 uv_icons_1sbwqkz9 uv_icons_1sbwqkzf uv_icons_1sbwqkz26"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  width="20"
+                >
+                  <title>
+                    SearchIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <input
+              aria-invalid="false"
+              class="styles__dk0fjs9"
+              data-size="large"
+              id="_r_k_"
+              placeholder="Type something"
+              type="text"
+              value=""
+            />
+            <div
+              class="styles__dk0fjs3 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+              data-size="large"
+            >
+              <div
+                class="styles__17syp632 styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <kbd
+                  class="styles__lo0770 styles_prominence_default__lo0772 styles_sentiment_neutral__lo0774 styles_size_medium__lo0776"
+                  data-prominence="default"
+                  data-sentiment="neutral"
+                  data-size="medium"
+                  data-testid="key-Ctrl"
+                >
+                  <span
+                    class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+                  >
+                    Ctrl
+                  </span>
+                </kbd>
+                <kbd
+                  class="styles__lo0770 styles_prominence_default__lo0772 styles_sentiment_neutral__lo0774 styles_size_medium__lo0776"
+                  data-prominence="default"
+                  data-sentiment="neutral"
+                  data-size="medium"
+                  data-testid="key-Shift"
+                >
+                  <span
+                    class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+                  >
+                    ⇧
+                  </span>
+                </kbd>
+                <kbd
+                  class="styles__lo0770 styles_prominence_default__lo0772 styles_sentiment_neutral__lo0774 styles_size_medium__lo0776"
+                  data-prominence="default"
+                  data-sentiment="neutral"
+                  data-size="medium"
+                  data-testid="key-A"
+                >
+                  <span
+                    class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+                  >
+                    A
+                  </span>
+                </kbd>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      style="width: 100%;"
+    >
+      <div
+        aria-controls="_r_a_"
+        aria-describedby="_r_a_"
+        class="styles__pjfil59"
+        tabindex="0"
+      >
+        <div
+          class="styles__17syp631 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d styles_gap_0.25rem_xxsmall__mxir935j"
+        >
+          <div
+            class="styles__dk0fjs8 styles_large__dk0fjs5"
+            data-disabled="false"
+            data-error="false"
+            data-readonly="false"
+            data-success="false"
+          >
+            <div
+              class="styles__dk0fjs1 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+              data-size="large"
+            >
+              <div
+                class="styles__17syp632 styles__mxir930 styles_flexDirection_column_xxsmall__mxir932d"
+                data-testid="search-icon"
+              >
+                <svg
+                  class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz6 uv_icons_1sbwqkz9 uv_icons_1sbwqkzf uv_icons_1sbwqkz26"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  width="20"
+                >
+                  <title>
+                    SearchIcon
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <input
+              aria-invalid="false"
+              class="styles__dk0fjs9"
+              data-size="large"
+              id="_r_b_"
+              placeholder="Type something"
+              type="text"
+              value=""
+            />
+            <div
+              class="styles__dk0fjs3 styles__mxir930 styles_alignItems_center_xxsmall__mxir93d styles_flexDirection_row_xxsmall__mxir932j"
+              data-size="large"
+            >
+              <div
+                class="styles__17syp632 styles__mxir930 styles_flexDirection_row_xxsmall__mxir932j styles_gap_0.25rem_xxsmall__mxir935j"
+              >
+                <kbd
+                  class="styles__lo0770 styles_prominence_default__lo0772 styles_sentiment_neutral__lo0774 styles_size_medium__lo0776"
+                  data-prominence="default"
+                  data-sentiment="neutral"
+                  data-size="medium"
+                  data-testid="key-Ctrl"
+                >
+                  <span
+                    class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+                  >
+                    Ctrl
+                  </span>
+                </kbd>
+                <kbd
+                  class="styles__lo0770 styles_prominence_default__lo0772 styles_sentiment_neutral__lo0774 styles_size_medium__lo0776"
+                  data-prominence="default"
+                  data-sentiment="neutral"
+                  data-size="medium"
+                  data-testid="key-K"
+                >
+                  <span
+                    class="style__1yhcak80 style_prominence_default__1yhcak84 style_sentiment_neutral__1yhcak8b style_variant_caption__1yhcak8p style_undefined_compound_0__1yhcak81a style_undefined_compound_64__1yhcak832"
+                  >
+                    K
+                  </span>
+                </kbd>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

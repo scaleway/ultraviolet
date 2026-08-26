@@ -1,7 +1,7 @@
 'use client'
 
 import { useId } from 'react'
-import { Separator as UVSeparator } from '../../../components/Separator'
+import { Separator as UVSeparator } from '../../../components/layout/Separator'
 import { navigationStyle } from '../styles.css'
 
 export const Separator = () => {
