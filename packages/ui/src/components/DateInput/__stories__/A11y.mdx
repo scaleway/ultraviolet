@@ -49,6 +49,7 @@ To apply when using the component:
 - Focus is not moved into the popup when it opens, so keyboard/screen-reader users cannot reach the calendar via keyboard. Per the dialog pattern, focus should move to an element inside the dialog on open.
 - The dialog (`role="dialog"` in `Popup.tsx:48`) has no `aria-label`/`aria-labelledby`, so it has no accessible name.
 - The outer container (`index.tsx:266`) has `onClick` and `onKeyDown` handlers (opens the popup on Enter/Space) but is a static element with no `role` or `tabIndex` (oxlint disabled), so the keyboard handler is never reached by keyboard users.
+- The calendar icon used as the input suffix has no alternative text describing it as the "open calendar" affordance. It would be better that this icon be a button that opens the dialog picker, which would fix the issue of the previous bullet.
 - The date picker dialog does not allow to navigate between the days using the arrow keys like the Grid pattern, which makes the navigation very painful. The keyboard navigation should follow the Grid pattern instead of a really long Tab sequence.
 
 **Medium:**
@@ -62,7 +63,6 @@ To apply when using the component:
 **Low:**
 
 - In the `input="calendar"` variant the label is rendered as plain text not associated with any control.
-- The calendar icon used as the input suffix has no alternative text describing it as the "open calendar" affordance.
 
 ## Dependencies
 
