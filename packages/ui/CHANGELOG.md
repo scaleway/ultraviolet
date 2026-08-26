@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.24.1
+
+### Patch Changes
+
+- [#6832](https://github.com/scaleway/ultraviolet/pull/6832) [`9ebb1cb`](https://github.com/scaleway/ultraviolet/commit/9ebb1cbf15808f588835c1a8cc4448e3835c3290) Thanks [@lisalupi](https://github.com/lisalupi)! - `Text`: add `min-width` to tooltip container (`oneLine` variant) to stabilize div width
+
+- [#6824](https://github.com/scaleway/ultraviolet/pull/6824) [`62b512c`](https://github.com/scaleway/ultraviolet/commit/62b512c8c89fe1ebea11526681056e275f7e45ad) Thanks [@jsulpis](https://github.com/jsulpis)! - `TagList`: fix and improve overflow behavior
+
 ## 3.24.0
 
 ### Minor Changes
