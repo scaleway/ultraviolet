@@ -185,11 +185,6 @@ export const TagList = ({
       sentiment: sentiment,
     }
 
-    // Avoid displaying an empty tag
-    if (!tag) {
-      return
-    }
-
     if (isKeyValueTag(tag)) {
       return <Tag keyValue={tag} {...commonProps} key={`${tagLabel}-${index}`} />
     }
