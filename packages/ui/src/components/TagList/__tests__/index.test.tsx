@@ -92,6 +92,8 @@ describe('tagList', () => {
 
     const { asFragment } = renderWithTheme(<TagList data-testid="taglist" popoverTitle="Additional" />)
 
+    const tagWrapper = screen.getByTestId('taglist-container')
+    expect(tagWrapper).toBeEmptyDOMElement()
     expect(asFragment()).toMatchSnapshot()
   })
 

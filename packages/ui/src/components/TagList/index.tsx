@@ -90,7 +90,8 @@ export const TagList = ({
   const popoverTriggerRef = useRef<HTMLButtonElement>(null)
 
   const [isPopoverVisible, setIsPopoverVisible] = useState(false)
-  const [visibleTags, setVisibleTags] = useState<TagType[]>([tags[0]])
+  // Avoid adding undefined to default visibleTags
+  const [visibleTags, setVisibleTags] = useState<TagType[]>(tags[0] ? [tags[0]] : [])
   const [hiddenTags, setHiddenTags] = useState<TagType[]>([])
 
   const [potentiallyVisibleTags, surelyHiddenTags] = useMemo(() => {
