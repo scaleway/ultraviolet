@@ -201,7 +201,7 @@ jobs:
           fi
 
       - name: Deploy Serverless Container Scaleway
-        uses: scaleway/scw-serverless-container-action@7ae007211c694cc6928a2f09be77a9f1cf19b6a1 # v0.0.4
+        uses: scaleway/scw-serverless-container-action@f87d6df5bde9a356b16c837ec69d2baa5c4cac09 # v0.0.8
         id: deploy
         with:
           type: 'deploy'
