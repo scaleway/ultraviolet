@@ -14,12 +14,12 @@ export default {
   parameters: {
     a11yStatus: {
       perceivable: false,
-      operable: false,
-      understandable: false,
+      operable: true,
+      understandable: true,
       robust: false,
     },
   },
-} as Meta
+} satisfies Meta<typeof TagList>
 
 export { Playground } from './Playground.stories'
 export { Threshold } from './Threshold.stories'

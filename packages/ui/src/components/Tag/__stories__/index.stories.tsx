@@ -6,13 +6,13 @@ export default {
   title: 'UI/Badges/Tag',
   parameters: {
     a11yStatus: {
-      perceivable: false,
+      perceivable: true,
       operable: false,
       understandable: false,
       robust: false,
     },
   },
-} as Meta
+} satisfies Meta<typeof Tag>
 
 export { Playground } from './Playground.stories'
 export { Sentiments } from './Sentiments.stories'
