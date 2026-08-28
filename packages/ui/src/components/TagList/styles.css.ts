@@ -37,6 +37,26 @@ const tagContainer = recipe({
   },
 })
 
+const list = style({
+  padding: 0,
+  margin: 0,
+  listStyle: 'none',
+  overflow: 'hidden',
+  selectors: {
+    [`${tagContainer()} > &`]: {
+      display: 'contents',
+    },
+  },
+})
+
+const listItem = style({
+  selectors: {
+    '&:only-child': {
+      overflow: 'hidden',
+    },
+  },
+})
+
 const tag = style({
   maxWidth: 'fit-content',
   minWidth: MIN_TAG_WIDTH_PX,
@@ -64,4 +84,6 @@ export const tagListStyle = {
   tag,
   counter,
   measurementContainer,
+  list,
+  listItem,
 }

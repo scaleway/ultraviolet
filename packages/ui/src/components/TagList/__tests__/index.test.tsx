@@ -90,8 +90,8 @@ describe('tagList', () => {
 
     const { asFragment } = renderWithTheme(<TagList data-testid="taglist" popoverTitle="Additional" tags={tags} />)
 
-    expect(screen.getByText('+1')).toBeInTheDocument()
-    expect(screen.getByTestId('scaleway')).toBeInTheDocument()
+    expect(screen.getByText('+1')).toBeInTheDocument() // use getByText and not getByRole to make sure this query works with the hidden tags
+    expect(screen.getAllByRole('listitem').find(li => li.textContent === 'scaleway')).toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -127,7 +127,7 @@ describe('tagList', () => {
       <TagList data-testid="taglist" popoverTitle="Additional" tags={tags} threshold={2} />,
     )
 
-    expect(screen.getByTestId('cloud')).toBeInTheDocument()
+    expect(screen.getAllByRole('listitem').find(li => li.textContent === 'cloud')).toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -155,8 +155,8 @@ describe('tagList', () => {
       <TagList data-testid="taglist" popoverTitle="Additional" tags={tags} threshold={2} />,
     )
 
-    expect(screen.getByTestId('scaleway')).toBeInTheDocument()
-    expect(screen.queryByTestId('provider')).not.toBeInTheDocument()
+    expect(screen.getAllByRole('listitem').find(li => li.textContent === 'scaleway')).toBeInTheDocument()
+    expect(screen.queryByText('provider')).not.toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -180,7 +180,7 @@ describe('tagList', () => {
       <TagList data-testid="taglist" maxLength={10} popoverTitle="Additional" tags={tags} threshold={2} />,
     )
 
-    expect(screen.getByTestId('scaleway')).toBeInTheDocument()
+    expect(screen.getAllByRole('listitem').find(li => li.textContent === 'scaleway')).toBeInTheDocument()
     expect(screen.queryByText('cloud')).not.toBeInTheDocument()
     expect(screen.getByText('+2')).toBeInTheDocument()
 
@@ -196,7 +196,7 @@ describe('tagList', () => {
       <TagList data-testid="taglist" maxLength={5} popoverTitle="Additional" tags={tags} />,
     )
 
-    expect(screen.getByTestId('scaleway')).toBeInTheDocument()
+    expect(screen.getAllByRole('listitem').find(li => li.textContent === 'scaleway')).toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -210,7 +210,7 @@ describe('tagList', () => {
       <TagList data-testid="taglist" maxLength={30} popoverTitle="Additional" tags={tags} threshold={100} />,
     )
 
-    expect(screen.getByTestId('database')).toBeInTheDocument()
+    expect(screen.getAllByRole('listitem').find(li => li.textContent === 'database')).toBeInTheDocument()
     expect(screen.queryByText('private-network')).not.toBeInTheDocument()
     expect(screen.getByText('+2')).toBeInTheDocument()
 
@@ -275,7 +275,7 @@ describe('tagList', () => {
     await userEvent.click(plus)
 
     expect(screen.getByText('Additional')).toBeInTheDocument()
-    expect(screen.getByTestId('world')).toBeInTheDocument()
+    expect(screen.getAllByRole('listitem').find(li => li.textContent === 'world')).toBeInTheDocument()
 
     const closeButton = screen.getByLabelText('close')
     await userEvent.click(closeButton)

@@ -1,22 +1,12 @@
 import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { tagListStyle } from '../TagList/styles.css'
 
 export const SENTIMENTS = ['danger', 'info', 'neutral', 'primary', 'secondary', 'success', 'warning'] as const
 
-const baseWrapperStyle = style({
-  selectors: {
-    // in the TagList, 2nd element is the counter, i.e. the tag is the only one displayed
-    [`${tagListStyle.tagContainer()}:has(:nth-child(2):not(&)) &`]: {
-      overflow: 'hidden', // make the tag shrink
-    },
-  },
-})
-
 const wrapper = styleVariants({
-  copiable: [baseWrapperStyle, {}],
-  notCopiable: [baseWrapperStyle, {}],
+  copiable: {},
+  notCopiable: {},
 })
 
 const separator = style({})

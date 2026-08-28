@@ -10,7 +10,7 @@ A layout component that displays a list of `Tag`s. When tags exceed a `threshold
 
 ## Summary
 
-1. ❌ **Perceivable**: the collection of tags is not conveyed as a list — it is rendered as plain `<div>`s, so assistive technology has no indication the tags form a cohesive set (WCAG 1.3.1).
+1. ✅ **Perceivable**: the collection of tags is conveyed as a list, so assistive technology knows that the tags form a cohesive set (WCAG 1.3.1).
 2. ✅ **Operable**: the counter is keyboard operable; focus management and the redundant wrapper tab stop will be handled by the Popover/Popup fix.
 3. ✅ **Understandable**: opening the popover happens on explicit activation of the trigger; no unexpected context change.
 4. ❌ **Robust**: the `+N` counter button has a non-descriptive accessible name and does not expose `aria-haspopup`/`aria-expanded` to reflect the popover's state.
@@ -19,7 +19,7 @@ A layout component that displays a list of `Tag`s. When tags exceed a `threshold
 
 Enforced by the component:
 
-- ❌ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - The tags are rendered as plain `<div>`s, not as a list. Because a `TagList` is a collection of related items, the visible tags should be a `<ul>` with each tag in an `<li>`, and the hidden tags inside the popover should be list items too, so screen readers can convey the grouping and count.
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - The tags are rendered inside a list so screen readers can convey the grouping and count.
 - ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The `+N` counter button's accessible name is derived solely from its `+N` text (e.g. "+3") and does not describe that it reveals hidden tags.
 - ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The counter button exposes neither `aria-haspopup="dialog"` nor `aria-expanded`, so assistive technology is not told that activating it opens a dialog or whether it is currently open. TagList owns both the button and the `isPopoverVisible` state, so it can set `aria-haspopup="dialog"` and `aria-expanded={isPopoverVisible}` directly on its own button.
 - ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - The counter is a native `<button>` and opens the popover with Enter/Space and click; Escape closes the popover (handled by Popup).
@@ -36,11 +36,20 @@ To apply when using the component:
 - [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The `sentiment` is conveyed only through color; ensure the meaning is also present in the tag text where it carries information.
 - [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - Icon tags (`{ icon, label }`) must remain decorative/hidden; the label provides the accessible name (resolved by the Icon component fix).
 
+<details>
+<summary>Past accessibility issues</summary>
+
+**High:**
+
+- ✅ The visible tags and the hidden tags inside the popover are plain `<div>`s, so the collection is not conveyed to assistive technology (WCAG 1.3.1).
+  - The component now renders a `<ul>` with each tag in an `<li>` for the visible container and for the popover content. The `+N` counter remains a sibling of the list, not a list item.
+
+</details>
+
 ## Accessibility issues
 
 **High:**
 
-- The visible tags and the hidden tags inside the popover are plain `<div>`s, so the collection is not conveyed to assistive technology (WCAG 1.3.1). Use a `<ul>` with each tag in an `<li>` for the visible container and for the popover content. The `+N` counter should remain a sibling of the list, not a list item. The measurement container is a separate, `aria-hidden` element used only for sizing; it is not affected by wrapping the visible/popover tags and can stay as-is.
 - Counter button lacks a descriptive accessible name: the `+N` button is announced as "+3" with no indication it reveals the hidden tags. Provide a localizable accessible name such as `Show {hiddenTags.length} hidden tags` (e.g. visually hidden text per RFC #6585, or an `aria-label`) (WCAG 4.1.2).
 
 **Medium:**
