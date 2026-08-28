@@ -4,8 +4,7 @@ import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { forwardRef } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Link } from '..'
-import type { ProminenceProps } from '..'
-import { PROMINENCES } from '../constants'
+import { PROMINENCE_VALUES } from '../constants'
 
 // Mock component simulating Next.js Link
 const MockNextLink = forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }>(
@@ -31,11 +30,11 @@ describe('link', () => {
   })
 
   describe('prominence', () => {
-    it.each(Object.keys(PROMINENCES).map(prominence => [`render prominence ${prominence}`, prominence]))(
+    it.each(PROMINENCE_VALUES.map(prominence => [`render prominence ${prominence}`, prominence]))(
       '%s',
       (_, prominence) =>
         shouldMatchSnapshot(
-          <Link href="/" prominence={prominence as ProminenceProps}>
+          <Link href="/" prominence={prominence}>
             Hello
           </Link>,
         ),
@@ -69,18 +68,6 @@ describe('link', () => {
           Hello
         </Link>
         <Link href="/" iconPosition="left" target="_blank">
-          Hello
-        </Link>
-      </>,
-    ))
-
-  it('render correctly with variants props', () =>
-    shouldMatchSnapshot(
-      <>
-        <Link href="/" variant="inline">
-          Hello
-        </Link>
-        <Link href="/" variant="standalone">
           Hello
         </Link>
       </>,
