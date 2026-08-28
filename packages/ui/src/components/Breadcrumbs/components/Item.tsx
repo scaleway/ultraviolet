@@ -1,5 +1,6 @@
 'use client'
 
+import type { XOR } from '@scaleway/types'
 import { cn } from '@ultraviolet/utils'
 import type { RenderProp } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'

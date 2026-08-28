@@ -1,3 +1,4 @@
+import type { XOR } from '@scaleway/types'
 import type { DragEvent, InputHTMLAttributes, ReactNode, RefObject } from 'react'
 
 type ChildrenType = ReactNode | ((inputId: string, inputRef: RefObject<HTMLInputElement | null>) => ReactNode)

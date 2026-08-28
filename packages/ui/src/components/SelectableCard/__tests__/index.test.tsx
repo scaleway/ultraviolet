@@ -1,3 +1,4 @@
+import type { TupleUnion } from '@scaleway/types'
 import { act, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { MacMiniProductIcon } from '@ultraviolet/icons/product/MacMiniProductIcon'

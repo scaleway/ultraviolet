@@ -1,3 +1,4 @@
+import type { TupleUnion } from '@scaleway/types'
 import type { ExtendedColor, Monochrome } from '../constants'
 
 const monochromes: TupleUnion<Monochrome> = ['black', 'white']
