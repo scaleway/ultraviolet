@@ -173,24 +173,24 @@ export const TagList = ({
     }
   }, [multiline, potentiallyVisibleTags, surelyHiddenTags, tags])
 
-  const renderTag = (tag: TagType, index: number, hidden?: boolean) => {
+  const renderTag = (tag: TagType, options: { index: number; hidden?: boolean }) => {
     const tagLabel = getTagLabel(tag)
     const commonProps = {
       className: tagListStyle.tag,
       copiable: copiable,
       copiedText: copiedText,
       copyText: copyText,
-      'data-testid': hidden ? '' : tagLabel,
+      'data-testid': options.hidden ? '' : tagLabel,
       variant: variant,
       sentiment: sentiment,
     }
 
     if (isKeyValueTag(tag)) {
-      return <Tag keyValue={tag} {...commonProps} key={`${tagLabel}-${index}`} />
+      return <Tag keyValue={tag} {...commonProps} key={`${tagLabel}-${options.index}`} />
     }
 
     return (
-      <Tag {...commonProps} key={`${tagLabel}-${index}`}>
+      <Tag {...commonProps} key={`${tagLabel}-${options.index}`}>
         {isLabelIconTag(tag) ? tag.icon : undefined}
         {tagLabel}
       </Tag>
@@ -203,13 +203,13 @@ export const TagList = ({
         className={cn(tagListStyle.tagContainer({ multiline }))}
         data-testid={`${dataTestId ?? 'taglist'}-container`}
       >
-        {visibleTags.map((tag, index) => renderTag(tag, index, true))}
+        {visibleTags.map((tag, index) => renderTag(tag, { index }))}
 
         {hiddenTags.length > 0 && (
           <Popover
             content={
               <div className={tagListStyle.tagContainer({ multiline: true })}>
-                {hiddenTags.map((tag, index) => renderTag(tag, index))}
+                {hiddenTags.map((tag, index) => renderTag(tag, { index }))}
               </div>
             }
             maxHeight={popoverMaxHeight}
@@ -239,7 +239,7 @@ export const TagList = ({
       {/* A hidden div which renders the tags so we can measure them */}
       <div aria-hidden="true" ref={measureRef} className={tagListStyle.measurementContainer}>
         <div className={tagListStyle.tagContainer({ multiline })}>
-          {potentiallyVisibleTags.map((tag, index) => renderTag(tag, index))}
+          {potentiallyVisibleTags.map((tag, index) => renderTag(tag, { index, hidden: true }))}
         </div>
         <button type="button" className={tagListStyle.counter} ref={popoverTriggerRef}>
           +{surelyHiddenTags.length}
