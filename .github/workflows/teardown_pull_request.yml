@@ -23,7 +23,7 @@ jobs:
           echo "STORYBOOK_BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL" >> $GITHUB_ENV
 
       - name: Deploy Serverless Container Scaleway
-        uses: scaleway/scw-serverless-container-action@f87d6df5bde9a356b16c837ec69d2baa5c4cac09 # v0.0.8
+        uses: scaleway/scw-serverless-container-action@efbea758b5fd4b8d70a4e3faa8f6dbc4c9ac163b # v0.0.11
         id: deploy
         with:
           type: 'teardown'
