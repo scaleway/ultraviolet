@@ -184,9 +184,9 @@ jobs:
         id: set-min-scale
         run: |
           if [[ "${{ env.STORYBOOK_BRANCH_SLUG }}" == "main" || "${{ env.STORYBOOK_BRANCH_SLUG }}" == "beta" ]]; then
-            echo "SCW_MIN_SCALE=1" >> $GITHUB_ENV
+            echo "SCW_MIN_SCALE=2" >> $GITHUB_ENV
           else
-            echo "SCW_MIN_SCALE=0" >> $GITHUB_ENV
+            echo "SCW_MIN_SCALE=1" >> $GITHUB_ENV
           fi
 
       - name: Set scw_limit
@@ -201,7 +201,7 @@ jobs:
           fi
 
       - name: Deploy Serverless Container Scaleway
-        uses: scaleway/scw-serverless-container-action@f87d6df5bde9a356b16c837ec69d2baa5c4cac09 # v0.0.8
+        uses: scaleway/scw-serverless-container-action@ff7675ddd76864bd900979035b13ef6f8996fac6 # v0.0.9
         id: deploy
         with:
           type: 'deploy'
