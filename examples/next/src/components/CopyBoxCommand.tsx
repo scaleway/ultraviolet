@@ -1,4 +1,4 @@
-import { useTheme } from '@ultraviolet/themes'
+import { useThemes } from '@ultraviolet/themes'
 import { Stack, Tabs } from '@ultraviolet/ui'
 import { Children, isValidElement, useState } from 'react'
 import type { ReactElement } from 'react'
@@ -47,7 +47,7 @@ type CommandProps = {
 }
 
 const Command = ({ command, showLineNumbers = true }: CommandProps) => {
-  const { theme } = useTheme()
+  const { themeName } = useThemes()
 
   return (
     <SyntaxHighlighter
@@ -57,7 +57,7 @@ const Command = ({ command, showLineNumbers = true }: CommandProps) => {
         style: { whiteSpace: 'pre-wrap', wordBreak: 'break-all' },
       }}
       showLineNumbers={showLineNumbers}
-      style={theme === 'light' ? oneLight : dracula}
+      style={themeName === 'light' ? oneLight : dracula}
     >
       {command}
     </SyntaxHighlighter>

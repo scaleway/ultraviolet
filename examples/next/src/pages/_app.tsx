@@ -1,7 +1,6 @@
-import { consoleDarkTheme, consoleLightTheme, extendTheme, ThemeProvider } from '@ultraviolet/themes'
+import { ThemesProvider } from '@ultraviolet/themes'
 import { Stack } from '@ultraviolet/ui'
 import type { AppProps } from 'next/app'
-import { useCallback, useLayoutEffect, useState } from 'react'
 import type { PropsWithChildren } from 'react'
 import Footer from '../components/Footer'
 import Head from '../components/Head'
@@ -16,72 +15,23 @@ import '@ultraviolet/themes/light.css'
 import styles from '../../styles/grid.module.scss'
 import '../../styles/global.css'
 
-type Themes = 'light' | 'dark'
-
 const Grid = ({ children }: PropsWithChildren) => (
   <Stack alignItems="center" className={styles.grid} gap={4}>
     {children}
   </Stack>
 )
 
-const themeKey = 'theme'
-
-const App = ({ Component, pageProps }: AppProps) => {
-  const [theme, setTheme] = useState<Themes>('light')
-
-  const setThemes = (newTheme: Themes) => {
-    setTheme(newTheme)
-    document.documentElement.classList.remove('light-theme', 'dark-theme')
-    document.documentElement.classList.add(`${newTheme}-theme`)
-  }
-  const setThemeCallBack = useCallback((localTheme: Themes) => {
-    localStorage.setItem(themeKey, localTheme)
-    setTheme(localTheme)
-  }, [])
-
-  const localLightTheme = {
-    ...extendTheme({
-      ...consoleLightTheme,
-      colors: {
-        primary: {
-          text: '#4F0599',
-        },
-      },
-    }),
-    setTheme: setThemeCallBack,
-    theme: 'light',
-  } as const
-
-  const localDarkTheme = {
-    ...extendTheme({
-      ...consoleDarkTheme,
-    }),
-    setTheme: setThemeCallBack,
-    theme: 'dark',
-  } as const
-
-  useLayoutEffect(() => {
-    if (typeof window !== 'undefined') {
-      const matchtTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-      const storageTheme = (localStorage.getItem(themeKey) as 'light' | 'dark') ?? matchtTheme
-      if (storageTheme) {
-        setTheme(storageTheme)
-      }
-    }
-  }, [])
-
-  return (
-    <ThemeProvider theme={theme === 'light' ? localLightTheme : localDarkTheme}>
-      <Head />
-      <Grid>
-        <Header className={styles.header} setTheme={setThemes} />
-        <main className={styles.main}>
-          <Component {...pageProps} />
-        </main>
-        <Footer className={styles.footer} />
-      </Grid>
-    </ThemeProvider>
-  )
-}
+const App = ({ Component, pageProps }: AppProps) => (
+  <ThemesProvider>
+    <Head />
+    <Grid>
+      <Header className={styles.header} />
+      <main className={styles.main}>
+        <Component {...pageProps} />
+      </main>
+      <Footer className={styles.footer} />
+    </Grid>
+  </ThemesProvider>
+)
 
 export default App
