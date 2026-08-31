@@ -1,5 +1,11 @@
 # @ultraviolet/utils
 
+## 1.1.0
+
+### Minor Changes
+
+- [#6853](https://github.com/scaleway/ultraviolet/pull/6853) [`47ddb53`](https://github.com/scaleway/ultraviolet/commit/47ddb53c132d69b7608f4385a14d90b4a0a58144) Thanks [@jsulpis](https://github.com/jsulpis)! - add a function `shuffle` to shuffle a string
+
 ## 1.0.14
 
 ### Patch Changes

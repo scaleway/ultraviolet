@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.24.3
+
+### Patch Changes
+
+- [#6853](https://github.com/scaleway/ultraviolet/pull/6853) [`47ddb53`](https://github.com/scaleway/ultraviolet/commit/47ddb53c132d69b7608f4385a14d90b4a0a58144) Thanks [@jsulpis](https://github.com/jsulpis)! - `TagList`:
+  - avoid issues with duplicated tag labels in tests
+  - set `data-testid` on visible tags (including the popover) instead of the hidden ones
+- Updated dependencies [[`47ddb53`](https://github.com/scaleway/ultraviolet/commit/47ddb53c132d69b7608f4385a14d90b4a0a58144)]:
+  - @ultraviolet/utils@1.1.0
+  - @ultraviolet/icons@5.5.2
+
 ## 3.24.2
 
 ### Patch Changes
