@@ -22,30 +22,32 @@ const container = styleVariants({
 })
 
 const optionBase = style({
-  alignItems: 'center',
-  background: 'transparent',
-  border: 'none',
-  fontWeight: theme.typography.bodyStrong.weight,
-  height: '100%',
-  justifyContent: 'center',
-  padding: `${theme.space[1]} ${theme.space[2]}`,
   selectors: {
-    '&:hover, &:active': {
+    '&&': {
+      alignItems: 'center',
+      background: 'transparent',
+      border: 'none',
+      fontWeight: theme.typography.bodyStrong.weight,
+      height: '100%',
+      justifyContent: 'center',
+      padding: `${theme.space[1]} ${theme.space[2]}`,
+      transition: 'all 200ms ease-in-out ',
+      userSelect: 'none',
+      whiteSpace: 'nowrap',
+    },
+    '&&[data-checked]:hover, &&[data-checked]:active': {
       border: 'none !important',
       boxShadow: 'none !important',
     },
-    '&[data-checked="false"]:hover:not([data-error="true"])[data-disabled="false"]': {
+    '&&[data-checked="false"]:hover:not([data-error="true"])[data-disabled="false"]': {
       boxShadow: 'none',
     },
-    '&[data-checked="false"][data-error="false"][data-disabled="false"]:active': {
+    '&&[data-checked="false"][data-error="false"][data-disabled="false"]:active': {
       boxShadow: 'none',
     },
-    '&[data-checked="true"]': { border: 'none' },
-    '&[data-disabled="true"]': { background: 'transparent', border: 'none' },
+    '&&[data-checked="true"]': { border: 'none' },
+    '&&[data-disabled="true"]': { background: 'transparent', border: 'none' },
   },
-  transition: 'all 200ms ease-in-out ',
-  userSelect: 'none',
-  whiteSpace: 'nowrap',
 })
 
 /**
