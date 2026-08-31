@@ -1,0 +1,71 @@
+name: Cleanup Stale Containers
+
+# Deletes Scaleway Serverless Containers that were not torn down properly
+# (e.g. a PR was closed but the teardown workflow was cancelled or failed).
+#
+# Uses the native `type: cleanup` mode of scw-serverless-container-action,
+# which lists containers in the namespace and deletes the ones matching the
+# filters below. The `cleanup_name_pattern` regex targets PR preview
+# containers (ending with `-storybook`) so `main` and `beta` are never touched.
+
+on:
+  schedule:
+    # Every day at 03:00 UTC
+    - cron: '0 3 * * *'
+
+  # uncommented to force cleanup on merge request
+  # pull_request:
+
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: 'List stuck containers without deleting them'
+        required: false
+        type: boolean
+        default: false
+      max-age-days:
+        description: 'Delete containers older than N days'
+        required: false
+        type: string
+        default: '7'
+
+permissions:
+  contents: read
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Cleanup stale containers
+        uses: scaleway/scw-serverless-container-action@efbea758b5fd4b8d70a4e3faa8f6dbc4c9ac163b # v0.0.11
+        id: cleanup
+        with:
+          type: cleanup
+          scw_access_key: ${{ vars.SCW_ACCESS_KEY }}
+          scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
+          scw_containers_namespace_id: ${{ vars.SCW_CONTAINERS_NAMESPACE_ID }}
+          scw_region: ${{ vars.SCW_REGION || 'fr-par' }}
+          cleanup_max_age_days: ${{ github.event.inputs.max-age-days || '7' }}
+          cleanup_date_field: updated_at
+          # Only target PR preview containers — main/beta will be excluded
+          cleanup_exclude_names: 'main,beta'
+          cleanup_dry_run: ${{ github.event.inputs.dry-run || 'false' }}
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Cleanup Summary"
+            echo ""
+            echo "- Containers found: \`${{ steps.cleanup.outputs.cleanup_total_count }}\`"
+            echo "- Containers deleted: \`${{ steps.cleanup.outputs.cleanup_deleted_count }}\`"
+            echo "- Dry run: \`${{ steps.cleanup.outputs.cleanup_dry_run }}\`"
+            if [ -n "${{ steps.cleanup.outputs.cleanup_deleted_containers }}" ]; then
+              echo ""
+              echo "### Deleted Containers"
+              echo ""
+              echo "\`${{ steps.cleanup.outputs.cleanup_deleted_containers }}\`"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
