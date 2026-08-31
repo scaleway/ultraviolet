@@ -5,16 +5,12 @@ name: Cleanup Stale Containers
 #
 # Uses the native `type: cleanup` mode of scw-serverless-container-action,
 # which lists containers in the namespace and deletes the ones matching the
-# filters below. The `cleanup_name_pattern` regex targets PR preview
-# containers (ending with `-storybook`) so `main` and `beta` are never touched.
+# filters below.
 
 on:
   schedule:
     # Every day at 03:00 UTC
     - cron: '0 3 * * *'
-
-  # uncommented to force cleanup on merge request
-  # pull_request:
 
   workflow_dispatch:
     inputs:
@@ -52,20 +48,3 @@ jobs:
           # Only target PR preview containers — main/beta will be excluded
           cleanup_exclude_names: 'main,beta'
           cleanup_dry_run: ${{ github.event.inputs.dry-run || 'false' }}
-
-      - name: Summary
-        if: always()
-        run: |
-          {
-            echo "## Cleanup Summary"
-            echo ""
-            echo "- Containers found: \`${{ steps.cleanup.outputs.cleanup_total_count }}\`"
-            echo "- Containers deleted: \`${{ steps.cleanup.outputs.cleanup_deleted_count }}\`"
-            echo "- Dry run: \`${{ steps.cleanup.outputs.cleanup_dry_run }}\`"
-            if [ -n "${{ steps.cleanup.outputs.cleanup_deleted_containers }}" ]; then
-              echo ""
-              echo "### Deleted Containers"
-              echo ""
-              echo "\`${{ steps.cleanup.outputs.cleanup_deleted_containers }}\`"
-            fi
-          } >> "$GITHUB_STEP_SUMMARY"
