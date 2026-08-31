@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@ultraviolet/utils'
+import { cn, shuffle } from '@ultraviolet/utils'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Popover } from '../Popover'
@@ -63,6 +63,22 @@ const getTagLabel = (tag: NonNullable<TagListProps['tags']>[number]) => {
   }
 
   return tag
+}
+
+const shuffleTagLabels = (tag: TagType) => {
+  if (isKeyValueTag(tag)) {
+    return {
+      ...tag,
+      key: shuffle(tag.key),
+      value: shuffle(tag.value),
+    }
+  } else if (isLabelIconTag(tag)) {
+    return {
+      ...tag,
+      label: shuffle(tag.label),
+    }
+  }
+  return shuffle(tag)
 }
 
 /**
@@ -174,7 +190,8 @@ export const TagList = ({
   }, [multiline, potentiallyVisibleTags, surelyHiddenTags, tags])
 
   const renderTag = (tag: TagType, index: number, hidden?: boolean) => {
-    const tagLabel = getTagLabel(tag)
+    const finalTag = hidden ? shuffleTagLabels(tag) : tag
+    const tagLabel = getTagLabel(finalTag)
     const commonProps = {
       className: tagListStyle.tag,
       copiable: copiable,
@@ -185,13 +202,13 @@ export const TagList = ({
       sentiment: sentiment,
     }
 
-    if (isKeyValueTag(tag)) {
-      return <Tag keyValue={tag} {...commonProps} key={`${tagLabel}-${index}`} />
+    if (isKeyValueTag(finalTag)) {
+      return <Tag keyValue={finalTag} {...commonProps} key={`${tagLabel}-${index}`} />
     }
 
     return (
       <Tag {...commonProps} key={`${tagLabel}-${index}`}>
-        {isLabelIconTag(tag) ? tag.icon : undefined}
+        {isLabelIconTag(finalTag) ? finalTag.icon : undefined}
         {tagLabel}
       </Tag>
     )
@@ -203,7 +220,7 @@ export const TagList = ({
         className={cn(tagListStyle.tagContainer({ multiline }))}
         data-testid={`${dataTestId ?? 'taglist'}-container`}
       >
-        {visibleTags.map((tag, index) => renderTag(tag, index, true))}
+        {visibleTags.map((tag, index) => renderTag(tag, index))}
 
         {hiddenTags.length > 0 && (
           <Popover
@@ -239,10 +256,10 @@ export const TagList = ({
       {/* A hidden div which renders the tags so we can measure them */}
       <div aria-hidden="true" ref={measureRef} className={tagListStyle.measurementContainer}>
         <div className={tagListStyle.tagContainer({ multiline })}>
-          {potentiallyVisibleTags.map((tag, index) => renderTag(tag, index))}
+          {potentiallyVisibleTags.map((tag, index) => renderTag(tag, index, true))}
         </div>
         <button type="button" className={tagListStyle.counter} ref={popoverTriggerRef}>
-          +{surelyHiddenTags.length}
+          {surelyHiddenTags.length}+
         </button>
       </div>
     </div>
