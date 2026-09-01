@@ -110,6 +110,19 @@ export const CreateDropdown = ({
     </Stack>
   )
 
+  if (isLoading) {
+    return (
+      <Stack
+        className={selectInputStyle.dropdownContainer}
+        id="select-dropdown"
+        onKeyDown={handleKeyDownSelect}
+        role="listbox"
+      >
+        <Skeleton variant="block" />
+      </Stack>
+    )
+  }
+
   if (isEmpty && !addOption) {
     return (
       <Stack alignItems="center" className={selectInputStyle.dropdownEmptyState} gap={2}>
@@ -156,22 +169,18 @@ export const CreateDropdown = ({
       <SelectAll textVariant={textVariant} />
 
       <Stack gap={0.25} id="items" className={selectInputStyle.dropdownSection}>
-        {isLoading ? (
-          <Skeleton variant="block" />
-        ) : (
-          displayedOptions.map((option, index) => (
-            <Item
-              defaultSearchValue={defaultSearchValue}
-              descriptionDirection={descriptionDirection}
-              focusedItemRef={focusedItemRef}
-              indexOption={index}
-              key={option.value}
-              option={option}
-              optionalInfoPlacement={optionalInfoPlacement}
-              textVariant={textVariant}
-            />
-          ))
-        )}
+        {displayedOptions.map((option, index) => (
+          <Item
+            defaultSearchValue={defaultSearchValue}
+            descriptionDirection={descriptionDirection}
+            focusedItemRef={focusedItemRef}
+            indexOption={index}
+            key={option.value}
+            option={option}
+            optionalInfoPlacement={optionalInfoPlacement}
+            textVariant={textVariant}
+          />
+        ))}
         {loadMore ? <Stack className={selectInputStyle.dropdownLoadMore}>{loadMore}</Stack> : null}
       </Stack>
     </Stack>
@@ -183,73 +192,67 @@ export const CreateDropdown = ({
       onKeyDown={handleKeyDownSelect}
       role="listbox"
     >
-      {isLoading ? (
-        <Skeleton variant="block" />
-      ) : (
-        <>
-          <AddOption
-            addOption={addOption}
-            option={{
-              label: addOptionLabel,
-              searchText: searchInput,
-              value: `${addOption?.text} ${searchInput}`,
-            }}
-            searchable={searchable}
-            textVariant={textVariant}
-          />
-          <SelectAll textVariant={textVariant} />
+      <AddOption
+        addOption={addOption}
+        option={{
+          label: addOptionLabel,
+          searchText: searchInput,
+          value: `${addOption?.text} ${searchInput}`,
+        }}
+        searchable={searchable}
+        textVariant={textVariant}
+      />
+      <SelectAll textVariant={textVariant} />
 
-          {Object.keys(displayedOptions).map((group, index) => {
-            const hasElements = displayedOptions[group].length > 0
-            const emptyStateGroup = groupEmptyState?.[group] ?? null
-            const errorGroup = groupError?.[group] ?? null
+      {Object.keys(displayedOptions).map((group, index) => {
+        const hasElements = displayedOptions[group].length > 0
+        const emptyStateGroup = groupEmptyState?.[group] ?? null
+        const errorGroup = groupError?.[group] ?? null
 
-            return (
-              <Stack gap={0.25} key={group} className={selectInputStyle.dropdownSection}>
-                {hasElements || emptyStateGroup ? <Group group={group} index={index} /> : null}
-                <Stack gap="0.25" id="items">
-                  {!hasElements && emptyStateGroup ? (
-                    <Text
-                      as="span"
-                      className={selectInputStyle.emptyStateGroupStyle}
-                      prominence="weak"
-                      sentiment="neutral"
-                      variant={textVariant}
-                    >
-                      {emptyStateGroup}
-                    </Text>
-                  ) : null}
-                  {errorGroup ? (
-                    <Text
-                      as="span"
-                      className={selectInputStyle.emptyStateGroupStyle}
-                      sentiment="danger"
-                      variant={textVariant}
-                    >
-                      {errorGroup}
-                    </Text>
-                  ) : null}
-                  {displayedOptions[group].map((option, indexOption) =>
-                    errorGroup ? null : (
-                      <Item
-                        defaultSearchValue={defaultSearchValue}
-                        descriptionDirection={descriptionDirection}
-                        focusedItemRef={focusedItemRef}
-                        group={group}
-                        indexOption={indexOption}
-                        key={option.value}
-                        option={option}
-                        optionalInfoPlacement={optionalInfoPlacement}
-                        textVariant={textVariant}
-                      />
-                    ),
-                  )}
-                </Stack>
-              </Stack>
-            )
-          })}
-        </>
-      )}
+        return (
+          <Stack gap={0.25} key={group} className={selectInputStyle.dropdownSection}>
+            {hasElements || emptyStateGroup ? <Group group={group} index={index} /> : null}
+            <Stack gap="0.25" id="items">
+              {!hasElements && emptyStateGroup ? (
+                <Text
+                  as="span"
+                  className={selectInputStyle.emptyStateGroupStyle}
+                  prominence="weak"
+                  sentiment="neutral"
+                  variant={textVariant}
+                >
+                  {emptyStateGroup}
+                </Text>
+              ) : null}
+              {errorGroup ? (
+                <Text
+                  as="span"
+                  className={selectInputStyle.emptyStateGroupStyle}
+                  sentiment="danger"
+                  variant={textVariant}
+                >
+                  {errorGroup}
+                </Text>
+              ) : null}
+              {displayedOptions[group].map((option, indexOption) =>
+                errorGroup ? null : (
+                  <Item
+                    defaultSearchValue={defaultSearchValue}
+                    descriptionDirection={descriptionDirection}
+                    focusedItemRef={focusedItemRef}
+                    group={group}
+                    indexOption={indexOption}
+                    key={option.value}
+                    option={option}
+                    optionalInfoPlacement={optionalInfoPlacement}
+                    textVariant={textVariant}
+                  />
+                ),
+              )}
+            </Stack>
+          </Stack>
+        )
+      })}
       {loadMore ? <Stack className={selectInputStyle.dropdownLoadMore}>{loadMore}</Stack> : null}
     </Stack>
   )

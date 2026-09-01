@@ -711,7 +711,6 @@ exports[`selectInput > renders correctly loading - grouped data 1`] = `
             >
               <div
                 class="dropdown__igqisu2 styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d"
-                data-grouped="true"
                 id="select-dropdown"
                 role="listbox"
               >
@@ -846,55 +845,50 @@ exports[`selectInput > renders correctly loading - ungrouped data 1`] = `
                 role="listbox"
               >
                 <div
-                  class="dropdown__igqisu8 styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.125rem_xxsmall__toi52u5d"
-                  id="items"
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="styles__c2hb451"
                 >
-                  <div
-                    aria-busy="true"
-                    aria-live="polite"
-                    class="styles__c2hb451"
+                  <ul
+                    class="stylesVariants__fr4c0t4"
                   >
-                    <ul
-                      class="stylesVariants__fr4c0t4"
+                    <li
+                      class="stylesVariants__fr4c0t3"
                     >
-                      <li
-                        class="stylesVariants__fr4c0t3"
-                      >
-                        <div
-                          class="stylesVariants__fr4c0tc"
-                        />
-                        <div
-                          class="stylesVariants__fr4c0td"
-                          style="--fr4c0t1: 7.5rem;"
-                        />
-                      </li>
-                      <li
-                        class="stylesVariants__fr4c0t3"
-                      >
-                        <div
-                          class="stylesVariants__fr4c0tc"
-                        />
-                        <div
-                          class="stylesVariants__fr4c0td"
-                          style="--fr4c0t1: 7.5rem;"
-                        />
-                      </li>
-                      <li
-                        class="stylesVariants__fr4c0t3"
-                      >
-                        <div
-                          class="stylesVariants__fr4c0tc"
-                        />
-                        <div
-                          class="stylesVariants__fr4c0td"
-                          style="--fr4c0t1: 7.5rem;"
-                        />
-                      </li>
-                    </ul>
-                    <div
-                      class="styles__c2hb452"
-                    />
-                  </div>
+                      <div
+                        class="stylesVariants__fr4c0tc"
+                      />
+                      <div
+                        class="stylesVariants__fr4c0td"
+                        style="--fr4c0t1: 7.5rem;"
+                      />
+                    </li>
+                    <li
+                      class="stylesVariants__fr4c0t3"
+                    >
+                      <div
+                        class="stylesVariants__fr4c0tc"
+                      />
+                      <div
+                        class="stylesVariants__fr4c0td"
+                        style="--fr4c0t1: 7.5rem;"
+                      />
+                    </li>
+                    <li
+                      class="stylesVariants__fr4c0t3"
+                    >
+                      <div
+                        class="stylesVariants__fr4c0tc"
+                      />
+                      <div
+                        class="stylesVariants__fr4c0td"
+                        style="--fr4c0t1: 7.5rem;"
+                      />
+                    </li>
+                  </ul>
+                  <div
+                    class="styles__c2hb452"
+                  />
                 </div>
               </div>
             </div>
@@ -4660,8 +4654,8 @@ exports[`selectInput > renders correctly with function footer 1`] = `
       class="styles__uf6pag0"
     >
       <div
-        aria-controls="_r_4ai_"
-        aria-describedby="_r_4ai_"
+        aria-controls="_r_4aq_"
+        aria-describedby="_r_4aq_"
         class="styles__w40vpo9 styles_fullWidth_true__w40vpob"
         tabindex="-1"
       >
@@ -4669,13 +4663,13 @@ exports[`selectInput > renders correctly with function footer 1`] = `
           class="styles__toi52u0 styles_flexDirection_column_xxsmall__toi52u2d styles_gap_0.25rem_xxsmall__toi52u5j"
         >
           <div
-            aria-controls="_r_4ai_"
+            aria-controls="_r_4aq_"
             aria-expanded="false"
             class="selectBar__r8qe46 selectBar__r8qe45 selectBar_size_large__r8qe4a selectBar_state_neutral__r8qe4e"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_4ag_"
+            id="_r_4ao_"
             role="combobox"
             tabindex="0"
           >
