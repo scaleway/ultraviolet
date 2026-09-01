@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const GmailLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="GmailLogo">
+export const GmailLogo = (props: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <g clipPath="url(#a)">
       <path fill="#4285f4" d="M3.09 16h2.546V9.818L2 7.091v7.818c0 .604.49 1.09 1.09 1.09" />
       <path fill="#34a853" d="M14.364 16h2.545c.604 0 1.09-.49 1.09-1.091V7.091l-3.635 2.727" />

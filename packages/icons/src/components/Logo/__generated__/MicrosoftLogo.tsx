@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const MicrosoftLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="MicrosoftLogo">
+export const MicrosoftLogo = (props: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <g clipPath="url(#a)">
       <path fill="#f3f3f3" d="M2 2h16v16H2z" />
       <path fill="#f35325" d="M2.696 2.696h6.956v6.956H2.696z" />

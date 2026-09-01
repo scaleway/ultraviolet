@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const GpuServersProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="GpuServersProductIcon">
+export const GpuServersProductIcon = (props: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <g>
       <g>
         <g fill="#f1eefc" className="fillWeak">

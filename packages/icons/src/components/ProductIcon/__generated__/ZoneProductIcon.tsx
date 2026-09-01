@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ZoneProductIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="ZoneProductIcon">
+export const ZoneProductIcon = (props: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <g clipPath="url(#b)">
       <g>
         <path

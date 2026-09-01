@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const EmailRemoveIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="EmailRemoveIcon">
+export const EmailRemoveIcon = (props: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M2 6.21c0-.93.754-1.684 1.684-1.684h11.79c.93 0 1.684.754 1.684 1.685v.978l-7.108 3.554a1.05 1.05 0 0 1-.942 0L2 7.189zm12.686 3.627L17.158 8.6v1.031c-.282.073-.55.22-.77.44l-.704.704-.704-.704a1.7 1.7 0 0 0-.294-.235" />

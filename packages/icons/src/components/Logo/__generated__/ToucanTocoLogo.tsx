@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ToucanTocoLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="ToucanTocoLogo">
+export const ToucanTocoLogo = (props: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <path
       fill="#a0d1c5"
       d="M8.666 1.03a6 6 0 0 0-.44-.027L8.009 1c-.002 2.326-.021 4.653 0 6.979h6.977a13 13 0 0 0-.013-.551c-.19-2.174-1.313-4.065-3.133-5.28a8.7 8.7 0 0 0-1.445-.73 7.8 7.8 0 0 0-1.73-.388"

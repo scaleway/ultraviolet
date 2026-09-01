@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const JsonIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="JsonIcon">
+export const JsonIcon = (props: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M10.766 13.981q.244 0 .444.193a.67.67 0 0 1 .203.507.67.67 0 0 1-.651.7.64.64 0 0 1-.449-.193.68.68 0 0 1-.199-.503q0-.316.2-.508a.63.63 0 0 1 .452-.196" />

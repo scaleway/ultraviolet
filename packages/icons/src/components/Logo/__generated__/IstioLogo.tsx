@@ -9,12 +9,12 @@ import { useTheme } from '@ultraviolet/themes'
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const IstioLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => {
+export const IstioLogo = (props: Omit<IconProps, 'children'>) => {
   const { theme } = useTheme()
   const isLight = theme === 'light'
 
   return (
-    <Icon {...props} title="IstioLogo">
+    <Icon {...props}>
       {isLight ? (
         <>
           <path fill="#466bb0" d="m16.833 16.667-7.5-.834V0zm-13.333 0 5-.834V6.667zm0 .833h13.333L8.5 20z" />

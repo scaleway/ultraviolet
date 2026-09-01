@@ -6,14 +6,14 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 ## Description
 
-Base SVG icon component for the design system. It renders an `<svg>` with configurable size, sentiment color, prominence and disabled state. Every generated icon (e.g. `ArrowRightIcon`, `AddressIcon`) is a thin wrapper around this base component, passing its SVG paths as children and a `title` prop set to the icon's technical name.
+Base SVG icon component for the design system. It renders an `<svg>` with configurable size, sentiment color, prominence and disabled state. Every generated icon (e.g. `ArrowRightIcon`, `AddressIcon`) is a thin wrapper around this base component, passing its SVG paths as children.
 
 ## Summary
 
-1. ❌ **Perceivable**: icons are not hidden from assistive technologies by default and generated icons expose a meaningless technical name (e.g. `ArrowRightIcon`) as their accessible name.
+1. ✅ **Perceivable**: icons are `aria-hidden` by default. Informative icons can be given a meaningful accessible name via `accessibleLabel` combined with `role="img"`.
 2. ✅ **Operable**: the icon is a non-interactive element; operability depends on the interactive parent it is placed inside (button, link, etc.).
 3. ✅ **Understandable**: the component itself is static and introduces no comprehension issues.
-4. ❌ **Robust**: no explicit `role="img"` and `aria-hidden` is not applied by default, leading to inconsistent exposure across browsers and screen readers.
+4. ✅ **Robust**: `role="img"` (when informative) and `aria-hidden` now applied explicitly by default. `focusable="false"` prevents decorative icons from entering the tab order.
 
 ## ARIA Pattern
 
@@ -22,16 +22,16 @@ There is no dedicated ARIA Pattern for icons in the [WAI-ARIA Authoring Practice
 An icon is either:
 
 - **Decorative**: must be `aria-hidden="true"` with no accessible name.
-- **Informative**: must have `role="img"` and an accessible name provided via a `<title>` element, `aria-label`, or `aria-labelledby`.
+- **Informative**: must have `role="img"` and an accessible name provided via a `accessibleLabel` (preferred), `aria-label` (deprecated), or `aria-labelledby`.
 
-The team's agreed approach for icon accessibility is defined in [RFC #6585 - Accessible Icons and Hidden Labels](https://github.com/scaleway/ultraviolet/discussions/6585). The key decision is that **all icons should be `aria-hidden` by default** and an accessible name should be provided through a `VisuallyHidden` component or a tooltip (`tooltipLabel` / `tooltipDescription`) on the interactive parent, rather than via `aria-label` on the icon.
+The team's agreed approach for icon accessibility is defined in [RFC #6585 - Accessible Icons and Hidden Labels](https://github.com/scaleway/ultraviolet/discussions/6585). The key decision is that **all icons should be `aria-hidden` by default** and an accessible name should be provided through a `VisuallyHidden` component or a tooltip (`tooltipLabel` / `tooltipDescription`) on the interactive parent, rather than via `accessibleLabel` on the icon. For icons that carry meaning on their own, `accessibleLabel` on the icon makes it informative (`role="img"`).
 
 ## Rules
 
 Enforced by the component:
 
-- ❌ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - Decorative icons must be hidden from assistive technologies; informative icons must have a meaningful text alternative. Currently neither is reliably true: icons are exposed by default and generated icons use the technical icon name as the title.
-- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The `<svg>` has no explicit `role="img"` and `aria-hidden` is not set by default, so role and name cannot be reliably determined by assistive technologies.
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - Decorative icons are hidden by default via `aria-hidden="true"`; informative icons expose a meaningful text alternative via `accessibleLabel` combined with `role="img"`.
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The `<svg>` declares `role="img"` when informative and `aria-hidden="true"` by default, so role and name can be reliably determined by assistive technologies.
 - ⚠️ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The `sentiment` prop drives the icon color. When the sentiment carries meaning it must also be conveyed through a visible or accessible text label, not color alone.
 - ⚠️ [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Icons default to `currentColor` or theme sentiment colors. Contrast must be verified in the context where the icon is rendered.
 
@@ -39,30 +39,54 @@ To apply when using the component:
 
 - [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Do not rely on the icon's `sentiment` color as the sole way to convey meaning; provide a visible or accessible text label.
 - [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Ensure the icon color meets the 3:1 contrast ratio against its background in the context of use.
-- [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - When an icon carries meaning (e.g. inside an icon-only button), provide an accessible name on the interactive parent via a `VisuallyHidden` label or a tooltip (`tooltipLabel`), as described in RFC #6585.
+- [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - When an icon carries meaning (e.g. inside an icon-only button), provide an accessible name on the interactive parent via a `VisuallyHidden` label or a tooltip (`tooltipLabel`), as described in RFC #6585. Alternatively, set `accessibleLabel` directly on the icon, which makes it informative (`role="img"` with the given accessible name).
 
-## Accessibility issues
+<details>
+  <summary>Past accessibility issues</summary>
 
 **Critical:**
 
-- Icons are not `aria-hidden` by default. The component only forwards `aria-hidden` if it is explicitly passed, defaulting to `undefined`. As a result every icon is exposed to the accessibility tree even when it is purely decorative, polluting the screen reader experience. This directly contradicts decision #1 of RFC #6585 ("All Icons Are `aria-hidden`") and violates WCAG 1.1.1 and 4.1.2. The component should default `aria-hidden` to `true`.
-- Generated icons expose the technical component name as the accessible name. Each generated icon passes `title="ArrowRightIcon"` (the icon name), which becomes the SVG `<title>` and the accessible name. Screen readers therefore announce "ArrowRightIcon" instead of a meaningful label such as "Next" or "Right arrow". This violates WCAG 1.1.1 (the text alternative must serve an equivalent purpose) and aligns with the RFC motivation: "Icon names don't always map to their semantic meaning".
+- ✅ Icons are not `aria-hidden` by default
+  - The component now defaults `aria-hidden` to `true` unless the icon is informative. Previously it only forwarded
+    `aria-hidden` if it was explicitly passed, defaulting to `undefined`, so every icon was exposed to the accessibility
+    tree even when purely decorative. This implements decision #1 of RFC #6585 ("All Icons Are `aria-hidden`") and
+    satisfies WCAG 1.1.1 and 4.1.2.
+
+- ✅ Generated icons expose the technical component name as the accessible name
+  - The `title` prop (hard-coded to the icon name, e.g. `title="AddressIcon"`) has been removed entirely, along with the
+    always-rendered `<title>` element. Screen readers no longer announce meaningless names such as "ArrowRightIcon". This
+    satisfies WCAG 1.1.1 (the text alternative must serve an equivalent purpose).
 
 **High:**
 
-- No explicit `role="img"`. The `<svg>` element does not declare `role="img"`. While some browsers map an SVG containing a `<title>` to the `img` role, this mapping is inconsistent across browsers and assistive technologies. Explicitly setting `role="img"` (only when the icon is informative and not `aria-hidden`) would make identification robust. This affects WCAG 4.1.2.
-- `<title>` is always rendered and cannot be changed. When the icon is decorative (aria-hidden="true"), the title is ignored by assistive technologies but still present in the DOM. The `title` prop should be renamed to `accessibleLabel` to be consistent with the decision in RFC #6585 and added to the generated component (i.e. InformationIcon, FolderIcon etc.) as an optional property to provide an adequate label for informative icons. The `<title>` element should only be rendered when an `accessibleLabel` is provided.
+- ✅ No explicit `role="img"`
+  - When an icon is informative (an `accessibleLabel` is provided), the `<svg>` now declares `role="img"`, making
+    identification robust across browsers and assistive technologies instead of relying on inconsistent implicit SVG
+    mapping. This satisfies WCAG 4.1.2.
+
+- ✅ `<title>` is always rendered and cannot be changed
+  - The `title` prop was not usable by consumers (the base `Icon` is not exposed; generated icons hard-coded it to the
+    icon name) so it has been removed entirely. The `<title>` element is no longer rendered. Informative icons now get
+    their accessible name via `accessibleLabel`.
 
 **Medium:**
 
-- `aria-label` is the only built-in way to set a meaningful accessible name, but it is discouraged by RFC #6585 because it is often overlooked by automatic browser translation and has poorer screen reader support than visually hidden content. The recommended approach is to label the interactive parent via `VisuallyHidden` or a tooltip instead. The component API and documentation should guide consumers toward this pattern and deprecate direct `aria-label` usage.
-- No `focusable="false"` attribute. SVG elements can receive focus in some (mostly legacy) browsers. Setting `focusable="false"` on the SVG would prevent decorative icons from accidentally entering the tab order. Low impact on modern browsers but good for robustness.
+- ✅ `aria-label` is the only built-in way to set a meaningful accessible name
+  - Icons that carry meaning can now be given an accessible name with `accessibleLabel`, which sets `role="img"` and
+    un-hides the icon. The API and documentation guide consumers toward labelling the interactive parent via
+    `VisuallyHidden` or a tooltip (see "To apply when using the component").
+
+- ✅ No `focusable="false"` attribute
+  - The `<svg>` now sets `focusable="false"`, preventing decorative icons from accidentally entering the tab order in
+    browsers that historically made SVGs focusable.
 
 **Low:**
 
-- Contrast (WCAG 1.4.11) cannot be enforced by the component alone since icons default to `currentColor` or theme colors. This must be validated in the context of use.
+- ⚠️ Contrast (WCAG 1.4.11) cannot be enforced by the component alone since icons default to `currentColor` or theme colors. This must be validated in the context of use.
+
+</details>
 
 ## Dependencies
 
-- The `VisuallyHidden` component and the global `sr-only` CSS class proposed in RFC #6585 do not exist yet. Implementing them is a prerequisite for the recommended way to provide accessible labels on icon-only interactive elements.
-- The `tooltipLabel` / `tooltipDescription` properties proposed in RFC #6585 for the `Button` (and other interactive components) are a prerequisite to cleanly replace `aria-label` usage on icon buttons.
+- A `VisuallyHidden` component exists in `@ultraviolet/ui` and is the recommended way to provide accessible labels on icon-only interactive elements.
+- The `tooltipLabel` / `tooltipDescription` properties proposed in RFC #6585 for the `Button` (and other interactive components) are a prerequisite to cleanly replace `aria-label` usage on icon buttons, and do not exist yet.
