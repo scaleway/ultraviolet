@@ -38,16 +38,19 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: 'pnpm'
+          registry-url: 'https://registry.npmjs.org'
+        env:
+          NODE_AUTH_TOKEN: ${{ env.NPM_TOKEN }}
 
       - run: pnpm install
       - name: Create Release Pull Request or Publish to npm
         id: changesets
-        uses: changesets/action@a45c4d594aa4e2c509dc14a9f2b3b67ba3780d0d # v1.9.0
+        uses: changesets/action@8488615a623b1b9c987934bb89eae8af6a946ac1 # v2.1.1
         with:
-          commit: 'chore: release'
-          title: 'chore: release'
-          publish: pnpm release
+          commit-message: 'chore: release'
+          pr-title: 'chore: release'
+          publish-script: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ env.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ env.NPM_TOKEN }}
           PNPM_CONFIG_PROVENANCE: true
