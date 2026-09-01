@@ -478,6 +478,9 @@ importers:
       '@scaleway/regex':
         specifier: 6.1.0
         version: 6.1.0
+      '@scaleway/types':
+        specifier: 1.2.0
+        version: 1.2.0(typescript@7.0.2)
       '@types/node':
         specifier: 24.13.3
         version: 24.13.3
@@ -809,6 +812,9 @@ importers:
 
   packages/themes:
     dependencies:
+      '@scaleway/types':
+        specifier: 1.2.0
+        version: 1.2.0(typescript@7.0.2)
       '@vanilla-extract/css':
         specifier: 1.21.2
         version: 1.21.2
@@ -867,6 +873,9 @@ importers:
       '@scaleway/phonenumber':
         specifier: 1.0.0
         version: 1.0.0
+      '@scaleway/types':
+        specifier: 1.2.0
+        version: 1.2.0(typescript@7.0.2)
       '@scaleway/use-clipboard':
         specifier: 1.1.0
         version: 1.1.0(react@19.2.8)
@@ -4145,6 +4154,11 @@ packages:
 
   '@scaleway/tsconfig@1.1.6':
     resolution: {integrity: sha512-iU1AlvlPWL0R77lWhFD5gAPIeac6Pixb0sOYjZLovsqLp5jQgKM8BgcPtRHJ2xPHg4p7azuJQ8PQsMedB2YRwA==}
+
+  '@scaleway/types@1.2.0':
+    resolution: {integrity: sha512-gPecxSR3x2JnUsJ3JBGFyWPiE2a2hBWPJX6BG87GuePiXzXDSPnCVHLOip/iGERizFQ525VkxL3ylR7k6x4wiA==}
+    peerDependencies:
+      typescript: '>=4.1'
 
   '@scaleway/use-clipboard@1.1.0':
     resolution: {integrity: sha512-aXXU6cWfNdOTBS0+BMrzERYiZWwvmt2VcBNinvEwOFyPTuihxjbBjLqw9AzLRJQb4ScJDb93QpHaPHeoqvjGLA==}
@@ -11780,6 +11794,10 @@ snapshots:
   '@scaleway/regex@6.1.0': {}
 
   '@scaleway/tsconfig@1.1.6': {}
+
+  '@scaleway/types@1.2.0(typescript@7.0.2)':
+    dependencies:
+      typescript: 7.0.2
 
   '@scaleway/use-clipboard@1.1.0(react@19.2.8)':
     dependencies:

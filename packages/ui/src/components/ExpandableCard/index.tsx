@@ -1,12 +1,12 @@
 'use client'
 
+import type { XOR } from '@scaleway/types'
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { DragIcon } from '@ultraviolet/icons/DragIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useCallback, useRef, useState } from 'react'
 import type { CSSProperties, DetailsHTMLAttributes, DragEvent, ForwardedRef, KeyboardEvent, ReactNode } from 'react'
-import type { XOR } from '../../types'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 import { ExpandableCardTitle } from './components/Title'
