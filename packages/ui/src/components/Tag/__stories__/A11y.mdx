@@ -41,7 +41,7 @@ To apply when using the component:
 - When `copiable` and `disabled` are both set, the element renders as a `<button>` without the `disabled` attribute, so it remains in the tab order and is announced as an enabled button even though it does nothing (WCAG 2.1.1, 4.1.2).
 - `aria-disabled` is applied to the inner text `<span>`, not to the interactive copiable button, so assistive technology never learns the button is disabled (WCAG 4.1.2).
 - Hardcoded English close label: `aria-label="Close tag"` is not localized and does not include the visible tag text. A removable tag's button label should contain the visible tag label (e.g. `Remove {label}`) so screen reader users know which tag they are removing. Prefer visually hidden text per RFC #6585 or an `accessibleLabel` (WCAG 4.1.2).
-- Copy success is not announced to screen readers: the "Copied!" feedback is only shown through a Tooltip (`role="tooltip"`), which is not read by screen readers, so screen reader users get no confirmation the copy succeeded (WCAG 4.1.3). Use a status/live region (e.g. `role="status"`) to announce the feedback.
+- Copy success is not announced to screen readers: the "Copied!" feedback is only shown through a Tooltip (`role="tooltip"`), which is not read by screen readers, so screen reader users get no confirmation the copy succeeded (WCAG 4.1.3). Use a status (`role="status"`) or live region (`aria-live="assertive"`) to announce the feedback.
 
 **Medium:**
 
@@ -50,6 +50,7 @@ To apply when using the component:
 **Low:**
 
 - Copiable button's purpose is conveyed only via the tooltip description (`aria-describedby`). However, because this relies on tooltip-description announcement, it may be inconsistent across screen readers. For full robustness, add a visually hidden "Copy" indication to the accessible name (prefer `VisuallyHidden` text over `aria-label`).
+- Investigate if the use of an `aria-atomic` attribute would make screen readers announce a more relevant message after a status update (copy/copied)
 - KeyValue separator: the vertical `<Separator>` between key and value is presentational; consider `aria-hidden` so it is not announced.
 
 ## Dependencies
