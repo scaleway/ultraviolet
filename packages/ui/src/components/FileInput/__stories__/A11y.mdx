@@ -1,0 +1,69 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/FileInput/A11y" />
+
+# FileInput - Accessibility
+
+## Description
+
+FileInput lets users upload one or multiple files via drag & drop or a native file picker. Two variants: `dropzone` (dedicated drop area with label, helper, file list) and `overlay` (overlay appears over custom content when dragging). Supports file validation, directory upload, and a file list with delete.
+
+## Summary
+
+1. ❌ **Perceivable**: Input hidden via `display: none` removes it from the a11y tree. File rejection errors not surfaced in UI.
+2. ❌ **Operable**: Medium dropzone variant has no keyboard way to trigger the picker unless a `FileInput.Button` is provided as children. Focus not managed after file deletion.
+3. ⚠️ **Understandable**: Labels enforced via types (good), but file-level rejection errors are returned only via callbacks and never shown to the user.
+4. ❌ **Robust**: Dropzone container `<div>` lacks `role`, `tabIndex`, keyboard handlers. Delete buttons in `FileInput.List` have no accessible name (icon is `aria-hidden` by default).
+
+## ARIA Pattern
+
+No specific ARIA pattern exists for file upload/dropzone in the [WAI-ARIA APG](https://www.w3.org/WAI/ARIA/apg/patterns/). Built on the native `<input type="file">`, which is the recommended approach. Accessibility depends on keeping that input perceivable and operable.
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 1.3.3 - Sensory Characteristics (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html) - Drag-over state conveyed only visually (background, border). No non-visual cue.
+- ❌ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Drag states (`over`, `page`) and error states rely solely on color changes.
+- ❌ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - Hidden input (`display: none`) removed from tab order. Small variant's `<button>` is in tab order but not associated with the label.
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - The buttons used to open the file picker inherit from the native focus visible style which has enough contrast.
+- ⚠️ [WCAG 2.5.3 - Label in Name (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html) - Small variant `<button>` accessible name comes from `title` prop. When `title` is missing, the button has no accessible name (UploadIcon is `aria-hidden` by default).
+- ⚠️ [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - General `error` prop shown via Description (`role="status"`). But file-level rejection errors (wrong type, validation failure) only returned via callbacks (`onDrop`, `onDropError`), never shown in UI.
+- ✅ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - `LabelType` enforces either `label` or `aria-label`, ensuring the input always has an accessible name (when visible).
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - Dropzone container `<div>` (medium): no `role`, `tabIndex`, or keyboard handlers despite handling drag-and-drop. Delete buttons in `FileInput.List` have no accessible name (only contain a `CloseIcon` which is `aria-hidden` by default).
+- ❌ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - File add/remove events not announced. No `aria-live` region. Description has `role="status"` but only for `error`/`helper` props.
+
+To apply when using the component:
+
+- [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - When using the `FileInput` with `children` you **must** include interactive elements to allow opening the picker with the keyboard. This is missing in several stories.
+- [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - Ensure disabled state text/background meet minimum contrast.
+- [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Ensure dashed border and drag-over indicators have sufficient contrast.
+
+## Accessibility issues
+
+**Critical:**
+
+- Native `<input type="file">` hidden with `display: none` (`fileInputStyle.fileInput`) → removed from a11y tree and tab order. `.click()` still opens the picker, but screen readers can't perceive the input, label association is broken, and keyboard users can't focus it. Use a visually-hidden technique (e.g., `.visually-hidden` / clip-rect) to keep it in the a11y tree.
+- Medium dropzone variant: container is a `<div>` with `onDragOver`/`onDrop` but NO `onClick`, `role`, `tabIndex`, or keyboard handler. Keyboard users can't trigger the picker unless `FileInput.Button` is provided as children. This is the default variant — consumers may not realize they need a button.
+- Overlay variant: keyboard access to file selection depends entirely on consumer-provided interactive children (e.g., `FileInput.Button`). Without it, no keyboard-accessible way to trigger the picker.
+
+**High:**
+
+- Delete buttons in `FileInput.List` have no accessible name — the `<CloseIcon />` is `aria-hidden` by default (PR #6815), so screen readers announce nothing. Use `accessibleLabel="Remove {file.name}"` once this prop is added to the Button, or use a Tooltip with `relation="label"`.
+- File rejection errors (wrong type, validation failure) returned via `onDrop`/`onDropError` callbacks but never shown in UI. Screen reader/keyboard users get no feedback. Surface these in an `aria-live` region or integrate into the Description component, or document that users must display those errors themselves.
+- Focus not managed after removing a file from `FileInput.List`. Delete button is unmounted → focus falls to `<body>`. Move focus to next/previous delete button or another logical element.
+
+**Medium:**
+
+- Drag states (`over`, `page`) communicated only visually. No `aria-live` region or ARIA state announces changes to screen reader users.
+- File add/remove events not announced to AT. No `aria-live` region or `role="status"`/`role="alert"`.
+- Small variant `<button>` has no accessible name when `title` prop is missing — UploadIcon is `aria-hidden` by default (PR #6815), leaving the button with no text content.
+
+**Low:**
+
+- `disabled` attribute passed to `<div>` container (`<Container disabled={disabled}>`) — not valid HTML for a `<div>`, no semantic effect. Use ARIA or class-based styling.
+- `FileInput.Button` doesn't inherit/convey the file input's label in its accessible name — only its own text content (e.g., "Upload"), may lack context about what files are being uploaded.
+
+## Dependencies
+
+- **Button**: delete button in `FileInput.List` relies on Button's accessible name behavior. With the `CloseIcon` now `aria-hidden` by default (PR #6815), a Button with only an icon and no `accessibleLabel` has no accessible name at all.
