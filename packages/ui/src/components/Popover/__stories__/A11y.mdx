@@ -1,0 +1,62 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Overlay/Popover/A11y" />
+
+# Popover - Accessibility
+
+## Description
+
+A non-modal overlay dialog that displays additional information or actions on top of the main content when triggered. It includes a title, a close button and a content area, and is usually triggered by clicking a button.
+
+## Summary
+
+1. ❌ **Perceivable**: the dialog has no accessible name associated to its visible title (`role="dialog"` is unnamed); the icon in the close button is not marked `aria-hidden`.
+2. ❌ **Operable**: no focus management — focus does not move into the dialog on open and is not restored to the trigger on close.
+3. ✅ **Understandable**: content and close affordance are predictable and readable.
+4. ❌ **Robust**: the `dialog` role lacks an accessible name (`aria-labelledby`/`aria-label`), failing Name, Role, Value.
+
+## ARIA Pattern
+
+[ARIA Dialog (Modal) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
+
+The Popover maps to the Dialog pattern. As a non-modal dialog it correctly does not set `aria-modal="true"`, but it must still provide an accessible name and manage focus. Naming conventions follow [RFC #6585 - Accessible Icons and Hidden Labels](https://github.com/scaleway/ultraviolet/discussions/6585): prefer `aria-labelledby` referencing visible text over `aria-label`, and avoid hardcoded, non-localizable labels.
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - `role="dialog"` is set but the dialog has no accessible name; the visible title is not referenced via `aria-labelledby` nor is an `aria-label` provided. Per RFC #6585 the preferred fix is `aria-labelledby` pointing at the visible `<h3>` title (via a generated `id`), not `aria-label`.
+- ❌ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - the title (`<h3>`) is not programmatically associated with the dialog container.
+- ❌ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - focus does not move into the dialog on open and is not returned to the trigger on close.
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - the dialog can be opened from a focusable trigger and closed with the Escape key and the close button.
+- ✅ [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) - Escape provides a way out of the dialog.
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - the close button keeps a visible focus indicator.
+- ⚠️ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - the `CloseIcon` inside the close button is not `aria-hidden="true"`; although the button's accessible name overrides it, per RFC #6585 decorative icons should be hidden explicitly.
+- ⚠️ [WCAG 1.4.13 - Content on Hover or Focus (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html) - the Popover is dismissible via Escape and a close button; hoverable and persistent behavior depends on usage.
+
+To apply when using the component:
+
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - the `primary` sentiment conveys meaning through color; ensure the sentiment is also conveyed through text (title/content).
+- [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - ensure text on `primary` background meets contrast requirements.
+
+## Accessibility issues
+
+**Critical:**
+
+- Dialog has no accessible name. The popup renders `role="dialog"` without `aria-labelledby` (the `<h3>` title has no `id` to reference) or an `aria-label`, so screen readers announce an unnamed dialog. This violates WCAG 4.1.2 / 1.3.1 and the Dialog pattern. Per RFC #6585, fix with `aria-labelledby` pointing at the visible title's generated `id` (preferred over `aria-label`).
+
+**High:**
+
+- No focus management on open. When the Popover opens, focus remains on the trigger instead of moving into the dialog, contrary to the Dialog pattern (2.4.3). Because focus never enters the portal, the focus trap attached in `Popup` (`handleFocusTrap`) never actually receives Tab events, so it is effectively inert.
+- No focus restoration on close. When the dialog is dismissed (close button or Escape), focus is not returned to the triggering element and is lost to the document (2.4.3).
+
+**Medium:**
+
+- The close button uses a generic, hardcoded `aria-label="close"` (`ContentWrapper.tsx`), which is non-localizable and does not tell screen reader users which popover they are closing. Per RFC #6585, avoid `aria-label`; provide a descriptive, localizable accessible name (e.g. `Close {title}`) via visually hidden text or a `tooltipLabel` (2.5.3 / 4.1.2).
+- The trigger does not expose `aria-haspopup="dialog"` (the `aria-haspopup` prop is not forwarded by `Popover`), so assistive technologies are not told that activating the trigger opens a dialog.
+
+**Low:**
+
+- The `CloseIcon` inside the close button is not `aria-hidden="true"` (`ContentWrapper.tsx`). The button's accessible name overrides it, but per RFC #6585 decorative icons should be hidden explicitly (1.1.1).
+- The focus trap applied to this non-modal dialog wraps Tab focus within the dialog. Since the Popover is non-modal, focus trapping is semantically inconsistent with non-modal behavior (2.1.2); Escape remains the way out.
+- The native `dialog` element could be used instead of a `div` with `role="dialog"`
