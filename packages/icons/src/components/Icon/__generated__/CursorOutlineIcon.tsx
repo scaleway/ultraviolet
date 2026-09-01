@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const CursorOutlineIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="CursorOutlineIcon">
+export const CursorOutlineIcon = (props: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M2.47 2.47a.75.75 0 0 1 .865-.141l14.5 7.25a.75.75 0 0 1-.098 1.383l-5.083 1.693-1.692 5.082a.75.75 0 0 1-1.383.098l-7.25-14.5a.75.75 0 0 1 .14-.865m7.64 13.074 1.24-3.719a.75.75 0 0 1 .475-.473l3.72-1.242L4.677 4.677z" />
     ) : (

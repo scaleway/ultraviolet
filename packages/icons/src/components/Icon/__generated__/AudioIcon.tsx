@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const AudioIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="AudioIcon">
+export const AudioIcon = (props: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M10.702 2.25a.75.75 0 0 1 .75.75v14a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75m3.009 2.505a.75.75 0 0 1 .75.75v9.018a.75.75 0 0 1-1.5 0V5.505a.75.75 0 0 1 .75-.75m-9.027.496a.75.75 0 0 1 .75.75v7.996a.75.75 0 0 1-1.5 0V6.001a.75.75 0 0 1 .75-.75M7.693 7.25a.75.75 0 0 1 .75.75v3.998a.75.75 0 0 1-1.5 0V8a.75.75 0 0 1 .75-.75m9.027 0a.75.75 0 0 1 .75.75v3.998a.75.75 0 0 1-1.5 0V8a.75.75 0 0 1 .75-.75" />
     ) : (

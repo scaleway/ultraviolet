@@ -7,9 +7,9 @@ export default {
   parameters: {
     a11yStatus: {
       perceivable: false,
-      operable: false,
+      operable: true,
       understandable: false,
-      robust: false,
+      robust: true,
     },
   },
 } as Meta<typeof VerificationCode>

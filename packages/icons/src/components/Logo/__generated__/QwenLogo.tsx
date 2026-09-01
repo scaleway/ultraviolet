@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const QwenLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="QwenLogo">
+export const QwenLogo = (props: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <path
       fill="#615ced"
       fillRule="evenodd"

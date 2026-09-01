@@ -1498,6 +1498,28 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  it('renders skeleton instead of empty state when loading with empty data', async () => {
+    renderWithTheme(
+      <SelectInput
+        isLoading
+        name="test"
+        options={{}}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+      />,
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+
+    expect(dropdown.querySelector('[aria-busy="true"]')).not.toBeNull()
+    expect(screen.queryByText('No options')).not.toBeInTheDocument()
+  })
+
   it('renders correctly with function footer', async () => {
     const f = vi.fn(() => {})
 

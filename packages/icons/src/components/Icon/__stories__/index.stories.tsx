@@ -6,10 +6,10 @@ export default {
   component: AddressIcon,
   parameters: {
     a11yStatus: {
-      perceivable: false,
+      perceivable: true,
       operable: true,
       understandable: true,
-      robust: false,
+      robust: true,
     },
     docs: {
       description: {
@@ -24,3 +24,4 @@ export { Playground } from './Playground.stories'
 export { List } from './List.stories'
 export { Size } from './Size.stories'
 export { Sentiment } from './Sentiment.stories'
+export { Label } from './Label.stories'

@@ -9,12 +9,12 @@ import { useTheme } from '@ultraviolet/themes'
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const WindowsLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => {
+export const WindowsLogo = (props: Omit<IconProps, 'children'>) => {
   const { theme } = useTheme()
   const isLight = theme === 'light'
 
   return (
-    <Icon {...props} title="WindowsLogo">
+    <Icon {...props}>
       {isLight ? (
         <>
           <path

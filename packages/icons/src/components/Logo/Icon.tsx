@@ -10,15 +10,31 @@ export type IconProps = {
   className?: string
   children: ReactNode
   style?: CSSProperties
-  title: string
+  accessibleLabel?: string
+  'aria-hidden'?: boolean
 }
 
 /**
  * Logo component is used to render a set of logos. Their style cannot be changed
  */
-export const Icon = ({ size = 'small', className, children, style, title }: IconProps) => (
-  <svg className={cn(className, logo[size])} height="20" style={style} viewBox="0 0 20 20" width="20">
-    <title>{title}</title>
+export const Icon = ({
+  size = 'small',
+  className,
+  children,
+  style,
+  accessibleLabel,
+  'aria-hidden': ariaHidden,
+}: IconProps) => (
+  <svg
+    aria-hidden={ariaHidden ?? !accessibleLabel}
+    className={cn(className, logo[size])}
+    height="20"
+    style={style}
+    role={accessibleLabel ? 'img' : undefined}
+    viewBox="0 0 20 20"
+    width="20"
+  >
+    {accessibleLabel ? <title>{accessibleLabel}</title> : null}
     {children}
   </svg>
 )

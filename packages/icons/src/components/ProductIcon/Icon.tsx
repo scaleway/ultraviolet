@@ -14,7 +14,8 @@ export type IconProps = {
   className?: string
   children: ReactNode
   style?: CSSProperties
-  title: string
+  accessibleLabel?: string
+  'aria-hidden'?: boolean
 }
 
 /**
@@ -28,16 +29,19 @@ export const Icon = ({
   className,
   children,
   style,
-  title,
+  accessibleLabel,
+  'aria-hidden': ariaHidden,
 }: IconProps) => (
   <svg
+    aria-hidden={ariaHidden ?? !accessibleLabel}
     className={cn(className, productIconSizes[size], productIconVariants[`${variant}${disabled ? 'Disabled' : ''}`])}
     height="64"
+    role={accessibleLabel ? 'img' : undefined}
     style={style}
     viewBox="0 0 64 64"
     width="64"
   >
-    <title>{title}</title>
+    {accessibleLabel ? <title>{accessibleLabel}</title> : null}
     {children}
   </svg>
 )

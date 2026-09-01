@@ -186,7 +186,7 @@ jobs:
           if [[ "${{ env.STORYBOOK_BRANCH_SLUG }}" == "main" || "${{ env.STORYBOOK_BRANCH_SLUG }}" == "beta" ]]; then
             echo "SCW_MIN_SCALE=1" >> $GITHUB_ENV
           else
-            echo "SCW_MIN_SCALE=0" >> $GITHUB_ENV
+            echo "SCW_MIN_SCALE=1" >> $GITHUB_ENV
           fi
 
       - name: Set scw_limit
@@ -201,7 +201,7 @@ jobs:
           fi
 
       - name: Deploy Serverless Container Scaleway
-        uses: philibea/scaleway-containers-deploy@0d640c31f4e7d2e3c7b830e89d19b9253624c40f # v1.1.5
+        uses: scaleway/scw-serverless-container-action@efbea758b5fd4b8d70a4e3faa8f6dbc4c9ac163b # v0.0.11
         id: deploy
         with:
           type: 'deploy'

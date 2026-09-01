@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const EmbeddingIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="EmbeddingIcon">
+export const EmbeddingIcon = (props: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M2.5 1.75a.75.75 0 0 1 .75.75v14.25H17.5a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75v-15a.75.75 0 0 1 .75-.75" />

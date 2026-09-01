@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const AiCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="AiCategoryIcon">
+export const AiCategoryIcon = (props: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <g>
       <path
         fill="#a060f6"

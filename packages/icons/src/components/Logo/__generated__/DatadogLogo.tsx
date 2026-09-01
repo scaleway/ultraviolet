@@ -9,12 +9,12 @@ import { useTheme } from '@ultraviolet/themes'
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const DatadogLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => {
+export const DatadogLogo = (props: Omit<IconProps, 'children'>) => {
   const { theme } = useTheme()
   const isLight = theme === 'light'
 
   return (
-    <Icon {...props} title="DatadogLogo">
+    <Icon {...props}>
       {isLight ? (
         <>
           <path

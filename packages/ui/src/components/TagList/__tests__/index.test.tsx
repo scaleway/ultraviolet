@@ -5,6 +5,15 @@ import { afterAll, describe, expect, it, vi } from 'vitest'
 import { TagList } from '..'
 import type { TagType } from '..'
 
+vi.mock('@ultraviolet/utils', async importOriginal => {
+  // oxlint-disable-next-line typescript/consistent-type-imports
+  const actual = await importOriginal<typeof import('@ultraviolet/utils')>()
+  return {
+    ...actual,
+    shuffle: (value: string) => value.split('').reverse().join(''),
+  }
+})
+
 // - This function mocks the offsetWidth of DOM elements:
 // as JSDOM | happy-dom ( used by testing-library ) only emulates the DOM elements
 // so it does not render the elements in any way to be able to know their size or position.
@@ -81,7 +90,7 @@ describe('tagList', () => {
 
     const { asFragment } = renderWithTheme(<TagList data-testid="taglist" popoverTitle="Additional" tags={tags} />)
 
-    expect(screen.getByRole('button', { name: '+1' })).toBeInTheDocument()
+    expect(screen.getByText('+1')).toBeInTheDocument()
     expect(screen.getByTestId('scaleway')).toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
@@ -92,6 +101,8 @@ describe('tagList', () => {
 
     const { asFragment } = renderWithTheme(<TagList data-testid="taglist" popoverTitle="Additional" />)
 
+    const tagWrapper = screen.getByTestId('taglist-container')
+    expect(tagWrapper).toBeEmptyDOMElement()
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -171,7 +182,7 @@ describe('tagList', () => {
 
     expect(screen.getByTestId('scaleway')).toBeInTheDocument()
     expect(screen.queryByText('cloud')).not.toBeInTheDocument()
-    expect(screen.getByRole('button', { name: '+2' })).toBeInTheDocument()
+    expect(screen.getByText('+2')).toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -201,7 +212,7 @@ describe('tagList', () => {
 
     expect(screen.getByTestId('database')).toBeInTheDocument()
     expect(screen.queryByText('private-network')).not.toBeInTheDocument()
-    expect(screen.getByRole('button', { name: '+2' })).toBeInTheDocument()
+    expect(screen.getByText('+2')).toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
   })

@@ -9,12 +9,12 @@ import { useTheme } from '@ultraviolet/themes'
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const AirflowLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => {
+export const AirflowLogo = (props: Omit<IconProps, 'children'>) => {
   const { theme } = useTheme()
   const isLight = theme === 'light'
 
   return (
-    <Icon {...props} title="AirflowLogo">
+    <Icon {...props}>
       {isLight ? (
         <>
           <path

@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const PartnersCategoryIcon = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="PartnersCategoryIcon">
+export const PartnersCategoryIcon = (props: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     <g fillRule="evenodd" clipRule="evenodd">
       <path
         fill="#521094"

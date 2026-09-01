@@ -9,12 +9,12 @@ import { useTheme } from '@ultraviolet/themes'
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const KibanaLogo = ({ ...props }: Omit<IconProps, 'children' | 'title'>) => {
+export const KibanaLogo = (props: Omit<IconProps, 'children'>) => {
   const { theme } = useTheme()
   const isLight = theme === 'light'
 
   return (
-    <Icon {...props} title="KibanaLogo">
+    <Icon {...props}>
       {isLight ? (
         <>
           <path fill="#e9478b" d="M2.79 7.49c2.655 0 5.165.692 7.346 1.855L17.918 0H2.5v18.546V7.49z" />
