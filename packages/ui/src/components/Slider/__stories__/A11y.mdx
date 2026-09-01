@@ -42,7 +42,7 @@ To apply when using the component:
 
 **High:**
 
-- Indistinguishable handles on the double slider: Both handles use `aria-label={ariaLabel ?? name}`, so a screen reader user hears the same name for both and cannot tell which handle is the minimum and which is the maximum. They should have distinct names (e.g. "Minimum" and "Maximum") derived from the label.
+- Indistinguishable handles on the double slider: Both handles use `aria-label={ariaLabel ?? name}`, so a screen reader user hears the same name for both and cannot tell which handle is the minimum and which is the maximum. Screen readers should announce the whole range (i.e. "from 10 to 50") when one of the values is updated.
 - No accessible name possible in some configurations: When `label`, `aria-label`, and `name` are all omitted, the slider has no accessible name, failing labels requirements.
 - Deprecated `aria-label` pattern: The slider exposes the `aria-label` prop. Per [RFC #6585](https://github.com/scaleway/ultraviolet/discussions/6585), it should migrate to an `accessibleLabel` prop for hidden labels in line with team standards.
 - Option values announced as indexes: When `options` is used with a non-linear scale, the native slider `value` is the index, so assistive tech announces the numeric index rather than the option's semantic label. A blind user cannot tell what value they are selecting, making the component effectively unusable for screen reader users. Expose `aria-valuetext` with the option label (the ARIA Slider pattern requires it when `aria-valuenow` is not user-friendly).
