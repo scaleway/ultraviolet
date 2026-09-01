@@ -1,0 +1,60 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Badges/Tag/A11y" />
+
+# Tag - Accessibility
+
+## Description
+
+A metadata component that displays a short text description of an item (category, label, key-value). It supports several variants: `copiable` (renders a button that copies its text to the clipboard), `closable` (renders a close button via `onClose`), `disabled`, `isLoading`, and a `keyValue` layout, all available in 7 color sentiments.
+
+## Summary
+
+1. ✅ **Perceivable**: decorative icons are `aria-hidden` (resolved by the Icon component fix); sentiment contrast is correct.
+2. ❌ **Operable**: the disabled copiable button remains focusable even though it performs no action.
+3. ❌ **Understandable**: the copiable button lacks `type="button"` and may unexpectedly submit a parent form.
+4. ❌ **Robust**: `aria-disabled` is placed on a decorative element instead of the interactive button; the "Copied!" status message is not announced (4.1.3).
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - A non-copiable tag renders as a `<span>` and a copiable/removable tag uses a native `<button>`.
+- ❌ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - The copiable button in a `disabled` state remains keyboard-focusable even though it performs no action.
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - Both the **copiable** button and the **close (closable)** button keep the browser-default focus ring, which is a valid, visible focus indicator (passes).
+- ❌ [WCAG 3.2.2 - On Input (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/on-input.html) - The copiable `<button>` has no `type` attribute (defaults to `submit`) and can trigger an unexpected form submission when placed inside a form.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - `aria-disabled` is set on the inner text `<span>` instead of the actual interactive button, so the disabled state is not programmatically conveyed.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The removable (close) button's `aria-label` is a generic "Close tag" that does not include the visible tag text. A removable tag's button label should contain the visible label of the tag.
+- ⚠️ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The copiable button's accessible name is the tag text, and the tooltip is wired as its accessible description. On focus, the action is conveyed as a description, so the button's purpose is programmatically determinable. Caveat: because announcement relies on the tooltip description, it may vary across screen readers; a visually hidden "Copy" in the name would make it fully robust (see Low below).
+- ❌ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - The "Copied!" feedback is only shown via a tooltip, which is not announced by screen readers.
+
+To apply when using the component:
+
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The `sentiment` is conveyed only through color; ensure the meaning is also present in the tag text where the sentiment carries information.
+- [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - On tag removal, focus should be repositioned to a relevant location. `onClose` is external, so this is the consumer's responsibility.
+
+## Accessibility issues
+
+**High:**
+
+- Missing `type="button"` on the copiable button: `TagInner` renders `<button>` with no `type`, which defaults to `submit`. Inside a form, clicking a copiable Tag submits the form unexpectedly (WCAG 3.2.2). This also affects the `keyValue + copiable` combination.
+- When `copiable` and `disabled` are both set, the element renders as a `<button>` without the `disabled` attribute, so it remains in the tab order and is announced as an enabled button even though it does nothing (WCAG 2.1.1, 4.1.2).
+- `aria-disabled` is applied to the inner text `<span>`, not to the interactive copiable button, so assistive technology never learns the button is disabled (WCAG 4.1.2).
+- Hardcoded English close label: `aria-label="Close tag"` is not localized and does not include the visible tag text. A removable tag's button label should contain the visible tag label (e.g. `Remove {label}`) so screen reader users know which tag they are removing. Prefer visually hidden text per RFC #6585 or an `accessibleLabel` (WCAG 4.1.2).
+- Copy success is not announced to screen readers: the "Copied!" feedback is only shown through a Tooltip (`role="tooltip"`), which is not read by screen readers, so screen reader users get no confirmation the copy succeeded (WCAG 4.1.3). Use a status (`role="status"`) or live region (`aria-live="assertive"`) to announce the feedback.
+
+**Medium:**
+
+- Loader inside a copiable button: `isLoading` renders a `role="progressbar"` labeled "Loading" inside the button, which adds "Loading 20%" to the button's accessible output and may be noisy.
+
+**Low:**
+
+- Copiable button's purpose is conveyed only via the tooltip description (`aria-describedby`). However, because this relies on tooltip-description announcement, it may be inconsistent across screen readers. For full robustness, add a visually hidden "Copy" indication to the accessible name (prefer `VisuallyHidden` text over `aria-label`).
+- Investigate if the use of an `aria-atomic` attribute would make screen readers announce a more relevant message after a status update (copy/copied)
+- KeyValue separator: the vertical `<Separator>` between key and value is presentational; consider `aria-hidden` so it is not announced.
+
+## Dependencies
+
+- `Icon` - Icons (CloseIcon, CopyContentIcon, and child icons) were previously exposed with their technical name as the accessible name (WCAG 1.1.1 / 4.1.2). This is being resolved by the Icon component fix (`aria-hidden` by default), which will automatically fix it for Tag. No further action required on Tag.
+- `Tooltip` - The copy-feedback mechanism relies on tooltip announcement behavior.
+- `Loader` - The loading state renders the Loader component inside the copiable button, which adds "Loading 20%" to the button's accessible output. Any adjustment to how the loading state is announced must be coordinated with the Loader component's implementation.
