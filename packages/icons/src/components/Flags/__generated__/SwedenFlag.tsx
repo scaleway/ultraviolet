@@ -8,35 +8,28 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const SwedenFlag = ({ disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="SwedenFlag">
+export const SwedenFlag = ({ disabled, ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {disabled ? (
       <>
-        <g clipPath="url(#clip0_3237_1286)">
-          <mask id="mask0_3237_1286" x="0" y="0" maskUnits="userSpaceOnUse">
-            <path fill="#fff" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
-          </mask>
-          <g mask="url(#mask0_3237_1286)">
-            <path fill="#414141" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
-            <path fill="#c4c4c4" d="M4.583-.23H7.5v15.75H4.583z" />
-            <path fill="#c4c4c4" d="M-.083 6.188H16.25v2.916H-.083z" />
-          </g>
+        <mask id="mask0_3237_1286" x="1" y="1" maskUnits="userSpaceOnUse">
+          <path fill="#fff" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        </mask>
+        <g mask="url(#mask0_3237_1286)">
+          <path fill="#414141" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+          <path fill="#c4c4c4" d="M5.083.27H8v15.75H5.083z" />
+          <path fill="#c4c4c4" d="M.417 6.688H16.75v2.916H.417z" />
         </g>
-        <defs>
-          <clipPath id="clip0_3237_1286">
-            <path fill="#fff" d="M0 0h16v16H0z" />
-          </clipPath>
-        </defs>
       </>
     ) : (
       <>
-        <mask id="mask0_3237_1281" x="0" y="0">
-          <path fill="#fff" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
+        <mask id="mask0_3237_1281" x="1" y="1" maskUnits="userSpaceOnUse">
+          <path fill="#fff" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
         </mask>
         <g mask="url(#mask0_3237_1281)">
-          <path fill="#005293" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
-          <path fill="#fecb00" d="M4.583-.23H7.5v15.75H4.583z" />
-          <path fill="#fecb00" d="M-.083 6.188H16.25v2.916H-.083z" />
+          <path fill="#005293" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+          <path fill="#fecb00" d="M5.083.27H8v15.75H5.083z" />
+          <path fill="#fecb00" d="M.417 6.688H16.75v2.916H.417z" />
         </g>
       </>
     )}

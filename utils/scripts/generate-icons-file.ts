@@ -102,7 +102,7 @@ const templateFlag = (iconName: string, svg: string, svgDisabled?: string) => {
  export const ${iconName} = ({
     disabled,
     ...props
-  }: Omit<IconProps, 'children' | 'title'>) =><Icon {...props} title="${iconName}">{disabled ? ${wrapSvg(svgDisabled ?? svg)} : ${wrapSvg(svg)}}</Icon>
+  }: Omit<IconProps, 'children'>) =><Icon {...props}>{disabled ? ${wrapSvg(svgDisabled ?? svg)} : ${wrapSvg(svg)}}</Icon>
 
   ${iconName}.displayName = '${iconName}'
 `

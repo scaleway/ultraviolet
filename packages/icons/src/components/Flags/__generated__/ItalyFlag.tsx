@@ -8,33 +8,19 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ItalyFlag = ({ disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="ItalyFlag">
+export const ItalyFlag = ({ disabled, ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {disabled ? (
       <>
-        <g clipPath="url(#clip0_3237_1277)">
-          <path fill="#f0f0f0" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
-          <path fill="#5d5d5d" d="M14.5 7.5c0-3.01-1.9-5.576-4.565-6.565v13.13A7 7 0 0 0 14.5 7.5" />
-          <path fill="#5e5e5e" d="M.5 7.5c0 3.01 1.9 5.576 4.565 6.565V.935A7 7 0 0 0 .5 7.5" />
-        </g>
-        <defs>
-          <clipPath id="clip0_3237_1277">
-            <path fill="#fff" d="M0 0h16v16H0z" />
-          </clipPath>
-        </defs>
+        <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        <path fill="#5d5d5d" d="M15 8c0-3.01-1.9-5.576-4.565-6.565v13.13A7 7 0 0 0 15 8" />
+        <path fill="#5e5e5e" d="M1 8c0 3.01 1.9 5.576 4.565 6.565V1.435A7 7 0 0 0 1 8" />
       </>
     ) : (
       <>
-        <g clipPath="url(#clip0_3237_1273)">
-          <path fill="#f0f0f0" d="M7.5 14.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14" />
-          <path fill="#ce2b37" d="M14.5 7.5c0-3.01-1.9-5.576-4.565-6.565v13.13A7 7 0 0 0 14.5 7.5" />
-          <path fill="#009246" d="M.5 7.5c0 3.01 1.9 5.576 4.565 6.565V.935A7 7 0 0 0 .5 7.5" />
-        </g>
-        <defs>
-          <clipPath id="clip0_3237_1273">
-            <path fill="#fff" d="M0 0h16v16H0z" />
-          </clipPath>
-        </defs>
+        <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        <path fill="#ce2b37" d="M15 8c0-3.01-1.9-5.576-4.565-6.565v13.13A7 7 0 0 0 15 8" />
+        <path fill="#009246" d="M1 8c0 3.01 1.9 5.576 4.565 6.565V1.435A7 7 0 0 0 1 8" />
       </>
     )}
   </Icon>

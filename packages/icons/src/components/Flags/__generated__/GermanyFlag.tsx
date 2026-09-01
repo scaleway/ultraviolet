@@ -8,11 +8,11 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const GermanyFlag = ({ disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="GermanyFlag">
+export const GermanyFlag = ({ disabled, ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {disabled ? (
       <>
-        <path fill="#d5d5d5" d="M1.435 10.435a7.002 7.002 0 0 0 13.13 0L8 9.826z" />
+        <path fill="#d5d5d5" d="M1.435 10.435a7.003 7.003 0 0 0 13.13 0L8 9.826z" />
         <path fill="#000" d="M8 1C4.99 1 2.425 2.9 1.435 5.565L8 6.174l6.565-.609A7 7 0 0 0 8 1" />
         <path
           fill="#454545"
@@ -21,7 +21,7 @@ export const GermanyFlag = ({ disabled, ...props }: Omit<IconProps, 'children' |
       </>
     ) : (
       <>
-        <path fill="#ffda44" d="M1.435 10.435a7.002 7.002 0 0 0 13.13 0L8 9.826z" />
+        <path fill="#ffda44" d="M1.435 10.435a7.003 7.003 0 0 0 13.13 0L8 9.826z" />
         <path fill="#000" d="M8 1C4.99 1 2.425 2.9 1.435 5.565L8 6.174l6.565-.609A7 7 0 0 0 8 1" />
         <path
           fill="#d80027"

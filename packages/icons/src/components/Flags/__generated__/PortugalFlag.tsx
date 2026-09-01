@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const PortugalFlag = ({ disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="PortugalFlag">
+export const PortugalFlag = ({ disabled, ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {disabled ? (
       <>
         <path fill="#8a8a8a" d="M1 8c0 3.01 1.9 5.576 4.565 6.565L6.174 8l-.609-6.565A7 7 0 0 0 1 8" />

@@ -8,8 +8,8 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const HungaryFlag = ({ disabled, ...props }: Omit<IconProps, 'children' | 'title'>) => (
-  <Icon {...props} title="HungaryFlag">
+export const HungaryFlag = ({ disabled, ...props }: Omit<IconProps, 'children'>) => (
+  <Icon {...props}>
     {disabled ? (
       <>
         <path
@@ -23,7 +23,7 @@ export const HungaryFlag = ({ disabled, ...props }: Omit<IconProps, 'children' |
       <>
         <path
           fill="#f0f0f0"
-          d="M1.435 5.565A7 7 0 0 0 1 8c0 .856.154 1.676.435 2.435L8 11.043l6.565-.608A7 7 0 0 0 15 8c0-.856-.154-1.676-.435-2.435L8 4.957z"
+          d="M1.435 5.565A7 7 0 0 0 1 8c0 .856.154 1.676.435 2.435L8 11.043l6.565-.608A7 7 0 0 0 15 8c0-.856-.154-1.676-.435-2.435L8 4.956z"
         />
         <path fill="#d80027" d="M8 1C4.99 1 2.425 2.9 1.436 5.565h13.129A7 7 0 0 0 8 1" />
         <path fill="#6da544" d="M8 15c3.01 0 5.576-1.9 6.565-4.565H1.435A7 7 0 0 0 8 15" />
