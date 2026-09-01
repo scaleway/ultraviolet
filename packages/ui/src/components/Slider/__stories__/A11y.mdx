@@ -1,0 +1,56 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/Slider/A11y" />
+
+# Slider - Accessibility
+
+## Description
+
+A form control that lets the user select a value (single handle) or a range of values (double handle) within a given min/max range. It can display the value as plain text or as a numeric input, supports optional ticks/options for non-linear scales, tooltips, helper/error text, and a required indicator.
+
+## Summary
+
+1. ✅ **Perceivable**: native range controls expose role/value to assistive tech, and error/helper text is provided as text and associated via `aria-describedby`
+2. ✅ **Operable**: native `<input type="range">` provides keyboard support (arrow keys, Home/End) and visible focus
+3. ❌ **Understandable**: the component can be rendered without an accessible name (no `label`, `accessibleLabel`, or `name`), and the numeric input variant uses a generic non-descriptive `aria-label="input"`
+4. ❌ **Robust**: the double slider renders two handles sharing the same `id` and the same accessible name, so screen reader users cannot distinguish the min and max handles
+
+## ARIA Pattern
+
+[ARIA Slider Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/slider/)
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Native range inputs are keyboard operable with arrow keys and Home/End
+- ✅ [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - Error text is rendered and referenced from the slider via `aria-describedby`
+- ❌ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - The slider can be rendered without any accessible name when neither `label`, `accessibleLabel`, nor `name` is provided
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The two double-slider handles share the same `id` and the same accessible name; the numeric input uses the generic name "input"
+
+To apply when using the component:
+
+- [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Ensure the thumb and track meet a 3:1 contrast ratio against adjacent colors in both themes
+- [WCAG 2.4.6 - Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html) - Provide a descriptive `label` or `accessibleLabel` for the field, and distinct names for each double-slider handle
+- ⚠️ [RFC #6585 - Accessible Icons and Hidden Labels](https://github.com/scaleway/ultraviolet/discussions/6585) - The slider exposes the deprecated `aria-label` prop. Per team standards it should migrate to an `accessibleLabel` prop for hidden labels
+
+## Accessibility issues
+
+**Critical:**
+
+- Duplicate `id` on the double slider - The two range inputs in `DoubleSlider` both render `id={finalId}`. Duplicate IDs make the associated `<label htmlFor>` and `aria-describedby` ambiguous, and browsers may resolve both to the first matching element. Each handle needs a unique `id`.
+
+**High:**
+
+- Indistinguishable handles on the double slider: Both handles use `aria-label={ariaLabel ?? name}`, so a screen reader user hears the same name for both and cannot tell which handle is the minimum and which is the maximum. Screen readers should announce the whole range (i.e. "from 10 to 50") when one of the values is updated.
+- No accessible name possible in some configurations: When `label`, `aria-label`, and `name` are all omitted, the slider has no accessible name, failing labels requirements.
+- Deprecated `aria-label` pattern: The slider exposes the `aria-label` prop. Per [RFC #6585](https://github.com/scaleway/ultraviolet/discussions/6585), it should migrate to an `accessibleLabel` prop for hidden labels in line with team standards.
+- Option values announced as indexes: When `options` is used with a non-linear scale, the native slider `value` is the index, so assistive tech announces the numeric index rather than the option's semantic label. A blind user cannot tell what value they are selecting, making the component effectively unusable for screen reader users. Expose `aria-valuetext` with the option label (the ARIA Slider pattern requires it when `aria-valuenow` is not user-friendly).
+
+**Medium:**
+
+- Generic name on the numeric input variant: The `NumberInput` used when `input` is enabled is labelled `aria-label="input"`, which is not descriptive and does not convey the field's purpose to screen reader users.
+
+**Low:**
+
+- Invalid `<datalist>` content - The `Options` component renders `<span>` elements inside a `<datalist>` instead of `<option>` elements, which is not valid HTML. The slider does not reference the datalist, so impact is limited, but it should use `<option>` or a non-semantic element.
