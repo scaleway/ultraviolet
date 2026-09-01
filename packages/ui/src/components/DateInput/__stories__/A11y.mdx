@@ -1,0 +1,71 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/DateInput/A11y" />
+
+# DateInput - Accessibility
+
+## Description
+
+A date picker component that lets users type a date in a text input and/or select it from a calendar popup. Supports single date and date range selection, month/year picker, min/max and excluded dates, and multiple localizations.
+
+## Summary
+
+1. ⚠️ **Perceivable**: contrast and text presentation are fine, but selected/hovered states are conveyed only through color and the calendar-variant label is not associated with a control
+2. ❌ **Operable**: the calendar popup is not keyboard accessible as a dialog (no focus move into dialog, no focus trap, no Escape handling)
+3. ✅ **Understandable**: errors and required states are announced through the underlying TextInput (`aria-invalid`, native `required`)
+4. ❌ **Robust**: day/month buttons expose meaningless accessible names (`aria-label` set to state words), and the dialog has no accessible name
+
+## ARIA Pattern
+
+- [Dialog (Modal) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
+- [Grid (Interactive Tabular Data and Layout Containers) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/grid/)
+- [Date Picker Dialog Example](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/)
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - Day/month buttons get `aria-label` set to a state word ("neutral", "selected", "in-range") instead of the actual date, hiding the day number from assistive technologies
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The `role="dialog"` popup has no `aria-label` or `aria-labelledby`, so it has no accessible name
+- ❌ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Focus is not moved into the popup when it opens, so keyboard users cannot reach the calendar.
+- ❌ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Keyboard navigation does not follow the [Grid Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) (navigation with arrow keys, only one cell in the Tab sequence)
+- ❌ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The selected/hovered date and range states are communicated only by the button sentiment (fill color), with no non-color indication
+- ❌ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - The calendar variant renders the label as plain text (`<Text as="label">`) with no associated form control
+- ❌ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - The calendar icon used as the input suffix has no alternative text
+- ❌ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - The arrow buttons will have no accessible label once the `Icon` component is updated to be `aria-hidden` by default
+
+To apply when using the component:
+
+- [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - Consumers should pass `error` and `helper` so the invalid state and message are announced
+
+## Accessibility issues
+
+**Critical:**
+
+- `aria-label` on day buttons (`CalendarDaily.tsx:193`) and month buttons (`CalendarMonthly.tsx:97`) is set to the day/month **state** (`'selected'`, `'in-range'`, `'not-current'`, `'neutral'`) instead of the actual date or month. Because `aria-label` overrides the visible text, screen readers announce "neutral" or "selected" with **no date information at all**. This makes the entire calendar unusable for assistive technology users. Each button should be named with its full date (e.g. "Tuesday, March 3, 2026").
+
+**High:**
+
+- Focus is not moved into the popup when it opens, so keyboard/screen-reader users cannot reach the calendar via keyboard. Per the dialog pattern, focus should move to an element inside the dialog on open.
+- The dialog (`role="dialog"` in `Popup.tsx:48`) has no `aria-label`/`aria-labelledby`, so it has no accessible name.
+- The outer container (`index.tsx:266`) has `onClick` and `onKeyDown` handlers (opens the popup on Enter/Space) but is a static element with no `role` or `tabIndex` (oxlint disabled), so the keyboard handler is never reached by keyboard users.
+- The calendar icon used as the input suffix has no alternative text describing it as the "open calendar" affordance. It would be better that this icon be a button that opens the dialog picker, which would fix the issue of the previous bullet.
+- The date picker dialog does not allow to navigate between the days using the arrow keys like the Grid pattern, which makes the navigation very painful. The keyboard navigation should follow the Grid pattern instead of a really long Tab sequence.
+
+**Medium:**
+
+- The input does not expose `aria-expanded`/`aria-haspopup` to indicate whether the popup is open.
+- Selected and in-range dates are conveyed only through color; the (broken) `aria-label` does not describe a selected state either.
+- Month/year navigation buttons (`CalendarContent.tsx`) contain only an arrow icon and have no accessible name (e.g. "Previous month" / "Next month").
+- Days from adjacent months provide no indication that they belong to a different month; the label should include the month and year.
+- In range mode there is no announcement of which part of the range (start/end) is currently being selected.
+
+**Low:**
+
+- In the `input="calendar"` variant the label is rendered as plain text not associated with any control.
+
+## Dependencies
+
+- `TextInput` (already handles `aria-invalid`, label association, and helper/error description — reuse these for announcing validation state).
+- `Popup` (provides the dialog container and positioning; the DateInput wraps it to add `role="dialog"`).
+- `Button` and `Icon` (affect the accessible names of the day, month, and navigation buttons).
