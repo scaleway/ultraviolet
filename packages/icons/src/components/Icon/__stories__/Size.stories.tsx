@@ -6,7 +6,7 @@ import { SIZES } from '../constants'
 export const Size = (args: ComponentProps<typeof AlertCircleIcon>) => (
   <Stack gap={1}>
     {Object.keys(SIZES).map(size => (
-      <Stack direction="row" alignItems={'center'} gap={2}>
+      <Stack direction="row" alignItems={'center'} gap={2} key={size}>
         <AlertCircleIcon size={size as keyof typeof SIZES} {...args} />{' '}
         <Text as="span" variant="bodyStrong">
           {size}
