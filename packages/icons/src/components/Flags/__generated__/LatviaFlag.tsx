@@ -8,22 +8,22 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const LatviaFlag = (props: Omit<IconProps, 'children'>) => (
+export const LatviaFlag = ({ disabled, ...props }: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
-    {props.disabled ? (
+    {disabled ? (
       <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
+        <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
         <path
           fill="#343434"
-          d="M12 0C6.455 0 1.79 3.76.413 8.87h23.173C22.209 3.76 17.544 0 12 0m0 24c5.544 0 10.209-3.761 11.586-8.87H.413C1.79 20.239 6.455 24 12 24"
+          d="M8 1a7 7 0 0 0-6.76 5.174h13.518A7 7 0 0 0 7.999 1M8 15a7 7 0 0 0 6.759-5.174H1.24A7 7 0 0 0 8 15"
         />
       </>
     ) : (
       <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
+        <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
         <path
           fill="#a2001d"
-          d="M12 0C6.455 0 1.79 3.76.413 8.87h23.173C22.209 3.76 17.544 0 12 0m0 24c5.544 0 10.209-3.761 11.586-8.87H.413C1.79 20.239 6.455 24 12 24"
+          d="M8 1a7 7 0 0 0-6.76 5.174h13.518A7 7 0 0 0 7.999 1M8 15a7 7 0 0 0 6.759-5.174H1.24A7 7 0 0 0 8 15"
         />
       </>
     )}

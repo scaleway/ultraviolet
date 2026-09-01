@@ -29,7 +29,7 @@ export const Icon = ({
     className={cn(className, flag[size])}
     height="24"
     role={accessibleLabel ? 'img' : undefined}
-    viewBox="0 0 24 24"
+    viewBox="0 0 16 16"
     width="24"
   >
     {accessibleLabel ? <title>{accessibleLabel}</title> : null}

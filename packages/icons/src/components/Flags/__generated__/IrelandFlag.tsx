@@ -8,19 +8,19 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const IrelandFlag = (props: Omit<IconProps, 'children'>) => (
+export const IrelandFlag = ({ disabled, ...props }: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
-    {props.disabled ? (
+    {disabled ? (
       <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path fill="#a8a8a8" d="M24 12c0-5.16-3.256-9.558-7.826-11.253v22.507C20.744 21.558 24 17.16 24 12" />
-        <path fill="#8a8a8a" d="M0 12c0 5.16 3.257 9.558 7.826 11.254V.747C3.256 2.442 0 6.84 0 12" />
+        <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        <path fill="#a8a8a8" d="M15 8c0-3.01-1.9-5.575-4.565-6.564v13.129A7 7 0 0 0 15 8" />
+        <path fill="#8a8a8a" d="M1 8c0 3.01 1.9 5.576 4.565 6.565V1.435A7 7 0 0 0 1 8" />
       </>
     ) : (
       <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path fill="#ff9811" d="M24 12c0-5.16-3.256-9.558-7.826-11.253v22.507C20.744 21.558 24 17.16 24 12" />
-        <path fill="#6da544" d="M0 12c0 5.16 3.257 9.558 7.826 11.254V.747C3.256 2.442 0 6.84 0 12" />
+        <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        <path fill="#ff9811" d="M15 8c0-3.01-1.9-5.575-4.565-6.564v13.129A7 7 0 0 0 15 8" />
+        <path fill="#6da544" d="M1 8c0 3.01 1.9 5.576 4.565 6.565V1.435A7 7 0 0 0 1 8" />
       </>
     )}
   </Icon>

@@ -8,17 +8,17 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const PolandFlag = (props: Omit<IconProps, 'children'>) => (
+export const PolandFlag = ({ disabled, ...props }: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
-    {props.disabled ? (
+    {disabled ? (
       <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path fill="#454545" d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12" />
+        <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        <path fill="#454545" d="M15 8A7 7 0 1 1 1 8" />
       </>
     ) : (
       <>
-        <path fill="#f0f0f0" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path fill="#d80027" d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12" />
+        <path fill="#f0f0f0" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        <path fill="#d80027" d="M15 8A7 7 0 1 1 1 8" />
       </>
     )}
   </Icon>

@@ -84,6 +84,29 @@ const templateIcon = (iconName: string, svg: string, svgSmall?: string, svgDisab
 `
 }
 
+const templateFlag = (iconName: string, svg: string, svgDisabled?: string) => {
+  const deprecated = DEPRECATED_ICONS.find(icon => icon.name === iconName)
+
+  return `${COMMENT_HEADER}
+  import { Icon } from '../Icon'
+  import type { IconProps } from '../Icon'
+
+  ${
+    deprecated
+      ? `
+  /**
+    * @deprecated ${deprecated.deprecatedReason}
+    */`
+      : ''
+  }
+ export const ${iconName} = ({
+    disabled,
+    ...props
+  }: Omit<IconProps, 'children'>) =><Icon {...props}>{disabled ? ${wrapSvg(svgDisabled ?? svg)} : ${wrapSvg(svg)}}</Icon>
+
+  ${iconName}.displayName = '${iconName}'
+`
+}
 const templateLogo = (logoName: string, svg: string, svgDark?: string) => {
   const deprecated = DEPRECATED_ICONS.find(icon => icon.name === logoName)
 
@@ -220,6 +243,22 @@ const getDarkFile = (file: string) => {
   return existsSync(darkFileName) ? darkFileName : file
 }
 
+const generateContent = (
+  type: string,
+  generatedName: string,
+  svg: { default: string; dark?: string; small?: string; smallDisabled?: string; disabled?: string },
+) => {
+  if (type === 'Logo') {
+    return templateLogo(generatedName, svg.default, svg.dark)
+  }
+
+  if (type === 'Flags') {
+    return templateFlag(generatedName, svg.default, svg.disabled)
+  }
+
+  return templateIcon(generatedName, svg.default, svg.small, svg.disabled)
+}
+
 const appendExportToIndex = async (output: string, iconName: string) => {
   const exportStatement = `export { ${iconName} } from './${iconName}'\n`
 
@@ -296,10 +335,13 @@ const main = async () => {
         const svgContentDark =
           component.name === 'Logo' && darkFile !== file ? await readSvg(darkFile, component.suffix) : undefined
 
-        const generatedComponent =
-          component.name === 'Logo'
-            ? templateLogo(generatedName, svgContent, svgContentDark)
-            : templateIcon(generatedName, svgContent, svgContentSmall, svgContentDisabled)
+        const generatedComponent = generateContent(component.name, generatedName, {
+          default: svgContent,
+          small: svgContentSmall,
+          disabled: svgContentDisabled,
+          dark: svgContentDark,
+        })
+
         const filePath = `${component.output}/${generatedName}.tsx`
 
         try {

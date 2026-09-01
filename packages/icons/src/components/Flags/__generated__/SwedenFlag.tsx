@@ -8,21 +8,28 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const SwedenFlag = (props: Omit<IconProps, 'children'>) => (
+export const SwedenFlag = ({ disabled, ...props }: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
-    {props.disabled ? (
+    {disabled ? (
       <>
-        <path fill="#414141" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <path fill="#c4c4c4" d="M7-1.25h5v27H7z" />
-        <path fill="#c4c4c4" d="M-1 9.75h28v5H-1z" />
+        <mask id="mask0_3237_1286" x="1" y="1" maskUnits="userSpaceOnUse">
+          <path fill="#fff" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        </mask>
+        <g mask="url(#mask0_3237_1286)">
+          <path fill="#414141" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+          <path fill="#c4c4c4" d="M5.083.27H8v15.75H5.083z" />
+          <path fill="#c4c4c4" d="M.417 6.688H16.75v2.916H.417z" />
+        </g>
       </>
     ) : (
       <>
-        <path fill="#005293" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-        <g mask="url(#mask0_3023_239)">
-          <path fill="#005293" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12" />
-          <path fill="#fecb00" d="M7-1.25h5v27H7z" />
-          <path fill="#fecb00" d="M-1 9.75h28v5H-1z" />
+        <mask id="mask0_3237_1281" x="1" y="1" maskUnits="userSpaceOnUse">
+          <path fill="#fff" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+        </mask>
+        <g mask="url(#mask0_3237_1281)">
+          <path fill="#005293" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
+          <path fill="#fecb00" d="M5.083.27H8v15.75H5.083z" />
+          <path fill="#fecb00" d="M.417 6.688H16.75v2.916H.417z" />
         </g>
       </>
     )}
