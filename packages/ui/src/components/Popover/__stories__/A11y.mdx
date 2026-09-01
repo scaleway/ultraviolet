@@ -59,3 +59,4 @@ To apply when using the component:
 
 - The `CloseIcon` inside the close button is not `aria-hidden="true"` (`ContentWrapper.tsx`). The button's accessible name overrides it, but per RFC #6585 decorative icons should be hidden explicitly (1.1.1).
 - The focus trap applied to this non-modal dialog wraps Tab focus within the dialog. Since the Popover is non-modal, focus trapping is semantically inconsistent with non-modal behavior (2.1.2); Escape remains the way out.
+- The native `dialog` element could be used instead of a `div` with `role="dialog"`
