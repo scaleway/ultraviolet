@@ -14,20 +14,19 @@ import {
   useDismiss,
   useInteractions,
 } from '@floating-ui/react'
-import { usePrefersReducedMotion } from '@ultraviolet/animations'
 import { useState, useRef, useCallback } from 'react'
 import type { CSSProperties } from 'react'
 import type { TooltipPlacement } from './types'
-import { ANIMATION_DURATION } from './styles.css'
 
 export type UseTooltipOptions = {
   visible?: boolean
   placement: TooltipPlacement
-  delay?: { open?: number; close?: number }
+  delay: { open?: number; close?: number }
+  transitionDuration: number
   onOpenChange?: (open: boolean) => void
 }
 
-export const useTooltip = ({ visible, placement, delay, onOpenChange }: UseTooltipOptions) => {
+export const useTooltip = ({ visible, placement, delay, transitionDuration, onOpenChange }: UseTooltipOptions) => {
   const [uncontrolledOpen, setUncontrolledOpen] = useState(false)
   const isControlled = visible !== undefined
   const open = isControlled ? visible : uncontrolledOpen
@@ -58,11 +57,8 @@ export const useTooltip = ({ visible, placement, delay, onOpenChange }: UseToolt
     placement: (placement.replace(/auto-?/, '') || 'top') as Placement,
   })
 
-  // remove the transition when prefers reduced motion, mostly to avoid waiting in tests
-  const prefersReducedMotion = usePrefersReducedMotion()
-
   const { isMounted, status } = useTransitionStatus(context, {
-    duration: prefersReducedMotion ? 0 : ANIMATION_DURATION,
+    duration: transitionDuration,
   })
 
   const hover = useHover(context, {

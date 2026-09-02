@@ -33,10 +33,7 @@ describe('tooltip', () => {
     })
 
     it('should not add a wrapper div if the children are a function', () => {
-      const { asFragment } = renderWithTheme(
-        <Tooltip delay={{ open: 0 }}>{() => <span>Hover me</span>}</Tooltip>,
-        consoleLightTheme,
-      )
+      const { asFragment } = renderWithTheme(<Tooltip>{() => <span>Hover me</span>}</Tooltip>, consoleLightTheme)
       expect(asFragment()).toMatchSnapshot()
     })
   })
@@ -44,7 +41,7 @@ describe('tooltip', () => {
   describe('open / close', () => {
     it('should display the tooltip on hover and hide when exit', async () => {
       renderWithTheme(
-        <Tooltip delay={{ open: 0 }} text="test success!">
+        <Tooltip text="test success!">
           <p data-testid="children">Hover me</p>
         </Tooltip>,
       )
@@ -62,7 +59,7 @@ describe('tooltip', () => {
 
     it('should display the tooltip on hover with function children', async () => {
       renderWithTheme(
-        <Tooltip delay={{ open: 0 }} text="test success!">
+        <Tooltip text="test success!">
           {props => (
             <p {...props} data-testid="children">
               Hover me
@@ -91,7 +88,7 @@ describe('tooltip', () => {
     it('should call onOpenChange when the tooltip opens', async () => {
       const onOpenChange = vi.fn()
       renderWithTheme(
-        <Tooltip delay={{ open: 0 }} onOpenChange={onOpenChange} text="opened">
+        <Tooltip onOpenChange={onOpenChange} text="opened">
           <p>Hover me</p>
         </Tooltip>,
       )
@@ -104,7 +101,7 @@ describe('tooltip', () => {
   describe('position / size', () => {
     it('should renders tooltip with maxWidth', async () => {
       renderWithTheme(
-        <Tooltip delay={{ open: 0 }} maxWidth={100} text="test success!">
+        <Tooltip maxWidth={100} text="test success!">
           <p data-testid="children">Hover me</p>
         </Tooltip>,
       )
@@ -120,11 +117,7 @@ describe('tooltip', () => {
       `should renders tooltip with placement %s`,
       async placement => {
         renderWithTheme(
-          <Tooltip
-            delay={{ open: 0 }}
-            placement={placement as ComponentProps<typeof Tooltip>['placement']}
-            text="test success!"
-          >
+          <Tooltip placement={placement as ComponentProps<typeof Tooltip>['placement']} text="test success!">
             <p data-testid="children">Hover me</p>
           </Tooltip>,
         )
