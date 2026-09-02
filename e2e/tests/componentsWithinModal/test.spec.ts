@@ -15,7 +15,7 @@ test('open modal, fill text inputs, close modal', async ({ page, baseURL }) => {
 
   await expect(page.locator('div[data-testid="form-content"]')).toHaveText('Test Last Name')
 
-  await page.getByLabel('close').click()
+  await page.getByRole('button', { name: 'close' }).click()
   await expect(page.locator('dialog')).not.toBeVisible()
 })
 
@@ -30,10 +30,10 @@ test('open modal, select an option, open nested modal through select input, clos
 
   await page.getByRole('button', { name: 'Open Nested Modal' }).click()
   const nestedModal = page.locator('dialog').filter({ hasText: 'This is the nested modal' })
-  await nestedModal.getByLabel('close').click()
+  await nestedModal.getByRole('button', { name: 'close' }).click()
   await expect(nestedModal).not.toBeAttached()
 
-  await page.getByLabel('close').click()
+  await page.getByRole('button', { name: 'close' }).click()
   await expect(page.locator('dialog')).not.toBeVisible()
 })
 

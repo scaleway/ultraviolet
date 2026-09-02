@@ -6,6 +6,4 @@
  * survives library bundling (unlike `process.env.NODE_ENV` which is inlined at
  * build time).
  */
-export const isTestEnvironment =
-  typeof navigator !== 'undefined' &&
-  /\b(jsdom|happy-dom)\b/i.test(navigator.userAgent)
+export const isTestEnvironment = typeof navigator !== 'undefined' && /\b(jsdom|happy-dom)\b/i.test(navigator.userAgent)
