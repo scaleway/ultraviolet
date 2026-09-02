@@ -29,7 +29,8 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
       - name: Run changesets-renovate
-        run: pnpm dlx @scaleway/changesets-renovate
+        run: pnpm exec changesets-renovate
         env:
           EXCLUDE_DEVDEPS: true
