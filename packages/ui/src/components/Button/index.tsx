@@ -8,6 +8,7 @@ import { forwardRef, useMemo } from 'react'
 import type { AriaRole, ButtonHTMLAttributes, CSSProperties, MouseEventHandler, ReactNode, Ref } from 'react'
 import { Loader } from '../Loader'
 import { Tooltip } from '../Tooltip'
+import { VisuallyHidden } from '../VisuallyHidden'
 import { buttonStyle } from './styles.css'
 
 type CommonProps = {
@@ -21,6 +22,9 @@ type CommonProps = {
    */
   'data-flip-id'?: string
   isLoading?: boolean
+  /**
+   * @deprecated use `accessibleLabel` instead.
+   */
   'aria-label'?: string
   'aria-current'?: boolean
   'aria-controls'?: string
@@ -32,7 +36,23 @@ type CommonProps = {
   'aria-roledescription'?: string
   'aria-keyshortcuts'?: string
   onClick?: MouseEventHandler<HTMLElement>
+  /**
+   * @deprecated use `tooltipDescription` instead.
+   */
   tooltip?: string
+  /**
+   * Label of the button rendered inside a Tooltip.
+   */
+  tooltipLabel?: string
+  /**
+   * Description of the button rendered inside a Tooltip.
+   */
+  tooltipDescription?: string
+  /**
+   * Accessible label hidden in the button.
+   * Prefer this over `aria-label` as the text is localizable.
+   */
+  accessibleLabel?: string
   form?: ButtonHTMLAttributes<HTMLButtonElement>['form']
   tabIndex?: ButtonHTMLAttributes<HTMLButtonElement>['tabIndex']
   onMouseDown?: MouseEventHandler<HTMLElement>
@@ -125,6 +145,9 @@ export const Button = forwardRef<Element, BaseButtonProps>(
       target,
       role,
       tooltip,
+      tooltipLabel,
+      tooltipDescription,
+      accessibleLabel,
       tabIndex,
       autoFocus,
       style,
@@ -146,9 +169,14 @@ export const Button = forwardRef<Element, BaseButtonProps>(
       return sentiment
     }, [sentiment, theme, variant])
 
+    const tooltipText = tooltipLabel || tooltipDescription || tooltip
+    const tooltipRelation = tooltipLabel ? 'label' : 'description'
+    const computedAccessibleLabel = accessibleLabel ?? ariaLabel
+
     const content = (
       <>
         {isLoading ? <Loader active sentiment={computedSentimentLoader} size="small" /> : null}
+        {computedAccessibleLabel ? <VisuallyHidden>{computedAccessibleLabel}</VisuallyHidden> : null}
         {children}
       </>
     )
@@ -158,7 +186,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
     // render prop: render custom element with Button styling
     if (render) {
       return (
-        <Tooltip containerFullWidth={fullWidth} text={tooltip}>
+        <Tooltip containerFullWidth={fullWidth} relation={tooltipRelation} text={tooltipText}>
           {renderElement(render, {
             children,
             className: computedClassName,
@@ -176,7 +204,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
     // @note: an anchor can't be disabled
     if (href && !computeIsDisabled) {
       return (
-        <Tooltip containerFullWidth={fullWidth} text={tooltip}>
+        <Tooltip containerFullWidth={fullWidth} relation={tooltipRelation} text={tooltipText}>
           <a
             aria-controls={ariaControls}
             aria-current={ariaCurrent}
@@ -185,7 +213,6 @@ export const Button = forwardRef<Element, BaseButtonProps>(
             aria-expanded={ariaExpanded}
             aria-haspopup={ariaHaspopup}
             aria-keyshortcuts={ariaKeyshortcuts}
-            aria-label={ariaLabel}
             aria-pressed={ariaPressed}
             aria-roledescription={ariaRoledescription}
             autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
@@ -216,13 +243,12 @@ export const Button = forwardRef<Element, BaseButtonProps>(
     }
 
     return (
-      <Tooltip containerFullWidth={fullWidth} text={tooltip}>
+      <Tooltip containerFullWidth={fullWidth} relation={tooltipRelation} text={tooltipText}>
         <button
           aria-controls={ariaControls}
           aria-current={ariaCurrent}
           aria-expanded={ariaExpanded}
           aria-haspopup={ariaHaspopup}
-          aria-label={ariaLabel}
           autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
           className={computedClassName}
           data-testid={dataTestId}

@@ -147,6 +147,82 @@ describe('button', () => {
       </Button>,
     ))
 
+  describe('tooltipLabel and tooltipDescription', () => {
+    it('renders tooltipLabel as the accessible name (label relation)', () => {
+      renderWithTheme(<Button tooltipLabel="More info">Hello</Button>)
+
+      const trigger = screen.getByRole('button', { name: 'More info' })
+      expect(trigger).not.toHaveAccessibleDescription()
+    })
+
+    it('renders tooltipDescription as the accessible description (description relation)', async () => {
+      renderWithTheme(<Button tooltipDescription="Helpful text">Hello</Button>)
+
+      const trigger = screen.getByRole('button', { name: 'Hello' })
+      expect(trigger).not.toHaveAccessibleDescription()
+
+      await userEvent.hover(trigger)
+      expect(trigger).toHaveAccessibleDescription('Helpful text')
+      expect(trigger).toHaveAccessibleName('Hello')
+    })
+
+    it('uses tooltipLabel over tooltipDescription when both are set', () => {
+      renderWithTheme(
+        <Button tooltipDescription="ignored" tooltipLabel="the label">
+          Hello
+        </Button>,
+      )
+
+      const trigger = screen.getByRole('button', { name: 'the label' })
+      expect(trigger).not.toHaveAccessibleDescription()
+    })
+
+    it('falls back deprecated `tooltip` prop to tooltipDescription (description relation)', async () => {
+      renderWithTheme(<Button tooltip="legacy tooltip">Hello</Button>)
+
+      const trigger = screen.getByRole('button', { name: 'Hello' })
+      expect(trigger).not.toHaveAccessibleDescription()
+
+      await userEvent.hover(trigger)
+      expect(trigger).toHaveAccessibleDescription('legacy tooltip')
+    })
+  })
+
+  describe('accessibleLabel', () => {
+    it('renders an accessible name via VisuallyHidden', () => {
+      renderWithTheme(
+        <Button accessibleLabel="Edit item">
+          <PencilOutlineIcon />
+        </Button>,
+      )
+
+      const trigger = screen.getByRole('button', { name: 'Edit item' })
+      expect(trigger).toBeInTheDocument()
+      expect(screen.getByText('Edit item')).toBeInTheDocument()
+    })
+
+    it('falls back deprecated `aria-label` prop to accessibleLabel', () => {
+      renderWithTheme(
+        <Button aria-label="Delete">
+          <PencilOutlineIcon />
+        </Button>,
+      )
+
+      expect(screen.getByRole('button', { name: 'Delete' })).toBeInTheDocument()
+    })
+
+    it('uses accessibleLabel over aria-label when both are set', () => {
+      renderWithTheme(
+        <Button accessibleLabel="primary" aria-label="secondary">
+          <PencilOutlineIcon />
+        </Button>,
+      )
+
+      expect(screen.getByRole('button', { name: 'primary' })).toBeInTheDocument()
+      expect(screen.queryByRole('button', { name: 'secondary' })).toBeNull()
+    })
+  })
+
   describe('render prop', () => {
     describe('element form', () => {
       it('render correctly with render prop', () =>
