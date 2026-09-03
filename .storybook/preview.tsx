@@ -96,7 +96,7 @@ const parameters: Preview['parameters'] = {
         'Guidelines',
         'Customization',
         ['Understand Tokens'],
-        ['Dark mode', 'Colors', 'Typography', 'Shadows', 'Spaces and Radii'],
+        ['Dark mode', 'Colors', 'Color Contrast', 'Typography', 'Shadows', 'Spaces and Radii'],
         'Tools',
         'State',
         'Guides',
