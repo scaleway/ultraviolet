@@ -1,7 +1,7 @@
 'use client'
 
 import { cn, shuffle } from '@ultraviolet/utils'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
@@ -202,15 +202,25 @@ export const TagList = ({
       sentiment: sentiment,
     }
 
+    const TagWrapper = hidden
+      ? Fragment
+      : ({ children }: { children: ReactNode }) => <li className={tagListStyle.listItem}>{children}</li>
+
     if (isKeyValueTag(finalTag)) {
-      return <Tag keyValue={finalTag} {...commonProps} key={`${tagLabel}-${index}`} />
+      return (
+        <TagWrapper>
+          <Tag keyValue={finalTag} {...commonProps} key={`${tagLabel}-${index}`} />
+        </TagWrapper>
+      )
     }
 
     return (
-      <Tag {...commonProps} key={`${tagLabel}-${index}`}>
-        {isLabelIconTag(finalTag) ? finalTag.icon : undefined}
-        {tagLabel}
-      </Tag>
+      <TagWrapper>
+        <Tag {...commonProps} key={`${tagLabel}-${index}`}>
+          {isLabelIconTag(finalTag) ? finalTag.icon : undefined}
+          {tagLabel}
+        </Tag>
+      </TagWrapper>
     )
   }
 
@@ -220,14 +230,16 @@ export const TagList = ({
         className={cn(tagListStyle.tagContainer({ multiline }))}
         data-testid={`${dataTestId ?? 'taglist'}-container`}
       >
-        {visibleTags.map((tag, index) => renderTag(tag, index))}
+        {visibleTags.length > 0 && (
+          <ul className={tagListStyle.list}>{visibleTags.map((tag, index) => renderTag(tag, index))}</ul>
+        )}
 
         {hiddenTags.length > 0 && (
           <Popover
             content={
-              <div className={tagListStyle.tagContainer({ multiline: true })}>
+              <ul className={cn(tagListStyle.tagContainer({ multiline: true }), tagListStyle.list)}>
                 {hiddenTags.map((tag, index) => renderTag(tag, index))}
-              </div>
+              </ul>
             }
             maxHeight={popoverMaxHeight}
             onClose={() => setIsPopoverVisible(false)}

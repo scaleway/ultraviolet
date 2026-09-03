@@ -13,7 +13,7 @@ export default {
   title: 'UI/Data Display/TagList',
   parameters: {
     a11yStatus: {
-      perceivable: false,
+      perceivable: true,
       operable: true,
       understandable: true,
       robust: false,
