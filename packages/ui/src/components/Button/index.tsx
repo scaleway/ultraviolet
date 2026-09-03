@@ -204,7 +204,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
     const commonProps = {
       'aria-controls': ariaControls,
       'aria-current': ariaCurrent,
-      'aria-disabled': ariaDisabled ?? disabled,
+      'aria-disabled': ariaDisabled,
       'aria-describedby': ariaDescribedby,
       'aria-expanded': ariaExpanded,
       'aria-haspopup': ariaHaspopup,
