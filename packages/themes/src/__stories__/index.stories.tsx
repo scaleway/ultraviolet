@@ -1,7 +1,12 @@
 import type { Meta, StoryFn } from '@storybook/react-vite'
 import { useTheme } from '@ultraviolet/themes'
 import type { consoleLightTheme } from '@ultraviolet/themes'
+import { Badge, Checkbox, Row, Stack, Text } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useMemo, useState } from 'react'
+import { contrastStyle } from './styles.css'
+import { previewBackgroundColor, previewTextColor, swatchColor, swatchSize } from './variables.css'
 
 type Theme = typeof consoleLightTheme
 
@@ -43,9 +48,9 @@ type ContrastLevel = 'pass' | 'fail'
 
 const getContrastLevel = (ratio: number): ContrastLevel => (ratio >= AA_THRESHOLD ? 'pass' : 'fail')
 
-const LEVEL_META: Record<ContrastLevel, { color: string; label: string; description: string }> = {
-  pass: { color: '#2c8564', label: 'AA', description: '\u2265 4.5:1 \u2014 passes WCAG AA for normal text' },
-  fail: { color: '#e51963', label: 'Fail', description: '< 4.5:1 \u2014 does not meet WCAG AA' },
+const LEVEL_META: Record<ContrastLevel, { sentiment: 'success' | 'danger'; label: string; description: string }> = {
+  pass: { sentiment: 'success', label: 'AA', description: '\u2265 4.5:1 \u2014 passes WCAG AA for normal text' },
+  fail: { sentiment: 'danger', label: 'Fail', description: '< 4.5:1 \u2014 does not meet WCAG AA' },
 }
 
 // --- Color extraction helpers ---
@@ -73,71 +78,47 @@ type Pairing = {
 
 const Swatch = ({ color, size = 12 }: { color: string; size?: number }) => (
   <span
-    style={{
-      display: 'inline-block',
-      width: size,
-      height: size,
-      borderRadius: 3,
-      backgroundColor: color,
-      border: '1px solid rgba(128,128,128,0.3)',
-      flexShrink: 0,
-    }}
+    className={contrastStyle.swatch}
+    style={assignInlineVars({
+      [swatchColor]: color,
+      [swatchSize]: `${size}px`,
+    })}
   />
 )
 
 const LEVEL_ORDER: ContrastLevel[] = ['pass', 'fail']
 
-const Legend = ({ theme }: { theme: Theme }) => (
-  <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', alignItems: 'center' }}>
+const Legend = () => (
+  <Stack direction="row" gap={2} wrap alignItems="center">
     {LEVEL_ORDER.map(level => (
-      <div key={level} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-        <span
-          style={{
-            display: 'inline-block',
-            width: 16,
-            height: 16,
-            borderRadius: 4,
-            backgroundColor: LEVEL_META[level].color,
-            flexShrink: 0,
-          }}
-        />
-        <span style={{ fontSize: 13, color: theme.colors.neutral.text }}>
-          <strong>{LEVEL_META[level].label}</strong>
-          <span style={{ marginLeft: 6, color: theme.colors.neutral.textWeak }}>{LEVEL_META[level].description}</span>
-        </span>
-      </div>
+      <Stack key={level} direction="row" gap={0.5} alignItems="center">
+        <Badge sentiment={LEVEL_META[level].sentiment} size="small">
+          {LEVEL_META[level].label}
+        </Badge>
+        <Text as="span" sentiment="neutral" prominence="weak" variant="bodySmall">
+          {LEVEL_META[level].description}
+        </Text>
+      </Stack>
     ))}
-  </div>
+  </Stack>
 )
 
-const SummaryBar = ({ counts, theme }: { counts: { total: number; pass: number; fail: number }; theme: Theme }) => (
-  <div
-    style={{
-      display: 'flex',
-      gap: 20,
-      alignItems: 'center',
-      flexWrap: 'wrap',
-      padding: '12px 16px',
-      borderRadius: 8,
-      backgroundColor: theme.colors.neutral.backgroundWeak,
-      border: `1px solid ${theme.colors.neutral.border}`,
-    }}
-  >
-    <span style={{ fontSize: 14, fontWeight: 700, color: theme.colors.neutral.textStrong }}>
+const SummaryBar = ({ counts }: { counts: { total: number; pass: number; fail: number } }) => (
+  <Stack className={contrastStyle.summaryBar} direction="row" gap={2} alignItems="center" wrap>
+    <Text as="span" prominence="strong" sentiment="neutral" variant="bodySmallStrong">
       {counts.total} intended pairings
-    </span>
-    <span style={{ color: LEVEL_META.pass.color, fontWeight: 600, fontSize: 13 }}>
+    </Text>
+    <Badge sentiment="success">
       {'\u2713'} {counts.pass} pass
-    </span>
-    <span style={{ color: LEVEL_META.fail.color, fontWeight: 600, fontSize: 13 }}>
+    </Badge>
+    <Badge sentiment="danger">
       {'\u2717'} {counts.fail} fail
-    </span>
-  </div>
+    </Badge>
+  </Stack>
 )
 
 const PairingCard = ({
   pairing,
-  theme,
   highlightFailures,
 }: {
   pairing: Pairing
@@ -145,62 +126,64 @@ const PairingCard = ({
   highlightFailures: boolean
 }) => (
   <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      borderRadius: 8,
-      overflow: 'hidden',
-      border: `1px solid ${pairing.level === 'pass' ? theme.colors.neutral.border : theme.colors.danger.border}`,
-      opacity: highlightFailures ? (pairing.level === 'fail' ? 1 : 0.25) : 1,
-      transition: 'opacity 0.2s',
-    }}
+    className={contrastStyle.pairingCard}
+    data-highlight={highlightFailures ? 'true' : 'false'}
+    data-level={pairing.level}
   >
     <div
-      style={{
-        backgroundColor: pairing.bgVal,
-        color: pairing.textVal,
-        padding: '16px 12px',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 6,
-        minHeight: 64,
-        justifyContent: 'center',
-      }}
+      className={contrastStyle.preview}
+      style={assignInlineVars({
+        [previewBackgroundColor]: pairing.bgVal,
+        [previewTextColor]: pairing.textVal,
+      })}
     >
-      <span style={{ fontSize: 15, fontWeight: 600 }}>The quick brown fox</span>
-      <span style={{ fontSize: 12, opacity: 0.85 }}>0123456789</span>
+      <Text as="span" variant="bodyStronger">
+        The quick brown fox
+      </Text>
+      <Text as="span" style={{ opacity: 0.85 }} variant="caption">
+        0123456789
+      </Text>
     </div>
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '8px 12px',
-        backgroundColor: theme.colors.neutral.backgroundWeak,
-      }}
-    >
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-        <span
-          style={{ fontSize: 12, fontWeight: 700, color: theme.colors.neutral.textStrong, textTransform: 'capitalize' }}
+    <Stack className={contrastStyle.pairingFooter} direction="row" alignItems="center" justifyContent="space-between">
+      <Stack gap={0.25}>
+        <Text
+          as="span"
+          className={contrastStyle.capitalize}
+          prominence="strong"
+          sentiment="neutral"
+          variant="bodySmallStrong"
         >
           {pairing.suffix || 'default'}
-        </span>
-        <span style={{ fontSize: 11, color: theme.colors.neutral.textWeak }}>
-          <Swatch color={pairing.textVal} size={10} /> {pairing.textVal}
-          <span style={{ margin: '0 4px' }}>on</span>
-          <Swatch color={pairing.bgVal} size={10} /> {pairing.bgVal}
-        </span>
-      </div>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 2 }}>
-        <span style={{ fontSize: 15, fontWeight: 700, color: LEVEL_META[pairing.level].color }}>
+        </Text>
+        <Stack direction="row" gap={0.5} alignItems="center">
+          <Swatch color={pairing.textVal} size={10} />
+          <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
+            {pairing.textVal}
+          </Text>
+          <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
+            on
+          </Text>
+          <Swatch color={pairing.bgVal} size={10} />
+          <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
+            {pairing.bgVal}
+          </Text>
+        </Stack>
+      </Stack>
+      <Stack alignItems="flex-end" gap={0.25}>
+        <Text
+          as="span"
+          className={cn(contrastStyle.capitalize, contrastStyle.ratioText[pairing.level])}
+          sentiment="neutral"
+          variant="bodySmallStronger"
+        >
           {pairing.ratio.toFixed(2)}
-          {pairing.level === 'pass' ? ' ✔︎' : '❗'}
-        </span>
-        <span style={{ fontSize: 10, fontWeight: 600, color: theme.colors.neutral.textWeak }}>
+          {pairing.level === 'pass' ? ' \u2713' : ' \u2717'}
+        </Text>
+        <Badge sentiment={LEVEL_META[pairing.level].sentiment} size="small">
           {LEVEL_META[pairing.level].label}
-        </span>
-      </div>
-    </div>
+        </Badge>
+      </Stack>
+    </Stack>
   </div>
 )
 
@@ -262,95 +245,35 @@ const ContrastChecker = () => {
   }, [theme, hideDisabled])
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 24,
-        fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
-      }}
-    >
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-        <h1
-          style={{
-            margin: 0,
-            fontSize: 24,
-            fontWeight: 700,
-            color: theme.colors.neutral.textStrong,
-          }}
-        >
+    <Stack className={contrastStyle.root} gap={3}>
+      <Stack gap={1.5}>
+        <Text as="h1" prominence="strong" sentiment="neutral" variant="headingStronger">
           Color Contrast Checker
-        </h1>
-        <p style={{ margin: 0, fontSize: 14, color: theme.colors.neutral.text }}>
+        </Text>
+        <Text as="p" sentiment="neutral" variant="bodySmall">
           WCAG contrast ratios for intended text-on-background pairings (matching state &amp; variant suffixes) within
           each sentiment. Switch between light / dark / darker themes using the toolbar to check each theme.
-        </p>
-      </div>
+        </Text>
+      </Stack>
 
-      <Legend theme={theme} />
-      <SummaryBar counts={counts} theme={theme} />
+      <Legend />
+      <SummaryBar counts={counts} />
 
-      <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
-        <label
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 8,
-            cursor: 'pointer',
-            fontSize: 14,
-            color: theme.colors.neutral.text,
-            userSelect: 'none',
-          }}
-        >
-          <input
-            type="checkbox"
-            checked={highlightFailures}
-            onChange={e => setHighlightFailures(e.target.checked)}
-            style={{ width: 16, height: 16, cursor: 'pointer' }}
-          />
+      <Stack direction="row" gap={3} wrap>
+        <Checkbox checked={highlightFailures} onChange={e => setHighlightFailures(e.target.checked)}>
           Highlight failures only (dim passing pairings)
-        </label>
-        <label
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 8,
-            cursor: 'pointer',
-            fontSize: 14,
-            color: theme.colors.neutral.text,
-            userSelect: 'none',
-          }}
-        >
-          <input
-            type="checkbox"
-            checked={hideDisabled}
-            onChange={e => setHideDisabled(e.target.checked)}
-            style={{ width: 16, height: 16, cursor: 'pointer' }}
-          />
+        </Checkbox>
+        <Checkbox checked={hideDisabled} onChange={e => setHideDisabled(e.target.checked)}>
           Hide disabled colors
-        </label>
-      </div>
+        </Checkbox>
+      </Stack>
 
       {groups.map(({ sentiment, pairings }) => (
-        <div key={sentiment} style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-          <h2
-            style={{
-              margin: 0,
-              fontSize: 18,
-              fontWeight: 700,
-              color: theme.colors.neutral.textStrong,
-              textTransform: 'capitalize',
-            }}
-          >
+        <Stack key={sentiment} gap={1.5}>
+          <Text as="h2" className={contrastStyle.capitalize} sentiment="neutral" variant="headingSmallStrong">
             {sentiment}
-          </h2>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
-              gap: 12,
-            }}
-          >
+          </Text>
+          <Row gap={1.5} templateColumns="repeat(auto-fill, minmax(220px, 1fr))">
             {pairings.map(pairing => (
               <PairingCard
                 key={pairing.textKey}
@@ -359,10 +282,10 @@ const ContrastChecker = () => {
                 highlightFailures={highlightFailures}
               />
             ))}
-          </div>
-        </div>
+          </Row>
+        </Stack>
       ))}
-    </div>
+    </Stack>
   )
 }
 
