@@ -21,7 +21,7 @@ export const RightIcon = ({
     {error ? <AlertCircleIcon sentiment="danger" /> : null}
     {clearable ? (
       <Button
-        aria-label="clear value"
+        accessibleLabel="clear value"
         data-testid="clear"
         disabled={isEditable}
         onClick={event => {

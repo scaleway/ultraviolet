@@ -249,7 +249,7 @@ export const TagInput = ({
               <div className={tagInputStyle.stateContainer}>
                 {computedClearable ? (
                   <Button
-                    aria-label="clear value"
+                    accessibleLabel="clear value"
                     disabled={disabled}
                     onClick={clearAll}
                     sentiment="neutral"

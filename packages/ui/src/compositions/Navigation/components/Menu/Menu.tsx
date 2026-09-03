@@ -24,7 +24,7 @@ export const ItemMenu = ({
         className={navigationStyle.itemMenuContainer}
         disclosure={
           <Button
-            aria-label={label}
+            accessibleLabel={label}
             sentiment="neutral"
             size="small"
             variant={hasActiveChildren ? 'filled' : 'ghost'}
@@ -50,7 +50,7 @@ export const ItemMenu = ({
     ) : (
       <Tooltip placement="right" tabIndex={-1} text={label}>
         <Button
-          aria-label={label}
+          accessibleLabel={label}
           sentiment="neutral"
           size="small"
           variant={active ? 'filled' : 'ghost'}

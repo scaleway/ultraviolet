@@ -28,7 +28,7 @@ describe('textInput', () => {
 
     const textarea = screen.getByLabelText<HTMLTextAreaElement>('Test')
     expect(textarea.value).toBe('test')
-    const clearableButton = screen.getByLabelText('clear value')
+    const clearableButton = screen.getByRole('button', { name: 'clear value' })
     await userEvent.click(clearableButton)
     expect(onChange).toHaveBeenCalledWith({
       currentTarget: { value: '' },

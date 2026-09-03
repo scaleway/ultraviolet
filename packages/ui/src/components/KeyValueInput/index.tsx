@@ -154,7 +154,7 @@ export const KeyValueInput = ({
             handleChange(index, 'add', '', '')
           }}
           sentiment="primary"
-          tooltip={canAdd ? addButton.tooltip : maxSizeReachedTooltip}
+          tooltipDescription={canAdd ? addButton.tooltip : maxSizeReachedTooltip}
           variant="outlined"
           size={size}
         >

@@ -14,7 +14,7 @@ type CloseButtonProps = {
 
 export const CloseButton = ({ closeToast, sentiment = 'success' }: CloseButtonProps) => (
   <Button
-    aria-label="close"
+    accessibleLabel="close"
     className={toasterStyle.closeButton}
     onClick={closeToast}
     sentiment={sentiment}

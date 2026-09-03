@@ -123,7 +123,7 @@ const SteppedListCard = ({
               onClick={onClickHideButton}
               sentiment="neutral"
               size="small"
-              tooltip={hidden ? showTooltipText : hideTooltipText}
+              tooltipDescription={hidden ? showTooltipText : hideTooltipText}
               variant="ghost"
             >
               {hidden ? showText : hideText}

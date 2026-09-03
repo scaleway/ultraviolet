@@ -202,7 +202,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
             <Stack alignItems="center" className={textAreaStyle.clearableContainer} direction="row" gap="1">
               {computedClearable ? (
                 <Button
-                  aria-label="clear value"
+                  accessibleLabel="clear value"
                   onClick={() => {
                     onChange('')
                   }}

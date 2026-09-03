@@ -60,7 +60,7 @@ export const PaginationButtons = ({
     <Stack className={className} data-testid={dataTestId} direction="row">
       <Stack gap={1}>
         <Button
-          aria-label="Back"
+          accessibleLabel="Back"
           disabled={page <= 1 || disabled}
           onClick={goToPreviousPage}
           sentiment="primary"
@@ -93,7 +93,7 @@ export const PaginationButtons = ({
       </Stack>
       <Stack gap={1}>
         <Button
-          aria-label="Next"
+          accessibleLabel="Next"
           disabled={page >= pageCount || disabled}
           onClick={goToNextPage}
           sentiment="primary"

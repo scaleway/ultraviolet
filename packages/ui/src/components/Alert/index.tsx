@@ -120,7 +120,7 @@ export const Alert = ({
       </Stack>
       {closable || onClose ? (
         <Button
-          aria-label="close"
+          accessibleLabel="close"
           className={alertStyle.buttonClose}
           onClick={() => {
             setOpened(false)

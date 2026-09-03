@@ -19,7 +19,7 @@ export const ContentWrapper = ({ title, onClose, children, sentiment }: ContentW
         {title}
       </Text>
       <Button
-        aria-label="close"
+        accessibleLabel="close"
         onClick={onClose}
         sentiment={sentiment === 'neutral' ? 'neutral' : 'primary'}
         size="small"

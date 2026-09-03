@@ -71,9 +71,9 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
         overflow: footerHasOverflowStyle,
       })}
     >
-      <Tooltip disableAnimation={animation === false} placement="right" text={label}>
+      <Tooltip placement="right" text={label}>
         <Button
-          aria-label={label}
+          accessibleLabel={label}
           onClick={() => {
             toggleExpand()
             onToggleExpand?.(!expanded)

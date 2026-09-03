@@ -62,7 +62,7 @@ export const Toolbar = ({ disabled, showList, showMarks, size }: ToolbarProps) =
       {showMarks ? (
         <Stack alignItems="center" direction="row" gap={1}>
           <Button
-            aria-label="Bold"
+            accessibleLabel="Bold"
             disabled={disabled}
             size={buttonSize}
             variant={isMarkActive(editorState, strongMark) ? 'filled' : 'ghost'}
@@ -82,7 +82,7 @@ export const Toolbar = ({ disabled, showList, showMarks, size }: ToolbarProps) =
             <BoldIcon />
           </Button>
           <Button
-            aria-label="Italic"
+            accessibleLabel="Italic"
             disabled={disabled}
             size={buttonSize}
             variant={isMarkActive(editorState, emMark) ? 'filled' : 'ghost'}
@@ -102,7 +102,7 @@ export const Toolbar = ({ disabled, showList, showMarks, size }: ToolbarProps) =
             <ItalicIcon />
           </Button>
           <Button
-            aria-label="Underline"
+            accessibleLabel="Underline"
             disabled={disabled}
             size={buttonSize}
             variant={isMarkActive(editorState, underlineMark) ? 'filled' : 'ghost'}
@@ -126,7 +126,7 @@ export const Toolbar = ({ disabled, showList, showMarks, size }: ToolbarProps) =
       {showList ? (
         <Stack alignItems="center" direction="row" gap={1}>
           <Button
-            aria-label="Bullet List"
+            accessibleLabel="Bullet List"
             disabled={disabled || isInOrderedList}
             size={buttonSize}
             variant={isInBulletList ? 'filled' : 'ghost'}
@@ -142,7 +142,7 @@ export const Toolbar = ({ disabled, showList, showMarks, size }: ToolbarProps) =
             <ListBulletIcon />
           </Button>
           <Button
-            aria-label="Ordered List"
+            accessibleLabel="Ordered List"
             disabled={disabled || isInBulletList}
             size={buttonSize}
             variant={isInOrderedList ? 'filled' : 'ghost'}

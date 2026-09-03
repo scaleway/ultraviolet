@@ -57,7 +57,7 @@ export const Controls = ({ controls, direction, size, localRef, max, min, isDisa
       justifyContent="center"
     >
       <Button
-        aria-label={isUp ? 'plus' : 'minus'}
+        accessibleLabel={isUp ? 'plus' : 'minus'}
         disabled={isDisabledOrReadOnly || isDisabled}
         onClick={onClickSideButton}
         sentiment="neutral"

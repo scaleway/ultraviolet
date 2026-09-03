@@ -6,9 +6,16 @@ import { useDialogContext } from '../Context'
 
 type DialogButtonProps = {
   children: ReactNode
-} & Pick<ComponentProps<typeof Button>, 'onClick' | 'disabled' | 'tooltip' | 'style'>
+} & Pick<ComponentProps<typeof Button>, 'onClick' | 'disabled' | 'tooltip' | 'tooltipDescription' | 'style'>
 
-export const DialogButton = ({ children, onClick, disabled, tooltip, style }: DialogButtonProps) => {
+export const DialogButton = ({
+  children,
+  onClick,
+  disabled,
+  tooltip,
+  tooltipDescription,
+  style,
+}: DialogButtonProps) => {
   const context = useDialogContext()
 
   function onButtonClick(e: MouseEvent<HTMLElement>) {
@@ -20,7 +27,14 @@ export const DialogButton = ({ children, onClick, disabled, tooltip, style }: Di
   }
 
   return (
-    <Button disabled={disabled} onClick={onButtonClick} sentiment={context.sentiment} style={style} tooltip={tooltip}>
+    <Button
+      disabled={disabled}
+      onClick={onButtonClick}
+      sentiment={context.sentiment}
+      style={style}
+      tooltip={tooltip}
+      tooltipDescription={tooltipDescription}
+    >
       {children}
     </Button>
   )

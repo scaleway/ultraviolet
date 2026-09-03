@@ -85,7 +85,7 @@ export const ModalContent = ({
       <div className={modalStyle.container}>
         {isClosable ? (
           <Button
-            aria-label="close"
+            accessibleLabel="close"
             data-testid={dataTestId ? `${dataTestId}-close-button` : undefined}
             onClick={handleClose}
             sentiment={closeButtonSentiment}

@@ -44,7 +44,6 @@ export const CopyButton = ({
 
   return (
     <Button
-      aria-label="Copy"
       className={className}
       data-testid={dataTestId}
       onClick={() => {
@@ -57,7 +56,7 @@ export const CopyButton = ({
       sentiment={sentiment}
       size={size}
       style={style}
-      tooltip={isCopied ? copiedText : copyText}
+      tooltipLabel={isCopied ? copiedText : copyText}
       type="button"
       variant={bordered ? 'outlined' : 'ghost'}
     >
