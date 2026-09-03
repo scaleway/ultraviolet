@@ -2,13 +2,21 @@ import { useTheme } from '@ultraviolet/themes'
 import type { consoleLightTheme } from '@ultraviolet/themes'
 import { Badge, Checkbox, Row, Stack, Text } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { contrastStyle } from './styles.css'
 import { previewBackgroundColor, previewTextColor, swatchColor, swatchSize } from './variables.css'
 
 type Theme = typeof consoleLightTheme
 
 const SENTIMENTS = ['primary', 'secondary', 'neutral', 'success', 'danger', 'warning', 'info'] as const
+
+// Module-scope persistence: the theme switcher remounts the story tree, so plain
+// useState is wiped on each light/dark/darker toggle. Keep it here to survive remounts.
+const persist = {
+  highlightFailures: false,
+  hideDisabled: false,
+  scrollY: 0,
+}
 
 // --- WCAG contrast computation ---
 
@@ -187,8 +195,17 @@ const PairingCard = ({
 
 export const ContrastChecker = () => {
   const theme = useTheme()
-  const [highlightFailures, setHighlightFailures] = useState(false)
-  const [hideDisabled, setHideDisabled] = useState(false)
+  const [highlightFailures, setHighlightFailures] = useState(persist.highlightFailures)
+  const [hideDisabled, setHideDisabled] = useState(persist.hideDisabled)
+
+  useEffect(() => {
+    const onScroll = () => {
+      persist.scrollY = window.scrollY
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.scrollTo(0, persist.scrollY)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const { groups, counts } = useMemo(() => {
     const groups = SENTIMENTS.map(sentiment => {
@@ -256,10 +273,22 @@ export const ContrastChecker = () => {
       <SummaryBar counts={counts} />
 
       <Stack direction="row" gap={3} wrap>
-        <Checkbox checked={highlightFailures} onChange={e => setHighlightFailures(e.target.checked)}>
+        <Checkbox
+          checked={highlightFailures}
+          onChange={e => {
+            persist.highlightFailures = e.target.checked
+            setHighlightFailures(e.target.checked)
+          }}
+        >
           Highlight failures only (dim passing pairings)
         </Checkbox>
-        <Checkbox checked={hideDisabled} onChange={e => setHideDisabled(e.target.checked)}>
+        <Checkbox
+          checked={hideDisabled}
+          onChange={e => {
+            persist.hideDisabled = e.target.checked
+            setHideDisabled(e.target.checked)
+          }}
+        >
           Hide disabled colors
         </Checkbox>
       </Stack>
