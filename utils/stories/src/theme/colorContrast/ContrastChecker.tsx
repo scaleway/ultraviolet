@@ -1,8 +1,6 @@
-import type { Meta, StoryFn } from '@storybook/react-vite'
 import { useTheme } from '@ultraviolet/themes'
 import type { consoleLightTheme } from '@ultraviolet/themes'
 import { Badge, Checkbox, Row, Stack, Text } from '@ultraviolet/ui'
-import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useMemo, useState } from 'react'
 import { contrastStyle } from './styles.css'
@@ -172,7 +170,7 @@ const PairingCard = ({
       <Stack alignItems="flex-end" gap={0.25}>
         <Text
           as="span"
-          className={cn(contrastStyle.capitalize, contrastStyle.ratioText[pairing.level])}
+          className={`${contrastStyle.capitalize} ${contrastStyle.ratioText[pairing.level]}`}
           sentiment="neutral"
           variant="bodySmallStronger"
         >
@@ -187,9 +185,7 @@ const PairingCard = ({
   </div>
 )
 
-// --- Main story component ---
-
-const ContrastChecker = () => {
+export const ContrastChecker = () => {
   const theme = useTheme()
   const [highlightFailures, setHighlightFailures] = useState(false)
   const [hideDisabled, setHideDisabled] = useState(false)
@@ -288,20 +284,3 @@ const ContrastChecker = () => {
     </Stack>
   )
 }
-
-export default {
-  title: 'Customization/Color Contrast',
-  parameters: {
-    layout: 'padded',
-    docs: {
-      description: {
-        story:
-          'Displays WCAG contrast ratios for intended text-on-background pairings (matching state & variant suffixes) within each sentiment. Use the theme switcher in the toolbar to check light, dark, and darker themes.',
-      },
-    },
-  },
-} satisfies Meta
-
-export const Default: StoryFn = () => <ContrastChecker />
-
-Default.storyName = 'Color Contrast Checker'
