@@ -1,13 +1,21 @@
 import { DocsContainer as BaseContainer, Unstyled } from '@storybook/addon-docs/blocks'
 import type { DocsContainerProps as BaseContainerProps } from '@storybook/addon-docs/blocks'
-import { consoleLightTheme as lightTheme, ThemeProvider as ThemeProviderUV } from '@ultraviolet/themes'
+import {
+  consoleDarkerTheme,
+  consoleDarkTheme,
+  consoleLightTheme,
+  ThemeProvider as ThemeProviderUV,
+} from '@ultraviolet/themes'
 import { GlobalAlert } from '@ultraviolet/ui'
 import { cloneElement, isValidElement, useState } from 'react'
+import type { ReactNode } from 'react'
 import '@ultraviolet/fonts/fonts.css'
 // don't know how it's work today
 import '../../packages/themes/dist/themes.css'
 
-import type { ReactNode } from 'react'
+import type Channel from 'storybook/internal/channels'
+import * as SB_THEMES from '../storybookThemes'
+import { useDocsTheme } from './useDocsTheme'
 import { globalStyleStoryBook } from './globalStyle.css'
 
 type ExtraProps = {
@@ -41,13 +49,18 @@ type ExtraProps = {
 
 type DocsContainerProps = BaseContainerProps & {
   context?: {
+    channel: Channel
     // oxlint-disable-next-line typescript/no-explicit-any
     attachedCSFFiles: Set<any>
   }
 } & { children: ReactNode }
 
+const UV_THEMES = { light: consoleLightTheme, dark: consoleDarkTheme, darker: consoleDarkerTheme } as const
+
 const DocsContainer = ({ children, context }: DocsContainerProps) => {
   const [isBeta, setIsBeta] = useState(false)
+  const themeName = useDocsTheme(context?.channel)
+
   const scope = context?.attachedCSFFiles?.values()?.next()?.value?.meta
   const parameters = scope?.parameters
 
@@ -71,7 +84,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
   return (
     <Unstyled>
       <div className={globalStyleStoryBook}>
-        <ThemeProviderUV theme={lightTheme}>
+        <ThemeProviderUV theme={UV_THEMES[themeName]}>
           {isBeta ? (
             <GlobalAlert
               buttonText="Access to Beta"
@@ -81,7 +94,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
               A Beta version is available. Please use this version if your dependencies include the Beta release.
             </GlobalAlert>
           ) : null}
-          <BaseContainer context={context}>
+          <BaseContainer context={context} theme={SB_THEMES[themeName]}>
             {isValidElement<ExtraProps>(children)
               ? cloneElement(children, {
                   a11yStatus: parameters?.a11yStatus,

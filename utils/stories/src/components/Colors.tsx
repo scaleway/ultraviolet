@@ -2,7 +2,6 @@ import { useTheme } from '@ultraviolet/themes'
 import type { consoleLightTheme } from '@ultraviolet/themes'
 import { Card, Row, Separator, Stack, Text } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import ThemeWrapper from '../ThemeWrapper'
 import { capitalizedText, card, computedBackground, noMarginText, paddingCard, separator } from '../styles.css'
 
 type Color = Extract<
@@ -263,10 +262,6 @@ const Colors = () => {
   )
 }
 
-const Container = () => (
-  <ThemeWrapper>
-    <Colors />
-  </ThemeWrapper>
-)
+const Container = () => <Colors />
 
 export default Container
