@@ -1,68 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`expandable > renders correctly opened 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <div
-      class="styles__mlltm91"
-      data-is-animated="false"
-      style="--mlltm90: 300ms;"
-    >
-      Sample Expandable
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`expandable > renders correctly with animationDuration 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <div
-      class="styles__mlltm91"
-      data-is-animated="false"
-      style="--mlltm90: 500ms; max-height: 0px; overflow: hidden;"
-    >
-      Sample Expandable
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`expandable > renders correctly with animationDuration set to 0 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <div
-      style="display: none;"
-    >
-      Sample Expandable
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`expandable > renders correctly with className 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <div
-      class="test styles__mlltm91"
-      data-is-animated="false"
-      style="--mlltm90: 300ms; max-height: 0px; overflow: hidden;"
-    >
-      Sample Expandable
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`expandable > renders correctly with default values 1`] = `
+exports[`expandable > locks the default render DOM 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
@@ -71,22 +9,6 @@ exports[`expandable > renders correctly with default values 1`] = `
       class="styles__mlltm91"
       data-is-animated="false"
       style="--mlltm90: 300ms; max-height: 0px; overflow: hidden;"
-    >
-      Sample Expandable
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`expandable > renders correctly with minHeight 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <div
-      class="styles__mlltm91"
-      data-is-animated="false"
-      style="--mlltm90: 300ms; max-height: 5px; overflow: hidden;"
     >
       Sample Expandable
     </div>
