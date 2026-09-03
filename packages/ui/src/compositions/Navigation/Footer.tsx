@@ -16,7 +16,7 @@ type FooterProps = {
 }
 
 export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
-  const { expanded, toggleExpand, locales, animation } = useNavigation()
+  const { expanded, toggleExpand, locales } = useNavigation()
 
   const isScrollAtBottom = useCallback(() => {
     if (contentRef.current) {
