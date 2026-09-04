@@ -58,19 +58,19 @@ const parameters: Preview['parameters'] = {
         name: 'light',
         textColor: '#3f4250',
         value:
-          'linear-gradient(90deg,#ffffff 10px,transparent 1%) 50%,linear-gradient(#ffffff 10px,transparent 1%) 50%,#eceef2',
+          'linear-gradient(90deg,#ffffff 10px,transparent 1%) -4px -4px / 12px 12px,linear-gradient(#ffffff 10px,transparent 1%) -4px -4px / 12px 12px,#eceef2',
       },
       {
         name: 'dark',
         textColor: '#b8bac0',
         value:
-          'linear-gradient(90deg,#151a2d 10px,transparent 1%) 50%,linear-gradient(#151a2d 10px,transparent 1%) 50%,#303445',
+          'linear-gradient(90deg,#151a2d 10px,transparent 1%) -4px -4px / 12px 12px,linear-gradient(#151a2d 10px,transparent 1%) -4px -4px / 12px 12px,#303445',
       },
       {
         name: 'darker',
         textColor: '#d8d9dc',
         value:
-          'linear-gradient(90deg,#000000 10px,transparent 1%) 50%,linear-gradient(#000000 10px,transparent 1%) 50%,#151a2d',
+          'linear-gradient(90deg,#000000 10px,transparent 1%) -4px -4px / 12px 12px,linear-gradient(#000000 10px,transparent 1%) -4px -4px / 12px 12px,#151a2d',
       },
     ],
   },
@@ -140,8 +140,6 @@ function DottedBackground({ theme, children }: { theme: string; children: ReactN
     <div
       style={{
         background,
-        backgroundPosition: '-4px -4px',
-        backgroundSize: '12px 12px',
         color: textColor,
         padding: '30px',
       }}
