@@ -1,12 +1,13 @@
-import { consoleLightTheme as theme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import { globalStyle, style } from '@vanilla-extract/css'
-import background from '../assets/brand-background.png'
+import instanceWire from '../assets/instance-wire.svg'
 
 export const globalStyleStoryBook = style({
   color: theme.colors.neutral.text,
   fontFamily: "'Inter', sans-serif",
-  fontSize: 16,
 })
+
+globalStyle('html.dark, html.darker', { colorScheme: 'dark' })
 
 globalStyle(`${globalStyleStoryBook} p`, { margin: 0 })
 
@@ -20,20 +21,16 @@ globalStyle(
   { margin: 'inherit' },
 )
 
-globalStyle(`${globalStyleStoryBook} body`, {
-  color: theme.colors.neutral.text,
-  fontFamily: "'Inter', sans-serif",
-  fontSize: 16,
-  fontWeight: 400,
-  lineHeight: 24,
-})
-
 globalStyle(`${globalStyleStoryBook} h1, h2, h3, h4, h5, h3`, {
   color: theme.colors.neutral.text,
 })
 
 globalStyle(`${globalStyleStoryBook} .toc-list-item::before`, {
   borderColor: `${theme.colors.primary.border} !important`,
+})
+
+globalStyle(`${globalStyleStoryBook} .toc-list`, {
+  borderLeftColor: `${theme.colors.neutral.borderWeak} !important`,
 })
 
 globalStyle(`${globalStyleStoryBook} .toc-list-item`, {
@@ -47,10 +44,10 @@ globalStyle(`${globalStyleStoryBook} .toc-list-item.is-active-li>a`, {
 export const titleDecorator = style({})
 
 globalStyle(`${titleDecorator} > h1`, {
-  backgroundImage: `url(${background})`,
-  backgroundPosition: 'center',
+  backgroundImage: `url(${instanceWire}), linear-gradient(${theme.colors.neutral.backgroundWeak})`,
+  backgroundPosition: '120% center, center',
   backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
+  backgroundSize: '30%, cover',
   borderRadius: theme.radii.default,
   color: theme.colors.neutral.text,
   fontFamily: theme.typography.headingLargeStronger.fontFamily,
@@ -59,12 +56,12 @@ globalStyle(`${titleDecorator} > h1`, {
   letterSpacing: theme.typography.headingLargeStronger.letterSpacing,
   lineHeight: theme.typography.headingLargeStronger.lineHeight,
   padding: `${theme.space[5]} ${theme.space[3]}`,
+  marginInline: `calc(-1 * ${theme.space[3]})`,
   textDecoration: theme.typography.headingLargeStronger.textDecoration,
-  width: '100%',
 })
 
 export const h2Decorator = style({
-  borderBottom: `2px solid ${theme.colors.neutral.borderStronger}`,
+  borderBottom: `1px solid ${theme.colors.neutral.borderStrong}`,
   marginBottom: `${theme.space[2]} !important`,
   paddingBottom: theme.space[1],
 })
@@ -72,7 +69,7 @@ export const h2Decorator = style({
 export const storiesDecorator = style({})
 
 globalStyle(`${storiesDecorator} #stories`, {
-  borderBottom: `2px solid ${theme.colors.neutral.borderStronger}`,
+  borderBottom: `1px solid ${theme.colors.neutral.borderStrong}`,
   color: theme.colors.neutral.text,
   fontFamily: theme.typography.headingStrong.fontFamily,
   fontSize: theme.typography.headingStrong.fontSize,
