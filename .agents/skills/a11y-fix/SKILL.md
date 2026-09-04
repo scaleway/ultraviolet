@@ -70,7 +70,14 @@ The a11y test suite generated in Step 5 should now pass. Fix any failures you in
 
 ### Step 8: Update audit artifacts
 
-1. **`A11y.mdx`** — for each resolved issue, mark it ✅ and move the detail under a **Resolved** subsection (keep the original note for traceability). Update the **Summary** lines (✅/⚠️/❌) to reflect the new state. Wrap the whole "Accessibility issues" section in a details/summary and rename it to "Past accessibility issues".
+1. **`A11y.mdx`** — for each resolved issue, mark it ✅ and keep the original note for traceability. Update the **Summary** lines (✅/⚠️/❌) to reflect the new state. Wrap the whole "Accessibility issues" section in a `<details><summary>` block and rename it to "Past accessibility issues". Within that section, format each issue as a list item whose first line is the issue title (with ✅/⚠️/❌) and whose details (description, resolution, or status) go in a **nested sub-list** below it, e.g.:
+   ```mdx
+   - ✅ Missing ARIA props on button:
+     - The following ARIA props were defined but NOT passed to the native `<button>` element: ...
+     - **Resolved** by forwarding all ARIA attributes to the `<button>` element (`index.tsx`).
+   - ❌ Contrast failures:
+     - Unresolved (theme tokens, see WCAG 1.4.3 above).
+   ```
 2. **`index.stories.tsx`** — recompute the `a11yStatus` parameter:
    - `perceivable`: `false` if any 1.x.x rule still fails, else `true`
    - `operable`: `false` if any 2.x.x rule still fails, else `true`

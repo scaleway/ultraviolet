@@ -201,40 +201,43 @@ export const Button = forwardRef<Element, BaseButtonProps>(
       )
     }
 
+    const commonProps = {
+      'aria-controls': ariaControls,
+      'aria-current': ariaCurrent,
+      'aria-disabled': ariaDisabled,
+      'aria-describedby': ariaDescribedby,
+      'aria-expanded': ariaExpanded,
+      'aria-haspopup': ariaHaspopup,
+      'aria-keyshortcuts': ariaKeyshortcuts,
+      'aria-pressed': ariaPressed,
+      'aria-roledescription': ariaRoledescription,
+      autoFocus,
+      className: computedClassName,
+      'data-testid': dataTestId,
+      'data-flip-id': dataFlipId,
+      onBlur,
+      onClick,
+      onMouseDown,
+      onMouseEnter,
+      onMouseLeave,
+      onMouseOut,
+      onMouseUp,
+      role,
+      style,
+      tabIndex,
+    }
+
     // @note: an anchor can't be disabled
     if (href && !computeIsDisabled) {
       return (
         <Tooltip containerFullWidth={fullWidth} relation={tooltipRelation} text={tooltipText}>
           <a
-            aria-controls={ariaControls}
-            aria-current={ariaCurrent}
-            aria-describedby={ariaDescribedby}
-            aria-disabled={ariaDisabled ?? disabled}
-            aria-expanded={ariaExpanded}
-            aria-haspopup={ariaHaspopup}
-            aria-keyshortcuts={ariaKeyshortcuts}
-            aria-pressed={ariaPressed}
-            aria-roledescription={ariaRoledescription}
-            autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
-            className={computedClassName}
-            data-testid={dataTestId}
-            data-flip-id={dataFlipId}
+            {...commonProps}
             download={download}
             href={href}
-            onBlur={onBlur}
-            onClick={onClick}
-            onMouseDown={onMouseDown}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-            onMouseOut={onMouseOut}
-            onMouseUp={onMouseUp}
             // oxlint-disable-next-line typescript/no-unsafe-type-assertion
             ref={ref as Ref<HTMLAnchorElement>}
-            role={role}
-            style={style}
-            tabIndex={tabIndex}
             target={target}
-            type={type}
           >
             {content}
           </a>
@@ -245,31 +248,14 @@ export const Button = forwardRef<Element, BaseButtonProps>(
     return (
       <Tooltip containerFullWidth={fullWidth} relation={tooltipRelation} text={tooltipText}>
         <button
-          aria-controls={ariaControls}
-          aria-current={ariaCurrent}
-          aria-expanded={ariaExpanded}
-          aria-haspopup={ariaHaspopup}
-          autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
-          className={computedClassName}
-          data-testid={dataTestId}
-          data-flip-id={dataFlipId}
+          {...commonProps}
           disabled={computeIsDisabled}
           name={name}
           form={form}
-          onBlur={onBlur}
-          onClick={onClick}
           onKeyDown={onKeyDown}
-          onMouseDown={onMouseDown}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          onMouseOut={onMouseOut}
-          onMouseUp={onMouseUp}
           onPointerDown={onPointerDown}
           // oxlint-disable-next-line typescript/no-unsafe-type-assertion
           ref={ref as Ref<HTMLButtonElement>}
-          role={role}
-          style={style}
-          tabIndex={tabIndex}
           type={type} // oxlint-disable-line react/button-has-type
         >
           {content}

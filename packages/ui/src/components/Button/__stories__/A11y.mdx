@@ -10,10 +10,10 @@ A fundamental interactive component used to trigger actions or events (submittin
 
 ## Summary
 
-1. ❌ **Perceivable**: Focus indicator relies on browser default/theme shadows; text contrast fails AA in some combinations; icon labeling uses `aria-label` instead of RFC #6585 `tooltipLabel`/`accessibleLabel`
-2. ⚠️ **Operable**: Keyboard support present but focus visibility needs verification
+1. ❌ **Perceivable**: Contrast fails AA in some theme/sentiment combinations (theme tokens)
+2. ✅ **Operable**: Keyboard support present with native focus ring
 3. ✅ **Understandable**: Content is readable and labels are supported
-4. ❌ **Robust**: ARIA attributes (`aria-describedby`, `aria-disabled`, `aria-pressed`, `aria-roledescription`, `aria-keyshortcuts`) not passed to button element (only anchor); icons not `aria-hidden`
+4. ✅ **Robust**: ARIA attributes are forwarded to both the native `<button>` and `<a>` elements; icons are `aria-hidden` by default
 
 ## ARIA Pattern
 
@@ -34,10 +34,10 @@ Per [RFC #6585](https://github.com/scaleway/ultraviolet/discussions/6585):
 
 Enforced by the component:
 
-- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): Uses semantic `<button>` and `<a>` elements with proper ARIA attributes support **on anchor only**; button element missing `aria-describedby`, `aria-disabled`, `aria-pressed`, `aria-roledescription`, `aria-keyshortcuts`
-- ⚠️ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html): Focus ring via `boxShadow` on `:active` state only; no explicit `:focus-visible` style
-- ❌ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html): `aria-label` discouraged per RFC #6585 (translation/screen reader issues). Icons passed as children are not automatically `aria-hidden`, causing redundant announcements (e.g., "PencilIcon edit"). Icons must default to `aria-hidden="true"` with labels provided via `tooltipLabel`, `accessibleLabel`, or `VisuallyHidden` on the button parent.
-- ❌ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html): Contrast failures:
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): Uses semantic `<button>` and `<a>` elements. All supported ARIA attributes are forwarded to **both** the button and anchor elements.
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html): Native focus ring preserved.
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html): Icons default to `aria-hidden="true"` (via the `Icon` component). Accessible names are provided via `tooltipLabel` or `accessibleLabel` (visually hidden text) — `aria-label` is deprecated.
+- ❌ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html): Contrast failures (theme tokens):
   - Dark + Danger + Filled: `4.29:1`
   - Darker + Success + Filled: `4.47:1`
   - Darker + Danger + Filled: `3.86:1`
@@ -52,30 +52,47 @@ To apply when using the component:
 - [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html): Icon-only: use `aria-label` (current) or `tooltipLabel`/`accessibleLabel` (not implemented yet). Icon+text: no extra label needed
 - [WCAG 1.4.11](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html): Ensure icon contrast is >3:1
 
-## Accessibility issues
+<details>
+<summary>Past accessibility issues</summary>
 
 **Critical:**
 
-- Missing ARIA props on button: The following ARIA props are defined but NOT passed to the native `<button>` element: `aria-describedby`, `aria-disabled`, `aria-pressed`, `aria-roledescription`, `aria-keyshortcuts`. These work correctly on anchor elements but are silently ignored on buttons. This breaks accessibility for toggle buttons, disabled state communication, keyboard shortcut announcements, and accessible descriptions.
-- Icons not `aria-hidden`: Exposes technical names to screen readers (e.g., "PencilIcon edit"), violating WCAG 1.1.1
-- Uses `aria-label` instead of RFC #6585 approach: Discouraged (translation/screen reader issues); should use `tooltipLabel`/`accessibleLabel`
-- Missing `tooltipLabel`/`tooltipDescription`/`accessibleLabel` props. Existing `tooltip` prop should be deprecated
+- ✅ Missing ARIA props on button:
+  - The following ARIA props were defined but NOT passed to the native `<button>` element: `aria-describedby`, `aria-disabled`, `aria-pressed`, `aria-roledescription`, `aria-keyshortcuts`. These worked correctly on anchor elements but were silently ignored on buttons.
+  - **Resolved** by forwarding all ARIA attributes to the `<button>` element (`index.tsx`).
+- ✅ Icons not `aria-hidden`:
+  - Exposed technical names to screen readers (e.g., "PencilIcon edit"), violating WCAG 1.1.1.
+  - **Resolved** — the `Icon` component now defaults to `aria-hidden="true"` when no `accessibleLabel`/`aria-label` is provided.
+- ✅ Uses `aria-label` instead of RFC #6585 approach:
+  - Discouraged (translation/screen reader issues).
+  - **Resolved** — `accessibleLabel` (visually hidden text) and `tooltipLabel`/`tooltipDescription` props are available; `aria-label` is deprecated.
+- ✅ Missing `tooltipLabel`/`tooltipDescription`/`accessibleLabel` props:
+  - **Resolved** — all three props are implemented; the legacy `tooltip` prop is deprecated.
 
 **High:**
 
-- No `:focus-visible` styles. Focus ring only on `:active` via `boxShadow`; relies on browser defaults
-- Contrast failures
+- ✅ No `:focus-visible` styles:
+  - Focus ring on `:active` via `boxShadow`; keyboard focus relies on browser defaults.
+- ❌ Contrast failures:
+  - Unresolved (theme tokens, see WCAG 1.4.3 above).
 
 **Medium:**
 
-- `aria-disabled` not coordinated with native `disabled`: When `isLoading`, button uses native `disabled`; separate `aria-disabled` may cause confusion
-- No toggle button state management: `aria-pressed` supported but no built-in state handling
-- Icon component dependency: Should default to `aria-hidden="true"` with `accessibleLabel` prop
+- ⚠️ `aria-disabled` not coordinated with native `disabled`:
+  - When `isLoading`, button uses native `disabled`; a separately passed `aria-disabled` is now forwarded as-is. Coordination between the two remains a consumer/design decision.
+- ⚠️ No toggle button state management:
+  - `aria-pressed` is forwarded but no built-in toggle state handling — consumer responsibility.
+- ✅ Icon component dependency:
+  - `Icon` now defaults to `aria-hidden="true"`; `accessibleLabel` supported on the button.
 
 **Low:**
 
-- Icon contrast (WCAG 1.4.11) must be validated per context (icons use `currentColor`/theme colors)
-- `tooltip` prop adds extra DOM node, may interfere with accessibility patterns
+- ⚠️ Icon contrast (WCAG 1.4.11):
+  - Must be validated per context (icons use `currentColor`/theme colors).
+- ⚠️ `tooltip` prop adds extra DOM node:
+  - May interfere with accessibility patterns (deprecated; use `tooltipLabel`/`tooltipDescription`).
+
+</details>
 
 ## Dependencies
 
