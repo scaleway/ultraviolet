@@ -1,21 +1,20 @@
 import { useEffect, useState } from 'react'
-import type Channel from 'storybook/internal/channels'
 import { GLOBALS_UPDATED } from 'storybook/internal/core-events'
+import { addons } from 'storybook/manager-api'
 
 type ThemeName = 'light' | 'dark' | 'darker'
 
-export const useDocsTheme = (channel?: Channel) => {
+export const useDocsTheme = () => {
+  const channel = addons.getChannel()
   const [themeName, setThemeName] = useState(() => {
-    const last = channel?.last?.(GLOBALS_UPDATED)?.[0] as { globals?: { theme?: string } } | undefined
-    return (last?.globals?.theme ?? 'light') as ThemeName
+    const last = channel.last(GLOBALS_UPDATED)?.[0] as { globals?: { theme?: string } } | undefined
+    return (last?.globals?.theme || 'light') as ThemeName
   })
 
   useEffect(() => {
-    if (!channel) return undefined
-
     const handler = (...args: unknown[]) => {
       const payload = args[0] as { globals?: { theme?: string } } | undefined
-      setThemeName((payload?.globals?.theme ?? 'light') as ThemeName)
+      setThemeName((payload?.globals?.theme || 'light') as ThemeName)
     }
 
     channel.on(GLOBALS_UPDATED, handler)
