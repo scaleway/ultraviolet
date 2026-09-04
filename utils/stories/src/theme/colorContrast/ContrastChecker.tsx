@@ -1,7 +1,9 @@
+import { CheckIcon, CloseIcon } from '@ultraviolet/icons'
 import { useTheme } from '@ultraviolet/themes'
 import type { consoleLightTheme } from '@ultraviolet/themes'
 import { Badge, Checkbox, Row, Stack, Text } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { ReactNode } from 'react'
 import { useEffect, useMemo, useState } from 'react'
 import { contrastStyle } from './styles.css'
 import { previewBackgroundColor, previewTextColor, swatchColor, swatchSize } from './variables.css'
@@ -50,13 +52,32 @@ const contrastRatio = (fg: string, bg: string): number => {
 // --- Thresholds & levels ---
 
 const AA_THRESHOLD = 4.5
-type ContrastLevel = 'pass' | 'fail'
+type ContrastLevel = 'pass' | 'fail' | 'disabled'
 
 const getContrastLevel = (ratio: number): ContrastLevel => (ratio >= AA_THRESHOLD ? 'pass' : 'fail')
 
-const LEVEL_META: Record<ContrastLevel, { sentiment: 'success' | 'danger'; label: string; description: string }> = {
-  pass: { sentiment: 'success', label: 'AA', description: '\u2265 4.5:1 \u2014 passes WCAG AA for normal text' },
-  fail: { sentiment: 'danger', label: 'Fail', description: '< 4.5:1 \u2014 does not meet WCAG AA' },
+const LEVEL_META: Record<
+  ContrastLevel,
+  { sentiment: 'success' | 'danger' | 'neutral'; label: string; description: string; mark: ReactNode }
+> = {
+  pass: {
+    sentiment: 'success',
+    label: 'AA',
+    description: '\u2265 4.5:1 \u2014 passes WCAG AA for normal text',
+    mark: <CheckIcon />,
+  },
+  fail: {
+    sentiment: 'danger',
+    label: 'Fail',
+    description: '< 4.5:1 \u2014 does not meet WCAG AA',
+    mark: <CloseIcon />,
+  },
+  disabled: {
+    sentiment: 'neutral',
+    label: 'N/A',
+    description: 'Disabled elements are exempt from WCAG AA contrast requirements',
+    mark: '',
+  },
 }
 
 // --- Color extraction helpers ---
@@ -92,7 +113,7 @@ const Swatch = ({ color, size = 12 }: { color: string; size?: number }) => (
   />
 )
 
-const LEVEL_ORDER: ContrastLevel[] = ['pass', 'fail']
+const LEVEL_ORDER: ContrastLevel[] = ['pass', 'fail', 'disabled']
 
 const Legend = () => (
   <Stack direction="row" gap={2} wrap alignItems="center">
@@ -109,17 +130,16 @@ const Legend = () => (
   </Stack>
 )
 
-const SummaryBar = ({ counts }: { counts: { total: number; pass: number; fail: number } }) => (
+const SummaryBar = ({ counts }: { counts: { total: number; pass: number; fail: number; disabled: number } }) => (
   <Stack className={contrastStyle.summaryBar} direction="row" gap={2} alignItems="center" wrap>
     <Text as="span" prominence="strong" sentiment="neutral" variant="bodySmallStrong">
       {counts.total} intended pairings
     </Text>
-    <Badge sentiment="success">
-      {'\u2713'} {counts.pass} pass
-    </Badge>
-    <Badge sentiment="danger">
-      {'\u2717'} {counts.fail} fail
-    </Badge>
+    {LEVEL_ORDER.map(level => (
+      <Badge sentiment={LEVEL_META[level].sentiment} key={level}>
+        {LEVEL_META[level].mark} {counts[level]} {LEVEL_META[level].label}
+      </Badge>
+    ))}
   </Stack>
 )
 
@@ -183,7 +203,7 @@ const PairingCard = ({
           variant="bodySmallStronger"
         >
           {pairing.ratio.toFixed(2)}
-          {pairing.level === 'pass' ? ' \u2713' : ' \u2717'}
+          {LEVEL_META[pairing.level].mark}
         </Text>
         <Badge sentiment={LEVEL_META[pairing.level].sentiment} size="small">
           {LEVEL_META[pairing.level].label}
@@ -225,7 +245,8 @@ export const ContrastChecker = () => {
           if (hideDisabled && suffix.toLowerCase().includes('disabled')) return null
 
           const ratio = contrastRatio(textVal, bgMatch.val)
-          const level = getContrastLevel(ratio)
+          const isDisabled = suffix.toLowerCase().includes('disabled')
+          const level: ContrastLevel = isDisabled ? 'disabled' : getContrastLevel(ratio)
 
           return {
             suffix,
@@ -245,30 +266,22 @@ export const ContrastChecker = () => {
     let total = 0
     let pass = 0
     let fail = 0
+    let disabled = 0
 
     for (const { pairings } of groups) {
       for (const pairing of pairings) {
         total++
-        if (pairing.level === 'pass') pass++
+        if (pairing.level === 'disabled') disabled++
+        else if (pairing.level === 'pass') pass++
         else fail++
       }
     }
 
-    return { groups, counts: { total, pass, fail } }
+    return { groups, counts: { total, pass, fail, disabled } }
   }, [theme, hideDisabled])
 
   return (
     <Stack className={contrastStyle.root} gap={3}>
-      <Stack gap={1.5}>
-        <Text as="h1" prominence="strong" sentiment="neutral" variant="headingStronger">
-          Color Contrast Checker
-        </Text>
-        <Text as="p" sentiment="neutral" variant="bodySmall">
-          WCAG contrast ratios for intended text-on-background pairings (matching state &amp; variant suffixes) within
-          each sentiment. Switch between light / dark / darker themes using the toolbar to check each theme.
-        </Text>
-      </Stack>
-
       <Legend />
       <SummaryBar counts={counts} />
 
@@ -280,7 +293,7 @@ export const ContrastChecker = () => {
             setHighlightFailures(e.target.checked)
           }}
         >
-          Highlight failures only (dim passing pairings)
+          Highlight failures
         </Checkbox>
         <Checkbox
           checked={hideDisabled}
