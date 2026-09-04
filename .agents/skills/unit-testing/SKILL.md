@@ -37,25 +37,9 @@ Choose the highest query that works, in this order:
 3. **Test IDs** — `getByTestId` only when you can't match by role or text and it doesn't
    make sense (e.g. dynamic text). Users can't see them; a testid is a last resort.
 
-### Query variants
-
-| Variant | 0 matches | 1 match | >1 matches | Retries |
-|---------|-----------|---------|------------|---------|
-| `getBy...` | throws | element | throws | no |
-| `queryBy...` | `null` | element | throws | no |
-| `findBy...` | throws | element | throws | **yes** |
-| `getAllBy...` | throws | array | array | no |
-| `queryAllBy...` | `[]` | array | array | no |
-| `findAllBy...` | throws | array | array | **yes** |
-
-- `queryBy...` → assert something is **not** present.
-- `findBy...` → content appears **asynchronously** (await it).
-- Prefer regex `/submit/i` over string + `{ exact: false }`.
-
 ### By component type
 
 - Interactive (button, link, tab, switch): `getByRole`
-- Form fields: `getByLabelText` / `getByDisplayValue`
 - Feedback/labels (alert, status): `getByRole('alert')`, `getByRole('status')`
 - Layout/content: `getByText`
 - Icons/avatars: `getByAltText`
@@ -81,6 +65,21 @@ Choose the highest query that works, in this order:
 - Use `screen` (pre-bound to `document.body`); `screen.getByRole` is preferred over
   destructuring from `render`.
 - Pure functions: assert behavior with `expect(fn(input)).toEqual(output)`, no rendering needed.
+
+### a11y.test.tsx vs regular tests
+
+The line is thin, but split files by intent:
+
+- **`a11y.test.tsx`** — accessibility-only concerns: axe violations, keyboard
+  navigation, focus management, ARIA attributes. Query by role to _trigger_ those
+  checks, but assert on a11y outcomes (`expect(axe).toHaveNoViolations()`, focus
+  landing, etc.).
+- **Regular `*.test.tsx`** — behavior: does the component render and respond.
+  `getByRole` here asserts _behavior_; labels/descriptions/roles are matched as a
+  side effect of finding the element a user interacts with, not asserted directly.
+
+If a test's real question is "is this accessible?", it's an a11y test. If it's
+"does this work?", it's a regular test. Same query tools, different intent.
 
 ## Snapshot policy
 
