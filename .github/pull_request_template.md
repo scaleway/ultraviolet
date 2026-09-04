@@ -1,33 +1,12 @@
-## Summary
+### Summary
 
-## Type
+_Explain briefly the purpose of this PR_
 
-- Bug
-- Feature
-- Enhancement
-- Documentation
-- Migration
-- Refactor
+### Screenshots
 
-### Summarize concisely:
+_If the PR introduces visual changes, in the components or Storybook, you can show the changes with screenshots. Otherwise, you can remove this section._
 
-#### What is expected?
-
-(Description of the new behavior)
-
-#### The following changes were made:
-
-(Describe what you did)
-
-1.
-
-2.
-
-3.
-
-## Relevant logs and/or screenshots
-
-| Page |   Before   |      After |
-| :--- | :--------: | ---------: |
-| url  | screenshot | screenshot |
-| url  | screenshot | screenshot |
+|   Before   |   After    |
+| :--------: | :--------: |
+| screenshot | screenshot |
+| screenshot | screenshot |
