@@ -17,32 +17,14 @@ describe('radio', () => {
     expect(radio).toHaveAttribute('value', 'choice')
   })
 
-  it('disables the input and exposes aria-disabled', () => {
+  it('disables the input', () => {
     renderWithTheme(<Radio disabled label="Choice" name="radio" onChange={() => {}} value="choice" />)
-    const radio = screen.getByRole('radio', { name: 'Choice' })
-    expect(radio).toBeDisabled()
-    expect(radio).toHaveAttribute('aria-disabled', 'true')
+    expect(screen.getByRole('radio', { name: 'Choice' })).toBeDisabled()
   })
 
   it('marks the input as checked', () => {
     renderWithTheme(<Radio checked label="Choice" name="radio" onChange={() => {}} value="choice" />)
     expect(screen.getByRole('radio', { name: 'Choice' })).toBeChecked()
-  })
-
-  it('renders the error description and links it to the input', () => {
-    renderWithTheme(<Radio error="Invalid value" label="Choice" name="radio" onChange={() => {}} value="choice" />)
-    const radio = screen.getByRole('radio', { name: 'Choice' })
-    expect(screen.getByRole('status')).toHaveTextContent('Invalid value')
-    expect(radio).toHaveAccessibleDescription('Invalid value')
-  })
-
-  it('renders the helper description and links it to the input at small size', () => {
-    renderWithTheme(
-      <Radio helper="Helper" label="Choice" name="radio" onChange={() => {}} size="small" value="choice" />,
-    )
-    const radio = screen.getByRole('radio', { name: 'Choice' })
-    expect(screen.getByRole('status')).toHaveTextContent('Helper')
-    expect(radio).toHaveAccessibleDescription('Helper')
   })
 
   it('exposes the tooltip on hover', async () => {

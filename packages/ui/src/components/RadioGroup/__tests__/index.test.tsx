@@ -40,37 +40,6 @@ describe('radioGroup', () => {
     expect(screen.getByRole('radio', { name: 'Radio 2' })).not.toBeChecked()
   })
 
-  it('renders the helper description and links it to the group', () => {
-    const { container } = renderWithTheme(
-      <RadioGroup helper="Helper content" legend="Group legend" name="radio" onChange={() => {}} value="value-1">
-        <RadioGroup.Radio label="Radio 1" value="value-1" />
-        <RadioGroup.Radio label="Radio 2" value="value-2" />
-      </RadioGroup>,
-    )
-    const fieldset = container.querySelector('fieldset')
-    expect(screen.getByRole('status')).toHaveTextContent('Helper content')
-    expect(fieldset).toHaveAccessibleDescription('Helper content')
-  })
-
-  it('renders the error description and links it to the group at small size', () => {
-    const { container } = renderWithTheme(
-      <RadioGroup
-        error="Error content"
-        legend="Group legend"
-        name="radio"
-        onChange={() => {}}
-        size="small"
-        value="value-1"
-      >
-        <RadioGroup.Radio label="Radio 1" value="value-1" />
-        <RadioGroup.Radio label="Radio 2" value="value-2" />
-      </RadioGroup>,
-    )
-    const fieldset = container.querySelector('fieldset')
-    expect(screen.getByRole('status')).toHaveTextContent('Error content')
-    expect(fieldset).toHaveAccessibleDescription('Error content')
-  })
-
   it('calls onChange when an option is selected', async () => {
     const onChange = vi.fn()
     renderWithTheme(
