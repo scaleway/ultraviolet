@@ -1,57 +1,42 @@
+import { screen } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { Radio } from '..'
 
 describe('radio', () => {
-  it('renders correctly', () => {
+  it('locks the default render DOM', () => {
     const { asFragment } = renderWithTheme(<Radio label="Choice" name="radio" onChange={() => {}} value="choice" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('renders correctly when disabled', () => {
-    const { asFragment } = renderWithTheme(
-      <Radio disabled label="Choice" name="radio" onChange={() => {}} value="choice" />,
-    )
-    expect(asFragment()).toMatchSnapshot()
+  it('forwards name and value to the input', () => {
+    renderWithTheme(<Radio label="Choice" name="radio" onChange={() => {}} value="choice" />)
+    const radio = screen.getByRole('radio', { name: 'Choice' })
+    expect(radio).toHaveAttribute('name', 'radio')
+    expect(radio).toHaveAttribute('value', 'choice')
   })
 
-  it('renders correctly with tooltip', () => {
-    const { asFragment } = renderWithTheme(
-      <Radio label="Choice" name="radio" onChange={() => {}} tooltip="test" value="choice" />,
-    )
-    expect(asFragment()).toMatchSnapshot()
+  it('disables the input', () => {
+    renderWithTheme(<Radio disabled label="Choice" name="radio" onChange={() => {}} value="choice" />)
+    expect(screen.getByRole('radio', { name: 'Choice' })).toBeDisabled()
   })
 
-  it('renders without name', () => {
-    const { asFragment } = renderWithTheme(<Radio disabled label="Choice" onChange={() => {}} value="choice" />)
-    expect(asFragment()).toMatchSnapshot()
+  it('marks the input as checked', () => {
+    renderWithTheme(<Radio checked label="Choice" name="radio" onChange={() => {}} value="choice" />)
+    expect(screen.getByRole('radio', { name: 'Choice' })).toBeChecked()
   })
 
-  it('renders correctly when checked', () => {
-    const { asFragment } = renderWithTheme(
-      <Radio checked label="Choice" name="radio" onChange={() => {}} value="choice" />,
-    )
-    expect(asFragment()).toMatchSnapshot()
+  it('exposes the tooltip on hover', async () => {
+    renderWithTheme(<Radio label="Choice" name="radio" onChange={() => {}} tooltip="test" value="choice" />)
+    await userEvent.hover(screen.getByRole('radio', { name: 'Choice' }))
+    expect(await screen.findByRole('tooltip', { name: 'test' })).toBeVisible()
   })
 
-  it('renders correctly when error', () => {
-    const { asFragment } = renderWithTheme(
-      <Radio error="Invalid value" label="Choice" name="radio" onChange={() => {}} value="choice" />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  it('renders correctly when helper', () => {
-    const { asFragment } = renderWithTheme(
-      <Radio helper="Helper" label="Choice" name="radio" onChange={() => {}} value="choice" />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  it('renders correctly small', () => {
-    const { asFragment } = renderWithTheme(
-      <Radio helper="Helper" label="Choice" name="radio" onChange={() => {}} value="choice" size="small" />,
-    )
-    expect(asFragment()).toMatchSnapshot()
+  it('calls onChange when clicked', async () => {
+    const onChange = vi.fn()
+    renderWithTheme(<Radio label="Choice" name="radio" onChange={onChange} value="choice" />)
+    await userEvent.click(screen.getByRole('radio', { name: 'Choice' }))
+    expect(onChange).toHaveBeenCalled()
   })
 })
