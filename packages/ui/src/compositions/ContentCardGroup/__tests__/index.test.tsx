@@ -1,64 +1,70 @@
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { screen } from '@testing-library/react'
+import { renderWithTheme } from '@utils/test'
+import { describe, expect, it } from 'vitest'
 import { ContentCardGroup } from '..'
 
 describe('contentCardGroup', () => {
-  beforeEach(() => {
-    vi.spyOn(global.Math, 'random').mockReturnValue(0.415_591_366_944_480_4)
-  })
-
-  afterEach(() => {
-    vi.spyOn(global.Math, 'random').mockRestore()
-  })
-
-  it('renders correctly with required title & hread', () =>
-    shouldMatchSnapshot(
-      <ContentCardGroup>
-        <ContentCardGroup.Card href="http://scaleway.com" title="title" />
-      </ContentCardGroup>,
-    ))
-
-  it('renders correctly with subtitle', () =>
-    shouldMatchSnapshot(
-      <ContentCardGroup>
-        <ContentCardGroup.Card href="http://scaleway.com" subtitle="subtitle" title="title" />
-      </ContentCardGroup>,
-    ))
-
-  it('renders correctly with description', () =>
-    shouldMatchSnapshot(
-      <ContentCardGroup>
-        <ContentCardGroup.Card description="description" href="http://scaleway.com" title="title" />
-      </ContentCardGroup>,
-    ))
-
-  it('renders correctly with loading prop', () => {
+  it('locks the default render DOM', () => {
     const { asFragment } = renderWithTheme(
-      <ContentCardGroup loading>
+      <ContentCardGroup>
         <ContentCardGroup.Card href="http://scaleway.com" title="title" />
       </ContentCardGroup>,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('renders correctly with link target _parent', () =>
-    shouldMatchSnapshot(
+  it('renders each card as a link with href and default target', () => {
+    renderWithTheme(
+      <ContentCardGroup>
+        <ContentCardGroup.Card href="http://scaleway.com" title="title" />
+      </ContentCardGroup>,
+    )
+    const link = screen.getByRole('link', { name: 'title' })
+    expect(link).toHaveAttribute('href', 'http://scaleway.com')
+    expect(link).toHaveAttribute('target', '_blank')
+  })
+
+  it('renders subtitle and description', () => {
+    renderWithTheme(
+      <ContentCardGroup>
+        <ContentCardGroup.Card description="description" href="http://scaleway.com" subtitle="subtitle" title="title" />
+      </ContentCardGroup>,
+    )
+    expect(screen.getByText('subtitle')).toBeInTheDocument()
+    expect(screen.getByText('description')).toBeInTheDocument()
+  })
+
+  it('renders skeleton cards instead of links while loading', () => {
+    renderWithTheme(
+      <ContentCardGroup loading>
+        <ContentCardGroup.Card href="http://scaleway.com" title="title" />
+      </ContentCardGroup>,
+    )
+    expect(screen.queryByRole('link')).not.toBeInTheDocument()
+  })
+
+  it('forwards a custom target to the link', () => {
+    renderWithTheme(
       <ContentCardGroup>
         <ContentCardGroup.Card href="http://scaleway.com" target="_parent" title="title" />
       </ContentCardGroup>,
-    ))
+    )
+    expect(screen.getByRole('link', { name: 'title' })).toHaveAttribute('target', '_parent')
+  })
 
-  it('renders correctly with a children', () =>
-    shouldMatchSnapshot(
+  it('renders children inside the card', () => {
+    renderWithTheme(
       <ContentCardGroup>
-        <ContentCardGroup.Card href="http://scaleway.com" target="_parent">
+        <ContentCardGroup.Card href="http://scaleway.com" title="title">
           <div>test</div>
         </ContentCardGroup.Card>
       </ContentCardGroup>,
-    ))
+    )
+    expect(screen.getByText('test')).toBeInTheDocument()
+  })
 
-  it('renders correctly with different title and subtitle and with custom titleAs and subtitleAs', () =>
-    shouldMatchSnapshot(
+  it('uses titleAs and subtitleAs for heading levels', () => {
+    renderWithTheme(
       <ContentCardGroup>
         <ContentCardGroup.Card
           href="http://scaleway.com"
@@ -70,5 +76,8 @@ describe('contentCardGroup', () => {
           <div>test</div>
         </ContentCardGroup.Card>
       </ContentCardGroup>,
-    ))
+    )
+    expect(screen.getByRole('heading', { level: 1, name: 'title' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 2, name: 'subtitle' })).toBeInTheDocument()
+  })
 })
