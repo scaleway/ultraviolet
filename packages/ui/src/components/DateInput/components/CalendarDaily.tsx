@@ -190,7 +190,7 @@ export const Daily = () => {
 
         return (
           <Button
-            aria-label={dayState()}
+            accessibleLabel={dayState()}
             className={dateInputStyle.dayMonth}
             data-testid={createTestId()}
             disabled={disabled || isExcluded || isOutsideRange}

@@ -9,8 +9,10 @@ describe('textArea', () => {
   let spyGetComputedStyle: Mock
 
   beforeEach(() => {
-    const mockTextareaStyle = { lineHeight: '16px' } as CSSStyleDeclaration
-    spyGetComputedStyle = vi.spyOn(window, 'getComputedStyle').mockReturnValue(mockTextareaStyle)
+    const original = window.getComputedStyle.bind(window)
+    spyGetComputedStyle = vi
+      .spyOn(window, 'getComputedStyle')
+      .mockImplementation(elt => Object.assign(original(elt), { lineHeight: '16px' }))
   })
   afterEach(() => {
     spyGetComputedStyle.mockRestore()
@@ -41,7 +43,7 @@ describe('textArea', () => {
 
     const textarea = screen.getByLabelText<HTMLTextAreaElement>('Test')
     expect(textarea.value).toBe('test')
-    const clearableButton = screen.getByLabelText('clear value')
+    const clearableButton = screen.getByRole('button', { name: 'clear value' })
     await userEvent.click(clearableButton)
     expect(onChange).toHaveBeenCalledWith('')
   })

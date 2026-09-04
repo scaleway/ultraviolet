@@ -16,7 +16,7 @@ type CloseButtonProps = {
 }
 
 const closeButton = (props: CloseButtonProps) => (
-  <Button aria-label="close" onClick={props.closeToast} sentiment="neutral" size="xsmall" variant="ghost">
+  <Button accessibleLabel="close" onClick={props.closeToast} sentiment="neutral" size="xsmall" variant="ghost">
     <CloseIcon />
   </Button>
 )

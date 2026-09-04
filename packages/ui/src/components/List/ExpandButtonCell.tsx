@@ -28,7 +28,7 @@ export const ExpandButtonCell = ({
     <ColumnProvider width={theme.sizing[400]}>
       <Cell className={listStyle.noPaddingCell}>
         <Button
-          aria-label="expand"
+          accessibleLabel="expand"
           className={listStyle.expandableButton}
           data-testid="list-expand-button"
           disabled={disabled || !expandable}

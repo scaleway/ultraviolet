@@ -67,7 +67,7 @@ export const ShowHide = memo(
           onClick={onClick}
           sentiment="primary"
           size="small"
-          tooltip={tooltip}
+          tooltipDescription={tooltip}
           variant="ghost"
         >
           {computedShown ? <ArrowUpIcon /> : <ArrowDownIcon />}

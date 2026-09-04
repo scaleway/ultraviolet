@@ -142,7 +142,7 @@ describe('numberInput', () => {
     const { asFragment } = renderWithTheme(
       <NumberInput max={100} min={0} onBlur={() => {}} onChange={onChange} step={10} />,
     )
-    const plus = screen.getByLabelText('plus')
+    const plus = screen.getByRole('button', { name: 'plus' })
 
     await userEvent.click(plus)
     // In happy-dom, the step functionality might not work as expected
@@ -158,7 +158,7 @@ describe('numberInput', () => {
     const onChange = vi.fn()
     renderWithTheme(<NumberInput min={10} onChange={onChange} />)
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
-    const plusButton = screen.getByLabelText('plus')
+    const plusButton = screen.getByRole('button', { name: 'plus' })
 
     await userEvent.clear(input)
     await userEvent.type(input, '5')
@@ -172,7 +172,7 @@ describe('numberInput', () => {
     const onChange = vi.fn()
     renderWithTheme(<NumberInput max={10} onChange={onChange} />)
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
-    const minusButton = screen.getByLabelText('minus')
+    const minusButton = screen.getByRole('button', { name: 'minus' })
 
     await userEvent.clear(input)
     await userEvent.type(input, '15')

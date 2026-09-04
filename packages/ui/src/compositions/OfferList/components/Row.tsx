@@ -186,7 +186,7 @@ export const Row = ({
         {expandable ? (
           <List.Cell className={cn(offerListStyle.noPaddingCell, isSelected ? offerListStyle.selectedCell : '')}>
             <Button
-              aria-label="expand"
+              accessibleLabel="expand"
               data-testid="list-expand-button"
               disabled={(disabled ?? !expandableContent) || loading}
               onClick={event => {

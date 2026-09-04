@@ -94,7 +94,7 @@ export const Monthly = () => {
 
         return (
           <Button
-            aria-label={monthState()}
+            accessibleLabel={monthState()}
             className={cn(dateInputStyle.dayMonth, dateInputStyle.capitalizedText)}
             disabled={disabled || isExcluded || isOutsideRange}
             key={month[0]}

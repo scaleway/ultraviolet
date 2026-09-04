@@ -3,10 +3,12 @@
 import { useId } from 'react'
 import type { CSSProperties, HTMLAttributes, ReactNode, Ref } from 'react'
 import { createPortal } from 'react-dom'
+import { isHeadlessTestEnvironment } from '../../helpers/isHeadlessTestEnvironment'
 import { TooltipChildren } from './TooltipChildren'
 import { TooltipElement } from './TooltipElement'
 import type { TooltipPlacement } from './types'
 import { useTooltip } from './useTooltip'
+import { ANIMATION_DURATION } from './styles.css'
 
 export type TooltipRenderProps = Pick<
   HTMLAttributes<HTMLElement>,
@@ -135,8 +137,12 @@ export const Tooltip = ({
   style,
   onOpenChange,
 }: TooltipProps) => {
+  const transitionDuration = isHeadlessTestEnvironment ? 0 : ANIMATION_DURATION
+  const defaultDelay = isHeadlessTestEnvironment ? { open: 0, close: 0 } : DEFAULT_DELAY
+
   const tooltip = useTooltip({
-    delay: delay ?? (debounceDelay ? { open: debounceDelay, close: debounceDelay } : DEFAULT_DELAY),
+    delay: delay ?? (debounceDelay ? { open: debounceDelay, close: debounceDelay } : defaultDelay),
+    transitionDuration,
     onOpenChange,
     placement,
     visible,

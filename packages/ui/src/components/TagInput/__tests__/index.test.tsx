@@ -51,7 +51,7 @@ describe('tagInput', () => {
     const mockOnChange = vi.fn()
 
     renderWithTheme(<TagInput clearable onChange={mockOnChange} value={['first']} />)
-    const clearableButton = screen.getByLabelText('clear value')
+    const clearableButton = screen.getByRole('button', { name: 'clear value' })
     await userEvent.click(clearableButton)
     expect(mockOnChange).toHaveBeenCalledWith([])
   })

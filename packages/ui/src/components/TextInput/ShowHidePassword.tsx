@@ -18,7 +18,7 @@ export const ShowHidePassword = ({
 }) => (
   <Stack alignItems="center" className={textInputStyle.ctaSuffix} direction="row">
     <Button
-      aria-label={isPasswordVisible ? 'hide' : 'show'}
+      accessibleLabel={isPasswordVisible ? 'hide' : 'show'}
       data-testid={dataTestId ? `${dataTestId}-visibility-button` : undefined}
       disabled={disabled}
       onClick={() => {

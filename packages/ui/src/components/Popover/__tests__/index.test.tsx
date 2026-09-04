@@ -128,7 +128,7 @@ describe('tooltip', () => {
     const popover = screen.getByTestId('popover')
     expect(popover).toBeVisible()
 
-    const closeButton = screen.getByLabelText('close')
+    const closeButton = screen.getByRole('button', { name: 'close' })
     await userEvent.click(closeButton)
 
     expect(onClose).toHaveBeenCalledOnce()

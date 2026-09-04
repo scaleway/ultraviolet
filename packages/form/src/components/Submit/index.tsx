@@ -44,7 +44,7 @@ export const Submit = <TFieldValues extends FieldValues>({
       onClick={onClick}
       sentiment={sentiment}
       size={size}
-      tooltip={tooltip}
+      tooltipDescription={tooltip}
       type="submit"
       variant={variant}
     >

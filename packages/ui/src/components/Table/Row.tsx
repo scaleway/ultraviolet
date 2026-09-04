@@ -134,7 +134,7 @@ export const Row = ({
           <ColumnProvider width={theme.sizing[300]}>
             <Cell>
               <Button
-                aria-label="expand"
+                accessibleLabel="expand"
                 data-testid="list-expand-button"
                 disabled={!expandable}
                 onClick={toggleRowExpand}

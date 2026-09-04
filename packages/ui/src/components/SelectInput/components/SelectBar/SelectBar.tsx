@@ -251,7 +251,7 @@ const SelectBar = ({
           {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
           {clearable && selectedData.selectedValues.length > 0 ? (
             <Button
-              aria-label="clear value"
+              accessibleLabel="clear value"
               data-testid="clear-all"
               disabled={disabled || !selectedData.selectedValues[0] || readOnly}
               onClick={event => {

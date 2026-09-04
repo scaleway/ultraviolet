@@ -30,7 +30,7 @@ export const RightIcon = ({
     <Stack alignItems="center" className={textInputStyle.stateStack} direction="row" gap={1}>
       {computedClearable ? (
         <Button
-          aria-label="clear value"
+          accessibleLabel="clear value"
           disabled={disabled || !computedValue}
           onClick={() => {
             if (inputRef?.current) {
