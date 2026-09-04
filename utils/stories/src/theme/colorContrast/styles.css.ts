@@ -3,6 +3,7 @@ import { style, styleVariants } from '@vanilla-extract/css'
 import { previewBackgroundColor, previewTextColor, swatchColor, swatchSize } from './variables.css'
 
 const root = style({
+  marginTop: theme.space[2],
   fontFamily: theme.typography.body.fontFamily,
 })
 
@@ -36,8 +37,11 @@ const pairingCard = style({
     "&[data-level='pass']": {
       border: `1px solid ${theme.colors.neutral.border}`,
     },
-    "&[data-highlight='true'][data-level='pass']": {
+    "&[data-highlight='true']:not([data-level='fail'])": {
       opacity: 0.25,
+    },
+    "&[data-level='disabled']": {
+      border: `1px solid ${theme.colors.neutral.border}`,
     },
   },
 })
@@ -65,6 +69,7 @@ const capitalize = style({
 const ratioText = styleVariants({
   pass: { color: theme.colors.success.text },
   fail: { color: theme.colors.danger.text },
+  disabled: { color: theme.colors.neutral.text },
 })
 
 export const contrastStyle = {
