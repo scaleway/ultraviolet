@@ -81,6 +81,19 @@ The line is thin, but split files by intent:
 If a test's real question is "is this accessible?", it's an a11y test. If it's
 "does this work?", it's a regular test. Same query tools, different intent.
 
+### Accessible-name/description matchers
+
+Prefer `jest-dom` matchers over raw attribute checks — attributes are the
+implementation, accessible names/descriptions are the behavior:
+
+- `expect(radio).toHaveAccessibleName('Agree')` — over `toHaveAttribute('aria-label', ...)`
+- `expect(radio).toHaveAccessibleDescription('Invalid value')` — over checking
+  `aria-describedby`/`title` wiring
+- `expect(button).toBeDisabled()` — over `toHaveAttribute('disabled')`
+
+These compute the name/description from the whole source chain (label, aria-label,
+aria-labelledby, title), so they pass when the label works and fail when it breaks.
+
 ## Snapshot policy
 
 A snapshot only locks the initial DOM — it passes until someone clicks "update
