@@ -32,9 +32,8 @@ describe('radio', () => {
   it('renders the error description and links it to the input', () => {
     renderWithTheme(<Radio error="Invalid value" label="Choice" name="radio" onChange={() => {}} value="choice" />)
     const radio = screen.getByRole('radio', { name: 'Choice' })
-    const description = screen.getByRole('status')
-    expect(description).toHaveTextContent('Invalid value')
-    expect(radio).toHaveAttribute('aria-describedby', description.id)
+    expect(screen.getByRole('status')).toHaveTextContent('Invalid value')
+    expect(radio).toHaveAccessibleDescription('Invalid value')
   })
 
   it('renders the helper description and links it to the input at small size', () => {
@@ -42,9 +41,8 @@ describe('radio', () => {
       <Radio helper="Helper" label="Choice" name="radio" onChange={() => {}} size="small" value="choice" />,
     )
     const radio = screen.getByRole('radio', { name: 'Choice' })
-    const helper = screen.getByRole('status')
-    expect(helper).toHaveTextContent('Helper')
-    expect(radio).toHaveAttribute('aria-describedby', helper.id)
+    expect(screen.getByRole('status')).toHaveTextContent('Helper')
+    expect(radio).toHaveAccessibleDescription('Helper')
   })
 
   it('exposes the tooltip on hover', async () => {

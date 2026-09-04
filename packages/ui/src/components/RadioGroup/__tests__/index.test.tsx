@@ -48,9 +48,8 @@ describe('radioGroup', () => {
       </RadioGroup>,
     )
     const fieldset = container.querySelector('fieldset')
-    const description = screen.getByRole('status')
-    expect(description).toHaveTextContent('Helper content')
-    expect(fieldset).toHaveAttribute('aria-describedby', description.id)
+    expect(screen.getByRole('status')).toHaveTextContent('Helper content')
+    expect(fieldset).toHaveAccessibleDescription('Helper content')
   })
 
   it('renders the error description and links it to the group at small size', () => {
@@ -68,9 +67,8 @@ describe('radioGroup', () => {
       </RadioGroup>,
     )
     const fieldset = container.querySelector('fieldset')
-    const description = screen.getByRole('status')
-    expect(description).toHaveTextContent('Error content')
-    expect(fieldset).toHaveAttribute('aria-describedby', description.id)
+    expect(screen.getByRole('status')).toHaveTextContent('Error content')
+    expect(fieldset).toHaveAccessibleDescription('Error content')
   })
 
   it('calls onChange when an option is selected', async () => {
