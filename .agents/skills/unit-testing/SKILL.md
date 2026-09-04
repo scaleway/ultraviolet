@@ -81,18 +81,24 @@ The line is thin, but split files by intent:
 If a test's real question is "is this accessible?", it's an a11y test. If it's
 "does this work?", it's a regular test. Same query tools, different intent.
 
-### Accessible-name/description matchers
+### Prefer semantic matchers over attribute checks
 
-Prefer `jest-dom` matchers over raw attribute checks — attributes are the
-implementation, accessible names/descriptions are the behavior:
+`toHaveAttribute` tests the implementation (an attribute on an element); jest-dom's
+semantic matchers test the **behavior** a user perceives. Reach for them first —
+if a matcher exists for what you're asserting, use it instead of checking the
+attribute that happens to produce it:
 
 - `expect(radio).toHaveAccessibleName('Agree')` — over `toHaveAttribute('aria-label', ...)`
 - `expect(radio).toHaveAccessibleDescription('Invalid value')` — over checking
   `aria-describedby`/`title` wiring
 - `expect(button).toBeDisabled()` — over `toHaveAttribute('disabled')`
+- `expect(radio).toBeChecked()` — over `toHaveAttribute('checked')` or poking `.checked`
+- `expect(toast).toBeVisible()` — over `toHaveAttribute('aria-hidden', 'false')`
 
-These compute the name/description from the whole source chain (label, aria-label,
-aria-labelledby, title), so they pass when the label works and fail when it breaks.
+These compute their result from the whole source chain (label, aria-label,
+aria-labelledby, title, form state, etc.), so they pass when the wiring works and
+fail when it breaks — even if the break is in a different attribute than the one
+you'd have checked.
 
 ## Snapshot policy
 
