@@ -120,3 +120,12 @@ It is acceptable only as an initial-DOM lock; otherwise assert what the variant 
    sees and can do: `getByRole('button', { name: /submit/i })`, `expect(el).toHaveAttribute(...)`,
    `await userEvent.click(...)` then `expect(onClick).toHaveBeenCalled()`, etc.
 3. Delete redundant variant snapshots — assert the behavior those variants enable instead.
+4. If no `a11y.test.tsx` exists next to the rewritten file, create one with:
+   - `expectNoViolations(container)` across every theme in `consoleThemesMap` (use
+     `it.for([...consoleThemesMap.entries()])`), rendering the component with a
+     realistic full set of props.
+   - Any component-specific a11y assertions (decorative `alt=""` images, ARIA
+     wiring, accessible name/description via jest-dom semantic matchers like
+     `toHaveAccessibleName` / `toHaveAccessibleDescription`).
+   Tag the describe block with `{ tags: ['a11y'] }`. See existing `a11y.test.tsx`
+   files (e.g. `Radio`, `Button`) for the established pattern.
