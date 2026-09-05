@@ -1,5 +1,36 @@
 # Change Log
 
+## 3.25.0
+
+### Minor Changes
+
+- [#6861](https://github.com/scaleway/ultraviolet/pull/6861) [`167aaa6`](https://github.com/scaleway/ultraviolet/commit/167aaa656698d7a48aa94255774369792aa9570c) Thanks [@jsulpis](https://github.com/jsulpis)! - `Button`:
+  - new `tooltipLabel` prop: renders text inside a Tooltip with a `label` relation (tooltip text becomes the accessible name via `aria-labelledby`)
+  - new `tooltipDescription` prop: renders text inside a Tooltip with a `description` relation (accessible description via `aria-describedby`)
+  - new `accessibleLabel` prop: renders a `VisuallyHidden` element inside the button to provide a localizable accessible name
+  - deprecate `tooltip` prop: it now falls back to `tooltipDescription` to avoid a breaking change
+  - deprecate `aria-label` prop: it now falls back to `accessibleLabel` to avoid a breaking change
+
+### Patch Changes
+
+- [#6870](https://github.com/scaleway/ultraviolet/pull/6870) [`05e6ecd`](https://github.com/scaleway/ultraviolet/commit/05e6ecdb74e6bae5663b5250edc1fc44c984861d) Thanks [@jsulpis](https://github.com/jsulpis)! - `Button`: fix accessibility issues
+
+- [#6861](https://github.com/scaleway/ultraviolet/pull/6861) [`167aaa6`](https://github.com/scaleway/ultraviolet/commit/167aaa656698d7a48aa94255774369792aa9570c) Thanks [@jsulpis](https://github.com/jsulpis)! - `Tooltip`: remove opening delay in tests
+
+- [#6837](https://github.com/scaleway/ultraviolet/pull/6837) [`c03beb2`](https://github.com/scaleway/ultraviolet/commit/c03beb22f424141d4b50b27195d5600c5af82299) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: empty state should not override isLoading state
+
+- [#6850](https://github.com/scaleway/ultraviolet/pull/6850) [`577b0f9`](https://github.com/scaleway/ultraviolet/commit/577b0f9e4f080d5a6d9f69111a2cd951a330cfeb) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-intersection-observer` to `11.0.1`.
+
+- [#6847](https://github.com/scaleway/ultraviolet/pull/6847) [`c2c9ebe`](https://github.com/scaleway/ultraviolet/commit/c2c9ebec2f029e5d0117a8469c239281884156a1) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@handlewithcare/react-prosemirror` to `3.2.8`.
+  Updated dependency `prosemirror-view` to `1.42.3`.
+
+- [#6842](https://github.com/scaleway/ultraviolet/pull/6842) [`b07a846`](https://github.com/scaleway/ultraviolet/commit/b07a846dfa6b229e7ffee449aeed4f56e08ba533) Thanks [@philibea](https://github.com/philibea)! - use `@scaleway/types` utility package instead of local duplicated types (`XOR`, `TupleUnion`)
+
+- [#6844](https://github.com/scaleway/ultraviolet/pull/6844) [`ecc3e23`](https://github.com/scaleway/ultraviolet/commit/ecc3e230a1e21824d6cddbac5eadc73ffab90405) Thanks [@lisalupi](https://github.com/lisalupi)! - `TagList`: tags should be organised inside a li (`ul`/`li`) instead of a div
+- Updated dependencies [[`95730d0`](https://github.com/scaleway/ultraviolet/commit/95730d0b40736ba12c2c4bbc1dcd615a9797a6e4), [`360a3c1`](https://github.com/scaleway/ultraviolet/commit/360a3c11353ceb1ce959b632fd544c1d2a9836d6), [`b07a846`](https://github.com/scaleway/ultraviolet/commit/b07a846dfa6b229e7ffee449aeed4f56e08ba533), [`865d5b4`](https://github.com/scaleway/ultraviolet/commit/865d5b462e3a1307f6331598cc318862c9d2a106)]:
+  - @ultraviolet/icons@5.6.0
+  - @ultraviolet/themes@3.1.12
+
 ## 3.24.3
 
 ### Patch Changes

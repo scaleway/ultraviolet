@@ -1,5 +1,25 @@
 # Change Log
 
+## 5.6.0
+
+### Minor Changes
+
+- [#6815](https://github.com/scaleway/ultraviolet/pull/6815) [`95730d0`](https://github.com/scaleway/ultraviolet/commit/95730d0b40736ba12c2c4bbc1dcd615a9797a6e4) Thanks [@lisalupi](https://github.com/lisalupi)! - All components (`Icon`, `ProductIcon`, `CategoryIcon`, `Flag` and `Logo`):
+  -  Remove default `title` ⚠️⚠️ **This change might break some tests** ⚠️⚠️
+  -  New prop `accessibleLabel`;
+  - `aria-hidden = true` by default;
+  - Informative icons: when an icon has an `accessibleLabel` (or `aria-label`) set, `aria-hidden` switches to `false` and the svg has `role="img"`;
+  - `Icon`: deprecate `aria-label` prop. Use `accessibleLabel` instead.
+
+- [#6860](https://github.com/scaleway/ultraviolet/pull/6860) [`360a3c1`](https://github.com/scaleway/ultraviolet/commit/360a3c11353ceb1ce959b632fd544c1d2a9836d6) Thanks [@jsulpis](https://github.com/jsulpis)! - add private-network-interfaces, raise, set, wait product icons, and pause system icon
+
+- [#6798](https://github.com/scaleway/ultraviolet/pull/6798) [`865d5b4`](https://github.com/scaleway/ultraviolet/commit/865d5b462e3a1307f6331598cc318862c9d2a106) Thanks [@lisalupi](https://github.com/lisalupi)! - `Flags`: update size
+
+### Patch Changes
+
+- Updated dependencies [[`b07a846`](https://github.com/scaleway/ultraviolet/commit/b07a846dfa6b229e7ffee449aeed4f56e08ba533)]:
+  - @ultraviolet/themes@3.1.12
+
 ## 5.5.2
 
 ### Patch Changes
