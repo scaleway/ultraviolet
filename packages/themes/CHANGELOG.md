@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.1.12
+
+### Patch Changes
+
+- [#6842](https://github.com/scaleway/ultraviolet/pull/6842) [`b07a846`](https://github.com/scaleway/ultraviolet/commit/b07a846dfa6b229e7ffee449aeed4f56e08ba533) Thanks [@philibea](https://github.com/philibea)! - use `@scaleway/types` utility package instead of local duplicated types (`XOR`, `TupleUnion`)
+
 ## 3.1.11
 
 ### Patch Changes
