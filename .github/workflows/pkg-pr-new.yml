@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   publish:
-    if: contains(github.event.pull_request.labels.*.name, 'pkg-pr-new')
+    if: contains(github.event.pull_request.labels.*.name, 'publish-pr')
     runs-on: ubuntu-24.04
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
