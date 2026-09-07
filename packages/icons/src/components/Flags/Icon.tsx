@@ -1,18 +1,16 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ReactNode } from 'react'
+import type { ReactNode, SVGProps } from 'react'
 import type { SIZES } from './constant'
 import { flag } from './style.css'
 
 export type IconProps = {
   size?: keyof typeof SIZES
-  className?: string
   children: ReactNode
   disabled?: boolean
-  accessibleLabel?: boolean
-  'aria-hidden'?: boolean
-}
+  accessibleLabel?: string
+} & Pick<SVGProps<SVGSVGElement>, 'className' | 'aria-hidden'>
 
 /**
  * Logo component is used to render a set of flags. Their style cannot be changed

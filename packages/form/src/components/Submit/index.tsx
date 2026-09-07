@@ -13,7 +13,17 @@ type SubmitButtonProps = {
 } & Partial<
   Pick<
     ComponentProps<typeof Button>,
-    'size' | 'sentiment' | 'variant' | 'tooltip' | 'fullWidth' | 'onClick' | 'disabled' | 'className'
+    | 'size'
+    | 'sentiment'
+    | 'variant'
+    | 'tooltip'
+    | 'accessibleLabel'
+    | 'tooltipLabel'
+    | 'tooltipDescription'
+    | 'fullWidth'
+    | 'onClick'
+    | 'disabled'
+    | 'className'
   >
 >
 
@@ -21,33 +31,16 @@ type SubmitProps<TFieldValues extends FieldValues> = RHFBase<TFieldValues> & Sub
 
 export const Submit = <TFieldValues extends FieldValues>({
   children,
-  className,
-  disabled = false,
-  size,
-  variant = 'filled',
-  sentiment = 'primary',
-  tooltip,
-  fullWidth,
-  onClick,
   control,
+  disabled = false,
+  ...props
 }: SubmitProps<TFieldValues>) => {
   const { isSubmitting, isValid } = useFormState({ control })
 
   const isDisabled = disabled || isSubmitting || !isValid
 
   return (
-    <Button
-      className={className}
-      disabled={isDisabled}
-      fullWidth={fullWidth}
-      isLoading={isSubmitting}
-      onClick={onClick}
-      sentiment={sentiment}
-      size={size}
-      tooltipDescription={tooltip}
-      type="submit"
-      variant={variant}
-    >
+    <Button disabled={isDisabled} isLoading={isSubmitting} type="submit" {...props}>
       {children}
     </Button>
   )
