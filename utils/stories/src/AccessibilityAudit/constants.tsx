@@ -1,4 +1,9 @@
-import { SettingsOutlineIcon, ShieldCheckOutlineIcon, ProgressCheckIcon } from '@ultraviolet/icons'
+import {
+  SettingsOutlineIcon,
+  ShieldCheckOutlineIcon,
+  ProgressCheckIcon,
+  InformationOutlineIcon,
+} from '@ultraviolet/icons'
 import { Text } from '@ultraviolet/ui'
 import type { A11yLevel, A11yLevelInfo } from './types'
 
@@ -10,6 +15,16 @@ export const WCAG_PRINCIPLES = [
 ] as const
 
 export const A11Y_LEVELS: Record<A11yLevel, A11yLevelInfo> = {
+  unknown: {
+    level: 'unknown',
+    icon: <InformationOutlineIcon size="medium" sentiment="neutral" />,
+    label: 'Unknown',
+    description: (
+      <Text as="p" variant="body">
+        A11y Unknown means the component has not been audited yet.
+      </Text>
+    ),
+  },
   partial: {
     level: 'partial',
     icon: <SettingsOutlineIcon size="medium" sentiment="danger" />,

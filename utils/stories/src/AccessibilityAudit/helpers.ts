@@ -19,9 +19,12 @@ export const getComponentAuditCategories = (parameters: ComponentStoryParameters
   }))
 }
 
+export const isComponentAudited = (parameters: ComponentStoryParameters): boolean =>
+  Boolean(parameters?.a11yStatus) && WCAG_PRINCIPLES.some(p => parameters.a11yStatus?.[p.name] !== undefined)
+
 export const findA11yLevel = (parameters: { a11yStatus?: ComponentA11yStatus }): A11yLevel => {
-  if (!parameters?.a11yStatus) {
-    return 'partial'
+  if (!isComponentAudited(parameters)) {
+    return 'unknown'
   }
 
   return WCAG_PRINCIPLES.every(principle => parameters.a11yStatus?.[principle.name] === true) ? 'compliant' : 'partial'

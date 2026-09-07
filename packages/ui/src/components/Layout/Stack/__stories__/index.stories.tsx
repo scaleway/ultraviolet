@@ -6,10 +6,10 @@ export default {
   title: 'UI/Layout/Stack',
   parameters: {
     a11yStatus: {
-      perceivable: true,
-      operable: true,
-      understandable: true,
-      robust: true,
+      perceivable: undefined,
+      operable: undefined,
+      understandable: undefined,
+      robust: undefined,
     },
   },
 } as Meta<typeof Stack>

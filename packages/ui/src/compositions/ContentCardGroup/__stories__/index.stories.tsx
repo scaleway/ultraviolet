@@ -7,10 +7,10 @@ export default {
   subcomponents: { 'ContentCardGroup.Card': ContentCardGroup.Card },
   parameters: {
     a11yStatus: {
-      perceivable: false,
-      operable: false,
-      understandable: false,
-      robust: false,
+      perceivable: undefined,
+      operable: undefined,
+      understandable: undefined,
+      robust: undefined,
     },
     experimental: true,
   },
