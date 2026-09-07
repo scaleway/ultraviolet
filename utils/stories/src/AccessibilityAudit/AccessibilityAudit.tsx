@@ -13,7 +13,6 @@ import type { A11yLevel, ComponentA11yStatus, AuditCategories, ComponentStoryPar
 type ComponentInfo = {
   title: string
   name: string
-  category: string
   state: {
     label: string
     icon: ReactNode
@@ -65,13 +64,11 @@ const AccessibilityAudit = () => {
         const parameters = module.value.default.parameters
         const destructuredName: string[] = module.value.default.title.split('/') ?? []
 
-        const componentCategory = destructuredName.slice(1, -1).join('/')
         const componentName = destructuredName.at(-1) ?? 'Unknown'
 
         return {
           title: module.value.default.title,
           name: componentName,
-          category: componentCategory || 'Others',
           state: findComponentState(parameters),
           a11yLevel: findA11yLevel(parameters),
           a11yStatus: getComponentA11yStatus(parameters),
@@ -86,6 +83,20 @@ const AccessibilityAudit = () => {
   }
 
   const getComponentsForCategory = (categoryId: WcagPrinciple) => componentsInfo.filter(c => c.a11yStatus[categoryId])
+
+  const groupedComponents = componentsInfo.reduce<{ name: string; components: ComponentInfo[] }[]>((acc, component) => {
+    const [packageName, ...path] = component.title.split('/')
+    const category = packageName === 'Compositions' ? 'Compositions' : path.slice(0, -1).join('/')
+    const group = acc.find(g => g.name === category)
+
+    if (group) {
+      group.components.push(component)
+    } else {
+      acc.push({ name: category, components: [component] })
+    }
+
+    return acc
+  }, [])
 
   return (
     <Stack gap={5}>
@@ -173,61 +184,58 @@ const AccessibilityAudit = () => {
         <Text as="p" variant="body">
           Total: {componentsInfo.length} components
         </Text>
-        <Table
-          columns={[
-            { label: 'Name' },
-            { label: 'Category' },
-            { label: 'Accessibility Level' },
-            { label: 'Accessibility Status' },
-          ]}
-          stripped
-        >
-          <Table.Body>
-            {componentsInfo.map(component => (
-              <Table.Row id={component.title} key={component.title}>
-                <Table.Cell>
-                  <Button onClick={linkTo(component.title)} size="small" variant="ghost">
-                    {component.name}
-                  </Button>
-                </Table.Cell>
-                <Table.Cell>
-                  <Text as="span" variant="body">
-                    {component.category}
-                  </Text>
-                </Table.Cell>
-                <Table.Cell>
-                  {component.a11yLevel ? (
-                    <Stack direction="row" gap={0.5} alignItems="center">
-                      {A11Y_LEVELS[component.a11yLevel].icon}
-                      <Text as="span" variant="body">
-                        {A11Y_LEVELS[component.a11yLevel].label}
-                      </Text>
-                    </Stack>
-                  ) : (
-                    <Text as="span" variant="body">
-                      -
-                    </Text>
-                  )}
-                </Table.Cell>
-                <Table.Cell>
-                  <Stack direction="row" gap={1}>
-                    {component.auditCategories.map(category => (
-                      <Text as="span" key={category.id} variant="bodySmall">
-                        <Tooltip text={category.label}>
-                          {category.completed ? (
-                            <CheckCircleIcon size="medium" sentiment="success" />
-                          ) : (
-                            <CloseCircleOutlineIcon size="medium" sentiment="danger" />
-                          )}
-                        </Tooltip>
-                      </Text>
-                    ))}
-                  </Stack>
-                </Table.Cell>
-              </Table.Row>
-            ))}
-          </Table.Body>
-        </Table>
+        {groupedComponents.map(group => (
+          <Stack key={group.name} gap={2}>
+            <Text as="h3" variant="headingSmall" style={{ margin: 0 }}>
+              {group.name}
+            </Text>
+            <Table
+              columns={[{ label: 'Name' }, { label: 'Accessibility Level' }, { label: 'Accessibility Status' }]}
+              stripped
+            >
+              <Table.Body>
+                {group.components.map(component => (
+                  <Table.Row id={component.title} key={component.title}>
+                    <Table.Cell>
+                      <Button onClick={linkTo(component.title)} size="small" variant="ghost">
+                        {component.name}
+                      </Button>
+                    </Table.Cell>
+                    <Table.Cell>
+                      {component.a11yLevel ? (
+                        <Stack direction="row" gap={0.5} alignItems="center">
+                          {A11Y_LEVELS[component.a11yLevel].icon}
+                          <Text as="span" variant="body">
+                            {A11Y_LEVELS[component.a11yLevel].label}
+                          </Text>
+                        </Stack>
+                      ) : (
+                        <Text as="span" variant="body">
+                          -
+                        </Text>
+                      )}
+                    </Table.Cell>
+                    <Table.Cell>
+                      <Stack direction="row" gap={1}>
+                        {component.auditCategories.map(category => (
+                          <Text as="span" key={category.id} variant="bodySmall">
+                            <Tooltip text={category.label}>
+                              {category.completed ? (
+                                <CheckCircleIcon size="medium" sentiment="success" />
+                              ) : (
+                                <CloseCircleOutlineIcon size="medium" sentiment="danger" />
+                              )}
+                            </Tooltip>
+                          </Text>
+                        ))}
+                      </Stack>
+                    </Table.Cell>
+                  </Table.Row>
+                ))}
+              </Table.Body>
+            </Table>
+          </Stack>
+        ))}
       </Stack>
     </Stack>
   )
