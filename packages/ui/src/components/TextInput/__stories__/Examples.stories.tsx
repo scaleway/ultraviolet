@@ -3,7 +3,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { TextInput } from '..'
 import { Link } from '../../Action/Link'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { Text } from '../../Typography/Text'
 
 export const Examples: StoryFn<typeof TextInput> = args => {

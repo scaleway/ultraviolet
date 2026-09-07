@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import type { ComponentProps } from 'react'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 import { SwitchButton } from '../index'
 
 export const OnChange: StoryFn<ComponentProps<typeof SwitchButton>> = () => {

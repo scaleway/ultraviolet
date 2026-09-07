@@ -3,7 +3,7 @@ import { AutoFixIcon } from '@ultraviolet/icons/AutoFixIcon'
 import { useState } from 'react'
 import { Stepper } from '..'
 import { Button } from '../../Action/Button'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 
 export const Example: StoryFn<typeof Stepper> = args => {
   const [selected, setStep] = useState(1)

@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { TagInput } from '..'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { TAGINPUT_SIZE_PADDING } from '../styles.css'
 
 export const Size: StoryFn<typeof TagInput> = args => {

@@ -11,7 +11,7 @@ import type {
   ReactEventHandler,
 } from 'react'
 import { createPortal } from 'react-dom'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { useModal } from '../ModalProvider'
 import type { DialogProps } from '../types'
 import { modalStyle, nestedModalScale, nestedModalTop } from '../styles.css'

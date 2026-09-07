@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { useCallback, useEffect, useState } from 'react'
 import { Key } from '..'
 import { Button } from '../../Action/Button'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { Tooltip } from '../../Tooltip'
 
 export const Usage: StoryFn<typeof Key> = () => {

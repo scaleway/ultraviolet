@@ -2,7 +2,7 @@
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { Button } from '../Action/Button'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 import { Text } from '../Typography/Text'
 import type { ContentWrapperProps } from './types'
 import { popoverStyle } from './styles.css'

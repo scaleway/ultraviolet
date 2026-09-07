@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import { Menu } from '..'
 import { Button } from '../../index'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 
 export const DefaultDisclosure = (
   <Button sentiment="neutral" size="small" variant="ghost">

@@ -5,7 +5,7 @@ import { OrderSummary } from '..'
 import { Button } from '../../../components/Action/Button'
 import { Link } from '../../../components/Action/Link'
 import { Checkbox } from '../../../components/Checkbox'
-import { Stack } from '../../../components/Stack'
+import { Stack } from '../../../components/Layout/Stack'
 import { Text } from '../../../components/Typography/Text'
 import { categoryM2, categoryOptions, categoryStorage, negativeItem } from './productsExample'
 

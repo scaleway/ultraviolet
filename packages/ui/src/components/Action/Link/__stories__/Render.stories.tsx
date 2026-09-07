@@ -1,7 +1,7 @@
 import type { Decorator, StoryFn } from '@storybook/react-vite'
 import { forwardRef } from 'react'
 import { Link } from '..'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 
 // Mock component simulating Next.js Link (must spread props and forward ref)
 const MockNextLink = forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }>(

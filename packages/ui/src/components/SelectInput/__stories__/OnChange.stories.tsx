@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { SelectInput } from '..'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { dataGrouped, OptionalInfo4 } from './resources'
 
 export const OnChange: StoryFn<typeof SelectInput> = args => {

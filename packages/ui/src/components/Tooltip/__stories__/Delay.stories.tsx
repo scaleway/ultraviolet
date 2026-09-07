@@ -1,7 +1,7 @@
 import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { Tooltip } from '..'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 
 export const Delay = (props: ComponentProps<typeof Tooltip>) => (
   <>

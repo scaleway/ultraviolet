@@ -9,7 +9,7 @@ import type { ChangeEvent, ComponentProps, CSSProperties, KeyboardEventHandler, 
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { Button } from '../Action/Button'
 import { Tag } from '../Badges/Tag'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 import { Tooltip } from '../Tooltip'
 import { Description } from '../Typography/Description'
 import { Label } from '../Typography/Label'

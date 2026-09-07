@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Slider } from '..'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 
 export const MinMax: StoryFn<typeof Slider> = () => (
   <Stack gap={4}>

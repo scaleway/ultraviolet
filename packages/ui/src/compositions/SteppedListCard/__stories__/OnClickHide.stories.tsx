@@ -6,7 +6,7 @@ import type { ComponentProps } from 'react'
 import { SteppedListCard } from '..'
 import { Button } from '../../../components/Action/Button'
 import { Expandable } from '../../../components/Action/Expandable'
-import { Stack } from '../../../components/Stack'
+import { Stack } from '../../../components/Layout/Stack'
 import { Text } from '../../../components/Typography/Text'
 import { blockStorageWire } from '../__mocks__/blockStorageWire'
 

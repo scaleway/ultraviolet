@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { NumberInput } from '../index'
 
 export const Sizes: StoryFn = (args: ComponentProps<typeof NumberInput>) => (

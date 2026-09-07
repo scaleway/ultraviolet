@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { CheckboxGroup } from '../index'
 
 export const Required: StoryFn<typeof CheckboxGroup> = props => (

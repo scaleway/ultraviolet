@@ -6,8 +6,8 @@ import type { ComponentProps } from 'react'
 import { Breadcrumbs } from '..'
 import { Button } from '../../Action/Button'
 import { Avatar } from '../../Avatar'
+import { Stack } from '../../Layout/Stack'
 import { Menu } from '../../Menu'
-import { Stack } from '../../Stack'
 
 export const AdvancedUsage: StoryFn<ComponentProps<typeof Breadcrumbs>> = props => (
   <Stack gap={4}>

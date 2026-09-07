@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Menu } from '..'
 import { Badge } from '../../Badges/Badge'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { DefaultDisclosure } from './Template.stories'
 
 export const LongMenu: StoryFn<typeof Menu> = ({ ...props }) => (

@@ -1,7 +1,7 @@
 import { HelpCircleOutlineIcon } from '@ultraviolet/icons/HelpCircleOutlineIcon'
 import { Children, cloneElement, isValidElement } from 'react'
 import { Badge } from '../../../components/Badges/Badge'
-import { Stack } from '../../../components/Stack'
+import { Stack } from '../../../components/Layout/Stack'
 import { Tooltip } from '../../../components/Tooltip'
 import { Text } from '../../../components/Typography/Text'
 import { useEstimateCost } from '../EstimateCostProvider'

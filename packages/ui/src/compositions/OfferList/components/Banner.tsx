@@ -1,8 +1,8 @@
 'use client'
 
 import type { ComponentProps, ReactNode } from 'react'
+import { Stack } from '../../../components/Layout/Stack'
 import { List } from '../../../components/List'
-import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Typography/Text'
 import { offerListStyle } from '../styles.css'
 

@@ -9,7 +9,7 @@ import { useState } from 'react'
 import { SelectableCard } from '..'
 import { Link } from '../../Action/Link'
 import { Badge } from '../../Badges/Badge'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { Text } from '../../Typography/Text'
 
 export const Illustration: StoryFn = args => {

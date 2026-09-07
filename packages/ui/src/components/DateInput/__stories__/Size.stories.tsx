@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { DateInput } from '..'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 
 export const Size: StoryFn<typeof DateInput> = args => (
   <Stack gap="2">

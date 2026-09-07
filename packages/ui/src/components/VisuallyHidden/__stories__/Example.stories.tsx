@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { PlusIcon } from '@ultraviolet/icons'
 import { VisuallyHidden } from '..'
 import { Button } from '../../Action/Button'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { TextInput } from '../../TextInput'
 
 export const Example: StoryFn<typeof VisuallyHidden> = props => (

@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Tag } from '..'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 
 export const KeyValue: StoryFn<typeof Tag> = args => {
   const { children, copyButton, keyValue, ...tagArgs } = args

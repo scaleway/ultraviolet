@@ -2,7 +2,7 @@
 
 import type { ComponentProps } from 'react'
 import { Key } from '../Key'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 import { searchInputStyle } from './styles.css'
 
 type KeyGroupProps = {

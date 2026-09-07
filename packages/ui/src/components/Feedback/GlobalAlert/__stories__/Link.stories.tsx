@@ -1,6 +1,6 @@
 import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 import { GlobalAlert } from '../index'
 
 export const Link = (props: ComponentProps<typeof GlobalAlert>) => (

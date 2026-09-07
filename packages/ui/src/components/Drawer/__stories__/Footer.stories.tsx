@@ -1,5 +1,5 @@
 import { Button } from '../../Action/Button'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { Text } from '../../Typography/Text'
 import { DefaultDisclosure, Template } from './Template.stories'
 

@@ -1,6 +1,6 @@
 import { cn } from '@ultraviolet/utils'
 import { Checkbox } from '../../../Checkbox'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 import { Text } from '../../../Typography/Text'
 import { useSelectInput } from '../../SelectInputProvider'
 import { selectInputStyle } from '../../styles.css'

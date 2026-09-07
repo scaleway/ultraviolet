@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { OfferList } from '..'
-import { Stack } from '../../../components/Stack'
+import { Stack } from '../../../components/Layout/Stack'
 import { Text } from '../../../components/Typography/Text'
 import { columns, data } from './resources'
 

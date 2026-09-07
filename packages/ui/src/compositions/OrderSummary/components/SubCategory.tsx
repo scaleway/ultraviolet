@@ -1,6 +1,6 @@
 import { AttachIcon } from '@ultraviolet/icons/AttachIcon'
+import { Stack } from '../../../components/Layout/Stack'
 import { NumberInput } from '../../../components/NumberInput'
-import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Typography/Text'
 import type { SubCategoryType } from '../types'
 import { SubCategoryPrice } from './SubCategoryPrice'

@@ -5,7 +5,7 @@ import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { memo, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
 import { Button } from '../../../components/Action/Button'
-import { Stack } from '../../../components/Stack'
+import { Stack } from '../../../components/Layout/Stack'
 import { useNavigation } from '../NavigationProvider'
 import { navigationStyle } from '../styles.css'
 

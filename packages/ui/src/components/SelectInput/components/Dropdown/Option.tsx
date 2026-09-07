@@ -1,7 +1,7 @@
 'use client'
 
 import { useMemo } from 'react'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 import { Text } from '../../../Typography/Text'
 import type { OptionType } from '../../types'
 import { selectInputStyle } from '../../styles.css'

@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { SelectInput } from '..'
 import { Button } from '../../Action/Button'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { dataGrouped } from './resources'
 import { Template } from './Template.stories'
 

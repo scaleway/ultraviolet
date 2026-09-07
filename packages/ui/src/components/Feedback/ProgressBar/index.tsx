@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { Label } from '../../Typography/Label'
 import { Text } from '../../Typography/Text'
 import type { PROGRESS_BAR_SENTIMENTS } from './constants'

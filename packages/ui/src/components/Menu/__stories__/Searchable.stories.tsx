@@ -5,7 +5,7 @@ import { Menu } from '..'
 import { Button } from '../../Action/Button'
 import { Avatar } from '../../Avatar'
 import { Badge } from '../../Badges/Badge'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 
 type ItemProps = {
   sentiment?: ComponentProps<typeof Menu.Item>['sentiment']

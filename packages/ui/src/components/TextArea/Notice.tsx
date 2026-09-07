@@ -2,7 +2,7 @@
 
 import type { ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Row } from '../Row'
+import { Row } from '../Layout/Row'
 import { Description } from '../Typography/Description'
 import { Text } from '../Typography/Text'
 

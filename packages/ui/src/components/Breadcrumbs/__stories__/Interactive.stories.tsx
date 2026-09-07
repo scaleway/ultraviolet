@@ -5,8 +5,8 @@ import { useCallback, useState } from 'react'
 import type { ComponentProps, MouseEvent } from 'react'
 import { Breadcrumbs } from '..'
 import { Button } from '../../Action/Button'
-import { Separator } from '../../Separator'
-import { Stack } from '../../Stack'
+import { Separator } from '../../Layout/Separator'
+import { Stack } from '../../Layout/Stack'
 
 type ItemProp = { label: string; to?: string }[]
 

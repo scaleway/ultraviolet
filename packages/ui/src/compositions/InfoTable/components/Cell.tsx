@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { useContext } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { Stack } from '../../../components/Stack'
+import { Stack } from '../../../components/Layout/Stack'
 import { Text } from '../../../components/Typography/Text'
 import { isStringOrNumberArray } from '../../../helpers/isStringOrNumberArray'
 import { InfoTableContext } from '../Context'

@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { FileInput } from '..'
-import { Separator } from '../../Separator'
-import { Stack } from '../../Stack'
+import { Separator } from '../../Layout/Separator'
+import { Stack } from '../../Layout/Stack'
 import { defaultFiles } from '../__mock__/mockFile'
 
 export const List: StoryFn<typeof FileInput> = args => (

@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { ProgressBar } from '..'
 import { Badge } from '../../../Badges/Badge'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 
 export const Direction: StoryFn = props => (
   <Stack gap={3}>

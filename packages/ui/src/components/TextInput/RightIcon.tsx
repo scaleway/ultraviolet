@@ -4,7 +4,7 @@ import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import type { ChangeEvent, ChangeEventHandler, Dispatch, RefObject, SetStateAction } from 'react'
 import { Button } from '../Action/Button'
 import { Loader } from '../Feedback/Loader'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 import type { TextInputProps } from './type'
 import { textInputStyle } from './styles.css'
 

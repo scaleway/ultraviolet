@@ -3,7 +3,7 @@ import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { useState } from 'react'
 import { Expandable } from '..'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 import { Button } from '../../Button'
 
 export const NoAnimations: StoryFn<typeof Expandable> = args => {

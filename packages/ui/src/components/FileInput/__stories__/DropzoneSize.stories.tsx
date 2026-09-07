@@ -3,7 +3,7 @@ import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
 import { FileInput } from '..'
 import { Link } from '../../Action/Link'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 
 export const DropzoneSize: StoryFn<typeof FileInput> = args => (
   <Stack direction="column" gap={2}>

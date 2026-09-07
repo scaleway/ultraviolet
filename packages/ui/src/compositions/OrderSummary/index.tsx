@@ -1,6 +1,6 @@
 import { cn } from '@ultraviolet/utils'
 import { useEffect, useMemo, useState } from 'react'
-import { Stack } from '../../components/Stack'
+import { Stack } from '../../components/Layout/Stack'
 import { Text } from '../../components/Typography/Text'
 import { UnitInput } from '../../components/UnitInput'
 import { Units } from './constants'

@@ -4,8 +4,8 @@ import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
 import { useState } from 'react'
 import { Table } from '..'
 import { Button } from '../../Action/Button'
-import { Row } from '../../Row'
-import { Stack } from '../../Stack'
+import { Row } from '../../Layout/Row'
+import { Stack } from '../../Layout/Stack'
 import { columns, data as DATA } from './resources'
 
 type Movie = {

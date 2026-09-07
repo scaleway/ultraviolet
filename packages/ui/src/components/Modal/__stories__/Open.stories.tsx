@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useReducer } from 'react'
 import { Button } from '../../Action/Button'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { Modal } from '../index'
 
 export const Open: StoryFn = props => {

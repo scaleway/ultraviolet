@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { AlertCircleOutlineIcon } from '@ultraviolet/icons/AlertCircleOutlineIcon'
 import type { ComponentProps } from 'react'
 import { Badge } from '../../Badges/Badge'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { Tooltip } from '../../Tooltip'
 import { TagInput } from '../index'
 

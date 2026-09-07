@@ -3,7 +3,7 @@
 import type { ChangeEvent, DragEvent as DragEventReact } from 'react'
 import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 import { Description } from '../Typography/Description'
 import { Label } from '../Typography/Label'
 import { Text } from '../Typography/Text'

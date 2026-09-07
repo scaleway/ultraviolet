@@ -3,7 +3,7 @@ import { useState } from 'react'
 import type { ComponentProps } from 'react'
 import { OrderSummary } from '..'
 import { Button } from '../../../components/Action/Button'
-import { Stack } from '../../../components/Stack'
+import { Stack } from '../../../components/Layout/Stack'
 import type { PriceType } from '../types'
 import { categoryAZ, categoryDefault } from './productsExample'
 

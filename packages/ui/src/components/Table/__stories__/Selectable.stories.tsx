@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { Table } from '..'
 import { Button } from '../../Action/Button'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { Text } from '../../Typography/Text'
 import { columns, data } from './resources'
 

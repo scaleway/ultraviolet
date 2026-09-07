@@ -3,9 +3,9 @@ import { useState } from 'react'
 import type { ComponentProps } from 'react'
 import { OrderSummary } from '..'
 import { Badge } from '../../../components/Badges/Badge'
+import { Stack } from '../../../components/Layout/Stack'
 import { RadioGroup } from '../../../components/RadioGroup'
 import { SelectInput } from '../../../components/SelectInput'
-import { Stack } from '../../../components/Stack'
 import { categoryAZ, categoryM2, categoryOptions } from './productsExample'
 
 const mockItems = [categoryAZ, categoryM2, categoryOptions]

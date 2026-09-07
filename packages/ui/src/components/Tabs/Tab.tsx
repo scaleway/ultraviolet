@@ -13,7 +13,7 @@ import type {
   Ref,
 } from 'react'
 import { Badge } from '../Badges/Badge'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 import { Tooltip } from '../Tooltip'
 import { Text } from '../Typography/Text'
 import { useTabsContext } from './TabsContext'

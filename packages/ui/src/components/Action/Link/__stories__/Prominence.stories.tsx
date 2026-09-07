@@ -2,7 +2,7 @@ import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { Link } from '..'
 import type { ProminenceProps } from '..'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 import { PROMINENCES } from '../constants'
 
 export const Prominence = (props: ComponentProps<typeof Link>) =>

@@ -4,7 +4,7 @@
 import type { ReactNode } from 'react'
 import { useId, useMemo } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 import { Description } from '../Typography/Description'
 import { DoubleSlider } from './components/DoubleSlider'
 import { SingleSlider } from './components/SingleSlider'

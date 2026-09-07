@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { SteppedListCard } from '..'
 import { Button } from '../../../components/Action/Button'
-import { Stack } from '../../../components/Stack'
+import { Stack } from '../../../components/Layout/Stack'
 
 export const NextStep: StoryFn<ComponentProps<typeof SteppedListCard>> = props => (
   <SteppedListCard {...props}>

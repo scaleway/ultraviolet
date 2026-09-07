@@ -5,7 +5,7 @@ import type { MarkType } from 'prosemirror-model'
 import { liftListItem, wrapInList } from 'prosemirror-schema-list'
 import type { EditorState, Transaction } from 'prosemirror-state'
 import { Button } from '../../components/Action/Button'
-import { Stack } from '../../components/Stack'
+import { Stack } from '../../components/Layout/Stack'
 import { isSelectionInNodeType } from './helpers'
 
 type ToolbarProps = {

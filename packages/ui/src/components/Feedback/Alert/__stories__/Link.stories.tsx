@@ -1,6 +1,6 @@
 import { Alert } from '..'
 import { Link as UVLink } from '../../../Action/Link'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 
 export const Link = () => (
   <Stack gap={1}>

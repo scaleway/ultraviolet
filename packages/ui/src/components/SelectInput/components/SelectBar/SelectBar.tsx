@@ -8,7 +8,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } fr
 import type { ReactNode, RefObject } from 'react'
 import { hasHelperText } from '../../../../helpers/hasHelperText'
 import { Button } from '../../../Action/Button'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 import { Tooltip } from '../../../Tooltip'
 import { Text } from '../../../Typography/Text'
 import { SIZES_TAG } from '../../constants'

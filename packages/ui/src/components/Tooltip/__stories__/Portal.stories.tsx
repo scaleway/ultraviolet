@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 import type { ComponentProps, ReactNode } from 'react'
 import { Tooltip } from '..'
 import { Button } from '../../Action/Button'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 
 const ScrollDemo = ({ children }: { children: ReactNode }) => (
   <div

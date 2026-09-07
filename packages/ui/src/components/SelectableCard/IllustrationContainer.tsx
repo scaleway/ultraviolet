@@ -2,7 +2,7 @@
 
 import { cloneElement, isValidElement } from 'react'
 import type { ReactNode } from 'react'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 import type { SelectableCardProps } from './types'
 import { selectableCardStyle } from './styles.css'
 

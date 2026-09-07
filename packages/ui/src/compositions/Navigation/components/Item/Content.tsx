@@ -1,6 +1,6 @@
 import { DragIcon } from '@ultraviolet/icons/DragIcon'
 import { useContext } from 'react'
-import { Stack } from '../../../../components/Stack'
+import { Stack } from '../../../../components/Layout/Stack'
 import { Text } from '../../../../components/Typography/Text'
 import { useNavigation } from '../../NavigationProvider'
 import type { ItemExpandedType } from '../ComponentsTypes'

@@ -4,8 +4,8 @@ import type { ChangeEvent } from 'react'
 import { SelectableCard } from '..'
 import { Badge } from '../../Badges/Badge'
 import { Checkbox } from '../../Checkbox'
+import { Stack } from '../../Layout/Stack'
 import { SelectInput } from '../../SelectInput'
-import { Stack } from '../../Stack'
 import { Text } from '../../Typography/Text'
 
 export const Children: StoryFn = args => {

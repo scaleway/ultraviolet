@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Drawer } from '..'
 import { Button } from '../../Action/Button'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 
 export const FunctionProps: StoryFn = props => (
   <Stack direction="row" gap={2}>

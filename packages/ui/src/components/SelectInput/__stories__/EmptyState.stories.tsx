@@ -6,7 +6,7 @@ import {
 import { SelectInput } from '..'
 import { Link } from '../../Action/Link'
 import { EmptyState as EmptyStateComponent } from '../../EmptyState'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { Text } from '../../Typography/Text'
 import { Template } from './Template.stories'
 

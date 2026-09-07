@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
 import { FileInput } from '..'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 
 export const Template: StoryFn<typeof FileInput> = args => (
   <FileInput {...args}>

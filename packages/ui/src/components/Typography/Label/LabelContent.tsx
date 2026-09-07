@@ -1,6 +1,6 @@
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { Text } from '../Text'
 import type { LabelProps } from './type'
 import { labelStyle } from './styles.css'

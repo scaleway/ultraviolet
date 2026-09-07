@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { Text } from '../../Typography/Text'
 import { ChipContext } from './ChipContext'
 import { ChipIcon } from './ChipIcon'

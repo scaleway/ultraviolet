@@ -4,7 +4,7 @@ import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIco
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 import { Tooltip } from '../Tooltip'
 import { SortIcon } from './SortIcon'
 import { listStyle } from './styles.css'

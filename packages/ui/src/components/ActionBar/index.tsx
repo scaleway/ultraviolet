@@ -4,7 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import { createPortal } from 'react-dom'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 import { actionBarStyle, rankActionBar } from './styles.css'
 
 type ActionBarProps = {

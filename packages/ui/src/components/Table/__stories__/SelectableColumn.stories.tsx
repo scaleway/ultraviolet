@@ -3,7 +3,7 @@ import { useState } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
 import { Table } from '..'
 import { Checkbox } from '../../Checkbox'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { Text } from '../../Typography/Text'
 
 const CHANNELS = ['email', 'app', 'sms']

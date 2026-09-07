@@ -5,7 +5,7 @@ import type { ReactNode } from 'react'
 import { toast as baseToast } from 'react-toastify'
 import type { Theme as ThemeToastify, ToastOptions, TypeOptions } from 'react-toastify'
 import { Button } from '../../Action/Button'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { Text } from '../../Typography/Text'
 
 type CloseButtonProps = {

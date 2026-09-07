@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
 import { useBreakpoints } from '../../hooks/useBreakpoint'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 import { PaginationButtons } from './PaginationButtons'
 import { PerPage } from './PerPage'
 import { paginationStyle } from './styles.css'

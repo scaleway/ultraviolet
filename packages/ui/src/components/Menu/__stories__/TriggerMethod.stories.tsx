@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Menu } from '..'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { Text } from '../../Typography/Text'
 import { DefaultDisclosure } from './Template.stories'
 

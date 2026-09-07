@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { SelectableCard } from '..'
+import { Separator } from '../../Layout/Separator'
+import { Stack } from '../../Layout/Stack'
 import { SelectInput } from '../../SelectInput'
-import { Separator } from '../../Separator'
-import { Stack } from '../../Stack'
 import { Text } from '../../Typography/Text'
 
 export const Indented: StoryFn = args => {

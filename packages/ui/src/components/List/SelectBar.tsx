@@ -3,7 +3,7 @@
 import { useMemo } from 'react'
 import type { ReactNode } from 'react'
 import { ActionBar } from '../ActionBar'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 import { useListContext } from './ListContext'
 
 type SelectBarProps<T> = {

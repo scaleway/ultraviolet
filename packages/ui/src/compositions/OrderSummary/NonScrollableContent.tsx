@@ -1,7 +1,7 @@
 import { CalculatorIcon } from '@ultraviolet/icons/CalculatorIcon'
 import { useContext } from 'react'
 import type { ReactNode } from 'react'
-import { Stack } from '../../components/Stack'
+import { Stack } from '../../components/Layout/Stack'
 import { Text } from '../../components/Typography/Text'
 import { DisplayPrice } from './helpers'
 import { OrderSummaryContext } from './Provider'

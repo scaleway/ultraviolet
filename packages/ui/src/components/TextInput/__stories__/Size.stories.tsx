@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { TextInput } from '..'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { TEXTINPUT_SIZE_HEIGHT } from '../constants'
 
 export const Size: StoryFn<typeof TextInput> = args => {

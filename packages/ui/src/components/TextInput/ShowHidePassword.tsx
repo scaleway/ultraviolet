@@ -2,7 +2,7 @@ import { EyeIcon } from '@ultraviolet/icons/EyeIcon'
 import { EyeOffIcon } from '@ultraviolet/icons/EyeOffIcon'
 import type { Dispatch, SetStateAction } from 'react'
 import { Button } from '../Action/Button'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 import type { TextInputProps } from './type'
 import { textInputStyle } from './styles.css'
 

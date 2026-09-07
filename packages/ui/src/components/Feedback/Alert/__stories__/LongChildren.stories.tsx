@@ -1,6 +1,6 @@
 import type { ComponentProps } from 'react'
 import { Alert } from '..'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 
 export const LongChildren = (props: ComponentProps<typeof Alert>) => (
   <Stack gap="3">

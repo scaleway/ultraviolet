@@ -1,0 +1,288 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`card > renders correctly with active 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__14lm1671"
+      data-disabled="false"
+      data-is-active="true"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with active and disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__14lm1671"
+      data-disabled="true"
+      data-is-active="true"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with advanced header 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__14lm1670 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+      data-disabled="false"
+    >
+      <h2>
+        Advanced Title
+      </h2>
+      <div
+        class="styles__14lm1671"
+        data-disabled="false"
+        data-is-active="false"
+      >
+        Hello
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with advanced header and subHeader 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__14lm1670 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+      data-disabled="false"
+    >
+      <h2>
+        Advanced Title
+      </h2>
+      <div
+        class="styles__14lm1671"
+        data-disabled="false"
+        data-is-active="false"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_1rem_xxsmall__xf61n43v"
+        >
+          <h2>
+            Advanced subHeader
+          </h2>
+          Hello
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with advanced subHeader 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__14lm1671"
+      data-disabled="false"
+      data-is-active="false"
+    >
+      <div
+        class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_1rem_xxsmall__xf61n43v"
+      >
+        <h2>
+          Advanced subHeader
+        </h2>
+        Hello
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with className 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="test styles__14lm1671"
+      data-disabled="false"
+      data-is-active="false"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with data-testid 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__14lm1671"
+      data-disabled="false"
+      data-is-active="false"
+      data-testid="test"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__14lm1671"
+      data-disabled="true"
+      data-is-active="false"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with disabled and header 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__14lm1670 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+      data-disabled="true"
+    >
+      <h2
+        class="style__1do42ls0 style_disabled_true__1do42ls1 style_prominence_strong__1do42ls5 style_sentiment_neutral__1do42lsb style_variant_heading__1do42ls11 style_undefined_compound_29__1do42ls23"
+      >
+        Title
+      </h2>
+      <div
+        class="styles__14lm1671"
+        data-disabled="true"
+        data-is-active="false"
+      >
+        Hello
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with header 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__14lm1670 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+      data-disabled="false"
+    >
+      <h2
+        class="style__1do42ls0 style_prominence_strong__1do42ls5 style_sentiment_neutral__1do42lsb style_variant_heading__1do42ls11 style_undefined_compound_1__1do42ls1b style_undefined_compound_65__1do42ls33"
+      >
+        Title
+      </h2>
+      <div
+        class="styles__14lm1671"
+        data-disabled="false"
+        data-is-active="false"
+      >
+        Hello
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with header and subHeader 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__14lm1670 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+      data-disabled="false"
+    >
+      <h2
+        class="style__1do42ls0 style_prominence_strong__1do42ls5 style_sentiment_neutral__1do42lsb style_variant_heading__1do42ls11 style_undefined_compound_1__1do42ls1b style_undefined_compound_65__1do42ls33"
+      >
+        Main title
+      </h2>
+      <div
+        class="styles__14lm1671"
+        data-disabled="false"
+        data-is-active="false"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_1rem_xxsmall__xf61n43v"
+        >
+          <h3
+            class="style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_headingSmallStrong__1do42ls16 style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+          >
+            Title
+          </h3>
+          Hello
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly with subHeader 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__14lm1671"
+      data-disabled="false"
+      data-is-active="false"
+    >
+      <div
+        class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_1rem_xxsmall__xf61n43v"
+      >
+        <h3
+          class="style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_headingSmallStrong__1do42ls16 style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+        >
+          Title
+        </h3>
+        Hello
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`card > renders correctly without header 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__14lm1671"
+      data-disabled="false"
+      data-is-active="false"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;

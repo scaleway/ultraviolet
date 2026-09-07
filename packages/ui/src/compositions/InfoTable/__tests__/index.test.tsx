@@ -3,7 +3,7 @@ import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { InfoTable } from '..'
 import { Button } from '../../../components/Action/Button'
-import { Stack } from '../../../components/Stack'
+import { Stack } from '../../../components/Layout/Stack'
 import { Text } from '../../../components/Typography/Text'
 
 describe('infoTable', () => {

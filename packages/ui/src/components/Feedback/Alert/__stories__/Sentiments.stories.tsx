@@ -1,7 +1,7 @@
 import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { Alert } from '..'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 import { ALERT_SENTIMENTS } from '../type'
 
 export const Sentiments = (props: ComponentProps<typeof Alert>) =>

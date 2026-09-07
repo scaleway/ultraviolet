@@ -1,6 +1,6 @@
 import { Badge } from '../../components/Badges/Badge'
-import { Separator } from '../../components/Separator'
-import { Stack } from '../../components/Stack'
+import { Separator } from '../../components/Layout/Separator'
+import { Stack } from '../../components/Layout/Stack'
 import { Text } from '../../components/Typography/Text'
 import type PlansLocales from './locales/en'
 import type { PlanType } from './types'

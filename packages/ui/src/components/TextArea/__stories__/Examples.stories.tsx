@@ -3,7 +3,7 @@ import { AlertCircleOutlineIcon } from '@ultraviolet/icons/AlertCircleOutlineIco
 import { useState } from 'react'
 import { TextArea } from '..'
 import { Badge } from '../../Badges/Badge'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { TextInput } from '../../TextInput'
 import { Tooltip } from '../../Tooltip'
 import { Text } from '../../Typography/Text'

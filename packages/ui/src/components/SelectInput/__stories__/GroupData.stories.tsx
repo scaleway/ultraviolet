@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { SelectInput } from '..'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { dataGrouped } from './resources'
 
 const Error = (

@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Toggle } from '..'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 
 export const Sizes: StoryFn = props => (
   <>

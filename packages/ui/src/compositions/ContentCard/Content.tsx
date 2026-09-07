@@ -1,6 +1,6 @@
 'use client'
 
-import { Stack } from '../../components/Stack'
+import { Stack } from '../../components/Layout/Stack'
 import { Text } from '../../components/Typography/Text'
 import type { ContentCardProps } from './type'
 

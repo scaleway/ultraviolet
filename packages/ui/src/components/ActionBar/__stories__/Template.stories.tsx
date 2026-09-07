@@ -3,7 +3,7 @@ import { DeleteIcon } from '@ultraviolet/icons/DeleteIcon'
 import { useState } from 'react'
 import { ActionBar } from '..'
 import { Button } from '../../Action/Button'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 
 export const Template: StoryFn<typeof ActionBar> = args => {
   const [state, setState] = useState(false)

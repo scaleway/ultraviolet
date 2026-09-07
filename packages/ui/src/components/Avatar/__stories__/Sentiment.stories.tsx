@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { MosaicIcon } from '@ultraviolet/icons/MosaicIcon'
 import { Avatar } from '..'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 
 export const Sentiment: StoryFn<typeof Avatar> = props => (
   <>

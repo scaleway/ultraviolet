@@ -2,7 +2,7 @@ import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import type { Dispatch, SetStateAction } from 'react'
 import { Button } from '../Action/Button'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 
 export const RightIcon = ({
   error,

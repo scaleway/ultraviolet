@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { Stack } from '../Stack'
+import { Stack } from '../Layout/Stack'
 import { Text } from '../Typography/Text'
 import { StepBullet } from './Bullet'
 import { useStepper } from './StepperProvider'

@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { TextInput } from '..'
 import { CopyButton } from '../../Action/CopyButton'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 
 const generateRandomPassword = (length = 12) => {
   const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'

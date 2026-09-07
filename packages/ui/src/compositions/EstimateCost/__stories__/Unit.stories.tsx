@@ -3,7 +3,7 @@ import { useState } from 'react'
 import type { ComponentProps } from 'react'
 import { EstimateCost } from '..'
 import { Button } from '../../../components/Action/Button'
-import { Stack } from '../../../components/Stack'
+import { Stack } from '../../../components/Layout/Stack'
 
 export const Unit: StoryFn<ComponentProps<typeof EstimateCost>> = props => {
   const [value, setValue] = useState<number | undefined>(0)

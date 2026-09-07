@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Toast, ToastContainer, toast } from '..'
 import { Button } from '../../../Action/Button'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 
 const ButtonToaster = () => (
   <Stack alignItems="center" direction="row" gap={1} justifyContent="space-between" width="100%">

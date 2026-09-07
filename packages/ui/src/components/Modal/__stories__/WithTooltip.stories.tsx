@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Button } from '../../Action/Button'
-import { Row } from '../../Row'
-import { Stack } from '../../Stack'
+import { Row } from '../../Layout/Row'
+import { Stack } from '../../Layout/Stack'
 import { Text } from '../../Typography/Text'
 import { Modal } from '../index'
 

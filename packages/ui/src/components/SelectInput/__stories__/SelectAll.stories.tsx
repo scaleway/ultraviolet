@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { SelectInput } from '..'
-import { Stack } from '../../Stack'
+import { Stack } from '../../Layout/Stack'
 import { dataGrouped } from './resources'
 
 export const SelectAll: StoryFn<typeof SelectInput> = args => (

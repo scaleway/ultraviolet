@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react-vite'
 import { CopyButton } from '..'
-import { Stack } from '../../../Stack'
+import { Stack } from '../../../Layout/Stack'
 
 export default {
   component: CopyButton,
