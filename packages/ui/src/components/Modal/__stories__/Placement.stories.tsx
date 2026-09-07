@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Modal } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { MODAL_PLACEMENT } from '../constants.css'
 
 export const Placement: StoryFn = props => (

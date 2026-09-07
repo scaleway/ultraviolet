@@ -1,7 +1,7 @@
 import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { useCallback } from 'react'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { Stack } from '../../Stack'
 import type { ControlsProps } from '../types'
 import { numberInputStyle } from '../styles.css'

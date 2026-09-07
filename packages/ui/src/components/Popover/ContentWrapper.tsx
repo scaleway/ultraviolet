@@ -1,7 +1,7 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-import { Button } from '../Button'
+import { Button } from '../Action/Button'
 import { Stack } from '../Stack'
 import { Text } from '../Typography/Text'
 import type { ContentWrapperProps } from './types'

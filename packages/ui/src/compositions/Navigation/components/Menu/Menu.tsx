@@ -1,7 +1,7 @@
 import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category/OrganizationDashboardCategoryIcon'
 import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import { Children } from 'react'
-import { Button } from '../../../../components/Button'
+import { Button } from '../../../../components/Action/Button'
 import { Menu } from '../../../../components/Menu'
 import { Stack } from '../../../../components/Stack'
 import { Tooltip } from '../../../../components/Tooltip'

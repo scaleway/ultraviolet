@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Dialog } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { Stack } from '../../Stack'
 import { DIALOG_SENTIMENTS } from '../constants'
 

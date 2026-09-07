@@ -3,7 +3,7 @@ import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
 import { useCallback, useState } from 'react'
 import type { ComponentProps } from 'react'
 import { Breadcrumbs } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
 

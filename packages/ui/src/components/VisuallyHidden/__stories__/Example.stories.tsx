@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { PlusIcon } from '@ultraviolet/icons'
 import { VisuallyHidden } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { Stack } from '../../Stack'
 import { TextInput } from '../../TextInput'
 

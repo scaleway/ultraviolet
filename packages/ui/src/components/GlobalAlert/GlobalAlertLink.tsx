@@ -2,7 +2,7 @@
 
 import { useTheme } from '@ultraviolet/themes'
 import type { ComponentProps } from 'react'
-import { Link } from '../Link'
+import { Link } from '../Action/Link'
 
 type GlobalAlertLinkProps = Omit<ComponentProps<typeof Link>, 'sentiment' | 'prominence' | 'size' | 'render'> &
   NonNullable<Pick<ComponentProps<typeof Link>, 'href'>>

@@ -3,7 +3,7 @@
 import { ArrowLeftIcon } from '@ultraviolet/icons/ArrowLeftIcon'
 import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { useCallback, useMemo } from 'react'
-import { Button } from '../Button'
+import { Button } from '../Action/Button'
 import { Stack } from '../Stack'
 import { Ellipsis } from './Ellipsis'
 import { getPageItems } from './getPageItems'

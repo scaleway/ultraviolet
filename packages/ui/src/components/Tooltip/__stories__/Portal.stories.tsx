@@ -2,7 +2,7 @@ import type { Decorator } from '@storybook/react-vite'
 import { useEffect, useRef } from 'react'
 import type { ComponentProps, ReactNode } from 'react'
 import { Tooltip } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { Stack } from '../../Stack'
 
 const ScrollDemo = ({ children }: { children: ReactNode }) => (

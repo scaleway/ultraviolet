@@ -1,5 +1,5 @@
 import { Alert } from '..'
-import { Link as UVLink } from '../../Link'
+import { Link as UVLink } from '../../Action/Link'
 import { Stack } from '../../Stack'
 
 export const Link = () => (

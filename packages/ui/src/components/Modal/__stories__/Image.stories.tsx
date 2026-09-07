@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Modal } from '..'
+import { Button } from '../../Action/Button'
 import { Badge } from '../../Badges/Badge'
-import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Typography/Text'
 import image from './assets/illustration.webp'

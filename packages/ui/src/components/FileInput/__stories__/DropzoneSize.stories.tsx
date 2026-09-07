@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
 import { FileInput } from '..'
-import { Link } from '../../Link'
+import { Link } from '../../Action/Link'
 import { Stack } from '../../Stack'
 
 export const DropzoneSize: StoryFn<typeof FileInput> = args => (

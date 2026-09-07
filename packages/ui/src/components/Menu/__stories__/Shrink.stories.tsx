@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Menu } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 
 export const Shrink: StoryFn<typeof Menu> = () => (
   <>

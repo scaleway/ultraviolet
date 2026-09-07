@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useState } from 'react'
 import { describe, expect, it } from 'vitest'
 import { SearchInput } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 
 describe('searchInput', () => {
   it('renders correctly without children props', () =>

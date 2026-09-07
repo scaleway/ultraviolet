@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Modal } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 
 export const WithLotsOfContent: StoryFn = props => (
   <Modal disclosure={<Button>Open Modal with lot of content</Button>} {...props}>

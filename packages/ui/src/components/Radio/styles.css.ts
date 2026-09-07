@@ -1,9 +1,9 @@
 import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
+import { switchButtonStyle } from '../Action/SwitchButton/styles.css'
 import { selectableCardStyle } from '../SelectableCard/styles.css'
 import { widthSelectable } from '../SelectableCard/variables.css'
 import { selectableCardOptionGroupStyle } from '../SelectableCardOptionGroup/styles.css'
-import { switchButtonStyle } from '../SwitchButton/styles.css'
 
 const stack = style({
   selectors: {

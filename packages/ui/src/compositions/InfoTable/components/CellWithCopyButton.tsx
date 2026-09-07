@@ -1,5 +1,5 @@
 import type { ComponentProps } from 'react'
-import { CopyButton } from '../../../components/CopyButton'
+import { CopyButton } from '../../../components/Action/CopyButton'
 import { Row } from '../../../components/Row'
 import { Text } from '../../../components/Typography/Text'
 import { InfoTableCell } from './Cell'

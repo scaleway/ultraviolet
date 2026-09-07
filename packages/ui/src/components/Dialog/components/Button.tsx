@@ -1,7 +1,7 @@
 'use client'
 
 import type { ComponentProps, MouseEvent, ReactNode } from 'react'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { useDialogContext } from '../Context'
 
 type DialogButtonProps = {

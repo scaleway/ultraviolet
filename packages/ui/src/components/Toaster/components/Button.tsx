@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { toasterStyle } from '../styles.css'
 
 export const ToastButton = ({ variant, className, ...props }: ComponentProps<typeof Button>) => {

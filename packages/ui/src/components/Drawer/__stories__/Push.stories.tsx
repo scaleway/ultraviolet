@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useRef } from 'react'
 import { Drawer } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 

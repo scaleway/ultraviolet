@@ -1,5 +1,5 @@
 import type { ComponentProps } from 'react'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { useFileInput } from '../FileInputProvider'
 
 export const FileInputButton = ({ children, disabled, ...props }: ComponentProps<typeof Button>) => {

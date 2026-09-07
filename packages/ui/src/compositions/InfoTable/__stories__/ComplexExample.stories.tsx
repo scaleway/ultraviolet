@@ -3,7 +3,7 @@ import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIco
 import { LockIcon } from '@ultraviolet/icons/LockIcon'
 import type { ComponentProps } from 'react'
 import { InfoTable } from '..'
-import { Button } from '../../../components/Button'
+import { Button } from '../../../components/Action/Button'
 import { Status } from '../../../components/Status'
 import { Tooltip } from '../../../components/Tooltip'
 

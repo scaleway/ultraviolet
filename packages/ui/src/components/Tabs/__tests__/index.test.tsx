@@ -3,7 +3,7 @@ import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Tabs } from '..'
-import { Link } from '../../Link'
+import { Link } from '../../Action/Link'
 
 describe('tabs', () => {
   it('renders correctly', () => {

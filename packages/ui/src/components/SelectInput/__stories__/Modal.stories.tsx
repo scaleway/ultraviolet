@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { SelectInput } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { Modal as ModalComponent } from '../../Modal'
 import { Stack } from '../../Stack'
 import { Text } from '../../Typography/Text'

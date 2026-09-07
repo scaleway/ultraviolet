@@ -1,4 +1,4 @@
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import errorImg from './illustrations/product-error.svg'
 import { Template } from './Template.stories'
 

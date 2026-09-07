@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Menu } from '..'
+import { Button } from '../../Action/Button'
 import { Badge } from '../../Badges/Badge'
-import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { DefaultDisclosure } from './Template.stories'
 

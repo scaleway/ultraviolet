@@ -1,7 +1,7 @@
 import { useId } from 'react'
 import type { ComponentType, SubmitEvent } from 'react'
 import { Row } from '../../../components'
-import { Button } from '../../../components/Button'
+import { Button } from '../../../components/Action/Button'
 import { Drawer } from '../../../components/Drawer'
 import { Separator } from '../../../components/Separator'
 import { Stack } from '../../../components/Stack'

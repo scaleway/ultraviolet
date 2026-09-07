@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { TextInput } from '..'
-import { CopyButton } from '../../CopyButton'
+import { CopyButton } from '../../Action/CopyButton'
 import { Stack } from '../../Stack'
 
 const generateRandomPassword = (length = 12) => {

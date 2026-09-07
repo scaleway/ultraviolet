@@ -1,7 +1,7 @@
 import type { Decorator } from '@storybook/react-vite'
 import { HelpCircleOutlineIcon, InformationIcon, SettingsOutlineIcon } from '@ultraviolet/icons'
 import { Tooltip } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { Stack } from '../../Stack'
 
 export const Examples = () => (

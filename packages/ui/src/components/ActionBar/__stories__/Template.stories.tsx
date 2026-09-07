@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { DeleteIcon } from '@ultraviolet/icons/DeleteIcon'
 import { useState } from 'react'
 import { ActionBar } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { Stack } from '../../Stack'
 
 export const Template: StoryFn<typeof ActionBar> = args => {

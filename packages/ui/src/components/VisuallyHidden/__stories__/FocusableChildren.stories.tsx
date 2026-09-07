@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { VisuallyHidden } from '..'
-import { Link } from '../../Link'
+import { Link } from '../../Action/Link'
 import { Stack } from '../../Stack'
 
 export const FocusableChildren: StoryFn<typeof VisuallyHidden> = props => (

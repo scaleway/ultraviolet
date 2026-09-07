@@ -3,7 +3,7 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Dialog } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 
 describe('dialog', () => {
   it('should render correctly', () => {

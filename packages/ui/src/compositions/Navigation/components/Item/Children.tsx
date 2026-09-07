@@ -1,4 +1,4 @@
-import { Expandable } from '../../../../components/Expandable'
+import { Expandable } from '../../../../components/Action/Expandable'
 import { Stack } from '../../../../components/Stack'
 import { useNavigation } from '../../NavigationProvider'
 import type { ItemExpandedType } from '../ComponentsTypes'

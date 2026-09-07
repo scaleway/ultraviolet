@@ -2,7 +2,7 @@
 
 import { Children, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
-import { Button } from '../../components/Button'
+import { Button } from '../../components/Action/Button'
 import { Card } from '../../components/Card'
 import { Row } from '../../components/Row'
 import { Stack } from '../../components/Stack'

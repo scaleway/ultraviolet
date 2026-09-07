@@ -1,8 +1,8 @@
 import { NetworkCategoryIcon } from '@ultraviolet/icons/category/NetworkCategoryIcon'
 import { EmailOutlineIcon } from '@ultraviolet/icons/EmailOutlineIcon'
+import { Button } from '../../Action/Button'
 import { Badge } from '../../Badges/Badge'
 import { Bullet } from '../../Badges/Bullet'
-import { Button } from '../../Button'
 import { Text } from '../../Typography/Text'
 
 const reactNeptune = (

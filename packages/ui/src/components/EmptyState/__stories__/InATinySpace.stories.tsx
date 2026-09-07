@@ -1,4 +1,4 @@
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import kapsuleLogo from './illustrations/kapsule.webp'
 import { Template } from './Template.stories'
 

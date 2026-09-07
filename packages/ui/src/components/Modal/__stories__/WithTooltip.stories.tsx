@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { Row } from '../../Row'
 import { Stack } from '../../Stack'
 import { Text } from '../../Typography/Text'

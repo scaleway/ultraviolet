@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Modal } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 
 export const IsClosable: StoryFn = props => (
   <Modal {...props} disclosure={<Button>isClosable</Button>} isClosable={false}>

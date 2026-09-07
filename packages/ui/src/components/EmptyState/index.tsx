@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
-import { Link } from '../Link'
+import { Link } from '../Action/Link'
 import { Stack } from '../Stack'
 import { Text } from '../Typography/Text'
 import { emptyStateStyle } from './styles.css'

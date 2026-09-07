@@ -2,9 +2,9 @@ import type { StoryFn } from '@storybook/react-vite'
 import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import type { ComponentProps, ReactNode } from 'react'
 import { Menu } from '..'
+import { Button } from '../../Action/Button'
 import { Avatar } from '../../Avatar'
 import { Badge } from '../../Badges/Badge'
-import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 
 type ItemProps = {

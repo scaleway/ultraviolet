@@ -4,8 +4,8 @@ import {
   // @ts-expect-error can't import ultraviolet/illustration in ui (cyclic dependencies)
 } from '@ultraviolet/illustrations'
 import { SelectInput } from '..'
+import { Link } from '../../Action/Link'
 import { EmptyState as EmptyStateComponent } from '../../EmptyState'
-import { Link } from '../../Link'
 import { Stack } from '../../Stack'
 import { Text } from '../../Typography/Text'
 import { Template } from './Template.stories'

@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import type { ComponentProps } from 'react'
 import { OfferList } from '..'
-import { Button } from '../../../components/Button'
+import { Button } from '../../../components/Action/Button'
 import { Stack } from '../../../components/Stack'
 import { columns, data } from './resources'
 

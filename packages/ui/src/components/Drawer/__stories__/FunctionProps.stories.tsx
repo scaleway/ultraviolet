@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Drawer } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { Stack } from '../../Stack'
 
 export const FunctionProps: StoryFn = props => (

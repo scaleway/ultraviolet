@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { List } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { Text } from '../../Typography/Text'
 import { columns, data } from './resources'
 import { Template } from './Template.stories'

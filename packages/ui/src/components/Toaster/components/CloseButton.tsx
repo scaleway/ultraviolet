@@ -2,7 +2,7 @@
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import type { SENTIMENTS } from '../../../theme'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { toasterStyle } from '../styles.css'
 
 type SENTIMENT = (typeof SENTIMENTS)[number]

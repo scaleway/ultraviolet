@@ -3,7 +3,7 @@
 import { DeleteIcon, PlusIcon } from '@ultraviolet/icons'
 import { useId } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Button } from '../Button'
+import { Button } from '../Action/Button'
 import { Row } from '../Row'
 import { SelectInput } from '../SelectInput'
 import { Stack } from '../Stack'

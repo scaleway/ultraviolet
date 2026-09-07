@@ -1,7 +1,7 @@
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import { useState } from 'react'
-import { Button } from '../../../components/Button'
+import { Button } from '../../../components/Action/Button'
 import { Row } from '../../../components/Row'
 import { Stack } from '../../../components/Stack'
 import { Label } from '../../../components/Typography/Label'

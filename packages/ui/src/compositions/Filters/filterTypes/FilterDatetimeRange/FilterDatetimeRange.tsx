@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { Button } from '../../../../components/Button'
+import { Button } from '../../../../components/Action/Button'
 import { Popover } from '../../../../components/Popover'
 import { Stack } from '../../../../components/Stack'
 import { Label } from '../../../../components/Typography/Label'

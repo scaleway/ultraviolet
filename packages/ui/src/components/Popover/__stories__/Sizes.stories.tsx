@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useCallback, useState } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
-import { Button } from '../../Button'
+import { Button } from '../../Action/Button'
 import { Popover } from '../index'
 import { Playground } from './Playground.stories'
 
