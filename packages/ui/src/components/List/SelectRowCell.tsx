@@ -1,6 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import type { RefObject } from 'react'
-import { Checkbox } from '../Checkbox'
+import { Checkbox } from '../Data Entry/Checkbox'
 import { Tooltip } from '../Overlay/Tooltip'
 import { Cell } from './Cell'
 import { ColumnProvider } from './ColumnProvider'

@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { useEffect, useRef } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { SelectableCard } from '../../SelectableCard'
+import { SelectableCard } from '../../Data Entry/SelectableCard'
 import { useSwitchButton } from './SwitchButtonContext'
 import { switchButtonStyle } from './styles.css'
 

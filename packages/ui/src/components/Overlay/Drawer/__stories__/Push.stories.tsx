@@ -2,8 +2,8 @@ import type { StoryFn } from '@storybook/react-vite'
 import { useRef } from 'react'
 import { Drawer } from '..'
 import { Button } from '../../../Action/Button'
+import { SelectInput } from '../../../Data Entry/SelectInput'
 import { Stack } from '../../../Layout/Stack'
-import { SelectInput } from '../../../SelectInput'
 
 export const DisclosureBody = <Button>Open Drawer (push = body)</Button>
 export const DisclosureStack = <Button>Open Drawer (push = ref stack)</Button>

@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Menu } from '..'
-import { TextInput } from '../../../TextInput'
+import { TextInput } from '../../../Data Entry/TextInput'
 import { Modal } from '../../Modal'
 import { DefaultDisclosure } from './Template.stories'
 

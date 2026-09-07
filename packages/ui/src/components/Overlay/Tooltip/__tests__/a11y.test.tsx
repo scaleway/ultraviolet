@@ -5,7 +5,7 @@ import { consoleThemesMap } from '@ultraviolet/themes'
 import { renderWithTheme, expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Tooltip } from '..'
-import { TextInput } from '../../../TextInput'
+import { TextInput } from '../../../Data Entry/TextInput'
 
 describe('tooltip - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {

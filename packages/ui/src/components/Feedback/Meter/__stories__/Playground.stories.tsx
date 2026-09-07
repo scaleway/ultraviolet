@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import zxcvbn from 'zxcvbn'
 import { Meter } from '..'
 import { colors } from '../../../../theme'
-import { TextInput } from '../../../TextInput'
+import { TextInput } from '../../../Data Entry/TextInput'
 
 const strength = [
   { color: colors.danger.text, text: 'veryWeak' },

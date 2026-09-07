@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { InfiniteScroll } from '..'
+import { SelectInput as SelectInputUV } from '../../Data Entry/SelectInput'
 import { Skeleton } from '../../Feedback/Skeleton'
 import { Stack } from '../../Layout/Stack'
-import { SelectInput as SelectInputUV } from '../../SelectInput'
 import { generateRandomNamesArray, SELECT_INPUT_DATA } from './data'
 import { infiniteScrollSelectInput } from './style.css'
 

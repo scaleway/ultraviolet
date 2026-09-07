@@ -3,10 +3,10 @@
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, ReactNode } from 'react'
 import { Badge as BadgeUV } from '../../../components/Badges/Badge'
-import { Checkbox } from '../../../components/Checkbox'
+import { Checkbox } from '../../../components/Data Entry/Checkbox'
+import { Radio } from '../../../components/Data Entry/Radio'
 import { List } from '../../../components/List'
 import { Tooltip } from '../../../components/Overlay/Tooltip'
-import { Radio } from '../../../components/Radio'
 import { useOfferListContext } from '../OfferListProvider'
 import { offerListStyle } from '../styles.css'
 

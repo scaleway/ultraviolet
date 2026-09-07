@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
 import { Table } from '..'
-import { Checkbox } from '../../Checkbox'
+import { Checkbox } from '../../Data Entry/Checkbox'
 import { Stack } from '../../Layout/Stack'
 import { Text } from '../../Typography/Text'
 

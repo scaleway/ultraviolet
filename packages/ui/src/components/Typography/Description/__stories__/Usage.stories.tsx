@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Description } from '..'
-import { Checkbox } from '../../../Checkbox'
+import { Checkbox } from '../../../Data Entry/Checkbox'
+import { SelectInput } from '../../../Data Entry/SelectInput'
 import { Row } from '../../../Layout/Row'
 import { Stack } from '../../../Layout/Stack'
-import { SelectInput } from '../../../SelectInput'
 
 const values = [
   {

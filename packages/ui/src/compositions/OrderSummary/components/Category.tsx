@@ -1,7 +1,7 @@
 import { AttachIcon } from '@ultraviolet/icons/AttachIcon'
 import { useContext } from 'react'
+import { NumberInput } from '../../../components/Data Entry/NumberInput'
 import { Stack } from '../../../components/Layout/Stack'
-import { NumberInput } from '../../../components/NumberInput'
 import { Text } from '../../../components/Typography/Text'
 import { DisplayPrice } from '../helpers'
 import { OrderSummaryContext } from '../Provider'

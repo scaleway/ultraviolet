@@ -1,7 +1,7 @@
 'use client'
 
 import type { ReactNode } from 'react'
-import { Checkbox } from '../Checkbox'
+import { Checkbox } from '../Data Entry/Checkbox'
 import { HeaderCell } from './HeaderCell'
 import { useListContext } from './ListContext'
 import { listStyle } from './styles.css'

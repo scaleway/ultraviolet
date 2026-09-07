@@ -1,7 +1,7 @@
 import type { ComponentProps, ReactNode } from 'react'
-import type { DateInput } from '../../components/DateInput'
-import type { SelectInput } from '../../components/SelectInput'
-import type { Slider } from '../../components/Slider'
+import type { DateInput } from '../../components/Data Entry/DateInput'
+import type { SelectInput } from '../../components/Data Entry/SelectInput'
+import type { Slider } from '../../components/Data Entry/Slider'
 import type { DatetimeRangeLocales } from './filterTypes/FilterDatetimeRange/type'
 
 export type AnyObject = Record<string, unknown>

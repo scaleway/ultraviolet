@@ -15,8 +15,8 @@ import {
   useState,
 } from 'react'
 import type { ButtonHTMLAttributes, KeyboardEvent, MouseEvent, ReactNode, Ref } from 'react'
+import { SearchInput } from '../../Data Entry/SearchInput'
 import { Stack } from '../../Layout/Stack'
-import { SearchInput } from '../../SearchInput'
 import { Popup } from '../Popup'
 import { getListItem, searchChildren } from './helpers'
 import { DisclosureContext, useMenu } from './MenuProvider'

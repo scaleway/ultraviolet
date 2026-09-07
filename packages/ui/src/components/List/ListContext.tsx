@@ -9,7 +9,7 @@ import type {
   RefObject,
   SetStateAction,
 } from 'react'
-import type { Checkbox } from '../Checkbox'
+import type { Checkbox } from '../Data Entry/Checkbox'
 import type { ColumnProps } from './types'
 
 type RowState = Record<string | number, boolean>

@@ -1,6 +1,6 @@
 import { useDebouncedCallback } from '@ultraviolet/utils'
 import { useEffect, useState } from 'react'
-import { TextInput } from '../../../components/TextInput'
+import { TextInput } from '../../../components/Data Entry/TextInput'
 import type { FilterConfigItemText, FilterComponentProps } from '../types'
 
 type FilterTextProps = FilterComponentProps<string, FilterConfigItemText>

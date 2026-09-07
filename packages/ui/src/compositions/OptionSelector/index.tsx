@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { useId, useMemo } from 'react'
-import type { SelectInput } from '../../components/SelectInput'
+import type { SelectInput } from '../../components/Data Entry/SelectInput'
 import { Description } from '../../components/Typography/Description'
 import { Label } from '../../components/Typography/Label'
 import { Arrow } from './components/ArrowIcon'
