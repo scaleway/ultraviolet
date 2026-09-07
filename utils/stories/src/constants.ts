@@ -1,13 +1,16 @@
-import * as components from '../../../packages/ui/src/components'
-import * as compositions from '../../../packages/ui/src/compositions'
+import type { ComponentStoryParameters } from './AccessibilityAudit/types'
 
-export const componentsNames = Object.keys(components)
-export const compositionNames = Object.keys(compositions)
+export type ComponentStoryModule = {
+  default: {
+    title: string
+    parameters: ComponentStoryParameters
+  }
+}
 
-export const storiesComponentModules = componentsNames.map(
-  async name => import(`../../../packages/ui/src/components/${name}/__stories__/index.stories.tsx`),
-)
+export const storiesComponentModules = Object.values(
+  import.meta.glob<ComponentStoryModule>('../../../packages/ui/src/components/**/__stories__/index.stories.tsx'),
+).map(loader => loader())
 
-export const storiesCompositionsModules = compositionNames.map(
-  async name => import(`../../../packages/ui/src/compositions/${name}/__stories__/index.stories.tsx`),
-)
+export const storiesCompositionsModules = Object.values(
+  import.meta.glob<ComponentStoryModule>('../../../packages/ui/src/compositions/**/__stories__/index.stories.tsx'),
+).map(loader => loader())

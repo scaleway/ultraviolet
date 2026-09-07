@@ -2,18 +2,11 @@ import { linkTo } from '@storybook/addon-links'
 import { Button, Stack, Table, Text } from '@ultraviolet/ui'
 import { useState, useEffect } from 'react'
 import { storiesCompositionsModules, storiesComponentModules } from '../constants'
+import type { ComponentStoryModule } from '../constants'
 import { COMPONENT_STATES, findComponentState } from './constants'
 
 const ComponentState = () => {
-  const [modules, setModules] = useState<
-    | PromiseSettledResult<{
-        default: {
-          title: string
-          parameters: { deprecated: boolean }
-        }
-      }>[]
-    | null
-  >(null)
+  const [modules, setModules] = useState<PromiseSettledResult<ComponentStoryModule>[] | null>(null)
 
   /**
    * Effect to dynamically import all component story files

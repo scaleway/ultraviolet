@@ -6,9 +6,10 @@ import { useState, useEffect } from 'react'
 import type { ReactNode } from 'react'
 import { findComponentState } from '../ComponentState/constants'
 import { storiesCompositionsModules, storiesComponentModules } from '../constants'
+import type { ComponentStoryModule } from '../constants'
 import { A11Y_LEVELS, WCAG_PRINCIPLES } from './constants'
 import { findA11yLevel, getComponentA11yStatus, getComponentAuditCategories } from './helpers'
-import type { A11yLevel, ComponentA11yStatus, AuditCategories, ComponentStoryParameters, WcagPrinciple } from './types'
+import type { A11yLevel, ComponentA11yStatus, AuditCategories, WcagPrinciple } from './types'
 
 type ComponentInfo = {
   title: string
@@ -24,15 +25,7 @@ type ComponentInfo = {
 }
 
 const AccessibilityAudit = () => {
-  const [modules, setModules] = useState<
-    | PromiseSettledResult<{
-        default: {
-          title: string
-          parameters: ComponentStoryParameters
-        }
-      }>[]
-    | null
-  >(null)
+  const [modules, setModules] = useState<PromiseSettledResult<ComponentStoryModule>[] | null>(null)
 
   useEffect(() => {
     Promise.allSettled([...storiesComponentModules, ...storiesCompositionsModules])
@@ -50,16 +43,7 @@ const AccessibilityAudit = () => {
 
   const componentsInfo: ComponentInfo[] =
     modules
-      ?.filter(
-        (
-          module,
-        ): module is PromiseFulfilledResult<{
-          default: {
-            title: string
-            parameters: ComponentStoryParameters
-          }
-        }> => module.status === 'fulfilled',
-      )
+      ?.filter((module): module is PromiseFulfilledResult<ComponentStoryModule> => module.status === 'fulfilled')
       .map(module => {
         const parameters = module.value.default.parameters
         const destructuredName: string[] = module.value.default.title.split('/') ?? []
