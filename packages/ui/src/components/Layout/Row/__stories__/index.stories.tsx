@@ -6,10 +6,10 @@ export default {
   title: 'UI/Layout/Row',
   parameters: {
     a11yStatus: {
-      perceivable: undefined,
-      operable: undefined,
-      understandable: undefined,
-      robust: undefined,
+      perceivable: true,
+      operable: true,
+      understandable: true,
+      robust: true,
     },
   },
 } as Meta<typeof Row>
