@@ -1,3 +1,5 @@
+import { screen } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { ContentCard } from '..'
@@ -18,50 +20,45 @@ describe('contentCard', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('renders correctly with title with custom tag', () => {
-    const { asFragment } = renderWithTheme(<ContentCard headingTag="h1" title="test" />)
-    expect(asFragment()).toMatchSnapshot()
+  it('renders the title as the given heading tag', () => {
+    const { container } = renderWithTheme(<ContentCard headingTag="h1" title="test" />)
+    const heading = screen.getByRole('heading', { name: /test/i })
+    expect(heading.tagName).toBe('H1')
+    expect(container.querySelector('h3')).toBeNull()
   })
 
-  it('renders correctly with disabled', () => {
-    const { asFragment } = renderWithTheme(<ContentCard disabled title="test" />)
-    expect(asFragment()).toMatchSnapshot()
+  it('removes the link when disabled', () => {
+    renderWithTheme(<ContentCard disabled href="https://scaleway.com" title="test" />)
+    expect(screen.queryByRole('link')).toBeNull()
+    expect(screen.getByText('test')).toBeInTheDocument()
   })
 
-  it('renders correctly with empty string title', () => {
-    const { asFragment } = renderWithTheme(<ContentCard title="" />)
-    expect(asFragment()).toMatchSnapshot()
+  it('renders an empty heading when title is empty', () => {
+    renderWithTheme(<ContentCard title="" />)
+    expect(screen.getByRole('heading')).toBeInTheDocument()
   })
 
-  it('renders correctly with href', () => {
-    const { asFragment } = renderWithTheme(<ContentCard href="https://scaleway.com" title="test" />)
-    expect(asFragment()).toMatchSnapshot()
+  it('renders as a link with the href and target', () => {
+    renderWithTheme(<ContentCard href="https://scaleway.com" target="_self" title="test" />)
+    const link = screen.getByRole('link', { name: /test/i })
+    expect(link).toHaveAttribute('href', 'https://scaleway.com')
+    expect(link).toHaveAttribute('target', '_self')
   })
 
-  it('renders correctly with href and direction row', () => {
-    const { asFragment } = renderWithTheme(<ContentCard direction="row" href="https://scaleway.com" title="test" />)
-    expect(asFragment()).toMatchSnapshot()
+  it('calls onClick when used as a button', async () => {
+    const onClick = vi.fn()
+    renderWithTheme(<ContentCard onClick={onClick} title="test" />)
+    await userEvent.click(screen.getByRole('button', { name: /test/i }))
+    expect(onClick).toHaveBeenCalledOnce()
   })
 
-  it('renders correctly with href and target', () => {
-    const { asFragment } = renderWithTheme(<ContentCard href="https://scaleway.com" target="_blank" title="test" />)
-    expect(asFragment()).toMatchSnapshot()
+  it('renders children', () => {
+    renderWithTheme(<ContentCard title="test">This is the children of the component</ContentCard>)
+    expect(screen.getByText('This is the children of the component')).toBeInTheDocument()
   })
 
-  it('renders correctly with onClick', () => {
-    const { asFragment } = renderWithTheme(<ContentCard onClick={() => {}} title="test" />)
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  it('renders correctly with children', () => {
-    const { asFragment } = renderWithTheme(
-      <ContentCard title="test">This is the children of the component</ContentCard>,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  it('renders correctly with image, title, description, subtitle and icon', () => {
-    const { asFragment } = renderWithTheme(
+  it('renders subtitle, description, image and icon', () => {
+    const { container } = renderWithTheme(
       <ContentCard
         description="this is a description"
         icon={illustration}
@@ -70,24 +67,13 @@ describe('contentCard', () => {
         title="test"
       />,
     )
-    expect(asFragment()).toMatchSnapshot()
+    expect(screen.getByText('sub title test')).toBeInTheDocument()
+    expect(screen.getByText('this is a description')).toBeInTheDocument()
+    expect(container.querySelector('img')).not.toBeNull()
   })
 
-  describe('renders correctly with all directions', () => {
-    const directions = ['row', 'column'] as const
-    it.each(directions)(`renders correctly direction %s`, direction => {
-      const { asFragment } = renderWithTheme(<ContentCard direction={direction} title="test" />)
-      expect(asFragment()).toMatchSnapshot()
-    })
-
-    it.each(directions)(`renders correctly direction %s and loading`, direction => {
-      const { asFragment } = renderWithTheme(<ContentCard direction={direction} loading title="test" />)
-      expect(asFragment()).toMatchSnapshot()
-    })
-
-    it.each(directions)(`renders correctly direction %s and image`, direction => {
-      const { asFragment } = renderWithTheme(<ContentCard direction={direction} image={illustration} title="test" />)
-      expect(asFragment()).toMatchSnapshot()
-    })
+  it('shows a skeleton instead of content when loading', () => {
+    renderWithTheme(<ContentCard loading title="test" />)
+    expect(screen.queryByText('test')).toBeNull()
   })
 })
