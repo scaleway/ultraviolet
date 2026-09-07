@@ -1,6 +1,6 @@
 import { SupportProductIcon } from '@ultraviolet/icons/product/SupportProductIcon'
 import { Conversation } from '..'
-import { Avatar } from '../../../components/Avatar'
+import { Avatar } from '../../../components/Other/Avatar'
 import { Text } from '../../../components/Typography/Text'
 
 export const Message = () => (

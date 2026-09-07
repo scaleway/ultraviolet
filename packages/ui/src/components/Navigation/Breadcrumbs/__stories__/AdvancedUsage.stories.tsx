@@ -5,9 +5,9 @@ import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import type { ComponentProps } from 'react'
 import { Breadcrumbs } from '..'
 import { Button } from '../../../Action/Button'
-import { Avatar } from '../../../Avatar'
 import { Stack } from '../../../Layout/Stack'
 import { Menu } from '../../../Menu'
+import { Avatar } from '../../../Other/Avatar'
 
 export const AdvancedUsage: StoryFn<ComponentProps<typeof Breadcrumbs>> = props => (
   <Stack gap={4}>

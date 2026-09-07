@@ -1,7 +1,7 @@
 import { cn } from '@ultraviolet/utils'
 import type { TooltipProps } from '.'
 import type { useTooltip } from './useTooltip'
-import { visuallyHiddenStyle } from '../VisuallyHidden/styles.css'
+import { visuallyHiddenStyle } from '../Other/VisuallyHidden/styles.css'
 import { tooltipStyle } from './styles.css'
 
 type TooltipElementProps = Pick<TooltipProps, 'id' | 'className' | 'style' | 'data-testid' | 'maxWidth' | 'text'> & {

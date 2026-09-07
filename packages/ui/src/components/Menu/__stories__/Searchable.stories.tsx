@@ -3,9 +3,9 @@ import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import type { ComponentProps, ReactNode } from 'react'
 import { Menu } from '..'
 import { Button } from '../../Action/Button'
-import { Avatar } from '../../Avatar'
 import { Badge } from '../../Badges/Badge'
 import { Stack } from '../../Layout/Stack'
+import { Avatar } from '../../Other/Avatar'
 
 type ItemProps = {
   sentiment?: ComponentProps<typeof Menu.Item>['sentiment']

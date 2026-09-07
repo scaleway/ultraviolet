@@ -3,7 +3,7 @@ import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
 import { SunIcon } from '@ultraviolet/icons/SunIcon'
 import type { ComponentProps } from 'react'
 import { Stack } from '../../../Layout/Stack'
-import { VisuallyHidden } from '../../../VisuallyHidden'
+import { VisuallyHidden } from '../../../Other/VisuallyHidden'
 import { SwitchButton } from '../index'
 
 export const WithIcon: StoryFn<ComponentProps<typeof SwitchButton>> = args => (

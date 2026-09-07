@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { Bullet } from '..'
-import { VisuallyHidden } from '../../../VisuallyHidden'
+import { VisuallyHidden } from '../../../Other/VisuallyHidden'
 
 export const Icon: StoryFn = props => (
   <>

@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { FileInput } from '..'
-import { Avatar } from '../../Avatar'
 import { Stack } from '../../Layout/Stack'
+import { Avatar } from '../../Other/Avatar'
 import { Text } from '../../Typography/Text'
 import { hereText } from './styles.css'
 

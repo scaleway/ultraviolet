@@ -7,8 +7,8 @@ import type { RenderProp } from '@ultraviolet/utils'
 import { forwardRef, useMemo } from 'react'
 import type { AriaRole, ButtonHTMLAttributes, CSSProperties, MouseEventHandler, ReactNode, Ref } from 'react'
 import { Loader } from '../../Feedback/Loader'
+import { VisuallyHidden } from '../../Other/VisuallyHidden'
 import { Tooltip } from '../../Tooltip'
-import { VisuallyHidden } from '../../VisuallyHidden'
 import { buttonStyle } from './styles.css'
 
 type CommonProps = {
