@@ -3,7 +3,7 @@ import { Modal } from '..'
 import { Badge } from '../../Badges/Badge'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import image from './assets/illustration.webp'
 import imageCorrectFormat from './assets/illustrationCorrectFormat.webp'
 

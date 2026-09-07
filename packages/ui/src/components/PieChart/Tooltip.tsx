@@ -1,6 +1,6 @@
 'use client'
 
-import { Text } from '../Text'
+import { Text } from '../Typography/Text'
 import { pieChartStyle } from './styles.css'
 
 type TooltipProps = {

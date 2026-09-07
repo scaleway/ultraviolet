@@ -1,7 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import { THUMB_SIZE } from '../constant'
 import { leftOption, sliderStyle } from '../styles.css'
 

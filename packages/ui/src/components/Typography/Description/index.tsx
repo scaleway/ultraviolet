@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react'
 import type { HTMLAttributes, ReactNode } from 'react'
-import { canDisplay } from '../../helpers/hasHelperText'
+import { canDisplay } from '../../../helpers/hasHelperText'
 import { Text } from '../Text'
 
 export type DescriptionProps = {

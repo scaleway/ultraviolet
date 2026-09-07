@@ -1,6 +1,6 @@
 import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
 import type { RefObject } from 'react'
-import { Text } from '../Text'
+import { Text } from '../Typography/Text'
 import type { FileInputProps } from './types'
 import { fileInputStyle } from './styles.css'
 

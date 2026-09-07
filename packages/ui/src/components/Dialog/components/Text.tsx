@@ -1,7 +1,7 @@
 'use client'
 
 import type { CSSProperties } from 'react'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 
 type DialogTextProps = {
   children: React.ReactNode

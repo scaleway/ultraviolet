@@ -3,7 +3,7 @@ import type { ComponentProps } from 'react'
 import { OrderSummary } from '..'
 import { Badge } from '../../../components/Badges/Badge'
 import { Stack } from '../../../components/Stack'
-import { Text } from '../../../components/Text'
+import { Text } from '../../../components/Typography/Text'
 import { categoryAZ, categoryDefault } from './productsExample'
 
 const elements = [categoryAZ, categoryDefault]

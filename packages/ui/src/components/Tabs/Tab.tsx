@@ -14,8 +14,8 @@ import type {
 } from 'react'
 import { Badge } from '../Badges/Badge'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
+import { Text } from '../Typography/Text'
 import { useTabsContext } from './TabsContext'
 import { tabsStyle } from './styles.css'
 

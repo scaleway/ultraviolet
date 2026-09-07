@@ -1,5 +1,5 @@
 import { Badge } from '../../Badges/Badge'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 
 const reactNeptune = (
   <Text as="div" variant="body">

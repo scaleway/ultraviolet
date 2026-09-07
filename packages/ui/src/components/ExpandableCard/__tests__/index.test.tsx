@@ -3,7 +3,7 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { ExpandableCard } from '..'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 
 describe('expandableCard', () => {
   it('renders correctly with default values', () => {

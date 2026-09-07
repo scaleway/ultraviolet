@@ -9,10 +9,10 @@ import type { ChangeEvent, ComponentProps, CSSProperties, KeyboardEventHandler, 
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { Tag } from '../Badges/Tag'
 import { Button } from '../Button'
-import { Description } from '../Description'
-import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
+import { Description } from '../Typography/Description'
+import { Label } from '../Typography/Label'
 import { tagInputStyle } from './styles.css'
 import type { TAGINPUT_SIZE_PADDING } from './styles.css'
 

@@ -1,6 +1,6 @@
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import { DefaultDisclosure, Template } from './Template.stories'
 
 export const Footer = Template.bind({})

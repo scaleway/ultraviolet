@@ -4,7 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import { Link } from '../Link'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
+import { Text } from '../Typography/Text'
 import { emptyStateStyle } from './styles.css'
 import type { SizesTypes } from './styles.css'
 

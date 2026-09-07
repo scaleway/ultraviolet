@@ -4,7 +4,7 @@ import type { Dispatch, SetStateAction } from 'react'
 import { useId } from 'react'
 import { SelectInput } from '../SelectInput'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
+import { Text } from '../Typography/Text'
 
 const optionsItemsPerPage = [
   {

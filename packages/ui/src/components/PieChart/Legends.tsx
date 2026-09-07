@@ -1,8 +1,8 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
+import { Text } from '../Typography/Text'
 import { TooltipContent } from './Tooltip'
 import type { Data } from './types'
 import { colorBullet, pieChartStyle } from './styles.css'

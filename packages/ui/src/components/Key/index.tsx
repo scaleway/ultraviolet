@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
 import type { CSSProperties } from 'react'
-import { Text } from '../Text'
+import { Text } from '../Typography/Text'
 import { KEYS_MATCH } from './constants'
 import { keyStyle } from './styles.css'
 

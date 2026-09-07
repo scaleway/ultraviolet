@@ -4,7 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import { forwardRef } from 'react'
 import type { CSSProperties, ReactNode, Ref } from 'react'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
+import { Text } from '../Typography/Text'
 import { cardStyle } from './styles.css'
 
 type CardProps = {

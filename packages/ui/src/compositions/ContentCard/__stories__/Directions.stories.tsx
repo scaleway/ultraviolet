@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '../../../components/Stack'
-import { Text } from '../../../components/Text'
+import { Text } from '../../../components/Typography/Text'
 import { ContentCard } from '../index'
 import { Template } from './Template.stories'
 

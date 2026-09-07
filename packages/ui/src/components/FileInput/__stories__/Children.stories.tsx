@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { FileInput } from '..'
 import { Avatar } from '../../Avatar'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import { hereText } from './styles.css'
 
 export const Children: StoryFn<typeof FileInput> = args => {

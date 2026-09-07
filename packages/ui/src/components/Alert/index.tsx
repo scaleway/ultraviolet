@@ -10,7 +10,7 @@ import { useState } from 'react'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
+import { Text } from '../Typography/Text'
 import type { AlertSentiment } from './type'
 import { alertStyle } from './styles.css'
 

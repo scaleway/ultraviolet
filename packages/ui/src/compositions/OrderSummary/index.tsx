@@ -1,7 +1,7 @@
 import { cn } from '@ultraviolet/utils'
 import { useEffect, useMemo, useState } from 'react'
 import { Stack } from '../../components/Stack'
-import { Text } from '../../components/Text'
+import { Text } from '../../components/Typography/Text'
 import { UnitInput } from '../../components/UnitInput'
 import { Units } from './constants'
 import { computeCategoriesPrice, computeTotalPrice } from './helpers'

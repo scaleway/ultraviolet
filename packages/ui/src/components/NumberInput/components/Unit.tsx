@@ -1,4 +1,4 @@
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import type { UnitProps } from '../types'
 import { numberInputStyle } from '../styles.css'
 

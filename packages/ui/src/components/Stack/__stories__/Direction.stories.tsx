@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '..'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import { child } from './styles.css'
 
 export const Direction: StoryFn = props => (

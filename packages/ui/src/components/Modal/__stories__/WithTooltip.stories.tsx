@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import { Modal } from '../index'
 
 export const WithTooltip: StoryFn = props => (

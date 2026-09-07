@@ -4,7 +4,7 @@ import { useContext, useState } from 'react'
 import type { MouseEvent as MouseEventReact } from 'react'
 import { Button } from '../../Button'
 import { Row } from '../../Row'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import { CALENDAR_WEEKS } from '../constants'
 import { DateInputContext } from '../Context'
 import {

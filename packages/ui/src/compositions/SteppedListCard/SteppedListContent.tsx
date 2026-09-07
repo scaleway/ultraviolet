@@ -3,7 +3,7 @@
 import { useContext, useEffect } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../../components/Stack'
-import { Text } from '../../components/Text'
+import { Text } from '../../components/Typography/Text'
 import { Data, nextStep } from './helper'
 import { steppedListCardStyle } from './styles.css'
 

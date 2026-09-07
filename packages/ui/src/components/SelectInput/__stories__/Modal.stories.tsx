@@ -3,7 +3,7 @@ import { SelectInput } from '..'
 import { Button } from '../../Button'
 import { Modal as ModalComponent } from '../../Modal'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import { dataGrouped } from './resources'
 
 export const Modal: StoryFn<typeof SelectInput> = args => (

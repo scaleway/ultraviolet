@@ -4,10 +4,10 @@ import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
 import type { BaseFormComponentProps } from '../../types'
-import { Description } from '../Description'
-import { Label } from '../Label'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
+import { Description } from '../Typography/Description'
+import { Label } from '../Typography/Label'
+import { Text } from '../Typography/Text'
 import { DEFAULT_DATE, DEFAULT_PLACEHOLDER, TIME_KEYS } from './constants'
 import {
   canConcat,

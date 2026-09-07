@@ -1,5 +1,5 @@
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 
 export const treeMapChartSimpleData = {
   children: [

@@ -7,7 +7,7 @@ import { SelectInput } from '..'
 import { EmptyState as EmptyStateComponent } from '../../EmptyState'
 import { Link } from '../../Link'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import { Template } from './Template.stories'
 
 const emptyStateText = (

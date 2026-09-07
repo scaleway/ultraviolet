@@ -4,11 +4,11 @@ import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId } from 'react'
 import type { InputHTMLAttributes, ReactNode, Ref } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Description } from '../Description'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
+import { Description } from '../Typography/Description'
+import { Text } from '../Typography/Text'
 import { toggleStyle } from './styles.css'
 
 type ToggleProps = {

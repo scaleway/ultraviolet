@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Slider } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 
 export const Controlled: StoryFn<typeof Slider> = () => {
   const [value, setValue] = useState(0)

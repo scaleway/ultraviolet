@@ -3,7 +3,7 @@ import type { ComponentProps } from 'react'
 import { ContentCardGroup } from '..'
 import { Row } from '../../../components/Row'
 import { Status } from '../../../components/Status'
-import { Text } from '../../../components/Text'
+import { Text } from '../../../components/Typography/Text'
 
 export const Custom: StoryFn<ComponentProps<typeof ContentCardGroup>> = ({ ...props }) => (
   <ContentCardGroup {...props}>

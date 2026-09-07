@@ -8,7 +8,7 @@ import { useMemo } from 'react'
 import type { KeyboardEvent, MouseEvent as ReactMouseEvent, ReactNode } from 'react'
 import { Button } from '../../Button'
 import { Link } from '../../Link'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import { breadcrumbsStyle } from '../styles.css'
 import { maxWidthVar, minWidthVar } from './styles.css'
 

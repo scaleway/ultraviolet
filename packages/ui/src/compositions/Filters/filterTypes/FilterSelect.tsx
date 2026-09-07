@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
-import { Label } from '../../../components/Label'
 import { RadioGroup } from '../../../components/RadioGroup'
 import { SelectInput } from '../../../components/SelectInput'
+import { Label } from '../../../components/Typography/Label'
 import type { FilterConfigItemSelect, AnyObject, FilterComponentProps } from '../types'
 
 export const SELECT_DISPLAY_THRESHOLD = 5

@@ -5,7 +5,7 @@ import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties } from 'react'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
+import { Text } from '../Typography/Text'
 import { passwordCheckStyle } from './styles.css'
 
 type Rule = {

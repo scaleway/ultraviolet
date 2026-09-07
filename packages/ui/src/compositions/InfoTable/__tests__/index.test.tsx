@@ -4,7 +4,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { InfoTable } from '..'
 import { Button } from '../../../components/Button'
 import { Stack } from '../../../components/Stack'
-import { Text } from '../../../components/Text'
+import { Text } from '../../../components/Typography/Text'
 
 describe('infoTable', () => {
   it('should work with default props', () => {

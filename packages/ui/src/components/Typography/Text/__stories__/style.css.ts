@@ -2,7 +2,7 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { SENTIMENTS } from '../../../theme'
+import { SENTIMENTS } from '../../../../theme'
 import { PROMINENCES } from '../constants'
 
 export const oneLineContainer = style({

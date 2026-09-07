@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
+import { Text } from '../Typography/Text'
 import type { TextInputProps } from './type'
 import { textInputStyle } from './styles.css'
 

@@ -5,7 +5,7 @@ import { SteppedListCard } from '..'
 import { Button } from '../../../components/Button'
 import { Snippet } from '../../../components/Snippet'
 import { Stack } from '../../../components/Stack'
-import { Text } from '../../../components/Text'
+import { Text } from '../../../components/Typography/Text'
 import { blockStorageWire } from '../__mocks__/blockStorageWire'
 
 export const Template: StoryFn<ComponentProps<typeof SteppedListCard>> = props => (

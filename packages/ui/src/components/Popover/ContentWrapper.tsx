@@ -3,7 +3,7 @@
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
+import { Text } from '../Typography/Text'
 import type { ContentWrapperProps } from './types'
 import { popoverStyle } from './styles.css'
 

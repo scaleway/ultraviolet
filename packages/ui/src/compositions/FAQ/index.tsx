@@ -4,7 +4,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import { Bullet } from '../../components/Badges/Bullet'
 import { Card } from '../../components/Card'
 import { Stack } from '../../components/Stack'
-import { Text } from '../../components/Text'
+import { Text } from '../../components/Typography/Text'
 import { faqStyle } from './styles.css'
 
 type FAQProps = {

@@ -1,4 +1,4 @@
-import { Badge } from '../../Badges/Badge'
+import { Badge } from '../../../Badges/Badge'
 import { Template } from './Template'
 
 export const LabelDescription = Template.bind({})

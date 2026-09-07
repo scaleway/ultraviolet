@@ -2,9 +2,9 @@
 
 import type { ReactNode } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Description } from '../Description'
 import { Row } from '../Row'
-import { Text } from '../Text'
+import { Description } from '../Typography/Description'
+import { Text } from '../Typography/Text'
 
 export const Notice = ({
   maxLength,

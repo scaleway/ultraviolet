@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Description } from '..'
-import { Stack } from '../../Stack'
+import { Stack } from '../../../Stack'
 import { Text } from '../../Text'
 
 export const Error: StoryFn<typeof Description> = props => (

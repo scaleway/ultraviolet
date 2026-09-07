@@ -3,7 +3,7 @@
 import { Children } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import { menuStyle } from '../styles.css'
 
 type GroupProps = {

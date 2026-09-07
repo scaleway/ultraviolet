@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { TextInput } from '..'
 import { Link } from '../../Link'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 
 export const Examples: StoryFn<typeof TextInput> = args => {
   const [value, setValue] = useState('Text')

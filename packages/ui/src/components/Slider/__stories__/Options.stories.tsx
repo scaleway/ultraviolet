@@ -4,7 +4,7 @@ import { Slider } from '..'
 import { Button } from '../../Button'
 import { Modal } from '../../Modal'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 
 const options = [
   { label: '1 Mbps', value: 1 },

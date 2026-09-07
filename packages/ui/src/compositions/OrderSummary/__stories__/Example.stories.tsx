@@ -6,7 +6,7 @@ import { Button } from '../../../components/Button'
 import { Checkbox } from '../../../components/Checkbox'
 import { Link } from '../../../components/Link'
 import { Stack } from '../../../components/Stack'
-import { Text } from '../../../components/Text'
+import { Text } from '../../../components/Typography/Text'
 import { categoryM2, categoryOptions, categoryStorage, negativeItem } from './productsExample'
 
 const mockItems = (requestsAmount: number | null, setRequestsAmount: Dispatch<React.SetStateAction<number | null>>) => {

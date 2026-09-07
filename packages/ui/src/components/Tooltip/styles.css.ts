@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { fadeIn, fadeOut } from '../../utils'
-import { textStyle } from '../Text/style.css'
+import { textStyle } from '../Typography/Text/style.css'
 
 export const ARROW_SIZE = 8
 const ARROW_RADIUS = 2

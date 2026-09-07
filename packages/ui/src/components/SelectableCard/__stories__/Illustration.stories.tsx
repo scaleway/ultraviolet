@@ -10,7 +10,7 @@ import { SelectableCard } from '..'
 import { Badge } from '../../Badges/Badge'
 import { Link } from '../../Link'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 
 export const Illustration: StoryFn = args => {
   const [value, onChange] = useState('label-30')

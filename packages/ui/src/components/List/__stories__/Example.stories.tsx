@@ -7,8 +7,8 @@ import { Button } from '../../Button/index'
 import { Menu } from '../../Menu'
 import { Modal } from '../../Modal'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
 import { TextInput } from '../../TextInput'
+import { Text } from '../../Typography/Text'
 import { data as sourceData } from './resources'
 
 export const Example: StoryFn = args => {

@@ -1,4 +1,4 @@
-import { Text } from '../Text'
+import { Text } from '../Typography/Text'
 import { paginationStyle } from './styles.css'
 
 type EllipsisProps = {

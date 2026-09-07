@@ -1,6 +1,6 @@
 import type { ComponentProps } from 'react'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import { CopyButton } from '../index'
 
 export const Sizes = (props: ComponentProps<typeof CopyButton>) => (

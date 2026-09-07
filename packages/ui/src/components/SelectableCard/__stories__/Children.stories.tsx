@@ -6,7 +6,7 @@ import { Badge } from '../../Badges/Badge'
 import { Checkbox } from '../../Checkbox'
 import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 
 export const Children: StoryFn = args => {
   const [value, onChange] = useState('label-9')

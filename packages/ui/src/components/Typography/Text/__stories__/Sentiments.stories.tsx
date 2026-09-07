@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { SENTIMENTS } from '../../../theme'
+import { SENTIMENTS } from '../../../../theme'
 import { Text } from '../index'
 
 export const Sentiments: StoryFn<ComponentProps<typeof Text>> = args => (

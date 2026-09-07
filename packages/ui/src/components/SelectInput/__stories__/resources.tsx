@@ -3,7 +3,7 @@ import { EmailOutlineIcon } from '@ultraviolet/icons/EmailOutlineIcon'
 import { Badge } from '../../Badges/Badge'
 import { Bullet } from '../../Badges/Bullet'
 import { Button } from '../../Button'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 
 const reactNeptune = (
   <Text as="span" sentiment="primary" variant="bodySmall">

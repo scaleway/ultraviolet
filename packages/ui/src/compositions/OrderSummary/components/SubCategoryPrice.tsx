@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { Stack } from '../../../components/Stack'
-import { Text } from '../../../components/Text'
+import { Text } from '../../../components/Typography/Text'
 import { calculateSubCategoryPrice, formatNumber } from '../helpers'
 import { OrderSummaryContext } from '../Provider'
 import type { SubCategoryType } from '../types'

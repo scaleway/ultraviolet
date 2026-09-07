@@ -4,7 +4,7 @@ import { SelectableCard } from '..'
 import { SelectInput } from '../../SelectInput'
 import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 
 export const Indented: StoryFn = args => {
   const [value2, onChange2] = useState({ 'label-20': true, 'label-21': false })

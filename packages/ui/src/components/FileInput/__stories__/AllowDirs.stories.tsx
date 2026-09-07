@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { FileInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import type { FilesType } from '../types'
 
 export const AllowDirectories: StoryFn<typeof FileInput> = args => {

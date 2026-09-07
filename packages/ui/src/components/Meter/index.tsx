@@ -2,7 +2,7 @@
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties } from 'react'
-import { Text } from '../Text'
+import { Text } from '../Typography/Text'
 import { colorMeter, meterStyle } from './styles.css'
 
 type Strength = {

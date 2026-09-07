@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react'
 import { Stack } from '../../../Stack'
-import { Text } from '../../../Text'
+import { Text } from '../../../Typography/Text'
 import type { OptionType } from '../../types'
 import { selectInputStyle } from '../../styles.css'
 

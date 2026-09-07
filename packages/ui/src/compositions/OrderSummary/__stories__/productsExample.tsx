@@ -1,8 +1,8 @@
 import { FranceFlag } from '@ultraviolet/icons/flags/FranceFlag'
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { Stack } from '../../../components/Stack'
-import { Text } from '../../../components/Text'
 import { Tooltip } from '../../../components/Tooltip'
+import { Text } from '../../../components/Typography/Text'
 
 const AdditionalInfo = () => (
   <Stack alignItems="center" direction="row" gap={0.5}>

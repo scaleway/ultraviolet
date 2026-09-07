@@ -2,7 +2,7 @@ import { EntrepriseSupportProductIcon } from '@ultraviolet/icons/product'
 import type { ComponentProps } from 'react'
 import { Button } from '../../../components/Button'
 import { Separator } from '../../../components/Separator'
-import type { Text } from '../../../components/Text'
+import type { Text } from '../../../components/Typography/Text'
 
 export const planStarter = {
   data: {

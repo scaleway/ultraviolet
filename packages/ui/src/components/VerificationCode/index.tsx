@@ -11,8 +11,8 @@ import type {
   ReactNode,
 } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
-import { Description } from '../Description'
-import { Label } from '../Label'
+import { Description } from '../Typography/Description'
+import { Label } from '../Typography/Label'
 import { verificationCodeStyle } from './styles.css'
 
 const DEFAULT_ON_FUNCTION = () => {}

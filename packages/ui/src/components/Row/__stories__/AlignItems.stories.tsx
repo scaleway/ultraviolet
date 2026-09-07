@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { Row } from '..'
 import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import { divWithBackground } from './DivWithBackground.css'
 
 export const AlignItems: StoryFn = args => (

@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { useMemo } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { Text } from '../../Text'
+import { Text } from '../../Typography/Text'
 import { TEXT_VARIANT } from './constant'
 import { badgeStyle } from './styles.css'
 

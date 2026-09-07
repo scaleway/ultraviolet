@@ -3,7 +3,7 @@
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
-import { Text } from '../Text'
+import { Text } from '../Typography/Text'
 import { noticeStyle } from './styles.css'
 
 type NoticeProps = {
