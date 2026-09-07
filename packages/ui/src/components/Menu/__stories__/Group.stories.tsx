@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import { Menu } from '..'
-import { Badge } from '../../Badge'
+import { Badge } from '../../Badges/Badge'
 import { Stack } from '../../Stack'
 import { Tooltip } from '../../Tooltip'
 import { DefaultDisclosure } from './Template.stories'

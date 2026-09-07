@@ -2,8 +2,8 @@ import { theme } from '@ultraviolet/themes'
 import { createVar } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import type { Color } from '../../theme'
+import { tagStyle } from '../Badges/Tag/styles.css'
 import { drawerStyle } from '../Drawer/styles.css'
-import { tagStyle } from '../Tag/styles.css'
 
 export const thicknessSeparator = createVar()
 

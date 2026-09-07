@@ -7,7 +7,7 @@ import {
 } from '@ultraviolet/illustrations'
 import { useState } from 'react'
 import { SelectableCard } from '..'
-import { Badge } from '../../Badge'
+import { Badge } from '../../Badges/Badge'
 import { Link } from '../../Link'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'

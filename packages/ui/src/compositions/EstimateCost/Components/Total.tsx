@@ -1,6 +1,6 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { Badge } from '../../../components/Badge'
+import { Badge } from '../../../components/Badges/Badge'
 import { Text } from '../../../components/Text'
 import { maximumFractionDigits, maximumFractionDigitsLong } from '../constants'
 import { useEstimateCost } from '../EstimateCostProvider'

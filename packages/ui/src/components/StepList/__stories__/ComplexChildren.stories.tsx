@@ -1,6 +1,6 @@
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { StepList } from '..'
-import { Badge } from '../../Badge'
+import { Badge } from '../../Badges/Badge'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Template } from './Template.stories'

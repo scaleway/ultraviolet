@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { Pagination } from '..'
-import { Badge } from '../../Badge'
+import { Badge } from '../../Badges/Badge'
 import { Stack } from '../../Stack'
 import { list } from './styles.css'
 

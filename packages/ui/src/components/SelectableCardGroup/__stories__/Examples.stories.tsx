@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { SelectableCardGroup } from '..'
-import { Badge } from '../../Badge'
+import { Badge } from '../../Badges/Badge'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import fr from './assets/fr.svg'

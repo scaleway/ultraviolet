@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, ReactNode } from 'react'
-import { Badge as BadgeUV } from '../../../components/Badge'
+import { Badge as BadgeUV } from '../../../components/Badges/Badge'
 import { Checkbox } from '../../../components/Checkbox'
 import { List } from '../../../components/List'
 import { Radio } from '../../../components/Radio'

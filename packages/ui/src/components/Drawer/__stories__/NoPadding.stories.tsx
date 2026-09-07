@@ -1,4 +1,4 @@
-import { Drawer } from '../../Drawer'
+import { Drawer } from '..'
 import { Separator } from '../../Separator'
 import { DefaultDisclosure, Template } from './Template.stories'
 

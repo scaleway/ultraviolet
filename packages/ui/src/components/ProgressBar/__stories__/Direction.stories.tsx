@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { ProgressBar } from '..'
-import { Badge } from '../../Badge'
+import { Badge } from '../../Badges/Badge'
 import { Stack } from '../../Stack'
 
 export const Direction: StoryFn = props => (

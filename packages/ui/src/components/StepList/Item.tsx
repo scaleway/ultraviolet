@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, ReactNode } from 'react'
-import { Bullet } from '../Bullet'
+import { Bullet } from '../Badges/Bullet'
 import { stepListStyle } from './styles.css'
 
 export type Sizes = 'small' | 'medium'

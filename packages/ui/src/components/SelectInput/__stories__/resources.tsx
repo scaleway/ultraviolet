@@ -1,7 +1,7 @@
 import { NetworkCategoryIcon } from '@ultraviolet/icons/category/NetworkCategoryIcon'
 import { EmailOutlineIcon } from '@ultraviolet/icons/EmailOutlineIcon'
-import { Badge } from '../../Badge'
-import { Bullet } from '../../Bullet'
+import { Badge } from '../../Badges/Badge'
+import { Bullet } from '../../Badges/Bullet'
 import { Button } from '../../Button'
 import { Text } from '../../Text'
 

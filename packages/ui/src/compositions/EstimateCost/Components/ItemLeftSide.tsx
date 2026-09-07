@@ -1,6 +1,6 @@
 import { HelpCircleOutlineIcon } from '@ultraviolet/icons/HelpCircleOutlineIcon'
 import { Children, cloneElement, isValidElement } from 'react'
-import { Badge } from '../../../components/Badge'
+import { Badge } from '../../../components/Badges/Badge'
 import { Stack } from '../../../components/Stack'
 import { Text } from '../../../components/Text'
 import { Tooltip } from '../../../components/Tooltip'

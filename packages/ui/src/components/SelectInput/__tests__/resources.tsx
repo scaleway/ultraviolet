@@ -1,4 +1,4 @@
-import { Badge } from '../../Badge'
+import { Badge } from '../../Badges/Badge'
 import { Text } from '../../Text'
 
 const reactNeptune = (

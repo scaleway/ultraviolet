@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Stack } from '../../Stack'
+import { Stack } from '..'
 import { Text } from '../../Text'
 import { child } from './styles.css'
 

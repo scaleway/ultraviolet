@@ -12,7 +12,7 @@ import type {
   ReactNode,
   Ref,
 } from 'react'
-import { Badge } from '../Badge'
+import { Badge } from '../Badges/Badge'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'

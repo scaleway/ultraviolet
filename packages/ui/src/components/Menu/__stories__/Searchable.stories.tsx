@@ -3,7 +3,7 @@ import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import type { ComponentProps, ReactNode } from 'react'
 import { Menu } from '..'
 import { Avatar } from '../../Avatar'
-import { Badge } from '../../Badge'
+import { Badge } from '../../Badges/Badge'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 
