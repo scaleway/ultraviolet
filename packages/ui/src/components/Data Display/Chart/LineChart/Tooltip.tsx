@@ -2,7 +2,7 @@
 
 import type { LineSeries, Point } from '@nivo/line'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { Text } from '../Typography/Text'
+import { Text } from '../../../Typography/Text'
 import { colorLine, lineChartStyle } from './styles.css'
 
 type LineChartTooltipProps = {

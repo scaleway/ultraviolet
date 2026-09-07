@@ -1,6 +1,6 @@
 'use client'
 
-import { Text } from '../Typography/Text'
+import { Text } from '../../../Typography/Text'
 import type { DataType } from './types'
 import { treeMapChartStyle } from './styles.css'
 
