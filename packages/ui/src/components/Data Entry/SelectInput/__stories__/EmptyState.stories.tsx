@@ -5,7 +5,7 @@ import {
 } from '@ultraviolet/illustrations'
 import { SelectInput } from '..'
 import { Link } from '../../../Action/Link'
-import { EmptyState as EmptyStateComponent } from '../../../EmptyState'
+import { EmptyState as EmptyStateComponent } from '../../../Data Display/EmptyState'
 import { Stack } from '../../../Layout/Stack'
 import { Text } from '../../../Typography/Text'
 import { Template } from './Template.stories'
