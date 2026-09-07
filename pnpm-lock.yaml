@@ -665,8 +665,8 @@ importers:
   packages/form:
     dependencies:
       '@scaleway/phonenumber':
-        specifier: 1.0.0
-        version: 1.0.0
+        specifier: 1.0.1
+        version: 1.0.1
       '@ultraviolet/icons':
         specifier: workspace:*
         version: link:../icons
@@ -874,8 +874,8 @@ importers:
         specifier: 2.0.2
         version: 2.0.2
       '@scaleway/phonenumber':
-        specifier: 1.0.0
-        version: 1.0.0
+        specifier: 1.0.1
+        version: 1.0.1
       '@scaleway/types':
         specifier: 1.2.0
         version: 1.2.0(typescript@7.0.2)
@@ -4155,9 +4155,9 @@ packages:
     peerDependencies:
       oxlint: '>=1.55.0'
 
-  '@scaleway/phonenumber@1.0.0':
-    resolution: {integrity: sha512-Sk0tNh2FPn/QRmTxImDGqCzPMehrqSJYetUiamgCztKl31Oh5DAOQPhDBSCs4sdjp5fHO3hJrjTT27fWNWZuVA==}
-    engines: {node: '>=24.x'}
+  '@scaleway/phonenumber@1.0.1':
+    resolution: {integrity: sha512-pYjnaGF8RmeXzpQOqRE/slEaxyonsqnZ4w+NkwdP8LumEezWZF1jblp4rD4EmbfJ10Hi/oQVwHPjsGQM3yuyvg==}
+    engines: {node: 24.x || 25.x || 26.x}
 
   '@scaleway/random-name@6.0.2':
     resolution: {integrity: sha512-fhR2aCzxoZlOZcCM42srbALdpdqMy79LwOK5mVf4sGG1uknn095mr5PQ/0/zwfk/FX2KycZwbKJzr4zP6CG3Zg==}
@@ -11579,7 +11579,7 @@ snapshots:
     dependencies:
       oxlint: 1.81.0(oxlint-tsgolint@7.0.2001)
 
-  '@scaleway/phonenumber@1.0.0':
+  '@scaleway/phonenumber@1.0.1':
     dependencies:
       awesome-phonenumber: 7.8.0
 
