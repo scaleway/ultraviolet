@@ -1,4 +1,4 @@
-import { Alert } from '../../../components/Alert'
+import { Alert } from '../../../components/Feedback/Alert'
 import { Template } from './Template.stories'
 
 const alert = (

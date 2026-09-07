@@ -1,5 +1,5 @@
 import type { ComponentProps, CSSProperties, Dispatch, JSX, ReactNode, SetStateAction } from 'react'
-import type { Alert } from '../../components/Alert'
+import type { Alert } from '../../components/Feedback/Alert'
 import type { Text } from '../../components/Typography/Text'
 import type EstimateCostLocales from './locales/en'
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { Skeleton } from '../Skeleton'
+import { Skeleton } from '../Feedback/Skeleton'
 import { Cell } from './Cell'
 import { tableStyle } from './styles.css'
 

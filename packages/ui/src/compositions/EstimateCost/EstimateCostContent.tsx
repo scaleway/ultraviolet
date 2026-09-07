@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
-import { Alert } from '../../components/Alert'
+import { Alert } from '../../components/Feedback/Alert'
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Typography/Text'
 import { CompactEstimateCost } from './CompactEstimateCost'

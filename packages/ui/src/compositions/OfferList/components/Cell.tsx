@@ -2,8 +2,8 @@
 
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
+import { Skeleton } from '../../../components/Feedback/Skeleton'
 import { List } from '../../../components/List'
-import { Skeleton } from '../../../components/Skeleton'
 import { useOfferListContext } from '../OfferListProvider'
 import { useOfferListRowContext } from './OfferListRowProvider'
 import { offerListStyle } from '../styles.css'

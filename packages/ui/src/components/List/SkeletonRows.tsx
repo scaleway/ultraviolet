@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { Skeleton } from '../Skeleton'
+import { Skeleton } from '../Feedback/Skeleton'
 import { Cell } from './Cell'
 import { ColumnProvider } from './ColumnProvider'
 import { useListContext } from './ListContext'

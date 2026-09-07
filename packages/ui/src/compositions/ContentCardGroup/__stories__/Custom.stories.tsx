@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { ContentCardGroup } from '..'
+import { Status } from '../../../components/Feedback/Status'
 import { Row } from '../../../components/Row'
-import { Status } from '../../../components/Status'
 import { Text } from '../../../components/Typography/Text'
 
 export const Custom: StoryFn<ComponentProps<typeof ContentCardGroup>> = ({ ...props }) => (

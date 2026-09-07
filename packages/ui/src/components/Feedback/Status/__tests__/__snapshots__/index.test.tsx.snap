@@ -1,0 +1,116 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`status > render animated 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__14rtfshc"
+    >
+      <span
+        class="styles__14rtfsh6 styles_sentiment_success__14rtfsha"
+      />
+      <span
+        class="styles__14rtfsh0 styles_sentiment_success__14rtfsh4"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`status > render with className 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="test styles__14rtfshc"
+    >
+      <span
+        class="styles__14rtfsh0 styles_sentiment_success__14rtfsh4"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`status > renders correctly with type="danger" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__14rtfshc"
+    >
+      <span
+        class="styles__14rtfsh0 styles_sentiment_danger__14rtfsh1"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`status > renders correctly with type="info" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__14rtfshc"
+    >
+      <span
+        class="styles__14rtfsh0 styles_sentiment_info__14rtfsh2"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`status > renders correctly with type="neutral" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__14rtfshc"
+    >
+      <span
+        class="styles__14rtfsh0 styles_sentiment_neutral__14rtfsh3"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`status > renders correctly with type="success" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__14rtfshc"
+    >
+      <span
+        class="styles__14rtfsh0 styles_sentiment_success__14rtfsh4"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`status > renders correctly with type="warning" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__14rtfshc"
+    >
+      <span
+        class="styles__14rtfsh0 styles_sentiment_warning__14rtfsh5"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;

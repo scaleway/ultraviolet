@@ -1,6 +1,6 @@
 'use client'
 
-import { Skeleton } from '../../components/Skeleton'
+import { Skeleton } from '../../components/Feedback/Skeleton'
 import { Stack } from '../../components/Stack'
 import { contentCardGroupStyle } from './styles.css'
 

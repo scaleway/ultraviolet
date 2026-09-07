@@ -4,7 +4,7 @@ import { LockIcon } from '@ultraviolet/icons/LockIcon'
 import type { ComponentProps } from 'react'
 import { InfoTable } from '..'
 import { Button } from '../../../components/Action/Button'
-import { Status } from '../../../components/Status'
+import { Status } from '../../../components/Feedback/Status'
 import { Tooltip } from '../../../components/Tooltip'
 
 export const ComplexExample: StoryFn<ComponentProps<typeof InfoTable>> = props => (

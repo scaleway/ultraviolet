@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Alert } from '../../Alert'
 import { Badge } from '../../Badges/Badge'
+import { Alert } from '../../Feedback/Alert'
 import { Stack } from '../../Stack'
 import { Text } from '../../Typography/Text'
 import { Card } from '../index'

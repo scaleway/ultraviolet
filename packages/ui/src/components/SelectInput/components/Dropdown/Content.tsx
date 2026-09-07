@@ -3,7 +3,7 @@
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { useEffect, useRef } from 'react'
 import type { KeyboardEvent, ReactNode } from 'react'
-import { Skeleton } from '../../../Skeleton'
+import { Skeleton } from '../../../Feedback/Skeleton'
 import { Stack } from '../../../Stack'
 import { Text } from '../../../Typography/Text'
 import { OPTION_SELECTOR } from '../../constants'
