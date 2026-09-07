@@ -32,10 +32,31 @@ const MyComponent = styled.div`
 ```
 
 <Card>
-  | **Do** | **Don't** | |--------|-----------| | ✅ **Do**: Use `space` for setting spacing (padding, margin, gap) to
-  maintain consistency. | 🚫 **Don't**: Use `space` on height, max-height, width, max-width. Use `sizing` for that. | |
-  | 🚫 **Don't**: Use `space` on border radius, `theme.radii` exists for that | | | 🚫 **Don't**: Use `space` on font
-  size and line height, `theme.typography` exists for that or use `<Text />` component |
+  <table>
+    <thead>
+      <tr>
+        <th>Do</th>
+        <th>Don't</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>✅ **Do**: Use `space` (padding, margin, gap) to maintain consistency.</td>
+        <td>🚫 **Don't**: Use `space` on height, max-height, width, max-width. Use `sizing` for that.</td>
+      </tr>
+      <tr>
+        <td />
+        <td>🚫 **Don't**: Use `space` on border radius, `theme.radii` exists for that</td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          🚫 **Don't**: Use `space` on font size and line height, `theme.typography` exists for that or use `<Text />`
+          component
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </Card>
 
 ### Sizing
@@ -63,11 +84,37 @@ const MyComponent = styled.div`
 ```
 
 <Card>
-  | **Do** | **Don't** | |--------|-----------| | ✅ **Do**: Use `sizing` for setting width and height (min and max
-  included) to maintain consistency. | 🚫 **Don't**: Use `sizing` on padding, margin, gap, and any other spacing
-  element. Use `space` for that. | | | 🚫 **Don't**: Use `sizing` on border and box shadow, we want to keep those in px
-  and not in rem | | | 🚫 **Don't**: Use `sizing` on border radius, `theme.radii` exists for that | | | 🚫 **Don't**:
-  Use `sizing` on font size and line height, `theme.typography` exists for that or use `<Text />` component |
+  <table>
+    <thead>
+      <tr>
+        <th>Do</th>
+        <th>Don't</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>✅ **Do**: Use `sizing` for setting width and height (min and max included) to maintain consistency.</td>
+        <td>
+          🚫 **Don't**: Use `sizing` on padding, margin, gap, and any other spacing element. Use `space` for that.{' '}
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>🚫 **Don't**: Use `sizing` on border and box shadow, we want to keep those in px and not in rem </td>
+      </tr>
+      <tr>
+        <td />
+        <td>🚫 **Don't**: Use `sizing` on border radius, `theme.radii` exists for that</td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          🚫 **Don't**: Use `sizing` on font size and line height, `theme.typography` exists for that or use `<Text />`
+          component
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </Card>
 <br />
 
