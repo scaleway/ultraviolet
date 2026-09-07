@@ -20,7 +20,7 @@ type ComponentInfo = {
     icon: ReactNode
     description: ReactNode
   }
-  a11yLevel: A11yLevel | null
+  a11yLevel: A11yLevel
   a11yStatus: ComponentA11yStatus
   auditCategories: AuditCategories
 }
