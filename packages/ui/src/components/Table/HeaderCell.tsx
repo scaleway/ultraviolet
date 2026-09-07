@@ -4,7 +4,7 @@ import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIco
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
-import { Tooltip } from '../Tooltip'
+import { Tooltip } from '../Overlay/Tooltip'
 import { Text } from '../Typography/Text'
 import { SortIcon } from './SortIcon'
 import { useTableContext } from './TableContext'

@@ -8,7 +8,7 @@ import { useImperativeHandle, useId, useRef, useState, forwardRef, useCallback, 
 import type { ChangeEvent, ComponentType, InputHTMLAttributes, ForwardedRef, Ref } from 'react'
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { Stack } from '../Layout/Stack'
-import { Tooltip } from '../Tooltip'
+import { Tooltip } from '../Overlay/Tooltip'
 import { Description } from '../Typography/Description'
 import type { DescriptionProps } from '../Typography/Description'
 import { Label } from '../Typography/Label'

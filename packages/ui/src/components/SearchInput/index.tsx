@@ -16,7 +16,7 @@ import {
 import type { Ref } from 'react'
 import { isClientSide } from '../../helpers/isClientSide'
 import { Stack } from '../Layout/Stack'
-import { Popup } from '../Popup'
+import { Popup } from '../Overlay/Popup'
 import { TextInput } from '../TextInput'
 import { KeyGroup } from './KeyGroup'
 import type { SearchInputProps } from './types'

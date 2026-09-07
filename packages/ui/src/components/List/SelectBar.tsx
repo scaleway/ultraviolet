@@ -2,8 +2,8 @@
 
 import { useMemo } from 'react'
 import type { ReactNode } from 'react'
-import { ActionBar } from '../ActionBar'
 import { Stack } from '../Layout/Stack'
+import { ActionBar } from '../Overlay/ActionBar'
 import { useListContext } from './ListContext'
 
 type SelectBarProps<T> = {

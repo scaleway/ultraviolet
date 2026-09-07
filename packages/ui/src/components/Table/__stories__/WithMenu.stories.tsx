@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import { Table } from '..'
 import { Button } from '../../Action/Button'
-import { Menu } from '../../Menu'
+import { Menu } from '../../Overlay/Menu'
 import { columns, data } from './resources'
 
 export const WithMenu: StoryFn<typeof Table> = ({ ...props }) => <Table {...props} />

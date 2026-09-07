@@ -1,7 +1,7 @@
 import { cn } from '@ultraviolet/utils'
 import type { ChangeEvent, KeyboardEvent, MouseEvent, RefObject } from 'react'
 import { Checkbox } from '../../../Checkbox'
-import { Tooltip } from '../../../Tooltip'
+import { Tooltip } from '../../../Overlay/Tooltip'
 import { useSelectInput } from '../../SelectInputProvider'
 import type { OptionType } from '../../types'
 import { DisplayOption } from './Option'

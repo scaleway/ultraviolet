@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import { Badge } from '../../../Badges/Badge'
-import { Tooltip } from '../../../Tooltip'
+import { Tooltip } from '../../../Overlay/Tooltip'
 import { Text } from '../../../Typography/Text'
 import { Stack } from '../../Stack'
 import { Card } from '../index'

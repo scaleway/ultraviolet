@@ -3,7 +3,7 @@ import { createVar } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import type { Color } from '../../../theme'
 import { tagStyle } from '../../Badges/Tag/styles.css'
-import { drawerStyle } from '../../Drawer/styles.css'
+import { drawerStyle } from '../../Overlay/Drawer/styles.css'
 
 export const thicknessSeparator = createVar()
 

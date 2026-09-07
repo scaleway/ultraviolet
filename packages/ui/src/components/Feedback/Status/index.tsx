@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties } from 'react'
-import { Tooltip } from '../../Tooltip'
+import { Tooltip } from '../../Overlay/Tooltip'
 import type { SENTIMENTS } from './constant'
 import { statusStyle } from './styles.css'
 

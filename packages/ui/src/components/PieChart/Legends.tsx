@@ -1,7 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { Tooltip } from '../Tooltip'
+import { Tooltip } from '../Overlay/Tooltip'
 import { Text } from '../Typography/Text'
 import { TooltipContent } from './Tooltip'
 import type { Data } from './types'

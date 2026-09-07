@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { Key } from '..'
 import { Button } from '../../../Action/Button'
 import { Stack } from '../../../Layout/Stack'
-import { Tooltip } from '../../../Tooltip'
+import { Tooltip } from '../../../Overlay/Tooltip'
 
 export const Usage: StoryFn<typeof Key> = () => {
   const [counter, setCounter] = useState(0)

@@ -18,7 +18,7 @@ import type {
   RefObject,
 } from 'react'
 import recursivelyGetChildrenString from '../../../helpers/recursivelyGetChildrenString'
-import { Tooltip } from '../../Tooltip'
+import { Tooltip } from '../../Overlay/Tooltip'
 import type { PROMINENCES } from './constants'
 import { linkStyle } from './styles.css'
 

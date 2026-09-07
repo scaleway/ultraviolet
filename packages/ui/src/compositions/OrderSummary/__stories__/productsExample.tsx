@@ -1,7 +1,7 @@
 import { FranceFlag } from '@ultraviolet/icons/flags/FranceFlag'
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { Stack } from '../../../components/Layout/Stack'
-import { Tooltip } from '../../../components/Tooltip'
+import { Tooltip } from '../../../components/Overlay/Tooltip'
 import { Text } from '../../../components/Typography/Text'
 
 const AdditionalInfo = () => (

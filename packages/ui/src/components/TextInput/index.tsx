@@ -7,7 +7,7 @@ import { forwardRef, useCallback, useId, useImperativeHandle, useRef, useState }
 import { hasHelperText } from '../../helpers/hasHelperText'
 import { Button } from '../Action/Button'
 import { Stack } from '../Layout/Stack'
-import { Tooltip } from '../Tooltip'
+import { Tooltip } from '../Overlay/Tooltip'
 import { Description } from '../Typography/Description'
 import { Label } from '../Typography/Label'
 import { PrefixSuffix } from './PrefixSuffix'

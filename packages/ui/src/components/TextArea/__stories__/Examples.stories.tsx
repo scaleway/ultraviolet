@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { TextArea } from '..'
 import { Badge } from '../../Badges/Badge'
 import { Stack } from '../../Layout/Stack'
+import { Tooltip } from '../../Overlay/Tooltip'
 import { TextInput } from '../../TextInput'
-import { Tooltip } from '../../Tooltip'
 import { Text } from '../../Typography/Text'
 
 const LONG_VALUE =

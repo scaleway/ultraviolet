@@ -2,7 +2,7 @@
 
 import { useLayoutEffect, useRef } from 'react'
 import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
-import { Popup } from '../../Popup'
+import { Popup } from '../../Overlay/Popup'
 import { POPUP_WIDTH } from '../constants'
 import { dateInputStyle } from '../styles.css'
 

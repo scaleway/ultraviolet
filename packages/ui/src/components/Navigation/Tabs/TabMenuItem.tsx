@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react'
 import type { ComponentProps } from 'react'
-import { Menu } from '../../Menu'
+import { Menu } from '../../Overlay/Menu'
 import { useTabsContext } from './TabsContext'
 import { tabsStyle } from './styles.css'
 

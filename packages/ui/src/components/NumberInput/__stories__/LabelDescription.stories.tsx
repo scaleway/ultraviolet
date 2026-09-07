@@ -3,7 +3,7 @@ import { AlertCircleOutlineIcon } from '@ultraviolet/icons/AlertCircleOutlineIco
 import type { ComponentProps } from 'react'
 import { Badge } from '../../Badges/Badge'
 import { Stack } from '../../Layout/Stack'
-import { Tooltip } from '../../Tooltip'
+import { Tooltip } from '../../Overlay/Tooltip'
 import { NumberInput } from '../index'
 
 export const LabelDescription: StoryFn = (args: ComponentProps<typeof NumberInput>) => (

@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import type { SENTIMENTS } from '../../../theme'
-import { Tooltip } from '../../Tooltip'
+import { Tooltip } from '../../Overlay/Tooltip'
 import type { PROMINENCES, SIZES } from './constants'
 import { bulletStyle } from './styles.css'
 

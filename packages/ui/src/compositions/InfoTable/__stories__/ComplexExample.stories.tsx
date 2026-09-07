@@ -5,7 +5,7 @@ import type { ComponentProps } from 'react'
 import { InfoTable } from '..'
 import { Button } from '../../../components/Action/Button'
 import { Status } from '../../../components/Feedback/Status'
-import { Tooltip } from '../../../components/Tooltip'
+import { Tooltip } from '../../../components/Overlay/Tooltip'
 
 export const ComplexExample: StoryFn<ComponentProps<typeof InfoTable>> = props => (
   <InfoTable {...props} header="Instance information">

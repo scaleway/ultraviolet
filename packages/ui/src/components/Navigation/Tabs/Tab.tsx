@@ -14,7 +14,7 @@ import type {
 } from 'react'
 import { Badge } from '../../Badges/Badge'
 import { Stack } from '../../Layout/Stack'
-import { Tooltip } from '../../Tooltip'
+import { Tooltip } from '../../Overlay/Tooltip'
 import { Text } from '../../Typography/Text'
 import { useTabsContext } from './TabsContext'
 import { tabsStyle } from './styles.css'

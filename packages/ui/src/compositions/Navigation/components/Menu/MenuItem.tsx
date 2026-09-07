@@ -1,7 +1,7 @@
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn } from '@ultraviolet/utils'
 import { Stack } from '../../../../components/Layout/Stack'
-import { Menu } from '../../../../components/Menu'
+import { Menu } from '../../../../components/Overlay/Menu'
 import { Text } from '../../../../components/Typography/Text'
 import { useNavigation } from '../../NavigationProvider'
 import type { ItemMenuItemType } from '../ComponentsTypes'

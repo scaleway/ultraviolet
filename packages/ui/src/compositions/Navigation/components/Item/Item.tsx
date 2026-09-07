@@ -6,7 +6,7 @@ import { Children, isValidElement, memo, useContext, useEffect, useMemo, useRef 
 import type { ComponentProps, CSSProperties, DragEvent, ElementType, ReactNode } from 'react'
 import type { Badge } from '../../../../components/Badges/Badge'
 import { Stack } from '../../../../components/Layout/Stack'
-import { Tooltip } from '../../../../components/Tooltip'
+import { Tooltip } from '../../../../components/Overlay/Tooltip'
 import { useNavigation } from '../../NavigationProvider'
 import type { ItemType, PinUnPinType } from '../../types'
 import { ItemMenu } from '../Menu/Menu'

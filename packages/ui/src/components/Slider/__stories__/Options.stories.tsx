@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Slider } from '..'
 import { Button } from '../../Action/Button'
 import { Stack } from '../../Layout/Stack'
-import { Modal } from '../../Modal'
+import { Modal } from '../../Overlay/Modal'
 import { Text } from '../../Typography/Text'
 
 const options = [
