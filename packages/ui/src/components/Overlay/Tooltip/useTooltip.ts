@@ -14,7 +14,7 @@ import {
   useDismiss,
   useInteractions,
 } from '@floating-ui/react'
-import { useState, useRef, useCallback } from 'react'
+import { useState, useRef, useCallback, useEffect } from 'react'
 import type { CSSProperties } from 'react'
 import type { TooltipPlacement } from './types'
 
@@ -49,13 +49,20 @@ export const useTooltip = ({ visible, placement, delay, transitionDuration, onOp
     context,
     middlewareData,
     placement: finalPlacement,
+    elements,
+    update,
   } = useFloating({
     open,
     onOpenChange: setOpen,
     middleware: [offset(8), flip(), shift(), arrow({ element: arrowRef, padding: 4 })],
-    whileElementsMounted: autoUpdate,
     placement: (placement.replace(/auto-?/, '') || 'top') as Placement,
   })
+
+  useEffect(() => {
+    if (!open || !elements.reference || !elements.floating) return
+    const cleanup = autoUpdate(elements.reference, elements.floating, update)
+    return cleanup
+  }, [open, elements.reference, elements.floating, update])
 
   const { isMounted, status } = useTransitionStatus(context, {
     duration: transitionDuration,

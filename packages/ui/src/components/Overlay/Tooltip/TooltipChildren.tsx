@@ -74,7 +74,7 @@ export const TooltipChildren = ({
     }
 
     return clearAriaAttribute
-  }, [tooltip, tabIndex, ariaAttributeName, ariaAttributeValue])
+  }, [tooltip.refs, tabIndex, ariaAttributeName, ariaAttributeValue])
 
   if (typeof children === 'function') {
     return children({
