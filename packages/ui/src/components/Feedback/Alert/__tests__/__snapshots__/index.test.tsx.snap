@@ -1,0 +1,585 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`alert > renders correctly small 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="small styles__1saelyy0 styles_sentiment_danger__1saelyy1 styles_size_small__1saelyy7 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <div
+        class="styles__1saelyy8 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_1rem_xxsmall__xf61n43v styles_justifyContent_space-between_xxsmall__xf61n477"
+      >
+        <div
+          class="styles__xf61n40 styles_alignItems_flex-start_xxsmall__xf61n4v styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+          style="--_1d8tbmb3: 1 1 auto;"
+        >
+          <svg
+            aria-hidden="true"
+            class="styles__1saelyyd uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzf uv_icons_1sbwqkz1k"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14M8 4a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 8 4m0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="styles__1saelyy9 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_0.25rem_xxsmall__xf61n45j"
+            style="--_1d8tbmb3: 1 1 auto;"
+          >
+            <span
+              class="style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_danger__1do42ls9 style_variant_bodySmallStronger__1do42lsm style_undefined_compound_0__1do42ls1a style_undefined_compound_48__1do42ls2m"
+            >
+              title
+            </span>
+            <p
+              class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a"
+            >
+              Sample Alert
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'danger' 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1saelyy0 styles_sentiment_danger__1saelyy1 styles_size_medium__1saelyy6 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <div
+        class="styles__1saelyy8 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_1rem_xxsmall__xf61n43v styles_justifyContent_space-between_xxsmall__xf61n477"
+      >
+        <div
+          class="styles__xf61n40 styles_alignItems_flex-start_xxsmall__xf61n4v styles_flexDirection_row_xxsmall__xf61n42j styles_gap_1rem_xxsmall__xf61n43v"
+          style="--_1d8tbmb3: 1 1 auto;"
+        >
+          <svg
+            aria-hidden="true"
+            class="styles__1saelyyd uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzg uv_icons_1sbwqkz1k"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="styles__1saelyy9 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_0.5rem_xxsmall__xf61n43p"
+            style="--_1d8tbmb3: 1 1 auto;"
+          >
+            <p
+              class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a"
+            >
+              Sample Alert
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'info' 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1saelyy0 styles_sentiment_info__1saelyy2 styles_size_medium__1saelyy6 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <div
+        class="styles__1saelyy8 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_1rem_xxsmall__xf61n43v styles_justifyContent_space-between_xxsmall__xf61n477"
+      >
+        <div
+          class="styles__xf61n40 styles_alignItems_flex-start_xxsmall__xf61n4v styles_flexDirection_row_xxsmall__xf61n42j styles_gap_1rem_xxsmall__xf61n43v"
+          style="--_1d8tbmb3: 1 1 auto;"
+        >
+          <svg
+            aria-hidden="true"
+            class="styles__1saelyyd uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzd uv_icons_1sbwqkzg uv_icons_1sbwqkz1m"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0M9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="styles__1saelyy9 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_0.5rem_xxsmall__xf61n43p"
+            style="--_1d8tbmb3: 1 1 auto;"
+          >
+            <p
+              class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a"
+            >
+              Sample Alert
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'neutral' 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1saelyy0 styles_sentiment_neutral__1saelyy3 styles_size_medium__1saelyy6 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <div
+        class="styles__1saelyy8 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_1rem_xxsmall__xf61n43v styles_justifyContent_space-between_xxsmall__xf61n477"
+      >
+        <div
+          class="styles__xf61n40 styles_alignItems_flex-start_xxsmall__xf61n4v styles_flexDirection_row_xxsmall__xf61n42j styles_gap_1rem_xxsmall__xf61n43v"
+          style="--_1d8tbmb3: 1 1 auto;"
+        >
+          <svg
+            aria-hidden="true"
+            class="styles__1saelyyd uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz4 uv_icons_1sbwqkz9 uv_icons_1sbwqkzg uv_icons_1sbwqkz1q"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+          >
+            <path
+              d="M9.6 1a6.6 6.6 0 0 0-3.308 12.312c.548.319.892.807.907 1.298a.6.6 0 0 0 .462.565q.422.1.859.156a.43.43 0 0 0 .48-.435v-3.729a5.4 5.4 0 0 1-.75-.137.6.6 0 1 1 .3-1.162 4.2 4.2 0 0 0 2.1 0 .6.6 0 0 1 .3 1.162 5.4 5.4 0 0 1-.75.137v3.729a.43.43 0 0 0 .48.435q.438-.056.859-.156A.6.6 0 0 0 12 14.61c.015-.491.359-.98.907-1.298A6.6 6.6 0 0 0 9.6 1"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M7.21 16.32a.6.6 0 0 1 .702-.478 9 9 0 0 0 3.376 0 .6.6 0 0 1 .224 1.179 10.3 10.3 0 0 1-3.824 0 .6.6 0 0 1-.477-.701m.592 1.955a.6.6 0 0 1 .66-.534 11 11 0 0 0 2.275 0 .6.6 0 1 1 .124 1.193 12 12 0 0 1-2.524 0 .6.6 0 0 1-.535-.659"
+            />
+          </svg>
+          <div
+            class="styles__1saelyy9 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_0.5rem_xxsmall__xf61n43p"
+            style="--_1d8tbmb3: 1 1 auto;"
+          >
+            <p
+              class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a"
+            >
+              Sample Alert
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'success' 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1saelyy0 styles_sentiment_success__1saelyy4 styles_size_medium__1saelyy6 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <div
+        class="styles__1saelyy8 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_1rem_xxsmall__xf61n43v styles_justifyContent_space-between_xxsmall__xf61n477"
+      >
+        <div
+          class="styles__xf61n40 styles_alignItems_flex-start_xxsmall__xf61n4v styles_flexDirection_row_xxsmall__xf61n42j styles_gap_1rem_xxsmall__xf61n43v"
+          style="--_1d8tbmb3: 1 1 auto;"
+        >
+          <svg
+            aria-hidden="true"
+            class="styles__1saelyyd uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkza uv_icons_1sbwqkzg uv_icons_1sbwqkz1j"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16m3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="styles__1saelyy9 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_0.5rem_xxsmall__xf61n43p"
+            style="--_1d8tbmb3: 1 1 auto;"
+          >
+            <p
+              class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a"
+            >
+              Sample Alert
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'warning' 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1saelyy0 styles_sentiment_warning__1saelyy5 styles_size_medium__1saelyy6 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <div
+        class="styles__1saelyy8 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_1rem_xxsmall__xf61n43v styles_justifyContent_space-between_xxsmall__xf61n477"
+      >
+        <div
+          class="styles__xf61n40 styles_alignItems_flex-start_xxsmall__xf61n4v styles_flexDirection_row_xxsmall__xf61n42j styles_gap_1rem_xxsmall__xf61n43v"
+          style="--_1d8tbmb3: 1 1 auto;"
+        >
+          <svg
+            aria-hidden="true"
+            class="styles__1saelyyd uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzc uv_icons_1sbwqkzg uv_icons_1sbwqkz1l"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="styles__1saelyy9 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_0.5rem_xxsmall__xf61n43p"
+            style="--_1d8tbmb3: 1 1 auto;"
+          >
+            <p
+              class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a"
+            >
+              Sample Alert
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1saelyy0 styles_sentiment_danger__1saelyy1 styles_size_medium__1saelyy6 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <div
+        class="styles__1saelyy8 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_1rem_xxsmall__xf61n43v styles_justifyContent_space-between_xxsmall__xf61n477"
+      >
+        <div
+          class="styles__xf61n40 styles_alignItems_flex-start_xxsmall__xf61n4v styles_flexDirection_row_xxsmall__xf61n42j styles_gap_1rem_xxsmall__xf61n43v"
+          style="--_1d8tbmb3: 1 1 auto;"
+        >
+          <svg
+            aria-hidden="true"
+            class="styles__1saelyyd uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzg uv_icons_1sbwqkz1k"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="styles__1saelyy9 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_0.5rem_xxsmall__xf61n43p"
+            style="--_1d8tbmb3: 1 1 auto;"
+          >
+            <p
+              class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a"
+            >
+              Sample Alert
+            </p>
+          </div>
+        </div>
+        <button
+          class="styles_medium__1saelyya styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_danger__8xt08s6 styles_size_small__8xt08sg styles_variant_filled__8xt08si styles_undefined_compound_2__8xt08sn"
+          type="button"
+        >
+          Button
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`alert > renders correctly with children as component 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1saelyy0 styles_sentiment_danger__1saelyy1 styles_size_medium__1saelyy6 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <div
+        class="styles__1saelyy8 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_1rem_xxsmall__xf61n43v styles_justifyContent_space-between_xxsmall__xf61n477"
+      >
+        <div
+          class="styles__xf61n40 styles_alignItems_flex-start_xxsmall__xf61n4v styles_flexDirection_row_xxsmall__xf61n42j styles_gap_1rem_xxsmall__xf61n43v"
+          style="--_1d8tbmb3: 1 1 auto;"
+        >
+          <svg
+            aria-hidden="true"
+            class="styles__1saelyyd uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzg uv_icons_1sbwqkz1k"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="styles__1saelyy9 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_0.5rem_xxsmall__xf61n43p"
+            style="--_1d8tbmb3: 1 1 auto;"
+          >
+            <p>
+              Sample Alert
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`alert > renders correctly with closable and onClose 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1saelyy0 styles_sentiment_danger__1saelyy1 styles_size_medium__1saelyy6 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <div
+        class="styles__1saelyy8 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_1rem_xxsmall__xf61n43v styles_justifyContent_space-between_xxsmall__xf61n477"
+      >
+        <div
+          class="styles__xf61n40 styles_alignItems_flex-start_xxsmall__xf61n4v styles_flexDirection_row_xxsmall__xf61n42j styles_gap_1rem_xxsmall__xf61n43v"
+          style="--_1d8tbmb3: 1 1 auto;"
+        >
+          <svg
+            aria-hidden="true"
+            class="styles__1saelyyd uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzg uv_icons_1sbwqkz1k"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="styles__1saelyy9 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_0.5rem_xxsmall__xf61n43p"
+            style="--_1d8tbmb3: 1 1 auto;"
+          >
+            <p
+              class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a"
+            >
+              Sample Alert
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="styles__1saelyyc styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_danger__8xt08s6 styles_size_xsmall__8xt08sh styles_variant_ghost__8xt08sj styles_undefined_compound_20__8xt08s15"
+        type="button"
+      >
+        <span
+          class="styles__ahdbou0"
+        >
+          close
+        </span>
+        <svg
+          aria-hidden="true"
+          class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkz9 uv_icons_1sbwqkzf uv_icons_1sbwqkz1i"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`alert > renders correctly with default values 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1saelyy0 styles_sentiment_danger__1saelyy1 styles_size_medium__1saelyy6 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <div
+        class="styles__1saelyy8 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_1rem_xxsmall__xf61n43v styles_justifyContent_space-between_xxsmall__xf61n477"
+      >
+        <div
+          class="styles__xf61n40 styles_alignItems_flex-start_xxsmall__xf61n4v styles_flexDirection_row_xxsmall__xf61n42j styles_gap_1rem_xxsmall__xf61n43v"
+          style="--_1d8tbmb3: 1 1 auto;"
+        >
+          <svg
+            aria-hidden="true"
+            class="styles__1saelyyd uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzg uv_icons_1sbwqkz1k"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="styles__1saelyy9 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_0.5rem_xxsmall__xf61n43p"
+            style="--_1d8tbmb3: 1 1 auto;"
+          >
+            <p
+              class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a"
+            >
+              Sample Alert
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`alert > renders correctly with disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1saelyy0 styles_sentiment_danger__1saelyy1 styles_size_medium__1saelyy6 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <div
+        class="styles__1saelyy8 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_1rem_xxsmall__xf61n43v styles_justifyContent_space-between_xxsmall__xf61n477"
+      >
+        <div
+          class="styles__xf61n40 styles_alignItems_flex-start_xxsmall__xf61n4v styles_flexDirection_row_xxsmall__xf61n42j styles_gap_1rem_xxsmall__xf61n43v"
+          style="--_1d8tbmb3: 1 1 auto;"
+        >
+          <svg
+            aria-hidden="true"
+            class="styles__1saelyyd uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzg uv_icons_1sbwqkz1k"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="styles__1saelyy9 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_0.5rem_xxsmall__xf61n43p"
+            style="--_1d8tbmb3: 1 1 auto;"
+          >
+            <p
+              class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a"
+            >
+              Sample Alert
+            </p>
+          </div>
+        </div>
+        <button
+          class="styles_medium__1saelyya styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_danger__8xt08s6 styles_size_small__8xt08sg styles_variant_filled__8xt08si styles_undefined_compound_2__8xt08sn"
+          disabled=""
+          type="button"
+        >
+          button
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`alert > renders correctly with title 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1saelyy0 styles_sentiment_danger__1saelyy1 styles_size_medium__1saelyy6 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <div
+        class="styles__1saelyy8 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_1rem_xxsmall__xf61n43v styles_justifyContent_space-between_xxsmall__xf61n477"
+      >
+        <div
+          class="styles__xf61n40 styles_alignItems_flex-start_xxsmall__xf61n4v styles_flexDirection_row_xxsmall__xf61n42j styles_gap_1rem_xxsmall__xf61n43v"
+          style="--_1d8tbmb3: 1 1 auto;"
+        >
+          <svg
+            aria-hidden="true"
+            class="styles__1saelyyd uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzb uv_icons_1sbwqkzg uv_icons_1sbwqkz1k"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="styles__1saelyy9 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437 styles_gap_0.5rem_xxsmall__xf61n43p"
+            style="--_1d8tbmb3: 1 1 auto;"
+          >
+            <span
+              class="style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_danger__1do42ls9 style_variant_bodyStronger__1do42lso style_undefined_compound_0__1do42ls1a style_undefined_compound_48__1do42ls2m"
+            >
+              title
+            </span>
+            <p
+              class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a"
+            >
+              Sample Alert
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

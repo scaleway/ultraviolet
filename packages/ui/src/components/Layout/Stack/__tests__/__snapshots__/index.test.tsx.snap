@@ -1,0 +1,184 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`stack > should render correctly max width 100% 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
+      style="--_1d8tbmb1: 100%;"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render correctly min width 100% 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
+      style="--_1d8tbmb2: 100%;"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render correctly with alignCenter 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render correctly with default props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+      <div>
+        third child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render correctly with row direction 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+      <div>
+        third child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render correctly with width 100% 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
+      style="--_1d8tbmb0: 100%;"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render correctly with wrap as boolean 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap_xxsmall__xf61n437"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render correctly with wrap as string 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_flexWrap_wrap-reverse_xxsmall__xf61n43d"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`stack > should render different direction and gap on different viewport sizes 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_large__xf61n42n styles_flexDirection_row_medium__xf61n42m styles_flexDirection_row_small__xf61n42l styles_flexDirection_row_xlarge__xf61n42o styles_flexDirection_column_xsmall__xf61n42e styles_flexDirection_column_xxsmall__xf61n42d styles_gap_2.5rem_large__xf61n44h styles_gap_2rem_medium__xf61n44a styles_gap_1.5rem_small__xf61n443 styles_gap_3rem_xlarge__xf61n44o styles_gap_1rem_xsmall__xf61n43w styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+      <div>
+        third child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

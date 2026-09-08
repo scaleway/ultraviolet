@@ -1,7 +1,7 @@
 import type { ComponentProps } from 'react'
-import { CopyButton } from '../../../components/CopyButton'
-import { Row } from '../../../components/Row'
-import { Text } from '../../../components/Text'
+import { CopyButton } from '../../../components/Action/CopyButton'
+import { Row } from '../../../components/Layout/Row'
+import { Text } from '../../../components/Typography/Text'
 import { InfoTableCell } from './Cell'
 import type { CellProps } from './Cell'
 

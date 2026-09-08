@@ -1,0 +1,1471 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`pagination > should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_justifyContent_space-between_xxsmall__xf61n477"
+    >
+      <div
+        class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Back
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            aria-current="true"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            2
+          </button>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            3
+          </button>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            4
+          </button>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            5
+          </button>
+        </div>
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Next
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`pagination > should render correctly component with disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_justifyContent_space-between_xxsmall__xf61n477"
+    >
+      <div
+        class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Back
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            disabled=""
+            type="button"
+          >
+            1
+          </button>
+          <span
+            class="styles_medium__1xkd25x5 styles__1xkd25x4 style__1do42ls0 style_disabled_true__1do42ls1 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_28__1do42ls22"
+            style="--textAlign__1giziax0: center;"
+          >
+            ...
+          </span>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            disabled=""
+            type="button"
+          >
+            4
+          </button>
+          <button
+            aria-current="true"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+            disabled=""
+            type="button"
+          >
+            5
+          </button>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            disabled=""
+            type="button"
+          >
+            6
+          </button>
+          <span
+            class="styles_medium__1xkd25x5 styles__1xkd25x4 style__1do42ls0 style_disabled_true__1do42ls1 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_28__1do42ls22"
+            style="--textAlign__1giziax0: center;"
+          >
+            ...
+          </span>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            disabled=""
+            type="button"
+          >
+            10
+          </button>
+        </div>
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Next
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`pagination > should render correctly component with pageTabCount 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_justifyContent_space-between_xxsmall__xf61n477"
+    >
+      <div
+        class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Back
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            1
+          </button>
+          <span
+            class="styles_medium__1xkd25x5 styles__1xkd25x4 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+            style="--textAlign__1giziax0: center;"
+          >
+            ...
+          </span>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            11
+          </button>
+          <button
+            aria-current="true"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+            type="button"
+          >
+            12
+          </button>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            13
+          </button>
+          <span
+            class="styles_medium__1xkd25x5 styles__1xkd25x4 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+            style="--textAlign__1giziax0: center;"
+          >
+            ...
+          </span>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            16
+          </button>
+        </div>
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Next
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`pagination > should render correctly small 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_justifyContent_space-between_xxsmall__xf61n477"
+    >
+      <div
+        class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Back
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            aria-current="true"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-current="false"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            2
+          </button>
+          <button
+            aria-current="false"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            3
+          </button>
+          <button
+            aria-current="false"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            4
+          </button>
+          <button
+            aria-current="false"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            5
+          </button>
+        </div>
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Next
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`pagination > should render correctly with hideFirstPage 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_justifyContent_space-between_xxsmall__xf61n477"
+    >
+      <div
+        class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Back
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <span
+            class="styles_medium__1xkd25x5 styles__1xkd25x4 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+            style="--textAlign__1giziax0: center;"
+          >
+            ...
+          </span>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            5
+          </button>
+          <button
+            aria-current="true"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+            type="button"
+          >
+            6
+          </button>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            7
+          </button>
+          <span
+            class="styles_medium__1xkd25x5 styles__1xkd25x4 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+            style="--textAlign__1giziax0: center;"
+          >
+            ...
+          </span>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            10
+          </button>
+        </div>
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Next
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`pagination > should render correctly with hideLastPage 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_justifyContent_space-between_xxsmall__xf61n477"
+    >
+      <div
+        class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Back
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            1
+          </button>
+          <span
+            class="styles_medium__1xkd25x5 styles__1xkd25x4 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+            style="--textAlign__1giziax0: center;"
+          >
+            ...
+          </span>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            5
+          </button>
+          <button
+            aria-current="true"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+            type="button"
+          >
+            6
+          </button>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            7
+          </button>
+          <span
+            class="styles_medium__1xkd25x5 styles__1xkd25x4 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+            style="--textAlign__1giziax0: center;"
+          >
+            ...
+          </span>
+        </div>
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Next
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`pagination > should render correctly with page < 1 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_justifyContent_space-between_xxsmall__xf61n477"
+    >
+      <div
+        class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Back
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            2
+          </button>
+        </div>
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Next
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`pagination > should render correctly with page > pageCount 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_justifyContent_space-between_xxsmall__xf61n477"
+    >
+      <div
+        class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Back
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            2
+          </button>
+        </div>
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Next
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`pagination > should render correctly with pageClick 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_justifyContent_space-between_xxsmall__xf61n477"
+    >
+      <div
+        class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Back
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-current="true"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+            type="button"
+          >
+            2
+          </button>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            3
+          </button>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            4
+          </button>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            5
+          </button>
+          <span
+            class="styles_medium__1xkd25x5 styles__1xkd25x4 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+            style="--textAlign__1giziax0: center;"
+          >
+            ...
+          </span>
+          <button
+            aria-current="false"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            10
+          </button>
+        </div>
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Next
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`pagination > should render correctly with pageCount is 1 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_justifyContent_space-between_xxsmall__xf61n477"
+    >
+      <div
+        class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Back
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            aria-current="true"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+            type="button"
+          >
+            1
+          </button>
+        </div>
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Next
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`pagination > should render correctly with perPage - default values 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_justifyContent_space-between_xxsmall__xf61n477"
+    >
+      <div
+        class="styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_1rem_xxsmall__xf61n43v"
+      >
+        <label
+          class="style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          id="_r_3e_"
+        >
+          Items per page
+        </label>
+        <div
+          aria-label="select-items-per-page"
+          class="styles__ei8oq30"
+          style="width: fit-content;"
+        >
+          <div
+            aria-controls="_r_3j_"
+            aria-describedby="_r_3j_"
+            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
+            tabindex="-1"
+          >
+            <div
+              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+            >
+              <div
+                aria-controls="_r_3j_"
+                aria-expanded="false"
+                aria-labelledby="_r_3e_"
+                class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_small__1xo4j4bc selectBar_state_neutral__1xo4j4be"
+                data-disabled="false"
+                data-readonly="false"
+                data-testid="select-input-select-items-per-page"
+                id="_r_3h_"
+                role="combobox"
+                tabindex="0"
+              >
+                <span
+                  class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+                >
+                  10
+                </span>
+                <div
+                  class="selectBar_small__1xo4j4b3 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkz9 uv_icons_1sbwqkzf uv_icons_1sbwqkz1i"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span
+          class="style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+        >
+          11-20 of 100 items"
+        </span>
+      </div>
+      <div
+        class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Back
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            aria-current="false"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-current="true"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+            type="button"
+          >
+            2
+          </button>
+          <button
+            aria-current="false"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            3
+          </button>
+          <button
+            aria-current="false"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            4
+          </button>
+          <button
+            aria-current="false"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            5
+          </button>
+          <span
+            class="styles_small__1xkd25x6 styles__1xkd25x4 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+            style="--textAlign__1giziax0: center;"
+          >
+            ...
+          </span>
+          <button
+            aria-current="false"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            10
+          </button>
+        </div>
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Next
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`pagination > should render correctly with perPage 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_justifyContent_space-between_xxsmall__xf61n477"
+    >
+      <div
+        class="styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_1rem_xxsmall__xf61n43v"
+      >
+        <label
+          class="style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          id="_r_4f_"
+        >
+          test
+        </label>
+        <div
+          aria-label="select-items-per-page"
+          class="styles__ei8oq30"
+          style="width: fit-content;"
+        >
+          <div
+            aria-controls="_r_4k_"
+            aria-describedby="_r_4k_"
+            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
+            tabindex="-1"
+          >
+            <div
+              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+            >
+              <div
+                aria-controls="_r_4k_"
+                aria-expanded="false"
+                aria-labelledby="_r_4f_"
+                class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_small__1xo4j4bc selectBar_state_neutral__1xo4j4be"
+                data-disabled="false"
+                data-readonly="false"
+                data-testid="select-input-select-items-per-page"
+                id="_r_4i_"
+                role="combobox"
+                tabindex="0"
+              >
+                <span
+                  class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+                >
+                  10
+                </span>
+                <div
+                  class="selectBar_small__1xo4j4b3 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkz9 uv_icons_1sbwqkzf uv_icons_1sbwqkz1i"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span
+          class="style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+        >
+          11-20 items
+        </span>
+      </div>
+      <div
+        class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Back
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            aria-current="false"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-current="true"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+            type="button"
+          >
+            2
+          </button>
+          <button
+            aria-current="false"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            3
+          </button>
+          <button
+            aria-current="false"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            4
+          </button>
+          <button
+            aria-current="false"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            5
+          </button>
+          <span
+            class="styles_small__1xkd25x6 styles__1xkd25x4 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+            style="--textAlign__1giziax0: center;"
+          >
+            ...
+          </span>
+          <button
+            aria-current="false"
+            class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            type="button"
+          >
+            10
+          </button>
+        </div>
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <button
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            type="button"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Next
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

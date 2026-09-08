@@ -4,8 +4,8 @@ import {
   EntrepriseSupportProductIcon,
 } from '@ultraviolet/icons/product'
 import type { ReactNode } from 'react'
-import { Button } from '../../../components/Button'
-import { Separator } from '../../../components/Separator'
+import { Button } from '../../../components/Action/Button'
+import { Separator } from '../../../components/Layout/Separator'
 import { domain, fees, gb, pipeline, ssl } from './features'
 import { Template } from './Template.stories'
 

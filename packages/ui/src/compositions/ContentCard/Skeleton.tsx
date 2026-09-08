@@ -1,8 +1,8 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { Skeleton as UVSkeleton } from '../../components/Skeleton'
-import { Stack } from '../../components/Stack'
+import { Skeleton as UVSkeleton } from '../../components/Feedback/Skeleton'
+import { Stack } from '../../components/Layout/Stack'
 import { contentCardStyle, skeletonHeightVar, skeletonWidthVar } from './styles.css'
 
 type SkeletonProps = {

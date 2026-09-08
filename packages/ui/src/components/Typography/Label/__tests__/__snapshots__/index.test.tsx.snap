@@ -1,0 +1,146 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`label > renders correctly large 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+    >
+      Label
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`label > renders correctly medium 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmallStrong__1do42lsl style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+    >
+      Label
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`label > renders correctly required 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_alignItems_flex-start_xxsmall__xf61n4v styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j"
+    >
+      <label
+        class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+      >
+        Label
+      </label>
+      <span
+        class="style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_danger__1do42ls9 style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_48__1do42ls2m"
+      >
+        *
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`label > renders correctly small 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmallStrong__1do42lsl style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+    >
+      Label
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`label > renders correctly with default props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <label
+      class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+    >
+      Label
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`label > renders correctly with htmlFor 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div>
+      <label
+        class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmallStrong__1do42lsl style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+        for="id"
+        id="id-label"
+      >
+        Label
+      </label>
+      <input
+        data-testid="test-input"
+        id="id"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`label > renders correctly with label description (ReactNode) 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <label
+        class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+      >
+        Label
+      </label>
+      <div>
+        test
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`label > renders correctly with label description (string) 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+    >
+      <label
+        class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+      >
+        Label
+      </label>
+      <span
+        class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a"
+      >
+        test
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

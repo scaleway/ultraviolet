@@ -1,0 +1,950 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`button > render as an anchor with href prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      href="http://scaleway.com"
+    >
+      Scaleway
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render large 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render medium 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render prop > element form > render correctly with render prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      href="/about"
+    >
+      About
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render prop > element form > render correctly with render prop and different sentiments 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      href="/about"
+    >
+      Primary
+    </a>
+    <a
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_danger__8xt08s6 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_2__8xt08sn"
+      href="/about"
+    >
+      Danger
+    </a>
+    <a
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_6__8xt08sr"
+      href="/about"
+    >
+      Neutral
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render prop > element form > render correctly with render prop and different variants 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      href="/about"
+    >
+      Filled
+    </a>
+    <a
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+      href="/about"
+    >
+      Outlined
+    </a>
+    <a
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
+      href="/about"
+    >
+      Ghost
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render prop > element form > render correctly with render prop and fullWidth 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_true__8xt08s4 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      href="/about"
+    >
+      About
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render prop > element form > render correctly with render prop and sizes 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      href="/about"
+    >
+      Large
+    </a>
+    <a
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      href="/about"
+    >
+      Medium
+    </a>
+    <a
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      href="/about"
+    >
+      Small
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render prop > function form > render correctly with render function 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      href="/about"
+    >
+      About
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render small 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render with a tooltip 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__18qbklt5"
+    >
+      <button
+        class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+        type="button"
+      >
+        Hello
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render with fullWidth 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_true__8xt08s4 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render with icon 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      disabled=""
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          d="M14.402 1.598a2.04 2.04 0 0 0-2.887 0L6.543 6.57a3.2 3.2 0 0 0-.696 1.04l-.989 2.388a.875.875 0 0 0 1.144 1.144l2.387-.99a3.2 3.2 0 0 0 1.041-.695l4.972-4.972a2.04 2.04 0 0 0 0-2.887"
+        />
+        <path
+          d="M4.208 2.75c-.805 0-1.458.653-1.458 1.458v7.584c0 .805.653 1.458 1.458 1.458h7.584c.805 0 1.458-.653 1.458-1.458V9.167a.875.875 0 1 1 1.75 0v2.625A3.21 3.21 0 0 1 11.792 15H4.208A3.21 3.21 0 0 1 1 11.792V4.208A3.21 3.21 0 0 1 4.208 1h2.625a.875.875 0 1 1 0 1.75z"
+        />
+      </svg>
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render with icon on the right 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      disabled=""
+      type="button"
+    >
+      Hello
+      <svg
+        aria-hidden="true"
+        class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          d="M14.402 1.598a2.04 2.04 0 0 0-2.887 0L6.543 6.57a3.2 3.2 0 0 0-.696 1.04l-.989 2.388a.875.875 0 0 0 1.144 1.144l2.387-.99a3.2 3.2 0 0 0 1.041-.695l4.972-4.972a2.04 2.04 0 0 0 0-2.887"
+        />
+        <path
+          d="M4.208 2.75c-.805 0-1.458.653-1.458 1.458v7.584c0 .805.653 1.458 1.458 1.458h7.584c.805 0 1.458-.653 1.458-1.458V9.167a.875.875 0 1 1 1.75 0v2.625A3.21 3.21 0 0 1 11.792 15H4.208A3.21 3.21 0 0 1 1 11.792V4.208A3.21 3.21 0 0 1 4.208 1h2.625a.875.875 0 1 1 0 1.75z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render with icon only 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      disabled=""
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M13.508 2.492a.61.61 0 0 0-.866 0l-.678.678.866.866.678-.678a.61.61 0 0 0 0-.866m-1.606 2.472-.866-.866-5.58 5.58c-.28.28-.486.626-.6 1.006l-.194.655.654-.195c.38-.114.726-.32 1.007-.6zm-.188-3.4a1.925 1.925 0 0 1 2.722 2.722l-7.185 7.186a3.7 3.7 0 0 1-1.56.93l-1.817.54a.656.656 0 0 1-.817-.816L3.6 10.31c.175-.59.495-1.126.93-1.56l6.043-6.044.464.464-.464-.464zM3.179 4.85a.866.866 0 0 0-.866.866v7.105c0 .479.387.867.866.867h7.105a.866.866 0 0 0 .866-.867V9.607a.656.656 0 1 1 1.313 0v3.214A2.18 2.18 0 0 1 10.283 15H3.18A2.18 2.18 0 0 1 1 12.821V5.716c0-1.203.975-2.179 2.179-2.179h3.214a.656.656 0 0 1 0 1.313z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render with isLoading with icon 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      disabled=""
+      type="button"
+    >
+      <svg
+        aria-label="Loading"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="20"
+        aria-valuetext="20%"
+        class="styles__1ehxqey2"
+        role="progressbar"
+        style="height: 1rem; width: 1rem;"
+        viewBox="0 0 100 100"
+      >
+        <circle
+          class="styles__1ehxqey1"
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke-width="16"
+        />
+        <circle
+          class="styles__1ehxqey3"
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="#ffffff"
+          stroke-dasharray="263.89378290154264"
+          stroke-dashoffset="211.11502632123413"
+          stroke-linecap="round"
+          stroke-width="16"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          d="M14.402 1.598a2.04 2.04 0 0 0-2.887 0L6.543 6.57a3.2 3.2 0 0 0-.696 1.04l-.989 2.388a.875.875 0 0 0 1.144 1.144l2.387-.99a3.2 3.2 0 0 0 1.041-.695l4.972-4.972a2.04 2.04 0 0 0 0-2.887"
+        />
+        <path
+          d="M4.208 2.75c-.805 0-1.458.653-1.458 1.458v7.584c0 .805.653 1.458 1.458 1.458h7.584c.805 0 1.458-.653 1.458-1.458V9.167a.875.875 0 1 1 1.75 0v2.625A3.21 3.21 0 0 1 11.792 15H4.208A3.21 3.21 0 0 1 1 11.792V4.208A3.21 3.21 0 0 1 4.208 1h2.625a.875.875 0 1 1 0 1.75z"
+        />
+      </svg>
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render with isLoading with icon variant 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M13.508 2.492a.61.61 0 0 0-.866 0l-.678.678.866.866.678-.678a.61.61 0 0 0 0-.866m-1.606 2.472-.866-.866-5.58 5.58c-.28.28-.486.626-.6 1.006l-.194.655.654-.195c.38-.114.726-.32 1.007-.6zm-.188-3.4a1.925 1.925 0 0 1 2.722 2.722l-7.185 7.186a3.7 3.7 0 0 1-1.56.93l-1.817.54a.656.656 0 0 1-.817-.816L3.6 10.31c.175-.59.495-1.126.93-1.56l6.043-6.044.464.464-.464-.464zM3.179 4.85a.866.866 0 0 0-.866.866v7.105c0 .479.387.867.866.867h7.105a.866.866 0 0 0 .866-.867V9.607a.656.656 0 1 1 1.313 0v3.214A2.18 2.18 0 0 1 10.283 15H3.18A2.18 2.18 0 0 1 1 12.821V5.716c0-1.203.975-2.179 2.179-2.179h3.214a.656.656 0 0 1 0 1.313z"
+          fill-rule="evenodd"
+        />
+      </svg>
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render with isLoading without icon 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      disabled=""
+      type="button"
+    >
+      <svg
+        aria-label="Loading"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="20"
+        aria-valuetext="20%"
+        class="styles__1ehxqey2"
+        role="progressbar"
+        style="height: 1rem; width: 1rem;"
+        viewBox="0 0 100 100"
+      >
+        <circle
+          class="styles__1ehxqey1"
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke-width="16"
+        />
+        <circle
+          class="styles__1ehxqey3"
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="#ffffff"
+          stroke-dasharray="263.89378290154264"
+          stroke-dashoffset="211.11502632123413"
+          stroke-linecap="round"
+          stroke-width="16"
+        />
+      </svg>
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render xsmall 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_xsmall__8xt08sh styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&black 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&black disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_black__8xt08s5 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_7__8xt08ss"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&danger 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&danger disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_danger__8xt08s6 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_2__8xt08sn"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&info 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&info disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_info__8xt08s7 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_3__8xt08so"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&neutral 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&neutral disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_6__8xt08sr"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&primary 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&primary disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&secondary 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&secondary disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_secondary__8xt08sa styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_1__8xt08sm"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&success 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&success disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_success__8xt08sb styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_4__8xt08sp"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&warning 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&warning disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_warning__8xt08sc styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_5__8xt08sq"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&white 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render filled&white disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_white__8xt08sd styles_size_large__8xt08se styles_variant_filled__8xt08si styles_undefined_compound_8__8xt08st"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&black 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&black disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_black__8xt08s5 styles_size_large__8xt08se styles_variant_ghost__8xt08sj styles_undefined_compound_25__8xt08s1a"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&danger 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&danger disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_danger__8xt08s6 styles_size_large__8xt08se styles_variant_ghost__8xt08sj styles_undefined_compound_20__8xt08s15"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&info 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&info disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_info__8xt08s7 styles_size_large__8xt08se styles_variant_ghost__8xt08sj styles_undefined_compound_21__8xt08s16"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&neutral 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&neutral disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_large__8xt08se styles_variant_ghost__8xt08sj styles_undefined_compound_24__8xt08s19"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&primary 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&primary disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&secondary 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&secondary disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_secondary__8xt08sa styles_size_large__8xt08se styles_variant_ghost__8xt08sj styles_undefined_compound_19__8xt08s14"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&success 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&success disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_success__8xt08sb styles_size_large__8xt08se styles_variant_ghost__8xt08sj styles_undefined_compound_22__8xt08s17"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&warning 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&warning disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_warning__8xt08sc styles_size_large__8xt08se styles_variant_ghost__8xt08sj styles_undefined_compound_23__8xt08s18"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&white 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render ghost&white disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_white__8xt08sd styles_size_large__8xt08se styles_variant_ghost__8xt08sj styles_undefined_compound_26__8xt08s1b"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&black 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&black disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_black__8xt08s5 styles_size_large__8xt08se styles_variant_outlined__8xt08sk styles_undefined_compound_16__8xt08s11"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&danger 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&danger disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_danger__8xt08s6 styles_size_large__8xt08se styles_variant_outlined__8xt08sk styles_undefined_compound_11__8xt08sw"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&info 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&info disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_info__8xt08s7 styles_size_large__8xt08se styles_variant_outlined__8xt08sk styles_undefined_compound_12__8xt08sx"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&neutral 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&neutral disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_large__8xt08se styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&primary 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&primary disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&secondary 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&secondary disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_secondary__8xt08sa styles_size_large__8xt08se styles_variant_outlined__8xt08sk styles_undefined_compound_10__8xt08sv"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&success 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&success disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_success__8xt08sb styles_size_large__8xt08se styles_variant_outlined__8xt08sk styles_undefined_compound_13__8xt08sy"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&warning 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&warning disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_warning__8xt08sc styles_size_large__8xt08se styles_variant_outlined__8xt08sk styles_undefined_compound_14__8xt08sz"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&white 1`] = `[Function]`;
+
+exports[`button > variant-sentiment-disabled combination > render outlined&white disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_white__8xt08sd styles_size_large__8xt08se styles_variant_outlined__8xt08sk styles_undefined_compound_17__8xt08s12"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > work with onPointerDown and onKeyDown 1`] = `[Function]`;

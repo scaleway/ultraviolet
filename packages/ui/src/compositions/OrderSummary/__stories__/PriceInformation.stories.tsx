@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { OrderSummary } from '..'
-import { Badge } from '../../../components/Badge'
-import { Stack } from '../../../components/Stack'
-import { Text } from '../../../components/Text'
+import { Badge } from '../../../components/Badges/Badge'
+import { Stack } from '../../../components/Layout/Stack'
+import { Text } from '../../../components/Typography/Text'
 import { categoryAZ, categoryDefault } from './productsExample'
 
 const elements = [categoryAZ, categoryDefault]

@@ -1,7 +1,7 @@
 'use client'
 
-import { Skeleton } from '../../components/Skeleton'
-import { Stack } from '../../components/Stack'
+import { Skeleton } from '../../components/Feedback/Skeleton'
+import { Stack } from '../../components/Layout/Stack'
 import { contentCardGroupStyle } from './styles.css'
 
 export const SkeletonCard = () => (

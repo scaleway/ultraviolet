@@ -7,8 +7,8 @@ import { capitalize } from '@ultraviolet/utils'
 import { useState } from 'react'
 import type { ComponentProps } from 'react'
 import { OptionSelector } from '..'
-import { Button } from '../../../components/Button'
-import { Stack } from '../../../components/Stack'
+import { Button } from '../../../components/Action/Button'
+import { Stack } from '../../../components/Layout/Stack'
 import type { ValueType } from '../__mock__/resources'
 
 const options = [

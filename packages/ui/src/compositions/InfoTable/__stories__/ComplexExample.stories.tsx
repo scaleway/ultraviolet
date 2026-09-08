@@ -3,9 +3,9 @@ import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIco
 import { LockIcon } from '@ultraviolet/icons/LockIcon'
 import type { ComponentProps } from 'react'
 import { InfoTable } from '..'
-import { Button } from '../../../components/Button'
-import { Status } from '../../../components/Status'
-import { Tooltip } from '../../../components/Tooltip'
+import { Button } from '../../../components/Action/Button'
+import { Status } from '../../../components/Feedback/Status'
+import { Tooltip } from '../../../components/Overlay/Tooltip'
 
 export const ComplexExample: StoryFn<ComponentProps<typeof InfoTable>> = props => (
   <InfoTable {...props} header="Instance information">

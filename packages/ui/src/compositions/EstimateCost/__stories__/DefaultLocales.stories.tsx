@@ -1,4 +1,4 @@
-import { Snippet } from '../../../components/Snippet'
+import { Snippet } from '../../../components/Data Display/Snippet'
 import locales from '../locales/en'
 
 export const DefaultLocales = () => <Snippet prefix="lines">{JSON.stringify(locales, null, 4)}</Snippet>
