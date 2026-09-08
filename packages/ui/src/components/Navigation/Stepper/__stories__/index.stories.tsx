@@ -10,10 +10,10 @@ export default {
   title: 'UI/Navigation/Stepper',
   parameters: {
     a11yStatus: {
-      perceivable: false,
-      operable: false,
-      understandable: false,
-      robust: false,
+      perceivable: undefined,
+      operable: undefined,
+      understandable: undefined,
+      robust: undefined,
     },
   },
 } as Meta

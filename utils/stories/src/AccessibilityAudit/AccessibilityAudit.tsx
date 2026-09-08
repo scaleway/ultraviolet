@@ -1,6 +1,7 @@
 import { linkTo } from '@storybook/addon-links'
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseCircleOutlineIcon } from '@ultraviolet/icons/CloseCircleOutlineIcon'
+import { HelpCircleOutlineIcon } from '@ultraviolet/icons/HelpCircleOutlineIcon'
 import { Button, Stack, Table, Text, Tooltip, ProgressBar, Link } from '@ultraviolet/ui'
 import { useState, useEffect } from 'react'
 import type { ReactNode } from 'react'
@@ -19,7 +20,7 @@ type ComponentInfo = {
     icon: ReactNode
     description: ReactNode
   }
-  a11yLevel: A11yLevel | null
+  a11yLevel: A11yLevel
   a11yStatus: ComponentA11yStatus
   auditCategories: AuditCategories
 }
@@ -95,17 +96,19 @@ const AccessibilityAudit = () => {
           Accessibility Levels
         </Text>
         <Stack gap={2} direction="row">
-          {Object.entries(A11Y_LEVELS).map(([key, { icon, label, description }]) => (
-            <Stack key={key} gap={1} justifyContent="left">
-              <Stack direction="row" gap={1} alignItems="center">
-                {icon}
-                <Text as="h3" variant="headingSmall" style={{ margin: 0 }}>
-                  {label}
-                </Text>
+          {Object.entries(A11Y_LEVELS)
+            .filter(([key]) => key !== 'unknown')
+            .map(([key, { icon, label, description }]) => (
+              <Stack key={key} gap={1} justifyContent="left">
+                <Stack direction="row" gap={1} alignItems="center">
+                  {icon}
+                  <Text as="h3" variant="headingSmall" style={{ margin: 0 }}>
+                    {label}
+                  </Text>
+                </Stack>
+                {description}
               </Stack>
-              {description}
-            </Stack>
-          ))}
+            ))}
         </Stack>
       </Stack>
 
@@ -186,32 +189,41 @@ const AccessibilityAudit = () => {
                       </Button>
                     </Table.Cell>
                     <Table.Cell>
-                      {component.a11yLevel ? (
+                      {component.a11yLevel === 'unknown' ? (
+                        <Stack direction="row" gap={0.5} alignItems="center">
+                          <HelpCircleOutlineIcon size="medium" sentiment="neutral" />
+                          <Text as="span" variant="body">
+                            Not audited
+                          </Text>
+                        </Stack>
+                      ) : (
                         <Stack direction="row" gap={0.5} alignItems="center">
                           {A11Y_LEVELS[component.a11yLevel].icon}
                           <Text as="span" variant="body">
                             {A11Y_LEVELS[component.a11yLevel].label}
                           </Text>
                         </Stack>
-                      ) : (
-                        <Text as="span" variant="body">
-                          -
-                        </Text>
                       )}
                     </Table.Cell>
                     <Table.Cell>
                       <Stack direction="row" gap={1}>
-                        {component.auditCategories.map(category => (
-                          <Text as="span" key={category.id} variant="bodySmall">
-                            <Tooltip text={category.label}>
-                              {category.completed ? (
-                                <CheckCircleIcon size="medium" sentiment="success" />
-                              ) : (
-                                <CloseCircleOutlineIcon size="medium" sentiment="danger" />
-                              )}
-                            </Tooltip>
+                        {component.a11yLevel !== 'unknown' ? (
+                          component.auditCategories.map(category => (
+                            <Text as="span" key={category.id} variant="bodySmall">
+                              <Tooltip text={category.label}>
+                                {category.completed ? (
+                                  <CheckCircleIcon size="medium" sentiment="success" />
+                                ) : (
+                                  <CloseCircleOutlineIcon size="medium" sentiment="danger" />
+                                )}
+                              </Tooltip>
+                            </Text>
+                          ))
+                        ) : (
+                          <Text as="span" variant="body">
+                            -
                           </Text>
-                        ))}
+                        )}
                       </Stack>
                     </Table.Cell>
                   </Table.Row>

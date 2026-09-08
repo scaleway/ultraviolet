@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import type { WCAG_PRINCIPLES } from './constants'
 
-export type A11yLevel = 'partial' | 'compliant' | 'certified'
+export type A11yLevel = 'unknown' | 'partial' | 'compliant' | 'certified'
 
 export type A11yLevelInfo = {
   level: A11yLevel
