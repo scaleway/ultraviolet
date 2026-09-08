@@ -73,7 +73,7 @@ export const PerPage = ({
       />
       <Text as="span" prominence="weak" sentiment="neutral" variant="body">
         {(page - 1) * perPage + 1}-{Math.min(page * perPage, numberOfItems)}{' '}
-        {numberOfItemsText ?? `of ${numberOfItems} items"`}
+        {numberOfItemsText ?? `of ${numberOfItems} items`}
       </Text>
     </Stack>
   )
