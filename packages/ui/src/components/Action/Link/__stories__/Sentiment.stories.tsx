@@ -1,27 +1,17 @@
-import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { Link } from '..'
 import { Stack } from '../../../Layout/Stack'
+import { SENTIMENTS } from '../constants'
 
 export const Sentiment = (props: ComponentProps<typeof Link>) => (
-  <>
-    <Link {...props}>Link to an internal page</Link>
-    <Link {...props} target="_blank">
-      Link that opens in a new tab
-    </Link>
-    <Link {...props} target="_blank" sentiment="primary">
-      Link to an internal page that opens in new tab
-    </Link>
-  </>
+  <Stack direction={'row'} gap={2}>
+    {SENTIMENTS.map(sentiment => (
+      <Link key={sentiment} sentiment={sentiment} {...props}>
+        {sentiment}
+      </Link>
+    ))}
+  </Stack>
 )
-
-Sentiment.decorators = [
-  StoryComponent => (
-    <Stack>
-      <StoryComponent />
-    </Stack>
-  ),
-] as Decorator[]
 
 Sentiment.parameters = {
   docs: {
