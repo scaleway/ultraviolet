@@ -51,7 +51,7 @@ Labeling.parameters = {
   docs: {
     description: {
       story:
-        'Several props are available to label a button or provide a description:\n- `accessibleLabel`: accessible name rendered in a `VisuallyHidden` element (replaces the deprecated `aria-label`).\n- `tooltipLabel`: label rendered in a `VisuallyHidden` element and displayed in a tooltip that is not linked to the button.\n- `tooltipDescription`: tooltip text used as the accessible description (`description` relation, replaces the deprecated `tooltip` prop).',
+        'Several props are available to label a button or provide a description:\n- `accessibleLabel`: accessible name rendered in a `VisuallyHidden` element (replaces the deprecated `aria-label`).\n- `tooltipLabel`: the button label is displayed in a tooltip (`label` relation).\n- `tooltipDescription`: tooltip text used as the accessible description (`description` relation, replaces the deprecated `tooltip` prop).',
     },
   },
 }

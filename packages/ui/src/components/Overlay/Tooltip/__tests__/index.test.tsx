@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { screen, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme } from '@utils/test'
@@ -96,32 +96,25 @@ describe('tooltip', () => {
       await userEvent.hover(screen.getByText('Hover me'))
       expect(onOpenChange).toHaveBeenCalledWith(true)
     })
+  })
 
-    it('should open on hover with relation="none" without linking to the trigger', async () => {
+  describe('relation="label" placement', () => {
+    it('should render the tooltip inline when closed and move it to the portal target when opened', async () => {
+      const portalTarget = document.createElement('div')
+      document.body.appendChild(portalTarget)
+
       renderWithTheme(
-        <Tooltip relation="none" text="the label">
+        <Tooltip portalTarget={portalTarget} relation="label" text="the label">
           <button type="button">Trigger</button>
         </Tooltip>,
       )
 
-      const trigger = screen.getByRole('button', { name: 'Trigger' })
-      expect(trigger).not.toHaveAccessibleName('the label')
-      expect(trigger).not.toHaveAccessibleDescription()
+      const trigger = screen.getByRole('button', { name: 'the label' })
+      expect(screen.getByRole('tooltip', { name: 'the label' })).toBeInTheDocument()
+      expect(within(portalTarget).queryByRole('tooltip')).toBeNull()
 
       await userEvent.hover(trigger)
-      expect(screen.getByRole('tooltip', { name: 'the label' })).toBeVisible()
-      expect(trigger).not.toHaveAccessibleName('the label')
-      expect(trigger).not.toHaveAccessibleDescription()
-    })
-
-    it('should keep the wrapper focusable with relation="none"', () => {
-      renderWithTheme(
-        <Tooltip relation="none" text="the label">
-          <span>Hover me</span>
-        </Tooltip>,
-      )
-
-      expect(screen.getByText('Hover me').parentElement).toHaveAttribute('tabindex', '0')
+      expect(within(portalTarget).getByRole('tooltip', { name: 'the label' })).toBeVisible()
     })
   })
 

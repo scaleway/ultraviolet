@@ -108,23 +108,6 @@ describe('tooltip - A11y', { tags: ['a11y'] }, () => {
       expect(trigger).not.toHaveAccessibleDescription()
     })
 
-    it('should open on hover with relation="none" without linking to the trigger', async () => {
-      renderWithTheme(
-        <Tooltip relation="none" text="tooltip content">
-          <button type="button">Trigger</button>
-        </Tooltip>,
-      )
-
-      const trigger = screen.getByRole('button', { name: 'Trigger' })
-      expect(trigger).not.toHaveAccessibleName('the label')
-      expect(trigger).not.toHaveAccessibleDescription()
-
-      await userEvent.hover(trigger)
-      expect(screen.getByRole('tooltip', { name: 'tooltip content' })).toBeVisible()
-      expect(trigger).not.toHaveAccessibleName('tooltip content')
-      expect(trigger).not.toHaveAccessibleDescription('tooltip content')
-    })
-
     it('should ADD the tooltip text to an existing description', async () => {
       renderWithTheme(
         <Tooltip delay={{ open: 0 }} text="tooltip">
