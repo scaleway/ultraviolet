@@ -1,6 +1,6 @@
 import type { ComponentProps } from 'react'
 import { Link } from '..'
-import { Stack } from '../../Stack'
+import { Stack } from '../../../Layout/Stack'
 
 const sizes = ['large', 'small', 'xsmall'] as const
 

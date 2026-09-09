@@ -2,6 +2,7 @@ import { useTheme } from '@ultraviolet/themes'
 import type { ComponentProps } from 'react'
 import { Link } from '..'
 import { Stack } from '../../../Layout/Stack'
+import { SENTIMENTS } from '../constants'
 
 export const Prominence = (props: ComponentProps<typeof Link>) => {
   const theme = useTheme()
@@ -24,8 +25,25 @@ export const Prominence = (props: ComponentProps<typeof Link>) => {
           External
         </Link>
       </Stack>
+
+      <Stack direction={'row'}>
+        {SENTIMENTS.map(sentiment => (
+          <Stack
+            key={sentiment}
+            style={{ background: (theme.colors[sentiment] as any).backgroundStrong, padding: theme.space[2] }}
+          >
+            <Link key={sentiment} sentiment={sentiment} {...props}>
+              {sentiment}
+            </Link>
+          </Stack>
+        ))}
+      </Stack>
     </Stack>
   )
+}
+
+Prominence.args = {
+  prominence: 'strong',
 }
 
 Prominence.parameters = {
