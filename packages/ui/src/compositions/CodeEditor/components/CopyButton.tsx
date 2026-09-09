@@ -11,14 +11,7 @@ export const CodeEditorCopyButton = ({
   copyButton: CodeEditorProps['copyButton']
   value: CodeEditorProps['value']
 }) => (
-  <CopyButton
-    copyText={typeof copyButton === 'string' ? '' : undefined} // avoid duplicate label with the tooltip
-    bordered
-    className={codeEditorStyle.copyButton}
-    sentiment="neutral"
-    size="small"
-    value={value}
-  >
+  <CopyButton bordered className={codeEditorStyle.copyButton} sentiment="neutral" size="small" value={value}>
     {typeof copyButton === 'string' ? copyButton : undefined}
   </CopyButton>
 )
