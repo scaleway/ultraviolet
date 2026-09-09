@@ -18,7 +18,7 @@ import type {
 } from 'react'
 import recursivelyGetChildrenString from '../../../helpers/recursivelyGetChildrenString'
 import { Tooltip } from '../../Overlay/Tooltip'
-import type { ProminenceType } from './constants'
+import type { LinkSentiment, ProminenceType } from './constants'
 import { linkStyle } from './styles.css'
 
 type LinkSizes = 'large' | 'small' | 'xsmall'
@@ -29,11 +29,9 @@ type LinkProps = {
   target?: HTMLAttributeAnchorTarget
   download?: string | boolean
   /**
-   * - "primary" is for a link to an internal page
-   * - "info" is for a link to an external page (which should also have `target="_blank"`)
    * @default "info" if target="_blank", "primary" otherwise.
    */
-  sentiment?: 'primary' | 'info'
+  sentiment?: LinkSentiment
   prominence?: ProminenceType
   size?: LinkSizes
   iconPosition?: LinkIconPosition

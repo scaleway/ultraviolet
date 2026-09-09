@@ -2,15 +2,15 @@ import { theme } from '@ultraviolet/themes'
 import { capitalize } from '@ultraviolet/utils'
 import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import type { ProminenceType } from './constants'
-import { PROMINENCE_VALUES, PROMINENCES } from './constants'
+import type { LinkSentiment, ProminenceType } from './constants'
+import { PROMINENCE_VALUES, PROMINENCES, SENTIMENTS } from './constants'
 
 const TRANSITION_DURATION = 250
 
-function getLinkStyle(sentiment: 'primary' | 'info', prominence: ProminenceType) {
+function getLinkStyle(sentiment: LinkSentiment, prominence: ProminenceType) {
   const definedProminence = capitalize(PROMINENCES[prominence])
-  const text = `text${definedProminence}` as keyof typeof theme.colors.primary
-  const textHover = `text${definedProminence}Hover` as keyof typeof theme.colors.primary
+  const text = `text${definedProminence}` as const
+  const textHover = `text${definedProminence}Hover` as const
 
   return {
     color: theme.colors[sentiment][text] ?? theme.colors.neutral.text,
@@ -36,8 +36,7 @@ const link = recipe({
   base: {
     border: 'none',
     padding: 0,
-    textDecoration: 'none',
-    textDecorationThickness: '1px',
+    textDecoration: 'underline 1px dotted',
     textUnderlineOffset: '3px',
     position: 'relative',
     cursor: 'pointer',
@@ -53,9 +52,11 @@ const link = recipe({
   variants: {
     sentiment: {
       primary: {},
+      success: {},
+      warning: {},
+      danger: {},
+      neutral: {},
       info: {
-        textDecorationLine: 'underline',
-        textDecorationStyle: 'dotted',
         selectors: {
           '&:visited, &:visited:hover, &:visited:focus, &:visited:active': {
             color: theme.colors.secondary.text,
@@ -81,22 +82,17 @@ const link = recipe({
       bodyStrong: makeVariant('bodyStrong'),
     },
   },
-  compoundVariants: PROMINENCE_VALUES.flatMap(prominence => [
-    {
-      variants: {
-        sentiment: 'primary' as const,
-        prominence,
+  compoundVariants: SENTIMENTS.flatMap(sentiment =>
+    PROMINENCE_VALUES.flatMap(prominence => [
+      {
+        variants: {
+          sentiment: sentiment,
+          prominence,
+        },
+        style: getLinkStyle(sentiment, prominence),
       },
-      style: getLinkStyle('primary', prominence),
-    },
-    {
-      variants: {
-        sentiment: 'info' as const,
-        prominence,
-      },
-      style: getLinkStyle('info', prominence),
-    },
-  ]),
+    ]),
+  ),
   defaultVariants: {
     prominence: 'default',
     oneLine: false,
