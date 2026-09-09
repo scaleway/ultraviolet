@@ -39,7 +39,7 @@ export const TooltipChildren = ({
 }: TooltipChildrenProps) => {
   const eventHandlers = tooltip.getReferenceProps()
 
-  const ariaAttributeName = relation === 'label' ? 'aria-labelledby' : 'aria-describedby'
+  const ariaAttributeName = relation === 'label' ? 'aria-labelledby' : relation === 'none' ? null : 'aria-describedby'
   const ariaAttributeValue = isTooltipVisible ? tooltipId : null
 
   const tooltipWrapperRef = useRef<HTMLDivElement>(null)
@@ -51,9 +51,18 @@ export const TooltipChildren = ({
 
     const focusableChild = tooltipWrapperRef.current.querySelector<HTMLElement>(FOCUSABLE_ELEMENTS)
     const reference = focusableChild || tooltipWrapperRef.current
-    const existingAriaValue = reference.getAttribute(ariaAttributeName)
 
     tooltip.refs.setReference(reference)
+
+    if (reference === tooltipWrapperRef.current && tooltipWrapperRef.current.tabIndex !== tabIndex) {
+      tooltipWrapperRef.current.tabIndex = tabIndex
+    }
+
+    if (!ariaAttributeName) {
+      return
+    }
+
+    const existingAriaValue = reference.getAttribute(ariaAttributeName)
 
     const clearAriaAttribute = () => {
       if (existingAriaValue) {
@@ -69,17 +78,13 @@ export const TooltipChildren = ({
       clearAriaAttribute()
     }
 
-    if (reference === tooltipWrapperRef.current && tooltipWrapperRef.current.tabIndex !== tabIndex) {
-      tooltipWrapperRef.current.tabIndex = tabIndex
-    }
-
     return clearAriaAttribute
   }, [tooltip, tabIndex, ariaAttributeName, ariaAttributeValue])
 
   if (typeof children === 'function') {
     return children({
       ...eventHandlers,
-      [ariaAttributeName]: ariaAttributeValue,
+      ...(ariaAttributeName ? { [ariaAttributeName]: ariaAttributeValue } : null),
       ref: tooltip.refs.setReference,
     })
   }

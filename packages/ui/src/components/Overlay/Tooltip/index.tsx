@@ -68,9 +68,10 @@ export type TooltipProps = {
    * Role of the tooltip in relation to its reference element
    * - use "description" only if the reference element already has an accessible label
    * - use "label" if the tooltip text should be the label of the reference element
+   * - use "none" if the tooltip should not be linked to the reference element
    * @default 'description'
    */
-  relation?: 'description' | 'label'
+  relation?: 'description' | 'label' | 'none'
   'data-testid'?: string
   /**
    * It will add `width: 100%` to the tooltip trigger container.

@@ -10,8 +10,8 @@ export const Labeling: StoryFn<typeof Button> = () => (
         <PencilIcon />
       </Button>
       <Text as="p" variant="bodySmall">
-        <code>accessibleLabel</code>: renders a <code>VisuallyHidden</code> element inside the button. The text becomes
-        the accessible name. Prefer this over the deprecated <code>aria-label</code> prop.
+        <code>accessibleLabel</code>: renders a hidden text inside the button as the accessible name. Prefer this over
+        the deprecated <code>aria-label</code> prop.
       </Text>
     </Stack>
 
@@ -20,8 +20,7 @@ export const Labeling: StoryFn<typeof Button> = () => (
         <PencilIcon />
       </Button>
       <Text as="p" variant="bodySmall">
-        <code>tooltipLabel</code>: the tooltip text becomes the accessible name (<code>aria-labelledby</code>). Use for
-        icon-only buttons that display a tooltip.
+        <code>tooltipLabel</code>: the button label is displayed in a tooltip.
       </Text>
     </Stack>
 
@@ -31,9 +30,8 @@ export const Labeling: StoryFn<typeof Button> = () => (
         Edit
       </Button>
       <Text as="p" variant="bodySmall">
-        <code>tooltipDescription</code>: the tooltip text becomes the accessible description (
-        <code>aria-describedby</code>). The button still needs an accessible name (here the visible text). Use to
-        provide auxiliary information.
+        <code>tooltipDescription</code>: the tooltip text becomes the accessible description. The button still needs an
+        accessible name (here the visible text). Use to provide auxiliary information.
       </Text>
     </Stack>
 
@@ -43,7 +41,7 @@ export const Labeling: StoryFn<typeof Button> = () => (
       </Button>
       <Text as="p" variant="bodySmall">
         <code>accessibleLabel</code> + <code>tooltipDescription</code>: an icon-only button with both an accessible name
-        and an auxiliary description shown on hover.
+        and an auxiliary description shown on hover. Use only if the icon is really explicit and does not need a label.
       </Text>
     </Stack>
   </Stack>
@@ -53,7 +51,7 @@ Labeling.parameters = {
   docs: {
     description: {
       story:
-        'Several props are available to label a button or provide a description:\n- `accessibleLabel`: accessible name rendered in a `VisuallyHidden` element (replaces the deprecated `aria-label`).\n- `tooltipLabel`: tooltip text used as the accessible name (`label` relation).\n- `tooltipDescription`: tooltip text used as the accessible description (`description` relation, replaces the deprecated `tooltip` prop).',
+        'Several props are available to label a button or provide a description:\n- `accessibleLabel`: accessible name rendered in a `VisuallyHidden` element (replaces the deprecated `aria-label`).\n- `tooltipLabel`: label rendered in a `VisuallyHidden` element and displayed in a tooltip that is not linked to the button.\n- `tooltipDescription`: tooltip text used as the accessible description (`description` relation, replaces the deprecated `tooltip` prop).',
     },
   },
 }

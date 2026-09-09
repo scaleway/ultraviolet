@@ -148,10 +148,19 @@ describe('button', () => {
     ))
 
   describe('tooltipLabel and tooltipDescription', () => {
-    it('renders tooltipLabel as the accessible name (label relation)', () => {
-      renderWithTheme(<Button tooltipLabel="More info">Hello</Button>)
+    it('renders tooltipLabel as the accessible name (label relation)', async () => {
+      renderWithTheme(
+        <Button tooltipLabel="More info">
+          <PencilOutlineIcon />
+        </Button>,
+      )
 
       const trigger = screen.getByRole('button', { name: 'More info' })
+      expect(screen.getByText('More info')).toBeInTheDocument()
+      expect(trigger).not.toHaveAccessibleDescription()
+
+      await userEvent.hover(trigger)
+      expect(trigger).toHaveAccessibleName('More info')
       expect(trigger).not.toHaveAccessibleDescription()
     })
 
@@ -169,7 +178,7 @@ describe('button', () => {
     it('uses tooltipLabel over tooltipDescription when both are set', () => {
       renderWithTheme(
         <Button tooltipDescription="ignored" tooltipLabel="the label">
-          Hello
+          <PencilOutlineIcon />
         </Button>,
       )
 

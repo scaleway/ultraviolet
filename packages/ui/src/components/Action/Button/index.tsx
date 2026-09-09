@@ -170,8 +170,8 @@ export const Button = forwardRef<Element, BaseButtonProps>(
     }, [sentiment, theme, variant])
 
     const tooltipText = tooltipLabel || tooltipDescription || tooltip
-    const tooltipRelation = tooltipLabel ? 'label' : 'description'
-    const computedAccessibleLabel = accessibleLabel ?? ariaLabel
+    const tooltipRelation = tooltipLabel ? 'none' : 'description'
+    const computedAccessibleLabel = accessibleLabel ?? tooltipLabel ?? ariaLabel
 
     const content = (
       <>
@@ -188,7 +188,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
       return (
         <Tooltip containerFullWidth={fullWidth} relation={tooltipRelation} text={tooltipText}>
           {renderElement(render, {
-            children,
+            children: content,
             className: computedClassName,
             'data-testid': dataTestId,
             'data-flip-id': dataFlipId,

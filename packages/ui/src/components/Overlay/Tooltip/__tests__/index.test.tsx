@@ -96,6 +96,33 @@ describe('tooltip', () => {
       await userEvent.hover(screen.getByText('Hover me'))
       expect(onOpenChange).toHaveBeenCalledWith(true)
     })
+
+    it('should open on hover with relation="none" without linking to the trigger', async () => {
+      renderWithTheme(
+        <Tooltip relation="none" text="the label">
+          <button type="button">Trigger</button>
+        </Tooltip>,
+      )
+
+      const trigger = screen.getByRole('button', { name: 'Trigger' })
+      expect(trigger).not.toHaveAccessibleName('the label')
+      expect(trigger).not.toHaveAccessibleDescription()
+
+      await userEvent.hover(trigger)
+      expect(screen.getByRole('tooltip', { name: 'the label' })).toBeVisible()
+      expect(trigger).not.toHaveAccessibleName('the label')
+      expect(trigger).not.toHaveAccessibleDescription()
+    })
+
+    it('should keep the wrapper focusable with relation="none"', () => {
+      renderWithTheme(
+        <Tooltip relation="none" text="the label">
+          <span>Hover me</span>
+        </Tooltip>,
+      )
+
+      expect(screen.getByText('Hover me').parentElement).toHaveAttribute('tabindex', '0')
+    })
   })
 
   describe('position / size', () => {
