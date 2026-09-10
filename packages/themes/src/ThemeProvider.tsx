@@ -27,13 +27,14 @@ type ThemeProviderProps = {
    */
   theme?: typeof consoleLightTheme
   children: ReactNode
+  cssLayer?: string
 }
 
 /**
  * ThemeProvider will apply generated global CSS variables to the application in the `<head>`.
  * If no theme is provided, it will default to `lightTheme`.
  */
-export const ThemeProvider = ({ children, theme = consoleLightTheme }: ThemeProviderProps) => {
+export const ThemeProvider = ({ children, theme = consoleLightTheme, cssLayer }: ThemeProviderProps) => {
   useLayoutEffect(() => {
     const styleId = 'uv-theme'
     const existingStyle = document.getElementById(styleId)
@@ -47,13 +48,14 @@ export const ThemeProvider = ({ children, theme = consoleLightTheme }: ThemeProv
         background-color: ${theme.colors.neutral.background};
       }
     `
+    const layeredCssString = cssLayer ? `@layer ${cssLayer} { ${cssString} }` : cssString
 
     if (existingStyle) {
-      existingStyle.textContent = cssString
+      existingStyle.textContent = layeredCssString
     } else {
       const style = document.createElement('style')
       style.id = styleId
-      style.textContent = cssString
+      style.textContent = layeredCssString
       document.head.appendChild(style)
     }
 
@@ -63,7 +65,7 @@ export const ThemeProvider = ({ children, theme = consoleLightTheme }: ThemeProv
         style.remove()
       }
     }
-  }, [theme])
+  }, [theme, cssLayer])
 
   return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
 }
