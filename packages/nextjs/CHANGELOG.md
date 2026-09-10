@@ -1,5 +1,13 @@
 # @ultraviolet/nextjs
 
+## 3.0.51
+
+### Patch Changes
+
+- Updated dependencies [[`167aaa6`](https://github.com/scaleway/ultraviolet/commit/167aaa656698d7a48aa94255774369792aa9570c), [`05e6ecd`](https://github.com/scaleway/ultraviolet/commit/05e6ecdb74e6bae5663b5250edc1fc44c984861d), [`167aaa6`](https://github.com/scaleway/ultraviolet/commit/167aaa656698d7a48aa94255774369792aa9570c), [`7bf6d35`](https://github.com/scaleway/ultraviolet/commit/7bf6d35912915c1e0c9001bc2eac89b86bfd5287), [`1046cd3`](https://github.com/scaleway/ultraviolet/commit/1046cd389ffd75bd5fd2b2f1c55758b6dfdbf631), [`a10cfa7`](https://github.com/scaleway/ultraviolet/commit/a10cfa7a50d2fca3886cf1db0841bacf6eee7f47), [`5a9975c`](https://github.com/scaleway/ultraviolet/commit/5a9975ca62b1f8b388a68cc2551672f9a9120973), [`c03beb2`](https://github.com/scaleway/ultraviolet/commit/c03beb22f424141d4b50b27195d5600c5af82299), [`044dafd`](https://github.com/scaleway/ultraviolet/commit/044dafd979163e6b4b2a1ea9b3952e94ecf3e8bf), [`577b0f9`](https://github.com/scaleway/ultraviolet/commit/577b0f9e4f080d5a6d9f69111a2cd951a330cfeb), [`c2c9ebe`](https://github.com/scaleway/ultraviolet/commit/c2c9ebec2f029e5d0117a8469c239281884156a1), [`b07a846`](https://github.com/scaleway/ultraviolet/commit/b07a846dfa6b229e7ffee449aeed4f56e08ba533), [`d45a4fd`](https://github.com/scaleway/ultraviolet/commit/d45a4fd3e90eecf1a909de99a7498c60ab0d833e), [`9d09e2b`](https://github.com/scaleway/ultraviolet/commit/9d09e2b9135f212d3859180d1d342de58fe048c1), [`ecc3e23`](https://github.com/scaleway/ultraviolet/commit/ecc3e230a1e21824d6cddbac5eadc73ffab90405)]:
+  - @ultraviolet/ui@3.25.0
+  - @ultraviolet/themes@3.1.12
+
 ## 3.0.50
 
 ### Patch Changes
