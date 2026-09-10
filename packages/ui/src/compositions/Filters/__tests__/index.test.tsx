@@ -525,5 +525,27 @@ describe('filters', () => {
       expect(screen.getByTestId('select-input-env')).toBeVisible()
       expect(screen.queryByRole('checkbox')).not.toBeInTheDocument()
     })
+
+    it('should be possible to hide the "clear all" button (main row only)', async () => {
+      renderWithTheme(
+        <Filters
+          config={[
+            {
+              type: 'multiselect',
+              name: 'env',
+              label: 'Environment',
+              selectAll: { label: 'All Environments' },
+              options: fiveOptions,
+            },
+          ]}
+          defaultValues={{ env: [] }}
+          labels={labels}
+          layout={{ mainFilters: [] }}
+          hideClearAllMainRow
+        />,
+      )
+
+      expect(screen.queryByRole('button', { name: 'Clear All' })).not.toBeInTheDocument()
+    })
   })
 })
