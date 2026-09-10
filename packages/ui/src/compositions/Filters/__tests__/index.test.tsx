@@ -540,8 +540,7 @@ describe('filters', () => {
           ]}
           defaultValues={{ env: [] }}
           labels={labels}
-          layout={{ mainFilters: [] }}
-          hideClearAllMainRow
+          layout={{ hideClearAll: true }}
         />,
       )
 
