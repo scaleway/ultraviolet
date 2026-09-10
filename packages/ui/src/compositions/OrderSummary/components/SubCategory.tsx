@@ -1,4 +1,5 @@
 import { AttachIcon } from '@ultraviolet/icons/AttachIcon'
+import { isNullOrUndefined } from '@ultraviolet/utils'
 import { NumberInput } from '../../../components/Data Entry/NumberInput'
 import { Stack } from '../../../components/Layout/Stack'
 import { Text } from '../../../components/Typography/Text'
@@ -55,10 +56,10 @@ export const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) =
       ) : null}
       <SubCategoryPrice subCategory={subCategory} />
     </Stack>
-    {subCategory.details ? (
+    {!isNullOrUndefined(subCategory.details) ? (
       <Stack className={orderSummaryStyle.details} direction="column" gap={0.5}>
         {subCategory.details.map((detail, index) =>
-          detail ? (
+          !isNullOrUndefined(detail) ? (
             <Text as="span" key={`${subCategory.title}-${index}`} sentiment="neutral" variant="bodySmall">
               {detail}
             </Text>

@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { renderWithTheme } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { OrderSummary } from '..'
 import {
@@ -12,6 +12,7 @@ import {
   categoryOptions,
   categoryRequest,
   categoryStorage,
+  falsyCategory,
   fixePrice,
   negativeItem,
   numberInputCategory,
@@ -33,14 +34,23 @@ const mockItems = [
 ]
 
 describe('orderSummary', () => {
-  it('should work with default props', () => shouldMatchSnapshot(<OrderSummary items={mockItems} />))
+  it('should work with default props', () => {
+    const { asFragment } = renderWithTheme(<OrderSummary items={mockItems} />)
 
-  it('should work with an empty list of item', () => shouldMatchSnapshot(<OrderSummary items={[]} />))
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should work without unitInput', () =>
-    shouldMatchSnapshot(
+  it('should work with an empty list of item', () => {
+    const { asFragment } = renderWithTheme(<OrderSummary items={[]} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should work without unitInput', () => {
+    const { asFragment } = renderWithTheme(
       <OrderSummary currency="EUR" header="summary" hideTimeUnit items={mockItems} localeFormat="en-EN" />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('should work with custom timeUnit', async () => {
     renderWithTheme(
@@ -68,20 +78,24 @@ describe('orderSummary', () => {
     expect(screen.getByTestId('total-price').textContent).toBe('€2.50')
   })
 
-  it('should work with children', () =>
-    shouldMatchSnapshot(
+  it('should work with children', () => {
+    const { asFragment } = renderWithTheme(
       <OrderSummary currency="EUR" header="summary" items={mockItems} localeFormat="en-EN">
         children
       </OrderSummary>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should work with footer', () =>
-    shouldMatchSnapshot(
+  it('should work with footer', () => {
+    const { asFragment } = renderWithTheme(
       <OrderSummary currency="EUR" footer="footer" header="summary" items={mockItems} localeFormat="en-EN" />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should work with price information', () =>
-    shouldMatchSnapshot(
+  it('should work with price information', () => {
+    const { asFragment } = renderWithTheme(
       <OrderSummary
         currency="EUR"
         footer="footer"
@@ -90,10 +104,12 @@ describe('orderSummary', () => {
         localeFormat="en-EN"
         priceInformation="Information"
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should work with price information boolean', () =>
-    shouldMatchSnapshot(
+  it('should work with price information boolean', () => {
+    const { asFragment } = renderWithTheme(
       <OrderSummary
         currency="EUR"
         footer="footer"
@@ -102,15 +118,19 @@ describe('orderSummary', () => {
         localeFormat="en-EN"
         priceInformation
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should work with price as a range', () =>
-    shouldMatchSnapshot(
+  it('should work with price as a range', () => {
+    const { asFragment } = renderWithTheme(
       <OrderSummary currency="EUR" footer="footer" header="summary" items={[rangePriceContent]} localeFormat="en-EN" />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should work with totalPriceInfo', () =>
-    shouldMatchSnapshot(
+  it('should work with totalPriceInfo', () => {
+    const { asFragment } = renderWithTheme(
       <OrderSummary
         currency="EUR"
         header="summary"
@@ -118,10 +138,12 @@ describe('orderSummary', () => {
         localeFormat="en-EN"
         totalPriceInfo="total price info"
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should work with totalPriceInfo and totalPriceInfoPlacement', () =>
-    shouldMatchSnapshot(
+  it('should work with totalPriceInfo and totalPriceInfoPlacement', () => {
+    const { asFragment } = renderWithTheme(
       <OrderSummary
         currency="EUR"
         header="summary"
@@ -130,10 +152,12 @@ describe('orderSummary', () => {
         totalPriceInfo="total price info"
         totalPriceInfoPlacement="right"
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should work with additionalInfo', () =>
-    shouldMatchSnapshot(
+  it('should work with additionalInfo', () => {
+    const { asFragment } = renderWithTheme(
       <OrderSummary
         additionalInfo="additional info"
         currency="EUR"
@@ -143,9 +167,11 @@ describe('orderSummary', () => {
       >
         children
       </OrderSummary>,
-    ))
-  it('should work with numberInputs', () =>
-    shouldMatchSnapshot(
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+  it('should work with numberInputs', () => {
+    const { asFragment } = renderWithTheme(
       <OrderSummary
         currency="EUR"
         header="summary"
@@ -153,7 +179,9 @@ describe('orderSummary', () => {
         localeFormat="en-EN"
         totalPriceInfo="total price info"
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('should work with discount in  %', () => {
     const { asFragment } = renderWithTheme(
@@ -225,26 +253,32 @@ describe('orderSummary', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('works with hideDetails', () =>
-    shouldMatchSnapshot(
+  it('works with hideDetails', () => {
+    const { asFragment } = renderWithTheme(
       <>
         <OrderSummary header="summary" hideDetails items={[categoryAZ]} />
         <OrderSummary discount={0.5} header="summary" hideDetails items={[categoryAZ]} />
       </>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('works compact', () =>
-    shouldMatchSnapshot(
+  it('works compact', () => {
+    const { asFragment } = renderWithTheme(
       <OrderSummary header="summary" items={[categoryAZ]} compact backgroundProminence="strong" calculatorIcon />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('works with calculator icon', () =>
-    shouldMatchSnapshot(
+  it('works with calculator icon', () => {
+    const { asFragment } = renderWithTheme(
       <OrderSummary header="summary" items={[categoryAZ]} compact backgroundProminence="default" calculatorIcon />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('works compact with total price info', () =>
-    shouldMatchSnapshot(
+  it('works compact with total price info', () => {
+    const { asFragment } = renderWithTheme(
       <OrderSummary
         header="summary"
         items={[categoryAZ]}
@@ -254,7 +288,9 @@ describe('orderSummary', () => {
         totalPriceInfo="Info"
         totalPriceInfoPlacement="left"
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('works with negative category price', () => {
     const { asFragment } = renderWithTheme(<OrderSummary header="summary" items={[categoryAZ, negativeItem]} />)
@@ -281,6 +317,24 @@ describe('orderSummary', () => {
 
     await userEvent.click(anchor1Link)
     await userEvent.click(anchor2Link)
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('display titles that are defined and falsy', async () => {
+    const { asFragment } = renderWithTheme(
+      <OrderSummary
+        currency="EUR"
+        discount={0.5}
+        fractionDigits={0}
+        header="summary"
+        items={[falsyCategory]}
+        localeFormat="en-EN"
+      />,
+    )
+
+    expect(screen.getByText('0')).toBeVisible()
+    expect(screen.getAllByText('€10')).toHaveLength(3) // price appears in category, sub-category and total price
 
     expect(asFragment()).toMatchSnapshot()
   })
