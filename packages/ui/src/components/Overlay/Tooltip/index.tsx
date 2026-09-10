@@ -181,7 +181,7 @@ export const Tooltip = ({
       </TooltipChildren>
 
       {shouldRenderTooltipElement ? (
-        portalTarget ? (
+        portalTarget && tooltip.isMounted ? (
           createPortal(<TooltipElement {...tooltipProps} />, portalTarget)
         ) : (
           <TooltipElement {...tooltipProps} />
