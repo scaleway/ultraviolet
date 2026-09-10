@@ -1,5 +1,21 @@
 # Change Log
 
+## 6.6.7
+
+### Patch Changes
+
+- [#6895](https://github.com/scaleway/ultraviolet/pull/6895) [`d45a4fd`](https://github.com/scaleway/ultraviolet/commit/d45a4fd3e90eecf1a909de99a7498c60ab0d833e) Thanks [@jsulpis](https://github.com/jsulpis)! - `Submit` now spreads all `Button` props, adding `accessibleLabel`, `tooltipLabel` and `tooltipDescription`.
+  
+  `Flag`: `accessibleLabel` is now a `string` (the flag's accessible name) instead of a boolean, and `className`/`aria-hidden` are now accepted via `SVGProps`.
+
+- [#6881](https://github.com/scaleway/ultraviolet/pull/6881) [`044dafd`](https://github.com/scaleway/ultraviolet/commit/044dafd979163e6b4b2a1ea9b3952e94ecf3e8bf) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/phonenumber` to `1.0.1`.
+
+- [#6884](https://github.com/scaleway/ultraviolet/pull/6884) [`ba719ff`](https://github.com/scaleway/ultraviolet/commit/ba719ff7481220130b46752cd6e2312929ee502a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.87.0`.
+- Updated dependencies [[`167aaa6`](https://github.com/scaleway/ultraviolet/commit/167aaa656698d7a48aa94255774369792aa9570c), [`05e6ecd`](https://github.com/scaleway/ultraviolet/commit/05e6ecdb74e6bae5663b5250edc1fc44c984861d), [`167aaa6`](https://github.com/scaleway/ultraviolet/commit/167aaa656698d7a48aa94255774369792aa9570c), [`7bf6d35`](https://github.com/scaleway/ultraviolet/commit/7bf6d35912915c1e0c9001bc2eac89b86bfd5287), [`1046cd3`](https://github.com/scaleway/ultraviolet/commit/1046cd389ffd75bd5fd2b2f1c55758b6dfdbf631), [`a10cfa7`](https://github.com/scaleway/ultraviolet/commit/a10cfa7a50d2fca3886cf1db0841bacf6eee7f47), [`d45a4fd`](https://github.com/scaleway/ultraviolet/commit/d45a4fd3e90eecf1a909de99a7498c60ab0d833e), [`5a9975c`](https://github.com/scaleway/ultraviolet/commit/5a9975ca62b1f8b388a68cc2551672f9a9120973), [`95730d0`](https://github.com/scaleway/ultraviolet/commit/95730d0b40736ba12c2c4bbc1dcd615a9797a6e4), [`360a3c1`](https://github.com/scaleway/ultraviolet/commit/360a3c11353ceb1ce959b632fd544c1d2a9836d6), [`c03beb2`](https://github.com/scaleway/ultraviolet/commit/c03beb22f424141d4b50b27195d5600c5af82299), [`044dafd`](https://github.com/scaleway/ultraviolet/commit/044dafd979163e6b4b2a1ea9b3952e94ecf3e8bf), [`577b0f9`](https://github.com/scaleway/ultraviolet/commit/577b0f9e4f080d5a6d9f69111a2cd951a330cfeb), [`c2c9ebe`](https://github.com/scaleway/ultraviolet/commit/c2c9ebec2f029e5d0117a8469c239281884156a1), [`b07a846`](https://github.com/scaleway/ultraviolet/commit/b07a846dfa6b229e7ffee449aeed4f56e08ba533), [`d45a4fd`](https://github.com/scaleway/ultraviolet/commit/d45a4fd3e90eecf1a909de99a7498c60ab0d833e), [`9d09e2b`](https://github.com/scaleway/ultraviolet/commit/9d09e2b9135f212d3859180d1d342de58fe048c1), [`ecc3e23`](https://github.com/scaleway/ultraviolet/commit/ecc3e230a1e21824d6cddbac5eadc73ffab90405), [`865d5b4`](https://github.com/scaleway/ultraviolet/commit/865d5b462e3a1307f6331598cc318862c9d2a106)]:
+  - @ultraviolet/ui@3.25.0
+  - @ultraviolet/icons@5.6.0
+  - @ultraviolet/themes@3.1.12
+
 ## 6.6.6
 
 ### Patch Changes
