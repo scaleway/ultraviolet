@@ -42,5 +42,6 @@ Playground.args = {
   layout: {
     mainFilters: ['name', 'status', 'env'],
     templateColumns: 'repeat(auto-fit, minmax(200px, 1fr)',
+    hideClearAll: false,
   },
 }
