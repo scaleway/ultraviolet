@@ -77,7 +77,7 @@ export const EmptyState = ({
               placement="center"
               prominence="strong"
               sentiment="neutral"
-              variant={size === 'small' ? 'bodyStrong' : 'headingSmall'}
+              variant={size === 'small' ? 'bodyStrong' : 'headingSmallStrong'}
             >
               {title}
             </Text>
