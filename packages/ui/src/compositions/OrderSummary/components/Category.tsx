@@ -1,4 +1,5 @@
 import { AttachIcon } from '@ultraviolet/icons/AttachIcon'
+import { isNullOrUndefined } from '@ultraviolet/utils'
 import { useContext } from 'react'
 import { NumberInput } from '../../../components/Data Entry/NumberInput'
 import { Stack } from '../../../components/Layout/Stack'
@@ -19,7 +20,7 @@ export const CategoryName = ({ category }: { category: ItemsType }) => {
     totalPriceWithDiscount: 0,
   }
 
-  return category.category ? (
+  return !isNullOrUndefined(category.category) ? (
     <Stack alignItems="center" direction="row" justifyContent="space-between" gap={2}>
       {category.additionalInfo ? (
         <Stack alignItems="center" direction="row" gap={1} wrap="wrap">

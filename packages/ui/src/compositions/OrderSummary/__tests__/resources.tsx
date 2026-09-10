@@ -161,3 +161,14 @@ export const anchorProduct = {
     },
   ],
 }
+
+export const falsyCategory = {
+  category: '',
+  subCategories: [
+    {
+      price: 10,
+      title: '',
+      details: [0],
+    },
+  ],
+}

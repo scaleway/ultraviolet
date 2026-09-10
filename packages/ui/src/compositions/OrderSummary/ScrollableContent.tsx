@@ -1,3 +1,4 @@
+import { isNullOrUndefined } from '@ultraviolet/utils'
 import { useContext } from 'react'
 import { Stack } from '../../components/Layout/Stack'
 import { CategoryName } from './components/Category'
@@ -11,7 +12,7 @@ export const ScrollableContent = () => {
   return (
     <Stack className={orderSummaryStyle.scrollableContainer} gap={3}>
       {items.map(category =>
-        Object.keys(category).length > 0 && category.category ? (
+        Object.keys(category).length > 0 && !isNullOrUndefined(category.category) ? (
           <Stack className={orderSummaryStyle.category} gap={1.5} key={category.category}>
             {category.subTitle ? (
               <Stack direction="column">
