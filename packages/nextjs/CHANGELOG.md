@@ -1,5 +1,12 @@
 # @ultraviolet/nextjs
 
+## 3.0.52
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @ultraviolet/ui@3.25.1
+
 ## 3.0.51
 
 ### Patch Changes
