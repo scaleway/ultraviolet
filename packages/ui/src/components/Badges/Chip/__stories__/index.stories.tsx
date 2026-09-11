@@ -16,10 +16,10 @@ export default {
   title: 'UI/Badges/Chip',
   parameters: {
     a11yStatus: {
-      perceivable: undefined,
-      operable: undefined,
-      understandable: undefined,
-      robust: undefined,
+      perceivable: false,
+      operable: false,
+      understandable: true,
+      robust: false,
     },
   },
 } as Meta<typeof Chip>
