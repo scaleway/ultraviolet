@@ -53,7 +53,7 @@ exports[`optionSelectorField > should render correctly 1`] = `
                         </div>
                         <div
                           class="cm-gutterElement"
-                          style="height: 14px;"
+                          style="height: 14px; margin-top: 4px;"
                         >
                           1
                         </div>
@@ -74,6 +74,7 @@ exports[`optionSelectorField > should render correctly 1`] = `
                       </div>
                     </div>
                     <div
+                      aria-autocomplete="list"
                       aria-multiline="true"
                       autocapitalize="off"
                       autocorrect="off"
@@ -188,6 +189,7 @@ exports[`optionSelectorField > should render correctly disabled 1`] = `
                       </div>
                     </div>
                     <div
+                      aria-autocomplete="list"
                       aria-multiline="true"
                       aria-readonly="true"
                       autocapitalize="off"
