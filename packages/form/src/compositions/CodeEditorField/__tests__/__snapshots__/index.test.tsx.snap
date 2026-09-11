@@ -53,7 +53,7 @@ exports[`optionSelectorField > should render correctly 1`] = `
                         </div>
                         <div
                           class="cm-gutterElement"
-                          style="height: 14px;"
+                          style="height: 14px; margin-top: 4px;"
                         >
                           1
                         </div>
@@ -74,122 +74,8 @@ exports[`optionSelectorField > should render correctly 1`] = `
                       </div>
                     </div>
                     <div
+                      aria-autocomplete="list"
                       aria-multiline="true"
-                      autocapitalize="off"
-                      autocorrect="off"
-                      class="cm-content"
-                      contenteditable="true"
-                      data-language="javascript"
-                      role="textbox"
-                      spellcheck="false"
-                      style="tab-size: 4;"
-                      translate="no"
-                      writingsuggestions="false"
-                    >
-                      <div
-                        class="cm-line"
-                      >
-                        <br />
-                      </div>
-                    </div>
-                    <div
-                      aria-hidden="true"
-                      class="cm-layer cm-layer-above cm-cursorLayer"
-                      style="z-index: 150; animation-duration: 1200ms;"
-                    />
-                    <div
-                      aria-hidden="true"
-                      class="cm-layer cm-selectionLayer"
-                      style="z-index: -2;"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`optionSelectorField > should render correctly disabled 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <form
-      novalidate=""
-      style="display: contents;"
-    >
-      <div
-        class="uv_xf61n40 uv_xf61n42d uv_xf61n43p"
-      >
-        <div
-          class="uv_1b8bj1w1 uv_xf61n40 uv_xf61n42d uv_xf61n45j"
-        >
-          <div
-            class="uv_1b8bj1we"
-          >
-            <div
-              class="uv_1b8bj1w5 uv_1b8bj1w3"
-              style="--uv_1b8bj1w0: none;"
-            >
-              <div
-                aria-disabled="true"
-                class="cm-theme"
-              >
-                <div
-                  class="cm-editor ͼ1 ͼ3 ͼ4 ͼ3u ͼ3t ͼ1p"
-                >
-                  <div
-                    aria-live="polite"
-                    class="cm-announced"
-                  />
-                  <div
-                    class="cm-scroller"
-                    tabindex="-1"
-                  >
-                    <div
-                      aria-hidden="true"
-                      class="cm-gutters cm-gutters-before"
-                      style="min-height: 14px; position: sticky;"
-                    >
-                      <div
-                        class="cm-gutter cm-lineNumbers"
-                      >
-                        <div
-                          class="cm-gutterElement"
-                          style="height: 0px; visibility: hidden; pointer-events: none;"
-                        >
-                          9
-                        </div>
-                        <div
-                          class="cm-gutterElement"
-                          style="height: 14px;"
-                        >
-                          1
-                        </div>
-                      </div>
-                      <div
-                        class="cm-gutter cm-foldGutter"
-                      >
-                        <div
-                          class="cm-gutterElement"
-                          style="height: 0px; visibility: hidden; pointer-events: none;"
-                        >
-                          <span
-                            title="Unfold line"
-                          >
-                            ›
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      aria-multiline="true"
-                      aria-readonly="true"
                       autocapitalize="off"
                       autocorrect="off"
                       class="cm-content"
