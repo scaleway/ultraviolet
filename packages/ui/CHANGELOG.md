@@ -1,5 +1,12 @@
 # Change Log
 
+## 3.25.1
+
+### Patch Changes
+
+- Updated dependencies [[`3619e8e`](https://github.com/scaleway/ultraviolet/commit/3619e8e3f62a39782979acca1e58df570d69cb86)]:
+  - @ultraviolet/animations@1.0.3
+
 ## 3.25.0
 
 ### Minor Changes
