@@ -74,7 +74,6 @@ const defaultConfig = defineConfig({
         inline: true,
       },
     },
-    setupFiles: ['vitest-localstorage-mock', 'vitest-canvas-mock'],
     testTimeout: 25_000,
   },
 })
