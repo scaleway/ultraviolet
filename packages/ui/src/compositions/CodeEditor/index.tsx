@@ -1,11 +1,11 @@
 'use client'
 
-import { langs } from '@uiw/codemirror-extensions-langs'
+import { languages } from '@codemirror/language-data'
 import { material } from '@uiw/codemirror-theme-material'
 import CodeMirror from '@uiw/react-codemirror'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { useId, useState } from 'react'
+import { useEffect, useId, useState } from 'react'
 import { Expandable } from '../../components/Action/Expandable'
 import { Stack } from '../../components/Layout/Stack'
 import { Description } from '../../components/Typography/Description'
@@ -15,6 +15,24 @@ import { CodeEditorCopyButton } from './components/CopyButton'
 import { CodeEditorExpandable } from './components/Expandable'
 import type { CodeEditorProps } from './type'
 import { codeEditorStyle, disabledStack, maxHeightVar } from './styles.css'
+
+type LoadedLanguage = Awaited<ReturnType<(typeof languages)[number]['load']>>
+
+const loadLanguage = (name: string): Promise<LoadedLanguage> => {
+  switch (name.toLowerCase()) {
+    case 'nix':
+      return import('@replit/codemirror-lang-nix').then(({ nix }) => nix())
+    case 'svelte':
+      return import('@replit/codemirror-lang-svelte').then(({ svelte }) => svelte())
+    case 'solidity':
+      return import('@replit/codemirror-lang-solidity').then(({ solidity }) => solidity)
+    default:
+      return (
+        languages.find(lang => lang.extensions.some(ext => ext.toLowerCase() === name.toLowerCase())) ??
+        languages.find(lang => lang.name.toLowerCase() === 'shell')!
+      ).load()
+  }
+}
 
 /**
  * A code editor is a specialized tool designed to help developers write, edit, and manage code efficiently.
@@ -47,9 +65,22 @@ export const CodeEditor = ({
   'aria-describedby': ariaDescribedBy,
 }: CodeEditorProps) => {
   const [expanded, setExpanded] = useState(false)
+  const [language, setLanguage] = useState<LoadedLanguage | null>(null)
   const expandableEnabled = expandableHeight !== undefined
 
   const helperId = useId()
+
+  useEffect(() => {
+    let cancelled = false
+    loadLanguage(extensions)
+      .then(loaded => {
+        if (!cancelled) setLanguage(loaded)
+      })
+      .catch(() => undefined)
+    return () => {
+      cancelled = true
+    }
+  }, [extensions])
 
   // Non-editable when disabled, readOnly or not-expanded
   const isEditable = !(disabled && readOnly) && (!expandableEnabled || expanded)
@@ -69,7 +100,7 @@ export const CodeEditor = ({
         className={className}
         data-testid={dataTestId}
         editable={isEditable}
-        extensions={[langs[extensions]?.() ?? langs['sh']]}
+        extensions={language ? [language] : []}
         height={expandableEnabled ? undefined : height}
         id={id}
         onBlur={onBlur}
