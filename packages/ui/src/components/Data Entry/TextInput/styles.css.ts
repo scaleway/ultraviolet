@@ -120,6 +120,10 @@ const input = style({
   fontSize: theme.typography.bodySmall.fontSize,
   color: theme.colors.neutral.text,
   selectors: {
+    '&:autofill': {
+      WebkitBoxShadow: 'inset 0 0 0 1000px transparent',
+      transition: 'background-color 9999s ease-in-out 0s',
+    },
     '&[data-size="large"]': {
       fontSize: theme.typography.body.fontSize,
     },

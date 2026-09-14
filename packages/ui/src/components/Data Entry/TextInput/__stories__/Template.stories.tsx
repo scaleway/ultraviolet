@@ -9,9 +9,6 @@ export const Template: StoryFn<typeof TextInput> = ({ ...args }) => {
 }
 
 Template.args = {
-  'aria-atomic': 'true',
-  'aria-live': 'polite',
   placeholder: 'Placeholder',
-  role: 'status',
-  value: 'Text',
+  type: 'text',
 }
