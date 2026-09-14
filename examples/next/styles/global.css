@@ -4,6 +4,9 @@ html {
 
 body {
   font-family: var(--typography-body-font-family);
+  background: var(
+    --color-neutral-background
+  ); /* it should override ThemeProvider's background-color, since a @layer is used */
 }
 
 a {

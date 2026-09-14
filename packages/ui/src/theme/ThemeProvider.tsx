@@ -27,6 +27,7 @@ type ThemeProviderProps = {
    */
   theme?: typeof consoleLightTheme
   children: ReactNode
+  cssLayer?: string
 }
 
 /**
@@ -44,7 +45,7 @@ type ThemeProviderProps = {
  * import '@ultraviolet/icons/styles'
  * ```
  */
-export const ThemeProvider = ({ children, theme = consoleLightTheme }: ThemeProviderProps) => {
+export const ThemeProvider = ({ children, theme = consoleLightTheme, cssLayer }: ThemeProviderProps) => {
   useLayoutEffect(() => {
     const styleId = 'uv-theme'
     const iconsStyleId = 'uv-icons'
@@ -62,12 +63,14 @@ export const ThemeProvider = ({ children, theme = consoleLightTheme }: ThemeProv
       }
     `
 
+    const layeredCssString = cssLayer ? `@layer ${cssLayer} { ${cssString} }` : cssString
+
     if (existingStyle) {
-      existingStyle.textContent = cssString
+      existingStyle.textContent = layeredCssString
     } else {
       const style = document.createElement('style')
       style.id = styleId
-      style.textContent = cssString
+      style.textContent = layeredCssString
       document.head.appendChild(style)
     }
 
@@ -91,7 +94,7 @@ export const ThemeProvider = ({ children, theme = consoleLightTheme }: ThemeProv
         iconsStyle.remove()
       }
     }
-  }, [theme])
+  }, [theme, cssLayer])
 
   return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
 }
