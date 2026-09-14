@@ -7,10 +7,9 @@ export const config = mergeConfig(defineConfig(defaultConfig), {
   build: {
     lib: {
       entry: {
-        'compositions/Navigation/index': resolve(import.meta.dirname, 'src/compositions/Navigation/index.tsx'),
-        'compositions/EstimateCost/index': resolve(import.meta.dirname, 'src/compositions/EstimateCost/index.tsx'),
         'compositions/Filters/index': resolve(import.meta.dirname, 'src/compositions/Filters/index.ts'),
-        composition: 'src/composition.ts',
+        'compositions/index': 'src/compositions/index.ts',
+        'compositions/styles': 'src/compositions/styles.ts',
         index: 'src/index.ts',
       },
       rolldownOptions: {
