@@ -1,5 +1,12 @@
 # Change Log
 
+## 5.6.1
+
+### Patch Changes
+
+- Updated dependencies [[`e1e31fe`](https://github.com/scaleway/ultraviolet/commit/e1e31fe5a3b4552a7fd6339cf1f67132e196b3a3)]:
+  - @ultraviolet/themes@3.1.13
+
 ## 5.6.0
 
 ### Minor Changes
