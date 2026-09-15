@@ -14,10 +14,10 @@ export default {
   title: 'UI/Action/CopyButton',
   parameters: {
     a11yStatus: {
-      perceivable: undefined,
-      operable: undefined,
-      understandable: undefined,
-      robust: undefined,
+      perceivable: true,
+      operable: true,
+      understandable: false,
+      robust: false,
     },
   },
 } as Meta<typeof CopyButton>
