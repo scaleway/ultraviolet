@@ -1,14 +1,24 @@
 import { theme } from '@ultraviolet/themes'
-import { capitalize } from '@ultraviolet/utils'
 import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import type { LinkSentiment, ProminenceType } from './constants'
-import { PROMINENCE_VALUES, PROMINENCES, SENTIMENTS } from './constants'
+import { PROMINENCE_VALUES, SENTIMENTS } from './constants'
 
 const TRANSITION_DURATION = 250
 
 function getLinkStyle(sentiment: LinkSentiment, prominence: ProminenceType) {
-  const definedProminence = capitalize(PROMINENCES[prominence])
+  if (prominence === 'stronger') {
+    return {
+      color: theme.colors.neutral.textStronger,
+      selectors: {
+        '&:hover, &:focus': {
+          color: theme.colors.neutral.textStrongerHover,
+        },
+      },
+    }
+  }
+
+  const definedProminence = prominence === 'strong' ? 'Strong' : ''
   const text = `text${definedProminence}` as const
   const textHover = `text${definedProminence}Hover` as const
 
@@ -47,6 +57,9 @@ const link = recipe({
       '&:active': {
         textDecorationThickness: '2px',
       },
+      '&[target="_blank"]:is(:visited, :visited:hover, :visited:focus, :visited:active)': {
+        color: theme.colors.secondary.text,
+      },
     },
   },
   variants: {
@@ -56,13 +69,7 @@ const link = recipe({
       warning: {},
       danger: {},
       neutral: {},
-      info: {
-        selectors: {
-          '&:visited, &:visited:hover, &:visited:focus, &:visited:active': {
-            color: theme.colors.secondary.text,
-          },
-        },
-      },
+      info: {},
     },
     prominence: Object.fromEntries(PROMINENCE_VALUES.map(prominence => [prominence, {}])),
     oneLine: {
@@ -76,10 +83,10 @@ const link = recipe({
         width: 'fit-content',
       },
     },
-    variant: {
-      captionStrong: makeVariant('captionStrong'),
-      bodySmallStrong: makeVariant('bodySmallStrong'),
-      bodyStrong: makeVariant('bodyStrong'),
+    size: {
+      xsmall: makeVariant('captionStrong'),
+      small: makeVariant('bodySmallStrong'),
+      large: makeVariant('bodyStrong'),
     },
   },
   compoundVariants: SENTIMENTS.flatMap(sentiment =>
@@ -96,11 +103,11 @@ const link = recipe({
   defaultVariants: {
     prominence: 'default',
     oneLine: false,
-    variant: 'bodyStrong',
+    size: 'large',
   },
 })
 
-const externalIcon = styleVariants({
+const openInNewIcon = styleVariants({
   large: {
     marginBottom: theme.space['0.5'],
   },
@@ -119,7 +126,7 @@ const defaultLink = style({})
 
 const iconLeft = style({
   marginRight: theme.space['0.5'],
-  transition: `transform ${TRANSITION_DURATION}ms ease-out`,
+  transition: `transform ${TRANSITION_DURATION}ms cubic-bezier(0.22, 1, 0.36, 1)`, // easeOutQuint
   selectors: {
     [`${defaultLink}:hover &, ${defaultLink}:focus &`]: {
       transform: `translate(${theme.space['0.25']}, 0)`,
@@ -127,13 +134,12 @@ const iconLeft = style({
   },
 })
 
-// Use calc() instead of simply "-" because theme.space[0.25] is a var()
 const iconRight = style({
   marginLeft: theme.space['0.5'],
-  transition: `transform ${TRANSITION_DURATION}ms ease-out`,
+  transition: `transform ${TRANSITION_DURATION}ms cubic-bezier(0.22, 1, 0.36, 1)`, // easeOutQuint
   selectors: {
     [`${defaultLink}:hover &, ${defaultLink}:focus &`]: {
-      transform: `translate(calc(${theme.space['0.25']}*-1), 0)`,
+      transform: `translate(calc(${theme.space['0.25']}*-1), 0)`, // Use calc() instead of simply "-" because theme.space[0.25] is a var()
     },
   },
 })
@@ -145,7 +151,7 @@ globalStyle(`${defaultLink} > * `, {
 
 export const linkStyle = {
   link,
-  externalIcon,
+  openInNewIcon,
   defaultLink,
   iconLeft,
   iconRight,

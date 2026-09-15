@@ -12,7 +12,7 @@ export const Examples = (args: ComponentProps<typeof Link>) => {
     <>
       <Text as="p" variant="body">
         To know more about that feature please visit{' '}
-        <Link {...props} href="https://example.com" target="_blank">
+        <Link {...props} href="https://scaleway.com" target="_blank">
           our website
         </Link>
         .
@@ -29,6 +29,10 @@ export const Examples = (args: ComponentProps<typeof Link>) => {
       </Text>
     </>
   )
+}
+
+Examples.args = {
+  href: '#',
 }
 
 Examples.decorators = [

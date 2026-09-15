@@ -2,24 +2,12 @@ import type { ComponentProps } from 'react'
 import { Link } from '..'
 import { Stack } from '../../../Layout/Stack'
 
-const sizes = ['large', 'small', 'xsmall'] as const
-
 export const Target = (props: ComponentProps<typeof Link>) => (
   <Stack gap={2}>
-    <Stack direction="row" alignItems="end" gap="3">
-      {sizes.map(size => (
-        <Link key={size} {...props} href={undefined} size={size} target="_blank">
-          {size}
-        </Link>
-      ))}
-    </Stack>
-    <Stack direction="row" alignItems="end" gap="3">
-      {sizes.map(size => (
-        <Link key={size} {...props} size={size} target="_blank">
-          {size}
-        </Link>
-      ))}
-    </Stack>
+    <Link {...props} href={undefined}>
+      External link not visited
+    </Link>
+    <Link {...props}>External link visited</Link>
   </Stack>
 )
 
