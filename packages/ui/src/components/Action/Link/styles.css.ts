@@ -1,12 +1,12 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import type { LinkSentiment, ProminenceType } from './constants'
-import { PROMINENCE_VALUES, SENTIMENTS } from './constants'
+import type { LinkSentiment, LinkProminence } from './constants'
+import { PROMINENCES, SENTIMENTS } from './constants'
 
 const TRANSITION_DURATION = 250
 
-function getLinkStyle(sentiment: LinkSentiment, prominence: ProminenceType) {
+function getLinkStyle(sentiment: LinkSentiment, prominence: LinkProminence) {
   if (prominence === 'stronger') {
     return {
       color: theme.colors.neutral.textStronger,
@@ -71,7 +71,7 @@ const link = recipe({
       neutral: {},
       info: {},
     },
-    prominence: Object.fromEntries(PROMINENCE_VALUES.map(prominence => [prominence, {}])),
+    prominence: Object.fromEntries(PROMINENCES.map(prominence => [prominence, {}])),
     oneLine: {
       true: {
         whiteSpace: 'nowrap',
@@ -90,7 +90,7 @@ const link = recipe({
     },
   },
   compoundVariants: SENTIMENTS.flatMap(sentiment =>
-    PROMINENCE_VALUES.flatMap(prominence => [
+    PROMINENCES.flatMap(prominence => [
       {
         variants: {
           sentiment: sentiment,

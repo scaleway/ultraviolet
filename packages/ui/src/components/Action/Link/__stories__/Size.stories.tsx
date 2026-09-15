@@ -2,11 +2,10 @@ import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { Link } from '..'
 import { Stack } from '../../../Layout/Stack'
-
-const sizes: ComponentProps<typeof Link>['size'][] = ['large', 'small', 'xsmall']
+import { SIZES } from '../constants'
 
 export const Size = (props: ComponentProps<typeof Link>) =>
-  sizes.map(size => (
+  SIZES.map(size => (
     <Link key={size} {...props} size={size}>
       {size}
     </Link>
