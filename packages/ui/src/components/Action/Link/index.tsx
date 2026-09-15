@@ -18,11 +18,8 @@ import type {
 } from 'react'
 import recursivelyGetChildrenString from '../../../helpers/recursivelyGetChildrenString'
 import { Tooltip } from '../../Overlay/Tooltip'
-import type { LinkSentiment, ProminenceType } from './constants'
+import type { LinkSentiment, LinkProminence, LinkSize } from './constants'
 import { linkStyle } from './styles.css'
-
-type LinkSizes = 'large' | 'small' | 'xsmall'
-type LinkIconPosition = 'left' | 'right'
 
 type LinkProps = {
   children: ReactNode
@@ -32,9 +29,9 @@ type LinkProps = {
    * @default "info" if target="_blank", "primary" otherwise.
    */
   sentiment?: LinkSentiment
-  prominence?: ProminenceType
-  size?: LinkSizes
-  iconPosition?: LinkIconPosition
+  prominence?: LinkProminence
+  size?: LinkSize
+  iconPosition?: 'left' | 'right'
   rel?: AnchorHTMLAttributes<HTMLAnchorElement>['rel']
   className?: string
   // For react router shouldn't be used directly

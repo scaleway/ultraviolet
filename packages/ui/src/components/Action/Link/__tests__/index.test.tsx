@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { forwardRef } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Link } from '..'
-import { PROMINENCE_VALUES } from '../constants'
+import { PROMINENCES } from '../constants'
 
 // Mock component simulating Next.js Link
 const MockNextLink = forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }>(
@@ -30,14 +30,12 @@ describe('link', () => {
   })
 
   describe('prominence', () => {
-    it.each(PROMINENCE_VALUES.map(prominence => [`render prominence ${prominence}`, prominence]))(
-      '%s',
-      (_, prominence) =>
-        shouldMatchSnapshot(
-          <Link href="/" prominence={prominence}>
-            Hello
-          </Link>,
-        ),
+    it.each(PROMINENCES.map(prominence => [`render prominence ${prominence}`, prominence]))('%s', (_, prominence) =>
+      shouldMatchSnapshot(
+        <Link href="/" prominence={prominence}>
+          Hello
+        </Link>,
+      ),
     )
   })
 
