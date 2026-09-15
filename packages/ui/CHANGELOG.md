@@ -1,5 +1,23 @@
 # Change Log
 
+## 3.25.1
+
+### Patch Changes
+
+- [#6907](https://github.com/scaleway/ultraviolet/pull/6907) [`4e86a06`](https://github.com/scaleway/ultraviolet/commit/4e86a06bc8291313526edcc5dbde001c5260e860) Thanks [@lisalupi](https://github.com/lisalupi)! - `TextInput`: override browser's default "autofill" style
+
+- [#6908](https://github.com/scaleway/ultraviolet/pull/6908) [`e1e31fe`](https://github.com/scaleway/ultraviolet/commit/e1e31fe5a3b4552a7fd6339cf1f67132e196b3a3) Thanks [@lisalupi](https://github.com/lisalupi)! - `ThemeProvider`: new prop `cssLayer` to wrap default theme (css variables added in `:root` as well as default color and background-color) in a css layer
+
+- [#6918](https://github.com/scaleway/ultraviolet/pull/6918) [`c63be91`](https://github.com/scaleway/ultraviolet/commit/c63be910070f8e540ffc31f26f3462b6ad4da606) Thanks [@jsulpis](https://github.com/jsulpis)! - add `compositions/index.js` and `compositions/styles.js` back in the `dist` folder
+
+- [#6912](https://github.com/scaleway/ultraviolet/pull/6912) [`fa0ce56`](https://github.com/scaleway/ultraviolet/commit/fa0ce56e71e173668077d678fcf239a75a7f6ed6) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/use-clipboard` to `1.1.1`.
+
+- [#6911](https://github.com/scaleway/ultraviolet/pull/6911) [`015ccd6`](https://github.com/scaleway/ultraviolet/commit/015ccd6d1b38cc254cd35abac3cda5c19d172bcd) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/fuzzy-search` to `2.0.3`.
+- Updated dependencies [[`e1e31fe`](https://github.com/scaleway/ultraviolet/commit/e1e31fe5a3b4552a7fd6339cf1f67132e196b3a3), [`3619e8e`](https://github.com/scaleway/ultraviolet/commit/3619e8e3f62a39782979acca1e58df570d69cb86)]:
+  - @ultraviolet/themes@3.1.13
+  - @ultraviolet/animations@1.0.3
+  - @ultraviolet/icons@5.6.1
+
 ## 3.25.0
 
 ### Minor Changes

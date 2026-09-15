@@ -1,5 +1,11 @@
 # @ultraviolet/animations
 
+## 1.0.3
+
+### Patch Changes
+
+- [#6902](https://github.com/scaleway/ultraviolet/pull/6902) [`3619e8e`](https://github.com/scaleway/ultraviolet/commit/3619e8e3f62a39782979acca1e58df570d69cb86) Thanks [@philibea](https://github.com/philibea)! - fix published files
+
 ## 1.0.2
 
 ### Patch Changes
