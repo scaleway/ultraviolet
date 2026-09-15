@@ -16,7 +16,7 @@ export default {
     a11yStatus: {
       perceivable: true,
       operable: true,
-      understandable: false,
+      understandable: true,
       robust: false,
     },
   },
