@@ -1,6 +1,12 @@
-export const PROMINENCES = {
-  default: '',
-  strong: 'strong',
-  stronger: 'stronger',
-  weak: 'weak',
-} as const
+export const PROMINENCES = ['default', 'strong', 'stronger'] as const
+/**
+ * @deprecated
+ */
+type LegacyLinkProminence = 'weak'
+export type LinkProminence = 'default' | 'strong' | 'stronger' | LegacyLinkProminence
+
+export const SENTIMENTS = ['primary', 'info', 'success', 'warning', 'danger', 'neutral'] as const
+export type LinkSentiment = 'primary' | 'info' | 'success' | 'warning' | 'danger' | 'neutral'
+
+export const SIZES = ['large', 'small', 'xsmall'] as const
+export type LinkSize = 'large' | 'small' | 'xsmall'
