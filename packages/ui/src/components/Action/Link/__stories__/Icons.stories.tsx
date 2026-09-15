@@ -1,20 +1,19 @@
 import type { ComponentProps } from 'react'
 import { Link } from '..'
 import { Stack } from '../../../Layout/Stack'
-
-const sizes = ['large', 'small', 'xsmall'] as const
+import { SIZES } from '../constants'
 
 export const Icons = (props: ComponentProps<typeof Link>) => (
   <Stack gap={2}>
     <Stack direction="row" alignItems="end" gap="3">
-      {sizes.map(size => (
+      {SIZES.map(size => (
         <Link key={size} {...props} size={size} iconPosition="left">
           {size}
         </Link>
       ))}
     </Stack>
     <Stack direction="row" alignItems="end" gap="3">
-      {sizes.map(size => (
+      {SIZES.map(size => (
         <Link key={size} {...props} size={size} iconPosition="right">
           {size}
         </Link>
