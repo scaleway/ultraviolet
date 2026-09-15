@@ -31,32 +31,61 @@ type ThemeProviderProps = {
 }
 
 /**
- * ThemeProvider will apply generated global CSS variables to the application in the `<head>`.
+ * Computes the CSS variables that differ from what is already defined on the document
+ * (from direct import, e.g @ultraviolet/themes/light.css).
+ */
+const getMissingVars = (theme: typeof consoleLightTheme) => {
+  const cssVars = assignInlineVars(themeContract, theme)
+  const computedStyle = getComputedStyle(document.documentElement)
+
+  // Guard against environments where getComputedStyle does not return a real CSSStyleDeclaration
+  if (typeof computedStyle?.getPropertyValue !== 'function') {
+    return cssVars
+  }
+
+  const missing: Record<string, string> = {}
+
+  for (const [key, value] of Object.entries(cssVars)) {
+    if (computedStyle.getPropertyValue(key) !== value) {
+      missing[key] = value
+    }
+  }
+
+  return missing
+}
+
+/**
+ * ThemeProvider applies the theme variables to the application.
  * If no theme is provided, it will default to `lightTheme`.
  */
 export const ThemeProvider = ({ children, theme = consoleLightTheme, cssLayer }: ThemeProviderProps) => {
   useLayoutEffect(() => {
+    const missingVars = getMissingVars(theme)
     const styleId = 'uv-theme'
     const existingStyle = document.getElementById(styleId)
-    const cssVars = assignInlineVars(themeContract, theme)
-    const cssString = `:root { ${Object.entries(cssVars)
+    const cssString = Object.entries(missingVars)
       .map(([key, value]) => `${key}: ${value};`)
-      .join(' ')} }
-      
-      body {
+      .join(' ')
+
+    if (cssString) {
+      const css = `:root { ${cssString} }
+       body {
         color: ${theme.colors.neutral.text};
         background-color: ${theme.colors.neutral.background};
       }
-    `
-    const layeredCssString = cssLayer ? `@layer ${cssLayer} { ${cssString} }` : cssString
+      `
 
-    if (existingStyle) {
-      existingStyle.textContent = layeredCssString
-    } else {
-      const style = document.createElement('style')
-      style.id = styleId
-      style.textContent = layeredCssString
-      document.head.appendChild(style)
+      const layeredCssString = cssLayer ? `@layer ${cssLayer} { ${css} }` : css
+      if (existingStyle) {
+        existingStyle.textContent = layeredCssString
+      } else {
+        const style = document.createElement('style')
+        style.id = styleId
+        style.textContent = layeredCssString
+        document.head.appendChild(style)
+      }
+    } else if (existingStyle) {
+      existingStyle.remove()
     }
 
     return () => {

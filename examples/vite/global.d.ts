@@ -22,18 +22,3 @@ declare module '@ultraviolet/themes/global' {
   const content: string
   export default content
 }
-
-declare module '@ultraviolet/themes/dark.css' {
-  const content: string
-  export default content
-}
-
-declare module '@ultraviolet/themes/darker.css' {
-  const content: string
-  export default content
-}
-
-declare module '@ultraviolet/themes/light.css' {
-  const content: string
-  export default content
-}

@@ -71,7 +71,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   }, [])
 
   return (
-    <ThemeProvider theme={theme === 'light' ? localLightTheme : localDarkTheme} cssLayer="next-app">
+    <ThemeProvider theme={theme === 'light' ? localLightTheme : localDarkTheme}>
       <Head />
       <Grid>
         <Header className={styles.header} setTheme={setThemes} />
