@@ -6,10 +6,10 @@ export default {
   title: 'UI/Data Display/EmptyState',
   parameters: {
     a11yStatus: {
-      perceivable: undefined,
-      operable: undefined,
-      understandable: undefined,
-      robust: undefined,
+      perceivable: false,
+      operable: true,
+      understandable: true,
+      robust: true,
     },
   },
 } as Meta<typeof EmptyState>
