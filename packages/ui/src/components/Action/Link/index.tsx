@@ -6,7 +6,7 @@ import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn, renderElement } from '@ultraviolet/utils'
 import type { RenderProp } from '@ultraviolet/utils'
-import { forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react'
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react'
 import type {
   AnchorHTMLAttributes,
   CSSProperties,
@@ -46,7 +46,7 @@ type LinkProps = {
   oneLine?: boolean
   'data-testid'?: string
   /**
-   * @deprecated the "variant" property has been removed.
+   * @deprecated the "variant" property has been removed and has no effect.
    */
   variant?: 'inline' | 'standalone'
   style?: CSSProperties
@@ -114,17 +114,6 @@ export const Link = forwardRef(
 
     const finalStringChildren = recursivelyGetChildrenString(children)
 
-    const textVariant = useMemo(() => {
-      if (size === 'xsmall') {
-        return 'captionStrong'
-      }
-      if (size === 'small') {
-        return 'bodySmallStrong'
-      }
-
-      return 'bodyStrong'
-    }, [size])
-
     useEffect(() => {
       if (oneLine && elementRef?.current) {
         const { offsetWidth, scrollWidth } = elementRef.current
@@ -138,7 +127,7 @@ export const Link = forwardRef(
         oneLine,
         prominence,
         sentiment,
-        variant: textVariant,
+        size,
       }),
       linkStyle.defaultLink,
     )
@@ -181,7 +170,7 @@ export const Link = forwardRef(
 
           {isBlank ? (
             <OpenInNewIcon
-              className={cn(linkStyle.iconRight, linkStyle.externalIcon[size])}
+              className={cn(linkStyle.iconRight, linkStyle.openInNewIcon[size])}
               size={BLANK_TARGET_ICON_SIZE}
             />
           ) : null}
