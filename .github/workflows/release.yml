@@ -11,18 +11,11 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
     steps:
-      - name: Pull Secrets
-        uses: scaleway/action-scw-secret@b454408a91715a52a9074ac94882cdf4040365a1 # v0.0.12
-        with:
-          secret-names: |
-            NPM_TOKEN, /npm/token_ultraviolet
-          access-key: ${{ vars.SCW_ACCESS_KEY }}
-          secret-key: ${{ secrets.SCW_SECRET_KEY }}
-          default-project-id: ${{ vars.SCW_DEFAULT_PROJECT_ID }}
-          default-organization-id: ${{ vars.SCW_DEFAULT_ORGANIZATION_ID }}
-
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Git Identity
         run: |
@@ -48,5 +41,4 @@ jobs:
           publish-script: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ env.NPM_TOKEN }}
           PNPM_CONFIG_PROVENANCE: true
