@@ -312,7 +312,6 @@ const main = async () => {
           (file.includes('/dark/') && component.name === 'Logo')
         ) {
           // We do not generate an icon component for small/disabled/dark variants of icons/logos/flags
-          // oxlint-disable-next-line no-continue
           continue
         }
 
