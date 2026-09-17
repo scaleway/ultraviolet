@@ -20,17 +20,21 @@ type LoadedLanguage = Awaited<ReturnType<(typeof languages)[number]['load']>>
 
 const loadLanguage = (name: string): Promise<LoadedLanguage> => {
   switch (name.toLowerCase()) {
-    case 'nix':
+    case 'nix': {
       return import('@replit/codemirror-lang-nix').then(({ nix }) => nix())
-    case 'svelte':
+    }
+    case 'svelte': {
       return import('@replit/codemirror-lang-svelte').then(({ svelte }) => svelte())
-    case 'solidity':
+    }
+    case 'solidity': {
       return import('@replit/codemirror-lang-solidity').then(({ solidity }) => solidity)
-    default:
+    }
+    default: {
       return (
         languages.find(lang => lang.extensions.some(ext => ext.toLowerCase() === name.toLowerCase())) ??
         languages.find(lang => lang.name.toLowerCase() === 'shell')!
       ).load()
+    }
   }
 }
 

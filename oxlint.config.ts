@@ -108,7 +108,6 @@ export default defineConfig({
         'vitest/no-importing-vitest-globals': 'off',
         'vitest/padding-around-test-blocks': 'warn', // vitest errors (129)
         'vitest/prefer-called-times': 'off',
-        'vitest/prefer-describe-function-title': 'warn', // vitest errors (0)
         'vitest/prefer-expect-resolves': 'warn', // vitest errors (4)
         'vitest/prefer-spy-on': 'warn', // vitest errors (3)
         'vitest/prefer-strict-equal': 'warn', // vitest errors (7)
@@ -145,21 +144,18 @@ export default defineConfig({
     'eslint/class-methods-use-this': 'warn', // eslint errors (4)
     'eslint/complexity': ['warn', { max: 30, variant: 'modified' }],
     'eslint/curly': 'warn', // eslint errors (15)
-    'eslint/eqeqeq': 'warn', // eslint errors (0)
     'eslint/init-declarations': 'warn', // eslint errors (15)
     'eslint/max-depth': 'warn', // eslint errors (3)
     'eslint/max-lines': 'warn', // eslint errors (38)
-    'eslint/max-nested-callbacks': 'warn', // eslint errors (0)
+    'eslint/max-nested-callbacks': 'warn', // base sets error (max: 4); keep warn
     'eslint/max-params': 'warn', // eslint errors (33)
     'eslint/max-statements': ['error', { max: 30 }],
     'eslint/no-await-in-loop': 'warn', // eslint errors (12)
-    'eslint/no-console': 'warn', // eslint errors (0)
     'eslint/no-empty-function': 'warn', // eslint errors (408)
     'eslint/no-implicit-coercion': 'warn', // eslint errors (113)
     'eslint/no-negated-condition': 'off',
     'eslint/no-param-reassign': 'error',
     'eslint/no-shadow': 'warn', // eslint errors (7)
-    'eslint/no-throw-literal': 'warn', // eslint errors (0)
     'eslint/no-unused-vars': 'warn', // eslint errors (15)
     'eslint/no-useless-assignment': 'warn', // eslint errors (2)
     'eslint/no-useless-computed-key': 'warn', // eslint errors (3)
@@ -180,14 +176,9 @@ export default defineConfig({
     'import/max-dependencies': 'off',
     'import/namespace': 'warn', // import errors (7)
     'import/newline-after-import': 'warn', // import errors (1)
-    'import/no-anonymous-default-export': 'warn', // import errors (0)
-    'import/no-commonjs': 'warn', // import errors (0)
     'import/no-namespace': 'warn', // import errors (76)
-    'import/no-nodejs-modules': 'warn', // import errors (0)
     'import/no-unassigned-import': 'off',
-    'import/unambiguous': 'warn', // import errors (0)
 
-    'jsx-a11y/alt-text': 'warn', // jsx-a11y errors (0)
     'jsx-a11y/control-has-associated-label': [
       'error',
       {
@@ -235,11 +226,9 @@ export default defineConfig({
     'react/no-array-index-key': 'warn', // react errors (6)
     'react/no-clone-element': 'off',
     'react/no-deriving-state-in-effects': 'warn', // react errors (7)
-    'react/no-multi-comp': 'warn', // react errors (0)
     'react/no-object-type-as-default-prop': 'warn', // react errors (1)
     'react/no-react-children': 'off',
     'react/only-export-components': 'off',
-    'react/prefer-function-component': 'warn', // react errors (0)
     'react/preserve-manual-memoization': 'warn', // react errors (3)
     'react/refs': 'warn', // react errors (44)
     'react/set-state-in-effect': 'warn', // react errors (34)
@@ -251,10 +240,8 @@ export default defineConfig({
     'typescript/consistent-type-imports': 'error',
     'typescript/dot-notation': 'off',
     'typescript/explicit-member-accessibility': 'warn', // typescript errors (10)
-    'typescript/method-signature-style': 'warn', // typescript errors (0)
     'typescript/no-confusing-void-expression': 'off',
     'typescript/no-deprecated': 'warn', // typescript errors (594)
-    'typescript/no-explicit-any': 'warn', // typescript errors (0)
     'typescript/no-invalid-void-type': 'warn', // typescript errors (1)
     'typescript/no-misused-promises': 'warn', // typescript errors (1)
     'typescript/no-misused-spread': 'warn', // typescript errors (7)
@@ -273,7 +260,6 @@ export default defineConfig({
     'typescript/no-unsafe-return': 'warn', // typescript errors (41)
     'typescript/no-unsafe-type-assertion': 'warn', // typescript errors (207)
     'typescript/no-useless-default-assignment': 'off',
-    'typescript/only-throw-error': 'warn', // typescript errors (0)
     'typescript/parameter-properties': 'warn', // typescript errors (1)
     'typescript/prefer-nullish-coalescing': ['off', { ignoreBooleanCoercion: true }],
     'typescript/prefer-optional-chain': 'warn', // typescript errors (1)
