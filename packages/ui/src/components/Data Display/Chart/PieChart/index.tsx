@@ -52,7 +52,6 @@ export const PieChart = ({
   const emptyTooltip = useCallback(() => <span />, [])
   const isEmpty = !data || data.length === 0
 
-  // oxlint-disable-next-line typescript/no-unsafe-type-assertion
   const localColors = getLegendColor(theme as typeof UVTheme)
 
   return (

@@ -40,7 +40,6 @@ const Provider = ({ children, bordered, stripped, columns, size = 'medium' }: Ta
   return <TableContext.Provider value={value}>{children}</TableContext.Provider>
 }
 
-// oxlint-disable-next-line react/no-multi-comp
 export const TableProvider = ({ children, bordered, stripped, columns, ...props }: TableProviderProps) => (
   <ListProvider columns={[]} {...props}>
     <Provider bordered={bordered} columns={columns} stripped={stripped} {...props}>
