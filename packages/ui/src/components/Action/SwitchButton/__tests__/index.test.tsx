@@ -47,7 +47,7 @@ describe('switchButton', () => {
 
   it('renders correctly with children changing', () => {
     const tempResizeObserver = window.ResizeObserver
-    window.ResizeObserver = vi.fn(function mock(cb: ResizeObserverCallback) {
+    window.ResizeObserver = vi.fn((cb: ResizeObserverCallback) => {
       resizeCallback = cb
 
       return {
