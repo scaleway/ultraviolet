@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { CodeEditorField } from '..'
 import { renderWithForm } from '../../../__tests__/helpers'
 
-describe('optionSelectorField', () => {
+describe('codeEditorField', () => {
   it('should render correctly', () => {
     const { asFragment } = renderWithForm(<CodeEditorField extensions="js" name="test" />)
     expect(asFragment()).toMatchSnapshot()
