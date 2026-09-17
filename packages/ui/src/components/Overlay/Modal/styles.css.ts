@@ -62,7 +62,7 @@ const backdrop = style({
     [animationDurationTranslation]: `calc(${animationDuration} * 1.5)`,
   },
   selectors: {
-    ['&::before']: {
+    '&::before': {
       content: '',
       position: 'fixed',
       inset: '0',
@@ -72,7 +72,7 @@ const backdrop = style({
         opacity: 0,
       },
     },
-    ['&:not(:has(dialog[open]))::before']: {
+    '&:not(:has(dialog[open]))::before': {
       opacity: 0,
     },
     [`&:not(:has(dialog[open]))`]: {

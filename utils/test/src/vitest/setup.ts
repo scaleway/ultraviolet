@@ -5,9 +5,7 @@ import * as axeMatchers from 'vitest-axe/matchers'
 
 // Mock InputEvent.getTargetRanges() for ProseMirror beforeinput plugin
 // jsdom doesn't implement this method, but @handlewithcare/react-prosemirror@3.2.1 requires it
-const MockGetTargetRanges = vi.fn(function mockGetTargetRanges(): StaticRange[] {
-  return []
-})
+const MockGetTargetRanges = vi.fn((): StaticRange[] => [])
 
 export const setup = () => {
   process.env['TZ'] = 'UTC'

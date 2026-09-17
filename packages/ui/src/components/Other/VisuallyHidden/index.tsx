@@ -17,8 +17,8 @@ export const VisuallyHidden = forwardRef(
   <T extends ElementType = 'span'>(
     { children, className, as = 'span' as T, ...props }: VisuallyHiddenProps<T>,
     ref: ForwardedRef<ComponentProps<T>>,
-  ) => {
-    return createElement(
+  ) =>
+    createElement(
       as,
       {
         className: cn(className, visuallyHiddenStyle.visuallyHidden),
@@ -26,8 +26,7 @@ export const VisuallyHidden = forwardRef(
         ref,
       },
       children,
-    )
-  },
+    ),
 )
 
 VisuallyHidden.displayName = 'VisuallyHidden'
