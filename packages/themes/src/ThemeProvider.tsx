@@ -31,39 +31,15 @@ type ThemeProviderProps = {
 }
 
 /**
- * Computes the CSS variables that differ from what is already defined on the document
- * (from direct import, e.g @ultraviolet/themes/light.css).
- */
-const getMissingVars = (theme: typeof consoleLightTheme) => {
-  const cssVars = assignInlineVars(themeContract, theme)
-  const computedStyle = getComputedStyle(document.documentElement)
-
-  // Guard against environments where getComputedStyle does not return a real CSSStyleDeclaration
-  if (typeof computedStyle?.getPropertyValue !== 'function') {
-    return cssVars
-  }
-
-  const missing: Record<string, string> = {}
-
-  for (const [key, value] of Object.entries(cssVars)) {
-    if (computedStyle.getPropertyValue(key) !== value) {
-      missing[key] = value
-    }
-  }
-
-  return missing
-}
-
-/**
  * ThemeProvider applies the theme variables to the application.
  * If no theme is provided, it will default to `lightTheme`.
  */
 export const ThemeProvider = ({ children, theme = consoleLightTheme, cssLayer }: ThemeProviderProps) => {
   useLayoutEffect(() => {
-    const missingVars = getMissingVars(theme)
+    const cssVars = assignInlineVars(themeContract, theme)
     const styleId = 'uv-theme'
     const existingStyle = document.getElementById(styleId)
-    const cssString = Object.entries(missingVars)
+    const cssString = Object.entries(cssVars)
       .map(([key, value]) => `${key}: ${value};`)
       .join(' ')
 
@@ -76,6 +52,7 @@ export const ThemeProvider = ({ children, theme = consoleLightTheme, cssLayer }:
       `
 
       const layeredCssString = cssLayer ? `@layer ${cssLayer} { ${css} }` : css
+
       if (existingStyle) {
         existingStyle.textContent = layeredCssString
       } else {

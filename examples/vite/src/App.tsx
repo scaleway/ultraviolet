@@ -58,8 +58,8 @@ export const App = () => {
         <Text as="h2" variant="headingStrong">
           Playground
         </Text>
-        <Stack gap="3">
-          <Stack>
+        <Stack gap="3" maxWidth="80ch" width="100%">
+          <Stack alignItems="center">
             <Badge sentiment="danger" prominence="strong">
               test
             </Badge>
