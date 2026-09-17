@@ -4,7 +4,7 @@ import { usePrefersReducedMotion } from '../usePrefersReducedMotion'
 
 describe(usePrefersReducedMotion, () => {
   it('should return true when prefers-reduced-motion is enabled', () => {
-    window.matchMedia = vi.fn().mockReturnValue({
+    vi.spyOn(window, 'matchMedia').mockReturnValue({
       matches: false,
       addEventListener: vi.fn(),
       removeEventListener: vi.fn(),
@@ -16,7 +16,7 @@ describe(usePrefersReducedMotion, () => {
   })
 
   it('should return false when prefers-reduced-motion is disabled', () => {
-    window.matchMedia = vi.fn().mockReturnValue({
+    vi.spyOn(window, 'matchMedia').mockReturnValue({
       matches: true,
       addEventListener: vi.fn(),
       removeEventListener: vi.fn(),
@@ -30,7 +30,7 @@ describe(usePrefersReducedMotion, () => {
   it('should cleanup event listener on unmount', () => {
     const mockRemoveListener = vi.fn()
 
-    window.matchMedia = vi.fn().mockReturnValue({
+    vi.spyOn(window, 'matchMedia').mockReturnValue({
       matches: true,
       addEventListener: vi.fn(),
       removeEventListener: mockRemoveListener,

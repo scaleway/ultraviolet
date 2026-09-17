@@ -126,7 +126,7 @@ describe('double slider', () => {
     expect(slider).not.toBeNull()
     await userEvent.hover(slider!)
 
-    expect(await screen.findByRole('tooltip', { name: 'tooltip' })).toBeVisible()
+    await expect(screen.findByRole('tooltip', { name: 'tooltip' })).resolves.toBeVisible()
   })
 
   it('renders correctly double with default ticks', () => {
