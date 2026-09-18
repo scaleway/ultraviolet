@@ -11,20 +11,18 @@ export const Prominence = ({ prominence, ...props }: ComponentProps<typeof Link>
 
   return (
     <Stack width="300px">
-      <Row templateColumns={'10ch repeat(2, 12ch)'} alignItems={'center'}>
+      <Row templateColumns={'10ch repeat(6, 12ch)'} alignItems={'center'}>
         <Text as="span" variant="body">
           Default
         </Text>
-        <Stack direction="row" gap={2} style={{ background: theme.colors.neutral.background, padding: '1rem' }}>
-          <Link {...props} prominence="default">
-            Default
-          </Link>
-        </Stack>
-        <Stack direction="row" gap={2} style={{ background: theme.colors.neutral.background, padding: '1rem' }}>
-          <Link {...props} prominence="default" target="_blank">
-            External
-          </Link>
-        </Stack>
+
+        {SENTIMENTS.map(sentiment => (
+          <Stack key={sentiment} style={{ background: theme.colors[sentiment].background, padding: theme.space[2] }}>
+            <Link key={sentiment} {...props} sentiment={sentiment}>
+              {sentiment}
+            </Link>
+          </Stack>
+        ))}
       </Row>
 
       <Row templateColumns={'10ch repeat(6, 12ch)'} alignItems={'center'}>
