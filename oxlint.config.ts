@@ -244,8 +244,6 @@ export default defineConfig({
 
     'unicorn/empty-brace-spaces': 'off',
     'unicorn/import-style': 'warn', // unicorn errors (7)
-    'unicorn/no-array-reverse': 'warn', // unicorn errors (2)
-    'unicorn/no-array-sort': 'warn', // unicorn errors (6)
     'unicorn/no-await-expression-member': 'warn', // unicorn errors (6)
     'unicorn/no-invalid-remove-event-listener': 'off',
     'unicorn/no-new-array': 'off',
@@ -261,15 +259,12 @@ export default defineConfig({
     'unicorn/prefer-import-meta-properties': 'off',
     'unicorn/prefer-logical-operator-over-ternary': 'off',
     'unicorn/prefer-number-coercion': 'warn', // unicorn errors (21)
-    'unicorn/prefer-number-properties': 'warn', // unicorn errors (3)
     'unicorn/prefer-object-from-entries': 'warn', // unicorn errors (14)
     'unicorn/prefer-query-selector': 'off',
     'unicorn/prefer-set-has': 'off',
-    'unicorn/prefer-spread': 'warn', // unicorn errors (2)
     'unicorn/prefer-string-replace-all': 'warn', // unicorn errors (35)
     'unicorn/prefer-string-slice': 'off',
     'unicorn/prefer-ternary': 'off',
-    'unicorn/prefer-top-level-await': 'warn', // unicorn errors (1)
 
     'vitest/no-conditional-expect': 'warn', // vitest errors (11)
     'vitest/no-conditional-in-test': 'warn', // vitest errors (36)

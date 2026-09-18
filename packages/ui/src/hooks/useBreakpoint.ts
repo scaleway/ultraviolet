@@ -4,7 +4,7 @@ import type { RefObject } from 'react'
 type BreakpointState<T extends string> = Record<T, boolean>
 
 const getActive = <T extends string>(width: number, breakpoints: Record<T, number>): BreakpointState<T> => {
-  const sorted = Object.entries<number>(breakpoints).sort((a, b) => a[1] - b[1])
+  const sorted = Object.entries<number>(breakpoints).toSorted((a, b) => a[1] - b[1])
   const active: Record<string, boolean> = {}
 
   sorted.forEach(([name, start], index) => {
