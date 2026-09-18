@@ -1,0 +1,51 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Action/CopyButton/A11y" />
+
+# CopyButton - Accessibility
+
+## Description
+
+A button that copies a given value to the clipboard. It renders as a native `<button>` (via the shared `Button` component) with a copy icon and, optionally, text children. Its accessible name and success feedback are both driven by a tooltip label that switches from "Copy" to "Copied!" (with a checkmark icon) for 2.5 seconds after activation.
+
+## Summary
+
+1. ✅ **Perceivable**: Icons are `aria-hidden` by default; color is not the only indicator of state (icon + label change together)
+2. ✅ **Operable**: Native `<button>` with full keyboard support (Enter, Space) and visible focus indicator
+3. ✅ **Understandable**: Accessible name reflects the purpose and the copied state
+4. ⚠️ **Robust**: The "Copied!" name swap is announced via the label relation (VoiceOver confirmed), but this breaks if the tooltip is switched to a description relation with `children`. In that case, an `aria-live`/always-mounted tooltip (or status element) is needed
+
+## ARIA Pattern
+
+[ARIA Button Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/button/)
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): Renders a semantic native `<button>`; the accessible name is provided via `aria-labelledby` pointing to the tooltip label ("Copy" / "Copied!"). Even in icon-only mode the button has an accessible name.
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html): Native button activation with Enter and Space.
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html): Native focus ring preserved by the `Button` component.
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html): Icons (`CopyContentIcon`/`CheckIcon`) default to `aria-hidden="true"` and are purely decorative; the state is conveyed by the label.
+- ⚠️ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html): With the label relation the "Copied!" feedback is conveyed via the accessible name change, which is announced. If the tooltip is switched to `tooltipDescription` (with `children`), the name no longer changes and the outcome is not announced and a live region (e.g., `aria-live` on an always-mounted tooltip) is then required.
+
+To apply when using the component:
+
+- [WCAG 2.5.3 - Label in Name (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html): The accessible name (tooltip) may differ from the visible label, but it **must** contain the visible text (ideally start with it). When `children` text is provided, ensure the accessible name includes it.
+
+## Accessibility issues
+
+**Medium:**
+
+- Copy failures are silently swallowed (`catch(() => null)`). If the clipboard write fails, there is no feedback at all, so users cannot tell the action did not succeed. Expose the failure through a status message as well.
+- Recommended tooltip strategy to enforce correct naming (see [4.1.2](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value), [2.5.3](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html) and [1.1.1](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content)):
+  - With `children`: do not show a default tooltip (a "Copy" tooltip over "Copy id" both violates 2.5.3 and is redundant). Show only a temporary "Copied!" tooltip as feedback via `tooltipDescription` so the visible `children` text stays the accessible name.
+  - Icon-only (no `children`): keep `tooltipLabel` (`aria-labelledby`) so the tooltip text ("Copy" / "Copied!") provides the accessible name.
+  - Deprecate `copyText` prop: replace with `tooltipLabel` which displays a tooltip: this would enforce a correct usage (no tooltip for buttons with children, tooltip for icon-only buttons) while keeping the `copiedText` as a description (with aria-live)
+
+- Inconsistent success feedback for screen readers. With the current label relation, the "Copied!" tooltip text is the button's accessible name, so the "Copy" -> "Copied!" swap is re-announced by screen readers when the button is focused. However, if the tooltip is switched to `tooltipDescription` (with `children`), the accessible name no longer changes, so the outcome is not announced. If that route is taken, add `aria-live` on the Tooltip and force it to always be mounted so the change stays in the accessibility tree and is announced.
+
+## Dependencies
+
+- `Button` component: provides the native button, focus management, icon handling, and tooltip `aria-labelledby` wiring as well as styling.
+- `Tooltip` component: supplies the accessible name via `aria-labelledby` (relation `label`).
