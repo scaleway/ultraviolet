@@ -1,8 +1,17 @@
 import { renderHook } from '@testing-library/react'
-import { describe, expect, it, vi } from 'vitest'
+import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { usePrefersReducedMotion } from '../usePrefersReducedMotion'
 
 describe(usePrefersReducedMotion, () => {
+  beforeAll(() => {
+    if (!window.matchMedia) {
+      Object.defineProperty(window, 'matchMedia', {
+        configurable: true,
+        value: vi.fn(),
+        writable: true,
+      })
+    }
+  })
   it('should return true when prefers-reduced-motion is enabled', () => {
     vi.spyOn(window, 'matchMedia').mockReturnValue({
       matches: false,
