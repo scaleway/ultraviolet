@@ -107,7 +107,6 @@ export const BarStack = ({
                 <Tooltip text={legend === 'outside' ? text : undefined} visible={hoveredBarId === id}>
                   {tooltip ? (
                     <Tooltip id={`tooltip-${id}`} text={tooltip ?? text}>
-                      {/* oxlint-disable-next-line jsx_a11y/no-static-element-interactions */}
                       <div
                         className={barStackStyle.barStack({ size })}
                         data-testid={`content-${id}`}
@@ -136,7 +135,6 @@ export const BarStack = ({
                       </div>
                     </Tooltip>
                   ) : (
-                    // oxlint-disable-next-line jsx_a11y/no-static-element-interactions
                     <div
                       className={barStackStyle.barStack({ size })}
                       data-testid={`content-${id}`}
