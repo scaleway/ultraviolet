@@ -21,17 +21,6 @@ describe('themeProvider', () => {
     expect(style?.textContent).not.toContain('@layer')
   })
 
-  it('wraps the dynamic styles in a css @layer when cssLayer is provided', () => {
-    render(
-      <ThemeProvider cssLayer="uv">
-        <div>child</div>
-      </ThemeProvider>,
-    )
-
-    const style = getInjectedStyle()
-    expect(style?.textContent).toMatch(/@layer uv \{\s*:root/)
-  })
-
   it('applies the theme background color to the body', () => {
     render(
       <ThemeProvider theme={consoleLightTheme}>
@@ -61,23 +50,5 @@ describe('themeProvider', () => {
     const newStyle = getInjectedStyle()
     expect(newStyle?.textContent).toContain(`background-color: ${consoleDarkTheme.colors.neutral.background}`)
     expect(newStyle?.textContent).not.toContain(`background-color: ${consoleLightTheme.colors.neutral.background}`)
-  })
-
-  it('re-wraps styles in a layer when cssLayer changes', () => {
-    const { rerender } = render(
-      <ThemeProvider>
-        <div>child</div>
-      </ThemeProvider>,
-    )
-
-    expect(getInjectedStyle()?.textContent).not.toContain('@layer')
-
-    rerender(
-      <ThemeProvider cssLayer="uv">
-        <div>child</div>
-      </ThemeProvider>,
-    )
-
-    expect(getInjectedStyle()?.textContent).toContain('@layer uv')
   })
 })
