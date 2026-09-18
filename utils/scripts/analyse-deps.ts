@@ -6,11 +6,12 @@ const args = process.argv.slice(2)
 
 const srcDir = join(cwd, args[0] ?? 'packages/ui/src/components')
 
-type DependencyGraph = {
-  [componentName: string]: {
+type DependencyGraph = Record<
+  string,
+  {
     dependsOn: string[]
   }
-}
+>
 
 const graph: DependencyGraph = {}
 

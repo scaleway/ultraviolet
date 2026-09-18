@@ -92,7 +92,7 @@ export const TagInput = ({
 }: TagInputProps) => {
   const [tagInputState, setTagInput] = useState(convertTagArrayToTagStateArray(value))
   const [input, setInput] = useState('')
-  const [status, setStatus] = useState<{ [key: string]: StatusValue }>({})
+  const [status, setStatus] = useState<Record<string, StatusValue>>({})
 
   const uniqueId = useId()
   const localId = id ?? uniqueId

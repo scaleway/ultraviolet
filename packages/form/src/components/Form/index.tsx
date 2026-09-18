@@ -8,7 +8,8 @@ import type { FormErrors } from '../../types'
 import { defaultErrors } from './defaultErrors'
 import { FormRegisterModeContext } from './registerMode'
 
-type OnSubmitReturn = string | null | undefined | void
+// oxlint-disable-next-line typescript/no-invalid-void-type -- void is needed for onSubmit callbacks that don't return a value
+type OnSubmitReturn = string | void | null | undefined
 
 type FormProps<TFieldValues extends FieldValues> = {
   children?: ReactNode

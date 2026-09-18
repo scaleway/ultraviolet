@@ -223,19 +223,15 @@ export default defineConfig({
     'react/set-state-in-effect': 'warn', // react errors (34)
     'react/static-components': 'warn', // react errors (2)
 
-    'typescript/consistent-indexed-object-style': 'warn', // typescript errors (3)
     'typescript/consistent-return': 'warn', // typescript errors (8)
     'typescript/consistent-type-imports': 'error',
     'typescript/dot-notation': 'off',
     'typescript/explicit-member-accessibility': 'warn', // typescript errors (10)
     'typescript/no-confusing-void-expression': 'off',
     'typescript/no-deprecated': 'warn', // typescript errors (594)
-    'typescript/no-invalid-void-type': 'warn', // typescript errors (1)
-    'typescript/no-misused-promises': 'warn', // typescript errors (1)
     'typescript/no-misused-spread': 'warn', // typescript errors (7)
     'typescript/no-non-null-assertion': 'warn', // typescript errors (29)
     'typescript/no-redundant-type-constituents': 'warn', // typescript errors (68)
-    'typescript/no-unnecessary-boolean-literal-compare': 'warn', // typescript errors (1)
     'typescript/no-unnecessary-condition': 'warn', // typescript errors (307)
     'typescript/no-unnecessary-type-arguments': 'warn', // typescript errors (5)
     'typescript/no-unnecessary-type-assertion': 'warn', // typescript errors (39)
@@ -248,17 +244,13 @@ export default defineConfig({
     'typescript/no-unsafe-return': 'warn', // typescript errors (41)
     'typescript/no-unsafe-type-assertion': 'warn', // typescript errors (207)
     'typescript/no-useless-default-assignment': 'off',
-    'typescript/parameter-properties': 'warn', // typescript errors (1)
     'typescript/prefer-nullish-coalescing': ['off', { ignoreBooleanCoercion: true }],
-    'typescript/prefer-optional-chain': 'warn', // typescript errors (1)
     'typescript/prefer-reduce-type-parameter': 'warn', // typescript errors (2)
-    'typescript/prefer-regexp-exec': 'warn', // typescript errors (1)
     'typescript/promise-function-async': 'off',
     'typescript/require-await': 'warn', // typescript errors (10)
     'typescript/strict-boolean-expressions': 'off',
     'typescript/strict-void-return': 'off',
     'typescript/unbound-method': 'warn', // typescript errors (2)
-    'typescript/unified-signatures': 'warn', // typescript errors (1)
 
     'unicorn/empty-brace-spaces': 'off',
     'unicorn/import-style': 'warn', // unicorn errors (7)
