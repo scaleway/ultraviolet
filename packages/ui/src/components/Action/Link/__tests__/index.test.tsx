@@ -4,7 +4,6 @@ import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { forwardRef } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Link } from '..'
-import type { ProminenceProps } from '..'
 import { PROMINENCES } from '../constants'
 
 // Mock component simulating Next.js Link
@@ -31,14 +30,12 @@ describe('link', () => {
   })
 
   describe('prominence', () => {
-    it.each(Object.keys(PROMINENCES).map(prominence => [`render prominence ${prominence}`, prominence]))(
-      '%s',
-      (_, prominence) =>
-        shouldMatchSnapshot(
-          <Link href="/" prominence={prominence as ProminenceProps}>
-            Hello
-          </Link>,
-        ),
+    it.each(PROMINENCES.map(prominence => [`render prominence ${prominence}`, prominence]))('%s', (_, prominence) =>
+      shouldMatchSnapshot(
+        <Link href="/" prominence={prominence}>
+          Hello
+        </Link>,
+      ),
     )
   })
 
@@ -69,18 +66,6 @@ describe('link', () => {
           Hello
         </Link>
         <Link href="/" iconPosition="left" target="_blank">
-          Hello
-        </Link>
-      </>,
-    ))
-
-  it('render correctly with variants props', () =>
-    shouldMatchSnapshot(
-      <>
-        <Link href="/" variant="inline">
-          Hello
-        </Link>
-        <Link href="/" variant="standalone">
           Hello
         </Link>
       </>,

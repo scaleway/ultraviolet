@@ -1,6 +1,5 @@
 'use client'
 
-import { useTheme } from '@ultraviolet/themes'
 import type { ComponentProps } from 'react'
 import { Link } from '../../Action/Link'
 
@@ -19,26 +18,21 @@ export const GlobalAlertLink = ({
   oneLine = false,
   'data-testid': dataTestId,
   style,
-}: GlobalAlertLinkProps) => {
-  const { theme } = useTheme()
-
-  return (
-    <Link
-      aria-label={ariaLabel}
-      className={className}
-      data-testid={dataTestId}
-      download={download}
-      href={href}
-      onClick={onClick}
-      oneLine={oneLine}
-      prominence={theme === 'light' ? 'strong' : 'stronger'}
-      rel={rel}
-      size="small"
-      style={style}
-      target={target}
-      variant="inline"
-    >
-      {children}
-    </Link>
-  )
-}
+}: GlobalAlertLinkProps) => (
+  <Link
+    aria-label={ariaLabel}
+    className={className}
+    data-testid={dataTestId}
+    download={download}
+    href={href}
+    onClick={onClick}
+    oneLine={oneLine}
+    prominence="strong"
+    rel={rel}
+    size="small"
+    style={style}
+    target={target}
+  >
+    {children}
+  </Link>
+)
