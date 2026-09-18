@@ -133,7 +133,7 @@ const getThemeColor = (theme: string) => {
   return { background, textColor }
 }
 
-function DottedBackground({ theme, children }: { theme: string; children: ReactNode }) {
+const DottedBackground = ({ theme, children }: { theme: string; children: ReactNode }) => {
   const { background, textColor } = getThemeColor(theme)
 
   return (
