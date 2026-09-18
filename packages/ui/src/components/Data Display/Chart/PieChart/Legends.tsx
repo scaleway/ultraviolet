@@ -36,6 +36,7 @@ export const Legends = ({ focused, data, legendHeader, onFocusChange, colors }: 
 
         return (
           <Tooltip key={item.id} text={<TooltipContent data={item} />} visible={isSegmentFocused}>
+            {/* oxlint-disable-next-line jsx_a11y/no-noninteractive-element-interactions */}
             <li
               className={pieChartStyle.listItem({
                 isFocused: isSegmentFocused,
