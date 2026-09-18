@@ -225,7 +225,6 @@ export default defineConfig({
 
     'typescript/consistent-indexed-object-style': 'warn', // typescript errors (3)
     'typescript/consistent-return': 'warn', // typescript errors (8)
-    'typescript/consistent-type-definitions': ['warn', 'type'], // typescript errors (0)
     'typescript/consistent-type-imports': 'error',
     'typescript/dot-notation': 'off',
     'typescript/explicit-member-accessibility': 'warn', // typescript errors (10)
