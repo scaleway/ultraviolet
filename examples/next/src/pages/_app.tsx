@@ -10,9 +10,6 @@ import '@ultraviolet/fonts/fonts.css'
 import '@ultraviolet/ui/styles'
 import '@ultraviolet/icons/styles'
 import '@ultraviolet/themes/global'
-import '@ultraviolet/themes/dark.css'
-import '@ultraviolet/themes/darker.css'
-import '@ultraviolet/themes/light.css'
 import styles from '../../styles/grid.module.scss'
 import '../../styles/global.css'
 
@@ -71,7 +68,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   }, [])
 
   return (
-    <ThemeProvider theme={theme === 'light' ? localLightTheme : localDarkTheme} cssLayer="next-app">
+    <ThemeProvider theme={theme === 'light' ? localLightTheme : localDarkTheme}>
       <Head />
       <Grid>
         <Header className={styles.header} setTheme={setThemes} />

@@ -27,35 +27,34 @@ type ThemeProviderProps = {
    */
   theme?: typeof consoleLightTheme
   children: ReactNode
-  cssLayer?: string
 }
 
 /**
- * ThemeProvider will apply generated global CSS variables to the application in the `<head>`.
+ * ThemeProvider applies the theme variables to the application.
  * If no theme is provided, it will default to `lightTheme`.
  */
-export const ThemeProvider = ({ children, theme = consoleLightTheme, cssLayer }: ThemeProviderProps) => {
+export const ThemeProvider = ({ children, theme = consoleLightTheme }: ThemeProviderProps) => {
   useLayoutEffect(() => {
+    const cssVars = assignInlineVars(themeContract, theme)
     const styleId = 'uv-theme'
     const existingStyle = document.getElementById(styleId)
-    const cssVars = assignInlineVars(themeContract, theme)
-    const cssString = `:root { ${Object.entries(cssVars)
+    const cssString = Object.entries(cssVars)
       .map(([key, value]) => `${key}: ${value};`)
-      .join(' ')} }
-      
-      body {
+      .join(' ')
+
+    const css = `:root { ${cssString} }
+       body {
         color: ${theme.colors.neutral.text};
         background-color: ${theme.colors.neutral.background};
       }
-    `
-    const layeredCssString = cssLayer ? `@layer ${cssLayer} { ${cssString} }` : cssString
+      `
 
     if (existingStyle) {
-      existingStyle.textContent = layeredCssString
+      existingStyle.textContent = css
     } else {
       const style = document.createElement('style')
       style.id = styleId
-      style.textContent = layeredCssString
+      style.textContent = css
       document.head.appendChild(style)
     }
 
@@ -65,7 +64,7 @@ export const ThemeProvider = ({ children, theme = consoleLightTheme, cssLayer }:
         style.remove()
       }
     }
-  }, [theme, cssLayer])
+  }, [theme])
 
   return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
 }
