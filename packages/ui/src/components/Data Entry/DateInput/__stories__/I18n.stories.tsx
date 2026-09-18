@@ -43,7 +43,7 @@ export const I18n: StoryFn = args => {
       <SelectInput
         label="Switch Locale"
         name="locale-switcher"
-        onChange={locale => {
+        onChange={(locale: string) => {
           onChange(locale).catch(() => {})
         }}
         options={localesOptions}
