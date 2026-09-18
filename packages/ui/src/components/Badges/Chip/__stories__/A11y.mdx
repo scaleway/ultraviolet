@@ -1,0 +1,55 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Badges/Chip/A11y" />
+
+# Chip - Accessibility
+
+## Description
+
+A clickable status or label displayed in a small container. The chip supports an `active` toggle state, a `disabled` state, and an optional `Chip.Icon` sub-component that can be a decorative element or an independent clickable button.
+
+## Summary
+
+1. ❌ **Perceivable**: The active and disabled states rely solely on color/visual styling without an equivalent text or non-color indicator (1.4.1)
+2. ❌ **Operable**: The chip container is a `div` with a click handler but no keyboard access or focus (2.1.1)
+3. ✅ **Understandable**: No context changes occur on focus; content is predictable (3.2.1)
+4. ❌ **Robust**: The clickable container has no role, name, or programmatic state (4.1.2)
+
+## ARIA Pattern
+
+[ARIA Button Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/button/) — the chip behaves as a toggle button. There is no dedicated chip pattern; the button/toggle button semantics apply.
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - The chip container is a `div` with only an `onClick` handler (`index.tsx:84`); it cannot be focused or activated with the keyboard.
+- ❌ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - The chip container is not focusable so no focus indicator is ever shown; `Chip.Icon` buttons rely on the browser default which may not be visible in all browsers.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The chip container has no `role`, no accessible name, and no programmatic state. When `onClick` is provided, it is exposed as neither a button nor a toggle (`aria-pressed`).
+- ❌ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The `active` and `disabled` states are conveyed only through background/border/text color changes, with no text or non-color alternative.
+- ✅ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - The chip uses theme tokens which meet 4.5:1 contrast requirement.
+- ❌ [WCAG 2.5.8 - Target Size (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) - `Chip.Icon` buttons are 16x16 CSS px, below the 24x24 minimal threshold.
+
+To apply when using the component:
+
+- [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - `Chip.Icon` buttons render only an icon; the icon must carry an accessible label (e.g. `accessibleLabel`) so the button has a name.
+
+## Accessibility issues
+
+**Critical:**
+
+- The chip container is a `<div>` with an `onClick` handler but no `role`, no `tabindex`, and no keyboard event handling. Keyboard-only users and assistive technologies cannot focus or activate the chip at all (2.1.1). When `onClick` is provided, the chip should render as a real `<button>` (or add `role="button"`, `tabIndex={0}`, and `onKeyDown` for Enter/Space).
+
+**High:**
+
+- The `active` toggle state is exposed only via a `data-active` attribute and visual styling. Screen readers cannot determine that the chip is a toggle button or its current state (4.1.2). Add `role="button"` with `aria-pressed={isActive}` (or use a real `<button aria-pressed>`).
+- The `disabled` state is conveyed only via a `data-disabled` attribute. It is not exposed through an ARIA property (`aria-disabled`) and does not move focus when using a native button.
+
+**Medium:**
+
+- The active/disabled visual states are conveyed only by color (1.4.1). No text or non-color indicator (icon, `aria-pressed`, disabled attribute) communicates the state to users who cannot perceive color differences.
+
+**Low:**
+
+- `Chip.Icon` when rendered as a button has no built-in accessible name; it depends entirely on the icon providing a label (1.1.1). Consider documenting or enforcing a required accessible label for clickable icons.
+- `Chip.Icon` button target size depends on the icon and may be under 24x24 CSS px (2.5.8).
