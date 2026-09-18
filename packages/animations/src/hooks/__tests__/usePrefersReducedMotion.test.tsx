@@ -17,7 +17,7 @@ describe(usePrefersReducedMotion, () => {
       matches: false,
       addEventListener: vi.fn(),
       removeEventListener: vi.fn(),
-    })
+    } as unknown as MediaQueryList)
 
     const { result } = renderHook(() => usePrefersReducedMotion())
 
@@ -29,7 +29,7 @@ describe(usePrefersReducedMotion, () => {
       matches: true,
       addEventListener: vi.fn(),
       removeEventListener: vi.fn(),
-    })
+    } as unknown as MediaQueryList)
 
     const { result } = renderHook(() => usePrefersReducedMotion())
 
@@ -43,7 +43,7 @@ describe(usePrefersReducedMotion, () => {
       matches: true,
       addEventListener: vi.fn(),
       removeEventListener: mockRemoveListener,
-    })
+    } as unknown as MediaQueryList)
 
     const { unmount } = renderHook(() => usePrefersReducedMotion())
 
