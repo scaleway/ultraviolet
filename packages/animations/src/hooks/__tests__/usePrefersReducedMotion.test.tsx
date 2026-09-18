@@ -4,6 +4,7 @@ import { usePrefersReducedMotion } from '../usePrefersReducedMotion'
 
 describe(usePrefersReducedMotion, () => {
   it('should return true when prefers-reduced-motion is enabled', () => {
+    // oxlint-disable-next-line vitest/prefer-spy-on -- jsdom doesn't implement matchMedia
     window.matchMedia = vi.fn().mockReturnValue({
       matches: false,
       addEventListener: vi.fn(),
@@ -16,6 +17,7 @@ describe(usePrefersReducedMotion, () => {
   })
 
   it('should return false when prefers-reduced-motion is disabled', () => {
+    // oxlint-disable-next-line vitest/prefer-spy-on -- jsdom doesn't implement matchMedia
     window.matchMedia = vi.fn().mockReturnValue({
       matches: true,
       addEventListener: vi.fn(),
@@ -30,6 +32,7 @@ describe(usePrefersReducedMotion, () => {
   it('should cleanup event listener on unmount', () => {
     const mockRemoveListener = vi.fn()
 
+    // oxlint-disable-next-line vitest/prefer-spy-on -- jsdom doesn't implement matchMedia
     window.matchMedia = vi.fn().mockReturnValue({
       matches: true,
       addEventListener: vi.fn(),

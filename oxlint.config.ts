@@ -108,9 +108,6 @@ export default defineConfig({
         'vitest/no-importing-vitest-globals': 'off',
         'vitest/padding-around-test-blocks': 'warn', // vitest errors (129)
         'vitest/prefer-called-times': 'off',
-        'vitest/prefer-expect-resolves': 'warn', // vitest errors (4)
-        'vitest/prefer-spy-on': 'warn', // vitest errors (3)
-        'vitest/prefer-strict-equal': 'warn', // vitest errors (7)
         'vitest/prefer-import-in-mock': 'off',
         'vitest/prefer-lowercase-title': 'error',
         'vitest/prefer-to-be-falsy': 'off',
@@ -124,7 +121,6 @@ export default defineConfig({
         'vitest/prefer-snapshot-hint': 'off',
         'vitest/require-hook': 'warn', // vitest errors (5)
         'vitest/prefer-called-with': 'off',
-        'vitest/warn-todo': 'warn', // vitest errors (1)
         'vitest/max-expects': ['error', { max: 10 }],
         'vitest/no-mocks-import': 'error',
       },
@@ -298,8 +294,5 @@ export default defineConfig({
     'vitest/no-conditional-expect': 'warn', // vitest errors (11)
     'vitest/no-conditional-in-test': 'warn', // vitest errors (36)
     'vitest/padding-around-test-blocks': 'warn', // vitest errors (129)
-    'vitest/prefer-expect-resolves': 'warn', // vitest errors (4)
-    'vitest/prefer-spy-on': 'warn', // vitest errors (3)
-    'vitest/prefer-strict-equal': 'warn', // vitest errors (7)
   },
 })
