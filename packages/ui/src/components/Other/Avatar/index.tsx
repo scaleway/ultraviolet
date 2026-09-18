@@ -35,6 +35,7 @@ export const Avatar = ({
   const finalSize = sizes(UVTheme)[size]
 
   return (
+    // oxlint-disable-next-line jsx_a11y/no-static-element-interactions
     <div
       className={cn(className, avatarStyle.container({ sentiment, shape, size }))}
       data-has-background={!['user', 'image'].includes(variant)}
