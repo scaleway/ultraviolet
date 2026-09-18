@@ -21,9 +21,7 @@ export type FieldProps<
   error: string | undefined
 }
 
-const useFieldStrategy = (mode: boolean) => {
-  return mode ? useRegisterField : useControlledField
-}
+const useFieldStrategy = (mode: boolean) => (mode ? useRegisterField : useControlledField)
 
 /**
  * Hook to use in Field components to centralize the logic linked to React-Hook-Form and other common field props.

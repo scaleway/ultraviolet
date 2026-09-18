@@ -37,35 +37,41 @@ const walk = (dir: string): string[] => {
 const filesToAnalyze = walk(srcDir)
 
 for (const file of filesToAnalyze) {
-  if ((file.endsWith('.ts') || file.endsWith('.tsx')) && !['stories.tsx', 'test.tsx'].some(end => file.endsWith(end))) {
-    const relativePath = relative(srcDir, file)
-    const componentName = relativePath.split('/')[0]
+  const isTsFile = file.endsWith('.ts') || file.endsWith('.tsx')
+  const isExcluded = ['stories.tsx', 'test.tsx'].some(end => file.endsWith(end))
+  if (!isTsFile || isExcluded) {
+    continue
+  }
 
-    const content = readFileSync(file, 'utf8')
+  const relativePath = relative(srcDir, file)
+  const componentName = relativePath.split('/')[0]
 
-    const matches = content.matchAll(/import\s+(?:.*?from\s+)?(['"])(.*?)(['"])|export\s+\{?\s*(\w+)?\s*\}?$/gu)
+  const content = readFileSync(file, 'utf8')
 
-    for (const match of matches) {
-      const importedFile = match[2] || null
-      if (importedFile) {
-        const normalizedFile = relative(srcDir, join(dirname(file), importedFile)).replace(/\.tsx?$/u, '')
+  const matches = content.matchAll(/import\s+(?:.*?from\s+)?(['"])(.*?)(['"])|export\s+\{?\s*(\w+)?\s*\}?$/gu)
 
-        if (
-          !['react', 'react-vite', 'vitest', 'styled', 'components/'].some(string => normalizedFile.endsWith(string))
-        ) {
-          const importedComponent = normalizedFile.split('/').toReversed()[0]
+  for (const match of matches) {
+    const importedFile = match[2] || null
+    if (!importedFile) {
+      continue
+    }
 
-          if (!graph[componentName]) {
-            graph[componentName] = { dependsOn: [] }
-          }
+    const normalizedFile = relative(srcDir, join(dirname(file), importedFile)).replace(/\.tsx?$/u, '')
 
-          if (importedComponent !== componentName) {
-            const { dependsOn } = graph[componentName]
-            const newDeps = [...new Set([...dependsOn, importedComponent])]
-            graph[componentName].dependsOn = newDeps
-          }
-        }
-      }
+    if (['react', 'react-vite', 'vitest', 'styled', 'components/'].some(string => normalizedFile.endsWith(string))) {
+      continue
+    }
+
+    const importedComponent = normalizedFile.split('/').toReversed()[0]
+
+    if (!graph[componentName]) {
+      graph[componentName] = { dependsOn: [] }
+    }
+
+    if (importedComponent !== componentName) {
+      const { dependsOn } = graph[componentName]
+      const newDeps = [...new Set([...dependsOn, importedComponent])]
+      graph[componentName].dependsOn = newDeps
     }
   }
 }

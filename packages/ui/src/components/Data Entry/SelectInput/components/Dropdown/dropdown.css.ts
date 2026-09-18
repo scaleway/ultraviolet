@@ -72,7 +72,7 @@ export const dropdownGroupSelectable = recipe({
 export const dropdownSection = style({
   paddingBlock: theme.space[0.5],
   selectors: {
-    ['&:not(:first-child)']: {
+    '&:not(:first-child)': {
       borderTop: `1px solid ${theme.colors.neutral.borderWeak}`,
     },
     [`&:has(${dropdownGroup})`]: {

@@ -140,12 +140,9 @@ export default defineConfig({
   ],
   plugins: ['import', 'node', 'oxc', 'react', 'typescript', 'unicorn', 'jsx-a11y'],
   rules: {
-    'eslint/arrow-body-style': 'warn', // eslint errors (4)
     'eslint/class-methods-use-this': 'warn', // eslint errors (4)
-    'eslint/complexity': ['warn', { max: 30, variant: 'modified' }],
     'eslint/curly': 'warn', // eslint errors (15)
     'eslint/init-declarations': 'warn', // eslint errors (15)
-    'eslint/max-depth': 'warn', // eslint errors (3)
     'eslint/max-lines': 'warn', // eslint errors (38)
     'eslint/max-nested-callbacks': 'warn', // base sets error (max: 4); keep warn
     'eslint/max-params': 'warn', // eslint errors (33)
@@ -157,10 +154,7 @@ export default defineConfig({
     'eslint/no-param-reassign': 'error',
     'eslint/no-shadow': 'warn', // eslint errors (7)
     'eslint/no-unused-vars': 'warn', // eslint errors (15)
-    'eslint/no-useless-assignment': 'warn', // eslint errors (2)
-    'eslint/no-useless-computed-key': 'warn', // eslint errors (3)
     'eslint/object-shorthand': 'warn', // eslint errors (15)
-    'eslint/prefer-arrow-callback': 'warn', // eslint errors (1)
     'eslint/prefer-destructuring': 'warn', // eslint errors (31)
     'eslint/prefer-named-capture-group': 'warn', // eslint errors (18)
     'eslint/require-unicode-regexp': 'warn', // eslint errors (34)

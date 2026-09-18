@@ -2,30 +2,28 @@ import type { StoryFn } from '@storybook/react-vite'
 import { TagList } from '..'
 import { Stack } from '../../../Layout/Stack'
 
-export const ParentWithDefinedWidth: StoryFn<typeof TagList> = args => {
-  return (
-    <Stack gap={2}>
-      <div
-        style={{
-          border: '1px solid gray',
-          padding: '10px',
-          overflow: 'hidden',
-          resize: 'horizontal',
-        }}
-      >
-        <TagList {...args} />
-      </div>
+export const ParentWithDefinedWidth: StoryFn<typeof TagList> = args => (
+  <Stack gap={2}>
+    <div
+      style={{
+        border: '1px solid gray',
+        padding: '10px',
+        overflow: 'hidden',
+        resize: 'horizontal',
+      }}
+    >
+      <TagList {...args} />
+    </div>
 
-      <div style={{ border: '1px solid gray', padding: '10px', width: '100px' }}>
-        <TagList {...args} />
-      </div>
+    <div style={{ border: '1px solid gray', padding: '10px', width: '100px' }}>
+      <TagList {...args} />
+    </div>
 
-      <div style={{ border: '1px solid gray', padding: '10px', width: '100px' }}>
-        <TagList {...args} tags={['Looooooooooooong']} />
-      </div>
-    </Stack>
-  )
-}
+    <div style={{ border: '1px solid gray', padding: '10px', width: '100px' }}>
+      <TagList {...args} tags={['Looooooooooooong']} />
+    </div>
+  </Stack>
+)
 
 ParentWithDefinedWidth.parameters = {
   docs: {
