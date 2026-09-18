@@ -204,7 +204,6 @@ export default defineConfig({
     'react/display-name': 'off',
     'react/exhaustive-effect-dependencies': 'warn', // react errors (30)
     'react/forbid-component-props': 'off',
-    'react/function-component-definition': 'warn', // react errors (964)
     'react/hook-use-state': 'warn', // react errors (74)
     'react/hooks': 'warn', // react errors (2)
     'react/immutability': 'warn', // react errors (5)
