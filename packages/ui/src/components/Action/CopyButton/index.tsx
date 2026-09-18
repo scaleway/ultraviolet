@@ -3,7 +3,8 @@
 import { useClipboard } from '@scaleway/use-clipboard'
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { CopyContentIcon } from '@ultraviolet/icons/CopyContentIcon'
-import type { CSSProperties } from 'react'
+import { cn } from '@ultraviolet/utils'
+import type { ComponentProps, CSSProperties } from 'react'
 import { Button } from '../Button'
 
 const COPY_DURATION = 2500
@@ -13,7 +14,7 @@ type CopyButtonProps = {
   value: string
   copyText?: string
   copiedText?: string
-  sentiment?: 'primary' | 'neutral'
+  sentiment?: ComponentProps<typeof Button>['sentiment']
   bordered?: boolean
   className?: string
   'data-testid'?: string
@@ -44,7 +45,7 @@ export const CopyButton = ({
 
   return (
     <Button
-      className={className}
+      className={cn(className, 'copyButton')}
       data-testid={dataTestId}
       onClick={() => {
         setCopied()

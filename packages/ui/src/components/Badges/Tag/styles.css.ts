@@ -81,6 +81,21 @@ const container = recipe({
         },
       },
     },
+    tagLink: {
+      true: {
+        borderRight: 0,
+        selectors: {
+          '&&:hover': {
+            border: 'none',
+            borderLeft: `1px solid transparent`,
+            borderLeftColor: 'inherit',
+          },
+          '&&': {
+            background: theme.colors.neutral.background,
+          },
+        },
+      },
+    },
   },
   defaultVariants: {
     copiable: false,

@@ -3,6 +3,7 @@ import { createVar } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import type { Color } from '../../../theme'
 import { tagStyle } from '../../Badges/Tag/styles.css'
+import { tagLinkStyle } from '../../Badges/TagLink/styles.css'
 import { drawerStyle } from '../../Overlay/Drawer/styles.css'
 
 export const thicknessSeparator = createVar()
@@ -83,6 +84,9 @@ const hr = recipe({
             minHeight: 1,
           },
           [`&${tagStyle.separator}`]: {
+            backgroundColor: theme.colors.neutral.border,
+          },
+          [`&${tagLinkStyle.separator}`]: {
             backgroundColor: theme.colors.neutral.border,
           },
           [`${tagStyle.content.copiable}:hover  &${tagStyle.separator}`]: {
