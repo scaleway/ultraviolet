@@ -44,7 +44,7 @@ export const KeyValueInput = ({
     onChange?.(newKeyValues, index, operationType)
   }
 
-  const canAdd = (keyvalues && keyvalues.length !== undefined && keyvalues.length < maxSize) || !keyvalues
+  const canAdd = (keyvalues?.length !== undefined && keyvalues.length < maxSize) || !keyvalues
 
   const editable = !(disabled || readOnly)
 

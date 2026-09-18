@@ -64,7 +64,7 @@ export const Text = ({
   'aria-hidden': ariaHidden,
   style,
 }: TextProps) => {
-  const [setElement, isOverflowing] = useIsOverflowing({ enabled: oneLine === true })
+  const [setElement, isOverflowing] = useIsOverflowing({ enabled: oneLine })
 
   const finalStringChildren = recursivelyGetChildrenString(children)
 

@@ -6,7 +6,11 @@ import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { Pagination } from '..'
 
 class MockResizeObserver {
-  constructor(private readonly callback: ResizeObserverCallback) {}
+  private readonly callback: ResizeObserverCallback
+
+  constructor(callback: ResizeObserverCallback) {
+    this.callback = callback
+  }
 
   observe(target: Element) {
     const entry = { target, contentRect: { width: 800 } } as unknown as ResizeObserverEntry

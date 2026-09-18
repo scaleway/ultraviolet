@@ -117,7 +117,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         return
       }
 
-      const userResized = textArea.style.height.match(/^\d+px$/)
+      const userResized = /^\d+px$/.exec(textArea.style.height) !== null
       const hasNativeAutoResize = textArea.style.fieldSizing === 'content'
       if (userResized || hasNativeAutoResize) {
         return

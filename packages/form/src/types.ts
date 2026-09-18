@@ -38,9 +38,7 @@ export type MetaField = {
   value?: string | number
 }
 
-export type RequiredErrors = {
-  [key in FieldError['type']]: (params: MetaField) => string
-}
+export type RequiredErrors = Record<FieldError['type'], (params: MetaField) => string>
 
 export type FormErrors = {
   [
