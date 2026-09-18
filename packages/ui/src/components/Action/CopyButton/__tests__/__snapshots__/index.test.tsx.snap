@@ -10,7 +10,7 @@ exports[`copyButton > renders correctly 1`] = `
     >
       <button
         aria-labelledby="_r_1_"
-        class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
         type="button"
       >
         <svg
@@ -55,6 +55,116 @@ exports[`copyButton > renders correctly 1`] = `
 </DocumentFragment>
 `;
 
+exports[`copyButton > renders correctly sentiment danger 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__18qbklt5"
+    >
+      <button
+        aria-labelledby="_r_j_"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_danger__8xt08s6 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_20__8xt08s15"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+            fill-rule="evenodd"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="styles__18qbklt0 styles__ahdbou0"
+      data-floating-ui-focusable=""
+      data-placement="top"
+      id="_r_j_"
+      role="tooltip"
+      style="position: absolute; left: 0px; top: 0px; max-width: 232px; transform: translate(0px, 0px);"
+      tabindex="-1"
+    >
+      <div
+        class="styles__18qbklt1"
+      />
+      <div
+        class="styles__18qbklt2"
+      >
+        Copy
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`copyButton > renders correctly sentiment info 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__18qbklt5"
+    >
+      <button
+        aria-labelledby="_r_n_"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_info__8xt08s7 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_21__8xt08s16"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+            fill-rule="evenodd"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="styles__18qbklt0 styles__ahdbou0"
+      data-floating-ui-focusable=""
+      data-placement="top"
+      id="_r_n_"
+      role="tooltip"
+      style="position: absolute; left: 0px; top: 0px; max-width: 232px; transform: translate(0px, 0px);"
+      tabindex="-1"
+    >
+      <div
+        class="styles__18qbklt1"
+      />
+      <div
+        class="styles__18qbklt2"
+      >
+        Copy
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`copyButton > renders correctly sentiment large 1`] = `
 <DocumentFragment>
   <div
@@ -65,7 +175,7 @@ exports[`copyButton > renders correctly sentiment large 1`] = `
     >
       <button
         aria-labelledby="_r_9_"
-        class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_large__8xt08se styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
         type="button"
       >
         <svg
@@ -120,7 +230,7 @@ exports[`copyButton > renders correctly sentiment medium 1`] = `
     >
       <button
         aria-labelledby="_r_7_"
-        class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
         type="button"
       >
         <svg
@@ -174,8 +284,8 @@ exports[`copyButton > renders correctly sentiment neutral 1`] = `
       class="styles__18qbklt5"
     >
       <button
-        aria-labelledby="_r_d_"
-        class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_24__8xt08s19"
+        aria-labelledby="_r_f_"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_24__8xt08s19"
         type="button"
       >
         <svg
@@ -202,7 +312,7 @@ exports[`copyButton > renders correctly sentiment neutral 1`] = `
       class="styles__18qbklt0 styles__ahdbou0"
       data-floating-ui-focusable=""
       data-placement="top"
-      id="_r_d_"
+      id="_r_f_"
       role="tooltip"
       style="position: absolute; left: 0px; top: 0px; max-width: 232px; transform: translate(0px, 0px);"
       tabindex="-1"
@@ -230,7 +340,7 @@ exports[`copyButton > renders correctly sentiment primary 1`] = `
     >
       <button
         aria-labelledby="_r_b_"
-        class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
         type="button"
       >
         <svg
@@ -275,6 +385,61 @@ exports[`copyButton > renders correctly sentiment primary 1`] = `
 </DocumentFragment>
 `;
 
+exports[`copyButton > renders correctly sentiment secondary 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__18qbklt5"
+    >
+      <button
+        aria-labelledby="_r_d_"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_secondary__8xt08sa styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_19__8xt08s14"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+            fill-rule="evenodd"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="styles__18qbklt0 styles__ahdbou0"
+      data-floating-ui-focusable=""
+      data-placement="top"
+      id="_r_d_"
+      role="tooltip"
+      style="position: absolute; left: 0px; top: 0px; max-width: 232px; transform: translate(0px, 0px);"
+      tabindex="-1"
+    >
+      <div
+        class="styles__18qbklt1"
+      />
+      <div
+        class="styles__18qbklt2"
+      >
+        Copy
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`copyButton > renders correctly sentiment small 1`] = `
 <DocumentFragment>
   <div
@@ -285,7 +450,7 @@ exports[`copyButton > renders correctly sentiment small 1`] = `
     >
       <button
         aria-labelledby="_r_5_"
-        class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
         type="button"
       >
         <svg
@@ -330,6 +495,116 @@ exports[`copyButton > renders correctly sentiment small 1`] = `
 </DocumentFragment>
 `;
 
+exports[`copyButton > renders correctly sentiment success 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__18qbklt5"
+    >
+      <button
+        aria-labelledby="_r_h_"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_success__8xt08sb styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_22__8xt08s17"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+            fill-rule="evenodd"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="styles__18qbklt0 styles__ahdbou0"
+      data-floating-ui-focusable=""
+      data-placement="top"
+      id="_r_h_"
+      role="tooltip"
+      style="position: absolute; left: 0px; top: 0px; max-width: 232px; transform: translate(0px, 0px);"
+      tabindex="-1"
+    >
+      <div
+        class="styles__18qbklt1"
+      />
+      <div
+        class="styles__18qbklt2"
+      >
+        Copy
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`copyButton > renders correctly sentiment warning 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__18qbklt5"
+    >
+      <button
+        aria-labelledby="_r_l_"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_warning__8xt08sc styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_23__8xt08s18"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+            fill-rule="evenodd"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="styles__18qbklt0 styles__ahdbou0"
+      data-floating-ui-focusable=""
+      data-placement="top"
+      id="_r_l_"
+      role="tooltip"
+      style="position: absolute; left: 0px; top: 0px; max-width: 232px; transform: translate(0px, 0px);"
+      tabindex="-1"
+    >
+      <div
+        class="styles__18qbklt1"
+      />
+      <div
+        class="styles__18qbklt2"
+      >
+        Copy
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`copyButton > renders correctly sentiment xsmall 1`] = `
 <DocumentFragment>
   <div
@@ -340,7 +615,7 @@ exports[`copyButton > renders correctly sentiment xsmall 1`] = `
     >
       <button
         aria-labelledby="_r_3_"
-        class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_xsmall__8xt08sh styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_xsmall__8xt08sh styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
         type="button"
       >
         <svg
@@ -394,8 +669,8 @@ exports[`copyButton > renders correctly with bordered 1`] = `
       class="styles__18qbklt5"
     >
       <button
-        aria-labelledby="_r_f_"
-        class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+        aria-labelledby="_r_p_"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
         type="button"
       >
         <svg
@@ -422,7 +697,7 @@ exports[`copyButton > renders correctly with bordered 1`] = `
       class="styles__18qbklt0 styles__ahdbou0"
       data-floating-ui-focusable=""
       data-placement="top"
-      id="_r_f_"
+      id="_r_p_"
       role="tooltip"
       style="position: absolute; left: 0px; top: 0px; max-width: 232px; transform: translate(0px, 0px);"
       tabindex="-1"
@@ -449,8 +724,8 @@ exports[`copyButton > renders correctly with children 1`] = `
       class="styles__18qbklt5"
     >
       <button
-        aria-labelledby="_r_h_"
-        class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
+        aria-labelledby="_r_r_"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
         type="button"
       >
         <svg
@@ -478,7 +753,7 @@ exports[`copyButton > renders correctly with children 1`] = `
       class="styles__18qbklt0 styles__ahdbou0"
       data-floating-ui-focusable=""
       data-placement="top"
-      id="_r_h_"
+      id="_r_r_"
       role="tooltip"
       style="position: absolute; left: 0px; top: 0px; max-width: 232px; transform: translate(0px, 0px);"
       tabindex="-1"
@@ -505,8 +780,8 @@ exports[`copyButton > renders correctly with custom class name 1`] = `
       class="styles__18qbklt5"
     >
       <button
-        aria-labelledby="_r_n_"
-        class="custom-class styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
+        aria-labelledby="_r_11_"
+        class="custom-class copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
         type="button"
       >
         <svg
@@ -533,7 +808,7 @@ exports[`copyButton > renders correctly with custom class name 1`] = `
       class="styles__18qbklt0 styles__ahdbou0"
       data-floating-ui-focusable=""
       data-placement="top"
-      id="_r_n_"
+      id="_r_11_"
       role="tooltip"
       style="position: absolute; left: 0px; top: 0px; max-width: 232px; transform: translate(0px, 0px);"
       tabindex="-1"
@@ -560,8 +835,8 @@ exports[`copyButton > renders correctly with custom copied text 1`] = `
       class="styles__18qbklt5"
     >
       <button
-        aria-labelledby="_r_l_"
-        class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
+        aria-labelledby="_r_v_"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
         type="button"
       >
         <svg
@@ -588,7 +863,7 @@ exports[`copyButton > renders correctly with custom copied text 1`] = `
       class="styles__18qbklt0 styles__ahdbou0"
       data-floating-ui-focusable=""
       data-placement="top"
-      id="_r_l_"
+      id="_r_v_"
       role="tooltip"
       style="position: absolute; left: 0px; top: 0px; max-width: 232px; transform: translate(0px, 0px);"
       tabindex="-1"
@@ -615,8 +890,8 @@ exports[`copyButton > renders correctly with custom copy text 1`] = `
       class="styles__18qbklt5"
     >
       <button
-        aria-labelledby="_r_j_"
-        class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
+        aria-labelledby="_r_t_"
+        class="copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
         type="button"
       >
         <svg
@@ -643,7 +918,7 @@ exports[`copyButton > renders correctly with custom copy text 1`] = `
       class="styles__18qbklt0 styles__ahdbou0"
       data-floating-ui-focusable=""
       data-placement="top"
-      id="_r_j_"
+      id="_r_t_"
       role="tooltip"
       style="position: absolute; left: 0px; top: 0px; max-width: 232px; transform: translate(0px, 0px);"
       tabindex="-1"
