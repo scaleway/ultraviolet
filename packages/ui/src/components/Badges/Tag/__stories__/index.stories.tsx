@@ -7,9 +7,9 @@ export default {
   parameters: {
     a11yStatus: {
       perceivable: true,
-      operable: false,
-      understandable: false,
-      robust: false,
+      operable: true,
+      understandable: true,
+      robust: true,
     },
   },
 } satisfies Meta<typeof Tag>

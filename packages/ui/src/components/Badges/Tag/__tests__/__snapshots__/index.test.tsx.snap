@@ -56,6 +56,7 @@ exports[`tag > renders correctly disabled 1`] = `
       style="--_1d8tbmb0: fit-content; --_1d8tbmb1: 100%;"
     >
       <span
+        aria-disabled="true"
         class="styles_notCopiable__1gaaepy4 styles__1gaaepy5 styles_disabled_true__1gaaepy7 styles_sentiment_neutral__1gaaepyb styles_isButton_false__1gaaepyh styles_undefined_compound_9__1gaaepyr"
       >
         <span
@@ -129,6 +130,7 @@ exports[`tag > renders correctly with copiable and copy button 1`] = `
       >
         <button
           class="styles_copiable__1gaaepy3 styles__1gaaepy5 styles_copiable_true__1gaaepy6 styles_sentiment_neutral__1gaaepyb styles_isButton_false__1gaaepyh styles_undefined_compound_2__1gaaepyk"
+          type="button"
         >
           <span
             class="styles__1gaaepy13 style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32 style__1do42ls3e"
@@ -154,6 +156,10 @@ exports[`tag > renders correctly with copiable and copy button 1`] = `
             />
           </svg>
         </button>
+        <span
+          class="styles__ahdbou0"
+          role="status"
+        />
       </div>
     </div>
   </div>
@@ -273,6 +279,7 @@ exports[`tag > renders correctly with key-value variant 1`] = `
             key
           </span>
           <hr
+            aria-hidden="true"
             aria-orientation="vertical"
             class="styles__1gaaepy2 styles__kqki61b styles_direction_vertical__kqki61d styles_sentiment_neutral__kqki61i"
             style="--kqki610: 1px;"
@@ -308,11 +315,15 @@ exports[`tag > renders correctly with onClose 1`] = `
         </span>
       </span>
       <button
-        aria-label="Close tag"
         class="styles__1gaaepy5 styles_sentiment_neutral__1gaaepyb styles_isButton_true__1gaaepyg styles_undefined_compound_16__1gaaepyy"
         data-testid="close-tag"
         type="button"
       >
+        <span
+          class="styles__ahdbou0"
+        >
+          Remove tag test
+        </span>
         <svg
           aria-hidden="true"
           class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
@@ -352,6 +363,7 @@ exports[`tag > renders correctly with onClose and key-value 1`] = `
             myKey
           </span>
           <hr
+            aria-hidden="true"
             aria-orientation="vertical"
             class="styles__1gaaepy2 styles__kqki61b styles_direction_vertical__kqki61d styles_sentiment_neutral__kqki61i"
             style="--kqki610: 1px;"
@@ -364,11 +376,15 @@ exports[`tag > renders correctly with onClose and key-value 1`] = `
         </div>
       </span>
       <button
-        aria-label="Close tag"
         class="styles__1gaaepy5 styles_sentiment_neutral__1gaaepyb styles_isButton_true__1gaaepyg styles_undefined_compound_16__1gaaepyy"
         data-testid="close-tag"
         type="button"
       >
+        <span
+          class="styles__ahdbou0"
+        >
+          Remove tag myKey:myValue
+        </span>
         <svg
           aria-hidden="true"
           class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
@@ -396,6 +412,7 @@ exports[`tag > should not close with onClose and disabled 1`] = `
       style="--_1d8tbmb0: fit-content; --_1d8tbmb1: 100%;"
     >
       <span
+        aria-disabled="true"
         class="styles_notCopiable__1gaaepy4 styles__1gaaepy5 styles_disabled_true__1gaaepy7 styles_sentiment_neutral__1gaaepyb styles_isButton_false__1gaaepyh styles_closable_true__1gaaepy8 styles_undefined_compound_9__1gaaepyr"
       >
         <span
@@ -405,12 +422,16 @@ exports[`tag > should not close with onClose and disabled 1`] = `
         </span>
       </span>
       <button
-        aria-label="Close tag"
         class="styles__1gaaepy5 styles_disabled_true__1gaaepy7 styles_sentiment_neutral__1gaaepyb styles_isButton_true__1gaaepyg styles_undefined_compound_9__1gaaepyr"
         data-testid="close-tag"
         disabled=""
         type="button"
       >
+        <span
+          class="styles__ahdbou0"
+        >
+          Remove tag test
+        </span>
         <svg
           aria-hidden="true"
           class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
@@ -439,6 +460,8 @@ exports[`tag > should not copy with copiable and disabled 1`] = `
     >
       <button
         class="styles_copiable__1gaaepy3 styles__1gaaepy5 styles_disabled_true__1gaaepy7 styles_sentiment_neutral__1gaaepyb styles_isButton_false__1gaaepyh styles_undefined_compound_9__1gaaepyr"
+        disabled=""
+        type="button"
       >
         <span
           class="styles__1gaaepy13 style__1do42ls0 style_disabled_true__1do42ls1 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_caption__1do42lsp style_undefined_compound_28__1do42ls22 style__1do42ls3e"

@@ -9,6 +9,7 @@ import { Loader } from '../../Feedback/Loader'
 import { Row } from '../../Layout/Row'
 import { Separator } from '../../Layout/Separator'
 import { Stack } from '../../Layout/Stack'
+import { VisuallyHidden } from '../../Other/VisuallyHidden'
 import { Tooltip } from '../../Overlay/Tooltip'
 import { Text } from '../../Typography/Text'
 import type { TagProps } from './type'
@@ -65,7 +66,6 @@ export const Tag = ({
   const copyTextTooltip = isCopied ? copiedText : copyText
 
   const textProps = {
-    'aria-disabled': disabled,
     as: 'span',
     variant: variant === 'code' ? 'code' : 'caption',
     oneLine: true,
@@ -74,7 +74,7 @@ export const Tag = ({
   } as const
 
   return (
-    <Tooltip text={isCopiable ? copyTextTooltip : null}>
+    <Tooltip text={isCopiable ? copyTextTooltip : null} relation="description">
       <Stack
         direction="row"
         className={tagStyle.wrapper[copiable ? 'copiable' : 'notCopiable']}
@@ -100,6 +100,7 @@ export const Tag = ({
               setCopied().catch(() => null)
             }
           }}
+          {...(copiable ? { type: 'button', disabled } : { 'aria-disabled': disabled })}
         >
           {keyValue ? (
             <Row templateColumns="minmax(0, auto) 1px minmax(0, auto)" gap={1} className={tagStyle.text}>
@@ -109,6 +110,7 @@ export const Tag = ({
                 direction="vertical"
                 thickness={1}
                 className={tagStyle.separator}
+                aria-hidden
               />
               <Text {...textProps}>{keyValue.value}</Text>
             </Row>
@@ -118,19 +120,23 @@ export const Tag = ({
             </Text>
           )}
           {copiable && copyButton && !isLoading ? <CopyContentIcon size="xsmall" /> : null}
-          {isLoading ? <Loader active size="small" /> : null}
+          {isLoading ? <Loader active size="small" label="Loading" /> : null}
         </TagInner>
         {onClose ? (
           <button
-            aria-label="Close tag"
             data-testid="close-tag"
             disabled={disabled}
             onClick={onClose}
             type="button"
             className={tagStyle.container({ disabled, isButton: true, sentiment })}
           >
+            <VisuallyHidden>Remove tag {stringChildren}</VisuallyHidden>
             <CloseIcon size="small" />
           </button>
+        ) : null}
+        {isCopiable ? (
+          // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role
+          <VisuallyHidden role="status">{isCopied ? copiedText : null}</VisuallyHidden>
         ) : null}
       </Stack>
     </Tooltip>

@@ -1,33 +1,59 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { TagInput } from '..'
 
 describe('tagInput', () => {
-  it('should renders correctly', () => shouldMatchSnapshot(<TagInput onChange={() => {}} />))
+  it('should renders correctly', () => {
+    const { asFragment } = renderWithTheme(<TagInput onChange={() => {}} />)
 
-  it('should renders correctly disabled', () => shouldMatchSnapshot(<TagInput disabled />))
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly readOnly', () => shouldMatchSnapshot(<TagInput readOnly />))
+  it('should renders correctly disabled', () => {
+    const { asFragment } = renderWithTheme(<TagInput disabled />)
 
-  it('should renders correctly with label', () => shouldMatchSnapshot(<TagInput label="Label" />))
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly with labelDescription', () =>
-    shouldMatchSnapshot(<TagInput labelDescription={<div>label description</div>} />))
+  it('should renders correctly readOnly', () => {
+    const { asFragment } = renderWithTheme(<TagInput readOnly />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly with error', () => shouldMatchSnapshot(<TagInput error="This is an error" />))
+  it('should renders correctly with label', () => {
+    const { asFragment } = renderWithTheme(<TagInput label="Label" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly with success', () => shouldMatchSnapshot(<TagInput success="This is a success" />))
+  it('should renders correctly with labelDescription', () => {
+    const { asFragment } = renderWithTheme(<TagInput labelDescription={<div>label description</div>} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly with placeholder', () =>
-    shouldMatchSnapshot(<TagInput placeholder="Enter a value here" />))
+  it('should renders correctly with error', () => {
+    const { asFragment } = renderWithTheme(<TagInput error="This is an error" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly with some tags', () =>
-    shouldMatchSnapshot(<TagInput name="radio" onChange={() => {}} value={['hello', 'world']} />))
+  it('should renders correctly with success', () => {
+    const { asFragment } = renderWithTheme(<TagInput success="This is a success" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should renders correctly with some tags objects', () =>
-    shouldMatchSnapshot(
+  it('should renders correctly with placeholder', () => {
+    const { asFragment } = renderWithTheme(<TagInput placeholder="Enter a value here" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should renders correctly with some tags', () => {
+    const { asFragment } = renderWithTheme(<TagInput name="radio" onChange={() => {}} value={['hello', 'world']} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should renders correctly with some tags objects', () => {
+    const { asFragment } = renderWithTheme(
       <TagInput
         name="radio"
         onChange={() => {}}
@@ -36,7 +62,9 @@ describe('tagInput', () => {
           { index: 'secondIndex', label: 'world' },
         ]}
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('should be able to be controlled', async () => {
     const mockOnChange = vi.fn()
@@ -61,7 +89,7 @@ describe('tagInput', () => {
 
     renderWithTheme(<TagInput onChange={mockOnChange} value={['first', 'second']} />)
 
-    const firstTag = screen.queryByText(/first/u)
+    const firstTag = screen.queryByText('first')
     expect(firstTag).toBeInTheDocument()
     // remove Tag
     const tagsClose = screen.getAllByTestId('close-tag')
@@ -76,7 +104,7 @@ describe('tagInput', () => {
     const mockOnChange = vi.fn()
     renderWithTheme(<TagInput id="test" name="radio" onChange={mockOnChange} value={['hello', 'world']} />)
     const input = screen.getByRole<HTMLInputElement>('textbox')
-    const lastTag = screen.queryByText(/world/u)
+    const lastTag = screen.queryByText('world')
     expect(lastTag).toBeInTheDocument()
     await userEvent.click(input)
     expect(input).toHaveFocus()
