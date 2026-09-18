@@ -1,3 +1,4 @@
+import { AnchorIcon, AttachIcon, DocPaperIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { Link } from '..'
 import { Stack } from '../../../Layout/Stack'
@@ -18,6 +19,14 @@ export const Icons = (props: ComponentProps<typeof Link>) => (
           {size}
         </Link>
       ))}
+    </Stack>
+    <Stack direction="row" alignItems="end" gap="3">
+      <Link {...props}>
+        Link <DocPaperIcon />
+      </Link>
+      <Link {...props}>
+        Link <AttachIcon />
+      </Link>
     </Stack>
   </Stack>
 )
