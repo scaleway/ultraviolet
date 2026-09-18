@@ -101,9 +101,7 @@ const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(
  * List is a component that displays a list of items based on the columns you provide and the data you pass.
  */
 type ListType = {
-  (
-    props: (NewListProps & RefAttributes<HTMLTableElement>) | (LegacyListProps & RefAttributes<HTMLTableElement>),
-  ): ReactNode
+  (props: (NewListProps | LegacyListProps) & RefAttributes<HTMLTableElement>): ReactNode
   Cell: typeof Cell
   Row: typeof Row
   SelectBar: typeof SelectBar
