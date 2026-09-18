@@ -190,6 +190,7 @@ export const TagInput = ({
       ) : null}
       <div>
         <Tooltip text={tooltip}>
+          {/* oxlint-disable-next-line jsx_a11y/no-static-element-interactions */}
           <div
             className={cn(className, tagInputStyle.container({ size }))}
             data-disabled={disabled}
