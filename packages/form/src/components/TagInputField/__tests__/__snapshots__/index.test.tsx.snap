@@ -77,6 +77,7 @@ exports[`tagInputField > should render correctly with regex 1`] = `
                 style="--uv_1d8tbmb0: fit-content; --uv_1d8tbmb1: 100%;"
               >
                 <span
+                  aria-disabled="false"
                   class="uv_1gaaepy4 uv_1gaaepy5 uv_1gaaepyb uv_1gaaepyh uv_1gaaepy8"
                 >
                   <span
@@ -86,11 +87,15 @@ exports[`tagInputField > should render correctly with regex 1`] = `
                   </span>
                 </span>
                 <button
-                  aria-label="Close tag"
                   class="uv_1gaaepy5 uv_1gaaepyb uv_1gaaepyg uv_1gaaepyy"
                   data-testid="close-tag"
                   type="button"
                 >
+                  <span
+                    class="uv_ahdbou0"
+                  >
+                    Remove tag 4
+                  </span>
                   <svg
                     aria-hidden="true"
                     class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
@@ -189,6 +194,7 @@ exports[`tagInputField > should works with defaultValues 1`] = `
                 style="--uv_1d8tbmb0: fit-content; --uv_1d8tbmb1: 100%;"
               >
                 <span
+                  aria-disabled="false"
                   class="uv_1gaaepy4 uv_1gaaepy5 uv_1gaaepyb uv_1gaaepyh uv_1gaaepy8"
                 >
                   <span
@@ -198,11 +204,15 @@ exports[`tagInputField > should works with defaultValues 1`] = `
                   </span>
                 </span>
                 <button
-                  aria-label="Close tag"
                   class="uv_1gaaepy5 uv_1gaaepyb uv_1gaaepyg uv_1gaaepyy"
                   data-testid="close-tag"
                   type="button"
                 >
+                  <span
+                    class="uv_ahdbou0"
+                  >
+                    Remove tag First
+                  </span>
                   <svg
                     aria-hidden="true"
                     class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"

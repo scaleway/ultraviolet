@@ -15,6 +15,7 @@ type SeparatorProps = {
    * @private
    */
   'data-flip-id'?: string
+  'aria-hidden'?: boolean
   children?: ReactNode
   style?: CSSProperties
 }
@@ -29,6 +30,7 @@ export const Separator = ({
   className,
   'data-testid': dataTestId,
   'data-flip-id': flipId,
+  'aria-hidden': ariaHidden,
   children,
   style,
 }: SeparatorProps) =>
@@ -40,6 +42,7 @@ export const Separator = ({
       data-flip-id={flipId}
       role="separator"
       style={style}
+      aria-hidden={ariaHidden}
     >
       <hr
         className={separatorStyle.hr({ direction, hasIcon: true, sentiment })}
@@ -61,9 +64,13 @@ export const Separator = ({
       className={cn(className, separatorStyle.hr({ direction, sentiment }))}
       data-testid={dataTestId}
       data-flip-id={flipId}
-      style={assignInlineVars({
-        [thicknessSeparator]: `${thickness}px`,
-      })}
+      style={{
+        ...assignInlineVars({
+          [thicknessSeparator]: `${thickness}px`,
+        }),
+        ...style,
+      }}
+      aria-hidden={ariaHidden}
     />
   )
 

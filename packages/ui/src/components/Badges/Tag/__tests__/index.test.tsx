@@ -58,7 +58,7 @@ describe('tag', () => {
     const onClose = vi.fn()
     const { asFragment } = renderWithTheme(<Tag onClose={onClose}>test</Tag>)
 
-    const closeButton = screen.getByRole('button', { name: 'Close tag' })
+    const closeButton = screen.getByRole('button', { name: 'Remove tag test' })
     await userEvent.click(closeButton)
 
     expect(onClose).toHaveBeenCalledOnce()
@@ -97,7 +97,7 @@ describe('tag', () => {
       </Tag>,
     )
 
-    const closeButton = screen.getByRole('button', { name: 'Close tag' })
+    const closeButton = screen.getByRole('button', { name: 'Remove tag test' })
     await userEvent.click(closeButton)
 
     expect(onClose).not.toHaveBeenCalled()
@@ -146,7 +146,7 @@ describe('tag', () => {
     const onClose = vi.fn()
     const { asFragment } = renderWithTheme(<Tag onClose={onClose} keyValue={{ key: 'myKey', value: 'myValue' }} />)
 
-    const closeButton = screen.getByRole('button', { name: 'Close tag' })
+    const closeButton = screen.getByRole('button', { name: 'Remove tag myKey:myValue' })
     await userEvent.click(closeButton)
 
     expect(onClose).toHaveBeenCalledOnce()
