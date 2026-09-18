@@ -47,12 +47,7 @@ export const Prominence = ({ prominence, ...props }: ComponentProps<typeof Link>
         </Text>
         <Stack direction="row" gap={2} style={{ background: theme.colors.neutral.backgroundStronger, padding: '1rem' }}>
           <Link {...props} sentiment="neutral" prominence="stronger">
-            Default
-          </Link>
-        </Stack>
-        <Stack direction="row" gap={2} style={{ background: theme.colors.neutral.backgroundStronger, padding: '1rem' }}>
-          <Link {...props} sentiment="neutral" prominence="stronger" target="_blank">
-            External
+            neutral
           </Link>
         </Stack>
       </Row>

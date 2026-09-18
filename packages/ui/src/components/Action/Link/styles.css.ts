@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
+import { globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import type { LinkSentiment, LinkProminence } from './constants'
 import { PROMINENCES, SENTIMENTS } from './constants'
@@ -46,6 +46,9 @@ const link = recipe({
   base: {
     border: 'none',
     padding: 0,
+    display: 'inline-flex',
+    gap: theme.space[0.5],
+    alignItems: 'center',
     textDecoration: 'underline 1px dotted',
     textUnderlineOffset: '3px',
     position: 'relative',
@@ -115,25 +118,12 @@ const link = recipe({
   },
 })
 
-const openInNewIcon = styleVariants({
-  large: {
-    marginBottom: theme.space['0.5'],
-  },
-  small: {
-    marginBottom: theme.space['0.25'],
-  },
-  xsmall: {
-    marginBottom: 0,
-  },
-})
-
 /* Make this to have a global syle which does not depend on props
 That way we do not have to target every possible variant in
 icon styles */
 const defaultLink = style({})
 
 const iconLeft = style({
-  marginRight: theme.space['0.5'],
   transition: `transform ${TRANSITION_DURATION}ms cubic-bezier(0.22, 1, 0.36, 1)`, // easeOutQuint
   selectors: {
     [`${defaultLink}:hover &, ${defaultLink}:focus &`]: {
@@ -143,7 +133,6 @@ const iconLeft = style({
 })
 
 const iconRight = style({
-  marginLeft: theme.space['0.5'],
   transition: `transform ${TRANSITION_DURATION}ms cubic-bezier(0.22, 1, 0.36, 1)`, // easeOutQuint
   selectors: {
     [`${defaultLink}:hover &, ${defaultLink}:focus &`]: {
@@ -159,7 +148,6 @@ globalStyle(`${defaultLink} > * `, {
 
 export const linkStyle = {
   link,
-  openInNewIcon,
   defaultLink,
   iconLeft,
   iconRight,

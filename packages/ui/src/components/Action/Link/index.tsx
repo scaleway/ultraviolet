@@ -72,7 +72,6 @@ type LinkProps = {
 >
 
 const ICON_SIZE = 'small'
-const BLANK_TARGET_ICON_SIZE = 'small'
 
 /**
  * Link is a component used to navigate between pages or to external websites.
@@ -165,12 +164,7 @@ export const Link = forwardRef(
           ) : null}
           {children}
 
-          {isBlank ? (
-            <OpenInNewIcon
-              className={cn(linkStyle.iconRight, linkStyle.openInNewIcon[size])}
-              size={BLANK_TARGET_ICON_SIZE}
-            />
-          ) : null}
+          {isBlank ? <OpenInNewIcon className={cn(linkStyle.iconRight)} size={ICON_SIZE} /> : null}
 
           {!isBlank && iconPosition === 'right' ? (
             <ArrowRightIcon className={linkStyle.iconRight} size={ICON_SIZE} />

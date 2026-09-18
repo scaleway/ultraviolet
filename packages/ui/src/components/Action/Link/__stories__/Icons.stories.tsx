@@ -22,10 +22,7 @@ export const Icons = (props: ComponentProps<typeof Link>) => (
     </Stack>
     <Stack direction="row" alignItems="end" gap="3">
       <Link {...props}>
-        Link <DocPaperIcon />
-      </Link>
-      <Link {...props}>
-        Link <AttachIcon />
+        Anchor <AttachIcon />
       </Link>
     </Stack>
   </Stack>
