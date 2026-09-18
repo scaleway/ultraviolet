@@ -190,7 +190,6 @@ export const TagInput = ({
       ) : null}
       <div>
         <Tooltip text={tooltip}>
-          {/* oxlint-disable-next-line jsx_a11y/no-static-element-interactions */}
           <div
             className={cn(className, tagInputStyle.container({ size }))}
             data-disabled={disabled}
@@ -198,7 +197,6 @@ export const TagInput = ({
             data-readonly={readOnly}
             data-success={!!success}
             data-testid={dataTestId}
-            // oxlint-disable-next-line jsx_a11y/no-noninteractive-tabindex
             tabIndex={0}
             onClick={handleContainerClick}
             onKeyDown={event => {

@@ -205,7 +205,6 @@ export const Dialog = ({
   }
 
   return createPortal(
-    // oxlint-disable-next-line jsx_a11y/no-static-element-interactions
     <div
       className={cn(backdropClassName, modalStyle.backdrop)}
       style={backdropStyle}
@@ -243,7 +242,6 @@ export const Dialog = ({
           }),
           ...style,
         }}
-        // oxlint-disable-next-line jsx_a11y/no-noninteractive-tabindex
         tabIndex={0}
       >
         {image ? (

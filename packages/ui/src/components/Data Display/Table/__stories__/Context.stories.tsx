@@ -3,31 +3,29 @@ import { useMemo } from 'react'
 import { Table } from '..'
 import { columns, data } from './resources'
 
-export const Context: StoryFn = args => {
-  const SubComponent = ({ srcData }: { srcData: typeof data }) => {
-    const { selectedRowIds } = Table.useTableContext()
+const SubComponent = ({ srcData }: { srcData: typeof data }) => {
+  const { selectedRowIds } = Table.useTableContext()
 
-    const selectedItems = useMemo(() => srcData.filter(item => selectedRowIds[item.id]), [srcData, selectedRowIds])
+  const selectedItems = useMemo(() => srcData.filter(item => selectedRowIds[item.id]), [srcData, selectedRowIds])
 
-    return <caption>Selected movies(s): {selectedItems.map(movie => movie.name).join(', ')}</caption>
-  }
-
-  return (
-    <Table {...args} columns={columns} selectable>
-      <Table.Body>
-        {data.map(movie => (
-          <Table.Row id={movie.id} key={movie.id}>
-            <Table.Cell>{movie.name}</Table.Cell>
-            <Table.Cell>{movie.releaseYear}</Table.Cell>
-            <Table.Cell>{movie.trilogy}</Table.Cell>
-            <Table.Cell>{movie.director}</Table.Cell>
-          </Table.Row>
-        ))}
-      </Table.Body>
-      <SubComponent srcData={data} />
-    </Table>
-  )
+  return <caption>Selected movies(s): {selectedItems.map(movie => movie.name).join(', ')}</caption>
 }
+
+export const Context: StoryFn = args => (
+  <Table {...args} columns={columns} selectable>
+    <Table.Body>
+      {data.map(movie => (
+        <Table.Row id={movie.id} key={movie.id}>
+          <Table.Cell>{movie.name}</Table.Cell>
+          <Table.Cell>{movie.releaseYear}</Table.Cell>
+          <Table.Cell>{movie.trilogy}</Table.Cell>
+          <Table.Cell>{movie.director}</Table.Cell>
+        </Table.Row>
+      ))}
+    </Table.Body>
+    <SubComponent srcData={data} />
+  </Table>
+)
 
 Context.parameters = {
   docs: {
