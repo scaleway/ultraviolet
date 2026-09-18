@@ -1,4 +1,4 @@
-import { AnchorIcon, AttachIcon, DocPaperIcon } from '@ultraviolet/icons'
+import { AttachIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { Link } from '..'
 import { Stack } from '../../../Layout/Stack'
