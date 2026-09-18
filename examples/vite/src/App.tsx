@@ -38,7 +38,7 @@ export const App = () => {
   const [option, onChangeOption] = useState<string>()
 
   return (
-    <ThemeProvider theme={getTheme(mode)} cssLayer="vite-app">
+    <ThemeProvider theme={getTheme(mode)}>
       <Stack gap={4} style={{ padding: '32px' }} alignItems="center" width="100%">
         <SwitchButton
           onChange={value => {
