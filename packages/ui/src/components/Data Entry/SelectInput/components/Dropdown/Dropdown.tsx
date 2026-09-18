@@ -134,7 +134,8 @@ export const Dropdown = ({
     ) {
       setWidth(refSelect.current.getBoundingClientRect().width)
     }
-  }, [refSelect, maxWidth])
+    // oxlint-disable-next-line react-hooks/exhaustive-deps -- refSelect is a stable ref
+  }, [maxWidth])
 
   useLayoutEffect(() => {
     if (refSelect.current && isDropdownVisible) {

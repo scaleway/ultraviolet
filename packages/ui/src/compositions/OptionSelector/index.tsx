@@ -76,7 +76,7 @@ export const OptionSelector = ({
     }
 
     return undefined
-  }, [value?.first, value?.second, onChange, firstSelector])
+  }, [value, onChange, firstSelector])
 
   const secondValue = useMemo(() => {
     if (value?.second) {
@@ -94,7 +94,7 @@ export const OptionSelector = ({
     }
 
     return undefined
-  }, [secondSelector, value?.first, value?.second, onChange])
+  }, [secondSelector, value, onChange])
 
   const firstSelectorOptions = makeSelectInputOptions(firstSelector.options)
   const secondSelectorOptions = secondSelector?.options ? makeSelectInputOptions(secondSelector.options) : undefined
