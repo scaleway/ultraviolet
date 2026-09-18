@@ -59,12 +59,8 @@ export const Banner = ({
   const defaultImage = size === 'small' ? defaultIllustrationSmall : defaultIllustration
 
   const prominence = useMemo(() => {
-    if (variant === 'promotional') {
+    if (variant === 'promotional' || theme === 'dark' || theme === 'darker') {
       return 'strong'
-    }
-
-    if (theme === 'dark' || theme === 'darker') {
-      return 'stronger'
     }
 
     return 'default'
@@ -127,7 +123,7 @@ export const Banner = ({
               </Button>
             ) : null}
             {linkText ? (
-              <Link href={linkHref ?? ''} prominence={prominence} size="small" target="_blank">
+              <Link href={linkHref ?? ''} prominence={prominence} sentiment="primary" size="small" target="_blank">
                 {linkText}
               </Link>
             ) : null}

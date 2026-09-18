@@ -71,7 +71,7 @@ export const Item = ({
           className={breadcrumbsStyle.link}
           onClick={onClick}
           onKeyDown={onKeyDown}
-          prominence="stronger"
+          sentiment="neutral"
           size="small"
           {...(render
             ? {
