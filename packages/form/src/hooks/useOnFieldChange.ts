@@ -12,7 +12,7 @@ export type CallbackFn<TFieldValues extends FieldValues, TFieldName extends Fiel
  */
 export const useOnFieldChange = <TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>>(
   fieldName: TFieldName,
-  callback: CallbackFn<TFieldValues, TFieldName>,
+  onValueChange: CallbackFn<TFieldValues, TFieldName>,
   enabled = true,
 ): void => {
   const { watch, getValues } = useFormContext<TFieldValues>()
@@ -22,10 +22,10 @@ export const useOnFieldChange = <TFieldValues extends FieldValues, TFieldName ex
     const subscription = watch(value => {
       if (previousValues.current !== value[fieldName] && enabled) {
         previousValues.current = value[fieldName]
-        callback(value[fieldName], value)?.catch(() => null)
+        onValueChange(value[fieldName], value)?.catch(() => null)
       }
     })
 
     return () => subscription.unsubscribe()
-  }, [callback, enabled, watch, getValues, fieldName])
+  }, [onValueChange, enabled, watch, getValues, fieldName])
 }

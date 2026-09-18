@@ -110,15 +110,11 @@ export const Row = ({
   const isSelected = selectable === 'radio' ? radioSelectedRow === offerName : checkboxSelectedRows.includes(offerName)
 
   const handleChangeCheckbox = () => {
-    if (isRowSelected) {
-      const newSelectedList = checkboxSelectedRows.filter(element => element !== offerName)
-      setCheckboxSelectedRows(newSelectedList)
-      onChangeSelect?.(newSelectedList)
-    } else {
-      const newSelectedList = [...checkboxSelectedRows, offerName]
-      setCheckboxSelectedRows(newSelectedList)
-      onChangeSelect?.(newSelectedList)
-    }
+    const newSelectedList = isRowSelected
+      ? checkboxSelectedRows.filter(element => element !== offerName)
+      : [...checkboxSelectedRows, offerName]
+    setCheckboxSelectedRows(newSelectedList)
+    onChangeSelect?.(newSelectedList)
 
     if (expandedRowIds[id]) {
       expandRow(id)
