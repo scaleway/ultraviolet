@@ -1,5 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, style } from '@vanilla-extract/css'
+import { linkStyle } from '../../Action/Link/styles.css'
 
 const PREFIX = '.Toastify'
 
@@ -25,7 +26,7 @@ globalStyle(`${toaster} ${PREFIX}__toast--success`, {
 
 globalStyle(`${toaster} ${PREFIX}__toast--error`, {
   backgroundColor: theme.colors.danger.backgroundStrong,
-  color: theme.colors.neutral.textStronger,
+  color: theme.colors.danger.textStrong,
   padding: theme.space[2],
 })
 
@@ -33,6 +34,10 @@ globalStyle(`${toaster} ${PREFIX}__toast--warning`, {
   backgroundColor: theme.colors.warning.backgroundStrong,
   color: theme.colors.warning.textStrong,
   padding: theme.space[2],
+})
+
+globalStyle(`${toaster} ${linkStyle.defaultLink}`, {
+  color: 'inherit',
 })
 
 const closeButton = style({

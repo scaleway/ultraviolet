@@ -7,7 +7,7 @@ import { PROMINENCES, SENTIMENTS } from './constants'
 const TRANSITION_DURATION = 250
 
 function getLinkStyle(sentiment: LinkSentiment, prominence: LinkProminence) {
-  if (prominence === 'stronger') {
+  if (prominence === 'stronger' && sentiment === 'neutral') {
     return {
       color: theme.colors.neutral.textStronger,
       selectors: {
@@ -57,9 +57,6 @@ const link = recipe({
       '&:active': {
         textDecorationThickness: '2px',
       },
-      '&[target="_blank"]:is(:visited, :visited:hover, :visited:focus, :visited:active)': {
-        color: theme.colors.secondary.text,
-      },
     },
   },
   variants: {
@@ -71,7 +68,18 @@ const link = recipe({
       neutral: {},
       info: {},
     },
-    prominence: Object.fromEntries(PROMINENCES.map(prominence => [prominence, {}])),
+    prominence: {
+      default: {
+        selectors: {
+          '&[target="_blank"]:is(:visited, :visited:hover, :visited:focus, :visited:active)': {
+            color: theme.colors.secondary.text,
+          },
+        },
+      },
+      strong: {},
+      stronger: {},
+      weak: {},
+    },
     oneLine: {
       true: {
         whiteSpace: 'nowrap',
