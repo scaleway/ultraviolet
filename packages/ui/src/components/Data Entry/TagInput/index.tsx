@@ -27,10 +27,11 @@ type Keys = keyof typeof STATUS
 type StatusValue = (typeof STATUS)[Keys]
 
 const convertTagArrayToTagStateArray = (tags?: TagInputProp) =>
-  (tags ?? [])?.map((tag, index) => ({
-    label: typeof tag === 'object' ? tag.label : tag,
-    index: getUUID(`tag-${index}`),
-  }))
+  (tags ?? [])?.map((tag, index) =>
+    typeof tag === 'object'
+      ? { label: tag.label, index: getUUID(`tag-${index}`) }
+      : { index: getUUID(`tag-${index}`), label: tag },
+  )
 
 type TagInputProp = (string | { label: string; index: string })[]
 
@@ -196,7 +197,6 @@ export const TagInput = ({
             data-readonly={readOnly}
             data-success={!!success}
             data-testid={dataTestId}
-            // oxlint-disable-next-line jsx_a11y/no-noninteractive-tabindex
             tabIndex={0}
             onClick={handleContainerClick}
             onKeyDown={event => {
