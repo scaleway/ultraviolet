@@ -1063,7 +1063,7 @@ describe('selectInput', () => {
   }, 15_000)
 
   it.each([dataGrouped, dataUnGrouped])('handles correctly selectAll when the value is controlled', async () => {
-    function ControlledSelect() {
+    const ControlledSelect = () => {
       const [values, setValues] = useState<string[]>([])
 
       return (

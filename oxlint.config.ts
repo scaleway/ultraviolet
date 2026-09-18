@@ -137,10 +137,10 @@ export default defineConfig({
   plugins: ['import', 'node', 'oxc', 'react', 'typescript', 'unicorn', 'jsx-a11y'],
   rules: {
     'eslint/class-methods-use-this': 'warn', // eslint errors (4)
-    'eslint/curly': 'warn', // eslint errors (15)
+    'eslint/curly': ['warn', 'all'], // eslint errors (16)
     'eslint/init-declarations': 'warn', // eslint errors (15)
-    'eslint/max-lines': 'warn', // eslint errors (38)
-    'eslint/max-nested-callbacks': 'warn', // base sets error (max: 4); keep warn
+    'eslint/max-lines': ['warn', { max: 500 }], // eslint errors (8)
+    'eslint/max-nested-callbacks': ['warn', { max: 4 }], // base sets error (max: 4); keep warn
     'eslint/max-params': 'warn', // eslint errors (33)
     'eslint/max-statements': ['error', { max: 30 }],
     'eslint/no-await-in-loop': 'warn', // eslint errors (12)
@@ -153,7 +153,7 @@ export default defineConfig({
     'eslint/object-shorthand': 'warn', // eslint errors (15)
     'eslint/prefer-destructuring': 'warn', // eslint errors (31)
     'eslint/prefer-named-capture-group': 'warn', // eslint errors (18)
-    'eslint/require-unicode-regexp': 'warn', // eslint errors (34)
+    'eslint/require-unicode-regexp': ['warn', { requireFlag: 'v' }], // eslint errors (129)
     'eslint/sort-imports': [
       'off',
       {
@@ -204,8 +204,7 @@ export default defineConfig({
     'react/display-name': 'off',
     'react/exhaustive-effect-dependencies': 'warn', // react errors (30)
     'react/forbid-component-props': 'off',
-    'react/function-component-definition': 'warn', // react errors (964)
-    'react/hook-use-state': 'warn', // react errors (74)
+    'react/hook-use-state': ['warn', { allowDestructuredState: true }], // react errors (74)
     'react/hooks': 'warn', // react errors (2)
     'react/immutability': 'warn', // react errors (5)
     'react/jsx-curly-brace-presence': 'warn', // react errors (5)
@@ -226,7 +225,6 @@ export default defineConfig({
 
     'typescript/consistent-indexed-object-style': 'warn', // typescript errors (3)
     'typescript/consistent-return': 'warn', // typescript errors (8)
-    'typescript/consistent-type-definitions': 'warn', // typescript errors (310)
     'typescript/consistent-type-imports': 'error',
     'typescript/dot-notation': 'off',
     'typescript/explicit-member-accessibility': 'warn', // typescript errors (10)
@@ -276,7 +274,7 @@ export default defineConfig({
     'unicorn/prefer-code-point': 'off',
     'unicorn/prefer-dom-node-append': 'off',
     'unicorn/prefer-dom-node-remove': 'off',
-    'unicorn/prefer-export-from': 'warn', // unicorn errors (89)
+    'unicorn/prefer-export-from': ['warn', { checkUsedVariables: false }], // unicorn errors (79)
     'unicorn/prefer-global-this': 'off',
     'unicorn/prefer-import-meta-properties': 'off',
     'unicorn/prefer-logical-operator-over-ternary': 'off',
