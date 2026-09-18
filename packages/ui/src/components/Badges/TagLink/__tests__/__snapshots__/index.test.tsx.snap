@@ -1,0 +1,451 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`tagLink > renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__zbqax50 styles__1gaaepy5 styles_sentiment_primary__1gaaepyc styles_isButton_false__1gaaepyh style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_sentiment_primary__1do42lsc style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_40__1do42ls2e style__1do42ls3e"
+    >
+      <div
+        class="styles_primary__zbqax53 styles__zbqax52 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        <svg
+          aria-hidden="true"
+          class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkze uv_icons_1sbwqkz1n"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M8.007 8a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m5.524 7c.721 0 1.275-.654 1.017-1.328a7.002 7.002 0 0 0-13.084 0C1.207 14.346 1.76 15 2.482 15z"
+          />
+        </svg>
+        label
+      </div>
+      <hr
+        aria-orientation="vertical"
+        class="styles__zbqax51 styles__kqki61b styles_direction_vertical__kqki61d styles_sentiment_primary__kqki61j"
+        style="--kqki610: 1px;"
+      />
+      <span
+        class="styles__zbqax59 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        <a
+          class="styles_default__zbqax5c styles__1pc546m0 styles_prominence_default__1pc546m3 styles_sentiment_info__1pc546m2 styles_oneLine_false__1pc546m8 styles_variant_captionStrong__1pc546m9 styles_type_standalone__1pc546md styles_undefined_compound_4__1pc546mi styles__1pc546mn"
+          data-variant="standalone"
+          href="example.com"
+        >
+          link
+        </a>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tagLink > renders correctly loading 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles_notCopiable__1gaaepy1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+      style="--_1d8tbmb0: fit-content; --_1d8tbmb1: 100%;"
+    >
+      <span
+        class="styles_notCopiable__1gaaepy4 styles__1gaaepy5 styles_sentiment_primary__1gaaepyc styles_isButton_false__1gaaepyh"
+      >
+        <span
+          class="styles__1gaaepy14 style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_sentiment_primary__1do42lsc style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_40__1do42ls2e style__1do42ls3e"
+        >
+          loading
+        </span>
+        <svg
+          aria-label="Loading"
+          aria-valuemax="100"
+          aria-valuemin="0"
+          aria-valuenow="20"
+          aria-valuetext="20%"
+          class="styles__1ehxqey2"
+          role="progressbar"
+          style="height: 1rem; width: 1rem;"
+          viewBox="0 0 100 100"
+        >
+          <circle
+            class="styles__1ehxqey1"
+            cx="50"
+            cy="50"
+            fill="none"
+            r="42"
+            stroke-width="16"
+          />
+          <circle
+            class="styles__1ehxqey3"
+            cx="50"
+            cy="50"
+            fill="none"
+            r="42"
+            stroke="#8c40ef"
+            stroke-dasharray="263.89378290154264"
+            stroke-dashoffset="211.11502632123413"
+            stroke-linecap="round"
+            stroke-width="16"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tagLink > renders correctly with variant code 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__zbqax50 styles__1gaaepy5 styles_sentiment_primary__1gaaepyc styles_isButton_false__1gaaepyh style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_sentiment_primary__1do42lsc style_variant_code__1do42lsv style_undefined_compound_0__1do42ls1a style_undefined_compound_40__1do42ls2e style__1do42ls3e"
+    >
+      <div
+        class="styles_primary__zbqax53 styles__zbqax52 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        label
+      </div>
+      <hr
+        aria-orientation="vertical"
+        class="styles__zbqax51 styles__kqki61b styles_direction_vertical__kqki61d styles_sentiment_primary__kqki61j"
+        style="--kqki610: 1px;"
+      />
+      <span
+        class="styles__zbqax59 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        <a
+          class="styles_code__zbqax5b styles__1pc546m0 styles_prominence_default__1pc546m3 styles_sentiment_info__1pc546m2 styles_oneLine_false__1pc546m8 styles_variant_captionStrong__1pc546m9 styles_type_standalone__1pc546md styles_undefined_compound_4__1pc546mi styles__1pc546mn"
+          data-variant="standalone"
+          href="example.com"
+        >
+          link
+        </a>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tagLink > renders with sentiment danger 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__zbqax50 styles__1gaaepy5 styles_sentiment_danger__1gaaepy9 styles_isButton_false__1gaaepyh style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_sentiment_danger__1do42ls9 style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_48__1do42ls2m style__1do42ls3e"
+    >
+      <div
+        class="styles_danger__zbqax56 styles__zbqax52 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        label
+      </div>
+      <hr
+        aria-orientation="vertical"
+        class="styles__zbqax51 styles__kqki61b styles_direction_vertical__kqki61d styles_sentiment_danger__kqki61g"
+        style="--kqki610: 1px;"
+      />
+      <span
+        class="styles__zbqax59 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        <a
+          class="styles_default__zbqax5c styles__1pc546m0 styles_prominence_default__1pc546m3 styles_sentiment_info__1pc546m2 styles_oneLine_false__1pc546m8 styles_variant_captionStrong__1pc546m9 styles_type_standalone__1pc546md styles_undefined_compound_4__1pc546mi styles__1pc546mn"
+          data-variant="standalone"
+          href="example.com"
+        >
+          link
+        </a>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tagLink > renders with sentiment info 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__zbqax50 styles__1gaaepy5 styles_sentiment_info__1gaaepya styles_isButton_false__1gaaepyh style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_sentiment_info__1do42lsa style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_52__1do42ls2q style__1do42ls3e"
+    >
+      <div
+        class="styles_info__zbqax57 styles__zbqax52 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        label
+      </div>
+      <hr
+        aria-orientation="vertical"
+        class="styles__zbqax51 styles__kqki61b styles_direction_vertical__kqki61d styles_sentiment_info__kqki61h"
+        style="--kqki610: 1px;"
+      />
+      <span
+        class="styles__zbqax59 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        <a
+          class="styles_default__zbqax5c styles__1pc546m0 styles_prominence_default__1pc546m3 styles_sentiment_info__1pc546m2 styles_oneLine_false__1pc546m8 styles_variant_captionStrong__1pc546m9 styles_type_standalone__1pc546md styles_undefined_compound_4__1pc546mi styles__1pc546mn"
+          data-variant="standalone"
+          href="example.com"
+        >
+          link
+        </a>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tagLink > renders with sentiment neutral 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__zbqax50 styles__1gaaepy5 styles_sentiment_neutral__1gaaepyb styles_isButton_false__1gaaepyh style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32 style__1do42ls3e"
+    >
+      <div
+        class="styles_neutral__zbqax58 styles__zbqax52 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        label
+      </div>
+      <hr
+        aria-orientation="vertical"
+        class="styles__zbqax51 styles__kqki61b styles_direction_vertical__kqki61d styles_sentiment_neutral__kqki61i"
+        style="--kqki610: 1px;"
+      />
+      <span
+        class="styles__zbqax59 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        <a
+          class="styles_default__zbqax5c styles__1pc546m0 styles_prominence_default__1pc546m3 styles_sentiment_info__1pc546m2 styles_oneLine_false__1pc546m8 styles_variant_captionStrong__1pc546m9 styles_type_standalone__1pc546md styles_undefined_compound_4__1pc546mi styles__1pc546mn"
+          data-variant="standalone"
+          href="example.com"
+        >
+          link
+        </a>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tagLink > renders with sentiment primary 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__zbqax50 styles__1gaaepy5 styles_sentiment_primary__1gaaepyc styles_isButton_false__1gaaepyh style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_sentiment_primary__1do42lsc style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_40__1do42ls2e style__1do42ls3e"
+    >
+      <div
+        class="styles_primary__zbqax53 styles__zbqax52 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        label
+      </div>
+      <hr
+        aria-orientation="vertical"
+        class="styles__zbqax51 styles__kqki61b styles_direction_vertical__kqki61d styles_sentiment_primary__kqki61j"
+        style="--kqki610: 1px;"
+      />
+      <span
+        class="styles__zbqax59 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        <a
+          class="styles_default__zbqax5c styles__1pc546m0 styles_prominence_default__1pc546m3 styles_sentiment_info__1pc546m2 styles_oneLine_false__1pc546m8 styles_variant_captionStrong__1pc546m9 styles_type_standalone__1pc546md styles_undefined_compound_4__1pc546mi styles__1pc546mn"
+          data-variant="standalone"
+          href="example.com"
+        >
+          link
+        </a>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tagLink > renders with sentiment success 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__zbqax50 styles__1gaaepy5 styles_sentiment_success__1gaaepye styles_isButton_false__1gaaepyh style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_sentiment_success__1do42lse style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_56__1do42ls2u style__1do42ls3e"
+    >
+      <div
+        class="styles_success__zbqax54 styles__zbqax52 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        label
+      </div>
+      <hr
+        aria-orientation="vertical"
+        class="styles__zbqax51 styles__kqki61b styles_direction_vertical__kqki61d styles_sentiment_success__kqki61l"
+        style="--kqki610: 1px;"
+      />
+      <span
+        class="styles__zbqax59 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        <a
+          class="styles_default__zbqax5c styles__1pc546m0 styles_prominence_default__1pc546m3 styles_sentiment_info__1pc546m2 styles_oneLine_false__1pc546m8 styles_variant_captionStrong__1pc546m9 styles_type_standalone__1pc546md styles_undefined_compound_4__1pc546mi styles__1pc546mn"
+          data-variant="standalone"
+          href="example.com"
+        >
+          link
+        </a>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tagLink > renders with sentiment warning 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__zbqax50 styles__1gaaepy5 styles_sentiment_warning__1gaaepyf styles_isButton_false__1gaaepyh style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_sentiment_warning__1do42lsf style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_60__1do42ls2y style__1do42ls3e"
+    >
+      <div
+        class="styles_warning__zbqax55 styles__zbqax52 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        label
+      </div>
+      <hr
+        aria-orientation="vertical"
+        class="styles__zbqax51 styles__kqki61b styles_direction_vertical__kqki61d styles_sentiment_warning__kqki61m"
+        style="--kqki610: 1px;"
+      />
+      <span
+        class="styles__zbqax59 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        <a
+          class="styles_default__zbqax5c styles__1pc546m0 styles_prominence_default__1pc546m3 styles_sentiment_info__1pc546m2 styles_oneLine_false__1pc546m8 styles_variant_captionStrong__1pc546m9 styles_type_standalone__1pc546md styles_undefined_compound_4__1pc546mi styles__1pc546mn"
+          data-variant="standalone"
+          href="example.com"
+        >
+          link
+        </a>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tagLink > should work closable 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__zbqax50 styles__1gaaepy5 styles_sentiment_primary__1gaaepyc styles_isButton_false__1gaaepyh style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_sentiment_primary__1do42lsc style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_40__1do42ls2e style__1do42ls3e"
+    >
+      <div
+        class="styles_primary__zbqax53 styles__zbqax52 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        label
+      </div>
+      <hr
+        aria-orientation="vertical"
+        class="styles__zbqax51 styles__kqki61b styles_direction_vertical__kqki61d styles_sentiment_primary__kqki61j"
+        style="--kqki610: 1px;"
+      />
+      <span
+        class="styles__zbqax59 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        <a
+          class="styles_default__zbqax5c styles__1pc546m0 styles_prominence_default__1pc546m3 styles_sentiment_info__1pc546m2 styles_oneLine_false__1pc546m8 styles_variant_captionStrong__1pc546m9 styles_type_standalone__1pc546md styles_undefined_compound_4__1pc546mi styles__1pc546mn"
+          data-variant="standalone"
+          href="example.com"
+        >
+          link
+        </a>
+      </span>
+      <button
+        class="styles__1gaaepy5 styles_sentiment_primary__1gaaepyc styles_isButton_true__1gaaepyg styles_tagLink_true__1gaaepyi styles_undefined_compound_17__1gaaepy10"
+        data-testid="close-tag"
+        type="button"
+      >
+        <span
+          class="styles__ahdbou0"
+        >
+          Close tag label: link
+        </span>
+        <svg
+          aria-hidden="true"
+          class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tagLink > should work copiable 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__zbqax50 styles__1gaaepy5 styles_sentiment_primary__1gaaepyc styles_isButton_false__1gaaepyh style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_sentiment_primary__1do42lsc style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_40__1do42ls2e style__1do42ls3e"
+    >
+      <div
+        class="styles_primary__zbqax53 styles__zbqax52 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        label
+      </div>
+      <hr
+        aria-orientation="vertical"
+        class="styles__zbqax51 styles__kqki61b styles_direction_vertical__kqki61d styles_sentiment_primary__kqki61j"
+        style="--kqki610: 1px;"
+      />
+      <span
+        class="styles__zbqax59 styles_copiable_true__zbqax5a styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_center_xxsmall__xf61n461"
+      >
+        <a
+          class="styles_default__zbqax5c styles__1pc546m0 styles_prominence_default__1pc546m3 styles_sentiment_info__1pc546m2 styles_oneLine_false__1pc546m8 styles_variant_captionStrong__1pc546m9 styles_type_standalone__1pc546md styles_undefined_compound_4__1pc546mi styles__1pc546mn"
+          data-variant="standalone"
+          href="example.com"
+        >
+          link
+        </a>
+        <div
+          class="styles__18qbklt5"
+        >
+          <button
+            aria-labelledby="_r_1d_"
+            class="styles_primary__zbqax5d copyButton styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_xsmall__8xt08sh styles_variant_ghost__8xt08sj styles_undefined_compound_18__8xt08s13"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
+              />
+            </svg>
+          </button>
+        </div>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
