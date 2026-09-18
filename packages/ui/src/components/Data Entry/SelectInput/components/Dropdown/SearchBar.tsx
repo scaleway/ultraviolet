@@ -80,18 +80,19 @@ export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }:
 
   const handleChange = (search: string) => {
     if (search.length > 0) {
+      let filteredOptions: DataType
       if (Array.isArray(options)) {
-        const filteredOptions = searchRegex([...options], escapeRegExp(search.toString()))
-        onSearch(filteredOptions)
+        filteredOptions = searchRegex([...options], escapeRegExp(search.toString()))
       } else {
-        const filteredOptions = { ...options }
-        Object.keys(filteredOptions).map((group: string) => {
-          filteredOptions[group] = searchRegex(filteredOptions[group], escapeRegExp(search.toString()))
+        const grouped: Record<string, OptionType[]> = { ...options }
+        Object.keys(grouped).map((group: string) => {
+          grouped[group] = searchRegex(grouped[group], escapeRegExp(search.toString()))
 
           return null
         })
-        onSearch(filteredOptions)
+        filteredOptions = grouped
       }
+      onSearch(filteredOptions)
     } else {
       onSearch(options)
     }
@@ -108,11 +109,11 @@ export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }:
           const data = computeSelectedDataMultiselect(closestOption, options, selectedData)
           setSelectedData(data.computedData)
           onChange?.(data.onChangeData)
-        } else {
-          const data = computeSelectedDataSingleSelect(closestOption, selectedData)
-          setSelectedData(data.computedData)
-          onChange?.(data.onChangeData)
+          return
         }
+        const data = computeSelectedDataSingleSelect(closestOption, selectedData)
+        setSelectedData(data.computedData)
+        onChange?.(data.onChangeData)
       }
     } else if (key === 'Tab' || key === 'ArrowDown') {
       event?.preventDefault()

@@ -11,19 +11,18 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
     if (multiselect) {
       setSelectedData({ selectedGroup: group, type: 'selectGroup' })
       if (!Array.isArray(options)) {
+        let newSelectedValues: string[] = selectedData.selectedValues
         if (selectedData.selectedGroups.includes(group)) {
-          const newSelectedValues = [...selectedData.selectedValues].filter(
+          newSelectedValues = [...selectedData.selectedValues].filter(
             selectedValue => !options[group].find(option => option.value === selectedValue),
           )
-          onChange?.(newSelectedValues)
         } else {
-          const newSelectedValues = [...selectedData.selectedValues]
-
+          newSelectedValues = [...selectedData.selectedValues]
           options[group].map(option =>
             newSelectedValues.includes(option.value) || option.disabled ? null : newSelectedValues.push(option.value),
           )
-          onChange?.(newSelectedValues)
         }
+        onChange?.(newSelectedValues)
       }
     }
   }

@@ -194,12 +194,8 @@ export default defineConfig({
     'jsx-a11y/no-static-element-interactions': 'warn', // jsx-a11y errors (6)
     'jsx-a11y/prefer-tag-over-role': 'warn', // jsx-a11y errors (18)
 
-    'node/callback-return': 'warn', // node errors (2)
-
-    'oxc/branches-sharing-code': 'warn', // oxc errors (6)
     'oxc/no-accumulating-spread': 'warn', // oxc errors (26)
     'oxc/no-barrel-file': 'warn', // oxc errors (6)
-    'oxc/no-map-spread': 'warn', // oxc errors (1)
 
     'react/display-name': 'off',
     'react/exhaustive-effect-dependencies': 'warn', // react errors (30)
