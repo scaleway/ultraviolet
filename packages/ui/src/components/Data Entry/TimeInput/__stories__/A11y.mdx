@@ -1,0 +1,73 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/TimeInput/A11y" />
+
+# TimeInput - Accessibility
+
+## Description
+
+A composite time-entry form control that lets users type a time in 12 or 24-hour format. It is rendered as three spinbutton-style segments (hours, minutes, seconds) plus an optional AM/PM segment, with arrow-key increment/decrement, cross-field navigation, and automatic focus advance when a segment is complete.
+
+## Summary
+
+1. ⚠️ **Perceivable**: labels and helper text are visible, but the error state is conveyed only by color and an icon when `error` is a boolean
+2. ✅ **Operable**: fully keyboard accessible (Tab reaches every segment, arrows increment/decrement/navigate), with a visible focus indicator on the wrapper via `:focus-within`
+3. ❌ **Understandable**: the visible label is not programmatically associated with the segments and the automatic focus advance is not described; error state not identified in text when `error` is a boolean
+4. ❌ **Robust**: duplicate `id`s across segments, segments lack accessible names, missing `aria-valuenow` when empty, missing `aria-invalid`, and `required` state not conveyed
+
+## ARIA Pattern
+
+[WAI-ARIA Spinbutton Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/spinbutton/)
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html): Every segment is a native input reachable with Tab; Arrow Up/Down increment/decrement, Arrow Left/Right move between fields.
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html): Focus is indicated by the wrapper border and background changes via `:focus-within` (acceptable pattern, same as TextInput).
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): All segments share the same `id`, so the label only associates with the first one and the other segments have no accessible name (failure technique F86 - multi-part form field).
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): `aria-valuenow` is `undefined` while a segment is empty, and no `aria-valuetext` fallback, so the spinbutton value is not exposed.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): No `aria-invalid` on the segments when `error` is set, and `required` is only set via `aria-required` on a plain `div` (no role), which is not exposed.
+- ⚠️ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html): When `error` is a boolean, the invalid state is communicated only through the red border and the alert icon.
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html): Icons default to `aria-hidden="true"` when they have no accessible label (`Icon.tsx:62`), and the clear button provides its name via the `accessibleLabel` prop on the interactive parent (RFC #6585).
+- ⚠️ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html): A visible label exists but is not associated with every segment, so each segment is not identified.
+- ⚠️ [WCAG 3.2.2 - On Input (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/on-input.html): Focus automatically moves to the next segment once a segment is complete. This is acceptable (see Understanding example of phone fields) only if described to the user, which it is not.
+
+To apply when using the component:
+
+- [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) / [WCAG 3.3.3 - Error Suggestion (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html): Pass an `error` message string (not just `error` boolean) so the invalid state is described in text and announced via the Description (`role="status"`).
+
+## Accessibility issues
+
+**Critical:**
+
+- **Duplicate `id`s on the segments**: When an `id` is provided there are 5 elements sharing the same `id` (invalid HTML). Because the `Label`'s `htmlFor` only matches the first element, only the hours segment is programmatically labelled; the minutes, seconds and AM/PM segments have no accessible name at all.
+
+**High:**
+
+- **Minutes, seconds and AM/PM segments are unlabeled**: Because the segments have no accessible name, a screen reader user cannot tell whether they are editing hours, minutes or seconds. When `aria-label` (which is deprecated: should have an `accessibleLabel`) is passed it is applied identically to every segment, which is not descriptive enough to distinguish hours from minutes from seconds. Each segment should be independently named while keeping the field label as context.
+- **Missing `aria-invalid="true"` on the segments when `error` is set**: The invalid state is not exposed programmatically to assistive technologies.
+- **`aria-valuenow` is `undefined` while a segment is empty**: `aria-valuenow` is required for `role="spinbutton"`; without it the spinbutton has no exposed value. In practice VoiceOver announces "nan" for an empty segment. Provide `aria-valuenow` and an `aria-valuetext` such as "hours, 1" so the value and unit are always announced.
+- **The `required` state is not conveyed to the segments**: `aria-required={required}` is set on the wrapper `div`, which has no role and is therefore ignored. The inputs themselves should carry `required`/`aria-required`.
+- **The AM/PM segment uses `role="spinbutton"`, which is inappropriate for a binary am/pm state**: `spinbutton` is intended for a value in an ordered numeric range, but AM/PM is a two-state toggle whose value is textual. `aria-valuenow={period === 'am' ? 0 : 12}` maps the state to arbitrary numbers. Fix: use a plain text input (`type="text"`), which exposes "AM"/"PM" directly as the value. But note the custom Arrow Up/Down toggle then conflicts with native textbox cursor-movement semantics.
+- **Automatic focus advance steals the value announcement**: on the very keystroke that completes a segment, focus is moved to the next input. VoiceOver then announces the newly focused (generally empty) segment instead of the completed value. Concrete example: typing "2" then "1" in hours — VoiceOver says "2", then "nan" (empty minutes) but never "21". Two ways to fix:
+  - (**Recommended**)remove the auto-advance and rely on the existing Arrow Left/Right and Tab navigation, so the completed value is always announced before the user moves on.
+  - **If the auto-advance must stay**, keep focus where it is and announce the completed value with a polite live region (`role="status"` on a visually-hidden element), then defer the focus move to the next tick so the announcement is read before focus is pulled to the next field.
+
+**Medium:**
+
+- Error state is color-only when `error` is a boolean (`true`): only the red border and alert icon communicate it, failing 1.4.1. A text description should accompany the visual cue (passing a message string fixes this).
+- The `Description` component uses `role="status"` even for static helper text, which causes unnecessary announcements (same finding as TextInput).
+
+**Low:**
+
+- The colon separators between segments are announced as "colon" by screen readers; consider `aria-hidden` or including them in the segment semantics.
+- `aria-label` on the wrapper `div` is ignored because the element has no role.
+- The clear button uses `accessibleLabel="clear value"` which is generic; it should indicate what is being cleared (e.g. "Clear time").
+
+## Dependencies
+
+- `Label`: label association breaks because of the duplicate `id`s; fixing the `id` generation is a prerequisite.
+- `Description`: already announces helper/error text via `role="status"`; only fix the `role="status"`-on-static-text behavior.
+- `Icon` components: already compliant: decorative icons are `aria-hidden` by default and the clear button provides the accessible name on its parent.
+- `Button`: the clear button already uses the `accessibleLabel` pattern.
