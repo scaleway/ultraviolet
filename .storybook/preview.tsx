@@ -38,7 +38,12 @@ const VIEWPORTS = BREAKPOINT_ORDER.reduce((acc, key) => {
 }, {})
 
 if (import.meta.env.DEV) {
-  import('react-scan').then(({ scan }) => scan()).catch(() => {})
+  try {
+    const { scan } = await import('react-scan')
+    scan()
+  } catch {
+    // react-scan is optional in dev
+  }
 }
 
 const parameters: Preview['parameters'] = {
