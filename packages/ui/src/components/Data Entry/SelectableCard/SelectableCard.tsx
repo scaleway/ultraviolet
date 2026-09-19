@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { forwardRef, useCallback, useMemo, useRef } from 'react'
-import type { ForwardedRef, KeyboardEventHandler, MouseEventHandler, ReactNode } from 'react'
+import type { ForwardedRef, KeyboardEventHandler, MouseEventHandler } from 'react'
 import { Stack } from '../../Layout/Stack'
 import { Tooltip } from '../../Overlay/Tooltip'
 import { IllustrationContainer } from './IllustrationContainer'
@@ -56,23 +56,6 @@ export const SelectableCard = forwardRef(
       return 'none'
     }, [illustration, productIcon])
 
-    const ParentContainer = useCallback(
-      ({ children: subChildren }: { children: ReactNode }) => {
-        if (tooltip) {
-          return (
-            <Stack flex={1}>
-              <Tooltip containerFullHeight text={tooltip}>
-                {subChildren}
-              </Tooltip>
-            </Stack>
-          )
-        }
-
-        return <Tooltip>{subChildren}</Tooltip>
-      },
-      [tooltip],
-    )
-
     const onKeyDown: KeyboardEventHandler = useCallback(
       event => {
         if (event.key === ' ' && innerRef?.current) {
@@ -105,8 +88,8 @@ export const SelectableCard = forwardRef(
 
     const isCheckboxOrToggle = type === 'checkbox' || type === 'toggle'
 
-    return (
-      <ParentContainer>
+    const content = (
+      <Tooltip containerFullHeight={!!tooltip} text={tooltip}>
         <Stack
           alignItems="flex-start"
           className={cn(
@@ -177,8 +160,10 @@ export const SelectableCard = forwardRef(
             ) : null}
           </IllustrationContainer>
         </Stack>
-      </ParentContainer>
+      </Tooltip>
     )
+
+    return tooltip ? <Stack flex={1}>{content}</Stack> : content
   },
 )
 

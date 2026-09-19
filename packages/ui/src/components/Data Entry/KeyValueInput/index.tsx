@@ -32,19 +32,21 @@ export const KeyValueInput = ({
   inputValue,
   addButton,
   readOnly,
-  keyvalues = [],
+  keyvalues,
   maxSize = 100,
   fieldErrors,
 }: KeyValueInputProps) => {
   const errorId = useId()
 
+  const keyvaluesList = keyvalues ?? []
+
   const handleChange = (index: number, operationType: 'add' | 'change', key?: string, value?: string) => {
-    const newKeyValues = [...keyvalues]
+    const newKeyValues = [...keyvaluesList]
     newKeyValues[index] = { key: key ?? newKeyValues[index].key, value: value ?? newKeyValues[index].value }
     onChange?.(newKeyValues, index, operationType)
   }
 
-  const canAdd = (keyvalues?.length !== undefined && keyvalues.length < maxSize) || !keyvalues
+  const canAdd = keyvaluesList.length < maxSize
 
   const editable = !(disabled || readOnly)
 
@@ -64,18 +66,18 @@ export const KeyValueInput = ({
         : ariaDescribedBy || (hasHelperText(undefined, error) ? errorId : undefined),
       error: !!(inputError || error),
       name: `${name}.${index}.${type}`,
-      onFocus: () => onFocus?.(keyvalues, index),
-      onBlur: () => onBlur?.(keyvalues, index),
-      value: keyvalues[index][type],
+      onFocus: () => onFocus?.(keyvaluesList, index),
+      onBlur: () => onBlur?.(keyvaluesList, index),
+      value: keyvaluesList[index][type],
       placeholder: input.placeholder,
     }
   }
 
   return (
     <Stack gap={3} style={style} className={className}>
-      {keyvalues && keyvalues?.length > 0 ? (
+      {keyvaluesList.length > 0 ? (
         <Stack gap={3}>
-          {keyvalues.map((_, index) => {
+          {keyvaluesList.map((_, index) => {
             const errorKey = fieldErrors?.[index]?.key
             const errorValue = fieldErrors?.[index]?.value
 
@@ -112,7 +114,7 @@ export const KeyValueInput = ({
                   data-testid={`remove-button-${index}`}
                   disabled={!editable}
                   onClick={() => {
-                    const newKeyValues = keyvalues.filter((_, i) => index !== i)
+                    const newKeyValues = keyvaluesList.filter((_, i) => index !== i)
                     onChange?.(newKeyValues, index, 'remove')
                   }}
                   sentiment="danger"
@@ -150,7 +152,7 @@ export const KeyValueInput = ({
           disabled={!(canAdd && editable)}
           fullWidth={addButton.fullWidth}
           onClick={() => {
-            const index = keyvalues ? keyvalues.length : 0
+            const index = keyvaluesList.length
             handleChange(index, 'add', '', '')
           }}
           sentiment="primary"

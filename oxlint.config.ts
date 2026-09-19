@@ -194,8 +194,8 @@ export default defineConfig({
     'react/display-name': 'off',
     'react/exhaustive-effect-dependencies': 'warn', // react errors (30)
     'react/forbid-component-props': 'off',
+    'react/function-component-definition': 'warn', // react errors (964)
     'react/hook-use-state': ['warn', { allowDestructuredState: true }], // react errors (74)
-    'react/hooks': 'warn', // react errors (2)
     'react/immutability': 'warn', // react errors (5)
     'react/jsx-curly-brace-presence': 'warn', // react errors (5)
     'react/jsx-max-depth': ['error', { max: 10 }],
@@ -205,13 +205,10 @@ export default defineConfig({
     'react/no-array-index-key': 'warn', // react errors (6)
     'react/no-clone-element': 'off',
     'react/no-deriving-state-in-effects': 'warn', // react errors (7)
-    'react/no-object-type-as-default-prop': 'warn', // react errors (1)
     'react/no-react-children': 'off',
     'react/only-export-components': 'off',
-    'react/preserve-manual-memoization': 'warn', // react errors (3)
     'react/refs': 'warn', // react errors (44)
     'react/set-state-in-effect': 'warn', // react errors (34)
-    'react/static-components': 'warn', // react errors (2)
 
     'typescript/consistent-return': 'warn', // typescript errors (8)
     'typescript/consistent-type-imports': 'error',
