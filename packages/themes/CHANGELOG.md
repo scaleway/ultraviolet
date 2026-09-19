@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.1.13
+
+### Patch Changes
+
+- [#6908](https://github.com/scaleway/ultraviolet/pull/6908) [`e1e31fe`](https://github.com/scaleway/ultraviolet/commit/e1e31fe5a3b4552a7fd6339cf1f67132e196b3a3) Thanks [@lisalupi](https://github.com/lisalupi)! - `ThemeProvider`: new prop `cssLayer` to wrap default theme (css variables added in `:root` as well as default color and background-color) in a css layer
+
 ## 3.1.12
 
 ### Patch Changes
