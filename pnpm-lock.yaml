@@ -791,8 +791,8 @@ importers:
         specifier: 1.2.0
         version: 1.2.0(typescript@7.0.2)
       '@scaleway/use-clipboard':
-        specifier: 1.1.1
-        version: 1.1.1(react@19.3.0)
+        specifier: 1.1.2
+        version: 1.1.2(react@19.3.0)
       '@uiw/codemirror-theme-material':
         specifier: 4.25.11
         version: 4.25.11(@codemirror/language@6.12.4)(@codemirror/state@6.7.5)(@codemirror/view@6.43.12)
@@ -3981,8 +3981,8 @@ packages:
     peerDependencies:
       typescript: '>=4.1'
 
-  '@scaleway/use-clipboard@1.1.1':
-    resolution: {integrity: sha512-RE8apNsvc/qv954kP/xYf2p530k/Ho0Z4xz7lTdJDKLzpWqGxyMb/T93LvdIHHimciwA6OS3BHuBfAEnv6BEhw==}
+  '@scaleway/use-clipboard@1.1.2':
+    resolution: {integrity: sha512-/AhlWUAPKrl6kF7MtEOJ5dFeFGhkAZh3l6UDxzcCIGfytDZH3MJqq5+MWrL1MV5O3weZUkTpzzHrCvhmlPrI2Q==}
     engines: {node: 24.x || 25.x || 26.x}
     peerDependencies:
       react: 18.x || 19.x
@@ -11361,7 +11361,7 @@ snapshots:
     dependencies:
       typescript: 7.0.2
 
-  '@scaleway/use-clipboard@1.1.1(react@19.3.0)':
+  '@scaleway/use-clipboard@1.1.2(react@19.3.0)':
     dependencies:
       react: 19.3.0
 
