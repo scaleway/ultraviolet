@@ -29,7 +29,7 @@ type StatusValue = (typeof STATUS)[Keys]
 const convertTagArrayToTagStateArray = (tags?: TagInputProp) =>
   (tags ?? [])?.map((tag, index) =>
     typeof tag === 'object'
-      ? { ...tag, index: getUUID(`tag-${index}`) }
+      ? { label: tag.label, index: getUUID(`tag-${index}`) }
       : { index: getUUID(`tag-${index}`), label: tag },
   )
 
