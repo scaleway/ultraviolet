@@ -31,7 +31,7 @@ export const RadioGroupRadio = ({
 
   return (
     <Radio
-      autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
+      autoFocus={autoFocus}
       checked={groupValue === value}
       className={className}
       data-testid={dataTestId}

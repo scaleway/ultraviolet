@@ -532,7 +532,6 @@ export const Popup = forwardRef(
       }
 
       return (
-        // oxlint-disable-next-line jsx_a11y/no-static-element-interactions
         <div
           aria-controls={generatedId}
           aria-describedby={generatedId}

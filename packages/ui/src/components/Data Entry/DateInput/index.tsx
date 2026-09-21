@@ -292,7 +292,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
             <TextInput
               aria-describedBy={ariaDescribedBy}
               autoComplete="false"
-              autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
+              autoFocus={autoFocus}
               clearable={clearable}
               disabled={disabled}
               error={error}

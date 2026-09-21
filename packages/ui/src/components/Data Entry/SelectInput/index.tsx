@@ -231,7 +231,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
             <SelectBar
               aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
               aria-labelledby={ariaLabelledby}
-              autoFocus={autofocus} // oxlint-disable-line jsx_a11y/no-autofocus
+              autoFocus={autofocus}
               clearable={clearable}
               data-testid={finalDataTestId}
               disabled={disabled}

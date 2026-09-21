@@ -231,7 +231,6 @@ const FileInputBase = ({
     return (
       <FileInputContext.Provider value={value}>
         <Stack direction="column" gap={1}>
-          {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
           <div
             className={className}
             data-testid="drag-container"
@@ -244,7 +243,6 @@ const FileInputBase = ({
             {input}
             <div className={fileInputStyle.overlayWrapper}>
               {computedChildren}
-              {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
               <div
                 className={
                   disabled

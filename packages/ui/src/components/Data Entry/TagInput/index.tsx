@@ -196,6 +196,7 @@ export const TagInput = ({
             data-readonly={readOnly}
             data-success={!!success}
             data-testid={dataTestId}
+            // oxlint-disable-next-line jsx_a11y/no-noninteractive-tabindex
             tabIndex={0}
             onClick={handleContainerClick}
             onKeyDown={event => {
