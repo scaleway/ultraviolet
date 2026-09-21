@@ -3,6 +3,7 @@ import { globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import type { LinkSentiment, LinkProminence } from './constants'
 import { PROMINENCES, SENTIMENTS } from './constants'
+import { globalAlertStyle } from '../../Feedback/GlobalAlert/styles.css'
 
 const TRANSITION_DURATION = 250
 
@@ -118,10 +119,19 @@ const link = recipe({
   },
 })
 
-/* Make this to have a global syle which does not depend on props
-That way we do not have to target every possible variant in
-icon styles */
-const defaultLink = style({})
+const defaultLink = style({
+  selectors: {
+    [`${globalAlertStyle.container['danger']} &`]: {
+      color: theme.colors.danger.textStrong,
+    },
+    [`${globalAlertStyle.container['info']} &`]: {
+      color: theme.colors.info.textStrong,
+    },
+    [`${globalAlertStyle.container['promotional']} &`]: {
+      color: theme.colors.primary.textStrong,
+    },
+  },
+})
 
 const iconLeft = style({
   transition: `transform ${TRANSITION_DURATION}ms cubic-bezier(0.22, 1, 0.36, 1)`, // easeOutQuint
