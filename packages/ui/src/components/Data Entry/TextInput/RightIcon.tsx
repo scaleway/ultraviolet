@@ -36,7 +36,6 @@ export const RightIcon = ({
             if (inputRef?.current) {
               inputRef.current.value = ''
               setLocalValue('')
-              // oxlint-disable-next-line typescript/no-unsafe-type-assertion
               onChangeCallback({
                 currentTarget: { value: '' },
                 target: { value: '' },
