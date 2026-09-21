@@ -22,7 +22,7 @@ export const useIsOverflowing = ({ callback, enabled = true }: UseIsOverflowingO
 
       setIsOverflowing(hasOverflow)
       if (callback) {
-        callback(hasOverflow)
+        return callback(hasOverflow)
       }
     }
 

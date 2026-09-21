@@ -9,7 +9,7 @@ import { ModalContext } from '../../../../Overlay/Modal/ModalProvider'
 import { Popup } from '../../../../Overlay/Popup'
 import { DROPDOWN_MAX_HEIGHT, INPUT_SIZE_HEIGHT } from '../../constants'
 import { useSelectInput } from '../../SelectInputProvider'
-import type { DataType } from '../../types'
+import type { DataType, OptionType } from '../../types'
 import { CreateDropdown } from './Content'
 import { SearchBar } from './SearchBar'
 import { selectInputStyle } from '../../styles.css'
@@ -68,17 +68,13 @@ const handleKeyDown = (
     const currentSearch = search + event.key
     setSearch(currentSearch)
     ref.current.focus()
+    let closestOption: OptionType | undefined
     if (Array.isArray(options)) {
-      const closestOption = [...options].find(option =>
+      closestOption = [...options].find(option =>
         option.searchText
           ? option.searchText.toLocaleLowerCase().startsWith(currentSearch)
           : option.value.toLocaleLowerCase().startsWith(currentSearch),
       )
-      if (closestOption) {
-        setDefaultSearch(closestOption.searchText ?? closestOption.value)
-      } else {
-        setDefaultSearch(null)
-      }
     } else {
       const closestOptions = { ...options }
       Object.keys(closestOptions).map((group: string) => {
@@ -90,12 +86,13 @@ const handleKeyDown = (
 
         return null
       })
-      const closestOption = closestOptions[Object.keys(closestOptions)[0]][0]
-      if (closestOption) {
-        setDefaultSearch(closestOption.searchText ?? closestOption.value)
-      } else {
-        setDefaultSearch(null)
-      }
+      closestOption = closestOptions[Object.keys(closestOptions)[0]][0]
+    }
+
+    if (closestOption) {
+      setDefaultSearch(closestOption.searchText ?? closestOption.value)
+    } else {
+      setDefaultSearch(null)
     }
   }
 }

@@ -53,15 +53,11 @@ const ToggleGroupFieldComponent = <
       legend={legend}
       name={field.name}
       onChange={event => {
-        if (value.includes(event.currentTarget.value)) {
-          const newValue = value.filter(currentValue => currentValue !== event.currentTarget.value)
-          field.onChange(newValue)
-          onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
-        } else {
-          const newValue = [...value, event.currentTarget.value]
-          field.onChange(newValue)
-          onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
-        }
+        const newValue = value.includes(event.currentTarget.value)
+          ? value.filter(currentValue => currentValue !== event.currentTarget.value)
+          : [...value, event.currentTarget.value]
+        field.onChange(newValue)
+        onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       required={required}
       value={value}
