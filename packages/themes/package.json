@@ -36,8 +36,22 @@
       "import": "./dist/themes/console/*/index.js",
       "require": "./dist/themes/console/*/index.js"
     },
-    "./global": "./dist/themes.css",
-    "./theme.css": "./dist/themes.css"
+    "./global": {
+      "types": "./dist/global/globalStyle.css.d.ts",
+      "default": "./dist/global/globalStyle.css"
+    },
+    "./normalize": {
+      "types": "./dist/global/normalize.css.d.ts",
+      "default": "./dist/global/normalize.css"
+    },
+    "./theme.css": {
+      "types": "./dist/global/globalStyle.css.d.ts",
+      "default": "./dist/global/globalStyle.css"
+    },
+    "./normalize.css": {
+      "types": "./dist/global/normalize.css.d.ts",
+      "default": "./dist/global/normalize.css"
+    }
   },
   "publishConfig": {
     "access": "public"

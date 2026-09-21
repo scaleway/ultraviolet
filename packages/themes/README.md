@@ -81,12 +81,24 @@ The prop is optional and `undefined` by default, in which case the styles are in
 Add this import for normalized css:
 
 ```tsx
-import '@ultraviolet/themes/global'
+import '@ultraviolet/themes/normalize'
+// OR
+import '@ultraviolet/themes/normalize.css'
 ```
 
-It also provides a `visually-hidden` class that visually hides a component while keeping it accessible to screen readers. It can be applied to Ultraviolet components.
+#### Global style
 
-Usage:
+For a default background-color and text-color, and a `visually-hidden` class that visually hides a component while keeping it accessible to screen readers, you can import a `global` style instead of `normalize`.
+
+```tsx
+import '@ultraviolet/themes/global'
+// OR
+import '@ultraviolet/themes/global.css'
+```
+
+It imports `normalize` so **it is not necessary to import both `global` and `normalize`**.
+
+The `visually-hidden` class (from `global`) is a simple CSS-class that can be used anywhere, which includes Ultraviolet components. Usage:
 
 ```tsx
 import { Text } from '@ultraviolet/ui'

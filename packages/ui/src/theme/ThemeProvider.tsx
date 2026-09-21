@@ -55,11 +55,6 @@ export const ThemeProvider = ({ children, theme = consoleLightTheme }: ThemeProv
     const cssString = `:root { ${Object.entries(cssVars)
       .map(([key, value]) => `${key}: ${value};`)
       .join(' ')} }
-      
-      body {
-        color: ${theme.colors.neutral.text};
-        background-color: ${theme.colors.neutral.background};
-      }
     `
 
     if (existingStyle) {

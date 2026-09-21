@@ -42,12 +42,7 @@ export const ThemeProvider = ({ children, theme = consoleLightTheme }: ThemeProv
       .map(([key, value]) => `${key}: ${value};`)
       .join(' ')
 
-    const css = `:root { ${cssString} }
-       body {
-        color: ${theme.colors.neutral.text};
-        background-color: ${theme.colors.neutral.background};
-      }
-      `
+    const css = `:root { ${cssString} }`
 
     if (existingStyle) {
       existingStyle.textContent = css
