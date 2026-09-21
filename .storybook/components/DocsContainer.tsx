@@ -10,8 +10,8 @@ import { GlobalAlert } from '@ultraviolet/ui'
 import { cloneElement, isValidElement, useState } from 'react'
 import type { ReactNode } from 'react'
 import '@ultraviolet/fonts/fonts.css'
-// don't know how it's work today
-import '../../packages/themes/dist/themes.css'
+// don't know how it works today
+import '../../packages/themes/dist/global/globalStyle.css'
 
 import * as SB_THEMES from '../storybookThemes'
 import { useDocsTheme } from './useDocsTheme'
