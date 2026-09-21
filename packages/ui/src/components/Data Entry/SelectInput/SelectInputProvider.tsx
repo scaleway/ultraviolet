@@ -189,7 +189,6 @@ export const SelectInputProvider = <T extends boolean>({
 
   const providerValue = useMemo(
     () =>
-      // oxlint-disable-next-line typescript/no-unsafe-type-assertion
       ({
         displayedOptions,
         isDropdownVisible,

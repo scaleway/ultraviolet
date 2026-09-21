@@ -37,8 +37,8 @@ pmOnFail: error
 optimisticRepeatInstall: false
 
 overrides:
-  vite: "catalog:"
-  vitest: "catalog:"
+  vite: 'catalog:'
+  vitest: 'catalog:'
 
 catalog:
   vite: 8.3.0
@@ -50,5 +50,5 @@ peerDependencyRules:
     '@types/react': 18 || 19
 
 supportedArchitectures:
-  cpu: [ arm64, current ]
-  os: [ darwin, current ]
+  cpu: [arm64, current]
+  os: [darwin, current]
