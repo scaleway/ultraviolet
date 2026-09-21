@@ -297,7 +297,6 @@ export const TimeInput = ({
                     filled[type] ? Number.parseInt(format(getValueByType(type, time), type, timeFormat), 10) : undefined
                   }
                   autoComplete="off"
-                  // oxlint-disable-next-line jsx_a11y/no-autofocus
                   autoFocus={autoFocus && type === 'h'}
                   className={timeInputStyle.timeinput()}
                   data-size={size}

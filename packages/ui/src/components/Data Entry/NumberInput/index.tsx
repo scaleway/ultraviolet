@@ -148,7 +148,7 @@ export const NumberInput = forwardRef(
                 <input
                   aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
                   aria-label={ariaLabel}
-                  autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
+                  autoFocus={autoFocus}
                   className={numberInputStyle.numberinput({
                     controls,
                     hasUnit: !!unit,

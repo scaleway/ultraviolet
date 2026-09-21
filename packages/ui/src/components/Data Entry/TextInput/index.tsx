@@ -118,7 +118,6 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
               aria-labelledby={ariaLabelledBy}
               autoComplete={autoComplete}
-              // oxlint-disable-next-line jsx_a11y/no-autofocus
               autoFocus={autoFocus}
               className={textInputStyle.input}
               data-size={size}

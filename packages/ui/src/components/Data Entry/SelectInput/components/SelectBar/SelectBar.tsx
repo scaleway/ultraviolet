@@ -179,7 +179,6 @@ const SelectBar = ({
         aria-controls={dropdownId}
         aria-expanded={isDropdownVisible}
         aria-label={label}
-        // oxlint-disable-next-line jsx_a11y/no-autofocus
         autoFocus={autoFocus}
         className={selectInputStyle.selectBar({
           disabled,

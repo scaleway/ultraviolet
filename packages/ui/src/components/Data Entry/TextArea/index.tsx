@@ -166,7 +166,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
               aria-invalid={!!error}
               aria-label={ariaLabel}
-              autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
+              autoFocus={autoFocus}
               className={textAreaStyle.textArea({
                 error: !!error,
                 success: !!success,

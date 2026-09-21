@@ -1,8 +1,9 @@
 import { base, react, vitest, ignorePatterns } from '@scaleway/oxlint-config'
 import { defineConfig } from 'oxlint'
+import { warnRules } from './oxlint-fix.config.ts'
 
 export default defineConfig({
-  extends: [base, react, vitest],
+  extends: [base, react, vitest, warnRules],
   jsPlugins: ['./.oxlint/rules/storybook-a11y-partial.cjs'],
   options: {
     reportUnusedDisableDirectives: 'error',
@@ -43,6 +44,8 @@ export default defineConfig({
         'import/no-namespace': 'off',
         'import/no-nodejs-modules': 'off',
         'import/no-unassigned-import': 'off',
+
+        'jsx-a11y/no-static-element-interactions': 'warn', // jsx-a11y errors (6)
 
         'react/jsx-pascal-case': 'off',
         'react/no-multi-comp': 'off',
@@ -134,38 +137,18 @@ export default defineConfig({
   ],
   plugins: ['import', 'node', 'oxc', 'react', 'typescript', 'unicorn', 'jsx-a11y'],
   rules: {
-    'eslint/class-methods-use-this': 'warn', // eslint errors (4)
-    'eslint/curly': ['warn', 'all'], // eslint errors (16)
-    'eslint/init-declarations': 'warn', // eslint errors (15)
-    'eslint/max-lines': ['warn', { max: 500 }], // eslint errors (8)
-    'eslint/max-nested-callbacks': ['warn', { max: 4 }], // base sets error (max: 4); keep warn
-    'eslint/max-params': 'warn', // eslint errors (33)
-    'eslint/max-statements': ['error', { max: 30 }],
-    'eslint/no-await-in-loop': 'warn', // eslint errors (12)
-    'eslint/no-empty-function': 'warn', // eslint errors (408)
-    'eslint/no-implicit-coercion': 'warn', // eslint errors (113)
-    'eslint/no-negated-condition': 'off',
-    'eslint/no-param-reassign': 'error',
-    'eslint/no-shadow': 'warn', // eslint errors (7)
-    'eslint/no-unused-vars': 'warn', // eslint errors (15)
-    'eslint/object-shorthand': 'warn', // eslint errors (15)
-    'eslint/prefer-destructuring': 'warn', // eslint errors (31)
-    'eslint/prefer-named-capture-group': 'warn', // eslint errors (18)
-    'eslint/require-unicode-regexp': ['warn', { requireFlag: 'v' }], // eslint errors (129)
+    'eslint/max-statements': ['error', { max: 30 }], // base sets max: 50
+    'eslint/no-negated-condition': 'off', // eslint errors (6)
     'eslint/sort-imports': [
       'off',
       {
         ignoreDeclarationSort: true,
         memberSyntaxSortOrder: ['single', 'multiple', 'all', 'none'],
       },
-    ],
+    ], // eslint errors (1008)
 
-    'import/first': 'warn', // import errors (1)
-    'import/max-dependencies': 'off',
-    'import/namespace': 'warn', // import errors (7)
-    'import/newline-after-import': 'warn', // import errors (1)
-    'import/no-namespace': 'warn', // import errors (76)
-    'import/no-unassigned-import': 'off',
+    'import/max-dependencies': 'off', // import errors (36)
+    'import/no-unassigned-import': 'off', // import errors (1)
 
     'jsx-a11y/control-has-associated-label': [
       'error',
@@ -186,93 +169,41 @@ export default defineConfig({
         ],
       },
     ],
-    'jsx-a11y/prefer-tag-over-role': 'warn', // jsx-a11y errors (18)
+    'jsx-a11y/no-autofocus': 'off',
 
-    'oxc/no-accumulating-spread': 'warn', // oxc errors (26)
-    'oxc/no-barrel-file': 'warn', // oxc errors (6)
+    'react/display-name': 'off', // react errors (4)
+    'react/forbid-component-props': 'off', // react errors (229)
+    'react/jsx-max-depth': ['error', { max: 10 }], // base sets max: 8
+    'react/jsx-no-useless-fragment': 'off', // react errors (3)
+    'react/jsx-props-no-spreading': 'off', // react errors (215)
+    'react/no-clone-element': 'off', // react errors (2)
+    'react/no-react-children': 'off', // react errors (10)
+    'react/only-export-components': 'off', // react errors (22)
 
-    'react/display-name': 'off',
-    'react/exhaustive-effect-dependencies': 'warn', // react errors (30)
-    'react/forbid-component-props': 'off',
-    'react/hook-use-state': ['warn', { allowDestructuredState: true }], // react errors (74)
-    'react/hooks': 'warn', // react errors (2)
-    'react/immutability': 'warn', // react errors (5)
-    'react/jsx-curly-brace-presence': 'warn', // react errors (5)
-    'react/jsx-max-depth': ['error', { max: 10 }],
-    'react/jsx-no-useless-fragment': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'react/memo-dependencies': 'warn', // react errors (4)
-    'react/no-array-index-key': 'warn', // react errors (6)
-    'react/no-clone-element': 'off',
-    'react/no-deriving-state-in-effects': 'warn', // react errors (7)
-    'react/no-object-type-as-default-prop': 'warn', // react errors (1)
-    'react/no-react-children': 'off',
-    'react/only-export-components': 'off',
-    'react/preserve-manual-memoization': 'warn', // react errors (3)
-    'react/refs': 'warn', // react errors (44)
-    'react/set-state-in-effect': 'warn', // react errors (34)
-    'react/static-components': 'warn', // react errors (2)
+    'typescript/dot-notation': 'off', // typescript errors (4)
+    'typescript/no-confusing-void-expression': 'off', // typescript errors (390)
+    'typescript/no-unsafe-argument': 'off', // typescript errors (2)
+    'typescript/no-useless-default-assignment': 'off', // typescript errors (2)
+    'typescript/prefer-nullish-coalescing': ['off', { ignoreBooleanCoercion: true }], // typescript errors (39)
+    'typescript/promise-function-async': 'off', // typescript errors (7)
+    'typescript/strict-boolean-expressions': 'off', // typescript errors (416)
+    'typescript/strict-void-return': 'off', // typescript errors (118)
 
-    'typescript/consistent-return': 'warn', // typescript errors (8)
-    'typescript/consistent-type-imports': 'error',
-    'typescript/dot-notation': 'off',
-    'typescript/explicit-member-accessibility': 'warn', // typescript errors (10)
-    'typescript/no-confusing-void-expression': 'off',
-    'typescript/no-deprecated': 'warn', // typescript errors (594)
-    'typescript/no-misused-spread': 'warn', // typescript errors (7)
-    'typescript/no-non-null-assertion': 'warn', // typescript errors (29)
-    'typescript/no-redundant-type-constituents': 'warn', // typescript errors (68)
-    'typescript/no-unnecessary-condition': 'warn', // typescript errors (307)
-    'typescript/no-unnecessary-type-arguments': 'warn', // typescript errors (5)
-    'typescript/no-unnecessary-type-assertion': 'warn', // typescript errors (39)
-    'typescript/no-unnecessary-type-conversion': 'warn', // typescript errors (15)
-    'typescript/no-unnecessary-type-parameters': 'warn', // typescript errors (32)
-    'typescript/no-unsafe-argument': 'off',
-    'typescript/no-unsafe-assignment': 'warn', // typescript errors (2233)
-    'typescript/no-unsafe-call': 'warn', // typescript errors (332)
-    'typescript/no-unsafe-member-access': 'warn', // typescript errors (2353)
-    'typescript/no-unsafe-return': 'warn', // typescript errors (41)
-    'typescript/no-unsafe-type-assertion': 'warn', // typescript errors (207)
-    'typescript/no-useless-default-assignment': 'off',
-    'typescript/prefer-nullish-coalescing': ['off', { ignoreBooleanCoercion: true }],
-    'typescript/prefer-reduce-type-parameter': 'warn', // typescript errors (2)
-    'typescript/promise-function-async': 'off',
-    'typescript/require-await': 'warn', // typescript errors (10)
-    'typescript/strict-boolean-expressions': 'off',
-    'typescript/strict-void-return': 'off',
-    'typescript/unbound-method': 'warn', // typescript errors (2)
-
-    'unicorn/empty-brace-spaces': 'off',
-    'unicorn/import-style': 'warn', // unicorn errors (7)
-    'unicorn/no-array-reverse': 'warn', // unicorn errors (2)
-    'unicorn/no-array-sort': 'warn', // unicorn errors (6)
-    'unicorn/no-await-expression-member': 'warn', // unicorn errors (6)
-    'unicorn/no-invalid-remove-event-listener': 'off',
-    'unicorn/no-new-array': 'off',
-    'unicorn/no-zero-fractions': 'off',
-    'unicorn/number-literal-case': 'off',
-    'unicorn/numeric-separators-style': 'off',
-    'unicorn/prefer-array-some': 'off',
-    'unicorn/prefer-code-point': 'off',
-    'unicorn/prefer-dom-node-append': 'off',
-    'unicorn/prefer-dom-node-remove': 'off',
-    'unicorn/prefer-export-from': ['warn', { checkUsedVariables: false }], // unicorn errors (79)
-    'unicorn/prefer-global-this': 'off',
-    'unicorn/prefer-import-meta-properties': 'off',
-    'unicorn/prefer-logical-operator-over-ternary': 'off',
-    'unicorn/prefer-number-coercion': 'warn', // unicorn errors (21)
-    'unicorn/prefer-number-properties': 'warn', // unicorn errors (3)
-    'unicorn/prefer-object-from-entries': 'warn', // unicorn errors (14)
-    'unicorn/prefer-query-selector': 'off',
-    'unicorn/prefer-set-has': 'off',
-    'unicorn/prefer-spread': 'warn', // unicorn errors (2)
-    'unicorn/prefer-string-replace-all': 'warn', // unicorn errors (35)
-    'unicorn/prefer-string-slice': 'off',
-    'unicorn/prefer-ternary': 'off',
-    'unicorn/prefer-top-level-await': 'warn', // unicorn errors (1)
-
-    'vitest/no-conditional-expect': 'warn', // vitest errors (11)
-    'vitest/no-conditional-in-test': 'warn', // vitest errors (36)
-    'vitest/padding-around-test-blocks': 'warn', // vitest errors (129)
+    'unicorn/no-invalid-remove-event-listener': 'off', // unicorn errors (5)
+    'unicorn/no-new-array': 'off', // unicorn errors (3)
+    'unicorn/no-zero-fractions': 'off', // unicorn errors (60)
+    'unicorn/number-literal-case': 'off', // unicorn errors (2)
+    'unicorn/numeric-separators-style': 'off', // unicorn errors (10)
+    'unicorn/prefer-array-some': 'off', // unicorn errors (2)
+    'unicorn/prefer-code-point': 'off', // unicorn errors (2)
+    'unicorn/prefer-dom-node-append': 'off', // unicorn errors (7)
+    'unicorn/prefer-dom-node-remove': 'off', // unicorn errors (1)
+    'unicorn/prefer-global-this': 'off', // unicorn errors (7)
+    'unicorn/prefer-import-meta-properties': 'off', // unicorn errors (2)
+    'unicorn/prefer-logical-operator-over-ternary': 'off', // unicorn errors (2)
+    'unicorn/prefer-query-selector': 'off', // unicorn errors (8)
+    'unicorn/prefer-set-has': 'off', // unicorn errors (2)
+    'unicorn/prefer-string-slice': 'off', // unicorn errors (1)
+    'unicorn/prefer-ternary': 'off', // unicorn errors (1)
   },
 })

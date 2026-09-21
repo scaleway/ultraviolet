@@ -110,7 +110,6 @@ export const PinnedItems = ({ toggle = true, onReorder, onToggle, itemWrapper, s
 
                 return (
                   <div className={navigationStyle.pinnedItemRelativeDiv} key={itemId} data-flip-id={itemId}>
-                    {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
                     <div
                       className={navigationStyle.pinnedItemDropableArea}
                       onDragLeave={onDragLeave}
@@ -133,7 +132,6 @@ export const PinnedItems = ({ toggle = true, onReorder, onToggle, itemWrapper, s
           )}
 
           <div className={navigationStyle.pinnedItemRelativeDiv}>
-            {/** oxlint-disable jsx_a11y/no-static-element-interactions: needed for drag and drop */}
             <div
               className={navigationStyle.pinnedItemDropableArea}
               onDragLeave={onDragLeave}

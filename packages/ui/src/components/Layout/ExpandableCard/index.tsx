@@ -190,7 +190,6 @@ const BaseExpandableCard = forwardRef(
           ref={ref}
           tabIndex={disabled ? -1 : undefined}
         >
-          {/** oxlint-disable jsx_a11y/no-static-element-interactions: need to add onClick/onKeyDown to use onToggleExpand */}
           <summary
             className={expandableCardStyle.summary}
             data-disabled={!!disabled}
