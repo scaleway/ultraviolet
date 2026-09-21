@@ -1,10 +1,15 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { describe, expect, vi, it } from 'vitest'
+import { beforeEach, describe, expect, vi, it } from 'vitest'
 import { FileInputField } from '..'
 import { renderWithForm } from '../../../__tests__/helpers'
 
 describe('fileInputField', () => {
+  beforeEach(() => {
+    // jsdom doesn't implement URL.createObjectURL and vitest's fallback breaks with jsdom 30.1.0
+    vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:mock')
+  })
+
   it('should render correctly', () => {
     const { asFragment } = renderWithForm(<FileInputField label="Test" name="test" />)
     expect(asFragment()).toMatchSnapshot()
