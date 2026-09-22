@@ -13,7 +13,7 @@ export const NumberInputField = <
   TFieldValues extends FieldValues = FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  control,
+  control: _control,
   max = Number.MAX_SAFE_INTEGER,
   min = 0,
   validate,

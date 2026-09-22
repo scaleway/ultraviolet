@@ -4,7 +4,7 @@ import { Stack } from '../../../Layout/Stack'
 import { SENTIMENTS } from '../constants'
 
 export const Sentiment = (props: ComponentProps<typeof Link>) => (
-  <Stack direction={'row'} gap={2}>
+  <Stack direction="row" gap={2}>
     {SENTIMENTS.map(sentiment => (
       <Link key={sentiment} {...props} sentiment={sentiment}>
         {sentiment}

@@ -157,13 +157,13 @@ export const Tooltip = ({
   const shouldRenderTooltipElement = relation === 'label' ? true : tooltip.isMounted
 
   const tooltipProps = {
-    tooltip: tooltip,
+    tooltip,
     id: tooltipId,
-    className: className,
-    style: style,
+    className,
+    style,
     'data-testid': dataTestId,
-    maxWidth: maxWidth,
-    text: text,
+    maxWidth,
+    text,
   }
 
   return (

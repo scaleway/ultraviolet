@@ -55,7 +55,9 @@ export const KeyValueField = <
           ? {
               pattern: value => {
                 const keyValueArray = value as KeyValueType
-                if (!keyValueArray) return !required
+                if (!keyValueArray) {
+                  return !required
+                }
 
                 return keyValueArray.every(item => {
                   const keyValidRegex = !regexKey || validateRegex(item?.key, regexKey)

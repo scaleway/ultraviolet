@@ -16,7 +16,7 @@ export const Delay = (props: ComponentProps<typeof Tooltip>) => (
 
 Delay.decorators = [
   Story => (
-    <Stack alignItems={'center'} gap={5} style={{ margin: '1rem' }}>
+    <Stack alignItems="center" gap={5} style={{ margin: '1rem' }}>
       <Story />
     </Stack>
   ),

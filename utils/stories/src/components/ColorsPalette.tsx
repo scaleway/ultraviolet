@@ -73,14 +73,18 @@ const ColorsPalette = () => {
 
                   // Skip variants that don't exist for this sentiment
                   // (e.g. "Stronger"/"Weak" only exist for "neutral").
-                  if (!sentimentColors[base]) return null
+                  if (!sentimentColors[base]) {
+                    return null
+                  }
 
                   const colors: Record<string, string> = {}
 
                   STATES.forEach(state => {
                     const key = `${base}${state.suffix}`
                     const value = sentimentColors[key]
-                    if (value) colors[state.label] = value
+                    if (value) {
+                      colors[state.label] = value
+                    }
                   })
 
                   return (

@@ -59,7 +59,9 @@ export const useTooltip = ({ visible, placement, delay, transitionDuration, onOp
   })
 
   useEffect(() => {
-    if (!open || !elements.reference || !elements.floating) return
+    if (!open || !elements.reference || !elements.floating) {
+      return
+    }
     const cleanup = autoUpdate(elements.reference, elements.floating, update)
     return cleanup
   }, [open, elements.reference, elements.floating, update])

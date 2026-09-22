@@ -184,8 +184,12 @@ export const ContrastChecker = () => {
           const suffix = getSuffix(textKey, 'text')
           const bgMatch = bgMap.get(suffix)
 
-          if (!bgMatch) return null
-          if (hideDisabled && suffix.toLowerCase().includes('disabled')) return null
+          if (!bgMatch) {
+            return null
+          }
+          if (hideDisabled && suffix.toLowerCase().includes('disabled')) {
+            return null
+          }
 
           const ratio = contrastRatio(textVal, bgMatch.val)
           const isDisabled = suffix.toLowerCase().includes('disabled')
@@ -214,9 +218,13 @@ export const ContrastChecker = () => {
     for (const { pairings } of groups) {
       for (const pairing of pairings) {
         total++
-        if (pairing.level === 'disabled') disabled++
-        else if (pairing.level === 'pass') pass++
-        else fail++
+        if (pairing.level === 'disabled') {
+          disabled++
+        } else if (pairing.level === 'pass') {
+          pass++
+        } else {
+          fail++
+        }
       }
     }
 

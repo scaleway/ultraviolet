@@ -64,7 +64,9 @@ export const NumberInput = forwardRef(
      * We return a modified `value` to differentiate empty (null) from invalid (NaN), like we do in the `onChange` callback.
      */
     useImperativeHandle(ref, () => {
-      if (!localRef.current) return null!
+      if (!localRef.current) {
+        return null!
+      }
 
       return new Proxy(localRef.current, {
         get(target, prop: keyof HTMLInputElement) {

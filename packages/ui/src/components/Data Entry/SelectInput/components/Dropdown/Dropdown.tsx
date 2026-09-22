@@ -127,12 +127,9 @@ export const Dropdown = ({
   const modalContext = useContext(ModalContext)
 
   const resizeDropdown = useCallback(() => {
-    if (
-      refSelect.current &&
-      refSelect.current.getBoundingClientRect().width > 0 &&
-      refSelect.current.getBoundingClientRect().width !== maxWidth
-    ) {
-      setWidth(refSelect.current.getBoundingClientRect().width)
+    const { current } = refSelect
+    if (current && current.getBoundingClientRect().width > 0 && current.getBoundingClientRect().width !== maxWidth) {
+      setWidth(current.getBoundingClientRect().width)
     }
   }, [refSelect, maxWidth])
 

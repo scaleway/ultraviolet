@@ -188,7 +188,7 @@ describe('numberInputField', () => {
         {
           _experimentalRegisterMode: true,
           errors: mockFormErrors,
-          onSubmit: onSubmit,
+          onSubmit,
         },
       )
 
@@ -488,12 +488,9 @@ describe('numberInputField', () => {
 
     it('should allow pasting scientific notation like 1e2', async () => {
       const onChange = vi.fn()
-      renderWithForm(
-        <>
-          <NumberInputField aria-label="Test" name="test" onChange={onChange} />
-        </>,
-        { defaultValues: { test: 0 } },
-      )
+      renderWithForm(<NumberInputField aria-label="Test" name="test" onChange={onChange} />, {
+        defaultValues: { test: 0 },
+      })
 
       const input = screen.getByRole('spinbutton', { name: 'Test' })
 

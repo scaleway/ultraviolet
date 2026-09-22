@@ -94,7 +94,7 @@ export const ListProvider = ({
 
     return () => {
       setExpandedRowIds(current => {
-        const { [rowId]: relatedId, ...otherIds } = current
+        const { [rowId]: _relatedId, ...otherIds } = current
 
         return otherIds
       })
@@ -106,7 +106,7 @@ export const ListProvider = ({
 
     return () => {
       setSelectedRowIds(current => {
-        const { [rowId]: relatedId, ...otherIds } = current
+        const { [rowId]: _relatedId, ...otherIds } = current
 
         return otherIds
       })

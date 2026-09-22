@@ -120,7 +120,9 @@ export const TagList = ({
 
     for (let i = 0; i < limit; i++) {
       currentLength += getTagLabel(tags[i]).length
-      if (currentLength > maxLength) break
+      if (currentLength > maxLength) {
+        break
+      }
       visibleCount++
     }
     visibleCount = Math.max(visibleCount, 1)
@@ -161,7 +163,9 @@ export const TagList = ({
       let visibleTagsWidth = 0
 
       for (let i = 0; i < potentiallyVisibleTags.length; i++) {
-        if (i > 0) visibleTagsWidth += TAGS_GAP_PX
+        if (i > 0) {
+          visibleTagsWidth += TAGS_GAP_PX
+        }
         visibleTagsWidth += elementsToMeasure[i].offsetWidth
 
         const notLastTag = i < tags.length - 1
@@ -194,12 +198,12 @@ export const TagList = ({
     const tagLabel = getTagLabel(finalTag)
     const commonProps = {
       className: tagListStyle.tag,
-      copiable: copiable,
-      copiedText: copiedText,
-      copyText: copyText,
+      copiable,
+      copiedText,
+      copyText,
       'data-testid': hidden ? '' : tagLabel,
-      variant: variant,
-      sentiment: sentiment,
+      variant,
+      sentiment,
     }
 
     const TagWrapper = hidden

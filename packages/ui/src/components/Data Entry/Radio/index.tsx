@@ -108,25 +108,22 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               <RadioMarkedIcon size={size} />
             </svg>
             {label ? (
-              // biome-ignore lint/complexity/noUselessFragments: needed
-              <>
-                {typeof label === 'string' ? (
-                  <Text
-                    as="label"
-                    className={cn(radioStyle.textLabel[size], radioStyle.label)}
-                    htmlFor={localId}
-                    prominence="default"
-                    sentiment="neutral"
-                    variant={size === 'small' ? 'bodySmall' : 'body'}
-                  >
-                    {label}
-                  </Text>
-                ) : (
-                  <label className={cn(radioStyle.labelStyle, radioStyle.label)} htmlFor={localId}>
-                    {label}
-                  </label>
-                )}
-              </>
+              typeof label === 'string' ? (
+                <Text
+                  as="label"
+                  className={cn(radioStyle.textLabel[size], radioStyle.label)}
+                  htmlFor={localId}
+                  prominence="default"
+                  sentiment="neutral"
+                  variant={size === 'small' ? 'bodySmall' : 'body'}
+                >
+                  {label}
+                </Text>
+              ) : (
+                <label className={cn(radioStyle.labelStyle, radioStyle.label)} htmlFor={localId}>
+                  {label}
+                </label>
+              )
             ) : null}
           </div>
           <Description error={error} helper={helper} id={ariaDescribedBy ?? helperId} disabled={disabled} />

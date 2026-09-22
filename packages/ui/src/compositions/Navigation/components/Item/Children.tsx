@@ -19,23 +19,23 @@ export const ItemChildren = ({
     throw new Error('Navigation.Item can only be used inside a NavigationProvider.')
   }
 
+  if (noExpand) {
+    return (
+      <ItemProvider>
+        <Stack gap={0.25} className={noExpand || type === 'pinnedGroup' ? '' : navigationStyle.itemPaddingStack}>
+          {children}
+        </Stack>
+      </ItemProvider>
+    )
+  }
+
   return (
-    <>
-      {noExpand ? (
-        <ItemProvider>
-          <Stack gap={0.25} className={noExpand || type === 'pinnedGroup' ? '' : navigationStyle.itemPaddingStack}>
-            {children}
-          </Stack>
-        </ItemProvider>
-      ) : (
-        <ItemProvider>
-          <Expandable animationDuration={0} opened={internalExpanded}>
-            <Stack gap={0.25} className={noExpand || type === 'pinnedGroup' ? '' : navigationStyle.itemPaddingStack}>
-              {children}
-            </Stack>
-          </Expandable>
-        </ItemProvider>
-      )}
-    </>
+    <ItemProvider>
+      <Expandable animationDuration={0} opened={internalExpanded}>
+        <Stack gap={0.25} className={noExpand || type === 'pinnedGroup' ? '' : navigationStyle.itemPaddingStack}>
+          {children}
+        </Stack>
+      </Expandable>
+    </ItemProvider>
   )
 }
