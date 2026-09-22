@@ -1,5 +1,3 @@
-import './vanilla/globalStyle.css'
-
 export type { ExtendedColor, TextStyleObject, TextVariant, UltravioletUITheme } from './constants'
 export { textVariants } from './constants'
 export { generateObjectStyleFromTheme, isColorMonochrome, isSize } from './helpers'

@@ -22,6 +22,7 @@ type UvThemeType = {
   colors: Record<string, string>
   radii: Record<string, string>
   shadows: Record<string, string>
+  sizing: Record<string, string>
   space: Record<string, string>
   typography: Record<string, string>
   breakpoints: Record<string, string>

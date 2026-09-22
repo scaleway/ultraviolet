@@ -369,6 +369,28 @@
   --shadow-tab-bar-active: 0px -2px 0px 0px #8c40ef;
   --shadow-tab-bar-off: 0px -1px 0px 0px #e9eaeb;
   --shadow-tooltip: 0px 4px 32px 8px #d9dadd66;
+  --sizing-0: 0rem;
+  --sizing-100: 0.5rem;
+  --sizing-125: 0.625rem;
+  --sizing-150: 0.75rem;
+  --sizing-175: 0.875rem;
+  --sizing-200: 1rem;
+  --sizing-250: 1.25rem;
+  --sizing-262: 1.3125rem;
+  --sizing-300: 1.5rem;
+  --sizing-312: 1.5625rem;
+  --sizing-400: 2rem;
+  --sizing-437: 2.1875rem;
+  --sizing-500: 2.5rem;
+  --sizing-600: 3rem;
+  --sizing-700: 3.5rem;
+  --sizing-750: 3.75rem;
+  --sizing-800: 4rem;
+  --sizing-900: 4.5rem;
+  --sizing-1000: 5rem;
+  --sizing-012: 0.0625rem;
+  --sizing-025: 0.125rem;
+  --sizing-050: 0.25rem;
   --space-0: 0rem;
   --space-1: 0.5rem;
   --space-2: 1rem;
@@ -386,7 +408,7 @@
   --typography-body-font-family:
     Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --typography-body-font-size: 1rem;
-  --typography-body-font-weight: 400;
+  --typography-body-font-weight: Regular;
   --typography-body-letter-spacing: 0;
   --typography-body-line-height: 1.5rem;
   --typography-body-paragraph-spacing: none;
@@ -396,7 +418,7 @@
   --typography-body-small-font-family:
     Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --typography-body-small-font-size: 0.875rem;
-  --typography-body-small-font-weight: 400;
+  --typography-body-small-font-weight: Regular;
   --typography-body-small-letter-spacing: 0;
   --typography-body-small-line-height: 1.25rem;
   --typography-body-small-paragraph-spacing: 0;
@@ -406,7 +428,7 @@
   --typography-body-small-strong-font-family:
     Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --typography-body-small-strong-font-size: 0.875rem;
-  --typography-body-small-strong-font-weight: 500;
+  --typography-body-small-strong-font-weight: Medium;
   --typography-body-small-strong-letter-spacing: 0;
   --typography-body-small-strong-line-height: 1.25rem;
   --typography-body-small-strong-paragraph-spacing: 0;
@@ -416,7 +438,7 @@
   --typography-body-small-stronger-font-family:
     Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --typography-body-small-stronger-font-size: 0.875rem;
-  --typography-body-small-stronger-font-weight: 600;
+  --typography-body-small-stronger-font-weight: SemiBold;
   --typography-body-small-stronger-letter-spacing: 0;
   --typography-body-small-stronger-line-height: 1.25rem;
   --typography-body-small-stronger-paragraph-spacing: 0;
@@ -426,7 +448,7 @@
   --typography-body-strong-font-family:
     Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --typography-body-strong-font-size: 1rem;
-  --typography-body-strong-font-weight: 500;
+  --typography-body-strong-font-weight: Medium;
   --typography-body-strong-letter-spacing: 0;
   --typography-body-strong-line-height: 1.5rem;
   --typography-body-strong-paragraph-spacing: 0;
@@ -436,7 +458,7 @@
   --typography-body-stronger-font-family:
     Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --typography-body-stronger-font-size: 1rem;
-  --typography-body-stronger-font-weight: 600;
+  --typography-body-stronger-font-weight: SemiBold;
   --typography-body-stronger-letter-spacing: 0;
   --typography-body-stronger-line-height: 1.5rem;
   --typography-body-stronger-paragraph-spacing: 0;
@@ -446,7 +468,7 @@
   --typography-caption-font-family:
     Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --typography-caption-font-size: 0.75rem;
-  --typography-caption-font-weight: 400;
+  --typography-caption-font-weight: Regular;
   --typography-caption-letter-spacing: 0;
   --typography-caption-line-height: 1rem;
   --typography-caption-paragraph-spacing: 0;
@@ -456,7 +478,7 @@
   --typography-caption-small-font-family:
     Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --typography-caption-small-font-size: 0.625rem;
-  --typography-caption-small-font-weight: 400;
+  --typography-caption-small-font-weight: Regular;
   --typography-caption-small-letter-spacing: 0;
   --typography-caption-small-line-height: 1rem;
   --typography-caption-small-paragraph-spacing: 0;
@@ -466,7 +488,7 @@
   --typography-caption-small-strong-font-family:
     Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --typography-caption-small-strong-font-size: 0.625rem;
-  --typography-caption-small-strong-font-weight: 500;
+  --typography-caption-small-strong-font-weight: Medium;
   --typography-caption-small-strong-letter-spacing: 0;
   --typography-caption-small-strong-line-height: 1rem;
   --typography-caption-small-strong-paragraph-spacing: 0;
@@ -476,7 +498,7 @@
   --typography-caption-small-stronger-font-family:
     Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --typography-caption-small-stronger-font-size: 0.625rem;
-  --typography-caption-small-stronger-font-weight: 600;
+  --typography-caption-small-stronger-font-weight: SemiBold;
   --typography-caption-small-stronger-letter-spacing: 0;
   --typography-caption-small-stronger-line-height: 1rem;
   --typography-caption-small-stronger-paragraph-spacing: 0;
@@ -486,7 +508,7 @@
   --typography-caption-strong-font-family:
     Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --typography-caption-strong-font-size: 0.75rem;
-  --typography-caption-strong-font-weight: 500;
+  --typography-caption-strong-font-weight: Medium;
   --typography-caption-strong-letter-spacing: 0;
   --typography-caption-strong-line-height: 1rem;
   --typography-caption-strong-paragraph-spacing: 0;
@@ -496,7 +518,7 @@
   --typography-caption-stronger-font-family:
     Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --typography-caption-stronger-font-size: 0.75rem;
-  --typography-caption-stronger-font-weight: 600;
+  --typography-caption-stronger-font-weight: SemiBold;
   --typography-caption-stronger-letter-spacing: 0;
   --typography-caption-stronger-line-height: 1rem;
   --typography-caption-stronger-paragraph-spacing: 0;
@@ -505,7 +527,7 @@
   --typography-caption-stronger-weight: 600;
   --typography-code-font-family: JetBrains, Consolas, Monaco, Andale Mono, monospace;
   --typography-code-font-size: 0.875rem;
-  --typography-code-font-weight: 400;
+  --typography-code-font-weight: Regular;
   --typography-code-letter-spacing: 0;
   --typography-code-line-height: 1.25rem;
   --typography-code-paragraph-spacing: 0;
@@ -514,7 +536,7 @@
   --typography-code-weight: 400;
   --typography-code-small-font-family: JetBrains, Consolas, Monaco, Andale Mono, monospace;
   --typography-code-small-font-size: 0.75rem;
-  --typography-code-small-font-weight: 400;
+  --typography-code-small-font-weight: Regular;
   --typography-code-small-letter-spacing: 0;
   --typography-code-small-line-height: 1rem;
   --typography-code-small-paragraph-spacing: 0;
@@ -523,7 +545,7 @@
   --typography-code-small-weight: 400;
   --typography-code-small-strong-font-family: JetBrains, Consolas, Monaco, Andale Mono, monospace;
   --typography-code-small-strong-font-size: 0.75rem;
-  --typography-code-small-strong-font-weight: 500;
+  --typography-code-small-strong-font-weight: Medium;
   --typography-code-small-strong-letter-spacing: 0;
   --typography-code-small-strong-line-height: 1rem;
   --typography-code-small-strong-paragraph-spacing: 0;
@@ -532,7 +554,7 @@
   --typography-code-small-strong-weight: 500;
   --typography-code-small-stronger-font-family: JetBrains, Consolas, Monaco, Andale Mono, monospace;
   --typography-code-small-stronger-font-size: 0.75rem;
-  --typography-code-small-stronger-font-weight: 600;
+  --typography-code-small-stronger-font-weight: SemiBold;
   --typography-code-small-stronger-letter-spacing: 0;
   --typography-code-small-stronger-line-height: 1rem;
   --typography-code-small-stronger-paragraph-spacing: 0;
@@ -541,7 +563,7 @@
   --typography-code-small-stronger-weight: 600;
   --typography-code-strong-font-family: JetBrains, Consolas, Monaco, Andale Mono, monospace;
   --typography-code-strong-font-size: 0.875rem;
-  --typography-code-strong-font-weight: 500;
+  --typography-code-strong-font-weight: Medium;
   --typography-code-strong-letter-spacing: 0;
   --typography-code-strong-line-height: 1.25rem;
   --typography-code-strong-paragraph-spacing: 0;
@@ -559,7 +581,7 @@
   --typography-code-stronger-weight: 600;
   --typography-heading-font-family: Space Grotesk, Century Gothic, Futura, sans-serif;
   --typography-heading-font-size: 1.5625rem;
-  --typography-heading-font-weight: 400;
+  --typography-heading-font-weight: Regular;
   --typography-heading-letter-spacing: 0;
   --typography-heading-line-height: 2rem;
   --typography-heading-paragraph-spacing: 0;
@@ -568,7 +590,7 @@
   --typography-heading-weight: 400;
   --typography-heading-large-font-family: Space Grotesk, Century Gothic, Futura, sans-serif;
   --typography-heading-large-font-size: 2.1875rem;
-  --typography-heading-large-font-weight: 400;
+  --typography-heading-large-font-weight: Regular;
   --typography-heading-large-letter-spacing: 0;
   --typography-heading-large-line-height: 3rem;
   --typography-heading-large-paragraph-spacing: 0;
@@ -577,7 +599,7 @@
   --typography-heading-large-weight: 400;
   --typography-heading-large-strong-font-family: Space Grotesk, Century Gothic, Futura, sans-serif;
   --typography-heading-large-strong-font-size: 2.1875rem;
-  --typography-heading-large-strong-font-weight: 500;
+  --typography-heading-large-strong-font-weight: Medium;
   --typography-heading-large-strong-letter-spacing: 0;
   --typography-heading-large-strong-line-height: 3rem;
   --typography-heading-large-strong-paragraph-spacing: 0;
@@ -586,7 +608,7 @@
   --typography-heading-large-strong-weight: 500;
   --typography-heading-large-stronger-font-family: Space Grotesk, Century Gothic, Futura, sans-serif;
   --typography-heading-large-stronger-font-size: 2.1875rem;
-  --typography-heading-large-stronger-font-weight: 600;
+  --typography-heading-large-stronger-font-weight: SemiBold;
   --typography-heading-large-stronger-letter-spacing: 0;
   --typography-heading-large-stronger-line-height: 3rem;
   --typography-heading-large-stronger-paragraph-spacing: 0;
@@ -595,7 +617,7 @@
   --typography-heading-large-stronger-weight: 600;
   --typography-heading-small-font-family: Space Grotesk, Century Gothic, Futura, sans-serif;
   --typography-heading-small-font-size: 1.3125rem;
-  --typography-heading-small-font-weight: 400;
+  --typography-heading-small-font-weight: Regular;
   --typography-heading-small-letter-spacing: 0;
   --typography-heading-small-line-height: 2rem;
   --typography-heading-small-paragraph-spacing: 0;
@@ -604,7 +626,7 @@
   --typography-heading-small-weight: 400;
   --typography-heading-small-strong-font-family: Space Grotesk, Century Gothic, Futura, sans-serif;
   --typography-heading-small-strong-font-size: 1.3125rem;
-  --typography-heading-small-strong-font-weight: 500;
+  --typography-heading-small-strong-font-weight: Medium;
   --typography-heading-small-strong-letter-spacing: 0;
   --typography-heading-small-strong-line-height: 2rem;
   --typography-heading-small-strong-paragraph-spacing: 0;
@@ -613,7 +635,7 @@
   --typography-heading-small-strong-weight: 500;
   --typography-heading-small-stronger-font-family: Space Grotesk, Century Gothic, Futura, sans-serif;
   --typography-heading-small-stronger-font-size: 1.3125rem;
-  --typography-heading-small-stronger-font-weight: 600;
+  --typography-heading-small-stronger-font-weight: SemiBold;
   --typography-heading-small-stronger-letter-spacing: 0;
   --typography-heading-small-stronger-line-height: 2rem;
   --typography-heading-small-stronger-paragraph-spacing: 0;
@@ -622,7 +644,7 @@
   --typography-heading-small-stronger-weight: 600;
   --typography-heading-strong-font-family: Space Grotesk, Century Gothic, Futura, sans-serif;
   --typography-heading-strong-font-size: 1.5625rem;
-  --typography-heading-strong-font-weight: 500;
+  --typography-heading-strong-font-weight: Medium;
   --typography-heading-strong-letter-spacing: 0;
   --typography-heading-strong-line-height: 2rem;
   --typography-heading-strong-paragraph-spacing: 0;
@@ -631,7 +653,7 @@
   --typography-heading-strong-weight: 500;
   --typography-heading-stronger-font-family: Space Grotesk, Century Gothic, Futura, sans-serif;
   --typography-heading-stronger-font-size: 1.5625rem;
-  --typography-heading-stronger-font-weight: 600;
+  --typography-heading-stronger-font-weight: SemiBold;
   --typography-heading-stronger-letter-spacing: 0;
   --typography-heading-stronger-line-height: 2rem;
   --typography-heading-stronger-paragraph-spacing: 0;

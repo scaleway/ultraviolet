@@ -1,9 +1,3 @@
-const fontWeightMap = {
-  Medium: 500,
-  Regular: 400,
-  SemiBold: 600,
-}
-
 const makeCSSVariablesRec = (
   innerKey: string,
   innerValue: string | object,
@@ -17,11 +11,8 @@ const makeCSSVariablesRec = (
       )
       .join('')
   }
-  const cssValue = Object.keys(fontWeightMap).includes(innerValue as unknown as keyof typeof fontWeightMap)
-    ? fontWeightMap[innerValue as unknown as keyof typeof fontWeightMap]
-    : innerValue
 
-  const finalCSSValue = typeof cssValue === 'string' ? cssValue.replace(/;$/u, '') : cssValue
+  const finalCSSValue = typeof innerValue === 'string' ? innerValue.replace(/;+$/u, '') : innerValue
   const formattedInnerKey = innerKey
     .replace(/([A-Z])/gu, '-$1')
     .replace(/\./gu, '-')
@@ -54,17 +45,20 @@ type UvThemeType = {
   colors: Record<string, string>
   radii: Record<string, string>
   shadows: Record<string, string>
+  sizing: Record<string, string>
   space: Record<string, string>
   typography: Record<string, string>
   breakpoints: Record<string, string>
 }
 
 export const generateThemeCss = ({ uvTheme, filename }: { uvTheme: UvThemeType; filename: string }) =>
-  `:root,\n:root.${filename}-theme {\n${
+  `:root,
+:root.${filename}-theme {\n${
     createCssVariables('color', uvTheme.colors) +
     createCssVariables('radius', uvTheme.radii) +
     createCssVariables('shadow', uvTheme.shadows) +
+    createCssVariables('sizing', uvTheme.sizing) +
     createCssVariables('space', uvTheme.space) +
     createCssVariables('typography', uvTheme.typography) +
     createCssVariables('breakpoint', uvTheme.breakpoints)
-  }}\n`
+  }}`

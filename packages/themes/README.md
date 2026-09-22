@@ -50,17 +50,30 @@ export const App = () => (
 )
 ```
 
+> **Note**:
+> The static CSS imports above are **not** required for the CSS variables to work as long as `ThemeProvider` is used because the provider injects them at runtime. Importing the theme CSS file only **reduces FOUC**: it inlines the variables into the initial HTML, whereas without it the theme is applied client-side after first paint.
+
 #### Normalized css
 
 Add this import for normalized css:
 
 ```tsx
-import '@ultraviolet/themes/global'
+import '@ultraviolet/themes/normalize.css'
 ```
 
-It also provides a `visually-hidden` class that visually hides a component while keeping it accessible to screen readers. It can be applied to Ultraviolet components.
+#### Global style
 
-Usage:
+For a default background-color and text-color, and a `visually-hidden` class that visually hides a component while keeping it accessible to screen readers, you can import a `global` style instead of `normalize`.
+
+```tsx
+import '@ultraviolet/themes/global' //deprecated
+// OR
+import '@ultraviolet/themes/theme.css'
+```
+
+It imports `normalize` so **it is not necessary to import both `global` and `normalize`**.
+
+The `visually-hidden` class (from `global`) is a simple CSS-class that can be used anywhere, which includes Ultraviolet components. Usage:
 
 ```tsx
 import { Text } from '@ultraviolet/ui'
