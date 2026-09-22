@@ -143,7 +143,7 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "12.3.4",
+      "version": ">=12.4.0",
       "onFail": "warn"
     },
     "runtime": {
@@ -154,8 +154,9 @@
   },
   "engines": {
     "node": ">=20.x",
-    "pnpm": ">=10.x"
+    "pnpm": ">=12.x"
   },
+  "packageManager": "pnpm@12.5.1",
   "manypkg": {
     "ignoredRules": [
       "INTERNAL_MISMATCH"
