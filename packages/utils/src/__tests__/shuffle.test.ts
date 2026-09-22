@@ -16,7 +16,7 @@ describe(shuffle, () => {
     const result = shuffle(input)
 
     expect(result).toHaveLength(input.length)
-    expect(result.toSorted()).toStrictEqual([...input].toSorted())
+    expect([...result].toSorted()).toStrictEqual([...input].toSorted())
   })
 
   it('should return a strictly different string for multi-character input', () => {
