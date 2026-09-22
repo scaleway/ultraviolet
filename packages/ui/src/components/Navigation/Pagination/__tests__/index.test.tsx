@@ -1,28 +1,14 @@
 // oxlint-disable typescript/no-unsafe-type-assertion
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
+import { createMockResizeObserver, renderWithTheme } from '@utils/test'
 import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { Pagination } from '..'
 
-class MockResizeObserver {
-  private readonly callback: ResizeObserverCallback
-
-  constructor(callback: ResizeObserverCallback) {
-    this.callback = callback
-  }
-
-  observe(target: Element) {
-    const entry = { target, contentRect: { width: 800 } } as unknown as ResizeObserverEntry
-    this.callback([entry], this as unknown as ResizeObserver)
-  }
-
-  // oxlint-disable-next-line eslint/class-methods-use-this -- mock implementation per ResizeObserver interface
-  unobserve() {}
-
-  // oxlint-disable-next-line eslint/class-methods-use-this -- mock implementation per ResizeObserver interface
-  disconnect() {}
-}
+const { MockResizeObserver } = createMockResizeObserver((callback, target) => {
+  const entry = { target, contentRect: { width: 800 } } as unknown as ResizeObserverEntry
+  callback([entry], undefined as unknown as ResizeObserver)
+})
 
 describe('pagination', () => {
   beforeAll(() => {
