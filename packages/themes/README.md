@@ -53,36 +53,11 @@ export const App = () => (
 > **Note**:
 > The static CSS imports above are **not** required for the CSS variables to work as long as `ThemeProvider` is used because the provider injects them at runtime. Importing the theme CSS file only **reduces FOUC**: it inlines the variables into the initial HTML, whereas without it the theme is applied client-side after first paint.
 
-##### Wrap the injected styles in a CSS layer
-
-`ThemeProvider` injects the theme variables (and the `body` background) in a `<style>` tag in the `<head>`. If your application already defines styles using [CSS layers](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer), pass the `cssLayer` prop to wrap the injected styles in a layer, so they don't override other layered styles by specificity:
-
-```tsx
-import { ThemeProvider, consoleLightTheme } from '@ultraviolet/themes'
-
-export const App = () => (
-  <ThemeProvider theme={consoleLightTheme} cssLayer="uv">
-    <YourApp />
-  </ThemeProvider>
-)
-```
-
-The prop is optional and `undefined` by default, in which case the styles are injected without any layer.
-
-> **Note**:
-> The `cssLayer` prop only wraps the styles **injected by `ThemeProvider`**. It does not affect the static theme CSS files if they are directly imported. Because un-layered styles always win over layered ones, an un-layered `light.css` would override `layer(uv)`. If you import the static CSS while using `cssLayer`, wrap the import in the same layer so both are applied consistently:
->
-> ```css
-> @import '@ultraviolet/themes/light.css' layer(uv);
-> ```
-
 #### Normalized css
 
 Add this import for normalized css:
 
 ```tsx
-import '@ultraviolet/themes/normalize'
-// OR
 import '@ultraviolet/themes/normalize.css'
 ```
 
@@ -91,9 +66,9 @@ import '@ultraviolet/themes/normalize.css'
 For a default background-color and text-color, and a `visually-hidden` class that visually hides a component while keeping it accessible to screen readers, you can import a `global` style instead of `normalize`.
 
 ```tsx
-import '@ultraviolet/themes/global'
+import '@ultraviolet/themes/global' //deprecated
 // OR
-import '@ultraviolet/themes/global.css'
+import '@ultraviolet/themes/theme.css'
 ```
 
 It imports `normalize` so **it is not necessary to import both `global` and `normalize`**.
