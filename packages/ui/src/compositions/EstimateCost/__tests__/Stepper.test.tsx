@@ -11,25 +11,27 @@ describe('estimateCost - NumberInput Item', () => {
     resetIntersectionMocking()
   })
 
-  it('render basic props', () =>
+  it('render basic props', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="NumberInput">
           <EstimateCost.NumberInput />
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render basic with overlay', () =>
+  it('render basic with overlay', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="NumberInput">
           <EstimateCost.NumberInput />
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with values', () =>
+  it('render with values', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
@@ -43,14 +45,16 @@ describe('estimateCost - NumberInput Item', () => {
           <EstimateCost.NumberInput maxValue={51} minValue={0} />
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with getAmountValue', () =>
+  it('render with getAmountValue', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="NumberInput">
           <EstimateCost.NumberInput getAmountValue={value => value} />
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 })

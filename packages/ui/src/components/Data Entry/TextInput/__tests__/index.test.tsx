@@ -5,8 +5,9 @@ import { describe, expect, it, vi } from 'vitest'
 import { TextInput } from '..'
 
 describe('textInput', () => {
-  it('should render correctly with basic props', () =>
-    shouldMatchSnapshot(<TextInput label="Test" onChange={() => {}} value="test" />))
+  it('should render correctly with basic props', () => {
+    shouldMatchSnapshot(<TextInput label="Test" onChange={() => {}} value="test" />)
+  })
 
   it('should control the value', () => {
     const onChange = vi.fn()
@@ -36,17 +37,21 @@ describe('textInput', () => {
     })
   })
 
-  it('should render correctly when input is disabled', () =>
-    shouldMatchSnapshot(<TextInput disabled label="Test" onChange={() => {}} value="test" />))
+  it('should render correctly when input is disabled', () => {
+    shouldMatchSnapshot(<TextInput disabled label="Test" onChange={() => {}} value="test" />)
+  })
 
-  it('should render correctly when input is readOnly', () =>
-    shouldMatchSnapshot(<TextInput label="Test" onChange={() => {}} readOnly value="test" />))
+  it('should render correctly when input is readOnly', () => {
+    shouldMatchSnapshot(<TextInput label="Test" onChange={() => {}} readOnly value="test" />)
+  })
 
-  it('should render correctly when input has a success sentiment', () =>
-    shouldMatchSnapshot(<TextInput label="Test" onChange={() => {}} success="success" value="test" />))
+  it('should render correctly when input has a success sentiment', () => {
+    shouldMatchSnapshot(<TextInput label="Test" onChange={() => {}} success="success" value="test" />)
+  })
 
-  it('should render correctly when input  has a error sentiment', () =>
-    shouldMatchSnapshot(<TextInput error="success" label="Test" onChange={() => {}} value="test" />))
+  it('should render correctly when input  has a error sentiment', () => {
+    shouldMatchSnapshot(<TextInput error="success" label="Test" onChange={() => {}} value="test" />)
+  })
 
   it('should display success message', () => {
     const onChange = vi.fn()

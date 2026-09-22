@@ -22,28 +22,32 @@ describe('switchButton', () => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {})
   })
 
-  it('renders correctly', () =>
+  it('renders correctly', () => {
     shouldMatchSnapshot(
       <SwitchButton name="test" onChange={() => {}} value="left">
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
       </SwitchButton>,
-    ))
-  it('renders correctly medium', () =>
+    )
+  })
+
+  it('renders correctly medium', () => {
     shouldMatchSnapshot(
       <SwitchButton name="test" onChange={() => {}} size="medium" value="left">
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
       </SwitchButton>,
-    ))
+    )
+  })
 
-  it('renders correctly with right value', () =>
+  it('renders correctly with right value', () => {
     shouldMatchSnapshot(
       <SwitchButton name="test" onChange={() => {}} value="right">
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
       </SwitchButton>,
-    ))
+    )
+  })
 
   it('renders correctly with children changing', () => {
     const tempResizeObserver = window.ResizeObserver
@@ -76,15 +80,16 @@ describe('switchButton', () => {
     window.ResizeObserver = tempResizeObserver
   })
 
-  it('renders with tooltip', () =>
+  it('renders with tooltip', () => {
     shouldMatchSnapshot(
       <SwitchButton name="test" onChange={() => {}} tooltip="tooltip" value="left">
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
       </SwitchButton>,
-    ))
+    )
+  })
 
-  it('renders with disabled and tooltip on SwitchButton.Option', () =>
+  it('renders with disabled and tooltip on SwitchButton.Option', () => {
     shouldMatchSnapshot(
       <SwitchButton name="test" onChange={() => {}} tooltip="tooltip" value="left">
         <SwitchButton.Option disabled tooltip="This is disabled" value="left">
@@ -92,17 +97,19 @@ describe('switchButton', () => {
         </SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
       </SwitchButton>,
-    ))
+    )
+  })
 
-  it('renders neutral', () =>
+  it('renders neutral', () => {
     shouldMatchSnapshot(
       <SwitchButton name="test" onChange={() => {}} sentiment="neutral" value="left">
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
       </SwitchButton>,
-    ))
+    )
+  })
 
-  it('renders with icons', () =>
+  it('renders with icons', () => {
     shouldMatchSnapshot(
       <SwitchButton name="test" onChange={() => {}} tooltip="tooltip" value="left">
         <SwitchButton.Option value="left">
@@ -112,7 +119,8 @@ describe('switchButton', () => {
           <SunIcon />
         </SwitchButton.Option>
       </SwitchButton>,
-    ))
+    )
+  })
 
   it('renders with on change', async () => {
     const onChange = vi.fn()

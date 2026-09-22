@@ -22,6 +22,7 @@ describe('barStack', () => {
     const { asFragment } = renderWithTheme(<BarStack data={fakeData} total={1000} />)
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('should render correctly with label and label information', () => {
     const { asFragment } = renderWithTheme(
       <BarStack
@@ -34,6 +35,7 @@ describe('barStack', () => {
     )
     expect(asFragment()).toMatchSnapshot()
   })
+
   it.each(['xsmall', 'small', 'large', 'medium'] as const)(`renders correctly size %s`, size => {
     const { asFragment } = renderWithTheme(<BarStack data={fakeData} size={size} />)
     expect(asFragment()).toMatchSnapshot()

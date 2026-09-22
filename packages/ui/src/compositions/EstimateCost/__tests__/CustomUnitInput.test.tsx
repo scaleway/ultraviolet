@@ -12,14 +12,16 @@ describe('estimateCost - CustomUnitInput', () => {
   afterEach(() => {
     resetIntersectionMocking()
   })
-  it('render default values', () =>
+
+  it('render default values', () => {
     shouldMatchSnapshot(
       <CustomUnitInput
         iteration={{ unit: 'hours', value: 1 }}
         setIteration={() => {}}
         timeUnits={['seconds', 'minutes', 'hours', 'days', 'months']}
       />,
-    ))
+    )
+  })
 
   it('render and trigger on blur when leaving input empty', async () => {
     renderWithTheme(
@@ -31,11 +33,15 @@ describe('estimateCost - CustomUnitInput', () => {
     )
 
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
-    await waitFor(() => expect(input.value).toBe('1'))
+    await waitFor(() => {
+      expect(input.value).toBe('1')
+    })
     await userEvent.click(input)
     await userEvent.type(input, '{ArrowLeft}{Backspace}0')
     await userEvent.tab()
 
-    await waitFor(() => expect(input.value).toBe('1'))
+    await waitFor(() => {
+      expect(input.value).toBe('1')
+    })
   })
 })

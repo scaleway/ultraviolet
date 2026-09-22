@@ -24,8 +24,12 @@ export const Examples: StoryFn<typeof SelectableCardOptionGroup> = args => {
         <SelectableCardOptionGroup
           {...args}
           columns={4}
-          onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
-          onChangeOption={(newValue: string) => onChangeOption(newValue)}
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+            onChange(event.currentTarget.value)
+          }}
+          onChangeOption={(newValue: string) => {
+            onChangeOption(newValue)
+          }}
           optionValue={option}
           size="large"
           value={value}
@@ -77,8 +81,12 @@ export const Examples: StoryFn<typeof SelectableCardOptionGroup> = args => {
       <SelectableCardOptionGroup
         {...args}
         columns={4}
-        onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange2(event.currentTarget.value)}
-        onChangeOption={(newValue: string) => onChangeOption2(newValue)}
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+          onChange2(event.currentTarget.value)
+        }}
+        onChangeOption={(newValue: string) => {
+          onChangeOption2(newValue)
+        }}
         optionValue={option2}
         size="large"
         value={value2}

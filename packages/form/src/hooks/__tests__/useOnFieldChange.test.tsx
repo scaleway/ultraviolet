@@ -54,7 +54,9 @@ describe(useOnFieldChange, () => {
     let defaultValues = initial
 
     const { result, rerender } = renderHook(
-      () => useOnFieldChange<FormValues, 'textInputName'>('textInputName', callback),
+      () => {
+        useOnFieldChange<FormValues, 'textInputName'>('textInputName', callback)
+      },
       {
         wrapper: ({ children }) => <Wrapper defaultValues={defaultValues}>{children}</Wrapper>,
       },

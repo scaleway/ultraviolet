@@ -11,8 +11,13 @@ export const OnChange: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
   const [prices, setPrices] = useState<PriceType>({})
   const [elements, setElements] = useState([categoryAZ, categoryDefault])
 
-  const onClick = () =>
-    elements.length === 2 ? setElements([categoryDefault]) : setElements([categoryAZ, categoryDefault])
+  const onClick = () => {
+    if (elements.length === 2) {
+      setElements([categoryDefault])
+    } else {
+      setElements([categoryAZ, categoryDefault])
+    }
+  }
 
   return (
     <Stack direction="row" gap={3}>

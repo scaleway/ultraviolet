@@ -113,14 +113,14 @@ export const Toggle = forwardRef(
           <div
             className={toggleStyle.toggle({
               disabled,
-              error: !!error,
+              error: Boolean(error),
               size,
             })}
           >
             <input
               aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
               aria-disabled={disabled}
-              aria-invalid={!!error}
+              aria-invalid={Boolean(error)}
               aria-label={ariaLabel}
               checked={checked}
               className={toggleStyle.checkbox}

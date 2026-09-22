@@ -1,10 +1,10 @@
 import { DocsContainer as BaseContainer, Unstyled } from '@storybook/addon-docs/blocks'
 import type { DocsContainerProps as BaseContainerProps } from '@storybook/addon-docs/blocks'
 import {
-  consoleDarkerTheme,
-  consoleDarkTheme,
-  consoleLightTheme,
   ThemeProvider as ThemeProviderUV,
+  consoleDarkTheme,
+  consoleDarkerTheme,
+  consoleLightTheme,
 } from '@ultraviolet/themes'
 import { GlobalAlert } from '@ultraviolet/ui'
 import { cloneElement, isValidElement, useState } from 'react'
@@ -98,7 +98,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
           ) : null}
           <BaseContainer context={context} theme={SB_THEMES[themeName]}>
             {isValidElement<ExtraProps>(children)
-              ? cloneElement(children, {
+              ? cloneElement<ExtraProps>(children, {
                   a11yStatus: parameters?.a11yStatus,
                   deprecated: parameters?.deprecated,
                   deprecatedReason: parameters?.deprecatedReason,

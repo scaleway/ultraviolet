@@ -16,7 +16,9 @@ export const ShowTick: StoryFn = args => {
           checked={value === 'label-5'}
           label="Radio Left"
           name="label-5"
-          onChange={event => onChange(event.currentTarget.value)}
+          onChange={event => {
+            onChange(event.currentTarget.value)
+          }}
           showTick
           type="radio"
           value="label-5"
@@ -26,7 +28,9 @@ export const ShowTick: StoryFn = args => {
           checked={value === 'label-6'}
           label="Radio Right"
           name="label-6"
-          onChange={event => onChange(event.currentTarget.value)}
+          onChange={event => {
+            onChange(event.currentTarget.value)
+          }}
           showTick
           type="radio"
           value="label-6"
@@ -38,7 +42,9 @@ export const ShowTick: StoryFn = args => {
           checked={value2['label-1']}
           label="Checkbox 1"
           name="label-1"
-          onChange={event => onChange2({ ...value2, 'label-1': event.currentTarget.checked })}
+          onChange={event => {
+            onChange2({ ...value2, 'label-1': event.currentTarget.checked })
+          }}
           showTick
           type="checkbox"
           value="label-1"
@@ -48,7 +54,9 @@ export const ShowTick: StoryFn = args => {
           checked={value2['label-2']}
           label="Checkbox 2"
           name="label-2"
-          onChange={event => onChange2({ ...value2, 'label-2': event.currentTarget.checked })}
+          onChange={event => {
+            onChange2({ ...value2, 'label-2': event.currentTarget.checked })
+          }}
           showTick
           type="checkbox"
           value="label-2"
@@ -61,7 +69,9 @@ export const ShowTick: StoryFn = args => {
           checked={value3['label-1']}
           label="Toggle 1"
           name="label-1"
-          onChange={event => onChange3({ ...value3, 'label-1': event.currentTarget.checked })}
+          onChange={event => {
+            onChange3({ ...value3, 'label-1': event.currentTarget.checked })
+          }}
           showTick
           type="toggle"
           value="label-1"
@@ -71,7 +81,9 @@ export const ShowTick: StoryFn = args => {
           checked={value3['label-2']}
           label="Toggle 2"
           name="label-2"
-          onChange={event => onChange3({ ...value3, 'label-2': event.currentTarget.checked })}
+          onChange={event => {
+            onChange3({ ...value3, 'label-2': event.currentTarget.checked })
+          }}
           showTick
           type="toggle"
           value="label-2"

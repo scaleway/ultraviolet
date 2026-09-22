@@ -5,35 +5,49 @@ import { describe, expect, it, vi } from 'vitest'
 import { Toggle } from '..'
 
 describe('toggle', () => {
-  it('renders correctly', () => shouldMatchSnapshot(<Toggle name="test" onChange={() => {}} />))
+  it('renders correctly', () => {
+    shouldMatchSnapshot(<Toggle name="test" onChange={() => {}} />)
+  })
 
-  it('renders correctly when checked', () => shouldMatchSnapshot(<Toggle checked name="test" onChange={() => {}} />))
+  it('renders correctly when checked', () => {
+    shouldMatchSnapshot(<Toggle checked name="test" onChange={() => {}} />)
+  })
 
-  it('renders correctly when disabled', () => shouldMatchSnapshot(<Toggle disabled name="test" onChange={() => {}} />))
+  it('renders correctly when disabled', () => {
+    shouldMatchSnapshot(<Toggle disabled name="test" onChange={() => {}} />)
+  })
 
-  it('renders correctly when required with label', () =>
-    shouldMatchSnapshot(<Toggle label="test" name="test" onChange={() => {}} required />))
+  it('renders correctly when required with label', () => {
+    shouldMatchSnapshot(<Toggle label="test" name="test" onChange={() => {}} required />)
+  })
 
-  it('renders correctly when required with label left', () =>
-    shouldMatchSnapshot(<Toggle label="test" labelPosition="left" name="test" onChange={() => {}} required />))
+  it('renders correctly when required with label left', () => {
+    shouldMatchSnapshot(<Toggle label="test" labelPosition="left" name="test" onChange={() => {}} required />)
+  })
 
-  it('renders correctly with non default size', () =>
-    shouldMatchSnapshot(<Toggle name="test" onChange={() => {}} size="small" />))
+  it('renders correctly with non default size', () => {
+    shouldMatchSnapshot(<Toggle name="test" onChange={() => {}} size="small" />)
+  })
 
-  it('renders correctly label', () =>
-    shouldMatchSnapshot(<Toggle label="This is a label" name="test" onChange={() => {}} />))
+  it('renders correctly label', () => {
+    shouldMatchSnapshot(<Toggle label="This is a label" name="test" onChange={() => {}} />)
+  })
 
-  it('renders correctly with tooltip', () =>
-    shouldMatchSnapshot(<Toggle label="This is a label" name="test" onChange={() => {}} tooltip="test" />))
+  it('renders correctly with tooltip', () => {
+    shouldMatchSnapshot(<Toggle label="This is a label" name="test" onChange={() => {}} tooltip="test" />)
+  })
 
-  it('renders correctly with labels on left', () =>
-    shouldMatchSnapshot(<Toggle label="This is a label" labelPosition="left" name="test" onChange={() => {}} />))
+  it('renders correctly with labels on left', () => {
+    shouldMatchSnapshot(<Toggle label="This is a label" labelPosition="left" name="test" onChange={() => {}} />)
+  })
 
-  it('renders correctly with custom labels on right', () =>
-    shouldMatchSnapshot(<Toggle label="This is a label" labelPosition="right" name="test" onChange={() => {}} />))
+  it('renders correctly with custom labels on right', () => {
+    shouldMatchSnapshot(<Toggle label="This is a label" labelPosition="right" name="test" onChange={() => {}} />)
+  })
 
-  it('renders correctly with complex label', () =>
-    shouldMatchSnapshot(<Toggle label={<span>Custom label rendered</span>} name="test" />))
+  it('renders correctly with complex label', () => {
+    shouldMatchSnapshot(<Toggle label={<span>Custom label rendered</span>} name="test" />)
+  })
 
   it('renders and click on toggle on', async () => {
     const onChange = vi.fn()
@@ -47,8 +61,11 @@ describe('toggle', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('renders correctly with helper', () =>
-    shouldMatchSnapshot(<Toggle helper="This is a helper" label="This is a label" name="test" />))
-  it('renders correctly with error', () =>
-    shouldMatchSnapshot(<Toggle error="error text" helper="This is a helper" label="This is a label" name="test" />))
+  it('renders correctly with helper', () => {
+    shouldMatchSnapshot(<Toggle helper="This is a helper" label="This is a label" name="test" />)
+  })
+
+  it('renders correctly with error', () => {
+    shouldMatchSnapshot(<Toggle error="error text" helper="This is a helper" label="This is a label" name="test" />)
+  })
 })

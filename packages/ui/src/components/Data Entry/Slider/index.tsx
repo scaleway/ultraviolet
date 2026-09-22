@@ -69,9 +69,9 @@ export const Slider = ({
   return (
     <Stack
       aria-label={ariaLabel}
-      className={double && !!options ? sliderStyle.container : ''}
+      className={double && Boolean(options) ? sliderStyle.container : ''}
       data-double={double}
-      data-options={!!options}
+      data-options={Boolean(options)}
       gap={gap}
       style={style}
     >
@@ -101,7 +101,7 @@ export const Slider = ({
           required={required}
           step={step}
           suffix={suffix as ReactNode[]}
-          tooltip={tooltip as string[] | boolean | undefined}
+          tooltip={tooltip}
           tooltipPosition={tooltipPosition}
           unit={unit}
           value={value as number[]}

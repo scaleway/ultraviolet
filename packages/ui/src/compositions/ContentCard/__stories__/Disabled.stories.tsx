@@ -49,7 +49,9 @@ export const Disabled: StoryFn<typeof ContentCard> = args => (
           direction="column"
           disabled
           image={illustration}
-          onClick={() => console.log('ok')}
+          onClick={() => {
+            console.log('ok')
+          }}
           subtitle="New update"
           title="Create your first function"
         />

@@ -13,7 +13,9 @@ export const Tooltip: StoryFn = args => {
         checked={value === 'label-14'}
         label="Radio Left"
         name="label-14"
-        onChange={event => onChange(event.currentTarget.value)}
+        onChange={event => {
+          onChange(event.currentTarget.value)
+        }}
         tooltip="Click on me!"
         type="radio"
         value="label-14"
@@ -23,7 +25,9 @@ export const Tooltip: StoryFn = args => {
         checked={value === 'label-15'}
         label="Radio Right"
         name="label-15"
-        onChange={event => onChange(event.currentTarget.value)}
+        onChange={event => {
+          onChange(event.currentTarget.value)
+        }}
         tooltip="No! Click on me instead!"
         type="radio"
         value="label-15"

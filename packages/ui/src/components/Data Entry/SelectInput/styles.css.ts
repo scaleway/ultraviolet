@@ -6,7 +6,6 @@ import {
   dropdownCheckbox,
   dropdownCheckboxGroup,
   dropdownContainer,
-  dropdownSection,
   dropdownEmptyState,
   dropdownGroup,
   dropdownGroupSelectable,
@@ -17,10 +16,11 @@ import {
   dropdownItem,
   dropdownItemBase,
   dropdownLoadMore,
+  dropdownSection,
   emptyStateGroupStyle,
   footer,
-  searchBar,
   optionalInfoPadding,
+  searchBar,
 } from './components/Dropdown/dropdown.css'
 import {
   multiselectStack,

@@ -1,4 +1,4 @@
-import { consoleDarkerTheme, consoleDarkTheme, consoleLightTheme, useTheme } from '@ultraviolet/themes'
+import { consoleDarkTheme, consoleDarkerTheme, consoleLightTheme, useTheme } from '@ultraviolet/themes'
 import deepmerge from 'deepmerge'
 import { ThemeProvider } from './ThemeProvider'
 

@@ -43,7 +43,7 @@ export const SelectableCell = ({
   const { selectable, expandable, autoCollapse } = useOfferListContext()
   const { expandedRowIds, collapseRow, expandRow } = List.useListContext()
 
-  const isSelectableDisabled = disabled || loading || !!selectDisabled
+  const isSelectableDisabled = disabled || loading || Boolean(selectDisabled)
 
   return (
     <List.Cell

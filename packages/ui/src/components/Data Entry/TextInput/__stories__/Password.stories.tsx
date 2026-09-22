@@ -19,14 +19,18 @@ export const Password: StoryFn<typeof TextInput> = ({ ...args }) => {
       <TextInput
         {...args}
         label="Password"
-        onChange={event => setValue(event.target.value)}
+        onChange={event => {
+          setValue(event.target.value)
+        }}
         type="password"
         value={value}
       />
       <TextInput
         {...args}
         label="Password with randomize"
-        onChange={event => setValue2(event.target.value)}
+        onChange={event => {
+          setValue2(event.target.value)
+        }}
         onRandomize={() => {
           setValue2(generateRandomPassword())
         }}
@@ -36,7 +40,9 @@ export const Password: StoryFn<typeof TextInput> = ({ ...args }) => {
       <TextInput
         {...args}
         label="Passord with copy button"
-        onChange={event => setValue3(event.target.value)}
+        onChange={event => {
+          setValue3(event.target.value)
+        }}
         suffix={<CopyButton sentiment="neutral" value={value3 ?? ''} />}
         type="password"
         value={value3}

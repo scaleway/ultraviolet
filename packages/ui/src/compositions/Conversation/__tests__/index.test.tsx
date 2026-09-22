@@ -3,7 +3,7 @@ import { describe, it } from 'vitest'
 import { Conversation } from '..'
 
 describe('conversation', () => {
-  it('should work with Default', () =>
+  it('should work with Default', () => {
     shouldMatchSnapshot(
       <Conversation>
         <Conversation.Date>2022-03-02</Conversation.Date>
@@ -16,5 +16,6 @@ describe('conversation', () => {
           <Conversation.Tag>Hello</Conversation.Tag>
         </Conversation.Message>
       </Conversation>,
-    ))
+    )
+  })
 })

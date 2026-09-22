@@ -121,9 +121,15 @@ export const Menu = forwardRef(
           setShouldBeVisible(value)
         }
 
-        disclosureRef.current.addEventListener('focus', () => handler(true))
-        disclosureRef.current.addEventListener('mouseenter', () => handler(true))
-        disclosureRef.current.addEventListener('mouseleave', () => handler(false))
+        disclosureRef.current.addEventListener('focus', () => {
+          handler(true)
+        })
+        disclosureRef.current.addEventListener('mouseenter', () => {
+          handler(true)
+        })
+        disclosureRef.current.addEventListener('mouseleave', () => {
+          handler(false)
+        })
         disclosureRef.current.addEventListener('keydown', event => {
           if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
             handler(false) // force close menu when navigating with arrow keys
@@ -131,10 +137,18 @@ export const Menu = forwardRef(
         })
 
         return () => {
-          window.removeEventListener('focus', () => handler(undefined))
-          window.removeEventListener('mouseenter', () => handler(undefined))
-          window.removeEventListener('mouseleave', () => handler(undefined))
-          window.removeEventListener('keydown', () => handler(undefined))
+          window.removeEventListener('focus', () => {
+            handler(undefined)
+          })
+          window.removeEventListener('mouseenter', () => {
+            handler(undefined)
+          })
+          window.removeEventListener('mouseleave', () => {
+            handler(undefined)
+          })
+          window.removeEventListener('keydown', () => {
+            handler(undefined)
+          })
         }
       }
 
@@ -143,7 +157,11 @@ export const Menu = forwardRef(
 
     const finalChild = useMemo(() => {
       if (typeof children === 'function') {
-        return children({ toggle: () => setIsVisible(!isVisible) })
+        return children({
+          toggle: () => {
+            setIsVisible(!isVisible)
+          },
+        })
       }
 
       if (searchable && localChild) {
@@ -233,8 +251,12 @@ export const Menu = forwardRef(
             className={cn(className, menuStyle.list)}
             data-testid={dataTestId}
             onKeyDown={handleKeyDown}
-            onMouseEnter={() => setShouldBeVisible(true)}
-            onMouseLeave={() => setShouldBeVisible(false)}
+            onMouseEnter={() => {
+              setShouldBeVisible(true)
+            }}
+            onMouseLeave={() => {
+              setShouldBeVisible(false)
+            }}
             role="menu"
             style={assignInlineVars({
               [heightMenu]: maxHeight ?? '30rem',

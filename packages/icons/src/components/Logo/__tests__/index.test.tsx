@@ -9,8 +9,8 @@ import {
   ArchLinuxLogo,
   ArgoLogo,
   BaaiLogo,
-  CentosLogo,
   CPanelLogo,
+  CentosLogo,
 } from '..'
 
 describe('logos', () => {

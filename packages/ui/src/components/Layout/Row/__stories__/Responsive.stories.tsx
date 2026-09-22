@@ -21,7 +21,9 @@ export const Responsive: StoryFn = props => {
     calc()
     window.addEventListener('resize', calc)
 
-    return () => window.removeEventListener('resize', calc)
+    return () => {
+      window.removeEventListener('resize', calc)
+    }
   }, [])
 
   const row1Columns = {

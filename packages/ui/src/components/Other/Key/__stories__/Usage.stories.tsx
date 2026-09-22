@@ -7,7 +7,12 @@ import { Tooltip } from '../../../Overlay/Tooltip'
 
 export const Usage: StoryFn<typeof Key> = () => {
   const [counter, setCounter] = useState(0)
-  const updateCounter = useCallback((amount?: number) => setCounter(counter + (amount ?? 1)), [counter])
+  const updateCounter = useCallback(
+    (amount?: number) => {
+      setCounter(counter + (amount ?? 1))
+    },
+    [counter],
+  )
 
   useEffect(() => {
     const shortcutFunction = (event: KeyboardEvent) => {
@@ -25,7 +30,9 @@ export const Usage: StoryFn<typeof Key> = () => {
 
     document.addEventListener('keydown', shortcutFunction)
 
-    return () => document.removeEventListener('keydown', shortcutFunction)
+    return () => {
+      document.removeEventListener('keydown', shortcutFunction)
+    }
   }, [updateCounter])
 
   return (
@@ -38,7 +45,12 @@ export const Usage: StoryFn<typeof Key> = () => {
           </Stack>
         }
       >
-        <Button fullWidth onClick={() => updateCounter()}>
+        <Button
+          fullWidth
+          onClick={() => {
+            updateCounter()
+          }}
+        >
           Click me
         </Button>
       </Tooltip>

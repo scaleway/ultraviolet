@@ -40,7 +40,11 @@ export const HeaderCell = ({
     order = 'descending'
   }
 
-  const handleOrder = onOrder ? () => onOrder(order === 'ascending' ? 'desc' : 'asc') : undefined
+  const handleOrder = onOrder
+    ? () => {
+        onOrder(order === 'ascending' ? 'desc' : 'asc')
+      }
+    : undefined
 
   return (
     <th

@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import { Form, FileInputField } from '../..'
+import { FileInputField, Form } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 
@@ -8,7 +8,7 @@ import { mockErrors } from '../../../mocks'
 const serializeValues = (values: Record<string, File>) =>
   Object.entries(values).reduce<Record<string, unknown>>((acc, [key, value]) => {
     if (Array.isArray(value)) {
-      acc[key] = [...value].map(file => ({
+      acc[key] = ([...value] as File[]).map(file => ({
         name: file.name,
         size: file.size,
         type: file.type,

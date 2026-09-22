@@ -115,7 +115,7 @@ export const EstimateCostContent = ({
     // this variable check if there is a maxAmount in each product
     // if not we do not need to calculate maxTotal, maxHourly, maxOverlayHourly
     const isMaxAmountInProducts = products.find(product => product.maxAmount)
-    setIsLongFractionDigits(!!products.find(product => product.longFractionDigits))
+    setIsLongFractionDigits(Boolean(products.find(product => product.longFractionDigits)))
     setTotalPrice({
       hourly: products.reduce(
         (acc, product) =>

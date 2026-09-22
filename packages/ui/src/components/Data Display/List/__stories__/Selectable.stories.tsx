@@ -43,7 +43,12 @@ export const Selectable: StoryFn<typeof List> = args => {
         </List.SelectBar>
       </List>
 
-      <button onClick={() => setClick(!clicked)} type="button">
+      <button
+        onClick={() => {
+          setClick(!clicked)
+        }}
+        type="button"
+      >
         {clicked ? 'remove' : 'add'} mars as a planet
       </button>
     </>

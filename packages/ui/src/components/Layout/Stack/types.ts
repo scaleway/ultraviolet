@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef, ComponentPropsWithRef, ElementType } from 'react'
+import type { ComponentPropsWithRef, ComponentPropsWithoutRef, ElementType } from 'react'
 
 type MainProps<E extends ElementType> = {
   as?: E

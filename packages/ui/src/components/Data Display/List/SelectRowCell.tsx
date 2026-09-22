@@ -31,7 +31,9 @@ export const SelectRowCell = ({
               className={inRange?.includes(id) ? listStyle.checkboxInRange : ''}
               disabled={isSelectDisabled}
               name="list-select-checkbox"
-              onChange={() => handleOnChange(id, selectedRowIds[id])}
+              onChange={() => {
+                handleOnChange(id, selectedRowIds[id])
+              }}
               ref={checkboxRef}
               value={id}
             />

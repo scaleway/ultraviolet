@@ -17,7 +17,7 @@ const prefixMap: Record<string, string> = {
   theme: 'theme',
 }
 
-const toKebabCase = (key: string) => key.replace(/\./gu, '-').replace(/[A-Z]/gu, match => `-${match.toLowerCase()}`)
+const toKebabCase = (key: string) => key.replaceAll('.', '-').replaceAll(/[A-Z]/gu, match => `-${match.toLowerCase()}`)
 
 // Theme contract that will defines all CSS variables used in the application
 // Variable names are readable and match the static CSS files

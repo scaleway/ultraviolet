@@ -19,7 +19,7 @@ const FOCUSABLE_ELEMENTS = `
   )
   :not([disabled])
   :not([tabindex="-1"])
-`.replace(/\s+/g, '')
+`.replaceAll(/\s+/g, '')
 
 type TooltipChildrenProps = {
   tooltip: ReturnType<typeof useTooltip>

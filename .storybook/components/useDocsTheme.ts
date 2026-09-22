@@ -18,7 +18,9 @@ export const useDocsTheme = () => {
     }
 
     channel.on(GLOBALS_UPDATED, handler)
-    return () => channel.off(GLOBALS_UPDATED, handler)
+    return () => {
+      channel.off(GLOBALS_UPDATED, handler)
+    }
   }, [channel])
 
   useEffect(() => {

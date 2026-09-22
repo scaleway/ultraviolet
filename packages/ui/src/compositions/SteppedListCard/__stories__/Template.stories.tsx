@@ -58,10 +58,21 @@ export const Template: StoryFn<ComponentProps<typeof SteppedListCard>> = props =
         <Stack direction="column" gap={2}>
           Second step description
           <Stack direction="row" gap={2}>
-            <Button onClick={() => nextStep()} variant="outlined">
+            <Button
+              onClick={() => {
+                nextStep()
+              }}
+              variant="outlined"
+            >
               Next step
             </Button>
-            <Button onClick={() => nextStep(true)}>Next step and validate</Button>
+            <Button
+              onClick={() => {
+                nextStep(true)
+              }}
+            >
+              Next step and validate
+            </Button>
           </Stack>
         </Stack>
       )}
@@ -71,7 +82,13 @@ export const Template: StoryFn<ComponentProps<typeof SteppedListCard>> = props =
         <Stack gap={2}>
           Second step description
           <Stack direction="row" gap={2}>
-            <Button onClick={() => nextStep(true)}>Validate and close</Button>
+            <Button
+              onClick={() => {
+                nextStep(true)
+              }}
+            >
+              Validate and close
+            </Button>
           </Stack>
         </Stack>
       )}

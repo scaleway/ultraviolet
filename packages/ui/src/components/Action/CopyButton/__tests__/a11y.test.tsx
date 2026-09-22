@@ -1,5 +1,5 @@
 import { consoleThemesMap } from '@ultraviolet/themes'
-import { renderWithTheme, expectNoViolations } from '@utils/test'
+import { expectNoViolations, renderWithTheme } from '@utils/test'
 import { describe, it } from 'vitest'
 import { CopyButton } from '..'
 

@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
+import { ThemeProvider, consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useState } from 'react'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
@@ -91,7 +91,7 @@ describe('list', () => {
     consoleErrMock.mockRestore()
   })
 
-  it('should render correctly', () =>
+  it('should render correctly', () => {
     shouldMatchSnapshot(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -104,9 +104,10 @@ describe('list', () => {
           </List.Row>
         ))}
       </List>,
-    ))
+    )
+  })
 
-  it('should render correctly with sort', () =>
+  it('should render correctly with sort', () => {
     shouldMatchSnapshot(
       <List columns={columns.map(column => ({ ...column, sort: 'none' }))}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -119,9 +120,10 @@ describe('list', () => {
           </List.Row>
         ))}
       </List>,
-    ))
+    )
+  })
 
-  it('should render correctly with row expanded', () =>
+  it('should render correctly with row expanded', () => {
     shouldMatchSnapshot(
       <List columns={columns.map(column => ({ ...column, sort: 'none' }))}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -134,9 +136,10 @@ describe('list', () => {
           </List.Row>
         ))}
       </List>,
-    ))
+    )
+  })
 
-  it('should render correctly with selectable', () =>
+  it('should render correctly with selectable', () => {
     shouldMatchSnapshot(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -149,9 +152,10 @@ describe('list', () => {
           </List.Row>
         ))}
       </List>,
-    ))
+    )
+  })
 
-  it('should render correctly with loading', () =>
+  it('should render correctly with loading', () => {
     shouldMatchSnapshot(
       <List columns={columns} loading>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -164,9 +168,10 @@ describe('list', () => {
           </List.Row>
         ))}
       </List>,
-    ))
+    )
+  })
 
-  it('should render correctly with loading with selectable', () =>
+  it('should render correctly with loading with selectable', () => {
     shouldMatchSnapshot(
       <List columns={columns} loading selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -179,9 +184,10 @@ describe('list', () => {
           </List.Row>
         ))}
       </List>,
-    ))
+    )
+  })
 
-  it('should render correctly with column width', () =>
+  it('should render correctly with column width', () => {
     shouldMatchSnapshot(
       <List columns={[columnWidthPercent, columnWidthPx]} loading selectable>
         {data.map(({ id, columnA, columnB }) => (
@@ -191,9 +197,10 @@ describe('list', () => {
           </List.Row>
         ))}
       </List>,
-    ))
+    )
+  })
 
-  it('should render correctly with column width and colMode strict', () =>
+  it('should render correctly with column width and colMode strict', () => {
     shouldMatchSnapshot(
       <List colMode="strict" columns={[columnWidthPercent, columnWidthPx]} loading selectable>
         {data.map(({ id, columnA, columnB }) => (
@@ -203,8 +210,10 @@ describe('list', () => {
           </List.Row>
         ))}
       </List>,
-    ))
-  it('should render correctly with disabled rows', () =>
+    )
+  })
+
+  it('should render correctly with disabled rows', () => {
     shouldMatchSnapshot(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -217,9 +226,10 @@ describe('list', () => {
           </List.Row>
         ))}
       </List>,
-    ))
+    )
+  })
 
-  it('should render correctly with expandable rows', () =>
+  it('should render correctly with expandable rows', () => {
     shouldMatchSnapshot(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
@@ -232,9 +242,10 @@ describe('list', () => {
           </List.Row>
         ))}
       </List>,
-    ))
+    )
+  })
 
-  it('should render correctly with sentiment rows', () =>
+  it('should render correctly with sentiment rows', () => {
     shouldMatchSnapshot(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
@@ -247,9 +258,10 @@ describe('list', () => {
           </List.Row>
         ))}
       </List>,
-    ))
+    )
+  })
 
-  it('should render correctly with children fragment', () =>
+  it('should render correctly with children fragment', () => {
     shouldMatchSnapshot(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
@@ -265,7 +277,8 @@ describe('list', () => {
           </List.Row>
         ))}
       </List>,
-    ))
+    )
+  })
 
   it('should render correctly with selectable then click on first row then uncheck all, then check all', async () => {
     const { asFragment } = renderWithTheme(

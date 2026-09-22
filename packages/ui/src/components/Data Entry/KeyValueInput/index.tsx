@@ -66,7 +66,7 @@ export const KeyValueInput = ({
       'aria-describedby': inputError
         ? `error-${type}-${index}`
         : ariaDescribedBy || (hasHelperText(undefined, error) ? errorId : undefined),
-      error: !!(inputError || error),
+      error: Boolean(inputError || error),
       name: `${name}.${index}.${type}`,
       onFocus: () => onFocus?.(keyvaluesList, index),
       onBlur: () => onBlur?.(keyvaluesList, index),
@@ -88,26 +88,34 @@ export const KeyValueInput = ({
                 {inputKey.inputType === 'select' ? (
                   <SelectInput
                     options={inputKey.options}
-                    onChange={(key: string) => handleChange(index, 'change', key)} // can't properly infer type of onChange
+                    onChange={(key: string) => {
+                      handleChange(index, 'change', key)
+                    }} // can't properly infer type of onChange
                     {...commonProps(index, 'key', errorKey)}
                   />
                 ) : (
                   <TextInput
-                    onChangeValue={key => handleChange(index, 'change', key)}
+                    onChangeValue={key => {
+                      handleChange(index, 'change', key)
+                    }}
                     {...commonProps(index, 'key', errorKey)}
                   />
                 )}
                 {inputValue.inputType === 'select' ? (
                   <SelectInput
                     options={inputValue.options}
-                    onChange={(value: string) => handleChange(index, 'change', undefined, value)}
+                    onChange={(value: string) => {
+                      handleChange(index, 'change', undefined, value)
+                    }}
                     {...commonProps(index, 'value', errorValue)}
                   />
                 ) : (
                   <TextInput
                     autoComplete="off"
                     type={inputValue.type}
-                    onChangeValue={value => handleChange(index, 'change', undefined, value)}
+                    onChangeValue={value => {
+                      handleChange(index, 'change', undefined, value)
+                    }}
                     {...commonProps(index, 'value', errorValue)}
                   />
                 )}

@@ -8,21 +8,25 @@ import { Banner } from '..'
 // import image from '../__stories__/Image.png'
 
 describe('banner', () => {
-  it('renders correctly with default values', () => shouldMatchSnapshot(<Banner title="Title">Description</Banner>))
+  it('renders correctly with default values', () => {
+    shouldMatchSnapshot(<Banner title="Title">Description</Banner>)
+  })
 
-  it('renders correctly with a button', () =>
+  it('renders correctly with a button', () => {
     shouldMatchSnapshot(
       <Banner buttonText="Button" title="Title">
         Description
       </Banner>,
-    ))
+    )
+  })
 
-  it('renders correctly with a link', () =>
+  it('renders correctly with a link', () => {
     shouldMatchSnapshot(
       <Banner linkText="Link" title="Title">
         Description
       </Banner>,
-    ))
+    )
+  })
 
   describe('sizes and variants', () => {
     it.each([
@@ -39,19 +43,21 @@ describe('banner', () => {
     })
   })
 
-  it('renders correctly with direction row', () =>
+  it('renders correctly with direction row', () => {
     shouldMatchSnapshot(
       <Banner direction="row" title="Title">
         Description
       </Banner>,
-    ))
+    )
+  })
 
-  it('renders correctly with closable to false', () =>
+  it('renders correctly with closable to false', () => {
     shouldMatchSnapshot(
       <Banner closable={false} direction="row" title="Title">
         Description
       </Banner>,
-    ))
+    )
+  })
 
   it('should render banner and then close it', async () => {
     renderWithTheme(
@@ -71,11 +77,12 @@ describe('banner', () => {
     })
   })
 
-  it('should render correctly with dark theme', () =>
+  it('should render correctly with dark theme', () => {
     shouldMatchSnapshot(
       <Banner linkText="Learn more" title="Title">
         Descritpion
       </Banner>,
       consoleDarkTheme,
-    ))
+    )
+  })
 })

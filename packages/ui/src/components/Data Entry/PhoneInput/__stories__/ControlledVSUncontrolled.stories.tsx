@@ -15,7 +15,9 @@ export const ControlledVSUncontrolled: StoryFn<typeof PhoneInput> = props => {
           {...props}
           defaultCountry="FR"
           label="Controlled"
-          onChange={event => setValue(event.target.value)}
+          onChange={event => {
+            setValue(event.target.value)
+          }}
           value={value}
         />
         <Text as="p" sentiment="neutral" variant="body">

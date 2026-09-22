@@ -1,6 +1,6 @@
 import { act, fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { describe, expect, vi, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { SelectInputField } from '..'
 import { renderWithForm } from '../../../__tests__/helpers'
 import { cities, planets } from './resources'
@@ -56,7 +56,9 @@ describe('selectInputField', () => {
     await waitFor(() => {
       expect(onChange).toHaveBeenCalledOnce()
     })
-    act(() => select.blur())
+    act(() => {
+      select.blur()
+    })
 
     expect(asFragment()).toMatchSnapshot()
   })

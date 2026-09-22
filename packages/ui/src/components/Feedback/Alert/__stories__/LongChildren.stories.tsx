@@ -9,7 +9,9 @@ export const LongChildren = (props: ComponentProps<typeof Alert>) => (
       sentiment="info"
       closable
       buttonText="More info"
-      onClickButton={() => alert('Button clicked')}
+      onClickButton={() => {
+        alert('Button clicked')
+      }}
       title="Information"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -18,7 +20,15 @@ export const LongChildren = (props: ComponentProps<typeof Alert>) => (
       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </Alert>
 
-    <Alert {...props} sentiment="info" closable onClickButton={() => alert('Button clicked')} title="Note">
+    <Alert
+      {...props}
+      sentiment="info"
+      closable
+      onClickButton={() => {
+        alert('Button clicked')
+      }}
+      title="Note"
+    >
       <ul style={{ margin: 0 }}>
         <li>
           Hubble must be deployed in the <code>kube-system</code> namespace.

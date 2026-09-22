@@ -7,11 +7,21 @@ export const Disabled: StoryFn<typeof Chip> = ({ ...args }) => (
   <Stack direction="row" gap={1}>
     <Chip {...args} disabled>
       Disabled inactive
-      <Chip.Icon icon={<CloseIcon />} onClick={() => alert('Deleted')} />
+      <Chip.Icon
+        icon={<CloseIcon />}
+        onClick={() => {
+          alert('Deleted')
+        }}
+      />
     </Chip>
     <Chip {...args} active disabled>
       Disabled active
-      <Chip.Icon icon={<CloseIcon />} onClick={() => alert('Deleted')} />
+      <Chip.Icon
+        icon={<CloseIcon />}
+        onClick={() => {
+          alert('Deleted')
+        }}
+      />
     </Chip>
   </Stack>
 )

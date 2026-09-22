@@ -25,7 +25,7 @@ export const mergeProps = (parentProps: Props, childProps: Props): Props => {
     }
     // Merge style
     else if (key === 'style' && parentValue && childValue) {
-      merged[key] = { ...(parentValue as object), ...(childValue as object) }
+      merged[key] = { ...parentValue, ...childValue }
     }
   }
 
@@ -51,7 +51,7 @@ export const renderElement = <P extends Props>(
 
   // Function form: pass props to render function
   if (typeof render === 'function') {
-    return render(props as P)
+    return render(props)
   }
 
   // Element form: clone element with merged props

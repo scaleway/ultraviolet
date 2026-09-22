@@ -34,7 +34,9 @@ export const Error: StoryFn<typeof SelectableCardGroup> = args => {
         {...args}
         columns={2}
         legend="Error with 2 columns and radio"
-        onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange2(event.currentTarget.value)}
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+          onChange2(event.currentTarget.value)
+        }}
         showTick
         type="radio"
         value={valueRow}

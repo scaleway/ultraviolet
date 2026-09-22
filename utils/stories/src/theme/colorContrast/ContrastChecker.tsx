@@ -167,7 +167,9 @@ export const ContrastChecker = () => {
     }
     window.addEventListener('scroll', onScroll, { passive: true })
     window.scrollTo(0, persist.scrollY)
-    return () => window.removeEventListener('scroll', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+    }
   }, [])
 
   const { groups, counts } = useMemo(() => {

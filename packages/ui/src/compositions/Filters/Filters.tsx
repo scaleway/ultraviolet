@@ -11,7 +11,7 @@ export type FiltersProps<V extends AnyObject = AnyObject> = MainRowProps<V> & {
 } & FiltersProviderProps<V>
 
 const hasFullDrawerLabels = (labels: Partial<DrawerProps['labels']>): labels is Required<DrawerProps['labels']> =>
-  !!labels.clear && !!labels.submit && !!labels.drawerHeader
+  Boolean(labels.clear) && Boolean(labels.submit) && Boolean(labels.drawerHeader)
 
 export const Filters = <V extends AnyObject>({
   config,

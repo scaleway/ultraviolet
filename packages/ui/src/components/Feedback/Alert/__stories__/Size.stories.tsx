@@ -5,14 +5,35 @@ import { Stack } from '../../../Layout/Stack'
 
 export const Size = (props: ComponentProps<typeof Alert>) => (
   <>
-    <Alert {...props} onClickButton={() => alert('Button clicked')} title="title">
+    <Alert
+      {...props}
+      onClickButton={() => {
+        alert('Button clicked')
+      }}
+      title="title"
+    >
       This is an Alert.
     </Alert>
 
-    <Alert {...props} onClickButton={() => alert('Button clicked')} size="small" title="title">
+    <Alert
+      {...props}
+      onClickButton={() => {
+        alert('Button clicked')
+      }}
+      size="small"
+      title="title"
+    >
       This is a small alert
     </Alert>
-    <Alert {...props} buttonText="More info" onClickButton={() => alert('Button clicked')} size="small" title="title">
+    <Alert
+      {...props}
+      buttonText="More info"
+      onClickButton={() => {
+        alert('Button clicked')
+      }}
+      size="small"
+      title="title"
+    >
       Small alert with long children. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
       incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum

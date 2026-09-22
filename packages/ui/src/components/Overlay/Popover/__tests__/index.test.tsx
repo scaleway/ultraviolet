@@ -56,7 +56,13 @@ const AdvancedPopover = () => {
       title="Popover Title"
       visible={opened}
     >
-      <Button data-testid="button-popover" onClick={() => setOpened(true)} sentiment="neutral">
+      <Button
+        data-testid="button-popover"
+        onClick={() => {
+          setOpened(true)
+        }}
+        sentiment="neutral"
+      >
         Open Popover
       </Button>
     </Popover>
@@ -64,26 +70,29 @@ const AdvancedPopover = () => {
 }
 
 describe('tooltip', () => {
-  it('should render correctly with required props', () =>
+  it('should render correctly with required props', () => {
     shouldMatchSnapshot(
       <Popover content="Test" onClose={() => {}} title="Test">
         Children
       </Popover>,
-    ))
+    )
+  })
 
-  it('should render correctly with required props and visible', () =>
+  it('should render correctly with required props and visible', () => {
     shouldMatchSnapshot(
       <Popover content="Test" onClose={() => {}} title="Test" visible>
         Children
       </Popover>,
-    ))
+    )
+  })
 
-  it('should render correctly with component in content prop', () =>
+  it('should render correctly with component in content prop', () => {
     shouldMatchSnapshot(
       <Popover content={<p>Test</p>} onClose={() => {}} title="Test" visible>
         Children
       </Popover>,
-    ))
+    )
+  })
 
   describe('should render correctly with placement', () => {
     it.each(['top', 'left', 'right', 'bottom'] as const)(`should renders tooltip with placement %s`, placement => {

@@ -34,7 +34,9 @@ export const Illustration: StoryFn = args => {
             </Stack>
           }
           name="label-30"
-          onChange={event => onChange(event.currentTarget.value)}
+          onChange={event => {
+            onChange(event.currentTarget.value)
+          }}
           productIcon={<MacMiniProductIcon size="large" />}
           showTick
           type="radio"
@@ -61,7 +63,9 @@ export const Illustration: StoryFn = args => {
             </Stack>
           }
           name="label-31"
-          onChange={event => onChange(event.currentTarget.value)}
+          onChange={event => {
+            onChange(event.currentTarget.value)
+          }}
           productIcon={<ColdStorageProductIcon size="large" />}
           showTick
           type="radio"
@@ -92,7 +96,9 @@ export const Illustration: StoryFn = args => {
             </Stack>
           }
           name="label-24"
-          onChange={event => onChange2(event.currentTarget.value)}
+          onChange={event => {
+            onChange2(event.currentTarget.value)
+          }}
           showTick
           type="radio"
           value="label-24"
@@ -119,7 +125,9 @@ export const Illustration: StoryFn = args => {
             </Stack>
           }
           name="label-25"
-          onChange={event => onChange2(event.currentTarget.value)}
+          onChange={event => {
+            onChange2(event.currentTarget.value)
+          }}
           showTick
           type="radio"
           value="label-25"

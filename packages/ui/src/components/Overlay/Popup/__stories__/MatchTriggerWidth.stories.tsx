@@ -19,7 +19,9 @@ export const MatchTriggerWidth: StoryFn<typeof Popup> = () => {
     measure()
     window.addEventListener('resize', measure)
 
-    return () => window.removeEventListener('resize', measure)
+    return () => {
+      window.removeEventListener('resize', measure)
+    }
   }, [])
 
   return (

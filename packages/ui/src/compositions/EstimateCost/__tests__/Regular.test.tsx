@@ -16,16 +16,17 @@ describe('estimateCost - Regular Item', () => {
     resetIntersectionMocking()
   })
 
-  it('render basic props', () =>
+  it('render basic props', () => {
     shouldMatchSnapshot(
       <EstimateCost description="Custom Description">
         <EstimateCost.Item label="Regular">
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render basic props with overlay', () =>
+  it('render basic props with overlay', () => {
     shouldMatchSnapshot(
       <EstimateCost OverlayLeft={OverlaySubmitButton} OverlayRight={OverlaySubmitButton}>
         <EstimateCost.Item label="Regular">
@@ -37,9 +38,10 @@ describe('estimateCost - Regular Item', () => {
           <EstimateCost.Regular>Hidden element in overlay</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render basic props with overlay beta', () =>
+  it('render basic props with overlay beta', () => {
     shouldMatchSnapshot(
       <EstimateCost isBeta OverlayRight={OverlaySubmitButton}>
         <EstimateCost.Item amount={0} label="Regular" maxAmount={100} price={0.001}>
@@ -49,63 +51,70 @@ describe('estimateCost - Regular Item', () => {
           <EstimateCost.Regular>This is a regular Item 2</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render basic props with long fractions digits', () =>
+  it('render basic props with long fractions digits', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular" longFractionDigits price={0.000_001}>
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render basic props with maxPrice and longFractionDigits', () =>
+  it('render basic props with maxPrice and longFractionDigits', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item amount={10} label="Regular" longFractionDigits maxAmount={100} price={0.000_001}>
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render basic props with maxPrice', () =>
+  it('render basic props with maxPrice', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item amount={0} label="Regular" maxAmount={100} price={0.000_001} unit="Node">
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render basic props with is not defined', () =>
+  it('render basic props with is not defined', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item isDefined={false} label="Regular">
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render basic props with sublabel', () =>
+  it('render basic props with sublabel', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular" subLabel="Excellent">
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render basic props with textNotDefined', () =>
+  it('render basic props with textNotDefined', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular" textNotDefined="Not defined">
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render basic with ellipsis', () =>
+  it('render basic with ellipsis', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular" textNotDefined="Not defined">
@@ -114,25 +123,28 @@ describe('estimateCost - Regular Item', () => {
           </EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with isDisabledOnOverlay', () =>
+  it('render with isDisabledOnOverlay', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular">
           <EstimateCost.Regular isDisabledOnOverlay>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with alert', () =>
+  it('render with alert', () => {
     shouldMatchSnapshot(
       <EstimateCost alert="this is an alert" alertTitle="this is an alert title">
         <EstimateCost.Item label="Regular">
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
   it('render with hourly price range', async () => {
     renderWithTheme(
@@ -144,10 +156,14 @@ describe('estimateCost - Regular Item', () => {
     )
 
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
-    await waitFor(() => expect(input.value).toBe('1'))
+    await waitFor(() => {
+      expect(input.value).toBe('1')
+    })
     await userEvent.click(input)
     await userEvent.type(input, '0')
-    await waitFor(() => expect(input.value).toBe('10'))
+    await waitFor(() => {
+      expect(input.value).toBe('10')
+    })
   })
 
   it('render with hourly price range and longFractionDigits', async () => {
@@ -160,9 +176,13 @@ describe('estimateCost - Regular Item', () => {
     )
 
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
-    await waitFor(() => expect(input.value).toBe('1'))
+    await waitFor(() => {
+      expect(input.value).toBe('1')
+    })
     await userEvent.click(input)
     await userEvent.type(input, '0')
-    await waitFor(() => expect(input.value).toBe('10'))
+    await waitFor(() => {
+      expect(input.value).toBe('10')
+    })
   })
 })

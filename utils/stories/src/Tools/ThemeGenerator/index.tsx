@@ -1,5 +1,5 @@
 import { Form, useForm } from '@ultraviolet/form'
-import { theme as consoleLightTheme, Stack, Text } from '@ultraviolet/ui'
+import { Stack, Text, theme as consoleLightTheme } from '@ultraviolet/ui'
 import type { UltravioletUITheme } from '@ultraviolet/ui'
 import { useCallback, useEffect, useState } from 'react'
 import { TOKENS_URL } from '../../../../scripts/figma-synchronise-token/constants'
@@ -76,7 +76,7 @@ export const ThemeGenerator = () => {
       }
     }, {})
 
-    const figmaTokensResponse = await fetch(TOKENS_URL as string)
+    const figmaTokensResponse = await fetch(TOKENS_URL)
     const figmaTokensJson = (await figmaTokensResponse.json()) as JsonTokenType
 
     const overloadedTokens = {

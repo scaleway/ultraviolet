@@ -25,11 +25,20 @@ export const FeatureHint = ({ hint }: FeatureHintProps) => {
   }
 
   return (
-    <Popover content={hint.content} onClose={() => setVisible(false)} title={hint.title} visible={visible}>
+    <Popover
+      content={hint.content}
+      onClose={() => {
+        setVisible(false)
+      }}
+      title={hint.title}
+      visible={visible}
+    >
       <button
         className={plansStyle.iconWrapper}
         data-testid="hint-popover"
-        onClick={() => setVisible(true)}
+        onClick={() => {
+          setVisible(true)
+        }}
         onKeyDown={event => {
           if (event.key === 'Space' || event.key === 'Enter') {
             setVisible(true)

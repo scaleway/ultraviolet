@@ -40,7 +40,9 @@ describe('visuallyHidden', () => {
     expect(button).toBeVisuallyHidden()
 
     await userEvent.tab()
-    await waitFor(() => expect(button).toHaveFocus())
+    await waitFor(() => {
+      expect(button).toHaveFocus()
+    })
 
     await userEvent.click(button)
     expect(onClick).toHaveBeenCalledOnce()
@@ -62,7 +64,9 @@ describe('visuallyHidden', () => {
     expect(wrapper).toBeVisuallyHidden()
 
     await userEvent.tab()
-    await waitFor(() => expect(button).toHaveFocus())
+    await waitFor(() => {
+      expect(button).toHaveFocus()
+    })
 
     expect(asFragment()).toMatchSnapshot()
   })

@@ -4,7 +4,7 @@ import { describe, it } from 'vitest'
 import { LineChartTooltip } from '../Tooltip'
 
 describe('lineChart Tooltip', () => {
-  it('renders correctly ', () =>
+  it('renders correctly ', () => {
     shouldMatchSnapshot(
       <LineChartTooltip
         point={
@@ -14,5 +14,6 @@ describe('lineChart Tooltip', () => {
           } as unknown as Point<LineSeries>
         }
       />,
-    ))
+    )
+  })
 })

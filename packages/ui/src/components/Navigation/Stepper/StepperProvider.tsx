@@ -60,7 +60,9 @@ export const StepperProvider = ({
     }),
     [step, interactive, size, animated, labelPosition, separator],
   )
-  useEffect(() => setStep(selected), [selected])
+  useEffect(() => {
+    setStep(selected)
+  }, [selected])
 
   return <StepperContext.Provider value={value}>{children}</StepperContext.Provider>
 }

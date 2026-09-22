@@ -9,14 +9,12 @@ import { defineConfig } from 'oxlint'
  */
 export const warnRules = defineConfig({
   rules: {
-    'eslint/curly': ['warn', 'all'], // eslint errors (16)
     'eslint/max-lines': ['warn', { max: 500 }], // eslint errors (8)
     'eslint/max-nested-callbacks': ['warn', { max: 4 }], // base sets error (max: 4); keep warn
     'eslint/max-params': 'warn', // eslint errors (33)
     'eslint/no-await-in-loop': 'warn', // eslint errors (12)
     'eslint/no-empty-function': 'warn', // eslint errors (408)
     'eslint/no-implicit-coercion': 'warn', // eslint errors (113)
-    'eslint/object-shorthand': 'warn', // eslint errors (15)
     'eslint/prefer-destructuring': 'warn', // eslint errors (31)
     'eslint/prefer-named-capture-group': 'warn', // eslint errors (18)
     'eslint/require-unicode-regexp': ['warn', { requireFlag: 'v' }], // eslint errors (129)
@@ -42,8 +40,6 @@ export const warnRules = defineConfig({
     'react/refs': 'warn', // react errors (44)
     'react/set-state-in-effect': 'warn', // react errors (34)
 
-    'typescript/consistent-return': 'warn', // typescript errors (8)
-    'typescript/explicit-member-accessibility': 'warn', // typescript errors (10)
     'typescript/no-deprecated': 'warn', // typescript errors (594)
     'typescript/no-misused-spread': 'warn', // typescript errors (7)
     'typescript/no-non-null-assertion': 'warn', // typescript errors (29)
@@ -51,8 +47,6 @@ export const warnRules = defineConfig({
     'typescript/no-unnecessary-condition': 'warn', // typescript errors (307)
     'typescript/no-unnecessary-type-arguments': 'warn', // typescript errors (5)
     'typescript/no-unnecessary-type-assertion': 'warn', // typescript errors (39)
-    'typescript/no-unnecessary-type-conversion': 'warn', // typescript errors (15)
-    'typescript/no-unnecessary-type-parameters': 'warn', // typescript errors (32)
     'typescript/no-unsafe-assignment': 'warn', // typescript errors (2233)
     'typescript/no-unsafe-call': 'warn', // typescript errors (332)
     'typescript/no-unsafe-member-access': 'warn', // typescript errors (2353)

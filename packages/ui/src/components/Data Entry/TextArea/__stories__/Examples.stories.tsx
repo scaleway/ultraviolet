@@ -31,9 +31,13 @@ export const Examples: StoryFn<typeof TextArea> = () => {
       <TextArea
         label={`Change on focus: rows=${rows}`}
         name="example-1"
-        onBlur={() => setRows(1)}
+        onBlur={() => {
+          setRows(1)
+        }}
         onChange={setValueLong}
-        onFocus={() => setRows('auto')}
+        onFocus={() => {
+          setRows('auto')
+        }}
         rows={rows}
         value={valueLong}
       />

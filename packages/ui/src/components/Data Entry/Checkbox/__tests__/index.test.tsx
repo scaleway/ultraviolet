@@ -19,104 +19,121 @@ describe('checkbox', () => {
     return children({ checked, onChange: setCheked })
   }
 
-  it('renders correctly', () =>
+  it('renders correctly', () => {
     shouldMatchSnapshot(
       <Checkbox name="testing" onBlur={() => {}} onChange={() => {}} onFocus={() => {}}>
         Checkbox Label
       </Checkbox>,
-    ))
+    )
+  })
 
-  it('renders correctly no child', () => shouldMatchSnapshot(<Checkbox aria-label="check" onChange={() => {}} />))
+  it('renders correctly no child', () => {
+    shouldMatchSnapshot(<Checkbox aria-label="check" onChange={() => {}} />)
+  })
 
-  it('renders correctly disabled', () =>
+  it('renders correctly disabled', () => {
     shouldMatchSnapshot(
       <Checkbox disabled onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
-    ))
+    )
+  })
 
-  it('renders correctly required', () =>
+  it('renders correctly required', () => {
     shouldMatchSnapshot(
       <Checkbox onChange={() => {}} required>
         Checkbox Label
       </Checkbox>,
-    ))
+    )
+  })
 
-  it('renders correctly with tooltip', () =>
+  it('renders correctly with tooltip', () => {
     shouldMatchSnapshot(
       <Checkbox onChange={() => {}} tooltip="test">
         Checkbox Label
       </Checkbox>,
-    ))
+    )
+  })
 
-  it('renders correctly checked', () =>
+  it('renders correctly checked', () => {
     shouldMatchSnapshot(
       <Checkbox checked onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
-    ))
-  it('renders correctly checked with helper', () =>
+    )
+  })
+
+  it('renders correctly checked with helper', () => {
     shouldMatchSnapshot(
       <Checkbox checked helper="helper" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
-    ))
+    )
+  })
 
-  it('renders correctly indeterminate', () =>
+  it('renders correctly indeterminate', () => {
     shouldMatchSnapshot(
       <Checkbox checked="indeterminate" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
-    ))
+    )
+  })
 
-  it('renders correctly small', () =>
+  it('renders correctly small', () => {
     shouldMatchSnapshot(
       <Checkbox onChange={() => {}} size="small">
         Checkbox Label
       </Checkbox>,
-    ))
+    )
+  })
 
-  it('renders correctly checked and disabled', () =>
+  it('renders correctly checked and disabled', () => {
     shouldMatchSnapshot(
       <Checkbox checked disabled onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
-    ))
+    )
+  })
 
-  it('renders correctly indeterminate and disabled', () =>
+  it('renders correctly indeterminate and disabled', () => {
     shouldMatchSnapshot(
       <Checkbox checked="indeterminate" disabled onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
-    ))
+    )
+  })
 
-  it('renders correctly invisible', () =>
+  it('renders correctly invisible', () => {
     shouldMatchSnapshot(
       <Checkbox data-visibility="true" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
-    ))
+    )
+  })
 
-  it('renders correctly with an error', () =>
+  it('renders correctly with an error', () => {
     shouldMatchSnapshot(
       <Checkbox error="test error" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
-    ))
+    )
+  })
 
-  it('renders correctly with a value', () =>
+  it('renders correctly with a value', () => {
     shouldMatchSnapshot(
       <Checkbox onChange={() => {}} value="test">
         Checkbox Label
       </Checkbox>,
-    ))
+    )
+  })
 
-  it('renders correctly with indeterminate state', () =>
+  it('renders correctly with indeterminate state', () => {
     shouldMatchSnapshot(
       <Checkbox checked="indeterminate" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
-    ))
+    )
+  })
 
   it('renders with click event', async () => {
     renderWithTheme(

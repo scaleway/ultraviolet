@@ -7,8 +7,8 @@ import {
   Form,
   NumberInputField,
   RadioField,
-  SelectableCardField,
   SelectInputField,
+  SelectableCardField,
   Submit,
   SubmitErrorAlert,
   TagInputField,
@@ -75,7 +75,9 @@ export const Playground: StoryFn<typeof Form> = () => {
       methods={methods}
       onSubmit={async () =>
         new Promise(rejects => {
-          setTimeout(() => rejects('SERVER ERROR'), 5000)
+          setTimeout(() => {
+            rejects('SERVER ERROR')
+          }, 5000)
         })
       }
     >

@@ -8,7 +8,9 @@ import { Button } from '../../Button'
 
 export const NoAnimations: StoryFn<typeof Expandable> = args => {
   const [toggled, onToggle] = useState(false)
-  const toggle = () => onToggle(state => !state)
+  const toggle = () => {
+    onToggle(state => !state)
+  }
 
   return (
     <>

@@ -45,7 +45,7 @@ export const MenuProvider = ({
   const disclosureRef = useRef<HTMLButtonElement>(null)
   const menuRef = useRef<HTMLDivElement>(null)
   const parentMenu = useContext(MenuContext)
-  const isNested = !!parentMenu // If there is no parent Menu, then parentMenu is undefined (we do not use useMenu which will return an error)
+  const isNested = Boolean(parentMenu) // If there is no parent Menu, then parentMenu is undefined (we do not use useMenu which will return an error)
 
   const values = useMemo(
     () => ({

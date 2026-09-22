@@ -24,6 +24,7 @@ describe('label', () => {
     const { asFragment } = renderWithTheme(<Label labelDescription={<div>test</div>}>Label</Label>)
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders correctly small', () => {
     const { asFragment } = renderWithTheme(<Label size="small">Label</Label>)
     expect(asFragment()).toMatchSnapshot()

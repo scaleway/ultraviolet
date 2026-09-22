@@ -11,10 +11,13 @@ const recursivelyGetChildrenString = (children: ReactNode): string => {
   }
 
   if (Array.isArray(children)) {
-    return children
-      .map(child => recursivelyGetChildrenString(child))
-      .filter(Boolean)
-      .join(' ')
+    return (
+      children
+        // oxlint-disable-next-line typescript/no-unsafe-argument
+        .map(child => recursivelyGetChildrenString(child))
+        .filter(Boolean)
+        .join(' ')
+    )
   }
 
   if (typeof children === 'object') {

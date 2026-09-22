@@ -8,7 +8,9 @@ import ChangelogMdUi from '../../../../packages/ui/CHANGELOG.md?raw'
 
 export const Changelog = () => {
   const [selected, setSelected] = useState<string | number>('ui')
-  const onChangeHandler = (e: string | number) => setSelected(e)
+  const onChangeHandler = (e: string | number) => {
+    setSelected(e)
+  }
 
   return (
     <Stack gap={2}>

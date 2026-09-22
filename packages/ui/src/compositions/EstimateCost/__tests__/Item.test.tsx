@@ -10,6 +10,7 @@ describe('estimateCost - Item', () => {
   afterEach(() => {
     resetIntersectionMocking()
   })
+
   it('render with noPrice and noBorder', () => {
     const { asFragment } = renderWithTheme(
       <EstimateCost>

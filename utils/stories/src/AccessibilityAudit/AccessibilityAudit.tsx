@@ -2,15 +2,15 @@ import { linkTo } from '@storybook/addon-links'
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseCircleOutlineIcon } from '@ultraviolet/icons/CloseCircleOutlineIcon'
 import { HelpCircleOutlineIcon } from '@ultraviolet/icons/HelpCircleOutlineIcon'
-import { Button, Stack, Table, Text, Tooltip, ProgressBar, Link } from '@ultraviolet/ui'
-import { useState, useEffect } from 'react'
+import { Button, Link, ProgressBar, Stack, Table, Text, Tooltip } from '@ultraviolet/ui'
+import { useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 import { findComponentState } from '../ComponentState/constants'
-import { storiesCompositionsModules, storiesComponentModules } from '../constants'
+import { storiesComponentModules, storiesCompositionsModules } from '../constants'
 import type { ComponentStoryModule } from '../constants'
 import { A11Y_LEVELS, WCAG_PRINCIPLES } from './constants'
 import { findA11yLevel, getComponentA11yStatus, getComponentAuditCategories } from './helpers'
-import type { A11yLevel, ComponentA11yStatus, AuditCategories, WcagPrinciple } from './types'
+import type { A11yLevel, AuditCategories, ComponentA11yStatus, WcagPrinciple } from './types'
 
 type ComponentInfo = {
   title: string
@@ -46,7 +46,7 @@ const AccessibilityAudit = () => {
     modules
       ?.filter((module): module is PromiseFulfilledResult<ComponentStoryModule> => module.status === 'fulfilled')
       .map(module => {
-        const parameters = module.value.default.parameters
+        const { parameters } = module.value.default
         const destructuredName: string[] = module.value.default.title.split('/') ?? []
 
         const componentName = destructuredName.at(-1) ?? 'Unknown'

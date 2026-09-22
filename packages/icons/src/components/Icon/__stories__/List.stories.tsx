@@ -20,7 +20,7 @@ export const List = (args: ComponentProps<typeof AddressIcon>) =>
           </Stack>
         </Stack>
         <div style={{ width: '880px' }}>
-          <Text as="code" strikeThrough={!!deprecated} variant="code">
+          <Text as="code" strikeThrough={Boolean(deprecated)} variant="code">
             <Snippet>{`import { ${name} } from '@ultraviolet/icons/${name}'`}</Snippet>
           </Text>
         </div>

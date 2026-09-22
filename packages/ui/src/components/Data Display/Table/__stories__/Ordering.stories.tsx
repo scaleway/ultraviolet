@@ -17,7 +17,7 @@ export const Ordering: StoryFn = args => {
         return -1 * orderMultiplicator
       }
       if (a[currentOrder.columnId] > b[currentOrder.columnId]) {
-        return Number(orderMultiplicator)
+        return orderMultiplicator
       }
 
       return 0
@@ -32,13 +32,17 @@ export const Ordering: StoryFn = args => {
           info: 'info works fine with the ordering',
           isOrdered: currentOrder.columnId === 'name',
           label: 'Movie name',
-          onOrder: newOrder => setCurrentOrder({ columnId: 'name', order: newOrder }),
+          onOrder: newOrder => {
+            setCurrentOrder({ columnId: 'name', order: newOrder })
+          },
           orderDirection: currentOrder.order,
         },
         {
           isOrdered: currentOrder.columnId === 'releaseYear',
           label: 'Release year',
-          onOrder: newOrder => setCurrentOrder({ columnId: 'releaseYear', order: newOrder }),
+          onOrder: newOrder => {
+            setCurrentOrder({ columnId: 'releaseYear', order: newOrder })
+          },
           orderDirection: currentOrder.order,
         },
         { label: 'Trilogy' },

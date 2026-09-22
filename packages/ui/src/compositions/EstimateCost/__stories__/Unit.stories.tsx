@@ -10,8 +10,20 @@ export const Unit: StoryFn<ComponentProps<typeof EstimateCost>> = props => {
 
   return (
     <Stack gap={1}>
-      <Button onClick={() => setValue(10)}>Set value to 10</Button>
-      <Button onClick={() => setValue(20)}>Set value to 20</Button>
+      <Button
+        onClick={() => {
+          setValue(10)
+        }}
+      >
+        Set value to 10
+      </Button>
+      <Button
+        onClick={() => {
+          setValue(20)
+        }}
+      >
+        Set value to 20
+      </Button>
       <EstimateCost {...props} hideOverlay>
         <EstimateCost.Item amount={value} label="Screen pixels" price={1} unit="Px">
           <EstimateCost.Unit />

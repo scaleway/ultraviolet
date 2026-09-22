@@ -242,8 +242,12 @@ export const ListProvider = ({
         handleClickRange(this, index, event.shiftKey)
       }
 
-      const hoverEnteringHandler = (event: MouseEvent) => handleHover(index, event.shiftKey, false)
-      const hoverLeavingHandler = (event: MouseEvent) => handleHover(index, event.shiftKey, true)
+      const hoverEnteringHandler = (event: MouseEvent) => {
+        handleHover(index, event.shiftKey, false)
+      }
+      const hoverLeavingHandler = (event: MouseEvent) => {
+        handleHover(index, event.shiftKey, true)
+      }
 
       if (checkbox.current) {
         checkbox.current.addEventListener('click', clickHandler)

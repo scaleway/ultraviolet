@@ -36,8 +36,7 @@ export const ItemContent = ({
 
   const { expanded, animation } = context
 
-  const itemProvider = useContext(ItemContext)
-  const hasParents = !!itemProvider
+  const hasParents = useContext(ItemContext)
 
   return (
     <Stack alignItems={categoryIcon ? 'flex-start' : 'center'} direction="row" gap={1} justifyContent="center">
@@ -61,7 +60,7 @@ export const ItemContent = ({
           className={navigationStyle.itemWrapText({
             disabled,
             animation,
-            weak: hasActiveChildren && !noExpand && !disabled && !!active,
+            weak: hasActiveChildren && !noExpand && !disabled && Boolean(active),
           })}
           data-animation={animation}
           disabled={disabled}
@@ -79,7 +78,7 @@ export const ItemContent = ({
             className={navigationStyle.itemWrapText({
               disabled,
               animation,
-              weak: hasActiveChildren && !noExpand && !disabled && !!active,
+              weak: hasActiveChildren && !noExpand && !disabled && Boolean(active),
             })}
             data-animation={animation}
             disabled={disabled}

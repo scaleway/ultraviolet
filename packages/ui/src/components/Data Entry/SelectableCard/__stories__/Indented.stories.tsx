@@ -26,12 +26,12 @@ export const Indented: StoryFn = args => {
             </Stack>
           }
           name="label-20"
-          onChange={event =>
+          onChange={event => {
             onChange2(prevState => ({
               ...prevState,
               'label-20': event.currentTarget.checked,
             }))
-          }
+          }}
           showTick
           type="checkbox"
           value="label-20"
@@ -67,12 +67,12 @@ export const Indented: StoryFn = args => {
             </Stack>
           }
           name="label-21"
-          onChange={event =>
+          onChange={event => {
             onChange2(prevState => ({
               ...prevState,
               'label-21': event.currentTarget.checked,
             }))
-          }
+          }}
           showTick
           type="checkbox"
           value="label-21"

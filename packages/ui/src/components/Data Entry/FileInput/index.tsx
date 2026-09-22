@@ -78,7 +78,9 @@ const FileInputBase = ({
     setDragState('page')
   }
 
-  const handleDrop = () => setDragState('default')
+  const handleDrop = () => {
+    setDragState('default')
+  }
   const handleDragLeave = (event: DragEvent) => {
     const dragEvent = event
 
@@ -218,7 +220,7 @@ const FileInputBase = ({
   const value = useMemo(
     () => ({
       disabled,
-      error: !!error,
+      error: Boolean(error),
       files,
       inputRef,
       onChangeFiles,
@@ -249,7 +251,9 @@ const FileInputBase = ({
                     ? fileInputStyle.dropzoneOverlayDisabled[dragState]
                     : fileInputStyle.dropzoneOverlay[dragState]
                 }
-                onDragOver={event => event.preventDefault()}
+                onDragOver={event => {
+                  event.preventDefault()
+                }}
                 onDrop={event => {
                   onDropComputed(event).catch(onDropError)
                 }}

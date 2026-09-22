@@ -3,6 +3,7 @@ import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { ANIMATION_EASING, NAVIGATION_COLLASPED_WIDTH } from './constants'
 import {
+  itemArrowIcon,
   itemBadge,
   itemCategoryIcon,
   itemCollapsed,
@@ -20,7 +21,6 @@ import {
   itemRelative,
   itemShowDraggable,
   itemShowPinButton,
-  itemArrowIcon,
   itemVariants,
   itemWeakText,
   itemWrapText,

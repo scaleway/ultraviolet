@@ -18,11 +18,15 @@ vi.mock('@nivo/core', async importOriginal => {
 })
 
 describe('barChart', () => {
-  it('renders correctly without data', () => shouldMatchSnapshot(<BarChart />))
+  it('renders correctly without data', () => {
+    shouldMatchSnapshot(<BarChart />)
+  })
 
-  it('renders correctly with data', () => shouldMatchSnapshot(<BarChart data={barChartSimpleData} />))
+  it('renders correctly with data', () => {
+    shouldMatchSnapshot(<BarChart data={barChartSimpleData} />)
+  })
 
-  it('renders correctly with data transformer', () =>
+  it('renders correctly with data transformer', () => {
     shouldMatchSnapshot(
       <BarChart
         axisFormatters={{
@@ -30,12 +34,16 @@ describe('barChart', () => {
         }}
         data={barChartSimpleData}
       />,
-    ))
+    )
+  })
 
-  it('renders correctly with multiple series', () => shouldMatchSnapshot(<BarChart data={barChartMultiData} />))
+  it('renders correctly with multiple series', () => {
+    shouldMatchSnapshot(<BarChart data={barChartMultiData} />)
+  })
 
-  it('renders correctly with negative values', () =>
-    shouldMatchSnapshot(<BarChart data={barChartPositiveNegativeData} />))
+  it('renders correctly with negative values', () => {
+    shouldMatchSnapshot(<BarChart data={barChartPositiveNegativeData} />)
+  })
 
   // oxlint-disable-next-line vitest/no-disabled-tests
   it.skip('renders correctly with custom tooltip format', async () => {

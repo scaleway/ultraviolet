@@ -1,7 +1,7 @@
 'use client'
 
 import { FileInput } from '@ultraviolet/ui'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
@@ -74,7 +74,7 @@ const FileInputFieldBase = <
           onBlur?.(event)
         }}
         required={required}
-        title={title as ReactNode}
+        title={title}
         variant="overlay"
       >
         {typeof children === 'function' ? (inputId, inputRef) => children(inputId, inputRef) : children}

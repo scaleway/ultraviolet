@@ -70,7 +70,7 @@ export const UnitInputField = <
       }}
       required={required}
       unitValue={unitField.value as string}
-      value={valueField.value as number}
+      value={valueField.value}
     />
   )
 }

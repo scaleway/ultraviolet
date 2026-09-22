@@ -35,7 +35,9 @@ export const PlanHeader = ({
         onBlur={() => {
           setFocusedPlan(undefined)
         }}
-        onChange={() => onChange(plan.value)}
+        onChange={() => {
+          onChange(plan.value)
+        }}
         onFocus={() => {
           setFocusedPlan(plan.value)
         }}

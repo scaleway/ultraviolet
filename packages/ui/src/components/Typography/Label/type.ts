@@ -1,4 +1,4 @@
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import type { CSSProperties, ComponentProps, ReactNode } from 'react'
 import type { Text } from '../Text'
 
 export type LabelProps = {

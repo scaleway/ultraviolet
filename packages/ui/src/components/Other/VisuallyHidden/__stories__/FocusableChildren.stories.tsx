@@ -13,7 +13,13 @@ export const FocusableChildren: StoryFn<typeof VisuallyHidden> = props => (
     <VisuallyHidden {...props} tabIndex={0}>
       With tabIndex. It can be used for skip links.
     </VisuallyHidden>
-    <VisuallyHidden {...props} as="button" onClick={() => alert('clicked')}>
+    <VisuallyHidden
+      {...props}
+      as="button"
+      onClick={() => {
+        alert('clicked')
+      }}
+    >
       As a focusable element. It can also be used for skip links.
     </VisuallyHidden>
   </Stack>

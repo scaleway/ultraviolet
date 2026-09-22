@@ -127,7 +127,7 @@ const getValues = (
 
         newValue['fontFamily'] = adaptedFontFamily ?? defaultFontFamily
       }
-      values[key.replaceAll(/,/gu, '.')] = newValue
+      values[key.replaceAll(',', '.')] = newValue
     }
 
     return values

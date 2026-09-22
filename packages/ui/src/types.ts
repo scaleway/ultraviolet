@@ -1,4 +1,4 @@
-import type { HTMLAttributes, AllHTMLAttributes, AriaAttributes, ReactNode } from 'react'
+import type { AllHTMLAttributes, AriaAttributes, HTMLAttributes, ReactNode } from 'react'
 
 /**
  * Enforces that at least one of the given keys is provided.

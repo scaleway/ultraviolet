@@ -18,13 +18,13 @@ export const searchChildren = (children: ReactNode, searchString: string): React
       return child
     }
 
-    if (isValidElement(child)) {
+    if (isValidElement<{ children: ReactNode }>(child)) {
       const childProps = child.props as ChildType
 
       if (childProps?.searchText?.match(searchRegex)) {
-        return cloneElement(child, {
+        return cloneElement<{ children: ReactNode }>(child, {
           children: childProps.children,
-        } as { children: ReactNode })
+        })
       }
 
       // This is the case where there is a Menu.Group we want to search the Menu.Item only

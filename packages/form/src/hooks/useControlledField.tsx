@@ -3,7 +3,7 @@ import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../providers'
 import { validateRegex } from '../utils/validateRegex'
-import type { UseFieldProps, FieldProps } from './useField'
+import type { FieldProps, UseFieldProps } from './useField'
 import { isChangeEvent } from './useRegisterField'
 
 export const useControlledField = <

@@ -5,7 +5,7 @@ import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useId, useMemo, useState } from 'react'
-import type { ComponentProps, CSSProperties, InputHTMLAttributes, ReactNode } from 'react'
+import type { CSSProperties, ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import type { BaseFormComponentProps } from '../../../types'
 import { Row } from '../../Layout/Row'
@@ -18,7 +18,7 @@ import { unitInputStyle, widthSelectInput } from './styles.css'
 
 type UnitInputValue = { inputValue: number; unit: string }
 
-type UnitInputProps = BaseFormComponentProps<HTMLInputElement> & {
+type UnitInputProps = BaseFormComponentProps & {
   max?: number
   min?: number
   value?: UnitInputValue['inputValue']
@@ -115,15 +115,14 @@ export const UnitInput = ({
       ) : null}
       <Row
         className={cn(unitInputStyle.size[size], unitInputStyle.state[computedState])}
-        data-disabled={!!disabled}
+        data-disabled={disabled}
         data-testid={dataTestId}
         templateColumns={templateColumns ?? '1fr auto'}
       >
         <div className={unitInputStyle.numberWrapper} id="input-field">
           <input
             aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
-            aria-invalid={!!error}
-            // oxlint-disable-next-line jsx_a11y/no-autofocus
+            aria-invalid={Boolean(error)}
             autoFocus={autoFocus}
             className={cn(className, unitInputStyle.number[size])}
             data-testid="unit-input"

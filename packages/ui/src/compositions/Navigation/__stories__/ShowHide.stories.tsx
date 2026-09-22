@@ -48,7 +48,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
   const pinnedItems = useMemo(() => (storageItems ? storageItems.split(',') : []), [storageItems])
   const [showHide, setShowHide] = useState<'show' | 'hide'>('hide')
 
-  const onShowHide = (newValue: typeof showHide) => setShowHide(newValue)
+  const onShowHide = (newValue: typeof showHide) => {
+    setShowHide(newValue)
+  }
   const [active, setActive] = useState('Instance')
   const [pinnedItemsExpanded, setPinnedItemsExpanded] = useState(false)
 
@@ -105,7 +107,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
             label="Organization Dashboard"
             noPinButton
             onClickPinUnpin={onClickPinUnpin}
-            onToggle={() => setActive('Organization Dashboard')}
+            onToggle={() => {
+              setActive('Organization Dashboard')
+            }}
           />
           <Navigation.Item
             active={active === 'Project Dashboard'}
@@ -117,7 +121,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
             label="Project Dashboard"
             noPinButton
             onClickPinUnpin={onClickPinUnpin}
-            onToggle={() => setActive('Project Dashboard')}
+            onToggle={() => {
+              setActive('Project Dashboard')
+            }}
           />
           <Navigation.PinnedItems
             itemWrapper={(item, id) => (
@@ -125,14 +131,18 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 {item}
               </Tooltip>
             )}
-            onToggle={toggle => setPinnedItemsExpanded(!!toggle)}
+            onToggle={toggle => {
+              setPinnedItemsExpanded(toggle)
+            }}
             toggle={pinnedItemsExpanded}
           />
           <Navigation.Separator />
           <Navigation.Group
             additionalData={
               <Button
-                onClick={() => alert('clicked !')}
+                onClick={() => {
+                  alert('clicked !')
+                }}
                 sentiment="neutral"
                 size="xsmall"
                 tooltip="Settings"
@@ -163,7 +173,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 id="instance"
                 label="Instance"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Instance')}
+                onToggle={() => {
+                  setActive('Instance')
+                }}
               />
               <Navigation.Item
                 active={active === 'Elastic Metal'}
@@ -172,7 +184,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 id="elastic-metal"
                 label="Elastic Metal"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Elastic Metal')}
+                onToggle={() => {
+                  setActive('Elastic Metal')
+                }}
               />
               <Navigation.Item
                 active={active === 'Dedibox'}
@@ -181,7 +195,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 id="dedibox"
                 label="Dedibox"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Dedibox')}
+                onToggle={() => {
+                  setActive('Dedibox')
+                }}
                 target="_blank"
               />
               <Navigation.Item
@@ -192,7 +208,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 id="very-long-product-name-with-spaces"
                 label="Very long product name with spaces"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Very long product name with spaces')}
+                onToggle={() => {
+                  setActive('Very long product name with spaces')
+                }}
               />
               <Navigation.Item
                 active={active === 'Verylongproductnamewithoutspace'}
@@ -202,7 +220,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 id="verylongproductnamewithoutspace"
                 label="Verylongproductnamewithoutspace"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Verylongproductnamewithoutspace')}
+                onToggle={() => {
+                  setActive('Verylongproductnamewithoutspace')
+                }}
               />
               <Navigation.Item id="advanced" label="Advanced">
                 <Navigation.Item
@@ -211,7 +231,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                   id="kubernetes"
                   label="Kubernetes"
                   onClickPinUnpin={onClickPinUnpin}
-                  onToggle={() => setActive('Kubernetes')}
+                  onToggle={() => {
+                    setActive('Kubernetes')
+                  }}
                 />
                 <Navigation.Item
                   active={active === 'OpenStack'}
@@ -219,7 +241,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                   id="openstack"
                   label="OpenStack"
                   onClickPinUnpin={onClickPinUnpin}
-                  onToggle={() => setActive('OpenStack')}
+                  onToggle={() => {
+                    setActive('OpenStack')
+                  }}
                 />
               </Navigation.Item>
             </Navigation.Item>
@@ -233,7 +257,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 id="block-storage"
                 label="Block Storage"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Block Storage')}
+                onToggle={() => {
+                  setActive('Block Storage')
+                }}
               />
               <Navigation.Item
                 active={active === 'Object Storage'}
@@ -242,7 +268,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 id="object-storage"
                 label="Object Storage"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Object Storage')}
+                onToggle={() => {
+                  setActive('Object Storage')
+                }}
               />
             </Navigation.Item>
             <Navigation.Item
@@ -255,21 +283,27 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 id="load-balancer"
                 label="Load Balancer"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Load Balancer')}
+                onToggle={() => {
+                  setActive('Load Balancer')
+                }}
               />
               <Navigation.Item
                 active={active === 'IP'}
                 id="ip"
                 label="IP"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('IP')}
+                onToggle={() => {
+                  setActive('IP')
+                }}
               />
               <Navigation.Item
                 active={active === 'VPC'}
                 id="vpc"
                 label="VPC"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('VPC')}
+                onToggle={() => {
+                  setActive('VPC')
+                }}
               />
             </Navigation.Item>
             <Navigation.Item categoryIcon={<DatabaseCategoryIcon variant="primary" />} id="database" label="Database">
@@ -278,21 +312,27 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 id="managed-database"
                 label="Managed Database"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Managed Database')}
+                onToggle={() => {
+                  setActive('Managed Database')
+                }}
               />
               <Navigation.Item
                 active={active === 'Redis'}
                 id="redis"
                 label="Redis"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Redis')}
+                onToggle={() => {
+                  setActive('Redis')
+                }}
               />
               <Navigation.Item
                 active={active === 'Elasticsearch'}
                 id="elasticsearch"
                 label="Elasticsearch"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Elasticsearch')}
+                onToggle={() => {
+                  setActive('Elasticsearch')
+                }}
               />
             </Navigation.Item>
             <Navigation.Item
@@ -305,21 +345,27 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 id="logs"
                 label="Logs"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Logs')}
+                onToggle={() => {
+                  setActive('Logs')
+                }}
               />
               <Navigation.Item
                 active={active === 'Metrics'}
                 id="metrics"
                 label="Metrics"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Metrics')}
+                onToggle={() => {
+                  setActive('Metrics')
+                }}
               />
               <Navigation.Item
                 active={active === 'Alerts'}
                 id="alerts"
                 label="Alerts"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Alerts')}
+                onToggle={() => {
+                  setActive('Alerts')
+                }}
               />
             </Navigation.Item>
             <Navigation.Item categoryIcon={<SecurityCategoryIcon variant="primary" />} id="security" label="Security">
@@ -328,21 +374,27 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 id="firewall"
                 label="Firewall"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Firewall')}
+                onToggle={() => {
+                  setActive('Firewall')
+                }}
               />
               <Navigation.Item
                 active={active === 'Certificate'}
                 id="certificate"
                 label="Certificate"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('Certificate')}
+                onToggle={() => {
+                  setActive('Certificate')
+                }}
               />
               <Navigation.Item
                 active={active === 'VPN'}
                 id="vpn"
                 label="VPN"
                 onClickPinUnpin={onClickPinUnpin}
-                onToggle={() => setActive('VPN')}
+                onToggle={() => {
+                  setActive('VPN')
+                }}
               />
             </Navigation.Item>
           </Navigation.Group>
@@ -361,7 +413,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
               label="Support"
               noPinButton
               onClickPinUnpin={onClickPinUnpin}
-              onToggle={() => setActive('Support')}
+              onToggle={() => {
+                setActive('Support')
+              }}
             />
             <Navigation.Item
               active={active === 'Abuse'}
@@ -370,7 +424,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
               label="Abuse"
               noPinButton
               onClickPinUnpin={onClickPinUnpin}
-              onToggle={() => setActive('Abuse')}
+              onToggle={() => {
+                setActive('Abuse')
+              }}
             />
             <Navigation.Item
               active={active === 'Documentation'}
@@ -381,7 +437,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
               id="documentation"
               label="Documentation"
               onClickPinUnpin={onClickPinUnpin}
-              onToggle={() => setActive('Documentation')}
+              onToggle={() => {
+                setActive('Documentation')
+              }}
               target="_blank"
             />
             <Navigation.Item
@@ -391,7 +449,9 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
               id="feature-request"
               label="Feature Request"
               onClickPinUnpin={onClickPinUnpin}
-              onToggle={() => setActive('Feature Request')}
+              onToggle={() => {
+                setActive('Feature Request')
+              }}
               target="_blank"
             />
           </Navigation.Item>

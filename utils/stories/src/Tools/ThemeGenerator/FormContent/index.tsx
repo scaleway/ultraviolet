@@ -4,7 +4,7 @@ import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
 import { Button, Row, Stack, Text, Tooltip } from '@ultraviolet/ui'
 import { useState } from 'react'
-import { hexadecimalColorRegex, INITIAL_VALUES } from '../contants'
+import { INITIAL_VALUES, hexadecimalColorRegex } from '../contants'
 import { capitalizeText, row } from './style.css'
 
 export const FormContent = () => {
@@ -94,7 +94,14 @@ export const FormContent = () => {
                   />
                 </Row>
                 {isRequiredSentiment ? null : (
-                  <Button onClick={() => remove(index)} sentiment="neutral" size="large" variant="filled">
+                  <Button
+                    onClick={() => {
+                      remove(index)
+                    }}
+                    sentiment="neutral"
+                    size="large"
+                    variant="filled"
+                  >
                     <CloseIcon />
                   </Button>
                 )}

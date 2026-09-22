@@ -110,7 +110,9 @@ export const InfiniteScroll = ({
       return undefined
     }
 
-    const scrollListener = () => debouncedHandleScroll(scrollableContainer)
+    const scrollListener = () => {
+      debouncedHandleScroll(scrollableContainer)
+    }
     scrollableContainer.addEventListener('scroll', scrollListener)
 
     return () => {

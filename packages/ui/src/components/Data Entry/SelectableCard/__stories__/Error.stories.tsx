@@ -14,7 +14,9 @@ export const Error: StoryFn = args => {
         isError
         label="Radio Left"
         name="label-12"
-        onChange={event => onChange(event.currentTarget.value)}
+        onChange={event => {
+          onChange(event.currentTarget.value)
+        }}
         showTick
         type="radio"
         value="label-12"
@@ -24,7 +26,9 @@ export const Error: StoryFn = args => {
         checked={value === 'label-13'}
         label="Radio Right"
         name="label-13"
-        onChange={event => onChange(event.currentTarget.value)}
+        onChange={event => {
+          onChange(event.currentTarget.value)
+        }}
         showTick
         type="radio"
         value="label-13"

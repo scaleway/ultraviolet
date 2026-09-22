@@ -28,6 +28,7 @@ describe('menu', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders with visible=false', () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure}>
@@ -37,6 +38,7 @@ describe('menu', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders with Menu.Item', () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} visible>
@@ -90,20 +92,26 @@ describe('menu', () => {
 
     const disclosureMenu = screen.getByTestId('disclosure')
     fireEvent.mouseEnter(disclosureMenu)
-    await waitFor(() => expect(screen.getByRole('menu')).toBeVisible())
+    await waitFor(() => {
+      expect(screen.getByRole('menu')).toBeVisible()
+    })
     fireEvent.mouseLeave(disclosureMenu)
 
     await userEvent.hover(disclosureMenu)
 
     const menu = screen.getByRole('menu')
-    await waitFor(() => expect(menu).toBeVisible())
+    await waitFor(() => {
+      expect(menu).toBeVisible()
+    })
 
     const menuItem = screen.getByRole<HTMLLinkElement>('menuitem')
     await userEvent.hover(menuItem)
     expect(menu).toBeVisible()
 
     fireEvent.mouseLeave(menu)
-    await waitFor(() => expect(menu).not.toBeVisible())
+    await waitFor(() => {
+      expect(menu).not.toBeVisible()
+    })
   })
 
   it('renders with Menu.ItemLink & Menu.Item disabled', () => {
@@ -238,12 +246,14 @@ describe('menu', () => {
     expect(items).toHaveLength(1)
     expect(items[0]).toHaveTextContent('Disk')
   })
-  it('renders with footer', () =>
+
+  it('renders with footer', () => {
     shouldMatchSnapshot(
       <Menu disclosure={() => disclosure} footer="Footer" visible>
         <Menu.Item>Not footer</Menu.Item>
       </Menu>,
-    ))
+    )
+  })
 
   it('renders with rightComponent', async () => {
     const onClick = vi.fn()
@@ -386,6 +396,7 @@ describe('menu', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders nested', async () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} searchable>
@@ -480,67 +491,79 @@ describe('menu', () => {
   })
 
   describe('placement', () => {
-    it('renders top', () =>
+    it('renders top', () => {
       shouldMatchSnapshot(
         <Menu disclosure={() => disclosure} placement="top" visible>
           <Menu.Item>top</Menu.Item>
         </Menu>,
-      ))
+      )
+    })
 
-    it('renders bottom', () =>
+    it('renders bottom', () => {
       shouldMatchSnapshot(
         <Menu disclosure={() => disclosure} placement="bottom" visible>
           <Menu.Item>bottom</Menu.Item>
         </Menu>,
-      ))
+      )
+    })
 
-    it('renders left', () =>
+    it('renders left', () => {
       shouldMatchSnapshot(
         <Menu disclosure={() => disclosure} placement="left" visible>
           <Menu.Item>left</Menu.Item>
         </Menu>,
-      ))
-    it('renders right', () =>
+      )
+    })
+
+    it('renders right', () => {
       shouldMatchSnapshot(
         <Menu disclosure={() => disclosure} placement="right" visible>
           <Menu.Item>right</Menu.Item>
         </Menu>,
-      ))
+      )
+    })
   })
 
   describe('menu.Item', () => {
-    it('render with default props', () =>
+    it('render with default props', () => {
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item>Default Props</Menu.Item>
         </Menu>,
-      ))
+      )
+    })
 
-    it('render with sentiment danger', () =>
+    it('render with sentiment danger', () => {
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item sentiment="danger">Danger</Menu.Item>
         </Menu>,
-      ))
+      )
+    })
 
-    it('render with disabled props', () =>
+    it('render with disabled props', () => {
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item disabled>Disabled Props</Menu.Item>
         </Menu>,
-      ))
-    it('render with borderless props', () =>
+      )
+    })
+
+    it('render with borderless props', () => {
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item borderless>Borderless Props</Menu.Item>
         </Menu>,
-      ))
-    it('render with active props', () =>
+      )
+    })
+
+    it('render with active props', () => {
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item active>Active Props</Menu.Item>
         </Menu>,
-      ))
+      )
+    })
 
     it('should hideOnClick for specific item', async () => {
       renderWithTheme(

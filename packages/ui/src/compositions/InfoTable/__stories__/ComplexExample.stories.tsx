@@ -50,7 +50,9 @@ export const ComplexExample: StoryFn<ComponentProps<typeof InfoTable>> = props =
         copiedText="Done !"
         copyContent="this-is-an-id-3424-2342"
         copyText="Click to copy"
-        onCopy={() => console.log('Copied!')}
+        onCopy={() => {
+          console.log('Copied!')
+        }}
         title="Image Id"
       >
         4f6be74f-84c1-4ffb-ac80-39bezefzef7808bdd0

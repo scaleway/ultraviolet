@@ -4,7 +4,7 @@ import { CalendarRangeIcon } from '@ultraviolet/icons/CalendarRangeIcon'
 import { cn } from '@ultraviolet/utils'
 import type { Locale } from 'date-fns'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import type { ChangeEvent, CSSProperties, FocusEvent, ReactNode } from 'react'
+import type { CSSProperties, ChangeEvent, FocusEvent, ReactNode } from 'react'
 import { Card } from '../../Layout/Card'
 import { Stack } from '../../Layout/Stack'
 import { Text } from '../../Typography/Text'
@@ -262,7 +262,6 @@ export const DateInput = <IsRange extends undefined | boolean>({
 
   return (
     <DateInputContext.Provider value={valueContext}>
-      {/* oxlint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div
         className={cn(className, dateInputStyle.container)}
         data-testid={dataTestId}

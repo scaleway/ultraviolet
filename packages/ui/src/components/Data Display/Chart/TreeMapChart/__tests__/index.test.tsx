@@ -46,8 +46,12 @@ vi.mock('@nivo/treemap', () => ({
               color: '#641cb3',
               data: child,
               height: 100,
-              onMouseEnter: () => setHoveredNode(mockNode),
-              onMouseLeave: () => setHoveredNode(null),
+              onMouseEnter: () => {
+                setHoveredNode(mockNode)
+              },
+              onMouseLeave: () => {
+                setHoveredNode(null)
+              },
               onMouseMove: () => {},
               width: 100,
               x: index * 100,

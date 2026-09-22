@@ -58,13 +58,7 @@ export const OptionSelectorField = <
       name={field.name}
       onChange={val => {
         field.onChange({ first: val.first, second: val.second })
-        onChange?.(
-          val as {
-            first?: string
-            second?: string
-            changingValue: 'first' | 'second'
-          },
-        )
+        onChange?.(val)
       }}
       required={required}
       value={field.value}

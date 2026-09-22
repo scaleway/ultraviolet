@@ -321,7 +321,13 @@ export const OptionalInfo5 = [
     disabled: true,
     label: 'Warsaw',
     optionalInfo: (
-      <Button onClick={() => alert('We will enable Warsaw soon!')} sentiment="neutral" size="xsmall">
+      <Button
+        onClick={() => {
+          alert('We will enable Warsaw soon!')
+        }}
+        sentiment="neutral"
+        size="xsmall"
+      >
         <EmailOutlineIcon />
         Contact us
       </Button>

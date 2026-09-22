@@ -14,7 +14,9 @@ export const Size: StoryFn<typeof TextInput> = args => {
           key={size}
           {...args}
           label={size}
-          onChange={event => setValue(event.target.value)}
+          onChange={event => {
+            setValue(event.target.value)
+          }}
           placeholder="Placeholder"
           size={size}
           value={value}

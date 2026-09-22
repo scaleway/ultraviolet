@@ -6,7 +6,7 @@ import { List } from '..'
 import { Button } from '../../../Action/Button'
 import { Row } from '../../../Layout/Row'
 import { Stack } from '../../../Layout/Stack'
-import { columns, data as DATA } from './resources'
+import { data as DATA, columns } from './resources'
 
 type Planets = {
   id: string
@@ -30,11 +30,20 @@ export const HighlightAnimation: StoryFn<typeof List> = ({ ...props }) => {
   return (
     <Stack gap={1}>
       <Row gap={2} templateColumns="repeat(4, 1fr)">
-        <Button onClick={() => setData([...data, newData])}>
+        <Button
+          onClick={() => {
+            setData([...data, newData])
+          }}
+        >
           <PlusIcon />
           Add data
         </Button>
-        <Button onClick={() => setData(DATA)} sentiment="neutral">
+        <Button
+          onClick={() => {
+            setData(DATA)
+          }}
+          sentiment="neutral"
+        >
           <RestoreIcon />
           Reset data
         </Button>

@@ -1,4 +1,4 @@
-import { base, react, vitest, ignorePatterns } from '@scaleway/oxlint-config'
+import { base, ignorePatterns, react, vitest } from '@scaleway/oxlint-config'
 import { defineConfig } from 'oxlint'
 import { warnRules } from './oxlint-fix.config.ts'
 
@@ -137,16 +137,7 @@ export default defineConfig({
   rules: {
     'eslint/max-statements': ['error', { max: 30 }], // base sets max: 50
     'eslint/no-negated-condition': 'off', // eslint errors (6)
-    'eslint/sort-imports': [
-      'off',
-      {
-        ignoreDeclarationSort: true,
-        memberSyntaxSortOrder: ['single', 'multiple', 'all', 'none'],
-      },
-    ], // eslint errors (1008)
-
-    'import/max-dependencies': 'off', // import errors (36)
-    'import/no-unassigned-import': 'off', // import errors (1)
+    'eslint/no-implicit-coercion': 'off',
 
     'jsx-a11y/control-has-associated-label': [
       'error',
@@ -169,18 +160,17 @@ export default defineConfig({
     ],
     'jsx-a11y/no-autofocus': 'off',
 
-    'react/display-name': 'off', // react errors (4)
     'react/forbid-component-props': 'off', // react errors (229)
     'react/jsx-max-depth': ['error', { max: 10 }], // base sets max: 8
-    'react/jsx-props-no-spreading': 'off', // react errors (215)
+    'react/jsx-props-no-spreading': 'off',
     'react/no-clone-element': 'off', // react errors (2)
     'react/no-react-children': 'off', // react errors (10)
     'react/only-export-components': 'off', // react errors (22)
 
-    'typescript/dot-notation': 'off', // typescript errors (4)
-    'typescript/no-confusing-void-expression': 'off', // typescript errors (390)
-    'typescript/no-unsafe-argument': 'off', // typescript errors (2)
-    'typescript/no-useless-default-assignment': 'off', // typescript errors (2)
+    'typescript/consistent-return': 'off',
+
+    // 'typescript/no-confusing-void-expression': 'off', // typescript errors (390)
+    'typescript/no-useless-default-assignment': 'off',
     'typescript/prefer-nullish-coalescing': ['off', { ignoreBooleanCoercion: true }], // typescript errors (39)
     'typescript/promise-function-async': 'off', // typescript errors (7)
     'typescript/strict-boolean-expressions': 'off', // typescript errors (416)
@@ -195,7 +185,7 @@ export default defineConfig({
     'unicorn/prefer-code-point': 'off', // unicorn errors (2)
     'unicorn/prefer-dom-node-append': 'off', // unicorn errors (7)
     'unicorn/prefer-dom-node-remove': 'off', // unicorn errors (1)
-    'unicorn/prefer-global-this': 'off', // unicorn errors (7)
+    'unicorn/prefer-global-this': 'off',
     'unicorn/prefer-import-meta-properties': 'off', // unicorn errors (2)
     'unicorn/prefer-logical-operator-over-ternary': 'off', // unicorn errors (2)
     'unicorn/prefer-query-selector': 'off', // unicorn errors (8)

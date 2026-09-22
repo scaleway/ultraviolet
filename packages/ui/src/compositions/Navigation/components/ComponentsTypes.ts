@@ -1,4 +1,4 @@
-import type { ComponentProps, CSSProperties, DragEvent, ElementType, ReactNode } from 'react'
+import type { CSSProperties, ComponentProps, DragEvent, ElementType, ReactNode } from 'react'
 import type { Badge } from '../../../components/Badges/Badge'
 import type { ItemType, PinUnPinType } from '../types'
 

@@ -6,7 +6,7 @@ import { theme as UVTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Text } from '../../Typography/Text'
-import { DEFAULT_COLORS, sizes, TEXT_VARIANT_BY_SIZE } from './constants'
+import { DEFAULT_COLORS, TEXT_VARIANT_BY_SIZE, sizes } from './constants'
 import type { AvatarProps, SentimentColors } from './types'
 import { avatarStyle } from './styles.css'
 import { finalColorAvatar, finalSizeAvatar, halvedColorAvatar } from './variables.css'
@@ -35,7 +35,6 @@ export const Avatar = ({
   const finalSize = sizes(UVTheme)[size]
 
   return (
-    // oxlint-disable-next-line jsx_a11y/no-static-element-interactions
     <div
       className={cn(className, avatarStyle.container({ sentiment, shape, size }))}
       data-has-background={!['user', 'image'].includes(variant)}

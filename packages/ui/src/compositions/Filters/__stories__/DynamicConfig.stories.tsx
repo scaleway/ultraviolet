@@ -40,7 +40,7 @@ export const DynamicConfig = () => {
   const [filterValues, setFilterValues] = useState(defaultValues)
 
   const config = useMemo(() => {
-    if (filterValues['category'] === 'category 1') {
+    if (filterValues.category === 'category 1') {
       return baseConfig.toSpliced(1, 0, {
         type: 'multiselect',
         name: 'items',
@@ -51,7 +51,7 @@ export const DynamicConfig = () => {
           { label: 'Cat 1 / Item B', value: 'tag b' },
         ],
       })
-    } else if (filterValues['category'] === 'category 2') {
+    } else if (filterValues.category === 'category 2') {
       return baseConfig.toSpliced(1, 0, {
         type: 'multiselect',
         name: 'tags',

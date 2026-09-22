@@ -3,7 +3,7 @@ import { Button, Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { PlansField } from '..'
 import { Submit } from '../../../components/Submit'
-import { domain, fees, pipeline, gb, ssl } from '../__tests__/features'
+import { domain, fees, gb, pipeline, ssl } from '../__tests__/features'
 
 const planStarter = {
   data: {

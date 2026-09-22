@@ -3,7 +3,7 @@
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn } from '@ultraviolet/utils'
 import { Children, isValidElement, memo, useContext, useEffect, useMemo, useRef } from 'react'
-import type { ComponentProps, CSSProperties, DragEvent, ElementType, ReactNode } from 'react'
+import type { CSSProperties, ComponentProps, DragEvent, ElementType, ReactNode } from 'react'
 import type { Badge } from '../../../../components/Badges/Badge'
 import { Stack } from '../../../../components/Layout/Stack'
 import { Tooltip } from '../../../../components/Overlay/Tooltip'
@@ -140,7 +140,7 @@ export const Item = memo(
       throw new Error('Navigation.Item can only be used inside a NavigationProvider.')
     }
 
-    const hasParents = !!useContext(ItemContext)
+    const hasParents = useContext(ItemContext)
 
     const { expanded, locales, pinnedFeature, pinnedItems, pinLimit, registerItem, showHide } = context
 
@@ -148,10 +148,11 @@ export const Item = memo(
 
     // Use ref to avoid infinite loop
     useEffect(() => {
-      makeRegisterRef.current = () =>
+      makeRegisterRef.current = () => {
         registerItem({
           [id]: { active, label, onClickPinUnpin, onToggle },
         })
+      }
     }, [active, id, label, onClickPinUnpin, registerItem, onToggle])
 
     useEffect(() => {

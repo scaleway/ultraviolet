@@ -128,7 +128,9 @@ describe('modal', () => {
     const closeButton = screen.getByRole('button', { name: 'close' })
     await userEvent.click(closeButton)
 
-    await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
+    await waitFor(() => {
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+    })
 
     expect(count).toBe(1)
     expect(asFragment()).toMatchSnapshot()

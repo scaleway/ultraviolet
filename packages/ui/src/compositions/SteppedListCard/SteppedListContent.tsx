@@ -47,7 +47,7 @@ export const SteppedListContent = ({
           )}
         </div>
         {typeof children === 'function'
-          ? children((completedArg?: boolean) =>
+          ? children((completedArg?: boolean) => {
               nextStep({
                 completed: completedArg,
                 done,
@@ -57,8 +57,8 @@ export const SteppedListContent = ({
                 setCurrentStep,
                 setHidden,
                 stepNumber,
-              }),
-            )
+              })
+            })
           : children}
         <div className={steppedListCardStyle.image}>{image}</div>
       </Stack>

@@ -118,7 +118,9 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     useLayoutEffect(() => {
       document.addEventListener('keyup', handleNavigation)
 
-      return () => document.removeEventListener('keyup', handleNavigation)
+      return () => {
+        document.removeEventListener('keyup', handleNavigation)
+      }
     }, [])
 
     useLayoutEffect(() => {
@@ -126,7 +128,9 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
 
       window.addEventListener('resize', resizeSearchBar)
 
-      return () => window.removeEventListener('resize', resizeSearchBar)
+      return () => {
+        window.removeEventListener('resize', resizeSearchBar)
+      }
     }, [])
 
     useEffect(() => {
@@ -268,7 +272,9 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             minLength={minLength}
             name={name}
             onBlur={onBlur}
-            onChange={event => onSearchCallback(event.target.value)}
+            onChange={event => {
+              onSearchCallback(event.target.value)
+            }}
             onFocus={onFocus}
             onKeyDown={onKeyDown}
             onKeyUp={onKeyUp}

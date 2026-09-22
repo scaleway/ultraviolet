@@ -1,6 +1,6 @@
 import { PencilIcon } from '@ultraviolet/icons/PencilIcon'
 import { consoleThemesMap } from '@ultraviolet/themes'
-import { renderWithTheme, expectNoViolations } from '@utils/test'
+import { expectNoViolations, renderWithTheme } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Button } from '..'
 

@@ -1,3 +1,4 @@
+// oxlint-disable-next-line import/no-unassigned-import
 import './utils/animations/animations.css'
 
 export * from './components'

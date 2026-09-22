@@ -56,14 +56,18 @@ export const Carousel = ({ children, className, 'data-testid': dataTestId = 'scr
         className={carouselStyle.beforeScroll}
         data-testid={`${dataTestId}-before`}
         onFocus={handleScrollRight}
-        onMouseLeave={() => clearInterval(intervalRight)}
+        onMouseLeave={() => {
+          clearInterval(intervalRight)
+        }}
         onMouseOver={handleScrollRight}
       />
-      {/* oxlint-disable-next-line jsx-a11y/no-static-element-interactions */}
+
       <div
         className={cn(className, carouselStyle.scrollableWrapper)}
         data-testid={`${dataTestId}-wrapper`}
-        onDrag={() => handleScrollX(deltaX)}
+        onDrag={() => {
+          handleScrollX(deltaX)
+        }}
         onDragEnd={() => {
           setDeltaX(0)
           setDragStartX(0)
@@ -92,7 +96,9 @@ export const Carousel = ({ children, className, 'data-testid': dataTestId = 'scr
         className={carouselStyle.afterScroll}
         data-testid={`${dataTestId}-after`}
         onFocus={handleScrollLeft}
-        onMouseLeave={() => clearInterval(intervalLeft)}
+        onMouseLeave={() => {
+          clearInterval(intervalLeft)
+        }}
         onMouseOver={handleScrollLeft}
       />
     </div>

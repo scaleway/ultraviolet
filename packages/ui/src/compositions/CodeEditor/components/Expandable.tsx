@@ -20,7 +20,9 @@ export const CodeEditorExpandable = ({
     <button
       aria-expanded={expanded}
       className={codeEditorStyle.showMoreButton}
-      onClick={() => setExpanded(prevState => !prevState)}
+      onClick={() => {
+        setExpanded(prevState => !prevState)
+      }}
       type="button"
     >
       <Text as="span" className={codeEditorStyle.centeredText} sentiment="neutral" variant="bodySmallStrong">

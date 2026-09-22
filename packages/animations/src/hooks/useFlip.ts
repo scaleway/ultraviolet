@@ -67,7 +67,9 @@ export const useFlip = (ref: RefObject<HTMLElement | null>, options: UseFlipOpti
       return Promise.resolve()
     }
 
-    animations.current.forEach(animation => animation.cancel())
+    animations.current.forEach(animation => {
+      animation.cancel()
+    })
 
     const elements = ref.current.querySelectorAll<HTMLElement>('[data-flip-id]')
 

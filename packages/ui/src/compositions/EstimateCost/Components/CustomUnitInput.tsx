@@ -34,12 +34,12 @@ export const CustomUnitInput = memo(
       <UnitInput
         min={1}
         name="iteration"
-        onChange={inputValue =>
+        onChange={inputValue => {
           setIteration({
             unit: iteration.unit,
             value: inputValue,
           })
-        }
+        }}
         onChangeUnitValue={unitValue => {
           setIteration({
             unit: unitValue as Units,

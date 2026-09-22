@@ -82,7 +82,9 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
           info: 'Info',
           isOrdered: currentOrder.columnId === 'id',
           label: 'Name',
-          onOrder: newOrder => setCurrentOrder({ columnId: 'id', order: newOrder }),
+          onOrder: newOrder => {
+            setCurrentOrder({ columnId: 'id', order: newOrder })
+          },
           orderDirection: currentOrder.order,
         },
         {
@@ -91,7 +93,9 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
         {
           isOrdered: currentOrder.columnId === 'memory',
           label: 'Memory',
-          onOrder: newOrder => setCurrentOrder({ columnId: 'memory', order: newOrder }),
+          onOrder: newOrder => {
+            setCurrentOrder({ columnId: 'memory', order: newOrder })
+          },
           orderDirection: currentOrder.order,
         },
         { label: 'Disks' },

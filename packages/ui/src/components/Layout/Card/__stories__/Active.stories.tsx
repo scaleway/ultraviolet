@@ -21,15 +21,32 @@ export const Active: StoryFn = args => {
 
         {active ? (
           <Stack direction="row" gap={1}>
-            <Button onClick={() => setActive(false)} sentiment="success" variant="outlined">
+            <Button
+              onClick={() => {
+                setActive(false)
+              }}
+              sentiment="success"
+              variant="outlined"
+            >
               <CheckIcon />
             </Button>
-            <Button onClick={() => setActive(false)} sentiment="danger" variant="outlined">
+            <Button
+              onClick={() => {
+                setActive(false)
+              }}
+              sentiment="danger"
+              variant="outlined"
+            >
               <CancelIcon />
             </Button>
           </Stack>
         ) : (
-          <Button onClick={() => setActive(true)} sentiment="neutral">
+          <Button
+            onClick={() => {
+              setActive(true)
+            }}
+            sentiment="neutral"
+          >
             <PencilIcon />
           </Button>
         )}

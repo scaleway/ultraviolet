@@ -18,7 +18,7 @@ import type {
 } from 'react'
 import recursivelyGetChildrenString from '../../../helpers/recursivelyGetChildrenString'
 import { Tooltip } from '../../Overlay/Tooltip'
-import type { LinkSentiment, LinkProminence, LinkSize } from './constants'
+import type { LinkProminence, LinkSentiment, LinkSize } from './constants'
 import { linkStyle } from './styles.css'
 
 type LinkProps = {

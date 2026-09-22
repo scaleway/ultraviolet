@@ -19,22 +19,27 @@ const options = [
   },
 ]
 describe('unitInput', () => {
-  it('renders with default props', () =>
-    shouldMatchSnapshot(<UnitInput name="test" onChange={() => {}} onChangeUnitValue={() => {}} options={options} />))
+  it('renders with default props', () => {
+    shouldMatchSnapshot(<UnitInput name="test" onChange={() => {}} onChangeUnitValue={() => {}} options={options} />)
+  })
 
-  it('renders with min max', () =>
+  it('renders with min max', () => {
     shouldMatchSnapshot(
       <UnitInput max={100} min={10} onChange={() => {}} onChangeUnitValue={() => {}} options={options} />,
-    ))
-  it('renders with size small', () =>
+    )
+  })
+
+  it('renders with size small', () => {
     shouldMatchSnapshot(
       <UnitInput name="test" onChange={() => {}} onChangeUnitValue={() => {}} options={options} size="small" />,
-    ))
+    )
+  })
 
-  it('renders with size medioum', () =>
+  it('renders with size medioum', () => {
     shouldMatchSnapshot(
       <UnitInput name="test" onChange={() => {}} onChangeUnitValue={() => {}} options={options} size="medium" />,
-    ))
+    )
+  })
 
   it('renders click', async () => {
     const { asFragment } = renderWithTheme(
@@ -46,12 +51,13 @@ describe('unitInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('renders with size large', () =>
+  it('renders with size large', () => {
     shouldMatchSnapshot(
       <UnitInput name="test" onChange={() => {}} onChangeUnitValue={() => {}} options={options} size="large" />,
-    ))
+    )
+  })
 
-  it('renders with disabled and placeHolder', () =>
+  it('renders with disabled and placeHolder', () => {
     shouldMatchSnapshot(
       <UnitInput
         disabled
@@ -61,9 +67,10 @@ describe('unitInput', () => {
         options={options}
         placeholder="100"
       />,
-    ))
+    )
+  })
 
-  it('renders with dropdownAlign center', () =>
+  it('renders with dropdownAlign center', () => {
     shouldMatchSnapshot(
       <UnitInput
         dropdownAlign="center"
@@ -73,9 +80,10 @@ describe('unitInput', () => {
         options={options}
         placeholder="100"
       />,
-    ))
+    )
+  })
 
-  it('renders with success', () =>
+  it('renders with success', () => {
     shouldMatchSnapshot(
       <UnitInput
         helper="text"
@@ -86,9 +94,10 @@ describe('unitInput', () => {
         placeholder="100"
         success
       />,
-    ))
+    )
+  })
 
-  it('renders with error', () =>
+  it('renders with error', () => {
     shouldMatchSnapshot(
       <UnitInput
         error="error"
@@ -99,8 +108,10 @@ describe('unitInput', () => {
         options={options}
         placeholder="100"
       />,
-    ))
-  it('renders with error  and success', () =>
+    )
+  })
+
+  it('renders with error  and success', () => {
     shouldMatchSnapshot(
       <UnitInput
         error
@@ -112,7 +123,8 @@ describe('unitInput', () => {
         placeholder="100"
         success="success"
       />,
-    ))
+    )
+  })
 
   it('handles writing in input', async () => {
     renderWithTheme(
@@ -169,7 +181,7 @@ describe('unitInput', () => {
     await userEvent.click(screen.getByTestId('option-mb'))
   })
 
-  it('renders with label and no label information', () =>
+  it('renders with label and no label information', () => {
     shouldMatchSnapshot(
       <UnitInput
         disabled
@@ -180,34 +192,39 @@ describe('unitInput', () => {
         options={options}
         placeholder="100"
       />,
-    ))
-  it('renders with label and label information', () =>
-    shouldMatchSnapshot(
-      <UnitInput
-        disabled
-        label="label"
-        labelInformation="label information"
-        name="test"
-        onChange={() => {}}
-        onChangeUnitValue={() => {}}
-        options={options}
-        placeholder="100"
-      />,
-    ))
-  it('renders with no label and label information', () =>
-    shouldMatchSnapshot(
-      <UnitInput
-        disabled
-        labelInformation="label information"
-        name="test"
-        onChange={() => {}}
-        onChangeUnitValue={() => {}}
-        options={options}
-        placeholder="100"
-      />,
-    ))
+    )
+  })
 
-  it('renders with default value', () =>
+  it('renders with label and label information', () => {
+    shouldMatchSnapshot(
+      <UnitInput
+        disabled
+        label="label"
+        labelInformation="label information"
+        name="test"
+        onChange={() => {}}
+        onChangeUnitValue={() => {}}
+        options={options}
+        placeholder="100"
+      />,
+    )
+  })
+
+  it('renders with no label and label information', () => {
+    shouldMatchSnapshot(
+      <UnitInput
+        disabled
+        labelInformation="label information"
+        name="test"
+        onChange={() => {}}
+        onChangeUnitValue={() => {}}
+        options={options}
+        placeholder="100"
+      />,
+    )
+  })
+
+  it('renders with default value', () => {
     shouldMatchSnapshot(
       <UnitInput
         disabled
@@ -220,5 +237,6 @@ describe('unitInput', () => {
         unitValue="kb"
         value={1}
       />,
-    ))
+    )
+  })
 })

@@ -1,6 +1,6 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { describe, expect, vi, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { renderWithForm } from '../../../__tests__/helpers'
 
 describe('form', () => {
@@ -14,7 +14,9 @@ describe('form', () => {
 
     const { asFragment } = renderWithForm(<button type="submit">Submit</button>, undefined, { onSubmit })
     await userEvent.click(screen.getByText('Submit'))
-    await waitFor(() => expect(onSubmit).toHaveBeenCalledOnce())
+    await waitFor(() => {
+      expect(onSubmit).toHaveBeenCalledOnce()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 })

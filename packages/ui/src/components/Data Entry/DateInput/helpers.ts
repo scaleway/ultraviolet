@@ -80,7 +80,7 @@ export const formatValue = (
 }
 
 const returnValidDate = (computedDate: Date, minDate?: Date, maxDate?: Date) => {
-  const isValidDate = !!computedDate.getTime()
+  const isValidDate = Boolean(computedDate.getTime())
 
   const isTooSoon = isValidDate && minDate && computedDate < minDate
   const isTooLate = isValidDate && maxDate && computedDate > maxDate

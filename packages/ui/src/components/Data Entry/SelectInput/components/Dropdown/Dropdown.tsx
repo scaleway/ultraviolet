@@ -190,7 +190,9 @@ export const Dropdown = ({
     onResize()
     window.addEventListener('resize', onResize)
 
-    return () => window.removeEventListener('resize', onResize)
+    return () => {
+      window.removeEventListener('resize', onResize)
+    }
   }, [maxWidth, refSelect])
 
   useEffect(() => {
@@ -205,7 +207,7 @@ export const Dropdown = ({
       setSearch('')
     }
 
-    const eventKeydown = (event: globalThis.KeyboardEvent) =>
+    const eventKeydown = (event: globalThis.KeyboardEvent) => {
       handleKeyDown({
         event,
         ref,
@@ -215,6 +217,7 @@ export const Dropdown = ({
         setDefaultSearchValue,
         search,
       })
+    }
 
     if (!searchable) {
       document.addEventListener('keydown', eventKeydown)
@@ -259,7 +262,13 @@ export const Dropdown = ({
   const computedFooter = useMemo(() => {
     if (footer && !isEmpty) {
       if (typeof footer === 'function') {
-        return <div className={selectInputStyle.footer}>{footer(() => setIsDropdownVisible(false))}</div>
+        return (
+          <div className={selectInputStyle.footer}>
+            {footer(() => {
+              setIsDropdownVisible(false)
+            })}
+          </div>
+        )
       }
 
       return <div className={selectInputStyle.footer}>{footer}</div>
@@ -279,7 +288,9 @@ export const Dropdown = ({
       hideOnClickOutside
       id={id}
       maxWidth={maxWidth ?? refSelect.current?.offsetWidth}
-      onClose={() => setIsDropdownVisible(false)}
+      onClose={() => {
+        setIsDropdownVisible(false)
+      }}
       placement="bottom"
       portalTarget={portalTarget}
       ref={ref}

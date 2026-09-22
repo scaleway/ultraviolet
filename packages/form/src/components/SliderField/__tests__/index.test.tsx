@@ -1,6 +1,6 @@
 import { act, fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { describe, expect, vi, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { SliderField, Submit } from '../..'
 import { mockFormErrors, renderWithForm } from '../../../__tests__/helpers'
 
@@ -46,9 +46,13 @@ describe('sliderField', () => {
       <SliderField input label="Test" max={10} min={0} name="test" onBlur={onBlur} onFocus={onFocus} required />,
     )
     const input = screen.getByRole('slider', { hidden: true })
-    act(() => input.focus())
+    act(() => {
+      input.focus()
+    })
     expect(onFocus).toHaveBeenCalledOnce()
-    act(() => input.blur())
+    act(() => {
+      input.blur()
+    })
     expect(onBlur).toHaveBeenCalledOnce()
     expect(asFragment()).toMatchSnapshot()
   })

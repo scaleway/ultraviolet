@@ -12,7 +12,9 @@ export const Controlled: StoryFn = args => {
         checked={value === 'label-1'}
         label="Label 1"
         name="group"
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.currentTarget.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+          onChange(e.currentTarget.value)
+        }}
         value="label-1"
       />
       <Radio
@@ -20,7 +22,9 @@ export const Controlled: StoryFn = args => {
         checked={value === 'label-2'}
         label="Label 2"
         name="group"
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.currentTarget.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+          onChange(e.currentTarget.value)
+        }}
         value="label-2"
       />
     </>

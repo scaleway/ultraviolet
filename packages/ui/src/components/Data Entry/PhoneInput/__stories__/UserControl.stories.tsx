@@ -54,7 +54,9 @@ export const WithOnValueChange: StoryFn<typeof PhoneInput> = () => {
         onValueChange={data => {
           setMetadata(JSON.stringify(data, null, 2))
         }}
-        onChange={event => setValue(event.target.value)}
+        onChange={event => {
+          setValue(event.target.value)
+        }}
         placeholder="Enter phone number"
         value={value}
       />

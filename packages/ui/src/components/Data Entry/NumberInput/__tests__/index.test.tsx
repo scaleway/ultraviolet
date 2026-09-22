@@ -76,10 +76,14 @@ describe('numberInput', () => {
     await userEvent.click(minus)
     // In happy-dom, the step functionality might not work as expected
     // We'll check that onChange was called (the exact value might differ)
-    await waitFor(() => expect(onChange).toHaveBeenCalledTimes(1))
+    await waitFor(() => {
+      expect(onChange).toHaveBeenCalledTimes(1)
+    })
 
     await userEvent.click(minus)
-    await waitFor(() => expect(onChange).toHaveBeenCalledTimes(2))
+    await waitFor(() => {
+      expect(onChange).toHaveBeenCalledTimes(2)
+    })
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -94,10 +98,14 @@ describe('numberInput', () => {
     await userEvent.click(plus)
     // In happy-dom, the step functionality might not work as expected
     // We'll check that onChange was called (the exact value might differ)
-    await waitFor(() => expect(onChange).toHaveBeenCalledTimes(1))
+    await waitFor(() => {
+      expect(onChange).toHaveBeenCalledTimes(1)
+    })
 
     await userEvent.click(plus)
-    await waitFor(() => expect(onChange).toHaveBeenCalledTimes(2))
+    await waitFor(() => {
+      expect(onChange).toHaveBeenCalledTimes(2)
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -110,7 +118,9 @@ describe('numberInput', () => {
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
     await userEvent.click(input)
-    await waitFor(() => expect(input).toHaveFocus())
+    await waitFor(() => {
+      expect(input).toHaveFocus()
+    })
     input.blur()
 
     await userEvent.clear(input)
@@ -118,6 +128,7 @@ describe('numberInput', () => {
     expect(onChange).toHaveBeenNthCalledWith(2, null)
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('should update the value on blur when it is above the max value', async () => {
     const onChange = vi.fn()
     const maxValue = 5
@@ -127,7 +138,9 @@ describe('numberInput', () => {
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
     await userEvent.click(input)
-    await waitFor(() => expect(input).toHaveFocus())
+    await waitFor(() => {
+      expect(input).toHaveFocus()
+    })
     input.blur()
 
     await userEvent.clear(input)
@@ -147,10 +160,14 @@ describe('numberInput', () => {
     await userEvent.click(plus)
     // In happy-dom, the step functionality might not work as expected
     // We'll check that onChange was called (the exact value might differ)
-    await waitFor(() => expect(onChange).toHaveBeenCalled())
+    await waitFor(() => {
+      expect(onChange).toHaveBeenCalled()
+    })
 
     await userEvent.click(plus)
-    await waitFor(() => expect(onChange).toHaveBeenCalledTimes(2))
+    await waitFor(() => {
+      expect(onChange).toHaveBeenCalledTimes(2)
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -165,7 +182,9 @@ describe('numberInput', () => {
 
     await userEvent.click(plusButton)
     // In happy-dom, we'll check that onChange was called (the exact value might differ)
-    await waitFor(() => expect(onChange).toHaveBeenCalled())
+    await waitFor(() => {
+      expect(onChange).toHaveBeenCalled()
+    })
   })
 
   it('should set value at max when value is greater than max', async () => {

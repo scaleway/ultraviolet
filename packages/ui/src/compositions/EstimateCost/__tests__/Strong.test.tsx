@@ -12,30 +12,33 @@ describe('estimateCost - Strong Item', () => {
     resetIntersectionMocking()
   })
 
-  it('render basic props', () =>
+  it('render basic props', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Strong">
           <EstimateCost.Strong>This is a strong Item</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with small variant', () =>
+  it('render with small variant', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Strong">
           <EstimateCost.Strong variant="small">This is a strong Item</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with isDisabledOnOverlay', () =>
+  it('render with isDisabledOnOverlay', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Strong">
           <EstimateCost.Strong isDisabledOnOverlay>This is a strong Item</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 })

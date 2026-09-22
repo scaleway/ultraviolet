@@ -19,7 +19,9 @@ export const Examples: StoryFn = args => {
         {...args}
         legend="First group"
         name="First group"
-        onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+          onChange(event.currentTarget.value)
+        }}
         showTick
         type="radio"
         value={value}

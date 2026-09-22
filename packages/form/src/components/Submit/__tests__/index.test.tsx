@@ -30,7 +30,9 @@ describe('submit', () => {
       {
         onSubmit: async () =>
           new Promise(resolve => {
-            setTimeout(() => resolve(undefined), 500)
+            setTimeout(() => {
+              resolve(undefined)
+            }, 500)
           }),
       },
     )

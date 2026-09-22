@@ -18,7 +18,7 @@ export const List: StoryFn<typeof CategoryIcon> = props => (
             <FoundCategoryIcon {...props} disabled />
           </Row>
           <div style={{ width: '880px' }}>
-            <Text as="code" strikeThrough={!!deprecated} variant="code">
+            <Text as="code" strikeThrough={Boolean(deprecated)} variant="code">
               <Snippet>{`import { ${iconName} } from '@ultraviolet/icons/category/${iconName}'`}</Snippet>
             </Text>
           </div>

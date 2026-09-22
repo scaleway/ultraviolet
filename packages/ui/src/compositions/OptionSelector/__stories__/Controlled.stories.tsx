@@ -70,7 +70,9 @@ export const Controlled: StoryFn<ComponentProps<typeof OptionSelector>> = props 
           label: 'Controlled',
           options,
         }}
-        onChange={newValue => setValue(newValue)}
+        onChange={newValue => {
+          setValue(newValue)
+        }}
         secondSelector={{
           label: 'Zone',
           options: makeVersions(capitalize(value.first ?? '')),
@@ -81,7 +83,12 @@ export const Controlled: StoryFn<ComponentProps<typeof OptionSelector>> = props 
         <li>Selected OS: {value.first}</li>
         <li>Selected version: {value.second}</li>
       </ul>
-      <Button onClick={() => setValue({ first: options[0].value })} style={{ width: 'fit-content' }}>
+      <Button
+        onClick={() => {
+          setValue({ first: options[0].value })
+        }}
+        style={{ width: 'fit-content' }}
+      >
         Set first selector value to Ubuntu
       </Button>
     </Stack>

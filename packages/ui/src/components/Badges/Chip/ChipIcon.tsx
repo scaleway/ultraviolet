@@ -30,7 +30,7 @@ export const ChipIcon = ({ icon, onClick, 'data-testid': dataTestId }: ChipIconT
         className={chipStyle.buttonContainer}
         data-active={isActive}
         data-disabled={disabled}
-        data-has-onclick={!!onClick && !disabled}
+        data-has-onclick={Boolean(onClick) && !disabled}
         data-testid={dataTestId}
         onClick={event => {
           if (!disabled && onClick) {

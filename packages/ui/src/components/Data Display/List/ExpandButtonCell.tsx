@@ -32,7 +32,9 @@ export const ExpandButtonCell = ({
           className={listStyle.expandableButton}
           data-testid="list-expand-button"
           disabled={disabled || !expandable}
-          onClick={() => toggleRowExpand()}
+          onClick={() => {
+            toggleRowExpand()
+          }}
           sentiment={sentiment}
           size="small"
           variant="ghost"

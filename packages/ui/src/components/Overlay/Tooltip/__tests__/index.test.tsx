@@ -2,7 +2,6 @@ import { screen, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme } from '@utils/test'
-import type { ComponentProps } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Tooltip } from '..'
 
@@ -137,7 +136,7 @@ describe('tooltip', () => {
       `should renders tooltip with placement %s`,
       async placement => {
         renderWithTheme(
-          <Tooltip placement={placement as ComponentProps<typeof Tooltip>['placement']} text="test success!">
+          <Tooltip placement={placement} text="test success!">
             <p data-testid="children">Hover me</p>
           </Tooltip>,
         )

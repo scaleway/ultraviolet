@@ -29,7 +29,13 @@ export const Playground: StoryFn<typeof Popup> = args => {
       }
       visible={visible}
     >
-      <Button onClick={() => setVisible(prev => !prev)} sentiment="neutral" variant="outlined">
+      <Button
+        onClick={() => {
+          setVisible(prev => !prev)
+        }}
+        sentiment="neutral"
+        variant="outlined"
+      >
         Open Popup
       </Button>
     </Popup>

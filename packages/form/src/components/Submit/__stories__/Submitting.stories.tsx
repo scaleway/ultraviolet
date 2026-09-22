@@ -15,7 +15,9 @@ export const Submitting: StoryFn = () => {
       methods={methods}
       onSubmit={async () =>
         new Promise(resolve => {
-          setTimeout(() => resolve(undefined), 5000)
+          setTimeout(() => {
+            resolve(undefined)
+          }, 5000)
         })
       }
     >

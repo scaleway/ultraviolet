@@ -42,7 +42,12 @@ export const Demo = () => {
     <div className={themeGeneratorContainer}>
       <Row gap={2} templateColumns="1fr 1fr">
         <Stack gap={2}>
-          <Tabs onChange={(e: number | string) => setTabState(e)} selected={tabState}>
+          <Tabs
+            onChange={(e: number | string) => {
+              setTabState(e)
+            }}
+            selected={tabState}
+          >
             <Tabs.Tab value={1}>UI</Tabs.Tab>
             <Tabs.Tab value={2}>Form</Tabs.Tab>
             <Tabs.Tab value={3}>Icons</Tabs.Tab>
@@ -158,9 +163,9 @@ export const Demo = () => {
               <Stack gap={2}>
                 <SwitchButton
                   name="switch-version"
-                  onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                  onChange={(event: ChangeEvent<HTMLInputElement>) => {
                     setSwitchState(event.target.value as 'downgrade' | 'upgrade')
-                  }
+                  }}
                   value={switchState}
                 >
                   <SwitchButton.Option value="downgrade">Downgrade</SwitchButton.Option>
@@ -169,7 +174,9 @@ export const Demo = () => {
                 <RadioGroup
                   legend={`${switchState.charAt(0).toUpperCase()}${switchState.slice(1)} to a previous version:`}
                   name="downgrade"
-                  onChange={(event: ChangeEvent<HTMLInputElement>) => setRadioState(event.target.value)}
+                  onChange={(event: ChangeEvent<HTMLInputElement>) => {
+                    setRadioState(event.target.value)
+                  }}
                   value={radioState}
                 >
                   <RadioGroup.Radio label="Version 1.3.0" value="option-1" />
@@ -182,13 +189,17 @@ export const Demo = () => {
               <SelectableCard
                 checked={selectableCardState === 'option-1'}
                 label="Update Automatically"
-                onChange={event => setSelectableCardState(event.currentTarget.value)}
+                onChange={event => {
+                  setSelectableCardState(event.currentTarget.value)
+                }}
                 value="option-1"
               />
               <SelectableCard
                 checked={selectableCardState === 'option-2'}
                 label="Update Manually"
-                onChange={event => setSelectableCardState(event.currentTarget.value)}
+                onChange={event => {
+                  setSelectableCardState(event.currentTarget.value)
+                }}
                 value="option-2"
               />
             </Row>

@@ -5,7 +5,7 @@ import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIco
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn, getUUID } from '@ultraviolet/utils'
 import { useEffect, useId, useRef, useState } from 'react'
-import type { ChangeEvent, ComponentProps, CSSProperties, KeyboardEventHandler, ReactNode } from 'react'
+import type { CSSProperties, ChangeEvent, ComponentProps, KeyboardEventHandler, ReactNode } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import { Button } from '../../Action/Button'
 import { Tag } from '../../Badges/Tag'
@@ -190,13 +190,12 @@ export const TagInput = ({
       ) : null}
       <div>
         <Tooltip text={tooltip}>
-          {/* oxlint-disable-next-line jsx_a11y/no-static-element-interactions */}
           <div
             className={cn(className, tagInputStyle.container({ size }))}
             data-disabled={disabled}
-            data-error={!!error}
+            data-error={Boolean(error)}
             data-readonly={readOnly}
-            data-success={!!success}
+            data-success={Boolean(success)}
             data-testid={dataTestId}
             tabIndex={0}
             onClick={handleContainerClick}

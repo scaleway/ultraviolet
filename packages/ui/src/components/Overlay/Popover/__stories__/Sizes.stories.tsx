@@ -18,36 +18,57 @@ export const Sizes: StoryFn<typeof Popover> = () => {
     <div style={{ display: 'inline-flex', gap: '16px' }}>
       <Popover
         content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-        onClose={() => onCloseCallBack(setOpenedSmall)}
+        onClose={() => {
+          onCloseCallBack(setOpenedSmall)
+        }}
         size="small"
         title="Popover Title"
         visible={openedSmall}
       >
-        <Button onClick={() => setOpenedSmall(true)} sentiment="neutral">
+        <Button
+          onClick={() => {
+            setOpenedSmall(true)
+          }}
+          sentiment="neutral"
+        >
           Open Popover small size
         </Button>
       </Popover>
 
       <Popover
         content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-        onClose={() => onCloseCallBack(setOpenedMedium)}
+        onClose={() => {
+          onCloseCallBack(setOpenedMedium)
+        }}
         size="medium"
         title="Popover Title"
         visible={openedMedium}
       >
-        <Button onClick={() => setOpenedMedium(true)} sentiment="neutral">
+        <Button
+          onClick={() => {
+            setOpenedMedium(true)
+          }}
+          sentiment="neutral"
+        >
           Open Popover medium size
         </Button>
       </Popover>
 
       <Popover
         content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-        onClose={() => onCloseCallBack(setOpenedLarge)}
+        onClose={() => {
+          onCloseCallBack(setOpenedLarge)
+        }}
         size="large"
         title="Popover Title"
         visible={openedLarge}
       >
-        <Button onClick={() => setOpenedLarge(true)} sentiment="neutral">
+        <Button
+          onClick={() => {
+            setOpenedLarge(true)
+          }}
+          sentiment="neutral"
+        >
           Open Popover large size
         </Button>
       </Popover>

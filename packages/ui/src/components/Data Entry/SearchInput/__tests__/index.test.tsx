@@ -7,22 +7,24 @@ import { SearchInput } from '..'
 import { Button } from '../../../Action/Button'
 
 describe('searchInput', () => {
-  it('renders correctly without children props', () =>
+  it('renders correctly without children props', () => {
     shouldMatchSnapshot(
       <SearchInput onClose={() => {}} onSearch={() => {}} placeholder="Type something" popupPlacement="bottom">
         <div />
       </SearchInput>,
-    ))
+    )
+  })
 
-  it('renders with disabled prop', () =>
+  it('renders with disabled prop', () => {
     shouldMatchSnapshot(
       <SearchInput disabled onClose={() => {}} onSearch={() => {}} placeholder="Type something" popupPlacement="bottom">
         <div />
       </SearchInput>,
-    ))
+    )
+  })
 
   describe('renders with shortcut prop', () => {
-    it('as boolean', () =>
+    it('as boolean', () => {
       shouldMatchSnapshot(
         <SearchInput
           onClose={() => {}}
@@ -33,8 +35,10 @@ describe('searchInput', () => {
         >
           <div />
         </SearchInput>,
-      ))
-    it('as array of string', () =>
+      )
+    })
+
+    it('as array of string', () => {
       shouldMatchSnapshot(
         <SearchInput
           onClose={() => {}}
@@ -45,10 +49,11 @@ describe('searchInput', () => {
         >
           <div />
         </SearchInput>,
-      ))
+      )
+    })
   })
 
-  it('renders with error prop', () =>
+  it('renders with error prop', () => {
     shouldMatchSnapshot(
       <SearchInput
         error="there is an error"
@@ -59,7 +64,8 @@ describe('searchInput', () => {
       >
         <div />
       </SearchInput>,
-    ))
+    )
+  })
 
   it('renders correctly with children props and triggers onSearch then clear the search', async () => {
     let searchValue = ''
@@ -82,12 +88,16 @@ describe('searchInput', () => {
 
     const SearchInputElement = screen.getByTestId('search-bar')
     await userEvent.type(SearchInputElement, 'scw')
-    await waitFor(() => expect(searchValue).toBe('scw'))
+    await waitFor(() => {
+      expect(searchValue).toBe('scw')
+    })
 
     // The tab will focus the cross
     await userEvent.keyboard('{Tab}')
     await userEvent.keyboard('{Enter}')
-    await waitFor(() => expect(searchValue).toBe(''))
+    await waitFor(() => {
+      expect(searchValue).toBe('')
+    })
   })
 
   it('renders correctly and verify accessibility', async () => {
@@ -117,7 +127,9 @@ describe('searchInput', () => {
 
     const SearchInputElement = screen.getByTestId('search-bar')
     await userEvent.type(SearchInputElement, 'scw')
-    await waitFor(() => expect(searchValue).toBe('scw'))
+    await waitFor(() => {
+      expect(searchValue).toBe('scw')
+    })
 
     const popupSearchInput = screen.getByTestId('popup-search-bar')
     const childrenOne = screen.getByTestId('children-1')
@@ -280,7 +292,12 @@ describe('searchInput', () => {
 
       return (
         <>
-          <Button data-testid="reset-button" onClick={() => setValue(undefined)}>
+          <Button
+            data-testid="reset-button"
+            onClick={() => {
+              setValue(undefined)
+            }}
+          >
             Reset
           </Button>
           <SearchInput

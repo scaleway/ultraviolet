@@ -145,7 +145,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
     const nonDefaultState = success || error
 
-    const computedClearable = clearable && !!value
+    const computedClearable = clearable && Boolean(value)
     const defaultPadding = theme.space[1]
     const spaceForClearButton = computedClearable ? theme.sizing[buttonSizeHeight.xsmall] : '0px'
     const spaceForStateIcon = nonDefaultState ? theme.sizing[STATE_ICON_SIZE] : '0px'

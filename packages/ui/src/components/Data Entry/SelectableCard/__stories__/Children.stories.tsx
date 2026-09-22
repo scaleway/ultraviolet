@@ -18,7 +18,9 @@ export const Children: StoryFn = args => {
         checked={value === 'label-9'}
         label="Left Radio"
         name="label-9"
-        onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
+        onChange={(event: ChangeEvent<HTMLInputElement>) => {
+          onChange(event.currentTarget.value)
+        }}
         type="radio"
         value="label-9"
       >
@@ -38,7 +40,9 @@ export const Children: StoryFn = args => {
         checked={value === 'label-10'}
         label="Middle Radio"
         name="label-10"
-        onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
+        onChange={(event: ChangeEvent<HTMLInputElement>) => {
+          onChange(event.currentTarget.value)
+        }}
         type="radio"
         value="label-10"
       >
@@ -70,7 +74,9 @@ export const Children: StoryFn = args => {
         disabled
         label="Right Radio"
         name="label-11"
-        onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
+        onChange={(event: ChangeEvent<HTMLInputElement>) => {
+          onChange(event.currentTarget.value)
+        }}
         type="radio"
         value="label-11"
       >

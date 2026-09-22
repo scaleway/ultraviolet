@@ -15,8 +15,12 @@ export const ShowcaseAnimations = ({ animation }: { animation: string }) => {
         direction="row"
         gap={2}
         justifyContent="center"
-        onMouseEnter={() => setClassName(animationClassname)}
-        onMouseLeave={() => setClassName('')}
+        onMouseEnter={() => {
+          setClassName(animationClassname)
+        }}
+        onMouseLeave={() => {
+          setClassName('')
+        }}
       >
         Hover me
         <div className={`${className} ${animationShowCaseAnimatedElement}`} />

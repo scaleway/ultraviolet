@@ -10,7 +10,9 @@ export const Upload: StoryFn<typeof Avatar> = props => (
 )
 
 Upload.args = {
-  onClick: () => alert('Upload avatar'),
+  onClick: () => {
+    alert('Upload avatar')
+  },
   shape: 'circle',
   text: 'UV',
   upload: true,

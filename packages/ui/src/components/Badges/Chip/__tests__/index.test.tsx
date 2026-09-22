@@ -7,42 +7,50 @@ import { describe, expect, it, vi } from 'vitest'
 import { Chip } from '..'
 
 describe('checkbox', () => {
-  it('renders correctly', () => shouldMatchSnapshot(<Chip>test</Chip>))
-  it('renders correctly wiht icon', () =>
+  it('renders correctly', () => {
+    shouldMatchSnapshot(<Chip>test</Chip>)
+  })
+
+  it('renders correctly wiht icon', () => {
     shouldMatchSnapshot(
       <Chip>
         <Chip.Icon icon={<AddressIcon />} onClick={() => {}} />
         test
       </Chip>,
-    ))
+    )
+  })
 
-  it('renders correctly active', () =>
+  it('renders correctly active', () => {
     shouldMatchSnapshot(
       <Chip active>
         test <Chip.Icon icon={<AddressIcon />} />
       </Chip>,
-    ))
+    )
+  })
 
-  it('renders correctly large', () =>
+  it('renders correctly large', () => {
     shouldMatchSnapshot(
       <Chip size="large">
         test <Chip.Icon icon={<AddressIcon />} />
       </Chip>,
-    ))
+    )
+  })
 
-  it('renders correctly disabled', () =>
+  it('renders correctly disabled', () => {
     shouldMatchSnapshot(
       <Chip disabled>
         test <Chip.Icon icon={<AddressIcon />} />
       </Chip>,
-    ))
+    )
+  })
 
-  it('renders correctly active disabled', () =>
+  it('renders correctly active disabled', () => {
     shouldMatchSnapshot(
       <Chip active disabled>
         test <Chip.Icon icon={<AddressIcon />} />
       </Chip>,
-    ))
+    )
+  })
 
   it('throw error when using Chip.Icon outside of Chip', () => {
     expect(() => renderWithTheme(<Chip.Icon icon={<AddressIcon />} />)).toThrow(

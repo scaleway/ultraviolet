@@ -5,50 +5,65 @@ import { KEYS_MATCH } from '../constants'
 import { Key } from '../index'
 
 describe('key', () => {
-  it('renders correctly', () => shouldMatchSnapshot(<Key>A</Key>))
-  it('renders primary', () => shouldMatchSnapshot(<Key sentiment="primary">A</Key>))
-  it('renders strong', () =>
+  it('renders correctly', () => {
+    shouldMatchSnapshot(<Key>A</Key>)
+  })
+
+  it('renders primary', () => {
+    shouldMatchSnapshot(<Key sentiment="primary">A</Key>)
+  })
+
+  it('renders strong', () => {
     shouldMatchSnapshot(
       <Key prominence="strong" sentiment="neutral">
         A
       </Key>,
-    ))
-  it('renders strong primary', () =>
+    )
+  })
+
+  it('renders strong primary', () => {
     shouldMatchSnapshot(
       <Key prominence="strong" sentiment="primary">
         A
       </Key>,
-    ))
+    )
+  })
 
-  it('renders disabled', () =>
+  it('renders disabled', () => {
     shouldMatchSnapshot(
       <Key disabled sentiment="neutral">
         A
       </Key>,
-    ))
+    )
+  })
 
-  it('renders disabled primary', () =>
+  it('renders disabled primary', () => {
     shouldMatchSnapshot(
       <Key disabled sentiment="primary">
         A
       </Key>,
-    ))
+    )
+  })
 
-  it('renders disabled strong', () =>
+  it('renders disabled strong', () => {
     shouldMatchSnapshot(
       <Key disabled prominence="strong" sentiment="neutral">
         A
       </Key>,
-    ))
+    )
+  })
 
-  it('renders disabled strong primary', () =>
+  it('renders disabled strong primary', () => {
     shouldMatchSnapshot(
       <Key disabled prominence="strong" sentiment="primary">
         A
       </Key>,
-    ))
+    )
+  })
 
-  it('renders small', () => shouldMatchSnapshot(<Key size="small">A</Key>))
+  it('renders small', () => {
+    shouldMatchSnapshot(<Key size="small">A</Key>)
+  })
 
   it.each(Object.keys(KEYS_MATCH))(`renders with special key %s`, key => {
     renderWithTheme(<Key data-testid="key">{key}</Key>)

@@ -49,7 +49,12 @@ export const Selectable: StoryFn<typeof Table> = args => {
           )}
         </Table.SelectBar>
       </Table>
-      <button onClick={() => setClick(!clicked)} type="button">
+      <button
+        onClick={() => {
+          setClick(!clicked)
+        }}
+        type="button"
+      >
         {clicked ? 'remove ' : 'add '}
         The Empire Strikes Back
       </button>

@@ -6,7 +6,7 @@ import { Table } from '..'
 import { Button } from '../../../Action/Button'
 import { Row } from '../../../Layout/Row'
 import { Stack } from '../../../Layout/Stack'
-import { columns, data as DATA } from './resources'
+import { data as DATA, columns } from './resources'
 
 type Movie = {
   id: string
@@ -34,11 +34,20 @@ export const HighlightAnimation: StoryFn<typeof Table> = ({ ...props }) => {
   return (
     <Stack gap={1}>
       <Row gap={2} templateColumns="repeat(4, 1fr)">
-        <Button onClick={() => setData([...data, newData])}>
+        <Button
+          onClick={() => {
+            setData([...data, newData])
+          }}
+        >
           <PlusIcon />
           Add data
         </Button>
-        <Button onClick={() => setData(DATA)} sentiment="neutral">
+        <Button
+          onClick={() => {
+            setData(DATA)
+          }}
+          sentiment="neutral"
+        >
           <RestoreIcon />
           Reset data
         </Button>
@@ -46,7 +55,7 @@ export const HighlightAnimation: StoryFn<typeof Table> = ({ ...props }) => {
       <Table {...props} columns={columns}>
         <Table.Body>
           {data.map(movie => (
-            <Table.Row highlightAnimation={!!movie.isNew} id={movie.id} key={movie.id}>
+            <Table.Row highlightAnimation={Boolean(movie.isNew)} id={movie.id} key={movie.id}>
               <Table.Cell>{movie.name}</Table.Cell>
               <Table.Cell>{movie.releaseYear}</Table.Cell>
               <Table.Cell>{movie.trilogy}</Table.Cell>

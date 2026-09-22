@@ -45,7 +45,9 @@ export const Children: StoryFn<typeof FileInput> = args => {
         accept="image/*"
         aria-label="label"
         disabled={args.disabled}
-        onChangeFiles={files => setImage(files[0].file)}
+        onChangeFiles={files => {
+          setImage(files[0].file)
+        }}
         title="dnd here"
         variant="overlay"
       >

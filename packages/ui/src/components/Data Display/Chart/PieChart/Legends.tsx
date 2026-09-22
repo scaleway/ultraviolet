@@ -36,15 +36,22 @@ export const Legends = ({ focused, data, legendHeader, onFocusChange, colors }: 
 
         return (
           <Tooltip key={item.id} text={<TooltipContent data={item} />} visible={isSegmentFocused}>
-            {/* oxlint-disable-next-line jsx_a11y/no-noninteractive-element-interactions */}
             <li
               className={pieChartStyle.listItem({
                 isFocused: isSegmentFocused,
               })}
-              onBlur={() => onFocusChange()}
-              onFocus={() => onFocusChange(item.id)}
-              onMouseOut={() => onFocusChange()}
-              onMouseOver={() => onFocusChange(item.id)}
+              onBlur={() => {
+                onFocusChange()
+              }}
+              onFocus={() => {
+                onFocusChange(item.id)
+              }}
+              onMouseOut={() => {
+                onFocusChange()
+              }}
+              onMouseOver={() => {
+                onFocusChange(item.id)
+              }}
               data-testid={id}
             >
               <span

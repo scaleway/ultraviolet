@@ -119,7 +119,7 @@ export const Item = ({
   return (
     <li
       aria-current={ariaCurrent}
-      className={cn(className, breadcrumbsStyle.itemContainer({ clickable: !!onClick }), breadcrumbsStyle.item)}
+      className={cn(className, breadcrumbsStyle.itemContainer({ clickable: Boolean(onClick) }), breadcrumbsStyle.item)}
       style={assignInlineVars({
         [minWidthVar]: minWidth?.toString(),
         [maxWidthVar]: maxWidth?.toString(),

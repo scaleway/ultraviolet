@@ -170,6 +170,7 @@ describe('orderSummary', () => {
     )
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('should work with numberInputs', () => {
     const { asFragment } = renderWithTheme(
       <OrderSummary

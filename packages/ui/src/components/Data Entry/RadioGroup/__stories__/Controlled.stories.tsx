@@ -10,7 +10,9 @@ export const Controlled: StoryFn = args => {
       {...args}
       legend="Legend label"
       name="controlled"
-      onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.currentTarget.value)}
+      onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+        onChange(e.currentTarget.value)
+      }}
       value={value}
     >
       <RadioGroup.Radio label="Label 1" value="label-1" />

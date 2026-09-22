@@ -18,28 +18,52 @@ export const Groups: StoryFn<typeof Chip> = ({ ...args }) => {
           <Chip
             {...args}
             active={singleSelected === 0}
-            onClick={() => (singleSelected === 0 ? setSingleSelected(-1) : setSingleSelected(0))}
+            onClick={() => {
+              if (singleSelected === 0) {
+                setSingleSelected(-1)
+              } else {
+                setSingleSelected(0)
+              }
+            }}
           >
             All
           </Chip>
           <Chip
             {...args}
             active={singleSelected === 1}
-            onClick={() => (singleSelected === 1 ? setSingleSelected(-1) : setSingleSelected(1))}
+            onClick={() => {
+              if (singleSelected === 1) {
+                setSingleSelected(-1)
+              } else {
+                setSingleSelected(1)
+              }
+            }}
           >
             Product
           </Chip>
           <Chip
             {...args}
             active={singleSelected === 2}
-            onClick={() => (singleSelected === 2 ? setSingleSelected(-1) : setSingleSelected(2))}
+            onClick={() => {
+              if (singleSelected === 2) {
+                setSingleSelected(-1)
+              } else {
+                setSingleSelected(2)
+              }
+            }}
           >
             Actions
           </Chip>
           <Chip
             {...args}
             active={singleSelected === 3}
-            onClick={() => (singleSelected === 3 ? setSingleSelected(-1) : setSingleSelected(3))}
+            onClick={() => {
+              if (singleSelected === 3) {
+                setSingleSelected(-1)
+              } else {
+                setSingleSelected(3)
+              }
+            }}
           >
             Resources
           </Chip>
@@ -54,40 +78,52 @@ export const Groups: StoryFn<typeof Chip> = ({ ...args }) => {
           <Chip
             {...args}
             active={multiSelected.includes(0)}
-            onClick={() => (multiSelected.includes(0) ? setMultiSelected([]) : setMultiSelected([...multiSelected, 0]))}
+            onClick={() => {
+              if (multiSelected.includes(0)) {
+                setMultiSelected([])
+              } else {
+                setMultiSelected([...multiSelected, 0])
+              }
+            }}
           >
             All (18)
           </Chip>
           <Chip
             {...args}
             active={multiSelected.includes(1) || multiSelected.includes(0)}
-            onClick={() =>
-              multiSelected.includes(1)
-                ? setMultiSelected(multiSelected.filter(id => id !== 1))
-                : setMultiSelected([...multiSelected, 1])
-            }
+            onClick={() => {
+              if (multiSelected.includes(1)) {
+                setMultiSelected(multiSelected.filter(id => id !== 1))
+              } else {
+                setMultiSelected([...multiSelected, 1])
+              }
+            }}
           >
             Product (2)
           </Chip>
           <Chip
             {...args}
             active={multiSelected.includes(0) || multiSelected.includes(2)}
-            onClick={() =>
-              multiSelected.includes(2)
-                ? setMultiSelected(multiSelected.filter(id => id !== 2))
-                : setMultiSelected([...multiSelected, 2])
-            }
+            onClick={() => {
+              if (multiSelected.includes(2)) {
+                setMultiSelected(multiSelected.filter(id => id !== 2))
+              } else {
+                setMultiSelected([...multiSelected, 2])
+              }
+            }}
           >
             Actions (4)
           </Chip>
           <Chip
             {...args}
             active={multiSelected.includes(3) || multiSelected.includes(0)}
-            onClick={() =>
-              multiSelected.includes(3)
-                ? setMultiSelected(multiSelected.filter(id => id !== 3))
-                : setMultiSelected([...multiSelected, 3])
-            }
+            onClick={() => {
+              if (multiSelected.includes(3)) {
+                setMultiSelected(multiSelected.filter(id => id !== 3))
+              } else {
+                setMultiSelected([...multiSelected, 3])
+              }
+            }}
           >
             Resources (12)
           </Chip>

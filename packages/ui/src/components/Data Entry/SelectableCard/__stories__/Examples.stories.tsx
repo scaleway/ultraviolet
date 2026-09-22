@@ -51,7 +51,9 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
           name="label-29"
-          onChange={event => onChange(event.currentTarget.value)}
+          onChange={event => {
+            onChange(event.currentTarget.value)
+          }}
           showTick
           type="radio"
           value="label-29"
@@ -74,7 +76,9 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
           name="label-15"
-          onChange={event => onChange(event.currentTarget.value)}
+          onChange={event => {
+            onChange(event.currentTarget.value)
+          }}
           showTick
           type="radio"
           value="label-15"
@@ -99,12 +103,12 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
           name="label-20"
-          onChange={event =>
+          onChange={event => {
             onChange2(prevState => ({
               ...prevState,
               'label-20': event.currentTarget.checked,
             }))
-          }
+          }}
           showTick
           type="checkbox"
           value="label-20"
@@ -139,12 +143,12 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
           name="label-21"
-          onChange={event =>
+          onChange={event => {
             onChange2(prevState => ({
               ...prevState,
               'label-21': event.currentTarget.checked,
             }))
-          }
+          }}
           showTick
           type="checkbox"
           value="label-21"
@@ -170,12 +174,12 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
           name="label-22"
-          onChange={event =>
+          onChange={event => {
             onChange3(prevState => ({
               ...prevState,
               'label-22': event.currentTarget.checked,
             }))
-          }
+          }}
           showTick
           type="checkbox"
           value="label-22"
@@ -198,12 +202,12 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
           name="label-23"
-          onChange={event =>
+          onChange={event => {
             onChange3(prevState => ({
               ...prevState,
               'label-23': event.currentTarget.checked,
             }))
-          }
+          }}
           showTick
           type="checkbox"
           value="label-23"
@@ -227,12 +231,12 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
           name="label-24"
-          onChange={event =>
+          onChange={event => {
             onChange3(prevState => ({
               ...prevState,
               'label-24': event.currentTarget.checked,
             }))
-          }
+          }}
           showTick
           type="checkbox"
           value="label-24"
@@ -256,12 +260,12 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
           name="label-25"
-          onChange={event =>
+          onChange={event => {
             onChange3(prevState => ({
               ...prevState,
               'label-25': event.currentTarget.checked,
             }))
-          }
+          }}
           showTick
           type="checkbox"
           value="label-25"
@@ -285,12 +289,12 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
           name="label-26"
-          onChange={event =>
+          onChange={event => {
             onChange4(prevState => ({
               ...prevState,
               'label-26': event.currentTarget.checked,
             }))
-          }
+          }}
           showTick
           type="checkbox"
           value="label-26"
@@ -307,12 +311,12 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
           name="label-27"
-          onChange={event =>
+          onChange={event => {
             onChange4(prevState => ({
               ...prevState,
               'label-27': event.currentTarget.checked,
             }))
-          }
+          }}
           showTick
           type="checkbox"
           value="label-27"
@@ -330,12 +334,12 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
           name="label-28"
-          onChange={event =>
+          onChange={event => {
             onChange4(prevState => ({
               ...prevState,
               'label-28': event.currentTarget.checked,
             }))
-          }
+          }}
           showTick
           type="checkbox"
           value="label-28"
@@ -346,12 +350,12 @@ export const Examples: StoryFn = args => {
         checked={value5['label-29']}
         label="With an input in the children"
         name="label-29"
-        onChange={event =>
+        onChange={event => {
           onChange5(prevState => ({
             ...prevState,
             'label-29': event.currentTarget.checked,
           }))
-        }
+        }}
         showTick
         type="checkbox"
         value="label-29"
@@ -386,12 +390,12 @@ export const Examples: StoryFn = args => {
           </Stack>
         }
         name="label-30"
-        onChange={event =>
+        onChange={event => {
           onChange6(prevState => ({
             ...prevState,
             'label-30': event.currentTarget.checked,
           }))
-        }
+        }}
         showTick
         type="checkbox"
         value="label-30"

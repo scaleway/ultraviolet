@@ -21,7 +21,15 @@ export const Carousel: StoryFn = props => {
 
   return (
     <Modal
-      disclosure={<Button onClick={() => setStep(0)}>Open Carousel Modal</Button>}
+      disclosure={
+        <Button
+          onClick={() => {
+            setStep(0)
+          }}
+        >
+          Open Carousel Modal
+        </Button>
+      }
       image={IMAGES_STEP[step]}
       size="xsmall"
       {...props}

@@ -25,8 +25,12 @@ export const Template: StoryFn<typeof UnitInput> = args => {
     <Stack gap={5} width="600px">
       <UnitInput
         {...args}
-        onChange={val => setValue(val)}
-        onChangeUnitValue={val => setUnit(val[0])}
+        onChange={val => {
+          setValue(val)
+        }}
+        onChangeUnitValue={val => {
+          setUnit(val[0])
+        }}
         options={optionsSelect}
         width="300px"
       />

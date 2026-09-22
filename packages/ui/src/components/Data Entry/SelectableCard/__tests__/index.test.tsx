@@ -16,56 +16,63 @@ describe('selectableCard', () => {
   ] as const
 
   describe.each(types)('%s', type => {
-    it('renders correctly with default props', () =>
+    it('renders correctly with default props', () => {
       shouldMatchSnapshot(
         <SelectableCard label="test" name="test" onChange={() => {}} value="choice">
           SelectableCard
         </SelectableCard>,
-      ))
+      )
+    })
 
-    it('renders correctly with aria label', () =>
+    it('renders correctly with aria label', () => {
       shouldMatchSnapshot(
         <SelectableCard aria-label="test" name="test" onChange={() => {}} value="choice">
           SelectableCard
         </SelectableCard>,
-      ))
+      )
+    })
 
-    it('renders correctly with showTick', () =>
+    it('renders correctly with showTick', () => {
       shouldMatchSnapshot(
         <SelectableCard aria-label="test" name="test" onChange={() => {}} showTick type={type} value="choice">
           SelectableCard
         </SelectableCard>,
-      ))
+      )
+    })
 
-    it('renders correctly with checked prop', () =>
+    it('renders correctly with checked prop', () => {
       shouldMatchSnapshot(
         <SelectableCard aria-label="test" checked name="test" onChange={() => {}} type={type} value="choice">
           SelectableCard
         </SelectableCard>,
-      ))
+      )
+    })
 
-    it('renders correctly with disabled prop', () =>
+    it('renders correctly with disabled prop', () => {
       shouldMatchSnapshot(
         <SelectableCard aria-label="test" disabled name="test" onChange={() => {}} type={type} value="choice">
           SelectableCard
         </SelectableCard>,
-      ))
+      )
+    })
 
-    it('renders correctly with isError prop', () =>
+    it('renders correctly with isError prop', () => {
       shouldMatchSnapshot(
         <SelectableCard isError label="test" name="test" onChange={() => {}} type={type} value="choice">
           SelectableCard
         </SelectableCard>,
-      ))
+      )
+    })
 
-    it('renders correctly with tooltip prop', () =>
+    it('renders correctly with tooltip prop', () => {
       shouldMatchSnapshot(
         <SelectableCard label="test" name="test" onChange={() => {}} tooltip="test" type={type} value="choice">
           SelectableCard
         </SelectableCard>,
-      ))
+      )
+    })
 
-    it('renders correctly with complex children', () =>
+    it('renders correctly with complex children', () => {
       shouldMatchSnapshot(
         <SelectableCard disabled label="test" name="test" onChange={() => {}} type={type} value="choice">
           {({ checked, disabled }) => (
@@ -79,9 +86,10 @@ describe('selectableCard', () => {
             </div>
           )}
         </SelectableCard>,
-      ))
+      )
+    })
 
-    it('renders correctly with illustration', () =>
+    it('renders correctly with illustration', () => {
       shouldMatchSnapshot(
         <SelectableCard
           illustration={<IllustrationExample />}
@@ -95,9 +103,10 @@ describe('selectableCard', () => {
           Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol.
           Learn more
         </SelectableCard>,
-      ))
+      )
+    })
 
-    it('renders correctly with indented disabled', () =>
+    it('renders correctly with indented disabled', () => {
       shouldMatchSnapshot(
         <SelectableCard
           indented={false}
@@ -111,9 +120,10 @@ describe('selectableCard', () => {
           Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol.
           Learn more
         </SelectableCard>,
-      ))
+      )
+    })
 
-    it('renders correctly with productIcon', () =>
+    it('renders correctly with productIcon', () => {
       shouldMatchSnapshot(
         <SelectableCard
           label="label"
@@ -127,7 +137,8 @@ describe('selectableCard', () => {
           Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol.
           Learn more
         </SelectableCard>,
-      ))
+      )
+    })
 
     it('accessibility working with space key pressed to select', async () => {
       const onChange = vi.fn()
@@ -139,7 +150,9 @@ describe('selectableCard', () => {
       )
 
       const button = screen.getByRole('button')
-      act(() => button.focus())
+      act(() => {
+        button.focus()
+      })
 
       await userEvent.keyboard('[Space]')
       await waitFor(() => {

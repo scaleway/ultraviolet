@@ -28,14 +28,18 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
   const { filters, closeDrawer, isDrawerOpen } = useFiltersContext()
   const drawerFilters = config.filter(item => !item.hideInDrawer)
 
-  const createResetHandler = (configItem: FilterConfig<AnyObject>) => {
+  const createResetHandler = (configItem: FilterConfig) => {
     let fieldsToReset: string[] = []
     if (isFilterConfigGroup(configItem)) {
       fieldsToReset = configItem.items.map(item => item.name).filter(name => filters.dirtyFilters.includes(name))
     } else if (filters.dirtyFilters.includes(configItem.name)) {
       fieldsToReset = [configItem.name]
     }
-    return fieldsToReset.length > 0 ? () => filters.resetFields(fieldsToReset) : undefined
+    return fieldsToReset.length > 0
+      ? () => {
+          filters.resetFields(fieldsToReset)
+        }
+      : undefined
   }
 
   if (drawerFilters.length === 0) {
@@ -46,7 +50,13 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
     <Drawer
       footer={
         <Row gap={2} templateColumns="1fr 1fr">
-          <Button variant="outlined" onClick={() => filters.reset()} disabled={filters.dirtyFilters.length === 0}>
+          <Button
+            variant="outlined"
+            onClick={() => {
+              filters.reset()
+            }}
+            disabled={filters.dirtyFilters.length === 0}
+          >
             {labels.clearAll}
           </Button>
           <Button form={formId} type="submit">
@@ -94,7 +104,9 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
                           directionContext="column"
                           size="large"
                           key={subConfigItem.name}
-                          onChange={value => filters.setValue(subConfigItem.name, value)}
+                          onChange={value => {
+                            filters.setValue(subConfigItem.name, value)
+                          }}
                           value={filters.values[subConfigItem.name]}
                           values={filters.values}
                           customComponents={components}
@@ -107,7 +119,9 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
                     directionContext="column"
                     size="large"
                     hideLabel
-                    onChange={value => filters.setValue(configItem.name, value)}
+                    onChange={value => {
+                      filters.setValue(configItem.name, value)
+                    }}
                     value={filters.values[configItem.name]}
                     values={filters.values}
                     customComponents={components}

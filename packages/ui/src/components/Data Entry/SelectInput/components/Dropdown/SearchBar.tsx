@@ -71,7 +71,7 @@ const findClosestOption = (options: DataType, searchInput: string | undefined) =
   return null
 }
 
-const escapeRegExp = (string: string) => string.replace(/[.*+?^{}()|[\]\\]/gu, String.raw`\$&`)
+const escapeRegExp = (string: string) => string.replaceAll(/[.*+?^{}()|[\]\\]/gu, String.raw`\$&`)
 
 const filterGroupedOptions = (options: Record<string, OptionType[]>, escapedSearch: string) => {
   const grouped = { ...options }
@@ -89,10 +89,10 @@ export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }:
 
   const handleChange = (search: string) => {
     if (search.length > 0) {
-      const escapedSearch = escapeRegExp(search.toString())
+      const escapedSearch = escapeRegExp(search)
       const filteredOptions: DataType = Array.isArray(options)
         ? searchRegex([...options], escapedSearch)
-        : filterGroupedOptions(options as Record<string, OptionType[]>, escapedSearch)
+        : filterGroupedOptions(options, escapedSearch)
       onSearch(filteredOptions)
     } else {
       onSearch(options)
@@ -144,10 +144,18 @@ export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }:
       aria-label="search-bar"
       className={cn(selectInputStyle.searchBar, searchInputStyle.searchInput)}
       data-testid="search-bar"
-      onBlur={() => setSearchBarActive(false)}
-      onChange={event => handleChange(event.target.value)}
-      onFocus={() => setSearchBarActive(true)}
-      onKeyDown={event => handleKeyDown(event, searchInput)}
+      onBlur={() => {
+        setSearchBarActive(false)
+      }}
+      onChange={event => {
+        handleChange(event.target.value)
+      }}
+      onFocus={() => {
+        setSearchBarActive(true)
+      }}
+      onKeyDown={event => {
+        handleKeyDown(event, searchInput)
+      }}
       placeholder={placeholder}
       prefix={<SearchIcon sentiment="neutral" prominence="weak" size="small" />}
       ref={searchInputRef}

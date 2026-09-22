@@ -155,7 +155,7 @@ export const OptionSelector = ({
           <Selector
             direction={direction}
             // The second selector is disabled when the first selector has no selected value or is in an error state
-            disabled={disabled || !firstValue || !!firstSelector.error}
+            disabled={disabled || !firstValue || Boolean(firstSelector.error)}
             error={error}
             firstSelector={secondSelector}
             isHorizontal={isHorizontal}

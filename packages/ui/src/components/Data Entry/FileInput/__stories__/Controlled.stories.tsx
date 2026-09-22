@@ -8,7 +8,9 @@ import type { FilesType } from '../types'
 
 export const Controlled: StoryFn<typeof FileInput> = args => {
   const [files, setFiles] = useState<FilesType[]>([])
-  const onChange = (f: FilesType[]) => setFiles(f)
+  const onChange = (f: FilesType[]) => {
+    setFiles(f)
+  }
 
   return (
     <Stack direction="column" gap={3}>
@@ -34,7 +36,13 @@ export const Controlled: StoryFn<typeof FileInput> = args => {
           ' none'
         )}
       </Text>
-      <Button onClick={() => setFiles([])}>Reset</Button>
+      <Button
+        onClick={() => {
+          setFiles([])
+        }}
+      >
+        Reset
+      </Button>
     </Stack>
   )
 }

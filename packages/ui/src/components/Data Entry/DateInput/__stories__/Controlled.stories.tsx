@@ -13,7 +13,13 @@ export const Controlled: StoryFn = args => {
     <Stack gap={2}>
       <DateInput {...args} label="Date" onChange={setValue} value={value as Date} />
       Selected date : {value?.toString()}
-      <Button onClick={() => setValue(new Date('December 26, 1995 03:24:00'))}>Set date to 1995-12-26</Button>
+      <Button
+        onClick={() => {
+          setValue(new Date('December 26, 1995 03:24:00'))
+        }}
+      >
+        Set date to 1995-12-26
+      </Button>
     </Stack>
   )
 }

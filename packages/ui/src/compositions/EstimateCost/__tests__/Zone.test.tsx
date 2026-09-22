@@ -12,17 +12,19 @@ describe('estimateCost - Zone', () => {
     resetIntersectionMocking()
   })
 
-  it('render zone component', () =>
+  it('render zone component', () => {
     shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="hours">
         <EstimateCost.Zone image={frFlag} label="fr-par-1" />
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render region component, with animation', () =>
+  it('render region component, with animation', () => {
     shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="hours">
         <EstimateCost.Zone animated image={frFlag} label="nl-ams-1" />
       </EstimateCost>,
-    ))
+    )
+  })
 })

@@ -37,7 +37,9 @@ export const SteppedList = ({ stepNumber, stepTitle, completed, stepIcon, 'data-
       bulletContent={<CheckIcon />}
       className={steppedListCardStyle.step}
       data-testid={dataTestId}
-      onClick={() => containerData.setCurrentStep(stepNumber)}
+      onClick={() => {
+        containerData.setCurrentStep(stepNumber)
+      }}
       prominence={active ? 'strong' : 'default'}
       sentiment="primary"
       size="small"
@@ -51,7 +53,9 @@ export const SteppedList = ({ stepNumber, stepTitle, completed, stepIcon, 'data-
       bulletContent={stepIcon ?? String(stepNumber)}
       className={steppedListCardStyle.step}
       data-testid={dataTestId}
-      onClick={() => containerData.setCurrentStep(stepNumber)}
+      onClick={() => {
+        containerData.setCurrentStep(stepNumber)
+      }}
       prominence={active ? 'strong' : undefined}
       sentiment={active ? 'primary' : undefined}
       size="small"

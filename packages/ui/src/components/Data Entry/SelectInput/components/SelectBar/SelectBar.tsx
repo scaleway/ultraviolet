@@ -85,7 +85,7 @@ const SelectBar = ({
     () =>
       selectedData.selectedValues
         .map(selectedValue => findOptionInOptions(options, selectedValue))
-        .filter((option): option is OptionType => !!option),
+        .filter((option): option is OptionType => Boolean(option)),
     [options, selectedData.selectedValues],
   )
 
@@ -191,7 +191,13 @@ const SelectBar = ({
         data-readonly={readOnly}
         data-testid={dataTestId}
         id={id}
-        onClick={openable ? () => setIsDropdownVisible(!isDropdownVisible) : undefined}
+        onClick={
+          openable
+            ? () => {
+                setIsDropdownVisible(!isDropdownVisible)
+              }
+            : undefined
+        }
         onKeyDown={event => {
           if (event.key === 'ArrowDown') {
             if (isDropdownVisible) {
@@ -219,7 +225,7 @@ const SelectBar = ({
             nonOverflowedValues={nonOverflowedValues}
             overflow={overflow}
             overflowAmount={overflowAmount}
-            overflowed={!!overflowAmount}
+            overflowed={Boolean(overflowAmount)}
             potentiallyNonOverflowedValues={potentiallyNonOverflowedValues}
             readOnly={readOnly}
             refPlusTag={refPlusTag}

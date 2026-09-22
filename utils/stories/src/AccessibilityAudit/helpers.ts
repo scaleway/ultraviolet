@@ -1,5 +1,5 @@
 import { WCAG_PRINCIPLES } from './constants'
-import type { ComponentStoryParameters, ComponentA11yStatus, AuditCategories, A11yLevel } from './types'
+import type { A11yLevel, AuditCategories, ComponentA11yStatus, ComponentStoryParameters } from './types'
 
 export const getComponentA11yStatus = (parameters: ComponentStoryParameters): ComponentA11yStatus => {
   if (!parameters?.a11yStatus) {

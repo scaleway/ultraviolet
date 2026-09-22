@@ -75,7 +75,9 @@ export const FiltersMainRow = <V extends AnyObject>({
           size={filterSize}
           directionContext="row"
           key={configItem.name}
-          onChange={value => handleMainFilterChange(configItem.name, value)}
+          onChange={value => {
+            handleMainFilterChange(configItem.name, value)
+          }}
           customComponents={components}
         />
       ))}

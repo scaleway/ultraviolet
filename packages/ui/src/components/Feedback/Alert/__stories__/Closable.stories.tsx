@@ -6,7 +6,9 @@ Closable.args = {
   buttonText: 'More info',
   children: 'This is a closable alert',
   closable: true,
-  onClickButton: () => alert('Button clicked'),
+  onClickButton: () => {
+    alert('Button clicked')
+  },
   sentiment: 'info',
   title: 'Information',
 }

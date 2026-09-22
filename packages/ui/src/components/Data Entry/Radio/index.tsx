@@ -80,7 +80,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
             aria-disabled={disabled}
             className={cn(className, radioStyle.container[size])}
             data-checked={checked}
-            data-invalid={!!error}
+            data-invalid={Boolean(error)}
             data-testid={dataTestId}
           >
             <input

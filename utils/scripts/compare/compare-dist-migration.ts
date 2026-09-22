@@ -5,7 +5,7 @@
 // oxlint-disable import/no-nodejs-modules
 
 import { createHash } from 'node:crypto'
-import fs, { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
+import fs, { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs'
 import { dirname, join, relative, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -71,7 +71,7 @@ function generateManifest(outputFile: string): void {
   console.log(`Generating manifest for ${packages.length} packages...`)
 
   const manifest: Manifest = {
-    packages: {} as Record<string, PackageInfo>,
+    packages: {},
     timestamp: new Date().toISOString(),
     vite_version: '8.0.0-beta.2',
   }

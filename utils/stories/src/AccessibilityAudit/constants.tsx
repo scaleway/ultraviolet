@@ -1,8 +1,8 @@
 import {
+  InformationOutlineIcon,
+  ProgressCheckIcon,
   SettingsOutlineIcon,
   ShieldCheckOutlineIcon,
-  ProgressCheckIcon,
-  InformationOutlineIcon,
 } from '@ultraviolet/icons'
 import { Text } from '@ultraviolet/ui'
 import type { A11yLevel, A11yLevelInfo } from './types'

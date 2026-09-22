@@ -10,7 +10,9 @@ export const Sentiments = (props: ComponentProps<typeof Alert>) =>
       key={sentiment}
       {...props}
       buttonText="More info"
-      onClickButton={() => alert('Button clicked')}
+      onClickButton={() => {
+        alert('Button clicked')
+      }}
       sentiment={sentiment}
       title={`${sentiment.charAt(0).toUpperCase() + sentiment.slice(1)} title`}
     >

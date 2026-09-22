@@ -17,7 +17,7 @@ export const Ellipsis = ({
 }) => {
   const { isOverlay } = useOverlay()
   // eslint-disable-next-line @typescript-eslint/no-base-to-string
-  const text = Children.toArray(children).join('').toString()
+  const text = Children.toArray(children).join('')
 
   return (
     <div data-testid={dataTestId} style={{ display: isOverlay ? undefined : 'inline-flex' }}>

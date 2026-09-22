@@ -213,6 +213,7 @@ describe('double slider', () => {
     expect(sliderRight.value).toBe('10')
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('handles correctly onChange custom scale double', () => {
     const onChange: (value: number[]) => void = vi.fn()
 

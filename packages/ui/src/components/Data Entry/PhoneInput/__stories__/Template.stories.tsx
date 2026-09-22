@@ -5,7 +5,15 @@ import { PhoneInput } from '..'
 export const Template: StoryFn<typeof PhoneInput> = ({ ...args }) => {
   const [value, setValue] = useState<string | undefined>(args.value)
 
-  return <PhoneInput {...args} onChange={event => setValue(event.target.value)} value={value} />
+  return (
+    <PhoneInput
+      {...args}
+      onChange={event => {
+        setValue(event.target.value)
+      }}
+      value={value}
+    />
+  )
 }
 
 Template.args = {

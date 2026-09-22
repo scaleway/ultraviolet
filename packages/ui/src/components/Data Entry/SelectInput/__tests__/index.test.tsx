@@ -2,9 +2,9 @@ import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { useState } from 'react'
-import { describe, expect, it, vi, afterEach, beforeEach } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { SelectInput } from '..'
-import { cities, dataGroupEmpty, dataGrouped, dataUnGrouped, OptionalInfo, dataGroupedSmall } from './resources'
+import { OptionalInfo, cities, dataGroupEmpty, dataGrouped, dataGroupedSmall, dataUnGrouped } from './resources'
 
 describe('selectInput', () => {
   beforeEach(() => {
@@ -691,6 +691,7 @@ describe('selectInput', () => {
 
     expect(dropdown).not.toBeVisible()
   })
+
   it('handles click on item', async () => {
     const onChange = vi.fn()
 
@@ -770,6 +771,7 @@ describe('selectInput', () => {
     await userEvent.click(earth)
     await userEvent.click(earth)
   })
+
   it('renders with onChange - multiselect', async () => {
     renderWithTheme(
       <SelectInput
@@ -922,10 +924,14 @@ describe('selectInput', () => {
     const jupiter = screen.getByText('Jupiter')
     const earth = screen.getByText('Earth')
     await userEvent.keyboard('e')
-    await waitFor(() => expect(jupiter).toBeVisible())
+    await waitFor(() => {
+      expect(jupiter).toBeVisible()
+    })
 
     await userEvent.keyboard('ea')
-    await waitFor(() => expect(earth).toBeVisible())
+    await waitFor(() => {
+      expect(earth).toBeVisible()
+    })
     await waitFor(() => {
       expect(screen.queryByText('jupiter')).not.toBeVisible()
     })
@@ -1331,6 +1337,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
@@ -1347,6 +1354,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
@@ -1363,6 +1371,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
@@ -1379,6 +1388,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row"', async () => {
     renderWithTheme(
       <SelectInput
@@ -1394,6 +1404,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row"', async () => {
     renderWithTheme(
       <SelectInput
@@ -1414,6 +1425,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column"', async () => {
     renderWithTheme(
       <SelectInput
@@ -1434,6 +1446,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column"', async () => {
     renderWithTheme(
       <SelectInput
@@ -1455,6 +1468,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('renders correctly loading - grouped data', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput

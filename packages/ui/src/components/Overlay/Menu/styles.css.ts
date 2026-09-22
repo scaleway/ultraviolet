@@ -166,38 +166,38 @@ const item = recipe({
   },
 })
 
-ITEM_SENTIMENT.map(sentiment =>
+ITEM_SENTIMENT.forEach(sentiment => {
   globalStyle(`${item({ borderless: false, disabled: false, sentiment })} > svg`, {
     fill: theme.colors[sentiment].text,
-  }),
-)
+  })
+})
 
-ITEM_SENTIMENT.map(sentiment =>
+ITEM_SENTIMENT.forEach(sentiment => {
   globalStyle(`${item({ borderless: false, disabled: true, sentiment })} > svg`, {
     fill: theme.colors[sentiment].textDisabled,
-  }),
-)
+  })
+})
 
-ITEM_SENTIMENT.map(sentiment =>
+ITEM_SENTIMENT.forEach(sentiment => {
   globalStyle(
     `${item({ borderless: false, disabled: false, sentiment })}:hover, ${item({ borderless: false, disabled: false, sentiment })}:focus-visible, ${item({ borderless: false, disabled: false, sentiment })}[data-active="true"] > svg, ${item({ borderless: true, disabled: false, sentiment })}:hover, ${item({ borderless: true, disabled: false, sentiment })}:focus-visible, ${item({ borderless: true, disabled: false, sentiment })}[data-active="true"] > svg`,
     {
       fill: theme.colors[sentiment].textHover,
     },
-  ),
-)
+  )
+})
 
-ITEM_SENTIMENT.map(sentiment =>
+ITEM_SENTIMENT.forEach(sentiment => {
   globalStyle(`${item({ borderless: true, disabled: false, sentiment })} > svg`, {
     fill: theme.colors[sentiment].text,
-  }),
-)
+  })
+})
 
-ITEM_SENTIMENT.map(sentiment =>
+ITEM_SENTIMENT.forEach(sentiment => {
   globalStyle(`${item({ borderless: true, disabled: true, sentiment })} > svg`, {
     fill: theme.colors[sentiment].textDisabled,
-  }),
-)
+  })
+})
 
 export const menuStyle = {
   menu,

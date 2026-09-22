@@ -3,71 +3,79 @@ import { describe, it } from 'vitest'
 import { Stack } from '..'
 
 describe('stack', () => {
-  it('should render correctly with default props', () =>
+  it('should render correctly with default props', () => {
     shouldMatchSnapshot(
       <Stack>
         <div>first child</div>
         <div>second child</div>
         <div>third child</div>
       </Stack>,
-    ))
+    )
+  })
 
-  it('should render correctly with row direction', () =>
+  it('should render correctly with row direction', () => {
     shouldMatchSnapshot(
       <Stack direction="row">
         <div>first child</div>
         <div>second child</div>
         <div>third child</div>
       </Stack>,
-    ))
+    )
+  })
 
-  it('should render correctly with alignCenter', () =>
+  it('should render correctly with alignCenter', () => {
     shouldMatchSnapshot(
       <Stack alignItems="center" direction="row">
         <div>first child</div>
         <div>second child</div>
       </Stack>,
-    ))
+    )
+  })
 
-  it('should render correctly with wrap as boolean', () =>
+  it('should render correctly with wrap as boolean', () => {
     shouldMatchSnapshot(
       <Stack direction="row" wrap>
         <div>first child</div>
         <div>second child</div>
       </Stack>,
-    ))
+    )
+  })
 
-  it('should render correctly with wrap as string', () =>
+  it('should render correctly with wrap as string', () => {
     shouldMatchSnapshot(
       <Stack direction="row" wrap="wrap-reverse">
         <div>first child</div>
         <div>second child</div>
       </Stack>,
-    ))
+    )
+  })
 
-  it('should render correctly with width 100%', () =>
+  it('should render correctly with width 100%', () => {
     shouldMatchSnapshot(
       <Stack width="100%">
         <div>first child</div>
         <div>second child</div>
       </Stack>,
-    ))
+    )
+  })
 
-  it('should render correctly max width 100%', () =>
+  it('should render correctly max width 100%', () => {
     shouldMatchSnapshot(
       <Stack maxWidth="100%">
         <div>first child</div>
         <div>second child</div>
       </Stack>,
-    ))
+    )
+  })
 
-  it('should render correctly min width 100%', () =>
+  it('should render correctly min width 100%', () => {
     shouldMatchSnapshot(
       <Stack minWidth="100%">
         <div>first child</div>
         <div>second child</div>
       </Stack>,
-    ))
+    )
+  })
 
   it('should render different direction and gap on different viewport sizes', () => {
     shouldMatchSnapshot(

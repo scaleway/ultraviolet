@@ -5,7 +5,9 @@ export const Button = Template.bind({})
 Button.args = {
   buttonText: 'More info',
   children: 'This is an alert content.',
-  onClickButton: () => alert('Button clicked'),
+  onClickButton: () => {
+    alert('Button clicked')
+  },
   sentiment: 'info',
   title: 'Information',
 }

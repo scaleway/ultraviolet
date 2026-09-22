@@ -18,7 +18,12 @@ export const Playground: StoryFn<typeof Popover> = args => {
       title="Popover Title"
       visible={opened}
     >
-      <Button onClick={() => setOpened(true)} sentiment="neutral">
+      <Button
+        onClick={() => {
+          setOpened(true)
+        }}
+        sentiment="neutral"
+      >
         Open Popover
       </Button>
     </Popover>

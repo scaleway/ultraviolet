@@ -14,7 +14,9 @@ export const AutoFocus: StoryFn = props => (
         placeholder="placeholder"
         ref={ref => {
           if (ref) {
-            setTimeout(() => ref?.focus(), 1)
+            setTimeout(() => {
+              ref?.focus()
+            }, 1)
           }
         }}
       />

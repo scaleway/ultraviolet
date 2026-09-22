@@ -3,39 +3,43 @@ import { describe, it } from 'vitest'
 import { Row } from '..'
 
 describe('row', () => {
-  it('renders correctly with default props', () =>
+  it('renders correctly with default props', () => {
     shouldMatchSnapshot(
       <Row templateColumns="repeat(2, 1fr)">
         <div>First col</div>
         <div>Second col</div>
       </Row>,
-    ))
+    )
+  })
 
-  it('renders correctly with specific gap', () =>
+  it('renders correctly with specific gap', () => {
     shouldMatchSnapshot(
       <Row gap={1} templateColumns="repeat(2, 1fr)">
         <div>First col</div>
         <div>Second col</div>
       </Row>,
-    ))
+    )
+  })
 
-  it('renders correctly with specific align', () =>
+  it('renders correctly with specific align', () => {
     shouldMatchSnapshot(
       <Row alignItems="center" gap={1} templateColumns="repeat(2, 1fr)">
         <div>First col</div>
         <div>Second col</div>
       </Row>,
-    ))
+    )
+  })
 
-  it('renders correctly with specific padding', () =>
+  it('renders correctly with specific padding', () => {
     shouldMatchSnapshot(
       <Row gap={1} padding="10px" templateColumns="repeat(2, 1fr)">
         <div>First col</div>
         <div>Second col</div>
       </Row>,
-    ))
+    )
+  })
 
-  it('renders correctly with responsive values', () =>
+  it('renders correctly with responsive values', () => {
     shouldMatchSnapshot(
       <Row
         alignItems={{
@@ -59,5 +63,6 @@ describe('row', () => {
         <div>First col</div>
         <div>Second col</div>
       </Row>,
-    ))
+    )
+  })
 })

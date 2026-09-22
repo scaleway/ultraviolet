@@ -14,8 +14,8 @@ const makeCSSVariablesRec = (
 
   const finalCSSValue = typeof innerValue === 'string' ? innerValue.replace(/;+$/u, '') : innerValue
   const formattedInnerKey = innerKey
-    .replace(/([A-Z])/gu, '-$1')
-    .replace(/\./gu, '-')
+    .replaceAll(/([A-Z])/gu, '-$1')
+    .replaceAll('.', '-')
     .toLowerCase() // Replace caps and dots by dashes, convert to kebab-case
 
   return `    --${prefix}-${formattedKey}-${formattedInnerKey}: ${finalCSSValue};\n`
@@ -25,8 +25,8 @@ const createCssVariables = (prefix: string, obj: object) =>
   Object.entries(obj)
     .map(([key, value]: [string, string | object]) => {
       const formattedKey = key
-        .replace(/([A-Z])/gu, '-$1')
-        .replace(/\./gu, '-')
+        .replaceAll(/([A-Z])/gu, '-$1')
+        .replaceAll('.', '-')
         .toLowerCase()
 
       if (typeof value === 'object' && value !== null) {

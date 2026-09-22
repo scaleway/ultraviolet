@@ -2,11 +2,11 @@
 
 import type { Box as NivoBox, ValueFormat } from '@nivo/core'
 import { ResponsiveLine } from '@nivo/line'
-import type { LineSvgProps, Point, LineSeries, AllowedValue } from '@nivo/line'
+import type { AllowedValue, LineSeries, LineSvgProps, Point } from '@nivo/line'
 import type { ScaleSpec } from '@nivo/scales'
 import { theme } from '@ultraviolet/themes'
 import { useEffect, useState } from 'react'
-import type { ComponentProps, CSSProperties } from 'react'
+import type { CSSProperties, ComponentProps } from 'react'
 import { getLegendColor } from '../../../../helpers/legend'
 import { getNivoTheme } from '../../../../helpers/nivoTheme'
 import { CustomLegend } from './CustomLegend'
@@ -77,7 +77,7 @@ export const LineChart = ({
     datasets: data?.map(d => ({
       data: d.data,
       id: d.id,
-      label: d?.['label'],
+      label: d?.label,
     })),
   }
 

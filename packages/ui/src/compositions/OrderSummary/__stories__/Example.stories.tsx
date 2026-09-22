@@ -41,10 +41,20 @@ export const Example: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
       currency="EUR"
       footer={
         <Stack gap="1">
-          <Checkbox checked={checked} onChange={() => setChecked(!checked)}>
+          <Checkbox
+            checked={checked}
+            onChange={() => {
+              setChecked(!checked)
+            }}
+          >
             I have read and accept Bare Metal specific conditions and macOS License Agreement
           </Checkbox>
-          <Button disabled={!checked} onClick={() => alert('clicked')}>
+          <Button
+            disabled={!checked}
+            onClick={() => {
+              alert('clicked')
+            }}
+          >
             Create
           </Button>
           <Text as="span" prominence="weak" sentiment="neutral" variant="bodySmall">

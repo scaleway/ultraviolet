@@ -1,5 +1,5 @@
 import type { XOR } from '@scaleway/types'
-import type { ComponentProps, CSSProperties } from 'react'
+import type { CSSProperties, ComponentProps } from 'react'
 import type { Button } from '../../Action/Button'
 import type { SelectInput } from '../SelectInput'
 import type { TextInput } from '../TextInput'

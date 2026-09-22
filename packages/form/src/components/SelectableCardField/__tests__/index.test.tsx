@@ -1,6 +1,6 @@
 import { act, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { describe, expect, vi, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { SelectableCardField } from '../..'
 import { renderWithForm } from '../../../__tests__/helpers'
 
@@ -55,11 +55,15 @@ describe('selectableCardField', () => {
       </SelectableCardField>,
     )
     const input = screen.getByRole('radio', { hidden: true })
-    act(() => input.focus())
+    act(() => {
+      input.focus()
+    })
     expect(onFocus).toHaveBeenCalledOnce()
     await userEvent.click(input)
     expect(onChange).toHaveBeenCalledOnce()
-    act(() => input.blur())
+    act(() => {
+      input.blur()
+    })
     expect(onBlur).toHaveBeenCalledOnce()
 
     expect(asFragment()).toMatchSnapshot()

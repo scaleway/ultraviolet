@@ -9,11 +9,21 @@ export const UpdateChildren: StoryFn<ComponentProps<typeof SwitchButton>> = () =
 
   return (
     <>
-      <button onClick={() => setFirstCount(current => (current === 1 ? 10_000_000 : 1))} type="button">
+      <button
+        onClick={() => {
+          setFirstCount(current => (current === 1 ? 10_000_000 : 1))
+        }}
+        type="button"
+      >
         Change children size
       </button>
 
-      <SwitchButton onChange={event => setValue(event.target.value)} value={value}>
+      <SwitchButton
+        onChange={event => {
+          setValue(event.target.value)
+        }}
+        value={value}
+      >
         <SwitchButton.Option value="1">Button {firstCount}</SwitchButton.Option>
         <SwitchButton.Option value="2">Button</SwitchButton.Option>
       </SwitchButton>

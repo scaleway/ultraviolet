@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { memo, useCallback, useEffect, useId, useMemo, useState } from 'react'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import type { CSSProperties, ComponentProps, ReactNode } from 'react'
 import type { Text } from '../../../components/Typography/Text'
 import { maximumFractionDigits, maximumFractionDigitsLong, multiplier } from '../constants'
 import { useEstimateCost } from '../EstimateCostProvider'
@@ -215,7 +215,9 @@ export const Item = memo(
     const [amount, setAmount] = useState(currentAmount)
     const [isVariant, setIsVariant] = useState(false)
 
-    useEffect(() => setAmount(currentAmount), [setAmount, currentAmount])
+    useEffect(() => {
+      setAmount(currentAmount)
+    }, [setAmount, currentAmount])
     useEffect(() => onAmountChange?.(amount), [onAmountChange, amount])
 
     const itemCallback = useCallback(

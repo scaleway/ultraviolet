@@ -21,12 +21,15 @@ vi.mock('@nivo/core', async importOriginal => {
 })
 
 describe('lineChart', () => {
-  it('renders correctly without data', () => shouldMatchSnapshot(<LineChart xScale={{ type: 'linear' }} />)) // default xScale type (time) triggers test failure !?!
+  it('renders correctly without data', () => {
+    shouldMatchSnapshot(<LineChart xScale={{ type: 'linear' }} />)
+  }) // default xScale type (time) triggers test failure !?!
 
-  it('renders correctly with data', () =>
-    shouldMatchSnapshot(<LineChart data={lineChartData} xScale={{ type: 'linear' }} />))
+  it('renders correctly with data', () => {
+    shouldMatchSnapshot(<LineChart data={lineChartData} xScale={{ type: 'linear' }} />)
+  })
 
-  it('renders correctly with data transformer', () =>
+  it('renders correctly with data transformer', () => {
     shouldMatchSnapshot(
       <LineChart
         axisFormatters={{
@@ -35,9 +38,10 @@ describe('lineChart', () => {
         data={lineChartData}
         xScale={{ type: 'linear' }}
       />,
-    ))
+    )
+  })
 
-  it('renders correctly with point formatter', () =>
+  it('renders correctly with point formatter', () => {
     shouldMatchSnapshot(
       <LineChart
         data={lineChartData}
@@ -47,16 +51,20 @@ describe('lineChart', () => {
         }}
         xScale={{ type: 'linear' }}
       />,
-    ))
+    )
+  })
 
-  it('renders correctly with detailed legend', () =>
-    shouldMatchSnapshot(<LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />))
+  it('renders correctly with detailed legend', () => {
+    shouldMatchSnapshot(<LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />)
+  })
 
-  it('renders correctly with timeline data', () =>
-    shouldMatchSnapshot(<LineChart data={lineChartHoursData} withLegend xScale={{ type: 'linear' }} />))
+  it('renders correctly with timeline data', () => {
+    shouldMatchSnapshot(<LineChart data={lineChartHoursData} withLegend xScale={{ type: 'linear' }} />)
+  })
 
-  it('renders correctly with multiple series', () =>
-    shouldMatchSnapshot(<LineChart data={lineChartMultipleData} withLegend xScale={{ type: 'linear' }} />))
+  it('renders correctly with multiple series', () => {
+    shouldMatchSnapshot(<LineChart data={lineChartMultipleData} withLegend xScale={{ type: 'linear' }} />)
+  })
 
   // oxlint-disable-next-line vitest/no-disabled-tests
   it.skip('renders correctly when chart is hovered', async () => {
@@ -72,7 +80,7 @@ describe('lineChart', () => {
 
   it('renders correctly when legend is deselected', () => {
     const { asFragment } = renderWithTheme(<LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />)
-    const id = `label-${lineChartData[0].id.toString()}`
+    const id = `label-${lineChartData[0].id}`
     fireEvent.click(screen.getByTestId(id))
     expect(asFragment()).toMatchSnapshot()
   })

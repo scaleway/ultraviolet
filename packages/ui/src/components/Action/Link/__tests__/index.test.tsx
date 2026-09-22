@@ -17,43 +17,47 @@ const MockNextLink = forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HT
 MockNextLink.displayName = 'MockNextLink'
 
 describe('link', () => {
-  it('render correctly with no sentiment', () => shouldMatchSnapshot(<Link href="/">Hello</Link>))
+  it('render correctly with no sentiment', () => {
+    shouldMatchSnapshot(<Link href="/">Hello</Link>)
+  })
 
   describe('sentiment', () => {
-    it.each(['primary', 'info'].map(sentiment => [`render ${sentiment}`, sentiment]))('%s', (_, sentiment) =>
+    it.each(['primary', 'info'].map(sentiment => [`render ${sentiment}`, sentiment]))('%s', (_, sentiment) => {
       shouldMatchSnapshot(
         <Link href="/" sentiment={sentiment as 'primary' | 'info'}>
           Hello
         </Link>,
-      ),
-    )
+      )
+    })
   })
 
   describe('prominence', () => {
-    it.each(PROMINENCES.map(prominence => [`render prominence ${prominence}`, prominence]))('%s', (_, prominence) =>
+    it.each(PROMINENCES.map(prominence => [`render prominence ${prominence}`, prominence]))('%s', (_, prominence) => {
       shouldMatchSnapshot(
         <Link href="/" prominence={prominence}>
           Hello
         </Link>,
-      ),
-    )
+      )
+    })
   })
 
-  it('render correctly with target blank', () =>
+  it('render correctly with target blank', () => {
     shouldMatchSnapshot(
       <Link href="/" target="_blank">
         Hello
       </Link>,
-    ))
+    )
+  })
 
-  it('render correctly prop primary', () =>
+  it('render correctly prop primary', () => {
     shouldMatchSnapshot(
       <Link href="/" sentiment="primary">
         Hello
       </Link>,
-    ))
+    )
+  })
 
-  it('render correctly with href props', () =>
+  it('render correctly with href props', () => {
     shouldMatchSnapshot(
       <>
         <Link href="/" iconPosition="left">
@@ -69,17 +73,19 @@ describe('link', () => {
           Hello
         </Link>
       </>,
-    ))
+    )
+  })
 
-  it('render correctly with bad sentiment', () =>
+  it('render correctly with bad sentiment', () => {
     shouldMatchSnapshot(
       // @ts-expect-error Use a wrong sentiment
       <Link href="/" sentiment="wrong">
         Hello
       </Link>,
-    ))
+    )
+  })
 
-  it('render correctly with sizes', () =>
+  it('render correctly with sizes', () => {
     shouldMatchSnapshot(
       <>
         <Link href="/" size="large">
@@ -94,27 +100,30 @@ describe('link', () => {
           Hello
         </Link>
       </>,
-    ))
+    )
+  })
 
-  it('render correctly with oneLine', () =>
+  it('render correctly with oneLine', () => {
     shouldMatchSnapshot(
       <div style={{ marginBottom: 16, marginTop: 8, width: 200 }}>
         <Link href="/" oneLine>
           Hello this is a very long text that should be truncated
         </Link>
       </div>,
-    ))
+    )
+  })
 
   describe('render prop', () => {
     describe('element form', () => {
-      it('render correctly with render prop', () =>
+      it('render correctly with render prop', () => {
         shouldMatchSnapshot(
           <Link render={<MockNextLink href="/about" />} sentiment="primary">
             About
           </Link>,
-        ))
+        )
+      })
 
-      it('render correctly with render prop and different sentiments', () =>
+      it('render correctly with render prop and different sentiments', () => {
         shouldMatchSnapshot(
           <>
             <Link render={<MockNextLink href="/about" />} sentiment="primary">
@@ -124,9 +133,10 @@ describe('link', () => {
               Info
             </Link>
           </>,
-        ))
+        )
+      })
 
-      it('render correctly with render prop and sizes', () =>
+      it('render correctly with render prop and sizes', () => {
         shouldMatchSnapshot(
           <>
             <Link render={<MockNextLink href="/about" />} size="large">
@@ -139,7 +149,8 @@ describe('link', () => {
               XSmall
             </Link>
           </>,
-        ))
+        )
+      })
 
       it('merges className correctly with render prop', () => {
         renderWithTheme(
@@ -185,12 +196,13 @@ describe('link', () => {
     })
 
     describe('function form', () => {
-      it('render correctly with render function', () =>
+      it('render correctly with render function', () => {
         shouldMatchSnapshot(
           <Link render={props => <MockNextLink {...props} href="/about" />} sentiment="primary">
             About
           </Link>,
-        ))
+        )
+      })
 
       it('passes props to render function', () => {
         renderWithTheme(

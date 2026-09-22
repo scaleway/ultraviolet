@@ -57,7 +57,9 @@ export const SelectableColumn: StoryFn = () => {
               <Checkbox
                 checked={getAllState(incidentNotifications)}
                 id="incident"
-                onChange={() => selectAll(setIndicentNotifications)}
+                onChange={() => {
+                  selectAll(setIndicentNotifications)
+                }}
               >
                 <Text as="span" htmlFor="incident" variant="bodySmall">
                   Incident notifications
@@ -71,7 +73,9 @@ export const SelectableColumn: StoryFn = () => {
                 <Checkbox
                   checked={getAllState(technicalNotifications)}
                   id="technical"
-                  onChange={() => selectAll(setTechnicalNotifications)}
+                  onChange={() => {
+                    selectAll(setTechnicalNotifications)
+                  }}
                 >
                   <Text as="span" htmlFor="technical" variant="bodySmall">
                     Technical notifications
@@ -82,7 +86,12 @@ export const SelectableColumn: StoryFn = () => {
           },
           {
             label: (
-              <Checkbox checked={getAllState(billingNotifications)} onChange={() => selectAll(setBillingNotifications)}>
+              <Checkbox
+                checked={getAllState(billingNotifications)}
+                onChange={() => {
+                  selectAll(setBillingNotifications)
+                }}
+              >
                 <Text as="span" variant="bodySmall">
                   Billing notifications
                 </Text>

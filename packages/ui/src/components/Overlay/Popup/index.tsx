@@ -25,7 +25,7 @@ import type {
 } from 'react'
 import { createPortal } from 'react-dom'
 import { isClientSide } from '../../../helpers/isClientSide'
-import { computePositions, DEFAULT_POSITIONS } from './helpers'
+import { DEFAULT_POSITIONS, computePositions } from './helpers'
 import type { PopupAlign, PopupPlacement } from './helpers'
 import { popupStyle } from './styles.css'
 import {
@@ -590,7 +590,6 @@ export const Popup = forwardRef(
         {renderChildren()}
         {shouldRender
           ? createPortal(
-              // oxlint-disable-next-line jsx_a11y/no-static-element-interactions
               <div
                 className={cn(
                   className,
@@ -625,7 +624,7 @@ export const Popup = forwardRef(
               >
                 <div
                   className={popupStyle.container({
-                    hasMaxHeight: !!maxHeight,
+                    hasMaxHeight: Boolean(maxHeight),
                   })}
                   style={assignInlineVars({
                     [maxHeightPopup]: typeof maxHeight === 'number' ? `${maxHeight}px` : maxHeight,

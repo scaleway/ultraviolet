@@ -25,7 +25,7 @@ export const Example: StoryFn = args => {
         return -1 * orderMultiplicator
       }
       if (a[currentOrder.columnId] > b[currentOrder.columnId]) {
-        return Number(orderMultiplicator)
+        return orderMultiplicator
       }
 
       return 0
@@ -39,13 +39,17 @@ export const Example: StoryFn = args => {
         {
           isOrdered: currentOrder.columnId === 'name',
           label: 'Solar system Planet',
-          onOrder: newOrder => setCurrentOrder({ columnId: 'name', order: newOrder }),
+          onOrder: newOrder => {
+            setCurrentOrder({ columnId: 'name', order: newOrder })
+          },
           orderDirection: currentOrder.order,
         },
         {
           isOrdered: currentOrder.columnId === 'perihelion',
           label: 'Perihelion',
-          onOrder: newOrder => setCurrentOrder({ columnId: 'perihelion', order: newOrder }),
+          onOrder: newOrder => {
+            setCurrentOrder({ columnId: 'perihelion', order: newOrder })
+          },
           orderDirection: currentOrder.order,
           width: '200px',
         },

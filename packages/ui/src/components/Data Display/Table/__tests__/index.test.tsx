@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { theme as defaultTheme, ThemeProvider } from '@ultraviolet/themes'
+import { ThemeProvider, theme as defaultTheme } from '@ultraviolet/themes'
 import { renderWithTheme } from '@utils/test'
 import { useState } from 'react'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'

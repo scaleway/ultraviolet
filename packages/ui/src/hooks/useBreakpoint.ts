@@ -41,17 +41,23 @@ export const useBreakpoints = <T extends string>(
       return
     }
 
-    const update = (width: number) => setCurrent(getActive(width, breakpointsRef.current))
+    const update = (width: number) => {
+      setCurrent(getActive(width, breakpointsRef.current))
+    }
 
     if (typeof ResizeObserver === 'undefined') {
       update(element.getBoundingClientRect().width)
       return
     }
 
-    const observer = new ResizeObserver(([entry]) => update(entry.contentRect.width))
+    const observer = new ResizeObserver(([entry]) => {
+      update(entry.contentRect.width)
+    })
     observer.observe(element)
 
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+    }
   }, [ref])
 
   return current

@@ -3,7 +3,7 @@ import { describe, it } from 'vitest'
 import { PasswordCheck } from '..'
 
 describe('passwordCheck', () => {
-  it('render with custom values', () =>
+  it('render with custom values', () => {
     shouldMatchSnapshot(
       <PasswordCheck
         rules={[
@@ -19,5 +19,6 @@ describe('passwordCheck', () => {
           },
         ]}
       />,
-    ))
+    )
+  })
 })

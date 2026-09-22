@@ -5,29 +5,34 @@ import { describe, expect, it } from 'vitest'
 import { GlobalAlert } from '..'
 
 describe('globalAlert', () => {
-  it('renders correctly with default values', () => shouldMatchSnapshot(<GlobalAlert>Simple GlobalAlert</GlobalAlert>))
+  it('renders correctly with default values', () => {
+    shouldMatchSnapshot(<GlobalAlert>Simple GlobalAlert</GlobalAlert>)
+  })
 
-  it('renders correctly with children as component', () =>
-    shouldMatchSnapshot(<GlobalAlert>Sample GlobalAlert</GlobalAlert>))
+  it('renders correctly with children as component', () => {
+    shouldMatchSnapshot(<GlobalAlert>Sample GlobalAlert</GlobalAlert>)
+  })
 
-  it('renders correctly with buttonText and onClickButton', () =>
+  it('renders correctly with buttonText and onClickButton', () => {
     shouldMatchSnapshot(
       <GlobalAlert buttonText="Button" onClickButton={() => 'ok'}>
         Sample GlobalAlert
       </GlobalAlert>,
-    ))
+    )
+  })
 
-  it('renders correctly with closable and onClose', () =>
+  it('renders correctly with closable and onClose', () => {
     shouldMatchSnapshot(
       <GlobalAlert closable onClose={() => 'ok'}>
         Sample GlobalAlert
       </GlobalAlert>,
-    ))
+    )
+  })
 
   describe('renders correctly with all variants', () => {
-    it.each(['info', 'danger', 'promotional'] as const)(`renders correctly variant %s`, variant =>
-      shouldMatchSnapshot(<GlobalAlert variant={variant}>Sample GlobalAlert</GlobalAlert>),
-    )
+    it.each(['info', 'danger', 'promotional'] as const)(`renders correctly variant %s`, variant => {
+      shouldMatchSnapshot(<GlobalAlert variant={variant}>Sample GlobalAlert</GlobalAlert>)
+    })
   })
 
   it('should render GlobalAlert and then close it', async () => {
@@ -48,12 +53,13 @@ describe('globalAlert', () => {
     })
   })
 
-  it('renders correctly with link', () =>
+  it('renders correctly with link', () => {
     shouldMatchSnapshot(
       <GlobalAlert buttonText="button">
         This is a&nbsp;
         <GlobalAlert.Link href="scaleway.com">Global Alert</GlobalAlert.Link>
         &nbsp; link
       </GlobalAlert>,
-    ))
+    )
+  })
 })

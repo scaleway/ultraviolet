@@ -110,7 +110,9 @@ export const PinnedItems = ({ toggle = true, onReorder, onToggle, itemWrapper, s
                       className={navigationStyle.pinnedItemDropableArea}
                       onDragLeave={onDragLeave}
                       onDragOver={onDragOver}
-                      onDrop={event => onDrop(event, index)}
+                      onDrop={event => {
+                        onDrop(event, index)
+                      }}
                     />
                     {itemWrapper ? itemWrapper(itemElement, itemId) : itemElement}
                   </div>
@@ -132,7 +134,9 @@ export const PinnedItems = ({ toggle = true, onReorder, onToggle, itemWrapper, s
               className={navigationStyle.pinnedItemDropableArea}
               onDragLeave={onDragLeave}
               onDragOver={onDragOver}
-              onDrop={event => onDrop(event, pinnedItems.length)}
+              onDrop={event => {
+                onDrop(event, pinnedItems.length)
+              }}
             />
           </div>
         </Item>

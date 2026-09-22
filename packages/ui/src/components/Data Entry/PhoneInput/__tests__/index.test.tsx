@@ -1,6 +1,6 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, expectNoViolations } from '@utils/test'
+import { expectNoViolations, renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { PhoneInput } from '..'
 
@@ -182,7 +182,9 @@ describe('ui - PhoneInput', () => {
     const input = screen.getByPlaceholderText<HTMLInputElement>('Enter phone number')
     await userEvent.type(input, '0612345678')
 
-    await waitFor(() => expect(input.value).toBe('+33 6 12 34 56 78'))
+    await waitFor(() => {
+      expect(input.value).toBe('+33 6 12 34 56 78')
+    })
     await expectNoViolations(container)
     expect(onValueChange).toHaveBeenCalled()
     expect(onValueChange).toHaveBeenCalledWith({

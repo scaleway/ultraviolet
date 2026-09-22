@@ -10,7 +10,12 @@ export const Expandable: StoryFn<typeof List> = props => {
 
   return (
     <Stack gap={1}>
-      <Button onClick={() => setExpanded(!expanded)} sentiment="primary">
+      <Button
+        onClick={() => {
+          setExpanded(!expanded)
+        }}
+        sentiment="primary"
+      >
         {expanded ? 'Collapse' : 'Expand'} all row
       </Button>
       <List {...props} colMode="strict" columns={columns} expandable>

@@ -219,7 +219,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
           placeholder={placeholderSearch}
           portalTarget={portalTarget}
           refSelect={ref}
-          searchable={numberOfOptions >= 6 || !!addOption}
+          searchable={numberOfOptions >= 6 || Boolean(addOption)}
           size={size}
         >
           <Stack aria-label={ariaLabel} gap={0.5}>

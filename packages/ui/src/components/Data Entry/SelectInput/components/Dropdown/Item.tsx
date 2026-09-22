@@ -53,12 +53,12 @@ export const Item = ({
   return (
     <Tooltip containerFullWidth text={option.tooltip}>
       <div
-        aria-disabled={!!option.disabled}
+        aria-disabled={Boolean(option.disabled)}
         aria-label={option.value}
         aria-selected={selectedData.selectedValues.includes(option.value) && !option.disabled}
         className={cn(
           selectInputStyle.dropdownItem({
-            disabled: !!option.disabled,
+            disabled: Boolean(option.disabled),
             size,
             selected: selectedData.selectedValues.includes(option.value) && !option.disabled,
           }),

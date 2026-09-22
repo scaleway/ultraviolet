@@ -15,11 +15,19 @@ export const PlacementAuto: StoryFn<typeof Popover> = args => {
     <Popover
       {...args}
       content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-      onClose={() => setOpened(false)}
+      onClose={() => {
+        setOpened(false)
+      }}
       title="Popover Title"
       visible={opened}
     >
-      <Button onClick={() => setOpened(true)} sentiment="neutral" ref={btnRef}>
+      <Button
+        onClick={() => {
+          setOpened(true)
+        }}
+        sentiment="neutral"
+        ref={btnRef}
+      >
         Open Popover
       </Button>
     </Popover>

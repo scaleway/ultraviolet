@@ -20,7 +20,13 @@ export const Controlled: StoryFn<typeof TimeInput> = args => {
           value={value24}
         />
         Time: {value24?.toString()}
-        <Button onClick={() => setValue24(new Date('01/01/2000 12:34:56'))}>set time to 12:34:56</Button>
+        <Button
+          onClick={() => {
+            setValue24(new Date('01/01/2000 12:34:56'))
+          }}
+        >
+          set time to 12:34:56
+        </Button>
       </Stack>
       <Stack gap={1}>
         <TimeInput

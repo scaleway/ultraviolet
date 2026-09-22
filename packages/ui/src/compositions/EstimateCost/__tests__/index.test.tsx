@@ -10,131 +10,146 @@ describe('estimateCost - index', () => {
   afterEach(() => {
     resetIntersectionMocking()
   })
-  it('render isBeta without discount', () =>
+
+  it('render isBeta without discount', () => {
     shouldMatchSnapshot(
       <EstimateCost isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render isBeta with discount', () =>
+  it('render isBeta with discount', () => {
     shouldMatchSnapshot(
       <EstimateCost discount={0.5} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render isBeta with discount more than 100%', () =>
+  it('render isBeta with discount more than 100%', () => {
     shouldMatchSnapshot(
       <EstimateCost discount={2} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render isBeta with discount equal to 100%', () =>
+  it('render isBeta with discount equal to 100%', () => {
     shouldMatchSnapshot(
       <EstimateCost discount={1} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with discount 100% but no isBeta', () =>
+  it('render with discount 100% but no isBeta', () => {
     shouldMatchSnapshot(
       <EstimateCost discount={1}>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with isBeta but undefined discount', () =>
+  it('render with isBeta but undefined discount', () => {
     shouldMatchSnapshot(
       <EstimateCost discount={undefined} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with isBeta, price, discount 50%', () =>
+  it('render with isBeta, price, discount 50%', () => {
     shouldMatchSnapshot(
       <EstimateCost discount={0.5} isBeta>
         <EstimateCost.Item label="Test" price={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with item discount 50%', () =>
+  it('render with item discount 50%', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item discount={0.5} label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with item discount 50% and text', () =>
+  it('render with item discount 50% and text', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item discount={0.5} discountText="Nice discount" label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with item discount 50% and defaultTimeUnit months', () =>
+  it('render with item discount 50% and defaultTimeUnit months', () => {
     shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="months">
         <EstimateCost.Item discount={0.5} label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with all timeUnits values', () =>
+  it('render with all timeUnits values', () => {
     shouldMatchSnapshot(
       <EstimateCost timeUnits={['seconds', 'minutes', 'hours', 'days', 'months']}>
         <EstimateCost.Item label="Test">
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with discount 1, isBeta and defaultTimeUnit months', () =>
+  it('render with discount 1, isBeta and defaultTimeUnit months', () => {
     shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="months" discount={1} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with discount 1 and defaultTimeUnit months', () =>
+  it('render with discount 1 and defaultTimeUnit months', () => {
     shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="months" discount={1}>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with discount 0 and defaultTimeUnit months', () =>
+  it('render with discount 0 and defaultTimeUnit months', () => {
     shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="months" discount={0}>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
   it('render with isBeta, discount 0 and defaultTimeUnit months', () => {
     const { asFragment } = renderWithTheme(
@@ -225,57 +240,65 @@ describe('estimateCost - index', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('render compact', () =>
+  it('render compact', () => {
     shouldMatchSnapshot(
       <EstimateCost compact defaultTimeUnit="months" discount={0} backgroundProminence="strong">
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with alert variant', () =>
+  it('render with alert variant', () => {
     shouldMatchSnapshot(
       <EstimateCost alertVariant="danger">
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with hideOverlay', () =>
+  it('render with hideOverlay', () => {
     shouldMatchSnapshot(
       <EstimateCost hideOverlay>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with disableOverlayLeft', () =>
+  it('render with disableOverlayLeft', () => {
     shouldMatchSnapshot(
       <EstimateCost disableOverlayLeft>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
-  it('render with disableOverlayRight', () =>
+    )
+  })
+
+  it('render with disableOverlayRight', () => {
     shouldMatchSnapshot(
       <EstimateCost disableOverlayRight>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
-  it('render with overlayUnit', () =>
+    )
+  })
+
+  it('render with overlayUnit', () => {
     shouldMatchSnapshot(
       <EstimateCost overlayUnit="days">
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
   it('render with custom locales', () => {
     const customLocales = {

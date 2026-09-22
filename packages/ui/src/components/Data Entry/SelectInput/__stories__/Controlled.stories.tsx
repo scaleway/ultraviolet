@@ -23,14 +23,18 @@ export const Controlled: StoryFn<typeof SelectInput> = () => {
       <SelectInput
         multiselect={false}
         name="single"
-        onChange={value => setValueSingle(value)}
+        onChange={value => {
+          setValueSingle(value)
+        }}
         options={dataUnGrouped}
         value={valueSingle}
       />
       <SelectInput
         multiselect
         name="multi"
-        onChange={value => setValueMulti(value)}
+        onChange={value => {
+          setValueMulti(value)
+        }}
         options={dataUnGrouped}
         value={valueMulti}
       />

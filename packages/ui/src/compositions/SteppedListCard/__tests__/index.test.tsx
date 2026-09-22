@@ -8,7 +8,7 @@ import { SteppedListCard } from '..'
 import { blockStorageWire } from '../__mocks__/blockStorageWire'
 
 describe('steppedListCard', () => {
-  it('should work with default props', () =>
+  it('should work with default props', () => {
     shouldMatchSnapshot(
       <SteppedListCard
         header={<h1>Header</h1>}
@@ -25,9 +25,10 @@ describe('steppedListCard', () => {
           Description step 2
         </SteppedListCard.Step>
       </SteppedListCard>,
-    ))
+    )
+  })
 
-  it('should hide the toggle button', () =>
+  it('should hide the toggle button', () => {
     shouldMatchSnapshot(
       <SteppedListCard header={<h1>Header</h1>} showToggleOption={false} steps={['step1', 'step2']}>
         <SteppedListCard.Step image={blockStorageWire} stepNumber={1} subHeader="First step">
@@ -37,9 +38,10 @@ describe('steppedListCard', () => {
           Description step 2
         </SteppedListCard.Step>
       </SteppedListCard>,
-    ))
+    )
+  })
 
-  it('should work with step icon', () =>
+  it('should work with step icon', () => {
     shouldMatchSnapshot(
       <SteppedListCard
         header={<h1>Header</h1>}
@@ -53,11 +55,18 @@ describe('steppedListCard', () => {
           Description step 2
         </SteppedListCard.Step>
       </SteppedListCard>,
-    ))
+    )
+  })
 
-  it('should work with custom hide action', () =>
+  it('should work with custom hide action', () => {
     shouldMatchSnapshot(
-      <SteppedListCard header="Header" onClickHide={() => console.log('test')} steps={['step1', 'step2']}>
+      <SteppedListCard
+        header="Header"
+        onClickHide={() => {
+          console.log('test')
+        }}
+        steps={['step1', 'step2']}
+      >
         <SteppedListCard.Step image={blockStorageWire} stepNumber={1} subHeader={<h1>First step</h1>}>
           Description
         </SteppedListCard.Step>
@@ -65,16 +74,28 @@ describe('steppedListCard', () => {
           Description step 2
         </SteppedListCard.Step>
       </SteppedListCard>,
-    ))
+    )
+  })
 
   it('should handle checked steps and navigation', async () => {
     renderWithTheme(
-      <SteppedListCard header="Header" onClickHide={() => console.log('test')} steps={['step1', 'step2']}>
+      <SteppedListCard
+        header="Header"
+        onClickHide={() => {
+          console.log('test')
+        }}
+        steps={['step1', 'step2']}
+      >
         <SteppedListCard.Step data-testid="step1id" image={blockStorageWire} stepNumber={1} subHeader="step1title">
           {nextStep => (
             <>
               step1desc{' '}
-              <button onClick={() => nextStep(true)} type="button">
+              <button
+                onClick={() => {
+                  nextStep(true)
+                }}
+                type="button"
+              >
                 step1 button next
               </button>
             </>
@@ -84,7 +105,12 @@ describe('steppedListCard', () => {
           {nextStep => (
             <>
               <p data-testid="step2desc">step2desc</p>
-              <button onClick={() => nextStep()} type="button">
+              <button
+                onClick={() => {
+                  nextStep()
+                }}
+                type="button"
+              >
                 step2 button next
               </button>
             </>
@@ -94,7 +120,12 @@ describe('steppedListCard', () => {
           {nextStep => (
             <>
               <p data-testid="step3desc">step3desc</p>
-              <button onClick={() => nextStep(false)} type="button">
+              <button
+                onClick={() => {
+                  nextStep(false)
+                }}
+                type="button"
+              >
                 step3 button next
               </button>
             </>
@@ -126,12 +157,23 @@ describe('steppedListCard', () => {
 
   it('should handle custom hide button', async () => {
     renderWithTheme(
-      <SteppedListCard header="Header" onClickHide={() => console.log('hide clicked')} steps={['step1', 'step2']}>
+      <SteppedListCard
+        header="Header"
+        onClickHide={() => {
+          console.log('hide clicked')
+        }}
+        steps={['step1', 'step2']}
+      >
         <SteppedListCard.Step data-testid="step1id" image={blockStorageWire} stepNumber={1} subHeader="step1title">
           {nextStep => (
             <>
               step1desc
-              <button onClick={() => nextStep(true)} type="button">
+              <button
+                onClick={() => {
+                  nextStep(true)
+                }}
+                type="button"
+              >
                 step1 button next
               </button>
             </>
@@ -141,7 +183,12 @@ describe('steppedListCard', () => {
           {nextStep => (
             <>
               <p data-testid="step2desc">step2desc</p>
-              <button onClick={() => nextStep(false)} type="button">
+              <button
+                onClick={() => {
+                  nextStep(false)
+                }}
+                type="button"
+              >
                 step2 button next
               </button>
             </>
@@ -171,7 +218,12 @@ describe('steppedListCard', () => {
           {nextStep => (
             <>
               step1desc
-              <button onClick={() => nextStep(true)} type="button">
+              <button
+                onClick={() => {
+                  nextStep(true)
+                }}
+                type="button"
+              >
                 step1 button next
               </button>
             </>
@@ -181,7 +233,12 @@ describe('steppedListCard', () => {
           {nextStep => (
             <>
               <p data-testid="step2desc">step2desc</p>
-              <button onClick={() => nextStep(false)} type="button">
+              <button
+                onClick={() => {
+                  nextStep(false)
+                }}
+                type="button"
+              >
                 step2 button next
               </button>
             </>
@@ -205,7 +262,7 @@ describe('steppedListCard', () => {
     expect(content).not.toBeInTheDocument()
   })
 
-  it('should work with pre-completed step', () =>
+  it('should work with pre-completed step', () => {
     shouldMatchSnapshot(
       <SteppedListCard header={<h1>Header</h1>} steps={['step1', 'step2']}>
         <SteppedListCard.Step image={blockStorageWire} stepNumber={1} subHeader="First step">
@@ -215,5 +272,6 @@ describe('steppedListCard', () => {
           Description step 2
         </SteppedListCard.Step>
       </SteppedListCard>,
-    ))
+    )
+  })
 })

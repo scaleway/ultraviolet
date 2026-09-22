@@ -14,23 +14,33 @@ export const Examples: StoryFn<typeof TextInput> = args => {
       <TextInput
         {...args}
         label="With prefix"
-        onChange={event => setValue(event.target.value)}
+        onChange={event => {
+          setValue(event.target.value)
+        }}
         prefix="https://"
         value={value}
       />
       <TextInput
         {...args}
         label="Text input with random hook"
-        onChange={event => setValue(event.target.value)}
-        onRandomize={() => setValue(randomName())}
+        onChange={event => {
+          setValue(event.target.value)
+        }}
+        onRandomize={() => {
+          setValue(randomName())
+        }}
         prefix="https://"
         value={value}
       />
       <TextInput
         {...args}
         label="Password input with random hook"
-        onChange={event => setValue(event.target.value)}
-        onRandomize={() => setValue(randomName())}
+        onChange={event => {
+          setValue(event.target.value)
+        }}
+        onRandomize={() => {
+          setValue(randomName())
+        }}
         prefix="https://"
         type="password"
         value={value}
@@ -40,8 +50,12 @@ export const Examples: StoryFn<typeof TextInput> = args => {
         clearable
         label="All at once"
         loading
-        onChange={event => setValue(event.target.value)}
-        onRandomize={() => setValue(randomName())}
+        onChange={event => {
+          setValue(event.target.value)
+        }}
+        onRandomize={() => {
+          setValue(randomName())
+        }}
         prefix="https://"
         success="Field has been updated!"
         suffix=".com"
@@ -53,8 +67,12 @@ export const Examples: StoryFn<typeof TextInput> = args => {
         helper="Notice to fill the field"
         label="With an helper but disabled"
         loading
-        onChange={event => setValue(event.target.value)}
-        onRandomize={() => setValue(randomName())}
+        onChange={event => {
+          setValue(event.target.value)
+        }}
+        onRandomize={() => {
+          setValue(randomName())
+        }}
         value={value}
       />
       <TextInput
@@ -69,8 +87,12 @@ export const Examples: StoryFn<typeof TextInput> = args => {
         }
         label="Complex helper"
         loading
-        onChange={event => setValue(event.target.value)}
-        onRandomize={() => setValue(randomName())}
+        onChange={event => {
+          setValue(event.target.value)
+        }}
+        onRandomize={() => {
+          setValue(randomName())
+        }}
         value={value}
       />
     </Stack>

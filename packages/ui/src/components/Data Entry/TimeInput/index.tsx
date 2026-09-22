@@ -29,7 +29,7 @@ export type Time = {
   period?: string
 }
 
-type TimeInputProps = BaseFormComponentProps<HTMLInputElement> & {
+type TimeInputProps = BaseFormComponentProps & {
   placeholder?: Time
   readOnly?: boolean
   value?: Date | null
@@ -240,7 +240,7 @@ export const TimeInput = ({
         aria-required={required}
         className={timeInputStyle.wrapper({
           disabled,
-          error: !!error,
+          error: Boolean(error),
           readOnly,
           size,
         })}
@@ -374,7 +374,9 @@ export const TimeInput = ({
                   }
                 }
               }}
-              onClick={event => event.stopPropagation()}
+              onClick={event => {
+                event.stopPropagation()
+              }}
               onKeyDown={event => {
                 if (!isEditable) {
                   if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
@@ -397,7 +399,7 @@ export const TimeInput = ({
         {error || clearable ? (
           <RightIcon
             clearable={clearable}
-            error={!!error}
+            error={Boolean(error)}
             isEditable={isEditable}
             onChange={onChange}
             setTime={setTime}

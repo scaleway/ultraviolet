@@ -20,9 +20,31 @@ export const Example: StoryFn<typeof Stepper> = args => {
             </Stack>
           }
         />
-        <Stepper.Step onClick={index => (selected > 2 ? setStep(index) : null)} title="Create" />
-        <Stepper.Step onClick={index => (selected > 3 ? setStep(index) : null)} title="Continue" />
-        <Stepper.Step onClick={index => (selected > 4 ? setStep(index) : null)} title="Last step" />
+        <Stepper.Step
+          onClick={index => {
+            if (selected > 2) {
+              setStep(index)
+            }
+          }}
+          title="Create"
+        />
+        <Stepper.Step
+          onClick={index => {
+            if (selected > 3) {
+              setStep(index)
+            }
+          }}
+
+          title="Continue"
+        />
+        <Stepper.Step
+          onClick={index => {
+            if (selected > 4) {
+              setStep(index)
+            }
+          }}
+          title="Last step"
+        />
         <Stepper.Step onClick={index => (selected > 5 ? setStep(index) : null)} title="Done" />
       </Stepper>
 
@@ -31,7 +53,15 @@ export const Example: StoryFn<typeof Stepper> = args => {
       ) : (
         <Stack width="30%">
           Current index: {selected}
-          <Button onClick={() => (selected < 5 ? setStep(selected + 1) : null)}>Next step</Button>
+          <Button
+            onClick={() => {
+              if (selected < 5) {
+                setStep(selected + 1)
+              }
+            }}
+          >
+            Next step
+          </Button>
         </Stack>
       )}
     </Stack>

@@ -53,11 +53,13 @@ export const CustomLegend = ({
               <Checkbox
                 checked={selected.includes(labelIndexed)}
                 name={id}
-                onChange={() => setSelected([...getSelected(id, index, selected)])}
+                onChange={() => {
+                  setSelected([...getSelected(id, index, selected)])
+                }}
               >
                 <div className={lineChartStyle.cellValueContainer}>
                   <Text as="span" sentiment="neutral" variant="bodySmall">
-                    {row?.['label']}
+                    {row?.label}
                   </Text>
                   <div
                     className={lineChartStyle.legend}

@@ -13,7 +13,9 @@ export const Disabled: StoryFn = args => {
         checked={value === 'label-7'}
         label="Radio Left"
         name="label-7"
-        onChange={event => onChange(event.currentTarget.value)}
+        onChange={event => {
+          onChange(event.currentTarget.value)
+        }}
         type="radio"
         value="label-7"
       />
@@ -23,7 +25,9 @@ export const Disabled: StoryFn = args => {
         disabled
         label="Radio Right"
         name="label-8"
-        onChange={event => onChange(event.currentTarget.value)}
+        onChange={event => {
+          onChange(event.currentTarget.value)
+        }}
         type="radio"
         value="label-8"
       />

@@ -76,7 +76,9 @@ const planAdvanced = {
 
 export const Selectable: StoryFn<ComponentProps<typeof Plans>> = ({ ...props }) => {
   const [value, setValue] = useState('advanced')
-  const onChange = (newValue?: string) => setValue(newValue ?? 'advanced')
+  const onChange = (newValue?: string) => {
+    setValue(newValue ?? 'advanced')
+  }
 
   return <Plans {...props} fieldName="plans" onChange={onChange} value={value} />
 }

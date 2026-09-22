@@ -39,23 +39,25 @@ describe('button', () => {
           await userEvent.hover(screen.getByRole('button'))
           expect(asFragment).toMatchSnapshot()
         })
-        it(`render ${variant}&${sentiment} disabled`, () =>
+
+        it(`render ${variant}&${sentiment} disabled`, () => {
           shouldMatchSnapshot(
             <Button disabled onClick={MockOnClick} sentiment={sentiment} variant={variant}>
               Hello
             </Button>,
-          ))
+          )
+        })
       })
     })
   })
 
-  it.each(buttonSizes)(`render %s`, size =>
+  it.each(buttonSizes)(`render %s`, size => {
     shouldMatchSnapshot(
       <Button onClick={MockOnClick} size={size}>
         Hello
       </Button>,
-    ),
-  )
+    )
+  })
 
   it('work with onPointerDown and onKeyDown', async () => {
     const onPointerDown = vi.fn()
@@ -80,72 +82,81 @@ describe('button', () => {
     expect(asFragment).toMatchSnapshot()
   })
 
-  it('render with icon', () =>
+  it('render with icon', () => {
     shouldMatchSnapshot(
       <Button disabled onClick={MockOnClick}>
         <PencilIcon />
         Hello
       </Button>,
-    ))
+    )
+  })
 
-  it('render with icon on the right', () =>
+  it('render with icon on the right', () => {
     shouldMatchSnapshot(
       <Button disabled onClick={MockOnClick}>
         Hello
         <PencilIcon />
       </Button>,
-    ))
+    )
+  })
 
-  it('render with icon only', () =>
+  it('render with icon only', () => {
     shouldMatchSnapshot(
       <Button disabled onClick={MockOnClick}>
         <PencilOutlineIcon />
       </Button>,
-    ))
+    )
+  })
 
-  it('render with fullWidth', () =>
+  it('render with fullWidth', () => {
     shouldMatchSnapshot(
       <Button fullWidth onClick={MockOnClick}>
         Hello
       </Button>,
-    ))
+    )
+  })
 
-  it('render with isLoading without icon', () =>
+  it('render with isLoading without icon', () => {
     shouldMatchSnapshot(
       <Button isLoading onClick={MockOnClick}>
         Hello
       </Button>,
-    ))
+    )
+  })
 
-  it('render with isLoading with icon', () =>
+  it('render with isLoading with icon', () => {
     shouldMatchSnapshot(
       <Button isLoading onClick={MockOnClick}>
         <PencilIcon />
         Hello
       </Button>,
-    ))
+    )
+  })
 
-  it('render with isLoading with icon variant', () =>
+  it('render with isLoading with icon variant', () => {
     shouldMatchSnapshot(
       <Button onClick={MockOnClick}>
         <PencilOutlineIcon />
         Hello
       </Button>,
-    ))
+    )
+  })
 
-  it('render as an anchor with href prop', () =>
+  it('render as an anchor with href prop', () => {
     shouldMatchSnapshot(
       <Button href="http://scaleway.com" onClick={MockOnClick}>
         Scaleway
       </Button>,
-    ))
+    )
+  })
 
-  it('render with a tooltip', () =>
+  it('render with a tooltip', () => {
     shouldMatchSnapshot(
       <Button onClick={MockOnClick} tooltip="Hello world !">
         Hello
       </Button>,
-    ))
+    )
+  })
 
   describe('tooltipLabel and tooltipDescription', () => {
     it('renders tooltipLabel as the accessible name (label relation)', () => {
@@ -225,10 +236,11 @@ describe('button', () => {
 
   describe('render prop', () => {
     describe('element form', () => {
-      it('render correctly with render prop', () =>
-        shouldMatchSnapshot(<Button render={<MockNextLink href="/about" />}>About</Button>))
+      it('render correctly with render prop', () => {
+        shouldMatchSnapshot(<Button render={<MockNextLink href="/about" />}>About</Button>)
+      })
 
-      it('render correctly with render prop and different variants', () =>
+      it('render correctly with render prop and different variants', () => {
         shouldMatchSnapshot(
           <>
             <Button render={<MockNextLink href="/about" />} variant="filled">
@@ -241,9 +253,10 @@ describe('button', () => {
               Ghost
             </Button>
           </>,
-        ))
+        )
+      })
 
-      it('render correctly with render prop and different sentiments', () =>
+      it('render correctly with render prop and different sentiments', () => {
         shouldMatchSnapshot(
           <>
             <Button render={<MockNextLink href="/about" />} sentiment="primary">
@@ -256,9 +269,10 @@ describe('button', () => {
               Neutral
             </Button>
           </>,
-        ))
+        )
+      })
 
-      it('render correctly with render prop and sizes', () =>
+      it('render correctly with render prop and sizes', () => {
         shouldMatchSnapshot(
           <>
             <Button render={<MockNextLink href="/about" />} size="large">
@@ -271,7 +285,8 @@ describe('button', () => {
               Small
             </Button>
           </>,
-        ))
+        )
+      })
 
       it('merges className correctly with render prop', () => {
         renderWithTheme(
@@ -314,17 +329,19 @@ describe('button', () => {
         expect(onClick).toHaveBeenCalledOnce()
       })
 
-      it('render correctly with render prop and fullWidth', () =>
+      it('render correctly with render prop and fullWidth', () => {
         shouldMatchSnapshot(
           <Button fullWidth render={<MockNextLink href="/about" />}>
             About
           </Button>,
-        ))
+        )
+      })
     })
 
     describe('function form', () => {
-      it('render correctly with render function', () =>
-        shouldMatchSnapshot(<Button render={props => <MockNextLink {...props} href="/about" />}>About</Button>))
+      it('render correctly with render function', () => {
+        shouldMatchSnapshot(<Button render={props => <MockNextLink {...props} href="/about" />}>About</Button>)
+      })
 
       it('passes props to render function', () => {
         renderWithTheme(

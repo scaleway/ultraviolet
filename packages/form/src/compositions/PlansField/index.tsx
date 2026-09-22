@@ -36,7 +36,7 @@ export const PlansField = <
           onChange(value)
         }
       }}
-      value={field.value as string | undefined}
+      value={field.value}
     />
   )
 }

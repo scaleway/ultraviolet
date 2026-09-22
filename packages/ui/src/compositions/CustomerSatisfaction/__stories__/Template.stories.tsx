@@ -8,7 +8,13 @@ export const Template: StoryFn<ComponentProps<typeof CustomerSatisfaction>> = pr
 
   return (
     <div>
-      <CustomerSatisfaction {...props} onChange={rating => setValue(rating)} value={value} />
+      <CustomerSatisfaction
+        {...props}
+        onChange={rating => {
+          setValue(rating)
+        }}
+        value={value}
+      />
     </div>
   )
 }

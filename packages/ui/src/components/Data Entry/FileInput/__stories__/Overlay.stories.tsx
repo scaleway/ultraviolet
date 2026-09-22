@@ -27,7 +27,13 @@ const Prompt = ({
         <UploadIcon />
       </Button>
       <TextInput className={promptInput} helper="this is an helper" placeholder="Placeholder" size="medium" />
-      <Button onClick={() => setFiles([])} sentiment="neutral" size="medium">
+      <Button
+        onClick={() => {
+          setFiles([])
+        }}
+        sentiment="neutral"
+        size="medium"
+      >
         <RebootIcon />
       </Button>
       <Button sentiment="primary" size="medium">
@@ -52,7 +58,9 @@ export const Overlay: StoryFn<typeof FileInput> = args => {
         aria-label="prompt"
         defaultFiles={files}
         multiple
-        onChangeFiles={newFiles => setFiles(newFiles)}
+        onChangeFiles={newFiles => {
+          setFiles(newFiles)
+        }}
         title={
           <Stack alignItems="center" direction="row" gap={1} justifyContent="center">
             <UploadIcon /> Drag file to this area to upload

@@ -5,7 +5,7 @@ import { describe, it } from 'vitest'
 import { Carousel } from '..'
 
 describe('carousel', () => {
-  it('renders correctly with default props', () =>
+  it('renders correctly with default props', () => {
     shouldMatchSnapshot(
       <Carousel>
         <Carousel.Item>Item 1</Carousel.Item>
@@ -15,7 +15,8 @@ describe('carousel', () => {
         <Carousel.Item>Item 5</Carousel.Item>
         <Carousel.Item>Item 6</Carousel.Item>
       </Carousel>,
-    ))
+    )
+  })
 
   it('check hover state on scrollbar', async () => {
     renderWithTheme(

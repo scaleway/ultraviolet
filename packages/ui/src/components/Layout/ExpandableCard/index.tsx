@@ -97,7 +97,9 @@ const BaseExpandableCard = forwardRef(
       [value],
     )
 
-    const onDragEnd = useCallback(() => setClicking(false), [])
+    const onDragEnd = useCallback(() => {
+      setClicking(false)
+    }, [])
 
     const onDrag = useCallback((event: DragEvent<HTMLDivElement>, borderColor: string, isFirst?: boolean) => {
       const refElement = isFirst ? draggableFirstRef : draggableRef
@@ -162,8 +164,12 @@ const BaseExpandableCard = forwardRef(
                 onKeyDown?.(event)
               }
             }}
-            onMouseDown={() => setClicking(true)}
-            onMouseUp={() => setClicking(false)}
+            onMouseDown={() => {
+              setClicking(true)
+            }}
+            onMouseUp={() => {
+              setClicking(false)
+            }}
           >
             <Tooltip
               text={draggableTooltip}
@@ -190,7 +196,7 @@ const BaseExpandableCard = forwardRef(
         >
           <summary
             className={expandableCardStyle.summary}
-            data-disabled={!!disabled}
+            data-disabled={Boolean(disabled)}
             data-testid={dataTestId ? `${dataTestId}-summary` : undefined}
             onClick={event => {
               if (disabled || onToggleExpand) {
@@ -225,9 +231,15 @@ const BaseExpandableCard = forwardRef(
           <div
             className={expandableCardStyle.dropableArea}
             data-first
-            onDragLeave={event => onDrag(event, 'transparent', true)}
-            onDragOver={event => onDrag(event, theme.colors.primary.border, true)}
-            onDrop={event => handleDrop(event, true)}
+            onDragLeave={event => {
+              onDrag(event, 'transparent', true)
+            }}
+            onDragOver={event => {
+              onDrag(event, theme.colors.primary.border, true)
+            }}
+            onDrop={event => {
+              handleDrop(event, true)
+            }}
             ref={draggableFirstRef}
           />
         ) : null}
@@ -235,8 +247,12 @@ const BaseExpandableCard = forwardRef(
           <div
             className={expandableCardStyle.dropableArea}
             data-testid={`${value}-dropable-area`}
-            onDragLeave={event => onDrag(event, 'transparent')}
-            onDragOver={event => onDrag(event, theme.colors.primary.border)}
+            onDragLeave={event => {
+              onDrag(event, 'transparent')
+            }}
+            onDragOver={event => {
+              onDrag(event, theme.colors.primary.border)
+            }}
             onDrop={handleDrop}
             ref={draggableRef}
           />

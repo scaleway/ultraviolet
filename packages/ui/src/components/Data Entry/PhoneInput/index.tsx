@@ -1,11 +1,11 @@
 'use client'
 
-import { parsePhoneNumber, getPhoneCountryFlag, getPhoneExample } from '@scaleway/phonenumber'
+import { getPhoneCountryFlag, getPhoneExample, parsePhoneNumber } from '@scaleway/phonenumber'
 import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
 import { cn } from '@ultraviolet/utils'
-import { useImperativeHandle, useId, useRef, useState, forwardRef, useCallback, useLayoutEffect } from 'react'
-import type { ChangeEvent, ComponentType, InputHTMLAttributes, ForwardedRef, Ref } from 'react'
+import { forwardRef, useCallback, useId, useImperativeHandle, useLayoutEffect, useRef, useState } from 'react'
+import type { ChangeEvent, ComponentType, ForwardedRef, InputHTMLAttributes, Ref } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import { Stack } from '../../Layout/Stack'
 import { Tooltip } from '../../Overlay/Tooltip'
@@ -179,13 +179,13 @@ export const PhoneInput: PhoneInputType = forwardRef(
             data-disabled={disabled}
             data-readonly={readOnly}
             data-success={success}
-            data-error={!!customError}
+            data-error={Boolean(customError)}
           >
             <Stack alignItems="center" className={phoneInputStyle.flag} data-disabled={disabled}>
               {getPhoneCountryFlag(countryFlag)}
             </Stack>
             <input
-              aria-invalid={!!error}
+              aria-invalid={Boolean(error)}
               aria-label={label ? undefined : ariaLabel}
               aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
               aria-labelledby={ariaLabelledBy}

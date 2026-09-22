@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 import { InfiniteScroll } from '..'
 import { Skeleton } from '../../../Feedback/Skeleton'
 import { Table as UVTable } from '../../Table'
-import { generateRandomNamesArray, TABLE_COLUMNS, TABLE_DATA } from './data'
+import { TABLE_COLUMNS, TABLE_DATA, generateRandomNamesArray } from './data'
 
 const ListLoader = () => (
   <>

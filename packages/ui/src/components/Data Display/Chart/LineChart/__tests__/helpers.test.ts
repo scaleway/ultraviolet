@@ -70,12 +70,15 @@ describe('line Chart', () => {
     it('should return the smallest value of integer values', () => {
       expect(getMinChartValue(chartValues)).toBe(4)
     })
+
     it('should return the smallest value of integer/float mix values', () => {
       expect(getMinChartValue(chartValuesFloat)).toBe(4)
     })
+
     it('should return 0 when there are no values', () => {
       expect(getMinChartValue(emptyValues)).toBe(0)
     })
+
     it('should return 0 when values are undefined', () => {
       expect(getMinChartValue(errorValues)).toBe(0)
     })
@@ -85,12 +88,15 @@ describe('line Chart', () => {
     it('should return the highest value of integer values', () => {
       expect(getMaxChartValue(chartValues)).toBe(21)
     })
+
     it('should return the highest value of integer/float mix values', () => {
       expect(getMaxChartValue(chartValuesFloat)).toBe(22)
     })
+
     it('should return 0 when there are no values', () => {
       expect(getMaxChartValue(emptyValues)).toBe(0)
     })
+
     it('should return 0 when values are undefined', () => {
       expect(getMaxChartValue(errorValues)).toBe(0)
     })
@@ -100,15 +106,19 @@ describe('line Chart', () => {
     it('should return the smallest value of integer values', () => {
       expect(getMin(values)).toBe(20)
     })
+
     it('should return the smallest value of integer/float mix values', () => {
       expect(getMin(valuesFloatMix)).toBe(19.1)
     })
+
     it('should return the smallest value of integer/float mix values as string', () => {
       expect(getMin(valuesString)).toBe(19.1)
     })
+
     it('should return 0 when there are no values', () => {
       expect(getMin(emptyValues)).toBe(0)
     })
+
     it('should return 0 when values are undefined', () => {
       expect(getMin(errorValues)).toBe(0)
     })
@@ -118,15 +128,19 @@ describe('line Chart', () => {
     it('should return the greatest value of integer values', () => {
       expect(getMax(values)).toBe(80)
     })
+
     it('should return the greatest value integer/float mix values', () => {
       expect(getMax(valuesFloatMix)).toBe(80.8)
     })
+
     it('should return the greatest value integer/float mix values as string', () => {
       expect(getMax(valuesString)).toBe(80.8)
     })
+
     it('should return 0 when there are no values', () => {
       expect(getMax(emptyValues)).toBe(0)
     })
+
     it('should return 0 when values are undefined', () => {
       expect(getMax(errorValues)).toBe(0)
     })
@@ -135,12 +149,15 @@ describe('line Chart', () => {
     it('should return the average value', () => {
       expect(getAverage(values)).toBe(48.4)
     })
+
     it('should return average when there are string values', () => {
       expect(getAverage(valuesString)).toBe(49)
     })
+
     it('should return 0 when there are no values', () => {
       expect(getAverage(emptyValues)).toBe(0)
     })
+
     it('should return 0 when values are undefined', () => {
       expect(getAverage(errorValues)).toBe(0)
     })
@@ -149,9 +166,11 @@ describe('line Chart', () => {
     it('should return the last value', () => {
       expect(getCurrent(values)).toBe(20)
     })
+
     it('should return 0 when there are no values', () => {
       expect(getCurrent(emptyValues)).toBe(0)
     })
+
     it('should return 0 when values are undefined', () => {
       expect(getCurrent(errorValues)).toBe(0)
     })
@@ -160,6 +179,7 @@ describe('line Chart', () => {
     it('should remove label already selected', () => {
       expect(getSelected('one', 0, ['one0', 'two1'])).toStrictEqual(['two1'])
     })
+
     it('should add label not selected', () => {
       expect(getSelected('two', 1, ['one0'])).toStrictEqual(['one0', 'two1'])
     })

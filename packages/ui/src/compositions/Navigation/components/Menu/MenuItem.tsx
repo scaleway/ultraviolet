@@ -50,7 +50,7 @@ export const ItemMenuItem = ({
       disabled={disabled}
       href={href}
       // pinnedFeature={pinnedFeature}
-      onClick={() => onToggle?.(!!active)}
+      onClick={() => onToggle?.(Boolean(active))}
       rel={rel}
       sentiment={active ? 'primary' : 'neutral'}
       style={style}
@@ -62,7 +62,7 @@ export const ItemMenuItem = ({
           className={navigationStyle.itemWrapText({
             disabled,
             animation,
-            weak: hasActiveChildren && !noExpand && !disabled && !!active,
+            weak: hasActiveChildren && !noExpand && !disabled && Boolean(active),
           })}
           variant="bodySmall"
           whiteSpace="pre-wrap"

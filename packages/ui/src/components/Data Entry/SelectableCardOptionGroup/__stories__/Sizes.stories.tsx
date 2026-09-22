@@ -18,8 +18,12 @@ export const Sizes: StoryFn<typeof SelectableCardOptionGroup> = args => {
         <SelectableCardOptionGroup
           {...args}
           legend={`${args.legend} (large)`}
-          onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
-          onChangeOption={(newValue: string) => onChangeOption(newValue)}
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+            onChange(event.currentTarget.value)
+          }}
+          onChangeOption={(newValue: string) => {
+            onChangeOption(newValue)
+          }}
           optionValue={option}
           size="large"
           value={value}
@@ -31,8 +35,12 @@ export const Sizes: StoryFn<typeof SelectableCardOptionGroup> = args => {
         <SelectableCardOptionGroup
           {...args}
           legend={`${args.legend} (medium)`}
-          onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
-          onChangeOption={(newValue: string) => onChangeOption(newValue)}
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+            onChange(event.currentTarget.value)
+          }}
+          onChangeOption={(newValue: string) => {
+            onChangeOption(newValue)
+          }}
           optionValue={option}
           size="medium"
           value={value}

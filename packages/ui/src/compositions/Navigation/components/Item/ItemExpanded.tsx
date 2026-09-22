@@ -58,7 +58,7 @@ export const ItemExpanded = ({
   const showPinIcon = !(noExpand || disabled) && shouldShowPinnedButton && pinnedFeature
   // This content is when the navigation is expanded
 
-  const shouldHaveWeakText = !!children && !active && shouldShowPinnedButton && !disabled
+  const shouldHaveWeakText = Boolean(children) && !active && shouldShowPinnedButton && !disabled
 
   const hasHrefAndNoChildren = href && !children
 
@@ -84,7 +84,11 @@ export const ItemExpanded = ({
   )
 
   const onDragEnd = useCallback(
-    (event: DragEvent<HTMLDivElement>) => (expanded ? onDragStopTrigger(event) : undefined),
+    (event: DragEvent<HTMLDivElement>) => {
+      if (expanded) {
+        onDragStopTrigger(event)
+      }
+    },
     [expanded, onDragStopTrigger],
   )
 
@@ -110,7 +114,7 @@ export const ItemExpanded = ({
           navigationStyle.itemContainer({
             disabled,
             hasActive: hasActiveChildren,
-            isActive: !!active,
+            isActive: Boolean(active),
             noExpand,
             expanding: animation === 'expand',
           }),

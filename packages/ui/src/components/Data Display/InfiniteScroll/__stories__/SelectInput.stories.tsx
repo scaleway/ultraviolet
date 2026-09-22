@@ -4,7 +4,7 @@ import { InfiniteScroll } from '..'
 import { SelectInput as SelectInputUV } from '../../../Data Entry/SelectInput'
 import { Skeleton } from '../../../Feedback/Skeleton'
 import { Stack } from '../../../Layout/Stack'
-import { generateRandomNamesArray, SELECT_INPUT_DATA } from './data'
+import { SELECT_INPUT_DATA, generateRandomNamesArray } from './data'
 import { infiniteScrollSelectInput } from './style.css'
 
 const InfiniteScrollLoader = (

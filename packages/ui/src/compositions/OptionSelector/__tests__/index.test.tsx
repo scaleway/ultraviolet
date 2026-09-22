@@ -13,7 +13,7 @@ const valueBoth = {
 const valueSecond = { second: franceOptions[0].value }
 
 describe('optionSelector', () => {
-  it('should work with default props', () =>
+  it('should work with default props', () => {
     shouldMatchSnapshot(
       <OptionSelector
         firstSelector={{
@@ -25,9 +25,10 @@ describe('optionSelector', () => {
           options: franceOptions,
         }}
       />,
-    ))
+    )
+  })
 
-  it('should work with direction vertical', () =>
+  it('should work with direction vertical', () => {
     shouldMatchSnapshot(
       <OptionSelector
         direction="vertical"
@@ -40,7 +41,8 @@ describe('optionSelector', () => {
           options: franceOptions,
         }}
       />,
-    ))
+    )
+  })
 
   it('should work without hideWhenEmpty', () => {
     const { asFragment } = renderWithTheme(
@@ -145,7 +147,7 @@ describe('optionSelector', () => {
     expect(asFragment).toMatchSnapshot()
   })
 
-  it('should work with disabled', () =>
+  it('should work with disabled', () => {
     shouldMatchSnapshot(
       <OptionSelector
         disabled
@@ -158,9 +160,10 @@ describe('optionSelector', () => {
           options: franceOptions,
         }}
       />,
-    ))
+    )
+  })
 
-  it('should work readonly', () =>
+  it('should work readonly', () => {
     shouldMatchSnapshot(
       <OptionSelector
         firstSelector={{
@@ -173,7 +176,8 @@ describe('optionSelector', () => {
           options: franceOptions,
         }}
       />,
-    ))
+    )
+  })
 
   it('should work with only one option', () => {
     const { asFragment } = renderWithTheme(

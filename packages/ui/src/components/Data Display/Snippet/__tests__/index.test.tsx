@@ -17,24 +17,33 @@ const TEST_VALUE_SINGLELINE =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 
 describe('snippet', () => {
-  it('renders correctly', () => shouldMatchSnapshot(<Snippet>{TEST_VALUE_SINGLELINE}</Snippet>))
+  it('renders correctly', () => {
+    shouldMatchSnapshot(<Snippet>{TEST_VALUE_SINGLELINE}</Snippet>)
+  })
 
-  it('renders correctly in multiline ', () => shouldMatchSnapshot(<Snippet>{TEST_VALUE_MULTILINE}</Snippet>))
+  it('renders correctly in multiline ', () => {
+    shouldMatchSnapshot(<Snippet>{TEST_VALUE_MULTILINE}</Snippet>)
+  })
 
-  it('renders correctly in multiline with prefix lines number', () =>
-    shouldMatchSnapshot(<Snippet prefix="lines">{TEST_VALUE_MULTILINE}</Snippet>))
+  it('renders correctly in multiline with prefix lines number', () => {
+    shouldMatchSnapshot(<Snippet prefix="lines">{TEST_VALUE_MULTILINE}</Snippet>)
+  })
 
-  it('renders correctly in multiline with prefix command', () =>
-    shouldMatchSnapshot(<Snippet prefix="command">{TEST_VALUE_MULTILINE}</Snippet>))
+  it('renders correctly in multiline with prefix command', () => {
+    shouldMatchSnapshot(<Snippet prefix="command">{TEST_VALUE_MULTILINE}</Snippet>)
+  })
 
-  it('renders correctly with single line with prefix command', () =>
-    shouldMatchSnapshot(<Snippet prefix="command">{TEST_VALUE_SINGLELINE}</Snippet>))
+  it('renders correctly with single line with prefix command', () => {
+    shouldMatchSnapshot(<Snippet prefix="command">{TEST_VALUE_SINGLELINE}</Snippet>)
+  })
 
-  it('renders correctly with single line with prefix lines number', () =>
-    shouldMatchSnapshot(<Snippet prefix="lines">{TEST_VALUE_SINGLELINE}</Snippet>))
+  it('renders correctly with single line with prefix lines number', () => {
+    shouldMatchSnapshot(<Snippet prefix="lines">{TEST_VALUE_SINGLELINE}</Snippet>)
+  })
 
-  it('renders correctly with copyText', () =>
-    shouldMatchSnapshot(<Snippet copyText="Test">{TEST_VALUE_SINGLELINE}</Snippet>))
+  it('renders correctly with copyText', () => {
+    shouldMatchSnapshot(<Snippet copyText="Test">{TEST_VALUE_SINGLELINE}</Snippet>)
+  })
 
   it('renders correctly with copiedText', () => {
     shouldMatchSnapshot(<Snippet copiedText="Test">{TEST_VALUE_SINGLELINE}</Snippet>)
@@ -72,15 +81,19 @@ describe('snippet', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('renders correctly with label ', () =>
-    shouldMatchSnapshot(<Snippet label="label">{TEST_VALUE_MULTILINE}</Snippet>))
+  it('renders correctly with label ', () => {
+    shouldMatchSnapshot(<Snippet label="label">{TEST_VALUE_MULTILINE}</Snippet>)
+  })
 
-  it('renders correctly with labelDescription', () =>
+  it('renders correctly with labelDescription', () => {
     shouldMatchSnapshot(
       <Snippet label="label" labelDescription={<InformationIcon size="small" />}>
         {TEST_VALUE_MULTILINE}
       </Snippet>,
-    ))
-  it('renders correctly with helper ', () =>
-    shouldMatchSnapshot(<Snippet helper="helper">{TEST_VALUE_MULTILINE}</Snippet>))
+    )
+  })
+
+  it('renders correctly with helper ', () => {
+    shouldMatchSnapshot(<Snippet helper="helper">{TEST_VALUE_MULTILINE}</Snippet>)
+  })
 })

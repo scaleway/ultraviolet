@@ -8,7 +8,9 @@ export const Template: StoryFn<typeof SelectableCardGroup> = args => {
   return (
     <SelectableCardGroup
       {...args}
-      onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
+      onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+        onChange(event.currentTarget.value)
+      }}
       value={value}
     >
       <SelectableCardGroup.Card label="Radio 1" value="value-1" />

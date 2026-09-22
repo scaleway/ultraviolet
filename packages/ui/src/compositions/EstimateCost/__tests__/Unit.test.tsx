@@ -34,16 +34,17 @@ describe('estimateCost - Unit Item', () => {
     )
   })
 
-  it('render basic props with values', () =>
+  it('render basic props with values', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item amount={100} amountFree={50} label="Storage" price={0.001} subLabel="50 GB Free" unit="GB">
           <EstimateCost.Unit unit="GB" />
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render basic props with values and no iteration', () =>
+  it('render basic props with values and no iteration', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
@@ -59,9 +60,10 @@ describe('estimateCost - Unit Item', () => {
           <EstimateCost.Unit unit="GB" />
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render test', () =>
+  it('render test', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
@@ -89,34 +91,38 @@ describe('estimateCost - Unit Item', () => {
           <EstimateCost.Unit unit="value" />
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render basic props with overlay', () =>
+  it('render basic props with overlay', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Unit" monthlyPrice={100}>
           <EstimateCost.Unit />
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with 0 amount', () =>
+  it('render with 0 amount', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item amount={0} label="Unit" price={10}>
           <EstimateCost.Unit />
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
-  it('render with 10 amount', () =>
+  it('render with 10 amount', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item amount={10} label="Unit" price={10}>
           <EstimateCost.Unit />
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
   it('render with value update', async () => {
     renderWithTheme(
@@ -128,10 +134,14 @@ describe('estimateCost - Unit Item', () => {
     )
 
     const input = screen.getAllByRole('spinbutton')[1] as HTMLInputElement
-    await waitFor(() => expect(input.value).toBe('1'))
+    await waitFor(() => {
+      expect(input.value).toBe('1')
+    })
     await userEvent.click(input)
     await userEvent.type(input, '0')
-    await waitFor(() => expect(input.value).toBe('10'))
+    await waitFor(() => {
+      expect(input.value).toBe('10')
+    })
   })
 
   it('render with negative value update', async () => {
@@ -144,18 +154,23 @@ describe('estimateCost - Unit Item', () => {
     )
 
     const input = screen.getAllByRole('spinbutton')[1] as HTMLInputElement
-    await waitFor(() => expect(input.value).toBe('1'))
+    await waitFor(() => {
+      expect(input.value).toBe('1')
+    })
     await userEvent.click(input)
     await userEvent.type(input, '{Control>}A{Delete}-1')
-    await waitFor(() => expect(input.value).toBe('0'))
+    await waitFor(() => {
+      expect(input.value).toBe('0')
+    })
   })
 
-  it('render with getAmountValue', () =>
+  it('render with getAmountValue', () => {
     shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Unit" monthlyPrice={100}>
           <EstimateCost.Unit getAmountValue={value => value} />
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 })

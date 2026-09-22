@@ -88,7 +88,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
     )
 
     const computedValue = value ?? localValue
-    const computedClearable = clearable && !!computedValue
+    const computedClearable = clearable && Boolean(computedValue)
 
     return (
       <Stack aria-atomic={ariaAtomic} aria-live={ariaLive} className={className} gap={0.5} role={role}>
@@ -107,13 +107,13 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
           <div
             className={cn(textInputStyle.inputWrapper, textInputStyle.inputWrapperSizes[size])}
             data-disabled={disabled}
-            data-error={!!error}
+            data-error={Boolean(error)}
             data-readonly={readOnly}
-            data-success={!!success}
+            data-success={Boolean(success)}
           >
             <PrefixSuffix content={prefix} disabled={disabled} size={size} type="prefix" />
             <input
-              aria-invalid={!!error}
+              aria-invalid={Boolean(error)}
               aria-label={ariaLabel}
               aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
               aria-labelledby={ariaLabelledBy}

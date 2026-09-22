@@ -1,5 +1,5 @@
 import { Button } from '@ultraviolet/ui'
-import { domain, fees, pipeline, gb, ssl } from '../__tests__/features'
+import { domain, fees, gb, pipeline, ssl } from '../__tests__/features'
 import { Template } from './Template.stories'
 
 const planStarter = {

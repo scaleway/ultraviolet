@@ -8,10 +8,14 @@ import { Button } from '../../Button'
 
 export const NestedExpandable: StoryFn<typeof Expandable> = args => {
   const [toggled, onToggle] = useState(false)
-  const toggle = () => onToggle(state => !state)
+  const toggle = () => {
+    onToggle(state => !state)
+  }
 
   const [toggledNested, onToggleNested] = useState(false)
-  const toggleNested = () => onToggleNested(state => !state)
+  const toggleNested = () => {
+    onToggleNested(state => !state)
+  }
 
   return (
     <>

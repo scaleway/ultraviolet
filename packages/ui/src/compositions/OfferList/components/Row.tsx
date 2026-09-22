@@ -6,7 +6,7 @@ import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Children, useCallback, useMemo, useState } from 'react'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import type { CSSProperties, ComponentProps, ReactNode } from 'react'
 import { Button } from '../../../components/Action/Button'
 import type { Badge as BadgeUV } from '../../../components/Badges/Badge'
 import { List } from '../../../components/Data Display/List'
@@ -128,7 +128,10 @@ export const Row = ({
     onChangeSelect?.(offerName)
   }
 
-  const offerListRowContextValue = useMemo(() => ({ selected: isSelected, banner: !!banner }), [isSelected, banner])
+  const offerListRowContextValue = useMemo(
+    () => ({ selected: isSelected, banner: Boolean(banner) }),
+    [isSelected, banner],
+  )
 
   return (
     <>
@@ -162,8 +165,12 @@ export const Row = ({
 
           onClick?.(localId)
         }}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+        onMouseEnter={() => {
+          setHovered(true)
+        }}
+        onMouseLeave={() => {
+          setHovered(false)
+        }}
         selectDisabled={selectDisabled}
         style={style}
       >

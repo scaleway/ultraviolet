@@ -9,7 +9,9 @@ describe('codeEditorField', () => {
 
     const textbox = screen.getByRole('textbox')
     expect(textbox).toBeVisible()
-    await waitFor(() => expect(textbox).toHaveAttribute('data-language', 'javascript'))
+    await waitFor(() => {
+      expect(textbox).toHaveAttribute('data-language', 'javascript')
+    })
 
     expect(asFragment()).toMatchSnapshot()
   })

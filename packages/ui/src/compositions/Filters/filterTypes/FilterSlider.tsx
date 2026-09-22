@@ -1,5 +1,5 @@
 import { Slider } from '../../../components/Data Entry/Slider'
-import type { FilterConfigItemSlider, FilterComponentProps } from '../types'
+import type { FilterComponentProps, FilterConfigItemSlider } from '../types'
 
 type FilterSliderProps = FilterComponentProps<number | number[], FilterConfigItemSlider>
 
@@ -18,9 +18,13 @@ export const FilterSlider = ({ value, onChange, config, hideLabel }: FilterSlide
     labelDescription: hideLabel ? undefined : config.labelDescription,
   }
 
-  if (config.double) {
-    return <Slider double {...sliderProps} value={value as number[]} />
+  if (config.double && typeof value !== 'number') {
+    return <Slider double {...sliderProps} value={value} />
   }
 
-  return <Slider {...sliderProps} value={value as number} />
+  if (config.double !== true && typeof value === 'number') {
+    return <Slider {...sliderProps} value={value} />
+  }
+
+  return null
 }

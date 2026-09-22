@@ -15,12 +15,21 @@ export const OnClickHide: StoryFn<ComponentProps<typeof SteppedListCard>> = prop
 
   return (
     <>
-      <Button onClick={() => setVisible(!visible)}>
+      <Button
+        onClick={() => {
+          setVisible(!visible)
+        }}
+      >
         {visible ? <MinusIcon /> : <PlusIcon />}
         Click to {visible ? 'completely hide' : 'show'} the component.
       </Button>
       <Expandable opened={visible}>
-        <SteppedListCard {...props} onClickHide={() => setVisible(!visible)}>
+        <SteppedListCard
+          {...props}
+          onClickHide={() => {
+            setVisible(!visible)
+          }}
+        >
           <SteppedListCard.Step
             image={blockStorageWire}
             stepNumber={1}
@@ -36,10 +45,21 @@ export const OnClickHide: StoryFn<ComponentProps<typeof SteppedListCard>> = prop
                   First step description
                 </Text>
                 <Stack direction="row" gap={2}>
-                  <Button onClick={() => nextStep(false)} variant="outlined">
+                  <Button
+                    onClick={() => {
+                      nextStep(false)
+                    }}
+                    variant="outlined"
+                  >
                     Skip
                   </Button>
-                  <Button onClick={() => nextStep(true)}>Next step</Button>
+                  <Button
+                    onClick={() => {
+                      nextStep(true)
+                    }}
+                  >
+                    Next step
+                  </Button>
                 </Stack>
               </Stack>
             )}
@@ -49,7 +69,11 @@ export const OnClickHide: StoryFn<ComponentProps<typeof SteppedListCard>> = prop
               <Stack gap={2}>
                 Step description
                 <Stack direction="row" gap={2}>
-                  <Button onClick={() => nextStep(true)}>
+                  <Button
+                    onClick={() => {
+                      nextStep(true)
+                    }}
+                  >
                     Validate and close. It will trigger &quot;onClickHidden&quot;
                   </Button>
                 </Stack>

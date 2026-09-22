@@ -12,7 +12,13 @@ export const Standalone: StoryFn<typeof SearchInput> = ({ ...args }) => {
     <div style={{ height: '120px' }}>
       <Stack direction="row" gap={1}>
         <SearchInput {...args} onClose={() => {}} onSearch={setValue} placeholder="Type something" />
-        <Button onClick={() => setSubmit(value)}>Search</Button>
+        <Button
+          onClick={() => {
+            setSubmit(value)
+          }}
+        >
+          Search
+        </Button>
       </Stack>
       <div style={{ marginTop: '20px' }}>
         <p>Value: {value}</p>

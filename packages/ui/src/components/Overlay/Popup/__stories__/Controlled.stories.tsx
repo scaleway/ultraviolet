@@ -41,7 +41,13 @@ export const Controlled: StoryFn<typeof Popup> = () => {
           }
           visible={visible}
         >
-          <Button onClick={() => setVisible(prev => !prev)} sentiment="neutral" variant="outlined">
+          <Button
+            onClick={() => {
+              setVisible(prev => !prev)
+            }}
+            sentiment="neutral"
+            variant="outlined"
+          >
             Toggle popup
           </Button>
         </Popup>

@@ -42,7 +42,13 @@ export const Trigger: StoryFn<typeof Popup> = () => {
           }
           visible={visible}
         >
-          <Button onClick={() => setVisible(prev => !prev)} sentiment="neutral" variant="outlined">
+          <Button
+            onClick={() => {
+              setVisible(prev => !prev)
+            }}
+            sentiment="neutral"
+            variant="outlined"
+          >
             Click me
           </Button>
         </Popup>

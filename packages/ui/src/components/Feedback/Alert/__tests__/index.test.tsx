@@ -13,34 +13,44 @@ describe('alert', () => {
     vi.restoreAllMocks()
   })
 
-  it('renders correctly with default values', () => shouldMatchSnapshot(<Alert>Sample Alert</Alert>))
+  it('renders correctly with default values', () => {
+    shouldMatchSnapshot(<Alert>Sample Alert</Alert>)
+  })
 
-  it('renders correctly with children as component', () =>
+  it('renders correctly with children as component', () => {
     shouldMatchSnapshot(
       <Alert>
         <p>Sample Alert</p>
       </Alert>,
-    ))
+    )
+  })
 
-  it('renders correctly with title', () => shouldMatchSnapshot(<Alert title="title">Sample Alert</Alert>))
+  it('renders correctly with title', () => {
+    shouldMatchSnapshot(<Alert title="title">Sample Alert</Alert>)
+  })
 
-  it('renders correctly with buttonText and onClickButton', () =>
+  it('renders correctly with buttonText and onClickButton', () => {
     shouldMatchSnapshot(
       <Alert buttonText="Button" onClickButton={() => 'ok'}>
         Sample Alert
       </Alert>,
-    ))
+    )
+  })
 
-  it('renders correctly with closable and onClose', () =>
+  it('renders correctly with closable and onClose', () => {
     shouldMatchSnapshot(
       <Alert closable onClose={() => 'ok'}>
         Sample Alert
       </Alert>,
-    ))
+    )
+  })
 
   describe('renders correctly with all sentiments', () => {
-    it.each(['danger', 'info', 'success', 'warning', 'neutral'] as const)('renders correctly sentiment %o', sentiment =>
-      shouldMatchSnapshot(<Alert sentiment={sentiment}>Sample Alert</Alert>),
+    it.each(['danger', 'info', 'success', 'warning', 'neutral'] as const)(
+      'renders correctly sentiment %o',
+      sentiment => {
+        shouldMatchSnapshot(<Alert sentiment={sentiment}>Sample Alert</Alert>)
+      },
     )
   })
 
@@ -62,16 +72,19 @@ describe('alert', () => {
     })
   })
 
-  it('renders correctly with disabled', () =>
+  it('renders correctly with disabled', () => {
     shouldMatchSnapshot(
       <Alert buttonText="button" disabled>
         Sample Alert
       </Alert>,
-    ))
-  it('renders correctly small', () =>
+    )
+  })
+
+  it('renders correctly small', () => {
     shouldMatchSnapshot(
       <Alert className="small" size="small" title="title">
         Sample Alert
       </Alert>,
-    ))
+    )
+  })
 })

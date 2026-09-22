@@ -26,6 +26,8 @@ export const useOnFieldChange = <TFieldValues extends FieldValues, TFieldName ex
       }
     })
 
-    return () => subscription.unsubscribe()
+    return () => {
+      subscription.unsubscribe()
+    }
   }, [onValueChange, enabled, watch, getValues, fieldName])
 }

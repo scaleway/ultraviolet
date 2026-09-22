@@ -17,24 +17,39 @@ export const Sentiments: StoryFn<typeof Popover> = () => {
     <div style={{ display: 'inline-flex', gap: '16px' }}>
       <Popover
         content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-        onClose={() => onCloseCallBack(setDefaultOpened)}
+        onClose={() => {
+          onCloseCallBack(setDefaultOpened)
+        }}
         sentiment="neutral"
         title="Popover Title"
         visible={defaultOpened}
       >
-        <Button onClick={() => setDefaultOpened(true)} sentiment="neutral">
+        <Button
+          onClick={() => {
+            setDefaultOpened(true)
+          }}
+          sentiment="neutral"
+        >
           Open Popover neutral sentiment
         </Button>
       </Popover>
 
       <Popover
         content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-        onClose={() => onCloseCallBack(setPrimaryOpened)}
+        onClose={() => {
+          onCloseCallBack(setPrimaryOpened)
+        }}
         sentiment="primary"
         title="Popover Title"
         visible={primaryOpened}
       >
-        <Button onClick={() => setPrimaryOpened(true)}>Open Popover primary sentiment</Button>
+        <Button
+          onClick={() => {
+            setPrimaryOpened(true)
+          }}
+        >
+          Open Popover primary sentiment
+        </Button>
       </Popover>
     </div>
   )

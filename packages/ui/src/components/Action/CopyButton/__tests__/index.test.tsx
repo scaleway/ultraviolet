@@ -17,26 +17,37 @@ describe('copyButton', () => {
     }
   })
 
-  it('renders correctly', () => shouldMatchSnapshot(<CopyButton value="Test" />))
-  it.each(['xsmall', 'small', 'medium', 'large'] as const)(`renders correctly sentiment %s`, size =>
-    shouldMatchSnapshot(<CopyButton size={size} value="Test" />),
-  )
-  it.each(['primary', 'neutral'] as const)(`renders correctly sentiment %s`, sentiment =>
-    shouldMatchSnapshot(<CopyButton sentiment={sentiment} value="Test" />),
-  )
+  it('renders correctly', () => {
+    shouldMatchSnapshot(<CopyButton value="Test" />)
+  })
 
-  it('renders correctly with bordered', () => shouldMatchSnapshot(<CopyButton bordered value="Test" />))
+  it.each(['xsmall', 'small', 'medium', 'large'] as const)(`renders correctly sentiment %s`, size => {
+    shouldMatchSnapshot(<CopyButton size={size} value="Test" />)
+  })
 
-  it('renders correctly with children', () => shouldMatchSnapshot(<CopyButton value="Test">Copy test</CopyButton>))
+  it.each(['primary', 'neutral'] as const)(`renders correctly sentiment %s`, sentiment => {
+    shouldMatchSnapshot(<CopyButton sentiment={sentiment} value="Test" />)
+  })
 
-  it('renders correctly with custom copy text', () =>
-    shouldMatchSnapshot(<CopyButton copyText="Copy me" value="Test" />))
+  it('renders correctly with bordered', () => {
+    shouldMatchSnapshot(<CopyButton bordered value="Test" />)
+  })
 
-  it('renders correctly with custom copied text', () =>
-    shouldMatchSnapshot(<CopyButton copiedText="Copied!" value="Test" />))
+  it('renders correctly with children', () => {
+    shouldMatchSnapshot(<CopyButton value="Test">Copy test</CopyButton>)
+  })
 
-  it('renders correctly with custom class name', () =>
-    shouldMatchSnapshot(<CopyButton className="custom-class" value="Test" />))
+  it('renders correctly with custom copy text', () => {
+    shouldMatchSnapshot(<CopyButton copyText="Copy me" value="Test" />)
+  })
+
+  it('renders correctly with custom copied text', () => {
+    shouldMatchSnapshot(<CopyButton copiedText="Copied!" value="Test" />)
+  })
+
+  it('renders correctly with custom class name', () => {
+    shouldMatchSnapshot(<CopyButton className="custom-class" value="Test" />)
+  })
 
   it('should renders correctly with a complex children', async () => {
     const onCopy = vi.fn(() => {})

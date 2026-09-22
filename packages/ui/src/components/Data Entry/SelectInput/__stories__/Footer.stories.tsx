@@ -18,7 +18,14 @@ const PopupFooter = () => (
 
 const PopupFooteronClick = ({ closeDropdown }: { closeDropdown: () => void }) => (
   <Stack direction="row" gap="1" width="100%">
-    <Button fullWidth onClick={() => closeDropdown()} sentiment="primary" variant="outlined">
+    <Button
+      fullWidth
+      onClick={() => {
+        closeDropdown()
+      }}
+      sentiment="primary"
+      variant="outlined"
+    >
       Click me (close the dropdown)
     </Button>
     <Button fullWidth sentiment="primary" variant="filled">
