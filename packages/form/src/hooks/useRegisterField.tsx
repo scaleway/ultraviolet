@@ -52,8 +52,8 @@ export const useRegisterField = <
         errors: true,
       },
       callback: ({ values }) => {
-        const error = getError({ ...errorMeta, value: values[name] }, getFieldState(name).error)
-        setError(error)
+        const fieldError = getError({ ...errorMeta, value: values[name] }, getFieldState(name).error)
+        setError(fieldError)
       },
     })
     return unsubscribe

@@ -21,6 +21,7 @@ export const NumberInputField = <
 }: BaseFieldProps<TFieldValues, TFieldName> & NumberInputComponentProps) => {
   const { fieldProps } = useField({
     ...props,
+
     min,
     max,
     validate: {

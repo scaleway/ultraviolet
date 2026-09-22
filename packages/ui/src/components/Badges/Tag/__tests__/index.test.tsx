@@ -5,7 +5,7 @@ import { renderWithTheme } from '@utils/test'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { Tag } from '..'
 
-let writeTextMock: ReturnType<typeof vi.fn>
+let writeTextMock: ReturnType<typeof vi.fn> | undefined = undefined
 
 describe('tag', () => {
   beforeEach(() => {

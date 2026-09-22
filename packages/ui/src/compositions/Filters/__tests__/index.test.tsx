@@ -343,7 +343,9 @@ describe('filters', () => {
   })
 
   it('should accept custom filter components', () => {
-    const CustomFilter = ({ config }: FilterComponentProps) => <button type="button">{config.label}</button>
+    const CustomFilter = ({ config: filterConfig }: FilterComponentProps) => (
+      <button type="button">{filterConfig.label}</button>
+    )
 
     renderWithTheme(
       <Filters

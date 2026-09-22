@@ -181,7 +181,7 @@ export const Item = memo(
   }: ItemProps) => {
     const { locales } = useEstimateCost()
 
-    let iteration: Iteration | undefined
+    let iteration: Iteration | undefined = undefined
 
     if (noIteration) {
       iteration = {

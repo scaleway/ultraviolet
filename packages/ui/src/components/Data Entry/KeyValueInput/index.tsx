@@ -79,7 +79,7 @@ export const KeyValueInput = ({
     <Stack gap={3} style={style} className={className}>
       {keyvalues.length > 0 ? (
         <Stack gap={3}>
-          {keyvaluesList.map((_, index) => {
+          {keyvaluesList.map((_keyvalue, index) => {
             const errorKey = fieldErrors?.[index]?.key
             const errorValue = fieldErrors?.[index]?.value
 
@@ -116,7 +116,7 @@ export const KeyValueInput = ({
                   data-testid={`remove-button-${index}`}
                   disabled={!editable}
                   onClick={() => {
-                    const newKeyValues = keyvaluesList.filter((_, i) => index !== i)
+                    const newKeyValues = keyvaluesList.filter((_, j) => index !== j)
                     onChange?.(newKeyValues, index, 'remove')
                   }}
                   sentiment="danger"

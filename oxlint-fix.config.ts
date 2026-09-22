@@ -9,16 +9,14 @@ import { defineConfig } from 'oxlint'
  */
 export const warnRules = defineConfig({
   rules: {
-    'eslint/class-methods-use-this': 'warn', // eslint errors (4)
-    'eslint/init-declarations': 'warn', // eslint errors (15)
+    'eslint/curly': ['warn', 'all'], // eslint errors (16)
     'eslint/max-lines': ['warn', { max: 500 }], // eslint errors (8)
     'eslint/max-nested-callbacks': ['warn', { max: 4 }], // base sets error (max: 4); keep warn
     'eslint/max-params': 'warn', // eslint errors (33)
     'eslint/no-await-in-loop': 'warn', // eslint errors (12)
     'eslint/no-empty-function': 'warn', // eslint errors (408)
     'eslint/no-implicit-coercion': 'warn', // eslint errors (113)
-    'eslint/no-shadow': 'warn', // eslint errors (7)
-    // 'eslint/no-unused-vars': 'warn', // eslint errors (15)
+    'eslint/object-shorthand': 'warn', // eslint errors (15)
     'eslint/prefer-destructuring': 'warn', // eslint errors (31)
     'eslint/prefer-named-capture-group': 'warn', // eslint errors (18)
     'eslint/require-unicode-regexp': ['warn', { requireFlag: 'v' }], // eslint errors (129)
