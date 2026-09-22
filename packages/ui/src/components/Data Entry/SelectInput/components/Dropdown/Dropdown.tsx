@@ -49,15 +49,25 @@ const NON_SEARCHABLE_KEYS = [
   'Escape',
 ]
 
-const handleKeyDown = (
-  event: globalThis.KeyboardEvent,
-  ref: RefObject<HTMLDivElement | null>,
-  options: DataType,
-  searchBarActive: boolean,
-  setSearch: Dispatch<SetStateAction<string>>,
-  setDefaultSearch: Dispatch<SetStateAction<string | null>>,
-  search: string,
-) => {
+type HandleKeyDownParams = {
+  event: globalThis.KeyboardEvent
+  ref: RefObject<HTMLDivElement | null>
+  options: DataType
+  searchBarActive: boolean
+  setSearch: Dispatch<SetStateAction<string>>
+  setDefaultSearchValue: Dispatch<SetStateAction<string | null>>
+  search: string
+}
+
+const handleKeyDown = ({
+  event,
+  ref,
+  options,
+  searchBarActive,
+  setSearch,
+  setDefaultSearchValue,
+  search,
+}: HandleKeyDownParams) => {
   // Deals with default search
   if (
     ref.current &&
@@ -90,9 +100,9 @@ const handleKeyDown = (
     }
 
     if (closestOption) {
-      setDefaultSearch(closestOption.searchText ?? closestOption.value)
+      setDefaultSearchValue(closestOption.searchText ?? closestOption.value)
     } else {
-      setDefaultSearch(null)
+      setDefaultSearchValue(null)
     }
   }
 }
@@ -120,7 +130,7 @@ export const Dropdown = ({
     useSelectInput()
   const theme = useTheme()
   const [searchBarActive, setSearchBarActive] = useState(false)
-  const [defaultSearchValue, setDefaultSearch] = useState<string | null>(null)
+  const [defaultSearchValue, setDefaultSearchValue] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState('')
   const [maxWidth, setMaxWidth] = useState(refSelect.current?.offsetWidth ?? '100%')
@@ -140,7 +150,7 @@ export const Dropdown = ({
     const overflow = position - window.innerHeight + 32
 
     if (overflow > 0 && modalContext) {
-      const currentModal = modalContext.openedModals[0]
+      const [currentModal] = modalContext.openedModals
       const modalElement = currentModal?.ref.current
 
       if (modalElement) {
@@ -185,12 +195,20 @@ export const Dropdown = ({
 
   useEffect(() => {
     if (!isDropdownVisible) {
-      setDefaultSearch(null)
+      setDefaultSearchValue(null)
       setSearch('')
     }
 
     const eventKeydown = (event: globalThis.KeyboardEvent) =>
-      handleKeyDown(event, ref, options, searchBarActive, setSearch, setDefaultSearch, search)
+      handleKeyDown({
+        event,
+        ref,
+        options,
+        searchBarActive,
+        setSearch,
+        setDefaultSearchValue,
+        search,
+      })
 
     if (!searchable) {
       document.addEventListener('keydown', eventKeydown)
@@ -208,7 +226,7 @@ export const Dropdown = ({
     onSearch,
     search,
     refSelect,
-    setDefaultSearch,
+    setDefaultSearchValue,
     setIsDropdownVisible,
     searchable,
   ])
