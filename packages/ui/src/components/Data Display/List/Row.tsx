@@ -83,7 +83,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
 
     const isSelectDisabled = disabled || (selectDisabled !== undefined && selectDisabled !== false)
 
-    const hasExpandable = !!expandable
+    const hasExpandable = Boolean(expandable)
     useEffect(() => {
       if (hasExpandable) {
         const unregisterCallback = registerExpandableRow(id, expanded)
@@ -133,7 +133,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
     const validChildrenArray = Children.toArray(childrenArrayNoFragment).filter(child => isValidElement(child))
     const totalColumns = columns.length + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
 
-    const hasHightLight = selectable && !!selectedRowIds[id]
+    const hasHightLight = selectable && Boolean(selectedRowIds[id])
 
     return (
       <>

@@ -28,7 +28,7 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
   const { filters, closeDrawer, isDrawerOpen } = useFiltersContext()
   const drawerFilters = config.filter(item => !item.hideInDrawer)
 
-  const createResetHandler = (configItem: FilterConfig<AnyObject>) => {
+  const createResetHandler = (configItem: FilterConfig) => {
     let fieldsToReset: string[] = []
     if (isFilterConfigGroup(configItem)) {
       fieldsToReset = configItem.items.map(item => item.name).filter(name => filters.dirtyFilters.includes(name))

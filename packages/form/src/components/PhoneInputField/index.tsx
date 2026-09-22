@@ -55,7 +55,7 @@ export const PhoneInputField = <
     rules: {
       validate: (phoneNumber: PhoneInputValue) => {
         try {
-          return !!phoneNumber && !parsePhoneNumber(phoneNumber).valid ? parseNumberErrorMessage : undefined
+          return Boolean(phoneNumber) && !parsePhoneNumber(phoneNumber).valid ? parseNumberErrorMessage : undefined
         } catch (error: unknown) {
           if (error instanceof Error) {
             onParsingError?.({

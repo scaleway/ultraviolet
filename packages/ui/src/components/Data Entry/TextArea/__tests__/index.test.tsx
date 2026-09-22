@@ -91,6 +91,7 @@ describe('textArea', () => {
     )
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('should render with AutoExpandMax and rows', () => {
     const { asFragment } = renderWithTheme(
       <TextArea error="success" label="Test" maxRows={3} onChange={() => {}} rows={2} value="test" />,

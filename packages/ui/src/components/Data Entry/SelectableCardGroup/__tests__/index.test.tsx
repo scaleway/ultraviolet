@@ -41,6 +41,7 @@ describe('selectableCardGroup', () => {
         <SelectableCardGroup.Card label="Checkbox 2" value="value-2" />
       </SelectableCardGroup>,
     ))
+
   it('renders correctly required and showTick', () =>
     shouldMatchSnapshot(
       <SelectableCardGroup
@@ -56,6 +57,7 @@ describe('selectableCardGroup', () => {
         <SelectableCardGroup.Card label="Checkbox 2" value="value-2" />
       </SelectableCardGroup>,
     ))
+
   it('renders correctly with error content', () =>
     shouldMatchSnapshot(
       <SelectableCardGroup
@@ -70,6 +72,7 @@ describe('selectableCardGroup', () => {
         <SelectableCardGroup.Card label="Checkbox 2" value="value-2" />
       </SelectableCardGroup>,
     ))
+
   it('renders correctly as a radio', () =>
     shouldMatchSnapshot(
       <SelectableCardGroup

@@ -16,6 +16,7 @@ describe('fileInput', () => {
     const { asFragment } = renderWithTheme(<FileInput helper="helper" label="label" title="title" />)
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders correctly as an overlay', () => {
     const { asFragment } = renderWithTheme(
       <FileInput label="label" title="title" variant="overlay">
@@ -24,6 +25,7 @@ describe('fileInput', () => {
     )
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders correctly small', () => {
     const { asFragment } = renderWithTheme(<FileInput label="label" size="small" title="title" />)
     expect(asFragment()).toMatchSnapshot()
@@ -286,7 +288,7 @@ describe('fileInput', () => {
         items: [],
         types: ['Files'],
       },
-    } as unknown as DragEvent)
+    })
 
     expect(onChangeFiles).toHaveBeenCalledWith(expect.arrayContaining([expect.objectContaining({ name: 'dnd.png' })]))
 
@@ -310,7 +312,7 @@ describe('fileInput', () => {
         items: [],
         types: ['Files'],
       },
-    } as unknown as DragEvent)
+    })
 
     expect(onChangeFiles).toHaveBeenCalledWith(expect.arrayContaining([expect.objectContaining({ name: 'dnd.png' })]))
 
@@ -320,7 +322,7 @@ describe('fileInput', () => {
         items: [],
         types: ['Files'],
       },
-    } as unknown as DragEvent)
+    })
 
     expect(onChangeFiles).not.toHaveBeenCalledWith(
       expect.arrayContaining([expect.objectContaining({ name: 'not-added.pdf' })]),
@@ -347,7 +349,7 @@ describe('fileInput', () => {
         items: [],
         types: ['Files'],
       },
-    } as unknown as DragEvent)
+    })
 
     expect(onChangeFiles).toHaveBeenCalledWith(expect.arrayContaining([expect.objectContaining({ name: 'dnd.png' })]))
 
@@ -357,7 +359,7 @@ describe('fileInput', () => {
         items: [],
         types: ['Files'],
       },
-    } as unknown as DragEvent)
+    })
 
     expect(onChangeFiles).not.toHaveBeenCalledWith(
       expect.arrayContaining([expect.objectContaining({ name: 'not-added.pdf' })]),
@@ -369,7 +371,7 @@ describe('fileInput', () => {
         items: [],
         types: ['Files'],
       },
-    } as unknown as DragEvent)
+    })
 
     fireEvent.drop(dropzone, {
       dataTransfer: {
@@ -377,7 +379,7 @@ describe('fileInput', () => {
         items: [],
         types: ['Files'],
       },
-    } as unknown as DragEvent)
+    })
 
     expect(onChangeFiles).not.toHaveBeenCalledWith(
       expect.arrayContaining([
@@ -400,7 +402,7 @@ describe('fileInput', () => {
         items: [],
         types: ['Files'],
       },
-    } as unknown as DragEvent)
+    })
 
     expect(onChangeFiles).toHaveBeenCalledWith(expect.arrayContaining([expect.objectContaining({ name: 'dnd.png' })]))
   })
@@ -502,7 +504,7 @@ describe('fileInput', () => {
         items: [dirItem, singleItem],
         types: ['Files'],
       },
-    } as unknown as DragEvent)
+    })
 
     await waitFor(() => {
       expect(onChangeFiles).toHaveBeenCalledWith(

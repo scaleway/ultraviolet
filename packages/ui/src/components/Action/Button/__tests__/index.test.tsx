@@ -39,6 +39,7 @@ describe('button', () => {
           await userEvent.hover(screen.getByRole('button'))
           expect(asFragment).toMatchSnapshot()
         })
+
         it(`render ${variant}&${sentiment} disabled`, () =>
           shouldMatchSnapshot(
             <Button disabled onClick={MockOnClick} sentiment={sentiment} variant={variant}>

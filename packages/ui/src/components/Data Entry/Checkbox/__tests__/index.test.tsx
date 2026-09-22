@@ -55,6 +55,7 @@ describe('checkbox', () => {
         Checkbox Label
       </Checkbox>,
     ))
+
   it('renders correctly checked with helper', () =>
     shouldMatchSnapshot(
       <Checkbox checked helper="helper" onChange={() => {}}>

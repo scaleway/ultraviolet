@@ -18,9 +18,11 @@ describe('copyButton', () => {
   })
 
   it('renders correctly', () => shouldMatchSnapshot(<CopyButton value="Test" />))
+
   it.each(['xsmall', 'small', 'medium', 'large'] as const)(`renders correctly sentiment %s`, size =>
     shouldMatchSnapshot(<CopyButton size={size} value="Test" />),
   )
+
   it.each(['primary', 'neutral'] as const)(`renders correctly sentiment %s`, sentiment =>
     shouldMatchSnapshot(<CopyButton sentiment={sentiment} value="Test" />),
   )

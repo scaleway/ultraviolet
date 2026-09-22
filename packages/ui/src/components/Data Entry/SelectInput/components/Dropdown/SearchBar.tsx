@@ -71,7 +71,7 @@ const findClosestOption = (options: DataType, searchInput: string | undefined) =
   return null
 }
 
-const escapeRegExp = (string: string) => string.replace(/[.*+?^{}()|[\]\\]/gu, String.raw`\$&`)
+const escapeRegExp = (string: string) => string.replaceAll(/[.*+?^{}()|[\]\\]/gu, String.raw`\$&`)
 
 const filterGroupedOptions = (options: Record<string, OptionType[]>, escapedSearch: string) => {
   const grouped = { ...options }
@@ -92,7 +92,7 @@ export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }:
       const escapedSearch = escapeRegExp(search.toString())
       const filteredOptions: DataType = Array.isArray(options)
         ? searchRegex([...options], escapedSearch)
-        : filterGroupedOptions(options as Record<string, OptionType[]>, escapedSearch)
+        : filterGroupedOptions(options, escapedSearch)
       onSearch(filteredOptions)
     } else {
       onSearch(options)

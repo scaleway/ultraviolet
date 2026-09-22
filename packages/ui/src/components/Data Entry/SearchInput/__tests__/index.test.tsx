@@ -34,6 +34,7 @@ describe('searchInput', () => {
           <div />
         </SearchInput>,
       ))
+
     it('as array of string', () =>
       shouldMatchSnapshot(
         <SearchInput

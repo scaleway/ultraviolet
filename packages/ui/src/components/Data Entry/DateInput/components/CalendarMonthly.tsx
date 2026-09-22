@@ -42,7 +42,8 @@ export const Monthly = () => {
           ? excludeDates.map(date => isSameMonth(constructedDate, date)).includes(true)
           : false
 
-        const isOutsideRange = !!(minDate && constructedDate < minDate) || !!(maxDate && constructedDate > maxDate)
+        const isOutsideRange =
+          Boolean(minDate && constructedDate < minDate) || Boolean(maxDate && constructedDate > maxDate)
 
         const isAfterStartDate = selectsRange && range?.start && constructedDate > range.start
 

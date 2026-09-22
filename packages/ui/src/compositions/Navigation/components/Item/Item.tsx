@@ -140,7 +140,7 @@ export const Item = memo(
       throw new Error('Navigation.Item can only be used inside a NavigationProvider.')
     }
 
-    const hasParents = !!useContext(ItemContext)
+    const hasParents = Boolean(useContext(ItemContext))
 
     const { expanded, locales, pinnedFeature, pinnedItems, pinLimit, registerItem, showHide } = context
 

@@ -71,7 +71,7 @@ function generateManifest(outputFile: string): void {
   console.log(`Generating manifest for ${packages.length} packages...`)
 
   const manifest: Manifest = {
-    packages: {} as Record<string, PackageInfo>,
+    packages: {},
     timestamp: new Date().toISOString(),
     vite_version: '8.0.0-beta.2',
   }

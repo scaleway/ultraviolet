@@ -26,6 +26,7 @@ describe('unitInput', () => {
     shouldMatchSnapshot(
       <UnitInput max={100} min={10} onChange={() => {}} onChangeUnitValue={() => {}} options={options} />,
     ))
+
   it('renders with size small', () =>
     shouldMatchSnapshot(
       <UnitInput name="test" onChange={() => {}} onChangeUnitValue={() => {}} options={options} size="small" />,
@@ -100,6 +101,7 @@ describe('unitInput', () => {
         placeholder="100"
       />,
     ))
+
   it('renders with error  and success', () =>
     shouldMatchSnapshot(
       <UnitInput
@@ -181,6 +183,7 @@ describe('unitInput', () => {
         placeholder="100"
       />,
     ))
+
   it('renders with label and label information', () =>
     shouldMatchSnapshot(
       <UnitInput
@@ -194,6 +197,7 @@ describe('unitInput', () => {
         placeholder="100"
       />,
     ))
+
   it('renders with no label and label information', () =>
     shouldMatchSnapshot(
       <UnitInput

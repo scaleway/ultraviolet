@@ -10,6 +10,7 @@ describe('estimateCost - index', () => {
   afterEach(() => {
     resetIntersectionMocking()
   })
+
   it('render isBeta without discount', () =>
     shouldMatchSnapshot(
       <EstimateCost isBeta>
@@ -260,6 +261,7 @@ describe('estimateCost - index', () => {
         </EstimateCost.Item>
       </EstimateCost>,
     ))
+
   it('render with disableOverlayRight', () =>
     shouldMatchSnapshot(
       <EstimateCost disableOverlayRight>
@@ -268,6 +270,7 @@ describe('estimateCost - index', () => {
         </EstimateCost.Item>
       </EstimateCost>,
     ))
+
   it('render with overlayUnit', () =>
     shouldMatchSnapshot(
       <EstimateCost overlayUnit="days">

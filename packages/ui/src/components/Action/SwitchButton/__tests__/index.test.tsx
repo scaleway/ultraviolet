@@ -29,6 +29,7 @@ describe('switchButton', () => {
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
       </SwitchButton>,
     ))
+
   it('renders correctly medium', () =>
     shouldMatchSnapshot(
       <SwitchButton name="test" onChange={() => {}} size="medium" value="left">

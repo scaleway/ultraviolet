@@ -60,7 +60,7 @@ export const ContentCard = forwardRef<HTMLAnchorElement & HTMLButtonElement & HT
 
     return (
       <Container
-        className={cn(className, contentCardStyle.card({ active: !!(onClick || href) }))}
+        className={cn(className, contentCardStyle.card({ active: Boolean(onClick || href) }))}
         disabled={disabled}
         href={disabled ? undefined : href}
         onClick={disabled ? undefined : onClick}

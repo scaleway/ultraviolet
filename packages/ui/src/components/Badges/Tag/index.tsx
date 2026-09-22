@@ -88,7 +88,7 @@ export const Tag = ({
             tagStyle.container({
               disabled,
               sentiment,
-              closable: !!onClose,
+              closable: Boolean(onClose),
               copiable: copiable && !disabled,
               isButton: false,
             }),

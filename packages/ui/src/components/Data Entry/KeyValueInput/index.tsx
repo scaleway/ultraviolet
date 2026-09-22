@@ -66,7 +66,7 @@ export const KeyValueInput = ({
       'aria-describedby': inputError
         ? `error-${type}-${index}`
         : ariaDescribedBy || (hasHelperText(undefined, error) ? errorId : undefined),
-      error: !!(inputError || error),
+      error: Boolean(inputError || error),
       name: `${name}.${index}.${type}`,
       onFocus: () => onFocus?.(keyvaluesList, index),
       onBlur: () => onBlur?.(keyvaluesList, index),

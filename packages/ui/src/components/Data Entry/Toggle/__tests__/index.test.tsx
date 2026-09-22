@@ -49,6 +49,7 @@ describe('toggle', () => {
 
   it('renders correctly with helper', () =>
     shouldMatchSnapshot(<Toggle helper="This is a helper" label="This is a label" name="test" />))
+
   it('renders correctly with error', () =>
     shouldMatchSnapshot(<Toggle error="error text" helper="This is a helper" label="This is a label" name="test" />))
 })

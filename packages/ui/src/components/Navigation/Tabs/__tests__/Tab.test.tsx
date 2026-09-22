@@ -4,6 +4,7 @@ import { Tab } from '../Tab'
 
 describe('tab', () => {
   it('renders correctly', () => shouldMatchSnapshot(<Tab />))
+
   it('renders correctly with subtitle', () => shouldMatchSnapshot(<Tab subtitle="test" />))
 
   it('renders correctly with counter, badge and subtitle', () =>

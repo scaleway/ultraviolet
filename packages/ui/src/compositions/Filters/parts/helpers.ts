@@ -56,7 +56,7 @@ export const getKeysWithDifferentValues = <Values extends AnyObject>(a?: Values,
     return true
   })
 
-  return keysWithDifferentValues as (keyof Values)[]
+  return keysWithDifferentValues
 }
 
 // This function is a very lightweight deepCompare according to the possible FormValues type aka values can be string | number | [string, string] | [number, number] | string[]

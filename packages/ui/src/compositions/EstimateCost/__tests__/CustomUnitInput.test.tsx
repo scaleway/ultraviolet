@@ -12,6 +12,7 @@ describe('estimateCost - CustomUnitInput', () => {
   afterEach(() => {
     resetIntersectionMocking()
   })
+
   it('render default values', () =>
     shouldMatchSnapshot(
       <CustomUnitInput

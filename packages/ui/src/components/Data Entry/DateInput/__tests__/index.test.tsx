@@ -47,6 +47,7 @@ describe('dateInput', () => {
     const { asFragment } = renderWithTheme(<DateInput error="error" label="Date" onChange={() => {}} />)
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders correctly error disabled', () => {
     const { asFragment } = renderWithTheme(<DateInput disabled error="error" label="Date" onChange={() => {}} />)
     expect(asFragment()).toMatchSnapshot()
@@ -96,6 +97,7 @@ describe('dateInput', () => {
     const { asFragment } = renderWithTheme(<DateInput label="Date" onChange={() => {}} showMonthYearPicker />)
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('render correctly with showMonthYearPicker with default date', async () => {
     const { asFragment } = renderWithTheme(
       <DateInput

@@ -19,8 +19,8 @@ export const FilterSlider = ({ value, onChange, config, hideLabel }: FilterSlide
   }
 
   if (config.double) {
-    return <Slider double {...sliderProps} value={value as number[]} />
+    return <Slider double {...sliderProps} value={value} />
   }
 
-  return <Slider {...sliderProps} value={value as number} />
+  return <Slider {...sliderProps} value={value} />
 }

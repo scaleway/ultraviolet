@@ -285,12 +285,12 @@ export const DoubleSlider = ({
             <div className={sliderStyle.doubleWrapper} {...tooltipProps}>
               <div className={sliderStyle.customRail}>
                 <div
-                  aria-disabled={!!disabled}
+                  aria-disabled={Boolean(disabled)}
                   className={sliderStyle.innerRail({
-                    disabled: !!disabled,
-                    error: !!error,
+                    disabled: Boolean(disabled),
+                    error: Boolean(error),
                   })}
-                  data-error={!!error}
+                  data-error={Boolean(error)}
                   style={{ left: `${minPos}%`, right: `${100 - maxPos}%` }}
                 />
               </div>
@@ -310,7 +310,7 @@ export const DoubleSlider = ({
                   data-direction={direction}
                   data-error={error}
                   data-testid={`${dataTestId ?? 'handle'}-left`}
-                  disabled={!!disabled}
+                  disabled={Boolean(disabled)}
                   id={finalId}
                   max={max}
                   min={min}
@@ -349,7 +349,7 @@ export const DoubleSlider = ({
                   data-direction={direction}
                   data-error={error}
                   data-testid={`${dataTestId ?? 'handle'}-right`}
-                  disabled={!!disabled}
+                  disabled={Boolean(disabled)}
                   id={finalId}
                   max={max}
                   min={min}

@@ -22,6 +22,7 @@ describe('stepper', () => {
         <Stepper.Step title="step 3" />
       </Stepper>,
     ))
+
   it('renders correctly with children', () =>
     shouldMatchSnapshot(
       <Stepper animated selected={1}>
@@ -30,6 +31,7 @@ describe('stepper', () => {
         <Stepper.Step title="step 3" />
       </Stepper>,
     ))
+
   it('renders correctly with animation', () =>
     shouldMatchSnapshot(
       <Stepper animated selected={1}>

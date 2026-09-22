@@ -56,8 +56,8 @@ export const fileIsAccepted = (file: File, accept?: string) => {
   return false
 }
 
-const isFileEntry = (entry: FileSystemEntry): entry is FileSystemFileEntry => !!entry.isFile
-const isDirectoryEntry = (entry: FileSystemEntry): entry is FileSystemDirectoryEntry => !!entry.isDirectory
+const isFileEntry = (entry: FileSystemEntry): entry is FileSystemFileEntry => Boolean(entry.isFile)
+const isDirectoryEntry = (entry: FileSystemEntry): entry is FileSystemDirectoryEntry => Boolean(entry.isDirectory)
 
 const convertEntryToFile = (entry: FileSystemFileEntry): Promise<File> =>
   new Promise((resolve, reject) => {

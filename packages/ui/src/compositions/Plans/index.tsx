@@ -40,7 +40,7 @@ export const Plans = <T extends string>({
   style,
   highlight,
 }: PlansProps<T>) => {
-  const hasCardBehavior = !!(fieldName && onChange)
+  const hasCardBehavior = Boolean(fieldName && onChange)
   const [focusedPlan, setFocusedPlan] = useState<string>()
   const [hoveredPlan, setHoveredPlan] = useState<string>()
 
@@ -56,7 +56,7 @@ export const Plans = <T extends string>({
             )}
           </td>
           {plans.map(plan => {
-            const computedDisabled = !!(plan.outOfStock || plan.disabled)
+            const computedDisabled = Boolean(plan.outOfStock || plan.disabled)
             const selectable = hasCardBehavior && !computedDisabled
             const isHighlighted = plan.value === highlight?.plan
             const hoverPlan = (newValue?: string) => {
@@ -77,11 +77,11 @@ export const Plans = <T extends string>({
                 })}
                 key={plan.value}
                 onBlur={() => hoverPlan()}
-                onClick={selectable ? () => onChange(plan.value) : undefined}
+                onClick={selectable ? () => onChange?.(plan.value) : undefined}
                 onFocus={() => hoverPlan(plan.value)}
                 onKeyDown={event => {
                   if ([' ', 'Enter'].includes(event.key) && selectable) {
-                    onChange(plan.value)
+                    onChange?.(plan.value)
                   }
                 }}
                 onMouseOut={() => hoverPlan()}
@@ -190,10 +190,10 @@ export const Plans = <T extends string>({
                     })}
                     data-testid={`${plan.value}-${feature.key}`}
                     key={plan.value}
-                    onBlur={() => {}}
-                    onClick={selectable ? () => onChange(plan.value) : undefined}
-                    onFocus={() => {}}
-                    onKeyDown={() => {}}
+                    onBlur={() => undefined}
+                    onClick={selectable ? () => onChange?.(plan.value) : undefined}
+                    onFocus={() => undefined}
+                    onKeyDown={() => undefined}
                     onMouseOut={() => hoverPlan()}
                     onMouseOver={() => hoverPlan(plan.value)}
                   >

@@ -58,7 +58,7 @@ export const ItemExpanded = ({
   const showPinIcon = !(noExpand || disabled) && shouldShowPinnedButton && pinnedFeature
   // This content is when the navigation is expanded
 
-  const shouldHaveWeakText = !!children && !active && shouldShowPinnedButton && !disabled
+  const shouldHaveWeakText = Boolean(children) && !active && shouldShowPinnedButton && !disabled
 
   const hasHrefAndNoChildren = href && !children
 
@@ -110,7 +110,7 @@ export const ItemExpanded = ({
           navigationStyle.itemContainer({
             disabled,
             hasActive: hasActiveChildren,
-            isActive: !!active,
+            isActive: Boolean(active),
             noExpand,
             expanding: animation === 'expand',
           }),

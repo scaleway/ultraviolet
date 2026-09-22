@@ -39,7 +39,7 @@ export const Option = ({ value, children, 'data-testid': dataTestId, disabled, t
       )}
       data-checked={localValue === value}
       data-testid={dataTestId ?? `switch-button-${value}`}
-      disabled={!!disabled}
+      disabled={Boolean(disabled)}
       label={children}
       name={name}
       onBlur={onBlur}

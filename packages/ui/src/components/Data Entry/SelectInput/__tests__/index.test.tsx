@@ -691,6 +691,7 @@ describe('selectInput', () => {
 
     expect(dropdown).not.toBeVisible()
   })
+
   it('handles click on item', async () => {
     const onChange = vi.fn()
 
@@ -770,6 +771,7 @@ describe('selectInput', () => {
     await userEvent.click(earth)
     await userEvent.click(earth)
   })
+
   it('renders with onChange - multiselect', async () => {
     renderWithTheme(
       <SelectInput
@@ -1331,6 +1333,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
@@ -1347,6 +1350,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
@@ -1363,6 +1367,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
@@ -1379,6 +1384,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row"', async () => {
     renderWithTheme(
       <SelectInput
@@ -1394,6 +1400,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row"', async () => {
     renderWithTheme(
       <SelectInput
@@ -1414,6 +1421,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column"', async () => {
     renderWithTheme(
       <SelectInput
@@ -1434,6 +1442,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column"', async () => {
     renderWithTheme(
       <SelectInput
@@ -1455,6 +1464,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('renders correctly loading - grouped data', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput

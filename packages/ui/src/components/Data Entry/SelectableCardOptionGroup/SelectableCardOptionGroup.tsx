@@ -64,7 +64,7 @@ const SelectableCardOptionGroupComponent = ({
   const contextValue = useMemo(
     () => ({
       disabled,
-      error: !!error,
+      error: Boolean(error),
       groupName: name,
       groupValue: value,
       onChange,

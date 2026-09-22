@@ -46,7 +46,7 @@ const AccessibilityAudit = () => {
     modules
       ?.filter((module): module is PromiseFulfilledResult<ComponentStoryModule> => module.status === 'fulfilled')
       .map(module => {
-        const parameters = module.value.default.parameters
+        const { parameters } = module.value.default
         const destructuredName: string[] = module.value.default.title.split('/') ?? []
 
         const componentName = destructuredName.at(-1) ?? 'Unknown'

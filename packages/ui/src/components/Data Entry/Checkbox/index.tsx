@@ -12,7 +12,7 @@ import { Text } from '../../Typography/Text'
 import { CheckboxIconContainer } from './CheckboxIconContainer'
 import { checkboxStyle } from './styles.css'
 
-type CheckboxProps = BaseFormComponentProps<HTMLInputElement> &
+type CheckboxProps = BaseFormComponentProps &
   CheckboxLabelProp & {
     error?: ReactNode
     checked?: boolean | 'indeterminate'
@@ -94,14 +94,14 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           aria-disabled={disabled}
           className={cn(className, checkboxStyle.container[size])}
           data-checked={checked}
-          data-error={!!error}
+          data-error={Boolean(error)}
           data-testid={dataTestId}
           data-visibility={dataVisibility}
         >
           <input
             aria-checked={checked === 'indeterminate' ? 'mixed' : isCheck}
             aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? `${localId}-hint` : undefined)}
-            aria-invalid={!!error}
+            aria-invalid={Boolean(error)}
             aria-label={ariaLabel}
             autoFocus={autoFocus}
             checked={isCheck}

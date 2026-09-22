@@ -204,6 +204,7 @@ describe('list', () => {
         ))}
       </List>,
     ))
+
   it('should render correctly with disabled rows', () =>
     shouldMatchSnapshot(
       <List columns={columns}>

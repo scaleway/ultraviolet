@@ -31,7 +31,7 @@ export const CalendarContent = () => {
       <Stack direction="row" justifyContent="space-between" width="100%">
         <Button
           data-testid="previous-month"
-          disabled={!!(minDate && minDate > new Date(yearToShow, monthToShow - 1, 0)) || disabled}
+          disabled={Boolean(minDate && minDate > new Date(yearToShow, monthToShow - 1, 0)) || disabled}
           onClick={() => {
             if ((!minDate || minDate <= new Date(yearToShow, monthToShow - 1, 0)) && !readOnly) {
               if (showMonthYearPicker) {
@@ -61,7 +61,7 @@ export const CalendarContent = () => {
         </Text>
         <Button
           data-testid="next-month"
-          disabled={!!(maxDate && maxDate < new Date(yearToShow, monthToShow, 1)) || disabled}
+          disabled={Boolean(maxDate && maxDate < new Date(yearToShow, monthToShow, 1)) || disabled}
           onClick={() => {
             if ((!maxDate || maxDate >= new Date(yearToShow, monthToShow, 1)) && !readOnly) {
               if (showMonthYearPicker) {

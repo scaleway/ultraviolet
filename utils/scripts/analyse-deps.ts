@@ -112,7 +112,7 @@ const componentNames = new Set(sortedComponent.sortedComponent.map(([name]) => n
 const asRecord = Object.fromEntries(
   sortedComponent.sortedComponent
     .map(([name, count]) => {
-      const { dependsOn } = count as { dependsOn: string[] }
+      const { dependsOn } = count
       const filteredDeps = dependsOn.filter(dependency => componentNames.has(dependency))
 
       return [name, filteredDeps.length] as const

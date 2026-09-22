@@ -212,13 +212,13 @@ export const SingleSlider = ({
             aria-label={ariaLabel ?? name}
             className={cn(
               className,
-              sliderStyle.single({ direction, disabled, error: !!error }),
+              sliderStyle.single({ direction, disabled, error: Boolean(error) }),
               sliderStyle.thumbStyle({ disabled }),
             )}
             data-direction={direction}
-            data-error={!!error}
+            data-error={Boolean(error)}
             data-testid={dataTestId}
-            disabled={!!disabled}
+            disabled={Boolean(disabled)}
             id={finalId}
             max={max}
             min={min}

@@ -49,7 +49,7 @@ const SelectableCardGroupComponent = ({
 }: SelectableCardGroupProps) => {
   const contextValue = useMemo(
     () => ({
-      error: !!error,
+      error: Boolean(error),
       groupName: name,
       groupValue: value,
       onChange,

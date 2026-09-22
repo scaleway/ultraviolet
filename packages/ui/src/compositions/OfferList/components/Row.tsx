@@ -128,7 +128,10 @@ export const Row = ({
     onChangeSelect?.(offerName)
   }
 
-  const offerListRowContextValue = useMemo(() => ({ selected: isSelected, banner: !!banner }), [isSelected, banner])
+  const offerListRowContextValue = useMemo(
+    () => ({ selected: isSelected, banner: Boolean(banner) }),
+    [isSelected, banner],
+  )
 
   return (
     <>

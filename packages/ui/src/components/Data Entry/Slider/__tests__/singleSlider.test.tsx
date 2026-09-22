@@ -80,6 +80,7 @@ describe('single slider', () => {
   it('renders correctly error string', () => {
     shouldMatchSnapshot(<Slider error="error" label="Label" name="Name" value={1} />)
   })
+
   it('renders correctly error string and helper', () => {
     shouldMatchSnapshot(<Slider error="error" helper="helper" label="Label" name="Name" value={1} />)
   })
@@ -123,6 +124,7 @@ describe('single slider', () => {
   it('renders correctly with custom ticks', () => {
     shouldMatchSnapshot(<Slider label="Label" name="Name" options={options} unit="%" value={1} />)
   })
+
   it('renders correctly with custom ticks and default scale', () => {
     shouldMatchSnapshot(<Slider defaultScale label="Label" name="Name" options={options} unit="%" value={1} />)
   })

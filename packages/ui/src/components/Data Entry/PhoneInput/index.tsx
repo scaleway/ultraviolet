@@ -179,13 +179,13 @@ export const PhoneInput: PhoneInputType = forwardRef(
             data-disabled={disabled}
             data-readonly={readOnly}
             data-success={success}
-            data-error={!!customError}
+            data-error={Boolean(customError)}
           >
             <Stack alignItems="center" className={phoneInputStyle.flag} data-disabled={disabled}>
               {getPhoneCountryFlag(countryFlag)}
             </Stack>
             <input
-              aria-invalid={!!error}
+              aria-invalid={Boolean(error)}
               aria-label={label ? undefined : ariaLabel}
               aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
               aria-labelledby={ariaLabelledBy}

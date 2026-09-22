@@ -125,7 +125,7 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 {item}
               </Tooltip>
             )}
-            onToggle={toggle => setPinnedItemsExpanded(!!toggle)}
+            onToggle={toggle => setPinnedItemsExpanded(Boolean(toggle))}
             toggle={pinnedItemsExpanded}
           />
           <Navigation.Separator />

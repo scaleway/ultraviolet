@@ -625,7 +625,7 @@ export const Popup = forwardRef(
               >
                 <div
                   className={popupStyle.container({
-                    hasMaxHeight: !!maxHeight,
+                    hasMaxHeight: Boolean(maxHeight),
                   })}
                   style={assignInlineVars({
                     [maxHeightPopup]: typeof maxHeight === 'number' ? `${maxHeight}px` : maxHeight,

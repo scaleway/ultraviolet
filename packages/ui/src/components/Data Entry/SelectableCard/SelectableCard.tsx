@@ -89,7 +89,7 @@ export const SelectableCard = forwardRef(
     const isCheckboxOrToggle = type === 'checkbox' || type === 'toggle'
 
     const content = (
-      <Tooltip containerFullHeight={!!tooltip} text={tooltip}>
+      <Tooltip containerFullHeight={Boolean(tooltip)} text={tooltip}>
         <Stack
           alignItems="flex-start"
           className={cn(
@@ -146,10 +146,10 @@ export const SelectableCard = forwardRef(
               <Stack
                 className={cn(
                   selectableCardStyle.stack,
-                  !!label && showTick && indented ? selectableCardStyle.indentedCard : undefined,
+                  Boolean(label) && showTick && indented ? selectableCardStyle.indentedCard : undefined,
                 )}
                 data-has-default-cursor={isCheckboxOrToggle && isComplexChildren}
-                data-has-label={!!label && showTick}
+                data-has-label={Boolean(label) && showTick}
                 onKeyDown={event => event.stopPropagation()}
                 ref={childrenRef}
                 width="100%"

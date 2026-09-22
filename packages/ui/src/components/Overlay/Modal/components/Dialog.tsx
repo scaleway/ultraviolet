@@ -221,7 +221,7 @@ export const Dialog = ({
         className={cn(
           className,
           modalStyle.modal({
-            image: !!image,
+            image: Boolean(image),
             placement,
             positivePosition: position > 0,
             size,

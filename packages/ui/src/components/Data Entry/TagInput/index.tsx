@@ -194,9 +194,9 @@ export const TagInput = ({
           <div
             className={cn(className, tagInputStyle.container({ size }))}
             data-disabled={disabled}
-            data-error={!!error}
+            data-error={Boolean(error)}
             data-readonly={readOnly}
-            data-success={!!success}
+            data-success={Boolean(success)}
             data-testid={dataTestId}
             tabIndex={0}
             onClick={handleContainerClick}

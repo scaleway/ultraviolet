@@ -138,7 +138,7 @@ ${svgDark ? `import { useTheme } from '@ultraviolet/themes'` : ''}
 `
 }
 
-const toPascalCase = (str: string) => str.replace(/(^\w|-\w)/gu, match => match.replace('-', '').toUpperCase())
+const toPascalCase = (str: string) => str.replaceAll(/(^\w|-\w)/gu, match => match.replace('-', '').toUpperCase())
 
 const generateVariableName = (filePath: string) => {
   const parsedPath = path.parse(filePath)
@@ -172,26 +172,26 @@ const readDirectoryRecursive = async (dir: string) => {
 
 const readSvg = async (filePath: string, suffix: string) => {
   const svgContent = await promises.readFile(filePath, 'utf8')
-  const innerSvgContent = svgContent.replace(/<svg[^>]*>|<\/svg>/gu, '') // Remove <svg ...> and </svg> tags
+  const innerSvgContent = svgContent.replaceAll(/<svg[^>]*>|<\/svg>/gu, '') // Remove <svg ...> and </svg> tags
 
   // Replace class with className
   const updatedSvgContent = innerSvgContent
-    .replace(/class=/gu, 'className=')
-    .replace(/fill-rule=/gu, 'fillRule=')
-    .replace(/fill-opacity=/gu, 'fillOpacity=')
-    .replace(/clip-rule=/gu, 'clipRule=')
-    .replace(/clip-path=/gu, 'clipPath=')
-    .replace(/stop-color=/gu, 'stopColor=')
-    .replace(/flood-opacity=/gu, 'floodOpacity=')
-    .replace(/stroke-width=/gu, 'strokeWidth=')
-    .replace(/stroke-linecap=/gu, 'strokeLinecap=')
-    .replace(/stroke-linejoin=/gu, 'strokeLinejoin=')
-    .replace(/stop-opacity=/gu, 'stopOpacity=')
-    .replace(/color-interpolation-filters=/gu, 'colorInterpolationFilters=')
-    .replace(/xlink:href=/gu, 'xlinkHref=')
-    .replace(/`/gu, '\\`')
-    .replace(/height="[^"]*"/gu, '')
-    .replace(/width="[^"]*"/gu, '')
+    .replaceAll('class=', 'className=')
+    .replaceAll('fill-rule=', 'fillRule=')
+    .replaceAll('fill-opacity=', 'fillOpacity=')
+    .replaceAll('clip-rule=', 'clipRule=')
+    .replaceAll('clip-path=', 'clipPath=')
+    .replaceAll('stop-color=', 'stopColor=')
+    .replaceAll('flood-opacity=', 'floodOpacity=')
+    .replaceAll('stroke-width=', 'strokeWidth=')
+    .replaceAll('stroke-linecap=', 'strokeLinecap=')
+    .replaceAll('stroke-linejoin=', 'strokeLinejoin=')
+    .replaceAll('stop-opacity=', 'stopOpacity=')
+    .replaceAll('color-interpolation-filters=', 'colorInterpolationFilters=')
+    .replaceAll('xlink:href=', 'xlinkHref=')
+    .replaceAll('`', '\\`')
+    .replaceAll(/height="[^"]*"/gu, '')
+    .replaceAll(/width="[^"]*"/gu, '')
 
   if (['ProductIcon', 'CategoryIcon'].includes(suffix)) {
     const svgWithClassNames = updatedSvgContent.replaceAll(/className="[^"]*"/gu, '')
@@ -209,7 +209,7 @@ const readSvg = async (filePath: string, suffix: string) => {
           '#521094': 'fill',
         }
 
-    return svgWithClassNames.replace(/fill="([^"]*)"/giu, (match: string, color: string) => {
+    return svgWithClassNames.replaceAll(/fill="([^"]*)"/giu, (match: string, color: string) => {
       const className = colorToClass[color.toUpperCase()]
       if (className) {
         return `${match} className="${className}"`

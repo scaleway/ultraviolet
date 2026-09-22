@@ -59,7 +59,7 @@ export const Row = ({
 
   const checkboxRowRef = useRef<HTMLInputElement>(null)
 
-  const hasExpandable = !!expandable
+  const hasExpandable = Boolean(expandable)
   useEffect(() => {
     if (hasExpandable) {
       const unregisterCallback = registerExpandableRow(id, expanded)
@@ -119,7 +119,7 @@ export const Row = ({
                     aria-label="select"
                     checked={selectedRowIds[id]}
                     className={inRange?.includes(id) ? listStyle.checkboxInRange : undefined}
-                    disabled={!!selectDisabled}
+                    disabled={Boolean(selectDisabled)}
                     name="table-select-checkbox"
                     onChange={() => handleOnChange(id, selectedRowIds[id] ?? false)}
                     ref={checkboxRowRef}

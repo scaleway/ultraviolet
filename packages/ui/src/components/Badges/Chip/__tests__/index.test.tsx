@@ -8,6 +8,7 @@ import { Chip } from '..'
 
 describe('checkbox', () => {
   it('renders correctly', () => shouldMatchSnapshot(<Chip>test</Chip>))
+
   it('renders correctly wiht icon', () =>
     shouldMatchSnapshot(
       <Chip>

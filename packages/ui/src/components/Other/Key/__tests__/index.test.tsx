@@ -6,13 +6,16 @@ import { Key } from '../index'
 
 describe('key', () => {
   it('renders correctly', () => shouldMatchSnapshot(<Key>A</Key>))
+
   it('renders primary', () => shouldMatchSnapshot(<Key sentiment="primary">A</Key>))
+
   it('renders strong', () =>
     shouldMatchSnapshot(
       <Key prominence="strong" sentiment="neutral">
         A
       </Key>,
     ))
+
   it('renders strong primary', () =>
     shouldMatchSnapshot(
       <Key prominence="strong" sentiment="primary">

@@ -70,12 +70,14 @@ describe('text', () => {
         Lorem Ipsum
       </Text>,
     ))
+
   it('with italic', () =>
     shouldMatchSnapshot(
       <Text as="div" italic variant="body">
         Lorem Ipsum
       </Text>,
     ))
+
   it('with underline', () =>
     shouldMatchSnapshot(
       <Text as="div" underline variant="body">

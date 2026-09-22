@@ -68,6 +68,7 @@ describe('alert', () => {
         Sample Alert
       </Alert>,
     ))
+
   it('renders correctly small', () =>
     shouldMatchSnapshot(
       <Alert className="small" size="small" title="title">

@@ -218,7 +218,7 @@ const FileInputBase = ({
   const value = useMemo(
     () => ({
       disabled,
-      error: !!error,
+      error: Boolean(error),
       files,
       inputRef,
       onChangeFiles,

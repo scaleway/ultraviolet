@@ -67,7 +67,7 @@ export const ListFiles = ({ limit, textLimit, prominence = 'default', onDelete }
       {files.map((file, index) => {
         if (!computedLimit || index < computedLimit) {
           const fileType = getMimeTypeType(file.type)
-          const illustration = getIllustration(fileType, !!file.error || error, !!file.loading, file.file)
+          const illustration = getIllustration(fileType, Boolean(file.error) || error, Boolean(file.loading), file.file)
           const sentiment = file.error ? 'danger' : 'neutral'
 
           return (

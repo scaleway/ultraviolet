@@ -118,6 +118,7 @@ describe('numberInput', () => {
     expect(onChange).toHaveBeenNthCalledWith(2, null)
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('should update the value on blur when it is above the max value', async () => {
     const onChange = vi.fn()
     const maxValue = 5

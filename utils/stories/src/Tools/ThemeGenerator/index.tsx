@@ -76,7 +76,7 @@ export const ThemeGenerator = () => {
       }
     }, {})
 
-    const figmaTokensResponse = await fetch(TOKENS_URL as string)
+    const figmaTokensResponse = await fetch(TOKENS_URL)
     const figmaTokensJson = (await figmaTokensResponse.json()) as JsonTokenType
 
     const overloadedTokens = {

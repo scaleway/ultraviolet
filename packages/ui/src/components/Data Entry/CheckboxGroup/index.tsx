@@ -47,7 +47,7 @@ const CheckboxGroup = ({
 }: CheckboxGroupProps) => {
   const contextValue = useMemo(
     () => ({
-      error: !!error,
+      error: Boolean(error),
       groupName: name,
       groupValues: value ?? [],
       onChange,

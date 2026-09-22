@@ -19,6 +19,7 @@ describe('filterByProperty helpers', () => {
     expect(result).toContainEqual({ name: '' })
     expect(result).toContainEqual({ name: 'Jane' })
   })
+
   it('should filter array by property existence 2', () => {
     const input: { name?: string | null | undefined }[] = [
       { name: 'John' },

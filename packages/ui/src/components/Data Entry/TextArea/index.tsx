@@ -146,7 +146,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
     const nonDefaultState = success || error
 
-    const computedClearable = clearable && !!value
+    const computedClearable = clearable && Boolean(value)
     const defaultPadding = theme.space[1]
     const spaceForClearButton = computedClearable ? theme.sizing[buttonSizeHeight.xsmall] : '0px'
     const spaceForStateIcon = nonDefaultState ? theme.sizing[STATE_ICON_SIZE] : '0px'
@@ -164,12 +164,12 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           <div className={textAreaStyle.wrapper}>
             <textarea
               aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
-              aria-invalid={!!error}
+              aria-invalid={Boolean(error)}
               aria-label={ariaLabel}
               autoFocus={autoFocus}
               className={textAreaStyle.textArea({
-                error: !!error,
-                success: !!success,
+                error: Boolean(error),
+                success: Boolean(success),
                 size,
               })}
               data-testid={dataTestId}
@@ -185,7 +185,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               onFocus={onFocus}
               onKeyDown={onKeyDown}
               placeholder={placeholder}
-              readOnly={!!readOnly}
+              readOnly={Boolean(readOnly)}
               ref={textAreaRef}
               rows={rows === 'auto' ? AUTO_ROWS : rows}
               style={{
@@ -214,7 +214,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
                   <CloseIcon />
                 </Button>
               ) : null}
-              <SuccessErrorIcon error={!!error} success={!!success} />
+              <SuccessErrorIcon error={Boolean(error)} success={Boolean(success)} />
             </Stack>
           </div>
         </Tooltip>

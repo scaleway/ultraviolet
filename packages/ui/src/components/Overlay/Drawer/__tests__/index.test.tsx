@@ -92,6 +92,7 @@ describe('drawer', () => {
     await userEvent.click(button)
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders custom size=large', async () => {
     const { asFragment } = renderWithTheme(
       <Drawer disclosure={<button type="button">button</button>} header="header" size="large">

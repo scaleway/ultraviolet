@@ -28,6 +28,7 @@ describe('menu', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders with visible=false', () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure}>
@@ -37,6 +38,7 @@ describe('menu', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders with Menu.Item', () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} visible>
@@ -238,6 +240,7 @@ describe('menu', () => {
     expect(items).toHaveLength(1)
     expect(items[0]).toHaveTextContent('Disk')
   })
+
   it('renders with footer', () =>
     shouldMatchSnapshot(
       <Menu disclosure={() => disclosure} footer="Footer" visible>
@@ -386,6 +389,7 @@ describe('menu', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders nested', async () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} searchable>
@@ -500,6 +504,7 @@ describe('menu', () => {
           <Menu.Item>left</Menu.Item>
         </Menu>,
       ))
+
     it('renders right', () =>
       shouldMatchSnapshot(
         <Menu disclosure={() => disclosure} placement="right" visible>
@@ -529,12 +534,14 @@ describe('menu', () => {
           <Menu.Item disabled>Disabled Props</Menu.Item>
         </Menu>,
       ))
+
     it('render with borderless props', () =>
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item borderless>Borderless Props</Menu.Item>
         </Menu>,
       ))
+
     it('render with active props', () =>
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>

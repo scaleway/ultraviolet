@@ -6,6 +6,7 @@ import { DynamicIllustration } from '..'
 describe('dynamicIllustration', () => {
   it('should work with consoleLightTheme', () =>
     shouldMatchSnapshot(<DynamicIllustration name="empty" />, consoleLightTheme))
+
   it('should work with consoleDarkTheme', () =>
     shouldMatchSnapshot(<DynamicIllustration name="empty" />, consoleDarkTheme))
 

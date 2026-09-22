@@ -81,6 +81,7 @@ describe('snippet', () => {
         {TEST_VALUE_MULTILINE}
       </Snippet>,
     ))
+
   it('renders correctly with helper ', () =>
     shouldMatchSnapshot(<Snippet helper="helper">{TEST_VALUE_MULTILINE}</Snippet>))
 })

@@ -96,7 +96,8 @@ export const Daily = () => {
           : false
 
         // Whether the date < minDate or date > maxDate
-        const isOutsideRange = !!(minDate && constructedDate < minDate) || !!(maxDate && constructedDate > maxDate)
+        const isOutsideRange =
+          Boolean(minDate && constructedDate < minDate) || Boolean(maxDate && constructedDate > maxDate)
 
         // Whether the date is selected
         const isSelected =

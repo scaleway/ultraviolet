@@ -30,7 +30,9 @@ export function shuffle(input: string, maxRetries = 10): string {
 
   for (let attempts = 0; attempts < maxRetries; attempts++) {
     const result = shuffleOnce()
-    if (result !== input) return result
+    if (result !== input) {
+      return result
+    }
   }
 
   return input

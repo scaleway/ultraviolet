@@ -53,7 +53,7 @@ export const SelectableCardField = <
       {...props}
       {...(productIcon ? { productIcon } : { illustration })}
       checked={isChecked}
-      isError={!!error}
+      isError={Boolean(error)}
       name={field.name}
       onBlur={event => {
         field.onBlur()

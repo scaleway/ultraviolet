@@ -41,6 +41,7 @@ describe('plans', () => {
 
     expect(asFragment).toMatchSnapshot()
   })
+
   it('should work with value and onChange', async () => {
     const mockOnChange = vi.fn()
     const { asFragment } = renderWithTheme(

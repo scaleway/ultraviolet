@@ -76,7 +76,7 @@ const SelectableCardOptionGroupFieldComponent: <
       }}
       optionValue={String(optionField.value)}
       required={required}
-      value={field.value as string}
+      value={field.value}
       {...props}
     >
       {children}

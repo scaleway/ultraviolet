@@ -192,7 +192,7 @@ const BaseExpandableCard = forwardRef(
         >
           <summary
             className={expandableCardStyle.summary}
-            data-disabled={!!disabled}
+            data-disabled={Boolean(disabled)}
             data-testid={dataTestId ? `${dataTestId}-summary` : undefined}
             onClick={event => {
               if (disabled || onToggleExpand) {

@@ -34,11 +34,10 @@ export const ErrorProvider = ({ children, errors }: ErrorProviderProps) => {
   )
 
   const value = useMemo(
-    () =>
-      ({
-        errors,
-        getError,
-      }) as ErrorContextValue,
+    () => ({
+      errors,
+      getError,
+    }),
     [errors, getError],
   )
 

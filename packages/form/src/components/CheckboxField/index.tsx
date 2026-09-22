@@ -48,7 +48,7 @@ export const CheckboxField = <
     <Checkbox
       {...props}
       required={required}
-      checked={!!field.value}
+      checked={Boolean(field.value)}
       disabled={field.disabled}
       error={getError({ label: errorLabel ?? label ?? props['aria-label'] ?? name }, error)}
       name={field.name}

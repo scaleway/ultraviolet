@@ -125,11 +125,11 @@ export const NumberInput = forwardRef(
               })}
               data-controls={controls}
               data-disabled={disabled}
-              data-error={!!error}
+              data-error={Boolean(error)}
               data-readonly={readOnly}
               data-size={size}
-              data-success={!!success}
-              data-unit={!!unit}
+              data-success={Boolean(success)}
+              data-unit={Boolean(unit)}
             >
               <Controls
                 controls={controls}
@@ -153,7 +153,7 @@ export const NumberInput = forwardRef(
                   autoFocus={autoFocus}
                   className={numberInputStyle.numberinput({
                     controls,
-                    hasUnit: !!unit,
+                    hasUnit: Boolean(unit),
                     size,
                   })}
                   data-testid={dataTestId}

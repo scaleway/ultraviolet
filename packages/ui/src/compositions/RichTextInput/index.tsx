@@ -105,8 +105,8 @@ export const RichTextInput = ({
           richTextInputStyle.editorSurface({
             disabled,
             readonly: readOnly,
-            error: !!error && !disabled,
-            success: !!success && !error && !disabled,
+            error: Boolean(error) && !disabled,
+            success: Boolean(success) && !error && !disabled,
           }),
           className,
         )}

@@ -46,7 +46,7 @@ export const HighlightAnimation: StoryFn<typeof Table> = ({ ...props }) => {
       <Table {...props} columns={columns}>
         <Table.Body>
           {data.map(movie => (
-            <Table.Row highlightAnimation={!!movie.isNew} id={movie.id} key={movie.id}>
+            <Table.Row highlightAnimation={Boolean(movie.isNew)} id={movie.id} key={movie.id}>
               <Table.Cell>{movie.name}</Table.Cell>
               <Table.Cell>{movie.releaseYear}</Table.Cell>
               <Table.Cell>{movie.trilogy}</Table.Cell>

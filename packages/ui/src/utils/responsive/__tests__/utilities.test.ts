@@ -8,6 +8,7 @@ describe('responsive utilities', () => {
     it.each(Object.keys(screens) as ScreenSize[])(`works with %s`, brk => {
       expect(up(brk, 'border: 1px solid red;')).toMatchSnapshot()
     })
+
     it('should return null when unknown size', () => {
       // @ts-expect-error we send the wrong screen size on purpose
       expect(up('yolo', 'border: 1px solid red;')).toMatchSnapshot()
@@ -17,6 +18,7 @@ describe('responsive utilities', () => {
     it.each(Object.keys(screens) as ScreenSize[])(`works with %s`, brk => {
       expect(down(brk, 'border: 1px solid red;')).toMatchSnapshot()
     })
+
     it('should return null when unknown size', () => {
       // @ts-expect-error we send the wrong screen size on purpose
       expect(down('yolo', 'border: 1px solid red;')).toMatchSnapshot()

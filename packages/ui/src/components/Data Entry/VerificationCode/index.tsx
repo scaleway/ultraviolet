@@ -105,7 +105,7 @@ export const VerificationCode = ({
   const inputOnChange = (index: number) => (event: ChangeEvent<HTMLInputElement>) => {
     let { value } = event.target
     if (type === 'number') {
-      value = event.target.value.replace(/[^\d]/giu, '')
+      value = event.target.value.replaceAll(/[^\d]/giu, '')
     }
     const newValues = [...values]
 
@@ -192,7 +192,7 @@ export const VerificationCode = ({
       // oxlint-disable-next-line typescript/no-misused-spread
       const pastedValue = [...event.clipboardData.getData('Text')].map((copiedValue: string) =>
         // Replace non number char with empty char when type is number
-        type === 'number' ? copiedValue.replace(/[^\d]/giu, '') : copiedValue,
+        type === 'number' ? copiedValue.replaceAll(/[^\d]/giu, '') : copiedValue,
       )
 
       // Trim array to avoid array overflow
@@ -230,11 +230,11 @@ export const VerificationCode = ({
         {values.map((value: string, index: number) => (
           <input
             aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
-            aria-invalid={!!error}
+            aria-invalid={Boolean(error)}
             aria-label={`${ariaLabel} ${index}`}
             autoComplete="off"
             className={cn(verificationCodeStyle.inputSizes[size], verificationCodeStyle.input)}
-            data-success={!!success}
+            data-success={Boolean(success)}
             data-testid={index}
             disabled={disabled}
             id={`${id}-${index}`}

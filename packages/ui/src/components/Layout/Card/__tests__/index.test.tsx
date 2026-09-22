@@ -7,8 +7,10 @@ describe('card', () => {
 
   it('renders correctly with advanced header', () =>
     shouldMatchSnapshot(<Card header={<h2>Advanced Title</h2>}>Hello</Card>))
+
   it('renders correctly with advanced subHeader', () =>
     shouldMatchSnapshot(<Card subHeader={<h2>Advanced subHeader</h2>}>Hello</Card>))
+
   it('renders correctly with subHeader', () => shouldMatchSnapshot(<Card subHeader="Title">Hello</Card>))
 
   it('renders correctly with header and subHeader', () =>
