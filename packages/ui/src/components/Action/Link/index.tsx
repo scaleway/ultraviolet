@@ -6,7 +6,7 @@ import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn, renderElement } from '@ultraviolet/utils'
 import type { RenderProp } from '@ultraviolet/utils'
-import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react'
 import type {
   AnchorHTMLAttributes,
   CSSProperties,
@@ -15,26 +15,23 @@ import type {
   KeyboardEventHandler,
   MouseEventHandler,
   ReactNode,
-  RefObject,
 } from 'react'
 import recursivelyGetChildrenString from '../../../helpers/recursivelyGetChildrenString'
 import { Tooltip } from '../../Overlay/Tooltip'
-import type { PROMINENCES } from './constants'
+import type { LinkSentiment, LinkProminence, LinkSize } from './constants'
 import { linkStyle } from './styles.css'
-
-export type ProminenceProps = keyof typeof PROMINENCES
-
-type LinkSizes = 'large' | 'small' | 'xsmall'
-type LinkIconPosition = 'left' | 'right'
 
 type LinkProps = {
   children: ReactNode
   target?: HTMLAttributeAnchorTarget
   download?: string | boolean
-  sentiment?: 'primary' | 'info'
-  prominence?: ProminenceProps
-  size?: LinkSizes
-  iconPosition?: LinkIconPosition
+  /**
+   * @default "info" if target="_blank", "primary" otherwise.
+   */
+  sentiment?: LinkSentiment
+  prominence?: LinkProminence
+  size?: LinkSize
+  iconPosition?: 'left' | 'right'
   rel?: AnchorHTMLAttributes<HTMLAnchorElement>['rel']
   className?: string
   // For react router shouldn't be used directly
@@ -45,6 +42,9 @@ type LinkProps = {
   'aria-keyshortcuts'?: string
   oneLine?: boolean
   'data-testid'?: string
+  /**
+   * @deprecated the "variant" property has been removed and has no effect.
+   */
   variant?: 'inline' | 'standalone'
   style?: CSSProperties
 } & XOR<
@@ -72,7 +72,6 @@ type LinkProps = {
 >
 
 const ICON_SIZE = 'small'
-const BLANK_TARGET_ICON_SIZE = 'small'
 
 /**
  * Link is a component used to navigate between pages or to external websites.
@@ -85,7 +84,7 @@ export const Link = forwardRef(
       href,
       target,
       download,
-      sentiment = 'info',
+      sentiment = target === '_blank' ? 'info' : 'primary',
       prominence,
       size = 'large',
       iconPosition,
@@ -98,36 +97,25 @@ export const Link = forwardRef(
       'aria-keyshortcuts': ariaKeyshortcuts,
       oneLine = false,
       'data-testid': dataTestId,
-      variant = 'standalone',
       style,
       render,
     }: LinkProps,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     const isBlank = target === '_blank'
-    const computedRel = rel ?? (isBlank ? 'noopener noreferrer' : undefined)
     const [isTruncated, setIsTruncated] = useState(false)
-    const elementRef = useRef<HTMLAnchorElement>(null)
 
-    const usedRef = (ref as RefObject<HTMLAnchorElement>) ?? elementRef
+    const elementRef = useRef<HTMLAnchorElement>(null)
+    useImperativeHandle(ref, () => elementRef.current!)
 
     const finalStringChildren = recursivelyGetChildrenString(children)
-    const textVariant = useMemo(() => {
-      if (size === 'xsmall') {
-        return 'captionStrong'
-      }
-      if (size === 'small') {
-        return 'bodySmallStrong'
-      }
 
-      return 'bodyStrong'
-    }, [size])
     useEffect(() => {
-      if (oneLine && usedRef?.current) {
-        const { offsetWidth, scrollWidth } = usedRef.current
+      if (oneLine && elementRef?.current) {
+        const { offsetWidth, scrollWidth } = elementRef.current
         setIsTruncated(offsetWidth < scrollWidth)
       }
-    }, [oneLine, ref, usedRef])
+    }, [oneLine, ref, elementRef])
 
     const computedClassName = cn(
       className,
@@ -135,8 +123,7 @@ export const Link = forwardRef(
         oneLine,
         prominence,
         sentiment,
-        type: variant,
-        variant: textVariant,
+        size,
       }),
       linkStyle.defaultLink,
     )
@@ -148,8 +135,7 @@ export const Link = forwardRef(
             children,
             className: computedClassName,
             'data-testid': dataTestId,
-            'data-variant': variant,
-            ref: usedRef,
+            ref: elementRef,
             style,
           })}
         </Tooltip>
@@ -164,13 +150,12 @@ export const Link = forwardRef(
           aria-label={ariaLabel}
           className={computedClassName}
           data-testid={dataTestId}
-          data-variant={variant}
           download={download}
           href={href}
           onClick={onClick}
           onKeyDown={onKeyDown}
-          ref={usedRef}
-          rel={computedRel}
+          ref={elementRef}
+          rel={rel ?? (isBlank ? 'noopener noreferrer' : undefined)}
           style={style}
           target={target}
         >
@@ -179,11 +164,7 @@ export const Link = forwardRef(
           ) : null}
           {children}
 
-          {isBlank ? (
-            <span className={linkStyle.containerIcon}>
-              <OpenInNewIcon className={linkStyle.iconRight} size={BLANK_TARGET_ICON_SIZE} />
-            </span>
-          ) : null}
+          {isBlank ? <OpenInNewIcon className={cn(linkStyle.iconRight)} size={ICON_SIZE} /> : null}
 
           {!isBlank && iconPosition === 'right' ? (
             <ArrowRightIcon className={linkStyle.iconRight} size={ICON_SIZE} />

@@ -59,12 +59,8 @@ export const Banner = ({
   const defaultImage = size === 'small' ? defaultIllustrationSmall : defaultIllustration
 
   const prominence = useMemo(() => {
-    if (variant === 'promotional') {
+    if (variant === 'promotional' || theme === 'dark' || theme === 'darker') {
       return 'strong'
-    }
-
-    if (theme === 'dark' || theme === 'darker') {
-      return 'stronger'
     }
 
     return 'default'

@@ -1,35 +1,33 @@
 import { theme } from '@ultraviolet/themes'
-import { capitalize } from '@ultraviolet/utils'
 import { globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { PROMINENCES } from './constants'
+import type { LinkSentiment, LinkProminence } from './constants'
+import { PROMINENCES, SENTIMENTS } from './constants'
+import { globalAlertStyle } from '../../Feedback/GlobalAlert/styles.css'
 
 const TRANSITION_DURATION = 250
 
-type ProminenceType = keyof typeof PROMINENCES
+function getLinkStyle(sentiment: LinkSentiment, prominence: LinkProminence) {
+  if (prominence === 'stronger' && sentiment === 'neutral') {
+    return {
+      color: theme.colors.neutral.textStronger,
+      selectors: {
+        '&:hover, &:focus': {
+          color: theme.colors.neutral.textStrongerHover,
+        },
+      },
+    }
+  }
 
-function getLinkStyle(sentiment: 'primary' | 'info', prominence: ProminenceType) {
-  const definedProminence = capitalize(PROMINENCES[prominence])
-  const text = `text${definedProminence}` as keyof typeof theme.colors.primary
-  const textHover = `text${definedProminence}Hover` as keyof typeof theme.colors.primary
+  const definedProminence = prominence === 'strong' ? 'Strong' : ''
+  const text = `text${definedProminence}` as const
+  const textHover = `text${definedProminence}Hover` as const
 
   return {
     color: theme.colors[sentiment][text] ?? theme.colors.neutral.text,
     selectors: {
-      '&:hover': {
-        textDecorationColor: theme.colors[sentiment][textHover],
+      '&:hover, &:focus': {
         color: theme.colors[sentiment][textHover],
-      },
-      '&:focus': {
-        textDecorationColor: theme.colors[sentiment][textHover],
-        color: theme.colors[sentiment][textHover],
-      },
-      '&:active': {
-        textDecorationThickness: '2px',
-      },
-      '&:visited': {
-        color: theme.colors.secondary.text,
-        textDecorationColor: theme.colors.secondary.text,
       },
     },
   }
@@ -42,55 +40,50 @@ function makeVariant(variant: 'captionStrong' | 'bodySmallStrong' | 'bodyStrong'
     fontWeight: theme.typography[variant].weight,
     letterSpacing: theme.typography[variant].letterSpacing,
     lineHeight: theme.typography[variant].lineHeight,
-    paragraphSpacing: theme.typography[variant].paragraphSpacing,
-    textCase: theme.typography[variant].textCase,
   }
 }
 
 const link = recipe({
   base: {
-    backgroundColor: 'none',
     border: 'none',
     padding: 0,
-    textDecoration: 'underline',
-    textDecorationThickness: 1,
-    textUnderlineOffset: 2,
-    textDecorationStyle: 'dotted',
-    gap: theme.space[1],
+    display: 'inline-flex',
+    gap: theme.space[0.5],
+    alignItems: 'center',
+    textDecoration: 'underline 1px dotted',
+    textUnderlineOffset: '3px',
     position: 'relative',
     cursor: 'pointer',
     selectors: {
-      '&:hover': {
-        outline: 'none',
+      '&:hover, &:focus, &:active': {
         textDecoration: 'underline',
-        textDecorationThickness: 1,
+      },
+      '&:active': {
+        textDecorationThickness: '2px',
       },
     },
   },
   variants: {
     sentiment: {
-      primary: {
-        selectors: {
-          '&:hover::after': {
-            backgroundColor: theme.colors.primary.text,
-          },
-          '&:focus::after': {
-            backgroundColor: theme.colors.primary.text,
-          },
-        },
-      },
-      info: {
-        selectors: {
-          '&:hover::after': {
-            backgroundColor: theme.colors.info.text,
-          },
-          '&:focus::after': {
-            backgroundColor: theme.colors.info.text,
-          },
-        },
-      },
+      primary: {},
+      success: {},
+      warning: {},
+      danger: {},
+      neutral: {},
+      info: {},
     },
-    prominence: Object.fromEntries(Object.keys(PROMINENCES).map(prominence => [prominence, {}])),
+    prominence: {
+      default: {
+        selectors: {
+          '&[target="_blank"]:is(:visited, :visited:hover, :visited:focus, :visited:active)': {
+            color: theme.colors.secondary.text,
+          },
+        },
+      },
+      strong: {},
+      stronger: {},
+      weak: {},
+    },
     oneLine: {
       true: {
         whiteSpace: 'nowrap',
@@ -102,77 +95,58 @@ const link = recipe({
         width: 'fit-content',
       },
     },
-    variant: {
-      captionStrong: makeVariant('captionStrong'),
-      bodySmallStrong: makeVariant('bodySmallStrong'),
-      bodyStrong: makeVariant('bodyStrong'),
-    },
-    type: {
-      inline: {
-        textDecoration: 'underline',
-        textDecorationThickness: 1,
-      },
-      standalone: {},
+    size: {
+      xsmall: makeVariant('captionStrong'),
+      small: makeVariant('bodySmallStrong'),
+      large: makeVariant('bodyStrong'),
     },
   },
-  compoundVariants: [
-    ...Object.keys(PROMINENCES).map(prominence => ({
-      variants: {
-        sentiment: 'primary' as const,
-        prominence: prominence as ProminenceType,
+  compoundVariants: SENTIMENTS.flatMap(sentiment =>
+    PROMINENCES.flatMap(prominence => [
+      {
+        variants: {
+          sentiment: sentiment,
+          prominence,
+        },
+        style: getLinkStyle(sentiment, prominence),
       },
-      style: getLinkStyle('primary', prominence as ProminenceType),
-    })),
-    ...Object.keys(PROMINENCES).map(prominence => ({
-      variants: {
-        sentiment: 'info' as const,
-        prominence: prominence as ProminenceType,
-      },
-      style: getLinkStyle('info', prominence as ProminenceType),
-    })),
-  ],
+    ]),
+  ),
   defaultVariants: {
     prominence: 'default',
-    sentiment: 'info',
     oneLine: false,
-    variant: 'bodyStrong',
-    type: 'standalone',
+    size: 'large',
   },
 })
 
-const containerIcon = style({
-  display: 'inline-flex',
-  paddingBottom: theme.space['0.5'],
+const defaultLink = style({
+  selectors: {
+    [`${globalAlertStyle.container['danger']} &`]: {
+      color: theme.colors.danger.textStrong,
+    },
+    [`${globalAlertStyle.container['info']} &`]: {
+      color: theme.colors.info.textStrong,
+    },
+    [`${globalAlertStyle.container['promotional']} &`]: {
+      color: theme.colors.primary.textStrong,
+    },
+  },
 })
-
-/* Make this to have a global syle which does not depend on props
-That way we do not have to target every possible variant in
-icon styles */
-const defaultLink = style({})
 
 const iconLeft = style({
-  marginRight: theme.space['0.5'],
-  transition: `transform ${TRANSITION_DURATION}ms ease-out`,
+  transition: `transform ${TRANSITION_DURATION}ms cubic-bezier(0.22, 1, 0.36, 1)`, // easeOutQuint
   selectors: {
-    [`${defaultLink}:hover &`]: {
-      transform: 'translate(0.25rem, 0)',
-    },
-    [`${defaultLink}:focus &`]: {
-      transform: 'translate(0.25rem, 0)',
+    [`${defaultLink}:hover &, ${defaultLink}:focus &`]: {
+      transform: `translate(${theme.space['0.25']}, 0)`,
     },
   },
 })
 
-// Use calc() instead of simply "-" because theme.space[0.25] is a var()
 const iconRight = style({
-  marginLeft: theme.space['0.5'],
-  transition: `transform ${TRANSITION_DURATION}ms ease-out`,
+  transition: `transform ${TRANSITION_DURATION}ms cubic-bezier(0.22, 1, 0.36, 1)`, // easeOutQuint
   selectors: {
-    [`${defaultLink}:hover &`]: {
-      transform: `translate(calc(${theme.space['0.25']}*-1), 0)`,
-    },
-    [`${defaultLink}:focus &`]: {
-      transform: `translate(calc(${theme.space['0.25']}*-1), 0)`,
+    [`${defaultLink}:hover &, ${defaultLink}:focus &`]: {
+      transform: `translate(calc(${theme.space['0.25']}*-1), 0)`, // Use calc() instead of simply "-" because theme.space[0.25] is a var()
     },
   },
 })
@@ -184,7 +158,6 @@ globalStyle(`${defaultLink} > * `, {
 
 export const linkStyle = {
   link,
-  containerIcon,
   defaultLink,
   iconLeft,
   iconRight,
