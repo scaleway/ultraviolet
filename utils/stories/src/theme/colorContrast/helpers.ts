@@ -14,14 +14,12 @@ export const AA_THRESHOLD = 4.5
 
 export const hexToRgb = (hex: string): [number, number, number] => {
   const cleaned = hex.replace('#', '')
-  const full =
-    cleaned.length === 3
-      ? cleaned
-          .split('')
-          .map(c => c + c)
-          .join('')
-      : cleaned
-  return [parseInt(full.slice(0, 2), 16), parseInt(full.slice(2, 4), 16), parseInt(full.slice(4, 6), 16)]
+  const full = cleaned.length === 3 ? [...cleaned].map(c => c + c).join('') : cleaned
+  return [
+    Number.parseInt(full.slice(0, 2), 16),
+    Number.parseInt(full.slice(2, 4), 16),
+    Number.parseInt(full.slice(4, 6), 16),
+  ]
 }
 
 export const relativeLuminance = (hex: string): number => {
@@ -44,6 +42,6 @@ export const getContrastLevel = (ratio: number): ContrastLevel => (ratio >= AA_T
 export const filterByPrefix = (colors: Record<string, string>, prefix: string) =>
   Object.entries(colors)
     .filter(([key]) => key.startsWith(prefix))
-    .sort(([a], [b]) => a.localeCompare(b))
+    .toSorted(([a], [b]) => a.localeCompare(b))
 
 export const getSuffix = (key: string, prefix: string) => key.slice(prefix.length)

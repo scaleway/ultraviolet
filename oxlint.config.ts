@@ -45,8 +45,6 @@ export default defineConfig({
         'import/no-nodejs-modules': 'off',
         'import/no-unassigned-import': 'off',
 
-        'jsx-a11y/no-static-element-interactions': 'warn', // jsx-a11y errors (6)
-
         'react/jsx-pascal-case': 'off',
         'react/no-multi-comp': 'off',
         'react/no-array-index-key': 'off',

@@ -10,7 +10,7 @@ vi.mock('@ultraviolet/utils', async importOriginal => {
   const actual = await importOriginal<typeof import('@ultraviolet/utils')>()
   return {
     ...actual,
-    shuffle: (value: string) => value.split('').reverse().join(''),
+    shuffle: (value: string) => [...value].toReversed().join(''),
   }
 })
 
