@@ -55,15 +55,44 @@ const resolveVar = (value: string) => {
   return varName ? getComputedStyle(document.documentElement).getPropertyValue(varName).trim() : value
 }
 
-const handleKeyDown = (
-  event: globalThis.KeyboardEvent,
-  ref: RefObject<HTMLDivElement | null>,
-  options: DataType,
-  searchBarActive: boolean,
-  setSearch: Dispatch<SetStateAction<string>>,
-  setDefaultSearch: Dispatch<SetStateAction<string | null>>,
-  search: string,
-) => {
+type HandleKeyDownParams = {
+  event: globalThis.KeyboardEvent
+  ref: RefObject<HTMLDivElement | null>
+  options: DataType
+  searchBarActive: boolean
+  setSearch: Dispatch<SetStateAction<string>>
+  setDefaultSearchValue: Dispatch<SetStateAction<string | null>>
+  search: string
+}
+
+const findClosestOption = (options: DataType, currentSearch: string): OptionType | undefined => {
+  const matchesSearch = (option: OptionType): boolean =>
+    option.searchText
+      ? option.searchText.toLocaleLowerCase().startsWith(currentSearch)
+      : option.value.toLocaleLowerCase().startsWith(currentSearch)
+
+  if (Array.isArray(options)) {
+    return options.find(matchesSearch)
+  }
+
+  const keys = Object.keys(options)
+  if (keys.length === 0) {
+    return undefined
+  }
+
+  const firstGroup = options[keys[0]]
+  return firstGroup.find(matchesSearch)
+}
+
+const handleKeyDown = ({
+  event,
+  ref,
+  options,
+  searchBarActive,
+  setSearch,
+  setDefaultSearchValue,
+  search,
+}: HandleKeyDownParams) => {
   // Deals with default search
   if (
     ref.current &&
@@ -74,31 +103,13 @@ const handleKeyDown = (
     const currentSearch = search + event.key
     setSearch(currentSearch)
     ref.current.focus()
-    let closestOption: OptionType | undefined
-    if (Array.isArray(options)) {
-      closestOption = [...options].find(option =>
-        option.searchText
-          ? option.searchText.toLocaleLowerCase().startsWith(currentSearch)
-          : option.value.toLocaleLowerCase().startsWith(currentSearch),
-      )
-    } else {
-      const closestOptions = { ...options }
-      Object.keys(closestOptions).map((group: string) => {
-        closestOptions[group] = closestOptions[group].filter(option =>
-          option.searchText
-            ? option.searchText.toLocaleLowerCase().startsWith(currentSearch)
-            : option.value.toLocaleLowerCase().startsWith(currentSearch),
-        )
 
-        return null
-      })
-      closestOption = closestOptions[Object.keys(closestOptions)[0]][0]
-    }
+    const closestOption = findClosestOption(options, currentSearch)
 
     if (closestOption) {
-      setDefaultSearch(closestOption.searchText ?? closestOption.value)
+      setDefaultSearchValue(closestOption.searchText ?? closestOption.value)
     } else {
-      setDefaultSearch(null)
+      setDefaultSearchValue(null)
     }
   }
 }
@@ -145,7 +156,7 @@ export const Dropdown = ({
     const overflow = position - window.innerHeight + 32
 
     if (overflow > 0 && modalContext) {
-      const currentModal = modalContext.openedModals[0]
+      const [currentModal] = modalContext.openedModals
       const modalElement = currentModal?.ref.current
 
       if (modalElement) {
@@ -195,7 +206,15 @@ export const Dropdown = ({
     }
 
     const eventKeydown = (event: globalThis.KeyboardEvent) =>
-      handleKeyDown(event, ref, options, searchBarActive, setSearch, setDefaultSearchValue, search)
+      handleKeyDown({
+        event,
+        ref,
+        options,
+        searchBarActive,
+        setSearch,
+        setDefaultSearchValue,
+        search,
+      })
 
     if (!searchable) {
       document.addEventListener('keydown', eventKeydown)
