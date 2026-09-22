@@ -14,7 +14,7 @@ const actionBar = style({
   backgroundColor: theme.colors.other.elevation.background.fixed,
   borderRadius: theme.radii.default,
   bottom: `calc(${theme.sizing['700']} * ${rankActionBar} + ${theme.space['2']})`,
-  boxShadow: `${theme.shadows.fixed[0]}, ${theme.shadows.fixed[1]}`,
+  boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
   height: theme.sizing[700],
   left: '50%',
   position: 'fixed',

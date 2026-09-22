@@ -22,7 +22,7 @@ export const ContentWrapper = ({ title, onClose, children, sentiment }: ContentW
         accessibleLabel="close"
         onClick={onClose}
         sentiment={sentiment === 'neutral' ? 'neutral' : 'primary'}
-        size="small"
+        size="xsmall"
         variant={sentiment === 'neutral' ? 'ghost' : 'filled'}
       >
         <CloseIcon />

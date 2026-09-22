@@ -11,7 +11,7 @@ function createSizesPopover(size: keyof typeof SIZES_WIDTH) {
 }
 const popover = recipe({
   base: {
-    boxShadow: theme.shadows.popover,
+    boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
     padding: theme.space[2],
     textAlign: 'initial',
   },
