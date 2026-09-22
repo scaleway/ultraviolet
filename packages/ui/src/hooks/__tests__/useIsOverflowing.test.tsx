@@ -15,8 +15,10 @@ class MockResizeObserver {
     this.callback([], this as unknown as ResizeObserver)
   }
 
+  // oxlint-disable-next-line eslint/class-methods-use-this -- mock implementation per ResizeObserver interface
   unobserve() {}
 
+  // oxlint-disable-next-line eslint/class-methods-use-this -- mock delegates to static spy
   disconnect() {
     MockResizeObserver.disconnect()
   }

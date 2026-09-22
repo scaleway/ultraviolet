@@ -73,6 +73,15 @@ const findClosestOption = (options: DataType, searchInput: string | undefined) =
 
 const escapeRegExp = (string: string) => string.replace(/[.*+?^{}()|[\]\\]/gu, String.raw`\$&`)
 
+const filterGroupedOptions = (options: Record<string, OptionType[]>, escapedSearch: string) => {
+  const grouped = { ...options }
+  for (const group of Object.keys(grouped)) {
+    grouped[group] = searchRegex(grouped[group], escapedSearch)
+  }
+
+  return grouped
+}
+
 export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }: SearchBarProps) => {
   const searchInputRef = useRef<HTMLInputElement>(null)
   const { onChange, onSearch, setSearchInput, searchInput, options, multiselect, setSelectedData, selectedData, size } =
@@ -80,18 +89,10 @@ export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }:
 
   const handleChange = (search: string) => {
     if (search.length > 0) {
-      let filteredOptions: DataType
-      if (Array.isArray(options)) {
-        filteredOptions = searchRegex([...options], escapeRegExp(search.toString()))
-      } else {
-        const grouped: Record<string, OptionType[]> = { ...options }
-        Object.keys(grouped).map((group: string) => {
-          grouped[group] = searchRegex(grouped[group], escapeRegExp(search.toString()))
-
-          return null
-        })
-        filteredOptions = grouped
-      }
+      const escapedSearch = escapeRegExp(search.toString())
+      const filteredOptions: DataType = Array.isArray(options)
+        ? searchRegex([...options], escapedSearch)
+        : filterGroupedOptions(options as Record<string, OptionType[]>, escapedSearch)
       onSearch(filteredOptions)
     } else {
       onSearch(options)

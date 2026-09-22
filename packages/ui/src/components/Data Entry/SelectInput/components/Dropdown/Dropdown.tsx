@@ -78,26 +78,26 @@ const handleKeyDown = ({
     const currentSearch = search + event.key
     setSearch(currentSearch)
     ref.current.focus()
-    let closestOption: OptionType | undefined
-    if (Array.isArray(options)) {
-      closestOption = [...options].find(option =>
-        option.searchText
-          ? option.searchText.toLocaleLowerCase().startsWith(currentSearch)
-          : option.value.toLocaleLowerCase().startsWith(currentSearch),
-      )
-    } else {
-      const closestOptions = { ...options }
-      Object.keys(closestOptions).map((group: string) => {
-        closestOptions[group] = closestOptions[group].filter(option =>
+    const closestOption: OptionType | undefined = Array.isArray(options)
+      ? [...options].find(option =>
           option.searchText
             ? option.searchText.toLocaleLowerCase().startsWith(currentSearch)
             : option.value.toLocaleLowerCase().startsWith(currentSearch),
         )
+      : (() => {
+          const closestOptions = { ...options }
+          Object.keys(closestOptions).map((group: string) => {
+            closestOptions[group] = closestOptions[group].filter(option =>
+              option.searchText
+                ? option.searchText.toLocaleLowerCase().startsWith(currentSearch)
+                : option.value.toLocaleLowerCase().startsWith(currentSearch),
+            )
 
-        return null
-      })
-      closestOption = closestOptions[Object.keys(closestOptions)[0]][0]
-    }
+            return null
+          })
+
+          return closestOptions[Object.keys(closestOptions)[0]][0]
+        })()
 
     if (closestOption) {
       setDefaultSearchValue(closestOption.searchText ?? closestOption.value)

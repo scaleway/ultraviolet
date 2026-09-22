@@ -6,7 +6,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { TextArea } from '..'
 
 describe('textArea', () => {
-  let spyGetComputedStyle: Mock
+  let spyGetComputedStyle: Mock | undefined = undefined
 
   beforeEach(() => {
     const original = window.getComputedStyle.bind(window)
@@ -15,7 +15,7 @@ describe('textArea', () => {
       .mockImplementation(elt => Object.assign(original(elt), { lineHeight: '16px' }))
   })
   afterEach(() => {
-    spyGetComputedStyle.mockRestore()
+    spyGetComputedStyle?.mockRestore()
   })
 
   it('should render correctly with basic props', () => {

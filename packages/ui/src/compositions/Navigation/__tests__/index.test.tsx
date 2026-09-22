@@ -211,7 +211,7 @@ describe('navigation', () => {
     await userEvent.click(pinnedGroup)
 
     // Wait for unpin buttons to appear
-    let unpinButton: HTMLButtonElement | undefined
+    let unpinButton: HTMLButtonElement | undefined = undefined
     await waitFor(
       () => {
         const unpinButtons = screen.queryAllByRole('button', {

@@ -18,18 +18,20 @@ export function shuffle(input: string, maxRetries = 10): string {
     return input
   }
 
-  let result: string
-  let attempts = 0
-
-  do {
+  const shuffleOnce = () => {
     const shuffled = [...chars]
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
       ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
     }
-    result = shuffled.join('')
-    attempts++
-  } while (result === input && attempts < maxRetries)
 
-  return result
+    return shuffled.join('')
+  }
+
+  for (let attempts = 0; attempts < maxRetries; attempts++) {
+    const result = shuffleOnce()
+    if (result !== input) return result
+  }
+
+  return input
 }
