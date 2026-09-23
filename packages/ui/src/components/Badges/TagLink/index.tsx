@@ -5,7 +5,6 @@ import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, ReactNode } from 'react'
 import { CopyButton } from '../../Action/CopyButton'
 import { Link } from '../../Action/Link'
-import { Separator } from '../../Layout/Separator'
 import { Stack } from '../../Layout/Stack'
 import { VisuallyHidden } from '../../Other/VisuallyHidden'
 import { Text } from '../../Typography/Text'
@@ -43,8 +42,8 @@ export const TagLink = ({
   copyText,
   onCopy,
   loading,
-}: TagLinkProps) => {
-  return loading ? (
+}: TagLinkProps) =>
+  loading ? (
     <Tag isLoading sentiment={sentiment}>
       {loading}
     </Tag>
@@ -68,7 +67,6 @@ export const TagLink = ({
         {icon}
         {label}
       </Stack>
-      <Separator direction="vertical" className={tagLinkStyle.separator} sentiment={sentiment} aria-hidden />
       <Stack
         className={tagLinkStyle.linkStack({ copiable })}
         as="span"
@@ -100,13 +98,12 @@ export const TagLink = ({
           className={tagStyle.container({ isButton: true, sentiment, tagLink: true })}
         >
           <VisuallyHidden>
-            Close tag {label}: {link}
+            Remove tag {label}: {link}
           </VisuallyHidden>
           <CloseIcon size="small" />
         </button>
       ) : null}
     </Text>
   )
-}
 
 TagLink.displayName = 'Taglink'

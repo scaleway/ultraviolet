@@ -9,11 +9,10 @@ const tagLink = style({
   selectors: { '&&': { padding: 0, gap: 0 } },
 })
 
-const separator = style({
-  selectors: { '&&': { height: theme.sizing[300] } },
+const idStackBase = style({
+  padding: `${theme.space['0.5']} ${theme.space[1]}`,
+  height: '100%',
 })
-
-const idStackBase = style({})
 
 const idStack = styleVariants(
   Object.fromEntries(
@@ -21,9 +20,7 @@ const idStack = styleVariants(
       sentiment,
       {
         backgroundColor: theme.colors[sentiment][sentiment === 'neutral' ? 'backgroundStrong' : 'background'],
-
-        padding: `${theme.space['0.5']} ${theme.space[1]}`,
-        height: '100%',
+        borderRight: `1px solid ${theme.colors[sentiment].border}`,
       },
     ]),
   ),
@@ -34,6 +31,7 @@ const linkStack = recipe({
     paddingInline: theme.space['1'],
     paddingBlock: theme.space[0.5],
     background: theme.colors.neutral.background,
+    overflow: 'hidden',
   },
   variants: {
     copiable: {
@@ -44,11 +42,19 @@ const linkStack = recipe({
   },
 })
 
+const linkBase = style({
+  textOverflow: 'ellipsis',
+  overflow: 'hidden',
+  display: 'block',
+})
 const link = styleVariants({
-  code: {
-    fontFamily: theme.typography.code.fontFamily,
-  },
-  default: {},
+  code: [
+    linkBase,
+    {
+      fontFamily: theme.typography.code.fontFamily,
+    },
+  ],
+  default: [linkBase],
 })
 
 const copyButton = styleVariants(
@@ -59,11 +65,8 @@ const copyButton = styleVariants(
         borderRadius: 0,
         borderRight: '1px solid transparent',
         selectors: {
-          '&:active': {
-            boxShadow: `inset ${theme.shadows[`focus${capitalize(sentiment)}` as keyof typeof theme.shadows]}`,
-          },
-          '&:hover': {
-            borderRight: `1px solid ${theme.colors[sentiment].border}`,
+          '&&:active': {
+            boxShadow: `inset ${theme.shadows[`focus${capitalize(sentiment)}`]}`,
           },
         },
       },
@@ -80,7 +83,6 @@ globalStyle(`${idStackBase} > svg, ${idStackBase} > img`, {
 
 export const tagLinkStyle = {
   tagLink,
-  separator,
   idStack,
   idStackBase,
   linkStack,

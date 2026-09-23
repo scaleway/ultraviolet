@@ -70,7 +70,6 @@ const container = recipe({
       true: {
         borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
         width: theme.sizing[300],
-        marginLeft: -1,
       },
       false: {
         selectors: {

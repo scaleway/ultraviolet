@@ -26,7 +26,8 @@ There is no dedicated ARIA pattern for a tag-with-link composite. The component 
 
 Enforced by the component:
 
-- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - The optional `icon`, the close icon, and the copy/check icons are decorative and default to `aria-hidden` (Icon component). The close button is labeled with visually hidden text.- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Link and buttons are native keyboard-operable (Tab, Enter, Space).
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - The optional `icon`, the close icon, and the copy/check icons are decorative and default to `aria-hidden` (Icon component). The close button is labeled with visually hidden text.
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Link and buttons are native keyboard-operable (Tab, Enter, Space).
 - ✅ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - Focus moves link, then copy button and then close button, matching the visual order.
 - ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - The link keeps the browser-default focus ring; `CopyButton` (via `Button`) has an explicit focus ring; the close button shows a `:focus-visible` background/border change.
 - ✅ [WCAG 3.2.2 - On Input (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/on-input.html) - The close button and `CopyButton` both render `type="button"`, so no unexpected form submission.
@@ -40,6 +41,5 @@ To apply when using the component:
 
 ## Dependencies
 
-- `CopyButton` / `Tooltip` - the "Copied!" feedback (shown via `<TagLink copiable>`) is only conveyed through the tooltip and is not announced as a status message (WCAG 4.1.3). This is an upstream issue of `CopyButton`, not of TagLink; resolve it in `CopyButton`.
 - `Button` - the copy button's focus ring and accessible-name/tooltip wiring come from `Button`.
 - `Link` - the injected link uses `Link`'s styling and focus behavior.

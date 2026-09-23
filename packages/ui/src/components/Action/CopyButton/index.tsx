@@ -3,7 +3,6 @@
 import { useClipboard } from '@scaleway/use-clipboard'
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { CopyContentIcon } from '@ultraviolet/icons/CopyContentIcon'
-import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, CSSProperties } from 'react'
 import { Button } from '../Button'
 
@@ -45,7 +44,7 @@ export const CopyButton = ({
 
   return (
     <Button
-      className={cn(className, 'copyButton')}
+      className={className}
       data-testid={dataTestId}
       onClick={() => {
         setCopied()
