@@ -9,16 +9,15 @@ exports[`verificationCodeField > should render correctly 1`] = `
       novalidate=""
       style="display: contents;"
     >
-      <fieldset
-        class="uv_1m876pf5"
+      <div
+        class="uv_xf61n40 uv_xf61n42d uv_xf61n45j"
       >
         <div
           class="uv_xf61n40 uv_xf61n4v uv_xf61n42j uv_xf61n45j"
         >
           <label
             class="uv_l58dz72 uv_1do42ls0 uv_1do42ls4 uv_1do42lsb uv_1do42lsn uv_1do42ls1a uv_1do42ls32"
-            for="verification-code-input-0"
-            id="verification-code-input-label"
+            for="verification-code-input"
           >
             Code
           </label>
@@ -28,65 +27,48 @@ exports[`verificationCodeField > should render correctly 1`] = `
             *
           </span>
         </div>
-        <div>
+        <div
+          class="uv_1m876pf5"
+        >
           <input
             aria-invalid="false"
-            aria-label="Verification code 0"
-            autocomplete="off"
-            class="uv_1m876pf0 uv_1m876pf4"
-            data-success="false"
-            data-testid="0"
-            id="verification-code-input-0"
+            autocomplete="one-time-code"
+            class="uv_1m876pf6"
+            id="verification-code-input"
+            inputmode="numeric"
             pattern="[0-9]*"
-            placeholder="0"
             required=""
-            type="tel"
+            type="text"
             value=""
           />
-          <input
-            aria-invalid="false"
-            aria-label="Verification code 1"
-            autocomplete="off"
-            class="uv_1m876pf0 uv_1m876pf4"
-            data-success="false"
-            data-testid="1"
-            id="verification-code-input-1"
-            pattern="[0-9]*"
-            placeholder=""
-            required=""
-            type="tel"
-            value=""
+          <span
+            aria-hidden="true"
+            class="uv_1m876pf1 uv_1m876pf8 uv_1m876pf9 uv_1do42ls0 uv_1do42ls7 uv_1do42lsb uv_1do42lsj uv_1do42ls1d uv_1do42ls35"
+            data-testid="box-0"
+          >
+            0
+            <span
+              aria-hidden="true"
+              class="uv_1m876pf7"
+            />
+          </span>
+          <span
+            aria-hidden="true"
+            class="uv_1m876pf1 uv_1m876pf8 uv_1do42ls0 uv_1do42ls7 uv_1do42lsb uv_1do42lsj uv_1do42ls1d uv_1do42ls35"
+            data-testid="box-1"
           />
-          <input
-            aria-invalid="false"
-            aria-label="Verification code 2"
-            autocomplete="off"
-            class="uv_1m876pf0 uv_1m876pf4"
-            data-success="false"
-            data-testid="2"
-            id="verification-code-input-2"
-            pattern="[0-9]*"
-            placeholder=""
-            required=""
-            type="tel"
-            value=""
+          <span
+            aria-hidden="true"
+            class="uv_1m876pf1 uv_1m876pf8 uv_1do42ls0 uv_1do42ls7 uv_1do42lsb uv_1do42lsj uv_1do42ls1d uv_1do42ls35"
+            data-testid="box-2"
           />
-          <input
-            aria-invalid="false"
-            aria-label="Verification code 3"
-            autocomplete="off"
-            class="uv_1m876pf0 uv_1m876pf4"
-            data-success="false"
-            data-testid="3"
-            id="verification-code-input-3"
-            pattern="[0-9]*"
-            placeholder=""
-            required=""
-            type="tel"
-            value=""
+          <span
+            aria-hidden="true"
+            class="uv_1m876pf1 uv_1m876pf8 uv_1do42ls0 uv_1do42ls7 uv_1do42lsb uv_1do42lsj uv_1do42ls1d uv_1do42ls35"
+            data-testid="box-3"
           />
         </div>
-      </fieldset>
+      </div>
     </form>
   </div>
 </DocumentFragment>
