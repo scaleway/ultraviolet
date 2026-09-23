@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { globalStyle, style } from '@vanilla-extract/css'
+import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import type { LinkSentiment, LinkProminence } from './constants'
 import { PROMINENCES, SENTIMENTS } from './constants'
@@ -43,13 +43,16 @@ function makeVariant(variant: 'captionStrong' | 'bodySmallStrong' | 'bodyStrong'
   }
 }
 
+const linkSize = styleVariants({
+  xsmall: makeVariant('captionStrong'),
+  small: makeVariant('bodySmallStrong'),
+  large: makeVariant('bodyStrong'),
+})
+
 const link = recipe({
   base: {
     border: 'none',
     padding: 0,
-    display: 'inline-flex',
-    gap: theme.space[0.5],
-    alignItems: 'center',
     textDecoration: 'underline 1px dotted',
     textUnderlineOffset: '3px',
     position: 'relative',
@@ -95,11 +98,7 @@ const link = recipe({
         width: 'fit-content',
       },
     },
-    size: {
-      xsmall: makeVariant('captionStrong'),
-      small: makeVariant('bodySmallStrong'),
-      large: makeVariant('bodyStrong'),
-    },
+    size: linkSize,
   },
   compoundVariants: SENTIMENTS.flatMap(sentiment =>
     PROMINENCES.flatMap(prominence => [
@@ -134,6 +133,7 @@ const defaultLink = style({
 })
 
 const iconLeft = style({
+  marginRight: theme.space[0.5],
   transition: `transform ${TRANSITION_DURATION}ms cubic-bezier(0.22, 1, 0.36, 1)`, // easeOutQuint
   selectors: {
     [`${defaultLink}:hover &, ${defaultLink}:focus &`]: {
@@ -143,12 +143,21 @@ const iconLeft = style({
 })
 
 const iconRight = style({
+  marginLeft: theme.space[0.5],
   transition: `transform ${TRANSITION_DURATION}ms cubic-bezier(0.22, 1, 0.36, 1)`, // easeOutQuint
   selectors: {
     [`${defaultLink}:hover &, ${defaultLink}:focus &`]: {
       transform: `translate(calc(${theme.space['0.25']}*-1), 0)`, // Use calc() instead of simply "-" because theme.space[0.25] is a var()
     },
   },
+})
+
+globalStyle(`${linkSize['small']} svg`, {
+  marginBottom: theme.space[0.25],
+})
+
+globalStyle(`${linkSize['large']} svg`, {
+  marginBottom: theme.space[0.5],
 })
 
 // Safari issue when something is inside an anchor
