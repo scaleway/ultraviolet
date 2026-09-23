@@ -35,6 +35,7 @@ export const Tag = ({
   className,
   style,
   keyValue,
+  closeButtonText = 'Remove tag',
   'data-testid': dataTestId,
 }: TagProps) => {
   const stringChildren = useMemo(() => {
@@ -74,7 +75,7 @@ export const Tag = ({
   } as const
 
   return (
-    <Tooltip text={isCopiable ? copyTextTooltip : null} relation="description">
+    <Tooltip text={isCopiable ? copyTextTooltip : null} relation="description" aria-live="polite">
       <Stack
         direction="row"
         className={tagStyle.wrapper[copiable ? 'copiable' : 'notCopiable']}
@@ -88,7 +89,7 @@ export const Tag = ({
             tagStyle.container({
               disabled,
               sentiment,
-              closable: !!onClose,
+              closable: Boolean(onClose),
               copiable: copiable && !disabled,
               isButton: false,
             }),
@@ -100,7 +101,7 @@ export const Tag = ({
               setCopied().catch(() => null)
             }
           }}
-          {...(copiable ? { type: 'button', disabled } : { 'aria-disabled': disabled })}
+          {...(copiable ? { type: 'button', disabled } : { 'aria-disabled': disabled ? true : undefined })}
         >
           {keyValue ? (
             <Row templateColumns="minmax(0, auto) 1px minmax(0, auto)" gap={1} className={tagStyle.text}>
@@ -130,13 +131,11 @@ export const Tag = ({
             type="button"
             className={tagStyle.container({ disabled, isButton: true, sentiment })}
           >
-            <VisuallyHidden>Remove tag {stringChildren}</VisuallyHidden>
+            <VisuallyHidden>
+              {closeButtonText} {stringChildren}
+            </VisuallyHidden>
             <CloseIcon size="small" />
           </button>
-        ) : null}
-        {isCopiable ? (
-          // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role
-          <VisuallyHidden role="status">{isCopied ? copiedText : null}</VisuallyHidden>
         ) : null}
       </Stack>
     </Tooltip>

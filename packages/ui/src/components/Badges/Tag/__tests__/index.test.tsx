@@ -56,9 +56,13 @@ describe('tag', () => {
 
   it('renders correctly with onClose', async () => {
     const onClose = vi.fn()
-    const { asFragment } = renderWithTheme(<Tag onClose={onClose}>test</Tag>)
+    const { asFragment } = renderWithTheme(
+      <Tag onClose={onClose} closeButtonText="Delete">
+        test
+      </Tag>,
+    )
 
-    const closeButton = screen.getByRole('button', { name: 'Remove tag test' })
+    const closeButton = screen.getByRole('button', { name: 'Delete test' })
     await userEvent.click(closeButton)
 
     expect(onClose).toHaveBeenCalledOnce()

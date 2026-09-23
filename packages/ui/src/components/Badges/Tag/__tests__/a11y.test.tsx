@@ -49,7 +49,7 @@ describe('tag - A11y', { tags: ['a11y'] }, () => {
       const copyButton = screen.getByRole('button', { name: 'test' })
       await user.click(copyButton)
 
-      expect(screen.getByRole('status')).toHaveTextContent('Copied!')
+      expect(copyButton).toHaveAccessibleDescription('Copied!')
     })
   })
 
@@ -61,7 +61,12 @@ describe('tag - A11y', { tags: ['a11y'] }, () => {
     })
 
     it('does not expose aria-disabled when not disabled', () => {
-      const { container } = renderWithTheme(<Tag>test</Tag>)
+      const { container } = renderWithTheme(
+        <>
+          <Tag>test</Tag>
+          <Tag disabled={false}>test</Tag>
+        </>,
+      )
 
       expect(container.querySelector('[aria-disabled]')).not.toBeInTheDocument()
     })

@@ -11,8 +11,8 @@ A metadata component that displays a short text description of an item (category
 ## Summary
 
 1. ✅ **Perceivable**: decorative icons are `aria-hidden` (resolved by the Icon component fix); sentiment contrast is correct.
-2. ✅ **Operable**: the disabled copiable button remains focusable even though it performs no action.
-3. ✅ **Understandable**: the copiable button lacks `type="button"` and may unexpectedly submit a parent form.
+2. ✅ **Operable**: the disabled copiable button is not focusable.
+3. ✅ **Understandable**: the copiable button has `type="button"` to avoid unexpected submitting a parent form.
 4. ✅ **Robust**: the "Copied!" status message is announced via a `role="status"` live region (4.1.3).
 
 ## Rules
@@ -53,7 +53,7 @@ To apply when using the component:
 - ✅ Close label:
   - Removed `aria-label="Close tag"` and instead use accessibleLabel on Icon. A removable tag's button label contains the visible tag label (e.g. `Remove {label}`) so screen reader users know which tag they are removing.
 - ✅ Copy success is not announced to screen readers:
-  - The "Copied!" feedback was only shown through a Tooltip (`role="tooltip"`), which is not read by screen readers, so screen reader users got no confirmation the copy succeeded (WCAG 4.1.3). Resolved by rendering a visually hidden `role="status"` live region for copiable tags that announces the `copiedText`.
+  - The "Copied!" feedback was only shown through a Tooltip (`role="tooltip"`), which is not read by screen readers, so screen reader users got no confirmation the copy succeeded (WCAG 4.1.3). Resolved by adding `aria-live="polite"` to the tooltip.
 
 **Low:**
 
