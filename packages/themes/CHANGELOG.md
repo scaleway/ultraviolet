@@ -1,5 +1,22 @@
 # Change Log
 
+## 3.2.0
+
+### Minor Changes
+
+- [#6919](https://github.com/scaleway/ultraviolet/pull/6919) [`6b4bd58`](https://github.com/scaleway/ultraviolet/commit/6b4bd58a8fdbace3d24fb2f56e4a29c33d43949c) Thanks [@lisalupi](https://github.com/lisalupi)! - - Update `@ultraviolet/themes/global` to normalize add a default background-color and text-color.
+  - New css:  Use `@ultraviolet/themes/normalize` which only normalizes the CSS. ⚠️ It is included in `@ultraviolet/themes/global`, so it is not necessary to import it if the project already uses `@ultraviolet/themes/global`
+  - `ThemeProvider`: do not hash css variable names.
+  The name of the CSS variables defined in the ThemeProvider are not hashed anymore. This has a couple of consequences:
+      - clearer naming
+      - possibility to use the variables without importing css files (`@ultraviolet/themes/light.css` and other variants)
+      - reduces FOUC
+  
+  
+  ⚠️⚠️ **Breaking change**: If `@ultraviolet/themes/light.css` (and other variants) is imported, any custom theme defined in the theme provider **will be** overwritten by the .css file (see `examples/next/src/pages/_app.tsx`: to apply the custom *primary text* , `@ultraviolet/themes/light.css` is imported in a layer to reduce its specificity).⚠️⚠️
+  
+  ⚠️⚠️ **This change may break snapshots** since the variable names are not hashed anymore ⚠️⚠️
+
 ## 3.1.12
 
 ### Patch Changes
