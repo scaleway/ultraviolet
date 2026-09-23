@@ -49,7 +49,7 @@ describe('tagLink', () => {
     const onClose = vi.fn()
     const { asFragment } = renderWithTheme(<TagLink label="label" link="link" href="example.com" onClose={onClose} />)
 
-    await userEvent.click(screen.getByRole('button', { name: 'Close tag label: link' }))
+    await userEvent.click(screen.getByRole('button', { name: 'Remove tag label: link' }))
     expect(onClose).toHaveBeenCalledTimes(1)
 
     expect(asFragment()).toMatchSnapshot()
