@@ -6,9 +6,9 @@ export default {
   title: 'UI/Data Entry/VerificationCode',
   parameters: {
     a11yStatus: {
-      perceivable: false,
+      perceivable: true,
       operable: true,
-      understandable: false,
+      understandable: true,
       robust: true,
     },
   },

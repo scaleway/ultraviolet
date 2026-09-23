@@ -1,23 +1,18 @@
+// oxlint-disable unicorn/prefer-spread
+// oxlint wants `[...value]` instead of Array.from(value) but it triggers typescript/no-misused-spread
+// which advises to use "`Array.from` for non-iterables if needed"
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { createRef, useId, useState } from 'react'
-import type {
-  ChangeEvent,
-  ClipboardEventHandler,
-  CSSProperties,
-  FocusEventHandler,
-  KeyboardEventHandler,
-  ReactNode,
-} from 'react'
+import { useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import type { ChangeEvent, CSSProperties, FocusEventHandler, KeyboardEvent, ReactNode } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
+import { Stack } from '../../Layout/Stack'
+import { VisuallyHidden } from '../../Other/VisuallyHidden'
 import { Description } from '../../Typography/Description'
 import { Label } from '../../Typography/Label'
+import { Text } from '../../Typography/Text'
 import { verificationCodeStyle } from './styles.css'
-
-const DEFAULT_ON_FUNCTION = () => {}
-
-const inputOnFocus: FocusEventHandler<HTMLInputElement> = event => event.target.select()
 
 type VerificationCodeProps = {
   disabled?: boolean
@@ -34,19 +29,23 @@ type VerificationCodeProps = {
   /**
    * Triggered when a field change
    */
-  onChange?: (data: unknown) => void
+  onChange?: (value: string) => void
   /**
    * Triggered when all fields are completed
    */
-  onComplete?: (data: unknown) => void
+  onComplete?: (value: string) => void
   placeholder?: string
   required?: boolean
   /**
-   * Type of the fields
+   * Type of the field
    */
   type?: 'text' | 'number'
   'data-testid'?: string
+  /**
+   * @deprecated Use `accessibleLabel` instead.
+   */
   'aria-label'?: string
+  accessibleLabel?: string
   label?: string
   labelDescription?: ReactNode
   helper?: ReactNode
@@ -66,13 +65,14 @@ export const VerificationCode = ({
   initialValue = '',
   inputId,
   size = 'large',
-  onChange = DEFAULT_ON_FUNCTION,
-  onComplete = DEFAULT_ON_FUNCTION,
+  onChange,
+  onComplete,
   placeholder = '',
   required = false,
   type = 'number',
   'data-testid': dataTestId,
-  'aria-label': ariaLabel = 'Verification code',
+  'aria-label': ariaLabel,
+  accessibleLabel,
   label,
   labelDescription,
   helper,
@@ -84,173 +84,152 @@ export const VerificationCode = ({
   const id = inputId ?? uniqueId
   const helperId = useId()
 
-  const valuesArray = Object.assign(new Array(fields).fill(''), [
-    // oxlint-disable-next-line typescript/no-misused-spread
-    ...initialValue.substring(0, fields),
-  ])
-  const [values, setValues] = useState<string[]>(valuesArray)
+  const [value, setValue] = useState(initialValue.substring(0, fields))
+  const [caretIndex, setCaretIndex] = useState(0)
+  const inputRef = useRef<HTMLInputElement>(null)
 
-  const inputRefs = Array.from({ length: fields }, () => createRef<HTMLInputElement>())
-
-  const triggerChange = (inputValues: string[]) => {
-    const stringValue = inputValues.join('')
-    if (onChange) {
-      onChange(stringValue)
+  const computedSentiment = useMemo(() => {
+    if (error) {
+      return 'danger'
     }
-    if (onComplete && stringValue.length >= fields) {
-      onComplete(stringValue)
+    if (success) {
+      return 'success'
     }
-  }
 
-  const inputOnChange = (index: number) => (event: ChangeEvent<HTMLInputElement>) => {
-    let { value } = event.target
+    return 'neutral'
+  }, [success, error])
+
+  // Keep the hidden input's selection in sync with the highlighted box
+  useLayoutEffect(() => {
+    inputRef.current?.setSelectionRange(caretIndex, caretIndex)
+    // `value` is required  so a deletion (where caretIndex is unchanged) also re-syncs the selection
+    // oxlint-disable-next-line react/exhaustive-effect-dependencies
+  }, [caretIndex, value])
+
+  const inputOnChange = (event: ChangeEvent<HTMLInputElement>) => {
+    let nextValue = event.target.value
+
     if (type === 'number') {
-      value = event.target.value.replace(/[^\d]/giu, '')
-    }
-    const newValues = [...values]
-
-    if (value === '' || (type === 'number' && !new RegExp(event.target.pattern, 'u').test(value))) {
-      newValues[index] = ''
-      setValues(newValues)
-
-      return
+      nextValue = nextValue.replaceAll(/[^\d]/gv, '')
     }
 
-    const sanitizedValue = value[0] // in case more than 1 char, we just take the first one
-    newValues[index] = sanitizedValue ?? ''
-    setValues(newValues)
-    const nextIndex = Math.min(index + 1, fields - 1)
-    const next = inputRefs[nextIndex]
+    const boxUnderCaretIsFull = caretIndex < value.length
+    const isTypingAtEndOfFullField = caretIndex >= value.length && value.length >= fields
 
-    next?.current?.focus()
+    const removeChar = nextValue.length < value.length
+    const addedChars = nextValue.length - value.length
 
-    triggerChange(newValues)
+    if (nextValue.length > value.length && (boxUnderCaretIsFull || isTypingAtEndOfFullField)) {
+      const chars = Array.from(value)
+      if (boxUnderCaretIsFull) {
+        chars[caretIndex] = nextValue[caretIndex] // replace instead of inserting
+      } else {
+        chars[fields - 1] = nextValue[fields] // add last digit
+      }
+      nextValue = chars.join('')
+    } else {
+      nextValue = nextValue.substring(0, fields)
+    }
+
+    const nextCaretIndex = removeChar || nextValue === value ? caretIndex : caretIndex + addedChars
+    setValue(nextValue)
+    setCaretIndex(Math.min(nextCaretIndex, fields - 1))
+    onChange?.(nextValue)
+
+    if (nextValue.length >= fields) {
+      onComplete?.(nextValue)
+    }
   }
 
-  const inputOnKeyDown =
-    (index: number): KeyboardEventHandler<HTMLInputElement> =>
-    event => {
-      const prevIndex = index - 1
-      const nextIndex = index + 1
-      const last = inputRefs.at(-1)
-      const prev = inputRefs[prevIndex]
-      const next = inputRefs[nextIndex]
-      const vals = [...values]
+  const updateCaretIndex = () => {
+    const position = inputRef.current?.selectionStart ?? value.length
+    setCaretIndex(Math.min(position, fields - 1))
+  }
 
-      switch (event.key) {
-        case 'Backspace': {
-          event.preventDefault()
+  const inputOnFocus: FocusEventHandler<HTMLInputElement> = event => {
+    const { length } = event.target.value
+    event.target.setSelectionRange(length, length)
+    setCaretIndex(length)
+  }
 
-          if (values[index]) {
-            vals[index] = ''
-            setValues(vals)
-            triggerChange(vals)
-          } else if (prev) {
-            vals[prevIndex] = ''
-            prev?.current?.focus()
-            setValues(vals)
-            triggerChange(vals)
-          }
-          break
-        }
-
-        case 'ArrowLeft': {
-          event.preventDefault()
-          prev?.current?.focus()
-          break
-        }
-
-        case 'ArrowRight': {
-          event.preventDefault()
-          next?.current?.focus()
-          break
-        }
-
-        case 'ArrowUp': {
-          event.preventDefault()
-          inputRefs[0]?.current?.focus()
-          break
-        }
-
-        case 'ArrowDown': {
-          event.preventDefault()
-          last?.current?.focus()
-
-          break
-        }
-
-        default: {
-          break
-        }
-      }
-    }
-
-  const inputOnPaste =
-    (currentIndex: number): ClipboardEventHandler<HTMLInputElement> =>
-    event => {
+  const inputOnKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    // Backspace should delete the character in the current box, not the previous one
+    if (event.key === 'Backspace' && caretIndex < value.length) {
       event.preventDefault()
-      // oxlint-disable-next-line typescript/no-misused-spread
-      const pastedValue = [...event.clipboardData.getData('Text')].map((copiedValue: string) =>
-        // Replace non number char with empty char when type is number
-        type === 'number' ? copiedValue.replace(/[^\d]/giu, '') : copiedValue,
-      )
-
-      // Trim array to avoid array overflow
-      pastedValue.splice(fields - currentIndex < pastedValue.length ? fields - currentIndex : pastedValue.length)
-
-      setValues((vals: string[]) => {
-        const newArray = structuredClone(vals)
-
-        newArray.splice(currentIndex, pastedValue.length, ...pastedValue)
-
-        return newArray
-      })
-
-      // we select min value between the end of inputs and valid pasted chars
-      const nextIndex = Math.min(currentIndex + pastedValue.filter(item => item !== '').length, inputRefs.length - 1)
-      const next = inputRefs[nextIndex]
-      next?.current?.focus()
-      triggerChange(pastedValue)
+      const chars = Array.from(value)
+      chars.splice(caretIndex, 1)
+      const nextValue = chars.join('')
+      setValue(nextValue)
+      setCaretIndex(Math.min(caretIndex, fields - 1))
+      onChange?.(nextValue)
     }
+  }
 
   return (
-    <fieldset className={cn(className, verificationCodeStyle.filedSetClass)} data-testid={dataTestId} style={style}>
-      {label || labelDescription ? (
+    <Stack className={className} data-testid={dataTestId} gap={0.5} style={style}>
+      {label ? (
         <Label
-          htmlFor={`${id}-0`}
-          id={`${id}-label`}
+          htmlFor={id}
           labelDescription={labelDescription}
           required={required}
           size={size === 'xlarge' ? 'large' : size}
         >
           {label}
         </Label>
-      ) : null}
-      <div>
-        {values.map((value: string, index: number) => (
-          <input
-            aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
-            aria-invalid={!!error}
-            aria-label={`${ariaLabel} ${index}`}
-            autoComplete="off"
-            className={cn(verificationCodeStyle.inputSizes[size], verificationCodeStyle.input)}
-            data-success={!!success}
-            data-testid={index}
-            disabled={disabled}
-            id={`${id}-${index}`}
-            key={`field-${index}`}
-            onChange={inputOnChange(index)}
-            onFocus={inputOnFocus}
-            onKeyDown={inputOnKeyDown(index)}
-            onPaste={inputOnPaste(index)}
-            pattern={type === 'number' ? '[0-9]*' : undefined}
-            placeholder={placeholder?.[index] ?? ''}
-            ref={inputRefs[index]}
-            required={required}
-            type={type === 'number' ? 'tel' : type}
-            value={value}
-          />
-        ))}
+      ) : (
+        <VisuallyHidden as="label" htmlFor={id}>
+          {accessibleLabel ?? ariaLabel}
+        </VisuallyHidden>
+      )}
+      <div className={verificationCodeStyle.boxesWrapper}>
+        <input
+          aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
+          aria-invalid={Boolean(error)}
+          autoComplete="one-time-code"
+          className={verificationCodeStyle.overlayInput}
+          disabled={disabled}
+          id={id}
+          inputMode={type === 'number' ? 'numeric' : undefined}
+          onChange={inputOnChange}
+          onClick={updateCaretIndex}
+          onFocus={inputOnFocus}
+          onKeyDown={inputOnKeyDown}
+          onKeyUp={updateCaretIndex}
+          onSelect={updateCaretIndex}
+          pattern={type === 'number' ? '[0-9]*' : undefined}
+          ref={inputRef}
+          required={required}
+          type={type === 'number' ? 'text' : type}
+          value={value}
+        />
+        {Array.from({ length: fields }, (_, index) => {
+          const current = caretIndex === index
+
+          return (
+            <Text
+              as="span"
+              variant={size === 'small' ? 'caption' : 'body'}
+              sentiment={computedSentiment}
+              disabled={disabled}
+              prominence={value[index] ? 'default' : 'weak'}
+              aria-hidden
+              className={cn(
+                verificationCodeStyle.boxSizes[size],
+                verificationCodeStyle.box({
+                  current,
+                  error: Boolean(error),
+                  success: Boolean(success),
+                }),
+              )}
+              data-testid={`box-${index}`}
+              key={`field-${index}`}
+            >
+              {/* oxlint-disable-next-line typescript/no-unnecessary-condition */}
+              {value[index] ?? placeholder?.[index] ?? ''}
+              {current && !value[index] ? <span aria-hidden className={verificationCodeStyle.caret} /> : null}
+            </Text>
+          )
+        })}
       </div>
       <Description
         error={error}
@@ -259,7 +238,7 @@ export const VerificationCode = ({
         disabled={disabled}
         id={ariaDescribedBy ?? helperId}
       />
-    </fieldset>
+    </Stack>
   )
 }
 
