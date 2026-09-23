@@ -10,17 +10,19 @@ describe('verificationCodeField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('renders one input per field', () => {
+  it('renders one input and one box per field', () => {
     renderWithForm(<VerificationCodeField label="Code" name="code" />)
-    expect(screen.getAllByRole('textbox')).toHaveLength(4)
+    expect(screen.getAllByRole('textbox')).toHaveLength(1)
+    for (const boxNumber of [0, 1, 2, 3]) {
+      expect(screen.getByTestId(`box-${boxNumber}`)).toHaveAttribute('aria-hidden', 'true')
+    }
   })
 
   it('calls onChange and updates the field value while typing', async () => {
     const onChange = vi.fn()
     const { resultForm } = renderWithForm(<VerificationCodeField label="Code" name="code" onChange={onChange} />)
-    const [first, second] = screen.getAllByRole('textbox')
-    await userEvent.type(first, '1')
-    await userEvent.type(second, '2')
+    const input = screen.getByRole('textbox')
+    await userEvent.type(input, '12')
     expect(onChange).toHaveBeenLastCalledWith('12')
     expect(resultForm.current.getValues('code')).toBe('12')
   })
@@ -34,8 +36,8 @@ describe('verificationCodeField', () => {
       { mode: 'onChange' },
       { errors: mockFormErrors },
     )
-    const [first] = screen.getAllByRole('textbox')
-    await userEvent.type(first, '1')
+    const input = screen.getByRole('textbox')
+    await userEvent.type(input, '1')
     await userEvent.click(screen.getByText('Focus'))
     expect(screen.getByText(mockFormErrors.required({ label: '' }))).toBeVisible()
   })
