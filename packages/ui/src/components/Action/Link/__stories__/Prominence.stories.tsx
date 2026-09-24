@@ -6,12 +6,12 @@ import { Stack } from '../../../Layout/Stack'
 import { Text } from '../../../Typography/Text'
 import { SENTIMENTS } from '../constants'
 
-export const Prominence = ({ prominence, ...props }: ComponentProps<typeof Link>) => {
+export const Prominence = ({ prominence: _prominence, ...props }: ComponentProps<typeof Link>) => {
   const theme = useTheme()
 
   return (
     <Stack width="300px">
-      <Row templateColumns={'10ch repeat(6, 12ch)'} alignItems={'center'}>
+      <Row templateColumns="10ch repeat(6, 12ch)" alignItems="center">
         <Text as="span" variant="body">
           Default
         </Text>
@@ -25,7 +25,7 @@ export const Prominence = ({ prominence, ...props }: ComponentProps<typeof Link>
         ))}
       </Row>
 
-      <Row templateColumns={'10ch repeat(6, 12ch)'} alignItems={'center'}>
+      <Row templateColumns="10ch repeat(6, 12ch)" alignItems="center">
         <Text as="span" variant="body">
           Strong
         </Text>
@@ -41,7 +41,7 @@ export const Prominence = ({ prominence, ...props }: ComponentProps<typeof Link>
         ))}
       </Row>
 
-      <Row templateColumns={'10ch repeat(2, 12ch)'} alignItems={'center'}>
+      <Row templateColumns="10ch repeat(2, 12ch)" alignItems="center">
         <Text as="span" variant="body">
           Stronger
         </Text>

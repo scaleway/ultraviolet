@@ -1,7 +1,8 @@
 import type { RefObject, InputHTMLAttributes, ReactNode } from 'react'
-import type { SIZES } from './constant'
-type Sizes = keyof typeof SIZES
 import type { BaseFormComponentProps } from '../../../types'
+import type { SIZES } from './constant'
+
+type Sizes = keyof typeof SIZES
 
 export type NumberInputProps = BaseFormComponentProps<HTMLInputElement> & {
   size?: Sizes

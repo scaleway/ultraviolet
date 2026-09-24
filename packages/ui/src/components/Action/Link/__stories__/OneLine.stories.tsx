@@ -3,7 +3,7 @@ import { Link } from '../index'
 import { containerStoryLink } from './styles.css'
 
 export const OneLine: StoryFn<typeof Link> = args => {
-  const { render, ...props } = args
+  const { render: _render, ...props } = args
 
   return (
     <>

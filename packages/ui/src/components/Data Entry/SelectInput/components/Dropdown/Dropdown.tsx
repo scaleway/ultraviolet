@@ -2,7 +2,7 @@
 
 import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { useCallback, useContext, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { useContext, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import type { ComponentProps, Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { Stack } from '../../../../Layout/Stack'
 import { ModalContext } from '../../../../Overlay/Modal/ModalProvider'
@@ -123,60 +123,59 @@ export const Dropdown = ({
   const [defaultSearchValue, setDefaultSearch] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState('')
-  const [maxWidth, setWidth] = useState(refSelect.current?.offsetWidth ?? '100%')
+  const [maxWidth, setMaxWidth] = useState(refSelect.current?.offsetWidth ?? '100%')
   const modalContext = useContext(ModalContext)
 
-  const resizeDropdown = useCallback(() => {
-    if (
-      refSelect.current &&
-      refSelect.current.getBoundingClientRect().width > 0 &&
-      refSelect.current.getBoundingClientRect().width !== maxWidth
-    ) {
-      setWidth(refSelect.current.getBoundingClientRect().width)
-    }
-  }, [refSelect, maxWidth])
-
   useLayoutEffect(() => {
-    if (refSelect.current && isDropdownVisible) {
-      const position =
-        refSelect.current.getBoundingClientRect().bottom +
-        DROPDOWN_MAX_HEIGHT +
-        Number(theme.sizing[INPUT_SIZE_HEIGHT[size]].replace('rem', '')) * 16 +
-        Number.parseInt(theme.space['5'], 10)
-      const overflow = position - window.innerHeight + 32
+    const { current } = refSelect
+    if (!current || !isDropdownVisible) {
+      return
+    }
 
-      if (overflow > 0 && modalContext) {
-        const currentModal = modalContext.openedModals[0]
-        const modalElement = currentModal?.ref.current
+    const position =
+      current.getBoundingClientRect().bottom +
+      DROPDOWN_MAX_HEIGHT +
+      Number(theme.sizing[INPUT_SIZE_HEIGHT[size]].replace('rem', '')) * 16 +
+      Number.parseInt(theme.space['5'], 10)
+    const overflow = position - window.innerHeight + 32
 
-        if (modalElement) {
-          const parentElement = modalElement.parentNode
+    if (overflow > 0 && modalContext) {
+      const currentModal = modalContext.openedModals[0]
+      const modalElement = currentModal?.ref.current
 
-          if (parentElement instanceof HTMLElement) {
-            parentElement.scrollBy({
-              behavior: 'smooth',
-              top: overflow,
-            })
-          } else {
-            modalElement.scrollBy({
-              behavior: 'smooth',
-              top: overflow,
-            })
-          }
+      if (modalElement) {
+        const parentElement = modalElement.parentNode
+
+        if (parentElement instanceof HTMLElement) {
+          parentElement.scrollBy({
+            behavior: 'smooth',
+            top: overflow,
+          })
         } else {
-          window.scrollBy({ behavior: 'smooth', top: overflow })
+          modalElement.scrollBy({
+            behavior: 'smooth',
+            top: overflow,
+          })
         }
+      } else {
+        window.scrollBy({ behavior: 'smooth', top: overflow })
       }
     }
-  }, [isDropdownVisible, refSelect, size, modalContext, theme, resizeDropdown])
+  }, [isDropdownVisible, refSelect, size, modalContext, theme])
 
   useEffect(() => {
-    resizeDropdown()
+    const onResize = () => {
+      const { current } = refSelect
+      if (current && current.getBoundingClientRect().width > 0 && current.getBoundingClientRect().width !== maxWidth) {
+        setMaxWidth(current.getBoundingClientRect().width)
+      }
+    }
 
-    window.addEventListener('resize', resizeDropdown)
+    onResize()
+    window.addEventListener('resize', onResize)
 
-    return () => window.removeEventListener('resize', resizeDropdown)
-  }, [resizeDropdown, refSelect.current?.offsetWidth])
+    return () => window.removeEventListener('resize', onResize)
+  }, [maxWidth, refSelect])
 
   useEffect(() => {
     if (!searchInput) {

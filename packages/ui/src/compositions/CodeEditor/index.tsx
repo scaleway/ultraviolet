@@ -78,7 +78,9 @@ export const CodeEditor = ({
     let cancelled = false
     loadLanguage(extensions)
       .then(loaded => {
-        if (!cancelled) setLanguage(loaded)
+        if (!cancelled) {
+          setLanguage(loaded)
+        }
       })
       .catch(() => undefined)
     return () => {

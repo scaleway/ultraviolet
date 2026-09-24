@@ -12,7 +12,7 @@ export const SelectInputField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  control,
+  control: _control,
   ...props
 }: BaseFieldProps<TFieldValues, TFieldName> & SelectInputFieldExtraProps) => {
   const { fieldProps } = useField(props)

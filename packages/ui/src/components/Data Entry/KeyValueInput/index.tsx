@@ -10,8 +10,10 @@ import { VisuallyHidden } from '../../Other/VisuallyHidden'
 import { Description } from '../../Typography/Description'
 import { SelectInput } from '../SelectInput'
 import { TextInput } from '../TextInput'
-import type { KeyValueInputProps } from './types'
+import type { KeyValueInputProps, KeyValuePair } from './types'
 import { keyValueInputStyle } from './styles.css'
+
+const DEFAULT_KEY_VALUE_LIST: KeyValuePair[] = []
 
 /**
  * KeyValuenput allow user to add key-value pairs
@@ -32,7 +34,7 @@ export const KeyValueInput = ({
   inputValue,
   addButton,
   readOnly,
-  keyvalues = [],
+  keyvalues = DEFAULT_KEY_VALUE_LIST,
   maxSize = 100,
   fieldErrors,
 }: KeyValueInputProps) => {
@@ -44,7 +46,7 @@ export const KeyValueInput = ({
     onChange?.(newKeyValues, index, operationType)
   }
 
-  const canAdd = (keyvalues?.length !== undefined && keyvalues.length < maxSize) || !keyvalues
+  const canAdd = keyvalues.length < maxSize
 
   const editable = !(disabled || readOnly)
 
@@ -55,10 +57,10 @@ export const KeyValueInput = ({
 
     return {
       label: input.label,
-      readOnly: readOnly,
-      disabled: disabled,
+      readOnly,
+      disabled,
       required: input.required || required,
-      size: size,
+      size,
       'aria-describedby': inputError
         ? `error-${type}-${index}`
         : ariaDescribedBy || (hasHelperText(undefined, error) ? errorId : undefined),
@@ -73,7 +75,7 @@ export const KeyValueInput = ({
 
   return (
     <Stack gap={3} style={style} className={className}>
-      {keyvalues && keyvalues?.length > 0 ? (
+      {keyvalues.length > 0 ? (
         <Stack gap={3}>
           {keyvalues.map((_, index) => {
             const errorKey = fieldErrors?.[index]?.key
@@ -150,7 +152,7 @@ export const KeyValueInput = ({
           disabled={!(canAdd && editable)}
           fullWidth={addButton.fullWidth}
           onClick={() => {
-            const index = keyvalues ? keyvalues.length : 0
+            const index = keyvalues.length
             handleChange(index, 'add', '', '')
           }}
           sentiment="primary"

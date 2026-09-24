@@ -70,7 +70,7 @@ export const Tag = ({
     variant: variant === 'code' ? 'code' : 'caption',
     oneLine: true,
     sentiment: disabled ? 'neutral' : sentiment,
-    disabled: disabled,
+    disabled,
   } as const
 
   return (

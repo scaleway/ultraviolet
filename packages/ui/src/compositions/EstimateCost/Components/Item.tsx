@@ -291,7 +291,7 @@ export const Item = memo(
       }
 
       return longFractionDigits ? maximumFractionDigitsLong[iteration?.unit] : maximumFractionDigits[iteration?.unit]
-    }, [iteration?.unit, longFractionDigits])
+    }, [iteration, longFractionDigits])
 
     return (
       <Row

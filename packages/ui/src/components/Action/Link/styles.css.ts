@@ -104,7 +104,7 @@ const link = recipe({
     PROMINENCES.flatMap(prominence => [
       {
         variants: {
-          sentiment: sentiment,
+          sentiment,
           prominence,
         },
         style: getLinkStyle(sentiment, prominence),

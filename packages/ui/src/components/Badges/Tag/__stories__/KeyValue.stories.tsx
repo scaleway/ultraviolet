@@ -3,15 +3,15 @@ import { Tag } from '..'
 import { Stack } from '../../../Layout/Stack'
 
 export const KeyValue: StoryFn<typeof Tag> = args => {
-  const { children, copyButton, keyValue, ...tagArgs } = args
+  const { children: _children, copyButton: _copyButton, keyValue: _keyValue, ...tagArgs } = args
 
   return (
     <Stack gap={1}>
       Default:
       <Tag {...args} />
-      Closable: <Tag {...args} onClose={() => {}} />
+      Closable: <Tag {...args} onClose={() => undefined} />
       Copiable: <Tag {...args} copiable copyText="Copy" copiedText="Copied" />
-      Closable & copiable: <Tag {...args} onClose={() => {}} copiable copyText="Copy" copiedText="Copied" />
+      Closable & copiable: <Tag {...args} onClose={() => undefined} copiable copyText="Copy" copiedText="Copied" />
       With overflow:
       <Tag
         keyValue={{
@@ -27,7 +27,7 @@ export const KeyValue: StoryFn<typeof Tag> = args => {
           key: 'key key key key key key key key key key',
           value: 'value value value value value value value',
         }}
-        onClose={() => {}}
+        onClose={() => undefined}
         {...tagArgs}
       />
     </Stack>

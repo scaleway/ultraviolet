@@ -211,7 +211,9 @@ const readSvg = async (filePath: string, suffix: string) => {
 
     return svgWithClassNames.replace(/fill="([^"]*)"/giu, (match: string, color: string) => {
       const className = colorToClass[color.toUpperCase()]
-      if (className) return `${match} className="${className}"`
+      if (className) {
+        return `${match} className="${className}"`
+      }
       if (!['NONE', '#FFF'].includes(color.toUpperCase())) {
         console.error(`Unrecognized fill color "${color}" in file: ${filePath}`)
       }

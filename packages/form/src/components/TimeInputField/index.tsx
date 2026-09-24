@@ -20,7 +20,7 @@ export const TimeInputField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  control,
+  control: _control,
   ...props
 }: TimeInputFieldProps<TFieldValues, TFieldName>) => {
   const { fieldProps } = useField(props)

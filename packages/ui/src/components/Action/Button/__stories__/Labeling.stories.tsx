@@ -5,7 +5,7 @@ import { Stack, Text } from '../../..'
 
 export const Labeling: StoryFn<typeof Button> = () => (
   <Stack gap={2}>
-    <Stack gap={1} alignItems={'start'}>
+    <Stack gap={1} alignItems="start">
       <Button accessibleLabel="Edit profile">
         <PencilIcon />
       </Button>

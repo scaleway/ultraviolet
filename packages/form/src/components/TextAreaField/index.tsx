@@ -21,7 +21,7 @@ export const TextAreaField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  control,
+  control: _control,
   submitOnEnter,
   onKeyDown,
   ...props

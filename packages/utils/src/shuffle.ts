@@ -11,8 +11,12 @@
 export function shuffle(input: string, maxRetries = 10): string {
   const chars = [...input]
 
-  if (chars.length <= 1) return input
-  if (new Set(chars).size === 1) return input
+  if (chars.length <= 1) {
+    return input
+  }
+  if (new Set(chars).size === 1) {
+    return input
+  }
 
   let result: string
   let attempts = 0

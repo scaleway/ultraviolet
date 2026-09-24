@@ -172,7 +172,6 @@ export default defineConfig({
     'react/display-name': 'off', // react errors (4)
     'react/forbid-component-props': 'off', // react errors (229)
     'react/jsx-max-depth': ['error', { max: 10 }], // base sets max: 8
-    'react/jsx-no-useless-fragment': 'off', // react errors (3)
     'react/jsx-props-no-spreading': 'off', // react errors (215)
     'react/no-clone-element': 'off', // react errors (2)
     'react/no-react-children': 'off', // react errors (10)

@@ -10,7 +10,6 @@ import { defineConfig } from 'oxlint'
 export const warnRules = defineConfig({
   rules: {
     'eslint/class-methods-use-this': 'warn', // eslint errors (4)
-    'eslint/curly': ['warn', 'all'], // eslint errors (16)
     'eslint/init-declarations': 'warn', // eslint errors (15)
     'eslint/max-lines': ['warn', { max: 500 }], // eslint errors (8)
     'eslint/max-nested-callbacks': ['warn', { max: 4 }], // base sets error (max: 4); keep warn
@@ -19,15 +18,12 @@ export const warnRules = defineConfig({
     'eslint/no-empty-function': 'warn', // eslint errors (408)
     'eslint/no-implicit-coercion': 'warn', // eslint errors (113)
     'eslint/no-shadow': 'warn', // eslint errors (7)
-    'eslint/no-unused-vars': 'warn', // eslint errors (15)
-    'eslint/object-shorthand': 'warn', // eslint errors (15)
+    // 'eslint/no-unused-vars': 'warn', // eslint errors (15)
     'eslint/prefer-destructuring': 'warn', // eslint errors (31)
     'eslint/prefer-named-capture-group': 'warn', // eslint errors (18)
     'eslint/require-unicode-regexp': ['warn', { requireFlag: 'v' }], // eslint errors (129)
 
-    'import/first': 'warn', // import errors (1)
     'import/namespace': 'warn', // import errors (7)
-    'import/newline-after-import': 'warn', // import errors (1)
     'import/no-namespace': 'warn', // import errors (76)
 
     // fix jsx-a11y after a11y audit
@@ -41,20 +37,14 @@ export const warnRules = defineConfig({
 
     'react/exhaustive-effect-dependencies': 'warn', // react errors (30)
     'react/hook-use-state': ['warn', { allowDestructuredState: true }], // react errors (74)
-    'react/hooks': 'warn', // react errors (2)
     'react/immutability': 'warn', // react errors (5)
-    'react/jsx-curly-brace-presence': 'warn', // react errors (5)
     'react/memo-dependencies': 'warn', // react errors (4)
     'react/no-array-index-key': 'warn', // react errors (6)
     'react/no-deriving-state-in-effects': 'warn', // react errors (7)
-    'react/no-object-type-as-default-prop': 'warn', // react errors (1)
-    'react/preserve-manual-memoization': 'warn', // react errors (3)
     'react/refs': 'warn', // react errors (44)
     'react/set-state-in-effect': 'warn', // react errors (34)
-    'react/static-components': 'warn', // react errors (2)
 
     'typescript/consistent-return': 'warn', // typescript errors (8)
-    'typescript/consistent-type-definitions': ['warn', 'type'], // typescript errors (0)
     'typescript/explicit-member-accessibility': 'warn', // typescript errors (10)
     'typescript/no-deprecated': 'warn', // typescript errors (594)
     'typescript/no-misused-spread': 'warn', // typescript errors (7)
@@ -70,21 +60,19 @@ export const warnRules = defineConfig({
     'typescript/no-unsafe-member-access': 'warn', // typescript errors (2353)
     'typescript/no-unsafe-return': 'warn', // typescript errors (41)
     'typescript/no-unsafe-type-assertion': 'warn', // typescript errors (207)
-    'typescript/prefer-reduce-type-parameter': 'warn', // typescript errors (2)
     'typescript/require-await': 'warn', // typescript errors (10)
     'typescript/unbound-method': 'warn', // typescript errors (2)
 
     'unicorn/import-style': 'warn', // unicorn errors (7)
-    'unicorn/no-array-reverse': 'warn', // unicorn errors (2)
+
     'unicorn/no-array-sort': 'warn', // unicorn errors (6)
     'unicorn/no-await-expression-member': 'warn', // unicorn errors (6)
     'unicorn/prefer-export-from': ['warn', { checkUsedVariables: false }], // unicorn errors (79)
     'unicorn/prefer-number-coercion': 'warn', // unicorn errors (21)
     'unicorn/prefer-number-properties': 'warn', // unicorn errors (3)
     'unicorn/prefer-object-from-entries': 'warn', // unicorn errors (14)
-    'unicorn/prefer-spread': 'warn', // unicorn errors (2)
     'unicorn/prefer-string-replace-all': 'warn', // unicorn errors (35)
-    'unicorn/prefer-top-level-await': 'warn', // unicorn errors (1)
+    // 'unicorn/prefer-top-level-await': 'warn', // unicorn errors (1)
 
     'vitest/no-conditional-expect': 'warn', // vitest errors (11)
     'vitest/no-conditional-in-test': 'warn', // vitest errors (36)

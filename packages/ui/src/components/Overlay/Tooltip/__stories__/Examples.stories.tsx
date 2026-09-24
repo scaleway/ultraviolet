@@ -26,7 +26,7 @@ export const Examples = () => (
 
 Examples.decorators = [
   Story => (
-    <Stack direction="row" alignItems={'center'} gap={3} style={{ margin: '1rem' }}>
+    <Stack direction="row" alignItems="center" gap={3} style={{ margin: '1rem' }}>
       <Story />
     </Stack>
   ),
