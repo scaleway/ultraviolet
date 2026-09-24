@@ -75,70 +75,76 @@ export const Tag = ({
   } as const
 
   return (
-    <Tooltip text={isCopiable ? copyTextTooltip : null} relation="description" aria-live="polite">
-      <Stack
-        direction="row"
-        className={tagStyle.wrapper[copiable ? 'copiable' : 'notCopiable']}
-        width="fit-content"
-        maxWidth="100%"
-      >
-        <TagInner
-          className={cn(
-            className,
-            tagStyle.content[copiable ? 'copiable' : 'notCopiable'],
-            tagStyle.container({
-              disabled,
-              sentiment,
-              closable: Boolean(onClose),
-              copiable: copiable && !disabled,
-              isButton: false,
-            }),
-          )}
-          data-testid={dataTestId}
-          style={style}
-          onClick={() => {
-            if (isCopiable) {
-              setCopied().catch(() => null)
-            }
-          }}
-          {...(copiable ? { type: 'button', disabled } : { 'aria-disabled': disabled ? true : undefined })}
+    <>
+      <Tooltip text={isCopiable ? copyTextTooltip : null} relation="description">
+        <Stack
+          direction="row"
+          className={tagStyle.wrapper[copiable ? 'copiable' : 'notCopiable']}
+          width="fit-content"
+          maxWidth="100%"
         >
-          {keyValue ? (
-            <Row templateColumns="minmax(0, auto) 1px minmax(0, auto)" gap={1} className={tagStyle.text}>
-              <Text {...textProps}>{keyValue.key}</Text>
-              <Separator
-                sentiment={disabled ? 'neutral' : sentiment}
-                direction="vertical"
-                thickness={1}
-                className={tagStyle.separator}
-                aria-hidden
-              />
-              <Text {...textProps}>{keyValue.value}</Text>
-            </Row>
-          ) : (
-            <Text className={tagStyle.text} {...textProps}>
-              {children}
-            </Text>
-          )}
-          {copiable && copyButton && !isLoading ? <CopyContentIcon size="xsmall" /> : null}
-          {isLoading ? <Loader active size="small" label="Loading" /> : null}
-        </TagInner>
-        {onClose ? (
-          <button
-            data-testid="close-tag"
-            disabled={disabled}
-            onClick={onClose}
-            type="button"
-            className={tagStyle.container({ disabled, isButton: true, sentiment })}
+          <TagInner
+            className={cn(
+              className,
+              tagStyle.content[copiable ? 'copiable' : 'notCopiable'],
+              tagStyle.container({
+                disabled,
+                sentiment,
+                closable: Boolean(onClose),
+                copiable: copiable && !disabled,
+                isButton: false,
+              }),
+            )}
+            data-testid={dataTestId}
+            style={style}
+            onClick={() => {
+              if (isCopiable) {
+                setCopied().catch(() => null)
+              }
+            }}
+            {...(copiable ? { type: 'button', disabled } : { 'aria-disabled': disabled ? true : undefined })}
           >
-            <VisuallyHidden>
-              {closeButtonText} {stringChildren}
-            </VisuallyHidden>
-            <CloseIcon size="small" />
-          </button>
-        ) : null}
-      </Stack>
-    </Tooltip>
+            {keyValue ? (
+              <Row templateColumns="minmax(0, auto) 1px minmax(0, auto)" gap={1} className={tagStyle.text}>
+                <Text {...textProps}>{keyValue.key}</Text>
+                <Separator
+                  sentiment={disabled ? 'neutral' : sentiment}
+                  direction="vertical"
+                  thickness={1}
+                  className={tagStyle.separator}
+                  aria-hidden
+                />
+                <Text {...textProps}>{keyValue.value}</Text>
+              </Row>
+            ) : (
+              <Text className={tagStyle.text} {...textProps}>
+                {children}
+              </Text>
+            )}
+            {copiable && copyButton && !isLoading ? <CopyContentIcon size="xsmall" /> : null}
+            {isLoading ? <Loader active size="small" label="Loading" /> : null}
+          </TagInner>
+          {onClose ? (
+            <button
+              data-testid="close-tag"
+              disabled={disabled}
+              onClick={onClose}
+              type="button"
+              className={tagStyle.container({ disabled, isButton: true, sentiment })}
+            >
+              <VisuallyHidden>
+                {closeButtonText} {stringChildren}
+              </VisuallyHidden>
+              <CloseIcon size="small" />
+            </button>
+          ) : null}
+        </Stack>
+      </Tooltip>
+      {isCopiable ? (
+        // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role
+        <VisuallyHidden role="status">{isCopied ? copiedText : ''}</VisuallyHidden>
+      ) : null}
+    </>
   )
 }
 
