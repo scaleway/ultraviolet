@@ -3,6 +3,7 @@
 import { CloseIcon } from '@ultraviolet/icons'
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, ReactNode } from 'react'
+import { Button } from '../../Action/Button'
 import { CopyButton } from '../../Action/CopyButton'
 import { Link } from '../../Action/Link'
 import { Stack } from '../../Layout/Stack'
@@ -14,8 +15,8 @@ import { tagLinkStyle } from './styles.css'
 
 type TagLinkProps = {
   link: string
-  label: string
-  icon?: ReactNode
+  prefixText: string
+  prefixIcon?: ReactNode
   href: string
   sentiment?: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'neutral'
   /** Set loading state with loading text to display next to the loader */
@@ -28,8 +29,8 @@ type TagLinkProps = {
 
 export const TagLink = ({
   link,
-  label,
-  icon,
+  prefixText,
+  prefixIcon,
   className,
   href,
   copiable = false,
@@ -61,10 +62,10 @@ export const TagLink = ({
         gap="0.5"
         alignItems="center"
         justifyContent="center"
-        className={cn(tagLinkStyle.idStack[sentiment], tagLinkStyle.idStackBase)}
+        className={cn(tagLinkStyle.prefixStack[sentiment], tagLinkStyle.prefixStackBase)}
       >
-        {icon}
-        {label}
+        {prefixIcon}
+        {prefixText}
       </Stack>
       <Stack
         className={tagLinkStyle.linkStack({ copiable, closable: Boolean(onClose) })}
@@ -90,17 +91,20 @@ export const TagLink = ({
         ) : null}
       </Stack>
       {onClose ? (
-        <button
+        <Button
+          variant="ghost"
+          size="xsmall"
+          sentiment={sentiment}
           data-testid="close-tag"
           onClick={onClose}
           type="button"
-          className={tagStyle.container({ isButton: true, sentiment, tagLink: true })}
+          className={tagLinkStyle.closeButton}
         >
           <VisuallyHidden>
-            Remove tag {label}: {link}
+            Remove tag {prefixText}: {link}
           </VisuallyHidden>
           <CloseIcon size="small" />
-        </button>
+        </Button>
       ) : null}
     </Text>
   )

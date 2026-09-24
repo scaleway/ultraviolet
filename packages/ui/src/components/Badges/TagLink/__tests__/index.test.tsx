@@ -10,13 +10,17 @@ let writeTextMock: ReturnType<typeof vi.fn>
 
 describe('tagLink', () => {
   beforeEach(() => {
-    writeTextMock = vi.spyOn(navigator.clipboard, 'writeText').mockImplementation(async () => {})
-    vi.spyOn(navigator.clipboard, 'writeText').mockImplementation(async () => {})
+    writeTextMock = vi.spyOn(navigator.clipboard, 'writeText').mockImplementation(async () => {
+      /* empty */
+    })
+    vi.spyOn(navigator.clipboard, 'writeText').mockImplementation(async () => {
+      /* empty */
+    })
   })
 
   it('renders correctly', () => {
     const { asFragment } = renderWithTheme(
-      <TagLink label="label" link="link" href="example.com" icon={<ProfileIcon size="xsmall" />} />,
+      <TagLink prefixText="label" link="link" href="example.com" prefixIcon={<ProfileIcon size="xsmall" />} />,
     )
 
     expect(asFragment()).toMatchSnapshot()
@@ -24,14 +28,16 @@ describe('tagLink', () => {
 
   it.each(SENTIMENTS)('renders with sentiment %s', sentiment => {
     const { asFragment } = renderWithTheme(
-      <TagLink label="label" link="link" href="example.com" sentiment={sentiment} />,
+      <TagLink prefixText="label" link="link" href="example.com" sentiment={sentiment} />,
     )
 
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly loading', () => {
-    const { asFragment } = renderWithTheme(<TagLink label="label" link="link" href="example.com" loading="loading" />)
+    const { asFragment } = renderWithTheme(
+      <TagLink prefixText="label" link="link" href="example.com" loading="loading" />,
+    )
 
     expect(screen.queryByText('label')).not.toBeInTheDocument()
     expect(screen.queryByRole('link', { name: 'link' })).not.toBeInTheDocument()
@@ -41,13 +47,15 @@ describe('tagLink', () => {
   })
 
   it('renders correctly with variant code', () => {
-    const { asFragment } = renderWithTheme(<TagLink label="label" link="link" href="example.com" variant="code" />)
+    const { asFragment } = renderWithTheme(<TagLink prefixText="label" link="link" href="example.com" variant="code" />)
 
     expect(asFragment()).toMatchSnapshot()
   })
   it('should work closable', async () => {
     const onClose = vi.fn()
-    const { asFragment } = renderWithTheme(<TagLink label="label" link="link" href="example.com" onClose={onClose} />)
+    const { asFragment } = renderWithTheme(
+      <TagLink prefixText="label" link="link" href="example.com" onClose={onClose} />,
+    )
 
     await userEvent.click(screen.getByRole('button', { name: 'Remove tag label: link' }))
     expect(onClose).toHaveBeenCalledTimes(1)
@@ -56,7 +64,7 @@ describe('tagLink', () => {
   })
 
   it('should work copiable', async () => {
-    const { asFragment } = renderWithTheme(<TagLink label="label" link="link" href="example.com" copiable />)
+    const { asFragment } = renderWithTheme(<TagLink prefixText="label" link="link" href="example.com" copiable />)
 
     await userEvent.click(screen.getByRole('button', { name: 'Copy' }))
     expect(writeTextMock).toHaveBeenCalledExactlyOnceWith('link')

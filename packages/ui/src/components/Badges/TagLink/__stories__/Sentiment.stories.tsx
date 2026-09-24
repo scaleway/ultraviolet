@@ -13,9 +13,9 @@ export const Sentiment: StoryFn<typeof TagLink> = args => (
 )
 
 Sentiment.args = {
-  label: 'id',
+  prefixText: 'id',
   link: 'link',
-  icon: <ProfileIcon size="xsmall" />,
+  prefixIcon: <ProfileIcon size="xsmall" />,
   href: '/',
   onClose: () => {},
   copiable: true,
