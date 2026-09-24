@@ -82,6 +82,8 @@ const container = recipe({
     },
     tagLink: {
       true: {
+        height: '100%',
+        borderBlock: 'none',
         borderRight: 0,
         selectors: {
           '&&:hover': {
@@ -91,6 +93,10 @@ const container = recipe({
           },
           '&&': {
             background: theme.colors.neutral.background,
+          },
+          '&&:focus-visible': {
+            borderBlock: 'none',
+            borderRight: 'none',
           },
         },
       },
@@ -102,8 +108,15 @@ const container = recipe({
     sentiment: 'neutral',
     isButton: false,
     closable: false,
+    tagLink: false,
   },
   compoundVariants: [
+    {
+      variants: { tagLink: false, isButton: true },
+      style: {
+        marginLeft: -1,
+      },
+    },
     ...SENTIMENTS.map(sentiment => ({
       style: {
         selectors: {
