@@ -12,6 +12,8 @@ const tagLink = style({
 const idStackBase = style({
   padding: `${theme.space['0.5']} ${theme.space[1]}`,
   height: '100%',
+  maxWidth: '100%',
+  overflow: 'hidden',
 })
 
 const idStack = styleVariants(
@@ -21,6 +23,7 @@ const idStack = styleVariants(
       {
         backgroundColor: theme.colors[sentiment][sentiment === 'neutral' ? 'backgroundStrong' : 'background'],
         borderRight: `1px solid ${theme.colors[sentiment].border}`,
+        borderRadius: `${theme.radii.default} 0 0 ${theme.radii.default}`,
       },
     ]),
   ),
@@ -31,12 +34,18 @@ const linkStack = recipe({
     paddingInline: theme.space['1'],
     paddingBlock: theme.space[0.5],
     background: theme.colors.neutral.background,
-    overflow: 'hidden',
+    height: '100%',
+    minWidth: 0,
   },
   variants: {
     copiable: {
       true: {
         paddingRight: 0,
+      },
+    },
+    closable: {
+      false: {
+        borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
       },
     },
   },
@@ -57,22 +66,34 @@ const link = styleVariants({
   default: [linkBase],
 })
 
-const copyButton = styleVariants(
-  Object.fromEntries(
-    SENTIMENTS.map(sentiment => [
-      sentiment,
-      {
+const copyButton = recipe({
+  variants: {
+    closable: {
+      false: {
+        borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
+      },
+      true: {
         borderRadius: 0,
-        borderRight: '1px solid transparent',
-        selectors: {
-          '&&:active': {
-            boxShadow: `inset ${theme.shadows[`focus${capitalize(sentiment)}`]}`,
+      },
+    },
+    sentiment: Object.fromEntries(
+      SENTIMENTS.map(sentiment => [
+        sentiment,
+        {
+          border: '1px solid transparent',
+          selectors: {
+            '&&:active': {
+              boxShadow: `inset ${theme.shadows[`focus${capitalize(sentiment)}`]}`,
+            },
+            '&&:hover': {
+              height: `calc(${theme.sizing[300]} - 2px)`, // to avoid overflow:hidden (which overflows the focus ring), manually set the copyButton height to be the height of the tag (minus border)
+            },
           },
         },
-      },
-    ]),
-  ),
-)
+      ]),
+    ),
+  },
+})
 
 globalStyle(`${idStackBase} > svg, ${idStackBase} > img`, {
   height: theme.sizing[150],

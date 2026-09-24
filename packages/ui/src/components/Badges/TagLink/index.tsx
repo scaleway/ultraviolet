@@ -52,7 +52,6 @@ export const TagLink = ({
       as="span"
       className={cn(tagLinkStyle.tagLink, tagStyle.container({ sentiment }), className)}
       variant={variant === 'code' ? 'code' : 'caption'}
-      oneLine
       sentiment={sentiment}
       data-testid={dataTestid}
       style={style}
@@ -68,7 +67,7 @@ export const TagLink = ({
         {label}
       </Stack>
       <Stack
-        className={tagLinkStyle.linkStack({ copiable })}
+        className={tagLinkStyle.linkStack({ copiable, closable: Boolean(onClose) })}
         as="span"
         gap={0.5}
         direction="row"
@@ -86,7 +85,7 @@ export const TagLink = ({
             copiedText={copiedText}
             copyText={copyText}
             onCopy={onCopy}
-            className={tagLinkStyle.copyButton[sentiment]}
+            className={tagLinkStyle.copyButton({ sentiment, closable: Boolean(onClose) })}
           />
         ) : null}
       </Stack>
