@@ -5,8 +5,8 @@ import { TagLink } from '..'
 export const Template: StoryFn<typeof TagLink> = args => <TagLink {...args} />
 
 Template.args = {
-  label: 'id',
+  prefixText: 'id',
   link: 'link',
-  icon: <ProfileIcon />,
+  prefixIcon: <ProfileIcon />,
   href: '/',
 }

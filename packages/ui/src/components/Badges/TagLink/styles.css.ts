@@ -9,14 +9,14 @@ const tagLink = style({
   selectors: { '&&': { padding: 0, gap: 0 } },
 })
 
-const idStackBase = style({
+const prefixStackBase = style({
   padding: `${theme.space['0.5']} ${theme.space[1]}`,
   height: '100%',
   maxWidth: '100%',
   overflow: 'hidden',
 })
 
-const idStack = styleVariants(
+const prefixStack = styleVariants(
   Object.fromEntries(
     SENTIMENTS.map(sentiment => [
       sentiment,
@@ -95,7 +95,17 @@ const copyButton = recipe({
   },
 })
 
-globalStyle(`${idStackBase} > svg, ${idStackBase} > img`, {
+const closeButton = style({
+  borderWidth: 1,
+  borderStyle: 'solid',
+  borderColor: 'inherit',
+  borderRightWidth: 0,
+  borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
+  width: theme.sizing[300],
+  background: theme.colors.neutral.background,
+})
+
+globalStyle(`${prefixStackBase} > svg, ${prefixStackBase} > img`, {
   height: theme.sizing[150],
   width: theme.sizing[150],
   minHeight: theme.sizing[150],
@@ -104,9 +114,10 @@ globalStyle(`${idStackBase} > svg, ${idStackBase} > img`, {
 
 export const tagLinkStyle = {
   tagLink,
-  idStack,
-  idStackBase,
+  prefixStack,
+  prefixStackBase,
   linkStack,
   link,
   copyButton,
+  closeButton,
 }

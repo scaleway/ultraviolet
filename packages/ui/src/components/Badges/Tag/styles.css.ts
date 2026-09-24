@@ -70,6 +70,7 @@ const container = recipe({
       true: {
         borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
         width: theme.sizing[300],
+        marginLeft: -1,
       },
       false: {
         selectors: {
@@ -80,27 +81,6 @@ const container = recipe({
         },
       },
     },
-    tagLink: {
-      true: {
-        height: '100%',
-        borderBlock: 'none',
-        borderRight: 0,
-        selectors: {
-          '&&:hover': {
-            border: 'none',
-            borderLeft: `1px solid transparent`,
-            borderLeftColor: 'inherit',
-          },
-          '&&': {
-            background: theme.colors.neutral.background,
-          },
-          '&&:focus-visible': {
-            borderBlock: 'none',
-            borderRight: 'none',
-          },
-        },
-      },
-    },
   },
   defaultVariants: {
     copiable: false,
@@ -108,15 +88,8 @@ const container = recipe({
     sentiment: 'neutral',
     isButton: false,
     closable: false,
-    tagLink: false,
   },
   compoundVariants: [
-    {
-      variants: { tagLink: false, isButton: true },
-      style: {
-        marginLeft: -1,
-      },
-    },
     ...SENTIMENTS.map(sentiment => ({
       style: {
         selectors: {
