@@ -28,21 +28,7 @@ exports[`visuallyHidden > renders correctly with default props 1`] = `
 </DocumentFragment>
 `;
 
-exports[`visuallyHidden > should be visible when it is a focusable element 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <button
-      class="styles__ahdbou0"
-    >
-      hidden
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`visuallyHidden > should be visible when it is has focusable element 1`] = `
+exports[`visuallyHidden > should be visible on focus when it HAS focusable element 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
@@ -56,6 +42,20 @@ exports[`visuallyHidden > should be visible when it is has focusable element 1`]
         click
       </button>
     </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`visuallyHidden > should be visible on focus when it IS a focusable element 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      class="styles__ahdbou0"
+    >
+      hidden
+    </button>
   </div>
 </DocumentFragment>
 `;
