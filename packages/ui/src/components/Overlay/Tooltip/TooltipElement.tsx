@@ -4,10 +4,7 @@ import type { useTooltip } from './useTooltip'
 import { visuallyHiddenStyle } from '../../Other/VisuallyHidden/styles.css'
 import { tooltipStyle } from './styles.css'
 
-type TooltipElementProps = Pick<
-  TooltipProps,
-  'id' | 'className' | 'style' | 'data-testid' | 'maxWidth' | 'text' | 'aria-live'
-> & {
+type TooltipElementProps = Pick<TooltipProps, 'id' | 'className' | 'style' | 'data-testid' | 'maxWidth' | 'text'> & {
   tooltip: ReturnType<typeof useTooltip>
 }
 
@@ -19,12 +16,10 @@ export const TooltipElement = ({
   'data-testid': dataTestId,
   maxWidth,
   text,
-  'aria-live': ariaLive,
 }: TooltipElementProps) => (
   <div
     {...tooltip.getFloatingProps()}
     id={id}
-    aria-live={ariaLive}
     className={cn(
       className,
       tooltipStyle.tooltip,

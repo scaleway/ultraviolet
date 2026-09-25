@@ -110,7 +110,7 @@ export type TooltipProps = {
    * Called when the tooltip visibility changes (open/close, including Escape dismiss).
    */
   onOpenChange?: (open: boolean) => void
-} & Pick<HTMLAttributes<HTMLDivElement>, 'aria-live'>
+}
 
 export const DEFAULT_DELAY = { close: 0, open: 200 }
 
@@ -136,7 +136,6 @@ export const Tooltip = ({
   tabIndex = 0,
   style,
   onOpenChange,
-  'aria-live': ariaLive,
 }: TooltipProps) => {
   const transitionDuration = isHeadlessTestEnvironment ? 0 : ANIMATION_DURATION
   const defaultDelay = isHeadlessTestEnvironment ? { open: 0, close: 0 } : DEFAULT_DELAY
@@ -165,7 +164,6 @@ export const Tooltip = ({
     'data-testid': dataTestId,
     maxWidth,
     text,
-    'aria-live': ariaLive,
   }
 
   return (
