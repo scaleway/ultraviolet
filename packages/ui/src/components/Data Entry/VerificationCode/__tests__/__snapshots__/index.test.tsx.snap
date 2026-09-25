@@ -1,68 +1,115 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`verificationCode > render correctly with accessibleLabel 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+    >
+      <label
+        class="styles__ahdbou0"
+        for="_r_6m_"
+      >
+        test
+      </label>
+      <div
+        class="styles__1m876pf5"
+      >
+        <input
+          aria-invalid="false"
+          autocomplete="one-time-code"
+          class="styles__1m876pf6"
+          id="_r_6m_"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          type="text"
+          value=""
+        />
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_current_true__1m876pf9 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-0"
+        >
+          <span
+            aria-hidden="true"
+            class="styles__1m876pf7"
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-1"
+        />
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-2"
+        />
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-3"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`verificationCode > render correctly with error as boolean 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
   >
-    <fieldset
-      class="styles__1m876pf5"
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
     >
-      <div>
+      <label
+        class="styles__ahdbou0"
+        for="_r_7e_"
+      />
+      <div
+        class="styles__1m876pf5"
+      >
         <input
           aria-invalid="true"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_12_-0"
+          autocomplete="one-time-code"
+          class="styles__1m876pf6"
+          id="_r_7e_"
+          inputmode="numeric"
           pattern="[0-9]*"
-          placeholder=""
-          type="tel"
+          type="text"
           value=""
         />
-        <input
-          aria-invalid="true"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_12_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_current_true__1m876pf9 styles_error_true__1m876pfb style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_danger__1do42ls9 style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_51__1do42ls2p"
+          data-testid="box-0"
+        >
+          <span
+            aria-hidden="true"
+            class="styles__1m876pf7"
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_error_true__1m876pfb style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_danger__1do42ls9 style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_51__1do42ls2p"
+          data-testid="box-1"
         />
-        <input
-          aria-invalid="true"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_12_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_error_true__1m876pfb style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_danger__1do42ls9 style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_51__1do42ls2p"
+          data-testid="box-2"
         />
-        <input
-          aria-invalid="true"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_12_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_error_true__1m876pfb style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_danger__1do42ls9 style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_51__1do42ls2p"
+          data-testid="box-3"
         />
       </div>
-    </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -72,75 +119,63 @@ exports[`verificationCode > render correctly with error as string 1`] = `
   <div
     data-testid="testing"
   >
-    <fieldset
-      class="styles__1m876pf5"
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
     >
-      <div>
+      <label
+        class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+        for="_r_70_"
+      >
+        test
+      </label>
+      <div
+        class="styles__1m876pf5"
+      >
         <input
-          aria-describedby="_r_v_"
+          aria-describedby="_r_71_"
           aria-invalid="true"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_u_-0"
+          autocomplete="one-time-code"
+          class="styles__1m876pf6"
+          id="_r_70_"
+          inputmode="numeric"
           pattern="[0-9]*"
-          placeholder=""
-          type="tel"
+          type="text"
           value=""
         />
-        <input
-          aria-describedby="_r_v_"
-          aria-invalid="true"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_u_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_current_true__1m876pf9 styles_error_true__1m876pfb style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_danger__1do42ls9 style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_51__1do42ls2p"
+          data-testid="box-0"
+        >
+          <span
+            aria-hidden="true"
+            class="styles__1m876pf7"
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_error_true__1m876pfb style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_danger__1do42ls9 style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_51__1do42ls2p"
+          data-testid="box-1"
         />
-        <input
-          aria-describedby="_r_v_"
-          aria-invalid="true"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_u_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_error_true__1m876pfb style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_danger__1do42ls9 style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_51__1do42ls2p"
+          data-testid="box-2"
         />
-        <input
-          aria-describedby="_r_v_"
-          aria-invalid="true"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_u_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_error_true__1m876pfb style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_danger__1do42ls9 style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_51__1do42ls2p"
+          data-testid="box-3"
         />
       </div>
       <span
         class="style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_danger__1do42ls9 style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_48__1do42ls2m"
-        id="_r_v_"
+        id="_r_71_"
         role="status"
       >
-        test
+        error-test
       </span>
-    </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -150,75 +185,63 @@ exports[`verificationCode > render correctly with helper 1`] = `
   <div
     data-testid="testing"
   >
-    <fieldset
-      class="styles__1m876pf5"
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
     >
-      <div>
+      <label
+        class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+        for="_r_5s_"
+      >
+        test
+      </label>
+      <div
+        class="styles__1m876pf5"
+      >
         <input
-          aria-describedby="_r_n_"
+          aria-describedby="_r_5t_"
           aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_m_-0"
+          autocomplete="one-time-code"
+          class="styles__1m876pf6"
+          id="_r_5s_"
+          inputmode="numeric"
           pattern="[0-9]*"
-          placeholder=""
-          type="tel"
+          type="text"
           value=""
         />
-        <input
-          aria-describedby="_r_n_"
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_m_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_current_true__1m876pf9 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-0"
+        >
+          <span
+            aria-hidden="true"
+            class="styles__1m876pf7"
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-1"
         />
-        <input
-          aria-describedby="_r_n_"
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_m_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-2"
         />
-        <input
-          aria-describedby="_r_n_"
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_m_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-3"
         />
       </div>
       <span
         class="style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_caption__1do42lsp style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
-        id="_r_n_"
+        id="_r_5t_"
         role="status"
       >
-        test
+        test-helper
       </span>
-    </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -228,71 +251,55 @@ exports[`verificationCode > render correctly with label 1`] = `
   <div
     data-testid="testing"
   >
-    <fieldset
-      class="styles__1m876pf5"
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
     >
       <label
         class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-        for="_r_q_-0"
-        id="_r_q_-label"
+        for="_r_6a_"
       >
         test
       </label>
-      <div>
+      <div
+        class="styles__1m876pf5"
+      >
         <input
           aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_q_-0"
+          autocomplete="one-time-code"
+          class="styles__1m876pf6"
+          id="_r_6a_"
+          inputmode="numeric"
           pattern="[0-9]*"
-          placeholder=""
-          type="tel"
+          type="text"
           value=""
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_q_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_current_true__1m876pf9 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-0"
+        >
+          <span
+            aria-hidden="true"
+            class="styles__1m876pf7"
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-1"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_q_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-2"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_q_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-3"
         />
       </div>
-    </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -302,16 +309,15 @@ exports[`verificationCode > render correctly with labelDescription 1`] = `
   <div
     data-testid="testing"
   >
-    <fieldset
-      class="styles__1m876pf5"
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
     >
       <div
         class="styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
       >
         <label
           class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-          for="_r_1a_-0"
-          id="_r_1a_-label"
+          for="_r_8e_"
         >
           test
         </label>
@@ -319,61 +325,46 @@ exports[`verificationCode > render correctly with labelDescription 1`] = `
           description
         </span>
       </div>
-      <div>
+      <div
+        class="styles__1m876pf5"
+      >
         <input
           aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_1a_-0"
+          autocomplete="one-time-code"
+          class="styles__1m876pf6"
+          id="_r_8e_"
+          inputmode="numeric"
           pattern="[0-9]*"
-          placeholder=""
-          type="tel"
+          type="text"
           value=""
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_1a_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_current_true__1m876pf9 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-0"
+        >
+          <span
+            aria-hidden="true"
+            class="styles__1m876pf7"
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-1"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_1a_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-2"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_1a_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-3"
         />
       </div>
-    </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -383,64 +374,53 @@ exports[`verificationCode > render correctly with small size 1`] = `
   <div
     data-testid="testing"
   >
-    <fieldset
-      class="styles__1m876pf5"
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
     >
-      <div>
+      <label
+        class="styles__ahdbou0"
+        for="_r_5i_"
+      />
+      <div
+        class="styles__1m876pf5"
+      >
         <input
           aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_small__1m876pf2 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_k_-0"
+          autocomplete="one-time-code"
+          class="styles__1m876pf6"
+          id="_r_5i_"
+          inputmode="numeric"
           pattern="[0-9]*"
-          placeholder=""
-          type="tel"
+          type="text"
           value=""
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_small__1m876pf2 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_k_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_small__1m876pf3 styles__1m876pf8 styles_current_true__1m876pf9 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_caption__1do42lsp style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-0"
+        >
+          <span
+            aria-hidden="true"
+            class="styles__1m876pf7"
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_small__1m876pf3 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_caption__1do42lsp style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-1"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_small__1m876pf2 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_k_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_small__1m876pf3 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_caption__1do42lsp style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-2"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_small__1m876pf2 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_k_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_small__1m876pf3 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_caption__1do42lsp style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-3"
         />
       </div>
-    </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -450,64 +430,53 @@ exports[`verificationCode > render correctly with success as boolean 1`] = `
   <div
     data-testid="testing"
   >
-    <fieldset
-      class="styles__1m876pf5"
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
     >
-      <div>
+      <label
+        class="styles__ahdbou0"
+        for="_r_7o_"
+      />
+      <div
+        class="styles__1m876pf5"
+      >
         <input
           aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="true"
-          data-testid="0"
-          id="_r_14_-0"
+          autocomplete="one-time-code"
+          class="styles__1m876pf6"
+          id="_r_7o_"
+          inputmode="numeric"
           pattern="[0-9]*"
-          placeholder=""
-          type="tel"
+          type="text"
           value=""
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="true"
-          data-testid="1"
-          id="_r_14_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_current_true__1m876pf9 styles_success_true__1m876pfa style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_success__1do42lse style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_59__1do42ls2x"
+          data-testid="box-0"
+        >
+          <span
+            aria-hidden="true"
+            class="styles__1m876pf7"
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_success_true__1m876pfa style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_success__1do42lse style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_59__1do42ls2x"
+          data-testid="box-1"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="true"
-          data-testid="2"
-          id="_r_14_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_success_true__1m876pfa style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_success__1do42lse style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_59__1do42ls2x"
+          data-testid="box-2"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="true"
-          data-testid="3"
-          id="_r_14_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_success_true__1m876pfa style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_success__1do42lse style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_59__1do42ls2x"
+          data-testid="box-3"
         />
       </div>
-    </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -517,75 +486,61 @@ exports[`verificationCode > render correctly with success as string 1`] = `
   <div
     data-testid="testing"
   >
-    <fieldset
-      class="styles__1m876pf5"
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
     >
-      <div>
+      <label
+        class="styles__ahdbou0"
+        for="_r_82_"
+      />
+      <div
+        class="styles__1m876pf5"
+      >
         <input
-          aria-describedby="_r_17_"
+          aria-describedby="_r_83_"
           aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="true"
-          data-testid="0"
-          id="_r_16_-0"
+          autocomplete="one-time-code"
+          class="styles__1m876pf6"
+          id="_r_82_"
+          inputmode="numeric"
           pattern="[0-9]*"
-          placeholder=""
-          type="tel"
+          type="text"
           value=""
         />
-        <input
-          aria-describedby="_r_17_"
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="true"
-          data-testid="1"
-          id="_r_16_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_current_true__1m876pf9 styles_success_true__1m876pfa style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_success__1do42lse style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_59__1do42ls2x"
+          data-testid="box-0"
+        >
+          <span
+            aria-hidden="true"
+            class="styles__1m876pf7"
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_success_true__1m876pfa style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_success__1do42lse style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_59__1do42ls2x"
+          data-testid="box-1"
         />
-        <input
-          aria-describedby="_r_17_"
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="true"
-          data-testid="2"
-          id="_r_16_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_success_true__1m876pfa style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_success__1do42lse style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_59__1do42ls2x"
+          data-testid="box-2"
         />
-        <input
-          aria-describedby="_r_17_"
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="true"
-          data-testid="3"
-          id="_r_16_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_success_true__1m876pfa style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_success__1do42lse style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_59__1do42ls2x"
+          data-testid="box-3"
         />
       </div>
       <span
         class="style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_success__1do42lse style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_56__1do42ls2u"
-        id="_r_17_"
+        id="_r_83_"
         role="status"
       >
         test
       </span>
-    </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -595,64 +550,53 @@ exports[`verificationCode > renders correctly with default values 1`] = `
   <div
     data-testid="testing"
   >
-    <fieldset
-      class="styles__1m876pf5"
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
     >
-      <div>
+      <label
+        class="styles__ahdbou0"
+        for="_r_0_"
+      />
+      <div
+        class="styles__1m876pf5"
+      >
         <input
           aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_0_-0"
+          autocomplete="one-time-code"
+          class="styles__1m876pf6"
+          id="_r_0_"
+          inputmode="numeric"
           pattern="[0-9]*"
-          placeholder=""
-          type="tel"
+          type="text"
           value=""
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_0_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_current_true__1m876pf9 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-0"
+        >
+          <span
+            aria-hidden="true"
+            class="styles__1m876pf7"
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-1"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_0_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-2"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_0_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-3"
         />
       </div>
-    </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -662,157 +606,70 @@ exports[`verificationCode > renders correctly with initial value and placeholder
   <div
     data-testid="testing"
   >
-    <fieldset
-      class="styles__1m876pf5"
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
     >
-      <div>
+      <label
+        class="styles__ahdbou0"
+        for="_r_a_"
+      />
+      <div
+        class="styles__1m876pf5"
+      >
         <input
           aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_2_-0"
+          autocomplete="one-time-code"
+          class="styles__1m876pf6"
+          id="_r_a_"
+          inputmode="numeric"
           pattern="[0-9]*"
-          placeholder="0"
-          type="tel"
-          value="1"
+          type="text"
+          value="13"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_2_-1"
-          pattern="[0-9]*"
-          placeholder="0"
-          type="tel"
-          value="3"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_2_-2"
-          pattern="[0-9]*"
-          placeholder="3"
-          type="tel"
-          value=""
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_2_-3"
-          pattern="[0-9]*"
-          placeholder="7"
-          type="tel"
-          value=""
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 4"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="4"
-          id="_r_2_-4"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 5"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="5"
-          id="_r_2_-5"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
-        />
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_current_true__1m876pf9 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+          data-testid="box-0"
+        >
+          1
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+          data-testid="box-1"
+        >
+          3
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-2"
+        >
+          0
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-3"
+        >
+          0
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-4"
+        >
+          0
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-5"
+        >
+          0
+        </span>
       </div>
-    </fieldset>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`verificationCode > should handle and replace non number with "" when type is number 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <fieldset
-      class="styles__1m876pf5"
-    >
-      <div>
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_8_-0"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="1"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_8_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_8_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="3"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_8_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="4"
-        />
-      </div>
-    </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -822,490 +679,167 @@ exports[`verificationCode > should handle error 1`] = `
   <div
     data-testid="testing"
   >
-    <fieldset
-      class="styles__1m876pf5"
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
     >
-      <div>
+      <label
+        class="styles__ahdbou0"
+        for="_r_58_"
+      />
+      <div
+        class="styles__1m876pf5"
+      >
         <input
           aria-invalid="true"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_i_-0"
+          autocomplete="one-time-code"
+          class="styles__1m876pf6"
+          id="_r_58_"
+          inputmode="numeric"
           pattern="[0-9]*"
-          placeholder=""
-          type="tel"
+          type="text"
           value="1"
         />
-        <input
-          aria-invalid="true"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_i_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_current_true__1m876pf9 styles_error_true__1m876pfb style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_danger__1do42ls9 style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a style_undefined_compound_48__1do42ls2m"
+          data-testid="box-0"
+        >
+          1
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_error_true__1m876pfb style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_danger__1do42ls9 style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_51__1do42ls2p"
+          data-testid="box-1"
         />
-        <input
-          aria-invalid="true"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_i_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_error_true__1m876pfb style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_danger__1do42ls9 style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_51__1do42ls2p"
+          data-testid="box-2"
         />
-        <input
-          aria-invalid="true"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_i_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_error_true__1m876pfb style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_danger__1do42ls9 style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_51__1do42ls2p"
+          data-testid="box-3"
         />
       </div>
-    </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`verificationCode > should handle keyDown and special key cases and focus/change events 1`] = `
+exports[`verificationCode > should handle typing and focus 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
   >
-    <fieldset
-      class="styles__1m876pf5"
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
     >
-      <div>
+      <label
+        class="styles__ahdbou0"
+        for="_r_o_"
+      />
+      <div
+        class="styles__1m876pf5"
+      >
         <input
           aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_4_-0"
+          autocomplete="one-time-code"
+          class="styles__1m876pf6"
+          id="_r_o_"
+          inputmode="numeric"
           pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+          type="text"
+          value="1"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_4_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+          data-testid="box-0"
+        >
+          1
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_current_true__1m876pf9 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-1"
+        >
+          <span
+            aria-hidden="true"
+            class="styles__1m876pf7"
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-2"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_4_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_4_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
+          data-testid="box-3"
         />
       </div>
-    </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`verificationCode > should handle paste when type is not number 1`] = `
+exports[`verificationCode > should render correctly disabled 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
   >
-    <fieldset
-      class="styles__1m876pf5"
+    <div
+      class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
     >
-      <div>
+      <label
+        class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+        for="_r_8q_"
+      >
+        test
+      </label>
+      <div
+        class="styles__1m876pf5"
+      >
         <input
           aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_e_-0"
-          placeholder=""
-          type="text"
-          value="1"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_e_-1"
-          placeholder=""
-          type="text"
-          value="h"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_e_-2"
-          placeholder=""
-          type="text"
-          value="2"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_e_-3"
-          placeholder=""
-          type="text"
-          value="3"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 4"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="4"
-          id="_r_e_-4"
-          placeholder=""
-          type="text"
-          value="a"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 5"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="5"
-          id="_r_e_-5"
-          placeholder=""
-          type="text"
-          value="*"
-        />
-      </div>
-    </fieldset>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`verificationCode > should handle paste with no overflowing values 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <fieldset
-      class="styles__1m876pf5"
-    >
-      <div>
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_6_-0"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="1"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_6_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="2"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_6_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="3"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_6_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="4"
-        />
-      </div>
-    </fieldset>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`verificationCode > should handle paste with overflowing values 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <fieldset
-      class="styles__1m876pf5"
-    >
-      <div>
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_a_-0"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="1"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_a_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="2"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_a_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="3"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_a_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="4"
-        />
-      </div>
-    </fieldset>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`verificationCode > should handle paste with overflowing values at different index than 0 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <fieldset
-      class="styles__1m876pf5"
-    >
-      <div>
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
-          id="_r_c_-0"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="1"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          id="_r_c_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="1"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          id="_r_c_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="2"
-        />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          id="_r_c_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value="3"
-        />
-      </div>
-    </fieldset>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`verificationCode > should render correctly disabled true 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <fieldset
-      class="styles__1m876pf5"
-    >
-      <div>
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 0"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="0"
+          autocomplete="one-time-code"
+          class="styles__1m876pf6"
           disabled=""
-          id="_r_1e_-0"
+          id="_r_8q_"
+          inputmode="numeric"
           pattern="[0-9]*"
-          placeholder=""
-          type="tel"
+          type="text"
           value=""
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 1"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="1"
-          disabled=""
-          id="_r_1e_-1"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 styles_current_true__1m876pf9 style__1do42ls0 style_disabled_true__1do42ls1 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_31__1do42ls25"
+          data-testid="box-0"
+        >
+          <span
+            aria-hidden="true"
+            class="styles__1m876pf7"
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_disabled_true__1do42ls1 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_31__1do42ls25"
+          data-testid="box-1"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 2"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="2"
-          disabled=""
-          id="_r_1e_-2"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_disabled_true__1do42ls1 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_31__1do42ls25"
+          data-testid="box-2"
         />
-        <input
-          aria-invalid="false"
-          aria-label="Verification code 3"
-          autocomplete="off"
-          class="styles_large__1m876pf0 styles__1m876pf4"
-          data-success="false"
-          data-testid="3"
-          disabled=""
-          id="_r_1e_-3"
-          pattern="[0-9]*"
-          placeholder=""
-          type="tel"
-          value=""
+        <span
+          aria-hidden="true"
+          class="styles_large__1m876pf1 styles__1m876pf8 style__1do42ls0 style_disabled_true__1do42ls1 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_31__1do42ls25"
+          data-testid="box-3"
         />
       </div>
-    </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;

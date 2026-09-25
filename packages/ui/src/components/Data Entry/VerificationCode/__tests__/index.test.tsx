@@ -1,12 +1,8 @@
-import { fireEvent, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { VerificationCode } from '..'
-
-const pasteEventWithValue = (selector: HTMLElement, value: string) =>
-  fireEvent.paste(selector, {
-    clipboardData: { getData: () => value },
-  })
 
 describe('verificationCode', () => {
   it('renders correctly with default values', () => {
@@ -15,78 +11,191 @@ describe('verificationCode', () => {
   })
 
   it('renders correctly with initial value and placeholder and 6 fields', () => {
-    const { asFragment } = renderWithTheme(<VerificationCode fields={6} initialValue="13" placeholder="0037" />)
+    const { asFragment } = renderWithTheme(<VerificationCode fields={6} initialValue="13" placeholder="000000" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should handle keyDown and special key cases and focus/change events', () => {
-    const { asFragment } = renderWithTheme(<VerificationCode fields={4} initialValue="1" type="number" />)
+  it('should handle typing and focus', async () => {
+    const onChange = vi.fn()
+    const { asFragment } = renderWithTheme(<VerificationCode fields={4} type="number" onChange={onChange} />)
 
-    const input0 = screen.getByTestId('0')
-    fireEvent.keyDown(input0, { keyCode: 8 }) // press backspace
-    fireEvent.keyDown(input0, { keyCode: 37 }) // press arrow left
-    fireEvent.keyDown(input0, { keyCode: 39 }) // press arrow right
-    fireEvent.keyDown(input0, { keyCode: 38 }) // press arrow up
-    fireEvent.keyDown(input0, { keyCode: 40 }) // press arrow down
-    fireEvent.keyDown(input0, { keyCode: 50 }) // press 2
-
-    const input1 = screen.getByTestId('1')
-
-    input1.focus()
-    fireEvent.keyDown(input1, { keyCode: 8 }) // press backspace
-
-    fireEvent.change(input1, { target: { value: '2' } })
-    fireEvent.change(input1, { target: { value: '' } })
+    const input = screen.getByRole('textbox')
+    await userEvent.type(input, '1')
+    expect(onChange).toHaveBeenCalledExactlyOnceWith('1')
+    expect(screen.getByTestId('box-0')).toHaveTextContent('1')
 
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should handle paste with no overflowing values', () => {
-    const { asFragment } = renderWithTheme(<VerificationCode fields={4} initialValue="1" type="number" />)
-    pasteEventWithValue(screen.getByDisplayValue('1'), '1234')
-    expect(asFragment()).toMatchSnapshot()
+  it('replaces the digit under the caret when typing into a full field instead of shifting', async () => {
+    const onChange = vi.fn()
+
+    renderWithTheme(<VerificationCode fields={4} initialValue="1234" onChange={onChange} />)
+
+    const input = screen.getByRole<HTMLInputElement>('textbox')
+    await userEvent.click(input)
+    expect(input).toHaveFocus()
+
+    await userEvent.type(input, '9', { skipClick: true })
+
+    expect(input).toHaveValue('1239')
+    expect(onChange).toHaveBeenCalledExactlyOnceWith('1239')
   })
 
-  it('should handle and replace non number with "" when type is number', () => {
-    const { asFragment } = renderWithTheme(<VerificationCode fields={4} initialValue="1" />)
-    pasteEventWithValue(screen.getByDisplayValue('1'), '1a34')
-    expect(asFragment()).toMatchSnapshot()
+  it('replaces the digit in a filled box of a partially filled field instead of shifting', async () => {
+    const onChange = vi.fn()
+
+    renderWithTheme(<VerificationCode fields={4} initialValue="12" onChange={onChange} />)
+
+    const input = screen.getByRole<HTMLInputElement>('textbox')
+    await userEvent.click(input)
+    expect(input).toHaveFocus()
+
+    await userEvent.keyboard('[arrowLeft]')
+    await userEvent.type(input, '9', { skipClick: true })
+
+    expect(input).toHaveValue('19')
+    expect(onChange).toHaveBeenCalledExactlyOnceWith('19')
   })
 
-  it('should handle paste with overflowing values', () => {
-    const { asFragment } = renderWithTheme(<VerificationCode fields={4} initialValue="12" />)
-    pasteEventWithValue(screen.getByDisplayValue('1'), '123456')
-    expect(asFragment()).toMatchSnapshot()
+  it('replaces the last digit when typing at the end of a full field', async () => {
+    const onChange = vi.fn()
+
+    renderWithTheme(<VerificationCode fields={4} initialValue="1234" onChange={onChange} />)
+
+    const input = screen.getByRole('textbox')
+    await userEvent.type(input, '9')
+
+    expect(input).toHaveValue('1239')
+    expect(onChange).toHaveBeenCalledExactlyOnceWith('1239')
   })
 
-  it('should handle paste with overflowing values at different index than 0', () => {
-    const { asFragment } = renderWithTheme(<VerificationCode fields={4} initialValue="12" />)
-    pasteEventWithValue(screen.getByDisplayValue('2'), '123456')
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  it('should handle paste when type is not number', () => {
-    const { asFragment } = renderWithTheme(<VerificationCode fields={6} initialValue="12" type="text" />)
-    pasteEventWithValue(screen.getByDisplayValue('2'), 'h23a*6')
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  it('should trigger onChange and onComplete after pasting values', () => {
+  it('should trigger onChange and onComplete after typing', async () => {
     const onChange = vi.fn()
     const onComplete = vi.fn()
 
-    renderWithTheme(
-      <VerificationCode fields={4} initialValue="1" onChange={onChange} onComplete={onComplete} type="number" />,
-    )
+    renderWithTheme(<VerificationCode fields={4} onChange={onChange} onComplete={onComplete} type="number" />)
 
-    pasteEventWithValue(screen.getByDisplayValue('1'), '12')
+    const input = screen.getByRole('textbox')
+    await userEvent.type(input, '1234')
 
-    expect(onChange).toHaveBeenLastCalledWith('12')
+    expect(onComplete).toHaveBeenCalledExactlyOnceWith('1234')
+    expect(onChange).toHaveBeenCalledWith('1234')
+    expect(onChange).toHaveBeenCalledTimes(4)
+  })
+
+  it('should delete the last digit when pressing backspace', async () => {
+    const onChange = vi.fn()
+
+    renderWithTheme(<VerificationCode fields={4} initialValue="1234" onChange={onChange} />)
+
+    const input = screen.getByRole('textbox')
+    await userEvent.click(input)
+    await userEvent.keyboard('{Backspace}')
+
+    expect(input).toHaveValue('123')
+    expect(onChange).toHaveBeenCalledExactlyOnceWith('123')
+  })
+
+  it('should delete the character under the caret when pressing backspace', async () => {
+    const onChange = vi.fn()
+
+    renderWithTheme(<VerificationCode fields={4} initialValue="1234" onChange={onChange} />)
+
+    const input = screen.getByRole('textbox')
+    await userEvent.click(input)
+    await userEvent.keyboard('[arrowLeft]')
+    await userEvent.keyboard('[arrowLeft]')
+    await userEvent.keyboard('{Backspace}')
+
+    expect(input).toHaveValue('134')
+    expect(onChange).toHaveBeenCalledExactlyOnceWith('134')
+  })
+
+  it('should not change the value when pressing backspace on an empty field', async () => {
+    const onChange = vi.fn()
+
+    renderWithTheme(<VerificationCode fields={4} onChange={onChange} />)
+
+    const input = screen.getByRole('textbox')
+    await userEvent.click(input)
+    await userEvent.keyboard('{Backspace}')
+
+    expect(input).toHaveValue('')
+    expect(onChange).not.toHaveBeenCalled()
+  })
+
+  it('should trigger onChange and onComplete after paste', async () => {
+    const onChange = vi.fn()
+    const onComplete = vi.fn()
+
+    renderWithTheme(<VerificationCode fields={4} onChange={onChange} onComplete={onComplete} type="number" />)
+
+    await userEvent.click(screen.getByRole('textbox'))
+    await userEvent.paste('1234')
+
+    expect(onChange).toHaveBeenLastCalledWith('1234')
     expect(onChange).toHaveBeenCalledOnce()
 
-    pasteEventWithValue(screen.getByDisplayValue('1'), '1234')
     expect(onComplete).toHaveBeenLastCalledWith('1234')
     expect(onComplete).toHaveBeenCalledOnce()
+  })
+
+  it('should cap the value to the number of fields', async () => {
+    const onChange = vi.fn()
+    renderWithTheme(<VerificationCode fields={4} type="number" onChange={onChange} />)
+
+    const input = screen.getByRole('textbox')
+    await userEvent.click(input)
+    await userEvent.paste('1234567')
+
+    expect(input).toHaveValue('1234')
+    expect(onChange).toHaveBeenCalledExactlyOnceWith('1234')
+  })
+
+  it('should sanitize non numeric characters when type is number', async () => {
+    renderWithTheme(<VerificationCode fields={4} />)
+
+    const input = screen.getByRole('textbox')
+    await userEvent.type(input, '1a34')
+
+    expect(input).toHaveValue('134')
+  })
+
+  it('should not sanitize characters when type is text', async () => {
+    renderWithTheme(<VerificationCode fields={6} type="text" />)
+
+    const input = screen.getByRole('textbox')
+    await userEvent.type(input, '1a34')
+
+    expect(input).toHaveValue('1a34')
+  })
+
+  it('replaces the character under the caret when type is text', async () => {
+    const onChange = vi.fn()
+
+    renderWithTheme(<VerificationCode fields={4} type="text" initialValue="abcd" onChange={onChange} />)
+
+    const input = screen.getByRole('textbox')
+    await userEvent.click(input)
+    await userEvent.type(input, 'z', { skipClick: true })
+
+    expect(input).toHaveValue('abcz')
+    expect(onChange).toHaveBeenCalledExactlyOnceWith('abcz')
+  })
+
+  it('should trigger onChange and onComplete with text values', async () => {
+    const onChange = vi.fn()
+    const onComplete = vi.fn()
+
+    renderWithTheme(<VerificationCode fields={4} type="text" onChange={onChange} onComplete={onComplete} />)
+
+    const input = screen.getByRole('textbox')
+    await userEvent.type(input, 'abcd')
+
+    expect(onComplete).toHaveBeenCalledExactlyOnceWith('abcd')
+    expect(onChange).toHaveBeenCalledWith('abcd')
+    expect(onChange).toHaveBeenCalledTimes(4)
   })
 
   it('should handle error', () => {
@@ -100,22 +209,35 @@ describe('verificationCode', () => {
   })
 
   it('render correctly with helper', () => {
-    const { asFragment } = renderWithTheme(<VerificationCode helper="test" />)
+    const { asFragment } = renderWithTheme(<VerificationCode helper="test-helper" label="test" />)
+
+    const code = screen.getByRole('textbox', { name: 'test' })
+    expect(code).toHaveAccessibleDescription('test-helper')
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('render correctly with label', () => {
     const { asFragment } = renderWithTheme(<VerificationCode label="test" />)
 
-    const code = screen.getByLabelText('test')
+    const code = screen.getByRole('textbox', { name: 'test' })
     expect(code).toBeInTheDocument()
-    expect(code).toBeEnabled()
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('render correctly with accessibleLabel', () => {
+    const { asFragment } = renderWithTheme(<VerificationCode accessibleLabel="test" />)
+
+    const code = screen.getByRole('textbox', { name: 'test' })
+    expect(code).toBeInTheDocument()
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('render correctly with error as string', () => {
-    const { asFragment } = renderWithTheme(<VerificationCode error="test" />)
+    const { asFragment } = renderWithTheme(<VerificationCode error="error-test" label="test" />)
     expect(asFragment()).toMatchSnapshot()
+    const code = screen.getByRole('textbox', { name: 'test' })
+
+    expect(code).toHaveAccessibleDescription('error-test')
   })
 
   it('render correctly with error as boolean', () => {
@@ -137,11 +259,16 @@ describe('verificationCode', () => {
     const { asFragment } = renderWithTheme(
       <VerificationCode label="test" labelDescription={<span>description</span>} />,
     )
+
+    expect(screen.getByText('description')).toBeInTheDocument()
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should render correctly disabled true', () => {
-    const { asFragment } = renderWithTheme(<VerificationCode disabled />)
+  it('should render correctly disabled', () => {
+    const { asFragment } = renderWithTheme(<VerificationCode disabled label="test" />)
+
+    const code = screen.getByRole('textbox', { name: 'test' })
+    expect(code).toBeDisabled()
     expect(asFragment()).toMatchSnapshot()
   })
 })
