@@ -42,7 +42,7 @@ exports[`pieChart > renders correctly when legend is focused 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--color-neutral-text-strong)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -62,17 +62,17 @@ exports[`pieChart > renders correctly when legend is focused 1`] = `
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
                   data-testid="arc.compute"
-                  fill="#5e47be"
+                  fill="var(--color-other-data-charts-data1)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
                   data-testid="arc.gpu"
-                  fill="#0083e6"
+                  fill="var(--color-other-data-charts-data2)"
                   opacity="1"
-                  stroke="rgb(0, 92, 161)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -97,9 +97,9 @@ exports[`pieChart > renders correctly when legend is focused 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#5e47be"
+                color="var(--color-other-data-charts-data1)"
                 id="chart-legend-compute"
-                style="--kkn7a31: #5e47be;"
+                style="--kkn7a31: var(--color-other-data-charts-data1);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmallStrong__1do42lsl style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -126,9 +126,9 @@ exports[`pieChart > renders correctly when legend is focused 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#0083e6"
+                color="var(--color-other-data-charts-data2)"
                 id="chart-legend-gpu"
-                style="--kkn7a31: #0083e6;"
+                style="--kkn7a31: var(--color-other-data-charts-data2);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -194,7 +194,7 @@ exports[`pieChart > renders correctly when legend is hovered 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--color-neutral-text-strong)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -214,17 +214,17 @@ exports[`pieChart > renders correctly when legend is hovered 1`] = `
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
                   data-testid="arc.compute"
-                  fill="#5e47be"
+                  fill="var(--color-other-data-charts-data1)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
                   data-testid="arc.gpu"
-                  fill="#0083e6"
+                  fill="var(--color-other-data-charts-data2)"
                   opacity="1"
-                  stroke="rgb(0, 92, 161)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -249,9 +249,9 @@ exports[`pieChart > renders correctly when legend is hovered 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#5e47be"
+                color="var(--color-other-data-charts-data1)"
                 id="chart-legend-compute"
-                style="--kkn7a31: #5e47be;"
+                style="--kkn7a31: var(--color-other-data-charts-data1);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmallStrong__1do42lsl style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -278,9 +278,9 @@ exports[`pieChart > renders correctly when legend is hovered 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#0083e6"
+                color="var(--color-other-data-charts-data2)"
                 id="chart-legend-gpu"
-                style="--kkn7a31: #0083e6;"
+                style="--kkn7a31: var(--color-other-data-charts-data2);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -346,7 +346,7 @@ exports[`pieChart > renders correctly with data 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--color-neutral-text-strong)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -366,17 +366,17 @@ exports[`pieChart > renders correctly with data 1`] = `
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
                   data-testid="arc.compute"
-                  fill="#5e47be"
+                  fill="var(--color-other-data-charts-data1)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
                   data-testid="arc.gpu"
-                  fill="#0083e6"
+                  fill="var(--color-other-data-charts-data2)"
                   opacity="1"
-                  stroke="rgb(0, 92, 161)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -431,7 +431,7 @@ exports[`pieChart > renders correctly with data and content 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--color-neutral-text-strong)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -451,17 +451,17 @@ exports[`pieChart > renders correctly with data and content 1`] = `
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
                   data-testid="arc.compute"
-                  fill="#5e47be"
+                  fill="var(--color-other-data-charts-data1)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
                   data-testid="arc.gpu"
-                  fill="#0083e6"
+                  fill="var(--color-other-data-charts-data2)"
                   opacity="1"
-                  stroke="rgb(0, 92, 161)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -521,7 +521,7 @@ exports[`pieChart > renders correctly with detailed legend 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--color-neutral-text-strong)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -541,17 +541,17 @@ exports[`pieChart > renders correctly with detailed legend 1`] = `
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
                   data-testid="arc.compute"
-                  fill="#5e47be"
+                  fill="var(--color-other-data-charts-data1)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
                   data-testid="arc.gpu"
-                  fill="#0083e6"
+                  fill="var(--color-other-data-charts-data2)"
                   opacity="1"
-                  stroke="rgb(0, 92, 161)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -575,9 +575,9 @@ exports[`pieChart > renders correctly with detailed legend 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#5e47be"
+                color="var(--color-other-data-charts-data1)"
                 id="chart-legend-compute"
-                style="--kkn7a31: #5e47be;"
+                style="--kkn7a31: var(--color-other-data-charts-data1);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -604,9 +604,9 @@ exports[`pieChart > renders correctly with detailed legend 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#0083e6"
+                color="var(--color-other-data-charts-data2)"
                 id="chart-legend-gpu"
-                style="--kkn7a31: #0083e6;"
+                style="--kkn7a31: var(--color-other-data-charts-data2);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -672,7 +672,7 @@ exports[`pieChart > renders correctly with detailed legend and discount 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--color-neutral-text-strong)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -692,9 +692,9 @@ exports[`pieChart > renders correctly with detailed legend and discount 1`] = `
                 <path
                   d="M0,-93A93,93,0,1,1,0,93A93,93,0,1,1,0,-93M0,-74.4A74.4,74.4,0,1,0,0,74.4A74.4,74.4,0,1,0,0,-74.4Z"
                   data-testid="arc.discount"
-                  fill="#5e47be"
+                  fill="var(--color-other-data-charts-data1)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -718,9 +718,9 @@ exports[`pieChart > renders correctly with detailed legend and discount 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#5e47be"
+                color="var(--color-other-data-charts-data1)"
                 id="chart-legend-discount"
-                style="--kkn7a31: #5e47be;"
+                style="--kkn7a31: var(--color-other-data-charts-data1);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -786,7 +786,7 @@ exports[`pieChart > renders correctly with empty legend placeholder 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--color-neutral-text-strong)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -806,9 +806,9 @@ exports[`pieChart > renders correctly with empty legend placeholder 1`] = `
                 <path
                   d="M0,-93A93,93,0,1,1,0,93A93,93,0,1,1,0,-93M0,-74.4A74.4,74.4,0,1,0,0,74.4A74.4,74.4,0,1,0,0,-74.4Z"
                   data-testid="arc.empty"
-                  fill="#5e47be"
+                  fill="var(--color-other-data-charts-data1)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -868,7 +868,7 @@ exports[`pieChart > renders correctly with legend 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--color-neutral-text-strong)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -888,81 +888,81 @@ exports[`pieChart > renders correctly with legend 1`] = `
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,53.82,-75.845L42.886,-60.796A74.4,74.4,0,0,0,1.039,-74.393Z"
                   data-testid="arc.compute"
-                  fill="#5e47be"
+                  fill="var(--color-other-data-charts-data1)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M55.501,-74.623A93,93,0,0,1,88.122,-29.725L70.431,-23.977A74.4,74.4,0,0,0,44.568,-59.574Z"
                   data-testid="arc.gpu"
-                  fill="#0083e6"
+                  fill="var(--color-other-data-charts-data2)"
                   opacity="1"
-                  stroke="rgb(0, 92, 161)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M88.764,-27.748A93,93,0,0,1,88.764,27.748L71.073,22A74.4,74.4,0,0,0,71.073,-22Z"
                   data-testid="arc.functions"
-                  fill="#3ebd8f"
+                  fill="var(--color-other-data-charts-data3)"
                   opacity="1"
-                  stroke="rgb(43, 132, 100)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M88.122,29.725A93,93,0,0,1,55.501,74.623L44.568,59.574A74.4,74.4,0,0,0,70.431,23.977Z"
                   data-testid="arc.containers"
-                  fill="#ac2740"
+                  fill="var(--color-other-data-charts-data4)"
                   opacity="1"
-                  stroke="rgb(120, 27, 45)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M53.82,75.845A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,42.886,60.796Z"
                   data-testid="arc.s3"
-                  fill="#9a85ec"
+                  fill="var(--color-other-data-charts-data5)"
                   opacity="1"
-                  stroke="rgb(108, 93, 165)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-53.82,75.845L-42.886,60.796A74.4,74.4,0,0,0,-1.039,74.393Z"
                   data-testid="arc.dns"
-                  fill="#ff602e"
+                  fill="var(--color-other-data-charts-data6)"
                   opacity="1"
-                  stroke="rgb(179, 67, 32)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-55.501,74.623A93,93,0,0,1,-88.122,29.725L-70.431,23.977A74.4,74.4,0,0,0,-44.568,59.574Z"
                   data-testid="arc.appleSilicon"
-                  fill="#483800"
+                  fill="var(--color-other-data-charts-data7)"
                   opacity="1"
-                  stroke="rgb(50, 39, 0)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-88.764,27.748A93,93,0,0,1,-88.764,-27.748L-71.073,-22A74.4,74.4,0,0,0,-71.073,22Z"
                   data-testid="arc.baremetal"
-                  fill="#02a5ad"
+                  fill="var(--color-other-data-charts-data8)"
                   opacity="1"
-                  stroke="rgb(1, 115, 121)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-88.122,-29.725A93,93,0,0,1,-55.501,-74.623L-44.568,-59.574A74.4,74.4,0,0,0,-70.431,-23.977Z"
                   data-testid="arc.database"
-                  fill="#ffa488"
+                  fill="var(--color-other-data-charts-data9)"
                   opacity="1"
-                  stroke="rgb(179, 115, 95)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-53.82,-75.845A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-42.886,-60.796Z"
                   data-testid="arc.lb"
-                  fill="#96edf2"
+                  fill="var(--color-other-data-charts-data10)"
                   opacity="1"
-                  stroke="rgb(105, 166, 169)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -986,9 +986,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#5e47be"
+                color="var(--color-other-data-charts-data1)"
                 id="chart-legend-compute"
-                style="--kkn7a31: #5e47be;"
+                style="--kkn7a31: var(--color-other-data-charts-data1);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -1015,9 +1015,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#0083e6"
+                color="var(--color-other-data-charts-data2)"
                 id="chart-legend-gpu"
-                style="--kkn7a31: #0083e6;"
+                style="--kkn7a31: var(--color-other-data-charts-data2);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -1044,9 +1044,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#3ebd8f"
+                color="var(--color-other-data-charts-data3)"
                 id="chart-legend-functions"
-                style="--kkn7a31: #3ebd8f;"
+                style="--kkn7a31: var(--color-other-data-charts-data3);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -1073,9 +1073,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#ac2740"
+                color="var(--color-other-data-charts-data4)"
                 id="chart-legend-containers"
-                style="--kkn7a31: #ac2740;"
+                style="--kkn7a31: var(--color-other-data-charts-data4);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -1102,9 +1102,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#9a85ec"
+                color="var(--color-other-data-charts-data5)"
                 id="chart-legend-s3"
-                style="--kkn7a31: #9a85ec;"
+                style="--kkn7a31: var(--color-other-data-charts-data5);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -1131,9 +1131,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#ff602e"
+                color="var(--color-other-data-charts-data6)"
                 id="chart-legend-dns"
-                style="--kkn7a31: #ff602e;"
+                style="--kkn7a31: var(--color-other-data-charts-data6);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -1160,9 +1160,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#483800"
+                color="var(--color-other-data-charts-data7)"
                 id="chart-legend-appleSilicon"
-                style="--kkn7a31: #483800;"
+                style="--kkn7a31: var(--color-other-data-charts-data7);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -1189,9 +1189,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#02a5ad"
+                color="var(--color-other-data-charts-data8)"
                 id="chart-legend-baremetal"
-                style="--kkn7a31: #02a5ad;"
+                style="--kkn7a31: var(--color-other-data-charts-data8);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -1218,9 +1218,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#ffa488"
+                color="var(--color-other-data-charts-data9)"
                 id="chart-legend-database"
-                style="--kkn7a31: #ffa488;"
+                style="--kkn7a31: var(--color-other-data-charts-data9);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -1247,9 +1247,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             >
               <span
                 class="styles__kkn7a3b"
-                color="#96edf2"
+                color="var(--color-other-data-charts-data10)"
                 id="chart-legend-lb"
-                style="--kkn7a31: #96edf2;"
+                style="--kkn7a31: var(--color-other-data-charts-data10);"
               />
               <span
                 class="style__1do42ls0 style_oneLine_true__1do42ls3 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style__1do42ls3e"
@@ -1315,7 +1315,7 @@ exports[`pieChart > renders correctly with no props 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--color-neutral-text-strong)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -1335,9 +1335,9 @@ exports[`pieChart > renders correctly with no props 1`] = `
                 <path
                   d="M0,-93A93,93,0,1,1,0,93A93,93,0,1,1,0,-93M0,-74.4A74.4,74.4,0,1,0,0,74.4A74.4,74.4,0,1,0,0,-74.4Z"
                   data-testid="arc.empty"
-                  fill="#5e47be"
+                  fill="var(--color-other-data-charts-data1)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>

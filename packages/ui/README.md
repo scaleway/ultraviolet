@@ -32,14 +32,18 @@ import '@ultraviolet/fonts'
 
 ### Usage
 
-For the library to work properly, you need to wrap your application with the `ThemeProvider` component. `ThemeProvider` will provide the theme to all components in your application and allow you to do `const theme = useTheme()` to have access to the theme object in your TSX files.
+For the library to work properly, you need to wrap your application with the `ThemeProvider` component from `@ultraviolet/themes`. To have access to the `theme` object, simply import the object directly from the `@ultraviolet/themes` library:
+
+```tsx
+import { theme } from '@ultraviolet/themes'
+```
 
 You will also need to import styles of components for them to have the correct styles.
 
 ```tsx
-import { ThemeProvider, consoleLightTheme as theme } from '@ultraviolet/themes'
+import { ThemeProvider, theme } from '@ultraviolet/themes'
 import { Button } from '@ultraviolet/ui'
-import '@ultraviolet/ui/styles'
+import '@ultraviolet/ui/styles' // <- components style
 
 const App = () => (
   <ThemeProvider theme={theme}>

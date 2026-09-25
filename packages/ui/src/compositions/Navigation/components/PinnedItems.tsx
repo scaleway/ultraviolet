@@ -1,7 +1,7 @@
 'use client'
 
 import { PinCategoryIcon } from '@ultraviolet/icons/category'
-import { useTheme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import { useCallback } from 'react'
 import type { CSSProperties, DragEvent, ReactElement } from 'react'
 import { Text } from '../../../components/Typography/Text'
@@ -39,7 +39,6 @@ export const PinnedItems = ({ toggle = true, onReorder, onToggle, itemWrapper, s
   }
 
   const { locales, pinnedItems, pinnedFeature, reorderItems, expanded, items, showHide } = context
-  const theme = useTheme()
 
   const onDrop = useCallback(
     (event: DragEvent<HTMLDivElement>, index: number) => {
@@ -61,13 +60,10 @@ export const PinnedItems = ({ toggle = true, onReorder, onToggle, itemWrapper, s
     [onReorder, reorderItems],
   )
 
-  const onDragOver = useCallback(
-    (event: DragEvent<HTMLDivElement>) => {
-      event.preventDefault()
-      event.currentTarget.style.borderColor = theme.colors.primary.border
-    },
-    [theme.colors.primary.border],
-  )
+  const onDragOver = useCallback((event: DragEvent<HTMLDivElement>) => {
+    event.preventDefault()
+    event.currentTarget.style.borderColor = theme.colors.primary.border
+  }, [])
 
   const onDragLeave = useCallback((event: DragEvent<HTMLDivElement>) => {
     event.preventDefault()

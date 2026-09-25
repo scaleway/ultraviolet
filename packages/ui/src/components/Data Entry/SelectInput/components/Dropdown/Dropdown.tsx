@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useContext, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import type { ComponentProps, Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
@@ -48,6 +48,12 @@ const NON_SEARCHABLE_KEYS = [
   'ArrowRight',
   'Escape',
 ]
+
+const resolveVar = (value: string) => {
+  const varName = /var\(([^)]+)\)/.exec(value)?.[1]
+
+  return varName ? getComputedStyle(document.documentElement).getPropertyValue(varName).trim() : value
+}
 
 const handleKeyDown = (
   event: globalThis.KeyboardEvent,
@@ -118,9 +124,8 @@ export const Dropdown = ({
 }: DropdownProps) => {
   const { setIsDropdownVisible, isDropdownVisible, onSearch, searchInput, options, displayedOptions, numberOfOptions } =
     useSelectInput()
-  const theme = useTheme()
   const [searchBarActive, setSearchBarActive] = useState(false)
-  const [defaultSearchValue, setDefaultSearch] = useState<string | null>(null)
+  const [defaultSearchValue, setDefaultSearchValue] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState('')
   const [maxWidth, setMaxWidth] = useState(refSelect.current?.offsetWidth ?? '100%')
@@ -135,8 +140,8 @@ export const Dropdown = ({
     const position =
       current.getBoundingClientRect().bottom +
       DROPDOWN_MAX_HEIGHT +
-      Number(theme.sizing[INPUT_SIZE_HEIGHT[size]].replace('rem', '')) * 16 +
-      Number.parseInt(theme.space['5'], 10)
+      Number(resolveVar(theme.sizing[INPUT_SIZE_HEIGHT[size]]).replace('rem', '')) * 16 +
+      Number.parseInt(resolveVar(theme.space['5']), 10)
     const overflow = position - window.innerHeight + 32
 
     if (overflow > 0 && modalContext) {
@@ -161,7 +166,7 @@ export const Dropdown = ({
         window.scrollBy({ behavior: 'smooth', top: overflow })
       }
     }
-  }, [isDropdownVisible, refSelect, size, modalContext, theme])
+  }, [isDropdownVisible, refSelect, size, modalContext])
 
   useEffect(() => {
     const onResize = () => {
@@ -185,12 +190,12 @@ export const Dropdown = ({
 
   useEffect(() => {
     if (!isDropdownVisible) {
-      setDefaultSearch(null)
+      setDefaultSearchValue(null)
       setSearch('')
     }
 
     const eventKeydown = (event: globalThis.KeyboardEvent) =>
-      handleKeyDown(event, ref, options, searchBarActive, setSearch, setDefaultSearch, search)
+      handleKeyDown(event, ref, options, searchBarActive, setSearch, setDefaultSearchValue, search)
 
     if (!searchable) {
       document.addEventListener('keydown', eventKeydown)
@@ -208,7 +213,7 @@ export const Dropdown = ({
     onSearch,
     search,
     refSelect,
-    setDefaultSearch,
+    setDefaultSearchValue,
     setIsDropdownVisible,
     searchable,
   ])
@@ -259,6 +264,7 @@ export const Dropdown = ({
       placement="bottom"
       portalTarget={portalTarget}
       ref={ref}
+      // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role
       role="dialog"
       style={assignInlineVars({
         [dropdownWidth]: typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth,

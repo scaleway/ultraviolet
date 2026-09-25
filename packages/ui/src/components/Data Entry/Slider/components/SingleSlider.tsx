@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
@@ -45,12 +45,11 @@ export const SingleSlider = ({
   'aria-describedby': ariaDescribedBy,
 }: SingleSliderProps) => {
   const localId = useId()
-  const theme = useTheme()
   const finalId = id ?? localId
   const safeValue = value ?? min
   const [selectedIndex, setSelectedIndex] = useState(safeValue)
   const refSlider = useRef<HTMLInputElement>(null)
-  const [sliderWidth, setWidth] = useState(0)
+  const [sliderWidth, setSliderWidth] = useState(0)
   const [inputValue, setInputValue] = useState<number | null>(safeValue)
 
   useEffect(() => {
@@ -58,7 +57,7 @@ export const SingleSlider = ({
   }, [selectedIndex])
 
   useEffect(() => {
-    setWidth(Number(refSlider.current?.offsetWidth))
+    setSliderWidth(Number(refSlider.current?.offsetWidth))
   }, [refSlider])
 
   const ticks = useMemo(() => {
@@ -108,7 +107,7 @@ export const SingleSlider = ({
   // Get slider size
   useEffect(() => {
     const setWidthResize = () => {
-      setWidth(Number(refSlider.current?.offsetWidth))
+      setSliderWidth(Number(refSlider.current?.offsetWidth))
     }
     window.addEventListener('resize', setWidthResize)
 
@@ -137,7 +136,7 @@ export const SingleSlider = ({
         max={max}
         min={min}
         onBlur={event => {
-          internalOnChange(Number.parseFloat(event.target.value))
+          internalOnChange(Number(event.target.value))
         }}
         onChange={setInputValue}
         size="small"
@@ -212,20 +211,20 @@ export const SingleSlider = ({
             aria-label={ariaLabel ?? name}
             className={cn(
               className,
-              sliderStyle.single({ direction, disabled, error: !!error }),
+              sliderStyle.single({ direction, disabled, error: Boolean(error) }),
               sliderStyle.thumbStyle({ disabled }),
             )}
             data-direction={direction}
-            data-error={!!error}
+            data-error={Boolean(error)}
             data-testid={dataTestId}
-            disabled={!!disabled}
+            disabled={Boolean(disabled)}
             id={finalId}
             max={max}
             min={min}
             name={name}
             onBlur={onBlur}
             onChange={event => {
-              internalOnChange(Number.parseFloat(event.target.value))
+              internalOnChange(Number(event.target.value))
             }}
             onFocus={onFocus}
             ref={refSlider}
@@ -233,8 +232,7 @@ export const SingleSlider = ({
             style={{
               ...assignInlineVars({
                 [leftVar]: `calc(${leftPosition}% - ${(THUMB_SIZE * leftPosition) / 100}px)`,
-                [thumbColor]:
-                  theme.theme === 'light' ? theme.colors.neutral.background : theme.colors.neutral.backgroundStronger,
+                [thumbColor]: theme.colors.other.monochrome.white.background,
               }),
               ...getBackgroundSize,
             }}

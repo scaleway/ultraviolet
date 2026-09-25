@@ -1,8 +1,8 @@
 import type { PartialTheme as NivoTheme } from '@nivo/theming'
-import type { useTheme } from '@ultraviolet/themes'
+import type { theme as themeUv } from '@ultraviolet/themes'
 
 // be aware that this theme is applied on all chart using nivo library, please check any changes you make here on all charts
-export const getNivoTheme = (theme: ReturnType<typeof useTheme>) =>
+export const getNivoTheme = (theme: typeof themeUv) =>
   ({
     axis: {
       ticks: {

@@ -1,7 +1,7 @@
 'use client'
 
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
-import { useTheme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useId, useReducer } from 'react'
@@ -16,7 +16,7 @@ import { CodeContent } from './CodeContent'
 import type { Prefixes } from './CodeContent'
 import { snippetStyle } from './styles.css'
 
-const LINES_BREAK_REGEX = /\r\n|\r|\n/u
+const LINES_BREAK_REGEX = /\r\n|\r|\n/v
 
 type SnippetProps = {
   className?: string
@@ -64,7 +64,6 @@ export const Snippet = ({
   labelDescription,
   'aria-describedby': ariaDescribedBy,
 }: SnippetProps) => {
-  const theme = useTheme()
   const helperId = useId()
 
   const [showMore, setShowMore] = useReducer(value => !value, initiallyExpanded ?? false)
@@ -73,9 +72,8 @@ export const Snippet = ({
   const numberOfLines = lines.length
   const multiline = numberOfLines > 1
   const hasShowMoreButton = numberOfLines > rows && multiline && !noExpandable
-  // Height of the expandable (when needed) = number of rows * height of a line (from rem to px) + padding (from rem to px)
-  const minHeight =
-    rows * Number.parseFloat(theme.typography.code.lineHeight) * 16 + Number.parseFloat(theme.space[4]) * 16
+  // Height of the expandable (when needed) = number of rows * height of a line + padding
+  const minHeight = `calc(${rows} * ${theme.typography.code.lineHeight} + ${theme.space[4]})`
 
   return (
     <Stack direction="column" gap={1} width="100%">

@@ -8,10 +8,11 @@ import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category/O
 import { SecurityCategoryIcon } from '@ultraviolet/icons/category/SecurityCategoryIcon'
 import { UseCaseCategoryIcon } from '@ultraviolet/icons/category/UseCaseCategoryIcon'
 import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
+import { theme } from '@ultraviolet/themes'
 import { useCallback, useEffect, useState } from 'react'
 import type { ComponentProps, ReactNode } from 'react'
 import { Navigation, NavigationProvider, useNavigation } from '..'
-import { Button } from '../../../components'
+import { Button, Text } from '../../../components'
 import { Stack } from '../../../components/Layout/Stack'
 import { Tooltip } from '../../../components/Overlay/Tooltip'
 import logoSmall from './assets/logo-small.svg'
@@ -361,11 +362,12 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
             gap: '16px',
             overflowY: 'scroll',
             padding: '16px',
+            background: theme.colors.neutral.backgroundHover,
           }}
         >
           <ToggleButton>Toggle</ToggleButton>
           <ToggleButton immediate>Toggle immediate</ToggleButton>
-          <div>
+          <Text as="div" variant="body" sentiment="neutral">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor aliquam dui, a laoreet ante faucibus a.
             In accumsan pharetra dui, a lobortis eros suscipit ut. In dapibus quam et massa commodo tincidunt. Cras
             bibendum pharetra ultricies. Sed eget vulputate dui. Morbi nisi ipsum, gravida at tristique eu, varius ut
@@ -416,7 +418,7 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
             mauris. Pellentesque et tortor sem. Duis suscipit orci massa. Duis a tellus vitae nunc semper eleifend.
             Pellentesque venenatis maximus tellus in bibendum. Ut risus justo, viverra id lacinia quis, egestas at
             augue. Nulla dolor odio, malesuada nec posuere sed, molestie vitae quam. Suspendisse at augue augue.
-          </div>
+          </Text>
         </div>
       </div>
     </NavigationProvider>
