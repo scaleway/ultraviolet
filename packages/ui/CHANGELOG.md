@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.26.2
+
+### Patch Changes
+
+- [#6928](https://github.com/scaleway/ultraviolet/pull/6928) [`301aa73`](https://github.com/scaleway/ultraviolet/commit/301aa7388440deb8695a6c0bf5a3881fbbcb50f9) Thanks [@lisalupi](https://github.com/lisalupi)! - `Tag`: fix accessibility issues
+  
+  `Separator`: new prop `aria-hidden`
+
+- [#6955](https://github.com/scaleway/ultraviolet/pull/6955) [`9da846c`](https://github.com/scaleway/ultraviolet/commit/9da846c22ae31b2452118e83868694868ece46ba) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: do not display empty divs for empty groups on search
+
 ## 3.26.1
 
 ### Patch Changes
