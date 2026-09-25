@@ -1,5 +1,14 @@
 # Change Log
 
+## 6.6.9
+
+### Patch Changes
+
+- [#6952](https://github.com/scaleway/ultraviolet/pull/6952) [`b5659d9`](https://github.com/scaleway/ultraviolet/commit/b5659d9289b317ea22a8e9691699e2c8abe3da87) Thanks [@jsulpis](https://github.com/jsulpis)! - use range instead of fixed version for ultraviolet dependencies
+- Updated dependencies [[`b5659d9`](https://github.com/scaleway/ultraviolet/commit/b5659d9289b317ea22a8e9691699e2c8abe3da87), [`4eb822f`](https://github.com/scaleway/ultraviolet/commit/4eb822f660fa46d351e91299a0970984e2a700b0)]:
+  - @ultraviolet/icons@5.6.2
+  - @ultraviolet/ui@3.26.1
+
 ## 6.6.8
 
 ### Patch Changes
