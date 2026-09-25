@@ -1,0 +1,70 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/KeyValueInput/A11y" />
+
+# KeyValueInput - Accessibility
+
+## Description
+
+A form control that lets users build an ordered list of key/value pairs. Each row combines a key input and a value input (each a `TextInput` or a `SelectInput`), a delete button, optional per-row errors, a global error message, and an "add" button that is disabled once a `maxSize` limit is reached. Used to collect structured "key → value" data such as environment variables or query parameters.
+
+## Summary
+
+1. ✅ **Perceivable**: visible labels on all inputs; Icons are decorative (`aria-hidden`) and paired with text; errors are conveyed in text, not color alone
+2. ❌ **Operable**: keyboard accessible but focus is lost when a row is removed, and the disabled add button's tooltip reason is unreachable by keyboard/SR users
+3. ✅ **Understandable**: input labels and error messages are properly associated (`aria-describedby`, `aria-invalid` on text inputs)
+4. ❌ **Robust**: duplicate `id`s for per-row errors, generic "Delete" button names, no row/group semantics, and no status announcements on add/remove or when the max size is reached
+
+## ARIA Pattern
+
+There is no dedicated WAI-ARIA APG pattern for a key-value list. The component inherits the requirements of the inputs it wraps.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html): Plus/Delete icons are `aria-hidden` and paired with text (`addButton.name`, `<VisuallyHidden>Delete`)
+- ⚠️ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html): each pair is laid out as a CSS grid row; the relationship between a key input, its value input, its delete button and its error is only visual
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html): all interactions are native `<button>`/`<input>` elements, operable by keyboard
+- ✅ [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html): no focus trap
+- ❌ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html): deleting a row removes the focused element and focus falls back to `document.body` instead of being moved to a sensible neighbour
+- ❌ [WCAG 2.4.6 - Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html): every delete button shares the identical label "Delete", giving no indication of which key/value pair it acts on
+- ⚠️ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html): relies entirely on the underlying Button/TextInput focus indicators
+- ✅ [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html): global and per-row errors are linked to the relevant inputs via `aria-describedby`; text inputs set `aria-invalid`
+- ✅ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html): every field has a label; both action buttons have a name
+- ❌ [WCAG 4.1.1 - Parsing (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/parsing.html): per-row error `id`s (`error-key-{index}`, `error-value-{index}`) are hardcoded and collide when several `KeyValueInput` render on the same page
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): delete buttons have a non-descriptive name; the collection of pairs is not exposed as a group with a name
+- ❌ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html): adding/removing a pair and the "max size reached" state are not announced via a live region
+
+To apply when using the component:
+
+- [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html): always pass `label` for `inputKey` and `inputValue`; do not use `placeholder` as a substitute for a visible label
+- [WCAG 3.3.3 - Error Suggestion (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html): provide helpful suggested input in `fieldErrors` / `error`
+- [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html): when the key/value list is a logical section of a form, wrap it in `<fieldset>`/`<legend>` so the collection and its purpose are announced
+
+## Accessibility issues
+
+**High:**
+
+- **Focus is lost when a row is removed (2.4.3)**: the delete button is removed from the DOM, so focus jumps to `document.body`. Keyboard users lose their position and must re-navigate the whole list. Focus should move to the delete button of the previous row, or to the add button if the row was the only one.
+- **Delete buttons have a generic, identical name (2.4.6 / 4.1.2)**: every row's button is announced as just "Delete" (acknowledged by a `TODO` in the source). Screen reader users cannot tell which pair is being deleted. Name should be contextual, e.g. "Delete key/value pair N".
+- **Add/remove and max-size reach are not announced (4.1.3)**: when a row is added or removed the change is silent for screen reader users, and when the limit is reached the "cannot add more" tooltip (set as the disabled button description) is also silent. A live region (`aria-live="polite"`) reporting the operation (and the max reached / disabled reason) is needed.
+- **Reason for the disabled add button is inaccessible**: when the add button is disabled (max size reached, `disabled` or `readOnly`), the Tooltip wrapper becomes the focus target as a bare `div tabindex="0"` with no role or name, while the disabled button name is not in the accessibility tree. Keyboard/SR users get no feedback on why the button is disabled.
+
+**Medium:**
+
+- **No group semantics for the collection (1.3.1 / 4.1.2)**: the rows are not wrapped in `fieldset`/`legend` or `role="group"` + label, so assistive technologies cannot associate the pairs as one structured collection.
+- **Repeated row labels with no row context**: each row's inputs are announced as "key" / "value" with no index or grouping, making it hard to know which pair a focused input belongs to (especially with several rows). Consider including the row position in the accessible name.
+- **Duplicate `id`s for per-row errors (4.1.1)**: `error-key-{index}` / `error-value-{index}` are hardcoded strings instead of `useId()`. Rendering two `KeyValueInput` on the same page produces duplicate `id`s and cross-linked `aria-describedby`.
+- **Focus is not moved after adding a row**: the new empty pair is appended but focus stays on the add button; keyboard users must Tab forward to find the new inputs. Focus should move to the new row's first input.
+
+**Low:**
+
+- The top-level `aria-describedby` prop is applied to every key and value input in every row — an over-broad association if the referenced text describes the whole group rather than individual fields.
+- Placeholder is accepted as a prop but should stay an input-format example, not a label replacement (applies to consumers).
+
+## Dependencies
+
+- **SelectInput**: rows using a select carry over its issues — combobox named via `aria-label` overriding the selected value, missing `aria-invalid`, `required` not surfaced, every option a tab stop. See the SelectInput audit.
+- **Button / Tooltip**: disabled buttons with tooltips are not reachable by keyboard/SR users; the Tooltip wrapper takes `tabindex="0"` without a role or name.
+- **TextInput**: label/`aria-describedby`/`aria-invalid` handling is inherited and correct for text rows.
