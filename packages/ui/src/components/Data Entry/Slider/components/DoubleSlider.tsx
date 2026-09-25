@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
@@ -45,7 +45,6 @@ export const DoubleSlider = ({
   customValueDisplay,
   'aria-describedby': ariaDescribedBy,
 }: DoubleSliderProps) => {
-  const theme = useTheme()
   const localId = useId()
   const finalId = id ?? localId
   const refSlider = useRef<HTMLInputElement>(null)
@@ -325,10 +324,7 @@ export const DoubleSlider = ({
                   step={step}
                   style={assignInlineVars({
                     [leftVar]: `calc(${leftSliderProgress}% - ${(THUMB_SIZE * leftSliderProgress) / 100}px)`,
-                    [thumbColor]:
-                      theme.theme === 'light'
-                        ? theme.colors.neutral.background
-                        : theme.colors.neutral.backgroundStronger,
+                    [thumbColor]: theme.colors.other.monochrome.white.background,
                   })}
                   type="range"
                   value={selectedIndexes[0]}
@@ -363,10 +359,7 @@ export const DoubleSlider = ({
                   step={step}
                   style={assignInlineVars({
                     [leftVar]: `calc(${rightSliderProgress}% - ${(THUMB_SIZE * rightSliderProgress) / 100}px)`,
-                    [thumbColor]:
-                      theme.theme === 'light'
-                        ? theme.colors.neutral.background
-                        : theme.colors.neutral.backgroundStronger,
+                    [thumbColor]: theme.colors.other.monochrome.white.background,
                   })}
                   type="range"
                   value={selectedIndexes[1]}

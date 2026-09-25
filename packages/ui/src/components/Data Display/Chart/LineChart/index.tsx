@@ -4,8 +4,7 @@ import type { Box as NivoBox, ValueFormat } from '@nivo/core'
 import { ResponsiveLine } from '@nivo/line'
 import type { LineSvgProps, Point, LineSeries, AllowedValue } from '@nivo/line'
 import type { ScaleSpec } from '@nivo/scales'
-import { useTheme } from '@ultraviolet/themes'
-import type { theme as UVTheme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import { useEffect, useState } from 'react'
 import type { ComponentProps, CSSProperties } from 'react'
 import { getLegendColor } from '../../../../helpers/legend'
@@ -74,7 +73,6 @@ export const LineChart = ({
   style,
   'data-testid': dataTestId,
 }: LineChartProps) => {
-  const theme = useTheme()
   const dataset = {
     datasets: data?.map(d => ({
       data: d.data,
@@ -94,7 +92,7 @@ export const LineChart = ({
     setSelected(dataset.datasets?.map(({ id }, index) => `${id}${index}`))
   }, [dataset.datasets, selected])
 
-  const localColors = getLegendColor(theme as typeof UVTheme)
+  const localColors = getLegendColor(theme)
 
   const CustomTooltip = createCustomTooltip(tooltipFunction)
 

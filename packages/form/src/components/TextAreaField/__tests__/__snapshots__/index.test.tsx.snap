@@ -27,7 +27,7 @@ exports[`textAreaField > should render correctly 1`] = `
             id="_r_0_"
             name="test"
             rows="3"
-            style="--uv_1x5uoc10: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+            style="--uv_1x5uoc10: calc(var(--space-1) + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(48px + 2*var(--space-1-5) + 2px);"
           />
           <div
             class="uv_1x5uoc12 uv_xf61n40 uv_xf61n4d uv_xf61n42j uv_xf61n43p"
@@ -75,7 +75,7 @@ exports[`textAreaField > should render correctly generated 1`] = `
             id="_r_e_"
             name="test"
             rows="3"
-            style="--uv_1x5uoc10: calc(0.5rem + 1.5rem + 0px + 0px + 0.25rem); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+            style="--uv_1x5uoc10: calc(var(--space-1) + var(--sizing-300) + 0px + 0px + var(--space-0-5)); field-sizing: fixed; min-block-size: calc(48px + 2*var(--space-1-5) + 2px);"
           >
             This is an example
           </textarea>
@@ -144,7 +144,7 @@ exports[`textAreaField > should submit with onSubmitEnter prop 1`] = `
             id="_r_6_"
             name="test"
             rows="3"
-            style="--uv_1x5uoc10: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+            style="--uv_1x5uoc10: calc(var(--space-1) + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(48px + 2*var(--space-1-5) + 2px);"
           >
             This is an example
           </textarea>

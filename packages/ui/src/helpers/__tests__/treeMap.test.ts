@@ -1,7 +1,7 @@
 import type { DefaultTreeMapDatum } from '@nivo/treemap'
 import type { consoleLightTheme } from '@ultraviolet/themes'
 import { describe, expect, it } from 'vitest'
-import { getAllIds, getDataColors, getOpacity, percentToHex } from '../treeMap'
+import { getAllIds, getDataColors, getOpacity } from '../treeMap'
 
 type Theme = typeof consoleLightTheme
 
@@ -31,40 +31,6 @@ describe(getOpacity, () => {
   it('should handle edge cases for two-digit numbers', () => {
     expect(getOpacity(20)).toBe(2)
     expect(getOpacity(50)).toBe(5)
-  })
-})
-
-describe(percentToHex, () => {
-  it('should convert 0% to "00"', () => {
-    expect(percentToHex(0)).toBe('00')
-  })
-
-  it('should convert 100% to "FF"', () => {
-    expect(percentToHex(100)).toBe('FF')
-  })
-
-  it('should convert 50% to "80"', () => {
-    expect(percentToHex(50)).toBe('80')
-  })
-
-  it('should convert decimal percentages correctly', () => {
-    expect(percentToHex(25.5)).toBe('41')
-    expect(percentToHex(75.3)).toBe('C0')
-  })
-
-  it('should round values correctly', () => {
-    expect(percentToHex(49.8)).toBe('7F') // rounds to 127
-    expect(percentToHex(50.2)).toBe('80') // rounds to 128
-  })
-
-  it('should always return uppercase hex values', () => {
-    expect(percentToHex(66.7)).toBe('AA')
-    expect(percentToHex(93.3)).toBe('EE')
-  })
-
-  it('should pad single digit hex values with leading zero', () => {
-    expect(percentToHex(1)).toBe('03')
-    expect(percentToHex(5)).toBe('0D')
   })
 })
 
@@ -136,7 +102,7 @@ describe(getDataColors, () => {
     const data: DefaultTreeMapDatum = { id: 'root' }
     const colors = getDataColors(data, mockTheme)
 
-    expect(colors[0]).toMatch(/^#3B82F6[0-9A-F]{2}$/u)
+    expect(colors[0]).toMatch(/^color-mix\(in srgb, #3B82F6 (?:100|[1-9]?\d)%\)$/v)
   })
 
   it('should generate different colors for multiple nodes', () => {
@@ -174,9 +140,9 @@ describe(getDataColors, () => {
     const colors = getDataColors(data, mockTheme)
 
     // First node (root) should have highest opacity (100 - 0 = 100 -> 0)
-    expect(colors[0]).toBe('#3B82F6FF')
+    expect(colors[0]).toBe('color-mix(in srgb, #3B82F6 100%)')
     // Second node (child1) should have next opacity (100 - 1 = 99 -> 99)
-    expect(colors[1]).toBe('#3B82F6FC')
+    expect(colors[1]).toBe('color-mix(in srgb, #3B82F6 99%)')
   })
 
   it('should handle more than 100 nodes using modulo', () => {

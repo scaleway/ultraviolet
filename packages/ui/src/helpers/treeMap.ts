@@ -78,30 +78,6 @@ export const getOpacity = (n: number): number => {
 }
 
 /**
- * Converts a percentage value to a two-digit hexadecimal string.
- *
- * @param {number} percentage - The percentage value to convert (range: 0-100)
- * @returns {string} A two-digit uppercase hexadecimal string (range: "00"-"FF")
- *
- * @description
- * This function is commonly used for converting opacity/alpha percentages to hex values
- * for use in color codes (e.g., #RRGGBBAA format). The percentage is mapped to the
- * 0-255 range, converted to hexadecimal, and formatted as a two-character uppercase string.
- *
- * @example
- * percentToHex(0)    // returns "00"
- * percentToHex(50)   // returns "80"
- * percentToHex(100)  // returns "FF"
- * percentToHex(25.5) // returns "41"
- */
-export const percentToHex = (percentage: number): string => {
-  const intValue = Math.round((percentage / 100) * 255) // map percent to nearest integer (0 - 255)
-  const hexValue = intValue.toString(16) // get hexadecimal representation
-
-  return hexValue.padStart(2, '0').toUpperCase() // format with leading 0 and upper case characters
-}
-
-/**
  * Generates the needed colors for the tree map with graduated opacity values.
  *
  * @param {DefaultTreeMapDatum} data - The tree map data structure to generate colors for
@@ -131,6 +107,6 @@ export const getDataColors = (data: DefaultTreeMapDatum, theme: Theme): string[]
     (_, index) =>
       // if we have more than 100 elements, we use the mod function to be able to return to the start
       // as we only have 100 transparency values for a given color
-      `${baseColor}${percentToHex(getOpacity((100 - index) % 100))}`,
+      `color-mix(in srgb, ${baseColor} ${getOpacity((100 - index) % 100)}%)`,
   )
 }

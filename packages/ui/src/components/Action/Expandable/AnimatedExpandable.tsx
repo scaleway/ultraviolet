@@ -5,6 +5,9 @@ import { ANIMATION_DURATION } from './constant'
 import type { ExpandableProps } from './types'
 import { animationDurationVar, expandableStyle } from './styles.css'
 
+const formatMinHeight = (minHeight: number | string | undefined) =>
+  typeof minHeight === 'number' ? `${minHeight}px` : minHeight
+
 export const AnimatedExpandable = ({
   children,
   opened,
@@ -46,7 +49,7 @@ export const AnimatedExpandable = ({
    */
   useEffect(() => {
     if (isFirstRender.current && !opened && ref.current) {
-      ref.current.style.maxHeight = `${minHeight ?? 0}px`
+      ref.current.style.maxHeight = formatMinHeight(minHeight) ?? '0px'
       ref.current.style.overflow = 'hidden'
     } else if (opened && ref.current && height) {
       ref.current.style.maxHeight = `${height}px`
@@ -67,7 +70,7 @@ export const AnimatedExpandable = ({
         ref.current.style.maxHeight = `${height}px`
         transitionTimer.current = setTimeout(() => {
           if (ref.current) {
-            ref.current.style.maxHeight = `${minHeight}px`
+            ref.current.style.maxHeight = formatMinHeight(minHeight) ?? '0px'
             ref.current.style.overflow = 'hidden'
             setTimeout(() => {
               if (ref.current && !minHeight) {

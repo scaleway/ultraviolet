@@ -2,8 +2,7 @@
 
 import type { Box } from '@nivo/core'
 import { Pie } from '@nivo/pie'
-import { useTheme } from '@ultraviolet/themes'
-import type { theme as UVTheme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useCallback, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
@@ -47,12 +46,11 @@ export const PieChart = ({
   chartProps = DEFAULT_CHARTPROPS,
   style,
 }: PieChartProps) => {
-  const theme = useTheme()
   const [currentFocusIndex, setCurrentFocusIndex] = useState<string>()
   const emptyTooltip = useCallback(() => <span />, [])
   const isEmpty = !data || data.length === 0
 
-  const localColors = getLegendColor(theme as typeof UVTheme)
+  const localColors = getLegendColor(theme)
 
   return (
     <div

@@ -70,7 +70,7 @@ exports[`submit > form is submitting 1`] = `
           aria-valuetext="20%"
           class="uv_1ehxqey2"
           role="progressbar"
-          style="height: 1rem; width: 1rem;"
+          style="height: var(--sizing-200); width: var(--sizing-200);"
           viewBox="0 0 100 100"
         >
           <circle
@@ -87,7 +87,7 @@ exports[`submit > form is submitting 1`] = `
             cy="50"
             fill="none"
             r="42"
-            stroke="#ffffff"
+            stroke="var(--color-other-monochrome-white-background)"
             stroke-dasharray="263.89378290154264"
             stroke-dashoffset="211.11502632123413"
             stroke-linecap="round"

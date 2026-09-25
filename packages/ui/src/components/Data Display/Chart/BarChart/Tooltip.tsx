@@ -23,7 +23,7 @@ export const BarChartTooltip = ({
   <div className={cn(className, barChartStyle.tooltipContainer)} data-testid={dataTestId}>
     <div>
       <span
-        className={barChartStyle.tooltipContainer}
+        className={barChartStyle.colorSquare}
         style={assignInlineVars({
           [colorBar]: color,
         })}

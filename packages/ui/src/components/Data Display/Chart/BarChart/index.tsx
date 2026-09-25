@@ -3,8 +3,7 @@
 import { ResponsiveBar } from '@nivo/bar'
 import type { BarDatum, BarSvgProps, BarTooltipProps } from '@nivo/bar'
 import type { Box, DatumValue, ValueFormat } from '@nivo/core'
-import { useTheme } from '@ultraviolet/themes'
-import type { theme as UVTheme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import { useCallback } from 'react'
 import type { ComponentProps, CSSProperties } from 'react'
 import { getLegendColor } from '../../../../helpers/legend'
@@ -56,8 +55,6 @@ export const BarChart = ({
   'data-testid': dataTestId,
   style,
 }: BarChartProps) => {
-  const theme = useTheme()
-
   const tooltip = useCallback(
     (props: BarTooltipProps<BarDatum>) => {
       const { indexValue, formattedValue, color } = tooltipFunction ? tooltipFunction(props) : props
@@ -84,7 +81,7 @@ export const BarChart = ({
           tickSize: 5,
           tickValues: tickValues?.left,
         }}
-        colors={getLegendColor(theme as typeof UVTheme)}
+        colors={getLegendColor(theme)}
         data={data}
         enableLabel={false}
         keys={keys}

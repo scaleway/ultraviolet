@@ -3,7 +3,7 @@
 import type { XOR } from '@scaleway/types'
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { DragIcon } from '@ultraviolet/icons/DragIcon'
-import { useTheme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useCallback, useRef, useState } from 'react'
 import type { CSSProperties, DetailsHTMLAttributes, DragEvent, ForwardedRef, KeyboardEvent, ReactNode } from 'react'
@@ -82,8 +82,6 @@ const BaseExpandableCard = forwardRef(
     const draggableFirstRef = useRef<HTMLDivElement>(null)
     const [isHovered, setIsHovered] = useState(false)
     const [clicking, setClicking] = useState(false)
-
-    const theme = useTheme()
 
     const handleMouseEnter = () => {
       setIsHovered(true)
