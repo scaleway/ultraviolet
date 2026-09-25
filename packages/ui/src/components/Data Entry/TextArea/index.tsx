@@ -1,7 +1,7 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-import { useTheme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { forwardRef, useEffect, useId, useImperativeHandle, useRef } from 'react'
 import type { ReactNode } from 'react'
@@ -99,7 +99,6 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     const localId = useId()
     const helperId = useId()
 
-    const theme = useTheme()
     const textAreaRef = useRef<HTMLTextAreaElement>(null)
     useImperativeHandle(ref, () => textAreaRef.current!)
 
@@ -117,7 +116,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         return
       }
 
-      const userResized = /^\d+px$/.exec(textArea.style.height) !== null
+      const userResized = /^\d+px$/v.exec(textArea.style.height) !== null
       const hasNativeAutoResize = textArea.style.fieldSizing === 'content'
       if (userResized || hasNativeAutoResize) {
         return
@@ -142,7 +141,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
       const minRows = rows === 'auto' ? AUTO_ROWS : rows
       textArea.style.minBlockSize = `calc(${minRows * lineHeight}px + 2*${padding} + ${BORDERS_WIDTH})`
-    }, [maxRows, rows, theme.space])
+    }, [maxRows, rows])
 
     const nonDefaultState = success || error
 
@@ -164,12 +163,12 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           <div className={textAreaStyle.wrapper}>
             <textarea
               aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
-              aria-invalid={!!error}
+              aria-invalid={Boolean(error)}
               aria-label={ariaLabel}
               autoFocus={autoFocus}
               className={textAreaStyle.textArea({
-                error: !!error,
-                success: !!success,
+                error: Boolean(error),
+                success: Boolean(success),
                 size,
               })}
               data-testid={dataTestId}
@@ -185,7 +184,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               onFocus={onFocus}
               onKeyDown={onKeyDown}
               placeholder={placeholder}
-              readOnly={!!readOnly}
+              readOnly={readOnly}
               ref={textAreaRef}
               rows={rows === 'auto' ? AUTO_ROWS : rows}
               style={{
@@ -214,7 +213,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
                   <CloseIcon />
                 </Button>
               ) : null}
-              <SuccessErrorIcon error={!!error} success={!!success} />
+              <SuccessErrorIcon error={Boolean(error)} success={Boolean(success)} />
             </Stack>
           </div>
         </Tooltip>

@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import type { CSSProperties } from 'react'
 import type { ExtendedColor } from '../../../theme'
 import { SIZES } from './constants'
@@ -34,8 +34,6 @@ export const Loader = ({
   label = 'Loading',
   style,
 }: LoaderProps) => {
-  const theme = useTheme()
-
   const circleRadius = HALF_VIEWBOX_HEIGHT - 8
   const boundedPercentage = Math.min(Math.max(percentage, 0), 100) / 100
   const circleDiameter = Math.PI * 2 * circleRadius

@@ -2,7 +2,7 @@
 
 import { ResponsiveTreeMapHtml } from '@nivo/treemap'
 import type { TooltipProps, TreeMapSvgProps } from '@nivo/treemap'
-import { useTheme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { useCallback, useMemo } from 'react'
 import type { ComponentProps } from 'react'
@@ -32,10 +32,8 @@ export const TreeMapChart = ({
   className,
   'data-testid': dataTestId,
 }: TreeMapChartProps) => {
-  const theme = useTheme()
-
   // Generate colors to be used by the TreeMap
-  const colors = useMemo(() => getDataColors(data, theme), [data, theme])
+  const colors = useMemo(() => getDataColors(data, theme), [data])
 
   // Custom tooltip renderer - uses provided function or defaults to showing content and value
   const tooltip = useCallback(
@@ -56,7 +54,7 @@ export const TreeMapChart = ({
         text: theme.typography.captionStrong,
       },
     }),
-    [theme.typography.captionStrong],
+    [],
   )
 
   return (
