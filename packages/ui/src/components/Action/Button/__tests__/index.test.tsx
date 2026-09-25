@@ -198,7 +198,7 @@ describe('button', () => {
 
       const trigger = screen.getByRole('button', { name: 'Edit item' })
       expect(trigger).toBeInTheDocument()
-      expect(screen.getByText('Edit item')).toBeInTheDocument()
+      expect(screen.getByText('Edit item')).toBeVisuallyHidden()
     })
 
     it('falls back deprecated `aria-label` prop to accessibleLabel', () => {
