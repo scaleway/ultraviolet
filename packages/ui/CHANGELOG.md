@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.26.1
+
+### Patch Changes
+
+- [#6952](https://github.com/scaleway/ultraviolet/pull/6952) [`b5659d9`](https://github.com/scaleway/ultraviolet/commit/b5659d9289b317ea22a8e9691699e2c8abe3da87) Thanks [@jsulpis](https://github.com/jsulpis)! - use range instead of fixed version for ultraviolet dependencies
+
+- [#6949](https://github.com/scaleway/ultraviolet/pull/6949) [`4eb822f`](https://github.com/scaleway/ultraviolet/commit/4eb822f660fa46d351e91299a0970984e2a700b0) Thanks [@jsulpis](https://github.com/jsulpis)! - `Menu`: fix double scroll on menus with many items
+- Updated dependencies [[`b5659d9`](https://github.com/scaleway/ultraviolet/commit/b5659d9289b317ea22a8e9691699e2c8abe3da87)]:
+  - @ultraviolet/icons@5.6.2
+
 ## 3.26.0
 
 ### Minor Changes
