@@ -1,6 +1,18 @@
 import { defineMain } from '@storybook/react-vite/node'
 import remarkGfm from 'remark-gfm'
 
+const stories = [
+  '../packages/*/src/**/__stories__/index.stories.tsx',
+  '../packages/*/src/**/__stories__/*.mdx',
+  '../utils/stories/src/**/*.mdx',
+  '../utils/stories/src/**/*.stories.tsx',
+]
+
+// oxlint-disable-next-line node/no-process-env
+if (process.env['STORYBOOK_ENVIRONMENT'] !== 'production') {
+  stories.push('../packages/ui/src/components/Overlay/Popup/__stories__/Popup.stories.tsx')
+}
+
 const main = defineMain({
   addons: [
     {
@@ -32,12 +44,7 @@ const main = defineMain({
       },
     },
   },
-  stories: [
-    '../packages/*/src/**/__stories__/index.stories.tsx',
-    '../packages/*/src/**/__stories__/*.mdx',
-    '../utils/stories/src/**/*.mdx',
-    '../utils/stories/src/**/*.stories.tsx',
-  ],
+  stories,
 })
 
 export default main
