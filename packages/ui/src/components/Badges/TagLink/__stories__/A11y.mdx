@@ -1,0 +1,45 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Badges/TagLink/A11y" />
+
+# TagLink - Accessibility
+
+## Description
+
+A badge-style component that pairs an identifier (a `label`, with optional `icon`) with a `link`, and can additionally render a copy button and a close button, plus a `loading` state.
+
+## Summary
+
+1. ✅ **Perceivable**: decorative icons are `aria-hidden` by default; any text/icon contrast violation needs to be fixed by a tokens update (see [Ultraviolet's color constrast checker](https://storybook.ultraviolet.scaleway.com/?path=/docs/customization-color-contrast--docs)).
+2. ✅ **Operable**: all interactions use native `<a>`/`<button>` elements which are keyboard accessible with visible focus indicators (default) and a logical focus order.
+3. ✅ **Understandable**: both buttons render `type="button"` (no accidental form submission); labels and names are provided.
+4. ✅ **Robust**: names, roles, and values are correct on all TagLink elements. The only known gap comes from the `CopyButton` and `Loading` dependencies, not from TagLink itself.
+
+## ARIA Pattern
+
+There is no dedicated ARIA pattern for a tag-with-link composite. The component relies on the native semantics of the elements it composes:
+
+- [ARIA Link Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/link/) - the `<a>` element rendered by `Link`
+- [ARIA Button Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/button/) - the copy button (`CopyButton`) and the close button
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - The optional `icon`, the close icon, and the copy/check icons are decorative and default to `aria-hidden` (Icon component). The close button is labeled with visually hidden text.
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Link and buttons are native keyboard-operable (Tab, Enter, Space).
+- ✅ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - Focus moves link, then copy button and then close button, matching the visual order.
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - The link keeps the browser-default focus ring; `CopyButton` (via `Button`) has an explicit focus ring; the close button shows a `:focus-visible` background/border change.
+- ✅ [WCAG 3.2.2 - On Input (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/on-input.html) - The close button and `CopyButton` both render `type="button"`, so no unexpected form submission.
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The link is named by its visible text; the close button name includes the tag label and link (`Close tag {label}: {link}`); the copy button is named via its tooltip label (`Copy` / `Copied!`).
+
+To apply when using the component:
+
+- [WCAG 2.4.4 - Link Purpose (In Context) (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html) - The `link` text is the accessible name of the link; pass text that conveys its destination (e.g., an ID or resource name). Several links with identical text on the same page would be ambiguous.
+- [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The copy button's accessible name comes from the `copyText` / `copiedText` props; customize them to include what is copied (e.g., `Copy {link}`) so users can distinguish between multiple TagLinks in a list.
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The `sentiment` is conveyed through background color; ensure the meaning is also carried by the label/link text where the sentiment is informative.
+
+## Dependencies
+
+- `Button` - the copy button's focus ring and accessible-name/tooltip wiring come from `Button`.
+- `Link` - the injected link uses `Link`'s styling and focus behavior.
