@@ -37,7 +37,7 @@ export const DynamicIllustration = ({
 
   return (
     <img
-      alt={name}
+      alt=""
       className={className}
       data-testid={dataTestId}
       height={height}

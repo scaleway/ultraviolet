@@ -1,0 +1,61 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Illustrations/DynamicIllustration/A11y" />
+
+# DynamicIllustration - Accessibility
+
+## Description
+
+A component that renders an illustration as an `<img>` and automatically switches between the light and dark asset of the same illustration based on the current theme. It is used to display illustrations that adapt to the active theme (light/dark/darker). **The illustration is always decorative** (`alt=""`), by design: these illustrations never carry meaning on their own and must always accompany visible text.
+
+## Summary
+
+1. ✅ **Perceivable**: the illustration is always rendered with `alt=""`, so it is treated as decorative and never announced to screen reader users.
+2. ✅ **Operable**: the component is a non-interactive image; it adds nothing to keyboard interaction.
+3. ✅ **Understandable**: the component is static and introduces no comprehension issues.
+4. ✅ **Robust**: the `<img>` is always `alt=""` with no role, so decorative images are reliably ignored by assistive technology.
+
+## ARIA Pattern
+
+There is no dedicated ARIA Pattern for images in the [WAI-ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/). The component follows the general guidance for [decorative images](https://www.w3.org/WAI/tutorials/images/decorative/) and the [HTML `<img>` element](https://www.w3.org/TR/html-aam-1.0/#el-img):
+
+- **Decorative**: a decorative image must use `alt=""` (with no `title`) so assistive technology ignores it, per [H67 - null alt text](https://www.w3.org/WAI/WCAG22/Techniques/html/H67).
+
+These illustrations are illustrative by design and always decorative, so the informative (`alt` description) variant is intentionally not supported.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - The `<img>` is always rendered with `alt=""`, so the illustration is treated as decorative and ignored by assistive technology (see [H67 - null alt text for decorative images](https://www.w3.org/WAI/WCAG22/Techniques/html/H67)).
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The `<img>` always has `alt=""`, so it is correctly excluded from the accessibility tree.
+
+To apply when using the component:
+
+- [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - An illustration is always decorative. Do not use it without any other text when information needs to be conveyed.
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Illustrations may rely on color (e.g. a green "success" or red "danger" illustration). Do not use color alone to convey the state; pair it with visible text.
+- [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - The illustration is a remote `.webp` asset; its contrast cannot be enforced by the component and must be validated against the theme background.
+
+<details>
+  <summary>Past accessibility issues</summary>
+
+**Critical:**
+
+- ✅ The `alt` attribute was forced to the technical illustration key (`alt={name}`) and could not be overridden:
+  - Screen reader users heard meaningless names such as "generic" or "success" instead of a description of the illustration, and purely decorative usage could not be expressed (violated 1.1.1, see F30).
+  - **Resolved** by rendering the image as always decorative with `alt=""`.
+
+**High:**
+
+- ✅ There was no way to mark the illustration as decorative (`alt=""`):
+  - Most illustrations in this set are used decoratively inside empty states where the surrounding text already conveys the message.
+  - **Resolved** by making the illustration always decorative (`alt=""`).
+
+- ✅ An informative `alt` prop was initially added:
+  - Since illustrations must always be decorative, the `alt` prop was removed. The `<img>` is now unconditionally rendered with `alt=""`.
+
+</details>
+
+## Dependencies
+
+None.

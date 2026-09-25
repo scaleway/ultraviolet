@@ -5,7 +5,7 @@ import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties } from 'react'
 import { ILLUSTRATIONS } from './__generated__/Illustrations'
-import { heightVar, illustrationVariants, url, widthVar } from './styles.css'
+import { illustrationVariants, url } from './styles.css'
 
 type Color = Extract<
   keyof typeof theme.colors,
@@ -41,16 +41,18 @@ export const WireIllustration = ({
   style,
 }: IllustrationWireProp) => (
   <svg
+    aria-hidden
     className={cn(className, illustrationVariants[sentiment])}
     data-testid={dataTestId}
+    focusable={false}
+    height={typeof height === 'number' ? `${height.toString()}px` : height}
     style={{
       ...assignInlineVars({
         [url]: `url(${ILLUSTRATIONS[name]}) center center / contain no-repeat`,
-        [widthVar]: typeof width === 'number' ? `${width.toString()}px` : width,
-        [heightVar]: typeof height === 'number' ? `${height.toString()}px` : height,
       }),
       ...style,
     }}
+    width={typeof width === 'number' ? `${width.toString()}px` : width}
   />
 )
 
