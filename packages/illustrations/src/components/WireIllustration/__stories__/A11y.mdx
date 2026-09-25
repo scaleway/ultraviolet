@@ -1,0 +1,51 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Illustrations/WireIllustration/A11y" />
+
+# WireIllustration - Accessibility
+
+## Description
+
+A component that renders a monochrome "wire" illustration. It renders an `<svg>` element whose `background` is masked by an SVG image (loaded from a remote URL) using a CSS mask, and tints the result with a theme sentiment color via the `sentiment` prop. **The illustration is always decorative** (`aria-hidden`), by design: these illustrations never carry meaning on their own and must always accompany visible text.
+
+## Summary
+
+1. ✅ **Perceivable**: the illustration is always hidden from assistive technology (`aria-hidden`), so it is treated as decorative and never announced to screen reader users.
+2. ✅ **Operable**: the component is non-interactive and adds no keyboard interaction; `focusable="false"` prevents decorative SVGs from entering the tab order in legacy browsers.
+3. ✅ **Understandable**: the component is static and introduces no comprehension issues.
+4. ✅ **Robust**: the `<svg>` is always `aria-hidden` with no role, so decorative images are reliably ignored by assistive technology.
+
+## ARIA Pattern
+
+There is no dedicated ARIA Pattern for images in the [WAI-ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/). The component follows the general guidance for [decorative images](https://www.w3.org/WAI/tutorials/images/decorative/) and the [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0/):
+
+- **Decorative**: an SVG used purely for decoration should be `aria-hidden="true"` (or `focusable="false"` with no name) so it is ignored by assistive technology.
+
+These illustrations are illustrative by design and always decorative, so the informative variant is intentionally not supported.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - The `<svg>` is always `aria-hidden`, so the illustration is treated as decorative and ignored by assistive technology (see [H67 - null alt text for decorative images](https://www.w3.org/WAI/WCAG22/Techniques/html/H67) applied to the SVG equivalent).
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The `<svg>` has no role and is always `aria-hidden`, so it is correctly excluded from the accessibility tree.
+
+To apply when using the component:
+
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The `sentiment` prop tints the illustration (e.g. green for success, red for danger). Do not rely on the color alone to convey meaning; provide visible text.
+- [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - The tinted stroke must keep a 3:1 contrast ratio against its background. The sentiment colors come from the theme tokens and must be validated in the context of use.
+
+<details>
+  <summary>Past accessibility issues</summary>
+
+**Critical:**
+
+- ✅ The `<svg>` was exposed to the accessibility tree with no name and no `aria-hidden`:
+  - Screen readers encountered an unnamed graphics element that conveyed nothing, because the actual illustration is drawn via a CSS mask and never exists as exposed SVG content (failed 1.1.1 and 4.1.2).
+  - **Resolved** by making the illustration always decorative (`aria-hidden` + `focusable="false"`, no role), `index.tsx`.
+
+</details>
+
+## Dependencies
+
+None.

@@ -3,6 +3,14 @@ import { DynamicIllustration } from '..'
 
 export default {
   component: DynamicIllustration,
+  parameters: {
+    a11yStatus: {
+      perceivable: true,
+      operable: true,
+      understandable: true,
+      robust: true,
+    },
+  },
   title: 'Illustrations/DynamicIllustration',
 } as Meta<typeof DynamicIllustration>
 

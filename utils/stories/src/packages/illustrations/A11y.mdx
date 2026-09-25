@@ -1,0 +1,32 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Illustrations/Accessibility" />
+
+# Illustrations (single assets) - Accessibility
+
+## What these are
+
+The single illustration assets (e.g. `instanceOriginal`, `emptyLight`, `successDark`) are **not components**. They are plain URL string constants and are meant to be used directly as the `src` of an `<img>`:
+
+```tsx
+import { instanceOriginal } from '@ultraviolet/illustrations/products/instance'
+
+const App = () => <img src={instanceOriginal} alt="" />
+```
+
+Because they are only strings, the package cannot enforce any accessibility behaviour. Everything depends on how the consumer renders them.
+
+## Recommended usage
+
+These illustrations are **illustrative by design** and will very rarely convey meaningful information on their own. In almost all cases they accompany visible text (an empty state, an onboarding step, a product card…) that already carries the message.
+
+For this reason, the recommended usage is to mark them as **decorative**:
+
+```tsx
+<img src={illustrationUrl} alt="" />
+```
+
+- An `alt=""` (empty) alt text tells assistive technologies to ignore the image entirely. It is not announced to screen reader users, which is what is wanted for a decorative illustration. See the [W3C tutorial on Decorative Images](https://www.w3.org/WAI/tutorials/images/decorative/) for more information.
+- Do **not** put a technical key, a filename, or a generic word like "illustration" as the alt text as it only adds noise for screen reader users (see [F30 - text alternatives that are not alternatives](https://www.w3.org/WAI/WCAG22/Techniques/failures/F30)).
+- _Only if an illustration genuinely conveys information that is not present elsewhere should you provide a short, meaningful description_.
+  The [W3C Images Tutorial](https://www.w3.org/WAI/tutorials/images/) is the reference for choosing between informative and decorative alt text.
