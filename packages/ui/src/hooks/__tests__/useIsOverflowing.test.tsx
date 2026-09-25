@@ -1,30 +1,13 @@
 import { act, renderHook } from '@testing-library/react'
+import { createMockResizeObserver } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { useIsOverflowing } from '../useIsOverflowing'
 
-class MockResizeObserver {
-  static disconnect = vi.fn()
-
-  callback: ResizeObserverCallback
-
-  constructor(callback: ResizeObserverCallback) {
-    this.callback = callback
-  }
-
-  observe() {
-    this.callback([], this as unknown as ResizeObserver)
-  }
-
-  unobserve() {}
-
-  disconnect() {
-    MockResizeObserver.disconnect()
-  }
-}
+const { MockResizeObserver, disconnectSpy } = createMockResizeObserver()
 
 describe(useIsOverflowing, () => {
   beforeEach(() => {
-    MockResizeObserver.disconnect.mockClear()
+    disconnectSpy.mockClear()
     vi.stubGlobal('ResizeObserver', MockResizeObserver)
   })
 
@@ -90,7 +73,7 @@ describe(useIsOverflowing, () => {
     })
     unmount()
 
-    expect(MockResizeObserver.disconnect).toHaveBeenCalled()
+    expect(disconnectSpy).toHaveBeenCalled()
   })
 
   it('should not create the observer when disabled', () => {

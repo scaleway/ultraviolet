@@ -171,7 +171,7 @@ export const ContrastChecker = () => {
   }, [])
 
   const { groups, counts } = useMemo(() => {
-    const groups = SENTIMENTS.map(sentiment => {
+    const groupedSentiments = SENTIMENTS.map(sentiment => {
       // oxlint-disable-next-line typescript/no-unsafe-type-assertion
       const colors = theme.colors[sentiment] as unknown as Record<string, string>
       const bgColors = filterByPrefix(colors, 'background')
@@ -215,7 +215,7 @@ export const ContrastChecker = () => {
     let fail = 0
     let disabled = 0
 
-    for (const { pairings } of groups) {
+    for (const { pairings } of groupedSentiments) {
       for (const pairing of pairings) {
         total++
         if (pairing.level === 'disabled') {
@@ -228,7 +228,7 @@ export const ContrastChecker = () => {
       }
     }
 
-    return { groups, counts: { total, pass, fail, disabled } }
+    return { groups: groupedSentiments, counts: { total, pass, fail, disabled } }
   }, [theme, hideDisabled])
 
   return (

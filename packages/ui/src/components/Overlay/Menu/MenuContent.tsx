@@ -101,7 +101,7 @@ export const Menu = forwardRef(
     )
 
     useEffect(() => {
-      let timeout: ReturnType<typeof setTimeout> | undefined
+      let timeout: ReturnType<typeof setTimeout> | undefined = undefined
       if (isVisible && searchable) {
         timeout = setTimeout(() => {
           searchInputRef.current?.focus()

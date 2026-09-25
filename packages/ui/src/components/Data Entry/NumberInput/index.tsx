@@ -74,8 +74,8 @@ export const NumberInput = forwardRef(
             return getValueAsNumber(target)
           }
 
-          const value = Reflect.get(target, prop)
-          return typeof value === 'function' ? value.bind(target) : value
+          const propValue = Reflect.get(target, prop)
+          return typeof propValue === 'function' ? propValue.bind(target) : propValue
         },
         set(target, prop, newValue) {
           if (prop === 'value' && Number.isNaN(newValue)) {

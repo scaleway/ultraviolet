@@ -5,10 +5,10 @@ import { skeletonStyle } from './styles.css'
 
 export const List = ({ length = 3, col = 3 }: { length?: number; col?: number }) => (
   <ul className={skeletonStyle.listSkeletonUl}>
-    {Array.from({ length }, (_, i) => (
+    {Array.from({ length }, (_li, i) => (
       <li className={skeletonStyle.listSkeletonLi} key={`skeleton-list-${i}`}>
-        {Array.from({ length: col }, (_, index) => (
-          <div className={skeletonStyle.listSkeletonDiv} key={`skeleton-list-col-${index}`}>
+        {Array.from({ length: col }, (_div, colIndex) => (
+          <div className={skeletonStyle.listSkeletonDiv} key={`skeleton-list-col-${colIndex}`}>
             <Line />
           </div>
         ))}

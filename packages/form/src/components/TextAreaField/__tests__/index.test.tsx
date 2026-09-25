@@ -7,14 +7,14 @@ import { Submit } from '../..'
 import { mockFormErrors, renderWithForm } from '../../../__tests__/helpers'
 
 describe('textAreaField', () => {
-  let spyGetComputedStyle: Mock
+  let spyGetComputedStyle: Mock | undefined = undefined
 
   beforeEach(() => {
     const mockTextareaStyle = { lineHeight: '16px' } as CSSStyleDeclaration
     spyGetComputedStyle = vi.spyOn(window, 'getComputedStyle').mockReturnValue(mockTextareaStyle)
   })
   afterEach(() => {
-    spyGetComputedStyle.mockRestore()
+    spyGetComputedStyle?.mockRestore()
   })
 
   it('should render correctly', () => {

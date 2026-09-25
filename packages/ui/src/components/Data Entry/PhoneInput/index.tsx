@@ -126,10 +126,10 @@ export const PhoneInput: PhoneInputType = forwardRef(
           onValueChange?.(result)
 
           return formattedNumber
-        } catch (error: unknown) {
-          if (error instanceof Error) {
+        } catch (parseError: unknown) {
+          if (parseError instanceof Error) {
             onParsingError?.({
-              error,
+              error: parseError,
               inputValue,
             })
           }
