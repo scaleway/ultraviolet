@@ -209,9 +209,9 @@ export const CreateDropdown = ({
         const emptyStateGroup = groupEmptyState?.[group] ?? null
         const errorGroup = groupError?.[group] ?? null
 
-        return (
+        return hasElements || emptyStateGroup ? (
           <Stack gap={0.25} key={group} className={selectInputStyle.dropdownSection}>
-            {hasElements || emptyStateGroup ? <Group group={group} index={index} /> : null}
+            <Group group={group} index={index} />
             <Stack gap="0.25" id="items">
               {!hasElements && emptyStateGroup ? (
                 <Text
@@ -251,7 +251,7 @@ export const CreateDropdown = ({
               )}
             </Stack>
           </Stack>
-        )
+        ) : null
       })}
       {loadMore ? <Stack className={selectInputStyle.dropdownLoadMore}>{loadMore}</Stack> : null}
     </Stack>
