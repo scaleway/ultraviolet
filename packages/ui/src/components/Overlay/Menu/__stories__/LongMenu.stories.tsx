@@ -1,7 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Menu } from '..'
+import { CopyButton } from '../../../Action/CopyButton'
 import { Badge } from '../../../Badges/Badge'
 import { Stack } from '../../../Layout/Stack'
+import { Text } from '../../../Typography/Text'
 import { DefaultDisclosure } from './Template.stories'
 
 export const LongMenu: StoryFn<typeof Menu> = ({ ...props }) => (
@@ -52,13 +54,13 @@ export const LongMenu: StoryFn<typeof Menu> = ({ ...props }) => (
       <Menu.Item sentiment="danger">Delete</Menu.Item>
     </Menu.Group>
     <Menu.Group label="Serverless">
-      <Menu.Item borderless>
-        <Stack alignItems="center" direction="row" flex={1} justifyContent="space-between">
-          Information&nbsp;
-          <Badge sentiment="success" size="small">
-            New
-          </Badge>
-        </Stack>
+      <Menu.Item
+        borderless
+        rightComponent={<CopyButton sentiment="neutral" size="xsmall" value="value" copyText="Copy server id" />}
+      >
+        <Text as="span" oneLine variant="bodySmall">
+          See the details of your server with a really long name
+        </Text>
       </Menu.Item>
       <Menu.Item borderless>Power on</Menu.Item>
       <Menu.Item borderless sentiment="neutral">

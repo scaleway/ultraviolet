@@ -61,7 +61,10 @@ const menu = recipe({
   },
 })
 
-const content = style({ overflow: 'auto' })
+const content = style({
+  overflow: 'auto',
+  position: 'relative', // mitigate a scroll issue on Safari caused by the Tooltip of the CopyButton
+})
 
 const footer = style({ padding: theme.space[1] })
 
@@ -69,20 +72,6 @@ const list = style({
   backgroundColor: theme.colors.other.elevation.background.raised,
   color: theme.colors.neutral.text,
   maxHeight: `calc(min(${heightMenu}, ${heightAvailableSpace}) - ${theme.space['0.5']})`,
-  overflowX: 'hidden',
-  overflowY: 'auto',
-  position: 'relative',
-  selectors: {
-    '&:after, &:before': {
-      border: 'solid transparent',
-      borderWidth: 9,
-      content: ' ',
-      height: 0,
-      pointerEvents: 'none',
-      position: 'absolute',
-      width: 0,
-    },
-  },
 })
 
 const searchInput = style({ padding: theme.space[1] })
