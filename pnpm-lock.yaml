@@ -749,8 +749,8 @@ importers:
         specifier: 0.27.20
         version: 0.27.20(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@handlewithcare/react-prosemirror':
-        specifier: 3.2.8
-        version: 3.2.8(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.3)(react-dom@19.3.0(react@19.3.0))(react-reconciler@0.33.0(react@19.3.0))(react@19.3.0)
+        specifier: 3.2.9
+        version: 3.2.9(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.5)(react-dom@19.3.0(react@19.3.0))(react-reconciler@0.33.0(react@19.3.0))(react@19.3.0)
       '@nivo/bar':
         specifier: 0.99.0
         version: 0.99.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -839,8 +839,8 @@ importers:
         specifier: 1.2.3
         version: 1.2.3
       prosemirror-model:
-        specifier: 1.25.11
-        version: 1.25.11
+        specifier: 1.25.12
+        version: 1.25.12
       prosemirror-schema-basic:
         specifier: 1.2.4
         version: 1.2.4
@@ -851,8 +851,8 @@ importers:
         specifier: 1.4.4
         version: 1.4.4
       prosemirror-view:
-        specifier: 1.42.3
-        version: 1.42.3
+        specifier: 1.42.5
+        version: 1.42.5
       react-intersection-observer:
         specifier: 11.0.1
         version: 11.0.1(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -2226,8 +2226,8 @@ packages:
   '@floating-ui/utils@0.2.12':
     resolution: {integrity: sha512-HpCo8tmWzLVad5s2d19EhAz5zqrrQ6s69qd6moPMQvkOuSwDT1YgRfWSVuc4ennqrgv3OHppiOGMQ7oC13yIww==}
 
-  '@handlewithcare/react-prosemirror@3.2.8':
-    resolution: {integrity: sha512-/we1CVZBClbfQ9S91YRsyr5yXdYO3KIX7txoUGIsURTucDvCc7LsTs5I11BquRi0naciao7CDQ8y/C65e8akyQ==}
+  '@handlewithcare/react-prosemirror@3.2.9':
+    resolution: {integrity: sha512-zNGR4BDAvXQGY0ph2ZVK/wDdOr3nL3kTjtXv9Bwwmvzy39Gtooc+vQHSHRtWg0AoN33csJgg0ev78dtoScAR9g==}
     engines: {node: '>=16.9'}
     peerDependencies:
       '@tiptap/core': ^3.0.0
@@ -2235,7 +2235,7 @@ packages:
       '@tiptap/react': ^3.0.0
       prosemirror-model: ^1.0.0
       prosemirror-state: ^1.0.0
-      prosemirror-view: 1.42.0
+      prosemirror-view: 1.42.3
       react: '>=17 <20'
       react-dom: '>=17 <20'
       react-reconciler: '>=0.26.1 <=0.33.0'
@@ -7278,8 +7278,8 @@ packages:
   prosemirror-keymap@1.2.3:
     resolution: {integrity: sha512-4HucRlpiLd1IPQQXNqeo81BGtkY8Ai5smHhKW9jjPKRc2wQIxksg7Hl1tTI2IfT2B/LgX6bfYvXxEpJl7aKYKw==}
 
-  prosemirror-model@1.25.11:
-    resolution: {integrity: sha512-QWg9RhnpLlogAmp3p96uEFrE5txQpFynd4vhBAELkwgOCWQs/X0yCzB3/hrHqiPwf91RG5KyWq6553zs9JqIOQ==}
+  prosemirror-model@1.25.12:
+    resolution: {integrity: sha512-Ue2gTmXMa7EhpLNhC7J+h4+ykD8ha12K6rrZFFKKJHBForfIStw5gJ6Zrf1mqqAa9NmpmEB4wp9bKmA4eUVjWg==}
 
   prosemirror-schema-basic@1.2.4:
     resolution: {integrity: sha512-ELxP4TlX3yr2v5rM7Sb70SqStq5NvI15c0j9j/gjsrO5vaw+fnnpovCLEGIcpeGfifkuqJwl4fon6b+KdrODYQ==}
@@ -7293,8 +7293,8 @@ packages:
   prosemirror-transform@1.12.1:
     resolution: {integrity: sha512-t4F5615FycnCqsX7ShTUs8+jfnwcf46kuFRvSl/3qFx2QTZ4DjgowesLHQXcFP7G//TjesqZG3WtgL7vdyVJyA==}
 
-  prosemirror-view@1.42.3:
-    resolution: {integrity: sha512-oTN7EtH+CpwxU9NrwEYWd0UZ4JUx7l048l5A2Xppm4p/60isZYLnth9QVQmC3VRIvdrIWCxwZSd+Uz791G31/w==}
+  prosemirror-view@1.42.5:
+    resolution: {integrity: sha512-7qcRaCWM48NC4utNQnx5Obvvs48/jMHXXvOXHH6WlBojmiK15eyxoHYlv5aJARHJHiFccSuWZ7ULW2SPrFAS/g==}
 
   proto-list@1.2.4:
     resolution: {integrity: sha512-vtK/94akxsTMhe0/cbfpR+syPuszcuwhqVjJq26CuNDgFGj682oRBXOP5MJpv2r7JtE8MsiepGIqvvOTBwn2vA==}
@@ -10112,12 +10112,12 @@ snapshots:
 
   '@floating-ui/utils@0.2.12': {}
 
-  '@handlewithcare/react-prosemirror@3.2.8(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.3)(react-dom@19.3.0(react@19.3.0))(react-reconciler@0.33.0(react@19.3.0))(react@19.3.0)':
+  '@handlewithcare/react-prosemirror@3.2.9(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.5)(react-dom@19.3.0(react@19.3.0))(react-reconciler@0.33.0(react@19.3.0))(react@19.3.0)':
     dependencies:
       classnames: 2.5.1
-      prosemirror-model: 1.25.11
+      prosemirror-model: 1.25.12
       prosemirror-state: 1.4.4
-      prosemirror-view: 1.42.3
+      prosemirror-view: 1.42.5
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
       react-reconciler: 0.33.0(react@19.3.0)
@@ -15122,7 +15122,7 @@ snapshots:
 
   prosemirror-commands@1.7.2:
     dependencies:
-      prosemirror-model: 1.25.11
+      prosemirror-model: 1.25.12
       prosemirror-state: 1.4.4
       prosemirror-transform: 1.12.1
 
@@ -15131,33 +15131,33 @@ snapshots:
       prosemirror-state: 1.4.4
       w3c-keyname: 2.2.8
 
-  prosemirror-model@1.25.11:
+  prosemirror-model@1.25.12:
     dependencies:
       orderedmap: 2.1.1
 
   prosemirror-schema-basic@1.2.4:
     dependencies:
-      prosemirror-model: 1.25.11
+      prosemirror-model: 1.25.12
 
   prosemirror-schema-list@1.5.1:
     dependencies:
-      prosemirror-model: 1.25.11
+      prosemirror-model: 1.25.12
       prosemirror-state: 1.4.4
       prosemirror-transform: 1.12.1
 
   prosemirror-state@1.4.4:
     dependencies:
-      prosemirror-model: 1.25.11
+      prosemirror-model: 1.25.12
       prosemirror-transform: 1.12.1
-      prosemirror-view: 1.42.3
+      prosemirror-view: 1.42.5
 
   prosemirror-transform@1.12.1:
     dependencies:
-      prosemirror-model: 1.25.11
+      prosemirror-model: 1.25.12
 
-  prosemirror-view@1.42.3:
+  prosemirror-view@1.42.5:
     dependencies:
-      prosemirror-model: 1.25.11
+      prosemirror-model: 1.25.12
       prosemirror-state: 1.4.4
       prosemirror-transform: 1.12.1
 
