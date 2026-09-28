@@ -38,6 +38,10 @@ type ExtraProps = {
    * This prop can be used to define if a component is being tested and not prod ready
    */
   experimental?: boolean
+  /**
+   * This prop can be used to define if a component is for internal use only and should not be used
+   */
+  internal?: boolean
   a11yStatus?: {
     perceivable: boolean
     operable: boolean
@@ -100,6 +104,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
                   deprecatedReason: parameters?.deprecatedReason,
                   experimental: isPlusLibrary ? true : parameters?.experimental,
                   hideArgsTable: parameters?.hideArgsTable,
+                  internal: parameters?.internal,
                   migrationLink: parameters?.migrationLink,
                 })
               : children}

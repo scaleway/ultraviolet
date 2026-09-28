@@ -1,4 +1,5 @@
 import { CancelIcon } from '@ultraviolet/icons/CancelIcon'
+import { LockOutlineIcon } from '@ultraviolet/icons/LockOutlineIcon'
 import { ShieldCheckOutlineIcon } from '@ultraviolet/icons/ShieldCheckOutlineIcon'
 import { SparklesOutlineIcon } from '@ultraviolet/icons/SparklesOutlineIcon'
 import { Text } from '@ultraviolet/ui'
@@ -42,6 +43,16 @@ export const COMPONENT_STATES: Record<string, ComponentStatus> = {
       </>
     ),
   },
+  internal: {
+    icon: <LockOutlineIcon size="medium" sentiment="danger" prominence="strong" />,
+    label: 'Internal',
+    description: (
+      <Text as="p" variant="body">
+        Internal state means the component is for internal use only. You should not use these components in your
+        projects as they might not be suitable for production usage or subject to changes without prior notice.
+      </Text>
+    ),
+  },
   stable: {
     icon: <ShieldCheckOutlineIcon size="medium" sentiment="success" prominence="strong" />,
     label: 'Stable',
@@ -54,9 +65,17 @@ export const COMPONENT_STATES: Record<string, ComponentStatus> = {
   },
 }
 
-export const findComponentState = (parameters: { deprecated?: boolean; experimental?: boolean }) => {
+export const findComponentState = (parameters: {
+  deprecated?: boolean
+  experimental?: boolean
+  internal?: boolean
+}) => {
   if (parameters?.deprecated) {
     return COMPONENT_STATES['deprecated']
+  }
+
+  if (parameters?.internal) {
+    return COMPONENT_STATES['internal']
   }
 
   if (parameters?.experimental) {

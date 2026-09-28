@@ -4,7 +4,7 @@ import { Popup } from '..'
 export default {
   component: Popup,
   title: 'UI/Overlay/Popup',
-  tags: ['local'],
+  tags: ['internal'],
   parameters: {
     a11yStatus: {
       perceivable: undefined,
@@ -12,7 +12,7 @@ export default {
       understandable: undefined,
       robust: undefined,
     },
-
+    internal: true,
     docs: {
       description: {
         component:
