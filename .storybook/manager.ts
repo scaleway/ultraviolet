@@ -30,6 +30,15 @@ addons.setConfig({
       badge: {
         bgColor: consoleLightTheme.colors.danger.background,
         fgColor: consoleLightTheme.colors.danger.text,
+        text: '🔒 Internal',
+        tooltip: 'This component is for internal use only and should not be used in your projects.',
+      },
+      tags: 'internal',
+    },
+    {
+      badge: {
+        bgColor: consoleLightTheme.colors.danger.background,
+        fgColor: consoleLightTheme.colors.danger.text,
         text: '⛔ Deprecated',
         tooltip: 'This component is deprecated please do not use it any more.',
       },

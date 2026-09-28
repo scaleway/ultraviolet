@@ -174,7 +174,7 @@ const getPopupPortalTarget = ({
 }
 
 /**
- * @experimental This component is experimental and may be subject to breaking changes in the future.
+ * @internal This component is only used in other components and cannot be used in consumer projects.
  */
 export const Popup = forwardRef(
   // oxlint-disable-next-line eslint/max-statements

@@ -9,9 +9,10 @@ type PageProps = {
   migrationLink?: string
   hideArgsTable?: boolean
   experimental?: boolean
+  internal?: boolean
 }
 
-const Page = ({ deprecated, deprecatedReason, migrationLink, hideArgsTable, experimental }: PageProps) => (
+const Page = ({ deprecated, deprecatedReason, migrationLink, hideArgsTable, experimental, internal }: PageProps) => (
   <div className={storiesTheme}>
     <Stack gap={1}>
       <div>
@@ -35,6 +36,15 @@ const Page = ({ deprecated, deprecatedReason, migrationLink, hideArgsTable, expe
             title="Experimental component"
           >
             This component is at an unstable stage and is subject to change in future releases.
+          </Alert>
+        ) : null}
+        {internal ? (
+          <Alert
+            buttonText="Learn more about component states"
+            onClickButton={linkTo('state-components-state--docs')}
+            title="Internal component"
+          >
+            This component is for internal use only and cannot be used in your projects.
           </Alert>
         ) : null}
       </div>

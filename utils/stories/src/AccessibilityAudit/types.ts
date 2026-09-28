@@ -23,5 +23,6 @@ export type AuditCategories = {
 export type ComponentStoryParameters = {
   deprecated?: boolean
   experimental?: boolean
+  internal?: boolean
   a11yStatus?: ComponentA11yStatus
 }
