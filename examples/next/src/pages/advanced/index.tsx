@@ -5,7 +5,7 @@ import AdvancedUseCases from './AdvancedUseCases'
 import GettingStarted from './GettingStarted'
 import Introduction from './Introduction'
 import OpenSource from './OpenSource'
-import styles from '../../../styles/advanced.module.scss'
+import styles from '../../../styles/advanced.module.css'
 
 const Home = () => (
   <Stack className={styles.homeContainer} gap={8}>

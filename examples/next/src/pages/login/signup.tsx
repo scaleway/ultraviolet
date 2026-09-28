@@ -3,7 +3,7 @@ import { ProfileIcon } from '@ultraviolet/icons/ProfileIcon'
 import { Alert, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
 import { EMAIL_REGEX, mockErrors } from '../../constants'
-import styles from '../../../styles/login.module.scss'
+import styles from '../../../styles/login.module.css'
 
 type FormValues = {
   email: string

@@ -6,7 +6,7 @@ import swDx from '../../assets/icons/icon-scaleway-dx.svg'
 import introductionIllustration from '../../assets/illustrations/introduction.svg'
 import Card from '../../components/Card'
 import GithubAndDocumentationButtons from '../../components/GithubAndDocumentationButtons'
-import styles from '../../../styles/advanced.module.scss'
+import styles from '../../../styles/advanced.module.css'
 
 const Introduction = () => (
   <Stack gap={6}>

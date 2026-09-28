@@ -5,7 +5,7 @@ import { Toggle } from '@ultraviolet/ui'
 import { cn } from '@ultraviolet/utils'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
-import styles from '../../styles/component.module.scss'
+import styles from '../../styles/component.module.css'
 
 type Themes = 'light' | 'dark'
 

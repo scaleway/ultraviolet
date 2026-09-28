@@ -3,7 +3,7 @@ import { Link, Stack, Text } from '@ultraviolet/ui'
 import swForm from '../../assets/icons/icon-scaleway-form.svg'
 import swLib from '../../assets/icons/icon-scaleway-lib.svg'
 import Card from '../../components/Card'
-import styles from '../../../styles/advanced.module.scss'
+import styles from '../../../styles/advanced.module.css'
 
 const OpenSource = () => (
   <section>

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import type { JSX } from 'react'
 import LogIn from './login'
 import SignUp from './signup'
-import styles from '../../../styles/login.module.scss'
+import styles from '../../../styles/login.module.css'
 
 const Content = (props: { tab: string }) => {
   let tabLoaded: null | JSX.Element = null

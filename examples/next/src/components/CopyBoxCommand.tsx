@@ -5,7 +5,7 @@ import type { ReactElement } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import dracula from 'react-syntax-highlighter/dist/esm/styles/prism/dracula'
 import oneLight from 'react-syntax-highlighter/dist/esm/styles/prism/one-light'
-import styles from '../../styles/component.module.scss'
+import styles from '../../styles/component.module.css'
 
 type CopyBoxProps = {
   children: ReactElement<CommandProps> | ReactElement<CommandProps>[]
