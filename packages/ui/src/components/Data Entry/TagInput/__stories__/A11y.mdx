@@ -1,0 +1,66 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/TagInput/A11y" />
+
+# TagInput - Accessibility
+
+## Description
+
+A multi-value text input that lets users type a value and press Enter, Space, or blur to commit it as a tag. Each tag is rendered as a closable `Tag` badge; Backspace at the start of the input removes the last tag, and a clear button empties all tags. Supports disabled, readOnly, error/success/helper states, tooltip, and required.
+
+## Summary
+
+1. ✅ **Perceivable**: labels, error/success text and icons convey state; contrast is handled by the theme.
+2. ❌ **Operable**: redundant focusable container creates an extra tab stop; the container stays focusable (inert) when disabled.
+3. ⚠️ **Understandable**: labels and inline error/success text are provided and associated with the input. Input is named via a deprecated `aria-label` prop and should migrate to `accessibleLabel` per RFC #6585 (team standard, not a WCAG failure).
+4. ❌ **Robust**: `aria-invalid` and `aria-required` are missing; tag add/remove changes are not announced as status messages.
+
+## ARIA Pattern
+
+This is a free-form multi-tag input, not a suggestion listbox. The closest reference is the [WAI-ARIA Combobox Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/) for how selected values and editable input can be exposed, but since there is no popup of suggestions, a full combobox implementation is **not** required. The component should still follow its keyboard conventions (Tab into the editable field, standard single-line editing keys) and expose the input as the single focusable control.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - The container shows a `:focus-within` border + shadow, so focus on the input is visible.
+- ✅ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - The `Label` is associated with the input via `htmlFor`/`id`.
+- ✅ [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - Error text is displayed and linked to the input via `aria-describedby`.
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - Tag close buttons expose an accessible name containing the tag text (from the `Tag` component) and the clear button has an accessible label.
+- ❌ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - The wrapping `div` has `tabIndex={0}`, creating a redundant tab stop before the real control (the input).
+- ❌ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - When `disabled`, the input is not rendered but the container keeps `tabIndex={0}`, leaving keyboard users able to focus an inert element that does nothing.
+- ⚠️ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - `aria-invalid` and `aria-required` are not set on the input for `error`/`required` states.
+- ⚠️ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - Tags are added and removed without any live-region announcement to screen reader users.
+
+To apply when using the component:
+
+- [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - Always provide a `label` (or `accessibleLabel`). Without either, the input has no accessible name; `placeholder` is not a substitute.
+- [WCAG 2.5.3 - Label in Name (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html) - Do not pass both `label` and `accessibleLabel`: `accessibleLabel` overrides the visible label and creates a mismatch between what is seen and what is announced.
+- [WCAG 3.3.3 - Error Suggestion (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html) - Provide error text that describes how to fix the input.
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Error/success are also conveyed through text (via the Description), which is sufficient.
+
+## Accessibility issues
+
+**High:**
+
+- **Deprecated `aria-label` prop**: the input is named through an `aria-label` prop. Per [RFC #6585](https://github.com/scaleway/ultraviolet/discussions/6585), this should be replaced with an `accessibleLabel` prop (a visually hidden text label) so the name stays localizable and consistent with the rest of the design system.
+- **Redundant focusable container (`tabIndex={0}` on the wrapping `div`)**: the container creates an extra, useless tab stop before the actual input (index.tsx:200). It has no role or accessible name, and it remains focusable when `disabled` even though the input is not rendered, leaving an inert focus target. Because the `Tooltip` sets its `aria-describedby` on the first focusable child it finds (the container), the tooltip is never announced when the user focuses the actual input.
+  - Fix: remove `tabIndex={0}` from the container (the input is already focusable), keep only `onClick` to focus the input for pointer users, and let the `Tooltip` describe the input.
+
+**Medium:**
+
+- **Missing `aria-invalid`**: when `error` is set, the input is not flagged with `aria-invalid="true"`, so assistive technologies cannot programmatically determine the field is in error (WCAG 4.1.2).
+- **Missing required state**: the `required` prop only renders the visual asterisk in the `Label`; the input never gets `required`/`aria-required`, so screen reader users are not told the field is required (WCAG 4.1.2 / 3.3.2).
+- **No status announcement on tag add/remove**: adding a tag (Enter/Space/blur), deleting a tag (Backspace / close button) or clearing all tags changes the value without a live-region announcement. Screen reader users are not informed the value changed (WCAG 4.1.3).
+
+**Low:**
+
+- Tags are rendered as plain badges, not as a semantic list (`role="list"`/`listitem`), so the structure of the collection is not exposed.
+- `onBlur={addTag}` commits the current text as a tag when the input loses focus, which can surprise users who tab away mid-edit (WCAG 3.2.1/3.2.2).
+- The `LOADING` status for a newly added tag is set and cleared synchronously in `addTag`, so it is imperceptible and never announced.
+
+## Dependencies
+
+- `Tag` - tag close buttons already expose an accessible name with the tag text; tag add/remove feedback depends on how the collection is announced here.
+- `Tooltip` - the tooltip description is attached to the container instead of the input; once the container is no longer focusable this association must point at the input.
+- `Description` - uses `role="status"` for error messages too; error messages would be more appropriate as `role="alert"`.
