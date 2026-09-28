@@ -1,6 +1,6 @@
 import { Stack, Text } from '@ultraviolet/ui'
 import CopyBox from '../../components/CopyBoxCommand'
-import styles from '../../../styles/advanced.module.scss'
+import styles from '../../../styles/advanced.module.css'
 
 const useCase1 = `import { Button, Text } from '@ultraviolet/ui'
 import { ThemeProvider, consoleDarkTheme as darkTheme, consoleLightTheme as lightTheme } from '@ultraviolet/themes'

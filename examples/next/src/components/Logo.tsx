@@ -1,4 +1,4 @@
-import styles from '../../styles/component.module.scss'
+import styles from '../../styles/component.module.css'
 
 type LogoProps = {
   width?: number

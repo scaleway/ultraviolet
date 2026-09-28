@@ -19,15 +19,19 @@
 
 .homeContainer {
   max-width: 1440px;
+}
 
-  @media (max-width: 1280px) {
+@media (max-width: 1280px) {
+  .homeContainer {
     padding: 0 var(--space-2);
     width: 100%;
   }
-}
 
-.headingContainer {
-  @media (max-width: 1280px) {
+  .headingContainer {
+    flex-direction: column;
+  }
+
+  .openSourceStack {
     flex-direction: column;
   }
 }
@@ -42,10 +46,4 @@ h3.openSourceTitle {
 
 .openSourceCard {
   flex: 1;
-}
-
-.openSourceStack {
-  @media (max-width: 1280px) {
-    flex-direction: column;
-  }
 }

@@ -2,7 +2,7 @@ import { Card as ScwUICard, Text } from '@ultraviolet/ui'
 import { cn } from '@ultraviolet/utils'
 import Image from 'next/image'
 import type { ReactNode } from 'react'
-import styles from '../../styles/component.module.scss'
+import styles from '../../styles/component.module.css'
 
 type CardProps = {
   title: string

@@ -10,7 +10,7 @@ import '@ultraviolet/fonts/fonts.css'
 import '@ultraviolet/ui/styles'
 import '@ultraviolet/icons/styles'
 import '@ultraviolet/themes/global'
-import styles from '../../styles/grid.module.scss'
+import styles from '../../styles/grid.module.css'
 import '../../styles/global.css'
 
 type Themes = 'light' | 'dark'

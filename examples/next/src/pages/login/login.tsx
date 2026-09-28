@@ -4,7 +4,7 @@ import { IdIcon } from '@ultraviolet/icons/IdIcon'
 import { Link, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
 import { mockErrors } from '../../constants'
-import styles from '../../../styles/login.module.scss'
+import styles from '../../../styles/login.module.css'
 
 type FormValues = {
   email: string
