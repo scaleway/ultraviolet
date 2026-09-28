@@ -12,7 +12,7 @@ export type ExpandableProps = {
   /**
    * The minimum height of the content
    */
-  minHeight?: number
+  minHeight?: number | string
   className?: string
   'data-testid'?: string
   /**

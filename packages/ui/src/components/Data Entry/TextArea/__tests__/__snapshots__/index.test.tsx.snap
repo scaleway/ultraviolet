@@ -22,7 +22,7 @@ exports[`textArea > renders correctly with size large 1`] = `
           class="styles__1x5uoc13 styles_size_large__1x5uoc18"
           id="_r_4c_"
           rows="3"
-          style="--_1x5uoc10: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+          style="--_1x5uoc10: calc(var(--space-1) + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(48px + 2*var(--space-1-5) + 2px);"
         >
           test
         </textarea>
@@ -57,7 +57,7 @@ exports[`textArea > renders correctly with size medium 1`] = `
           class="styles__1x5uoc13 styles_size_medium__1x5uoc17"
           id="_r_46_"
           rows="3"
-          style="--_1x5uoc10: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+          style="--_1x5uoc10: calc(var(--space-1) + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(48px + 2*var(--space-1-5) + 2px);"
         >
           test
         </textarea>
@@ -92,7 +92,7 @@ exports[`textArea > renders correctly with size small 1`] = `
           class="styles__1x5uoc13 styles_size_small__1x5uoc16"
           id="_r_40_"
           rows="3"
-          style="--_1x5uoc10: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+          style="--_1x5uoc10: calc(var(--space-1) + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(48px + 2*var(--space-1-5) + 2px);"
         >
           test
         </textarea>
@@ -128,7 +128,7 @@ exports[`textArea > should render correctly when input  has a error sentiment 1`
           class="styles__1x5uoc13 styles_error_true__1x5uoc14 styles_size_large__1x5uoc18"
           id="_r_1o_"
           rows="3"
-          style="--_1x5uoc10: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+          style="--_1x5uoc10: calc(var(--space-1) + 0px + var(--sizing-200) + 0px + var(--space-0-5)); field-sizing: fixed; min-block-size: calc(48px + 2*var(--space-1-5) + 2px);"
         >
           test
         </textarea>
@@ -190,7 +190,7 @@ exports[`textArea > should render correctly when input has a success sentiment 1
           class="styles__1x5uoc13 styles_success_true__1x5uoc15 styles_size_large__1x5uoc18"
           id="_r_1g_"
           rows="3"
-          style="--_1x5uoc10: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+          style="--_1x5uoc10: calc(var(--space-1) + 0px + var(--sizing-200) + 0px + var(--space-0-5)); field-sizing: fixed; min-block-size: calc(48px + 2*var(--space-1-5) + 2px);"
         >
           test
         </textarea>
@@ -252,7 +252,7 @@ exports[`textArea > should render correctly when input is disabled 1`] = `
           disabled=""
           id="_r_k_"
           rows="3"
-          style="--_1x5uoc10: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+          style="--_1x5uoc10: calc(var(--space-1) + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(48px + 2*var(--space-1-5) + 2px);"
         >
           test
         </textarea>
@@ -288,7 +288,7 @@ exports[`textArea > should render correctly when input is readOnly 1`] = `
           id="_r_q_"
           readonly=""
           rows="3"
-          style="--_1x5uoc10: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+          style="--_1x5uoc10: calc(var(--space-1) + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(48px + 2*var(--space-1-5) + 2px);"
         >
           test
         </textarea>
@@ -332,7 +332,7 @@ exports[`textArea > should render correctly when it is required 1`] = `
           class="styles__1x5uoc13 styles_size_large__1x5uoc18"
           id="_r_10_"
           rows="3"
-          style="--_1x5uoc10: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+          style="--_1x5uoc10: calc(var(--space-1) + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(48px + 2*var(--space-1-5) + 2px);"
         >
           test
         </textarea>
@@ -367,7 +367,7 @@ exports[`textArea > should render correctly with basic props 1`] = `
           class="styles__1x5uoc13 styles_size_large__1x5uoc18"
           id="_r_0_"
           rows="3"
-          style="--_1x5uoc10: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+          style="--_1x5uoc10: calc(var(--space-1) + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(48px + 2*var(--space-1-5) + 2px);"
         >
           test
         </textarea>
@@ -403,7 +403,7 @@ exports[`textArea > should render correctly with maxlength 1`] = `
           id="_r_18_"
           maxlength="3"
           rows="3"
-          style="--_1x5uoc10: calc(0.5rem + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(2px + 48px + 1.5rem);"
+          style="--_1x5uoc10: calc(var(--space-1) + 0px + 0px + 0px + 0px); field-sizing: fixed; min-block-size: calc(48px + 2*var(--space-1-5) + 2px);"
         >
           test
         </textarea>
@@ -450,7 +450,7 @@ exports[`textArea > should render with AutoExpandMax 1`] = `
           class="styles__1x5uoc13 styles_error_true__1x5uoc14 styles_size_large__1x5uoc18"
           id="_r_28_"
           rows="3"
-          style="--_1x5uoc10: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); field-sizing: fixed; max-block-size: calc(2px + 48px + 1.5rem); min-block-size: calc(2px + 48px + 1.5rem);"
+          style="--_1x5uoc10: calc(var(--space-1) + 0px + var(--sizing-200) + 0px + var(--space-0-5)); field-sizing: fixed; max-block-size: calc(48px + 2*var(--space-1-5) + 2px); min-block-size: calc(48px + 2*var(--space-1-5) + 2px);"
         >
           test
         </textarea>
@@ -512,7 +512,7 @@ exports[`textArea > should render with AutoExpandMax and rows 1`] = `
           class="styles__1x5uoc13 styles_error_true__1x5uoc14 styles_size_large__1x5uoc18"
           id="_r_2g_"
           rows="2"
-          style="--_1x5uoc10: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); field-sizing: fixed; max-block-size: calc(2px + 48px + 1.5rem); min-block-size: calc(2px + 32px + 1.5rem);"
+          style="--_1x5uoc10: calc(var(--space-1) + 0px + var(--sizing-200) + 0px + var(--space-0-5)); field-sizing: fixed; max-block-size: calc(48px + 2*var(--space-1-5) + 2px); min-block-size: calc(32px + 2*var(--space-1-5) + 2px);"
         >
           test
         </textarea>
@@ -574,7 +574,7 @@ exports[`textArea > should render with auto rows 1`] = `
           class="styles__1x5uoc13 styles_error_true__1x5uoc14 styles_size_large__1x5uoc18"
           id="_r_20_"
           rows="2"
-          style="--_1x5uoc10: calc(0.5rem + 0px + 1rem + 0px + 0.25rem); field-sizing: content; min-block-size: calc(2px + 32px + 1.5rem);"
+          style="--_1x5uoc10: calc(var(--space-1) + 0px + var(--sizing-200) + 0px + var(--space-0-5)); field-sizing: content; min-block-size: calc(32px + 2*var(--space-1-5) + 2px);"
         >
           test
         </textarea>

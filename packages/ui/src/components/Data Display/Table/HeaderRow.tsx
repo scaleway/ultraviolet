@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import type { ReactNode } from 'react'
 import { Checkbox } from '../../Data Entry/Checkbox'
 import { SELECTABLE_CHECKBOX_SIZE } from './constants'
@@ -14,7 +14,6 @@ type HeaderRowProps = {
 
 export const HeaderRow = ({ children, hasSelectAllColumn }: HeaderRowProps) => {
   const { allRowSelectValue, selectAllHandler, selectedRowIds, expandButton } = useTableContext()
-  const theme = useTheme()
   const { size } = useTableContext()
 
   const selectableRowCount = Object.keys(selectedRowIds).length
