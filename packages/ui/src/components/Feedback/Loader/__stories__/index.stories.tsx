@@ -14,10 +14,10 @@ export default {
   ],
   parameters: {
     a11yStatus: {
-      perceivable: undefined,
-      operable: undefined,
-      understandable: undefined,
-      robust: undefined,
+      perceivable: false,
+      operable: true,
+      understandable: true,
+      robust: false,
     },
   },
 } as Meta
