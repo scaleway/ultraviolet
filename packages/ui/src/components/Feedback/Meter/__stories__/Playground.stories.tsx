@@ -1,9 +1,25 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { useEffect, useState } from 'react'
-import zxcvbn from 'zxcvbn'
+import { useState } from 'react'
 import { Meter } from '..'
 import { colors } from '../../../../theme'
 import { TextInput } from '../../../Data Entry/TextInput'
+
+const getPasswordStrength = (password: string) => {
+  let score = 0
+  if (password.length >= 4) {
+    score += 1
+  }
+  if (password.length >= 8) {
+    score += 1
+  }
+  if (/[A-Z]/v.test(password) && /[a-z]/v.test(password)) {
+    score += 1
+  }
+  if (/\d/v.test(password) && /[^A-Za-z0-9]/v.test(password)) {
+    score += 1
+  }
+  return Math.min(score, 4)
+}
 
 const strength = [
   { color: colors.danger.text, text: 'veryWeak' },
@@ -14,14 +30,8 @@ const strength = [
 ]
 
 export const Playground: StoryFn<typeof Meter> = args => {
-  const [value, setValue] = useState(0)
   const [password, setPassword] = useState('')
-
-  useEffect(() => {
-    if (password.length > 0) {
-      setValue(zxcvbn(password).score)
-    }
-  }, [password, setValue])
+  const value = password.length > 0 ? getPasswordStrength(password) : 0
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
