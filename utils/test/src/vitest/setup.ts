@@ -2,6 +2,7 @@ import * as domMatchers from '@testing-library/jest-dom/matchers'
 import { cleanup } from '@testing-library/react'
 import { afterEach, beforeEach, expect, vi } from 'vitest'
 import * as axeMatchers from 'vitest-axe/matchers'
+import { toBeVisuallyHidden } from './toBeVisuallyHidden'
 
 // Mock InputEvent.getTargetRanges() for ProseMirror beforeinput plugin
 // jsdom doesn't implement this method, but @handlewithcare/react-prosemirror@3.2.1 requires it
@@ -11,6 +12,7 @@ export const setup = () => {
   process.env['TZ'] = 'UTC'
   expect.extend(domMatchers)
   expect.extend(axeMatchers)
+  expect.extend({ toBeVisuallyHidden })
 
   beforeEach(() => {
     vi.spyOn(globalThis.Math, 'random').mockReturnValue(0.415_591_366_944_480_4)

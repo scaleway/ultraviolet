@@ -110,7 +110,7 @@ describe('tooltip', () => {
       )
 
       const trigger = screen.getByRole('button', { name: 'the label' })
-      expect(screen.getByRole('tooltip', { name: 'the label' })).toBeInTheDocument()
+      expect(screen.getByRole('tooltip', { name: 'the label' })).toBeVisuallyHidden()
       expect(within(portalTarget).queryByRole('tooltip')).toBeNull()
 
       await userEvent.hover(trigger)

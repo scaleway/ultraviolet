@@ -2,3 +2,4 @@ export { ComponentWrapper, renderWithTheme, shouldMatchSnapshot } from './helper
 export { mockMatchMedia } from './mockMatchMedia'
 export { resetUserEvent } from './resetUserEvent'
 export { setup } from './setup'
+export { toBeVisuallyHidden } from './toBeVisuallyHidden'
