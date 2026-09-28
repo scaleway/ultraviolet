@@ -102,7 +102,7 @@ describe(getDataColors, () => {
     const data: DefaultTreeMapDatum = { id: 'root' }
     const colors = getDataColors(data, mockTheme)
 
-    expect(colors[0]).toMatch(/^color-mix\(in srgb, #3B82F6 (?:100|[1-9]?\d)%\)$/v)
+    expect(colors[0]).toMatch(/^color-mix\(in srgb, #3B82F6 (?:100|[1-9]?\d)%, transparent\)$/v)
   })
 
   it('should generate different colors for multiple nodes', () => {
@@ -140,9 +140,9 @@ describe(getDataColors, () => {
     const colors = getDataColors(data, mockTheme)
 
     // First node (root) should have highest opacity (100 - 0 = 100 -> 0)
-    expect(colors[0]).toBe('color-mix(in srgb, #3B82F6 100%)')
+    expect(colors[0]).toBe('color-mix(in srgb, #3B82F6 100%, transparent)')
     // Second node (child1) should have next opacity (100 - 1 = 99 -> 99)
-    expect(colors[1]).toBe('color-mix(in srgb, #3B82F6 99%)')
+    expect(colors[1]).toBe('color-mix(in srgb, #3B82F6 99%, transparent)')
   })
 
   it('should handle more than 100 nodes using modulo', () => {

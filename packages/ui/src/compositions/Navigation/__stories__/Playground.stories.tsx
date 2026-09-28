@@ -346,7 +346,6 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
     >
       <div
         style={{
-          background: '#f1f1f1',
           display: 'flex',
           height: '800px',
           margin: '-10px 0', // This is to compensate the border added by storybook around the story
@@ -362,7 +361,7 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
             gap: '16px',
             overflowY: 'scroll',
             padding: '16px',
-            background: theme.colors.neutral.backgroundHover,
+            background: theme.colors.neutral.backgroundWeak,
           }}
         >
           <ToggleButton>Toggle</ToggleButton>

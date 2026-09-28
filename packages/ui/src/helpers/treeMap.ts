@@ -107,6 +107,6 @@ export const getDataColors = (data: DefaultTreeMapDatum, theme: Theme): string[]
     (_, index) =>
       // if we have more than 100 elements, we use the mod function to be able to return to the start
       // as we only have 100 transparency values for a given color
-      `color-mix(in srgb, ${baseColor} ${getOpacity((100 - index) % 100)}%)`,
+      `color-mix(in srgb, ${baseColor} ${getOpacity((100 - index) % 100)}%, transparent)`,
   )
 }
