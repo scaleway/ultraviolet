@@ -14,6 +14,7 @@ const prefixStackBase = style({
   height: '100%',
   maxWidth: '100%',
   overflow: 'hidden',
+  flexShrink: 0,
 })
 
 const prefixStack = styleVariants(
@@ -67,6 +68,10 @@ const link = styleVariants({
 })
 
 const copyButton = recipe({
+  base: {
+    border: '1px solid transparent',
+    height: `calc(${theme.sizing[300]} - 2px)`, // to avoid overflow:hidden (which overflows the focus ring), manually set the copyButton height to be the height of the tag (minus border)
+  },
   variants: {
     closable: {
       false: {
@@ -80,13 +85,9 @@ const copyButton = recipe({
       SENTIMENTS.map(sentiment => [
         sentiment,
         {
-          border: '1px solid transparent',
           selectors: {
             '&&:active': {
               boxShadow: `inset ${theme.shadows[`focus${capitalize(sentiment)}`]}`,
-            },
-            '&&:hover': {
-              height: `calc(${theme.sizing[300]} - 2px)`, // to avoid overflow:hidden (which overflows the focus ring), manually set the copyButton height to be the height of the tag (minus border)
             },
           },
         },
@@ -101,7 +102,6 @@ const closeButton = style({
   borderColor: 'inherit',
   borderRightWidth: 0,
   borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
-  width: theme.sizing[300],
   background: theme.colors.neutral.background,
 })
 
