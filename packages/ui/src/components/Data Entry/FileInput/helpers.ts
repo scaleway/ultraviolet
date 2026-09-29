@@ -84,7 +84,7 @@ const readEntriesInDirectory = async (directory: FileSystemDirectoryEntry) => {
   const nestedEntries = []
 
   let results: FileSystemEntry[] = []
-  while (results.length > 0 || nestedEntries.length === 0) {
+  while (results.length > 0) {
     results = await new Promise<FileSystemEntry[]>((resolve, reject) => {
       reader.readEntries(resolve, reject)
     })

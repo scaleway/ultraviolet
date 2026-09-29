@@ -198,10 +198,13 @@ export const Plans = <T extends string>({
                     })}
                     data-testid={`${plan.value}-${feature.key}`}
                     key={plan.value}
-                    onBlur={() => undefined}
                     onClick={selectable ? () => onChange?.(plan.value) : undefined}
-                    onFocus={() => undefined}
-                    onKeyDown={() => undefined}
+                    onBlur={() => {
+                      hoverPlan(plan.value)
+                    }}
+                    onFocus={() => {
+                      hoverPlan(plan.value)
+                    }}
                     onMouseOut={() => {
                       hoverPlan()
                     }}
