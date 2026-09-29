@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useEffect, useState } from 'react'
-import type { CSSProperties, ComponentProps } from 'react'
+import type { ComponentProps, CSSProperties } from 'react'
 import { List } from '../../components/Data Display/List'
 import { Cell } from './components/Cell'
 import { Row } from './components/Row'

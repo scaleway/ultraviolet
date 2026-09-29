@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import type { CSSProperties, ChangeEvent, ChangeEventHandler, FocusEventHandler, ReactNode } from 'react'
+import type { ChangeEvent, ChangeEventHandler, CSSProperties, FocusEventHandler, ReactNode } from 'react'
 import { Stack } from '../../Layout/Stack'
 import { Tooltip } from '../../Overlay/Tooltip'
 import { FOCUS_OVERLAY_SCALE_RATIO } from './constant'

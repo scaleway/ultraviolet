@@ -1,4 +1,4 @@
-import type { CSSProperties, ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import type { UnitInput } from '../../components/Data Entry/UnitInput'
 import type orderSummaryLocales from './locales/en'
 

@@ -5,10 +5,10 @@ import addonTheme, { withThemeByClassName } from '@storybook/addon-themes'
 import { definePreview } from '@storybook/react-vite'
 import type { Decorator, Preview } from '@storybook/react-vite'
 import {
-  ThemeProvider as ThemeProviderUI,
-  consoleDarkTheme as darkTheme,
   consoleDarkerTheme as darkerTheme,
+  consoleDarkTheme as darkTheme,
   consoleLightTheme as lightTheme,
+  ThemeProvider as ThemeProviderUI,
 } from '@ultraviolet/themes'
 import type { ReactNode } from 'react'
 import { Fragment } from 'react/jsx-runtime'

@@ -3,7 +3,7 @@
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useId, useReducer } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import { CopyButton } from '../../Action/CopyButton'

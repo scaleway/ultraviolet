@@ -3,7 +3,7 @@
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn } from '@ultraviolet/utils'
 import { Children, isValidElement, memo, useContext, useEffect, useMemo, useRef } from 'react'
-import type { CSSProperties, ComponentProps, DragEvent, ElementType, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, DragEvent, ElementType, ReactNode } from 'react'
 import type { Badge } from '../../../../components/Badges/Badge'
 import { Stack } from '../../../../components/Layout/Stack'
 import { Tooltip } from '../../../../components/Overlay/Tooltip'

@@ -45,7 +45,11 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
         data-selectgroup={selectAllGroup}
         data-testid={`group-${index}`}
         key={group}
-        onClick={() => (selectAllGroup ? handleSelectGroup() : null)}
+        onClick={() => {
+          if (selectAllGroup) {
+            handleSelectGroup()
+          }
+        }}
         onKeyDown={event => {
           if ([' ', 'Enter'].includes(event.key)) {
             event.preventDefault()
@@ -61,7 +65,11 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
             className={selectInputStyle.dropdownCheckboxGroup}
             data-testid="select-group"
             disabled={false}
-            onChange={() => (selectAllGroup ? handleSelectGroup() : null)}
+            onChange={() => {
+              if (selectAllGroup) {
+                handleSelectGroup()
+              }
+            }}
             tabIndex={-1}
             value={group}
           >

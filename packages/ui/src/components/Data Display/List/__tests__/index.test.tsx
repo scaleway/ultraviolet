@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { ThemeProvider, consoleLightTheme } from '@ultraviolet/themes'
+import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useState } from 'react'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'

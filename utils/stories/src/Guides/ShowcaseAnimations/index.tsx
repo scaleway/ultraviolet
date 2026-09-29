@@ -18,9 +18,7 @@ export const ShowcaseAnimations = ({ animation }: { animation: string }) => {
         onMouseEnter={() => {
           setClassName(animationClassname)
         }}
-        onMouseLeave={() => {
-          setClassName('')
-        }}
+        onMouseLeave={() => setClassName('')}
       >
         Hover me
         <div className={`${className} ${animationShowCaseAnimatedElement}`} />

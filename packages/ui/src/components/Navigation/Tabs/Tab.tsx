@@ -3,8 +3,8 @@
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useMemo } from 'react'
 import type {
-  CSSProperties,
   ComponentProps,
+  CSSProperties,
   ElementType,
   ForwardedRef,
   KeyboardEventHandler,

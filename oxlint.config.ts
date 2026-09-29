@@ -134,6 +134,7 @@ export default defineConfig({
     },
   ],
   plugins: ['import', 'node', 'oxc', 'react', 'typescript', 'unicorn', 'jsx-a11y'],
+
   rules: {
     'eslint/max-statements': ['error', { max: 30 }], // base sets max: 50
     'eslint/no-negated-condition': 'off', // eslint errors (6)
@@ -160,37 +161,17 @@ export default defineConfig({
     ],
     'jsx-a11y/no-autofocus': 'off',
 
-    'react/forbid-component-props': 'off', // react errors (229)
-    'react/jsx-max-depth': ['error', { max: 10 }], // base sets max: 8
+    'react/forbid-component-props': 'off',
+    'react/jsx-max-depth': ['error', { max: 10 }],
     'react/jsx-props-no-spreading': 'off',
-    'react/no-clone-element': 'off', // react errors (2)
-    'react/no-react-children': 'off', // react errors (10)
-    'react/only-export-components': 'off', // react errors (22)
+    'react/no-clone-element': 'off',
+    'react/no-react-children': 'off',
+    'react/only-export-components': 'off',
 
-    'typescript/consistent-return': 'off',
-
-    // 'typescript/no-confusing-void-expression': 'off', // typescript errors (390)
-    'typescript/no-useless-default-assignment': 'off',
     'typescript/prefer-nullish-coalescing': ['off', { ignoreBooleanCoercion: true }], // typescript errors (39)
-    'typescript/promise-function-async': 'off', // typescript errors (7)
-    'typescript/strict-boolean-expressions': 'off', // typescript errors (416)
-    'typescript/strict-void-return': 'off', // typescript errors (118)
-
-    'unicorn/no-invalid-remove-event-listener': 'off', // unicorn errors (5)
-    'unicorn/no-new-array': 'off', // unicorn errors (3)
-    'unicorn/no-zero-fractions': 'off', // unicorn errors (60)
-    'unicorn/number-literal-case': 'off', // unicorn errors (2)
-    'unicorn/numeric-separators-style': 'off', // unicorn errors (10)
-    'unicorn/prefer-array-some': 'off', // unicorn errors (2)
-    'unicorn/prefer-code-point': 'off', // unicorn errors (2)
-    'unicorn/prefer-dom-node-append': 'off', // unicorn errors (7)
-    'unicorn/prefer-dom-node-remove': 'off', // unicorn errors (1)
-    'unicorn/prefer-global-this': 'off',
-    'unicorn/prefer-import-meta-properties': 'off', // unicorn errors (2)
-    'unicorn/prefer-logical-operator-over-ternary': 'off', // unicorn errors (2)
-    'unicorn/prefer-query-selector': 'off', // unicorn errors (8)
-    'unicorn/prefer-set-has': 'off', // unicorn errors (2)
-    'unicorn/prefer-string-slice': 'off', // unicorn errors (1)
-    'unicorn/prefer-ternary': 'off', // unicorn errors (1)
+    'typescript/promise-function-async': 'off',
+    'typescript/strict-boolean-expressions': 'off',
+    'typescript/strict-void-return': 'off',
+    'typescript/no-confusing-void-expression': 'off',
   },
 })

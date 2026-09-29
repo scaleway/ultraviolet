@@ -1,4 +1,4 @@
-import { consoleDarkTheme, consoleDarkerTheme, consoleLightTheme } from '@ultraviolet/themes'
+import { consoleDarkerTheme, consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
 import { create } from 'storybook/theming'
 import logoDark from './assets/logo-dark.png'
 import logoLight from './assets/logo-light.png'

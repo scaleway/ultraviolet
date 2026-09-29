@@ -3,9 +3,9 @@
 import { cn } from '@ultraviolet/utils'
 import { createRef, useId, useState } from 'react'
 import type {
-  CSSProperties,
   ChangeEvent,
   ClipboardEventHandler,
+  CSSProperties,
   FocusEventHandler,
   KeyboardEventHandler,
   ReactNode,

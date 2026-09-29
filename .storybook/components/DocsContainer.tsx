@@ -1,10 +1,10 @@
 import { DocsContainer as BaseContainer, Unstyled } from '@storybook/addon-docs/blocks'
 import type { DocsContainerProps as BaseContainerProps } from '@storybook/addon-docs/blocks'
 import {
-  ThemeProvider as ThemeProviderUV,
-  consoleDarkTheme,
   consoleDarkerTheme,
+  consoleDarkTheme,
   consoleLightTheme,
+  ThemeProvider as ThemeProviderUV,
 } from '@ultraviolet/themes'
 import { GlobalAlert } from '@ultraviolet/ui'
 import { cloneElement, isValidElement, useState } from 'react'

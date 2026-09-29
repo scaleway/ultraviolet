@@ -54,7 +54,11 @@ export const SelectAll = ({ textVariant }: { textVariant: 'body' | 'bodySmall' }
         )}
         data-testid="select-all"
         onClick={selectAllOptions}
-        onKeyDown={event => ([' ', 'Enter'].includes(event.key) ? selectAllOptions() : null)}
+        onKeyDown={event => {
+          if ([' ', 'Enter'].includes(event.key)) {
+            selectAllOptions()
+          }
+        }}
         role="option"
         tabIndex={0}
       >

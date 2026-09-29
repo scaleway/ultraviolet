@@ -4,7 +4,7 @@ import { renderWithTheme } from '@utils/test'
 import { useState } from 'react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { SelectInput } from '..'
-import { OptionalInfo, cities, dataGroupEmpty, dataGrouped, dataGroupedSmall, dataUnGrouped } from './resources'
+import { cities, dataGrouped, dataGroupedSmall, dataGroupEmpty, dataUnGrouped, OptionalInfo } from './resources'
 
 describe('selectInput', () => {
   beforeEach(() => {

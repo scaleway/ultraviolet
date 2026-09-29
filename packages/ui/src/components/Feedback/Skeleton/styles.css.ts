@@ -1,9 +1,9 @@
 import { theme } from '@ultraviolet/themes'
 import { keyframes, style } from '@vanilla-extract/css'
 import {
+  blocksContainer,
   blockSkeletonLine,
   blockSkeletonList,
-  blocksContainer,
   blocksSkeleton,
   boxWithIconSkeleton,
   donutSkeletonCircle,

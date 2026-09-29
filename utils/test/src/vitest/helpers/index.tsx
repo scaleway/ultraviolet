@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import type { RenderOptions } from '@testing-library/react'
-import { ThemeProvider, consoleLightTheme } from '@ultraviolet/themes'
+import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import type { ReactNode } from 'react'
 import { makeShouldMatchSnapshot } from './shouldMatchSnapshot'
 

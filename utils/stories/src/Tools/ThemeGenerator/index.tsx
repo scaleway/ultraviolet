@@ -1,5 +1,5 @@
 import { Form, useForm } from '@ultraviolet/form'
-import { Stack, Text, theme as consoleLightTheme } from '@ultraviolet/ui'
+import { theme as consoleLightTheme, Stack, Text } from '@ultraviolet/ui'
 import type { UltravioletUITheme } from '@ultraviolet/ui'
 import { useCallback, useEffect, useState } from 'react'
 import { TOKENS_URL } from '../../../../scripts/figma-synchronise-token/constants'

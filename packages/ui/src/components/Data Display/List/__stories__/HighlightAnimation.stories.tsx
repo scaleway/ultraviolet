@@ -6,7 +6,7 @@ import { List } from '..'
 import { Button } from '../../../Action/Button'
 import { Row } from '../../../Layout/Row'
 import { Stack } from '../../../Layout/Stack'
-import { data as DATA, columns } from './resources'
+import { columns, data as DATA } from './resources'
 
 type Planets = {
   id: string

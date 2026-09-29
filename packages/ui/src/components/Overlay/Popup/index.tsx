@@ -25,7 +25,7 @@ import type {
 } from 'react'
 import { createPortal } from 'react-dom'
 import { isClientSide } from '../../../helpers/isClientSide'
-import { DEFAULT_POSITIONS, computePositions } from './helpers'
+import { computePositions, DEFAULT_POSITIONS } from './helpers'
 import type { PopupAlign, PopupPlacement } from './helpers'
 import { popupStyle } from './styles.css'
 import {

@@ -2,7 +2,7 @@ import { act, screen } from '@testing-library/react'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme } from '@utils/test'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { Toast, ToastContainer, toast } from '..'
+import { Toast, toast, ToastContainer } from '..'
 
 describe('toaster', () => {
   afterEach(() => {

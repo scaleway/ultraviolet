@@ -2,7 +2,7 @@
 
 import { cn, shuffle } from '@ultraviolet/utils'
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
-import type { CSSProperties, ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Tag } from '../../Badges/Tag'
 import { Popover } from '../../Overlay/Popover'
 import { DEFAULT_POPOVER_MAX_HEIGHT, TAGS_GAP_PX } from './constant'

@@ -2,7 +2,7 @@
 
 import { usePrefersReducedMotion } from '@ultraviolet/animations'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-import type { CSSProperties, ComponentProps } from 'react'
+import type { ComponentProps, CSSProperties } from 'react'
 import type { Modal } from '.'
 import { Button } from '../../Action/Button'
 import { Dialog } from './components/Dialog'

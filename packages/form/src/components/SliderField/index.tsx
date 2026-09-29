@@ -68,7 +68,7 @@ export const SliderField = <
       }
     }
 
-    return field.value
+    return field.value as number | number[]
   }, [field.value, options])
 
   return (
@@ -98,7 +98,7 @@ export const SliderField = <
       }}
       options={options}
       required={required}
-      value={finalValue}
+      value={finalValue as PathValue<TFieldValues, Path<TFieldValues>>}
       {...props}
     />
   )

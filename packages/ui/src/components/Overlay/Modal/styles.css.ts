@@ -2,15 +2,15 @@ import { theme } from '@ultraviolet/themes'
 import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { dialogStyle } from '../Dialog/styles.css'
-import { SIZES, drawerStyle } from '../Drawer/styles.css'
+import { drawerStyle, SIZES } from '../Drawer/styles.css'
 import {
   ANIMATION_DURATION_MS,
   ANIMATION_EASING_OPACITY,
-  MODAL_PLACEMENT,
-  MODAL_WIDTH,
   animationDuration,
   animationDurationTranslation,
   animationEasingTranslation,
+  MODAL_PLACEMENT,
+  MODAL_WIDTH,
   offscreenTranslation,
 } from './constants.css'
 

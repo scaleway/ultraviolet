@@ -5,7 +5,7 @@ import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIco
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn, getUUID } from '@ultraviolet/utils'
 import { useEffect, useId, useRef, useState } from 'react'
-import type { CSSProperties, ChangeEvent, ComponentProps, KeyboardEventHandler, ReactNode } from 'react'
+import type { ChangeEvent, ComponentProps, CSSProperties, KeyboardEventHandler, ReactNode } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import { Button } from '../../Action/Button'
 import { Tag } from '../../Badges/Tag'

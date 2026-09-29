@@ -21,9 +21,7 @@ export const useIsOverflowing = ({ callback, enabled = true }: UseIsOverflowingO
       const hasOverflow = element.scrollWidth > element.clientWidth
 
       setIsOverflowing(hasOverflow)
-      if (callback) {
-        return callback(hasOverflow)
-      }
+      return callback?.(hasOverflow)
     }
 
     const resizeObserver = new ResizeObserver(handleResize)

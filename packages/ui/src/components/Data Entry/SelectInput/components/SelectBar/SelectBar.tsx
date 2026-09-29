@@ -210,7 +210,9 @@ const SelectBar = ({
             event.preventDefault()
           }
 
-          return ['Enter', ' '].includes(event.key) && openable ? setIsDropdownVisible(!isDropdownVisible) : null
+          if (['Enter', ' '].includes(event.key) && openable) {
+            setIsDropdownVisible(!isDropdownVisible)
+          }
         }}
         ref={innerRef}
         role="combobox"
