@@ -36,7 +36,6 @@ Enforced by the component:
 
 To apply when using the component:
 
-- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - When the percentage is meaningful, ensure it is also communicated through the accessible label (e.g., "Uploading 50%") and not only through the arc.
 - [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Ensure the arc and track strokes maintain a 3:1 contrast ratio against the background, especially for `white`/`black`/`neutral` sentiments on similar-toned backgrounds.
 - [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - `role="progressbar"` is not a live region by default. If the loader is inserted dynamically or its value updates over time, wrap it in a live region (e.g., `role="status"`/`aria-live`) or set `aria-busy="true"` on the loading region so screen readers announce the change.
 
@@ -50,11 +49,11 @@ To apply when using the component:
 
 **Medium:**
 
-- No reduced-motion handling for the spin animation. The animation is essential to the loading indication (so it passes WCAG 2.2.2), but it can still trigger discomfort for users with vestibular disorders. Consider disabling or slowing the animation under a `prefers-reduced-motion` media query.
+- No reduced-motion handling for the spin animation. The animation is essential to the loading indication (so it passes WCAG 2.2.2), but it can still trigger discomfort for users with vestibular disorders. Options: disable or slow the animation under a `prefers-reduced-motion` media query, or use the [`steps()`](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function/steps) easing function to replace the continuous rotation with discrete, clock-like steps (e.g., `animationTimingFunction: steps(12)`), which keeps the "loading" signal while removing the smooth motion that causes discomfort.
 
-- No support for `aria-describedby`/`aria-busy` linkage. Per the [ARIA spec](https://w3c.github.io/aria/#progressbar), when the loader indicates the loading progress of a region, consumers should reference the progressbar via `aria-describedby` and set `aria-busy="true"` on the region. Consider accepting an optional `aria-describedby` prop or documenting this pattern.
+- No support for `aria-describedby`/`aria-busy` linkage. Per the [ARIA spec](https://w3c.github.io/aria/#progressbar), when the loader indicates the loading progress of a region, the consumer should set `aria-busy="true"` and `aria-describedby={loaderId}` on the region (container) that is loading, with the `aria-describedby` referencing the progressbar. To enable this, the `Loader` should accept an `id` prop so consumers can reference it from the container.
 
-- The accessible name is provided only via `aria-label`, without a `<title>` child inside the SVG. This deviates from the [Icon component](https://github.com/scaleway/ultraviolet/blob/main/packages/icons/src/components/Icon/Icon.tsx) convention, which renders informative SVGs with a `<title>` child for more robust name computation. Consider rendering the label as a `<title>` element inside the SVG, and renaming the `label` prop to `accessibleLabel` (with a deprecated `aria-label` fallback).
+- The accessible name is provided only via `aria-label`, without a `<title>` child inside the SVG. This deviates from the [Icon component](https://github.com/scaleway/ultraviolet/blob/main/packages/icons/src/components/Icon/Icon.tsx) convention, which renders informative SVGs with a `<title>` child for more robust name computation. Consider rendering the label as a `<title>` element inside the SVG, and renaming the `label` prop to `accessibleLabel` (with a deprecated `label` fallback).
 
 **Low:**
 
