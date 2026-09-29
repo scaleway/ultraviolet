@@ -1,0 +1,55 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Layout/Separator/A11y" />
+
+# Separator - Accessibility
+
+## Description
+
+A layout component used to separate content with a horizontal or vertical line. It can be rendered as a plain line or, when children are provided, as a divider with content (typically an icon) in the middle. It is non-interactive and non-focusable.
+
+## Summary
+
+1. ⚠️ **Perceivable**: decorative separators are exposed to assistive technologies by default, and meaningful content passed as children is hidden from the accessibility tree
+2. ✅ **Operable**: non-interactive component, no keyboard or focus requirements apply
+3. ✅ **Understandable**: no labels, instructions, or language requirements apply
+4. ⚠️ **Robust**: `separator` role has presentational children, so nested semantics and child content handling are ambiguous
+
+## ARIA Pattern
+
+There is no dedicated APG pattern for static separators. The relevant reference is the [`separator` role in WAI-ARIA 1.2](https://www.w3.org/TR/wai-aria-1.2/#separator).
+
+Key characteristics of the `separator` role:
+
+- A non-focusable `separator` is a `structure` role revealed to assistive technologies as a static structural element.
+- It has an implicit `aria-orientation="horizontal"`.
+- **Children Presentational: True** - descendants are not exposed in the accessibility tree.
+- Name comes from author only; no accessible name is required for a static separator.
+
+## Rules
+
+Enforced by the component:
+
+- ⚠️ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - decorative separators are announced by default instead of being hidden
+- ⚠️ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - structure exposed to assistive technologies depends on usage: decorative separators add noise, while content children are not conveyed
+- ⚠️ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - the `separator` role makes children presentational, so child content and nested `<hr>` elements are not exposed reliably
+
+To apply when using the component:
+
+- [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - when the separation itself is meaningful to understand the content, ensure the separator line meets a 3:1 contrast ratio against the adjacent background
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - do not rely on the `sentiment` color alone to convey information
+
+## Accessibility issues
+
+**High:**
+
+- Meaningful children are hidden from assistive technologies - `role="separator"` has "children presentational: true", so any text or icon children (e.g. an "OR" divider) are removed from the accessibility tree and never announced. Meaningful content should not be passed as children, or the container should not use `role="separator"` when children must be conveyed.
+
+**Medium:**
+
+- Decorative separators are announced by default - the native `<hr>` is exposed as a `separator` to screen readers, adding noise for purely decorative dividers. Consider defaulting `aria-hidden` to `true` or documenting that consumers must pass `aria-hidden` for decorative separators.
+
+**Low:**
+
+- Nested `<hr>` elements inside the `role="separator"` wrapper rely on the presentational-children behavior to avoid duplicate separator announcements; behavior may vary across assistive technologies.
+- Redundant `aria-orientation="horizontal"` on the native `<hr>` - the element already has an implicit horizontal orientation; the explicit attribute is only needed for the vertical case.
