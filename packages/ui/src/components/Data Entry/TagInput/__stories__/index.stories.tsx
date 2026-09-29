@@ -6,13 +6,13 @@ export default {
   title: 'UI/Data Entry/TagInput',
   parameters: {
     a11yStatus: {
-      perceivable: undefined,
-      operable: undefined,
-      understandable: undefined,
-      robust: undefined,
+      perceivable: true,
+      operable: false,
+      understandable: false,
+      robust: false,
     },
   },
-} as Meta
+} as Meta<typeof TagInput>
 
 export { Playground } from './Playground.stories'
 export { Size } from './Size.stories'
