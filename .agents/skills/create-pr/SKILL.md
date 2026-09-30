@@ -43,7 +43,10 @@ Short, conventional-commit style: `type(scope): summary`. Reuse the commit name 
 
 ## Step 5 — Draft the description
 
-Write a complete draft following the [GitHub Pull Request Template](../../../.github/pull_request_template.md). Scale its length to the diff: tight for a small change, fuller for a large one — and when the diff is large, cover only the significant changes.
+Write a complete draft following the [GitHub Pull Request Template](../../../.github/pull_request_template.md).
+
+**Summary**: write a very high-level overview of the changes, not a detailed list. On a scale of 1 to 10 of verbosity, be 2/10.
+**Screenshots**: if there is a UI change, keep the section with the empty table. If there is no UI change, remove the whole section.
 
 ## Step 6 — Validate
 
