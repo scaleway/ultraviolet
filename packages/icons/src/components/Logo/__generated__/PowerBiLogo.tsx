@@ -61,6 +61,8 @@ export const PowerBiLogo = (props: Omit<IconProps, 'children'>) => (
       </linearGradient>
       <filter
         id="filter0_d_116_656025"
+        width="6.578"
+        height="13.029"
         x="7.562"
         y="5.733"
         colorInterpolationFilters="sRGB"

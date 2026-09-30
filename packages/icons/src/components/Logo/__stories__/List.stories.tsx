@@ -18,3 +18,7 @@ export const List: StoryFn = props => (
     })}
   </Stack>
 )
+
+List.args = {
+  size: 'medium',
+}

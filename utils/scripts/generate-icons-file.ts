@@ -190,8 +190,6 @@ const readSvg = async (filePath: string, suffix: string) => {
     .replace(/color-interpolation-filters=/gu, 'colorInterpolationFilters=')
     .replace(/xlink:href=/gu, 'xlinkHref=')
     .replace(/`/gu, '\\`')
-    .replace(/height="[^"]*"/gu, '')
-    .replace(/width="[^"]*"/gu, '')
 
   if (['ProductIcon', 'CategoryIcon'].includes(suffix)) {
     const svgWithClassNames = updatedSvgContent.replaceAll(/className="[^"]*"/gu, '')
