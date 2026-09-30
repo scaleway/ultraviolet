@@ -13,7 +13,7 @@ A typography component that renders a native `<label>` (or `<legend>` when used 
 1. ✅ **Perceivable**: label/legend text provides high-contrast theme colors and the required indication uses a text symbol (`*`) rather than color alone. The label-to-control relationship is conveyed structurally when `htmlFor`/`legend` are used.
 2. ✅ **Operable**: the component relies on native `<label>` semantics, so clicking it focuses the associated control; there is no custom keyboard handling to break.
 3. ✅ **Understandable**: the label text is readable and provides an accessible name for the associated control; a descriptive label is the responsibility of the consumer.
-4. ❌ **Robust**: the intended `aria-label="required"` on the required asterisk is not rendered (the `Text` component does not forward it), leaving the required indication unnamed and ambiguous for assistive technologies.
+4. ✅ **Robust**: the required asterisk is decorative (`aria-hidden`); the required state is conveyed programmatically via `aria-required` on the associated control (consumer side).
 
 ## ARIA Pattern
 
@@ -31,26 +31,37 @@ Enforced by the component:
 To apply when using the component:
 
 - [WCAG 2.4.6 - Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html) - Provide a label text that clearly describes the associated control. When `required` is used inside an input component, also set `aria-required` on the actual form control so the required state is programmatically determinable.
-- [WCAG 2.5.3 - Label in Name (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html) - Ensure the visible label text is part of the control's accessible name; do not pass an `aria-label` that omits the visible label text.
 - [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - Always use the component to label an input/legend, or the control will have no accessible name.
 - [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - When `as="legend"`, the component must be placed inside a `<fieldset>` (as done in `CheckboxGroup`, `SelectableCardGroup`, etc.) for the grouping relationship to be conveyed.
 
-## Accessibility issues
+## Past accessibility issues
+
+<details><summary>Accessibility issues found by the a11y audit — all now resolved</summary>
 
 **High:**
 
-- Required indicator has no accessible label - The `*` marker is given `aria-label="required"` (`LabelContent.tsx:47`), but the `Text` component does not forward `aria-label` to the rendered element, so it is silently dropped. The snapshot confirms the `<span>` renders with no `aria-label`. As a result, screen readers announce the raw `*` character (e.g. "star" / "asterisk"), which is ambiguous and does not clearly convey "required". Fix by rendering the required indication so its name is actually emitted (e.g. an element with an effective label, or a visually hidden "required" text per RFC #6585), or forward the label through `Text`.
+- ✅ Required indicator has no accessible label:
+  - The `*` marker was given `aria-label="required"` (`LabelContent.tsx:47`), but the `Text` component did not forward it, so it was silently dropped. As a result, screen readers announced the raw `*` character (e.g. "star" / "asterisk"), which is ambiguous.
+  - **Resolved** by rendering the asterisk as purely decorative (`aria-hidden="true"`, via `Text`, which forwards `aria-hidden`) and removing the ineffective `aria-label` (`LabelContent.tsx`). The required state is now conveyed programmatically via `aria-required` on the associated control (consumer side, see [ARIA2](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA2)).
 
 **Medium:**
 
-- Required state not included in the accessible name of the associated control - When used with `htmlFor`, the `<label>` and the `*` are siblings within a `Stack`; the `*` is not part of the label element, and its own label is dropped. The control's accessible name is therefore only the plain label text with no required information. Prefer relying on `aria-required` on the control (consumer side) and/or adding a visually hidden "required" text so screen reader users receive the same required signal as sighted users.
+- ✅ Required state not included in the accessible name of the associated control:
+  - When used with `htmlFor`, the `<label>` and the `*` were siblings within a `Stack`; the `*` was not part of the label element and its own label was dropped, so the control's accessible name carried no required information.
+  - **Resolved** by following the consumer-side pattern: the required state is conveyed via `aria-required` on the actual form control. The decorative `*` is hidden from assistive technologies (`aria-hidden`) and no longer pollutes the accessible name.
 
 **Low:**
 
-- `disabled` is purely decorative - The `disabled` prop only changes the text appearance and cursor (`styles.css.ts`); it carries no semantics to assistive technologies. Since a `<label>` is not itself an interactive element, ensure the disabled state is also applied to the associated control.
-- Pointer cursor on a `<legend>` with `htmlFor` - When `as="legend"` and `htmlFor` is provided, the `htmlFor` styling (`cursor: pointer`) is applied to the `<legend>`, which is misleading since `htmlFor` has no meaning on a legend.
+- ⚠️ `disabled` is purely decorative:
+  - The `disabled` prop only changes the text appearance and cursor (`styles.css.ts`); since a `<label>` is not itself an interactive element, the disabled state must be applied to the associated control.
+  - **Unresolved in the component**: consumer responsibility — apply the disabled state to the associated control.
+
+- ✅ Pointer cursor on a `<legend>` with `htmlFor`:
+  - When `as="legend"` and `htmlFor` was provided, the `htmlFor` styling (`cursor: pointer`) was applied to the `<legend>`, which is misleading since `htmlFor` has no meaning on a legend.
+  - **Resolved** by only applying the pointer cursor when `as === 'label'` (`LabelContent.tsx`).
+
+</details>
 
 ## Dependencies
 
-- **Text**: the `Text` component must be able to forward `aria-label` (or the `Label` component must stop passing it through `Text` and render the required indicator directly) for the required `*` to have an accessible name. Currently `Text` only forwards a fixed set of props and drops `aria-label`.
 - **Input components** (`SelectInput`, `TextArea`, `NumberInput`, etc.): they consume the `required` prop of `Label`; they should propagate it as `aria-required` on the actual control so the required state is programmatically determinable (see [ARIA2](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA2)).

@@ -9,7 +9,7 @@ export default {
       perceivable: true,
       operable: true,
       understandable: true,
-      robust: false,
+      robust: true,
     },
   },
 } as Meta
