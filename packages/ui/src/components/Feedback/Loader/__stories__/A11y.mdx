@@ -1,0 +1,62 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Feedback/Loader/A11y" />
+
+# Loader - Accessibility
+
+## Description
+
+A circular SVG progress indicator (`role="progressbar"`) that displays an indeterminate spinning loader when `active`, or a determinate percentage arc otherwise. Supports sentiment, size, and an accessible label describing what is loading.
+
+## Summary
+
+1. ⚠️ **Perceivable**: the progressbar has an accessible name and the percentage is conveyed both visually (arc) and programmatically (`aria-valuenow`/`aria-valuetext`). Contrast of the arc depends on the chosen sentiment/background.
+2. ✅ **Operable**: not an interactive widget, no keyboard interaction required. The spinning animation is essential to convey the loading state (WCAG 2.2.2 exception).
+3. ✅ **Understandable**: no language, consistency, or input-assistance concerns for a single labelled indicator.
+4. ❌ **Robust**: `aria-valuenow`/`aria-valuetext` announce a value even when the loader is indeterminate (`active`), and the announced value is not clamped to the `[0, 100]` range declared by `aria-valuemin`/`aria-valuemax`.
+
+## ARIA Pattern
+
+There is no dedicated [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/) pattern for a progressbar. The widget contract is defined directly by the [`progressbar` role](https://w3c.github.io/aria/#progressbar) in the WAI-ARIA specification:
+
+- An accessible name is required.
+- `aria-valuenow` SHOULD be provided for a determinate progressbar and SHOULD be omitted when the value is indeterminate.
+- `aria-valuenow` must stay within the `[aria-valuemin, aria-valuemax]` range.
+- When the progressbar describes the loading progress of a region, authors SHOULD reference it with `aria-describedby` and set `aria-busy="true"` on that region until loading completes.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - The SVG has an accessible name via `aria-label`. However, unlike the [Icon component](https://github.com/scaleway/ultraviolet/blob/main/packages/icons/src/components/Icon/Icon.tsx), the label is not also rendered as a `<title>` child inside the SVG, which would make name computation more robust across assistive technologies.
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - The `role="progressbar"` and its value states are programmatically exposed.
+- ✅ [WCAG 2.2.2 - Pause, Stop, Hide (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html) - The infinite spin animation is essential to the loading indication itself; per the exception in the Understanding doc (preload animations), no pause mechanism is required.
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - Correct `role="progressbar"`, accessible name, and value states are provided.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The value is announced even for indeterminate loaders and is not clamped to the `[0, 100]` range declared by `aria-valuemin`/`aria-valuemax`.
+
+To apply when using the component:
+
+- [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Ensure the arc and track strokes maintain a 3:1 contrast ratio against the background, especially for `white`/`black`/`neutral` sentiments on similar-toned backgrounds.
+- [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - `role="progressbar"` is not a live region by default. If the loader is inserted dynamically or its value updates over time, wrap it in a live region (e.g., `role="status"`/`aria-live`) or set `aria-busy="true"` on the loading region so screen readers announce the change.
+
+## Accessibility issues
+
+**High:**
+
+- `aria-valuenow` and `aria-valuetext` are always rendered even when the loader is indeterminate. When `active` is set, a screen reader announces "Loading, progressbar, 20%" even though no determinate progress is known. The [ARIA spec](https://w3c.github.io/aria/#progressbar) states `aria-valuenow` SHOULD be omitted when the value is indeterminate. Consider omitting `aria-valuenow`/`aria-valuetext` when `active` is true.
+
+- `aria-valuenow`/`aria-valuetext` use the raw `percentage` prop instead of the bounded value used for the visual arc. Passing `percentage={150}` renders a fully filled circle but announces "150%", which violates the `[aria-valuemin, aria-valuemax]` range contract. The announced value should be `boundedPercentage`.
+
+**Medium:**
+
+- No reduced-motion handling for the spin animation. The animation is essential to the loading indication (so it passes WCAG 2.2.2), but it can still trigger discomfort for users with vestibular disorders. Options: disable or slow the animation under a `prefers-reduced-motion` media query, or use the [`steps()`](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function/steps) easing function to replace the continuous rotation with discrete, clock-like steps (e.g., `animationTimingFunction: steps(12)`), which keeps the "loading" signal while removing the smooth motion that causes discomfort.
+
+- No support for `aria-describedby`/`aria-busy` linkage. Per the [ARIA spec](https://w3c.github.io/aria/#progressbar), when the loader indicates the loading progress of a region, the consumer should set `aria-busy="true"` and `aria-describedby={loaderId}` on the region (container) that is loading, with the `aria-describedby` referencing the progressbar. To enable this, the `Loader` should accept an `id` prop so consumers can reference it from the container.
+
+- The accessible name is provided only via `aria-label`, without a `<title>` child inside the SVG. This deviates from the [Icon component](https://github.com/scaleway/ultraviolet/blob/main/packages/icons/src/components/Icon/Icon.tsx) convention, which renders informative SVGs with a `<title>` child for more robust name computation. Consider rendering the label as a `<title>` element inside the SVG, and renaming the `label` prop to `accessibleLabel` (with a deprecated `label` fallback).
+
+**Low:**
+
+- The two decorative `<circle>` children are not marked `aria-hidden="true"`. They are not announced in practice (the parent SVG exposes the `progressbar` role), but explicitly hiding decorative shapes is best practice for robustness.
+
+- The default label `"Loading"` means all loaders without an explicit label are announced identically. Consumers should always provide a descriptive label (the JSDoc at `index.tsx:19-22` already warns about this).
