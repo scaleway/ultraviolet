@@ -1,7 +1,6 @@
 import { CheckIcon, CloseIcon } from '@ultraviolet/icons'
 import { useTheme } from '@ultraviolet/themes'
-import type { consoleLightTheme } from '@ultraviolet/themes'
-import { Badge, RadioGroup, Row, Stack, Text, Toggle } from '@ultraviolet/ui'
+import { Badge, CheckboxGroup, Row, Stack, Text } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import { useEffect, useMemo, useState } from 'react'
@@ -10,24 +9,23 @@ import type { ContrastLevel, Pairing } from './helpers'
 import { contrastStyle } from './styles.css'
 import { previewBackgroundColor, previewTextColor, swatchColor, swatchSize } from './variables.css'
 
-type Theme = typeof consoleLightTheme
-
-type State = 'default' | 'disabled' | 'both'
 type Background = 'neutral' | 'color'
+type Status = 'pass' | 'fail' | 'n/a'
+
+const BACKGROUND_OPTIONS: Background[] = ['neutral', 'color']
+const STATUS_OPTIONS: Status[] = ['pass', 'fail', 'n/a']
 
 const SENTIMENTS = ['primary', 'secondary', 'neutral', 'success', 'danger', 'warning', 'info'] as const
 
 // Module-scope persistence: the theme switcher remounts the story tree, so plain
 // useState is wiped on each light/dark/darker toggle. Keep it here to survive remounts.
 const persist: {
-  highlightFailures: boolean
-  state: State
-  background: Background
+  backgrounds: Background[]
+  statuses: Status[]
   scrollY: number
 } = {
-  highlightFailures: false,
-  state: 'both',
-  background: 'color',
+  backgrounds: ['neutral', 'color'],
+  statuses: ['pass', 'fail', 'n/a'],
   scrollY: 0,
 }
 
@@ -95,19 +93,8 @@ const SummaryBar = ({ counts }: { counts: { total: number; pass: number; fail: n
   </Stack>
 )
 
-const PairingCard = ({
-  pairing,
-  highlightFailures,
-}: {
-  pairing: Pairing
-  theme: Theme
-  highlightFailures: boolean
-}) => (
-  <div
-    className={contrastStyle.pairingCard}
-    data-highlight={highlightFailures ? 'true' : 'false'}
-    data-level={pairing.level}
-  >
+const PairingCard = ({ pairing }: { pairing: Pairing }) => (
+  <div className={contrastStyle.pairingCard} data-level={pairing.level}>
     <div
       className={contrastStyle.preview}
       style={assignInlineVars({
@@ -167,9 +154,8 @@ const PairingCard = ({
 
 export const ContrastChecker = () => {
   const theme = useTheme()
-  const [highlightFailures, setHighlightFailures] = useState(persist.highlightFailures)
-  const [state, setState] = useState<State>(persist.state)
-  const [background, setBackground] = useState<Background>(persist.background)
+  const [backgrounds, setBackgrounds] = useState<Background[]>(persist.backgrounds)
+  const [statuses, setStatuses] = useState<Status[]>(persist.statuses)
 
   useEffect(() => {
     const onScroll = () => {
@@ -188,46 +174,61 @@ export const ContrastChecker = () => {
 
       const bgMap = new Map(bgColors.map(([key, val]) => [getSuffix(key, 'background'), { key, val }]))
 
-      // In "neutral" mode every sentiment is displayed on the neutral default background,
-      // so drop the strong text variants (only default/disabled/hover remain).
-      const textColors = filterByPrefix(colors, 'text').filter(
-        ([key]) => background !== 'neutral' || !key.toLowerCase().includes('strong'),
-      )
-      const neutralBg = background === 'neutral' ? theme.colors.neutral.background : undefined
+      const buildPairings = (textEntries: [string, string][], bgVal: string | undefined, bgKey: string | null) =>
+        textEntries
+          .map(([textKey, textVal]): Pairing | null => {
+            const suffix = getSuffix(textKey, 'text')
+            const isDisabled = suffix.toLowerCase().includes('disabled')
 
-      const pairings: Pairing[] = textColors
-        .map(([textKey, textVal]) => {
-          const suffix = getSuffix(textKey, 'text')
-          const isDisabled = suffix.toLowerCase().includes('disabled')
-          if (state === 'disabled' && !isDisabled) {
-            return null
-          }
-          if (state === 'default' && isDisabled) {
-            return null
-          }
+            const bgMatch = bgMap.get(suffix)
+            const pairingBgVal = bgVal ?? bgMatch?.val
+            if (!pairingBgVal) {
+              return null
+            }
 
-          const bgMatch = bgMap.get(suffix)
-          const bgVal = neutralBg ?? bgMatch?.val
-          if (!bgVal) {
-            return null
-          }
+            const ratio = contrastRatio(textVal, pairingBgVal)
+            const level: ContrastLevel = isDisabled ? 'disabled' : getContrastLevel(ratio)
+            // Status filter: disabled pairings map to the "n/a" status
+            if (!statuses.includes(level === 'disabled' ? 'n/a' : level)) {
+              return null
+            }
 
-          const ratio = contrastRatio(textVal, bgVal)
-          const level: ContrastLevel = isDisabled ? 'disabled' : getContrastLevel(ratio)
+            return {
+              suffix,
+              textKey,
+              textVal,
+              bgKey: bgKey ?? bgMatch?.key ?? 'background',
+              bgVal: pairingBgVal,
+              ratio,
+              level,
+            }
+          })
+          .filter((p): p is Pairing => p !== null)
 
-          return {
-            suffix,
-            textKey,
-            textVal,
-            bgKey: neutralBg ? 'background' : (bgMatch?.key ?? 'background'),
-            bgVal,
-            ratio,
-            level,
-          }
-        })
-        .filter((p): p is Pairing => p !== null)
+      const pairings: Pairing[] = []
+      if (backgrounds.includes('color')) {
+        // state-matched backgrounds, all text variants (current display)
+        pairings.push(...buildPairings(filterByPrefix(colors, 'text'), undefined, null))
+      }
+      if (backgrounds.includes('neutral')) {
+        // every sentiment on the neutral default background, without strong variants
+        const neutralTexts = filterByPrefix(colors, 'text').filter(([key]) => !key.toLowerCase().includes('strong'))
+        pairings.push(...buildPairings(neutralTexts, theme.colors.neutral.background, 'neutral-background'))
+      }
 
-      return { sentiment, pairings }
+      // Drop exact duplicates (same text variant + background), e.g. the neutral sentiment's
+      // default pairing is produced by both the "color" and "neutral" background modes.
+      const seen = new Set<string>()
+      const uniquePairings = pairings.filter(pairing => {
+        const id = `${pairing.textKey}-${pairing.bgVal}`
+        if (seen.has(id)) {
+          return false
+        }
+        seen.add(id)
+        return true
+      })
+
+      return { sentiment, pairings: uniquePairings }
     })
 
     let total = 0
@@ -249,53 +250,50 @@ export const ContrastChecker = () => {
     }
 
     return { groups, counts: { total, pass, fail, disabled } }
-  }, [theme, state, background])
+  }, [theme, backgrounds, statuses])
 
   return (
     <Stack className={contrastStyle.root} gap={3}>
       <Legend />
       <SummaryBar counts={counts} />
 
-      <Stack gap={1.5}>
-        <Toggle
-          checked={highlightFailures}
+      <Stack direction="row" gap={10} wrap>
+        <CheckboxGroup
+          direction="row"
+          legend="Background"
+          name="background"
           onChange={e => {
-            persist.highlightFailures = e.target.checked
-            setHighlightFailures(e.target.checked)
+            const value = e.target.value as Background
+            const next = e.target.checked ? [...backgrounds, value] : backgrounds.filter(item => item !== value)
+            persist.backgrounds = next
+            setBackgrounds(next)
           }}
-          label="Highlight failures"
-        />
-        <Stack direction="row" gap={10} wrap>
-          <RadioGroup
-            direction="row"
-            legend="State"
-            name="state"
-            onChange={e => {
-              const value = e.target.value as State
-              persist.state = value
-              setState(value)
-            }}
-            value={state}
-          >
-            <RadioGroup.Radio label="default" value="default" />
-            <RadioGroup.Radio label="disabled" value="disabled" />
-            <RadioGroup.Radio label="both" value="both" />
-          </RadioGroup>
-          <RadioGroup
-            direction="row"
-            legend="Background"
-            name="background"
-            onChange={e => {
-              const value = e.target.value as Background
-              persist.background = value
-              setBackground(value)
-            }}
-            value={background}
-          >
-            <RadioGroup.Radio label="neutral" value="neutral" />
-            <RadioGroup.Radio label="color" value="color" />
-          </RadioGroup>
-        </Stack>
+          value={backgrounds}
+        >
+          {BACKGROUND_OPTIONS.map(option => (
+            <CheckboxGroup.Checkbox key={option} value={option}>
+              {option}
+            </CheckboxGroup.Checkbox>
+          ))}
+        </CheckboxGroup>
+        <CheckboxGroup
+          direction="row"
+          legend="Status"
+          name="status"
+          onChange={e => {
+            const value = e.target.value as Status
+            const next = e.target.checked ? [...statuses, value] : statuses.filter(item => item !== value)
+            persist.statuses = next
+            setStatuses(next)
+          }}
+          value={statuses}
+        >
+          {STATUS_OPTIONS.map(option => (
+            <CheckboxGroup.Checkbox key={option} value={option}>
+              {option}
+            </CheckboxGroup.Checkbox>
+          ))}
+        </CheckboxGroup>
       </Stack>
 
       {groups.map(({ sentiment, pairings }) => (
@@ -305,12 +303,7 @@ export const ContrastChecker = () => {
           </Text>
           <Row gap={1.5} templateColumns="repeat(auto-fill, minmax(220px, 1fr))">
             {pairings.map(pairing => (
-              <PairingCard
-                key={pairing.textKey}
-                pairing={pairing}
-                theme={theme}
-                highlightFailures={highlightFailures}
-              />
+              <PairingCard key={`${pairing.bgKey}-${pairing.bgVal}-${pairing.textKey}`} pairing={pairing} />
             ))}
           </Row>
         </Stack>
