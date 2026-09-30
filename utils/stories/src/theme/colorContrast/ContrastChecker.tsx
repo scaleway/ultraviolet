@@ -1,7 +1,7 @@
 import { CheckIcon, CloseIcon } from '@ultraviolet/icons'
 import { useTheme } from '@ultraviolet/themes'
 import type { consoleLightTheme } from '@ultraviolet/themes'
-import { Badge, Row, Stack, Text, Toggle } from '@ultraviolet/ui'
+import { Badge, RadioGroup, Row, Stack, Text, Toggle } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import { useEffect, useMemo, useState } from 'react'
@@ -12,13 +12,22 @@ import { previewBackgroundColor, previewTextColor, swatchColor, swatchSize } fro
 
 type Theme = typeof consoleLightTheme
 
+type State = 'default' | 'disabled' | 'both'
+type Background = 'neutral' | 'color'
+
 const SENTIMENTS = ['primary', 'secondary', 'neutral', 'success', 'danger', 'warning', 'info'] as const
 
 // Module-scope persistence: the theme switcher remounts the story tree, so plain
 // useState is wiped on each light/dark/darker toggle. Keep it here to survive remounts.
-const persist = {
+const persist: {
+  highlightFailures: boolean
+  state: State
+  background: Background
+  scrollY: number
+} = {
   highlightFailures: false,
-  showDisabled: true,
+  state: 'both',
+  background: 'color',
   scrollY: 0,
 }
 
@@ -159,7 +168,8 @@ const PairingCard = ({
 export const ContrastChecker = () => {
   const theme = useTheme()
   const [highlightFailures, setHighlightFailures] = useState(persist.highlightFailures)
-  const [showDisabled, setShowDisabled] = useState(persist.showDisabled)
+  const [state, setState] = useState<State>(persist.state)
+  const [background, setBackground] = useState<Background>(persist.background)
 
   useEffect(() => {
     const onScroll = () => {
@@ -175,32 +185,42 @@ export const ContrastChecker = () => {
       // oxlint-disable-next-line typescript/no-unsafe-type-assertion
       const colors = theme.colors[sentiment] as unknown as Record<string, string>
       const bgColors = filterByPrefix(colors, 'background')
-      const textColors = filterByPrefix(colors, 'text')
 
       const bgMap = new Map(bgColors.map(([key, val]) => [getSuffix(key, 'background'), { key, val }]))
+
+      // In "neutral" mode every sentiment is displayed on the neutral default background,
+      // so drop the strong text variants (only default/disabled/hover remain).
+      const textColors = filterByPrefix(colors, 'text').filter(
+        ([key]) => background !== 'neutral' || !key.toLowerCase().includes('strong'),
+      )
+      const neutralBg = background === 'neutral' ? theme.colors.neutral.background : undefined
 
       const pairings: Pairing[] = textColors
         .map(([textKey, textVal]) => {
           const suffix = getSuffix(textKey, 'text')
-          const bgMatch = bgMap.get(suffix)
-
-          if (!bgMatch) {
-            return null
-          }
-          if (!showDisabled && suffix.toLowerCase().includes('disabled')) {
-            return null
-          }
-
-          const ratio = contrastRatio(textVal, bgMatch.val)
           const isDisabled = suffix.toLowerCase().includes('disabled')
+          if (state === 'disabled' && !isDisabled) {
+            return null
+          }
+          if (state === 'default' && isDisabled) {
+            return null
+          }
+
+          const bgMatch = bgMap.get(suffix)
+          const bgVal = neutralBg ?? bgMatch?.val
+          if (!bgVal) {
+            return null
+          }
+
+          const ratio = contrastRatio(textVal, bgVal)
           const level: ContrastLevel = isDisabled ? 'disabled' : getContrastLevel(ratio)
 
           return {
             suffix,
             textKey,
             textVal,
-            bgKey: bgMatch.key,
-            bgVal: bgMatch.val,
+            bgKey: neutralBg ? 'background' : (bgMatch?.key ?? 'background'),
+            bgVal,
             ratio,
             level,
           }
@@ -229,7 +249,7 @@ export const ContrastChecker = () => {
     }
 
     return { groups, counts: { total, pass, fail, disabled } }
-  }, [theme, showDisabled])
+  }, [theme, state, background])
 
   return (
     <Stack className={contrastStyle.root} gap={3}>
@@ -237,26 +257,44 @@ export const ContrastChecker = () => {
       <SummaryBar counts={counts} />
 
       <Stack gap={1.5}>
-        <Text as="h2" className={contrastStyle.capitalize} sentiment="neutral" variant="headingSmallStrong">
-          Display
-        </Text>
-        <Stack direction="row" gap={3} wrap>
-          <Toggle
-            checked={highlightFailures}
+        <Toggle
+          checked={highlightFailures}
+          onChange={e => {
+            persist.highlightFailures = e.target.checked
+            setHighlightFailures(e.target.checked)
+          }}
+          label="Highlight failures"
+        />
+        <Stack direction="row" gap={10} wrap>
+          <RadioGroup
+            direction="row"
+            legend="State"
+            name="state"
             onChange={e => {
-              persist.highlightFailures = e.target.checked
-              setHighlightFailures(e.target.checked)
+              const value = e.target.value as State
+              persist.state = value
+              setState(value)
             }}
-            label="Highlight failures"
-          />
-          <Toggle
-            checked={showDisabled}
+            value={state}
+          >
+            <RadioGroup.Radio label="default" value="default" />
+            <RadioGroup.Radio label="disabled" value="disabled" />
+            <RadioGroup.Radio label="both" value="both" />
+          </RadioGroup>
+          <RadioGroup
+            direction="row"
+            legend="Background"
+            name="background"
             onChange={e => {
-              persist.showDisabled = e.target.checked
-              setShowDisabled(e.target.checked)
+              const value = e.target.value as Background
+              persist.background = value
+              setBackground(value)
             }}
-            label="Show disabled colors"
-          />
+            value={background}
+          >
+            <RadioGroup.Radio label="neutral" value="neutral" />
+            <RadioGroup.Radio label="color" value="color" />
+          </RadioGroup>
         </Stack>
       </Stack>
 
