@@ -4,7 +4,15 @@ import { Description } from '..'
 export default {
   component: Description,
   title: 'UI/Typography/Description',
-} as Meta
+  parameters: {
+    a11yStatus: {
+      perceivable: false,
+      operable: true,
+      understandable: true,
+      robust: false,
+    },
+  },
+} satisfies Meta<typeof Description>
 export { Playground } from './Playground.stories'
 export { Error } from './Error.stories'
 export { Success } from './Success.stories'
