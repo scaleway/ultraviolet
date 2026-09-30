@@ -5,7 +5,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
-import type { ChangeEvent, CSSProperties, FocusEventHandler, KeyboardEvent, ReactNode } from 'react'
+import type { ChangeEvent, CSSProperties, FocusEventHandler, KeyboardEvent, MouseEvent, ReactNode } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import { Stack } from '../../Layout/Stack'
 import { VisuallyHidden } from '../../Other/VisuallyHidden'
@@ -146,6 +146,33 @@ export const VerificationCode = ({
     setCaretIndex(Math.min(position, fields - 1))
   }
 
+  const inputOnClick = (event: MouseEvent<HTMLInputElement>) => {
+    const inputElement = inputRef.current
+    if (!inputElement) {
+      return
+    }
+
+    const boxes = Array.from({ length: fields }, (_, index) => document.getElementById(`${id}-box-${index}`)).filter(
+      (box): box is HTMLElement => box !== null,
+    )
+
+    const clickedIndex = boxes.findIndex(box => {
+      const rect = box.getBoundingClientRect()
+      return rect.width > 0 && event.clientX >= rect.left && event.clientX <= rect.right
+    })
+
+    const position = clickedIndex !== -1 ? clickedIndex : (inputElement.selectionStart ?? 0)
+    const nextCaretIndex = Math.min(fields - 1, position)
+
+    if (nextCaretIndex >= value.length + 1) {
+      // Can't click on an empty box (unless it is the next empty one)
+      inputElement.setSelectionRange(caretIndex, caretIndex)
+    } else {
+      setCaretIndex(nextCaretIndex)
+      inputElement.setSelectionRange(nextCaretIndex, nextCaretIndex)
+    }
+  }
+
   const inputOnFocus: FocusEventHandler<HTMLInputElement> = event => {
     const { length } = event.target.value
     event.target.setSelectionRange(length, length)
@@ -191,11 +218,10 @@ export const VerificationCode = ({
           id={id}
           inputMode={type === 'number' ? 'numeric' : undefined}
           onChange={inputOnChange}
-          onClick={updateCaretIndex}
+          onClick={inputOnClick}
           onFocus={inputOnFocus}
           onKeyDown={inputOnKeyDown}
           onKeyUp={updateCaretIndex}
-          onSelect={updateCaretIndex}
           pattern={type === 'number' ? '[0-9]*' : undefined}
           ref={inputRef}
           required={required}
@@ -222,6 +248,7 @@ export const VerificationCode = ({
                 }),
               )}
               data-testid={`box-${index}`}
+              id={`${id}-box-${index}`}
               key={`field-${index}`}
             >
               {/* oxlint-disable-next-line typescript/no-unnecessary-condition */}
