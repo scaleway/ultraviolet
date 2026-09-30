@@ -16,7 +16,6 @@ export const warnRules = defineConfig({
     'eslint/max-params': 'warn', // eslint errors (33)
     'eslint/no-await-in-loop': 'warn', // eslint errors (12)
     'eslint/no-empty-function': 'warn', // eslint errors (408)
-    'eslint/no-implicit-coercion': 'warn', // eslint errors (113)
     'eslint/no-shadow': 'warn', // eslint errors (7)
     'eslint/sort-imports': [
       'warn',
@@ -56,7 +55,6 @@ export const warnRules = defineConfig({
     'typescript/consistent-return': 'warn', // typescript errors (8)
     'typescript/dot-notation': 'warn', // typescript errors (4)
     'typescript/explicit-member-accessibility': 'warn', // typescript errors (10)
-    'typescript/no-confusing-void-expression': 'warn', // typescript errors (390)
     'typescript/no-deprecated': 'warn', // typescript errors (594)
     'typescript/no-misused-spread': 'warn', // typescript errors (7)
     'typescript/no-non-null-assertion': 'warn', // typescript errors (29)

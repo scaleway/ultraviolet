@@ -92,9 +92,7 @@ export default defineConfig({
         'node/no-process-env': 'off',
 
         'typescript/consistent-type-imports': 'error',
-        'typescript/no-unsafe-assignment': 'warn', // typescript errors (2233)
         'typescript/no-unsafe-member-access': 'off',
-        'typescript/promise-function-async': 'warn', // typescript errors (1)
         'typescript/strict-void-return': 'off',
 
         'unicorn/no-new-array': 'off',
@@ -168,9 +166,7 @@ export default defineConfig({
     'react/only-export-components': 'off',
 
     'typescript/prefer-nullish-coalescing': ['off', { ignoreBooleanCoercion: true }], // typescript errors (39)
-    'typescript/promise-function-async': 'off',
     'typescript/strict-boolean-expressions': 'off',
-    'typescript/strict-void-return': 'off',
     'typescript/no-confusing-void-expression': 'off',
   },
 })
