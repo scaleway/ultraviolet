@@ -1,7 +1,7 @@
 import { CheckIcon, CloseIcon } from '@ultraviolet/icons'
 import { useTheme } from '@ultraviolet/themes'
 import type { consoleLightTheme } from '@ultraviolet/themes'
-import { Badge, Checkbox, Row, Stack, Text } from '@ultraviolet/ui'
+import { Badge, Row, Stack, Text, Toggle } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import { useEffect, useMemo, useState } from 'react'
@@ -18,7 +18,7 @@ const SENTIMENTS = ['primary', 'secondary', 'neutral', 'success', 'danger', 'war
 // useState is wiped on each light/dark/darker toggle. Keep it here to survive remounts.
 const persist = {
   highlightFailures: false,
-  hideDisabled: false,
+  showDisabled: true,
   scrollY: 0,
 }
 
@@ -159,7 +159,7 @@ const PairingCard = ({
 export const ContrastChecker = () => {
   const theme = useTheme()
   const [highlightFailures, setHighlightFailures] = useState(persist.highlightFailures)
-  const [hideDisabled, setHideDisabled] = useState(persist.hideDisabled)
+  const [showDisabled, setShowDisabled] = useState(persist.showDisabled)
 
   useEffect(() => {
     const onScroll = () => {
@@ -187,7 +187,7 @@ export const ContrastChecker = () => {
           if (!bgMatch) {
             return null
           }
-          if (hideDisabled && suffix.toLowerCase().includes('disabled')) {
+          if (!showDisabled && suffix.toLowerCase().includes('disabled')) {
             return null
           }
 
@@ -229,32 +229,35 @@ export const ContrastChecker = () => {
     }
 
     return { groups, counts: { total, pass, fail, disabled } }
-  }, [theme, hideDisabled])
+  }, [theme, showDisabled])
 
   return (
     <Stack className={contrastStyle.root} gap={3}>
       <Legend />
       <SummaryBar counts={counts} />
 
-      <Stack direction="row" gap={3} wrap>
-        <Checkbox
-          checked={highlightFailures}
-          onChange={e => {
-            persist.highlightFailures = e.target.checked
-            setHighlightFailures(e.target.checked)
-          }}
-        >
-          Highlight failures
-        </Checkbox>
-        <Checkbox
-          checked={hideDisabled}
-          onChange={e => {
-            persist.hideDisabled = e.target.checked
-            setHideDisabled(e.target.checked)
-          }}
-        >
-          Hide disabled colors
-        </Checkbox>
+      <Stack gap={1.5}>
+        <Text as="h2" className={contrastStyle.capitalize} sentiment="neutral" variant="headingSmallStrong">
+          Display
+        </Text>
+        <Stack direction="row" gap={3} wrap>
+          <Toggle
+            checked={highlightFailures}
+            onChange={e => {
+              persist.highlightFailures = e.target.checked
+              setHighlightFailures(e.target.checked)
+            }}
+            label="Highlight failures"
+          />
+          <Toggle
+            checked={showDisabled}
+            onChange={e => {
+              persist.showDisabled = e.target.checked
+              setShowDisabled(e.target.checked)
+            }}
+            label="Show disabled colors"
+          />
+        </Stack>
       </Stack>
 
       {groups.map(({ sentiment, pairings }) => (
