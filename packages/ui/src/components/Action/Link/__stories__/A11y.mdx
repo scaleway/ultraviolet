@@ -1,0 +1,58 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Action/Link/A11y" />
+
+# Link - Accessibility
+
+## Description
+
+A navigation component that renders a native HTML anchor (`<a href>`) to navigate between pages or to external websites. It supports `target="_blank"` (with automatic `rel="noopener noreferrer"`), download, icons, `oneLine` truncation with a tooltip exposing the full text, and a `render` prop for custom anchors (e.g., Next.js Link).
+
+## Summary
+
+1. ✅ **Perceivable**: icons are decorative (aria-hidden), links are distinguished by more than color (dotted underline), color tokens backed by the theme.
+2. ⚠️ **Operable**: keyboard accessible as a native link, focus indicator preserved. Opening in a new tab is not announced to screen reader users.
+3. ✅ **Understandable**: no change of context on focus or input; link behavior is predictable (except the unannounced new-window opening, see issues).
+4. ⚠️ **Robust**: native anchor exposes proper name/role/value, but the `render` prop drops the accessibility-related props passed to `Link`.
+
+## ARIA Pattern
+
+[ARIA Link Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/link/) — strongly encourages using a native HTML `<a>` element with an `href`, which this component does. Keyboard interaction: `Enter` executes the link.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - Arrow and "open in new" icons are correctly marked decorative (`aria-hidden`) when no accessible label is provided.
+- ✅ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Links have a dotted underline by default, so color is never the only indicator.
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Native links with `href` are keyboard accessible (Tab + Enter).
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - The default browser focus outline is preserved (no `outline: none`), styled further by underline/color change on `:focus`.
+- ⚠️ [WCAG 2.4.4 - Link Purpose (In Context) (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html) - The purpose of `target="_blank"` links (opening a new tab) is only conveyed visually through the icon; no text alternative announces it.
+- ⚠️ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - Correct when using the default anchor, but `aria-label`/`aria-current` are dropped when the `render` prop is used.
+
+To apply when using the component:
+
+- [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - Ensure the chosen `sentiment`/`prominence` colors meet 4.5:1 contrast against the surrounding background.
+- [WCAG 2.4.4 - Link Purpose (In Context) (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html) - Use meaningful children or an `accessibleLabel` that describes the link destination.
+- [WCAG 2.4.9 - Link Purpose (Link Only) (Level AAA)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-link-only.html) - Prefer self-describing link text without needing surrounding context.
+- [WCAG 2.5.3 - Label in Name (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html) - When providing an `accessibleLabel`, ensure it contains the visible text of the link.
+
+## Accessibility issues
+
+**High:**
+
+- The `render` prop drops the accessibility-related props passed to `Link`. In the `render` branch only `children`, `className`, `data-testid`, `ref` and `style` are forwarded; `aria-label`, `aria-current`, `aria-keyshortcuts`, `onClick`, `onKeyDown`, `target`, `rel` and `download` are silently ignored. Consumers using `render` cannot set an accessible name/current state through `Link` props, and the automatic `rel="noopener noreferrer"` for `target="_blank"` is lost.
+- `target="_blank"` links are not announced as opening in a new tab/window. The automatically added `OpenInNewIcon` is decorative (`aria-hidden`) and visually conveys this information only. Screen reader users are not warned, violating the intent of 2.4.4 and the G201 technique. Consider adding a visually hidden text (e.g. "Opens in a new tab") or an `accessibleLabel` on the icon.
+
+**Medium:**
+
+- The component exposes an `aria-label` prop but no `accessibleLabel` prop. Per [RFC #6585](https://github.com/scaleway/ultraviolet/discussions/6585), add an `accessibleLabel` property to set the accessible name, deprecate the `aria-label` property, and use its value as a fallback for the accessible name.
+- `oneLine` + `Tooltip` minor overlap — When truncated, the full string remains the accessible name (good) and the same string is duplicated as `aria-describedby` description on focus/hover, causing redundant announcements.
+
+**Low:**
+
+- `href` is optional in the public type, and anchors without an `href` (e.g. `href={undefined}`) are not keyboard focusable and expose no link semantics. `href` should be required to guarantee keyboard access and a proper link role.
+
+## Dependencies
+
+- `Tooltip`: Already accessible (opens on hover + focus, `role="tooltip"`, `aria-describedby`) but might need some changes to avoid the redundant description announcement.
