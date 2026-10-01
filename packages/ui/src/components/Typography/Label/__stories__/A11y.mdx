@@ -41,8 +41,8 @@ To apply when using the component:
 **High:**
 
 - ✅ Required indicator has no accessible label:
-  - The `*` marker was given `aria-label="required"` (`LabelContent.tsx:47`), but the `Text` component did not forward it, so it was silently dropped. As a result, screen readers announced the raw `*` character (e.g. "star" / "asterisk"), which is ambiguous.
-  - **Resolved** by rendering the asterisk as purely decorative (`aria-hidden="true"`, via `Text`, which forwards `aria-hidden`) and removing the ineffective `aria-label` (`LabelContent.tsx`). The required state is now conveyed programmatically via `aria-required` on the associated control (consumer side, see [ARIA2](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA2)).
+  - The `*` marker was given `aria-label="required"`, but the `Text` component did not forward it, so it was silently dropped. As a result, screen readers announced the raw `*` character (e.g. "star" / "asterisk"), which is ambiguous.
+  - **Resolved** by rendering the asterisk as purely decorative (`aria-hidden="true"`, via `Text`, which forwards `aria-hidden`) and removing the ineffective `aria-label`. The required state is now conveyed programmatically via `aria-required` on the associated control (consumer side, see [ARIA2](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA2)).
 
 **Medium:**
 
@@ -58,7 +58,7 @@ To apply when using the component:
 
 - ✅ Pointer cursor on a `<legend>` with `htmlFor`:
   - When `as="legend"` and `htmlFor` was provided, the `htmlFor` styling (`cursor: pointer`) was applied to the `<legend>`, which is misleading since `htmlFor` has no meaning on a legend.
-  - **Resolved** by only applying the pointer cursor when `as === 'label'` (`LabelContent.tsx`).
+  - **Resolved** by only applying the pointer cursor when `as === 'label'` .
 
 </details>
 
