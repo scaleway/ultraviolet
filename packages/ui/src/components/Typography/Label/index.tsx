@@ -20,43 +20,29 @@ export const Label = ({
   disabled,
   style,
   className,
-}: LabelProps) =>
-  labelDescription ? (
-    <Stack alignItems="center" className={className} direction="row" gap="1">
-      <LabelRequiredOrNot
-        as={as}
-        disabled={disabled}
-        htmlFor={htmlFor}
-        id={id}
-        required={required}
-        sentiment={sentiment}
-        size={size}
-        style={style}
-      >
-        {children}
-      </LabelRequiredOrNot>
-      {typeof labelDescription === 'string' ? (
-        <Text as="span" variant="bodySmall">
-          {labelDescription}
-        </Text>
-      ) : (
-        labelDescription
-      )}
-    </Stack>
-  ) : (
-    <LabelRequiredOrNot
-      as={as}
-      className={className}
-      disabled={disabled}
-      htmlFor={htmlFor}
-      id={id}
-      required={required}
-      sentiment={sentiment}
-      size={size}
-      style={style}
-    >
+}: LabelProps) => {
+  const labelProps = { as, disabled, htmlFor, id, required, sentiment, size, style }
+
+  if (labelDescription) {
+    return (
+      <Stack alignItems="center" className={className} direction="row" gap="1">
+        <LabelRequiredOrNot {...labelProps}>{children}</LabelRequiredOrNot>
+        {typeof labelDescription === 'string' ? (
+          <Text as="span" variant="bodySmall">
+            {labelDescription}
+          </Text>
+        ) : (
+          labelDescription
+        )}
+      </Stack>
+    )
+  }
+
+  return (
+    <LabelRequiredOrNot className={className} {...labelProps}>
       {children}
     </LabelRequiredOrNot>
   )
+}
 
 Label.displayName = 'Label'
