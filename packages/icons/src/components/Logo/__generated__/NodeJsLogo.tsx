@@ -37,7 +37,7 @@ export const NodeJsLogo = (props: Omit<IconProps, 'children'>) => {
             d="M17.838 8.756a.04.04 0 0 1 .044 0l.367.212a.04.04 0 0 1 .023.038v.425q-.001.025-.023.038l-.367.212a.04.04 0 0 1-.045 0l-.367-.212a.04.04 0 0 1-.022-.038v-.425q0-.024.022-.038z"
             clipRule="evenodd"
           />
-          <mask id="mask0_341_658" x="5" y="6" maskUnits="userSpaceOnUse">
+          <mask id="mask0_341_658" width="5" height="6" x="5" y="6" maskUnits="userSpaceOnUse">
             <path
               fill="#fff"
               d="M7.266 6.83 5.362 7.929a.23.23 0 0 0-.115.2v2.2a.23.23 0 0 0 .115.199l1.905 1.1a.23.23 0 0 0 .23 0l1.904-1.1a.23.23 0 0 0 .115-.2v-2.2a.23.23 0 0 0-.115-.199l-1.904-1.1a.23.23 0 0 0-.231 0"
@@ -46,7 +46,7 @@ export const NodeJsLogo = (props: Omit<IconProps, 'children'>) => {
           <g mask="url(#mask0_341_658)">
             <path fill="url(#paint0_linear_341_658)" d="m11.44 7.742-5.366-2.63-2.752 5.613 5.367 2.631z" />
           </g>
-          <mask id="mask1_341_658" x="5" y="6" maskUnits="userSpaceOnUse">
+          <mask id="mask1_341_658" width="5" height="6" x="5" y="6" maskUnits="userSpaceOnUse">
             <path
               fill="#fff"
               d="M5.294 10.469a.2.2 0 0 0 .068.059l1.634.944.272.156a.23.23 0 0 0 .178.022l2.009-3.678a.2.2 0 0 0-.054-.043l-1.247-.72-.66-.38a.2.2 0 0 0-.06-.023z"
@@ -55,7 +55,7 @@ export const NodeJsLogo = (props: Omit<IconProps, 'children'>) => {
           <g mask="url(#mask1_341_658)">
             <path fill="url(#paint1_linear_341_658)" d="m2.973 8.52 3.79 5.13 5.012-3.703-3.79-5.13z" />
           </g>
-          <mask id="mask2_341_658" x="5" y="6" maskUnits="userSpaceOnUse">
+          <mask id="mask2_341_658" width="5" height="6" x="5" y="6" maskUnits="userSpaceOnUse">
             <path
               fill="#fff"
               d="M7.359 6.8a.2.2 0 0 0-.092.03l-1.9 1.096 2.048 3.73a.2.2 0 0 0 .082-.028l1.905-1.1a.23.23 0 0 0 .111-.157L7.425 6.804A.2.2 0 0 0 7.36 6.8"

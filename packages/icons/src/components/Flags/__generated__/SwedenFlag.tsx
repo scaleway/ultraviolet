@@ -12,7 +12,7 @@ export const SwedenFlag = ({ disabled, ...props }: Omit<IconProps, 'children'>) 
   <Icon {...props}>
     {disabled ? (
       <>
-        <mask id="mask0_3237_1286" x="1" y="1" maskUnits="userSpaceOnUse">
+        <mask id="mask0_3237_1286" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
           <path fill="#fff" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
         </mask>
         <g mask="url(#mask0_3237_1286)">
@@ -23,7 +23,7 @@ export const SwedenFlag = ({ disabled, ...props }: Omit<IconProps, 'children'>) 
       </>
     ) : (
       <>
-        <mask id="mask0_3237_1281" x="1" y="1" maskUnits="userSpaceOnUse">
+        <mask id="mask0_3237_1281" width="14" height="14" x="1" y="1" maskUnits="userSpaceOnUse">
           <path fill="#fff" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14" />
         </mask>
         <g mask="url(#mask0_3237_1281)">
