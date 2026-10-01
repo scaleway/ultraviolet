@@ -2,6 +2,7 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { beforeAll, describe, expect, it, vi } from 'vitest'
+import { SENTIMENTS } from '../../../../theme'
 import { CopyButton } from '../index'
 
 describe('copyButton', () => {
@@ -18,25 +19,41 @@ describe('copyButton', () => {
   })
 
   it('renders correctly', () => shouldMatchSnapshot(<CopyButton value="Test" />))
-  it.each(['xsmall', 'small', 'medium', 'large'] as const)(`renders correctly sentiment %s`, size =>
-    shouldMatchSnapshot(<CopyButton size={size} value="Test" />),
-  )
-  it.each(['primary', 'neutral'] as const)(`renders correctly sentiment %s`, sentiment =>
-    shouldMatchSnapshot(<CopyButton sentiment={sentiment} value="Test" />),
-  )
+  it.each(['xsmall', 'small', 'medium', 'large'] as const)(`renders correctly sentiment %s`, size => {
+    const { asFragment } = renderWithTheme(<CopyButton size={size} value="Test" />)
 
-  it('renders correctly with bordered', () => shouldMatchSnapshot(<CopyButton bordered value="Test" />))
+    expect(asFragment()).toMatchSnapshot()
+  })
+  it.each(SENTIMENTS)(`renders correctly sentiment %s`, sentiment => {
+    const { asFragment } = renderWithTheme(<CopyButton sentiment={sentiment} value="Test" />)
 
-  it('renders correctly with children', () => shouldMatchSnapshot(<CopyButton value="Test">Copy test</CopyButton>))
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('renders correctly with custom copy text', () =>
-    shouldMatchSnapshot(<CopyButton copyText="Copy me" value="Test" />))
+  it('renders correctly with bordered', () => {
+    const { asFragment } = renderWithTheme(<CopyButton bordered value="Test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('renders correctly with custom copied text', () =>
-    shouldMatchSnapshot(<CopyButton copiedText="Copied!" value="Test" />))
+  it('renders correctly with children', () => {
+    const { asFragment } = renderWithTheme(<CopyButton value="Test">Copy test</CopyButton>)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('renders correctly with custom class name', () =>
-    shouldMatchSnapshot(<CopyButton className="custom-class" value="Test" />))
+  it('renders correctly with custom copy text', () => {
+    const { asFragment } = renderWithTheme(<CopyButton copyText="Copy me" value="Test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders correctly with custom copied text', () => {
+    const { asFragment } = renderWithTheme(<CopyButton copiedText="Copied!" value="Test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders correctly with custom class name', () => {
+    const { asFragment } = renderWithTheme(<CopyButton className="custom-class" value="Test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('should renders correctly with a complex children', async () => {
     const onCopy = vi.fn(() => {})
