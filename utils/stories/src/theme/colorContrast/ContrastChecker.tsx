@@ -1,7 +1,6 @@
 import { CheckIcon, CloseIcon } from '@ultraviolet/icons'
 import { useTheme } from '@ultraviolet/themes'
-import type { consoleLightTheme } from '@ultraviolet/themes'
-import { Badge, Checkbox, Row, Stack, Text } from '@ultraviolet/ui'
+import { Badge, CheckboxGroup, Row, Stack, Text } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import { useEffect, useMemo, useState } from 'react'
@@ -10,15 +9,29 @@ import type { ContrastLevel, Pairing } from './helpers'
 import { contrastStyle } from './styles.css'
 import { previewBackgroundColor, previewTextColor, swatchColor, swatchSize } from './variables.css'
 
-type Theme = typeof consoleLightTheme
+type Background = 'Neutral' | 'Color'
+type Status = 'Pass' | 'Fail' | 'N/A'
+
+const BACKGROUND_OPTIONS: Background[] = ['Neutral', 'Color']
+const STATUS_OPTIONS: Status[] = ['Pass', 'Fail', 'N/A']
 
 const SENTIMENTS = ['primary', 'secondary', 'neutral', 'success', 'danger', 'warning', 'info'] as const
 
+const LEVEL_TO_STATUS: Record<ContrastLevel, Status> = {
+  pass: 'Pass',
+  fail: 'Fail',
+  disabled: 'N/A',
+}
+
 // Module-scope persistence: the theme switcher remounts the story tree, so plain
 // useState is wiped on each light/dark/darker toggle. Keep it here to survive remounts.
-const persist = {
-  highlightFailures: false,
-  hideDisabled: false,
+const persist: {
+  backgrounds: Background[]
+  statuses: Status[]
+  scrollY: number
+} = {
+  backgrounds: BACKGROUND_OPTIONS,
+  statuses: STATUS_OPTIONS,
   scrollY: 0,
 }
 
@@ -86,19 +99,8 @@ const SummaryBar = ({ counts }: { counts: { total: number; pass: number; fail: n
   </Stack>
 )
 
-const PairingCard = ({
-  pairing,
-  highlightFailures,
-}: {
-  pairing: Pairing
-  theme: Theme
-  highlightFailures: boolean
-}) => (
-  <div
-    className={contrastStyle.pairingCard}
-    data-highlight={highlightFailures ? 'true' : 'false'}
-    data-level={pairing.level}
-  >
+const PairingCard = ({ pairing }: { pairing: Pairing }) => (
+  <div className={contrastStyle.pairingCard} data-level={pairing.level}>
     <div
       className={contrastStyle.preview}
       style={assignInlineVars({
@@ -158,8 +160,8 @@ const PairingCard = ({
 
 export const ContrastChecker = () => {
   const theme = useTheme()
-  const [highlightFailures, setHighlightFailures] = useState(persist.highlightFailures)
-  const [hideDisabled, setHideDisabled] = useState(persist.hideDisabled)
+  const [backgrounds, setBackgrounds] = useState<Background[]>(persist.backgrounds)
+  const [statuses, setStatuses] = useState<Status[]>(persist.statuses)
 
   useEffect(() => {
     const onScroll = () => {
@@ -175,39 +177,64 @@ export const ContrastChecker = () => {
       // oxlint-disable-next-line typescript/no-unsafe-type-assertion
       const colors = theme.colors[sentiment] as unknown as Record<string, string>
       const bgColors = filterByPrefix(colors, 'background')
-      const textColors = filterByPrefix(colors, 'text')
 
       const bgMap = new Map(bgColors.map(([key, val]) => [getSuffix(key, 'background'), { key, val }]))
 
-      const pairings: Pairing[] = textColors
-        .map(([textKey, textVal]) => {
-          const suffix = getSuffix(textKey, 'text')
-          const bgMatch = bgMap.get(suffix)
+      const buildPairings = (textEntries: [string, string][], bgVal: string | undefined, bgKey: string | null) =>
+        textEntries
+          .map(([textKey, textVal]): Pairing | null => {
+            const suffix = getSuffix(textKey, 'text')
+            const isDisabled = suffix.toLowerCase().includes('disabled')
 
-          if (!bgMatch) {
-            return null
-          }
-          if (hideDisabled && suffix.toLowerCase().includes('disabled')) {
-            return null
-          }
+            const bgMatch = bgMap.get(suffix)
+            const pairingBgVal = bgVal ?? bgMatch?.val
+            if (!pairingBgVal) {
+              return null
+            }
 
-          const ratio = contrastRatio(textVal, bgMatch.val)
-          const isDisabled = suffix.toLowerCase().includes('disabled')
-          const level: ContrastLevel = isDisabled ? 'disabled' : getContrastLevel(ratio)
+            const ratio = contrastRatio(textVal, pairingBgVal)
+            const level: ContrastLevel = isDisabled ? 'disabled' : getContrastLevel(ratio)
+            // Status filter: keep only selected statuses
+            if (!statuses.includes(LEVEL_TO_STATUS[level])) {
+              return null
+            }
 
-          return {
-            suffix,
-            textKey,
-            textVal,
-            bgKey: bgMatch.key,
-            bgVal: bgMatch.val,
-            ratio,
-            level,
-          }
-        })
-        .filter((p): p is Pairing => p !== null)
+            return {
+              suffix,
+              textKey,
+              textVal,
+              bgKey: bgKey ?? bgMatch?.key ?? 'background',
+              bgVal: pairingBgVal,
+              ratio,
+              level,
+            }
+          })
+          .filter((p): p is Pairing => p !== null)
 
-      return { sentiment, pairings }
+      const pairings: Pairing[] = []
+      if (backgrounds.includes('Color')) {
+        // state-matched backgrounds, all text variants (current display)
+        pairings.push(...buildPairings(filterByPrefix(colors, 'text'), undefined, null))
+      }
+      if (backgrounds.includes('Neutral')) {
+        // every sentiment on the neutral default background, without strong variants
+        const neutralTexts = filterByPrefix(colors, 'text').filter(([key]) => !key.toLowerCase().includes('strong'))
+        pairings.push(...buildPairings(neutralTexts, theme.colors.neutral.background, 'neutral-background'))
+      }
+
+      // Drop exact duplicates (same text variant + background), e.g. the neutral sentiment's
+      // default pairing is produced by both the "color" and "neutral" background modes.
+      const seen = new Set<string>()
+      const uniquePairings = pairings.filter(pairing => {
+        const id = `${pairing.textKey}-${pairing.bgVal}`
+        if (seen.has(id)) {
+          return false
+        }
+        seen.add(id)
+        return true
+      })
+
+      return { sentiment, pairings: uniquePairings }
     })
 
     let total = 0
@@ -229,32 +256,50 @@ export const ContrastChecker = () => {
     }
 
     return { groups, counts: { total, pass, fail, disabled } }
-  }, [theme, hideDisabled])
+  }, [theme, backgrounds, statuses])
 
   return (
     <Stack className={contrastStyle.root} gap={3}>
       <Legend />
       <SummaryBar counts={counts} />
 
-      <Stack direction="row" gap={3} wrap>
-        <Checkbox
-          checked={highlightFailures}
+      <Stack direction="row" gap={10} wrap>
+        <CheckboxGroup
+          direction="row"
+          legend="Background"
+          name="background"
           onChange={e => {
-            persist.highlightFailures = e.target.checked
-            setHighlightFailures(e.target.checked)
+            const value = e.target.value as Background
+            const next = e.target.checked ? [...backgrounds, value] : backgrounds.filter(item => item !== value)
+            persist.backgrounds = next
+            setBackgrounds(next)
           }}
+          value={backgrounds}
         >
-          Highlight failures
-        </Checkbox>
-        <Checkbox
-          checked={hideDisabled}
+          {BACKGROUND_OPTIONS.map(option => (
+            <CheckboxGroup.Checkbox key={option} value={option}>
+              {option}
+            </CheckboxGroup.Checkbox>
+          ))}
+        </CheckboxGroup>
+        <CheckboxGroup
+          direction="row"
+          legend="Status"
+          name="status"
           onChange={e => {
-            persist.hideDisabled = e.target.checked
-            setHideDisabled(e.target.checked)
+            const value = e.target.value as Status
+            const next = e.target.checked ? [...statuses, value] : statuses.filter(item => item !== value)
+            persist.statuses = next
+            setStatuses(next)
           }}
+          value={statuses}
         >
-          Hide disabled colors
-        </Checkbox>
+          {STATUS_OPTIONS.map(option => (
+            <CheckboxGroup.Checkbox key={option} value={option}>
+              {option}
+            </CheckboxGroup.Checkbox>
+          ))}
+        </CheckboxGroup>
       </Stack>
 
       {groups.map(({ sentiment, pairings }) => (
@@ -264,12 +309,7 @@ export const ContrastChecker = () => {
           </Text>
           <Row gap={1.5} templateColumns="repeat(auto-fill, minmax(220px, 1fr))">
             {pairings.map(pairing => (
-              <PairingCard
-                key={pairing.textKey}
-                pairing={pairing}
-                theme={theme}
-                highlightFailures={highlightFailures}
-              />
+              <PairingCard key={`${pairing.bgKey}-${pairing.bgVal}-${pairing.textKey}`} pairing={pairing} />
             ))}
           </Row>
         </Stack>

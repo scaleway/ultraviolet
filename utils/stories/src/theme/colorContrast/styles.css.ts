@@ -37,9 +37,6 @@ const pairingCard = style({
     "&[data-level='pass']": {
       border: `1px solid ${theme.colors.neutral.border}`,
     },
-    "&[data-highlight='true']:not([data-level='fail'])": {
-      opacity: 0.25,
-    },
     "&[data-level='disabled']": {
       border: `1px solid ${theme.colors.neutral.border}`,
     },
