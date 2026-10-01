@@ -9,13 +9,19 @@ import type { ContrastLevel, Pairing } from './helpers'
 import { contrastStyle } from './styles.css'
 import { previewBackgroundColor, previewTextColor, swatchColor, swatchSize } from './variables.css'
 
-type Background = 'neutral' | 'color'
-type Status = 'pass' | 'fail' | 'n/a'
+type Background = 'Neutral' | 'Color'
+type Status = 'Pass' | 'Fail' | 'N/A'
 
-const BACKGROUND_OPTIONS: Background[] = ['neutral', 'color']
-const STATUS_OPTIONS: Status[] = ['pass', 'fail', 'n/a']
+const BACKGROUND_OPTIONS: Background[] = ['Neutral', 'Color']
+const STATUS_OPTIONS: Status[] = ['Pass', 'Fail', 'N/A']
 
 const SENTIMENTS = ['primary', 'secondary', 'neutral', 'success', 'danger', 'warning', 'info'] as const
+
+const LEVEL_TO_STATUS: Record<ContrastLevel, Status> = {
+  pass: 'Pass',
+  fail: 'Fail',
+  disabled: 'N/A',
+}
 
 // Module-scope persistence: the theme switcher remounts the story tree, so plain
 // useState is wiped on each light/dark/darker toggle. Keep it here to survive remounts.
@@ -24,8 +30,8 @@ const persist: {
   statuses: Status[]
   scrollY: number
 } = {
-  backgrounds: ['neutral', 'color'],
-  statuses: ['pass', 'fail', 'n/a'],
+  backgrounds: BACKGROUND_OPTIONS,
+  statuses: STATUS_OPTIONS,
   scrollY: 0,
 }
 
@@ -188,8 +194,8 @@ export const ContrastChecker = () => {
 
             const ratio = contrastRatio(textVal, pairingBgVal)
             const level: ContrastLevel = isDisabled ? 'disabled' : getContrastLevel(ratio)
-            // Status filter: disabled pairings map to the "n/a" status
-            if (!statuses.includes(level === 'disabled' ? 'n/a' : level)) {
+            // Status filter: keep only selected statuses
+            if (!statuses.includes(LEVEL_TO_STATUS[level])) {
               return null
             }
 
@@ -206,11 +212,11 @@ export const ContrastChecker = () => {
           .filter((p): p is Pairing => p !== null)
 
       const pairings: Pairing[] = []
-      if (backgrounds.includes('color')) {
+      if (backgrounds.includes('Color')) {
         // state-matched backgrounds, all text variants (current display)
         pairings.push(...buildPairings(filterByPrefix(colors, 'text'), undefined, null))
       }
-      if (backgrounds.includes('neutral')) {
+      if (backgrounds.includes('Neutral')) {
         // every sentiment on the neutral default background, without strong variants
         const neutralTexts = filterByPrefix(colors, 'text').filter(([key]) => !key.toLowerCase().includes('strong'))
         pairings.push(...buildPairings(neutralTexts, theme.colors.neutral.background, 'neutral-background'))
