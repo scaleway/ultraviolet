@@ -44,6 +44,7 @@ To apply when using the component:
 **High:**
 
 - Meaningful children are hidden from assistive technologies - `role="separator"` has "children presentational: true", so any text or icon children (e.g. an "OR" divider) are removed from the accessibility tree and never announced. Meaningful content should not be passed as children, or the container should not use `role="separator"` when children must be conveyed.
+  - **Proposed fix**: remove `role="separator"` from the container and set `aria-hidden="true"` on one of the two inner `<hr>` elements. The remaining `<hr>` keeps its native `separator` role (with `aria-orientation={direction}`), so exactly one separator is announced while children become accessible. Keep the `aria-hidden` prop on the container as the escape hatch for fully decorative separators.
 
 **Medium:**
 
