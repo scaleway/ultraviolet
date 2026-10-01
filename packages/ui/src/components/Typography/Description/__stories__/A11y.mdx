@@ -1,0 +1,51 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Typography/Description/A11y" />
+
+# Description - Accessibility
+
+A form-feedback component used inside all input components (and standalone) to display helper text, error and success messages below a field. It renders a `role="status"` span with an `id` that can be linked to its input via `aria-describedby`.
+
+## Summary
+
+1. ❌ **Perceivable**: Helper text (neutral `textWeak`) fails contrast in dark and darker themes; boolean `error`/`success` values additionally convey state through color only
+2. ✅ **Operable**: Static text, no keyboard interaction or focus management required
+3. ✅ **Understandable**: Messages are plain text meant to be linked to their field via `aria-describedby`
+4. ❌ **Robust**: `role="status"` is applied unconditionally (even to static helper text) and the live region is only mounted when content exists
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - Helper text fails in the dark themes against ultraviolet's default background colors (see [Color Contrast Checker](https://storybook.ultraviolet.scaleway.com/?path=/docs/customization-color-contrast--docs&globals=theme:dark)).
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - Live region role and accessible name (the text content) are programmatically exposed.
+- ✅ [WCAG 1.4.4 - Resize Text (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html) - Font sizes are in `rem` (`caption` 0.75rem = 12px for `large`/`medium`, `captionSmall` 0.625rem = 10px for `small`), so text scales with browser zoom and user font settings.
+- ❌ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - `role="status"` is applied even for static helper text, and the live region is created/removed from the DOM alongside its content.
+
+To apply when using the component:
+
+- [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Link the Description to its field using `aria-describedby={descriptionId}` so screen readers associate the message with the input.
+- [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - When rendering an error in a custom component, also set `aria-invalid="true"` on the input in error.
+- [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - Helper text must provide meaningful instructions; do not rely on placeholder text as a substitute for the label.
+- [WCAG 3.3.3 - Error Suggestion (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html) - Error messages should suggest how to correct the input.
+- [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - If helper or error content includes icons, provide text alternatives or mark them `aria-hidden` when decorative.
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - **Prefer passing string messages so the state is also conveyed by text**: when `error={true}` or `success={true}` (instead of string) is combined with helper text, the text content is unchanged and only the color signals the state change. Color-blind users cannot perceive it.
+
+## Accessibility issues
+
+**High:**
+
+- The helper text does not meet WCAG 1.4.3 (4.5:1) on elevated surfaces in `dark`and `darker` themes.
+
+**Medium:**
+
+- `role="status"` applied to static helper text - Helper text that is present on page load does not need to be a live region. Applying `role="status"` unconditionally means any dynamic update to the helper is announced as a status message, which can make a page "chatty" for screen reader users. The live region role should only apply to dynamic error/success content. This is a cross-cutting finding already flagged as a dependency in the [TextInput](https://storybook.ultraviolet.scaleway.com/?path=/docs/ui-data-entry-textinput-a11y--docs), [TextArea](https://storybook.ultraviolet.scaleway.com/?path=/docs/ui-data-entry-textarea-a11y--docs), [TimeInput](https://storybook.ultraviolet.scaleway.com/?path=/docs/ui-data-entry-timeinput-a11y--docs) audits. [SelectInput also notes](https://storybook.ultraviolet.scaleway.com/?path=/docs/ui-data-entry-selectinput-a11y--docs&globals=theme:light#dependencies) error messages should ideally be announced with an assertive role (`role="alert"`) rather than the polite `role="status"`.
+
+**Low:**
+
+- Small font sizes - `caption` (0.75rem = 12px) and `captionSmall` (0.625rem = 10px) are below the commonly recommended minimum text size (12px strict minimum, ideally 14px+). Not a WCAG failure (1.4.4/1.4.10 pass since sizes are in `rem`), but 10-12px is hard to read for low-vision users even with correct contrast. Consider a larger default for helper text.
+- The component returns `null` when there is no content, so the `role="status"` region does not exist until a message is rendered. Some screen readers do not reliably announce content when the live region is created at the same time as its content. A persistent live region whose content is swapped in is more robust.
+
+## Dependencies
+
+`Description` is the shared helper/error/success primitive used by the whole Data Entry family (TextInput, TextArea, TimeInput, PhoneInput, SelectInput, Checkbox, Radio, CheckboxGroup, RadioGroup, ...). Fixing the `role="status"`-on-static-text behavior in `Description` will resolve the pending dependency noted in those audits; no fix in those components is required first.
