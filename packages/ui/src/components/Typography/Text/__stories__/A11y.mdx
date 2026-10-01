@@ -1,0 +1,63 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Typography/Text/A11y" />
+
+# Text - Accessibility
+
+## Description
+
+A typography component that renders text with a chosen `variant` (font size/weight from the design tokens), `sentiment` (color), `prominence`, and formatting options (`italic`, `underline`, `strikeThrough`, `oneLine`). It is a presentational element that stays accessible through semantic markup: any element can be used via `as`, it can act as a `<label>` (`htmlFor`), as a live region (`role="status" | "alert"`), and it wraps truncated content in a Tooltip showing the full text when `oneLine` overflows.
+
+## Summary
+
+1. ❌ **Perceivable**: text scales with user settings and is spacing-safe (1.4.4, 1.4.12). However, many `sentiment`/`prominence` text-on-background combinations fail WCAG 1.4.3. See the [Color Contrast Checker](https://storybook.ultraviolet.scaleway.com/?path=/docs/customization-color-contrast--docs). These are theme-token values the component renders, so they must be fixed by updating the theme tokens, not the component.
+2. ✅ **Operable**: not an interactive widget; no keyboard handling required. The `oneLine` overflow Tooltip is keyboard-accessible (wrapper becomes focusable, Escape dismisses, focus ring is visible).
+3. ✅ **Understandable**: text content is readable, `dir` correctly handles RTL/LTR/auto reading direction, and no unexpected context changes occur.
+4. ⚠️ **Robust**: `role` (status/alert), `htmlFor` label association, and Tooltip `aria-describedby` are correctly wired. Minor robustness gaps: the overflow Tooltip description duplicates the element's own text content (double announcement), and `htmlFor` is rendered on any element, not only `<label>`.
+
+## ARIA Pattern
+
+There is no dedicated [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/) pattern for plain text or typography.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.4.4 - Resize Text (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html) - Font sizes and line heights come from the theme typography tokens (`rem`-based), so text scales up to 200% without loss of content.
+- ✅ [WCAG 1.4.12 - Text Spacing (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html) - Line-height and letter-spacing are token-driven and not clipped. For `oneLine` text, increased spacing truncates visually but the full content remains in the DOM and in the overflow Tooltip, so no content is lost.
+- ✅ [WCAG 1.4.13 - Content on Hover or Focus (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html) - The `oneLine` overflow Tooltip appears on both hover and keyboard focus, is hoverable, persistent, and dismissible with Escape (handled by `Tooltip`).
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Semantics are preserved: `as` allows heading/paragraph/label elements, `htmlFor` + `as="label"` associates the text as a form label, and `role="status" | "alert"` exposes live-region semantics.
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - The `oneLine` overflow wrapper becomes focusable (`tabIndex`) and keeps the browser-default focus ring, so keyboard users see where focus is while reading the tooltip.
+- ✅ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - The `role` prop (`status`/`alert`) gives consumers a programmatic way to expose dynamic text as a live region.
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - `role` is restricted to `status`/`alert`, and the Tooltip associates the trigger with the tooltip via `aria-describedby`.
+- ❌ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - The `sentiment`/`prominence` text tokens the component renders fall below 4.5:1 on the intended backgrounds listed in the [Color Contrast Checker](https://storybook.ultraviolet.scaleway.com/?path=/docs/customization-color-contrast--docs). These are theme-token values, they require a tokens update, not a component change.
+
+To apply when using the component:
+
+- [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - Verify the chosen `sentiment` against the actual background with the [Color Contrast Checker](https://storybook.ultraviolet.scaleway.com/?path=/docs/customization-color-contrast--docs) for the theme in use. `white`/`black` sentiments always render those colors regardless of theme, and `weak`/`disabled` tones are dimmer — they are only safe on backgrounds that provide enough contrast.
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - If a `sentiment` conveys meaning (e.g. success/danger), pair it with text or an icon so the information is not color-only.
+- [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Use the `as` prop with the semantically correct element (`h1`-`h6`, `p`, `label`, `span`) so the structure is programmatically exposed.
+- [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - Only set `role="status"`/`role="alert"` on dynamically updated content. A static `role="alert"` text that exists on page load is announced without user action.
+
+## Accessibility issues
+
+**High:**
+
+- Several intended text-on-background pairings exposed by the [Color Contrast Checker](https://storybook.ultraviolet.scaleway.com/?path=/docs/customization-color-contrast--docs) fail WCAG 1.4.3: `neutral` `weak` prominence fails on `backgroundWeak` in **all three themes**, `secondary` on its own background fails in light, and `textStrong` on `backgroundStrong` fails in dark/darker for `danger` and `info`/`success` in darker. These are theme-token values the Text component renders and cannot fix by itself, they need a tokens update.
+
+**Medium:**
+
+- Redundant overflow Tooltip description (`oneLine`). When the text overflows, the Tooltip sets `aria-describedby` on the wrapper to a tooltip whose content is the full children string (via `recursivelyGetChildrenString`). But the Text element itself still contains the full untruncated text in the DOM (the ellipsis is CSS-only). Screen readers therefore announce the full text twice. Sighted users benefit from the tooltip, but assistive-technology users get pure redundancy. Consider suppressing the tooltip/`aria-describedby` when the tooltip content equals the element's own text content.
+
+- `disabled` is purely visual and not exposed to assistive technology. The prop only changes the text color; it sets no `aria-disabled` and has no effect on interactive semantics. If a consumer combines `disabled` with an interactive `as` (e.g. `as="button"`), the native control would not be disabled. If `disabled` text conveys that a related control is inactive, the control itself should carry the disabled state.
+
+**Low:**
+
+- `htmlFor` is rendered on whatever element `as` resolves to. If `as` is not `label` (e.g. `div`, `span`, `p`), the resulting `for` attribute is invalid HTML and provides no label association. Consider only forwarding `htmlFor` when `as === "label"` (or issuing a dev-time warning).
+
+- Extra tab stop per overflowing `oneLine` text. Each truncated text that shows an overflow tooltip becomes focusable (`tabIndex` on the Tooltip wrapper), so pages with many truncated texts add multiple redundant tab stops for keyboard users. Acceptable tradeoff for keyboard access to the tooltip, but worth keeping in mind for dense pages.
+
+## Dependencies
+
+- `Tooltip` - The `oneLine` overflow mechanism relies on the Tooltip component for hover/focus display, keyboard access (wrapper `tabIndex`), Escape dismissal, and `aria-describedby` association. To fix the redundant overflow description (double announcement), the `Tooltip` needs an opt-out prop that skips setting `aria-describedby`/`aria-labelledby` and adds `aria-hidden` on the tooltip element. `Text` would enable it when `oneLine`, since the full text is already the element's accessible name.
+- `Theme` (typography/colors) - Text sizes, line-heights and `sentiment`/`disabled` colors come from the theme tokens. Several intended text-on-background pairings (see `weak`/`secondary`/`textStrong` above) fall below the WCAG 1.4.3 4.5:1 threshold. Everything is tracked in the [Color Contrast Checker](https://storybook.ultraviolet.scaleway.com/?path=/docs/customization-color-contrast--docs) and fixable only via a theme tokens update.
