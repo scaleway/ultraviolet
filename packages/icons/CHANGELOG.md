@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.6.3
+
+### Patch Changes
+
+- [#6974](https://github.com/scaleway/ultraviolet/pull/6974) [`eecc7a9`](https://github.com/scaleway/ultraviolet/commit/eecc7a9ce7922a5b7bd2a9fde1d7f803a66636f3) Thanks [@lisalupi](https://github.com/lisalupi)! - `Flags`: fix `GitlabRunnerLogo` by updating the icons generation files. It now keeps inner `height` and `width`. No visual impact for other components. Beware, this may break snapshots (`SwedenFlag`, `BaaiLogo`, `GitlabRUnnerLogo`, `NodeJsLogo` and `PowerBiLogo` svg content has been updated)
+
 ## 5.6.2
 
 ### Patch Changes

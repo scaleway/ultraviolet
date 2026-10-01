@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 6.0.31
+
+### Patch Changes
+
+- [#6950](https://github.com/scaleway/ultraviolet/pull/6950) [`2f5d0ae`](https://github.com/scaleway/ultraviolet/commit/2f5d0ae11fb4d33e589bb4115ca805ee114baaea) Thanks [@lisalupi](https://github.com/lisalupi)! - Audit and update illustration accessibility
+
 ## 6.0.30
 
 ### Patch Changes
