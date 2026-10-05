@@ -3,8 +3,13 @@
   "mcp": {
     "wcag": {
       "type": "local",
-      "enabled": false,
-      "command": ["pnpm", "wcag-guidelines-mcp"]
+      "command": ["pnpm", "wcag-guidelines-mcp"],
+      "enabled": false
+    },
+    "ultraviolet-storybook": {
+      "type": "remote",
+      "url": "http://localhost:6006/mcp",
+      "enabled": false
     }
   }
 }

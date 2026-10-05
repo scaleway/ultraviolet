@@ -17,6 +17,7 @@ const main = defineMain({
     '@storybook/addon-a11y',
     '@storybook/addon-themes',
     'storybook-addon-tag-badges',
+    '@storybook/addon-mcp',
   ],
 
   core: {
