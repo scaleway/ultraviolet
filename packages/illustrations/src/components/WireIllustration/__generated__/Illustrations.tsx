@@ -78,6 +78,7 @@ export const ILLUSTRATIONS = {
   quantumApplication:
     'https://assets.scaleway.com/illustrations/products/quantumApplication/quantum-application-wire.svg',
   redis: 'https://assets.scaleway.com/illustrations/products/redis/redis-wire.svg',
+  resourceExplorer: 'https://assets.scaleway.com/illustrations/products/resourceExplorer/resource-explorer-wire.svg',
   savingsPlan: 'https://assets.scaleway.com/illustrations/products/savingsPlan/savings-plan-wire.svg',
   secretManager: 'https://assets.scaleway.com/illustrations/products/secretManager/secret-manager-wire.svg',
   serverlessDB: 'https://assets.scaleway.com/illustrations/products/serverlessDB/serverlessDB-wire.svg',

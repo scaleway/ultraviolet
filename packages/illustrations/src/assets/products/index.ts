@@ -56,6 +56,7 @@ import * as publicGateway from './publicGateway'
 import * as quantum from './quantum'
 import * as quantumApplication from './quantumApplication'
 import * as redis from './redis'
+import * as resourceExplorer from './resourceExplorer'
 import * as savingsPlan from './savingsPlan'
 import * as secretManager from './secretManager'
 import * as serverlessDB from './serverlessDB'
@@ -126,6 +127,7 @@ export {
   quantum,
   quantumApplication,
   redis,
+  resourceExplorer,
   savingsPlan,
   secretManager,
   serverlessDB,
