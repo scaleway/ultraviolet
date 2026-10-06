@@ -1,5 +1,5 @@
 import type { CSSProperties, MouseEvent, ReactNode } from 'react'
-import type { SENTIMENTS, sizes } from './constants'
+import type { SENTIMENTS, Size } from './constants'
 
 // This type defines an array of string that should have a length of 0, 1, or 2
 export type Colors = [] | [string] | [string, string] | readonly [string, string] | readonly [string] | readonly []
@@ -10,7 +10,7 @@ export type Shape = 'circle' | 'square'
 
 type CommonProps = {
   shape: Shape
-  size?: keyof ReturnType<typeof sizes>
+  size?: Size
   upload?: boolean
   onClick?: (event?: MouseEvent<HTMLDivElement>) => void
   className?: string
