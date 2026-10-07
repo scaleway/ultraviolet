@@ -62,7 +62,7 @@ This version is recommended for projects that import the static CSS files (`ligh
 ```tsx
 import '@ultraviolet/themes/light.css'
 import '@ultraviolet/themes/dark.css'
-import '@ultraviolet/themes/darker.css'
+import '@ultraviolet/themes/darker.css' // OR import '@ultraviolet/themes/themes.css' to import all three themes at once
 import { ThemeProviderV2 } from '@ultraviolet/themes'
 
 export const App = () => (

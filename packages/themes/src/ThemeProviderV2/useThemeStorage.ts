@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { DEFAULT_THEME_STORAGE_KEY, DEFAULT_THEME_VALUES } from './constants'
 import type { LocalStorageConfig, ThemesExtended } from './types'
 
@@ -43,9 +43,25 @@ export const useThemeStorage = ({ enabled, localStorageConfig, chosenTheme, onTh
 
   const storageKey = localStorageConfig?.key ?? DEFAULT_THEME_STORAGE_KEY
 
-  // Update local storage when `chosenTheme` changes
+  const [hasRestored, setHasRestored] = useState(false)
+
+  // Restore the persisted theme on mount
   useEffect(() => {
     if (!enabled) {
+      return
+    }
+    const storage = getLocalStorage()
+    const storedTheme = storage ? THEMES.find(key => storageValues[key] === storage.getItem(storageKey)) : undefined
+    if (storedTheme) {
+      onThemeChange(storedTheme)
+    }
+    // oxlint-disable-next-line react/set-state-in-effect
+    setHasRestored(true)
+  }, [enabled, storageKey, storageValues, onThemeChange])
+
+  // Update local storage when `chosenTheme` changes
+  useEffect(() => {
+    if (!enabled || !hasRestored) {
       return
     }
     const storage = getLocalStorage()
@@ -54,7 +70,7 @@ export const useThemeStorage = ({ enabled, localStorageConfig, chosenTheme, onTh
     }
 
     storage.setItem(storageKey, storageValues[chosenTheme])
-  }, [enabled, storageKey, storageValues, chosenTheme])
+  }, [enabled, hasRestored, storageKey, storageValues, chosenTheme])
 
   // Updates theme to match storage
   useEffect(() => {

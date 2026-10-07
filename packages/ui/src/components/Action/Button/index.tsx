@@ -1,7 +1,7 @@
 'use client'
 
 import type { XOR } from '@scaleway/types'
-import { useTheme, useThemeV2 } from '@ultraviolet/themes'
+import { useResolvedTheme } from '@ultraviolet/themes'
 import { cn, renderElement } from '@ultraviolet/utils'
 import type { RenderProp } from '@ultraviolet/utils'
 import { forwardRef, useMemo } from 'react'
@@ -156,15 +156,11 @@ export const Button = forwardRef<Element, BaseButtonProps>(
     ref,
   ) => {
     const computeIsDisabled = disabled || isLoading
-    const { theme, defined } = useTheme()
-    const { theme: themeV2, defined: definedV2 } = useThemeV2()
-
-    const fallBackTheme = defined ? theme : 'light'
-    const computedTheme = definedV2 ? themeV2 : fallBackTheme
+    const theme = useResolvedTheme()
 
     const computedSentimentLoader = useMemo(() => {
       if (variant === 'filled' && !['black', 'white'].includes(sentiment)) {
-        if (computedTheme === 'light') {
+        if (theme === 'light') {
           return 'white'
         }
 
@@ -172,7 +168,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
       }
 
       return sentiment
-    }, [sentiment, computedTheme, variant])
+    }, [sentiment, theme, variant])
 
     const tooltipText = tooltipLabel || tooltipDescription || tooltip
     const tooltipRelation = tooltipLabel ? 'label' : 'description'
