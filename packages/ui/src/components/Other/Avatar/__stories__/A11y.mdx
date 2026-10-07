@@ -1,0 +1,63 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Other/Avatar/A11y" />
+
+# Avatar - Accessibility
+
+## Description
+
+Avatar is a graphic element used to represent a user, a product, or an entity. It can display an image, an icon, initials (text), or a set of colors, and can be turned into a clickable control (optionally with an `upload` overlay) via the `onClick` prop.
+
+## Summary
+
+1. ❌ **Perceivable**: the `image` variant is rendered as a CSS background image and cannot expose any text alternative when the image conveys meaning, failing 1.1.1.
+2. ❌ **Operable**: the clickable avatar is not focusable from the keyboard (no `tabIndex`) and has no visible focus indicator, failing 2.1.1 and 2.4.7.
+3. ✅ **Understandable**: no 3.x.x rules apply to this component.
+4. ❌ **Robust**: the button role relies on visible content for its name; initials (`text` variant) are not descriptive of the action and the other variants have no name at all, failing 4.1.2.
+
+## ARIA Pattern
+
+There is no dedicated ARIA pattern for avatars. For non-text content refer to [WCAG 1.1.1 Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html). When the avatar is interactive, it behaves as a button:
+
+- [ARIA Button Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/button/)
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - The `image` variant is displayed through a CSS `background-image`, which is invisible to assistive technology and cannot receive a text alternative.
+- ✅ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - Text and icon variants use theme color tokens designed to meet contrast requirements.
+- ❌ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - When `onClick` is set, the container gets `role="button"` but no `tabIndex`, so it can never receive keyboard focus and the `onKeyDown` handler is unreachable.
+- ❌ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - No visible focus indicator is styled for the interactive avatar.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The button role has no way to set an explicit accessible name: the `text` variant falls back to initials (not descriptive of the action) and the `user`, `image`, `icon`, and `colors` variants expose no name at all.
+
+To apply when using the component:
+
+- [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - Provide an accessible label for `image` avatars that convey meaning (e.g. profile picture of a user). Decorative avatars do not need one.
+- [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - For clickable avatars, provide an explicit label that describes the action (e.g. `accessibleLabel="Change profile picture"`) instead of relying on initials. This is only needed for interactive avatars, not decorative ones.
+
+## Accessibility issues
+
+**Critical:**
+
+- Clickable avatar is not keyboard accessible - When `onClick` is provided, the container has `role="button"` but lacks `tabIndex={0}`, so it is skipped by keyboard users. The `onKeyDown` handler that listens for Enter/Space can never fire because the element cannot be focused (2.1.1).
+
+**High:**
+
+- No way to set an explicit accessible name - The component exposes no `aria-label`/`accessibleLabel` prop. For clickable avatars, initials (`text` variant) are not descriptive of the action, and the `user`, `image`, `icon`, and `colors` variants have no name at all, so screen readers announce an unnamed "button" (4.1.2). The component should expose an optional `accessibleLabel` prop (following the `Icon` component convention) that sets the accessible name when present.
+- No text alternative for the `image` variant - The image is applied via CSS `background-image`, which is not exposed to assistive technology and cannot carry an `alt`/text alternative. For images that convey meaning (e.g. who the user is), an accessible label must be provided (1.1.1).
+- No visible focus indicator - Even if the avatar were made focusable, no `:focus-visible` style is defined, so sighted keyboard users would have no indication of focus (2.4.7).
+
+**Medium:**
+
+- Space key does not prevent default - In the `onKeyDown` handler, pressing Space triggers `onClick` without `event.preventDefault()`, which may also scroll the page.
+- Upload overlay is hover-only - The `upload` overlay is shown only on `:hover` (`styles.css.ts`), with no `:focus-within`/`:focus-visible` equivalent. Keyboard users cannot perceive the upload affordance.
+
+**Low:**
+
+- Decorative content not explicitly hidden - The `colors` variant renders an empty `<span>` purely for visual formatting; it could be marked `aria-hidden="true"`.
+- Prefer a native `<button>` - Replacing the clickable `<div role="button">` with a native `<button>` would provide focusability, Enter/Space activation, and an accessible name for free.
+
+## Dependencies
+
+No external component dependencies. The `Icon` component already sets `aria-hidden` on decorative icons, which is correct.
