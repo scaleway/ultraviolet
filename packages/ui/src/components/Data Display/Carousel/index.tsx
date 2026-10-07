@@ -17,18 +17,18 @@ type CarouselProps = {
  */
 export const Carousel = ({ children, className, 'data-testid': dataTestId = 'scrollbar' }: CarouselProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
-  let intervalLeft: ReturnType<typeof setInterval> | undefined
-  let intervalRight: ReturnType<typeof setInterval> | undefined
+  const intervalLeftRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined)
+  const intervalRightRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined)
 
   const handleScrollRight = () => {
-    intervalRight = setInterval(() => {
+    intervalRightRef.current = setInterval(() => {
       if (scrollRef.current?.scrollTo && scrollRef.current?.scrollLeft) {
         scrollRef.current.scrollTo?.(scrollRef.current.scrollLeft - 25, 0)
       }
     }, 30)
   }
   const handleScrollLeft = () => {
-    intervalLeft = setInterval(() => {
+    intervalLeftRef.current = setInterval(() => {
       if (scrollRef.current?.scrollTo && scrollRef.current?.scrollLeft) {
         scrollRef.current.scrollTo(scrollRef.current.scrollLeft + 25, 0)
       }
@@ -42,8 +42,8 @@ export const Carousel = ({ children, className, 'data-testid': dataTestId = 'scr
   }
 
   const cleanUp = () => {
-    clearInterval(intervalLeft)
-    clearInterval(intervalRight)
+    clearInterval(intervalLeftRef.current)
+    clearInterval(intervalRightRef.current)
   }
 
   useEffect(() => cleanUp)
@@ -56,7 +56,7 @@ export const Carousel = ({ children, className, 'data-testid': dataTestId = 'scr
         className={carouselStyle.beforeScroll}
         data-testid={`${dataTestId}-before`}
         onFocus={handleScrollRight}
-        onMouseLeave={() => clearInterval(intervalRight)}
+        onMouseLeave={() => clearInterval(intervalRightRef.current)}
         onMouseOver={handleScrollRight}
       />
       {/* oxlint-disable-next-line jsx-a11y/no-static-element-interactions */}
@@ -92,7 +92,7 @@ export const Carousel = ({ children, className, 'data-testid': dataTestId = 'scr
         className={carouselStyle.afterScroll}
         data-testid={`${dataTestId}-after`}
         onFocus={handleScrollLeft}
-        onMouseLeave={() => clearInterval(intervalLeft)}
+        onMouseLeave={() => clearInterval(intervalLeftRef.current)}
         onMouseOver={handleScrollLeft}
       />
     </div>

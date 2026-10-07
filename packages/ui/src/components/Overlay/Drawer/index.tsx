@@ -65,6 +65,8 @@ export const BaseDrawer = ({
     const targetElement = push === 'body' ? document?.body : push?.current
 
     if (targetElement && push) {
+      // intentional DOM side-effect on the consumer's pushed element
+      // oxlint-disable-next-line react/immutability
       targetElement.dataset['drawer'] = size
       if (!targetElement.classList.contains(drawerStyle.contentToPushStyle)) {
         targetElement.classList.add(drawerStyle.contentToPushStyle)
@@ -76,6 +78,8 @@ export const BaseDrawer = ({
     const targetElement = push === 'body' ? document?.body : push?.current
 
     if (targetElement && push) {
+      // intentional DOM side-effect on the consumer's pushed element
+      // oxlint-disable-next-line react/immutability
       targetElement.dataset['drawer'] = 'none'
       targetElement.classList.remove(drawerStyle.contentToPushStyle)
     }
