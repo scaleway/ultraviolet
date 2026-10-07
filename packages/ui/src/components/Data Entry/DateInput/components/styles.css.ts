@@ -20,15 +20,25 @@ export const dayMonth = recipe({
   variants: {
     variant: {
       selected: {
-        color: theme.colors.neutral.textStronger,
+        color: theme.colors.primary.textStrong,
+        selectors: {
+          '&:disabled': {
+            backgroundColor: theme.colors.primary.backgroundStrongDisabled,
+            color: theme.colors.primary.textStrongDisabled,
+          },
+        },
       },
       'in-range': {
         backgroundColor: theme.colors.primary.background,
-        color: theme.colors.primary.textHover,
+        color: theme.colors.primary.text,
         selectors: {
-          '&:hover': {
-            backgroundColor: theme.colors.primary.backgroundStrongHover,
-            color: theme.colors.neutral.textStronger,
+          '&:hover:not(:disabled)': {
+            backgroundColor: theme.colors.primary.backgroundHover,
+            color: theme.colors.primary.textHover,
+          },
+          '&:disabled': {
+            backgroundColor: theme.colors.primary.backgroundDisabled,
+            color: theme.colors.primary.textDisabled,
           },
         },
       },
