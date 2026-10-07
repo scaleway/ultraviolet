@@ -1,69 +1,43 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { MosaicIcon } from '@ultraviolet/icons/MosaicIcon'
+import { StarIcon } from '@ultraviolet/icons'
 import { Avatar } from '..'
 import { Stack } from '../../../Layout/Stack'
+import { ICON_SIZE_BY_AVATAR_SIZE, SIZES } from '../constants'
 
 export const Size: StoryFn<typeof Avatar> = props => (
   <Stack gap={2}>
     <Stack direction="row" gap={2}>
-      <>
-        <Avatar {...props} />
-        <Avatar shape="circle" size="medium" text="UV" variant="text" />
-        <Avatar shape="circle" size="small" text="UV" variant="text" />
-        <Avatar shape="circle" size="xsmall" text="UV" variant="text" />
-      </>
-      <>
-        <Avatar shape="circle" size="large" variant="icon">
-          <MosaicIcon />
-        </Avatar>
-        <Avatar shape="circle" size="medium" variant="icon">
-          <MosaicIcon />
-        </Avatar>
-        <Avatar shape="circle" size="small" variant="icon">
-          <MosaicIcon />
-        </Avatar>
-        <Avatar shape="circle" size="xsmall" variant="icon">
-          <MosaicIcon />
-        </Avatar>
-      </>
+      {SIZES.map(size => (
+        <Avatar
+          key={size}
+          shape="square"
+          variant="text"
+          text={props.text || 'UV'}
+          size={size}
+          sentiment={props.sentiment}
+          upload={props.upload}
+        />
+      ))}
     </Stack>
     <Stack direction="row" gap={2}>
-      <>
-        <Avatar shape="square" size="large" text="UV" variant="text" />
-        <Avatar shape="square" size="medium" text="UV" variant="text" />
-        <Avatar shape="square" size="small" text="UV" variant="text" />
-        <Avatar shape="square" size="xsmall" text="UV" variant="text" />
-      </>
-      <>
-        <Avatar shape="square" size="large" variant="icon">
-          <MosaicIcon />
+      {SIZES.map(size => (
+        <Avatar key={size} shape="circle" variant="icon" size={size} sentiment={props.sentiment} upload={props.upload}>
+          <StarIcon size={ICON_SIZE_BY_AVATAR_SIZE[size]} />
         </Avatar>
-        <Avatar shape="square" size="medium" variant="icon">
-          <MosaicIcon />
-        </Avatar>
-        <Avatar shape="square" size="small" variant="icon">
-          <MosaicIcon />
-        </Avatar>
-        <Avatar shape="square" size="xsmall" variant="icon">
-          <MosaicIcon />
-        </Avatar>
-      </>
+      ))}
     </Stack>
   </Stack>
 )
 
 Size.args = {
-  shape: 'circle',
-  size: 'large',
   text: 'UV',
-  variant: 'text',
 }
 
 Size.parameters = {
   docs: {
     description: {
       story:
-        'Using prop `size` you can change the size of the avatar. When variant is set to `icon` the icon size will automatically scale based on avatar size.',
+        'Using the prop `size` you can change the size of the avatar. Make sure to use the right icon size corresponding to the Avatar size.',
     },
   },
 }

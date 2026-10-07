@@ -69,6 +69,7 @@ const container = recipe({
       medium: sizeStyle('medium'),
       small: sizeStyle('small'),
       xsmall: sizeStyle('xsmall'),
+      xxsmall: sizeStyle('xxsmall'),
     },
   },
 })
@@ -108,6 +109,7 @@ const uploadContainer = recipe({
       medium: {},
       small: {},
       xsmall: {},
+      xxsmall: {},
     },
   },
 })
@@ -130,6 +132,7 @@ const productIconContainer = recipe({
       medium: sizeStyle('medium'),
       small: sizeStyle('small'),
       xsmall: sizeStyle('xsmall'),
+      xxsmall: sizeStyle('xxsmall'),
     },
   },
 })
@@ -170,6 +173,7 @@ const colorsAvatar = recipe({
       medium: sizeStyle('medium'),
       small: sizeStyle('small'),
       xsmall: sizeStyle('xsmall'),
+      xxsmall: sizeStyle('xxsmall'),
     },
   },
 })
