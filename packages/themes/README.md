@@ -52,6 +52,82 @@ export const App = () => (
 
 > **Note**:
 > The static CSS imports above are **not** required for the CSS variables to work as long as `ThemeProvider` is used because the provider injects them at runtime. Importing the theme CSS file only **reduces FOUC**: it inlines the variables into the initial HTML, whereas without it the theme is applied client-side after first paint.
+>
+> This does **not** apply to `ThemeProviderV2` which relies on the static CSS files to provide the variables (see below).
+
+#### With static CSS files and `ThemeProviderV2`
+
+This version is recommended for projects that import the static CSS files (`light.css`, `dark.css`, `darker.css`) which provide the theme variables. Contrary to `ThemeProvider`, it does **not** inject the CSS variables at runtime, so the variables already defined in the CSS are not duplicated. It also handles the theme logic internally: initialization, switching, system preference and optional persistence.
+
+```tsx
+import '@ultraviolet/themes/light.css'
+import '@ultraviolet/themes/dark.css'
+import '@ultraviolet/themes/darker.css'
+import { ThemeProviderV2 } from '@ultraviolet/themes'
+
+export const App = () => (
+  <ThemeProviderV2>
+    <YourApp />
+  </ThemeProviderV2>
+)
+```
+
+The provider manages the theme internally:
+
+- it reads the initial theme from the `light-theme`/`dark-theme`/`darker-theme` class on the document element, falling back to `"system"`. This makes it possible to retrieve a theme saved in `localStorage` and applied with an inline script before the hydration,
+- when the chosen theme is `"system"`, it follows the `prefers-color-scheme` media query and updates the theme accordingly,
+- it updates the `*-theme` class on the document element whenever the theme changes,
+- with the `localStorageConfig` prop, it persists the chosen theme in `localStorage` and keeps it in sync across all open tabs/windows.
+
+Use `useThemeV2` to retrieve the current theme and `setTheme` to switch it from a child component:
+
+```tsx
+import { ThemeProviderV2, useThemeV2 } from '@ultraviolet/themes'
+import type { Themes } from '@ultraviolet/themes'
+import { SwitchButton } from '@ultraviolet/ui'
+
+const ThemeSwitcher = () => {
+  const { theme, setTheme } = useThemeV2()
+
+  return (
+    <SwitchButton
+      onChange={event => {
+        setTheme(event.currentTarget.value as Themes)
+      }}
+      value={theme}
+    >
+      <SwitchButton.Option value="light">light mode</SwitchButton.Option>
+      <SwitchButton.Option value="dark">dark mode</SwitchButton.Option>
+      <SwitchButton.Option value="darker">darker mode</SwitchButton.Option>
+    </SwitchButton>
+  )
+}
+```
+
+`initialTheme` and `localStorageConfig` are both optional. Storage is only enabled when `localStorageConfig` is provided:
+
+```tsx
+<ThemeProviderV2 initialTheme="system" localStorageConfig={{ key: 'theme-preference' }}>
+  <YourApp />
+</ThemeProviderV2>
+```
+
+##### Customizing theme variables
+
+`extendTheme` is **not** supported by `ThemeProviderV2`: since the provider does not inject any variable at runtime, there is no theme object to extend. Instead, override the CSS variables directly in a `.css` file, scoped to the theme class (`:root.light-theme`, `:root.dark-theme`, `:root.darker-theme`):
+
+```css
+@import '@ultraviolet/themes/light.css' layer(ultraviolet);
+@import '@ultraviolet/themes/dark.css' layer(ultraviolet);
+
+:root.light-theme {
+  --color-primary-text: #ff00aa;
+}
+```
+
+The override must be scoped to the theme class (so it only applies when the corresponding theme is active) and must win the cascade: either declare it **after** the imported theme files, or wrap the imports and the overrides in cascade layers and give the overrides a later layer order.
+
+Our components currently support both `ThemeProvider` and `ThemeProviderV2`, but only one of them is necessary.
 
 #### Normalized css
 

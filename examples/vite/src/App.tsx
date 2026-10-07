@@ -1,5 +1,7 @@
+import { DatadogLogo } from '@ultraviolet/icons/logo/DatadogLogo'
 import { instanceOriginal } from '@ultraviolet/illustrations/products/instance'
-import { consoleDarkerTheme, consoleDarkTheme, consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
+import { ThemeProviderV2, useThemeV2 } from '@ultraviolet/themes'
+import type { Themes } from '@ultraviolet/themes'
 import {
   Alert,
   Button,
@@ -21,38 +23,39 @@ import ubuntu from './assets/ubuntu.svg'
 import { centosOptions, debianOptions, ubuntuOptions } from './constants'
 import { DemoForm } from './DemoForm'
 import './style.css'
+import '@ultraviolet/themes/light.css'
+import '@ultraviolet/themes/dark.css'
+import '@ultraviolet/themes/darker.css'
 
-const getTheme = (theme: string) => {
-  if (theme === 'dark') {
-    return consoleDarkTheme
-  }
-  if (theme === 'darker') {
-    return consoleDarkerTheme
-  }
-  return consoleLightTheme
+const ThemeSwitcher = () => {
+  const { theme, setTheme } = useThemeV2()
+
+  return (
+    <SwitchButton
+      onChange={event => {
+        setTheme(event.currentTarget.value as Themes)
+      }}
+      value={theme}
+    >
+      <SwitchButton.Option value="light">light mode</SwitchButton.Option>
+      <SwitchButton.Option value="dark">dark mode</SwitchButton.Option>
+      <SwitchButton.Option value="darker">darker mode</SwitchButton.Option>
+    </SwitchButton>
+  )
 }
+
 export const App = () => {
   const [count, setCount] = useState(0)
-  const [mode, setMode] = useState('light')
   const [value, onChange] = useState<string>()
   const [option, onChangeOption] = useState<string>()
 
   return (
-    <ThemeProvider theme={getTheme(mode)}>
+    <ThemeProviderV2 initialTheme="system" localStorageConfig={{ key: 'theme-preference' }}>
       <Stack gap={4} style={{ padding: '32px' }} alignItems="center" width="100%">
-        <SwitchButton
-          onChange={value => {
-            setMode(value.currentTarget.value)
-          }}
-          value="light"
-        >
-          <SwitchButton.Option value="light">light mode</SwitchButton.Option>
-          <SwitchButton.Option value="dark">dark mode</SwitchButton.Option>
-          <SwitchButton.Option value="darker">darker mode</SwitchButton.Option>
-        </SwitchButton>
-        <Stack className="test" style={{ color: 'var(--color-primary-text)' }}>
-          This box uses css variables from ultraviolet/theme outside of vanilla extract without importing{' '}
-          <code>'@ultraviolet/themes/light.css'</code> (and variants)
+        <ThemeSwitcher />
+        <DatadogLogo size="large" />
+        <Stack className="test" style={{ color: 'var(--color-primary-text)', padding: '8px' }}>
+          This box uses css variables from ultraviolet/theme outside of vanilla extract
         </Stack>
         <Separator direction="horizontal" style={{ width: '100%' }} />
         <Text as="h2" variant="headingStrong">
@@ -99,6 +102,6 @@ export const App = () => {
         </Text>
         <DemoForm />
       </Stack>
-    </ThemeProvider>
+    </ThemeProviderV2>
   )
 }

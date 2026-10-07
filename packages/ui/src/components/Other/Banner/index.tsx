@@ -1,10 +1,10 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-import { useTheme } from '@ultraviolet/themes'
+import { useTheme, useThemeV2 } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { useMemo, useState } from 'react'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import type { CSSProperties, ComponentProps, ReactNode } from 'react'
 import { Button } from '../../Action/Button'
 import { Link } from '../../Action/Link'
 import { Stack } from '../../Layout/Stack'
@@ -55,16 +55,21 @@ export const Banner = ({
   'data-testid': dataTestId,
   style,
 }: BannerProps) => {
-  const { theme } = useTheme()
+  const { theme, defined } = useTheme()
+  const { theme: themeV2, defined: definedV2 } = useThemeV2()
+
+  const fallBackTheme = defined ? theme : 'light'
+  const computedTheme = definedV2 ? themeV2 : fallBackTheme
+
   const defaultImage = size === 'small' ? defaultIllustrationSmall : defaultIllustration
 
   const prominence = useMemo(() => {
-    if (variant === 'promotional' || theme === 'dark' || theme === 'darker') {
+    if (variant === 'promotional' || computedTheme === 'dark' || computedTheme === 'darker') {
       return 'strong'
     }
 
     return 'default'
-  }, [variant, theme])
+  }, [variant, computedTheme])
 
   const [opened, setOpened] = useState(true)
 
@@ -106,7 +111,11 @@ export const Banner = ({
           >
             {title}
           </Text>
-          <Text as="p" sentiment={variant === 'promotional' || theme !== 'light' ? 'white' : 'neutral'} variant="body">
+          <Text
+            as="p"
+            sentiment={variant === 'promotional' || computedTheme !== 'light' ? 'white' : 'neutral'}
+            variant="body"
+          >
             {children}
           </Text>
         </Stack>
@@ -138,7 +147,9 @@ export const Banner = ({
             setOpened(false)
             onClose?.()
           }}
-          sentiment={variant === 'intro' || (variant === 'promotional' && theme !== 'light') ? 'neutral' : 'primary'}
+          sentiment={
+            variant === 'intro' || (variant === 'promotional' && computedTheme !== 'light') ? 'neutral' : 'primary'
+          }
           size="small"
           variant={variant === 'intro' ? 'ghost' : 'filled'}
         >

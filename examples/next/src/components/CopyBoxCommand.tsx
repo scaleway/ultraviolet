@@ -1,4 +1,4 @@
-import { useTheme } from '@ultraviolet/themes'
+import { useThemeV2 } from '@ultraviolet/themes'
 import { Stack, Tabs } from '@ultraviolet/ui'
 import { Children, isValidElement, useState } from 'react'
 import type { ReactElement } from 'react'
@@ -47,7 +47,7 @@ type CommandProps = {
 }
 
 const Command = ({ command, showLineNumbers = true }: CommandProps) => {
-  const { theme } = useTheme()
+  const { theme } = useThemeV2()
 
   return (
     <SyntaxHighlighter

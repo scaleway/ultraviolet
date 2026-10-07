@@ -1,6 +1,10 @@
 @import'@ultraviolet/themes/light.css' layer(ultraviolet);
 @import'@ultraviolet/themes/dark.css' layer(ultraviolet);
 
+:root.light-theme {
+  --color-primary-text: #4f0599;
+}
+
 html {
   height: 100%;
 }
