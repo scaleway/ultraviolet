@@ -19,7 +19,7 @@ const Grid = ({ children }: PropsWithChildren) => (
 )
 
 const App = ({ Component, pageProps }: AppProps) => (
-  <ThemeProvider initialTheme="system">
+  <ThemeProvider initialTheme="system" localStorageConfig={{ key: 'next-app-theme' }}>
     <Head />
     <Grid>
       <Header className={styles.header} />

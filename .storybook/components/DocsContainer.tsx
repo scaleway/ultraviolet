@@ -82,7 +82,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
   return (
     <Unstyled>
       <div className={globalStyleStoryBook}>
-        <ThemeProviderV2 key={themeName} initialTheme={themeName}>
+        <ThemeProviderV2 initialTheme={themeName}>
           {isBeta ? (
             <GlobalAlert
               buttonText="Access to Beta"

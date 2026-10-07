@@ -159,7 +159,7 @@ const decorators: Decorator[] = [
 
     return (
       <Wrapper theme={theme}>
-        <ThemeProviderV2 key={theme} initialTheme={theme}>
+        <ThemeProviderV2 initialTheme={theme}>
           <Story {...context} />
         </ThemeProviderV2>
       </Wrapper>

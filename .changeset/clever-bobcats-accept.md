@@ -7,6 +7,8 @@ New `ThemeProvider` (`ThemeProviderV2`) : this provider will replace the V1 in t
 import '@ultraviolet/themes/light.css'
 import '@ultraviolet/themes/dark.css'
 import '@ultraviolet/themes/darker.css'
+// OR
+import '@ultraviolet/themes/themes.css' // import all 3 themes at once
 ```
 Theme switching is done internally by the provider, use `useThemeV2` to retrieve the current theme :
 ```js

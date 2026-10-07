@@ -1,6 +1,12 @@
+import { CentosLogo } from '@ultraviolet/icons/logo/CentosLogo'
 import { DatadogLogo } from '@ultraviolet/icons/logo/DatadogLogo'
+import { DebianLogo } from '@ultraviolet/icons/logo/DebianLogo'
+import { UbuntuLogo } from '@ultraviolet/icons/logo/UbuntuLogo'
 import { instanceOriginal } from '@ultraviolet/illustrations/products/instance'
 import { ThemeProviderV2, useThemeV2 } from '@ultraviolet/themes'
+import '@ultraviolet/ui/styles' // Import styles for the UI components
+import '@ultraviolet/icons/styles' // Import styles for the icons components
+import '@ultraviolet/themes/global'
 import type { Themes } from '@ultraviolet/themes'
 import {
   Alert,
@@ -14,18 +20,10 @@ import {
   Separator,
 } from '@ultraviolet/ui'
 import { useState } from 'react'
-import '@ultraviolet/ui/styles' // Import styles for the UI components
-import '@ultraviolet/icons/styles' // Import styles for the icons components
-import '@ultraviolet/themes/global'
-import centos from './assets/centos.svg'
-import debian from './assets/debian.svg'
-import ubuntu from './assets/ubuntu.svg'
 import { centosOptions, debianOptions, ubuntuOptions } from './constants'
 import { DemoForm } from './DemoForm'
 import './style.css'
-import '@ultraviolet/themes/light.css'
-import '@ultraviolet/themes/dark.css'
-import '@ultraviolet/themes/darker.css'
+import '@ultraviolet/themes/themes.css'
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useThemeV2()
@@ -78,9 +76,24 @@ export const App = () => {
             optionValue={option}
             value={value}
           >
-            <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
-            <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
-            <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
+            <SelectableCardOptionGroup.Option
+              image={<UbuntuLogo size="xlarge" />}
+              label="Ubuntu"
+              options={ubuntuOptions}
+              value="ubuntu"
+            />
+            <SelectableCardOptionGroup.Option
+              image={<DebianLogo size="xlarge" />}
+              label="Debian"
+              options={debianOptions}
+              value="debian"
+            />
+            <SelectableCardOptionGroup.Option
+              image={<CentosLogo size="xlarge" />}
+              label="CentOS"
+              options={centosOptions}
+              value="centos"
+            />
           </SelectableCardOptionGroup>
           <Card>
             <Text as="h1" variant="headingSmall">

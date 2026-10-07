@@ -113,7 +113,7 @@ const templateLogo = (logoName: string, svg: string, svgDark?: string) => {
   return `${COMMENT_HEADER}
   import { Icon } from '../Icon'
   import type { IconProps } from '../Icon'
-${svgDark ? `import { useTheme, useThemeV2 } from '@ultraviolet/themes'` : ''}
+${svgDark ? `import { useResolvedTheme } from '@ultraviolet/themes'` : ''}
   ${
     deprecated
       ? `
@@ -125,13 +125,8 @@ ${svgDark ? `import { useTheme, useThemeV2 } from '@ultraviolet/themes'` : ''}
  export const ${logoName} = (props: Omit<IconProps, 'children'>) => ${
    svgDark
      ? `{
-  const { theme, defined } = useTheme()
-  const { theme: themeV2, defined: definedV2 } = useThemeV2()
-
-  const fallBackTheme = defined ? theme : 'light'
-  const computedTheme = definedV2 ? themeV2 : fallBackTheme
-  
-  const isLight = computedTheme === "light"
+  const theme = useResolvedTheme()  
+  const isLight = theme === "light"
 
   return (
       <Icon {...props}>{isLight ? <>${svg}</> : <>${svgDark}</>}</Icon>

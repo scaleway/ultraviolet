@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useMemo, useState } from 'react'
 import { DEFAULT_THEME_CLASSES } from './constants'
 import { ThemeContext, getInitTheme, getSystemTheme } from './helpers'
@@ -11,7 +13,9 @@ import { useThemeStorage } from './useThemeStorage'
 export const ThemeProviderV2 = ({ initialTheme, children, localStorageConfig }: ThemeProviderProps) => {
   const [chosenTheme, setChosenTheme] = useState<ThemesExtended>(initialTheme ?? getInitTheme())
   const [colorMediaPreference, setColorMediaPreference] = useState<Themes>(getSystemTheme())
+  const [isHydrated, setIsHydrated] = useState(false)
 
+  const isStorageEnabled = Boolean(localStorageConfig)
   const isSystem = chosenTheme === 'system'
 
   const appliedTheme = useMemo(() => {
@@ -23,11 +27,26 @@ export const ThemeProviderV2 = ({ initialTheme, children, localStorageConfig }: 
   }, [isSystem, colorMediaPreference, chosenTheme])
 
   useThemeStorage({
-    enabled: Boolean(localStorageConfig),
+    enabled: isStorageEnabled,
     localStorageConfig,
     chosenTheme,
     onThemeChange: setChosenTheme,
   })
+
+  // Sync the system preference and the initial theme after the hydration.
+  useEffect(() => {
+    // persisted theme restored by `useThemeStorage` takes precedence over the `initialTheme` fallback
+    if (!isStorageEnabled) {
+      // oxlint-disable-next-line react/set-state-in-effect
+      setChosenTheme(initialTheme ?? getInitTheme())
+    }
+
+    if (typeof globalThis.matchMedia === 'function') {
+      setColorMediaPreference(getSystemTheme())
+    }
+
+    setIsHydrated(true)
+  }, [initialTheme, isStorageEnabled])
 
   // Listen to matchMedia update
   useEffect(() => {
@@ -43,7 +62,7 @@ export const ThemeProviderV2 = ({ initialTheme, children, localStorageConfig }: 
 
   // Add class to document according to applied theme
   useEffect(() => {
-    if (typeof document === 'undefined') {
+    if (!isHydrated || typeof document === 'undefined') {
       return
     }
 
@@ -55,7 +74,7 @@ export const ThemeProviderV2 = ({ initialTheme, children, localStorageConfig }: 
     return () => {
       documentElement.classList.remove(DEFAULT_THEME_CLASSES[appliedTheme])
     }
-  }, [appliedTheme])
+  }, [isHydrated, appliedTheme])
 
   const value = useMemo<ThemeContextType>(
     () => ({
