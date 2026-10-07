@@ -4,12 +4,7 @@ import addonLinks from '@storybook/addon-links'
 import addonTheme, { withThemeByClassName } from '@storybook/addon-themes'
 import { definePreview } from '@storybook/react-vite'
 import type { Decorator, Preview } from '@storybook/react-vite'
-import {
-  consoleDarkerTheme as darkerTheme,
-  consoleDarkTheme as darkTheme,
-  consoleLightTheme as lightTheme,
-  ThemeProvider as ThemeProviderUI,
-} from '@ultraviolet/themes'
+import { ThemeProviderV2, consoleLightTheme as lightTheme } from '@ultraviolet/themes'
 import type { ReactNode } from 'react'
 import { Fragment } from 'react/jsx-runtime'
 import { themes } from 'storybook/theming'
@@ -158,34 +153,24 @@ const decorators: Decorator[] = [
   (Story, args) => {
     const { context } = args
     const { theme: globalTheme } = context.globals
-    const theme = (globalTheme as 'light' | 'dark' | undefined) || 'light'
-    const finalTheme = () => {
-      if (theme === 'light') {
-        return lightTheme
-      }
-      if (theme === 'dark') {
-        return darkTheme
-      }
-
-      return darkerTheme
-    }
+    const theme = (globalTheme as 'light' | 'dark' | 'darker' | undefined) || 'light'
 
     const Wrapper = context.parameters['layout'] === 'fullscreen' ? Fragment : DottedBackground
 
     return (
       <Wrapper theme={theme}>
-        <ThemeProviderUI theme={finalTheme()}>
+        <ThemeProviderV2 key={theme} initialTheme={theme}>
           <Story {...context} />
-        </ThemeProviderUI>
+        </ThemeProviderV2>
       </Wrapper>
     )
   },
   withThemeByClassName({
     defaultTheme: 'light',
     themes: {
-      dark: 'dark',
-      darker: 'darker',
-      light: '',
+      dark: 'dark-theme',
+      darker: 'darker-theme',
+      light: 'light-theme',
     },
   }),
 ]

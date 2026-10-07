@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@ultraviolet/themes'
+import { useTheme, useThemeV2 } from '@ultraviolet/themes'
 import type { CSSProperties } from 'react'
 import { ILLUSTRATIONS } from './__generated__/Illustrations'
 import type { IllustrationsKeys } from './__generated__/Illustrations'
@@ -33,7 +33,11 @@ export const DynamicIllustration = ({
   className,
   style,
 }: DynamicIllustrationProps) => {
-  const { theme } = useTheme()
+  const { theme, defined } = useTheme()
+  const { theme: themeV2, defined: definedV2 } = useThemeV2()
+
+  const fallBackTheme = defined ? theme : 'light'
+  const computedTheme = definedV2 ? themeV2 : fallBackTheme
 
   return (
     <img
@@ -41,7 +45,7 @@ export const DynamicIllustration = ({
       className={className}
       data-testid={dataTestId}
       height={height}
-      src={ILLUSTRATIONS[theme === 'light' ? 'light' : 'dark'][name]}
+      src={ILLUSTRATIONS[computedTheme === 'light' ? 'light' : 'dark'][name]}
       style={style}
       width={width}
     />
