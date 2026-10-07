@@ -184,7 +184,6 @@ const AccessibilityAudit = () => {
         </Text>
         <Text as="ul" variant="body" style={{ margin: 0 }}>
           <li>on MacOS computer with Chrome, Firefox, Safari and VoiceOver;</li>
-          <li>on Mobile iOS with Safari;</li>
         </Text>
         <Text as="h3" variant="headingSmall" style={{ margin: 0 }}>
           Audits and corrections
