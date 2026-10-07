@@ -164,6 +164,37 @@ const AccessibilityAudit = () => {
         </Table>
       </Stack>
 
+      <Stack gap={2}>
+        <Text as="h2" variant="heading">
+          Methodology
+        </Text>
+        <Text as="h3" variant="headingSmall" style={{ margin: 0 }}>
+          Technologies used for the Design System components
+        </Text>
+        <Text as="ul" variant="body" style={{ margin: 0 }}>
+          <li>HTML5</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </Text>
+        <Text as="h3" variant="headingSmall" style={{ margin: 0 }}>
+          User agents and assistive technologies used to verify content accessibility
+        </Text>
+        <Text as="p" variant="body">
+          Components are tested using the following tools:
+        </Text>
+        <Text as="ul" variant="body" style={{ margin: 0 }}>
+          <li>on MacOS computer with Chrome, Firefox, Safari and VoiceOver;</li>
+        </Text>
+        <Text as="h3" variant="headingSmall" style={{ margin: 0 }}>
+          Audits and corrections
+        </Text>
+        <Text as="p" variant="body">
+          We use AI assistance to find accessibility issues and relevant rules using the WCAG documentation as the
+          source of truth. Accessibility audits and subsequent corrections are initiated with AI, then verified and
+          finalized by the maintainers.
+        </Text>
+      </Stack>
+
       <Stack gap={3}>
         <Text as="h2" variant="heading">
           All Components
