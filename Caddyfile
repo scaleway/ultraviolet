@@ -1,25 +1,23 @@
-:80 {
-	root * /srv/storybook-static
+root * /srv/storybook-static
 
-	encode zstd gzip
+encode zstd gzip
 
-	# Security headers
-	header {
-		Cross-Origin-Resource-Policy "same-origin"
-		Cross-Origin-Opener-Policy "same-origin"
-		Referrer-Policy "no-referrer"
-		Strict-Transport-Security "max-age=15552000;"
-		X-Content-Type-Options "nosniff"
-		X-Frame-Options "SAMEORIGIN"
-	}
+# Security headers
+header {
+  Cross-Origin-Resource-Policy "same-origin"
+  Cross-Origin-Opener-Policy "same-origin"
+  Referrer-Policy "no-referrer"
+  Strict-Transport-Security "max-age=15552000;"
+  X-Content-Type-Options "nosniff"
+  X-Frame-Options "SAMEORIGIN"
+}
 
-	# Cache-Control: immutable for hashed assets, revalidation with ETag for the rest
-	handle /assets/* {
-		header Cache-Control "public, max-age=2592000, immutable"
-		file_server
-	}
-	handle {
-		header Cache-Control "no-cache"
-		file_server
-	}
+# Cache-Control: immutable for hashed assets, revalidation with ETag for the rest
+handle /assets/* {
+  header Cache-Control "public, max-age=2592000, immutable"
+  file_server
+}
+handle {
+  header Cache-Control "no-cache"
+  file_server
 }
