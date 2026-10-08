@@ -1,0 +1,67 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Other/Banner/A11y" />
+
+# Banner - Accessibility
+
+## Description
+
+An informative or promotional message displayed with style. It supports an optional illustration, a title and description, an optional call-to-action button and link, two directions (row/column), two sizes, and an optional close button that dismisses the banner.
+
+## Summary
+
+1. ⚠️ **Perceivable**: decorative images are correctly ignored by assistive technologies (1.1.1); the promotional variant renders white text on an aqua gradient whose lightest stop is localized to the top-left corner. Contrast to verify against actual text placement, in all themes (1.4.3)
+2. ✅ **Operable**: all controls are native `<Button>`/`<Link>` elements, fully keyboard operable, with visible focus; dismissing the banner removes it from the DOM without leaving a focus trap, though the consumer must manage focus after close (2.1.1 / 2.4.3)
+3. ✅ **Understandable**: text is readable and no change of context is triggered on focus or input
+4. ❌ **Robust**: the close button has no accessible name (`name="close"` sets the HTML form name, not an accessible name), failing 4.1.2
+
+## ARIA Pattern
+
+There is no dedicated ARIA pattern for this type of banner. The `banner` landmark role is reserved for the page masthead and must **not** be used here.
+
+The closest patterns are:
+
+- [ARIA Alert Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) — for important, time-sensitive messages that should be announced when dynamically rendered. Not appropriate by default for a promotional/informative banner.
+- [ARIA Status Message Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) — the polite alternative, suitable when the banner reports a non-critical status.
+
+For static content rendered at page load, no live region is required.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - Decorative images are rendered with `alt=""` and the `CloseIcon` is hidden (`aria-hidden` is set by default on the icon), so they can be ignored by assistive technologies.
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - The CTA button and close button are native `<Button>` elements and the link is a native `<Link>` (`<a>`), all fully operable from the keyboard (Tab, Enter/Space).
+- ✅ [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) - Focus can move freely in and out of the banner.
+- ✅ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - Focus order follows the visual reading order: CTA button, link, close button.
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - The native `<Button>` and `<Link>` components provide a visible focus indicator.
+- ✅ [WCAG 3.2.1 - On Focus (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/on-focus.html) - Receiving focus does not trigger any change of context.
+- ✅ [WCAG 3.2.2 - On Input (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/on-input.html) - No change of context is triggered by user input.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The close button has no accessible name: `name="close"` sets the native HTML `name` attribute (used for form submission), not the accessible name, and the icon is `aria-hidden`.
+
+To apply when using the component:
+
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The `intro`/`promotional` distinction is conveyed through color and layout. Ensure the message content itself carries the information so meaning is not dependent on color alone.
+- [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - In the promotional variant, white text sits on the aqua gradient. The lightest stop computes to ~1.9:1 against white, but it is confined to the top-left corner (the gradient darkens to ~14:1 by 29%). This applies in **all** themes. Verify with contrast tooling that the title/description never overlap that corner region; the content column starts after the 140px image stack, so overlap only occurs on narrow/short banners.
+- [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - If the banner is used to report a status that appears dynamically (e.g., "Your storage is 90% full"), it should carry `role="status"` (or `role="alert"` for urgent messages) so it is announced without focus. Static banners do not need this.
+- [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - If the `image` prop is used to convey information, a meaningful alternative must be provided; the string form always renders `alt=""`.
+- [WCAG 2.1.1 / 2.4.3 - Keyboard & Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - The consumer must manage focus on close. When the banner is dismissed the close button is removed from the DOM and focus is lost. The component does not redirect focus, so the consumer should move focus to a logical element (e.g., the element that caused the banner to appear, or the first focusable element after where the banner was) in the `onClose` handler.
+
+## Accessibility issues
+
+**Critical:**
+
+- The close button has no accessible name. The `name="close"` prop maps to the native HTML `name` attribute of the `<button>` (used for form submission), not to the accessible name. Screen readers announce an unnamed "button". This is a direct failure of WCAG 4.1.2. Fix by passing `accessibleLabel` (e.g., "Close" or a translated label).
+
+**High:**
+
+- Promotional variant contrast: white title/description text is rendered on the aqua gradient. The lightest stop `#03cfda` computes to ~1.9:1 against white, but it is localized to the top-left corner; the gradient reaches ~14:1 contrast by its 29% stop. The content column starts after the 140px image stack, so text usually clears the failing region. Verify with contrast tooling at small/medium banner sizes that no text overlaps the lightest corner.
+
+**Medium:**
+
+- No `role` on the banner container. Static banners are fine as plain content, but if a consumer renders the banner dynamically to communicate a status, it will not be announced. Consider exposing an optional `role` prop (`"status"` | `"alert"`) rather than hardcoding one, since `role="alert"` is too assertive for promotional content.
+
+**Low:**
+
+- The accessible label for the close button (once added) should ideally be derived from context (e.g., `Close {title}`), so screen reader users can distinguish which banner they are closing (when/if multiple banners are present).
+- The `image` prop renders any string as `<img alt="">` with no way to provide an alternative. If the illustration is ever informative, consumers need a way to set an accessible name.
