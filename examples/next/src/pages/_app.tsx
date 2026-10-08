@@ -1,4 +1,4 @@
-import { ThemeProviderV2 as ThemeProvider } from '@ultraviolet/themes'
+import { ThemeProvider } from '@ultraviolet/themes/v2'
 import { Stack } from '@ultraviolet/ui'
 import type { AppProps } from 'next/app'
 import type { PropsWithChildren } from 'react'

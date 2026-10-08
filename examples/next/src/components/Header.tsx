@@ -1,6 +1,6 @@
 import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
 import { SunIcon } from '@ultraviolet/icons/SunIcon'
-import { useThemeV2 } from '@ultraviolet/themes'
+import { useTheme } from '@ultraviolet/themes/v2'
 import { Checkbox, Toggle } from '@ultraviolet/ui'
 import { cn } from '@ultraviolet/utils'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
@@ -8,7 +8,7 @@ import Logo from './Logo'
 import styles from '../../styles/component.module.css'
 
 const TopBar = ({ className }: { className?: string }) => {
-  const { theme, setTheme, isSystem } = useThemeV2()
+  const { theme, setTheme, isSystem } = useTheme()
   return (
     <header className={cn(className, styles.header)}>
       <div className={styles.headerRow}>

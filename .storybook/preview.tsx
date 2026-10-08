@@ -4,7 +4,8 @@ import addonLinks from '@storybook/addon-links'
 import addonTheme, { withThemeByClassName } from '@storybook/addon-themes'
 import { definePreview } from '@storybook/react-vite'
 import type { Decorator, Preview } from '@storybook/react-vite'
-import { ThemeProviderV2, consoleLightTheme as lightTheme } from '@ultraviolet/themes'
+import { consoleLightTheme as lightTheme } from '@ultraviolet/themes/'
+import { ThemeProvider } from '@ultraviolet/themes/v2'
 import type { ReactNode } from 'react'
 import { Fragment } from 'react/jsx-runtime'
 import { themes } from 'storybook/theming'
@@ -159,9 +160,9 @@ const decorators: Decorator[] = [
 
     return (
       <Wrapper theme={theme}>
-        <ThemeProviderV2 initialTheme={theme}>
+        <ThemeProvider initialTheme={theme}>
           <Story {...context} />
-        </ThemeProviderV2>
+        </ThemeProvider>
       </Wrapper>
     )
   },

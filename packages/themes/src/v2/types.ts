@@ -42,8 +42,8 @@ export type ThemeContextType = {
    */
   isSystem: boolean
   setTheme: (newTheme: ThemesExtended) => void
-  /** TO REMOVE ONCE THEMEPROVIDER IS REMOVED AND THEMEPROVIDERV2 IS THE ONLY VERSION
-   *  Whether a ThemeProviderV2 is defined in the app
+  /** TO REMOVE ONCE THEMEPROVIDER IS REMOVED AND THEMEPROVIDER V2 IS THE ONLY VERSION
+   *  Whether a ThemeProvider v2 is defined in the app
    */
   defined: boolean
 }

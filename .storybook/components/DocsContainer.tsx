@@ -1,16 +1,13 @@
 import { DocsContainer as BaseContainer, Unstyled } from '@storybook/addon-docs/blocks'
 import type { DocsContainerProps as BaseContainerProps } from '@storybook/addon-docs/blocks'
-import { ThemeProviderV2 } from '@ultraviolet/themes'
+import { ThemeProvider } from '@ultraviolet/themes/v2'
 import { GlobalAlert } from '@ultraviolet/ui'
 import { cloneElement, isValidElement, useState } from 'react'
 import type { ReactNode } from 'react'
 import '@ultraviolet/fonts/fonts.css'
 // don't know how it works today
 import '../../packages/themes/dist/global/globalStyle.css'
-import '../../packages/themes/dist/style/dark.css'
-import '../../packages/themes/dist/style/darker.css'
-import '../../packages/themes/dist/style/light.css'
-
+import '../../packages/themes/dist/style/themes.css'
 import * as SB_THEMES from '../storybookThemes'
 import { useDocsTheme } from './useDocsTheme'
 import { globalStyleStoryBook } from './globalStyle.css'
@@ -82,7 +79,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
   return (
     <Unstyled>
       <div className={globalStyleStoryBook}>
-        <ThemeProviderV2 initialTheme={themeName}>
+        <ThemeProvider initialTheme={themeName}>
           {isBeta ? (
             <GlobalAlert
               buttonText="Access to Beta"
@@ -105,7 +102,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
                 })
               : children}
           </BaseContainer>
-        </ThemeProviderV2>
+        </ThemeProvider>
       </div>
     </Unstyled>
   )
