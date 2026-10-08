@@ -45,7 +45,6 @@ export const warnRules = defineConfig({
 
     'react/exhaustive-effect-dependencies': 'warn', // react errors (30)
     'react/hook-use-state': ['warn', { allowDestructuredState: true }], // react errors (74)
-    'react/immutability': 'warn', // react errors (5)
     'react/memo-dependencies': 'warn', // react errors (4)
     'react/no-array-index-key': 'warn', // react errors (6)
     'react/no-deriving-state-in-effects': 'warn', // react errors (7)
