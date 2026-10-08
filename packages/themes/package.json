@@ -33,6 +33,11 @@
       "import": "./dist/index.js",
       "require": "./dist/index.js"
     },
+    "./v2": {
+      "types": "./dist/v2/index.d.ts",
+      "import": "./dist/v2/index.js",
+      "require": "./dist/v2/index.js"
+    },
     "./*.css": "./dist/style/*.css",
     "./console/*": {
       "types": "./dist/themes/console/*/index.d.ts",

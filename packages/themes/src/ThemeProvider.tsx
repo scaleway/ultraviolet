@@ -10,7 +10,7 @@ const ThemeContext = createContext({ ...consoleLightTheme, defined: false })
 
 /**
  * Provide an object of the theme variables.
- * @deprecated use `useThemeV2` instead
+ * @deprecated use `v2/useTheme` instead
  */
 export const useTheme = () => {
   const context = useContext(ThemeContext)
@@ -34,7 +34,7 @@ type ThemeProviderProps = {
 /**
  * ThemeProvider applies the theme variables to the application.
  * If no theme is provided, it will default to `lightTheme`.
- * @deprecated use `ThemeProviderV2` instead
+ * @deprecated use `v2/ThemeProvider` instead
  */
 export const ThemeProvider = ({ children, theme = consoleLightTheme }: ThemeProviderProps) => {
   useLayoutEffect(() => {

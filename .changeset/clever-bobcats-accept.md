@@ -2,7 +2,7 @@
 "@ultraviolet/themes": minor
 ---
 
-New `ThemeProvider` (`ThemeProviderV2`) : this provider will replace the V1 in the future. To use it, it is necessary to import css files with ultraviolet's themes:
+New `ThemeProvider` (`/v2/ThemeProvider`) : this provider will replace the V1 in the future. To use it, it is necessary to import css files with ultraviolet's themes:
 ```js
 import '@ultraviolet/themes/light.css'
 import '@ultraviolet/themes/dark.css'
@@ -10,17 +10,17 @@ import '@ultraviolet/themes/darker.css'
 // OR
 import '@ultraviolet/themes/themes.css' // import all 3 themes at once
 ```
-Theme switching is done internally by the provider, use `useThemeV2` to retrieve the current theme :
+Theme switching is done internally by the provider, use `v2/useTheme` to retrieve the current theme :
 ```js
-const { theme } = useThemeV2() // theme: "dark" | "light" | "darker"
+const { theme } = useTheme() // theme: "dark" | "light" | "darker"
 ```
 
-Our components currently support both `ThemeProvider` and `ThemeProviderV2`, but only one is necessary.
+Our components currently support both `ThemeProvider` and `v2/ThemeProvider`, but only one is necessary.
 
 Example of theme switcher using the new provider: 
 ```js
 import { instanceOriginal } from '@ultraviolet/illustrations/products/instance'
-import { ThemeProviderV2, useThemeV2 } from '@ultraviolet/themes'
+import { ThemeProvider, useTheme } from '@ultraviolet/themes/v2'
 import type { Themes } from '@ultraviolet/themes'
 import {
   SwitchButton,
@@ -34,7 +34,7 @@ import '@ultraviolet/themes/dark.css'
 import '@ultraviolet/themes/darker.css'
 
 const ThemeSwitcher = () => {
-  const { theme, setTheme } = useThemeV2()
+  const { theme, setTheme } = useTheme()
 
   return (
     <SwitchButton

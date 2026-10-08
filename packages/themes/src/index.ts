@@ -2,7 +2,6 @@ export type { ExtendedColor, TextStyleObject, TextVariant, UltravioletUITheme } 
 export { textVariants } from './constants'
 export { generateObjectStyleFromTheme, isColorMonochrome, isSize } from './helpers'
 export { ThemeProvider, useTheme } from './ThemeProvider'
-export * from './ThemeProviderV2'
 export * from './themes'
 export { theme } from './vanilla/themes.css'
 export { extendTheme } from './extendTheme'

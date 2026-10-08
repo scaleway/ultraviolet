@@ -7,10 +7,10 @@ import type { ThemeContextType, ThemeProviderProps, Themes, ThemesExtended } fro
 import { useThemeStorage } from './useThemeStorage'
 
 /**
- * ThemeProviderV2 manages the theme without injecting any CSS variable at runtime.
+ * ThemeProvider (v2) manages the theme without injecting any CSS variable at runtime.
  * It relies on the static CSS files to provide the theme variables
  */
-export const ThemeProviderV2 = ({ initialTheme, children, localStorageConfig }: ThemeProviderProps) => {
+export const ThemeProvider = ({ initialTheme, children, localStorageConfig }: ThemeProviderProps) => {
   const [chosenTheme, setChosenTheme] = useState<ThemesExtended>(initialTheme ?? getInitTheme())
   const [colorMediaPreference, setColorMediaPreference] = useState<Themes>(getSystemTheme())
   const [isHydrated, setIsHydrated] = useState(false)

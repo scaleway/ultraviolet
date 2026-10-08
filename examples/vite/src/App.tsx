@@ -3,11 +3,11 @@ import { DatadogLogo } from '@ultraviolet/icons/logo/DatadogLogo'
 import { DebianLogo } from '@ultraviolet/icons/logo/DebianLogo'
 import { UbuntuLogo } from '@ultraviolet/icons/logo/UbuntuLogo'
 import { instanceOriginal } from '@ultraviolet/illustrations/products/instance'
-import { ThemeProviderV2, useThemeV2 } from '@ultraviolet/themes'
+import { ThemeProvider, useTheme } from '@ultraviolet/themes/v2'
 import '@ultraviolet/ui/styles' // Import styles for the UI components
 import '@ultraviolet/icons/styles' // Import styles for the icons components
 import '@ultraviolet/themes/global'
-import type { Themes } from '@ultraviolet/themes'
+import type { Themes } from '@ultraviolet/themes/v2'
 import {
   Alert,
   Button,
@@ -26,7 +26,7 @@ import './style.css'
 import '@ultraviolet/themes/themes.css'
 
 const ThemeSwitcher = () => {
-  const { theme, setTheme } = useThemeV2()
+  const { theme, setTheme } = useTheme()
 
   return (
     <SwitchButton
@@ -48,7 +48,7 @@ export const App = () => {
   const [option, onChangeOption] = useState<string>()
 
   return (
-    <ThemeProviderV2 initialTheme="system" localStorageConfig={{ key: 'theme-preference' }}>
+    <ThemeProvider initialTheme="system" localStorageConfig={{ key: 'theme-preference' }}>
       <Stack gap={4} style={{ padding: '32px' }} alignItems="center" width="100%">
         <ThemeSwitcher />
         <DatadogLogo size="large" />
@@ -115,6 +115,6 @@ export const App = () => {
         </Text>
         <DemoForm />
       </Stack>
-    </ThemeProviderV2>
+    </ThemeProvider>
   )
 }

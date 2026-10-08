@@ -53,9 +53,9 @@ export const App = () => (
 > **Note**:
 > The static CSS imports above are **not** required for the CSS variables to work as long as `ThemeProvider` is used because the provider injects them at runtime. Importing the theme CSS file only **reduces FOUC**: it inlines the variables into the initial HTML, whereas without it the theme is applied client-side after first paint.
 >
-> This does **not** apply to `ThemeProviderV2` which relies on the static CSS files to provide the variables (see below).
+> This does **not** apply to `v2/ThemeProvider` which relies on the static CSS files to provide the variables (see below).
 
-#### With static CSS files and `ThemeProviderV2`
+#### With static CSS files and new `ThemeProvider` (v2)
 
 This version is recommended for projects that import the static CSS files (`light.css`, `dark.css`, `darker.css`) which provide the theme variables. Contrary to `ThemeProvider`, it does **not** inject the CSS variables at runtime, so the variables already defined in the CSS are not duplicated. It also handles the theme logic internally: initialization, switching, system preference and optional persistence.
 
@@ -63,12 +63,12 @@ This version is recommended for projects that import the static CSS files (`ligh
 import '@ultraviolet/themes/light.css'
 import '@ultraviolet/themes/dark.css'
 import '@ultraviolet/themes/darker.css' // OR import '@ultraviolet/themes/themes.css' to import all three themes at once
-import { ThemeProviderV2 } from '@ultraviolet/themes'
+import { ThemeProvider } from '@ultraviolet/themes/v2'
 
 export const App = () => (
-  <ThemeProviderV2>
+  <ThemeProvider>
     <YourApp />
-  </ThemeProviderV2>
+  </ThemeProvider>
 )
 ```
 
@@ -79,15 +79,15 @@ The provider manages the theme internally:
 - it updates the `*-theme` class on the document element whenever the theme changes,
 - with the `localStorageConfig` prop, it persists the chosen theme in `localStorage` and keeps it in sync across all open tabs/windows.
 
-Use `useThemeV2` to retrieve the current theme and `setTheme` to switch it from a child component:
+Use `v2/useTheme` to retrieve the current theme and `setTheme` to switch it from a child component:
 
 ```tsx
-import { ThemeProviderV2, useThemeV2 } from '@ultraviolet/themes'
+import { ThemeProvider, useTheme } from '@ultraviolet/themes/v2'
 import type { Themes } from '@ultraviolet/themes'
 import { SwitchButton } from '@ultraviolet/ui'
 
 const ThemeSwitcher = () => {
-  const { theme, setTheme } = useThemeV2()
+  const { theme, setTheme } = useTheme()
 
   return (
     <SwitchButton
@@ -107,14 +107,14 @@ const ThemeSwitcher = () => {
 `initialTheme` and `localStorageConfig` are both optional. Storage is only enabled when `localStorageConfig` is provided:
 
 ```tsx
-<ThemeProviderV2 initialTheme="system" localStorageConfig={{ key: 'theme-preference' }}>
+<ThemeProvider initialTheme="system" localStorageConfig={{ key: 'theme-preference' }}>
   <YourApp />
-</ThemeProviderV2>
+</ThemeProvider>
 ```
 
 ##### Customizing theme variables
 
-`extendTheme` is **not** supported by `ThemeProviderV2`: since the provider does not inject any variable at runtime, there is no theme object to extend. Instead, override the CSS variables directly in a `.css` file, scoped to the theme class (`:root.light-theme`, `:root.dark-theme`, `:root.darker-theme`):
+`extendTheme` is **not** supported by `v2/ThemeProvider`: since the provider does not inject any variable at runtime, there is no theme object to extend. Instead, override the CSS variables directly in a `.css` file, scoped to the theme class (`:root.light-theme`, `:root.dark-theme`, `:root.darker-theme`):
 
 ```css
 @import '@ultraviolet/themes/light.css' layer(ultraviolet);
@@ -127,7 +127,7 @@ const ThemeSwitcher = () => {
 
 The override must be scoped to the theme class (so it only applies when the corresponding theme is active) and must win the cascade: either declare it **after** the imported theme files, or wrap the imports and the overrides in cascade layers and give the overrides a later layer order.
 
-Our components currently support both `ThemeProvider` and `ThemeProviderV2`, but only one of them is necessary.
+Our components currently support both `ThemeProvider` and `v2/ThemeProvider`, but only one of them is necessary.
 
 #### Normalized css
 

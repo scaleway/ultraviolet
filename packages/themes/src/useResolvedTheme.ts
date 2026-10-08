@@ -1,11 +1,10 @@
 import { useTheme } from './ThemeProvider'
-import { useThemeV2 } from './ThemeProviderV2'
-import type { Themes } from './ThemeProviderV2'
+import { useTheme as useThemeV2 } from './v2'
+import type { Themes } from './v2'
 
-//
 /**
- * Hook to get current applied theme from ThemeProviderV2 with a fallback on ThemeProvider.
- * Uses `useTheme` and `useThemeV2`
+ * Hook to get current applied theme from v2/ThemeProvider with a fallback on ThemeProvider.
+ * Uses `useTheme` and `v2/useTheme`
  * @returns 'light' | 'dark' | 'darker'
  */
 export const useResolvedTheme = () => {

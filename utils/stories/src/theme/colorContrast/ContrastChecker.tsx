@@ -1,5 +1,6 @@
 import { CheckIcon, CloseIcon } from '@ultraviolet/icons'
-import { consoleDarkTheme, consoleDarkerTheme, consoleLightTheme, useThemeV2 } from '@ultraviolet/themes'
+import { consoleDarkTheme, consoleDarkerTheme, consoleLightTheme } from '@ultraviolet/themes'
+import { useTheme } from '@ultraviolet/themes/v2'
 import { Badge, CheckboxGroup, Row, Stack, Text } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
@@ -161,7 +162,7 @@ const PairingCard = ({ pairing }: { pairing: Pairing }) => (
 export const ContrastChecker = () => {
   const [backgrounds, setBackgrounds] = useState<Background[]>(persist.backgrounds)
   const [statuses, setStatuses] = useState<Status[]>(persist.statuses)
-  const { theme: currentTheme } = useThemeV2()
+  const { theme: currentTheme } = useTheme()
 
   const theme = useMemo(() => {
     if (currentTheme === 'dark') {
