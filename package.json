@@ -121,10 +121,10 @@
     "*.json?(c)": [
       "pnpm run format"
     ],
-    ".md?(x)": [
+    "*.md?(x)": [
       "pnpm run format"
     ],
-    "pnpm-lock.yaml, package.json, **/pnpm-lock.yaml, **/package.json": [
+    "**/{pnpm-lock.yaml,package.json}": [
       "pnpm exec manypkg check"
     ]
   },
