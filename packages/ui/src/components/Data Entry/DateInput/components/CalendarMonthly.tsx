@@ -95,7 +95,7 @@ export const Monthly = () => {
         return (
           <Button
             accessibleLabel={monthState()}
-            className={cn(dateInputStyle.dayMonth, dateInputStyle.capitalizedText)}
+            className={cn(dateInputStyle.dayMonth({ variant: monthState() }), dateInputStyle.capitalizedText)}
             disabled={disabled || isExcluded || isOutsideRange}
             key={month[0]}
             onClick={event => {

@@ -191,7 +191,7 @@ export const Daily = () => {
         return (
           <Button
             accessibleLabel={dayState()}
-            className={dateInputStyle.dayMonth}
+            className={dateInputStyle.dayMonth({ variant: dayState() })}
             data-testid={createTestId()}
             disabled={disabled || isExcluded || isOutsideRange}
             key={`${data.month}-${data.day}`}
