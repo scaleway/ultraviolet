@@ -51,7 +51,9 @@ To apply when using the component:
 
 **Critical:**
 
-- The close button has no accessible name. The `name="close"` prop maps to the native HTML `name` attribute of the `<button>` (used for form submission), not to the accessible name. Screen readers announce an unnamed "button". This is a direct failure of WCAG 4.1.2. Fix by passing `accessibleLabel` (e.g., "Close" or a translated label).
+- The close button has no accessible name. The `name="close"` prop maps to the native HTML `name` attribute of the `<button>` (used for form submission), not to the accessible name. Screen readers announce an unnamed "button". This is a direct failure of WCAG 4.1.2.
+
+  **Fix**: use `Button.accessibleLabel` with a localized string that includes the banner title. The label is rendered inside a `VisuallyHidden` span in the Button.
 
 **High:**
 
@@ -63,5 +65,5 @@ To apply when using the component:
 
 **Low:**
 
-- The accessible label for the close button (once added) should ideally be derived from context (e.g., `Close {title}`), so screen reader users can distinguish which banner they are closing (when/if multiple banners are present).
+- The close button accessible label should embed the banner title (e.g., `"Close banner {title}"`) so screen reader users can distinguish which banner they are closing when multiple banners are present.
 - The `image` prop renders any string as `<img alt="">` with no way to provide an alternative. If the illustration is ever informative, consumers need a way to set an accessible name.
