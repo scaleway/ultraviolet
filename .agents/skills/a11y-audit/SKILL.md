@@ -40,6 +40,8 @@ Read the component file(s) to understand:
 
 Based on the ARIA pattern and WCAG rules that you found in previous steps, identify any accessibility issues or missing features. Be as comprehensive as possible.
 
+If the component has an `aria-label` property and no `accessibleLabel` property, add an entry in the accessibility issues to add the `accessibleLabel` property to implement the chosen decision in RFC #6585 (https://github.com/scaleway/ultraviolet/discussions/6585), deprecate the `aria-label` property and use its value as a fallback for the `accessibleName`.
+
 ### Step 5: Generate and fill `A11y.mdx` file
 
 Create a file `path/to/component/__stories__/A11y.mdx` following the template `.agents/skills/a11y-audit/resources/audit-template.mdx`. You can find the "Component Path" in the stories `path/to/component/__stories__/index.stories.tsx`.
@@ -77,25 +79,4 @@ export default {
 
 ## Action Summary & Prioritization
 
-After analyzing a component, provide a short summary with:
-
-### Ticket Template
-
-If issues found, suggest a ticket:
-
-```markdown
-**Title**: [A11Y] Fix [Component]
-
-**Description**:
-
-- Critical issues: ...
-- Dependencies: [list or "none"]
-- Estimated effort: [XS/S/M/L/XL]
-
-**Acceptance rules**:
-
-- [ ] Keyboard navigation works (Tab, Enter, Escape)
-- [ ] Screen readers announce component correctly
-- [ ] Focus is visible and managed properly
-- [ ] ARIA attributes are correct
-```
+After analyzing a component, provide a short summary of your findings.
