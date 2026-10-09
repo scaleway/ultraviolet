@@ -1,6 +1,7 @@
 'use client'
 import { autoUpdate, flip, offset, shift, useDismiss, useFloating, useInteractions, useTransitionStatus } from '@floating-ui/react'
 import type { Middleware, Placement } from '@floating-ui/react'
+import { usePrefersReducedMotion } from '@ultraviolet/animations'
 import { useCallback, useId, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
 import { isHeadlessTestEnvironment } from '../../../../helpers/isHeadlessTestEnvironment'
@@ -65,8 +66,10 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
   const dismiss = useDismiss(floating.context)
   const { getFloatingProps } = useInteractions([dismiss])
 
+  const prefersReducedMotion = usePrefersReducedMotion()
+
   const { isMounted, status } = useTransitionStatus(floating.context, {
-    duration: isHeadlessTestEnvironment ? 0 : ANIMATION_DURATION,
+    duration: isHeadlessTestEnvironment || prefersReducedMotion ? 0 : ANIMATION_DURATION,
   })
 
   const id = useId()
