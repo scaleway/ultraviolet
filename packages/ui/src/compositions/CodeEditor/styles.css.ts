@@ -1,8 +1,7 @@
 import { consoleDarkTheme, theme } from '@ultraviolet/themes'
-import { createVar, globalStyle, style, styleVariants } from '@vanilla-extract/css'
+import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-export const maxHeightVar = createVar()
 export const disabledStack = style({ cursor: 'not-allowed' })
 
 const copyButton = style({
@@ -33,7 +32,6 @@ globalStyle(`div:not([aria-describedby]) > ${copyButton}`, {
 const codeEditorBase = style({
   position: 'relative',
   width: '100%',
-  maxHeight: maxHeightVar,
 })
 
 const codeEditor = styleVariants({
