@@ -80,7 +80,6 @@ const SelectList = () => {
   const [selected, setSelected] = useState(OPTIONS[0])
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const listRef = useRef<(HTMLElement | null)[]>([])
-  const initialFocusRef = useRef<HTMLElement>(null)
   const selectedIndex = OPTIONS.indexOf(selected)
 
   const listNavigation = useListNavigation(context, {
@@ -89,7 +88,7 @@ const SelectList = () => {
     selectedIndex,
     onNavigate: setActiveIndex,
   })
-  const { getFloatingProps, getItemProps } = useInteractions([listNavigation])
+  const { getFloatingProps, getItemProps, getReferenceProps } = useInteractions([listNavigation])
 
   const select = (option: string) => {
     setSelected(option)
@@ -99,20 +98,17 @@ const SelectList = () => {
   return (
     <>
       <Popup.Trigger>
-        <Button sentiment="neutral" variant="outlined">
+        <Button sentiment="neutral" variant="outlined" {...getReferenceProps()}>
           {selected}
         </Button>
       </Popup.Trigger>
-      <Popup.Panel role="listbox" accessibleLabel="Choose an option" matchTriggerWidth initialFocus={initialFocusRef}>
+      <Popup.Panel role="listbox" accessibleLabel="Choose an option" matchTriggerWidth>
         <Stack gap={0.5} {...getFloatingProps()}>
           {OPTIONS.map((option, index) => (
             <Button
               key={option}
               ref={(node: HTMLElement) => {
                 listRef.current[index] = node
-                if (index === selectedIndex) {
-                  initialFocusRef.current = node
-                }
               }}
               size="small"
               variant="ghost"
