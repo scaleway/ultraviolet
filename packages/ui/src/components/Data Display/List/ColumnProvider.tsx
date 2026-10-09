@@ -6,6 +6,7 @@ type ContextType =
       width?: string
       maxWidth?: string
       minWidth?: string
+      highlightRow?: boolean
     }
   | undefined
 
@@ -14,17 +15,19 @@ type ColumnProviderProps = {
   maxWidth?: string
   minWidth?: string
   children?: ReactNode
+  highlightRow?: boolean
 }
 const ColumnContext = createContext<ContextType>(undefined)
 
-export const ColumnProvider = ({ width, minWidth, maxWidth, children }: ColumnProviderProps) => {
+export const ColumnProvider = ({ width, minWidth, maxWidth, children, highlightRow }: ColumnProviderProps) => {
   const value = useMemo(
     () => ({
       maxWidth,
       minWidth,
       width,
+      highlightRow,
     }),
-    [maxWidth, minWidth, width],
+    [maxWidth, minWidth, width, highlightRow],
   )
   return <ColumnContext.Provider value={value}>{children}</ColumnContext.Provider>
 }

@@ -5,7 +5,7 @@ import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { Children, useCallback, useEffect, useRef } from 'react'
-import type { CSSProperties, ReactNode, RefObject } from 'react'
+import type { CSSProperties, HTMLAttributes, ReactNode, RefObject } from 'react'
 import { Button } from '../../Action/Button'
 import { Checkbox } from '../../Data Entry/Checkbox'
 import { Tooltip } from '../../Overlay/Tooltip'
@@ -27,8 +27,12 @@ type RowProps = {
   selectDisabled?: boolean | string
   highlightAnimation?: boolean
   expanded?: boolean
+  /**
+   * Highlight the row for a stronger visual emphasis
+   */
+  highlight?: boolean
   style?: CSSProperties
-}
+} & Pick<HTMLAttributes<HTMLTableRowElement>, 'aria-current'>
 
 export const Row = ({
   children,
@@ -38,8 +42,10 @@ export const Row = ({
   highlightAnimation,
   expandable,
   expanded,
+  highlight,
   style,
   'data-testid': dataTestid,
+  'aria-current': ariaCurrent,
 }: RowProps) => {
   const {
     selectable,
@@ -93,11 +99,7 @@ export const Row = ({
   const childrenLength = Children.count(children) + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
 
   useEffect(() => {
-    if (
-      refList &&
-      checkboxRowRef.current !== null &&
-      !refList.includes(checkboxRowRef as RefObject<HTMLInputElement>)
-    ) {
+    if (checkboxRowRef.current !== null && !refList.includes(checkboxRowRef as RefObject<HTMLInputElement>)) {
       setRefList([...refList, checkboxRowRef as RefObject<HTMLInputElement>])
     }
   }, [refList, setRefList])
@@ -106,12 +108,15 @@ export const Row = ({
     <>
       <tr
         className={cn(className, highlightAnimation ? tableStyle.trAnimation : '', tableStyle.row)}
+        data-highlight={highlight}
         data-testid={dataTestid}
         role={canClickRowToExpand ? 'button row' : 'row'}
         style={style}
+        aria-current={ariaCurrent}
+        {...(selectable ? { 'aria-selected': selectedRowIds[id] } : {})}
       >
         {selectable ? (
-          <ColumnProvider width={theme.sizing[300]}>
+          <ColumnProvider width={theme.sizing[300]} highlightRow={highlight}>
             <Cell>
               <div className={tableStyle.checkboxContainer}>
                 <Tooltip text={typeof selectDisabled === 'string' ? selectDisabled : undefined}>
@@ -131,7 +136,7 @@ export const Row = ({
           </ColumnProvider>
         ) : null}
         {expandButton ? (
-          <ColumnProvider width={theme.sizing[300]}>
+          <ColumnProvider width={theme.sizing[300]} highlightRow={highlight}>
             <Cell>
               <Button
                 accessibleLabel="expand"
@@ -151,7 +156,16 @@ export const Row = ({
           const column = columns[index]
 
           return (
-            <ColumnProvider maxWidth={column?.maxWidth} minWidth={column?.minWidth} width={column?.width}>
+            <ColumnProvider
+              // All those condition are indeed necessary
+              // oxlint-disable-next-line typescript/no-unnecessary-condition
+              maxWidth={column?.maxWidth}
+              // oxlint-disable-next-line typescript/no-unnecessary-condition
+              minWidth={column?.minWidth}
+              // oxlint-disable-next-line typescript/no-unnecessary-condition
+              width={column?.width}
+              highlightRow={highlight}
+            >
               {child}
             </ColumnProvider>
           )
