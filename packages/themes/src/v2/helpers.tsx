@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 import { DEFAULT_THEME_CLASSES } from './constants'
-import type { ThemeContextType, Themes, ThemesExtended } from './types'
+import type { ThemeContextType, ThemeOption } from './types'
 
 export const ThemeContext = createContext<ThemeContextType>({
   theme: 'light',
@@ -11,15 +11,7 @@ export const ThemeContext = createContext<ThemeContextType>({
   defined: false,
 })
 
-export const getSystemTheme = (): Themes => {
-  if (typeof globalThis.matchMedia !== 'function') {
-    return 'light'
-  }
-
-  return globalThis.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-}
-
-export const getInitTheme = (): ThemesExtended => {
+export const getInitTheme = (): ThemeOption => {
   if (typeof document === 'undefined') {
     return 'system'
   }

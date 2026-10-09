@@ -1,3 +1,4 @@
 export { ThemeProvider } from './ThemeProvider'
+export { usePrefersDarkMode } from './usePrefersDarkMode'
 export { useTheme } from './useTheme'
-export type { LocalStorageConfig, ThemeContextType, ThemeProviderProps, Themes, ThemesExtended } from './types'
+export type { ThemeContextType, ThemeProviderProps, Theme, ThemeOption } from './types'

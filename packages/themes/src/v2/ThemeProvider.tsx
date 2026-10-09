@@ -1,76 +1,53 @@
 'use client'
 
+import { useLocalStorage } from '@scaleway/use-storage'
 import { useEffect, useMemo, useState } from 'react'
-import { DEFAULT_THEME_CLASSES } from './constants'
-import { ThemeContext, getInitTheme, getSystemTheme } from './helpers'
-import type { ThemeContextType, ThemeProviderProps, Themes, ThemesExtended } from './types'
-import { useThemeStorage } from './useThemeStorage'
+import { DEFAULT_THEME_CLASSES, DEFAULT_THEME_STORAGE_KEY } from './constants'
+import { ThemeContext, getInitTheme } from './helpers'
+import type { ThemeContextType, ThemeOption, ThemeProviderProps } from './types'
+import { usePrefersDarkMode } from './usePrefersDarkMode'
 
 /**
  * ThemeProvider (v2) manages the theme without injecting any CSS variable at runtime.
  * It relies on the static CSS files to provide the theme variables
  */
-export const ThemeProvider = ({ initialTheme, children, localStorageConfig }: ThemeProviderProps) => {
-  const [chosenTheme, setChosenTheme] = useState<ThemesExtended>(initialTheme ?? getInitTheme())
-  const [colorMediaPreference, setColorMediaPreference] = useState<Themes>(getSystemTheme())
+export const ThemeProvider = ({ initialTheme, children, storageKey }: ThemeProviderProps) => {
+  const [storedTheme, setStoredTheme] = useLocalStorage<ThemeOption>(
+    storageKey ?? DEFAULT_THEME_STORAGE_KEY,
+    initialTheme ?? getInitTheme(),
+  )
   const [isHydrated, setIsHydrated] = useState(false)
 
-  const isStorageEnabled = Boolean(localStorageConfig)
+  const chosenTheme = storedTheme ?? initialTheme ?? getInitTheme()
   const isSystem = chosenTheme === 'system'
+  const prefersDarkMode = usePrefersDarkMode()
 
   const appliedTheme = useMemo(() => {
     if (isSystem) {
-      return colorMediaPreference
+      return prefersDarkMode ? 'dark' : 'light'
     }
 
     return chosenTheme
-  }, [isSystem, colorMediaPreference, chosenTheme])
+  }, [isSystem, prefersDarkMode, chosenTheme])
 
-  useThemeStorage({
-    enabled: isStorageEnabled,
-    localStorageConfig,
-    chosenTheme,
-    onThemeChange: setChosenTheme,
-  })
-
-  // Sync the system preference and the initial theme after the hydration.
+  // Apply the theme only once the component is hydrated
   useEffect(() => {
-    // persisted theme restored by `useThemeStorage` takes precedence over the `initialTheme` fallback
-    if (!isStorageEnabled) {
-      // oxlint-disable-next-line react/set-state-in-effect
-      setChosenTheme(initialTheme ?? getInitTheme())
-    }
-
-    if (typeof globalThis.matchMedia === 'function') {
-      setColorMediaPreference(getSystemTheme())
-    }
-
+    // oxlint-disable-next-line react/set-state-in-effect
     setIsHydrated(true)
-  }, [initialTheme, isStorageEnabled])
-
-  // Listen to matchMedia update
-  useEffect(() => {
-    const colorMedia = globalThis.matchMedia('(prefers-color-scheme: dark)')
-    const handleChange = (event: MediaQueryListEvent) => {
-      setColorMediaPreference(event.matches ? 'dark' : 'light')
-    }
-
-    colorMedia.addEventListener('change', handleChange)
-
-    return () => colorMedia.removeEventListener('change', handleChange)
   }, [])
 
   // Add class to document according to applied theme
   useEffect(() => {
     if (!isHydrated || typeof document === 'undefined') {
-      return
+      return () => {
+        /* empty */
+      }
     }
 
     const { documentElement } = document
     documentElement.classList.remove(...Object.values(DEFAULT_THEME_CLASSES))
     documentElement.classList.add(DEFAULT_THEME_CLASSES[appliedTheme])
 
-    // oxlint-disable-next-line typescript/consistent-return
     return () => {
       documentElement.classList.remove(DEFAULT_THEME_CLASSES[appliedTheme])
     }
@@ -80,10 +57,10 @@ export const ThemeProvider = ({ initialTheme, children, localStorageConfig }: Th
     () => ({
       theme: appliedTheme,
       isSystem,
-      setTheme: setChosenTheme,
+      setTheme: setStoredTheme,
       defined: true,
     }),
-    [appliedTheme, isSystem],
+    [appliedTheme, isSystem, setStoredTheme],
   )
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>

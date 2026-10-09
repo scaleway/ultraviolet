@@ -1,22 +1,8 @@
 import type { ReactNode } from 'react'
 
-export type Themes = 'light' | 'dark' | 'darker'
+export type Theme = 'light' | 'dark' | 'darker'
 
-export type ThemesExtended = Themes | 'system'
-
-export type LocalStorageConfig = {
-  /**
-   * Name of the item to store in the local storage.
-   * @default "theme"
-   */
-  key?: string
-  values?: {
-    light?: string
-    dark?: string
-    darker?: string
-    system?: string
-  }
-}
+export type ThemeOption = Theme | 'system'
 
 export type ThemeProviderProps = {
   /**
@@ -24,24 +10,25 @@ export type ThemeProviderProps = {
    * `light-theme`/`dark-theme`/`darker-theme` classes on the document element,
    * @default "system".
    */
-  initialTheme?: ThemesExtended
+  initialTheme?: ThemeOption
   children: ReactNode
   /**
-   * When provided, the chosen theme is stored in the local storage
+   * Key used to persist the chosen theme in the local storage.
+   * @default "uv-theme"
    */
-  localStorageConfig?: LocalStorageConfig
+  storageKey?: string
 }
 
 export type ThemeContextType = {
   /**
    * Currently applied theme ("dark", "light", or "darker")
    */
-  theme: Themes
+  theme: Theme
   /**
    * Whether the chosen theme is `system` (which translates to dark or light)
    */
   isSystem: boolean
-  setTheme: (newTheme: ThemesExtended) => void
+  setTheme: (newTheme: ThemeOption) => void
   /** TO REMOVE ONCE THEMEPROVIDER IS REMOVED AND THEMEPROVIDER V2 IS THE ONLY VERSION
    *  Whether a ThemeProvider v2 is defined in the app
    */

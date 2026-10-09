@@ -7,7 +7,7 @@ import { ThemeProvider, useTheme } from '@ultraviolet/themes/v2'
 import '@ultraviolet/ui/styles' // Import styles for the UI components
 import '@ultraviolet/icons/styles' // Import styles for the icons components
 import '@ultraviolet/themes/global'
-import type { Themes } from '@ultraviolet/themes/v2'
+import type { Theme } from '@ultraviolet/themes/v2'
 import {
   Alert,
   Button,
@@ -31,7 +31,7 @@ const ThemeSwitcher = () => {
   return (
     <SwitchButton
       onChange={event => {
-        setTheme(event.currentTarget.value as Themes)
+        setTheme(event.currentTarget.value as Theme)
       }}
       value={theme}
     >
@@ -48,7 +48,7 @@ export const App = () => {
   const [option, onChangeOption] = useState<string>()
 
   return (
-    <ThemeProvider initialTheme="system" localStorageConfig={{ key: 'theme-preference' }}>
+    <ThemeProvider initialTheme="system" storageKey="vite-theme-preference">
       <Stack gap={4} style={{ padding: '32px' }} alignItems="center" width="100%">
         <ThemeSwitcher />
         <DatadogLogo size="large" />

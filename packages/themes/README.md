@@ -77,13 +77,13 @@ The provider manages the theme internally:
 - it reads the initial theme from the `light-theme`/`dark-theme`/`darker-theme` class on the document element, falling back to `"system"`. This makes it possible to retrieve a theme saved in `localStorage` and applied with an inline script before the hydration,
 - when the chosen theme is `"system"`, it follows the `prefers-color-scheme` media query and updates the theme accordingly,
 - it updates the `*-theme` class on the document element whenever the theme changes,
-- with the `localStorageConfig` prop, it persists the chosen theme in `localStorage` and keeps it in sync across all open tabs/windows.
+- it persists the chosen theme in `localStorage` under the `storageKey` (default `"uv-theme"`) and keeps it in sync across all open tabs/windows.
 
 Use `v2/useTheme` to retrieve the current theme and `setTheme` to switch it from a child component:
 
 ```tsx
 import { ThemeProvider, useTheme } from '@ultraviolet/themes/v2'
-import type { Themes } from '@ultraviolet/themes'
+import type { Theme } from '@ultraviolet/themes'
 import { SwitchButton } from '@ultraviolet/ui'
 
 const ThemeSwitcher = () => {
@@ -92,7 +92,7 @@ const ThemeSwitcher = () => {
   return (
     <SwitchButton
       onChange={event => {
-        setTheme(event.currentTarget.value as Themes)
+        setTheme(event.currentTarget.value as Theme)
       }}
       value={theme}
     >
@@ -104,10 +104,10 @@ const ThemeSwitcher = () => {
 }
 ```
 
-`initialTheme` and `localStorageConfig` are both optional. Storage is only enabled when `localStorageConfig` is provided:
+`initialTheme` and `storageKey` are both optional:
 
 ```tsx
-<ThemeProvider initialTheme="system" localStorageConfig={{ key: 'theme-preference' }}>
+<ThemeProvider initialTheme="system" storageKey="theme-preference">
   <YourApp />
 </ThemeProvider>
 ```

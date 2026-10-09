@@ -711,6 +711,9 @@ importers:
       '@scaleway/types':
         specifier: 1.2.0
         version: 1.2.0(typescript@7.0.2)
+      '@scaleway/use-storage':
+        specifier: 4.0.3
+        version: 4.0.3(react@19.3.0)
       '@vanilla-extract/css':
         specifier: 1.21.2
         version: 1.21.2
@@ -4115,6 +4118,12 @@ packages:
     engines: {node: 24.x || 25.x || 26.x}
     peerDependencies:
       react: 18.x || 19.x
+
+  '@scaleway/use-storage@4.0.3':
+    resolution: {integrity: sha512-xjub5NvQDiBznadcBRlX05SkP795xguDUVzlrrZQXjdfds72zxsVJFiCfpqvBEchexZAxPQslGh8Cncm3lofKw==}
+    engines: {node: 24.x || 25.x || 26.x}
+    peerDependencies:
+      react: '>=18.0'
 
   '@sentry/conventions@0.16.0':
     resolution: {integrity: sha512-fO9PLmHdVURcSPUpWCItWAtgKiMwGdJHbovoSEyLplX5sxs2ugvI4CBPTrkkgqhObnZOD0CnWBKDzSVQYBKEyQ==}
@@ -11662,6 +11671,10 @@ snapshots:
       typescript: 7.0.2
 
   '@scaleway/use-clipboard@1.1.2(react@19.3.0)':
+    dependencies:
+      react: 19.3.0
+
+  '@scaleway/use-storage@4.0.3(react@19.3.0)':
     dependencies:
       react: 19.3.0
 
