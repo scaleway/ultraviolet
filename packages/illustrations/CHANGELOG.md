@@ -1,5 +1,13 @@
 # @ultraviolet/illustrations
 
+## 6.0.31
+
+### Patch Changes
+
+- [#6950](https://github.com/scaleway/ultraviolet/pull/6950) [`2f5d0ae`](https://github.com/scaleway/ultraviolet/commit/2f5d0ae11fb4d33e589bb4115ca805ee114baaea) Thanks [@lisalupi](https://github.com/lisalupi)! - Audit and update illustration accessibility
+
+- [#6986](https://github.com/scaleway/ultraviolet/pull/6986) [`738c080`](https://github.com/scaleway/ultraviolet/commit/738c080661f7517eed89a7b339f814c91af05324) Thanks [@jsulpis](https://github.com/jsulpis)! - New illustration `resourceExplorer`
+
 ## 6.0.30
 
 ### Patch Changes

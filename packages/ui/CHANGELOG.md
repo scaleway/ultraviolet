@@ -1,5 +1,48 @@
 # Change Log
 
+## 3.27.0
+
+### Minor Changes
+
+- [#6988](https://github.com/scaleway/ultraviolet/pull/6988) [`769ca24`](https://github.com/scaleway/ultraviolet/commit/769ca2489b47b6d4c31b27314ddd73dce671c705) Thanks [@jsulpis](https://github.com/jsulpis)! - `Avatar`: add `xxsmall` size (16x16)
+
+- [#6947](https://github.com/scaleway/ultraviolet/pull/6947) [`b1b2741`](https://github.com/scaleway/ultraviolet/commit/b1b2741a6473902f6357da931bd99a2c57c6de95) Thanks [@lisalupi](https://github.com/lisalupi)! - `VerificationCode`: fix accessibility issues. To improve accessibility, the component now uses one singular input which might break tests. ⚠️`onChange` and `onComplete` values have been updated to be `string` instead of `unknown`.⚠️
+
+### Patch Changes
+
+- [#6999](https://github.com/scaleway/ultraviolet/pull/6999) [`463dfb5`](https://github.com/scaleway/ultraviolet/commit/463dfb54b43529bf345c55c6205cfb2f7c75a5b2) Thanks [@jsulpis](https://github.com/jsulpis)! - - `Expandable`: improve animation curve
+  - `CodeEditor`: fix closing animation
+
+- [#6928](https://github.com/scaleway/ultraviolet/pull/6928) [`301aa73`](https://github.com/scaleway/ultraviolet/commit/301aa7388440deb8695a6c0bf5a3881fbbcb50f9) Thanks [@lisalupi](https://github.com/lisalupi)! - `Tag`: fix accessibility issues
+  
+  `Separator`: new prop `aria-hidden`
+
+- [#6953](https://github.com/scaleway/ultraviolet/pull/6953) [`b2c85e9`](https://github.com/scaleway/ultraviolet/commit/b2c85e9dbbccbb037fa4d4ff4e052a7ed601e301) Thanks [@lisalupi](https://github.com/lisalupi)! - - Use `theme` directly from `@ultraviolet/theme` instead of from `useTheme`
+  - `BarChart`: fix legend color
+  - `TreeMapChart` & `Snippet`: update color & height computation
+  - `Expandable`: now accepts string `minHeight` as well as number
+
+- [#6924](https://github.com/scaleway/ultraviolet/pull/6924) [`54d5d65`](https://github.com/scaleway/ultraviolet/commit/54d5d6529e4028d2b7b76c417b692529f1b5f490) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `TagLink`
+  
+  `CopyButton`: add more sentiments (match values of `Button`)
+
+- [#6982](https://github.com/scaleway/ultraviolet/pull/6982) [`a77fde8`](https://github.com/scaleway/ultraviolet/commit/a77fde8f3e6531d80a42884c21f0ea1a019ee31a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@handlewithcare/react-prosemirror` to `3.2.10`.
+  Updated dependency `prosemirror-schema-basic` to `1.2.5`.
+  Updated dependency `prosemirror-view` to `1.42.6`.
+
+- [#6959](https://github.com/scaleway/ultraviolet/pull/6959) [`670e320`](https://github.com/scaleway/ultraviolet/commit/670e32005e35ef10ada904157df7bd786cf971c5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@handlewithcare/react-prosemirror` to `3.2.9`.
+  Updated dependency `prosemirror-model` to `1.25.12`.
+  Updated dependency `prosemirror-view` to `1.42.5`.
+
+- [#6980](https://github.com/scaleway/ultraviolet/pull/6980) [`b739b42`](https://github.com/scaleway/ultraviolet/commit/b739b427d6323b94e355d3ca027b88d86a5a6495) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-theme-material` to `4.25.12`.
+  Updated dependency `@uiw/react-codemirror` to `4.25.12`.
+
+- [#6955](https://github.com/scaleway/ultraviolet/pull/6955) [`9da846c`](https://github.com/scaleway/ultraviolet/commit/9da846c22ae31b2452118e83868694868ece46ba) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: do not display empty divs for empty groups on search
+
+- [#6992](https://github.com/scaleway/ultraviolet/pull/6992) [`0dd254b`](https://github.com/scaleway/ultraviolet/commit/0dd254b0eaa632b9ddc7e1bf8b096c08843f13ce) Thanks [@lisalupi](https://github.com/lisalupi)! - `DateInput`: fix months/days button selector in calendar (broken style)
+- Updated dependencies [[`769ca24`](https://github.com/scaleway/ultraviolet/commit/769ca2489b47b6d4c31b27314ddd73dce671c705), [`eecc7a9`](https://github.com/scaleway/ultraviolet/commit/eecc7a9ce7922a5b7bd2a9fde1d7f803a66636f3)]:
+  - @ultraviolet/icons@5.6.3
+
 ## 3.26.1
 
 ### Patch Changes
