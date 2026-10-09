@@ -1,5 +1,6 @@
 import { useInteractions, useListNavigation } from '@floating-ui/react'
 import type { StoryFn } from '@storybook/react-vite'
+import { theme } from '@ultraviolet/themes'
 import { useRef, useState } from 'react'
 import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
@@ -20,7 +21,7 @@ const Popover = () => (
       </Button>
     </Popup.Trigger>
     <Popup.Panel role="dialog" aria-labelledby="popover-title">
-      <Stack gap={1}>
+      <Stack gap={1} style={{ padding: theme.space['2'] }}>
         <Text id="popover-title" as="p" variant="bodyStrong">
           Popover title
         </Text>
@@ -44,7 +45,7 @@ const MenuList = () => {
         </Button>
       </Popup.Trigger>
       <Popup.Panel role="menu" accessibleLabel="Actions">
-        <Stack>
+        <Stack style={{ padding: theme.space['0.5'] }}>
           {MENU_ITEMS.map(item => (
             <Button
               key={item}
@@ -103,7 +104,7 @@ const SelectList = () => {
         </Button>
       </Popup.Trigger>
       <Popup.Panel role="listbox" accessibleLabel="Choose an option" matchTriggerWidth>
-        <Stack gap={0.5} {...getFloatingProps()}>
+        <Stack gap={0.5} style={{ padding: theme.space['0.5'] }} {...getFloatingProps()}>
           {OPTIONS.map((option, index) => (
             <Button
               key={option}

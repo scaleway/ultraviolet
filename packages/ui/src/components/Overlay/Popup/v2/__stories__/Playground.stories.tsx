@@ -1,3 +1,4 @@
+import { theme } from '@ultraviolet/themes'
 import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
 import { Text } from '../../../../Typography/Text'
@@ -10,13 +11,13 @@ export const Playground = () => (
         Open Popup
       </Button>
     </Popup.Trigger>
-    <Popup.Panel>
-      <Stack gap={1}>
-        <Text as="p" variant="bodySmall">
-          This is the new compound Popup built on @floating-ui/react.
+    <Popup.Panel aria-labelledby="demo-title">
+      <Stack gap={1} style={{ padding: theme.space['2'] }}>
+        <Text id="demo-title" as="p" variant="bodyStrong">
+          Demo Popup
         </Text>
         <Text as="p" variant="bodySmall">
-          It demos click-to-open, Escape and outside-click dismissal out of the box.
+          Click to open, Escape or click outside to dismiss.
         </Text>
       </Stack>
     </Popup.Panel>

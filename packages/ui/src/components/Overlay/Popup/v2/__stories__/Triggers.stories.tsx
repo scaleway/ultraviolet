@@ -1,11 +1,12 @@
 import type { StoryFn } from '@storybook/react-vite'
+import { theme } from '@ultraviolet/themes'
 import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
 import { Text } from '../../../../Typography/Text'
 import { Popup } from '../index'
 
 const Content = () => (
-  <Stack gap={1}>
+  <Stack gap={1} style={{ padding: theme.space['2'] }}>
     <Text as="p" variant="bodySmall">
       Popup content
     </Text>

@@ -16,7 +16,6 @@ const panel = style({
 const content = style({
   maxHeight: '100%',
   overflow: 'auto',
-  padding: `${theme.space['0.5']} ${theme.space[1]}`,
   position: 'relative',
 })
 

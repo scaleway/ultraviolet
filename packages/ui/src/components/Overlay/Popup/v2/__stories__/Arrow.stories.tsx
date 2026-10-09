@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
+import { theme } from '@ultraviolet/themes'
 import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
 import { Text } from '../../../../Typography/Text'
@@ -16,7 +17,7 @@ export const Arrow: StoryFn<typeof Popup> = () => (
           </Button>
         </Popup.Trigger>
         <Popup.Panel arrow placement={placement}>
-          <Stack gap={1}>
+          <Stack gap={1} style={{ padding: theme.space['2'] }}>
             <Text as="p" variant="bodySmall">
               Popup with arrow pointing at its trigger.
             </Text>

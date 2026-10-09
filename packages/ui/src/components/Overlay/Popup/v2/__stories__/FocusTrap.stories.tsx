@@ -1,5 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
+import { theme } from '@ultraviolet/themes'
 import { useRef, useState } from 'react'
 import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
@@ -18,7 +19,7 @@ export const FocusTrap: StoryFn<typeof Popup> = () => {
         </Button>
       </Popup.Trigger>
       <Popup.Panel focusTrap initialFocus={closeButtonRef} accessibleLabel="Popup with focus trap" maxWidth={400}>
-        <Stack gap={2} width="100%">
+        <Stack gap={2} width="100%" style={{ padding: theme.space['2'] }}>
           <Stack alignItems="center" direction="row" gap={2} justifyContent="space-between">
             <Text as="h3" sentiment="neutral" variant="bodyStrong">
               Popup with focus trap

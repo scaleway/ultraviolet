@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
+import { theme } from '@ultraviolet/themes'
 import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
 import { Text } from '../../../../Typography/Text'
@@ -29,7 +30,7 @@ export const Placement: StoryFn<typeof Popup> = () => (
           </Button>
         </Popup.Trigger>
         <Popup.Panel placement={placement}>
-          <Stack gap={1}>
+          <Stack gap={1} style={{ padding: theme.space['2'] }}>
             <Text as="p" variant="bodySmall">
               Placement demo, automatically flipped when out of viewport.
             </Text>

@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
+import { theme } from '@ultraviolet/themes'
 import { useState } from 'react'
 import { TextInput } from '../../../../Data Entry/TextInput'
 import { Toggle } from '../../../../Data Entry/Toggle'
@@ -7,7 +8,7 @@ import { Text } from '../../../../Typography/Text'
 import { Popup } from '../index'
 
 const Content = () => (
-  <Stack gap={1}>
+  <Stack gap={1} style={{ padding: theme.space['2'] }}>
     <Text as="p" variant="bodySmall">
       Controlled popup: opening/closing is driven entirely by the{' '}
       <Text as="span" variant="bodySmallStrong">
