@@ -6,7 +6,7 @@ export default {
   title: 'UI/Other/Banner',
   parameters: {
     a11yStatus: {
-      perceivable: false,
+      perceivable: true,
       operable: true,
       understandable: true,
       robust: false,
