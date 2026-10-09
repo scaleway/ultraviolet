@@ -24,11 +24,12 @@ type CellProps = {
 export const Cell = ({ children, className, colSpan, rowSpan, sentiment, align = 'left', style }: CellProps) => {
   const context = useColumnProvider()
   const { size } = useTableContext()
+  const computedSentiment = context?.highlightRow ? 'primary' : sentiment
 
   return (
     <td
       align={align}
-      className={cn(className, tableStyle.cell({ align, sentiment, size }))}
+      className={cn(className, tableStyle.cell({ align, sentiment: computedSentiment, size }))}
       colSpan={colSpan}
       rowSpan={rowSpan}
       style={{
