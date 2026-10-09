@@ -65,4 +65,4 @@ export const Trigger = ({ children, triggerEvent = 'click' }: PopupTriggerProps)
   )
 }
 
-Trigger.displayName = 'PopupV2.Trigger'
+Trigger.displayName = 'Popup.Trigger'

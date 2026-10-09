@@ -198,4 +198,4 @@ export const Panel = ({
   )
 }
 
-Panel.displayName = 'PopupV2.Panel'
+Panel.displayName = 'Popup.Panel'

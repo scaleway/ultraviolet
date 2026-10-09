@@ -1,12 +1,12 @@
 import type { Meta } from '@storybook/react-vite'
-import { PopupV2 } from '..'
+import { Popup } from '..'
 
 export default {
   title: 'UI/Overlay/PopupV2',
-  component: PopupV2.Root,
+  component: Popup.Root,
   subcomponents: {
-    "PopupV2.Trigger": PopupV2.Trigger,
-    "PopupV2.Panel": PopupV2.Panel,
+    "Popup.Trigger": Popup.Trigger,
+    "Popup.Panel": Popup.Panel,
   },
   tags: ['internal'],
   parameters: {

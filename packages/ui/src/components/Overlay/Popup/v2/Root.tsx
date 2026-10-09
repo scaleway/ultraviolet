@@ -92,4 +92,4 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
   return <PopupContext.Provider value={value}>{children}</PopupContext.Provider>
 }
 
-Root.displayName = 'PopupV2.Root'
+Root.displayName = 'Popup.Root'

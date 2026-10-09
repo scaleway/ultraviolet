@@ -24,7 +24,7 @@ export const PopupContext = createContext<PopupContextValue | null>(null)
 export const usePopupContext = () => {
   const context = useContext(PopupContext)
   if (!context) {
-    throw new Error('Popup component must be used within <PopupV2.Root>')
+    throw new Error('Popup component must be used within <Popup.Root>')
   }
 
   return context
