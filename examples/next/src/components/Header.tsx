@@ -1,17 +1,14 @@
 import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
 import { SunIcon } from '@ultraviolet/icons/SunIcon'
-import { useTheme } from '@ultraviolet/themes'
-import { Toggle } from '@ultraviolet/ui'
+import { useTheme } from '@ultraviolet/themes/v2'
+import { Checkbox, Toggle } from '@ultraviolet/ui'
 import { cn } from '@ultraviolet/utils'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
 import styles from '../../styles/component.module.css'
 
-type Themes = 'light' | 'dark'
-
-const TopBar = ({ setTheme, className }: { setTheme: (theme: Themes) => void; className?: string }) => {
-  const { theme } = useTheme()
-
+const TopBar = ({ className }: { className?: string }) => {
+  const { theme, setTheme, isSystem } = useTheme()
   return (
     <header className={cn(className, styles.header)}>
       <div className={styles.headerRow}>
@@ -20,6 +17,7 @@ const TopBar = ({ setTheme, className }: { setTheme: (theme: Themes) => void; cl
           <GithubAndDocumentationButtons />
           <SunIcon size="small" />
           <Toggle
+            disabled={isSystem}
             checked={theme === 'dark'}
             name="themeMode"
             onChange={() => {
@@ -27,6 +25,19 @@ const TopBar = ({ setTheme, className }: { setTheme: (theme: Themes) => void; cl
             }}
           />
           <MoonIcon size="small" />
+          <Checkbox
+            value="isSystem"
+            checked={isSystem}
+            onChange={() => {
+              if (isSystem) {
+                setTheme(theme)
+              } else {
+                setTheme('system')
+              }
+            }}
+          >
+            Use system theme
+          </Checkbox>
         </div>
       </div>
     </header>
