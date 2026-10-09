@@ -4,7 +4,6 @@ import { languages } from '@codemirror/language-data'
 import { material } from '@uiw/codemirror-theme-material'
 import CodeMirror from '@uiw/react-codemirror'
 import { cn } from '@ultraviolet/utils'
-import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useId, useState } from 'react'
 import { Expandable } from '../../components/Action/Expandable'
 import { Stack } from '../../components/Layout/Stack'
@@ -14,7 +13,7 @@ import { hasHelperText } from '../../helpers/hasHelperText'
 import { CodeEditorCopyButton } from './components/CopyButton'
 import { CodeEditorExpandable } from './components/Expandable'
 import type { CodeEditorProps } from './type'
-import { codeEditorStyle, disabledStack, maxHeightVar } from './styles.css'
+import { codeEditorStyle, disabledStack } from './styles.css'
 
 type LoadedLanguage = Awaited<ReturnType<(typeof languages)[number]['load']>>
 
@@ -134,12 +133,7 @@ export const CodeEditor = ({
         </Label>
       ) : null}
       <div className={codeEditorStyle.wrapper}>
-        <div
-          className={cn(codeEditorStyle.codeEditor[disabled ? 'disabled' : 'default'])}
-          style={assignInlineVars({
-            [maxHeightVar]: !expanded && expandableHeight ? `${expandableHeight}px` : 'none',
-          })}
-        >
+        <div className={cn(codeEditorStyle.codeEditor[disabled ? 'disabled' : 'default'])}>
           {expandableEnabled ? (
             <Expandable minHeight={expandableHeight} opened={expanded}>
               {content}

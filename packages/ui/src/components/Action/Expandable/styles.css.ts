@@ -7,8 +7,8 @@ const expandable = style({
   selectors: {
     '&[data-is-animated="true"]': {
       transition: `
-        max-height ${animationDurationVar} ease-out,
-        opacity ${animationDurationVar} ease-out
+        max-height ${animationDurationVar} cubic-bezier(0.22, 1, 0.36, 1),
+        opacity ${animationDurationVar} cubic-bezier(0.22, 1, 0.36, 1)
       `,
     },
   },
