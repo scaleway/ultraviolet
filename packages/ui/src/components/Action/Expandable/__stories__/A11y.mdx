@@ -1,0 +1,57 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Action/Expandable/A11y" />
+
+# Expandable - Accessibility
+
+## Description
+
+A content container that shows or hides its children based on the `opened` prop, with an optional smooth height animation. It is a passive disclosure content region: it does not render its own trigger, so it is meant to be controlled by an external button (e.g. `Button`) that toggles the `opened` state.
+
+## Summary
+
+1. ❌ **Perceivable**: collapsed content is exposed to assistive technologies (on initial mount with and without `minHeight` and permanently when `minHeight` is set)
+2. ❌ **Operable**: focusable children of a collapsed Expandable stay in the tab order: on initial mount, during each close animation, and permanently when `minHeight` is set.
+3. ✅ **Understandable**: the component itself is passive and performs no surprising input handling
+4. ⚠️ **Robust**: the collapsed state is not programmatically conveyed and no `id`/`aria-controls` is exposed to wire the external trigger to the content
+
+## ARIA Pattern
+
+[ARIA Disclosure (Show/Hide) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html): with `minHeight` set, interactive children of the animated variant remain focusable while collapsed; without `minHeight`, they remain in the tab order during the close animation (~600ms) and on initial closed mount.
+- ❌ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html): collapsed content is exposed to assistive technologies on initial mount (even without `minHeight`, because `visibility="hidden"` is never applied in that branch), during each close animation, and permanently when `minHeight` is set. There is also no programmatic relationship between the external trigger and the content.
+- ⚠️ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): the collapsed/expanded state and the trigger-to-content relationship must be conveyed by the consumer (via `aria-expanded`/`aria-controls`), but the component does not expose an `id` to make this wiring possible.
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html): the component itself is not focusable/interactive; keyboard operability depends on the external trigger.
+- ✅ [WCAG 2.2.2 - Pause, Stop, Hide (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html): the height animation is short (300ms) and only runs in response to user activation (`opened` change), so it does not start automatically.
+
+To apply when using the component:
+
+- [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) & [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html): the trigger button must expose `aria-expanded` and `aria-controls` pointing to the `Expandable` content.
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) & [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html): when using icon-only triggers (e.g. `PlusIcon`/`MinusIcon`), do not rely on the icon alone to convey state; provide text or an appropriate accessible name.
+
+## Accessibility issues
+
+**Critical:**
+
+- On initial mount, collapsed content is exposed to screen readers and the tab order even without `minHeight`. The initial closed mount branch sets only `maxHeight`/`overflow` and never `visibility`, so from first render the visually hidden content is read by screen readers and its focusable children can be reached with Tab. This persists until the first open/close cycle.
+  - Fix: apply `visibility: hidden` (or `inert` / `tabindex={-1}` on focusable descendants) immediately when collapsed, on mount included.
+- With `minHeight` set, collapsed content is permanently in the accessibility tree and the tab order. In `AnimatedExpandable`, `visibility: hidden` is only applied when `!minHeight`, so with a `minHeight` preview the content stays readable by screen readers and its interactive children stay Tab-focusable even though they are clipped.
+  - Fix: when `opened === false`, apply `visibility: hidden` (or set `inert` / `tabindex={-1}` on focusable descendants) regardless of `minHeight`.
+
+**High:**
+
+- Without `minHeight`, each close animation only applies `visibility: hidden` after the ~600ms close sequence, leaving the collapsing content exposed to screen readers and the tab order during the transition. Apply `visibility: hidden`/`inert` immediately when collapsed and keep it until the expand animation starts.
+- No programmatic relationship between the external trigger and the content. The component does not accept or forward an `id`, so consumers cannot set `aria-controls` on the trigger and must maintain `aria-expanded` entirely by hand. Expose an `id` prop (forwarded to the container) so consumers can wire `aria-controls`/`aria-labelledby`.
+
+**Medium:**
+
+- No `prefers-reduced-motion` support: the height/opacity transition runs regardless of the user's reduced-motion preference (WCAG 2.3.3 Animation from Interactions, Level AAA — nice to have).
+
+## Dependencies
+
+- `Button` (or any trigger component): must set `aria-expanded`/`aria-controls` on the trigger to convey the disclosure state.
