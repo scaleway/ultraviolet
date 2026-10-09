@@ -1,16 +1,16 @@
 import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
 import { Text } from '../../../../Typography/Text'
-import { PopupV2 } from '../index'
+import { Popup } from '../index'
 
 export const Playground = () => (
-  <PopupV2.Root>
-    <PopupV2.Trigger>
+  <Popup.Root>
+    <Popup.Trigger>
       <Button sentiment="neutral" variant="outlined">
         Open Popup
       </Button>
-    </PopupV2.Trigger>
-    <PopupV2.Panel>
+    </Popup.Trigger>
+    <Popup.Panel>
       <Stack gap={1}>
         <Text as="p" variant="bodySmall">
           This is the new compound Popup built on @floating-ui/react.
@@ -19,6 +19,6 @@ export const Playground = () => (
           It demos click-to-open, Escape and outside-click dismissal out of the box.
         </Text>
       </Stack>
-    </PopupV2.Panel>
-  </PopupV2.Root>
+    </Popup.Panel>
+  </Popup.Root>
 )

@@ -5,21 +5,21 @@ import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
 import { Text } from '../../../../Typography/Text'
 import { usePopupContext } from '../context'
-import { PopupV2 } from '../index'
+import { Popup } from '../index'
 
 const MENU_ITEMS = ['Create', 'Edit', 'Delete']
 
 /**
- * Dummy Popover built from the public `PopupV2` API
+ * Dummy Popover built from the public `Popup` API
  */
 const Popover = () => (
-  <PopupV2.Root>
-    <PopupV2.Trigger>
+  <Popup.Root>
+    <Popup.Trigger>
       <Button sentiment="neutral" variant="outlined">
         Popover (dialog)
       </Button>
-    </PopupV2.Trigger>
-    <PopupV2.Panel role="dialog" aria-labelledby="popover-title">
+    </Popup.Trigger>
+    <Popup.Panel role="dialog" aria-labelledby="popover-title">
       <Stack gap={1}>
         <Text id="popover-title" as="p" variant="bodyStrong">
           Popover title
@@ -28,8 +28,8 @@ const Popover = () => (
           A Popover with an accessible name and focus restoration.
         </Text>
       </Stack>
-    </PopupV2.Panel>
-  </PopupV2.Root>
+    </Popup.Panel>
+  </Popup.Root>
 )
 
 const MenuList = () => {
@@ -38,12 +38,12 @@ const MenuList = () => {
 
   return (
     <>
-      <PopupV2.Trigger>
+      <Popup.Trigger>
         <Button sentiment="neutral" variant="outlined">
           Menu
         </Button>
-      </PopupV2.Trigger>
-      <PopupV2.Panel role="menu" accessibleLabel="Actions">
+      </Popup.Trigger>
+      <Popup.Panel role="menu" accessibleLabel="Actions">
         <Stack>
           {MENU_ITEMS.map(item => (
             <Button
@@ -59,18 +59,18 @@ const MenuList = () => {
             </Button>
           ))}
         </Stack>
-      </PopupV2.Panel>
+      </Popup.Panel>
     </>
   )
 }
 
 /**
- * Dummy Menu built from the public `PopupV2` API
+ * Dummy Menu built from the public `Popup` API
  */
 const Menu = () => (
-  <PopupV2.Root>
+  <Popup.Root>
     <MenuList />
-  </PopupV2.Root>
+  </Popup.Root>
 )
 
 const OPTIONS = ['Option A', 'Option B', 'Option C']
@@ -98,12 +98,12 @@ const SelectList = () => {
 
   return (
     <>
-      <PopupV2.Trigger>
+      <Popup.Trigger>
         <Button sentiment="neutral" variant="outlined">
           {selected}
         </Button>
-      </PopupV2.Trigger>
-      <PopupV2.Panel role="listbox" accessibleLabel="Choose an option" matchTriggerWidth initialFocus={initialFocusRef}>
+      </Popup.Trigger>
+      <Popup.Panel role="listbox" accessibleLabel="Choose an option" matchTriggerWidth initialFocus={initialFocusRef}>
         <Stack gap={0.5} {...getFloatingProps()}>
           {OPTIONS.map((option, index) => (
             <Button
@@ -128,21 +128,21 @@ const SelectList = () => {
             </Button>
           ))}
         </Stack>
-      </PopupV2.Panel>
+      </Popup.Panel>
     </>
   )
 }
 
 /**
- * Dummy Select built from the public `PopupV2` API.
+ * Dummy Select built from the public `Popup` API.
  */
 const Select = () => (
-  <PopupV2.Root>
+  <Popup.Root>
     <SelectList />
-  </PopupV2.Root>
+  </Popup.Root>
 )
 
-export const Examples: StoryFn<typeof PopupV2> = () => (
+export const Examples: StoryFn<typeof Popup> = () => (
   <Stack gap={2} direction="row">
     <Popover />
     <Menu />

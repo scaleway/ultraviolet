@@ -4,7 +4,7 @@ import { TextInput } from '../../../../Data Entry/TextInput'
 import { Toggle } from '../../../../Data Entry/Toggle'
 import { Stack } from '../../../../Layout/Stack'
 import { Text } from '../../../../Typography/Text'
-import { PopupV2 } from '../index'
+import { Popup } from '../index'
 
 const Content = () => (
   <Stack gap={1}>
@@ -18,20 +18,20 @@ const Content = () => (
   </Stack>
 )
 
-export const Controlled: StoryFn<typeof PopupV2> = () => {
+export const Controlled: StoryFn<typeof Popup> = () => {
   const [visible, setVisible] = useState(false)
 
   return (
     <Stack gap={3} alignItems="flex-start">
       <Toggle checked={visible} label="Toggle from outside" onChange={event => setVisible(event.target.checked)} />
-      <PopupV2.Root visible={visible}>
-        <PopupV2.Trigger>
+      <Popup.Root visible={visible}>
+        <Popup.Trigger>
           <TextInput label="Passive Input" />
-        </PopupV2.Trigger>
-        <PopupV2.Panel initialFocus={-1}>
+        </Popup.Trigger>
+        <Popup.Panel initialFocus={-1}>
           <Content />
-        </PopupV2.Panel>
-      </PopupV2.Root>
+        </Popup.Panel>
+      </Popup.Root>
     </Stack>
   )
 }

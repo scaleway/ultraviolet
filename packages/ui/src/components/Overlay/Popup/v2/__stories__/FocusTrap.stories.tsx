@@ -4,20 +4,20 @@ import { useRef, useState } from 'react'
 import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
 import { Text } from '../../../../Typography/Text'
-import { PopupV2 } from '../index'
+import { Popup } from '../index'
 
-export const FocusTrap: StoryFn<typeof PopupV2> = () => {
+export const FocusTrap: StoryFn<typeof Popup> = () => {
   const closeButtonRef = useRef<HTMLButtonElement>(null)
   const [visible, setVisible] = useState(false)
 
   return (
-    <PopupV2.Root visible={visible} onOpenChange={setVisible}>
-      <PopupV2.Trigger>
+    <Popup.Root visible={visible} onOpenChange={setVisible}>
+      <Popup.Trigger>
         <Button sentiment="neutral" variant="outlined">
           Open the Popup
         </Button>
-      </PopupV2.Trigger>
-      <PopupV2.Panel focusTrap initialFocus={closeButtonRef} accessibleLabel="Popup with focus trap" maxWidth={400}>
+      </Popup.Trigger>
+      <Popup.Panel focusTrap initialFocus={closeButtonRef} accessibleLabel="Popup with focus trap" maxWidth={400}>
         <Stack gap={2} width="100%">
           <Stack alignItems="center" direction="row" gap={2} justifyContent="space-between">
             <Text as="h3" sentiment="neutral" variant="bodyStrong">
@@ -48,7 +48,7 @@ export const FocusTrap: StoryFn<typeof PopupV2> = () => {
             </Button>
           </Stack>
         </Stack>
-      </PopupV2.Panel>
-    </PopupV2.Root>
+      </Popup.Panel>
+    </Popup.Root>
   )
 }

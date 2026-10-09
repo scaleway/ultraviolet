@@ -3,7 +3,7 @@ import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
 import { Text } from '../../../../Typography/Text'
 import { usePopupContext } from '../context'
-import { PopupV2 } from '../index'
+import { Popup } from '../index'
 
 const ACTIONS = [
   'Create a new compute instance in the selected region',
@@ -18,12 +18,12 @@ const MenuList = () => {
 
   return (
     <>
-      <PopupV2.Trigger>
+      <Popup.Trigger>
         <Button fullWidth sentiment="neutral" variant="outlined">
           Actions
         </Button>
-      </PopupV2.Trigger>
-      <PopupV2.Panel matchTriggerWidth role="menu" accessibleLabel="Actions" placement="bottom-start">
+      </Popup.Trigger>
+      <Popup.Panel matchTriggerWidth role="menu" accessibleLabel="Actions" placement="bottom-start">
         <Stack gap={0}>
           {ACTIONS.map(action => (
             <Button
@@ -40,15 +40,15 @@ const MenuList = () => {
             </Button>
           ))}
         </Stack>
-      </PopupV2.Panel>
+      </Popup.Panel>
     </>
   )
 }
 
-export const MatchTriggerWidth: StoryFn<typeof PopupV2> = () => (
-  <PopupV2.Root visible>
+export const MatchTriggerWidth: StoryFn<typeof Popup> = () => (
+  <Popup.Root visible>
     <MenuList />
-  </PopupV2.Root>
+  </Popup.Root>
 )
 
 MatchTriggerWidth.decorators = [

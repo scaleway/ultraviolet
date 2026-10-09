@@ -3,7 +3,7 @@ import { Panel } from './Panel'
 import { Root } from './Root'
 import { Trigger } from './Trigger'
 
-export const PopupV2 = {
+export const Popup = {
   Panel,
   Root,
   Trigger,
