@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
+import { theme } from '@ultraviolet/themes'
 import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
 import { Text } from '../../../../Typography/Text'
@@ -24,7 +25,7 @@ const MenuList = () => {
         </Button>
       </Popup.Trigger>
       <Popup.Panel matchTriggerWidth role="menu" accessibleLabel="Actions" placement="bottom-start">
-        <Stack gap={0}>
+        <Stack gap={0} style={{ padding: theme.space['0.5'] }}>
           {ACTIONS.map(action => (
             <Button
               key={action}
