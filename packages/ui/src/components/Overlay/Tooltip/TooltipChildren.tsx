@@ -3,7 +3,7 @@ import type { TooltipProps } from '.'
 import type { useTooltip } from './useTooltip'
 import { tooltipStyle } from './styles.css'
 
-const FOCUSABLE_ELEMENTS = `
+export const FOCUSABLE_ELEMENTS = `
   :is(
     a[href],
     button,
