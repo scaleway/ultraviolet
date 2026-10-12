@@ -142,12 +142,12 @@
     "packageManager": {
       "name": "pnpm",
       "version": "12.3.4",
-      "onFail": "warn"
+      "onFail": "download"
     },
     "runtime": {
       "name": "node",
-      "version": "^24.18.0 || 26.x",
-      "onFail": "error"
+      "version": "v26.11.1",
+      "onFail": "download"
     }
   },
   "engines": {
