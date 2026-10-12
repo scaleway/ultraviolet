@@ -15,6 +15,10 @@ const stack = style({
     [`${selectableCardStyle.labelContainerSelectableCardLabel} &`]: {
       width: '100%',
     },
+    [`${selectableCardStyle.labelContainerSelectableCardLabel}${selectableCardStyle.labelContainerSelectableCardLabelDescription} &`]:
+      {
+        width: 'auto',
+      },
     [`${selectableCardStyle.selectableElement} > &`]: {
       width: widthSelectable,
     },

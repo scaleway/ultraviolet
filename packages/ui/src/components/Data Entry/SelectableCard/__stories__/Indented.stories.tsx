@@ -7,14 +7,14 @@ import { Text } from '../../../Typography/Text'
 import { SelectInput } from '../../SelectInput'
 
 export const Indented: StoryFn = args => {
-  const [value2, onChange2] = useState({ 'label-20': true, 'label-21': false })
+  const [value, setValue] = useState({ 'label-20': true, 'label-21': false })
 
   return (
     <Stack flex={1} gap={8}>
       <Stack flex={1} gap={1}>
         <SelectableCard
           {...args}
-          checked={value2['label-20']}
+          checked={value['label-20']}
           label={
             <Stack direction="row" flex={1} justifyContent="space-between">
               <Text as="span" variant="bodyStrong">
@@ -27,7 +27,7 @@ export const Indented: StoryFn = args => {
           }
           name="label-20"
           onChange={event =>
-            onChange2(prevState => ({
+            setValue(prevState => ({
               ...prevState,
               'label-20': event.currentTarget.checked,
             }))
@@ -54,7 +54,7 @@ export const Indented: StoryFn = args => {
         </SelectableCard>
         <SelectableCard
           {...args}
-          checked={value2['label-21']}
+          checked={value['label-21']}
           indented={false}
           label={
             <Stack direction="row" flex={1} justifyContent="space-between">
@@ -68,7 +68,7 @@ export const Indented: StoryFn = args => {
           }
           name="label-21"
           onChange={event =>
-            onChange2(prevState => ({
+            setValue(prevState => ({
               ...prevState,
               'label-21': event.currentTarget.checked,
             }))

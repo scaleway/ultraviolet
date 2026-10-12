@@ -5,7 +5,7 @@ import { SelectableCard } from '..'
 import { Stack } from '../../../Layout/Stack'
 
 export const Controlled: StoryFn = args => {
-  const [value, onChange] = useState('label-1')
+  const [value, setValue] = useState('label-1')
 
   return (
     <>
@@ -14,7 +14,7 @@ export const Controlled: StoryFn = args => {
         checked={value === 'label-1'}
         label="Left Radio"
         name="label-1"
-        onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
+        onChange={(event: ChangeEvent<HTMLInputElement>) => setValue(event.currentTarget.value)}
         type="radio"
         value="label-1"
       />
@@ -23,7 +23,7 @@ export const Controlled: StoryFn = args => {
         checked={value === 'label-2'}
         label="Right Radio"
         name="label-2"
-        onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
+        onChange={(event: ChangeEvent<HTMLInputElement>) => setValue(event.currentTarget.value)}
         type="radio"
         value="label-2"
       />

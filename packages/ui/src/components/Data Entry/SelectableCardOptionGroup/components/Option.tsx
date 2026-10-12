@@ -11,7 +11,7 @@ import { useSelectableCardOptionGroup } from '../Provider'
 import { Image } from './Image'
 import { selectableCardOptionGroupStyle } from '../styles.css'
 
-type OptionProps = Omit<ComponentProps<typeof SelectableCard>, 'onChange'> & {
+type OptionProps = Omit<ComponentProps<typeof SelectableCard>, 'onChange' | 'labelDescriptionInline'> & {
   value: string
   className?: string
   children?: ReactNode

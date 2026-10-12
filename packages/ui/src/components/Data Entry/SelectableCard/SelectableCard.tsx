@@ -34,6 +34,8 @@ export const SelectableCard = forwardRef(
       tooltip,
       id,
       label,
+      labelDescription,
+      labelDescriptionInline = false,
       'data-testid': dataTestId,
       productIcon,
       illustration,
@@ -99,7 +101,10 @@ export const SelectableCard = forwardRef(
               image,
             }),
             label
-              ? selectableCardStyle.labelContainerSelectableCardLabel
+              ? cn(
+                  selectableCardStyle.labelContainerSelectableCardLabel,
+                  labelDescriptionInline ? selectableCardStyle.labelContainerSelectableCardLabelDescription : '',
+                )
               : selectableCardStyle.labelContainerSelectableCardNoLabel,
           )}
           data-checked={checked}
@@ -125,22 +130,44 @@ export const SelectableCard = forwardRef(
           tabIndex={disabled ? undefined : 0}
         >
           <IllustrationContainer illustration={illustration} productIcon={productIcon}>
-            <MultiStateInput
-              aria-label={ariaLabel}
-              checked={checked}
-              data-error={isError}
-              disabled={disabled}
-              id={id}
-              innerRef={innerRef}
-              isError={isError}
-              label={label}
-              name={name}
-              onBlur={onBlur}
-              onChange={onChange}
-              onFocus={onFocus}
-              type={type}
-              value={value}
-            />
+            {labelDescription ? (
+              <Stack width="100%" direction="row" gap={1} alignItems="center">
+                <MultiStateInput
+                  aria-label={ariaLabel}
+                  checked={checked}
+                  data-error={isError}
+                  disabled={disabled}
+                  id={id}
+                  innerRef={innerRef}
+                  isError={isError}
+                  label={label}
+                  name={name}
+                  onBlur={onBlur}
+                  onChange={onChange}
+                  onFocus={onFocus}
+                  type={type}
+                  value={value}
+                />
+                {labelDescription}
+              </Stack>
+            ) : (
+              <MultiStateInput
+                aria-label={ariaLabel}
+                checked={checked}
+                data-error={isError}
+                disabled={disabled}
+                id={id}
+                innerRef={innerRef}
+                isError={isError}
+                label={label}
+                name={name}
+                onBlur={onBlur}
+                onChange={onChange}
+                onFocus={onFocus}
+                type={type}
+                value={value}
+              />
+            )}
 
             {children ? (
               <Stack
