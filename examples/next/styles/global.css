@@ -2,7 +2,7 @@
 @import'@ultraviolet/themes/dark.css' layer(ultraviolet);
 
 :root.light-theme {
-  --color-primary-text: #4f0599;
+  --color-primary-text: #4f0599; /* test to override a UV token */
 }
 
 html {
