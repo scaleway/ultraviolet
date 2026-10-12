@@ -52,6 +52,16 @@ To apply when using the component:
 
 - No `prefers-reduced-motion` support: the height/opacity transition runs regardless of the user's reduced-motion preference (WCAG 2.3.3 Animation from Interactions, Level AAA — nice to have).
 
+## Remediation
+
+The current architecture makes enforcing accessibility complicated and fragile: the trigger is external (so `aria-expanded`/`aria-controls` are delegated to consumers), the collapsed state relies on `max-height`/`overflow` with a delayed `visibility` (exposing content to assistive technology and the tab order), and `minHeight` conflicts with fully hiding collapsed content. Rethinking the component design is recommended rather than patching it.
+
+**Redesign with native `<details>`/`<summary>`**: the component owns the trigger and the collapsed state, getting `aria-expanded`, `aria-controls`, keyboard support (Enter/Space) and removal of collapsed content from the accessibility tree for free. Requires:
+
+- the trigger to live inside the component (optional `trigger`/`summary` prop), abandoning the external-trigger pattern;
+- re-implementing the height animation by intercepting the `toggle` event (`preventDefault()`) or dropping it, since native `<details>` toggles instantly;
+- dropping the partial `minHeight` preview, since collapsed content is fully hidden.
+
 ## Dependencies
 
 - `Button` (or any trigger component): must set `aria-expanded`/`aria-controls` on the trigger to convey the disclosure state.
