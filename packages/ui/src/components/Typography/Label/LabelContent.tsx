@@ -22,12 +22,12 @@ export const LabelRequiredOrNot = ({
       return 'disabled'
     }
 
-    if (htmlFor) {
+    if (htmlFor && as === 'label') {
       return 'htmlFor'
     }
 
     return 'default'
-  }, [disabled, htmlFor])
+  }, [disabled, htmlFor, as])
 
   if (required) {
     return (
@@ -44,7 +44,7 @@ export const LabelRequiredOrNot = ({
           {children}
         </Text>
         <Text
-          aria-label="required"
+          aria-hidden
           as="span"
           disabled={disabled}
           sentiment="danger"
