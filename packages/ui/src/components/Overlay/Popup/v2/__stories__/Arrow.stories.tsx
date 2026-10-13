@@ -17,7 +17,7 @@ export const Arrow: StoryFn<typeof Popup> = () => (
           </Button>
         </Popup.Trigger>
         <Popup.Panel arrow placement={placement}>
-          <Stack gap={1} style={{ padding: theme.space['2'] }}>
+          <Stack gap={1} style={{ padding: theme.space['1'] }}>
             <Text as="p" variant="bodySmall">
               Popup with arrow pointing at its trigger.
             </Text>

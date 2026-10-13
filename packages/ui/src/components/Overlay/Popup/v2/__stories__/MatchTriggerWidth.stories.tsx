@@ -63,6 +63,7 @@ MatchTriggerWidth.decorators = [
           border: '1px solid black',
           width: '100%',
           maxWidth: '40rem',
+          minWidth: '10rem',
           overflow: 'auto',
           padding: '1rem 2rem',
           resize: 'horizontal',

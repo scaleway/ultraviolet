@@ -58,7 +58,7 @@ const animation = styleVariants({
 })
 
 const trigger = style({
-  display: 'contents',
+  display: 'inherit',
 })
 
 export const popupV2Style = {
