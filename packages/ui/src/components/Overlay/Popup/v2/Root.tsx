@@ -1,5 +1,14 @@
 'use client'
-import { autoUpdate, flip, offset, shift, useDismiss, useFloating, useInteractions, useTransitionStatus } from '@floating-ui/react'
+import {
+  autoUpdate,
+  flip,
+  offset,
+  shift,
+  useDismiss,
+  useFloating,
+  useInteractions,
+  useTransitionStatus,
+} from '@floating-ui/react'
 import type { Middleware, Placement } from '@floating-ui/react'
 import { usePrefersReducedMotion } from '@ultraviolet/animations'
 import { useCallback, useId, useMemo, useState } from 'react'
@@ -89,7 +98,20 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
       isMounted,
       status,
     }),
-    [floating, open, id, role, placement, setRole, setPlacement, setPanelMiddleware, dismiss, getFloatingProps, isMounted, status],
+    [
+      floating,
+      open,
+      id,
+      role,
+      placement,
+      setRole,
+      setPlacement,
+      setPanelMiddleware,
+      dismiss,
+      getFloatingProps,
+      isMounted,
+      status,
+    ],
   )
 
   return <PopupContext.Provider value={value}>{children}</PopupContext.Provider>
