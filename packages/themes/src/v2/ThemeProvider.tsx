@@ -1,7 +1,7 @@
 'use client'
 
 import { useLocalStorage } from '@scaleway/use-storage'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo } from 'react'
 import { DEFAULT_THEME_CLASSES, DEFAULT_THEME_STORAGE_KEY } from './constants'
 import { ThemeContext, getInitTheme } from './helpers'
 import type { ThemeContextType, ThemeOption, ThemeProviderProps } from './types'
@@ -16,7 +16,6 @@ export const ThemeProvider = ({ initialTheme, children, storageKey }: ThemeProvi
     storageKey ?? DEFAULT_THEME_STORAGE_KEY,
     initialTheme ?? getInitTheme(),
   )
-  const [isHydrated, setIsHydrated] = useState(false)
 
   const chosenTheme = storedTheme ?? initialTheme ?? getInitTheme()
   const isSystem = chosenTheme === 'system'
@@ -30,20 +29,9 @@ export const ThemeProvider = ({ initialTheme, children, storageKey }: ThemeProvi
     return chosenTheme
   }, [isSystem, prefersDarkMode, chosenTheme])
 
-  // Apply the theme only once the component is hydrated
+  // Add class to document according to applied theme.
+  // Effects only run on the client after render, so `document` is always defined
   useEffect(() => {
-    // oxlint-disable-next-line react/set-state-in-effect
-    setIsHydrated(true)
-  }, [])
-
-  // Add class to document according to applied theme
-  useEffect(() => {
-    if (!isHydrated || typeof document === 'undefined') {
-      return () => {
-        /* empty */
-      }
-    }
-
     const { documentElement } = document
     documentElement.classList.remove(...Object.values(DEFAULT_THEME_CLASSES))
     documentElement.classList.add(DEFAULT_THEME_CLASSES[appliedTheme])
@@ -51,7 +39,7 @@ export const ThemeProvider = ({ initialTheme, children, storageKey }: ThemeProvi
     return () => {
       documentElement.classList.remove(DEFAULT_THEME_CLASSES[appliedTheme])
     }
-  }, [isHydrated, appliedTheme])
+  }, [appliedTheme])
 
   const value = useMemo<ThemeContextType>(
     () => ({
