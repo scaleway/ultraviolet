@@ -9,7 +9,7 @@ export default {
       perceivable: false,
       operable: true,
       understandable: true,
-      robust: false,
+      robust: true,
     },
   },
 } satisfies Meta<typeof Badge>
@@ -20,3 +20,5 @@ export { Prominences } from './Prominences.stories'
 export { Sizes } from './Sizes.stories'
 export { Disabled } from './Disabled.stories'
 export { Icon } from './Icon.stories'
+export { AccessibleLabel } from './AccessibleLabel.stories'
+export { Role } from './Role.stories'
