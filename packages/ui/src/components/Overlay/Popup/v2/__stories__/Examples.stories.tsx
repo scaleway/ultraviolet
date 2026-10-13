@@ -1,9 +1,11 @@
 import { useInteractions, useListNavigation } from '@floating-ui/react'
 import type { StoryFn } from '@storybook/react-vite'
+import { ArrowDownIcon, DotsVerticalIcon, InformationOutlineIcon } from '@ultraviolet/icons'
 import { theme } from '@ultraviolet/themes'
 import { useRef, useState } from 'react'
 import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
+import { VisuallyHidden } from '../../../../Other/VisuallyHidden'
 import { Text } from '../../../../Typography/Text'
 import { usePopupContext } from '../context'
 import { Popup } from '../index'
@@ -17,7 +19,7 @@ const Popover = () => (
   <Popup.Root>
     <Popup.Trigger>
       <Button sentiment="neutral" variant="outlined">
-        Popover (dialog)
+        Popover
       </Button>
     </Popup.Trigger>
     <Popup.Panel role="dialog" aria-labelledby="popover-title">
@@ -26,7 +28,7 @@ const Popover = () => (
           Popover title
         </Text>
         <Text as="p" variant="bodySmall">
-          A Popover with an accessible name and focus restoration.
+          A Popover labelled by its visible heading.
         </Text>
       </Stack>
     </Popup.Panel>
@@ -40,8 +42,8 @@ const MenuList = () => {
   return (
     <>
       <Popup.Trigger>
-        <Button sentiment="neutral" variant="outlined">
-          Menu
+        <Button sentiment="neutral" variant="outlined" size="small" accessibleLabel="Menu">
+          <DotsVerticalIcon />
         </Button>
       </Popup.Trigger>
       <Popup.Panel role="menu" accessibleLabel="Actions">
@@ -101,6 +103,7 @@ const SelectList = () => {
       <Popup.Trigger>
         <Button sentiment="neutral" variant="outlined" {...getReferenceProps()}>
           {selected}
+          <ArrowDownIcon/>
         </Button>
       </Popup.Trigger>
       <Popup.Panel role="listbox" accessibleLabel="Choose an option" matchTriggerWidth>
@@ -139,10 +142,27 @@ const Select = () => (
   </Popup.Root>
 )
 
+const InformationIcon = () => (
+  <Popup.Root>
+    <Popup.Trigger triggerEvent="hover">
+      <VisuallyHidden>See information</VisuallyHidden>
+      <InformationOutlineIcon prominence="weak" sentiment="neutral" />
+    </Popup.Trigger>
+    <Popup.Panel placement="top" arrow>
+      <Stack gap={1} style={{ padding: theme.space['1'] }}>
+        <Text as="p" variant="bodySmall">
+          Some detailed information
+        </Text>
+      </Stack>
+    </Popup.Panel>
+  </Popup.Root>
+)
+
 export const Examples: StoryFn<typeof Popup> = () => (
-  <Stack gap={2} direction="row">
+  <Stack gap={3} alignItems="center" direction="row">
     <Popover />
     <Menu />
     <Select />
+    <InformationIcon />
   </Stack>
 )
