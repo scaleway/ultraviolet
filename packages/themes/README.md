@@ -57,7 +57,7 @@ export const App = () => (
 
 #### With static CSS files and new `ThemeProvider` (v2)
 
-This version is recommended for projects that import the static CSS files (`light.css`, `dark.css`, `darker.css`) which provide the theme variables. Contrary to `ThemeProvider`, it does **not** inject the CSS variables at runtime, so the variables already defined in the CSS are not duplicated. It also handles the theme logic internally: initialization, switching, system preference and optional persistence.
+This version is recommended for projects that import the static CSS files (`light.css`, `dark.css`, `darker.css`) which provide the theme variables. Contrary to `ThemeProvider`, it does **not** inject the CSS variables at runtime, so the variables already defined in the CSS are not duplicated. It also handles the theme logic internally: initialization, switching, system preference and persistence.
 
 ```tsx
 import '@ultraviolet/themes/light.css'
@@ -83,26 +83,29 @@ Use `v2/useTheme` to retrieve the current theme and `setTheme` to switch it from
 
 ```tsx
 import { ThemeProvider, useTheme } from '@ultraviolet/themes/v2'
-import type { Theme } from '@ultraviolet/themes'
+import type { ThemeOption } from '@ultraviolet/themes/v2'
 import { SwitchButton } from '@ultraviolet/ui'
 
 const ThemeSwitcher = () => {
-  const { theme, setTheme } = useTheme()
+  const { theme, isSystem, setTheme } = useTheme()
 
   return (
     <SwitchButton
       onChange={event => {
-        setTheme(event.currentTarget.value as Theme)
+        setTheme(event.currentTarget.value as ThemeOption)
       }}
-      value={theme}
+      value={isSystem ? 'system' : theme}
     >
       <SwitchButton.Option value="light">light mode</SwitchButton.Option>
       <SwitchButton.Option value="dark">dark mode</SwitchButton.Option>
       <SwitchButton.Option value="darker">darker mode</SwitchButton.Option>
+      <SwitchButton.Option value="system">system</SwitchButton.Option>
     </SwitchButton>
   )
 }
 ```
+
+`isSystem` is `true` when the chosen theme is `"system"`, i.e. when the applied theme follows the OS `prefers-color-scheme` setting. When `isSystem` is `true`, `theme` still contains the resolved theme (`"light"`, `"dark"` or `"darker"`).
 
 `initialTheme` and `storageKey` are both optional:
 
@@ -128,6 +131,8 @@ const ThemeSwitcher = () => {
 The override must be scoped to the theme class (so it only applies when the corresponding theme is active) and must win the cascade: either declare it **after** the imported theme files, or wrap the imports and the overrides in cascade layers and give the overrides a later layer order.
 
 Our components currently support both `ThemeProvider` and `v2/ThemeProvider`, but only one of them is necessary.
+
+Migrating an existing application from `ThemeProvider` (v1) to `ThemeProvider` (v2)? Check out the [migration guide](./MIGRATION.md).
 
 #### Normalized css
 
