@@ -103,7 +103,7 @@ const SelectList = () => {
       <Popup.Trigger>
         <Button sentiment="neutral" variant="outlined" {...getReferenceProps()}>
           {selected}
-          <ArrowDownIcon/>
+          <ArrowDownIcon />
         </Button>
       </Popup.Trigger>
       <Popup.Panel role="listbox" accessibleLabel="Choose an option" matchTriggerWidth>

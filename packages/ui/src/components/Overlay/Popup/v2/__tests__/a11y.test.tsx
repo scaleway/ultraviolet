@@ -86,6 +86,7 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       renderPopup()
       const wrapper = screen.getByRole('button', { name: 'Open' }).parentElement
       expect(wrapper).not.toHaveAttribute('tabindex')
+      expect(wrapper).not.toHaveAttribute('role')
     })
 
     it('should add a tab stop on the wrapper and land ARIA on it when the trigger has no focusable element', () => {
@@ -100,6 +101,7 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
 
       const wrapper = screen.getByText('Open').parentElement
       expect(wrapper).toHaveAttribute('tabindex', '0')
+      expect(wrapper).toHaveAttribute('role', 'button')
       expect(wrapper).toHaveAttribute('aria-expanded', 'false')
       expect(wrapper).toHaveAttribute('aria-haspopup', 'dialog')
     })

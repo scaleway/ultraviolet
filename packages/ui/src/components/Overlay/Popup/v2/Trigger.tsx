@@ -44,6 +44,7 @@ export const Trigger = ({ children, triggerEvent = 'click' }: PopupTriggerProps)
     refs.setReference(reference)
     if (reference === wrapper) {
       wrapper.tabIndex = 0
+      wrapper.setAttribute('role', 'button')
     }
 
     const setAttribute = (name: string, value: string | null) => {

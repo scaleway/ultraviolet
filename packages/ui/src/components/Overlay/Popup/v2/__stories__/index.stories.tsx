@@ -5,8 +5,8 @@ export default {
   title: 'UI/Overlay/PopupV2',
   component: Popup.Root,
   subcomponents: {
-    "Popup.Trigger": Popup.Trigger,
-    "Popup.Panel": Popup.Panel,
+    'Popup.Trigger': Popup.Trigger,
+    'Popup.Panel': Popup.Panel,
   },
   tags: ['internal'],
   parameters: {
@@ -19,8 +19,7 @@ export default {
     internal: true,
     docs: {
       description: {
-        component:
-          'General purpose `Popup` component to use in other components like `Popover`, `SelectInput` etc.',
+        component: 'General purpose `Popup` component to use in other components like `Popover`, `SelectInput` etc.',
       },
     },
   },
