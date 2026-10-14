@@ -4,278 +4,32 @@ import { SelectableCard } from '..'
 import { Button } from '../../../Action/Button'
 import { Badge } from '../../../Badges/Badge'
 import { Row } from '../../../Layout/Row'
-import { Separator } from '../../../Layout/Separator'
 import { Stack } from '../../../Layout/Stack'
 import { Text } from '../../../Typography/Text'
-import { SelectInput } from '../../SelectInput'
 import { TextArea } from '../../TextArea'
 import fr from './assets/fr.svg'
 import nl from './assets/nl.svg'
 import pl from './assets/pl.svg'
 
 export const Examples: StoryFn = args => {
-  const [value, onChange] = useState('label-29')
-  const [value2, onChange2] = useState({ 'label-20': true, 'label-21': false })
-  const [value3, onChange3] = useState({
-    'label-22': true,
-    'label-23': false,
-    'label-24': false,
-    'label-25': false,
-  })
-  const [value4, onChange4] = useState({
+  const [value, setValue] = useState({
     'label-26': true,
     'label-27': false,
     'label-28': false,
   })
-  const [value5, onChange5] = useState({
+  const [valueInput, setValueInput] = useState({
     'label-29': false,
   })
-  const [value6, onChange6] = useState({
+  const [valueDomain, setValueDomain] = useState({
     'label-30': false,
   })
 
   return (
     <Stack flex={1} gap={8}>
-      <Stack flex={1} gap={1}>
-        <SelectableCard
-          {...args}
-          checked={value === 'label-29'}
-          label={
-            <Stack direction="row" flex={1} justifyContent="space-between">
-              <Text as="span" variant="bodyStrong">
-                Option 1
-              </Text>
-              <Text as="span" variant="bodyStronger">
-                1.99€
-              </Text>
-            </Stack>
-          }
-          name="label-29"
-          onChange={event => onChange(event.currentTarget.value)}
-          showTick
-          type="radio"
-          value="label-29"
-        >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 1.99€ and provide you with a lot of happiness
-          </Text>
-        </SelectableCard>
-        <SelectableCard
-          {...args}
-          checked={value === 'label-15'}
-          label={
-            <Stack direction="row" flex={1} justifyContent="space-between">
-              <Text as="span" variant="bodyStrong">
-                Option 2
-              </Text>
-              <Text as="span" variant="bodyStronger">
-                2.99€
-              </Text>
-            </Stack>
-          }
-          name="label-15"
-          onChange={event => onChange(event.currentTarget.value)}
-          showTick
-          type="radio"
-          value="label-15"
-        >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of happiness
-          </Text>
-        </SelectableCard>
-      </Stack>
-      <Stack flex={1} gap={1}>
-        <SelectableCard
-          {...args}
-          checked={value2['label-20']}
-          label={
-            <Stack direction="row" flex={1} justifyContent="space-between">
-              <Text as="span" variant="bodyStrong">
-                Optional option 1
-              </Text>
-              <Text as="span" variant="bodyStronger">
-                4.99€
-              </Text>
-            </Stack>
-          }
-          name="label-20"
-          onChange={event =>
-            onChange2(prevState => ({
-              ...prevState,
-              'label-20': event.currentTarget.checked,
-            }))
-          }
-          showTick
-          type="checkbox"
-          value="label-20"
-        >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            <Stack gap={3} width="100%">
-              This option will cost you 1.99€ and provide you with a lot of happiness
-              <Separator />
-              <SelectInput
-                label="Select a sub option"
-                options={[
-                  {
-                    label: 'Sub option 1',
-                    value: 'option1',
-                  },
-                ]}
-              />{' '}
-            </Stack>
-          </Text>
-        </SelectableCard>
-        <SelectableCard
-          {...args}
-          checked={value2['label-21']}
-          label={
-            <Stack direction="row" flex={1} justifyContent="space-between">
-              <Text as="span" variant="bodyStrong">
-                Optional option 2
-              </Text>
-              <Text as="span" variant="bodyStronger">
-                9.99€
-              </Text>
-            </Stack>
-          }
-          name="label-21"
-          onChange={event =>
-            onChange2(prevState => ({
-              ...prevState,
-              'label-21': event.currentTarget.checked,
-            }))
-          }
-          showTick
-          type="checkbox"
-          value="label-21"
-        >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of happiness
-          </Text>
-        </SelectableCard>
-      </Stack>
-
-      <Row gap={1} templateColumns="repeat(2, auto)">
-        <SelectableCard
-          {...args}
-          checked={value3['label-22']}
-          label={
-            <Stack alignItems="center" direction="row" flex={1} gap={1}>
-              <Text as="span" variant="bodyStrong">
-                Backup
-              </Text>
-              <Badge sentiment="primary" size="small">
-                Recommended
-              </Badge>
-            </Stack>
-          }
-          name="label-22"
-          onChange={event =>
-            onChange3(prevState => ({
-              ...prevState,
-              'label-22': event.currentTarget.checked,
-            }))
-          }
-          showTick
-          type="checkbox"
-          value="label-22"
-        >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of happiness
-          </Text>
-        </SelectableCard>
-        <SelectableCard
-          {...args}
-          checked={value3['label-23']}
-          label={
-            <Stack alignItems="center" direction="row" flex={1} gap={1}>
-              <Text as="span" variant="bodyStrong">
-                Redundancy
-              </Text>
-              <Badge sentiment="primary" size="small">
-                Recommended
-              </Badge>
-            </Stack>
-          }
-          name="label-23"
-          onChange={event =>
-            onChange3(prevState => ({
-              ...prevState,
-              'label-23': event.currentTarget.checked,
-            }))
-          }
-          showTick
-          type="checkbox"
-          value="label-23"
-        >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of happiness
-          </Text>
-        </SelectableCard>
-
-        <SelectableCard
-          {...args}
-          checked={value3['label-24']}
-          label={
-            <Stack alignItems="center" direction="row" flex={1} gap={1}>
-              <Text as="span" variant="bodyStrong">
-                Morning Reboot 9am
-              </Text>
-              <Badge sentiment="neutral" size="small">
-                Optional
-              </Badge>
-            </Stack>
-          }
-          name="label-24"
-          onChange={event =>
-            onChange3(prevState => ({
-              ...prevState,
-              'label-24': event.currentTarget.checked,
-            }))
-          }
-          showTick
-          type="checkbox"
-          value="label-24"
-        >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of happiness
-          </Text>
-        </SelectableCard>
-
-        <SelectableCard
-          {...args}
-          checked={value3['label-25']}
-          label={
-            <Stack alignItems="center" direction="row" flex={1} gap={1}>
-              <Text as="span" variant="bodyStrong">
-                Monitoring
-              </Text>
-              <Badge sentiment="neutral" size="small">
-                Optional
-              </Badge>
-            </Stack>
-          }
-          name="label-25"
-          onChange={event =>
-            onChange3(prevState => ({
-              ...prevState,
-              'label-25': event.currentTarget.checked,
-            }))
-          }
-          showTick
-          type="checkbox"
-          value="label-25"
-        >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of happiness
-          </Text>
-        </SelectableCard>
-      </Row>
-
       <Row gap={1} templateColumns="repeat(3, auto)">
         <SelectableCard
           {...args}
-          checked={value4['label-26']}
+          checked={value['label-26']}
           label={
             <Stack alignItems="center" direction="row" flex={1} gap={1}>
               <img alt="fr" height={24} src={fr} width={24} />
@@ -286,7 +40,7 @@ export const Examples: StoryFn = args => {
           }
           name="label-26"
           onChange={event =>
-            onChange4(prevState => ({
+            setValue(prevState => ({
               ...prevState,
               'label-26': event.currentTarget.checked,
             }))
@@ -297,7 +51,7 @@ export const Examples: StoryFn = args => {
         />
         <SelectableCard
           {...args}
-          checked={value4['label-27']}
+          checked={value['label-27']}
           label={
             <Stack alignItems="center" direction="row" flex={1} gap={1}>
               <img alt="nl" src={nl} width={24} />
@@ -308,7 +62,7 @@ export const Examples: StoryFn = args => {
           }
           name="label-27"
           onChange={event =>
-            onChange4(prevState => ({
+            setValue(prevState => ({
               ...prevState,
               'label-27': event.currentTarget.checked,
             }))
@@ -320,7 +74,7 @@ export const Examples: StoryFn = args => {
 
         <SelectableCard
           {...args}
-          checked={value4['label-28']}
+          checked={value['label-28']}
           label={
             <Stack alignItems="center" direction="row" flex={1} gap={1}>
               <img alt="pl" src={pl} width={24} />
@@ -331,7 +85,7 @@ export const Examples: StoryFn = args => {
           }
           name="label-28"
           onChange={event =>
-            onChange4(prevState => ({
+            setValue(prevState => ({
               ...prevState,
               'label-28': event.currentTarget.checked,
             }))
@@ -343,11 +97,11 @@ export const Examples: StoryFn = args => {
       </Row>
       <SelectableCard
         {...args}
-        checked={value5['label-29']}
+        checked={valueInput['label-29']}
         label="With an input in the children"
         name="label-29"
         onChange={event =>
-          onChange5(prevState => ({
+          setValueInput(prevState => ({
             ...prevState,
             'label-29': event.currentTarget.checked,
           }))
@@ -360,7 +114,7 @@ export const Examples: StoryFn = args => {
       </SelectableCard>
       <SelectableCard
         {...args}
-        checked={value6['label-30']}
+        checked={valueDomain['label-30']}
         label={
           <Stack direction="row" justifyContent="space-between">
             <Stack direction="row" gap={1}>
@@ -387,7 +141,7 @@ export const Examples: StoryFn = args => {
         }
         name="label-30"
         onChange={event =>
-          onChange6(prevState => ({
+          setValueDomain(prevState => ({
             ...prevState,
             'label-30': event.currentTarget.checked,
           }))
