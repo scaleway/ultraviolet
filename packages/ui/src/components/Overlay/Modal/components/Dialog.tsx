@@ -12,6 +12,7 @@ import type {
 } from 'react'
 import { createPortal } from 'react-dom'
 import { Stack } from '../../../Layout/Stack'
+import { FOCUSABLE_ELEMENTS } from '../../constants'
 import { useModal } from '../ModalProvider'
 import type { DialogProps } from '../types'
 import { modalStyle, nestedModalScale, nestedModalTop } from '../styles.css'
@@ -181,9 +182,7 @@ export const Dialog = ({
         return
       }
 
-      const focusableEls = dialogRef.current?.querySelectorAll(
-        'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])',
-      )
+      const focusableEls = dialogRef.current?.querySelectorAll(FOCUSABLE_ELEMENTS)
 
       // Handle case when no interactive element are within the modal (including close icon)
       if (focusableEls?.length === 0) {

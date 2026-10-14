@@ -2,7 +2,7 @@
 import { safePolygon, useClick, useHover, useInteractions } from '@floating-ui/react'
 import { useEffect, useRef } from 'react'
 import type { ReactNode } from 'react'
-import { FOCUSABLE_ELEMENTS } from '../../Tooltip/TooltipChildren'
+import { FOCUSABLE_ELEMENTS } from '../../constants'
 import { usePopupContext } from './context'
 import { popupV2Style } from './styles.css'
 

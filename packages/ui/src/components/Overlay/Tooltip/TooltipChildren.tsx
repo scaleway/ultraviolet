@@ -1,25 +1,8 @@
 import { useEffect, useRef } from 'react'
 import type { TooltipProps } from '.'
+import { FOCUSABLE_ELEMENTS } from '../constants'
 import type { useTooltip } from './useTooltip'
 import { tooltipStyle } from './styles.css'
-
-export const FOCUSABLE_ELEMENTS = `
-  :is(
-    a[href],
-    button,
-    input:not([type="hidden"]),
-    select,
-    textarea,
-    [tabindex],
-    [contenteditable="true"],
-    details,
-    summary,
-    audio[controls],
-    video[controls]
-  )
-  :not([disabled])
-  :not([tabindex="-1"])
-`.replace(/\s+/g, '')
 
 type TooltipChildrenProps = {
   tooltip: ReturnType<typeof useTooltip>
