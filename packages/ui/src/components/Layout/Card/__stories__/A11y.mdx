@@ -1,0 +1,62 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Layout/Card/A11y" />
+
+# Card - Accessibility
+
+## Description
+
+A non-interactive layout container that displays content inside a bordered box. It supports an optional `header` (rendered as an `h2` when a string) and `subHeader` (rendered as an `h3` when a string), plus two presentation-only states: `active` (highlights the border with the primary color) and `disabled` (muted border, `not-allowed` cursor, and disabled-colored text). It has no `onClick`, focus, or keyboard behavior of its own.
+
+## Summary
+
+1. ❌ **Perceivable**: `active` and `disabled` states are conveyed only by color (border/cursor/text), failing WCAG 1.4.1. The default/disabled borders are also low-contrast - this is an advisory usability concern for low-vision users rather than a strict 1.4.11 failure, since the card is a non-interactive container (not a UI component) and the disabled border is exempt from the criterion.
+2. ✅ **Operable**: non-interactive container, no keyboard or focus requirements apply
+3. ✅ **Understandable**: no labels, instructions, or language requirements apply
+4. ⚠️ **Robust**: the `active`/`disabled` states are only exposed via `data-*` attributes, which are not part of the accessibility API; no `aria-disabled` or equivalent state is exposed
+
+## ARIA Pattern
+
+There is no dedicated [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/) pattern for cards. The relevant references are:
+
+- [`group` role](https://www.w3.org/TR/wai-aria-1.2/#group) - for grouping related content; only useful when the grouping itself needs to be conveyed to assistive technology
+- [`region` role](https://www.w3.org/TR/wai-aria-1.2/#region) - a generic landmark; requires an accessible name, otherwise the `region` role is not conveyed
+
+A plain, non-interactive card is best left as a generic `<div>`; adding `role="group"`/`role="region"` to every card adds noise to screen reader users. The WAI guidance on cards emphasizes: **never** make an entire card clickable with a `div` + `onClick`. Interactive actions must be real `<button>`/`<a>` elements inside the card. This component respects that by being non-interactive itself.
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - the `active` state is conveyed only by switching the border to `primary.border`; the `disabled` state only by border/cursor/text color. No non-color indicator (icon, checkmark, text, or programmatic state) accompanies either.
+- ⚠️ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - heading structure is programmatically correct for string `header`/`subHeader` (`h2`/`h3`), but the heading levels are hardcoded and cannot be adapted to the page structure; custom (ReactNode) headers/subHeaders do not receive `disabled` styling or semantics.
+- ⚠️ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - `active` and `disabled` are exposed only through `data-is-active`/`data-disabled`, which are invisible to assistive technology. If these states carry meaning (e.g. a selected/active card or an inactive one), screen reader and switch-access users receive no indication.
+- ⚠️ [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - advisory. The card is a non-interactive container (not a UI component) and the disabled border is explicitly exempt from the criterion, so the border is not a strict 1.4.11 failure. The contrast still matters for low-vision users when the boundary is needed to perceive the grouping. These are theme-token values.
+
+To apply when using the component:
+
+- [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - the heading level of the string `header` (`h2`) and `subHeader` (`h3`) is fixed by the component. Until the component exposes configurable heading levels, if the surrounding page structure requires a different level (e.g. the card sits inside an `h3` section), pass a custom header with an appropriate `Text as="hX"` to avoid heading-hierarchy issues. Keep string `subHeader` (`h3`) and custom headers consistent.
+
+## Accessibility issues
+
+**High:**
+
+- `active` state is color-only - the card is highlighted exclusively by swapping the border to `primary.border`. Users with color vision deficiency cannot tell an active card from an inactive one (1.4.1). The Card itself exposes no programmatic state (`aria-pressed`/`aria-current`/`aria-selected`) and no non-color visual indicator.
+  - **Proposed fix**: add a non-color cue and, if the active state is meaningful, expose it programmatically (e.g. `aria-current`).
+
+- `disabled` is not exposed to assistive technology. It is rendered as `data-disabled`, which is not in the accessibility API, and no `aria-disabled` is set. A consumer using a disabled card to signal that content is inactive gives screen reader users no indication (1.3.1 / 4.1.2).
+  - **Proposed fix**: forward `aria-disabled` on the container or document that `disabled` is purely presentational and that interactive descendants must carry the real disabled state.
+
+**Medium:**
+
+- Hardcoded heading levels - a string `header` always renders `h2` and a string `subHeader` always `h3`. The levels cannot be adapted, which can break the document outline. It should be possible to set the heading level of the `header` and `subHeader`, so consumers can match the surrounding page structure. Custom ReactNode headers also bypass the `disabled` styling/semantics applied to string headers, and the documented custom-subHeader example uses `h5`, inconsistent with the string `h3`.
+  - **Proposed fix**: expose props to configure the heading level of the string `header` and `subHeader` (e.g. `headerLevel`/`subHeaderLevel`, or `headerTag`/`subHeaderTag`, following the convention already used in `ContentCard`), defaulting to the current `h2`/`h3`.
+
+**Low:**
+
+- Low-contrast default/disabled borders (advisory, not a strict 1.4.11 failure) - the default and disabled borders are below 3:1 against the page background in all three themes. Since the card is a non-interactive container the criterion does not strictly apply, but the boundary becomes nearly invisible for low-vision users, so perceived grouping relies on spacing or a background difference.
+  - **Proposed fix**: darken `neutral.border`/`neutral.borderDisabled` in the theme tokens, or add a subtle background tint to the card in addition to the border.
+
+## Dependencies
+
+None
