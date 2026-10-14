@@ -6,7 +6,7 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 ## Description
 
-A composition that displays key-value information (e.g. instance details, offer descriptions) as a grid of label/value pairs. It is built on the semantic HTML description list (`<dl>`), with each row rendered as a CSS-grid `<div>` and each cell containing a `<dt>` (title/label) and a `<dd>` (value). It supports an optional header that wraps the table in a `Card`, two sizes, and a `CellWithCopyButton` variant that embeds a `CopyButton` inside a cell.
+A composition that displays key-value information as a grid of label/value pairs. It is built on the semantic HTML description list (`<dl>`), with each row rendered as a CSS-grid `<div>` and each cell containing a `<dt>` (title/label) and a `<dd>` (value). It supports an optional header that wraps the table in a `Card`, two sizes, and a `CellWithCopyButton` variant that embeds a `CopyButton` inside a cell.
 
 ## Summary
 
@@ -49,6 +49,8 @@ To apply when using the component:
 **Low:**
 
 - Hardcoded `<h2>` for string headers: the heading level may skip a level depending on page structure. Consumers should not nest it in a way that breaks the heading order (WCAG 1.3.1 / 2.4.6).
+
+- The `InfoTable` name is misleading: this is a description list, not a data table. The "Table" naming (and the aligned grid) can push consumers to reach for it for genuinely tabular data, where it would then fail to expose `th`/`scope` header semantics. Consider renaming (e.g. `DefinitionList`) to signal the actual semantics and avoid misuse.
 
 ## Dependencies
 
