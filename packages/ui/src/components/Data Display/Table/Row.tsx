@@ -5,7 +5,7 @@ import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { Children, useCallback, useEffect, useRef } from 'react'
-import type { CSSProperties, ReactNode, RefObject } from 'react'
+import type { CSSProperties, HTMLAttributes, ReactNode, RefObject } from 'react'
 import { Button } from '../../Action/Button'
 import { Checkbox } from '../../Data Entry/Checkbox'
 import { Tooltip } from '../../Overlay/Tooltip'
@@ -27,8 +27,12 @@ type RowProps = {
   selectDisabled?: boolean | string
   highlightAnimation?: boolean
   expanded?: boolean
+  /**
+   * Highlight the row for a stronger visual emphasis
+   */
+  highlighted?: boolean
   style?: CSSProperties
-}
+} & Pick<HTMLAttributes<HTMLTableRowElement>, 'aria-current'>
 
 export const Row = ({
   children,
@@ -38,8 +42,10 @@ export const Row = ({
   highlightAnimation,
   expandable,
   expanded,
+  highlighted,
   style,
   'data-testid': dataTestid,
+  'aria-current': ariaCurrent,
 }: RowProps) => {
   const {
     selectable,
@@ -93,11 +99,7 @@ export const Row = ({
   const childrenLength = Children.count(children) + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
 
   useEffect(() => {
-    if (
-      refList &&
-      checkboxRowRef.current !== null &&
-      !refList.includes(checkboxRowRef as RefObject<HTMLInputElement>)
-    ) {
+    if (checkboxRowRef.current !== null && !refList.includes(checkboxRowRef as RefObject<HTMLInputElement>)) {
       setRefList([...refList, checkboxRowRef as RefObject<HTMLInputElement>])
     }
   }, [refList, setRefList])
@@ -106,9 +108,12 @@ export const Row = ({
     <>
       <tr
         className={cn(className, highlightAnimation ? tableStyle.trAnimation : '', tableStyle.row)}
+        data-highlighted={highlighted}
         data-testid={dataTestid}
         role={canClickRowToExpand ? 'button row' : 'row'}
         style={style}
+        aria-current={ariaCurrent}
+        {...(selectable ? { 'aria-selected': selectedRowIds[id] } : {})}
       >
         {selectable ? (
           <ColumnProvider width={theme.sizing[300]}>

@@ -36,6 +36,14 @@ const cell = recipe({
     minWidth: minWidthCell,
     verticalAlign: 'middle',
     width: widthCell,
+    selectors: {
+      [`tr[data-highlighted='true'] > &:first-child`]: {
+        boxShadow: `inset 2px 0 0 0 ${theme.colors.primary.border}`, // border adds a horizontal scroll on the table
+      },
+      [`tr[data-highlighted='true'] > &`]: {
+        backgroundColor: theme.colors.primary.background,
+      },
+    },
   },
   variants: {
     align: {
