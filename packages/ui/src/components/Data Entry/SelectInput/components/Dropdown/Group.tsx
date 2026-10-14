@@ -58,7 +58,6 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
         {selectAllGroup ? (
           <Checkbox
             checked={selectedData.selectedGroups.includes(group)}
-            className={selectInputStyle.dropdownCheckboxGroup}
             data-testid="select-group"
             disabled={false}
             onChange={() => (selectAllGroup ? handleSelectGroup() : null)}
