@@ -6,6 +6,7 @@ import { selectableCardStyle } from '../SelectableCard/styles.css'
 
 const containerBase = style({
   display: 'inline-flex',
+  alignItems: 'center',
   position: 'relative',
   selectors: {
     "&[aria-disabled='true']": {
@@ -27,6 +28,7 @@ const inputBase = style({
   borderWidth: 0,
   opacity: 0,
   position: 'absolute',
+  alignSelf: 'start',
   whiteSpace: 'nowrap',
   selectors: {
     '&:not(:disabled)': {
@@ -51,6 +53,7 @@ const input = styleVariants({
 })
 
 const iconBase = style({
+  alignSelf: 'start',
   borderRadius: theme.radii.default,
   selectors: {
     [`${containerBase}[aria-disabled='true'] &`]: {

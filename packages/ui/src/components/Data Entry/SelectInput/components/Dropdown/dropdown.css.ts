@@ -159,15 +159,13 @@ export const footer = style({
   boxShadow: theme.shadows.dropdown,
 })
 
-const dropdownCheckboxBase = style({
+export const dropdownCheckbox = style({
   width: '100%',
   position: 'static',
   textAlign: 'left',
   pointerEvents: 'none',
 })
-export const dropdownCheckbox = style([dropdownCheckboxBase, { alignItems: 'flex-start' }])
 
-export const dropdownCheckboxGroup = style([dropdownCheckboxBase, { alignItems: 'center' }])
 export const dropdownEmptyState = style({ padding: theme.space[2] })
 
 export const dropdownLoadMore = style({ padding: theme.space['0.5'] })
