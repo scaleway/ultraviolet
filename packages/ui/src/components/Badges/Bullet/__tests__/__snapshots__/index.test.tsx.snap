@@ -1,5 +1,33 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`bullet > renders correctly aria-hidden 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-hidden="true"
+      class="styles__vfqe6p0 styles_prominence_default__vfqe6p2 styles_size_medium__vfqe6pb styles_undefined_compound_2__vfqe6ph"
+      data-testid="test"
+    >
+      <svg
+        aria-hidden="true"
+        class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M6.132 1.18c.176.175.228.44.133.67a6.029 6.029 0 0 0 7.886 7.886.613.613 0 0 1 .802.801A7.257 7.257 0 0 1 1 7.745a7.26 7.26 0 0 1 4.463-6.698.61.61 0 0 1 .67.133M4.69 2.883a6.029 6.029 0 1 0 8.427 8.427A7.255 7.255 0 0 1 4.69 2.883"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`bullet > renders correctly disabled 1`] = `
 <DocumentFragment>
   <div
