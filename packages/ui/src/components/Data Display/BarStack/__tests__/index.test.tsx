@@ -45,9 +45,9 @@ describe('barStack', () => {
   })
 
   it('should render correctly with event handlers', async () => {
-    const [onClick, onDoubleClick, onMouseDown, onMouseEnter, onMouseLeave, onMouseUp] = new Array(6)
-      .fill(1)
-      .map(() => vi.fn())
+    const [onClick, onDoubleClick, onMouseDown, onMouseEnter, onMouseLeave, onMouseUp] = Array.from({ length: 6 }, () =>
+      vi.fn(),
+    )
 
     const { asFragment } = renderWithTheme(
       <BarStack

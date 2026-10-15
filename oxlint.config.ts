@@ -95,7 +95,6 @@ export default defineConfig({
         'typescript/no-unsafe-member-access': 'off',
         'typescript/strict-void-return': 'off',
 
-        'unicorn/no-new-array': 'off',
         'unicorn/prefer-logical-operator-over-ternary': 'off',
         'unicorn/prefer-set-has': 'off',
         'unicorn/consistent-function-scoping': 'off',

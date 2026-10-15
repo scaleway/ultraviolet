@@ -12,6 +12,6 @@ MaxLength.parameters = {
 
 MaxLength.args = {
   maxLength: 40,
-  tags: ['very', ...new Array<string>(50).fill('large'), 'tooltip', 'scaleway', 'paris', 'cloud'],
+  tags: ['very', ...Array.from({ length: 50 }, () => 'large'), 'tooltip', 'scaleway', 'paris', 'cloud'],
   threshold: undefined,
 }

@@ -314,7 +314,14 @@ describe('tagList', () => {
   })
 
   it('renders correctly a scrollable popover with non default popoverMaxHeight', async () => {
-    const tags: TagType[] = ['very', ...new Array<string>(50).fill('item'), 'tooltip', 'scaleway', 'paris', 'cloud']
+    const tags: TagType[] = [
+      'very',
+      ...Array.from({ length: 50 }, () => 'item'),
+      'tooltip',
+      'scaleway',
+      'paris',
+      'cloud',
+    ]
 
     mockOffsetWidth()
 

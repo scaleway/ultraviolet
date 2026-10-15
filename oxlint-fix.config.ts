@@ -82,7 +82,6 @@ export const warnRules = defineConfig({
     'unicorn/no-array-sort': 'warn', // unicorn errors (6)
     'unicorn/no-await-expression-member': 'warn', // unicorn errors (6)
     'unicorn/no-invalid-remove-event-listener': 'warn', // unicorn errors (5)
-    'unicorn/no-new-array': 'warn', // unicorn errors (3)
     'unicorn/no-zero-fractions': 'warn', // unicorn errors (60)
     'unicorn/number-literal-case': 'warn', // unicorn errors (2)
     'unicorn/numeric-separators-style': 'warn', // unicorn errors (10)
