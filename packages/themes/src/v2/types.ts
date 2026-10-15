@@ -6,9 +6,8 @@ export type ThemeOption = Theme | 'system'
 
 export type ThemeProviderProps = {
   /**
-   * Initial chosen theme. When not provided, the theme is read from the
-   * `light-theme`/`dark-theme`/`darker-theme` classes on the document element,
-   * @default "system".
+   * Initial chosen theme.
+   * @default "system"
    */
   initialTheme?: ThemeOption
   children: ReactNode

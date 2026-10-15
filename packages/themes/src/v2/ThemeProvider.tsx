@@ -3,7 +3,7 @@
 import { useLocalStorage } from '@scaleway/use-storage'
 import { useEffect, useMemo } from 'react'
 import { DEFAULT_THEME_CLASSES, DEFAULT_THEME_STORAGE_KEY } from './constants'
-import { ThemeContext, getInitTheme } from './helpers'
+import { ThemeContext } from './helpers'
 import type { ThemeContextType, ThemeOption, ThemeProviderProps } from './types'
 import { usePrefersDarkMode } from './usePrefersDarkMode'
 
@@ -11,13 +11,13 @@ import { usePrefersDarkMode } from './usePrefersDarkMode'
  * ThemeProvider (v2) manages the theme without injecting any CSS variable at runtime.
  * It relies on the static CSS files to provide the theme variables
  */
-export const ThemeProvider = ({ initialTheme, children, storageKey }: ThemeProviderProps) => {
+export const ThemeProvider = ({ initialTheme = 'system', children, storageKey }: ThemeProviderProps) => {
   const [storedTheme, setStoredTheme] = useLocalStorage<ThemeOption>(
     storageKey ?? DEFAULT_THEME_STORAGE_KEY,
-    initialTheme ?? getInitTheme(),
+    initialTheme,
   )
 
-  const chosenTheme = storedTheme ?? initialTheme ?? getInitTheme()
+  const chosenTheme = storedTheme ?? initialTheme
   const isSystem = chosenTheme === 'system'
   const prefersDarkMode = usePrefersDarkMode()
 
