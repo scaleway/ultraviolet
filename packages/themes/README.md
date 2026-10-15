@@ -115,6 +115,32 @@ const ThemeSwitcher = () => {
 </ThemeProvider>
 ```
 
+##### Avoiding a flash of the wrong theme (FOUC)
+
+`v2/ThemeProvider` applies the `*-theme` class on the document element in an effect, after React has hydrated. Before that, the page renders with the default styling: on a slow connection the browser can paint that un-themed page before hydration completes, causing a flash of the wrong theme.
+
+To prevent it, apply the theme class **before the first paint** with a small inline script in the `<head>` of your HTML. The provider persists the theme in `localStorage` as a JSON-encoded value, so the script reads it and adds the matching class:
+
+```html
+<script>
+  try {
+    let theme = JSON.parse(localStorage.getItem('uv-theme')) || 'system'
+
+    if (theme === 'system') {
+      theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    }
+
+    if (['light', 'dark', 'darker'].includes(theme)) {
+      document.documentElement.classList.add(`${theme}-theme`)
+    }
+  } catch (e) {}
+</script>
+```
+
+The script must use the **same storage key** as the provider and be placed in the `<head>` so it runs before the first paint.
+
+An example can be found in our [Next example](https://github.com/scaleway/ultraviolet/blob/main/examples/next/src/pages/_document.tsx).
+
 ##### Customizing theme variables
 
 `extendTheme` is **not** supported by `v2/ThemeProvider`: since the provider does not inject any variable at runtime, there is no theme object to extend. Instead, override the CSS variables directly in a `.css` file, scoped to the theme class (`:root.light-theme`, `:root.dark-theme`, `:root.darker-theme`):

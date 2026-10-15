@@ -89,11 +89,16 @@ const Component = () => {
 
 ### Case B: `const { theme } = useTheme()`
 
-In v2 this pattern does not change the v2, so the `useTheme` itself must be migrated from v1 to v2:
+In v2 this pattern does not change, so the `useTheme` itself must be migrated from v1 to v2:
 
 ```tsx
+//Before
+import { useTheme } from '@ultraviolet/themes'
+
+//After
 import { useTheme } from '@ultraviolet/themes/v2'
 
+// No change
 const Component = () => {
   const { theme, isSystem } = useTheme()
 
@@ -134,3 +139,29 @@ The key can be customized:
   <YourApp />
 </ThemeProvider>
 ```
+
+## 6. Avoiding a flash of the wrong theme (FOUC)
+
+`v2/ThemeProvider` applies the `*-theme` class on the document element in an effect, after React has hydrated. Before that, the page renders with the default styling: on a slow connection the browser can paint that un-themed page before hydration completes, causing a flash of the wrong theme.
+
+To prevent it, apply the theme class **before the first paint** with a small inline script in the `<head>` of your HTML. The provider persists the theme in `localStorage` as a JSON-encoded value, so the script reads it and adds the matching class:
+
+```html
+<script>
+  try {
+    let theme = JSON.parse(localStorage.getItem('uv-theme')) || 'system'
+
+    if (theme === 'system') {
+      theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    }
+
+    if (['light', 'dark', 'darker'].includes(theme)) {
+      document.documentElement.classList.add(`${theme}-theme`)
+    }
+  } catch (e) {}
+</script>
+```
+
+The script must use the **same storage key** as the provider and be placed in the `<head>` so it runs before the first paint.
+
+An example can be found in our [Next example](https://github.com/scaleway/ultraviolet/blob/main/examples/next/src/pages/_document.tsx).
