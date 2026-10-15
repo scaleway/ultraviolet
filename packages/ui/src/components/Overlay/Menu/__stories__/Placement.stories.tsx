@@ -10,7 +10,7 @@ export const DefaultDisclosure = (
   </Button>
 )
 
-export const Placement: StoryFn<typeof Menu> = ({ disclosure = DefaultDisclosure, ...props }) => (
+export const Placement: StoryFn<typeof Menu> = ({ disclosure, ...props }) => (
   <>
     <Stack alignItems="flex-end" justifyContent="left" width="100%">
       <>
@@ -55,6 +55,10 @@ export const Placement: StoryFn<typeof Menu> = ({ disclosure = DefaultDisclosure
     </Stack>
   </>
 )
+
+Placement.args = {
+  disclosure: DefaultDisclosure,
+}
 
 Placement.parameters = {
   docs: {

@@ -25,7 +25,7 @@ const SelectableCardGroupFieldComponent = <
   required = false,
   error: customError,
   columns = 1,
-  type = 'radio',
+  type,
   shouldUnregister = false,
   validate,
   errorLabel,

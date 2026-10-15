@@ -13,4 +13,5 @@ Error.args = {
   columns: 2,
   legend: 'Legend label',
   name: 'mySelectableCardGroup',
+  type: 'radio',
 }

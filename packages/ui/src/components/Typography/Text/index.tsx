@@ -45,7 +45,7 @@ type TextProps = {
 export const Text = ({
   variant,
   children,
-  as: Component = 'div',
+  as: Component,
   sentiment,
   oneLine = false,
   placement,

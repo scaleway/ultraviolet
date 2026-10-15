@@ -37,7 +37,7 @@ const DEFAULT_MARGIN = { bottom: 10, left: 10, right: 10, top: 10 }
 export const PieChart = ({
   height = 206,
   width = 206,
-  data = undefined,
+  data,
   emptyLegend,
   legendHeader,
   content,
