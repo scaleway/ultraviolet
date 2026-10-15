@@ -102,7 +102,6 @@ export const warnRules = defineConfig({
     'unicorn/prefer-ternary': 'warn', // unicorn errors (1)
     'unicorn/prefer-top-level-await': 'warn', // unicorn errors (1)
 
-    'vitest/no-conditional-expect': 'warn', // vitest errors (11)
     'vitest/no-conditional-in-test': 'warn', // vitest errors (36)
     'vitest/padding-around-test-blocks': 'warn', // vitest errors (129)
   },
