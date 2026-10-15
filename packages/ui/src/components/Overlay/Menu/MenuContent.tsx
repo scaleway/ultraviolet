@@ -120,21 +120,26 @@ export const Menu = forwardRef(
         const handler = (value: boolean | undefined) => {
           setShouldBeVisible(value)
         }
-
-        disclosureRef.current.addEventListener('focus', () => handler(true))
-        disclosureRef.current.addEventListener('mouseenter', () => handler(true))
-        disclosureRef.current.addEventListener('mouseleave', () => handler(false))
-        disclosureRef.current.addEventListener('keydown', event => {
+        const onFocus = () => handler(true)
+        const onMouseEnter = () => handler(true)
+        const onMouseLeave = () => handler(false)
+        const onKeyDown = (event: globalThis.KeyboardEvent) => {
           if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
             handler(false) // force close menu when navigating with arrow keys
           }
-        })
+        }
+
+        const disclosureElement = disclosureRef.current
+        disclosureElement.addEventListener('focus', onFocus)
+        disclosureElement.addEventListener('mouseenter', onMouseEnter)
+        disclosureElement.addEventListener('mouseleave', onMouseLeave)
+        disclosureElement.addEventListener('keydown', onKeyDown)
 
         return () => {
-          window.removeEventListener('focus', () => handler(undefined))
-          window.removeEventListener('mouseenter', () => handler(undefined))
-          window.removeEventListener('mouseleave', () => handler(undefined))
-          window.removeEventListener('keydown', () => handler(undefined))
+          disclosureElement.removeEventListener('focus', onFocus)
+          disclosureElement.removeEventListener('mouseenter', onMouseEnter)
+          disclosureElement.removeEventListener('mouseleave', onMouseLeave)
+          disclosureElement.removeEventListener('keydown', onKeyDown)
         }
       }
 
