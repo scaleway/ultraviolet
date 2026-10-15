@@ -28,7 +28,9 @@ export const TooltipElement = ({
     )}
     data-placement={tooltip.finalPlacement}
     data-testid={dataTestId}
-    ref={tooltip.refs.setFloating}
+    ref={node => {
+      tooltip.refs.setFloating(node)
+    }}
     role="tooltip"
     style={{
       ...tooltip.floatingStyles,

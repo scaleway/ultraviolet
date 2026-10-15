@@ -80,7 +80,9 @@ export const TooltipChildren = ({
     return children({
       ...eventHandlers,
       [ariaAttributeName]: ariaAttributeValue,
-      ref: tooltip.refs.setReference,
+      ref: node => {
+        tooltip.refs.setReference(node)
+      },
     })
   }
 
