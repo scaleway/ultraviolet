@@ -26,6 +26,7 @@ Add one or more labels from this exhaustive list, matching the type of change. D
 - dependencies
 - documentation (Storybook, markdown files etc)
 - enhancement
+- oxlint
 - refactor
 
 ## Step 3 — Check requirements
