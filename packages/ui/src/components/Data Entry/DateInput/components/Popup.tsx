@@ -29,10 +29,10 @@ export const CalendarPopup = ({ children, visible, setVisible, refInput, content
   const ref = useRef<HTMLDivElement>(null)
 
   useLayoutEffect(() => {
-    document.addEventListener('mousedown', event => handleClickOutside(event, ref, setVisible, refInput))
+    const handler = (event: MouseEvent) => handleClickOutside(event, ref, setVisible, refInput)
+    document.addEventListener('mousedown', handler)
 
-    return () =>
-      document.removeEventListener('mousedown', event => handleClickOutside(event, ref, setVisible, refInput))
+    return () => document.removeEventListener('mousedown', handler)
   }, [ref, setVisible, refInput])
 
   return (
