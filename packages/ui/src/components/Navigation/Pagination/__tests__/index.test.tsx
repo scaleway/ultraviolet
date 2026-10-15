@@ -7,19 +7,25 @@ import { Pagination } from '..'
 
 class MockResizeObserver {
   private readonly callback: ResizeObserverCallback
+  private readonly observed = new Set<Element>()
 
   constructor(callback: ResizeObserverCallback) {
     this.callback = callback
   }
 
   observe(target: Element) {
+    this.observed.add(target)
     const entry = { target, contentRect: { width: 800 } } as unknown as ResizeObserverEntry
     this.callback([entry], this as unknown as ResizeObserver)
   }
 
-  unobserve() {}
+  unobserve(target: Element) {
+    this.observed.delete(target)
+  }
 
-  disconnect() {}
+  disconnect() {
+    this.observed.clear()
+  }
 }
 
 describe('pagination', () => {

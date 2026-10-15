@@ -6,18 +6,23 @@ class MockResizeObserver {
   static disconnect = vi.fn()
 
   callback: ResizeObserverCallback
+  private readonly observed = new Set<Element>()
 
   constructor(callback: ResizeObserverCallback) {
     this.callback = callback
   }
 
-  observe() {
+  observe(target: Element) {
+    this.observed.add(target)
     this.callback([], this as unknown as ResizeObserver)
   }
 
-  unobserve() {}
+  unobserve(target: Element) {
+    this.observed.delete(target)
+  }
 
   disconnect() {
+    this.observed.clear()
     MockResizeObserver.disconnect()
   }
 }
