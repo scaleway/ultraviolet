@@ -75,7 +75,6 @@ export const warnRules = defineConfig({
     'typescript/require-await': 'warn', // typescript errors (10)
     'typescript/strict-boolean-expressions': 'warn', // typescript errors (416)
     'typescript/strict-void-return': 'warn', // typescript errors (118)
-    'typescript/unbound-method': 'warn', // typescript errors (2)
 
     'unicorn/import-style': 'warn', // unicorn errors (7)
 
