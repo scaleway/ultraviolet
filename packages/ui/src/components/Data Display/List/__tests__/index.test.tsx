@@ -375,17 +375,15 @@ describe('list', () => {
     expect(listHeaderCells).toHaveLength(columns.length)
 
     expect(listHeaderCells).toHaveLength(columns.length)
-    if (listHeaderCells[0] && listHeaderCells[1]) {
-      expect(listHeaderCells[0].getAttribute('aria-sort')).toBeNull()
-      await userEvent.click(listHeaderCells[0])
-      expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('ascending')
-      fireEvent.keyDown(listHeaderCells[0], { key: 'Enter' })
-      expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('descending')
-      fireEvent.keyDown(listHeaderCells[0], { key: 'Space' })
-      await userEvent.click(listHeaderCells[1])
-      expect(listHeaderCells[0].getAttribute('aria-sort')).toBeNull()
-      expect(listHeaderCells[1].getAttribute('aria-sort')).toBe('ascending')
-    }
+    expect(listHeaderCells[0].getAttribute('aria-sort')).toBeNull()
+    await userEvent.click(listHeaderCells[0])
+    expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('ascending')
+    fireEvent.keyDown(listHeaderCells[0], { key: 'Enter' })
+    expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('descending')
+    fireEvent.keyDown(listHeaderCells[0], { key: 'Space' })
+    await userEvent.click(listHeaderCells[1])
+    expect(listHeaderCells[0].getAttribute('aria-sort')).toBeNull()
+    expect(listHeaderCells[1].getAttribute('aria-sort')).toBe('ascending')
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -626,19 +624,17 @@ describe('list', () => {
     )
     const rows = screen.getAllByRole('button')
     const firstRow = rows[0]
-    if (firstRow) {
-      expect(firstRow).toHaveAttribute('tabIndex', '0')
-      // Testing expanding by pressing space key
-      expect(firstRow).toHaveAttribute('aria-expanded', 'false')
-      fireEvent.keyDown(firstRow, { charCode: 32, code: 'Space', key: ' ' })
-      expect(firstRow).toHaveAttribute('aria-expanded', 'true')
-      // Testing collapsing by pressing space key
-      fireEvent.keyDown(firstRow, { charCode: 32, code: 'Space', key: ' ' })
-      expect(firstRow).toHaveAttribute('aria-expanded', 'false')
-      // Testing another key
-      fireEvent.keyDown(firstRow, { charCode: 65, code: 'KeyA', key: 'a' })
-      expect(firstRow).toHaveAttribute('aria-expanded', 'false')
-    }
+    expect(firstRow).toHaveAttribute('tabIndex', '0')
+    // Testing expanding by pressing space key
+    expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+    fireEvent.keyDown(firstRow, { charCode: 32, code: 'Space', key: ' ' })
+    expect(firstRow).toHaveAttribute('aria-expanded', 'true')
+    // Testing collapsing by pressing space key
+    fireEvent.keyDown(firstRow, { charCode: 32, code: 'Space', key: ' ' })
+    expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+    // Testing another key
+    fireEvent.keyDown(firstRow, { charCode: 65, code: 'KeyA', key: 'a' })
+    expect(firstRow).toHaveAttribute('aria-expanded', 'false')
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -660,10 +656,8 @@ describe('list', () => {
     const firstRow = rows[0]
     expect(firstRow).toHaveAttribute('aria-expanded', 'false')
 
-    if (firstRow) {
-      fireEvent.click(firstRow)
-      expect(firstRow).toHaveAttribute('aria-expanded', 'true')
-    }
+    fireEvent.click(firstRow)
+    expect(firstRow).toHaveAttribute('aria-expanded', 'true')
     expect(asFragment()).toMatchSnapshot()
   })
 

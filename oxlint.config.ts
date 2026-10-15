@@ -100,7 +100,6 @@ export default defineConfig({
         'unicorn/prefer-set-has': 'off',
         'unicorn/consistent-function-scoping': 'off',
 
-        'vitest/no-conditional-expect': 'warn', // vitest errors (11)
         'vitest/no-conditional-in-test': 'warn', // vitest errors (36)
         'vitest/no-importing-vitest-globals': 'off',
         'vitest/padding-around-test-blocks': 'warn', // vitest errors (129)
