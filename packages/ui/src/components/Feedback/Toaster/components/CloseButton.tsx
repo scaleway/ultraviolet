@@ -12,7 +12,7 @@ type CloseButtonProps = {
   sentiment: SENTIMENT
 }
 
-export const CloseButton = ({ closeToast, sentiment = 'success' }: CloseButtonProps) => (
+export const CloseButton = ({ closeToast, sentiment }: CloseButtonProps) => (
   <Button
     accessibleLabel="close"
     className={toasterStyle.closeButton}

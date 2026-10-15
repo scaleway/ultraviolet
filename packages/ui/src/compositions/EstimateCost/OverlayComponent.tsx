@@ -45,7 +45,7 @@ export const OverlayComponent = ({
   OverlayLeft,
   disableOverlayLeft = false,
   totalPrice,
-  unit = 'hours',
+  unit,
   isBeta = false,
   overlayMargin,
 }: OverlayComponentProps) => {

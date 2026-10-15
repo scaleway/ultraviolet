@@ -69,7 +69,6 @@ export const warnRules = defineConfig({
     'typescript/no-unsafe-member-access': 'warn', // typescript errors (2353)
     'typescript/no-unsafe-return': 'warn', // typescript errors (41)
     'typescript/no-unsafe-type-assertion': 'warn', // typescript errors (207)
-    'typescript/no-useless-default-assignment': 'warn', // typescript errors (2)
     'typescript/prefer-nullish-coalescing': ['warn', { ignoreBooleanCoercion: true }], // typescript errors (39)
     'typescript/promise-function-async': 'warn', // typescript errors (7)
     'typescript/require-await': 'warn', // typescript errors (10)

@@ -1,6 +1,6 @@
 import { radioStyle } from './styles.css'
 
-export const RadioMarkedIcon = ({ size = 'medium' }: { size: 'small' | 'medium' }) => (
+export const RadioMarkedIcon = ({ size }: { size: 'small' | 'medium' }) => (
   <g>
     <circle className={radioStyle.focusRing} cx="12" cy="12" r={size === 'medium' ? '10' : '8'} strokeWidth="6" />
     <circle cx="12" cy="12" r={size === 'medium' ? '10' : '8'} strokeWidth="2" />

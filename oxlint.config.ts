@@ -51,7 +51,6 @@ export default defineConfig({
         'react/only-export-components': 'off',
         'react/no-unstable-nested-components': 'off',
         'typescript/strict-void-return': 'off',
-        'typescript/no-useless-default-assignment': 'off',
         'typescript/no-unsafe-assignment': 'warn', // typescript errors (2233)
         'typescript/no-unsafe-call': 'warn', // typescript errors (332)
         'typescript/no-unsafe-member-access': 'warn', // typescript errors (2353)

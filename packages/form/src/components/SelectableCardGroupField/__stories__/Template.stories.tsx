@@ -13,4 +13,5 @@ Template.args = {
   legend: 'Legend label',
   name: 'mySelectableCardGroup',
   showTick: true,
+  type: 'radio',
 }

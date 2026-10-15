@@ -40,7 +40,7 @@ export const PhoneInputField = <
   placeholder,
   required,
   'data-testid': dataTestId,
-  parseNumberErrorMessage = "This doesn't appear to be a valid phone number.",
+  parseNumberErrorMessage,
   onParsingError,
   shouldUnregister,
   ...props
