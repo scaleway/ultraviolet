@@ -13,7 +13,7 @@ PopoverMaxHeight.parameters = {
 PopoverMaxHeight.args = {
   popoverMaxHeight: '10rem',
   popoverTitle: 'Additional tags',
-  tags: ['very', ...new Array<string>(50).fill('item'), 'tooltip', 'scaleway', 'paris', 'cloud'],
+  tags: ['very', ...Array.from({ length: 50 }, () => 'item'), 'tooltip', 'scaleway', 'paris', 'cloud'],
   threshold: 5,
 }
 
