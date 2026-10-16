@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.27.1
+
+### Patch Changes
+
+- [#7025](https://github.com/scaleway/ultraviolet/pull/7025) [`ccbecd0`](https://github.com/scaleway/ultraviolet/commit/ccbecd0ae97009befd06c354406f8a430b4a82ed) Thanks [@jsulpis](https://github.com/jsulpis)! - `Filters`: add `date` type to select a single date
+
 ## 3.27.0
 
 ### Minor Changes
