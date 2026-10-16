@@ -1,5 +1,61 @@
 # Change Log
 
+## 3.27.0
+
+### Minor Changes
+
+- [#6988](https://github.com/scaleway/ultraviolet/pull/6988) [`769ca24`](https://github.com/scaleway/ultraviolet/commit/769ca2489b47b6d4c31b27314ddd73dce671c705) Thanks [@jsulpis](https://github.com/jsulpis)! - `Avatar`: add `xxsmall` size (16x16)
+
+- [#6947](https://github.com/scaleway/ultraviolet/pull/6947) [`b1b2741`](https://github.com/scaleway/ultraviolet/commit/b1b2741a6473902f6357da931bd99a2c57c6de95) Thanks [@lisalupi](https://github.com/lisalupi)! - `VerificationCode`: fix accessibility issues. To improve accessibility, the component now uses one singular input which might break tests. ⚠️`onChange` and `onComplete` values have been updated to be `string` instead of `unknown`.⚠️
+
+### Patch Changes
+
+- [#7000](https://github.com/scaleway/ultraviolet/pull/7000) [`1806096`](https://github.com/scaleway/ultraviolet/commit/18060964041bdd7df75d83c9b5353528e6dcc1c8) Thanks [@lisalupi](https://github.com/lisalupi)! - `Table.Row`:
+  - new prop `highlighted`
+  - add `aria-selected` prop on selectable rows
+
+- [#6999](https://github.com/scaleway/ultraviolet/pull/6999) [`463dfb5`](https://github.com/scaleway/ultraviolet/commit/463dfb54b43529bf345c55c6205cfb2f7c75a5b2) Thanks [@jsulpis](https://github.com/jsulpis)! - - `Expandable`: improve animation curve
+  - `CodeEditor`: fix closing animation
+
+- [#6928](https://github.com/scaleway/ultraviolet/pull/6928) [`301aa73`](https://github.com/scaleway/ultraviolet/commit/301aa7388440deb8695a6c0bf5a3881fbbcb50f9) Thanks [@lisalupi](https://github.com/lisalupi)! - `Tag`: fix accessibility issues
+  
+  `Separator`: new prop `aria-hidden`
+
+- [#6953](https://github.com/scaleway/ultraviolet/pull/6953) [`b2c85e9`](https://github.com/scaleway/ultraviolet/commit/b2c85e9dbbccbb037fa4d4ff4e052a7ed601e301) Thanks [@lisalupi](https://github.com/lisalupi)! - - Use `theme` directly from `@ultraviolet/theme` instead of from `useTheme`
+  - `BarChart`: fix legend color
+  - `TreeMapChart` & `Snippet`: update color & height computation
+  - `Expandable`: now accepts string `minHeight` as well as number
+
+- [#6971](https://github.com/scaleway/ultraviolet/pull/6971) [`e0ae3aa`](https://github.com/scaleway/ultraviolet/commit/e0ae3aa8cac6f81a1871ebb0a4342f93788fcf85) Thanks [@jsulpis](https://github.com/jsulpis)! - Fix Label accessibility: make the required asterisk decorative (`aria-hidden`) instead of a dropped `aria-label`, and only apply the pointer cursor when rendering a real `<label>`.
+
+- [#7014](https://github.com/scaleway/ultraviolet/pull/7014) [`a1028f8`](https://github.com/scaleway/ultraviolet/commit/a1028f897d94b39ce724c3d3cbcd5b4336371030) Thanks [@jsulpis](https://github.com/jsulpis)! - `Checkbox`: fix label alignment when the label is smaller than the checkbox (ex: SelectInput small/medium)
+
+- [#6924](https://github.com/scaleway/ultraviolet/pull/6924) [`54d5d65`](https://github.com/scaleway/ultraviolet/commit/54d5d6529e4028d2b7b76c417b692529f1b5f490) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `TagLink`
+  
+  `CopyButton`: add more sentiments (match values of `Button`)
+
+- [#7002](https://github.com/scaleway/ultraviolet/pull/7002) [`ff7ece3`](https://github.com/scaleway/ultraviolet/commit/ff7ece35b971055af6781bb46ae01a880f655a70) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@handlewithcare/react-prosemirror` to `3.2.11`.
+
+- [#6982](https://github.com/scaleway/ultraviolet/pull/6982) [`a77fde8`](https://github.com/scaleway/ultraviolet/commit/a77fde8f3e6531d80a42884c21f0ea1a019ee31a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@handlewithcare/react-prosemirror` to `3.2.10`.
+  Updated dependency `prosemirror-schema-basic` to `1.2.5`.
+  Updated dependency `prosemirror-view` to `1.42.6`.
+
+- [#6959](https://github.com/scaleway/ultraviolet/pull/6959) [`670e320`](https://github.com/scaleway/ultraviolet/commit/670e32005e35ef10ada904157df7bd786cf971c5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@handlewithcare/react-prosemirror` to `3.2.9`.
+  Updated dependency `prosemirror-model` to `1.25.12`.
+  Updated dependency `prosemirror-view` to `1.42.5`.
+
+- [#6980](https://github.com/scaleway/ultraviolet/pull/6980) [`b739b42`](https://github.com/scaleway/ultraviolet/commit/b739b427d6323b94e355d3ca027b88d86a5a6495) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-theme-material` to `4.25.12`.
+  Updated dependency `@uiw/react-codemirror` to `4.25.12`.
+
+- [#6989](https://github.com/scaleway/ultraviolet/pull/6989) [`dce304d`](https://github.com/scaleway/ultraviolet/commit/dce304dd9d5a697630a7add17a0c777b72705a1b) Thanks [@lisalupi](https://github.com/lisalupi)! - Update components to be compatible with new provider `/v2/ThemeProvider` (@ultraviolet/themes)
+
+- [#6955](https://github.com/scaleway/ultraviolet/pull/6955) [`9da846c`](https://github.com/scaleway/ultraviolet/commit/9da846c22ae31b2452118e83868694868ece46ba) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: do not display empty divs for empty groups on search
+
+- [#6992](https://github.com/scaleway/ultraviolet/pull/6992) [`0dd254b`](https://github.com/scaleway/ultraviolet/commit/0dd254b0eaa632b9ddc7e1bf8b096c08843f13ce) Thanks [@lisalupi](https://github.com/lisalupi)! - `DateInput`: fix months/days button selector in calendar (broken style)
+- Updated dependencies [[`dce304d`](https://github.com/scaleway/ultraviolet/commit/dce304dd9d5a697630a7add17a0c777b72705a1b), [`769ca24`](https://github.com/scaleway/ultraviolet/commit/769ca2489b47b6d4c31b27314ddd73dce671c705), [`dce304d`](https://github.com/scaleway/ultraviolet/commit/dce304dd9d5a697630a7add17a0c777b72705a1b), [`eecc7a9`](https://github.com/scaleway/ultraviolet/commit/eecc7a9ce7922a5b7bd2a9fde1d7f803a66636f3)]:
+  - @ultraviolet/themes@3.3.0
+  - @ultraviolet/icons@5.6.3
+
 ## 3.26.1
 
 ### Patch Changes

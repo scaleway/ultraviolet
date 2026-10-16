@@ -1,5 +1,17 @@
 # Change Log
 
+## 5.6.3
+
+### Patch Changes
+
+- [#6988](https://github.com/scaleway/ultraviolet/pull/6988) [`769ca24`](https://github.com/scaleway/ultraviolet/commit/769ca2489b47b6d4c31b27314ddd73dce671c705) Thanks [@jsulpis](https://github.com/jsulpis)! - `StarIcon`: fix optical alignment
+
+- [#6989](https://github.com/scaleway/ultraviolet/pull/6989) [`dce304d`](https://github.com/scaleway/ultraviolet/commit/dce304dd9d5a697630a7add17a0c777b72705a1b) Thanks [@lisalupi](https://github.com/lisalupi)! - Update components to be compatible with new provider `/v2/ThemeProvider` (@ultraviolet/themes)
+
+- [#6974](https://github.com/scaleway/ultraviolet/pull/6974) [`eecc7a9`](https://github.com/scaleway/ultraviolet/commit/eecc7a9ce7922a5b7bd2a9fde1d7f803a66636f3) Thanks [@lisalupi](https://github.com/lisalupi)! - `Flags`: fix `GitlabRunnerLogo` by updating the icons generation files. It now keeps inner `height` and `width`. No visual impact for other components. Beware, this may break snapshots (`SwedenFlag`, `BaaiLogo`, `GitlabRUnnerLogo`, `NodeJsLogo` and `PowerBiLogo` svg content has been updated)
+- Updated dependencies [[`dce304d`](https://github.com/scaleway/ultraviolet/commit/dce304dd9d5a697630a7add17a0c777b72705a1b)]:
+  - @ultraviolet/themes@3.3.0
+
 ## 5.6.2
 
 ### Patch Changes

@@ -1,5 +1,0 @@
----
-"@ultraviolet/icons": patch
----
-
-`Flags`: fix `GitlabRunnerLogo` by updating the icons generation files. It now keeps inner `height` and `width`. No visual impact for other components. Beware, this may break snapshots (`SwedenFlag`, `BaaiLogo`, `GitlabRUnnerLogo`, `NodeJsLogo` and `PowerBiLogo` svg content has been updated)
