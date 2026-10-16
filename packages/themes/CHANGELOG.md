@@ -1,5 +1,17 @@
 # Change Log
 
+## 3.3.0
+
+### Minor Changes
+
+- [#6989](https://github.com/scaleway/ultraviolet/pull/6989) [`dce304d`](https://github.com/scaleway/ultraviolet/commit/dce304dd9d5a697630a7add17a0c777b72705a1b) Thanks [@lisalupi](https://github.com/lisalupi)! - New `ThemeProvider` (`/v2/ThemeProvider`) : this provider will replace the V1 in the future. To use it, it is necessary to import css files with ultraviolet's themes. For more details, please refer to the [README](https://github.com/scaleway/ultraviolet/tree/main/packages/themes#with-static-css-files-and-new-themeprovider-v2) and the [Migration Guide](https://storybook.ultraviolet.scaleway.com/?path=/docs/migrations-themeprovider--docs).
+  
+  Our components currently support both `ThemeProvider` and `v2/ThemeProvider`, but only one is necessary.
+  
+  New exported theme types: `Theme`, `ThemeOption`
+  
+  New hook: `usePrefersDarkMode`
+
 ## 3.2.0
 
 ### Minor Changes
