@@ -1,5 +1,5 @@
+import type { UltravioletUITheme } from '@ultraviolet/themes'
 import { Snippet, Stack, Tabs, Text } from '@ultraviolet/ui'
-import type { UltravioletUITheme } from '@ultraviolet/ui'
 import { useState } from 'react'
 import { snippetResult } from './styles.css'
 
