@@ -11,15 +11,16 @@ on:
 permissions:
   contents: read
 
+env:
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+  TURBO_CACHE: ${{ github.ref == 'refs/heads/main' && 'remote:rw' || 'remote:r' }}
+
 jobs:
   build:
     strategy:
       matrix:
         node: ['24', '26']
     runs-on: ubuntu-24.04
-    env:
-      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: 'remote:rw'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: pnpm/setup@a0881977cd8ea73b1ed212236c99ca10dcc80cf4 # v3.1.1
@@ -32,9 +33,6 @@ jobs:
   build_storybook:
     runs-on: ubuntu-24.04
     needs: [build]
-    env:
-      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: 'remote:rw'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: pnpm/setup@a0881977cd8ea73b1ed212236c99ca10dcc80cf4 # v3.1.1
@@ -52,9 +50,6 @@ jobs:
   build_examples:
     runs-on: ubuntu-24.04
     needs: [build]
-    env:
-      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: 'remote:rw'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: pnpm/setup@a0881977cd8ea73b1ed212236c99ca10dcc80cf4 # v3.1.1
@@ -66,9 +61,6 @@ jobs:
   static-checks:
     runs-on: ubuntu-24.04
     needs: [build]
-    env:
-      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: 'remote:rw'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: pnpm/setup@a0881977cd8ea73b1ed212236c99ca10dcc80cf4 # v3.1.1
@@ -91,9 +83,6 @@ jobs:
 
   test:
     runs-on: ubuntu-24.04
-    env:
-      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: 'remote:rw'
     needs: [build]
     strategy:
       matrix:
@@ -123,8 +112,6 @@ jobs:
     env:
       IMAGE_NAME: rg.fr-par.scw.cloud/ultraviolet/storybook
       DEPLOYMENT_NAME: 'storybook'
-      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: 'remote:rw'
     # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#example-usage-of-the-jobs-context
     outputs:
       base_url: ${{ steps.deploy.outputs.url }}
@@ -235,10 +222,6 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-24.04
     needs: [build]
-    env:
-      CI: true
-      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: 'remote:rw'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: pnpm/setup@a0881977cd8ea73b1ed212236c99ca10dcc80cf4 # v3.1.1
