@@ -1,4 +1,5 @@
 import type { ComponentType } from 'react'
+import { FilterDate } from '../filterTypes/FilterDate'
 import { FilterDateRange } from '../filterTypes/FilterDateRange'
 import { FilterDatetimeRange } from '../filterTypes/FilterDatetimeRange/FilterDatetimeRange'
 import { FilterMultiSelect } from '../filterTypes/FilterMultiSelect'
@@ -20,6 +21,7 @@ const defaultFieldComponents = {
   multiselect: FilterMultiSelect,
   slider: FilterSlider,
   datetimeRange: FilterDatetimeRange,
+  date: FilterDate,
   dateRange: FilterDateRange,
   number: FilterNumber,
 }

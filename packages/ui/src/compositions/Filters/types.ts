@@ -90,6 +90,14 @@ export type FilterConfigItemDatetimeRange = FilterConfigItemBase & {
   relativePresets: [RelativePreset, ...RelativePreset[]]
 }
 
+export type FilterConfigItemDate = FilterConfigItemBase &
+  Pick<
+    ComponentProps<typeof DateInput>,
+    'minDate' | 'maxDate' | 'format' | 'locale' | 'excludeDates' | 'labelDescription'
+  > & {
+    type: 'date'
+  }
+
 export type FilterConfigItemDateRange = FilterConfigItemBase & {
   type: 'dateRange'
 } & Pick<
@@ -113,6 +121,7 @@ export type FilterConfigItem<V extends AnyObject = AnyObject> =
   | FilterConfigItemMultiSelect<V>
   | FilterConfigItemSlider
   | FilterConfigItemDatetimeRange
+  | FilterConfigItemDate
   | FilterConfigItemDateRange
   | FilterConfigItemCustom
 
