@@ -53,12 +53,13 @@ type UvThemeType = {
 
 export const generateThemeCss = ({ uvTheme, filename }: { uvTheme: UvThemeType; filename: string }) =>
   `:root,
-:root.${filename}-theme {\n${
-    createCssVariables('color', uvTheme.colors) +
-    createCssVariables('radius', uvTheme.radii) +
-    createCssVariables('shadow', uvTheme.shadows) +
-    createCssVariables('sizing', uvTheme.sizing) +
-    createCssVariables('space', uvTheme.space) +
-    createCssVariables('typography', uvTheme.typography) +
-    createCssVariables('breakpoint', uvTheme.breakpoints)
-  }}`
+:root.${filename}-theme {\n
+    color-scheme: ${filename === 'darker' ? 'dark' : filename};${
+      createCssVariables('color', uvTheme.colors) +
+      createCssVariables('radius', uvTheme.radii) +
+      createCssVariables('shadow', uvTheme.shadows) +
+      createCssVariables('sizing', uvTheme.sizing) +
+      createCssVariables('space', uvTheme.space) +
+      createCssVariables('typography', uvTheme.typography) +
+      createCssVariables('breakpoint', uvTheme.breakpoints)
+    }}`
