@@ -1,4 +1,3 @@
-// oxlint-disable typescript/no-unsafe-type-assertion
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { MockResizeObserver, renderWithTheme } from '@utils/test'
@@ -7,7 +6,7 @@ import { Pagination } from '..'
 
 describe('pagination', () => {
   beforeAll(() => {
-    globalThis.ResizeObserver = MockResizeObserver as unknown as typeof ResizeObserver
+    globalThis.ResizeObserver = MockResizeObserver
   })
 
   it('should render correctly', async () => {
