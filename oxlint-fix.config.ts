@@ -9,7 +9,6 @@ import { defineConfig } from 'oxlint'
  */
 export const warnRules = defineConfig({
   rules: {
-    'eslint/class-methods-use-this': 'warn', // eslint errors (4)
     'eslint/init-declarations': 'warn', // eslint errors (15)
     'eslint/max-lines': ['warn', { max: 500 }], // eslint errors (8)
     'eslint/max-nested-callbacks': ['warn', { max: 4 }], // base sets error (max: 4); keep warn

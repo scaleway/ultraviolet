@@ -1,26 +1,7 @@
 import { act, renderHook } from '@testing-library/react'
+import { MockResizeObserver } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { useIsOverflowing } from '../useIsOverflowing'
-
-class MockResizeObserver {
-  static disconnect = vi.fn()
-
-  callback: ResizeObserverCallback
-
-  constructor(callback: ResizeObserverCallback) {
-    this.callback = callback
-  }
-
-  observe() {
-    this.callback([], this as unknown as ResizeObserver)
-  }
-
-  unobserve() {}
-
-  disconnect() {
-    MockResizeObserver.disconnect()
-  }
-}
 
 describe(useIsOverflowing, () => {
   beforeEach(() => {
