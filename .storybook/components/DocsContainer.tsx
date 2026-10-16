@@ -1,18 +1,13 @@
 import { DocsContainer as BaseContainer, Unstyled } from '@storybook/addon-docs/blocks'
 import type { DocsContainerProps as BaseContainerProps } from '@storybook/addon-docs/blocks'
-import {
-  consoleDarkerTheme,
-  consoleDarkTheme,
-  consoleLightTheme,
-  ThemeProvider as ThemeProviderUV,
-} from '@ultraviolet/themes'
+import { ThemeProvider } from '@ultraviolet/themes/v2'
 import { GlobalAlert } from '@ultraviolet/ui'
 import { cloneElement, isValidElement, useState } from 'react'
 import type { ReactNode } from 'react'
 import '@ultraviolet/fonts/fonts.css'
 // don't know how it works today
 import '../../packages/themes/dist/global/globalStyle.css'
-
+import '../../packages/themes/dist/style/themes.css'
 import * as SB_THEMES from '../storybookThemes'
 import { useDocsTheme } from './useDocsTheme'
 import { globalStyleStoryBook } from './globalStyle.css'
@@ -57,8 +52,6 @@ type DocsContainerProps = BaseContainerProps & {
   }
 } & { children: ReactNode }
 
-const UV_THEMES = { light: consoleLightTheme, dark: consoleDarkTheme, darker: consoleDarkerTheme } as const
-
 const DocsContainer = ({ children, context }: DocsContainerProps) => {
   const [isBeta, setIsBeta] = useState(false)
   const themeName = useDocsTheme()
@@ -86,7 +79,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
   return (
     <Unstyled>
       <div className={globalStyleStoryBook}>
-        <ThemeProviderUV theme={UV_THEMES[themeName]}>
+        <ThemeProvider initialTheme={themeName}>
           {isBeta ? (
             <GlobalAlert
               buttonText="Access to Beta"
@@ -109,7 +102,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
                 })
               : children}
           </BaseContainer>
-        </ThemeProviderUV>
+        </ThemeProvider>
       </div>
     </Unstyled>
   )

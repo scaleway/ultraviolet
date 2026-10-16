@@ -1,7 +1,7 @@
 'use client'
 
 import type { XOR } from '@scaleway/types'
-import { useTheme } from '@ultraviolet/themes'
+import { useResolvedTheme } from '@ultraviolet/themes'
 import { cn, renderElement } from '@ultraviolet/utils'
 import type { RenderProp } from '@ultraviolet/utils'
 import { forwardRef, useMemo } from 'react'
@@ -156,7 +156,8 @@ export const Button = forwardRef<Element, BaseButtonProps>(
     ref,
   ) => {
     const computeIsDisabled = disabled || isLoading
-    const { theme } = useTheme()
+    const theme = useResolvedTheme()
+
     const computedSentimentLoader = useMemo(() => {
       if (variant === 'filled' && !['black', 'white'].includes(sentiment)) {
         if (theme === 'light') {

@@ -1,0 +1,167 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { ThemeProviderVersionsComparison } from './migrationTables.tsx'
+
+<Meta title="Migrations/ThemeProvider" />
+
+# Migrating from ThemeProvider (v1) to ThemeProvider (v2)
+
+This guide explains how to migrate an application from the legacy `ThemeProvider` (v1) to the new `ThemeProvider` (v2), imported from `@ultraviolet/themes/v2`.
+
+## What changed between v1 and v2
+
+<ThemeProviderVersionsComparison />
+
+Both providers are supported by the Ultraviolet components, but only **one** of them must be used in an application.
+
+## 1. Import the static CSS files
+
+v2 does **not** inject the variables at runtime, so the theme CSS files are now required (they also reduce FOUC by inlining the variables in the initial HTML):
+
+```tsx
+import '@ultraviolet/themes/light.css'
+import '@ultraviolet/themes/dark.css'
+import '@ultraviolet/themes/darker.css'
+// OR import all three at once:
+import '@ultraviolet/themes/themes.css'
+```
+
+## 2. Replace the provider
+
+```tsx
+// Before (v1)
+import { ThemeProvider, consoleLightTheme } from '@ultraviolet/themes'
+
+export const App = () => (
+  <ThemeProvider theme={consoleLightTheme}>
+    <YourApp />
+  </ThemeProvider>
+)
+```
+
+```tsx
+// After (v2)
+import { ThemeProvider } from '@ultraviolet/themes/v2'
+
+export const App = () => (
+  <ThemeProvider>
+    <YourApp />
+  </ThemeProvider>
+)
+```
+
+The `theme` prop is gone. The initial theme is read from the `light-theme` / `dark-theme` / `darker-theme` class on the document element (falling back to `"system"`), and can be overridden with `initialTheme`. The chosen theme is persisted and can be customised with `storageKey`:
+
+```tsx
+<ThemeProvider initialTheme="system" storageKey="theme-preference">
+  <YourApp />
+</ThemeProvider>
+```
+
+## 3. Migrate the `useTheme` consumers
+
+This is the step that usually requires the most work, because the return value of `useTheme()` changed completely between v1 and v2.
+
+### Case A: `const theme = useTheme()`
+
+In v1, `useTheme()` returns the **entire theme object** (all the CSS variables). Any code relying on those variables must be migrated to **direct imports** of the theme from `@ultraviolet/themes`:
+
+```tsx
+// Before (v1): `theme` is the theme object with all the variables
+import { useTheme } from '@ultraviolet/themes'
+
+const Component = () => {
+  const theme = useTheme()
+
+  return <p style={{ color: theme.colors.primary.text }}>Hello</p>
+}
+```
+
+```tsx
+// After: import the theme directly, no `useTheme` involved
+import { theme } from '@ultraviolet/themes'
+
+const Component = () => {
+  return <p style={{ color: theme.colors.primary.text }}>Hello</p>
+}
+```
+
+> ⚠️ In v2, `useTheme()` does **not** return the theme object anymore: `const theme = useTheme()` would give you the `{ theme, isSystem, setTheme, defined }` object, not the CSS variables.
+
+### Case B: `const { theme } = useTheme()`
+
+In v2 this pattern does not change, so the `useTheme` itself must be migrated from v1 to v2:
+
+```tsx
+//Before
+import { useTheme } from '@ultraviolet/themes'
+
+//After
+import { useTheme } from '@ultraviolet/themes/v2'
+
+// No change
+const Component = () => {
+  const { theme, isSystem } = useTheme()
+
+  return (
+    <div>
+      <p>{theme === 'dark' ? 'I am dark' : 'I am not dark'}</p>
+      <p>{isSystem ? 'System theme' : 'Custom theme'}</p>
+    </div>
+  )
+}
+```
+
+In v2, `theme` is the applied theme (`'light'`, `'dark'` or `'darker'`), `isSystem` tells you whether the chosen theme is `"system"` (i.e. the applied theme follows the OS preference), and `setTheme` switches the theme (accepting `'light' | 'dark' | 'darker' | 'system'`).
+
+## 4. Customizing theme variables
+
+`extendTheme` is **not** supported by `v2/ThemeProvider`: since the provider does not inject any variable at runtime, there is no theme object to extend. Instead, override the CSS variables directly in a `.css` file, scoped to the theme class (`:root.light-theme`, `:root.dark-theme`, `:root.darker-theme`):
+
+```css
+@import '@ultraviolet/themes/light.css' layer(ultraviolet);
+@import '@ultraviolet/themes/dark.css' layer(ultraviolet);
+
+:root.light-theme {
+  --color-primary-text: #ff00aa;
+}
+```
+
+The override must be scoped to the theme class (so it only applies when the corresponding theme is active) and must win the cascade: either declare it **after** the imported theme files, or wrap the imports and the overrides in cascade layers and give the overrides a later layer order.
+
+## 5. Persistence
+
+v2 persists the chosen theme in `localStorage` under the `storageKey` prop (default `"uv-theme"`) and keeps it in sync across all open tabs/windows. The persisted theme is restored automatically on the next load, so the user's choice survives a reload.
+
+The key can be customized:
+
+```tsx
+<ThemeProvider initialTheme="system" storageKey="theme-preference">
+  <YourApp />
+</ThemeProvider>
+```
+
+## 6. Avoiding a flash of the wrong theme (FOUC)
+
+`v2/ThemeProvider` applies the `*-theme` class on the document element in an effect, after React has hydrated. Before that, the page renders with the default styling: on a slow connection the browser can paint that un-themed page before hydration completes, causing a flash of the wrong theme.
+
+To prevent it, apply the theme class **before the first paint** with a small inline script in the `<head>` of your HTML. The provider persists the theme in `localStorage` as a JSON-encoded value, so the script reads it and adds the matching class:
+
+```html
+<script>
+  try {
+    let theme = JSON.parse(localStorage.getItem('uv-theme')) || 'system'
+
+    if (theme === 'system') {
+      theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    }
+
+    if (['light', 'dark', 'darker'].includes(theme)) {
+      document.documentElement.classList.add(`${theme}-theme`)
+    }
+  } catch (e) {}
+</script>
+```
+
+The script must use the **same storage key** as the provider and be placed in the `<head>` so it runs before the first paint.
+
+An example can be found in our [Next example](https://github.com/scaleway/ultraviolet/blob/main/examples/next/src/pages/_document.tsx).

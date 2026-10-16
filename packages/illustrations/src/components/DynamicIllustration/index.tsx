@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@ultraviolet/themes'
+import { useResolvedTheme } from '@ultraviolet/themes'
 import type { CSSProperties } from 'react'
 import { ILLUSTRATIONS } from './__generated__/Illustrations'
 import type { IllustrationsKeys } from './__generated__/Illustrations'
@@ -33,7 +33,7 @@ export const DynamicIllustration = ({
   className,
   style,
 }: DynamicIllustrationProps) => {
-  const { theme } = useTheme()
+  const theme = useResolvedTheme()
 
   return (
     <img

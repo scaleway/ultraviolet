@@ -7,7 +7,7 @@ export const globalStyleStoryBook = style({
   fontFamily: "'Inter', sans-serif",
 })
 
-globalStyle('html.dark, html.darker', { colorScheme: 'dark' })
+globalStyle('html.dark-theme, html.darker-theme', { colorScheme: 'dark' })
 
 globalStyle(`${globalStyleStoryBook} p`, { margin: 0 })
 

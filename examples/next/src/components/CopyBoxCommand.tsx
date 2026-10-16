@@ -1,4 +1,4 @@
-import { useTheme } from '@ultraviolet/themes'
+import { useTheme } from '@ultraviolet/themes/v2'
 import { Stack, Tabs } from '@ultraviolet/ui'
 import { Children, isValidElement, useState } from 'react'
 import type { ReactElement } from 'react'

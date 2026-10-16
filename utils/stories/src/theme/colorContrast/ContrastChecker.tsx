@@ -1,5 +1,6 @@
 import { CheckIcon, CloseIcon } from '@ultraviolet/icons'
-import { useTheme } from '@ultraviolet/themes'
+import { consoleDarkTheme, consoleDarkerTheme, consoleLightTheme } from '@ultraviolet/themes'
+import { useTheme } from '@ultraviolet/themes/v2'
 import { Badge, CheckboxGroup, Row, Stack, Text } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
@@ -159,9 +160,21 @@ const PairingCard = ({ pairing }: { pairing: Pairing }) => (
 )
 
 export const ContrastChecker = () => {
-  const theme = useTheme()
   const [backgrounds, setBackgrounds] = useState<Background[]>(persist.backgrounds)
   const [statuses, setStatuses] = useState<Status[]>(persist.statuses)
+  const { theme: currentTheme } = useTheme()
+
+  const theme = useMemo(() => {
+    if (currentTheme === 'dark') {
+      return consoleDarkTheme
+    }
+
+    if (currentTheme === 'darker') {
+      return consoleDarkerTheme
+    }
+
+    return consoleLightTheme
+  }, [currentTheme])
 
   useEffect(() => {
     const onScroll = () => {
@@ -256,7 +269,7 @@ export const ContrastChecker = () => {
     }
 
     return { groups, counts: { total, pass, fail, disabled } }
-  }, [theme, backgrounds, statuses])
+  }, [backgrounds, statuses, theme.colors])
 
   return (
     <Stack className={contrastStyle.root} gap={3}>

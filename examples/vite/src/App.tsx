@@ -1,5 +1,13 @@
+import { CentosLogo } from '@ultraviolet/icons/logo/CentosLogo'
+import { DatadogLogo } from '@ultraviolet/icons/logo/DatadogLogo'
+import { DebianLogo } from '@ultraviolet/icons/logo/DebianLogo'
+import { UbuntuLogo } from '@ultraviolet/icons/logo/UbuntuLogo'
 import { instanceOriginal } from '@ultraviolet/illustrations/products/instance'
-import { consoleDarkerTheme, consoleDarkTheme, consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
+import { ThemeProvider, useTheme } from '@ultraviolet/themes/v2'
+import '@ultraviolet/ui/styles' // Import styles for the UI components
+import '@ultraviolet/icons/styles' // Import styles for the icons components
+import '@ultraviolet/themes/global'
+import type { Theme } from '@ultraviolet/themes/v2'
 import {
   Alert,
   Button,
@@ -12,47 +20,40 @@ import {
   Separator,
 } from '@ultraviolet/ui'
 import { useState } from 'react'
-import '@ultraviolet/ui/styles' // Import styles for the UI components
-import '@ultraviolet/icons/styles' // Import styles for the icons components
-import '@ultraviolet/themes/global'
-import centos from './assets/centos.svg'
-import debian from './assets/debian.svg'
-import ubuntu from './assets/ubuntu.svg'
 import { centosOptions, debianOptions, ubuntuOptions } from './constants'
 import { DemoForm } from './DemoForm'
 import './style.css'
+import '@ultraviolet/themes/themes.css'
 
-const getTheme = (theme: string) => {
-  if (theme === 'dark') {
-    return consoleDarkTheme
-  }
-  if (theme === 'darker') {
-    return consoleDarkerTheme
-  }
-  return consoleLightTheme
+const ThemeSwitcher = () => {
+  const { theme, setTheme } = useTheme()
+
+  return (
+    <SwitchButton
+      onChange={event => {
+        setTheme(event.currentTarget.value as Theme)
+      }}
+      value={theme}
+    >
+      <SwitchButton.Option value="light">light mode</SwitchButton.Option>
+      <SwitchButton.Option value="dark">dark mode</SwitchButton.Option>
+      <SwitchButton.Option value="darker">darker mode</SwitchButton.Option>
+    </SwitchButton>
+  )
 }
+
 export const App = () => {
   const [count, setCount] = useState(0)
-  const [mode, setMode] = useState('light')
   const [value, onChange] = useState<string>()
   const [option, onChangeOption] = useState<string>()
 
   return (
-    <ThemeProvider theme={getTheme(mode)}>
+    <ThemeProvider initialTheme="system" storageKey="vite-theme-preference">
       <Stack gap={4} style={{ padding: '32px' }} alignItems="center" width="100%">
-        <SwitchButton
-          onChange={value => {
-            setMode(value.currentTarget.value)
-          }}
-          value="light"
-        >
-          <SwitchButton.Option value="light">light mode</SwitchButton.Option>
-          <SwitchButton.Option value="dark">dark mode</SwitchButton.Option>
-          <SwitchButton.Option value="darker">darker mode</SwitchButton.Option>
-        </SwitchButton>
-        <Stack className="test" style={{ color: 'var(--color-primary-text)' }}>
-          This box uses css variables from ultraviolet/theme outside of vanilla extract without importing{' '}
-          <code>'@ultraviolet/themes/light.css'</code> (and variants)
+        <ThemeSwitcher />
+        <DatadogLogo size="large" />
+        <Stack className="test" style={{ color: 'var(--color-primary-text)', padding: '8px' }}>
+          This box uses css variables from ultraviolet/theme outside of vanilla extract
         </Stack>
         <Separator direction="horizontal" style={{ width: '100%' }} />
         <Text as="h2" variant="headingStrong">
@@ -75,9 +76,24 @@ export const App = () => {
             optionValue={option}
             value={value}
           >
-            <SelectableCardOptionGroup.Option image={ubuntu} label="Ubuntu" options={ubuntuOptions} value="ubuntu" />
-            <SelectableCardOptionGroup.Option image={debian} label="Debian" options={debianOptions} value="debian" />
-            <SelectableCardOptionGroup.Option image={centos} label="CentOS" options={centosOptions} value="centos" />
+            <SelectableCardOptionGroup.Option
+              image={<UbuntuLogo size="xlarge" />}
+              label="Ubuntu"
+              options={ubuntuOptions}
+              value="ubuntu"
+            />
+            <SelectableCardOptionGroup.Option
+              image={<DebianLogo size="xlarge" />}
+              label="Debian"
+              options={debianOptions}
+              value="debian"
+            />
+            <SelectableCardOptionGroup.Option
+              image={<CentosLogo size="xlarge" />}
+              label="CentOS"
+              options={centosOptions}
+              value="centos"
+            />
           </SelectableCardOptionGroup>
           <Card>
             <Text as="h1" variant="headingSmall">
