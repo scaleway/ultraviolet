@@ -7,6 +7,10 @@ on:
       - beta
     paths:
       - packages/illustrations/**
+
+permissions:
+  contents: read
+
 env:
   BUCKET_NAME: scaleway-assets
   BUCKET_REGION: fr-par

@@ -7,6 +7,9 @@ on:
     paths:
       - packages/themes/**
 
+permissions:
+  contents: read
+
 env:
   BUCKET_NAME: scaleway-assets
   BUCKET_REGION: fr-par

@@ -7,6 +7,9 @@ on:
 jobs:
   teardown:
     runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      deployments: write
     env:
       IMAGE_NAME: rg.fr-par.scw.cloud/ultraviolet/storybook
       STORYBOOK_DEPLOYMENT_NAME: storybook

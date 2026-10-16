@@ -8,6 +8,9 @@ on:
       - main
       - beta
 
+permissions:
+  contents: read
+
 jobs:
   build:
     strategy:
@@ -114,6 +117,9 @@ jobs:
   deploy:
     runs-on: ubuntu-24.04
     needs: [build_storybook]
+    permissions:
+      contents: read
+      deployments: write
     env:
       IMAGE_NAME: rg.fr-par.scw.cloud/ultraviolet/storybook
       DEPLOYMENT_NAME: 'storybook'
@@ -141,7 +147,7 @@ jobs:
         id: deployment
         with:
           step: start
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           env: ${{ env.DEPLOYMENT_NAME }}
           ref: ${{ github.head_ref }}
 
@@ -217,7 +223,7 @@ jobs:
         with:
           step: finish
           env: ${{ env.DEPLOYMENT_NAME }}
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           auto_inactive: true
           # This will now be automatically handled by github with the auto_inactive
           override: false
