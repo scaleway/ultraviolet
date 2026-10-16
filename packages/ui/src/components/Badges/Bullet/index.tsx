@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
+import type { CSSProperties, HTMLAttributes, ReactNode } from 'react'
 import type { SENTIMENTS } from '../../../theme'
 import { Tooltip } from '../../Overlay/Tooltip'
 import type { PROMINENCES, SIZES } from './constants'
@@ -20,7 +20,7 @@ type BulletProps = {
   children?: ReactNode
   disabled?: boolean
   style?: CSSProperties
-}
+} & Pick<HTMLAttributes<HTMLDivElement>, 'aria-hidden'>
 
 /**
  * Bullet component is used to display a small icon or text with a colored background in a circle.
@@ -36,12 +36,14 @@ export const Bullet = ({
   children,
   disabled,
   style,
+  'aria-hidden': ariaHidden,
 }: BulletProps) => (
   <Tooltip id={tooltipBaseId} text={tooltip}>
     <div
       className={cn(className, bulletStyle.bullet({ disabled, prominence, sentiment, size }))}
       data-testid={dataTestId}
       style={style}
+      aria-hidden={ariaHidden}
     >
       {children}
     </div>

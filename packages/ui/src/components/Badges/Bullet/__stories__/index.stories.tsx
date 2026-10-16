@@ -9,7 +9,7 @@ export default {
       perceivable: false,
       operable: true,
       understandable: true,
-      robust: false,
+      robust: true,
     },
   },
 } as Meta<typeof Bullet>
