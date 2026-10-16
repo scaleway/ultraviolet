@@ -15,6 +15,7 @@ type FilterValues = {
     startAt: Date | null
     endAt: Date | null
   }
+  date: Date | null
 }
 
 const datetimeFormat = new Intl.DateTimeFormat('en-US', {
@@ -54,6 +55,12 @@ const config: FilterConfig<FilterValues>[] = [
     label: 'Date Range',
     placeholder: 'DD/MM/YYYY - DD/MM/YYYY',
   },
+  {
+    type: 'date',
+    name: 'date',
+    label: 'Date',
+    placeholder: 'DD/MM/YYYY',
+  },
 ]
 
 export const Dates: StoryFn<FiltersProps<FilterValues>> = props => {
@@ -91,12 +98,14 @@ Dates.args = {
       startAt: null,
       endAt: null,
     },
+    date: null,
   },
   initialValues: {
     dates: {
       startAt: oneWeekAgo,
       endAt: today,
     },
+    date: today,
   },
   labels: {
     clearAll: 'Clear all',
