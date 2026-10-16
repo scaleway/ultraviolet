@@ -16,16 +16,17 @@ export default {
   title: 'UI/Badges/Chip',
   parameters: {
     a11yStatus: {
-      perceivable: false,
-      operable: false,
+      perceivable: true,
+      operable: true,
       understandable: true,
-      robust: false,
+      robust: true,
     },
   },
 } as Meta<typeof Chip>
 
 export { Playground } from './Playground.stories'
 export { Icons } from './Icons.stories'
+export { Closable } from './Closable.stories'
 export { Groups } from './Groups.stories'
 export { Size } from './Size.stories'
 export { Disabled } from './Disabled.stories'
