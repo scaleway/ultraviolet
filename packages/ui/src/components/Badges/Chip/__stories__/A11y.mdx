@@ -6,14 +6,14 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 ## Description
 
-A clickable status or label displayed in a small container. The chip supports an `active` toggle state, a `disabled` state, and an optional `Chip.Icon` sub-component that can be a decorative element or an independent clickable button.
+A clickable status or label displayed in a small container. The chip is rendered as a native `<button>` with an `active` toggle state (`aria-pressed`), a `disabled` state, and an optional closable variant (`onClose`) whose close button has a built-in accessible label.
 
 ## Summary
 
-1. ❌ **Perceivable**: The active and disabled states rely solely on color/visual styling without an equivalent text or non-color indicator (1.4.1)
-2. ❌ **Operable**: The chip container is a `div` with a click handler but no keyboard access or focus (2.1.1)
+1. ✅ **Perceivable**: The active and disabled states are exposed programmatically (`aria-pressed`, native `disabled` attribute) and use theme tokens meeting 4.5:1 contrast (1.4.1, 1.4.3)
+2. ✅ **Operable**: The chip is a native `<button>`, keyboard accessible and focusable with a (default) visible focus indicator (2.1.1, 2.4.7)
 3. ✅ **Understandable**: No context changes occur on focus; content is predictable (3.2.1)
-4. ❌ **Robust**: The clickable container has no role, name, or programmatic state (4.1.2)
+4. ✅ **Robust**: The chip has a native button role, an accessible name from its content, and programmatic state via `aria-pressed` and the `disabled` attribute (4.1.2)
 
 ## ARIA Pattern
 
@@ -23,33 +23,51 @@ A clickable status or label displayed in a small container. The chip supports an
 
 Enforced by the component:
 
-- ❌ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - The chip container is a `div` with only an `onClick` handler (`index.tsx:84`); it cannot be focused or activated with the keyboard.
-- ❌ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - The chip container is not focusable so no focus indicator is ever shown; `Chip.Icon` buttons rely on the browser default which may not be visible in all browsers.
-- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The chip container has no `role`, no accessible name, and no programmatic state. When `onClick` is provided, it is exposed as neither a button nor a toggle (`aria-pressed`).
-- ❌ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The `active` and `disabled` states are conveyed only through background/border/text color changes, with no text or non-color alternative.
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - The chip is rendered as a native `<button>`, so it is keyboard focusable and activatable with Enter/Space.
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - As a native `<button>`, the chip and the close button receive a visible focus indicator (browsers default focus indicator).
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The chip is a native `<button>` with an accessible name from its content, `aria-pressed` for the toggle state, and the native `disabled` attribute for the disabled state.
+- ✅ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The `active` state is conveyed via `aria-pressed` and the `disabled` state via the native `disabled` attribute, providing non-color programmatic indicators in addition to the color styling.
 - ✅ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - The chip uses theme tokens which meet 4.5:1 contrast requirement.
-- ❌ [WCAG 2.5.8 - Target Size (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) - `Chip.Icon` buttons are 16x16 CSS px, below the 24x24 minimal threshold.
+- ✅ [WCAG 2.5.8 - Target Size (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) - The chip has a minimum height of 24px (`theme.space[3]`) for the medium size, and the close button is contained within it.
 
 To apply when using the component:
 
-- [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - `Chip.Icon` buttons render only an icon; the icon must carry an accessible label (e.g. `accessibleLabel`) so the button has a name.
+- [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - Icons used inside the chip are decorative by default (`aria-hidden`). If an icon conveys meaning on its own, give it an `accessibleLabel`. The close button already carries a built-in accessible label (`closeAccessibleLabel`, defaulting to `'Close'`).
+- [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - For a closable chip, always provide a specific `closeAccessibleLabel` (e.g. `Remove "Content"`) instead of relying on the default `'Close'`: it allows translations and gives a more precise name. A generic `'Close'` does not state which chip is being closed and can confuse screen reader users.
 
-## Accessibility issues
+## Past accessibility issues
+
+<details>
+  <summary>Click to expand the history of resolved issues</summary>
 
 **Critical:**
 
-- The chip container is a `<div>` with an `onClick` handler but no `role`, no `tabindex`, and no keyboard event handling. Keyboard-only users and assistive technologies cannot focus or activate the chip at all (2.1.1). When `onClick` is provided, the chip should render as a real `<button>` (or add `role="button"`, `tabIndex={0}`, and `onKeyDown` for Enter/Space).
+- ✅ The chip container is a `<div>` with an `onClick` handler but no `role`, no `tabindex`, and no keyboard event handling. Keyboard-only users and assistive technologies cannot focus or activate the chip at all (2.1.1).
+  - The chip is now rendered as a native `<button>`, which is keyboard focusable and activatable with Enter/Space.
+  - **Resolved** by switching the container from a clickable `div` to a native `<button>`.
 
 **High:**
 
-- The `active` toggle state is exposed only via a `data-active` attribute and visual styling. Screen readers cannot determine that the chip is a toggle button or its current state (4.1.2). Add `role="button"` with `aria-pressed={isActive}` (or use a real `<button aria-pressed>`).
-- The `disabled` state is conveyed only via a `data-disabled` attribute. It is not exposed through an ARIA property (`aria-disabled`) and does not move focus when using a native button.
+- ✅ The `active` toggle state is exposed only via a `data-active` attribute and visual styling. Screen readers cannot determine that the chip is a toggle button or its current state (4.1.2).
+  - `aria-pressed` now reflects the toggle state.
+  - **Resolved** by exposing the toggle state through `aria-pressed` on the native `<button>`.
+- ✅ The `disabled` state is conveyed only via a `data-disabled` attribute. It is not exposed through an ARIA property (`aria-disabled`) and does not move focus when using a native button.
+  - The native `disabled` attribute is now applied to the `<button>`, which removes it from the tab order and exposes the disabled state to assistive technologies.
+  - **Resolved** by using the native `disabled` attribute on the `<button>`.
 
 **Medium:**
 
-- The active/disabled visual states are conveyed only by color (1.4.1). No text or non-color indicator (icon, `aria-pressed`, disabled attribute) communicates the state to users who cannot perceive color differences.
+- ✅ The active/disabled visual states are conveyed only by color (1.4.1). No text or non-color indicator (icon, `aria-pressed`, disabled attribute) communicates the state to users who cannot perceive color differences.
+  - The `active` state is conveyed via `aria-pressed` and the `disabled` state via the native `disabled` attribute, both programmatic non-color indicators.
+  - **Resolved** by adding `aria-pressed` and the native `disabled` attribute.
 
 **Low:**
 
-- `Chip.Icon` when rendered as a button has no built-in accessible name; it depends entirely on the icon providing a label (1.1.1). Consider documenting or enforcing a required accessible label for clickable icons.
-- `Chip.Icon` button target size depends on the icon and may be under 24x24 CSS px (2.5.8).
+- ✅ `Chip.Icon` when rendered as a button has no built-in accessible name; it depends entirely on the icon providing a label (1.1.1).
+  - `Chip.Icon` is deprecated. The closable chip now uses a dedicated close button with a built-in accessible label via the `closeAccessibleLabel` prop (default `'Close'`), rendered as `VisuallyHidden` content.
+  - **Resolved** by deprecating `Chip.Icon` and providing a built-in accessible label on the close button.
+- ✅ `Chip.Icon` button target size depends on the icon and may be under 24x24 CSS px (2.5.8).
+  - `Chip.Icon` is deprecated. The chip itself has a minimum height of 24px and the close button is contained within it.
+  - **Resolved** by deprecating `Chip.Icon`.
+
+</details>
