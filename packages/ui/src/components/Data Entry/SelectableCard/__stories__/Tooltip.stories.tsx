@@ -4,7 +4,7 @@ import { SelectableCard } from '..'
 import { Stack } from '../../../Layout/Stack'
 
 export const Tooltip: StoryFn = args => {
-  const [value, onChange] = useState('label-14')
+  const [value, setValue] = useState('label-14')
 
   return (
     <>
@@ -13,7 +13,7 @@ export const Tooltip: StoryFn = args => {
         checked={value === 'label-14'}
         label="Radio Left"
         name="label-14"
-        onChange={event => onChange(event.currentTarget.value)}
+        onChange={event => setValue(event.currentTarget.value)}
         tooltip="Click on me!"
         type="radio"
         value="label-14"
@@ -23,7 +23,7 @@ export const Tooltip: StoryFn = args => {
         checked={value === 'label-15'}
         label="Radio Right"
         name="label-15"
-        onChange={event => onChange(event.currentTarget.value)}
+        onChange={event => setValue(event.currentTarget.value)}
         tooltip="No! Click on me instead!"
         type="radio"
         value="label-15"

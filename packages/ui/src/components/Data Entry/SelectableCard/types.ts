@@ -1,4 +1,4 @@
-import type { ChangeEventHandler, CSSProperties, FocusEventHandler, ReactElement, ReactNode, RefObject } from 'react'
+import type { CSSProperties, ChangeEventHandler, FocusEventHandler, ReactElement, ReactNode, RefObject } from 'react'
 import type { LabelProp } from '../../../types'
 
 export type SelectableCardProps = {
@@ -19,6 +19,8 @@ export type SelectableCardProps = {
   'data-testid'?: string
   style?: CSSProperties
   indented?: boolean
+  labelDescription?: ReactNode
+  labelDescriptionInline?: boolean
 } & (
   | {
       illustration?: ReactElement<{ style?: CSSProperties }>

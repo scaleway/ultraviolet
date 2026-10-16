@@ -9,7 +9,7 @@ import { Checkbox } from '../../Checkbox'
 import { SelectInput } from '../../SelectInput'
 
 export const Children: StoryFn = args => {
-  const [value, onChange] = useState('label-9')
+  const [value, setValue] = useState('label-9')
 
   return (
     <>
@@ -18,7 +18,7 @@ export const Children: StoryFn = args => {
         checked={value === 'label-9'}
         label="Left Radio"
         name="label-9"
-        onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
+        onChange={(event: ChangeEvent<HTMLInputElement>) => setValue(event.currentTarget.value)}
         type="radio"
         value="label-9"
       >
@@ -38,7 +38,7 @@ export const Children: StoryFn = args => {
         checked={value === 'label-10'}
         label="Middle Radio"
         name="label-10"
-        onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
+        onChange={(event: ChangeEvent<HTMLInputElement>) => setValue(event.currentTarget.value)}
         type="radio"
         value="label-10"
       >
@@ -46,10 +46,22 @@ export const Children: StoryFn = args => {
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             I am a children with clickable select input
             <Stack gap={1}>
-              <Checkbox name="test" onChange={() => {}} value="test">
+              <Checkbox
+                name="test"
+                onChange={() => {
+                  /* empty */
+                }}
+                value="test"
+              >
                 First element
               </Checkbox>
-              <Checkbox name="test" onChange={() => {}} value="test">
+              <Checkbox
+                name="test"
+                onChange={() => {
+                  /* empty */
+                }}
+                value="test"
+              >
                 Second element
               </Checkbox>
             </Stack>
@@ -70,7 +82,7 @@ export const Children: StoryFn = args => {
         disabled
         label="Right Radio"
         name="label-11"
-        onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
+        onChange={(event: ChangeEvent<HTMLInputElement>) => setValue(event.currentTarget.value)}
         type="radio"
         value="label-11"
       >

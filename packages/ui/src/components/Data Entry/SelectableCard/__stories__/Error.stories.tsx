@@ -4,7 +4,7 @@ import { SelectableCard } from '..'
 import { Stack } from '../../../Layout/Stack'
 
 export const Error: StoryFn = args => {
-  const [value, onChange] = useState('label-12')
+  const [value, setValue] = useState('label-12')
 
   return (
     <>
@@ -14,7 +14,7 @@ export const Error: StoryFn = args => {
         isError
         label="Radio Left"
         name="label-12"
-        onChange={event => onChange(event.currentTarget.value)}
+        onChange={event => setValue(event.currentTarget.value)}
         showTick
         type="radio"
         value="label-12"
@@ -24,7 +24,7 @@ export const Error: StoryFn = args => {
         checked={value === 'label-13'}
         label="Radio Right"
         name="label-13"
-        onChange={event => onChange(event.currentTarget.value)}
+        onChange={event => setValue(event.currentTarget.value)}
         showTick
         type="radio"
         value="label-13"

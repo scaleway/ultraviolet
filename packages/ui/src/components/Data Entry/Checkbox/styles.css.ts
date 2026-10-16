@@ -16,6 +16,10 @@ const containerBase = style({
     [`${selectableCardStyle.labelContainerSelectableCardLabel} &`]: {
       width: '100%',
     },
+    [`${selectableCardStyle.labelContainerSelectableCardLabel}${selectableCardStyle.labelContainerSelectableCardLabelDescription} &`]:
+      {
+        width: 'auto',
+      },
   },
 })
 

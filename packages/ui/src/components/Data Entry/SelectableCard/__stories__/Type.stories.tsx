@@ -4,27 +4,27 @@ import { SelectableCard } from '..'
 import { Stack } from '../../../Layout/Stack'
 
 export const Type: StoryFn = args => {
-  const [value, onChange] = useState('label-3')
-  const [value2, onChange2] = useState({ 'label-1': true, 'label-2': true })
+  const [radio, setRadio] = useState('label-3')
+  const [checkbox, setCheckbox] = useState({ 'label-1': true, 'label-2': true })
 
   return (
     <>
       <Stack direction="row" gap={2}>
         <SelectableCard
           {...args}
-          checked={value === 'label-3'}
+          checked={radio === 'label-3'}
           label="Radio Left"
           name="label-3"
-          onChange={event => onChange(event.currentTarget.value)}
+          onChange={event => setRadio(event.currentTarget.value)}
           type="radio"
           value="label-3"
         />
         <SelectableCard
           {...args}
-          checked={value === 'label-4'}
+          checked={radio === 'label-4'}
           label="Radio Right"
           name="label-4"
-          onChange={event => onChange(event.currentTarget.value)}
+          onChange={event => setRadio(event.currentTarget.value)}
           type="radio"
           value="label-4"
         />
@@ -32,19 +32,19 @@ export const Type: StoryFn = args => {
       <Stack direction="row" gap={2}>
         <SelectableCard
           {...args}
-          checked={value2['label-1']}
+          checked={checkbox['label-1']}
           label="Checkbox 1"
           name="label-1"
-          onChange={event => onChange2({ ...value2, 'label-1': !event.currentTarget.checked })}
+          onChange={event => setCheckbox({ ...checkbox, 'label-1': !event.currentTarget.checked })}
           type="checkbox"
           value="label-1"
         />
         <SelectableCard
           {...args}
-          checked={value2['label-2']}
+          checked={checkbox['label-2']}
           label="Checkbox 2"
           name="label-2"
-          onChange={event => onChange2({ ...value2, 'label-2': !event.currentTarget.checked })}
+          onChange={event => setCheckbox({ ...checkbox, 'label-2': !event.currentTarget.checked })}
           type="checkbox"
           value="label-2"
         />
