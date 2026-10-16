@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Overlay/PopupV2/A11y" />
+
+# Popup v2 - Accessibility
+
+## Description
+
+A headless, general-purpose floating overlay, meant to be composed into higher-level components (`Popover`, `SelectInput`, menus…). `Popup.Root` owns the open state and the dismiss behavior, `Popup.Trigger` wires the interactions and lands the ARIA attributes on the trigger, and `Popup.Panel` portals, positions and manages focus while applying the `dialog`, `menu` or `listbox` role.
+
+## Summary
+
+1. ✅ **Perceivable**: content is text-based; the panel role is programmable together with its accessible name via `accessibleLabel` (rendered in `VisuallyHidden` and wired through `aria-labelledby`) or a developer-provided `aria-labelledby`. The hover interaction is additive (`useHover` on top of `useClick`), so it is also dismissible (Escape), hoverable (`safePolygon()`) and persistent.
+2. ✅ **Operable**: the popup can be triggered by pointer or keyboard (Enter/Space via `useClick`, in both click and hover modes), dismissed with Escape or an outside click, focus is moved into the panel on open and restored to the trigger on close, and the optional modal focus trap always lets Escape through.
+3. ✅ **Understandable**: open/close behavior is consistent and content is readable and predictable.
+4. ✅ **Robust**: the trigger exposes the right role and states in both paths — a focusable child keeps its own role, and the wrapper fallback is given `role="button"` alongside `aria-haspopup` / `aria-expanded` / `aria-controls`. The panel role is programmable.
+
+## ARIA Pattern
+
+- [Dialog (Modal) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) — for `role="dialog"` (the default).
+- [Menu Button Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/) — for `role="menu"`.
+- [Listbox Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/) — for `role="listbox"`.
+
+The Popup is a base component that maps to one of these patterns depending on the `role` it is given; the concrete pattern (items, roving focus, Arrow keys…) is the responsibility of the components built on top of it (`SelectInput`, menus…).
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - `accessibleLabel` renders a `VisuallyHidden` element whose generated `id` is referenced through `aria-labelledby`, associating the panel with its name; a developer-provided `aria-labelledby` is forwarded as-is.
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - the decorative arrow SVG is rendered by `FloatingArrow` with `aria-hidden="true"`, so it is ignored by assistive technologies.
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - `useClick` is always wired, so the popup opens with Enter/Space in both `click` and `hover` modes; Escape closes it.
+- ✅ [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) - the modal `focusTrap` cycles Tab inside the panel but Escape always closes it.
+- ✅ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - `FloatingFocusManager` moves focus into the panel on open (first tabbable, or `initialFocus`) and returns it to the trigger on close (`returnFocus`, default `true`).
+- ✅ [WCAG 2.4.11 - Focus Not Obscured (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured.html) - `flip()` and `shift()` keep the panel within the viewport, and `size()` (via `matchTriggerWidth`) constrains it.
+- ✅ [WCAG 2.5.1 - Pointer Gestures (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures.html) - only simple click and hover are required; no multi-point or path-based gesture.
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - the reference element gets `aria-expanded`, `aria-controls` (only while open, to avoid a dangling reference) and `aria-haspopup` derived from the panel role.
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - when the trigger has no focusable child, the wrapper gets `role="button"` in addition to `tabIndex={0}` and the ARIA states, so it is announced and operated as a button.
+
+To apply when using the component:
+
+- [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - always give the panel an accessible name (`accessibleLabel` or `aria-labelledby`).
+- [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - when `role="menu"` or `role="listbox"` is used, make sure to provide the matching child roles (`menuitem`, `option`) and the pattern's keyboard navigation (Arrow keys, Home/End, typeahead), e.g. by wiring `useListNavigation` like the `Select` example does.
+- [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - ensure the panel text on `theme.colors.other.elevation.background.raised` meets contrast requirements.
