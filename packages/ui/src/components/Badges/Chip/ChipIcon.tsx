@@ -15,6 +15,10 @@ type ChipIconType = {
   'data-testid'?: string
 }
 
+/**
+ * @deprecated use an icon directly as the chil of `<Chip>`
+ * For a close button, use prop `onClose` (and optional `closeAccesibleLabel`) directlty on `Chip`
+ */
 export const ChipIcon = ({ icon, onClick, 'data-testid': dataTestId }: ChipIconType) => {
   const context = useContext(ChipContext)
 
@@ -26,23 +30,31 @@ export const ChipIcon = ({ icon, onClick, 'data-testid': dataTestId }: ChipIconT
 
   if (onClick) {
     return (
-      <button
+      // Use role button instead of type button to avoid nesting two <button>
+      <div
         className={chipStyle.buttonContainer}
         data-active={isActive}
-        data-disabled={disabled}
-        data-has-onclick={!!onClick && !disabled}
+        aria-disabled={disabled}
+        data-has-onclick={!disabled}
         data-testid={dataTestId}
         onClick={event => {
-          if (!disabled && onClick) {
+          if (!disabled) {
             event.stopPropagation()
             onClick()
           }
         }}
-        ref={iconRef as RefObject<HTMLButtonElement | null>}
-        type="button"
+        onKeyDown={event => {
+          if (!disabled && [' ', 'Enter'].includes(event.key)) {
+            event.stopPropagation()
+            onClick()
+          }
+        }}
+        tabIndex={0}
+        ref={iconRef as RefObject<HTMLDivElement | null>}
+        role="button"
       >
         {icon}
-      </button>
+      </div>
     )
   }
 
@@ -58,4 +70,5 @@ export const ChipIcon = ({ icon, onClick, 'data-testid': dataTestId }: ChipIconT
     </div>
   )
 }
+
 ChipIcon.displayName = 'Chip.Icon'
