@@ -610,14 +610,14 @@ importers:
         specifier: workspace:^
         version: link:../utils
       '@vanilla-extract/css':
-        specifier: 1.21.2
-        version: 1.21.2
+        specifier: 1.21.3
+        version: 1.21.3
       '@vanilla-extract/dynamic':
         specifier: 2.1.5
         version: 2.1.5
       '@vanilla-extract/recipes':
         specifier: 0.5.7
-        version: 0.5.7(@vanilla-extract/css@1.21.2)
+        version: 0.5.7(@vanilla-extract/css@1.21.3)
     devDependencies:
       '@repo/config':
         specifier: workspace:*
@@ -650,8 +650,8 @@ importers:
         specifier: workspace:^
         version: link:../utils
       '@vanilla-extract/css':
-        specifier: 1.21.2
-        version: 1.21.2
+        specifier: 1.21.3
+        version: 1.21.3
       '@vanilla-extract/dynamic':
         specifier: 2.1.5
         version: 2.1.5
@@ -715,8 +715,8 @@ importers:
         specifier: 4.0.3
         version: 4.0.3(react@19.3.0)
       '@vanilla-extract/css':
-        specifier: 1.21.2
-        version: 1.21.2
+        specifier: 1.21.3
+        version: 1.21.3
       '@vanilla-extract/dynamic':
         specifier: 2.1.5
         version: 2.1.5
@@ -809,17 +809,17 @@ importers:
         specifier: workspace:^
         version: link:../utils
       '@vanilla-extract/css':
-        specifier: 1.21.2
-        version: 1.21.2
+        specifier: 1.21.3
+        version: 1.21.3
       '@vanilla-extract/dynamic':
         specifier: 2.1.5
         version: 2.1.5
       '@vanilla-extract/recipes':
         specifier: 0.5.7
-        version: 0.5.7(@vanilla-extract/css@1.21.2)
+        version: 0.5.7(@vanilla-extract/css@1.21.3)
       '@vanilla-extract/sprinkles':
         specifier: 1.7.1
-        version: 1.7.1(@vanilla-extract/css@1.21.2)
+        version: 1.7.1(@vanilla-extract/css@1.21.3)
       codemirror:
         specifier: 6.0.2
         version: 6.0.2
@@ -4755,6 +4755,9 @@ packages:
   '@vanilla-extract/css@1.21.2':
     resolution: {integrity: sha512-ehF/tmv2MxQwOJB1DicALUqnjZTnmY9Y7J2ccKB578JzZpYeL6sLAUqbaXo1taw1Erp0qBq0I4Kejs0uU/pBfg==}
 
+  '@vanilla-extract/css@1.21.3':
+    resolution: {integrity: sha512-h7wXxEowNLjhGfTHqReoSBWjAzxDADM8yUuUL/enDWXQVwy50JnY8xFNaie04XHTmrBPKJjwcwRNuTGlFIJLSA==}
+
   '@vanilla-extract/dynamic@2.1.5':
     resolution: {integrity: sha512-QGIFGb1qyXQkbzx6X6i3+3LMc/iv/ZMBttMBL+Wm/DetQd36KsKsFg5CtH3qy+1hCA/5w93mEIIAiL4fkM8ycw==}
 
@@ -6912,6 +6915,9 @@ packages:
   modern-ahocorasick@1.1.0:
     resolution: {integrity: sha512-sEKPVl2rM+MNVkGQt3ChdmD8YsigmXdn5NifZn6jiwn9LRJpWm8F3guhaqrJT/JOat6pwpbXEk6kv+b9DMIjsQ==}
 
+  modern-ahocorasick@3.3.0:
+    resolution: {integrity: sha512-OEuPxzKD4fG8Zx2dUX8jDP7ArNhRdlHhjLA00k+ZmtXe49Qb6+E/M/ViDYnXOZ9A3uRbRIb1eTKPesQGKd0USA==}
+
   module-details-from-path@1.0.4:
     resolution: {integrity: sha512-EGWKgxALGMgzvxYF1UyGTy0HXX/2vHLkw6+NvDKW2jypWbHpjQuj4UMcqQWXHERJhVGKikolT06G3bcKe4fi7w==}
 
@@ -7208,8 +7214,8 @@ packages:
       vite-plus:
         optional: true
 
-  oxlint-plugin-react-doctor@0.9.17:
-    resolution: {integrity: sha512-j6tdFoJbLztISYNlw7LMT+6naqhVsXTNn7drhoGRIqf0x2mCSD2Ur71hK0E/VrLens355finI6j+sMqHxHpEfA==}
+  oxlint-plugin-react-doctor@0.9.18:
+    resolution: {integrity: sha512-1mfeb/jzXnduWOZJxrvdJjvKT0pFNKrNFYcPO4ncpFAnfW41M0mLz/23lAFzHb0knNLYayEgIQ5DjI4ZfFe+DQ==}
     engines: {node: ^20.19.0 || >=22.13.0}
 
   oxlint-tsgolint@7.0.2003:
@@ -7497,8 +7503,8 @@ packages:
     resolution: {integrity: sha512-gIYjtVTU4NCWZnb/LXVSWfClZXnjzX3+xxi69Tkfu4YsmYuqiOk8giLkKt/WwxWqh+U66CTh8Kqbha1uPv8/qQ==}
     engines: {node: ^20.9.0 || >=22}
 
-  react-doctor@0.9.17:
-    resolution: {integrity: sha512-YCsjYk6MocO/oBhVxCcKvPotFxEOf/WJep/oF7jrpyVUBVKDKdpt7jVwTxrJrFE8uALMmVTljzXNTIjoL3talg==}
+  react-doctor@0.9.18:
+    resolution: {integrity: sha512-4Ach00KtfnfjTBGgr2PyPgHua85vT/UfPY5sR0bHgRAc/QSu0JInA0GHCL6a7WFGMeGUrxtGnI8oqZinG44BOA==}
     engines: {node: ^20.19.0 || >=22.13.0}
     hasBin: true
 
@@ -12354,6 +12360,22 @@ snapshots:
     transitivePeerDependencies:
       - babel-plugin-macros
 
+  '@vanilla-extract/css@1.21.3':
+    dependencies:
+      '@emotion/hash': 0.9.2
+      '@vanilla-extract/private': 1.0.9
+      css-what: 6.2.2
+      csstype: 3.2.3
+      dedent: 1.7.2
+      deep-object-diff: 1.1.9
+      deepmerge-ts: 8.0.2
+      lru-cache: 10.4.3
+      media-query-parser: 2.0.2
+      modern-ahocorasick: 3.3.0
+      picocolors: 1.1.1
+    transitivePeerDependencies:
+      - babel-plugin-macros
+
   '@vanilla-extract/dynamic@2.1.5':
     dependencies:
       '@vanilla-extract/private': 1.0.9
@@ -12380,9 +12402,17 @@ snapshots:
     dependencies:
       '@vanilla-extract/css': 1.21.2
 
+  '@vanilla-extract/recipes@0.5.7(@vanilla-extract/css@1.21.3)':
+    dependencies:
+      '@vanilla-extract/css': 1.21.3
+
   '@vanilla-extract/sprinkles@1.7.1(@vanilla-extract/css@1.21.2)':
     dependencies:
       '@vanilla-extract/css': 1.21.2
+
+  '@vanilla-extract/sprinkles@1.7.1(@vanilla-extract/css@1.21.3)':
+    dependencies:
+      '@vanilla-extract/css': 1.21.3
 
   '@vanilla-extract/vite-plugin@5.2.6(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.7.0)(supports-color@8.1.1)(terser@5.51.2)(vite@8.3.4(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(yaml@2.9.1)':
     dependencies:
@@ -14738,6 +14768,8 @@ snapshots:
 
   modern-ahocorasick@1.1.0: {}
 
+  modern-ahocorasick@3.3.0: {}
+
   module-details-from-path@1.0.4: {}
 
   mri@1.2.0: {}
@@ -15027,7 +15059,7 @@ snapshots:
       '@oxfmt/binding-win32-ia32-msvc': 0.70.0
       '@oxfmt/binding-win32-x64-msvc': 0.70.0
 
-  oxlint-plugin-react-doctor@0.9.17:
+  oxlint-plugin-react-doctor@0.9.18:
     dependencies:
       '@shaderfrog/glsl-parser': 7.0.1
       '@typescript-eslint/types': 8.70.1
@@ -15393,7 +15425,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  react-doctor@0.9.17(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(eslint@10.11.0(jiti@2.7.0)(supports-color@8.1.1))(oxlint-tsgolint@7.0.2003)(react@19.3.0)(supports-color@8.1.1):
+  react-doctor@0.9.18(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(eslint@10.11.0(jiti@2.7.0)(supports-color@8.1.1))(oxlint-tsgolint@7.0.2003)(react@19.3.0)(supports-color@8.1.1):
     dependencies:
       '@astrojs/compiler': 4.0.0
       '@sentry/node': 10.75.3(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@8.1.1)
@@ -15408,7 +15440,7 @@ snapshots:
       oxc-parser: 0.148.0
       oxc-resolver: 11.24.2
       oxlint: 1.81.0(oxlint-tsgolint@7.0.2003)
-      oxlint-plugin-react-doctor: 0.9.17
+      oxlint-plugin-react-doctor: 0.9.18
       playwright-core: 1.63.0
       prompts: 2.4.2
       typescript: 5.9.3
@@ -15478,7 +15510,7 @@ snapshots:
       preact: 10.29.8
       prompts: 2.4.2
       react: 19.3.0
-      react-doctor: 0.9.17(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(eslint@10.11.0(jiti@2.7.0)(supports-color@8.1.1))(oxlint-tsgolint@7.0.2003)(react@19.3.0)(supports-color@8.1.1)
+      react-doctor: 0.9.18(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(eslint@10.11.0(jiti@2.7.0)(supports-color@8.1.1))(oxlint-tsgolint@7.0.2003)(react@19.3.0)(supports-color@8.1.1)
       react-dom: 19.3.0(react@19.3.0)
       react-grab: 0.2.0(react@19.3.0)
     optionalDependencies:
