@@ -53,6 +53,8 @@ const defaultConfig = defineConfig({
     environment: 'jsdom',
     exclude: [
       ...configDefaults.exclude,
+      // Accessibility tests only run in Vitest Browser Mode, see vitest.browser.config.ts
+      '**/__tests__/a11y.test.tsx',
       '**/node_modules/**',
       '**/{dist,build}/**',
       '**/__stories__/**',

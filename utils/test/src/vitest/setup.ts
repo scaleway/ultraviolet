@@ -41,3 +41,14 @@ export const setup = () => {
     cleanup()
   })
 }
+
+// Setup for Vitest Browser Mode: the real browser provides native APIs,
+// so only the matchers and the DOM cleanup are needed.
+export const setupBrowser = () => {
+  expect.extend(domMatchers)
+  expect.extend(axeMatchers)
+
+  afterEach(() => {
+    cleanup()
+  })
+}
