@@ -6,10 +6,10 @@ export default {
   title: 'Compositions/CodeEditor',
   parameters: {
     a11yStatus: {
-      perceivable: undefined,
-      operable: undefined,
-      understandable: undefined,
-      robust: undefined,
+      perceivable: false,
+      operable: false,
+      understandable: false,
+      robust: false,
     },
     experimental: true,
   },
