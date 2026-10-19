@@ -9,7 +9,7 @@ import { Popup } from '..'
 // jsdom doesn't implement focus({ preventScroll }), which makes Floating UI skip
 // restoring focus on dismiss. Reading the option lets its feature detection see
 // the same support as a real browser.
-const originalFocus = HTMLElement.prototype.focus
+const originalFocus = Reflect.get(HTMLElement.prototype, 'focus')
 HTMLElement.prototype.focus = function focus(this: HTMLElement, options?: FocusOptions) {
   return originalFocus.call(this, { ...options, preventScroll: options?.preventScroll })
 }
