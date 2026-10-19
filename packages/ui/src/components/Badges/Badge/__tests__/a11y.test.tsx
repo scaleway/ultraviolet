@@ -1,8 +1,10 @@
+import { screen } from '@testing-library/react'
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations, renderWithTheme } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Badge } from '..'
+import { VisuallyHidden } from '../../../Other/VisuallyHidden'
 
 describe('badge - A11y', { tags: ['a11y'] }, () => {
   it.for([...consoleThemesMap.entries()])(
@@ -27,27 +29,34 @@ describe('badge - A11y', { tags: ['a11y'] }, () => {
       expect(getByTestId('badge')).not.toHaveAttribute('role')
     })
 
-    it('includes accessibleLabel in the content of a status badge', () => {
+    it('includes visually hidden text in the content of a status badge', () => {
       const { getByRole } = renderWithTheme(
-        <Badge role="status" accessibleLabel="Server error">
+        <Badge role="status">
+          <VisuallyHidden>Server error</VisuallyHidden>
           <InformationOutlineIcon />
         </Badge>,
       )
 
       expect(getByRole('status')).toHaveTextContent('Server error')
+      expect(screen.getByText('Server error')).toBeVisuallyHidden()
     })
   })
 
   describe('labelling (WCAG 4.1.2)', () => {
-    it('renders accessibleLabel as visually hidden text for screen readers', () => {
-      const { getByText } = renderWithTheme(<Badge accessibleLabel="Server error">Sample badge</Badge>)
+    it('renders visually hidden text for screen readers', () => {
+      const { getByText } = renderWithTheme(
+        <Badge>
+          <VisuallyHidden>Server error</VisuallyHidden>Sample badge
+        </Badge>,
+      )
 
       expect(getByText('Server error')).toBeInTheDocument()
     })
 
-    it('should not have violations with an icon-only badge labelled via accessibleLabel', async () => {
+    it('should not have violations with an icon-only badge labelled via VisuallyHidden', async () => {
       const { container } = renderWithTheme(
-        <Badge accessibleLabel="Server error" data-testid="badge">
+        <Badge>
+          <VisuallyHidden>Server error</VisuallyHidden>
           <InformationOutlineIcon />
         </Badge>,
       )

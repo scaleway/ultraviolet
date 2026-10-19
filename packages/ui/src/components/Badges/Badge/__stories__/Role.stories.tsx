@@ -7,7 +7,7 @@ export const Role: StoryFn = () => {
   const [done, setDone] = useState(false)
 
   useEffect(() => {
-    setTimeout(() => setDone(true), 5000)
+    setTimeout(() => setDone(true), 2000)
   }, [])
 
   return (

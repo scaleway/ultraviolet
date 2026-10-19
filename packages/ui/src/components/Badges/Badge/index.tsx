@@ -2,7 +2,6 @@
 
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
-import { VisuallyHidden } from '../../Other/VisuallyHidden'
 import { Text } from '../../Typography/Text'
 import { TEXT_VARIANT } from './constant'
 import { badgeStyle } from './styles.css'
@@ -13,7 +12,6 @@ type BadgeProps = {
   sentiment?: 'danger' | 'info' | 'success' | 'warning' | 'neutral' | 'black' | 'white' | 'primary' | 'secondary'
   size?: 'medium' | 'small' | 'large' | 'xsmall'
   className?: string
-  accessibleLabel?: string
   role?: 'status' | 'alert'
   children: ReactNode
   'data-testid'?: string
@@ -31,7 +29,6 @@ export const Badge = ({
   className,
   children,
   'data-testid': dataTestId,
-  accessibleLabel,
   role,
   style,
 }: BadgeProps) => (
@@ -45,7 +42,6 @@ export const Badge = ({
     variant={TEXT_VARIANT[size]}
     whiteSpace="nowrap"
   >
-    {accessibleLabel ? <VisuallyHidden>{accessibleLabel}</VisuallyHidden> : null}
     {children}
   </Text>
 )

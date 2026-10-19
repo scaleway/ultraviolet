@@ -10,10 +10,10 @@ A presentational component that displays status or labels in a small colored con
 
 ## Summary
 
-1. ⚠️ **Perceivable**: Text-to-background contrast ratios still fall below 4.5:1 for several sentiment/prominence combinations (theme tokens, not fixable in the component); color is primary means of conveying sentiment, but `accessibleLabel` now lets consumers add text context
+1. ⚠️ **Perceivable**: Text-to-background contrast ratios still fall below 4.5:1 for several sentiment/prominence combinations (theme tokens, not fixable in the component)
 2. ✅ **Operable**: Non-interactive component, no keyboard interaction required
 3. ✅ **Understandable**: Content is readable with appropriate text styling
-4. ✅ **Robust**: Dead/inconsistent auto `aria-label` logic removed; `accessibleLabel` provides a consistent labelling mechanism and the `role` prop supports dynamic status indicators
+4. ✅ **Robust**: Dead/inconsistent auto `aria-label` logic removed and the `role` prop supports dynamic status indicators
 
 ## ARIA Pattern
 
@@ -32,14 +32,14 @@ Enforced by the component:
   - darker theme, success sentiment, strong prominence: 4.47:1
   - darker theme, danger sentiment, strong prominence: 3.86:1
   - darker theme, info sentiment, strong prominence: 4.49:1
-- ✅ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Sentiment can be conveyed through text as well as color via `accessibleLabel` (rendered as visually-hidden text)
-- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Contextual information can be provided programmatically via `accessibleLabel`; a semantic `role` (`status` | `alert`) can be set for dynamic status indicators
+- ✅ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Sentiment can be conveyed through text as well as color via `<VisuallyHidden>` component (in the children)
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Contextual information can be provided programmatically with `VisuallyHidden`; a semantic `role` (`status` | `alert`) can be set for dynamic status indicators
 
 To apply when using the component:
 
 - [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Ensure badge maintains 3:1 contrast ratio against its background in all sentiment/prominence combinations
-- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Ensure sentiment is also conveyed through text content (not just color) for screen reader users; use `accessibleLabel` to add context
-- [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - Avoid icon-only badges; if an icon-only badge is used and conveys meaning, add an `accessibleLabel`.
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Ensure sentiment is also conveyed through text content (not just color) for screen reader users; use `VisuallyHidden` in the children to add context
+- [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - Avoid icon-only badges; if an icon-only badge is used and conveys meaning, add a `VisuallyHidden` text.
 - [ARIA Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - If the badge represents a dynamic status that changes after load, pass `role="status"` so changes are announced
 
 <details>
@@ -50,25 +50,22 @@ To apply when using the component:
   - **Unresolved** - theme tokens, see WCAG 1.4.3 above.
 - ✅ Inconsistent aria-label application:
   - aria-label was only applied to sentiments other than 'neutral' and 'primary', creating an inconsistent screen reader experience.
-  - **Resolved** by removing the automatic `aria-label` logic; labelling is now explicit via `accessibleLabel`.
+  - **Resolved** by removing the automatic `aria-label` logic; labelling is user responsibility.
 - ✅ aria-label value was just the sentiment name:
   - e.g. "danger" is not meaningful without context.
-  - **Resolved** by removing the automatic `aria-label` logic; consumers provide meaningful context via `accessibleLabel`.
+  - **Resolved** by removing the automatic `aria-label` logic; meaningful context is user responsibility (usage of `VisuallyHidden`).
 - ✅ aria-label not supported by `Text`:
   - The component `Text` does not accept `aria-label`, so the labels were never rendered.
-  - **Resolved** by removing the dead `aria-label` prop and rendering `accessibleLabel` as visually-hidden text.
+  - **Resolved** by removing the dead `aria-label` prop and documenting usage of `VisuallyHidden`.
 - ✅ Missing semantic role:
   - The badge rendered without a semantic role, so it could not be announced as a dynamic status indicator.
   - **Resolved** by adding the `role` prop (`status` | `alert`) forwarded to the rendered element (`index.tsx`); apply `role="status"` when used for dynamic status.
 - ✅ No mechanism to provide contextual information:
   - No way to express e.g. "Status: Error" vs just "danger".
-  - **Resolved** by adding the `accessibleLabel` prop, rendered via `VisuallyHidden` (`index.tsx`).
+  - **Resolved** by documenting the `VisuallyHidden` usage.
 - ✅ Icon-only badges have no accessible text alternative:
   - Icons must be decorative (`aria-hidden`) or have an accessible label; avoid icon-only badges.
-  - **Resolved** - `accessibleLabel` can label icon-only badges; labelling remains the consumer's responsibility (see Rules above).
-- ✅ Custom `aria-label` override:
-  - A more descriptive label could not be provided.
-  - **Resolved** by adding the `accessibleLabel` prop.
+  - **Resolved** - labelling remains the consumer's responsibility.
 - ✅ Documenting proper usage patterns:
   - **Resolved** - usage guidance documented in the Rules section above.
 
