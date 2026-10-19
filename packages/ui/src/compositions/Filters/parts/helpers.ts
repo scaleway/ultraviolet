@@ -5,6 +5,19 @@ export const isFilterConfigGroup = <V extends AnyObject>(item: FilterConfig<V>):
 
 const isEmpty = (value: unknown) => value === undefined || value === null || value === ''
 
+/**
+ * For an empty value, return `defaultValue` instead (if it is empty too)
+ */
+export const getValueWithDefaultIfEmptyString = (name: string, value: unknown, defaultValues: AnyObject): unknown => {
+  const defaultValue = defaultValues[name]
+
+  if (value === '' && isEmpty(defaultValue)) {
+    return defaultValue
+  }
+
+  return value
+}
+
 export const getKeysWithDifferentValues = <Values extends AnyObject>(a?: Values, b?: Values): (keyof Values)[] => {
   if (a === b) {
     return []
@@ -56,7 +69,7 @@ export const getKeysWithDifferentValues = <Values extends AnyObject>(a?: Values,
     return true
   })
 
-  return keysWithDifferentValues as (keyof Values)[]
+  return keysWithDifferentValues
 }
 
 // This function is a very lightweight deepCompare according to the possible FormValues type aka values can be string | number | [string, string] | [number, number] | string[]

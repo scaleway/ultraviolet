@@ -9,7 +9,7 @@ import type { AnyObject, FilterComponentProps, FilterConfig, FilterConfigItem } 
 import { AbstractFilter } from './AbstractFilter'
 import { ExpandableFilterGroup } from './ExpandableFilterGroup'
 import { useFiltersContext } from './FiltersProvider'
-import { isFilterConfigGroup } from './helpers'
+import { getValueWithDefaultIfEmptyString, isFilterConfigGroup } from './helpers'
 
 export type DrawerProps<V extends AnyObject = AnyObject> = {
   config: FilterConfig<V>[]
@@ -28,7 +28,11 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
   const { filters, closeDrawer, isDrawerOpen } = useFiltersContext()
   const drawerFilters = config.filter(item => !item.hideInDrawer)
 
-  const createResetHandler = (configItem: FilterConfig<AnyObject>) => {
+  const handleSetValue = (name: string, value: unknown) => {
+    filters.setValue(name, getValueWithDefaultIfEmptyString(name, value, filters.defaultValues))
+  }
+
+  const createResetHandler = (configItem: FilterConfig) => {
     let fieldsToReset: string[] = []
     if (isFilterConfigGroup(configItem)) {
       fieldsToReset = configItem.items.map(item => item.name).filter(name => filters.dirtyFilters.includes(name))
@@ -94,7 +98,7 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
                           directionContext="column"
                           size="large"
                           key={subConfigItem.name}
-                          onChange={value => filters.setValue(subConfigItem.name, value)}
+                          onChange={value => handleSetValue(subConfigItem.name, value)}
                           value={filters.values[subConfigItem.name]}
                           values={filters.values}
                           customComponents={components}
@@ -107,7 +111,7 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
                     directionContext="column"
                     size="large"
                     hideLabel
-                    onChange={value => filters.setValue(configItem.name, value)}
+                    onChange={value => handleSetValue(configItem.name, value)}
                     value={filters.values[configItem.name]}
                     values={filters.values}
                     customComponents={components}

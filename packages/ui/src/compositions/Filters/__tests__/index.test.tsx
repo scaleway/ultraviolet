@@ -1,4 +1,4 @@
-import { screen, within } from '@testing-library/react'
+import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { InformationIcon } from '@ultraviolet/icons'
 import { renderWithTheme } from '@utils/test'
@@ -215,6 +215,80 @@ describe('filters', () => {
 
     expect(screen.getByRole('button', { name: 'All filters' })).toBeVisible()
     expect(screen.getByRole('button', { name: 'Clear all' })).toBeDisabled()
+  })
+
+  it('should replace the empty string with the default value when clearing a main row filter with an empty default', async () => {
+    const onSubmit = vi.fn()
+    const onChange = vi.fn()
+
+    renderWithTheme(
+      <Filters
+        config={[{ type: 'search', name: 'name', label: 'Name', debounceDuration: 100 }]}
+        defaultValues={{ name: undefined }}
+        labels={labels}
+        onSubmit={onSubmit}
+        onChange={onChange}
+      />,
+    )
+
+    const nameInput = screen.getByRole('textbox', { name: 'Name' })
+    await userEvent.type(nameInput, 'John')
+    await waitFor(() => expect(onSubmit).toHaveBeenLastCalledWith({ name: 'John' }))
+
+    await userEvent.click(screen.getByRole('button', { name: 'clear value' }))
+    await waitFor(() => expect(onSubmit).toHaveBeenLastCalledWith({ name: undefined }))
+    await waitFor(() => expect(onChange).toHaveBeenLastCalledWith({ name: undefined }))
+  })
+
+  it('should keep the empty string when the default value is not empty', async () => {
+    const onSubmit = vi.fn()
+    const onChange = vi.fn()
+
+    renderWithTheme(
+      <Filters
+        config={[{ type: 'search', name: 'name', label: 'Name', debounceDuration: 100 }]}
+        defaultValues={{ name: 'default' }}
+        labels={labels}
+        onSubmit={onSubmit}
+        onChange={onChange}
+      />,
+    )
+
+    expect(screen.getByRole('textbox', { name: 'Name' })).toHaveValue('default')
+
+    await userEvent.clear(screen.getByRole('textbox', { name: 'Name' }))
+    await waitFor(() => expect(onSubmit).toHaveBeenLastCalledWith({ name: '' }))
+    await waitFor(() => expect(onChange).toHaveBeenLastCalledWith({ name: '' }))
+  })
+
+  it('should replace the empty string with the default value when clearing a drawer filter with an empty default', async () => {
+    const onChange = vi.fn()
+
+    renderWithTheme(
+      <Filters
+        config={[
+          {
+            type: 'text',
+            name: 'drawer',
+            label: 'Drawer filter',
+            debounceDuration: 100,
+            clearable: true,
+          },
+        ]}
+        defaultValues={{ drawer: null }}
+        labels={labels}
+        onChange={onChange}
+        layout={{ mainFilters: [] }}
+      />,
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: 'All filters' }))
+
+    await userEvent.type(screen.getByRole('textbox', { name: 'Drawer filter' }), 'John')
+    await waitFor(() => expect(onChange).toHaveBeenLastCalledWith({ drawer: 'John' }))
+
+    await userEvent.click(screen.getByRole('button', { name: 'clear value' }))
+    await waitFor(() => expect(onChange).toHaveBeenLastCalledWith({ drawer: null }))
   })
 
   it('should submit only after clicking the submit button in the drawer', async () => {

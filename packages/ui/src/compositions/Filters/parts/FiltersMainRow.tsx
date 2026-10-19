@@ -8,7 +8,7 @@ import { Stack } from '../../../components/Layout/Stack'
 import type { AnyObject, FilterComponentProps, FilterConfig } from '../types'
 import { AbstractFilter } from './AbstractFilter'
 import { useFiltersContext } from './FiltersProvider'
-import { isFilterConfigGroup } from './helpers'
+import { getValueWithDefaultIfEmptyString, isFilterConfigGroup } from './helpers'
 import { filterStyles } from './styles.css'
 
 export type MainRowProps<V extends AnyObject = AnyObject> = {
@@ -50,9 +50,10 @@ export const FiltersMainRow = <V extends AnyObject>({
   const defaultSize = mainFilters.some(item => item.type === 'slider') ? 'large' : 'medium'
   const filterSize = layout?.size ?? defaultSize
 
-  const handleMainFilterChange = (key: string | number | symbol, value: unknown) => {
-    filters.setValue(key as string, value)
-    filters.submit({ [key]: value })
+  const handleMainFilterChange = (key: string, value: unknown) => {
+    const newValue = getValueWithDefaultIfEmptyString(key, value, filters.defaultValues)
+    filters.setValue(key, newValue)
+    filters.submit({ [key]: newValue })
   }
 
   const handleReset = () => {
