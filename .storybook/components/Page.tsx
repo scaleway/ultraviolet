@@ -1,7 +1,7 @@
 import { Controls, Description, Primary, Stories, Subtitle, Title } from '@storybook/addon-docs/blocks'
 import { linkTo } from '@storybook/addon-links'
 import { Alert, Stack, Text } from '@ultraviolet/ui'
-import { h2Decorator, storiesDecorator, storiesTheme, titleDecorator } from './globalStyle.css'
+import { h2Decorator, storiesDecorator, storiesTheme, titleDecorator } from '../../utils/stories/src/globalStyle.css'
 
 type PageProps = {
   deprecated?: boolean
