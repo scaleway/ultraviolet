@@ -73,7 +73,12 @@ The line is thin, but split files by intent:
 - **`a11y.test.tsx`** — accessibility-only concerns: axe violations, keyboard
   navigation, focus management, ARIA attributes. Query by role to _trigger_ those
   checks, but assert on a11y outcomes (`expect(axe).toHaveNoViolations()`, focus
-  landing, etc.).
+  landing, etc.). These files are **excluded from the jsdom unit run and only run
+  in Vitest Browser Mode** (`pnpm test:browser` in the package, `@utils/test/browser-config`),
+  where axe can check rules that need real layout like `color-contrast`.
+  The page gets the theme background via `@ultraviolet/themes/global` imported in
+  `vitest.browser.setup.ts` — don't remove it. Animations/transitions DO run in the
+  real browser: wait with `waitFor` before asserting visibility.
 - **Regular `*.test.tsx`** — behavior: does the component render and respond.
   `getByRole` here asserts _behavior_; labels/descriptions/roles are matched as a
   side effect of finding the element a user interacts with, not asserted directly.
