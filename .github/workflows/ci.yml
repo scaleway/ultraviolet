@@ -115,7 +115,7 @@ jobs:
           cache: true
           require-lockfile: true
           runtime: node
-      - run: pnpm playwright install --with-deps chromium
+      - run: pnpm playwright install --with-deps chromium firefox
       - run: pnpm run test:browser
 
   deploy:
