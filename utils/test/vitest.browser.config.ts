@@ -3,6 +3,18 @@ import { configDefaults, defineConfig, mergeConfig } from 'vitest/config'
 import type { TestUserConfig, ViteUserConfig } from 'vitest/config'
 
 const defaultBrowserConfig = defineConfig({
+  // Wrapper packages that internally import @vanilla-extract/css must be
+  // excluded from the browser dep optimizer: their pre-bundled copies embed a
+  // second css instance whose fileScope is never set by the transform-mode
+  // plugin. @vanilla-extract/css itself must stay optimized (CJS interop for
+  // picocolors), and shares its fileScope chunk with the plugin injection.
+  optimizeDeps: {
+    exclude: ['@vanilla-extract/recipes', '@vanilla-extract/sprinkles'],
+    // The fileScope imports are injected by the plugin at transform time, so
+    // the scanner cannot discover them upfront: bundle them at server start
+    // instead of mid-run, which reloads the page and fails cold test runs.
+    include: ['@vanilla-extract/css', '@vanilla-extract/css/fileScope'],
+  },
   test: {
     tags: [
       {
