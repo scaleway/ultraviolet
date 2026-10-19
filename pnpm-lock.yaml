@@ -576,8 +576,8 @@ importers:
         specifier: workspace:^
         version: link:../utils
       react-hook-form:
-        specifier: 7.88.0
-        version: 7.88.0(react@19.3.0)
+        specifier: 7.90.0
+        version: 7.90.0(@types/react@19.3.0)(react@19.3.0)
     devDependencies:
       '@repo/config':
         specifier: workspace:*
@@ -7431,11 +7431,15 @@ packages:
       react:
         optional: true
 
-  react-hook-form@7.88.0:
-    resolution: {integrity: sha512-QRaLOWhX93YCnMiRfnOFRSwWXZNt8qhm2JTZwypoDvKpSffTJHmpzMXt8U6PV5UThvL3IiiLDUWe2nHMtz6Mmw==}
+  react-hook-form@7.90.0:
+    resolution: {integrity: sha512-+NdG0FLzCPhFOp2NNxaUYLF9fyZhNjx9FTBBSYWF71/l6BBlmIc/j6xlp3DbaHWLJbIG7Zd8oznA19xJClU97w==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
+      '@types/react': '*'
       react: ^16.8.0 || ^17 || ^18 || ^19
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
 
   react-intersection-observer@11.0.1:
     resolution: {integrity: sha512-BIZ1M40GPSKDIT1MJbXK7SB0BwBaTKr84QfZCs5asKer7YMOYLzMi+RI1F4VStbZLGHoosJmd+aOQDDipUV1gA==}
@@ -15307,9 +15311,11 @@ snapshots:
     optionalDependencies:
       react: 19.3.0
 
-  react-hook-form@7.88.0(react@19.3.0):
+  react-hook-form@7.90.0(@types/react@19.3.0)(react@19.3.0):
     dependencies:
       react: 19.3.0
+    optionalDependencies:
+      '@types/react': 19.3.0
 
   react-intersection-observer@11.0.1(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
     dependencies:
