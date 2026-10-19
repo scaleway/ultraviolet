@@ -18,7 +18,12 @@ export const FocusTrap: StoryFn<typeof Popup> = () => {
           Open the Popup
         </Button>
       </Popup.Trigger>
-      <Popup.Panel focusTrap initialFocus={closeButtonRef} accessibleLabel="Popup with focus trap" maxWidth={400}>
+      <Popup.Panel
+        focusTrap
+        initialFocus={closeButtonRef}
+        accessibleLabel="Popup with focus trap"
+        style={{ maxWidth: '400px' }}
+      >
         <Stack gap={2} width="100%" style={{ padding: theme.space['2'] }}>
           <Stack alignItems="center" direction="row" gap={2} justifyContent="space-between">
             <Text as="h3" sentiment="neutral" variant="bodyStrong">

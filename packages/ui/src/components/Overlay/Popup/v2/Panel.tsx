@@ -9,8 +9,6 @@ import { usePopupContext } from './context'
 import type { PopupRole } from './context'
 import { popupV2Style } from './styles.css'
 
-const sizeValue = (value: number | string) => (typeof value === 'number' ? `${value}px` : value)
-
 type PopupPanelProps = {
   children: ReactNode
   /**
@@ -28,14 +26,6 @@ type PopupPanelProps = {
    * @default document.body
    */
   portalTarget?: HTMLElement | null
-  /**
-   * Max width of the popup.
-   */
-  maxWidth?: number | string
-  /**
-   * Max height of the popup (enables overflow scrolling).
-   */
-  maxHeight?: number | string
   /**
    * When `true`, keeps the popup width synced to the trigger width.
    * @default false
@@ -72,8 +62,7 @@ type PopupPanelProps = {
   'aria-labelledby'?: string
   /**
    * Accessible name of the popup, rendered in a `VisuallyHidden` element and
-   * wired through `aria-labelledby`. Prefer this over `aria-label` as the
-   * text is localizable.
+   * wired through `aria-labelledby`.
    */
   accessibleLabel?: string
   className?: string
@@ -90,8 +79,6 @@ export const Panel = ({
   role = 'dialog',
   placement = 'bottom-start',
   portalTarget = typeof window === 'undefined' ? null : document.body,
-  maxWidth,
-  maxHeight,
   matchTriggerWidth = false,
   arrow = false,
   focusTrap = false,
@@ -170,12 +157,7 @@ export const Panel = ({
         status === 'open' || status === 'close' ? popupV2Style.animation[status] : null,
         className,
       )}
-      style={{
-        ...floatingStyles,
-        ...(maxWidth !== undefined && { maxWidth: sizeValue(maxWidth) }),
-        ...(maxHeight !== undefined && { maxHeight: sizeValue(maxHeight) }),
-        ...style,
-      }}
+      style={{ ...floatingStyles, ...style }}
     >
       {arrow ? <FloatingArrow ref={arrowRef} context={context} tipRadius={2} className={popupV2Style.arrow} /> : null}
       <div className={popupV2Style.content}>
