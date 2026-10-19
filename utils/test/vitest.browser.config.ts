@@ -31,6 +31,9 @@ const defaultBrowserConfig = defineConfig({
         {
           browser: 'chromium',
         },
+        {
+          browser: 'firefox',
+        },
       ],
     },
     include: ['src/**/__tests__/a11y.test.tsx'],
