@@ -20,7 +20,7 @@ export type SelectableCardProps = {
   style?: CSSProperties
   indented?: boolean
   labelDescription?: ReactNode
-  labelDescriptionInline?: boolean
+  labelDescriptionAlignment?: 'right' | 'left'
 } & (
   | {
       illustration?: ReactElement<{ style?: CSSProperties }>

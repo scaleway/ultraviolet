@@ -187,7 +187,7 @@ describe('selectableCard', () => {
           type={type}
           value="choice"
           labelDescription="description"
-          labelDescriptionInline
+          labelDescriptionAlignment="left"
         >
           child
         </SelectableCard>,

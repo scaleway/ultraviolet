@@ -184,7 +184,7 @@ export const LabelDescription: StoryFn = args => {
               </Text>
             </Stack>
           }
-          labelDescriptionInline
+          labelDescriptionAlignment="left"
           name="label-22"
           onChange={event =>
             setValue4(prevState => ({
@@ -213,7 +213,7 @@ export const LabelDescription: StoryFn = args => {
               Recommended
             </Badge>
           }
-          labelDescriptionInline
+          labelDescriptionAlignment="left"
           name="label-23"
           onChange={event =>
             setValue4(prevState => ({
@@ -243,7 +243,7 @@ export const LabelDescription: StoryFn = args => {
               Optional
             </Badge>
           }
-          labelDescriptionInline
+          labelDescriptionAlignment="left"
           name="label-24"
           onChange={event =>
             setValue4(prevState => ({
@@ -273,7 +273,7 @@ export const LabelDescription: StoryFn = args => {
               Optional
             </Badge>
           }
-          labelDescriptionInline
+          labelDescriptionAlignment="left"
           name="label-25"
           onChange={event =>
             setValue4(prevState => ({
@@ -302,7 +302,7 @@ LabelDescription.parameters = {
   docs: {
     description: {
       story:
-        'Use prop `labelDescription` to add more information on the same row as the label (badge, button, etc.). Use prop `labelDescriptionInline` to keep that description right next to the label instead of aligned to the far right. <br/>**Prefer a `labelDescription` over a complex `label`**, as any content inside the `label` prop is added to the accessible label of the checkbox, overloading it.',
+        'Use prop `labelDescription` to add more information on the same row as the label (badge, button, etc.). Use prop `labelDescriptionAlignment="left"` to keep that description right next to the label instead of aligned to the far right. <br/>**Prefer a `labelDescription` over a complex `label`**, as any content inside the `label` prop is added to the accessible label of the checkbox, overloading it.',
     },
   },
 }

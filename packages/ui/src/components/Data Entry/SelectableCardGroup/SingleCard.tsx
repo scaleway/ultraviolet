@@ -24,7 +24,7 @@ export const CardSelectableCard = ({
   style,
   'data-testid': dataTestId,
   labelDescription,
-  labelDescriptionInline,
+  labelDescriptionAlignment = 'right',
 }: CardSelectableCardProps) => {
   const context = useContext(SelectableCardGroupContext)
 
@@ -53,7 +53,7 @@ export const CardSelectableCard = ({
       type={type}
       value={value}
       labelDescription={labelDescription}
-      labelDescriptionInline={labelDescriptionInline}
+      labelDescriptionAlignment={labelDescriptionAlignment}
     >
       {children}
     </SelectableCard>

@@ -35,7 +35,7 @@ export const SelectableCard = forwardRef(
       id,
       label,
       labelDescription,
-      labelDescriptionInline = false,
+      labelDescriptionAlignment = 'right',
       'data-testid': dataTestId,
       productIcon,
       illustration,
@@ -90,6 +90,23 @@ export const SelectableCard = forwardRef(
 
     const isCheckboxOrToggle = type === 'checkbox' || type === 'toggle'
 
+    const inputsProps = {
+      'aria-label': ariaLabel,
+      checked,
+      'data-error': isError,
+      disabled,
+      id,
+      innerRef,
+      isError,
+      label,
+      name,
+      onBlur,
+      onChange,
+      onFocus,
+      type,
+      value,
+    }
+
     const content = (
       <Tooltip containerFullHeight={!!tooltip} text={tooltip}>
         <Stack
@@ -103,7 +120,9 @@ export const SelectableCard = forwardRef(
             label
               ? cn(
                   selectableCardStyle.labelContainerSelectableCardLabel,
-                  labelDescriptionInline ? selectableCardStyle.labelContainerSelectableCardLabelDescription : '',
+                  labelDescriptionAlignment === 'left'
+                    ? selectableCardStyle.labelContainerSelectableCardLabelDescription
+                    : '',
                 )
               : selectableCardStyle.labelContainerSelectableCardNoLabel,
           )}
@@ -132,41 +151,11 @@ export const SelectableCard = forwardRef(
           <IllustrationContainer illustration={illustration} productIcon={productIcon}>
             {labelDescription ? (
               <Stack width="100%" direction="row" gap={1} alignItems="center">
-                <MultiStateInput
-                  aria-label={ariaLabel}
-                  checked={checked}
-                  data-error={isError}
-                  disabled={disabled}
-                  id={id}
-                  innerRef={innerRef}
-                  isError={isError}
-                  label={label}
-                  name={name}
-                  onBlur={onBlur}
-                  onChange={onChange}
-                  onFocus={onFocus}
-                  type={type}
-                  value={value}
-                />
+                <MultiStateInput {...inputsProps} />
                 {labelDescription}
               </Stack>
             ) : (
-              <MultiStateInput
-                aria-label={ariaLabel}
-                checked={checked}
-                data-error={isError}
-                disabled={disabled}
-                id={id}
-                innerRef={innerRef}
-                isError={isError}
-                label={label}
-                name={name}
-                onBlur={onBlur}
-                onChange={onChange}
-                onFocus={onFocus}
-                type={type}
-                value={value}
-              />
+              <MultiStateInput {...inputsProps} />
             )}
 
             {children ? (

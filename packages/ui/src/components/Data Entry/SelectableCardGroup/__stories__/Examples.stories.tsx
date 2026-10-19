@@ -92,7 +92,7 @@ export const Examples: StoryFn = args => {
               Recommended
             </Badge>
           }
-          labelDescriptionInline
+          labelDescriptionAlignment="left"
           value="label-22"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
@@ -111,7 +111,7 @@ export const Examples: StoryFn = args => {
               Recommended
             </Badge>
           }
-          labelDescriptionInline
+          labelDescriptionAlignment="left"
           name="label-23"
           value="label-23"
         >
@@ -131,7 +131,7 @@ export const Examples: StoryFn = args => {
               Optional
             </Badge>
           }
-          labelDescriptionInline
+          labelDescriptionAlignment="left"
           name="label-24"
           value="label-24"
         >
@@ -151,7 +151,7 @@ export const Examples: StoryFn = args => {
               Optional
             </Badge>
           }
-          labelDescriptionInline
+          labelDescriptionAlignment="left"
           name="label-25"
           value="label-25"
         >
