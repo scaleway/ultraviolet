@@ -4,7 +4,7 @@ import { SelectableCard } from '..'
 import { Stack } from '../../../Layout/Stack'
 
 export const Disabled: StoryFn = args => {
-  const [value, onChange] = useState('label-8')
+  const [value, setValue] = useState('label-8')
 
   return (
     <>
@@ -13,7 +13,7 @@ export const Disabled: StoryFn = args => {
         checked={value === 'label-7'}
         label="Radio Left"
         name="label-7"
-        onChange={event => onChange(event.currentTarget.value)}
+        onChange={event => setValue(event.currentTarget.value)}
         type="radio"
         value="label-7"
       />
@@ -23,7 +23,7 @@ export const Disabled: StoryFn = args => {
         disabled
         label="Radio Right"
         name="label-8"
-        onChange={event => onChange(event.currentTarget.value)}
+        onChange={event => setValue(event.currentTarget.value)}
         type="radio"
         value="label-8"
       />
