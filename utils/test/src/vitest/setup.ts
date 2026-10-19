@@ -45,6 +45,16 @@ export const setup = () => {
 // Setup for Vitest Browser Mode: the real browser provides native APIs,
 // so only the matchers and the DOM cleanup are needed.
 export const setupBrowser = () => {
+  // Library internals (floating-ui positioning, rAF, ResizeObserver) update
+  // React state outside act() and cannot be wrapped by tests: React act
+  // warnings are noise in a real browser. RTL still wraps render and user
+  // events in act itself, so interactions stay deterministic.
+  // beforeEach is needed: RTL's own module init sets the flag back to true
+  // in a beforeAll, and module hooks run before it.
+  beforeEach(() => {
+    globalThis.IS_REACT_ACT_ENVIRONMENT = false
+  })
+
   expect.extend(domMatchers)
   expect.extend(axeMatchers)
 
