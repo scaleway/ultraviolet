@@ -10,7 +10,7 @@ import '../../packages/themes/dist/global/globalStyle.css'
 import '../../packages/themes/dist/style/themes.css'
 import * as SB_THEMES from '../storybookThemes'
 import { useDocsTheme } from './useDocsTheme'
-import { globalStyleStoryBook } from './globalStyle.css'
+import { globalStyleStoryBook } from '../../utils/stories/src/globalStyle.css'
 
 type ExtraProps = {
   /**
