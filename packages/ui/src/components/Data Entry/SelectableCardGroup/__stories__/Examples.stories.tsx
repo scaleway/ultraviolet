@@ -9,9 +9,9 @@ import nl from './assets/nl.svg'
 import pl from './assets/pl.svg'
 
 export const Examples: StoryFn = args => {
-  const [value, onChange] = useState('label-14')
-  const [value3, onChange3] = useState([''])
-  const [value4, onChange4] = useState([''])
+  const [value, setValue] = useState('label-14')
+  const [valueCheckbox, setValueCheckbox] = useState([''])
+  const [country, setCountry] = useState([''])
 
   return (
     <Stack flex={1} gap={8}>
@@ -19,21 +19,21 @@ export const Examples: StoryFn = args => {
         {...args}
         legend="First group"
         name="First group"
-        onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange(event.currentTarget.value)}
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) => setValue(event.currentTarget.value)}
         showTick
         type="radio"
         value={value}
       >
         <SelectableCardGroup.Card
           label={
-            <Stack direction="row" flex={1} justifyContent="space-between">
-              <Text as="span" variant="bodyStrong">
-                Option 1
-              </Text>
-              <Text as="span" variant="bodyStronger">
-                1.99€
-              </Text>
-            </Stack>
+            <Text as="span" variant="bodyStrong">
+              Option 1
+            </Text>
+          }
+          labelDescription={
+            <Text as="span" variant="bodyStronger">
+              1.99€
+            </Text>
           }
           name="label-14"
           value="label-14"
@@ -44,14 +44,14 @@ export const Examples: StoryFn = args => {
         </SelectableCardGroup.Card>
         <SelectableCardGroup.Card
           label={
-            <Stack direction="row" flex={1} justifyContent="space-between">
-              <Text as="span" variant="bodyStrong">
-                Option 2
-              </Text>
-              <Text as="span" variant="bodyStronger">
-                2.99€
-              </Text>
-            </Stack>
+            <Text as="span" variant="bodyStrong">
+              Option 2
+            </Text>
+          }
+          labelDescription={
+            <Text as="span" variant="bodyStronger">
+              2.99€
+            </Text>
           }
           name="label-14"
           value="label-15"
@@ -68,30 +68,31 @@ export const Examples: StoryFn = args => {
         legend="Second group"
         name="label-22"
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-          const data = [...value3]
+          const data = [...valueCheckbox]
           if (data.includes(event.currentTarget.value)) {
             data.splice(data.indexOf(event.currentTarget?.value), 1)
           } else {
             data.push(event.currentTarget.value)
           }
-          onChange3(data)
+          setValueCheckbox(data)
           console.log(data)
         }}
         showTick
         type="checkbox"
-        value={value3}
+        value={valueCheckbox}
       >
         <SelectableCardGroup.Card
           label={
-            <Stack alignItems="center" direction="row" flex={1} gap={1}>
-              <Text as="span" variant="bodyStrong">
-                Backup
-              </Text>
-              <Badge sentiment="primary" size="small">
-                Recommended
-              </Badge>
-            </Stack>
+            <Text as="span" variant="bodyStrong">
+              Backup
+            </Text>
           }
+          labelDescription={
+            <Badge sentiment="primary" size="small">
+              Recommended
+            </Badge>
+          }
+          labelDescriptionAlignment="left"
           value="label-22"
         >
           <Text as="p" prominence="weak" sentiment="neutral" variant="body">
@@ -101,15 +102,16 @@ export const Examples: StoryFn = args => {
         <SelectableCardGroup.Card
           {...args}
           label={
-            <Stack alignItems="center" direction="row" flex={1} gap={1}>
-              <Text as="span" variant="bodyStrong">
-                Redundancy
-              </Text>
-              <Badge sentiment="primary" size="small">
-                Recommended
-              </Badge>
-            </Stack>
+            <Text as="span" variant="bodyStrong">
+              Redundancy
+            </Text>
           }
+          labelDescription={
+            <Badge sentiment="primary" size="small">
+              Recommended
+            </Badge>
+          }
+          labelDescriptionAlignment="left"
           name="label-23"
           value="label-23"
         >
@@ -120,15 +122,16 @@ export const Examples: StoryFn = args => {
 
         <SelectableCardGroup.Card
           label={
-            <Stack alignItems="center" direction="row" flex={1} gap={1}>
-              <Text as="span" variant="bodyStrong">
-                Morning Reboot 9am
-              </Text>
-              <Badge sentiment="neutral" size="small">
-                Optional
-              </Badge>
-            </Stack>
+            <Text as="span" variant="bodyStrong">
+              Morning Reboot 9am
+            </Text>
           }
+          labelDescription={
+            <Badge sentiment="neutral" size="small">
+              Optional
+            </Badge>
+          }
+          labelDescriptionAlignment="left"
           name="label-24"
           value="label-24"
         >
@@ -139,15 +142,16 @@ export const Examples: StoryFn = args => {
 
         <SelectableCardGroup.Card
           label={
-            <Stack alignItems="center" direction="row" flex={1} gap={1}>
-              <Text as="span" variant="bodyStrong">
-                Monitoring
-              </Text>
-              <Badge sentiment="neutral" size="small">
-                Optional
-              </Badge>
-            </Stack>
+            <Text as="span" variant="bodyStrong">
+              Monitoring
+            </Text>
           }
+          labelDescription={
+            <Badge sentiment="neutral" size="small">
+              Optional
+            </Badge>
+          }
+          labelDescriptionAlignment="left"
           name="label-25"
           value="label-25"
         >
@@ -164,18 +168,18 @@ export const Examples: StoryFn = args => {
         legend="Choose country"
         name="label-23"
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-          const data = [...value4]
+          const data = [...country]
           if (data.includes(event.currentTarget.value)) {
             data.splice(data.indexOf(event.currentTarget?.value), 1)
           } else {
             data.push(event.currentTarget.value)
           }
-          onChange4(data)
+          setCountry(data)
           console.log(data)
         }}
         showTick
         type="checkbox"
-        value={value4}
+        value={country}
       >
         <SelectableCardGroup.Card
           label={
