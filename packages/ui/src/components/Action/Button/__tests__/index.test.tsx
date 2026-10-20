@@ -350,6 +350,18 @@ describe('button', () => {
 
         expect(ref).toHaveBeenCalled()
       })
+
+      it('forwards onClick to render function elements', async () => {
+        const onClick = vi.fn()
+        renderWithTheme(
+          <Button onClick={onClick} render={props => <MockNextLink {...props} data-testid="button" href="/about" />}>
+            About
+          </Button>,
+        )
+
+        await userEvent.click(screen.getByTestId('button'))
+        expect(onClick).toHaveBeenCalledOnce()
+      })
     })
   })
 })
