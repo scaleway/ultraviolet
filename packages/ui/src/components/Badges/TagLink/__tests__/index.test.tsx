@@ -2,6 +2,8 @@ import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ProfileIcon } from '@ultraviolet/icons'
 import { renderWithTheme } from '@utils/test'
+import { forwardRef } from 'react'
+import type { AnchorHTMLAttributes } from 'react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { TagLink } from '..'
 import { SENTIMENTS } from '../styles.css'
@@ -70,5 +72,20 @@ describe('tagLink', () => {
     expect(writeTextMock).toHaveBeenCalledExactlyOnceWith('link')
 
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders a custom link with renderLink', () => {
+    const CustomLink = forwardRef<HTMLAnchorElement, AnchorHTMLAttributes<HTMLAnchorElement>>(
+      ({ href, children, ...props }, ref) => (
+        <a href={href} ref={ref} {...props}>
+          {children}
+        </a>
+      ),
+    )
+    CustomLink.displayName = 'CustomLink'
+
+    renderWithTheme(<TagLink prefixText="label" link="link" renderLink={<CustomLink href="/about" />} />)
+
+    expect(screen.getByRole('link', { name: 'link' })).toHaveAttribute('href', '/about')
   })
 })

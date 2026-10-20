@@ -1,7 +1,9 @@
 'use client'
 
+import type { XOR } from '@scaleway/types'
 import { CloseIcon } from '@ultraviolet/icons'
 import { cn } from '@ultraviolet/utils'
+import type { RenderProp } from '@ultraviolet/utils'
 import type { ComponentProps, ReactNode } from 'react'
 import { Button } from '../../Action/Button'
 import { CopyButton } from '../../Action/CopyButton'
@@ -17,7 +19,6 @@ type TagLinkProps = {
   link: string
   prefixText: string
   prefixIcon?: ReactNode
-  href: string
   sentiment?: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'neutral'
   /** Set loading state with loading text to display next to the loader */
   loading?: string
@@ -25,7 +26,31 @@ type TagLinkProps = {
   ComponentProps<typeof Tag>,
   'className' | 'copiable' | 'data-testid' | 'onClose' | 'style' | 'variant' | 'isLoading'
 > &
-  Pick<ComponentProps<typeof CopyButton>, 'copiedText' | 'copyText' | 'onCopy'>
+  Pick<ComponentProps<typeof CopyButton>, 'copiedText' | 'copyText' | 'onCopy'> &
+  XOR<
+    [
+      {
+        href: string
+      },
+      {
+        /**
+         * Custom element or render function to use instead of the default anchor, e.g. to enable client-side
+         * navigation with a routing component. The element carries its own `href`.
+         *
+         * Element form (props auto-merged):
+         * ```tsx
+         * <TagLink renderLink={<NextLink href="/id" />}>id</TagLink>
+         * ```
+         *
+         * Function form (you control prop merging):
+         * ```tsx
+         * <TagLink renderLink={(props) => <NextLink {...props} href="/id" />}>id</TagLink>
+         * ```
+         */
+        renderLink: RenderProp
+      },
+    ]
+  >
 
 export const TagLink = ({
   link,
@@ -33,6 +58,7 @@ export const TagLink = ({
   prefixIcon,
   className,
   href,
+  renderLink,
   copiable = false,
   'data-testid': dataTestid,
   onClose,
@@ -75,7 +101,12 @@ export const TagLink = ({
         alignItems="center"
         justifyContent="center"
       >
-        <Link href={href} size="xsmall" sentiment={sentiment} className={tagLinkStyle.link[variant]}>
+        <Link
+          {...(renderLink ? { render: renderLink } : { href })}
+          size="xsmall"
+          sentiment={sentiment}
+          className={tagLinkStyle.link[variant]}
+        >
           {link}
         </Link>
         {copiable ? (
