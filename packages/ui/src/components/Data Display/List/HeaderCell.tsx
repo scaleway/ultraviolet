@@ -33,12 +33,9 @@ export const HeaderCell = ({
   minWidth,
   maxWidth,
 }: HeaderCellProps) => {
-  let order: undefined | 'ascending' | 'descending'
-  if (isOrdered && orderDirection === 'asc') {
-    order = 'ascending'
-  } else if (isOrdered && orderDirection === 'desc') {
-    order = 'descending'
-  }
+  const order = isOrdered
+    ? ({ asc: 'ascending', desc: 'descending', none: undefined } as const)[orderDirection ?? 'none']
+    : undefined
 
   const handleOrder = onOrder ? () => onOrder(order === 'ascending' ? 'desc' : 'asc') : undefined
 

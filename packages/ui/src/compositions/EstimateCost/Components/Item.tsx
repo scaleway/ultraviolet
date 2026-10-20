@@ -181,15 +181,13 @@ export const Item = memo(
   }: ItemProps) => {
     const { locales } = useEstimateCost()
 
-    let iteration: Iteration | undefined
+    let iteration: Iteration | undefined = receivedIteration
 
     if (noIteration) {
       iteration = {
         ...(receivedIteration ?? { value: 0 }),
         unit: 'hours',
       }
-    } else {
-      iteration = receivedIteration
     }
 
     const price = useMemo(() => {

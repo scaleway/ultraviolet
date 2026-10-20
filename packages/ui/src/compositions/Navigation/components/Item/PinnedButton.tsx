@@ -43,12 +43,7 @@ export const ItemPinnedButton = ({
             if (pinnedItems.length < pinLimit || isItemPinned) {
               event.preventDefault()
               event.stopPropagation() // This is to avoid click spread to the parent and change the routing
-              let newValue: string[] | undefined
-              if (isItemPinned) {
-                newValue = unpinItem(id)
-              } else {
-                newValue = pinItem(id)
-              }
+              const newValue = isItemPinned ? unpinItem(id) : pinItem(id)
 
               onClickPinUnpin?.({
                 id,
