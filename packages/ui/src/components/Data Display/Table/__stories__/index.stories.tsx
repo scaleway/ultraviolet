@@ -7,10 +7,10 @@ export default {
   subcomponents: { 'Table.Row': Table.Row, 'Table.Cell': Table.Cell },
   parameters: {
     a11yStatus: {
-      perceivable: undefined,
-      operable: undefined,
-      understandable: undefined,
-      robust: undefined,
+      perceivable: false,
+      operable: false,
+      understandable: true,
+      robust: false,
     },
   },
 } as Meta

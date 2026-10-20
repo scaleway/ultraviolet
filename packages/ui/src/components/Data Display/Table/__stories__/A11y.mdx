@@ -1,0 +1,71 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Display/Table/A11y" />
+
+# Table - Accessibility
+
+## Description
+
+A data table component used to display tabular data. Supports sortable columns (with `aria-sort`), row selection (select-all checkbox and shift-click range selection), expandable rows (via a dedicated button or click-to-expand), a loading skeleton state, and a `SelectBar` summarizing the selected rows.
+
+## Summary
+
+1. ⚠️ **Perceivable**: header/data-cell relationships are not fully programmatically determinable (missing `scope` on `<th>`); the `<table>` has no accessible name.
+2. ❌ **Operable**: expandable rows in click-to-expand mode are exposed as buttons but are not focusable nor keyboard operable; sortable headers are keyboard accessible.
+3. ✅ **Understandable**: labels and sorting state are provided to assistive technology (labels exist, though they are not descriptive).
+4. ❌ **Robust**: space-separated fallback roles (`role="button columnheader"`, `role="button row"`) override native table semantics, `aria-sort` may be dropped, and the expand toggle does not expose `aria-expanded`.
+
+## ARIA Pattern
+
+- [ARIA Table Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/table/)
+- [Sortable Table Example](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/)
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Header cells are rendered as `<th>` but without a `scope` attribute, so the header/data-cell association is not reliably programmatically determinable across assistive technologies.
+- ✅ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Sort state is conveyed with an icon and `aria-sort`, not by color alone.
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - `Cell` forwards `colSpan`/`rowSpan` to the native `<td>`, so spanning is programmatically determined by the browser (no `aria-colspan`/`aria-rowspan` needed for native HTML tables).
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Sortable header cells are focusable (`tabIndex={0}`) and activatable with Enter/Space via `onKeyDown`.
+- ❌ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Click-to-expand rows are exposed with `role="button"` but have no focus, no `onClick`/`onKeyDown`, and cannot be operated from the keyboard.
+- ✅ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - Checkboxes and expand buttons precede row content, preserving a logical tab order.
+- ⚠️ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - Sortable header cells rely on the browser default outline; provide an explicit `:focus-visible` indicator that also encompasses the sort icon.
+- ✅ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - Row and select-all checkboxes have accessible names.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - Space-separated fallback roles replace native table semantics, `aria-expanded` is missing on expand toggles, the table has no accessible name, and checkbox accessible names are generic.
+
+To apply when using the component:
+
+- [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - When using `Cell` `sentiment` backgrounds, ensure the text inside the cell keeps sufficient contrast.
+- [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Ensure the sort/info icons and checkbox indicators meet the 3:1 contrast requirement.
+- [WCAG 2.4.6 - Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html) - Provide meaningful, distinct column labels via the `label` prop; they become the accessible names of the header cells.
+- [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Interactive widgets placed inside cells (see the `Input` story) must keep their own accessible names.
+
+## Accessibility issues
+
+**Critical:**
+
+- Click-to-expand rows are not operable: when `expandable` is set on a `Table.Row` and `expandable` (on `Table`) is not enabled, the `<tr>` receives `role="button row"` but has no `tabIndex`, no click handler, and no keyboard handler. The row is announced as a button yet cannot receive focus or be activated, blocking screen reader and keyboard users from expanding rows. Role and behavior should depend on the same prop.
+
+**High:**
+
+- `role="button columnheader"`: space-separated role values form a fallback list, not compound roles. In browsers that support the `button` role, the cell loses its `columnheader` semantics and `aria-sort` (only valid on `columnheader`/`rowheader`) is dropped. Follow the APG sortable table pattern: keep the `<th>` with `aria-sort` and put a native `<button>` inside it for activation.
+- Missing `aria-expanded`/`aria-controls` on expand toggles: the expand `Button` keeps a static `accessibleLabel="expand"` and exposes no expanded/collapsed state, so assistive technology cannot determine whether the row content is open (WCAG 4.1.2).
+- Header cells lack `scope="col"`, leaving header/data-cell relationships ambiguous for some assistive technologies (WCAG 1.3.1). Add `scope="col"` to the `<th>`.
+
+**Medium:**
+
+- The `<table>` has no accessible name: the component offers no `aria-label`/`aria-labelledby`/`<caption>` prop, so the table cannot be named by consumers. Per the ARIA Table pattern, allow labelling the table.
+- Generic checkbox accessible names: every row checkbox shares `aria-label="select"` and the header checkbox is `aria-label="select all"`. These do not identify the row or the table. Use descriptive, localizable names such as "Select row id" and "Select all rows" (WCAG 4.1.2 / 3.3.2 / 2.4.6). Consider adding a prop for localized and custom naming.
+- Loading state is not announced: when `loading` is true, the body is replaced by skeleton rows with no `aria-busy` on the table, so assistive technology users receive no indication that data is loading or that the previously announced content was replaced (WCAG 1.3.1 / 4.1.2). Set `aria-busy` during loading.
+- `aria-selected` on `role="row"` is only supported for rows within a `grid`; on a plain table row it may be ignored. Selection is already conveyed by the checkbox — keep `aria-selected` only if the table is exposed as a grid, otherwise remove it.
+
+**Low:**
+
+- The empty header cell for the expand-button column is announced as an empty column header; hide it with `aria-hidden` or give it a visually hidden label.
+- Shift-click range selection relies on `mousemove` events and is mouse-only. Acceptable as a pointer enhancement since each checkbox remains individually keyboard operable, but consider announcing the range to screen reader users.
+
+## Dependencies
+
+- `Checkbox` - Its SVG exposes a `<title>{name}</title>` (the form name, e.g. "table-select-checkbox") to assistive technology; tracked in the Checkbox audit.
+- `Tooltip` - Used for header `info` icons and around the row checkbox; its focus/announcement behavior is tracked in the Tooltip audit.
