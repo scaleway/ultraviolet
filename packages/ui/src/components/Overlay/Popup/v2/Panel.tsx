@@ -1,8 +1,15 @@
 'use client'
-import { FloatingArrow, FloatingFocusManager, FloatingPortal, arrow as arrowMiddleware, size } from '@floating-ui/react'
+import {
+  FloatingArrow,
+  FloatingFocusManager,
+  FloatingPortal,
+  arrow as arrowMiddleware,
+  size,
+  useMergeRefs,
+} from '@floating-ui/react'
 import type { Middleware, Placement } from '@floating-ui/react'
 import { cn } from '@ultraviolet/utils'
-import { useId, useLayoutEffect, useRef } from 'react'
+import { forwardRef, useId, useLayoutEffect, useRef } from 'react'
 import type { CSSProperties, ReactNode, RefObject } from 'react'
 import { VisuallyHidden } from '../../../Other/VisuallyHidden'
 import { usePopupContext } from './context'
@@ -74,110 +81,121 @@ type PopupPanelProps = {
  * Popup content container: portals, positions and manages focus, and applies
  * the role and ARIA attributes.
  */
-export const Panel = ({
-  children,
-  role = 'dialog',
-  placement = 'bottom-start',
-  portalTarget = typeof window === 'undefined' ? null : document.body,
-  matchTriggerWidth = false,
-  arrow = false,
-  focusTrap = false,
-  initialFocus,
-  returnFocus = true,
-  id,
-  'aria-labelledby': ariaLabelledby,
-  accessibleLabel,
-  className,
-  style,
-  'data-testid': dataTestId,
-}: PopupPanelProps) => {
-  const {
-    context,
-    floatingStyles,
-    getFloatingProps,
-    id: contextId,
-    isMounted,
-    placement: resolvedPlacement,
-    refs,
-    setPanelMiddleware,
-    setPlacement,
-    setRole,
-    status,
-  } = usePopupContext()
+export const Panel = forwardRef<HTMLDivElement, PopupPanelProps>(
+  (
+    {
+      children,
+      role = 'dialog',
+      placement = 'bottom-start',
+      portalTarget = typeof window === 'undefined' ? null : document.body,
+      matchTriggerWidth = false,
+      arrow = false,
+      focusTrap = false,
+      initialFocus,
+      returnFocus = true,
+      id,
+      'aria-labelledby': ariaLabelledby,
+      accessibleLabel,
+      className,
+      style,
+      'data-testid': dataTestId,
+    },
+    forwardedRef,
+  ) => {
+    const {
+      context,
+      floatingStyles,
+      getFloatingProps,
+      id: contextId,
+      isMounted,
+      placement: resolvedPlacement,
+      refs,
+      setPanelMiddleware,
+      setPlacement,
+      setRole,
+      status,
+    } = usePopupContext()
 
-  const arrowRef = useRef<SVGSVGElement>(null)
-  const panelId = id ?? contextId
-  const labelId = useId()
+    const arrowRef = useRef<SVGSVGElement>(null)
+    const panelRef = useMergeRefs([refs.setFloating, forwardedRef])
+    const panelId = id ?? contextId
+    const labelId = useId()
 
-  useLayoutEffect(() => {
-    setPlacement(placement)
-  }, [placement, setPlacement])
+    useLayoutEffect(() => {
+      setPlacement(placement)
+    }, [placement, setPlacement])
 
-  useLayoutEffect(() => {
-    setRole(role)
-  }, [role, setRole])
+    useLayoutEffect(() => {
+      setRole(role)
+    }, [role, setRole])
 
-  useLayoutEffect(() => {
-    const middleware: Middleware[] = []
-    if (matchTriggerWidth) {
-      middleware.push(
-        size({
-          apply: ({ rects, elements }) => {
-            Object.assign(elements.floating.style, {
-              minWidth: `${rects.reference.width}px`,
-            })
-          },
-        }),
-      )
+    useLayoutEffect(() => {
+      const middleware: Middleware[] = []
+      if (matchTriggerWidth) {
+        middleware.push(
+          size({
+            apply: ({ rects, elements }) => {
+              Object.assign(elements.floating.style, {
+                minWidth: `${rects.reference.width}px`,
+              })
+            },
+          }),
+        )
+      }
+      if (arrow) {
+        middleware.push(arrowMiddleware({ element: arrowRef, padding: 4 }))
+      }
+      setPanelMiddleware(middleware)
+    }, [matchTriggerWidth, arrow, arrowRef, setPanelMiddleware])
+
+    if (!isMounted) {
+      return null
     }
-    if (arrow) {
-      middleware.push(arrowMiddleware({ element: arrowRef, padding: 4 }))
-    }
-    setPanelMiddleware(middleware)
-  }, [matchTriggerWidth, arrow, arrowRef, setPanelMiddleware])
 
-  if (!isMounted) {
-    return null
-  }
+    const hasInitialFocus = initialFocus !== undefined
+    const manageFocus = focusTrap || returnFocus || hasInitialFocus
 
-  const hasInitialFocus = initialFocus !== undefined
-  const manageFocus = focusTrap || returnFocus || hasInitialFocus
-
-  const popupElement = (
-    <div
-      ref={el => refs.setFloating(el)}
-      {...getFloatingProps()}
-      data-placement={resolvedPlacement}
-      data-testid={dataTestId}
-      id={panelId}
-      role={role}
-      aria-labelledby={ariaLabelledby ?? (accessibleLabel ? labelId : undefined)}
-      className={cn(
-        popupV2Style.panel,
-        status === 'open' || status === 'close' ? popupV2Style.animation[status] : null,
-        className,
-      )}
-      style={{ ...floatingStyles, ...style }}
-    >
-      {arrow ? <FloatingArrow ref={arrowRef} context={context} tipRadius={2} className={popupV2Style.arrow} /> : null}
-      <div className={popupV2Style.content}>
-        {accessibleLabel ? <VisuallyHidden id={labelId}>{accessibleLabel}</VisuallyHidden> : null}
-        {children}
+    const popupElement = (
+      <div
+        ref={panelRef}
+        {...getFloatingProps()}
+        data-placement={resolvedPlacement}
+        data-testid={dataTestId}
+        id={panelId}
+        role={role}
+        aria-labelledby={ariaLabelledby ?? (accessibleLabel ? labelId : undefined)}
+        className={cn(
+          popupV2Style.panel,
+          status === 'open' || status === 'close' ? popupV2Style.animation[status] : null,
+          className,
+        )}
+        style={{ ...floatingStyles, ...style }}
+      >
+        {arrow ? <FloatingArrow ref={arrowRef} context={context} tipRadius={2} className={popupV2Style.arrow} /> : null}
+        <div className={popupV2Style.content}>
+          {accessibleLabel ? <VisuallyHidden id={labelId}>{accessibleLabel}</VisuallyHidden> : null}
+          {children}
+        </div>
       </div>
-    </div>
-  )
+    )
 
-  return (
-    <FloatingPortal root={portalTarget}>
-      {manageFocus ? (
-        <FloatingFocusManager context={context} initialFocus={initialFocus} modal={focusTrap} returnFocus={returnFocus}>
-          {popupElement}
-        </FloatingFocusManager>
-      ) : (
-        popupElement
-      )}
-    </FloatingPortal>
-  )
-}
+    return (
+      <FloatingPortal root={portalTarget}>
+        {manageFocus ? (
+          <FloatingFocusManager
+            context={context}
+            initialFocus={initialFocus}
+            modal={focusTrap}
+            returnFocus={returnFocus}
+          >
+            {popupElement}
+          </FloatingFocusManager>
+        ) : (
+          popupElement
+        )}
+      </FloatingPortal>
+    )
+  },
+)
 
 Panel.displayName = 'Popup.Panel'
