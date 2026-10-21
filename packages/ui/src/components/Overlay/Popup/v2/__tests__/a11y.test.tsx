@@ -14,6 +14,11 @@ HTMLElement.prototype.focus = function focus(this: HTMLElement, options?: FocusO
   return originalFocus.call(this, { ...options, preventScroll: options?.preventScroll })
 }
 
+// Floating UI focuses through a rAF-deferred queue. On loaded CI runners the
+// webkit instance can take well over the 1s waitFor default to reach the
+// settled focus, so focus assertions wait for up to 5s instead.
+const FOCUS_WAIT_TIMEOUT = 5_000
+
 const renderPopup = (
   {
     rootProps = {},
@@ -134,7 +139,9 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
 
       await userEvent.keyboard('{Escape}')
       await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
-      await waitFor(() => expect(trigger).toHaveFocus())
+      // Focus returns through the same deferred path as the initial focus:
+      // allow for slow frames on loaded CI runners (webkit especially).
+      await waitFor(() => expect(trigger).toHaveFocus(), { timeout: FOCUS_WAIT_TIMEOUT })
     })
 
     it('should close after an outside click and return focus to the trigger', async () => {
@@ -146,7 +153,9 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
 
       await userEvent.click(document.body)
       await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
-      await waitFor(() => expect(trigger).toHaveFocus())
+      // Focus returns through the same deferred path as the initial focus:
+      // allow for slow frames on loaded CI runners (webkit especially).
+      await waitFor(() => expect(trigger).toHaveFocus(), { timeout: FOCUS_WAIT_TIMEOUT })
     })
   })
 
@@ -168,65 +177,29 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
   })
 
   describe('focus management', () => {
-    it('should move focus to the first focusable element by default', { timeout: 30_000 }, async () => {
-      const describeEl = (el: Element | null): string =>
-        el === document.body || el === null
-          ? 'body'
-          : `${el.tagName}:"${(el.textContent ?? '').slice(0, 12)}"${el.isConnected ? '' : ' DETACHED'}`
+    it('should move focus to the first focusable element by default', async () => {
+      renderWithTheme(
+        <Popup.Root>
+          <Popup.Trigger>
+            <button type="button">Open</button>
+          </Popup.Trigger>
 
-      // TEMP-DEBUG(webkit-ci): trace every focus() call during this test.
-      const focusTrace: string[] = []
-      const baseFocus = Reflect.get(HTMLElement.prototype, 'focus') as (options?: FocusOptions) => void
-      HTMLElement.prototype.focus = function focus(this: HTMLElement, options?: FocusOptions) {
-        focusTrace.push(`focus() → ${describeEl(this)}`)
-        return baseFocus.call(this, { ...options, preventScroll: options?.preventScroll })
-      }
+          <Popup.Panel>
+            <button type="button">First</button>
+          </Popup.Panel>
+        </Popup.Root>,
+      )
 
-      try {
-        renderWithTheme(
-          <Popup.Root>
-            <Popup.Trigger>
-              <button type="button">Open</button>
-            </Popup.Trigger>
+      const trigger = screen.getByRole('button', { name: 'Open' })
+      await userEvent.click(trigger)
 
-            <Popup.Panel>
-              <button type="button">First</button>
-            </Popup.Panel>
-          </Popup.Root>,
-        )
-
-        const trigger = screen.getByRole('button', { name: 'Open' })
-        await userEvent.click(trigger)
-
-        try {
-          await waitFor(() => expect(screen.getByRole('button', { name: 'First' })).toHaveFocus(), {
-            timeout: 4000,
-          })
-        } catch {
-          const timeline: string[] = [`poll start: ${describeEl(document.activeElement)}`]
-          for (let i = 0; i < 12; i += 1) {
-            await new Promise(r => {
-              setTimeout(r, 250)
-            })
-            timeline.push(`+${(i + 1) * 250}ms: ${describeEl(document.activeElement)}`)
-          }
-          let rafFired = false
-          requestAnimationFrame(() => {
-            rafFired = true
-          })
-          await new Promise(r => {
-            setTimeout(r, 500)
-          })
-          const diagnostics = [
-            `focus() trace:\n${focusTrace.join('\n')}`,
-            `activeElement timeline:\n${timeline.join('\n')}`,
-            `rAF fired in 500ms: ${rafFired}, hasFocus: ${document.hasFocus()}, visibility: ${document.visibilityState}`,
-          ]
-          throw new Error(`TEMP-DEBUG(webkit-ci) focus diagnostics:\n${diagnostics.join('\n\n')}`)
-        }
-      } finally {
-        HTMLElement.prototype.focus = baseFocus
-      }
+      // Floating UI lands the initial focus on the next animation frame.
+      // WebKit on a loaded CI runner can take over a second to reach it, so
+      // the assertion needs more headroom than the 1s default to observe the
+      // settled state instead of the transient one.
+      await waitFor(() => expect(screen.getByRole('button', { name: 'First' })).toHaveFocus(), {
+        timeout: FOCUS_WAIT_TIMEOUT,
+      })
     })
 
     it('should move focus to the initialFocus element when specified', async () => {
@@ -252,7 +225,9 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
 
       await userEvent.click(screen.getByRole('button', { name: 'Open' }))
 
-      await waitFor(() => expect(screen.getByRole('button', { name: 'Second' })).toHaveFocus())
+      await waitFor(() => expect(screen.getByRole('button', { name: 'Second' })).toHaveFocus(), {
+        timeout: FOCUS_WAIT_TIMEOUT,
+      })
     })
 
     it('should keep focus on the trigger when initialFocus is -1', async () => {
@@ -291,7 +266,9 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
 
       await userEvent.click(screen.getByRole('button', { name: 'Open' }))
 
-      await waitFor(() => expect(screen.getByRole('button', { name: 'Second' })).toHaveFocus())
+      await waitFor(() => expect(screen.getByRole('button', { name: 'Second' })).toHaveFocus(), {
+        timeout: FOCUS_WAIT_TIMEOUT,
+      })
     })
 
     it('should not move focus into the panel when returnFocus is false', async () => {
@@ -320,7 +297,9 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       const trigger = screen.getByRole('button', { name: 'Open' })
       await userEvent.click(trigger)
 
-      await waitFor(() => expect(screen.getByRole('dialog')).toHaveFocus())
+      await waitFor(() => expect(screen.getByRole('dialog')).toHaveFocus(), {
+        timeout: FOCUS_WAIT_TIMEOUT,
+      })
     })
   })
 
