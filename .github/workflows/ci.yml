@@ -117,7 +117,7 @@ jobs:
           runtime: node
       - uses: ./.github/actions/setup-playwright
         with:
-          install-args: chromium firefox
+          install-args: chromium firefox webkit
       - run: pnpm run test:browser
 
   deploy:

@@ -6,11 +6,19 @@ import type { AxeCore } from 'vitest-axe'
 
 /**
  * https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md
- * color-contrast-enhanced (AAA 7:1) is not enabled: the neutral.textWeak token used for
- * secondary text sits around 5.4:1 (WCAG AA compliant). Re-enable when the theme tokens pass AAA.
  */
 const rules: AxeCore.RuleObject = {
   'identical-links-same-purpose': {
+    enabled: true,
+  },
+
+  'color-contrast-enhanced': {
+    /*
+     * the neutral.textWeak token used for secondary text sits around 5.4:1 (WCAG AA compliant). Re-enable when the theme tokens pass AAA.
+     **/
+    enabled: false,
+  },
+  'meta-refresh-no-exceptions': {
     enabled: true,
   },
 } as const
