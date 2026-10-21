@@ -196,23 +196,65 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
   })
 
   describe('focus management', () => {
-    it('should move focus to the first focusable element by default', async () => {
-      renderWithTheme(
-        <Popup.Root>
-          <Popup.Trigger>
-            <button type="button">Open</button>
-          </Popup.Trigger>
+    it('should move focus to the first focusable element by default', { timeout: 30_000 }, async () => {
+      const describeEl = (el: Element | null): string =>
+        el === document.body || el === null
+          ? 'body'
+          : `${el.tagName}:"${(el.textContent ?? '').slice(0, 12)}"${el.isConnected ? '' : ' DETACHED'}`
 
-          <Popup.Panel>
-            <button type="button">First</button>
-          </Popup.Panel>
-        </Popup.Root>,
-      )
+      // TEMP-DEBUG(webkit-ci): trace every focus() call during this test.
+      const focusTrace: string[] = []
+      const baseFocus = Reflect.get(HTMLElement.prototype, 'focus') as (options?: FocusOptions) => void
+      HTMLElement.prototype.focus = function focus(this: HTMLElement, options?: FocusOptions) {
+        focusTrace.push(`focus() → ${describeEl(this)}`)
+        return baseFocus.call(this, { ...options, preventScroll: options?.preventScroll })
+      }
 
-      const trigger = screen.getByRole('button', { name: 'Open' })
-      await userEvent.click(trigger)
+      try {
+        renderWithTheme(
+          <Popup.Root>
+            <Popup.Trigger>
+              <button type="button">Open</button>
+            </Popup.Trigger>
 
-      await waitFor(() => expect(screen.getByRole('button', { name: 'First' })).toHaveFocus())
+            <Popup.Panel>
+              <button type="button">First</button>
+            </Popup.Panel>
+          </Popup.Root>,
+        )
+
+        const trigger = screen.getByRole('button', { name: 'Open' })
+        await userEvent.click(trigger)
+
+        try {
+          await waitFor(() => expect(screen.getByRole('button', { name: 'First' })).toHaveFocus(), {
+            timeout: 4000,
+          })
+        } catch {
+          const timeline: string[] = [`poll start: ${describeEl(document.activeElement)}`]
+          for (let i = 0; i < 12; i += 1) {
+            await new Promise(r => {
+              setTimeout(r, 250)
+            })
+            timeline.push(`+${(i + 1) * 250}ms: ${describeEl(document.activeElement)}`)
+          }
+          let rafFired = false
+          requestAnimationFrame(() => {
+            rafFired = true
+          })
+          await new Promise(r => {
+            setTimeout(r, 500)
+          })
+          const diagnostics = [
+            `focus() trace:\n${focusTrace.join('\n')}`,
+            `activeElement timeline:\n${timeline.join('\n')}`,
+            `rAF fired in 500ms: ${rafFired}, hasFocus: ${document.hasFocus()}, visibility: ${document.visibilityState}`,
+          ]
+          throw new Error(`TEMP-DEBUG(webkit-ci) focus diagnostics:\n${diagnostics.join('\n\n')}`)
+        }
+      } finally {
+        HTMLElement.prototype.focus = baseFocus
+      }
     })
 
     it('should move focus to the initialFocus element when specified', async () => {
