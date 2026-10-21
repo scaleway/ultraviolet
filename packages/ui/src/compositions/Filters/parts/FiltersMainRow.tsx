@@ -81,24 +81,26 @@ export const FiltersMainRow = <V extends AnyObject>({
         />
       ))}
 
-      <Stack direction="row" gap={2} alignItems="center">
-        {shouldDisplayDrawer ? (
-          <Button onClick={openDrawer} size={filterSize} variant="outlined">
-            <AdjustmentsHorizontalIcon aria-hidden="true" /> {labels.seeAll}
-            {filters.appliedFilters.length > 0 ? ` (${filters.appliedFilters.length})` : null}
-          </Button>
-        ) : null}
-        {layout?.hideClearAll ? null : (
-          <Button
-            onClick={handleReset}
-            size={filterSize}
-            variant="ghost"
-            disabled={filters.appliedFilters.length === 0}
-          >
-            {labels.clearAll}
-          </Button>
-        )}
-      </Stack>
+      {shouldDisplayDrawer || !layout?.hideClearAll ? (
+        <Stack direction="row" gap={2} alignItems="center">
+          {shouldDisplayDrawer ? (
+            <Button onClick={openDrawer} size={filterSize} variant="outlined">
+              <AdjustmentsHorizontalIcon aria-hidden="true" /> {labels.seeAll}
+              {filters.appliedFilters.length > 0 ? ` (${filters.appliedFilters.length})` : null}
+            </Button>
+          ) : null}
+          {layout?.hideClearAll ? null : (
+            <Button
+              onClick={handleReset}
+              size={filterSize}
+              variant="ghost"
+              disabled={filters.appliedFilters.length === 0}
+            >
+              {labels.clearAll}
+            </Button>
+          )}
+        </Stack>
+      ) : null}
     </Row>
   )
 }
