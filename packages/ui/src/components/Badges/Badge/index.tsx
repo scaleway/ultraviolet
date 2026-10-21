@@ -1,7 +1,6 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { useMemo } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
 import { Text } from '../../Typography/Text'
 import { TEXT_VARIANT } from './constant'
@@ -13,6 +12,7 @@ type BadgeProps = {
   sentiment?: 'danger' | 'info' | 'success' | 'warning' | 'neutral' | 'black' | 'white' | 'primary' | 'secondary'
   size?: 'medium' | 'small' | 'large' | 'xsmall'
   className?: string
+  role?: 'status' | 'alert'
   children: ReactNode
   'data-testid'?: string
   style?: CSSProperties
@@ -29,30 +29,21 @@ export const Badge = ({
   className,
   children,
   'data-testid': dataTestId,
+  role,
   style,
-}: BadgeProps) => {
-  /**
-   * Badge should display an aria-label if the status is not neutral or primary
-   */
-  const ariaLabel = useMemo(
-    () => (['neutral', 'primary'].some(baseSentiment => baseSentiment === sentiment) ? undefined : sentiment),
-    [sentiment],
-  )
-
-  return (
-    <Text
-      aria-label={ariaLabel}
-      as="span"
-      className={cn(className, badgeStyle.badge({ disabled, prominence, sentiment, size }))}
-      data-testid={dataTestId}
-      prominence={disabled ? 'weak' : 'default'}
-      style={style}
-      variant={TEXT_VARIANT[size]}
-      whiteSpace="nowrap"
-    >
-      {children}
-    </Text>
-  )
-}
+}: BadgeProps) => (
+  <Text
+    as="span"
+    className={cn(className, badgeStyle.badge({ disabled, prominence, sentiment, size }))}
+    data-testid={dataTestId}
+    prominence={disabled ? 'weak' : 'default'}
+    role={role}
+    style={style}
+    variant={TEXT_VARIANT[size]}
+    whiteSpace="nowrap"
+  >
+    {children}
+  </Text>
+)
 
 Badge.displayName = 'Badge'
