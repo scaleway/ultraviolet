@@ -107,7 +107,7 @@
     "size": "size-limit",
     "test:unit": "LC_ALL=en_US.UTF-8 pnpm vitest --run ",
     "test:unit:coverage": "pnpm test:unit --coverage",
-    "test:browser": "LC_ALL=en_US.UTF-8 pnpm vitest --run --config vitest.browser.config.ts",
+    "test:browser": "pnpm vitest --run --config vitest.browser.config.ts",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "watch": "pnpm run '/^watch:.*/'",
