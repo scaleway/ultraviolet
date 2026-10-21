@@ -47,8 +47,6 @@ const arrow = style({
 })
 
 const content = style({
-  maxHeight: '100%',
-  overflow: 'auto',
   position: 'relative',
 })
 
