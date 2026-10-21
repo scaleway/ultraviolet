@@ -23,6 +23,8 @@ export const CardSelectableCard = ({
   label,
   style,
   'data-testid': dataTestId,
+  labelDescription,
+  labelDescriptionAlignment = 'right',
 }: CardSelectableCardProps) => {
   const context = useContext(SelectableCardGroupContext)
 
@@ -50,6 +52,8 @@ export const CardSelectableCard = ({
       tooltip={tooltip}
       type={type}
       value={value}
+      labelDescription={labelDescription}
+      labelDescriptionAlignment={labelDescriptionAlignment}
     >
       {children}
     </SelectableCard>

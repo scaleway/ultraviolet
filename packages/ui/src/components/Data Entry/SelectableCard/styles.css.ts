@@ -72,6 +72,7 @@ const labelContainerSelectableCardLabel = style({
     },
   },
 })
+const labelContainerSelectableCardLabelDescription = style({})
 const labelContainerSelectableCardNoLabel = style({})
 
 const div = style({
@@ -141,6 +142,7 @@ globalStyle(`${selectableElement} > label`, {
 export const selectableCardStyle = {
   container,
   labelContainerSelectableCardLabel,
+  labelContainerSelectableCardLabelDescription,
   labelContainerSelectableCardNoLabel,
   div,
   image,

@@ -34,6 +34,8 @@ export const SelectableCard = forwardRef(
       tooltip,
       id,
       label,
+      labelDescription,
+      labelDescriptionAlignment = 'right',
       'data-testid': dataTestId,
       productIcon,
       illustration,
@@ -88,6 +90,23 @@ export const SelectableCard = forwardRef(
 
     const isCheckboxOrToggle = type === 'checkbox' || type === 'toggle'
 
+    const inputsProps = {
+      'aria-label': ariaLabel,
+      checked,
+      'data-error': isError,
+      disabled,
+      id,
+      innerRef,
+      isError,
+      label,
+      name,
+      onBlur,
+      onChange,
+      onFocus,
+      type,
+      value,
+    }
+
     const content = (
       <Tooltip containerFullHeight={!!tooltip} text={tooltip}>
         <Stack
@@ -99,7 +118,12 @@ export const SelectableCard = forwardRef(
               image,
             }),
             label
-              ? selectableCardStyle.labelContainerSelectableCardLabel
+              ? cn(
+                  selectableCardStyle.labelContainerSelectableCardLabel,
+                  labelDescriptionAlignment === 'left'
+                    ? selectableCardStyle.labelContainerSelectableCardLabelDescription
+                    : '',
+                )
               : selectableCardStyle.labelContainerSelectableCardNoLabel,
           )}
           data-checked={checked}
@@ -125,22 +149,14 @@ export const SelectableCard = forwardRef(
           tabIndex={disabled ? undefined : 0}
         >
           <IllustrationContainer illustration={illustration} productIcon={productIcon}>
-            <MultiStateInput
-              aria-label={ariaLabel}
-              checked={checked}
-              data-error={isError}
-              disabled={disabled}
-              id={id}
-              innerRef={innerRef}
-              isError={isError}
-              label={label}
-              name={name}
-              onBlur={onBlur}
-              onChange={onChange}
-              onFocus={onFocus}
-              type={type}
-              value={value}
-            />
+            {labelDescription ? (
+              <Stack width="100%" direction="row" gap={1} alignItems="center">
+                <MultiStateInput {...inputsProps} />
+                {labelDescription}
+              </Stack>
+            ) : (
+              <MultiStateInput {...inputsProps} />
+            )}
 
             {children ? (
               <Stack

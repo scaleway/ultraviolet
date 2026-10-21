@@ -1,5 +1,21 @@
 # Change Log
 
+## 3.28.0
+
+### Minor Changes
+
+- [#7011](https://github.com/scaleway/ultraviolet/pull/7011) [`3085997`](https://github.com/scaleway/ultraviolet/commit/30859975796b96b9ca084fd9207a0daec8d987c5) Thanks [@jsulpis](https://github.com/jsulpis)! - `Popup`: create a new version of the general purpose popup component (internal) to build other components like `Popover` or `SelectInput`.
+
+### Patch Changes
+
+- [#7025](https://github.com/scaleway/ultraviolet/pull/7025) [`ccbecd0`](https://github.com/scaleway/ultraviolet/commit/ccbecd0ae97009befd06c354406f8a430b4a82ed) Thanks [@jsulpis](https://github.com/jsulpis)! - `Filters`: add `date` type to select a single date
+
+- [#7009](https://github.com/scaleway/ultraviolet/pull/7009) [`35611a9`](https://github.com/scaleway/ultraviolet/commit/35611a95afd190209ab54b2acf9c8e071e4a3cc7) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectableCard`: new prop `labelDescription` to add content on the same row as the label, and new prop `labelDescriptionAlignment="left"` to keep the `labelDescription` right next to the label (instead of pushed to the far right).
+
+- [#7027](https://github.com/scaleway/ultraviolet/pull/7027) [`d0bb644`](https://github.com/scaleway/ultraviolet/commit/d0bb6447c651f2afb2d1764a70d72d49a3d44275) Thanks [@lisalupi](https://github.com/lisalupi)! - `Filters`: replace empty strings by default values when empty
+
+- [#7039](https://github.com/scaleway/ultraviolet/pull/7039) [`424fbd7`](https://github.com/scaleway/ultraviolet/commit/424fbd77d01ab301905e66a964bad5be3d6c2087) Thanks [@jsulpis](https://github.com/jsulpis)! - `TagLink`: add a `renderLink` prop to render a custom element (e.g. a routing `Link`) instead of the default anchor.
+
 ## 3.27.0
 
 ### Minor Changes

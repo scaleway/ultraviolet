@@ -1,6 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, style } from '@vanilla-extract/css'
-import instanceWire from '../assets/instance-wire.svg'
+import instanceWire from './assets/instance-wire.svg'
 
 export const globalStyleStoryBook = style({
   color: theme.colors.neutral.text,
