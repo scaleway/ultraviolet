@@ -1,0 +1,58 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Feedback/Status/A11y" />
+
+# Status - Accessibility
+
+## Description
+
+A small colored circle that indicates the state of an element (e.g. `success`, `danger`, `in progress`). Supports 5 sentiments, an optional animated "ping" for temporary/in-progress states, an optional tooltip with additional information, and a notification mode that positions it on the top-right of its parent. Used for status indicators, notification badges, or live-state markers. **It is a companion indicator: it must not be used on its own** — it is always paired with a tooltip or adjacent text that explains the state it represents.
+
+## Summary
+
+1. ⚠️ **Perceivable**: The `warning` circle fails WCAG 1.4.11: only 1.59:1 contrast against a light background.
+2. ✅ **Operable**: the component is informational, not interactive. The tooltip is reachable by keyboard focus. The `animated` ping is not a WCAG 2.2.2 failure: it passes via the "essential" exception (the blink itself is what conveys the "in progress" state). However, the ping does not respect the user's `prefers-reduced-motion` preference (best practice, WCAG 2.3.3 AAA).
+3. ✅ **Understandable**: no language, consistency, or input-assistance concerns for a single indicator.
+4. ✅ **Robust**: since the status is never used on its own, it does not need its own role, accessible name, or live region: the companion text or tooltip carries the accessible meaning.
+
+## ARIA Pattern
+
+There is no dedicated [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/) pattern for a colored "status indicator". The closest relevant references are:
+
+- [Tooltip Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/) - the component wraps its trigger in a `Tooltip` when a `tooltip` text is provided, so the tooltip requirements apply.
+- The [`status` role](https://w3c.github.io/aria/#status) (a `polite` live region) from the WAI-ARIA specification — how a dynamically changing state ("in progress" -> "done") should be surfaced through the **companion text**. The status itself, being decorative and never used on its own, does not carry this role.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - When a `tooltip` is provided, the component links it to the status via `aria-describedby`, giving the status a text alternative. Because the status must not be used on its own, compliance also depends on the consumer pairing it with a tooltip or adjacent text (see "To apply").
+- ✅ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The sentiment (`danger`/`info`/`neutral`/`success`/`warning`) is conveyed solely by the circle's background color, so this criterion is only satisfied by correct usage: the status must not be used on its own and must be paired with adjacent text that conveys the state (see "To apply").
+- ❌ [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - The `warning` circle fall below the required 3:1 in light theme. All other sentiments pass on the light theme.
+- ✅ [WCAG 2.2.2 - Pause, Stop, Hide (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html) - The `animated` ping runs infinitely, starts automatically, and runs in parallel with other content with no pause/stop/hide mechanism. It does not fail because it falls under the "essential" exception: the blinking is the very indication of the "in progress" state (there is no separate text or static cue), in the same way a loading spinner is exempt. Note: although 2.2.2 passes, the animation does not respect `prefers-reduced-motion` (WCAG 2.3.3, AAA, best practice).
+- ⚠️ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The status exposes no role and no accessible name, which is correct here: it must not be used on its own, so the accompanying text or tooltip provides the accessible semantics and the status circle is a decorative accent. Caveat: when the companion is a tooltip, prefer `relation="label"` on the internal `Tooltip` so the tooltip text becomes the status's accessible name immediately instead of a delayed description.
+
+To apply when using the component:
+
+- [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - **Never use the status on its own.** Always pair it with a `tooltip` or an adjacent text label that explains the state. When it is purely decorative (e.g. a notification badge on an already-labelled icon button), hide it from assistive technologies instead of giving it a name.
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Ensure the sentiment is also conveyed by adjacent text (e.g. a label next to the status), so users who cannot distinguish colors can still understand the state.
+- [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - If the status's state changes dynamically (e.g. an animated "in progress" dot appears and later disappears), the state must be conveyed through the companion text: make that text a live region (`role="status"`), so screen readers announce the change without taking focus. The status itself does not need to be the live region since it is never used on its own.
+- [WCAG 2.5.8 - Target Size (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) - When a `tooltip` makes the 10px status focusable, it is far below the 24×24px minimum. Ensure there is no adjacent target within the 24px spacing circle, or pair it with a larger labelled control.
+
+## Accessibility issues
+
+**Medium:**
+
+- **`warning` sentiment fails non-text contrast on light themes (WCAG 1.4.11)** - The warning status is nearly invisible on light backgrounds for users with low vision. Requires a theme color adjustment to reach 3:1.
+
+- **No `prefers-reduced-motion` handling for the `animated` ping (WCAG 2.3.3, AAA)** - The infinite ping animation runs regardless of the user's reduced-motion preference (other components in the codebase, e.g. `Skeleton`, `Modal`, `Popup`, already handle this). Disable or slow the animation under `prefers-reduced-motion: reduce`.
+
+**Low:**
+
+- **Tooltip text is only exposed as a delayed description (WCAG 4.1.2)** - With a `tooltip`, the wrapper becomes focusable and the tooltip text is linked via `aria-describedby` once shown (on focus/hover). Since the status is decorative and never used alone, this is acceptable; using `relation="label"` on the internal `Tooltip` would expose the tooltip text as the accessible name immediately (enhancement).
+
+- **Focusable tooltip wrapper is only 10×10px (WCAG 2.5.8, AA)** - When a `tooltip` is set, the `TooltipChildren` wrapper is focusable (`tabIndex=0`) but only 10×10px, well below the 24×24px minimum target size. The compact dot is essential to the design, but verify there is enough spacing from adjacent targets, or pair the status with a larger labelled control.
+
+## Dependencies
+
+- **Tooltip**: The `Status` wraps its content in `Tooltip` (`packages/ui/src/components/Overlay/Tooltip`). The tooltip's own accessibility pattern (role, association, keyboard support) is handled by the Tooltip component; the issues above relate to how `Status` configures it (`relation` defaults to `description`, `tabIndex` defaults to `0`).
