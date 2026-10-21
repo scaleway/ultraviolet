@@ -80,18 +80,13 @@ export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }:
 
   const handleChange = (search: string) => {
     if (search.length > 0) {
-      let filteredOptions: DataType
-      if (Array.isArray(options)) {
-        filteredOptions = searchRegex([...options], escapeRegExp(search.toString()))
-      } else {
-        const grouped: Record<string, OptionType[]> = { ...options }
-        Object.keys(grouped).map((group: string) => {
-          grouped[group] = searchRegex(grouped[group], escapeRegExp(search.toString()))
+      const query = escapeRegExp(search)
+      const filteredOptions = Array.isArray(options)
+        ? searchRegex([...options], query)
+        : Object.fromEntries(
+            Object.entries(options).map(([group, groupOptions]) => [group, searchRegex(groupOptions, query)]),
+          )
 
-          return null
-        })
-        filteredOptions = grouped
-      }
       onSearch(filteredOptions)
     } else {
       onSearch(options)

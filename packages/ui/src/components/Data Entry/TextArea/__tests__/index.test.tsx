@@ -1,21 +1,16 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import type { Mock } from 'vitest'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { TextArea } from '..'
 
 describe('textArea', () => {
-  let spyGetComputedStyle: Mock
-
   beforeEach(() => {
     const original = window.getComputedStyle.bind(window)
-    spyGetComputedStyle = vi
-      .spyOn(window, 'getComputedStyle')
-      .mockImplementation(elt => Object.assign(original(elt), { lineHeight: '16px' }))
+    vi.spyOn(window, 'getComputedStyle').mockImplementation(elt => Object.assign(original(elt), { lineHeight: '16px' }))
   })
   afterEach(() => {
-    spyGetComputedStyle.mockRestore()
+    vi.restoreAllMocks()
   })
 
   it('should render correctly with basic props', () => {

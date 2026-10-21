@@ -81,15 +81,17 @@ const convertEntryToFile = (entry: FileSystemFileEntry): Promise<File> =>
 
 const readEntriesInDirectory = async (directory: FileSystemDirectoryEntry) => {
   const reader = directory.createReader()
-  const nestedEntries = []
+  const nestedEntries: FileSystemEntry[] = []
 
-  let results: FileSystemEntry[]
-  do {
-    results = await new Promise<FileSystemEntry[]>((resolve, reject) => {
+  while (true) {
+    const results = await new Promise<FileSystemEntry[]>((resolve, reject) => {
       reader.readEntries(resolve, reject)
     })
     nestedEntries.push(...results)
-  } while (results?.length > 0)
+    if (results.length === 0) {
+      break
+    }
+  }
 
   return nestedEntries
 }

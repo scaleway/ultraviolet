@@ -4,13 +4,18 @@ export const useDelayUnmount = (open?: boolean, delayTime?: number) => {
   const [shouldRender, setShouldRender] = useState(open)
 
   useEffect(() => {
-    let timeoutId: ReturnType<typeof setTimeout>
     if (open && !shouldRender) {
       setShouldRender(true)
-    } else if (!open && shouldRender) {
-      timeoutId = setTimeout(() => setShouldRender(false), delayTime)
+
+      return undefined
     }
-    return () => clearTimeout(timeoutId)
+    if (!open && shouldRender) {
+      const timeoutId = setTimeout(() => setShouldRender(false), delayTime)
+
+      return () => clearTimeout(timeoutId)
+    }
+
+    return undefined
   }, [open, delayTime, shouldRender])
 
   return shouldRender

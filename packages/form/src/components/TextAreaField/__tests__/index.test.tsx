@@ -1,20 +1,17 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import type { Mock } from 'vitest'
 import { TextAreaField } from '..'
 import { Submit } from '../..'
 import { mockFormErrors, renderWithForm } from '../../../__tests__/helpers'
 
 describe('textAreaField', () => {
-  let spyGetComputedStyle: Mock
-
   beforeEach(() => {
     const mockTextareaStyle = { lineHeight: '16px' } as CSSStyleDeclaration
-    spyGetComputedStyle = vi.spyOn(window, 'getComputedStyle').mockReturnValue(mockTextareaStyle)
+    vi.spyOn(globalThis, 'getComputedStyle').mockReturnValue(mockTextareaStyle)
   })
   afterEach(() => {
-    spyGetComputedStyle.mockRestore()
+    vi.restoreAllMocks()
   })
 
   it('should render correctly', () => {

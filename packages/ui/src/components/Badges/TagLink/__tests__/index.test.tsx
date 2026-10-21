@@ -8,14 +8,11 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { TagLink } from '..'
 import { SENTIMENTS } from '../styles.css'
 
-let writeTextMock: ReturnType<typeof vi.fn>
+let writeTextMock: ReturnType<typeof vi.fn> | undefined = undefined
 
 describe('tagLink', () => {
   beforeEach(() => {
     writeTextMock = vi.spyOn(navigator.clipboard, 'writeText').mockImplementation(async () => {
-      /* empty */
-    })
-    vi.spyOn(navigator.clipboard, 'writeText').mockImplementation(async () => {
       /* empty */
     })
   })
