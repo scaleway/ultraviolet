@@ -741,7 +741,7 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         name="test"
-        options={dataGrouped}
+        options={dataGroupedSmall}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         size="medium"
@@ -750,8 +750,10 @@ describe('selectInput', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
+    // Venus lives in the second group, so type-ahead must search every group, not only the first one
+    const venus = screen.getByRole('option', { name: /venus/iu })
     await userEvent.type(dropdown, 'v')
-    await userEvent.type(dropdown, 'a')
+    expect(venus).toHaveFocus()
   })
 
   it('renders with onChange', async () => {

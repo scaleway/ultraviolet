@@ -80,7 +80,7 @@ const handleKeyDown = (
         : option.value.toLocaleLowerCase().startsWith(currentSearch)
     const closestOption = Array.isArray(options)
       ? options.find(matchesSearch)
-      : Object.values(options)[0]?.find(matchesSearch)
+      : Object.values(options).flat().find(matchesSearch)
 
     setDefaultSearch(closestOption ? (closestOption.searchText ?? closestOption.value) : null)
   }
