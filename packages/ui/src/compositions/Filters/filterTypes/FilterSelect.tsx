@@ -16,6 +16,7 @@ export const FilterSelect = <V extends AnyObject>({
   onChange,
   values,
   size,
+  inDrawer,
 }: FilterSelectProps<V>) => {
   const configOptions = config.options
   const options = useMemo(
@@ -56,6 +57,7 @@ export const FilterSelect = <V extends AnyObject>({
       options={options}
       placeholder={config.placeholder}
       value={value}
+      dropdownAlign={inDrawer ? 'center' : 'start'}
     />
   )
 }

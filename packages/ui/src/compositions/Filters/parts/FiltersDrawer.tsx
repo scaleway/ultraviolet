@@ -102,6 +102,7 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
                           value={filters.values[subConfigItem.name]}
                           values={filters.values}
                           customComponents={components}
+                          inDrawer
                         />
                       ))}
                   </Stack>
@@ -115,6 +116,7 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
                     value={filters.values[configItem.name]}
                     values={filters.values}
                     customComponents={components}
+                    inDrawer
                   />
                 )}
               </ExpandableFilterGroup>

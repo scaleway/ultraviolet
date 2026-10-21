@@ -19,6 +19,7 @@ export const FilterMultiSelect = <V extends AnyObject>({
   onChange,
   values,
   size,
+  inDrawer,
 }: FilterMultiSelectProps<V>) => {
   const configOptions = config.options
   const options = useMemo(
@@ -70,6 +71,7 @@ export const FilterMultiSelect = <V extends AnyObject>({
       selectAll={config.selectAll}
       selectAllGroup={config.selectAllGroup}
       value={value}
+      dropdownAlign={inDrawer ? 'center' : 'start'}
     />
   )
 }

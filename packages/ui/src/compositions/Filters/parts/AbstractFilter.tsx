@@ -36,6 +36,7 @@ export const AbstractFilter = ({
   values,
   customComponents = defaultCustomComponents,
   size,
+  inDrawer = false,
 }: AbstractFilterProps) => {
   const shouldHideLabel = directionContext === 'column' && hideLabel
   const availableComponents = { ...defaultFieldComponents, ...customComponents }
@@ -55,6 +56,7 @@ export const AbstractFilter = ({
         hideLabel={shouldHideLabel}
         value={value as unknown}
         values={values}
+        inDrawer={inDrawer}
       />
     )
   }

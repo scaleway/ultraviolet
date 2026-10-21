@@ -146,4 +146,5 @@ export type FilterComponentProps<
   size: 'large' | 'medium'
   directionContext: 'column' | 'row'
   values: Values
+  inDrawer?: boolean
 }
