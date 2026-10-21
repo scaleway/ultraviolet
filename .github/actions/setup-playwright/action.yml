@@ -1,0 +1,34 @@
+name: Setup Playwright
+description: Cache and install Playwright browsers with their OS dependencies (requires project dependencies installed first, e.g. via pnpm/setup)
+inputs:
+  install-args:
+    description: Browser names and/or flags passed to `playwright install` (e.g. "chromium firefox" or "--only-shell")
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Compute Playwright cache key
+      id: cache-key
+      shell: bash
+      env:
+        INSTALL_ARGS: ${{ inputs.install-args }}
+      run: |
+        version=$(pnpm playwright --version | cut -d' ' -f2)
+        browsers=$(echo "$INSTALL_ARGS" | sed -e 's/^-*//' -e 's/ /-/g')
+        echo "key=${RUNNER_OS}-playwright-${version}-${browsers}" >> "$GITHUB_OUTPUT"
+    - name: Cache Playwright Browsers
+      id: playwright-cache
+      uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      with:
+        path: ~/.cache/ms-playwright
+        key: ${{ steps.cache-key.outputs.key }}
+    - name: Install Playwright OS Dependencies only
+      if: steps.playwright-cache.outputs.cache-hit == 'true'
+      shell: bash
+      run: pnpm playwright install-deps
+    - name: Install Playwright Browsers & OS Dependencies
+      if: steps.playwright-cache.outputs.cache-hit != 'true'
+      shell: bash
+      env:
+        INSTALL_ARGS: ${{ inputs.install-args }}
+      run: pnpm playwright install --with-deps $INSTALL_ARGS
