@@ -6,6 +6,7 @@ const customStack = style({
 })
 
 const cardWrapper = style({
+  color: theme.colors.neutral.text,
   height: '100%',
   padding: theme.space['3'],
 
