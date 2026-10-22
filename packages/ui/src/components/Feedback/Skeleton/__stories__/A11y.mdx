@@ -1,0 +1,60 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Feedback/Skeleton/A11y" />
+
+# Skeleton - Accessibility
+
+## Description
+
+A feedback component that displays animated placeholder shapes (blocks, lines, donut, list, slider, square) reflecting the dimensions of content that will load, to indicate that data is loading. It is purely visual and non-interactive, exposed to assistive technology through `aria-busy`, `aria-label`, and `aria-live="polite"` on its container.
+
+## Summary
+
+1. ⚠️ **Perceivable**: the loading state is not conveyed by color alone and the placeholder HTML is purely decorative, but it is not hidden from assistive technology: the `block`, `list` and `donut` variants expose empty `<ul>`/`<li>` list semantics that screen readers announce as noise.
+2. ✅ **Operable**: not an interactive widget, no keyboard interaction required. The infinite shine animation is an essential preload animation (WCAG 2.2.2 exception) and is already disabled under `prefers-reduced-motion: reduce`.
+3. ✅ **Understandable**: no language, consistency, or input-assistance concerns for a single loading placeholder.
+4. ⚠️ **Robust**: `aria-busy="true"` and `aria-live="polite"` are provided, but without an explicit `aria-label` the live region contains no text, so the loading/ready status is not reliably announced. The accessible name is provided via the deprecated `aria-label` prop instead of `accessibleLabel`.
+
+## ARIA Pattern
+
+There is no dedicated [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/) pattern for skeleton loaders. The relevant guidance is defined by the WAI-ARIA specification:
+
+- The skeleton placeholder HTML is **purely decorative** (non-text content) and should be implemented so that assistive technology ignores it, i.e. `aria-hidden="true"` on the whole placeholder container.
+- The loading state should be exposed on a **separate element "on the side"**, decoupled from the decorative shapes: a live region (`aria-live`/`role="status"`) containing a visually hidden status text, with the [`aria-busy` state](https://w3c.github.io/aria/#aria-busy) set on the region that will receive the loaded content and cleared when loading completes.
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - The placeholder shapes are decorative but not hidden from assistive technology: the `donut` SVG is exposed as an unnamed graphic and the `block`/`list`/`donut` variants expose empty list semantics. Decorative content must be implemented so it can be ignored by assistive technology (`aria-hidden="true"`).
+- ❌ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - The `block`, `list` and `donut` variants render `<ul>`/`<li>` elements whose empty items are exposed as "list with N items"/"listitem" in the accessibility tree, implying structure that conveys no real information. Hiding the decorative HTML with `aria-hidden` resolves this.
+- ✅ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The loading state is also conveyed programmatically via `aria-busy="true"`, so color alone is not the only indicator.
+- ✅ [WCAG 2.2.2 - Pause, Stop, Hide (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html) - The shine animation is an essential preload/loading indication (exception in the Understanding doc) and is disabled under `prefers-reduced-motion: reduce`.
+- ✅ [WCAG 2.3.1 - Three Flashes or Below Threshold (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html) - The shine animation sweeps a gradient once per second; it does not flash more than 3 times per second.
+- ⚠️ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - `aria-busy="true"` correctly exposes the busy state, and an accessible name can be provided, but only through the deprecated `aria-label` prop (see issues).
+- ⚠️ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - `aria-live="polite"` is present but mixed with the decorative shapes on the same element; without an `aria-label` the live region has no text to announce, so the loading status is not reliably surfaced. Move the status to a dedicated visually hidden `role="status"` element.
+
+To apply when using the component:
+
+- [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Ensure the skeleton shapes remain distinguishable from the background for users with low vision, without relying on the animated highlight alone.
+- [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - Prefer mounting the Skeleton on the region that will receive the loaded content and set `aria-busy="true"` there (clearing it once the content renders), rather than relying solely on the Skeleton's own live region, so the "loading complete" state is announced.
+
+## Accessibility issues
+
+**High:**
+
+- The decorative skeleton HTML should be `aria-hidden` as a whole - All the placeholder markup (the `<ul>`/`<li>` in `block`, `list` and `donut`, the `<svg>` in `donut`, and the plain `<div>` shapes) is purely decorative and conveys no information. It is currently exposed to assistive technology: screen readers announce empty "list, N items"/"listitem" and an unnamed graphic. Wrap the placeholder output in a container with `aria-hidden="true"` so it is completely ignored by assistive technology.
+
+- The busy/loading state must live on a separate element "on the side" - The loading status (`aria-busy`, `aria-live`/`role="status"`) should not be mixed with the decorative shapes. Move it to a dedicated status element (containing the loading text, and/or `aria-busy="true"`).
+
+**Medium:**
+
+- `aria-busy` should be on the loading region, not the placeholder - Per the [ARIA spec](https://w3c.github.io/aria/#aria-busy), `aria-busy` should be set on the element that will receive the loaded content and cleared once it renders, so assistive technologies wait and then announce the new content. Setting it on a standalone placeholder (that the consumer unmounts) does not convey the transition to loaded content. Document that consumers should set `aria-busy` on the content container (or provide a completion status) and treat the Skeleton as `aria-hidden`.
+
+- The `donut` SVG uses a hardcoded, non-descriptive `<title>` - `Donut.tsx` sets `<title>donut skeleton</title>` without `role="img"` and without localisation. The title does not describe what is loading and is not derived from the component's accessible name. Once the placeholder is `aria-hidden` (see High issues), this `<title>` becomes unnecessary and should be removed.
+
+**Low:**
+
+- `Line.tsx` picks a random width at render time (`randomSize()`) - This makes the rendered output non-deterministic, which can cause client/server hydration mismatches and flaky snapshot tests, and means the placeholder can not be reproduced reliably. Consider deriving the line width deterministically (e.g. from the index or `length`).
+
+- The `block`, `list` and `donut` variants use list semantics purely for layout - if the placeholders are hidden from assistive technology (see High issues), these `<ul>`/`<li>` elements no longer need to be lists; plain `<div>`s would be simpler and avoid misleading semantics entirely.
