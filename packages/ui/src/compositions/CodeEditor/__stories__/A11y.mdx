@@ -27,7 +27,6 @@ Enforced by the component:
 - ❌ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - The label is not programmatically associated with the editor: no `aria-labelledby`/`labelId` linking the label to the editor. The helper association via `aria-describedby` + helperId is correct.
 - ⚠️ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The disabled state is only conveyed by `aria-disabled` and color, the editor is not truly disabled (it remains focusable)
 - ❌ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - Gutter line numbers only reach a 1.63:1 contrast ratio (the rest of the text is fine)
-- ❌ [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - The focus indicator box-shadow is only 1.44:1 against a white background
 - ❌ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - The copy button is inaccessible by keyboard (see the keyboard trap below)
 - ❌ [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) - Once focus enters the editor, Tab is used to insert tabulation in the code and there is no key pairing to leave the editing state, so the focus is trapped
 - ⚠️ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - A focus indicator is shown but its contrast is too low (1.44:1, see 1.4.11)
@@ -47,6 +46,7 @@ To apply when using the component:
 **Critical:**
 
 - Keyboard trap (2.1.2): Tab is captured to insert tabulation inside the code, with no key pairing (e.g. `Ctrl/Cmd + Enter` or `Esc`) to leave the editing state. As a result, keyboard users cannot move focus to the copy button or beyond the editor (2.1.1).
+  Suggested fix: place a layer on top of the editor with a click/Enter event to focus in, then bind the `Esc` key to leave the editing state.
 
 **High:**
 
