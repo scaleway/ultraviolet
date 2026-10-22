@@ -13,7 +13,7 @@ A decorative component that displays content (icon or text) within a colored cir
 1. ❌ **Perceivable**: Text-to-background contrast ratios fall below 4.5:1 for several sentiment/prominence combinations
 2. ✅ **Operable**: Component is not interactive, no keyboard requirements
 3. ✅ **Understandable**: Content is readable when provided
-4. ❌ **Robust**: Uses generic `<div>` without semantic role support; lacks `aria-hidden` or `role='img'` props for proper assistive technology integration for icon-only bullets
+4. ✅ **Robust**: Supports `aria-hidden` to hide decorative content from assistive technology. A semantic `role` is intentionally not added: the component is decorative and non-interactive, and when conveying meaning the consumer provides an accessible name (`tooltipLabel`, `VisuallyHidden`, or adjacent text)
 
 ## ARIA Pattern
 
@@ -29,39 +29,52 @@ Enforced by the component:
   - darker theme, success sentiment, strong prominence: 4.47:1
   - darker theme, error sentiment, strong prominence: 3.86:1
   - darker theme, info sentiment, strong prominence: 3.84:1
-- ❌ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Uses generic `<div>` without semantic role; should support `role` or `aria-hidden` based on usage context
-- ⚠️ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - Component should support being marked as decorative (null alt) or provide text alternative when conveying meaning
+  - **Unresolved** (theme tokens — must be addressed in the theme, not the component).
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - The component supports `aria-hidden` to hide it from assistive technology when purely decorative.
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - The component supports being marked as decorative via the `aria-hidden` prop. When/If conveying meaning, a text alternative must be provided by the consumer.
 
 To apply when using the component:
 
 - [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Ensure sentiment (color) is not the only visual means of conveying information; provide text labels or icons with distinct shapes
 - [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - When the bullet conveys status/meaning, ensure equivalent text information is available (via tooltip, adjacent text, or semantic HTML)
 
-## Accessibility issues
+## Past accessibility issues
 
-**Critical:**
-
-- None - Component is decorative and non-interactive
+<details>
+  <summary>Accessibility issues</summary>
 
 **High:**
 
-- **Failing contrast ratios (WCAG 1.4.3)** - Multiple theme/sentiment/prominence combinations have text-to-background contrast below 4.5:1, making text difficult to read for users with low vision or contrast sensitivity loss. Requires theme color adjustments.
-- **Icon-only usage lacks accessible alternative when conveying meaning** - When used with only an icon to convey status/meaning (no text), screen readers have no way to understand the purpose. Must provide `aria-label` or ensure Tooltip contains descriptive text (or any other selected accessible solution. See [RFC on Icons](https://github.com/scaleway/ultraviolet/discussions/6585)).
-- When used to convey status or meaning (e.g., success/error state), the sentiment color alone is insufficient for users with color vision deficiencies. Ensure additional visual indicators or text labels are provided.
+- ❌ Failing contrast ratios (WCAG 1.4.3):
+  - Multiple theme/sentiment/prominence combinations have text-to-background contrast below 4.5:1, making text difficult to read for users with low vision or contrast sensitivity loss.
+  - **Unresolved** (theme tokens, see WCAG 1.4.3 above).
+- ✅ Icon-only usage lacks accessible alternative when conveying meaning:
+  - When used with only an icon to convey status/meaning (no text), screen readers have no way to understand the purpose. Must provide `aria-label` or ensure Tooltip contains descriptive text (or any other selected accessible solution. See [RFC on Icons](https://github.com/scaleway/ultraviolet/discussions/6585)).
+  - **Resolved** by supporting the `aria-hidden` prop to mark decorative bullets and documenting in the Icon story that informative bullets need an accessible name (`VisuallyHidden`, `tooltipLabel`, or icon `accessibleLabel`).
+- ⚠️ Sentiment color alone insufficient for users with color vision deficiencies:
+  - When used to convey status or meaning (e.g., success/error state), the sentiment color alone is insufficient. Ensure additional visual indicators or text labels are provided.
+  - **To apply when using the component** (consumer responsibility).
 
 **Medium:**
 
-- **Missing semantic HTML support (WCAG 1.3.1)** - Component uses generic `<div>` without props to control semantic role. Should support:
-  - `aria-hidden="true"` when purely decorative (e.g., visual bullet point in a list)
-  - `role="img"` with `aria-label` (or an other accessible name) when representing a status icon with meaning
-  - `role="status"` when announcing dynamic changes
-- No built-in mechanism to mark the component as purely decorative for screen readers. Developers must determine usage context:
-  - **Decorative**: Add `aria-hidden="true"` to hide from screen readers
-  - **Informative**: Ensure Tooltip or adjacent text provides the accessible name
+- ✅ Missing semantic HTML support (WCAG 1.3.1):
+  - Component uses generic `<div>` without props to control semantic role. Should support:
+    - `aria-hidden="true"` when purely decorative (e.g., visual bullet point in a list)
+    - `role="img"` with `aria-label` (or an other accessible name) when representing a status icon with meaning
+    - `role="status"` when announcing dynamic changes
+  - **Resolved** by supporting the `aria-hidden` prop (forwarded to the underlying `<div>`) for the decorative case. A `role` prop is intentionally not added: the component is decorative and non-interactive, and when conveying meaning the consumer provides an accessible name.
+- ✅ No built-in mechanism to mark the component as purely decorative for screen readers:
+  - Developers must determine usage context:
+    - **Decorative**: Add `aria-hidden="true"` to hide from screen readers
+    - **Informative**: Ensure Tooltip or adjacent text provides the accessible name
+  - **Resolved** via the new `aria-hidden` prop on the `Bullet`, documented in `Icon.stories.tsx`.
 
 **Low:**
 
-- Consider adding support for `aria-hidden` prop to explicitly control when the component should be ignored by assistive technology
+- ✅ Consider adding support for `aria-hidden` prop to explicitly control when the component should be ignored by assistive technology:
+  - **Resolved**: `aria-hidden` is now a supported prop on `Bullet`, forwarded to the underlying `<div>`.
+
+</details>
 
 ## Dependencies
 
