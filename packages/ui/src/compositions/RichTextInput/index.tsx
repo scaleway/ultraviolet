@@ -7,7 +7,7 @@ import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { EditorState } from 'prosemirror-state'
 import { useEffect, useId, useState } from 'react'
-import type { CSSProperties, DOMAttributes, ReactNode } from 'react'
+import type { CSSProperties, DOMAttributes, HTMLAttributes, ReactNode } from 'react'
 import { Stack } from '../../components/Layout/Stack'
 import { Description } from '../../components/Typography/Description'
 import { Label } from '../../components/Typography/Label'
@@ -19,8 +19,8 @@ import { docRegionMaxHeightVar, docRegionMinHeightVar, richTextInputStyle } from
 const RICH_TEXT_EDITOR_LINE_HEIGHT_EM = 1.5
 
 export type RichTextInputProps = {
-  'aria-label'?: string
-  'aria-describedby'?: string
+  'aria-label'?: HTMLAttributes<HTMLDivElement>['aria-label']
+  'aria-describedby'?: HTMLAttributes<HTMLDivElement>['aria-describedby']
   className?: string
   'data-testid'?: string
   disabled?: boolean

@@ -5,7 +5,7 @@ import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
-import type { ReactNode, RefObject } from 'react'
+import type { HTMLAttributes, ReactNode, RefObject } from 'react'
 import { hasHelperText } from '../../../../../helpers/hasHelperText'
 import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
@@ -35,8 +35,8 @@ type SelectBarProps = {
   tooltip?: string
   dropdownId?: string
   helperId: string
-  'aria-describedby'?: string
-  'aria-labelledby'?: string
+  'aria-describedby'?: HTMLAttributes<HTMLDivElement>['aria-describedby']
+  'aria-labelledby'?: HTMLAttributes<HTMLDivElement>['aria-labelledby']
   helper?: ReactNode
 }
 

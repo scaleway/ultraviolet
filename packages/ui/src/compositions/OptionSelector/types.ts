@@ -1,4 +1,4 @@
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, FieldsetHTMLAttributes, ReactNode } from 'react'
 import type { SelectInput } from '../../components/Data Entry/SelectInput'
 
 export type SelectorOption = {
@@ -39,7 +39,7 @@ export type OptionSelectorProps = {
   disabled?: boolean
   readOnly?: boolean
   name?: string
-  'aria-label'?: string
+  'aria-label'?: FieldsetHTMLAttributes<HTMLFieldSetElement>['aria-label']
   error?: string | boolean
   required?: boolean
   onChange?: (values: { first?: string; second?: string; changingValue: 'first' | 'second' }) => void

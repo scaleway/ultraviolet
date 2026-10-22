@@ -17,7 +17,7 @@ type ToggleProps = {
   size?: 'large' | 'small'
   labelPosition?: 'left' | 'right'
   label?: ReactNode
-  'aria-label'?: string
+  'aria-label'?: InputHTMLAttributes<HTMLInputElement>['aria-label']
   helper?: ReactNode
   className?: string
   error?: boolean | string

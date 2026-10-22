@@ -1,5 +1,5 @@
 import type { XOR } from '@scaleway/types'
-import type { ComponentProps, CSSProperties } from 'react'
+import type { ComponentProps, CSSProperties, InputHTMLAttributes } from 'react'
 import type { Button } from '../../Action/Button'
 import type { SelectInput } from '../SelectInput'
 import type { TextInput } from '../TextInput'
@@ -59,5 +59,5 @@ export type KeyValueInputProps = {
   onFocus?: (keyValues: KeyValuePair[], index?: number) => void
   style?: CSSProperties
   className?: string
-  'aria-describedby'?: string
+  'aria-describedby'?: InputHTMLAttributes<HTMLInputElement>['aria-describedby']
 }

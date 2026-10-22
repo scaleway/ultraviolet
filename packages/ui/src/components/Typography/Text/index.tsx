@@ -3,7 +3,7 @@
 import type { TextVariant } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, AriaRole, ElementType, ReactNode } from 'react'
+import type { AriaRole, CSSProperties, ElementType, HTMLAttributes, ReactNode } from 'react'
 import recursivelyGetChildrenString from '../../../helpers/recursivelyGetChildrenString'
 import { useIsOverflowing } from '../../../hooks/useIsOverflowing'
 import type { ExtendedColor } from '../../../theme'
@@ -32,7 +32,7 @@ type TextProps = {
   dir?: 'ltr' | 'rtl' | 'auto'
   htmlFor?: string
   'data-testid'?: string
-  'aria-hidden'?: boolean
+  'aria-hidden'?: HTMLAttributes<HTMLElement>['aria-hidden']
   strikeThrough?: boolean
   whiteSpace?: WhiteSpaceProps
   role?: Extract<AriaRole, 'status' | 'alert'>

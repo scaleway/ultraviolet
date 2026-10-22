@@ -37,9 +37,9 @@ type LinkProps = {
   // For react router shouldn't be used directly
   onClick?: MouseEventHandler<HTMLAnchorElement>
   onKeyDown?: KeyboardEventHandler<HTMLAnchorElement>
-  'aria-label'?: string
+  'aria-label'?: AnchorHTMLAttributes<HTMLAnchorElement>['aria-label']
   'aria-current'?: AnchorHTMLAttributes<HTMLAnchorElement>['aria-current']
-  'aria-keyshortcuts'?: string
+  'aria-keyshortcuts'?: AnchorHTMLAttributes<HTMLAnchorElement>['aria-keyshortcuts']
   oneLine?: boolean
   'data-testid'?: string
   /**

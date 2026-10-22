@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, ReactNode } from 'react'
+import type { CSSProperties, HTMLAttributes, ReactNode } from 'react'
 import { separatorStyle, thicknessSeparator } from './styles.css'
 
 type SeparatorProps = {
@@ -15,7 +15,7 @@ type SeparatorProps = {
    * @private
    */
   'data-flip-id'?: string
-  'aria-hidden'?: boolean
+  'aria-hidden'?: HTMLAttributes<HTMLElement>['aria-hidden']
   children?: ReactNode
   style?: CSSProperties
 }

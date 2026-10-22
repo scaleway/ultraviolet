@@ -5,7 +5,15 @@
 
 import { cn } from '@ultraviolet/utils'
 import { useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
-import type { ChangeEvent, CSSProperties, FocusEventHandler, KeyboardEvent, MouseEvent, ReactNode } from 'react'
+import type {
+  ChangeEvent,
+  CSSProperties,
+  FocusEventHandler,
+  InputHTMLAttributes,
+  KeyboardEvent,
+  MouseEvent,
+  ReactNode,
+} from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import { Stack } from '../../Layout/Stack'
 import { VisuallyHidden } from '../../Other/VisuallyHidden'
@@ -44,14 +52,14 @@ type VerificationCodeProps = {
   /**
    * @deprecated Use `accessibleLabel` instead.
    */
-  'aria-label'?: string
+  'aria-label'?: InputHTMLAttributes<HTMLInputElement>['aria-label']
   accessibleLabel?: string
   label?: string
   labelDescription?: ReactNode
   helper?: ReactNode
   success?: boolean | string
   style?: CSSProperties
-  'aria-describedby'?: string
+  'aria-describedby'?: InputHTMLAttributes<HTMLInputElement>['aria-describedby']
 }
 
 /**

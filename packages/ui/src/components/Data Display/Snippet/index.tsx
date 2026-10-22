@@ -3,7 +3,7 @@
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, HTMLAttributes, ReactNode } from 'react'
 import { useId, useReducer } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import { CopyButton } from '../../Action/CopyButton'
@@ -38,7 +38,7 @@ type SnippetProps = {
   helper?: ReactNode
   label?: string
   labelDescription?: ReactNode
-  'aria-describedby'?: string
+  'aria-describedby'?: HTMLAttributes<HTMLDivElement>['aria-describedby']
 } & Pick<ComponentProps<typeof CopyButton>, 'copyText' | 'copiedText'>
 
 /**
