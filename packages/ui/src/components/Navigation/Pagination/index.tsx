@@ -1,5 +1,6 @@
 'use client'
 
+import type { XOR } from '@scaleway/types'
 import { useEffect, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
 import { useBreakpoints } from '../../../hooks/useBreakpoint'
@@ -31,8 +32,9 @@ type PaginationProps = {
   className?: string
   style?: CSSProperties
   'data-testid'?: string
-} & (
-  | {
+} & XOR<
+  [
+    {
       /**
        * Number of elements to show per page
        */
@@ -57,29 +59,18 @@ type PaginationProps = {
        * Defines the target element for the perPage dropdown menu
        */
       perPagePortalTarget?: HTMLElement
-      size?: never
-    }
-  | {
-      perPage?: never
-      onChangePerPage?: never
-      perPageText?: never
-      numberOfItemsText?: never
-      numberOfItems?: never
-      perPagePortalTarget?: never
+    },
+    {
       size?: 'small' | 'medium'
-    }
-) &
-  (
-    | {
-        /**
-         * Event function called when changing the page
-         */
+    },
+  ]
+> &
+  XOR<
+    [
+      {
         onChange: (newPage: number) => void
-        hrefBuilder?: never
-        renderLink?: never
-      }
-    | {
-        onChange?: never
+      },
+      {
         /**
          * Builds the href of a given page. When set, pagination items are rendered as links
          * instead of buttons, which allows real page navigation (prefetching, open in a new tab, SEO)
@@ -102,8 +93,9 @@ type PaginationProps = {
          * The rendered element must forward the `ref` and spread the props it receives.
          */
         renderLink?: PaginationRenderLink
-      }
-  )
+      },
+    ]
+  >
 
 /**
  * Pagination is a component to navigate between pages, it is composed of 2 buttons to go to the previous and next page,
@@ -130,7 +122,7 @@ export const Pagination = ({
   'data-testid': dataTestId,
   style,
 }: PaginationProps) => {
-  const [perPageComputed, setPerPage] = useState(perPage ?? 10)
+  const [perPageComputed, setPerPageComputed] = useState(perPage ?? 10)
   const rootRef = useRef<HTMLDivElement>(null)
   const breakpoint = useBreakpoints(rootRef, { small: 0, large: 420 })
 
@@ -145,7 +137,7 @@ export const Pagination = ({
 
   useEffect(() => {
     if (perPage) {
-      setPerPage(perPage)
+      setPerPageComputed(perPage)
     }
   }, [perPage])
 
@@ -166,7 +158,7 @@ export const Pagination = ({
           perPage={perPageComputed}
           perPageText={perPageText}
           portalTarget={perPagePortalTarget}
-          setPerPage={setPerPage}
+          setPerPage={setPerPageComputed}
         />
       ) : null}
       <PaginationButtons

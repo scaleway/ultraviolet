@@ -16,6 +16,8 @@ export type PaginationLinkProps = HTMLAttributes<HTMLElement> & {
 
 export type PaginationRenderLink = (page: number, props: PaginationLinkProps) => ReactElement
 
+type HrefBuilder = (page: number) => string
+
 type PaginationButtonsProps = {
   page: number
   disabled: boolean
@@ -28,7 +30,7 @@ type PaginationButtonsProps = {
   hideLastPage?: boolean
   isSmall: boolean
   size: 'small' | 'medium'
-  hrefBuilder?: (page: number) => string
+  hrefBuilder?: HrefBuilder
   renderLink?: PaginationRenderLink
 }
 
@@ -68,19 +70,23 @@ export const PaginationButtons = ({
   )
 
   const getLinkProps = useCallback(
-    (targetPage: number) => {
+    ({ targetPage, onClick }: { targetPage: number; onClick: () => void }) => {
       const href = hrefBuilder?.(targetPage)
-      if (!href) {
-        return {}
+      const isInRange = targetPage >= 1 && targetPage <= pageCount
+
+      if (!href || !isInRange) {
+        return { onClick }
       }
+
       if (renderLink) {
         return {
           render: (props: HTMLAttributes<HTMLElement>) => renderLink(targetPage, { ...props, href }),
         }
       }
+
       return { href }
     },
-    [hrefBuilder, renderLink],
+    [hrefBuilder, pageCount, renderLink],
   )
 
   return (
@@ -89,8 +95,7 @@ export const PaginationButtons = ({
         <Button
           accessibleLabel="Back"
           disabled={page <= 1 || disabled}
-          onClick={hrefBuilder ? undefined : goToPreviousPage}
-          {...(hrefBuilder && page > 1 ? getLinkProps(page - 1) : {})}
+          {...getLinkProps({ targetPage: page - 1, onClick: goToPreviousPage })}
           sentiment="primary"
           size={size}
           variant="outlined"
@@ -108,8 +113,7 @@ export const PaginationButtons = ({
               className={paginationStyle.pageButton[size]}
               disabled={disabled}
               key={item.page}
-              onClick={hrefBuilder ? undefined : handlePageClick(item.page)}
-              {...(hrefBuilder ? getLinkProps(item.page) : {})}
+              {...getLinkProps({ targetPage: item.page, onClick: handlePageClick(item.page) })}
               sentiment={item.page === page ? 'primary' : 'neutral'}
               size={size}
               type="button"
@@ -124,8 +128,7 @@ export const PaginationButtons = ({
         <Button
           accessibleLabel="Next"
           disabled={page >= pageCount || disabled}
-          onClick={hrefBuilder ? undefined : goToNextPage}
-          {...(hrefBuilder && page < pageCount ? getLinkProps(page + 1) : {})}
+          {...getLinkProps({ targetPage: page + 1, onClick: goToNextPage })}
           sentiment="primary"
           size={size}
           variant="outlined"

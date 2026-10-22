@@ -13,31 +13,7 @@ const MockNextLink = forwardRef<HTMLAnchorElement, AnchorHTMLAttributes<HTMLAnch
 )
 MockNextLink.displayName = 'MockNextLink'
 
-export const HrefBuilder: StoryFn<typeof Pagination> = () => (
-  <Pagination
-    hrefBuilder={pageNumber => (pageNumber === 1 ? '/tutorials' : `/tutorials/${pageNumber}`)}
-    page={2}
-    pageCount={10}
-  />
-)
-
-HrefBuilder.parameters = {
-  docs: {
-    description: {
-      story: `Use the \`hrefBuilder\` prop to render pagination items as real links instead of buttons, which enables real page navigation (prefetching, open in a new tab, SEO).
-
-\`\`\`tsx
-<Pagination
-  hrefBuilder={pageNumber => (pageNumber === 1 ? '/tutorials' : \`/tutorials/\${pageNumber}\`)}
-  page={2}
-  pageCount={10}
-/>
-\`\`\``,
-    },
-  },
-}
-
-export const RenderLink: StoryFn<typeof Pagination> = () => (
+export const Link: StoryFn<typeof Pagination> = () => (
   <Pagination
     hrefBuilder={pageNumber => `/tutorials/${pageNumber}`}
     page={2}
@@ -46,7 +22,7 @@ export const RenderLink: StoryFn<typeof Pagination> = () => (
   />
 )
 
-RenderLink.parameters = {
+Link.parameters = {
   docs: {
     description: {
       story: `Use the \`renderLink\` prop to render a custom element (like a routing component) instead of the default anchor, while preserving Pagination's styling. It receives the target page and the props to spread on the link, including the \`href\` built by \`hrefBuilder\`.
@@ -62,7 +38,9 @@ import NextLink from 'next/link'
 />
 \`\`\`
 
-The rendered element must forward the \`ref\` and spread the props it receives.`,
+The rendered element must forward the \`ref\` and spread the props it receives.
+Use the \`hrefBuilder\` prop to render pagination items as real links instead of buttons, which enables real page navigation (prefetching, open in a new tab, SEO)
+`,
     },
   },
 }
