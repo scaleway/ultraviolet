@@ -70,4 +70,24 @@ describe('button - A11y', { tags: ['a11y'] }, () => {
     expect(button).not.toHaveAttribute('aria-roledescription')
     expect(button).not.toHaveAttribute('aria-keyshortcuts')
   })
+
+  it('forwards ARIA attributes and accessible label to render elements', () => {
+    const { getByRole } = renderWithTheme(
+      <Button
+        accessibleLabel="Edit item"
+        aria-current="page"
+        render={({ children, ...props }) => (
+          <a {...props} href="/about">
+            {children}
+          </a>
+        )}
+      >
+        <PencilIcon />
+      </Button>,
+    )
+    const link = getByRole('link')
+
+    expect(link).toHaveAccessibleName('Edit item')
+    expect(link).toHaveAttribute('aria-current', 'page')
+  })
 })

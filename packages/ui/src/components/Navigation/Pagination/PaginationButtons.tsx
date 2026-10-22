@@ -3,16 +3,25 @@
 import { ArrowLeftIcon } from '@ultraviolet/icons/ArrowLeftIcon'
 import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { useCallback, useMemo } from 'react'
+import type { HTMLAttributes, ReactElement } from 'react'
 import { Button } from '../../Action/Button'
 import { Stack } from '../../Layout/Stack'
 import { Ellipsis } from './Ellipsis'
 import { getPageItems } from './getPageItems'
 import { paginationStyle } from './styles.css'
 
+export type PaginationLinkProps = HTMLAttributes<HTMLElement> & {
+  href: string
+}
+
+export type PaginationRenderLink = (page: number, props: PaginationLinkProps) => ReactElement
+
+type HrefBuilder = (page: number) => string
+
 type PaginationButtonsProps = {
   page: number
   disabled: boolean
-  onChange: (newPage: number) => void
+  onChange?: (newPage: number) => void
   pageCount: number
   pageTabCount: number
   className?: string
@@ -21,6 +30,8 @@ type PaginationButtonsProps = {
   hideLastPage?: boolean
   isSmall: boolean
   size: 'small' | 'medium'
+  hrefBuilder?: HrefBuilder
+  renderLink?: PaginationRenderLink
 }
 
 export const PaginationButtons = ({
@@ -35,13 +46,15 @@ export const PaginationButtons = ({
   hideLastPage,
   isSmall,
   size,
+  hrefBuilder,
+  renderLink,
 }: PaginationButtonsProps) => {
   const goToNextPage = useCallback(() => {
-    onChange(page + 1)
+    onChange?.(page + 1)
   }, [onChange, page])
 
   const goToPreviousPage = useCallback(() => {
-    onChange(page - 1)
+    onChange?.(page - 1)
   }, [onChange, page])
 
   const pageItems = useMemo(() => {
@@ -51,9 +64,29 @@ export const PaginationButtons = ({
 
   const handlePageClick = useCallback(
     (pageNumber: number) => () => {
-      onChange(pageNumber)
+      onChange?.(pageNumber)
     },
     [onChange],
+  )
+
+  const getLinkProps = useCallback(
+    ({ targetPage, onClick }: { targetPage: number; onClick: () => void }) => {
+      const href = hrefBuilder?.(targetPage)
+      const isInRange = targetPage >= 1 && targetPage <= pageCount
+
+      if (!href || !isInRange) {
+        return { onClick }
+      }
+
+      if (renderLink) {
+        return {
+          render: (props: HTMLAttributes<HTMLElement>) => renderLink(targetPage, { ...props, href }),
+        }
+      }
+
+      return { href }
+    },
+    [hrefBuilder, pageCount, renderLink],
   )
 
   return (
@@ -62,7 +95,7 @@ export const PaginationButtons = ({
         <Button
           accessibleLabel="Back"
           disabled={page <= 1 || disabled}
-          onClick={goToPreviousPage}
+          {...getLinkProps({ targetPage: page - 1, onClick: goToPreviousPage })}
           sentiment="primary"
           size={size}
           variant="outlined"
@@ -76,11 +109,11 @@ export const PaginationButtons = ({
             <Ellipsis disabled={disabled} key={`ellipsis-${index}`} size={size} />
           ) : (
             <Button
-              aria-current={item.page === page}
+              aria-current={item.page === page ? 'page' : undefined}
               className={paginationStyle.pageButton[size]}
               disabled={disabled}
               key={item.page}
-              onClick={handlePageClick(item.page)}
+              {...getLinkProps({ targetPage: item.page, onClick: handlePageClick(item.page) })}
               sentiment={item.page === page ? 'primary' : 'neutral'}
               size={size}
               type="button"
@@ -95,7 +128,7 @@ export const PaginationButtons = ({
         <Button
           accessibleLabel="Next"
           disabled={page >= pageCount || disabled}
-          onClick={goToNextPage}
+          {...getLinkProps({ targetPage: page + 1, onClick: goToNextPage })}
           sentiment="primary"
           size={size}
           variant="outlined"

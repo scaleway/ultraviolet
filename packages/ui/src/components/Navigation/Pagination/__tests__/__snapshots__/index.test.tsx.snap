@@ -43,35 +43,31 @@ exports[`pagination > should render correctly 1`] = `
           class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
         >
           <button
-            aria-current="true"
+            aria-current="page"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
             type="button"
           >
             1
           </button>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             2
           </button>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             3
           </button>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             4
           </button>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -154,7 +150,6 @@ exports[`pagination > should render correctly component with disabled 1`] = `
           class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
         >
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             disabled=""
             type="button"
@@ -168,7 +163,6 @@ exports[`pagination > should render correctly component with disabled 1`] = `
             ...
           </span>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             disabled=""
             type="button"
@@ -176,7 +170,7 @@ exports[`pagination > should render correctly component with disabled 1`] = `
             4
           </button>
           <button
-            aria-current="true"
+            aria-current="page"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
             disabled=""
             type="button"
@@ -184,7 +178,6 @@ exports[`pagination > should render correctly component with disabled 1`] = `
             5
           </button>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             disabled=""
             type="button"
@@ -198,7 +191,6 @@ exports[`pagination > should render correctly component with disabled 1`] = `
             ...
           </span>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_true__8xt08s2 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             disabled=""
             type="button"
@@ -282,7 +274,6 @@ exports[`pagination > should render correctly component with pageTabCount 1`] = 
           class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
         >
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -295,21 +286,19 @@ exports[`pagination > should render correctly component with pageTabCount 1`] = 
             ...
           </span>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             11
           </button>
           <button
-            aria-current="true"
+            aria-current="page"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
             type="button"
           >
             12
           </button>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -322,7 +311,6 @@ exports[`pagination > should render correctly component with pageTabCount 1`] = 
             ...
           </span>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -405,35 +393,31 @@ exports[`pagination > should render correctly small 1`] = `
           class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
         >
           <button
-            aria-current="true"
+            aria-current="page"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
             type="button"
           >
             1
           </button>
           <button
-            aria-current="false"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             2
           </button>
           <button
-            aria-current="false"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             3
           </button>
           <button
-            aria-current="false"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             4
           </button>
           <button
-            aria-current="false"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -521,21 +505,19 @@ exports[`pagination > should render correctly with hideFirstPage 1`] = `
             ...
           </span>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             5
           </button>
           <button
-            aria-current="true"
+            aria-current="page"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
             type="button"
           >
             6
           </button>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -548,7 +530,6 @@ exports[`pagination > should render correctly with hideFirstPage 1`] = `
             ...
           </span>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -630,7 +611,6 @@ exports[`pagination > should render correctly with hideLastPage 1`] = `
           class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
         >
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -643,21 +623,19 @@ exports[`pagination > should render correctly with hideLastPage 1`] = `
             ...
           </span>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             5
           </button>
           <button
-            aria-current="true"
+            aria-current="page"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
             type="button"
           >
             6
           </button>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -746,14 +724,12 @@ exports[`pagination > should render correctly with page < 1 1`] = `
           class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
         >
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             1
           </button>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -835,14 +811,12 @@ exports[`pagination > should render correctly with page > pageCount 1`] = `
           class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
         >
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             1
           </button>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -925,35 +899,31 @@ exports[`pagination > should render correctly with pageClick 1`] = `
           class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
         >
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             1
           </button>
           <button
-            aria-current="true"
+            aria-current="page"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
             type="button"
           >
             2
           </button>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             3
           </button>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             4
           </button>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -966,7 +936,6 @@ exports[`pagination > should render correctly with pageClick 1`] = `
             ...
           </span>
           <button
-            aria-current="false"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -1049,7 +1018,7 @@ exports[`pagination > should render correctly with pageCount is 1 1`] = `
           class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
         >
           <button
-            aria-current="true"
+            aria-current="page"
             class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
             type="button"
           >
@@ -1199,35 +1168,31 @@ exports[`pagination > should render correctly with perPage - default values 1`] 
           class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
         >
           <button
-            aria-current="false"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             1
           </button>
           <button
-            aria-current="true"
+            aria-current="page"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
             type="button"
           >
             2
           </button>
           <button
-            aria-current="false"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             3
           </button>
           <button
-            aria-current="false"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             4
           </button>
           <button
-            aria-current="false"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -1240,7 +1205,6 @@ exports[`pagination > should render correctly with perPage - default values 1`] 
             ...
           </span>
           <button
-            aria-current="false"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -1389,35 +1353,31 @@ exports[`pagination > should render correctly with perPage 1`] = `
           class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
         >
           <button
-            aria-current="false"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             1
           </button>
           <button
-            aria-current="true"
+            aria-current="page"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_small__8xt08sg styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
             type="button"
           >
             2
           </button>
           <button
-            aria-current="false"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             3
           </button>
           <button
-            aria-current="false"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
             4
           </button>
           <button
-            aria-current="false"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -1430,7 +1390,6 @@ exports[`pagination > should render correctly with perPage 1`] = `
             ...
           </span>
           <button
-            aria-current="false"
             class="styles_small__1xkd25x3 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_small__8xt08sg styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
             type="button"
           >
@@ -1463,6 +1422,112 @@ exports[`pagination > should render correctly with perPage 1`] = `
               />
             </svg>
           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`pagination > should render items as links with hrefBuilder 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_justifyContent_space-between_xxsmall__xf61n477"
+    >
+      <div
+        class="styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j"
+      >
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <a
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            href="/tutorials"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Back
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          class="styles__1xkd25x1 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <a
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            href="/tutorials"
+          >
+            1
+          </a>
+          <a
+            aria-current="page"
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_filled__8xt08si styles_undefined_compound_0__8xt08sl"
+            href="/tutorials/2"
+          >
+            2
+          </a>
+          <a
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            href="/tutorials/3"
+          >
+            3
+          </a>
+          <a
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            href="/tutorials/4"
+          >
+            4
+          </a>
+          <a
+            class="styles_medium__1xkd25x2 styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_neutral__8xt08s8 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_15__8xt08s10"
+            href="/tutorials/5"
+          >
+            5
+          </a>
+        </div>
+        <div
+          class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p"
+        >
+          <a
+            class="styles__8xt08s0 styles_disabled_false__8xt08s1 styles_fullWidth_false__8xt08s3 styles_sentiment_primary__8xt08s9 styles_size_medium__8xt08sf styles_variant_outlined__8xt08sk styles_undefined_compound_9__8xt08su"
+            href="/tutorials/3"
+          >
+            <span
+              class="styles__ahdbou0"
+            >
+              Next
+            </span>
+            <svg
+              aria-hidden="true"
+              class="uv_icons_1sbwqkz0 uv_icons_1sbwqkz1 uv_icons_1sbwqkz3 uv_icons_1sbwqkzf uv_icons_1sbwqkz1n"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </div>

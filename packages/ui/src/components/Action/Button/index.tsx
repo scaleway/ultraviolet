@@ -26,7 +26,7 @@ type CommonProps = {
    * @deprecated use `accessibleLabel` instead.
    */
   'aria-label'?: string
-  'aria-current'?: boolean
+  'aria-current'?: boolean | 'false' | 'true' | 'page' | 'step' | 'location' | 'date' | 'time'
   'aria-controls'?: string
   'aria-expanded'?: boolean
   'aria-haspopup'?: boolean
@@ -184,24 +184,6 @@ export const Button = forwardRef<Element, BaseButtonProps>(
 
     const computedClassName = cn(className, buttonStyle.button({ disabled, fullWidth, sentiment, size, variant }))
 
-    // render prop: render custom element with Button styling
-    if (render) {
-      return (
-        <Tooltip containerFullWidth={fullWidth} relation={tooltipRelation} text={tooltipText}>
-          {renderElement(render, {
-            children,
-            className: computedClassName,
-            'data-testid': dataTestId,
-            'data-flip-id': dataFlipId,
-            // oxlint-disable-next-line typescript/no-unsafe-type-assertion
-            ref: ref as Ref<HTMLElement>,
-            form,
-            style,
-          })}
-        </Tooltip>
-      )
-    }
-
     const commonProps = {
       'aria-controls': ariaControls,
       'aria-current': ariaCurrent,
@@ -226,6 +208,21 @@ export const Button = forwardRef<Element, BaseButtonProps>(
       role,
       style,
       tabIndex,
+    }
+
+    // render prop: render custom element with Button styling and the same props as the native elements
+    if (render) {
+      return (
+        <Tooltip containerFullWidth={fullWidth} relation={tooltipRelation} text={tooltipText}>
+          {renderElement(render, {
+            ...commonProps,
+            children: content,
+            // oxlint-disable-next-line typescript/no-unsafe-type-assertion
+            ref: ref as Ref<HTMLElement>,
+            form,
+          })}
+        </Tooltip>
+      )
     }
 
     // @note: an anchor can't be disabled

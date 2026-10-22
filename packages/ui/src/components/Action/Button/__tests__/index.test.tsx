@@ -310,7 +310,7 @@ describe('button', () => {
           </Button>,
         )
 
-        await userEvent.click(screen.getByTestId('button'))
+        await userEvent.click(screen.getByRole('link', { name: 'About' }))
         expect(onClick).toHaveBeenCalledOnce()
       })
 
@@ -326,7 +326,7 @@ describe('button', () => {
       it('render correctly with render function', () =>
         shouldMatchSnapshot(<Button render={props => <MockNextLink {...props} href="/about" />}>About</Button>))
 
-      it('passes props to render function', () => {
+      it('passes props to render function', async () => {
         renderWithTheme(
           <Button
             className="button-class"
@@ -336,8 +336,9 @@ describe('button', () => {
           </Button>,
         )
 
-        const button = screen.getByTestId('button')
-        expect(button.className).toContain('button-class')
+        const buttonLink = screen.getByRole('link', { name: 'About' })
+        await userEvent.click(buttonLink)
+        expect(buttonLink.className).toContain('button-class')
       })
 
       it('forwards ref correctly with render function', () => {
@@ -349,6 +350,19 @@ describe('button', () => {
         )
 
         expect(ref).toHaveBeenCalled()
+      })
+
+      it('forwards onClick to render function elements', async () => {
+        const onClick = vi.fn()
+        renderWithTheme(
+          <Button onClick={onClick} render={props => <MockNextLink {...props} data-testid="button" href="/about" />}>
+            About
+          </Button>,
+        )
+
+        const buttonLink = screen.getByRole('link', { name: 'About' })
+        await userEvent.click(buttonLink)
+        expect(onClick).toHaveBeenCalledOnce()
       })
     })
   })

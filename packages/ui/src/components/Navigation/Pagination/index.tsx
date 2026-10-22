@@ -1,18 +1,16 @@
 'use client'
 
+import type { XOR } from '@scaleway/types'
 import { useEffect, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
 import { useBreakpoints } from '../../../hooks/useBreakpoint'
 import { Stack } from '../../Layout/Stack'
 import { PaginationButtons } from './PaginationButtons'
+import type { PaginationRenderLink } from './PaginationButtons'
 import { PerPage } from './PerPage'
 import { paginationStyle } from './styles.css'
 
 type PaginationProps = {
-  /**
-    Event function called when changing the page
-  */
-  onChange: (newPage: number) => void
   /**
     The current page (must be between 1 and pageCount included, otherwhile onChange will be called with a correct value)
   */
@@ -34,8 +32,9 @@ type PaginationProps = {
   className?: string
   style?: CSSProperties
   'data-testid'?: string
-} & (
-  | {
+} & XOR<
+  [
+    {
       /**
        * Number of elements to show per page
        */
@@ -60,18 +59,43 @@ type PaginationProps = {
        * Defines the target element for the perPage dropdown menu
        */
       perPagePortalTarget?: HTMLElement
-      size?: never
-    }
-  | {
-      perPage?: never
-      onChangePerPage?: never
-      perPageText?: never
-      numberOfItemsText?: never
-      numberOfItems?: never
-      perPagePortalTarget?: never
+    },
+    {
       size?: 'small' | 'medium'
-    }
-)
+    },
+  ]
+> &
+  XOR<
+    [
+      {
+        onChange: (newPage: number) => void
+      },
+      {
+        /**
+         * Builds the href of a given page. When set, pagination items are rendered as links
+         * instead of buttons, which allows real page navigation (prefetching, open in a new tab, SEO)
+         */
+        hrefBuilder: (page: number) => string
+        /**
+         * Custom element renderer used instead of the default anchor for each page, e.g. to enable
+         * client-side navigation with a routing component. It receives the target page and the props
+         * to spread on the link (including the `href` built by `hrefBuilder`).
+         *
+         * ```tsx
+         * <Pagination
+         *   hrefBuilder={pageNumber => `/tutorials/${pageNumber}`}
+         *   page={2}
+         *   pageCount={10}
+         *   renderLink={(pageNumber, props) => <NextLink {...props} />}
+         * />
+         * ```
+         *
+         * The rendered element must forward the `ref` and spread the props it receives.
+         */
+        renderLink?: PaginationRenderLink
+      },
+    ]
+  >
 
 /**
  * Pagination is a component to navigate between pages, it is composed of 2 buttons to go to the previous and next page,
@@ -82,6 +106,8 @@ export const Pagination = ({
   page,
   pageCount,
   onChange,
+  hrefBuilder,
+  renderLink,
   pageTabCount,
   className,
   perPage,
@@ -96,22 +122,22 @@ export const Pagination = ({
   'data-testid': dataTestId,
   style,
 }: PaginationProps) => {
-  const [perPageComputed, setPerPage] = useState(perPage ?? 10)
+  const [perPageComputed, setPerPageComputed] = useState(perPage ?? 10)
   const rootRef = useRef<HTMLDivElement>(null)
   const breakpoint = useBreakpoints(rootRef, { small: 0, large: 420 })
 
   useEffect(() => {
     if (page < 1) {
-      onChange(1)
+      onChange?.(1)
     }
     if (page > pageCount) {
-      onChange(pageCount)
+      onChange?.(pageCount)
     }
   }, [page, pageCount, onChange])
 
   useEffect(() => {
     if (perPage) {
-      setPerPage(perPage)
+      setPerPageComputed(perPage)
     }
   }, [perPage])
 
@@ -132,18 +158,20 @@ export const Pagination = ({
           perPage={perPageComputed}
           perPageText={perPageText}
           portalTarget={perPagePortalTarget}
-          setPerPage={setPerPage}
+          setPerPage={setPerPageComputed}
         />
       ) : null}
       <PaginationButtons
         className={className}
         data-testid={dataTestId}
         disabled={disabled}
+        hrefBuilder={hrefBuilder}
         isSmall={breakpoint.small}
         onChange={onChange}
         page={page}
         pageCount={pageCount}
         pageTabCount={pageTabCount ?? (breakpoint.small ? 3 : 5)}
+        renderLink={renderLink}
         size={perPage ? 'small' : size}
         hideFirstPage={hideFirstPage}
         hideLastPage={hideLastPage}

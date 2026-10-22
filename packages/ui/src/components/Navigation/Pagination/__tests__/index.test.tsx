@@ -1,6 +1,8 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { MockResizeObserver, renderWithTheme } from '@utils/test'
+import { forwardRef } from 'react'
+import type { AnchorHTMLAttributes } from 'react'
 import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { Pagination } from '..'
 
@@ -195,5 +197,68 @@ describe('pagination', () => {
     expect(page1Button).toBeVisible()
 
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should render items as links with hrefBuilder', () => {
+    const { asFragment } = renderWithTheme(
+      <Pagination
+        hrefBuilder={pageNumber => (pageNumber === 1 ? '/tutorials' : `/tutorials/${pageNumber}`)}
+        page={2}
+        pageCount={5}
+      />,
+    )
+
+    // page numbers are links, the builder can handle edge cases such as the first page
+    expect(screen.getByRole('link', { name: '1' })).toHaveAttribute('href', '/tutorials')
+    expect(screen.getByRole('link', { name: '2' })).toHaveAttribute('href', '/tutorials/2')
+    expect(screen.getByRole('link', { name: '3' })).toHaveAttribute('href', '/tutorials/3')
+
+    // the current page is marked for assistive technologies
+    expect(screen.getByRole('link', { name: '2' })).toHaveAttribute('aria-current', 'page')
+
+    // previous and next arrows are links too
+    expect(screen.getByRole('link', { name: 'Back' })).toHaveAttribute('href', '/tutorials')
+    expect(screen.getByRole('link', { name: 'Next' })).toHaveAttribute('href', '/tutorials/3')
+
+    expect(screen.queryAllByRole('button')).toHaveLength(0)
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should keep boundary arrows disabled without href in link mode', () => {
+    renderWithTheme(<Pagination hrefBuilder={pageNumber => `/pages/${pageNumber}`} page={1} pageCount={3} />)
+
+    // there is no page 0 to link to, the previous arrow stays a disabled button
+    expect(screen.getByRole('button', { name: 'Back' })).toBeDisabled()
+
+    expect(screen.getByRole('link', { name: 'Next' })).toHaveAttribute('href', '/pages/2')
+  })
+
+  it('should render a custom link element with renderLink', () => {
+    const MockNextLink = forwardRef<HTMLAnchorElement, AnchorHTMLAttributes<HTMLAnchorElement>>(
+      ({ href, children, ...props }, ref) => (
+        <a data-custom-link="true" href={href} ref={ref} {...props}>
+          {children}
+        </a>
+      ),
+    )
+    MockNextLink.displayName = 'MockNextLink'
+
+    renderWithTheme(
+      <Pagination
+        hrefBuilder={pageNumber => `/tutorials/${pageNumber}`}
+        page={2}
+        pageCount={3}
+        renderLink={(_pageNumber, props) => <MockNextLink {...props} />}
+      />,
+    )
+
+    expect(screen.getByRole('link', { name: '3' })).toHaveAttribute('data-custom-link', 'true')
+    expect(screen.getByRole('link', { name: '3' })).toHaveAttribute('href', '/tutorials/3')
+    expect(screen.getByRole('link', { name: 'Next' })).toHaveAttribute('href', '/tutorials/3')
+
+    // Button styling and the current page marker are preserved on the custom element
+    expect(screen.getByRole('link', { name: '2' })).toHaveAttribute('aria-current', 'page')
+    expect(screen.getByRole('link', { name: '2' }).className).not.toBe('')
   })
 })
