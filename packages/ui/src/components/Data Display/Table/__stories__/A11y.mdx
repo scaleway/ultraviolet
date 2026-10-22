@@ -37,9 +37,9 @@ Enforced by the component:
 To apply when using the component:
 
 - [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - When using `Cell` `sentiment` backgrounds, ensure the text inside the cell keeps sufficient contrast.
-- [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - Ensure the sort/info icons and checkbox indicators meet the 3:1 contrast requirement.
 - [WCAG 2.4.6 - Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html) - Provide meaningful, distinct column labels via the `label` prop; they become the accessible names of the header cells.
 - [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Interactive widgets placed inside cells (see the `Input` story) must keep their own accessible names.
+- [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - A footer/summary row (column totals) should be a native `<tfoot>` with the label cell as `<th scope="row">`, so the relationship is programmatically determinable.
 
 ## Accessibility issues
 
@@ -59,6 +59,7 @@ To apply when using the component:
 - Generic checkbox accessible names: every row checkbox shares `aria-label="select"` and the header checkbox is `aria-label="select all"`. These do not identify the row or the table. Use descriptive, localizable names such as "Select row id" and "Select all rows" (WCAG 4.1.2 / 3.3.2 / 2.4.6). Consider adding a prop for localized and custom naming.
 - Loading state is not announced: when `loading` is true, the body is replaced by skeleton rows with no `aria-busy` on the table, so assistive technology users receive no indication that data is loading or that the previously announced content was replaced (WCAG 1.3.1 / 4.1.2). Set `aria-busy` during loading.
 - `aria-selected` on `role="row"` is only supported for rows within a `grid`; on a plain table row it may be ignored. Selection is already conveyed by the checkbox — keep `aria-selected` only if the table is exposed as a grid, otherwise remove it.
+- No footer/summary row support: the component has no `tfoot`, so a column summary cannot be added natively. Fix: create a `Table.Footer` sub-component.
 
 **Low:**
 
