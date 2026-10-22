@@ -8,6 +8,7 @@ export type PopupTransitionStatus = 'unmounted' | 'initial' | 'open' | 'close'
 
 export type PopupContextValue = UseFloatingReturn & {
   open: boolean
+  setOpen: (open: boolean) => void
   id: string
   role: PopupRole
   setRole: (role: PopupRole) => void
