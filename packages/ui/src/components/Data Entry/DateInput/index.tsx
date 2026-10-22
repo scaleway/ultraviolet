@@ -4,7 +4,7 @@ import { CalendarRangeIcon } from '@ultraviolet/icons/CalendarRangeIcon'
 import { cn } from '@ultraviolet/utils'
 import type { Locale } from 'date-fns'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import type { ChangeEvent, CSSProperties, FocusEvent, ReactNode } from 'react'
+import type { ChangeEvent, CSSProperties, FocusEvent, InputHTMLAttributes, ReactNode } from 'react'
 import { Card } from '../../Layout/Card'
 import { Stack } from '../../Layout/Stack'
 import { Text } from '../../Typography/Text'
@@ -55,7 +55,7 @@ type DateInputProps<IsRange extends undefined | boolean = false> = {
    */
   input?: 'calendar' | 'text'
   selectsRange?: IsRange
-  'aria-describedBy'?: string
+  'aria-describedby'?: InputHTMLAttributes<HTMLInputElement>['aria-describedby']
   onChange?: IsRange extends true
     ? (date: Date[] | [Date | null, Date | null], event?: React.SyntheticEvent) => void
     : (date: Date | null, event?: React.SyntheticEvent) => void
@@ -97,7 +97,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
   input = 'text',
   'data-testid': dataTestId,
   style,
-  'aria-describedBy': ariaDescribedBy,
+  'aria-describedby': ariaDescribedBy,
 }: DateInputProps<IsRange>) => {
   const defaultMonthToShow = useMemo(() => {
     if (value) {
@@ -290,7 +290,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
             visible={isPopupVisible}
           >
             <TextInput
-              aria-describedBy={ariaDescribedBy}
+              aria-describedby={ariaDescribedBy}
               autoComplete="false"
               autoFocus={autoFocus}
               clearable={clearable}
