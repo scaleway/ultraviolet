@@ -1,5 +1,4 @@
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
-import { useState } from 'react'
 import { Popover } from '../../components/Overlay/Popover'
 import { Tooltip } from '../../components/Overlay/Tooltip'
 import type { Hint } from './types'
@@ -10,10 +9,8 @@ type FeatureHintProps = {
 }
 
 export const FeatureHint = ({ hint }: FeatureHintProps) => {
-  const [visible, setVisible] = useState(false)
-
   if (!hint) {
-    return <div />
+    return null
   }
 
   if (hint.type === 'tooltip') {
@@ -25,19 +22,8 @@ export const FeatureHint = ({ hint }: FeatureHintProps) => {
   }
 
   return (
-    <Popover content={hint.content} onClose={() => setVisible(false)} title={hint.title} visible={visible}>
-      <button
-        className={plansStyle.iconWrapper}
-        data-testid="hint-popover"
-        onClick={() => setVisible(true)}
-        onKeyDown={event => {
-          if (event.key === 'Space' || event.key === 'Enter') {
-            setVisible(true)
-          }
-        }}
-        tabIndex={0}
-        type="button"
-      >
+    <Popover content={hint.content} title={hint.title}>
+      <button className={plansStyle.iconWrapper} data-testid="hint-popover" type="button">
         <InformationOutlineIcon prominence="weak" sentiment="neutral" />
       </button>
     </Popover>

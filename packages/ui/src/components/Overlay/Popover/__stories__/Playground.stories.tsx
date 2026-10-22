@@ -1,28 +1,18 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { useCallback, useState } from 'react'
 import { Button } from '../../../Action/Button'
+import { Stack } from '../../../Layout/Stack'
 import { Popover } from '../index'
 
-export const Playground: StoryFn<typeof Popover> = args => {
-  const [opened, setOpened] = useState(false)
+export const Playground: StoryFn<typeof Popover> = args => (
+  <Popover {...args}>
+    <Button sentiment="neutral">Open Popover</Button>
+  </Popover>
+)
 
-  const onCloseCallBack = useCallback(() => {
-    setOpened(false)
-  }, [])
-
-  return (
-    <Popover
-      {...args}
-      content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-      onClose={onCloseCallBack}
-      title="Popover Title"
-      visible={opened}
-    >
-      <Button onClick={() => setOpened(true)} sentiment="neutral">
-        Open Popover
-      </Button>
-    </Popover>
-  )
+Playground.args = {
+  content:
+    'This is a simple text content inside the popover. You can customize it by passing text into content property.',
+  title: 'Popover Title',
 }
 
 Playground.parameters = {
@@ -36,10 +26,8 @@ Playground.parameters = {
 
 Playground.decorators = [
   StoryComponent => (
-    <div style={{ height: '200px' }}>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <StoryComponent />
-      </div>
-    </div>
+    <Stack direction="row" gap={2} justifyContent="center" alignItems="end" style={{ height: '150px' }}>
+      <StoryComponent />
+    </Stack>
   ),
 ]
