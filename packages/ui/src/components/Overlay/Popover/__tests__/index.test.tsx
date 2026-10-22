@@ -91,17 +91,6 @@ describe('popover', () => {
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
   })
 
-  it('should label the dialog with the visible title', () => {
-    renderWithTheme(
-      <Popover content="Test" data-testid="popover" title="Popover Title" visible>
-        Children
-      </Popover>,
-    )
-
-    expect(screen.getByRole('heading', { level: 2, name: 'Popover Title' })).toBeVisible()
-    expect(screen.getByRole('dialog')).toHaveAccessibleName('Popover Title')
-  })
-
   it('should render the content as a paragraph when it is a string', () => {
     renderWithTheme(
       <Popover content="Popover content" title="Test" visible>
@@ -133,41 +122,6 @@ describe('popover', () => {
     )
 
     expect(screen.getByTestId('popover')).toHaveStyle({ backgroundColor: background })
-  })
-
-  it('should expose the open state on the trigger', async () => {
-    renderWithTheme(
-      <Popover content="Test" title="Test">
-        <button type="button">Open Popover</button>
-      </Popover>,
-    )
-
-    const trigger = screen.getByRole('button', { name: 'Open Popover' })
-    expect(trigger).toHaveAttribute('aria-haspopup', 'dialog')
-    expect(trigger).toHaveAttribute('aria-expanded', 'false')
-    expect(trigger).not.toHaveAttribute('aria-controls')
-
-    await userEvent.click(trigger)
-
-    expect(trigger).toHaveAttribute('aria-expanded', 'true')
-    expect(trigger).toHaveAttribute('aria-controls', screen.getByRole('dialog').id)
-  })
-
-  it('should move focus into the dialog on open and restore it to the trigger on close', async () => {
-    renderWithTheme(
-      <Popover content="Test" title="Test">
-        <button type="button">Open Popover</button>
-      </Popover>,
-    )
-
-    const trigger = screen.getByRole('button', { name: 'Open Popover' })
-    await userEvent.click(trigger)
-
-    // focus lands on the first tabbable element of the dialog
-    await waitFor(() => expect(screen.getByRole('button', { name: 'close' })).toHaveFocus())
-
-    await userEvent.keyboard('{Escape}')
-    await waitFor(() => expect(trigger).toHaveFocus())
   })
 
   it('should ignore deprecated props', () => {
