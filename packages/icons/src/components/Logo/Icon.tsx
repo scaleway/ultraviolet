@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
+import type { CSSProperties, ReactNode, SVGProps } from 'react'
 import type { SIZES } from './constant'
 import { logo } from './style.css'
 
@@ -11,7 +11,7 @@ export type IconProps = {
   children: ReactNode
   style?: CSSProperties
   accessibleLabel?: string
-  'aria-hidden'?: boolean
+  'aria-hidden'?: SVGProps<SVGSVGElement>['aria-hidden']
 }
 
 /**
