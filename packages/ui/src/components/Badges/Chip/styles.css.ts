@@ -35,6 +35,7 @@ const container = recipe({
     userSelect: 'none',
     width: 'fit-content',
     borderRadius: theme.radii.xlarge,
+    overflow: 'hidden',
   },
   variants: {
     size: {
@@ -155,15 +156,20 @@ const closeButton = recipe({
     contentBase,
     {
       borderLeft: 0,
+      selectors: {
+        '&:disabled': {
+          cursor: 'not-allowed',
+        },
+      },
     },
   ],
   variants: {
     size: {
       medium: {
         padding: theme.space['0.5'],
-        borderRadius: `0px ${theme.radii.small} ${theme.radii.small} 0px`,
+        borderRadius: 0,
       },
-      large: { padding: theme.space['0.5'], borderRadius: `0px ${theme.radii.default} ${theme.radii.default} 0px` },
+      large: { padding: theme.space['0.5'], borderRadius: 0 },
     },
     isActive: {
       true: {
@@ -187,4 +193,14 @@ const closeButton = recipe({
   },
 })
 
-export const chipStyle = { buttonContainer, container, closeButton, content }
+const contentStack = recipe({
+  variants: {
+    disabled: {
+      true: {
+        cursor: 'not-allowed',
+      },
+    },
+  },
+})
+
+export const chipStyle = { buttonContainer, container, closeButton, content, contentStack }
