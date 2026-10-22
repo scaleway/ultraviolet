@@ -12,7 +12,14 @@ type ProminenceType = keyof typeof PROMINENCES
 type BulletProps = {
   className?: string
   size?: keyof typeof SIZES
+  /**
+   * @deprecated use `tooltipLabel` instead.
+   */
   tooltip?: string
+  /**
+   * Label of the bullet rendered inside a Tooltip.
+   */
+  tooltipLabel?: string
   tooltipBaseId?: string
   sentiment?: (typeof SENTIMENTS)[number]
   'data-testid'?: string
@@ -30,6 +37,7 @@ export const Bullet = ({
   sentiment = 'neutral',
   size = 'medium',
   tooltip,
+  tooltipLabel,
   tooltipBaseId,
   'data-testid': dataTestId,
   prominence = 'default',
@@ -37,17 +45,21 @@ export const Bullet = ({
   disabled,
   style,
   'aria-hidden': ariaHidden,
-}: BulletProps) => (
-  <Tooltip id={tooltipBaseId} text={tooltip}>
-    <div
-      className={cn(className, bulletStyle.bullet({ disabled, prominence, sentiment, size }))}
-      data-testid={dataTestId}
-      style={style}
-      aria-hidden={ariaHidden}
-    >
-      {children}
-    </div>
-  </Tooltip>
-)
+}: BulletProps) => {
+  const tooltipText = tooltipLabel || tooltip
+
+  return (
+    <Tooltip id={tooltipBaseId} relation="label" text={tooltipText}>
+      <div
+        className={cn(className, bulletStyle.bullet({ disabled, prominence, sentiment, size }))}
+        data-testid={dataTestId}
+        style={style}
+        aria-hidden={ariaHidden}
+      >
+        {children}
+      </div>
+    </Tooltip>
+  )
+}
 
 Bullet.displayName = 'Bullet'

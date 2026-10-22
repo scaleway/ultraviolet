@@ -4,11 +4,11 @@ export const Tooltip = Template.bind({})
 
 Tooltip.args = {
   children: '1',
-  tooltip: 'tooltip text',
+  tooltipLabel: 'tooltip text',
 }
 
 Tooltip.parameters = {
   docs: {
-    description: { story: 'Add a `tooltip` using tooltip property' },
+    description: { story: 'Add a description using the `tooltipDescription` prop' },
   },
 }

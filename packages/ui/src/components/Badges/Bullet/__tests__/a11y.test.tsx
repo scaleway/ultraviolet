@@ -1,4 +1,6 @@
 import { screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
 import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations, renderWithTheme } from '@utils/test'
@@ -44,6 +46,43 @@ describe('bullet - A11y', { tags: ['a11y'] }, () => {
       const { container } = renderWithTheme(<Bullet>1</Bullet>)
 
       expect(container.querySelector('[aria-hidden]')).not.toBeInTheDocument()
+    })
+  })
+
+  describe('tooltip labeling (WCAG 1.1.1, 4.1.2)', () => {
+    it('uses tooltipLabel as the accessible name (label relation)', () => {
+      renderWithTheme(
+        <Bullet data-testid="bullet" tooltipLabel="Done">
+          <CheckIcon />
+        </Bullet>,
+      )
+
+      const bullet = screen.getByTestId('bullet')
+      expect(bullet.parentElement).toHaveAccessibleName('Done')
+    })
+
+    it('falls back to the deprecated tooltip prop as a description', async () => {
+      const user = userEvent.setup()
+      renderWithTheme(
+        <Bullet data-testid="bullet" tooltip="Extra info">
+          <CheckIcon />
+        </Bullet>,
+      )
+
+      const bullet = screen.getByTestId('bullet')
+      await user.hover(bullet)
+      expect(bullet.parentElement).toHaveAccessibleName('Extra info')
+    })
+
+    it('prefers tooltipLabel over tooltip when both are set', () => {
+      renderWithTheme(
+        <Bullet data-testid="bullet" tooltip="ignored" tooltipLabel="the label">
+          <CheckIcon />
+        </Bullet>,
+      )
+
+      const bullet = screen.getByTestId('bullet')
+      expect(bullet.parentElement).toHaveAccessibleName('the label')
     })
   })
 })

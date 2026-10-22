@@ -15,8 +15,8 @@ export const Icon: StoryFn = props => (
       </Bullet>
     </Stack>
     <Stack direction="row" gap="1">
-      With the <code>tooltip</code> prop:
-      <Bullet {...props} sentiment="success" tooltip="Done">
+      With the <code>tooltipLabel</code> prop:
+      <Bullet {...props} sentiment="success" tooltipLabel="Done">
         <CheckIcon />
       </Bullet>
     </Stack>
@@ -47,7 +47,7 @@ Icon.parameters = {
   docs: {
     description: {
       story:
-        'To add an icon, simply pass it as a child of the `Bullet` component. The sentiment of the icon will automatically follow the sentiment of the bullet. **Do not forget to label the icon** (use the `VisuallyHidden` component, use the `tooltip` prop directly on the `Bullet`, rely on adjacent text, or use the `accessibleLabel` prop on the icon as a last resort)',
+        'To add an icon, simply pass it as a child of the `Bullet` component. The sentiment of the icon will automatically follow the sentiment of the bullet. **Do not forget to label the icon** (use the `VisuallyHidden` component, use the `tooltipLabel` prop directly on the `Bullet`, rely on adjacent text, or use the `accessibleLabel` prop on the icon as a last resort)',
     },
   },
 }
