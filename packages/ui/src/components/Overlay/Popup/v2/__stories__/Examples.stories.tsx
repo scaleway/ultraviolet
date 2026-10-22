@@ -36,8 +36,8 @@ const Popover = () => (
 )
 
 const MenuList = () => {
-  const { context } = usePopupContext()
-  const close = () => context.onOpenChange(false)
+  const { setOpen } = usePopupContext()
+  const close = () => setOpen(false)
 
   return (
     <>

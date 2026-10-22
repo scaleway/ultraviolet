@@ -4,6 +4,7 @@ import {
   FloatingFocusManager,
   FloatingPortal,
   arrow as arrowMiddleware,
+  offset,
   size,
   useMergeRefs,
 } from '@floating-ui/react'
@@ -30,7 +31,7 @@ type PopupPanelProps = {
   placement?: Placement
   /**
    * Where the popup is portaled. Pass `null` to render inline.
-   * @default document.body
+   * @default the closest `dialog` parent, or document.body
    */
   portalTarget?: HTMLElement | null
   /**
@@ -38,6 +39,11 @@ type PopupPanelProps = {
    * @default false
    */
   matchTriggerWidth?: boolean
+  /**
+   * Background color applied to the panel and its arrow.
+   * @default the raised elevation surface
+   */
+  background?: string
   /**
    * When `true`, renders an arrow pointing at the trigger.
    * @default false
@@ -87,8 +93,9 @@ export const Panel = forwardRef<HTMLDivElement, PopupPanelProps>(
       children,
       role = 'dialog',
       placement = 'bottom-start',
-      portalTarget = typeof window === 'undefined' ? null : document.body,
+      portalTarget: userPortalTarget,
       matchTriggerWidth = false,
+      background,
       arrow = false,
       focusTrap = false,
       initialFocus,
@@ -143,7 +150,7 @@ export const Panel = forwardRef<HTMLDivElement, PopupPanelProps>(
         )
       }
       if (arrow) {
-        middleware.push(arrowMiddleware({ element: arrowRef, padding: 4 }))
+        middleware.push(offset(4), arrowMiddleware({ element: arrowRef, padding: 4 }))
       }
       setPanelMiddleware(middleware)
     }, [matchTriggerWidth, arrow, arrowRef, setPanelMiddleware])
@@ -154,6 +161,11 @@ export const Panel = forwardRef<HTMLDivElement, PopupPanelProps>(
 
     const hasInitialFocus = initialFocus !== undefined
     const manageFocus = focusTrap || returnFocus || hasInitialFocus
+
+    // portal the Popup to the parent dialog so that clicks inside the Popup don't close the dialog
+    const parentDialogElement = (refs.reference.current as HTMLElement)?.closest('dialog')
+    const defaultPortalTarget = typeof window === 'undefined' ? null : parentDialogElement || document.body
+    const portalTarget = userPortalTarget ?? defaultPortalTarget
 
     const popupElement = (
       <div
@@ -169,13 +181,20 @@ export const Panel = forwardRef<HTMLDivElement, PopupPanelProps>(
           status === 'open' || status === 'close' ? popupV2Style.animation[status] : null,
           className,
         )}
-        style={{ ...floatingStyles, ...style }}
+        style={{ ...floatingStyles, backgroundColor: background, ...style }}
       >
-        {arrow ? <FloatingArrow ref={arrowRef} context={context} tipRadius={2} className={popupV2Style.arrow} /> : null}
-        <div className={popupV2Style.content}>
-          {accessibleLabel ? <VisuallyHidden id={labelId}>{accessibleLabel}</VisuallyHidden> : null}
-          {children}
-        </div>
+        {arrow ? (
+          <FloatingArrow
+            className={popupV2Style.arrow}
+            context={context}
+            ref={arrowRef}
+            style={background ? { fill: background } : undefined}
+            tipRadius={2}
+          />
+        ) : null}
+
+        {accessibleLabel ? <VisuallyHidden id={labelId}>{accessibleLabel}</VisuallyHidden> : null}
+        {children}
       </div>
     )
 

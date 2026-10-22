@@ -25,6 +25,7 @@ const panel = style({
   borderRadius: theme.radii.default,
   boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
   color: theme.colors.neutral.text,
+  maxWidth: '100dvw',
   position: 'relative',
   zIndex: 1,
   vars: { [offsetX]: '0px', [offsetY]: '0px' },
@@ -34,12 +35,6 @@ const panel = style({
     "&[data-placement^='left']": { vars: { [offsetX]: `${OFFSET}px` } },
     "&[data-placement^='right']": { vars: { [offsetX]: `-${OFFSET}px` } },
   },
-})
-
-const content = style({
-  maxHeight: '100%',
-  overflow: 'auto',
-  position: 'relative',
 })
 
 const arrow = style({
@@ -64,7 +59,6 @@ const trigger = style({
 export const popupV2Style = {
   animation,
   arrow,
-  content,
   panel,
   trigger,
 }

@@ -87,9 +87,9 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
     () => ({
       ...floating,
       open,
+      setOpen,
       id,
       role,
-      placement,
       setRole,
       setPlacement,
       setPanelMiddleware,
@@ -101,9 +101,9 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
     [
       floating,
       open,
+      setOpen,
       id,
       role,
-      placement,
       setRole,
       setPlacement,
       setPanelMiddleware,
