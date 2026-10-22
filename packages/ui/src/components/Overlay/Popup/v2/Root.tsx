@@ -11,7 +11,7 @@ import {
 } from '@floating-ui/react'
 import type { Middleware, Placement } from '@floating-ui/react'
 import { usePrefersReducedMotion } from '@ultraviolet/animations'
-import { useCallback, useId, useMemo, useState } from 'react'
+import { useCallback, useEffect, useId, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
 import { isHeadlessTestEnvironment } from '../../../../helpers/isHeadlessTestEnvironment'
 import { PopupContext } from './context'
@@ -74,6 +74,29 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
 
   const dismiss = useDismiss(floating.context)
   const { getFloatingProps } = useInteractions([dismiss])
+
+  // Escape must close the popup and not an enclosing Modal, which reacts to Escape too.
+  // We listen to keyboard events in the capture phase, before all other listeners that are in the bubble phase.
+  useEffect(() => {
+    const handleKeyUp = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.stopPropagation()
+      }
+    }
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (open && event.key === 'Escape') {
+        event.stopPropagation()
+        setOpen(false)
+        document.addEventListener('keyup', handleKeyUp, { capture: true, once: true })
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown, { capture: true })
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown, { capture: true })
+    }
+  }, [open, setOpen])
 
   const prefersReducedMotion = usePrefersReducedMotion()
 
