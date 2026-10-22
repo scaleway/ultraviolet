@@ -54,10 +54,8 @@ AdvancedUsage.parameters = {
 
 AdvancedUsage.decorators = [
   StoryComponent => (
-    <div style={{ height: '500px' }}>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <StoryComponent />
-      </div>
-    </div>
+    <Stack direction="row" gap={2} justifyContent="center" alignItems="center" style={{ height: '150px' }}>
+      <StoryComponent />
+    </Stack>
   ),
 ]

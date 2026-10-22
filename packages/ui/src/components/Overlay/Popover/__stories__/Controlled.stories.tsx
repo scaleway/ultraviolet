@@ -1,6 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { Button } from '../../../Action/Button'
+import { Stack } from '../../../Layout/Stack'
 import { Popover } from '../index'
 
 export const Controlled: StoryFn<typeof Popover> = args => {
@@ -44,10 +45,8 @@ Controlled.parameters = {
 
 Controlled.decorators = [
   StoryComponent => (
-    <div style={{ height: '200px' }}>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <StoryComponent />
-      </div>
-    </div>
+    <Stack direction="row" gap={2} justifyContent="center" alignItems="end" style={{ height: '200px' }}>
+      <StoryComponent />
+    </Stack>
   ),
 ]
