@@ -3,6 +3,8 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Popup } from '..'
+import { Modal } from '../../../Modal'
+import { usePopupContext } from '../context'
 
 const renderPopup = ({
   rootProps = {},
@@ -61,6 +63,71 @@ describe('popup v2', () => {
       await userEvent.keyboard('{Escape}')
 
       expect(onOpenChange).toHaveBeenCalledWith(false)
+    })
+
+    it('should close only the popup and not an enclosing Modal on Escape', async () => {
+      const onClose = vi.fn()
+      renderWithTheme(
+        <Modal ariaLabel="modal-test" open onClose={onClose}>
+          <Popup.Root>
+            <Popup.Trigger>
+              <button type="button">Open</button>
+            </Popup.Trigger>
+            <Popup.Panel>Content</Popup.Panel>
+          </Popup.Root>
+        </Modal>,
+        undefined,
+        { container: document.body },
+      )
+
+      await userEvent.click(screen.getByRole('button', { name: 'Open' }))
+      expect(screen.getByText('Content')).toBeVisible()
+
+      await userEvent.keyboard('{Escape}')
+
+      expect(screen.queryByText('Content')).not.toBeInTheDocument()
+      expect(onClose).not.toHaveBeenCalled()
+
+      await userEvent.keyboard('{Escape}')
+      expect(onClose).toHaveBeenCalledOnce()
+    })
+
+    it('should not close an enclosing Modal when clicking a menu item in the Popup', async () => {
+      const onClose = vi.fn()
+
+      const MenuList = () => {
+        const { setOpen } = usePopupContext()
+
+        return (
+          <>
+            <Popup.Trigger>
+              <button type="button">Open</button>
+            </Popup.Trigger>
+            <Popup.Panel role="menu" accessibleLabel="Actions">
+              <button type="button" role="menuitem" onClick={() => setOpen(false)}>
+                Create
+              </button>
+            </Popup.Panel>
+          </>
+        )
+      }
+
+      renderWithTheme(
+        <Modal ariaLabel="modal-test" open onClose={onClose}>
+          <Popup.Root>
+            <MenuList />
+          </Popup.Root>
+        </Modal>,
+        undefined,
+        { container: document.body },
+      )
+
+      await userEvent.click(screen.getByRole('button', { name: 'Open' }))
+      await userEvent.click(screen.getByRole('menuitem', { name: 'Create' }))
+
+      expect(screen.queryByRole('menuitem', { name: 'Create' })).not.toBeInTheDocument()
+      expect(onClose).not.toHaveBeenCalled()
+      expect(screen.getByRole('dialog')).toBeVisible()
     })
 
     it('should call onOpenChange when dismissed by an outside click', async () => {
