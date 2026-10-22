@@ -130,6 +130,7 @@ export type FilterConfigGroup<V extends AnyObject = AnyObject> = {
   label: string
   items: FilterConfigItem<V>[]
   hideInDrawer?: boolean
+  labelDescription?: ReactNode
   expanded?: boolean
 }
 

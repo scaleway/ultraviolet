@@ -1,4 +1,4 @@
-import { InformationIcon } from '@ultraviolet/icons'
+import { InformationOutlineIcon } from '@ultraviolet/icons'
 import { Tooltip } from '../../../components'
 import type { FilterConfig } from '../types'
 
@@ -17,7 +17,7 @@ export type FilterValues = {
 
 const labelDescription = (
   <Tooltip text="Info">
-    <InformationIcon sentiment="neutral" />
+    <InformationOutlineIcon sentiment="neutral" />
   </Tooltip>
 )
 
@@ -46,12 +46,14 @@ export const demoFilters: FilterConfig<FilterValues>[] = [
   {
     type: 'group',
     label: 'Infos',
+    labelDescription,
     name: 'infos',
     items: [
       {
         type: 'select',
         name: 'status',
         label: 'Status',
+        labelDescription,
         clearable: true,
         placeholder: 'Select status',
         options: [
