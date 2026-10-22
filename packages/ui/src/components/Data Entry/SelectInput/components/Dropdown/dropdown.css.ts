@@ -101,6 +101,7 @@ export const dropdownItemBase = style([
   {
     backgroundColor: theme.colors.other.elevation.background.raised,
     display: 'grid',
+    gridTemplateColumns: 'minmax(0, 1fr)',
   },
 ])
 
