@@ -11,7 +11,8 @@ export const gb = {
 export const pipeline = {
   description: '€4.00 per additional',
   hint: {
-    content: 'popover',
+    title: 'more details',
+    content: 'popover details',
     type: 'popover' as const,
   },
   key: 'pipeline',

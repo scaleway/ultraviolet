@@ -26,8 +26,8 @@ export const domain = {
 
 export const ssl = {
   hint: {
-    content: 'tooltip',
-    type: 'tootlip' as const,
+    title: 'More details',
+    content: 'Lorem ipsum dolor sit amet',
   },
   key: 'ssl',
   text: 'SSL Certificate',
