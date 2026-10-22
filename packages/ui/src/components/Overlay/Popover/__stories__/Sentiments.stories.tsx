@@ -1,44 +1,28 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { useCallback, useState } from 'react'
-import type { Dispatch, SetStateAction } from 'react'
 import { Button } from '../../../Action/Button'
+import { Stack } from '../../../Layout/Stack'
 import { Popover } from '../index'
 import { Playground } from './Playground.stories'
 
-export const Sentiments: StoryFn<typeof Popover> = () => {
-  const [primaryOpened, setPrimaryOpened] = useState(false)
-  const [defaultOpened, setDefaultOpened] = useState(false)
+export const Sentiments: StoryFn<typeof Popover> = () => (
+  <Stack direction="row" gap={2}>
+    <Popover
+      content="This is a simple text content inside the popover. You can customize it by passing text into content property."
+      sentiment="neutral"
+      title="Popover Title"
+    >
+      <Button sentiment="neutral">Open Popover neutral sentiment</Button>
+    </Popover>
 
-  const onCloseCallBack = useCallback((setValue: Dispatch<SetStateAction<boolean>>) => {
-    setValue(false)
-  }, [])
-
-  return (
-    <div style={{ display: 'inline-flex', gap: '16px' }}>
-      <Popover
-        content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-        onClose={() => onCloseCallBack(setDefaultOpened)}
-        sentiment="neutral"
-        title="Popover Title"
-        visible={defaultOpened}
-      >
-        <Button onClick={() => setDefaultOpened(true)} sentiment="neutral">
-          Open Popover neutral sentiment
-        </Button>
-      </Popover>
-
-      <Popover
-        content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-        onClose={() => onCloseCallBack(setPrimaryOpened)}
-        sentiment="primary"
-        title="Popover Title"
-        visible={primaryOpened}
-      >
-        <Button onClick={() => setPrimaryOpened(true)}>Open Popover primary sentiment</Button>
-      </Popover>
-    </div>
-  )
-}
+    <Popover
+      content="This is a simple text content inside the popover. You can customize it by passing text into content property."
+      sentiment="primary"
+      title="Popover Title"
+    >
+      <Button>Open Popover primary sentiment</Button>
+    </Popover>
+  </Stack>
+)
 
 Sentiments.parameters = {
   docs: {

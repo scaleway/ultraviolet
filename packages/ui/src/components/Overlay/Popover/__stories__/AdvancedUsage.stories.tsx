@@ -1,9 +1,11 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { useCallback, useState } from 'react'
 import type { ComponentProps } from 'react'
 import { Button } from '../../../Action/Button'
+import { TagList } from '../../../Data Display/TagList'
 import { SelectInput } from '../../../Data Entry/SelectInput'
 import { TextInput } from '../../../Data Entry/TextInput'
+import { Stack } from '../../../Layout/Stack'
+import { Text } from '../../../Typography/Text'
 import { Modal } from '../../Modal'
 import { Popover } from '../index'
 
@@ -18,38 +20,29 @@ const options: ComponentProps<typeof SelectInput>['options'] = [
   },
 ]
 
-export const AdvancedUsage: StoryFn<typeof Popover> = () => {
-  const [opened, setOpened] = useState(false)
-
-  const onCloseCallBack = useCallback(() => {
-    setOpened(false)
-  }, [])
-
-  return (
-    <Popover
-      content={
-        <>
-          <Modal disclosure={() => <Button sentiment="neutral">Open Modal</Button>}>
-            <div>
-              <div>Modal</div>
-              <SelectInput label="Choose an option" name="options" options={options} />
-              <TextInput label="Type something here" />
-            </div>
-          </Modal>
-          <SelectInput label="Choose an option" name="options" options={options} />
-          <TextInput label="Type something here" />
-        </>
-      }
-      onClose={onCloseCallBack}
-      title="Popover Title"
-      visible={opened}
-    >
-      <Button onClick={() => setOpened(true)} sentiment="neutral">
-        Open Popover
-      </Button>
-    </Popover>
-  )
-}
+export const AdvancedUsage: StoryFn<typeof Popover> = () => (
+  <Popover
+    content={
+      <>
+        <Modal disclosure={() => <Button sentiment="neutral">Open Modal</Button>}>
+          <Stack gap={2}>
+            <Text as="h2" variant="headingSmallStrong">
+              Modal
+            </Text>
+            <SelectInput label="Choose an option" name="options" options={options} />
+            <TextInput label="Type something here" />
+            <TagList popoverTitle="Tags" tags={['one', 'two', 'three', 'four', 'five']} />
+          </Stack>
+        </Modal>
+        <SelectInput label="Choose an option" name="options" options={options} />
+        <TextInput label="Type something here" />
+      </>
+    }
+    title="Popover Title"
+  >
+    <Button sentiment="neutral">Open Popover</Button>
+  </Popover>
+)
 
 AdvancedUsage.parameters = {
   docs: {

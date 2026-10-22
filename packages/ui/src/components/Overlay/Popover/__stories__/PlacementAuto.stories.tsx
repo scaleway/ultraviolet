@@ -1,10 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { Button } from '../../../Action/Button'
 import { Popover } from '../index'
 
 export const PlacementAuto: StoryFn<typeof Popover> = args => {
-  const [opened, setOpened] = useState(false)
   const btnRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -15,11 +14,9 @@ export const PlacementAuto: StoryFn<typeof Popover> = args => {
     <Popover
       {...args}
       content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-      onClose={() => setOpened(false)}
       title="Popover Title"
-      visible={opened}
     >
-      <Button onClick={() => setOpened(true)} sentiment="neutral" ref={btnRef}>
+      <Button sentiment="neutral" ref={btnRef}>
         Open Popover
       </Button>
     </Popover>
@@ -30,7 +27,7 @@ PlacementAuto.parameters = {
   docs: {
     description: {
       story:
-        'The Popover automatically flips its direction if the "placement" prop includes "auto" and there is not enough space to open it in the requested direction.<br/>It also translates on the axis orthogonal to the direction, to avoid overflowing its container.',
+        'The Popover automatically flips its placement if there is not enough space to open it in the requested direction.<br/>It also translates on the axis orthogonal to the direction, to avoid overflowing its container.',
     },
   },
 }
