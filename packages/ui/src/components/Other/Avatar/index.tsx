@@ -35,6 +35,8 @@ export const Avatar = ({
   const finalSize = sizes(UVTheme)[size]
 
   return (
+    // Role is added when the element is interactive, the linter cannot statically infer it
+    // oxlint-disable-next-line jsx-a11y/no-static-element-interactions
     <div
       className={cn(className, avatarStyle.container({ sentiment, shape, size }))}
       data-has-background={!['user', 'image'].includes(variant)}
