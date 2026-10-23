@@ -1,6 +1,6 @@
 'use client'
 
-import type { FormHTMLAttributes, ReactNode } from 'react'
+import type { AriaAttributes, ReactNode } from 'react'
 import { FormProvider } from 'react-hook-form'
 import type { FieldValues, UseFormReturn } from 'react-hook-form'
 import { ErrorProvider } from '../../providers'
@@ -17,7 +17,7 @@ type FormProps<TFieldValues extends FieldValues> = {
   name?: string
   onSubmit: (data: TFieldValues) => Promise<OnSubmitReturn> | OnSubmitReturn
   methods: UseFormReturn<TFieldValues>
-  'aria-label'?: FormHTMLAttributes<HTMLFormElement>['aria-label']
+  'aria-label'?: AriaAttributes['aria-label']
   /**
    * If `true`, the fields in the form will use the [register](https://react-hook-form.com/docs/useform/register) API from react-hook-form
    * and the fields will be uncontrolled, which triggers less re-renders. BUT in order to have correct `isDirty` state, you need to provide
