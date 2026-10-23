@@ -11,12 +11,19 @@ describe(shuffle, () => {
     expect(shuffle('aaa')).toBe('aaa')
   })
 
+  it('should return an empty string for nullish values', () => {
+    expect(shuffle(null)).toBe('')
+    expect(shuffle(undefined)).toBe('')
+  })
+
   it('should return a string with the same characters', () => {
     const input = 'abcdef'
     const result = shuffle(input)
 
     expect(result).toHaveLength(input.length)
-    expect([...result].toSorted()).toStrictEqual([...input].toSorted())
+    for (const char of ['a', 'b', 'c', 'd', 'e', 'f']) {
+      expect(result).toContain(char)
+    }
   })
 
   it('should return a strictly different string for multi-character input', () => {
@@ -25,11 +32,13 @@ describe(shuffle, () => {
     }
   })
 
-  it('should handle emojis as single characters', () => {
+  it('should handle complex emojis as single characters', () => {
     const input = '👨‍👩‍👧‍👦abc'
     const result = shuffle(input)
 
     expect(result).toHaveLength(input.length)
-    expect([...result].toSorted()).toStrictEqual([...input].toSorted())
+    for (const char of ['👨‍👩‍👧‍👦', 'a', 'b', 'c']) {
+      expect(result).toContain(char)
+    }
   })
 })

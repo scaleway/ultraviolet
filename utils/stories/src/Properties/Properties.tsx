@@ -1,4 +1,5 @@
 import { Stack, Table, Text } from '@ultraviolet/ui'
+import { reverseString } from '@ultraviolet/utils'
 import type { ComponentType } from 'react'
 import * as components from '../../../../packages/ui/src/components'
 
@@ -144,8 +145,8 @@ const Properties = () => {
                       }
                     }
 
-                    const reversedLocalProperty = [...lowerCaseLocalProperty].toReversed().join('')
-                    const reversedLowerCaseProperty = [...lowerCaseProperty].toReversed().join('')
+                    const reversedLocalProperty = reverseString(lowerCaseLocalProperty)
+                    const reversedLowerCaseProperty = reverseString(lowerCaseProperty)
 
                     for (let i = 4; i < reversedLocalProperty.length; i += 1) {
                       const reverseLocalPropertySubstring = reversedLocalProperty.substring(0, i)

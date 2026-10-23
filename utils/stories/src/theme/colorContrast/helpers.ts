@@ -1,3 +1,5 @@
+import { toCharacterArray } from '@ultraviolet/utils'
+
 export type ContrastLevel = 'pass' | 'fail' | 'disabled'
 
 export type Pairing = {
@@ -14,7 +16,12 @@ export const AA_THRESHOLD = 4.5
 
 export const hexToRgb = (hex: string): [number, number, number] => {
   const cleaned = hex.replace('#', '')
-  const full = cleaned.length === 3 ? [...cleaned].map(c => c + c).join('') : cleaned
+  const full =
+    cleaned.length === 3
+      ? toCharacterArray(cleaned)
+          .map(c => c + c)
+          .join('')
+      : cleaned
   return [
     Number.parseInt(full.slice(0, 2), 16),
     Number.parseInt(full.slice(2, 4), 16),

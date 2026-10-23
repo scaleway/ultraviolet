@@ -51,7 +51,6 @@ export const warnRules = defineConfig({
     'typescript/consistent-return': 'warn', // typescript errors (8)
     'typescript/dot-notation': 'warn', // typescript errors (4)
     'typescript/explicit-member-accessibility': 'warn', // typescript errors (10)
-    'typescript/no-misused-spread': 'warn', // typescript errors (7)
     'typescript/no-non-null-assertion': 'warn', // typescript errors (29)
     'typescript/no-unnecessary-condition': 'warn', // typescript errors (307)
     'typescript/no-unnecessary-type-arguments': 'warn', // typescript errors (5)
