@@ -1,0 +1,71 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Display/List/A11y" />
+
+# List - Accessibility
+
+## Description
+
+List displays tabular data using native HTML `<table>` semantics: `<th>` columns in a `<thead>`, `<td>` cells in `<tr>` rows. It supports sortable headers (`aria-sort`), row selection (select-all + shift-range), expandable rows, a select action bar, row sentiments, a highlight animation, and a loading skeleton.
+
+## Summary
+
+1. ❌ **Perceivable**: `role` overrides on `<th>`/`<tr>` and a missing table name break the table/header/data relationships (WCAG 1.3.1).
+2. ❌ **Operable**: the clickable row responds to Space but not Enter, nests other controls, uses non-descriptive labels, and has an unverified focus indicator (WCAG 2.1.1, 2.4.6, ⚠️ 2.4.7).
+3. ✅ **Understandable**: content is readable and sorting/expansion require explicit activation.
+4. ❌ **Robust**: generic control names, a re-purposed role and the missing table name prevent correct name/role/value exposure (WCAG 4.1.2).
+
+## ARIA Pattern
+
+Native HTML `<table>` semantics; the [ARIA Table Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/table/) describes the intent. Per the APG, a sortable header keeps its `columnheader` role with a real `<button>` inside it, and `aria-sort` on the `<th>`.
+
+## Rules
+
+Enforced by the component:
+
+- ❌ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - `role="button columnheader"` on `<th>` and `role="button row"` on `<tr>`: the first valid role wins, so both are exposed as `button`, losing the column/row/cell relationships and making `aria-sort`/`aria-expanded`/`aria-controls` invalid.
+- ❌ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - the `<table>` has no `<caption>`/`aria-label`/`aria-labelledby` and no prop to set one.
+- ❌ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - the clickable row handles only `Space` (not `Enter`), contains nested focusable controls, and its `Space` handler swallows the row checkbox's `Space`.
+- ❌ [WCAG 2.4.6 - Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html) - "select", "select all" and "expand" are identical for every row, so the names don't identify the row acted on.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - generic names and a re-purposed `<tr>`/`<th>` role.
+- ✅ [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) / [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - focus moves freely and follows DOM order.
+- ⚠️ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) / [1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - focus is shown only by the cell border switching to `primary.border`; rows that are selectable _and_ expandable have two visible focus states for the row itself and the checkbox inside.
+- ⚠️ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - loading shows empty skeleton cells with no `aria-busy` or live region.
+
+To apply when using the component:
+
+- [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - a row `sentiment` is color-only; convey it in text too.
+
+## Accessibility issues
+
+**Critical:**
+
+- **`role` overrides break the table.** `HeaderCell` uses `<th role="button columnheader">` and `Row` uses `<tr role="button row">`. The first valid role wins, so sortable headers and clickable rows become `button`: header/row/cell relationships are lost, `aria-sort` is ignored, and each row is announced as one big button. Fix: keep `<th>` as `columnheader` with a real `<button>` inside (and `aria-sort` on the `<th>`); keep native `<tr>` row/cell semantics and expose expansion via the expand button.
+- **No accessible table name.** There is no `<caption>`/`aria-label`/`aria-labelledby` and no prop (e.g. `accessibleName`) to provide one.
+
+**High:**
+
+- **Non-descriptive, duplicated names.** "select", "select all" and "expand" are identical for every row/header. Include row context (row label/id); per RFC [#6585](https://github.com/scaleway/ultraviolet/discussions/6585) prefer an `accessibleLabel` over raw `aria-label` once `Checkbox`/`Button` support it.
+- **Incomplete row keyboard support.** The row behaves as a button but handles `Space` only, not `Enter`, and nests the checkbox (and tooltip wrapper) inside a button role.
+- **Selection and expansion collide.** On an expandable row without an expand-button column, activating the row checkbox bubbles to the row `onClick`/`onKeyDown` and toggles expansion (and `preventDefault` blocks the checkbox). The two should not trigger each other.
+
+**Medium:**
+
+- `aria-sort="none"` is missing on sortable columns that aren't the current sort target.
+- The expand `<button>` doesn't own `aria-expanded`/`aria-controls`; they sit on the overridden `<tr>`. If the expanded rows are dynamically inserted in the DOM, be careful to avoid `aria-controls` that links to non-existing DOM nodes.
+- For expandable rows, consider keeping them in the DOM when they are collapsed to allow discovery with `Ctrl + F` for instance, like in native `details/summary`
+- Loading state not announced (no `aria-busy`/live region).
+- `scope="col"` is missing on the header cells.
+- Focus indicator is border-color only (see 2.4.7 / 1.4.11).
+- With expandable rows, the first column of the header (`thead > th`) is empty. Consider adding a visually hidden column title like "Expand button actions"
+
+**Low:**
+
+- Hardcoded English labels ("select", "select all", "expand") can't be localized.
+- `display: 'table-row,'` typo in `headerRow` (`styles.css.ts`) is an invalid value, silently ignored.
+
+## Dependencies
+
+- `Tooltip` - inside a sortable header the `info` tooltip wraps the icon in a focusable wrapper, adding an extra tab stop in the `<th>`; its dismiss/hover/persist behavior must satisfy WCAG 1.4.13.
+- `Checkbox` - focus-indicator contrast (WCAG 1.4.11), the SVG `<title>{name}</title>` leaking the form `name`, and the missing `accessibleLabel` strategy (RFC #6585) needed to label each row's checkbox.
+- `Button` - needs per-row descriptive `accessibleLabel` names.
