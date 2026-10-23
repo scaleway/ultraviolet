@@ -61,8 +61,7 @@ const stopClickPropagation: MouseEventHandler = event => {
   event.stopPropagation()
 }
 
-// oxlint-disable-next-line typescript/no-redundant-type-constituents
-type PopupRole = 'dialog' | 'tooltip' | 'popup' | (string & object)
+type PopupRole = 'dialog' | 'tooltip' | 'popup' | (string & {})
 
 type PopupProps = {
   /**
