@@ -63,7 +63,13 @@ export type PartialLabelProps = Partial<DefaultLabel>
 
 export type LabelProps = AtLeastOne<DefaultLabel>
 
-type BaseAriaProps = Pick<AriaAttributes, 'aria-describedby' | 'aria-labelledby'>
+// Inline aria declarations instead of `Pick<AriaAttributes, ...>` so props
+// documentation is generated (react-docgen cannot resolve mapped types and
+// react-docgen-typescript filters props declared in node_modules).
+type BaseAriaProps = {
+  'aria-describedby'?: AriaAttributes['aria-describedby']
+  'aria-labelledby'?: AriaAttributes['aria-labelledby']
+}
 
 type StyleBaseProps<E extends HTMLElement> = Pick<HTMLAttributes<E>, 'style' | 'className'>
 

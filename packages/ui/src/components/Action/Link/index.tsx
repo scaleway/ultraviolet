@@ -22,7 +22,14 @@ import { Tooltip } from '../../Overlay/Tooltip'
 import type { LinkSentiment, LinkProminence, LinkSize } from './constants'
 import { linkStyle } from './styles.css'
 
-type CommonAriaProps = Pick<AriaAttributes, 'aria-label' | 'aria-current' | 'aria-keyshortcuts'>
+// Inline aria declarations instead of `Pick<AriaAttributes, ...>` so props
+// documentation is generated (react-docgen cannot resolve mapped types and
+// react-docgen-typescript filters props declared in node_modules).
+type CommonAriaProps = {
+  'aria-label'?: AriaAttributes['aria-label']
+  'aria-current'?: AriaAttributes['aria-current']
+  'aria-keyshortcuts'?: AriaAttributes['aria-keyshortcuts']
+}
 
 type LinkProps = CommonAriaProps & {
   children: ReactNode
