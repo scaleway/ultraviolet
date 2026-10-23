@@ -5,14 +5,7 @@ import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIco
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn, getUUID } from '@ultraviolet/utils'
 import { useEffect, useId, useRef, useState } from 'react'
-import type {
-  ChangeEvent,
-  ComponentProps,
-  CSSProperties,
-  InputHTMLAttributes,
-  KeyboardEventHandler,
-  ReactNode,
-} from 'react'
+import type { AriaAttributes, ChangeEvent, ComponentProps, CSSProperties, KeyboardEventHandler, ReactNode } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import { Button } from '../../Action/Button'
 import { Tag } from '../../Badges/Tag'
@@ -56,7 +49,7 @@ type TagInputProps = {
    * Label description displayed right next to the label. It allows you to customize the label content.
    */
   labelDescription?: ReactNode
-  'aria-label'?: InputHTMLAttributes<HTMLInputElement>['aria-label']
+  'aria-label'?: AriaAttributes['aria-label']
   required?: boolean
   size?: TagInputSize
   error?: string
@@ -66,7 +59,7 @@ type TagInputProps = {
   tooltip?: string
   clearable?: boolean
   style?: CSSProperties
-  'aria-describedBy'?: InputHTMLAttributes<HTMLInputElement>['aria-describedby']
+  'aria-describedBy'?: AriaAttributes['aria-describedby']
 } & Pick<ComponentProps<typeof Tag>, 'sentiment' | 'variant'>
 
 /**

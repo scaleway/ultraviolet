@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId } from 'react'
-import type { InputHTMLAttributes, ReactNode, Ref } from 'react'
+import type { AriaAttributes, InputHTMLAttributes, ReactNode, Ref } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import { Row } from '../../Layout/Row'
 import { Stack } from '../../Layout/Stack'
@@ -17,7 +17,7 @@ type ToggleProps = {
   size?: 'large' | 'small'
   labelPosition?: 'left' | 'right'
   label?: ReactNode
-  'aria-label'?: InputHTMLAttributes<HTMLInputElement>['aria-label']
+  'aria-label'?: AriaAttributes['aria-label']
   helper?: ReactNode
   className?: string
   error?: boolean | string

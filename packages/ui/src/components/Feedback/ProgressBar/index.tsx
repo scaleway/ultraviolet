@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, HTMLAttributes, ReactNode } from 'react'
+import type { AriaAttributes, CSSProperties, ReactNode } from 'react'
 import { Stack } from '../../Layout/Stack'
 import { Label } from '../../Typography/Label'
 import { Text } from '../../Typography/Text'
@@ -24,8 +24,8 @@ type ProgressBarProps = {
   progress?: boolean
   className?: string
   'data-testid'?: string
-  'aria-labelledby'?: HTMLAttributes<HTMLDivElement>['aria-labelledby']
-  'aria-label'?: HTMLAttributes<HTMLDivElement>['aria-label']
+  'aria-labelledby'?: AriaAttributes['aria-labelledby']
+  'aria-label'?: AriaAttributes['aria-label']
   style?: CSSProperties
 }
 

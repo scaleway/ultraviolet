@@ -1,5 +1,5 @@
 import type { ReactCodeMirrorProps } from '@uiw/react-codemirror'
-import type { CSSProperties, HTMLAttributes, ReactNode } from 'react'
+import type { AriaAttributes, CSSProperties, ReactNode } from 'react'
 
 type CodeEditorLanguageName =
   | 'c'
@@ -257,12 +257,12 @@ export type CodeEditorProps = {
   hideText?: string
   id?: string
   labelDescription?: ReactNode
-  'aria-label'?: HTMLAttributes<HTMLDivElement>['aria-label']
+  'aria-label'?: AriaAttributes['aria-label']
   'data-testid'?: string
   className?: string
   error?: string
   lineNumbers?: boolean
   style?: CSSProperties
   required?: boolean
-  'aria-describedby'?: HTMLAttributes<HTMLDivElement>['aria-describedby']
+  'aria-describedby'?: AriaAttributes['aria-describedby']
 }

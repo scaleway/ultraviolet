@@ -9,6 +9,7 @@ import type { RenderProp } from '@ultraviolet/utils'
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react'
 import type {
   AnchorHTMLAttributes,
+  AriaAttributes,
   CSSProperties,
   ForwardedRef,
   HTMLAttributeAnchorTarget,
@@ -37,9 +38,9 @@ type LinkProps = {
   // For react router shouldn't be used directly
   onClick?: MouseEventHandler<HTMLAnchorElement>
   onKeyDown?: KeyboardEventHandler<HTMLAnchorElement>
-  'aria-label'?: AnchorHTMLAttributes<HTMLAnchorElement>['aria-label']
-  'aria-current'?: AnchorHTMLAttributes<HTMLAnchorElement>['aria-current']
-  'aria-keyshortcuts'?: AnchorHTMLAttributes<HTMLAnchorElement>['aria-keyshortcuts']
+  'aria-label'?: AriaAttributes['aria-label']
+  'aria-current'?: AriaAttributes['aria-current']
+  'aria-keyshortcuts'?: AriaAttributes['aria-keyshortcuts']
   oneLine?: boolean
   'data-testid'?: string
   /**

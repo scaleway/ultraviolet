@@ -1,102 +1,94 @@
-"use client";
+'use client'
 
-import type { XOR } from "@scaleway/types";
-import { useResolvedTheme } from "@ultraviolet/themes";
-import { cn, renderElement } from "@ultraviolet/utils";
-import type { RenderProp } from "@ultraviolet/utils";
-import { forwardRef, useMemo } from "react";
+import type { XOR } from '@scaleway/types'
+import { useResolvedTheme } from '@ultraviolet/themes'
+import { cn, renderElement } from '@ultraviolet/utils'
+import type { RenderProp } from '@ultraviolet/utils'
+import { forwardRef, useMemo } from 'react'
 import type {
+  AriaAttributes,
   AriaRole,
   ButtonHTMLAttributes,
   CSSProperties,
   MouseEventHandler,
   ReactNode,
   Ref,
-} from "react";
-import { Loader } from "../../Feedback/Loader";
-import { VisuallyHidden } from "../../Other/VisuallyHidden";
-import { Tooltip } from "../../Overlay/Tooltip";
-import { buttonStyle } from "./styles.css";
+} from 'react'
+import { Loader } from '../../Feedback/Loader'
+import { VisuallyHidden } from '../../Other/VisuallyHidden'
+import { Tooltip } from '../../Overlay/Tooltip'
+import { buttonStyle } from './styles.css'
 
 type CommonProps = {
-  type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
-  autoFocus?: ButtonHTMLAttributes<HTMLButtonElement>["autoFocus"];
-  role?: AriaRole;
-  className?: string;
-  "data-testid"?: string;
+  type?: ButtonHTMLAttributes<HTMLButtonElement>['type']
+  autoFocus?: ButtonHTMLAttributes<HTMLButtonElement>['autoFocus']
+  role?: AriaRole
+  className?: string
+  'data-testid'?: string
   /**
    * @private
    */
-  "data-flip-id"?: string;
-  isLoading?: boolean;
+  'data-flip-id'?: string
+  isLoading?: boolean
   /**
    * @deprecated use `accessibleLabel` instead.
    */
-  "aria-label"?: ButtonHTMLAttributes<HTMLButtonElement>["aria-label"];
-  "aria-current"?: ButtonHTMLAttributes<HTMLButtonElement>["aria-current"];
-  "aria-controls"?: ButtonHTMLAttributes<HTMLButtonElement>["aria-controls"];
-  "aria-expanded"?: ButtonHTMLAttributes<HTMLButtonElement>["aria-expanded"];
-  "aria-haspopup"?: ButtonHTMLAttributes<HTMLButtonElement>["aria-haspopup"];
-  "aria-describedby"?: ButtonHTMLAttributes<HTMLButtonElement>["aria-describedby"];
-  "aria-disabled"?: ButtonHTMLAttributes<HTMLButtonElement>["aria-disabled"];
-  "aria-pressed"?: ButtonHTMLAttributes<HTMLButtonElement>["aria-pressed"];
+  'aria-label'?: AriaAttributes['aria-label']
+  'aria-current'?: AriaAttributes['aria-current']
+  'aria-controls'?: AriaAttributes['aria-controls']
+  'aria-expanded'?: AriaAttributes['aria-expanded']
+  'aria-haspopup'?: AriaAttributes['aria-haspopup']
+  'aria-describedby'?: AriaAttributes['aria-describedby']
+  'aria-disabled'?: AriaAttributes['aria-disabled']
+  'aria-pressed'?: AriaAttributes['aria-pressed']
 
-  "aria-roledescription"?: ButtonHTMLAttributes<HTMLButtonElement>["aria-roledescription"];
-  "aria-keyshortcuts"?: ButtonHTMLAttributes<HTMLButtonElement>["aria-keyshortcuts"];
-  onClick?: MouseEventHandler<HTMLElement>;
+  'aria-roledescription'?: AriaAttributes['aria-roledescription']
+  'aria-keyshortcuts'?: AriaAttributes['aria-keyshortcuts']
+  onClick?: MouseEventHandler<HTMLElement>
   /**
    * @deprecated use `tooltipDescription` instead.
    */
-  tooltip?: string;
+  tooltip?: string
   /**
    * Label of the button rendered inside a Tooltip.
    */
-  tooltipLabel?: string;
+  tooltipLabel?: string
   /**
    * Description of the button rendered inside a Tooltip.
    */
-  tooltipDescription?: string;
+  tooltipDescription?: string
   /**
    * Accessible label hidden in the button.
    * Prefer this over `aria-label` as the text is localizable.
    */
-  accessibleLabel?: string;
-  form?: ButtonHTMLAttributes<HTMLButtonElement>["form"];
-  tabIndex?: ButtonHTMLAttributes<HTMLButtonElement>["tabIndex"];
-  onMouseDown?: MouseEventHandler<HTMLElement>;
-  onMouseUp?: MouseEventHandler<HTMLElement>;
-  onMouseOut?: MouseEventHandler<HTMLElement>;
-  onBlur?: ButtonHTMLAttributes<HTMLElement>["onBlur"];
-  onMouseEnter?: MouseEventHandler<HTMLElement>;
-  onMouseLeave?: MouseEventHandler<HTMLElement>;
-  onPointerDown?: ButtonHTMLAttributes<HTMLButtonElement>["onPointerDown"];
-  onKeyDown?: ButtonHTMLAttributes<HTMLButtonElement>["onKeyDown"];
-  style?: CSSProperties;
-  disabled?: boolean;
-  fullWidth?: boolean;
-  sentiment?:
-    | "danger"
-    | "info"
-    | "neutral"
-    | "primary"
-    | "secondary"
-    | "success"
-    | "warning"
-    | "black"
-    | "white";
-  size?: "small" | "medium" | "large" | "xsmall";
-  variant?: "filled" | "outlined" | "ghost";
-};
+  accessibleLabel?: string
+  form?: ButtonHTMLAttributes<HTMLButtonElement>['form']
+  tabIndex?: ButtonHTMLAttributes<HTMLButtonElement>['tabIndex']
+  onMouseDown?: MouseEventHandler<HTMLElement>
+  onMouseUp?: MouseEventHandler<HTMLElement>
+  onMouseOut?: MouseEventHandler<HTMLElement>
+  onBlur?: ButtonHTMLAttributes<HTMLElement>['onBlur']
+  onMouseEnter?: MouseEventHandler<HTMLElement>
+  onMouseLeave?: MouseEventHandler<HTMLElement>
+  onPointerDown?: ButtonHTMLAttributes<HTMLButtonElement>['onPointerDown']
+  onKeyDown?: ButtonHTMLAttributes<HTMLButtonElement>['onKeyDown']
+  style?: CSSProperties
+  disabled?: boolean
+  fullWidth?: boolean
+  sentiment?: 'danger' | 'info' | 'neutral' | 'primary' | 'secondary' | 'success' | 'warning' | 'black' | 'white'
+  size?: 'small' | 'medium' | 'large' | 'xsmall'
+  variant?: 'filled' | 'outlined' | 'ghost'
+}
 
 type BaseButtonProps = CommonProps & {
-  children: ReactNode;
-  name?: string;
+  children: ReactNode
+  name?: string
 } & XOR<
     [
       {
-        href?: string;
-        target?: string;
-        download?: string;
+        href?: string
+        target?: string
+        download?: string
       },
       {
         /**
@@ -112,10 +104,10 @@ type BaseButtonProps = CommonProps & {
          * <Button render={(props) => <NextLink {...props} href="/about" />}>About</Button>
          * ```
          */
-        render: RenderProp;
+        render: RenderProp
       },
     ]
-  >;
+  >
 
 /**
  * Button component is used to trigger an action or event, such as submitting a form, opening a dialog,
@@ -125,13 +117,13 @@ type BaseButtonProps = CommonProps & {
 export const Button = forwardRef<Element, BaseButtonProps>(
   (
     {
-      type = "button" as const,
+      type = 'button' as const,
       className,
-      "data-testid": dataTestId,
-      "data-flip-id": dataFlipId,
-      sentiment = "primary",
-      variant = "filled",
-      size = "large",
+      'data-testid': dataTestId,
+      'data-flip-id': dataFlipId,
+      sentiment = 'primary',
+      variant = 'filled',
+      size = 'large',
       disabled = false,
       fullWidth = false,
       isLoading = false,
@@ -147,16 +139,16 @@ export const Button = forwardRef<Element, BaseButtonProps>(
       onKeyDown,
       name,
       form,
-      "aria-label": ariaLabel,
-      "aria-current": ariaCurrent,
-      "aria-controls": ariaControls,
-      "aria-expanded": ariaExpanded,
-      "aria-haspopup": ariaHaspopup,
-      "aria-describedby": ariaDescribedby,
-      "aria-disabled": ariaDisabled,
-      "aria-pressed": ariaPressed,
-      "aria-roledescription": ariaRoledescription,
-      "aria-keyshortcuts": ariaKeyshortcuts,
+      'aria-label': ariaLabel,
+      'aria-current': ariaCurrent,
+      'aria-controls': ariaControls,
+      'aria-expanded': ariaExpanded,
+      'aria-haspopup': ariaHaspopup,
+      'aria-describedby': ariaDescribedby,
+      'aria-disabled': ariaDisabled,
+      'aria-pressed': ariaPressed,
+      'aria-roledescription': ariaRoledescription,
+      'aria-keyshortcuts': ariaKeyshortcuts,
       href,
       download,
       target,
@@ -172,54 +164,49 @@ export const Button = forwardRef<Element, BaseButtonProps>(
     },
     ref,
   ) => {
-    const computeIsDisabled = disabled || isLoading;
-    const theme = useResolvedTheme();
+    const computeIsDisabled = disabled || isLoading
+    const theme = useResolvedTheme()
 
     const computedSentimentLoader = useMemo(() => {
-      if (variant === "filled" && !["black", "white"].includes(sentiment)) {
-        if (theme === "light") {
-          return "white";
+      if (variant === 'filled' && !['black', 'white'].includes(sentiment)) {
+        if (theme === 'light') {
+          return 'white'
         }
 
-        return "black";
+        return 'black'
       }
 
-      return sentiment;
-    }, [sentiment, theme, variant]);
+      return sentiment
+    }, [sentiment, theme, variant])
 
-    const tooltipText = tooltipLabel || tooltipDescription || tooltip;
-    const tooltipRelation = tooltipLabel ? "label" : "description";
-    const computedAccessibleLabel = accessibleLabel ?? ariaLabel;
+    const tooltipText = tooltipLabel || tooltipDescription || tooltip
+    const tooltipRelation = tooltipLabel ? 'label' : 'description'
+    const computedAccessibleLabel = accessibleLabel ?? ariaLabel
 
     const content = (
       <>
         {isLoading ? <Loader active sentiment={computedSentimentLoader} size="small" /> : null}
-        {computedAccessibleLabel ? (
-          <VisuallyHidden>{computedAccessibleLabel}</VisuallyHidden>
-        ) : null}
+        {computedAccessibleLabel ? <VisuallyHidden>{computedAccessibleLabel}</VisuallyHidden> : null}
         {children}
       </>
-    );
+    )
 
-    const computedClassName = cn(
-      className,
-      buttonStyle.button({ disabled, fullWidth, sentiment, size, variant }),
-    );
+    const computedClassName = cn(className, buttonStyle.button({ disabled, fullWidth, sentiment, size, variant }))
 
     const commonProps = {
-      "aria-controls": ariaControls,
-      "aria-current": ariaCurrent,
-      "aria-disabled": ariaDisabled,
-      "aria-describedby": ariaDescribedby,
-      "aria-expanded": ariaExpanded,
-      "aria-haspopup": ariaHaspopup,
-      "aria-keyshortcuts": ariaKeyshortcuts,
-      "aria-pressed": ariaPressed,
-      "aria-roledescription": ariaRoledescription,
+      'aria-controls': ariaControls,
+      'aria-current': ariaCurrent,
+      'aria-disabled': ariaDisabled,
+      'aria-describedby': ariaDescribedby,
+      'aria-expanded': ariaExpanded,
+      'aria-haspopup': ariaHaspopup,
+      'aria-keyshortcuts': ariaKeyshortcuts,
+      'aria-pressed': ariaPressed,
+      'aria-roledescription': ariaRoledescription,
       autoFocus,
       className: computedClassName,
-      "data-testid": dataTestId,
-      "data-flip-id": dataFlipId,
+      'data-testid': dataTestId,
+      'data-flip-id': dataFlipId,
       onBlur,
       onClick,
       onMouseDown,
@@ -230,7 +217,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
       role,
       style,
       tabIndex,
-    };
+    }
 
     // render prop: render custom element with Button styling and the same props as the native elements
     if (render) {
@@ -244,7 +231,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
             form,
           })}
         </Tooltip>
-      );
+      )
     }
 
     // @note: an anchor can't be disabled
@@ -262,7 +249,7 @@ export const Button = forwardRef<Element, BaseButtonProps>(
             {content}
           </a>
         </Tooltip>
-      );
+      )
     }
 
     return (
@@ -281,8 +268,8 @@ export const Button = forwardRef<Element, BaseButtonProps>(
           {content}
         </button>
       </Tooltip>
-    );
+    )
   },
-);
+)
 
-Button.displayName = "Button";
+Button.displayName = 'Button'

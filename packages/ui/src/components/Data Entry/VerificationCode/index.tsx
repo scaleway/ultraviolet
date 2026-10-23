@@ -6,10 +6,10 @@
 import { cn } from '@ultraviolet/utils'
 import { useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import type {
+  AriaAttributes,
   ChangeEvent,
   CSSProperties,
   FocusEventHandler,
-  InputHTMLAttributes,
   KeyboardEvent,
   MouseEvent,
   ReactNode,
@@ -52,14 +52,14 @@ type VerificationCodeProps = {
   /**
    * @deprecated Use `accessibleLabel` instead.
    */
-  'aria-label'?: InputHTMLAttributes<HTMLInputElement>['aria-label']
+  'aria-label'?: AriaAttributes['aria-label']
   accessibleLabel?: string
   label?: string
   labelDescription?: ReactNode
   helper?: ReactNode
   success?: boolean | string
   style?: CSSProperties
-  'aria-describedby'?: InputHTMLAttributes<HTMLInputElement>['aria-describedby']
+  'aria-describedby'?: AriaAttributes['aria-describedby']
 }
 
 /**

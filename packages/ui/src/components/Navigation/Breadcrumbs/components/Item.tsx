@@ -5,7 +5,7 @@ import { cn } from '@ultraviolet/utils'
 import type { RenderProp } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useMemo } from 'react'
-import type { KeyboardEvent, LiHTMLAttributes, MouseEvent as ReactMouseEvent, ReactNode } from 'react'
+import type { AriaAttributes, KeyboardEvent, MouseEvent as ReactMouseEvent, ReactNode } from 'react'
 import { Button } from '../../../Action/Button'
 import { Link } from '../../../Action/Link'
 import { Text } from '../../../Typography/Text'
@@ -14,7 +14,7 @@ import { maxWidthVar, minWidthVar } from './styles.css'
 
 type ItemProps = {
   children: ReactNode
-  'aria-current'?: LiHTMLAttributes<HTMLLIElement>['aria-current']
+  'aria-current'?: AriaAttributes['aria-current']
   disabled?: boolean
   onClick?: (event: ReactMouseEvent<HTMLElement>) => void
   onKeyDown?: (event: KeyboardEvent<HTMLElement>) => void
