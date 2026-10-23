@@ -1,48 +1,75 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { AddressIcon } from '@ultraviolet/icons/AddressIcon'
-import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Chip } from '..'
 
-describe('checkbox', () => {
-  it('renders correctly', () => shouldMatchSnapshot(<Chip>test</Chip>))
-  it('renders correctly wiht icon', () =>
-    shouldMatchSnapshot(
+describe('chip', () => {
+  it('renders correctly', () => {
+    const { asFragment } = renderWithTheme(<Chip>test</Chip>)
+
+    const chip = screen.getByRole('button', { name: 'test' })
+    expect(chip).toHaveAttribute('aria-pressed', 'false')
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders correctly wiht icon', () => {
+    const { asFragment } = renderWithTheme(
       <Chip>
-        <Chip.Icon icon={<AddressIcon />} onClick={() => {}} />
+        <AddressIcon />
         test
       </Chip>,
-    ))
+    )
 
-  it('renders correctly active', () =>
-    shouldMatchSnapshot(
-      <Chip active>
-        test <Chip.Icon icon={<AddressIcon />} />
-      </Chip>,
-    ))
+    const chip = screen.getByRole('button')
+    expect(chip).toHaveAccessibleName('test')
 
-  it('renders correctly large', () =>
-    shouldMatchSnapshot(
-      <Chip size="large">
-        test <Chip.Icon icon={<AddressIcon />} />
-      </Chip>,
-    ))
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('renders correctly disabled', () =>
-    shouldMatchSnapshot(
+  it('renders correctly active', () => {
+    const { asFragment } = renderWithTheme(<Chip active>test</Chip>)
+
+    const chip = screen.getByRole('button', { name: 'test' })
+    expect(chip).toHaveAttribute('aria-pressed', 'true')
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders correctly large', () => {
+    const { asFragment } = renderWithTheme(<Chip size="large">test</Chip>)
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders correctly disabled', () => {
+    const { asFragment } = renderWithTheme(
       <Chip disabled>
-        test <Chip.Icon icon={<AddressIcon />} />
+        test <AddressIcon />
       </Chip>,
-    ))
+    )
 
-  it('renders correctly active disabled', () =>
-    shouldMatchSnapshot(
+    const chip = screen.getByRole('button', { name: 'test' })
+    expect(chip).toHaveAttribute('aria-pressed', 'false')
+    expect(chip).toBeDisabled()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders correctly active disabled', () => {
+    const { asFragment } = renderWithTheme(
       <Chip active disabled>
-        test <Chip.Icon icon={<AddressIcon />} />
+        test
       </Chip>,
-    ))
+    )
+
+    const chip = screen.getByRole('button', { name: 'test' })
+    expect(chip).toHaveAttribute('aria-pressed', 'true')
+    expect(chip).toBeDisabled()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('throw error when using Chip.Icon outside of Chip', () => {
     expect(() => renderWithTheme(<Chip.Icon icon={<AddressIcon />} />)).toThrow(
@@ -50,39 +77,80 @@ describe('checkbox', () => {
     )
   })
 
-  it('renders correctly onClick', async () => {
-    const mockOnClick1 = vi.fn()
-    const mockOnClick2 = vi.fn()
-    const mockOnClickIcon1 = vi.fn()
-    const mockOnClickIcon2 = vi.fn()
+  it('should call onClick', async () => {
+    const onClick = vi.fn()
 
-    renderWithTheme(
-      <>
-        <Chip data-testid="test" onClick={mockOnClick1}>
-          test
-          <Chip.Icon data-testid="test-icon" icon={<ArrowDownIcon />} onClick={mockOnClickIcon1} />
-        </Chip>
-        <Chip data-testid="test-disabled" disabled onClick={mockOnClick2}>
-          test Disabled
-          <Chip.Icon data-testid="test-icon-disabled" icon={<ArrowDownIcon />} onClick={mockOnClickIcon2} />
-        </Chip>
-      </>,
+    const { asFragment } = renderWithTheme(<Chip onClick={onClick}>test</Chip>)
+
+    const chip = screen.getByRole('button', { name: 'test' })
+    expect(chip).toHaveAttribute('aria-pressed', 'false')
+
+    await userEvent.click(chip)
+    expect(chip).toHaveAttribute('aria-pressed', 'true')
+    expect(onClick).toHaveBeenCalledExactlyOnceWith(true)
+
+    await userEvent.click(chip)
+
+    expect(chip).toHaveAttribute('aria-pressed', 'false')
+    expect(onClick).toHaveBeenCalledTimes(2)
+    expect(onClick).toHaveBeenLastCalledWith(false)
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should not call onClick when disabled', async () => {
+    const onClick = vi.fn()
+
+    const { asFragment } = renderWithTheme(
+      <Chip onClick={onClick} disabled>
+        test
+      </Chip>,
     )
 
-    const chip = screen.getByTestId('test')
+    const chip = screen.getByRole('button', { name: 'test' })
+    expect(chip).toHaveAttribute('aria-pressed', 'false')
+
     await userEvent.click(chip)
-    expect(mockOnClick1).toHaveBeenCalledOnce()
+    expect(chip).toHaveAttribute('aria-pressed', 'false')
 
-    const chipDisabled = screen.getByTestId('test-disabled')
-    await userEvent.click(chipDisabled)
-    expect(mockOnClick2).toHaveBeenCalledTimes(0)
+    expect(onClick).not.toHaveBeenCalled()
 
-    const chipIcon = screen.getByTestId('test-icon')
-    await userEvent.click(chipIcon)
-    expect(mockOnClickIcon1).toHaveBeenCalledOnce()
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-    const chipIconDisabled = screen.getByTestId('test-icon-disabled')
-    await userEvent.click(chipIconDisabled)
-    expect(mockOnClickIcon2).toHaveBeenCalledTimes(0)
+  it('works correctly closable', async () => {
+    const onClose = vi.fn()
+    const onClick = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <Chip closeAccessibleLabel="close" onClose={onClose} onClick={onClick}>
+        test
+      </Chip>,
+    )
+
+    const closeButton = screen.getByRole('button', { name: 'close' })
+
+    await userEvent.click(closeButton)
+    expect(onClick).not.toHaveBeenCalled()
+    expect(onClose).toHaveBeenCalledExactlyOnceWith()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('works correctly closable and disabled', async () => {
+    const onClose = vi.fn()
+    const onClick = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <Chip closeAccessibleLabel="close" onClose={onClose} onClick={onClick} disabled>
+        test
+      </Chip>,
+    )
+
+    const closeButton = screen.getByRole('button', { name: 'close' })
+
+    await userEvent.click(closeButton)
+    expect(onClick).not.toHaveBeenCalled()
+    expect(onClose).not.toHaveBeenCalled()
+
+    expect(asFragment()).toMatchSnapshot()
   })
 })
