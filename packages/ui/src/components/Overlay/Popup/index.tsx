@@ -1,3 +1,5 @@
+// oxlint-disable eslint/max-lines
+
 'use client'
 
 import { cn } from '@ultraviolet/utils'

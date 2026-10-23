@@ -1,3 +1,5 @@
+// oxlint-disable eslint/max-lines
+
 import type { RefObject } from 'react'
 
 const PLACEMENTS = ['top', 'right', 'bottom', 'left', 'nested-menu'] as const

@@ -77,6 +77,7 @@ export default defineConfig({
       plugins: ['import', 'oxc', 'vitest'],
       rules: {
         'eslint/func-names': 'off',
+        'eslint/max-lines': 'off',
         'eslint/max-statements': ['error', { max: 100 }],
         'import/export': 'off',
         'import/max-dependencies': 'off',
