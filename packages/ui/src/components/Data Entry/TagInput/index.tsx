@@ -197,10 +197,8 @@ export const TagInput = ({
             data-readonly={readOnly}
             data-success={!!success}
             data-testid={dataTestId}
-            tabIndex={0}
-            onClick={handleContainerClick}
-            onKeyDown={event => {
-              if ([' ', 'Enter'].includes(event.key)) {
+            onPointerUp={event => {
+              if (event.target === event.currentTarget) {
                 handleContainerClick()
               }
             }}

@@ -45,4 +45,5 @@ export type TextInputProps = {
   | 'onChange'
   | 'style'
   | 'aria-describedby'
+  | 'onClick'
 >

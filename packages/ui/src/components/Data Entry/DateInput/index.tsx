@@ -262,23 +262,10 @@ export const DateInput = <IsRange extends undefined | boolean>({
 
   return (
     <DateInputContext.Provider value={valueContext}>
-      {/* oxlint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div
         className={cn(className, dateInputStyle.container)}
         data-testid={dataTestId}
         id={id}
-        onBlur={onBlur}
-        onClick={() => {
-          if (!isPopupVisible) {
-            setVisible(true)
-          }
-        }}
-        onFocus={onFocus}
-        onKeyDown={event => {
-          if ([' ', 'Enter'].includes(event.key) && !isPopupVisible) {
-            setVisible(true)
-          }
-        }}
         ref={popupRef}
         style={style}
       >
@@ -290,6 +277,8 @@ export const DateInput = <IsRange extends undefined | boolean>({
             visible={isPopupVisible}
           >
             <TextInput
+              onFocus={onFocus}
+
               aria-describedBy={ariaDescribedBy}
               autoComplete="false"
               autoFocus={autoFocus}
@@ -300,14 +289,20 @@ export const DateInput = <IsRange extends undefined | boolean>({
               label={label}
               labelDescription={labelDescription}
               name={name}
+              onClick={() => {
+                if (!isPopupVisible) {
+                  setVisible(true)
+                }
+              }}
               onBlur={event => {
                 if (!popupRef.current?.contains(event.relatedTarget)) {
                   onBlurInput()
                 }
+                onBlur?.(event)
               }}
               onChange={manageOnChange}
               onKeyDown={event => {
-                if (event.key === 'Enter') {
+                if ([' ', 'Enter'].includes(event.key) && !isPopupVisible) {
                   setVisible(!isPopupVisible)
                   onBlurInput()
                 }

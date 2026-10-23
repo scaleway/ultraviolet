@@ -211,7 +211,6 @@ export const Dialog = ({
       onPointerDown={handlePointerDown}
       onPointerUp={handleClose}
       onFocus={stopFocus}
-      onKeyDown={() => {}}
     >
       <dialog
         aria-label={ariaLabel}
