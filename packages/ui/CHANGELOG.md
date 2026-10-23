@@ -1,5 +1,35 @@
 # Change Log
 
+## 3.29.0
+
+### Minor Changes
+
+- [#7024](https://github.com/scaleway/ultraviolet/pull/7024) [`b6564cc`](https://github.com/scaleway/ultraviolet/commit/b6564cc62c1070d5cf5567927730e828befc3dda) Thanks [@lisalupi](https://github.com/lisalupi)! - `Chip` fix accessibility issues: complete refactor of the component, deprecate `Chip.Icon` and add new prop `onClose`. No visual change expected, except close button style
+
+### Patch Changes
+
+- [#7054](https://github.com/scaleway/ultraviolet/pull/7054) [`6c91cc6`](https://github.com/scaleway/ultraviolet/commit/6c91cc6771d02d0d9cd7b52888ff074ded129baa) Thanks [@lisalupi](https://github.com/lisalupi)! - `Filters`: labelDescription on groups and items
+
+- [#7043](https://github.com/scaleway/ultraviolet/pull/7043) [`17950b2`](https://github.com/scaleway/ultraviolet/commit/17950b24d7a2848c371bdea21d7138d54425772e) Thanks [@philibea](https://github.com/philibea)! - `Button`: forward ARIA attributes, `role`, `tabIndex`, `onClick` and the accessible label / loader content to custom elements passed via the `render` prop, matching what the native `<button>` and `<a>` elements receive. The `aria-current` prop now accepts the full ARIA value list (`page`, `step`, …) instead of only booleans.
+
+- [#7046](https://github.com/scaleway/ultraviolet/pull/7046) [`f79f2cd`](https://github.com/scaleway/ultraviolet/commit/f79f2cd088ea4d0194add4db2ff7d54f79a7231e) Thanks [@lisalupi](https://github.com/lisalupi)! - `Filters`: remove empty div when there is no drawer and `hideClearAll` is true
+
+- [#7015](https://github.com/scaleway/ultraviolet/pull/7015) [`059fad6`](https://github.com/scaleway/ultraviolet/commit/059fad6f7a8a4b3a2bdf0ba3ef6efa9d014f5384) Thanks [@lisalupi](https://github.com/lisalupi)! - `Bullet`: fix accessibility
+
+- [#7043](https://github.com/scaleway/ultraviolet/pull/7043) [`17950b2`](https://github.com/scaleway/ultraviolet/commit/17950b24d7a2848c371bdea21d7138d54425772e) Thanks [@philibea](https://github.com/philibea)! - `Pagination`: add `hrefBuilder` prop to render pagination items as links instead of buttons, and an optional `renderLink` prop to render a custom link element (e.g. a routing `Link`) per page. The current page item now uses `aria-current="page"`.
+
+- [#7044](https://github.com/scaleway/ultraviolet/pull/7044) [`e75c0f1`](https://github.com/scaleway/ultraviolet/commit/e75c0f1d0fab89bcfa544dfc0d84cd9e3ce50cf8) Thanks [@philibea](https://github.com/philibea)! - Fix Tooltip accessibility: the closed tooltip's content wrapper created a scrollable region without keyboard access (`scrollable-region-focusable`), because of dead `overflow: auto` / `maxHeight: 100%` styles. They are removed.
+
+- [#7040](https://github.com/scaleway/ultraviolet/pull/7040) [`60c1263`](https://github.com/scaleway/ultraviolet/commit/60c12638690619e3c04b51abfcd3efa0e97ee538) Thanks [@jsulpis](https://github.com/jsulpis)! - `SelectInput`: search every group (not only the first one) when using type-ahead on a non-searchable grouped dropdown.
+
+- [#7045](https://github.com/scaleway/ultraviolet/pull/7045) [`1d00749`](https://github.com/scaleway/ultraviolet/commit/1d00749cd39aec2cfcee061094b370561bf4f86b) Thanks [@philibea](https://github.com/philibea)! - Fix ContentCardGroup.Card accessibility: children of the card link inherited the browser default link color instead of the theme text color, making custom content unreadable on dark themes.
+
+- [#7051](https://github.com/scaleway/ultraviolet/pull/7051) [`ab7c6e2`](https://github.com/scaleway/ultraviolet/commit/ab7c6e2d91b40c7675aac15c66a895db738b57bb) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: fix overflow when label has `<Text oneLine={true} />`
+
+- [#7010](https://github.com/scaleway/ultraviolet/pull/7010) [`88ddf28`](https://github.com/scaleway/ultraviolet/commit/88ddf28233037a7cfc8f2406a12833c7c8f220a3) Thanks [@lisalupi](https://github.com/lisalupi)! - `Badge`: fix accessibility issues and add a prop `role`
+- Updated dependencies [[`91860a5`](https://github.com/scaleway/ultraviolet/commit/91860a503c91374b2273ae49cacef38eb645ab6d)]:
+  - @ultraviolet/utils@1.1.1
+
 ## 3.28.0
 
 ### Minor Changes
