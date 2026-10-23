@@ -52,10 +52,12 @@ To apply when using the component:
 **Medium:**
 
 - `aria-sort="none"` is missing on sortable columns that aren't the current sort target.
-- The expand `<button>` doesn't own `aria-expanded`/`aria-controls`; they sit on the overridden `<tr>`.
+- The expand `<button>` doesn't own `aria-expanded`/`aria-controls`; they sit on the overridden `<tr>`. If the expanded rows are dynamically inserted in the DOM, be careful to avoid `aria-controls` that links to non-existing DOM nodes.
+- For expandable rows, consider keeping them in the DOM when they are collapsed to allow discovery with `Ctrl + F` for instance, like in native `details/summary`
 - Loading state not announced (no `aria-busy`/live region).
 - `scope="col"` is missing on the header cells.
 - Focus indicator is border-color only (see 2.4.7 / 1.4.11).
+- With expandable rows, the first column of the header (`thead > th`) is empty. Consider adding a visually hidden column title like "Expand button actions"
 
 **Low:**
 
