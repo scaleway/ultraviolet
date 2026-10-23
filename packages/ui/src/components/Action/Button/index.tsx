@@ -19,7 +19,20 @@ import { VisuallyHidden } from '../../Other/VisuallyHidden'
 import { Tooltip } from '../../Overlay/Tooltip'
 import { buttonStyle } from './styles.css'
 
-type CommonProps = {
+type CommonAriaProps = Pick<
+  AriaAttributes,
+  | 'aria-current'
+  | 'aria-controls'
+  | 'aria-expanded'
+  | 'aria-haspopup'
+  | 'aria-describedby'
+  | 'aria-disabled'
+  | 'aria-pressed'
+  | 'aria-roledescription'
+  | 'aria-keyshortcuts'
+>
+
+type CommonProps = CommonAriaProps & {
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type']
   autoFocus?: ButtonHTMLAttributes<HTMLButtonElement>['autoFocus']
   role?: AriaRole
@@ -34,16 +47,7 @@ type CommonProps = {
    * @deprecated use `accessibleLabel` instead.
    */
   'aria-label'?: AriaAttributes['aria-label']
-  'aria-current'?: AriaAttributes['aria-current']
-  'aria-controls'?: AriaAttributes['aria-controls']
-  'aria-expanded'?: AriaAttributes['aria-expanded']
-  'aria-haspopup'?: AriaAttributes['aria-haspopup']
-  'aria-describedby'?: AriaAttributes['aria-describedby']
-  'aria-disabled'?: AriaAttributes['aria-disabled']
-  'aria-pressed'?: AriaAttributes['aria-pressed']
 
-  'aria-roledescription'?: AriaAttributes['aria-roledescription']
-  'aria-keyshortcuts'?: AriaAttributes['aria-keyshortcuts']
   onClick?: MouseEventHandler<HTMLElement>
   /**
    * @deprecated use `tooltipDescription` instead.
