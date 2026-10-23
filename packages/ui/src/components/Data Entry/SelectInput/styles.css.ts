@@ -27,8 +27,8 @@ import {
   plusTag,
   selectBar,
   selectBarBase,
-  selectBarTags,
   selectbarState,
+  selectBarTags,
   selectedValues,
 } from './components/SelectBar/selectBar.css'
 

@@ -1,5 +1,5 @@
 import type { Decorator } from '@storybook/react-vite'
-import { Stack, VisuallyHidden, Text, Button } from '@ultraviolet/ui'
+import { Button, Stack, Text, VisuallyHidden } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { EyeIcon } from '../__generated__'
 

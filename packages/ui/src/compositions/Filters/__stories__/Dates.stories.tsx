@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { Stack, Snippet } from '../../../components'
+import { Snippet, Stack } from '../../../components'
 import type { FiltersProps } from '../Filters'
 import { Filters } from '../Filters'
 import type { FilterConfig } from '../types'

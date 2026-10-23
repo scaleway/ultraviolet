@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { describe, expect, vi, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { Submit, SubmitErrorAlert } from '../..'
 import { renderWithForm } from '../../../__tests__/helpers'
 

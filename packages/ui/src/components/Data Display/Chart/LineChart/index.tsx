@@ -2,7 +2,7 @@
 
 import type { Box as NivoBox, ValueFormat } from '@nivo/core'
 import { ResponsiveLine } from '@nivo/line'
-import type { LineSvgProps, Point, LineSeries, AllowedValue } from '@nivo/line'
+import type { AllowedValue, LineSeries, LineSvgProps, Point } from '@nivo/line'
 import type { ScaleSpec } from '@nivo/scales'
 import { theme } from '@ultraviolet/themes'
 import { useEffect, useState } from 'react'

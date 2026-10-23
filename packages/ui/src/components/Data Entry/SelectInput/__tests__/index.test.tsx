@@ -2,9 +2,9 @@ import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { useState } from 'react'
-import { describe, expect, it, vi, afterEach, beforeEach } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { SelectInput } from '..'
-import { cities, dataGroupEmpty, dataGrouped, dataUnGrouped, OptionalInfo, dataGroupedSmall } from './resources'
+import { cities, dataGrouped, dataGroupedSmall, dataGroupEmpty, dataUnGrouped, OptionalInfo } from './resources'
 
 describe('selectInput', () => {
   beforeEach(() => {

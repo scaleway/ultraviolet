@@ -1,4 +1,4 @@
-import { renderWithTheme, expectNoViolations } from '@utils/test'
+import { expectNoViolations, renderWithTheme } from '@utils/test'
 import { describe, it } from 'vitest'
 import { Stack } from '..'
 

@@ -1,5 +1,5 @@
 import { Slider } from '../../../components/Data Entry/Slider'
-import type { FilterConfigItemSlider, FilterComponentProps } from '../types'
+import type { FilterComponentProps, FilterConfigItemSlider } from '../types'
 
 type FilterSliderProps = FilterComponentProps<number | number[], FilterConfigItemSlider>
 

@@ -1,5 +1,5 @@
 import { ColorItem, ColorPalette } from '@storybook/addon-docs/blocks'
-import { consoleDarkTheme, consoleDarkerTheme, consoleLightTheme } from '@ultraviolet/themes'
+import { consoleDarkerTheme, consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
 import { useDocsTheme } from '../../../../.storybook/components/useDocsTheme'
 
 const SENTIMENTS = ['primary', 'secondary', 'neutral', 'success', 'danger', 'warning', 'info'] as const
