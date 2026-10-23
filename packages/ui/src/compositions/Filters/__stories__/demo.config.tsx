@@ -1,4 +1,4 @@
-import { InformationOutlineIcon } from '@ultraviolet/icons'
+import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { Tooltip } from '../../../components'
 import type { FilterConfig } from '../types'
 
