@@ -96,71 +96,61 @@ export const BarStack = ({
               onMouseDown,
               onMouseUp,
               tooltip,
-            }) => (
-              <div
-                className={barStackStyle.wrapper}
-                key={id}
-                style={assignInlineVars({
-                  [wrapperWidth]: `${(value / computedTotal) * 100}%`,
-                })}
-              >
-                <Tooltip text={legend === 'outside' ? text : undefined} visible={hoveredBarId === id}>
-                  {tooltip ? (
-                    <Tooltip id={`tooltip-${id}`} text={tooltip ?? text}>
-                      <div
-                        className={barStackStyle.barStack({ size })}
-                        data-testid={`content-${id}`}
-                        onClick={onClick}
-                        onDoubleClick={onDoubleClick}
-                        onKeyDown={onKeyDown}
-                        onMouseDown={onMouseDown}
-                        onMouseEnter={event => {
-                          onMouseEnter?.(event)
-                        }}
-                        onMouseLeave={event => {
-                          onMouseLeave?.(event)
-                        }}
-                        onMouseUp={onMouseUp}
-                      >
-                        <Text
-                          as="span"
-                          className={barStackStyle.text}
-                          prominence="stronger"
-                          sentiment="neutral"
-                          variant={size === 'small' || size === 'xsmall' ? 'captionSmallStrong' : 'captionStrong'}
-                          whiteSpace="nowrap"
-                        >
-                          {legend === 'outside' ? '' : text}
-                        </Text>
-                      </div>
-                    </Tooltip>
-                  ) : (
-                    <div
-                      className={barStackStyle.barStack({ size })}
-                      data-testid={`content-${id}`}
-                      onClick={onClick}
-                      onDoubleClick={onDoubleClick}
-                      onKeyDown={onKeyDown}
-                      onMouseDown={onMouseDown}
-                      onMouseEnter={onMouseEnter}
-                      onMouseLeave={onMouseLeave}
-                      onMouseUp={onMouseUp}
-                    >
-                      <Text
-                        as="span"
-                        className={barStackStyle.text}
-                        prominence="stronger"
-                        sentiment="neutral"
-                        variant={size === 'small' || size === 'xsmall' ? 'captionSmallStrong' : 'captionStrong'}
-                        whiteSpace="nowrap"
-                      >
-                        {legend === 'outside' ? '' : text}
-                      </Text>
-                    </div>
-                  )}
-                </Tooltip>
-              </div>
-            ),
+            }) => {
+              const isInteractive = onClick || onDoubleClick || onMouseDown || onKeyDown || onMouseUp
+
+              // Role is added when the element is interactive, the linter cannot statically infer it
+              const bar = (
+                // oxlint-disable-next-line jsx-a11y/no-static-element-interactions
+                <div
+                  className={barStackStyle.barStack({ size })}
+                  data-testid={`content-${id}`}
+                  onClick={onClick}
+                  onDoubleClick={onDoubleClick}
+                  onKeyDown={onKeyDown}
+                  onMouseDown={onMouseDown}
+                  onMouseEnter={event => {
+                    onMouseEnter?.(event)
+                  }}
+                  onMouseLeave={event => {
+                    onMouseLeave?.(event)
+                  }}
+                  onMouseUp={onMouseUp}
+                  role={isInteractive ? 'button' : undefined}
+                >
+                  <Text
+                    as="span"
+                    className={barStackStyle.text}
+                    prominence="stronger"
+                    sentiment="neutral"
+                    variant={size === 'small' || size === 'xsmall' ? 'captionSmallStrong' : 'captionStrong'}
+                    whiteSpace="nowrap"
+                  >
+                    {legend === 'outside' ? '' : text}
+                  </Text>
+                </div>
+              )
+
+              return (
+                <div
+                  className={barStackStyle.wrapper}
+                  key={id}
+                  style={assignInlineVars({
+                    [wrapperWidth]: `${(value / computedTotal) * 100}%`,
+                  })}
+                >
+                  <Tooltip text={legend === 'outside' ? text : undefined} visible={hoveredBarId === id}>
+                    {tooltip ? (
+                      <Tooltip id={`tooltip-${id}`} text={tooltip ?? text}>
+                        {bar}
+                      </Tooltip>
+                    ) : (
+                      bar
+                    )}
+                  </Tooltip>
+                </div>
+              )
+            },
           )}
         </div>
       </Stack>

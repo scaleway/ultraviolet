@@ -34,7 +34,6 @@ export const warnRules = defineConfig({
     // fix jsx-a11y after a11y audit
     'jsx-a11y/no-noninteractive-element-interactions': 'warn', // jsx-a11y errors (1)
     'jsx-a11y/no-noninteractive-tabindex': 'warn', // jsx-a11y errors (1)
-    'jsx-a11y/no-static-element-interactions': 'warn', // jsx-a11y errors (6)
     'jsx-a11y/prefer-tag-over-role': 'warn', // jsx-a11y errors (18)
 
     'oxc/no-accumulating-spread': 'warn', // oxc errors (26)
