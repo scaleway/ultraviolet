@@ -1,21 +1,25 @@
+import { toCharacterArray } from './toCharacterArray'
+
 /**
  * Shuffles the characters of a string using the Fisher-Yates algorithm.
  *
  * Emoji are treated as single characters. Strings of 1 character or less, or
- * strings where all characters are identical, are returned unchanged.
+ * strings where all characters are identical, are returned unchanged. Nullish
+ * values are treated as an empty string.
  *
  * @param input - The string to shuffle.
  * @param maxRetries - Maximum number of attempts to produce a string different from the input (default: 20).
  * @returns A shuffled string, or the input if it cannot be shuffled.
  */
-export function shuffle(input: string, maxRetries = 10): string {
-  const chars = [...input]
+export function shuffle(input: string | null | undefined, maxRetries = 10): string {
+  const value = input ?? ''
+  const chars = toCharacterArray(value)
 
   if (chars.length <= 1) {
-    return input
+    return value
   }
   if (new Set(chars).size === 1) {
-    return input
+    return value
   }
 
   const shuffleOnce = () => {
@@ -29,7 +33,7 @@ export function shuffle(input: string, maxRetries = 10): string {
   }
 
   let result = shuffleOnce()
-  for (let attempts = 1; result === input && attempts < maxRetries; attempts++) {
+  for (let attempts = 1; result === value && attempts < maxRetries; attempts++) {
     result = shuffleOnce()
   }
 

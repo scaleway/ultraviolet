@@ -1,11 +1,8 @@
-// oxlint-disable unicorn/prefer-spread
-// oxlint wants `[...value]` instead of Array.from(value) but it triggers typescript/no-misused-spread
-// which advises to use "`Array.from` for non-iterables if needed"
 'use client'
 
-import { cn } from '@ultraviolet/utils'
+import { cn, toCharacterArray } from '@ultraviolet/utils'
 import { useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
-import type { ChangeEvent, CSSProperties, FocusEventHandler, KeyboardEvent, MouseEvent, ReactNode } from 'react'
+import type { CSSProperties, ChangeEvent, FocusEventHandler, KeyboardEvent, MouseEvent, ReactNode } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import { Stack } from '../../Layout/Stack'
 import { VisuallyHidden } from '../../Other/VisuallyHidden'
@@ -120,7 +117,7 @@ export const VerificationCode = ({
     const addedChars = nextValue.length - value.length
 
     if (nextValue.length > value.length && (boxUnderCaretIsFull || isTypingAtEndOfFullField)) {
-      const chars = Array.from(value)
+      const chars = toCharacterArray(value)
       if (boxUnderCaretIsFull) {
         chars[caretIndex] = nextValue[caretIndex] // replace instead of inserting
       } else {
@@ -183,7 +180,7 @@ export const VerificationCode = ({
     // Backspace should delete the character in the current box, not the previous one
     if (event.key === 'Backspace' && caretIndex < value.length) {
       event.preventDefault()
-      const chars = Array.from(value)
+      const chars = toCharacterArray(value)
       chars.splice(caretIndex, 1)
       const nextValue = chars.join('')
       setValue(nextValue)
