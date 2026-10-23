@@ -86,7 +86,7 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
                 label={configItem.label}
                 defaultExpanded={configItem.expanded}
                 onReset={createResetHandler(configItem)}
-                labelDescription={isFilterConfigGroup(configItem) ? undefined : configItem.labelDescription}
+                labelDescription={configItem.labelDescription}
               >
                 {isFilterConfigGroup(configItem) ? (
                   <Stack gap={2}>
