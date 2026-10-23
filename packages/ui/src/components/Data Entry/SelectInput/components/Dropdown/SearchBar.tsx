@@ -71,7 +71,7 @@ const findClosestOption = (options: DataType, searchInput: string | undefined) =
   return null
 }
 
-const escapeRegExp = (string: string) => string.replace(/[.*+?^{}()|[\]\\]/gu, String.raw`\$&`)
+const escapeRegExp = (string: string) => string.replaceAll(/[.*+?^{}()|[\]\\]/gu, String.raw`\$&`)
 
 export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }: SearchBarProps) => {
   const searchInputRef = useRef<HTMLInputElement>(null)

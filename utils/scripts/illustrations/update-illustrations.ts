@@ -42,13 +42,13 @@ const importIllustration = (directory: string, file: string, output: string, ill
   const parsedFile = path.parse(file)
 
   if (parsedFile.ext === '.webp' || parsedFile.ext === '.svg') {
-    const filename = parsedFile.name.replace(/-./gu, x => x[1].toUpperCase())
+    const filename = parsedFile.name.replaceAll(/-./gu, x => x[1].toUpperCase())
     const relativePath = directory.split('illustrations/src/assets/')[1]
 
     updateListIllustrationsCategories(directory)
 
     illustrations.push(filename)
-    appendFileSync(output, `const ${filename} = \`\${BASE_URL}/${relativePath.replace(/\\/gu, '/')}\`\n`)
+    appendFileSync(output, `const ${filename} = \`\${BASE_URL}/${relativePath.replaceAll('\\', '/')}\`\n`)
   }
 }
 
