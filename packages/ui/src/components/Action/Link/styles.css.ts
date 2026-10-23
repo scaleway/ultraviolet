@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import type { LinkSentiment, LinkProminence } from './constants'
+import type { LinkProminence, LinkSentiment } from './constants'
 import { PROMINENCES, SENTIMENTS } from './constants'
 import { globalAlertStyle } from '../../Feedback/GlobalAlert/styles.css'
 

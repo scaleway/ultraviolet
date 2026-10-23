@@ -1,5 +1,5 @@
 import { CheckIcon, CloseIcon } from '@ultraviolet/icons'
-import { consoleDarkTheme, consoleDarkerTheme, consoleLightTheme } from '@ultraviolet/themes'
+import { consoleDarkerTheme, consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
 import { useTheme } from '@ultraviolet/themes/v2'
 import { Badge, CheckboxGroup, Row, Stack, Text } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'

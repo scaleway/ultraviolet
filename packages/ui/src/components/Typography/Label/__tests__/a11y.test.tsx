@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 import { consoleThemesMap } from '@ultraviolet/themes'
-import { renderWithTheme, expectNoViolations } from '@utils/test'
+import { expectNoViolations, renderWithTheme } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Label } from '..'
 

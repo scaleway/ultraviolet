@@ -3,7 +3,7 @@
 import type { TextVariant } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, AriaRole, ElementType, ReactNode } from 'react'
+import type { AriaRole, CSSProperties, ElementType, ReactNode } from 'react'
 import recursivelyGetChildrenString from '../../../helpers/recursivelyGetChildrenString'
 import { useIsOverflowing } from '../../../hooks/useIsOverflowing'
 import type { ExtendedColor } from '../../../theme'

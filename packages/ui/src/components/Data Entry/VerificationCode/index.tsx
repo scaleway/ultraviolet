@@ -2,7 +2,7 @@
 
 import { cn, toCharacterArray } from '@ultraviolet/utils'
 import { useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
-import type { CSSProperties, ChangeEvent, FocusEventHandler, KeyboardEvent, MouseEvent, ReactNode } from 'react'
+import type { ChangeEvent, CSSProperties, FocusEventHandler, KeyboardEvent, MouseEvent, ReactNode } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import { Stack } from '../../Layout/Stack'
 import { VisuallyHidden } from '../../Other/VisuallyHidden'

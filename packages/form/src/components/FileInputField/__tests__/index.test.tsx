@@ -1,6 +1,6 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { beforeEach, describe, expect, vi, it } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { FileInputField } from '..'
 import { renderWithForm } from '../../../__tests__/helpers'
 

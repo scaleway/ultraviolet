@@ -1,20 +1,20 @@
 'use client'
 import type { ExtendedRefs, Placement, ReferenceType } from '@floating-ui/react'
 import {
-  offset,
-  flip,
-  shift,
   arrow,
-  useFloating,
   autoUpdate,
-  useTransitionStatus,
-  useHover,
+  flip,
+  offset,
   safePolygon,
-  useFocus,
+  shift,
   useDismiss,
+  useFloating,
+  useFocus,
+  useHover,
   useInteractions,
+  useTransitionStatus,
 } from '@floating-ui/react'
-import { useState, useRef, useCallback, useEffect } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
 import type { TooltipPlacement } from './types'
 

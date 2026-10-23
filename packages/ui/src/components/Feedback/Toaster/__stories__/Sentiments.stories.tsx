@@ -1,5 +1,5 @@
 import type { Decorator, StoryFn } from '@storybook/react-vite'
-import { ToastContainer, toast } from '..'
+import { toast, ToastContainer } from '..'
 import { Button } from '../../../index'
 
 export const Sentiments: StoryFn<typeof ToastContainer> = args => (

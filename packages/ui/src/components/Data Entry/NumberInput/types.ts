@@ -1,4 +1,4 @@
-import type { RefObject, InputHTMLAttributes, ReactNode } from 'react'
+import type { InputHTMLAttributes, ReactNode, RefObject } from 'react'
 import type { BaseFormComponentProps } from '../../../types'
 import type { SIZES } from './constant'
 
