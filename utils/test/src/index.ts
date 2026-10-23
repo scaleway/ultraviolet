@@ -5,6 +5,7 @@ export {
   renderWithTheme,
   resetUserEvent,
   setup,
+  setupBrowser,
   shouldMatchSnapshot,
 } from './vitest'
 

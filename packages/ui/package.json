@@ -67,6 +67,8 @@
     "size": "size-limit",
     "test:unit": "TZ=UTC LC_ALL=en_US.UTF-8  pnpm vitest --run ",
     "test:unit:coverage": "pnpm test:unit --coverage",
+    "test:browser": "pnpm vitest --run --config vitest.browser.config.ts",
+    "test:browser:watch": "pnpm vitest watch --config vitest.browser.config.ts",
     "test:watch": "LC_ALL=en_US.UTF-8  pnpm vitest watch ",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",

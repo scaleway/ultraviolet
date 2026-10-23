@@ -19,16 +19,20 @@
     ".": {
       "default": "./src/index.ts"
     },
+    "./browser-config": "./vitest.browser.config.ts",
     "./config": "./vitest.config.ts"
   },
   "dependencies": {
     "@testing-library/jest-dom": "7.0.1",
     "@testing-library/react": "16.3.3",
-    "@ultraviolet/themes": "workspace:*"
+    "@ultraviolet/themes": "workspace:*",
+    "axe-core": "catalog:"
   },
   "devDependencies": {
     "@types/node": "24.19.2",
     "@types/react": "19.3.0",
+    "@vitest/browser-playwright": "4.1.12",
+    "playwright": "1.64.0",
     "vitest": "catalog:"
   }
 }

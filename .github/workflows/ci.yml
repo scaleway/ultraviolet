@@ -103,6 +103,23 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           verbose: true
 
+  test_browser:
+    runs-on: ubuntu-24.04
+    needs: [build]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 10
+      - uses: pnpm/setup@a0881977cd8ea73b1ed212236c99ca10dcc80cf4 # v3.1.1
+        with:
+          cache: true
+          require-lockfile: true
+          runtime: node
+      - uses: ./.github/actions/setup-playwright
+        with:
+          install-args: chromium firefox webkit
+      - run: pnpm run test:browser
+
   deploy:
     runs-on: ubuntu-24.04
     needs: [build_storybook]
@@ -228,20 +245,9 @@ jobs:
         with:
           cache: true
           require-lockfile: true
-      - name: Get installed Playwright version
-        run: echo "PLAYWRIGHT_VERSION=$(pnpm playwright --version | cut -d' ' -f2)" >> $GITHUB_ENV
-      - name: Cache Playwright Browsers
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
-        id: playwright-cache
+      - uses: ./.github/actions/setup-playwright
         with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ env.PLAYWRIGHT_VERSION }}
-      - name: Install Playwright OS Dependencies only
-        if: steps.playwright-cache.outputs.cache-hit == 'true'
-        run: pnpm playwright install-deps
-      - name: Install Playwright Browsers & OS Dependencies
-        if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: pnpm playwright install --with-deps --only-shell
+          install-args: --only-shell
       - run: pnpm run test:e2e
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() }}

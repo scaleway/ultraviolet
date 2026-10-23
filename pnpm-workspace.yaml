@@ -38,11 +38,13 @@ optimisticRepeatInstall: false
 overrides:
   vite: 'catalog:'
   vitest: 'catalog:'
+  axe-core: 'catalog:'
 
 catalog:
   vite: 8.3.4
   vitest: 4.1.12
   typescript: 7.0.2
+  axe-core: 4.14.0
 
 peerDependencyRules:
   allowedVersions:
