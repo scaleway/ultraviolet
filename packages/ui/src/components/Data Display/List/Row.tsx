@@ -3,7 +3,7 @@
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { Children, Fragment, forwardRef, isValidElement, useCallback, useEffect, useId, useRef } from 'react'
+import { Children, forwardRef, Fragment, isValidElement, useCallback, useEffect, useId, useRef } from 'react'
 import type { CSSProperties, MouseEventHandler, ReactNode, RefObject } from 'react'
 import type { SENTIMENTS, space } from '../../../theme'
 import { Cell } from './Cell'

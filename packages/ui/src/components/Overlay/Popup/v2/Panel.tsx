@@ -1,5 +1,5 @@
 'use client'
-import { FloatingArrow, FloatingFocusManager, FloatingPortal, arrow as arrowMiddleware, size } from '@floating-ui/react'
+import { arrow as arrowMiddleware, FloatingArrow, FloatingFocusManager, FloatingPortal, size } from '@floating-ui/react'
 import type { Middleware, Placement } from '@floating-ui/react'
 import { cn } from '@ultraviolet/utils'
 import { useId, useLayoutEffect, useRef } from 'react'

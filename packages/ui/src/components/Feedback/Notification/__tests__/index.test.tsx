@@ -4,7 +4,7 @@ import { renderWithTheme } from '@utils/test'
 import { act } from 'react'
 import { toast } from 'react-toastify'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { NotificationContainer, notification } from '..'
+import { notification, NotificationContainer } from '..'
 
 describe('toaster', () => {
   afterEach(() => {
