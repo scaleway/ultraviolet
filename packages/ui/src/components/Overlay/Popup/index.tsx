@@ -15,8 +15,8 @@ import {
   useState,
 } from 'react'
 import type {
+  AriaAttributes,
   CSSProperties,
-  HTMLAttributes,
   KeyboardEventHandler,
   MouseEventHandler,
   ReactNode,
@@ -112,7 +112,7 @@ type PopupProps = {
   onClose?: () => void
   tabIndex?: number
   onKeyDown?: KeyboardEventHandler
-  'aria-haspopup'?: HTMLAttributes<HTMLDivElement>['aria-haspopup']
+  'aria-haspopup'?: AriaAttributes['aria-haspopup']
   hideOnClickOutside?: boolean
   /**
    * If you set debounceTime to false, the popup will not debounce the hover event and will be displayed instantly.

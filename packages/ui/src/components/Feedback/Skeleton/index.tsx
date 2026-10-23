@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties } from 'react'
+import type { AriaAttributes, CSSProperties } from 'react'
 import { Block } from './Block'
 import { Blocks } from './Blocks'
 import { BoxWithIcon } from './BoxWithIcon'
@@ -30,7 +30,7 @@ type SkeletonProps = {
   length?: number
   col?: number
   className?: string
-  'aria-label'?: string
+  'aria-label'?: AriaAttributes['aria-label']
   'data-testid'?: string
   style?: CSSProperties
 }

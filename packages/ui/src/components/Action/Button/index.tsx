@@ -5,13 +5,34 @@ import { useResolvedTheme } from '@ultraviolet/themes'
 import { cn, renderElement } from '@ultraviolet/utils'
 import type { RenderProp } from '@ultraviolet/utils'
 import { forwardRef, useMemo } from 'react'
-import type { AriaRole, ButtonHTMLAttributes, CSSProperties, MouseEventHandler, ReactNode, Ref } from 'react'
+import type {
+  AriaAttributes,
+  AriaRole,
+  ButtonHTMLAttributes,
+  CSSProperties,
+  MouseEventHandler,
+  ReactNode,
+  Ref,
+} from 'react'
 import { Loader } from '../../Feedback/Loader'
 import { VisuallyHidden } from '../../Other/VisuallyHidden'
 import { Tooltip } from '../../Overlay/Tooltip'
 import { buttonStyle } from './styles.css'
 
-type CommonProps = {
+type CommonAriaProps = Pick<
+  AriaAttributes,
+  | 'aria-current'
+  | 'aria-controls'
+  | 'aria-expanded'
+  | 'aria-haspopup'
+  | 'aria-describedby'
+  | 'aria-disabled'
+  | 'aria-pressed'
+  | 'aria-roledescription'
+  | 'aria-keyshortcuts'
+>
+
+type CommonProps = CommonAriaProps & {
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type']
   autoFocus?: ButtonHTMLAttributes<HTMLButtonElement>['autoFocus']
   role?: AriaRole
@@ -25,16 +46,8 @@ type CommonProps = {
   /**
    * @deprecated use `accessibleLabel` instead.
    */
-  'aria-label'?: string
-  'aria-current'?: boolean | 'false' | 'true' | 'page' | 'step' | 'location' | 'date' | 'time'
-  'aria-controls'?: string
-  'aria-expanded'?: boolean
-  'aria-haspopup'?: boolean
-  'aria-describedby'?: string
-  'aria-disabled'?: boolean
-  'aria-pressed'?: boolean
-  'aria-roledescription'?: string
-  'aria-keyshortcuts'?: string
+  'aria-label'?: AriaAttributes['aria-label']
+
   onClick?: MouseEventHandler<HTMLElement>
   /**
    * @deprecated use `tooltipDescription` instead.

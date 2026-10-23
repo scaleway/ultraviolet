@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
-import type { ReactNode } from 'react'
+import type { AriaAttributes, ReactNode } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import type { BaseFormComponentProps } from '../../../types'
 import { Stack } from '../../Layout/Stack'
@@ -39,7 +39,7 @@ type TimeInputProps = BaseFormComponentProps<HTMLInputElement> & {
   onChange?: (value: Date | undefined, valuePeriod?: string) => void
   size?: 'small' | 'medium' | 'large'
   timeFormat?: 12 | 24
-  'aria-describedby'?: string
+  'aria-describedby'?: AriaAttributes['aria-describedby']
 }
 
 /**

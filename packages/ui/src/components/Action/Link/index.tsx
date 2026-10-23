@@ -9,6 +9,7 @@ import type { RenderProp } from '@ultraviolet/utils'
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react'
 import type {
   AnchorHTMLAttributes,
+  AriaAttributes,
   CSSProperties,
   ForwardedRef,
   HTMLAttributeAnchorTarget,
@@ -21,7 +22,9 @@ import { Tooltip } from '../../Overlay/Tooltip'
 import type { LinkSentiment, LinkProminence, LinkSize } from './constants'
 import { linkStyle } from './styles.css'
 
-type LinkProps = {
+type CommonAriaProps = Pick<AriaAttributes, 'aria-label' | 'aria-current' | 'aria-keyshortcuts'>
+
+type LinkProps = CommonAriaProps & {
   children: ReactNode
   target?: HTMLAttributeAnchorTarget
   download?: string | boolean
@@ -37,9 +40,6 @@ type LinkProps = {
   // For react router shouldn't be used directly
   onClick?: MouseEventHandler<HTMLAnchorElement>
   onKeyDown?: KeyboardEventHandler<HTMLAnchorElement>
-  'aria-label'?: string
-  'aria-current'?: AnchorHTMLAttributes<HTMLAnchorElement>['aria-current']
-  'aria-keyshortcuts'?: string
   oneLine?: boolean
   'data-testid'?: string
   /**
@@ -48,28 +48,28 @@ type LinkProps = {
   variant?: 'inline' | 'standalone'
   style?: CSSProperties
 } & XOR<
-  [
-    {
-      href?: string
-    },
-    {
-      /**
-       * Custom element or render function to use instead of the default anchor.
-       *
-       * Element form (props auto-merged):
-       * ```tsx
-       * <Link render={<NextLink href="/about" />}>About</Link>
-       * ```
-       *
-       * Function form (you control prop merging):
-       * ```tsx
-       * <Link render={(props) => <NextLink {...props} href="/about" />}>About</Link>
-       * ```
-       */
-      render: RenderProp
-    },
-  ]
->
+    [
+      {
+        href?: string
+      },
+      {
+        /**
+         * Custom element or render function to use instead of the default anchor.
+         *
+         * Element form (props auto-merged):
+         * ```tsx
+         * <Link render={<NextLink href="/about" />}>About</Link>
+         * ```
+         *
+         * Function form (you control prop merging):
+         * ```tsx
+         * <Link render={(props) => <NextLink {...props} href="/about" />}>About</Link>
+         * ```
+         */
+        render: RenderProp
+      },
+    ]
+  >
 
 const ICON_SIZE = 'small'
 
