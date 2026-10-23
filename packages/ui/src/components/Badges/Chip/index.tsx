@@ -88,7 +88,7 @@ export const Chip = ({
             isActive,
             closable: true,
           })}
-          gap={0.5}
+          gap={size === 'medium' ? 0.25 : 0.5}
         >
           <ChipContent {...chipContentProps(true)}>{children}</ChipContent>
           <ChipContent

@@ -90,11 +90,22 @@ const container = recipe({
     closable: {
       true: {
         padding: 0,
-        paddingRight: theme.space[1],
       },
     },
   },
   compoundVariants: [
+    {
+      style: {
+        paddingRight: theme.space[0.5],
+      },
+      variants: { size: 'medium', closable: true },
+    },
+    {
+      style: {
+        paddingRight: theme.space[1],
+      },
+      variants: { size: 'large', closable: true },
+    },
     {
       style: {
         selectors: {
@@ -128,7 +139,6 @@ const container = recipe({
 const contentBase = style({
   border: 'none',
   background: 'none',
-  borderRadius: `${theme.radii.xlarge} 0 0 ${theme.radii.xlarge}`,
   borderRight: 0,
   color: 'inherit',
   selectors: {
@@ -139,7 +149,7 @@ const contentBase = style({
 })
 
 const content = recipe({
-  base: [contentBase],
+  base: [contentBase, { borderRadius: `${theme.radii.xlarge} 0 0 ${theme.radii.xlarge}` }],
   variants: {
     size: {
       medium: {
@@ -155,6 +165,9 @@ const closeButton = recipe({
   base: [
     contentBase,
     {
+      height: theme.sizing[300],
+      width: theme.sizing[300],
+      alignSelf: 'center',
       borderLeft: 0,
       selectors: {
         '&:disabled': {
@@ -169,7 +182,7 @@ const closeButton = recipe({
         padding: theme.space['0.5'],
         borderRadius: 0,
       },
-      large: { padding: theme.space['0.5'], borderRadius: 0 },
+      large: { padding: theme.space['0.5'], borderRadius: theme.radii.default },
     },
     isActive: {
       true: {
