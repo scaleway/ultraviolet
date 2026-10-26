@@ -51,10 +51,12 @@ export const SingleSlider = ({
   const refSlider = useRef<HTMLInputElement>(null)
   const [sliderWidth, setSliderWidth] = useState(0)
   const [inputValue, setInputValue] = useState<number | null>(safeValue)
+  const [previousSelectedIndex, setPreviousSelectedIndex] = useState(selectedIndex)
 
-  useEffect(() => {
+  if (selectedIndex !== previousSelectedIndex) {
+    setPreviousSelectedIndex(selectedIndex)
     setInputValue(selectedIndex)
-  }, [selectedIndex])
+  }
 
   useEffect(() => {
     setSliderWidth(Number(refSlider.current?.offsetWidth))
@@ -96,6 +98,7 @@ export const SingleSlider = ({
   // Make sure that min <= value <= max
   useEffect(() => {
     if (value < min) {
+      // oxlint-disable-next-line react/set-state-in-effect -- clamps the controlled value and notifies the parent, which requires an effect
       internalOnChange(min)
     } else if (value > max) {
       internalOnChange(max)

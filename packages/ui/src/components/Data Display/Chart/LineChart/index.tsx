@@ -5,7 +5,7 @@ import { ResponsiveLine } from '@nivo/line'
 import type { AllowedValue, LineSeries, LineSvgProps, Point } from '@nivo/line'
 import type { ScaleSpec } from '@nivo/scales'
 import { theme } from '@ultraviolet/themes'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import type { ComponentProps, CSSProperties } from 'react'
 import { getLegendColor } from '../../../../helpers/legend'
 import { getNivoTheme } from '../../../../helpers/nivoTheme'
@@ -81,16 +81,11 @@ export const LineChart = ({
     })),
   }
 
-  const [selected, setSelected] = useState(dataset.datasets?.map(({ id }, index) => `${id}${index}`))
+  const [selected, setSelected] = useState<string[]>()
+  // Default to every dataset being selected. Calculated during render so that it stays in sync with the data prop.
+  const selectedOrDefault = selected ?? dataset.datasets?.map(({ id }, index) => `${id}${index}`)
 
-  const finalData = dataset.datasets?.filter(({ id }, index) => (selected ? selected.includes(`${id}${index}`) : false))
-
-  useEffect(() => {
-    if (selected !== undefined) {
-      return
-    }
-    setSelected(dataset.datasets?.map(({ id }, index) => `${id}${index}`))
-  }, [dataset.datasets, selected])
+  const finalData = dataset.datasets?.filter(({ id }, index) => selectedOrDefault?.includes(`${id}${index}`) ?? false)
 
   const localColors = getLegendColor(theme)
 
@@ -140,7 +135,7 @@ export const LineChart = ({
         <CustomLegend
           axisTransformer={axisFormatters?.left}
           data={data}
-          selected={selected ?? []}
+          selected={selectedOrDefault ?? []}
           setSelected={setSelected}
         />
       )}

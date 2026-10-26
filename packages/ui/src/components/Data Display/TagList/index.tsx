@@ -106,9 +106,6 @@ export const TagList = ({
   const popoverTriggerRef = useRef<HTMLButtonElement>(null)
 
   const [isPopoverVisible, setIsPopoverVisible] = useState(false)
-  // Avoid adding undefined to default visibleTags
-  const [visibleTags, setVisibleTags] = useState<TagType[]>(tags[0] ? [tags[0]] : [])
-  const [hiddenTags, setHiddenTags] = useState<TagType[]>([])
 
   const [potentiallyVisibleTags, surelyHiddenTags] = useMemo(() => {
     if (tags.length === 0) {
@@ -129,17 +126,27 @@ export const TagList = ({
     return [tags.slice(0, visibleCount), tags.slice(visibleCount)]
   }, [maxLength, tags, threshold])
 
+  // Seed the state with the potential split so the first client render matches the server
+  // render (where `ResizeObserver` is undefined) before the container width is measured.
+  const [visibleTags, setVisibleTags] = useState<TagType[]>(potentiallyVisibleTags)
+  const [hiddenTags, setHiddenTags] = useState<TagType[]>(surelyHiddenTags)
+
+  // When multiline or no measurement is available (e.g. server-side), the visible/hidden
+  // tags can be computed directly and don't need to be stored in state.
+  const splitIsDerived = multiline || typeof ResizeObserver === 'undefined'
+  const visibleTagsToDisplay = splitIsDerived ? potentiallyVisibleTags : visibleTags
+  const hiddenTagsToDisplay = splitIsDerived ? surelyHiddenTags : hiddenTags
+
   // Compute visible tags and hidden ones based on the container width and
   // what can fit into it from the potentially visible tags
   useEffect(() => {
-    if (tags.length === 0 || !containerRef.current || !measureRef.current) {
-      return
-    }
-
-    if (multiline || typeof ResizeObserver === 'undefined') {
-      setVisibleTags(potentiallyVisibleTags)
-      setHiddenTags(surelyHiddenTags)
-
+    if (
+      multiline ||
+      typeof ResizeObserver === 'undefined' ||
+      tags.length === 0 ||
+      !containerRef.current ||
+      !measureRef.current
+    ) {
       return
     }
 
@@ -234,15 +241,15 @@ export const TagList = ({
         className={cn(tagListStyle.tagContainer({ multiline }))}
         data-testid={`${dataTestId ?? 'taglist'}-container`}
       >
-        {visibleTags.length > 0 && (
-          <ul className={tagListStyle.list}>{visibleTags.map((tag, index) => renderTag(tag, index))}</ul>
+        {visibleTagsToDisplay.length > 0 && (
+          <ul className={tagListStyle.list}>{visibleTagsToDisplay.map((tag, index) => renderTag(tag, index))}</ul>
         )}
 
-        {hiddenTags.length > 0 && (
+        {hiddenTagsToDisplay.length > 0 && (
           <Popover
             content={
               <ul className={cn(tagListStyle.tagContainer({ multiline: true }), tagListStyle.list)}>
-                {hiddenTags.map((tag, index) => renderTag(tag, index))}
+                {hiddenTagsToDisplay.map((tag, index) => renderTag(tag, index))}
               </ul>
             }
             maxHeight={popoverMaxHeight}
@@ -263,7 +270,7 @@ export const TagList = ({
                 }
               }}
             >
-              +{hiddenTags.length}
+              +{hiddenTagsToDisplay.length}
             </button>
           </Popover>
         )}

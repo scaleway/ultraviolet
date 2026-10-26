@@ -1,7 +1,7 @@
 import { Form, useForm } from '@ultraviolet/form'
 import { theme as consoleLightTheme, Stack, Text } from '@ultraviolet/ui'
 import type { UltravioletUITheme } from '@ultraviolet/ui'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useState } from 'react'
 import { TOKENS_URL } from '../../../../scripts/figma-synchronise-token/constants'
 import { generatePalette } from '../../../../scripts/figma-synchronise-token/generatePalette'
 import { INITIAL_VALUES, SHADES_KEYS, SHADES_KEYS_MATCHING } from './contants'
@@ -31,10 +31,6 @@ export const ThemeGenerator = () => {
     mode: 'onChange',
     values: savedFormValues ?? INITIAL_VALUES,
   })
-
-  useEffect(() => {
-    setTheme(generatedPalette)
-  }, [generatedPalette])
 
   const onSubmit = useCallback(async (values: typeof INITIAL_VALUES) => {
     setSavedFormValues(values)
@@ -97,6 +93,7 @@ export const ThemeGenerator = () => {
     }) as UltravioletUITheme
 
     setGeneratedPalette(tempGeneratedPalette)
+    setTheme(tempGeneratedPalette)
     setStep(1)
   }, [])
 

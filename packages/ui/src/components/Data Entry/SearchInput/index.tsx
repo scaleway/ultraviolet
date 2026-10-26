@@ -5,16 +5,15 @@ import { cn } from '@ultraviolet/utils'
 import {
   forwardRef,
   useCallback,
-  useEffect,
   useImperativeHandle,
   useLayoutEffect,
   useMemo,
   useReducer,
   useRef,
   useState,
+  useSyncExternalStore,
 } from 'react'
 import type { Ref } from 'react'
-import { isClientSide } from '../../../helpers/isClientSide'
 import { Stack } from '../../Layout/Stack'
 import { Popup } from '../../Overlay/Popup'
 import { TextInput } from '../TextInput'
@@ -76,12 +75,18 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     const focusedLinkIndex = useRef(0)
     const popupRef = useRef<HTMLDivElement>(null)
     const [containerWidth, setContainerWidth] = useState(0)
-    const [searchTerms, setSearchTerms] = useState(defaultValue)
-    const [isMacOS, setIsMacOS] = useState(false)
+    const [searchTerms, setSearchTerms] = useState(value ?? defaultValue)
+    const [previousValue, setPreviousValue] = useState(value)
     const [keyPressed, setKeyPressed] = useState<string[]>([])
     const [isOpen, toggleIsOpen] = useReducer(state => !state, false)
     const innerSearchInputRef = useRef<HTMLInputElement>(null)
     useImperativeHandle(ref, () => innerSearchInputRef.current!)
+
+    const isMacOS = useSyncExternalStore(
+      /* subscribe */ () => () => {},
+      /* getSnapshot */ () => navigator.userAgent.includes('Mac'),
+      /* getServerSnapshot */ () => false,
+    )
 
     const content = typeof children === 'function' ? children({ isOpen, searchTerms, toggleIsOpen }) : children
 
@@ -129,9 +134,10 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       return () => window.removeEventListener('resize', resizeSearchBar)
     }, [])
 
-    useEffect(() => {
+    if (value !== previousValue) {
+      setPreviousValue(value)
       setSearchTerms(value ?? '')
-    }, [value])
+    }
 
     const onSearchCallback = (localValue: string) => {
       setSearchTerms(localValue)
@@ -152,13 +158,6 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
         toggleIsOpen()
       }
     }
-
-    useEffect(() => {
-      if (isClientSide) {
-        // We need to check if window is defined to avoid SSR issues
-        setIsMacOS(navigator.userAgent.includes('Mac'))
-      }
-    }, [])
 
     const handleKeyPressed = useCallback(
       (event: KeyboardEvent) => {

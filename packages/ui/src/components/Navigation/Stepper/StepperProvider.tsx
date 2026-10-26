@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useEffect, useMemo, useState } from 'react'
+import { createContext, useContext, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
 
 type ContextType = {
@@ -48,6 +48,13 @@ export const StepperProvider = ({
 }: StepperProviderProps) => {
   const currentSelected = useMemo(() => selected, [selected])
   const [step, setStep] = useState(currentSelected)
+  const [previousSelected, setPreviousSelected] = useState(selected)
+
+  if (selected !== previousSelected) {
+    setPreviousSelected(selected)
+    setStep(selected)
+  }
+
   const value = useMemo(
     () => ({
       animated,
@@ -60,7 +67,6 @@ export const StepperProvider = ({
     }),
     [step, interactive, size, animated, labelPosition, separator],
   )
-  useEffect(() => setStep(selected), [selected])
 
   return <StepperContext.Provider value={value}>{children}</StepperContext.Provider>
 }

@@ -114,6 +114,15 @@ export const Dropdown = ({
   const [maxWidth, setMaxWidth] = useState(refSelect.current?.offsetWidth ?? '100%')
   const modalContext = useContext(ModalContext)
 
+  if (!isDropdownVisible) {
+    if (defaultSearchValue !== null) {
+      setDefaultSearchValue(null)
+    }
+    if (search !== '') {
+      setSearch('')
+    }
+  }
+
   useLayoutEffect(() => {
     const { current } = refSelect
     if (!current || !isDropdownVisible) {
@@ -172,11 +181,6 @@ export const Dropdown = ({
   }, [onSearch, options, searchInput])
 
   useEffect(() => {
-    if (!isDropdownVisible) {
-      setDefaultSearchValue(null)
-      setSearch('')
-    }
-
     const eventKeydown = (event: globalThis.KeyboardEvent) =>
       handleKeyDown(event, ref, options, searchBarActive, setSearch, setDefaultSearchValue, search)
 
@@ -189,17 +193,7 @@ export const Dropdown = ({
         document.removeEventListener('keydown', eventKeydown)
       }
     }
-  }, [
-    isDropdownVisible,
-    searchBarActive,
-    options,
-    onSearch,
-    search,
-    refSelect,
-    setDefaultSearchValue,
-    setIsDropdownVisible,
-    searchable,
-  ])
+  }, [searchBarActive, options, onSearch, search, refSelect, setDefaultSearchValue, searchable])
 
   // No data is displayed (because of the search or because no data is provided)
   // Set to true when noData by default

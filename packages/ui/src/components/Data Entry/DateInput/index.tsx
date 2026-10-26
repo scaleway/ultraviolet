@@ -3,7 +3,7 @@
 import { CalendarRangeIcon } from '@ultraviolet/icons/CalendarRangeIcon'
 import { cn } from '@ultraviolet/utils'
 import type { Locale } from 'date-fns'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import type { ChangeEvent, CSSProperties, FocusEvent, ReactNode } from 'react'
 import { Card } from '../../Layout/Card'
 import { Stack } from '../../Layout/Stack'
@@ -139,6 +139,14 @@ export const DateInput = <IsRange extends undefined | boolean>({
     formatValue(computedValue, computedRange, showMonthYearPicker, selectsRange, format),
   )
   const [hoveredDate, setHoveredDate] = useState<Date | null>(null)
+  const [previousSyncProps, setPreviousSyncProps] = useState({
+    endDate,
+    format,
+    selectsRange,
+    showMonthYearPicker,
+    startDate,
+    value,
+  })
   const refInput = useRef<HTMLInputElement>(null)
   const popupRef = useRef<HTMLDivElement>(null)
   const MONTHS = getMonths(locale)
@@ -197,7 +205,23 @@ export const DateInput = <IsRange extends undefined | boolean>({
     ],
   )
 
-  useEffect(() => {
+  // slightly verbose way to avoid setStates in a useEffect
+  if (
+    endDate !== previousSyncProps.endDate ||
+    startDate !== previousSyncProps.startDate ||
+    value !== previousSyncProps.value ||
+    selectsRange !== previousSyncProps.selectsRange ||
+    format !== previousSyncProps.format ||
+    showMonthYearPicker !== previousSyncProps.showMonthYearPicker
+  ) {
+    setPreviousSyncProps({
+      endDate,
+      format,
+      selectsRange,
+      showMonthYearPicker,
+      startDate,
+      value,
+    })
     if (!selectsRange) {
       setValue(value ?? null)
       setInputValue(
@@ -213,7 +237,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
         formatValue(null, { start: startDate ?? null, end: endDate ?? null }, showMonthYearPicker, true, format),
       )
     }
-  }, [endDate, startDate, value, selectsRange, format, showMonthYearPicker])
+  }
 
   const manageOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newValue = event.currentTarget.value

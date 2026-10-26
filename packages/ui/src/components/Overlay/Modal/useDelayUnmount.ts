@@ -3,12 +3,11 @@ import { useEffect, useState } from 'react'
 export const useDelayUnmount = (open?: boolean, delayTime?: number) => {
   const [shouldRender, setShouldRender] = useState(open)
 
-  useEffect(() => {
-    if (open && !shouldRender) {
-      setShouldRender(true)
+  if (open && !shouldRender) {
+    setShouldRender(true)
+  }
 
-      return undefined
-    }
+  useEffect(() => {
     if (!open && shouldRender) {
       const timeoutId = setTimeout(() => setShouldRender(false), delayTime)
 

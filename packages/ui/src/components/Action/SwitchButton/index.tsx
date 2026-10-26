@@ -47,6 +47,7 @@ export const SwitchButton = ({
   const containerRef = useRef<HTMLDivElement>(null)
 
   const [localValue, setLocalValue] = useState(value)
+  const [previousValue, setPreviousValue] = useState(value)
   const [refOptions, setRefOptions] = useState<RefOptionType[]>([])
   const [position, setPosition] = useState(0)
   const [width, setWidth] = useState(0)
@@ -68,8 +69,13 @@ export const SwitchButton = ({
     return currentPosition - containerPosition
   }
 
-  useEffect(() => {
+  if (value !== previousValue) {
+    setPreviousValue(value)
     setLocalValue(value)
+  }
+
+  useEffect(() => {
+    // oxlint-disable-next-line react/set-state-in-effect -- measures the selected option DOM element after render
     setWidth(getElement(value)?.offsetWidth ?? 0)
     setPosition(getPosition(getElement(value)))
   }, [refOptions, value, getElement])

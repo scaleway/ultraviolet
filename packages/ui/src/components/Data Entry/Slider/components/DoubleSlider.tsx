@@ -15,6 +15,12 @@ import type { DoubleSliderProps } from '../types'
 import { Options } from './Options'
 import { leftVar, sliderStyle, thumbColor, tooltipLeft } from '../styles.css'
 
+const getClampedRange = (value: number[] | undefined, min: number, max: number) => {
+  const source = value && Array.isArray(value) && value.length === 2 ? value : [min, max]
+
+  return [Math.max(min, source[0]), Math.min(max, source[1])]
+}
+
 export const DoubleSlider = ({
   name,
   tooltip,
@@ -49,18 +55,25 @@ export const DoubleSlider = ({
   const finalId = id ?? localId
   const refSlider = useRef<HTMLInputElement>(null)
 
-  const safeValue = value && Array.isArray(value) && value.length === 2 ? value : [min ?? 0, max ?? 1]
-  const [selectedIndexes, setSelectedIndexes] = useState(safeValue)
+  const [selectedIndexes, setSelectedIndexes] = useState(() => getClampedRange(value, min, max))
   const [sliderWidth, setWidth] = useState(0)
-  const [inputValue, setInputValue] = useState<(number | null)[]>(safeValue)
+  const [inputValue, setInputValue] = useState<(number | null)[]>(selectedIndexes)
+  const [previousSync, setPreviousSync] = useState({ indexes: selectedIndexes, max, min, value })
 
-  useEffect(() => {
-    setInputValue(selectedIndexes)
-  }, [selectedIndexes])
-
-  useEffect(() => {
-    setWidth(Number(refSlider.current?.offsetWidth))
-  }, [refSlider])
+  if (
+    previousSync.indexes !== selectedIndexes ||
+    previousSync.max !== max ||
+    previousSync.min !== min ||
+    previousSync.value !== value
+  ) {
+    setPreviousSync({ indexes: selectedIndexes, max, min, value })
+    if (previousSync.indexes !== selectedIndexes) {
+      setInputValue(selectedIndexes)
+    }
+    if (previousSync.max !== max || previousSync.min !== min || previousSync.value !== value) {
+      setSelectedIndexes(getClampedRange(value, min, max))
+    }
+  }
 
   const activeValue = (side: 'left' | 'right') => {
     // Find the index of the min value (if side="left") and max value (side="right")
@@ -120,6 +133,8 @@ export const DoubleSlider = ({
     const setWidthResize = () => {
       setWidth(Number(refSlider.current?.offsetWidth))
     }
+
+    setWidthResize()
     window.addEventListener('resize', setWidthResize)
 
     return () => {
@@ -237,21 +252,6 @@ export const DoubleSlider = ({
 
   const leftSliderProgress = (((selectedIndexes[0] ?? 0) - min) * 100) / (max - min)
   const rightSliderProgress = (((selectedIndexes[1] ?? 0) - min) * 100) / (max - min)
-
-  // Make the component controllable
-  useEffect(() => {
-    setSelectedIndexes(() => {
-      const newSafeValue = value && Array.isArray(value) && value.length === 2 ? value : [min, max]
-      if (min > newSafeValue[0]) {
-        newSafeValue[0] = min
-      }
-      if (max < newSafeValue[1]) {
-        newSafeValue[1] = max
-      }
-
-      return newSafeValue
-    })
-  }, [min, max, value])
 
   return (
     <Stack direction="column" gap={1} justifyContent="left">

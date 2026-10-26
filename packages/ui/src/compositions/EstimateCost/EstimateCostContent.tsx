@@ -56,20 +56,91 @@ export const EstimateCostContent = ({
   const { formatNumber } = useEstimateCost()
 
   const [products, setProducts] = useState<EstimateProduct[]>([]) // product is used to store each items with their price and amount
-  const [totalPrice, setTotalPrice] = useState({
-    hourly: 0,
-    maxHourly: 0,
-    maxOverlayHourly: 0,
-    maxTotal: 0,
-    overlayHourly: 0,
-    total: 0,
-  })
   const [iteration, setIteration] = useState({
     unit: defaultTimeUnit ?? 'hours',
     value: 1,
   })
 
-  const [isLongFractionDigits, setIsLongFractionDigits] = useState(false)
+  const { totalPrice, isLongFractionDigits } = useMemo(() => {
+    // this variable check if there is a maxAmount in each product
+    // if not we do not need to calculate maxTotal, maxHourly, maxOverlayHourly
+    const isMaxAmountInProducts = products.find(product => product.maxAmount)
+
+    return {
+      isLongFractionDigits: !!products.find(product => product.longFractionDigits),
+      totalPrice: {
+        hourly: products.reduce(
+          (acc, product) =>
+            acc +
+            (product.noIteration
+              ? 0
+              : (product.price - product.price * product.discount) * Math.max(product.amount - product.amountFree, 0)),
+          0,
+        ),
+        maxHourly: isMaxAmountInProducts
+          ? products.reduce(
+              (acc, product) =>
+                acc && product.noIteration
+                  ? 0
+                  : (product.price - product.price * product.discount) *
+                    Math.max(product.maxAmount - product.amountFree, 0),
+
+              0,
+            )
+          : 0,
+        maxOverlayHourly: isMaxAmountInProducts
+          ? products.reduce(
+              (acc, product) =>
+                acc +
+                (product.noIteration
+                  ? 0
+                  : (product.price - product.price * product.discount) *
+                    Math.max(product.maxAmount - product.amountFree, 0)),
+              0,
+            )
+          : 0,
+        maxTotal: isMaxAmountInProducts
+          ? products.reduce(
+              (acc, product) =>
+                acc +
+                calculatePrice({
+                  amount: product.maxAmount || product.amount, // Not all products have maxAmount, so we need to check both
+                  amountFree: product.amountFree,
+                  discount: product.discount,
+                  price: product.price,
+                  timeAmount: product.noIteration ? 1 : iteration.value,
+                  timeUnit: product.noIteration ? 'hours' : iteration.unit,
+                }),
+              0,
+            )
+          : 0,
+        overlayHourly: products.reduce(
+          (acc, product) =>
+            acc +
+            (product.noIteration
+              ? 0
+              : (product.price - product.price * product.discount) * Math.max(product.amount - product.amountFree, 0)),
+          0,
+        ),
+        total: hideTotal
+          ? 0
+          : products.reduce(
+              (acc, product) =>
+                acc +
+                calculatePrice({
+                  amount: product.amount,
+                  amountFree: product.amountFree,
+                  discount: product.discount,
+                  price: product.price,
+                  timeAmount: product.noIteration ? 1 : iteration.value,
+                  timeUnit: product.noIteration ? 'hours' : iteration.unit,
+                }),
+              0,
+            ),
+      },
+    }
+  }, [hideTotal, products, iteration])
+
   const providerValue = useMemo(() => ({ isOverlay: false }), [])
 
   const totalValue = useMemo(
@@ -112,101 +183,15 @@ export const EstimateCostContent = ({
   )
 
   useEffect(() => {
-    // this variable check if there is a maxAmount in each product
-    // if not we do not need to calculate maxTotal, maxHourly, maxOverlayHourly
-    const isMaxAmountInProducts = products.find(product => product.maxAmount)
-    setIsLongFractionDigits(!!products.find(product => product.longFractionDigits))
-    setTotalPrice({
-      hourly: products.reduce(
-        (acc, product) =>
-          acc +
-          (product.noIteration
-            ? 0
-            : (product.price - product.price * product.discount) * Math.max(product.amount - product.amountFree, 0)),
-        0,
-      ),
-      maxHourly: isMaxAmountInProducts
-        ? products.reduce(
-            (acc, product) =>
-              acc && product.noIteration
-                ? 0
-                : (product.price - product.price * product.discount) *
-                  Math.max(product.maxAmount - product.amountFree, 0),
-
-            0,
-          )
-        : 0,
-      maxOverlayHourly: isMaxAmountInProducts
-        ? products.reduce(
-            (acc, product) =>
-              acc +
-              (product.noIteration
-                ? 0
-                : (product.price - product.price * product.discount) *
-                  Math.max(product.maxAmount - product.amountFree, 0)),
-            0,
-          )
-        : 0,
-      maxTotal: isMaxAmountInProducts
-        ? products.reduce(
-            (acc, product) =>
-              acc +
-              calculatePrice({
-                amount: product.maxAmount || product.amount, // Not all products have maxAmount, so we need to check both
-                amountFree: product.amountFree,
-                discount: product.discount,
-                price: product.price,
-                timeAmount: product.noIteration ? 1 : iteration.value,
-                timeUnit: product.noIteration ? 'hours' : iteration.unit,
-              }),
-            0,
-          )
-        : 0,
-      overlayHourly: products.reduce(
-        (acc, product) =>
-          acc +
-          (product.noIteration
-            ? 0
-            : (product.price - product.price * product.discount) * Math.max(product.amount - product.amountFree, 0)),
-        0,
-      ),
-      total: hideTotal
-        ? 0
-        : products.reduce(
-            (acc, product) =>
-              acc +
-              calculatePrice({
-                amount: product.amount,
-                amountFree: product.amountFree,
-                discount: product.discount,
-                price: product.price,
-                timeAmount: product.noIteration ? 1 : iteration.value,
-                timeUnit: product.noIteration ? 'hours' : iteration.unit,
-              }),
-            0,
-          ),
-    })
     onTotalPriceChange?.({
       total: totalPrice.total,
       totalMax: totalPrice.maxTotal > 0 ? totalPrice.maxTotal : undefined,
     })
-  }, [
-    hideTotal,
-    products,
-    iteration,
-    setTotalPrice,
-    onTotalPriceChange,
-    totalPrice.total,
-    totalPrice.maxTotal,
-    totalValue,
-    totalMaxValue,
-  ])
+  }, [onTotalPriceChange, totalPrice])
 
-  useEffect(() => {
-    if (hideTimeUnit && (iteration.value > 1 || iteration.unit !== (defaultTimeUnit ?? 'hours'))) {
-      setIteration({ unit: defaultTimeUnit ?? 'hours', value: 1 })
-    }
-  }, [hideTimeUnit, iteration, defaultTimeUnit])
+  if (hideTimeUnit && (iteration.value > 1 || iteration.unit !== (defaultTimeUnit ?? 'hours'))) {
+    setIteration({ unit: defaultTimeUnit ?? 'hours', value: 1 })
+  }
 
   return (
     <>

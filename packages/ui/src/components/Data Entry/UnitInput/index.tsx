@@ -4,7 +4,7 @@ import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { useEffect, useId, useMemo, useState } from 'react'
+import { useId, useMemo, useState } from 'react'
 import type { ComponentProps, CSSProperties, InputHTMLAttributes, ReactNode } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import type { BaseFormComponentProps } from '../../../types'
@@ -78,10 +78,18 @@ export const UnitInput = ({
   'aria-describedby': ariaDescribedBy,
 }: UnitInputProps) => {
   const [val, setVal] = useState(value)
+  const [previousValue, setPreviousValue] = useState(value)
   const uniqueId = useId()
   const helperId = useId()
 
   const localId = id ?? uniqueId
+
+  if (value !== previousValue) {
+    setPreviousValue(value)
+    if (value !== undefined) {
+      setVal(value)
+    }
+  }
 
   const computedState = useMemo(() => {
     if (disabled) {
@@ -99,12 +107,6 @@ export const UnitInput = ({
 
     return 'default'
   }, [disabled, readOnly, success, error])
-
-  useEffect(() => {
-    if (value !== undefined) {
-      setVal(value)
-    }
-  }, [value])
 
   return (
     <Stack gap={0.5} maxWidth={maxWidth} onBlur={onBlur} onFocus={onFocus} onKeyDown={onKeyDown} width={width}>

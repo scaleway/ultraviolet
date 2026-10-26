@@ -1,5 +1,5 @@
 import { useDebouncedCallback } from '@ultraviolet/utils'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { SearchInput } from '../../../components/Data Entry/SearchInput'
 import type { FilterComponentProps, FilterConfigItemSearch } from '../types'
 
@@ -7,12 +7,14 @@ type FilterSearchProps = FilterComponentProps<string, FilterConfigItemSearch>
 
 export const FilterSearch = ({ config, hideLabel, onChange, value, size }: FilterSearchProps) => {
   const [tempValue, setTempValue] = useState(value)
+  const [previousValue, setPreviousValue] = useState(value)
 
   const onSetValueLater = useDebouncedCallback(onChange, config.debounceDuration ?? 600)
 
-  useEffect(() => {
+  if (value !== previousValue) {
+    setPreviousValue(value)
     setTempValue(value)
-  }, [value])
+  }
 
   return (
     <SearchInput

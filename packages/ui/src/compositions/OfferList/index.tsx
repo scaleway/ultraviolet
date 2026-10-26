@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import type { ComponentProps, CSSProperties } from 'react'
 import { List } from '../../components/Data Display/List'
 import { Cell } from './components/Cell'
@@ -42,6 +42,8 @@ export const OfferList = ({
 }: OfferListProps) => {
   const [radioSelectedRow, setRadioSelectedRow] = useState(typeof selected === 'string' ? selected : undefined)
   const [checkboxSelectedRows, setCheckboxSelectedRows] = useState(Array.isArray(selected) ? selected : [])
+  const [previousSelected, setPreviousSelected] = useState(selected)
+  const [previousType, setPreviousType] = useState(type)
 
   const computedColumns = [
     {
@@ -51,7 +53,9 @@ export const OfferList = ({
     ...columns,
   ].filter(element => !!element)
 
-  useEffect(() => {
+  if (selected !== previousSelected || type !== previousType) {
+    setPreviousSelected(selected)
+    setPreviousType(type)
     if (selected) {
       if (typeof selected === 'string' && type === 'radio') {
         setRadioSelectedRow(selected)
@@ -60,7 +64,7 @@ export const OfferList = ({
         setCheckboxSelectedRows(selected)
       }
     }
-  }, [type, selected])
+  }
 
   return (
     <OfferListProvider
