@@ -1,5 +1,5 @@
-import { createVitestConfig, createVitestProjectsConfig } from './src/vitest/configs/index.ts'
+import { createVitestProjectsConfig } from './src/vitest/configs/index.ts'
 
-export { createVitestConfig, createVitestProjectsConfig }
+export { createVitestProjectsConfig }
 
-export default createVitestConfig()
+export default createVitestProjectsConfig()

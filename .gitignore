@@ -43,6 +43,10 @@ storybook-static
 vite.config.ts.*
 vitest.config.ts.*
 
+#vitest
+.vitest-attachments/
+__screenshots__/
+
 # turbo
 .turbo
 !.turbo/config.json
@@ -58,6 +62,7 @@ tools/*/.turbo
 next-env.d.ts*
 **/test-results/
 **/playwright-report/
+**/.vitest-attachements/
 **/blob-report/
 **/playwright/.cache/
 

@@ -35,7 +35,7 @@
   "scripts": {
     "build": "vite build && pnpm type:generate",
     "lintpublish": "publint",
-    "test:unit": "vitest --run",
+    "test:unit": "pnpm vitest --run --project unit",
     "test:unit:coverage": "pnpm test:unit --coverage",
     "test:watch": "vitest",
     "type:generate": "tsc --declaration -p tsconfig.build.json",

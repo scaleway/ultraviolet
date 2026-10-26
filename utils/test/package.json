@@ -20,23 +20,25 @@
       "default": "./src/index.ts"
     },
     "./browser-setup": "./src/vitest/setup/browser.ts",
-    "./config": "./vitest.config.ts"
+    "./config": "./vitest.config.ts",
+    "./setup": "./src/vitest/setup/unit.ts"
   },
   "dependencies": {
     "@testing-library/jest-dom": "7.0.1",
     "@testing-library/react": "16.3.3",
     "@ultraviolet/themes": "workspace:*",
-    "axe-core": "catalog:"
-  },
-  "devDependencies": {
-    "@types/node": "24.19.2",
-    "@types/react": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
     "@vitest/browser": "4.1.12",
     "@vitest/browser-playwright": "4.1.12",
     "@vitest/coverage-istanbul": "4.1.12",
     "@vitest/coverage-v8": "4.1.12",
     "@vitest/ui": "4.1.12",
+    "axe-core": "4.14.0",
     "playwright": "1.64.0",
     "vitest": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0"
   }
 }

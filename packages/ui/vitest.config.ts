@@ -10,12 +10,12 @@ export const vitestConfig = createVitestProjectsConfig({
     }),
   ],
   unit: {
-    name: 'uv/ui',
+    name: 'unit',
     testTimeout: 10_000,
-    setupFiles: ['./vitest.setup.ts'],
+    setupFiles: ['@utils/test/setup'],
   },
   browser: {
-    name: 'uv/ui-browser',
+    name: 'browser',
     setupFiles: ['@utils/test/browser-setup'],
   },
 })

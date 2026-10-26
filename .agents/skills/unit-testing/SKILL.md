@@ -73,9 +73,9 @@ The line is thin, but split files by intent:
 - **`a11y.test.tsx`** — accessibility-only concerns: axe violations, keyboard
   navigation, focus management, ARIA attributes. Query by role to _trigger_ those
   checks, but assert on a11y outcomes (`expect(axe).toHaveNoViolations()`, focus
-  landing, etc.). These files are **excluded from the jsdom unit project and only
-  run in Vitest Browser Mode** (`pnpm test:browser` in the package, the
-  `uv/<pkg>-browser` project in `vitest.config.ts`), where axe can check rules
+  landing, etc.). These files are **excluded from the jsdom `unit` project and only
+  run in Vitest Browser Mode** (`pnpm test:browser` in the package, the `browser`
+  project in `vitest.config.ts`), where axe can check rules
   that need real layout like `color-contrast`. The page gets the theme
   background via `@ultraviolet/themes/global` imported in
   `@utils/test/browser-setup` — don't remove it. Animations/transitions DO run

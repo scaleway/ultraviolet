@@ -10,11 +10,11 @@ export const vitestConfig = createVitestProjectsConfig({
     }),
   ],
   unit: {
-    name: 'uv/illustration',
-    setupFiles: ['./vitest.setup.ts'],
+    name: 'unit',
+    setupFiles: ['@utils/test/setup'],
   },
   browser: {
-    name: 'uv/illustration-browser',
+    name: 'browser',
     setupFiles: ['@utils/test/browser-setup'],
   },
 })

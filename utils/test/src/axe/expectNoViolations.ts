@@ -1,13 +1,11 @@
-// axe-core is used directly instead of vitest-axe's runner: vitest-axe uses `createRequire`,
-// which doesn't exist in Vitest Browser Mode. The `toHaveNoViolations` matcher stays from vitest-axe.
 import axe from 'axe-core'
 import { expect } from 'vitest'
-import type { AxeCore } from 'vitest-axe'
 
+type RuleObject = axe.RunOptions['rules']
 /**
  * https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md
  */
-const rules: AxeCore.RuleObject = {
+const rules: RuleObject = {
   'identical-links-same-purpose': {
     enabled: true,
   },
@@ -23,17 +21,17 @@ const rules: AxeCore.RuleObject = {
   },
 } as const
 
-const defaultAxeOptions: AxeCore.RunOptions = {
+const defaultAxeOptions: axe.RunOptions = {
   performanceTimer: false,
   reporter: 'v2',
   rules,
 } as const
 
-const expectNoViolations = async (container: string | Element, customOptions: AxeCore.RunOptions = {}) => {
+const expectNoViolations = async (container: string | Element, customOptions: axe.RunOptions = {}) => {
   const opts = {
     ...customOptions,
     ...defaultAxeOptions,
-  } satisfies AxeCore.RunOptions
+  } satisfies axe.RunOptions
 
   const axeResult = await axe.run(container, opts)
   expect(axeResult).toHaveNoViolations()

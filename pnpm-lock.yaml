@@ -273,6 +273,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: 6.1.2
         version: 6.1.2(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
+      '@vitest/coverage-istanbul':
+        specifier: 4.1.12
+        version: 4.1.12(supports-color@8.1.1)(vitest@4.1.12)
       browserslist:
         specifier: 4.29.4
         version: 4.29.4
@@ -309,9 +312,6 @@ importers:
       pkg-pr-new:
         specifier: 0.0.91
         version: 0.0.91
-      playwright:
-        specifier: 1.64.0
-        version: 1.64.0
       postcss:
         specifier: 8.5.31
         version: 8.5.31
@@ -683,9 +683,6 @@ importers:
       '@utils/test':
         specifier: workspace:*
         version: link:../../utils/test
-      '@vitest/coverage-istanbul':
-        specifier: 4.1.12
-        version: 4.1.12(supports-color@8.1.1)(vitest@4.1.12)
       react:
         specifier: 19.3.1
         version: 19.3.1
@@ -936,9 +933,6 @@ importers:
       '@vanilla-extract/vite-plugin':
         specifier: 5.2.6
         version: 5.2.6(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(supports-color@8.1.1)(terser@5.51.2)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(yaml@2.9.1)
-      '@vitest/coverage-istanbul':
-        specifier: 4.1.12
-        version: 4.1.12(supports-color@8.1.1)(vitest@4.1.12)
       react:
         specifier: 19.3.1
         version: 19.3.1
@@ -977,7 +971,10 @@ importers:
         version: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@24.19.2)(@vitest/browser-playwright@4.1.12)(@vitest/coverage-istanbul@4.1.12)(@vitest/coverage-v8@4.1.12)(@vitest/ui@4.1.12)(jsdom@30.1.3)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
 
   utils/config:
-    devDependencies:
+    dependencies:
+      '@vitejs/plugin-react':
+        specifier: 6.1.2
+        version: 6.1.2(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
       vite:
         specifier: 8.3.5
         version: 8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)
@@ -1051,16 +1048,9 @@ importers:
       '@ultraviolet/themes':
         specifier: workspace:*
         version: link:../../packages/themes
-      axe-core:
-        specifier: 4.14.0
-        version: 4.14.0
-    devDependencies:
-      '@types/node':
-        specifier: 24.19.2
-        version: 24.19.2
-      '@types/react':
-        specifier: 19.3.0
-        version: 19.3.0
+      '@vitejs/plugin-react':
+        specifier: 6.1.2
+        version: 6.1.2(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
       '@vitest/browser':
         specifier: 4.1.12
         version: 4.1.12(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(vitest@4.1.12)
@@ -1076,12 +1066,22 @@ importers:
       '@vitest/ui':
         specifier: 4.1.12
         version: 4.1.12(vitest@4.1.12)
+      axe-core:
+        specifier: 4.14.0
+        version: 4.14.0
       playwright:
         specifier: 1.64.0
         version: 1.64.0
       vitest:
         specifier: 4.1.12
         version: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@24.19.2)(@vitest/browser-playwright@4.1.12)(@vitest/coverage-istanbul@4.1.12)(@vitest/coverage-v8@4.1.12)(@vitest/ui@4.1.12)(jsdom@30.1.3)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
+    devDependencies:
+      '@types/node':
+        specifier: 24.19.2
+        version: 24.19.2
+      '@types/react':
+        specifier: 19.3.0
+        version: 19.3.0
 
 packages:
 
@@ -12373,6 +12373,20 @@ snapshots:
       - utf-8-validate
       - vite
 
+  '@vitest/browser-playwright@4.1.12(playwright@1.64.1)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(vitest@4.1.12)':
+    dependencies:
+      '@vitest/browser': 4.1.12(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(vitest@4.1.12)
+      '@vitest/mocker': 4.1.12(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
+      playwright: 1.64.1
+      tinyrainbow: 3.2.0
+      vitest: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@24.19.2)(@vitest/browser-playwright@4.1.12)(@vitest/coverage-istanbul@4.1.12)(@vitest/coverage-v8@4.1.12)(@vitest/ui@4.1.12)(jsdom@30.1.3)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
+    transitivePeerDependencies:
+      - bufferutil
+      - msw
+      - utf-8-validate
+      - vite
+    optional: true
+
   '@vitest/browser@4.1.12(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(vitest@4.1.12)':
     dependencies:
       '@blazediff/core': 1.9.1
@@ -16453,7 +16467,7 @@ snapshots:
     optionalDependencies:
       '@opentelemetry/api': 1.10.0
       '@types/node': 24.19.2
-      '@vitest/browser-playwright': 4.1.12(playwright@1.64.0)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(vitest@4.1.12)
+      '@vitest/browser-playwright': 4.1.12(playwright@1.64.1)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(vitest@4.1.12)
       '@vitest/coverage-istanbul': 4.1.12(supports-color@8.1.1)(vitest@4.1.12)
       '@vitest/coverage-v8': 4.1.12(@vitest/browser@4.1.12)(vitest@4.1.12)
       '@vitest/ui': 4.1.12(vitest@4.1.12)
