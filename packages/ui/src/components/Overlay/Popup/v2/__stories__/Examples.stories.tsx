@@ -15,7 +15,7 @@ const MENU_ITEMS = ['Create', 'Edit', 'Delete']
 /**
  * Dummy Popover built from the public `Popup` API
  */
-const Popover = () => (
+export const Popover = () => (
   <Popup.Root>
     <Popup.Trigger>
       <Button sentiment="neutral" variant="outlined">
@@ -36,8 +36,8 @@ const Popover = () => (
 )
 
 const MenuList = () => {
-  const { context } = usePopupContext()
-  const close = () => context.onOpenChange(false)
+  const { setOpen } = usePopupContext()
+  const close = () => setOpen(false)
 
   return (
     <>
@@ -70,7 +70,7 @@ const MenuList = () => {
 /**
  * Dummy Menu built from the public `Popup` API
  */
-const Menu = () => (
+export const Menu = () => (
   <Popup.Root>
     <MenuList />
   </Popup.Root>
@@ -136,13 +136,13 @@ const SelectList = () => {
 /**
  * Dummy Select built from the public `Popup` API.
  */
-const Select = () => (
+export const Select = () => (
   <Popup.Root>
     <SelectList />
   </Popup.Root>
 )
 
-const InformationIcon = () => (
+export const InfoTip = () => (
   <Popup.Root>
     <Popup.Trigger triggerEvent="hover">
       <VisuallyHidden>See information</VisuallyHidden>
@@ -163,6 +163,6 @@ export const Examples: StoryFn<typeof Popup> = () => (
     <Popover />
     <Menu />
     <Select />
-    <InformationIcon />
+    <InfoTip />
   </Stack>
 )
