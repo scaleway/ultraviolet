@@ -1,6 +1,5 @@
 'use client'
 
-import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId } from 'react'
 import type { Ref } from 'react'
@@ -48,7 +47,7 @@ export const Popover = forwardRef(
         <Popup.Panel
           role="dialog"
           aria-labelledby={titleId}
-          background={sentiment === 'primary' ? theme.colors.primary.backgroundStrong : theme.colors.neutral.background}
+          sentiment={sentiment}
           className={cn(className, popoverStyle.popover({ size }))}
           placement={finalPlacement}
           portalTarget={portalTarget}

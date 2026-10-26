@@ -11,15 +11,9 @@ export const ContentWrapper = ({ titleId, title, children, sentiment }: ContentW
   const { setOpen } = usePopupContext()
 
   return (
-    <Stack gap={1}>
+    <Stack gap={1} width="100%">
       <Stack direction="row" justifyContent="space-between">
-        <Text
-          as="h2"
-          id={titleId}
-          prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
-          sentiment={sentiment === 'neutral' ? 'neutral' : 'white'}
-          variant="bodyStrong"
-        >
+        <Text as="h2" id={titleId} variant="bodyStrong">
           {title}
         </Text>
         <Button
@@ -33,12 +27,7 @@ export const ContentWrapper = ({ titleId, title, children, sentiment }: ContentW
         </Button>
       </Stack>
       {typeof children === 'string' ? (
-        <Text
-          as="p"
-          prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
-          sentiment={sentiment === 'neutral' ? 'neutral' : 'white'}
-          variant="bodySmall"
-        >
+        <Text as="p" variant="bodySmall">
           {children}
         </Text>
       ) : (
