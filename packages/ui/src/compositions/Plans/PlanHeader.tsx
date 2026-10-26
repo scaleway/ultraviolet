@@ -8,7 +8,6 @@ import { plansStyle } from './styles.css'
 
 type PlanHeaderProps = {
   fieldName?: string
-  setFocusedPlan: (planValue?: string) => void
   onChange?: (newPlanValue?: string) => void
   currentPlanValue?: string
   plan: PlanType<string>
@@ -16,15 +15,7 @@ type PlanHeaderProps = {
   locales: Record<keyof typeof PlansLocales, string>
 }
 
-export const PlanHeader = ({
-  fieldName,
-  setFocusedPlan,
-  onChange,
-  currentPlanValue,
-  plan,
-  disabled,
-  locales,
-}: PlanHeaderProps) => (
+export const PlanHeader = ({ fieldName, onChange, currentPlanValue, plan, disabled, locales }: PlanHeaderProps) => (
   <>
     {fieldName && onChange && !disabled ? (
       <input
@@ -32,13 +23,7 @@ export const PlanHeader = ({
         data-testid={plan.value}
         id={plan.value}
         name={fieldName}
-        onBlur={() => {
-          setFocusedPlan(undefined)
-        }}
         onChange={() => onChange(plan.value)}
-        onFocus={() => {
-          setFocusedPlan(plan.value)
-        }}
         type="radio"
         value={plan.value}
       />

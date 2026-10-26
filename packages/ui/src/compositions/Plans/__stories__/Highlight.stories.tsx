@@ -79,6 +79,7 @@ Highlight.args = {
   features: [gb, pipeline, domain, ssl, fees],
   highlight: { content: 'Most popular', plan: 'professional' },
   plans: [planStarter, planProfessional, planAdvanced],
+  value: 'advanced',
 }
 
 Highlight.parameters = {
