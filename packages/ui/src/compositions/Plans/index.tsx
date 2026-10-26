@@ -122,7 +122,7 @@ export const Plans = <T extends string>({
                     <Text as="p" className={plansStyle.uppercaseText} sentiment="neutral" variant="bodySmallStronger">
                       {feature.group}
                     </Text>
-                    {feature.hint ? <FeatureHint hint={feature.hint} /> : null}
+                    <FeatureHint hint={feature.hint} />
                   </Stack>
                 </td>
                 {plans.map(plan => (
