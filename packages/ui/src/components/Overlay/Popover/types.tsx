@@ -1,8 +1,15 @@
-import type { ComponentProps, ReactNode } from 'react'
-import type { Popup } from '../Popup'
+import type { CSSProperties, ReactNode } from 'react'
 import type { SIZES_WIDTH } from './constant'
 
 type SentimentType = 'neutral' | 'primary'
+
+/**
+ * @deprecated "auto" is not required since the Popover placement is always flipped if needed to remain visible.
+ */
+type LegacyPopoverPlacement = 'auto' | 'auto-top' | 'auto-bottom' | 'auto-left' | 'auto-right'
+
+export type NewPopoverPlacement = 'top' | 'right' | 'bottom' | 'left'
+export type PopoverPlacement = NewPopoverPlacement | LegacyPopoverPlacement
 
 export type PopoverProps = {
   children: ReactNode
@@ -14,14 +21,34 @@ export type PopoverProps = {
   onClose?: () => void
   className?: string
   'data-testid'?: string
-  maxWidth?: string
-  maxHeight?: string
   /**
-   * By default, the portal target is children container or document.body if children is a function. You can override this
-   * behavior by setting a portalTarget prop.
+   * @deprecated the Popover has a fixed width derived from the `size` property.
+   * This property is ignored and will be removed in the next major release.
    */
+  maxWidth?: string
+  /**
+   * @deprecated the Popover should not truncate the content or scroll.
+   * This property is ignored and will be removed in the next major release.
+   */
+  maxHeight?: string
   portalTarget?: HTMLElement
-  placement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
-} & Pick<ComponentProps<typeof Popup>, 'dynamicDomRendering' | 'align' | 'style'>
+  placement?: PopoverPlacement
+  /**
+   * @deprecated the Popover is always centered
+   * This property is ignored and will be removed in the next major release.
+   */
+  align?: 'start' | 'center'
+  /**
+   * @deprecated the popup is always rendered dynamically.
+   * This property is ignored and will be removed in the next major release.
+   */
+  dynamicDomRendering?: boolean
+  style?: CSSProperties
+}
 
-export type ContentWrapperProps = Pick<PopoverProps, 'title' | 'onClose' | 'sentiment' | 'children'>
+export type ContentWrapperProps = Pick<PopoverProps, 'title' | 'onClose' | 'sentiment' | 'children'> & {
+  /**
+   * id of the title, referenced by the popup panel's `aria-labelledby`.
+   */
+  titleId: string
+}

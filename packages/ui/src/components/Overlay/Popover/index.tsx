@@ -1,12 +1,12 @@
 'use client'
 
+import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
-import { forwardRef, useCallback, useContext, useMemo, useRef, useState } from 'react'
+import { forwardRef, useId } from 'react'
 import type { Ref } from 'react'
-import { ModalContext } from '../Modal/ModalProvider'
-import { Popup } from '../Popup'
+import { Popup } from '../Popup/v2'
 import { ContentWrapper } from './ContentWrapper'
-import type { PopoverProps } from './types'
+import type { NewPopoverPlacement, PopoverProps } from './types'
 import { popoverStyle } from './styles.css'
 
 /**
@@ -16,80 +16,53 @@ import { popoverStyle } from './styles.css'
 export const Popover = forwardRef(
   (
     {
-      visible = false,
+      visible,
       children,
-      placement,
+      placement = 'top',
       content,
       title,
       sentiment = 'neutral',
       size = 'medium',
       onClose,
       className,
-      maxWidth,
-      maxHeight,
       'data-testid': dataTestId,
       portalTarget,
-      dynamicDomRendering,
-      align,
       style,
     }: PopoverProps,
     ref: Ref<HTMLDivElement>,
   ) => {
-    const innerRef = useRef<HTMLDivElement>(null)
-    const isInsideModal = useContext(ModalContext)
-    const [localVisible, setLocalVisible] = useState(visible)
+    const titleId = useId()
 
-    // We change local value if visible prop changes
-    const [previousVisible, setPreviousVisible] = useState(visible)
-    if (visible !== previousVisible) {
-      setPreviousVisible(visible)
-      setLocalVisible(visible)
+    const handleOpenChange = (open: boolean) => {
+      if (!open) {
+        onClose?.()
+      }
     }
 
-    const localOnClose = useCallback(() => {
-      setLocalVisible(false)
-      onClose?.()
-    }, [onClose])
-
-    const smartPortalTarget = useMemo(() => {
-      if (!portalTarget && isInsideModal) {
-        return undefined
-      }
-
-      if (!(portalTarget || isInsideModal)) {
-        return document.body
-      }
-
-      return portalTarget
-    }, [isInsideModal, portalTarget])
+    // remove legacy "auto" placements, the panel always flips when needed
+    const finalPlacement = (placement.replace(/auto-?/v, '') || 'top') as NewPopoverPlacement
 
     return (
-      <Popup
-        align={align}
-        className={cn(className, popoverStyle.popover({ sentiment, size }))}
-        data-testid={dataTestId}
-        debounceDelay={0}
-        dynamicDomRendering={dynamicDomRendering}
-        hideOnClickOutside
-        innerRef={innerRef}
-        maxHeight={maxHeight}
-        maxWidth={maxWidth}
-        onClose={localOnClose}
-        placement={placement}
-        portalTarget={smartPortalTarget}
-        ref={ref}
-        role="dialog"
-        style={style}
-        tabIndex={-1}
-        text={
-          <ContentWrapper onClose={localOnClose} sentiment={sentiment} title={title}>
+      <Popup.Root visible={visible} onOpenChange={handleOpenChange}>
+        <Popup.Trigger>{children}</Popup.Trigger>
+        <Popup.Panel
+          role="dialog"
+          aria-labelledby={titleId}
+          background={sentiment === 'primary' ? theme.colors.primary.backgroundStrong : theme.colors.neutral.background}
+          className={cn(className, popoverStyle.popover({ size }))}
+          placement={finalPlacement}
+          portalTarget={portalTarget}
+          data-testid={dataTestId}
+          ref={ref}
+          focusTrap
+          arrow
+          style={style}
+        >
+          <ContentWrapper titleId={titleId} sentiment={sentiment} title={title}>
             {content}
           </ContentWrapper>
-        }
-        visible={localVisible}
-      >
-        {children}
-      </Popup>
+        </Popup.Panel>
+      </Popup.Root>
     )
   },
 )
