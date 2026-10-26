@@ -3,8 +3,9 @@ import { userEvent } from '@testing-library/user-event'
 import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations, renderWithTheme } from '@utils/test'
 import { useRef } from 'react'
-import { afterEach, beforeEach, describe, expect, it } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { Popup } from '..'
+import { Modal } from '../../../Modal'
 
 // jsdom doesn't implement focus({ preventScroll }), which makes Floating UI skip
 // restoring focus on dismiss. Reading the option lets its feature detection see
@@ -133,6 +134,33 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       await userEvent.keyboard('{Escape}')
       expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
       expect(trigger).toHaveFocus()
+    })
+
+    it('should close only the popup and not an enclosing Modal on Escape', async () => {
+      const onClose = vi.fn()
+      renderWithTheme(
+        <Modal ariaLabel="modal-test" open onClose={onClose}>
+          <Popup.Root>
+            <Popup.Trigger>
+              <button type="button">Open</button>
+            </Popup.Trigger>
+            <Popup.Panel>Content</Popup.Panel>
+          </Popup.Root>
+        </Modal>,
+        undefined,
+        { container: document.body },
+      )
+
+      await userEvent.click(screen.getByRole('button', { name: 'Open' }))
+      expect(screen.getByText('Content')).toBeVisible()
+
+      await userEvent.keyboard('{Escape}')
+
+      expect(screen.queryByText('Content')).not.toBeInTheDocument()
+      expect(onClose).not.toHaveBeenCalled()
+
+      await userEvent.keyboard('{Escape}')
+      expect(onClose).toHaveBeenCalledOnce()
     })
 
     it('should close after an outside click and return focus to the trigger', async () => {

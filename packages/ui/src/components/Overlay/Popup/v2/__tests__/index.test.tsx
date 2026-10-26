@@ -65,33 +65,6 @@ describe('popup v2', () => {
       expect(onOpenChange).toHaveBeenCalledWith(false)
     })
 
-    it('should close only the popup and not an enclosing Modal on Escape', async () => {
-      const onClose = vi.fn()
-      renderWithTheme(
-        <Modal ariaLabel="modal-test" open onClose={onClose}>
-          <Popup.Root>
-            <Popup.Trigger>
-              <button type="button">Open</button>
-            </Popup.Trigger>
-            <Popup.Panel>Content</Popup.Panel>
-          </Popup.Root>
-        </Modal>,
-        undefined,
-        { container: document.body },
-      )
-
-      await userEvent.click(screen.getByRole('button', { name: 'Open' }))
-      expect(screen.getByText('Content')).toBeVisible()
-
-      await userEvent.keyboard('{Escape}')
-
-      expect(screen.queryByText('Content')).not.toBeInTheDocument()
-      expect(onClose).not.toHaveBeenCalled()
-
-      await userEvent.keyboard('{Escape}')
-      expect(onClose).toHaveBeenCalledOnce()
-    })
-
     it('should not close an enclosing Modal when clicking a menu item in the Popup', async () => {
       const onClose = vi.fn()
 
