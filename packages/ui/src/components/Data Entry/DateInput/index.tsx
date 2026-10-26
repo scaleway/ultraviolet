@@ -149,6 +149,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
   })
   const refInput = useRef<HTMLInputElement>(null)
   const popupRef = useRef<HTMLDivElement>(null)
+  const popupPanelRef = useRef<HTMLDivElement>(null)
   const MONTHS = getMonths(locale)
   const DAYS = getDays(locale)
   const MONTHS_ARR = getLocalizedMonths(locale)
@@ -309,7 +310,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
         {input === 'text' ? (
           <CalendarPopup
             content={<CalendarContent />}
-            refInput={refInput}
+            panelRef={popupPanelRef}
             setVisible={setVisible}
             visible={isPopupVisible}
           >
@@ -325,7 +326,10 @@ export const DateInput = <IsRange extends undefined | boolean>({
               labelDescription={labelDescription}
               name={name}
               onBlur={event => {
-                if (!popupRef.current?.contains(event.relatedTarget)) {
+                if (
+                  !popupRef.current?.contains(event.relatedTarget) &&
+                  !popupPanelRef.current?.contains(event.relatedTarget)
+                ) {
                   onBlurInput()
                 }
               }}

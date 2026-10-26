@@ -1,6 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+import { POPUP_WIDTH } from './constants'
 import { capitalizedText, capitalizedTextDay, dayMonth } from './components/styles.css'
 
 const container = style({
@@ -31,6 +32,7 @@ const popup = style([
   {
     boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
     width: '100%',
+    maxWidth: POPUP_WIDTH,
   },
 ])
 

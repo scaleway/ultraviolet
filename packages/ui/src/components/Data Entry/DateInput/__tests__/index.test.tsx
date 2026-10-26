@@ -5,8 +5,12 @@ import { es, fr, ru } from 'date-fns/locale'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 import { DateInput } from '..'
 
-const DECEMBER = /December/iu
-const YEAR = /1995/iu
+const DECEMBER = /December/iv
+const YEAR = /1995/iv
+
+const emptyFunction = () => {
+  /** empty */
+}
 
 describe('dateInput', () => {
   beforeAll(() => {
@@ -24,9 +28,9 @@ describe('dateInput', () => {
         label="Date"
         locale={fr}
         name="test"
-        onBlur={() => {}}
-        onChange={() => {}}
-        onFocus={() => {}}
+        onBlur={emptyFunction}
+        onChange={emptyFunction}
+        onFocus={emptyFunction}
         value={new Date('1995-12-17T03:24:00.000+00:00')}
       />,
     )
@@ -34,27 +38,28 @@ describe('dateInput', () => {
   })
 
   it('renders correctly disabled', () => {
-    const { asFragment } = renderWithTheme(<DateInput disabled label="Date" onChange={() => {}} />)
+    const { asFragment } = renderWithTheme(<DateInput disabled label="Date" onChange={emptyFunction} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly required', () => {
-    const { asFragment } = renderWithTheme(<DateInput label="Date" onChange={() => {}} required />)
+    const { asFragment } = renderWithTheme(<DateInput label="Date" onChange={emptyFunction} required />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly error', () => {
-    const { asFragment } = renderWithTheme(<DateInput error="error" label="Date" onChange={() => {}} />)
+    const { asFragment } = renderWithTheme(<DateInput error="error" label="Date" onChange={emptyFunction} />)
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders correctly error disabled', () => {
-    const { asFragment } = renderWithTheme(<DateInput disabled error="error" label="Date" onChange={() => {}} />)
+    const { asFragment } = renderWithTheme(<DateInput disabled error="error" label="Date" onChange={emptyFunction} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly error disabled required', () => {
     const { asFragment } = renderWithTheme(
-      <DateInput disabled error="error" label="Date" onChange={() => {}} required />,
+      <DateInput disabled error="error" label="Date" onChange={emptyFunction} required />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -65,42 +70,43 @@ describe('dateInput', () => {
         label="Date"
         maxDate={new Date('1995-12-25T03:24:00.000+00:00')}
         minDate={new Date('1995-12-11T03:24:00.000+00:00')}
-        onChange={() => {}}
+        onChange={emptyFunction}
       />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with date-fns locale fr', async () => {
-    const { asFragment } = renderWithTheme(<DateInput label="Date" locale={fr} onChange={() => {}} />)
+    const { asFragment } = renderWithTheme(<DateInput label="Date" locale={fr} onChange={emptyFunction} />)
     const buttonContainer = screen.getByLabelText('Date')
     await userEvent.click(buttonContainer)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with date-fns locale es', async () => {
-    const { asFragment } = renderWithTheme(<DateInput label="Date" locale={es} onChange={() => {}} />)
+    const { asFragment } = renderWithTheme(<DateInput label="Date" locale={es} onChange={emptyFunction} />)
     const buttonContainer = screen.getByLabelText('Date')
     await userEvent.click(buttonContainer)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with date-fns locale ru', async () => {
-    const { asFragment } = renderWithTheme(<DateInput label="Date" locale={ru} onChange={() => {}} />)
+    const { asFragment } = renderWithTheme(<DateInput label="Date" locale={ru} onChange={emptyFunction} />)
     const buttonContainer = screen.getByLabelText('Date')
     await userEvent.click(buttonContainer)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('render correctly with showMonthYearPicker', () => {
-    const { asFragment } = renderWithTheme(<DateInput label="Date" onChange={() => {}} showMonthYearPicker />)
+    const { asFragment } = renderWithTheme(<DateInput label="Date" onChange={emptyFunction} showMonthYearPicker />)
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('render correctly with showMonthYearPicker with default date', async () => {
     const { asFragment } = renderWithTheme(
       <DateInput
         label="Date"
-        onChange={() => {}}
+        onChange={emptyFunction}
         placeholder="YYYY-MM-DD"
         showMonthYearPicker
         value={new Date('1995-02-11T03:24:00.000+00:00')}
@@ -113,12 +119,14 @@ describe('dateInput', () => {
   })
 
   it('renders correctly with input = "calendar', () => {
-    const { asFragment } = renderWithTheme(<DateInput input="calendar" label="Date" onChange={() => {}} />)
+    const { asFragment } = renderWithTheme(<DateInput input="calendar" label="Date" onChange={emptyFunction} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with input = "calendar disabled', () => {
-    const { asFragment } = renderWithTheme(<DateInput disabled input="calendar" label="Date" onChange={() => {}} />)
+    const { asFragment } = renderWithTheme(
+      <DateInput disabled input="calendar" label="Date" onChange={emptyFunction} />,
+    )
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -131,7 +139,7 @@ describe('dateInput', () => {
           new Date('1995-12-14T03:24:00.000+00:00'),
         ]}
         label="Date"
-        onChange={() => {}}
+        onChange={emptyFunction}
         placeholder="YYYY-MM-DD"
         value={new Date('1995-12-11T03:24:00.000+00:00')}
       />,
@@ -146,7 +154,7 @@ describe('dateInput', () => {
     renderWithTheme(
       <>
         Outside
-        <DateInput label="Date" onChange={() => {}} placeholder="YYYY-MM-DD" />
+        <DateInput label="Date" onChange={emptyFunction} placeholder="YYYY-MM-DD" />
       </>,
     )
 
@@ -165,7 +173,7 @@ describe('dateInput', () => {
         Outside
         <DateInput
           label="Date"
-          onChange={() => {}}
+          onChange={emptyFunction}
           placeholder="YYYY-MM-DD"
           value={new Date('1995-12-11T03:24:00.000+00:00')}
         />
@@ -191,7 +199,7 @@ describe('dateInput', () => {
         Outside
         <DateInput
           label="Date"
-          onChange={() => {}}
+          onChange={emptyFunction}
           placeholder="YYYY-MM-DD"
           showMonthYearPicker
           value={new Date('1995-12-11T03:24:00.000+00:00')}
@@ -216,7 +224,7 @@ describe('dateInput', () => {
     renderWithTheme(
       <DateInput
         label="Date"
-        onChange={() => {}}
+        onChange={emptyFunction}
         placeholder="YYYY-MM-DD"
         value={new Date('1995-12-11T03:24:00.000+00:00')}
       />,
@@ -228,21 +236,18 @@ describe('dateInput', () => {
     const calendar = screen.getByRole('dialog')
     expect(calendar).toBeVisible()
 
-    await userEvent.click(input)
-
     await userEvent.click(screen.getByText('15'))
     expect(input.value).toBe('15/12/1995')
 
     await userEvent.click(input)
 
-    const dayFromLastMonth = screen.getAllByText('30')[0] // the first element in this array is from previous month
+    const [dayFromLastMonth] = screen.getAllByText('30') // the first element in this array is from previous month
     await userEvent.click(dayFromLastMonth)
 
     await userEvent.click(input)
     expect(input.value).toBe('30/11/1995')
 
-    await userEvent.click(input)
-    const dayFromNextMonth = screen.getAllByText('1')[1]
+    const [_, dayFromNextMonth] = screen.getAllByText('1')
     await userEvent.click(dayFromNextMonth)
     expect(input.value).toBe('01/12/1995')
   })
@@ -251,7 +256,7 @@ describe('dateInput', () => {
     renderWithTheme(
       <DateInput
         label="Date"
-        onChange={() => {}}
+        onChange={emptyFunction}
         placeholder="YYYY-MM-DD"
         selectsRange
         value={new Date('1995-02-11T03:24:00.000+00:00')}
@@ -286,7 +291,7 @@ describe('dateInput', () => {
       <DateInput
         excludeDates={[new Date('1995-10-01'), new Date('1995-02-01')]}
         label="Date"
-        onChange={() => {}}
+        onChange={emptyFunction}
         placeholder="YYYY-MM-DD"
         showMonthYearPicker
         value={new Date('1995-02-11T03:24:00.000+00:00')}
@@ -301,7 +306,7 @@ describe('dateInput', () => {
     renderWithTheme(
       <DateInput
         label="Date"
-        onChange={() => {}}
+        onChange={emptyFunction}
         placeholder="YYYY-MM-DD"
         showMonthYearPicker
         value={new Date('1995-12-11T03:24:00.000+00:00')}
@@ -321,7 +326,7 @@ describe('dateInput', () => {
     renderWithTheme(
       <DateInput
         label="Date"
-        onChange={() => {}}
+        onChange={emptyFunction}
         placeholder="YYYY-MM-DD"
         selectsRange
         showMonthYearPicker
@@ -359,9 +364,9 @@ describe('dateInput', () => {
         format={value => (value instanceof Date ? value.toISOString() : value)}
         label="Date"
         name="test"
-        onBlur={() => {}}
-        onChange={() => {}}
-        onFocus={() => {}}
+        onBlur={emptyFunction}
+        onChange={emptyFunction}
+        onFocus={emptyFunction}
         selectsRange
         startDate={new Date('1995-12-11T03:24:00.000+00:00')}
       />,
@@ -375,10 +380,10 @@ describe('dateInput', () => {
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
-
     await userEvent.type(input, '21/08/1995')
     input.blur()
     expect(mockOnChange).toHaveBeenCalled()
+    await userEvent.click(input)
     expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
   })
 
@@ -388,10 +393,10 @@ describe('dateInput', () => {
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
-
     await userEvent.type(input, '21/08/1995')
     input.blur()
     expect(mockOnChange).toHaveBeenCalled()
+    await userEvent.click(input)
     expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
   })
 
@@ -401,11 +406,11 @@ describe('dateInput', () => {
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
-
     await userEvent.type(input, '2000/08')
     input.blur()
 
     expect(mockOnChange).toHaveBeenCalled()
+    await userEvent.click(input)
     expect(screen.getByText('2000', { exact: false })).toBeInTheDocument()
   })
 
@@ -420,6 +425,7 @@ describe('dateInput', () => {
     await userEvent.type(input, '2000/08')
     input.blur()
     expect(mockOnChange).toHaveBeenCalled()
+    await userEvent.click(input)
     expect(screen.getByText('2000', { exact: false })).toBeInTheDocument()
   })
 })
