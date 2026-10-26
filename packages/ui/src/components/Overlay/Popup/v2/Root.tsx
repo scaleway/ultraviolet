@@ -84,11 +84,19 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
       }
     }
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (open && event.key === 'Escape') {
-        event.stopPropagation()
-        setOpen(false)
-        document.addEventListener('keyup', handleKeyUp, { capture: true, once: true })
+      if (!open || event.key !== 'Escape') {
+        return
       }
+
+      // A Modal opened inside the popup is above it: let it handle Escape first.
+      const activeDialog = document.activeElement?.closest('dialog')
+      if (activeDialog?.open && !activeDialog.contains(floating.refs.floating.current)) {
+        return
+      }
+
+      event.stopPropagation()
+      setOpen(false)
+      document.addEventListener('keyup', handleKeyUp, { capture: true, once: true })
     }
 
     document.addEventListener('keydown', handleKeyDown, { capture: true })
@@ -96,7 +104,7 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
     return () => {
       document.removeEventListener('keydown', handleKeyDown, { capture: true })
     }
-  }, [open, setOpen])
+  }, [open, setOpen, floating.refs])
 
   const prefersReducedMotion = usePrefersReducedMotion()
 
