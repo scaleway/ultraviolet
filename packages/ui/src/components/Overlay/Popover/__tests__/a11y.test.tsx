@@ -75,7 +75,7 @@ describe('popover - A11y', { tags: ['a11y'] }, () => {
       await userEvent.click(screen.getByRole('button', { name: 'Open Popover' }))
 
       // the close button is the first focusable element of the dialog
-      await waitFor(() => expect(screen.getByRole('button', { name: 'close' })).toHaveFocus())
+      await waitFor(() => expect(screen.getByRole('button', { name: 'close popover Popover title' })).toHaveFocus())
     })
 
     it('should return focus to the trigger on Escape', async () => {
@@ -96,7 +96,7 @@ describe('popover - A11y', { tags: ['a11y'] }, () => {
       const trigger = screen.getByRole('button', { name: 'Open Popover' })
 
       await userEvent.click(trigger)
-      await userEvent.click(screen.getByRole('button', { name: 'close' }))
+      await userEvent.click(screen.getByRole('button', { name: 'close popover Popover title' }))
 
       await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
       expect(trigger).toHaveFocus()

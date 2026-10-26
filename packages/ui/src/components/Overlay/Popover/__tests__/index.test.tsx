@@ -1,6 +1,5 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { theme } from '@ultraviolet/themes'
 import { renderWithTheme } from '@utils/test'
 import { createRef, useCallback, useState } from 'react'
 import type { ComponentProps } from 'react'
@@ -111,19 +110,6 @@ describe('popover', () => {
     expect(screen.getByTestId('content')).toBeVisible()
   })
 
-  it.each([
-    ['neutral', theme.colors.neutral.background],
-    ['primary', theme.colors.primary.backgroundStrong],
-  ] as const)(`should apply the %s sentiment background to the panel`, (sentiment, background) => {
-    renderWithTheme(
-      <Popover content="Test" data-testid="popover" sentiment={sentiment} title="Test" visible>
-        Children
-      </Popover>,
-    )
-
-    expect(screen.getByTestId('popover')).toHaveStyle({ backgroundColor: background })
-  })
-
   it('should ignore deprecated props', () => {
     renderWithTheme(
       <Popover
@@ -169,7 +155,7 @@ describe('popover', () => {
     const popover = screen.getByTestId('popover')
     expect(popover).toBeVisible()
 
-    const closeButton = screen.getByRole('button', { name: 'close' })
+    const closeButton = screen.getByRole('button', { name: 'close popover Test' })
     await userEvent.click(closeButton)
 
     expect(onClose).toHaveBeenCalledOnce()

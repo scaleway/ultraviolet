@@ -36,7 +36,7 @@ describe('plans', () => {
     expect(popover).toBeVisible()
     expect(popover).toHaveTextContent('popover details')
 
-    const closePopover = screen.getByRole('button', { name: 'close' })
+    const closePopover = screen.getByRole('button', { name: 'close popover more details' })
     await userEvent.click(closePopover)
 
     expect(asFragment).toMatchSnapshot()
