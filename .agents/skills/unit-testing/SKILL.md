@@ -121,13 +121,12 @@ It is acceptable only as an initial-DOM lock; otherwise assert what the variant 
 
 ### Locale-dependent output
 
-Node resolves its locale at process start, so a snapshot of anything formatted with the
-system locale (`toLocaleDateString(undefined, ...)`, `new Intl.DateTimeFormat(undefined, ...)`)
-is only deterministic if `LC_ALL` is set when the process starts. `form`'s `test:unit` pins
-`LC_ALL=en_US.UTF-8` for this reason (`DateInputField` renders dates in the system locale);
-everywhere else the components default to explicit locales and the pin was removed. If a
-test must format in the system locale, pin the locale in the script — it cannot be set at
-runtime.
+Node resolves its locale and timezone at process start, so output formatted with the system
+locale (`toLocaleDateString(undefined, ...)`, `new Intl.DateTimeFormat(undefined, ...)`) is
+only deterministic if the environment is pinned before the process starts. The pin lives once
+in `@utils/test`'s config (`env: { LC_ALL, TZ }` in the unit project defaults, injected by
+vitest when spawning the worker processes) — never add `LC_ALL`/`TZ` prefixes to test scripts.
+The browser project doesn't need it: playwright's `contextOptions` set `locale`/`timezoneId`.
 
 ### Rewriting a snapshot-only test
 
