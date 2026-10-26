@@ -168,6 +168,14 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       await waitFor(() => expect(screen.queryByText('Content')).not.toBeInTheDocument())
       expect(onClose).not.toHaveBeenCalled()
 
+      // The Modal listens for Escape keyup on its dialog element, so the keyup
+      // must originate inside the modal. Focus returns to the trigger through
+      // Floating UI's rAF-deferred queue, which can lag behind the unmount on
+      // loaded webkit runners — press only once focus is back inside.
+      await waitFor(() => expect(screen.getByRole('button', { name: 'Open' })).toHaveFocus(), {
+        timeout: FOCUS_WAIT_TIMEOUT,
+      })
+
       await userEvent.keyboard('{Escape}')
       expect(onClose).toHaveBeenCalledOnce()
     })
