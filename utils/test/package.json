@@ -19,7 +19,7 @@
     ".": {
       "default": "./src/index.ts"
     },
-    "./browser-setup": "./src/vitest/browserSetup.ts",
+    "./browser-setup": "./src/vitest/setup/browser.ts",
     "./config": "./vitest.config.ts"
   },
   "dependencies": {

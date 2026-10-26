@@ -1,0 +1,66 @@
+import { configDefaults } from 'vitest/config'
+import type { TestUserConfig } from 'vitest/config'
+
+// Options shared by every jsdom unit project (and by `createVitestConfig`,
+// used by packages without browser tests).
+export const unitTestOptions = {
+  tags: [
+    {
+      name: 'a11y',
+      description: 'Tests written for accessility.',
+    },
+  ],
+  alias: {
+    '.*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/.vitest/fileMock.js',
+    '\\.svg$': '<rootDir>/.vitest/svg.ts',
+  },
+  allowOnly: false,
+  clearMocks: true,
+  pool: 'forks',
+  css: {
+    modules: {
+      classNameStrategy: 'non-scoped',
+    },
+  },
+  deps: {
+    optimizer: {
+      web: {
+        enabled: true,
+        include: ['@nivo/*'],
+      },
+    },
+  },
+  environment: 'jsdom',
+  // Node resolves its locale at process start: vitest injects `env` when
+  // spawning the worker processes, so pinning it here keeps dates and Intl
+  // output deterministic in every package, without per-script env prefixes.
+  env: {
+    LC_ALL: 'en_US.UTF-8',
+    TZ: 'UTC',
+  },
+  exclude: [
+    ...configDefaults.exclude,
+    // Accessibility tests only run in the browser project, see below
+    '**/__tests__/a11y.test.tsx',
+    '**/node_modules/**',
+    '**/{dist,build}/**',
+    '**/__stories__/**',
+    '**.stories.*',
+    '**/coverages/**',
+    '**/.{idea,git,cache,output,temp,reports,jest}/**',
+  ],
+  experimental: {
+    fsModuleCache: true,
+  },
+  globals: true,
+  logHeapUsage: true,
+  mockReset: true,
+  restoreMocks: true,
+  server: {
+    deps: {
+      inline: true,
+    },
+  },
+  testTimeout: 25_000,
+} satisfies TestUserConfig

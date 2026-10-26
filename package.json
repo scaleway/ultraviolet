@@ -36,6 +36,7 @@
     "test:unit": "turbo run test:unit",
     "test:unit:coverage": "turbo run test:unit:coverage",
     "test:browser": "turbo run test:browser",
+    "test:browser:coverage": "turbo run test:browser:coverage",
     "tokens:update": "node ./utils/scripts/figma-synchronise-token/index.ts && pnpm run format packages/themes/src/themes/console",
     "typecheck": "turbo run typecheck",
     "typecheck:root": "tsc -p tsconfig.json --noEmit"

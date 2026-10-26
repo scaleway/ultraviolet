@@ -68,6 +68,7 @@
     "test:unit": "pnpm vitest --run --project uv/ui",
     "test:unit:coverage": "pnpm test:unit --coverage",
     "test:browser": "pnpm vitest --run --project uv/ui-browser",
+    "test:browser:coverage": "pnpm test:browser --coverage",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "watch": "pnpm run '/^watch:.*/'",
@@ -122,6 +123,7 @@
     "@types/react-dom": "19.3.0",
     "@utils/test": "workspace:*",
     "@vanilla-extract/vite-plugin": "5.2.6",
+    "@vitest/coverage-istanbul": "4.1.12",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "vite": "catalog:"
