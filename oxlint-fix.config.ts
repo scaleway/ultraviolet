@@ -69,7 +69,6 @@ export const warnRules = defineConfig({
     'unicorn/prefer-object-from-entries': 'warn', // unicorn errors (14)
     'unicorn/prefer-query-selector': 'warn', // unicorn errors (8)
     'unicorn/prefer-set-has': 'warn', // unicorn errors (2)
-    'unicorn/prefer-string-replace-all': 'warn', // unicorn errors (35)
     'unicorn/prefer-string-slice': 'warn', // unicorn errors (1)
     'unicorn/prefer-ternary': 'warn', // unicorn errors (1)
   },
