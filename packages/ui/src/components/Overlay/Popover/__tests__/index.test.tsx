@@ -65,7 +65,7 @@ const AdvancedPopover = () => {
 }
 
 describe('popover', () => {
-  it('should render the trigger only when closed', () => {
+  it('should render only the trigger and not the panel when closed', () => {
     renderWithTheme(
       <Popover content="Test" title="Test">
         <button type="button">Open Popover</button>
@@ -101,7 +101,7 @@ describe('popover', () => {
     expect(screen.getByText('Popover content').tagName).toBe('P')
   })
 
-  it('should render a node content as is', () => {
+  it('should render the content without modifying it when it is a JSX element', () => {
     renderWithTheme(
       <Popover content={<p data-testid="content">Test</p>} title="Test" visible>
         Children

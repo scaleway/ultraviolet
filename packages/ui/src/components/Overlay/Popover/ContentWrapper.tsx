@@ -17,7 +17,7 @@ export const ContentWrapper = ({ titleId, title, children, sentiment }: ContentW
           {title}
         </Text>
         <Button
-          accessibleLabel="close"
+          accessibleLabel={`close popover ${title}`}
           onClick={() => setOpen(false)}
           sentiment={sentiment === 'neutral' ? 'neutral' : 'primary'}
           size="xsmall"
