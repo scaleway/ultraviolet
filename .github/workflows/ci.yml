@@ -20,7 +20,7 @@ jobs:
     strategy:
       matrix:
         node: ['24', '26']
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: pnpm/setup@a0881977cd8ea73b1ed212236c99ca10dcc80cf4 # v3.1.1
@@ -31,7 +31,7 @@ jobs:
       - run: pnpm run build
 
   build_storybook:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs: [build]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -48,7 +48,7 @@ jobs:
           retention-days: 1
 
   build_examples:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs: [build]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -59,7 +59,7 @@ jobs:
       - run: pnpm run build:examples
 
   static-checks:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs: [build]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -82,7 +82,7 @@ jobs:
         if: ${{ !cancelled() }}
 
   test:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs: [build]
     strategy:
       matrix:
@@ -104,7 +104,7 @@ jobs:
           verbose: true
 
   deploy:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs: [build_storybook]
     permissions:
       contents: read
@@ -220,7 +220,7 @@ jobs:
 
   e2e:
     timeout-minutes: 10
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs: [build]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
