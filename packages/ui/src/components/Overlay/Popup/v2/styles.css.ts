@@ -21,10 +21,8 @@ const slideOut = keyframes({
 })
 
 const panel = style({
-  backgroundColor: theme.colors.other.elevation.background.raised,
   borderRadius: theme.radii.default,
   boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
-  color: theme.colors.neutral.text,
   maxWidth: '100dvw',
   position: 'relative',
   zIndex: 1,
@@ -37,8 +35,20 @@ const panel = style({
   },
 })
 
-const arrow = style({
-  fill: theme.colors.other.elevation.background.raised,
+const panelSentiment = styleVariants({
+  neutral: {
+    backgroundColor: theme.colors.other.elevation.background.raised,
+    color: theme.colors.neutral.text,
+  },
+  primary: {
+    backgroundColor: theme.colors.primary.backgroundStrong,
+    color: theme.colors.primary.textStrong,
+  },
+})
+
+const arrowSentiment = styleVariants({
+  neutral: { fill: theme.colors.other.elevation.background.raised },
+  primary: { fill: theme.colors.primary.backgroundStrong },
 })
 
 const animation = styleVariants({
@@ -58,7 +68,8 @@ const trigger = style({
 
 export const popupV2Style = {
   animation,
-  arrow,
+  arrowSentiment,
   panel,
+  panelSentiment,
   trigger,
 }

@@ -1,5 +1,13 @@
 'use client'
-import { FloatingArrow, FloatingFocusManager, FloatingPortal, arrow as arrowMiddleware, size } from '@floating-ui/react'
+import {
+  arrow as arrowMiddleware,
+  FloatingArrow,
+  FloatingFocusManager,
+  FloatingPortal,
+  offset,
+  size,
+  useMergeRefs,
+} from '@floating-ui/react'
 import type { Middleware, Placement } from '@floating-ui/react'
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId, useLayoutEffect, useRef } from 'react'
@@ -33,9 +41,9 @@ type PopupPanelProps = {
   matchTriggerWidth?: boolean
   /**
    * Background color applied to the panel and its arrow.
-   * @default the raised elevation surface
+   * @default 'neutral'
    */
-  background?: string
+  sentiment?: 'neutral' | 'primary'
   /**
    * When `true`, renders an arrow pointing at the trigger.
    * @default false
@@ -87,7 +95,7 @@ export const Panel = forwardRef<HTMLDivElement, PopupPanelProps>(
       placement = 'bottom-start',
       portalTarget: userPortalTarget,
       matchTriggerWidth = false,
-      background,
+      sentiment = 'neutral',
       arrow = false,
       focusTrap = false,
       initialFocus,
@@ -170,17 +178,17 @@ export const Panel = forwardRef<HTMLDivElement, PopupPanelProps>(
         aria-labelledby={ariaLabelledby ?? (accessibleLabel ? labelId : undefined)}
         className={cn(
           popupV2Style.panel,
+          popupV2Style.panelSentiment[sentiment],
           status === 'open' || status === 'close' ? popupV2Style.animation[status] : null,
           className,
         )}
-        style={{ ...floatingStyles, backgroundColor: background, ...style }}
+        style={{ ...floatingStyles, ...style }}
       >
         {arrow ? (
           <FloatingArrow
-            className={popupV2Style.arrow}
+            className={popupV2Style.arrowSentiment[sentiment]}
             context={context}
             ref={arrowRef}
-            style={background ? { fill: background } : undefined}
             tipRadius={2}
           />
         ) : null}
