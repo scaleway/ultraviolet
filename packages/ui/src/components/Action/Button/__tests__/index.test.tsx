@@ -14,6 +14,9 @@ const buttonVariants = ['ghost', 'filled', 'outlined'] as const
 
 const MockOnClick = () => {}
 const EXTENDED_SENTIMENTS = [...SENTIMENTS, 'black', 'white'] as const
+const variantSentimentCombinations = buttonVariants.flatMap(variant =>
+  EXTENDED_SENTIMENTS.map(sentiment => [variant, sentiment] as const),
+)
 
 // Mock component simulating Next.js Link
 const MockNextLink = forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }>(
@@ -27,26 +30,24 @@ MockNextLink.displayName = 'MockNextLink'
 
 describe('button', () => {
   describe('variant-sentiment-disabled combination', () => {
-    buttonVariants.forEach(variant => {
-      EXTENDED_SENTIMENTS.forEach(sentiment => {
-        it(`render ${variant}&${sentiment}`, async () => {
-          const { asFragment } = renderWithTheme(
-            <Button disabled onClick={MockOnClick} sentiment={sentiment} variant={variant}>
-              Hello
-            </Button>,
-          )
+    it.each(variantSentimentCombinations)('render %s&%s', async (variant, sentiment) => {
+      const { asFragment } = renderWithTheme(
+        <Button disabled onClick={MockOnClick} sentiment={sentiment} variant={variant}>
+          Hello
+        </Button>,
+      )
 
-          await userEvent.hover(screen.getByRole('button'))
-          expect(asFragment).toMatchSnapshot()
-        })
-        it(`render ${variant}&${sentiment} disabled`, () =>
-          shouldMatchSnapshot(
-            <Button disabled onClick={MockOnClick} sentiment={sentiment} variant={variant}>
-              Hello
-            </Button>,
-          ))
-      })
+      await userEvent.hover(screen.getByRole('button'))
+      expect(asFragment).toMatchSnapshot()
     })
+
+    it.each(variantSentimentCombinations)('render %s&%s disabled', (variant, sentiment) =>
+      shouldMatchSnapshot(
+        <Button disabled onClick={MockOnClick} sentiment={sentiment} variant={variant}>
+          Hello
+        </Button>,
+      ),
+    )
   })
 
   it.each(buttonSizes)(`render %s`, size =>
