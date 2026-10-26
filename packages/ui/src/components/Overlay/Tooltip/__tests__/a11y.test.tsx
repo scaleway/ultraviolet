@@ -70,7 +70,7 @@ describe('tooltip - A11y', { tags: ['a11y'] }, () => {
 
       const tooltip = await screen.findByText('hoverable content')
       await userEvent.hover(tooltip)
-      expect(tooltip).toBeVisible()
+      await waitFor(() => expect(tooltip).toBeVisible())
     })
   })
 

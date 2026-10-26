@@ -161,11 +161,11 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       )
 
       await userEvent.click(screen.getByRole('button', { name: 'Open' }))
-      expect(screen.getByText('Content')).toBeVisible()
+      await waitFor(() => expect(screen.getByText('Content')).toBeVisible())
 
       await userEvent.keyboard('{Escape}')
 
-      expect(screen.queryByText('Content')).not.toBeInTheDocument()
+      await waitFor(() => expect(screen.queryByText('Content')).not.toBeInTheDocument())
       expect(onClose).not.toHaveBeenCalled()
 
       await userEvent.keyboard('{Escape}')
