@@ -9,7 +9,6 @@ import { defineConfig } from 'oxlint'
  */
 export const warnRules = defineConfig({
   rules: {
-    'eslint/max-nested-callbacks': ['warn', { max: 4 }], // base sets error (max: 4); keep warn
     'eslint/max-params': 'warn', // eslint errors (33)
     'eslint/no-await-in-loop': 'warn', // eslint errors (12)
     'eslint/no-empty-function': 'warn', // eslint errors (408)
