@@ -1,4 +1,4 @@
-import { base, react, vitest, ignorePatterns } from '@scaleway/oxlint-config'
+import { base, ignorePatterns, react, vitest } from '@scaleway/oxlint-config'
 import { defineConfig } from 'oxlint'
 import { warnRules } from './oxlint-fix.config.ts'
 

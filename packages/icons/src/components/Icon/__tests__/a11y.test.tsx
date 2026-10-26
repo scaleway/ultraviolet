@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react'
-import { renderWithTheme, expectNoViolations } from '@utils/test'
+import { expectNoViolations, renderWithTheme } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { AddressIcon, ArrowDownIcon, InformationIcon, LeftRightArrowIcon } from '../__generated__'
 

@@ -1,6 +1,6 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, expectNoViolations } from '@utils/test'
+import { expectNoViolations, renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { PhoneInput } from '..'
 
