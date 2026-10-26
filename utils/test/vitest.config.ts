@@ -1,11 +1,9 @@
 import { configDefaults, defineConfig, mergeConfig } from 'vitest/config'
 import type { TestUserConfig, ViteUserConfig } from 'vitest/config'
 
-const defaultConfig = defineConfig({
+const defaultConfig: ViteUserConfig = defineConfig({
   test: {
-    experimental: {
-      fsModuleCache: true,
-    },
+    fsModuleCache: true,
     tags: [
       {
         name: 'a11y',
@@ -17,6 +15,7 @@ const defaultConfig = defineConfig({
         '<rootDir>/.vitest/fileMock.js',
       '\\.svg$': '<rootDir>/.vitest/svg.ts',
     },
+
     allowOnly: false,
     clearMocks: true,
     pool: 'forks',

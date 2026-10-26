@@ -30,7 +30,8 @@ describe('radio', () => {
   it('exposes the tooltip on hover', async () => {
     renderWithTheme(<Radio label="Choice" name="radio" onChange={() => {}} tooltip="test" value="choice" />)
     await userEvent.hover(screen.getByRole('radio', { name: 'Choice' }))
-    await expect(screen.findByRole('tooltip', { name: 'test' })).resolves.toBeVisible()
+    const tooltip = await screen.findByRole('tooltip', { name: 'test' })
+    expect(tooltip).toBeVisible()
   })
 
   it('calls onChange when clicked', async () => {

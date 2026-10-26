@@ -23,7 +23,8 @@ describe('toaster', () => {
       notification('Description', 'Title', 'icon', true)
     })
 
-    await expect(screen.findByRole('heading', { name: 'Title' })).resolves.toBeInTheDocument()
+    const heading = await screen.findByRole('heading', { name: 'Title' })
+    expect(heading).toBeInTheDocument()
     expect(screen.getByText('Description')).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /close/i })).toBeInTheDocument()
   })
@@ -59,7 +60,8 @@ describe('toaster', () => {
     })
 
     const toastElement = await screen.findByRole('alert')
-    await expect(screen.findByRole('heading', { name: 'Invitation' })).resolves.toBeInTheDocument()
+    const heading = await screen.findByRole('heading', { name: 'Invitation' })
+    expect(heading).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /decline/i })).toBeInTheDocument()
     expect(screen.queryByRole('button', { name: /close/i })).not.toBeInTheDocument()
 

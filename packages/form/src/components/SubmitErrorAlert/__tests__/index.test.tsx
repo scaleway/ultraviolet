@@ -22,7 +22,8 @@ describe('submitErrorAlert', () => {
       { onSubmit },
     )
     await userEvent.click(screen.getByText('Submit').closest('button')!)
-    await expect(screen.findByText('hello')).resolves.toBeInTheDocument()
+    const errorMessage = await screen.findByText('hello')
+    expect(errorMessage).toBeInTheDocument()
     expect(asFragment()).toMatchSnapshot()
   })
 })
