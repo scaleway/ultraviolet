@@ -51,9 +51,6 @@ export const unitProjectConfig = {
       '**/coverages/**',
       '**/.{idea,git,cache,output,temp,reports,jest}/**',
     ],
-    experimental: {
-      fsModuleCache: true,
-    },
     globals: true,
     logHeapUsage: true,
     mockReset: true,
