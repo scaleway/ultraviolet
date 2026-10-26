@@ -73,12 +73,13 @@ The line is thin, but split files by intent:
 - **`a11y.test.tsx`** — accessibility-only concerns: axe violations, keyboard
   navigation, focus management, ARIA attributes. Query by role to _trigger_ those
   checks, but assert on a11y outcomes (`expect(axe).toHaveNoViolations()`, focus
-  landing, etc.). These files are **excluded from the jsdom unit run and only run
-  in Vitest Browser Mode** (`pnpm test:browser` in the package, `@utils/test/browser-config`),
-  where axe can check rules that need real layout like `color-contrast`.
-  The page gets the theme background via `@ultraviolet/themes/global` imported in
-  `vitest.browser.setup.ts` — don't remove it. Animations/transitions DO run in the
-  real browser: wait with `waitFor` before asserting visibility.
+  landing, etc.). These files are **excluded from the jsdom unit project and only
+  run in Vitest Browser Mode** (`pnpm test:browser` in the package, the
+  `uv/<pkg>-browser` project in `vitest.config.ts`), where axe can check rules
+  that need real layout like `color-contrast`. The page gets the theme
+  background via `@ultraviolet/themes/global` imported in
+  `@utils/test/browser-setup` — don't remove it. Animations/transitions DO run
+  in the real browser: wait with `waitFor` before asserting visibility.
 - **Regular `*.test.tsx`** — behavior: does the component render and respond.
   `getByRole` here asserts _behavior_; labels/descriptions/roles are matched as a
   side effect of finding the element a user interacts with, not asserted directly.
@@ -117,6 +118,16 @@ then prove every behavior (state, props, interaction) with assertions.
 
 `shouldMatchSnapshot` from `@utils/test` locks markup, not behavior, and is **deprecated**.
 It is acceptable only as an initial-DOM lock; otherwise assert what the variant changes.
+
+### Locale-dependent output
+
+Node resolves its locale at process start, so a snapshot of anything formatted with the
+system locale (`toLocaleDateString(undefined, ...)`, `new Intl.DateTimeFormat(undefined, ...)`)
+is only deterministic if `LC_ALL` is set when the process starts. `form`'s `test:unit` pins
+`LC_ALL=en_US.UTF-8` for this reason (`DateInputField` renders dates in the system locale);
+everywhere else the components default to explicit locales and the pin was removed. If a
+test must format in the system locale, pin the locale in the script — it cannot be set at
+runtime.
 
 ### Rewriting a snapshot-only test
 

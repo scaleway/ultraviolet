@@ -1,16 +1,20 @@
-import { createVitestConfig } from '@utils/test/config'
+import { createVitestProjectsConfig } from '@utils/test/config'
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
 
-export const vitestConfig = createVitestConfig({
+export const vitestConfig = createVitestProjectsConfig({
   plugins: [
     vanillaExtractPlugin({
       identifiers: ({ hash }) => `uv_${hash}`,
       unstable_mode: 'transform',
     }),
   ],
-  test: {
+  unit: {
     name: 'uv/icons',
     setupFiles: ['./vitest.setup.ts'],
+  },
+  browser: {
+    name: 'uv/icons-browser',
+    setupFiles: ['@utils/test/browser-setup'],
   },
 })
 
