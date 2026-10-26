@@ -20,8 +20,7 @@ const measurementContainer = style({
 })
 
 const popup = style({
-  display: 'grid',
-  gridTemplateRows: '100%',
+  display: 'flex',
 })
 
 const tagContainer = recipe({
@@ -52,7 +51,6 @@ const list = style({
       display: 'contents',
     },
     [`${popup} &`]: {
-      maxHeight: '100%',
       overflow: 'auto',
     },
   },
