@@ -1,0 +1,53 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Feedback/Meter/A11y" />
+
+# Meter - Accessibility
+
+## Description
+
+A feedback component that displays the strength of a password as a graphical meter: a colored fill bar and a textual strength label indicating the current value within a defined range. It is a non-interactive, read-only display that updates as the associated password changes.
+
+## Summary
+
+1. ✅ **Perceivable**: the value is conveyed both by color and by text, and is programmatically determinable through the meter role
+2. ✅ **Operable**: non-interactive display, no keyboard interaction or focus management required
+3. ✅ **Understandable**: no specific rules apply to this component
+4. ❌ **Robust**: the meter is implemented with a `role="meter"` div instead of the native `<meter>` element, and the hardcoded label id breaks the accessible name when multiple meters are rendered on the same page
+
+## ARIA Pattern
+
+[Meter Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/meter/)
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - The meter value is programmatically determined through `role="meter"` combined with `aria-valuenow`, `aria-valuemin` and `aria-valuemax`.
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - The visible label is associated with the meter via `aria-labelledby` (works for a single instance).
+- ✅ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The strength is always conveyed by a text label in addition to the color of the fill bar.
+- ✅ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - `aria-live="polite"` makes value changes programmatically announced without taking focus.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The meter is rendered as a `<div role="meter">` with manually managed `aria-valuenow/min/max` instead of using the native `<meter>` element, and the hardcoded `id="meter-label"` creates duplicate IDs and broken label associations when several meters are used on the same page. The accessible name relies entirely on the required `title` prop; if `title` is made optional, an `accessibleLabel` prop must be provided to guarantee a name.
+
+To apply when using the component:
+
+- [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - The strength text color is provided by the consumer via the `strength` prop and must keep a 4.5:1 contrast ratio against its background.
+- [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - The fill bar color is provided by the consumer via the `strength` prop and must keep a 3:1 contrast ratio against the track.
+
+## Accessibility issues
+
+**High:**
+
+- Use the native `<meter>` element instead of `role="meter"` on a `<div>` - The native `<meter>` provides an implicit `meter` role, native `value`/`min`/`max` semantics (removing the need for manually managed `aria-valuenow`, `aria-valuemin` and `aria-valuemax`), built-in label association, and is consistently exposed to assistive technologies without custom ARIA. This resolves the role/value wiring under WCAG 4.1.2.
+- Hardcoded label id - `aria-labelledby="meter-label"` references a label whose `id` is hardcoded (`id="meter-label"`). Rendering more than one `Meter` on the same page produces duplicate IDs (invalid HTML) and every meter resolves its accessible name to the first `meter-label` in the DOM. The label id should be generated uniquely (e.g. with `useId`) or made configurable. This breaks WCAG 4.1.2 (Name, Role, Value) and, in the multi-instance case, 1.3.1.
+
+**Medium:**
+
+- Make `title` optional and require an `accessibleLabel` when it is omitted - The accessible name of the meter currently comes exclusively from the visible `title` label. If `title` is made optional, an `accessibleLabel` property (per RFC #6585) should be added so the meter still exposes a programmatically determinable name when there is no visible label, e.g. rendered as `aria-label` on the meter (or on the native `<meter>` element). At least one of `title` / `accessibleLabel` must be provided, otherwise the meter has no accessible name and fails WCAG 4.1.2.
+- Missing `aria-valuetext` - The current value is only exposed as a number through `aria-valuenow`, which assistive technologies often present as a percentage. The human-readable strength label available in the component (e.g. "strong") should be exposed through `aria-valuetext` so the value is understandable, as recommended by the ARIA Meter Pattern.
+- Inconsistent `aria-valuemax` - `aria-valuemax` is set to `strength.length` (e.g. 5) while the maximum meaningful value is `strength.length - 1` (4). The meter never reaches its stated maximum and the announced percentage is misleading. With the native `<meter>` element, `max` should be set to `strength.length - 1`.
+
+**Low:**
+
+- Redundant `title` attribute - The `title` prop is rendered both as the visible label text and as the native `title` tooltip, duplicating the accessible name as an accessible description.
+- Possible double announcements - `aria-live="polite"` on the whole meter (label + value) may cause chatty or duplicate announcements on top of the meter role's own value announcements on some screen readers. Consider applying the live region only to the changing value.
