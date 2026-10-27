@@ -102,6 +102,7 @@ const SelectBar = ({
 
   // First we display shadow copy of tags to render it
   useEffect(() => {
+    // oxlint-disable-next-line react/set-state-in-effect -- triggers the measurement pass that renders the shadow copy of the tags
     setDisplayShadowCopy(true)
   }, [selectedData.selectedValues.length])
 
@@ -118,6 +119,7 @@ const SelectBar = ({
   // We use useLayoutEffect to ensure the measurement is done before the browser paints
   useLayoutEffect(() => {
     if (selectedData.selectedValues.length === 0) {
+      // oxlint-disable-next-line react/set-state-in-effect -- resets measurement state, synchronized with the rendered DOM in the layout effect
       setOverflowAmount(0)
       setNonOverFlowedValues([])
     }

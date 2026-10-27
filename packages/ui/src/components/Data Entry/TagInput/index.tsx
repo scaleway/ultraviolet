@@ -4,7 +4,7 @@ import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn, getUUID } from '@ultraviolet/utils'
-import { useEffect, useId, useRef, useState } from 'react'
+import { useId, useRef, useState } from 'react'
 import type { ChangeEvent, ComponentProps, CSSProperties, KeyboardEventHandler, ReactNode } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import { Button } from '../../Action/Button'
@@ -91,6 +91,7 @@ export const TagInput = ({
   'aria-describedBy': ariaDescribedBy,
 }: TagInputProps) => {
   const [tagInputState, setTagInput] = useState(convertTagArrayToTagStateArray(value))
+  const [previousValue, setPreviousValue] = useState(value)
   const [input, setInput] = useState('')
   const [status, setStatus] = useState<Record<string, StatusValue>>({})
 
@@ -98,9 +99,10 @@ export const TagInput = ({
   const localId = id ?? uniqueId
   const helperId = useId()
 
-  useEffect(() => {
+  if (value !== previousValue) {
+    setPreviousValue(value)
     setTagInput(convertTagArrayToTagStateArray(value))
-  }, [value, setTagInput])
+  }
 
   const inputRef = useRef<HTMLInputElement>(null)
 

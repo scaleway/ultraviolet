@@ -1,7 +1,7 @@
 'use client'
 
 import type { ChangeEvent, DragEvent as DragEventReact } from 'react'
-import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import { Stack } from '../../Layout/Stack'
 import { Description } from '../../Typography/Description'
@@ -60,11 +60,19 @@ const FileInputBase = ({
 }: FileInputProps) => {
   const [dragState, setDragState] = useState<'over' | 'default' | 'page'>('default')
   const [files, setFiles] = useState(defaultFiles ?? [])
+  const [previousDefaultFiles, setPreviousDefaultFiles] = useState(defaultFiles)
 
   const generatedId = useId()
   const inputId = id ?? generatedId
   const helperId = useId()
   const inputRef = useRef<HTMLInputElement>(null)
+
+  if (defaultFiles !== previousDefaultFiles) {
+    setPreviousDefaultFiles(defaultFiles)
+    if (defaultFiles) {
+      setFiles(defaultFiles)
+    }
+  }
 
   // When we allow folder, we should allow to add multiple files
   const computedMultiple = allowDirectories || multiple
@@ -101,12 +109,6 @@ const FileInputBase = ({
       window.removeEventListener('dragleave', handleDragLeave)
     }
   }, [disabledDragndrop])
-
-  useEffect(() => {
-    if (defaultFiles) {
-      setFiles(defaultFiles)
-    }
-  }, [defaultFiles])
 
   const addFiles = (addedFiles: FileList | null): [File[], ErrorType[]] => {
     const droppedFiles = [...(addedFiles ?? [])]

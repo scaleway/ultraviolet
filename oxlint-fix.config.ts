@@ -34,7 +34,6 @@ export const warnRules = defineConfig({
     'react/no-array-index-key': 'warn', // react errors (6)
     'react/no-deriving-state-in-effects': 'warn', // react errors (7)
     'react/refs': 'warn', // react errors (44)
-    'react/set-state-in-effect': 'warn', // react errors (34)
 
     'typescript/consistent-return': 'warn', // typescript errors (8)
     'typescript/dot-notation': 'warn', // typescript errors (4)

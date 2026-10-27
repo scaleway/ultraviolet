@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { forwardRef, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
+import { forwardRef, useCallback, useContext, useMemo, useRef, useState } from 'react'
 import type { Ref } from 'react'
 import { ModalContext } from '../Modal/ModalProvider'
 import { Popup } from '../Popup'
@@ -40,9 +40,11 @@ export const Popover = forwardRef(
     const [localVisible, setLocalVisible] = useState(visible)
 
     // We change local value if visible prop changes
-    useEffect(() => {
+    const [previousVisible, setPreviousVisible] = useState(visible)
+    if (visible !== previousVisible) {
+      setPreviousVisible(visible)
       setLocalVisible(visible)
-    }, [visible])
+    }
 
     const localOnClose = useCallback(() => {
       setLocalVisible(false)

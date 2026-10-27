@@ -27,15 +27,17 @@ export const Chip = ({
   style,
 }: ChipType) => {
   const [isActive, setIsActive] = useState(active)
+  const [previousActive, setPreviousActive] = useState(active)
   const [hasTrailingIcon, setHasTrailingIcon] = useState(false)
   const chipRef = useRef<HTMLButtonElement>(null) // ref to the parent container
   const iconRef = useRef<HTMLButtonElement | HTMLDivElement>(null)
 
   const value = useMemo(() => ({ disabled, iconRef, isActive }), [isActive, disabled, iconRef])
 
-  useEffect(() => {
+  if (active !== previousActive) {
+    setPreviousActive(active)
     setIsActive(active)
-  }, [active])
+  }
 
   useEffect(() => {
     if (chipRef.current && iconRef.current) {

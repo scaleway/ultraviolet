@@ -123,6 +123,7 @@ export const Pagination = ({
   style,
 }: PaginationProps) => {
   const [perPageComputed, setPerPageComputed] = useState(perPage ?? 10)
+  const [previousPerPage, setPreviousPerPage] = useState(perPage)
   const rootRef = useRef<HTMLDivElement>(null)
   const breakpoint = useBreakpoints(rootRef, { small: 0, large: 420 })
 
@@ -135,11 +136,12 @@ export const Pagination = ({
     }
   }, [page, pageCount, onChange])
 
-  useEffect(() => {
+  if (perPage !== previousPerPage) {
+    setPreviousPerPage(perPage)
     if (perPage) {
       setPerPageComputed(perPage)
     }
-  }, [perPage])
+  }
 
   return (
     <Stack

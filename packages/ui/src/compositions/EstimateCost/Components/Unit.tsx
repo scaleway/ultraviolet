@@ -17,13 +17,18 @@ type UnitProps = {
 
 export const Unit = ({ amount, itemCallback, getAmountValue, unit, style }: UnitProps) => {
   const { isOverlay } = useOverlay()
-  const [capacity, setCapacity] = useState(amount === 0 ? undefined : amount)
+  const [capacity, setCapacity] = useState(amount)
+  const [previousAmount, setPreviousAmount] = useState(amount)
+
+  if (amount !== previousAmount) {
+    setPreviousAmount(amount)
+    setCapacity(amount)
+  }
 
   useEffect(() => {
-    setCapacity(amount)
     itemCallback?.(amount, true)
     getAmountValue?.(amount)
-  }, [getAmountValue, itemCallback, capacity, amount])
+  }, [getAmountValue, itemCallback, amount])
 
   return isOverlay ? (
     <div className={estimateCostStyle.resourceName()} style={style}>

@@ -3,7 +3,6 @@ import type * as Nivo from '@nivo/core'
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { useEffect, useState } from 'react'
 import type { ComponentProps } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { LineChart } from '..'
@@ -78,17 +77,8 @@ describe('lineChart', () => {
   })
 
   it('renders correctly when data is async', () => {
-    const AsyncLineChart = () => {
-      const [data, setData] = useState<typeof lineChartMultipleData | undefined>()
-
-      useEffect(() => {
-        setData(lineChartMultipleData)
-      }, [])
-
-      return <LineChart data={data} withLegend xScale={{ type: 'linear' }} />
-    }
-
-    const { asFragment } = renderWithTheme(<AsyncLineChart />)
+    const { asFragment, rerender } = renderWithTheme(<LineChart withLegend xScale={{ type: 'linear' }} />)
+    rerender(<LineChart data={lineChartMultipleData} withLegend xScale={{ type: 'linear' }} />)
     expect(asFragment()).toMatchSnapshot()
   })
 })

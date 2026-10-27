@@ -211,9 +211,14 @@ export const Item = memo(
     const Cell = isOverlay ? 'div' : 'td'
 
     const [amount, setAmount] = useState(currentAmount)
+    const [previousCurrentAmount, setPreviousCurrentAmount] = useState(currentAmount)
     const [isVariant, setIsVariant] = useState(false)
 
-    useEffect(() => setAmount(currentAmount), [setAmount, currentAmount])
+    if (currentAmount !== previousCurrentAmount) {
+      setPreviousCurrentAmount(currentAmount)
+      setAmount(currentAmount)
+    }
+
     useEffect(() => onAmountChange?.(amount), [onAmountChange, amount])
 
     const itemCallback = useCallback(
