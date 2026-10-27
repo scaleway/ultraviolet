@@ -38,6 +38,10 @@ const barStack = recipe({
     minWidth: 0,
     padding: theme.space[1],
     width: '100%',
+    background: 'inherit',
+    border: 'inherit',
+    color: 'inherit',
+    textAlign: 'inherit',
   },
   defaultVariants: {
     size: 'medium',

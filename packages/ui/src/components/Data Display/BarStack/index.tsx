@@ -23,13 +23,13 @@ type BarProps = {
    * Text to display inside the bar
    */
   text?: string
-  onClick?: MouseEventHandler<HTMLDivElement>
-  onDoubleClick?: MouseEventHandler<HTMLDivElement>
-  onKeyDown?: KeyboardEventHandler<HTMLDivElement>
-  onMouseDown?: MouseEventHandler<HTMLDivElement>
-  onMouseUp?: MouseEventHandler<HTMLDivElement>
-  onMouseEnter?: MouseEventHandler<HTMLDivElement>
-  onMouseLeave?: MouseEventHandler<HTMLDivElement>
+  onClick?: MouseEventHandler<HTMLElement>
+  onDoubleClick?: MouseEventHandler<HTMLElement>
+  onKeyDown?: KeyboardEventHandler<HTMLElement>
+  onMouseDown?: MouseEventHandler<HTMLElement>
+  onMouseUp?: MouseEventHandler<HTMLElement>
+  onMouseEnter?: MouseEventHandler<HTMLElement>
+  onMouseLeave?: MouseEventHandler<HTMLElement>
   /**
    * A tooltip to display when hovering the bar
    */
@@ -97,12 +97,11 @@ export const BarStack = ({
               onMouseUp,
               tooltip,
             }) => {
-              const isInteractive = onClick || onDoubleClick || onMouseDown || onKeyDown || onMouseUp
-
+              const isInteractive = !!(onClick || onDoubleClick || onMouseDown || onKeyDown || onMouseUp)
+              const Component = isInteractive ? 'button' : 'div'
               // Role is added when the element is interactive, the linter cannot statically infer it
               const bar = (
-                // oxlint-disable-next-line jsx-a11y/no-static-element-interactions
-                <div
+                <Component
                   className={barStackStyle.barStack({ size })}
                   data-testid={`content-${id}`}
                   onClick={onClick}
@@ -128,7 +127,7 @@ export const BarStack = ({
                   >
                     {legend === 'outside' ? '' : text}
                   </Text>
-                </div>
+                </Component>
               )
 
               return (

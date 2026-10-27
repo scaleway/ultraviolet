@@ -11,8 +11,9 @@ export const fakeData = [
   {
     id: '5',
     text: 'Again',
-    tooltip: 'Again',
+
     value: 42,
+    onClick: () => console.log('Click "Again"'),
   },
   { id: '6', text: 'Bye bye', tooltip: 'Bye bye', value: 42 },
 ]
