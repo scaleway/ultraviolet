@@ -2,7 +2,7 @@
 "@ultraviolet/ui": minor
 ---
 
-`Popover`: rebuild on the new `Popup` and fix its accessibility.
+`Popover`: rebuild on the new `Popup` and fix its accessibility. Some changes might break tests that look for aria-attributes, focus handling or DOM snapshots.
 
 - the popover always flips automatically when there is not enough space, so the `auto` / `auto-*` placements are deprecated (the `auto` prefix is ignored)
 - `align` is deprecated and ignored: the popover is always centered on its reference element
