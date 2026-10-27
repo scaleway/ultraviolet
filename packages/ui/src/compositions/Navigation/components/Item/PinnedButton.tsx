@@ -52,7 +52,6 @@ export const ItemPinnedButton = ({
               })
             }
           }}
-          onKeyDown={() => {}}
           type="button"
         >
           <PinUnpinIcon
