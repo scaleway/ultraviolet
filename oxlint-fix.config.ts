@@ -11,7 +11,6 @@ export const warnRules = defineConfig({
   rules: {
     'eslint/max-params': 'warn', // eslint errors (33)
     'eslint/no-await-in-loop': 'warn', // eslint errors (12)
-    'eslint/no-empty-function': 'warn', // eslint errors (408)
     'eslint/no-shadow': 'warn', // eslint errors (7)
     'import/no-unassigned-import': 'warn', // import errors (1)
     'eslint/prefer-destructuring': 'warn', // eslint errors (31)

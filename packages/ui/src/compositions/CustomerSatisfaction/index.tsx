@@ -78,7 +78,6 @@ export const CustomerSatisfaction = ({
             onClick={() => {
               onChange(rating.value)
             }}
-            onKeyDown={() => {}}
             onMouseEnter={() => {
               setHoveredValue(rating.value)
             }}

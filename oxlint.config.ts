@@ -134,6 +134,7 @@ export default defineConfig({
     'eslint/max-statements': ['error', { max: 30 }],
     'eslint/no-negated-condition': 'off',
     'eslint/no-implicit-coercion': 'off',
+    'eslint/no-empty-function': 'off',
 
     'jsx-a11y/control-has-associated-label': [
       'error',
