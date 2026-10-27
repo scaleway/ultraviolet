@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-const iconWrapper = style({ all: 'unset', cursor: 'pointer' })
+const iconWrapper = style({ all: 'unset', outline: 'revert', cursor: 'pointer' })
 
 const plans = style({
   borderCollapse: 'separate',

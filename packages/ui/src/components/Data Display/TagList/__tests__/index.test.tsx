@@ -277,7 +277,7 @@ describe('tagList', () => {
     expect(screen.getByText('Additional')).toBeInTheDocument()
     expect(screen.getAllByRole('listitem').find(li => li.textContent === 'world')).toBeInTheDocument()
 
-    const closeButton = screen.getByRole('button', { name: 'close' })
+    const closeButton = screen.getByRole('button', { name: 'close popover Additional' })
     await userEvent.click(closeButton)
 
     await waitFor(() => {
@@ -305,7 +305,7 @@ describe('tagList', () => {
 
     expect(screen.getByText('Additional')).toBeInTheDocument()
 
-    const closeButton = screen.getByRole('button', { name: 'close' })
+    const closeButton = screen.getByRole('button', { name: 'close popover Additional' })
     await userEvent.click(closeButton)
 
     await waitFor(() => {

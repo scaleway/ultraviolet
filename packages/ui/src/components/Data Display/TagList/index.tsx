@@ -105,8 +105,6 @@ export const TagList = ({
   const measureRef = useRef<HTMLDivElement>(null)
   const popoverTriggerRef = useRef<HTMLButtonElement>(null)
 
-  const [isPopoverVisible, setIsPopoverVisible] = useState(false)
-
   const [potentiallyVisibleTags, surelyHiddenTags] = useMemo(() => {
     if (tags.length === 0) {
       return [[], []]
@@ -252,24 +250,13 @@ export const TagList = ({
                 {hiddenTagsToDisplay.map((tag, index) => renderTag(tag, index))}
               </ul>
             }
-            maxHeight={popoverMaxHeight}
-            onClose={() => setIsPopoverVisible(false)}
+            className={tagListStyle.popup}
+            style={{ maxHeight: popoverMaxHeight }}
             placement={popoverPlacement}
             size="small"
             title={popoverTitle}
-            visible={isPopoverVisible}
           >
-            <button
-              type="button"
-              className={tagListStyle.counter}
-              data-testid={`${dataTestId ?? 'taglist'}-open`}
-              onClick={() => setIsPopoverVisible(true)}
-              onKeyDown={event => {
-                if ([' ', 'Enter'].includes(event.key)) {
-                  setIsPopoverVisible(true)
-                }
-              }}
-            >
+            <button type="button" className={tagListStyle.counter} data-testid={`${dataTestId ?? 'taglist'}-open`}>
               +{hiddenTagsToDisplay.length}
             </button>
           </Popover>

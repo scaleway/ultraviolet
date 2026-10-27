@@ -6,10 +6,10 @@ export default {
   title: 'UI/Overlay/Popover',
   parameters: {
     a11yStatus: {
-      perceivable: false,
-      operable: false,
+      perceivable: true,
+      operable: true,
       understandable: true,
-      robust: false,
+      robust: true,
     },
   },
 } as Meta<typeof Popover>
@@ -19,3 +19,4 @@ export { Sentiments } from './Sentiments.stories'
 export { Sizes } from './Sizes.stories'
 export { AdvancedUsage } from './AdvancedUsage.stories'
 export { PlacementAuto } from './PlacementAuto.stories'
+export { Controlled } from './Controlled.stories'

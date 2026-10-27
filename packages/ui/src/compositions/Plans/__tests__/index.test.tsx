@@ -32,11 +32,11 @@ describe('plans', () => {
     )
     const hint = screen.getByTestId('hint-popover')
     await userEvent.click(hint)
-    const popoverContent = screen.getByText('popover')
-    expect(popoverContent).toBeVisible()
+    const popover = screen.getByRole('dialog', { name: 'more details' })
+    expect(popover).toBeVisible()
+    expect(popover).toHaveTextContent('popover details')
 
-    await userEvent.keyboard('[Enter]')
-    const closePopover = screen.getByRole('button', { name: 'close' })
+    const closePopover = screen.getByRole('button', { name: 'close popover more details' })
     await userEvent.click(closePopover)
 
     expect(asFragment).toMatchSnapshot()

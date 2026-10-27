@@ -1,7 +1,7 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { useCallback, useState } from 'react'
+import { renderWithTheme } from '@utils/test'
+import { createRef, useCallback, useState } from 'react'
 import type { ComponentProps } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Popover } from '..'
@@ -63,57 +63,84 @@ const AdvancedPopover = () => {
   )
 }
 
-describe('tooltip', () => {
-  it('should render correctly with required props', () =>
-    shouldMatchSnapshot(
-      <Popover content="Test" onClose={() => {}} title="Test">
-        Children
+describe('popover', () => {
+  it('should render only the trigger and not the panel when closed', () => {
+    renderWithTheme(
+      <Popover content="Test" title="Test">
+        <button type="button">Open Popover</button>
       </Popover>,
-    ))
+    )
 
-  it('should render correctly with required props and visible', () =>
-    shouldMatchSnapshot(
-      <Popover content="Test" onClose={() => {}} title="Test" visible>
-        Children
-      </Popover>,
-    ))
-
-  it('should render correctly with component in content prop', () =>
-    shouldMatchSnapshot(
-      <Popover content={<p>Test</p>} onClose={() => {}} title="Test" visible>
-        Children
-      </Popover>,
-    ))
-
-  describe('should render correctly with placement', () => {
-    it.each(['top', 'left', 'right', 'bottom'] as const)(`should renders tooltip with placement %s`, placement => {
-      shouldMatchSnapshot(
-        <Popover content="Test" onClose={() => {}} placement={placement} title="Test" visible>
-          <p data-testid="children">Children</p>
-        </Popover>,
-      )
-    })
+    expect(screen.getByRole('button', { name: 'Open Popover' })).toHaveAttribute('aria-expanded', 'false')
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
   })
 
-  describe('should render correctly with sentiment', () => {
-    it.each(['neutral', 'primary'] as const)(`should renders tooltip with placement %s`, sentiment => {
-      shouldMatchSnapshot(
-        <Popover content="Test" onClose={() => {}} sentiment={sentiment} title="Test" visible>
-          <p data-testid="children">Children</p>
-        </Popover>,
-      )
-    })
+  it('should open and close from the trigger when uncontrolled', async () => {
+    renderWithTheme(
+      <Popover content="Test" title="Test">
+        <button type="button">Open Popover</button>
+      </Popover>,
+    )
+
+    const trigger = screen.getByRole('button', { name: 'Open Popover' })
+    await userEvent.click(trigger)
+    expect(screen.getByRole('dialog')).toBeVisible()
+
+    await userEvent.click(trigger)
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
   })
 
-  describe('should render correctly with sizes', () => {
-    it.each(['small', 'medium', 'large'] as const)(`should renders tooltip with placement %s`, size => {
-      const { asFragment } = renderWithTheme(
-        <Popover content="Test" onClose={() => {}} size={size} title="Test" visible>
-          <p data-testid="children">Children</p>
-        </Popover>,
-      )
-      expect(asFragment()).toMatchSnapshot()
-    })
+  it('should render the content as a paragraph when it is a string', () => {
+    renderWithTheme(
+      <Popover content="Popover content" title="Test" visible>
+        Children
+      </Popover>,
+    )
+
+    expect(screen.getByText('Popover content').tagName).toBe('P')
+  })
+
+  it('should render the content without modifying it when it is a JSX element', () => {
+    renderWithTheme(
+      <Popover content={<p data-testid="content">Test</p>} title="Test" visible>
+        Children
+      </Popover>,
+    )
+
+    expect(screen.getByTestId('content')).toBeVisible()
+  })
+
+  it('should ignore deprecated props', () => {
+    renderWithTheme(
+      <Popover
+        align="start"
+        content="Test"
+        data-testid="popover"
+        dynamicDomRendering={false}
+        maxHeight="100px"
+        maxWidth="100px"
+
+        placement="auto-left"
+        title="Test"
+        visible
+      >
+        Children
+      </Popover>,
+    )
+
+    // the popup always flips, is dynamically rendered and has a fixed width derived from `size`
+    expect(screen.getByTestId('popover')).toBeVisible()
+  })
+
+  it('should forward its ref to the popup panel element', () => {
+    const ref = createRef<HTMLDivElement>()
+    renderWithTheme(
+      <Popover content="Test" ref={ref} title="Test" visible>
+        Children
+      </Popover>,
+    )
+
+    expect(ref.current).toBe(screen.getByRole('dialog'))
   })
 
   it('should render visible on mount and close on click on close button', async () => {
@@ -128,7 +155,7 @@ describe('tooltip', () => {
     const popover = screen.getByTestId('popover')
     expect(popover).toBeVisible()
 
-    const closeButton = screen.getByRole('button', { name: 'close' })
+    const closeButton = screen.getByRole('button', { name: 'close popover Test' })
     await userEvent.click(closeButton)
 
     expect(onClose).toHaveBeenCalledOnce()
@@ -154,10 +181,7 @@ describe('tooltip', () => {
     const outsideElement = screen.getByTestId('outside-element')
     await userEvent.click(outsideElement)
 
-    // Need to await cause popup close is in a setTimeout
-    await waitFor(() => {
-      expect(onClose).toHaveBeenCalledOnce()
-    })
+    expect(onClose).toHaveBeenCalledOnce()
   })
 
   // This test is made to check advanced use cases of popover with inputs inside and a modal that contains the same inputs

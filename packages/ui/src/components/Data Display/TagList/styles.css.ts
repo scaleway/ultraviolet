@@ -19,6 +19,10 @@ const measurementContainer = style({
   display: 'flex',
 })
 
+const popup = style({
+  display: 'flex',
+})
+
 const tagContainer = recipe({
   base: {
     alignItems: 'center',
@@ -45,6 +49,9 @@ const list = style({
   selectors: {
     [`${tagContainer()} > &`]: {
       display: 'contents',
+    },
+    [`${popup} &`]: {
+      overflow: 'auto',
     },
   },
 })
@@ -81,6 +88,7 @@ const counter = style({
 export const tagListStyle = {
   container,
   tagContainer,
+  popup,
   tag,
   counter,
   measurementContainer,

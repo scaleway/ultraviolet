@@ -1,59 +1,36 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { useCallback, useState } from 'react'
-import type { Dispatch, SetStateAction } from 'react'
 import { Button } from '../../../Action/Button'
+import { Stack } from '../../../Layout/Stack'
 import { Popover } from '../index'
 import { Playground } from './Playground.stories'
 
-export const Sizes: StoryFn<typeof Popover> = () => {
-  const [openedSmall, setOpenedSmall] = useState(false)
-  const [openedMedium, setOpenedMedium] = useState(false)
-  const [openedLarge, setOpenedLarge] = useState(false)
+export const Sizes: StoryFn<typeof Popover> = () => (
+  <Stack direction="row" gap={2}>
+    <Popover
+      content="This is a simple text content inside the popover. You can customize it by passing text into content property."
+      size="small"
+      title="Popover Title"
+    >
+      <Button sentiment="neutral">Open Popover small size</Button>
+    </Popover>
 
-  const onCloseCallBack = useCallback((setValue: Dispatch<SetStateAction<boolean>>) => {
-    setValue(false)
-  }, [])
+    <Popover
+      content="This is a simple text content inside the popover. You can customize it by passing text into content property."
+      size="medium"
+      title="Popover Title"
+    >
+      <Button sentiment="neutral">Open Popover medium size</Button>
+    </Popover>
 
-  return (
-    <div style={{ display: 'inline-flex', gap: '16px' }}>
-      <Popover
-        content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-        onClose={() => onCloseCallBack(setOpenedSmall)}
-        size="small"
-        title="Popover Title"
-        visible={openedSmall}
-      >
-        <Button onClick={() => setOpenedSmall(true)} sentiment="neutral">
-          Open Popover small size
-        </Button>
-      </Popover>
-
-      <Popover
-        content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-        onClose={() => onCloseCallBack(setOpenedMedium)}
-        size="medium"
-        title="Popover Title"
-        visible={openedMedium}
-      >
-        <Button onClick={() => setOpenedMedium(true)} sentiment="neutral">
-          Open Popover medium size
-        </Button>
-      </Popover>
-
-      <Popover
-        content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-        onClose={() => onCloseCallBack(setOpenedLarge)}
-        size="large"
-        title="Popover Title"
-        visible={openedLarge}
-      >
-        <Button onClick={() => setOpenedLarge(true)} sentiment="neutral">
-          Open Popover large size
-        </Button>
-      </Popover>
-    </div>
-  )
-}
+    <Popover
+      content="This is a simple text content inside the popover. You can customize it by passing text into content property."
+      size="large"
+      title="Popover Title"
+    >
+      <Button sentiment="neutral">Open Popover large size</Button>
+    </Popover>
+  </Stack>
+)
 
 Sizes.parameters = {
   docs: {
