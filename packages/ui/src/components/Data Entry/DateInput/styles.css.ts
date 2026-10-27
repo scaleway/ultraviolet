@@ -14,8 +14,6 @@ const calendarContentWrapper = recipe({
     selectors: {
       '&&': {
         backgroundColor: theme.colors.other.elevation.background.raised,
-        borderRadius: theme.radii.default,
-        color: theme.colors.neutral.text,
         padding: theme.space[2],
         width: '16.5rem',
       },
@@ -30,7 +28,6 @@ const calendarContentWrapper = recipe({
 const popup = style([
   calendarContentWrapper(),
   {
-    boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
     width: '100%',
     maxWidth: POPUP_WIDTH,
   },
