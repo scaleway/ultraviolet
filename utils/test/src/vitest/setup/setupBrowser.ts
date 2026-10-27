@@ -3,6 +3,7 @@ import { cleanup } from '@testing-library/react'
 import { afterEach, beforeEach, expect } from 'vitest'
 import * as axeMatchers from 'vitest-axe/matchers'
 import { toBeVisuallyHidden } from '../toBeVisuallyHidden'
+// oxlint-disable-next-line import/no-unassigned-import
 import '@ultraviolet/themes/global'
 
 declare global {

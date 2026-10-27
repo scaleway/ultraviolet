@@ -26,7 +26,7 @@ export const unitProjectConfig = {
     },
     deps: {
       optimizer: {
-        web: {
+        ssr: {
           enabled: true,
           include: ['@nivo/*'],
         },
@@ -61,5 +61,8 @@ export const unitProjectConfig = {
       },
     },
     testTimeout: 25_000,
+    outputFile: {
+      junit: '.reports/tests-unit.xml',
+    },
   },
 } satisfies ViteUserConfig

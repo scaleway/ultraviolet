@@ -20,8 +20,5 @@ export const globalTestOptions = {
     provider: 'istanbul',
     reporter: ['text', 'json', 'cobertura', 'html', 'json-summary'],
   },
-  outputFile: {
-    junit: '.reports/tests.xml',
-  },
   reporters: ['default', 'junit'],
 } satisfies TestUserConfig

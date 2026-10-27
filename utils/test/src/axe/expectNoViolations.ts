@@ -27,13 +27,22 @@ const defaultAxeOptions: axe.RunOptions = {
   rules,
 } as const
 
+/*
+ * Floating UI's focus guards are visually hidden focus sentinels. On WebKit
+ * they must carry role="button" without aria-hidden for VoiceOver to focus
+ * them, which axe flags with aria-command-name; they are library internals,
+ * not part of the audited UI (in other browsers they are aria-hidden, so
+ * ignored). Excluded from every scan.
+ */
+const focusGuardSelector = '[data-floating-ui-focus-guard]'
+
 const expectNoViolations = async (container: string | Element, customOptions: axe.RunOptions = {}) => {
   const opts = {
     ...customOptions,
     ...defaultAxeOptions,
   } satisfies axe.RunOptions
 
-  const axeResult = await axe.run(container, opts)
+  const axeResult = await axe.run({ exclude: [focusGuardSelector], include: [container] }, opts)
   expect(axeResult).toHaveNoViolations()
 }
 

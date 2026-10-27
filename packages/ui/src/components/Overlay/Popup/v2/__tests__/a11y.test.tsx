@@ -3,17 +3,9 @@ import { userEvent } from '@testing-library/user-event'
 import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations, renderWithTheme } from '@utils/test'
 import { useRef } from 'react'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { Popup } from '..'
 import { Modal } from '../../../Modal'
-
-// jsdom doesn't implement focus({ preventScroll }), which makes Floating UI skip
-// restoring focus on dismiss. Reading the option lets its feature detection see
-// the same support as a real browser.
-const originalFocus = Reflect.get(HTMLElement.prototype, 'focus')
-HTMLElement.prototype.focus = function focus(this: HTMLElement, options?: FocusOptions) {
-  return originalFocus.call(this, { ...options, preventScroll: options?.preventScroll })
-}
 
 // Floating UI focuses through a rAF-deferred queue. On loaded CI runners the
 // webkit instance can take well over the 1s waitFor default to reach the
@@ -44,19 +36,6 @@ const renderPopup = (
 
 describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {
-    // jsdom reports an "Apple" vendor, which makes Floating UI's focus guards take
-    // the Safari-only role="button" path: empty, nameless sentinels that axe flags.
-    // Run as a non-Safari browser, where the guards are aria-hidden.
-    const appleVendor = Object.getOwnPropertyDescriptor(navigator, 'vendor')
-    beforeEach(() => {
-      Object.defineProperty(navigator, 'vendor', { value: '', configurable: true })
-    })
-    afterEach(() => {
-      if (appleVendor) {
-        Object.defineProperty(navigator, 'vendor', appleVendor)
-      }
-    })
-
     // the panel is portaled to document.body, so scan the whole body
     it.for([...consoleThemesMap.entries()])(
       'should not have violations when open (theme: %s)',
@@ -161,7 +140,15 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       )
 
       await userEvent.click(screen.getByRole('button', { name: 'Open' }))
-      await waitFor(() => expect(screen.getByText('Content')).toBeVisible())
+      await waitFor(
+        () => {
+          const content = screen.getByText('Content')
+          expect(content).toBeVisible()
+        },
+        {
+          timeout: FOCUS_WAIT_TIMEOUT,
+        },
+      )
 
       await userEvent.keyboard('{Escape}')
 
@@ -185,7 +172,13 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       const trigger = screen.getByRole('button', { name: 'Open' })
 
       await userEvent.click(trigger)
-      await waitFor(() => expect(screen.getByRole('dialog')).toBeVisible())
+      await waitFor(
+        async () => {
+          const dialog = screen.getByRole('dialog')
+          expect(dialog).toBeVisible()
+        },
+        { timeout: FOCUS_WAIT_TIMEOUT },
+      )
 
       await userEvent.click(document.body)
       await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())

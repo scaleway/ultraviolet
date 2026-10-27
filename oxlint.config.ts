@@ -32,6 +32,7 @@ export default defineConfig({
         'utils/stories/**/*.{ts,tsx}',
         'utils/scripts/*.ts',
         '**/icons/process-css.ts',
+        'utils/test/src/vitest/configs/*.ts',
         'vite.config.ts',
       ],
       rules: {
@@ -64,6 +65,7 @@ export default defineConfig({
         '**/__tests__/**/*.{ts,tsx}',
         '**/__mocks__/**/*.{ts,tsx}',
         '**/*.test.{ts,tsx}',
+        'utils/test/src/vitest/configs/*.ts',
         'test-utils.tsx',
         'setup.ts',
         '*.config.ts',
