@@ -13,9 +13,6 @@ declare global {
 const MockGetTargetRanges = vi.fn((): StaticRange[] => [])
 
 const setup = () => {
-  process.env['TZ'] = 'UTC'
-  process.env['LC_ALL'] = 'en_US.UTF-8'
-
   expect.extend(domMatchers)
   expect.extend(axeMatchers)
   expect.extend({ toBeVisuallyHidden })
@@ -47,6 +44,5 @@ const setup = () => {
     cleanup()
   })
 }
-
 
 setup()

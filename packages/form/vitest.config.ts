@@ -8,10 +8,6 @@ export const vitestConfig = createVitestProjectsConfig({
       unstable_mode: 'transform',
     }),
   ],
-  unit: {
-    name: 'unit',
-    setupFiles: ['@utils/test/setup'],
-  },
 })
 
 export default vitestConfig

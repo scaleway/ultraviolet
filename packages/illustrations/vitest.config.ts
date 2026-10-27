@@ -9,14 +9,6 @@ export const vitestConfig = createVitestProjectsConfig({
       unstable_mode: 'transform',
     }),
   ],
-  unit: {
-    name: 'unit',
-    setupFiles: ['@utils/test/setup'],
-  },
-  browser: {
-    name: 'browser',
-    setupFiles: ['@utils/test/browser-setup'],
-  },
 })
 
 export default vitestConfig

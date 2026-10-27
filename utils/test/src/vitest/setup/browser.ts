@@ -29,5 +29,4 @@ const setupBrowser = () => {
   })
 }
 
-
 setupBrowser()

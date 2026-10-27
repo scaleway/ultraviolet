@@ -33,9 +33,6 @@ export const unitProjectConfig = {
       },
     },
     environment: 'jsdom',
-    // Node resolves its locale at process start: vitest injects `env` when
-    // spawning the worker processes, so pinning it here keeps dates and Intl
-    // output deterministic in every package, without per-script env prefixes.
     env: {
       LC_ALL: 'en_US.UTF-8',
       TZ: 'UTC',

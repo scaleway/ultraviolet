@@ -83,7 +83,10 @@ describe('popover - A11y', { tags: ['a11y'] }, () => {
       const trigger = screen.getByRole('button', { name: 'Open Popover' })
 
       await userEvent.click(trigger)
-      expect(screen.getByRole('dialog')).toBeVisible()
+      await waitFor(() => {
+        const dialog = screen.getByRole('dialog')
+        expect(dialog).toBeVisible()
+      })
 
       await userEvent.keyboard('{Escape}')
 

@@ -37,6 +37,7 @@ export const browserProjectConfig = {
         contextOptions: {
           locale: 'en-US',
           timezoneId: 'UTC',
+          reducedMotion: 'reduce'
         },
       }),
       instances: [
