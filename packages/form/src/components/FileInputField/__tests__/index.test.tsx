@@ -11,32 +11,36 @@ describe('fileInputField', () => {
   })
 
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(<FileInputField label="Test" name="test" />)
+    const { asFragment } = renderWithForm({ children: <FileInputField label="Test" name="test" /> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly disabled', () => {
-    const { asFragment } = renderWithForm(<FileInputField disabled label="Test" name="test" />)
+    const { asFragment } = renderWithForm({ children: <FileInputField disabled label="Test" name="test" /> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly as an overlay', () => {
-    const { asFragment } = renderWithForm(
-      <FileInputField label="Test" name="test" variant="overlay">
-        overlay
-      </FileInputField>,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <FileInputField label="Test" name="test" variant="overlay">
+          overlay
+        </FileInputField>
+      ),
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should trigger events', async () => {
     const onChange = vi.fn()
     const user = userEvent.setup()
-    renderWithForm(
-      <FileInputField data-testid="input" label="label" name="Test" onChange={onChange}>
-        <FileInputField.Button>Add here</FileInputField.Button>
-      </FileInputField>,
-    )
+    renderWithForm({
+      children: (
+        <FileInputField data-testid="input" label="label" name="Test" onChange={onChange}>
+          <FileInputField.Button>Add here</FileInputField.Button>
+        </FileInputField>
+      ),
+    })
 
     const button = screen.getByText('Add here')
     await user.click(button)
@@ -56,7 +60,7 @@ describe('fileInputField', () => {
   it('should use provided id prop', () => {
     const customId = 'custom-file-input-field-id'
     const label = 'Test files'
-    const { asFragment } = renderWithForm(<FileInputField id={customId} label={label} name="test" />)
+    const { asFragment } = renderWithForm({ children: <FileInputField id={customId} label={label} name="test" /> })
 
     const input = screen.getByLabelText(label)
     expect(input).toHaveAttribute('id', customId)
@@ -67,11 +71,13 @@ describe('fileInputField', () => {
     const onBlur = vi.fn()
     const label = 'Test files'
 
-    renderWithForm(
-      <FileInputField label={label} name="test" onBlur={onBlur}>
-        <FileInputField.Button>Add here</FileInputField.Button>
-      </FileInputField>,
-    )
+    renderWithForm({
+      children: (
+        <FileInputField label={label} name="test" onBlur={onBlur}>
+          <FileInputField.Button>Add here</FileInputField.Button>
+        </FileInputField>
+      ),
+    })
 
     const input = screen.getByLabelText(label)
     input.focus()

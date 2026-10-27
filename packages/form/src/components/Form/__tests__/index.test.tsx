@@ -5,14 +5,14 @@ import { renderWithForm } from '../../../__tests__/helpers'
 
 describe('form', () => {
   it('renders correctly with node children', () => {
-    const { asFragment } = renderWithForm(<>Test</>)
+    const { asFragment } = renderWithForm({ children: <>Test</> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with onSubmit', async () => {
     const onSubmit = vi.fn(() => {})
 
-    const { asFragment } = renderWithForm(<button type="submit">Submit</button>, undefined, { onSubmit })
+    const { asFragment } = renderWithForm({ children: <button type="submit">Submit</button>, formProps: { onSubmit } })
     await userEvent.click(screen.getByText('Submit'))
     await waitFor(() => expect(onSubmit).toHaveBeenCalledOnce())
     expect(asFragment()).toMatchSnapshot()

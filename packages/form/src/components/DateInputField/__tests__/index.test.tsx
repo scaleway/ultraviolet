@@ -6,26 +6,26 @@ import { renderWithForm } from '../../../__tests__/helpers'
 
 describe('dateInputField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(<DateInputField name="test" />)
+    const { asFragment } = renderWithForm({ children: <DateInputField name="test" /> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly disabled', () => {
-    const { asFragment } = renderWithForm(<DateInputField disabled name="test" />)
+    const { asFragment } = renderWithForm({ children: <DateInputField disabled name="test" /> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should trigger events', async () => {
     const onBlur = vi.fn()
     const onChange = vi.fn()
-    const { asFragment, resultForm } = renderWithForm(
-      <DateInputField name="test" onBlur={onBlur} onChange={onChange} placeholder="YYYY-MM-DD" />,
-      {
+    const { asFragment, resultForm } = renderWithForm({
+      children: <DateInputField name="test" onBlur={onBlur} onChange={onChange} placeholder="YYYY-MM-DD" />,
+      useFormProps: {
         defaultValues: {
           test: new Date('2022-09-01'),
         },
       },
-    )
+    })
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
@@ -42,14 +42,16 @@ describe('dateInputField', () => {
   it('should test range', async () => {
     const onBlur = vi.fn()
     const onChange = vi.fn()
-    const { asFragment, resultForm } = renderWithForm(
-      <DateInputField name="test" onBlur={onBlur} onChange={onChange} placeholder="YYYY-MM-DD" selectsRange />,
-      {
+    const { asFragment, resultForm } = renderWithForm({
+      children: (
+        <DateInputField name="test" onBlur={onBlur} onChange={onChange} placeholder="YYYY-MM-DD" selectsRange />
+      ),
+      useFormProps: {
         defaultValues: {
           test: [new Date('2022-09-01'), new Date('2022-09-06')],
         },
       },
-    )
+    })
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
@@ -71,14 +73,14 @@ describe('dateInputField', () => {
   it('should clear field', async () => {
     const onBlur = vi.fn()
     const onChange = vi.fn()
-    const { asFragment, resultForm } = renderWithForm(
-      <DateInputField clearable name="test" onBlur={onBlur} onChange={onChange} placeholder="YYYY-MM-DD" />,
-      {
+    const { asFragment, resultForm } = renderWithForm({
+      children: <DateInputField clearable name="test" onBlur={onBlur} onChange={onChange} placeholder="YYYY-MM-DD" />,
+      useFormProps: {
         defaultValues: {
           test: new Date('2022-09-01'),
         },
       },
-    )
+    })
 
     const clearButton = screen.getByRole('button', { name: 'clear value' })
     await userEvent.click(clearButton)

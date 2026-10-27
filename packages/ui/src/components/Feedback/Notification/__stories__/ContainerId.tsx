@@ -8,15 +8,17 @@ export const ContainerId: StoryFn<typeof NotificationContainer> = args => (
     <NotificationContainer {...args} containerId="notification1" />
     <Button
       onClick={() =>
-        notification(
-          <Text as="span" variant="bodySmall">
-            Default position (top-right)
-          </Text>,
-          'Notification 1',
-          <VerifyCardProductIcon size="medium" variant="primary" />,
-          true,
-          'notification1',
-        )
+        notification({
+          children: (
+            <Text as="span" variant="bodySmall">
+              Default position (top-right)
+            </Text>
+          ),
+          title: 'Notification 1',
+          icon: <VerifyCardProductIcon size="medium" variant="primary" />,
+          isClosable: true,
+          containerId: 'notification1',
+        })
       }
     >
       ContainerId: &quot; notification1 &quot;
@@ -24,15 +26,17 @@ export const ContainerId: StoryFn<typeof NotificationContainer> = args => (
     <NotificationContainer {...args} containerId="notification2" position="bottom-left" />
     <Button
       onClick={() =>
-        notification(
-          <Text as="span" variant="bodySmall">
-            Notification at the bottom-left
-          </Text>,
-          'Notification 2',
-          <VerifyCardProductIcon size="medium" variant="primary" />,
-          true,
-          'notification2',
-        )
+        notification({
+          children: (
+            <Text as="span" variant="bodySmall">
+              Notification at the bottom-left
+            </Text>
+          ),
+          title: 'Notification 2',
+          icon: <VerifyCardProductIcon size="medium" variant="primary" />,
+          isClosable: true,
+          containerId: 'notification2',
+        })
       }
     >
       ContainerId: &quot; notification2 &quot;

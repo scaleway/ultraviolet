@@ -40,7 +40,11 @@ export const KeyValueInput = ({
 }: KeyValueInputProps) => {
   const errorId = useId()
 
-  const handleChange = (index: number, operationType: 'add' | 'change', key?: string, value?: string) => {
+  const handleChange = (
+    index: number,
+    operationType: 'add' | 'change',
+    { key, value }: { key?: string; value?: string } = {},
+  ) => {
     const newKeyValues = [...keyvalues]
     newKeyValues[index] = { key: key ?? newKeyValues[index].key, value: value ?? newKeyValues[index].value }
     onChange?.(newKeyValues, index, operationType)
@@ -86,26 +90,26 @@ export const KeyValueInput = ({
                 {inputKey.inputType === 'select' ? (
                   <SelectInput
                     options={inputKey.options}
-                    onChange={(key: string) => handleChange(index, 'change', key)} // can't properly infer type of onChange
+                    onChange={(key: string) => handleChange(index, 'change', { key })} // can't properly infer type of onChange
                     {...commonProps(index, 'key', errorKey)}
                   />
                 ) : (
                   <TextInput
-                    onChangeValue={key => handleChange(index, 'change', key)}
+                    onChangeValue={key => handleChange(index, 'change', { key })}
                     {...commonProps(index, 'key', errorKey)}
                   />
                 )}
                 {inputValue.inputType === 'select' ? (
                   <SelectInput
                     options={inputValue.options}
-                    onChange={(value: string) => handleChange(index, 'change', undefined, value)}
+                    onChange={(value: string) => handleChange(index, 'change', { value })}
                     {...commonProps(index, 'value', errorValue)}
                   />
                 ) : (
                   <TextInput
                     autoComplete="off"
                     type={inputValue.type}
-                    onChangeValue={value => handleChange(index, 'change', undefined, value)}
+                    onChangeValue={value => handleChange(index, 'change', { value })}
                     {...commonProps(index, 'value', errorValue)}
                   />
                 )}
@@ -153,7 +157,7 @@ export const KeyValueInput = ({
           fullWidth={addButton.fullWidth}
           onClick={() => {
             const index = keyvalues.length
-            handleChange(index, 'add', '', '')
+            handleChange(index, 'add', { key: '', value: '' })
           }}
           sentiment="primary"
           tooltipDescription={canAdd ? addButton.tooltip : maxSizeReachedTooltip}

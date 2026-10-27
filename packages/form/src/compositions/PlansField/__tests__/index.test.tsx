@@ -8,9 +8,11 @@ import { planAdvanced, planStarter } from './plans'
 
 describe('plansField', () => {
   it('should render correctly', async () => {
-    const { asFragment } = renderWithForm(
-      <PlansField features={[gb, pipeline, domain, ssl, fees]} name="plans" plans={[planStarter, planAdvanced]} />,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <PlansField features={[gb, pipeline, domain, ssl, fees]} name="plans" plans={[planStarter, planAdvanced]} />
+      ),
+    })
     const advancedPlan = screen.getByText('€109.99')
     await userEvent.click(advancedPlan)
 
@@ -18,27 +20,31 @@ describe('plansField', () => {
   })
 
   it('should render required', () => {
-    const { asFragment } = renderWithForm(
-      <PlansField
-        features={[gb, pipeline, domain, ssl, fees]}
-        name="plans"
-        plans={[planStarter, planAdvanced]}
-        required
-      />,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <PlansField
+          features={[gb, pipeline, domain, ssl, fees]}
+          name="plans"
+          plans={[planStarter, planAdvanced]}
+          required
+        />
+      ),
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render with on change', async () => {
     const onChange = vi.fn()
-    const { asFragment } = renderWithForm(
-      <PlansField
-        features={[gb, pipeline, domain, ssl, fees]}
-        name="plans"
-        onChange={onChange}
-        plans={[planStarter, planAdvanced]}
-      />,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <PlansField
+          features={[gb, pipeline, domain, ssl, fees]}
+          name="plans"
+          onChange={onChange}
+          plans={[planStarter, planAdvanced]}
+        />
+      ),
+    })
     const advancedPlan = screen.getByText('€109.99')
     await userEvent.click(advancedPlan)
     expect(onChange).toHaveBeenCalledOnce()

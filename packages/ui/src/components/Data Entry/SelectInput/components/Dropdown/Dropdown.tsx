@@ -55,15 +55,23 @@ const resolveVar = (value: string) => {
   return varName ? getComputedStyle(document.documentElement).getPropertyValue(varName).trim() : value
 }
 
-const handleKeyDown = (
-  event: globalThis.KeyboardEvent,
-  ref: RefObject<HTMLDivElement | null>,
-  options: DataType,
-  searchBarActive: boolean,
-  setSearch: Dispatch<SetStateAction<string>>,
-  setDefaultSearch: Dispatch<SetStateAction<string | null>>,
-  search: string,
-) => {
+const handleKeyDown = ({
+  event,
+  ref,
+  options,
+  searchBarActive,
+  setSearch,
+  setDefaultSearch,
+  search,
+}: {
+  event: globalThis.KeyboardEvent
+  ref: RefObject<HTMLDivElement | null>
+  options: DataType
+  searchBarActive: boolean
+  setSearch: Dispatch<SetStateAction<string>>
+  setDefaultSearch: Dispatch<SetStateAction<string | null>>
+  search: string
+}) => {
   // Deals with default search
   if (
     ref.current &&
@@ -178,7 +186,15 @@ export const Dropdown = ({
     }
 
     const eventKeydown = (event: globalThis.KeyboardEvent) =>
-      handleKeyDown(event, ref, options, searchBarActive, setSearch, setDefaultSearchValue, search)
+      handleKeyDown({
+        event,
+        options,
+        ref,
+        search,
+        searchBarActive,
+        setDefaultSearch: setDefaultSearchValue,
+        setSearch,
+      })
 
     if (!searchable) {
       document.addEventListener('keydown', eventKeydown)

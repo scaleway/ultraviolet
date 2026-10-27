@@ -128,7 +128,7 @@ export const TimeInput = ({
     const newTime = time ? new Date(time) : DEFAULT_DATE
     const valueToChange = getValueByType(type, time)
 
-    if (canConcat(valueToChange, type, key, timeFormat)) {
+    if (canConcat({ key, oldValue: valueToChange, timeFormat, type })) {
       const newValue = (valueToChange % 10) * 10 + key
 
       setValueByType(type, newTime, newValue)

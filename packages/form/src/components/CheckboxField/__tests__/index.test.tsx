@@ -6,21 +6,23 @@ import { mockFormErrors, renderWithForm } from '../../../__tests__/helpers'
 
 describe('checkboxField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(<CheckboxField name="test">test</CheckboxField>)
+    const { asFragment } = renderWithForm({ children: <CheckboxField name="test">test</CheckboxField> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly with aria-label', () => {
-    const { asFragment } = renderWithForm(<CheckboxField aria-label="test" name="test" />)
+    const { asFragment } = renderWithForm({ children: <CheckboxField aria-label="test" name="test" /> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly disabled', () => {
-    const { asFragment } = renderWithForm(
-      <CheckboxField disabled name="test">
-        test
-      </CheckboxField>,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <CheckboxField disabled name="test">
+          test
+        </CheckboxField>
+      ),
+    })
 
     const input = screen.getByRole('checkbox', { hidden: true })
     expect(input).toBeDisabled()
@@ -29,9 +31,12 @@ describe('checkboxField', () => {
   })
 
   it('should render correctly checked without value', () => {
-    const { asFragment } = renderWithForm(<CheckboxField name="checked">test</CheckboxField>, {
-      defaultValues: {
-        checked: true,
+    const { asFragment } = renderWithForm({
+      children: <CheckboxField name="checked">test</CheckboxField>,
+      useFormProps: {
+        defaultValues: {
+          checked: true,
+        },
       },
     })
     const input = screen.getByRole('checkbox', { hidden: true })
@@ -41,8 +46,11 @@ describe('checkboxField', () => {
   })
 
   it('should render correctly not checked without value', () => {
-    const { asFragment } = renderWithForm(<CheckboxField aria-label="test" name="checked" />, {
-      defaultValues: {},
+    const { asFragment } = renderWithForm({
+      children: <CheckboxField aria-label="test" name="checked" />,
+      useFormProps: {
+        defaultValues: {},
+      },
     })
 
     const input = screen.getByRole('checkbox', { hidden: true })
@@ -55,11 +63,13 @@ describe('checkboxField', () => {
     const onChange = vi.fn(() => {})
     const onBlur = vi.fn(() => {})
 
-    const { asFragment } = renderWithForm(
-      <CheckboxField name="test" onBlur={onBlur} onChange={onChange} onFocus={onFocus}>
-        Checkbox field events
-      </CheckboxField>,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <CheckboxField name="test" onBlur={onBlur} onChange={onChange} onFocus={onFocus}>
+          Checkbox field events
+        </CheckboxField>
+      ),
+    })
 
     const input = screen.getByRole('checkbox', { hidden: true })
     act(() => input.focus())
@@ -72,16 +82,18 @@ describe('checkboxField', () => {
   })
 
   it('should render correctly with errors', async () => {
-    const { asFragment } = renderWithForm(
-      <>
-        <CheckboxField name="test" required errorLabel="errorLabel">
-          Checkbox field error
-        </CheckboxField>
-        <div>Focus</div>
-      </>,
-      { mode: 'onChange' },
-      { errors: mockFormErrors },
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <>
+          <CheckboxField name="test" required errorLabel="errorLabel">
+            Checkbox field error
+          </CheckboxField>
+          <div>Focus</div>
+        </>
+      ),
+      useFormProps: { mode: 'onChange' },
+      formProps: { errors: mockFormErrors },
+    })
 
     await userEvent.click(screen.getByRole('checkbox', { hidden: true }))
     // to trigger error

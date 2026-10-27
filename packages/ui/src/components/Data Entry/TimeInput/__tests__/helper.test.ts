@@ -23,9 +23,9 @@ describe('helper functions dateInput', () => {
   })
 
   it('canConcat should work', () => {
-    expect(canConcat(3, 'h', 3, 12)).toBe(false)
-    expect(canConcat(1, 'm', 2, 24)).toBe(true)
-    expect(canConcat(1, 'm', 2, 12)).toBe(true)
+    expect(canConcat({ key: 3, oldValue: 3, timeFormat: 12, type: 'h' })).toBe(false)
+    expect(canConcat({ key: 2, oldValue: 1, timeFormat: 24, type: 'm' })).toBe(true)
+    expect(canConcat({ key: 2, oldValue: 1, timeFormat: 12, type: 'm' })).toBe(true)
   })
 
   it('isCompleteHour should work', () => {

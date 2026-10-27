@@ -6,32 +6,38 @@ import { renderWithForm } from '../../../__tests__/helpers'
 
 describe('selectableCardField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(
-      <SelectableCardField label="test" name="test" value="test">
-        Radio field
-      </SelectableCardField>,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <SelectableCardField label="test" name="test" value="test">
+          Radio field
+        </SelectableCardField>
+      ),
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly disabled', () => {
-    const { asFragment } = renderWithForm(
-      <SelectableCardField disabled label="test" name="test" value="disabled">
-        Radio field disabled
-      </SelectableCardField>,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <SelectableCardField disabled label="test" name="test" value="disabled">
+          Radio field disabled
+        </SelectableCardField>
+      ),
+    })
     const input = screen.getByRole('radio', { hidden: true })
     expect(input).toBeDisabled()
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly checked', () => {
-    const { asFragment } = renderWithForm(
-      <SelectableCardField label="test" name="test" value="checked">
-        Radio field checked
-      </SelectableCardField>,
-      { defaultValues: { test: 'checked' } },
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <SelectableCardField label="test" name="test" value="checked">
+          Radio field checked
+        </SelectableCardField>
+      ),
+      useFormProps: { defaultValues: { test: 'checked' } },
+    })
     const input = screen.getByRole('radio', { hidden: true })
     expect(input).toBeChecked()
     expect(asFragment()).toMatchSnapshot()
@@ -42,18 +48,20 @@ describe('selectableCardField', () => {
     const onChange = vi.fn(() => {})
     const onBlur = vi.fn(() => {})
 
-    const { asFragment } = renderWithForm(
-      <SelectableCardField
-        label="test"
-        name="test"
-        onBlur={onBlur}
-        onChange={onChange}
-        onFocus={onFocus}
-        value="events"
-      >
-        Radio field events
-      </SelectableCardField>,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <SelectableCardField
+          label="test"
+          name="test"
+          onBlur={onBlur}
+          onChange={onChange}
+          onFocus={onFocus}
+          value="events"
+        >
+          Radio field events
+        </SelectableCardField>
+      ),
+    })
     const input = screen.getByRole('radio', { hidden: true })
     act(() => input.focus())
     expect(onFocus).toHaveBeenCalledOnce()
@@ -66,14 +74,16 @@ describe('selectableCardField', () => {
   })
 
   it('should render correctly with errors', async () => {
-    const { asFragment } = renderWithForm(
-      <>
-        <SelectableCardField label="test" name="test" required value="checked">
-          Radio field error
-        </SelectableCardField>
-        <button type="submit">Submit</button>
-      </>,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <>
+          <SelectableCardField label="test" name="test" required value="checked">
+            Radio field error
+          </SelectableCardField>
+          <button type="submit">Submit</button>
+        </>
+      ),
+    })
     await userEvent.click(screen.getAllByRole('button')[1])
     expect(asFragment()).toMatchSnapshot()
   })

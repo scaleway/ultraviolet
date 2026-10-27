@@ -145,7 +145,7 @@ export const SelectInputProvider = <T extends boolean>({
   const reducer = (state: ReducerState, action: ReducerAction): ReducerState => {
     switch (action.type) {
       case 'selectAll': {
-        return selectAllAction(state, allGroups, allValues, numberOfOptions, numberOfDisabledOptions)
+        return selectAllAction({ allGroups, allValues, numberOfDisabledOptions, numberOfOptions, state })
       }
 
       case 'selectGroup': {
@@ -153,7 +153,13 @@ export const SelectInputProvider = <T extends boolean>({
       }
 
       case 'selectOption': {
-        return selectOptionAction(state, options, multiselect, action.clickedOption, action.group)
+        return selectOptionAction({
+          clickedOption: action.clickedOption,
+          group: action.group,
+          multiselect,
+          options,
+          state,
+        })
       }
 
       case 'clearAll': {

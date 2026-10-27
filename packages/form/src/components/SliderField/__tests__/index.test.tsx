@@ -16,22 +16,24 @@ const options = [
 
 describe('sliderField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(<SliderField name="test" value={0} />)
+    const { asFragment } = renderWithForm({ children: <SliderField name="test" value={0} /> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly with possible values', () => {
-    const { asFragment } = renderWithForm(<SliderField name="test" options={options} />)
+    const { asFragment } = renderWithForm({ children: <SliderField name="test" options={options} /> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly with possible values and double', () => {
-    const { asFragment } = renderWithForm(<SliderField double name="test" options={options} />)
+    const { asFragment } = renderWithForm({ children: <SliderField double name="test" options={options} /> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly disabled', () => {
-    const { asFragment } = renderWithForm(<SliderField aria-label="Slider Input" disabled name="test" value={10} />)
+    const { asFragment } = renderWithForm({
+      children: <SliderField aria-label="Slider Input" disabled name="test" value={10} />,
+    })
     const input = screen.getAllByLabelText('Slider Input')[1]
     expect(input).toBeDisabled()
 
@@ -42,9 +44,11 @@ describe('sliderField', () => {
     const onFocus = vi.fn(() => {})
     const onBlur = vi.fn(() => {})
 
-    const { asFragment } = renderWithForm(
-      <SliderField input label="Test" max={10} min={0} name="test" onBlur={onBlur} onFocus={onFocus} required />,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <SliderField input label="Test" max={10} min={0} name="test" onBlur={onBlur} onFocus={onFocus} required />
+      ),
+    })
     const input = screen.getByRole('slider', { hidden: true })
     act(() => input.focus())
     expect(onFocus).toHaveBeenCalledOnce()
@@ -56,24 +60,26 @@ describe('sliderField', () => {
   it('should work fine with form setValue', async () => {
     const onSubmit = vi.fn()
     const onBlur = vi.fn(() => {})
-    const { resultForm } = renderWithForm(
-      <>
-        <SliderField input label="Test" max={10} min={0} name="test" onBlur={onBlur} required />
-        <Submit>Submit</Submit>
-      </>,
-      {
+    const { resultForm } = renderWithForm({
+      children: (
+        <>
+          <SliderField input label="Test" max={10} min={0} name="test" onBlur={onBlur} required />
+          <Submit>Submit</Submit>
+        </>
+      ),
+      useFormProps: {
         defaultValues: {
           test: 10,
         },
         mode: 'onChange',
       },
-      {
+      formProps: {
         errors: mockFormErrors,
         onSubmit: value => {
           onSubmit(value)
         },
       },
-    )
+    })
 
     const slider = screen.getByRole<HTMLInputElement>('slider')
     const submit = screen.getByText('Submit')
@@ -91,8 +97,11 @@ describe('sliderField', () => {
   })
 
   it('should work correctly with possibleValues', () => {
-    const { resultForm } = renderWithForm(<SliderField label="Test" name="test" options={options} />, {
-      mode: 'onChange',
+    const { resultForm } = renderWithForm({
+      children: <SliderField label="Test" name="test" options={options} />,
+      useFormProps: {
+        mode: 'onChange',
+      },
     })
 
     const input = screen.getByRole('slider', { hidden: true })
@@ -107,8 +116,11 @@ describe('sliderField', () => {
   })
 
   it('should work correctly with possibleValues and double', () => {
-    const { resultForm } = renderWithForm(<SliderField double label="Test" name="test" options={options} />, {
-      mode: 'onChange',
+    const { resultForm } = renderWithForm({
+      children: <SliderField double label="Test" name="test" options={options} />,
+      useFormProps: {
+        mode: 'onChange',
+      },
     })
 
     const input1 = screen.getAllByRole('slider', { hidden: true })[0]

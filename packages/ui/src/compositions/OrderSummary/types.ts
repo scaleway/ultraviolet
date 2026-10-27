@@ -145,12 +145,12 @@ export type OrderSummaryProps = {
    * Get the total price +
    * Get the unitary categories- and total-prices (for 1 hour)
    */
-  onChange?: (
-    price: PriceType,
-    totalPrice: PriceTypeSingle,
-    unitaryCategoriesPrice: PriceType,
-    unitaryTotalPrice: PriceTypeSingle,
-  ) => void
+  onChange?: (params: {
+    price: PriceType
+    totalPrice: PriceTypeSingle
+    unitaryCategoriesPrice: PriceType
+    unitaryTotalPrice: PriceTypeSingle
+  }) => void
   hideDetails?: boolean
   calculatorIcon?: boolean
   className?: string

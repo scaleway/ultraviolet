@@ -3,12 +3,17 @@ import { useState } from 'react'
 import type { ComponentProps } from 'react'
 import { OrderSummary } from '..'
 
-const mockItems = (
-  requestsAmount: number,
-  setRequestsAmount: (value: number | null) => void,
-  requestsAmount2: number,
-  setRequestsAmount2: (value: number | null) => void,
-) => {
+const mockItems = ({
+  requestsAmount,
+  setRequestsAmount,
+  requestsAmount2,
+  setRequestsAmount2,
+}: {
+  requestsAmount: number
+  setRequestsAmount: (value: number | null) => void
+  requestsAmount2: number
+  setRequestsAmount2: (value: number | null) => void
+}) => {
   const categoryNumberOfRequests = {
     category: 'Numers of requests',
     numberInput: true,
@@ -67,7 +72,12 @@ export const NumberInput: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
   return (
     <OrderSummary
       currency="EUR"
-      items={mockItems(requestsAmount, onChange, requestsAmount2, onChange2)}
+      items={mockItems({
+        requestsAmount,
+        requestsAmount2,
+        setRequestsAmount: onChange,
+        setRequestsAmount2: onChange2,
+      })}
       localeFormat="en-US"
     />
   )

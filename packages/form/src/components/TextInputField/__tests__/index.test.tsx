@@ -7,21 +7,23 @@ import { mockFormErrors, renderWithForm } from '../../../__tests__/helpers'
 
 describe('textInputField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(<TextInputField label="Test" name="test" />)
+    const { asFragment } = renderWithForm({ children: <TextInputField label="Test" name="test" /> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly generated', async () => {
     const onSubmit = vi.fn()
 
-    const { asFragment } = renderWithForm(
-      <>
-        <TextInputField clearable label="Test" name="test" required />
-        <Submit>Submit</Submit>
-      </>,
-      { defaultValues: { test: null } },
-      { errors: mockFormErrors, onSubmit },
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <>
+          <TextInputField clearable label="Test" name="test" required />
+          <Submit>Submit</Submit>
+        </>
+      ),
+      useFormProps: { defaultValues: { test: null } },
+      formProps: { errors: mockFormErrors, onSubmit },
+    })
 
     await userEvent.click(screen.getByText('Submit'))
     await waitFor(() => {

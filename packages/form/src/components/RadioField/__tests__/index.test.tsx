@@ -6,27 +6,32 @@ import { renderWithForm } from '../../../__tests__/helpers'
 
 describe('radioField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(<RadioField label="Radio field" name="test" value="test" />)
+    const { asFragment } = renderWithForm({ children: <RadioField label="Radio field" name="test" value="test" /> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly with aria-label', () => {
-    const { asFragment } = renderWithForm(<RadioField aria-label="Radio field" name="test" value="test" />)
+    const { asFragment } = renderWithForm({
+      children: <RadioField aria-label="Radio field" name="test" value="test" />,
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly disabled', () => {
-    const { asFragment } = renderWithForm(
-      <RadioField disabled label="Radio field disabled" name="test" value="disabled" />,
-    )
+    const { asFragment } = renderWithForm({
+      children: <RadioField disabled label="Radio field disabled" name="test" value="disabled" />,
+    })
     const input = screen.getByRole('radio', { hidden: true })
     expect(input).toBeDisabled()
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly checked', () => {
-    const { asFragment } = renderWithForm(<RadioField label="Radio field checked" name="test" value="checked" />, {
-      defaultValues: { test: 'checked' },
+    const { asFragment } = renderWithForm({
+      children: <RadioField label="Radio field checked" name="test" value="checked" />,
+      useFormProps: {
+        defaultValues: { test: 'checked' },
+      },
     })
     const input = screen.getByRole('radio', { hidden: true })
     expect(input).toBeChecked()
@@ -38,17 +43,19 @@ describe('radioField', () => {
     const onChange = vi.fn(() => {})
     const onBlur = vi.fn(() => {})
 
-    const { asFragment } = renderWithForm(
-      <RadioField
-        label="Radio field events"
-        name="test"
-        onBlur={onBlur}
-        onChange={onChange}
-        onFocus={onFocus}
-        value="events"
-        errorLabel="errorLabel"
-      />,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <RadioField
+          label="Radio field events"
+          name="test"
+          onBlur={onBlur}
+          onChange={onChange}
+          onFocus={onFocus}
+          value="events"
+          errorLabel="errorLabel"
+        />
+      ),
+    })
     const input = screen.getByRole('radio', { hidden: true })
     act(() => input.focus())
     expect(onFocus).toHaveBeenCalledOnce()

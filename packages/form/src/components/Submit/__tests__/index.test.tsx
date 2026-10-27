@@ -8,32 +8,34 @@ const alpha = /^[a-zA-Z]*$/u
 
 describe('submit', () => {
   it('renders correctly ', () => {
-    const { asFragment } = renderWithForm(<Submit>Test</Submit>)
+    const { asFragment } = renderWithForm({ children: <Submit>Test</Submit> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('form is invalid', () => {
-    const { asFragment } = renderWithForm(
-      <>
-        <TextInputField label="test" name="toto" regex={[alpha]} />
-        <Submit>Test</Submit>
-      </>,
-      { defaultValues: { toto: '4' } },
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <>
+          <TextInputField label="test" name="toto" regex={[alpha]} />
+          <Submit>Test</Submit>
+        </>
+      ),
+      useFormProps: { defaultValues: { toto: '4' } },
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('form is submitting', async () => {
-    const { asFragment } = renderWithForm(
-      <Submit>Test</Submit>,
-      {},
-      {
+    const { asFragment } = renderWithForm({
+      children: <Submit>Test</Submit>,
+      useFormProps: {},
+      formProps: {
         onSubmit: async () =>
           new Promise(resolve => {
             setTimeout(() => resolve(undefined), 500)
           }),
       },
-    )
+    })
     await userEvent.click(screen.getByText('Test').closest('button')!)
     expect(screen.getByText('Test').closest('button')!).toBeDisabled()
 

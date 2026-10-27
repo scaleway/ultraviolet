@@ -31,19 +31,33 @@ const expandSinglePageGaps = (pageNumbers: number[]): number[] =>
     index > 0 && pageNumber - pageNumbers[index - 1] === 2 ? [pageNumber - 1, pageNumber] : [pageNumber],
   )
 
-export const getPageItems = (
-  page: number,
-  pageCount: number,
-  range: number,
-  numberOfButtonsInBetween: number,
-  hideFirstPage?: boolean,
-  hideLastPage?: boolean,
-): PageItem[] => {
+export const getPageItems = ({
+  page,
+  pageCount,
+  range,
+  numberOfButtonsInBetween,
+  hideFirstPage,
+  hideLastPage,
+}: {
+  page: number
+  pageCount: number
+  range: number
+  numberOfButtonsInBetween: number
+  hideFirstPage?: boolean
+  hideLastPage?: boolean
+}): PageItem[] => {
   if (pageCount <= 1) {
     return [{ type: 'page', page: 1 }]
   }
 
-  const pageNumbers = getPageNumbers(page, pageCount, range, numberOfButtonsInBetween, hideFirstPage, hideLastPage)
+  const pageNumbers = getPageNumbers({
+    currentPage: page,
+    pageCount,
+    range,
+    numberOfButtonsInBetween,
+    hideFirstPage,
+    hideLastPage,
+  })
 
   return toPageItems(expandSinglePageGaps(pageNumbers), pageCount)
 }

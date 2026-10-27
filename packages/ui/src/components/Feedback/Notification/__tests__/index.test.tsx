@@ -20,7 +20,7 @@ describe('toaster', () => {
   it('renders the title, description and close button when closable', async () => {
     renderWithTheme(<NotificationContainer />)
     act(() => {
-      notification('Description', 'Title', 'icon', true)
+      notification({ children: 'Description', title: 'Title', icon: 'icon', isClosable: true })
     })
 
     await expect(screen.findByRole('heading', { name: 'Title' })).resolves.toBeInTheDocument()
@@ -31,7 +31,7 @@ describe('toaster', () => {
   it('dismisses the notification when the close button is clicked', async () => {
     renderWithTheme(<NotificationContainer />)
     act(() => {
-      notification('Description', 'Title', 'icon', true)
+      notification({ children: 'Description', title: 'Title', icon: 'icon', isClosable: true })
     })
 
     const toastElement = await screen.findByRole('alert')
@@ -46,16 +46,16 @@ describe('toaster', () => {
   it('renders a custom close button and dismisses on click', async () => {
     renderWithTheme(<NotificationContainer />)
     act(() => {
-      notification(
-        ({ closeToast }) => (
+      notification({
+        children: ({ closeToast }) => (
           <button onClick={closeToast} type="button">
             Decline
           </button>
         ),
-        'Invitation',
-        'Avatar',
-        false,
-      )
+        title: 'Invitation',
+        icon: 'Avatar',
+        isClosable: false,
+      })
     })
 
     const toastElement = await screen.findByRole('alert')

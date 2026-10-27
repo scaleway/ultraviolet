@@ -8,12 +8,17 @@ import { Text } from '../../../Typography/Text'
 
 const CHANNELS = ['email', 'app', 'sms']
 
-const selectableCell = (
-  channel: string,
-  subject: string,
-  items: string[],
-  setter: Dispatch<SetStateAction<string[]>>,
-) => (
+const selectableCell = ({
+  channel,
+  subject,
+  items,
+  setter,
+}: {
+  channel: string
+  subject: string
+  items: string[]
+  setter: Dispatch<SetStateAction<string[]>>
+}) => (
   <Checkbox
     aria-label={`select ${subject} notifications for this row`}
     checked={items.includes(channel)}
@@ -97,13 +102,28 @@ export const SelectableColumn: StoryFn = () => {
             <Table.Row id={channel} key={channel}>
               <Table.Cell>{channel}</Table.Cell>
               <Table.Cell>
-                {selectableCell(channel, 'incident', incidentNotifications, setIndicentNotifications)}
+                {selectableCell({
+                  channel,
+                  subject: 'incident',
+                  items: incidentNotifications,
+                  setter: setIndicentNotifications,
+                })}
               </Table.Cell>
               <Table.Cell>
-                {selectableCell(channel, 'technical', technicalNotifications, setTechnicalNotifications)}
+                {selectableCell({
+                  channel,
+                  subject: 'technical',
+                  items: technicalNotifications,
+                  setter: setTechnicalNotifications,
+                })}
               </Table.Cell>
               <Table.Cell>
-                {selectableCell(channel, 'billing', billingNotifications, setBillingNotifications)}
+                {selectableCell({
+                  channel,
+                  subject: 'billing',
+                  items: billingNotifications,
+                  setter: setBillingNotifications,
+                })}
               </Table.Cell>
             </Table.Row>
           ))}

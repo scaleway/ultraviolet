@@ -7,22 +7,24 @@ import { Submit } from '../../Submit'
 
 describe('keyValueField', () => {
   it('should render with default props', async () => {
-    const { asFragment } = renderWithForm(
-      <KeyValueField
-        addButton={{
-          maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
-          name: 'add',
-          tooltip: 'This is a tooltip',
-        }}
-        inputKey={{
-          label: 'key',
-        }}
-        inputValue={{
-          label: 'value',
-        }}
-        name="test"
-      />,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <KeyValueField
+          addButton={{
+            maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
+            name: 'add',
+            tooltip: 'This is a tooltip',
+          }}
+          inputKey={{
+            label: 'key',
+          }}
+          inputValue={{
+            label: 'value',
+          }}
+          name="test"
+        />
+      ),
+    })
     const addButton = screen.getByRole('button', { name: /add/i })
     await userEvent.click(addButton)
 
@@ -32,67 +34,73 @@ describe('keyValueField', () => {
   })
 
   it('should render with default props & max size', () => {
-    const { asFragment } = renderWithForm(
-      <KeyValueField
-        addButton={{
-          maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
-          name: 'add',
-          tooltip: 'This is a tooltip',
-        }}
-        inputKey={{
-          label: 'key',
-        }}
-        inputValue={{
-          label: 'value',
-        }}
-        maxSize={42}
-        name="test"
-      />,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <KeyValueField
+          addButton={{
+            maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
+            name: 'add',
+            tooltip: 'This is a tooltip',
+          }}
+          inputKey={{
+            label: 'key',
+          }}
+          inputValue={{
+            label: 'value',
+          }}
+          maxSize={42}
+          name="test"
+        />
+      ),
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render with default props in readonly mode', () => {
-    const { asFragment } = renderWithForm(
-      <KeyValueField
-        addButton={{
-          maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
-          name: 'add',
-          tooltip: 'This is a tooltip',
-        }}
-        inputKey={{
-          label: 'key',
-        }}
-        inputValue={{
-          label: 'value',
-        }}
-        name="test"
-        readOnly
-      />,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <KeyValueField
+          addButton={{
+            maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
+            name: 'add',
+            tooltip: 'This is a tooltip',
+          }}
+          inputKey={{
+            label: 'key',
+          }}
+          inputValue={{
+            label: 'value',
+          }}
+          name="test"
+          readOnly
+        />
+      ),
+    })
     const addButton = screen.getByRole('button', { name: /add/i })
     expect(addButton).toBeDisabled()
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should add error with unvalidated regex', async () => {
-    const { asFragment } = renderWithForm(
-      <KeyValueField
-        addButton={{
-          maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
-          name: 'add',
-          tooltip: 'This is a tooltip',
-        }}
-        inputKey={{
-          label: 'key',
-        }}
-        inputValue={{
-          label: 'value',
-          regex: [/^[a-zA-Z]*$/u],
-        }}
-        name="test"
-      />,
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <KeyValueField
+          addButton={{
+            maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
+            name: 'add',
+            tooltip: 'This is a tooltip',
+          }}
+          inputKey={{
+            label: 'key',
+          }}
+          inputValue={{
+            label: 'value',
+            regex: [/^[a-zA-Z]*$/u],
+          }}
+          name="test"
+        />
+      ),
+    })
     const addButton = screen.getByRole('button', { name: /add/i })
     await userEvent.click(addButton)
 
@@ -113,36 +121,38 @@ describe('keyValueField', () => {
 
   it('should disable submit button when required and empty', () => {
     const onSubmit = vi.fn()
-    const { asFragment } = renderWithForm(
-      <>
-        <KeyValueField
-          addButton={{
-            name: 'add',
-          }}
-          inputKey={{
-            label: 'key',
-          }}
-          inputValue={{
-            label: 'value',
-          }}
-          required
-          name="test"
-        />
-        ,<Submit>Submit</Submit>
-      </>,
-      {
+    const { asFragment } = renderWithForm({
+      children: (
+        <>
+          <KeyValueField
+            addButton={{
+              name: 'add',
+            }}
+            inputKey={{
+              label: 'key',
+            }}
+            inputValue={{
+              label: 'value',
+            }}
+            required
+            name="test"
+          />
+          ,<Submit>Submit</Submit>
+        </>
+      ),
+      useFormProps: {
         defaultValues: {
           test: 10,
         },
         mode: 'onChange',
       },
-      {
+      formProps: {
         errors: mockFormErrors,
         onSubmit: value => {
           onSubmit(value)
         },
       },
-    )
+    })
 
     const submitButton = screen.getByRole('button', { name: 'Submit' })
     expect(submitButton).toBeDisabled()
@@ -150,30 +160,32 @@ describe('keyValueField', () => {
   })
 
   it('should enable submit button when typing on key with regex and nothing required', async () => {
-    const { asFragment } = renderWithForm(
-      <>
-        <KeyValueField
-          addButton={{
-            name: 'add',
-          }}
-          inputKey={{
-            label: 'key',
-            regex: [/^[a-zA-Z]*$/u],
-          }}
-          inputValue={{
-            label: 'value',
-          }}
-          name="test"
-        />
-        ,<Submit>Submit</Submit>
-      </>,
-      {
+    const { asFragment } = renderWithForm({
+      children: (
+        <>
+          <KeyValueField
+            addButton={{
+              name: 'add',
+            }}
+            inputKey={{
+              label: 'key',
+              regex: [/^[a-zA-Z]*$/u],
+            }}
+            inputValue={{
+              label: 'value',
+            }}
+            name="test"
+          />
+          ,<Submit>Submit</Submit>
+        </>
+      ),
+      useFormProps: {
         mode: 'onChange',
       },
-      {
+      formProps: {
         errors: mockFormErrors,
       },
-    )
+    })
 
     const addButton = screen.getByRole('button', { name: /add/i })
     await userEvent.click(addButton)

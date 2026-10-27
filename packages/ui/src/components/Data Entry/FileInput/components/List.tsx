@@ -13,7 +13,17 @@ import { formatFileSize, getMimeTypeType } from '../helpers'
 import type { ListProps, MimeType } from '../types'
 import { fileInputStyle } from '../styles.css'
 
-const getIllustration = (type: MimeType, error: boolean, loading: boolean, file?: string) => {
+const getIllustration = ({
+  type,
+  error,
+  loading,
+  file,
+}: {
+  type: MimeType
+  error: boolean
+  loading: boolean
+  file?: string
+}) => {
   const state = error ? 'error' : 'default'
   const sentiment = error ? 'danger' : 'primary'
 
@@ -67,7 +77,12 @@ export const ListFiles = ({ limit, textLimit, prominence = 'default', onDelete }
       {files.map((file, index) => {
         if (!computedLimit || index < computedLimit) {
           const fileType = getMimeTypeType(file.type)
-          const illustration = getIllustration(fileType, !!file.error || error, !!file.loading, file.file)
+          const illustration = getIllustration({
+            error: !!file.error || error,
+            file: file.file,
+            loading: !!file.loading,
+            type: fileType,
+          })
           const sentiment = file.error ? 'danger' : 'neutral'
 
           return (

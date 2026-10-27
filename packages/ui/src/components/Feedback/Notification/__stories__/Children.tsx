@@ -8,8 +8,8 @@ export const Children: StoryFn<typeof NotificationContainer> = args => (
     <Stack direction="row" gap={2}>
       <Button
         onClick={() =>
-          notification(
-            ({ closeToast }) => (
+          notification({
+            children: ({ closeToast }) => (
               <Stack gap={1}>
                 <Text as="div" variant="bodySmall">
                   You were invited to join the organization [Org_A]
@@ -24,11 +24,10 @@ export const Children: StoryFn<typeof NotificationContainer> = args => (
                 </Stack>
               </Stack>
             ),
-
-            'Invitation',
-            <Avatar shape="circle" text="AB" variant="text" />,
-            false,
-          )
+            title: 'Invitation',
+            icon: <Avatar shape="circle" text="AB" variant="text" />,
+            isClosable: false,
+          })
         }
         sentiment="neutral"
       >
@@ -36,14 +35,16 @@ export const Children: StoryFn<typeof NotificationContainer> = args => (
       </Button>
       <Button
         onClick={() =>
-          notification(
-            <Text as="p" variant="bodySmall">
-              You were invited to join the organization [Org_b]
-            </Text>,
-            'Invitation 2',
-            undefined,
-            true,
-          )
+          notification({
+            children: (
+              <Text as="p" variant="bodySmall">
+                You were invited to join the organization [Org_b]
+              </Text>
+            ),
+            title: 'Invitation 2',
+            icon: undefined,
+            isClosable: true,
+          })
         }
         sentiment="neutral"
       >

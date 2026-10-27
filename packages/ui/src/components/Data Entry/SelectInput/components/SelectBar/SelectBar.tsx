@@ -135,14 +135,14 @@ const SelectBar = ({
       const hasHiddenTags = tagsWidth.measuredHiddenTags > 0
       const lastVisibleElementMaxSize = tagsWidth.lastVisibleElementWidth - overflowPx
 
-      const overflowVars = computeOverflowVars(
-        tagsWidth,
+      const overflowVars = computeOverflowVars({
+        additionnalElementsWidth,
+        hasHiddenTags,
         hasOverflow,
         lastVisibleElementMaxSize,
-        hasHiddenTags,
         potentiallyNonOverflowedValues,
-        additionnalElementsWidth,
-      )
+        tagsWidth,
+      })
       setOverflowAmount(overflowVars.overflowAmount)
       setNonOverFlowedValues(overflowVars.nonOverflowedValues)
       setLastElementMaxWidth(overflowVars.lastElementMaxWidth)

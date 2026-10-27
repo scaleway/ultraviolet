@@ -46,7 +46,7 @@ export const Monthly = () => {
 
         const isAfterStartDate = selectsRange && range?.start && constructedDate > range.start
 
-        const isInHoveredRange = getIsInHoveredRange(selectsRange, constructedDate, hoveredDate, range)
+        const isInHoveredRange = getIsInHoveredRange({ constructedDate, hoveredDate, range, selectsRange })
 
         const isSelected =
           (value && isSameMonth(constructedDate, value)) ||
@@ -60,21 +60,45 @@ export const Monthly = () => {
             if (rangeState === 'end' && isAfterStartDate) {
               setRange?.({ end: newDate, start: range.start })
               onChange?.([range.start, newDate], event)
-              setInputValue(formatValue(null, { end: newDate, start: range.start }, true, true, format))
+              setInputValue(
+                formatValue({
+                  computedRange: { end: newDate, start: range.start },
+                  computedValue: null,
+                  format,
+                  selectsRange: true,
+                  showMonthYearPicker: true,
+                }),
+              )
               setVisible(false)
               // If we click on another date, it will reset the range
               setRangeState('start')
             } else if (rangeState === 'end' && !isAfterStartDate && range) {
               setRange?.({ end: range.start, start: newDate })
               onChange?.([newDate, range.start], event)
-              setInputValue(formatValue(null, { end: range.start, start: newDate }, true, true, format))
+              setInputValue(
+                formatValue({
+                  computedRange: { end: range.start, start: newDate },
+                  computedValue: null,
+                  format,
+                  selectsRange: true,
+                  showMonthYearPicker: true,
+                }),
+              )
               setVisible(false)
               // If we click on another date, it will reset the range
               setRangeState('start')
             } else {
               setRange?.({ end: null, start: newDate })
               onChange?.([newDate, null], event)
-              setInputValue(formatValue(null, { end: null, start: newDate }, true, true, format))
+              setInputValue(
+                formatValue({
+                  computedRange: { end: null, start: newDate },
+                  computedValue: null,
+                  format,
+                  selectsRange: true,
+                  showMonthYearPicker: true,
+                }),
+              )
               setRangeState('end')
             }
           }
@@ -106,7 +130,15 @@ export const Monthly = () => {
                   setMonthToShow(index + 1)
                   setValue(constructedDate)
                   onChange?.(constructedDate, event)
-                  setInputValue(formatValue(constructedDate, null, true, false, format))
+                  setInputValue(
+                    formatValue({
+                      computedRange: null,
+                      computedValue: constructedDate,
+                      format,
+                      selectsRange: false,
+                      showMonthYearPicker: true,
+                    }),
+                  )
                   setVisible(false)
                 }
               }
