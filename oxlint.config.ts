@@ -43,7 +43,6 @@ export default defineConfig({
         'import/no-named-export': 'off',
         'import/no-namespace': 'off',
         'import/no-nodejs-modules': 'off',
-        'import/no-unassigned-import': 'off',
 
         'react/jsx-pascal-case': 'off',
         'react/no-multi-comp': 'off',
@@ -84,7 +83,6 @@ export default defineConfig({
         'import/no-anonymous-default-export': 'off',
         'import/no-named-export': 'off',
         'import/no-namespace': 'off',
-        'import/no-unassigned-import': 'off',
 
         'jsx_a11y/label-has-associated-control': 'off',
 
@@ -155,6 +153,8 @@ export default defineConfig({
       },
     ],
     'jsx-a11y/no-autofocus': 'off',
+
+    'import/no-unassigned-import': ['error', { allow: ['**/*.css', '@testing-library/jest-dom'] }],
 
     'react/forbid-component-props': 'off',
     'react/jsx-max-depth': ['error', { max: 10 }],
