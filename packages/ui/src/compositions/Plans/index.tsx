@@ -41,7 +41,6 @@ export const Plans = <T extends string>({
   highlight,
 }: PlansProps<T>) => {
   const hasCardBehavior = !!(fieldName && onChange)
-  const [focusedPlan, setFocusedPlan] = useState<string>()
   const [hoveredPlan, setHoveredPlan] = useState<string>()
 
   return (
@@ -68,10 +67,8 @@ export const Plans = <T extends string>({
             return (
               <td
                 className={plansStyle.cell({
-                  activeColor:
-                    value === plan.value || hoveredPlan === plan.value || (isHighlighted && !plan.outOfStock),
+                  activeColor: value === plan.value || hoveredPlan === plan.value,
                   disabled: computedDisabled,
-                  focus: focusedPlan === plan.value,
                   hideLabels,
                   selectable,
                 })}
@@ -108,7 +105,6 @@ export const Plans = <T extends string>({
                   fieldName={fieldName}
                   onChange={onChange}
                   plan={plan}
-                  setFocusedPlan={setFocusedPlan}
                   locales={locales}
                 />
               </td>
@@ -129,22 +125,16 @@ export const Plans = <T extends string>({
                     {feature.hint ? <FeatureHint hint={feature.hint} /> : null}
                   </Stack>
                 </td>
-                {plans.map(plan => {
-                  const isHighlighted = plan.value === highlight?.plan
-
-                  return (
-                    <td
-                      className={plansStyle.cell({
-                        activeColor:
-                          value === plan.value || hoveredPlan === plan.value || (isHighlighted && !plan.outOfStock),
-                        disabled: plan.outOfStock || plan.disabled,
-                        focus: focusedPlan === plan.value,
-                        hide: hideLabels,
-                      })}
-                      key={plan.value}
-                    />
-                  )
-                })}
+                {plans.map(plan => (
+                  <td
+                    className={plansStyle.cell({
+                      activeColor: value === plan.value || hoveredPlan === plan.value,
+                      disabled: plan.outOfStock || plan.disabled,
+                      hide: hideLabels,
+                    })}
+                    key={plan.value}
+                  />
+                ))}
               </tr>
             )
           }
@@ -171,7 +161,7 @@ export const Plans = <T extends string>({
               {plans.map(plan => {
                 const computedDisabled = plan.outOfStock || plan.disabled
                 const selectable = hasCardBehavior && !computedDisabled
-                const isHighlighted = plan.value === highlight?.plan
+
                 const hoverPlan = (newValue?: string) => {
                   if (selectable) {
                     setHoveredPlan(newValue)
@@ -181,10 +171,8 @@ export const Plans = <T extends string>({
                 return (
                   <td
                     className={plansStyle.cell({
-                      activeColor:
-                        value === plan.value || hoveredPlan === plan.value || (isHighlighted && !plan.outOfStock),
+                      activeColor: value === plan.value || hoveredPlan === plan.value,
                       disabled: computedDisabled,
-                      focus: focusedPlan === plan.value,
                       hideLabels,
                       selectable,
                     })}
