@@ -10,6 +10,64 @@ import { Label } from '../../Typography/Label'
 import { Text } from '../../Typography/Text'
 import { barStackStyle, wrapperWidth } from './styles.css'
 
+const Bar = ({
+  id,
+  text,
+  onClick,
+  onDoubleClick,
+  onKeyDown,
+  onMouseEnter,
+  onMouseLeave,
+  onMouseDown,
+  onMouseUp,
+  size,
+  legend,
+}: {
+  id: string
+  text?: string
+  onClick?: MouseEventHandler<HTMLElement>
+  onDoubleClick?: MouseEventHandler<HTMLElement>
+  onKeyDown?: KeyboardEventHandler<HTMLElement>
+  onMouseEnter?: MouseEventHandler<HTMLElement>
+  onMouseLeave?: MouseEventHandler<HTMLElement>
+  onMouseDown?: MouseEventHandler<HTMLElement>
+  onMouseUp?: MouseEventHandler<HTMLElement>
+  size?: 'large' | 'medium' | 'small' | 'xsmall'
+  legend?: 'inside' | 'outside'
+}) => {
+  const isInteractive = !!(onClick || onDoubleClick || onMouseDown || onKeyDown || onMouseUp)
+  const Component = isInteractive ? 'button' : 'div'
+
+  return (
+    <Component
+      className={barStackStyle.barStack({ size })}
+      data-testid={`content-${id}`}
+      onClick={onClick}
+      onDoubleClick={onDoubleClick}
+      onKeyDown={onKeyDown}
+      onMouseDown={onMouseDown}
+      onMouseEnter={event => {
+        onMouseEnter?.(event)
+      }}
+      onMouseLeave={event => {
+        onMouseLeave?.(event)
+      }}
+      onMouseUp={onMouseUp}
+      role={isInteractive ? 'button' : undefined}
+    >
+      <Text
+        as="span"
+        className={barStackStyle.text}
+        prominence="stronger"
+        sentiment="neutral"
+        variant={size === 'small' || size === 'xsmall' ? 'captionSmallStrong' : 'captionStrong'}
+        whiteSpace="nowrap"
+      >
+        {legend === 'outside' ? '' : text}
+      </Text>
+    </Component>
+  )
+}
 type BarProps = {
   /**
    * Unique id of the bar
@@ -97,38 +155,19 @@ export const BarStack = ({
               onMouseUp,
               tooltip,
             }) => {
-              const isInteractive = !!(onClick || onDoubleClick || onMouseDown || onKeyDown || onMouseUp)
-              const Component = isInteractive ? 'button' : 'div'
-              // Role is added when the element is interactive, the linter cannot statically infer it
-              const bar = (
-                <Component
-                  className={barStackStyle.barStack({ size })}
-                  data-testid={`content-${id}`}
-                  onClick={onClick}
-                  onDoubleClick={onDoubleClick}
-                  onKeyDown={onKeyDown}
-                  onMouseDown={onMouseDown}
-                  onMouseEnter={event => {
-                    onMouseEnter?.(event)
-                  }}
-                  onMouseLeave={event => {
-                    onMouseLeave?.(event)
-                  }}
-                  onMouseUp={onMouseUp}
-                  role={isInteractive ? 'button' : undefined}
-                >
-                  <Text
-                    as="span"
-                    className={barStackStyle.text}
-                    prominence="stronger"
-                    sentiment="neutral"
-                    variant={size === 'small' || size === 'xsmall' ? 'captionSmallStrong' : 'captionStrong'}
-                    whiteSpace="nowrap"
-                  >
-                    {legend === 'outside' ? '' : text}
-                  </Text>
-                </Component>
-              )
+              const barProps = {
+                id,
+                text,
+                onClick,
+                onDoubleClick,
+                onKeyDown,
+                onMouseEnter,
+                onMouseLeave,
+                onMouseDown,
+                onMouseUp,
+                size,
+                legend,
+              }
 
               return (
                 <div
@@ -141,10 +180,10 @@ export const BarStack = ({
                   <Tooltip text={legend === 'outside' ? text : undefined} visible={hoveredBarId === id}>
                     {tooltip ? (
                       <Tooltip id={`tooltip-${id}`} text={tooltip ?? text}>
-                        {bar}
+                        <Bar {...barProps} />
                       </Tooltip>
                     ) : (
-                      bar
+                      <Bar {...barProps} />
                     )}
                   </Tooltip>
                 </div>
