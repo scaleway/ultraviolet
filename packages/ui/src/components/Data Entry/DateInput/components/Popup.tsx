@@ -1,56 +1,22 @@
 'use client'
 
-import { useLayoutEffect, useRef } from 'react'
 import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
-import { Popup } from '../../../Overlay/Popup'
-import { POPUP_WIDTH } from '../constants'
+import { Popup } from '../../../Overlay/Popup/v2'
 import { dateInputStyle } from '../styles.css'
 
 type PopupProps = {
   children: ReactNode
   visible: boolean
   setVisible: Dispatch<SetStateAction<boolean>>
-  refInput: RefObject<HTMLInputElement | null>
   content: ReactNode
+  panelRef: RefObject<HTMLDivElement | null>
 }
 
-const handleClickOutside = (
-  event: MouseEvent,
-  ref: RefObject<HTMLDivElement | null>,
-  setVisible: Dispatch<SetStateAction<boolean>>,
-  refInput: RefObject<HTMLInputElement | null>,
-) => {
-  if (ref.current && !ref.current.contains(event.target as Node) && !refInput.current?.contains(event.target as Node)) {
-    setVisible(false)
-  }
-}
-
-export const CalendarPopup = ({ children, visible, setVisible, refInput, content }: PopupProps) => {
-  const ref = useRef<HTMLDivElement>(null)
-
-  useLayoutEffect(() => {
-    const handler = (event: MouseEvent) => handleClickOutside(event, ref, setVisible, refInput)
-    document.addEventListener('mousedown', handler)
-
-    return () => document.removeEventListener('mousedown', handler)
-  }, [ref, setVisible, refInput])
-
-  return (
-    <Popup
-      align="start"
-      className={dateInputStyle.popup}
-      debounceDelay={0}
-      disableAnimation
-      hasArrow={false}
-      maxWidth={POPUP_WIDTH}
-      placement="bottom"
-      ref={ref}
-      role="dialog"
-      tabIndex={0}
-      text={content}
-      visible={visible}
-    >
-      {children}
-    </Popup>
-  )
-}
+export const CalendarPopup = ({ children, visible, setVisible, content, panelRef }: PopupProps) => (
+  <Popup.Root visible={visible} onOpenChange={setVisible}>
+    <Popup.Trigger>{children}</Popup.Trigger>
+    <Popup.Panel ref={panelRef} className={dateInputStyle.popup} placement="bottom-start" initialFocus={-1}>
+      {content}
+    </Popup.Panel>
+  </Popup.Root>
+)
