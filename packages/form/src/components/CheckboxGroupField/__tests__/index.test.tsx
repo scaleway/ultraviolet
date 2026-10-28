@@ -6,21 +6,23 @@ import { renderWithForm } from '../../../__tests__/helpers'
 
 describe('checkboxField', () => {
   it('should render correctly checked', async () => {
-    const { asFragment } = renderWithForm(
-      <CheckboxGroupField legend="Label" name="Checkbox" onChange={() => {}}>
-        <CheckboxGroupField.Checkbox name="value-1" value="value-1">
-          Checkbox 1
-        </CheckboxGroupField.Checkbox>
-        <CheckboxGroupField.Checkbox name="value-2" value="value-2">
-          Checkbox 2
-        </CheckboxGroupField.Checkbox>
-      </CheckboxGroupField>,
-      {
+    const { asFragment } = renderWithForm({
+      children: (
+        <CheckboxGroupField legend="Label" name="Checkbox" onChange={() => {}}>
+          <CheckboxGroupField.Checkbox name="value-1" value="value-1">
+            Checkbox 1
+          </CheckboxGroupField.Checkbox>
+          <CheckboxGroupField.Checkbox name="value-2" value="value-2">
+            Checkbox 2
+          </CheckboxGroupField.Checkbox>
+        </CheckboxGroupField>
+      ),
+      useFormProps: {
         defaultValues: {
           Checkbox: [],
         },
       },
-    )
+    })
     const [firstInput, secondInput] = screen.getAllByRole<HTMLInputElement>('checkbox', {
       hidden: true,
     })
@@ -34,21 +36,23 @@ describe('checkboxField', () => {
   it('should trigger events correctly with required prop', async () => {
     const onChange = vi.fn(() => {})
 
-    const { asFragment } = renderWithForm(
-      <CheckboxGroupField legend="CheckboxGroupField events" name="test" onChange={onChange} required>
-        <CheckboxGroupField.Checkbox name="value-1" value="value-1">
-          Checkbox 1
-        </CheckboxGroupField.Checkbox>
-        <CheckboxGroupField.Checkbox name="value-2" value="value-2">
-          Checkbox 2
-        </CheckboxGroupField.Checkbox>
-      </CheckboxGroupField>,
-      {
+    const { asFragment } = renderWithForm({
+      children: (
+        <CheckboxGroupField legend="CheckboxGroupField events" name="test" onChange={onChange} required>
+          <CheckboxGroupField.Checkbox name="value-1" value="value-1">
+            Checkbox 1
+          </CheckboxGroupField.Checkbox>
+          <CheckboxGroupField.Checkbox name="value-2" value="value-2">
+            Checkbox 2
+          </CheckboxGroupField.Checkbox>
+        </CheckboxGroupField>
+      ),
+      useFormProps: {
         defaultValues: {
           test: [],
         },
       },
-    )
+    })
     const input = screen.getAllByRole('checkbox', { hidden: true })[0]
     await userEvent.click(input)
     expect(onChange).toHaveBeenCalledOnce()

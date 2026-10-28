@@ -21,14 +21,16 @@ const closeButton = (props: CloseButtonProps) => (
   </Button>
 )
 
-export const notification = (
-  children: ((props: CloseButtonProps) => ReactNode) | ReactNode,
-  title: string,
-  icon?: ReactNode,
-  isClosable?: boolean,
-  containerId?: string,
-  options?: ToastOptions,
-) =>
+type NotificationProps = {
+  children: ((props: CloseButtonProps) => ReactNode) | ReactNode
+  title: string
+  icon?: ReactNode
+  isClosable?: boolean
+  containerId?: string
+  options?: ToastOptions
+}
+
+export const notification = ({ children, title, icon, isClosable, containerId, options }: NotificationProps) =>
   baseToast('', {
     ...options,
     closeButton: props => (

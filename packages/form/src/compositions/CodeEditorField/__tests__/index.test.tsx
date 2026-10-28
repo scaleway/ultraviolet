@@ -5,7 +5,7 @@ import { renderWithForm } from '../../../__tests__/helpers'
 
 describe('codeEditorField', () => {
   it('should render correctly', async () => {
-    const { asFragment } = renderWithForm(<CodeEditorField extensions="js" name="test" />)
+    const { asFragment } = renderWithForm({ children: <CodeEditorField extensions="js" name="test" /> })
 
     const textbox = screen.getByRole('textbox')
     expect(textbox).toBeVisible()
@@ -15,7 +15,7 @@ describe('codeEditorField', () => {
   })
 
   it('should render correctly disabled', async () => {
-    renderWithForm(<CodeEditorField disabled extensions="js" name="test" />)
+    renderWithForm({ children: <CodeEditorField disabled extensions="js" name="test" /> })
 
     const textbox = screen.getByRole('textbox')
     expect(textbox).toBeVisible()

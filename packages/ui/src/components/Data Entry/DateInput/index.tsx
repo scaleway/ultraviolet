@@ -136,7 +136,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
   const [monthToShow, setMonthToShow] = useState(defaultMonthToShow)
   const [yearToShow, setYearToShow] = useState(defaultYearToShow)
   const [inputValue, setInputValue] = useState(
-    formatValue(computedValue, computedRange, showMonthYearPicker, selectsRange, format),
+    formatValue({ computedRange, computedValue, format, selectsRange, showMonthYearPicker }),
   )
   const [hoveredDate, setHoveredDate] = useState<Date | null>(null)
   const [previousSyncProps, setPreviousSyncProps] = useState({
@@ -225,7 +225,13 @@ export const DateInput = <IsRange extends undefined | boolean>({
     if (!selectsRange) {
       setValue(value ?? null)
       setInputValue(
-        formatValue(value ? new Date(value) : null, null, showMonthYearPicker, selectsRange, format) ?? '', // Text Input which will use this value, won't update value if value is undefined, so we need force empty string is there is no date
+        formatValue({
+          computedRange: null,
+          computedValue: value ? new Date(value) : null,
+          format,
+          selectsRange,
+          showMonthYearPicker,
+        }) ?? '', // Text Input which will use this value, won't update value if value is undefined, so we need force empty string is there is no date
       )
     }
     if (selectsRange) {
@@ -234,7 +240,13 @@ export const DateInput = <IsRange extends undefined | boolean>({
         start: startDate ?? null,
       })
       setInputValue(
-        formatValue(null, { start: startDate ?? null, end: endDate ?? null }, showMonthYearPicker, true, format),
+        formatValue({
+          computedRange: { end: endDate ?? null, start: startDate ?? null },
+          computedValue: null,
+          format,
+          selectsRange: true,
+          showMonthYearPicker,
+        }),
       )
     }
   }
@@ -257,7 +269,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
         setYearToShow(computedNewRange[0].getFullYear())
       }
     } else {
-      const computedDate = createDate(newValue, showMonthYearPicker, minDate, maxDate)
+      const computedDate = createDate({ maxDate, minDate, showMonthYearPicker, value: newValue })
 
       if (computedDate) {
         setMonthToShow(computedDate.getMonth() + 1)
@@ -278,7 +290,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
           undefined,
         )
       } else {
-        const computedDate = createDate(inputValue, showMonthYearPicker, minDate, maxDate)
+        const computedDate = createDate({ maxDate, minDate, showMonthYearPicker, value: inputValue })
         ;(onChange as (date: Date | null, event?: React.SyntheticEvent) => void)?.(computedDate, undefined)
       }
     }

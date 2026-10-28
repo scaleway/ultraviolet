@@ -46,14 +46,21 @@ export const getTagsWidth = (
     },
   )
 
-export const computeOverflowVars = (
-  tagsWidth: ReturnType<typeof getTagsWidth>,
-  hasOverflow: boolean,
-  lastVisibleElementMaxSize: number,
-  hasHiddenTags: boolean,
-  potentiallyNonOverflowedValues: OptionType[],
-  additionnalElementsWidth: number,
-) => {
+export const computeOverflowVars = ({
+  tagsWidth,
+  hasOverflow,
+  lastVisibleElementMaxSize,
+  hasHiddenTags,
+  potentiallyNonOverflowedValues,
+  additionnalElementsWidth,
+}: {
+  tagsWidth: ReturnType<typeof getTagsWidth>
+  hasOverflow: boolean
+  lastVisibleElementMaxSize: number
+  hasHiddenTags: boolean
+  potentiallyNonOverflowedValues: OptionType[]
+  additionnalElementsWidth: number
+}) => {
   // If only one element is selected and it is hidden, we need to show it
   if (tagsWidth.measuredHiddenTags === 1 && tagsWidth.measuredVisibleTags.length === 0) {
     const newOverflowPx =

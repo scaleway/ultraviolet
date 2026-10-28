@@ -11,12 +11,14 @@ import type {
   TimeUnit,
 } from './types'
 
-export const formatNumber = (
-  number: number,
-  locale: LocalesFormatType,
-  currency: CurrencyType,
-  fractionDigits = 10,
-) => {
+type FormatNumberProps = {
+  number: number
+  locale: LocalesFormatType
+  currency: CurrencyType
+  fractionDigits?: number
+}
+
+export const formatNumber = ({ number, locale, currency, fractionDigits = 10 }: FormatNumberProps) => {
   const numberFormat = new Intl.NumberFormat(locale, {
     currency,
     maximumFractionDigits: fractionDigits,
@@ -59,12 +61,19 @@ export const calculatePrice = ({
   return finalValue
 }
 
-export const calculateSubCategoryPrice = (
-  subCategory: SubCategoryType,
-  hideTimeUnit: boolean,
-  timePeriodAmount: number,
-  timePeriodUnit: TimeUnit,
-): { discounted: [number, number]; default: [number, number] } => {
+type CalculateSubCategoryPriceProps = {
+  subCategory: SubCategoryType
+  hideTimeUnit: boolean
+  timePeriodAmount: number
+  timePeriodUnit: TimeUnit
+}
+
+export const calculateSubCategoryPrice = ({
+  subCategory,
+  hideTimeUnit,
+  timePeriodAmount,
+  timePeriodUnit,
+}: CalculateSubCategoryPriceProps): { discounted: [number, number]; default: [number, number] } => {
   const timeAmount = hideTimeUnit ? 1 : timePeriodAmount
   const timeUnit = hideTimeUnit ? 'hours' : timePeriodUnit
 
@@ -146,18 +155,30 @@ export const calculateSubCategoryPrice = (
   }
 }
 
-export const calculateCategoryPrice = (
-  category: ItemsType,
-  hideTimeUnit: boolean,
-  timePeriodAmount: number,
-  timePeriodUnit: TimeUnit,
-): { categoryPrice: [number, number]; discountedPrice: [number, number] } => {
+type CalculateCategoryPriceProps = {
+  category: ItemsType
+  hideTimeUnit: boolean
+  timePeriodAmount: number
+  timePeriodUnit: TimeUnit
+}
+
+export const calculateCategoryPrice = ({
+  category,
+  hideTimeUnit,
+  timePeriodAmount,
+  timePeriodUnit,
+}: CalculateCategoryPriceProps): { categoryPrice: [number, number]; discountedPrice: [number, number] } => {
   const categoryPrice: {
     discounted: [number, number]
     default: [number, number]
   } = category.subCategories?.reduce(
     (acc, subCategory) => {
-      const computedPrices = calculateSubCategoryPrice(subCategory, hideTimeUnit, timePeriodAmount, timePeriodUnit)
+      const computedPrices = calculateSubCategoryPrice({
+        subCategory,
+        hideTimeUnit,
+        timePeriodAmount,
+        timePeriodUnit,
+      })
 
       return {
         discounted: [
@@ -203,30 +224,34 @@ type DisplayPriceProps = {
 export const DisplayPrice = ({ price, beforeOrAfter, divisor = 1 }: DisplayPriceProps) => {
   const { localeFormat, currency, fractionDigits } = useContext(OrderSummaryContext)
   const withDiscount = beforeOrAfter === 'after' ? 'WithDiscount' : ''
+  const format = (number: number) =>
+    formatNumber({ currency, fractionDigits: fractionDigits ?? 2, locale: localeFormat, number })
 
   return price.totalPrice === price.maxPrice
-    ? formatNumber(price[`totalPrice${withDiscount}`] / divisor, localeFormat, currency, fractionDigits ?? 2)
-    : `${formatNumber(
-        price[`totalPrice${withDiscount}`] / divisor,
-        localeFormat,
-        currency,
-        fractionDigits ?? 2,
-      )} - ${formatNumber(price[`maxPrice${withDiscount}`] / divisor, localeFormat, currency, fractionDigits ?? 2)}`
+    ? format(price[`totalPrice${withDiscount}`] / divisor)
+    : `${format(price[`totalPrice${withDiscount}`] / divisor)} - ${format(price[`maxPrice${withDiscount}`] / divisor)}`
 }
 
-export const computeCategoriesPrice = (
-  items: ItemsType[],
-  hideTimeUnit: boolean,
-  timePeriodAmount: number,
-  timePeriodUnit: TimeUnit,
-) =>
+type ComputeCategoriesPriceProps = {
+  items: ItemsType[]
+  hideTimeUnit: boolean
+  timePeriodAmount: number
+  timePeriodUnit: TimeUnit
+}
+
+export const computeCategoriesPrice = ({
+  items,
+  hideTimeUnit,
+  timePeriodAmount,
+  timePeriodUnit,
+}: ComputeCategoriesPriceProps) =>
   items.reduce<PriceType>((acc, category) => {
-    const { categoryPrice, discountedPrice } = calculateCategoryPrice(
+    const { categoryPrice, discountedPrice } = calculateCategoryPrice({
       category,
       hideTimeUnit,
       timePeriodAmount,
       timePeriodUnit,
-    )
+    })
 
     return {
       ...acc,

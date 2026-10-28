@@ -50,12 +50,12 @@ export const OrderSummary = ({
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
 
   const categoriesPrice = useMemo(
-    () => computeCategoriesPrice(items, hideTimeUnit, timePeriodAmount, timePeriodUnit),
+    () => computeCategoriesPrice({ hideTimeUnit, items, timePeriodAmount, timePeriodUnit }),
     [hideTimeUnit, items, timePeriodAmount, timePeriodUnit],
   )
 
   const unitaryCategoriesPrice = useMemo(
-    () => computeCategoriesPrice(items, hideTimeUnit, 1, 'hours'),
+    () => computeCategoriesPrice({ hideTimeUnit, items, timePeriodAmount: 1, timePeriodUnit: 'hours' }),
     [items, hideTimeUnit],
   )
 
@@ -108,7 +108,7 @@ export const OrderSummary = ({
   }, [periodOptions, locales])
 
   useEffect(() => {
-    onChange?.(categoriesPrice, totalPrice, unitaryCategoriesPrice, unitaryTotalPrice)
+    onChange?.({ price: categoriesPrice, totalPrice, unitaryCategoriesPrice, unitaryTotalPrice })
   }, [categoriesPrice, totalPrice, onChange, unitaryTotalPrice, unitaryCategoriesPrice])
 
   return (

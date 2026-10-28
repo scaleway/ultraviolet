@@ -55,7 +55,14 @@ const COMMENT_HEADER = `
 * PLEASE DO NOT EDIT HERE
 */`
 
-const templateIcon = (iconName: string, svg: string, svgSmall?: string, svgDisabled?: string) => {
+type TemplateIconProps = {
+  iconName: string
+  svg: string
+  svgSmall?: string
+  svgDisabled?: string
+}
+
+const templateIcon = ({ iconName, svg, svgSmall, svgDisabled }: TemplateIconProps) => {
   const deprecated = DEPRECATED_ICONS.find(icon => icon.name === iconName)
 
   return `${COMMENT_HEADER}
@@ -256,7 +263,7 @@ const generateContent = (
     return templateFlag(generatedName, svg.default, svg.disabled)
   }
 
-  return templateIcon(generatedName, svg.default, svg.small, svg.disabled)
+  return templateIcon({ iconName: generatedName, svg: svg.default, svgSmall: svg.small, svgDisabled: svg.disabled })
 }
 
 const appendExportToIndex = async (output: string, iconName: string) => {

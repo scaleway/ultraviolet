@@ -6,17 +6,19 @@ import { renderWithForm } from '../../../__tests__/helpers'
 
 describe('groupField', () => {
   it('should render correctly checked', async () => {
-    const { asFragment } = renderWithForm(
-      <ToggleGroupField legend="Label" name="Group" onChange={() => {}}>
-        <ToggleGroupField.Toggle label="value 1" name="value-1" value="value-1" />
-        <ToggleGroupField.Toggle label="value 1" name="value-2" value="value-2" />
-      </ToggleGroupField>,
-      {
+    const { asFragment } = renderWithForm({
+      children: (
+        <ToggleGroupField legend="Label" name="Group" onChange={() => {}}>
+          <ToggleGroupField.Toggle label="value 1" name="value-1" value="value-1" />
+          <ToggleGroupField.Toggle label="value 1" name="value-2" value="value-2" />
+        </ToggleGroupField>
+      ),
+      useFormProps: {
         defaultValues: {
           Group: [],
         },
       },
-    )
+    })
     const [firstInput, secondInput] = screen.getAllByRole('checkbox', {
       hidden: true,
     })
@@ -30,17 +32,19 @@ describe('groupField', () => {
   it('should trigger events correctly with required prop', async () => {
     const onChange = vi.fn(() => {})
 
-    const { asFragment } = renderWithForm(
-      <ToggleGroupField legend="ToggleGroupField events" name="test" onChange={onChange} required>
-        <ToggleGroupField.Toggle label="value 1" name="value-1" value="value-1" />
-        <ToggleGroupField.Toggle label="value 1" name="value-2" value="value-2" />
-      </ToggleGroupField>,
-      {
+    const { asFragment } = renderWithForm({
+      children: (
+        <ToggleGroupField legend="ToggleGroupField events" name="test" onChange={onChange} required>
+          <ToggleGroupField.Toggle label="value 1" name="value-1" value="value-1" />
+          <ToggleGroupField.Toggle label="value 1" name="value-2" value="value-2" />
+        </ToggleGroupField>
+      ),
+      useFormProps: {
         defaultValues: {
           test: [],
         },
       },
-    )
+    })
     const input = screen.getAllByRole('checkbox', { hidden: true })[0]
     await userEvent.click(input)
     expect(onChange).toHaveBeenCalledOnce()

@@ -1,13 +1,15 @@
-const makeCSSVariablesRec = (
-  innerKey: string,
-  innerValue: string | object,
-  prefix: string,
-  formattedKey: string,
-): string => {
+type MakeCssVariablesRecProps = {
+  innerKey: string
+  innerValue: string | object
+  prefix: string
+  formattedKey: string
+}
+
+const makeCSSVariablesRec = ({ innerKey, innerValue, prefix, formattedKey }: MakeCssVariablesRecProps): string => {
   if (typeof innerValue === 'object') {
     return Object.entries(innerValue)
       .map(([key, value]: [string, string | object]) =>
-        makeCSSVariablesRec(key, value, prefix, `${formattedKey}-${innerKey}`),
+        makeCSSVariablesRec({ innerKey: key, innerValue: value, prefix, formattedKey: `${formattedKey}-${innerKey}` }),
       )
       .join('')
   }
@@ -32,7 +34,7 @@ const createCssVariables = (prefix: string, obj: object) =>
       if (typeof value === 'object' && value !== null) {
         return Object.entries(value)
           .map(([innerKey, innerValue]: [string, string | object]) =>
-            makeCSSVariablesRec(innerKey, innerValue, prefix, formattedKey),
+            makeCSSVariablesRec({ innerKey, innerValue, prefix, formattedKey }),
           )
           .join('')
       }

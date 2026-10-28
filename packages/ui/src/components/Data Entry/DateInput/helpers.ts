@@ -49,16 +49,22 @@ const getDateISO = (showMonthYearPicker: boolean, date?: Date) => {
   return ''
 }
 
-export const formatValue = (
-  computedValue: Date | null,
+export const formatValue = ({
+  computedValue,
+  computedRange,
+  showMonthYearPicker,
+  selectsRange,
+  format,
+}: {
+  computedValue: Date | null
   computedRange: {
     start: Date | null
     end: Date | null
-  } | null,
-  showMonthYearPicker: boolean,
-  selectsRange: boolean,
-  format?: (value?: Date) => string | undefined,
-) => {
+  } | null
+  showMonthYearPicker: boolean
+  selectsRange: boolean
+  format?: (value?: Date) => string | undefined
+}) => {
   if (selectsRange && computedRange) {
     return format
       ? `${
@@ -95,7 +101,17 @@ const returnValidDate = (computedDate: Date, minDate?: Date, maxDate?: Date) => 
   return isValidDate ? computedDate : null
 }
 
-export const createDate = (value: string, showMonthYearPicker: boolean, minDate?: Date, maxDate?: Date) => {
+export const createDate = ({
+  value,
+  showMonthYearPicker,
+  minDate,
+  maxDate,
+}: {
+  value: string
+  showMonthYearPicker: boolean
+  minDate?: Date
+  maxDate?: Date
+}) => {
   if (showMonthYearPicker) {
     // Force YYYY/MM (since MM/YYYY not recognised as a date in typescript)
     const res = value.split(SPLIT_REGEX).map(val => Number.parseInt(val, 10))
@@ -115,7 +131,7 @@ export const createDate = (value: string, showMonthYearPicker: boolean, minDate?
 }
 
 export const createDateRange = (value: string, showMonthYearPicker: boolean) => {
-  const [startDateInput, endDateInput] = value.split(' - ').map(val => createDate(val, showMonthYearPicker))
+  const [startDateInput, endDateInput] = value.split(' - ').map(val => createDate({ showMonthYearPicker, value: val }))
 
   const computedNewRange: [Date | null, Date | null] = [
     startDateInput instanceof Date && !Number.isNaN(startDateInput.getTime()) ? startDateInput : null,
@@ -125,15 +141,20 @@ export const createDateRange = (value: string, showMonthYearPicker: boolean) => 
   return computedNewRange
 }
 
-export const getIsInHoveredRange = (
-  selectsRange: boolean,
-  constructedDate: Date,
-  hoveredDate?: Date | null,
+export const getIsInHoveredRange = ({
+  selectsRange,
+  constructedDate,
+  hoveredDate,
+  range,
+}: {
+  selectsRange: boolean
+  constructedDate: Date
+  hoveredDate?: Date | null
   range?: {
     start?: Date | null
     end: Date | null
-  },
-) =>
+  }
+}) =>
   (selectsRange &&
     range?.start &&
     constructedDate > range.start &&

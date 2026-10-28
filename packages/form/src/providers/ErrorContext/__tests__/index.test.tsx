@@ -18,7 +18,7 @@ const HookWrapper = ({ children }: { children: ReactNode }) => {
 
 describe('errorProvider', () => {
   it('renders correctly ', () => {
-    const { asFragment } = renderWithForm(<>Test</>)
+    const { asFragment } = renderWithForm({ children: <>Test</> })
     expect(asFragment()).toMatchSnapshot()
   })
 

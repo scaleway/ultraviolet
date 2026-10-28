@@ -38,7 +38,17 @@ const updateListIllustrationsCategories = (directory: string) => {
 }
 
 // Add .webp and .svg files to index.ts
-const importIllustration = (directory: string, file: string, output: string, illustrations: string[]) => {
+const importIllustration = ({
+  directory,
+  file,
+  output,
+  illustrations,
+}: {
+  directory: string
+  file: string
+  output: string
+  illustrations: string[]
+}) => {
   const parsedFile = path.parse(file)
 
   if (parsedFile.ext === '.webp' || parsedFile.ext === '.svg') {
@@ -67,7 +77,7 @@ const findFiles = (dir: string, output: string, illustrations: string[]) => {
     if (isDirectory) {
       findFiles(fullPath, output, illustrations)
     } else {
-      importIllustration(fullPath, file, output, illustrations)
+      importIllustration({ directory: fullPath, file, output, illustrations })
     }
   }
 }

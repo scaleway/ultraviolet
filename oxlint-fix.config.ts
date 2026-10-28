@@ -9,7 +9,6 @@ import { defineConfig } from 'oxlint'
  */
 export const warnRules = defineConfig({
   rules: {
-    'eslint/max-params': 'warn', // eslint errors (33)
     'eslint/no-await-in-loop': 'warn', // eslint errors (12)
     'eslint/no-shadow': 'warn', // eslint errors (7)
     'eslint/prefer-destructuring': 'warn', // eslint errors (31)

@@ -1,12 +1,18 @@
 import type { DataType, OptionType, ReducerState } from './types'
 
-export const selectAllAction = (
-  state: ReducerState,
-  allGroups: string[],
-  allValues: OptionType[],
-  numberOfOptions: number,
-  numberOfDisabledOptions: number,
-) => {
+export const selectAllAction = ({
+  state,
+  allGroups,
+  allValues,
+  numberOfOptions,
+  numberOfDisabledOptions,
+}: {
+  state: ReducerState
+  allGroups: string[]
+  allValues: OptionType[]
+  numberOfOptions: number
+  numberOfDisabledOptions: number
+}) => {
   const allSelected = state.selectedValues.length === numberOfOptions - numberOfDisabledOptions
 
   if (allSelected) {
@@ -45,13 +51,19 @@ export const selectGroupAction = (state: ReducerState, selectedGroupAction: stri
   return state
 }
 
-export const selectOptionAction = (
-  state: ReducerState,
-  options: DataType,
-  multiselect: boolean,
-  clickedOption: OptionType,
-  group?: string,
-) => {
+export const selectOptionAction = ({
+  state,
+  options,
+  multiselect,
+  clickedOption,
+  group,
+}: {
+  state: ReducerState
+  options: DataType
+  multiselect: boolean
+  clickedOption: OptionType
+  group?: string
+}) => {
   if (multiselect) {
     if (state.selectedValues.includes(clickedOption.value)) {
       return {

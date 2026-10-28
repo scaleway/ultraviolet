@@ -8,14 +8,16 @@ export const Template: StoryFn<typeof NotificationContainer> = args => (
     <NotificationContainer {...args} />
     <Button
       onClick={() =>
-        notification(
-          <Text as="span" variant="bodySmall">
-            You need to review your password security
-          </Text>,
-          'Invitation',
-          <VerifyCardProductIcon size="medium" variant="primary" />,
-          true,
-        )
+        notification({
+          children: (
+            <Text as="span" variant="bodySmall">
+              You need to review your password security
+            </Text>
+          ),
+          title: 'Invitation',
+          icon: <VerifyCardProductIcon size="medium" variant="primary" />,
+          isClosable: true,
+        })
       }
     >
       Click

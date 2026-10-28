@@ -15,21 +15,22 @@ describe('textAreaField', () => {
   })
 
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(<TextAreaField label="Test" name="test" />)
+    const { asFragment } = renderWithForm({ children: <TextAreaField label="Test" name="test" /> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should submit with onSubmitEnter prop', async () => {
     const onSubmit = vi.fn()
 
-    const { asFragment } = renderWithForm(
-      <>
-        <TextAreaField label="Test" name="test" submitOnEnter />
-        <Submit>Submit</Submit>
-      </>,
-      undefined,
-      { errors: mockFormErrors, onSubmit },
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <>
+          <TextAreaField label="Test" name="test" submitOnEnter />
+          <Submit>Submit</Submit>
+        </>
+      ),
+      formProps: { errors: mockFormErrors, onSubmit },
+    })
 
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledTimes(0)
@@ -47,14 +48,15 @@ describe('textAreaField', () => {
   it('should render correctly generated', async () => {
     const onSubmit = vi.fn()
 
-    const { asFragment } = renderWithForm(
-      <>
-        <TextAreaField clearable label="Test" name="test" required />
-        <Submit>Submit</Submit>
-      </>,
-      undefined,
-      { errors: mockFormErrors, onSubmit },
-    )
+    const { asFragment } = renderWithForm({
+      children: (
+        <>
+          <TextAreaField clearable label="Test" name="test" required />
+          <Submit>Submit</Submit>
+        </>
+      ),
+      formProps: { errors: mockFormErrors, onSubmit },
+    })
 
     await userEvent.click(screen.getByText('Submit'))
     await waitFor(() => {

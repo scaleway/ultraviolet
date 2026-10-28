@@ -33,17 +33,19 @@ export const mockFormErrors: FormErrors = {
   required: () => 'This field is required',
 }
 
-export const renderWithForm = (
-  compoment: ReactElement,
-  useFormProps?: UseFormProps,
-  formProps?: Partial<ComponentProps<typeof Form>>,
-  theme?: typeof consoleLightTheme,
-) => {
+type RenderWithFormProps = {
+  children: ReactElement
+  useFormProps?: UseFormProps
+  formProps?: Partial<ComponentProps<typeof Form>>
+  theme?: typeof consoleLightTheme
+}
+
+export const renderWithForm = ({ children, useFormProps, formProps, theme }: RenderWithFormProps) => {
   const { result } = renderHook(() => useForm({ mode: 'onChange', ...useFormProps }))
 
   const renderResult = renderWithTheme(
     <Form errors={mockFormErrors} methods={result.current} onSubmit={() => {}} {...formProps}>
-      {compoment}
+      {children}
     </Form>,
     theme,
   )

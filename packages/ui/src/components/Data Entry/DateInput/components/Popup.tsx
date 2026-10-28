@@ -16,9 +16,15 @@ type PopupProps = {
 
 const handleClickOutside = (
   event: MouseEvent,
-  ref: RefObject<HTMLDivElement | null>,
-  setVisible: Dispatch<SetStateAction<boolean>>,
-  refInput: RefObject<HTMLInputElement | null>,
+  {
+    ref,
+    setVisible,
+    refInput,
+  }: {
+    ref: RefObject<HTMLDivElement | null>
+    setVisible: Dispatch<SetStateAction<boolean>>
+    refInput: RefObject<HTMLInputElement | null>
+  },
 ) => {
   if (ref.current && !ref.current.contains(event.target as Node) && !refInput.current?.contains(event.target as Node)) {
     setVisible(false)
@@ -29,7 +35,7 @@ export const CalendarPopup = ({ children, visible, setVisible, refInput, content
   const ref = useRef<HTMLDivElement>(null)
 
   useLayoutEffect(() => {
-    const handler = (event: MouseEvent) => handleClickOutside(event, ref, setVisible, refInput)
+    const handler = (event: MouseEvent) => handleClickOutside(event, { ref, refInput, setVisible })
     document.addEventListener('mousedown', handler)
 
     return () => document.removeEventListener('mousedown', handler)

@@ -144,12 +144,17 @@ const findOffsetParent = (element: RefObject<HTMLDivElement>) => {
   return document.body
 }
 
-const getVerticalOverflow = (
-  childrenRect: DOMRect,
-  offsetParentRect: DOMRect,
-  popupHalfWidthWithArrow: number,
-  popupWidth: number,
-) => {
+type OverflowParams = {
+  childrenRect: DOMRect
+  offsetParentRect: DOMRect
+  popupWidth: number
+  popupHeight: number
+  arrowWidth: number
+}
+
+const getVerticalOverflow = ({ childrenRect, offsetParentRect, popupWidth, arrowWidth }: OverflowParams) => {
+  const popupHalfWidthWithArrow = popupWidth / 2 - arrowWidth - 1
+
   const { left: parentLeft, right: parentRight } = offsetParentRect
   const { left: childrenLeft, width: childrenWidth } = childrenRect
 
@@ -173,12 +178,9 @@ const getVerticalOverflow = (
   return undefined
 }
 
-const getHorizontalOverflow = (
-  childrenRect: DOMRect,
-  offsetParentRect: DOMRect,
-  popupHeight: number,
-  popupHalfHeightWithArrow: number,
-) => {
+const getHorizontalOverflow = ({ childrenRect, offsetParentRect, popupHeight, arrowWidth }: OverflowParams) => {
+  const popupHalfHeightWithArrow = popupHeight / 2 - arrowWidth - 1
+
   const { top: parentTop, bottom: parentBottom } = offsetParentRect
   const { top: childrenTop, height: childrenHeight } = childrenRect
 
@@ -211,19 +213,25 @@ const getHorizontalOverflow = (
  * @param childrenRect the rect of the children element, the children element is the one that will trigger the popup
  * @param popupStructuredRef the rect of the popup, the popup itself
  */
-const getPopupOverflowFromParent = (
-  position: Placements,
-  offsetParentRect: DOMRect,
-  childrenRect: DOMRect,
-  popupStructuredRef: DOMRect,
-  arrowWidth: number,
-) => {
+type PopupOverflowParams = {
+  position: Placements
+  childrenRect: DOMRect
+  offsetParentRect: DOMRect
+  popupStructuredRef: DOMRect
+  arrowWidth: number
+}
+
+const getPopupOverflowFromParent = ({
+  position,
+  offsetParentRect,
+  childrenRect,
+  popupStructuredRef,
+  arrowWidth,
+}: PopupOverflowParams) => {
   const { width: popupWidth, height: popupHeight } = popupStructuredRef
-  const popupHalfWidthWithArrow = popupWidth / 2 - arrowWidth - 1 // -1 px to compensate border radius
-  const popupHalfHeightWithArrow = popupHeight / 2 - arrowWidth - 1 // -1 px to compensate border radius
 
   if (position === 'top' || position === 'bottom') {
-    const overflow = getVerticalOverflow(childrenRect, offsetParentRect, popupHalfWidthWithArrow, popupWidth)
+    const overflow = getVerticalOverflow({ childrenRect, offsetParentRect, popupWidth, popupHeight, arrowWidth })
 
     if (overflow) {
       return overflow
@@ -231,7 +239,7 @@ const getPopupOverflowFromParent = (
   }
 
   if (position === 'left' || position === 'right') {
-    const overflow = getHorizontalOverflow(childrenRect, offsetParentRect, popupHeight, popupHalfHeightWithArrow)
+    const overflow = getHorizontalOverflow({ childrenRect, offsetParentRect, popupWidth, popupHeight, arrowWidth })
 
     if (overflow) {
       return overflow
@@ -250,18 +258,38 @@ type ComputePositionsTypes = {
   align: PopupAlign
 }
 
-const placementBottom = (
-  isAligned: boolean,
-  overloadedChildrenLeft: number,
-  childrenWidth: number,
-  popupWidth: number,
-  overloadedChildrenTop: number,
-  scrollTopValue: number,
-  childrenHeight: number,
-  arrowWidth: number,
-  popupOverflow: number,
-  isPopupPortalTargetBody: boolean,
-) => {
+type PlacementParams = {
+  isAligned: boolean
+  overloadedChildrenLeft: number
+  overloadedChildrenTop: number
+  overloadedChildrenRight: number
+  childrenWidth: number
+  childrenHeight: number
+  popupWidth: number
+  popupHeight: number
+  scrollTopValue: number
+  arrowWidth: number
+  popupOverflow: number
+  isPopupPortalTargetBody: boolean
+  childrenRect: DOMRect
+  offsetParent: Element
+  offsetParentRect: DOMRect
+  popupStructuredRef: DOMRect
+  popupPortalTarget: HTMLElement
+}
+
+const placementBottom = ({
+  isAligned,
+  overloadedChildrenLeft,
+  childrenWidth,
+  popupWidth,
+  overloadedChildrenTop,
+  scrollTopValue,
+  childrenHeight,
+  arrowWidth,
+  popupOverflow,
+  isPopupPortalTargetBody,
+}: PlacementParams) => {
   const positionX = isAligned ? overloadedChildrenLeft : overloadedChildrenLeft + childrenWidth / 2 - popupWidth / 2
   const positionY = overloadedChildrenTop + scrollTopValue + childrenHeight + getVerticalSpacing(arrowWidth)
 
@@ -286,17 +314,17 @@ const placementBottom = (
   }
 }
 
-const placementLeft = (
-  isAligned: boolean,
-  overloadedChildrenLeft: number,
-  popupWidth: number,
-  overloadedChildrenTop: number,
-  scrollTopValue: number,
-  childrenHeight: number,
-  arrowWidth: number,
-  popupOverflow: number,
-  popupHeight: number,
-) => {
+const placementLeft = ({
+  isAligned,
+  overloadedChildrenLeft,
+  popupWidth,
+  overloadedChildrenTop,
+  scrollTopValue,
+  childrenHeight,
+  arrowWidth,
+  popupOverflow,
+  popupHeight,
+}: PlacementParams) => {
   const positionX = overloadedChildrenLeft - popupWidth - getHorizontalSpacing(arrowWidth)
   const positionY = isAligned
     ? overloadedChildrenTop + scrollTopValue
@@ -313,16 +341,16 @@ const placementLeft = (
   }
 }
 
-const placementRight = (
-  isAligned: boolean,
-  overloadedChildrenTop: number,
-  scrollTopValue: number,
-  childrenHeight: number,
-  arrowWidth: number,
-  popupOverflow: number,
-  popupHeight: number,
-  overloadedChildrenRight: number,
-) => {
+const placementRight = ({
+  isAligned,
+  overloadedChildrenTop,
+  scrollTopValue,
+  childrenHeight,
+  arrowWidth,
+  popupOverflow,
+  popupHeight,
+  overloadedChildrenRight,
+}: PlacementParams) => {
   const positionX = overloadedChildrenRight + getHorizontalSpacing(arrowWidth)
   const positionY = isAligned
     ? overloadedChildrenTop + scrollTopValue
@@ -339,23 +367,23 @@ const placementRight = (
   }
 }
 
-const placementNested = (
-  isAligned: boolean,
-  overloadedChildrenTop: number,
-  scrollTopValue: number,
-  childrenHeight: number,
-  arrowWidth: number,
-  popupOverflow: number,
-  popupHeight: number,
-  overloadedChildrenRight: number,
-  childrenRect: DOMRect,
-  offsetParent: Element,
-  offsetParentRect: DOMRect,
-  popupStructuredRef: DOMRect,
-  overloadedChildrenLeft: number,
-  popupWidth: number,
-  popupPortalTarget: HTMLElement,
-) => {
+const placementNested = ({
+  isAligned,
+  overloadedChildrenTop,
+  scrollTopValue,
+  childrenHeight,
+  arrowWidth,
+  popupOverflow,
+  popupHeight,
+  overloadedChildrenRight,
+  childrenRect,
+  offsetParent,
+  offsetParentRect,
+  popupStructuredRef,
+  overloadedChildrenLeft,
+  popupWidth,
+  popupPortalTarget,
+}: PlacementParams) => {
   if (
     computePlacement({
       childrenStructuredRef: childrenRect,
@@ -401,18 +429,18 @@ const placementNested = (
   }
 }
 
-const placementTop = (
-  isAligned: boolean,
-  overloadedChildrenTop: number,
-  scrollTopValue: number,
-  arrowWidth: number,
-  popupOverflow: number,
-  popupHeight: number,
-  overloadedChildrenLeft: number,
-  popupWidth: number,
-  childrenWidth: number,
-  isPopupPortalTargetBody: boolean,
-) => {
+const placementTop = ({
+  isAligned,
+  overloadedChildrenTop,
+  scrollTopValue,
+  arrowWidth,
+  popupOverflow,
+  popupHeight,
+  overloadedChildrenLeft,
+  popupWidth,
+  childrenWidth,
+  isPopupPortalTargetBody,
+}: PlacementParams) => {
   // top placement is default value
   const positionX = isAligned ? overloadedChildrenLeft : overloadedChildrenLeft + childrenWidth / 2 - popupWidth / 2
   const positionY = overloadedChildrenTop + scrollTopValue - popupHeight - getVerticalSpacing(arrowWidth)
@@ -498,102 +526,54 @@ export const computePositions = ({
   const overloadedChildrenTop = isPopupPortalTargetBody ? childrenTop : childrenTop - parentTop
   const overloadedChildrenRight = isPopupPortalTargetBody ? childrenRight : childrenLeft - parentLeft + childrenWidth
 
-  const popupOverflow = getPopupOverflowFromParent(
-    placementBasedOnWindowSize,
-    offsetParentRect,
-    childrenRect,
-    popupStructuredRef,
+  const popupOverflow = getPopupOverflowFromParent({
     arrowWidth,
-  )
+    childrenRect,
+    offsetParentRect,
+    popupStructuredRef,
+    position: placementBasedOnWindowSize,
+  })
 
   const isAligned = align === 'start'
 
+  const placementParams: PlacementParams = {
+    arrowWidth,
+    childrenHeight,
+    childrenRect,
+    childrenWidth,
+    isAligned,
+    isPopupPortalTargetBody,
+    offsetParent,
+    offsetParentRect,
+    overloadedChildrenLeft,
+    overloadedChildrenRight,
+    overloadedChildrenTop,
+    popupHeight,
+    popupOverflow,
+    popupPortalTarget,
+    popupStructuredRef,
+    popupWidth,
+    scrollTopValue,
+  }
+
   switch (placementBasedOnWindowSize) {
     case 'bottom': {
-      return placementBottom(
-        isAligned,
-        overloadedChildrenLeft,
-        childrenWidth,
-        popupWidth,
-        overloadedChildrenTop,
-        scrollTopValue,
-        childrenHeight,
-        arrowWidth,
-        popupOverflow,
-        isPopupPortalTargetBody,
-      )
+      return placementBottom(placementParams)
     }
     case 'left': {
-      return placementLeft(
-        isAligned,
-        overloadedChildrenLeft,
-        popupWidth,
-        overloadedChildrenTop,
-        scrollTopValue,
-        childrenHeight,
-        arrowWidth,
-        popupOverflow,
-        popupHeight,
-      )
+      return placementLeft(placementParams)
     }
     case 'right': {
-      return placementRight(
-        isAligned,
-        overloadedChildrenTop,
-        scrollTopValue,
-        childrenHeight,
-        arrowWidth,
-        popupOverflow,
-        popupHeight,
-        overloadedChildrenRight,
-      )
+      return placementRight(placementParams)
     }
     case 'nested-menu': {
-      return placementNested(
-        isAligned,
-        overloadedChildrenTop,
-        scrollTopValue,
-        childrenHeight,
-        arrowWidth,
-        popupOverflow,
-        popupHeight,
-        overloadedChildrenRight,
-        childrenRect,
-        offsetParent,
-        offsetParentRect,
-        popupStructuredRef,
-        overloadedChildrenLeft,
-        popupWidth,
-        popupPortalTarget,
-      )
+      return placementNested(placementParams)
     }
     case 'top': {
-      return placementTop(
-        isAligned,
-        overloadedChildrenTop,
-        scrollTopValue,
-        arrowWidth,
-        popupOverflow,
-        popupHeight,
-        overloadedChildrenLeft,
-        popupWidth,
-        childrenWidth,
-        isPopupPortalTargetBody,
-      )
+      return placementTop(placementParams)
     }
     default: {
-      return placementTop(
-        isAligned,
-        overloadedChildrenTop,
-        scrollTopValue,
-        arrowWidth,
-        popupOverflow,
-        popupHeight,
-        overloadedChildrenLeft,
-        popupWidth,
-        childrenWidth,
-        isPopupPortalTargetBody,
-      )
+      return placementTop(placementParams)
     }
   }
 }

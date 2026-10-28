@@ -6,14 +6,21 @@
  * @param numberOfButtonsInBetween The number of buttons to show in the middle section between the two ellipsis
  * @returns List of page numbers to display
  */
-export const getPageNumbers = (
-  currentPage: number,
-  pageCount: number,
+export const getPageNumbers = ({
+  currentPage,
+  pageCount,
   range = 5,
   numberOfButtonsInBetween = 3,
-  hideFirstPage?: boolean,
-  hideLastPage?: boolean,
-): number[] => {
+  hideFirstPage,
+  hideLastPage,
+}: {
+  currentPage: number
+  pageCount: number
+  range?: number
+  numberOfButtonsInBetween?: number
+  hideFirstPage?: boolean
+  hideLastPage?: boolean
+}): number[] => {
   const truncationBefore = currentPage >= range
   const truncationAfter = currentPage <= pageCount - range + 1 || currentPage < range
 

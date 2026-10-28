@@ -22,9 +22,9 @@ const optionsSelect = [
 
 describe('unitInputField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(
-      <UnitInputField label="Test" name="test" optionName="test2" options={optionsSelect} />,
-    )
+    const { asFragment } = renderWithForm({
+      children: <UnitInputField label="Test" name="test" optionName="test2" options={optionsSelect} />,
+    })
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -32,31 +32,33 @@ describe('unitInputField', () => {
   it('should handles onChange and selection', async () => {
     const onSubmit = vi.fn()
 
-    const { asFragment } = renderWithForm(
-      <>
-        <UnitInputField
-          label="Test"
-          name="test"
-          options={optionsSelect}
-          placeholder="input"
-          placeholderUnit="select"
-          required
-        />
-        <Submit>Submit</Submit>
-      </>,
-      {
+    const { asFragment } = renderWithForm({
+      children: (
+        <>
+          <UnitInputField
+            label="Test"
+            name="test"
+            options={optionsSelect}
+            placeholder="input"
+            placeholderUnit="select"
+            required
+          />
+          <Submit>Submit</Submit>
+        </>
+      ),
+      useFormProps: {
         defaultValues: {
           test: 10,
         },
         mode: 'onChange',
       },
-      {
+      formProps: {
         errors: mockErrors,
         onSubmit: value => {
           onSubmit(value)
         },
       },
-    )
+    })
 
     const selectBar = screen.getByTestId('select-input-test-unit')
     const numberInput = screen.getByTestId('unit-input')

@@ -18,7 +18,7 @@ describe('richTextInputField', () => {
   })
 
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(<RichTextInputField label="Test" name="test" />)
+    const { asFragment } = renderWithForm({ children: <RichTextInputField label="Test" name="test" /> })
 
     expect(asFragment()).toMatchSnapshot()
   })

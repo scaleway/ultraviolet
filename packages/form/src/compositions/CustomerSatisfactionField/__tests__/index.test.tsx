@@ -6,17 +6,17 @@ import { renderWithForm } from '../../../__tests__/helpers'
 
 describe('customersatisfactionfield', () => {
   it('renders correctly', () => {
-    const { asFragment } = renderWithForm(<CustomerSatisfactionField name="customerSat" />)
+    const { asFragment } = renderWithForm({ children: <CustomerSatisfactionField name="customerSat" /> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders five rating buttons', () => {
-    renderWithForm(<CustomerSatisfactionField name="customerSat" />)
+    renderWithForm({ children: <CustomerSatisfactionField name="customerSat" /> })
     expect(screen.getAllByRole('button')).toHaveLength(5)
   })
 
   it('updates the form value when a rating is clicked', async () => {
-    const { resultForm } = renderWithForm(<CustomerSatisfactionField name="customerSat" />)
+    const { resultForm } = renderWithForm({ children: <CustomerSatisfactionField name="customerSat" /> })
 
     await userEvent.click(screen.getAllByRole('button')[3])
 

@@ -22,7 +22,17 @@ export const isCompleteHour = (timeFormat: number, value: number) => {
   return false
 }
 
-export const canConcat = (oldValue: number, type: (typeof TIME_KEYS)[number], key: number, timeFormat: 24 | 12) =>
+export const canConcat = ({
+  oldValue,
+  type,
+  key,
+  timeFormat,
+}: {
+  oldValue: number
+  type: (typeof TIME_KEYS)[number]
+  key: number
+  timeFormat: 24 | 12
+}) =>
   (type === 'h' && isValidNewHour(oldValue, key, timeFormat)) ||
   (type !== 'h' && oldValue < 6) ||
   (type !== 'h' && oldValue < 6)

@@ -107,7 +107,7 @@ export const Daily = () => {
         // Whether the date is after the start date - useful when selectsRange is set to true
         const isAfterStartDate = selectsRange && range?.start && constructedDate > range.start
 
-        const isInHoveredRange = getIsInHoveredRange(selectsRange, constructedDate, hoveredDate, range)
+        const isInHoveredRange = getIsInHoveredRange({ constructedDate, hoveredDate, range, selectsRange })
 
         const getNewDate = () => {
           // Clicked on a day from the previous month
@@ -135,7 +135,15 @@ export const Daily = () => {
             if (rangeState === 'end' && isAfterStartDate) {
               setRange?.({ end: newDate, start: range.start })
               onChange?.([range.start, newDate], event)
-              setInputValue(formatValue(null, { end: newDate, start: range.start }, false, true, format))
+              setInputValue(
+                formatValue({
+                  computedRange: { end: newDate, start: range.start },
+                  computedValue: null,
+                  format,
+                  selectsRange: true,
+                  showMonthYearPicker: false,
+                }),
+              )
               // If we click on another date, it will reset the range
               setRangeState('start')
               setVisible(false)
@@ -144,7 +152,15 @@ export const Daily = () => {
             else if (rangeState === 'end' && !isAfterStartDate && range?.start) {
               setRange?.({ end: range.start, start: newDate })
               onChange?.([newDate, range.start], event)
-              setInputValue(formatValue(null, { end: range.start, start: newDate }, false, true, format))
+              setInputValue(
+                formatValue({
+                  computedRange: { end: range.start, start: newDate },
+                  computedValue: null,
+                  format,
+                  selectsRange: true,
+                  showMonthYearPicker: false,
+                }),
+              )
               setRangeState('start')
               setVisible(false)
             }
@@ -152,7 +168,15 @@ export const Daily = () => {
             else {
               setRange?.({ end: null, start: newDate })
               onChange?.([newDate, null], event)
-              setInputValue(formatValue(null, { end: null, start: newDate }, false, true, format))
+              setInputValue(
+                formatValue({
+                  computedRange: { end: null, start: newDate },
+                  computedValue: null,
+                  format,
+                  selectsRange: true,
+                  showMonthYearPicker: false,
+                }),
+              )
               setRangeState('end')
             }
           }
@@ -204,7 +228,15 @@ export const Daily = () => {
                 } else {
                   setValue(newDate)
                   onChange?.(newDate, event)
-                  setInputValue(formatValue(newDate, null, false, false, format))
+                  setInputValue(
+                    formatValue({
+                      computedRange: null,
+                      computedValue: newDate,
+                      format,
+                      selectsRange: false,
+                      showMonthYearPicker: false,
+                    }),
+                  )
                   setVisible(false)
                 }
               }

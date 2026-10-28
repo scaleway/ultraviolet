@@ -6,14 +6,14 @@ import { mockFormErrors, renderWithForm } from '../../../__tests__/helpers'
 
 describe('numberInputField', () => {
   it('should render correctly', () => {
-    const { asFragment } = renderWithForm(<NumberInputField name="test" value={0} />)
+    const { asFragment } = renderWithForm({ children: <NumberInputField name="test" value={0} /> })
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render correctly disabled', () => {
-    const { asFragment } = renderWithForm(
-      <NumberInputField aria-label="Number Input" disabled name="test" value={10} />,
-    )
+    const { asFragment } = renderWithForm({
+      children: <NumberInputField aria-label="Number Input" disabled name="test" value={10} />,
+    })
     const input = screen.getByRole('spinbutton', { name: 'Number Input' })
     expect(input).toBeDisabled()
 
@@ -27,24 +27,26 @@ describe('numberInputField', () => {
 
   it('should work fine with form setValue', async () => {
     const onSubmit = vi.fn()
-    const { resultForm } = renderWithForm(
-      <>
-        <NumberInputField label="Test" name="test" required />
-        <Submit>Submit</Submit>
-      </>,
-      {
+    const { resultForm } = renderWithForm({
+      children: (
+        <>
+          <NumberInputField label="Test" name="test" required />
+          <Submit>Submit</Submit>
+        </>
+      ),
+      useFormProps: {
         defaultValues: {
           test: 10,
         },
         mode: 'onChange',
       },
-      {
+      formProps: {
         errors: mockFormErrors,
         onSubmit: value => {
           onSubmit(value)
         },
       },
-    )
+    })
 
     const numberInput = screen.getByRole('spinbutton', { name: 'Test' })
     const submit = screen.getByRole('button', { name: 'Submit' })
@@ -82,24 +84,26 @@ describe('numberInputField', () => {
       test2: number | null
     }
 
-    const { resultForm } = renderWithForm(
-      <>
-        <NumberInputField label="Test1" name="test1" required />
-        <NumberInputField label="Test2" name="test2" required />
-        <Submit>Submit</Submit>
-      </>,
-      {
+    const { resultForm } = renderWithForm({
+      children: (
+        <>
+          <NumberInputField label="Test1" name="test1" required />
+          <NumberInputField label="Test2" name="test2" required />
+          <Submit>Submit</Submit>
+        </>
+      ),
+      useFormProps: {
         defaultValues: {
           test1: 10,
           test2: 20,
         } satisfies FormValues,
         mode: 'onChange',
       },
-      {
+      formProps: {
         errors: mockFormErrors,
         onSubmit,
       },
-    )
+    })
 
     const numberInput1 = screen.getByRole('spinbutton', { name: 'Test1' })
     const numberInput2 = screen.getByRole('spinbutton', { name: 'Test2' })
@@ -176,21 +180,23 @@ describe('numberInputField', () => {
   describe('with the _experimentalRegisterMode of the Form', () => {
     it('should submit the form with correct values after typing', async () => {
       const onSubmit = vi.fn()
-      const { resultForm } = renderWithForm(
-        <>
-          <NumberInputField label="Test" name="test" />
-          <Submit>Submit</Submit>
-        </>,
-        {
+      const { resultForm } = renderWithForm({
+        children: (
+          <>
+            <NumberInputField label="Test" name="test" />
+            <Submit>Submit</Submit>
+          </>
+        ),
+        useFormProps: {
           defaultValues: { test: 0 },
           mode: 'onChange',
         },
-        {
+        formProps: {
           _experimentalRegisterMode: true,
           errors: mockFormErrors,
           onSubmit,
         },
-      )
+      })
 
       const input = screen.getByRole<HTMLInputElement>('spinbutton', { name: 'Test' })
       const submitButton = screen.getByRole('button', { name: 'Submit' })
@@ -220,14 +226,16 @@ describe('numberInputField', () => {
   describe('validators', () => {
     it('should pass validation for valid numbers', async () => {
       const onSubmit = vi.fn()
-      renderWithForm(
-        <>
-          <NumberInputField aria-label="Test" name="test" />
-          <Submit>Submit</Submit>
-        </>,
-        { defaultValues: { test: 0 }, mode: 'onChange' },
-        { errors: mockFormErrors, onSubmit },
-      )
+      renderWithForm({
+        children: (
+          <>
+            <NumberInputField aria-label="Test" name="test" />
+            <Submit>Submit</Submit>
+          </>
+        ),
+        useFormProps: { defaultValues: { test: 0 }, mode: 'onChange' },
+        formProps: { errors: mockFormErrors, onSubmit },
+      })
 
       const input = screen.getByRole('spinbutton', { name: 'Test' })
       const submit = screen.getByRole('button', { name: 'Submit' })
@@ -242,20 +250,22 @@ describe('numberInputField', () => {
 
     it('should fail isNumber validation for NaN values', async () => {
       const onSubmit = vi.fn()
-      renderWithForm(
-        <>
-          <NumberInputField aria-label="Number Input" name="test" required min={Number.MIN_SAFE_INTEGER} />
-          <Submit>Submit</Submit>
-        </>,
-        {
+      renderWithForm({
+        children: (
+          <>
+            <NumberInputField aria-label="Number Input" name="test" required min={Number.MIN_SAFE_INTEGER} />
+            <Submit>Submit</Submit>
+          </>
+        ),
+        useFormProps: {
           defaultValues: {
             test: Number.NaN,
           },
           mode: 'all',
           shouldUseNativeValidation: true,
         },
-        { errors: mockFormErrors, onSubmit },
-      )
+        formProps: { errors: mockFormErrors, onSubmit },
+      })
 
       const submit = screen.getByRole('button', { name: 'Submit' })
 
@@ -268,19 +278,21 @@ describe('numberInputField', () => {
 
     it('should fail isNumber validation for null when required', async () => {
       const onSubmit = vi.fn()
-      renderWithForm(
-        <>
-          <NumberInputField aria-label="Number Input" name="test" required min={Number.MIN_SAFE_INTEGER} />
-          <Submit>Submit</Submit>
-        </>,
-        {
+      renderWithForm({
+        children: (
+          <>
+            <NumberInputField aria-label="Number Input" name="test" required min={Number.MIN_SAFE_INTEGER} />
+            <Submit>Submit</Submit>
+          </>
+        ),
+        useFormProps: {
           defaultValues: {
             test: null,
           },
           mode: 'onChange',
         },
-        { errors: mockFormErrors, onSubmit },
-      )
+        formProps: { errors: mockFormErrors, onSubmit },
+      })
 
       const submit = screen.getByRole('button', { name: 'Submit' })
 
@@ -294,19 +306,21 @@ describe('numberInputField', () => {
 
     it('should pass isNumber validation for zero', async () => {
       const onSubmit = vi.fn()
-      renderWithForm(
-        <>
-          <NumberInputField aria-label="Number Input" name="test" required min={Number.MIN_SAFE_INTEGER} />
-          <Submit>Submit</Submit>
-        </>,
-        {
+      renderWithForm({
+        children: (
+          <>
+            <NumberInputField aria-label="Number Input" name="test" required min={Number.MIN_SAFE_INTEGER} />
+            <Submit>Submit</Submit>
+          </>
+        ),
+        useFormProps: {
           defaultValues: {
             test: 0,
           },
           mode: 'all',
         },
-        { errors: mockFormErrors, onSubmit },
-      )
+        formProps: { errors: mockFormErrors, onSubmit },
+      })
 
       const submit = screen.getByRole('button', { name: 'Submit' })
 
@@ -319,19 +333,21 @@ describe('numberInputField', () => {
 
     it('should pass isNumber validation for negative numbers', async () => {
       const onSubmit = vi.fn()
-      renderWithForm(
-        <>
-          <NumberInputField aria-label="Number Input" name="test" required min={Number.MIN_SAFE_INTEGER} />
-          <Submit>Submit</Submit>
-        </>,
-        {
+      renderWithForm({
+        children: (
+          <>
+            <NumberInputField aria-label="Number Input" name="test" required min={Number.MIN_SAFE_INTEGER} />
+            <Submit>Submit</Submit>
+          </>
+        ),
+        useFormProps: {
           defaultValues: {
             test: -42,
           },
           mode: 'onChange',
         },
-        { errors: mockFormErrors, onSubmit },
-      )
+        formProps: { errors: mockFormErrors, onSubmit },
+      })
 
       const submit = screen.getByRole('button', { name: 'Submit' })
 
@@ -344,14 +360,16 @@ describe('numberInputField', () => {
 
     it('should pass validation for decimal numbers when step is decimal', async () => {
       const onSubmit = vi.fn()
-      renderWithForm(
-        <>
-          <NumberInputField aria-label="Test" name="test" step={0.1} />
-          <Submit>Submit</Submit>
-        </>,
-        { defaultValues: { test: 0 }, mode: 'onChange' },
-        { errors: mockFormErrors, onSubmit },
-      )
+      renderWithForm({
+        children: (
+          <>
+            <NumberInputField aria-label="Test" name="test" step={0.1} />
+            <Submit>Submit</Submit>
+          </>
+        ),
+        useFormProps: { defaultValues: { test: 0 }, mode: 'onChange' },
+        formProps: { errors: mockFormErrors, onSubmit },
+      })
 
       const input = screen.getByRole('spinbutton', { name: 'Test' })
       const submit = screen.getByRole('button', { name: 'Submit' })
@@ -367,14 +385,16 @@ describe('numberInputField', () => {
     it('should fail validation for decimal numbers when step is integer (accepting a string)', async () => {
       const onSubmit = vi.fn()
       const onChange = vi.fn()
-      renderWithForm(
-        <>
-          <NumberInputField aria-label="Test" name="test" onChange={onChange} step="2" min={0} />
-          <Submit>Submit</Submit>
-        </>,
-        { defaultValues: { test: 0 }, mode: 'onChange' },
-        { errors: mockFormErrors, onSubmit },
-      )
+      renderWithForm({
+        children: (
+          <>
+            <NumberInputField aria-label="Test" name="test" onChange={onChange} step="2" min={0} />
+            <Submit>Submit</Submit>
+          </>
+        ),
+        useFormProps: { defaultValues: { test: 0 }, mode: 'onChange' },
+        formProps: { errors: mockFormErrors, onSubmit },
+      })
 
       const input = screen.getByRole('spinbutton', { name: 'Test' })
       const submit = screen.getByRole('button', { name: 'Submit' })
@@ -399,14 +419,16 @@ describe('numberInputField', () => {
 
     it('should have valid form state when the number field is optional and empty', async () => {
       const onSubmit = vi.fn()
-      renderWithForm(
-        <>
-          <NumberInputField aria-label="Test" name="numberInput" />
-          <Submit>Submit</Submit>
-        </>,
-        { mode: 'onChange' },
-        { errors: mockFormErrors, onSubmit },
-      )
+      renderWithForm({
+        children: (
+          <>
+            <NumberInputField aria-label="Test" name="numberInput" />
+            <Submit>Submit</Submit>
+          </>
+        ),
+        useFormProps: { mode: 'onChange' },
+        formProps: { errors: mockFormErrors, onSubmit },
+      })
 
       const input = screen.getByRole('spinbutton', { name: 'Test' })
       const submit = screen.getByRole('button', { name: 'Submit' })
@@ -433,17 +455,19 @@ describe('numberInputField', () => {
 
     it('should have valid form state when the number field is optional and empty and the step attribute is present', async () => {
       const onSubmit = vi.fn()
-      renderWithForm(
-        <>
-          <NumberInputField aria-label="Test" name="test" step="1" />
-          <Submit>Submit</Submit>
-        </>,
-        {
+      renderWithForm({
+        children: (
+          <>
+            <NumberInputField aria-label="Test" name="test" step="1" />
+            <Submit>Submit</Submit>
+          </>
+        ),
+        useFormProps: {
           defaultValues: {},
           mode: 'onChange',
         },
-        { errors: mockFormErrors, onSubmit },
-      )
+        formProps: { errors: mockFormErrors, onSubmit },
+      })
       const submit = screen.getByRole('button', { name: 'Submit' })
 
       await waitFor(() => {
@@ -459,14 +483,16 @@ describe('numberInputField', () => {
 
     it('should accept scientific notation like 1e2 as a valid value', async () => {
       const onSubmit = vi.fn()
-      const { resultForm } = renderWithForm(
-        <>
-          <NumberInputField aria-label="Test" name="test" />
-          <Submit>Submit</Submit>
-        </>,
-        { defaultValues: { test: 0 }, mode: 'onChange' },
-        { errors: mockFormErrors, onSubmit },
-      )
+      const { resultForm } = renderWithForm({
+        children: (
+          <>
+            <NumberInputField aria-label="Test" name="test" />
+            <Submit>Submit</Submit>
+          </>
+        ),
+        useFormProps: { defaultValues: { test: 0 }, mode: 'onChange' },
+        formProps: { errors: mockFormErrors, onSubmit },
+      })
 
       const input = screen.getByRole('spinbutton', { name: 'Test' })
       const submit = screen.getByRole('button', { name: 'Submit' })
@@ -488,8 +514,11 @@ describe('numberInputField', () => {
 
     it('should allow pasting scientific notation like 1e2', async () => {
       const onChange = vi.fn()
-      renderWithForm(<NumberInputField aria-label="Test" name="test" onChange={onChange} />, {
-        defaultValues: { test: 0 },
+      renderWithForm({
+        children: <NumberInputField aria-label="Test" name="test" onChange={onChange} />,
+        useFormProps: {
+          defaultValues: { test: 0 },
+        },
       })
 
       const input = screen.getByRole('spinbutton', { name: 'Test' })

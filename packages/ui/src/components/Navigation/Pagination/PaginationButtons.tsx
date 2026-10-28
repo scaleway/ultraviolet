@@ -59,7 +59,14 @@ export const PaginationButtons = ({
 
   const pageItems = useMemo(() => {
     const buttonsInCenter = isSmall ? 1 : 3
-    return getPageItems(page, pageCount, pageTabCount, buttonsInCenter, hideFirstPage, hideLastPage)
+    return getPageItems({
+      page,
+      pageCount,
+      range: pageTabCount,
+      numberOfButtonsInBetween: buttonsInCenter,
+      hideFirstPage,
+      hideLastPage,
+    })
   }, [isSmall, page, pageCount, pageTabCount, hideFirstPage, hideLastPage])
 
   const handlePageClick = useCallback(
