@@ -5,6 +5,11 @@ import { expectNoViolations, renderWithTheme } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { Popover } from '..'
 
+// Floating UI focuses through a rAF-deferred queue. On loaded CI runners the
+// webkit instance can take well over the 1s waitFor default to reach the
+// settled focus, so focus assertions wait for up to 5s instead.
+const FOCUS_WAIT_TIMEOUT = 5_000
+
 const renderPopover = (props: { visible?: boolean } = {}) =>
   renderWithTheme(
     <Popover content="Popover content" title="Popover title" {...props}>
@@ -75,7 +80,15 @@ describe('popover - A11y', { tags: ['a11y'] }, () => {
       await userEvent.click(screen.getByRole('button', { name: 'Open Popover' }))
 
       // the close button is the first focusable element of the dialog
-      await waitFor(() => expect(screen.getByRole('button', { name: 'close popover Popover title' })).toHaveFocus())
+      await waitFor(
+        () => {
+          const button = screen.getByRole('button', { name: 'close popover Popover title' })
+          expect(button).toHaveFocus()
+        },
+        {
+          timeout: FOCUS_WAIT_TIMEOUT,
+        },
+      )
     })
 
     it('should return focus to the trigger on Escape', async () => {
@@ -90,7 +103,13 @@ describe('popover - A11y', { tags: ['a11y'] }, () => {
 
       await userEvent.keyboard('{Escape}')
 
-      await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
+      await waitFor(
+        () => {
+          const dialog = screen.queryByRole('dialog')
+          expect(dialog).not.toBeInTheDocument()
+        },
+        { timeout: FOCUS_WAIT_TIMEOUT },
+      )
       expect(trigger).toHaveFocus()
     })
 
@@ -101,7 +120,13 @@ describe('popover - A11y', { tags: ['a11y'] }, () => {
       await userEvent.click(trigger)
       await userEvent.click(screen.getByRole('button', { name: 'close popover Popover title' }))
 
-      await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
+      await waitFor(
+        () => {
+          const dialog = screen.queryByRole('dialog')
+          expect(dialog).not.toBeInTheDocument()
+        },
+        { timeout: FOCUS_WAIT_TIMEOUT },
+      )
       expect(trigger).toHaveFocus()
     })
   })
