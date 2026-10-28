@@ -148,7 +148,8 @@ export const DateInput = <IsRange extends undefined | boolean>({
     value,
   })
   const refInput = useRef<HTMLInputElement>(null)
-  const popupRef = useRef<HTMLDivElement>(null)
+  const inputWrapperRef = useRef<HTMLDivElement>(null)
+  const popupPanelRef = useRef<HTMLDivElement>(null)
   const MONTHS = getMonths(locale)
   const DAYS = getDays(locale)
   const MONTHS_ARR = getLocalizedMonths(locale)
@@ -286,30 +287,30 @@ export const DateInput = <IsRange extends undefined | boolean>({
 
   return (
     <DateInputContext.Provider value={valueContext}>
-      {/* oxlint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div
         className={cn(className, dateInputStyle.container)}
         data-testid={dataTestId}
         id={id}
+        // Stop the press from reaching the popup's document-level listener so the label click is handled as a single toggle
+        onClick={event => {
+          if ((event.target as HTMLElement).closest('label')) {
+            event.preventDefault()
+          }
+        }}
+        onKeyUp={event => {
+          if ((event.target as HTMLElement).closest('label')) {
+            event.preventDefault()
+          }
+        }}
         onBlur={onBlur}
-        onClick={() => {
-          if (!isPopupVisible) {
-            setVisible(true)
-          }
-        }}
         onFocus={onFocus}
-        onKeyDown={event => {
-          if ([' ', 'Enter'].includes(event.key) && !isPopupVisible) {
-            setVisible(true)
-          }
-        }}
-        ref={popupRef}
+        ref={inputWrapperRef}
         style={style}
       >
         {input === 'text' ? (
           <CalendarPopup
             content={<CalendarContent />}
-            refInput={refInput}
+            panelRef={popupPanelRef}
             setVisible={setVisible}
             visible={isPopupVisible}
           >
@@ -325,7 +326,10 @@ export const DateInput = <IsRange extends undefined | boolean>({
               labelDescription={labelDescription}
               name={name}
               onBlur={event => {
-                if (!popupRef.current?.contains(event.relatedTarget)) {
+                if (
+                  !inputWrapperRef.current?.contains(event.relatedTarget) &&
+                  !popupPanelRef.current?.contains(event.relatedTarget)
+                ) {
                   onBlurInput()
                 }
               }}

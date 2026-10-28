@@ -5,8 +5,8 @@ import { es, fr, ru } from 'date-fns/locale'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 import { DateInput } from '..'
 
-const DECEMBER = /December/iu
-const YEAR = /1995/iu
+const DECEMBER = /December/iv
+const YEAR = /1995/iv
 
 describe('dateInput', () => {
   beforeAll(() => {
@@ -47,6 +47,7 @@ describe('dateInput', () => {
     const { asFragment } = renderWithTheme(<DateInput error="error" label="Date" onChange={() => {}} />)
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders correctly error disabled', () => {
     const { asFragment } = renderWithTheme(<DateInput disabled error="error" label="Date" onChange={() => {}} />)
     expect(asFragment()).toMatchSnapshot()
@@ -96,6 +97,7 @@ describe('dateInput', () => {
     const { asFragment } = renderWithTheme(<DateInput label="Date" onChange={() => {}} showMonthYearPicker />)
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('render correctly with showMonthYearPicker with default date', async () => {
     const { asFragment } = renderWithTheme(
       <DateInput
@@ -228,21 +230,18 @@ describe('dateInput', () => {
     const calendar = screen.getByRole('dialog')
     expect(calendar).toBeVisible()
 
-    await userEvent.click(input)
-
     await userEvent.click(screen.getByText('15'))
     expect(input.value).toBe('15/12/1995')
 
     await userEvent.click(input)
 
-    const dayFromLastMonth = screen.getAllByText('30')[0] // the first element in this array is from previous month
+    const [dayFromLastMonth] = screen.getAllByText('30') // the first element in this array is from previous month
     await userEvent.click(dayFromLastMonth)
 
     await userEvent.click(input)
     expect(input.value).toBe('30/11/1995')
 
-    await userEvent.click(input)
-    const dayFromNextMonth = screen.getAllByText('1')[1]
+    const [_, dayFromNextMonth] = screen.getAllByText('1')
     await userEvent.click(dayFromNextMonth)
     expect(input.value).toBe('01/12/1995')
   })
@@ -375,10 +374,10 @@ describe('dateInput', () => {
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
-
     await userEvent.type(input, '21/08/1995')
     input.blur()
     expect(mockOnChange).toHaveBeenCalled()
+    await userEvent.click(input)
     expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
   })
 
@@ -388,10 +387,10 @@ describe('dateInput', () => {
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
-
     await userEvent.type(input, '21/08/1995')
     input.blur()
     expect(mockOnChange).toHaveBeenCalled()
+    await userEvent.click(input)
     expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
   })
 
@@ -401,11 +400,11 @@ describe('dateInput', () => {
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
-
     await userEvent.type(input, '2000/08')
     input.blur()
 
     expect(mockOnChange).toHaveBeenCalled()
+    await userEvent.click(input)
     expect(screen.getByText('2000', { exact: false })).toBeInTheDocument()
   })
 
@@ -420,6 +419,15 @@ describe('dateInput', () => {
     await userEvent.type(input, '2000/08')
     input.blur()
     expect(mockOnChange).toHaveBeenCalled()
+    await userEvent.click(input)
     expect(screen.getByText('2000', { exact: false })).toBeInTheDocument()
+  })
+
+  it('handle correctly click on label', async () => {
+    renderWithTheme(<DateInput label="Click on label" />)
+
+    await userEvent.click(screen.getByText('Click on label'))
+    const calendar = screen.getByRole('dialog')
+    expect(calendar).toBeVisible()
   })
 })
