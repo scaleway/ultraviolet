@@ -141,6 +141,22 @@ The script must use the **same storage key** as the provider and be placed in th
 
 An example can be found in our [Next example](https://github.com/scaleway/ultraviolet/blob/main/examples/next/src/pages/_document.tsx).
 
+##### Get the current theme object
+
+Use `v2/useThemeObject` to retrieve the full object of the currently applied theme — the same objects exported at the root of the package (`consoleLightTheme`, `consoleDarkTheme`, `consoleDarkerTheme`). The objects are lazy loaded in their own chunks, so an app only downloads the theme it applies and the other themes never end up in the consumer bundle. Since the loading is asynchronous, the hook returns `undefined` until the object is available (always `undefined` during SSR):
+
+```tsx
+import { useThemeObject } from '@ultraviolet/themes/v2'
+
+const CustomChart = () => {
+  const themeObject = useThemeObject()
+
+  if (!themeObject) return null
+
+  return <div style={{ color: themeObject.colors.primary.text }}>Chart using theme colors</div>
+}
+```
+
 ##### Customizing theme variables
 
 `extendTheme` is **not** supported by `v2/ThemeProvider`: since the provider does not inject any variable at runtime, there is no theme object to extend. Instead, override the CSS variables directly in a `.css` file, scoped to the theme class (`:root.light-theme`, `:root.dark-theme`, `:root.darker-theme`):
