@@ -1,5 +1,11 @@
 # @ultraviolet/utils
 
+## 1.1.1
+
+### Patch Changes
+
+- [#7058](https://github.com/scaleway/ultraviolet/pull/7058) [`91860a5`](https://github.com/scaleway/ultraviolet/commit/91860a503c91374b2273ae49cacef38eb645ab6d) Thanks [@jsulpis](https://github.com/jsulpis)! - Add `toCharacterArray` and `reverseString` functions
+
 ## 1.1.0
 
 ### Minor Changes
