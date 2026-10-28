@@ -2,20 +2,23 @@ import * as domMatchers from '@testing-library/jest-dom/matchers'
 import { cleanup } from '@testing-library/react'
 import { afterEach, beforeEach, expect, vi } from 'vitest'
 import * as axeMatchers from 'vitest-axe/matchers'
-import { toBeVisuallyHidden } from './toBeVisuallyHidden'
+import { toBeVisuallyHidden } from '../toBeVisuallyHidden'
+
+declare global {
+  var IS_REACT_ACT_ENVIRONMENT: boolean | undefined
+}
 
 // Mock InputEvent.getTargetRanges() for ProseMirror beforeinput plugin
 // jsdom doesn't implement this method, but @handlewithcare/react-prosemirror@3.2.1 requires it
 const MockGetTargetRanges = vi.fn((): StaticRange[] => [])
 
-export const setup = () => {
-  process.env['TZ'] = 'UTC'
+const setup = () => {
   expect.extend(domMatchers)
   expect.extend(axeMatchers)
   expect.extend({ toBeVisuallyHidden })
 
   beforeEach(() => {
-    vi.spyOn(globalThis.Math, 'random').mockReturnValue(0.415_591_366_944_480_4)
+    vi.spyOn(globalThis.Math, 'random').mockReturnValue(0.4155913669444804)
 
     // DON'T mock global browser APIs here because it would force consumer projects to add the same mocks.
     // Make the components more robust instead.
@@ -41,3 +44,5 @@ export const setup = () => {
     cleanup()
   })
 }
+
+setup()

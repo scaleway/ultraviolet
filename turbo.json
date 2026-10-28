@@ -53,6 +53,17 @@
       "outputs": ["node_modules/.vite", ".vitest-reports", ".reports"],
       "passThroughEnv": ["VITEST_*", "NODE_*"]
     },
+    "test:browser": {
+      "cache": true,
+      "dependsOn": ["build"],
+      "outputLogs": "new-only",
+      "outputs": ["node_modules/.vite", ".vitest-reports", ".reports"],
+      "passThroughEnv": ["VITEST_*", "NODE_*"]
+    },
+    "test:browser:coverage": {
+      "dependsOn": ["build"],
+      "passThroughEnv": ["VITEST_*"]
+    },
     "test:unit:coverage": {
       "dependsOn": ["build"],
       "passThroughEnv": ["VITEST_*"]

@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { SettingsIcon } from '@ultraviolet/icons'
 import { consoleThemesMap } from '@ultraviolet/themes'
@@ -35,10 +35,11 @@ describe('tooltip - A11y', { tags: ['a11y'] }, () => {
       await userEvent.tab()
 
       const tooltipPortal = screen.getByRole('tooltip', { name: 'test success!' })
-      expect(tooltipPortal).toBeVisible()
+      // the tooltip fades in and out, so wait for the transition instead of asserting immediately
+      await waitFor(() => expect(tooltipPortal).toBeVisible())
 
       await userEvent.keyboard('{Escape}')
-      expect(tooltipPortal).not.toBeVisible()
+      await waitFor(() => expect(tooltipPortal).not.toBeVisible())
     })
 
     it('should link the tooltip to a focusable wrapper div if there is no interactive element inside', async () => {
@@ -69,7 +70,7 @@ describe('tooltip - A11y', { tags: ['a11y'] }, () => {
 
       const tooltip = await screen.findByText('hoverable content')
       await userEvent.hover(tooltip)
-      expect(tooltip).toBeVisible()
+      await waitFor(() => expect(tooltip).toBeVisible())
     })
   })
 

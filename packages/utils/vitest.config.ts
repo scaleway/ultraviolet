@@ -1,13 +1,10 @@
-import { createVitestConfig } from '@utils/test/config'
-import { mergeConfig } from 'vite'
+import { createVitestProjectsConfig } from '@utils/test/config'
 import viteConfig from './vite.config'
 
-export default mergeConfig(
-  viteConfig,
-  createVitestConfig({
-    test: {
-      name: 'utils',
-      setupFiles: ['./vitest.setup.ts'],
-    },
-  }),
-)
+export default createVitestProjectsConfig({
+  plugins: [...viteConfig.plugins],
+  unit: {
+    name: 'unit',
+    setupFiles: ['./vitest.setup.ts'],
+  },
+})

@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations, renderWithTheme } from '@utils/test'
@@ -48,8 +48,9 @@ describe('tag - A11y', { tags: ['a11y'] }, () => {
 
       const copyButton = screen.getByRole('button', { name: 'test' })
       await user.click(copyButton)
-
-      expect(copyButton).toHaveAccessibleDescription('Copied!')
+      await waitFor(() => {
+        expect(copyButton).toHaveAccessibleDescription('Copied!')
+      })
     })
   })
 

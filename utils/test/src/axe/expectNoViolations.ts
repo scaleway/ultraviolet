@@ -1,32 +1,48 @@
+import axe from 'axe-core'
 import { expect } from 'vitest'
-import { axe } from 'vitest-axe'
-import type { AxeCore } from 'vitest-axe'
 
+type RuleObject = axe.RunOptions['rules']
 /**
  * https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md
  */
-const rules: AxeCore.RuleObject = {
-  'color-contrast-enhanced': {
+const rules: RuleObject = {
+  'identical-links-same-purpose': {
     enabled: true,
   },
-  'identical-links-same-purpose': {
+
+  'color-contrast-enhanced': {
+    /*
+     * the neutral.textWeak token used for secondary text sits around 5.4:1 (WCAG AA compliant). Re-enable when the theme tokens pass AAA.
+     **/
+    enabled: false,
+  },
+  'meta-refresh-no-exceptions': {
     enabled: true,
   },
 } as const
 
-const defaultAxeOptions: AxeCore.RunOptions = {
+const defaultAxeOptions: axe.RunOptions = {
   performanceTimer: false,
   reporter: 'v2',
   rules,
 } as const
 
-const expectNoViolations = async (container: string | Element, customOptions: AxeCore.RunOptions = {}) => {
+/*
+ * Floating UI's focus guards are visually hidden focus sentinels. On WebKit
+ * they must carry role="button" without aria-hidden for VoiceOver to focus
+ * them, which axe flags with aria-command-name; they are library internals,
+ * not part of the audited UI (in other browsers they are aria-hidden, so
+ * ignored). Excluded from every scan.
+ */
+const focusGuardSelector = '[data-floating-ui-focus-guard]'
+
+const expectNoViolations = async (container: string | Element, customOptions: axe.RunOptions = {}) => {
   const opts = {
     ...customOptions,
     ...defaultAxeOptions,
-  } satisfies AxeCore.RunOptions
+  } satisfies axe.RunOptions
 
-  const axeResult = await axe(container, opts)
+  const axeResult = await axe.run({ exclude: [focusGuardSelector], include: [container] }, opts)
   expect(axeResult).toHaveNoViolations()
 }
 

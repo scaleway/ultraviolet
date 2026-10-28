@@ -3,17 +3,14 @@ import { userEvent } from '@testing-library/user-event'
 import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations, renderWithTheme } from '@utils/test'
 import { useRef } from 'react'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { Popup } from '..'
 import { Modal } from '../../../Modal'
 
-// jsdom doesn't implement focus({ preventScroll }), which makes Floating UI skip
-// restoring focus on dismiss. Reading the option lets its feature detection see
-// the same support as a real browser.
-const originalFocus = Reflect.get(HTMLElement.prototype, 'focus')
-HTMLElement.prototype.focus = function focus(this: HTMLElement, options?: FocusOptions) {
-  return originalFocus.call(this, { ...options, preventScroll: options?.preventScroll })
-}
+// Floating UI focuses through a rAF-deferred queue. On loaded CI runners the
+// webkit instance can take well over the 1s waitFor default to reach the
+// settled focus, so focus assertions wait for up to 5s instead.
+const FOCUS_WAIT_TIMEOUT = 5_000
 
 const renderPopup = (
   {
@@ -39,19 +36,6 @@ const renderPopup = (
 
 describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {
-    // jsdom reports an "Apple" vendor, which makes Floating UI's focus guards take
-    // the Safari-only role="button" path: empty, nameless sentinels that axe flags.
-    // Run as a non-Safari browser, where the guards are aria-hidden.
-    const appleVendor = Object.getOwnPropertyDescriptor(navigator, 'vendor')
-    beforeEach(() => {
-      Object.defineProperty(navigator, 'vendor', { value: '', configurable: true })
-    })
-    afterEach(() => {
-      if (appleVendor) {
-        Object.defineProperty(navigator, 'vendor', appleVendor)
-      }
-    })
-
     // the panel is portaled to document.body, so scan the whole body
     it.for([...consoleThemesMap.entries()])(
       'should not have violations when open (theme: %s)',
@@ -76,11 +60,13 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       const popup = screen.getByRole('dialog')
       expect(trigger).toHaveAttribute('aria-expanded', 'true')
       expect(trigger).toHaveAttribute('aria-controls', popup.id)
-      expect(popup).toBeVisible()
+      // The panel fades in via an animation, so visibility settles asynchronously.
+      await waitFor(() => expect(popup).toBeVisible())
       expect(popup).toHaveTextContent('Content')
 
       await userEvent.click(trigger)
-      expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+      // The panel plays its exit animation before unmounting.
+      await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
     })
 
     it('should not add a tab stop on the wrapper when the trigger is focusable', () => {
@@ -121,7 +107,7 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       trigger.focus()
       await userEvent.keyboard('{Enter}')
 
-      expect(screen.getByRole('dialog')).toBeVisible()
+      await waitFor(() => expect(screen.getByRole('dialog')).toBeVisible())
     })
 
     it('should close on Escape and return focus to the trigger', async () => {
@@ -129,11 +115,13 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       const trigger = screen.getByRole('button', { name: 'Open' })
 
       await userEvent.click(trigger)
-      expect(screen.getByRole('dialog')).toBeVisible()
+      await waitFor(() => expect(screen.getByRole('dialog')).toBeVisible())
 
       await userEvent.keyboard('{Escape}')
-      expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
-      expect(trigger).toHaveFocus()
+      await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
+      // Focus returns through the same deferred path as the initial focus:
+      // allow for slow frames on loaded CI runners (webkit especially).
+      await waitFor(() => expect(trigger).toHaveFocus(), { timeout: FOCUS_WAIT_TIMEOUT })
     })
 
     it('should close only the popup and not an enclosing Modal on Escape', async () => {
@@ -152,12 +140,28 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       )
 
       await userEvent.click(screen.getByRole('button', { name: 'Open' }))
-      expect(screen.getByText('Content')).toBeVisible()
+      await waitFor(
+        () => {
+          const content = screen.getByText('Content')
+          expect(content).toBeVisible()
+        },
+        {
+          timeout: FOCUS_WAIT_TIMEOUT,
+        },
+      )
 
       await userEvent.keyboard('{Escape}')
 
-      expect(screen.queryByText('Content')).not.toBeInTheDocument()
+      await waitFor(() => expect(screen.queryByText('Content')).not.toBeInTheDocument())
       expect(onClose).not.toHaveBeenCalled()
+
+      // The Modal listens for Escape keyup on its dialog element, so the keyup
+      // must originate inside the modal. Focus returns to the trigger through
+      // Floating UI's rAF-deferred queue, which can lag behind the unmount on
+      // loaded webkit runners — press only once focus is back inside.
+      await waitFor(() => expect(screen.getByRole('button', { name: 'Open' })).toHaveFocus(), {
+        timeout: FOCUS_WAIT_TIMEOUT,
+      })
 
       await userEvent.keyboard('{Escape}')
       expect(onClose).toHaveBeenCalledOnce()
@@ -168,11 +172,19 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       const trigger = screen.getByRole('button', { name: 'Open' })
 
       await userEvent.click(trigger)
-      expect(screen.getByRole('dialog')).toBeVisible()
+      await waitFor(
+        async () => {
+          const dialog = screen.getByRole('dialog')
+          expect(dialog).toBeVisible()
+        },
+        { timeout: FOCUS_WAIT_TIMEOUT },
+      )
 
       await userEvent.click(document.body)
-      expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
-      expect(trigger).toHaveFocus()
+      await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
+      // Focus returns through the same deferred path as the initial focus:
+      // allow for slow frames on loaded CI runners (webkit especially).
+      await waitFor(() => expect(trigger).toHaveFocus(), { timeout: FOCUS_WAIT_TIMEOUT })
     })
   })
 
@@ -210,7 +222,13 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       const trigger = screen.getByRole('button', { name: 'Open' })
       await userEvent.click(trigger)
 
-      await waitFor(() => expect(screen.getByRole('button', { name: 'First' })).toHaveFocus())
+      // Floating UI lands the initial focus on the next animation frame.
+      // WebKit on a loaded CI runner can take over a second to reach it, so
+      // the assertion needs more headroom than the 1s default to observe the
+      // settled state instead of the transient one.
+      await waitFor(() => expect(screen.getByRole('button', { name: 'First' })).toHaveFocus(), {
+        timeout: FOCUS_WAIT_TIMEOUT,
+      })
     })
 
     it('should move focus to the initialFocus element when specified', async () => {
@@ -236,7 +254,9 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
 
       await userEvent.click(screen.getByRole('button', { name: 'Open' }))
 
-      await waitFor(() => expect(screen.getByRole('button', { name: 'Second' })).toHaveFocus())
+      await waitFor(() => expect(screen.getByRole('button', { name: 'Second' })).toHaveFocus(), {
+        timeout: FOCUS_WAIT_TIMEOUT,
+      })
     })
 
     it('should keep focus on the trigger when initialFocus is -1', async () => {
@@ -275,7 +295,9 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
 
       await userEvent.click(screen.getByRole('button', { name: 'Open' }))
 
-      await waitFor(() => expect(screen.getByRole('button', { name: 'Second' })).toHaveFocus())
+      await waitFor(() => expect(screen.getByRole('button', { name: 'Second' })).toHaveFocus(), {
+        timeout: FOCUS_WAIT_TIMEOUT,
+      })
     })
 
     it('should not move focus into the panel when returnFocus is false', async () => {
@@ -304,7 +326,9 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       const trigger = screen.getByRole('button', { name: 'Open' })
       await userEvent.click(trigger)
 
-      await waitFor(() => expect(screen.getByRole('dialog')).toHaveFocus())
+      await waitFor(() => expect(screen.getByRole('dialog')).toHaveFocus(), {
+        timeout: FOCUS_WAIT_TIMEOUT,
+      })
     })
   })
 

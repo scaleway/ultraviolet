@@ -73,7 +73,13 @@ The line is thin, but split files by intent:
 - **`a11y.test.tsx`** — accessibility-only concerns: axe violations, keyboard
   navigation, focus management, ARIA attributes. Query by role to _trigger_ those
   checks, but assert on a11y outcomes (`expect(axe).toHaveNoViolations()`, focus
-  landing, etc.).
+  landing, etc.). These files are **excluded from the jsdom `unit` project and only
+  run in Vitest Browser Mode** (`pnpm test:browser` in the package, the `browser`
+  project in `vitest.config.ts`), where axe can check rules
+  that need real layout like `color-contrast`. The page gets the theme
+  background via `@ultraviolet/themes/global` imported in
+  `@utils/test/browser-setup` — don't remove it. Animations/transitions DO run
+  in the real browser: wait with `waitFor` before asserting visibility.
 - **Regular `*.test.tsx`** — behavior: does the component render and respond.
   `getByRole` here asserts _behavior_; labels/descriptions/roles are matched as a
   side effect of finding the element a user interacts with, not asserted directly.
@@ -112,6 +118,15 @@ then prove every behavior (state, props, interaction) with assertions.
 
 `shouldMatchSnapshot` from `@utils/test` locks markup, not behavior, and is **deprecated**.
 It is acceptable only as an initial-DOM lock; otherwise assert what the variant changes.
+
+### Locale-dependent output
+
+Node resolves its locale and timezone at process start, so output formatted with the system
+locale (`toLocaleDateString(undefined, ...)`, `new Intl.DateTimeFormat(undefined, ...)`) is
+only deterministic if the environment is pinned before the process starts. The pin lives once
+in `@utils/test`'s config (`env: { LC_ALL, TZ }` in the unit project defaults, injected by
+vitest when spawning the worker processes) — never add `LC_ALL`/`TZ` prefixes to test scripts.
+The browser project doesn't need it: playwright's `contextOptions` set `locale`/`timezoneId`.
 
 ### Rewriting a snapshot-only test
 

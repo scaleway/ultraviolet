@@ -4,7 +4,6 @@ export {
   MockResizeObserver,
   renderWithTheme,
   resetUserEvent,
-  setup,
   shouldMatchSnapshot,
 } from './vitest'
 
