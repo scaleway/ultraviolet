@@ -84,7 +84,7 @@ export const UnitInput = ({
 
   const localId = id ?? uniqueId
 
-  if (value !== previousValue) {
+  if (!Object.is(value, previousValue)) {
     setPreviousValue(value)
     if (value !== undefined) {
       setVal(value)
