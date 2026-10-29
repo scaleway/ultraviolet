@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.29.1
+
+### Patch Changes
+
+- [#7090](https://github.com/scaleway/ultraviolet/pull/7090) [`8fd33e8`](https://github.com/scaleway/ultraviolet/commit/8fd33e8c322654abff7a0a89da9cd1797533a7ff) Thanks [@philibea](https://github.com/philibea)! - `UnitInput`: fix infinite re-render loop when a controlled `value` becomes `NaN` (`NaN !== NaN` never converged in the render-phase prop sync; now compared with `Object.is`)
+
+- [#7073](https://github.com/scaleway/ultraviolet/pull/7073) [`418e554`](https://github.com/scaleway/ultraviolet/commit/418e55443d497b0563d3828771047b0314c31d37) Thanks [@lisalupi](https://github.com/lisalupi)! - `DateInput`: use popup v2
+
 ## 3.29.0
 
 ### Minor Changes
