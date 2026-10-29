@@ -24,7 +24,6 @@ AdditionalInfo.args = {
   name: 'example',
   placeholder: 'Select item',
   placeholderSearch: 'Search in list',
-  searchable: false,
 }
 
 AdditionalInfo.parameters = {
