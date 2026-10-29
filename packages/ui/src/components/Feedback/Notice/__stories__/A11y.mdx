@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Feedback/Notice/A11y" />
+
+# Notice - Accessibility
+
+## Description
+
+A non-interactive feedback component that displays a short informational message alongside an info icon. It always uses the neutral sentiment and is rendered as a `<span>`, intended to be placed inline within surrounding content as static "more information".
+
+## Summary
+
+1. ✅ **Perceivable**: decorative icon is hidden from assistive technologies, text contrast and resize behavior are correct
+2. ✅ **Operable**: non-interactive, no keyboard interaction required
+3. ✅ **Understandable**: content is readable and no change of context is triggered
+4. ✅ **Robust**: static non-interactive content, no role or live-region semantics required
+
+## ARIA Pattern
+
+No specific ARIA pattern applies. The [ARIA Alert Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) targets dynamically rendered, time-sensitive messages that must be announced by screen readers. The Notice is static supplementary content ("more information"), so it is not a live region and needs no `role="alert"` or `role="status".
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - The message is rendered as text and the icon is decorative (`aria-hidden="true"` by default via the `Icon` component), so no extraneous or duplicate content is exposed to assistive technologies.
+- ✅ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The sentiment is fixed to `neutral`; no meaning is conveyed through color alone.
+- ✅ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - The `caption` weak text uses the theme neutral color which meets contrast requirements on the default background. Note: at 12px this is "small text", requiring the stricter 4.5:1 ratio, which the neutral colors satisfy.
+- ✅ [WCAG 1.4.4 - Resize Text (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html) - The `caption` variant uses `rem` units (`0.75rem`, i.e. 12px), so the text scales with browser zoom and root font-size settings up to 200% without loss of content. WCAG sets no minimum font size, so 12px is compliant.
+- ✅ [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - The neutral info icon has sufficient contrast against the background.
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The Notice is static, non-interactive content rather than a user interface component, so no role or accessible name is required.
+- ✅ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - The Notice is static and does not change dynamically, so it is not a status message and no live-region role is required.
+
+To apply when using the component:
+
+- [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - If the consumer passes interactive content (e.g., a link or button inside the children, as in the `ComplexChildren` story), those elements must be keyboard accessible. Use native interactive components (e.g., `Link`, `Button`) which already satisfy this.
+- [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - If a consumer uses the Notice to announce a change dynamically (e.g., after an action, with text that is inserted or replaced at runtime), it stops being a simple notice and must be wrapped in a live region (`role="status"` or `role="alert"`). The `Text` component supports a `role` prop restricted to `'status' | 'alert'` for this case.
+
+## Accessibility issues
+
+None.
