@@ -45,7 +45,7 @@ To apply when using the component:
 
 - **`warning` sentiment fails non-text contrast on light themes (WCAG 1.4.11)** - The warning status is nearly invisible on light backgrounds for users with low vision. Requires a theme color adjustment to reach 3:1.
 
-- **No `prefers-reduced-motion` handling for the `animated` ping (WCAG 2.3.3, AAA)** - The infinite ping animation runs regardless of the user's reduced-motion preference (other components in the codebase, e.g. `Skeleton`, `Modal`, `Popup`, already handle this). Disable or slow the animation under `prefers-reduced-motion: reduce`.
+- **No `prefers-reduced-motion` handling for the `animated` ping (WCAG 2.3.3, AAA)** - The infinite ping animation runs regardless of the user's reduced-motion preference. Rather than fully disabling the animation (which would remove the "in progress" signal), add a dedicated animation in a `prefers-reduced-motion: reduce` block that keeps a subtle state indication without motion: disable the `transform` (drop the expanding scale) and replace it with a smooth opacity animation lasting more than 3 seconds. An alternative is a `steps()` timing function, which replaces the continuous motion with discrete, clock-like steps that still read as "in progress" while avoiding smooth movement.
 
 **Low:**
 
