@@ -13,6 +13,7 @@ export const Item = ({
   group,
   defaultSearchValue,
   focusedItemRef,
+  initialFocusRef,
   descriptionDirection,
   textVariant,
   optionalInfoPlacement,
@@ -22,6 +23,7 @@ export const Item = ({
   group?: string
   defaultSearchValue: string | null
   focusedItemRef: RefObject<HTMLDivElement | null>
+  initialFocusRef?: RefObject<HTMLElement | null>
   descriptionDirection: 'column' | 'row'
   textVariant: 'body' | 'bodySmall'
   optionalInfoPlacement: 'left' | 'right'
@@ -82,7 +84,14 @@ export const Item = ({
             })
           }
         }}
-        ref={option.value === defaultSearchValue || option.searchText === defaultSearchValue ? focusedItemRef : null}
+        ref={element => {
+          const matchesDefaultSearch = option.value === defaultSearchValue || option.searchText === defaultSearchValue
+          if (matchesDefaultSearch) {
+            focusedItemRef.current = element
+          } else if (initialFocusRef) {
+            initialFocusRef.current = element
+          }
+        }}
         role="option"
         tabIndex={0}
       >

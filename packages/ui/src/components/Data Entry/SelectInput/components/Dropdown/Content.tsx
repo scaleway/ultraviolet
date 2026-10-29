@@ -2,7 +2,7 @@
 
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { useEffect, useRef } from 'react'
-import type { KeyboardEvent, ReactNode } from 'react'
+import type { KeyboardEvent, ReactNode, RefObject } from 'react'
 import { Skeleton } from '../../../../Feedback/Skeleton'
 import { Stack } from '../../../../Layout/Stack'
 import { Text } from '../../../../Typography/Text'
@@ -26,6 +26,7 @@ type CreateDropdownProps = {
   groupEmptyState?: Record<string, ReactNode>
   addOption?: { text: string; onClick: (searchText: string) => void }
   searchable?: boolean
+  initialFocusRef: RefObject<HTMLElement | null>
 }
 
 const moveFocusDown = () => {
@@ -81,8 +82,9 @@ export const CreateDropdown = ({
   groupError,
   addOption,
   searchable,
+  initialFocusRef,
 }: CreateDropdownProps) => {
-  const { displayedOptions, searchInput, size } = useSelectInput()
+  const { displayedOptions, searchInput, size, selectedData } = useSelectInput()
   const focusedItemRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -169,18 +171,22 @@ export const CreateDropdown = ({
       <SelectAll textVariant={textVariant} />
 
       <Stack gap={0.25} id="items" className={selectInputStyle.dropdownSection}>
-        {displayedOptions.map((option, index) => (
-          <Item
-            defaultSearchValue={defaultSearchValue}
-            descriptionDirection={descriptionDirection}
-            focusedItemRef={focusedItemRef}
-            indexOption={index}
-            key={option.value}
-            option={option}
-            optionalInfoPlacement={optionalInfoPlacement}
-            textVariant={textVariant}
-          />
-        ))}
+        {displayedOptions.map((option, index) => {
+          const isFirstSelected = option.value === selectedData.selectedValues[0]
+          return (
+            <Item
+              defaultSearchValue={defaultSearchValue}
+              descriptionDirection={descriptionDirection}
+              focusedItemRef={focusedItemRef}
+              indexOption={index}
+              initialFocusRef={isFirstSelected ? initialFocusRef : undefined}
+              key={option.value}
+              option={option}
+              optionalInfoPlacement={optionalInfoPlacement}
+              textVariant={textVariant}
+            />
+          )
+        })}
         {loadMore ? <Stack className={selectInputStyle.dropdownLoadMore}>{loadMore}</Stack> : null}
       </Stack>
     </Stack>
@@ -234,21 +240,24 @@ export const CreateDropdown = ({
                   {errorGroup}
                 </Text>
               ) : null}
-              {displayedOptions[group].map((option, indexOption) =>
-                errorGroup ? null : (
+              {displayedOptions[group].map((option, indexOption) => {
+                const isFirstSelected = option.value === selectedData.selectedValues[0]
+
+                return errorGroup ? null : (
                   <Item
                     defaultSearchValue={defaultSearchValue}
                     descriptionDirection={descriptionDirection}
                     focusedItemRef={focusedItemRef}
                     group={group}
                     indexOption={indexOption}
+                    initialFocusRef={isFirstSelected ? initialFocusRef : undefined}
                     key={option.value}
                     option={option}
                     optionalInfoPlacement={optionalInfoPlacement}
                     textVariant={textVariant}
                   />
-                ),
-              )}
+                )
+              })}
             </Stack>
           </Stack>
         ) : null

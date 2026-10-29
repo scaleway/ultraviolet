@@ -1,19 +1,15 @@
 'use client'
 
-import { theme } from '@ultraviolet/themes'
-import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { useContext, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ComponentProps, Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { Stack } from '../../../../Layout/Stack'
-import { ModalContext } from '../../../../Overlay/Modal/ModalProvider'
-import { Popup } from '../../../../Overlay/Popup'
-import { DROPDOWN_MAX_HEIGHT, INPUT_SIZE_HEIGHT } from '../../constants'
+import { Popup } from '../../../../Overlay/Popup/v2'
+import { DROPDOWN_MIN_WIDTH, NON_SEARCHABLE_KEYS } from '../../constants'
 import { useSelectInput } from '../../SelectInputProvider'
 import type { DataType, OptionType } from '../../types'
 import { CreateDropdown } from './Content'
 import { SearchBar } from './SearchBar'
 import { selectInputStyle } from '../../styles.css'
-import { dropdownWidth } from './dropdown.css'
 
 export type DropdownProps = {
   id?: string
@@ -23,36 +19,14 @@ export type DropdownProps = {
   searchable: boolean
   placeholder: string
   footer?: ((closeDropdown: () => void) => ReactNode) | ReactNode
-  refSelect: RefObject<HTMLDivElement | null>
   loadMore?: ReactNode
   optionalInfoPlacement: 'left' | 'right'
   isLoading?: boolean
-  size: 'small' | 'medium' | 'large'
-  dropdownAlign?: ComponentProps<typeof Popup>['align']
-  portalTarget?: ComponentProps<typeof Popup>['portalTarget']
   groupError?: Record<string, ReactNode>
   groupEmptyState?: Record<string, ReactNode>
   addOption?: { text: string; onClick: (searchText: string) => void }
   disabled?: boolean
-}
-
-const NON_SEARCHABLE_KEYS = [
-  'Tab',
-  ' ',
-  'Enter',
-  'CapsLock',
-  'Shift',
-  'ArrowDown',
-  'ArrowUp',
-  'ArrowLeft',
-  'ArrowRight',
-  'Escape',
-]
-
-const resolveVar = (value: string) => {
-  const varName = /var\(([^)]+)\)/.exec(value)?.[1]
-
-  return varName ? getComputedStyle(document.documentElement).getPropertyValue(varName).trim() : value
+  portalTarget?: ComponentProps<typeof Popup.Panel>['portalTarget']
 }
 
 const handleKeyDown = (
@@ -68,7 +42,7 @@ const handleKeyDown = (
   if (
     ref.current &&
     !searchBarActive &&
-    !NON_SEARCHABLE_KEYS.includes(event.key) &&
+    !NON_SEARCHABLE_KEYS.has(event.key) &&
     document.activeElement?.ariaLabel !== 'search-bar'
   ) {
     const currentSearch = search + event.key
@@ -92,27 +66,31 @@ export const Dropdown = ({
   searchable,
   placeholder,
   footer,
-  refSelect,
   loadMore,
   optionalInfoPlacement,
   isLoading,
-  size,
-  dropdownAlign,
-  portalTarget,
   id,
   groupError,
   groupEmptyState,
   addOption,
   disabled,
+  portalTarget,
 }: DropdownProps) => {
-  const { setIsDropdownVisible, isDropdownVisible, onSearch, searchInput, options, displayedOptions, numberOfOptions } =
-    useSelectInput()
+  const {
+    setIsDropdownVisible,
+    isDropdownVisible,
+    onSearch,
+    searchInput,
+    options,
+    displayedOptions,
+    numberOfOptions,
+    selectedData,
+  } = useSelectInput()
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [defaultSearchValue, setDefaultSearchValue] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState('')
-  const [maxWidth, setMaxWidth] = useState(refSelect.current?.offsetWidth ?? '100%')
-  const modalContext = useContext(ModalContext)
+  const initialFocusRef = useRef<HTMLElement | null>(null)
 
   if (!isDropdownVisible) {
     if (defaultSearchValue !== null) {
@@ -122,57 +100,6 @@ export const Dropdown = ({
       setSearch('')
     }
   }
-
-  useLayoutEffect(() => {
-    const { current } = refSelect
-    if (!current || !isDropdownVisible) {
-      return
-    }
-
-    const position =
-      current.getBoundingClientRect().bottom +
-      DROPDOWN_MAX_HEIGHT +
-      Number(resolveVar(theme.sizing[INPUT_SIZE_HEIGHT[size]]).replace('rem', '')) * 16 +
-      Number.parseInt(resolveVar(theme.space['5']), 10)
-    const overflow = position - window.innerHeight + 32
-
-    if (overflow > 0 && modalContext) {
-      const currentModal = modalContext.openedModals[0]
-      const modalElement = currentModal?.ref.current
-
-      if (modalElement) {
-        const parentElement = modalElement.parentNode
-
-        if (parentElement instanceof HTMLElement) {
-          parentElement.scrollBy({
-            behavior: 'smooth',
-            top: overflow,
-          })
-        } else {
-          modalElement.scrollBy({
-            behavior: 'smooth',
-            top: overflow,
-          })
-        }
-      } else {
-        window.scrollBy({ behavior: 'smooth', top: overflow })
-      }
-    }
-  }, [isDropdownVisible, refSelect, size, modalContext])
-
-  useEffect(() => {
-    const onResize = () => {
-      const { current } = refSelect
-      if (current && current.getBoundingClientRect().width > 0 && current.getBoundingClientRect().width !== maxWidth) {
-        setMaxWidth(current.getBoundingClientRect().width)
-      }
-    }
-
-    onResize()
-    window.addEventListener('resize', onResize)
-
-    return () => window.removeEventListener('resize', onResize)
-  }, [maxWidth, refSelect])
 
   useEffect(() => {
     if (!searchInput) {
@@ -193,7 +120,7 @@ export const Dropdown = ({
         document.removeEventListener('keydown', eventKeydown)
       }
     }
-  }, [searchBarActive, options, onSearch, search, refSelect, setDefaultSearchValue, searchable])
+  }, [searchBarActive, options, search, setDefaultSearchValue, searchable])
 
   // No data is displayed (because of the search or because no data is provided)
   // Set to true when noData by default
@@ -227,27 +154,19 @@ export const Dropdown = ({
   }, [isEmpty, footer, setIsDropdownVisible])
 
   return (
-    <Popup
-      align={dropdownAlign ?? 'start'}
-      className={selectInputStyle.dropdown}
-      containerFullWidth
-      debounceDelay={0}
-      disableAnimation
-      hasArrow={false}
-      hideOnClickOutside
-      id={id}
-      maxWidth={maxWidth ?? refSelect.current?.offsetWidth}
-      onClose={() => setIsDropdownVisible(false)}
-      placement="bottom"
-      portalTarget={portalTarget}
-      ref={ref}
-      // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role
-      role="dialog"
-      style={assignInlineVars({
-        [dropdownWidth]: typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth,
-      })}
-      tabIndex={-1}
-      text={
+    <Popup.Root visible={isDropdownVisible && !disabled} onOpenChange={setIsDropdownVisible}>
+      <Popup.Trigger>{children}</Popup.Trigger>
+      <Popup.Panel
+        id={id}
+        ref={ref}
+        className={selectInputStyle.dropdown}
+        placement="bottom"
+        matchTriggerMaxWidth
+        matchTriggerWidth
+        minWidth={DROPDOWN_MIN_WIDTH}
+        portalTarget={portalTarget}
+        initialFocus={searchable || selectedData.selectedValues.length === 0 ? undefined : initialFocusRef}
+      >
         <Stack>
           {searchable && !isLoading ? (
             <SearchBar
@@ -263,6 +182,7 @@ export const Dropdown = ({
             emptyState={emptyState}
             groupEmptyState={groupEmptyState}
             groupError={groupError}
+            initialFocusRef={initialFocusRef}
             isEmpty={isEmpty}
             isLoading={isLoading}
             loadMore={loadMore}
@@ -271,10 +191,7 @@ export const Dropdown = ({
           />
           {computedFooter}
         </Stack>
-      }
-      visible={!disabled && isDropdownVisible}
-    >
-      {children}
-    </Popup>
+      </Popup.Panel>
+    </Popup.Root>
   )
 }

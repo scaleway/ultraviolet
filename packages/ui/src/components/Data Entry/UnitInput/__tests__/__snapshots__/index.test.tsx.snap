@@ -14,13 +14,14 @@ exports[`unitInput > renders click 1`] = `
       >
         <div
           class="styles__bjgo2pb"
+          data-floating-ui-inert=""
           id="input-field"
         >
           <input
             aria-invalid="false"
             class="styles_medium__bjgo2p3 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_18_"
+            id="_r_1g_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -35,17 +36,16 @@ exports[`unitInput > renders click 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_1c_"
-            aria-describedby="_r_1c_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
+              data-floating-ui-inert=""
             >
               <div
-                aria-controls="_r_1c_"
+                aria-controls="_r_1m_"
                 aria-expanded="true"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_medium__1xo4j4bb selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
                 data-disabled="false"
                 data-readonly="false"
@@ -78,111 +78,31 @@ exports[`unitInput > renders click 1`] = `
                   </svg>
                 </div>
               </div>
+              <span
+                aria-hidden="true"
+                style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+                tabindex="-1"
+              />
             </div>
-            <div
-              class="dropdown__1hff1el1 styles__10e61c24"
-              id="_r_1c_"
-              role="dialog"
-              style="--_1eslcyd0: -5px; --_1eslcyd1: 0px; --_1eslcyd2: rotate(180deg); --_1eslcyd4: translate3d(0px, 4px, 0); --_1eslcyd5: 0ms; --_1eslcyd6: translate3d(0px, 4px, 0); --_1eslcyd7: 100%; --_1hff1el0: 100%; opacity: 1;"
-            >
-              <div
-                class="styles__10e61c22"
-              >
-                <div
-                  class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
-                >
-                  <div
-                    class="dropdown__1hff1el2 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
-                    id="select-dropdown"
-                    role="listbox"
-                  >
-                    <div
-                      class="dropdown__1hff1el8 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.125rem_xxsmall__xf61n45d"
-                      id="items"
-                    >
-                      <div
-                        aria-disabled="false"
-                        aria-label="kb"
-                        aria-selected="false"
-                        class="dropdown__1hff1elc dropdown__1hff1elb dropdown__1hff1ela dropdown_size_medium__1hff1elf"
-                        data-testid="option-kb"
-                        id="option-0"
-                        role="option"
-                        tabindex="0"
-                      >
-                        <div
-                          class="styles__xf61n40 styles_alignItems_normal_xxsmall__xf61n41 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
-                          data-testid="option-stack-kb"
-                        >
-                          <div
-                            class="dropdown__1hff1elo styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_space-between_xxsmall__xf61n477"
-                          >
-                            <span
-                              class="dropdown__1hff1eln style__1do42ls0 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a"
-                              style="--textAlign__1giziax0: left;"
-                            >
-                              KB
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        aria-disabled="false"
-                        aria-label="mb"
-                        aria-selected="false"
-                        class="dropdown__1hff1elc dropdown__1hff1elb dropdown__1hff1ela dropdown_size_medium__1hff1elf"
-                        data-testid="option-mb"
-                        id="option-1"
-                        role="option"
-                        tabindex="0"
-                      >
-                        <div
-                          class="styles__xf61n40 styles_alignItems_normal_xxsmall__xf61n41 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
-                          data-testid="option-stack-mb"
-                        >
-                          <div
-                            class="dropdown__1hff1elo styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_space-between_xxsmall__xf61n477"
-                          >
-                            <span
-                              class="dropdown__1hff1eln style__1do42ls0 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a"
-                              style="--textAlign__1giziax0: left;"
-                            >
-                              MB
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        aria-disabled="false"
-                        aria-label="gb"
-                        aria-selected="false"
-                        class="dropdown__1hff1elc dropdown__1hff1elb dropdown__1hff1ela dropdown_size_medium__1hff1elf"
-                        data-testid="option-gb"
-                        id="option-2"
-                        role="option"
-                        tabindex="0"
-                      >
-                        <div
-                          class="styles__xf61n40 styles_alignItems_normal_xxsmall__xf61n41 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
-                          data-testid="option-stack-gb"
-                        >
-                          <div
-                            class="dropdown__1hff1elo styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j styles_justifyContent_space-between_xxsmall__xf61n477"
-                          >
-                            <span
-                              class="dropdown__1hff1eln style__1do42ls0 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a"
-                              style="--textAlign__1giziax0: left;"
-                            >
-                              GB
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <span
+              data-floating-ui-focus-guard=""
+              data-type="outside"
+              role="button"
+              style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+              tabindex="0"
+            />
+            <span
+              aria-owns="_r_1s_"
+              data-floating-ui-inert=""
+              style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
+            />
+            <span
+              data-floating-ui-focus-guard=""
+              data-type="outside"
+              role="button"
+              style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
+              tabindex="0"
+            />
           </div>
         </div>
       </div>
@@ -226,17 +146,14 @@ exports[`unitInput > renders with default props 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_4_"
-            aria-describedby="_r_4_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
             >
               <div
-                aria-controls="_r_4_"
                 aria-expanded="false"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -291,7 +208,7 @@ exports[`unitInput > renders with default value 1`] = `
       >
         <label
           class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-          for="_r_6e_"
+          for="_r_7g_"
         />
         <span
           class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a"
@@ -312,7 +229,7 @@ exports[`unitInput > renders with default value 1`] = `
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
             disabled=""
-            id="_r_6e_"
+            id="_r_7g_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -328,17 +245,14 @@ exports[`unitInput > renders with default value 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_6m_"
-            aria-describedby="_r_6m_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
             >
               <div
-                aria-controls="_r_6m_"
                 aria-expanded="false"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="true"
                 data-readonly="false"
@@ -400,7 +314,7 @@ exports[`unitInput > renders with disabled and placeHolder 1`] = `
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
             disabled=""
-            id="_r_28_"
+            id="_r_2l_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -415,17 +329,14 @@ exports[`unitInput > renders with disabled and placeHolder 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_2c_"
-            aria-describedby="_r_2c_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
             >
               <div
-                aria-controls="_r_2c_"
                 aria-expanded="false"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="true"
                 data-readonly="false"
@@ -487,7 +398,7 @@ exports[`unitInput > renders with dropdownAlign center 1`] = `
             aria-invalid="false"
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_2i_"
+            id="_r_31_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -502,17 +413,14 @@ exports[`unitInput > renders with dropdownAlign center 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_2m_"
-            aria-describedby="_r_2m_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
             >
               <div
-                aria-controls="_r_2m_"
                 aria-expanded="false"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -571,11 +479,11 @@ exports[`unitInput > renders with error  and success 1`] = `
           id="input-field"
         >
           <input
-            aria-describedby="_r_3l_"
+            aria-describedby="_r_4a_"
             aria-invalid="true"
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_3k_"
+            id="_r_49_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -603,18 +511,15 @@ exports[`unitInput > renders with error  and success 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_3o_"
-            aria-describedby="_r_3o_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
             >
               <div
-                aria-controls="_r_3o_"
-                aria-describedby="_r_3l_"
+                aria-describedby="_r_4a_"
                 aria-expanded="false"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -653,7 +558,7 @@ exports[`unitInput > renders with error  and success 1`] = `
       </div>
       <span
         class="style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_danger__1do42ls9 style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_48__1do42ls2m"
-        id="_r_3l_"
+        id="_r_4a_"
         role="status"
       >
         helper
@@ -680,11 +585,11 @@ exports[`unitInput > renders with error 1`] = `
           id="input-field"
         >
           <input
-            aria-describedby="_r_39_"
+            aria-describedby="_r_3s_"
             aria-invalid="true"
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_38_"
+            id="_r_3r_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -712,18 +617,15 @@ exports[`unitInput > renders with error 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_3c_"
-            aria-describedby="_r_3c_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
             >
               <div
-                aria-controls="_r_3c_"
-                aria-describedby="_r_39_"
+                aria-describedby="_r_3s_"
                 aria-expanded="false"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -762,7 +664,7 @@ exports[`unitInput > renders with error 1`] = `
       </div>
       <span
         class="style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_danger__1do42ls9 style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_48__1do42ls2m"
-        id="_r_39_"
+        id="_r_3s_"
         role="status"
       >
         error
@@ -785,7 +687,7 @@ exports[`unitInput > renders with label and label information 1`] = `
       >
         <label
           class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-          for="_r_5i_"
+          for="_r_6g_"
         >
           label
         </label>
@@ -808,7 +710,7 @@ exports[`unitInput > renders with label and label information 1`] = `
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
             disabled=""
-            id="_r_5i_"
+            id="_r_6g_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -823,17 +725,14 @@ exports[`unitInput > renders with label and label information 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_5q_"
-            aria-describedby="_r_5q_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
             >
               <div
-                aria-controls="_r_5q_"
                 aria-expanded="false"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="true"
                 data-readonly="false"
@@ -885,7 +784,7 @@ exports[`unitInput > renders with label and no label information 1`] = `
     >
       <label
         class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-        for="_r_56_"
+        for="_r_62_"
       >
         label
       </label>
@@ -902,7 +801,7 @@ exports[`unitInput > renders with label and no label information 1`] = `
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
             disabled=""
-            id="_r_56_"
+            id="_r_62_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -917,17 +816,14 @@ exports[`unitInput > renders with label and no label information 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_5c_"
-            aria-describedby="_r_5c_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
             >
               <div
-                aria-controls="_r_5c_"
                 aria-expanded="false"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="true"
                 data-readonly="false"
@@ -989,7 +885,7 @@ exports[`unitInput > renders with min max 1`] = `
             aria-invalid="false"
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_a_"
+            id="_r_c_"
             max="100"
             min="10"
             name="-value"
@@ -1004,17 +900,14 @@ exports[`unitInput > renders with min max 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_e_"
-            aria-describedby="_r_e_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
             >
               <div
-                aria-controls="_r_e_"
                 aria-expanded="false"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -1069,7 +962,7 @@ exports[`unitInput > renders with no label and label information 1`] = `
       >
         <label
           class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-          for="_r_60_"
+          for="_r_70_"
         />
         <span
           class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a"
@@ -1090,7 +983,7 @@ exports[`unitInput > renders with no label and label information 1`] = `
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
             disabled=""
-            id="_r_60_"
+            id="_r_70_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -1105,17 +998,14 @@ exports[`unitInput > renders with no label and label information 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_68_"
-            aria-describedby="_r_68_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
             >
               <div
-                aria-controls="_r_68_"
                 aria-expanded="false"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="true"
                 data-readonly="false"
@@ -1177,7 +1067,7 @@ exports[`unitInput > renders with size large 1`] = `
             aria-invalid="false"
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_1u_"
+            id="_r_29_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -1192,17 +1082,14 @@ exports[`unitInput > renders with size large 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_22_"
-            aria-describedby="_r_22_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
             >
               <div
-                aria-controls="_r_22_"
                 aria-expanded="false"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -1264,7 +1151,7 @@ exports[`unitInput > renders with size medioum 1`] = `
             aria-invalid="false"
             class="styles_medium__bjgo2p3 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_u_"
+            id="_r_14_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -1279,17 +1166,14 @@ exports[`unitInput > renders with size medioum 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_12_"
-            aria-describedby="_r_12_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
             >
               <div
-                aria-controls="_r_12_"
                 aria-expanded="false"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_medium__1xo4j4bb selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -1351,7 +1235,7 @@ exports[`unitInput > renders with size small 1`] = `
             aria-invalid="false"
             class="styles_small__bjgo2p4 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_k_"
+            id="_r_o_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -1366,17 +1250,14 @@ exports[`unitInput > renders with size small 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_o_"
-            aria-describedby="_r_o_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
             >
               <div
-                aria-controls="_r_o_"
                 aria-expanded="false"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_small__1xo4j4bc selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -1435,11 +1316,11 @@ exports[`unitInput > renders with success 1`] = `
           id="input-field"
         >
           <input
-            aria-describedby="_r_2t_"
+            aria-describedby="_r_3e_"
             aria-invalid="false"
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_2s_"
+            id="_r_3d_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -1467,18 +1348,15 @@ exports[`unitInput > renders with success 1`] = `
           style="--bjgo2p0: 12.6rem;"
         >
           <div
-            aria-controls="_r_30_"
-            aria-describedby="_r_30_"
-            class="styles__10e61c29 styles_fullWidth_true__10e61c2b"
-            tabindex="-1"
+            class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
           >
             <div
-              class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+              class="styles__12tze4lb"
             >
               <div
-                aria-controls="_r_30_"
-                aria-describedby="_r_2t_"
+                aria-describedby="_r_3e_"
                 aria-expanded="false"
+                aria-haspopup="dialog"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -1517,7 +1395,7 @@ exports[`unitInput > renders with success 1`] = `
       </div>
       <span
         class="style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_success__1do42lse style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_56__1do42ls2u"
-        id="_r_2t_"
+        id="_r_3e_"
         role="status"
       >
         text
