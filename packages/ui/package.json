@@ -67,7 +67,7 @@
     "size": "size-limit",
     "test:unit": "vitest --run --project unit",
     "test:unit:coverage": "pnpm test:unit --coverage",
-    "test:browser": "vitest --run --project browser",
+    "test:browser": "vitest --run --project browser --project visual",
     "test:browser:coverage": "pnpm test:browser --coverage",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",

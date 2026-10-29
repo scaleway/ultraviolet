@@ -1,9 +1,8 @@
 import { mkdtempSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
-import { playwright } from '@vitest/browser-playwright'
-import { configDefaults } from 'vitest/config'
 import type { ViteUserConfig } from 'vitest/config'
+import { browserProjectShared } from './browserShared.ts'
 
 /*
  * Playwright's bundled Firefox (before 1.65) resolves its app-data from the
@@ -18,10 +17,7 @@ if (process.platform === 'darwin' && !process.env['CFFIXED_USER_HOME']) {
 }
 
 export const browserProjectConfig = {
-  optimizeDeps: {
-    exclude: ['@vanilla-extract/recipes', '@vanilla-extract/sprinkles'],
-    include: ['@vanilla-extract/css', '@vanilla-extract/css/fileScope', '@vitest/coverage-istanbul'],
-  },
+  optimizeDeps: browserProjectShared.optimizeDeps,
   test: {
     tags: [
       {
@@ -33,13 +29,7 @@ export const browserProjectConfig = {
     browser: {
       headless: true,
       enabled: true,
-      provider: playwright({
-        contextOptions: {
-          locale: 'en-US',
-          timezoneId: 'UTC',
-          reducedMotion: 'reduce',
-        },
-      }),
+      provider: browserProjectShared.provider,
       instances: [
         {
           browser: 'chromium',
@@ -53,13 +43,7 @@ export const browserProjectConfig = {
       ],
     },
     include: ['src/**/__tests__/a11y.test.tsx'],
-    exclude: [
-      ...configDefaults.exclude,
-      '**/node_modules/**',
-      '**/{dist,build}/**',
-      '**/__stories__/**',
-      '**.stories.*',
-    ],
+    exclude: browserProjectShared.exclude,
     testTimeout: 30_000,
     outputFile: {
       junit: '.reports/tests-browser.xml',

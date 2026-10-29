@@ -87,6 +87,38 @@ The line is thin, but split files by intent:
 If a test's real question is "is this accessible?", it's an a11y test. If it's
 "does this work?", it's a regular test. Same query tools, different intent.
 
+### visual.test.tsx — visual regression (screenshot) tests
+
+Screenshot tests live in `src/components/<Name>/__tests__/visual.test.tsx`,
+tagged `{ tags: ['visual'] }`, and only run in the `visual` project
+(`pnpm test:browser` in the package): real chromium via Playwright, references
+compared with `toMatchScreenshot`.
+
+- Screenshot an **element or locator**, not the whole page — lock the component,
+  not the viewport:
+  ```tsx
+  import { page } from 'vitest/browser'
+
+  it('keeps the default button identical', async () => {
+    renderWithTheme(<Button variant="primary">OK</Button>)
+    await expect(page.getByRole('button', { name: 'OK' })).toMatchScreenshot('button-primary.png')
+  })
+  ```
+  (`page` comes from `vitest/browser` — Vitest 5 resolves that specifier to the
+  in-browser virtual module; `@vitest/browser/context` is a node-side stub.)
+- References are committed under `__screenshots__/<test file>/` next to the test
+  (`<name>-chromium-<platform>.png` — one per OS, regenerate per platform).
+- First run without a reference **writes it and fails on purpose**: review the
+  PNG, run again — green. Update stale references with
+  `vitest --run --project visual --update` (never with `CI=true` set).
+- In CI the reference is never rewritten: a mismatch or missing reference fails
+  the run, and actual/diff images land in the ignored `.vitest/` directory.
+- Keep screenshots **text-free when possible** (icons, shapes, colors): fonts
+  render differently per OS, so text-bearing references are only as portable as
+  the platform they were generated on.
+- Baselines for the other platform come from the Playwright docker image
+  (`mcr.microsoft.com/playwright:<version>`), matching CI's Linux runners.
+
 ### Prefer semantic matchers over attribute checks
 
 `toHaveAttribute` tests the implementation (an attribute on an element); jest-dom's
