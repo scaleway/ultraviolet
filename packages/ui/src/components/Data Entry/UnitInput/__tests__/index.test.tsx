@@ -1,7 +1,8 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, it } from 'vitest'
+import { useState } from 'react'
+import { describe, expect, it, vi } from 'vitest'
 import { UnitInput } from '..'
 
 const options = [
@@ -221,4 +222,29 @@ describe('unitInput', () => {
         value={1}
       />,
     ))
+
+  it('handles a controlled value becoming NaN', async () => {
+    const onChange = vi.fn()
+    const ControlledUnitInput = () => {
+      const [amount, setAmount] = useState(0)
+      return (
+        <UnitInput
+          label="Amount"
+          onChange={value => {
+            onChange(value)
+            setAmount(value)
+          }}
+          onChangeUnitValue={() => {}}
+          options={options}
+          value={amount}
+        />
+      )
+    }
+    renderWithTheme(<ControlledUnitInput />)
+    const input = screen.getByLabelText('Amount')
+    await userEvent.type(input, '1')
+    await userEvent.clear(input)
+    expect(onChange).toHaveBeenLastCalledWith(Number.NaN)
+    expect(input).toHaveValue(null)
+  })
 })
