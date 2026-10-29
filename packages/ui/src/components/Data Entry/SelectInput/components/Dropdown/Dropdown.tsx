@@ -27,6 +27,7 @@ export type DropdownProps = {
   addOption?: { text: string; onClick: (searchText: string) => void }
   disabled?: boolean
   portalTarget?: ComponentProps<typeof Popup.Panel>['portalTarget']
+  listboxId: string
 }
 
 const handleKeyDown = (
@@ -75,6 +76,7 @@ export const Dropdown = ({
   addOption,
   disabled,
   portalTarget,
+  listboxId,
 }: DropdownProps) => {
   const {
     setIsDropdownVisible,
@@ -186,6 +188,7 @@ export const Dropdown = ({
             loadMore={loadMore}
             optionalInfoPlacement={optionalInfoPlacement}
             searchable={searchable}
+            listboxId={listboxId}
           />
           {computedFooter}
         </Stack>

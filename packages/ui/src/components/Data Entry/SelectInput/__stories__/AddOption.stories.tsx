@@ -2,40 +2,35 @@ import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { SelectInput } from '..'
 import { Stack } from '../../../Layout/Stack'
+import type { OptionType } from '../types'
 import { dataGrouped, dataUnGrouped } from './resources'
 import { Template } from './Template.stories'
 
 export const AddOption: StoryFn<typeof SelectInput> = args => {
-  const [addOptionDataUngrouped, setDataUngrouped] = useState(dataUnGrouped)
+  const [addOptionDataUngrouped, setAddOptionDataUngrouped] = useState(dataUnGrouped)
   const [valueUngrouped, setValueUngrouped] = useState('')
   const onClickUngrouped = (text: string) => {
-    setDataUngrouped(oldData => [{ label: text, value: text }, ...oldData])
+    setAddOptionDataUngrouped(oldData => [{ label: text, value: text }, ...oldData])
     setValueUngrouped(text)
   }
   const onChangeUngrouped = (value: string) => {
     if (dataUnGrouped.some(data => data.value === value)) {
-      setDataUngrouped(dataUnGrouped)
+      setAddOptionDataUngrouped(dataUnGrouped)
       setValueUngrouped(value)
     }
   }
 
-  const [addOptionDataGrouped, setDataGrouped] = useState(dataGrouped)
+  const [addOptionDataGrouped, setAddOptionDataGrouped] = useState<Record<string, OptionType[]>>(dataGrouped)
   const [valueGrouped, setValueGrouped] = useState('')
   const onClickGrouped = (text: string) => {
     const groupUserCreated =
       '' in addOptionDataGrouped
         ? {
-            '': [
-              ...(addOptionDataGrouped[''] as {
-                label: string
-                value: string
-              }[]),
-              { label: text, value: text },
-            ],
+            '': [...addOptionDataGrouped[''], { label: text, value: text }],
           }
         : { '': [{ label: text, value: text }] }
 
-    setDataGrouped(oldData => ({
+    setAddOptionDataGrouped(oldData => ({
       ...groupUserCreated,
       ...oldData,
     }))
@@ -46,15 +41,15 @@ export const AddOption: StoryFn<typeof SelectInput> = args => {
       '' in addOptionDataGrouped &&
       !(addOptionDataGrouped[''] as { value: string }[]).some((data: { value: string }) => data.value === value)
     ) {
-      setDataGrouped(dataGrouped)
+      setAddOptionDataGrouped(dataGrouped)
       setValueGrouped(value)
     }
   }
 
-  const [addOptionDataMulti, setDataMulti] = useState(dataUnGrouped)
+  const [addOptionDataMulti, setAddOptionDataMulti] = useState(dataUnGrouped)
   const [valueMulti, setValueMulti] = useState<string[]>([])
   const onClickMulti = (text: string) => {
-    setDataMulti(oldData => [{ label: text, value: text }, ...oldData])
+    setAddOptionDataMulti(oldData => [{ label: text, value: text }, ...oldData])
     setValueMulti(oldValue => [...oldValue])
   }
   const onChangeMulti = (value: string[]) => {
@@ -62,16 +57,15 @@ export const AddOption: StoryFn<typeof SelectInput> = args => {
       data => value.includes(data.value) || dataUnGrouped.some(val => val.value === data.value),
     )
 
-    setDataMulti(newDataMulti)
+    setAddOptionDataMulti(newDataMulti)
     setValueMulti(value)
   }
 
   return (
     <Stack direction="column" gap={2} width="50%">
       <SelectInput
-        {...args}
         addOption={{ onClick: onClickUngrouped, text: 'Create' }}
-        label="Search for a new value (ungrouped data)"
+        accessibleLabel="Search for a new value (ungrouped data)"
         onChange={onChangeUngrouped}
         options={addOptionDataUngrouped}
         placeholderSearch="Search or enter a value"
@@ -101,7 +95,6 @@ export const AddOption: StoryFn<typeof SelectInput> = args => {
 AddOption.args = {
   ...Template.args,
   options: {},
-  searchable: true,
 }
 
 AddOption.decorators = [
