@@ -35,8 +35,8 @@ Modal.args = {
   options: dataGrouped,
   placeholder: 'Select item',
   placeholderSearch: 'Search in list',
-  searchable: true,
 }
+
 Modal.decorators = [
   StoryComponent => (
     <div style={{ height: '80px' }}>

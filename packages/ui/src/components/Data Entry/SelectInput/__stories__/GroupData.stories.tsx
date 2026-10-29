@@ -22,7 +22,6 @@ export const GroupData: StoryFn<typeof SelectInput> = args => (
       label="Group empty state"
       optionalInfoPlacement="right"
       options={dataGrouped}
-      searchable
     />
     <SelectInput
       {...args}
@@ -42,7 +41,6 @@ GroupData.args = {
   name: 'example',
   placeholder: 'Select item',
   placeholderSearch: 'Search in list',
-  searchable: false,
 }
 
 GroupData.parameters = {

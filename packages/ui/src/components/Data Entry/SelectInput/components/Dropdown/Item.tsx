@@ -1,5 +1,6 @@
 import { cn } from '@ultraviolet/utils'
 import type { ChangeEvent, KeyboardEvent, MouseEvent, RefObject } from 'react'
+import { useId } from 'react'
 import { Tooltip } from '../../../../Overlay/Tooltip'
 import { Checkbox } from '../../../Checkbox'
 import { useSelectInput } from '../../SelectInputProvider'
@@ -9,7 +10,6 @@ import { selectInputStyle } from '../../styles.css'
 
 export const Item = ({
   option,
-  indexOption,
   group,
   defaultSearchValue,
   focusedItemRef,
@@ -29,13 +29,14 @@ export const Item = ({
   optionalInfoPlacement: 'left' | 'right'
 }) => {
   const { setIsDropdownVisible, onChange, multiselect, setSelectedData, selectedData, size } = useSelectInput()
+  const id = useId()
 
   const handleClick = ({
     clickedOption,
     event,
   }: {
     clickedOption: OptionType
-    event: MouseEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement> | ChangeEvent<HTMLDivElement>
+    event: MouseEvent<HTMLElement> | KeyboardEvent<HTMLElement> | ChangeEvent<HTMLElement>
   }) => {
     event.stopPropagation()
 
@@ -56,8 +57,9 @@ export const Item = ({
     <Tooltip containerFullWidth text={option.tooltip}>
       <div
         aria-disabled={!!option.disabled}
-        aria-label={option.value}
         aria-selected={selectedData.selectedValues.includes(option.value) && !option.disabled}
+        // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role - options must be inside a `select` and can't be styled accross all browsers
+        role="option"
         className={cn(
           selectInputStyle.dropdownItem({
             disabled: !!option.disabled,
@@ -66,7 +68,7 @@ export const Item = ({
           }),
         )}
         data-testid={`option-${option.value}`}
-        id={`option-${indexOption}`}
+        id={id}
         onClick={event => {
           if (!option.disabled) {
             handleClick({
@@ -92,7 +94,6 @@ export const Item = ({
             initialFocusRef.current = element
           }
         }}
-        role="option"
         tabIndex={0}
       >
         {multiselect ? (

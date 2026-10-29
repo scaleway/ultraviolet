@@ -21,15 +21,19 @@ export const AddOption = ({
 }) => {
   const { setIsDropdownVisible, multiselect, onSearch, searchInput, setSearchInput } = useSelectInput()
 
+  if (!addOption || !searchable || !(isEmpty || searchInput)) {
+    return null
+  }
+
   const handleClickCustomValue = () => {
     const newOption = { label: searchInput, value: searchInput }
-    addOption?.onClick(searchInput)
+    addOption.onClick(searchInput)
     onSearch([newOption])
     setIsDropdownVisible(multiselect)
     setSearchInput('')
   }
 
-  return addOption && searchable && (isEmpty || searchInput) ? (
+  return (
     <div
       aria-selected="false"
       className={selectInputStyle.comboboxCreate}
@@ -51,5 +55,5 @@ export const AddOption = ({
         textVariant={textVariant}
       />
     </div>
-  ) : null
+  )
 }

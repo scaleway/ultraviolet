@@ -14,5 +14,4 @@ Template.args = {
   name: 'example',
   placeholder: 'Select item',
   placeholderSearch: 'Search in list',
-  searchable: true,
 }

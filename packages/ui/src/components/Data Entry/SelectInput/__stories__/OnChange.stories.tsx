@@ -69,7 +69,6 @@ export const OnChange: StoryFn<typeof SelectInput> = args => {
         multiselect
         onChange={onChange}
         options={options}
-        searchable={false}
         value={values2}
       />
     </>
@@ -83,7 +82,6 @@ OnChange.args = {
   name: 'example',
   placeholder: 'Select item',
   placeholderSearch: 'Search in list',
-  searchable: true,
 }
 
 OnChange.parameters = {

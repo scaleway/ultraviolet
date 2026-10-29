@@ -27,6 +27,7 @@ type CreateDropdownProps = {
   addOption?: { text: string; onClick: (searchText: string) => void }
   searchable?: boolean
   initialFocusRef: RefObject<HTMLElement | null>
+  listboxId: string
 }
 
 const moveFocusDown = () => {
@@ -83,6 +84,7 @@ export const CreateDropdown = ({
   addOption,
   searchable,
   initialFocusRef,
+  listboxId,
 }: CreateDropdownProps) => {
   const { displayedOptions, searchInput, size, selectedData } = useSelectInput()
   const focusedItemRef = useRef<HTMLDivElement>(null)
@@ -116,7 +118,7 @@ export const CreateDropdown = ({
     return (
       <Stack
         className={selectInputStyle.dropdownContainer}
-        id="select-dropdown"
+        id={listboxId}
         onKeyDown={handleKeyDownSelect}
         role="listbox"
       >
@@ -152,12 +154,7 @@ export const CreateDropdown = ({
   }
 
   return Array.isArray(displayedOptions) ? (
-    <Stack
-      className={selectInputStyle.dropdownContainer}
-      id="select-dropdown"
-      onKeyDown={handleKeyDownSelect}
-      role="listbox"
-    >
+    <Stack className={selectInputStyle.dropdownContainer} id={listboxId} onKeyDown={handleKeyDownSelect} role="listbox">
       <AddOption
         addOption={addOption}
         option={{
@@ -194,7 +191,7 @@ export const CreateDropdown = ({
     <Stack
       className={selectInputStyle.dropdownContainer}
       data-grouped
-      id="select-dropdown"
+      id={listboxId}
       onKeyDown={handleKeyDownSelect}
       role="listbox"
     >
