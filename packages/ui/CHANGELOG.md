@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.29.2
+
+### Patch Changes
+
+- [#7095](https://github.com/scaleway/ultraviolet/pull/7095) [`2204026`](https://github.com/scaleway/ultraviolet/commit/220402659faf22a248e4c3c0d9b5b4c782bd3c71) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: fix dropdown style (CSS specificity issue) by removing unwanted style in the `Popup`
+  
+  Fix `Menu` stories
+
 ## 3.29.1
 
 ### Patch Changes
