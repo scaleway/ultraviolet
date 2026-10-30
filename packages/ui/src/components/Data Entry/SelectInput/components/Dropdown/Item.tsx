@@ -13,6 +13,8 @@ export const Item = ({
   group,
   defaultSearchValue,
   focusedItemRef,
+  isActive,
+  onFocus,
   initialFocusRef,
   descriptionDirection,
   textVariant,
@@ -23,6 +25,8 @@ export const Item = ({
   group?: string
   defaultSearchValue: string | null
   focusedItemRef: RefObject<HTMLDivElement | null>
+  isActive: boolean
+  onFocus: () => void
   initialFocusRef?: RefObject<HTMLElement | null>
   descriptionDirection: 'column' | 'row'
   textVariant: 'body' | 'bodySmall'
@@ -86,6 +90,7 @@ export const Item = ({
             })
           }
         }}
+        onFocus={onFocus}
         ref={element => {
           const matchesDefaultSearch = option.value === defaultSearchValue || option.searchText === defaultSearchValue
           if (matchesDefaultSearch) {
@@ -94,7 +99,7 @@ export const Item = ({
             initialFocusRef.current = element
           }
         }}
-        tabIndex={0}
+        tabIndex={isActive ? 0 : -1}
       >
         {multiselect ? (
           <Checkbox

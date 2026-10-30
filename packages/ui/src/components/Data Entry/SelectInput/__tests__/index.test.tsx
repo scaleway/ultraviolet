@@ -580,6 +580,30 @@ describe('selectInput', () => {
     expect(mercury).toHaveFocus()
   })
 
+  it('uses roving tab stops for options', async () => {
+    renderWithTheme(<SelectInput name="test" options={dataUnGrouped} placeholder="placeholder" />)
+
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    expect(dropdown).toBeVisible()
+    expect(screen.getByRole('textbox', { name: 'search-bar' })).toHaveFocus()
+
+    await userEvent.keyboard('[arrowDown]')
+    const mercury = screen.getByRole('option', { name: 'Mercury' })
+    const venus = screen.getByRole('option', { name: 'Venus' })
+
+    expect(mercury).toHaveFocus()
+    expect(mercury).toHaveAttribute('tabindex', '0')
+    expect(venus).toHaveAttribute('tabindex', '-1')
+
+    await userEvent.keyboard('[arrowDown]')
+
+    expect(venus).toHaveFocus()
+    expect(mercury).toHaveAttribute('tabindex', '-1')
+    expect(venus).toHaveAttribute('tabindex', '0')
+  })
+
   it('handles correctly dropdown with arrow pressing enter or space', async () => {
     renderWithTheme(
       <SelectInput
