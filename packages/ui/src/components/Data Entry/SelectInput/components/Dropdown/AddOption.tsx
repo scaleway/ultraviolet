@@ -38,7 +38,7 @@ export const AddOption = ({
       aria-selected="false"
       className={selectInputStyle.comboboxCreate}
       data-testid="add-option"
-      id="add-option"
+      data-type="add-option"
       onClick={handleClickCustomValue}
       onKeyDown={event => {
         if (['Enter', ' '].includes(event.key)) {

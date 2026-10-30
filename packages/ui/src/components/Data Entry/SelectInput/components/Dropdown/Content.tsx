@@ -1,7 +1,7 @@
 'use client'
 
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { KeyboardEvent, ReactNode, RefObject } from 'react'
 import { Skeleton } from '../../../../Feedback/Skeleton'
 import { Stack } from '../../../../Layout/Stack'
@@ -89,6 +89,7 @@ export const CreateDropdown = ({
 }: CreateDropdownProps) => {
   const { displayedOptions, searchInput, size, selectedData } = useSelectInput()
   const focusedItemRef = useRef<HTMLDivElement>(null)
+  const [focusedOptionValue, setFocusedOptionValue] = useState<string | null>(null)
 
   useEffect(() => {
     if (defaultSearchValue && focusedItemRef?.current) {
@@ -176,14 +177,17 @@ export const CreateDropdown = ({
       />
       <SelectAll textVariant={textVariant} />
 
-      <Stack gap={0.25} id="items" className={selectInputStyle.dropdownSection}>
+      <Stack gap={0.25} data-type="items" className={selectInputStyle.dropdownSection}>
         {displayedOptions.map((option, index) => {
           const isFirstSelected = option.value === selectedData.selectedValues[0]
           return (
             <Item
               descriptionDirection={descriptionDirection}
               indexOption={index}
+              isActive={focusedOptionValue === option.value}
+              initialFocusRef={isFirstSelected ? initialFocusRef : undefined}
               key={option.value}
+              onFocus={() => setFocusedOptionValue(option.value)}
               option={option}
               optionalInfoPlacement={optionalInfoPlacement}
               ref={getItemRef(option, isFirstSelected)}
@@ -222,7 +226,7 @@ export const CreateDropdown = ({
         return hasElements || emptyStateGroup ? (
           <Stack gap={0.25} key={group} className={selectInputStyle.dropdownSection}>
             <Group group={group} index={index} />
-            <Stack gap="0.25" id="items">
+            <Stack gap="0.25" data-type="items">
               {!hasElements && emptyStateGroup ? (
                 <Text
                   as="span"
@@ -252,7 +256,10 @@ export const CreateDropdown = ({
                     descriptionDirection={descriptionDirection}
                     group={group}
                     indexOption={indexOption}
+                    isActive={focusedOptionValue === option.value}
+                    initialFocusRef={isFirstSelected ? initialFocusRef : undefined}
                     key={option.value}
+                    onFocus={() => setFocusedOptionValue(option.value)}
                     option={option}
                     optionalInfoPlacement={optionalInfoPlacement}
                     ref={getItemRef(option, isFirstSelected)}
