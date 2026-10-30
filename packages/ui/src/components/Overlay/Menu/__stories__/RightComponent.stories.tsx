@@ -5,6 +5,7 @@ import { Template } from './Template.stories'
 export const RightComponent = Template.bind({})
 
 RightComponent.args = {
+  ...Template.args,
   children: [
     <Menu.Item
       borderless
