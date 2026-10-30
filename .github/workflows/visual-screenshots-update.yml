@@ -1,0 +1,45 @@
+name: Update visual screenshots
+
+# Regenerates the committed screenshot references (linux/chromium only) on the
+# selected branch and pushes them back as a single commit. Run it from the
+# Actions tab, "Run workflow", on your PR branch — after an intentional visual
+# change, or when CI fails with a missing or mismatched reference.
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: update-visual-screenshots-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+env:
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+  TURBO_CACHE: remote:r
+
+jobs:
+  update:
+    runs-on: ubuntu-26.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: pnpm/setup@fa36a5ef7dcdefc3a7cb25655c122e00cf6e636e # v3.1.2
+        with:
+          cache: true
+          require-lockfile: true
+      - uses: ./.github/actions/setup-playwright
+        with:
+          install-args: chromium
+      - run: pnpm turbo run test:visual -- --update
+      - name: Commit updated references
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- ':(glob)packages/**/__screenshots__/**'
+          if git diff --staged --quiet; then
+            echo "No screenshot reference changed."
+          else
+            git commit -m "chore(visual): update screenshot references"
+            git push
+          fi

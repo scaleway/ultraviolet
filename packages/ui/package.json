@@ -69,6 +69,7 @@
     "test:unit:coverage": "pnpm test:unit --coverage",
     "test:browser": "vitest --run --project browser --project visual",
     "test:browser:coverage": "pnpm test:browser --coverage",
+    "test:visual": "vitest --run --project visual",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "watch": "pnpm run '/^watch:.*/'",

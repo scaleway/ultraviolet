@@ -108,13 +108,18 @@ reference is a `-chromium-linux.png`.
   (`page` comes from `vitest/browser` — Vitest 5 resolves that specifier to the
   in-browser virtual module; `@vitest/browser/context` is a node-side stub.)
 - References are committed under `__screenshots__/<test file>/` next to the test.
-- **Updating a reference** (intentional visual change, or a new screenshot):
-  push the branch — CI's `test_browser` job fails with the rendered reference
-  uploaded as the `visual-screenshot-references` artifact. Download it, copy
+  Packages with visual tests declare a `test:visual` script (see `packages/ui`),
+  which the update job runs across the repo through turbo.
+- **Updating references** (intentional visual change, or a new screenshot):
+  run the **Update visual screenshots** workflow from the Actions tab on your
+  PR branch — it re-renders every reference on linux/chromium and pushes them
+  back as a `chore(visual): update screenshot references` commit. Manual
+  fallback: the failed `test_browser` job uploads the rendered reference as
+  the `visual-screenshot-references` artifact; copy
   `<name>-reference-chromium-linux.png` to
-  `__screenshots__/<test file dir>/<name>-chromium-linux.png`, commit, push.
-  Never regenerate references on macOS; local `test:browser` runs only the
-  accessibility project there.
+  `__screenshots__/<test file dir>/<name>-chromium-linux.png` and commit it
+  yourself. Never regenerate references on macOS; local `test:browser` runs
+  only the accessibility project there.
 - In CI the reference is never rewritten: a mismatch or missing reference
   fails the run.
 - Keep screenshots **text-free when possible** (icons, shapes, colors): CI
