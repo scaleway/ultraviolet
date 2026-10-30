@@ -9,8 +9,8 @@ import { browserProjectShared } from './browserShared.ts'
  * never compare or write them. On linux without a reference the first run
  * writes it and fails on purpose: review the PNG, then run again. `CI=true`
  * never writes references, it only compares — mismatch/actual/diff images
- * land in the ignored `.vitest/` directory; CI uploads them as artifacts so
- * the new reference can be committed.
+ * land in the ignored `test-results/attachments/` directory; CI uploads
+ * them as artifacts so the new reference can be committed.
  */
 export const visualProjectConfig = {
   optimizeDeps: browserProjectShared.optimizeDeps,

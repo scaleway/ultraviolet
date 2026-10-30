@@ -3,6 +3,10 @@ import type { TestUserConfig } from 'vitest/config'
 
 // Root-only options: they apply to the whole test run, not to a single project.
 export const globalTestOptions = {
+  // Non-hidden (`.vitest/` would be skipped by CI's upload-artifact globber)
+  // and already gitignored; projects inherit this location for the
+  // screenshot references, actuals and diffs they write on failure.
+  attachmentsDir: 'test-results/attachments',
   coverage: {
     exclude: [
       ...(configDefaults.coverage.exclude ?? []),
