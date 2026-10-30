@@ -111,11 +111,15 @@ reference is a `-chromium-linux.png`.
   Packages with visual tests declare a `test:visual` script (see `packages/ui`),
   which the update job runs across the repo through turbo.
 - **Updating references** (intentional visual change, or a new screenshot):
-  run the **Update visual screenshots** workflow from the Actions tab on your
-  PR branch — it re-renders every reference on linux/chromium and pushes them
-  back as a `chore(visual): update screenshot references` commit. Manual
-  fallback: the failed `test_browser` job uploads the rendered reference as
-  the `visual-screenshot-references` artifact; copy
+  add the **visual-ci-update** label to the PR — or, once the workflow has
+  reached main, run **Visual CI Update** from the Actions tab — the job
+  re-renders every reference on linux/chromium and pushes them back as a
+  `chore(visual): update screenshot references` commit, then removes the label
+  so it can be re-added. (The label exists because GitHub only dispatches
+  `workflow_dispatch` workflows that already exist on the default branch.)
+  The bot push does not re-trigger CI — follow it with any push to re-verify.
+  Manual fallback: the failed `test_browser` job uploads the rendered
+  reference as the `visual-screenshot-references` artifact; copy
   `<name>-reference-chromium-linux.png` to
   `__screenshots__/<test file dir>/<name>-chromium-linux.png` and commit it
   yourself. Never regenerate references on macOS; local `test:browser` runs
