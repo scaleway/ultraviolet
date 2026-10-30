@@ -1,7 +1,7 @@
 'use client'
 
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { KeyboardEvent, ReactNode, RefObject } from 'react'
 import { Skeleton } from '../../../../Feedback/Skeleton'
 import { Stack } from '../../../../Layout/Stack'
@@ -27,6 +27,7 @@ type CreateDropdownProps = {
   addOption?: { text: string; onClick: (searchText: string) => void }
   searchable?: boolean
   initialFocusRef: RefObject<HTMLElement | null>
+  listboxId: string
 }
 
 const moveFocusDown = () => {
@@ -83,9 +84,11 @@ export const CreateDropdown = ({
   addOption,
   searchable,
   initialFocusRef,
+  listboxId,
 }: CreateDropdownProps) => {
   const { displayedOptions, searchInput, size, selectedData } = useSelectInput()
   const focusedItemRef = useRef<HTMLDivElement>(null)
+  const [focusedOptionValue, setFocusedOptionValue] = useState<string | null>(null)
 
   useEffect(() => {
     if (defaultSearchValue && focusedItemRef?.current) {
@@ -116,7 +119,7 @@ export const CreateDropdown = ({
     return (
       <Stack
         className={selectInputStyle.dropdownContainer}
-        id="select-dropdown"
+        id={listboxId}
         onKeyDown={handleKeyDownSelect}
         role="listbox"
       >
@@ -152,12 +155,7 @@ export const CreateDropdown = ({
   }
 
   return Array.isArray(displayedOptions) ? (
-    <Stack
-      className={selectInputStyle.dropdownContainer}
-      id="select-dropdown"
-      onKeyDown={handleKeyDownSelect}
-      role="listbox"
-    >
+    <Stack className={selectInputStyle.dropdownContainer} id={listboxId} onKeyDown={handleKeyDownSelect} role="listbox">
       <AddOption
         addOption={addOption}
         option={{
@@ -170,7 +168,7 @@ export const CreateDropdown = ({
       />
       <SelectAll textVariant={textVariant} />
 
-      <Stack gap={0.25} id="items" className={selectInputStyle.dropdownSection}>
+      <Stack gap={0.25} data-type="items" className={selectInputStyle.dropdownSection}>
         {displayedOptions.map((option, index) => {
           const isFirstSelected = option.value === selectedData.selectedValues[0]
           return (
@@ -179,8 +177,10 @@ export const CreateDropdown = ({
               descriptionDirection={descriptionDirection}
               focusedItemRef={focusedItemRef}
               indexOption={index}
+              isActive={focusedOptionValue === option.value}
               initialFocusRef={isFirstSelected ? initialFocusRef : undefined}
               key={option.value}
+              onFocus={() => setFocusedOptionValue(option.value)}
               option={option}
               optionalInfoPlacement={optionalInfoPlacement}
               textVariant={textVariant}
@@ -194,7 +194,7 @@ export const CreateDropdown = ({
     <Stack
       className={selectInputStyle.dropdownContainer}
       data-grouped
-      id="select-dropdown"
+      id={listboxId}
       onKeyDown={handleKeyDownSelect}
       role="listbox"
     >
@@ -218,7 +218,7 @@ export const CreateDropdown = ({
         return hasElements || emptyStateGroup ? (
           <Stack gap={0.25} key={group} className={selectInputStyle.dropdownSection}>
             <Group group={group} index={index} />
-            <Stack gap="0.25" id="items">
+            <Stack gap="0.25" data-type="items">
               {!hasElements && emptyStateGroup ? (
                 <Text
                   as="span"
@@ -250,8 +250,10 @@ export const CreateDropdown = ({
                     focusedItemRef={focusedItemRef}
                     group={group}
                     indexOption={indexOption}
+                    isActive={focusedOptionValue === option.value}
                     initialFocusRef={isFirstSelected ? initialFocusRef : undefined}
                     key={option.value}
+                    onFocus={() => setFocusedOptionValue(option.value)}
                     option={option}
                     optionalInfoPlacement={optionalInfoPlacement}
                     textVariant={textVariant}

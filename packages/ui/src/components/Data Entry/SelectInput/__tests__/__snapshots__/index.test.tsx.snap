@@ -6,15 +6,14 @@ exports[`selectInput > renders correctly 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
         class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
       >
         <label
-          class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-          for="_r_0_"
+          class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+          id="_r_1_"
         >
           label
         </label>
@@ -24,7 +23,7 @@ exports[`selectInput > renders correctly 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="dialog"
-            aria-label="label"
+            aria-labelledby="_r_1_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
             data-disabled="false"
             data-readonly="false"
@@ -70,7 +69,6 @@ exports[`selectInput > renders correctly disabled 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -82,11 +80,12 @@ exports[`selectInput > renders correctly disabled 1`] = `
           <div
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_s8_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="true"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_of_"
+            id="_r_s7_"
             role="combobox"
             tabindex="0"
           >
@@ -127,7 +126,6 @@ exports[`selectInput > renders correctly grouped 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -138,14 +136,15 @@ exports[`selectInput > renders correctly grouped 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_39_"
+            aria-controls="_r_3t_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_3o_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_35_"
+            id="_r_3n_"
             role="combobox"
             tabindex="0"
           >
@@ -187,7 +186,7 @@ exports[`selectInput > renders correctly grouped 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_3f_"
+          aria-owns="_r_43_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -210,7 +209,6 @@ exports[`selectInput > renders correctly loadMore 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -222,11 +220,12 @@ exports[`selectInput > renders correctly loadMore 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="dialog"
+            aria-labelledby="_r_rf_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_nq_"
+            id="_r_re_"
             role="combobox"
             tabindex="0"
           >
@@ -267,7 +266,6 @@ exports[`selectInput > renders correctly loading - grouped data 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -278,14 +276,15 @@ exports[`selectInput > renders correctly loading - grouped data 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_4dt_"
+            aria-controls="_r_511_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_50s_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_4dp_"
+            id="_r_50r_"
             role="combobox"
             tabindex="0"
           >
@@ -327,7 +326,7 @@ exports[`selectInput > renders correctly loading - grouped data 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_4e3_"
+          aria-owns="_r_517_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -350,7 +349,6 @@ exports[`selectInput > renders correctly loading - ungrouped data 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -361,14 +359,15 @@ exports[`selectInput > renders correctly loading - ungrouped data 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_4e8_"
+            aria-controls="_r_51e_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_519_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_4e4_"
+            id="_r_518_"
             role="combobox"
             tabindex="0"
           >
@@ -410,7 +409,7 @@ exports[`selectInput > renders correctly loading - ungrouped data 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_4ee_"
+          aria-owns="_r_51k_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -433,7 +432,6 @@ exports[`selectInput > renders correctly multiselect 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -444,14 +442,15 @@ exports[`selectInput > renders correctly multiselect 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_9c_"
+            aria-controls="_r_b1_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_as_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_98_"
+            id="_r_ar_"
             role="combobox"
             tabindex="0"
           >
@@ -529,7 +528,7 @@ exports[`selectInput > renders correctly multiselect 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_9o_"
+          aria-owns="_r_bd_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -552,7 +551,6 @@ exports[`selectInput > renders correctly not clearable 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -564,11 +562,12 @@ exports[`selectInput > renders correctly not clearable 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="dialog"
+            aria-labelledby="_r_1b_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_14_"
+            id="_r_1a_"
             role="combobox"
             tabindex="0"
           >
@@ -608,7 +607,6 @@ exports[`selectInput > renders correctly readOnly 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -619,14 +617,15 @@ exports[`selectInput > renders correctly readOnly 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_qk_"
+            aria-controls="_r_uq_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_ul_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_readOnly_true__1xo4j4b9 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="true"
             data-testid="select-input-test"
-            id="_r_qg_"
+            id="_r_uk_"
             role="combobox"
             tabindex="0"
           >
@@ -668,7 +667,7 @@ exports[`selectInput > renders correctly readOnly 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_qq_"
+          aria-owns="_r_v0_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -691,7 +690,6 @@ exports[`selectInput > renders correctly required 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -702,14 +700,15 @@ exports[`selectInput > renders correctly required 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_ot_"
+            aria-controls="_r_sp_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_sk_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_op_"
+            id="_r_sj_"
             role="combobox"
             tabindex="0"
           >
@@ -751,7 +750,7 @@ exports[`selectInput > renders correctly required 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_p3_"
+          aria-owns="_r_sv_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -774,15 +773,14 @@ exports[`selectInput > renders correctly small 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
         class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
       >
         <label
-          class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmallStrong__1do42lsl style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-          for="_r_c_"
+          class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmallStrong__1do42lsl style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+          id="_r_f_"
         >
           label
         </label>
@@ -792,12 +790,12 @@ exports[`selectInput > renders correctly small 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="dialog"
-            aria-label="label"
+            aria-labelledby="_r_f_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_small__1xo4j4bc selectBar_state_neutral__1xo4j4be"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_c_"
+            id="_r_e_"
             role="combobox"
             tabindex="0"
           >
@@ -838,7 +836,6 @@ exports[`selectInput > renders correctly unclosable tags when readonly 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -850,11 +847,12 @@ exports[`selectInput > renders correctly unclosable tags when readonly 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="dialog"
+            aria-labelledby="_r_1ji_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_readOnly_true__1xo4j4b9 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
             data-disabled="false"
             data-readonly="true"
             data-testid="select-input-test"
-            id="_r_1cs_"
+            id="_r_1jh_"
             role="combobox"
             tabindex="0"
           >
@@ -909,7 +907,6 @@ exports[`selectInput > renders correctly ungrouped 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -920,14 +917,15 @@ exports[`selectInput > renders correctly ungrouped 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_1i_"
+            aria-controls="_r_1s_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_1n_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_1e_"
+            id="_r_1m_"
             role="combobox"
             tabindex="0"
           >
@@ -969,7 +967,7 @@ exports[`selectInput > renders correctly ungrouped 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_1o_"
+          aria-owns="_r_22_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -992,7 +990,6 @@ exports[`selectInput > renders correctly with default value 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1003,14 +1000,15 @@ exports[`selectInput > renders correctly with default value 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_5a_"
+            aria-controls="_r_69_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_64_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_56_"
+            id="_r_63_"
             role="combobox"
             tabindex="0"
           >
@@ -1051,7 +1049,7 @@ exports[`selectInput > renders correctly with default value 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_5g_"
+          aria-owns="_r_6f_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1074,7 +1072,6 @@ exports[`selectInput > renders correctly with emptyState 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="emptystate"
       class="styles__ei8oq30"
     >
       <div
@@ -1085,14 +1082,15 @@ exports[`selectInput > renders correctly with emptyState 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_o8_"
+            aria-controls="_r_s0_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_rr_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-emptystate"
-            id="_r_o4_"
+            id="_r_rq_"
             role="combobox"
             tabindex="0"
           >
@@ -1134,7 +1132,7 @@ exports[`selectInput > renders correctly with emptyState 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_oe_"
+          aria-owns="_r_s6_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1157,7 +1155,6 @@ exports[`selectInput > renders correctly with error 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1168,15 +1165,16 @@ exports[`selectInput > renders correctly with error 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_sb_"
-            aria-describedby="_r_s8_"
+            aria-controls="_r_10r_"
+            aria-describedby="_r_10n_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_10m_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_danger__1xo4j4bd selectBar_undefined_compound_2__1xo4j4bi"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_s7_"
+            id="_r_10l_"
             role="combobox"
             tabindex="0"
           >
@@ -1231,7 +1229,7 @@ exports[`selectInput > renders correctly with error 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_sj_"
+          aria-owns="_r_113_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1245,7 +1243,7 @@ exports[`selectInput > renders correctly with error 1`] = `
       </div>
       <span
         class="styles__ei8oq31 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_danger__1do42ls9 style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_48__1do42ls2m"
-        id="_r_s8_"
+        id="_r_10n_"
         role="status"
       >
         error
@@ -1261,7 +1259,6 @@ exports[`selectInput > renders correctly with footer 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1272,14 +1269,15 @@ exports[`selectInput > renders correctly with footer 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_7b_"
+            aria-controls="_r_8l_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_8g_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_77_"
+            id="_r_8f_"
             role="combobox"
             tabindex="0"
           >
@@ -1320,7 +1318,7 @@ exports[`selectInput > renders correctly with footer 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_7h_"
+          aria-owns="_r_8r_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1343,7 +1341,6 @@ exports[`selectInput > renders correctly with function footer 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1355,11 +1352,12 @@ exports[`selectInput > renders correctly with function footer 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="dialog"
+            aria-labelledby="_r_523_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_4eq_"
+            id="_r_522_"
             role="combobox"
             tabindex="0"
           >
@@ -1399,7 +1397,6 @@ exports[`selectInput > renders correctly with group empty state 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1410,14 +1407,15 @@ exports[`selectInput > renders correctly with group empty state 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_ea_"
+            aria-controls="_r_gh_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_gc_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_e6_"
+            id="_r_gb_"
             role="combobox"
             tabindex="0"
           >
@@ -1459,7 +1457,7 @@ exports[`selectInput > renders correctly with group empty state 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_eg_"
+          aria-owns="_r_gn_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1482,7 +1480,6 @@ exports[`selectInput > renders correctly with group error 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1493,14 +1490,15 @@ exports[`selectInput > renders correctly with group error 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_ce_"
+            aria-controls="_r_ee_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_e9_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_ca_"
+            id="_r_e8_"
             role="combobox"
             tabindex="0"
           >
@@ -1542,7 +1540,7 @@ exports[`selectInput > renders correctly with group error 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_ck_"
+          aria-owns="_r_ek_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1565,7 +1563,6 @@ exports[`selectInput > renders correctly with label on the bottom and optional i
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1576,14 +1573,15 @@ exports[`selectInput > renders correctly with label on the bottom and optional i
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_jg_"
+            aria-controls="_r_mg_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_mb_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_jc_"
+            id="_r_ma_"
             role="combobox"
             tabindex="0"
           >
@@ -1625,7 +1623,7 @@ exports[`selectInput > renders correctly with label on the bottom and optional i
           tabindex="0"
         />
         <span
-          aria-owns="_r_jm_"
+          aria-owns="_r_mm_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1648,7 +1646,6 @@ exports[`selectInput > renders correctly with label on the bottom and optional i
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1659,14 +1656,15 @@ exports[`selectInput > renders correctly with label on the bottom and optional i
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_ln_"
+            aria-controls="_r_p2_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_ot_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_lj_"
+            id="_r_os_"
             role="combobox"
             tabindex="0"
           >
@@ -1708,7 +1706,7 @@ exports[`selectInput > renders correctly with label on the bottom and optional i
           tabindex="0"
         />
         <span
-          aria-owns="_r_lt_"
+          aria-owns="_r_p8_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1731,7 +1729,6 @@ exports[`selectInput > renders correctly with label on the right and optional in
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1742,14 +1739,15 @@ exports[`selectInput > renders correctly with label on the right and optional in
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_f2_"
+            aria-controls="_r_hc_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_h7_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_eu_"
+            id="_r_h6_"
             role="combobox"
             tabindex="0"
           >
@@ -1791,7 +1789,7 @@ exports[`selectInput > renders correctly with label on the right and optional in
           tabindex="0"
         />
         <span
-          aria-owns="_r_f8_"
+          aria-owns="_r_hi_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1814,7 +1812,6 @@ exports[`selectInput > renders correctly with label on the right and optional in
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1825,14 +1822,15 @@ exports[`selectInput > renders correctly with label on the right and optional in
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_h9_"
+            aria-controls="_r_ju_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_jp_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_h5_"
+            id="_r_jo_"
             role="combobox"
             tabindex="0"
           >
@@ -1874,7 +1872,7 @@ exports[`selectInput > renders correctly with label on the right and optional in
           tabindex="0"
         />
         <span
-          aria-owns="_r_hf_"
+          aria-owns="_r_k4_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1897,7 +1895,6 @@ exports[`selectInput > renders correctly with success 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1908,15 +1905,16 @@ exports[`selectInput > renders correctly with success 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_u4_"
-            aria-describedby="_r_u1_"
+            aria-controls="_r_12u_"
+            aria-describedby="_r_12q_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_12p_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_success__1xo4j4bf selectBar_undefined_compound_1__1xo4j4bh"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_u0_"
+            id="_r_12o_"
             role="combobox"
             tabindex="0"
           >
@@ -1971,7 +1969,7 @@ exports[`selectInput > renders correctly with success 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_uc_"
+          aria-owns="_r_136_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1985,7 +1983,7 @@ exports[`selectInput > renders correctly with success 1`] = `
       </div>
       <span
         class="styles__ei8oq31 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_success__1do42lse style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_56__1do42ls2u"
-        id="_r_u1_"
+        id="_r_12q_"
         role="status"
       >
         success
@@ -2001,15 +1999,14 @@ exports[`selectInput > renders correctly with tooltip 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
         class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
       >
         <label
-          class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-          for="_r_o_"
+          class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+          id="_r_t_"
         >
           label
         </label>
@@ -2022,12 +2019,12 @@ exports[`selectInput > renders correctly with tooltip 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="dialog"
-              aria-label="label"
+              aria-labelledby="_r_t_"
               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
               data-disabled="false"
               data-readonly="false"
               data-testid="select-input-test"
-              id="_r_o_"
+              id="_r_s_"
               role="combobox"
               tabindex="0"
             >
@@ -2069,7 +2066,6 @@ exports[`selectInput > should be searchable when there are less than 6 items but
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -2080,14 +2076,15 @@ exports[`selectInput > should be searchable when there are less than 6 items but
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_10c_"
+            aria-controls="_r_15j_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_15e_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_108_"
+            id="_r_15d_"
             role="combobox"
             tabindex="0"
           >
@@ -2129,7 +2126,7 @@ exports[`selectInput > should be searchable when there are less than 6 items but
           tabindex="0"
         />
         <span
-          aria-owns="_r_10i_"
+          aria-owns="_r_15p_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -2152,7 +2149,6 @@ exports[`selectInput > should be searchable when there are more than 6 items 1`]
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -2163,14 +2159,15 @@ exports[`selectInput > should be searchable when there are more than 6 items 1`]
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_10v_"
+            aria-controls="_r_169_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_164_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_10r_"
+            id="_r_163_"
             role="combobox"
             tabindex="0"
           >
@@ -2212,7 +2209,7 @@ exports[`selectInput > should be searchable when there are more than 6 items 1`]
           tabindex="0"
         />
         <span
-          aria-owns="_r_115_"
+          aria-owns="_r_16f_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -2235,7 +2232,6 @@ exports[`selectInput > should not be searchable when there are less than 6 items
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -2246,14 +2242,15 @@ exports[`selectInput > should not be searchable when there are less than 6 items
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_vt_"
+            aria-controls="_r_151_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_14s_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_vp_"
+            id="_r_14r_"
             role="combobox"
             tabindex="0"
           >
@@ -2295,7 +2292,7 @@ exports[`selectInput > should not be searchable when there are less than 6 items
           tabindex="0"
         />
         <span
-          aria-owns="_r_103_"
+          aria-owns="_r_157_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />

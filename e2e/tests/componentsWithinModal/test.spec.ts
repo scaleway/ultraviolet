@@ -24,16 +24,16 @@ test('open modal, select an option, open nested modal through select input, clos
   await page.getByRole('button', { name: 'Open Modal' }).click()
   await expect(page.locator('dialog')).toBeVisible()
 
-  await page.getByTestId('select-input-color').click()
-  await page.getByTestId('option-stack-red').locator('div').click()
-  await page.getByTestId('select-input-color').click()
+  await page.getByRole('combobox', { name: 'Color' }).click()
+  await page.getByRole('option', { name: 'Red' }).click()
+  await page.getByRole('combobox', { name: 'Color' }).click()
 
   await page.getByRole('button', { name: 'Open Nested Modal' }).click()
   const nestedModal = page.locator('dialog').filter({ hasText: 'This is the nested modal' })
   await nestedModal.getByRole('button', { name: 'close' }).click()
   await expect(nestedModal).not.toBeAttached()
 
-  await page.getByTestId('select-input-color').click() // close the select input dropdown (it hides the modal's close button)
+  await page.getByRole('combobox', { name: 'Color' }).click() // close the select input dropdown (it hides the modal's close button)
 
   await page.getByRole('button', { name: 'close' }).click()
   await expect(page.locator('dialog')).not.toBeVisible()
@@ -47,10 +47,11 @@ test('open modal, click on select input, check that it opens, click outside, che
   await page.getByRole('button', { name: 'Open Modal' }).click()
   await expect(page.locator('dialog')).toBeVisible()
 
-  await page.getByTestId('select-input-color').click()
-  await page.getByTestId('option-stack-red').locator('div').isVisible()
-  await page.getByTestId('option-stack-red').locator('div').click()
+  await page.getByRole('combobox', { name: 'Color' }).click()
+
+  await page.getByRole('option', { name: 'Red' }).isVisible()
+  await page.getByRole('option', { name: 'red' }).click()
   await page.getByLabel('First name').click()
-  await page.getByTestId('option-stack-red').locator('div').isHidden()
+  await page.getByRole('option', { name: 'Red' }).isHidden()
   await expect(page.locator('dialog')).toBeVisible()
 })

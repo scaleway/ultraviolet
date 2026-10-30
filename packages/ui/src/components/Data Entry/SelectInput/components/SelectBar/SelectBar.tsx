@@ -31,13 +31,12 @@ type SelectBarProps = {
   innerRef: RefObject<HTMLDivElement | null>
   id?: string
   'data-testid': string
-  label?: string
   tooltip?: string
-  dropdownId?: string
   helperId: string
   'aria-describedby'?: string
   'aria-labelledby'?: string
   helper?: ReactNode
+  listboxId: string
 }
 
 const SelectBar = ({
@@ -53,8 +52,7 @@ const SelectBar = ({
   innerRef,
   id,
   'data-testid': dataTestId,
-  label,
-  dropdownId,
+  listboxId,
   helperId,
   helper,
   'aria-describedby': ariaDescribedBy,
@@ -177,10 +175,10 @@ const SelectBar = ({
     <Tooltip text={tooltip}>
       <div
         aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
+        aria-haspopup="listbox"
         aria-labelledby={ariaLabelledby}
-        aria-controls={dropdownId}
+        aria-controls={listboxId}
         aria-expanded={isDropdownVisible}
-        aria-label={label}
         autoFocus={autoFocus}
         className={selectInputStyle.selectBar({
           disabled,
@@ -209,6 +207,8 @@ const SelectBar = ({
           return ['Enter', ' '].includes(event.key) && openable ? setIsDropdownVisible(!isDropdownVisible) : null
         }}
         ref={innerRef}
+
+        // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role - can't style a input type="select"
         role="combobox"
         tabIndex={0}
       >

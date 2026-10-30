@@ -6,6 +6,7 @@ import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { RefObject } from 'react'
 import { Tag } from '../../../../Badges/Tag'
 import { Stack } from '../../../../Layout/Stack'
+import { VisuallyHidden } from '../../../../Other/VisuallyHidden'
 import { Text } from '../../../../Typography/Text'
 import { findOptionInOptions } from '../../findOptionInOptions'
 import { useSelectInput } from '../../SelectInputProvider'
@@ -110,7 +111,6 @@ export const DisplayValues = ({
       {overflowed ? (
         <Stack justifyContent="center" ref={refPlusTag}>
           <Tag
-            aria-label="Plus tag"
             className={selectInputStyle.plusTag}
             data-testid="plus-tag"
             disabled={disabled}
@@ -118,7 +118,8 @@ export const DisplayValues = ({
             sentiment="neutral"
           >
             <PlusIcon size="xsmall" />
-            {overflowAmount}
+            <VisuallyHidden>+</VisuallyHidden>
+            {overflowAmount} <VisuallyHidden>hidden item</VisuallyHidden>
           </Tag>
         </Stack>
       ) : null}

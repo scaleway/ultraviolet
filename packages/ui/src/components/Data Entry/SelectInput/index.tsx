@@ -6,6 +6,7 @@ import type { ComponentProps, ReactNode } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import type { BaseFormComponentProps } from '../../../types'
 import { Stack } from '../../Layout/Stack'
+import { VisuallyHidden } from '../../Other/VisuallyHidden'
 import type { Popup as PopupDeprecated } from '../../Overlay/Popup'
 import type { Popup } from '../../Overlay/Popup/v2'
 import { Description } from '../../Typography/Description'
@@ -112,8 +113,7 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = BaseFormCom
    */
   value?: IsMulti extends true ? string[] : string
   onChange?: IsMulti extends true ? (value: string[]) => void : (value: string) => void
-  /**
-   * In some cases, when the space is limited, you will need to change the `portalTarget` of the dropdown for a higher parent element.
+  /** In some cases, when the space is limited, you will need to change the `portalTarget` of the dropdown for a higher parent element.
    * If you don't know which element to target, you can use `document.body`.
    */
   portalTarget?: ComponentProps<typeof Popup.Panel>['portalTarget']
@@ -124,7 +124,11 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = BaseFormCom
   onOpen?: () => void
   groupError?: Record<string, ReactNode>
   groupEmptyState?: Record<string, ReactNode>
+  /** @deprecated use prop `accessibleLabel` instead */
+  'aria-label'?: string
+  accessibleLabel?: string
 }
+
 /**
  * SelectInput component is used to select one or many elements from a selection.
  */
@@ -148,6 +152,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   id,
   isLoading,
   label,
+  portalTarget,
   labelDescription,
   loadMore,
   multiselect = false,
@@ -160,7 +165,6 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   options,
   placeholder = 'Select item',
   placeholderSearch = 'Search in list',
-  portalTarget,
   readOnly = false,
   required = false,
   selectAll,
@@ -170,11 +174,14 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   success,
   tooltip,
   value,
+  accessibleLabel,
 }: SelectInputProps<IsMulti>) => {
   const localId = useId()
   const finalId = id ?? localId
+  const labelId = useId()
   const helperId = useId()
   const dropdownId = useId()
+  const listboxId = useId()
   const ref = useRef<HTMLDivElement | null>(null)
   const numberOfOptions = Array.isArray(options)
     ? options.length
@@ -184,6 +191,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
     ? options.filter(option => option.disabled).length
     : Object.values(options).reduce((acc, current) => acc + current.filter(option => option.disabled).length, 0)
   const finalDataTestId = dataTestId ?? `select-input-${name ?? 'name'}`
+  const accessibleLabelComputed = accessibleLabel ?? ariaLabel
 
   return (
     <SelectInputProvider
@@ -199,18 +207,17 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
       size={size}
       value={value}
     >
-      <div
-        aria-label={name}
-        className={cn(className, selectInputStyle.container)}
-        onBlur={onBlur}
-        onFocus={onFocus}
-        style={style}
-      >
-        <Stack aria-label={ariaLabel} gap={0.5}>
+      <div className={cn(className, selectInputStyle.container)} onBlur={onBlur} onFocus={onFocus} style={style}>
+        <Stack gap={0.5}>
           {label || labelDescription ? (
-            <Label htmlFor={finalId} labelDescription={labelDescription} required={required} size={size}>
+            <Label labelDescription={labelDescription} required={required} size={size} id={labelId}>
               {label}
             </Label>
+          ) : null}
+          {accessibleLabelComputed && !label ? (
+            <VisuallyHidden as="label" id={labelId}>
+              {accessibleLabelComputed}
+            </VisuallyHidden>
           ) : null}
           <Dropdown
             addOption={addOption}
@@ -222,6 +229,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
             groupError={groupError}
             id={dropdownId}
             isLoading={isLoading}
+            listboxId={listboxId}
             loadMore={loadMore}
             optionalInfoPlacement={optionalInfoPlacement}
             placeholder={placeholderSearch}
@@ -230,16 +238,15 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
           >
             <SelectBar
               aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
-              aria-labelledby={ariaLabelledby}
+              aria-labelledby={ariaLabelledby ?? labelId}
               autoFocus={autofocus}
               clearable={clearable}
               data-testid={finalDataTestId}
               disabled={disabled}
-              dropdownId={dropdownId}
               error={error}
               id={finalId}
               innerRef={ref}
-              label={label}
+              listboxId={listboxId}
               placeholder={placeholder}
               readOnly={readOnly}
               size={size}

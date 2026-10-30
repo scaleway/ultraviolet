@@ -42,9 +42,8 @@ export const SelectAll = ({ textVariant }: { textVariant: 'body' | 'bodySmall' }
   }
 
   return (
-    <Stack gap={0.25} id="items" tabIndex={-1} className={selectInputStyle.dropdownSection}>
+    <Stack gap={0.25} data-type="items" tabIndex={-1} className={selectInputStyle.dropdownSection}>
       <div
-        aria-label="select-all"
         aria-selected={allSelected}
         className={cn(
           selectInputStyle.dropdownItem({

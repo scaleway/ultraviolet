@@ -8,5 +8,4 @@
 - deprecate `dropdownAlign` prop
 
 
-
 `Popup`: add props `matchTriggerMaxWidth`, `minWidth` and `maxWidth` to use in the `SelectInput`
