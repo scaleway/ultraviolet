@@ -90,9 +90,10 @@ If a test's real question is "is this accessible?", it's an a11y test. If it's
 ### visual.test.tsx — visual regression (screenshot) tests
 
 Screenshot tests live in `src/components/<Name>/__tests__/visual.test.tsx`,
-tagged `{ tags: ['visual'] }`, and only run in the `visual` project
-(`pnpm test:browser` in the package): real chromium via Playwright, references
-compared with `toMatchScreenshot`.
+tagged `{ tags: ['visual'] }`, and run in the `visual` project — **linux only**
+(the project does not exist on other OSes). The team works on macOS, CI runs
+on linux, and CI is the single renderer of references: every committed
+reference is a `-chromium-linux.png`.
 
 - Screenshot an **element or locator**, not the whole page — lock the component,
   not the viewport:
@@ -106,18 +107,18 @@ compared with `toMatchScreenshot`.
   ```
   (`page` comes from `vitest/browser` — Vitest 5 resolves that specifier to the
   in-browser virtual module; `@vitest/browser/context` is a node-side stub.)
-- References are committed under `__screenshots__/<test file>/` next to the test
-  (`<name>-chromium-<platform>.png` — one per OS, regenerate per platform).
-- First run without a reference **writes it and fails on purpose**: review the
-  PNG, run again — green. Update stale references with
-  `vitest --run --project visual --update` (never with `CI=true` set).
-- In CI the reference is never rewritten: a mismatch or missing reference fails
-  the run, and actual/diff images land in the ignored `.vitest/` directory.
-- Keep screenshots **text-free when possible** (icons, shapes, colors): fonts
-  render differently per OS, so text-bearing references are only as portable as
-  the platform they were generated on.
-- Baselines for the other platform come from the Playwright docker image
-  (`mcr.microsoft.com/playwright:<version>`), matching CI's Linux runners.
+- References are committed under `__screenshots__/<test file>/` next to the test.
+- **Updating a reference** (intentional visual change, or a new screenshot):
+  push the branch — CI's `test_browser` job fails with the rendered reference
+  uploaded as the `visual-screenshot-references` artifact. Download it, copy
+  `<name>-reference-chromium-linux.png` to
+  `__screenshots__/<test file dir>/<name>-chromium-linux.png`, commit, push.
+  Never regenerate references on macOS; local `test:browser` runs only the
+  accessibility project there.
+- In CI the reference is never rewritten: a mismatch or missing reference
+  fails the run.
+- Keep screenshots **text-free when possible** (icons, shapes, colors): CI
+  runner images evolve, and font rendering changes with them.
 
 ### Prefer semantic matchers over attribute checks
 

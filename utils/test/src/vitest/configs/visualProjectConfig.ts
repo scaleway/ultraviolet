@@ -4,11 +4,13 @@ import { browserProjectShared } from './browserShared.ts'
 /*
  * Visual regression project: real chromium only, screenshot references are
  * committed under `__screenshots__/` next to each `visual.test.tsx` file
- * (`<name>-chromium-<platform>.png`, so every OS keeps its own reference).
- * The first run without a reference writes it and fails on purpose: review
- * the PNG, then run again. `CI=true` never writes references, it only
- * compares — mismatch/actual/diff images land in the ignored `.vitest/`
- * directory. Update references with `vitest --run --project visual --update`.
+ * (`<name>-chromium-<platform>.png`). The project only exists on linux: CI
+ * (ubuntu) is the only renderer of references, and the team's macOS runs
+ * never compare or write them. On linux without a reference the first run
+ * writes it and fails on purpose: review the PNG, then run again. `CI=true`
+ * never writes references, it only compares — mismatch/actual/diff images
+ * land in the ignored `.vitest/` directory; CI uploads them as artifacts so
+ * the new reference can be committed.
  */
 export const visualProjectConfig = {
   optimizeDeps: browserProjectShared.optimizeDeps,

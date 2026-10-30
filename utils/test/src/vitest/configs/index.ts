@@ -36,7 +36,13 @@ export const createVitestProjectsConfig = (
       projects: [
         mergeConfig(unitProjectConfig, { ...viteOptions, test: { ...defaultProject.unit, ...unit } }),
         mergeConfig(browserProjectConfig, { ...viteOptions, test: { ...defaultProject.browser, ...browser } }),
-        mergeConfig(visualProjectConfig, { ...viteOptions, test: { ...defaultProject.visual, ...visual } }),
+        // Linux only: the team develops on macOS and CI is the single place
+        // that renders screenshot references, so every committed reference is
+        // `-linux`. Elsewhere the project does not exist and `test:browser`
+        // silently runs just the `browser` project.
+        ...(process.platform === 'linux'
+          ? [mergeConfig(visualProjectConfig, { ...viteOptions, test: { ...defaultProject.visual, ...visual } })]
+          : []),
       ],
     },
   })
