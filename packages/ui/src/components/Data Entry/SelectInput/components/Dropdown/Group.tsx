@@ -32,7 +32,7 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
   }
 
   return (
-    <div className={selectInputStyle.dropdownGroupWrapper} id={selectAllGroup ? 'items' : undefined}>
+    <div className={selectInputStyle.dropdownGroupWrapper} data-type="items">
       <button
         className={cn(
           selectAllGroup

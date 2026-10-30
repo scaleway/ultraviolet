@@ -6,15 +6,14 @@ exports[`selectInput > renders correctly 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
         class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
       >
         <label
-          class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-          for="_r_0_"
+          class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+          id="_r_1_"
         >
           label
         </label>
@@ -24,7 +23,7 @@ exports[`selectInput > renders correctly 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="dialog"
-            aria-label="label"
+            aria-labelledby="_r_1_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
             data-disabled="false"
             data-readonly="false"
@@ -70,7 +69,6 @@ exports[`selectInput > renders correctly disabled 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -82,11 +80,16 @@ exports[`selectInput > renders correctly disabled 1`] = `
           <div
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_u9_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="true"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_q6_"
+=======
+            id="_r_u8_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -127,7 +130,6 @@ exports[`selectInput > renders correctly grouped 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -138,14 +140,23 @@ exports[`selectInput > renders correctly grouped 1`] = `
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_50_"
+=======
+            aria-controls="_r_5u_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_5p_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_4s_"
+=======
+            id="_r_5o_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -187,7 +198,11 @@ exports[`selectInput > renders correctly grouped 1`] = `
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_56_"
+=======
+          aria-owns="_r_64_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -210,7 +225,6 @@ exports[`selectInput > renders correctly loadMore 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -222,11 +236,16 @@ exports[`selectInput > renders correctly loadMore 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="dialog"
+            aria-labelledby="_r_tg_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_ph_"
+=======
+            id="_r_tf_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -267,7 +286,6 @@ exports[`selectInput > renders correctly loading - grouped data 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -278,14 +296,23 @@ exports[`selectInput > renders correctly loading - grouped data 1`] = `
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_4fk_"
+=======
+            aria-controls="_r_4vh_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_4vc_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_4fg_"
+=======
+            id="_r_4vb_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -327,7 +354,11 @@ exports[`selectInput > renders correctly loading - grouped data 1`] = `
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_4fq_"
+=======
+          aria-owns="_r_4vn_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -350,7 +381,6 @@ exports[`selectInput > renders correctly loading - ungrouped data 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -361,14 +391,23 @@ exports[`selectInput > renders correctly loading - ungrouped data 1`] = `
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_4fv_"
+=======
+            aria-controls="_r_4vu_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_4vp_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_4fr_"
+=======
+            id="_r_4vo_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -410,7 +449,11 @@ exports[`selectInput > renders correctly loading - ungrouped data 1`] = `
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_4g5_"
+=======
+          aria-owns="_r_504_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -433,7 +476,6 @@ exports[`selectInput > renders correctly multiselect 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -444,14 +486,23 @@ exports[`selectInput > renders correctly multiselect 1`] = `
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_b3_"
+=======
+            aria-controls="_r_d2_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_ct_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_av_"
+=======
+            id="_r_cs_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -529,7 +580,11 @@ exports[`selectInput > renders correctly multiselect 1`] = `
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_bf_"
+=======
+          aria-owns="_r_de_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -552,7 +607,6 @@ exports[`selectInput > renders correctly not clearable 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -564,11 +618,12 @@ exports[`selectInput > renders correctly not clearable 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="dialog"
+            aria-labelledby="_r_3c_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_14_"
+            id="_r_3b_"
             role="combobox"
             tabindex="0"
           >
@@ -608,7 +663,6 @@ exports[`selectInput > renders correctly readOnly 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -619,14 +673,23 @@ exports[`selectInput > renders correctly readOnly 1`] = `
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_sb_"
+=======
+            aria-controls="_r_10r_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_10m_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_readOnly_true__1xo4j4b9 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="true"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_s7_"
+=======
+            id="_r_10l_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -668,7 +731,11 @@ exports[`selectInput > renders correctly readOnly 1`] = `
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_sh_"
+=======
+          aria-owns="_r_111_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -691,7 +758,6 @@ exports[`selectInput > renders correctly required 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -702,14 +768,23 @@ exports[`selectInput > renders correctly required 1`] = `
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_qk_"
+=======
+            aria-controls="_r_uq_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_ul_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_qg_"
+=======
+            id="_r_uk_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -751,7 +826,11 @@ exports[`selectInput > renders correctly required 1`] = `
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_qq_"
+=======
+          aria-owns="_r_v0_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -774,15 +853,14 @@ exports[`selectInput > renders correctly small 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
         class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
       >
         <label
-          class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmallStrong__1do42lsl style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-          for="_r_c_"
+          class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmallStrong__1do42lsl style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+          id="_r_f_"
         >
           label
         </label>
@@ -792,12 +870,12 @@ exports[`selectInput > renders correctly small 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="dialog"
-            aria-label="label"
+            aria-labelledby="_r_f_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_small__1xo4j4bc selectBar_state_neutral__1xo4j4be"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_c_"
+            id="_r_e_"
             role="combobox"
             tabindex="0"
           >
@@ -838,7 +916,6 @@ exports[`selectInput > renders correctly unclosable tags when readonly 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -850,11 +927,16 @@ exports[`selectInput > renders correctly unclosable tags when readonly 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="dialog"
+            aria-labelledby="_r_1lj_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_readOnly_true__1xo4j4b9 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
             data-disabled="false"
             data-readonly="true"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_1ej_"
+=======
+            id="_r_1li_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -909,7 +991,6 @@ exports[`selectInput > renders correctly ungrouped 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -920,14 +1001,15 @@ exports[`selectInput > renders correctly ungrouped 1`] = `
           data-floating-ui-inert=""
         >
           <div
-            aria-controls="_r_1i_"
+            aria-controls="_r_3t_"
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_3o_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
-            id="_r_1e_"
+            id="_r_3n_"
             role="combobox"
             tabindex="0"
           >
@@ -969,7 +1051,7 @@ exports[`selectInput > renders correctly ungrouped 1`] = `
           tabindex="0"
         />
         <span
-          aria-owns="_r_1o_"
+          aria-owns="_r_43_"
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -992,7 +1074,6 @@ exports[`selectInput > renders correctly with default value 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1003,14 +1084,23 @@ exports[`selectInput > renders correctly with default value 1`] = `
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_71_"
+=======
+            aria-controls="_r_8a_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_85_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_6t_"
+=======
+            id="_r_84_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -1051,7 +1141,11 @@ exports[`selectInput > renders correctly with default value 1`] = `
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_77_"
+=======
+          aria-owns="_r_8g_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1074,7 +1168,6 @@ exports[`selectInput > renders correctly with emptyState 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="emptystate"
       class="styles__ei8oq30"
     >
       <div
@@ -1085,14 +1178,23 @@ exports[`selectInput > renders correctly with emptyState 1`] = `
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_pv_"
+=======
+            aria-controls="_r_u1_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_ts_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-emptystate"
+<<<<<<< HEAD
             id="_r_pr_"
+=======
+            id="_r_tr_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -1134,7 +1236,11 @@ exports[`selectInput > renders correctly with emptyState 1`] = `
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_q5_"
+=======
+          aria-owns="_r_u7_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1157,7 +1263,6 @@ exports[`selectInput > renders correctly with error 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1168,15 +1273,25 @@ exports[`selectInput > renders correctly with error 1`] = `
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_u2_"
             aria-describedby="_r_tv_"
+=======
+            aria-controls="_r_12s_"
+            aria-describedby="_r_12o_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_12n_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_danger__1xo4j4bd selectBar_undefined_compound_2__1xo4j4bi"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_tu_"
+=======
+            id="_r_12m_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -1231,7 +1346,11 @@ exports[`selectInput > renders correctly with error 1`] = `
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_ua_"
+=======
+          aria-owns="_r_134_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1245,7 +1364,11 @@ exports[`selectInput > renders correctly with error 1`] = `
       </div>
       <span
         class="styles__ei8oq31 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_danger__1do42ls9 style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_48__1do42ls2m"
+<<<<<<< HEAD
         id="_r_tv_"
+=======
+        id="_r_12o_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
         role="status"
       >
         error
@@ -1261,7 +1384,6 @@ exports[`selectInput > renders correctly with footer 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1272,14 +1394,23 @@ exports[`selectInput > renders correctly with footer 1`] = `
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_92_"
+=======
+            aria-controls="_r_am_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_ah_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_8u_"
+=======
+            id="_r_ag_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -1320,7 +1451,11 @@ exports[`selectInput > renders correctly with footer 1`] = `
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_98_"
+=======
+          aria-owns="_r_as_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1343,7 +1478,6 @@ exports[`selectInput > renders correctly with function footer 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1355,11 +1489,16 @@ exports[`selectInput > renders correctly with function footer 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="dialog"
+            aria-labelledby="_r_50j_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_4gh_"
+=======
+            id="_r_50i_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -1399,7 +1538,6 @@ exports[`selectInput > renders correctly with group empty state 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1410,14 +1548,23 @@ exports[`selectInput > renders correctly with group empty state 1`] = `
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_g1_"
+=======
+            aria-controls="_r_ii_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_id_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_ft_"
+=======
+            id="_r_ic_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -1459,7 +1606,11 @@ exports[`selectInput > renders correctly with group empty state 1`] = `
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_g7_"
+=======
+          aria-owns="_r_io_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1482,7 +1633,6 @@ exports[`selectInput > renders correctly with group error 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1493,14 +1643,23 @@ exports[`selectInput > renders correctly with group error 1`] = `
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_e5_"
+=======
+            aria-controls="_r_gf_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_ga_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_e1_"
+=======
+            id="_r_g9_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -1542,7 +1701,11 @@ exports[`selectInput > renders correctly with group error 1`] = `
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_eb_"
+=======
+          aria-owns="_r_gl_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1565,7 +1728,6 @@ exports[`selectInput > renders correctly with label on the bottom and optional i
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1576,14 +1738,23 @@ exports[`selectInput > renders correctly with label on the bottom and optional i
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_l7_"
+=======
+            aria-controls="_r_oh_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_oc_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_l3_"
+=======
+            id="_r_ob_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -1625,7 +1796,11 @@ exports[`selectInput > renders correctly with label on the bottom and optional i
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_ld_"
+=======
+          aria-owns="_r_on_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1648,7 +1823,6 @@ exports[`selectInput > renders correctly with label on the bottom and optional i
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1659,14 +1833,23 @@ exports[`selectInput > renders correctly with label on the bottom and optional i
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_ne_"
+=======
+            aria-controls="_r_r3_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_qu_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_na_"
+=======
+            id="_r_qt_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -1708,7 +1891,11 @@ exports[`selectInput > renders correctly with label on the bottom and optional i
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_nk_"
+=======
+          aria-owns="_r_r9_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1731,7 +1918,6 @@ exports[`selectInput > renders correctly with label on the right and optional in
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1742,14 +1928,23 @@ exports[`selectInput > renders correctly with label on the right and optional in
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_gp_"
+=======
+            aria-controls="_r_jd_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_j8_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_gl_"
+=======
+            id="_r_j7_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -1791,7 +1986,11 @@ exports[`selectInput > renders correctly with label on the right and optional in
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_gv_"
+=======
+          aria-owns="_r_jj_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1814,7 +2013,6 @@ exports[`selectInput > renders correctly with label on the right and optional in
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1825,14 +2023,23 @@ exports[`selectInput > renders correctly with label on the right and optional in
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_j0_"
+=======
+            aria-controls="_r_lv_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_lq_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_is_"
+=======
+            id="_r_lp_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -1874,7 +2081,11 @@ exports[`selectInput > renders correctly with label on the right and optional in
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_j6_"
+=======
+          aria-owns="_r_m5_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1897,7 +2108,6 @@ exports[`selectInput > renders correctly with success 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -1908,15 +2118,25 @@ exports[`selectInput > renders correctly with success 1`] = `
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_vr_"
             aria-describedby="_r_vo_"
+=======
+            aria-controls="_r_14v_"
+            aria-describedby="_r_14r_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_14q_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_success__1xo4j4bf selectBar_undefined_compound_1__1xo4j4bh"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_vn_"
+=======
+            id="_r_14p_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -1971,7 +2191,11 @@ exports[`selectInput > renders correctly with success 1`] = `
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_103_"
+=======
+          aria-owns="_r_157_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -1985,7 +2209,11 @@ exports[`selectInput > renders correctly with success 1`] = `
       </div>
       <span
         class="styles__ei8oq31 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_success__1do42lse style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_56__1do42ls2u"
+<<<<<<< HEAD
         id="_r_vo_"
+=======
+        id="_r_14r_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
         role="status"
       >
         success
@@ -2001,15 +2229,14 @@ exports[`selectInput > renders correctly with tooltip 1`] = `
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
         class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
       >
         <label
-          class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-          for="_r_o_"
+          class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+          id="_r_2u_"
         >
           label
         </label>
@@ -2022,12 +2249,12 @@ exports[`selectInput > renders correctly with tooltip 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="dialog"
-              aria-label="label"
+              aria-labelledby="_r_2u_"
               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
               data-disabled="false"
               data-readonly="false"
               data-testid="select-input-test"
-              id="_r_o_"
+              id="_r_2t_"
               role="combobox"
               tabindex="0"
             >
@@ -2069,7 +2296,6 @@ exports[`selectInput > should be searchable when there are less than 6 items but
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -2080,14 +2306,23 @@ exports[`selectInput > should be searchable when there are less than 6 items but
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_123_"
+=======
+            aria-controls="_r_17k_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_17f_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_11v_"
+=======
+            id="_r_17e_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -2129,7 +2364,11 @@ exports[`selectInput > should be searchable when there are less than 6 items but
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_129_"
+=======
+          aria-owns="_r_17q_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -2152,7 +2391,6 @@ exports[`selectInput > should be searchable when there are more than 6 items 1`]
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -2163,14 +2401,23 @@ exports[`selectInput > should be searchable when there are more than 6 items 1`]
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_12m_"
+=======
+            aria-controls="_r_18a_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_185_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_12i_"
+=======
+            id="_r_184_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -2212,7 +2459,11 @@ exports[`selectInput > should be searchable when there are more than 6 items 1`]
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_12s_"
+=======
+          aria-owns="_r_18g_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
@@ -2235,7 +2486,6 @@ exports[`selectInput > should not be searchable when there are less than 6 items
     data-testid="testing"
   >
     <div
-      aria-label="test"
       class="styles__ei8oq30"
     >
       <div
@@ -2246,14 +2496,23 @@ exports[`selectInput > should not be searchable when there are less than 6 items
           data-floating-ui-inert=""
         >
           <div
+<<<<<<< HEAD
             aria-controls="_r_11k_"
+=======
+            aria-controls="_r_172_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             aria-expanded="true"
             aria-haspopup="dialog"
+            aria-labelledby="_r_16t_"
             class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
             data-disabled="false"
             data-readonly="false"
             data-testid="select-input-test"
+<<<<<<< HEAD
             id="_r_11g_"
+=======
+            id="_r_16s_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
             role="combobox"
             tabindex="0"
           >
@@ -2295,7 +2554,11 @@ exports[`selectInput > should not be searchable when there are less than 6 items
           tabindex="0"
         />
         <span
+<<<<<<< HEAD
           aria-owns="_r_11q_"
+=======
+          aria-owns="_r_178_"
+>>>>>>> 2338eb5c8 (fix(SelectInput): high  accessibility issues)
           data-floating-ui-inert=""
           style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
         />
