@@ -7,7 +7,7 @@ import { Text } from '../../../Typography/Text'
 import { dataGrouped } from './resources'
 
 export const Modal: StoryFn<typeof SelectInput> = args => (
-  <ModalComponent disclosure={<Button type="button">Modal</Button>} placement="bottom">
+  <ModalComponent disclosure={<Button type="button">Modal</Button>}>
     <Stack gap={2}>
       <Text as="h1" sentiment="neutral" variant="heading">
         Title

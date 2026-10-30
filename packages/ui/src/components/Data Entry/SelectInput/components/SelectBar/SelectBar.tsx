@@ -71,7 +71,7 @@ const SelectBar = ({
   const [overflowAmount, setOverflowAmount] = useState(0)
   const [overflow, setOverflow] = useState(false)
   const [lastElementMaxWidth, setLastElementMaxWidth] = useState(0)
-  const [nonOverflowedValues, setNonOverFlowedValues] = useState<OptionType[]>(() => {
+  const [nonOverflowedValues, setNonOverflowedValues] = useState<OptionType[]>(() => {
     if (selectedData.selectedValues[0]) {
       const firstSelectOption = findOptionInOptions(options, selectedData.selectedValues[0])
 
@@ -121,7 +121,7 @@ const SelectBar = ({
     if (selectedData.selectedValues.length === 0) {
       // oxlint-disable-next-line react/set-state-in-effect -- resets measurement state, synchronized with the rendered DOM in the layout effect
       setOverflowAmount(0)
-      setNonOverFlowedValues([])
+      setNonOverflowedValues([])
     }
 
     if (measureRef.current && selectedData.selectedValues.length > 0) {
@@ -146,7 +146,7 @@ const SelectBar = ({
         additionnalElementsWidth,
       )
       setOverflowAmount(overflowVars.overflowAmount)
-      setNonOverFlowedValues(overflowVars.nonOverflowedValues)
+      setNonOverflowedValues(overflowVars.nonOverflowedValues)
       setLastElementMaxWidth(overflowVars.lastElementMaxWidth)
       setOverflow(overflowVars.hasOverflow)
     }
@@ -174,7 +174,7 @@ const SelectBar = ({
   const textVariant = useMemo(() => (size === 'large' ? 'body' : 'bodySmall'), [size])
 
   return (
-    <Tooltip disableAnimation text={tooltip}>
+    <Tooltip text={tooltip}>
       <div
         aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
         aria-labelledby={ariaLabelledby}

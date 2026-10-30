@@ -40,6 +40,21 @@ type PopupPanelProps = {
    */
   matchTriggerWidth?: boolean
   /**
+   * When `true`, caps the popup width to the trigger width
+   * @default false
+   */
+  matchTriggerMaxWidth?: boolean
+  /**
+   * Minimum width of the popup. When combined with `matchTriggerWidth`,
+   * the resulting min-width is the most restrictiveof the explicit value and the trigger one.
+   */
+  minWidth?: CSSProperties['minWidth']
+  /**
+   * Maximum width of the popup. When combined with `matchTriggerMaxWidth`,
+   * the resulting max-width is the most restrictive of the explicit value and the trigger one.
+   */
+  maxWidth?: CSSProperties['maxWidth']
+  /**
    * Background color applied to the panel and its arrow.
    * @default 'neutral'
    */
@@ -95,6 +110,9 @@ export const Panel = forwardRef<HTMLDivElement, PopupPanelProps>(
       placement = 'bottom-start',
       portalTarget: userPortalTarget,
       matchTriggerWidth = false,
+      matchTriggerMaxWidth = false,
+      minWidth,
+      maxWidth,
       sentiment = 'neutral',
       arrow = false,
       focusTrap = false,
@@ -138,13 +156,39 @@ export const Panel = forwardRef<HTMLDivElement, PopupPanelProps>(
 
     useLayoutEffect(() => {
       const middleware: Middleware[] = []
-      if (matchTriggerWidth) {
+      if (matchTriggerWidth || matchTriggerMaxWidth || minWidth !== undefined || maxWidth !== undefined) {
         middleware.push(
           size({
             apply: ({ rects, elements }) => {
-              Object.assign(elements.floating.style, {
-                minWidth: `${rects.reference.width}px`,
-              })
+              const minWidthValues: string[] = []
+              const maxWidthValues: string[] = []
+
+              if (matchTriggerWidth) {
+                minWidthValues.push(`${rects.reference.width}px`)
+              }
+              if (minWidth) {
+                minWidthValues.push(typeof minWidth === 'number' ? `${minWidth}px` : minWidth)
+              }
+              if (matchTriggerMaxWidth) {
+                maxWidthValues.push(`${rects.reference.width}px`)
+              }
+              if (maxWidth) {
+                maxWidthValues.push(typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth)
+              }
+
+              const widthStyles: CSSProperties = {}
+              // the most restrictive value wins: the max of every min-width,
+              // and the min of every max-width
+              if (minWidthValues.length > 0) {
+                widthStyles.minWidth =
+                  minWidthValues.length === 1 ? minWidthValues[0] : `max(${minWidthValues.join(', ')})`
+              }
+              if (maxWidthValues.length > 0) {
+                widthStyles.maxWidth =
+                  maxWidthValues.length === 1 ? maxWidthValues[0] : `min(${maxWidthValues.join(', ')})`
+              }
+
+              Object.assign(elements.floating.style, widthStyles)
             },
           }),
         )
@@ -153,7 +197,7 @@ export const Panel = forwardRef<HTMLDivElement, PopupPanelProps>(
         middleware.push(offset(4), arrowMiddleware({ element: arrowRef, padding: 4 }))
       }
       setPanelMiddleware(middleware)
-    }, [matchTriggerWidth, arrow, arrowRef, setPanelMiddleware])
+    }, [matchTriggerWidth, matchTriggerMaxWidth, minWidth, maxWidth, arrow, arrowRef, setPanelMiddleware])
 
     if (!isMounted) {
       return null
