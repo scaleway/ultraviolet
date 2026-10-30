@@ -1,0 +1,76 @@
+name: Visual CI Update
+
+# Update the committed screenshot references on demand, by hand from the
+# Actions tab or by adding the `visual-ci-update` label to a pull request.
+# The job re-renders every reference on linux/chromium (CI is the single
+# renderer, see visualProjectConfig.ts) and pushes a `chore(visual)` commit
+# that changes `__screenshots__/**` references only; label runs also remove
+# the label so it can be added again.
+#
+# The label exists because GitHub only runs `workflow_dispatch` workflows that
+# exist on the default branch: until this file reaches main, the `labeled`
+# pull_request event is the only manual trigger available on a PR. Caveat:
+# the bot push makes the next CI run on the PR require a maintainer approval
+# (GitHub rule for GITHUB_TOKEN updates).
+
+on:
+  pull_request:
+    types: [labeled]
+  workflow_dispatch:
+
+concurrency:
+  group: visual-ci-update-${{ github.event.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+  TURBO_CACHE: remote:r
+
+jobs:
+  visual-ci-update:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.label.name == 'visual-ci-update' &&
+       github.event.pull_request.head.repo.full_name == github.repository)
+    runs-on: ubuntu-26.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Head branch, not the merge ref: the commit below lands on the PR.
+          # On workflow_dispatch this is the branch chosen in the Actions tab.
+          ref: ${{ github.head_ref || github.ref_name }}
+      - uses: pnpm/setup@fa36a5ef7dcdefc3a7cb25655c122e00cf6e636e # v3.1.2
+        with:
+          cache: true
+          require-lockfile: true
+      - uses: ./.github/actions/setup-playwright
+        with:
+          install-args: chromium
+      # --update overrides vitest's "CI never writes references" guard: vitest
+      # resolves updateSnapshot to "all" when the flag is explicit.
+      - run: pnpm turbo run test:visual -- --update
+      - name: Commit and push updated references
+        env:
+          HEAD_REF: ${{ github.head_ref || github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- ':(glob)packages/**/__screenshots__/**'
+          if git diff --staged --quiet; then
+            echo "No screenshot reference changed."
+          else
+            git diff --staged --stat
+            git commit -m "chore(visual): update screenshot references"
+            git pull --rebase origin "$HEAD_REF"
+            git push origin "HEAD:$HEAD_REF"
+          fi
+      - name: Remove label to re-arm
+        if: always() && github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUMBER: ${{ github.event.pull_request.number }}
+        run: gh issue edit "$NUMBER" --repo "$GITHUB_REPOSITORY" --remove-label visual-ci-update || echo "label already removed"

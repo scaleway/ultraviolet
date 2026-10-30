@@ -58,11 +58,17 @@
       "dependsOn": ["build"],
       "outputLogs": "new-only",
       "outputs": ["node_modules/.vite", ".vitest-reports", ".reports"],
-      "passThroughEnv": ["VITEST_*", "NODE_*"]
+      "passThroughEnv": ["VITEST_*", "NODE_*", "PLAYWRIGHT_BROWSERS_PATH"]
     },
     "test:browser:coverage": {
       "dependsOn": ["build"],
-      "passThroughEnv": ["VITEST_*"]
+      "passThroughEnv": ["VITEST_*", "PLAYWRIGHT_BROWSERS_PATH"]
+    },
+    "test:visual": {
+      "cache": false,
+      "dependsOn": ["build"],
+      "outputs": ["node_modules/.vite", ".reports"],
+      "passThroughEnv": ["VITEST_*", "NODE_*", "PLAYWRIGHT_BROWSERS_PATH"]
     },
     "test:unit:coverage": {
       "dependsOn": ["build"],

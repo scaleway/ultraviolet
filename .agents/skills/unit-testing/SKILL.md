@@ -87,6 +87,48 @@ The line is thin, but split files by intent:
 If a test's real question is "is this accessible?", it's an a11y test. If it's
 "does this work?", it's a regular test. Same query tools, different intent.
 
+### visual.test.tsx — visual regression (screenshot) tests
+
+Screenshot tests live in `src/components/<Name>/__tests__/visual.test.tsx`,
+tagged `{ tags: ['visual'] }`, and run in the `visual` project — **linux only**
+(the project does not exist on other OSes). The team works on macOS, CI runs
+on linux, and CI is the single renderer of references: every committed
+reference is a `-chromium-linux.png`.
+
+- Screenshot an **element or locator**, not the whole page — lock the component,
+  not the viewport:
+  ```tsx
+  import { page } from 'vitest/browser'
+
+  it('keeps the default button identical', async () => {
+    renderWithTheme(<Button variant="primary">OK</Button>)
+    await expect(page.getByRole('button', { name: 'OK' })).toMatchScreenshot('button-primary.png')
+  })
+  ```
+  (`page` comes from `vitest/browser` — Vitest 5 resolves that specifier to the
+  in-browser virtual module; `@vitest/browser/context` is a node-side stub.)
+- References are committed under `__screenshots__/<test file>/` next to the test.
+  Packages with visual tests declare a `test:visual` script (see `packages/ui`),
+  which the update job runs across the repo through turbo.
+- **Updating references** (intentional visual change, or a new screenshot):
+  add the **visual-ci-update** label to the PR — or, once the workflow has
+  reached main, run **Visual CI Update** from the Actions tab — the job
+  re-renders every reference on linux/chromium and pushes them back as a
+  `chore(visual): update screenshot references` commit, then removes the label
+  so it can be re-added. (The label exists because GitHub only dispatches
+  `workflow_dispatch` workflows that already exist on the default branch.)
+  The bot push does not re-trigger CI — follow it with any push to re-verify.
+  Manual fallback: the failed `test_browser` job uploads the rendered
+  reference as the `visual-screenshot-references` artifact; copy
+  `<name>-reference-chromium-linux.png` to
+  `__screenshots__/<test file dir>/<name>-chromium-linux.png` and commit it
+  yourself. Never regenerate references on macOS; local `test:browser` runs
+  only the accessibility project there.
+- In CI the reference is never rewritten: a mismatch or missing reference
+  fails the run.
+- Keep screenshots **text-free when possible** (icons, shapes, colors): CI
+  runner images evolve, and font rendering changes with them.
+
 ### Prefer semantic matchers over attribute checks
 
 `toHaveAttribute` tests the implementation (an attribute on an element); jest-dom's

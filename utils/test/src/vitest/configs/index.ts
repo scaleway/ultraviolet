@@ -3,6 +3,7 @@ import type { TestUserConfig, ViteUserConfig } from 'vitest/config'
 import { browserProjectConfig } from './browserProjectConfig.ts'
 import { globalTestOptions } from './globalTestOptions.ts'
 import { unitProjectConfig } from './unitProjectConfig.ts'
+import { visualProjectConfig } from './visualProjectConfig.ts'
 
 const defaultProject = {
   unit: {
@@ -14,15 +15,20 @@ const defaultProject = {
     name: 'browser',
     setupFiles: ['@utils/test/browser-setup'],
   },
+  visual: {
+    name: 'visual',
+    setupFiles: ['@utils/test/browser-setup'],
+  },
 }
 
 export const createVitestProjectsConfig = (
   options: ViteUserConfig & {
     unit?: TestUserConfig
     browser?: TestUserConfig
+    visual?: TestUserConfig
   } = {},
 ) => {
-  const { unit, browser, ...viteOptions } = options
+  const { unit, browser, visual, ...viteOptions } = options
 
   return defineConfig({
     test: {
@@ -30,6 +36,13 @@ export const createVitestProjectsConfig = (
       projects: [
         mergeConfig(unitProjectConfig, { ...viteOptions, test: { ...defaultProject.unit, ...unit } }),
         mergeConfig(browserProjectConfig, { ...viteOptions, test: { ...defaultProject.browser, ...browser } }),
+        // Linux only: the team develops on macOS and CI is the single place
+        // that renders screenshot references, so every committed reference is
+        // `-linux`. Elsewhere the project does not exist and `test:browser`
+        // silently runs just the `browser` project.
+        ...(process.platform === 'linux'
+          ? [mergeConfig(visualProjectConfig, { ...viteOptions, test: { ...defaultProject.visual, ...visual } })]
+          : []),
       ],
     },
   })
