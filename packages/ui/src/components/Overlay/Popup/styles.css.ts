@@ -51,9 +51,7 @@ const container = recipe({
 
 const popup = recipe({
   base: {
-    backgroundColor: theme.colors.neutral.backgroundStronger,
     borderRadius: theme.radii.default,
-    color: theme.colors.neutral.textStronger,
     fontSize: '0.8rem',
     inset: '0 auto auto 0',
     left: 0,
@@ -61,7 +59,6 @@ const popup = recipe({
     maxWidth: maxWidthPopup,
     opacity: 0,
     overflowWrap: 'break-word',
-    padding: `${theme.space['0.5']} ${theme.space[1]}`,
     position: 'absolute',
     textAlign: 'center',
     top: 0,
