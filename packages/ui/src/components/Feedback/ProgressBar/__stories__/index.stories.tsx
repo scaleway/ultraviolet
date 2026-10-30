@@ -6,10 +6,10 @@ export default {
   title: 'UI/Feedback/ProgressBar',
   parameters: {
     a11yStatus: {
-      perceivable: undefined,
-      operable: undefined,
-      understandable: undefined,
-      robust: undefined,
+      perceivable: false,
+      operable: true,
+      understandable: true,
+      robust: false,
     },
   },
 } as Meta<typeof ProgressBar>

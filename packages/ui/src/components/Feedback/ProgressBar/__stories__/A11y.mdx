@@ -1,0 +1,68 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Feedback/ProgressBar/A11y" />
+
+# ProgressBar - Accessibility
+
+## Description
+
+A feedback component that displays the progress of a task as a horizontal bar. It supports a determinate mode (`value`/`max`/`sentiment`) and an indeterminate shimmering loading mode (`progress`), with optional label, label description, and a numeric readout (`showProgress`, `prefix`, `suffix`).
+
+## Summary
+
+1. ❌ **Perceivable**: the progress amount is conveyed by the bar width and, when `showProgress` is set, by text; the value states are exposed programmatically. However the visible `label` is not associated with the progressbar, and the filled bar's contrast against the track fails the 3:1 non-text contrast threshold for several sentiments (`warning` in light; `primary`/`danger`/`info`/`secondary` in dark and darker themes).
+2. ✅ **Operable**: not an interactive widget, no keyboard interaction required. The shimmer animation in `progress` state is an essential preload indication (WCAG 2.2.2 exception), though it is not disabled under `prefers-reduced-motion`.
+3. ✅ **Understandable**: no language, consistency, or input-assistance concerns for a single labelled progress indicator.
+4. ❌ **Robust**: `aria-valuenow` reports the raw, unclamped `value` prop (can exceed `aria-valuemax`, e.g. `value={110}` with `max={100}`) and is announced even in the indeterminate `progress` state where it should be omitted. The accessible name is only provided via the deprecated `aria-label` prop.
+
+## ARIA Pattern
+
+The widget contract is defined directly by the [`progressbar` role](https://w3c.github.io/aria/#progressbar) in the WAI-ARIA specification.
+
+The reference implementation of this pattern is the native [`<progress>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/progress) element: it exposes an implicit `progressbar` role, clamps `value` to `[0, max]`, is indeterminate when the `value` attribute is omitted (styleable via the `:indeterminate` pseudo-class), and is labelable via `<label for>`.
+
+## Rules
+
+Enforced by the component:
+
+- ⚠️ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - The progress indicator has a text alternative through the `progressbar` role, its value states, and an accessible name — but only when the consumer provides `aria-label`/`aria-labelledby`. Without them the progressbar is unnamed.
+- ⚠️ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - The `role="progressbar"` and its value states are programmatically exposed, but the visible `label` (rendered as a `<label>` element) is not associated with the progressbar, so the relationship between the label and the bar is not programmatically determinable.
+- ⚠️ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The progress amount is conveyed by bar width (a shape, not color alone), but the `sentiment` (e.g. `danger`, `success`) is conveyed only by the fill color.
+- ❌ [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - The filled bar must maintain a 3:1 contrast ratio against the track, but the component's default sentiment colors fail in several themes.
+- ✅ [WCAG 2.2.2 - Pause, Stop, Hide (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html) - The infinite shimmer animation of the `progress` state is an essential preload indication: no pause mechanism is required.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The role, name and value states are provided, but `aria-valuenow` uses the unclamped `value` prop and is announced even for indeterminate progress, violating the `[aria-valuemin, aria-valuemax]` range contract.
+- ⚠️ [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - `role="progressbar"` is not a live region by default; if the value updates over time, it will not be announced unless the consumer adds a live region or `aria-valuetext`.
+
+To apply when using the component:
+
+- [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - When the progressbar indicates the loading progress of a region, set `aria-busy="true"` on that region and reference the progressbar with `aria-describedby`.
+
+## Accessibility issues
+
+**High:**
+
+- The filled bar does not always meet the 3:1 non-text contrast ratio against the track - Measured contrast ratios: `warning` on the light theme is 1.32:1; on the dark theme `primary` 1.69:1, `danger` 1.94:1, `info` 2.27:1 and `secondary` 2.27:1 all fail; on the darker theme every sentiment except `warning` fails. Consider fill colors that maintain at least 3:1 against the track in every theme.
+
+- The visible `label` is not associated with the progressbar - The `label` is not wired to the `role="progressbar"` element (no generated `id`/`htmlFor`, no `aria-labelledby`). A screen reader announces "progressbar" with no accessible name by default. Consider generating an `id` for the label and referencing it from the progressbar with `aria-labelledby`.
+
+- `aria-valuenow` is always rendered, even in the indeterminate `progress` state - The [ARIA spec](https://w3c.github.io/aria/#progressbar) states `aria-valuenow` should be omitted when the value is indeterminate. Consider omitting `aria-valuenow` when `progress` is true.
+
+- `aria-valuenow` uses the raw, unclamped `value` prop - The visual fill is clamped to `[0, max]`, but `aria-valuenow` reports the raw value, announcing "110" while `aria-valuemax` is `100`. The announced value should be clamped.
+
+**Medium:**
+
+- Prefer the native `<progress>` element over role `progressbar` - The current custom `div` re-implements the `progressbar` contract manually and is the root cause of the high issues above. The native [`<progress>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/progress) element exposes an implicit "progressbar" role, clamps value to [0, max], is indeterminate when the `value` attribute is omitted (styleable via`:indeterminate`), and is labelable. Caveat: the fill must be restyled with browser-specific pseudo-elements.
+
+- No `aria-valuetext` - The [ARIA spec](https://w3c.github.io/aria/#progressbar) recommends `aria-valuetext` when the value is not self-explanatory (e.g. `aria-valuetext="50%"`).
+
+- No `id` prop for `aria-describedby`/`aria-busy` linkage - Per the [ARIA spec](https://w3c.github.io/aria/#progressbar), when the progressbar indicates the loading progress of a region, the consumer should set `aria-busy="true"` on the loading region and reference the progressbar via `aria-describedby`. To enable this, the `ProgressBar` should accept an `id` prop so consumers can reference it from the container.
+
+- No reduced-motion handling for the shimmer animation - The animation is essential to the loading indication (so it passes WCAG 2.2.2), but it can still trigger discomfort for users with vestibular disorders. Consider disabling or slowing the animation under a `prefers-reduced-motion` media query.
+
+- The `accessibleLabel` prop is missing - The component exposes `aria-label` but no `accessibleLabel` prop. Per [RFC #6585](https://github.com/scaleway/ultraviolet/discussions/6585), add an `accessibleLabel` prop as the preferred way to name the progressbar and deprecate the `aria-label` prop.
+
+**Low:**
+
+- The decorative inner bars are not `aria-hidden="true"` - The filled/loading `<div>` children of the progressbar are not marked `aria-hidden`. They are not announced in practice (the parent exposes the `progressbar` role), but explicitly hiding decorative shapes is best practice for robustness.
+
+- The `sentiment` is conveyed by color alone - Consumers should also convey the sentiment in the label for users who cannot perceive the fill color.
