@@ -87,6 +87,20 @@ const Component = () => {
 
 > ⚠️ In v2, `useTheme()` does **not** return the theme object anymore: `const theme = useTheme()` would give you the `{ theme, isSystem, setTheme, defined }` object, not the CSS variables.
 
+If the component must **react to theme changes** (rather than always using a single theme), use `useThemeObject` instead. It returns the object of the currently applied theme (`consoleLightTheme`, `consoleDarkTheme` or `consoleDarkerTheme`), lazy loaded so only the applied theme is downloaded, and `undefined` while it is loading:
+
+```tsx
+import { useThemeObject } from '@ultraviolet/themes/v2'
+
+const Component = () => {
+  const theme = useThemeObject()
+
+  if (!theme) return null // theme object is loading
+
+  return <p style={{ color: theme.colors.primary.text }}>Hello</p>
+}
+```
+
 ### Case B: `const { theme } = useTheme()`
 
 In v2 this pattern does not change, so the `useTheme` itself must be migrated from v1 to v2:

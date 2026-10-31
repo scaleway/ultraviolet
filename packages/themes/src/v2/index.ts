@@ -1,4 +1,5 @@
 export { ThemeProvider } from './ThemeProvider'
 export { usePrefersDarkMode } from './usePrefersDarkMode'
 export { useTheme } from './useTheme'
+export { useThemeObject } from './useThemeObject'
 export type { ThemeContextType, ThemeProviderProps, Theme, ThemeOption } from './types'
