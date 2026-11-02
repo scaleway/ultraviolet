@@ -17,7 +17,7 @@ export const updateWireIllustrations = (illustrations: { dir: string; category: 
   for (const file of fs.readdirSync(WIRE_ILLUSTRATIONS_DIR)) {
     const fullPath = path.join(WIRE_ILLUSTRATIONS_DIR, file)
     if (fs.statSync(fullPath).isDirectory()) {
-      fs.rmdirSync(fullPath, { recursive: true })
+      fs.rmSync(fullPath, { recursive: true })
     } else {
       fs.unlinkSync(fullPath)
     }
