@@ -39,7 +39,6 @@ export const NavigationContent = ({
   const clampedWidth = clamp(NAVIGATION_MIN_WIDTH, width, NAVIGATION_MAX_WIDTH)
 
   const sliderRef = useRef<HTMLDivElement | null>(null)
-  const contentRef = useRef<HTMLDivElement | null>(null)
 
   // It will handle the resize of the navigation when the user drag the vertical bar
   useEffect(() => {
@@ -130,10 +129,11 @@ export const NavigationContent = ({
       >
         {logo ? <Header logo={logo} /> : null}
         <div className={cn(navigationStyle.contentContainer)}>
-          <Stack className={navigationStyle.content({ collapsed: !expanded })} gap={0.25} ref={contentRef}>
+          <div className={navigationStyle.contentTopShadow} aria-hidden="true" />
+          <Stack className={navigationStyle.content({ collapsed: !expanded })} gap={0.25}>
             {children}
           </Stack>
-          {allowNavigationResize ? <Footer contentRef={contentRef} onToggleExpand={onToggleExpand} /> : null}
+          {allowNavigationResize ? <Footer onToggleExpand={onToggleExpand} /> : null}
         </div>
       </div>
       {allowNavigationResize ? <div className={navigationStyle.slider} data-testid="slider" ref={sliderRef} /> : null}

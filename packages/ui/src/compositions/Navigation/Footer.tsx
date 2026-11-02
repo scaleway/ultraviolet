@@ -2,8 +2,7 @@
 
 import { ArrowLeftDoubleIcon } from '@ultraviolet/icons/ArrowLeftDoubleIcon'
 import { ArrowRightDoubleIcon } from '@ultraviolet/icons/ArrowRightDoubleIcon'
-import { useCallback, useLayoutEffect, useMemo, useState } from 'react'
-import type { RefObject } from 'react'
+import { useMemo } from 'react'
 import { Button } from '../../components/Action/Button'
 import { Tooltip } from '../../components/Overlay/Tooltip'
 import { useNavigation } from './NavigationProvider'
@@ -12,52 +11,10 @@ import { navigationStyle } from './styles.css'
 
 type FooterProps = {
   onToggleExpand: NavigationProps['onToggleExpand']
-  contentRef: RefObject<HTMLDivElement | null>
 }
 
-export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
+export const Footer = ({ onToggleExpand }: FooterProps) => {
   const { expanded, toggleExpand, locales } = useNavigation()
-
-  const isScrollAtBottom = useCallback(() => {
-    if (contentRef.current) {
-      if (contentRef.current.scrollTop + contentRef.current.offsetHeight >= contentRef.current.scrollHeight) {
-        return false
-      }
-
-      return true
-    }
-
-    return true
-  }, [contentRef])
-
-  const [footerHasOverflowStyle, setFooterHasOverflowStyle] = useState(isScrollAtBottom())
-
-  // This is for detecting if there is scroll on the content and set the shadow on the footer
-  useLayoutEffect(() => {
-    const currentContentRef = contentRef.current
-
-    const scroll = () => {
-      const hasOverflow = isScrollAtBottom()
-
-      if (footerHasOverflowStyle !== hasOverflow) {
-        setFooterHasOverflowStyle(hasOverflow)
-      }
-    }
-
-    if (currentContentRef) {
-      currentContentRef.addEventListener('scroll', scroll)
-    }
-
-    return () => {
-      currentContentRef?.removeEventListener('scroll', scroll)
-    }
-  }, [footerHasOverflowStyle, isScrollAtBottom, contentRef])
-
-  // This will set the shadow on the footer when the component is mounted
-  useLayoutEffect(() => {
-    // oxlint-disable-next-line react/set-state-in-effect
-    setFooterHasOverflowStyle(isScrollAtBottom())
-  }, [isScrollAtBottom])
 
   const Icon = useMemo(() => (expanded ? ArrowLeftDoubleIcon : ArrowRightDoubleIcon), [expanded])
 
@@ -67,11 +24,7 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
   )
 
   return (
-    <div
-      className={navigationStyle.stickyFooter({
-        overflow: footerHasOverflowStyle,
-      })}
-    >
+    <div className={navigationStyle.stickyFooter}>
       <Tooltip placement="right" text={label}>
         <Button
           accessibleLabel={label}
