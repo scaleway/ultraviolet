@@ -65,6 +65,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
       'aria-atomic': ariaAtomic,
       defaultValue,
       style,
+      onClick,
     },
     ref,
   ) => {
@@ -133,6 +134,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               onFocus={onFocus}
               onKeyDown={onKeyDown}
               onKeyUp={onKeyUp}
+              onClick={onClick}
               placeholder={placeholder}
               readOnly={readOnly}
               ref={inputRef}

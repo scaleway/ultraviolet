@@ -533,6 +533,10 @@ export const Popup = forwardRef(
       }
 
       return (
+        // The wrapper adds trigger behavior to arbitrary children: its accessible role is provided by the child
+        // The component is planned to be deprecated in favor of
+        // `Popup/v2`, which does not rely on this wrapper.
+        // oxlint-disable-next-line jsx-a11y/no-static-element-interactions
         <div
           aria-controls={generatedId}
           aria-describedby={generatedId}
@@ -591,6 +595,8 @@ export const Popup = forwardRef(
         {renderChildren()}
         {shouldRender
           ? createPortal(
+              // A role is already defined (`role={role}`)
+              // oxlint-disable-next-line jsx-a11y/no-static-element-interactions
               <div
                 className={cn(
                   className,

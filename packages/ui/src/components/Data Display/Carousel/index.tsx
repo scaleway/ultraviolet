@@ -59,7 +59,6 @@ export const Carousel = ({ children, className, 'data-testid': dataTestId = 'scr
         onMouseLeave={() => clearInterval(intervalRightRef.current)}
         onMouseOver={handleScrollRight}
       />
-      {/* oxlint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div
         className={cn(className, carouselStyle.scrollableWrapper)}
         data-testid={`${dataTestId}-wrapper`}
@@ -79,7 +78,7 @@ export const Carousel = ({ children, className, 'data-testid': dataTestId = 'scr
           e.dataTransfer.setDragImage(blankImg, 0, 0)
           setDragStartX(e.clientX)
         }}
-        onMouseUp={e => {
+        onPointerUp={e => {
           e.preventDefault()
           e.stopPropagation()
         }}

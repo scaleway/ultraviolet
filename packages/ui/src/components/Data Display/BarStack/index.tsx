@@ -10,6 +10,64 @@ import { Label } from '../../Typography/Label'
 import { Text } from '../../Typography/Text'
 import { barStackStyle, wrapperWidth } from './styles.css'
 
+const Bar = ({
+  id,
+  text,
+  onClick,
+  onDoubleClick,
+  onKeyDown,
+  onMouseEnter,
+  onMouseLeave,
+  onMouseDown,
+  onMouseUp,
+  size,
+  legend,
+}: {
+  id: string
+  text?: string
+  onClick?: MouseEventHandler<HTMLElement>
+  onDoubleClick?: MouseEventHandler<HTMLElement>
+  onKeyDown?: KeyboardEventHandler<HTMLElement>
+  onMouseEnter?: MouseEventHandler<HTMLElement>
+  onMouseLeave?: MouseEventHandler<HTMLElement>
+  onMouseDown?: MouseEventHandler<HTMLElement>
+  onMouseUp?: MouseEventHandler<HTMLElement>
+  size?: 'large' | 'medium' | 'small' | 'xsmall'
+  legend?: 'inside' | 'outside'
+}) => {
+  const isInteractive = !!(onClick || onDoubleClick || onMouseDown || onKeyDown || onMouseUp)
+  const Component = isInteractive ? 'button' : 'div'
+
+  return (
+    <Component
+      className={barStackStyle.barStack({ size })}
+      data-testid={`content-${id}`}
+      onClick={onClick}
+      onDoubleClick={onDoubleClick}
+      onKeyDown={onKeyDown}
+      onMouseDown={onMouseDown}
+      onMouseEnter={event => {
+        onMouseEnter?.(event)
+      }}
+      onMouseLeave={event => {
+        onMouseLeave?.(event)
+      }}
+      onMouseUp={onMouseUp}
+      role={isInteractive ? 'button' : undefined}
+    >
+      <Text
+        as="span"
+        className={barStackStyle.text}
+        prominence="stronger"
+        sentiment="neutral"
+        variant={size === 'small' || size === 'xsmall' ? 'captionSmallStrong' : 'captionStrong'}
+        whiteSpace="nowrap"
+      >
+        {legend === 'outside' ? '' : text}
+      </Text>
+    </Component>
+  )
+}
 type BarProps = {
   /**
    * Unique id of the bar
@@ -23,13 +81,13 @@ type BarProps = {
    * Text to display inside the bar
    */
   text?: string
-  onClick?: MouseEventHandler<HTMLDivElement>
-  onDoubleClick?: MouseEventHandler<HTMLDivElement>
-  onKeyDown?: KeyboardEventHandler<HTMLDivElement>
-  onMouseDown?: MouseEventHandler<HTMLDivElement>
-  onMouseUp?: MouseEventHandler<HTMLDivElement>
-  onMouseEnter?: MouseEventHandler<HTMLDivElement>
-  onMouseLeave?: MouseEventHandler<HTMLDivElement>
+  onClick?: MouseEventHandler<HTMLElement>
+  onDoubleClick?: MouseEventHandler<HTMLElement>
+  onKeyDown?: KeyboardEventHandler<HTMLElement>
+  onMouseDown?: MouseEventHandler<HTMLElement>
+  onMouseUp?: MouseEventHandler<HTMLElement>
+  onMouseEnter?: MouseEventHandler<HTMLElement>
+  onMouseLeave?: MouseEventHandler<HTMLElement>
   /**
    * A tooltip to display when hovering the bar
    */
@@ -96,71 +154,41 @@ export const BarStack = ({
               onMouseDown,
               onMouseUp,
               tooltip,
-            }) => (
-              <div
-                className={barStackStyle.wrapper}
-                key={id}
-                style={assignInlineVars({
-                  [wrapperWidth]: `${(value / computedTotal) * 100}%`,
-                })}
-              >
-                <Tooltip text={legend === 'outside' ? text : undefined} visible={hoveredBarId === id}>
-                  {tooltip ? (
-                    <Tooltip id={`tooltip-${id}`} text={tooltip ?? text}>
-                      <div
-                        className={barStackStyle.barStack({ size })}
-                        data-testid={`content-${id}`}
-                        onClick={onClick}
-                        onDoubleClick={onDoubleClick}
-                        onKeyDown={onKeyDown}
-                        onMouseDown={onMouseDown}
-                        onMouseEnter={event => {
-                          onMouseEnter?.(event)
-                        }}
-                        onMouseLeave={event => {
-                          onMouseLeave?.(event)
-                        }}
-                        onMouseUp={onMouseUp}
-                      >
-                        <Text
-                          as="span"
-                          className={barStackStyle.text}
-                          prominence="stronger"
-                          sentiment="neutral"
-                          variant={size === 'small' || size === 'xsmall' ? 'captionSmallStrong' : 'captionStrong'}
-                          whiteSpace="nowrap"
-                        >
-                          {legend === 'outside' ? '' : text}
-                        </Text>
-                      </div>
-                    </Tooltip>
-                  ) : (
-                    <div
-                      className={barStackStyle.barStack({ size })}
-                      data-testid={`content-${id}`}
-                      onClick={onClick}
-                      onDoubleClick={onDoubleClick}
-                      onKeyDown={onKeyDown}
-                      onMouseDown={onMouseDown}
-                      onMouseEnter={onMouseEnter}
-                      onMouseLeave={onMouseLeave}
-                      onMouseUp={onMouseUp}
-                    >
-                      <Text
-                        as="span"
-                        className={barStackStyle.text}
-                        prominence="stronger"
-                        sentiment="neutral"
-                        variant={size === 'small' || size === 'xsmall' ? 'captionSmallStrong' : 'captionStrong'}
-                        whiteSpace="nowrap"
-                      >
-                        {legend === 'outside' ? '' : text}
-                      </Text>
-                    </div>
-                  )}
-                </Tooltip>
-              </div>
-            ),
+            }) => {
+              const barProps = {
+                id,
+                text,
+                onClick,
+                onDoubleClick,
+                onKeyDown,
+                onMouseEnter,
+                onMouseLeave,
+                onMouseDown,
+                onMouseUp,
+                size,
+                legend,
+              }
+
+              return (
+                <div
+                  className={barStackStyle.wrapper}
+                  key={id}
+                  style={assignInlineVars({
+                    [wrapperWidth]: `${(value / computedTotal) * 100}%`,
+                  })}
+                >
+                  <Tooltip text={legend === 'outside' ? text : undefined} visible={hoveredBarId === id}>
+                    {tooltip ? (
+                      <Tooltip id={`tooltip-${id}`} text={tooltip ?? text}>
+                        <Bar {...barProps} />
+                      </Tooltip>
+                    ) : (
+                      <Bar {...barProps} />
+                    )}
+                  </Tooltip>
+                </div>
+              )
+            },
           )}
         </div>
       </Stack>
