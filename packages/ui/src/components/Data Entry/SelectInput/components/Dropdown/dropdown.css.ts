@@ -1,11 +1,12 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { DROPDOWN_MAX_HEIGHT } from '../../constants'
+import { DROPDOWN_MAX_HEIGHT, DROPDOWN_MIN_WIDTH } from '../../constants'
 
 export const dropdown = style({
   overflow: 'hidden',
   padding: theme.space[0],
+  minWidth: DROPDOWN_MIN_WIDTH,
 })
 
 export const dropdownContainer = style({

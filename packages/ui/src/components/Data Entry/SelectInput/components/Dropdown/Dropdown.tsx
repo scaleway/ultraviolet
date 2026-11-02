@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ComponentProps, Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { Stack } from '../../../../Layout/Stack'
 import { Popup } from '../../../../Overlay/Popup/v2'
-import { DROPDOWN_MIN_WIDTH, NON_SEARCHABLE_KEYS } from '../../constants'
+import { NON_SEARCHABLE_KEYS } from '../../constants'
 import { useSelectInput } from '../../SelectInputProvider'
 import type { DataType, OptionType } from '../../types'
 import { CreateDropdown } from './Content'
@@ -90,7 +90,7 @@ export const Dropdown = ({
   const [defaultSearchValue, setDefaultSearchValue] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState('')
-  const initialFocusRef = useRef<HTMLElement | null>(null)
+  const initialFocusRef = useRef<HTMLDivElement | null>(null)
 
   if (!isDropdownVisible) {
     if (defaultSearchValue !== null) {
@@ -160,10 +160,8 @@ export const Dropdown = ({
         id={id}
         ref={ref}
         className={selectInputStyle.dropdown}
-        placement="bottom"
-        matchTriggerMaxWidth
+        placement="bottom-start"
         matchTriggerWidth
-        minWidth={DROPDOWN_MIN_WIDTH}
         portalTarget={portalTarget}
         initialFocus={searchable || selectedData.selectedValues.length === 0 ? undefined : initialFocusRef}
       >

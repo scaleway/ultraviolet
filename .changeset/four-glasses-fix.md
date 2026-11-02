@@ -9,4 +9,4 @@
 
 
 
-`Popup`: add props `matchTriggerMaxWidth`, `minWidth` and `maxWidth` to use in the `SelectInput`
+`Popup`: update `matchTriggerWidth` to sync the panel width with its trigger (instead of the min-width)

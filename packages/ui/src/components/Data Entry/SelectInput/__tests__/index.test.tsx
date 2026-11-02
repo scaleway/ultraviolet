@@ -73,6 +73,17 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  it('keeps the dropdown at least 320px wide', async () => {
+    renderWithTheme(<SelectInput name="test" options={dataUnGrouped} placeholder="placeholder" />)
+    await userEvent.click(screen.getByText('placeholder'))
+
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+      expect(dropdown).toHaveStyle({ minWidth: '320px' })
+    })
+  })
+
   it('renders correctly grouped', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput name="test" options={dataGrouped} placeholder="placeholder" placeholderSearch="placeholdersearch" />,

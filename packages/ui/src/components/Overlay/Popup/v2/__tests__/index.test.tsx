@@ -147,7 +147,7 @@ describe('popup v2', () => {
       expect(screen.getByRole('dialog').querySelector('svg')).toBeInTheDocument()
     })
 
-    it('should sync the panel min-width to the trigger width when matchTriggerWidth is true', async () => {
+    it('should sync the panel width to the trigger width when matchTriggerWidth is true', async () => {
       renderPopup({ panelProps: { matchTriggerWidth: true } })
       const trigger = screen.getByRole('button', { name: 'Open' })
       trigger.getBoundingClientRect = () => ({
@@ -164,7 +164,7 @@ describe('popup v2', () => {
 
       await userEvent.click(trigger)
 
-      await waitFor(() => expect(screen.getByRole('dialog')).toHaveStyle({ minWidth: '240px' }))
+      await waitFor(() => expect(screen.getByRole('dialog')).toHaveStyle({ width: '240px' }))
     })
 
     it('should portal the panel to document.body by default', async () => {

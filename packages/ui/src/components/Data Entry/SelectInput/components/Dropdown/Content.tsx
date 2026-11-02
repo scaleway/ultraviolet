@@ -8,6 +8,7 @@ import { Stack } from '../../../../Layout/Stack'
 import { Text } from '../../../../Typography/Text'
 import { OPTION_SELECTOR } from '../../constants'
 import { useSelectInput } from '../../SelectInputProvider'
+import type { OptionType } from '../../types'
 import { AddOption } from './AddOption'
 import { Group } from './Group'
 import { Item } from './Item'
@@ -26,7 +27,7 @@ type CreateDropdownProps = {
   groupEmptyState?: Record<string, ReactNode>
   addOption?: { text: string; onClick: (searchText: string) => void }
   searchable?: boolean
-  initialFocusRef: RefObject<HTMLElement | null>
+  initialFocusRef: RefObject<HTMLDivElement | null>
 }
 
 const moveFocusDown = () => {
@@ -96,6 +97,14 @@ export const CreateDropdown = ({
   const textVariant = size === 'large' ? 'body' : 'bodySmall'
 
   const sizeVariantIcon = size === 'small' ? 'xsmall' : 'small'
+
+  const getItemRef = (option: OptionType, isFirstSelected: boolean) => {
+    if (option.value === defaultSearchValue || option.searchText === defaultSearchValue) {
+      return focusedItemRef
+    }
+
+    return isFirstSelected ? initialFocusRef : undefined
+  }
 
   const computedEmptyState = emptyState ?? (
     <Text as="p" variant={size === 'small' ? 'bodySmallStrong' : 'bodyStrong'}>
@@ -175,14 +184,12 @@ export const CreateDropdown = ({
           const isFirstSelected = option.value === selectedData.selectedValues[0]
           return (
             <Item
-              defaultSearchValue={defaultSearchValue}
               descriptionDirection={descriptionDirection}
-              focusedItemRef={focusedItemRef}
               indexOption={index}
-              initialFocusRef={isFirstSelected ? initialFocusRef : undefined}
               key={option.value}
               option={option}
               optionalInfoPlacement={optionalInfoPlacement}
+              ref={getItemRef(option, isFirstSelected)}
               textVariant={textVariant}
             />
           )
@@ -245,15 +252,13 @@ export const CreateDropdown = ({
 
                 return errorGroup ? null : (
                   <Item
-                    defaultSearchValue={defaultSearchValue}
                     descriptionDirection={descriptionDirection}
-                    focusedItemRef={focusedItemRef}
                     group={group}
                     indexOption={indexOption}
-                    initialFocusRef={isFirstSelected ? initialFocusRef : undefined}
                     key={option.value}
                     option={option}
                     optionalInfoPlacement={optionalInfoPlacement}
+                    ref={getItemRef(option, isFirstSelected)}
                     textVariant={textVariant}
                   />
                 )
