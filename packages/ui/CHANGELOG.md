@@ -1,5 +1,19 @@
 # Change Log
 
+## 3.29.3
+
+### Patch Changes
+
+- [#7057](https://github.com/scaleway/ultraviolet/pull/7057) [`571d46a`](https://github.com/scaleway/ultraviolet/commit/571d46a46a0589d111469a32c4328f5f4d13132d) Thanks [@lisalupi](https://github.com/lisalupi)! - `DateInput`: clicking on clear button should not trigger pop up
+
+- [#7057](https://github.com/scaleway/ultraviolet/pull/7057) [`571d46a`](https://github.com/scaleway/ultraviolet/commit/571d46a46a0589d111469a32c4328f5f4d13132d) Thanks [@lisalupi](https://github.com/lisalupi)! - `TextInput`: new prop `onClick`
+
+- [#7057](https://github.com/scaleway/ultraviolet/pull/7057) [`571d46a`](https://github.com/scaleway/ultraviolet/commit/571d46a46a0589d111469a32c4328f5f4d13132d) Thanks [@lisalupi](https://github.com/lisalupi)! - `BarStack`: interactive elements are now `buttons`. As a result, the type of `onClick`, `onDoubleClick`, `onKeyDown`, `onMouseUp`, `onMouseDown`, `onMouseEnter` and `onMouseLeave` has been updated
+
+- [#7100](https://github.com/scaleway/ultraviolet/pull/7100) [`3d8cc0f`](https://github.com/scaleway/ultraviolet/commit/3d8cc0fc87fa3eb0efdc7bea66e3e422bbd3236b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prosemirror-view` to `1.42.8`.
+
+- [#7110](https://github.com/scaleway/ultraviolet/pull/7110) [`da9e7a3`](https://github.com/scaleway/ultraviolet/commit/da9e7a3b3265b12406fe82167d466221b99e60a2) Thanks [@jsulpis](https://github.com/jsulpis)! - `Navigation`: revert last change on the Footer
+
 ## 3.29.2
 
 ### Patch Changes
