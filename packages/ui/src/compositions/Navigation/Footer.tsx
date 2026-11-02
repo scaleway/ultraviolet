@@ -44,9 +44,6 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
       }
     }
 
-    // This will set the shadow on the footer when the component is mounted
-    scroll()
-
     if (currentContentRef) {
       currentContentRef.addEventListener('scroll', scroll)
     }
@@ -55,6 +52,12 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
       currentContentRef?.removeEventListener('scroll', scroll)
     }
   }, [footerHasOverflowStyle, isScrollAtBottom, contentRef])
+
+  // This will set the shadow on the footer when the component is mounted
+  useLayoutEffect(() => {
+    // oxlint-disable-next-line react/set-state-in-effect
+    setFooterHasOverflowStyle(isScrollAtBottom())
+  }, [isScrollAtBottom])
 
   const Icon = useMemo(() => (expanded ? ArrowLeftDoubleIcon : ArrowRightDoubleIcon), [expanded])
 
