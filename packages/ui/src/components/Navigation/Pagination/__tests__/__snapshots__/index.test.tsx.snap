@@ -1077,7 +1077,6 @@ exports[`pagination > should render correctly with perPage - default values 1`] 
           Items per page
         </label>
         <div
-          aria-label="select-items-per-page"
           class="styles__ei8oq30"
           style="width: fit-content;"
         >
@@ -1090,7 +1089,9 @@ exports[`pagination > should render correctly with perPage - default values 1`] 
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
+                aria-invalid="false"
                 aria-labelledby="_r_3e_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_small__1xo4j4bc selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -1254,12 +1255,11 @@ exports[`pagination > should render correctly with perPage 1`] = `
       >
         <label
           class="style__1do42ls0 style_prominence_weak__1do42ls7 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_3__1do42ls1d style_undefined_compound_67__1do42ls35"
-          id="_r_4h_"
+          id="_r_4j_"
         >
           test
         </label>
         <div
-          aria-label="select-items-per-page"
           class="styles__ei8oq30"
           style="width: fit-content;"
         >
@@ -1272,12 +1272,14 @@ exports[`pagination > should render correctly with perPage 1`] = `
               <div
                 aria-expanded="false"
                 aria-haspopup="dialog"
-                aria-labelledby="_r_4h_"
+                aria-invalid="false"
+                aria-labelledby="_r_4j_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_small__1xo4j4bc selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
                 data-testid="select-input-select-items-per-page"
-                id="_r_4k_"
+                id="_r_4m_"
                 role="combobox"
                 tabindex="0"
               >

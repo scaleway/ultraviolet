@@ -139,7 +139,7 @@ describe('filters', () => {
     )
 
     await userEvent.click(screen.getByRole('combobox', { name: 'Status' }))
-    await userEvent.click(screen.getByRole('option', { name: 'active' }))
+    await userEvent.click(screen.getByRole('option', { name: 'Active' }))
 
     expect(onChange).toHaveBeenCalledExactlyOnceWith({ ...defaultValues, status: 'active' })
     expect(onSubmit).toHaveBeenCalledExactlyOnceWith({ ...defaultValues, status: 'active' })
@@ -154,7 +154,7 @@ describe('filters', () => {
     )
 
     await userEvent.click(screen.getByRole('combobox', { name: 'Status' }))
-    await userEvent.click(screen.getByRole('option', { name: 'inactive' }))
+    await userEvent.click(screen.getByRole('option', { name: 'Inactive' }))
     expect(onChange).toHaveBeenCalledExactlyOnceWith({ ...defaultValues, status: 'inactive' })
     expect(onSubmit).toHaveBeenCalledExactlyOnceWith({ ...defaultValues, status: 'inactive' })
 
@@ -204,7 +204,7 @@ describe('filters', () => {
 
     await userEvent.type(screen.getByRole('textbox', { name: 'Name' }), 'John')
     await userEvent.click(screen.getByRole('combobox', { name: 'Status' }))
-    await userEvent.click(screen.getByRole('option', { name: 'active' }))
+    await userEvent.click(screen.getByRole('option', { name: 'Active' }))
 
     expect(screen.getByRole('button', { name: 'Clear all' })).not.toBeDisabled()
     expect(screen.getByRole('button', { name: 'All filters (2)' })).toBeVisible()
@@ -356,7 +356,7 @@ describe('filters', () => {
     )
 
     await userEvent.click(screen.getByRole('combobox', { name: 'Environment' }))
-    await userEvent.click(screen.getByRole('option', { name: 'prod' }))
+    await userEvent.click(screen.getByRole('option', { name: 'Production' }))
 
     expect(onSubmit).toHaveBeenLastCalledWith({
       ...defaultValues,

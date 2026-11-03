@@ -10,7 +10,6 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
       style="display: contents;"
     >
       <div
-        aria-label="test"
         class="uv_ei8oq30"
       >
         <div
@@ -21,14 +20,17 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
             data-floating-ui-inert=""
           >
             <div
-              aria-controls="_r_1c_"
+              aria-controls="_r_1m_"
               aria-expanded="true"
               aria-haspopup="dialog"
+              aria-invalid="false"
+              aria-labelledby="_r_1h_"
+              aria-required="false"
               class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4b8 uv_1xo4j4ba uv_1xo4j4be uv_1xo4j4bg"
               data-disabled="false"
               data-readonly="false"
               data-testid="select-input-test"
-              id="_r_18_"
+              id="_r_1g_"
               role="combobox"
               tabindex="0"
             >
@@ -69,7 +71,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
             tabindex="0"
           />
           <span
-            aria-owns="_r_37_"
+            aria-owns="_r_3r_"
             data-floating-ui-inert=""
             style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
           />
@@ -97,7 +99,6 @@ exports[`selectInputField > should render correctly 1`] = `
       style="display: contents;"
     >
       <div
-        aria-label="test"
         class="uv_ei8oq30"
       >
         <div
@@ -109,6 +110,9 @@ exports[`selectInputField > should render correctly 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="dialog"
+              aria-invalid="false"
+              aria-labelledby="_r_1_"
+              aria-required="false"
               class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4ba uv_1xo4j4be"
               data-disabled="false"
               data-readonly="false"
@@ -159,7 +163,6 @@ exports[`selectInputField > should render correctly disabled 1`] = `
       style="display: contents;"
     >
       <div
-        aria-label="test"
         class="uv_ei8oq30"
       >
         <div
@@ -171,11 +174,14 @@ exports[`selectInputField > should render correctly disabled 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="dialog"
+              aria-invalid="false"
+              aria-labelledby="_r_d_"
+              aria-required="false"
               class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4b7 uv_1xo4j4ba uv_1xo4j4be"
               data-disabled="true"
               data-readonly="false"
               data-testid="select-input-test"
-              id="_r_a_"
+              id="_r_c_"
               role="combobox"
               tabindex="0"
             >
@@ -221,7 +227,6 @@ exports[`selectInputField > should render correctly grouped 1`] = `
       style="display: contents;"
     >
       <div
-        aria-label="test"
         class="uv_ei8oq30"
       >
         <div
@@ -233,11 +238,14 @@ exports[`selectInputField > should render correctly grouped 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="dialog"
+              aria-invalid="false"
+              aria-labelledby="_r_15_"
+              aria-required="false"
               class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4ba uv_1xo4j4be"
               data-disabled="false"
               data-readonly="false"
               data-testid="select-input-test"
-              id="_r_u_"
+              id="_r_14_"
               role="combobox"
               tabindex="0"
             >
@@ -283,7 +291,6 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
       style="display: contents;"
     >
       <div
-        aria-label="test"
         class="uv_ei8oq30"
       >
         <div
@@ -295,11 +302,14 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="dialog"
+              aria-invalid="false"
+              aria-labelledby="_r_p_"
+              aria-required="false"
               class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4ba uv_1xo4j4be"
               data-disabled="false"
               data-readonly="false"
               data-testid="select-input-test"
-              id="_r_k_"
+              id="_r_o_"
               role="combobox"
               tabindex="0"
             >
@@ -345,7 +355,6 @@ exports[`selectInputField > should trigger events 1`] = `
       style="display: contents;"
     >
       <div
-        aria-label="test"
         class="uv_ei8oq30"
       >
         <div
@@ -357,11 +366,14 @@ exports[`selectInputField > should trigger events 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="dialog"
+              aria-invalid="false"
+              aria-labelledby="_r_5p_"
+              aria-required="false"
               class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4ba uv_1xo4j4be"
               data-disabled="false"
               data-readonly="false"
               data-testid="select-input-test"
-              id="_r_4q_"
+              id="_r_5o_"
               role="combobox"
               tabindex="0"
             >
