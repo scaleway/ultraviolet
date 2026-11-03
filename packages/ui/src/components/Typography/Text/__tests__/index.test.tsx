@@ -1,6 +1,6 @@
 import { textVariants } from '@ultraviolet/themes'
-import { shouldMatchSnapshot } from '@utils/test'
-import { describe, it } from 'vitest'
+import { MockResizeObserver, renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { describe, expect, it, vi } from 'vitest'
 import { Text } from '..'
 
 describe('text', () => {
@@ -104,4 +104,24 @@ describe('text', () => {
         incididunt ut labore et dolore magna aliqua.
       </Text>,
     ))
+
+  it('keeps the text element as the tooltip trigger when the text overflows', () => {
+    // The Tooltip trigger must be the text element itself: adding a wrapper when the tooltip
+    // opens changes the measured width, which makes the overflow state (and so the wrapper) flip forever.
+    vi.stubGlobal('ResizeObserver', MockResizeObserver)
+    vi.spyOn(Element.prototype, 'scrollWidth', 'get').mockReturnValue(100)
+    vi.spyOn(Element.prototype, 'clientWidth', 'get').mockReturnValue(50)
+
+    const { container } = renderWithTheme(
+      <Text as="p" oneLine variant="body">
+        Lorem ipsum dolor sit amet
+      </Text>,
+    )
+
+    expect(container.querySelector('p')?.parentElement).toBe(container.firstElementChild)
+    expect(container.querySelector('p')).toHaveAttribute('tabindex', '0')
+
+    vi.unstubAllGlobals()
+    vi.restoreAllMocks()
+  })
 })

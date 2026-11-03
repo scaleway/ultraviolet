@@ -2,6 +2,7 @@ import { Template } from './Template.stories'
 
 export const Prominence = Template.bind({})
 Prominence.args = {
+  as: 'p',
   children: 'This is a neutral text with prominence',
   prominence: 'weak',
   sentiment: 'neutral',

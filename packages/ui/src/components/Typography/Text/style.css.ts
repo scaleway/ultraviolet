@@ -172,6 +172,9 @@ const text = recipe({
   },
 })
 
-const oneLine = style({})
+const oneLine = style({
+  // needed to truncate instead of overflowing in flex/grid layouts
+  minWidth: 0,
+})
 
 export const textStyle = { text, oneLine }

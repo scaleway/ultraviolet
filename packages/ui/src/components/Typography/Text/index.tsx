@@ -4,10 +4,12 @@ import type { TextVariant } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { AriaRole, CSSProperties, ElementType, ReactNode } from 'react'
+import { useCallback, useRef } from 'react'
 import recursivelyGetChildrenString from '../../../helpers/recursivelyGetChildrenString'
 import { useIsOverflowing } from '../../../hooks/useIsOverflowing'
 import type { ExtendedColor } from '../../../theme'
 import { Tooltip } from '../../Overlay/Tooltip'
+import type { TooltipRenderProps } from '../../Overlay/Tooltip'
 import type { PROMINENCES } from './constants'
 import { textStyle } from './style.css'
 import { textVars } from './variables.css'
@@ -68,40 +70,62 @@ export const Text = ({
 
   const finalStringChildren = recursivelyGetChildrenString(children)
 
+  const tooltipRef = useRef<TooltipRenderProps['ref']>(undefined)
+  const setRef = useCallback(
+    (node: HTMLElement | null) => {
+      setElement(node)
+      const ref = tooltipRef.current
+      if (typeof ref === 'function') {
+        ref(node)
+      } else if (ref) {
+        ref.current = node
+      }
+    },
+    [setElement],
+  )
+
   return (
     <Tooltip text={isOverflowing ? finalStringChildren : ''}>
-      <Component
-        role={role}
-        aria-hidden={ariaHidden}
-        className={cn(
-          className,
-          textStyle.text({
-            disabled,
-            italic,
-            oneLine,
-            prominence,
-            sentiment,
-            strikeThrough,
-            underline,
-            variant,
-          }),
-          oneLine ? textStyle.oneLine : '',
-        )}
-        data-testid={dataTestId}
-        dir={dir}
-        htmlFor={htmlFor}
-        id={id}
-        ref={setElement}
-        style={{
-          ...assignInlineVars(textVars, {
-            textAlign: placement ?? '',
-            whiteSpace: whiteSpace ?? '',
-          }),
-          ...style,
-        }}
-      >
-        {children}
-      </Component>
+      {tooltipProps => {
+        tooltipRef.current = tooltipProps.ref
+
+        return (
+          <Component
+            {...tooltipProps}
+            aria-hidden={ariaHidden}
+            className={cn(
+              className,
+              textStyle.text({
+                disabled,
+                italic,
+                oneLine,
+                prominence,
+                sentiment,
+                strikeThrough,
+                underline,
+                variant,
+              }),
+              oneLine ? textStyle.oneLine : '',
+            )}
+            data-testid={dataTestId}
+            dir={dir}
+            htmlFor={htmlFor}
+            id={id}
+            ref={setRef}
+            role={role}
+            style={{
+              ...assignInlineVars(textVars, {
+                textAlign: placement ?? '',
+                whiteSpace: whiteSpace ?? '',
+              }),
+              ...style,
+            }}
+            tabIndex={isOverflowing ? 0 : undefined}
+          >
+            {children}
+          </Component>
+        )
+      }}
     </Tooltip>
   )
 }
