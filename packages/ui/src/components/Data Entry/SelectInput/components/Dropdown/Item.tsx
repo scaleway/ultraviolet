@@ -16,6 +16,7 @@ type ItemProps = {
   optionalInfoPlacement: 'left' | 'right'
   isActive: boolean
   onFocus: () => void
+  indexOption: number
 }
 
 export const Item = forwardRef<HTMLDivElement, ItemProps>(
