@@ -1,6 +1,7 @@
 import { theme } from '@ultraviolet/themes'
-import { style } from '@vanilla-extract/css'
+import { keyframes, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+import { fadeIn } from '../../utils'
 import { ANIMATION_EASING, NAVIGATION_COLLASPED_WIDTH } from './constants'
 import {
   itemArrowIcon,
@@ -40,25 +41,29 @@ import {
   widthNavigationContainerExpanded,
 } from './variables.css'
 
-const stickyFooter = recipe({
-  base: {
-    background: theme.colors.neutral.background,
-    borderTop: `1px solid ${theme.colors.neutral.borderWeak}`,
-    boxShadow: theme.shadows.defaultShadow,
-    display: 'flex',
-    justifyContent: 'flex-end',
-    padding: `${theme.space['1']} ${theme.space['2']}`,
-    width: '100%',
-  },
-  defaultVariants: {
-    overflow: false,
-  },
-  variants: {
-    overflow: {
-      false: {
-        border: 'none',
-        boxShadow: 'none',
-      },
+const SCROLL_TIMELINE_NAME = '--uv-navigation-scroll'
+const SHADOW_FADE_DISTANCE = '16px'
+
+const hideBottomShadow = keyframes({
+  from: { boxShadow: theme.shadows.defaultShadow },
+  to: { boxShadow: 'none' },
+})
+
+const stickyFooter = style({
+  background: theme.colors.neutral.background,
+  borderTop: `1px solid ${theme.colors.neutral.borderWeak}`,
+  display: 'flex',
+  justifyContent: 'flex-end',
+  padding: `${theme.space['1']} ${theme.space['2']}`,
+  width: '100%',
+  '@supports': {
+    '(animation-timeline: scroll())': {
+      animationDuration: 'auto',
+      animationFillMode: 'both',
+      animationName: hideBottomShadow,
+      animationRange: `max(0px, calc(100% - ${SHADOW_FADE_DISTANCE})) 100%`,
+      animationTimeline: SCROLL_TIMELINE_NAME,
+      animationTimingFunction: 'linear',
     },
   },
 })
@@ -96,6 +101,31 @@ const contentContainer = style({
   flexDirection: 'column',
   flexGrow: 1,
   overflow: 'hidden',
+  position: 'relative',
+  timelineScope: SCROLL_TIMELINE_NAME, // Makes the scroll timeline available to its siblings (footer, shadows)
+})
+
+const contentTopShadow = style({
+  borderBottom: `1px solid ${theme.colors.neutral.borderWeak}`,
+  boxShadow: theme.shadows.defaultShadow,
+  height: 0,
+  left: 0,
+  opacity: 0,
+  pointerEvents: 'none',
+  position: 'absolute',
+  right: 0,
+  top: 0,
+  zIndex: 1,
+  '@supports': {
+    '(animation-timeline: scroll())': {
+      animationDuration: 'auto',
+      animationFillMode: 'both',
+      animationName: fadeIn,
+      animationRange: `0 min(${SHADOW_FADE_DISTANCE}, 100%)`,
+      animationTimeline: SCROLL_TIMELINE_NAME,
+      animationTimingFunction: 'linear',
+    },
+  },
 })
 
 const contentContainerCollapsed = style({
@@ -107,6 +137,7 @@ const content = recipe({
     flexGrow: 1,
     overflowX: 'hidden',
     overflowY: 'auto',
+    scrollTimelineName: SCROLL_TIMELINE_NAME,
     scrollbarGutter: 'stable',
     padding: `${theme.space['2']} ${theme.space['0.5']} ${theme.space['2']} ${theme.space['2']}`,
     width: widthNavigationContainerExpanded,
@@ -165,6 +196,7 @@ export const navigationStyle = {
   contentContainer,
   contentContainerCollapsed,
   content,
+  contentTopShadow,
   slider,
   itemMenuContainer,
   itemCollapsed,
