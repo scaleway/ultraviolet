@@ -126,6 +126,8 @@ export const DisplayValues = ({
     </Stack>
   ) : (
     <Text
+      aria-atomic
+      aria-live="polite"
       as="span"
       className={selectInputStyle.selectedValues}
       disabled={disabled}

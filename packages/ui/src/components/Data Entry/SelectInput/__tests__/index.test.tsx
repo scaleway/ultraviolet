@@ -516,24 +516,57 @@ describe('selectInput', () => {
     )
 
     await userEvent.click(screen.getByRole('combobox', { name: 'label' }))
-    const dropdown = screen.getByRole('dialog')
-    const searchBar = within(dropdown).getByRole('textbox', { name: 'search-bar' })
-    const listbox = within(dropdown).getByRole('listbox', { name: 'label' })
+    const searchBar = screen.getByRole('textbox', { name: 'search-bar' })
 
-    expect(searchBar).toHaveAttribute('aria-controls', listbox.id)
+    expect(searchBar).toHaveAccessibleDescription('8 options available')
 
     await userEvent.type(searchBar, 'venus')
     await waitFor(() => {
       expect(searchBar).toHaveFocus()
-      expect(within(dropdown).getByRole('status')).toHaveTextContent('1 option available')
+      expect(screen.getAllByRole('status')[0]).toHaveTextContent('1 option available')
     })
+
+    await userEvent.keyboard('{ArrowDown}')
+    expect(screen.getByRole('option', { name: 'Venus' })).toHaveFocus()
+    await userEvent.keyboard('{ArrowUp}')
+    expect(searchBar).toHaveFocus()
 
     await userEvent.clear(searchBar)
     await userEvent.type(searchBar, 'test-test-test')
     await waitFor(() => {
       expect(searchBar).toHaveFocus()
-      expect(within(dropdown).getByRole('status')).toHaveTextContent('0 options available')
+      expect(screen.getAllByRole('status')[0]).toHaveTextContent('0 options available')
     })
+  })
+
+  it('announces selection changes', async () => {
+    renderWithTheme(<SelectInput multiselect options={dataUnGrouped} label="label" />)
+
+    const combobox = screen.getByRole('combobox', { name: 'label' })
+    expect(combobox).not.toHaveAttribute('aria-live')
+
+    await userEvent.click(combobox)
+    await userEvent.click(screen.getByRole('option', { name: /Jupiter/iv }))
+    await waitFor(() => {
+      expect(screen.getByRole('status', { name: 'Selected options' })).toHaveTextContent('Jupiter')
+    })
+    await userEvent.click(screen.getByRole('option', { name: 'Saturn' }))
+
+    await waitFor(() => {
+      expect(screen.getByRole('status', { name: 'Selected options' })).toHaveTextContent('Jupiter, Saturn')
+    })
+  })
+
+  it('announces a single selected value from the value text', async () => {
+    renderWithTheme(<SelectInput options={dataUnGrouped} label="label" />)
+
+    const combobox = screen.getByRole('combobox', { name: 'label' })
+    await userEvent.click(combobox)
+    await userEvent.click(screen.getByRole('option', { name: /Jupiter/iv }))
+
+    const selectedValue = screen.getByText('Jupiter')
+    expect(selectedValue).toHaveAttribute('aria-live', 'polite')
+    expect(combobox).not.toHaveAttribute('aria-live')
   })
 
   it('handles correctly dropdown with clicks - grouped', async () => {
@@ -1316,7 +1349,7 @@ describe('selectInput', () => {
 
     await userEvent.click(screen.getByRole('combobox', { name: 'label' }))
     const dropdown = screen.getByRole('dialog')
-    const listbox = within(dropdown).getByRole('listbox', { name: 'label' })
+    const listbox = dropdown
 
     expect(within(listbox).queryByRole('checkbox')).not.toBeInTheDocument()
     expect(within(listbox).getByRole('option', { name: /jupiter/i })).toBeInTheDocument()

@@ -63,7 +63,7 @@ exports[`unitInputField > should handles onChange and selection 1`] = `
               >
                 <div
                   aria-expanded="false"
-                  aria-haspopup="dialog"
+                  aria-haspopup="listbox"
                   aria-invalid="false"
                   aria-labelledby="_r_n_"
                   aria-required="false"
@@ -76,6 +76,8 @@ exports[`unitInputField > should handles onChange and selection 1`] = `
                   tabindex="0"
                 >
                   <span
+                    aria-atomic="true"
+                    aria-live="polite"
                     class="uv_1xo4j4bm uv_1do42ls0 uv_1do42ls4 uv_1do42lsb uv_1do42lsj uv_1do42ls1a uv_1do42ls32"
                   >
                     Days
@@ -99,6 +101,12 @@ exports[`unitInputField > should handles onChange and selection 1`] = `
                   </div>
                 </div>
               </div>
+              <output
+                aria-atomic="true"
+                aria-live="polite"
+                class="uv_ahdbou0"
+                id="_r_q_"
+              />
             </div>
           </div>
         </div>
@@ -165,7 +173,7 @@ exports[`unitInputField > should render correctly 1`] = `
               >
                 <div
                   aria-expanded="false"
-                  aria-haspopup="dialog"
+                  aria-haspopup="listbox"
                   aria-invalid="false"
                   aria-labelledby="_r_5_"
                   aria-required="false"
@@ -202,6 +210,12 @@ exports[`unitInputField > should render correctly 1`] = `
                   </div>
                 </div>
               </div>
+              <output
+                aria-atomic="true"
+                aria-live="polite"
+                class="uv_ahdbou0"
+                id="_r_8_"
+              />
             </div>
           </div>
         </div>

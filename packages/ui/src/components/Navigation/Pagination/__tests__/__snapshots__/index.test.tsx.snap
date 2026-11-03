@@ -1088,7 +1088,7 @@ exports[`pagination > should render correctly with perPage - default values 1`] 
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
                 aria-invalid="false"
                 aria-labelledby="_r_3e_"
                 aria-required="false"
@@ -1101,6 +1101,8 @@ exports[`pagination > should render correctly with perPage - default values 1`] 
                 tabindex="0"
               >
                 <span
+                  aria-atomic="true"
+                  aria-live="polite"
                   class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                 >
                   10
@@ -1124,6 +1126,12 @@ exports[`pagination > should render correctly with perPage - default values 1`] 
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_3l_"
+            />
           </div>
         </div>
         <span
@@ -1271,7 +1279,7 @@ exports[`pagination > should render correctly with perPage 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
                 aria-invalid="false"
                 aria-labelledby="_r_4j_"
                 aria-required="false"
@@ -1284,6 +1292,8 @@ exports[`pagination > should render correctly with perPage 1`] = `
                 tabindex="0"
               >
                 <span
+                  aria-atomic="true"
+                  aria-live="polite"
                   class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                 >
                   10
@@ -1307,6 +1317,12 @@ exports[`pagination > should render correctly with perPage 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_4q_"
+            />
           </div>
         </div>
         <span

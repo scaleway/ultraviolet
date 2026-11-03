@@ -3,7 +3,7 @@
 import type { TextVariant } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { AriaRole, CSSProperties, ElementType, ReactNode } from 'react'
+import type { AriaAttributes, AriaRole, CSSProperties, ElementType, ReactNode } from 'react'
 import { useCallback, useRef } from 'react'
 import recursivelyGetChildrenString from '../../../helpers/recursivelyGetChildrenString'
 import { useIsOverflowing } from '../../../hooks/useIsOverflowing'
@@ -35,6 +35,8 @@ type TextProps = {
   htmlFor?: string
   'data-testid'?: string
   'aria-hidden'?: boolean
+  'aria-live'?: AriaAttributes['aria-live']
+  'aria-atomic'?: AriaAttributes['aria-atomic']
   strikeThrough?: boolean
   whiteSpace?: WhiteSpaceProps
   role?: Extract<AriaRole, 'status' | 'alert'>
@@ -64,6 +66,8 @@ export const Text = ({
   role,
   'data-testid': dataTestId,
   'aria-hidden': ariaHidden,
+  'aria-live': ariaLive,
+  'aria-atomic': ariaAtomic,
   style,
 }: TextProps) => {
   const [setElement, isOverflowing] = useIsOverflowing({ enabled: oneLine })
@@ -92,7 +96,10 @@ export const Text = ({
         return (
           <Component
             {...tooltipProps}
+            role={role}
             aria-hidden={ariaHidden}
+            aria-live={ariaLive}
+            aria-atomic={ariaAtomic}
             className={cn(
               className,
               textStyle.text({

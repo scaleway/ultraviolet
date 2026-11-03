@@ -31,6 +31,7 @@ type CreateDropdownProps = {
   initialFocusRef: RefObject<HTMLDivElement | null>
   listboxId: string
   listboxLabelledBy?: string
+  searchBarRef?: RefObject<HTMLInputElement | null>
 }
 
 const moveFocusDown = () => {
@@ -45,19 +46,26 @@ const moveFocusDown = () => {
     }
   }
 }
-const moveFocusUp = () => {
+const moveFocusUp = (searchBarRef?: RefObject<HTMLInputElement | null>) => {
   const options = document.querySelectorAll<HTMLElement>(OPTION_SELECTOR)
   const activeItem = document.activeElement
 
   if (options) {
     for (let i = 0; i < options.length; i += 1) {
-      if (activeItem === options[i] && activeItem !== options[0]) {
-        options[i - 1].focus()
+      if (activeItem === options[i]) {
+        if (i === 0) {
+          searchBarRef?.current?.focus()
+        } else {
+          options[i - 1].focus()
+        }
       }
     }
   }
 }
-const handleKeyDownSelect = (event: KeyboardEvent<HTMLDivElement>) => {
+const handleKeyDownSelect = (
+  event: KeyboardEvent<HTMLDivElement>,
+  searchBarRef?: RefObject<HTMLInputElement | null>,
+) => {
   if (event.key === 'ArrowDown') {
     event.preventDefault()
     moveFocusDown()
@@ -65,7 +73,7 @@ const handleKeyDownSelect = (event: KeyboardEvent<HTMLDivElement>) => {
 
   if (event.key === 'ArrowUp') {
     event.preventDefault()
-    moveFocusUp()
+    moveFocusUp(searchBarRef)
   }
 
   if (event.key === ' ') {
@@ -89,6 +97,7 @@ export const CreateDropdown = ({
   initialFocusRef,
   listboxId,
   listboxLabelledBy,
+  searchBarRef,
 }: CreateDropdownProps) => {
   const { displayedOptions, searchInput, size, selectedData } = useSelectInput()
   const focusedItemRef = useRef<HTMLDivElement>(null)
@@ -103,6 +112,7 @@ export const CreateDropdown = ({
     focusableOptions.find(option => !option.disabled)
 
   const listBoxLabelId = useId()
+
   useEffect(() => {
     if (defaultSearchValue && focusedItemRef?.current) {
       focusedItemRef.current.focus()
@@ -139,13 +149,13 @@ export const CreateDropdown = ({
   if (isLoading) {
     return (
       <Stack
+        aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
         className={selectInputStyle.dropdownContainer}
         id={listboxId}
-        aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
-        onKeyDown={handleKeyDownSelect}
+        onKeyDown={event => handleKeyDownSelect(event, searchBarRef)}
         role="listbox"
       >
-        {!listBoxLabelId ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
+        {!listboxLabelledBy ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
         <Skeleton variant="block" />
       </Stack>
     )
@@ -155,13 +165,13 @@ export const CreateDropdown = ({
     return (
       <Stack
         alignItems="center"
+        aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
         className={selectInputStyle.dropdownEmptyState}
         gap={2}
         id={listboxId}
-        aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
         role="listbox"
       >
-        {!listBoxLabelId ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
+        {!listboxLabelledBy ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
         {computedEmptyState}
       </Stack>
     )
@@ -175,8 +185,13 @@ export const CreateDropdown = ({
     }
 
     return (
-      <Stack id={listboxId} aria-labelledby={listboxLabelledBy ?? listBoxLabelId} role="listbox">
-        {!listBoxLabelId ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
+      <Stack
+        aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
+        id={listboxId}
+        onKeyDown={event => handleKeyDownSelect(event, searchBarRef)}
+        role="listbox"
+      >
+        {!listboxLabelledBy ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
         <AddOption
           addOption={addOption}
           isEmpty={isEmpty}
@@ -190,13 +205,13 @@ export const CreateDropdown = ({
 
   return Array.isArray(displayedOptions) ? (
     <Stack
-      className={selectInputStyle.dropdownContainer}
-      id={listboxId}
       aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
-      onKeyDown={handleKeyDownSelect}
+      className={selectInputStyle.dropdownContainer}
+      onKeyDown={event => handleKeyDownSelect(event, searchBarRef)}
+      id={listboxId}
       role="listbox"
     >
-      {!listBoxLabelId ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
+      {!listboxLabelledBy ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
       <AddOption
         addOption={addOption}
         option={{
@@ -228,14 +243,14 @@ export const CreateDropdown = ({
     </Stack>
   ) : (
     <Stack
+      aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
       className={selectInputStyle.dropdownContainer}
       data-grouped
       id={listboxId}
-      aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
-      onKeyDown={handleKeyDownSelect}
+      onKeyDown={event => handleKeyDownSelect(event, searchBarRef)}
       role="listbox"
     >
-      {!listBoxLabelId ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
+      {!listboxLabelledBy ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
       <AddOption
         addOption={addOption}
         option={{

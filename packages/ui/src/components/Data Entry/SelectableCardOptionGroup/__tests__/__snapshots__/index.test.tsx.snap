@@ -23,7 +23,6 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
               data-checked="true"
               data-disabled="false"
               data-error="false"
-              data-floating-ui-inert=""
               data-type="radio"
               role="button"
               style="--_1d8tbmb3: 1; --_8im5570: inline; --_8im5571: inline; --_8im5572: auto;"
@@ -31,6 +30,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
             >
               <div
                 class="styles__v3r5nr0 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+                data-floating-ui-inert=""
               >
                 <div
                   aria-disabled="false"
@@ -96,6 +96,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                 >
                   <div
                     class="styles__xrfufo7 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p styles_justifyContent_center_xxsmall__xf61n461"
+                    data-floating-ui-inert=""
                     style="--_1d8tbmb0: 100%;"
                   >
                     <img
@@ -125,6 +126,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                     >
                       <label
                         class="styles__ahdbou0"
+                        data-floating-ui-inert=""
                         id="_r_mb_"
                       >
                         Ubuntu option
@@ -134,7 +136,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_mb_"
                           aria-required="false"
@@ -147,12 +149,15 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                           tabindex="0"
                         >
                           <span
+                            aria-atomic="true"
+                            aria-live="polite"
                             class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                           >
                             Ubuntu 20.04 Focal Fossa
                           </span>
                           <div
                             class="selectBar_small__1xo4j4b3 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.5rem_xxsmall__xf61n43p"
+                            data-floating-ui-inert=""
                           >
                             <svg
                               aria-hidden="true"
@@ -170,6 +175,12 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_me_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -292,9 +303,9 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                         data-floating-ui-inert=""
                       >
                         <div
-                          aria-controls="_r_n5_"
+                          aria-controls="_r_n2_"
                           aria-expanded="true"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_n0_"
                           aria-required="false"
@@ -355,6 +366,14 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                         style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
                         tabindex="0"
                       />
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_n3_"
+                      >
+                        2 options available
+                      </output>
                     </div>
                   </div>
                 </div>
@@ -365,7 +384,6 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
               data-checked="false"
               data-disabled="false"
               data-error="false"
-              data-floating-ui-inert=""
               data-type="radio"
               role="button"
               style="--_1d8tbmb3: 1; --_8im5570: inline; --_8im5571: inline; --_8im5572: auto;"
@@ -373,6 +391,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
             >
               <div
                 class="styles__v3r5nr0 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
+                data-floating-ui-inert=""
               >
                 <div
                   aria-disabled="false"
@@ -437,6 +456,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                 >
                   <div
                     class="styles__xrfufo7 styles__xf61n40 styles_alignItems_center_xxsmall__xf61n4d styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.5rem_xxsmall__xf61n43p styles_justifyContent_center_xxsmall__xf61n461"
+                    data-floating-ui-inert=""
                     style="--_1d8tbmb0: 100%;"
                   >
                     <img
@@ -466,16 +486,18 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                     >
                       <label
                         class="styles__ahdbou0"
+                        data-floating-ui-inert=""
                         id="_r_nl_"
                       >
                         CentOS option
                       </label>
                       <div
                         class="styles__12tze4lb"
+                        data-floating-ui-inert=""
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_nl_"
                           aria-required="false"
@@ -512,6 +534,12 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_no_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -663,7 +691,7 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_d_"
                           aria-required="false"
@@ -676,6 +704,8 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                           tabindex="0"
                         >
                           <span
+                            aria-atomic="true"
+                            aria-live="polite"
                             class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                           >
                             Ubuntu 20.04 Focal Fossa
@@ -699,6 +729,12 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_g_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -818,7 +854,7 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_12_"
                           aria-required="false"
@@ -855,6 +891,12 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_15_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -974,7 +1016,7 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_1n_"
                           aria-required="false"
@@ -1011,6 +1053,12 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_1q_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -1157,7 +1205,7 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_i9_"
                           aria-required="false"
@@ -1170,6 +1218,8 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                           tabindex="0"
                         >
                           <span
+                            aria-atomic="true"
+                            aria-live="polite"
                             class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                           >
                             Ubuntu 20.04 Focal Fossa
@@ -1193,6 +1243,12 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_ic_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -1312,7 +1368,7 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_iu_"
                           aria-required="false"
@@ -1349,6 +1405,12 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_j1_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -1468,7 +1530,7 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_jj_"
                           aria-required="false"
@@ -1505,6 +1567,12 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_jm_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -1652,7 +1720,7 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_87_"
                           aria-required="false"
@@ -1665,6 +1733,8 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                           tabindex="0"
                         >
                           <span
+                            aria-atomic="true"
+                            aria-live="polite"
                             class="selectBar__1xo4j4bm style__1do42ls0 style_disabled_true__1do42ls1 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_28__1do42ls22"
                           >
                             Ubuntu 20.04 Focal Fossa
@@ -1688,6 +1758,12 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_8a_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -1808,7 +1884,7 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_8s_"
                           aria-required="false"
@@ -1845,6 +1921,12 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_8v_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -1965,7 +2047,7 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_9h_"
                           aria-required="false"
@@ -2002,6 +2084,12 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_9k_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -2142,7 +2230,7 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_4b_"
                           aria-required="false"
@@ -2155,6 +2243,8 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                           tabindex="0"
                         >
                           <span
+                            aria-atomic="true"
+                            aria-live="polite"
                             class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                           >
                             Ubuntu 20.04 Focal Fossa
@@ -2178,6 +2268,12 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_4e_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -2291,7 +2387,7 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_4u_"
                           aria-required="false"
@@ -2328,6 +2424,12 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_51_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -2441,7 +2543,7 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_5h_"
                           aria-required="false"
@@ -2478,6 +2580,12 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_5k_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -2624,7 +2732,7 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="true"
                           aria-labelledby="_r_e9_"
                           aria-required="false"
@@ -2637,6 +2745,8 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                           tabindex="0"
                         >
                           <span
+                            aria-atomic="true"
+                            aria-live="polite"
                             class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                           >
                             Ubuntu 20.04 Focal Fossa
@@ -2673,6 +2783,12 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_ec_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -2792,7 +2908,7 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="true"
                           aria-labelledby="_r_eu_"
                           aria-required="false"
@@ -2842,6 +2958,12 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_f1_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -2961,7 +3083,7 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="true"
                           aria-labelledby="_r_fj_"
                           aria-required="false"
@@ -3011,6 +3133,12 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_fm_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -3158,7 +3286,7 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="true"
                           aria-labelledby="_r_c7_"
                           aria-required="false"
@@ -3171,6 +3299,8 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                           tabindex="0"
                         >
                           <span
+                            aria-atomic="true"
+                            aria-live="polite"
                             class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                           >
                             Ubuntu 20.04 Focal Fossa
@@ -3207,6 +3337,12 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_ca_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -3326,7 +3462,7 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="true"
                           aria-labelledby="_r_cs_"
                           aria-required="false"
@@ -3376,6 +3512,12 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_cv_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -3495,7 +3637,7 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="true"
                           aria-labelledby="_r_dh_"
                           aria-required="false"
@@ -3545,6 +3687,12 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_dk_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -3699,7 +3847,7 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_k9_"
                           aria-required="false"
@@ -3712,6 +3860,8 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                           tabindex="0"
                         >
                           <span
+                            aria-atomic="true"
+                            aria-live="polite"
                             class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                           >
                             Ubuntu 20.04 Focal Fossa
@@ -3735,6 +3885,12 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_kc_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -3854,7 +4010,7 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_ku_"
                           aria-required="false"
@@ -3891,6 +4047,12 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_l1_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -4010,7 +4172,7 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_lj_"
                           aria-required="false"
@@ -4047,6 +4209,12 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_lm_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -4200,7 +4368,7 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_67_"
                           aria-required="false"
@@ -4213,6 +4381,8 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                           tabindex="0"
                         >
                           <span
+                            aria-atomic="true"
+                            aria-live="polite"
                             class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                           >
                             Ubuntu 20.04 Focal Fossa
@@ -4236,6 +4406,12 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_6a_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -4355,7 +4531,7 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_6s_"
                           aria-required="false"
@@ -4392,6 +4568,12 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_6v_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -4511,7 +4693,7 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_7h_"
                           aria-required="false"
@@ -4548,6 +4730,12 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_7k_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -4691,7 +4879,7 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_g9_"
                           aria-required="false"
@@ -4704,6 +4892,8 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                           tabindex="0"
                         >
                           <span
+                            aria-atomic="true"
+                            aria-live="polite"
                             class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                           >
                             Ubuntu 20.04 Focal Fossa
@@ -4727,6 +4917,12 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_gc_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -4843,7 +5039,7 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_gu_"
                           aria-required="false"
@@ -4880,6 +5076,12 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_h1_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -4996,7 +5198,7 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_hj_"
                           aria-required="false"
@@ -5033,6 +5235,12 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_hm_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -5179,7 +5387,7 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_2d_"
                           aria-required="false"
@@ -5192,6 +5400,8 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                           tabindex="0"
                         >
                           <span
+                            aria-atomic="true"
+                            aria-live="polite"
                             class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                           >
                             Ubuntu 20.04 Focal Fossa
@@ -5215,6 +5425,12 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_2g_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -5334,7 +5550,7 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_32_"
                           aria-required="false"
@@ -5371,6 +5587,12 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_35_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -5490,7 +5712,7 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_3n_"
                           aria-required="false"
@@ -5527,6 +5749,12 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_3q_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -5673,7 +5901,7 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_a7_"
                           aria-required="false"
@@ -5686,6 +5914,8 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                           tabindex="0"
                         >
                           <span
+                            aria-atomic="true"
+                            aria-live="polite"
                             class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                           >
                             Ubuntu 20.04 Focal Fossa
@@ -5709,6 +5939,12 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_aa_"
+                      />
                     </div>
                   </div>
                 </div>
@@ -5829,7 +6065,7 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                       >
                         <div
                           aria-expanded="true"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_as_"
                           aria-required="false"
@@ -5866,6 +6102,14 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_av_"
+                      >
+                        2 options available
+                      </output>
                     </div>
                   </div>
                 </div>
@@ -5985,7 +6229,7 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                       >
                         <div
                           aria-expanded="false"
-                          aria-haspopup="dialog"
+                          aria-haspopup="listbox"
                           aria-invalid="false"
                           aria-labelledby="_r_bh_"
                           aria-required="false"
@@ -6022,6 +6266,12 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                           </div>
                         </div>
                       </div>
+                      <output
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="styles__ahdbou0"
+                        id="_r_bk_"
+                      />
                     </div>
                   </div>
                 </div>
