@@ -17,6 +17,7 @@ type SearchBarProps = {
   placeholder: string
   displayedOptions: DataType
   setSearchBarActive: Dispatch<SetStateAction<boolean>>
+  listboxId: string
 }
 
 const getReferenceText = (option: OptionType) => {
@@ -73,7 +74,7 @@ const findClosestOption = (options: DataType, searchInput: string | undefined) =
 
 const escapeRegExp = (string: string) => string.replaceAll(/[.*+?^{}()|[\]\\]/gu, String.raw`\$&`)
 
-export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }: SearchBarProps) => {
+export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive, listboxId }: SearchBarProps) => {
   const searchInputRef = useRef<HTMLInputElement>(null)
   const { onChange, onSearch, setSearchInput, searchInput, options, multiselect, setSelectedData, selectedData, size } =
     useSelectInput()
@@ -122,6 +123,7 @@ export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }:
   return (
     <TextInput
       aria-label="search-bar"
+      aria-controls={listboxId}
       className={cn(selectInputStyle.searchBar, searchInputStyle.searchInput)}
       data-testid="search-bar"
       onBlur={() => setSearchBarActive(false)}

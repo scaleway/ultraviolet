@@ -1,4 +1,5 @@
 import { cn } from '@ultraviolet/utils'
+import { useMemo } from 'react'
 import { Text } from '../../../../Typography/Text'
 import { Checkbox } from '../../../Checkbox'
 import { useSelectInput } from '../../SelectInputProvider'
@@ -27,36 +28,42 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
     }
   }
 
+  const groupLabel = useMemo(
+    () => (
+      <Text as="span" placement="left" sentiment="neutral" variant={size === 'small' ? 'captionSmall' : 'caption'}>
+        {group.toUpperCase()}
+      </Text>
+    ),
+    [group, size],
+  )
+
   if (!group) {
     return null
   }
 
   return (
     <div className={selectInputStyle.dropdownGroupWrapper} data-type="items">
-      <button
-        className={cn(
-          selectAllGroup
-            ? selectInputStyle.dropdownGroupSelectable({
-                size,
-              })
-            : '',
-          selectInputStyle.dropdownGroup,
-        )}
-        data-selectgroup={selectAllGroup}
-        data-testid={`group-${index}`}
-        key={group}
-        onClick={() => (selectAllGroup ? handleSelectGroup() : null)}
-        onKeyDown={event => {
-          if ([' ', 'Enter'].includes(event.key)) {
-            event.preventDefault()
-            handleSelectGroup()
-          }
-        }}
-        tabIndex={selectAllGroup ? 0 : -1}
-        type="button"
-      >
-        {selectAllGroup ? (
+      {selectAllGroup ? (
+        <button
+          className={cn(
+            selectInputStyle.dropdownGroupSelectable({
+              size,
+            }),
+            selectInputStyle.dropdownGroup,
+          )}
+          data-selectgroup
+          data-testid={`group-${index}`}
+          onClick={handleSelectGroup}
+          onKeyDown={event => {
+            if ([' ', 'Enter'].includes(event.key)) {
+              event.preventDefault()
+              handleSelectGroup()
+            }
+          }}
+          type="button"
+        >
           <Checkbox
+            aria-hidden
             checked={selectedData.selectedGroups.includes(group)}
             className={selectInputStyle.dropdownCheckbox}
             data-testid="select-group"
@@ -65,21 +72,14 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
             tabIndex={-1}
             value={group}
           >
-            <Text
-              as="span"
-              placement="left"
-              sentiment="neutral"
-              variant={size === 'small' ? 'captionSmall' : 'caption'}
-            >
-              {group.toUpperCase()}
-            </Text>
+            {groupLabel}
           </Checkbox>
-        ) : (
-          <Text as="span" placement="left" sentiment="neutral" variant={size === 'small' ? 'captionSmall' : 'caption'}>
-            {group.toUpperCase()}
-          </Text>
-        )}
-      </button>
+        </button>
+      ) : (
+        <div className={selectInputStyle.dropdownGroup} data-testid={`group-${index}`}>
+          {groupLabel}
+        </div>
+      )}
     </div>
   )
 }

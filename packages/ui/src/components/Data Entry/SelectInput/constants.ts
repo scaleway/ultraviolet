@@ -1,8 +1,9 @@
 export const DROPDOWN_MAX_HEIGHT = 256
 export const DROPDOWN_MIN_WIDTH = 320
 
-// Select all the items and the "add option" element
-export const OPTION_SELECTOR = '[data-type="items"] > div[role="option"]:not([aria-disabled="true"]), #add-option'
+// Select all items, selectable groups, and the "add option" element
+export const OPTION_SELECTOR =
+  '[data-type="items"] > div[role="option"]:not([aria-disabled="true"]), [data-type="items"] > button[data-selectgroup="true"], [data-type="add-option"][role="option"]'
 
 export const SIZES_TAG = {
   gap: 8,

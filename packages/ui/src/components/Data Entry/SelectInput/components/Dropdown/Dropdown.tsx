@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ComponentProps, Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { Stack } from '../../../../Layout/Stack'
+import { VisuallyHidden } from '../../../../Other/VisuallyHidden'
 import { Popup } from '../../../../Overlay/Popup/v2'
 import { NON_SEARCHABLE_KEYS } from '../../constants'
 import { useSelectInput } from '../../SelectInputProvider'
@@ -28,6 +29,7 @@ export type DropdownProps = {
   disabled?: boolean
   portalTarget?: ComponentProps<typeof Popup.Panel>['portalTarget']
   listboxId: string
+  listboxLabelledBy?: string
 }
 
 const handleKeyDown = (
@@ -77,17 +79,10 @@ export const Dropdown = ({
   disabled,
   portalTarget,
   listboxId,
+  listboxLabelledBy,
 }: DropdownProps) => {
-  const {
-    setIsDropdownVisible,
-    isDropdownVisible,
-    onSearch,
-    searchInput,
-    options,
-    displayedOptions,
-    numberOfOptions,
-    selectedData,
-  } = useSelectInput()
+  const { setIsDropdownVisible, isDropdownVisible, onSearch, searchInput, options, displayedOptions, numberOfOptions } =
+    useSelectInput()
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [defaultSearchValue, setDefaultSearchValue] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
@@ -143,6 +138,14 @@ export const Dropdown = ({
     return true
   }, [displayedOptions, numberOfOptions])
 
+  const displayedOptionCount = useMemo(
+    () =>
+      Array.isArray(displayedOptions)
+        ? displayedOptions.length
+        : Object.values(displayedOptions).reduce((count, groupOptions) => count + groupOptions.length, 0),
+    [displayedOptions],
+  )
+
   const computedFooter = useMemo(() => {
     if (footer && !isEmpty) {
       if (typeof footer === 'function') {
@@ -165,16 +168,20 @@ export const Dropdown = ({
         placement="bottom-start"
         matchTriggerWidth
         portalTarget={portalTarget}
-        initialFocus={searchable || selectedData.selectedValues.length === 0 ? undefined : initialFocusRef}
+        initialFocus={!searchable && !isLoading && displayedOptionCount > 0 ? initialFocusRef : undefined}
       >
         <Stack>
           {searchable && !isLoading ? (
             <SearchBar
               displayedOptions={displayedOptions}
+              listboxId={listboxId}
               placeholder={placeholder}
               setSearchBarActive={setSearchBarActive}
             />
           ) : null}
+          <VisuallyHidden aria-atomic="true" aria-live="polite" role="status">
+            {`${displayedOptionCount} option${displayedOptionCount === 1 ? '' : 's'} available`}
+          </VisuallyHidden>
           <CreateDropdown
             addOption={addOption}
             defaultSearchValue={defaultSearchValue}
@@ -189,6 +196,7 @@ export const Dropdown = ({
             optionalInfoPlacement={optionalInfoPlacement}
             searchable={searchable}
             listboxId={listboxId}
+            listboxLabelledBy={listboxLabelledBy}
           />
           {computedFooter}
         </Stack>

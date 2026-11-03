@@ -63,6 +63,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
       role,
       'aria-live': ariaLive,
       'aria-atomic': ariaAtomic,
+      'aria-controls': ariaControls,
       defaultValue,
       style,
       onClick,
@@ -117,6 +118,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               aria-invalid={!!error}
               aria-label={ariaLabel}
               aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
+              aria-controls={ariaControls}
               aria-labelledby={ariaLabelledBy}
               autoComplete={autoComplete}
               autoFocus={autoFocus}

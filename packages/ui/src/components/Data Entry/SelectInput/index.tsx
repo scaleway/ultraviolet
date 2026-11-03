@@ -182,6 +182,8 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   const helperId = useId()
   const dropdownId = useId()
   const listboxId = useId()
+  const accessibleLabelComputed = accessibleLabel ?? ariaLabel
+  const listboxLabelledBy = ariaLabelledby ?? (label || accessibleLabelComputed ? labelId : undefined)
   const ref = useRef<HTMLDivElement | null>(null)
   const numberOfOptions = Array.isArray(options)
     ? options.length
@@ -191,7 +193,6 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
     ? options.filter(option => option.disabled).length
     : Object.values(options).reduce((acc, current) => acc + current.filter(option => option.disabled).length, 0)
   const finalDataTestId = dataTestId ?? `select-input-${name ?? 'name'}`
-  const accessibleLabelComputed = accessibleLabel ?? ariaLabel
 
   return (
     <SelectInputProvider
@@ -230,6 +231,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
             id={dropdownId}
             isLoading={isLoading}
             listboxId={listboxId}
+            listboxLabelledBy={listboxLabelledBy}
             loadMore={loadMore}
             optionalInfoPlacement={optionalInfoPlacement}
             placeholder={placeholderSearch}
@@ -249,6 +251,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
               listboxId={listboxId}
               placeholder={placeholder}
               readOnly={readOnly}
+              required={required}
               size={size}
               success={success}
               tooltip={tooltip}

@@ -58,6 +58,7 @@ export const SelectAll = ({ textVariant }: { textVariant: 'body' | 'bodySmall' }
         tabIndex={0}
       >
         <Checkbox
+          aria-hidden
           checked={allSelected}
           className={selectInputStyle.dropdownCheckbox}
           data-testid="select-all-checkbox"
