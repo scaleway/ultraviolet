@@ -11,7 +11,7 @@ import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
 import { Tooltip } from '../../../../Overlay/Tooltip'
 import { Text } from '../../../../Typography/Text'
-import { SIZES_TAG } from '../../constants'
+import { OPTION_SELECTOR, SIZES_TAG } from '../../constants'
 import { findOptionInOptions } from '../../findOptionInOptions'
 import { useSelectInput } from '../../SelectInputProvider'
 import type { OptionType } from '../../types'
@@ -37,6 +37,7 @@ type SelectBarProps = {
   'aria-labelledby'?: string
   helper?: ReactNode
   listboxId: string
+  required?: boolean
 }
 
 const SelectBar = ({
@@ -57,6 +58,7 @@ const SelectBar = ({
   helper,
   'aria-describedby': ariaDescribedBy,
   'aria-labelledby': ariaLabelledby,
+  required,
 }: SelectBarProps) => {
   const { isDropdownVisible, onChange, setIsDropdownVisible, options, selectedData, setSelectedData, multiselect } =
     useSelectInput()
@@ -179,6 +181,8 @@ const SelectBar = ({
         aria-labelledby={ariaLabelledby}
         aria-controls={listboxId}
         aria-expanded={isDropdownVisible}
+        aria-invalid={!!error}
+        aria-required={required}
         autoFocus={autoFocus}
         className={selectInputStyle.selectBar({
           disabled,
@@ -195,7 +199,7 @@ const SelectBar = ({
         onKeyDown={event => {
           if (event.key === 'ArrowDown') {
             if (isDropdownVisible) {
-              document.getElementById('option-0')?.focus()
+              document.getElementById(listboxId)?.querySelector<HTMLElement>(OPTION_SELECTOR)?.focus()
             } else {
               setIsDropdownVisible(true)
             }

@@ -6,6 +6,9 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { SelectInput } from '..'
 import { cities, dataGrouped, dataGroupedSmall, dataGroupEmpty, dataUnGrouped, OptionalInfo } from './resources'
 
+// checkboxes are hidden (to avoid inputs inside a button)
+const getDecorativeCheckbox = (container: HTMLElement) => within(container).getByRole('checkbox', { hidden: true })
+
 describe('selectInput', () => {
   beforeEach(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
@@ -437,6 +440,25 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  it('focuses the first option when opening a non-searchable dropdown', async () => {
+    renderWithTheme(
+      <SelectInput
+        name="test"
+        options={[dataUnGrouped[1]]}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        label="label"
+      />,
+    )
+
+    await userEvent.click(screen.getByRole('combobox', { name: 'label' }))
+    const option = screen.getByRole('option', { name: 'Venus' })
+
+    await waitFor(() => {
+      expect(option).toHaveFocus()
+    })
+  })
+
   it('should be searchable when there are less than 6 items but addOption is enabled', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
@@ -475,6 +497,38 @@ describe('selectInput', () => {
       expect(screen.getByRole('textbox', { name: 'search-bar' })).toBeInTheDocument()
     })
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('keeps focus in the search bar and announces the number of results', async () => {
+    renderWithTheme(
+      <SelectInput
+        name="test"
+        options={dataUnGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        label="label"
+      />,
+    )
+
+    await userEvent.click(screen.getByRole('combobox', { name: 'label' }))
+    const dropdown = screen.getByRole('dialog')
+    const searchBar = within(dropdown).getByRole('textbox', { name: 'search-bar' })
+    const listbox = within(dropdown).getByRole('listbox', { name: 'label' })
+
+    expect(searchBar).toHaveAttribute('aria-controls', listbox.id)
+
+    await userEvent.type(searchBar, 'venus')
+    await waitFor(() => {
+      expect(searchBar).toHaveFocus()
+      expect(within(dropdown).getByRole('status')).toHaveTextContent('1 option available')
+    })
+
+    await userEvent.clear(searchBar)
+    await userEvent.type(searchBar, 'test-test-test')
+    await waitFor(() => {
+      expect(searchBar).toHaveFocus()
+      expect(within(dropdown).getByRole('status')).toHaveTextContent('0 options available')
+    })
   })
 
   it('handles correctly dropdown with clicks - grouped', async () => {
@@ -599,7 +653,7 @@ describe('selectInput', () => {
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     expect(dropdown).toBeVisible()
-    expect(screen.getByRole('textbox', { name: 'search-bar' })).toHaveFocus()
+    await waitFor(() => expect(screen.getByRole('textbox', { name: 'search-bar' })).toHaveFocus())
 
     await userEvent.keyboard('[arrowDown]')
     const mercury = screen.getByRole('option', { name: 'Mercury' })
@@ -893,10 +947,8 @@ describe('selectInput', () => {
       expect(dropdown).toBeVisible()
     })
     const venus = screen.getByText('Venus')
-    const earth = screen.getByText('Earth')
-    const earthCheckbox = screen.getByRole('checkbox', {
-      name: /earth/iv,
-    })
+    const earth = screen.getByRole('option', { name: /earth/iv })
+    const earthCheckbox = getDecorativeCheckbox(earth)
     await userEvent.keyboard('[Enter]') // empty search doesn't do anything
     await userEvent.keyboard('e')
     await waitFor(() => {
@@ -1038,10 +1090,10 @@ describe('selectInput', () => {
 
     const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
-    const selectAllCheckBox = screen.getByRole('checkbox', {
+    const selectAll = screen.getByRole('option', {
       name: /select.*all/iv,
     })
-    const selectAll = screen.getByTestId('select-all')
+    const selectAllCheckbox = getDecorativeCheckbox(selectAll)
     await userEvent.click(selectAll)
     expect(onChange).toHaveBeenCalledWith([
       'jupiter',
@@ -1058,13 +1110,11 @@ describe('selectInput', () => {
 
     const venus = screen.getByRole('option', { name: 'Venus' })
     const earth = screen.getByRole('option', { name: /earth/iv })
-    const earthCheckbox = screen.getByRole('checkbox', {
-      name: /earth/iv,
-    })
+    const earthCheckbox = getDecorativeCheckbox(earth)
     await userEvent.click(venus)
-    expect(selectAllCheckBox).not.toBeChecked()
+    expect(selectAllCheckbox).not.toBeChecked()
     await userEvent.click(venus)
-    expect(selectAllCheckBox).toBeChecked()
+    expect(selectAllCheckbox).toBeChecked()
     expect(onChange).toHaveBeenCalledWith([
       'jupiter',
       'saturn',
@@ -1092,9 +1142,9 @@ describe('selectInput', () => {
     await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.tab()
     await userEvent.keyboard(' ')
-    expect(selectAllCheckBox).not.toBeChecked()
+    expect(selectAllCheckbox).not.toBeChecked()
     await userEvent.keyboard('[Enter]')
-    expect(selectAllCheckBox).toBeChecked()
+    expect(selectAllCheckbox).toBeChecked()
   }, 15_000)
 
   it.each([dataGrouped, dataUnGrouped])('handles correctly selectAll when the value is controlled', async () => {
@@ -1148,20 +1198,16 @@ describe('selectInput', () => {
 
     const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
-    const selectAllCheckBox = screen.getByRole('checkbox', {
-      name: /select.*all/iv,
-    })
-    const selectAll = screen.getByTestId('select-all')
+    const selectAll = screen.getByRole('option', { name: /select.*all/iv })
+    const selectAllCheckBox = getDecorativeCheckbox(selectAll)
     await userEvent.click(selectAll)
     expect(onChange).toHaveBeenCalledWith(['mercury', 'venus', 'earth', 'jupiter', 'saturn', 'uranus', 'neptune'])
     const plustag = screen.getByTestId('plus-tag')
     expect(plustag).toBeInTheDocument()
 
     const venus = screen.getByRole('option', { name: 'Venus' })
-    const earthCheckbox = screen.getByRole('checkbox', {
-      name: /earth/iv,
-    })
     const earth = screen.getByRole('option', { name: /earth/iv })
+    const earthCheckbox = getDecorativeCheckbox(earth)
     await userEvent.click(venus)
     expect(onChange).toHaveBeenLastCalledWith(['mercury', 'earth', 'jupiter', 'saturn', 'uranus', 'neptune'])
     expect(selectAllCheckBox).not.toBeChecked()
@@ -1212,23 +1258,13 @@ describe('selectInput', () => {
       },
       { timeout: 1000 },
     )
-    const selectAllGroupCheckBox = within(dropdown).getByRole('checkbox', {
-      name: 'TERRESTRIAL PLANETS',
-    })
-    const selectAllGroup = within(dropdown).getByTestId('group-1')
+    const selectAllGroup = screen.getByTestId('group-1')
+    const selectAllGroupCheckBox = getDecorativeCheckbox(selectAllGroup)
     await userEvent.click(selectAllGroup)
-    const mercury = within(dropdown).getByRole('checkbox', {
-      name: /mercury/iv,
-    })
-    const venus = within(dropdown).getByRole('checkbox', {
-      name: /venus/iv,
-    })
-    const earth = within(dropdown).getByRole('checkbox', {
-      name: /earth/iv,
-    })
-    const jupiter = within(dropdown).getByRole('checkbox', {
-      name: /jupiter/iv,
-    })
+    const mercury = getDecorativeCheckbox(screen.getByRole('option', { name: /mercury/iv }))
+    const venus = getDecorativeCheckbox(screen.getByRole('option', { name: /venus/iv }))
+    const earth = getDecorativeCheckbox(screen.getByRole('option', { name: /earth/iv }))
+    const jupiter = getDecorativeCheckbox(screen.getByRole('option', { name: /jupiter/iv }))
 
     expect(mercury).toBeChecked()
     expect(venus).toBeChecked()
@@ -1236,7 +1272,7 @@ describe('selectInput', () => {
     expect(jupiter).not.toBeChecked()
 
     await userEvent.click(screen.getByRole('option', { name: 'Mercury' }))
-    expect(selectAllGroup).not.toBeChecked()
+    expect(selectAllGroupCheckBox).not.toBeChecked()
 
     await userEvent.click(screen.getByRole('option', { name: 'Mercury' }))
     expect(selectAllGroupCheckBox).toBeChecked()
@@ -1265,10 +1301,8 @@ describe('selectInput', () => {
       { timeout: 1000 },
     )
 
-    const selectAllGroupCheckBox = within(dropdown).getByRole('checkbox', {
-      name: 'TERRESTRIAL PLANETS',
-    })
     const selectAllGroup = within(dropdown).getByTestId('group-1')
+    const selectAllGroupCheckBox = getDecorativeCheckbox(selectAllGroup)
     await userEvent.click(selectAllGroup)
     const earth = screen.getByRole('option', { name: /earth/iv })
 
@@ -1283,6 +1317,28 @@ describe('selectInput', () => {
     await userEvent.click(selectAllGroup)
     expect(selectAllGroupCheckBox).not.toBeChecked()
   }, 10_000)
+
+  it('does not expose nested checkboxes inside listbox options', async () => {
+    renderWithTheme(
+      <SelectInput
+        multiselect
+        name="test"
+        options={dataGrouped}
+        placeholder="placeholder"
+        selectAll={{ label: 'Select all' }}
+        selectAllGroup
+        label="label"
+      />,
+    )
+
+    await userEvent.click(screen.getByRole('combobox', { name: 'label' }))
+    const dropdown = screen.getByRole('dialog')
+    const listbox = within(dropdown).getByRole('listbox', { name: 'label' })
+
+    expect(within(listbox).queryByRole('checkbox')).not.toBeInTheDocument()
+    expect(within(listbox).getByRole('option', { name: /jupiter/i })).toBeInTheDocument()
+    expect(within(listbox).getByRole('button', { name: 'JOVIAN PLANETS' })).toBeInTheDocument()
+  })
 
   it('handles correcty selectAllGroup with selectAll - grouped data', async () => {
     renderWithTheme(
@@ -1312,21 +1368,14 @@ describe('selectInput', () => {
       { timeout: 1000 },
     )
 
-    const selectAllGroupCheckBox = within(dropdown).getByRole('checkbox', {
-      name: /terrestrial planets/iv,
-    })
-
     const selectAllGroup = within(dropdown).getByTestId('group-1')
+    const selectAllGroupCheckBox = getDecorativeCheckbox(selectAllGroup)
 
     await userEvent.click(selectAllGroup)
-    const venus = within(dropdown).getByRole('checkbox', {
-      name: /venus/iv,
-    })
+    const venus = getDecorativeCheckbox(screen.getByRole('option', { name: /venus/iv }))
 
-    const selectAllCheckBox = within(dropdown).getByRole('checkbox', {
-      name: /select.*all/iv,
-    })
-    const selectAll = within(dropdown).getByTestId('select-all')
+    const selectAll = within(dropdown).getByRole('option', { name: /select.*all/iv })
+    const selectAllCheckBox = getDecorativeCheckbox(selectAll)
     await userEvent.click(selectAll)
 
     await userEvent.click(screen.getByRole('option', { name: 'Venus' }))

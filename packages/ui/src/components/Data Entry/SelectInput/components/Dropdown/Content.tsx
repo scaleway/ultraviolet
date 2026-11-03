@@ -1,10 +1,11 @@
 'use client'
 
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import type { KeyboardEvent, ReactNode, RefObject } from 'react'
 import { Skeleton } from '../../../../Feedback/Skeleton'
 import { Stack } from '../../../../Layout/Stack'
+import { VisuallyHidden } from '../../../../Other/VisuallyHidden'
 import { Text } from '../../../../Typography/Text'
 import { OPTION_SELECTOR } from '../../constants'
 import { useSelectInput } from '../../SelectInputProvider'
@@ -29,6 +30,7 @@ type CreateDropdownProps = {
   searchable?: boolean
   initialFocusRef: RefObject<HTMLDivElement | null>
   listboxId: string
+  listboxLabelledBy?: string
 }
 
 const moveFocusDown = () => {
@@ -86,11 +88,19 @@ export const CreateDropdown = ({
   searchable,
   initialFocusRef,
   listboxId,
+  listboxLabelledBy,
 }: CreateDropdownProps) => {
   const { displayedOptions, searchInput, size, selectedData } = useSelectInput()
   const focusedItemRef = useRef<HTMLDivElement>(null)
   const [focusedOptionValue, setFocusedOptionValue] = useState<string | null>(null)
+  const initialFocusOptions = Array.isArray(displayedOptions)
+    ? displayedOptions
+    : Object.entries(displayedOptions).flatMap(([group, groupOptions]) => (groupError?.[group] ? [] : groupOptions))
+  const initialFocusOption =
+    initialFocusOptions.find(option => !option.disabled && selectedData.selectedValues.includes(option.value)) ??
+    initialFocusOptions.find(option => !option.disabled)
 
+  const listBoxLabelId = useId()
   useEffect(() => {
     if (defaultSearchValue && focusedItemRef?.current) {
       focusedItemRef.current.focus()
@@ -129,9 +139,11 @@ export const CreateDropdown = ({
       <Stack
         className={selectInputStyle.dropdownContainer}
         id={listboxId}
+        aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
         onKeyDown={handleKeyDownSelect}
         role="listbox"
       >
+        {!listBoxLabelId ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
         <Skeleton variant="block" />
       </Stack>
     )
@@ -139,7 +151,15 @@ export const CreateDropdown = ({
 
   if (isEmpty && !addOption) {
     return (
-      <Stack alignItems="center" className={selectInputStyle.dropdownEmptyState} gap={2}>
+      <Stack
+        alignItems="center"
+        className={selectInputStyle.dropdownEmptyState}
+        gap={2}
+        id={listboxId}
+        aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
+        role="listbox"
+      >
+        {!listBoxLabelId ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
         {computedEmptyState}
       </Stack>
     )
@@ -153,18 +173,28 @@ export const CreateDropdown = ({
     }
 
     return (
-      <AddOption
-        addOption={addOption}
-        isEmpty={isEmpty}
-        option={option}
-        searchable={searchable}
-        textVariant={textVariant}
-      />
+      <Stack id={listboxId} aria-labelledby={listboxLabelledBy ?? listBoxLabelId} role="listbox">
+        {!listBoxLabelId ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
+        <AddOption
+          addOption={addOption}
+          isEmpty={isEmpty}
+          option={option}
+          searchable={searchable}
+          textVariant={textVariant}
+        />
+      </Stack>
     )
   }
 
   return Array.isArray(displayedOptions) ? (
-    <Stack className={selectInputStyle.dropdownContainer} id={listboxId} onKeyDown={handleKeyDownSelect} role="listbox">
+    <Stack
+      className={selectInputStyle.dropdownContainer}
+      id={listboxId}
+      aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
+      onKeyDown={handleKeyDownSelect}
+      role="listbox"
+    >
+      {!listBoxLabelId ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
       <AddOption
         addOption={addOption}
         option={{
@@ -183,6 +213,8 @@ export const CreateDropdown = ({
           return (
             <Item
               descriptionDirection={descriptionDirection}
+              defaultSearchValue={defaultSearchValue}
+              focusedItemRef={focusedItemRef}
               indexOption={index}
               isActive={focusedOptionValue === option.value}
               initialFocusRef={isFirstSelected ? initialFocusRef : undefined}
@@ -203,9 +235,11 @@ export const CreateDropdown = ({
       className={selectInputStyle.dropdownContainer}
       data-grouped
       id={listboxId}
+      aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
       onKeyDown={handleKeyDownSelect}
       role="listbox"
     >
+      {!listBoxLabelId ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
       <AddOption
         addOption={addOption}
         option={{
@@ -248,16 +282,14 @@ export const CreateDropdown = ({
                   {errorGroup}
                 </Text>
               ) : null}
-              {displayedOptions[group].map((option, indexOption) => {
-                const isFirstSelected = option.value === selectedData.selectedValues[0]
-
-                return errorGroup ? null : (
+              {displayedOptions[group].map((option, indexOption) =>
+                errorGroup ? null : (
                   <Item
                     descriptionDirection={descriptionDirection}
                     group={group}
                     indexOption={indexOption}
                     isActive={focusedOptionValue === option.value}
-                    initialFocusRef={isFirstSelected ? initialFocusRef : undefined}
+                    initialFocusRef={initialFocusOption?.value === option.value ? initialFocusRef : undefined}
                     key={option.value}
                     onFocus={() => setFocusedOptionValue(option.value)}
                     option={option}
@@ -265,8 +297,8 @@ export const CreateDropdown = ({
                     ref={getItemRef(option, isFirstSelected)}
                     textVariant={textVariant}
                   />
-                )
-              })}
+                ),
+              )}
             </Stack>
           </Stack>
         ) : null
