@@ -4,11 +4,12 @@ import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { Fragment, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import type { ReactNode, RefObject } from 'react'
 import { hasHelperText } from '../../../../../helpers/hasHelperText'
 import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
+import { VisuallyHidden } from '../../../../Other/VisuallyHidden'
 import { Tooltip } from '../../../../Overlay/Tooltip'
 import { Text } from '../../../../Typography/Text'
 import { OPTION_SELECTOR, SIZES_TAG } from '../../constants'
@@ -278,6 +279,21 @@ const SelectBar = ({
           <ArrowDownIcon disabled={disabled || readOnly} sentiment="neutral" size="small" />
         </Stack>
       </div>
+      {multiselect ? (
+        <VisuallyHidden as="output" aria-atomic="true" aria-live="polite" aria-label="Selected options">
+          {selectedData.selectedValues.length > 0
+            ? selectedData.selectedValues.map((value, index) => {
+                const option = findOptionInOptions(options, value)
+                return (
+                  <Fragment key={value}>
+                    {index > 0 ? ', ' : ''}
+                    {option?.label}
+                  </Fragment>
+                )
+              })
+            : 'No options selected'}
+        </VisuallyHidden>
+      ) : null}
     </Tooltip>
   )
 }

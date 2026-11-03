@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import type { ComponentProps, Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { Stack } from '../../../../Layout/Stack'
 import { VisuallyHidden } from '../../../../Other/VisuallyHidden'
@@ -13,7 +13,6 @@ import { SearchBar } from './SearchBar'
 import { selectInputStyle } from '../../styles.css'
 
 export type DropdownProps = {
-  id?: string
   children: ReactNode
   emptyState: ReactNode
   descriptionDirection: 'row' | 'column'
@@ -75,7 +74,6 @@ export const Dropdown = ({
   loadMore,
   optionalInfoPlacement,
   isLoading,
-  id,
   groupError,
   groupEmptyState,
   addOption,
@@ -89,6 +87,8 @@ export const Dropdown = ({
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [defaultSearchValue, setDefaultSearchValue] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
+  const resultCountId = useId()
+  const searchBarRef = useRef<HTMLInputElement | null>(null)
   const [search, setSearch] = useState('')
   const initialFocusRef = useRef<HTMLDivElement | null>(null)
 
@@ -163,9 +163,10 @@ export const Dropdown = ({
 
   return (
     <Popup.Root visible={isDropdownVisible && !disabled} onOpenChange={setIsDropdownVisible}>
-      <Popup.Trigger>{children}</Popup.Trigger>
+      <Popup.Trigger aria-controls={listboxId} aria-haspopup="listbox">
+        {children}
+      </Popup.Trigger>
       <Popup.Panel
-        id={id}
         ref={ref}
         className={selectInputStyle.dropdown}
         placement="bottom-start"
@@ -177,14 +178,13 @@ export const Dropdown = ({
           {searchable && !isLoading ? (
             <SearchBar
               displayedOptions={displayedOptions}
+              inputRef={searchBarRef}
               listboxId={listboxId}
               placeholder={placeholder}
+              resultCountId={resultCountId}
               setSearchBarActive={setSearchBarActive}
             />
           ) : null}
-          <VisuallyHidden aria-atomic="true" aria-live="polite" role="status">
-            {`${displayedOptionCount} option${displayedOptionCount === 1 ? '' : 's'} available`}
-          </VisuallyHidden>
           <CreateDropdown
             addOption={addOption}
             defaultSearchValue={defaultSearchValue}
@@ -196,14 +196,18 @@ export const Dropdown = ({
             isEmpty={isEmpty}
             isLoading={isLoading}
             loadMore={loadMore}
-            optionalInfoPlacement={optionalInfoPlacement}
-            searchable={searchable}
             listboxId={listboxId}
             listboxLabelledBy={listboxLabelledBy}
+            optionalInfoPlacement={optionalInfoPlacement}
+            searchable={searchable}
+            searchBarRef={searchBarRef}
           />
           {computedFooter}
         </Stack>
       </Popup.Panel>
+      <VisuallyHidden as="output" aria-atomic="true" aria-live="polite" id={resultCountId}>
+        {isDropdownVisible ? `${displayedOptionCount} option${displayedOptionCount === 1 ? '' : 's'} available` : ''}
+      </VisuallyHidden>
     </Popup.Root>
   )
 }
