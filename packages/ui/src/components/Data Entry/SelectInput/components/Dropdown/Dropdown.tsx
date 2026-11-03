@@ -45,6 +45,9 @@ const handleKeyDown = (
   if (
     ref.current &&
     !searchBarActive &&
+    !event.ctrlKey &&
+    !event.metaKey &&
+    !event.altKey &&
     !NON_SEARCHABLE_KEYS.has(event.key) &&
     document.activeElement?.ariaLabel !== 'search-bar'
   ) {
