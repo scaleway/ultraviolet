@@ -30,5 +30,6 @@ export const FilterDateRange = ({ config, hideLabel, onChange, value, size }: Fi
         endAt: dates[1],
       })
     }}
+    showMonthYearPicker={config.showMonthYearPicker}
   />
 )

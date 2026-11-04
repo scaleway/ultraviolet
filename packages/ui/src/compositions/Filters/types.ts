@@ -93,7 +93,7 @@ export type FilterConfigItemDatetimeRange = FilterConfigItemBase & {
 export type FilterConfigItemDate = FilterConfigItemBase &
   Pick<
     ComponentProps<typeof DateInput>,
-    'minDate' | 'maxDate' | 'format' | 'locale' | 'excludeDates' | 'labelDescription'
+    'minDate' | 'maxDate' | 'format' | 'locale' | 'excludeDates' | 'labelDescription' | 'showMonthYearPicker'
   > & {
     type: 'date'
   }
@@ -102,7 +102,7 @@ export type FilterConfigItemDateRange = FilterConfigItemBase & {
   type: 'dateRange'
 } & Pick<
     ComponentProps<typeof DateInput>,
-    'minDate' | 'maxDate' | 'format' | 'locale' | 'excludeDates' | 'labelDescription'
+    'minDate' | 'maxDate' | 'format' | 'locale' | 'excludeDates' | 'labelDescription' | 'showMonthYearPicker'
   >
 
 export type FilterConfigItemNumber = FilterConfigItemBase & {
