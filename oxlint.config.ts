@@ -135,6 +135,7 @@ export default defineConfig({
     'eslint/no-negated-condition': 'off',
     'eslint/no-implicit-coercion': 'off',
     'eslint/no-empty-function': 'off',
+    'eslint/max-params': 'off',
 
     'jsx-a11y/control-has-associated-label': [
       'error',
