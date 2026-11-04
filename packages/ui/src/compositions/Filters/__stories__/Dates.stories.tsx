@@ -15,7 +15,12 @@ type FilterValues = {
     startAt: Date | null
     endAt: Date | null
   }
+  datesMonth: {
+    startAt: Date | null
+    endAt: Date | null
+  }
   date: Date | null
+  dateMonth: Date | null
 }
 
 const datetimeFormat = new Intl.DateTimeFormat('en-US', {
@@ -56,10 +61,24 @@ const config: FilterConfig<FilterValues>[] = [
     placeholder: 'DD/MM/YYYY - DD/MM/YYYY',
   },
   {
+    type: 'dateRange',
+    name: 'datesMonth',
+    label: 'Date Range (month)',
+    placeholder: 'MM/YYYY - DD/MM/YYYY',
+    showMonthYearPicker: true,
+  },
+  {
     type: 'date',
     name: 'date',
     label: 'Date',
     placeholder: 'DD/MM/YYYY',
+  },
+  {
+    type: 'date',
+    name: 'dateMonth',
+    label: 'Date (months)',
+    placeholder: 'MM/YYYY',
+    showMonthYearPicker: true,
   },
 ]
 
@@ -86,6 +105,7 @@ const oneWeekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000)
 Dates.args = {
   config,
   layout: {
+    mainFilters: ['datetimes', 'dates', 'datesMonth', 'date', 'dateMonth'],
     templateColumns: 'repeat(auto-fit, minmax(min(32ch, 100%), 1fr))',
   },
   defaultValues: {
@@ -98,7 +118,12 @@ Dates.args = {
       startAt: null,
       endAt: null,
     },
+    datesMonth: {
+      startAt: null,
+      endAt: null,
+    },
     date: null,
+    dateMonth: null,
   },
   initialValues: {
     dates: {

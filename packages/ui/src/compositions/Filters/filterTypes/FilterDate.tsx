@@ -18,5 +18,6 @@ export const FilterDate = ({ config, hideLabel, onChange, value, size }: FilterD
     excludeDates={config.excludeDates}
     labelDescription={hideLabel ? undefined : config.labelDescription}
     onChange={onChange}
+    showMonthYearPicker={config.showMonthYearPicker}
   />
 )
