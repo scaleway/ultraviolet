@@ -10,7 +10,7 @@ A fundamental interactive component used to trigger actions or events (submittin
 
 ## Summary
 
-1. ❌ **Perceivable**: Contrast fails AA in some theme/sentiment combinations (theme tokens)
+1. ✅ **Perceivable**: Contrast meets AA in all theme/sentiment combinations
 2. ✅ **Operable**: Keyboard support present with native focus ring
 3. ✅ **Understandable**: Content is readable and labels are supported
 4. ✅ **Robust**: ARIA attributes are forwarded to both the native `<button>` and `<a>` elements; icons are `aria-hidden` by default
@@ -37,11 +37,7 @@ Enforced by the component:
 - ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html): Uses semantic `<button>` and `<a>` elements. All supported ARIA attributes are forwarded to **both** the button and anchor elements.
 - ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html): Native focus ring preserved.
 - ✅ [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html): Icons default to `aria-hidden="true"` (via the `Icon` component). Accessible names are provided via `tooltipLabel` or `accessibleLabel` (visually hidden text) — `aria-label` is deprecated.
-- ❌ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html): Contrast failures (theme tokens):
-  - Dark + Danger + Filled: `4.29:1`
-  - Darker + Success + Filled: `4.47:1`
-  - Darker + Danger + Filled: `3.86:1`
-  - Darker + Info + Filled: `4.49:1`
+- ✅ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html): The `filled` variant uses `textStrong` on `backgroundStrong`, which meets the 4.5:1 threshold for all sentiment/theme combinations.
 - ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html): Native keyboard support (Enter, Space)
 
 To apply when using the component:
@@ -73,8 +69,9 @@ To apply when using the component:
 
 - ✅ No `:focus-visible` styles:
   - Focus ring on `:active` via `boxShadow`; keyboard focus relies on browser defaults.
-- ❌ Contrast failures:
-  - Unresolved (theme tokens, see WCAG 1.4.3 above).
+- ✅ Contrast failures:
+  - The `filled` variant's `textStrong`-on-`backgroundStrong` combinations fell below 4.5:1 (dark + danger 4.29:1, darker + success 4.47:1, darker + danger 3.86:1, darker + info 4.49:1).
+  - **Resolved** by the theme tokens update; all combinations now pass the 4.5:1 threshold.
 
 **Medium:**
 
