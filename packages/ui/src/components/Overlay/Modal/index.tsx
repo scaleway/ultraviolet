@@ -12,8 +12,13 @@ export type ModalProps = {
   hideOnEsc?: boolean
   hideOnClickOutside?: boolean
   preventBodyScroll?: boolean
+  /**
+   * @deprecated use `accessibleLabel` instead.
+   */
   ariaLabel?: string
-  /** Id of the element titling the modal. Takes precedence over `ariaLabel`. */
+  /** Accessible label visually hidden in the modal */
+  accessibleLabel?: string
+  /** Id of the element titling the modal. Takes precedence over `accessibleLabel`. */
   ariaLabelledBy?: string
   /** Id of the element describing the modal. */
   ariaDescribedBy?: string
@@ -54,6 +59,7 @@ export type ModalProps = {
  */
 export const Modal = ({
   ariaLabel,
+  accessibleLabel,
   ariaLabelledBy,
   ariaDescribedBy,
   id,
@@ -131,6 +137,7 @@ export const Modal = ({
       <Container>
         <ModalContent
           ariaLabel={ariaLabel}
+          accessibleLabel={accessibleLabel}
           ariaLabelledBy={ariaLabelledBy}
           ariaDescribedBy={ariaDescribedBy}
           backdropClassName={backdropClassName}

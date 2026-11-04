@@ -99,7 +99,7 @@ exports[`modal > renders with disclosure and onClose 1`] = `
       data-testid="test-backdrop"
     >
       <dialog
-        aria-label="modal-test"
+        aria-labelledby="_r_t_"
         aria-modal="true"
         class="styles__i6gx4b8 styles_placement_center__i6gx4bd styles_size_small__i6gx4bm"
         data-size="small"
@@ -109,6 +109,12 @@ exports[`modal > renders with disclosure and onClose 1`] = `
         style="--i6gx4b0: -0px; --i6gx4b1: 1;"
         tabindex="0"
       >
+        <span
+          class="styles__ahdbou0"
+          id="_r_t_"
+        >
+          modal-test
+        </span>
         <div>
           modal
         </div>

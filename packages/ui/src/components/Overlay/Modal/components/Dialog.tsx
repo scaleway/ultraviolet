@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { useCallback, useEffect, useRef } from 'react'
+import { useCallback, useEffect, useId, useRef } from 'react'
 import type {
   FocusEventHandler,
   KeyboardEvent,
@@ -12,6 +12,7 @@ import type {
 } from 'react'
 import { createPortal } from 'react-dom'
 import { Stack } from '../../../Layout/Stack'
+import { VisuallyHidden } from '../../../Other/VisuallyHidden'
 import { FOCUSABLE_ELEMENTS } from '../../constants'
 import { useModal } from '../ModalProvider'
 import type { DialogProps } from '../types'
@@ -31,6 +32,7 @@ export const Dialog = ({
   size,
   id,
   ariaLabel,
+  accessibleLabel,
   ariaLabelledBy,
   ariaDescribedBy,
   className,
@@ -51,6 +53,9 @@ export const Dialog = ({
   const dialogRef = ref ?? nonDefaultRef
   const onCloseRef = useRef(onClose)
   const { registerModal, unregisterModal, openedModals } = useModal()
+
+  const accessibleLabelId = useId()
+  const computedAccessibleLabel = accessibleLabel ?? ariaLabel
 
   // register/unregister the modal to handle nested modals
   useEffect(() => {
@@ -224,8 +229,7 @@ export const Dialog = ({
       onFocus={stopFocus}
     >
       <dialog
-        aria-label={ariaLabelledBy ? undefined : ariaLabel}
-        aria-labelledby={ariaLabelledBy}
+        aria-labelledby={ariaLabelledBy ?? (computedAccessibleLabel ? accessibleLabelId : undefined)}
         aria-describedby={ariaDescribedBy}
         aria-modal
         className={cn(
@@ -255,6 +259,9 @@ export const Dialog = ({
         }}
         tabIndex={0}
       >
+        {computedAccessibleLabel ? (
+          <VisuallyHidden id={accessibleLabelId}>{computedAccessibleLabel}</VisuallyHidden>
+        ) : null}
         {image ? (
           <>
             <Stack alignItems="flex-end" className={modalStyle.imageContainer} justifyContent="center">

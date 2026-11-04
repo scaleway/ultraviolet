@@ -17,7 +17,7 @@ const ProgrammaticModal = () => {
       <button onClick={() => setOpen(true)} type="button">
         Open programmatic modal
       </button>
-      <Modal ariaLabel="Programmatic modal" onClose={() => setOpen(false)} open={open}>
+      <Modal accessibleLabel="Programmatic modal" onClose={() => setOpen(false)} open={open}>
         <p>Content</p>
       </Modal>
     </>
@@ -28,7 +28,7 @@ describe('modal - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {
     it.for([...consoleThemesMap.entries()])('should not have violations when open (theme: %s)', async ([, theme]) => {
       renderWithTheme(
-        <Modal ariaLabel="Settings" open>
+        <Modal accessibleLabel="Settings" open>
           <Text as="h2" sentiment="neutral" variant="headingSmallStrong">
             Settings
           </Text>
@@ -42,6 +42,39 @@ describe('modal - A11y', { tags: ['a11y'] }, () => {
   })
 
   describe('accessible name and description', () => {
+    it('should be named by accessibleLabel rendered in a VisuallyHidden element', () => {
+      renderWithTheme(
+        <Modal accessibleLabel="Settings" open>
+          <p>Content</p>
+        </Modal>,
+      )
+
+      expect(screen.getByRole('dialog')).toHaveAccessibleName('Settings')
+      expect(screen.getByText('Settings')).toBeVisuallyHidden()
+    })
+
+    it('should fall back deprecated ariaLabel to accessibleLabel', () => {
+      renderWithTheme(
+        <Modal ariaLabel="Settings" open>
+          <p>Content</p>
+        </Modal>,
+      )
+
+      expect(screen.getByRole('dialog')).toHaveAccessibleName('Settings')
+      expect(screen.getByText('Settings')).toBeVisuallyHidden()
+    })
+
+    it('should prefer accessibleLabel over ariaLabel when both are set', () => {
+      renderWithTheme(
+        <Modal accessibleLabel="primary" ariaLabel="secondary" open>
+          <p>Content</p>
+        </Modal>,
+      )
+
+      expect(screen.getByRole('dialog')).toHaveAccessibleName('primary')
+      expect(screen.getByText('primary')).toBeVisuallyHidden()
+    })
+
     it('should be named by the element referenced by ariaLabelledBy', () => {
       renderWithTheme(
         <Modal ariaLabelledBy="modal-title" open>
@@ -68,7 +101,7 @@ describe('modal - A11y', { tags: ['a11y'] }, () => {
   describe('focus management', () => {
     it('should move focus to the first focusable element on open', async () => {
       renderWithTheme(
-        <Modal ariaLabel="Settings" disclosure={<button type="button">Open settings</button>}>
+        <Modal accessibleLabel="Settings" disclosure={<button type="button">Open settings</button>}>
           <button type="button">First action</button>
           <button type="button">Second action</button>
         </Modal>,
@@ -81,7 +114,7 @@ describe('modal - A11y', { tags: ['a11y'] }, () => {
 
     it('should focus the dialog when it contains no focusable element', async () => {
       renderWithTheme(
-        <Modal ariaLabel="Settings" disclosure={<button type="button">Open settings</button>} isClosable={false}>
+        <Modal accessibleLabel="Settings" disclosure={<button type="button">Open settings</button>} isClosable={false}>
           <p>Content</p>
         </Modal>,
       )
@@ -93,7 +126,7 @@ describe('modal - A11y', { tags: ['a11y'] }, () => {
 
     it('should return focus to the disclosure after closing', async () => {
       renderWithTheme(
-        <Modal ariaLabel="Settings" disclosure={<button type="button">Open settings</button>}>
+        <Modal accessibleLabel="Settings" disclosure={<button type="button">Open settings</button>}>
           <p>Content</p>
         </Modal>,
       )
@@ -123,7 +156,7 @@ describe('modal - A11y', { tags: ['a11y'] }, () => {
   describe('images', () => {
     it('should mark the image as decorative by default', () => {
       renderWithTheme(
-        <Modal ariaLabel="Settings" image={illustration} open>
+        <Modal accessibleLabel="Settings" image={illustration} open>
           <p>Content</p>
         </Modal>,
       )
@@ -133,7 +166,7 @@ describe('modal - A11y', { tags: ['a11y'] }, () => {
 
     it('should use imageAlt when provided', () => {
       renderWithTheme(
-        <Modal ariaLabel="Settings" image={illustration} imageAlt="A server illustration" open>
+        <Modal accessibleLabel="Settings" image={illustration} imageAlt="A server illustration" open>
           <p>Content</p>
         </Modal>,
       )
