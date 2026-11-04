@@ -32,7 +32,11 @@ export type DisclosureProps = {
 }
 
 export type DialogProps = {
+  /**
+   * @deprecated use `accessibleLabel` instead.
+   */
   ariaLabel?: string
+  accessibleLabel?: string
   ariaLabelledBy?: string
   ariaDescribedBy?: string
   backdropClassName?: string

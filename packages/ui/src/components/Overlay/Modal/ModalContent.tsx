@@ -29,6 +29,7 @@ export const ModalContent = ({
   placement,
   finalSize,
   ariaLabel,
+  accessibleLabel,
   ariaLabelledBy,
   ariaDescribedBy,
   hideOnClickOutside,
@@ -60,6 +61,7 @@ export const ModalContent = ({
   return (
     <Dialog
       ariaLabel={ariaLabel}
+      accessibleLabel={accessibleLabel}
       ariaLabelledBy={ariaLabelledBy}
       ariaDescribedBy={ariaDescribedBy}
       backdropClassName={backdropClassName}
