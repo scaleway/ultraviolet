@@ -86,21 +86,18 @@ export const Dialog = ({
     onCloseRef.current = onClose
   }, [onClose])
 
-  // On open focus the first focusable element inside the modal, and restore focus on close
+  // On open focus the first focusable element inside the modal; on close restore focus.
+  // Restoring is done in the effect body rather than in a cleanup function otherwise React StrictMode's
+  // unmount/remount cycle would bounce the focus out of a Select that opens a Modal and close it immediately.
+  const previouslyFocusedElement = useRef<HTMLElement | null>(null)
   useEffect(() => {
-    if (!open) {
-      return undefined
-    }
-
-    const previouslyFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null
-    const firstFocusableElement = dialogRef.current?.querySelector<HTMLElement>(FOCUSABLE_ELEMENTS)
-    const elementToFocus = firstFocusableElement ?? dialogRef.current
-    elementToFocus?.focus({ preventScroll: true }) // preventScroll to avoid breaking the Drawer opening animation
-
-    return () => {
-      if (previouslyFocusedElement?.isConnected) {
-        previouslyFocusedElement.focus()
-      }
+    if (open) {
+      previouslyFocusedElement.current = document.activeElement instanceof HTMLElement ? document.activeElement : null
+      const firstFocusableElement = dialogRef.current?.querySelector<HTMLElement>(FOCUSABLE_ELEMENTS)
+      const elementToFocus = firstFocusableElement ?? dialogRef.current
+      elementToFocus?.focus({ preventScroll: true }) // preventScroll to avoid breaking the Drawer opening animation
+    } else if (previouslyFocusedElement.current?.isConnected) {
+      previouslyFocusedElement.current.focus()
     }
   }, [open, dialogRef])
 
