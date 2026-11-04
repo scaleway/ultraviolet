@@ -11,7 +11,7 @@ export const FocusManagement: StoryFn = props => {
 
   return (
     <Stack gap={2} width="fit-content">
-      With open prop: (focus lost when closing the modal)
+      With open prop: (focus restored to the previously focused element when closing)
       <Button onClick={toggleOpen} className={styleButton}>
         Open modal 1
       </Button>
