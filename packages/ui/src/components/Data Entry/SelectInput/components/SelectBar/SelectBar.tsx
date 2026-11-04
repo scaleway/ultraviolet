@@ -4,14 +4,15 @@ import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { Fragment, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import type { ReactNode, RefObject } from 'react'
 import { hasHelperText } from '../../../../../helpers/hasHelperText'
 import { Button } from '../../../../Action/Button'
 import { Stack } from '../../../../Layout/Stack'
+import { VisuallyHidden } from '../../../../Other/VisuallyHidden'
 import { Tooltip } from '../../../../Overlay/Tooltip'
 import { Text } from '../../../../Typography/Text'
-import { SIZES_TAG } from '../../constants'
+import { OPTION_SELECTOR, SIZES_TAG } from '../../constants'
 import { findOptionInOptions } from '../../findOptionInOptions'
 import { useSelectInput } from '../../SelectInputProvider'
 import type { OptionType } from '../../types'
@@ -31,13 +32,13 @@ type SelectBarProps = {
   innerRef: RefObject<HTMLDivElement | null>
   id?: string
   'data-testid': string
-  label?: string
   tooltip?: string
-  dropdownId?: string
   helperId: string
   'aria-describedby'?: string
   'aria-labelledby'?: string
   helper?: ReactNode
+  listboxId: string
+  required?: boolean
 }
 
 const SelectBar = ({
@@ -53,12 +54,12 @@ const SelectBar = ({
   innerRef,
   id,
   'data-testid': dataTestId,
-  label,
-  dropdownId,
+  listboxId,
   helperId,
   helper,
   'aria-describedby': ariaDescribedBy,
   'aria-labelledby': ariaLabelledby,
+  required,
 }: SelectBarProps) => {
   const { isDropdownVisible, onChange, setIsDropdownVisible, options, selectedData, setSelectedData, multiselect } =
     useSelectInput()
@@ -177,10 +178,12 @@ const SelectBar = ({
     <Tooltip text={tooltip}>
       <div
         aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
+        aria-haspopup="listbox"
         aria-labelledby={ariaLabelledby}
-        aria-controls={dropdownId}
+        aria-controls={listboxId}
         aria-expanded={isDropdownVisible}
-        aria-label={label}
+        aria-invalid={!!error}
+        aria-required={required}
         autoFocus={autoFocus}
         className={selectInputStyle.selectBar({
           disabled,
@@ -197,7 +200,7 @@ const SelectBar = ({
         onKeyDown={event => {
           if (event.key === 'ArrowDown') {
             if (isDropdownVisible) {
-              document.getElementById('option-0')?.focus()
+              document.getElementById(listboxId)?.querySelector<HTMLElement>(OPTION_SELECTOR)?.focus()
             } else {
               setIsDropdownVisible(true)
             }
@@ -209,6 +212,8 @@ const SelectBar = ({
           return ['Enter', ' '].includes(event.key) && openable ? setIsDropdownVisible(!isDropdownVisible) : null
         }}
         ref={innerRef}
+
+        // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role - can't style a input type="select"
         role="combobox"
         tabIndex={0}
       >
@@ -274,6 +279,21 @@ const SelectBar = ({
           <ArrowDownIcon disabled={disabled || readOnly} sentiment="neutral" size="small" />
         </Stack>
       </div>
+      {multiselect ? (
+        <VisuallyHidden as="output" aria-atomic="true" aria-live="polite" aria-label="Selected options">
+          {selectedData.selectedValues.length > 0
+            ? selectedData.selectedValues.map((value, index) => {
+                const option = findOptionInOptions(options, value)
+                return (
+                  <Fragment key={value}>
+                    {index > 0 ? ', ' : ''}
+                    {option?.label}
+                  </Fragment>
+                )
+              })
+            : 'No options selected'}
+        </VisuallyHidden>
+      ) : null}
     </Tooltip>
   )
 }

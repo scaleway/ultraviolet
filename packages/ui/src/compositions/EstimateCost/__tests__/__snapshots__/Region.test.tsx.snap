@@ -168,7 +168,6 @@ exports[`estimateCost - Region > render region component 1`] = `
                         />
                       </div>
                       <div
-                        aria-label="iteration-unit"
                         class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
                         style="--bjgo2p0: 100%;"
                       >
@@ -180,7 +179,10 @@ exports[`estimateCost - Region > render region component 1`] = `
                           >
                             <div
                               aria-expanded="false"
-                              aria-haspopup="dialog"
+                              aria-haspopup="listbox"
+                              aria-invalid="false"
+                              aria-labelledby="_r_8_"
+                              aria-required="false"
                               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_medium__1xo4j4bb selectBar_state_neutral__1xo4j4be"
                               data-disabled="false"
                               data-readonly="false"
@@ -190,6 +192,8 @@ exports[`estimateCost - Region > render region component 1`] = `
                               tabindex="0"
                             >
                               <span
+                                aria-atomic="true"
+                                aria-live="polite"
                                 class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                               >
                                 Hour(s)
@@ -213,6 +217,12 @@ exports[`estimateCost - Region > render region component 1`] = `
                               </div>
                             </div>
                           </div>
+                          <output
+                            aria-atomic="true"
+                            aria-live="polite"
+                            class="styles__ahdbou0"
+                            id="_r_b_"
+                          />
                         </div>
                       </div>
                     </div>

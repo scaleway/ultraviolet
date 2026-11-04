@@ -42,6 +42,7 @@ export type TextInputProps = {
   | 'role'
   | 'aria-live'
   | 'aria-atomic'
+  | 'aria-controls'
   | 'onChange'
   | 'style'
   | 'aria-describedby'

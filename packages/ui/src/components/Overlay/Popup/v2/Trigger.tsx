@@ -13,6 +13,18 @@ type PopupTriggerProps = {
    * @default 'click'
    */
   triggerEvent?: 'click' | 'hover'
+  /**
+   * Overrides the `aria-controls` attribute landed on the trigger's focusable
+   * element
+   * @default popup-id
+   */
+  'aria-controls'?: string
+  /**
+   * Overrides the `aria-haspopup` attribute landed on the trigger's focusable
+   * element
+   * @default popup role
+   */
+  'aria-haspopup'?: string
 }
 
 /**
@@ -20,7 +32,12 @@ type PopupTriggerProps = {
  * `triggerEvent` and lands the ARIA attributes on the trigger's focusable
  * element (or on the wrapper when there is none).
  */
-export const Trigger = ({ children, triggerEvent = 'click' }: PopupTriggerProps) => {
+export const Trigger = ({
+  children,
+  triggerEvent = 'click',
+  'aria-controls': ariaControls,
+  'aria-haspopup': ariaHasPopup,
+}: PopupTriggerProps) => {
   const { context, dismiss, id, refs, open, role } = usePopupContext()
   const triggerRef = useRef<HTMLDivElement>(null)
 
@@ -55,9 +72,9 @@ export const Trigger = ({ children, triggerEvent = 'click' }: PopupTriggerProps)
       }
     }
     setAttribute('aria-expanded', open ? 'true' : 'false')
-    setAttribute('aria-controls', open ? id : null)
-    setAttribute('aria-haspopup', role)
-  }, [open, role, id, refs])
+    setAttribute('aria-controls', open ? (ariaControls ?? id) : null)
+    setAttribute('aria-haspopup', ariaHasPopup ?? role)
+  }, [open, role, id, refs, ariaControls, ariaHasPopup])
 
   return (
     <div ref={triggerRef} className={popupV2Style.trigger} {...getReferenceProps()}>

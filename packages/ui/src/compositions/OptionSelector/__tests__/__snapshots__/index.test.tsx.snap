@@ -28,12 +28,15 @@ exports[`optionSelector > should work readonly 1`] = `
           >
             <div
               aria-expanded="false"
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-labelledby="_r_7b_"
+              aria-required="false"
               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_readOnly_true__1xo4j4b9 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
               data-disabled="false"
               data-readonly="true"
               data-testid="first-selector"
-              id="_r_6c_"
+              id="_r_7a_"
               role="combobox"
               tabindex="0"
             >
@@ -62,6 +65,12 @@ exports[`optionSelector > should work readonly 1`] = `
               </div>
             </div>
           </div>
+          <output
+            aria-atomic="true"
+            aria-live="polite"
+            class="styles__ahdbou0"
+            id="_r_7e_"
+          />
         </div>
       </div>
       <svg
@@ -90,12 +99,15 @@ exports[`optionSelector > should work readonly 1`] = `
           >
             <div
               aria-expanded="false"
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-labelledby="_r_7n_"
+              aria-required="false"
               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_readOnly_true__1xo4j4b9 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
               data-disabled="true"
               data-readonly="true"
               data-testid="second-selector"
-              id="_r_6m_"
+              id="_r_7m_"
               role="combobox"
               tabindex="0"
             >
@@ -124,6 +136,12 @@ exports[`optionSelector > should work readonly 1`] = `
               </div>
             </div>
           </div>
+          <output
+            aria-atomic="true"
+            aria-live="polite"
+            class="styles__ahdbou0"
+            id="_r_7q_"
+          />
         </div>
       </div>
     </fieldset>
@@ -155,7 +173,10 @@ exports[`optionSelector > should work with default props 1`] = `
           >
             <div
               aria-expanded="false"
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-labelledby="_r_5_"
+              aria-required="false"
               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
               data-disabled="false"
               data-readonly="false"
@@ -189,6 +210,12 @@ exports[`optionSelector > should work with default props 1`] = `
               </div>
             </div>
           </div>
+          <output
+            aria-atomic="true"
+            aria-live="polite"
+            class="styles__ahdbou0"
+            id="_r_8_"
+          />
         </div>
       </div>
       <svg
@@ -217,12 +244,15 @@ exports[`optionSelector > should work with default props 1`] = `
           >
             <div
               aria-expanded="false"
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-labelledby="_r_h_"
+              aria-required="false"
               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
               data-disabled="true"
               data-readonly="false"
               data-testid="second-selector"
-              id="_r_e_"
+              id="_r_g_"
               role="combobox"
               tabindex="0"
             >
@@ -251,6 +281,12 @@ exports[`optionSelector > should work with default props 1`] = `
               </div>
             </div>
           </div>
+          <output
+            aria-atomic="true"
+            aria-live="polite"
+            class="styles__ahdbou0"
+            id="_r_k_"
+          />
         </div>
       </div>
     </fieldset>
@@ -275,8 +311,8 @@ exports[`optionSelector > should work with direction vertical 1`] = `
           class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
         >
           <label
-            class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-            for="_r_q_"
+            class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+            id="_r_v_"
           >
             Region
           </label>
@@ -285,13 +321,15 @@ exports[`optionSelector > should work with direction vertical 1`] = `
           >
             <div
               aria-expanded="false"
-              aria-haspopup="dialog"
-              aria-label="Region"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-labelledby="_r_v_"
+              aria-required="false"
               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
               data-disabled="false"
               data-readonly="false"
               data-testid="first-selector"
-              id="_r_q_"
+              id="_r_u_"
               role="combobox"
               tabindex="0"
             >
@@ -320,6 +358,12 @@ exports[`optionSelector > should work with direction vertical 1`] = `
               </div>
             </div>
           </div>
+          <output
+            aria-atomic="true"
+            aria-live="polite"
+            class="styles__ahdbou0"
+            id="_r_14_"
+          />
         </div>
       </div>
       <svg
@@ -344,8 +388,8 @@ exports[`optionSelector > should work with direction vertical 1`] = `
           class="styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
         >
           <label
-            class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-            for="_r_16_"
+            class="styles_default__l58dz70 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
+            id="_r_1d_"
           >
             Zone
           </label>
@@ -354,13 +398,15 @@ exports[`optionSelector > should work with direction vertical 1`] = `
           >
             <div
               aria-expanded="false"
-              aria-haspopup="dialog"
-              aria-label="Zone"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-labelledby="_r_1d_"
+              aria-required="false"
               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
               data-disabled="true"
               data-readonly="false"
               data-testid="second-selector"
-              id="_r_16_"
+              id="_r_1c_"
               role="combobox"
               tabindex="0"
             >
@@ -389,6 +435,12 @@ exports[`optionSelector > should work with direction vertical 1`] = `
               </div>
             </div>
           </div>
+          <output
+            aria-atomic="true"
+            aria-live="polite"
+            class="styles__ahdbou0"
+            id="_r_1i_"
+          />
         </div>
       </div>
     </fieldset>
@@ -420,12 +472,15 @@ exports[`optionSelector > should work with disabled 1`] = `
           >
             <div
               aria-expanded="false"
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-labelledby="_r_6f_"
+              aria-required="false"
               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
               data-disabled="true"
               data-readonly="false"
               data-testid="first-selector"
-              id="_r_5k_"
+              id="_r_6e_"
               role="combobox"
               tabindex="0"
             >
@@ -454,6 +509,12 @@ exports[`optionSelector > should work with disabled 1`] = `
               </div>
             </div>
           </div>
+          <output
+            aria-atomic="true"
+            aria-live="polite"
+            class="styles__ahdbou0"
+            id="_r_6i_"
+          />
         </div>
       </div>
       <svg
@@ -482,12 +543,15 @@ exports[`optionSelector > should work with disabled 1`] = `
           >
             <div
               aria-expanded="false"
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-labelledby="_r_6r_"
+              aria-required="false"
               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
               data-disabled="true"
               data-readonly="false"
               data-testid="second-selector"
-              id="_r_5u_"
+              id="_r_6q_"
               role="combobox"
               tabindex="0"
             >
@@ -516,6 +580,12 @@ exports[`optionSelector > should work with disabled 1`] = `
               </div>
             </div>
           </div>
+          <output
+            aria-atomic="true"
+            aria-live="polite"
+            class="styles__ahdbou0"
+            id="_r_6u_"
+          />
         </div>
       </div>
     </fieldset>

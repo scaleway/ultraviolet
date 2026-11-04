@@ -17,7 +17,7 @@ exports[`unitInputField > should handles onChange and selection 1`] = `
         >
           <label
             class="uv_l58dz72 uv_1do42ls0 uv_1do42ls4 uv_1do42lsb uv_1do42lsn uv_1do42ls1a uv_1do42ls32"
-            for="_r_e_"
+            for="_r_g_"
           >
             Test
           </label>
@@ -40,7 +40,7 @@ exports[`unitInputField > should handles onChange and selection 1`] = `
               aria-invalid="false"
               class="uv_bjgo2p2 uv_bjgo2p1"
               data-testid="unit-input"
-              id="_r_e_"
+              id="_r_g_"
               max="9007199254740991"
               min="0"
               name="test-value"
@@ -52,7 +52,6 @@ exports[`unitInputField > should handles onChange and selection 1`] = `
             />
           </div>
           <div
-            aria-label="test-unit"
             class="uv_bjgo2pg uv_bjgo2pf uv_ei8oq30"
             style="--uv_bjgo2p0: 12.6rem;"
           >
@@ -64,7 +63,10 @@ exports[`unitInputField > should handles onChange and selection 1`] = `
               >
                 <div
                   aria-expanded="false"
-                  aria-haspopup="dialog"
+                  aria-haspopup="listbox"
+                  aria-invalid="false"
+                  aria-labelledby="_r_n_"
+                  aria-required="false"
                   class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4ba uv_1xo4j4be"
                   data-disabled="false"
                   data-readonly="false"
@@ -74,6 +76,8 @@ exports[`unitInputField > should handles onChange and selection 1`] = `
                   tabindex="0"
                 >
                   <span
+                    aria-atomic="true"
+                    aria-live="polite"
                     class="uv_1xo4j4bm uv_1do42ls0 uv_1do42ls4 uv_1do42lsb uv_1do42lsj uv_1do42ls1a uv_1do42ls32"
                   >
                     Days
@@ -97,6 +101,12 @@ exports[`unitInputField > should handles onChange and selection 1`] = `
                   </div>
                 </div>
               </div>
+              <output
+                aria-atomic="true"
+                aria-live="polite"
+                class="uv_ahdbou0"
+                id="_r_q_"
+              />
             </div>
           </div>
         </div>
@@ -152,7 +162,6 @@ exports[`unitInputField > should render correctly 1`] = `
             />
           </div>
           <div
-            aria-label="test-unit"
             class="uv_bjgo2pg uv_bjgo2pf uv_ei8oq30"
             style="--uv_bjgo2p0: 12.6rem;"
           >
@@ -164,7 +173,10 @@ exports[`unitInputField > should render correctly 1`] = `
               >
                 <div
                   aria-expanded="false"
-                  aria-haspopup="dialog"
+                  aria-haspopup="listbox"
+                  aria-invalid="false"
+                  aria-labelledby="_r_5_"
+                  aria-required="false"
                   class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4ba uv_1xo4j4be"
                   data-disabled="false"
                   data-readonly="false"
@@ -198,6 +210,12 @@ exports[`unitInputField > should render correctly 1`] = `
                   </div>
                 </div>
               </div>
+              <output
+                aria-atomic="true"
+                aria-live="polite"
+                class="uv_ahdbou0"
+                id="_r_8_"
+              />
             </div>
           </div>
         </div>

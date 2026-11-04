@@ -6,6 +6,9 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { SelectInput } from '..'
 import { cities, dataGrouped, dataGroupedSmall, dataGroupEmpty, dataUnGrouped, OptionalInfo } from './resources'
 
+// checkboxes are hidden (to avoid inputs inside a button)
+const getDecorativeCheckbox = (container: HTMLElement) => within(container).getByRole('checkbox', { hidden: true })
+
 describe('selectInput', () => {
   beforeEach(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
@@ -19,21 +22,17 @@ describe('selectInput', () => {
   })
 
   it('renders correctly', () => {
-    const { asFragment } = renderWithTheme(<SelectInput label="label" name="test" options={dataUnGrouped} />)
+    const { asFragment } = renderWithTheme(<SelectInput label="label" options={dataUnGrouped} />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly small', () => {
-    const { asFragment } = renderWithTheme(
-      <SelectInput label="label" name="test" options={dataUnGrouped} size="small" />,
-    )
+    const { asFragment } = renderWithTheme(<SelectInput label="label" options={dataUnGrouped} size="small" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders correctly with tooltip', () => {
-    const { asFragment } = renderWithTheme(
-      <SelectInput label="label" name="test" options={dataUnGrouped} tooltip="tooltip" />,
-    )
+    const { asFragment } = renderWithTheme(<SelectInput label="label" options={dataUnGrouped} tooltip="tooltip" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -41,11 +40,11 @@ describe('selectInput', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         clearable={false}
-        name="test"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         value={dataUnGrouped[4].value}
+        label="label"
       />,
     )
     expect(asFragment()).toMatchSnapshot()
@@ -54,13 +53,13 @@ describe('selectInput', () => {
   it('renders correctly ungrouped', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
-        name="test"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(
@@ -86,9 +85,15 @@ describe('selectInput', () => {
 
   it('renders correctly grouped', async () => {
     const { asFragment } = renderWithTheme(
-      <SelectInput name="test" options={dataGrouped} placeholder="placeholder" placeholderSearch="placeholdersearch" />,
+      <SelectInput
+        label="label"
+        options={dataGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+      />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
+
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -101,14 +106,14 @@ describe('selectInput', () => {
   it('renders correctly with default value', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
-        name="test"
+        label="label"
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         value={dataGrouped['terrestrial planets'][4].value}
       />,
     )
-    const input = screen.getByText('Pluto')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -122,14 +127,14 @@ describe('selectInput', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         footer="this is a footer"
-        name="test"
+        label="label"
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         value={dataGrouped['terrestrial planets'][4].value}
       />,
     )
-    const input = screen.getByText('Pluto')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -143,14 +148,14 @@ describe('selectInput', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         multiselect
-        name="test"
+        label="label"
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         value={[dataGrouped['terrestrial planets'][4].value]}
       />,
     )
-    const input = screen.getByText('Pluto')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -167,13 +172,13 @@ describe('selectInput', () => {
           'jovian planets': 'error',
         }}
         multiselect
-        name="test"
+        label="label"
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -192,13 +197,13 @@ describe('selectInput', () => {
           'terrestrial planets': 'No terrestrial planets !',
         }}
         multiselect
-        name="test"
         options={dataGroupEmpty}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -213,14 +218,14 @@ describe('selectInput', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         descriptionDirection="row"
-        name="test"
         onChange={() => {}}
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -234,14 +239,14 @@ describe('selectInput', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         descriptionDirection="row"
-        name="test"
         optionalInfoPlacement="right"
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -255,14 +260,14 @@ describe('selectInput', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         descriptionDirection="column"
-        name="test"
+        label="label"
         optionalInfoPlacement="left"
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -276,14 +281,14 @@ describe('selectInput', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         descriptionDirection="column"
-        name="test"
+        label="label"
         optionalInfoPlacement="right"
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -298,7 +303,7 @@ describe('selectInput', () => {
       <SelectInput
         clearable={false}
         loadMore="LoadMore"
-        name="test"
+        label="label"
         options={cities}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
@@ -311,13 +316,14 @@ describe('selectInput', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         emptyState="no option"
-        name="emptystate"
         options={{}}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
+
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -330,13 +336,14 @@ describe('selectInput', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         disabled
-        name="test"
+        label="label"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
+
     await userEvent.click(input) // it shouldn't open the dropdown
     expect(asFragment()).toMatchSnapshot()
   })
@@ -344,7 +351,7 @@ describe('selectInput', () => {
   it('renders correctly required', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
-        name="test"
+        label="label"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
@@ -352,7 +359,8 @@ describe('selectInput', () => {
       />,
     )
 
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
+
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -365,7 +373,7 @@ describe('selectInput', () => {
   it('renders correctly readOnly', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
-        name="test"
+        label="label"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
@@ -373,7 +381,8 @@ describe('selectInput', () => {
       />,
     )
 
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
+
     await userEvent.click(input) // it shouldn't open the dropdown
     expect(asFragment()).toMatchSnapshot()
   })
@@ -382,13 +391,14 @@ describe('selectInput', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         error="error"
-        name="test"
+        label="label"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
+
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -401,14 +411,14 @@ describe('selectInput', () => {
   it('renders correctly with success', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
-        name="test"
+        label="label"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         success="success"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -421,13 +431,13 @@ describe('selectInput', () => {
   it('should not be searchable when there are less than 6 items', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
-        name="test"
+        label="label"
         options={[dataUnGrouped[0]]}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -437,17 +447,35 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  it('focuses the first option when opening a non-searchable dropdown', async () => {
+    renderWithTheme(
+      <SelectInput
+        options={[dataUnGrouped[1]]}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        label="label"
+      />,
+    )
+
+    await userEvent.click(screen.getByRole('combobox', { name: 'label' }))
+    const option = screen.getByRole('option', { name: 'Venus' })
+
+    await waitFor(() => {
+      expect(option).toHaveFocus()
+    })
+  })
+
   it('should be searchable when there are less than 6 items but addOption is enabled', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
-        name="test"
+        label="label"
         options={[dataUnGrouped[0]]}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         addOption={{ text: 'text', onClick: vi.fn() }}
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -460,14 +488,14 @@ describe('selectInput', () => {
   it('should be searchable when there are more than 6 items', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
-        name="test"
+        label="label"
         options={[dataUnGrouped[0]]}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         addOption={{ text: 'text', onClick: vi.fn() }}
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -477,18 +505,82 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  it('keeps focus in the search bar and announces the number of results', async () => {
+    renderWithTheme(
+      <SelectInput
+        options={dataUnGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        label="label"
+      />,
+    )
+
+    await userEvent.click(screen.getByRole('combobox', { name: 'label' }))
+    const searchBar = screen.getByRole('textbox', { name: 'search-bar' })
+
+    expect(searchBar).toHaveAccessibleDescription('8 options available')
+
+    await userEvent.type(searchBar, 'venus')
+    await waitFor(() => {
+      expect(searchBar).toHaveFocus()
+      expect(screen.getAllByRole('status')[0]).toHaveTextContent('1 option available')
+    })
+
+    await userEvent.keyboard('{ArrowDown}')
+    expect(screen.getByRole('option', { name: 'Venus' })).toHaveFocus()
+    await userEvent.keyboard('{ArrowUp}')
+    expect(searchBar).toHaveFocus()
+
+    await userEvent.clear(searchBar)
+    await userEvent.type(searchBar, 'test-test-test')
+    await waitFor(() => {
+      expect(searchBar).toHaveFocus()
+      expect(screen.getAllByRole('status')[0]).toHaveTextContent('0 options available')
+    })
+  })
+
+  it('announces selection changes', async () => {
+    renderWithTheme(<SelectInput multiselect options={dataUnGrouped} label="label" />)
+
+    const combobox = screen.getByRole('combobox', { name: 'label' })
+    expect(combobox).not.toHaveAttribute('aria-live')
+
+    await userEvent.click(combobox)
+    await userEvent.click(screen.getByRole('option', { name: /Jupiter/iv }))
+    await waitFor(() => {
+      expect(screen.getByRole('status', { name: 'Selected options' })).toHaveTextContent('Jupiter')
+    })
+    await userEvent.click(screen.getByRole('option', { name: 'Saturn' }))
+
+    await waitFor(() => {
+      expect(screen.getByRole('status', { name: 'Selected options' })).toHaveTextContent('Jupiter, Saturn')
+    })
+  })
+
+  it('announces a single selected value from the value text', async () => {
+    renderWithTheme(<SelectInput options={dataUnGrouped} label="label" />)
+
+    const combobox = screen.getByRole('combobox', { name: 'label' })
+    await userEvent.click(combobox)
+    await userEvent.click(screen.getByRole('option', { name: /Jupiter/iv }))
+
+    const selectedValue = screen.getByText('Jupiter')
+    expect(selectedValue).toHaveAttribute('aria-live', 'polite')
+    expect(combobox).not.toHaveAttribute('aria-live')
+  })
+
   it('handles correctly dropdown with clicks - grouped', async () => {
     renderWithTheme(
       <SelectInput
         multiselect
-        name="test"
+        label="label"
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
       />,
     )
 
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -504,7 +596,7 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         multiselect
-        name="test"
+        label="label"
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
@@ -512,7 +604,7 @@ describe('selectInput', () => {
       />,
     )
 
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
@@ -528,7 +620,6 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         multiselect
-        name="test"
         onChange={() => {}}
         options={dataUnGrouped}
         placeholder="placeholder"
@@ -536,17 +627,15 @@ describe('selectInput', () => {
         value={[dataUnGrouped[1].value]}
       />,
     )
-    const venusCloseButton = screen.getByTestId('close-tag')
-    const venus = screen.getByText('Venus')
+    const venusCloseButton = screen.getByRole('button', { name: /remove tag venus/iv })
     await userEvent.click(venusCloseButton)
-    expect(venus).not.toBeVisible()
+    expect(venusCloseButton).not.toBeVisible()
   })
 
   it('renders correctly unclosable tags when readonly', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
         multiselect
-        name="test"
         onChange={() => {}}
         options={dataUnGrouped}
         placeholder="placeholder"
@@ -562,14 +651,14 @@ describe('selectInput', () => {
   it('handles correctly dropdown with arrow down/up key press with ungrouped data', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
 
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.tab()
     expect(input).toHaveFocus()
     await userEvent.keyboard('[arrowDown]')
@@ -591,17 +680,41 @@ describe('selectInput', () => {
     expect(mercury).toHaveFocus()
   })
 
+  it('uses roving tab stops for options', async () => {
+    renderWithTheme(<SelectInput label="label" options={dataUnGrouped} placeholder="placeholder" />)
+
+    const input = screen.getByRole('combobox', { name: 'label' })
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    expect(dropdown).toBeVisible()
+    await waitFor(() => expect(screen.getByRole('textbox', { name: 'search-bar' })).toHaveFocus())
+
+    await userEvent.keyboard('[arrowDown]')
+    const mercury = screen.getByRole('option', { name: 'Mercury' })
+    const venus = screen.getByRole('option', { name: 'Venus' })
+
+    expect(mercury).toHaveFocus()
+    expect(mercury).toHaveAttribute('tabindex', '0')
+    expect(venus).toHaveAttribute('tabindex', '-1')
+
+    await userEvent.keyboard('[arrowDown]')
+
+    expect(venus).toHaveFocus()
+    expect(mercury).toHaveAttribute('tabindex', '-1')
+    expect(venus).toHaveAttribute('tabindex', '0')
+  })
+
   it('handles correctly dropdown with arrow pressing enter or space', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
 
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.tab()
     expect(input).toHaveFocus()
     await userEvent.keyboard(' ')
@@ -614,14 +727,14 @@ describe('selectInput', () => {
   it('handles correctly dropdown with arrow down/up key press with grouped data', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
         options={dataGroupedSmall}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
 
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.tab()
     expect(input).toHaveFocus()
     await userEvent.keyboard('[arrowDown]')
@@ -646,14 +759,14 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         clearable
-        name="test"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
         value={dataUnGrouped[4].value}
       />,
     )
-    const clearAll = screen.getByTestId('clear-all')
+    const clearAll = screen.getByRole('button', { name: 'clear value' })
     await userEvent.click(clearAll)
     expect(clearAll).not.toBeInTheDocument()
   })
@@ -663,14 +776,14 @@ describe('selectInput', () => {
       <>
         Test outside element
         <SelectInput
-          name="test"
           options={dataUnGrouped}
           placeholder="placeholder"
           placeholderSearch="placeholdersearch"
+          label="label"
         />
       </>,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
 
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
@@ -690,18 +803,18 @@ describe('selectInput', () => {
 
     renderWithTheme(
       <SelectInput
-        name="test"
         onChange={onChange}
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
 
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
-    const venus = screen.getByText('Venus')
+    const venus = screen.getByRole('option', { name: /venus/iv })
 
     await waitFor(() => {
       expect(dropdown).toBeVisible()
@@ -714,13 +827,13 @@ describe('selectInput', () => {
   it('handles keydown when not searchable on ungrouped data', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
         options={[dataUnGrouped[1]]}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     const venus = screen.getByRole('option', {
@@ -734,14 +847,14 @@ describe('selectInput', () => {
   it('handles keydown when not searchable on grouped data', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
         options={dataGroupedSmall}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         size="medium"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     // Venus lives in the second group, so type-ahead must search every group, not only the first one
@@ -753,16 +866,16 @@ describe('selectInput', () => {
   it('renders with onChange', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
         onChange={(values: (string | undefined)[]) => values}
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
-    const earth = screen.getByText('Earth')
+    const earth = screen.getByRole('option', { name: /earth/iv })
     await userEvent.click(earth)
     await userEvent.click(earth)
   })
@@ -771,16 +884,16 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         multiselect
-        name="test"
         onChange={(values: (string | undefined)[]) => values}
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
-    const earth = screen.getByTestId('option-earth')
+    const earth = screen.getByRole('option', { name: /earth/iv })
     await userEvent.click(earth)
     await userEvent.click(earth)
   })
@@ -788,21 +901,21 @@ describe('selectInput', () => {
   it('handles correctly searchable and closest value - grouped data', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
         onChange={(values: (string | undefined)[]) => values}
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    const venus = screen.getByTestId('option-venus')
-    const earth = screen.getByTestId('option-earth')
+    const venus = screen.getByRole('option', { name: 'Venus' })
+    const earth = screen.getByRole('option', { name: /earth/iv })
 
     await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.keyboard('e')
@@ -818,7 +931,7 @@ describe('selectInput', () => {
 
     expect(input.textContent).toContain('Earth')
     await userEvent.keyboard('[Backspace][Backspace][Backspace][Backspace][Backspace]')
-    const mars = screen.getByText('Mars')
+    const mars = screen.getByRole('option', { name: /mars/iv })
     expect(mars).toBeVisible()
 
     const options = screen.getAllByRole('option')
@@ -844,24 +957,22 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         multiselect
-        name="test"
         onChange={(values: (string | undefined)[]) => values}
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    const venus = screen.getByText('Venus')
-    const earth = screen.getByText('Earth')
-    const earthCheckbox = screen.getByRole('checkbox', {
-      name: /earth/iv,
-    })
+    const venus = screen.getByRole('option', { name: /venus/iv })
+    const earth = screen.getByRole('option', { name: /earth/iv })
+    const earthCheckbox = getDecorativeCheckbox(earth)
     await userEvent.keyboard('[Enter]') // empty search doesn't do anything
     await userEvent.keyboard('e')
     await waitFor(() => {
@@ -881,7 +992,7 @@ describe('selectInput', () => {
     })
 
     await userEvent.keyboard('[Backspace][Backspace][Backspace][Backspace][Backspace]')
-    const mars = screen.getByTestId('option-mars')
+    const mars = screen.getByRole('option', { name: 'mars' })
     expect(mars).toBeVisible()
     await userEvent.click(mars)
     await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
@@ -903,21 +1014,21 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         multiselect
-        name="test"
         onChange={(values: (string | undefined)[]) => values}
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    const jupiter = screen.getByText('Jupiter')
-    const earth = screen.getByText('Earth')
+    const jupiter = screen.getByRole('option', { name: /jupiter/iv })
+    const earth = screen.getByRole('option', { name: /earth/iv })
     await userEvent.keyboard('e')
     await waitFor(() => expect(jupiter).toBeVisible())
 
@@ -928,7 +1039,7 @@ describe('selectInput', () => {
     })
 
     await userEvent.keyboard('[Backspace][Backspace][Backspace][Backspace][Backspace]')
-    const mars = screen.getByTestId('option-mars')
+    const mars = screen.getByRole('option', { name: 'mars' })
     expect(mars).toBeVisible()
     await userEvent.click(mars)
     await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
@@ -952,22 +1063,21 @@ describe('selectInput', () => {
       <SelectInput
         descriptionDirection="column"
         multiselect
-        name="test"
         onChange={(values: (string | undefined)[]) => values}
         optionalInfoPlacement="left"
         options={dataGrouped}
         placeholder="placeholder"
         value={[dataGrouped['jovian planets'][1].value]}
+        label="label"
       />,
     )
 
-    const closeTag = screen.getByTestId('close-tag')
-    const tag = screen.getByTestId('selected-options-tags')
-    expect(tag).toBeVisible()
+    const closeTag = screen.getByRole('button', { name: /remove tag/iv })
+    expect(closeTag).toBeVisible()
     await userEvent.click(closeTag)
-    expect(tag).not.toBeVisible()
+    expect(closeTag).not.toBeVisible()
 
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const options = screen.getAllByRole('option')
 
@@ -987,7 +1097,6 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         multiselect
-        name="test"
         onChange={onChange}
         options={dataGrouped}
         placeholder="placeholder"
@@ -995,15 +1104,16 @@ describe('selectInput', () => {
           description: 'all',
           label: 'Select',
         }}
+        label="label"
       />,
     )
 
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
-    const selectAllCheckBox = screen.getByRole('checkbox', {
+    const selectAll = screen.getByRole('option', {
       name: /select.*all/iv,
     })
-    const selectAll = screen.getByTestId('select-all')
+    const selectAllCheckbox = getDecorativeCheckbox(selectAll)
     await userEvent.click(selectAll)
     expect(onChange).toHaveBeenCalledWith([
       'jupiter',
@@ -1018,15 +1128,13 @@ describe('selectInput', () => {
     const plustag = screen.getByTestId('plus-tag')
     expect(plustag).toBeInTheDocument()
 
-    const venus = screen.getByTestId('option-venus')
-    const earth = screen.getByTestId('option-earth')
-    const earthCheckbox = screen.getByRole('checkbox', {
-      name: /earth/iv,
-    })
+    const venus = screen.getByRole('option', { name: 'Venus' })
+    const earth = screen.getByRole('option', { name: /earth/iv })
+    const earthCheckbox = getDecorativeCheckbox(earth)
     await userEvent.click(venus)
-    expect(selectAllCheckBox).not.toBeChecked()
+    expect(selectAllCheckbox).not.toBeChecked()
     await userEvent.click(venus)
-    expect(selectAllCheckBox).toBeChecked()
+    expect(selectAllCheckbox).toBeChecked()
     expect(onChange).toHaveBeenCalledWith([
       'jupiter',
       'saturn',
@@ -1054,9 +1162,9 @@ describe('selectInput', () => {
     await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.tab()
     await userEvent.keyboard(' ')
-    expect(selectAllCheckBox).not.toBeChecked()
+    expect(selectAllCheckbox).not.toBeChecked()
     await userEvent.keyboard('[Enter]')
-    expect(selectAllCheckBox).toBeChecked()
+    expect(selectAllCheckbox).toBeChecked()
   }, 15_000)
 
   it.each([dataGrouped, dataUnGrouped])('handles correctly selectAll when the value is controlled', async () => {
@@ -1066,7 +1174,7 @@ describe('selectInput', () => {
       return (
         <SelectInput
           multiselect
-          name="test"
+          label="label"
           value={values}
           onChange={setValues}
           options={dataGrouped}
@@ -1081,9 +1189,9 @@ describe('selectInput', () => {
 
     renderWithTheme(<ControlledSelect />)
 
-    await userEvent.click(screen.getByRole('combobox'))
+    await userEvent.click(screen.getByRole('combobox', { name: 'label' }))
 
-    const selectAll = screen.getByRole('option', { name: 'select-all' })
+    const selectAll = screen.getByRole('option', { name: 'Selectall' })
     expect(selectAll).toBeVisible()
 
     await userEvent.click(selectAll)
@@ -1096,7 +1204,6 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         multiselect
-        name="test"
         onChange={onChange}
         options={dataUnGrouped}
         placeholder="placeholder"
@@ -1104,25 +1211,22 @@ describe('selectInput', () => {
           description: 'all',
           label: 'Select',
         }}
+        label="label"
       />,
     )
 
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
-    const selectAllCheckBox = screen.getByRole('checkbox', {
-      name: /select.*all/iv,
-    })
-    const selectAll = screen.getByTestId('select-all')
+    const selectAll = screen.getByRole('option', { name: /select.*all/iv })
+    const selectAllCheckBox = getDecorativeCheckbox(selectAll)
     await userEvent.click(selectAll)
     expect(onChange).toHaveBeenCalledWith(['mercury', 'venus', 'earth', 'jupiter', 'saturn', 'uranus', 'neptune'])
     const plustag = screen.getByTestId('plus-tag')
     expect(plustag).toBeInTheDocument()
 
-    const venus = screen.getByTestId('option-venus')
-    const earthCheckbox = screen.getByRole('checkbox', {
-      name: /earth/iv,
-    })
-    const earth = screen.getByTestId('option-earth')
+    const venus = screen.getByRole('option', { name: 'Venus' })
+    const earth = screen.getByRole('option', { name: /earth/iv })
+    const earthCheckbox = getDecorativeCheckbox(earth)
     await userEvent.click(venus)
     expect(onChange).toHaveBeenLastCalledWith(['mercury', 'earth', 'jupiter', 'saturn', 'uranus', 'neptune'])
     expect(selectAllCheckBox).not.toBeChecked()
@@ -1154,15 +1258,15 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         multiselect
-        name="test"
         onChange={(values: (string | undefined)[]) => values}
         options={dataGrouped}
         placeholder="placeholder"
         selectAllGroup
+        label="label"
       />,
     )
 
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
 
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
@@ -1172,33 +1276,23 @@ describe('selectInput', () => {
       },
       { timeout: 1000 },
     )
-    const selectAllGroupCheckBox = within(dropdown).getByRole('checkbox', {
-      name: 'TERRESTRIAL PLANETS',
-    })
-    const selectAllGroup = within(dropdown).getByTestId('group-1')
+    const selectAllGroup = screen.getByRole('option', { name: 'TERRESTRIAL PLANETS' })
+    const selectAllGroupCheckBox = getDecorativeCheckbox(selectAllGroup)
     await userEvent.click(selectAllGroup)
-    const mercury = within(dropdown).getByRole('checkbox', {
-      name: /mercury/iv,
-    })
-    const venus = within(dropdown).getByRole('checkbox', {
-      name: /venus/iv,
-    })
-    const earth = within(dropdown).getByRole('checkbox', {
-      name: /earth/iv,
-    })
-    const jupiter = within(dropdown).getByRole('checkbox', {
-      name: /jupiter/iv,
-    })
+    const mercury = getDecorativeCheckbox(screen.getByRole('option', { name: /mercury/iv }))
+    const venus = getDecorativeCheckbox(screen.getByRole('option', { name: /venus/iv }))
+    const earth = getDecorativeCheckbox(screen.getByRole('option', { name: /earth/iv }))
+    const jupiter = getDecorativeCheckbox(screen.getByRole('option', { name: /jupiter/iv }))
 
     expect(mercury).toBeChecked()
     expect(venus).toBeChecked()
     expect(earth).toBeChecked()
     expect(jupiter).not.toBeChecked()
 
-    await userEvent.click(screen.getByTestId('option-mercury'))
-    expect(selectAllGroup).not.toBeChecked()
+    await userEvent.click(screen.getByRole('option', { name: 'Mercury' }))
+    expect(selectAllGroupCheckBox).not.toBeChecked()
 
-    await userEvent.click(screen.getByTestId('option-mercury'))
+    await userEvent.click(screen.getByRole('option', { name: 'Mercury' }))
     expect(selectAllGroupCheckBox).toBeChecked()
   }, 10_000)
 
@@ -1206,15 +1300,15 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         multiselect
-        name="test"
         onChange={(values: (string | undefined)[]) => values}
         options={dataGrouped}
         placeholder="placeholder"
         selectAllGroup
+        label="label"
       />,
     )
 
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(
@@ -1224,12 +1318,10 @@ describe('selectInput', () => {
       { timeout: 1000 },
     )
 
-    const selectAllGroupCheckBox = within(dropdown).getByRole('checkbox', {
-      name: 'TERRESTRIAL PLANETS',
-    })
-    const selectAllGroup = within(dropdown).getByTestId('group-1')
+    const selectAllGroup = within(dropdown).getByRole('option', { name: 'TERRESTRIAL PLANETS' })
+    const selectAllGroupCheckBox = getDecorativeCheckbox(selectAllGroup)
     await userEvent.click(selectAllGroup)
-    const earth = screen.getByTestId('option-earth')
+    const earth = screen.getByRole('option', { name: /earth/iv })
 
     await userEvent.click(earth)
     await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
@@ -1243,12 +1335,32 @@ describe('selectInput', () => {
     expect(selectAllGroupCheckBox).not.toBeChecked()
   }, 10_000)
 
+  it('does not expose nested checkboxes inside listbox options', async () => {
+    renderWithTheme(
+      <SelectInput
+        multiselect
+        options={dataGrouped}
+        placeholder="placeholder"
+        selectAll={{ label: 'Select all' }}
+        selectAllGroup
+        label="label"
+      />,
+    )
+
+    await userEvent.click(screen.getByRole('combobox', { name: 'label' }))
+    const dropdown = screen.getByRole('dialog')
+    const listbox = dropdown
+
+    expect(within(listbox).queryByRole('checkbox')).not.toBeInTheDocument()
+    expect(within(listbox).getByRole('option', { name: /jupiter/i })).toBeInTheDocument()
+    expect(within(listbox).getByRole('option', { name: 'JOVIAN PLANETS' })).toBeInTheDocument()
+  })
+
   it('handles correcty selectAllGroup with selectAll - grouped data', async () => {
     renderWithTheme(
       <SelectInput
         clearable={false}
         multiselect
-        name="test"
         onChange={(values: (string | undefined)[]) => values}
         options={dataGrouped}
         placeholder="placeholder"
@@ -1257,10 +1369,11 @@ describe('selectInput', () => {
           label: 'Select',
         }}
         selectAllGroup
+        label="label"
       />,
     )
 
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(
@@ -1270,24 +1383,17 @@ describe('selectInput', () => {
       { timeout: 1000 },
     )
 
-    const selectAllGroupCheckBox = within(dropdown).getByRole('checkbox', {
-      name: /terrestrial planets/iv,
-    })
-
-    const selectAllGroup = within(dropdown).getByTestId('group-1')
+    const selectAllGroup = within(dropdown).getByRole('option', { name: 'TERRESTRIAL PLANETS' })
+    const selectAllGroupCheckBox = getDecorativeCheckbox(selectAllGroup)
 
     await userEvent.click(selectAllGroup)
-    const venus = within(dropdown).getByRole('checkbox', {
-      name: /venus/iv,
-    })
+    const venus = getDecorativeCheckbox(screen.getByRole('option', { name: /venus/iv }))
 
-    const selectAllCheckBox = within(dropdown).getByRole('checkbox', {
-      name: /select.*all/iv,
-    })
-    const selectAll = within(dropdown).getByTestId('select-all')
+    const selectAll = within(dropdown).getByRole('option', { name: /select.*all/iv })
+    const selectAllCheckBox = getDecorativeCheckbox(selectAll)
     await userEvent.click(selectAll)
 
-    await userEvent.click(screen.getByTestId('option-venus'))
+    await userEvent.click(screen.getByRole('option', { name: 'Venus' }))
     await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
 
     await userEvent.keyboard('ve')
@@ -1317,15 +1423,15 @@ describe('selectInput', () => {
       <SelectInput
         descriptionDirection="row"
         multiselect
-        name="test"
         optionalInfoPlacement="left"
         options={dataGrouped}
         placeholder="placeholder"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
-    const earth = screen.getByTestId('option-earth')
+    const earth = screen.getByRole('option', { name: /earth/iv })
     await userEvent.click(earth)
   })
 
@@ -1334,15 +1440,15 @@ describe('selectInput', () => {
       <SelectInput
         descriptionDirection="row"
         multiselect
-        name="test"
         optionalInfoPlacement="right"
         options={dataGrouped}
         placeholder="placeholder"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
-    const earth = screen.getByTestId('option-earth')
+    const earth = screen.getByRole('option', { name: /earth/iv })
     await userEvent.click(earth)
   })
 
@@ -1351,15 +1457,15 @@ describe('selectInput', () => {
       <SelectInput
         descriptionDirection="column"
         multiselect
-        name="test"
         optionalInfoPlacement="left"
         options={dataGrouped}
         placeholder="placeholder"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
-    const earth = screen.getByTestId('option-earth')
+    const earth = screen.getByRole('option', { name: /earth/iv })
     await userEvent.click(earth)
   })
 
@@ -1368,15 +1474,15 @@ describe('selectInput', () => {
       <SelectInput
         descriptionDirection="column"
         multiselect
-        name="test"
         optionalInfoPlacement="right"
         options={dataGrouped}
         placeholder="placeholder"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
-    const earth = screen.getByTestId('option-earth')
+    const earth = screen.getByRole('option', { name: /earth/iv })
     await userEvent.click(earth)
   })
 
@@ -1384,15 +1490,15 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         descriptionDirection="row"
-        name="test"
         optionalInfoPlacement="left"
         options={dataGrouped}
         placeholder="placeholder"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
-    const earth = screen.getByTestId('option-earth')
+    const earth = screen.getByRole('option', { name: /earth/iv })
     await userEvent.click(earth)
   })
 
@@ -1400,20 +1506,20 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         descriptionDirection="row"
-        name="test"
         optionalInfoPlacement="right"
         options={dataGrouped}
         placeholder="placeholder"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
 
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    const earth = screen.getByTestId('option-earth')
+    const earth = screen.getByRole('option', { name: /earth/iv })
     await userEvent.click(earth)
   })
 
@@ -1421,20 +1527,20 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         descriptionDirection="column"
-        name="test"
         optionalInfoPlacement="left"
         options={dataGrouped}
         placeholder="placeholder"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
 
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    const earth = screen.getByTestId('option-earth')
+    const earth = screen.getByRole('option', { name: /earth/iv })
     await userEvent.click(earth)
   })
 
@@ -1442,13 +1548,13 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         descriptionDirection="column"
-        name="test"
         optionalInfoPlacement="right"
         options={dataGrouped}
         placeholder="placeholder"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
 
@@ -1456,7 +1562,7 @@ describe('selectInput', () => {
       expect(dropdown).toBeVisible()
     })
 
-    const earth = screen.getByTestId('option-earth')
+    const earth = screen.getByRole('option', { name: /earth/iv })
     await userEvent.click(earth)
   })
 
@@ -1465,13 +1571,13 @@ describe('selectInput', () => {
       <SelectInput
         descriptionDirection="row"
         isLoading
-        name="test"
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
 
     const dropdown = screen.getByRole('dialog')
@@ -1487,13 +1593,13 @@ describe('selectInput', () => {
       <SelectInput
         descriptionDirection="row"
         isLoading
-        name="test"
+        label="label"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
 
@@ -1507,13 +1613,13 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         isLoading
-        name="test"
+        label="label"
         options={{}}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
       />,
     )
-    const input = screen.getByText('placeholder')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
 
@@ -1542,17 +1648,17 @@ describe('selectInput', () => {
             click
           </button>
         )}
-        name="test"
+        label="label"
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         value={dataGrouped['terrestrial planets'][4].value}
       />,
     )
-    const input = screen.getByText('Pluto')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
 
-    const footer = screen.getByTestId('buttonclose')
+    const footer = screen.getByRole('button', { name: 'click' })
     const dropdown = screen.getByRole('dialog')
 
     await waitFor(() => {
@@ -1578,20 +1684,20 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         addOption={{ onClick, text: 'create' }}
-        name="test"
         onChange={(values: (string | undefined)[]) => values}
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    const venus = screen.getByTestId('option-venus')
+    const venus = screen.getByRole('option', { name: 'Venus' })
 
     expect(venus).toBeVisible()
 
@@ -1600,7 +1706,7 @@ describe('selectInput', () => {
 
     expect(venus).not.toBeVisible()
 
-    const addOption = screen.getByTestId('add-option')
+    const addOption = screen.getByRole('option', { name: 'create new value' })
 
     expect(addOption).toBeVisible()
     await userEvent.tab()
@@ -1615,20 +1721,20 @@ describe('selectInput', () => {
     renderWithTheme(
       <SelectInput
         addOption={{ onClick, text: 'create' }}
-        name="test"
         onChange={(values: (string | undefined)[]) => values}
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    const venus = screen.getByTestId('option-venus')
+    const venus = screen.getByRole('option', { name: 'Venus' })
 
     expect(venus).toBeVisible()
 
@@ -1637,7 +1743,7 @@ describe('selectInput', () => {
 
     expect(venus).not.toBeVisible()
 
-    const addOption = screen.getByTestId('add-option')
+    const addOption = screen.getByRole('option', { name: 'create new value' })
 
     expect(addOption).toBeVisible()
     await userEvent.tab()
@@ -1653,21 +1759,21 @@ describe('selectInput', () => {
       <SelectInput
         addOption={{ onClick, text: 'create' }}
         multiselect
-        name="test"
         onChange={(values: (string | undefined)[]) => values}
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    const venus = screen.getByTestId('option-venus')
-    const earth = screen.getByTestId('option-earth')
+    const venus = screen.getByRole('option', { name: 'Venus' })
+    const earth = screen.getByRole('option', { name: /earth/iv })
 
     expect(venus).toBeVisible()
     expect(earth).toBeVisible()
@@ -1678,7 +1784,7 @@ describe('selectInput', () => {
     expect(venus).toBeVisible()
     expect(earth).not.toBeVisible()
 
-    const addOption = screen.getByTestId('add-option')
+    const addOption = screen.getByRole('option', { name: 'create ven' })
 
     expect(addOption).toBeVisible()
 
@@ -1688,7 +1794,7 @@ describe('selectInput', () => {
     await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.keyboard('new-planet')
 
-    expect(screen.getByTestId('add-option')).toBeVisible()
+    expect(screen.getByRole('option', { name: 'create new-planet' })).toBeVisible()
     expect(venus).not.toBeVisible()
     expect(earth).not.toBeVisible()
 
@@ -1705,21 +1811,21 @@ describe('selectInput', () => {
       <SelectInput
         addOption={{ onClick, text: 'create' }}
         multiselect
-        name="test"
         onChange={(values: (string | undefined)[]) => values}
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        label="label"
       />,
     )
-    const input = screen.getByTestId('select-input-test')
+    const input = screen.getByRole('combobox', { name: 'label' })
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    const venus = screen.getByTestId('option-venus')
-    const earth = screen.getByTestId('option-earth')
+    const venus = screen.getByRole('option', { name: 'Venus' })
+    const earth = screen.getByRole('option', { name: /earth/iv })
 
     expect(venus).toBeVisible()
     expect(earth).toBeVisible()
@@ -1730,7 +1836,7 @@ describe('selectInput', () => {
     expect(venus).toBeVisible()
     expect(earth).not.toBeVisible()
 
-    const addOption = screen.getByTestId('add-option')
+    const addOption = screen.getByRole('option', { name: 'create ven' })
 
     expect(addOption).toBeVisible()
 
@@ -1740,7 +1846,7 @@ describe('selectInput', () => {
     await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.keyboard('new-planet')
 
-    expect(screen.getByTestId('add-option')).toBeVisible()
+    expect(screen.getByRole('option', { name: 'create new-planet' })).toBeVisible()
     expect(venus).not.toBeVisible()
     expect(earth).not.toBeVisible()
 

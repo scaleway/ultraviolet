@@ -10,7 +10,6 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
       style="display: contents;"
     >
       <div
-        aria-label="test"
         class="uv_ei8oq30"
       >
         <div
@@ -18,27 +17,32 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
         >
           <div
             class="uv_12tze4lb"
-            data-floating-ui-inert=""
           >
             <div
-              aria-controls="_r_1c_"
+              aria-controls="_r_1j_"
               aria-expanded="true"
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-labelledby="_r_1h_"
+              aria-required="false"
               class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4b8 uv_1xo4j4ba uv_1xo4j4be uv_1xo4j4bg"
               data-disabled="false"
               data-readonly="false"
               data-testid="select-input-test"
-              id="_r_18_"
+              id="_r_1g_"
               role="combobox"
               tabindex="0"
             >
               <span
+                aria-atomic="true"
+                aria-live="polite"
                 class="uv_1xo4j4bm uv_1do42ls0 uv_1do42ls4 uv_1do42lsb uv_1do42lsj uv_1do42ls1a uv_1do42ls32"
               >
                 Mercury
               </span>
               <div
                 class="uv_1xo4j4b2 uv_xf61n40 uv_xf61n4d uv_xf61n42j uv_xf61n43p"
+                data-floating-ui-inert=""
               >
                 <svg
                   aria-hidden="true"
@@ -57,6 +61,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
             </div>
             <span
               aria-hidden="true"
+              data-floating-ui-inert=""
               style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
               tabindex="-1"
             />
@@ -69,7 +74,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
             tabindex="0"
           />
           <span
-            aria-owns="_r_37_"
+            aria-owns="_r_3s_"
             data-floating-ui-inert=""
             style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
           />
@@ -80,6 +85,14 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
             style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
             tabindex="0"
           />
+          <output
+            aria-atomic="true"
+            aria-live="polite"
+            class="uv_ahdbou0"
+            id="_r_1k_"
+          >
+            9 options available
+          </output>
         </div>
       </div>
     </form>
@@ -97,7 +110,6 @@ exports[`selectInputField > should render correctly 1`] = `
       style="display: contents;"
     >
       <div
-        aria-label="test"
         class="uv_ei8oq30"
       >
         <div
@@ -108,7 +120,10 @@ exports[`selectInputField > should render correctly 1`] = `
           >
             <div
               aria-expanded="false"
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-labelledby="_r_1_"
+              aria-required="false"
               class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4ba uv_1xo4j4be"
               data-disabled="false"
               data-readonly="false"
@@ -142,6 +157,12 @@ exports[`selectInputField > should render correctly 1`] = `
               </div>
             </div>
           </div>
+          <output
+            aria-atomic="true"
+            aria-live="polite"
+            class="uv_ahdbou0"
+            id="_r_4_"
+          />
         </div>
       </div>
     </form>
@@ -159,7 +180,6 @@ exports[`selectInputField > should render correctly disabled 1`] = `
       style="display: contents;"
     >
       <div
-        aria-label="test"
         class="uv_ei8oq30"
       >
         <div
@@ -170,12 +190,15 @@ exports[`selectInputField > should render correctly disabled 1`] = `
           >
             <div
               aria-expanded="false"
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-labelledby="_r_d_"
+              aria-required="false"
               class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4b7 uv_1xo4j4ba uv_1xo4j4be"
               data-disabled="true"
               data-readonly="false"
               data-testid="select-input-test"
-              id="_r_a_"
+              id="_r_c_"
               role="combobox"
               tabindex="0"
             >
@@ -204,6 +227,12 @@ exports[`selectInputField > should render correctly disabled 1`] = `
               </div>
             </div>
           </div>
+          <output
+            aria-atomic="true"
+            aria-live="polite"
+            class="uv_ahdbou0"
+            id="_r_g_"
+          />
         </div>
       </div>
     </form>
@@ -221,7 +250,6 @@ exports[`selectInputField > should render correctly grouped 1`] = `
       style="display: contents;"
     >
       <div
-        aria-label="test"
         class="uv_ei8oq30"
       >
         <div
@@ -232,12 +260,15 @@ exports[`selectInputField > should render correctly grouped 1`] = `
           >
             <div
               aria-expanded="false"
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-labelledby="_r_15_"
+              aria-required="false"
               class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4ba uv_1xo4j4be"
               data-disabled="false"
               data-readonly="false"
               data-testid="select-input-test"
-              id="_r_u_"
+              id="_r_14_"
               role="combobox"
               tabindex="0"
             >
@@ -265,7 +296,21 @@ exports[`selectInputField > should render correctly grouped 1`] = `
                 </svg>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-label="Selected options"
+              aria-live="polite"
+              class="uv_ahdbou0"
+            >
+              No options selected
+            </output>
           </div>
+          <output
+            aria-atomic="true"
+            aria-live="polite"
+            class="uv_ahdbou0"
+            id="_r_18_"
+          />
         </div>
       </div>
     </form>
@@ -283,7 +328,6 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
       style="display: contents;"
     >
       <div
-        aria-label="test"
         class="uv_ei8oq30"
       >
         <div
@@ -294,12 +338,15 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
           >
             <div
               aria-expanded="false"
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-labelledby="_r_p_"
+              aria-required="false"
               class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4ba uv_1xo4j4be"
               data-disabled="false"
               data-readonly="false"
               data-testid="select-input-test"
-              id="_r_k_"
+              id="_r_o_"
               role="combobox"
               tabindex="0"
             >
@@ -327,7 +374,21 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
                 </svg>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-label="Selected options"
+              aria-live="polite"
+              class="uv_ahdbou0"
+            >
+              No options selected
+            </output>
           </div>
+          <output
+            aria-atomic="true"
+            aria-live="polite"
+            class="uv_ahdbou0"
+            id="_r_s_"
+          />
         </div>
       </div>
     </form>
@@ -345,7 +406,6 @@ exports[`selectInputField > should trigger events 1`] = `
       style="display: contents;"
     >
       <div
-        aria-label="test"
         class="uv_ei8oq30"
       >
         <div
@@ -356,16 +416,21 @@ exports[`selectInputField > should trigger events 1`] = `
           >
             <div
               aria-expanded="false"
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-labelledby="_r_5r_"
+              aria-required="false"
               class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4ba uv_1xo4j4be"
               data-disabled="false"
               data-readonly="false"
               data-testid="select-input-test"
-              id="_r_4q_"
+              id="_r_5q_"
               role="combobox"
               tabindex="0"
             >
               <span
+                aria-atomic="true"
+                aria-live="polite"
                 class="uv_1xo4j4bm uv_1do42ls0 uv_1do42ls4 uv_1do42lsb uv_1do42lsj uv_1do42ls1a uv_1do42ls32"
               >
                 Mercury
@@ -389,6 +454,12 @@ exports[`selectInputField > should trigger events 1`] = `
               </div>
             </div>
           </div>
+          <output
+            aria-atomic="true"
+            aria-live="polite"
+            class="uv_ahdbou0"
+            id="_r_5u_"
+          />
         </div>
       </div>
     </form>
