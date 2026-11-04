@@ -120,9 +120,9 @@ export const SearchBar = ({
       }
     } else if (key === 'Tab' || key === 'ArrowDown') {
       event?.preventDefault()
-      const optionsDropdown = document.querySelectorAll(OPTION_SELECTOR)
-      if (optionsDropdown && optionsDropdown.length > 0) {
-        ;(optionsDropdown[0] as HTMLElement).focus()
+      const optionsDropdown = document.getElementById(listboxId)?.querySelectorAll<HTMLElement>(OPTION_SELECTOR)
+      if (optionsDropdown?.length) {
+        optionsDropdown[0].focus()
       }
     }
   }

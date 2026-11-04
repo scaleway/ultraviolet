@@ -47,7 +47,7 @@ export const Item = forwardRef<HTMLDivElement, ItemProps>(
     }
 
     return (
-      <Tooltip containerFullWidth text={option.tooltip}>
+      <Tooltip containerFullWidth tabIndex={-1} text={option.tooltip}>
         <div
           aria-disabled={!!option.disabled}
           aria-selected={selectedData.selectedValues.includes(option.value) && !option.disabled}
@@ -97,6 +97,7 @@ export const Item = forwardRef<HTMLDivElement, ItemProps>(
                   })
                 }
               }}
+              style={{ display: 'none' }}
               tabIndex={-1}
               value={option.value}
             >

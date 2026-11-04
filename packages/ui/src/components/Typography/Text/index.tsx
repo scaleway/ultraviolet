@@ -96,7 +96,6 @@ export const Text = ({
         return (
           <Component
             {...tooltipProps}
-            role={role}
             aria-hidden={ariaHidden}
             aria-live={ariaLive}
             aria-atomic={ariaAtomic}

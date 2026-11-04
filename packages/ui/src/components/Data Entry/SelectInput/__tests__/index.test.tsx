@@ -1276,7 +1276,7 @@ describe('selectInput', () => {
       },
       { timeout: 1000 },
     )
-    const selectAllGroup = screen.getByRole('button', { name: 'TERRESTRIAL PLANETS' })
+    const selectAllGroup = screen.getByRole('option', { name: 'TERRESTRIAL PLANETS' })
     const selectAllGroupCheckBox = getDecorativeCheckbox(selectAllGroup)
     await userEvent.click(selectAllGroup)
     const mercury = getDecorativeCheckbox(screen.getByRole('option', { name: /mercury/iv }))
@@ -1318,7 +1318,7 @@ describe('selectInput', () => {
       { timeout: 1000 },
     )
 
-    const selectAllGroup = within(dropdown).getByRole('button', { name: 'TERRESTRIAL PLANETS' })
+    const selectAllGroup = within(dropdown).getByRole('option', { name: 'TERRESTRIAL PLANETS' })
     const selectAllGroupCheckBox = getDecorativeCheckbox(selectAllGroup)
     await userEvent.click(selectAllGroup)
     const earth = screen.getByRole('option', { name: /earth/iv })
@@ -1353,7 +1353,7 @@ describe('selectInput', () => {
 
     expect(within(listbox).queryByRole('checkbox')).not.toBeInTheDocument()
     expect(within(listbox).getByRole('option', { name: /jupiter/i })).toBeInTheDocument()
-    expect(within(listbox).getByRole('button', { name: 'JOVIAN PLANETS' })).toBeInTheDocument()
+    expect(within(listbox).getByRole('option', { name: 'JOVIAN PLANETS' })).toBeInTheDocument()
   })
 
   it('handles correcty selectAllGroup with selectAll - grouped data', async () => {
@@ -1383,7 +1383,7 @@ describe('selectInput', () => {
       { timeout: 1000 },
     )
 
-    const selectAllGroup = within(dropdown).getByRole('button', { name: 'TERRESTRIAL PLANETS' })
+    const selectAllGroup = within(dropdown).getByRole('option', { name: 'TERRESTRIAL PLANETS' })
     const selectAllGroupCheckBox = getDecorativeCheckbox(selectAllGroup)
 
     await userEvent.click(selectAllGroup)
