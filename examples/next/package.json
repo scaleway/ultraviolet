@@ -6,7 +6,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scaleway/ultraviolet.git",
-    "directory": "examples/next-advanced"
+    "directory": "examples/next"
   },
   "scripts": {
     "build": "next build",
@@ -16,12 +16,10 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@babel/core": "8.0.10",
     "@scaleway/regex": "6.2.0",
     "@scaleway/types": "1.2.0",
     "@types/node": "26.6.6",
     "@types/react": "19.3.0",
-    "@types/react-syntax-highlighter": "15.5.13",
     "@ultraviolet/fonts": "workspace:*",
     "@ultraviolet/form": "workspace:*",
     "@ultraviolet/icons": "workspace:*",
@@ -30,12 +28,8 @@
     "@ultraviolet/ui": "workspace:*",
     "@ultraviolet/utils": "workspace:*",
     "next": "16.4.3",
-    "next-transpile-modules": "10.0.1",
     "react": "19.3.1",
     "react-dom": "19.3.1",
-    "react-schemaorg": "2.0.1",
-    "react-syntax-highlighter": "16.1.2",
-    "schema-dts": "2.1.0",
     "typescript": "catalog:"
   }
 }

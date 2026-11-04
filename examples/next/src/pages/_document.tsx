@@ -1,6 +1,4 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
-import { jsonLdScriptProps } from 'react-schemaorg'
-import type { CreativeWork } from 'schema-dts'
 
 class MyDocument extends Document {
   override render() {
@@ -23,22 +21,6 @@ class MyDocument extends Document {
           <link href="/favicon/favicon.ico" rel="icon" />
           <link href="/favicon/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
           <script>{`try{var t=JSON.parse(localStorage.getItem('next-app-theme'))||'system';if(t==='system'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}if(['light','dark','darker'].includes(t)){document.documentElement.classList.add(t+'-theme')}}catch(e){}`}</script>
-
-          <script
-            {...jsonLdScriptProps<CreativeWork>({
-              '@context': 'https://schema.org',
-              '@type': 'CreativeWork',
-              author: {
-                '@type': 'Organization',
-                name: 'Scaleway',
-              },
-              dateCreated: '2020-12-10',
-              description: 'A beautiful React UI library created by Scaleway.',
-              keywords: 'react, ui, styled-components, ui-components, scaleway, ui-library, reakit',
-              name: 'Ultraviolet UI',
-              url: 'https://ultraviolet.scaleway.com',
-            })}
-          />
         </Head>
         <body>
           <Main />

@@ -1,10 +1,6 @@
-import { useTheme } from '@ultraviolet/themes/v2'
-import { Stack, Tabs } from '@ultraviolet/ui'
+import { Snippet, Stack, Tabs } from '@ultraviolet/ui'
 import { Children, isValidElement, useState } from 'react'
 import type { ReactElement } from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import dracula from 'react-syntax-highlighter/dist/esm/styles/prism/dracula'
-import oneLight from 'react-syntax-highlighter/dist/esm/styles/prism/one-light'
 import styles from '../../styles/component.module.css'
 
 type CopyBoxProps = {
@@ -46,22 +42,8 @@ type CommandProps = {
   showLineNumbers?: boolean
 }
 
-const Command = ({ command, showLineNumbers = true }: CommandProps) => {
-  const { theme } = useTheme()
-
-  return (
-    <SyntaxHighlighter
-      customStyle={{ background: 'none', fontSize: '14px', padding: 0 }}
-      language="typescript"
-      lineProps={{
-        style: { whiteSpace: 'pre-wrap', wordBreak: 'break-all' },
-      }}
-      showLineNumbers={showLineNumbers}
-      style={theme === 'light' ? oneLight : dracula}
-    >
-      {command}
-    </SyntaxHighlighter>
-  )
+const Command = ({ command }: CommandProps) => {
+  return <Snippet>{command}</Snippet>
 }
 
 CopyBox.Command = Command
