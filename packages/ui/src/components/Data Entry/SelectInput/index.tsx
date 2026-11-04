@@ -6,7 +6,8 @@ import type { ComponentProps, ReactNode } from 'react'
 import { hasHelperText } from '../../../helpers/hasHelperText'
 import type { BaseFormComponentProps } from '../../../types'
 import { Stack } from '../../Layout/Stack'
-import type { Popup } from '../../Overlay/Popup'
+import type { Popup as PopupDeprecated } from '../../Overlay/Popup'
+import type { Popup } from '../../Overlay/Popup/v2'
 import { Description } from '../../Typography/Description'
 import { Label } from '../../Typography/Label'
 import { Dropdown } from './components/Dropdown/Dropdown'
@@ -97,7 +98,10 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = BaseFormCom
    * When options are group, define a option to select every selectable options of a group
    */
   selectAllGroup?: boolean
-  dropdownAlign?: ComponentProps<typeof Popup>['align']
+  /**
+   * @deprecated alignment is automatic. The prop is ignored
+   */
+  dropdownAlign?: ComponentProps<typeof PopupDeprecated>['align']
   autofocus?: boolean
   /**
    * Whether it is possible to select multiple options
@@ -112,7 +116,7 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = BaseFormCom
    * In some cases, when the space is limited, you will need to change the `portalTarget` of the dropdown for a higher parent element.
    * If you don't know which element to target, you can use `document.body`.
    */
-  portalTarget?: ComponentProps<typeof Popup>['portalTarget']
+  portalTarget?: ComponentProps<typeof Popup.Panel>['portalTarget']
   /**
    * Allow to specify a callback called when option dropdown is open
    * Please wrap that definition in useCallback
@@ -135,7 +139,6 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   clearable = false,
   descriptionDirection = 'column',
   disabled = false,
-  dropdownAlign,
   emptyState,
   error,
   footer,
@@ -203,31 +206,28 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
         onFocus={onFocus}
         style={style}
       >
-        <Dropdown
-          addOption={addOption}
-          disabled={disabled}
-          descriptionDirection={descriptionDirection}
-          dropdownAlign={dropdownAlign}
-          emptyState={emptyState}
-          footer={footer}
-          groupEmptyState={groupEmptyState}
-          groupError={groupError}
-          id={dropdownId}
-          isLoading={isLoading}
-          loadMore={loadMore}
-          optionalInfoPlacement={optionalInfoPlacement}
-          placeholder={placeholderSearch}
-          portalTarget={portalTarget}
-          refSelect={ref}
-          searchable={numberOfOptions >= 6 || !!addOption}
-          size={size}
-        >
-          <Stack aria-label={ariaLabel} gap={0.5}>
-            {label || labelDescription ? (
-              <Label htmlFor={finalId} labelDescription={labelDescription} required={required} size={size}>
-                {label}
-              </Label>
-            ) : null}
+        <Stack aria-label={ariaLabel} gap={0.5}>
+          {label || labelDescription ? (
+            <Label htmlFor={finalId} labelDescription={labelDescription} required={required} size={size}>
+              {label}
+            </Label>
+          ) : null}
+          <Dropdown
+            addOption={addOption}
+            disabled={disabled}
+            descriptionDirection={descriptionDirection}
+            emptyState={emptyState}
+            footer={footer}
+            groupEmptyState={groupEmptyState}
+            groupError={groupError}
+            id={dropdownId}
+            isLoading={isLoading}
+            loadMore={loadMore}
+            optionalInfoPlacement={optionalInfoPlacement}
+            placeholder={placeholderSearch}
+            portalTarget={portalTarget}
+            searchable={numberOfOptions >= 6 || !!addOption}
+          >
             <SelectBar
               aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}
               aria-labelledby={ariaLabelledby}
@@ -248,8 +248,8 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
               helperId={helperId}
               helper={helper}
             />
-          </Stack>
-        </Dropdown>
+          </Dropdown>
+        </Stack>
         <Description
           error={error}
           success={success}

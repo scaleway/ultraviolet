@@ -143,7 +143,7 @@ export const Panel = forwardRef<HTMLDivElement, PopupPanelProps>(
           size({
             apply: ({ rects, elements }) => {
               Object.assign(elements.floating.style, {
-                minWidth: `${rects.reference.width}px`,
+                width: `${rects.reference.width}px`,
               })
             },
           }),

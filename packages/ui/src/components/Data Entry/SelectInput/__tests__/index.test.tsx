@@ -73,6 +73,17 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  it('keeps the dropdown at least 320px wide', async () => {
+    renderWithTheme(<SelectInput name="test" options={dataUnGrouped} placeholder="placeholder" />)
+    await userEvent.click(screen.getByText('placeholder'))
+
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+      expect(dropdown).toHaveStyle({ minWidth: '320px' })
+    })
+  })
+
   it('renders correctly grouped', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput name="test" options={dataGrouped} placeholder="placeholder" placeholderSearch="placeholdersearch" />,
@@ -351,28 +362,6 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('renders correctly with dropdownAlign', async () => {
-    const { asFragment } = renderWithTheme(
-      <SelectInput
-        dropdownAlign="center"
-        name="test"
-        options={dataUnGrouped}
-        placeholder="placeholder"
-        placeholderSearch="placeholdersearch"
-        required
-      />,
-    )
-
-    const input = screen.getByText('placeholder')
-    await userEvent.click(input)
-    const dropdown = screen.getByRole('dialog')
-    await waitFor(() => {
-      expect(dropdown).toBeVisible()
-    })
-    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
-    expect(asFragment()).toMatchSnapshot()
-  })
-
   it('renders correctly readOnly', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
@@ -591,11 +580,11 @@ describe('selectInput', () => {
     })
 
     await userEvent.keyboard('[arrowDown]')
-    const mercury = screen.getByRole('option', { name: /mercury/iu })
+    const mercury = screen.getByRole('option', { name: /mercury/iv })
     expect(mercury).toHaveFocus()
 
     await userEvent.keyboard('[arrowDown]')
-    const venus = screen.getByRole('option', { name: /venus/iu })
+    const venus = screen.getByRole('option', { name: /venus/iv })
     expect(venus).toHaveFocus()
 
     await userEvent.keyboard('[arrowUp]')
@@ -637,15 +626,19 @@ describe('selectInput', () => {
     expect(input).toHaveFocus()
     await userEvent.keyboard('[arrowDown]')
     const dropdown = screen.getByRole('dialog')
+    const jupiter = screen.getByRole('option', {
+      name: /jupiter/iv,
+    })
     await waitFor(() => {
       expect(dropdown).toBeVisible()
+      expect(jupiter).toHaveFocus() // focus on first element when opening the dropdown (and there is no searchbar)
     })
-    await userEvent.tab()
     await userEvent.keyboard('[arrowDown]')
-    await userEvent.keyboard('[arrowUp]')
-    const jupiter = screen.getByRole('option', {
-      name: /jupiter/iu,
+    const saturn = screen.getByRole('option', {
+      name: /saturn/iv,
     })
+    expect(saturn).toHaveFocus()
+    await userEvent.keyboard('[arrowUp]')
     expect(jupiter).toHaveFocus()
   })
 
@@ -691,6 +684,7 @@ describe('selectInput', () => {
 
     expect(dropdown).not.toBeVisible()
   })
+
   it('handles click on item', async () => {
     const onChange = vi.fn()
 
@@ -730,7 +724,7 @@ describe('selectInput', () => {
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     const venus = screen.getByRole('option', {
-      name: /venus/iu,
+      name: /venus/iv,
     })
     await userEvent.type(dropdown, 'v')
     expect(venus).toHaveFocus()
@@ -751,7 +745,7 @@ describe('selectInput', () => {
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     // Venus lives in the second group, so type-ahead must search every group, not only the first one
-    const venus = screen.getByRole('option', { name: /venus/iu })
+    const venus = screen.getByRole('option', { name: /venus/iv })
     await userEvent.type(dropdown, 'v')
     expect(venus).toHaveFocus()
   })
@@ -772,6 +766,7 @@ describe('selectInput', () => {
     await userEvent.click(earth)
     await userEvent.click(earth)
   })
+
   it('renders with onChange - multiselect', async () => {
     renderWithTheme(
       <SelectInput
@@ -865,7 +860,7 @@ describe('selectInput', () => {
     const venus = screen.getByText('Venus')
     const earth = screen.getByText('Earth')
     const earthCheckbox = screen.getByRole('checkbox', {
-      name: /earth/iu,
+      name: /earth/iv,
     })
     await userEvent.keyboard('[Enter]') // empty search doesn't do anything
     await userEvent.keyboard('e')
@@ -1006,7 +1001,7 @@ describe('selectInput', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const selectAllCheckBox = screen.getByRole('checkbox', {
-      name: /select.*all/iu,
+      name: /select.*all/iv,
     })
     const selectAll = screen.getByTestId('select-all')
     await userEvent.click(selectAll)
@@ -1026,7 +1021,7 @@ describe('selectInput', () => {
     const venus = screen.getByTestId('option-venus')
     const earth = screen.getByTestId('option-earth')
     const earthCheckbox = screen.getByRole('checkbox', {
-      name: /earth/iu,
+      name: /earth/iv,
     })
     await userEvent.click(venus)
     expect(selectAllCheckBox).not.toBeChecked()
@@ -1115,7 +1110,7 @@ describe('selectInput', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const selectAllCheckBox = screen.getByRole('checkbox', {
-      name: /select.*all/iu,
+      name: /select.*all/iv,
     })
     const selectAll = screen.getByTestId('select-all')
     await userEvent.click(selectAll)
@@ -1125,7 +1120,7 @@ describe('selectInput', () => {
 
     const venus = screen.getByTestId('option-venus')
     const earthCheckbox = screen.getByRole('checkbox', {
-      name: /earth/iu,
+      name: /earth/iv,
     })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(venus)
@@ -1183,16 +1178,16 @@ describe('selectInput', () => {
     const selectAllGroup = within(dropdown).getByTestId('group-1')
     await userEvent.click(selectAllGroup)
     const mercury = within(dropdown).getByRole('checkbox', {
-      name: /mercury/iu,
+      name: /mercury/iv,
     })
     const venus = within(dropdown).getByRole('checkbox', {
-      name: /venus/iu,
+      name: /venus/iv,
     })
     const earth = within(dropdown).getByRole('checkbox', {
-      name: /earth/iu,
+      name: /earth/iv,
     })
     const jupiter = within(dropdown).getByRole('checkbox', {
-      name: /jupiter/iu,
+      name: /jupiter/iv,
     })
 
     expect(mercury).toBeChecked()
@@ -1276,18 +1271,18 @@ describe('selectInput', () => {
     )
 
     const selectAllGroupCheckBox = within(dropdown).getByRole('checkbox', {
-      name: /terrestrial planets/iu,
+      name: /terrestrial planets/iv,
     })
 
     const selectAllGroup = within(dropdown).getByTestId('group-1')
 
     await userEvent.click(selectAllGroup)
     const venus = within(dropdown).getByRole('checkbox', {
-      name: /venus/iu,
+      name: /venus/iv,
     })
 
     const selectAllCheckBox = within(dropdown).getByRole('checkbox', {
-      name: /select.*all/iu,
+      name: /select.*all/iv,
     })
     const selectAll = within(dropdown).getByTestId('select-all')
     await userEvent.click(selectAll)
@@ -1333,6 +1328,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
@@ -1349,6 +1345,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
@@ -1365,6 +1362,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
@@ -1381,6 +1379,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row"', async () => {
     renderWithTheme(
       <SelectInput
@@ -1396,6 +1395,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row"', async () => {
     renderWithTheme(
       <SelectInput
@@ -1416,6 +1416,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column"', async () => {
     renderWithTheme(
       <SelectInput
@@ -1436,6 +1437,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column"', async () => {
     renderWithTheme(
       <SelectInput
@@ -1457,6 +1459,7 @@ describe('selectInput', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
+
   it('renders correctly loading - grouped data', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput

@@ -1,21 +1,12 @@
 import { theme } from '@ultraviolet/themes'
-import { createVar, globalStyle, style } from '@vanilla-extract/css'
+import { globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-
-const DROPDOWN_MAX_HEIGHT = 256
-const DROPDOWN_MIN_WIDTH = 320
-
-export const dropdownWidth = createVar()
+import { DROPDOWN_MAX_HEIGHT, DROPDOWN_MIN_WIDTH } from '../../constants'
 
 export const dropdown = style({
-  backgroundColor: theme.colors.other.elevation.background.raised,
-  color: theme.colors.neutral.text,
-  boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
-  marginBottom: theme.space[10],
-  minWidth: DROPDOWN_MIN_WIDTH,
   overflow: 'hidden',
   padding: theme.space[0],
-  width: dropdownWidth,
+  minWidth: DROPDOWN_MIN_WIDTH,
 })
 
 export const dropdownContainer = style({

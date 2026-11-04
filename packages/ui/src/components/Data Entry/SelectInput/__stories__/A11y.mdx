@@ -91,12 +91,12 @@ To apply when using the component:
 - **Search input is not an ARIA combobox, no `aria-activedescendant`**: typing gives no announced "active option", and the empty state is not announced. Fix: move combobox semantics onto the search input or add `aria-activedescendant` + a live region for empty results.
 - **Nested interactive roles**: `role="option"` contains a `role="checkbox"` and `Group.tsx:37-83` wraps a `<button>` around a `<Checkbox>`. In practice the checkboxes are `tabIndex={-1}`/`pointer-events: none` (decorative), so the impact is limited, but exposing a checkbox inside an option/button is ambiguous. Fix: render the checkbox as presentational (`aria-hidden`) or restructure.
 - **Non-actionable group `<button>`**: when `selectAllGroup` is false it renders `<button tabIndex={-1}>` that does nothing. Fix: render a plain element when not selectable.
-- **In a Modal, Escape closes the modal instead of the dropdown**: when the dropdown is open inside a Modal, the Modal's Escape handler wins over the `Popup`'s, so Escape dismisses the whole modal rather than first closing the dropdown. Keyboard users lose their selection context.
+- ✅ **In a Modal, Escape closes the modal instead of the dropdown**: when the dropdown is open inside a Modal, the Modal's Escape handler wins over the `Popup`'s, so Escape dismisses the whole modal rather than first closing the dropdown. Keyboard users lose their selection context. **Fixed**: Escape closes only the dropdown
 
 **Low:**
 
 - **No Home/End**: recommended by the Listbox APG but not a WCAG failure; optional.
-- **Search bar autofocus**: focus moves to the search input 50ms after open — acceptable for searchable combobox, but can be disorienting.
+- ✅ **Search bar autofocus**: focus moves to the search input 50ms after open — acceptable for searchable combobox, but can be disorienting. **Fixed**: in order of importance and, if present, the focus moves to: the search bar, the first selected element, the first element.
 - **"Dumb" search modifier keys**: browser shortcuts while open are swallowed as type-ahead; add a `ctrlKey/metaKey/altKey` guard.
 
 ## Dependencies

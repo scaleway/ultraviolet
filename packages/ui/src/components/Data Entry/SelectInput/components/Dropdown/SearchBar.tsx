@@ -3,7 +3,7 @@
 import { isFuzzyMatch, normalizeString } from '@scaleway/fuzzy-search'
 import { SearchIcon } from '@ultraviolet/icons/SearchIcon'
 import { cn } from '@ultraviolet/utils'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import type { Dispatch, KeyboardEvent, SetStateAction } from 'react'
 import { searchInputStyle } from '../../../../styles'
 import { TextInput } from '../../../TextInput'
@@ -118,20 +118,6 @@ export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }:
       }
     }
   }
-
-  useEffect(() => {
-    // note: Remove me and use autoFocus when popup is fixed
-    // Autofocus on the search bar create some scroll issues
-    const timeout = setTimeout(() => {
-      searchInputRef.current?.focus()
-    }, 50)
-
-    return () => {
-      if (timeout) {
-        clearTimeout(timeout)
-      }
-    }
-  }, [])
 
   return (
     <TextInput

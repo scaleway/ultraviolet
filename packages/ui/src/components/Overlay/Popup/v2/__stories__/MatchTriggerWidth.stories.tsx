@@ -37,7 +37,9 @@ const MenuList = () => {
               onClick={close}
               style={{ justifyContent: 'flex-start' }}
             >
-              {action}
+              <Text as="p" oneLine variant="bodySmall">
+                {action}
+              </Text>
             </Button>
           ))}
         </Stack>
