@@ -168,6 +168,7 @@ export const Dropdown = ({
       </Popup.Trigger>
       <Popup.Panel
         ref={ref}
+        aria-labelledby={listboxLabelledBy}
         className={selectInputStyle.dropdown}
         placement="bottom-start"
         matchTriggerWidth

@@ -34,30 +34,25 @@ type CreateDropdownProps = {
   searchBarRef?: RefObject<HTMLInputElement | null>
 }
 
-const moveFocusDown = () => {
-  const options = document.querySelectorAll<HTMLElement>(OPTION_SELECTOR)
+const moveFocusDown = (container: ParentNode) => {
+  const options = container.querySelectorAll<HTMLElement>(OPTION_SELECTOR)
   const activeItem = document.activeElement
-  if (options) {
-    for (let i = 0; i < options?.length; i += 1) {
-      const listLength = options.length
-      if (activeItem === options[i] && activeItem !== options[listLength - 1]) {
-        options[i + 1].focus()
-      }
+  for (let i = 0; i < options.length - 1; i += 1) {
+    if (activeItem === options[i]) {
+      options[i + 1].focus()
     }
   }
 }
-const moveFocusUp = (searchBarRef?: RefObject<HTMLInputElement | null>) => {
-  const options = document.querySelectorAll<HTMLElement>(OPTION_SELECTOR)
+const moveFocusUp = (container: ParentNode, searchBarRef?: RefObject<HTMLInputElement | null>) => {
+  const options = container.querySelectorAll<HTMLElement>(OPTION_SELECTOR)
   const activeItem = document.activeElement
 
-  if (options) {
-    for (let i = 0; i < options.length; i += 1) {
-      if (activeItem === options[i]) {
-        if (i === 0) {
-          searchBarRef?.current?.focus()
-        } else {
-          options[i - 1].focus()
-        }
+  for (let i = 0; i < options.length; i += 1) {
+    if (activeItem === options[i]) {
+      if (i === 0) {
+        searchBarRef?.current?.focus()
+      } else {
+        options[i - 1].focus()
       }
     }
   }
@@ -68,12 +63,12 @@ const handleKeyDownSelect = (
 ) => {
   if (event.key === 'ArrowDown') {
     event.preventDefault()
-    moveFocusDown()
+    moveFocusDown(event.currentTarget)
   }
 
   if (event.key === 'ArrowUp') {
     event.preventDefault()
-    moveFocusUp(searchBarRef)
+    moveFocusUp(event.currentTarget, searchBarRef)
   }
 
   if (event.key === ' ') {
@@ -112,6 +107,7 @@ export const CreateDropdown = ({
     focusableOptions.find(option => !option.disabled)
 
   const listBoxLabelId = useId()
+  const optionGroupLabelId = useId()
 
   useEffect(() => {
     if (defaultSearchValue && focusedItemRef?.current) {
@@ -224,7 +220,15 @@ export const CreateDropdown = ({
       />
       <SelectAll textVariant={textVariant} />
 
-      <Stack gap={0.25} data-type="items" className={selectInputStyle.dropdownSection}>
+      <Stack
+        aria-labelledby={optionGroupLabelId}
+        gap={0.25}
+        data-type="items"
+        className={selectInputStyle.dropdownSection}
+        // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role - listbox groups must use ARIA roles
+        role="group"
+      >
+        <VisuallyHidden id={optionGroupLabelId}>Options</VisuallyHidden>
         {displayedOptions.map((option, index) => (
           <Item
             descriptionDirection={descriptionDirection}
@@ -269,9 +273,17 @@ export const CreateDropdown = ({
         const errorGroup = groupError?.[group] ?? null
 
         return hasElements || emptyStateGroup ? (
-          <Stack gap={0.25} key={group} className={selectInputStyle.dropdownSection}>
+          <Stack
+            aria-labelledby={`${optionGroupLabelId}-${index}`}
+            gap={0.25}
+            key={group}
+            className={selectInputStyle.dropdownSection}
+            // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role - listbox groups must use ARIA roles
+            role="group"
+          >
+            <VisuallyHidden id={`${optionGroupLabelId}-${index}`}>{group}</VisuallyHidden>
             <Group group={group} index={index} />
-            <Stack gap="0.25" data-type="items">
+            <Stack gap="0.25" data-type="items" role="presentation">
               {!hasElements && emptyStateGroup ? (
                 <Text
                   as="span"

@@ -42,16 +42,16 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
   }
 
   return (
-    <div className={selectInputStyle.dropdownGroupWrapper} data-type="items">
+    <div className={selectInputStyle.dropdownGroupWrapper} data-type="items" role="presentation">
       {selectAllGroup ? (
-        <button
+        <div
+          aria-selected={selectedData.selectedGroups.includes(group)}
           className={cn(
             selectInputStyle.dropdownGroupSelectable({
               size,
             }),
             selectInputStyle.dropdownGroup,
           )}
-          data-selectgroup
           data-testid={`group-${index}`}
           onClick={handleSelectGroup}
           onKeyDown={event => {
@@ -60,7 +60,9 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
               handleSelectGroup()
             }
           }}
-          type="button"
+          // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role - options must be inside a select and can't be styled across all browsers
+          role="option"
+          tabIndex={-1}
         >
           <Checkbox
             aria-hidden
@@ -68,15 +70,16 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
             className={selectInputStyle.dropdownCheckbox}
             data-testid="select-group"
             disabled={false}
-            onChange={() => (selectAllGroup ? handleSelectGroup() : null)}
+            onChange={handleSelectGroup}
+            style={{ display: 'none' }}
             tabIndex={-1}
             value={group}
           >
             {groupLabel}
           </Checkbox>
-        </button>
+        </div>
       ) : (
-        <div className={selectInputStyle.dropdownGroup} data-testid={`group-${index}`}>
+        <div aria-hidden="true" className={selectInputStyle.dropdownGroup} data-testid={`group-${index}`}>
           {groupLabel}
         </div>
       )}

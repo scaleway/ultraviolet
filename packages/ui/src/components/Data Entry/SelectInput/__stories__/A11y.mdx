@@ -13,7 +13,7 @@ A combobox form control that lets users pick one or many options from a dropdown
 1. ❌ **Perceivable**: single-select selected option is conveyed by background color only
 2. ✅ **Operable**: single tab stop via roving focus (only the active option is `tabIndex={0}`); no keyboard trap; focus visible
 3. ✅ **Understandable**: required state and error validity are surfaced on the control; search result count / empty state is announced via a live region.
-4. ✅ **Robust**: accessible name via `aria-labelledby`; options named by their visible label; `aria-controls` points at the listbox with `aria-haspopup="listbox"`; unique ids; no nested interactive roles.
+4. ✅ **Robust**: accessible name via `aria-labelledby`; the popup is named by the same label; options named by their visible label; `aria-controls` points at the listbox with `aria-haspopup="listbox"`; unique ids; no nested interactive roles.
 
 ## ARIA Pattern
 
@@ -101,14 +101,14 @@ To apply when using the component:
   - Error/requiredness were not programmatically determinable.
   - **Resolved** by setting `aria-invalid={!!error}` and `aria-required={required}` on the combobox.
 - ✅ **"Select group" button is not reachable via Arrow up/down**:
-  - The arrow-navigation selector only matched `div[role="option"]`, skipping the group button.
-  - **Resolved** by including `button[data-selectgroup="true"]` in `OPTION_SELECTOR`.
+  - The arrow-navigation selector originally skipped the group selector.
+  - **Resolved** by rendering selectable group headings as listbox options that match `OPTION_SELECTOR`.
 - ✅ **Search input is not an ARIA combobox, no `aria-activedescendant`**:
   - Typing gave no announced "active option" and the empty state was not announced.
   - **Partially resolved**: the result count / empty state is now announced via a live region wired with `aria-describedby``aria-activedescendant` is intentionally not applied — it breaks focus management.
 - ✅ **Nested interactive roles**:
   - `role="option"` contained a `role="checkbox"` and a `<button>` wrapped a `<Checkbox>`.
-  - **Resolved** by rendering the checkboxes as presentational (`aria-hidden`).
+  - **Resolved** by hiding the checkbox inputs and representing selectable groups as listbox options.
 - ✅ **Non-actionable group `<button>`**:
   - When `selectAllGroup` is false it rendered a `<button tabIndex={-1}>` that did nothing.
   - **Resolved** by rendering a plain `<div>` when not selectable.
@@ -131,7 +131,7 @@ To apply when using the component:
 
 ## Dependencies
 
-- **Popup**: `Popup.Trigger` now accepts `aria-controls` and `aria-haspopup` overrides; SelectInput points them at the listbox. The popup panel itself still carries `role="dialog"` (no `role="listbox"` on the container) — the combobox association is correct via the listbox inside.
+- **Popup**: `Popup.Trigger` accepts `aria-controls` and `aria-haspopup` overrides; SelectInput points them at the listbox. The popup panel carries a labelled `role="dialog"`, while its listbox contains options and named groups.
 - **Tooltip**: hover/focus behavior on options and the select bar.
 - **Description**: error/success/helper uses `role="status"`; error messages ideally announced with an assertive role.
 - **Modal**: its Escape handler intercepts Escape before the `Popup`, closing the modal instead of the dropdown (resolved — Escape closes only the dropdown).
