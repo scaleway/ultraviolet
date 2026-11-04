@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import { useCallback, useEffect, useLayoutEffect, useRef } from 'react'
+import { useCallback, useEffect, useId, useLayoutEffect, useRef } from 'react'
 import type { ComponentProps, RefObject } from 'react'
 import { Separator } from '../../Layout/Separator'
 import { Stack } from '../../Layout/Stack'
@@ -60,6 +60,7 @@ export const BaseDrawer = ({
   style,
 }: DrawerProps) => {
   const modalRef = useRef<HTMLDialogElement>(null)
+  const headingId = useId()
 
   const onOpenPush = useCallback(() => {
     const targetElement = push === 'body' ? document?.body : push?.current
@@ -93,7 +94,14 @@ export const BaseDrawer = ({
   }, [onOpenPush, open])
 
   const computeHeader = (modalProps: ModalState) => (
-    <Text as="h2" className={drawerStyle.header} prominence="default" sentiment="neutral" variant="headingSmallStrong">
+    <Text
+      as="h2"
+      className={drawerStyle.header}
+      id={headingId}
+      prominence="default"
+      sentiment="neutral"
+      variant="headingSmallStrong"
+    >
       {typeof header === 'function' ? header(modalProps) : header}
     </Text>
   )
@@ -111,6 +119,7 @@ export const BaseDrawer = ({
   return (
     <Modal
       ariaLabel={ariaLabel}
+      ariaLabelledBy={header ? headingId : undefined}
       backdropClassName="backdrop-drawer"
       className={cn(className, drawerStyle.drawer[size], drawerStyle.base, push ? drawerStyle.push : '')}
       data-size={size}

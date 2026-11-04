@@ -31,6 +31,8 @@ export const Dialog = ({
   size,
   id,
   ariaLabel,
+  ariaLabelledBy,
+  ariaDescribedBy,
   className,
   'data-testid': dataTestId,
   preventBodyScroll,
@@ -38,6 +40,7 @@ export const Dialog = ({
   backdropClassName,
   backdropStyle,
   image,
+  imageAlt = '',
   style,
   ref,
   isDrawer,
@@ -83,10 +86,21 @@ export const Dialog = ({
     onCloseRef.current = onClose
   }, [onClose])
 
-  // On open focus the modal
+  // On open focus the first focusable element inside the modal, and restore focus on close
   useEffect(() => {
-    if (open) {
-      dialogRef.current?.focus()
+    if (!open) {
+      return undefined
+    }
+
+    const previouslyFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null
+    const firstFocusableElement = dialogRef.current?.querySelector<HTMLElement>(FOCUSABLE_ELEMENTS)
+    const elementToFocus = firstFocusableElement ?? dialogRef.current
+    elementToFocus?.focus({ preventScroll: true }) // preventScroll to avoid breaking the Drawer opening animation
+
+    return () => {
+      if (previouslyFocusedElement?.isConnected) {
+        previouslyFocusedElement.focus()
+      }
     }
   }, [open, dialogRef])
 
@@ -213,7 +227,9 @@ export const Dialog = ({
       onFocus={stopFocus}
     >
       <dialog
-        aria-label={ariaLabel}
+        aria-label={ariaLabelledBy ? undefined : ariaLabel}
+        aria-labelledby={ariaLabelledBy}
+        aria-describedby={ariaDescribedBy}
         aria-modal
         className={cn(
           className,
@@ -245,7 +261,7 @@ export const Dialog = ({
         {image ? (
           <>
             <Stack alignItems="flex-end" className={modalStyle.imageContainer} justifyContent="center">
-              <img alt="illustration" className={modalStyle.image} height="auto" src={image} width="auto" />
+              <img alt={imageAlt} className={modalStyle.image} height="auto" src={image} width="auto" />
             </Stack>
             <Stack className={modalStyle.content} gap={5}>
               {children}

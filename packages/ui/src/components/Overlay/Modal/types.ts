@@ -33,6 +33,8 @@ export type DisclosureProps = {
 
 export type DialogProps = {
   ariaLabel?: string
+  ariaLabelledBy?: string
+  ariaDescribedBy?: string
   backdropClassName?: string
   backdropStyle?: CSSProperties
   id: string
@@ -47,6 +49,7 @@ export type DialogProps = {
   'data-testid'?: string
   children: ReactNode
   image?: string
+  imageAlt?: string
   style?: CSSProperties
   ref?: RefObject<HTMLDialogElement | null>
   isDrawer?: boolean

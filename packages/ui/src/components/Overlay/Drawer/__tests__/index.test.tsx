@@ -128,7 +128,7 @@ describe('drawer', () => {
 
   it('renders with disclosure', () => {
     const { asFragment } = renderWithTheme(
-      <Drawer ariaLabel="drawer-test" disclosure={<button type="button">Test</button>} header="header" id="drawer-test">
+      <Drawer disclosure={<button type="button">Test</button>} header="header" id="drawer-test">
         <div>drawer</div>
       </Drawer>,
     )
@@ -140,7 +140,6 @@ describe('drawer', () => {
     let count = 0
     const { asFragment } = renderWithTheme(
       <Drawer
-        ariaLabel="drawer-test"
         data-testid="test"
         disclosure={<button type="button">Open drawer</button>}
         header="header"
@@ -169,7 +168,6 @@ describe('drawer', () => {
 
     renderWithTheme(
       <Drawer
-        ariaLabel="drawer-test"
         disclosure={() => (
           <button onClick={mockOnClick} type="button">
             Open
@@ -191,7 +189,6 @@ describe('drawer', () => {
 
     renderWithTheme(
       <Drawer
-        ariaLabel="drawer-test"
         disclosure={({ toggle }) => (
           <button
             onClick={() => {
@@ -218,7 +215,7 @@ describe('drawer', () => {
     const mockOnClick = vi.fn()
 
     renderWithTheme(
-      <Drawer ariaLabel="drawer-test" header="header" id="drawer-test" open>
+      <Drawer header="header" id="drawer-test" open>
         {({ close }) => (
           <button
             onClick={() => {
@@ -242,7 +239,6 @@ describe('drawer', () => {
 
     renderWithTheme(
       <Drawer
-        ariaLabel="drawer-test"
         disclosure={
           <button onClick={mockOnClick} type="button">
             Open
@@ -263,7 +259,7 @@ describe('drawer', () => {
   it('test hideOnEsc is true', async () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
-      <Drawer ariaLabel="drawer-test" header="header" hideOnEsc id="drawer-test" onClose={mockOnClose} open>
+      <Drawer header="header" hideOnEsc id="drawer-test" onClose={mockOnClose} open>
         <div> test</div>
       </Drawer>,
     )
@@ -278,7 +274,6 @@ describe('drawer', () => {
 
     const { asFragment } = renderWithTheme(
       <Drawer
-        ariaLabel="drawer-test"
         disclosure={<button type="button">Open</button>}
         footer={({ close }) => (
           <button
@@ -308,7 +303,6 @@ describe('drawer', () => {
   it('with footer', () => {
     const { asFragment } = renderWithTheme(
       <Drawer
-        ariaLabel="drawer-test"
         disclosure={<button type="button">Open</button>}
         footer={<button type="button">A custom button that can close the drawer</button>}
         header="header"
@@ -324,10 +318,9 @@ describe('drawer', () => {
   it('custom header', () => {
     const { asFragment } = renderWithTheme(
       <Drawer
-        ariaLabel="drawer-test"
         disclosure={<button type="button">Open</button>}
         footer="footer"
-        header={<h1>Custom header</h1>}
+        header={<p>Custom header</p>}
         id="drawer-test"
         open
       >
@@ -343,7 +336,6 @@ describe('drawer', () => {
 
     const { asFragment } = renderWithTheme(
       <Drawer
-        ariaLabel="drawer-test"
         disclosure={<button type="button">Open</button>}
         footer="footer"
         header={({ close }) => (
@@ -373,7 +365,6 @@ describe('drawer', () => {
   it('renders with push', async () => {
     const { asFragment } = renderWithTheme(
       <Drawer
-        ariaLabel="drawer-test"
         disclosure={<button type="button">Open</button>}
         footer="footer"
         header={({ close }) => (

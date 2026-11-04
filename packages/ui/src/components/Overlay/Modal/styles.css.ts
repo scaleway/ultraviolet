@@ -18,7 +18,7 @@ export const nestedModalTop = createVar()
 export const nestedModalScale = createVar()
 const modalWidth = createVar()
 
-const container = style({
+const closeButton = style({
   position: 'absolute',
   right: theme.space[2],
   top: theme.space[2],
@@ -210,7 +210,7 @@ const modal = recipe({
 })
 
 export const modalStyle = {
-  container,
+  closeButton,
   imageContainer,
   image,
   content,
