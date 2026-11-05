@@ -14,10 +14,15 @@ const popup = style({
 
 const searchInput = style({})
 
+const triggerContainer = style({
+  width: '100%',
+})
+
 const clickableStack = style({ cursor: 'text' })
 
 export const searchInputStyle = {
   popup,
   searchInput,
   clickableStack,
+  triggerContainer,
 }

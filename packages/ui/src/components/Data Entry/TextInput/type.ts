@@ -1,4 +1,5 @@
 import type { InputHTMLAttributes, ReactNode } from 'react'
+import type { TEXTINPUT_SIZE_HEIGHT } from './constants'
 
 export type TextInputProps = {
   className?: string
@@ -13,7 +14,7 @@ export type TextInputProps = {
   maxLength?: number
   onRandomize?: () => void
   prefix?: ReactNode
-  size?: 'small' | 'medium' | 'large'
+  size?: keyof typeof TEXTINPUT_SIZE_HEIGHT
   success?: string | boolean
   suffix?: ReactNode
   tooltip?: string

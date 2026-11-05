@@ -215,7 +215,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     }, [isMacOS, shortcut])
 
     return (
-      <div ref={triggerContainerRef} style={{ width: '100%' }}>
+      <div ref={triggerContainerRef} className={searchInputStyle.triggerContainer}>
         <Popup.Root
           visible={isOpen}
           onOpenChange={open => {
