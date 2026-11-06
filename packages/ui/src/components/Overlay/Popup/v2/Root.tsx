@@ -2,16 +2,20 @@
 import {
   autoUpdate,
   flip,
+  FloatingNode,
+  FloatingTree,
   offset,
   shift,
   useDismiss,
   useFloating,
+  useFloatingParentNodeId,
+  useFloatingTree,
   useInteractions,
   useTransitionStatus,
 } from '@floating-ui/react'
 import type { Middleware, Placement } from '@floating-ui/react'
 import { usePrefersReducedMotion } from '@ultraviolet/animations'
-import { useCallback, useEffect, useId, useMemo, useState } from 'react'
+import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
 import { isHeadlessTestEnvironment } from '../../../../helpers/isHeadlessTestEnvironment'
 import { PopupContext } from './context'
@@ -43,7 +47,20 @@ type PopupRootProps = {
  * Owns the floating context, the controlled/uncontrolled open state and the
  * dismiss behavior (outside click + Escape). Renders no DOM element.
  */
-export const Root = ({ children, defaultVisible = false, onOpenChange, visible }: PopupRootProps) => {
+const PopupRoot = ({ children, defaultVisible = false, onOpenChange, visible }: PopupRootProps) => {
+  const id = useId()
+  const tree = useFloatingTree()
+  const parentId = useFloatingParentNodeId()
+
+  // Register the popup in the shared `FloatingTree` so that nested popups (see nested Menu) share the same tree.
+  // in order for Floating UI keep parent popups open while a nested popup is open or focused.
+  useLayoutEffect(() => {
+    const node = { id, parentId }
+    tree?.addNode(node)
+
+    return () => tree?.removeNode(node)
+  }, [id, parentId, tree])
+
   const [uncontrolledOpen, setUncontrolledOpen] = useState(defaultVisible)
   const isControlled = visible !== undefined
   const open = isControlled ? visible : uncontrolledOpen
@@ -65,6 +82,7 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
   const middleware = useMemo(() => [...DEFAULT_MIDDLEWARE, ...panelMiddleware], [panelMiddleware])
 
   const floating = useFloating({
+    nodeId: id,
     open,
     onOpenChange: setOpen,
     placement,
@@ -112,8 +130,6 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
     duration: isHeadlessTestEnvironment || prefersReducedMotion ? 0 : ANIMATION_DURATION,
   })
 
-  const id = useId()
-
   const value = useMemo(
     () => ({
       ...floating,
@@ -145,7 +161,22 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
     ],
   )
 
-  return <PopupContext.Provider value={value}>{children}</PopupContext.Provider>
+  return (
+    <FloatingNode id={id}>
+      <PopupContext.Provider value={value}>{children}</PopupContext.Provider>
+    </FloatingNode>
+  )
+}
+
+export const Root = (props: PopupRootProps) => {
+  const tree = useFloatingTree()
+  return tree ? (
+    <PopupRoot {...props} />
+  ) : (
+    <FloatingTree>
+      <PopupRoot {...props} />
+    </FloatingTree>
+  )
 }
 
 Root.displayName = 'Popup.Root'

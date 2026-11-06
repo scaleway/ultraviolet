@@ -3,9 +3,10 @@
 import { cn } from '@ultraviolet/utils'
 import { forwardRef, useId } from 'react'
 import type { Ref } from 'react'
+import type { NewPopupPlacement } from '../../../types'
 import { Popup } from '../Popup/v2'
 import { ContentWrapper } from './ContentWrapper'
-import type { NewPopoverPlacement, PopoverProps } from './types'
+import type { PopoverProps } from './types'
 import { popoverStyle } from './styles.css'
 
 /**
@@ -39,7 +40,7 @@ export const Popover = forwardRef(
     }
 
     // remove legacy "auto" placements, the panel always flips when needed
-    const finalPlacement = (placement.replace(/auto-?/v, '') || 'top') as NewPopoverPlacement
+    const finalPlacement = (placement.replace(/auto-?/v, '') || 'top') as NewPopupPlacement
 
     return (
       <Popup.Root visible={visible} onOpenChange={handleOpenChange}>
