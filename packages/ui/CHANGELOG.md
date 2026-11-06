@@ -1,5 +1,28 @@
 # Change Log
 
+## 3.29.4
+
+### Patch Changes
+
+- [#7091](https://github.com/scaleway/ultraviolet/pull/7091) [`3bf0c8d`](https://github.com/scaleway/ultraviolet/commit/3bf0c8d8f4153332a0277502f4809107b1733fdb) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectedInput`: migrate to new popup, which fixes a few issues :
+  - placement will be automatic to avoid overflow on the page
+  - focus on (first) selected element when opening the dropdown and the first element if no element is selected. If searchable, focus goes to the search bar by default
+  - deprecate `dropdownAlign` prop
+  
+  
+  
+  `Popup`: update `matchTriggerWidth` to sync the panel width with its trigger (instead of the min-width)
+
+- [#7111](https://github.com/scaleway/ultraviolet/pull/7111) [`9900473`](https://github.com/scaleway/ultraviolet/commit/9900473c8e2f4d2d00562eaa04a2325193d4bb9b) Thanks [@jsulpis](https://github.com/jsulpis)! - `Navigation`: fix the bottom shadow and add a top shadow using CSS scroll animations
+
+- [#7119](https://github.com/scaleway/ultraviolet/pull/7119) [`30c2ae2`](https://github.com/scaleway/ultraviolet/commit/30c2ae20c70b82f35f7768e3429b79b6afd35a3c) Thanks [@lisalupi](https://github.com/lisalupi)! - `Filters`: add `showMonthYearPicker` prop to config on date and date-range filters
+
+- [#7112](https://github.com/scaleway/ultraviolet/pull/7112) [`4818d41`](https://github.com/scaleway/ultraviolet/commit/4818d41053312c6c5138c901eb1bae39fd4514a2) Thanks [@jsulpis](https://github.com/jsulpis)! - fix(Text): fix `oneLine` infinite resize when the text overflows, by using the text element itself as the tooltip trigger
+
+- [#7121](https://github.com/scaleway/ultraviolet/pull/7121) [`72505b5`](https://github.com/scaleway/ultraviolet/commit/72505b557d24fb83b2185034952be5076137932d) Thanks [@jsulpis](https://github.com/jsulpis)! - `SwitchButton`: fix the selected state positioning and improve the animation easing function
+- Updated dependencies [[`f23f519`](https://github.com/scaleway/ultraviolet/commit/f23f51955bc1fd7837a9a70d8cbde075e358681b)]:
+  - @ultraviolet/themes@3.3.1
+
 ## 3.29.3
 
 ### Patch Changes
