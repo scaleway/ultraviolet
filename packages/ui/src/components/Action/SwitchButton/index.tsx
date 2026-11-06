@@ -65,8 +65,9 @@ export const SwitchButton = ({
     }
     const currentPosition = curentElement.getBoundingClientRect().left
     const containerPosition = containerRef.current?.getBoundingClientRect().left ?? 0
+    const containerBorderLeftWidth = containerRef.current?.clientLeft ?? 0
 
-    return currentPosition - containerPosition
+    return currentPosition - containerPosition - containerBorderLeftWidth
   }
 
   if (value !== previousValue) {
