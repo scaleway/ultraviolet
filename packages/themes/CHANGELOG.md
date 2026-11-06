@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.3.1
+
+### Patch Changes
+
+- [#7115](https://github.com/scaleway/ultraviolet/pull/7115) [`f23f519`](https://github.com/scaleway/ultraviolet/commit/f23f51955bc1fd7837a9a70d8cbde075e358681b) Thanks [@jsulpis](https://github.com/jsulpis)! - fix(ThemeProvider): make nested providers pass-through and fix issue with multiple providers in separate React roots
+
 ## 3.3.0
 
 ### Minor Changes
