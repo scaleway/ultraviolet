@@ -5,8 +5,8 @@ import { cn } from '@ultraviolet/utils'
 import {
   forwardRef,
   useCallback,
+  useEffect,
   useImperativeHandle,
-  useLayoutEffect,
   useMemo,
   useReducer,
   useRef,
@@ -15,7 +15,7 @@ import {
 } from 'react'
 import type { Ref } from 'react'
 import { Stack } from '../../Layout/Stack'
-import { Popup } from '../../Overlay/Popup'
+import { Popup } from '../../Overlay/Popup/v2'
 import { TextInput } from '../TextInput'
 import { KeyGroup } from './KeyGroup'
 import type { SearchInputProps } from './types'
@@ -36,7 +36,6 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       labelDescription,
       loading,
       size = 'large',
-      popupPlacement,
       threshold = 0,
       children,
       onSearch,
@@ -74,7 +73,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
   ) => {
     const focusedLinkIndex = useRef(0)
     const popupRef = useRef<HTMLDivElement>(null)
-    const [containerWidth, setContainerWidth] = useState(0)
+    const triggerContainerRef = useRef<HTMLDivElement>(null)
     const [searchTerms, setSearchTerms] = useState(value ?? defaultValue)
     const [previousValue, setPreviousValue] = useState(value)
     const [keyPressed, setKeyPressed] = useState<string[]>([])
@@ -89,12 +88,6 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     )
 
     const content = typeof children === 'function' ? children({ isOpen, searchTerms, toggleIsOpen }) : children
-
-    const resizeSearchBar = () => {
-      if (popupRef.current) {
-        setContainerWidth(popupRef.current.getBoundingClientRect().width)
-      }
-    }
 
     const handleNavigation = (event: KeyboardEvent) => {
       const links = [...(popupRef.current?.querySelectorAll('a') ?? [])]
@@ -120,18 +113,10 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       }
     }
 
-    useLayoutEffect(() => {
+    useEffect(() => {
       document.addEventListener('keyup', handleNavigation)
 
       return () => document.removeEventListener('keyup', handleNavigation)
-    }, [])
-
-    useLayoutEffect(() => {
-      resizeSearchBar()
-
-      window.addEventListener('resize', resizeSearchBar)
-
-      return () => window.removeEventListener('resize', resizeSearchBar)
     }, [])
 
     if (value !== previousValue) {
@@ -197,7 +182,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       [keyPressed],
     )
 
-    useLayoutEffect(() => {
+    useEffect(() => {
       if (shortcut && !disabled) {
         document.body.addEventListener('keydown', handleKeyPressed)
         document.body.addEventListener('keyup', handleKeyReleased)
@@ -230,78 +215,85 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     }, [isMacOS, shortcut])
 
     return (
-      <div style={{ width: '100%' }}>
-        <Popup
-          className={searchInputStyle.popup}
-          data-testid={`popup-${dataTestId}`}
-          debounceDelay={0}
-          hasArrow={false}
-          hideOnClickOutside
-          innerRef={popupRef}
-          maxHeight={410}
-          maxWidth={containerWidth}
-          onClose={onCloseCallback}
-          placement={popupPlacement}
-          role="dialog"
-          text={content}
+      <div ref={triggerContainerRef} className={searchInputStyle.triggerContainer}>
+        <Popup.Root
           visible={isOpen}
+          onOpenChange={open => {
+            if (!open) {
+              onCloseCallback()
+            }
+          }}
         >
-          <TextInput
-            aria-atomic={ariaAtomic}
-            aria-describedby={ariaDescribedBy}
-            aria-label={ariaLabel}
-            aria-labelledby={ariaLabelledby}
-            aria-live={ariaLive}
-            autoComplete={autoComplete}
-            autoFocus={autoFocus}
-            className={cn(className, searchInputStyle.searchInput)}
-            clearable
-            data-testid={dataTestId}
-            disabled={disabled}
-            error={error}
-            id={id}
-            label={label}
-            labelDescription={labelDescription}
-            loading={loading}
-            maxLength={maxLength}
-            minLength={minLength}
-            name={name}
-            onBlur={onBlur}
-            onChange={event => onSearchCallback(event.target.value)}
-            onFocus={onFocus}
-            onKeyDown={onKeyDown}
-            onKeyUp={onKeyUp}
-            placeholder={placeholder}
-            prefix={
-              <Stack
-                className={searchInputStyle.clickableStack}
-                data-testid={`search-icon${dataTestId ? `-${dataTestId}` : ''}`}
-                onClick={() => innerSearchInputRef.current?.focus()}
-              >
-                <SearchIcon
-                  disabled={disabled}
-                  size={size === 'large' ? 'medium' : 'small'}
-                  sentiment="neutral"
-                  prominence="weak"
-                />
-              </Stack>
-            }
-            readOnly={readOnly}
-            ref={innerSearchInputRef}
-            required={required}
-            role={role}
-            size={size}
-            style={style}
-            suffix={
-              shortcut && searchTerms.length === 0 ? (
-                <KeyGroup disabled={disabled} keys={keys} onClick={() => innerSearchInputRef.current?.focus()} />
-              ) : undefined
-            }
-            tabIndex={tabIndex}
-            tooltip={tooltip}
-            value={searchTerms}
-          />
-        </Popup>
+          <Popup.Trigger triggerContainerRef={triggerContainerRef}>
+            <TextInput
+              aria-atomic={ariaAtomic}
+              aria-describedby={ariaDescribedBy}
+              aria-label={ariaLabel}
+              aria-labelledby={ariaLabelledby}
+              aria-live={ariaLive}
+              autoComplete={autoComplete}
+              autoFocus={autoFocus}
+              className={cn(className, searchInputStyle.searchInput)}
+              clearable
+              data-testid={dataTestId}
+              disabled={disabled}
+              error={error}
+              id={id}
+              label={label}
+              labelDescription={labelDescription}
+              loading={loading}
+              maxLength={maxLength}
+              minLength={minLength}
+              name={name}
+              onBlur={onBlur}
+              onChange={event => onSearchCallback(event.target.value)}
+              onFocus={onFocus}
+              onKeyDown={onKeyDown}
+              onKeyUp={onKeyUp}
+              placeholder={placeholder}
+              prefix={
+                <Stack
+                  className={searchInputStyle.clickableStack}
+                  data-testid={`search-icon${dataTestId ? `-${dataTestId}` : ''}`}
+                  onClick={() => innerSearchInputRef.current?.focus()}
+                >
+                  <SearchIcon
+                    disabled={disabled}
+                    size={size === 'large' ? 'medium' : 'small'}
+                    sentiment="neutral"
+                    prominence="weak"
+                  />
+                </Stack>
+              }
+              readOnly={readOnly}
+              ref={innerSearchInputRef}
+              required={required}
+              role={role}
+              size={size}
+              style={style}
+              suffix={
+                shortcut && searchTerms.length === 0 ? (
+                  <KeyGroup disabled={disabled} keys={keys} onClick={() => innerSearchInputRef.current?.focus()} />
+                ) : undefined
+              }
+              tabIndex={tabIndex}
+              tooltip={tooltip}
+              value={searchTerms}
+            />
+          </Popup.Trigger>
+          {content ? (
+            <Popup.Panel
+              ref={popupRef}
+              className={searchInputStyle.popup}
+              data-testid={`popup-${dataTestId}`}
+              initialFocus={-1}
+              matchTriggerWidth
+              placement="bottom-start"
+            >
+              {content}
+            </Popup.Panel>
+          ) : null}
+        </Popup.Root>
       </div>
     )
   },

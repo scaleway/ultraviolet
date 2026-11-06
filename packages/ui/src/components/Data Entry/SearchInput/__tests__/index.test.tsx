@@ -9,14 +9,14 @@ import { Button } from '../../../Action/Button'
 describe('searchInput', () => {
   it('renders correctly without children props', () =>
     shouldMatchSnapshot(
-      <SearchInput onClose={() => {}} onSearch={() => {}} placeholder="Type something" popupPlacement="bottom">
+      <SearchInput onClose={() => {}} onSearch={() => {}} placeholder="Type something">
         <div />
       </SearchInput>,
     ))
 
   it('renders with disabled prop', () =>
     shouldMatchSnapshot(
-      <SearchInput disabled onClose={() => {}} onSearch={() => {}} placeholder="Type something" popupPlacement="bottom">
+      <SearchInput disabled onClose={() => {}} onSearch={() => {}} placeholder="Type something">
         <div />
       </SearchInput>,
     ))
@@ -24,13 +24,7 @@ describe('searchInput', () => {
   describe('renders with shortcut prop', () => {
     it('as boolean', () =>
       shouldMatchSnapshot(
-        <SearchInput
-          onClose={() => {}}
-          onSearch={() => {}}
-          placeholder="Type something"
-          popupPlacement="bottom"
-          shortcut
-        >
+        <SearchInput onClose={() => {}} onSearch={() => {}} placeholder="Type something" shortcut>
           <div />
         </SearchInput>,
       ))
@@ -40,7 +34,6 @@ describe('searchInput', () => {
           onClose={() => {}}
           onSearch={() => {}}
           placeholder="Type something"
-          popupPlacement="bottom"
           shortcut={['Control', 'Shift', 'A']}
         >
           <div />
@@ -50,13 +43,7 @@ describe('searchInput', () => {
 
   it('renders with error prop', () =>
     shouldMatchSnapshot(
-      <SearchInput
-        error="there is an error"
-        onClose={() => {}}
-        onSearch={() => {}}
-        placeholder="Type something"
-        popupPlacement="bottom"
-      >
+      <SearchInput error="there is an error" onClose={() => {}} onSearch={() => {}} placeholder="Type something">
         <div />
       </SearchInput>,
     ))
@@ -72,7 +59,6 @@ describe('searchInput', () => {
           searchValue = value
         }}
         placeholder="Type something"
-        popupPlacement="bottom"
         size="medium"
         threshold={2}
       >
@@ -90,6 +76,19 @@ describe('searchInput', () => {
     await waitFor(() => expect(searchValue).toBe(''))
   })
 
+  it('allows typing spaces', async () => {
+    renderWithTheme(
+      <SearchInput label="Search" onSearch={() => {}} placeholder="Type something">
+        <div />
+      </SearchInput>,
+    )
+
+    const searchInputElement = screen.getByRole('textbox', { name: 'Search' })
+    await userEvent.type(searchInputElement, 'hello world')
+
+    expect(searchInputElement).toHaveValue('hello world')
+  })
+
   it('renders correctly and verify accessibility', async () => {
     let searchValue = ''
 
@@ -101,7 +100,6 @@ describe('searchInput', () => {
           searchValue = value
         }}
         placeholder="Type something"
-        popupPlacement="bottom"
         size="large"
       >
         <div>
@@ -163,7 +161,6 @@ describe('searchInput', () => {
         label="input-label"
         onSearch={() => {}}
         placeholder="Type something"
-        popupPlacement="bottom"
         shortcut
         size="large"
       >
@@ -191,7 +188,6 @@ describe('searchInput', () => {
         label="input-label"
         onSearch={() => {}}
         placeholder="Type something"
-        popupPlacement="bottom"
         shortcut={['Control', 'Shift', 'A']}
         size="large"
       >
@@ -219,7 +215,6 @@ describe('searchInput', () => {
         label="input-label"
         onSearch={() => {}}
         placeholder="Type something"
-        popupPlacement="bottom"
         shortcut={['Control', 'Shift', 'A']}
         size="large"
       >
@@ -250,7 +245,6 @@ describe('searchInput', () => {
         label="input-label"
         onSearch={() => {}}
         placeholder="Type something"
-        popupPlacement="bottom"
         shortcut={['Control']}
         size="large"
       >
@@ -288,7 +282,6 @@ describe('searchInput', () => {
             label="input-label"
             onSearch={() => {}}
             placeholder="Type something"
-            popupPlacement="bottom"
             size="large"
             value={value}
           >
