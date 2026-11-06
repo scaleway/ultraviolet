@@ -32,8 +32,8 @@ export const Examples: StoryFn = args => {
           checked={value['label-26']}
           label={
             <Stack alignItems="center" direction="row" flex={1} gap={1}>
-              <img alt="fr" height={24} src={fr} width={24} />
-              <Text as="span" variant="bodyStrong">
+              <img alt="fr" height={20} src={fr} width={20} />
+              <Text as="span" variant="body">
                 France
               </Text>
             </Stack>
@@ -42,7 +42,7 @@ export const Examples: StoryFn = args => {
           onChange={event =>
             setValue(prevState => ({
               ...prevState,
-              'label-26': event.currentTarget.checked,
+              'label-26': event.target.checked,
             }))
           }
           showTick
@@ -54,8 +54,8 @@ export const Examples: StoryFn = args => {
           checked={value['label-27']}
           label={
             <Stack alignItems="center" direction="row" flex={1} gap={1}>
-              <img alt="nl" src={nl} width={24} />
-              <Text as="span" variant="bodyStrong">
+              <img alt="nl" src={nl} width={20} />
+              <Text as="span" variant="body">
                 Netherlands
               </Text>
             </Stack>
@@ -64,7 +64,7 @@ export const Examples: StoryFn = args => {
           onChange={event =>
             setValue(prevState => ({
               ...prevState,
-              'label-27': event.currentTarget.checked,
+              'label-27': event.target.checked,
             }))
           }
           showTick
@@ -77,8 +77,8 @@ export const Examples: StoryFn = args => {
           checked={value['label-28']}
           label={
             <Stack alignItems="center" direction="row" flex={1} gap={1}>
-              <img alt="pl" src={pl} width={24} />
-              <Text as="span" variant="bodyStrong">
+              <img alt="pl" src={pl} width={20} />
+              <Text as="span" variant="body">
                 Poland
               </Text>
             </Stack>
@@ -87,7 +87,7 @@ export const Examples: StoryFn = args => {
           onChange={event =>
             setValue(prevState => ({
               ...prevState,
-              'label-28': event.currentTarget.checked,
+              'label-28': event.target.checked,
             }))
           }
           showTick
@@ -103,7 +103,7 @@ export const Examples: StoryFn = args => {
         onChange={event =>
           setValueInput(prevState => ({
             ...prevState,
-            'label-29': event.currentTarget.checked,
+            'label-29': event.target.checked,
           }))
         }
         showTick
@@ -133,7 +133,7 @@ export const Examples: StoryFn = args => {
                   €2.99 year
                 </Text>
               </Stack>
-              <Button sentiment="primary" size="small" variant="outlined">
+              <Button sentiment="primary" size="xsmall" variant="outlined">
                 Add to cart
               </Button>
             </Stack>
@@ -143,7 +143,7 @@ export const Examples: StoryFn = args => {
         onChange={event =>
           setValueDomain(prevState => ({
             ...prevState,
-            'label-30': event.currentTarget.checked,
+            'label-30': event.target.checked,
           }))
         }
         showTick

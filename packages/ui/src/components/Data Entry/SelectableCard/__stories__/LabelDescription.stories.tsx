@@ -5,7 +5,6 @@ import { SelectableCard } from '..'
 import { Button } from '../../../Action/Button'
 import { Badge } from '../../../Badges/Badge'
 import { Row } from '../../../Layout/Row'
-import { Separator } from '../../../Layout/Separator'
 import { Stack } from '../../../Layout/Stack'
 import { Text } from '../../../Typography/Text'
 import { SelectInput } from '../../SelectInput'
@@ -50,13 +49,9 @@ export const LabelDescription: StoryFn = args => {
         <SelectableCard
           {...args}
           checked={valueRadio === 'label-29'}
-          label={
-            <Text as="span" variant="bodyStrong">
-              Option 1
-            </Text>
-          }
+          label="Option 1"
           labelDescription={
-            <Text as="span" variant="bodyStronger" sentiment={valueRadio === 'label-29' ? 'primary' : 'neutral'}>
+            <Text as="span" variant="bodyStronger">
               1.99€
             </Text>
           }
@@ -66,20 +61,16 @@ export const LabelDescription: StoryFn = args => {
           type="radio"
           value="label-29"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
             This option will cost you 1.99€ and provide you with a lot of happiness
           </Text>
         </SelectableCard>
         <SelectableCard
           {...args}
           checked={valueRadio === 'label-15'}
-          label={
-            <Text as="span" variant="bodyStrong">
-              Option 2
-            </Text>
-          }
+          label="Option 2"
           labelDescription={
-            <Text as="span" variant="bodyStronger" sentiment={valueRadio === 'label-15' ? 'primary' : 'neutral'}>
+            <Text as="span" variant="bodyStronger">
               2.99€
             </Text>
           }
@@ -89,7 +80,7 @@ export const LabelDescription: StoryFn = args => {
           type="radio"
           value="label-15"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
             This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCard>
@@ -99,15 +90,11 @@ export const LabelDescription: StoryFn = args => {
           {...args}
           checked={valueSelect['label-20']}
           labelDescription={
-            <Text as="span" variant="bodyStronger" sentiment={valueSelect['label-20'] ? 'primary' : 'neutral'}>
+            <Text as="span" variant="bodyStronger">
               4.99€
             </Text>
           }
-          label={
-            <Text as="span" variant="bodyStrong">
-              Optional option 1
-            </Text>
-          }
+          label="Optional option 1"
           name="label-20"
           onChange={event =>
             setValueSelect(prevState => ({
@@ -119,10 +106,9 @@ export const LabelDescription: StoryFn = args => {
           type="checkbox"
           value="label-20"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
             <Stack gap={3} width="100%">
               This option will cost you 1.99€ and provide you with a lot of happiness
-              <Separator />
               <SelectInput
                 label="Select a sub option"
                 options={[
@@ -138,13 +124,9 @@ export const LabelDescription: StoryFn = args => {
         <SelectableCard
           {...args}
           checked={valueSelect['label-21']}
-          label={
-            <Text as="span" variant="bodyStrong">
-              Optional option 2
-            </Text>
-          }
+          label="Optional option 2"
           labelDescription={
-            <Text as="span" variant="bodyStronger" sentiment={valueSelect['label-21'] ? 'primary' : 'neutral'}>
+            <Text as="span" variant="bodyStronger">
               9.99€
             </Text>
           }
@@ -159,7 +141,7 @@ export const LabelDescription: StoryFn = args => {
           type="checkbox"
           value="label-21"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
             This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCard>
@@ -169,17 +151,13 @@ export const LabelDescription: StoryFn = args => {
         <SelectableCard
           {...args}
           checked={value4['label-22']}
-          label={
-            <Text as="span" variant="bodyStrong">
-              Backup
-            </Text>
-          }
+          label="Backup"
           labelDescription={
             <Stack justifyContent="space-between" direction="row" width="100%" alignItems="center">
               <Badge sentiment="primary" size="small">
                 Recommended
               </Badge>
-              <Text as="p" variant="bodyStrong" sentiment={value4['label-22'] ? 'primary' : 'neutral'}>
+              <Text as="p" variant="bodyStrong">
                 3.99€
               </Text>
             </Stack>
@@ -196,18 +174,14 @@ export const LabelDescription: StoryFn = args => {
           type="checkbox"
           value="label-22"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
             This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCard>
         <SelectableCard
           {...args}
           checked={value4['label-23']}
-          label={
-            <Text as="span" variant="bodyStrong">
-              Redundancy
-            </Text>
-          }
+          label="Redundancy"
           labelDescription={
             <Badge sentiment="primary" size="small">
               Recommended
@@ -225,7 +199,7 @@ export const LabelDescription: StoryFn = args => {
           type="checkbox"
           value="label-23"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
             This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCard>
@@ -233,11 +207,7 @@ export const LabelDescription: StoryFn = args => {
         <SelectableCard
           {...args}
           checked={value4['label-24']}
-          label={
-            <Text as="span" variant="bodyStrong" oneLine>
-              Morning Reboot 9am
-            </Text>
-          }
+          label="Morning Reboot 9am"
           labelDescription={
             <Badge sentiment="neutral" size="small">
               Optional
@@ -255,7 +225,7 @@ export const LabelDescription: StoryFn = args => {
           type="checkbox"
           value="label-24"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
             This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCard>
@@ -263,11 +233,7 @@ export const LabelDescription: StoryFn = args => {
         <SelectableCard
           {...args}
           checked={value4['label-25']}
-          label={
-            <Text as="span" variant="bodyStrong">
-              Monitoring
-            </Text>
-          }
+          label="Monitoring"
           labelDescription={
             <Badge sentiment="neutral" size="small">
               Optional
@@ -285,7 +251,7 @@ export const LabelDescription: StoryFn = args => {
           type="checkbox"
           value="label-25"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
             This option will cost you 2.99€ and provide you with a lot more of happiness
           </Text>
         </SelectableCard>

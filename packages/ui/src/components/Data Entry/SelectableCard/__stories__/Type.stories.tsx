@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { SelectableCard } from '..'
-import { Stack } from '../../../Layout/Stack'
+import { Row } from '../../../Layout/Row'
 
 export const Type: StoryFn = args => {
   const [radio, setRadio] = useState('label-3')
@@ -9,46 +9,43 @@ export const Type: StoryFn = args => {
 
   return (
     <>
-      <Stack direction="row" gap={2}>
-        <SelectableCard
-          {...args}
-          checked={radio === 'label-3'}
-          label="Radio Left"
-          name="label-3"
-          onChange={event => setRadio(event.currentTarget.value)}
-          type="radio"
-          value="label-3"
-        />
-        <SelectableCard
-          {...args}
-          checked={radio === 'label-4'}
-          label="Radio Right"
-          name="label-4"
-          onChange={event => setRadio(event.currentTarget.value)}
-          type="radio"
-          value="label-4"
-        />
-      </Stack>
-      <Stack direction="row" gap={2}>
-        <SelectableCard
-          {...args}
-          checked={checkbox['label-1']}
-          label="Checkbox 1"
-          name="label-1"
-          onChange={event => setCheckbox({ ...checkbox, 'label-1': !event.currentTarget.checked })}
-          type="checkbox"
-          value="label-1"
-        />
-        <SelectableCard
-          {...args}
-          checked={checkbox['label-2']}
-          label="Checkbox 2"
-          name="label-2"
-          onChange={event => setCheckbox({ ...checkbox, 'label-2': !event.currentTarget.checked })}
-          type="checkbox"
-          value="label-2"
-        />
-      </Stack>
+      <SelectableCard
+        {...args}
+        checked={radio === 'label-3'}
+        label="Radio Left"
+        name="label-3"
+        onChange={event => setRadio(event.currentTarget.value)}
+        type="radio"
+        value="label-3"
+      />
+      <SelectableCard
+        {...args}
+        checked={radio === 'label-4'}
+        label="Radio Right"
+        name="label-4"
+        onChange={event => setRadio(event.currentTarget.value)}
+        type="radio"
+        value="label-4"
+      />
+
+      <SelectableCard
+        {...args}
+        checked={checkbox['label-1']}
+        label="Checkbox 1"
+        name="label-1"
+        onChange={event => setCheckbox({ ...checkbox, 'label-1': !event.currentTarget.checked })}
+        type="checkbox"
+        value="label-1"
+      />
+      <SelectableCard
+        {...args}
+        checked={checkbox['label-2']}
+        label="Checkbox 2"
+        name="label-2"
+        onChange={event => setCheckbox({ ...checkbox, 'label-2': !event.currentTarget.checked })}
+        type="checkbox"
+        value="label-2"
+      />
     </>
   )
 }
@@ -62,8 +59,8 @@ Type.parameters = {
 }
 Type.decorators = [
   StoryComponent => (
-    <Stack gap={2}>
+    <Row templateColumns="1fr 1fr" gap={2}>
       <StoryComponent />
-    </Stack>
+    </Row>
   ),
 ]
