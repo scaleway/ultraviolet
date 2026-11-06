@@ -29,6 +29,9 @@ export const ModalContent = ({
   placement,
   finalSize,
   ariaLabel,
+  accessibleLabel,
+  ariaLabelledBy,
+  ariaDescribedBy,
   hideOnClickOutside,
   hideOnEsc,
   preventBodyScroll,
@@ -42,6 +45,7 @@ export const ModalContent = ({
   handleToggle,
   finalId,
   image,
+  imageAlt,
   closeButtonSentiment,
   style,
   ref,
@@ -57,6 +61,9 @@ export const ModalContent = ({
   return (
     <Dialog
       ariaLabel={ariaLabel}
+      accessibleLabel={accessibleLabel}
+      ariaLabelledBy={ariaLabelledBy}
+      ariaDescribedBy={ariaDescribedBy}
       backdropClassName={backdropClassName}
       className={className}
       data-testid={dataTestId}
@@ -64,6 +71,7 @@ export const ModalContent = ({
       hideOnEsc={hideOnEsc}
       id={finalId}
       image={image}
+      imageAlt={imageAlt}
       isDrawer={isDrawer}
       onClose={handleClose}
       open={open}
@@ -82,20 +90,20 @@ export const ModalContent = ({
             visible: open,
           })
         : children}
-      <div className={modalStyle.container}>
-        {isClosable ? (
-          <Button
-            accessibleLabel="close"
-            data-testid={dataTestId ? `${dataTestId}-close-button` : undefined}
-            onClick={handleClose}
-            sentiment={closeButtonSentiment}
-            size="small"
-            variant="ghost"
-          >
-            <CloseIcon />
-          </Button>
-        ) : null}
-      </div>
+
+      {isClosable ? (
+        <Button
+          className={modalStyle.closeButton}
+          accessibleLabel="close"
+          data-testid={dataTestId ? `${dataTestId}-close-button` : undefined}
+          onClick={handleClose}
+          sentiment={closeButtonSentiment}
+          size="small"
+          variant="ghost"
+        >
+          <CloseIcon />
+        </Button>
+      ) : null}
     </Dialog>
   )
 }

@@ -2,7 +2,7 @@
 
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { useCallback, useEffect, useRef } from 'react'
+import { useCallback, useEffect, useId, useRef } from 'react'
 import type {
   FocusEventHandler,
   KeyboardEvent,
@@ -12,6 +12,7 @@ import type {
 } from 'react'
 import { createPortal } from 'react-dom'
 import { Stack } from '../../../Layout/Stack'
+import { VisuallyHidden } from '../../../Other/VisuallyHidden'
 import { FOCUSABLE_ELEMENTS } from '../../constants'
 import { useModal } from '../ModalProvider'
 import type { DialogProps } from '../types'
@@ -31,6 +32,9 @@ export const Dialog = ({
   size,
   id,
   ariaLabel,
+  accessibleLabel,
+  ariaLabelledBy,
+  ariaDescribedBy,
   className,
   'data-testid': dataTestId,
   preventBodyScroll,
@@ -38,6 +42,7 @@ export const Dialog = ({
   backdropClassName,
   backdropStyle,
   image,
+  imageAlt = '',
   style,
   ref,
   isDrawer,
@@ -48,6 +53,9 @@ export const Dialog = ({
   const dialogRef = ref ?? nonDefaultRef
   const onCloseRef = useRef(onClose)
   const { registerModal, unregisterModal, openedModals } = useModal()
+
+  const accessibleLabelId = useId()
+  const computedAccessibleLabel = accessibleLabel ?? ariaLabel
 
   // register/unregister the modal to handle nested modals
   useEffect(() => {
@@ -83,10 +91,18 @@ export const Dialog = ({
     onCloseRef.current = onClose
   }, [onClose])
 
-  // On open focus the modal
+  // On open focus the first focusable element inside the modal; on close restore focus.
+  // Restoring is done in the effect body rather than in a cleanup function otherwise React StrictMode's
+  // unmount/remount cycle would bounce the focus out of a Select that opens a Modal and close it immediately.
+  const previouslyFocusedElement = useRef<HTMLElement | null>(null)
   useEffect(() => {
     if (open) {
-      dialogRef.current?.focus()
+      previouslyFocusedElement.current = document.activeElement instanceof HTMLElement ? document.activeElement : null
+      const firstFocusableElement = dialogRef.current?.querySelector<HTMLElement>(FOCUSABLE_ELEMENTS)
+      const elementToFocus = firstFocusableElement ?? dialogRef.current
+      elementToFocus?.focus({ preventScroll: true }) // preventScroll to avoid breaking the Drawer opening animation
+    } else if (previouslyFocusedElement.current?.isConnected) {
+      previouslyFocusedElement.current.focus()
     }
   }, [open, dialogRef])
 
@@ -213,7 +229,8 @@ export const Dialog = ({
       onFocus={stopFocus}
     >
       <dialog
-        aria-label={ariaLabel}
+        aria-labelledby={ariaLabelledBy ?? (computedAccessibleLabel ? accessibleLabelId : undefined)}
+        aria-describedby={ariaDescribedBy}
         aria-modal
         className={cn(
           className,
@@ -242,10 +259,13 @@ export const Dialog = ({
         }}
         tabIndex={0}
       >
+        {computedAccessibleLabel ? (
+          <VisuallyHidden id={accessibleLabelId}>{computedAccessibleLabel}</VisuallyHidden>
+        ) : null}
         {image ? (
           <>
             <Stack alignItems="flex-end" className={modalStyle.imageContainer} justifyContent="center">
-              <img alt="illustration" className={modalStyle.image} height="auto" src={image} width="auto" />
+              <img alt={imageAlt} className={modalStyle.image} height="auto" src={image} width="auto" />
             </Stack>
             <Stack className={modalStyle.content} gap={5}>
               {children}
