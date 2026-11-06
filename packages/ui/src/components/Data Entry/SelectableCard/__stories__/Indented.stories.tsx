@@ -1,7 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { SelectableCard } from '..'
-import { Separator } from '../../../Layout/Separator'
 import { Stack } from '../../../Layout/Stack'
 import { Text } from '../../../Typography/Text'
 import { SelectInput } from '../../SelectInput'
@@ -10,97 +9,97 @@ export const Indented: StoryFn = args => {
   const [value, setValue] = useState({ 'label-20': true, 'label-21': false })
 
   return (
-    <Stack flex={1} gap={8}>
-      <Stack flex={1} gap={1}>
-        <SelectableCard
-          {...args}
-          checked={value['label-20']}
-          label={
-            <Stack direction="row" flex={1} justifyContent="space-between">
-              <Text as="span" variant="bodyStrong">
-                Default layout (indented is set to true)
-              </Text>
-              <Text as="span" variant="bodyStronger">
-                4.99€
-              </Text>
-            </Stack>
-          }
-          name="label-20"
-          onChange={event =>
-            setValue(prevState => ({
-              ...prevState,
-              'label-20': event.currentTarget.checked,
-            }))
-          }
-          showTick
-          type="checkbox"
-          value="label-20"
-        >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            <Stack gap={3} width="100%">
+    <>
+      <SelectableCard
+        {...args}
+        checked={value['label-20']}
+        label={
+          <Stack direction="row" flex={1} justifyContent="space-between">
+            <Text as="span" variant="bodyStrong">
+              Default layout (indented is set to true)
+            </Text>
+            <Text as="span" variant="bodyStronger">
+              4.99€
+            </Text>
+          </Stack>
+        }
+        name="label-20"
+        onChange={event =>
+          setValue(prevState => ({
+            ...prevState,
+            'label-20': event.currentTarget.checked,
+          }))
+        }
+        showTick
+        type="checkbox"
+        value="label-20"
+      >
+        <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Stack gap={3} width="100%">
+            <Text as="span" prominence="weak" variant="bodySmall">
               This option will cost you 1.99€ and provide you with a lot of happiness
-              <Separator />
-              <SelectInput
-                label="Select a sub option"
-                options={[
-                  {
-                    label: 'Sub option 1',
-                    value: 'option1',
-                  },
-                ]}
-              />{' '}
-            </Stack>
-          </Text>
-        </SelectableCard>
-        <SelectableCard
-          {...args}
-          checked={value['label-21']}
-          indented={false}
-          label={
-            <Stack direction="row" flex={1} justifyContent="space-between">
-              <Text as="span" variant="bodyStrong">
-                Intended set to false
-              </Text>
-              <Text as="span" variant="bodyStronger">
-                4.99€
-              </Text>
-            </Stack>
-          }
-          name="label-21"
-          onChange={event =>
-            setValue(prevState => ({
-              ...prevState,
-              'label-21': event.currentTarget.checked,
-            }))
-          }
-          showTick
-          type="checkbox"
-          value="label-21"
-        >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            <Stack gap={3} width="100%">
+            </Text>
+            <SelectInput
+              label="Select a sub option"
+              options={[
+                {
+                  label: 'Sub option 1',
+                  value: 'option1',
+                },
+              ]}
+            />{' '}
+          </Stack>
+        </Text>
+      </SelectableCard>
+      <SelectableCard
+        {...args}
+        checked={value['label-21']}
+        indented={false}
+        label={
+          <Stack direction="row" flex={1} justifyContent="space-between">
+            <Text as="span" variant="bodyStrong">
+              Intended set to false
+            </Text>
+            <Text as="span" variant="bodyStronger">
+              4.99€
+            </Text>
+          </Stack>
+        }
+        name="label-21"
+        onChange={event =>
+          setValue(prevState => ({
+            ...prevState,
+            'label-21': event.currentTarget.checked,
+          }))
+        }
+        showTick
+        type="checkbox"
+        value="label-21"
+      >
+        <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Stack gap={3} width="100%">
+            <Text as="span" prominence="weak" variant="bodySmall">
               This option will cost you 1.99€ and provide you with a lot of happiness
-              <Separator />
-              <SelectInput
-                label="Select a sub option"
-                options={[
-                  {
-                    label: 'Sub option 1',
-                    value: 'option1',
-                  },
-                ]}
-              />
-            </Stack>
-          </Text>
-        </SelectableCard>
-      </Stack>
-    </Stack>
+            </Text>
+            <SelectInput
+              label="Select a sub option"
+              options={[
+                {
+                  label: 'Sub option 1',
+                  value: 'option1',
+                },
+              ]}
+            />
+          </Stack>
+        </Text>
+      </SelectableCard>
+    </>
   )
 }
 
 Indented.decorators = [
   StoryComponent => (
-    <Stack direction="row" gap={2}>
+    <Stack gap={2}>
       <StoryComponent />
     </Stack>
   ),
