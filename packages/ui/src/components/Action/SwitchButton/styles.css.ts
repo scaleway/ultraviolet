@@ -31,7 +31,7 @@ const optionBase = style({
       height: '100%',
       justifyContent: 'center',
       padding: `${theme.space[1]} ${theme.space[2]}`,
-      transition: 'all 200ms ease-in-out ',
+      transition: 'all 200ms cubic-bezier(0.5, 0, 0.1, 1)',
       userSelect: 'none',
       whiteSpace: 'nowrap',
     },
@@ -61,7 +61,11 @@ const focusOverlayBase = style({
   height: `calc(100% - ${theme.space[1]})`,
   position: 'absolute',
   transformOrigin: 'left center',
-  transition: 'all 200ms ease-in-out',
+  '@media': {
+    '(prefers-reduced-motion: no-preference)': {
+      transition: 'all 200ms cubic-bezier(0.5, 0, 0.1, 1)',
+    },
+  },
 })
 
 const focusOverlay = styleVariants({
