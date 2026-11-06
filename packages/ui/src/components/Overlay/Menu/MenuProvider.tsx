@@ -1,18 +1,14 @@
 'use client'
 
-import { createContext, useContext, useMemo, useRef, useState } from 'react'
-import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
+import { createContext, useContext, useMemo, useRef } from 'react'
+import type { ReactNode, RefObject } from 'react'
 
 type MenuContextProps = {
   hideOnClickItem: boolean
-  isVisible: boolean
-  setIsVisible: Dispatch<SetStateAction<boolean>>
   isNested: boolean
   disclosureRef: RefObject<HTMLButtonElement | null>
   menuRef: RefObject<HTMLDivElement | null>
   parentDisclosureRef?: RefObject<HTMLButtonElement | null>
-  setShouldBeVisible: Dispatch<SetStateAction<boolean | undefined>>
-  shouldBeVisible: boolean | undefined
 }
 
 const MenuContext = createContext<MenuContextProps | undefined>(undefined)
@@ -29,19 +25,11 @@ export const useMenu = () => {
 type MenuProviderProps = {
   hideOnClickItem?: boolean
   children: ReactNode
-  visible?: boolean
   parentDisclosureRef?: RefObject<HTMLButtonElement | null>
   triggerMethod?: 'hover' | 'click'
 }
 
-export const MenuProvider = ({
-  hideOnClickItem = false,
-  children,
-  visible = false,
-  parentDisclosureRef,
-}: MenuProviderProps) => {
-  const [isVisible, setIsVisible] = useState(visible)
-  const [shouldBeVisible, setShouldBeVisible] = useState<boolean | undefined>(undefined)
+export const MenuProvider = ({ hideOnClickItem = false, children, parentDisclosureRef }: MenuProviderProps) => {
   const disclosureRef = useRef<HTMLButtonElement>(null)
   const menuRef = useRef<HTMLDivElement>(null)
   const parentMenu = useContext(MenuContext)
@@ -52,22 +40,10 @@ export const MenuProvider = ({
       disclosureRef,
       hideOnClickItem,
       isNested,
-      isVisible,
       menuRef,
       parentDisclosureRef: parentDisclosureRef ?? parentMenu?.disclosureRef,
-      setIsVisible,
-      setShouldBeVisible,
-      shouldBeVisible,
     }),
-    [
-      hideOnClickItem,
-      isVisible,
-      isNested,
-      parentDisclosureRef,
-      parentMenu?.disclosureRef,
-      shouldBeVisible,
-      setShouldBeVisible,
-    ],
+    [hideOnClickItem, isNested, parentDisclosureRef, parentMenu?.disclosureRef],
   )
 
   return <MenuContext.Provider value={values}>{children}</MenuContext.Provider>

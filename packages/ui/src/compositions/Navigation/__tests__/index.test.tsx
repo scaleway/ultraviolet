@@ -138,10 +138,10 @@ describe('navigation', () => {
     })
     expect(asFragment()).toMatchSnapshot()
 
-    const itemMenu = screen.getByRole('button', { name: 'Servers' })
+    const itemMenu = screen.getByRole('button', { name: 'Not servers' })
     await userEvent.hover(itemMenu)
 
-    expect(screen.getByText('Thing')).toBeInTheDocument()
+    await waitFor(() => expect(screen.getByText('Thing')).toBeInTheDocument())
 
     const expandButton = screen.getByRole('button', {
       name: 'Expand sidebar',
@@ -284,5 +284,26 @@ describe('navigation', () => {
     expect(screen.getByTestId('advanced')).toBeInTheDocument()
 
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('opens and closes a nested item menu with the keyboard', async () => {
+    renderWithTheme(<NavigationNested pinnedFeature />)
+
+    const computeItemMenu = screen.getByRole('button', { name: 'Compute' })
+    await userEvent.hover(computeItemMenu)
+
+    const advancedItem = await screen.findByTestId('advanced')
+    await userEvent.hover(advancedItem)
+
+    const kubernetesItem = await screen.findByTestId('kubernetes')
+    await waitFor(() => expect(kubernetesItem).toBeVisible())
+    kubernetesItem.focus()
+    expect(kubernetesItem).toHaveFocus()
+    await userEvent.keyboard('[ArrowLeft]')
+
+    await waitFor(() => {
+      expect(kubernetesItem).not.toBeVisible()
+      expect(advancedItem).toHaveFocus()
+    })
   })
 })
