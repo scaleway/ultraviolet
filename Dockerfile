@@ -1,4 +1,4 @@
-FROM caddy:2.11.7-alpine@sha256:e70b164da81ef698b3ad19af799ea6086ce6d9e48ed4079eb9fe26f6fbf14ee5
+FROM caddy:2.11.9-alpine@sha256:0bbb055bda6793c999bde78b1b5ce3e89f829fb031af2cf50056ea1246559fee
 
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY ./storybook-static /srv/storybook-static
