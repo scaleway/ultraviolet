@@ -1,11 +1,12 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import { Menu } from '..'
-import { Button } from '../../../index'
+import { Button, VisuallyHidden } from '../../../index'
 
 export const DefaultDisclosure = (
   <Button sentiment="neutral" size="small" variant="ghost">
     <DotsHorizontalIcon />
+    <VisuallyHidden>Open menu</VisuallyHidden>
   </Button>
 )
 

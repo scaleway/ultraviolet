@@ -202,6 +202,7 @@ export const Panel = forwardRef<HTMLDivElement, PopupPanelProps>(
       <FloatingPortal root={portalTarget}>
         {manageFocus ? (
           <FloatingFocusManager
+            closeOnFocusOut={false}
             context={context}
             initialFocus={initialFocus}
             modal={focusTrap}

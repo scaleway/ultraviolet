@@ -5,6 +5,7 @@ import { cn } from '@ultraviolet/utils'
 import { forwardRef, useCallback } from 'react'
 import type { CSSProperties, KeyboardEvent, MouseEvent, MouseEventHandler, ReactNode, Ref } from 'react'
 import { Stack } from '../../../Layout/Stack'
+import { usePopupContext } from '../../Popup/v2/context'
 import { Tooltip } from '../../Tooltip'
 import { getListItem } from '../helpers'
 import { useDisclosureContext, useMenu } from '../MenuProvider'
@@ -65,8 +66,8 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
     },
     ref,
   ) => {
-    const { hideOnClickItem, setIsVisible, isVisible, menuRef, isNested, parentDisclosureRef, disclosureRef } =
-      useMenu()
+    const { hideOnClickItem, menuRef, isNested, parentDisclosureRef, disclosureRef } = useMenu()
+    const { open, setOpen } = usePopupContext()
     const isDisclosure = useDisclosureContext()
 
     const onClickHandle = useCallback(
@@ -76,12 +77,12 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
         }
         onClick?.(event)
         if (hideOnClickItem || hideOnClick) {
-          setIsVisible(false)
+          setOpen(false)
         }
 
         return undefined
       },
-      [disabled, hideOnClickItem, hideOnClick, onClick, setIsVisible],
+      [disabled, hideOnClickItem, hideOnClick, onClick, setOpen],
     )
 
     const handleKeyDown = (event: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>) => {
@@ -95,15 +96,17 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
             }
           }
         }, 50)
+      } else if (event.key === 'ArrowLeft' && isNested && !isDisclosure && disclosureRef.current) {
+        event.stopPropagation()
+        setOpen(false)
       } else if (
         event.key === 'ArrowLeft' &&
         isNested &&
-        ((isDisclosure && parentDisclosureRef?.current?.dataset['isMenuItem']) || !isDisclosure) &&
-        parentDisclosureRef?.current
+        isDisclosure &&
+        parentDisclosureRef?.current?.dataset['isMenuItem']
       ) {
-        // Focus the disclosure in the parent menu & close the nested menu
-        // When the item is a disclosure, we must click the parent disclosure (since disclosureRef is the Item itself)
-        ;(isDisclosure ? parentDisclosureRef : disclosureRef).current?.click()
+        event.stopPropagation()
+        parentDisclosureRef.current.click()
       }
     }
 
@@ -161,7 +164,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
         <Tooltip text={tooltip}>
           <button
             className={cn(className, menuStyle.item({ borderless, disabled, sentiment }))}
-            data-active={active || (isVisible && isDisclosure)}
+            data-active={active || (open && isDisclosure)}
             data-is-disclosure={isDisclosure}
             data-is-menu-item
             data-testid={dataTestId}
@@ -172,7 +175,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
               }
               onClick?.(event)
               if (hideOnClickItem || hideOnClick) {
-                setIsVisible(false)
+                setOpen(false)
               }
             }}
             onKeyDown={handleKeyDown}
