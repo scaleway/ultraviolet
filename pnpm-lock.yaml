@@ -891,8 +891,8 @@ importers:
         specifier: 11.0.1
         version: 11.0.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       react-toastify:
-        specifier: 11.1.0
-        version: 11.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        specifier: 11.2.0
+        version: 11.2.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
     devDependencies:
       '@repo/config':
         specifier: workspace:*
@@ -7462,8 +7462,8 @@ packages:
       esbuild:
         optional: true
 
-  react-toastify@11.1.0:
-    resolution: {integrity: sha512-e9h23x3phN0wbFeB6yovmWp7lobzV4CaCH0LO8nVP6H7Y+3GbcLpIzMm9dJhcp1RXbpyfvjgpfXqO80QAmn7sg==}
+  react-toastify@11.2.0:
+    resolution: {integrity: sha512-lznu1N00MfEv4p9vGWNVqCfDQ3DxScDAZTFk6STMsEcLcRZKT4PCO0JxsNduGN7LJPBSkXXs/YuLydjh650T7Q==}
     peerDependencies:
       react: ^18 || ^19
       react-dom: ^18 || ^19
@@ -15231,7 +15231,7 @@ snapshots:
       - vite-plus
       - webpack
 
-  react-toastify@11.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
+  react-toastify@11.2.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
     dependencies:
       clsx: 2.1.1
       react: 19.3.1
