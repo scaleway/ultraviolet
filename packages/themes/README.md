@@ -125,18 +125,41 @@ To prevent it, use `getThemeInitScript` and inline the returned script in the `<
 import { getThemeInitScript } from '@ultraviolet/themes/v2'
 
 // in your document template (e.g. Next.js pages router `_document.tsx`)
-;<script dangerouslySetInnerHTML={{ __html: getThemeInitScript().toString() }} />
+;<script dangerouslySetInnerHTML={{ __html: getThemeInitScript() }} />
 ```
 
 It accepts the same `initialTheme` and `storageKey` options as the provider and derives the class names from the same constants, so the script and the provider can never drift apart:
 
 ```tsx
-<script dangerouslySetInnerHTML={{ __html: getThemeInitScript({ storageKey: 'theme-preference' }).toString() }} />
+<script dangerouslySetInnerHTML={{ __html: getThemeInitScript({ storageKey: 'theme-preference' }) }} />
+```
+
+In apps where the bundler generates the HTML template (e.g. Vite), inline the script from a small plugin in `vite.config.ts` instead:
+
+```ts
+import { getThemeInitScript } from '@ultraviolet/themes/v2'
+import { defineConfig } from 'vite'
+import type { Plugin } from 'vite'
+
+const themeInitScriptPlugin = (): Plugin => ({
+  name: 'theme-init-script',
+  transformIndexHtml: () => [
+    {
+      tag: 'script',
+      children: getThemeInitScript({ storageKey: 'theme-preference' }),
+      injectTo: 'head-prepend',
+    },
+  ],
+})
+
+export default defineConfig({
+  plugins: [themeInitScriptPlugin(), react()],
+})
 ```
 
 The script must use the **same storage key** as the provider and be placed in the `<head>` so it runs before the first paint.
 
-An example can be found in our [Next example](https://github.com/scaleway/ultraviolet/blob/main/examples/next/src/pages/_document.tsx).
+Examples can be found in our [Next example](https://github.com/scaleway/ultraviolet/blob/main/examples/next/src/pages/_document.tsx) and our [Vite example](https://github.com/scaleway/ultraviolet/blob/main/examples/vite/vite.config.ts).
 
 ##### Customizing theme variables
 
