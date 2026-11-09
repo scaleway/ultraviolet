@@ -65,13 +65,7 @@ const container = recipe({
   },
 })
 
-const labelContainerSelectableCardLabel = style({
-  selectors: {
-    '&:first-child': {
-      marginBottom: `-${theme.space['0.5']}`,
-    },
-  },
-})
+const labelContainerSelectableCardLabel = style({})
 const labelContainerSelectableCardLabelDescription = style({})
 const labelContainerSelectableCardNoLabel = style({})
 
@@ -118,17 +112,6 @@ const indentedCard = style({
 const selectableElement = style({
   alignItems: 'flex-start',
   display: 'inline-flex',
-  selectors: {
-    '&[data-checked="true"]': {
-      color: theme.colors.primary.text,
-    },
-    '&[data-disabled="true"]': {
-      color: theme.colors.neutral.textDisabled,
-    },
-    '&[data-error="true"]': {
-      color: theme.colors.danger.text,
-    },
-  },
 })
 
 globalStyle(`${selectableElement} > input + svg`, {

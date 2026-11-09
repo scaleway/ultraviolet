@@ -17,7 +17,7 @@ export const Illustration: StoryFn = args => {
   const [value2, setValue2] = useState('label-24')
 
   return (
-    <Stack gap={8}>
+    <>
       <Stack flex={1} gap={1}>
         ProductIcon:
         <SelectableCard
@@ -40,7 +40,7 @@ export const Illustration: StoryFn = args => {
           type="radio"
           value="label-30"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
             Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol.
           </Text>
           <Link href="scaleway.com" size="small" target="_blank">
@@ -67,7 +67,7 @@ export const Illustration: StoryFn = args => {
           type="radio"
           value="label-31"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
             Offer the best experience to your Mac
           </Text>
           <Link href="scaleway.com" size="small" target="_blank">
@@ -75,6 +75,7 @@ export const Illustration: StoryFn = args => {
           </Link>
         </SelectableCard>
       </Stack>
+
       <Stack flex={1} gap={1}>
         Illustration (white — switch to dark or darker theme):
         <SelectableCard
@@ -97,7 +98,7 @@ export const Illustration: StoryFn = args => {
           type="radio"
           value="label-24"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
             Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol.
           </Text>
           <Link href="scaleway.com" size="small" target="_blank">
@@ -124,7 +125,7 @@ export const Illustration: StoryFn = args => {
           type="radio"
           value="label-25"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
             Offer the best experience to your Mac
           </Text>
           <Link href="scaleway.com" size="small" target="_blank">
@@ -132,13 +133,13 @@ export const Illustration: StoryFn = args => {
           </Link>
         </SelectableCard>
       </Stack>
-    </Stack>
+    </>
   )
 }
 
 Illustration.decorators = [
   StoryComponent => (
-    <Stack direction="row" gap={2}>
+    <Stack gap={8}>
       <StoryComponent />
     </Stack>
   ),

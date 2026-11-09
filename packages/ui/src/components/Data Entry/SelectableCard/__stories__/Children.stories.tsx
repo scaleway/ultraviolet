@@ -24,7 +24,7 @@ export const Children: StoryFn = args => {
       >
         {({ checked }) => (
           <Stack gap={1}>
-            <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+            <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
               I am a children with a badge &nbsp;
               <Badge prominence={checked ? 'default' : 'strong'} sentiment={checked ? 'info' : 'neutral'}>
                 info
@@ -43,7 +43,7 @@ export const Children: StoryFn = args => {
         value="label-10"
       >
         <Stack gap={2}>
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
             I am a children with clickable select input
             <Stack gap={1}>
               <Checkbox
@@ -88,7 +88,9 @@ export const Children: StoryFn = args => {
       >
         {({ disabled }) => (
           <Stack gap={1}>
-            I am a children with a badge &nbsp;
+            <Text as="p" prominence="weak" variant="bodySmall">
+              I am a children with a badge
+            </Text>
             <Badge disabled={disabled}>disabled info</Badge>
           </Stack>
         )}
@@ -106,10 +108,8 @@ Children.parameters = {
 }
 Children.decorators = [
   StoryComponent => (
-    <div style={{ height: '400px' }}>
-      <Stack direction="row" gap={2}>
-        <StoryComponent />
-      </Stack>
-    </div>
+    <Stack direction="row" gap={2}>
+      <StoryComponent />
+    </Stack>
   ),
 ]
