@@ -17,5 +17,6 @@ export type {
   FilterConfigItemSelect,
   FilterConfigItemSlider,
   FilterConfigItemText,
+  FilterConfigItemUnit,
   FilterComponentProps,
 } from './types'
