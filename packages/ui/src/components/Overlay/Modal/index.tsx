@@ -12,7 +12,16 @@ export type ModalProps = {
   hideOnEsc?: boolean
   hideOnClickOutside?: boolean
   preventBodyScroll?: boolean
+  /**
+   * @deprecated use `accessibleLabel` instead.
+   */
   ariaLabel?: string
+  /** Accessible label visually hidden in the modal */
+  accessibleLabel?: string
+  /** Id of the element titling the modal. Takes precedence over `accessibleLabel`. */
+  ariaLabelledBy?: string
+  /** Id of the element describing the modal. */
+  ariaDescribedBy?: string
   disclosure?: ReactElement | ((state: ModalState) => ReactElement)
   isClosable?: boolean
   /**
@@ -37,6 +46,8 @@ export type ModalProps = {
    * Add an image a the top of the modal.
    */
   image?: string
+  /** Alternative text of the `image`. Defaults to `''` (decorative). */
+  imageAlt?: string
   style?: CSSProperties
   ref?: RefObject<HTMLDialogElement | null>
   /** When set to true, the modal is not counted in the nested-modals count */
@@ -47,7 +58,10 @@ export type ModalProps = {
  * It is often used to display a dialog with additional information or to ask for a confirmation.
  */
 export const Modal = ({
-  ariaLabel = 'modal',
+  ariaLabel,
+  accessibleLabel,
+  ariaLabelledBy,
+  ariaDescribedBy,
   id,
   children,
   disclosure,
@@ -66,6 +80,7 @@ export const Modal = ({
   'data-testid': dataTestId,
   backdropClassName,
   image,
+  imageAlt,
   style,
   ref,
   isDrawer,
@@ -122,6 +137,9 @@ export const Modal = ({
       <Container>
         <ModalContent
           ariaLabel={ariaLabel}
+          accessibleLabel={accessibleLabel}
+          ariaLabelledBy={ariaLabelledBy}
+          ariaDescribedBy={ariaDescribedBy}
           backdropClassName={backdropClassName}
           className={className}
           dataTestId={dataTestId}
@@ -133,6 +151,7 @@ export const Modal = ({
           hideOnClickOutside={hideOnClickOutside}
           hideOnEsc={hideOnEsc}
           image={image}
+          imageAlt={imageAlt}
           closeButtonSentiment={closeButtonSentiment}
           isClosable={isClosable}
           isDrawer={isDrawer}
