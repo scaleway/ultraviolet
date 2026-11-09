@@ -22,6 +22,7 @@ class MyDocument extends Document {
           <link href="/favicon/favicon.ico" rel="icon" />
           <link href="/favicon/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
           <script
+            id="theme-init"
             dangerouslySetInnerHTML={{
               __html: getThemeInitScript({ storageKey: 'next-app-theme' }),
             }}
