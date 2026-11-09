@@ -335,7 +335,9 @@ describe('menu', () => {
     const button = screen.getByRole('button', {
       name: 'click me',
     })
-    button.focus()
+    await waitFor(() => expect(screen.getByRole('menuitem', { name: /Not footer/ })).toHaveFocus())
+    await userEvent.click(button)
+    expect(button).toHaveFocus()
     await userEvent.keyboard('[Space]')
     expect(onKeyDown).toHaveBeenCalledOnce()
     expect(onClickMenu).toHaveBeenCalledTimes(0)
@@ -370,7 +372,9 @@ describe('menu', () => {
     const button = screen.getByRole('button', {
       name: 'click me',
     })
-    button.focus()
+    await waitFor(() => expect(screen.getByRole('menuitem', { name: /Not footer/ })).toHaveFocus())
+    await userEvent.click(button)
+    expect(button).toHaveFocus()
     await userEvent.keyboard('[Enter]')
     expect(onKeyDown).toHaveBeenCalledOnce()
     expect(onClickMenu).toHaveBeenCalledTimes(0)
