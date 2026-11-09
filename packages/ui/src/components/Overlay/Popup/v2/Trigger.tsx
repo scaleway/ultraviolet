@@ -72,7 +72,7 @@ export const Trigger = ({
       }
     }
     setAttribute('aria-expanded', open ? 'true' : 'false')
-    setAttribute('aria-controls', open ? (ariaControls ?? id) : null)
+    setAttribute('aria-controls', ariaControls ?? (open ? id : null))
     setAttribute('aria-haspopup', ariaHasPopup ?? role)
   }, [open, role, id, refs, ariaControls, ariaHasPopup])
 

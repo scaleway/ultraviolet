@@ -101,13 +101,10 @@ export const dropdownItem = recipe({
     dropdownItemBase,
     {
       selectors: {
-        '&:focus': {
-          backgroundColor: theme.colors.primary.background,
-        },
         '&:hover': {
           backgroundColor: theme.colors.neutral.backgroundHover,
           cursor: 'pointer',
-          color: theme.colors.neutral.text,
+          color: theme.colors.neutral.textHover,
         },
       },
     },
@@ -122,6 +119,12 @@ export const dropdownItem = recipe({
       true: {
         backgroundColor: theme.colors.primary.background,
         color: theme.colors.primary.text,
+        selectors: {
+          '&:hover': {
+            backgroundColor: theme.colors.primary.backgroundHover,
+            color: theme.colors.primary.textHover,
+          },
+        },
       },
     },
     size: {

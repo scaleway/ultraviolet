@@ -97,6 +97,26 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       renderPopup({ panelProps: { role: 'menu' } })
       expect(screen.getByRole('button', { name: 'Open' })).toHaveAttribute('aria-haspopup', 'menu')
     })
+
+    it('should let explicit ARIA props override the trigger defaults and child attributes', async () => {
+      renderWithTheme(
+        <Popup.Root>
+          <Popup.Trigger aria-controls="custom-listbox" aria-haspopup="listbox">
+            <button aria-controls="child-listbox" aria-haspopup="menu" type="button">
+              Open
+            </button>
+          </Popup.Trigger>
+          <Popup.Panel role="listbox">Content</Popup.Panel>
+        </Popup.Root>,
+      )
+
+      const trigger = screen.getByRole('button', { name: 'Open' })
+      await userEvent.click(trigger)
+
+      expect(trigger).toHaveAttribute('aria-controls', 'custom-listbox')
+      expect(trigger).toHaveAttribute('aria-haspopup', 'listbox')
+      expect(trigger).toHaveAttribute('aria-expanded', 'true')
+    })
   })
 
   describe('keyboard and pointer', () => {

@@ -47,14 +47,11 @@ const moveFocusUp = (container: ParentNode, searchBarRef?: RefObject<HTMLInputEl
   const options = container.querySelectorAll<HTMLElement>(OPTION_SELECTOR)
   const activeItem = document.activeElement
 
-  for (let i = 0; i < options.length; i += 1) {
-    if (activeItem === options[i]) {
-      if (i === 0) {
-        searchBarRef?.current?.focus()
-      } else {
-        options[i - 1].focus()
-      }
-    }
+  const activeOptionIndex = activeItem instanceof HTMLElement ? [...options].indexOf(activeItem) : -1
+  if (activeOptionIndex === 0) {
+    searchBarRef?.current?.focus()
+  } else if (activeOptionIndex > 0) {
+    options[activeOptionIndex - 1].focus()
   }
 }
 const handleKeyDownSelect = (
@@ -106,7 +103,6 @@ export const CreateDropdown = ({
       .find((option): option is OptionType => !!option && !option.disabled) ??
     focusableOptions.find(option => !option.disabled)
 
-  const listBoxLabelId = useId()
   const optionGroupLabelId = useId()
 
   useEffect(() => {
@@ -145,13 +141,12 @@ export const CreateDropdown = ({
   if (isLoading) {
     return (
       <Stack
-        aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
+        aria-labelledby={listboxLabelledBy}
         className={selectInputStyle.dropdownContainer}
         id={listboxId}
         onKeyDown={event => handleKeyDownSelect(event, searchBarRef)}
         role="listbox"
       >
-        {!listboxLabelledBy ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
         <Skeleton variant="block" />
       </Stack>
     )
@@ -161,13 +156,12 @@ export const CreateDropdown = ({
     return (
       <Stack
         alignItems="center"
-        aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
+        aria-labelledby={listboxLabelledBy}
         className={selectInputStyle.dropdownEmptyState}
         gap={2}
         id={listboxId}
         role="listbox"
       >
-        {!listboxLabelledBy ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
         {computedEmptyState}
       </Stack>
     )
@@ -182,12 +176,11 @@ export const CreateDropdown = ({
 
     return (
       <Stack
-        aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
+        aria-labelledby={listboxLabelledBy}
         id={listboxId}
         onKeyDown={event => handleKeyDownSelect(event, searchBarRef)}
         role="listbox"
       >
-        {!listboxLabelledBy ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
         <AddOption
           addOption={addOption}
           isEmpty={isEmpty}
@@ -201,13 +194,12 @@ export const CreateDropdown = ({
 
   return Array.isArray(displayedOptions) ? (
     <Stack
-      aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
+      aria-labelledby={listboxLabelledBy}
       className={selectInputStyle.dropdownContainer}
       onKeyDown={event => handleKeyDownSelect(event, searchBarRef)}
       id={listboxId}
       role="listbox"
     >
-      {!listboxLabelledBy ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
       <AddOption
         addOption={addOption}
         option={{
@@ -223,7 +215,6 @@ export const CreateDropdown = ({
       <Stack
         aria-labelledby={optionGroupLabelId}
         gap={0.25}
-        data-type="items"
         className={selectInputStyle.dropdownSection}
         // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role - listbox groups must use ARIA roles
         role="group"
@@ -247,14 +238,13 @@ export const CreateDropdown = ({
     </Stack>
   ) : (
     <Stack
-      aria-labelledby={listboxLabelledBy ?? listBoxLabelId}
+      aria-labelledby={listboxLabelledBy}
       className={selectInputStyle.dropdownContainer}
       data-grouped
       id={listboxId}
       onKeyDown={event => handleKeyDownSelect(event, searchBarRef)}
       role="listbox"
     >
-      {!listboxLabelledBy ? <VisuallyHidden id={listBoxLabelId}>Options</VisuallyHidden> : null}
       <AddOption
         addOption={addOption}
         option={{
@@ -274,16 +264,15 @@ export const CreateDropdown = ({
 
         return hasElements || emptyStateGroup ? (
           <Stack
-            aria-labelledby={`${optionGroupLabelId}-${index}`}
+            aria-labelledby={group ? `${optionGroupLabelId}-${index}` : undefined}
             gap={0.25}
             key={group}
             className={selectInputStyle.dropdownSection}
             // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role - listbox groups must use ARIA roles
             role="group"
           >
-            <VisuallyHidden id={`${optionGroupLabelId}-${index}`}>{group}</VisuallyHidden>
-            <Group group={group} index={index} />
-            <Stack gap="0.25" data-type="items" role="presentation">
+            <Group group={group} index={index} labelId={`${optionGroupLabelId}-${index}`} />
+            <Stack gap="0.25" role="presentation">
               {!hasElements && emptyStateGroup ? (
                 <Text
                   as="span"

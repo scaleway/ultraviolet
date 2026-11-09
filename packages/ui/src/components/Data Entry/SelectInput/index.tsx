@@ -113,8 +113,9 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = BaseFormCom
    */
   value?: IsMulti extends true ? string[] : string
   onChange?: IsMulti extends true ? (value: string[]) => void : (value: string) => void
-  /** In some cases, when the space is limited, you will need to change the `portalTarget` of the dropdown for a higher parent element.
-   * If you don't know which element to target, you can use `document.body`.
+  /**
+   * Where the popup is portaled. Pass `null` to render inline.
+   * @default the closest `dialog` parent, or document.body
    */
   portalTarget?: ComponentProps<typeof Popup.Panel>['portalTarget']
   /**

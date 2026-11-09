@@ -5,7 +5,7 @@ import { Checkbox } from '../../../Checkbox'
 import { useSelectInput } from '../../SelectInputProvider'
 import { selectInputStyle } from '../../styles.css'
 
-export const Group = ({ group, index }: { group: string; index: number }) => {
+export const Group = ({ group, index, labelId }: { group: string; index: number; labelId: string }) => {
   const { selectAllGroup, selectedData, size, setSelectedData, multiselect, options, onChange } = useSelectInput()
 
   const handleSelectGroup = () => {
@@ -30,11 +30,17 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
 
   const groupLabel = useMemo(
     () => (
-      <Text as="span" placement="left" sentiment="neutral" variant={size === 'small' ? 'captionSmall' : 'caption'}>
+      <Text
+        as="span"
+        id={labelId}
+        placement="left"
+        sentiment="neutral"
+        variant={size === 'small' ? 'captionSmall' : 'caption'}
+      >
         {group.toUpperCase()}
       </Text>
     ),
-    [group, size],
+    [group, labelId, size],
   )
 
   if (!group) {
@@ -42,7 +48,7 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
   }
 
   return (
-    <div className={selectInputStyle.dropdownGroupWrapper} data-type="items" role="presentation">
+    <div className={selectInputStyle.dropdownGroupWrapper} role="presentation">
       {selectAllGroup ? (
         <div
           aria-selected={selectedData.selectedGroups.includes(group)}
@@ -79,7 +85,7 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
           </Checkbox>
         </div>
       ) : (
-        <div aria-hidden="true" className={selectInputStyle.dropdownGroup} data-testid={`group-${index}`}>
+        <div className={selectInputStyle.dropdownGroup} data-testid={`group-${index}`}>
           {groupLabel}
         </div>
       )}

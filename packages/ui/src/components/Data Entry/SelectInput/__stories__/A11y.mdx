@@ -87,7 +87,7 @@ To apply when using the component:
 
 - ✅ **Duplicate IDs**:
   - `id="option-{indexOption}"` was group-local and `id="items"` was repeated, breaking `getElementById`, associations, and assistive technology.
-  - **Resolved** by using `useId()` per option and replacing `id="items"` with `data-type="items"`.
+  - **Resolved** by using `useId()` per option and querying enabled `role="option"` elements within the listbox.
 - ✅ **Every option is a tab stop**:
   - All options were `tabIndex={0}`, producing a long tab sequence and leaving the dropdown open while focus moved on.
   - **Resolved** with a roving tabindex. Only the active option is `tabIndex={0}`, others `-1`.
