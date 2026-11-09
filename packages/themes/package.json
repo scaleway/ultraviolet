@@ -75,9 +75,11 @@
   },
   "devDependencies": {
     "@repo/config": "workspace:*",
+    "@types/node": "26.6.6",
     "react": "19.3.1",
     "react-dom": "19.3.1",
-    "vite": "catalog:"
+    "vite": "catalog:",
+    "vitest": "catalog:"
   },
   "peerDependencies": {
     "react": "18.x || 19.x",
