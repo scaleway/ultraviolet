@@ -6,13 +6,13 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 ## Description
 
-Modal is a dialog component that displays content on top of other page content, commonly used for dialogs with additional information or confirmations. It moves focus inside on open, traps it, restores it on close, and supports keyboard navigation (Escape to close), accessible naming (`ariaLabelledBy` / `ariaLabel`) and description (`ariaDescribedBy`).
+Modal is a dialog component that displays content on top of other page content, commonly used for dialogs with additional information or confirmations. It moves focus inside on open, traps it, restores it on close, and supports keyboard navigation (Escape to close), accessible naming (`ariaLabelledBy` / `accessibleLabel`) and description (`ariaDescribedBy`).
 
 ## Summary
 
-1. ✅ **Perceivable**: Semantic `<dialog>` element, accessible naming via `ariaLabelledBy` (preferred) or `ariaLabel`, labelled close button, `imageAlt` for images.
+1. ✅ **Perceivable**: Semantic `<dialog>` element, accessible naming via `ariaLabelledBy` or `accessibleLabel`, labelled close button, `imageAlt` for images.
 2. ✅ **Operable**: Focus moves to the first focusable element inside the dialog on open, the focus trap keeps Tab cycles inside, and focus is restored to the previously focused element on close — including modals opened with the `open` prop.
-3. ✅ **Understandable**: Clear labeling via `ariaLabelledBy`/`ariaLabel`, consistent behavior.
+3. ✅ **Understandable**: Clear labeling via `ariaLabelledBy`/`accessibleLabel`, consistent behavior.
 4. ✅ **Robust**: `ariaLabelledBy` and `ariaDescribedBy` are forwarded to the native `<dialog>`. Native `showModal()` is intentionally not used (top-layer conflicts with popups) and `preventBodyScroll` is kept for `Drawer`'s push variant.
 
 ## ARIA Pattern
@@ -25,7 +25,7 @@ Enforced by the component:
 
 - ✅ [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) - Focus trap via `handleFocusTrap`
 - ✅ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - Initial focus goes to the first focusable element inside the dialog; focus is restored to the previously focused element on close, with or without a `disclosure`
-- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - `ariaLabelledBy` (preferred) or `ariaLabel`, plus `ariaDescribedBy`
+- ✅ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - `ariaLabelledBy` or `accessibleLabel`, plus `ariaDescribedBy`
 
 To apply when using the component:
 
