@@ -13,6 +13,7 @@ export type FilterValues = {
     startAt: Date | null
     endAt: Date | null
   }
+  age: { value: number; unit: string } | null
 }
 
 const labelDescription = (
@@ -32,6 +33,7 @@ export const demoDefaultValues: FilterValues = {
     startAt: null,
     endAt: null,
   },
+  age: null,
 }
 
 export const demoFilters: FilterConfig<FilterValues>[] = [
@@ -101,5 +103,17 @@ export const demoFilters: FilterConfig<FilterValues>[] = [
     min: 0,
     max: 64,
     double: true,
+  },
+  {
+    type: 'unit',
+    name: 'age',
+    label: 'Age',
+    placeholder: '0',
+    placeholderUnit: 'Select unit',
+    options: [
+      { label: 'Seconds', value: 'seconds' },
+      { label: 'Days', value: 'days' },
+      { label: 'Months', value: 'months' },
+    ],
   },
 ]

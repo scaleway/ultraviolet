@@ -2,6 +2,7 @@ import type { ComponentProps, ReactNode } from 'react'
 import type { DateInput } from '../../components/Data Entry/DateInput'
 import type { SelectInput } from '../../components/Data Entry/SelectInput'
 import type { Slider } from '../../components/Data Entry/Slider'
+import type { UnitInput } from '../../components/Data Entry/UnitInput'
 import type { DatetimeRangeLocales } from './filterTypes/FilterDatetimeRange/type'
 
 export type AnyObject = Record<string, unknown>
@@ -112,6 +113,11 @@ export type FilterConfigItemNumber = FilterConfigItemBase & {
   step?: number
 }
 
+export type FilterConfigItemUnit = FilterConfigItemBase &
+  Pick<ComponentProps<typeof UnitInput>, 'options' | 'min' | 'max' | 'step' | 'placeholderUnit'> & {
+    type: 'unit'
+  }
+
 export type FilterConfigItemCustom = FilterConfigItemBase & { type: string }
 
 export type FilterConfigItem<V extends AnyObject = AnyObject> =
@@ -120,6 +126,7 @@ export type FilterConfigItem<V extends AnyObject = AnyObject> =
   | FilterConfigItemSelect<V>
   | FilterConfigItemMultiSelect<V>
   | FilterConfigItemSlider
+  | FilterConfigItemUnit
   | FilterConfigItemDatetimeRange
   | FilterConfigItemDate
   | FilterConfigItemDateRange

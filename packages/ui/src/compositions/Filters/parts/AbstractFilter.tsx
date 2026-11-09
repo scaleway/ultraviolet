@@ -8,6 +8,7 @@ import { FilterSearch } from '../filterTypes/FilterSearch'
 import { FilterSelect } from '../filterTypes/FilterSelect'
 import { FilterSlider } from '../filterTypes/FilterSlider'
 import { FilterText } from '../filterTypes/FilterText'
+import { FilterUnit } from '../filterTypes/FilterUnit'
 import type { FilterComponentProps, FilterConfig } from '../types'
 
 type AbstractFilterProps = FilterComponentProps & {
@@ -24,6 +25,7 @@ const defaultFieldComponents = {
   date: FilterDate,
   dateRange: FilterDateRange,
   number: FilterNumber,
+  unit: FilterUnit,
 }
 
 const defaultCustomComponents = {}
