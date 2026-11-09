@@ -71,7 +71,6 @@ export const Group = ({ group, index, labelId }: { group: string; index: number;
           tabIndex={-1}
         >
           <Checkbox
-            aria-hidden
             checked={selectedData.selectedGroups.includes(group)}
             className={selectInputStyle.dropdownCheckbox}
             data-testid="select-group"

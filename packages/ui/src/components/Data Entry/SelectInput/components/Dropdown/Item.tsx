@@ -85,7 +85,6 @@ export const Item = forwardRef<HTMLDivElement, ItemProps>(
         >
           {multiselect ? (
             <Checkbox
-              aria-hidden
               checked={selectedData.selectedValues.includes(option.value) && !option.disabled}
               className={selectInputStyle.dropdownCheckbox}
               disabled={option.disabled}
