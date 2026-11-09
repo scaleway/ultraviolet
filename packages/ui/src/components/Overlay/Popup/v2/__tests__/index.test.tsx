@@ -1,6 +1,7 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
+import { useRef } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Popup } from '..'
 import { Modal } from '../../../Modal'
@@ -165,6 +166,46 @@ describe('popup v2', () => {
       await userEvent.click(trigger)
 
       await waitFor(() => expect(screen.getByRole('dialog')).toHaveStyle({ width: '240px' }))
+    })
+
+    it('should use triggerContainerRef as the anchored and measured element', async () => {
+      const ContainerTrigger = () => {
+        const containerRef = useRef<HTMLDivElement>(null)
+
+        return (
+          <div data-testid="trigger-container" ref={containerRef} style={{ width: '400px' }}>
+            <Popup.Root>
+              <Popup.Trigger triggerContainerRef={containerRef}>
+                <button type="button">Open</button>
+              </Popup.Trigger>
+              <Popup.Panel matchTriggerWidth>Content</Popup.Panel>
+            </Popup.Root>
+          </div>
+        )
+      }
+
+      renderWithTheme(<ContainerTrigger />)
+
+      const container = screen.getByTestId('trigger-container')
+      const trigger = screen.getByRole('button', { name: 'Open' })
+      const rect = (width: number) => ({
+        bottom: 20,
+        height: 20,
+        left: 0,
+        right: width,
+        top: 0,
+        width,
+        x: 0,
+        y: 0,
+        toJSON: () => ({}),
+      })
+      container.getBoundingClientRect = () => rect(400)
+      trigger.getBoundingClientRect = () => rect(200)
+
+      await userEvent.click(trigger)
+
+      await waitFor(() => expect(screen.getByRole('dialog')).toHaveStyle({ width: '400px' }))
+      expect(trigger).toHaveAttribute('aria-expanded', 'true')
     })
 
     it('should portal the panel to document.body by default', async () => {
