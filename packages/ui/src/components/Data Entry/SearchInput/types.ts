@@ -13,6 +13,9 @@ export type SearchBarChildrenFunctionProps = ({ searchTerms, isOpen, toggleIsOpe
 
 export type SearchInputProps = {
   popupPlacement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
+  /**
+   * Close the results panel when the search string is shorter than the threshold.
+   */
   threshold?: number
   children?: SearchBarChildrenFunctionProps | ReactNode
   onSearch: (value: string) => void
