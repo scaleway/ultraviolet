@@ -144,7 +144,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
 
       try {
         onSearch(localValue)
-        if (localValue.length >= threshold && !isOpen) {
+        if ((localValue.length >= threshold && !isOpen) || (localValue.length < threshold && isOpen)) {
           toggleIsOpen()
         }
       } catch {

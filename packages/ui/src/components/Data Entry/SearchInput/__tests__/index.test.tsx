@@ -2,7 +2,7 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useState } from 'react'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { SearchInput } from '..'
 import { Button } from '../../../Action/Button'
 
@@ -88,6 +88,30 @@ describe('searchInput', () => {
     await userEvent.keyboard('{Tab}')
     await userEvent.keyboard('{Enter}')
     await waitFor(() => expect(searchValue).toBe(''))
+  })
+
+  it('closes the popup below the threshold and reopens it on reaching the threshold', async () => {
+    const onClose = vi.fn()
+
+    renderWithTheme(
+      <SearchInput label="input-label" onClose={onClose} onSearch={() => {}} placeholder="Type something" threshold={2}>
+        <div>
+          <a href="/">Result 1</a>
+        </div>
+      </SearchInput>,
+    )
+
+    const searchInputElement = screen.getByRole('textbox', { name: 'input-label' })
+
+    await userEvent.type(searchInputElement, 'sc')
+    await waitFor(() => expect(screen.getByRole('dialog')).toBeVisible())
+
+    await userEvent.keyboard('{Backspace}')
+    await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
+    expect(onClose).toHaveBeenCalledTimes(1)
+
+    await userEvent.type(searchInputElement, 'w')
+    await waitFor(() => expect(screen.getByRole('dialog')).toBeVisible())
   })
 
   it('renders correctly and verify accessibility', async () => {
