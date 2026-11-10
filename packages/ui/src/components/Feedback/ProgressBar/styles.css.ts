@@ -1,5 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { keyframes, style, styleVariants } from '@vanilla-extract/css'
+import { recipe } from '@vanilla-extract/recipes'
 import { SENTIMENTS_WITHOUT_NEUTRAL } from '../../../theme'
 import { percentageValue } from './variables.css'
 
@@ -8,15 +9,26 @@ const shineAnimation = keyframes({
   to: { left: '100%' },
 })
 
-const container = style({
-  backgroundColor: theme.colors.neutral.backgroundStrong,
-  borderRadius: theme.radii.default,
-  height: theme.sizing['050'],
-  marginLeft: 0,
-  marginRight: 0,
-  overflow: 'hidden',
-  position: 'relative',
-  width: '100%',
+const container = recipe({
+  base: {
+    backgroundColor: theme.colors.neutral.backgroundStrong,
+    borderRadius: theme.radii.default,
+    marginLeft: 0,
+    marginRight: 0,
+    overflow: 'hidden',
+    position: 'relative',
+    width: '100%',
+  },
+  variants: {
+    size: {
+      small: { height: theme.sizing['025'] },
+      medium: { height: theme.sizing['050'] },
+      large: { height: theme.sizing['100'] },
+    },
+  },
+  defaultVariants: {
+    size: 'medium',
+  },
 })
 
 const customText = styleVariants({
@@ -53,19 +65,19 @@ const base = style({
 })
 
 const filledBarSentiments = styleVariants(
-  SENTIMENTS_WITHOUT_NEUTRAL.reduce(
-    (acc, sentimentKey) => ({
-      ...acc,
-      [sentimentKey]: [
+  Object.fromEntries(
+    SENTIMENTS_WITHOUT_NEUTRAL.map(sentimentKey => [
+      sentimentKey,
+      [
         base,
         {
-          backgroundColor: theme.colors[sentimentKey]?.backgroundStrong,
+          backgroundColor: theme.colors[sentimentKey].text,
         },
       ],
-    }),
-    {} as Record<(typeof SENTIMENTS_WITHOUT_NEUTRAL)[number], { backgroundColor: string }>,
+    ]),
   ),
 )
+
 export const progressBarStyle = {
   container,
   customText,

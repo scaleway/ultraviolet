@@ -17,6 +17,7 @@ type ProgressBarProps = {
   prefix?: ReactNode
   suffix?: ReactNode
   max?: number
+  size?: 'small' | 'medium' | 'large'
   label?: string
   labelDescription?: ReactNode
   direction?: 'column' | 'row'
@@ -43,6 +44,7 @@ export const ProgressBar = ({
   suffix = '%',
   max = 100,
   label,
+  size = 'medium',
   labelDescription,
   direction = 'column',
   'aria-labelledby': ariaLabelledBy,
@@ -80,7 +82,7 @@ export const ProgressBar = ({
         aria-valuemax={max}
         aria-valuemin={0}
         aria-valuenow={value}
-        className={cn(className, progressBarStyle.container)}
+        className={cn(className, progressBarStyle.container({ size }))}
         data-testid={dataTestId}
         role="progressbar"
         style={style}
