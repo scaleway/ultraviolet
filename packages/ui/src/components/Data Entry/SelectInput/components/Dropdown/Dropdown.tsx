@@ -163,9 +163,7 @@ export const Dropdown = ({
 
   return (
     <Popup.Root visible={isDropdownVisible && !disabled} onOpenChange={setIsDropdownVisible}>
-      <Popup.Trigger aria-controls={listboxId} aria-haspopup="listbox">
-        {children}
-      </Popup.Trigger>
+      <Popup.Trigger>{children}</Popup.Trigger>
       <Popup.Panel
         ref={ref}
         aria-labelledby={listboxLabelledBy}
