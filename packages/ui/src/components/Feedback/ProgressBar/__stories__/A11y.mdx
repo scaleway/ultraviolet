@@ -41,7 +41,7 @@ To apply when using the component:
 
 **High:**
 
-- The filled bar does not always meet the 3:1 non-text contrast ratio against the track - Measured contrast ratios: `warning` on the light theme is 1.32:1; on the dark theme `primary` 1.69:1, `danger` 1.94:1, `info` 2.27:1 and `secondary` 2.27:1 all fail; on the darker theme every sentiment except `warning` fails. Consider fill colors that maintain at least 3:1 against the track in every theme.
+- The filled bar does not always meet the 3:1 non-text contrast ratio against the track - Measured contrast ratios: `warning` on the light theme is 1.32:1; on the dark theme `primary` 1.69:1, `danger` 2.07:1, `info` 2.27:1 and `secondary` 2.27:1 all fail; on the darker theme `primary` 2.04:1, `danger` 2.27:1, `info` 2.26:1 and `secondary` 2.24:1 all fail. Consider fill colors that maintain at least 3:1 against the track in every theme.
 
 - The visible `label` is not associated with the progressbar - The `label` is not wired to the `role="progressbar"` element (no generated `id`/`htmlFor`, no `aria-labelledby`). A screen reader announces "progressbar" with no accessible name by default. Consider generating an `id` for the label and referencing it from the progressbar with `aria-labelledby`.
 

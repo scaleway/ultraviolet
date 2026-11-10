@@ -6,7 +6,7 @@ export default {
   title: 'UI/Typography/Description',
   parameters: {
     a11yStatus: {
-      perceivable: false,
+      perceivable: true,
       operable: true,
       understandable: true,
       robust: false,

@@ -6,7 +6,7 @@ export default {
   title: 'UI/Action/Button',
   parameters: {
     a11yStatus: {
-      perceivable: false,
+      perceivable: true,
       operable: true,
       understandable: true,
       robust: true,
