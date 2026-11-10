@@ -100,7 +100,6 @@ const timeinput = recipe({
     borderRadius: theme.radii.default,
     caretColor: 'transparent',
     color: theme.colors.neutral.text,
-    fontSize: theme.typography.bodySmall.fontSize,
     height: theme.sizing[300],
     outline: 'none',
     selectors: {
@@ -123,8 +122,8 @@ const timeinput = recipe({
       '&:read-only': {
         cursor: 'default',
       },
-      '&[data-size="large"]': {
-        fontSize: theme.typography.body.fontSize,
+      '&::placeholder': {
+        color: theme.colors.neutral.textWeak,
       },
     },
     textAlign: 'center',
@@ -132,19 +131,45 @@ const timeinput = recipe({
   },
   defaultVariants: {
     period: false,
+    disabled: false,
   },
   variants: {
-    period: {
+    size: {
+      large: { fontSize: theme.typography.body.fontSize },
+      medium: { fontSize: theme.typography.body.fontSize },
+      small: { fontSize: theme.typography.bodySmall.fontSize },
+    },
+    disabled: {
       true: {
-        color: theme.colors.neutral.textWeak,
+        color: theme.colors.neutral.textDisabled,
         selectors: {
-          "&[data-size='large']": {
-            width: `calc(${theme.sizing['312']} + ${theme.sizing[100]})`,
+          '&::placeholder': {
+            color: theme.colors.neutral.textWeakDisabled,
           },
         },
       },
     },
+    period: {
+      true: {
+        color: theme.colors.neutral.textWeak,
+      },
+    },
   },
+  compoundVariants: [
+    {
+      variants: { period: true, disabled: true },
+      style: {
+        color: theme.colors.neutral.textWeakDisabled,
+        selectors: {
+          '&::placeholder': { color: theme.colors.neutral.textWeakDisabled },
+        },
+      },
+    },
+    {
+      variants: { period: true, size: 'large' },
+      style: { width: `calc(${theme.sizing['312']} + ${theme.sizing[100]})` },
+    },
+  ],
 })
 
 const timeSeparator = style({
