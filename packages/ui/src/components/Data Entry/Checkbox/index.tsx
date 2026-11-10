@@ -19,7 +19,7 @@ type CheckboxProps = BaseFormComponentProps<HTMLInputElement> &
     ['data-visibility']?: string
     tooltip?: string
     size?: 'default' | 'small'
-  } & Pick<InputHTMLAttributes<HTMLInputElement>, 'aria-hidden' | 'onChange' | 'onClick' | 'tabIndex' | 'value'>
+  } & Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'onClick' | 'tabIndex' | 'value'>
 
 /**
  * Checkbox is an input component used to select or deselect an option.
@@ -44,7 +44,6 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       'data-visibility': dataVisibility,
       'aria-label': ariaLabel,
       'aria-describedby': ariaDescribedBy,
-      'aria-hidden': ariaHidden,
       required,
       'data-testid': dataTestId,
       tooltip,
@@ -102,7 +101,6 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           <input
             aria-checked={checked === 'indeterminate' ? 'mixed' : isCheck}
             aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? `${localId}-hint` : undefined)}
-            aria-hidden={ariaHidden}
             aria-invalid={!!error}
             aria-label={ariaLabel}
             autoFocus={autoFocus}

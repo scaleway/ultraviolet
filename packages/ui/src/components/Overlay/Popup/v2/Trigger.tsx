@@ -13,18 +13,13 @@ type PopupTriggerProps = {
    * @default 'click'
    */
   triggerEvent?: 'click' | 'hover'
-  /**
-   * Overrides the `aria-controls` attribute landed on the trigger's focusable
-   * element
-   * @default popup-id
-   */
 }
 
 /**
  * Wraps the trigger element, wires the interaction hooks based on
  * `triggerEvent` and lands the ARIA attributes on the trigger's focusable
- * element (or on the wrapper when there is none). Existing `aria-controls` and
- * `aria-haspopup` attributes are preserved unless explicitly overridden by props.
+ * element (or on the wrapper when there is none).
+ * Existing `aria-controls` and `aria-haspopup` attributes are preserved
  */
 export const Trigger = ({ children, triggerEvent = 'click' }: PopupTriggerProps) => {
   const { context, dismiss, id, refs, open, role } = usePopupContext()
@@ -73,7 +68,7 @@ export const Trigger = ({ children, triggerEvent = 'click' }: PopupTriggerProps)
       }
     }
     setAttribute('aria-expanded', open ? 'true' : 'false')
-    setAttribute('aria-controls', initialAriaAttributes.current.controls ?? (open ? id : null))
+    setAttribute('aria-controls', open ? (initialAriaAttributes.current.controls ?? id) : null)
     setAttribute('aria-haspopup', initialAriaAttributes.current.hasPopup ?? role)
   }, [open, role, id, refs])
 
