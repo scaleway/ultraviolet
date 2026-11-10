@@ -2,4 +2,4 @@
 "@ultraviolet/ui": patch
 ---
 
-`TimeInput`: fix disabled style and fix oxc warnings
+`TimeInput`: fix disabled style, placeholder color and font-size, and fix oxc warnings
