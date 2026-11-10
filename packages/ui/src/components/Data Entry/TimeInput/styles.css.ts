@@ -132,8 +132,14 @@ const timeinput = recipe({
   },
   defaultVariants: {
     period: false,
+    disabled: false,
   },
   variants: {
+    disabled: {
+      true: {
+        color: theme.colors.neutral.textDisabled,
+      },
+    },
     period: {
       true: {
         color: theme.colors.neutral.textWeak,

@@ -29,7 +29,7 @@ export type Time = {
   period?: string
 }
 
-type TimeInputProps = BaseFormComponentProps<HTMLInputElement> & {
+type TimeInputProps = BaseFormComponentProps & {
   placeholder?: Time
   readOnly?: boolean
   value?: Date | null
@@ -138,9 +138,9 @@ export const TimeInput = ({
 
     const newValue = getValueByType(type, newTime)
     // Focus to next input if the current input has a valid time
-    if (type === 's' && newTime && newValue >= 7 && timeFormat === 12) {
+    if (type === 's' && newValue >= 7 && timeFormat === 12) {
       refPeriod.current?.focus()
-    } else if (type === 'm' && newTime && newValue >= 6) {
+    } else if (type === 'm' && newValue >= 6) {
       refSeconds.current?.focus()
     }
 
@@ -230,7 +230,13 @@ export const TimeInput = ({
   return (
     <Stack className={className} gap={0.5} style={style}>
       {label || labelDescription ? (
-        <Label htmlFor={id ?? localId} labelDescription={labelDescription} required={required} size={size}>
+        <Label
+          htmlFor={id ?? localId}
+          labelDescription={labelDescription}
+          required={required}
+          size={size}
+          disabled={disabled}
+        >
           {label}
         </Label>
       ) : null}
@@ -294,11 +300,11 @@ export const TimeInput = ({
                   aria-valuemax={computeMaxValue()}
                   aria-valuemin={type === 'h' && timeFormat === 12 ? 1 : 0}
                   aria-valuenow={
-                    filled[type] ? Number.parseInt(format(getValueByType(type, time), type, timeFormat), 10) : undefined
+                    filled[type] ? Math.trunc(Number(format(getValueByType(type, time), type, timeFormat))) : undefined
                   }
                   autoComplete="off"
                   autoFocus={autoFocus && type === 'h'}
-                  className={timeInputStyle.timeinput()}
+                  className={timeInputStyle.timeinput({ disabled })}
                   data-size={size}
                   data-testid={`${fullName()}-input`}
                   disabled={disabled}
@@ -307,7 +313,7 @@ export const TimeInput = ({
                     if (!isEditable) {
                       const key = getLastTypedChar(event.target.value, getValueByType(type, time))
                       if (isNumber(key)) {
-                        handleChange(type, Number.parseInt(key, 10))
+                        handleChange(type, Math.trunc(Number(key)))
                       }
                     }
                   }}
@@ -344,6 +350,7 @@ export const TimeInput = ({
                     prominence="default"
                     sentiment="neutral"
                     variant="body"
+                    disabled={disabled}
                   >
                     :
                   </Text>
@@ -360,7 +367,7 @@ export const TimeInput = ({
               aria-valuenow={period === 'am' ? 0 : 12}
               aria-valuetext={period}
               autoComplete="off"
-              className={timeInputStyle.timeinput({ period: true })}
+              className={timeInputStyle.timeinput({ period: true, disabled })}
               data-size={size}
               data-testid="am-pm-input"
               disabled={disabled}
