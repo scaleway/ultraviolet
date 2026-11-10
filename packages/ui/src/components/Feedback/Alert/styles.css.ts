@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { style, styleVariants } from '@vanilla-extract/css'
+import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import type { AlertSentiment } from './type'
 
@@ -52,13 +52,9 @@ const text = style({
   color: theme.colors.neutral.text,
 })
 
-const button = styleVariants({
-  medium: {
-    marginLeft: theme.space[5],
-  },
-  small: {
-    marginLeft: theme.space[3],
-  },
+const action = style({
+  alignSelf: 'flex-start',
+  marginLeft: 'auto',
 })
 
 const buttonClose = style({
@@ -73,7 +69,7 @@ export const alertStyle = {
   alert,
   wrap,
   text,
-  button,
+  action,
   buttonClose,
   icon,
 }

@@ -16,8 +16,7 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { Title } from './Title.stories'
-export { Button } from './Button.stories'
-export { Link } from './Link.stories'
+export { Action } from './Action.stories'
 export { Sentiments } from './Sentiments.stories'
 export { Size } from './Size.stories'
 export { Closable } from './Closable.stories'

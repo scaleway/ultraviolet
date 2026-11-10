@@ -22,14 +22,34 @@ const sentimentIcons = {
   warning: AlertCircleIcon,
 }
 
+type AlertActionButtonProps = Pick<ComponentProps<typeof Button>, 'disabled' | 'sentiment' | 'size'>
+
+type AlertRenderProps = {
+  buttonProps: AlertActionButtonProps
+}
+
 type AlertProps = {
-  children: ReactNode
+  /**
+   * Alert message. Pass a function to render content with a Button using `buttonProps`.
+   */
+  children: ReactNode | ((props: AlertRenderProps) => ReactNode)
   /**
    * Add a title at the top of your alert.
    */
   title?: string
   sentiment?: AlertSentiment
+  /**
+   * Action displayed at the end of the alert, such as a `Button` or a `Link`.
+   * Pass a function to render a Button with correct props using `buttonProps`.
+   */
+  action?: ReactNode | ((props: AlertRenderProps) => ReactNode)
+  /**
+   * @deprecated Use the `action` prop instead.
+   */
   buttonText?: ComponentProps<typeof Button>['children']
+  /**
+   * @deprecated Use the `action` prop instead.
+   */
   onClickButton?: () => void
   onClose?: () => void
   closable?: boolean
@@ -50,6 +70,7 @@ export const Alert = ({
   children,
   title,
   sentiment = 'danger',
+  action,
   buttonText,
   onClickButton,
   closable,
@@ -67,6 +88,22 @@ export const Alert = ({
     return null
   }
 
+  const buttonProps = {
+    disabled,
+    sentiment,
+    size: 'small',
+  } as const
+
+  const actionContent =
+    typeof action === 'function'
+      ? action({ buttonProps })
+      : (action ??
+        (buttonText ? (
+          <Button {...buttonProps} onClick={onClickButton}>
+            {buttonText}
+          </Button>
+        ) : null))
+
   return (
     <Stack
       className={cn(className, alertStyle.alert({ sentiment, size }))}
@@ -75,15 +112,8 @@ export const Alert = ({
       gap={1}
       style={style}
     >
-      <Stack
-        alignItems="center"
-        className={alertStyle.wrap}
-        direction="row"
-        gap={2}
-        justifyContent="space-between"
-        wrap
-      >
-        <Stack alignItems="flex-start" direction="row" flex="1 1 auto" gap={size === 'small' ? 1 : 2}>
+      <Stack alignItems="center" className={alertStyle.wrap} direction="row" gap={2} wrap>
+        <Stack alignItems="flex-start" direction="row" flex="1 1 0" gap={size === 'small' ? 1 : 2}>
           <Icon
             aria-hidden="true"
             className={alertStyle.icon}
@@ -97,26 +127,12 @@ export const Alert = ({
                 {title}
               </Text>
             ) : null}
-            {typeof children === 'string' ? (
-              <Text as="p" variant={size === 'small' ? 'bodySmall' : 'body'}>
-                {children}
-              </Text>
-            ) : (
-              children
-            )}
+            <Text as="div" variant={size === 'small' ? 'bodySmall' : 'body'}>
+              {typeof children === 'function' ? children({ buttonProps }) : children}
+            </Text>
           </Stack>
         </Stack>
-        {buttonText ? (
-          <Button
-            className={alertStyle.button[size]}
-            disabled={disabled}
-            onClick={onClickButton}
-            sentiment={sentiment}
-            size="small"
-          >
-            {buttonText}
-          </Button>
-        ) : null}
+        {actionContent ? <div className={alertStyle.action}>{actionContent}</div> : null}
       </Stack>
       {closable || onClose ? (
         <Button

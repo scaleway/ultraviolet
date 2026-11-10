@@ -1,12 +1,16 @@
+import { Button } from '../../../Action/Button'
 import { Template } from './Template.stories'
 
 export const Closable = Template.bind({})
 
 Closable.args = {
-  buttonText: 'More info',
+  action: ({ buttonProps }) => (
+    <Button {...buttonProps} onClick={() => alert('Button clicked')}>
+      More info
+    </Button>
+  ),
   children: 'This is a closable alert',
   closable: true,
-  onClickButton: () => alert('Button clicked'),
   sentiment: 'info',
   title: 'Information',
 }

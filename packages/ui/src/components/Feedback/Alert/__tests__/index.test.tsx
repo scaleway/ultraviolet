@@ -3,6 +3,8 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 import { Alert } from '..'
+import { Button } from '../../../Action/Button'
+import { Link } from '../../../Action/Link'
 
 describe('alert', () => {
   beforeAll(() => {
@@ -30,6 +32,33 @@ describe('alert', () => {
         Sample Alert
       </Alert>,
     ))
+
+  it('renders correctly with action', () => {
+    const { asFragment } = renderWithTheme(<Alert action={<Link href="#">More info</Link>}>Sample Alert</Alert>)
+
+    expect(screen.getByRole('link', { name: 'More info' })).toBeVisible()
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders correctly with action as a function and passes buttonProps', () => {
+    renderWithTheme(
+      <Alert action={({ buttonProps }) => <Button {...buttonProps}>More info</Button>} disabled sentiment="success">
+        Sample Alert
+      </Alert>,
+    )
+
+    expect(screen.getByRole('button', { name: 'More info' })).toBeDisabled()
+  })
+
+  it('renders correctly with children as a function and passes buttonProps', () => {
+    renderWithTheme(
+      <Alert disabled sentiment="success">
+        {({ buttonProps }) => <Button {...buttonProps}>More info</Button>}
+      </Alert>,
+    )
+
+    expect(screen.getByRole('button', { name: 'More info' })).toBeDisabled()
+  })
 
   it('renders correctly with closable and onClose', () =>
     shouldMatchSnapshot(
@@ -68,6 +97,7 @@ describe('alert', () => {
         Sample Alert
       </Alert>,
     ))
+
   it('renders correctly small', () =>
     shouldMatchSnapshot(
       <Alert className="small" size="small" title="title">

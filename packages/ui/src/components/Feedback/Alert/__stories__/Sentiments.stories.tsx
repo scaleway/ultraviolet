@@ -1,6 +1,7 @@
 import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { Alert } from '..'
+import { Button } from '../../../Action/Button'
 import { Stack } from '../../../Layout/Stack'
 import { ALERT_SENTIMENTS } from '../type'
 
@@ -9,8 +10,11 @@ export const Sentiments = (props: ComponentProps<typeof Alert>) =>
     <Alert
       key={sentiment}
       {...props}
-      buttonText="More info"
-      onClickButton={() => alert('Button clicked')}
+      action={({ buttonProps }) => (
+        <Button {...buttonProps} onClick={() => alert('Button clicked')}>
+          More info
+        </Button>
+      )}
       sentiment={sentiment}
       title={`${sentiment.charAt(0).toUpperCase() + sentiment.slice(1)} title`}
     >
