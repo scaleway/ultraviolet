@@ -304,8 +304,7 @@ export const TimeInput = ({
                   }
                   autoComplete="off"
                   autoFocus={autoFocus && type === 'h'}
-                  className={timeInputStyle.timeinput({ disabled })}
-                  data-size={size}
+                  className={timeInputStyle.timeinput({ disabled, size })}
                   data-testid={`${fullName()}-input`}
                   disabled={disabled}
                   id={id ?? localId}
@@ -367,8 +366,7 @@ export const TimeInput = ({
               aria-valuenow={period === 'am' ? 0 : 12}
               aria-valuetext={period}
               autoComplete="off"
-              className={timeInputStyle.timeinput({ period: true, disabled })}
-              data-size={size}
+              className={timeInputStyle.timeinput({ period: true, disabled, size })}
               data-testid="am-pm-input"
               disabled={disabled}
               id={id ?? localId}
