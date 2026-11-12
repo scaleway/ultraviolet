@@ -83,6 +83,10 @@ const AccessibilityAudit = () => {
     return acc
   }, [])
 
+  const auditedComponents = componentsInfo.filter(component => component.a11yLevel !== 'unknown')
+  const auditedPercentage =
+    componentsInfo.length > 0 ? Math.round((auditedComponents.length / componentsInfo.length) * 100) : 0
+
   return (
     <Stack gap={5}>
       <Stack gap={2}>
@@ -90,6 +94,16 @@ const AccessibilityAudit = () => {
           Accessibility audit tracking for all Ultraviolet components.
         </Text>
       </Stack>
+
+      <ProgressBar
+        label="Audited components"
+        showProgress
+        suffix={`% (${auditedComponents.length}/${componentsInfo.length})`}
+        max={100}
+        value={auditedPercentage}
+        sentiment={auditedPercentage === 100 ? 'success' : 'primary'}
+        direction="column"
+      />
 
       <Stack gap={3}>
         <Text as="h2" variant="heading">
