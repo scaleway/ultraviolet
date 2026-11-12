@@ -1,11 +1,15 @@
 import type { StoryFn } from '@storybook/react-vite'
+import { capitalize } from '@ultraviolet/utils'
+import { ProgressBar } from '..'
 import { PROGRESS_BAR_SENTIMENTS } from '../constants'
-import UncontrolledProgressBar from './UncontrolledProgressBar'
 
 export const Sentiments: StoryFn = props => (
   <>
     {PROGRESS_BAR_SENTIMENTS.map(sentiment => (
-      <UncontrolledProgressBar key={sentiment} sentiment={sentiment} {...props} />
+      <>
+        {capitalize(sentiment)}:
+        <ProgressBar key={sentiment} sentiment={sentiment} {...props} />
+      </>
     ))}
   </>
 )
@@ -22,4 +26,8 @@ Sentiments.parameters = {
   docs: {
     description: { story: 'Set sentiment using `sentiment` prop.' },
   },
+}
+
+Sentiments.args = {
+  value: 30,
 }
