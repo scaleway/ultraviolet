@@ -56,6 +56,7 @@ To apply when using the component:
 
 **Medium:**
 
+- Missing `role="switch"` on the input. The [Switch Example Using HTML Checkbox Input](https://www.w3.org/WAI/ARIA/apg/patterns/switch/examples/switch-checkbox/) sets `role="switch"` on the `input[type="checkbox"]`, which makes assistive technologies announce "switch, on/off" instead of "checkbox, checked". Since the component is a visual on/off switch, the `switch` role is the better semantic match; the native `checked` attribute still conveys the state, per the pattern. This is not a WCAG failure (a checkbox is a valid binary control), but aligning the role with the visual design improves the screen reader experience.
 - Move the `Description` (helper/error) outside the `<label>`. It currently sits inside the wrapping `<label>` and is kept out of the accessible name only because `role="status"` excludes it from the name computation. The `<label>` should only contain the control and its label text; a description belongs outside, linked via `aria-describedby`.
 - Invalid `for` attribute on the label `<span>`. `<Text as="span" htmlFor={localId}>` renders a `for` attribute on a `<span>`, which is invalid HTML and has no effect on label association. Remove the `htmlFor` on the span.
 - Required asterisk leaks into the accessible name. Confirmed with a screen reader: the `*` superscript is announced (e.g. "Toggle me on star") even though the native `required` attribute already conveys the required state. Consider hiding the asterisk with `aria-hidden` so screen reader users do not hear "star".
