@@ -7,7 +7,7 @@ export default {
   tags: [],
   parameters: {
     a11yStatus: {
-      perceivable: true,
+      perceivable: false,
       operable: false,
       understandable: true,
       robust: false,

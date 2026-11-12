@@ -6,58 +6,52 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 ## Description
 
-A floating bar that appears at the bottom of the page to display important actions or information. It is rendered through a portal into `document.body` (always on top of other elements) and defaults to `role="dialog"`, behaving as a non-modal dialog: no focus trap, no `aria-modal`, and no built-in close control.
+A floating bar for contextual actions, used by List and Table selection bars. It is rendered through a portal into `document.body`, defaults to `role="dialog"`, and does not manage visibility, focus, or dismissal. It is non-modal: there is no focus trap or `aria-modal`.
 
 ## Summary
 
-1. ✅ **Perceivable**: Content is text-based and left to consumers; no color-only or contrast issue enforced by the component itself.
-2. ❌ **Operable**: Portal rendering at the end of `document.body` breaks the logical focus order, no focus is moved into the bar when it appears nor restored on dismissal, and the entrance `fadeIn` animation does not respect `prefers-reduced-motion`.
+1. ⚠️ **Perceivable**: Content is text-based and left to consumers; no color-only or contrast issue enforced by the component itself. The fixed `37.5rem` width can overflow a 320 CSS-pixel viewport (WCAG 1.4.10).
+2. ⚠️ **Operable**: The component does not trap focus; its children provide the interactions. Portal placement puts the bar at the end of DOM order, which should be checked in context.
 3. ✅ **Understandable**: No labels or instructions enforced by the component; consumers provide them for their content.
-4. ❌ **Robust**: The default `role="dialog"` has no accessible name (no `aria-label`, `aria-labelledby`, or naming prop).
+4. ❌ **Robust**: The default `role="dialog"` has no accessible name, and the component exposes no naming prop. A named `region` or `toolbar` would also need an accessible name.
 
 ## ARIA Pattern
 
-[Dialog (Modal) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) - used in its non-modal form: the ActionBar overlays the page but background content remains operable and `aria-modal` is correctly not set.
+There is no single pattern for a generic floating action bar. The [Dialog (Modal) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) does not describe this non-modal component. For the List/Table selection use case, a named [landmark region](https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/) is a candidate that supports direct navigation without trapping focus. Use the [Toolbar Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/) only for a group of at least three related controls that implements its arrow-key and focus-management behavior. Keep `dialog` only if the bar is intentionally treated as a dialog and its naming and focus behavior are defined.
 
 ## Rules
 
 Enforced by the component:
 
-- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Focusable children remain operable via keyboard; the bar itself does not add non-keyboard interactions
-- ✅ [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) - No focus trap; background content stays reachable with Tab
+- ✅ [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) - The component does not trap focus; keyboard users can continue to the rest of the page
 - ❌ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - Portal appends the bar at the end of `document.body`, so its actions come last in the tab order; no focus is moved into the dialog on open or returned to the trigger on dismiss
-- ❌ [WCAG 2.3.3 - Animation from Interactions (Level AAA)](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html) - Entrance `fadeIn` animation runs on mount without a `prefers-reduced-motion: reduce` media query
-- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - `role="dialog"` without an accessible name; screen readers announce an unlabeled "dialog"
+- ❌ [WCAG 1.4.10 - Reflow (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html) - The default fixed width of `37.5rem` can require horizontal scrolling at a 320 CSS-pixel viewport
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The default `role="dialog"` has no accessible name
 
 To apply when using the component:
 
+- [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Ensure consumer-provided controls are keyboard operable
+- [WCAG 2.4.11 - Focus Not Obscured (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html) - Check that the fixed bar does not entirely obscure the page element that retains keyboard focus when the bar appears
 - [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Maintain semantic structure (headings, lists) inside the bar content
 - [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - Ensure meaning is not conveyed by color alone within the bar content
 - [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - Provide labels for any form controls placed in the bar
-- [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - If `role="status"` or `role="alert"` is passed, the bar is only announced when it appears via the live-region semantics of that role
+- [WCAG 4.1.3 - Status Messages (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) - If the bar communicates a status update (such as a selection count), expose that update as a status message; do not use `status` or `alert` as the role for interactive action controls
 
 ## Accessibility issues
 
-### Critical
+**Critical:**
 
-- **Dialog role without an accessible name**: The default `role="dialog"` provides no `aria-label` or `aria-labelledby`, and the component exposes no naming prop. Per the Dialog pattern every dialog must have an accessible name. Screen reader users hear an unlabeled "dialog" and cannot identify its purpose. Add an `accessibleLabel`/`accessibleName` prop that is forwarded as the accessible name of the dialog container.
+- **Default dialog role has no accessible name**: The component defaults to `role="dialog"` but exposes no `accessibleLabel` or `ariaLabelledBy` prop. A dialog needs an accessible name; without one, screen reader users cannot identify its purpose. Add a naming prop and forward it to the container. A `region` or `toolbar` role also needs an accessible name.
 
-### High
+**High:**
 
-- **No focus management on open/close**: When the bar appears, focus stays where it was and is never moved into the dialog; on dismissal there is no focus restoration to the invoking element. Per the Dialog pattern, focus should move to an element inside the dialog when it opens and return to the trigger (or a logical element) when it closes.
+- **Role and focus behavior need a product decision**: The default `dialog` role suggests a dialog, but the component has no open/close lifecycle and does not manage focus. Current List/Table selection bars are contextual actions and should remain non-modal so users can move between them and the page. Consider a named `region` for this use case; if retaining `dialog`, define its intended focus behavior and accessible name. A `toolbar` role requires the APG keyboard behavior.
 
 - **Appearance of the bar is never announced (WCAG 4.1.3)**: When the ActionBar is inserted dynamically, nothing announces it, there is no focus move and no live region. The correct mechanism depends on intent: if the bar is an interactive dialog, move focus into it (its accessible name and description then get announced); if it is purely informational/transient, it should use a live-region role rather than `dialog`.
 
-- **Portal breaks focus order (WCAG 2.4.3)**: Rendering via `createPortal(..., document.body)` appends the bar at the very end of the DOM, so keyboard users must tab through the entire page before reaching the bar's actions, even though it is visually at the bottom and contextually near the trigger.
+- **Fixed width can fail reflow**: `width: 37.5rem` and horizontal centering can place part of the bar outside a 320 CSS-pixel viewport, requiring two-dimensional scrolling. Add responsive sizing or a max-width that fits the viewport.
 
-- **Entrance animation ignores reduced motion (WCAG 2.3.3)**: The `fadeIn` animation has no `@media (prefers-reduced-motion: reduce)` guard, unlike `Modal` and `Popup/v2`. Users with vestibular disorders cannot disable the motion.
+**Medium:**
 
-### Medium
-
-- **Free-form `role` prop**: `role` is an unvalidated string. Passing `alert`/`status` (or a future `aria-modal` toggling) silently changes announcement semantics — `status` and `alert` carry implicit `aria-live` (polite/assertive) and are meant for dynamically inserted content, whereas `dialog` is announced via focus management. The component should document which roles are supported and their requirements, or derive the semantics automatically from usage.
-
-- **No recommended close control**: The Dialog pattern strongly recommends a visible close/cancel button in the tab sequence. The ActionBar has no built-in dismiss; consumers must provide one or manage visibility themselves, so documentation should call this out.
-
-### Low
-
-- **Reconsider the default `role="dialog"`**: A purely informational or transient floating bar is better served by a live-region role (`status`/`alert`) or a `region`/`toolbar`, which do not require an accessible name or focus management the way a dialog does. Aligning the default role with the actual semantics would resolve both the naming (4.1.2) and announcement (4.1.3) issues for informational usage.
+- **Role prop has no matching semantics or validation**: `role` accepts any string, but ActionBar does not provide role-specific labeling or keyboard behavior. Document supported roles and their requirements, or narrow the API to the intended semantic role.
+- **Portal order and focus visibility need contextual checks**: The bar is appended at the end of `document.body` and is fixed over page content. Verify keyboard order and that the previously focused page control is not entirely hidden when the bar appears. This is not an automatic WCAG 2.4.3 failure, and a close control or focus capture is not required for a non-modal selection region.
