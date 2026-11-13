@@ -1,0 +1,56 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Overlay/Drawer/A11y" />
+
+# Drawer - Accessibility
+
+## Description
+
+A side panel that slides in from the right edge of the viewport, built on top of `Modal`. It renders a native `<dialog>` (placement `right`, `aria-modal`) with an auto-generated `h2` header, optional footer, and a `push` mode that displaces (rather than covers) the underlying content. Focus management, Escape-to-close, and focus restoration are inherited from `Modal`; click-outside closing is disabled by default in `push` mode.
+
+## Summary
+
+1. ✅ **Perceivable**: Semantic `<dialog>` with `aria-modal`; backdrop dims background content. Contrast and reflow depend on the consumer's content.
+2. ⚠️ **Operable**: By default, Tab cycles via the focus trap and Escape/close button dismiss the drawer. In `push` mode the focus trap confines keyboard and screen-reader users to the drawer while the pushed page remains pointer-interactive which creates an inequitable interaction model.
+3. ✅ **Understandable**: Header rendered as a semantic `h2` heading wired to the dialog via `aria-labelledby` when provided.
+4. ❌ **Robust**: Accessible name relies on the optional `header` (via `aria-labelledby`) or the deprecated `ariaLabel`. Without a `header`, the `<dialog>` is unnamed (4.1.2), and there is no `accessibleLabel` prop to provide a non-deprecated name.
+
+## ARIA Pattern
+
+[Dialog (Modal) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - The default close button and Escape handling are keyboard operable
+- ✅ [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) - Focus trap cycles inside the drawer while Escape (when enabled) and the close button (when `isClosable`) provide keyboard exits
+- ✅ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - On open, focus moves to the first focusable element inside the drawer; on close, focus returns to the previously focused element if it still exists
+- ⚠️ [WCAG 2.4.11 - Focus Not Obscured (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html) - The drawer takes focus on appearance and traps it; in `push` mode content reflows aside instead of being obscured, but the push variant's pointer-interactive background must be used cautiously
+- ⚠️ [WCAG 2.4.6 - Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html) - Header is a descriptive `h2` when provided, but an empty `h2` is rendered when the `header` prop is omitted
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - Accessible name only derived from `aria-labelledby` (when `header` is set) or the deprecated `ariaLabel`; no `accessibleLabel` prop
+
+To apply when using the component:
+
+- [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - The `disclosure` is a consumer-provided element; the drawer only adds dialog relationship attributes (`aria-controls`, `aria-haspopup`). **Supply a keyboard-operable control**, such as a `Button`
+- [WCAG 2.1.2 - No Keyboard Trap (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) - Avoid disabling both `hideOnEsc` and `isClosable` without providing a keyboard-operable close action in the drawer content, or the focus trap has no keyboard exit
+- [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - Maintain semantic structure (headings, lists) within drawer content
+- [WCAG 3.2.1 - On Focus (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/on-focus.html) - Focusable content inside the drawer must not trigger a change of context
+
+## Accessibility issues
+
+**High:**
+
+- **Push mode is `aria-modal` yet the pushed page stays interactive**: In `push` mode the `<dialog>` still sets `aria-modal` and the focus trap is active. Pointer users can scroll and interact with the pushed content while keyboard and screen-reader users are confined to the drawer and told the rest of the page is inert. A dialog should only be marked modal when all users are prevented from interacting with content outside it and the content is obscured, which is not the case in `push` mode. Consider dropping `aria-modal` and the focus trap in `push` mode (treating it as non-modal, where focus can leave the drawer).
+
+- **No accessible name when `header` is not provided**: The `header` prop is optional, but it is the only non-deprecated source of the dialog's accessible name (via `ariaLabelledBy`). Without a `header` (and without the deprecated `ariaLabel`), the `<dialog>` is announced generically as "dialog". Provide a fallback accessible name (`accessibleLabel` prop) or require a header.
+
+**Medium:**
+
+- **Missing `accessibleLabel` prop**: The `Drawer` only exposes the deprecated `ariaLabel` prop to name the dialog without a visible header. Per [RFC #6585 - Accessible Icons and Hidden Labels](https://github.com/scaleway/ultraviolet/discussions/6585), add an `accessibleLabel` property and use its value as a fallback for the accessible name.
+
+- **Empty `h2` heading rendered when `header` is undefined**: `computeHeader` always renders `<Text as="h2">`, producing an empty heading in the DOM when no `header` is passed. Omit the heading (and the `aria-labelledby` reference) when there is no header content.
+
+## Dependencies
+
+- **Modal component**: Provides the `<dialog>`, focus trap, initial focus, Escape/click-outside handling, close button, and focus restoration
