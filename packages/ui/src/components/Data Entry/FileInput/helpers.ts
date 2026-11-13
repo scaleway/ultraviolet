@@ -84,6 +84,8 @@ const readEntriesInDirectory = async (directory: FileSystemDirectoryEntry) => {
   const nestedEntries: FileSystemEntry[] = []
 
   while (true) {
+    // readEntries only returns a batch of entries at a time, it must be called until it returns an empty array
+    // oxlint-disable-next-line eslint/no-await-in-loop
     const results = await new Promise<FileSystemEntry[]>((resolve, reject) => {
       reader.readEntries(resolve, reject)
     })
