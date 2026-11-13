@@ -1,8 +1,9 @@
 // oxlint-disable eslint/no-console
 // oxlint-disable import/no-nodejs-modules
+// oxlint-disable node/no-process-env
 
 import { writeFile, writeFileSync } from 'node:fs'
-import { header, TOKENS_URL } from './constants.ts'
+import { getTokensUrl, header } from './constants.ts'
 import { generateThemeCss } from './create-css-variables.ts'
 import { generatePalette } from './generatePalette.ts'
 
@@ -35,7 +36,7 @@ const createCSSFile = (theme: string, content: UvThemeType) => {
 }
 
 const writeFiles = async () => {
-  const figmaTokensResponse: Response = await fetch(TOKENS_URL)
+  const figmaTokensResponse: Response = await fetch(getTokensUrl(process.env['TOKENS_BRANCH'] ?? 'main'))
   const figmaTokensJson = (await figmaTokensResponse.json()) as JsonType
 
   // For each theme

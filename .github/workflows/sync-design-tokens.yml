@@ -2,8 +2,12 @@ name: Design tokens
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '30 9 * * 1-5'
+    inputs:
+      branch:
+        description: 'Branch of the design-tokens repository to fetch tokens from'
+        required: true
+        default: 'main'
+        type: string
 
 jobs:
   synchronise:
@@ -22,17 +26,19 @@ jobs:
       - name: Generate json files
         run: |
           pnpm run tokens:update
+        env:
+          TOKENS_BRANCH: ${{ inputs.branch }}
 
       - name: Compare & Create Pull Request
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
           base: main
           author: Scaleway Design <github@scaleway.com>
-          commit-message: 'fix(theme): synchronise design tokens'
-          branch: fix/design-tokens-synchronise
+          commit-message: 'chore(theme): synchronise design tokens'
+          branch: chore/design-tokens-synchronise
           delete-branch: true
-          title: 'fix(theme): synchronise design tokens'
+          title: 'chore(theme): synchronise design tokens'
           body: |
-            Design system tokens update. This MR is created automatically when a change is detected in design tokens.
-          team-reviewers: console
-          labels: design system
+            ### Summary
+
+            Synchronise design tokens from the [design-tokens](https://github.com/scaleway/design-tokens) repository.
