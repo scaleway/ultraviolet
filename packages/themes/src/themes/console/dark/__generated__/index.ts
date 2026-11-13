@@ -81,8 +81,8 @@ export const darkTheme = {
       backgroundWeakHover: '#303445',
       border: '#626672',
       borderDisabled: '#252a3b',
-      borderHover: '#8e92a1',
-      borderStrong: '#8e92a1',
+      borderHover: '#999dad',
+      borderStrong: '#999dad',
       borderStrongDisabled: '#252a3b',
       borderStrongHover: '#b8bac0',
       borderStronger: '#e9e9ec',
@@ -112,7 +112,7 @@ export const darkTheme = {
       textStronger: '#0c0f1a',
       textStrongerDisabled: '#484b5a',
       textStrongerHover: '#151a2d',
-      textWeak: '#8e92a1',
+      textWeak: '#999dad',
       textWeakDisabled: '#484b5a',
       textWeakHover: '#b8bac0',
     },
@@ -175,7 +175,7 @@ export const darkTheme = {
       },
       icon: {
         category: {
-          neutral: { fill: '#e9e9ec', fillDisabled: '#252a3b', fillStrong: '#8e92a1', fillStrongDisabled: '#484b5a' },
+          neutral: { fill: '#e9e9ec', fillDisabled: '#252a3b', fillStrong: '#999dad', fillStrongDisabled: '#484b5a' },
           primary: { fill: '#a061f4', fillDisabled: '#252a3b', fillStrong: '#d8c5fc', fillStrongDisabled: '#484b5a' },
         },
         product: {
