@@ -119,27 +119,47 @@ const ThemeSwitcher = () => {
 
 `v2/ThemeProvider` applies the `*-theme` class on the document element in an effect, after React has hydrated. Before that, the page renders with the default styling: on a slow connection the browser can paint that un-themed page before hydration completes, causing a flash of the wrong theme.
 
-To prevent it, apply the theme class **before the first paint** with a small inline script in the `<head>` of your HTML. The provider persists the theme in `localStorage` as a JSON-encoded value, so the script reads it and adds the matching class:
+To prevent it, use `getThemeInitScript` and inline the returned script in the `<head>` of your HTML, before any stylesheet, so it runs before the first paint:
 
-```html
-<script>
-  try {
-    let theme = JSON.parse(localStorage.getItem('uv-theme')) || 'system'
+```tsx
+import { getThemeInitScript } from '@ultraviolet/themes/v2'
 
-    if (theme === 'system') {
-      theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-    }
+// in your document template (e.g. Next.js pages router `_document.tsx`)
+;<script dangerouslySetInnerHTML={{ __html: getThemeInitScript() }} />
+```
 
-    if (['light', 'dark', 'darker'].includes(theme)) {
-      document.documentElement.classList.add(`${theme}-theme`)
-    }
-  } catch (e) {}
-</script>
+It accepts the same `initialTheme` and `storageKey` options as the provider and derives the class names from the same constants, so the script and the provider can never drift apart:
+
+```tsx
+<script dangerouslySetInnerHTML={{ __html: getThemeInitScript({ storageKey: 'theme-preference' }) }} />
+```
+
+In apps where the bundler generates the HTML template (e.g. Vite), inline the script from a small plugin in `vite.config.ts` instead:
+
+```ts
+import { getThemeInitScript } from '@ultraviolet/themes/v2'
+import { defineConfig } from 'vite'
+import type { Plugin } from 'vite'
+
+const themeInitScriptPlugin = (): Plugin => ({
+  name: 'theme-init-script',
+  transformIndexHtml: () => [
+    {
+      tag: 'script',
+      children: getThemeInitScript({ storageKey: 'theme-preference' }),
+      injectTo: 'head-prepend',
+    },
+  ],
+})
+
+export default defineConfig({
+  plugins: [themeInitScriptPlugin(), react()],
+})
 ```
 
 The script must use the **same storage key** as the provider and be placed in the `<head>` so it runs before the first paint.
 
-An example can be found in our [Next example](https://github.com/scaleway/ultraviolet/blob/main/examples/next/src/pages/_document.tsx).
+Examples can be found in our [Next example](https://github.com/scaleway/ultraviolet/blob/main/examples/next/src/pages/_document.tsx) and our [Vite example](https://github.com/scaleway/ultraviolet/blob/main/examples/vite/vite.config.ts).
 
 ##### Customizing theme variables
 

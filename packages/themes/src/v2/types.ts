@@ -18,6 +18,19 @@ export type ThemeProviderProps = {
   storageKey?: string
 }
 
+export type GetThemeInitScriptOptions = {
+  /**
+   * Theme used when nothing is persisted in the local storage.
+   * @default "system"
+   */
+  initialTheme?: ThemeOption
+  /**
+   * Key used to read the theme persisted by the `ThemeProvider`.
+   * @default "uv-theme"
+   */
+  storageKey?: string
+}
+
 export type ThemeContextType = {
   /**
    * Currently applied theme ("dark", "light", or "darker")
