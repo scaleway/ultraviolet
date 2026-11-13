@@ -1,5 +1,13 @@
 # Change Log
 
+## 5.6.4
+
+### Patch Changes
+
+- [#7138](https://github.com/scaleway/ultraviolet/pull/7138) [`ccb1fc3`](https://github.com/scaleway/ultraviolet/commit/ccb1fc3d7ab95f32de60813f64d7893ef70e76a1) Thanks [@lisalupi](https://github.com/lisalupi)! - New product icons: `AntiDdosProductIcon`, `MacMiniM5ProductIcon` and `MacMiniM6ProductIcon`
+- Updated dependencies [[`c81278d`](https://github.com/scaleway/ultraviolet/commit/c81278dc3d5fae88879eef35f608ce6f9d33d956), [`f23f519`](https://github.com/scaleway/ultraviolet/commit/f23f51955bc1fd7837a9a70d8cbde075e358681b)]:
+  - @ultraviolet/themes@3.3.1
+
 ## 5.6.3
 
 ### Patch Changes
