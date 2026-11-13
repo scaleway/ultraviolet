@@ -81,8 +81,8 @@ export const darkerTheme = {
       backgroundWeakHover: '#151a2d',
       border: '#555967',
       borderDisabled: '#212638',
-      borderHover: '#7a7c86',
-      borderStrong: '#7a7c86',
+      borderHover: '#81838d',
+      borderStrong: '#81838d',
       borderStrongDisabled: '#212638',
       borderStrongHover: '#a7a8b0',
       borderStronger: '#e2e4e4',
@@ -98,7 +98,7 @@ export const darkerTheme = {
       iconStrongDisabled: '#3b3f4f',
       iconStrongHover: '#ffffff',
       iconStronger: '#000000',
-      iconStrongerDisabled: '#7a7c86',
+      iconStrongerDisabled: '#81838d',
       iconStrongerHover: '#080a11',
       iconWeak: '#a7a8b0',
       iconWeakDisabled: '#3b3f4f',
@@ -112,7 +112,7 @@ export const darkerTheme = {
       textStronger: '#000000',
       textStrongerDisabled: '#3b3f4f',
       textStrongerHover: '#080a11',
-      textWeak: '#7a7c86',
+      textWeak: '#81838d',
       textWeakDisabled: '#3b3f4f',
       textWeakHover: '#a7a8b0',
     },
@@ -175,7 +175,7 @@ export const darkerTheme = {
       },
       icon: {
         category: {
-          neutral: { fill: '#d8d9dc', fillDisabled: '#151a2d', fillStrong: '#7a7c86', fillStrongDisabled: '#3b3f4f' },
+          neutral: { fill: '#d8d9dc', fillDisabled: '#151a2d', fillStrong: '#81838d', fillStrongDisabled: '#3b3f4f' },
           primary: { fill: '#8d40ee', fillDisabled: '#151a2d', fillStrong: '#ceb1fb', fillStrongDisabled: '#3b3f4f' },
         },
         product: {
