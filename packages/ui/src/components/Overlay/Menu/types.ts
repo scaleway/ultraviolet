@@ -1,5 +1,5 @@
-import type { ButtonHTMLAttributes, ComponentProps, ReactElement, ReactNode, Ref } from 'react'
-import type { Popup } from '../Popup'
+import type { Placement } from '@floating-ui/react'
+import type { ButtonHTMLAttributes, CSSProperties, ReactElement, ReactNode, Ref } from 'react'
 
 type ChildMenuProps = {
   toggle: () => void
@@ -43,9 +43,20 @@ export type MenuProps = {
    */
   hideOnClickItem?: boolean
   footer?: ReactNode
-  placement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
+  placement?: Placement
   /**
    * When set to true, the menu shrinks (height) to avoid overflow on the page
+   * @deprecated popup position will flip to avoi overflow on the page, the prop is ignored
    */
   shrink?: boolean
-} & Pick<ComponentProps<typeof Popup>, 'dynamicDomRendering' | 'align' | 'style'>
+  /**
+   * @deprecated the popup is always rendered dynamically.
+   * This property is ignored and will be removed in the next major release.
+   */
+  dynamicDomRendering?: boolean
+  /**
+   * @deprecated alignment is always "start", the prop is ignored
+   */
+  align?: 'start' | 'center'
+  style?: CSSProperties
+}

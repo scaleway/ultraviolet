@@ -1,21 +1,37 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import { Menu } from '..'
-import { Button } from '../../../index'
+import { Button, VisuallyHidden } from '../../../index'
 import { Stack } from '../../../Layout/Stack'
 
-export const DefaultDisclosure = (
+export const DefaultDisclosure = ({ placement }: { placement: string }) => (
   <Button sentiment="neutral" size="small" variant="ghost">
     <DotsHorizontalIcon />
+    <VisuallyHidden>Open menu with placement {placement}</VisuallyHidden>
   </Button>
 )
 
-export const Placement: StoryFn<typeof Menu> = ({ disclosure, ...props }) => (
-  <>
-    <Stack alignItems="flex-end" justifyContent="left" width="100%">
-      <>
-        Placement = &quot;auto-right&quot;: not enough room on the right, so second priority (left)
-        <Menu disclosure={disclosure} placement="auto-right">
+export const Placement: StoryFn<typeof Menu> = ({ ...props }) => (
+  <Stack gap={3} alignItems="center">
+    {(
+      [
+        'top',
+        'right',
+        'bottom',
+        'left',
+        'top-start',
+        'top-end',
+        'right-start',
+        'right-end',
+        'bottom-start',
+        'bottom-end',
+        'left-start',
+        'left-end',
+      ] as const
+    ).map(placement => (
+      <Stack key={placement} gap={1} alignItems="center">
+        Placement {placement}:
+        <Menu {...props} disclosure={<DefaultDisclosure placement={placement} />} placement={placement}>
           <Menu.Item borderless key="borderless">
             Information with a very long name. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Menu.Item>
@@ -23,55 +39,15 @@ export const Placement: StoryFn<typeof Menu> = ({ disclosure, ...props }) => (
             Power on
           </Menu.Item>
         </Menu>
-      </>
-      <>
-        Placement = &quot;right&quot;: not enough room on the right but force placement on the right
-        <Menu disclosure={disclosure} placement="right">
-          <Menu.Item borderless key="borderless">
-            Information with a very long name. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Menu.Item>
-          <Menu.Item borderless key="power on">
-            Power on
-          </Menu.Item>
-        </Menu>
-      </>
-    </Stack>
-    <Stack
-      alignItems="center"
-      justifyContent="center"
-      style={{
-        marginTop: 100,
-      }}
-    >
-      You can play with the placement here using storybook controls
-      <Menu disclosure={disclosure} {...props}>
-        <Menu.Item borderless key="borderless">
-          Information with a very long name. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </Menu.Item>
-        <Menu.Item borderless key="power on">
-          Power on
-        </Menu.Item>
-      </Menu>
-    </Stack>
-  </>
+      </Stack>
+    ))}
+  </Stack>
 )
-
-Placement.args = {
-  disclosure: DefaultDisclosure,
-}
 
 Placement.parameters = {
   docs: {
     description: {
-      story: `You can choose to place automatically the menu or manually. There are for manual placements: "top", "bottom", "left" and "right".
-There are five modes of auto-placement: "auto", "auto-left", "auto-right", "auto-top", and "auto-bottom". Those "auto-" allow to give a prioriry to the direction. For instance, auto-bottom will try to place the popup beneath the disclosure first, if there is not enough place it will try top, then left, then right. 
-The priorities are :
-<ul>
-<li> auto-bottom : bottom > top > left > right</li>
-<li>  auto-left : left > right > top > bottom</li>
-<li> auto-right : right > left > top > bottom</li>
-<li> auto and auto-top : top > bottom > left > right</li>
-</ul>
+      story: `There are four menu placements: "top", "bottom", "left" and "right". Alignment switches when necessary to avoid overflow.
 `,
     },
   },
