@@ -1,5 +1,15 @@
 # Change Log
 
+## 6.6.11
+
+### Patch Changes
+
+- [#7126](https://github.com/scaleway/ultraviolet/pull/7126) [`4362b38`](https://github.com/scaleway/ultraviolet/commit/4362b38c5161ff475e660f5920b0ed3582addf36) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.91.0`.
+- Updated dependencies [[`92276ad`](https://github.com/scaleway/ultraviolet/commit/92276ad5e37b1e3aa69073a91dba2d79162c00e8), [`414133f`](https://github.com/scaleway/ultraviolet/commit/414133f90674c99efee5ea9de0edfb3163c854e9), [`d407557`](https://github.com/scaleway/ultraviolet/commit/d407557b5fffd4e22240b70a162cdfa342db22df), [`d940822`](https://github.com/scaleway/ultraviolet/commit/d940822286b1e57405cdf16998f7757db4df9cc0), [`3bf0c8d`](https://github.com/scaleway/ultraviolet/commit/3bf0c8d8f4153332a0277502f4809107b1733fdb), [`c81278d`](https://github.com/scaleway/ultraviolet/commit/c81278dc3d5fae88879eef35f608ce6f9d33d956), [`4c1591b`](https://github.com/scaleway/ultraviolet/commit/4c1591bf934d4f55554085dbb3eafe8f79f267d6), [`f23f519`](https://github.com/scaleway/ultraviolet/commit/f23f51955bc1fd7837a9a70d8cbde075e358681b), [`d407557`](https://github.com/scaleway/ultraviolet/commit/d407557b5fffd4e22240b70a162cdfa342db22df), [`dd34495`](https://github.com/scaleway/ultraviolet/commit/dd34495b6d99a8363469524054f8f0e8606b35e8), [`9900473`](https://github.com/scaleway/ultraviolet/commit/9900473c8e2f4d2d00562eaa04a2325193d4bb9b), [`156ec37`](https://github.com/scaleway/ultraviolet/commit/156ec379a327e0d479c1ab983b5eeb45e13c1f82), [`d0d65a8`](https://github.com/scaleway/ultraviolet/commit/d0d65a89cbf9123ca5b11111ce1ee952844c8322), [`30c2ae2`](https://github.com/scaleway/ultraviolet/commit/30c2ae20c70b82f35f7768e3429b79b6afd35a3c), [`4818d41`](https://github.com/scaleway/ultraviolet/commit/4818d41053312c6c5138c901eb1bae39fd4514a2), [`ccb1fc3`](https://github.com/scaleway/ultraviolet/commit/ccb1fc3d7ab95f32de60813f64d7893ef70e76a1), [`72505b5`](https://github.com/scaleway/ultraviolet/commit/72505b557d24fb83b2185034952be5076137932d), [`f82c817`](https://github.com/scaleway/ultraviolet/commit/f82c81734f19d4e7995baa801463921238896df2)]:
+  - @ultraviolet/ui@3.30.0
+  - @ultraviolet/themes@3.3.1
+  - @ultraviolet/icons@5.6.4
+
 ## 6.6.10
 
 ### Patch Changes

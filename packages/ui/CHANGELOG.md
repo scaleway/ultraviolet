@@ -1,5 +1,59 @@
 # Change Log
 
+## 3.30.0
+
+### Minor Changes
+
+- [#7133](https://github.com/scaleway/ultraviolet/pull/7133) [`92276ad`](https://github.com/scaleway/ultraviolet/commit/92276ad5e37b1e3aa69073a91dba2d79162c00e8) Thanks [@jsulpis](https://github.com/jsulpis)! - `Alert`: add an `action` prop to display a `Button` or a `Link` at the end of the alert. `action` and `children` also accept a render function that provides the alert `buttonProps` (`sentiment`, `disabled`, `size`) to render a correctly themed `Button`. `buttonText` and `onClickButton` are deprecated in favor of `action`.
+
+- [#7093](https://github.com/scaleway/ultraviolet/pull/7093) [`d407557`](https://github.com/scaleway/ultraviolet/commit/d407557b5fffd4e22240b70a162cdfa342db22df) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: fix accessibility. No breaking change in usage, but a few changes might break tests and deprecated behavior:
+  - hard-coded ids replaced by auto-generated one in the `listbox` element
+  - hard coded ids replaces by `data-type` in other places (`id="items"` => `data-type="items"`) to avoid duplicate ids
+  - deprecate `aria-label`, use `accessibleLabel` instead
+  - Options' `aria-label` have been removed. Their accessible name is now the option content. All hard-coded `aria-label` have been removed (either completely or replaced by a `VisuallyHidden` text)
+
+- [#7130](https://github.com/scaleway/ultraviolet/pull/7130) [`dd34495`](https://github.com/scaleway/ultraviolet/commit/dd34495b6d99a8363469524054f8f0e8606b35e8) Thanks [@jsulpis](https://github.com/jsulpis)! - `Filters`: add filter type "unit"
+
+### Patch Changes
+
+- [#7136](https://github.com/scaleway/ultraviolet/pull/7136) [`414133f`](https://github.com/scaleway/ultraviolet/commit/414133f90674c99efee5ea9de0edfb3163c854e9) Thanks [@lisalupi](https://github.com/lisalupi)! - `ProgressBar`: change color to improve accessibility (contrast) and add missing prop `size`
+
+- [#7093](https://github.com/scaleway/ultraviolet/pull/7093) [`d407557`](https://github.com/scaleway/ultraviolet/commit/d407557b5fffd4e22240b70a162cdfa342db22df) Thanks [@lisalupi](https://github.com/lisalupi)! - `TextInput`: new props `aria-atomic` and `aria-live`
+
+- [#7118](https://github.com/scaleway/ultraviolet/pull/7118) [`d940822`](https://github.com/scaleway/ultraviolet/commit/d940822286b1e57405cdf16998f7757db4df9cc0) Thanks [@jsulpis](https://github.com/jsulpis)! - `Modal`: fix accessibility issues:
+  - add `aria-labelledby` and `aria-describedby` props to link the heading and content to the dialog
+  - add `imageAlt` prop to provide an accessible description to the image
+  - correctly restore focus on close when using the `open` prop
+  - add `accessibleLabel` prop for hidden label and deprecate `aria-label`
+
+- [#7091](https://github.com/scaleway/ultraviolet/pull/7091) [`3bf0c8d`](https://github.com/scaleway/ultraviolet/commit/3bf0c8d8f4153332a0277502f4809107b1733fdb) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectedInput`: migrate to new popup, which fixes a few issues :
+  - placement will be automatic to avoid overflow on the page
+  - focus on (first) selected element when opening the dropdown and the first element if no element is selected. If searchable, focus goes to the search bar by default
+  - deprecate `dropdownAlign` prop
+  
+  `Popup`: update `matchTriggerWidth` to sync the panel width with its trigger (instead of the min-width)
+
+- [#7122](https://github.com/scaleway/ultraviolet/pull/7122) [`4c1591b`](https://github.com/scaleway/ultraviolet/commit/4c1591bf934d4f55554085dbb3eafe8f79f267d6) Thanks [@jsulpis](https://github.com/jsulpis)! - `SelectableCard`: fix inconsistencies with the design:
+  - keep the label neutral in selected and error states
+  - update the stories with the expected design (descriptions in `bodySmall` font and `neutralWeak` color)
+
+- [#7111](https://github.com/scaleway/ultraviolet/pull/7111) [`9900473`](https://github.com/scaleway/ultraviolet/commit/9900473c8e2f4d2d00562eaa04a2325193d4bb9b) Thanks [@jsulpis](https://github.com/jsulpis)! - `Navigation`: fix the bottom shadow and add a top shadow using CSS scroll animations
+
+- [#7127](https://github.com/scaleway/ultraviolet/pull/7127) [`156ec37`](https://github.com/scaleway/ultraviolet/commit/156ec379a327e0d479c1ab983b5eeb45e13c1f82) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-toastify` to `11.2.0`.
+
+- [#7135](https://github.com/scaleway/ultraviolet/pull/7135) [`d0d65a8`](https://github.com/scaleway/ultraviolet/commit/d0d65a89cbf9123ca5b11111ce1ee952844c8322) Thanks [@jsulpis](https://github.com/jsulpis)! - `SearchInput`: close the panel when the search becomes shorter than the threshold
+
+- [#7119](https://github.com/scaleway/ultraviolet/pull/7119) [`30c2ae2`](https://github.com/scaleway/ultraviolet/commit/30c2ae20c70b82f35f7768e3429b79b6afd35a3c) Thanks [@lisalupi](https://github.com/lisalupi)! - `Filters`: add `showMonthYearPicker` prop to config on date and date-range filters
+
+- [#7112](https://github.com/scaleway/ultraviolet/pull/7112) [`4818d41`](https://github.com/scaleway/ultraviolet/commit/4818d41053312c6c5138c901eb1bae39fd4514a2) Thanks [@jsulpis](https://github.com/jsulpis)! - fix(Text): fix `oneLine` infinite resize when the text overflows, by using the text element itself as the tooltip trigger
+
+- [#7121](https://github.com/scaleway/ultraviolet/pull/7121) [`72505b5`](https://github.com/scaleway/ultraviolet/commit/72505b557d24fb83b2185034952be5076137932d) Thanks [@jsulpis](https://github.com/jsulpis)! - `SwitchButton`: fix the selected state positioning and improve the animation easing function
+
+- [#7134](https://github.com/scaleway/ultraviolet/pull/7134) [`f82c817`](https://github.com/scaleway/ultraviolet/commit/f82c81734f19d4e7995baa801463921238896df2) Thanks [@lisalupi](https://github.com/lisalupi)! - `TimeInput`: fix disabled style, placeholder color and font-size, and fix oxc warnings
+- Updated dependencies [[`c81278d`](https://github.com/scaleway/ultraviolet/commit/c81278dc3d5fae88879eef35f608ce6f9d33d956), [`f23f519`](https://github.com/scaleway/ultraviolet/commit/f23f51955bc1fd7837a9a70d8cbde075e358681b), [`ccb1fc3`](https://github.com/scaleway/ultraviolet/commit/ccb1fc3d7ab95f32de60813f64d7893ef70e76a1)]:
+  - @ultraviolet/themes@3.3.1
+  - @ultraviolet/icons@5.6.4
+
 ## 3.29.3
 
 ### Patch Changes
