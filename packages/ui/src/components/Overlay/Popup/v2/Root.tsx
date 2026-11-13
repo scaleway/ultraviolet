@@ -15,7 +15,7 @@ import {
 } from '@floating-ui/react'
 import type { Middleware, Placement } from '@floating-ui/react'
 import { usePrefersReducedMotion } from '@ultraviolet/animations'
-import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useId, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
 import { isHeadlessTestEnvironment } from '../../../../helpers/isHeadlessTestEnvironment'
 import { PopupContext } from './context'
@@ -54,7 +54,7 @@ const PopupRoot = ({ children, defaultVisible = false, onOpenChange, visible }: 
 
   // Register the popup in the shared `FloatingTree` so that nested popups (see nested Menu) share the same tree.
   // in order for Floating UI keep parent popups open while a nested popup is open or focused.
-  useLayoutEffect(() => {
+  useEffect(() => {
     const node = { id, parentId }
     tree?.addNode(node)
 

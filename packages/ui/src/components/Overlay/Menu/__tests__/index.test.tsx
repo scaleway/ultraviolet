@@ -35,6 +35,66 @@ describe('menu', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  it('closes nested menus when Tab moves focus out', async () => {
+    renderWithTheme(
+      <>
+        <Menu disclosure={() => disclosure}>
+          <Menu disclosure={<Menu.Item>Submenu</Menu.Item>} placement="right" triggerMethod="click">
+            <Menu.Item>Nested item</Menu.Item>
+          </Menu>
+        </Menu>
+        <button type="button">Next</button>
+      </>,
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: 'Menu' }))
+    await userEvent.click(screen.getByRole('menuitem', { name: 'Submenu' }))
+    await waitFor(() => expect(screen.getByRole('menuitem', { name: 'Nested item' })).toHaveFocus())
+
+    await userEvent.tab()
+
+    expect(screen.getByRole('button', { name: 'Next' })).toHaveFocus()
+    await waitFor(() => expect(screen.queryByRole('menu')).not.toBeInTheDocument())
+  })
+
+  it('closes on focus out when there are no nested menus', async () => {
+    renderWithTheme(
+      <>
+        <Menu disclosure={() => disclosure}>
+          <Menu.Item>Menu item</Menu.Item>
+        </Menu>
+        <button type="button">Outside</button>
+      </>,
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: 'Menu' }))
+    await waitFor(() => expect(screen.getByRole('menuitem', { name: 'Menu item' })).toHaveFocus())
+
+    screen.getByRole('button', { name: 'Outside' }).focus()
+
+    await waitFor(() => expect(screen.queryByRole('menu')).not.toBeInTheDocument())
+  })
+
+  it('keeps open on focus out when there are nested menus', async () => {
+    renderWithTheme(
+      <>
+        <Menu disclosure={() => disclosure}>
+          <Menu disclosure={<Menu.Item>Submenu</Menu.Item>} triggerMethod="click">
+            <Menu.Item>Nested item</Menu.Item>
+          </Menu>
+        </Menu>
+        <button type="button">Outside</button>
+      </>,
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: 'Menu' }))
+    await waitFor(() => expect(screen.getByRole('menuitem', { name: 'Submenu' })).toBeVisible())
+
+    screen.getByRole('button', { name: 'Outside' }).focus()
+
+    expect(screen.getByRole('menu')).toBeVisible()
+  })
+
   it('renders with Menu.Item', () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} visible>

@@ -1,6 +1,5 @@
 'use client'
 
-import type { Placement } from '@floating-ui/react'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import {
@@ -15,7 +14,7 @@ import {
   useRef,
   useState,
 } from 'react'
-import type { ButtonHTMLAttributes, KeyboardEvent, MouseEvent, ReactNode, Ref } from 'react'
+import type { ButtonHTMLAttributes, KeyboardEvent, ReactNode, Ref } from 'react'
 import { SearchInput } from '../../Data Entry/SearchInput'
 import { Stack } from '../../Layout/Stack'
 import { Popup } from '../Popup/v2'
@@ -45,20 +44,18 @@ type MenuDisclosureProps = {
   triggerMethod: MenuProps['triggerMethod']
 }
 
-const MenuChildren = ({ children }: { children: NonNullable<MenuProps['children']> }) => {
+const MenuChildren = ({ children }: { children: (args: { toggle: () => void }) => ReactNode }): ReactNode => {
   const { open, setOpen } = usePopupContext()
-
-  if (typeof children !== 'function') {
-    return children
-  }
 
   return children({ toggle: () => setOpen(!open) })
 }
 
 const MenuDisclosure = forwardRef(
   ({ disclosure, triggerMethod = 'click' }: MenuDisclosureProps, ref: Ref<HTMLButtonElement | null>) => {
-    const { disclosureRef } = useMenu()
-    const { open } = usePopupContext()
+    const { disclosureRef, registerCloseMenu } = useMenu()
+    const { open, setOpen } = usePopupContext()
+
+    useEffect(() => registerCloseMenu(() => setOpen(false)), [registerCloseMenu, setOpen])
 
     // if you need dialog inside your component, use function, otherwise component is fine
     const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(disclosure)
@@ -69,9 +66,6 @@ const MenuDisclosure = forwardRef(
     useImperativeHandle(ref, () => innerRef.current)
 
     const finalDisclosure = cloneElement(target, {
-      onClick: (event: MouseEvent<HTMLButtonElement>) => {
-        target.props.onClick?.(event)
-      },
       // @ts-expect-error not sure how to fix this
       ref: disclosureRef,
     })
@@ -105,14 +99,13 @@ export const Menu = forwardRef(
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
-    const { isNested, disclosureRef, menuRef } = useMenu()
+    const { isNested, hasNestedMenu, disclosureRef, menuRef, closeMenu } = useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
     const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
     const contentRef = useRef<HTMLDivElement>(null)
     const tempId = useId()
     const finalId = `menu-${id ?? tempId}`
     const isTriggerMethodHover = triggerMethod === 'hover'
-    const computedPlacement = `${placement.replace(/auto-?/v, '') || 'bottom'}-start` as Placement
 
     const onSearch = useCallback(
       (value: string) => {
@@ -123,21 +116,9 @@ export const Menu = forwardRef(
       [children],
     )
 
-    useEffect(() => {
-      if (searchable) {
-        return undefined
-      }
-
-      const timeout = setTimeout(() => {
-        searchInputRef.current?.focus()
-      }, 50)
-
-      return () => clearTimeout(timeout)
-    }, [searchable])
-
-    const finalChild = useMemo(() => {
+    const finalChild = useMemo((): ReactNode | null => {
       if (typeof children === 'function') {
-        return null
+        return <MenuChildren>{children}</MenuChildren>
       }
 
       if (searchable && localChild) {
@@ -161,15 +142,31 @@ export const Menu = forwardRef(
       }
     }
     const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
+        // Let the browser move focus first, then close only if it left every menu.
+        setTimeout(() => {
+          if (!document.activeElement?.closest('[role="menu"]')) {
+            closeMenu()
+          }
+        }, 0)
+        return
+      }
+
       if (contentRef.current) {
         const listItem = getListItem([...contentRef.current.children])
-        if (listItem) {
+        if (listItem.length > 0) {
           const currentElement = listItem.find(item => item === document.activeElement)
           if (currentElement) {
             const indexOfCurrent = listItem.indexOf(currentElement)
-            event.preventDefault()
+            const handlesKey =
+              event.key === 'ArrowUp' ||
+              event.key === 'ArrowDown' ||
+              (event.key === 'ArrowLeft' && isTriggerMethodHover)
 
-            handleFocusKey(event.key, indexOfCurrent, listItem)
+            if (handlesKey) {
+              event.preventDefault()
+              handleFocusKey(event.key, indexOfCurrent, listItem)
+            }
           }
         }
       }
@@ -183,7 +180,8 @@ export const Menu = forwardRef(
           className={cn(className, menuStyle.menu({ arrow: hasArrow, searchable }))}
           arrow={hasArrow}
           id={finalId}
-          placement={isNested ? 'right-start' : computedPlacement}
+          placement={isNested ? 'right-start' : placement}
+          closeOnFocusOut={!hasNestedMenu}
           portalTarget={portalTarget}
           ref={menuRef}
           style={style}
@@ -201,7 +199,7 @@ export const Menu = forwardRef(
               {searchable && typeof children !== 'function' ? (
                 <SearchInput className={menuStyle.searchInput} onSearch={onSearch} ref={searchInputRef} size="small" />
               ) : null}
-              {typeof children === 'function' ? <MenuChildren>{children}</MenuChildren> : finalChild}
+              {finalChild}
             </Stack>
             {footer ? <Stack className={menuStyle.footer}>{footer}</Stack> : null}
           </Stack>

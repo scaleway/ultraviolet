@@ -13,7 +13,22 @@ export const DefaultDisclosure = ({ placement }: { placement: string }) => (
 
 export const Placement: StoryFn<typeof Menu> = ({ ...props }) => (
   <Stack gap={3} alignItems="center">
-    {(['bottom', 'top', 'right', 'left'] as const).map(placement => (
+    {(
+      [
+        'top',
+        'right',
+        'bottom',
+        'left',
+        'top-start',
+        'top-end',
+        'right-start',
+        'right-end',
+        'bottom-start',
+        'bottom-end',
+        'left-start',
+        'left-end',
+      ] as const
+    ).map(placement => (
       <Stack key={placement} gap={1} alignItems="center">
         Placement {placement}:
         <Menu {...props} disclosure={<DefaultDisclosure placement={placement} />} placement={placement}>

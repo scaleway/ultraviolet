@@ -1,5 +1,5 @@
+import type { Placement } from '@floating-ui/react'
 import type { ButtonHTMLAttributes, CSSProperties, ReactElement, ReactNode, Ref } from 'react'
-import type { PopupPlacement } from '../../../types'
 
 type ChildMenuProps = {
   toggle: () => void
@@ -43,7 +43,7 @@ export type MenuProps = {
    */
   hideOnClickItem?: boolean
   footer?: ReactNode
-  placement?: PopupPlacement
+  placement?: Placement
   /**
    * When set to true, the menu shrinks (height) to avoid overflow on the page
    * @deprecated popup position will flip to avoi overflow on the page, the prop is ignored

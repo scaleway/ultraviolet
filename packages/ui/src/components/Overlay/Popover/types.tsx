@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react'
-import type { PopupPlacement } from '../../../types'
+import type { PopupPlacement } from '../types'
 import type { SIZES_WIDTH } from './constant'
 
 type SentimentType = 'neutral' | 'primary'

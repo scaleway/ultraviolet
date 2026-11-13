@@ -79,11 +79,3 @@ export type BaseFormComponentProps<E extends HTMLElement = HTMLInputElement> = D
   StyleBaseProps<E> &
   BaseAriaProps &
   PartialLabelProps
-
-/**
- * @deprecated "auto" is not required since the Popover placement is always flipped if needed to remain visible.
- */
-type LegacyPopupPlacement = 'auto' | 'auto-top' | 'auto-bottom' | 'auto-left' | 'auto-right'
-
-export type NewPopupPlacement = 'top' | 'right' | 'bottom' | 'left'
-export type PopupPlacement = NewPopupPlacement | LegacyPopupPlacement
