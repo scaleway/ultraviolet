@@ -29,7 +29,10 @@ exports[`optionSelectorField > should render correctly 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_5_"
+                aria-required="false"
                 class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4ba uv_1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -63,6 +66,12 @@ exports[`optionSelectorField > should render correctly 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="uv_ahdbou0"
+              id="_r_8_"
+            />
           </div>
         </div>
         <svg
@@ -91,12 +100,15 @@ exports[`optionSelectorField > should render correctly 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_h_"
+                aria-required="false"
                 class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4b7 uv_1xo4j4ba uv_1xo4j4be"
                 data-disabled="true"
                 data-readonly="false"
                 data-testid="second-selector"
-                id="_r_e_"
+                id="_r_g_"
                 role="combobox"
                 tabindex="0"
               >
@@ -125,6 +137,12 @@ exports[`optionSelectorField > should render correctly 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="uv_ahdbou0"
+              id="_r_k_"
+            />
           </div>
         </div>
       </fieldset>
@@ -162,12 +180,15 @@ exports[`optionSelectorField > should render correctly disabled 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_11_"
+                aria-required="false"
                 class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4b7 uv_1xo4j4ba uv_1xo4j4be"
                 data-disabled="true"
                 data-readonly="false"
                 data-testid="first-selector"
-                id="_r_s_"
+                id="_r_10_"
                 role="combobox"
                 tabindex="0"
               >
@@ -196,6 +217,12 @@ exports[`optionSelectorField > should render correctly disabled 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="uv_ahdbou0"
+              id="_r_14_"
+            />
           </div>
         </div>
         <svg
@@ -224,12 +251,15 @@ exports[`optionSelectorField > should render correctly disabled 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_1d_"
+                aria-required="false"
                 class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4b7 uv_1xo4j4ba uv_1xo4j4be"
                 data-disabled="true"
                 data-readonly="false"
                 data-testid="second-selector"
-                id="_r_16_"
+                id="_r_1c_"
                 role="combobox"
                 tabindex="0"
               >
@@ -258,6 +288,12 @@ exports[`optionSelectorField > should render correctly disabled 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="uv_ahdbou0"
+              id="_r_1g_"
+            />
           </div>
         </div>
       </fieldset>
@@ -300,16 +336,21 @@ exports[`optionSelectorField > should trigger events 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_1t_"
+                aria-required="false"
                 class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4ba uv_1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
                 data-testid="first-selector"
-                id="_r_1k_"
+                id="_r_1s_"
                 role="combobox"
                 tabindex="0"
               >
                 <span
+                  aria-atomic="true"
+                  aria-live="polite"
                   class="uv_1xo4j4bm uv_1do42ls0 uv_1do42ls4 uv_1do42lsb uv_1do42lsj uv_1do42ls1a uv_1do42ls32"
                 >
                   <div
@@ -418,6 +459,12 @@ exports[`optionSelectorField > should trigger events 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="uv_ahdbou0"
+              id="_r_20_"
+            />
           </div>
         </div>
         <svg
@@ -446,12 +493,15 @@ exports[`optionSelectorField > should trigger events 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_29_"
+                aria-required="false"
                 class="uv_1xo4j4b6 uv_1xo4j4b5 uv_1xo4j4ba uv_1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
                 data-testid="second-selector"
-                id="_r_1u_"
+                id="_r_28_"
                 role="combobox"
                 tabindex="0"
               >
@@ -480,6 +530,12 @@ exports[`optionSelectorField > should trigger events 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="uv_ahdbou0"
+              id="_r_2c_"
+            />
           </div>
         </div>
       </fieldset>

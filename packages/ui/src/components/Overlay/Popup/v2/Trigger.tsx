@@ -19,10 +19,16 @@ type PopupTriggerProps = {
  * Wraps the trigger element, wires the interaction hooks based on
  * `triggerEvent` and lands the ARIA attributes on the trigger's focusable
  * element (or on the wrapper when there is none).
+ * Existing `aria-controls` and `aria-haspopup` attributes are preserved
  */
 export const Trigger = ({ children, triggerEvent = 'click' }: PopupTriggerProps) => {
   const { context, dismiss, id, refs, open, role } = usePopupContext()
   const triggerRef = useRef<HTMLDivElement>(null)
+  const initialAriaAttributes = useRef<{
+    element: HTMLElement | null
+    controls: string | null
+    hasPopup: string | null
+  }>({ element: null, controls: null, hasPopup: null })
 
   const click = useClick(context)
   const hover = useHover(context, {
@@ -40,6 +46,13 @@ export const Trigger = ({ children, triggerEvent = 'click' }: PopupTriggerProps)
 
     const focusable = wrapper.querySelector<HTMLElement>(FOCUSABLE_ELEMENTS)
     const reference = focusable ?? wrapper
+    if (initialAriaAttributes.current.element !== reference) {
+      initialAriaAttributes.current = {
+        element: reference,
+        controls: reference.getAttribute('aria-controls'),
+        hasPopup: reference.getAttribute('aria-haspopup'),
+      }
+    }
 
     refs.setReference(reference)
     if (reference === wrapper) {
@@ -55,8 +68,8 @@ export const Trigger = ({ children, triggerEvent = 'click' }: PopupTriggerProps)
       }
     }
     setAttribute('aria-expanded', open ? 'true' : 'false')
-    setAttribute('aria-controls', open ? id : null)
-    setAttribute('aria-haspopup', role)
+    setAttribute('aria-controls', open ? (initialAriaAttributes.current.controls ?? id) : null)
+    setAttribute('aria-haspopup', initialAriaAttributes.current.hasPopup ?? role)
   }, [open, role, id, refs])
 
   return (

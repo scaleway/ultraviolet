@@ -21,7 +21,7 @@ exports[`unitInput > renders click 1`] = `
             aria-invalid="false"
             class="styles_medium__bjgo2p3 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_1g_"
+            id="_r_1o_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -31,7 +31,6 @@ exports[`unitInput > renders click 1`] = `
           />
         </div>
         <div
-          aria-label="test-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -43,9 +42,12 @@ exports[`unitInput > renders click 1`] = `
               data-floating-ui-inert=""
             >
               <div
-                aria-controls="_r_1m_"
+                aria-controls="_r_1t_"
                 aria-expanded="true"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_1r_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_dropdownVisible_true__1xo4j4b8 selectBar_size_medium__1xo4j4bb selectBar_state_neutral__1xo4j4be selectBar_undefined_compound_0__1xo4j4bg"
                 data-disabled="false"
                 data-readonly="false"
@@ -92,7 +94,7 @@ exports[`unitInput > renders click 1`] = `
               tabindex="0"
             />
             <span
-              aria-owns="_r_1s_"
+              aria-owns="_r_26_"
               data-floating-ui-inert=""
               style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
             />
@@ -103,6 +105,14 @@ exports[`unitInput > renders click 1`] = `
               style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: fixed; white-space: nowrap; width: 1px; top: 0px; left: 0px;"
               tabindex="0"
             />
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_1u_"
+            >
+              3 options available
+            </output>
           </div>
         </div>
       </div>
@@ -141,7 +151,6 @@ exports[`unitInput > renders with default props 1`] = `
           />
         </div>
         <div
-          aria-label="test-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -153,7 +162,10 @@ exports[`unitInput > renders with default props 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_3_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -187,6 +199,12 @@ exports[`unitInput > renders with default props 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_6_"
+            />
           </div>
         </div>
       </div>
@@ -208,7 +226,7 @@ exports[`unitInput > renders with default value 1`] = `
       >
         <label
           class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-          for="_r_7g_"
+          for="_r_8o_"
         />
         <span
           class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a"
@@ -229,7 +247,7 @@ exports[`unitInput > renders with default value 1`] = `
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
             disabled=""
-            id="_r_7g_"
+            id="_r_8o_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -240,7 +258,6 @@ exports[`unitInput > renders with default value 1`] = `
           />
         </div>
         <div
-          aria-label="test-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -252,7 +269,10 @@ exports[`unitInput > renders with default value 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_8v_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="true"
                 data-readonly="false"
@@ -262,6 +282,8 @@ exports[`unitInput > renders with default value 1`] = `
                 tabindex="0"
               >
                 <span
+                  aria-atomic="true"
+                  aria-live="polite"
                   class="selectBar__1xo4j4bm style__1do42ls0 style_disabled_true__1do42ls1 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_body__1do42lsj style_undefined_compound_28__1do42ls22"
                 >
                   KB
@@ -285,6 +307,12 @@ exports[`unitInput > renders with default value 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_92_"
+            />
           </div>
         </div>
       </div>
@@ -314,7 +342,7 @@ exports[`unitInput > renders with disabled and placeHolder 1`] = `
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
             disabled=""
-            id="_r_2l_"
+            id="_r_35_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -324,7 +352,6 @@ exports[`unitInput > renders with disabled and placeHolder 1`] = `
           />
         </div>
         <div
-          aria-label="test-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -336,7 +363,10 @@ exports[`unitInput > renders with disabled and placeHolder 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_38_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="true"
                 data-readonly="false"
@@ -370,6 +400,12 @@ exports[`unitInput > renders with disabled and placeHolder 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_3b_"
+            />
           </div>
         </div>
       </div>
@@ -398,7 +434,7 @@ exports[`unitInput > renders with dropdownAlign center 1`] = `
             aria-invalid="false"
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_31_"
+            id="_r_3j_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -408,7 +444,6 @@ exports[`unitInput > renders with dropdownAlign center 1`] = `
           />
         </div>
         <div
-          aria-label="test-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -420,7 +455,10 @@ exports[`unitInput > renders with dropdownAlign center 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_3m_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -454,6 +492,12 @@ exports[`unitInput > renders with dropdownAlign center 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_3p_"
+            />
           </div>
         </div>
       </div>
@@ -479,11 +523,11 @@ exports[`unitInput > renders with error  and success 1`] = `
           id="input-field"
         >
           <input
-            aria-describedby="_r_4a_"
+            aria-describedby="_r_52_"
             aria-invalid="true"
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_49_"
+            id="_r_51_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -506,7 +550,6 @@ exports[`unitInput > renders with error  and success 1`] = `
           </svg>
         </div>
         <div
-          aria-label="test-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -517,9 +560,12 @@ exports[`unitInput > renders with error  and success 1`] = `
               class="styles__12tze4lb"
             >
               <div
-                aria-describedby="_r_4a_"
+                aria-describedby="_r_52_"
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_54_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -553,12 +599,18 @@ exports[`unitInput > renders with error  and success 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_57_"
+            />
           </div>
         </div>
       </div>
       <span
         class="style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_danger__1do42ls9 style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_48__1do42ls2m"
-        id="_r_4a_"
+        id="_r_52_"
         role="status"
       >
         helper
@@ -585,11 +637,11 @@ exports[`unitInput > renders with error 1`] = `
           id="input-field"
         >
           <input
-            aria-describedby="_r_3s_"
+            aria-describedby="_r_4i_"
             aria-invalid="true"
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_3r_"
+            id="_r_4h_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -612,7 +664,6 @@ exports[`unitInput > renders with error 1`] = `
           </svg>
         </div>
         <div
-          aria-label="test-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -623,9 +674,12 @@ exports[`unitInput > renders with error 1`] = `
               class="styles__12tze4lb"
             >
               <div
-                aria-describedby="_r_3s_"
+                aria-describedby="_r_4i_"
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_4k_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -659,12 +713,18 @@ exports[`unitInput > renders with error 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_4n_"
+            />
           </div>
         </div>
       </div>
       <span
         class="style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_danger__1do42ls9 style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_48__1do42ls2m"
-        id="_r_3s_"
+        id="_r_4i_"
         role="status"
       >
         error
@@ -687,7 +747,7 @@ exports[`unitInput > renders with label and label information 1`] = `
       >
         <label
           class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-          for="_r_6g_"
+          for="_r_7k_"
         >
           label
         </label>
@@ -710,7 +770,7 @@ exports[`unitInput > renders with label and label information 1`] = `
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
             disabled=""
-            id="_r_6g_"
+            id="_r_7k_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -720,7 +780,6 @@ exports[`unitInput > renders with label and label information 1`] = `
           />
         </div>
         <div
-          aria-label="test-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -732,7 +791,10 @@ exports[`unitInput > renders with label and label information 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_7r_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="true"
                 data-readonly="false"
@@ -766,6 +828,12 @@ exports[`unitInput > renders with label and label information 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_7u_"
+            />
           </div>
         </div>
       </div>
@@ -784,7 +852,7 @@ exports[`unitInput > renders with label and no label information 1`] = `
     >
       <label
         class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-        for="_r_62_"
+        for="_r_74_"
       >
         label
       </label>
@@ -801,7 +869,7 @@ exports[`unitInput > renders with label and no label information 1`] = `
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
             disabled=""
-            id="_r_62_"
+            id="_r_74_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -811,7 +879,6 @@ exports[`unitInput > renders with label and no label information 1`] = `
           />
         </div>
         <div
-          aria-label="test-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -823,7 +890,10 @@ exports[`unitInput > renders with label and no label information 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_79_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="true"
                 data-readonly="false"
@@ -857,6 +927,12 @@ exports[`unitInput > renders with label and no label information 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_7c_"
+            />
           </div>
         </div>
       </div>
@@ -885,7 +961,7 @@ exports[`unitInput > renders with min max 1`] = `
             aria-invalid="false"
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_c_"
+            id="_r_e_"
             max="100"
             min="10"
             name="-value"
@@ -895,7 +971,6 @@ exports[`unitInput > renders with min max 1`] = `
           />
         </div>
         <div
-          aria-label="-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -907,7 +982,10 @@ exports[`unitInput > renders with min max 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_h_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -941,6 +1019,12 @@ exports[`unitInput > renders with min max 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_k_"
+            />
           </div>
         </div>
       </div>
@@ -962,7 +1046,7 @@ exports[`unitInput > renders with no label and label information 1`] = `
       >
         <label
           class="styles_htmlFor__l58dz72 style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodyStrong__1do42lsn style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
-          for="_r_70_"
+          for="_r_86_"
         />
         <span
           class="style__1do42ls0 style_prominence_default__1do42ls4 style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a"
@@ -983,7 +1067,7 @@ exports[`unitInput > renders with no label and label information 1`] = `
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
             disabled=""
-            id="_r_70_"
+            id="_r_86_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -993,7 +1077,6 @@ exports[`unitInput > renders with no label and label information 1`] = `
           />
         </div>
         <div
-          aria-label="test-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -1005,7 +1088,10 @@ exports[`unitInput > renders with no label and label information 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_8d_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_disabled_true__1xo4j4b7 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="true"
                 data-readonly="false"
@@ -1039,6 +1125,12 @@ exports[`unitInput > renders with no label and label information 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_8g_"
+            />
           </div>
         </div>
       </div>
@@ -1067,7 +1159,7 @@ exports[`unitInput > renders with size large 1`] = `
             aria-invalid="false"
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_29_"
+            id="_r_2n_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -1077,7 +1169,6 @@ exports[`unitInput > renders with size large 1`] = `
           />
         </div>
         <div
-          aria-label="test-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -1089,7 +1180,10 @@ exports[`unitInput > renders with size large 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_2q_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -1123,6 +1217,12 @@ exports[`unitInput > renders with size large 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_2t_"
+            />
           </div>
         </div>
       </div>
@@ -1151,7 +1251,7 @@ exports[`unitInput > renders with size medioum 1`] = `
             aria-invalid="false"
             class="styles_medium__bjgo2p3 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_14_"
+            id="_r_1a_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -1161,7 +1261,6 @@ exports[`unitInput > renders with size medioum 1`] = `
           />
         </div>
         <div
-          aria-label="test-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -1173,7 +1272,10 @@ exports[`unitInput > renders with size medioum 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_1d_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_medium__1xo4j4bb selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -1207,6 +1309,12 @@ exports[`unitInput > renders with size medioum 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_1g_"
+            />
           </div>
         </div>
       </div>
@@ -1235,7 +1343,7 @@ exports[`unitInput > renders with size small 1`] = `
             aria-invalid="false"
             class="styles_small__bjgo2p4 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_o_"
+            id="_r_s_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -1245,7 +1353,6 @@ exports[`unitInput > renders with size small 1`] = `
           />
         </div>
         <div
-          aria-label="test-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -1257,7 +1364,10 @@ exports[`unitInput > renders with size small 1`] = `
             >
               <div
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_v_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_small__1xo4j4bc selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -1291,6 +1401,12 @@ exports[`unitInput > renders with size small 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_12_"
+            />
           </div>
         </div>
       </div>
@@ -1316,11 +1432,11 @@ exports[`unitInput > renders with success 1`] = `
           id="input-field"
         >
           <input
-            aria-describedby="_r_3e_"
+            aria-describedby="_r_42_"
             aria-invalid="false"
             class="styles_large__bjgo2p2 styles__bjgo2p1"
             data-testid="unit-input"
-            id="_r_3d_"
+            id="_r_41_"
             max="9007199254740991"
             min="0"
             name="test-value"
@@ -1343,7 +1459,6 @@ exports[`unitInput > renders with success 1`] = `
           </svg>
         </div>
         <div
-          aria-label="test-unit"
           class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
           style="--bjgo2p0: 12.6rem;"
         >
@@ -1354,9 +1469,12 @@ exports[`unitInput > renders with success 1`] = `
               class="styles__12tze4lb"
             >
               <div
-                aria-describedby="_r_3e_"
+                aria-describedby="_r_42_"
                 aria-expanded="false"
-                aria-haspopup="dialog"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-labelledby="_r_44_"
+                aria-required="false"
                 class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_large__1xo4j4ba selectBar_state_neutral__1xo4j4be"
                 data-disabled="false"
                 data-readonly="false"
@@ -1390,12 +1508,18 @@ exports[`unitInput > renders with success 1`] = `
                 </div>
               </div>
             </div>
+            <output
+              aria-atomic="true"
+              aria-live="polite"
+              class="styles__ahdbou0"
+              id="_r_47_"
+            />
           </div>
         </div>
       </div>
       <span
         class="style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_success__1do42lse style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_56__1do42ls2u"
-        id="_r_3e_"
+        id="_r_42_"
         role="status"
       >
         text

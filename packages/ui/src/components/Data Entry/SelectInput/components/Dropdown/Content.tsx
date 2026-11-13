@@ -1,10 +1,11 @@
 'use client'
 
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
-import { useEffect, useRef } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import type { KeyboardEvent, ReactNode, RefObject } from 'react'
 import { Skeleton } from '../../../../Feedback/Skeleton'
 import { Stack } from '../../../../Layout/Stack'
+import { VisuallyHidden } from '../../../../Other/VisuallyHidden'
 import { Text } from '../../../../Typography/Text'
 import { OPTION_SELECTOR } from '../../constants'
 import { useSelectInput } from '../../SelectInputProvider'
@@ -28,41 +29,43 @@ type CreateDropdownProps = {
   addOption?: { text: string; onClick: (searchText: string) => void }
   searchable?: boolean
   initialFocusRef: RefObject<HTMLDivElement | null>
+  listboxId: string
+  listboxLabelledBy?: string
+  searchBarRef?: RefObject<HTMLInputElement | null>
 }
 
-const moveFocusDown = () => {
-  const options = document.querySelectorAll<HTMLElement>(OPTION_SELECTOR)
+const moveFocusDown = (container: ParentNode) => {
+  const options = container.querySelectorAll<HTMLElement>(OPTION_SELECTOR)
   const activeItem = document.activeElement
-  if (options) {
-    for (let i = 0; i < options?.length; i += 1) {
-      const listLength = options.length
-      if (activeItem === options[i] && activeItem !== options[listLength - 1]) {
-        options[i + 1].focus()
-      }
+  for (let i = 0; i < options.length - 1; i += 1) {
+    if (activeItem === options[i]) {
+      options[i + 1].focus()
     }
   }
 }
-const moveFocusUp = () => {
-  const options = document.querySelectorAll<HTMLElement>(OPTION_SELECTOR)
+const moveFocusUp = (container: ParentNode, searchBarRef?: RefObject<HTMLInputElement | null>) => {
+  const options = container.querySelectorAll<HTMLElement>(OPTION_SELECTOR)
   const activeItem = document.activeElement
 
-  if (options) {
-    for (let i = 0; i < options.length; i += 1) {
-      if (activeItem === options[i] && activeItem !== options[0]) {
-        options[i - 1].focus()
-      }
-    }
+  const activeOptionIndex = activeItem instanceof HTMLElement ? [...options].indexOf(activeItem) : -1
+  if (activeOptionIndex === 0) {
+    searchBarRef?.current?.focus()
+  } else if (activeOptionIndex > 0) {
+    options[activeOptionIndex - 1].focus()
   }
 }
-const handleKeyDownSelect = (event: KeyboardEvent<HTMLDivElement>) => {
+const handleKeyDownSelect = (
+  event: KeyboardEvent<HTMLDivElement>,
+  searchBarRef?: RefObject<HTMLInputElement | null>,
+) => {
   if (event.key === 'ArrowDown') {
     event.preventDefault()
-    moveFocusDown()
+    moveFocusDown(event.currentTarget)
   }
 
   if (event.key === 'ArrowUp') {
     event.preventDefault()
-    moveFocusUp()
+    moveFocusUp(event.currentTarget, searchBarRef)
   }
 
   if (event.key === ' ') {
@@ -84,9 +87,23 @@ export const CreateDropdown = ({
   addOption,
   searchable,
   initialFocusRef,
+  listboxId,
+  listboxLabelledBy,
+  searchBarRef,
 }: CreateDropdownProps) => {
   const { displayedOptions, searchInput, size, selectedData } = useSelectInput()
   const focusedItemRef = useRef<HTMLDivElement>(null)
+  const [focusedOptionValue, setFocusedOptionValue] = useState<string | null>(null)
+  const focusableOptions = Array.isArray(displayedOptions)
+    ? displayedOptions
+    : Object.entries(displayedOptions).flatMap(([group, groupOptions]) => (groupError?.[group] ? [] : groupOptions))
+  const initialFocusOption =
+    selectedData.selectedValues
+      .map(value => focusableOptions.find(option => option.value === value))
+      .find((option): option is OptionType => !!option && !option.disabled) ??
+    focusableOptions.find(option => !option.disabled)
+
+  const optionGroupLabelId = useId()
 
   useEffect(() => {
     if (defaultSearchValue && focusedItemRef?.current) {
@@ -98,12 +115,12 @@ export const CreateDropdown = ({
 
   const sizeVariantIcon = size === 'small' ? 'xsmall' : 'small'
 
-  const getItemRef = (option: OptionType, isFirstSelected: boolean) => {
+  const getItemRef = (option: OptionType) => {
     if (option.value === defaultSearchValue || option.searchText === defaultSearchValue) {
       return focusedItemRef
     }
 
-    return isFirstSelected ? initialFocusRef : undefined
+    return initialFocusOption?.value === option.value ? initialFocusRef : undefined
   }
 
   const computedEmptyState = emptyState ?? (
@@ -124,9 +141,10 @@ export const CreateDropdown = ({
   if (isLoading) {
     return (
       <Stack
+        aria-labelledby={listboxLabelledBy}
         className={selectInputStyle.dropdownContainer}
-        id="select-dropdown"
-        onKeyDown={handleKeyDownSelect}
+        id={listboxId}
+        onKeyDown={event => handleKeyDownSelect(event, searchBarRef)}
         role="listbox"
       >
         <Skeleton variant="block" />
@@ -136,7 +154,14 @@ export const CreateDropdown = ({
 
   if (isEmpty && !addOption) {
     return (
-      <Stack alignItems="center" className={selectInputStyle.dropdownEmptyState} gap={2}>
+      <Stack
+        alignItems="center"
+        aria-labelledby={listboxLabelledBy}
+        className={selectInputStyle.dropdownEmptyState}
+        gap={2}
+        id={listboxId}
+        role="listbox"
+      >
         {computedEmptyState}
       </Stack>
     )
@@ -150,21 +175,29 @@ export const CreateDropdown = ({
     }
 
     return (
-      <AddOption
-        addOption={addOption}
-        isEmpty={isEmpty}
-        option={option}
-        searchable={searchable}
-        textVariant={textVariant}
-      />
+      <Stack
+        aria-labelledby={listboxLabelledBy}
+        id={listboxId}
+        onKeyDown={event => handleKeyDownSelect(event, searchBarRef)}
+        role="listbox"
+      >
+        <AddOption
+          addOption={addOption}
+          isEmpty={isEmpty}
+          option={option}
+          searchable={searchable}
+          textVariant={textVariant}
+        />
+      </Stack>
     )
   }
 
   return Array.isArray(displayedOptions) ? (
     <Stack
+      aria-labelledby={listboxLabelledBy}
       className={selectInputStyle.dropdownContainer}
-      id="select-dropdown"
-      onKeyDown={handleKeyDownSelect}
+      onKeyDown={event => handleKeyDownSelect(event, searchBarRef)}
+      id={listboxId}
       role="listbox"
     >
       <AddOption
@@ -179,30 +212,37 @@ export const CreateDropdown = ({
       />
       <SelectAll textVariant={textVariant} />
 
-      <Stack gap={0.25} id="items" className={selectInputStyle.dropdownSection}>
-        {displayedOptions.map((option, index) => {
-          const isFirstSelected = option.value === selectedData.selectedValues[0]
-          return (
-            <Item
-              descriptionDirection={descriptionDirection}
-              indexOption={index}
-              key={option.value}
-              option={option}
-              optionalInfoPlacement={optionalInfoPlacement}
-              ref={getItemRef(option, isFirstSelected)}
-              textVariant={textVariant}
-            />
-          )
-        })}
+      <Stack
+        aria-labelledby={optionGroupLabelId}
+        gap={0.25}
+        className={selectInputStyle.dropdownSection}
+        // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role - listbox groups must use ARIA roles
+        role="group"
+      >
+        <VisuallyHidden id={optionGroupLabelId}>Options</VisuallyHidden>
+        {displayedOptions.map((option, index) => (
+          <Item
+            descriptionDirection={descriptionDirection}
+            indexOption={index}
+            isActive={focusedOptionValue === option.value}
+            key={option.value}
+            onFocus={() => setFocusedOptionValue(option.value)}
+            option={option}
+            optionalInfoPlacement={optionalInfoPlacement}
+            ref={getItemRef(option)}
+            textVariant={textVariant}
+          />
+        ))}
         {loadMore ? <Stack className={selectInputStyle.dropdownLoadMore}>{loadMore}</Stack> : null}
       </Stack>
     </Stack>
   ) : (
     <Stack
+      aria-labelledby={listboxLabelledBy}
       className={selectInputStyle.dropdownContainer}
       data-grouped
-      id="select-dropdown"
-      onKeyDown={handleKeyDownSelect}
+      id={listboxId}
+      onKeyDown={event => handleKeyDownSelect(event, searchBarRef)}
       role="listbox"
     >
       <AddOption
@@ -223,9 +263,16 @@ export const CreateDropdown = ({
         const errorGroup = groupError?.[group] ?? null
 
         return hasElements || emptyStateGroup ? (
-          <Stack gap={0.25} key={group} className={selectInputStyle.dropdownSection}>
-            <Group group={group} index={index} />
-            <Stack gap="0.25" id="items">
+          <Stack
+            aria-labelledby={group ? `${optionGroupLabelId}-${index}` : undefined}
+            gap={0.25}
+            key={group}
+            className={selectInputStyle.dropdownSection}
+            // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role - listbox groups must use ARIA roles
+            role="group"
+          >
+            <Group group={group} index={index} labelId={`${optionGroupLabelId}-${index}`} />
+            <Stack gap="0.25" role="presentation">
               {!hasElements && emptyStateGroup ? (
                 <Text
                   as="span"
@@ -247,22 +294,22 @@ export const CreateDropdown = ({
                   {errorGroup}
                 </Text>
               ) : null}
-              {displayedOptions[group].map((option, indexOption) => {
-                const isFirstSelected = option.value === selectedData.selectedValues[0]
-
-                return errorGroup ? null : (
+              {displayedOptions[group].map((option, indexOption) =>
+                errorGroup ? null : (
                   <Item
                     descriptionDirection={descriptionDirection}
                     group={group}
                     indexOption={indexOption}
+                    isActive={focusedOptionValue === option.value}
                     key={option.value}
+                    onFocus={() => setFocusedOptionValue(option.value)}
                     option={option}
                     optionalInfoPlacement={optionalInfoPlacement}
-                    ref={getItemRef(option, isFirstSelected)}
+                    ref={getItemRef(option)}
                     textVariant={textVariant}
                   />
-                )
-              })}
+                ),
+              )}
             </Stack>
           </Stack>
         ) : null

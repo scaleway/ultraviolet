@@ -165,7 +165,6 @@ exports[`estimateCost - NumberInput Item > render basic props 1`] = `
                         />
                       </div>
                       <div
-                        aria-label="iteration-unit"
                         class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
                         style="--bjgo2p0: 100%;"
                       >
@@ -177,7 +176,10 @@ exports[`estimateCost - NumberInput Item > render basic props 1`] = `
                           >
                             <div
                               aria-expanded="false"
-                              aria-haspopup="dialog"
+                              aria-haspopup="listbox"
+                              aria-invalid="false"
+                              aria-labelledby="_r_8_"
+                              aria-required="false"
                               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_medium__1xo4j4bb selectBar_state_neutral__1xo4j4be"
                               data-disabled="false"
                               data-readonly="false"
@@ -187,6 +189,8 @@ exports[`estimateCost - NumberInput Item > render basic props 1`] = `
                               tabindex="0"
                             >
                               <span
+                                aria-atomic="true"
+                                aria-live="polite"
                                 class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                               >
                                 Hour(s)
@@ -210,6 +214,12 @@ exports[`estimateCost - NumberInput Item > render basic props 1`] = `
                               </div>
                             </div>
                           </div>
+                          <output
+                            aria-atomic="true"
+                            aria-live="polite"
+                            class="styles__ahdbou0"
+                            id="_r_b_"
+                          />
                         </div>
                       </div>
                     </div>
@@ -291,7 +301,7 @@ exports[`estimateCost - NumberInput Item > render basic props 1`] = `
                           >
                             <input
                               class="styles__ai2awpc styles_controls_true__ai2awpe styles_size_small__ai2awpi"
-                              id="_r_k_"
+                              id="_r_m_"
                               inputmode="decimal"
                               max="100"
                               min="0"
@@ -541,7 +551,7 @@ exports[`estimateCost - NumberInput Item > render basic with overlay 1`] = `
                           aria-invalid="false"
                           class="styles_medium__bjgo2p3 styles__bjgo2p1"
                           data-testid="unit-input"
-                          id="_r_15_"
+                          id="_r_17_"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -552,7 +562,6 @@ exports[`estimateCost - NumberInput Item > render basic with overlay 1`] = `
                         />
                       </div>
                       <div
-                        aria-label="iteration-unit"
                         class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
                         style="--bjgo2p0: 100%;"
                       >
@@ -564,7 +573,10 @@ exports[`estimateCost - NumberInput Item > render basic with overlay 1`] = `
                           >
                             <div
                               aria-expanded="false"
-                              aria-haspopup="dialog"
+                              aria-haspopup="listbox"
+                              aria-invalid="false"
+                              aria-labelledby="_r_1a_"
+                              aria-required="false"
                               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_medium__1xo4j4bb selectBar_state_neutral__1xo4j4be"
                               data-disabled="false"
                               data-readonly="false"
@@ -574,6 +586,8 @@ exports[`estimateCost - NumberInput Item > render basic with overlay 1`] = `
                               tabindex="0"
                             >
                               <span
+                                aria-atomic="true"
+                                aria-live="polite"
                                 class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                               >
                                 Hour(s)
@@ -597,6 +611,12 @@ exports[`estimateCost - NumberInput Item > render basic with overlay 1`] = `
                               </div>
                             </div>
                           </div>
+                          <output
+                            aria-atomic="true"
+                            aria-live="polite"
+                            class="styles__ahdbou0"
+                            id="_r_1d_"
+                          />
                         </div>
                       </div>
                     </div>
@@ -678,7 +698,7 @@ exports[`estimateCost - NumberInput Item > render basic with overlay 1`] = `
                           >
                             <input
                               class="styles__ai2awpc styles_controls_true__ai2awpe styles_size_small__ai2awpi"
-                              id="_r_1k_"
+                              id="_r_1o_"
                               inputmode="decimal"
                               max="100"
                               min="0"
@@ -928,7 +948,7 @@ exports[`estimateCost - NumberInput Item > render with getAmountValue 1`] = `
                           aria-invalid="false"
                           class="styles_medium__bjgo2p3 styles__bjgo2p1"
                           data-testid="unit-input"
-                          id="_r_39_"
+                          id="_r_3f_"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -939,7 +959,6 @@ exports[`estimateCost - NumberInput Item > render with getAmountValue 1`] = `
                         />
                       </div>
                       <div
-                        aria-label="iteration-unit"
                         class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
                         style="--bjgo2p0: 100%;"
                       >
@@ -951,7 +970,10 @@ exports[`estimateCost - NumberInput Item > render with getAmountValue 1`] = `
                           >
                             <div
                               aria-expanded="false"
-                              aria-haspopup="dialog"
+                              aria-haspopup="listbox"
+                              aria-invalid="false"
+                              aria-labelledby="_r_3i_"
+                              aria-required="false"
                               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_medium__1xo4j4bb selectBar_state_neutral__1xo4j4be"
                               data-disabled="false"
                               data-readonly="false"
@@ -961,6 +983,8 @@ exports[`estimateCost - NumberInput Item > render with getAmountValue 1`] = `
                               tabindex="0"
                             >
                               <span
+                                aria-atomic="true"
+                                aria-live="polite"
                                 class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                               >
                                 Hour(s)
@@ -984,6 +1008,12 @@ exports[`estimateCost - NumberInput Item > render with getAmountValue 1`] = `
                               </div>
                             </div>
                           </div>
+                          <output
+                            aria-atomic="true"
+                            aria-live="polite"
+                            class="styles__ahdbou0"
+                            id="_r_3l_"
+                          />
                         </div>
                       </div>
                     </div>
@@ -1065,7 +1095,7 @@ exports[`estimateCost - NumberInput Item > render with getAmountValue 1`] = `
                           >
                             <input
                               class="styles__ai2awpc styles_controls_true__ai2awpe styles_size_small__ai2awpi"
-                              id="_r_3o_"
+                              id="_r_40_"
                               inputmode="decimal"
                               max="100"
                               min="0"
@@ -1315,7 +1345,7 @@ exports[`estimateCost - NumberInput Item > render with values 1`] = `
                           aria-invalid="false"
                           class="styles_medium__bjgo2p3 styles__bjgo2p1"
                           data-testid="unit-input"
-                          id="_r_25_"
+                          id="_r_29_"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -1326,7 +1356,6 @@ exports[`estimateCost - NumberInput Item > render with values 1`] = `
                         />
                       </div>
                       <div
-                        aria-label="iteration-unit"
                         class="styles__bjgo2pg styles__bjgo2pf styles__ei8oq30"
                         style="--bjgo2p0: 100%;"
                       >
@@ -1338,7 +1367,10 @@ exports[`estimateCost - NumberInput Item > render with values 1`] = `
                           >
                             <div
                               aria-expanded="false"
-                              aria-haspopup="dialog"
+                              aria-haspopup="listbox"
+                              aria-invalid="false"
+                              aria-labelledby="_r_2c_"
+                              aria-required="false"
                               class="selectBar__1xo4j4b6 selectBar__1xo4j4b5 selectBar_size_medium__1xo4j4bb selectBar_state_neutral__1xo4j4be"
                               data-disabled="false"
                               data-readonly="false"
@@ -1348,6 +1380,8 @@ exports[`estimateCost - NumberInput Item > render with values 1`] = `
                               tabindex="0"
                             >
                               <span
+                                aria-atomic="true"
+                                aria-live="polite"
                                 class="selectBar__1xo4j4bm style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_neutral__1do42lsb style_variant_bodySmall__1do42lsk style_undefined_compound_0__1do42ls1a style_undefined_compound_64__1do42ls32"
                               >
                                 Hour(s)
@@ -1371,6 +1405,12 @@ exports[`estimateCost - NumberInput Item > render with values 1`] = `
                               </div>
                             </div>
                           </div>
+                          <output
+                            aria-atomic="true"
+                            aria-live="polite"
+                            class="styles__ahdbou0"
+                            id="_r_2f_"
+                          />
                         </div>
                       </div>
                     </div>
@@ -1457,7 +1497,7 @@ exports[`estimateCost - NumberInput Item > render with values 1`] = `
                           >
                             <input
                               class="styles__ai2awpc styles_controls_true__ai2awpe styles_size_small__ai2awpi"
-                              id="_r_2m_"
+                              id="_r_2s_"
                               inputmode="decimal"
                               max="51"
                               min="0"

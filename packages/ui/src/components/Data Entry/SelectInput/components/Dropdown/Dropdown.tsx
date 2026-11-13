@@ -1,8 +1,9 @@
 'use client'
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import type { ComponentProps, Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { Stack } from '../../../../Layout/Stack'
+import { VisuallyHidden } from '../../../../Other/VisuallyHidden'
 import { Popup } from '../../../../Overlay/Popup/v2'
 import { NON_SEARCHABLE_KEYS } from '../../constants'
 import { useSelectInput } from '../../SelectInputProvider'
@@ -12,7 +13,6 @@ import { SearchBar } from './SearchBar'
 import { selectInputStyle } from '../../styles.css'
 
 export type DropdownProps = {
-  id?: string
   children: ReactNode
   emptyState: ReactNode
   descriptionDirection: 'row' | 'column'
@@ -27,6 +27,8 @@ export type DropdownProps = {
   addOption?: { text: string; onClick: (searchText: string) => void }
   disabled?: boolean
   portalTarget?: ComponentProps<typeof Popup.Panel>['portalTarget']
+  listboxId: string
+  listboxLabelledBy?: string
 }
 
 const handleKeyDown = (
@@ -42,6 +44,9 @@ const handleKeyDown = (
   if (
     ref.current &&
     !searchBarActive &&
+    !event.ctrlKey &&
+    !event.metaKey &&
+    !event.altKey &&
     !NON_SEARCHABLE_KEYS.has(event.key) &&
     document.activeElement?.ariaLabel !== 'search-bar'
   ) {
@@ -69,26 +74,21 @@ export const Dropdown = ({
   loadMore,
   optionalInfoPlacement,
   isLoading,
-  id,
   groupError,
   groupEmptyState,
   addOption,
   disabled,
   portalTarget,
+  listboxId,
+  listboxLabelledBy,
 }: DropdownProps) => {
-  const {
-    setIsDropdownVisible,
-    isDropdownVisible,
-    onSearch,
-    searchInput,
-    options,
-    displayedOptions,
-    numberOfOptions,
-    selectedData,
-  } = useSelectInput()
+  const { setIsDropdownVisible, isDropdownVisible, onSearch, searchInput, options, displayedOptions, numberOfOptions } =
+    useSelectInput()
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [defaultSearchValue, setDefaultSearchValue] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
+  const resultCountId = useId()
+  const searchBarRef = useRef<HTMLInputElement | null>(null)
   const [search, setSearch] = useState('')
   const initialFocusRef = useRef<HTMLDivElement | null>(null)
 
@@ -141,6 +141,14 @@ export const Dropdown = ({
     return true
   }, [displayedOptions, numberOfOptions])
 
+  const displayedOptionCount = useMemo(
+    () =>
+      Array.isArray(displayedOptions)
+        ? displayedOptions.length
+        : Object.values(displayedOptions).reduce((count, groupOptions) => count + groupOptions.length, 0),
+    [displayedOptions],
+  )
+
   const computedFooter = useMemo(() => {
     if (footer && !isEmpty) {
       if (typeof footer === 'function') {
@@ -157,19 +165,22 @@ export const Dropdown = ({
     <Popup.Root visible={isDropdownVisible && !disabled} onOpenChange={setIsDropdownVisible}>
       <Popup.Trigger>{children}</Popup.Trigger>
       <Popup.Panel
-        id={id}
         ref={ref}
+        aria-labelledby={listboxLabelledBy}
         className={selectInputStyle.dropdown}
         placement="bottom-start"
         matchTriggerWidth
         portalTarget={portalTarget}
-        initialFocus={searchable || selectedData.selectedValues.length === 0 ? undefined : initialFocusRef}
+        initialFocus={!searchable && !isLoading && displayedOptionCount > 0 ? initialFocusRef : undefined}
       >
         <Stack>
           {searchable && !isLoading ? (
             <SearchBar
               displayedOptions={displayedOptions}
+              inputRef={searchBarRef}
+              listboxId={listboxId}
               placeholder={placeholder}
+              resultCountId={resultCountId}
               setSearchBarActive={setSearchBarActive}
             />
           ) : null}
@@ -184,12 +195,18 @@ export const Dropdown = ({
             isEmpty={isEmpty}
             isLoading={isLoading}
             loadMore={loadMore}
+            listboxId={listboxId}
+            listboxLabelledBy={listboxLabelledBy}
             optionalInfoPlacement={optionalInfoPlacement}
             searchable={searchable}
+            searchBarRef={searchBarRef}
           />
           {computedFooter}
         </Stack>
       </Popup.Panel>
+      <VisuallyHidden as="output" aria-atomic="true" aria-live="polite" id={resultCountId}>
+        {isDropdownVisible ? `${displayedOptionCount} option${displayedOptionCount === 1 ? '' : 's'} available` : ''}
+      </VisuallyHidden>
     </Popup.Root>
   )
 }

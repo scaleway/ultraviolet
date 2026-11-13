@@ -1,5 +1,5 @@
 import { cn } from '@ultraviolet/utils'
-import { forwardRef } from 'react'
+import { forwardRef, useId } from 'react'
 import type { ChangeEvent, KeyboardEvent, MouseEvent } from 'react'
 import { Tooltip } from '../../../../Overlay/Tooltip'
 import { Checkbox } from '../../../Checkbox'
@@ -10,23 +10,26 @@ import { selectInputStyle } from '../../styles.css'
 
 type ItemProps = {
   option: OptionType
-  indexOption: number
   group?: string
   descriptionDirection: 'column' | 'row'
   textVariant: 'body' | 'bodySmall'
   optionalInfoPlacement: 'left' | 'right'
+  isActive: boolean
+  onFocus: () => void
+  indexOption: number
 }
 
 export const Item = forwardRef<HTMLDivElement, ItemProps>(
-  ({ option, indexOption, group, descriptionDirection, textVariant, optionalInfoPlacement }, ref) => {
+  ({ option, group, descriptionDirection, textVariant, optionalInfoPlacement, isActive, onFocus }, ref) => {
     const { setIsDropdownVisible, onChange, multiselect, setSelectedData, selectedData, size } = useSelectInput()
+    const id = useId()
 
     const handleClick = ({
       clickedOption,
       event,
     }: {
       clickedOption: OptionType
-      event: MouseEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement> | ChangeEvent<HTMLDivElement>
+      event: MouseEvent<HTMLElement> | KeyboardEvent<HTMLElement> | ChangeEvent<HTMLElement>
     }) => {
       event.stopPropagation()
 
@@ -44,10 +47,9 @@ export const Item = forwardRef<HTMLDivElement, ItemProps>(
     }
 
     return (
-      <Tooltip containerFullWidth text={option.tooltip}>
+      <Tooltip containerFullWidth tabIndex={-1} text={option.tooltip}>
         <div
           aria-disabled={!!option.disabled}
-          aria-label={option.value}
           aria-selected={selectedData.selectedValues.includes(option.value) && !option.disabled}
           className={cn(
             selectInputStyle.dropdownItem({
@@ -57,7 +59,7 @@ export const Item = forwardRef<HTMLDivElement, ItemProps>(
             }),
           )}
           data-testid={`option-${option.value}`}
-          id={`option-${indexOption}`}
+          id={id}
           onClick={event => {
             if (!option.disabled) {
               handleClick({
@@ -66,6 +68,7 @@ export const Item = forwardRef<HTMLDivElement, ItemProps>(
               })
             }
           }}
+          onFocus={onFocus}
           onKeyDown={event => {
             const shouldClick = [' ', 'Enter'].includes(event.key) && !option.disabled
             if (shouldClick) {
@@ -76,8 +79,9 @@ export const Item = forwardRef<HTMLDivElement, ItemProps>(
             }
           }}
           ref={ref}
+          // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role - options must be inside a `select` and can't be styled accross all browser
           role="option"
-          tabIndex={0}
+          tabIndex={isActive ? 0 : -1}
         >
           {multiselect ? (
             <Checkbox
@@ -92,6 +96,7 @@ export const Item = forwardRef<HTMLDivElement, ItemProps>(
                   })
                 }
               }}
+              style={{ display: 'none' }}
               tabIndex={-1}
               value={option.value}
             >

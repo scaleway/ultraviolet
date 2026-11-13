@@ -3,8 +3,7 @@
 import { isFuzzyMatch, normalizeString } from '@scaleway/fuzzy-search'
 import { SearchIcon } from '@ultraviolet/icons/SearchIcon'
 import { cn } from '@ultraviolet/utils'
-import { useRef } from 'react'
-import type { Dispatch, KeyboardEvent, SetStateAction } from 'react'
+import type { Dispatch, KeyboardEvent, RefObject, SetStateAction } from 'react'
 import { searchInputStyle } from '../../../../styles'
 import { TextInput } from '../../../TextInput'
 import { OPTION_SELECTOR } from '../../constants'
@@ -17,6 +16,9 @@ type SearchBarProps = {
   placeholder: string
   displayedOptions: DataType
   setSearchBarActive: Dispatch<SetStateAction<boolean>>
+  listboxId: string
+  resultCountId: string
+  inputRef: RefObject<HTMLInputElement | null>
 }
 
 const getReferenceText = (option: OptionType) => {
@@ -73,8 +75,14 @@ const findClosestOption = (options: DataType, searchInput: string | undefined) =
 
 const escapeRegExp = (string: string) => string.replaceAll(/[.*+?^{}()|[\]\\]/gu, String.raw`\$&`)
 
-export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }: SearchBarProps) => {
-  const searchInputRef = useRef<HTMLInputElement>(null)
+export const SearchBar = ({
+  placeholder,
+  displayedOptions,
+  setSearchBarActive,
+  listboxId,
+  resultCountId,
+  inputRef,
+}: SearchBarProps) => {
   const { onChange, onSearch, setSearchInput, searchInput, options, multiselect, setSelectedData, selectedData, size } =
     useSelectInput()
 
@@ -112,9 +120,9 @@ export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }:
       }
     } else if (key === 'Tab' || key === 'ArrowDown') {
       event?.preventDefault()
-      const optionsDropdown = document.querySelectorAll(OPTION_SELECTOR)
-      if (optionsDropdown && optionsDropdown.length > 0) {
-        ;(optionsDropdown[0] as HTMLElement).focus()
+      const optionsDropdown = document.getElementById(listboxId)?.querySelectorAll<HTMLElement>(OPTION_SELECTOR)
+      if (optionsDropdown?.length) {
+        optionsDropdown[0].focus()
       }
     }
   }
@@ -122,6 +130,8 @@ export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }:
   return (
     <TextInput
       aria-label="search-bar"
+      aria-controls={listboxId}
+      aria-describedby={resultCountId}
       className={cn(selectInputStyle.searchBar, searchInputStyle.searchInput)}
       data-testid="search-bar"
       onBlur={() => setSearchBarActive(false)}
@@ -130,7 +140,7 @@ export const SearchBar = ({ placeholder, displayedOptions, setSearchBarActive }:
       onKeyDown={event => handleKeyDown(event, searchInput)}
       placeholder={placeholder}
       prefix={<SearchIcon sentiment="neutral" prominence="weak" size="small" />}
-      ref={searchInputRef}
+      ref={inputRef}
       size={size === 'small' ? 'small' : 'medium'}
       value={searchInput}
     />

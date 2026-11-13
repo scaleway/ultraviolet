@@ -1,10 +1,11 @@
 import { cn } from '@ultraviolet/utils'
+import { useMemo } from 'react'
 import { Text } from '../../../../Typography/Text'
 import { Checkbox } from '../../../Checkbox'
 import { useSelectInput } from '../../SelectInputProvider'
 import { selectInputStyle } from '../../styles.css'
 
-export const Group = ({ group, index }: { group: string; index: number }) => {
+export const Group = ({ group, index, labelId }: { group: string; index: number; labelId: string }) => {
   const { selectAllGroup, selectedData, size, setSelectedData, multiselect, options, onChange } = useSelectInput()
 
   const handleSelectGroup = () => {
@@ -27,59 +28,66 @@ export const Group = ({ group, index }: { group: string; index: number }) => {
     }
   }
 
+  const groupLabel = useMemo(
+    () => (
+      <Text
+        as="span"
+        id={labelId}
+        placement="left"
+        sentiment="neutral"
+        variant={size === 'small' ? 'captionSmall' : 'caption'}
+      >
+        {group.toUpperCase()}
+      </Text>
+    ),
+    [group, labelId, size],
+  )
+
   if (!group) {
     return null
   }
 
   return (
-    <div className={selectInputStyle.dropdownGroupWrapper} id={selectAllGroup ? 'items' : undefined}>
-      <button
-        className={cn(
-          selectAllGroup
-            ? selectInputStyle.dropdownGroupSelectable({
-                size,
-              })
-            : '',
-          selectInputStyle.dropdownGroup,
-        )}
-        data-selectgroup={selectAllGroup}
-        data-testid={`group-${index}`}
-        key={group}
-        onClick={() => (selectAllGroup ? handleSelectGroup() : null)}
-        onKeyDown={event => {
-          if ([' ', 'Enter'].includes(event.key)) {
-            event.preventDefault()
-            handleSelectGroup()
-          }
-        }}
-        tabIndex={selectAllGroup ? 0 : -1}
-        type="button"
-      >
-        {selectAllGroup ? (
+    <div className={selectInputStyle.dropdownGroupWrapper} role="presentation">
+      {selectAllGroup ? (
+        <div
+          aria-selected={selectedData.selectedGroups.includes(group)}
+          className={cn(
+            selectInputStyle.dropdownGroupSelectable({
+              size,
+            }),
+            selectInputStyle.dropdownGroup,
+          )}
+          data-testid={`group-${index}`}
+          onClick={handleSelectGroup}
+          onKeyDown={event => {
+            if ([' ', 'Enter'].includes(event.key)) {
+              event.preventDefault()
+              handleSelectGroup()
+            }
+          }}
+          // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role - options must be inside a select and can't be styled across all browsers
+          role="option"
+          tabIndex={-1}
+        >
           <Checkbox
             checked={selectedData.selectedGroups.includes(group)}
             className={selectInputStyle.dropdownCheckbox}
             data-testid="select-group"
             disabled={false}
-            onChange={() => (selectAllGroup ? handleSelectGroup() : null)}
+            onChange={handleSelectGroup}
+            style={{ display: 'none' }}
             tabIndex={-1}
             value={group}
           >
-            <Text
-              as="span"
-              placement="left"
-              sentiment="neutral"
-              variant={size === 'small' ? 'captionSmall' : 'caption'}
-            >
-              {group.toUpperCase()}
-            </Text>
+            {groupLabel}
           </Checkbox>
-        ) : (
-          <Text as="span" placement="left" sentiment="neutral" variant={size === 'small' ? 'captionSmall' : 'caption'}>
-            {group.toUpperCase()}
-          </Text>
-        )}
-      </button>
+        </div>
+      ) : (
+        <div className={selectInputStyle.dropdownGroup} data-testid={`group-${index}`}>
+          {groupLabel}
+        </div>
+      )}
     </div>
   )
 }

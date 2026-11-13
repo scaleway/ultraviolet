@@ -15,9 +15,9 @@ export default {
   parameters: {
     a11yStatus: {
       perceivable: false,
-      operable: false,
-      understandable: false,
-      robust: false,
+      operable: true,
+      understandable: true,
+      robust: true,
     },
   },
 } as Meta<typeof SelectInput>

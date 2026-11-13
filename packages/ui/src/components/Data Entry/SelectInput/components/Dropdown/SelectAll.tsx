@@ -42,9 +42,14 @@ export const SelectAll = ({ textVariant }: { textVariant: 'body' | 'bodySmall' }
   }
 
   return (
-    <Stack gap={0.25} id="items" tabIndex={-1} className={selectInputStyle.dropdownSection}>
+    <Stack
+      gap={0.25}
+      tabIndex={-1}
+      className={selectInputStyle.dropdownSection}
+      // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role - listbox groups must use ARIA roles
+      role="group"
+    >
       <div
-        aria-label="select-all"
         aria-selected={allSelected}
         className={cn(
           selectInputStyle.dropdownItem({
@@ -64,6 +69,7 @@ export const SelectAll = ({ textVariant }: { textVariant: 'body' | 'bodySmall' }
           data-testid="select-all-checkbox"
           disabled={false}
           onChange={selectAllOptions}
+          style={{ display: 'none' }}
           tabIndex={-1}
           value="select-all"
         >
