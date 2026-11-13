@@ -18,6 +18,7 @@ export const MultiStateInput = ({
   onFocus,
   type,
   value,
+  size,
 }: MultiStateProps) => {
   if (!type) {
     return null
@@ -39,6 +40,7 @@ export const MultiStateInput = ({
         onChange={onChange}
         onFocus={onFocus}
         ref={innerRef}
+        size={size === 'small' ? 'small' : 'default'}
         tabIndex={-1}
         value={value}
         {...labelProps}
@@ -64,6 +66,7 @@ export const MultiStateInput = ({
         ref={innerRef}
         tabIndex={-1}
         value={value}
+        size={size === 'large' ? 'medium' : size}
         {...labelProps}
       />
     )
@@ -86,6 +89,7 @@ export const MultiStateInput = ({
       ref={innerRef}
       tabIndex={-1}
       value={value}
+      size={size === 'medium' ? 'large' : size}
       {...labelProps}
     />
   )

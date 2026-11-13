@@ -5,7 +5,29 @@ import { SelectableCardField } from '..'
 
 export const Checkbox: StoryFn<ComponentProps<typeof SelectableCardField>> = args => (
   <Row gap={1} templateColumns="repeat(2, 2fr)">
-    <SelectableCardField {...args} id="option1" name="option1" showTick type="checkbox" value="option1" />
-    <SelectableCardField {...args} id="option2" name="option1" showTick type="checkbox" value="option2" />
+    <SelectableCardField
+      {...args}
+      id="option1"
+      name="option1"
+      showTick
+      type="checkbox"
+      value="option1"
+      label="Option 1"
+      aria-label={undefined} // needed because {...args} breaks the aria-label type
+    />
+    <SelectableCardField
+      {...args}
+      id="option2"
+      name="option1"
+      showTick
+      type="checkbox"
+      value="option2"
+      label="Option 2"
+      aria-label={undefined}
+    />
   </Row>
 )
+
+Checkbox.args = {
+  label: 'Label',
+}

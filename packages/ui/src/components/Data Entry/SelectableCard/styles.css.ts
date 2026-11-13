@@ -3,6 +3,18 @@ import { globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { inputDisplay, labelDisplay } from './variables.css'
 
+const paddingsInline = {
+  small: theme.space['1.5'],
+  medium: theme.space[2],
+  large: theme.space[2],
+}
+
+const paddingsBlock = {
+  small: theme.space['0.5'],
+  medium: theme.space[1],
+  large: theme.space['1.5'],
+}
+
 const container = recipe({
   base: {
     background: theme.colors.neutral.background,
@@ -10,8 +22,8 @@ const container = recipe({
     borderRadius: theme.radii.default,
     color: theme.colors.neutral.text,
     cursor: 'pointer',
-    padding: theme.space[2],
     position: 'relative',
+    padding: theme.space[0],
     selectors: {
       '&[data-checked="true"]': {
         border: `1px solid ${theme.colors.primary.border}`,
@@ -42,6 +54,7 @@ const container = recipe({
   defaultVariants: {
     cursor: 'custom',
     image: 'none',
+    size: 'large',
   },
   variants: {
     cursor: {
@@ -53,16 +66,42 @@ const container = recipe({
       },
     },
     image: {
-      icon: {
-        padding: theme.space[0],
-        paddingRight: theme.space[2],
-      },
-      illustration: {
-        padding: theme.space[0],
-      },
+      icon: {},
+      illustration: {},
       none: {},
     },
+    size: {
+      small: {},
+      medium: {},
+      large: {},
+    },
   },
+  compoundVariants: [
+    {
+      style: { paddingInline: paddingsInline.small, paddingBlock: paddingsBlock.small },
+      variants: { size: 'small', image: 'none' },
+    },
+    {
+      style: { paddingInline: paddingsInline.medium, paddingBlock: paddingsBlock.medium },
+      variants: { size: 'medium', image: 'none' },
+    },
+    {
+      style: { paddingInline: paddingsInline.large, paddingBlock: paddingsBlock.large },
+      variants: { size: 'large', image: 'none' },
+    },
+    {
+      style: { paddingRight: paddingsInline.small },
+      variants: { size: 'small', image: 'icon' },
+    },
+    {
+      style: { paddingRight: paddingsInline.medium },
+      variants: { size: 'medium', image: 'icon' },
+    },
+    {
+      style: { paddingRight: paddingsInline.large },
+      variants: { size: 'large', image: 'icon' },
+    },
+  ],
 })
 
 const labelContainerSelectableCardLabel = style({})
@@ -88,19 +127,38 @@ const image = style({
   position: 'absolute',
 })
 
-const illustration = style({
-  flex: '0 1 auto',
-  maxWidth: 'calc(100% - 10rem)',
-  padding: theme.space[2],
+const illustration = recipe({
+  base: {
+    flex: '0 1 auto',
+    maxWidth: 'calc(100% - 10rem)',
+    padding: theme.space[2],
+  },
+  variants: {
+    size: {
+      small: {
+        paddingInline: paddingsInline.small,
+        paddingBlock: paddingsBlock.small,
+      },
+      medium: { paddingInline: paddingsInline.medium, paddingBlock: paddingsBlock.medium },
+      large: { paddingInline: paddingsInline.large, paddingBlock: paddingsBlock.large },
+    },
+  },
+  defaultVariants: {
+    size: 'large',
+  },
 })
 
-const stack = style({
-  selectors: {
-    '&[data-has-default-cursor="true"]': {
-      cursor: 'default',
+const stack = recipe({
+  variants: {
+    defaultCursor: {
+      true: {
+        cursor: 'default',
+      },
     },
-    '&[data-has-label="false"]': {
-      display: 'contents',
+    label: {
+      false: {
+        display: 'contents',
+      },
     },
   },
 })

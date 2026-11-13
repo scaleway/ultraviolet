@@ -21,6 +21,7 @@ export type SelectableCardProps = {
   indented?: boolean
   labelDescription?: ReactNode
   labelDescriptionAlignment?: 'right' | 'left'
+  size?: 'small' | 'medium' | 'large'
 } & (
   | {
       illustration?: ReactElement<{ style?: CSSProperties }>
@@ -48,6 +49,7 @@ export type MultiStateProps = Pick<
   | 'showTick'
   | 'onBlur'
   | 'value'
+  | 'size'
 > & {
   innerRef: RefObject<HTMLInputElement | null>
 }

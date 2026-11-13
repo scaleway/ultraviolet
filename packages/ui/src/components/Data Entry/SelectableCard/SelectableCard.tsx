@@ -41,6 +41,7 @@ export const SelectableCard = forwardRef(
       illustration,
       'aria-label': ariaLabel,
       style,
+      size = 'large',
       indented = true,
     }: SelectableCardProps,
     ref: ForwardedRef<HTMLDivElement>,
@@ -105,6 +106,7 @@ export const SelectableCard = forwardRef(
       onFocus,
       type,
       value,
+      size,
     }
 
     const content = (
@@ -116,6 +118,7 @@ export const SelectableCard = forwardRef(
             selectableCardStyle.container({
               cursor: isCheckboxOrToggle && isComplexChildren ? 'default' : 'custom',
               image,
+              size,
             }),
             label
               ? cn(
@@ -148,7 +151,7 @@ export const SelectableCard = forwardRef(
           }}
           tabIndex={disabled ? undefined : 0}
         >
-          <IllustrationContainer illustration={illustration} productIcon={productIcon}>
+          <IllustrationContainer illustration={illustration} productIcon={productIcon} size={size}>
             {labelDescription ? (
               <Stack width="100%" direction="row" gap={1} alignItems="center">
                 <MultiStateInput {...inputsProps} />
@@ -161,11 +164,13 @@ export const SelectableCard = forwardRef(
             {children ? (
               <Stack
                 className={cn(
-                  selectableCardStyle.stack,
+                  selectableCardStyle.stack({
+                    defaultCursor: isCheckboxOrToggle && isComplexChildren,
+                    label: !!label && showTick,
+                  }),
                   !!label && showTick && indented ? selectableCardStyle.indentedCard : undefined,
                 )}
-                data-has-default-cursor={isCheckboxOrToggle && isComplexChildren}
-                data-has-label={!!label && showTick}
+
                 onKeyDown={event => event.stopPropagation()}
                 ref={childrenRef}
                 width="100%"
