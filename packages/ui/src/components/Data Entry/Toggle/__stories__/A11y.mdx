@@ -1,0 +1,66 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Data Entry/Toggle/A11y" />
+
+# Toggle - Accessibility
+
+## Description
+
+A form input component used to toggle a binary setting on or off. Renders a native `<input type="checkbox">` styled as a switch track, with optional label (string or ReactNode), helper/error text, tooltip, and disabled/required states. Uses native checkbox semantics, so role, checked state and keyboard handling are provided by the browser.
+
+## Summary
+
+1. ❌ **Perceivable**: State is conveyed by knob position, not color alone (1.4.1), and the helper/error text is correctly exposed as a description via `aria-describedby`, but the off-state track/knob boundary and the focus ring fail non-text contrast (1.4.11)
+2. ❌ **Operable**: Keyboard accessible and a focus indicator is shown, but its contrast fails 1.4.11, and the `small` size hit target (20px tall) falls below the 24px minimum (2.5.8)
+3. ✅ **Understandable**: Labels and helper/error text are provided and associated with the input via label wrapping and `aria-describedby`
+4. ❌ **Robust**: The required asterisk leaks into the accessible name, the deprecated `aria-label` pattern is used instead of `accessibleLabel` (RFC #6585), and an invalid `for` attribute is rendered on the label `<span>` (4.1.2)
+
+## ARIA Pattern
+
+[ARIA Switch Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/switch/)
+
+The component follows the "Switch Example Using HTML Checkbox Input": a native `input[type="checkbox"]` uses the `checked` attribute (instead of `aria-checked`) and Space to toggle, with the accessible label provided by the wrapping `<label>`.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.4.1 - Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) - The on/off state is conveyed by the knob position on the track, not by color alone, so it remains perceivable to users with color vision deficiencies.
+- ❌ [WCAG 1.4.11 - Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) - The off-state track/knob boundary and the focus indicator fall below the 3:1 minimum in all themes: off track vs page is less than 3:1 for all themes (dark, darker, adn light) as well as the focus ring. The on/checked state passes.
+- ✅ [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - The `Description` (helper/error text) is exposed as a description via `aria-describedby` and excluded from the accessible name, so the label/description relationship is correctly conveyed. Moving the `Description` outside the `<label>` would make it robust and semantic.
+- ✅ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Native `<input type="checkbox">` is operable with the Space key without custom handlers.
+- ✅ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - A focus ring is shown on the track via `:focus-within`.
+- ❌ [WCAG 2.5.8 - Target Size (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) - The `small` size track is 20px tall (theme `sizing['250']`), below the 24×24 CSS px minimum. The interactive hit target (the invisible input stretched over the track) is therefore undersized unless the spacing exception applies.
+- ✅ [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - When `error` is a string, the error text is rendered and linked to the input via `aria-describedby`, and `aria-invalid` is set.
+- ✅ [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - The checkbox is named by the wrapping `<label>` when a `label` is provided.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The required asterisk is part of the accessible name; the component relies on the deprecated `aria-label` prop instead of an `accessibleLabel` prop; a `for` attribute is rendered on a `<span>`, which is invalid HTML and meaningless for label association.
+
+To apply when using the component:
+
+- [WCAG 2.4.6 - Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html) - Provide a descriptive `label` so the option purpose is clear; avoid generic labels without context.
+- [WCAG 2.5.3 - Label in Name (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html) - Do not pass both a visible `label` and `aria-label`/`accessibleLabel` with different text, or what screen reader users hear will not match what is shown.
+- [WCAG 3.3.2 - Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - Always provide a `label` (or an `accessibleLabel`). A complex ReactNode label that contains no text (e.g. an icon only) leaves the checkbox without an accessible name.
+- [WCAG 1.3.1 - Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) - When passing a complex ReactNode label, do not include labelable elements (button, input, select, textarea, etc.): per the HTML spec a `<label>` cannot contain other labelable elements.
+- [WCAG 3.3.1 - Error Identification (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - Prefer passing an error string. A boolean `error` (bare `true`) sets `aria-invalid` but renders no error text, so the error is never announced to assistive technologies.
+
+## Accessibility issues
+
+**Critical:**
+
+- Off state and focus indicator fail non-text contrast (1.4.11). The off track is less than 3:1 on all 3 themes (dark, darker, and light), so the "off" position of the switch is effectively invisible to low-vision users. The focus ring blends to ~2.26:1 (light) and ~1.02:1 (dark/darker), below the 3:1 minimum. The "on" state passes in all themes. Consider darker track/knob contrast for the off state and a more opaque/high-contrast focus ring.
+
+**High:**
+
+- `small` size hit target is below the WCAG 2.2 minimum. The `small` track is 20px tall, so the 100%×100% invisible input covering it is an undersized target and only passes 2.5.8 via the spacing exception. Consider increasing the hit area (e.g. larger transparent padding around the track) or requiring spacing.
+- No `accessibleLabel` prop. The component exposes only `aria-label`. Per [RFC #6585](https://github.com/scaleway/ultraviolet/discussions/6585), add an `accessibleLabel` property (rendered as visually hidden text via `VisuallyHidden`), deprecate the `aria-label` property and use its value as a fallback for the accessible name.
+
+**Medium:**
+
+- Missing `role="switch"` on the input. The [Switch Example Using HTML Checkbox Input](https://www.w3.org/WAI/ARIA/apg/patterns/switch/examples/switch-checkbox/) sets `role="switch"` on the `input[type="checkbox"]`, which makes assistive technologies announce "switch, on/off" instead of "checkbox, checked". Since the component is a visual on/off switch, the `switch` role is the better semantic match; the native `checked` attribute still conveys the state, per the pattern. This is not a WCAG failure (a checkbox is a valid binary control), but aligning the role with the visual design improves the screen reader experience.
+- Move the `Description` (helper/error) outside the `<label>`. It currently sits inside the wrapping `<label>` and is kept out of the accessible name only because `role="status"` excludes it from the name computation. The `<label>` should only contain the control and its label text; a description belongs outside, linked via `aria-describedby`.
+- Invalid `for` attribute on the label `<span>`. `<Text as="span" htmlFor={localId}>` renders a `for` attribute on a `<span>`, which is invalid HTML and has no effect on label association. Remove the `htmlFor` on the span.
+- Required asterisk leaks into the accessible name. Confirmed with a screen reader: the `*` superscript is announced (e.g. "Toggle me on star") even though the native `required` attribute already conveys the required state. Consider hiding the asterisk with `aria-hidden` so screen reader users do not hear "star".
+
+**Low:**
+
+- Redundant `aria-disabled` on the native input: `disabled` already removes the control from the interaction and accessibility tree; `aria-disabled={disabled}` on the input is redundant.
