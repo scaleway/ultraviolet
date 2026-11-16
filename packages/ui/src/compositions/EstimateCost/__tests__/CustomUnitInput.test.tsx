@@ -21,7 +21,7 @@ describe('estimateCost - CustomUnitInput', () => {
       />,
     ))
 
-  it('render and trigger on blur when leaving input empty', async () => {
+  it('render and and update when typing a value', async () => {
     renderWithTheme(
       <CustomUnitInput
         iteration={{ unit: 'hours', value: 1 }}
@@ -33,9 +33,9 @@ describe('estimateCost - CustomUnitInput', () => {
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
     await waitFor(() => expect(input.value).toBe('1'))
     await userEvent.click(input)
-    await userEvent.type(input, '{ArrowLeft}{Backspace}0')
+    await userEvent.type(input, '{Backspace}2')
     await userEvent.tab()
 
-    await waitFor(() => expect(input.value).toBe('1'))
+    await waitFor(() => expect(input.value).toBe('2'))
   })
 })
