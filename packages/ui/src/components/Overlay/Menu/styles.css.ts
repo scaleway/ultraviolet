@@ -37,7 +37,7 @@ const menu = recipe({
     boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
     maxWidth: SIZES.large,
     minWidth: SIZES.small,
-    padding: `${theme.space['0.25']} 0`,
+    padding: `${theme.space['0.5']} 0`,
   },
   defaultVariants: {
     arrow: false,
@@ -62,6 +62,7 @@ const menu = recipe({
 })
 
 const content = style({
+  gap: theme.space['0.25'],
   overflow: 'auto',
   position: 'relative', // mitigate a scroll issue on Safari caused by the Tooltip of the CopyButton
 })
@@ -71,7 +72,7 @@ const footer = style({ padding: theme.space[1] })
 const list = style({
   backgroundColor: theme.colors.other.elevation.background.raised,
   color: theme.colors.neutral.text,
-  maxHeight: `calc(min(${heightMenu}, ${heightAvailableSpace}) - ${theme.space['0.5']})`,
+  maxHeight: `calc(min(${heightMenu}, ${heightAvailableSpace}) - ${theme.space[1]})`,
 })
 
 const searchInput = style({ padding: theme.space[1] })
@@ -83,9 +84,12 @@ const group = style({
 
 const itemContainer = recipe({
   base: {
+    padding: `0 ${theme.space['0.5']}`,
     selectors: {
       '&:last-child': {
         border: 'none',
+        marginBottom: 0,
+        paddingBottom: 0,
       },
     },
     width: '100%',
@@ -97,11 +101,10 @@ const itemContainer = recipe({
     borderless: {
       false: {
         borderBottom: `1px solid ${theme.colors.neutral.border}`,
-        padding: `${theme.space['0.5']} ${theme.space['0.5']}`,
+        marginBottom: theme.space['0.25'],
+        paddingBottom: theme.space['0.5'],
       },
-      true: {
-        padding: `${theme.space['0.25']} ${theme.space['0.5']}`,
-      },
+      true: {},
     },
   },
 })
