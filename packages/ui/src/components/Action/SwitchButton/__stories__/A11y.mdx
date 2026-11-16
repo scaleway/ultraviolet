@@ -1,0 +1,68 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="UI/Action/SwitchButton/A11y" />
+
+# SwitchButton - Accessibility
+
+## Description
+
+A segmented control that lets the user select a single value among two or more mutually exclusive options (e.g. light/dark mode). Currently each option is rendered as a `div[role="button"]` (via `SelectableCard`) that hides a real radio input (`tabIndex={-1}`, `opacity: 0`) behind it, with a sliding overlay (FocusOverlay) indicating the selected one.
+
+## Summary
+
+1. ✅ **Perceivable**: selected option is conveyed by overlay position, background color and a text color/weight change, so it is not color-only, and the selected-state contrast passes AA on both sentiments.
+2. ❌ **Operable**: only Space can choose an option; Enter and arrow keys do nothing, and each option is an independent tab stop, so keyboard navigation is not that of a single-choice control.
+3. ✅ **Understandable**: options are labeled by their text content; icon-only usage requires a manual accessible label (documented).
+4. ❌ **Robust**: the exposed `role="button"` element does not convey the selected or disabled state, and the group has no accessible name.
+
+## ARIA Pattern
+
+[Radio Group Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/radio/) — the component is semantically a single-choice group of options and should behave as a native radio group. Target keyboard behavior:
+
+- Tab enters the group on the checked option; Shift+Tab leaves it.
+- Arrow keys (Left/Right, Up/Down) navigate between options and select the focused one.
+- Space checks the focused option if it is not already checked.
+
+Achieved by using real radio inputs with a shared `name` inside a `role="radiogroup"` container — no roving tabindex or `aria-checked` is needed, because grouping, checked, and disabled state are then exposed natively by the inputs.
+
+## Rules
+
+Enforced by the component:
+
+- ✅ [WCAG 1.4.3 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - Selected label color (`#ffffff`) on `primary` backgroundStrong (`#8c40ef`) is 5.13:1, well above 4.5:1; neutral sentiment passes too.
+- ❌ [WCAG 2.1.1 - Keyboard (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) - Only Space selects an option; Enter and arrow keys do nothing, so the control is not operable the way its single-choice semantics imply.
+- ❌ [WCAG 2.4.7 - Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) - The native focus-visible outline is still present on the element; its contrast must be valid on both `primary` and `neutral` sentiments (see issue below).
+- ❌ [WCAG 2.4.3 - Focus Order (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) - An unnamed focusable container is inserted in the tab order when the `tooltip` prop is used.
+- ❌ [WCAG 4.1.2 - Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) - The option exposes `role="button"` with only a `data-checked`/`data-disabled` attribute; selected and disabled states are not exposed as ARIA states, and the group has no accessible name.
+
+To apply when using the component:
+
+- [WCAG 1.1.1 - Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) - When options are icon-only, provide an accessible label (see WithIcon story using `VisuallyHidden`).
+
+## Accessibility issues
+
+**High:**
+
+- No selected state exposed - Each option is rendered as `role="button"` (via `SelectableCard`) with only a `data-checked` attribute, which is not an ARIA state. A screen reader user hears "Left, button" and "Right, button" but cannot tell which option is selected.
+  Suggested correction: expose the options as **native radio inputs** grouped together and wrap the control in `role="radiogroup"`, so the checked state is announced natively.
+- Arrow keys do not navigate - Each option is an independent tab stop and the underlying radios are hidden (`tabIndex={-1}`), so no arrow-key navigation exists.
+  Suggested correction: with the options as native radios sharing the same `name`, the browser provides **arrow-key navigation** (Left/Right, Up/Down) between options natively; no custom roving tabindex is needed.
+- Enter does nothing - The focusable element is `div[role="button"]`; `SelectableCard` intercepts only the Space key. Enter neither selects nor submits.
+  Suggested correction: with native radios, Enter behaving as it does for radios (it does **not** apply selection) is the desired behavior because Enter should **submit the surrounding form**; selection is done with arrow keys and Space. Do not add an Enter-to-select handler.
+- Focus indicator contrast - The native `:focus-visible` outline is still present and its contrast has not been validated on the segmented background.
+  Suggested correction: keep a visible focus indicator but ensure it has **valid contrast** (≥ 3:1 non-text, per WCAG 1.4.11 / 2.4.13) on both the `primary` and `neutral` sentiments, including when the focused option is the selected one (outline sits on `primary.backgroundStrong`); add a custom `:focus-visible` outline if the browser default does not meet it.
+
+**Medium:**
+
+- Extra unnamed tab stop with tooltip - In `index.tsx` the container gets `tabIndex={tooltip ? 0 : undefined}` solely so the tooltip shows on focus, adding a focusable element with no role and no accessible name before the options. Attach the tooltip to an option or remove the extra tab stop.
+- Radiogroup has no accessible name - The options are labeled but the group itself cannot be described. Add an `accessibleLabel` prop implementing RFC #6585 (https://github.com/scaleway/ultraviolet/discussions/6585).
+
+**Low:**
+
+- Disabled state not announced - A disabled `SwitchButton.Option` renders only `data-disabled="true"` and is removed from the tab order; users cannot be told the option exists but is disabled. With native radios the disabled state is exposed natively.
+- Tooltip on a disabled option only opens on hover - A disabled option is not focusable, so its tooltip cannot be opened from the keyboard. Consider a non-interactive reference (e.g. an adjacent info icon or the group label).
+
+## Dependencies
+
+- `SelectableCard` (packages/ui/src/components/Data Entry/SelectableCard) — renders each option as `div[role="button"]` and hides the inner radio (`tabIndex={-1}`), which masks the native semantics. `SwitchButton` should stop using `SelectableCard` and use native radio inputs instead.
+- `Radio` (packages/ui/src/components/Data Entry/Radio) — the native radio input behind each option. Since we don't use the appearance of our `Radio` component, native input elements can probably be used instead.
