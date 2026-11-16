@@ -116,7 +116,8 @@ export const SelectableCard = forwardRef(
       value,
     }
 
-    const renderChildren = async () => {
+    // oxlint-disable-next-line typescript/promise-function-async
+    const renderChildren = () => {
       if (typeof children === 'function') {
         return children({ checked, disabled })
       }
